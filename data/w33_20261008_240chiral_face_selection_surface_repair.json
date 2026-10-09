@@ -1,0 +1,207 @@
+{
+  "CW_face_selective_manifold_repair_proved": false,
+  "all_added_cycle_faces_are_disjoint_edge_sets": true,
+  "all_edge_onechain_zero_H1_class": true,
+  "all_edges_onechain_boundary_of_sum_80_Xstar_hexagons": true,
+  "candidate_Euler_char": -104,
+  "candidate_closed_surface_f_vector": [
+    240,
+    480,
+    136
+  ],
+  "candidate_global_GF2_betti": null,
+  "candidate_surface_is_manifold": true,
+  "chosen_octagon_indices": [
+    4,
+    5,
+    6,
+    7,
+    12,
+    13,
+    14,
+    15,
+    20,
+    21,
+    22,
+    23,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    76,
+    77,
+    78,
+    79
+  ],
+  "dual_graph_degree_hist": {
+    "4": 80
+  },
+  "new_cycle_face_count": 16,
+  "new_cycle_face_sizes": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "not_native_H4_600cell_geometry": true,
+  "octagon_checkerboard_one_face_per_320_covered_edges": true,
+  "octagon_dual_components": [
+    40,
+    40
+  ],
+  "octagon_face_dual_graph_bipartite": true,
+  "selected_octagon_count": 40,
+  "uncovered_edges": 160,
+  "uncovered_edges_partition_into_cycles": true,
+  "uncovered_graph_all_vertices_degree_hist": {
+    "0": 80,
+    "2": 160
+  },
+  "uncovered_nonisolated_connected_component_profiles": [
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    },
+    {
+      "degree_hist": {
+        "2": 10
+      },
+      "edges": 10,
+      "vertices": 10
+    }
+  ],
+  "vertex_links_simple_closed_circles_count": 240
+}

@@ -1,0 +1,44 @@
+{
+  "F20_C4_image_order_on_2bit_character_model": 2,
+  "F20_C5_acts_trivially_on_2bit_character_model": true,
+  "SWAP_conjugates_both_X_and_Z_logical_Paulis_by_qubit_exchange": true,
+  "SWAP_intertwines_deck_char_Fourier_transform": true,
+  "a_equal_b_causes_original_gh_fixedpoint_locus_on_hypersurface": true,
+  "abstract_CY_flat_U1_character_group": "Hom(pi1=Z2^2,U1)=Z2^2",
+  "abstract_character_space_dimension": 4,
+  "certified_free_polynomial_a2b3_maps_to_a3b2_distinct": true,
+  "character_basis_Fourier_matrix_Hadamard_tensor_Hadamard": [
+    [
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    [
+      "1/2",
+      "-1/2",
+      "1/2",
+      "-1/2"
+    ],
+    [
+      "1/2",
+      "1/2",
+      "-1/2",
+      "-1/2"
+    ],
+    [
+      "1/2",
+      "-1/2",
+      "-1/2",
+      "1/2"
+    ]
+  ],
+  "deck_factor_exchange_permutation_SWAPS_two_qubits": true,
+  "identical_fiber_requires_a_equal_b": true,
+  "may_relate_distinct_smooth_free_fibers_X23_X32_by_isomorphism": true,
+  "potential_shared_Z2squared_representation_not_physical_geometric_or_quantum_identification": true,
+  "scope": "A precise duality-versus-vacuum-symmetry obstruction for uniform H4/Clifford interchange and a positive abstract 4-state Fourier intertwiner. No CY deck Wilson dynamics, local spacetime symmetry or Standard Model action derived.",
+  "tetraquadric_family_duality": "F_{a,b} maps to F_{b,a} up to common scalar 16",
+  "uniform_Hadamard_all_four_P1_factors_action": "(S,D,T)->(2S,2T,2D); product quartics each scale 16",
+  "uniform_Hadamard_as_C4_chiral_swap_on_same_smooth_free_X23": false
+}

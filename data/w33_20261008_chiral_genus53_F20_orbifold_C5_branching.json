@@ -1,0 +1,87 @@
+{
+  "Euler_characteristic": -104,
+  "F20_group_order": 20,
+  "F20_preserves_orientation": true,
+  "all_faces_automorphism_action_checked": true,
+  "base_surface_genus": 53,
+  "branch_orbits_faces_with_order5_stabilizer": [
+    [
+      120,
+      125,
+      130,
+      132
+    ],
+    [
+      121,
+      124,
+      128,
+      134
+    ],
+    [
+      122,
+      127,
+      131,
+      133
+    ],
+    [
+      123,
+      126,
+      129,
+      135
+    ]
+  ],
+  "cannot_infer_universal_gravitational_or_fermion_coupling_from_orbifold": true,
+  "edge_orbit_count": 24,
+  "edge_orbit_sizes": {
+    "20": 24
+  },
+  "elliptic_branch_orders": [
+    2,
+    2,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5
+  ],
+  "face_orbit_sizes_by_polygon_n": {
+    "10": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "6": [
+      20,
+      20,
+      20,
+      20
+    ],
+    "8": [
+      5,
+      5,
+      5,
+      5,
+      10,
+      10
+    ]
+  },
+  "no_Riemann_surface_complex_structure_selected": true,
+  "orientation_preserving_group_elements": 20,
+  "orientation_reversing_group_elements": 0,
+  "quotient_cell_Euler_characteristic": 2,
+  "quotient_cell_orbit_f_vector": [
+    12,
+    24,
+    14
+  ],
+  "surface_orientation_from_exact_integer_face_boundary": true,
+  "underlying_orientable_quotient_surface_genus": 0.0,
+  "vertex_orbit_count": 12,
+  "vertex_orbit_sizes": {
+    "20": 12
+  }
+}

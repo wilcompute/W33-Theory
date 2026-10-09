@@ -1,0 +1,34 @@
+{
+  "F20_invariant_two_class_couplings_iff_equal_a_b": true,
+  "F20_order4_exchanges_native_plus_and_nonnative_minus": true,
+  "F20_order5_preserves_both_chiral_classes": true,
+  "F20_symmetric_discrete_Laplacian": "4I-(Aplus+Aminus)",
+  "minus_connected_component_size_hist": {
+    "1": 10,
+    "25": 2
+  },
+  "minus_degree_hist": {
+    "0": 10,
+    "1": 20,
+    "3": 20,
+    "4": 10
+  },
+  "minus_nonnative_mirror_edges_in_selected_W33_support": 60,
+  "not_local_Lorentzian_gravity_or_physical_stress_energy": true,
+  "plus_connected_component_size_hist": {
+    "1": 10,
+    "25": 2
+  },
+  "plus_degree_hist": {
+    "0": 10,
+    "1": 20,
+    "3": 20,
+    "4": 10
+  },
+  "plus_native_600cell_edges_in_selected_W33_support": 60,
+  "scientific_boundary": "An exact symmetry-vs-native-H4-nearest-neighbor-locality obstruction restricted to two-class hopping. Full F20 invariance requires two chiral couplings equal, introducing mirror edges; other representations or enlarged native carrier remain open.",
+  "symmetric_chiral_Laplacian_max_eigenvalue": 6.000000000000008,
+  "symmetric_chiral_Laplacian_smallest_eigenvalue": 1.3322676295501878e-15,
+  "this_F20_symmetric_operator_not_native_600cell_nearest_neighbor_Laplacian": true,
+  "unique_F20_invariant_generator_in_span_Aplus_Aminus": "Aplus + Aminus"
+}

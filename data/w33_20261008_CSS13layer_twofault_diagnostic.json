@@ -1,0 +1,10 @@
+{
+  "single_fault_records": 7641,
+  "unique_single_records": 2039,
+  "distinct_single_fault_signature_pairs_examined": 250000,
+  "ambiguity": null,
+  "found_a_two_fault_ambiguity": false,
+  "not_exhaustive_two_fault_model": true,
+  "distinct_physical_gate_locations_NOT_verified_for_pairs": true,
+  "linear_Pauli_XOR_justification": true
+}

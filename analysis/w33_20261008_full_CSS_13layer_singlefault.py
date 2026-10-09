@@ -17,7 +17,7 @@ from w33_20261008_60qubit_measurement_hook_audit import schedule
 from w33_20261008_60qubit_1flag_octagon_audit import cnot
 OUT=ROOT/"data/w33_20261008_full_13layer_CSS_1fault_preparation_idle_readout_certificate.json"
 DATA=(1<<60)-1
-def main():
+def main(include_records=False):
  _,E,F,st,H,bx,bz=topology()
  # Frozen schedules avoid nondeterministic networkx matching order across
  # different Python hash seeds, essential for reproducible outcomes.
@@ -44,6 +44,7 @@ def main():
   sum(((x>>(60+i))&1)<<i for i in range(20)),
   sum(((z>>(80+i))&1)<<i for i in range(20)))
  decoder=collections.defaultdict(set);types=collections.Counter();risk=collections.Counter();faultnum=0; first_collision=None
+ records=[]
  def register(kind,x,z,after_layer=-1,measflip=None):
   nonlocal faultnum,first_collision
   for lay,c,t in gates:
@@ -62,6 +63,7 @@ def main():
   if decoder[key] and (xc,zc) not in decoder[key] and first_collision is None:
    first_collision={"fault_type":kind,"observed_key":list(key),"different_stabilizer_cosets":2}
   decoder[key].add((xc,zc))
+  if include_records:records.append((kind,key,(xc,zc)))
   faultnum+=1;types[kind]+=1
   if kind=="gate" and (dx.bit_count()>3 or dz.bit_count()>3):risk["gate_physical_weight_gt3"]+=1
  # no fault
@@ -107,7 +109,8 @@ def main():
   "fault_model":"One post-CNOT two-qubit Pauli OR one initial ancilla Pauli OR one data idle Pauli at a layer boundary OR one readout bit flip. All other operations noiseless. Entire flagged 13-layer circuit, with ideal future 60-check data syndrome.",
   "no_finite_noise_threshold_or_true_noisy_detector_graph":True,
   "no_two_fault_correlated_or_imperfect_followup":True,
-  "only_one_fault_per_full_round":True}
+  "only_one_fault_per_full_round":True,
+  **({"all_single_fault_observation_coset_records":records} if include_records else {})}
 if __name__=="__main__":
  r=main();OUT.write_text(json.dumps(r,indent=2,sort_keys=True)+"\n")
  print(r,flush=True);print("CSS_13LAYER_EXPANDED_SINGLE_FAULT_TEST_DONE")

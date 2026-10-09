@@ -1,0 +1,16 @@
+{
+  "all_480_edges_as_GF2_one_chain_have_zero_vertex_boundary": true,
+  "all_edges_boundary_of_sum_80_hexagon_faces": true,
+  "all_edges_one_chain_is_nontrivial_H1_class": false,
+  "all_edges_one_chain_reduced_witness_hamming_weight": 0,
+  "base_native_H4_plus_edges_in_selected_W33_line_graph": 60,
+  "closed_surface_repair_by_checkerboard_and_decagon_faces_found_separately": true,
+  "full_CW_two_boundary_rank": 158,
+  "no_combination_of_160_existing_lifted_check_faces_can_supply_all_edge_parity_boundary": false,
+  "not_a_global_no_go_for_new_F20_equivariant_faces_or_other_H4_embedding": true,
+  "order4_F20_generator_maps_all_60_native_plus_W33_edge_relations_to_mirror_minus": true,
+  "order4_generator_cannot_act_as_native_H4_600cell_isometry_under_selected_address_identification": true,
+  "order5_generator_preserves_native_plus_relation_within_selected_support": true,
+  "repair_requires_integer_incidence_adjustment_not_mod2_homology": true,
+  "underlying_H1_dimension": 83
+}
