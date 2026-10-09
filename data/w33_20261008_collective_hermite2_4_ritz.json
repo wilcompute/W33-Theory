@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "upper_bound": 127.61937784333912,
+  "old_bound": 127.61950907272603,
+  "improvement": 0.00013122938690912633,
+  "quadrature_error": 3.1267607452271335e-13,
+  "orbit_classes": 8
+}
