@@ -52,3 +52,4 @@ import W33.Pass1096CharacterHesseE8Lock
 import W33.Pass1106CliffordFirewallCarrier
 import W33.Pass1390FrameCrossMatching
 import W33.CosineSequence
+import W33.Pass11815LevelCharges
