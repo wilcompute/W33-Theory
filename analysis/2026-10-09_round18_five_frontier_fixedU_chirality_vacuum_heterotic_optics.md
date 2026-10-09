@@ -1,8 +1,8 @@
 # Round 18: Five independent pressure tests on the W33 TOE program (9 October 2026)
 
 **Provenance.** Follow-up to Round17 exact interaction traces and no-go theorems on the
-public W33-Theory `master` branch. Native model inputs only; one spinful optical
-test is a deliberately constructed synthetic counterexample, not data from hardware.
+public W33-Theory `master` branch. Native model inputs only; one optical
+readout test is a deliberately constructed synthetic counterexample, not data from hardware.
 Concurrent agents' unrelated paths and untracked files must be preserved.
 
 ## 1. Exact **fixed-U** two-boson orbit separation (new theorem)
@@ -30,9 +30,11 @@ Both reductions F_p[i] with p=1000003,1000033 preserve ring identities.
 The p=1000033 algebra is a *split commutative algebra*, not a field.
 A nonzero difference modulo either valid p proves a nonzero rational value.
 
-**Results:** For each **U=2,8,20** and each prime, the ordered
-`(Tr H^17,Tr H^19)` (equivalently free-subtracted) vector is pairwise
-distinct among the five representative families. For example p=1000003:
+**Results:** For each **U=2,8,20** and each prime, **the single 19th
+trace moment** `Tr H^19` is pairwise distinct among the five representative
+families (and the joint 17th/19th signature also separates). Since the
+free moment is shared, its subtraction preserves the distinction.
+For example p=1000003:
 
 | U | Delta Tr H^17 across native orbits | Delta Tr H^19 across native orbits |
 |---|---|---|

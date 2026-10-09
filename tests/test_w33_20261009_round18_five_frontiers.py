@@ -23,7 +23,7 @@ def test_fixedU_toy_and_native_exact_modular_witness():
     G=[F.projected_returns(F.prior.phased_adj(edges,x['representative']),1000003) for x in reps]
     for U in (2,8,20):
         a=[F.interaction_deltas(x,U,1000003) for x in G]
-        assert len({(x['17'],x['19']) for x in a})==5
+        assert len({x['19'] for x in a})==5
         expected=certificate("w33_20261009_round18_fixedU_resolvent_certificate.json")['fixed_U']['1000003'][str(U)]['interacting_minus_free_trace']
         assert a==expected
 

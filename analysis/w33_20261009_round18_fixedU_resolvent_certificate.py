@@ -113,7 +113,7 @@ def main():
             distinct17=len({x["17"] for x in vs})
             distinct19=len({x["19"] for x in vs})
             distinctpair=len({(x["17"],x["19"]) for x in vs})
-            assert distinctpair==5,(p,U,vs)
+            assert distinct19==5 and distinctpair==5,(p,U,vs)
             by_U[str(U)]={"interacting_minus_free_trace":vs,"distinct_moment17":distinct17,"distinct_moment19":distinct19,"distinct_joint":distinctpair}
             print("FIXED U",p,U,"17",[x["17"] for x in vs],"19",[x["19"] for x in vs],"secs",round(time.time()-t,2),flush=True)
         cert[str(p)]=by_U
