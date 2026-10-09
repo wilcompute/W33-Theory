@@ -1,0 +1,18 @@
+/> 
+  Load orbifolds from file "modelW33Z3.txt".
+  Orbifold "W33Z3" loaded.
+/> /W33Z3> /W33Z3/gauge group> 
+  Gauge group in vev-configuration "TestConfig1": SU(9) and SO(14) and U(1)_1
+/W33Z3/gauge group> /W33Z3> /W33Z3/spectrum> 
+  Gauge group in vev-configuration "TestConfig1": SU(9) and SO(14) and U(1)
+  First U(1) is anomalous with tr Q_anom = 3888.00.
+  U Sector:
+    3 ( 84,  1)_l  U(1) : (    0) 
+    3 (  1, 14)_l  U(1) : (  -18) 
+    3 (  1, 64)_l  U(1) : (    9) 
+  T(1,0) Sector:   empty
+  T(2,0) Sector:
+   27 ( -9,  1)_l  U(1) : (   12) 
+/W33Z3/spectrum> 
+/W33Z3/spectrum> 
+  End.
