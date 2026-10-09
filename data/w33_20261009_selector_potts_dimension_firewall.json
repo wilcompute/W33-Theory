@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "q": 40,
+  "imposed_square_lattice_critical_betaJ": 1.9912324459391175,
+  "grids": [
+    {
+      "rows": 1,
+      "cols": 9,
+      "edges": 8,
+      "coefficient_by_open_edge_count": {
+        "0": "262144000000000",
+        "1": "52428800000000",
+        "2": "4587520000000",
+        "3": "229376000000",
+        "4": "7168000000",
+        "5": "143360000",
+        "6": "1792000",
+        "7": "12800",
+        "8": "40"
+      },
+      "data": [
+        {
+          "betaJ": 0.5,
+          "mean_equal_bond_probability": 0.040560224753946626,
+          "FK_mean_open_bonds": 0.12767363900674156,
+          "log_partition": 33.32861848166345
+        },
+        {
+          "betaJ": 1.9912324459391175,
+          "mean_equal_bond_probability": 0.158113883008419,
+          "FK_mean_open_bonds": 1.0922164759665147,
+          "log_partition": 34.37425683808262
+        },
+        {
+          "betaJ": 3.0,
+          "mean_equal_bond_probability": 0.33993999156340493,
+          "FK_mean_open_bonds": 2.584123007699733,
+          "log_partition": 36.32076883292055
+        }
+      ]
+    },
+    {
+      "rows": 2,
+      "cols": 3,
+      "edges": 7,
+      "coefficient_by_open_edge_count": {
+        "0": "4096000000",
+        "1": "716800000",
+        "2": "53760000",
+        "3": "2240000",
+        "4": "180800",
+        "5": "10200",
+        "6": "280",
+        "7": "40"
+      },
+      "data": [
+        {
+          "betaJ": 0.5,
+          "mean_equal_bond_probability": 0.04056745816582737,
+          "FK_mean_open_bonds": 0.11173435701150407,
+          "log_partition": 22.24589725588706
+        },
+        {
+          "betaJ": 1.9912324459391175,
+          "mean_equal_bond_probability": 0.17465237734165565,
+          "FK_mean_open_bonds": 1.055653212804722,
+          "log_partition": 23.189085569511903
+        },
+        {
+          "betaJ": 3.0,
+          "mean_equal_bond_probability": 0.6518392360771642,
+          "FK_mean_open_bonds": 4.33570250026014,
+          "log_partition": 25.754881785690063
+        }
+      ]
+    },
+    {
+      "rows": 3,
+      "cols": 3,
+      "edges": 12,
+      "coefficient_by_open_edge_count": {
+        "0": "262144000000000",
+        "1": "78643200000000",
+        "2": "10813440000000",
+        "3": "901120000000",
+        "4": "66662400000",
+        "5": "5222400000",
+        "6": "348672000",
+        "7": "26227200",
+        "8": "1865280",
+        "9": "96160",
+        "10": "8880",
+        "11": "480",
+        "12": "40"
+      },
+      "data": [
+        {
+          "betaJ": 0.5,
+          "mean_equal_bond_probability": 0.04056866646815943,
+          "FK_mean_open_bonds": 0.19155031717877882,
+          "log_partition": 33.39298030283212
+        },
+        {
+          "betaJ": 1.9912324459391175,
+          "mean_equal_bond_probability": 0.17942322384210072,
+          "FK_mean_open_bonds": 1.8591251842281529,
+          "log_partition": 35.02131740894678
+        },
+        {
+          "betaJ": 3.0,
+          "mean_equal_bond_probability": 0.8260270024426899,
+          "FK_mean_open_bonds": 9.418818475180487,
+          "log_partition": 40.394870879051076
+        }
+      ]
+    }
+  ],
+  "exact_1D_transfer_eigenvalues": "lambda0=e^K+39, lambda1=e^K-1",
+  "exact_1D_correlation_length": "xi = 1/log((exp(K)+39)/(exp(K)-1)) for 0<K<infinity",
+  "first_order_2D_fact": "For square lattice q>4, the standard ferromagnetic Potts model has a first-order thermal transition at betaJ=log(1+sqrt(q)); prior statistical-mechanics result, NOT proved here.",
+  "source": "F.Y. Wu, The Potts model Rev.Mod.Phys.54,235 (1982); also PTEP 2024 013A04.",
+  "exact_FK_polynomial": "Z=sum_A q^{k(A)}(exp(K)-1)^|A| on finite open grid. Enumerated all 2^12 edge subsets for 3x3.",
+  "critical_boundary": "At h=0, the selector model is exactly ordinary q40 Potts with full S40 relabeling symmetry; W33-specific line-incidence structure disappears. Square spatial connectivity and dimension are SUPPLIED, not dynamically derived. Adding h>0 restores W33 line graph, but transition line at finite h not computed.",
+  "scope": "Small finite grids/analytic q=40 Potts reduction. No thermodynamic finite-h many-body quantum SSB, no Lorentzian causal metric or Einstein dynamics."
+}

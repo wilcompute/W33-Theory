@@ -1,0 +1,763 @@
+{
+  "status": "PASS",
+  "base_support": [
+    "n_17",
+    "n_47",
+    "n_50",
+    "n_80",
+    "n_82",
+    "n_9",
+    "n_54",
+    "n_37",
+    "n_38",
+    "n_35",
+    "n_36",
+    "n_39",
+    "n_40"
+  ],
+  "charge_rank": 8,
+  "orthogonal_U1_annihilator": [
+    "0",
+    "1",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "parity_even_antifundamentals": [
+    "n_44",
+    "n_55",
+    "n_66",
+    "n_68",
+    "n_73"
+  ],
+  "residuals": {
+    "n_69": "0",
+    "n_74": "0",
+    "n_44": "0",
+    "n_5": "0",
+    "n_55": "0",
+    "n_66": "0",
+    "n_68": "0",
+    "n_73": "0"
+  },
+  "allowed_single_matched_SU4_pairs": [
+    {
+      "fundamental": "n_69",
+      "antifundamental": "n_44",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "1",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_69",
+      "antifundamental": "n_55",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "0",
+        "n_50": "1",
+        "n_80": "1",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_69",
+      "antifundamental": "n_66",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "0",
+        "n_50": "1",
+        "n_80": "1",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_69",
+      "antifundamental": "n_68",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "1",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_69",
+      "antifundamental": "n_73",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "1",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_74",
+      "antifundamental": "n_44",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "1",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_74",
+      "antifundamental": "n_55",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "0",
+        "n_50": "1",
+        "n_80": "1",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_74",
+      "antifundamental": "n_66",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "0",
+        "n_50": "1",
+        "n_80": "1",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_74",
+      "antifundamental": "n_68",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "1",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "fundamental": "n_74",
+      "antifundamental": "n_73",
+      "first_order_VEV_norm_correction": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "0",
+        "n_80": "1",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    }
+  ],
+  "allowed_two_matched_SU4_pairs": [
+    {
+      "first": [
+        "n_69",
+        "n_44"
+      ],
+      "second": [
+        "n_74",
+        "n_55"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_44"
+      ],
+      "second": [
+        "n_74",
+        "n_66"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_44"
+      ],
+      "second": [
+        "n_74",
+        "n_68"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_44"
+      ],
+      "second": [
+        "n_74",
+        "n_73"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_55"
+      ],
+      "second": [
+        "n_74",
+        "n_44"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_55"
+      ],
+      "second": [
+        "n_74",
+        "n_66"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "0",
+        "n_50": "2",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_55"
+      ],
+      "second": [
+        "n_74",
+        "n_68"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_55"
+      ],
+      "second": [
+        "n_74",
+        "n_73"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_66"
+      ],
+      "second": [
+        "n_74",
+        "n_44"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_66"
+      ],
+      "second": [
+        "n_74",
+        "n_55"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "0",
+        "n_50": "2",
+        "n_80": "2",
+        "n_82": "0",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_66"
+      ],
+      "second": [
+        "n_74",
+        "n_68"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_66"
+      ],
+      "second": [
+        "n_74",
+        "n_73"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_68"
+      ],
+      "second": [
+        "n_74",
+        "n_44"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_68"
+      ],
+      "second": [
+        "n_74",
+        "n_55"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_68"
+      ],
+      "second": [
+        "n_74",
+        "n_66"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_68"
+      ],
+      "second": [
+        "n_74",
+        "n_73"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "2",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_73"
+      ],
+      "second": [
+        "n_74",
+        "n_44"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_73"
+      ],
+      "second": [
+        "n_74",
+        "n_55"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_73"
+      ],
+      "second": [
+        "n_74",
+        "n_66"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "1",
+        "n_50": "1",
+        "n_80": "2",
+        "n_82": "1",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    },
+    {
+      "first": [
+        "n_69",
+        "n_73"
+      ],
+      "second": [
+        "n_74",
+        "n_68"
+      ],
+      "second_amplitude_square_over_first": "1",
+      "first_order_base_shift": {
+        "n_17": "0",
+        "n_47": "2",
+        "n_50": "0",
+        "n_80": "2",
+        "n_82": "2",
+        "n_9": "0",
+        "n_54": "0",
+        "n_37": "0",
+        "n_38": "0",
+        "n_35": "0",
+        "n_36": "0",
+        "n_39": "0",
+        "n_40": "0"
+      }
+    }
+  ],
+  "theorem": "All U1 charges including anomalous FI stay satisfied for sufficiently small positive paired SU4 VEV norms whenever the combined pair charge is in the base-support charge span. For each fund+anti pair, aligned conjugate color vectors with equal norm cancel the SU4 moment map; with two pairs use orthogonal color axes. Base FI positives persist by continuity, and the chosen fields carry even full-field parity.",
+  "boundary": "Pure gauge D-flat local algebra only; does not construct holomorphic F-flat branches, recompute Yukawa masks, guarantee rank repair, or preserve hidden SU4 gauge bosons. Pair embeddings need explicit hidden SU4 conjugate representation normalizations."
+}

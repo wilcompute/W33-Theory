@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "alpha": 0.01,
+  "samples": [
+    {
+      "n": 50000,
+      "true_delta": 0.003,
+      "point_estimate": 0.012641550461935061,
+      "confidence_interval": [
+        -0.006083772424802296,
+        0.0313281074327832
+      ],
+      "width": 0.0374118798575855,
+      "calibration_sign_rademacher": true
+    },
+    {
+      "n": 200000,
+      "true_delta": 0.003,
+      "point_estimate": -0.0003776431141137363,
+      "confidence_interval": [
+        -0.009557914126609696,
+        0.00880027383781671
+      ],
+      "width": 0.018358187964426405,
+      "calibration_sign_rademacher": true
+    },
+    {
+      "n": 1000000,
+      "true_delta": 0.003,
+      "point_estimate": 0.0024925805940322846,
+      "confidence_interval": [
+        -0.0014928660844572778,
+        0.006477885263645822
+      ],
+      "width": 0.0079707513481031,
+      "calibration_sign_rademacher": true
+    }
+  ],
+  "matched_sham_criterion": "constant delta confidence inversion; test any delta0 using |sum r_i Q_i(Y_i-delta0*r_i*Q_i)| <= sqrt(2log(2/alpha)*sum Q_i^2(Y_i-delta0*r_i Q_i)^2). Invert the quadratic, endpoints given.",
+  "finite_sample_guarantee": "For deterministic fixed Q, epsilon independent of assigned Rademacher r (temporal correlation permitted), inversion has >=1-alpha coverage of common delta.",
+  "exactly_signal_equivalent_mismatch": 0.014631086717700975,
+  "mismatch_threshold_referenced_to_prior": "Idealized optical signal divided by 4 E[(P_Y^2-.51)^2]",
+  "important_impossibility": "No finite randomized calibration dataset can, without a boundedness or regularity assumption on delta_i, certify a deterministic worst-case per-shot |delta_i|<=d. An arbitrarily rare, arbitrarily large route-sensitive detector outlier can remain unobserved.",
+  "rare_outlier_counterexamples": [
+    {
+      "shots": 50000,
+      "prob_zero_spikes": 0.9048373275545226,
+      "possible_unobserved_outlier_magnitude": "unbounded"
+    },
+    {
+      "shots": 200000,
+      "prob_zero_spikes": 0.9048373954224607,
+      "possible_unobserved_outlier_magnitude": "unbounded"
+    },
+    {
+      "shots": 1000000,
+      "prob_zero_spikes": 0.9048374135593988,
+      "possible_unobserved_outlier_magnitude": "unbounded"
+    }
+  ],
+  "scope": "Seeded Gaussian AR1 illustrative calibration. Common parameter delta is an assumption. The earlier robust detector null requires per-shot bound, not merely this confidence interval."
+}
