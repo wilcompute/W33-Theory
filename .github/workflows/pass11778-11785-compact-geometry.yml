@@ -31,6 +31,7 @@ jobs:
           tests/test_w33_20261008_dressed_current_antiunitary.py
           tests/test_w33_20261008_five_state_ritz.py
           tests/test_w33_20261008_optical_and_cone.py
+          tests/test_w33_20261008_five_fronts_controls.py
       - name: Replay compact vacuum and thermodynamics certificate
         run: python analysis/w33_pass11778_11783_compact_vacuum_thermodynamics.py
       - name: Replay local net current spin tests and surviving gauge
@@ -43,3 +44,4 @@ jobs:
           tests/test_w33_pass11778_11785_compact_geometry.py
           tests/test_w33_20261008_five_state_ritz.py
           tests/test_w33_20261008_optical_and_cone.py
+          tests/test_w33_20261008_five_fronts_controls.py

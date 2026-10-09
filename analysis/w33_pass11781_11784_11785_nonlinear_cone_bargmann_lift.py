@@ -49,6 +49,16 @@ def nonlinear_cone():
     leverage=np.einsum('ij,jk,ik->i',z['u'],p0i,z['u'])
     exact_leverage=39/(160*(z['vx']+.05))
     assert np.max(np.abs(leverage-exact_leverage))<1e-13
+    # Two equal-length P(0) directions give unequal generalized Rayleigh
+    # quotients off center: this rules out even a common rescaled speed.
+    r=np.zeros(80,dtype=np.int64);r[0]=1;r[39]=-1
+    s=np.zeros(80,dtype=np.int64);s[40]=1;s[79]=-1
+    ur=(np.rint(40*g['u']).astype(np.int64)@r)//40
+    us=(np.rint(40*g['u']).astype(np.int64)@s)//40
+    x=(np.rint(40*g['v']).astype(np.int64)@w.astype(np.int64))//40
+    difference=ur*ur-us*us
+    assert int(ur@ur)==int(us@us)==8
+    assert int(x@difference)==40 and int((x*x)@difference)==208
     samples=[]
     for epsilon in [0,.01,.1,.5]:
         q=epsilon*w@z['basis'];p,_,_,_,_,curl=coefficients(q,z)
@@ -66,6 +76,7 @@ def nonlinear_cone():
         kinetic='P(q)=2*U^T*diag(vx+(Vq+a)^2)*U. It is positive definite globally since vx>0 and U has rank78.',
         fixed_gradient='With the11771 centered matched spatial gradient P(0)^(-1), the squared-speed matrix at background q is P(q)P(0)^(-1).',
         exact_trace='For q=epsilon*(w_point,0), norm(w)^2=216, trace[P(q)P(0)^(-1)]-78=2106*epsilon^2/[5*(vx+1/20)]>0 if epsilon!=0.',
+        exact_anisotropy='For r=e_point0-e_point39 and s=e_line0-e_line39, both P(0)-norms squared are16*(vx+a^2). Their generalized P(q)/P(0) Rayleigh quotients differ by(10*a*epsilon+26*epsilon^2)/(vx+a^2)>0 for epsilon>0. Thus the speed matrix is not even a scalar multiple of identity.',
         leverage='u_e^T*P(0)^(-1)*u_e=39/[160*(vx+1/20)] for every actual edge. Linear trace terms cancel since sum V_e=0; sum(V_e.w)^2=864.',
         samples=samples,
         boundary='This is an exact Wick/finite-background obstruction in the fixed-covariance Gaussian variational model, not a computed one-loop self-energy. The common centered quadratic cone has no automatic nonlinear protection; a background-dependent gradient would be an additional prescription.')
@@ -87,12 +98,19 @@ def exact_curvature():
     assert entry==Fraction(-31,10)
     beta=2*(z['c']+.05)/(z['vx']+.05)
     coefficient=-31*.05*(2*beta-1)/(5*(z['vx']+.05))
+    confining=z['vy']-4*z['c']**2/z['vx']
+    assert confining>0
+    variational_floor=160*(z['vx']*z['vy']+2*z['c']**2+.05*confining)
     q=z['a']*1e-5*w@z['basis'];curl=coefficients(q,z)[-1]
     measured=float((r@z['basis'])@curl@(s@z['basis']))/1e-5
     assert abs(measured-coefficient)<1e-5
     return dict(status='EXACT_NONZERO_CURVATURE',
         connection='A(q)=-P(q)^(-1)*ell(q), ell=U^T[2a*(Vq+a)^2+4c*(Vq+a)]. E=.5*(p-A)^T*P*(p-A)+Veff.',
         effective_potential='Veff(q)=min_p E(q,p)>=E0>0 and Veff(q) tends to infinity as |q| tends to infinity. Otherwise normalized displaced fixed-covariance Gaussians at minimizing momenta would lie in a bounded form ball while converging weakly to zero by translation of their modulus, contradicting the11778 compact embedding.',
+        independent_quadratic_bound='Let d=vy-4*c^2/vx>0. Completing each independent y square gives Veff(q)>=160*(vx*vy+2*c^2+a^2*d)+d*q^T*(4Pw-Adj)*q. This even allows unconstrained edge momenta, so also bounds the actual minimizing p.',
+        positivity_proof='d=(m/t)*(1-3*f^2*t^2). Since f=-2b/(3mt+b), b=1/20, |ft|<2b/(3m) and m>33/40, the bracket is positive. Sum(Vq+a)^2=160a^2+q^T*(4Pw-Adj)*q.',
+        quadratic_coefficient=float(confining),restricted_family_floor=float(variational_floor),
+        restricted_floor_scope='The displayed scalar floor bounds only this fixed-covariance Gaussian family, NOT the full quantum spectral infimum E0.',
         beta='beta=2*(c+a^2)/(vx+a^2)',
         expansion='A(q)=-beta*Dq+2a*(2beta-1)*P(0)^(-1)*U^T*(Vq)^2+O(|q|^3).',
         integer_recipe='Mnum=25*(40Pw)-40*(10Adj)+(10Adj)^2; Snum=antisym[Mnum*(40U)^T*diag(Vw)*(40V)]. M=Pw/4-Adj/10+Adj^2/40.',

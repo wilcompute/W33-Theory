@@ -198,6 +198,8 @@ trace[P(epsilon*w)P(0)^(-1)]-78
 
 The proof uses the exact equal leverage `u_e^T P(0)^(-1)u_e=39/[160(vx+1/20)]`, cancellation of the linear trace, and `sum(V_e.w)^2=864`. At epsilon=.1, the squared speeds span approximately .950927 to2.314299. The all-one spectrum of the centered principal cone is lost. This is a stronger finite-background warning before any loop calculation; it is **not** a computed radiative correction. A prescription replacing the spatial metric by a background-dependent inverse would require a further action and consistency test.
 
+Trace alone would still allow a single rescaled speed; an additional exact witness excludes that possibility. Let `r=e_point0-e_point39`, `s=e_line0-e_line39`. Both have `r^T P(0)r=s^T P(0)s=16(vx+a^2)`. Exact edge sums give `sum(Vw)[(Ur)^2-(Us)^2]=40` and the same sum with `(Vw)^2` equal to208. Their generalized Rayleigh quotients differ by `(10a epsilon+26epsilon^2)/(vx+a^2)>0` for epsilon>0. Hence `P(q)` is not proportional to `P(0)`: the split cannot be removed merely by a common speed renormalization.
+
 Complete the square:
 
 ```
@@ -207,6 +209,16 @@ E=.5(p-A)^T P(p-A)+Veff.
 ```
 
 The compactness theorem has another consequence here: `Veff(q)=min_p E(q,p)>=E0>0` and **Veff is proper**, tending to infinity as `|q|` tends to infinity. If not, choose minimizing momenta along an escaping q-sequence. Their normalized displaced fixed-covariance Gaussians would have bounded form energy, yet converge weakly to zero, since their Gaussian moduli translate to infinity regardless of their phases. Compactness of that form ball would force a strongly convergent subsequence, contradicting unit norm. Thus the quantum variational scalar potential confines even after momentum relaxation; this is not inferred from the classical current-zero locus.
+
+There is an independent **explicit quadratic confinement bound**. Put `d=vy-4c^2/vx`. Minimizing each edge over its y separately, a relaxation of the actual shared momentum, gives
+
+```
+(vx+x^2)y^2+4cxy+vy*x^2
+  >= vy*x^2-4c^2*x^2/(vx+x^2) >= d*x^2,
+Veff(q)>=160(vx*vy+2c^2+a^2*d)+d*q^T(4Pw-Adj)q.
+```
+
+Exactly `d=(m/t)(1-3f^2t^2)>0`: `f=-2b/(3mt+b)`, `b=1/20`, implies `|ft|<2b/(3m)` and `m>33/40`. Since `4Pw-Adj` has positive least eigenvalue `4-sqrt6` on W, this gives a quantitative quadratic growth coefficient. At the optimized covariance d is approximately .844940848 and the scalar term is122.693541734. **This scalar term is a lower bound for the fixed-covariance Gaussian trial family only; it is not a lower bound for the full quantum ground energy.** The formula is exact in the previously isolated algebraic t,m,f; displayed decimal evaluations are floating controls.
 
 Let `beta=2(c+a^2)/(vx+a^2)`. Taylor expansion gives
 

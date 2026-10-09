@@ -142,6 +142,21 @@ def test_completed_square_equals_full_displaced_wick_energy():
         assert np.linalg.eigvalsh(kinetic)[0]>0
 
 
+def test_independent_global_quadratic_confinement_bound():
+    z=G.setup();rng=np.random.default_rng(11783)
+    d=z['vy']-4*z['c']**2/z['vx']
+    assert d>0
+    floor=160*(z['vx']*z['vy']+2*z['c']**2+.05*d)
+    # Test arbitrary momenta as well as the actual relaxed minimizer.
+    for scale in [.02,.3,2,10]:
+        q=scale*rng.normal(size=78);p=scale*rng.normal(size=78)
+        lower=floor+d*np.linalg.norm(z['v']@q)**2
+        effective=G.coefficients(q,z)[4]
+        assert G.wick_energy(q,p,z)>=effective>=lower-1e-8
+    # Exact algebraic positivity, using m>33/40 and b=1/20.
+    assert 1-4*sp.Rational(1,20)**2/(3*sp.Rational(33,40)**2)>0
+
+
 def test_cone_trace_is_exact_nonzero_rational_geometry():
     z=G.setup();g=z['g'];u40=np.rint(40*g['u']).astype(np.int64)
     pw40=np.rint(40*g['pw']).astype(np.int64);adj10=np.rint(10*g['g']).astype(np.int64)
@@ -153,6 +168,18 @@ def test_cone_trace_is_exact_nonzero_rational_geometry():
     assert abs(np.sum((g['v']@w)**2)-864)<1e-11
     result=G.nonlinear_cone()
     assert result['samples'][2]['squared_speed_max']>2
+
+
+def test_exact_cone_anisotropy_excludes_common_speed_rescaling():
+    z=G.setup();g=z['g'];edges=G.A.actual_edges()
+    # Independent incidence enumeration, without the producer's projected arrays.
+    x=np.array([g['kernel_witness'][p] for p,l in edges],dtype=int)
+    ur=np.array([int(p==0)-int(p==39) for p,l in edges],dtype=int)
+    us=np.array([int(l==40)-int(l==79) for p,l in edges],dtype=int)
+    assert ur@ur==us@us==8
+    assert x@(ur*ur-us*us)==40
+    assert (x*x)@(ur*ur-us*us)==208
+    assert 10*z['a']*.1+26*.1**2>0
 
 
 def test_curvature_rational_witness_and_analytic_jacobian_independently():
