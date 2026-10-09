@@ -1,0 +1,38 @@
+name: Pass11797-11801 five physical fronts
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11797_11801_five_physical_fronts.py
+      - analysis/w33_pass11797_orbifolder_probe.cpp
+      - analysis/w33_pass11797_build_probe.py
+      - analysis/PASS11797_11801_FIVE_PHYSICAL_FRONTS.md
+      - data/w33_pass11797_full_benchmark_metadata.json.gz
+      - data/w33_pass11797_corrected_named_coupling_checks.json
+      - data/w33_pass11797_11801_five_physical_fronts.json
+      - tests/test_w33_pass11797_11801_five_physical_fronts.py
+      - .github/workflows/pass11797-11801-five-physical-fronts.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 pytest
+      - name: Frozen physical certificates and prior branch controls
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11797_11801_five_physical_fronts.py
+          tests/test_w33_pass11796_parity_complete_abelian_higgs.py
+          tests/test_w33_pass11794_hidden_center_vacuum.py
+      - name: Regenerate all five mathematical fronts from frozen original-model inputs
+        run: python analysis/w33_pass11797_11801_five_physical_fronts.py
+      - name: Independently recheck regenerated physical certificate
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11797_11801_five_physical_fronts.py

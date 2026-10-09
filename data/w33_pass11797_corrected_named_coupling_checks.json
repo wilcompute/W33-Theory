@@ -1,0 +1,324 @@
+{
+  "degree8": {
+    "rows": [
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_37",
+          "n_38",
+          "n_37",
+          "n_38"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_37",
+          "n_38",
+          "n_35",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_37",
+          "n_38",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_35",
+          "n_36",
+          "n_35",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_35",
+          "n_36",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_35",
+          "n_40",
+          "n_35",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_35",
+          "n_40",
+          "n_39",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_39",
+          "n_36",
+          "n_39",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_37",
+          "n_38",
+          "n_39",
+          "n_40",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_36",
+          "n_35",
+          "n_36",
+          "n_35",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_36",
+          "n_35",
+          "n_36",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_36",
+          "n_35",
+          "n_40",
+          "n_35",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_36",
+          "n_35",
+          "n_40",
+          "n_39",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_36",
+          "n_39",
+          "n_36",
+          "n_39",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_36",
+          "n_39",
+          "n_40",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_40",
+          "n_35",
+          "n_40",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_35",
+          "n_40",
+          "n_39",
+          "n_36",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_39",
+          "n_36",
+          "n_39",
+          "n_36",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_9",
+          "n_54",
+          "n_39",
+          "n_40",
+          "n_39",
+          "n_40",
+          "n_39",
+          "n_40"
+        ]
+      }
+    ],
+    "raw_sha256": "0e2c67984622278b02d5be1460b1681d1ad5223c5a05185e8db79ead29475446",
+    "original_recursion_controls_verified": 2
+  },
+  "finite_mass_and_outsider": {
+    "rows": [
+      {
+        "allowed_count": 1,
+        "fields": [
+          "bd_1",
+          "d_2",
+          "n_17",
+          "n_35",
+          "n_36"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "bd_1",
+          "d_2",
+          "n_17",
+          "n_37",
+          "n_38"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "bd_1",
+          "d_2",
+          "n_17",
+          "n_39",
+          "n_40"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "bl_1",
+          "bu_1",
+          "q_1"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_17",
+          "n_54",
+          "n_82",
+          "n_83",
+          "n_9"
+        ]
+      },
+      {
+        "allowed_count": 1,
+        "fields": [
+          "n_17",
+          "n_81",
+          "n_82"
+        ]
+      }
+    ],
+    "raw_sha256": "d79f47e7377eda8566e65f210a6be47fbcd38d9cef59efe8b99f6e0b8e6d575f",
+    "original_recursion_controls_verified": 6
+  },
+  "status": "PASS",
+  "method": "Original orbifolder gauge and exact constructing-element/conjugacy-class space-group filter; isolated cached R1+6theta-gamma adapter. Exact-label sector enumeration checked against unaccelerated calls.",
+  "boundary": "Not physical amplitudes. Rules4/5/6 still need individual CFT treatment; random CouplingStrength is ignored.",
+  "source_sha256": {
+    "analysis/w33_pass11797_orbifolder_probe.cpp": "0528b25393b2758812fe2f7a84147cd38eacd931557958157a2a9ede85f21050",
+    "analysis/w33_pass11797_build_probe.py": "99fc031223e54fbfea48c71b0888c868a04c61f981c3dd41ae461958a7f57b77"
+  }
+}
