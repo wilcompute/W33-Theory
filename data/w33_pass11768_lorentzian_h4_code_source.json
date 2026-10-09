@@ -1,0 +1,321 @@
+{
+  "status": "PASS",
+  "schema": "w33.pass11768.lorentzian_h4_code_source.v1",
+  "source_sha256": "e4ec89af02e6d87a6896310ab85253d88833a981a1ca8e60f5db300fa2cf758f",
+  "inputs": {
+    "analysis/w33_20261008_native_H4_4D_spacetime_slab.py": "2a48ae309fd5f9492f9b90e3180285b0a2a6546bee0a1916728adcbe4e13fd26",
+    "analysis/w33_20261008_native_H4_Regge_S3.py": "2f5d9e082b84e1bc6e1db1af6aadc7882428662e6caaa1bf324d8265909cb5e4",
+    "analysis/w33_20261008_20apt_exact_thermal_spectrum.py": "6cc42ca4766e073d3efdaa979daa64403155c61518279c8714a289fde14d6a03"
+  },
+  "Lorentzian_slab": {
+    "status": "PASS",
+    "f_vector": [
+      240,
+      2280,
+      6240,
+      6600,
+      2400
+    ],
+    "edge_squared_lengths_at_a1_tau_half": {
+      "spatial": 1,
+      "cross_diagonal": "3/4",
+      "vertical": "-1/4"
+    },
+    "edge_type_counts": {
+      "3": 720,
+      "4": 1440,
+      "-1": 120
+    },
+    "triangle_type_counts": {
+      "timelike_product_edge": 1440,
+      "spacelike_mixed": 2400,
+      "spatial_boundary": 2400
+    },
+    "exact_Gram_types": [
+      {
+        "cut": 0,
+        "Gram": [
+          [
+            "-1/4",
+            "-1/4",
+            "-1/4",
+            "-1/4"
+          ],
+          [
+            "-1/4",
+            "3/4",
+            "1/4",
+            "1/4"
+          ],
+          [
+            "-1/4",
+            "1/4",
+            "3/4",
+            "1/4"
+          ],
+          [
+            "-1/4",
+            "1/4",
+            "1/4",
+            "3/4"
+          ]
+        ],
+        "determinant": "-1/8",
+        "product_basis": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "dt_squared_norm": -1
+      },
+      {
+        "cut": 1,
+        "Gram": [
+          [
+            "1",
+            "1",
+            "1/2",
+            "1/2"
+          ],
+          [
+            "1",
+            "3/4",
+            "1/4",
+            "1/4"
+          ],
+          [
+            "1/2",
+            "1/4",
+            "3/4",
+            "1/4"
+          ],
+          [
+            "1/2",
+            "1/4",
+            "1/4",
+            "3/4"
+          ]
+        ],
+        "determinant": "-1/8",
+        "product_basis": [
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "dt_squared_norm": -1
+      },
+      {
+        "cut": 2,
+        "Gram": [
+          [
+            "1",
+            "1/2",
+            "1/2",
+            "1/2"
+          ],
+          [
+            "1/2",
+            "1",
+            "1",
+            "1/2"
+          ],
+          [
+            "1/2",
+            "1",
+            "3/4",
+            "1/4"
+          ],
+          [
+            "1/2",
+            "1/2",
+            "1/4",
+            "3/4"
+          ]
+        ],
+        "determinant": "-1/8",
+        "product_basis": [
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "dt_squared_norm": -1
+      },
+      {
+        "cut": 3,
+        "Gram": [
+          [
+            "1",
+            "1/2",
+            "1/2",
+            "1/2"
+          ],
+          [
+            "1/2",
+            "1",
+            "1/2",
+            "1/2"
+          ],
+          [
+            "1/2",
+            "1/2",
+            "1",
+            "1"
+          ],
+          [
+            "1/2",
+            "1/2",
+            "1",
+            "3/4"
+          ]
+        ],
+        "determinant": "-1/8",
+        "product_basis": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ]
+        ],
+        "dt_squared_norm": -1
+      }
+    ],
+    "all_2400_simplex_signatures": "one negative, three positive, by exact product congruence",
+    "symbolic_all_simplex_determinant": "-a^6*tau^2/2",
+    "each_simplex_volume": "sqrt(2)*a^3*tau/48",
+    "total_spacetime_volume": "50*sqrt(2)*a^3*tau",
+    "time_covector_squared_norm": -1,
+    "time_function": "t=0 on bottom,t=tau on top, affine on simplices; dt is timelike. This global time function excludes causal closed curves in the product slab.",
+    "timelike_hinges": 1440,
+    "each_timelike_hinge_area": "a*tau/2",
+    "timelike_deficit_max_error": 0.0,
+    "spatial_edge_deficit": 0.12838822047571252,
+    "product_curvature": "Only the spatial-edge x interval surfaces have curvature; their two timelike triangular subdivisions carry the same Euclidean-normal-plane deficit. Other mixed hinges are flat subdivision or unfolded spatial-face interiors. Constant-time boundaries have K=0.",
+    "static_reduced_Regge_action": "tau*(720*a*delta-50*sqrt(2)*Lambda*a^3), omitting common1/(8piG)",
+    "static_lapse_constraint": "Lambda*a^2=72*delta/(5*sqrt(2))",
+    "static_scale_stationarity": "Lambda*a^2=24*delta/(5*sqrt(2))",
+    "no_simultaneous_static_scale_and_lapse_stationarity": true,
+    "boundary_variation_scope": "The two-parameter static ansatz lets a and tau vary. Its failure is not a claim about all independent Regge variations with fixed boundary spatial edges. A continuous-time homogeneous ADM extension below independently tests static bulk equations.",
+    "geometric_scope": "An explicit supplied piecewise-flat Lorentzian metric on the prior native S3xI triangulation. Not a spacetime metric derived from W33, a Regge vacuum, constraint closure or continuum limit."
+  },
+  "conditional_ADM_code_source": {
+    "status": "PASS",
+    "ADM_assumption": "Import the GR ADM action in8piG=1units and restrict g_ij=a(t)^2 g0_ij,N=N(t),shift0. Regge integrates the spatial curvature; KijKij-K^2=-6(adot/(Na))^2.",
+    "gravity_Lagrangian": "-150*sqrt(2)*a*adot^2/N+N*(720*delta*a-50*sqrt(2)*Lambda*a^3)",
+    "code_source": "H_exc=H_CSS+60I=sum_v(I-A_v)+sum_f(I-B_f), with the prior60qubit star/octagon stabilizers. Use i<psi|dot psi>-N*mu<psi|H_exc|psi>,norm psi=1.",
+    "code_lowest_excitation_energy": 4,
+    "code_ground_energy": 0,
+    "code_ground_degeneracy": 4,
+    "matter_assumptions": "Supplied positive energy scale mu; all code energy is smeared uniformly over native S3 and is independent of a (dust pressure0). This is a named homogeneous coupling, not a native H4check-face embedding or a derived local stress tensor.",
+    "full_homogeneous_constraint": "-E*mu - 50*sqrt(2)*Lambda*a**3 + 720*a*delta + 150*sqrt(2)*a*adot**2/N**2",
+    "Friedmann_equation": "(adot/(N*a))^2=Lambda/3-k_eff/a^2+mu*E/(150*sqrt(2)*a^3)",
+    "effective_curvature": "k_eff=24*delta/(5*sqrt(2))",
+    "matter_density": "rho=mu*E/(50*sqrt(2)*a^3), pressure=0",
+    "proper_time_acceleration": "addot=Lambda*a/3-mu*E/(300*sqrt(2)*a^2)",
+    "static_excited_solution": {
+      "a_star": "E*mu/(480*delta)",
+      "Lambda_star": "552960*sqrt(2)*delta**3/(E**2*mu**2)"
+    },
+    "static_excited_solution_exists_for_positive_E": true,
+    "static_excited_solution_stable": false,
+    "exact_linear_instability": "delta_addot=Lambda_star*delta_a; positive Lambda_star gives exponential growth.",
+    "code_ground_has_no_positive_radius_static_solution": true,
+    "power_law_extension": {
+      "supplied_energy": "mu*E*a^(-p)",
+      "equation_of_state": "w=p/3",
+      "static_radius_equation": "a^(p+1)=(p+3)*mu*E/(2*C), C=720*delta",
+      "static_curvature_relation": "Lambda*a^2=(p+1)*C/((p+3)*D), D=50*sqrt(2)",
+      "linear_growth_squared": "(p+1)*C/(B*a_star^2), B=150*sqrt(2)",
+      "all_p_greater_than_minus_one_unstable": true,
+      "scope": "An exact no-go inside the supplied homogeneous ADM/power-law spectral-source family. Dust p=0,radiation p=1 and stiff p=3 cannot stabilize the static branch. This is not a theorem excluding nonstatic universes, other matter actions, extra moduli or inhomogeneous dynamics."
+    },
+    "normalization_boundary": "The choice H_exc=H_CSS+60I and mu is supplied. A different vacuum-energy reference changes gravitational sources; no vacuum-energy cancellation or prediction of Newton or cosmological constants follows.",
+    "dynamics_scope": "A fully specified conditional homogeneous gravity/code-source action and its constraint, beyond two uncoupled carriers. ADM gravity, smearing and energy scale are independent assumptions. No local matter constraints, continuum recovery or stable physical vacuum is derived."
+  },
+  "literature": [
+    "https://arxiv.org/abs/2312.11639",
+    "https://arxiv.org/abs/1908.10022"
+  ],
+  "boundary": "The exact metric and conditional action do not complete gravity, derive physical constants or solve the TOE."
+}

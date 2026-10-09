@@ -1,0 +1,55 @@
+name: Pass11758-11768 geometry global currents Lorentzian sources
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11758*.py
+      - analysis/w33_pass11759_11765_geometry_flavor_stabilization.py
+      - analysis/w33_pass11767*.py
+      - analysis/w33_pass11768*.py
+      - tests/test_w33_pass11758*.py
+      - tests/test_w33_pass11767*.py
+      - .github/workflows/pass11758-11768-geometry-global-current.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Frozen owned and incoming scientific regressions
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11758_11765_geometry_flavor_stabilization.py
+          tests/test_w33_pass11758_smooth_snapshot_followthrough.py
+          tests/test_w33_pass11767_11768_global_current_lorentzian_source.py
+          tests/test_w33_pass11767_characteristic_bridges.py
+          tests/test_w33_pass11750_11757_integral_geometry_and_flux_dynamics.py
+          tests/test_w33_pass11766_compact_real_selector.py
+          tests/test_w33_20261008*.py
+      - name: Replay metric HYM harmonic approximation
+        run: python analysis/w33_pass11758_metric_harmonic_galerkin.py
+      - name: Replay exact geometric flavor and stabilization investigations
+        run: python analysis/w33_pass11759_11765_geometry_flavor_stabilization.py
+      - name: Follow through on the newly certified smooth polynomial
+        run: python analysis/w33_pass11758_smooth_snapshot_followthrough.py
+      - name: Replay rational global Lie witness
+        run: python analysis/w33_pass11767_global_current_algebra.py
+      - name: Replay field-specific current bridges
+        run: python analysis/w33_pass11767_characteristic_bridges.py
+      - name: Replay Lorentzian geometry and conditional source equations
+        run: python analysis/w33_pass11768_lorentzian_h4_code_source.py
+      - name: Full incoming file intake
+        run: python analysis/w33_pass11758_11768_github_intake.py
+      - name: Check regenerated owned certificates
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11758_11765_geometry_flavor_stabilization.py
+          tests/test_w33_pass11758_smooth_snapshot_followthrough.py
+          tests/test_w33_pass11767_11768_global_current_lorentzian_source.py
+          tests/test_w33_pass11767_characteristic_bridges.py
