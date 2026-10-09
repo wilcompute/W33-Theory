@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "chosen_edge": [
+    0,
+    40
+  ],
+  "eight_cycle_edges": [
+    0,
+    4,
+    5,
+    53,
+    52,
+    17,
+    16,
+    1
+  ],
+  "exact_integer_left_null_weight_histogram": {
+    "0": 4,
+    "1": 152,
+    "2": 4
+  },
+  "exact_weighted_divergence_zero": true,
+  "exact_weight_sum": 160,
+  "chosen_position": "q=-a*V_e0/||V_e0||\u00b2; exactly one of 160 affine factors is zero",
+  "previously_zero_scalar_barrier": "V_CS(q)=0, since z_e0=0",
+  "exact_new_lower_rational": "25600/77571",
+  "exact_new_lower_decimal": 0.330020239522502,
+  "numerical_optimal_local_potential": 0.34707576615770264,
+  "finite_radius_support_caveat": "Pointwise at one special q: by continuity the lower extends positively to some unspecified small neighborhood. It does NOT imply a uniform global mass gap or control other classical zeros.",
+  "proof": "At every q, for any w with U^T w=0 and w_i=0 at vanishing z_i, weighted Cauchy yields Vopt(q)>=a\u00b2 (sum w)^2/sum_i w_i\u00b2/z_i\u00b2. The constructed alternating Levi 8-cycle c has U^Tc=0 and sum c=0, hence w=1-c works. q is chosen so z_i=a t_i and a^4=1/400; exact fraction lower produced above."
+}

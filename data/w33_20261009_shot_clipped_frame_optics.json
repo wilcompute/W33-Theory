@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "frames": 1200,
+  "shots_per_frame": 200,
+  "corrupted_shots_arbitrary": 40,
+  "total_shots": 240000,
+  "clip_per_shot_T": 0.15,
+  "seeded_runs": {
+    "no_optical_signal": {
+      "n": 36,
+      "rejections": 0,
+      "median_ratio": 0.16384498739564693,
+      "first": {
+        "reject": false,
+        "score": 0.09714569902068648,
+        "threshold": 1.7631040743155377,
+        "ratio": 0.0550992425438072
+      }
+    },
+    "signal_proxy": {
+      "n": 36,
+      "rejections": 36,
+      "median_ratio": 3.7674250998046057,
+      "first": {
+        "reject": true,
+        "score": 7.615198895636971,
+        "threshold": 2.036283669195381,
+        "ratio": 3.7397534591268653
+      }
+    }
+  },
+  "adversary_spike_value": "1e8 times randomized frame sign, chosen after randomization",
+  "theory": "For clean clip-frame-vector z0 independent of randomized r, with at most M arbitrary bad raw shots and |good detector mismatch|<=dQ2, the fully clipped frame vector zobs obeys ||zobs-z0||1<=d sum Q2bar+2TM/L and ||zobs-z0||2<=d||Q2bar||2+2TM/L. Hoeffding on r.z0 gives unconditional sharp-null Type-I <=alpha with data-adaptive safe cutoff e1+sqrt(2ln(2/alpha))*(||zobs||2+e2). No independent glitches or noise samples are needed.",
+  "hardware_requirements": "Requires trusted every-shot clipping before frame means, trusted Q2, a credible bound M on total arbitrary shot corruption OR a physical upper amplitude cap. Without a certified bound, effective false positive protection is not claimed. Strongly correlated clean detector drift is allowed only if independent of randomized signs.",
+  "signal_boundary": "Synthetic quartic proxy injected in detector observations; no observed optical nonlinearity, gate or self-entangled photon."
+}

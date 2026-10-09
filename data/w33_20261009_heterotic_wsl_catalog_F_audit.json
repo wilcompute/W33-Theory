@@ -1,0 +1,2074 @@
+{
+  "status": "PASS",
+  "catalog_fingerprints": {
+    ".dbd": {
+      "sha256": "cd382682f439f9e1909da5f37091e74357eb32a8afc4bb9d725f56da71cd8070",
+      "lines": 170,
+      "C_records": 170,
+      "C_degree_histogram": {
+        "3": 4,
+        "4": 6,
+        "5": 160
+      },
+      "sample_record": [
+        "d_1",
+        "bd_9",
+        "n_78"
+      ]
+    },
+    ".mu": {
+      "sha256": "3f336d771ed7e54daa6d1fec4176da20e50b942a2dec650e1c3ef0f7726dd254",
+      "lines": 51,
+      "C_records": 51,
+      "C_degree_histogram": {
+        "3": 3,
+        "5": 48
+      },
+      "sample_record": [
+        "bl_1",
+        "n_6",
+        "l_2"
+      ]
+    },
+    ".ch": {
+      "sha256": "63a039510e2050c8ba5c52a392420012a9a15fda93b9488e056cad481155078e",
+      "lines": 369,
+      "C_records": 0,
+      "C_degree_histogram": {},
+      "sample_record": null
+    },
+    ".w": {
+      "sha256": "2e554373009ad24445071d2319f5e4c67f12542b5fdbfbdd6e1494ca0fa72beb",
+      "lines": 65,
+      "C_records": 0,
+      "C_degree_histogram": {},
+      "sample_record": null
+    },
+    ".model": {
+      "sha256": "a395b6806c2244470df1833553337e58fed6e20a93568c6f8b1212cb6868127e",
+      "lines": 14,
+      "C_records": 0,
+      "C_degree_histogram": {},
+      "sample_record": null
+    },
+    ".sp": {
+      "sha256": "6e6a25b992927ea35abba0b1d614e277902a3867471f575725eab59f7e85c755",
+      "lines": 370,
+      "format": "S named k/dim/q and associated metadata; not an exhaustive superpotential list"
+    }
+  },
+  "total_finite_named_C_records": 221,
+  "distinct_named_C_multisets": 221,
+  "triplet_n81_n17_n82_corrected_selection_pass": true,
+  "triplet_n81_n17_n82_present_in_limited_exports": false,
+  "finite_catalog_only_positive_mask": "Source C entries give only finite named channel coupling candidates; their matching rank is a LOWER bound on necessary-rule structural matching capacity, not a certified realized matrix rank or physical nonzero amplitude.",
+  "candidate_audit": [
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_81"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_81"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_83"
+      ],
+      "sources_exact_named_full_monomial_matches": 10,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 5,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": [
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "fields": [
+            "d_1",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "fields": [
+            "d_2",
+            "bd_6",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "fields": [
+            "d_2",
+            "bd_8",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "fields": [
+            "d_3",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "fields": [
+            "d_4",
+            "bd_3",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "fields": [
+            "d_4",
+            "bd_5",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "fields": [
+            "d_5",
+            "bd_2",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "fields": [
+            "d_5",
+            "bd_4",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_83"
+      ],
+      "sources_exact_named_full_monomial_matches": 10,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 5,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": [
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "fields": [
+            "d_1",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "fields": [
+            "d_2",
+            "bd_6",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "fields": [
+            "d_2",
+            "bd_8",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "fields": [
+            "d_3",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "fields": [
+            "d_4",
+            "bd_3",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "fields": [
+            "d_4",
+            "bd_5",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "fields": [
+            "d_5",
+            "bd_2",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "fields": [
+            "d_5",
+            "bd_4",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_88"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_88"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_90"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_90"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_81",
+        "n_86"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_81",
+        "n_86"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_83",
+        "n_86"
+      ],
+      "sources_exact_named_full_monomial_matches": 10,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 5,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": [
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "fields": [
+            "d_1",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "fields": [
+            "d_2",
+            "bd_6",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "fields": [
+            "d_2",
+            "bd_8",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "fields": [
+            "d_3",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "fields": [
+            "d_4",
+            "bd_3",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "fields": [
+            "d_4",
+            "bd_5",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "fields": [
+            "d_5",
+            "bd_2",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "fields": [
+            "d_5",
+            "bd_4",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_83",
+        "n_86"
+      ],
+      "sources_exact_named_full_monomial_matches": 10,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 5,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": [
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "fields": [
+            "d_1",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "fields": [
+            "d_2",
+            "bd_6",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "fields": [
+            "d_2",
+            "bd_8",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "fields": [
+            "d_3",
+            "bd_7",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "fields": [
+            "d_4",
+            "bd_3",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "fields": [
+            "d_4",
+            "bd_5",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "fields": [
+            "d_5",
+            "bd_2",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "fields": [
+            "d_5",
+            "bd_4",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_86",
+        "n_88"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_86",
+        "n_88"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_86",
+        "n_90"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_86",
+        "n_90"
+      ],
+      "sources_exact_named_full_monomial_matches": 0,
+      "finite_couplings_entirely_in_vev_support": 0,
+      "source_catalog_direct_colored_mask_rank": 0,
+      "source_catalog_direct_colored_mask": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "finite_C_catalog_possible_outsider_linear_terms": 0,
+      "example_possible_outsider_tadpoles": [],
+      "full_named_matches": []
+    }
+  ],
+  "source_scope": "The actual WSL exports are channel-specific and usually degree<=5. The absence of a degree8+ string coupling in them is not a worldsheet selection veto or a zero amplitude. The SP file is a state list, W is a weight catalog. Duplicate field-name lists and unknown channel conventions may occur.",
+  "F_term_conditional": "If a nonzero W coefficient multiplies n81*n17*n82 then F_n81 includes c*VEV(n17)*VEV(n82), nonzero for all 16 plus-positive candidates unless other terms cancel. The actual CFT coefficient and cancellations have NOT been computed.",
+  "remedy": "Need complete sector fixed point labels, constructing elements, gamma phases and vertex operator amplitudes in the actual model, not just k/q/R residues."
+}

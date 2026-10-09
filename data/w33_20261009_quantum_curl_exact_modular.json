@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "configuration": "q=a*(e_0-e_39)/10, a=1/sqrt20; q is on physical 78D sum-zero configuration slice",
+  "physical_dimension": 78,
+  "dual_derivative_basis_verified_exactly": true,
+  "antisymmetric_curvature_entry": [
+    35,
+    46
+  ],
+  "approximate_nonzero_curl": 0.2325660547011069,
+  "modular_certificates": [
+    {
+      "prime": 10007,
+      "Cij_mod": 5309,
+      "Cji_mod": 0,
+      "antisym_nonzero_residue": 5309,
+      "det_T_nonzero_mod_p": true
+    },
+    {
+      "prime": 10009,
+      "Cij_mod": 44,
+      "Cji_mod": 0,
+      "antisym_nonzero_residue": 44,
+      "det_T_nonzero_mod_p": true
+    }
+  ],
+  "exact_formula": "C=32000*T^-1*u.T*diag(t*(1-u*T^-1*b))*v where u=(40U)D[40(D.T D)^-1],v=(40V)D,t=400+v[:,0],T=u.T diag(t^2)u,b=u.T(t^2)",
+  "theorem": "Curvature of the quantum Hamiltonian first-order connection is nonzero as an exact rational tensor (certified modulo two primes). Therefore no local scalar U(1) gauge can remove the connection around the specified point. Positivity-improving scalar Schr. theorems cannot be applied without a new argument.",
+  "boundary": "No conclusion about actual quantum vacuum irrep or degeneracy, global spectral lower enclosure, experimental magnetism or the Theory of Everything."
+}

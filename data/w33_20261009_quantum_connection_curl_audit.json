@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "projected_coordinate_dimension": 78,
+  "probe_results": [
+    {
+      "q_stddev": 0,
+      "max_curl": 2.6645352591003757e-15,
+      "curl_frob": 3.191081159743924e-14,
+      "minimum_kinetic_metric_eigenvalue": 0.07752551286084089,
+      "gauge_connection_norm": 1.144268909833029e-15,
+      "sharp_pointwise_scalar_barrier": 0.39999999999999897
+    },
+    {
+      "q_stddev": 0.01,
+      "max_curl": 0.14120001876434596,
+      "curl_frob": 1.9873174092738601,
+      "minimum_kinetic_metric_eigenvalue": 0.07054117255927538,
+      "gauge_connection_norm": 0.1741493384777483,
+      "sharp_pointwise_scalar_barrier": 0.39557549540531095
+    },
+    {
+      "q_stddev": 0.03,
+      "max_curl": 0.41196222738697497,
+      "curl_frob": 5.593010388995681,
+      "minimum_kinetic_metric_eigenvalue": 0.06054753412446133,
+      "gauge_connection_norm": 0.4832392432584644,
+      "sharp_pointwise_scalar_barrier": 0.36750848624901
+    },
+    {
+      "q_stddev": 0.1,
+      "max_curl": 10.118446782786117,
+      "curl_frob": 113.21368558949412,
+      "minimum_kinetic_metric_eigenvalue": 0.0045113643326150305,
+      "gauge_connection_norm": 3.412483110222405,
+      "sharp_pointwise_scalar_barrier": 0.09995809706046466
+    },
+    {
+      "q_stddev": 0.3,
+      "max_curl": 1.6461689644250113,
+      "curl_frob": 24.006114573820007,
+      "minimum_kinetic_metric_eigenvalue": 0.039421545398953234,
+      "gauge_connection_norm": 1.7973579389534964,
+      "sharp_pointwise_scalar_barrier": 0.6034924195304396
+    }
+  ],
+  "exact_differential_form": "K=U^T diag(z^2) U, b=a U^T(z^2), A=K^-1 b, dA/dq=2 K^-1 U^T diag(z*(a-U A)) V; zero-curl at symmetric q=0 does not imply zero-curl elsewhere.",
+  "positive_magnetic_curl_at_generic_points": true,
+  "proof_scope": "Analytic exact derivative formula, finite-difference checks and numerical lower nonzero curl witnesses at explicitly seeded Gaussian probes. Rational exact certificate of nonzero entry can be added before claiming machine-checkable algebraic proof.",
+  "implication": "A naive scalar positive-improving Perron-Frobenius or nodal theorem cannot be invoked by simply gauging away all first-order currents. No conclusion on actual ground irrep, degeneracy or numerical gap.",
+  "author": "independent full-H ground-state symmetry obstruction, not a physical magnetic field."
+}

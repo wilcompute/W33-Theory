@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "graph": "W33 80-vertex,160-Levi-edge connected bipartite incidence graph",
+  "universal_native_deck_rank": 81,
+  "chosen_periodic_deck_rank": 3,
+  "total_coordinate_three_chord_quotients": 85320,
+  "minimal_anisotropy_coordinate_basis": {
+    "chord_basis_indices": [
+      2,
+      64,
+      76
+    ],
+    "original_edge_indices": [
+      55,
+      138,
+      154
+    ],
+    "normalized_tensor": [
+      [
+        0.006328125,
+        7.8125e-05,
+        7.8125e-05
+      ],
+      [
+        7.8125e-05,
+        0.006328125,
+        7.8125e-05
+      ],
+      [
+        7.8125e-05,
+        7.8125e-05,
+        0.006328125
+      ]
+    ],
+    "eigenvalues": [
+      0.00625,
+      0.00625,
+      0.006484375
+    ],
+    "anisotropy_eigenvalue_ratio": 1.037499999999999,
+    "determinant": 2.532958984374995e-07,
+    "heat_exponent_t_minus_d_over_2": "-3/2 for each of these chosen Z^3 periodic covers"
+  },
+  "maximal_anisotropy_coordinate_basis": {
+    "chord_basis_indices": [
+      27,
+      36,
+      45
+    ],
+    "original_edge_indices": [
+      89,
+      101,
+      113
+    ],
+    "normalized_tensor": [
+      [
+        0.006328125,
+        -0.002109375,
+        -0.002109375
+      ],
+      [
+        -0.002109375,
+        0.006328125,
+        -0.002109375
+      ],
+      [
+        -0.002109375,
+        -0.002109375,
+        0.006328125
+      ]
+    ],
+    "eigenvalues": [
+      0.002109375,
+      0.0084375,
+      0.0084375
+    ],
+    "anisotropy_eigenvalue_ratio": 4.000000000000022,
+    "determinant": 1.5016937255859308e-07,
+    "heat_exponent_t_minus_d_over_2": "-3/2 for each of these chosen Z^3 periodic covers"
+  },
+  "anisotropy_ratio_quantiles": {
+    "0": 1.037499999999999,
+    "0.01": 1.0374999999999999,
+    "0.1": 1.0375000000000005,
+    "0.5": 1.1106335001877083,
+    "0.9": 2.002739746508194,
+    "0.99": 2.071933142827209,
+    "1": 4.000000000000022
+  },
+  "exact_rank_explanation": "For every 3 independent free chord periods, coordinate projection Z^81 -> Z^3 is surjective and defines a connected Z^3 periodic quotient; projected H1 Gram is positive definite because the 81 chord columns map injectively to H1.",
+  "physical_caution": "Every quotient imposes rank3 by hand. Heat exponent3 is a consequence of externally selecting a Z^3 deck. The native universal rank is81. The shape of K and its eigenvalue ratio depend on choice of chord coordinate basis and Euclidean metric, hence no invariant spontaneous spatial isotropy or Lorentzian theory is inferred.",
+  "reproducibility": "Exhaustive numerical eigvalsh of all 85320 3x3 projected Gram minors, deterministic lexicographic spanning tree; numerical extrema not certified exact rational inequalities."
+}
