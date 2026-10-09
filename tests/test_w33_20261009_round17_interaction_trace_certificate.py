@@ -50,5 +50,9 @@ def test_native_five_orbit_witnesses_two_primes():
    assert len({tuple(sorted(s.items())) for s in onebody})==1
    assert len({(s["17"],s["19"]) for s in linear})==5
    assert len({s["17"] for s in linear})>1
+   expected_17 = ([438086,438086,110922,221378,327630] if prime==1000003 else [146937,146937,525553,328325,344165])
+   expected_19 = ([466015,404698,14902,764696,185564] if prime==1000003 else [70412,7637,26776,920814,645036])
+   assert [s["17"] for s in linear] == expected_17
+   assert [s["19"] for s in linear] == expected_19
  finally:
   m.MOD,m.NMAX=original_mod,original_max

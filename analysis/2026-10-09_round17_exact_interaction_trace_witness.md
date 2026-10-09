@@ -28,16 +28,16 @@ The selected three oriented Levi flags receive rational unit phases:
 z1=(15+8i)/17, z2=(4-3i)/5, z3=(5+12i)/13,
 and reverse hops receive their complex conjugates. All entries lie in Q(i).
 
-Map the calculations to F_p[i]=F_p[t]/(t^2+1) at p=1000003 and p=1000033. These are prime and neither divides the denominators. A nonzero modular difference therefore proves a nonzero characteristic-zero rational Gaussian coefficient.
+Reduce the calculations into the algebra F_p[t]/(t^2+1) at p=1000003 and p=1000033. Both moduli are prime and neither divides the denominators. At p=1000003 this algebra is a field (p=3 mod 4); at p=1000033 the polynomial splits (p=1 mod 4), so it is a commutative quotient algebra rather than a field. Both are valid modular reduction rings. A nonzero modular difference in either algebra proves that the characteristic-zero Gaussian-rational coefficient is nonzero.
 
 For p=1000003, the five native-orbit coefficient vectors:
-- [U]Tr(H^17): 378712, 378712, 771233, 660083, 489862.
-- [U]Tr(H^19): 445581, 600249, 263943, 671828, 115030.
+- [U]Tr(H^17): 438086, 438086, 110922, 221378, 327630.
+- [U]Tr(H^19): 466015, 404698, 14902, 764696, 185564.
 - [U^2]Tr(H^18): 519536, 519536, 640932, 475300, 103186.
 
 For p=1000033:
-- [U]Tr(H^17): 714549, 714549, 795646, 489917, 20245.
-- [U]Tr(H^19): 687939, 842535, 790909, 732697, 823449.
+- [U]Tr(H^17): 146937, 146937, 525553, 328325, 344165.
+- [U]Tr(H^19): 70412, 7637, 26776, 920814, 645036.
 - [U^2]Tr(H^18): 725087, 725087, 801880, 147219, 408949.
 
 The paired (N=17,N=19) signatures are distinct for all five orbits at each prime. Therefore every pair of the five interacting Hamiltonian families has different trace polynomials as functions of U over Q(i). The first detected nonconstant U-linear order was 17. The scan also found identical one-body traces across all five through order 32 over both primes; modular equality alone does not prove exact equality over Q(i) and the full exact isospectrality comes from Round14.

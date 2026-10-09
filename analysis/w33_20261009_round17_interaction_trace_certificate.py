@@ -51,7 +51,7 @@ def coeffs_for_orbit(edges,rep):
  def trProd(i,j):
   ar,ai=G[i];br,bi=G[j]
   return int((np.sum((ar*br.T-ai*bi.T)%MOD))%MOD)
- linear={str(n+1):int(np.trace(G[n][0])%MOD) for n in range(0,NMAX+1,2)}
+ linear={str(n+1):int(((n+1)*np.trace(G[n][0]))%MOD) for n in range(0,NMAX+1,2)}
  quadratic={}
  for n in range(2,NMAX+1,2):
   s=sum(trProd(a,n-2-a) for a in range(n-1))%MOD
@@ -75,7 +75,7 @@ def main():
  assert len({r["linear"]["17"] for r in results})>1
  assert len({(r["linear"]["17"],r["linear"]["19"]) for r in results})==5
  assert len({tuple(sorted(r["onebody"].items())) for r in results})==1
- out=dict(status="PASS",modulus=MOD,field="F_p[i], i^2=-1",phase_gaussian_rationals=[[15,8,17],[4,-3,5],[5,12,13]],max_trace_moment=NMAX,results=results,meaning="A modular discrepancy certifies a rational polynomial coefficient is unequal; equality modulo one prime is only a negative screening result.")
+ out=dict(status="PASS",modulus=MOD,reduction_algebra="F_p[t]/(t^2+1)",phase_gaussian_rationals=[[15,8,17],[4,-3,5],[5,12,13]],max_trace_moment=NMAX,results=results,meaning="A modular discrepancy certifies a rational polynomial coefficient is unequal; equality modulo one prime is only a negative screening result.")
  target=ROOT/("data/w33_20261009_round17_interaction_trace_certificate"+("" if MOD==1000003 else "_p"+str(MOD))+".json")
  target.write_text(json.dumps(out,indent=2)+"\n")
  print("DONE",flush=True)
