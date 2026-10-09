@@ -1,3 +1,9 @@
+# Scope correction — dressed antiunitary found
+
+The bare-K noninvariance verified below remains exact, but the proposed Pass11769 Hamiltonian **does possess** a different antiunitary symmetry that exchanges positions and momenta with the bipartition sign matrix D. See `analysis/2026-10-08_dressed_current_antiunitary.md` and `analysis/w33_20261008_dressed_current_antiunitary.py`. Thus do **not** infer intrinsic microscopic T breaking, physical CP or a thermodynamic arrow from the result below. All 160 currents are invariant under the dressed antiunitary.
+
+---
+
 # Canonical time reversal of the Pass11769 current Hamiltonian — exact firewall
 
 Status: proved for ordinary Schrödinger complex-conjugation K only; NOT a classification of all possible antiunitary symmetries or a statement about experimental CP/CPT.
