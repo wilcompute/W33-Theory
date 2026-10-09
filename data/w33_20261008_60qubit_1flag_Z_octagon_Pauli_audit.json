@@ -1,0 +1,2277 @@
+{
+  "Z_checks": 20,
+  "all_uncorrectable_flagged_cases": [
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 0,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 1,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 2,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 3,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 4,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 5,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 6,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 7,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 8,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 9,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 10,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 11,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 12,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 13,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 14,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 15,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 16,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 17,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 18,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        0,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        1,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 4,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        2
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        2,
+        3
+      ],
+      "X_min_weight_threshold": 0,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 0,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        2
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    },
+    {
+      "Pauli_output_indices": [
+        3,
+        3
+      ],
+      "X_min_weight_threshold": 1,
+      "Z_min_weight_threshold": 4,
+      "data_X_weight": 1,
+      "data_Z_weight": 4,
+      "face": 19,
+      "flag_X_measurement_is_minus": true,
+      "gate_index": 5,
+      "gate_type": "data"
+    }
+  ],
+  "all_uncorrectable_unflagged_cases": [],
+  "data_qubits": 60,
+  "example_ambiguous_flag_syndrome": null,
+  "exhaustive_single_post_gate_two_qubit_Pauli_fault_cases": 3000,
+  "first_uncorrectable_flagged_fault": {
+    "Pauli_output_indices": [
+      0,
+      2
+    ],
+    "X_min_weight_threshold": 0,
+    "Z_min_weight_threshold": 4,
+    "data_X_weight": 0,
+    "data_Z_weight": 4,
+    "face": 0,
+    "flag_X_measurement_is_minus": true,
+    "gate_index": 4,
+    "gate_type": "data"
+  },
+  "first_uncorrectable_unflagged_fault": null,
+  "flagged_fault_count": 640,
+  "ideal_followup_decoder_unambiguous_for_single_post_CNOT_Pauli_faults": true,
+  "ideal_followup_flag_and_full_syndrome_ambiguous_coset_keys": 0,
+  "ideal_followup_full_syndrome_plus_flag_lookup_distinct_outcome_keys": 900,
+  "per_face_data_CNOT": 8,
+  "per_face_flag_CNOT": 2,
+  "per_face_total_CNOT": 10,
+  "post_gate_Pauli_fault_model_only": true,
+  "prep_readout_idle_correlated_multifaults_not_covered": true,
+  "restricted_single_fault_detection_certificate_not_full_fault_tolerance": true,
+  "syndrome_and_flag_circuit_notes": "Flag |+> / X basis; syndrome |0> / Z basis; data-controls and syndrome target; two flag-controls after third and fifth data-CNOT, straddling fourth (and fifth) with harmless tail errors on flag-gate faults.",
+  "uncorrectable_flagged_fault_cases": 160,
+  "uncorrectable_unflagged_fault_cases": 0
+}

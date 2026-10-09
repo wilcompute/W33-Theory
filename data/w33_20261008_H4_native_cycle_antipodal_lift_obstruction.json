@@ -1,0 +1,82 @@
+{
+  "600cell_mirror_minus_relation_disjoint_from_original_edges": true,
+  "X_triangle_actual_120vertex_lift_classification": {
+    "native_closed": 10,
+    "non_native": 30
+  },
+  "X_triangle_all_plus_records": [
+    {
+      "check": 21,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 22,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 23,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 24,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 25,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 27,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 32,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 34,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 38,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    },
+    {
+      "check": 39,
+      "closed_n_cycle": true,
+      "lift_cycle_length": 3,
+      "native": true
+    }
+  ],
+  "X_triangles_all_plus_actual_H4_edges": 10,
+  "Z_octagons_with_all_eight_original_H4_edges": 0,
+  "Z_octagons_with_mixed_plus_minus_edge_counts": {
+    "2": 5,
+    "4": 10,
+    "6": 5
+  },
+  "actual_600cell_native_plus_relation_degree": 12,
+  "geometry_boundary": "Native 600-cell edge graph is only the + relation; the chiral-paired PLUS-UNION-MINUS graph needed for the W33 support embedding is a different 24-regular graph.",
+  "no_native_600cell_2face_lift_of_selected_W33_octagon_boundaries_for_this_selector": true,
+  "not_exclusion_of_other_119_perfect_selectors_or_nonstandard_H4_face_relations": true,
+  "selected_W33_X_check_triangles": 40,
+  "selected_W33_Z_octagons": 20
+}

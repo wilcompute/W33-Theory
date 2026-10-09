@@ -1,0 +1,28 @@
+{
+  "4D_simplicial_f_vector": [
+    240,
+    2280,
+    6240,
+    6600,
+    2400
+  ],
+  "4D_staircase_4simplices": 2400,
+  "4D_tetrahedral_facets_total": 6600,
+  "Euler_char": 0,
+  "all_interior_tetra_facets_incident_on_2_4simplices": true,
+  "boundary": "Explicit true 4D simplicial product cobordism; time-slice topology alone does not specify causality, edge lengths, dynamical spacetime or quantum-gravitational coupling.",
+  "boundary_map_d4_GF2_rank": 2400,
+  "boundary_native_S3_tetrahedra_each_slice": 600,
+  "boundary_square_zero_GF2_verified": true,
+  "boundary_tetrahedral_facets_total": 1200,
+  "global_order_may_not_be_F20_equivariant_as_simplicial_triangulation": true,
+  "global_vertex_order_used_for_prismatic_triangulation": true,
+  "lapse_shift_ADM_constraint_algebra_not_derived": true,
+  "native_H4_spatial_S3_tetrahedra": 600,
+  "not_physical_Lorentzian_metric_or_4D_Einstein_Regge_action": true,
+  "only_boundary_tetra_facets_at_t0_and_t1": true,
+  "relative_fundamental_4_chain_boundary_equals_t0_plus_t1_S3": true,
+  "spacetime_product_topology": "S3 x [0,1]",
+  "time_slices": 2,
+  "vertices_per_slice": 120
+}

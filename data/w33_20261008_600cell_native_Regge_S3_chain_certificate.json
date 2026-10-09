@@ -1,0 +1,35 @@
+{
+  "Euler_char": 0,
+  "GF2_cellular_boundary_ranks": [
+    119,
+    601,
+    599
+  ],
+  "GF2_homology_betti_numbers": [
+    1,
+    0,
+    0,
+    1
+  ],
+  "Lambda_times_a_squared_at_stationary_relation": 0.4357640703496794,
+  "boundary_square_zero_GF2": true,
+  "boundary_topological_dimension": 3,
+  "equilateral_regge_spatial_action": "S(a)=720*a*(2pi-5 acos(1/3)) - 50*sqrt(2)*Lambda*a^3",
+  "minisuperspace_stationary_relation": "Lambda*a^2 = 24*(2pi-5 acos(1/3))/(5*sqrt(2))",
+  "native_600cell_f_vector": [
+    120,
+    720,
+    1200,
+    600
+  ],
+  "native_edge_Regge_deficit_radians": 0.12838822047571252,
+  "native_spatial_integrated_scalar_curvature_per_unit_edge_length": 184.87903748502603,
+  "no_GR_recovery_from_W33_or_physical_metric_measured": true,
+  "not_Lorentzian_4D_or_ADM_hypersurface_brackets": true,
+  "not_full_Einstein_Regge_equations": true,
+  "regular_euclidean_tetrahedron_dihedral_angle_radians": 1.2309594173407747,
+  "regular_tetrahedron_volume_for_edge_a": "sqrt(2)*a^3/12",
+  "tetrahedra_incident_on_each_edge": 5,
+  "tetrahedra_incident_on_each_triangular_face": 2,
+  "total_tetrahedron_volume_for_edge_a": "50*sqrt(2)*a^3"
+}

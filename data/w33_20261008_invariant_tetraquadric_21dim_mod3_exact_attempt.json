@@ -1,0 +1,44 @@
+{
+  "attempts": 14,
+  "coefficients_21_orbits_F3": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1
+  ],
+  "projective_P1F3_fourfold_points_examined": 256,
+  "candidate_avoids_all_F3_projective_singular_points": true,
+  "candidate_avoids_geometric_algebraic_closure_singular_points": "unknown",
+  "char0_smoothness_proven": false,
+  "unit_Groebner_charts": [],
+  "failed_charts": [
+    {
+      "chart": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Groebner_is_unit": false,
+      "basis_length": 27,
+      "wall_seconds": 29.683
+    }
+  ]
+}
