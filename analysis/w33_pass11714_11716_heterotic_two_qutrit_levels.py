@@ -216,9 +216,11 @@ def analyse_model(mod):
                         cnt[(b.get("label") == "U", s["rep"][c3[0]])] += s.get("weights", 1)
             net = (cnt[(True, "3")] + cnt[(False, "3")] - cnt[(True, "-3")] - cnt[(False, "-3")]) // 6
             netU = (cnt[(True, "3")] - cnt[(True, "-3")]) // 6
-            if best is None or abs(net) > abs(best[2]):
-                best = (c3, c2, net, netU)
-    c3, c2, net, netU = best
+            # the SM pair: exactly three net doublets, preferring a pair inside the SU(9) half (Holotrade criterion)
+            score = (abs(net) == 3, fhalf[c3] == h and fhalf[c2] == h, abs(netU) == 3)
+            if best is None or score > best[0]:
+                best = (score, (c3, c2, net, netU))
+    c3, c2, net, netU = best[1]
     res = dict(label=mod["label"], A8_half=h, net_32=net, net_32_untwisted=netU if net > 0 else -netU,
                sm_in_su9=fhalf[c3] == h and fhalf[c2] == h)
     if not res["sm_in_su9"]:

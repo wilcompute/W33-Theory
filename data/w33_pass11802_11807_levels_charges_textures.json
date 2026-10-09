@@ -1,0 +1,1869 @@
+{
+ "pass_ids": [
+  11802,
+  11803,
+  11804,
+  11805,
+  11806,
+  11807
+ ],
+ "core_models": 33,
+ "p11802_twisted_integral_profiles": {
+  "('3', '1', 'single level (9/9bar)')": 222,
+  "('1', '2', 'single level (9/9bar)')": 274,
+  "('-3', '1', 'single level (9/9bar)')": 261
+ },
+ "p11803_charge_census_integral_standard_untwisted": {
+  "(True, True, True)": 1253,
+  "(False, False, False)": 3543,
+  "(True, True, False)": 757,
+  "(False, True, False)": 500
+ },
+ "p11803_every_fractional_charge_has_fractional_occupation": true,
+ "p11804_models_class_unbalanced": 33,
+ "p11805_up_cubic_patterns": {
+  "[\"Q(1, 2) u(1, 2) Woo(3,)\"]": 31,
+  "[]": 2
+ },
+ "p11805_higgs_component_charges": [
+  "-1",
+  "0",
+  "1"
+ ],
+ "p11805_sin2_theta_w": "3/8",
+ "p11806_z6ii": {
+  "a8_models": 13,
+  "sm_in_su9": 9,
+  "untwisted_net_doublets": {
+   "1": 7,
+   "2": 2
+  }
+ },
+ "p11806_benchmark": {
+  "2V+0W3": [
+   84,
+   84
+  ],
+  "4V+0W3": [
+   84,
+   84
+  ],
+  "2V+1W3": [
+   84,
+   84
+  ],
+  "4V+1W3": [
+   84,
+   84
+  ],
+  "2V+2W3": [
+   84,
+   84
+  ],
+  "4V+2W3": [
+   84,
+   84
+  ],
+  "reading": "84 integral roots per half = D7+U1; the A8 (SU(9)) class would have 72"
+ },
+ "p11807_bracket": {
+  "nonzero": 1680,
+  "expected": 1680,
+  "non_partition": 0,
+  "coupling_over_sign": [
+   1.0
+  ]
+ },
+ "per_model": [
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_3",
+   "file": "m15.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    2,
+    5,
+    7
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 84,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 14,
+   "class_unbalanced_weights": 5,
+   "up_cubics": {
+    "Q(3,) u(3,) Woo(3,)": 6,
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_36",
+   "file": "m16.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    2,
+    7
+   ],
+   "weak_levels": [
+    4,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 104,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 68,
+   "class_unbalanced_weights": 8,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_55",
+   "file": "m17.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    2,
+    5,
+    7
+   ],
+   "weak_levels": [
+    4,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 104,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 68,
+   "class_unbalanced_weights": 8,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_73",
+   "file": "m18.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    2,
+    7
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 104,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 34,
+   "class_unbalanced_weights": 10,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_174",
+   "file": "m19.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    5,
+    7
+   ],
+   "weak_levels": [
+    4,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 84,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 14,
+   "class_unbalanced_weights": 5,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_241",
+   "file": "m20.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    3,
+    5
+   ],
+   "weak_levels": [
+    0,
+    4
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 136,
+    "(True, True, False)": 23,
+    "(False, True, False)": 44
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 134,
+   "class_unbalanced_weights": 43,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_287",
+   "file": "m21.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    6
+   ],
+   "weak_levels": [
+    3,
+    5
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 108,
+    "(True, True, False)": 22,
+    "(False, True, False)": 45
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'single level (9/9bar)')": 10,
+    "('-3', '1', 'single level (9/9bar)')": 12
+   },
+   "sm_fractional_weights": 119,
+   "class_unbalanced_weights": 37,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_669",
+   "file": "m22.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    3,
+    5
+   ],
+   "weak_levels": [
+    0,
+    4
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 76,
+    "(True, True, False)": 23,
+    "(False, True, False)": 44
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 52,
+   "class_unbalanced_weights": 24,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_695",
+   "file": "m23.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    2,
+    7
+   ],
+   "weak_levels": [
+    0,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 112,
+    "(True, True, False)": 23,
+    "(False, True, False)": 46
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 120,
+   "class_unbalanced_weights": 31,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_1078",
+   "file": "m24.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    2,
+    3,
+    7
+   ],
+   "weak_levels": [
+    0,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 96,
+    "(True, True, False)": 23,
+    "(False, True, False)": 44
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 72,
+   "class_unbalanced_weights": 32,
+   "up_cubics": {
+    "Q(3,) u(3,) Woo(3,)": 6,
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_6",
+   "file": "m25.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    2,
+    5,
+    7
+   ],
+   "weak_levels": [
+    4,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 116,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 80,
+   "class_unbalanced_weights": 6,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_129",
+   "file": "m26.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    3,
+    5
+   ],
+   "weak_levels": [
+    0,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 92,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 24,
+   "class_unbalanced_weights": 8,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_184",
+   "file": "m27.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    2,
+    3,
+    7
+   ],
+   "weak_levels": [
+    4,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 112,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 74,
+   "class_unbalanced_weights": 3,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_186",
+   "file": "m28.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    2,
+    7
+   ],
+   "weak_levels": [
+    4,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 108,
+    "(True, True, False)": 23,
+    "(False, True, False)": 44
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 118,
+   "class_unbalanced_weights": 28,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_359",
+   "file": "m29.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    8
+   ],
+   "weak_levels": [
+    1,
+    7
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 96,
+    "(True, True, False)": 22,
+    "(False, True, False)": 45
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'single level (9/9bar)')": 10,
+    "('-3', '1', 'single level (9/9bar)')": 12
+   },
+   "sm_fractional_weights": 73,
+   "class_unbalanced_weights": 34,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_407",
+   "file": "m30.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    2,
+    3
+   ],
+   "weak_levels": [
+    4,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 100,
+    "(True, True, False)": 23,
+    "(False, True, False)": 46
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 76,
+   "class_unbalanced_weights": 31,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_1105",
+   "file": "m31.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    8
+   ],
+   "weak_levels": [
+    2,
+    5
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 136,
+    "(True, True, False)": 22,
+    "(False, True, False)": 45
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'single level (9/9bar)')": 10,
+    "('-3', '1', 'single level (9/9bar)')": 12
+   },
+   "sm_fractional_weights": 135,
+   "class_unbalanced_weights": 37,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_2225",
+   "file": "m32.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    3,
+    5
+   ],
+   "weak_levels": [
+    6,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 140,
+    "(True, True, False)": 23,
+    "(False, True, False)": 46
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 146,
+   "class_unbalanced_weights": 31,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_60",
+   "file": "m33.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    6
+   ],
+   "weak_levels": [
+    2,
+    7
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 112,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 74,
+   "class_unbalanced_weights": 15,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_148",
+   "file": "m34.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    6,
+    8
+   ],
+   "weak_levels": [
+    1,
+    2
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 84,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 14,
+   "class_unbalanced_weights": 7,
+   "up_cubics": {
+    "Q(3,) u(3,) Woo(3,)": 6,
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_151",
+   "file": "m35.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    8
+   ],
+   "weak_levels": [
+    1,
+    5
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 167,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 34,
+   "class_unbalanced_weights": 17,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_384",
+   "file": "m36.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    6
+   ],
+   "weak_levels": [
+    1,
+    2
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 124,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 76,
+   "class_unbalanced_weights": 10,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_487",
+   "file": "m37.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    8
+   ],
+   "weak_levels": [
+    1,
+    3
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 104,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 68,
+   "class_unbalanced_weights": 6,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_604",
+   "file": "m38.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    6
+   ],
+   "weak_levels": [
+    3,
+    5
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 112,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 74,
+   "class_unbalanced_weights": 15,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_1807",
+   "file": "m39.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    0,
+    4,
+    6
+   ],
+   "weak_levels": [
+    1,
+    5
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 84,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 14,
+   "class_unbalanced_weights": 7,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_42",
+   "file": "m45.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_56",
+   "file": "m46.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_4",
+   "file": "m47.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_8",
+   "file": "m48.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    4,
+    6,
+    7
+   ],
+   "weak_levels": [
+    0,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 37,
+    "(True, True, False)": 25,
+    "(False, False, False)": 100,
+    "(False, True, False)": 6
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 10
+   },
+   "sm_fractional_weights": 32,
+   "class_unbalanced_weights": 16,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_33",
+   "file": "m49.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_46",
+   "file": "m50.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_45",
+   "file": "m68.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_93",
+   "file": "m69.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_20",
+   "file": "m70.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_104",
+   "file": "m71.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    5,
+    8
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 92,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 24,
+   "class_unbalanced_weights": 5,
+   "up_cubics": {
+    "Q(3,) u(3,) Woo(3,)": 6,
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_114",
+   "file": "m72.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    2,
+    5,
+    7
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 84,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 14,
+   "class_unbalanced_weights": 4,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_142",
+   "file": "m73.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    4,
+    5,
+    8
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 104,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 34,
+   "class_unbalanced_weights": 6,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_207",
+   "file": "m74.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    2,
+    4,
+    7
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 160,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('-3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 24,
+   "class_unbalanced_weights": 9,
+   "up_cubics": {
+    "Q(3,) u(3,) Woo(3,)": 6,
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_300",
+   "file": "m75.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    5,
+    7,
+    8
+   ],
+   "weak_levels": [
+    3,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 148,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 14,
+   "class_unbalanced_weights": 4,
+   "up_cubics": {
+    "Q(3,) u(3,) Woo(3,)": 6,
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_519",
+   "file": "m76.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    1,
+    7,
+    8
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 84,
+    "(True, True, False)": 23
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 15,
+    "('1', '2', 'single level (9/9bar)')": 8
+   },
+   "sm_fractional_weights": 14,
+   "class_unbalanced_weights": 4,
+   "up_cubics": {
+    "Q(3,) u(3,) Woo(3,)": 6,
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_1069",
+   "file": "m77.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_1227",
+   "file": "m78.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_10",
+   "file": "m79.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_12",
+   "file": "m80.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_35",
+   "file": "m81.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_126",
+   "file": "m82.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 3,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-I",
+   "label": "SM_20260917_561",
+   "file": "m83.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "colour_levels": [
+    4,
+    5,
+    8
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "charge_census": {
+    "(True, True, True)": 38,
+    "(False, False, False)": 76,
+    "(True, True, False)": 22,
+    "(False, True, False)": 45
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'single level (9/9bar)')": 10,
+    "('3', '1', 'single level (9/9bar)')": 12
+   },
+   "sm_fractional_weights": 53,
+   "class_unbalanced_weights": 22,
+   "up_cubics": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24,
+    "Q(3,) u(3,) Woo(3,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(1, 2) u(1, 2) Woo(3,)": 24
+   },
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_1353",
+   "file": "Z6II_03__SM_20260917_1353.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 1,
+   "colour_levels": [
+    2,
+    4,
+    7
+   ],
+   "weak_levels": [
+    1,
+    5
+   ],
+   "charge_census": {
+    "(True, True, True)": 16,
+    "(True, True, False)": 57,
+    "(False, False, False)": 96,
+    "(False, True, False)": 70
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'other 2-valued')": 21,
+    "('1', '1', 'other 2-valued')": 3,
+    "('-3', '1', 'other 2-valued')": 15,
+    "('1', '2', 'other 2-valued')": 6,
+    "('1', '2', 'single level (9/9bar)')": 12
+   },
+   "sm_fractional_weights": 132,
+   "class_unbalanced_weights": 36,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": [
+    "-1",
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_435",
+   "file": "Z6II_03__SM_20260917_435.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 2,
+   "colour_levels": [
+    2,
+    4,
+    8
+   ],
+   "weak_levels": [
+    1,
+    5
+   ],
+   "charge_census": {
+    "(True, True, True)": 31,
+    "(False, True, False)": 55,
+    "(True, True, False)": 57,
+    "(False, False, False)": 78
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'other 2-valued')": 15,
+    "('1', '2', 'other 2-valued')": 6,
+    "('-3', '1', 'other 2-valued')": 21,
+    "('1', '1', 'other 2-valued')": 3,
+    "('1', '2', 'single level (9/9bar)')": 12
+   },
+   "sm_fractional_weights": 92,
+   "class_unbalanced_weights": 23,
+   "up_cubics": {
+    "Q(2,) u(2,) Woo(2,)": 6
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(2,) u(2,) Woo(2,)": 6
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_923",
+   "file": "Z6II_03__SM_20260917_923.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 2,
+   "colour_levels": [
+    5,
+    7,
+    8
+   ],
+   "weak_levels": [
+    2,
+    4
+   ],
+   "charge_census": {
+    "(True, True, True)": 30,
+    "(False, True, False)": 61,
+    "(True, True, False)": 60,
+    "(False, False, False)": 66
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'other 2-valued')": 12,
+    "('3', '1', 'other 2-valued')": 12,
+    "('1', '1', 'other 2-valued')": 3,
+    "('-3', '1', 'other 2-valued')": 15,
+    "('-3', '1', 'single level (9/9bar)')": 9,
+    "('3', '1', 'single level (9/9bar)')": 9
+   },
+   "sm_fractional_weights": 94,
+   "class_unbalanced_weights": 27,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": []
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_1116",
+   "file": "Z6II_18__SM_20260917_1116.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 1,
+   "colour_levels": [
+    3,
+    5,
+    7
+   ],
+   "weak_levels": [
+    1,
+    2
+   ],
+   "charge_census": {
+    "(True, True, True)": 12,
+    "(True, True, False)": 24,
+    "(False, True, False)": 65,
+    "(False, False, False)": 88
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 9,
+    "('1', '2', 'single level (9/9bar)')": 6,
+    "('-3', '1', 'single level (9/9bar)')": 9
+   },
+   "sm_fractional_weights": 71,
+   "class_unbalanced_weights": 23,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_2488",
+   "file": "Z6II_18__SM_20260917_2488.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 1,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_656",
+   "file": "Z6II_18__SM_20260917_656.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 1,
+   "colour_levels": [
+    0,
+    4,
+    6
+   ],
+   "weak_levels": [
+    1,
+    2
+   ],
+   "charge_census": {
+    "(True, True, True)": 14,
+    "(False, True, False)": 131,
+    "(True, True, False)": 24,
+    "(False, False, False)": 144
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'single level (9/9bar)')": 6,
+    "('3', '1', 'single level (9/9bar)')": 9,
+    "('-3', '1', 'single level (9/9bar)')": 9
+   },
+   "sm_fractional_weights": 233,
+   "class_unbalanced_weights": 47,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": []
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_477",
+   "file": "Z6II_19__SM_20260917_477.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 1,
+   "colour_levels": [
+    0,
+    6,
+    8
+   ],
+   "weak_levels": [
+    2,
+    3
+   ],
+   "charge_census": {
+    "(True, True, True)": 14,
+    "(False, True, False)": 134,
+    "(True, True, False)": 21,
+    "(False, False, False)": 32
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'single level (9/9bar)')": 12,
+    "('3', '1', 'single level (9/9bar)')": 6,
+    "('-3', '1', 'single level (9/9bar)')": 3
+   },
+   "sm_fractional_weights": 148,
+   "class_unbalanced_weights": 25,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": []
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_1383",
+   "file": "Z6II_20__SM_20260917_1383.txt",
+   "sm_in_su9": false,
+   "net_32": -3,
+   "net_32_untwisted": 1,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_2298",
+   "file": "Z6II_28__SM_20260917_2298.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 1,
+   "colour_levels": [
+    1,
+    4,
+    7
+   ],
+   "weak_levels": [
+    5,
+    8
+   ],
+   "charge_census": {
+    "(True, True, True)": 16,
+    "(False, False, False)": 150,
+    "(False, True, False)": 57
+   },
+   "twisted_integral_profiles": {},
+   "sm_fractional_weights": 152,
+   "class_unbalanced_weights": 48,
+   "up_cubics": {
+    "Q(2,) u(2,) Woo(2,)": 12
+   },
+   "up_cubics_allowed_by_plane_rule": {
+    "Q(2,) u(2,) Woo(2,)": 12
+   },
+   "higgs_component_charges": [
+    "0",
+    "1"
+   ]
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_2417",
+   "file": "Z6II_28__SM_20260917_2417.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 0,
+   "colour_levels": [],
+   "weak_levels": []
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_478",
+   "file": "Z6II_39__SM_20260917_478.txt",
+   "sm_in_su9": true,
+   "net_32": -3,
+   "net_32_untwisted": 1,
+   "colour_levels": [
+    2,
+    4,
+    8
+   ],
+   "weak_levels": [
+    0,
+    1
+   ],
+   "charge_census": {
+    "(True, True, True)": 14,
+    "(True, True, False)": 18,
+    "(False, True, False)": 101,
+    "(False, False, False)": 72
+   },
+   "twisted_integral_profiles": {
+    "('1', '2', 'single level (9/9bar)')": 18
+   },
+   "sm_fractional_weights": 135,
+   "class_unbalanced_weights": 38,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": []
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_1867",
+   "file": "Z6II_43__SM_20260917_1867.txt",
+   "sm_in_su9": true,
+   "net_32": 3,
+   "net_32_untwisted": 1,
+   "colour_levels": [
+    1,
+    5,
+    8
+   ],
+   "weak_levels": [
+    0,
+    4
+   ],
+   "charge_census": {
+    "(True, True, True)": 12,
+    "(False, True, False)": 48,
+    "(True, True, False)": 21,
+    "(False, False, False)": 56
+   },
+   "twisted_integral_profiles": {
+    "('3', '1', 'single level (9/9bar)')": 3,
+    "('1', '2', 'single level (9/9bar)')": 12,
+    "('-3', '1', 'single level (9/9bar)')": 6
+   },
+   "sm_fractional_weights": 54,
+   "class_unbalanced_weights": 22,
+   "up_cubics": {},
+   "up_cubics_allowed_by_plane_rule": {},
+   "higgs_component_charges": [
+    "-1",
+    "0"
+   ]
+  },
+  {
+   "family": "Z6-II",
+   "label": "SM_20260917_1962",
+   "file": "Z6II_45__SM_20260917_1962.txt",
+   "sm_in_su9": false,
+   "net_32": 3,
+   "net_32_untwisted": 1,
+   "colour_levels": [],
+   "weak_levels": []
+  }
+ ]
+}

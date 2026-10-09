@@ -47,7 +47,7 @@ def test_flagship_levels_and_hypercharge():
 
 def test_census_certificate():
     c = json.load(open(DATA / "w33_pass11714_11716_heterotic_two_qutrit_levels.json"))
-    assert (c["models"], c["with_A8_half"], c["sm_in_su9"], c["all_three_doublets_untwisted"]) == (87, 47, 30, 28)
-    for k in ("flavour_partition_holds", "two_plus_one_with_swap", "top_cubic_exists",
-              "every_top_cubic_partitions_levels", "doublet_triplet_same_pair"):
-        assert c[k] == 28, k
+    assert (c["models"], c["with_A8_half"], c["sm_in_su9"], c["all_three_doublets_untwisted"]) == (87, 47, 33, 33)
+    for k in ("flavour_partition_holds", "two_plus_one_with_swap", "top_cubic_exists", "doublet_triplet_same_pair"):
+        assert c[k] == 31, k
+    assert c["every_top_cubic_partitions_levels"] == 33

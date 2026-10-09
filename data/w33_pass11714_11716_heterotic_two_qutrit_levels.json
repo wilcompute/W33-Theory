@@ -23,13 +23,13 @@
  },
  "models": 87,
  "with_A8_half": 47,
- "sm_in_su9": 30,
- "all_three_doublets_untwisted": 28,
- "flavour_partition_holds": 28,
- "two_plus_one_with_swap": 28,
- "top_cubic_exists": 28,
- "every_top_cubic_partitions_levels": 28,
- "doublet_triplet_same_pair": 28,
+ "sm_in_su9": 33,
+ "all_three_doublets_untwisted": 33,
+ "flavour_partition_holds": 31,
+ "two_plus_one_with_swap": 31,
+ "top_cubic_exists": 31,
+ "every_top_cubic_partitions_levels": 33,
+ "doublet_triplet_same_pair": 31,
  "flagship_6Y_on_levels": [
   -3,
   0,
@@ -586,9 +586,99 @@
   {
    "label": "SM_20260917_174",
    "A8_half": 1,
-   "net_32": 4,
-   "net_32_untwisted": 4,
-   "sm_in_su9": false
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "sm_in_su9": true,
+   "colour_levels": [
+    1,
+    5,
+    7
+   ],
+   "weak_levels": [
+    4,
+    6
+   ],
+   "flavour_levels": [
+    0,
+    2,
+    3,
+    8
+   ],
+   "untwisted_level_table": {
+    "Coo@plane12": [
+     [
+      0,
+      2
+     ]
+    ],
+    "CCo@plane12": [
+     [
+      8
+     ]
+    ],
+    "ooo@plane12": [
+     [
+      2,
+      3,
+      8
+     ]
+    ],
+    "CWo@plane12": [
+     [
+      3
+     ]
+    ],
+    "WWo@plane12": [
+     [
+      8
+     ]
+    ],
+    "Woo@plane3": [
+     [
+      0,
+      2
+     ]
+    ],
+    "CWo@plane3": [
+     [
+      8
+     ]
+    ],
+    "CCo@plane3": [
+     [
+      3
+     ]
+    ],
+    "ooo@plane3": [
+     [
+      0,
+      3,
+      8
+     ]
+    ],
+    "WWo@plane3": [
+     [
+      3
+     ]
+    ]
+   },
+   "flavour_partition": {
+    "ten_levels": [
+     3,
+     8
+    ],
+    "five_pairs": [
+     [
+      0,
+      2
+     ]
+    ],
+    "disjoint_cover": true
+   },
+   "two_plus_one_with_swap": true,
+   "top_cubics": 24,
+   "top_cubics_partitioning_nine_levels": 24,
+   "doublet_triplet_same_level_pair": true
   },
   {
    "label": "SM_20260917_241",
@@ -2038,8 +2128,8 @@
   {
    "label": "SM_20260917_151",
    "A8_half": 0,
-   "net_32": 4,
-   "net_32_untwisted": 4,
+   "net_32": 3,
+   "net_32_untwisted": 3,
    "sm_in_su9": true,
    "colour_levels": [
     0,
@@ -2047,58 +2137,53 @@
     8
    ],
    "weak_levels": [
-    2,
-    7
+    1,
+    5
    ],
    "flavour_levels": [
-    1,
+    2,
     3,
-    5,
-    6
+    6,
+    7
    ],
    "untwisted_level_table": {
     "CWo@plane12": [
      [
-      1
+      2
      ],
      [
-      5
+      7
+     ]
+    ],
+    "WWo@plane12": [
+     [
+      6
      ]
     ],
     "ooo@plane12": [
      [
-      1,
-      5,
-      6
-     ]
-    ],
-    "Woo@plane12": [
-     [
+      2,
       3,
       6
-     ]
-    ],
-    "CCo@plane3": [
-     [
-      1
      ],
      [
-      5
+      3,
+      6,
+      7
+     ]
+    ],
+    "CCW@plane3": [
+     []
+    ],
+    "Woo@plane3": [
+     [
+      2,
+      7
      ]
     ],
     "WWo@plane3": [
      [
-      1
-     ],
-     [
-      5
-     ]
-    ],
-    "ooo@plane3": [
-     [
-      1,
-      3,
-      5
+      3
      ]
     ],
     "Coo@plane3": [
@@ -2110,16 +2195,22 @@
    },
    "flavour_partition": {
     "ten_levels": [
-     1,
-     5
+     2,
+     3,
+     6,
+     7
     ],
     "five_pairs": [
+     [
+      2,
+      7
+     ],
      [
       3,
       6
      ]
     ],
-    "disjoint_cover": true
+    "disjoint_cover": false
    },
    "two_plus_one_with_swap": false,
    "top_cubics": 0,
@@ -2550,8 +2641,8 @@
   {
    "label": "SM_20260917_8",
    "A8_half": 0,
-   "net_32": -4,
-   "net_32_untwisted": 4,
+   "net_32": -3,
+   "net_32_untwisted": 3,
    "sm_in_su9": true,
    "colour_levels": [
     4,
@@ -2559,14 +2650,14 @@
     7
    ],
    "weak_levels": [
-    2,
-    3
+    0,
+    8
    ],
    "flavour_levels": [
-    0,
     1,
-    5,
-    8
+    2,
+    3,
+    5
    ],
    "untwisted_level_table": {
     "Coo@plane3": [
@@ -2575,61 +2666,62 @@
       5
      ]
     ],
-    "ooo@plane3": [
-     [
-      0,
-      1,
-      8
-     ],
-     [
-      0,
-      5,
-      8
-     ]
-    ],
-    "CCo@plane3": [
-     [
-      0
-     ],
-     [
-      8
-     ]
-    ],
     "WWo@plane3": [
      [
-      0
+      1
      ],
      [
-      8
+      5
      ]
     ],
-    "Woo@plane12": [
+    "CCW@plane3": [
+     []
+    ],
+    "Woo@plane3": [
+     [
+      2,
+      3
+     ]
+    ],
+    "ooo@plane12": [
      [
       1,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
       5
      ]
     ],
     "CWo@plane12": [
      [
-      0
+      2
      ],
      [
-      8
+      3
      ]
     ]
    },
    "flavour_partition": {
     "ten_levels": [
-     0,
-     8
+     1,
+     2,
+     3,
+     5
     ],
     "five_pairs": [
      [
       1,
       5
+     ],
+     [
+      2,
+      3
      ]
     ],
-    "disjoint_cover": true
+    "disjoint_cover": false
    },
    "two_plus_one_with_swap": false,
    "top_cubics": 0,
@@ -2839,7 +2931,95 @@
    "A8_half": 1,
    "net_32": -3,
    "net_32_untwisted": 3,
-   "sm_in_su9": false
+   "sm_in_su9": true,
+   "colour_levels": [
+    2,
+    5,
+    7
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "flavour_levels": [
+    1,
+    3,
+    4,
+    8
+   ],
+   "untwisted_level_table": {
+    "Coo@plane12": [
+     [
+      1,
+      8
+     ]
+    ],
+    "CCo@plane12": [
+     [
+      4
+     ]
+    ],
+    "CWo@plane12": [
+     [
+      3
+     ]
+    ],
+    "WWo@plane12": [
+     [
+      4
+     ]
+    ],
+    "Woo@plane3": [
+     [
+      1,
+      8
+     ]
+    ],
+    "CCo@plane3": [
+     [
+      3
+     ]
+    ],
+    "ooo@plane3": [
+     [
+      1,
+      3,
+      4
+     ],
+     [
+      3,
+      4,
+      8
+     ]
+    ],
+    "CWo@plane3": [
+     [
+      4
+     ]
+    ],
+    "WWo@plane3": [
+     [
+      3
+     ]
+    ]
+   },
+   "flavour_partition": {
+    "ten_levels": [
+     3,
+     4
+    ],
+    "five_pairs": [
+     [
+      1,
+      8
+     ]
+    ],
+    "disjoint_cover": true
+   },
+   "two_plus_one_with_swap": true,
+   "top_cubics": 24,
+   "top_cubics_partitioning_nine_levels": 24,
+   "doublet_triplet_same_level_pair": true
   },
   {
    "label": "SM_20260917_142",
@@ -3129,9 +3309,97 @@
   {
    "label": "SM_20260917_519",
    "A8_half": 1,
-   "net_32": 4,
-   "net_32_untwisted": 4,
-   "sm_in_su9": false
+   "net_32": -3,
+   "net_32_untwisted": 3,
+   "sm_in_su9": true,
+   "colour_levels": [
+    1,
+    7,
+    8
+   ],
+   "weak_levels": [
+    0,
+    6
+   ],
+   "flavour_levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "untwisted_level_table": {
+    "CCo@plane3": [
+     [
+      3
+     ]
+    ],
+    "Woo@plane3": [
+     [
+      2,
+      5
+     ]
+    ],
+    "CWo@plane3": [
+     [
+      4
+     ]
+    ],
+    "ooo@plane3": [
+     [
+      2,
+      3,
+      4
+     ],
+     [
+      3,
+      4,
+      5
+     ]
+    ],
+    "WWo@plane3": [
+     [
+      3
+     ]
+    ],
+    "Coo@plane12": [
+     [
+      2,
+      5
+     ]
+    ],
+    "CCo@plane12": [
+     [
+      4
+     ]
+    ],
+    "CWo@plane12": [
+     [
+      3
+     ]
+    ],
+    "WWo@plane12": [
+     [
+      4
+     ]
+    ]
+   },
+   "flavour_partition": {
+    "ten_levels": [
+     3,
+     4
+    ],
+    "five_pairs": [
+     [
+      2,
+      5
+     ]
+    ],
+    "disjoint_cover": true
+   },
+   "two_plus_one_with_swap": true,
+   "top_cubics": 24,
+   "top_cubics_partitioning_nine_levels": 24,
+   "doublet_triplet_same_level_pair": true
   },
   {
    "label": "SM_20260917_1069",

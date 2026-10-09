@@ -44,10 +44,13 @@ These are the 87 parents of Pass 11089 and Holotrade 5b3f3ad, re-run in orbifold
 |---|---|
 | models | 87 |
 | an A8 (SU(9)) half in the θ² shift 2V | 47 |
-| SM SU(3) × SU(2) inside that SU(9) (colour on 3 levels, weak on 2, four flavour levels left) | 30 |
-| all three net quark doublets untwisted, i.e. three-fermion states colour ∧ weak ∧ o | **28** |
+| SM SU(3) × SU(2) inside that SU(9) (colour on 3 levels, weak on 2, four flavour levels left) | 33 |
+| all three net quark doublets untwisted, i.e. three-fermion states colour ∧ weak ∧ o | **33** |
+| of those, with the full pattern below | **31** |
 
-In **all 28**:
+> **Correction (Pass 11802 round).** The first version of this pass reported 30 / 28 / "all 28". It picked the SM pair as the SU(3) × SU(2) with the *largest* net number of (3,2) doublets. In models that contain several such pairs, that rule sometimes chose a pair with four net doublets, which is not the Standard Model. The SM pair is now chosen by Holotrade's own criterion: exactly three net doublets, preferring a pair inside SU(9). With that rule the counts are 33 / 33 / 31. The two exceptions, SM_20260917_8 and SM_20260917_151, put all three doublets on the degenerate planes 1, 2, using two flavour levels, and have no cubic top. Every qualitative statement below now refers to the 31.
+
+In **the 31**:
 
 * **Flavour-level partition {a} | {b} | {c, d}.** The untwisted 10-type states (Q, u^c, e^c) use the single levels a and b. The untwisted 5-type states use the pair {c, d}. The two sets are disjoint and cover all four flavour levels.
 * **2+1 family levels with a swap.** The two quark doublets from the degenerate G2 planes 1, 2 share one flavour level. The one from the order-three "qutrit" plane 3 uses the other. Q and u^c (and e^c) swap levels between plane 3 and planes 1, 2.
@@ -69,13 +72,13 @@ This is the **Georgi–Glashow hypercharge vanishing on the four non-GUT levels*
 
 **The cubic coupling is the two-qutrit bracket.** The cubic coupling of three untwisted fields is the E₈ structure constant. For three-fermion states it is Pass 11681's bracket [x, y] = ∗(x ∧ y). It is therefore nonzero exactly when the three level sets **partition the nine levels**, and then |coupling| = g, with the sign of the permutation.
 
-**The top Yukawa.** In all 28 models, gauge-invariant couplings
+**The top Yukawa.** In all 31 models, gauge-invariant couplings
 
   Q (planes 1, 2) · u^c (planes 1, 2) · H (plane 3)
 
 exist, with H = weak ∧ c ∧ d. There are 24 weight-level couplings in each model, and every one partitions the nine levels. So **y_top = g is the nine-level determinant**: Q fills colour, weak and a; u^c fills two colour levels and b; H fills weak, c and d.
 
-**Doublet–triplet splitting.** H (plane 3) and its colour partner T = colour ∧ c ∧ d (planes 1, 2) are the weak and colour halves of **one level-pair multiplet ∧{c, d}** (28/28). The missing-partner doublet–triplet splitting of Holotrade a6f1cae is the plane split of that one multiplet.
+**Doublet–triplet splitting.** H (plane 3) and its colour partner T = colour ∧ c ∧ d (planes 1, 2) are the weak and colour halves of **one level-pair multiplet ∧{c, d}** (31/31). The missing-partner doublet–triplet splitting of Holotrade a6f1cae is the plane split of that one multiplet.
 
 **Prior art.** The cubic top y_top = g is Holotrade 93b34e1/3caf15e (57/60). The determinant reading is what is added here.
 
@@ -91,4 +94,4 @@ These are dictionary statements on actual orbifolder spectra.
 
 The Codex track's all-order obstructions on the Z6-II benchmark (Passes 11797–11801) concern a different model class and are untouched.
 
-The two models among the 30 whose untwisted sector gives net 4 doublets are excluded from the 28 and listed in the certificate.
+Per-model data, including the two exceptions, are in the certificate.
