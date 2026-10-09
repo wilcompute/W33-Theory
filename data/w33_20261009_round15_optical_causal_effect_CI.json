@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "M": 8000,
+  "clip_T": 0.15,
+  "assumed_max_electronic_leakage_per_reading_eta": 0.0004,
+  "assumed_max_adversarial_corrupted_raw_shots_K": 14,
+  "alpha": 0.01,
+  "certified_conservative_two_sided_halfwidth": 0.01224343124021628,
+  "synthetic_sham_and_optical_effect_CIs": {
+    "null": {
+      "runs": 30,
+      "intervals_excluding_zero": 0,
+      "median_center": -3.6016323865978105e-05,
+      "median_lower": -0.012279447564082259,
+      "worst_lower": -0.012461861583254128,
+      "two_sided_CI_first_run": [
+        -0.01223003380412103,
+        0.01225682867631153
+      ]
+    },
+    "optical": {
+      "runs": 30,
+      "intervals_excluding_zero": 30,
+      "median_center": 0.09477439972777965,
+      "median_lower": 0.08253096848756337,
+      "worst_lower": 0.08223056345400433,
+      "two_sided_CI_first_run": [
+        0.08255436336070295,
+        0.1070412258411355
+      ]
+    },
+    "electronics_only": {
+      "runs": 30,
+      "intervals_excluding_zero": 0,
+      "median_center": -2.281633803139394e-05,
+      "median_lower": -0.012266247578247675,
+      "worst_lower": -0.01252188742744142,
+      "two_sided_CI_first_run": [
+        -0.012191660803174307,
+        0.012295201677258253
+      ]
+    }
+  },
+  "estimand": "Finite-population average r-weighted causal effect of active path on clipped detector outputs, averaged across BOTH possible slot positions; not unclipped optical phase or a specific quartic coefficient.",
+  "theorem": "With baseline clipped potential outcomes fixed independent of random z_j, independent fair z_j, and r_j fixed independently of z_j, E[S]=M tau. Each centered signed contribution is bounded by 2T. Hoeffding gives a two-sided 1-alpha CI S/M +/- 2T sqrt(2log(2/alpha)/M). Unknown post-assignment corruption up to K raw shots adds 2TK/M worst-case bias. Direct switch-correlated electronics up to eta per reading adds 2eta; the resulting enlarged interval contains tau with probability >=1-alpha.",
+  "physical_falsifiers": "A path-specific optical alteration other than the desired nonlinearity can still cause a positive causal effect. If switch leakage or detector corruption count assumptions fail, coverage guarantee fails. Real calibration, blinded sham, path-swapped sensors, and independent optical reference needed before experimental claim."
+}

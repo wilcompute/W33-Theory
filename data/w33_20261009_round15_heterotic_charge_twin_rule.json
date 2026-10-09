@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "source_sha256": "48eb514315636dc36b7d70c4bf280ac9922cf3bd7ab77401a9d72b7a21363b5c",
+  "distinct_orbifold": "Z6-II cp2 Codex benchmark SM_20260917_1558, not parallel Z6-I SU9 family-level examples",
+  "exact_charge_twins": [
+    "n_81",
+    "n_83"
+  ],
+  "twins_same_all_nine_U1_and_twist_and_fixed_point": true,
+  "discriminating_superpotential_triples": [
+    {
+      "fields": [
+        "n_81",
+        "n_17",
+        "n_82"
+      ],
+      "point_twist_sum_mod6": 0,
+      "hypercharge_and_eight_other_U1_exact_zero": true,
+      "source_raw_twist_sectors": [
+        5,
+        2,
+        5
+      ],
+      "source_fixed_point_translations": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "SO4_Z2xZ2_necessary_residues": [
+        0,
+        0
+      ],
+      "SU3_Z3_necessary_residues": [
+        0,
+        0
+      ],
+      "corrected_R_residues_for_superpotential": [
+        "0",
+        "0",
+        "0"
+      ],
+      "corrected_R_nonR_passes": true,
+      "oscillator_counts": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "fields": [
+        "n_83",
+        "n_17",
+        "n_82"
+      ],
+      "point_twist_sum_mod6": 0,
+      "hypercharge_and_eight_other_U1_exact_zero": true,
+      "source_raw_twist_sectors": [
+        5,
+        2,
+        5
+      ],
+      "source_fixed_point_translations": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "SO4_Z2xZ2_necessary_residues": [
+        0,
+        0
+      ],
+      "SU3_Z3_necessary_residues": [
+        0,
+        0
+      ],
+      "corrected_R_residues_for_superpotential": [
+        "4",
+        "1",
+        "0"
+      ],
+      "corrected_R_nonR_passes": false,
+      "oscillator_counts": [
+        1,
+        1,
+        2
+      ]
+    }
+  ],
+  "conclusion": "The n81 and n83 fields have indistinguishable nine Abelian charges and fixed-point translation, but their corrected R vectors/oscillator levels differ: n81*n17*n82 passes recorded necessary rules, n83*n17*n82 fails. Both pass simpler twist/point-lattice congruence checks. The actual n81 coupling amplitude remains entirely undetermined.",
+  "scope": "Fixed-point congruences interpreted in conventional six-coordinate G2xSU3xSO4 basis and are only necessary, not complete space-group representative products. Oscillator Rules4/5/6 and actual CFT amplitudes not computed; cannot certify supersymmetric physical vacuum or nonzero lambda."
+}

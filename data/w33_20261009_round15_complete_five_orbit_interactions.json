@@ -1,0 +1,208 @@
+{
+  "status": "PASS",
+  "native_flag_orbits": 5,
+  "optimal_selectors": 86400,
+  "complete_five_PSp_signatures": [
+    {
+      "representative": [
+        0,
+        52,
+        68
+      ],
+      "orbit_size": 4320,
+      "stabilizer_order": 6,
+      "common_point_correlator": 4,
+      "common_line_correlator": 0,
+      "incidence_weighted_four_body_correlator": 3,
+      "signature": [
+        4,
+        0,
+        3
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        72
+      ],
+      "orbit_size": 4320,
+      "stabilizer_order": 6,
+      "common_point_correlator": 4,
+      "common_line_correlator": 2,
+      "incidence_weighted_four_body_correlator": 3,
+      "signature": [
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        70
+      ],
+      "orbit_size": 25920,
+      "stabilizer_order": 1,
+      "common_point_correlator": 1,
+      "common_line_correlator": 0,
+      "incidence_weighted_four_body_correlator": 1,
+      "signature": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        74
+      ],
+      "orbit_size": 25920,
+      "stabilizer_order": 1,
+      "common_point_correlator": 1,
+      "common_line_correlator": 2,
+      "incidence_weighted_four_body_correlator": 1,
+      "signature": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        90
+      ],
+      "orbit_size": 25920,
+      "stabilizer_order": 1,
+      "common_point_correlator": 1,
+      "common_line_correlator": 2,
+      "incidence_weighted_four_body_correlator": 0,
+      "signature": [
+        1,
+        2,
+        0
+      ]
+    }
+  ],
+  "distinct_signature_count": 5,
+  "engineered_linear_orbit_selection_Hamiltonians": [
+    {
+      "target_orbit_representative": [
+        0,
+        52,
+        68
+      ],
+      "coefficients": [
+        -1,
+        1,
+        0
+      ],
+      "ground_degeneracy": 4320,
+      "selected_ground_energy": -4,
+      "first_orbit_gap": 2,
+      "five_orbit_energies": [
+        -4,
+        -2,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "target_orbit_representative": [
+        0,
+        52,
+        72
+      ],
+      "coefficients": [
+        -1,
+        -1,
+        0
+      ],
+      "ground_degeneracy": 4320,
+      "selected_ground_energy": -6,
+      "first_orbit_gap": 2,
+      "five_orbit_energies": [
+        -4,
+        -6,
+        -1,
+        -3,
+        -3
+      ]
+    },
+    {
+      "target_orbit_representative": [
+        0,
+        52,
+        70
+      ],
+      "coefficients": [
+        1,
+        1,
+        0
+      ],
+      "ground_degeneracy": 25920,
+      "selected_ground_energy": 1,
+      "first_orbit_gap": 2,
+      "five_orbit_energies": [
+        4,
+        6,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "target_orbit_representative": [
+        0,
+        52,
+        74
+      ],
+      "coefficients": [
+        1,
+        -1,
+        -1
+      ],
+      "ground_degeneracy": 25920,
+      "selected_ground_energy": -2,
+      "first_orbit_gap": 1,
+      "five_orbit_energies": [
+        1,
+        -1,
+        0,
+        -2,
+        -1
+      ]
+    },
+    {
+      "target_orbit_representative": [
+        0,
+        52,
+        90
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "ground_degeneracy": 25920,
+      "selected_ground_energy": 0,
+      "first_orbit_gap": 1,
+      "five_orbit_energies": [
+        3,
+        3,
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "theorem": "The three PSp-invariant native incidence correlators Cp,Cl,J distinguish all five optimal three-flag orbits. For EACH orbit, explicit small integer coefficients of H=w1 Cp+w2 Cl+w3 J give a unique lowest ORBIT, finite positive class gap and correct group orbit degeneracy.",
+  "observable": "Cp and Cl are triple-input coincidence/motif counts; J conditions a triple-point common-neighbor event on a selected line. They require information beyond the one-particle Peierls band eigenvalues, not necessarily many-body scattering.",
+  "limitation": "These are engineered classical finite selector energies and incidence-pattern observables. No physical nonlinear interaction, three-photon gate, thermodynamic spontaneous symmetry breaking, emergent 3-space or Lorentzian gravitation has been derived."
+}

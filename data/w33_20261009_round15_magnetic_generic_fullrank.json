@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "physical_configuration_dimension": 78,
+  "exact_modular_point_certificates": [
+    {
+      "label": "origin",
+      "coordinate_integer_vector": {},
+      "q_parameterization": "q = (1/sqrt20)/10 * D*k",
+      "min_absolute_affine_numerator": 400,
+      "modular_certificates": [
+        {
+          "prime": 10007,
+          "exact_Fp_curvature_rank": 0,
+          "exact_Fp_det": 0,
+          "exact_T_det": 450
+        },
+        {
+          "prime": 10009,
+          "exact_Fp_curvature_rank": 0,
+          "exact_Fp_det": 0,
+          "exact_T_det": 4889
+        }
+      ]
+    },
+    {
+      "label": "symmetric",
+      "coordinate_integer_vector": {
+        "0": 1
+      },
+      "q_parameterization": "q = (1/sqrt20)/10 * D*k",
+      "min_absolute_affine_numerator": 360,
+      "modular_certificates": [
+        {
+          "prime": 10007,
+          "exact_Fp_curvature_rank": 16,
+          "exact_Fp_det": 0,
+          "exact_T_det": 6642
+        },
+        {
+          "prime": 10009,
+          "exact_Fp_curvature_rank": 16,
+          "exact_Fp_det": 0,
+          "exact_T_det": 132
+        }
+      ]
+    },
+    {
+      "label": "two_coordinate",
+      "coordinate_integer_vector": {
+        "0": 1,
+        "1": 2
+      },
+      "q_parameterization": "q = (1/sqrt20)/10 * D*k",
+      "min_absolute_affine_numerator": 280,
+      "modular_certificates": [
+        {
+          "prime": 10007,
+          "exact_Fp_curvature_rank": 22,
+          "exact_Fp_det": 0,
+          "exact_T_det": 6885
+        },
+        {
+          "prime": 10009,
+          "exact_Fp_curvature_rank": 22,
+          "exact_Fp_det": 0,
+          "exact_T_det": 5858
+        }
+      ]
+    },
+    {
+      "label": "mixed_four",
+      "coordinate_integer_vector": {
+        "0": 1,
+        "1": 2,
+        "39": -1,
+        "40": 3
+      },
+      "q_parameterization": "q = (1/sqrt20)/10 * D*k",
+      "min_absolute_affine_numerator": 280,
+      "modular_certificates": [
+        {
+          "prime": 10007,
+          "exact_Fp_curvature_rank": 78,
+          "exact_Fp_det": 396,
+          "exact_T_det": 8420
+        },
+        {
+          "prime": 10009,
+          "exact_Fp_curvature_rank": 78,
+          "exact_Fp_det": 9566,
+          "exact_T_det": 2806
+        }
+      ]
+    },
+    {
+      "label": "mixed_eight",
+      "coordinate_integer_vector": {
+        "0": 1,
+        "1": 2,
+        "2": -1,
+        "3": 3,
+        "39": -2,
+        "40": 1,
+        "41": 2,
+        "42": -1
+      },
+      "q_parameterization": "q = (1/sqrt20)/10 * D*k",
+      "min_absolute_affine_numerator": 200,
+      "modular_certificates": [
+        {
+          "prime": 10007,
+          "exact_Fp_curvature_rank": 78,
+          "exact_Fp_det": 8379,
+          "exact_T_det": 774
+        },
+        {
+          "prime": 10009,
+          "exact_Fp_curvature_rank": 78,
+          "exact_Fp_det": 7574,
+          "exact_T_det": 731
+        }
+      ]
+    }
+  ],
+  "generic_rank_over_Q": 78,
+  "generic_full_rank_proof": "At explicit mixed_four q, the 78x78 rational curvature has a nonzero determinant modulo primes10007 and10009 after exact invertible kinetic-metric elimination. Therefore the numerator of this rational determinant is not the zero polynomial; hence rank78 holds on a nonempty Zariski-open set where T remains invertible. General rational symplectic nondegeneracy is generic, unlike symmetry-reduced rank16 q.",
+  "important_scope": "This is an intrinsic two-form of the mathematical differential Hamiltonian, not spacetime metric, physical magnetic field, ground-state irrep or proof of an energy gap."
+}
