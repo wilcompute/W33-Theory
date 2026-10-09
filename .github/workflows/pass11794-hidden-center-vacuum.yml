@@ -1,0 +1,32 @@
+name: Pass11794 hidden center D-flatness and gauge locking
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11794_hidden_center_vacuum.py
+      - analysis/PASS11794_HIDDEN_CENTER_DFLAT_AND_LOCKING.md
+      - data/w33_pass11794_hidden_center_vacuum.json
+      - tests/test_w33_pass11794_hidden_center_vacuum.py
+      - .github/workflows/pass11794-hidden-center-vacuum.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install sympy==1.14.0 pytest
+      - name: Frozen charge, moment-map and basis controls
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11794_hidden_center_vacuum.py
+      - name: Regenerate exact hidden-center and mass-kernel certificate
+        run: python analysis/w33_pass11794_hidden_center_vacuum.py
+      - name: Independently recheck regenerated certificate
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11794_hidden_center_vacuum.py
