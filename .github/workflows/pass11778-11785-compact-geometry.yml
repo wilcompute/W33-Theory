@@ -1,0 +1,45 @@
+name: Pass11778-11785 compact vacuum nonlinear geometry
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11778_11783_compact_vacuum_thermodynamics.py
+      - analysis/w33_pass11779_11780_11782_local_net_index_constraints.py
+      - analysis/w33_pass11781_11784_11785_nonlinear_cone_bargmann_lift.py
+      - analysis/PASS11778_11785_COMPACT_VACUUM_CURVATURE_LORENTZIAN_LIFT.md
+      - tests/test_w33_pass11778_11785_compact_geometry.py
+      - .github/workflows/pass11778-11785-compact-geometry.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Frozen compact geometry and prior quantum physics
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11778_11785_compact_geometry.py
+          tests/test_w33_pass11770_11777_quantum_physics.py
+          tests/test_w33_pass11769_quantized_current_vacuum.py
+          tests/test_w33_20261008_current_time_reversal_firewall.py
+          tests/test_w33_20261008_dressed_current_antiunitary.py
+          tests/test_w33_20261008_five_state_ritz.py
+          tests/test_w33_20261008_optical_and_cone.py
+      - name: Replay compact vacuum and thermodynamics certificate
+        run: python analysis/w33_pass11778_11783_compact_vacuum_thermodynamics.py
+      - name: Replay local net current spin tests and surviving gauge
+        run: python analysis/w33_pass11779_11780_11782_local_net_index_constraints.py
+      - name: Replay nonlinear cone exact curvature and Lorentzian lift
+        run: python analysis/w33_pass11781_11784_11785_nonlinear_cone_bargmann_lift.py
+      - name: Check regenerated compact geometry and parallel controls
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11778_11785_compact_geometry.py
+          tests/test_w33_20261008_five_state_ritz.py
+          tests/test_w33_20261008_optical_and_cone.py

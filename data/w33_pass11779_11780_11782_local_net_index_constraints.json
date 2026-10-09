@@ -1,0 +1,56 @@
+{
+  "schema": "w33.pass11779_11780_11782.v1",
+  "source_sha256": "c9296de763adf43d70249c1e61d868355f8859740ced28b70d053addb49d8e69",
+  "pass11779": {
+    "status": "EXPLICIT_STANDARD_CONSTRUCTION",
+    "carrier_dimension": 78,
+    "one_particle": "L2(R,dtheta) tensor W_C; W is the actual real78-dimensional projected carrier, with its Euclidean metric.",
+    "real_subspace": "K(I)=closure{hat(g)(exp(-theta)):g in C_c^infty(I,W), real, integral g=0}.",
+    "local_algebra": "M(I)={Weyl(xi):xi in K(I)} double-commutant on symmetric Fock space; vacuum Omega.",
+    "group": "[U(alpha,t)xi](theta)=exp(i*t*exp(-theta))*xi(theta-alpha). P=exp(-theta)>0 on the one-particle space.",
+    "modular": "Delta_(0,infinity)^(is)=Gamma(U(-2*pi*s,0)); Delta^(is)T(t)Delta^(-is)=T(exp(-2*pi*s)*t).",
+    "locality": "For g=phi_prime,h=psi_prime,2Im<g,h>=-integral phi*psi_prime. Disjoint interval supports give zero symplectic form and commuting Weyl algebras.",
+    "nontrivial_interval_symplectic_exact": "25165824/7436429",
+    "standard_inclusion": "M(1,infinity) subset M(0,infinity) is half-sided; its relative commutant contains nontrivial M(0,1). The standard free-current vacuum is cyclic and separating on intervals.",
+    "type": "The standard finite-multiplicity free-current interval algebras are typeIII1; this is a literature theorem, not inferred from sampled matrices.",
+    "physical_boundary": "A supplied chiral1D local net with78 internal components. No limit map from11769,3+1 spacetime, interactions, observed particles or gravity is established.",
+    "literature": [
+      "https://link.springer.com/article/10.1007/s00220-022-04432-8",
+      "https://arxiv.org/abs/1004.0616",
+      "https://park.itc.u-tokyo.ac.jp/MSF/UGMSS/Kawahigashi.pdf"
+    ]
+  },
+  "pass11780": {
+    "status": "PASS",
+    "commutator_expectation_max": 8.326672684688674e-17,
+    "exact_reason": "U=D V makes V U^T symmetric. For C=t*C0,F=f*D and D*C0*D=C0^-1, V C F U^T is also symmetric. Therefore every Gaussian expectation of [J_e,J_f] vanishes in this family.",
+    "spin_product_energy": "For every constant unit spinor eta, <eta tensor psi,D_current^2 eta tensor psi>=<psi,H psi>. Spin optimization alone gives no Gaussian product-state improvement.",
+    "zero_mode_obstruction": "At q=0, every centered Gaussian has gradient0 and D_current(eta*psi)(0)=a^2*(sum160 gamma_e)*eta*psi(0). Its spin factor squared is160*a^4 I=(2/5)I, hence no nonzero constant-spinor centered Gaussian solves D_current psi=0.",
+    "actual_index_boundary": "Fredholmness and the index of D_current are still open. Compactness of H does not imply compactness of D_current^2 because of the spin-curvature term. A truncated square matrix index is not substituted for this question."
+  },
+  "bott_index_control": {
+    "status": "STANDARD_INDEX_CONTROL",
+    "operator": "Q_B=sqrt2*sum_(i=1..78)(c_i^dagger*a_i+c_i*a_i^dagger), a_i=(q_i+partial_i)/sqrt2.",
+    "square": "Q_B^2=2*(N_boson+N_fermion).",
+    "kernel_dimension": 1,
+    "even_to_odd_index": 1,
+    "kernel": "pi^(-78/4)*exp(-|q|^2/2) tensor fermion vacuum.",
+    "index_proof": "All occupation energies are2*(sum n_i+sum f_i); the unique zero has every occupation0 and even parity. Positive energies pair under Q_B. Its heat supertrace is[(1-exp(-2beta))/(1-exp(-2beta))]^78=1.",
+    "relation": "The q,p operators occur in the certified current Lie closure by degree<=5, but this canonical Bott supercharge is a different selected energy law, using156 Clifford directions rather than160 edge labels.",
+    "boundary": "Index1 is internal supersymmetric quantum mechanics, not one SM generation or spacetime Weyl chirality. No index is assigned to D_current by analogy.",
+    "literature": "https://arxiv.org/abs/0907.1351"
+  },
+  "pass11782": {
+    "status": "PASS",
+    "enlarged_phase_dimension": 312,
+    "first_class_constraints": 78,
+    "reduced_phase_dimension": 156,
+    "propagating_canonical_modes": 78,
+    "constraints": "C_i=q1_i+q2_i. Retain Q_i=(q1_i-q2_i)/2, P_i=p1_i-p2_i; [Q_i,P_j]=i delta_ij and [C_i,Q_j]=[C_i,P_j]=0.",
+    "hamiltonian": "H_phys=sum_e[(V_e.Q+a)(U_e.P+a)]^2, so [C_i,H_phys]=0 exactly.",
+    "brst": "Omega_BRST=sum_i ghost_i*C_i; mutually commuting constraints give Omega_BRST^2=0.",
+    "rigging": "delta(q1+q2)*psi((q1-q2)/2) solves the constraints distributionally. Group averaging supplies the physical L2(R78) inner product; this is not a normalizable kinematical state.",
+    "contrast": "Imposing also all p1-p2 constraints is the11772 zero-dimensional reduction. Imposing only this chosen isotropic half retains the full original matter mechanics.",
+    "boundary": "An explicit supplied Abelian gauge embedding. The graph has not selected this half, and no local gravitational hypersurface-deformation algebra is derived."
+  }
+}
