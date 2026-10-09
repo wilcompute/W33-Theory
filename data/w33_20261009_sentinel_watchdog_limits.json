@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "frames": 1200,
+  "shots_per_frame": 200,
+  "target_watchdog_missed_corruption_budget": 0.001,
+  "one_unbounded_corrupt_shot_sentinel199_miss": 0.005,
+  "single_unbounded_corrupt_shot_requires_full_audit_at_0p1pct": true,
+  "calibration_sentinel_requirements": [
+    {
+      "corruptions_per_frame": 1,
+      "coverage_model": "single_bad_frame",
+      "minimum_independent_random_sentinels": 200,
+      "fraction_of_frame_sampled": 1.0,
+      "exact_miss_probability": 0.0
+    },
+    {
+      "corruptions_per_frame": 1,
+      "coverage_model": "all_frames_union",
+      "minimum_independent_random_sentinels": 200,
+      "fraction_of_frame_sampled": 1.0,
+      "exact_miss_probability": 0.0
+    },
+    {
+      "corruptions_per_frame": 2,
+      "coverage_model": "single_bad_frame",
+      "minimum_independent_random_sentinels": 194,
+      "fraction_of_frame_sampled": 0.97,
+      "exact_miss_probability": 0.0007537688442211055
+    },
+    {
+      "corruptions_per_frame": 2,
+      "coverage_model": "all_frames_union",
+      "minimum_independent_random_sentinels": 199,
+      "fraction_of_frame_sampled": 0.995,
+      "exact_miss_probability": 0.0
+    },
+    {
+      "corruptions_per_frame": 5,
+      "coverage_model": "single_bad_frame",
+      "minimum_independent_random_sentinels": 149,
+      "fraction_of_frame_sampled": 0.745,
+      "exact_miss_probability": 0.0009264133310762395
+    },
+    {
+      "corruptions_per_frame": 5,
+      "coverage_model": "all_frames_union",
+      "minimum_independent_random_sentinels": 186,
+      "fraction_of_frame_sampled": 0.93,
+      "exact_miss_probability": 7.895411308415416e-07
+    },
+    {
+      "corruptions_per_frame": 10,
+      "coverage_model": "single_bad_frame",
+      "minimum_independent_random_sentinels": 98,
+      "fraction_of_frame_sampled": 0.49,
+      "exact_miss_probability": 0.0009487709625082768
+    },
+    {
+      "corruptions_per_frame": 10,
+      "coverage_model": "all_frames_union",
+      "minimum_independent_random_sentinels": 148,
+      "fraction_of_frame_sampled": 0.74,
+      "exact_miss_probability": 7.04646616349756e-07
+    },
+    {
+      "corruptions_per_frame": 20,
+      "coverage_model": "single_bad_frame",
+      "minimum_independent_random_sentinels": 56,
+      "fraction_of_frame_sampled": 0.28,
+      "exact_miss_probability": 0.0009387131791727436
+    },
+    {
+      "corruptions_per_frame": 20,
+      "coverage_model": "all_frames_union",
+      "minimum_independent_random_sentinels": 96,
+      "fraction_of_frame_sampled": 0.48,
+      "exact_miss_probability": 7.915795698406889e-07
+    },
+    {
+      "corruptions_per_frame": 40,
+      "coverage_model": "single_bad_frame",
+      "minimum_independent_random_sentinels": 29,
+      "fraction_of_frame_sampled": 0.145,
+      "exact_miss_probability": 0.0008757522344126381
+    },
+    {
+      "corruptions_per_frame": 40,
+      "coverage_model": "all_frames_union",
+      "minimum_independent_random_sentinels": 54,
+      "fraction_of_frame_sampled": 0.27,
+      "exact_miss_probability": 6.127925903816368e-07
+    },
+    {
+      "corruptions_per_frame": 80,
+      "coverage_model": "single_bad_frame",
+      "minimum_independent_random_sentinels": 13,
+      "fraction_of_frame_sampled": 0.065,
+      "exact_miss_probability": 0.0009916241166972783
+    },
+    {
+      "corruptions_per_frame": 80,
+      "coverage_model": "all_frames_union",
+      "minimum_independent_random_sentinels": 26,
+      "fraction_of_frame_sampled": 0.13,
+      "exact_miss_probability": 5.012233546670633e-07
+    }
+  ],
+  "seeded_simulations": {
+    "b1_s100": {
+      "detection_frequency": 0.5109,
+      "exact_detection_probability": 0.5
+    },
+    "b40_s30": {
+      "detection_frequency": 0.9991,
+      "exact_detection_probability": 0.9993291020894266
+    },
+    "b40_s60": {
+      "detection_frequency": 1.0,
+      "exact_detection_probability": 0.9999999137669128
+    }
+  },
+  "information_theoretic_impossibility": "For an adversary choosing one shot to corrupt before secret uniformly sampled s of N slots, P(all sentinels miss)=(N-s)/N. Hence 200-shot frames and alpha_watch=0.001 require s=200 if a single unbounded corrupt shot can invalidate optical confidence. This is a simple sampling coverage bound independent of detector distribution.",
+  "viable_alternatives": "Use trusted full-stream analog/digital clipping before frame averaging, continuous redundant interlock with quantified false-negative rate, or a certified deterministic max spike amplitude to absorb undetected faults in good-frame delta budget. Only then may the m-compromised-frame Hoeffding test claim unconditional size alpha.",
+  "trust_boundary": "The hypergeometric burst bounds presume corruption locations are independent of secret sentinels; adaptive corruption able to avoid sentinel locations defeats them. It is not a hardware watchdog implementation or validated detector."
+}

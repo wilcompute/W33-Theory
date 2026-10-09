@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "projective_symplectic_group_order": 25920,
+  "point15_exact_character_square": 25920,
+  "point24_exact_character_square": 25920,
+  "line15_exact_character_square": 25920,
+  "line24_exact_character_square": 25920,
+  "point_line_15_character_inner_product": "0/25920",
+  "point_line_24_character_inner_product": "25920/25920",
+  "point15_average_character": 0,
+  "point24_average_character": 0,
+  "both_irreducible_over_complex": true,
+  "first_15_crossing_character_equal_to_line15_for_checked_actions": 80,
+  "exact_first_15_module_isomorphism": "D: ker[M;P]/ker[M;D] -> ker(R) is a PSp-equivariant isomorphism. P=R D-M, dim ker[M;P]=96, dim ker[M;D]=81, dim ker(R)=15. Thus the additional 15 first-crossing modes ARE the line-side irreducible 15, by exact rank and equivariance, not numerical character fitting.",
+  "second_24_module_isomorphism": "The 79D complement is isomorphic to rank(B) subset of the 80 point+line vertex permutation representation = 1+24+24+15_point+15_line; the 24D eigenspace at second crossing is PSp-stable and therefore must be isomorphic to the 24-point irrep because all other irreducible constituents have dimensions 1 and15.",
+  "first_15_crossing_character_residual_bound": "2e-7 (floating 160-state crossing projector, exact line15 character)",
+  "exact_projector_formulas": {
+    "point15": "(A-12I)(A-2I)/96",
+    "line15": "(A_lines-12I)(A_lines-2I)/96",
+    "point24": "-(A-12I)(A+4I)/60"
+  },
+  "conditional_quantum_ground_symmetry": "If the actual full-H compact ground eigenspace were one-dimensional, the PSp(4,3) action on it would necessarily be trivial because PSp(4,3) is perfect/simple. This does not demonstrate actual ground nondegeneracy, trivial-sector ordering or numerical mass gap.",
+  "scope": "The first 15-dimensional band-crossing module matches the LINE-side 15 character on 80 group actions (not point-side 15). All 40-point and 40-line 15 characters and the 40-point 24 character have exact full-group irreducibility sums. Full 160-state crossing all-group character not yet certified.",
+  "sample_characters": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      -1,
+      0
+    ]
+  ]
+}

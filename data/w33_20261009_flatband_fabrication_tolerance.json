@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "eps_independent_onsite": 0.01,
+  "critical_points": {
+    "first_t": "1/2",
+    "first_kernel_dimension": 96,
+    "second_t": "(2+sqrt10)/6",
+    "second_kernel_dimension": 105
+  },
+  "exact_offcritical_band_dimension": 81,
+  "analytic_lower_gap_first_phase": "For 0<=t<1/2, distance of 81 flat eigenvalues to all other energies >= (1-2t)*(4-sqrt6); at t=0.45 this is 0.15505102572...",
+  "Weyl_stability_theorem": "For any Hermitian perturbation V of norm<=eps, every eigenvalue moves at most eps. If the unperturbed gap delta to a flat eigenvalue cluster exceeds 2eps, the perturbed cluster is isolated with its original total spectral count, although generic disorder splits exact degeneracy.",
+  "negative_consequence": "At exact t1/t2, no gap between 81 core modes and extra 15/24 crossing states exists. Generic independent onsite detuning removes exact 96/105 degeneracy; it cannot be called topologically protected against arbitrary perturbations.",
+  "correlated_vertex_weights_exact_81_band": true,
+  "correlated_min_positive_gap_numerical": 1.036446718688347,
+  "correlated_rigorous_gap_lower": 0.8305522710208868,
+  "samples": [
+    {
+      "t": 0,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 0,
+      "unperturbed_min_distance_other_eigenvalues": 1.5505102572168163,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.008339894050039424,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.015367273705294353
+    },
+    {
+      "t": 0.35,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 0,
+      "unperturbed_min_distance_other_eigenvalues": 1.1999999999999975,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.00822322992681761,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.015815915450028473
+    },
+    {
+      "t": 0.45,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 0,
+      "unperturbed_min_distance_other_eigenvalues": 0.3999999999999959,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.007469774552312151,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.014606365074017502
+    },
+    {
+      "t": 0.49,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 0,
+      "unperturbed_min_distance_other_eigenvalues": 0.07999999999999473,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.008323017624280657,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.016597513747447383
+    },
+    {
+      "t": 0.5,
+      "unperturbed_minus2_multiplicity": 96,
+      "n_modes_below_minus2": 0,
+      "unperturbed_min_distance_other_eigenvalues": 1.8377223398316165,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.008209013499787709,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.01622753358258703
+    },
+    {
+      "t": 0.51,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 15,
+      "unperturbed_min_distance_other_eigenvalues": 0.07999999999999047,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.008002519534205676,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.015490797930130515
+    },
+    {
+      "t": 0.55,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 15,
+      "unperturbed_min_distance_other_eigenvalues": 0.3999999999999923,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.00827494079952944,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.015213047362231948
+    },
+    {
+      "t": 0.8,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 15,
+      "unperturbed_min_distance_other_eigenvalues": 0.331224051072196,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.007668730285190861,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.014765589664747033
+    },
+    {
+      "t": 0.85,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 15,
+      "unperturbed_min_distance_other_eigenvalues": 0.05730560813364056,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.00771011489692787,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.01473280702040157
+    },
+    {
+      "t": 0.8603796100280633,
+      "unperturbed_minus2_multiplicity": 105,
+      "n_modes_below_minus2": 15,
+      "unperturbed_min_distance_other_eigenvalues": 2.8830368802245006,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.008517669508819358,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.01693542369452733
+    },
+    {
+      "t": 0.87,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 39,
+      "unperturbed_min_distance_other_eigenvalues": 0.05323743687412656,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.008366990952486221,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.016363760032414264
+    },
+    {
+      "t": 0.95,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 39,
+      "unperturbed_min_distance_other_eigenvalues": 0.4999999999999936,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.007638957612746788,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.014479311197533061
+    },
+    {
+      "t": 1,
+      "unperturbed_minus2_multiplicity": 81,
+      "n_modes_below_minus2": 39,
+      "unperturbed_min_distance_other_eigenvalues": 0.7823299831252573,
+      "perturbation_norm_max": 0.01,
+      "Weyl_max_indexed_eigenvalue_shift": 0.008003346246165421,
+      "guaranteed_isolated_cluster_by_delta_gt_2epsilon": true,
+      "perturbed_cluster_width": 0.015955282592949586
+    }
+  ],
+  "hardware_boundary": "Dimensionless Hermitian 160-port hopping model only; no physical coupler calibration, photon statistics, dispersion relation or gravitational dynamics inferred."
+}
