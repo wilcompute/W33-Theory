@@ -1,0 +1,66 @@
+{
+  "schema": "w33.pass11794_11796.release.v1",
+  "reserved": {
+    "11794": "63b1d30aa",
+    "11795": "e0572b6a6",
+    "11796": "257d96a4b"
+  },
+  "released": {
+    "11795": "c24b26a80: prior11389 owns FCC/S4 coefficient27/3200"
+  },
+  "science_commits": {
+    "11794": "b15e91011e295ba73bf1a939e728a638606a99bb",
+    "11796": "3b52f0b71ca72ce7e68384d85cef1100bf8c7b00"
+  },
+  "local_focused_tests": {
+    "passed": 43,
+    "seconds": 38.87,
+    "includes": "9new11796+6new11794+28prior11786-11793"
+  },
+  "hosted": {
+    "11794": {
+      "run": 37956421272,
+      "job": 113907976430,
+      "status": "success",
+      "frozen": 6,
+      "frozen_seconds": 3.52,
+      "regenerated": 6,
+      "regenerated_seconds": 3.46
+    },
+    "11796": {
+      "run": 37958708852,
+      "job": 113915737227,
+      "status": "success",
+      "frozen": 15,
+      "frozen_seconds": 8.76,
+      "regenerated": 9,
+      "regenerated_seconds": 5.91
+    }
+  },
+  "science_lf_sha256": {
+    "analysis/w33_pass11794_hidden_center_vacuum.py": "959898e4c82f4b00c9448ecaa39cad0fb9eb5023ec50be6bb669222b76d5ff75",
+    "data/w33_pass11794_hidden_center_vacuum.json": "d1b671092450bbaeaea98282dba7f8ad54c24d9142bff2144a5453551619b27a",
+    "tests/test_w33_pass11794_hidden_center_vacuum.py": "552f1d6a83f03968427ff91cb0c1d11b5fda227882a481315df2db1e97860eb0",
+    ".github/workflows/pass11794-hidden-center-vacuum.yml": "4892fa6d894d0f1d2f154ac483eff84fc703488088e70a8e65e131b3b4c25610",
+    "analysis/w33_pass11796_parity_complete_abelian_higgs.py": "debda4c49392b654726e3b8b30e7c8b9711d40f5900ec31a337438bb37bfb11c",
+    "data/w33_pass11796_parity_complete_abelian_higgs.json": "5e7fb72883f62498778dda8c1b44de3a66d506d1fff5d5752b70633cc6613c1a",
+    "tests/test_w33_pass11796_parity_complete_abelian_higgs.py": "4ca190617a364686140886460794c9189f2578d31fdc9869bb1394805cc7437f",
+    ".github/workflows/pass11796-parity-abelian-higgs.yml": "2d93ecfeff24842222680f6b2c2dc1fd1acff53a39a0cad25857aa3f3f99a56f",
+    "analysis/PASS11794_HIDDEN_CENTER_DFLAT_AND_LOCKING.md": "7c9b266fdc1cc4c054224a6bfadeb8f26ec1c67b66a81b828098d2a832b817d0",
+    "analysis/PASS11796_FULL_FIELD_PARITY_AND_ABELIAN_HIGGS.md": "9914769b4439a87964e74502e97186d053cc87be53a8fcacc0b60f0c54cb6b2a"
+  },
+  "actual_CI_log_sha256": {
+    "data/w33_pass11794_hosted_ci.log": "9e727b46f0e8a096c4e119d8c8d54f0b4f813a2ab99fa2dd72976caca6eab6d3",
+    "data/w33_pass11796_hosted_ci.log": "03929ff50a2c6223c59e406d889f1f4beda44d5cfa6dde263b8f688298714ab6"
+  },
+  "parallel_intake_tests": {
+    "passed": 10,
+    "seconds": 78.47,
+    "files": [
+      "tests/test_w33_20261009_five_fronts_round3.py",
+      "tests/test_w33_20261009_five_quantum_frontiers_v2.py"
+    ]
+  },
+  "prior_spectral_crosscheck": "All162 real/imaginary entries of parallel11state leading9x9 block intersect the own corrected9state rational intervals.",
+  "scope": "Exact canonical classical D-flat branches, finite field-lattice characters and gauge mass kernels. No F-flat physical MSSM, axion/global anomaly completion, exotic mass spectrum or TOE. All owned artifacts in original checkout; unrelated shared data preserved."
+}

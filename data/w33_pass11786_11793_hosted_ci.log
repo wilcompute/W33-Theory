@@ -1,0 +1,356 @@
+verify	UNKNOWN STEP	﻿2026-10-09T09:11:09.9536762Z Current runner version: '2.337.0'
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9558771Z ##[group]Runner Image Provisioner
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9559574Z Hosted Compute Agent
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9560079Z Version: 20261002.596
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9560596Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9561226Z Build Date: 2026-10-02T22:28:27Z
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9561781Z Worker ID: {002c5c3c-3d25-45ce-8532-a4241bd86a56}
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9562563Z Region: westus3
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9563082Z Cloud: Azure
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9563666Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9565285Z ##[group]Operating System
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9565830Z Ubuntu
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9566244Z 24.04.5
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9566723Z LTS
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9567154Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9567636Z ##[group]Runner Image
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9568154Z Image: ubuntu-24.04
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9568685Z Version: 20261004.327.1
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9569789Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9571054Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9571873Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9572873Z ##[group]GITHUB_TOKEN Permissions
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9574716Z Contents: read
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9575230Z Metadata: read
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9575796Z Packages: read
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9576291Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9577988Z Secret source: Actions
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9578743Z Cache mode: write
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9579379Z Prepare workflow directory
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9886513Z Prepare all required actions
+verify	UNKNOWN STEP	2026-10-09T09:11:09.9926498Z Getting action download info
+verify	UNKNOWN STEP	2026-10-09T09:11:10.2909001Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	UNKNOWN STEP	2026-10-09T09:11:10.3739185Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+verify	UNKNOWN STEP	2026-10-09T09:11:10.5674642Z Complete job name: verify
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6287468Z ##[group]Run actions/checkout@v4
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6288298Z with:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6288667Z   repository: wilcompute/W33-Theory
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6291905Z   token: ***
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6292254Z   ssh-strict: true
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6292605Z   ssh-user: git
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6292958Z   persist-credentials: true
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6293337Z   clean: true
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6293880Z   sparse-checkout-cone-mode: true
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6294298Z   fetch-depth: 1
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6294637Z   fetch-tags: false
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6294996Z   show-progress: true
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6295356Z   lfs: false
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6295683Z   submodules: false
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6296038Z   set-safe-directory: true
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6296434Z   allow-unsafe-pr-checkout: false
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6297004Z env:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6297330Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:11:10.6297695Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7104002Z Syncing repository: wilcompute/W33-Theory
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7106328Z ##[group]Getting Git version info
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7107272Z Working directory is '/home/runner/work/W33-Theory/W33-Theory'
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7109509Z [command]/usr/bin/git version
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7217817Z git version 2.55.0
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7234043Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7246243Z Temporarily overriding HOME='/home/runner/work/_temp/c2b9debd-847b-4cc0-a052-507491f9f433' before making global git config changes
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7248062Z Adding repository directory to the temporary git global config as a safe directory
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7250475Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7340371Z Deleting the contents of '/home/runner/work/W33-Theory/W33-Theory'
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7342416Z ##[group]Initializing the repository
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7345862Z [command]/usr/bin/git init /home/runner/work/W33-Theory/W33-Theory
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7446582Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7448597Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7450044Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7451161Z hint: call:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7451867Z hint:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7452983Z hint: 	git config --global init.defaultBranch <name>
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7454057Z hint:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7454852Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7456062Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7457022Z hint:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7457538Z hint: 	git branch -m <name>
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7458123Z hint:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7458887Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7460163Z Initialized empty Git repository in /home/runner/work/W33-Theory/W33-Theory/.git/
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7462413Z [command]/usr/bin/git remote add origin https://github.com/wilcompute/W33-Theory
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7506537Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7507559Z ##[group]Disabling automatic garbage collection
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7510065Z [command]/usr/bin/git config --local gc.auto 0
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7541151Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7542174Z ##[group]Setting up auth
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7548362Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7576579Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	UNKNOWN STEP	2026-10-09T09:11:10.7998419Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	UNKNOWN STEP	2026-10-09T09:11:10.8029682Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	UNKNOWN STEP	2026-10-09T09:11:10.8216585Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	UNKNOWN STEP	2026-10-09T09:11:10.8246154Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	UNKNOWN STEP	2026-10-09T09:11:10.8434577Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	UNKNOWN STEP	2026-10-09T09:11:10.8467972Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:10.8468807Z ##[group]Fetching the repository
+verify	UNKNOWN STEP	2026-10-09T09:11:10.8475461Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9d8c8a0cf96b2b688f8f3a27b18292ba386b1e86:refs/remotes/origin/master
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2330637Z From https://github.com/wilcompute/W33-Theory
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2332276Z  * [new ref]           9d8c8a0cf96b2b688f8f3a27b18292ba386b1e86 -> origin/master
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2335880Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2337179Z ##[group]Determining the checkout info
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2338220Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2341039Z [command]/usr/bin/git sparse-checkout disable
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2807963Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2838488Z ##[group]Checking out the ref
+verify	UNKNOWN STEP	2026-10-09T09:11:20.2841033Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+verify	UNKNOWN STEP	2026-10-09T09:11:21.3392289Z Updating files:  36% (12345/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:21.3579137Z Updating files:  37% (12573/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:21.3746632Z Updating files:  38% (12913/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:21.4701561Z Updating files:  39% (13252/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:21.5068370Z Updating files:  40% (13592/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.3905401Z Updating files:  41% (13932/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4087827Z Updating files:  41% (13981/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4179863Z Updating files:  42% (14272/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4339202Z Updating files:  43% (14611/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4465815Z Updating files:  44% (14951/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4591365Z Updating files:  45% (15291/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4720999Z Updating files:  46% (15631/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4838800Z Updating files:  47% (15971/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.4993435Z Updating files:  48% (16310/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.5131256Z Updating files:  49% (16650/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.5300170Z Updating files:  50% (16990/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.5416645Z Updating files:  51% (17330/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.5690491Z Updating files:  52% (17670/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.5833668Z Updating files:  53% (18009/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.6004199Z Updating files:  54% (18349/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.7953335Z Updating files:  55% (18689/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.8198874Z Updating files:  56% (19029/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:22.8492062Z Updating files:  57% (19369/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.0212476Z Updating files:  58% (19708/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.0361297Z Updating files:  59% (20048/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.0522950Z Updating files:  60% (20388/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.0649801Z Updating files:  61% (20728/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.0785357Z Updating files:  62% (21067/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.0997893Z Updating files:  63% (21407/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.1157689Z Updating files:  64% (21747/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.1553764Z Updating files:  65% (22087/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.1771076Z Updating files:  66% (22427/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.2710451Z Updating files:  67% (22766/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.2891743Z Updating files:  68% (23106/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.3054030Z Updating files:  69% (23446/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.3089758Z Updating files:  69% (23720/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.5058686Z Updating files:  70% (23786/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.5222048Z Updating files:  71% (24126/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.5385044Z Updating files:  72% (24465/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.5528267Z Updating files:  73% (24805/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.5661255Z Updating files:  74% (25145/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.5794358Z Updating files:  75% (25485/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.5941034Z Updating files:  76% (25825/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.6375793Z Updating files:  77% (26164/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.6589828Z Updating files:  78% (26504/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.6746140Z Updating files:  79% (26844/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.6901127Z Updating files:  80% (27184/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.7128075Z Updating files:  81% (27523/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.7342939Z Updating files:  82% (27863/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.7486935Z Updating files:  83% (28203/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.7635716Z Updating files:  84% (28543/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.7822320Z Updating files:  85% (28883/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.7999738Z Updating files:  86% (29222/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.8158088Z Updating files:  87% (29562/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.8331436Z Updating files:  88% (29902/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.8471825Z Updating files:  89% (30242/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.8597560Z Updating files:  90% (30582/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.8716846Z Updating files:  91% (30921/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.8850270Z Updating files:  92% (31261/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.8982724Z Updating files:  93% (31601/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.9177374Z Updating files:  94% (31941/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.9339702Z Updating files:  95% (32281/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.9498708Z Updating files:  96% (32620/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.9638469Z Updating files:  97% (32960/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:23.9840979Z Updating files:  98% (33300/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:24.0297968Z Updating files:  99% (33640/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:24.0298548Z Updating files: 100% (33979/33979)
+verify	UNKNOWN STEP	2026-10-09T09:11:24.0299025Z Updating files: 100% (33979/33979), done.
+verify	UNKNOWN STEP	2026-10-09T09:11:24.1946652Z Reset branch 'master'
+verify	UNKNOWN STEP	2026-10-09T09:11:24.1952976Z branch 'master' set up to track 'origin/master'.
+verify	UNKNOWN STEP	2026-10-09T09:11:24.2685861Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:24.2731733Z [command]/usr/bin/git log -1 --format=%H
+verify	UNKNOWN STEP	2026-10-09T09:11:24.2754509Z 9d8c8a0cf96b2b688f8f3a27b18292ba386b1e86
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3537572Z ##[group]Run actions/setup-python@v5
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3537813Z with:
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3537983Z   python-version: 3.12
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3538188Z   check-latest: false
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3540199Z   token: ***
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3540374Z   update-environment: true
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3540573Z   allow-prereleases: false
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3540757Z   freethreaded: false
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3540927Z env:
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3541093Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:11:24.3541284Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:24.4601708Z ##[group]Installed versions
+verify	UNKNOWN STEP	2026-10-09T09:11:24.5047189Z (node:2133) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	UNKNOWN STEP	2026-10-09T09:11:24.5047967Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	UNKNOWN STEP	2026-10-09T09:11:24.5048447Z Successfully set up CPython (3.12.15)
+verify	UNKNOWN STEP	2026-10-09T09:11:24.5048922Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:24.5310402Z ##[group]Run python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+verify	UNKNOWN STEP	2026-10-09T09:11:24.5311033Z [36;1mpython -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest[0m
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7167319Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7167674Z env:
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7167985Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7168320Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7168693Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7169038Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7169382Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7169675Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7169965Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:11:24.7170238Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:27.1354552Z Collecting numpy==2.5.3
+verify	UNKNOWN STEP	2026-10-09T09:11:27.2012799Z   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:27.8861391Z Collecting scipy==1.18.1
+verify	UNKNOWN STEP	2026-10-09T09:11:27.8961776Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.0211893Z Collecting sympy==1.14.0
+verify	UNKNOWN STEP	2026-10-09T09:11:28.0312158Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.1271463Z Collecting networkx==3.6.1
+verify	UNKNOWN STEP	2026-10-09T09:11:28.1369693Z   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.1911208Z Collecting pytest
+verify	UNKNOWN STEP	2026-10-09T09:11:28.2011200Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.2329759Z Collecting mpmath<1.4,>=1.1.0 (from sympy==1.14.0)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.2427918Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.2912797Z Collecting iniconfig>=1.0.1 (from pytest)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.3010346Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.3243427Z Collecting packaging>=22 (from pytest)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.3339316Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.4669636Z Collecting pluggy<2,>=1.5 (from pytest)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.4768631Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.7193256Z Collecting pygments>=2.7.2 (from pytest)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.7291172Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:28.7949463Z Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.3443941Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 31.7 MB/s  0:00:00
+verify	UNKNOWN STEP	2026-10-09T09:11:29.3542954Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.7319737Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 93.6 MB/s  0:00:00
+verify	UNKNOWN STEP	2026-10-09T09:11:29.7420907Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.7882824Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 137.5 MB/s  0:00:00
+verify	UNKNOWN STEP	2026-10-09T09:11:29.7985309Z Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.8921776Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 19.8 MB/s  0:00:00
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9020699Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9060839Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 132.0 MB/s  0:00:00
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9158499Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9276280Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9387607Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9647979Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9761041Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+verify	UNKNOWN STEP	2026-10-09T09:11:29.9817947Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 268.6 MB/s  0:00:00
+verify	UNKNOWN STEP	2026-10-09T09:11:30.1821400Z Installing collected packages: mpmath, sympy, pygments, pluggy, packaging, numpy, networkx, iniconfig, scipy, pytest
+verify	UNKNOWN STEP	2026-10-09T09:11:42.6995657Z 
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7007938Z Successfully installed iniconfig-2.3.1 mpmath-1.3.0 networkx-3.6.1 numpy-2.5.3 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1 scipy-1.18.1 sympy-1.14.0
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7690993Z ##[group]Run python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q tests/test_w33_pass11786_11793_spectral_field_gravity.py tests/test_w33_pass11778_11785_compact_geometry.py tests/test_w33_pass11769_quantized_current_vacuum.py
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7692170Z [36;1mpython -m pytest --noconftest --ignore-glob='tests/test_*.py' -q tests/test_w33_pass11786_11793_spectral_field_gravity.py tests/test_w33_pass11778_11785_compact_geometry.py tests/test_w33_pass11769_quantized_current_vacuum.py[0m
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7753742Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7753964Z env:
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7754134Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7754395Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7754737Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7755067Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7755394Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7755688Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7755978Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:11:42.7756228Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:11:47.6405519Z .......................................................                  [100%]
+verify	UNKNOWN STEP	2026-10-09T09:11:47.6405985Z 55 passed in 4.34s
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8029031Z ##[group]Run python analysis/w33_pass11786_certified_spectral_transitions.py
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8029478Z [36;1mpython analysis/w33_pass11786_certified_spectral_transitions.py[0m
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8085948Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8086155Z env:
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8086339Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8086583Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8086931Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8087266Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8087558Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8087850Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8088155Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:11:47.8088411Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:12:05.2917207Z 11786 PASS rational nine-state upper bound 127.595533
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3867537Z ##[group]Run python analysis/w33_pass11787_11788_current_dirac_nonlinear_action.py
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3867986Z [36;1mpython analysis/w33_pass11787_11788_current_dirac_nonlinear_action.py[0m
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3924902Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3925275Z env:
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3925443Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3925691Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3926033Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3926369Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3926671Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3926994Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3927292Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:12:05.3927548Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:12:06.0471866Z 11787 actual Dirac domain/index controls;11788 nonlinear common-front action PASS
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1578863Z ##[group]Run python analysis/w33_pass11789_11792_transition_field_continuum.py
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1579293Z [36;1mpython analysis/w33_pass11789_11792_transition_field_continuum.py[0m
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1634626Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1634842Z env:
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1635005Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1635259Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1635600Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1635937Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1636230Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1636519Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1636809Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:12:06.1637061Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:12:06.4580259Z 11789 named transition-field limit;11791/11792 fluctuation and modular obstructions PASS
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5119676Z ##[group]Run python analysis/w33_pass11790_11793_lifted_ricci_sources.py
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5120083Z [36;1mpython analysis/w33_pass11790_11793_lifted_ricci_sources.py[0m
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5175541Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5175749Z env:
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5175918Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5176165Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5176513Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5176858Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5177152Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5177451Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5177753Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:12:06.5178006Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:12:07.2797852Z 11790/11793 exact null Ricci960alpha and required source PASS
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3823036Z ##[group]Run python analysis/w33_pass11793_order_four_matter_action.py
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3823438Z [36;1mpython analysis/w33_pass11793_order_four_matter_action.py[0m
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3879279Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3879497Z env:
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3879667Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3879912Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3880275Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3880615Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3880913Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3881204Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3881497Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:12:07.3881751Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:12:07.8578557Z 11793 PASS exact order4 field character [0, 0, 2, 0, 2, 0, 3, 3, 3] MSSM matter sign,VEVs/Higgs neutral; not F-flat vacuum
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9120051Z ##[group]Run python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q tests/test_w33_pass11786_11793_spectral_field_gravity.py
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9120888Z [36;1mpython -m pytest --noconftest --ignore-glob='tests/test_*.py' -q tests/test_w33_pass11786_11793_spectral_field_gravity.py[0m
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9176271Z shell: /usr/bin/bash -e {0}
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9176481Z env:
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9176666Z   OPENBLAS_NUM_THREADS: 1
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9176912Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9177255Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9177589Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9177888Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9178184Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9178476Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+verify	UNKNOWN STEP	2026-10-09T09:12:07.9178769Z ##[endgroup]
+verify	UNKNOWN STEP	2026-10-09T09:12:11.0486075Z ............................                                             [100%]
+verify	UNKNOWN STEP	2026-10-09T09:12:11.0486590Z 28 passed in 2.94s
+verify	UNKNOWN STEP	2026-10-09T09:12:11.1682558Z Post job cleanup.
+verify	UNKNOWN STEP	2026-10-09T09:12:11.2632631Z (node:2194) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	UNKNOWN STEP	2026-10-09T09:12:11.2633213Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	UNKNOWN STEP	2026-10-09T09:12:11.2793933Z Post job cleanup.
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3494335Z [command]/usr/bin/git version
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3529959Z git version 2.55.0
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3558319Z Temporarily overriding HOME='/home/runner/work/_temp/74a073f3-6931-4624-ac37-40ac69b60a1e' before making global git config changes
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3559337Z Adding repository directory to the temporary git global config as a safe directory
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3563328Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3595285Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3623330Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	UNKNOWN STEP	2026-10-09T09:12:11.3855781Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	UNKNOWN STEP	2026-10-09T09:12:11.5612005Z http.https://github.com/.extraheader
+verify	UNKNOWN STEP	2026-10-09T09:12:11.5624374Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	UNKNOWN STEP	2026-10-09T09:12:11.5924813Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	UNKNOWN STEP	2026-10-09T09:12:11.6158377Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	UNKNOWN STEP	2026-10-09T09:12:11.6191419Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	UNKNOWN STEP	2026-10-09T09:12:11.6554296Z Cleaning up orphan processes
+verify	UNKNOWN STEP	2026-10-09T09:12:11.6803269Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

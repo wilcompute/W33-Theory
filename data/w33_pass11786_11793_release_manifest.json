@@ -1,0 +1,68 @@
+{
+  "schema": "w33.pass11786_11793.release.v2",
+  "reservation": "485bfa609",
+  "science_commits": [
+    "c77e5fe38",
+    "975aad94e",
+    "bb6c8d8c1"
+  ],
+  "published_science_sha": "9d8c8a0cf96b2b688f8f3a27b18292ba386b1e86",
+  "concurrent_intake": [
+    "6ab13216a",
+    "3fdef4a22",
+    "a1f780d38",
+    "9d8c8a0cf",
+    "2d5389fec",
+    "d9df5bc6f",
+    "b336d1d1c"
+  ],
+  "local_tests": {
+    "passed": 55,
+    "seconds": 14.32,
+    "owned": 28
+  },
+  "hosted": {
+    "run_id": 37909630728,
+    "job_id": 113751390203,
+    "status": "success",
+    "frozen_tests": 55,
+    "frozen_seconds": 4.34,
+    "regenerated_owned_tests": 28,
+    "regenerated_seconds": 2.94,
+    "producer_count": 5,
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/37909630728"
+  },
+  "initial_hosted": {
+    "run_id": 37890650262,
+    "status": "success",
+    "frozen_tests": 50,
+    "regenerated_owned_tests": 23,
+    "producer_count": 4
+  },
+  "normalized_lf_verified_science_sha256": {
+    "analysis/w33_pass11786_certified_spectral_transitions.py": "c0c8b2d61cfe24fa042afbcf137b95721fb3d2f61f5d94aece81ed063d0088ea",
+    "analysis/w33_pass11787_11788_current_dirac_nonlinear_action.py": "a6eb5788e7c128a9f755ebb2986ef63f7b8fa8bbc6b7a6978e8da7319f84720b",
+    "analysis/w33_pass11789_11792_transition_field_continuum.py": "aa1a4ecc3eb9a90381f6a5ff8f2acd9ed0de975477cd3eb7488adc71850285e4",
+    "analysis/w33_pass11790_11793_lifted_ricci_sources.py": "dd678f9e1c3a25323032025de11d604d05e3182ff7d44bfd5339c0847605ef6e",
+    "analysis/PASS11786_11793_SPECTRAL_FIELD_GRAVITY.md": "3797d6f5b847126011d82ac9354a396fb97976d1938f0bc5bdc92a26cc6c4f67",
+    "tests/test_w33_pass11786_11793_spectral_field_gravity.py": "5de9c40cf19218e18a68d233fd4668eaeb0ed02f0ed7e3a50dc9f20389896272",
+    ".github/workflows/pass11786-11793-spectral-field-gravity.yml": "5fe552da412df8a185143c5bed63056fb579ff61635ffc210a60575d4c21847a",
+    "data/w33_pass11786_certified_spectral_transitions.json": "9b97150b38f9011106081c29d2abb061298b0971e1993d80248ce3a0450183eb",
+    "data/w33_pass11787_11788_current_dirac_nonlinear_action.json": "0242128f18363afc621ce5e7e1a3ee3767c0b97fbfd026f970062349cd813bab",
+    "data/w33_pass11789_11792_transition_field_continuum.json": "e5f00572e5b638e938c48cf85e195f323a8c473d6a8fedc5b97f8775479a8d68",
+    "data/w33_pass11790_11793_lifted_ricci_sources.json": "28eaa10944aa5ca702ea216226039fa5d40810f6543b88a244c59776cdffb8ad",
+    "analysis/w33_pass11793_order_four_matter_action.py": "d931629c04669cb8957f2770bb8711f1502f02d9d2669832e42eb74bd6035195",
+    "data/w33_pass11793_order_four_matter_action.json": "7bdcfc1c23d1decda248271fd4c5ce37a37b75ca7b7664975056ee0b88d50b29"
+  },
+  "preserved_raw_sha256": {
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    ".mcp.json": "88ca5e03b5be02bef6603b9a74758638a4eec5f0a910677154d20f506d9a3cfa"
+  },
+  "logs_sha256": {
+    "data/w33_pass11786_11793_initial_hosted_ci.log": "509db5d798c6ac1367776bf41d0bbae1ab3ea2ed40d1654a47e5e1dc63dfe3ce",
+    "data/w33_pass11786_11793_hosted_ci.log": "cdbf1f3d71456ea28043ebe0177fae7de0bda6e53a12a11596f9f4475fe35573"
+  },
+  "independent_remote_validation": "All13owned code/certificate/report/test/workflow files fetched from successful exact-SHA GitHub contents endpoint and compared byte-for-byte after LF normalization.",
+  "scope": "Five explicit investigations plus order4matter-action extension. No numerical lower/gap or full actual Fredholm index; spatial action/couplings and gravity-source inputs supplied. Later parallel owns stronger corrected11state bound127.595507; old9state remains a valid weaker certificate. Later11794/11796 vacua have distinct receipts."
+}
