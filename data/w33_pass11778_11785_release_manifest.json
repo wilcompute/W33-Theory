@@ -1,0 +1,104 @@
+{
+  "schema": "w33.pass11778_11785.release.v1",
+  "science_commits": [
+    "6039de33c",
+    "504ba3b48c18f49ed6c373f11084a1a9155d2773"
+  ],
+  "reservation": "94fd9d49d",
+  "validated_sha": "504ba3b48c18f49ed6c373f11084a1a9155d2773",
+  "hosted": {
+    "run_id": 37882187195,
+    "job_id": 113664110547,
+    "conclusion": "success",
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/37882187195",
+    "frozen": {
+      "passed": 49,
+      "seconds": 5.49
+    },
+    "producers_succeeded": 3,
+    "regenerated": {
+      "passed": 26,
+      "seconds": 2.99
+    }
+  },
+  "local": {
+    "focused": {
+      "passed": 49,
+      "seconds": 14.75
+    },
+    "additional_parallel": {
+      "passed": 3,
+      "seconds": 10.2
+    },
+    "rediscovery_guard_exit": 0
+  },
+  "initial_hosted": {
+    "run_id": 37881500268,
+    "job_id": 113661984499,
+    "sha": "39f4c051a30684ac4ece47eff370926fb4fb2813",
+    "conclusion": "success"
+  },
+  "science_artifacts_sha256_normalized_lf": {
+    ".github/workflows/pass11778-11785-compact-geometry.yml": "d42cec90f978b21e7e57e90f0f358ba97e9ea7bcb8782ac79b270d107285a4f3",
+    "analysis/PASS11778_11785_COMPACT_VACUUM_CURVATURE_LORENTZIAN_LIFT.md": "15041e15459d7a70df316fbf5d41ba3405e68bcfc64543315fd299087afdd819",
+    "analysis/w33_pass11778_11783_compact_vacuum_thermodynamics.py": "38be29d1ec93d4ec38e392218a68bc959de5c6e01bd99010414234bc85c6abda",
+    "analysis/w33_pass11779_11780_11782_local_net_index_constraints.py": "c9296de763adf43d70249c1e61d868355f8859740ced28b70d053addb49d8e69",
+    "analysis/w33_pass11781_11784_11785_nonlinear_cone_bargmann_lift.py": "4e9544f91c4175163bf0acd2b78c34dc57cb27b1ab0e4235530d646ab1f0ab18",
+    "data/w33_pass11778_11783_compact_vacuum_thermodynamics.json": "185a187ea6535c0391860d8aa25df36a4a5f9babe8a37c36b19970e481442456",
+    "data/w33_pass11779_11780_11782_local_net_index_constraints.json": "3796dbb9155c5e2e2ce6873b86a093b568af7e725ae67a3605e41970085e7fa5",
+    "data/w33_pass11781_11784_11785_nonlinear_cone_bargmann_lift.json": "daab6048fb22c6d06d36698d16bb4c98d74f2ab684e2611a7e262540ad6c67d8",
+    "docs/index.html": "745568aa0847c8c7643dde70cfc7fa30e757d33f8e723766d636f87bc8fa558e",
+    "tests/test_w33_pass11778_11785_compact_geometry.py": "e248a27b40c0dec3bf93f5bd64f1b62989517c6845d302eceb9980ca2ddc5ebc"
+  },
+  "results_index": {
+    "path": "RESULTS_INDEX.md",
+    "sha256_normalized_lf": "8248fa814180e8d5a8d891b53f41c4d2d496d05f581fe42f280a5fe42ebf8185",
+    "files_indexed": 11506,
+    "distinctive": 16152,
+    "unique": 7051,
+    "scope": "Regenerated after final science; published in this receipt separately from validated executable inputs."
+  },
+  "hosted_log": {
+    "path": "data/w33_pass11778_11785_hosted_ci.log",
+    "sha256_normalized_lf": "ae65859c8e7317b05995b8fe98f3b8534d41de12c8d7f8c137dd08fa90a7b1d9"
+  },
+  "preserved_unrelated_raw_sha256": {
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    ".mcp.json": "88ca5e03b5be02bef6603b9a74758638a4eec5f0a910677154d20f506d9a3cfa"
+  },
+  "reviewed_parallel_commits": [
+    "42d6a31e8",
+    "6dec4d83e",
+    "6777cbb4e",
+    "f76aaa5fa",
+    "2cd2a8f2a",
+    "0f6359755",
+    "57a7ddcab",
+    "03746aaf2",
+    "1a0a2fd52",
+    "7e956355d",
+    "a79b4e07a",
+    "0484f3a0c",
+    "790d8f36e",
+    "d4ebad8f0",
+    "d6c387dfd",
+    "a087bcbfd",
+    "338ddb721",
+    "ebdd5b952",
+    "7f2ebe1db"
+  ],
+  "parallel_latest_ritz_upper_estimate": 127.61920315299878,
+  "parallel_benchmark_provenance": {
+    "frozen_rows_verified": 29,
+    "raw_hashes_matched": 29,
+    "primary_shift_checked": "https://arxiv.org/pdf/0708.2691 E.1a and F.1a",
+    "scope": "Necessary fixed-generator sieve, not full model equivalence."
+  },
+  "boundaries": [
+    "Compact resolvent, ground attainment and gap existence concern the proposed finite current Hamiltonian; no numeric gap, uniqueness or particle masses.",
+    "The122.693541734 scalar lower bound concerns only the fixed-covariance Gaussian family, not E0.",
+    "Actual current-Dirac Fredholmness/index, a continuum limit and Einstein dynamics remain unresolved.",
+    "Local current net, Bott supercharge, Abelian constraint half and Eisenhart-Duval lift are explicit supplied constructions, not derived physical completion."
+  ]
+}
