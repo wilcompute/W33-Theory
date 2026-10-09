@@ -10,7 +10,7 @@ from fractions import Fraction
 from pathlib import Path
 import sys
 
-ROOT = Path(r"C:\Repos\Theory of Everything")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "analysis"))
 from w33_pass11767_global_current_algebra import actual_edges
 
