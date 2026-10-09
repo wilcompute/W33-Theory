@@ -1,0 +1,47 @@
+{
+  "schema": "w33.pass11790_11793.v1",
+  "source_sha256": "dd678f9e1c3a25323032025de11d604d05e3182ff7d44bfd5339c0847605ef6e",
+  "pass11790_11793": {
+    "status": "PASS",
+    "metric": "g=G_ij(q)dq_i*dq_j+2du[dv+A_i(q)dq_i-Veff(q)du], G=P(q)^(-1).",
+    "parallel_null": "All g_vA are constants and every coefficient is v-independent; Gamma^A_Bv=0. Thus partial_v is covariantly constant, not only Killing, and Ric_vA=0 globally.",
+    "stationary_Ruu": "For stationary G,A,Veff, Ric_uu=Delta_G Veff+(1/4)*F_ij*F^ij. At q=0, A=0,F=0,grad Veff=0; hence Ric_uu(0)=tr(P0*Hess Veff).",
+    "centered_hessian": "Hess Veff(0)=2*[(vy+b)-4*(c+b)^2/(vx+b)]*(4P_W-Adj); b=1/20. This is the Schur complement of the11771 exact Gaussian energy Hessian.",
+    "tidal_endomorphism": "P0*Hess Veff=alpha*(16P_W-Adj^2), alpha=4*[(vx+b)*(vy+b)-4*(c+b)^2]>0.",
+    "alpha_interval": [
+      "40437442727626429007622368612770999/12500000000000000000000000000000000",
+      "40437442727626429007622368612771059/12500000000000000000000000000000000"
+    ],
+    "null_ricci_interval": [
+      "121312328182879287022867105838312997/39062500000000000000000000000000",
+      "121312328182879287022867105838313177/39062500000000000000000000000000"
+    ],
+    "exact_trace": 960,
+    "tidal_eigenvalues": [
+      {
+        "value": "10*alpha",
+        "multiplicity": 48
+      },
+      {
+        "value": "16*alpha",
+        "multiplicity": 30
+      }
+    ],
+    "geodesic_connection": "The positive geodesic tidal eigenvalues reproduce the squared centered Gaussian normal frequencies already owned by11771. This supplies a geometric reading of those frequencies, not new particle masses.",
+    "no_vacuum_einstein": "If Ric_AB=lambda*g_AB, the uv component gives lambda=0 because Ric_uv=0 and g_uv=1. But Ric_uu(0)=960*alpha>0. Therefore this exact lift fails vacuum Einstein equations for EVERY cosmological constant.",
+    "required_null_source": "At q=0 let L=partial_u+Veff(0)*partial_v, so g(L,L)=0. Einstein equations with any cosmological constant require T(L,L)=960*alpha/(8*pi*G_N)>0. This null contraction is independent of scalar-curvature and cosmological terms. G_N is supplied; other stress components require the rest of Ricci(G,A,Veff).",
+    "constant_energy_shift": "Veff->Veff+Lambda changes the null-coordinate choice v_new=v-Lambda*u but not the invariant null Ricci/source contraction. The lift does not solve the physical cosmological constant problem.",
+    "field_equation_boundary": "The force-geometrizing metric is not a gravitational vacuum. One may define a conserved effective stress tensor from its Einstein tensor, but that alone is a tautological source assignment, not a derived matter action or gravitational dynamics. A self-consistent coupled solution and physical dimensional reduction remain open.",
+    "differential_controls": {
+      "flat_magnetic_Ruu": "B**2/2 + 2*mu",
+      "rotating_flat_control": "mu=-B^2/4 cancels the magnetic null Ricci contribution; positive confinement instead adds to it.",
+      "nonconstant_target_Ruu": "mu/(x**2 + 1)**2",
+      "parallel_null_vector": true
+    },
+    "prior": "11781/11784/11785 own G,A,Veff and the standard lift;11771 owns alpha and48+30 normal-frequency multiplicities.",
+    "literature": [
+      "https://arxiv.org/abs/1605.01932",
+      "https://arxiv.org/abs/1901.03699"
+    ]
+  }
+}

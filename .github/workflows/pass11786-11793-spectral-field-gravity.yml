@@ -1,0 +1,42 @@
+name: Pass11786-11793 spectral field and gravity sources
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11786_certified_spectral_transitions.py
+      - analysis/w33_pass11787_11788_current_dirac_nonlinear_action.py
+      - analysis/w33_pass11789_11792_transition_field_continuum.py
+      - analysis/w33_pass11790_11793_lifted_ricci_sources.py
+      - analysis/PASS11786_11793_SPECTRAL_FIELD_GRAVITY.md
+      - tests/test_w33_pass11786_11793_spectral_field_gravity.py
+      - .github/workflows/pass11786-11793-spectral-field-gravity.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 sympy==1.14.0 networkx==3.6.1 pytest
+      - name: Frozen intervals covariance continuum and Ricci controls
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11786_11793_spectral_field_gravity.py
+          tests/test_w33_pass11778_11785_compact_geometry.py
+          tests/test_w33_pass11769_quantized_current_vacuum.py
+      - name: Replay rational actual-coordinate nine-state audit
+        run: python analysis/w33_pass11786_certified_spectral_transitions.py
+      - name: Replay actual Dirac and nonlinear common-cone controls
+        run: python analysis/w33_pass11787_11788_current_dirac_nonlinear_action.py
+      - name: Replay actual-transition field and modular controls
+        run: python analysis/w33_pass11789_11792_transition_field_continuum.py
+      - name: Replay exact lifted Ricci and required source
+        run: python analysis/w33_pass11790_11793_lifted_ricci_sources.py
+      - name: Check regenerated spectral field and gravity certificates
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11786_11793_spectral_field_gravity.py
