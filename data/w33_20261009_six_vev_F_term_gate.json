@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "max_degree": 9,
+  "source": "Z6-II|Z6II_34__SM_20260917_1558",
+  "support": [
+    "n_1",
+    "n_19",
+    "n_54",
+    "n_56",
+    "n_80",
+    "n_82"
+  ],
+  "all_fields": 176,
+  "counts": {
+    "B_all": 11,
+    "B_point_group": 11
+  },
+  "examples": {
+    "A_all": [],
+    "B_all": [
+      [
+        "n_19",
+        "n_43"
+      ],
+      [
+        "n_19",
+        "n_61"
+      ],
+      [
+        "n_54",
+        "n_9"
+      ],
+      [
+        "n_56",
+        "n_25"
+      ],
+      [
+        "n_56",
+        "n_7"
+      ],
+      [
+        "n_19",
+        "n_82",
+        "n_72"
+      ],
+      [
+        "n_19",
+        "n_82",
+        "n_77"
+      ],
+      [
+        "n_54",
+        "n_56",
+        "n_80",
+        "n_93"
+      ],
+      [
+        "n_54",
+        "n_56",
+        "n_80",
+        "n_96"
+      ],
+      [
+        "n_1",
+        "n_19",
+        "n_54",
+        "n_56",
+        "n_16"
+      ],
+      [
+        "n_1",
+        "n_19",
+        "n_54",
+        "n_56",
+        "n_31"
+      ]
+    ],
+    "A_point_group": [],
+    "B_point_group": [
+      [
+        "n_19",
+        "n_43"
+      ],
+      [
+        "n_19",
+        "n_61"
+      ],
+      [
+        "n_54",
+        "n_9"
+      ],
+      [
+        "n_56",
+        "n_25"
+      ],
+      [
+        "n_56",
+        "n_7"
+      ],
+      [
+        "n_19",
+        "n_82",
+        "n_72"
+      ],
+      [
+        "n_19",
+        "n_82",
+        "n_77"
+      ],
+      [
+        "n_54",
+        "n_56",
+        "n_80",
+        "n_93"
+      ],
+      [
+        "n_54",
+        "n_56",
+        "n_80",
+        "n_96"
+      ],
+      [
+        "n_1",
+        "n_19",
+        "n_54",
+        "n_56",
+        "n_16"
+      ],
+      [
+        "n_1",
+        "n_19",
+        "n_54",
+        "n_56",
+        "n_31"
+      ]
+    ]
+  },
+  "result_scope": "Gauge charge exact and point-group k necessary only. No full Z6-II space-group/fixed-point, H-momentum, R-charge, gamma selection, physical superpotential coefficients, or cancellations. Absence through a degree is a rigorous gauge-only obstruction within the selected support; presence is NOT proof of generated couplings or F obstruction."
+}

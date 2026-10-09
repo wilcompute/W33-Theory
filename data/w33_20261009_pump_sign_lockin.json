@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "pump_sign": "independently randomized +/- on each shot",
+  "observable": "s * P_X_out * (P_Y_out^2 - E[P_Y_out^2])",
+  "mean": "-eta^(3/2)*theta/sqrt39 under independent symmetric Gaussian inputs",
+  "rows": [
+    {
+      "eta": 1.0,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.0,
+      "mean": -0.03044436524219217,
+      "variance": 0.6555925643203122,
+      "approx_5sigma_samples": 17683.172388484312
+    },
+    {
+      "eta": 1.0,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.05,
+      "mean": -0.03044436524219217,
+      "variance": 0.6816025643203121,
+      "approx_5sigma_samples": 18384.735125550003
+    },
+    {
+      "eta": 0.8,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.0,
+      "mean": -0.021784214468279533,
+      "variance": 0.5058492651562497,
+      "approx_5sigma_samples": 26648.77954134902
+    },
+    {
+      "eta": 0.8,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.05,
+      "mean": -0.021784214468279533,
+      "variance": 0.5318592651562498,
+      "approx_5sigma_samples": 28019.019262180467
+    },
+    {
+      "eta": 0.5,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.0,
+      "mean": -0.010763708555837059,
+      "variance": 0.35691994184765624,
+      "approx_5sigma_samples": 77017.06461083301
+    },
+    {
+      "eta": 0.5,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.05,
+      "mean": -0.010763708555837059,
+      "variance": 0.3829299418476563,
+      "approx_5sigma_samples": 82629.56650735858
+    },
+    {
+      "eta": 0.2,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.0,
+      "mean": -0.002723026808534943,
+      "variance": 0.28253030356406245,
+      "approx_5sigma_samples": 952579.4553652711
+    },
+    {
+      "eta": 0.2,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "drift_p": 0.05,
+      "mean": -0.002723026808534943,
+      "variance": 0.3085403035640626,
+      "approx_5sigma_samples": 1040274.7974984836
+    }
+  ],
+  "boundary": "Pump-even drift canceled in mean only if independently randomized, uncorrelated with sign. A phase-locked pump-odd detector bias still can fake it; finite-N power, hardware and nonlinear gate not certified."
+}

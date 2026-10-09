@@ -1,5 +1,7 @@
 # 2026-10-09 — Five further W33 physics fronts: corrected R-parity gate, 11-state vacuum, optical joint score, T-odd response and native dimensional limits
 
+**Ritz erratum (2026-10-09):** The earlier eleven-state floating reduction used the wrong line-side sign for momentum covariance and derivative, so its quoted `127.595492673` is NOT a correct bound for the named Hamiltonian. The independent exact-Wick corrected bound **`E0 < 127.595507`** is in [the follow-up](2026-10-09_five_more_toe_frontiers.md). Other fronts have distinct tests.
+
 **Ownership and standard of evidence:** This pass extends the already committed Pass11769–11785 current-square quantization and Pass10960 heterotic ledger. It separates exact algebra and reproducible numerics from interpretations requiring additional string/continuum/hardware assumptions. The principal external benchmark is Lebedev et al., *The Heterotic Road to the MSSM with R parity*, arXiv:0708.2691, especially equations E.1a–c, E.5 and model-1 vacua; the E8 root-system graph is an established Weyl representation (Winter and van Luijk, arXiv:1901.06945).
 
 ## 1. Spectrum: improved 11-state upper bound, not a computed full Hamiltonian gap

@@ -1,5 +1,7 @@
 # 2026-10-09 — Five independent TOE fronts: stronger Ritz bound, heterotic Wilson equivalence, T-odd deformation, eighth-moment photonics, spatial-lift falsification
 
+**Ritz erratum (2026-10-09):** Previous five/seven/nine-state floating Hermite current blocks used an incorrect line-side momentum-covariance/derivative sign; those figures are NOT certified upper bounds for the actual Hamiltonian. The independently rationally certified corrected eleven-state bound is **`E0 < 127.595507`**. See [follow-up analysis](2026-10-09_five_more_toe_frontiers.md) and Pass11786. This correction does not invalidate separately verified heterotic, optical or graph calculations.
+
 **Verdict:** Five executed mathematical/computational probes, several new quantitative constraints. None establishes a Standard Model vacuum, a physical mass gap, a 160-current photonic processor, or spontaneous selection of 3+1-dimensional spacetime. Parallel Passes11778–11785 own the existing qualitative compact-resolvent/attained-vacuum/gap theorem; this packet does not rediscover it.
 
 ## A. Nine-state collective-Hermite Ritz upper bound

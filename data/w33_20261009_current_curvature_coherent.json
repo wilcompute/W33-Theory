@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "current_count": 160,
+  "nonzero_current_curvature_pair_count": 480,
+  "distinct_centered_real_gaussian_curvature": [
+    "-1/10",
+    "1/10"
+  ],
+  "example": [
+    {
+      "e": 0,
+      "f": 1,
+      "edge_e": [
+        0,
+        40
+      ],
+      "edge_f": [
+        1,
+        40
+      ],
+      "symplectic_brackets_int": [
+        -1600,
+        -1600
+      ],
+      "curvature_expectation": "1/10"
+    },
+    {
+      "e": 0,
+      "f": 2,
+      "edge_e": [
+        0,
+        40
+      ],
+      "edge_f": [
+        2,
+        40
+      ],
+      "symplectic_brackets_int": [
+        -1600,
+        -1600
+      ],
+      "curvature_expectation": "1/10"
+    },
+    {
+      "e": 0,
+      "f": 3,
+      "edge_e": [
+        0,
+        40
+      ],
+      "edge_f": [
+        3,
+        40
+      ],
+      "symplectic_brackets_int": [
+        -1600,
+        -1600
+      ],
+      "curvature_expectation": "1/10"
+    },
+    {
+      "e": 0,
+      "f": 4,
+      "edge_e": [
+        0,
+        40
+      ],
+      "edge_f": [
+        0,
+        41
+      ],
+      "symplectic_brackets_int": [
+        1600,
+        1600
+      ],
+      "curvature_expectation": "-1/10"
+    },
+    {
+      "e": 0,
+      "f": 8,
+      "edge_e": [
+        0,
+        40
+      ],
+      "edge_f": [
+        0,
+        42
+      ],
+      "symplectic_brackets_int": [
+        1600,
+        1600
+      ],
+      "curvature_expectation": "-1/10"
+    },
+    {
+      "e": 0,
+      "f": 12,
+      "edge_e": [
+        0,
+        40
+      ],
+      "edge_f": [
+        0,
+        43
+      ],
+      "symplectic_brackets_int": [
+        1600,
+        1600
+      ],
+      "curvature_expectation": "-1/10"
+    },
+    {
+      "e": 1,
+      "f": 2,
+      "edge_e": [
+        1,
+        40
+      ],
+      "edge_f": [
+        2,
+        40
+      ],
+      "symplectic_brackets_int": [
+        -1600,
+        -1600
+      ],
+      "curvature_expectation": "1/10"
+    },
+    {
+      "e": 1,
+      "f": 3,
+      "edge_e": [
+        1,
+        40
+      ],
+      "edge_f": [
+        3,
+        40
+      ],
+      "symplectic_brackets_int": [
+        -1600,
+        -1600
+      ],
+      "curvature_expectation": "1/10"
+    }
+  ],
+  "domain": "Real Gaussian displaced in momentum p0=a(Ue-Uf) for each chosen adjacent pair, q0=0; finite-energy test vector, NOT T-fixed ground state.",
+  "theorem": "Exactly quadratic Weyl currents imply i[J_e,J_f] = -{J_e,J_f}_Poisson. Centered real Gaussian curvature vanishes for all pairs because Ve.Uf=Ue.Vf. A shifted Gaussian can have nonzero curvature; not a ground-state result."
+}
