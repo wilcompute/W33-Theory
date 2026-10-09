@@ -1,0 +1,1601 @@
+{
+  "status": "PASS",
+  "independent_exact_rational_entry_checks": 2370,
+  "candidates": 30,
+  "all_numerical_real_cone_masks_exactly_confirmed": true,
+  "max_up_rank": 3,
+  "max_colored_rank": 5,
+  "candidates_rank3": 18,
+  "exact_method": "All 5 FI-core inequalities plus 1 or2 nonnegative meson insertion variables are rational. One variable: exact lower/upper interval. Two variables: feasibility iff at least one vertex of a pointed closed rational polyhedron exists, tested exhaustively over 21 candidate line intersections. All 30*79 entries tested, equality with independently computed HiGHS mask asserted.",
+  "results": [
+    {
+      "candidate": "one:n_69_n_44",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_69_n_55",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_69_n_66",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_69_n_68",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_69_n_73",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_74_n_44",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_74_n_55",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_74_n_66",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_74_n_68",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "one:n_74_n_73",
+      "pair_count": 1,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_44_n_55",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_44_n_66",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_44_n_68",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_44_n_73",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_55_n_44",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_55_n_66",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_55_n_68",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_55_n_73",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_66_n_44",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_66_n_55",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 1,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_66_n_68",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_66_n_73",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_68_n_44",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_68_n_55",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_68_n_66",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_68_n_73",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_73_n_44",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_73_n_55",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_73_n_66",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "two:n_73_n_68",
+      "pair_count": 2,
+      "up_exact_real_cone_rank": 3,
+      "colored_exact_real_cone_rank": 5,
+      "sample_rational_witnesses": [
+        {
+          "names": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "names": [
+            "q_2",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_meson_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    }
+  ],
+  "theorem": "18/30 extended SU4 Dflat supports lose the original FI REAL-CONE obstruction to rank-three up Yukawa; all30 still have an exact necessary rank<=5 for seven colored-triplet mass pairs. These remain only permissive REAL-CONE upper masks. Integrality, corrected orbifold R, actual nonzero couplings and full F-flatness are not inferred."
+}

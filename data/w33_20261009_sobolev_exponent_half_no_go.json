@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "dimension": 78,
+  "gaussian_packet_exact_H": [
+    "1599/5",
+    "1681/10",
+    "39/5"
+  ],
+  "all_s_strictly_greater_than_half_excluded": true,
+  "markov_lower": "For Lambda>78: <(1+P\u00b2)^s> >= (1-78/Lambda)(1+Lambda\u00b2/2)^s for the normalized explicit packet.",
+  "no_go": "For every s>1/2 and every c>0,C finite, H>=c*(1+P\u00b2)^s-C is false as a quadratic-form inequality on Schwartz vectors of the 78D W33 system.",
+  "powers": [
+    {
+      "s": "1/2",
+      "threshold_asymptotic": "possible finite limit",
+      "samples": [
+        {
+          "Lambda": 100,
+          "energy": 32148.178,
+          "sobolev_expectation_lower": 15.557904743248685,
+          "upper_ratio_H_over_Sobolev_lower": 2066.3565261865115
+        },
+        {
+          "Lambda": 1000,
+          "energy": 319968.1078,
+          "sobolev_expectation_lower": 651.9531042061232,
+          "upper_ratio_H_over_Sobolev_lower": 490.7839317516894
+        },
+        {
+          "Lambda": 10000,
+          "energy": 3198168.10078,
+          "sobolev_expectation_lower": 7015.913553092059,
+          "upper_ratio_H_over_Sobolev_lower": 455.84485563829395
+        },
+        {
+          "Lambda": 100000,
+          "energy": 31980168.100078,
+          "sobolev_expectation_lower": 70655.52379678776,
+          "upper_ratio_H_over_Sobolev_lower": 452.62091881246414
+        }
+      ]
+    },
+    {
+      "s": "3/5",
+      "threshold_asymptotic": "H/Sobolev -> 0 for s>1/2",
+      "samples": [
+        {
+          "Lambda": 100,
+          "energy": 32148.178,
+          "sobolev_expectation_lower": 36.463369095055896,
+          "upper_ratio_H_over_Sobolev_lower": 881.6568188253071
+        },
+        {
+          "Lambda": 1000,
+          "energy": 319968.1078,
+          "sobolev_expectation_lower": 2421.6615416494733,
+          "upper_ratio_H_over_Sobolev_lower": 132.12750927285205
+        },
+        {
+          "Lambda": 10000,
+          "energy": 3198168.10078,
+          "sobolev_expectation_lower": 41302.96511484248,
+          "upper_ratio_H_over_Sobolev_lower": 77.43192509030588
+        },
+        {
+          "Lambda": 100000,
+          "energy": 31980168.100078,
+          "sobolev_expectation_lower": 659239.3473803541,
+          "upper_ratio_H_over_Sobolev_lower": 48.51070893622913
+        }
+      ]
+    },
+    {
+      "s": "3/4",
+      "threshold_asymptotic": "H/Sobolev -> 0 for s>1/2",
+      "samples": [
+        {
+          "Lambda": 100,
+          "energy": 32148.178,
+          "sobolev_expectation_lower": 130.83240407718978,
+          "upper_ratio_H_over_Sobolev_lower": 245.72030321351355
+        },
+        {
+          "Lambda": 1000,
+          "energy": 319968.1078,
+          "sobolev_expectation_lower": 17336.406263692163,
+          "upper_ratio_H_over_Sobolev_lower": 18.456426489618725
+        },
+        {
+          "Lambda": 10000,
+          "energy": 3198168.10078,
+          "sobolev_expectation_lower": 589965.6586023347,
+          "upper_ratio_H_over_Sobolev_lower": 5.420939429519778
+        },
+        {
+          "Lambda": 100000,
+          "energy": 31980168.100078,
+          "sobolev_expectation_lower": 18788349.116187185,
+          "upper_ratio_H_over_Sobolev_lower": 1.7021276271966517
+        }
+      ]
+    },
+    {
+      "s": "1",
+      "threshold_asymptotic": "H/Sobolev -> 0 for s>1/2",
+      "samples": [
+        {
+          "Lambda": 100,
+          "energy": 32148.178,
+          "sobolev_expectation_lower": 1100.2199999999998,
+          "upper_ratio_H_over_Sobolev_lower": 29.219772409154537
+        },
+        {
+          "Lambda": 1000,
+          "energy": 319968.1078,
+          "sobolev_expectation_lower": 461000.922,
+          "upper_ratio_H_over_Sobolev_lower": 0.6940725984057793
+        },
+        {
+          "Lambda": 10000,
+          "energy": 3198168.10078,
+          "sobolev_expectation_lower": 49610000.9922,
+          "upper_ratio_H_over_Sobolev_lower": 0.06446619707350613
+        },
+        {
+          "Lambda": 100000,
+          "energy": 31980168.100078,
+          "sobolev_expectation_lower": 4996100000.99922,
+          "upper_ratio_H_over_Sobolev_lower": 0.006401026419343482
+        }
+      ]
+    }
+  ],
+  "boundary": "s=1/2 is not established. In particular no positive full-H ground-energy lower bound, numerical spectral gap, or uniform global subelliptic inequality derived."
+}

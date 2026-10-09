@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "canonical_map": "Each 3-subset T of a W33 line L \u2194 Levi incidence flag (L,p=L\\T), i.e. the excluded point.",
+  "flags": 160,
+  "Levi_vertices": 80,
+  "Levi_edges": 160,
+  "Levi_cycle_rank": 81,
+  "integer_identity": "A_triples+2I=P^T P-D^T D, P=R D - M",
+  "modular_exact_rank_witness": {
+    "prime": 32003,
+    "rank_signless_Levi_incidence": 79,
+    "rank_A_plus_2I": 79
+  },
+  "flat_band_adjacency_eigenvalue": -2,
+  "flat_band_laplacian_eigenvalue": 32,
+  "flat_band_exact_multiplicity": 81,
+  "full_laplacian_spectrum": {
+    "0": 1,
+    "26-sqrt46": 24,
+    "28": 15,
+    "32": 81,
+    "26+sqrt46": 24,
+    "36": 15
+  },
+  "exact_trace_multiplicity_proof": {
+    "laplacian_rank": 159,
+    "multiplicity_32": 81,
+    "multiplicity_28": 15,
+    "multiplicity_36": 15,
+    "multiplicity_each_Galois_conjugate": 24
+  },
+  "prior_BT548_Pass4019": "BT548 and Pass4019-4024 already proved the Levi LINE GRAPH degree6 shared H1 flat band and 1620 apartment tight-frame states. This result is the independent degree30 collinear triple-overlap graph with the same exact H1 eigenspace.",
+  "different_couplers": {
+    "existing_Levi_line_graph_degree": 6,
+    "existing_edges": 480,
+    "new_triple_overlap_graph_degree": 30,
+    "new_edges": 2400,
+    "shared_edges": 240,
+    "common_exact_minus_two_band_rank": 81,
+    "all_1620_prior_apartment_eigenstates_remain_eigenstates": true,
+    "affine_interpolation_law": "A(t)=(1-t)A_line+t*A_triples acts as -2I on H1 for every real t; additional eigenvectors at -2 may occur at special t."
+  },
+  "spectral_minimal_polynomial": "L*(L-28I)*(L-32I)*(L-36I)*((L-26I)^2-46I)=0, integer matrix identity",
+  "theorem": "Exact canonical equality ker(A_triples+2I)=ker([M;D])=H1(Levi,R) after orientation sign convention: both dimension81; inclusion from factor identity; equality from exact rank79. Thus the W33 Levi cycle space is exactly the -2 adjacency flat band (32 Laplacian eigenspace) of the native 160-triple hopping graph.",
+  "physics_boundary": "This is a finite exact graph/representation theorem, not a 78D quantum Hamiltonian spectral gap, a 3D spacetime, massless gauge boson, particle multiplicity, or propagating physical band; dynamics needed to couple this flat band to a spatial continuum."
+}

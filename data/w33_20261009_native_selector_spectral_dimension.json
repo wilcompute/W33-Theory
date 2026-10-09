@@ -1,0 +1,476 @@
+{
+  "status": "PASS",
+  "line_context": {
+    "vertices": 40,
+    "degree": 12,
+    "edges": 240,
+    "diameter": 2,
+    "ball_shells_from_vertex_0": {
+      "0": 1,
+      "1": 12,
+      "2": 27
+    },
+    "laplacian_approx_eigenmultiplicities": {
+      "0.000000000": 1,
+      "10.000000000": 24,
+      "16.000000000": 15
+    },
+    "maximum_effective_spectral_dimension": 3.7184824400084353,
+    "at_time": 0.2587994489781365,
+    "time_points_near_dimension3_count": 17,
+    "first_and_last_near3_times": [
+      0.13750969960296053,
+      0.39204266552701555
+    ],
+    "sampled_heat_trace": [
+      {
+        "t": 0.001,
+        "return_probability": 0.9880776452702328,
+        "effective_dimension": 0.023975975935751834
+      },
+      {
+        "t": 0.001333521432163324,
+        "return_probability": 0.9841356084118527,
+        "effective_dimension": 0.0319617785496774
+      },
+      {
+        "t": 0.0017782794100389228,
+        "return_probability": 0.9789053154750477,
+        "effective_dimension": 0.042602675570756754
+      },
+      {
+        "t": 0.0023713737056616554,
+        "return_probability": 0.9719774344353006,
+        "effective_dimension": 0.05677768493020609
+      },
+      {
+        "t": 0.0031622776601683794,
+        "return_probability": 0.9628215365846853,
+        "effective_dimension": 0.07565389841881516
+      },
+      {
+        "t": 0.004216965034285823,
+        "return_probability": 0.9507571791856051,
+        "effective_dimension": 0.10077855344814754
+      },
+      {
+        "t": 0.005623413251903491,
+        "return_probability": 0.934923563865539,
+        "effective_dimension": 0.13419863813698377
+      },
+      {
+        "t": 0.007498942093324558,
+        "return_probability": 0.9142527741153277,
+        "effective_dimension": 0.17861466204833765
+      },
+      {
+        "t": 0.01,
+        "return_probability": 0.887456371683905,
+        "effective_dimension": 0.2375753350445906
+      },
+      {
+        "t": 0.01333521432163324,
+        "return_probability": 0.8530425455312954,
+        "effective_dimension": 0.31571823087521317
+      },
+      {
+        "t": 0.01778279410038923,
+        "return_probability": 0.8093912763983852,
+        "effective_dimension": 0.41905578446366376
+      },
+      {
+        "t": 0.023713737056616554,
+        "return_probability": 0.7549266113627757,
+        "effective_dimension": 0.5552913293270719
+      },
+      {
+        "t": 0.03162277660168379,
+        "return_probability": 0.6884324808757246,
+        "effective_dimension": 0.7341157199441752
+      },
+      {
+        "t": 0.042169650342858224,
+        "return_probability": 0.6095480446979475,
+        "effective_dimension": 0.9673570493636884
+      },
+      {
+        "t": 0.05623413251903491,
+        "return_probability": 0.5194262799859567,
+        "effective_dimension": 1.2686741553035674
+      },
+      {
+        "t": 0.07498942093324558,
+        "return_probability": 0.42141686562162467,
+        "effective_dimension": 1.6520395695686052
+      },
+      {
+        "t": 0.1,
+        "return_probability": 0.3214388589508612,
+        "effective_dimension": 2.1270955018660036
+      },
+      {
+        "t": 0.1333521432163324,
+        "return_probability": 0.22753085690900413,
+        "effective_dimension": 2.68628273310068
+      },
+      {
+        "t": 0.1778279410038923,
+        "return_probability": 0.1481520972655149,
+        "effective_dimension": 3.2703331996309104
+      },
+      {
+        "t": 0.23713737056616552,
+        "return_probability": 0.08944929438814268,
+        "effective_dimension": 3.685639943515516
+      },
+      {
+        "t": 0.31622776601683794,
+        "return_probability": 0.05277796326423452,
+        "effective_dimension": 3.499876772701381
+      },
+      {
+        "t": 0.4216965034285822,
+        "return_probability": 0.034286328928321896,
+        "effective_dimension": 2.3492892730198007
+      },
+      {
+        "t": 0.5623413251903491,
+        "return_probability": 0.02721377054948017,
+        "effective_dimension": 0.9264052567265576
+      },
+      {
+        "t": 0.7498942093324559,
+        "return_probability": 0.025334509857777698,
+        "effective_dimension": 0.19884770027119475
+      },
+      {
+        "t": 1.0,
+        "return_probability": 0.02502728215854814,
+        "effective_dimension": 0.02182216893493787
+      },
+      {
+        "t": 1.333521432163324,
+        "return_probability": 0.025000970135058576,
+        "effective_dimension": 0.0010350465704666487
+      },
+      {
+        "t": 1.7782794100389228,
+        "return_probability": 0.025000011355028183,
+        "effective_dimension": 1.615406334255878e-05
+      },
+      {
+        "t": 2.371373705661655,
+        "return_probability": 0.02500000003015857,
+        "effective_dimension": 5.7213193728992913e-08
+      },
+      {
+        "t": 3.1622776601683795,
+        "return_probability": 0.025000000000011485,
+        "effective_dimension": 2.7999040344403264e-11
+      },
+      {
+        "t": 4.216965034285822,
+        "return_probability": 0.02500000000000054,
+        "effective_dimension": -4.2090111035746367e-14
+      },
+      {
+        "t": 5.623413251903491,
+        "return_probability": 0.025000000000000716,
+        "effective_dimension": -5.74378333759596e-14
+      },
+      {
+        "t": 7.498942093324558,
+        "return_probability": 0.025000000000000955,
+        "effective_dimension": -7.659458318552519e-14
+      },
+      {
+        "t": 10.0,
+        "return_probability": 0.025000000000001278,
+        "effective_dimension": -1.0214051826551441e-13
+      },
+      {
+        "t": 13.33521432163324,
+        "return_probability": 0.025000000000001705,
+        "effective_dimension": -1.3620657019933291e-13
+      },
+      {
+        "t": 17.78279410038923,
+        "return_probability": 0.02500000000000227,
+        "effective_dimension": -1.8163438056226878e-13
+      },
+      {
+        "t": 23.71373705661655,
+        "return_probability": 0.025000000000003027,
+        "effective_dimension": -2.422133392974948e-13
+      },
+      {
+        "t": 31.622776601683793,
+        "return_probability": 0.025000000000004036,
+        "effective_dimension": -3.229966791090565e-13
+      },
+      {
+        "t": 42.169650342858226,
+        "return_probability": 0.025000000000005386,
+        "effective_dimension": -4.307229941095066e-13
+      },
+      {
+        "t": 56.23413251903491,
+        "return_probability": 0.025000000000007176,
+        "effective_dimension": -5.743783439705843e-13
+      },
+      {
+        "t": 74.98942093324558,
+        "return_probability": 0.025000000000009577,
+        "effective_dimension": -7.65945831855252e-13
+      },
+      {
+        "t": 100.0,
+        "return_probability": 0.02500000000001277,
+        "effective_dimension": -1.021405182655144e-12
+      }
+    ]
+  },
+  "collinear_triples": {
+    "vertices": 160,
+    "degree": 30,
+    "edges": 2400,
+    "diameter": 3,
+    "ball_shells_from_vertex_0": {
+      "0": 1,
+      "1": 30,
+      "2": 126,
+      "3": 3
+    },
+    "laplacian_approx_eigenmultiplicities": {
+      "0.000000000": 1,
+      "19.217670017": 24,
+      "28.000000000": 15,
+      "32.000000000": 81,
+      "32.782329983": 24,
+      "36.000000000": 15
+    },
+    "maximum_effective_spectral_dimension": 5.3895327184544755,
+    "at_time": 0.13689177191095928,
+    "time_points_near_dimension3_count": 12,
+    "first_and_last_near3_times": [
+      0.04823178482239309,
+      0.22908676527677746
+    ],
+    "sampled_heat_trace": [
+      {
+        "t": 0.001,
+        "return_probability": 0.9704601438997678,
+        "effective_dimension": 0.05993966848381488
+      },
+      {
+        "t": 0.001333521432163324,
+        "return_probability": 0.9608097718350169,
+        "effective_dimension": 0.07990380181072278
+      },
+      {
+        "t": 0.0017782794100389228,
+        "return_probability": 0.9480949372621058,
+        "effective_dimension": 0.1065051570060713
+      },
+      {
+        "t": 0.0023713737056616554,
+        "return_probability": 0.9314096194696238,
+        "effective_dimension": 0.141940568707475
+      },
+      {
+        "t": 0.0031622776601683794,
+        "return_probability": 0.9096307132217802,
+        "effective_dimension": 0.1891260711234537
+      },
+      {
+        "t": 0.004216965034285823,
+        "return_probability": 0.8814050261054762,
+        "effective_dimension": 0.25192570205944087
+      },
+      {
+        "t": 0.005623413251903491,
+        "return_probability": 0.8451694974015886,
+        "effective_dimension": 0.3354471999645784
+      },
+      {
+        "t": 0.007498942093324558,
+        "return_probability": 0.7992344510216993,
+        "effective_dimension": 0.44641839281544
+      },
+      {
+        "t": 0.01,
+        "return_probability": 0.7419725366588821,
+        "effective_dimension": 0.5936542623199166
+      },
+      {
+        "t": 0.01333521432163324,
+        "return_probability": 0.6721643860576088,
+        "effective_dimension": 0.788610159823892
+      },
+      {
+        "t": 0.01778279410038923,
+        "return_probability": 0.5895409525837488,
+        "effective_dimension": 1.0459756161272342
+      },
+      {
+        "t": 0.023713737056616554,
+        "return_probability": 0.49550445835343543,
+        "effective_dimension": 1.3841555866883208
+      },
+      {
+        "t": 0.03162277660168379,
+        "return_probability": 0.39387013961131273,
+        "effective_dimension": 1.8252047619035257
+      },
+      {
+        "t": 0.042169650342858224,
+        "return_probability": 0.2912416821704351,
+        "effective_dimension": 2.3930194618022336
+      },
+      {
+        "t": 0.05623413251903491,
+        "return_probability": 0.1964160984195819,
+        "effective_dimension": 3.1064099021739686
+      },
+      {
+        "t": 0.07498942093324558,
+        "return_probability": 0.11831412341140957,
+        "effective_dimension": 3.9570514115278663
+      },
+      {
+        "t": 0.1,
+        "return_probability": 0.06275484924952632,
+        "effective_dimension": 4.842401050242373
+      },
+      {
+        "t": 0.1333521432163324,
+        "return_probability": 0.029818223387401192,
+        "effective_dimension": 5.3842132214000085
+      },
+      {
+        "t": 0.1778279410038923,
+        "return_probability": 0.01412086516010955,
+        "effective_dimension": 4.719270762365908
+      },
+      {
+        "t": 0.23713737056616552,
+        "return_probability": 0.008283996435085633,
+        "effective_dimension": 2.553747915612605
+      },
+      {
+        "t": 0.31622776601683794,
+        "return_probability": 0.006633770725275781,
+        "effective_dimension": 0.7470154105395361
+      },
+      {
+        "t": 0.4216965034285822,
+        "return_probability": 0.006296916960507383,
+        "effective_dimension": 0.12310303159308013
+      },
+      {
+        "t": 0.5623413251903491,
+        "return_probability": 0.00625306190168626,
+        "effective_dimension": 0.010626873097227743
+      },
+      {
+        "t": 0.7498942093324559,
+        "return_probability": 0.006250082769565869,
+        "effective_dimension": 0.0003819143384040764
+      },
+      {
+        "t": 1.0,
+        "return_probability": 0.006250000676098028,
+        "effective_dimension": 4.157979825630312e-06
+      },
+      {
+        "t": 1.333521432163324,
+        "return_probability": 0.006250000001112891,
+        "effective_dimension": 9.124326235896787e-09
+      },
+      {
+        "t": 1.7782794100389228,
+        "return_probability": 0.0062500000000005555,
+        "effective_dimension": 2.25247545142322e-12
+      },
+      {
+        "t": 2.371373705661655,
+        "return_probability": 0.006250000000000454,
+        "effective_dimension": -1.4539788014143538e-13
+      },
+      {
+        "t": 3.1622776601683795,
+        "return_probability": 0.006250000000000607,
+        "effective_dimension": -1.9393830371740105e-13
+      },
+      {
+        "t": 4.216965034285822,
+        "return_probability": 0.006250000000000808,
+        "effective_dimension": -2.586208845402997e-13
+      },
+      {
+        "t": 5.623413251903491,
+        "return_probability": 0.0062500000000010785,
+        "effective_dimension": -3.448764923395262e-13
+      },
+      {
+        "t": 7.498942093324558,
+        "return_probability": 0.0062500000000014376,
+        "effective_dimension": -4.599001939840686e-13
+      },
+      {
+        "t": 10.0,
+        "return_probability": 0.006250000000001916,
+        "effective_dimension": -6.132867653338257e-13
+      },
+      {
+        "t": 13.33521432163324,
+        "return_probability": 0.0062500000000025565,
+        "effective_dimension": -8.178310456347756e-13
+      },
+      {
+        "t": 17.78279410038923,
+        "return_probability": 0.006250000000003408,
+        "effective_dimension": -1.090595227242515e-12
+      },
+      {
+        "t": 23.71373705661655,
+        "return_probability": 0.006250000000004545,
+        "effective_dimension": -1.454332109342924e-12
+      },
+      {
+        "t": 31.622776601683793,
+        "return_probability": 0.006250000000006061,
+        "effective_dimension": -1.9393830372920843e-12
+      },
+      {
+        "t": 42.169650342858226,
+        "return_probability": 0.006250000000008082,
+        "effective_dimension": -2.586208845402998e-12
+      },
+      {
+        "t": 56.23413251903491,
+        "return_probability": 0.006250000000010777,
+        "effective_dimension": -3.4487649233952623e-12
+      },
+      {
+        "t": 74.98942093324558,
+        "return_probability": 0.006250000000014372,
+        "effective_dimension": -4.599001939840686e-12
+      },
+      {
+        "t": 100.0,
+        "return_probability": 0.006250000000019166,
+        "effective_dimension": -6.132867653338257e-12
+      }
+    ]
+  },
+  "native_line_L_spectrum": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "exact_line_return": "P_line(t)=(1+24e^{-10t}+15e^{-16t})/40",
+  "exact_line_dim": "d_s(t)=2t*(240e^{-10t}+240e^{-16t})/(1+24e^{-10t}+15e^{-16t})",
+  "theorem": "At finite graph size, heat return P(t)->1 as t->0 and P(t)->1/N as t->infinity, so local spectral dimension -2 dlogP/dlogt->0 at BOTH ends. No fixed finite graph has an asymptotic d=3 heat-kernel power law.",
+  "observed_scope": "The W33 line coupler is strictly native (line intersection), and triple coupler is native overlap, no supplied square lattice. Finite spectral dimensions are scale-dependent transients; a physical 3D continuum requires a justified infinite cover or coupled limit, dimensional stability and Lorentzian microdynamics."
+}
