@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "antiunitary": "T^2=+1, TCT^-1=-C",
+  "finite_ground_matrix": "P0 C P0 = i A, A real skew",
+  "pairs": "all nonzero first-order shifts appear in +/- pairs, odd ground multiplicity forces a zero",
+  "degenerate_control": "twofold E0=2 gives lowest eigenvalue 2-|eps| (linear cusp)",
+  "simple_control": "E0(eps)=(7-sqrt(9+4eps^2))/2",
+  "simple_second_derivative": "-2/3",
+  "scope": "Finite compact ground sector, not its unknown W33 multiplicity or a thermodynamic spontaneous-symmetry-breaking proof."
+}

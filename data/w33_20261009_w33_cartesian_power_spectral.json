@@ -1,0 +1,207 @@
+{
+  "status": "PASS",
+  "family": "G_n = n-fold Cartesian product of 80-vertex Levi(W33)",
+  "formula": "P_n(t)=p_Levi(t)^n; degree normalized P_n(t)=p_Levi(t/n)^n",
+  "large_n_fixed_t": "P_norm(t)->exp(-4t), spectral_dimension(t)->8t (not constant)",
+  "fixed_n_large_t": "P_n(t)->80^-n, spectral_dimension->0",
+  "transient": "The dimension passes through 3 near t=3/8 only as a scale-dependent crossing, not a plateau.",
+  "samples": [
+    {
+      "n": 1,
+      "t": 0.2,
+      "degree_normalized": true,
+      "log_return_probability": -0.721292851640327,
+      "spectral_dimension": 1.2901865586960184
+    },
+    {
+      "n": 1,
+      "t": 0.375,
+      "degree_normalized": true,
+      "log_return_probability": -1.2336120953424166,
+      "spectral_dimension": 1.9881505633691772
+    },
+    {
+      "n": 1,
+      "t": 0.5,
+      "degree_normalized": true,
+      "log_return_probability": -1.5437188465615628,
+      "spectral_dimension": 2.3223438562017065
+    },
+    {
+      "n": 1,
+      "t": 1,
+      "degree_normalized": true,
+      "log_return_probability": -2.4830419896912534,
+      "spectral_dimension": 3.096079117636466
+    },
+    {
+      "n": 2,
+      "t": 0.2,
+      "degree_normalized": true,
+      "log_return_probability": -0.7601653674069117,
+      "spectral_dimension": 1.4413177891588866
+    },
+    {
+      "n": 2,
+      "t": 0.375,
+      "degree_normalized": true,
+      "log_return_probability": -1.3613797334683606,
+      "spectral_dimension": 2.4533238875084042
+    },
+    {
+      "n": 2,
+      "t": 0.5,
+      "degree_normalized": true,
+      "log_return_probability": -1.7562075251111666,
+      "spectral_dimension": 3.0485134733530046
+    },
+    {
+      "n": 2,
+      "t": 1,
+      "degree_normalized": true,
+      "log_return_probability": -3.0874376931231255,
+      "spectral_dimension": 4.644687712403413
+    },
+    {
+      "n": 5,
+      "t": 0.2,
+      "degree_normalized": true,
+      "log_return_probability": -0.7840106532604673,
+      "spectral_dimension": 1.5360851725371227
+    },
+    {
+      "n": 5,
+      "t": 0.375,
+      "degree_normalized": true,
+      "log_return_probability": -1.4438812555423874,
+      "spectral_dimension": 2.7760477346085493
+    },
+    {
+      "n": 5,
+      "t": 0.5,
+      "degree_normalized": true,
+      "log_return_probability": -1.9004134185172792,
+      "spectral_dimension": 3.6032944728972165
+    },
+    {
+      "n": 5,
+      "t": 1,
+      "degree_normalized": true,
+      "log_return_probability": -3.606464258201635,
+      "spectral_dimension": 6.450932793480091
+    },
+    {
+      "n": 10,
+      "t": 0.2,
+      "degree_normalized": true,
+      "log_return_probability": -0.7920013329139306,
+      "spectral_dimension": 1.56801066163445
+    },
+    {
+      "n": 10,
+      "t": 0.375,
+      "degree_normalized": true,
+      "log_return_probability": -1.4718914612851188,
+      "spectral_dimension": 2.8876316175460235
+    },
+    {
+      "n": 10,
+      "t": 0.5,
+      "degree_normalized": true,
+      "log_return_probability": -1.9500519811359596,
+      "spectral_dimension": 3.8004154412285818
+    },
+    {
+      "n": 10,
+      "t": 1,
+      "degree_normalized": true,
+      "log_return_probability": -3.8008268370345584,
+      "spectral_dimension": 7.206588945794433
+    },
+    {
+      "n": 50,
+      "t": 0.2,
+      "degree_normalized": true,
+      "log_return_probability": -0.7984000106665297,
+      "spectral_dimension": 1.5936000853317225
+    },
+    {
+      "n": 50,
+      "t": 0.375,
+      "degree_normalized": true,
+      "log_return_probability": -1.494375131830099,
+      "spectral_dimension": 2.9775010546174996
+    },
+    {
+      "n": 50,
+      "t": 0.5,
+      "degree_normalized": true,
+      "log_return_probability": -1.9900004166338925,
+      "spectral_dimension": 3.9600033329400484
+    },
+    {
+      "n": 50,
+      "t": 1,
+      "degree_normalized": true,
+      "log_return_probability": -3.9600066645696526,
+      "spectral_dimension": 7.84005330817225
+    },
+    {
+      "n": 200,
+      "t": 0.2,
+      "degree_normalized": true,
+      "log_return_probability": -0.7996000001666668,
+      "spectral_dimension": 1.598400001333332
+    },
+    {
+      "n": 200,
+      "t": 0.375,
+      "degree_normalized": true,
+      "log_return_probability": -1.498593752059941,
+      "spectral_dimension": 2.994375016479424
+    },
+    {
+      "n": 200,
+      "t": 0.5,
+      "degree_normalized": true,
+      "log_return_probability": -1.9975000065103836,
+      "spectral_dimension": 3.9900000520829493
+    },
+    {
+      "n": 200,
+      "t": 1,
+      "degree_normalized": true,
+      "log_return_probability": -3.9900001041646074,
+      "spectral_dimension": 7.960000833308751
+    },
+    {
+      "n": 1000,
+      "t": 0.2,
+      "degree_normalized": true,
+      "log_return_probability": -0.7999200000013372,
+      "spectral_dimension": 1.5996800000106668
+    },
+    {
+      "n": 1000,
+      "t": 0.375,
+      "degree_normalized": true,
+      "log_return_probability": -1.4997187500164926,
+      "spectral_dimension": 2.998875000131836
+    },
+    {
+      "n": 1000,
+      "t": 0.5,
+      "degree_normalized": true,
+      "log_return_probability": -1.9995000000521574,
+      "spectral_dimension": 3.998000000416667
+    },
+    {
+      "n": 1000,
+      "t": 1,
+      "degree_normalized": true,
+      "log_return_probability": -3.998000000833334,
+      "spectral_dimension": 7.992000006666659
+    }
+  ],
+  "boundary": "One W33-only replication family; no Einstein gravity, no interacting Lorentzian continuum or unique spatial dimension."
+}

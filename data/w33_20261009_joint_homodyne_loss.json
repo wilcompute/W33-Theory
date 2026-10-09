@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "signal": "kappa(Px_out,Py_out,Py_out)=-eta^(3/2)*theta/sqrt(39)",
+  "samples": [
+    {
+      "tau": 0.05,
+      "eta": 1.0,
+      "noise_p": 0.0,
+      "noise_y": 0.0,
+      "cross_cumulant": -0.030444365242192187,
+      "influence_variance": 0.6296261523437497,
+      "alternative_approx_5sigma_N": 16982.78534280753,
+      "order": 11,
+      "matched_gaussian_null_N": 6743.202009474201
+    },
+    {
+      "tau": 0.05,
+      "eta": 1.0,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "cross_cumulant": -0.030444365242192187,
+      "influence_variance": 0.6508902513234373,
+      "alternative_approx_5sigma_N": 17556.337802685477,
+      "order": 11,
+      "matched_gaussian_null_N": 7155.9399180700975
+    },
+    {
+      "tau": 0.05,
+      "eta": 0.8,
+      "noise_p": 0.0,
+      "noise_y": 0.0,
+      "cross_cumulant": -0.021784214468279543,
+      "influence_variance": 0.4834368058749997,
+      "alternative_approx_5sigma_N": 25468.062818985058,
+      "order": 11,
+      "matched_gaussian_null_N": 13170.3164247543
+    },
+    {
+      "tau": 0.05,
+      "eta": 0.8,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "cross_cumulant": -0.021784214468279543,
+      "influence_variance": 0.5027545253587498,
+      "alternative_approx_5sigma_N": 26485.74473180758,
+      "order": 11,
+      "matched_gaussian_null_N": 13976.445152480663
+    },
+    {
+      "tau": 0.05,
+      "eta": 0.5,
+      "noise_p": 0.0,
+      "noise_y": 0.0,
+      "cross_cumulant": -0.010763708555837062,
+      "influence_variance": 0.33850615820312496,
+      "alternative_approx_5sigma_N": 73043.69299887052,
+      "order": 11,
+      "matched_gaussian_null_N": 53945.6160757936
+    },
+    {
+      "tau": 0.05,
+      "eta": 0.5,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "cross_cumulant": -0.010763708555837062,
+      "influence_variance": 0.3556111456617187,
+      "alternative_approx_5sigma_N": 76734.64934456076,
+      "order": 11,
+      "matched_gaussian_null_N": 57247.51934456077
+    },
+    {
+      "tau": 0.05,
+      "eta": 0.2,
+      "noise_p": 0.0,
+      "noise_y": 0.0,
+      "cross_cumulant": -0.002723026808534943,
+      "influence_variance": 0.2665164914687499,
+      "alternative_approx_5sigma_N": 898587.270415044,
+      "order": 11,
+      "matched_gaussian_null_N": 842900.2511842753
+    },
+    {
+      "tau": 0.05,
+      "eta": 0.2,
+      "noise_p": 0.01,
+      "noise_y": 0.01,
+      "cross_cumulant": -0.002723026808534943,
+      "influence_variance": 0.28225695156468733,
+      "alternative_approx_5sigma_N": 951657.821489531,
+      "order": 11,
+      "matched_gaussian_null_N": 894492.4897587624
+    }
+  ],
+  "boundary": "Only a single two-mode quartic CV current square; idealized pure loss and independent Gaussian electronics, no time-correlated noise, imperfect nonlinear gate or finite-N power."
+}

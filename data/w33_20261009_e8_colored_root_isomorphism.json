@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "tested_models": 15,
+  "root_graph_vertices": 240,
+  "root_graph_edges": 6720,
+  "histogram_matches": 4,
+  "graph_matches": 4,
+  "matches": {
+    "Z6II_34__SM_20260917_1350": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_1558": {
+      "histogram_matches": [
+        [
+          "model1",
+          [
+            -1,
+            -1,
+            1,
+            0,
+            0
+          ]
+        ],
+        [
+          "model1",
+          [
+            -1,
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        [
+          "model1",
+          [
+            1,
+            -1,
+            -1,
+            0,
+            0
+          ]
+        ],
+        [
+          "model1",
+          [
+            1,
+            1,
+            -1,
+            0,
+            0
+          ]
+        ]
+      ],
+      "colored_root_graph_matches": [
+        [
+          "model1",
+          [
+            -1,
+            -1,
+            1,
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "model1",
+          [
+            -1,
+            1,
+            1,
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "model1",
+          [
+            1,
+            -1,
+            -1,
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "model1",
+          [
+            1,
+            1,
+            -1,
+            0,
+            0
+          ],
+          0
+        ]
+      ]
+    },
+    "Z6II_34__SM_20260917_1585": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_1702": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_2056": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_2068": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_2200": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_2229": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_2342": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_2698": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_2722": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_292": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_616": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_617": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    },
+    "Z6II_34__SM_20260917_938": {
+      "histogram_matches": [],
+      "colored_root_graph_matches": []
+    }
+  },
+  "scope": "Fixed ordered V/W2/W3 plus exactly 48 declared sign/addition transforms per model; colored E8 root graph encodes Weyl+lattice. Not exhaustive space-group equivalence."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "tau": "1/20",
+  "theta": "1521/8000",
+  "mixed_cumulant_over_alpha": "-1521/8000",
+  "mixed_cumulant_squared": "59319/64000000",
+  "exact_influence_variance": "32236859/51200000",
+  "alternative_asymptotic_5sigma_N": 16982.785342807532,
+  "matched_gaussian_null_5sigma_N": 6743.202009474199,
+  "prior_kurtosis_alternative_N": 85260.4879969483,
+  "locally_efficient_gaussian_nuisance_score_fisher": "4/39",
+  "locally_efficient_5sigma_N": 6743.202009474199,
+  "scope": "Single two-mode CV quartic term; independent vacuum inputs; no photon source, gate synthesis, drift, detector loss, finite-N power, or optimized gate."
+}

@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.corrected_assignment_Dflat.v1",
+  "model": "Z6-II|Z6II_34__SM_20260917_1558",
+  "physical_family_constraints": [
+    "q_1",
+    "q_2",
+    "q_3",
+    "bu_1",
+    "bu_2",
+    "bu_3",
+    "be_1",
+    "be_2",
+    "be_3",
+    "bd_3",
+    "bd_5",
+    "bd_9",
+    "bd_10"
+  ],
+  "positive_support": {
+    "n_1": "9/37",
+    "n_19": "27/74",
+    "n_54": "9/37",
+    "n_56": "27/74",
+    "n_80": "9/37",
+    "n_82": "9/37"
+  },
+  "charge_balance": [
+    "-1",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "all_vev_threeBL_even": true,
+  "BL_coefficients": [
+    "0",
+    "4/5",
+    "-5/42",
+    "1/5502",
+    "22/11135",
+    "-3/595",
+    "-36/2485",
+    "1/5112",
+    "-1/72"
+  ],
+  "exotic_bd_BminusL": {
+    "bd_1": "2/3",
+    "bd_2": "2/3",
+    "bd_4": "2/3",
+    "bd_6": "2/3",
+    "bd_7": "2/3",
+    "bd_8": "2/3"
+  },
+  "lepton_and_higgs_candidate_BminusL": {
+    "l_1": "0",
+    "bl_1": "0",
+    "bl_2": "1",
+    "l_2": "-1",
+    "l_3": "-1",
+    "l_4": "-1",
+    "l_5": "-1"
+  },
+  "integer_3BL_fields": 112,
+  "total_left_fields": 176,
+  "caveat": "No F-flatness, no actual geometric generator inversion, no full matter/Higgs assignment or discrete gauge character certified.",
+  "charge_lattice_rank": 9,
+  "selected_matter_odd_VEV_even_Z2_characters": 0,
+  "one_character": null
+}
