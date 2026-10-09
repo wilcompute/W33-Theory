@@ -7,6 +7,7 @@ on:
       - analysis/w33_pass11787_11788_current_dirac_nonlinear_action.py
       - analysis/w33_pass11789_11792_transition_field_continuum.py
       - analysis/w33_pass11790_11793_lifted_ricci_sources.py
+      - analysis/w33_pass11793_order_four_matter_action.py
       - analysis/PASS11786_11793_SPECTRAL_FIELD_GRAVITY.md
       - tests/test_w33_pass11786_11793_spectral_field_gravity.py
       - .github/workflows/pass11786-11793-spectral-field-gravity.yml
@@ -36,6 +37,8 @@ jobs:
         run: python analysis/w33_pass11789_11792_transition_field_continuum.py
       - name: Replay exact lifted Ricci and required source
         run: python analysis/w33_pass11790_11793_lifted_ricci_sources.py
+      - name: Replay full order-four charge action and light matter quotient
+        run: python analysis/w33_pass11793_order_four_matter_action.py
       - name: Check regenerated spectral field and gravity certificates
         run: >-
           python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q

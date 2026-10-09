@@ -10,6 +10,7 @@ import w33_pass11786_certified_spectral_transitions as S
 import w33_pass11787_11788_current_dirac_nonlinear_action as D
 import w33_pass11789_11792_transition_field_continuum as C
 import w33_pass11790_11793_lifted_ricci_sources as R
+import w33_pass11793_order_four_matter_action as M
 import w33_pass11775_symmetric_non_gaussian_vacuum as G
 
 def frozen(name):return json.loads((ROOT/'data'/name).read_text())
@@ -219,7 +220,8 @@ def test_all_four_source_hashes_match_frozen_certificates():
     pairs=[(S,'w33_pass11786_certified_spectral_transitions.json'),
            (D,'w33_pass11787_11788_current_dirac_nonlinear_action.json'),
            (C,'w33_pass11789_11792_transition_field_continuum.json'),
-           (R,'w33_pass11790_11793_lifted_ricci_sources.json')]
+           (R,'w33_pass11790_11793_lifted_ricci_sources.json'),
+           (M,'w33_pass11793_order_four_matter_action.json')]
     for module,file in pairs:
         assert frozen(file)['source_sha256']==hashlib.sha256(Path(module.__file__).read_bytes().replace(b'\r\n',b'\n')).hexdigest()
 
@@ -271,3 +273,36 @@ def test_parallel_no_full_lattice_Z2_character_independently_of_cone_library():
     survivors=[eps for eps in itertools.product((0,1),repeat=9)
                if all(sum(x*y for x,y in zip(eps,c))%2==target for c,target in zip(coords,targets))]
     assert survivors==[]
+
+def test_full_Z4_and_light_Z2_quotient_are_different_actions():
+    cert=M.certificate();charges=cert['all_field_charges']
+    assert cert['field_action_order']==4 and sum(v%2==1 for v in charges.values())==64
+    selected=list(cert['selected_matter_charges'])
+    for power in [1,3]:assert all(power*charges[n]%4==2 for n in selected)
+    assert all(2*charges[n]%4==0 for n in selected)
+    assert any(2*k%4==2 for k in charges.values())
+    assert all(charges[n]==0 for n in cert['vev_charges'])
+    assert cert['continuous_gravitational_trace']==cert['continuous_cubic_trace']=='0'
+
+def test_Z4_character_survives_an_independent_integral_basis_change():
+    cert=M.certificate();b=sp.Matrix([[sp.Rational(z) for z in row] for row in cert['integral_charge_lattice_basis']])
+    eps=sp.Matrix(cert['integral_character']);transform=sp.eye(9)
+    transform[1,6]=3;transform[2,8]=-2
+    transform.row_swap(3,7)
+    assert abs(transform.det())==1
+    # c'=T^-1*c, eps'=T^T*eps: exact pairing unchanged.
+    ep=transform.T*eps
+    for c in [sp.Matrix([i-j for j in range(9)]) for i in range(5)]:
+        assert (eps.T*c)[0]==(ep.T*(transform.inv()*c))[0]
+    assert any(int(z)%2 for z in ep)
+    assert cert['unbroken_abelian_lie_dimension']>=3
+
+def test_Z4_operator_selection_for_all_candidate_family_combinations():
+    cert=M.certificate();charges=cert['all_field_charges'];families=cert['candidate_three_family_Higgs_basis']
+    import itertools
+    for roles,allowed in [(('Q','u_c','H_u'),True),(('Q','d_c','H_d'),True),
+                          (('L','e_c','H_d'),True),(('u_c','d_c','d_c'),False),
+                          (('L','Q','d_c'),False),(('L','L','e_c'),False),
+                          (('Q','Q','Q','L'),True)]:
+        for names in itertools.product(*(families[r] for r in roles)):
+            assert (sum(charges[n] for n in names)%4==0)==allowed

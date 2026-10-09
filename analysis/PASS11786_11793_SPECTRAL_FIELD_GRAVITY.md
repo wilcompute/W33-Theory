@@ -1,6 +1,6 @@
 # Passes11786–11793: certified spectrum, a transition-field limit and the gravity source test
 
-All five requested directions were executed as explicit mathematical investigations. The strongest conclusions are a rational **ground-energy upper bound `E0 < 127.595533`**, a named dynamics-preserving selected-transition construction of a free local field, and the exact failure of the existing Gaussian Lorentzian lift to satisfy **vacuum Einstein equations for any cosmological constant**. None establishes a complete TOE, observed particle masses, a numerical spectral gap, or the full current-Dirac index.
+All five requested directions were executed as explicit mathematical investigations. The strongest conclusions are a rational **ground-energy upper bound `E0 < 127.595533`**, a named dynamics-preserving selected-transition construction of a free local field, and the exact failure of the existing Gaussian Lorentzian lift to satisfy **vacuum Einstein equations for any cosmological constant**. An additional investigation constructs a primitive full-field **order-four charge action whose light-field quotient is matter parity**, despite the absence of a suitable global order-two character. None establishes a complete TOE, an F-flat realistic vacuum, observed particle masses, a numerical spectral gap, or the full current-Dirac index.
 
 ## Intake and ownership
 
@@ -158,6 +158,29 @@ Independent symbolic controls compute the entire Ricci tensor of a flat magnetic
 
 ## Reproduction and scope
 
-Four producers write four JSON certificates. The focused test module independently checks covariance signs, rational root/moment enclosures, the older correct three-state block, second-basis symbol bounds, principal actions, Dicke convergence, spatial CCR and dispersion, and Ricci sources. CI replays all four producers and checks regenerated certificates. Publication/actual hosted evidence is recorded separately in the verification receipt.
+### Additional connection: a larger character can retain light matter parity —11793
+
+The parallel witness supplies a rational continuous B-L covector x with no component along the ledger's anomalous U1 coordinate. On all176 left-chiral fields, `3x.Q` is integral for112 and half-integral for64. Consequently `6x.Q` is integral on the entire field-generated charge lattice, and
+
+```
+g(phi)=exp(i*pi*3x.Q_phi)*phi=i^(6x.Q_phi)*phi
+```
+
+defines a genuine order-four **field-charge action**. In the canonical integral Hermite-normal-form basis its character is
+
+```
+epsilon=(0,4,-30,-12,-22,-8,-17,-29,-9),
+epsilon mod4=(0,0,2,0,2,0,3,3,3).
+```
+
+Every field pairing is checked against the original rational charges. Multiplicities of charges0,1,2,3 are **68,32,44,32**. The64 odd-charge fields make the full action order4. All thirteen selected matter labels have charge2, while all six condensates have charge0. Candidate Higgs doublets `l_1,bl_1` have charge0; `l_2,l_3,l_4` have charge2 and can be chosen as three lepton labels at the charge level.
+
+On this selected light carrier, g acts as matter odd/Higgs even, while g² acts trivially. Its faithful light image is therefore `Z4/<g²> = Z2`. On the entire field carrier, g² acts nontrivially on the odd exotic charges. **Absence of a global Z2 character does not eliminate this larger action's effective matter-parity quotient.** This explicitly completes the earlier conditional higher-order hint instead of treating the narrower gate as exhaustive. This is a non-R action; it is not the standard `Z4^R` assignment.
+
+The character permits ordinary up/down/lepton Yukawa monomials and a Higgs mu monomial at the charge level, and forbids `udd,LQd,LLe,LHu`. All candidate-family combinations are checked. `QQQL` and `uude` are allowed: **dimension-five proton decay is not excluded**. Charge-permitted monomials are not proved present in the worldsheet superpotential. The distinction between discrete field actions, matter parity and stronger proton symmetries is established prior literature, e.g. [Dreiner–Luhn–Thormeier](https://arxiv.org/abs/hep-ph/0512163); the new content is this exact actual-fixture character.
+
+The continuous B-L gravitational and cubic charge traces vanish exactly. All six condensates are actually continuously B-L neutral. Their full9-coordinate charge rank is6, so **three Abelian Lie directions remain unbroken**; this is not an MSSM gauge vacuum. Exact F-flatness, extra-gauge breaking, vectorlike mass ranks, full axion/global-gauge-group and anomaly completion, and a physical family/Higgs identification remain necessary. No source ledger, prior no-go producer, or main paper was changed.
+
+Five producers write five JSON certificates. The focused test module independently checks covariance signs, rational root/moment enclosures, the older correct three-state block, second-basis symbol bounds, principal actions, Dicke convergence, spatial CCR and dispersion, Ricci sources, rational parallel witnesses and the larger charge character. CI replays all five producers and checks regenerated certificates. Publication/actual hosted evidence is recorded separately in the verification receipt.
 
 The five targets are investigated, not all closed. Missing numerical lower/gap estimates, actual Dirac Fredholmness, physical Lorentz symmetry, selected spacetime/masses, interacting continuum dynamics and self-consistent gravity remain explicit mathematical or physical tasks.
