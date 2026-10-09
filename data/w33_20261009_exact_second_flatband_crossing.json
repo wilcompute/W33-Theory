@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "exact_G_Gram_polynomial": "G*(G-8I)*(G-4I)*((G-4I)^2-6I)=0",
+  "rational_pseudoinverse_formula": "Gplus=q(G)-q(0)*h(G)/320, h=(G-8I)(G-4I)((G-4I)^2-6I), q(x)=(320-h(x))/(320*x)",
+  "pseudoinverse_rational_matrix_exact": true,
+  "reduced_symmetric_eigenvalue_polynomial": "X*(X-4I)*(X^2-6X-I)*(X^2-I)=0",
+  "reduced_trace_first_second_third": [
+    148,
+    958,
+    5680
+  ],
+  "generalized_eigenvalue_multiplicities": {
+    "-1": 15,
+    "1": 15,
+    "4": 1,
+    "3-sqrt10": 24,
+    "3+sqrt10": 24
+  },
+  "guaranteed_groundband_critical_1": "1/2",
+  "guaranteed_groundband_critical_2": "1/3 + sqrt(10)/6",
+  "second_critical_t_numeric": 0.8603796100280632,
+  "exact_second_crossing": "There are 24 additional transverse modes with generalized lambda=3-sqrt10, whose (1-t)+t*lambda coefficient changes sign exactly at t2=(sqrt10+2)/6. At t2 the -2 cycle flat band has 81 persistent eigenvectors but the 15 former negative modes are already lower. It is NOT a second ground-state degeneracy of the entire operator.",
+  "negative_eigenvalue_counts_of_A_t_plus_2": {
+    "0<=t<=1/2": 0,
+    "1/2<t<(sqrt10+2)/6": 15,
+    "t=(sqrt10+2)/6": 15,
+    "(sqrt10+2)/6<t<=1": 39
+  },
+  "zero_eigenvalue_dimensions_at_critical": {
+    "t=1/2": 96,
+    "t=(sqrt10+2)/6": 105
+  },
+  "caveat": "The matrix inertia counts follow from congruence by the positive Levi Gram on its 79D image and the exact generalized eigenvalue spectrum. Negative modes need not be interpreted as physical negative energies or spacetime."
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "independent_randomized_frames": 1200,
+  "shots_per_frame": 200,
+  "total_shots": 240000,
+  "temporal_ar1_rho": 0.85,
+  "uncorrupted_noise_amplitude": 0.2,
+  "frame_clip_T": 0.15,
+  "allow_adaptive_fully_corrupted_frames": 1,
+  "good_frame_mismatch_bound": 0.001,
+  "nominal_alpha": 0.01,
+  "simulation": {
+    "null_adversarial_single_bad_frame": {
+      "rejects": 0,
+      "replicates": 24,
+      "median_score_over_cutoff": 0.2200353674839584,
+      "first_trial": {
+        "rejected": false,
+        "score": 0.5669426816196259,
+        "cutoff": 3.203612263254026,
+        "ratio": 0.17696981876444734
+      }
+    },
+    "quartic_proxy_single_bad_frame": {
+      "rejects": 24,
+      "replicates": 24,
+      "median_score_over_cutoff": 2.436121420738039,
+      "first_trial": {
+        "rejected": true,
+        "score": 8.472993573952644,
+        "cutoff": 3.456776245156962,
+        "ratio": 2.4511258389441726
+      }
+    }
+  },
+  "finiteN_theorem": "Under a sharp null independent of all Rademacher frame assignment signs, arbitrary temporally correlated clean frame weights W0 and trusted Q2, and at most m adaptively altered frame weights with |delta_i|<=d for all others, clip W at +/-T and reject iff |sum r_i clip(Wobs_i)|>d sum Q2_i+2mT+sqrt(2log(2/alpha))*(||clip(Wobs)||2+d||Q2||2+2T sqrt(m)). This has conditional Type-I rate <= alpha at every number of frames.",
+  "distinction": "Frame-level randomization tolerates correlations within shots and across frames, but protects only a certified COUNT of compromised frames. Cluster randomization lowers effective number of independent signs and may reduce power compared to independently sign-randomizing shots.",
+  "failure_modes": "An unmonitored burst spanning more than m frames, randomization-dependent clean drift, corrupted Q2, unbounded good-frame mismatch, or an adversary predicting sign assignments invalidates the guarantee. This is a synthetic implementation test, NOT photonic hardware."
+}

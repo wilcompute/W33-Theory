@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "fullH_Gaussian_energy_interval": [
+    "402773098173522362723091611506955747/3125000000000000000000000000000000",
+    "100693274543380590680772902876738947/781250000000000000000000000000000"
+  ],
+  "fullH_Gaussian_residual_variance_interval": [
+    "68981008162438851883470255276103354867/62500000000000000000000000000000000",
+    "551848065299510815067762042209049176739/500000000000000000000000000000000000"
+  ],
+  "outward_sigma_upper": "830548061/25000000",
+  "gaussian_exact_eigenstate": false,
+  "spectral_windows": [
+    {
+      "k": 1,
+      "lower_endpoint": "298954590548522362723091611506955747/3125000000000000000000000000000000",
+      "upper_endpoint": "126647901449630590680772902876738947/781250000000000000000000000000000",
+      "approximate_lower": 95.66546897552716,
+      "approximate_upper": 162.10931385552715,
+      "guaranteed_spectral_weight_at_least": "0",
+      "interpretation": "With k=1, at least one spectral point exists in the interval; k>=2 gives >=1-1/k\u00b2 of the Gaussian spectral measure inside."
+    },
+    {
+      "k": 2,
+      "lower_endpoint": "195136082923522362723091611506955747/3125000000000000000000000000000000",
+      "upper_endpoint": "152602528355880590680772902876738947/781250000000000000000000000000000",
+      "approximate_lower": 62.443546535527155,
+      "approximate_upper": 195.33123629552716,
+      "guaranteed_spectral_weight_at_least": "3/4",
+      "interpretation": "With k=1, at least one spectral point exists in the interval; k>=2 gives >=1-1/k\u00b2 of the Gaussian spectral measure inside."
+    },
+    {
+      "k": 3,
+      "lower_endpoint": "91317575298522362723091611506955747/3125000000000000000000000000000000",
+      "upper_endpoint": "178557155262130590680772902876738947/781250000000000000000000000000000",
+      "approximate_lower": 29.221624095527154,
+      "approximate_upper": 228.55315873552715,
+      "guaranteed_spectral_weight_at_least": "8/9",
+      "interpretation": "With k=1, at least one spectral point exists in the interval; k>=2 gives >=1-1/k\u00b2 of the Gaussian spectral measure inside."
+    },
+    {
+      "k": 4,
+      "lower_endpoint": "-12500932326477637276908388493044253/3125000000000000000000000000000000",
+      "upper_endpoint": "204511782168380590680772902876738947/781250000000000000000000000000000",
+      "approximate_lower": -4.000298344472844,
+      "approximate_upper": 261.77508117552713,
+      "guaranteed_spectral_weight_at_least": "15/16",
+      "interpretation": "With k=1, at least one spectral point exists in the interval; k>=2 gives >=1-1/k\u00b2 of the Gaussian spectral measure inside."
+    }
+  ],
+  "proof": "The full L\u00b2 spectral measure mu_psi of normalized PSp-invariant Gaussian psi has mean E and variance sigma\u00b2 from Pass11800 160\u00b2 exact Wick integrals. As psi is PSp invariant and H commutes with PSp, mu_psi is supported only on true eigenvalues in the trivial PSp representation. Chebyshev ensures mass |lambda-E|<=k*sigma at least 1-1/k\u00b2. A strictly positive variance excludes this Gaussian itself being an exact eigenstate.",
+  "provenance": "Pass11800 already certified the full-H Gaussian second moment, mean and total-spectrum spectral inclusion. New check isolates the PSp-trivial spectral measure, gives outward rational k=2..4 weight windows, and explicitly distinguishes trial vector from true eigenstate.",
+  "limit": "Does not establish the first ground representation or any actual eigenvalue lower enclosure or gap: even a trivial-sector eigenvalue below 163 can coexist with lower nontrivial-sector states."
+}

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "current_count": 160,
+  "parameter_a_square": "1/20",
+  "exact_at_q_origin": "V_C(0)=V_opt(0)=160*a^4=2/5",
+  "no_positive_uniform_bound_from_position_barrier": "V_C(q0)=V_opt(q0)=0 on known classical zero, so inf_q V=0",
+  "exact_scalar_barrier": "V_C(q)=(160*a)^2/(sum_e (V_e.q+a)^(-2)); define V_C=0 on affine-factor hyperplanes",
+  "sharp_scalar_barrier": "V_opt(q)=a\u00b2 min_{p in R^78}sum_e (V_e.q+a)\u00b2*(U_e.p+1)\u00b2",
+  "theorem": "For every Schwartz psi, sum_e ||(V_e.q+a)(U_e.P+a)psi||\u00b2 >= integral V_opt(q)|psi(q)|\u00b2 dq >= integral V_C(q)|psi(q)|\u00b2 dq, exactly by a pointwise real least-squares completion and Cauchy using sum U_e=0. The bound is independent of PSp ground representation and does not imply global E0>0 numerically.",
+  "provenance": "Prior Pass11778 already proves compact resolvent and qualitative strict E0>0; this pass adds a position-dependent constructive lower-form estimate, not that global theorem.",
+  "samples": [
+    {
+      "point": "origin",
+      "inactive_currents": 0,
+      "naive_barrier": 0.4000000000000001,
+      "optimal_barrier_numerical": 0.4,
+      "transport_weighted_rank": 78,
+      "norm_q": 0.0
+    },
+    {
+      "point": "principal_symbol_zero",
+      "inactive_currents": 156,
+      "naive_barrier": 0.0,
+      "optimal_barrier_numerical": 8.530304835555635e-31,
+      "transport_weighted_rank": 4,
+      "norm_q": 8.831760866327846
+    },
+    {
+      "point": "sample_0",
+      "inactive_currents": 0,
+      "naive_barrier": 0.00035894736602055314,
+      "optimal_barrier_numerical": 0.14100826285185622,
+      "transport_weighted_rank": 78,
+      "norm_q": 0.8107338374671413
+    },
+    {
+      "point": "sample_1",
+      "inactive_currents": 0,
+      "naive_barrier": 0.01680341353846855,
+      "optimal_barrier_numerical": 1.175709684302195,
+      "transport_weighted_rank": 78,
+      "norm_q": 4.120125516472725
+    },
+    {
+      "point": "sample_2",
+      "inactive_currents": 0,
+      "naive_barrier": 0.06376973893621626,
+      "optimal_barrier_numerical": 4.147105986557181,
+      "transport_weighted_rank": 78,
+      "norm_q": 8.545782976210461
+    },
+    {
+      "point": "sample_3",
+      "inactive_currents": 0,
+      "naive_barrier": 0.29277586970312014,
+      "optimal_barrier_numerical": 13.869784619413029,
+      "transport_weighted_rank": 78,
+      "norm_q": 16.360902904568057
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "status": "PASS",
+  "verified_pairs": 351,
+  "exact_rational_entry_checks": 27729,
+  "integerless_relaxed_rank_histogram": {
+    "(1, 5)": 168,
+    "(1, 7)": 107,
+    "(1, 6)": 68,
+    "(3, 7)": 8
+  },
+  "exact_double_rank_repair_pairs": [
+    [
+      "n_79",
+      "n_81"
+    ],
+    [
+      "n_79",
+      "n_83"
+    ],
+    [
+      "n_79",
+      "n_88"
+    ],
+    [
+      "n_79",
+      "n_90"
+    ],
+    [
+      "n_81",
+      "n_86"
+    ],
+    [
+      "n_83",
+      "n_86"
+    ],
+    [
+      "n_86",
+      "n_88"
+    ],
+    [
+      "n_86",
+      "n_90"
+    ]
+  ],
+  "exact_charge_coordinates_and_rational_witnesses": {
+    "n_79_n_81": {
+      "charge_generator_1": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "charge_generator_2": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    "n_79_n_83": {
+      "charge_generator_1": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "charge_generator_2": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    "n_79_n_88": {
+      "charge_generator_1": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "charge_generator_2": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    "n_79_n_90": {
+      "charge_generator_1": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "charge_generator_2": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    "n_81_n_86": {
+      "charge_generator_1": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "charge_generator_2": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    "n_83_n_86": {
+      "charge_generator_1": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "charge_generator_2": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "1"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "1"
+          ]
+        }
+      ]
+    },
+    "n_86_n_88": {
+      "charge_generator_1": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "charge_generator_2": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    },
+    "n_86_n_90": {
+      "charge_generator_1": [
+        "0",
+        "-1",
+        "0",
+        "-1",
+        "0"
+      ],
+      "charge_generator_2": [
+        "-1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      "sample_up_witnesses": [
+        {
+          "up_type": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_2",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "up_type": [
+            "q_1",
+            "bu_3",
+            "bl_1"
+          ],
+          "rational_extra_singlet_exponents": [
+            "1",
+            "0"
+          ]
+        }
+      ]
+    }
+  },
+  "all_HiGHS_masks_exactly_reproduced": true,
+  "theorem": "All 27729 necessary TWO-SINGLET, nonnegative REAL insertions independently verified using Fraction vertices. Eight named D-flat-support candidates meet up rank3 AND colored rank7 matching necessary conditions. This is not an integer holomorphic gauge-invariant superpotential, not an exact CFT selection-rule calculation and not physical mass evidence.",
+  "source": "Complete Pass11797 benchmark; no asserted F-flatness or nonzero worldsheet coefficients."
+}

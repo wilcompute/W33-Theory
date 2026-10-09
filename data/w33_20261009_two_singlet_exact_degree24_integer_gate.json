@@ -1,0 +1,5660 @@
+{
+  "status": "PASS",
+  "max_total_insertion_degree": 24,
+  "number_passing_previous_REAL_cone_both_ranks": 8,
+  "exact_integer_exponent_candidate_pairs": [
+    {
+      "pair": [
+        "n_79",
+        "n_81"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "n_79",
+        "n_83"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "n_79",
+        "n_88"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "n_79",
+        "n_90"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "n_81",
+        "n_86"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "n_83",
+        "n_86"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "n_86",
+        "n_88"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "n_86",
+        "n_90"
+      ],
+      "bounded_degree": 24,
+      "up_integer_U1_matching_rank": 1,
+      "colored_integer_U1_matching_rank": 7,
+      "up_integer_U1_mask": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "colored_integer_U1_mask": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "monomial_charge_witnesses": [
+        {
+          "target": [
+            "q_1",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 0,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_2",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 3,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "q_3",
+            "bu_1",
+            "bl_1"
+          ],
+          "index": 6,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_2"
+          ],
+          "index": 11,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_4"
+          ],
+          "index": 13,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_1",
+            "bd_7"
+          ],
+          "index": 16,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_1"
+          ],
+          "index": 19,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_2"
+          ],
+          "index": 21,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_4"
+          ],
+          "index": 23,
+          "total_insertion_degree": 3,
+          "extra_singlet_exponents": [
+            1,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_6"
+          ],
+          "index": 25,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_7"
+          ],
+          "index": 26,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_2",
+            "bd_8"
+          ],
+          "index": 27,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_2"
+          ],
+          "index": 31,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_4"
+          ],
+          "index": 33,
+          "total_insertion_degree": 4,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_3",
+            "bd_7"
+          ],
+          "index": 36,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_3"
+          ],
+          "index": 42,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_4",
+            "bd_5"
+          ],
+          "index": 44,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_2"
+          ],
+          "index": 51,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_5",
+            "bd_4"
+          ],
+          "index": 53,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_1"
+          ],
+          "index": 59,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_2"
+          ],
+          "index": 61,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_4"
+          ],
+          "index": 63,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_6"
+          ],
+          "index": 65,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_7"
+          ],
+          "index": 66,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_6",
+            "bd_8"
+          ],
+          "index": 67,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_1"
+          ],
+          "index": 69,
+          "total_insertion_degree": 0,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_2"
+          ],
+          "index": 71,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_4"
+          ],
+          "index": 73,
+          "total_insertion_degree": 5,
+          "extra_singlet_exponents": [
+            1,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_6"
+          ],
+          "index": 75,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_7"
+          ],
+          "index": 76,
+          "total_insertion_degree": 1,
+          "extra_singlet_exponents": [
+            0,
+            0
+          ],
+          "five_FI_exponents": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "target": [
+            "d_7",
+            "bd_8"
+          ],
+          "index": 77,
+          "total_insertion_degree": 2,
+          "extra_singlet_exponents": [
+            0,
+            1
+          ],
+          "five_FI_exponents": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "integer_rank_histogram": {
+    "(1, 7)": 8
+  },
+  "proof_scope": "Integer U1 charge-neutral monomials composed of all five FI-base VEV fields + two new parity-even true singlets, with arbitrary old charge-ZERO meson factors excluded from charge search (they cannot create new charge solutions). All nonnegative exponents of the 2 extras up to degree24 are enumerated and unique FI exponents solved exactly. Target SM bilinear/trilinear is hidden non-Abelian singlet, consistent with using old SU2 singlet invariants.",
+  "limit": "No complete all-orders Hilbert basis for unrestricted degree; R/nonR/space-group/oscillator constraints and nonzero string coefficients not yet applied. A VEV support with these extra fields is only infinitesimally D-flat, not F-flat."
+}
