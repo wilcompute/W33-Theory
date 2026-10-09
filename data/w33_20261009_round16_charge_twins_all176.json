@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "total_fields": 176,
+  "distinct_full_signature_groups": 172,
+  "groups_with_twins": 4,
+  "twin_pairs": 4,
+  "twin_group_size_histogram": {
+    "2": 4
+  },
+  "twin_difference_stats": {
+    "oscillator_count_different": 4,
+    "corrected_R_different": 4,
+    "nonR_different": 0,
+    "weights_different": 0
+  },
+  "complete_twin_groups": [
+    [
+      "n_81",
+      "n_83"
+    ],
+    [
+      "n_82",
+      "n_84"
+    ],
+    [
+      "n_88",
+      "n_90"
+    ],
+    [
+      "n_89",
+      "n_91"
+    ]
+  ],
+  "benchmark_cubic_contrast": {
+    "n_81": {
+      "cubic_fields": [
+        "n_81",
+        "n_17",
+        "n_82"
+      ],
+      "charge_sum": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "necessary_corrected_R_nonR": true,
+      "corrected_R": [
+        "11/6",
+        "-1/3",
+        "-1/2"
+      ],
+      "oscillator_count": 2,
+      "fixed_point_translation": [
+        "0/1",
+        "0/1",
+        "0/1",
+        "0/1",
+        "1/1",
+        "0/1"
+      ]
+    },
+    "n_83": {
+      "cubic_fields": [
+        "n_83",
+        "n_17",
+        "n_82"
+      ],
+      "charge_sum": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "necessary_corrected_R_nonR": false,
+      "corrected_R": [
+        "-1/6",
+        "2/3",
+        "-1/2"
+      ],
+      "oscillator_count": 1,
+      "fixed_point_translation": [
+        "0/1",
+        "0/1",
+        "0/1",
+        "0/1",
+        "1/1",
+        "0/1"
+      ]
+    }
+  },
+  "theorem": "Field-name equivalence under q,k,G and fixed_point_translation is not equivalence under corrected R/oscillator data. Exhaustive source-anchored grouping and the n81 vs n83 cubic demonstrate precisely where naive charge-only Yukawa counting fails.",
+  "limitations": "Even passing R and fixed point congruences does not prove nonzero string worldsheet coupling; full constructing elements, space group, Rule4/5/6, instantons and FI-corrected F/D flatness remain open."
+}

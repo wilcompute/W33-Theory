@@ -1,0 +1,165 @@
+{
+  "status": "PASS",
+  "sector_dimension": 3240,
+  "interaction": "uniform onsite U/2 sum_i n_i(n_i-1)",
+  "phase_vector": [
+    0.49,
+    -0.74,
+    1.22
+  ],
+  "exact_one_particle_isospectral_all_orbits": true,
+  "results": [
+    {
+      "U": 2.0,
+      "ground_spread": 4.983615298215227e-08,
+      "excited_spread": 7.0334580462017016e-06,
+      "maximum_eigenpair_residual": 6.372942547270726e-12,
+      "orbit_two_lowest_eigenvalues": [
+        [
+          -7.954729835680981,
+          -6.657472247779658
+        ],
+        [
+          -7.954729830887375,
+          -6.6574712536749985
+        ],
+        [
+          -7.9547298162123266,
+          -6.657476107830714
+        ],
+        [
+          -7.954729799828552,
+          -6.657477446177163
+        ],
+        [
+          -7.954729849664705,
+          -6.657470412719117
+        ]
+      ],
+      "orbit_residuals": [
+        [
+          6.790318010353266e-15,
+          2.7489749821594964e-12
+        ],
+        [
+          6.547516133275704e-15,
+          1.9198203705227876e-12
+        ],
+        [
+          1.1661910420515383e-14,
+          6.372942547270726e-12
+        ],
+        [
+          9.560304718472673e-15,
+          6.410564701153246e-13
+        ],
+        [
+          7.265503268569674e-15,
+          1.3656535442557062e-12
+        ]
+      ]
+    },
+    {
+      "U": 8.0,
+      "ground_spread": 1.1577799874373795e-07,
+      "excited_spread": 1.5604235243493747e-05,
+      "maximum_eigenpair_residual": 5.608559129097868e-12,
+      "orbit_two_lowest_eigenvalues": [
+        [
+          -7.9310036657325265,
+          -6.624319329400852
+        ],
+        [
+          -7.931003654556736,
+          -6.6243173060855325
+        ],
+        [
+          -7.931003620563216,
+          -6.624327895814595
+        ],
+        [
+          -7.931003582456248,
+          -6.624330910139687
+        ],
+        [
+          -7.931003698234247,
+          -6.624315305904443
+        ]
+      ],
+      "orbit_residuals": [
+        [
+          9.71252970918407e-15,
+          3.6303458821771826e-12
+        ],
+        [
+          1.687944207793666e-14,
+          4.0131254312737066e-12
+        ],
+        [
+          1.0881858234630188e-14,
+          5.608559129097868e-12
+        ],
+        [
+          1.7290276244655326e-14,
+          4.458897331579819e-12
+        ],
+        [
+          1.2156370523467794e-14,
+          8.698744244675873e-13
+        ]
+      ]
+    },
+    {
+      "U": 20.0,
+      "ground_spread": 1.5669496900017066e-07,
+      "excited_spread": 2.0458574764070647e-05,
+      "maximum_eigenpair_residual": 9.796554845992527e-12,
+      "orbit_two_lowest_eigenvalues": [
+        [
+          -7.91668651365659,
+          -6.6073137067207
+        ],
+        [
+          -7.916686498496718,
+          -6.607311170224501
+        ],
+        [
+          -7.916686452551539,
+          -6.607324929969355
+        ],
+        [
+          -7.91668640095079,
+          -6.60732891596394
+        ],
+        [
+          -7.916686557645759,
+          -6.607308457389176
+        ]
+      ],
+      "orbit_residuals": [
+        [
+          9.926348633990934e-15,
+          1.3091962055949191e-12
+        ],
+        [
+          1.5358679655919584e-14,
+          3.98770658831714e-12
+        ],
+        [
+          1.580635408210322e-14,
+          1.0580588012984924e-12
+        ],
+        [
+          2.052275358717823e-14,
+          3.370329598120234e-12
+        ],
+        [
+          1.7288097520804442e-14,
+          9.796554845992527e-12
+        ]
+      ]
+    }
+  ],
+  "physical_interpretation": "A UNIFORM genuine two-photon on-site interaction resolves distinctions invisible to one-photon full-band energy measurements in a finite Peierls-flux W33 graph. Numerical eigenvalue differences exceed displayed Ritz residuals; not an exact characteristic-polynomial theorem.",
+  "limitations": "No optical nonlinearity or two-photon Bose-Hubbard Hamiltonian implemented physically; no gravity or non-imposed spatial continuum."
+}

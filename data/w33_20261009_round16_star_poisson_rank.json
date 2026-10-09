@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "stars": 80,
+  "rank_distribution": {
+    "8": 80
+  },
+  "each_star_74dim_exact_classical_zero_plane": true,
+  "example": {
+    "star": 0,
+    "bracket_rank": 8,
+    "independent_conjugate_pairs": 4,
+    "classical_zero_momentum_plane_dim": 74
+  },
+  "proof": "Exact integer current gradients Qgrad=Y*V, Pgrad=192*X*U at 80 zero anchors; full skew Poisson matrix is bipartite active/passive, rank=2 rank(B), verified by F32003 row elimination. Classical linear normal modes are bounded by this symplectic constraint rank; no quantum eigenvalue or global gap follows.",
+  "epistemic_boundary": "The linearized classical Poisson matrix is not the full quantized operator or its ground representation. Rank over finite field gives a rational lower bound only unless independent analytic upper bound is given (here at most 2*4=8)."
+}

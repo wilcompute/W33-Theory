@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "pairs": 8000,
+  "detectors": 2,
+  "raw_shots": 32000,
+  "maximum_arbitrarily_corrupted_raw_readings": 14,
+  "clip_T": 0.15,
+  "independently_calibrated_switch_mismatch_eta": 0.0005,
+  "alpha": 0.01,
+  "synthetic": {
+    "null": {
+      "n": 18,
+      "rejections": 0,
+      "median_signed_score": 0.028263545081353314,
+      "threshold": 191.0948998434605
+    },
+    "electronics_sham": {
+      "n": 18,
+      "rejections": 0,
+      "median_signed_score": -0.061346860507880574,
+      "threshold": 191.0948998434605
+    },
+    "optical": {
+      "n": 18,
+      "rejections": 18,
+      "median_signed_score": 752.9683086221614,
+      "threshold": 191.0948998434605
+    }
+  },
+  "theorem": "Conditional sharp-null Rademacher/Hoeffding score for sensor-difference DID: |X|>2 eta M+4TK+4T sqrt(2M ln(2/alpha)) rejects at level alpha with independent z, arbitrary serial clean drift and <=K raw faults. Science-only switch leakage >eta invalidates the bound.",
+  "identification_boundary": "Two detector negative control and randomized optical path cannot by itself establish a specific quartic optical gate. Shared electronics artifacts cancel only if matched. Independent leakage calibration, detector-swap and hardware audit required; all numbers synthetic."
+}

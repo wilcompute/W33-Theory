@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "classical_zero_stars": 80,
+  "exact_energy_function": "312/sigma\u00b2 + 1027/128*sigma\u00b2 + 1521/10",
+  "coefficient_A": "312",
+  "coefficient_B": "1027/128",
+  "constant": "1521/10",
+  "optimum_sigma_squared": 6.235870103631656,
+  "optimum_gaussian_energy": 252.16622806921424,
+  "exact_optimum": "1521/10+sqrt(40053)/2",
+  "isotropic_centered_origin_gaussian_energy": "1681/10",
+  "conclusion": "The 80 exact CLASSICAL star zero planes are quantum-coherent localization costly within the specified isotropic Gaussian family, compared with the symmetric q=p=0 isotropic Gaussian. This is NOT a lower bound: squeezed, non-Gaussian and phase-correlated states may do better.",
+  "proof": "For each e, X=40+V0*qi and Y=40*7680+U0*pnum give all classical J_e=0. U_e.V_e=0 implies independent centered position and momentum quadratures for isotropic Gaussian; Wick factor yields A/sigma\u00b2+B sigma\u00b2+C. Minimize by AM-GM; exact arithmetic repeated on all 80 anchors."
+}
