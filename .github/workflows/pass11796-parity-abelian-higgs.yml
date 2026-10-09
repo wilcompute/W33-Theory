@@ -1,0 +1,33 @@
+name: Pass11796 full field parity and Abelian Higgs kernel
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analysis/w33_pass11796_parity_complete_abelian_higgs.py
+      - analysis/PASS11796_FULL_FIELD_PARITY_AND_ABELIAN_HIGGS.md
+      - data/w33_pass11796_parity_complete_abelian_higgs.json
+      - tests/test_w33_pass11796_parity_complete_abelian_higgs.py
+      - .github/workflows/pass11796-parity-abelian-higgs.yml
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 sympy==1.14.0 pytest
+      - name: Frozen independent character and full Higgs controls
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11796_parity_complete_abelian_higgs.py
+          tests/test_w33_pass11794_hidden_center_vacuum.py
+      - name: Replay exhaustive characters and full nonabelian D-flatness
+        run: python analysis/w33_pass11796_parity_complete_abelian_higgs.py
+      - name: Recheck regenerated certificate
+        run: >-
+          python -m pytest --noconftest --ignore-glob='tests/test_*.py' -q
+          tests/test_w33_pass11796_parity_complete_abelian_higgs.py
