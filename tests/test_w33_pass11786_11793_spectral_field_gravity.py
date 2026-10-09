@@ -222,3 +222,52 @@ def test_all_four_source_hashes_match_frozen_certificates():
            (R,'w33_pass11790_11793_lifted_ricci_sources.json')]
     for module,file in pairs:
         assert frozen(file)['source_sha256']==hashlib.sha256(Path(module.__file__).read_bytes().replace(b'\r\n',b'\n')).hexdigest()
+
+def test_parallel_assignment_aware_charge_and_inconsistent_old_gate_witnesses():
+    # Verify stored witnesses directly over Q, without importing the cone-search API.
+    import gzip,re
+    ledger=json.loads(gzip.decompress((ROOT/'data/w33_pass10960_heterotic_left_chiral_ledger.json.gz').read_bytes()))
+    rec=ledger['Z6-II|Z6II_34__SM_20260917_1558']
+    fields={f['name']:f for f in rec['left']};q={n:list(map(F,f['q'])) for n,f in fields.items()}
+    cert=frozen('w33_20261009_corrected_assignment_dflat_certificate.json')
+    weights={n:F(x) for n,x in cert['positive_support'].items()}
+    assert all(x>0 for x in weights.values()) and len(weights)==6
+    assert [sum(weights[n]*q[n][j] for n in weights) for j in range(9)]==[F(-1)]+[F(0)]*8
+    bl=list(map(F,cert['BL_coefficients']))
+    expected={'q':F(1,3),'bu':F(-1,3),'bd':F(-1,3),'be':F(1)}
+    for n in cert['physical_family_constraints']:
+        assert sum(a*b for a,b in zip(q[n],bl))==expected[n.rsplit('_',1)[0]]
+    for n in weights:
+        charge=3*sum(a*b for a,b in zip(q[n],bl))
+        assert charge.denominator==1 and charge.numerator%2==0
+        assert all(abs(int(re.match(r'(-?\d+)',part).group(1)))==1 and 'adj' not in part for part in fields[n]['dim'].split(','))
+    assert all(-q['bd_7'][j]+q['bu_3'][j]+q['be_3'][j]==0 for j in range(9))
+    assert -expected['bd']+expected['bu']+expected['be']==1
+    # Hypercharge neutrality derived independently from all standard-charge labels.
+    smy={'q':F(1,6),'bq':F(-1,6),'u':F(2,3),'bu':F(-2,3),
+         'd':F(-1,3),'bd':F(1,3),'e':F(-1),'be':F(1),'l':F(-1,2),'bl':F(1,2)}
+    names=[n for n in fields if n.rsplit('_',1)[0] in smy]
+    a=sp.Matrix([[sp.Rational(x.numerator,x.denominator) for x in q[n]] for n in names])
+    b=sp.Matrix([sp.Rational(smy[n.rsplit('_',1)[0]].numerator,smy[n.rsplit('_',1)[0]].denominator) for n in names])
+    sol,params=a.gauss_jordan_solve(b);sol=sol.subs({x:0 for x in params})
+    assert all(sum(sp.Rational(x.numerator,x.denominator)*y for x,y in zip(q[n],sol))==0 for n in weights)
+
+def test_parallel_no_full_lattice_Z2_character_independently_of_cone_library():
+    import gzip,itertools,math
+    from sympy.matrices.normalforms import hermite_normal_form
+    ledger=json.loads(gzip.decompress((ROOT/'data/w33_pass10960_heterotic_left_chiral_ledger.json.gz').read_bytes()))
+    rows=ledger['Z6-II|Z6II_34__SM_20260917_1558']['left']
+    cert=frozen('w33_20261009_corrected_assignment_dflat_certificate.json')
+    q=[list(map(F,row['q'])) for row in rows];den=math.lcm(*(x.denominator for v in q for x in v))
+    matrix=sp.Matrix([[int(x*den) for x in v] for v in q]);basis=hermite_normal_form(matrix.T)
+    assert basis.cols==9
+    need={n:1 for n in cert['physical_family_constraints']};need.update({n:0 for n in cert['positive_support']})
+    coords=[];targets=[]
+    for i,row in enumerate(rows):
+        if row['name'] in need:
+            vector=basis.inv()*matrix.row(i).T
+            assert all(x.q==1 for x in vector)
+            coords.append([int(x)%2 for x in vector]);targets.append(need[row['name']])
+    survivors=[eps for eps in itertools.product((0,1),repeat=9)
+               if all(sum(x*y for x,y in zip(eps,c))%2==target for c,target in zip(coords,targets))]
+    assert survivors==[]

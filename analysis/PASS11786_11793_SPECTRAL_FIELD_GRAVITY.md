@@ -19,6 +19,8 @@ Prior inputs:
 
 **Concurrent intake:** while this packet was tested, `3fdef4a22` and scope correction `a1f780d38` reached master. Their eleven-state extension inherits the same reduced line-sign issue, so its numerical upper bound and min–max counting values are not adopted here. The independent E8 Weyl/lattice benchmark identification and assignment-aware six-singlet FI support are separate results: `n_1=n_54=n_80=n_82=9/37`, `n_19=n_56=27/74`. The exact source ledger gives charge balance `(-1,0,...,0)` and the old all-label B-L gate has a minimal inconsistent three-row core. That warrants the parallel scope correction, but its own certificate has zero compatible full charge-lattice Z2 characters and does not establish F-flatness or an MSSM vacuum. No old blanket heterotic conclusion is imported into this packet. The joint homodyne, finite-ground response and native Cartesian-power controls were read and kept distinct from the continuum construction here.
 
+Two added independent tests verify the stored six-singlet charge/representation/hypercharge/B-L witness directly over rational numbers, and verify the three-row contradiction. A separate Hermite-normal-form construction of the full rank9 charge lattice exhausts all512 order-two characters and confirms zero compatible survivors. These witness checks avoid importing the cone-search library. Fifteen original full-model raw hashes and the gauge-weight raw-source hash also match their frozen fixtures.
+
 ## 1. Certified energies and transition observables —11786
 
 Let `H` be the nonnegative Friedrichs current-square Hamiltonian on `L²(R^78)` already defined in11769. Its quantum energy units are supplied conventions.
