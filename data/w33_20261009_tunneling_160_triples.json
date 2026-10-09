@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.160triples_tunneling.v1",
+  "minimum_triples": 160,
+  "one_replacement_degree": 3,
+  "two_replacement_degree": 27,
+  "one_replacement_components": 40,
+  "each_component": "K4",
+  "full_graph_connected": true,
+  "ground_unique_for_t_positive_eps_positive": true,
+  "exact_energy_ground_formula": "-3*t -27*epsilon",
+  "rank40_projected_two_step_adjacency_formula": "Q^T A2 Q = (9/4)*A_lines_W33",
+  "line_graph_spectrum": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "first_order_ground_to_excited_gap": "(9/4)*(12-2)*epsilon = 45*epsilon/2",
+  "numeric_samples": [
+    {
+      "epsilon": 0.0025,
+      "exact_ground_energy": -3.0675,
+      "numeric_first_gap": 0.05619736500821482,
+      "first_order_gap": 0.05625,
+      "ratio_gap_to_linear": 0.9990642668127079,
+      "band_transition_gap": 0.0
+    },
+    {
+      "epsilon": 0.01,
+      "exact_ground_energy": -3.27,
+      "numeric_first_gap": 0.22416270497839497,
+      "first_order_gap": 0.225,
+      "ratio_gap_to_linear": 0.9962786887928665,
+      "band_transition_gap": 0.0
+    },
+    {
+      "epsilon": 0.05,
+      "exact_ground_energy": -4.35,
+      "numeric_first_gap": 1.1047673160242963,
+      "first_order_gap": 1.125,
+      "ratio_gap_to_linear": 0.9820153920215967,
+      "band_transition_gap": 0.0
+    },
+    {
+      "epsilon": 0.1,
+      "exact_ground_energy": -5.7,
+      "numeric_first_gap": 2.1728942548679906,
+      "first_order_gap": 2.25,
+      "ratio_gap_to_linear": 0.9657307799413292,
+      "band_transition_gap": 0.0
+    }
+  ],
+  "physics_scope": "A specified finite quantum hopping graph on selector minima, NOT actual W33 spacetime, GR, quantum gravity, continuum, photon propagation, or physically derived tunneling. Unique uniform ground does not mean any particular triple spontaneously selected at finite volume."
+}

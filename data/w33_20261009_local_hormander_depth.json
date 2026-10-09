@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "active_current_indices": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "actual_hormander_bracket_step_upper": 4,
+  "stage_rank_lower_certificates": [
+    {
+      "bracket_depth": 1,
+      "current_indices_reached": 4,
+      "vector_field_evaluation_rank_lower": 4,
+      "frontier_size": 4
+    },
+    {
+      "bracket_depth": 2,
+      "current_indices_reached": 16,
+      "vector_field_evaluation_rank_lower": 16,
+      "frontier_size": 12
+    },
+    {
+      "bracket_depth": 3,
+      "current_indices_reached": 52,
+      "vector_field_evaluation_rank_lower": 52,
+      "frontier_size": 36
+    },
+    {
+      "bracket_depth": 4,
+      "current_indices_reached": 160,
+      "vector_field_evaluation_rank_lower": 78,
+      "frontier_size": 108
+    }
+  ],
+  "prime": 32003,
+  "ambient_configuration_dim": 78,
+  "construction": "At q0 with Xi(q0)=0 for inactive j, nested [Xj,Z] evaluated at q0 equals -Uj*(Vj.Z(q0)), producing nonzero Uj along each directed nonzero-dot path. Values of constructed iterated brackets span 78 by explicit independent modular minor.",
+  "scope": "Genuine local bracket-generating witness at this single q0 for first-order transport fields only. Not a global uniform step or explicit subelliptic inequality; the full quantum H includes scalar multiplications and complex phases. Does not imply full-H numerical gap."
+}

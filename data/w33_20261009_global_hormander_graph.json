@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "graph_vertices": 160,
+  "graph_edges": 480,
+  "graph_degree": 6,
+  "graph_diameter": 4,
+  "global_pointwise_bracket_step_upper": 5,
+  "full_configuration_dimension": 78,
+  "exact_integer_sum_V_zero": true,
+  "exact_U_rank_78": true,
+  "sample_ranks": [
+    {
+      "active": 160,
+      "rank_first": 78,
+      "depth_to_78": 1
+    },
+    {
+      "active": 4,
+      "rank_first": 4,
+      "depth_to_78": 4
+    },
+    {
+      "active": 160,
+      "rank_first": 78,
+      "depth_to_78": 1
+    },
+    {
+      "active": 160,
+      "rank_first": 78,
+      "depth_to_78": 1
+    }
+  ],
+  "proof": "At any q the sum of affine current coefficients is160a!=0, so some edge active. Because the nonzero Ui.Vj graph is connected of diameter D, every inactive edge is reachable from the active set by at most D links. At inactive j, [Xj,Z](q)=-DXj(q)Z(q) is a nonzero multiple of Uj whenever Z(q)=cUi and Ui.Vj!=0. All 160 Ui are then in the Lie-evaluation span; they span 78 exactly. Thus step\u2264D+1 for all q.",
+  "boundary": "Statement applies to real first-order transport Xi only, with affine coefficient a. No uniform bracket determinant, global coercivity constant, spectral inequality or physical gap derived; full quantum current also includes complex zeroth-order terms."
+}

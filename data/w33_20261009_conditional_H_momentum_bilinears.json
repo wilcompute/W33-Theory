@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "count": 6,
+  "records": [
+    {
+      "fields": [
+        "n_9",
+        "n_54"
+      ],
+      "twist_sectors": [
+        2,
+        4
+      ],
+      "predicted_no_oscillator_R": [
+        0,
+        0,
+        0
+      ],
+      "required_R": [
+        5,
+        2,
+        1
+      ],
+      "satisfies_no_oscillator_R": false
+    },
+    {
+      "fields": [
+        "n_37",
+        "n_38"
+      ],
+      "twist_sectors": [
+        3,
+        3
+      ],
+      "predicted_no_oscillator_R": [
+        0,
+        0,
+        0
+      ],
+      "required_R": [
+        5,
+        2,
+        1
+      ],
+      "satisfies_no_oscillator_R": false
+    },
+    {
+      "fields": [
+        "n_35",
+        "n_36"
+      ],
+      "twist_sectors": [
+        3,
+        3
+      ],
+      "predicted_no_oscillator_R": [
+        0,
+        0,
+        0
+      ],
+      "required_R": [
+        5,
+        2,
+        1
+      ],
+      "satisfies_no_oscillator_R": false
+    },
+    {
+      "fields": [
+        "n_35",
+        "n_40"
+      ],
+      "twist_sectors": [
+        3,
+        3
+      ],
+      "predicted_no_oscillator_R": [
+        0,
+        0,
+        0
+      ],
+      "required_R": [
+        5,
+        2,
+        1
+      ],
+      "satisfies_no_oscillator_R": false
+    },
+    {
+      "fields": [
+        "n_36",
+        "n_39"
+      ],
+      "twist_sectors": [
+        3,
+        3
+      ],
+      "predicted_no_oscillator_R": [
+        0,
+        0,
+        0
+      ],
+      "required_R": [
+        5,
+        2,
+        1
+      ],
+      "satisfies_no_oscillator_R": false
+    },
+    {
+      "fields": [
+        "n_39",
+        "n_40"
+      ],
+      "twist_sectors": [
+        3,
+        3
+      ],
+      "predicted_no_oscillator_R": [
+        0,
+        0,
+        0
+      ],
+      "required_R": [
+        5,
+        2,
+        1
+      ],
+      "satisfies_no_oscillator_R": false
+    }
+  ],
+  "no_oscillator_R_sector_table": {
+    "1": [
+      -1,
+      -1,
+      -1
+    ],
+    "2": [
+      -2,
+      -2,
+      0
+    ],
+    "3": [
+      -3,
+      0,
+      -1
+    ],
+    "4": [
+      -4,
+      -1,
+      0
+    ],
+    "5": [
+      -5,
+      -2,
+      -1
+    ]
+  },
+  "source": "Buchmuller et al NPB785 (2007) pp 168, Table4.1 and Eq4.8, eScholarship item 4qk7z9wd.",
+  "result": "All 6 gauge-neutral support bilinears FAIL the standard H-momentum selection requirement under the explicitly stated no-oscillator twisted-ground-state assumption.",
+  "major_limit": "No state-specific oscillator excitation number, gamma phases, fixed-point space group, full R-charge of individual 176 fields or computed CFT amplitudes available. This is a conditional filter, NOT verified absence of six actual superpotential coefficients. Physical vertex conventions may require further checking."
+}

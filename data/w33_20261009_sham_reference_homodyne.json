@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "trials_each": 72,
+  "shots_per_trial": 150000,
+  "alpha": 0.01,
+  "arms": {
+    "uncorrelated_reference_null": {
+      "rejections": 0,
+      "mean_4x_contrast": 0.00040491446941298356,
+      "mismatch": 0
+    },
+    "genuine_gate": {
+      "rejections": 58,
+      "mean_4x_contrast": -0.030118930688586572,
+      "mismatch": 0
+    },
+    "mismatched_reference_null": {
+      "rejections": 72,
+      "mean_4x_contrast": 0.0634147699886453,
+      "mismatch": 0.03
+    }
+  },
+  "observable": "4/N*sum_i S_i G_i R_i (Px_signal_i - Px_sham_i)*(Py_i^2-.51)",
+  "exactly_cancels_common_mode": "any common additive electronic artifact at the Px readout, including terms proportional to S, SG, SGR and arbitrary time-correlated drift, provided synchronous reference response is identical",
+  "sharp_null_bound": "After exact common-mode cancellation, for outcome differences invariant under randomized R, the conditional finite-N Hoeffding rejection probability is \u2264alpha.",
+  "nonidentifiability": "Residual mismatch \u03b4*S*G*R*(Py\u00b2-.51) produces an indistinguishable third-order signal. Real devices require independent calibration constraints/bounds on \u03b4; finite-N sharp null cannot cover \u03b4\u22600.",
+  "scope": "Synthetic homodyne data, not an implementation or verified source/detector model."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.symmetry_ritz_rational_intervals.v1",
+  "24_lower_ritz_interval": [
+    "142719336224218555613219889637681802163/1000000000000000000000000000000000000",
+    "142719336224218555613219889637686251941/1000000000000000000000000000000000000"
+  ],
+  "24_upper_ritz_interval": [
+    "14517245508726996061347373260631058417/100000000000000000000000000000000000",
+    "36293113771817490153368433151578758487/250000000000000000000000000000000000"
+  ],
+  "15_point_ritz_interval": [
+    "143611080740265533391242514642477974257/1000000000000000000000000000000000000",
+    "14361108074026553339124251464248479951/100000000000000000000000000000000000"
+  ],
+  "15_line_ritz_interval": [
+    "143611080740265533391242514642477974257/1000000000000000000000000000000000000",
+    "14361108074026553339124251464248479951/100000000000000000000000000000000000"
+  ],
+  "sector24_gram_norm": "32/27",
+  "sector15_gram_norm": "16/27",
+  "theorem": "Point/line He2 trial spaces each decompose into 1+24+15. Exact Wick 2x2 block and 1x1 blocks enclose Ritz energy levels, giving upper bounds by min-max within invariant sectors.",
+  "certification": "Outward rational Wick intervals with 10^-36 grid at every operation; not based on convergence of Gaussian quadrature.",
+  "boundary": "No lower spectral enclosure in full Hamiltonian; true ground irrep and spectral gap are not proved. Multiplicities are trial-representation dimensions, not exact spectral degeneracies."
+}
