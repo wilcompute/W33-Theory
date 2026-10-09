@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.coupled_selector.v1",
+  "results": [
+    {
+      "cells": 2,
+      "alignment_coupling_J": 0.0,
+      "local_hopping_h": 0.2,
+      "ground_energy": -4.799999999999995,
+      "first_ordered_energy": -2.8000000000000003,
+      "first_ordered_gap": 1.9999999999999951,
+      "mean_neighbor_line_agreement": 0.025,
+      "max_error_from_uniform_onesite_marginal": 3.8163916471489756e-17,
+      "Hilbert_dimension": 1600
+    },
+    {
+      "cells": 2,
+      "alignment_coupling_J": 0.2,
+      "local_hopping_h": 0.2,
+      "ground_energy": -4.805217410131393,
+      "first_ordered_energy": -2.810752483957939,
+      "first_ordered_gap": 1.9944649261734537,
+      "mean_neighbor_line_agreement": 0.02721998901716258,
+      "max_error_from_uniform_onesite_marginal": 4.163336342344337e-17,
+      "Hilbert_dimension": 1600
+    },
+    {
+      "cells": 2,
+      "alignment_coupling_J": 0.8,
+      "local_hopping_h": 0.2,
+      "ground_energy": -4.823980380995088,
+      "first_ordered_energy": -2.8551768069476164,
+      "first_ordered_gap": 1.9688035740474712,
+      "mean_neighbor_line_agreement": 0.035903060928519574,
+      "max_error_from_uniform_onesite_marginal": 6.591949208711867e-17,
+      "Hilbert_dimension": 1600
+    },
+    {
+      "cells": 2,
+      "alignment_coupling_J": 2.0,
+      "local_hopping_h": 0.2,
+      "ground_energy": -4.884665286852435,
+      "first_ordered_energy": -3.0731316411878673,
+      "first_ordered_gap": 1.8115336456645679,
+      "mean_neighbor_line_agreement": 0.07077140917791082,
+      "max_error_from_uniform_onesite_marginal": 5.898059818321144e-17,
+      "Hilbert_dimension": 1600
+    },
+    {
+      "cells": 3,
+      "alignment_coupling_J": 0.0,
+      "local_hopping_h": 0.2,
+      "ground_energy": -7.199999999999997,
+      "first_ordered_energy": -5.200000000000005,
+      "first_ordered_gap": 1.999999999999992,
+      "mean_neighbor_line_agreement": 0.024999999999999974,
+      "max_error_from_uniform_onesite_marginal": 9.575673587391975e-16,
+      "Hilbert_dimension": 64000
+    },
+    {
+      "cells": 3,
+      "alignment_coupling_J": 0.5,
+      "local_hopping_h": 0.2,
+      "ground_energy": -7.22790131800823,
+      "first_ordered_energy": -5.251087000922575,
+      "first_ordered_gap": 1.9768143170856547,
+      "mean_neighbor_line_agreement": 0.03112898719308254,
+      "max_error_from_uniform_onesite_marginal": 2.3592239273284576e-16,
+      "Hilbert_dimension": 64000
+    }
+  ],
+  "cell_space": "40 distinct W33 lines; 160-state collinear triples projected to uniform K4 line subspace",
+  "graph_L_eigenvalues": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "noninteracting_Ncell_Eground": "-12*N*h",
+  "noninteracting_gap": "10*h",
+  "finite_volume_theorem": "Each finite connected stoquastic selector-chain Hamiltonian has unique positive PF ground state. Exact W33 automorphism transitivity forces uniform single-site line marginals. Local ferromagnetic alignment can raise intersite correlations without finite-volume spontaneous breaking.",
+  "distinction": "This is an imposed finite open chain of W33 line contexts and equality interaction, not a derived physical lattice, thermodynamic limit, universal speed or Einstein dynamics."
+}

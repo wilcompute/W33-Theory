@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "integer_matrix_minimal_polynomial": "K*(K-6400I)*((K-6400I)^2-15360000I)=0",
+  "raw_matrix_rank": 78,
+  "eigenmultiplicities": {
+    "0": 2,
+    "4-sqrt6": 24,
+    "4": 30,
+    "4+sqrt6": 24
+  },
+  "affine_identity": "sum_e (Ve.q+1/sqrt20)^2 = 8+q^T (V^T V)q",
+  "uniform_physical_78D_bound": ">=8+(4-sqrt6)||q||^2",
+  "max_coefficient_lower": "max_e |Ve.q+a| >=sqrt((8+(4-sqrt6)||q||^2)/160)",
+  "samples": [
+    {
+      "qnorm": 0.0,
+      "sum_w_square": 7.999999999999999,
+      "radial_lower": 8.0,
+      "largest_abs_affine": 0.22360679774997896
+    },
+    {
+      "qnorm": 1.9331215488361144,
+      "sum_w_square": 24.476160472650545,
+      "radial_lower": 13.794193140249746,
+      "largest_abs_affine": 0.906100708748085
+    },
+    {
+      "qnorm": 8.91444199324456,
+      "sum_w_square": 323.16445710058224,
+      "radial_lower": 131.21482663003533,
+      "largest_abs_affine": 4.228500777367157
+    },
+    {
+      "qnorm": 83.16946546713311,
+      "sum_w_square": 30259.473344684542,
+      "radial_lower": 10733.127509240217,
+      "largest_abs_affine": 55.65336057287149
+    }
+  ],
+  "meaning": "Uniform quantitative affine-coefficient nonvanishing and growth at infinity. First-order transport current frame may be pointwise rank-deficient, so this is NOT a lower spectral bound for the sum of squared quantum currents."
+}

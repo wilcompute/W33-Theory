@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "alpha": 0.01,
+  "shots_for_illustrative_threshold": 150000,
+  "ideal_quartic_fourfold_signal": -0.030444365242192187,
+  "alternative_bias_per_unit_mismatch": 2.0808,
+  "exactly_signal_equivalent_mismatch": 0.014631086717700975,
+  "expected_null_weight_variance": 0.41616000000000003,
+  "idealized_hoeffding_critical_contrast": 0.02168844979375031,
+  "idealized_max_mismatch_for_mean_above_threshold": 0.004207956290100864,
+  "worstcase_randomized_sharp_null_theorem": "Conditional on all pump- and route-independent underlying W0,Q, assignment r are iid Rademacher. If |delta_i|<=d but otherwise arbitrary, Tobs=sum r_i Wobs_i. Using triangle inequalities, rejecting |Tobs|>d sum Q_i^2+c(||Wobs||2+d||Q^2||2) has P(reject)<=alpha exactly at every N. c=sqrt(2 log(2/alpha)).",
+  "trial_results": {
+    "trials_per_arm": 80,
+    "n": 35000,
+    "plus_boundary_null_rejections": 0,
+    "minus_boundary_null_rejections": 0
+  },
+  "caution": "Idealized threshold in population moments is not the sample-wise robust threshold. The matched sham experiment may have sign-sensitive optical effects; the theorem requires an independently established bound |delta_i|<=d and the sharp-null independence of W0,Q from route randomization; calibration proof is external."
+}

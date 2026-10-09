@@ -1,0 +1,233 @@
+{
+  "status": "PASS",
+  "source": "SHA256-anchored 11-field excerpt from Pass11797 recovered benchmark metadata; corrected per-field R and nonR",
+  "six_bilinears": [
+    {
+      "names": [
+        "n_9",
+        "n_54"
+      ],
+      "twist": [
+        2,
+        4
+      ],
+      "corrected_R": [
+        "2",
+        "-1",
+        "0"
+      ],
+      "uncorrected_R": [
+        "-1",
+        "-1",
+        "0"
+      ],
+      "R_target": [
+        "-1 mod 6",
+        "-1 mod 3",
+        "-1 mod 2"
+      ],
+      "corrected_R_rule_passes": false,
+      "exact_nonR_residues": [
+        "6",
+        "3",
+        "0",
+        "0"
+      ],
+      "oscillator_metadata": [
+        0,
+        0
+      ],
+      "original_gauge_nonR_correctedR_necessary": false
+    },
+    {
+      "names": [
+        "n_37",
+        "n_38"
+      ],
+      "twist": [
+        3,
+        3
+      ],
+      "corrected_R": [
+        "7",
+        "0",
+        "-1"
+      ],
+      "uncorrected_R": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "R_target": [
+        "-1 mod 6",
+        "-1 mod 3",
+        "-1 mod 2"
+      ],
+      "corrected_R_rule_passes": false,
+      "exact_nonR_residues": [
+        "6",
+        "0",
+        "2",
+        "0"
+      ],
+      "oscillator_metadata": [
+        0,
+        0
+      ],
+      "original_gauge_nonR_correctedR_necessary": false
+    },
+    {
+      "names": [
+        "n_35",
+        "n_36"
+      ],
+      "twist": [
+        3,
+        3
+      ],
+      "corrected_R": [
+        "7",
+        "0",
+        "-1"
+      ],
+      "uncorrected_R": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "R_target": [
+        "-1 mod 6",
+        "-1 mod 3",
+        "-1 mod 2"
+      ],
+      "corrected_R_rule_passes": false,
+      "exact_nonR_residues": [
+        "6",
+        "0",
+        "2",
+        "0"
+      ],
+      "oscillator_metadata": [
+        0,
+        0
+      ],
+      "original_gauge_nonR_correctedR_necessary": false
+    },
+    {
+      "names": [
+        "n_35",
+        "n_40"
+      ],
+      "twist": [
+        3,
+        3
+      ],
+      "corrected_R": [
+        "7",
+        "0",
+        "-1"
+      ],
+      "uncorrected_R": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "R_target": [
+        "-1 mod 6",
+        "-1 mod 3",
+        "-1 mod 2"
+      ],
+      "corrected_R_rule_passes": false,
+      "exact_nonR_residues": [
+        "6",
+        "0",
+        "1",
+        "0"
+      ],
+      "oscillator_metadata": [
+        0,
+        0
+      ],
+      "original_gauge_nonR_correctedR_necessary": false
+    },
+    {
+      "names": [
+        "n_36",
+        "n_39"
+      ],
+      "twist": [
+        3,
+        3
+      ],
+      "corrected_R": [
+        "7",
+        "0",
+        "-1"
+      ],
+      "uncorrected_R": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "R_target": [
+        "-1 mod 6",
+        "-1 mod 3",
+        "-1 mod 2"
+      ],
+      "corrected_R_rule_passes": false,
+      "exact_nonR_residues": [
+        "6",
+        "0",
+        "1",
+        "0"
+      ],
+      "oscillator_metadata": [
+        0,
+        0
+      ],
+      "original_gauge_nonR_correctedR_necessary": false
+    },
+    {
+      "names": [
+        "n_39",
+        "n_40"
+      ],
+      "twist": [
+        3,
+        3
+      ],
+      "corrected_R": [
+        "7",
+        "0",
+        "-1"
+      ],
+      "uncorrected_R": [
+        "-1",
+        "0",
+        "-1"
+      ],
+      "R_target": [
+        "-1 mod 6",
+        "-1 mod 3",
+        "-1 mod 2"
+      ],
+      "corrected_R_rule_passes": false,
+      "exact_nonR_residues": [
+        "6",
+        "0",
+        "0",
+        "0"
+      ],
+      "oscillator_metadata": [
+        0,
+        0
+      ],
+      "original_gauge_nonR_correctedR_necessary": false
+    }
+  ],
+  "six_correctedR_veto_count": 6,
+  "cubic_n81_n17_n82_necessary_passes": true,
+  "interpretation": "All six gauge-compatible quadratic support terms forbidden by the named corrected R-charge necessary rule. Independently reproduces the leading degree-eight support bound already owned by Pass11797. The outsider cubic is still allowed by these necessary filters.",
+  "limit": "Necessary filters and original-program named checks do not supply nonzero superpotential coefficients or complete fixed-point instanton amplitudes; no F-flatness assertion.",
+  "prior": "Pass11797 owns corrected full-state metadata, all-order invariant ring, leading order eight, outsider cubic and physical mass Hall no-go."
+}
