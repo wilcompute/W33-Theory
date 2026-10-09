@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "incidences": 160,
+  "noncommuting_edge_pairs": 480,
+  "commuting_edge_pairs": 12240,
+  "ground_doublet_control": "Nondegenerate real 2x2 toy Hamiltonian",
+  "real_control_eigenvalues": [
+    "20/9 - 2*sqrt(2)/3",
+    "2*sqrt(2)/3 + 20/9"
+  ],
+  "antiunitary_square": "+1",
+  "selection": "T-fixed vector or faithful T-invariant Gibbs state has vanishing expectation for i[J_e,J_f].",
+  "boundary": "No classification of all antiunitaries; no physical CP or chirality identification."
+}

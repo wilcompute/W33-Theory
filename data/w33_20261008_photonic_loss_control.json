@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "schema": "w33.cv.single_edge_loss.v1",
+  "exact_kappa4": "eta^2*(618440/6591)*((39/20)^2*tau)^4",
+  "exact_variance": "1/2+eta*(5207/3042)*((39/20)^2*tau)^2+sigma_e^2",
+  "null_drift_warning": "A Gaussian variance mixture has kappa4=3 Var(v_shot), so uncontrolled variance drift fakes this signal.",
+  "significance_warning": "600/gamma2^2 uses asymptotic normal-null standard error sqrt(24/N), not robust power under the quartic alternative.",
+  "controls": [
+    {
+      "tau": 0.02,
+      "transmission": 1.0,
+      "electronic_variance": 0.01,
+      "theta": 0.07604999999999999,
+      "variance": 0.51989980875,
+      "cumulant4": 0.0031386517666627486,
+      "excess_kurtosis": 0.011611914196690888,
+      "optimistic_5sigma_gaussian_null_shots": 4449831.994106083,
+      "variance_drift_std_at_equal_cumulant": 0.03234528181287419
+    },
+    {
+      "tau": 0.02,
+      "transmission": 0.8,
+      "electronic_variance": 0.01,
+      "theta": 0.07604999999999999,
+      "variance": 0.517919847,
+      "cumulant4": 0.0020087371306641596,
+      "excess_kurtosis": 0.0074885545868199664,
+      "optimistic_5sigma_gaussian_null_shots": 10699297.183538206,
+      "variance_drift_std_at_equal_cumulant": 0.02587622545029935
+    },
+    {
+      "tau": 0.02,
+      "transmission": 0.5,
+      "electronic_variance": 0.01,
+      "theta": 0.07604999999999999,
+      "variance": 0.514949904375,
+      "cumulant4": 0.0007846629416656871,
+      "excess_kurtosis": 0.0029590559602986053,
+      "optimistic_5sigma_gaussian_null_shots": 68524345.09311658,
+      "variance_drift_std_at_equal_cumulant": 0.016172640906437094
+    },
+    {
+      "tau": 0.02,
+      "transmission": 0.2,
+      "electronic_variance": 0.01,
+      "theta": 0.07604999999999999,
+      "variance": 0.51197996175,
+      "cumulant4": 0.00012554607066650998,
+      "excess_kurtosis": 0.00047895774188447563,
+      "optimistic_5sigma_gaussian_null_shots": 2615512832.727231,
+      "variance_drift_std_at_equal_cumulant": 0.006469056362574837
+    },
+    {
+      "tau": 0.03,
+      "transmission": 1.0,
+      "electronic_variance": 0.01,
+      "theta": 0.11407499999999998,
+      "variance": 0.5322745696875,
+      "cumulant4": 0.015889424568730163,
+      "excess_kurtosis": 0.05608370995109168,
+      "optimistic_5sigma_gaussian_null_shots": 190755.81295012927,
+      "variance_drift_std_at_equal_cumulant": 0.07277688407896692
+    },
+    {
+      "tau": 0.03,
+      "transmission": 0.8,
+      "electronic_variance": 0.01,
+      "theta": 0.11407499999999998,
+      "variance": 0.52781965575,
+      "cumulant4": 0.010169231723987307,
+      "excess_kurtosis": 0.03650203064842079,
+      "optimistic_5sigma_gaussian_null_shots": 450315.8149948673,
+      "variance_drift_std_at_equal_cumulant": 0.05822150726317354
+    },
+    {
+      "tau": 0.03,
+      "transmission": 0.5,
+      "electronic_variance": 0.01,
+      "theta": 0.11407499999999998,
+      "variance": 0.52113728484375,
+      "cumulant4": 0.003972356142182541,
+      "excess_kurtosis": 0.014626616897076221,
+      "optimistic_5sigma_gaussian_null_shots": 2804551.875613364,
+      "variance_drift_std_at_equal_cumulant": 0.03638844203948346
+    },
+    {
+      "tau": 0.03,
+      "transmission": 0.2,
+      "electronic_variance": 0.01,
+      "theta": 0.11407499999999998,
+      "variance": 0.5144549139375,
+      "cumulant4": 0.0006355769827492067,
+      "excess_kurtosis": 0.0024014498481687726,
+      "optimistic_5sigma_gaussian_null_shots": 104040925.7431535,
+      "variance_drift_std_at_equal_cumulant": 0.014555376815793384
+    },
+    {
+      "tau": 0.05,
+      "transmission": 1.0,
+      "electronic_variance": 0.01,
+      "theta": 0.190125,
+      "variance": 0.5718738046875,
+      "cumulant4": 0.12260358463526363,
+      "excess_kurtosis": 0.3748890545907415,
+      "optimistic_5sigma_gaussian_null_shots": 4269.192411914765,
+      "variance_drift_std_at_equal_cumulant": 0.20215801133046366
+    },
+    {
+      "tau": 0.05,
+      "transmission": 0.8,
+      "electronic_variance": 0.01,
+      "theta": 0.190125,
+      "variance": 0.55949904375,
+      "cumulant4": 0.07846629416656874,
+      "excess_kurtosis": 0.2506596592072145,
+      "optimistic_5sigma_gaussian_null_shots": 9549.537986993399,
+      "variance_drift_std_at_equal_cumulant": 0.16172640906437094
+    },
+    {
+      "tau": 0.05,
+      "transmission": 0.5,
+      "electronic_variance": 0.01,
+      "theta": 0.190125,
+      "variance": 0.54093690234375,
+      "cumulant4": 0.03065089615881591,
+      "excess_kurtosis": 0.10474901729697837,
+      "optimistic_5sigma_gaussian_null_shots": 54682.87447477604,
+      "variance_drift_std_at_equal_cumulant": 0.10107900566523183
+    },
+    {
+      "tau": 0.05,
+      "transmission": 0.2,
+      "electronic_variance": 0.01,
+      "theta": 0.190125,
+      "variance": 0.5223747609375,
+      "cumulant4": 0.004904143385410546,
+      "excess_kurtosis": 0.017972098436115774,
+      "optimistic_5sigma_gaussian_null_shots": 1857606.2907404976,
+      "variance_drift_std_at_equal_cumulant": 0.040431602266092735
+    }
+  ]
+}

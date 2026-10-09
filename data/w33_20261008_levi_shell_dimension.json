@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "vertices": 80,
+  "edges": 160,
+  "diameter": 4,
+  "distance_shells": [
+    1,
+    4,
+    12,
+    36,
+    27
+  ],
+  "ball_sizes": [
+    1,
+    5,
+    17,
+    53,
+    80
+  ],
+  "ball_growth_dimension_estimates": [
+    1.7655347463629771,
+    2.8043808129417926,
+    1.4312143875102672
+  ],
+  "exact_full_Levi_spectrum": "-4(1),-sqrt(6)(24),0(30),sqrt(6)(24),4(1)",
+  "boundary": "A finite diameter-four graph supplies no intrinsic large-scale polynomial volume growth or canonical spatial dimension. Infinite replication/limit and metric are extra inputs."
+}
