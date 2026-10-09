@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "actual_current_pairs": 480,
+  "pair_type_variance_counts": {
+    "('line', '41/20')": 240,
+    "('point', '41/20')": 240
+  },
+  "examples": [
+    {
+      "e": 0,
+      "f": 1,
+      "shared": "line",
+      "b": "-1",
+      "variance": "41/20",
+      "bilinear": "39/20",
+      "linear": "1/10"
+    },
+    {
+      "e": 0,
+      "f": 2,
+      "shared": "line",
+      "b": "-1",
+      "variance": "41/20",
+      "bilinear": "39/20",
+      "linear": "1/10"
+    },
+    {
+      "e": 0,
+      "f": 3,
+      "shared": "line",
+      "b": "-1",
+      "variance": "41/20",
+      "bilinear": "39/20",
+      "linear": "1/10"
+    },
+    {
+      "e": 0,
+      "f": 4,
+      "shared": "point",
+      "b": "1",
+      "variance": "41/20",
+      "bilinear": "39/20",
+      "linear": "1/10"
+    },
+    {
+      "e": 0,
+      "f": 8,
+      "shared": "point",
+      "b": "1",
+      "variance": "41/20",
+      "bilinear": "39/20",
+      "linear": "1/10"
+    }
+  ],
+  "expectation": "zero for all pairs in centered uncorrelated isotropic pure Gaussian",
+  "theorem": "Nonzero exact curvature fluctuations even when first moment vanishes. The Wick variance includes the Moyal/ordering correction tr(R\u00b2); omitting it gives incorrect quantum covariance.",
+  "boundary": "This is a test Gaussian, not a certified ground-state curvature susceptibility or breaking."
+}

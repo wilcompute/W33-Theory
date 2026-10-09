@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "source_model": "Z6II_34__SM_20260917_1558",
+  "candidate_count": 11,
+  "field_metadata_coverage": {
+    "w": {
+      "source_found": true,
+      "total_distinct_fields": 24,
+      "required_field_count": 17,
+      "required_fields_present": [],
+      "required_fields_missing": [
+        "n_1",
+        "n_16",
+        "n_19",
+        "n_25",
+        "n_31",
+        "n_43",
+        "n_54",
+        "n_56",
+        "n_61",
+        "n_7",
+        "n_72",
+        "n_77",
+        "n_80",
+        "n_82",
+        "n_9",
+        "n_93",
+        "n_96"
+      ]
+    },
+    "sp": {
+      "source_found": true,
+      "total_distinct_fields": 368,
+      "required_field_count": 17,
+      "required_fields_present": [
+        "n_1",
+        "n_16",
+        "n_19",
+        "n_25",
+        "n_31",
+        "n_43",
+        "n_54",
+        "n_56",
+        "n_61",
+        "n_7",
+        "n_72",
+        "n_77",
+        "n_80",
+        "n_82",
+        "n_9",
+        "n_93",
+        "n_96"
+      ],
+      "required_fields_missing": []
+    }
+  },
+  "by_catalog": {
+    "dbd": {
+      "found": true,
+      "source_sha256": "cd382682f439f9e1909da5f37091e74357eb32a8afc4bb9d725f56da71cd8070",
+      "lines": 170,
+      "parsed_C_lines": 170,
+      "matching_count": 0,
+      "matches": {}
+    },
+    "mu": {
+      "found": true,
+      "source_sha256": "3f336d771ed7e54daa6d1fec4176da20e50b942a2dec650e1c3ef0f7726dd254",
+      "lines": 51,
+      "parsed_C_lines": 51,
+      "matching_count": 0,
+      "matches": {}
+    },
+    "ch": {
+      "found": true,
+      "source_sha256": "63a039510e2050c8ba5c52a392420012a9a15fda93b9488e056cad481155078e",
+      "lines": 369,
+      "parsed_C_lines": 0,
+      "matching_count": 0,
+      "matches": {}
+    }
+  },
+  "scope": "Exact whole-field-multiset matching against existing catalog C records. No independent evidence here that any catalog lists every possible string-level superpotential coupling, or that catalog presence means nonzero coefficient."
+}

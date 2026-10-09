@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "n": 50000,
+  "trials_each": 96,
+  "no_gate_interaction_rejections": 0,
+  "true_quartic_signal_rejections": 88,
+  "gate_times_sign_detector_artifact_rejections": 96,
+  "contrast": "mean(G*S*Px*(Py^2-.51)); S and G independent Rademacher signs",
+  "exact_null": "If changing gate enable G leaves every shot output unaffected conditional on S, outcomes, then P(|T|>=sqrt(2 log(2/alpha)*sum(S W)^2))<=alpha for any finite N.",
+  "qualification": "Main-effect pump sign artifacts disappear in expectation; gate*sign detector interactions remain indistinguishable. A gate-control bypass/reference channel is required for stronger causal attribution.",
+  "simulator": "seeded AR1 drift rho=.98 and pump-sign detector cross-talk 0.1; 1% threshold",
+  "boundary": "Monte Carlo evidence not a physical device demonstration; no finite-sample power guarantee under composite nuisance gate effects."
+}

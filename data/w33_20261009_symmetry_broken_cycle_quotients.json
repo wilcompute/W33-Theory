@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "full_PSp_fixed_H1_dimension": 0,
+  "cases": {
+    "point_stabilizer": {
+      "order": 648,
+      "vertex_orbit_sizes": [
+        1,
+        4,
+        12,
+        27,
+        36
+      ],
+      "edge_orbit_sizes": [
+        4,
+        12,
+        36,
+        108
+      ],
+      "fixed_H1_dimension": 0
+    },
+    "ordered_pair_stabilizer": {
+      "order": 54,
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        6,
+        9,
+        9,
+        18,
+        27
+      ],
+      "edge_orbit_sizes": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        6,
+        9,
+        9,
+        18,
+        27,
+        27,
+        54
+      ],
+      "fixed_H1_dimension": 2
+    },
+    "set_pair_stabilizer": {
+      "order": 108,
+      "vertex_orbit_sizes": [
+        1,
+        2,
+        2,
+        6,
+        6,
+        18,
+        18,
+        27
+      ],
+      "edge_orbit_sizes": [
+        2,
+        2,
+        6,
+        6,
+        18,
+        18,
+        54,
+        54
+      ],
+      "fixed_H1_dimension": 1
+    },
+    "ordered_triple_stabilizer": {
+      "order": 27,
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        9,
+        9,
+        9,
+        9,
+        27
+      ],
+      "edge_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        9,
+        9,
+        9,
+        9,
+        27,
+        27,
+        27,
+        27
+      ],
+      "fixed_H1_dimension": 3
+    },
+    "ordered_quad_stabilizer": {
+      "order": 27,
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        9,
+        9,
+        9,
+        9,
+        27
+      ],
+      "edge_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        9,
+        9,
+        9,
+        9,
+        27,
+        27,
+        27,
+        27
+      ],
+      "fixed_H1_dimension": 3
+    }
+  },
+  "theorem": "For any finite subgroup H of PSp(4,3), rational fixed-cycle dimension = #edge orbits - #vertex orbits +1. If >=3, a rank-three H-equivariant integral lattice quotient with trivial target action exists via saturated invariant covectors.",
+  "boundary": "Subgroups are imposed as examples; neither their selection nor a Lorentzian continuum follows from W33 dynamics."
+}
