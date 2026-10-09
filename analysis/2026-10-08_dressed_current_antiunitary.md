@@ -53,12 +53,14 @@ This does not identify T with **physical** spacetime time reversal, and does not
 
 ## Genericity control: balanced bipartite graphs, not q=3 alone
 
-This exact antiunitary requires **no special finite-geometric identity beyond equal bipartition sizes**. For any simple bipartite incidence graph with (n) points and (m) lines, use the independently centered point/line carrier (W=(\mathbf1_P,\mathbf1_L)^\perp). Then for any incidence
-[
-U_e=P_W(e_i+e_j),\quad V_e=P_W(e_i-e_j),\quad
+This exact antiunitary requires **no special finite-geometric identity beyond equal bipartition sizes**. For any simple bipartite incidence graph with \(n\) points and \(m\) lines, use the independently centered point/line carrier \(W=(\mathbf1_P,\mathbf1_L)^\perp\). Then for any incidence,
+
+\[
+U_e=P_W(e_i+e_j),\qquad V_e=P_W(e_i-e_j),\qquad
 U_e\cdot V_e=\left(1-\frac1n\right)-\left(1-\frac1m\right)
 =\frac1m-\frac1n.
-]
-The sign operation (D=\operatorname{diag}(+I_n,-I_m)) always exchanges (U,V), but **the two ordered quantum factors commute precisely when (n=m)**. Thus the above proof applies to every balanced bipartite graph with this specific current prescription. The W33 graph is special through its *additional* 160-incidence algebra, spectral geometry and Lie closure, **not** through the factor-exchange antiunitary alone.
+\]
 
-A new exact-fraction regression checks all ordered pairs of part sizes (2\le n,m\le7), explicitly including unbalanced controls. Symmetrizing the current would change the operator prescription and could restore factor exchange in more general cases; that is a different model, not a counterexample.
+The sign operation \(D=\operatorname{diag}(+I_n,-I_m)\) always exchanges \(U,V\), but **the two ordered quantum factors commute precisely when \(n=m\)**. Thus the above proof applies to every balanced bipartite graph with this specific current prescription. The W33 graph is special through its *additional* 160-incidence algebra, spectral geometry and Lie closure, **not** through the factor-exchange antiunitary alone.
+
+A new exact-fraction regression checks all ordered pairs of part sizes \(2\le n,m\le7\), explicitly including unbalanced controls. Symmetrizing the current would change the operator prescription and could restore factor exchange in more general cases; that is a different model, not a counterexample.
