@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "total_intrinsic_isotropic_selectors": 86400,
+  "exact_PSp_orbits": [
+    {
+      "representative": [
+        0,
+        52,
+        68
+      ],
+      "orbit_size": 4320,
+      "stabilizer": 6,
+      "point_center_count": 4,
+      "line_transversal_count": 0,
+      "selector_one_flag_swap_degree": 117,
+      "E_plus": -4,
+      "E_minus": -4
+    },
+    {
+      "representative": [
+        0,
+        52,
+        72
+      ],
+      "orbit_size": 4320,
+      "stabilizer": 6,
+      "point_center_count": 4,
+      "line_transversal_count": 2,
+      "selector_one_flag_swap_degree": 117,
+      "E_plus": -2,
+      "E_minus": -6
+    },
+    {
+      "representative": [
+        0,
+        52,
+        70
+      ],
+      "orbit_size": 25920,
+      "stabilizer": 1,
+      "point_center_count": 1,
+      "line_transversal_count": 0,
+      "selector_one_flag_swap_degree": 117,
+      "E_plus": -1,
+      "E_minus": -1
+    },
+    {
+      "representative": [
+        0,
+        52,
+        74
+      ],
+      "orbit_size": 25920,
+      "stabilizer": 1,
+      "point_center_count": 1,
+      "line_transversal_count": 2,
+      "selector_one_flag_swap_degree": 117,
+      "E_plus": 1,
+      "E_minus": -3
+    },
+    {
+      "representative": [
+        0,
+        52,
+        90
+      ],
+      "orbit_size": 25920,
+      "stabilizer": 1,
+      "point_center_count": 1,
+      "line_transversal_count": 2,
+      "selector_one_flag_swap_degree": 117,
+      "E_plus": 1,
+      "E_minus": -3
+    }
+  ],
+  "integer_local_motif_energies": {
+    "E_plus": {
+      "classical_ground_energy": -4,
+      "ground_degeneracy": 4320,
+      "first_excitation_gap": 2,
+      "histogram": {
+        "-4": 4320,
+        "-2": 4320,
+        "-1": 25920,
+        "1": 51840
+      },
+      "selected_orbit_representative": [
+        0,
+        52,
+        68
+      ],
+      "residual_stabilizer_order": 6
+    },
+    "E_minus": {
+      "classical_ground_energy": -6,
+      "ground_degeneracy": 4320,
+      "first_excitation_gap": 2,
+      "histogram": {
+        "-6": 4320,
+        "-4": 4320,
+        "-3": 51840,
+        "-1": 25920
+      },
+      "selected_orbit_representative": [
+        0,
+        52,
+        72
+      ],
+      "residual_stabilizer_order": 6
+    }
+  },
+  "deterministic_classical_orbit_selection": "Two explicit local incidence-motif PSp-invariant energy functions select the two DIFFERENT 4320-state C6 orbits with positive integer gap. They do not pick one state without SSB or external field.",
+  "robustness": "For diagonal additive perturbation bounded by eta at every selector, the same selected orbit set remains the unique lowest orbit (no crossing between orbit types) whenever 2eta<gap; within-orbit splitting allowed if perturbation breaks PSp.",
+  "physical_boundary": "Finite discrete selector Hamiltonians explicitly engineered from common-neighbor motifs, NOT derived from quantum-current Hamiltonian nor any underlying physical microscopic interaction. No thermodynamic/continuum dynamics or Einstein gravity."
+}

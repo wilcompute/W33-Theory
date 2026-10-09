@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "paired_optical_interventions": 8000,
+  "shots_per_intervention": 2,
+  "blinded_assignment": "Exactly one active optical path per pair, fair independent random z. Independently random triple pump/gate/route sign r shared within pair; lock-in score sum r*z*(y1-y2). Optical switch path must be invisible to electronics except audited <=eta leakage.",
+  "clip_threshold_T": 0.15,
+  "maximum_direct_electronic_switch_leakage_eta": 0.0004,
+  "arbitrary_corrupted_raw_shots_K": 14,
+  "test_alpha": 0.01,
+  "exact_conditional_randomization_bound": "Under a sharp null and independent random z, baseline clipped outcomes (y0_j1,y0_j2) are fixed, with abs differences <=2T. Condition on randomized r (held fixed within a pair), so r*z is a fair independent sign under z randomization. Electronic switch leakage per reading <=eta adds at most 2eta M total to signed contrast; K arbitrary corrupted raw readings add at most 2TK. Hoeffding gives P(|sum z_j(y1-y2)|>2etaM+2TK+2T sqrt(2M ln(2/alpha))) <=alpha.",
+  "runs": {
+    "null": {
+      "rejections": 0,
+      "runs": 30,
+      "median_score": -0.2881305909278249,
+      "threshold": 97.94744992173025,
+      "first_run": {
+        "reject": false,
+        "score": 0.10717948876200467,
+        "threshold": 97.94744992173025,
+        "ratio": 0.0010942550198872122
+      }
+    },
+    "optical": {
+      "rejections": 30,
+      "runs": 30,
+      "median_score": 758.1951978222372,
+      "threshold": 97.94744992173025,
+      "first_run": {
+        "reject": true,
+        "score": 758.3823568073537,
+        "threshold": 97.94744992173025,
+        "ratio": 7.742747334549053
+      }
+    },
+    "electronics_only": {
+      "rejections": 0,
+      "runs": 30,
+      "median_score": -0.18253070425115153,
+      "threshold": 97.94744992173025,
+      "first_run": {
+        "reject": false,
+        "score": 0.41416349633578264,
+        "threshold": 97.94744992173025,
+        "ratio": 0.004228425514566642
+      }
+    }
+  },
+  "crucial_falsifier": "If electronic artifacts respond to the actual optical attenuator with direct leakage >eta, the experiment remains observationally nonidentifiable. Hardware route attenuation/blinded switch and independent detector/reference verification required. Simulations are not measurement results.",
+  "reference": "Builds on Round12 per-shot clipping and Round13 explicit two-model electronics sham no-go."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "verified_channel_representatives": 160,
+  "exact_t_min": "20/39",
+  "center_dual_coercivity_bound": "25600/77571",
+  "rigorous_ball_radius_half_min": "(20/39)/(2*sqrt39)",
+  "rigorous_uniform_energy_lower_on_all_160_balls": "6400/77571",
+  "theorem": "For each edge e, all psi supported in ||q-q_e||<=r< tmin/sqrt39 obey h[psi]>= [25600/77571]*(1-sqrt39*r/tmin)^2 ||psi||\u00b2. At r=tmin/(2sqrt39), this is 6400/77571. The exact value tmin is common to all 160 edge-transitive strata and is the minimum nonvanishing affine ratio on the support of its 8-cycle dual.",
+  "proof": "For w_e with U.T w=0 and w_e[e]=0, fix q_e. Bound |z_i(q)| >= a*(|t_i|-sqrt39*r) >= a |t_i|*(1-r sqrt39/tmin), and Cauchy weighted-dual energy bound propagates from center to entire ball.",
+  "boundary": "Wavefunctions supported in 160 small neighborhoods, not all configuration R^78. Known simultaneous classical zeros remain and global E0 remains without enclosure."
+}

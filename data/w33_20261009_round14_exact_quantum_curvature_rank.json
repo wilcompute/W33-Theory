@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "original_model": "Actual full-H 160-current differential connection in 78D quantum configuration space",
+  "adapted_exact_y_coefficients": [
+    "50/196319",
+    "2299/15705520"
+  ],
+  "adapted_two_parameter_y_verified_all_78": true,
+  "numerator_common_denominator": 15705520,
+  "exact_antisymmetric_integer_schur_rank": 16,
+  "exact_magnetic_curvature_Q_rank": 16,
+  "prior_three_modp_rank_lower_bound": 16,
+  "proof": "The rational 78x78 magnetic curvature is congruent via invertible T to integer skew matrix S=W_n T - T W_n^T. Exact integer DomainMatrix rank of S certifies the exact rational rank; 2-parameter exact y solves all 78 equations, so all entries computed without float inversion.",
+  "limitation": "Model connection curvature only; no proof of actual vacuum irrep, global numeric spectral gap or Einstein gravity."
+}

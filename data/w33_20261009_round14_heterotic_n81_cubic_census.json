@@ -1,0 +1,269 @@
+{
+  "status": "PASS",
+  "supports": 16,
+  "exact_degree3_monomial_histogram": {
+    "1": 16
+  },
+  "all_supports": [
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_81"
+      ],
+      "n81_is_VEV": true,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_81"
+      ],
+      "n81_is_VEV": true,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_83"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_83"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_88"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_88"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_90"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_90"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_81",
+        "n_86"
+      ],
+      "n81_is_VEV": true,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_81",
+        "n_86"
+      ],
+      "n81_is_VEV": true,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_83",
+        "n_86"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_83",
+        "n_86"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_86",
+        "n_88"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_86",
+        "n_88"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_86",
+        "n_90"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_86",
+        "n_90"
+      ],
+      "n81_is_VEV": false,
+      "exact_cubic_necessary_monomials": [
+        [
+          "n_81",
+          "n_17",
+          "n_82"
+        ]
+      ],
+      "number_cubic_necessary_monomials": 1
+    }
+  ],
+  "known_cubic_n81_n17_n82_present_in_all": true,
+  "exact_source_recovered_necessary_rule": "Each cubic field multiset has all nine exact U1 charges zero and corrected gamma-aware R and nonR passes, without invoking finite degree exports or MILP.",
+  "formal_F_obstruction": "If n81*n17*n82 is the only allowed leading cubic and its worldsheet coefficient lambda !=0, then along any field scaling VEV=epsilon*v with v17*v82 !=0, F81=lambda*epsilon\u00b2*v17*v82+O(epsilon\u00b3) cannot vanish for all sufficiently small nonzero epsilon. This is an order-by-order analytic statement, not global F-flatness.",
+  "limitation": "Additional genuine worldsheet selection could forbid the cubic, and other terms may cancel at finite VEV. FI D-term may not allow epsilon->0 scaling; full CFT coefficients, constructing elements, nondiscrete rules, non-Abelian D/F flatness remain unavailable."
+}
