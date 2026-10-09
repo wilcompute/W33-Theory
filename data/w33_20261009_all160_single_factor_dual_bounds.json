@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "representative_count": 160,
+  "exact_rational_values_with_edge_counts": {
+    "25600/77571": 160
+  },
+  "rational_bound_min": "25600/77571",
+  "rational_bound_max": "25600/77571",
+  "numeric_bound_min": 0.330020239522502,
+  "numeric_bound_max": 0.330020239522502,
+  "all_single_zero_factor_strata_locally_positive": true,
+  "proof": "For each q_e=-a V_e/||V_e||\u00b2 where exactly that e has factor zero, construct alternating 8-cycle c through e, U^T c=0, sum c=0; w=1-c vanishes at e yet U^T w=0 and sum w=160; weighted Cauchy gives strictly positive exact rational scalar Vopt(q_e) lower bound. This is a finite 160-point exhaustive certificate.",
+  "limitations": "Values may differ with deterministic shortest cycle choice; the full PSp orbit makes exact optimal Vopt identical only under an orthogonal group action, but these certificate witnesses are nonoptimal. None rules out true classical zeros with many factors zero or globally bounds H."
+}

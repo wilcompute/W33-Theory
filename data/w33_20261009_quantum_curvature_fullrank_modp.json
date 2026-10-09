@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "magnetic_curvature_2form_dimension": 78,
+  "finite_field_rank_lower_bounds": [
+    {
+      "prime": 10007,
+      "rank_skew2form_over_Fp": 16,
+      "nonzero_entries": 1072
+    },
+    {
+      "prime": 10009,
+      "rank_skew2form_over_Fp": 16,
+      "nonzero_entries": 1072
+    },
+    {
+      "prime": 10037,
+      "rank_skew2form_over_Fp": 16,
+      "nonzero_entries": 1072
+    }
+  ],
+  "real_singular_values_biggest": [
+    2.3049979769177646,
+    2.3049979769177633,
+    0.2504106671574738,
+    0.2504106671574736,
+    0.15815633603016307,
+    0.15815633603016302,
+    0.13561175840362355,
+    0.13561175840362344
+  ],
+  "real_singular_values_smallest": [
+    3.0567311482162743e-16,
+    3.0086068992979714e-16,
+    1.8514540652411472e-16,
+    1.8234996551554784e-16,
+    1.7245420068425295e-16,
+    1.7100551198448503e-16,
+    1.0221563740337075e-16,
+    9.854891454009008e-17
+  ],
+  "real_numerical_rank_tol_1e_minus_6": 16,
+  "statement": "A nonzero modular r-by-r minor yields rank over Q >=r. Equality requires separate exact upper rank certificate; none is asserted unless rank78 is established. Full 78 ranks yield exact maximal nondegenerate symplectic 2-form at this point.",
+  "interpretation": "Nonzero effective magnetic curvature blocks naive scalar-gauge Perron-Frobenius ground-state uniqueness. It is a property of an artificial quantized model, not a physical magnetic field, a proof of vacuum degeneracy or measured curvature."
+}

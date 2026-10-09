@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "flag_dimension": 160,
+  "universal_flatband_dimension": 81,
+  "endpoint_flatband_dimensions": [
+    120,
+    120
+  ],
+  "midpoint_dual_15_plus_15_degeneracy_at_positive_eigenvalue": 2,
+  "exact_formula": "spec K_t = 0^81 +4^1 +(2+-sqrt(4(2t-1)^2+6t(1-t)))^24+(4t)^15+(4(1-t))^15 for 0<t<1. At t=0,1 additional 39 zeros from endpoint rank loss.",
+  "fixed_symmetry": "PSp acts on incidence columns. Exchanging point and line sends t to 1-t and swaps two inequivalent 15-dimensional point/line sectors, leaving eigenvalues invariant.",
+  "critical_observation": "The entire 81D topological incidence cycle kernel persists for t interior. The endpoint 120D zero sector is NOT protected by generic mixing. Unlike earlier A6/A30, this strictly positive weighted incidence model has no 96/105 internal zero crossing.",
+  "finite_hardware": "A squared-incidence positive-semidefinite single-photon hopping kernel; no actual optical device, TOE or emergent spacetime.",
+  "samples": [
+    {
+      "t": 0,
+      "zero_dimension": 120,
+      "min_positive": 3.999999999999999,
+      "numerical_vs_formula_maxerror": 8.881784197001252e-16
+    },
+    {
+      "t": 0.001,
+      "zero_dimension": 81,
+      "min_positive": 0.002499061326875768,
+      "numerical_vs_formula_maxerror": 8.43769498715119e-15
+    },
+    {
+      "t": 0.01,
+      "zero_dimension": 81,
+      "min_positive": 0.02490506557279354,
+      "numerical_vs_formula_maxerror": 7.105427357601002e-15
+    },
+    {
+      "t": 0.1,
+      "zero_dimension": 81,
+      "min_positive": 0.23931831383409863,
+      "numerical_vs_formula_maxerror": 3.9968028886505635e-15
+    },
+    {
+      "t": 0.25,
+      "zero_dimension": 81,
+      "min_positive": 0.5422620262886723,
+      "numerical_vs_formula_maxerror": 4.884981308350689e-15
+    },
+    {
+      "t": 0.5,
+      "zero_dimension": 81,
+      "min_positive": 0.7752551286084082,
+      "numerical_vs_formula_maxerror": 7.549516567451064e-15
+    },
+    {
+      "t": 0.75,
+      "zero_dimension": 81,
+      "min_positive": 0.5422620262886728,
+      "numerical_vs_formula_maxerror": 5.329070518200751e-15
+    },
+    {
+      "t": 0.9,
+      "zero_dimension": 81,
+      "min_positive": 0.23931831383409574,
+      "numerical_vs_formula_maxerror": 5.329070518200751e-15
+    },
+    {
+      "t": 0.99,
+      "zero_dimension": 81,
+      "min_positive": 0.024905065572792928,
+      "numerical_vs_formula_maxerror": 6.661338147750939e-15
+    },
+    {
+      "t": 0.999,
+      "zero_dimension": 81,
+      "min_positive": 0.002499061326877995,
+      "numerical_vs_formula_maxerror": 5.773159728050814e-15
+    },
+    {
+      "t": 1,
+      "zero_dimension": 120,
+      "min_positive": 3.9999999999999973,
+      "numerical_vs_formula_maxerror": 3.552713678800501e-15
+    }
+  ]
+}

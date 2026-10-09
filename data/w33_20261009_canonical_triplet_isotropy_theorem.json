@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "projector_denominator": 160,
+  "exact_rational_L_pseudoinverse_polynomial": "12800 L+ = -47 L^4 + 900 L^3 - 5686 L^2 + 12152 L",
+  "exact_cycle_projector_rank": 81,
+  "exact_cycle_projector_integer_levels": {
+    "-27": 960,
+    "-3": 8640,
+    "1": 12960,
+    "9": 2880,
+    "81": 160
+  },
+  "offdiagonal_unordered_class_sizes": {
+    "-27": 480,
+    "-3": 4320,
+    "1": 6480,
+    "9": 1440
+  },
+  "relation_Pij_plus_1_graph_degree": 81,
+  "exact_optimal_unordered_three_flag_selectors": 86400,
+  "concrete_optimal_three_flag_indices": [
+    0,
+    52,
+    68
+  ],
+  "exact_example_3x3_integer_tensor": [
+    [
+      81,
+      1,
+      1
+    ],
+    [
+      1,
+      81,
+      1
+    ],
+    [
+      1,
+      1,
+      81
+    ]
+  ],
+  "exact_optimal_eigenvalues_divided_by_160": [
+    80,
+    80,
+    83
+  ],
+  "global_min_eigenvalue_ratio_for_all_160_choose_3_triples": "83/80",
+  "all_unordered_flag_triplets": "C(160,3)=669920",
+  "optimality_proof": "Let G=160 K for any three distinct flags. G has diagonal81 and nonzero integer offdiagonal abs>=1, so ||G-81I||_F\u00b2>=6; for tracezero 3x3 real symmetric, lambda_max-lambda_min>=sqrt(3/2)*||G-81I||_F>=3. Trace G=243 gives lambda_min<=(243-spread)/3, hence kappa >=(243+2*spread)/(243-spread)>=83/80. Equality achieved when all three offdiagonals equal+1.",
+  "group_equivariance": "PSp acts by permutation of 160 flags and commutes with Pi. Entire optimal set is G-invariant, not any specifically selected 3D subspace.",
+  "physical_boundary": "A rigorously optimal symmetry-covariant combinatorial selector family, but choosing a member is an external symmetry breaking or requires unproven dynamics. No physical dimension, spacetime metric or Lorentz signature follows."
+}

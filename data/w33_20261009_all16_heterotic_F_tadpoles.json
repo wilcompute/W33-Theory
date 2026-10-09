@@ -1,0 +1,3485 @@
+{
+  "status": "PASS",
+  "candidate_supports": 16,
+  "histogram_num_tadpole_possible_outsiders": {
+    "15": 2,
+    "13": 2,
+    "21": 6,
+    "19": 6
+  },
+  "full_results": [
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_81"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 15,
+      "min_total_exponent_degree": 4,
+      "previously_known_n81_n17_n82_candidate_status": "n81 is a positive VEV field",
+      "candidate_mononomials": [
+        {
+          "outside": "n_18",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_1",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 2,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 2,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_30",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_65",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_81"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 13,
+      "min_total_exponent_degree": 4,
+      "previously_known_n81_n17_n82_candidate_status": "n81 is a positive VEV field",
+      "candidate_mononomials": [
+        {
+          "outside": "n_18",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_51",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_63",
+          "degree": 7,
+          "charged": {
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_83"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 15,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_20",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_30",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_31",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_52",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_64",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_1",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 2,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 2,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_65",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_83"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 13,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_20",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_31",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_52",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_64",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_51",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_63",
+          "degree": 7,
+          "charged": {
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_88"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 21,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_1",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 2,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 2,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_30",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_65",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_32",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_84",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_90",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_86",
+          "degree": 14,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 3
+        },
+        {
+          "outside": "n_87",
+          "degree": 14,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_79": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_88"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 19,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_51",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_63",
+          "degree": 7,
+          "charged": {
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_18",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_32",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_84",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_90",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_86",
+          "degree": 14,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 3
+        },
+        {
+          "outside": "n_87",
+          "degree": 14,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_79": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_90"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 21,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_1",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 2,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_50": 2,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_30",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_65",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 9,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_51": 1,
+            "n_79": 1,
+            "n_90": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 9,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_51": 1,
+            "n_79": 1,
+            "n_90": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_79": 1,
+            "n_90": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_86",
+          "degree": 10,
+          "charged": {
+            "n_17": 1,
+            "n_50": 2,
+            "n_80": 2,
+            "n_82": 1,
+            "n_51": 2,
+            "n_79": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 10,
+          "charged": {
+            "n_17": 1,
+            "n_50": 2,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 2,
+            "n_79": 2,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_88",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_90"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 19,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_51",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_63",
+          "degree": 7,
+          "charged": {
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_18",
+          "degree": 9,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_65": 1,
+            "n_79": 1,
+            "n_90": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 9,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_65": 1,
+            "n_79": 1,
+            "n_90": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_79": 1,
+            "n_90": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_86",
+          "degree": 10,
+          "charged": {
+            "n_17": 1,
+            "n_47": 2,
+            "n_80": 2,
+            "n_82": 1,
+            "n_65": 2,
+            "n_79": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 10,
+          "charged": {
+            "n_17": 1,
+            "n_47": 2,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 2,
+            "n_79": 2,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_88",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_81",
+        "n_86"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 21,
+      "min_total_exponent_degree": 4,
+      "previously_known_n81_n17_n82_candidate_status": "n81 is a positive VEV field",
+      "candidate_mononomials": [
+        {
+          "outside": "n_18",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 6,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_1",
+          "degree": 7,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_51": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_2",
+          "degree": 7,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_30",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_51": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_88",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_51": 1,
+            "n_81": 1,
+            "n_86": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_81": 2,
+            "n_86": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_90",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_51": 1,
+            "n_81": 1,
+            "n_86": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_81": 2,
+            "n_86": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_65",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_51": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_81",
+        "n_86"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 19,
+      "min_total_exponent_degree": 4,
+      "previously_known_n81_n17_n82_candidate_status": "n81 is a positive VEV field",
+      "candidate_mononomials": [
+        {
+          "outside": "n_18",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 4,
+          "charged": {
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 6,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_2",
+          "degree": 7,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_82": 1,
+            "n_81": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_65": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_88",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_65": 1,
+            "n_81": 1,
+            "n_86": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_81": 2,
+            "n_86": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_90",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_65": 1,
+            "n_81": 1,
+            "n_86": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_81": 2,
+            "n_86": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_51",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_65": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_63",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_80": 2,
+            "n_65": 2,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_83",
+        "n_86"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 21,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_20",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_30",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_31",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_52",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_64",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_51": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 8,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_1",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 2,
+            "n_86": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_65",
+          "degree": 10,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_88",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_51": 1,
+            "n_83": 1,
+            "n_86": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 13,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 2,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_90",
+          "degree": 13,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_51": 1,
+            "n_83": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_83",
+        "n_86"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 19,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_20",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_31",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_52",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_64",
+          "degree": 4,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_32",
+          "degree": 6,
+          "charged": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_84",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_65": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 8,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_2",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 9,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_83": 2,
+            "n_86": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_51",
+          "degree": 10,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_82": 1,
+            "n_65": 1,
+            "n_83": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_63",
+          "degree": 10,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 2,
+            "n_82": 1,
+            "n_65": 2,
+            "n_83": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_88",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_65": 1,
+            "n_83": 1,
+            "n_86": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 13,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_83": 2,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_90",
+          "degree": 13,
+          "charged": {
+            "n_17": 2,
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 2,
+            "n_65": 1,
+            "n_83": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_86",
+        "n_88"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 21,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_30",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_51": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_32",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_53",
+          "degree": 11,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_84",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_90",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_1",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_51": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_2",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_65",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_51": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_86",
+        "n_88"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 19,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_88": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_65": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_18",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_32",
+          "degree": 11,
+          "charged": {
+            "n_17": 1,
+            "n_82": 2,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_53",
+          "degree": 11,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_84",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_88": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_90",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_88": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_2",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_51",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_65": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_63",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_80": 2,
+            "n_65": 2,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_51",
+        "n_86",
+        "n_90"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 21,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_15",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_30",
+          "degree": 7,
+          "charged": {
+            "n_51": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_50": 1,
+            "n_51": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 11,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_88",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_1",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_51": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_18",
+          "degree": 12,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_86": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_2",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_32",
+          "degree": 12,
+          "charged": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_86": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_84",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1,
+            "n_86": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_65",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_51": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_86",
+        "n_90"
+      ],
+      "n_parity_even_outside_singlets_tested": 24,
+      "n_F_tadpole_necessary_candidates": 19,
+      "min_total_exponent_degree": 2,
+      "previously_known_n81_n17_n82_candidate_status": "n81 outsider, F81 dangerous IF coefficient nonzero",
+      "candidate_mononomials": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 0,
+          "y": 0
+        },
+        {
+          "outside": "n_83",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_89",
+          "degree": 4,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 1,
+          "y": 0
+        },
+        {
+          "outside": "n_91",
+          "degree": 6,
+          "charged": {
+            "n_17": 1,
+            "n_90": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_16",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_20",
+          "degree": 7,
+          "charged": {
+            "n_47": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_31",
+          "degree": 7,
+          "charged": {
+            "n_50": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_52",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_64",
+          "degree": 7,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_79",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_87",
+          "degree": 7,
+          "charged": {
+            "n_47": 1,
+            "n_65": 1,
+            "n_86": 1
+          },
+          "x": 2,
+          "y": 0
+        },
+        {
+          "outside": "n_53",
+          "degree": 11,
+          "charged": {
+            "n_17": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_88",
+          "degree": 11,
+          "charged": {
+            "n_17": 2,
+            "n_82": 2,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_18",
+          "degree": 12,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_86": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_2",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_50": 1
+          },
+          "x": 2,
+          "y": 3
+        },
+        {
+          "outside": "n_32",
+          "degree": 12,
+          "charged": {
+            "n_47": 1,
+            "n_80": 1,
+            "n_82": 1,
+            "n_65": 1,
+            "n_86": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_84",
+          "degree": 12,
+          "charged": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_86": 1,
+            "n_90": 1
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_51",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 2,
+            "n_65": 1,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        },
+        {
+          "outside": "n_63",
+          "degree": 13,
+          "charged": {
+            "n_47": 1,
+            "n_80": 2,
+            "n_65": 2,
+            "n_86": 2
+          },
+          "x": 0,
+          "y": 3
+        }
+      ]
+    }
+  ],
+  "conditional_F_n81": "For all supports n17,n82 are nonzero; the earlier recognized necessary monomial lambda*n81*n17*n82 implies a nonzero contribution lambda*n17*n82 to F81. When n81 condenses, F17/F82 also receive lambda terms. This is a conditional obstruction only if the CFT coefficient lambda is generated and higher-degree contributions fail to cancel.",
+  "true_proof_boundary": "No F-flatness theorem, no nonzero lambda amplitude, no complete worldsheet/Rule4/5/6 test. The candidate counts are U1 and corrected discrete R/nonR holomorphic integer necessary masks, with charged powers bounded72. Nonsinglet outsider F terms not enumerated."
+}

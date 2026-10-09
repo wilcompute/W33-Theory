@@ -1,0 +1,581 @@
+{
+  "status": "PASS",
+  "source": "Pass11797 complete 176-sector model, prior 13 VEV support, integer corrected-R three-singlet solver",
+  "selected_supports": [
+    {
+      "triple": [
+        "n_51",
+        "n_79",
+        "n_83"
+      ],
+      "even_outside_singlets_checked": 24,
+      "F_tadpole_rule_permitted_outsiders": 15,
+      "shortest_necessary_tadpole_exponents": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_81",
+            "n_17",
+            "n_82"
+          ]
+        },
+        {
+          "outside": "n_15",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_15",
+            "n_17",
+            "n_82",
+            "n_51",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_16",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_16",
+            "n_17",
+            "n_50",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_20",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_20",
+            "n_17",
+            "n_47",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_30",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_82": 1,
+            "n_51": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_30",
+            "n_17",
+            "n_82",
+            "n_51",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_31",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_31",
+            "n_17",
+            "n_50",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_52",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_52",
+            "n_17",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_64",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_64",
+            "n_17",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_53",
+            "n_17",
+            "n_50",
+            "n_80",
+            "n_51",
+            "n_79"
+          ]
+        },
+        {
+          "outside": "n_1",
+          "degree": 6,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_51": 2,
+            "n_79": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_1",
+            "n_17",
+            "n_50",
+            "n_80",
+            "n_51",
+            "n_51",
+            "n_79"
+          ]
+        },
+        {
+          "outside": "n_18",
+          "degree": 6,
+          "charged_exponents": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_18",
+            "n_82",
+            "n_83",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_50": 2,
+            "n_80": 1,
+            "n_51": 1,
+            "n_79": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_2",
+            "n_17",
+            "n_50",
+            "n_50",
+            "n_80",
+            "n_51",
+            "n_79"
+          ]
+        },
+        {
+          "outside": "n_32",
+          "degree": 6,
+          "charged_exponents": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_32",
+            "n_82",
+            "n_83",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        },
+        {
+          "outside": "n_84",
+          "degree": 6,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_84",
+            "n_17",
+            "n_83",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        }
+      ],
+      "full_permitted_outsider_list": [
+        "n_1",
+        "n_15",
+        "n_16",
+        "n_18",
+        "n_2",
+        "n_20",
+        "n_30",
+        "n_31",
+        "n_32",
+        "n_52",
+        "n_53",
+        "n_64",
+        "n_65",
+        "n_81",
+        "n_84"
+      ]
+    },
+    {
+      "triple": [
+        "n_65",
+        "n_79",
+        "n_83"
+      ],
+      "even_outside_singlets_checked": 24,
+      "F_tadpole_rule_permitted_outsiders": 13,
+      "shortest_necessary_tadpole_exponents": [
+        {
+          "outside": "n_81",
+          "degree": 2,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_82": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_81",
+            "n_17",
+            "n_82"
+          ]
+        },
+        {
+          "outside": "n_16",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_16",
+            "n_17",
+            "n_50",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_20",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_20",
+            "n_17",
+            "n_47",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_31",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_50": 1,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_31",
+            "n_17",
+            "n_50",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_52",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_52",
+            "n_17",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_64",
+          "degree": 4,
+          "charged_exponents": {
+            "n_17": 2,
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_64",
+            "n_17",
+            "n_17",
+            "n_82",
+            "n_83"
+          ]
+        },
+        {
+          "outside": "n_53",
+          "degree": 5,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_53",
+            "n_17",
+            "n_47",
+            "n_80",
+            "n_65",
+            "n_79"
+          ]
+        },
+        {
+          "outside": "n_18",
+          "degree": 6,
+          "charged_exponents": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_18",
+            "n_82",
+            "n_83",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        },
+        {
+          "outside": "n_2",
+          "degree": 6,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_47": 1,
+            "n_50": 1,
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "neutral_x_power": 0,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_2",
+            "n_17",
+            "n_47",
+            "n_50",
+            "n_80",
+            "n_65",
+            "n_79"
+          ]
+        },
+        {
+          "outside": "n_32",
+          "degree": 6,
+          "charged_exponents": {
+            "n_82": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_32",
+            "n_82",
+            "n_83",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        },
+        {
+          "outside": "n_84",
+          "degree": 6,
+          "charged_exponents": {
+            "n_17": 1,
+            "n_83": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_84",
+            "n_17",
+            "n_83",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        },
+        {
+          "outside": "n_51",
+          "degree": 7,
+          "charged_exponents": {
+            "n_50": 1,
+            "n_80": 1,
+            "n_79": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_51",
+            "n_50",
+            "n_80",
+            "n_79",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        },
+        {
+          "outside": "n_63",
+          "degree": 7,
+          "charged_exponents": {
+            "n_80": 1,
+            "n_65": 1,
+            "n_79": 1
+          },
+          "neutral_x_power": 2,
+          "neutral_y_power": 0,
+          "full_monomial_fields": [
+            "n_63",
+            "n_80",
+            "n_65",
+            "n_79",
+            "n_9",
+            "n_54",
+            "n_9",
+            "n_54"
+          ]
+        }
+      ],
+      "full_permitted_outsider_list": [
+        "n_16",
+        "n_18",
+        "n_2",
+        "n_20",
+        "n_31",
+        "n_32",
+        "n_51",
+        "n_52",
+        "n_53",
+        "n_63",
+        "n_64",
+        "n_81",
+        "n_84"
+      ]
+    }
+  ],
+  "interpretation": "A positive integer holomorphic U1/R/nonR singlet insertion X*VEVs is a necessary-rule F_X tadpole candidate, not an actual amplitude. Unless physical coefficient is nonzero and not cancelled, cannot conclude failure of F-flatness.",
+  "caveats": "Non-Abelian outsider F terms, fixed-point/space-group, oscillator, Rule4/5/6, actual coefficients and unrestricted degrees all untested. The source finite C catalogs from round12 show zero outsider one-field terms for these VEV supports, which is not exhaustive."
+}

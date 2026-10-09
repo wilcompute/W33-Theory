@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "shots": 240000,
+  "causal_models": {
+    "signal": "true optical gate sends theta*S*G*R*Q into X; detector electronics clean",
+    "sham": "optical gate zero; detector electronics sends theta*S*G*R*Q into X"
+  },
+  "identical_raw_samples": true,
+  "identical_shot_clipped_samples": true,
+  "observed_threeway_lockin_proxy": 0.059686433380398494,
+  "exact_identifiability_theorem": "For any choice of randomized (S,G,R,Q) and any noise distribution, adding the same sign-dependent function to the optical field versus to the downstream electronics yields identical law of all downstream detector observables. Hence total-variation distance zero, no test on these outputs can distinguish null/sham from nonlinear optics; Bayes error 1/2 with equal priors even at infinite N.",
+  "necessary_intervention": "Independent causal control of an upstream optical node plus an independently calibrated sensor/reference chain (not merely software shuffling or shot clipping). Document leakage from the actual intervention into electronics. Proposed blinded matched dummy path and sensor swap make new exclusion restrictions experimentally testable.",
+  "caveat": "Mathematical observational equivalence and synthetic exact coupled array, not evidence which mechanism occurs in real equipment. Q is a toy centered intensity proxy."
+}

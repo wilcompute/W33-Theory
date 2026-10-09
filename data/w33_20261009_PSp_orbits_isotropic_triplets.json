@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "G": "PSp(4,3)",
+  "group_order": 25920,
+  "total_optimal_triples": 86400,
+  "number_of_orbits": 5,
+  "orbits": [
+    {
+      "representative": [
+        0,
+        52,
+        68
+      ],
+      "orbit_size": 4320,
+      "stabilizer_order": 6,
+      "induced_permutation_image_order": 3,
+      "pointwise_triple_stabilizer_order": 2,
+      "induced_permutation_action_sample": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        72
+      ],
+      "orbit_size": 4320,
+      "stabilizer_order": 6,
+      "induced_permutation_image_order": 3,
+      "pointwise_triple_stabilizer_order": 2,
+      "induced_permutation_action_sample": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        70
+      ],
+      "orbit_size": 25920,
+      "stabilizer_order": 1,
+      "induced_permutation_image_order": 1,
+      "pointwise_triple_stabilizer_order": 1,
+      "induced_permutation_action_sample": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        74
+      ],
+      "orbit_size": 25920,
+      "stabilizer_order": 1,
+      "induced_permutation_image_order": 1,
+      "pointwise_triple_stabilizer_order": 1,
+      "induced_permutation_action_sample": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "representative": [
+        0,
+        52,
+        90
+      ],
+      "orbit_size": 25920,
+      "stabilizer_order": 1,
+      "induced_permutation_image_order": 1,
+      "pointwise_triple_stabilizer_order": 1,
+      "induced_permutation_action_sample": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    }
+  ],
+  "orbit_stabilizer_verified": true,
+  "physical_boundary": "Exact discrete PSp orbit decomposition of a graph-theoretic 3-flag isotropy selection space. Does not produce a preferred orbit, an energy potential, emergent 3D spacetime, or Lorentzian dynamics."
+}
