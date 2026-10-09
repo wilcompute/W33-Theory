@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "phase_conventions": {
+    "rational_unimodular": {
+      "0.25": {
+        "max_probability_gap_among_pairwise_histograms": 1.4068094467134529e-09,
+        "minimum_pairwise_histogram_linf_distance": 9.196807759792591e-10,
+        "maximum_unitarity_residual": 5.44558696220914e-15
+      },
+      "0.5": {
+        "max_probability_gap_among_pairwise_histograms": 2.1639739600232133e-07,
+        "minimum_pairwise_histogram_linf_distance": 1.4251368574136336e-07,
+        "maximum_unitarity_residual": 7.485366364516178e-15
+      },
+      "1.0": {
+        "max_probability_gap_among_pairwise_histograms": 7.184625530929495e-06,
+        "minimum_pairwise_histogram_linf_distance": 5.104085834727046e-06,
+        "maximum_unitarity_residual": 2.9175857442203165e-14
+      },
+      "2.0": {
+        "max_probability_gap_among_pairwise_histograms": 0.0026064976911058524,
+        "minimum_pairwise_histogram_linf_distance": 0.0019917746368658673,
+        "maximum_unitarity_residual": 4.13209773840231e-14
+      }
+    },
+    "original_round16_angles": {
+      "0.25": {
+        "max_probability_gap_among_pairwise_histograms": 1.909140179279234e-09,
+        "minimum_pairwise_histogram_linf_distance": 9.214818907921085e-10,
+        "maximum_unitarity_residual": 5.707038574701566e-15
+      },
+      "0.5": {
+        "max_probability_gap_among_pairwise_histograms": 2.9775865523218314e-07,
+        "minimum_pairwise_histogram_linf_distance": 1.4357328792513613e-07,
+        "maximum_unitarity_residual": 7.148065164155779e-15
+      },
+      "1.0": {
+        "max_probability_gap_among_pairwise_histograms": 1.098154198922452e-05,
+        "minimum_pairwise_histogram_linf_distance": 5.270955790262835e-06,
+        "maximum_unitarity_residual": 3.018535795365445e-14
+      },
+      "2.0": {
+        "max_probability_gap_among_pairwise_histograms": 0.004066041848617058,
+        "minimum_pairwise_histogram_linf_distance": 0.0019966438298684164,
+        "maximum_unitarity_residual": 4.3865378942573595e-14
+      }
+    }
+  },
+  "protocol": "Single-photon preparation at each one of 80 physical sites; evolve for t under engineered 80-mode Peierls adjacency; read survival probability and sort across sites, allowing relabeling. Compare the full 80-dimensional histogram.",
+  "caveat": "All differences at finite time are floating-point numerical calculations, not exact certified lower bounds. In particular, minute short-time differences may be experimentally impractical. No gate fidelity, source/detector statistics, or photon-chip implementation has been measured."
+}

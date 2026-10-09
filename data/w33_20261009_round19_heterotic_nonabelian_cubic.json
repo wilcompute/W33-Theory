@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "initial_U1_R_nonR_necessary_candidates": 90,
+  "necessary_nonabelian_irrep_tensor_mask": {
+    "(True, True, True, True)": 90
+  },
+  "failed_group_theory_filters": [],
+  "surviving_full_nonabelian_and_R_count": 90,
+  "irrep_absolute_SU4_dims": [
+    1,
+    4
+  ],
+  "cubic_channel_coverage": "SU3 (1,3,3bar), SU2 doublet parity, SU4 (1,4,4bar,6 self-dual). Not a proof of actual gamma/space group/worldsheet correlator.",
+  "parallel_branch_boundary": "This is the frozen Z6-II 176-field benchmark, not the new parallel 33-model Z6-I Pass11810-11815 up-Yukawa texture. Do not transfer selection numbers between orbifolds.",
+  "scope": "Only necessary gauge-representation existence; nonzero contraction might vanish for repeated identical commuting chiral fields, and all worldsheet amplitude data remain absent."
+}

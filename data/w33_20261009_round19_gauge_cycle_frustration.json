@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "graph_vertices": 80,
+  "graph_edges": 160,
+  "cycle8_count": 1620,
+  "rank_binary": 81,
+  "rank_mod3": 81,
+  "physical_gauge_rank": 79,
+  "gauge_invariant_cycle_dimension": 81,
+  "explicit_theta_plaquette_indices": [
+    0,
+    1,
+    81
+  ],
+  "theta_flux_relation_signs": [
+    -1,
+    1,
+    -1
+  ],
+  "theta_cycle_vertices": [
+    [
+      0,
+      40,
+      1,
+      44,
+      4,
+      53,
+      13,
+      41
+    ],
+    [
+      0,
+      40,
+      1,
+      44,
+      4,
+      54,
+      16,
+      42
+    ],
+    [
+      0,
+      41,
+      13,
+      53,
+      4,
+      54,
+      16,
+      42
+    ]
+  ],
+  "theta_edge_intersections": [
+    [
+      8,
+      4,
+      4
+    ],
+    [
+      4,
+      8,
+      4
+    ],
+    [
+      4,
+      4,
+      8
+    ]
+  ],
+  "global_frustrated_plaquette_nogo": "For S=+g sum over all 1620 plaquettes cos(2F_c), g>0, not all terms can reach -g: the displayed 3-cycle theta has +/-F1 +/-F2 +/-F3=0 (mod 2pi), whereas F_i=pi/2 modulo pi for all three contradicts parity.",
+  "local_triangle_exact_minimum": "For ANY three loops satisfying signed flux sum zero, sum cos(2F_i)>=-3/2; naive -3 is forbidden. Relative to -3g, this triple costs >=3g/2. The rest of the 1620-cycle lattice is not globally minimized here.",
+  "unfrustrated_quadratic": "S=-g sum cos(F_c) has Hessian g C^T C at all-zero link phase with rank81 for g>0, kernel=79 gradient-gauge directions; this is a compact U(1) classical small-fluctuation toy, not quantum rotor spectrum.",
+  "boundary": "No edge-flux physical couplings have been derived from W33 geometry; a classical toy gauge potential was postulated. The 79 gauge modes are graph vertex U(1) redundancy; this is not 3+1-dimensional gauge dynamics."
+}

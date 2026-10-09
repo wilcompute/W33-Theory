@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "synthetic_open_closed_design": {
+    "n": 4096,
+    "estimated_coefficients": [
+      -4.965662490974486e-05,
+      0.08003002440488063,
+      0.04998939935977771,
+      0.030070679915204485,
+      0.010034750779360373
+    ],
+    "true_physical_optical": 0.08,
+    "true_phase_wire_leak": 0.05,
+    "unidentified_block_correlated_leak": 0.0,
+    "regression_matrix_rank": 5,
+    "regressor_condition": 2.5761838815793587,
+    "sample_blocked": 2133,
+    "sample_open": 1963,
+    "residual_norm": 0.18783757886235886
+  },
+  "exact_unidentified_block_correlated_leak_counterexample": true,
+  "design_matrix_columns": [
+    "intercept",
+    "phase_r * optical_unblocked_b",
+    "phase_r * wire_leak",
+    "electronics_sham_e",
+    "detector_swap_d"
+  ],
+  "rank_repair": "Independent random blocked/unblocked optical path promotes columns [r*b,r] to linearly independent in the synthetic intervention design.",
+  "remaining_causal_boundary": "The equivalence optical_signal*r*b and block-correlated electronic leakage*r*b is exact. Blocked-light intervention separates *only* leakage invariant under blocking; it does not certify genuine light propagation. Calibrate any block-correlated electronics separately with dark injections, optical isolation, and cross-route randomized actuation.",
+  "status_of_hardware": "Entirely simulated. No actual photonic hardware measured or sign of dynamical T breaking observed."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "native_theta_loop_relation": "There are three W33 8-cycles with oriented fluxes F1+F2+F3=0; independent coordinates x,y give F3=-x-y.",
+  "full_formal_160_link_hamiltonian": "H = (E/2) sum_e(-i d/dtheta_e)^2 + g sum_(c in 1620 eight_cycles) cos(2*(C theta)_c), with node gauge redundancy (79) and 81 cycle degrees. Its physical spectrum has NOT been computed.",
+  "truncated_theta_rotor": "H_theta=(E/2)(-d_x^2-d_y^2)+g[cos(2x)+cos(2y)+cos(2(x+y))], E=1/2, g=1, 2D Fourier cutoff \u00b14,\u00b16,\u00b18.",
+  "samples": [
+    {
+      "fourier_cut": 4,
+      "hilbert_dim": 81,
+      "lowest_energy": -0.599183428731814,
+      "first_gap": 0.08789881534449773,
+      "parity_mirror_absolute_overlap": 0.9999999999999991
+    },
+    {
+      "fourier_cut": 6,
+      "hilbert_dim": 169,
+      "lowest_energy": -0.5993912682264579,
+      "first_gap": 0.08616834884438918,
+      "parity_mirror_absolute_overlap": 1.000000000000002
+    },
+    {
+      "fourier_cut": 8,
+      "hilbert_dim": 289,
+      "lowest_energy": -0.5993919141365892,
+      "first_gap": 0.08615839433526995,
+      "parity_mirror_absolute_overlap": 0.9999999999999992
+    }
+  ],
+  "limitations": "Fourier cutoffs approximate a 2D toy only; the chosen effective kinetic metric is not derived by projecting the full graph electric operator; the ground parity overlap is numerical and no thermodynamic symmetry breaking or physical chiral vacuum is established."
+}

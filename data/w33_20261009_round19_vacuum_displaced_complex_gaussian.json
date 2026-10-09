@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "samples": [
+    {
+      "star": 0,
+      "centered_energy": 128.88739141552702,
+      "optimized_energy": 128.88739141552693,
+      "centered_displacement_hessian_eigenvalues": [
+        0.4119399058524262,
+        561.582201557303
+      ],
+      "optimized_q_and_p_star_displacements": [
+        -2.233607612547154e-09,
+        0.0
+      ],
+      "params_t_f": [
+        1.0007405068313864,
+        -0.03846285436931851
+      ],
+      "gradient_inf": 1.71661376953125e-05,
+      "optimization_success": false
+    },
+    {
+      "star": 1,
+      "centered_energy": 128.88739141552702,
+      "optimized_energy": 128.88739141552693,
+      "centered_displacement_hessian_eigenvalues": [
+        0.411939905852426,
+        561.5822015573024
+      ],
+      "optimized_q_and_p_star_displacements": [
+        -2.233607612547154e-09,
+        0.0
+      ],
+      "params_t_f": [
+        1.0007405068313864,
+        -0.03846285436931851
+      ],
+      "gradient_inf": 1.71661376953125e-05,
+      "optimization_success": false
+    },
+    {
+      "star": 40,
+      "centered_energy": 128.88739141552702,
+      "optimized_energy": 128.88739141552693,
+      "centered_displacement_hessian_eigenvalues": [
+        0.4119399058524263,
+        561.5822015573026
+      ],
+      "optimized_q_and_p_star_displacements": [
+        -2.233607612547154e-09,
+        0.0
+      ],
+      "params_t_f": [
+        1.0007405068313864,
+        -0.03846285436931851
+      ],
+      "gradient_inf": 1.71661376953125e-05,
+      "optimization_success": false
+    },
+    {
+      "star": 41,
+      "centered_energy": 128.88739141552702,
+      "optimized_energy": 128.88739141552693,
+      "centered_displacement_hessian_eigenvalues": [
+        0.41193990585242635,
+        561.5822015573026
+      ],
+      "optimized_q_and_p_star_displacements": [
+        -2.233607612547154e-09,
+        0.0
+      ],
+      "params_t_f": [
+        1.0007405068313864,
+        -0.03846285436931851
+      ],
+      "gradient_inf": 1.71661376953125e-05,
+      "optimization_success": false
+    }
+  ],
+  "ansatz": "Complex centered 11769 invariant covariance t*C0 and phase f*diag(s), with qmean=s*qstar and pmean=r*pstar. Three Wick covariances and nonzero means retained exactly at double precision.",
+  "conclusion": "Numerically optimized coherent displacement along four sampled star directions within this specified 4-parameter family; no global-minimum proof and no rigorous vacuum lower bound.",
+  "scope": "Variational energy is an upper bound to infimum, not a proof of its location, uniqueness, or mass gap."
+}
