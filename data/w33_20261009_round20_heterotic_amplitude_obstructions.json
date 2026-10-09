@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "frozen_model": "Z6-II 176-field benchmark (distinct from parallel Z6-I Pass11818-11825)",
+  "field_count": 176,
+  "exact_nine_U1_charge_neutral_cubics": 424,
+  "R_nonR_necessary": 90,
+  "pointgroup_twist_sum0_mod6": 90,
+  "pointgroup_rejected": [],
+  "forced_commuting_identical_field_antisymmetric_zeros": {
+    "d_1,q_2,q_2": [
+      "visible_SU2_antisymmetric_doublet",
+      "SU3_triple_epsilon_identical_fields"
+    ],
+    "d_3,q_2,q_2": [
+      "visible_SU2_antisymmetric_doublet",
+      "SU3_triple_epsilon_identical_fields"
+    ],
+    "d_1,q_3,q_3": [
+      "visible_SU2_antisymmetric_doublet",
+      "SU3_triple_epsilon_identical_fields"
+    ],
+    "d_3,q_3,q_3": [
+      "visible_SU2_antisymmetric_doublet",
+      "SU3_triple_epsilon_identical_fields"
+    ],
+    "n_15,w_5,w_5": [
+      "visible_SU2_antisymmetric_doublet",
+      "hidden_SU2_antisymmetric_doublet"
+    ],
+    "n_30,w_5,w_5": [
+      "visible_SU2_antisymmetric_doublet",
+      "hidden_SU2_antisymmetric_doublet"
+    ],
+    "n_15,w_8,w_8": [
+      "visible_SU2_antisymmetric_doublet",
+      "hidden_SU2_antisymmetric_doublet"
+    ],
+    "n_30,w_8,w_8": [
+      "visible_SU2_antisymmetric_doublet",
+      "hidden_SU2_antisymmetric_doublet"
+    ]
+  },
+  "additional_antisymmetry_vanishing_count": 8,
+  "remaining_necessary_not_sufficient_cubic_candidates": 82,
+  "examples_remaining": [
+    [
+      "bd_2",
+      "bd_9",
+      "bu_2"
+    ],
+    [
+      "bd_4",
+      "bd_9",
+      "bu_2"
+    ],
+    [
+      "bd_10",
+      "bd_2",
+      "bu_3"
+    ],
+    [
+      "bd_10",
+      "bd_4",
+      "bu_3"
+    ],
+    [
+      "be_2",
+      "bu_2",
+      "d_1"
+    ],
+    [
+      "be_3",
+      "bu_3",
+      "d_1"
+    ],
+    [
+      "be_2",
+      "bu_2",
+      "d_3"
+    ],
+    [
+      "be_3",
+      "bu_3",
+      "d_3"
+    ],
+    [
+      "bl_1",
+      "l_2",
+      "n_24"
+    ],
+    [
+      "bl_1",
+      "l_3",
+      "n_24"
+    ],
+    [
+      "bl_2",
+      "l_1",
+      "n_57"
+    ],
+    [
+      "bl_1",
+      "l_2",
+      "n_6"
+    ],
+    [
+      "bl_1",
+      "l_3",
+      "n_6"
+    ],
+    [
+      "bd_9",
+      "d_1",
+      "n_78"
+    ],
+    [
+      "bd_9",
+      "d_3",
+      "n_78"
+    ],
+    [
+      "n_17",
+      "n_81",
+      "n_82"
+    ],
+    [
+      "n_19",
+      "n_72",
+      "n_82"
+    ],
+    [
+      "n_18",
+      "n_83",
+      "n_84"
+    ],
+    [
+      "n_32",
+      "n_83",
+      "n_84"
+    ],
+    [
+      "bd_10",
+      "d_1",
+      "n_85"
+    ]
+  ],
+  "missing_full_amplitude_metadata": [
+    "full_constructing_element_group_word",
+    "vertex_operator_pictures",
+    "worldsheet_instanton_actions",
+    "oscillator_polarization_vectors",
+    "gamma_eigenphase_full_sector"
+  ],
+  "present_merged_field_metadata": [
+    "G",
+    "RQ",
+    "dim",
+    "fixed_point_translation",
+    "k",
+    "name",
+    "nonR",
+    "oscillator_count",
+    "q",
+    "q_shift",
+    "weights"
+  ],
+  "rule": "Only gauge-neutral+corrected R/nonR+sum of twist k=0 mod6+necessary invariant tensor symmetry, not space-group product, full oscillator/gamma/instanton correlator. Identical chiral superfields commute; epsilon Phi Phi=0. No surviving amplitude is claimed nonzero.",
+  "synthesis": "A failed necessary rule proves zero. Passing the finite rules never proves nonzero coupling; the frozen metadata cannot determine the complete complex CFT amplitude."
+}

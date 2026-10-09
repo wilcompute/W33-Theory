@@ -1,0 +1,2093 @@
+{
+  "status": "PASS",
+  "n_stars": 80,
+  "centered_complex_Gaussian_energy": 128.88739141552702,
+  "minimum_hessian_eigenvalue": 0.41193990585242524,
+  "maximum_hessian_eigenvalue": 0.41193990585242635,
+  "all_hessian_positive": true,
+  "all_global_restricted_displacement_minima_centered": true,
+  "star_samples": [
+    {
+      "star": 0,
+      "eigenvalues": [
+        0.4119399058524262,
+        561.582201557303
+      ],
+      "energy_coefficients": {
+        "linear_q": 2.220446049250313e-14,
+        "linear_p": -3.885780586188048e-16,
+        "qq": 280.79082746888025,
+        "pp": 0.2062432626974944,
+        "qp": -0.5538468497073472,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791365,
+      "alpha_discriminant": -11.945184681270163,
+      "completed_square_discriminant": -14250310.45757901,
+      "completed_square_quadratic": [
+        231.33811923791365,
+        839.1176002535614,
+        16160.791889700215
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 1,
+      "eigenvalues": [
+        0.411939905852426,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.2434497875801753e-14,
+        "linear_p": -1.1102230246251565e-16,
+        "qq": 280.7908274688799,
+        "pp": 0.20624326269749432,
+        "qp": -0.5538468497073477,
+        "qqp": -30.399999999999974,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.211458333333299
+      },
+      "hessian_determinant": 231.33811923791328,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.457578959,
+      "completed_square_quadratic": [
+        231.33811923791328,
+        839.1176002535599,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 2,
+      "eigenvalues": [
+        0.411939905852426,
+        561.5822015573026
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.3322676295501878e-14,
+        "linear_p": -3.3306690738754696e-16,
+        "qq": 280.79082746887997,
+        "pp": 0.20624326269749438,
+        "qp": -0.5538468497073474,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333317,
+        "qqpp": 15.211458333333299
+      },
+      "hessian_determinant": 231.3381192379134,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.45757897,
+      "completed_square_quadratic": [
+        231.3381192379134,
+        839.11760025356,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 3,
+      "eigenvalues": [
+        0.41193990585242596,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.0658141036401503e-14,
+        "linear_p": -1.1102230246251565e-16,
+        "qq": 280.7908274688799,
+        "pp": 0.2062432626974943,
+        "qp": -0.5538468497073475,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333317,
+        "qqpp": 15.2114583333333
+      },
+      "hessian_determinant": 231.33811923791325,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.45757896,
+      "completed_square_quadratic": [
+        231.33811923791325,
+        839.1176002535598,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 4,
+      "eigenvalues": [
+        0.41193990585242585,
+        561.5822015573021
+      ],
+      "energy_coefficients": {
+        "linear_q": 4.440892098500626e-15,
+        "linear_p": 0.0,
+        "qq": 280.7908274688798,
+        "pp": 0.20624326269749424,
+        "qp": -0.5538468497073479,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.211458333333303
+      },
+      "hessian_determinant": 231.33811923791308,
+      "alpha_discriminant": -11.94518468127015,
+      "completed_square_discriminant": -14250310.457578946,
+      "completed_square_quadratic": [
+        231.33811923791308,
+        839.1176002535595,
+        16160.791889700182
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 5,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.7763568394002505e-15,
+        "linear_p": 1.1102230246251565e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.2062432626974942,
+        "qp": -0.553846849707348,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.211458333333303
+      },
+      "hessian_determinant": 231.33811923791296,
+      "alpha_discriminant": -11.945184681270149,
+      "completed_square_discriminant": -14250310.457578931,
+      "completed_square_quadratic": [
+        231.33811923791296,
+        839.1176002535592,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 6,
+      "eigenvalues": [
+        0.41193990585242574,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.220446049250313e-15,
+        "linear_p": 3.2612801348363973e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.20624326269749418,
+        "qp": -0.5538468497073488,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333316,
+        "qqpp": 15.2114583333333
+      },
+      "hessian_determinant": 231.33811923791285,
+      "alpha_discriminant": -11.945184681270147,
+      "completed_square_discriminant": -14250310.457578918,
+      "completed_square_quadratic": [
+        231.33811923791285,
+        839.1176002535586,
+        16160.791889700167
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 7,
+      "eigenvalues": [
+        0.4119399058524257,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.9968028886505635e-15,
+        "linear_p": 3.3306690738754696e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.20624326269749416,
+        "qp": -0.553846849707349,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.2114583333333
+      },
+      "hessian_determinant": 231.3381192379129,
+      "alpha_discriminant": -11.945184681270144,
+      "completed_square_discriminant": -14250310.457578927,
+      "completed_square_quadratic": [
+        231.3381192379129,
+        839.1176002535592,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 8,
+      "eigenvalues": [
+        0.4119399058524255,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.440892098500626e-15,
+        "linear_p": 3.608224830031759e-16,
+        "qq": 280.7908274688796,
+        "pp": 0.20624326269749413,
+        "qp": -0.5538468497073491,
+        "qqp": -30.399999999999967,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.2114583333333
+      },
+      "hessian_determinant": 231.33811923791282,
+      "alpha_discriminant": -11.945184681270142,
+      "completed_square_discriminant": -14250310.457578918,
+      "completed_square_quadratic": [
+        231.33811923791282,
+        839.117600253559,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 9,
+      "eigenvalues": [
+        0.41193990585242524,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.3322676295501878e-14,
+        "linear_p": 6.38378239159465e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.206243262697494,
+        "qp": -0.5538468497073498,
+        "qqp": -30.399999999999967,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.211458333333303
+      },
+      "hessian_determinant": 231.33811923791248,
+      "alpha_discriminant": -11.945184681270135,
+      "completed_square_discriminant": -14250310.457578888,
+      "completed_square_quadratic": [
+        231.33811923791248,
+        839.1176002535583,
+        16160.79188970016
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 10,
+      "eigenvalues": [
+        0.41193990585242557,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -7.105427357601002e-15,
+        "linear_p": 5.273559366969494e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974941,
+        "qp": -0.5538468497073492,
+        "qqp": -30.399999999999967,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.211458333333303
+      },
+      "hessian_determinant": 231.33811923791274,
+      "alpha_discriminant": -11.945184681270142,
+      "completed_square_discriminant": -14250310.45757891,
+      "completed_square_quadratic": [
+        231.33811923791274,
+        839.1176002535587,
+        16160.791889700167
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 11,
+      "eigenvalues": [
+        0.41193990585242535,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.1102230246251565e-14,
+        "linear_p": 6.938893903907228e-16,
+        "qq": 280.7908274688795,
+        "pp": 0.20624326269749405,
+        "qp": -0.5538468497073493,
+        "qqp": -30.399999999999967,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.2114583333333
+      },
+      "hessian_determinant": 231.33811923791262,
+      "alpha_discriminant": -11.945184681270137,
+      "completed_square_discriminant": -14250310.4575789,
+      "completed_square_quadratic": [
+        231.33811923791262,
+        839.1176002535586,
+        16160.791889700164
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 12,
+      "eigenvalues": [
+        0.41193990585242524,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.3766765505351941e-14,
+        "linear_p": 7.771561172376096e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.206243262697494,
+        "qp": -0.5538468497073497,
+        "qqp": -30.399999999999967,
+        "qpp": 0.7770833333333317,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791248,
+      "alpha_discriminant": -11.945184681270137,
+      "completed_square_discriminant": -14250310.457578888,
+      "completed_square_quadratic": [
+        231.33811923791248,
+        839.1176002535581,
+        16160.79188970016
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 13,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 6.217248937900877e-15,
+        "linear_p": 0.0,
+        "qq": 280.79082746887985,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073478,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791316,
+      "alpha_discriminant": -11.945184681270154,
+      "completed_square_discriminant": -14250310.457578955,
+      "completed_square_quadratic": [
+        231.33811923791316,
+        839.1176002535599,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 14,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.1086244689504383e-15,
+        "linear_p": 2.498001805406602e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073489,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791296,
+      "alpha_discriminant": -11.94518468127015,
+      "completed_square_discriminant": -14250310.457578935,
+      "completed_square_quadratic": [
+        231.33811923791296,
+        839.1176002535592,
+        16160.791889700178
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 15,
+      "eigenvalues": [
+        0.4119399058524256,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -6.217248937900877e-15,
+        "linear_p": 4.718447854656915e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.20624326269749413,
+        "qp": -0.5538468497073493,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791276,
+      "alpha_discriminant": -11.945184681270145,
+      "completed_square_discriminant": -14250310.457578914,
+      "completed_square_quadratic": [
+        231.33811923791276,
+        839.1176002535589,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 16,
+      "eigenvalues": [
+        0.411939905852426,
+        561.5822015573021
+      ],
+      "energy_coefficients": {
+        "linear_q": 6.217248937900877e-15,
+        "linear_p": 0.0,
+        "qq": 280.7908274688798,
+        "pp": 0.20624326269749432,
+        "qp": -0.553846849707348,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.3381192379132,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.457578953,
+      "completed_square_quadratic": [
+        231.3381192379132,
+        839.1176002535597,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 17,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.3322676295501878e-15,
+        "linear_p": 1.942890293094024e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073488,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791296,
+      "alpha_discriminant": -11.94518468127015,
+      "completed_square_discriminant": -14250310.457578935,
+      "completed_square_quadratic": [
+        231.33811923791296,
+        839.1176002535593,
+        16160.791889700178
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 18,
+      "eigenvalues": [
+        0.41193990585242557,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -6.217248937900877e-15,
+        "linear_p": 4.163336342344337e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974941,
+        "qp": -0.5538468497073494,
+        "qqp": -30.399999999999974,
+        "qpp": 0.777083333333332,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791274,
+      "alpha_discriminant": -11.945184681270144,
+      "completed_square_discriminant": -14250310.457578912,
+      "completed_square_quadratic": [
+        231.33811923791274,
+        839.117600253559,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 19,
+      "eigenvalues": [
+        0.411939905852426,
+        561.5822015573021
+      ],
+      "energy_coefficients": {
+        "linear_q": 5.329070518200751e-15,
+        "linear_p": -5.551115123125783e-17,
+        "qq": 280.7908274688798,
+        "pp": 0.20624326269749432,
+        "qp": -0.5538468497073482,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.3381192379132,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.457578953,
+      "completed_square_quadratic": [
+        231.3381192379132,
+        839.1176002535597,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 20,
+      "eigenvalues": [
+        0.41193990585242557,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -5.773159728050814e-15,
+        "linear_p": 3.885780586188048e-16,
+        "qq": 280.7908274688796,
+        "pp": 0.20624326269749416,
+        "qp": -0.5538468497073493,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791285,
+      "alpha_discriminant": -11.945184681270147,
+      "completed_square_discriminant": -14250310.457578924,
+      "completed_square_quadratic": [
+        231.33811923791285,
+        839.1176002535591,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 21,
+      "eigenvalues": [
+        0.4119399058524256,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.440892098500626e-15,
+        "linear_p": 4.440892098500626e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.20624326269749413,
+        "qp": -0.5538468497073494,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333319,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791276,
+      "alpha_discriminant": -11.945184681270145,
+      "completed_square_discriminant": -14250310.457578914,
+      "completed_square_quadratic": [
+        231.33811923791276,
+        839.1176002535589,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 22,
+      "eigenvalues": [
+        0.4119399058524257,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.440892098500626e-15,
+        "linear_p": 3.95516952522712e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.20624326269749416,
+        "qp": -0.553846849707349,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.3381192379128,
+      "alpha_discriminant": -11.945184681270147,
+      "completed_square_discriminant": -14250310.457578916,
+      "completed_square_quadratic": [
+        231.3381192379128,
+        839.1176002535587,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 23,
+      "eigenvalues": [
+        0.41193990585242557,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -7.993605777301127e-15,
+        "linear_p": 4.371503159461554e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974941,
+        "qp": -0.553846849707349,
+        "qqp": -30.39999999999997,
+        "qpp": 0.7770833333333318,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791274,
+      "alpha_discriminant": -11.945184681270144,
+      "completed_square_discriminant": -14250310.457578912,
+      "completed_square_quadratic": [
+        231.33811923791274,
+        839.1176002535587,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 24,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.1086244689504383e-15,
+        "linear_p": 2.983724378680108e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073492,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.33811923791288,
+      "alpha_discriminant": -11.945184681270154,
+      "completed_square_discriminant": -14250310.45757893,
+      "completed_square_quadratic": [
+        231.33811923791288,
+        839.1176002535591,
+        16160.791889700178
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 25,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.884981308350689e-15,
+        "linear_p": 3.191891195797325e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073488,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791288,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.457578925,
+      "completed_square_quadratic": [
+        231.33811923791288,
+        839.1176002535591,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 26,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -5.995204332975845e-15,
+        "linear_p": 3.677613769070831e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974942,
+        "qp": -0.553846849707349,
+        "qqp": -30.399999999999977,
+        "qpp": 0.777083333333332,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791288,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.457578925,
+      "completed_square_quadratic": [
+        231.33811923791288,
+        839.117600253559,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 27,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -5.329070518200751e-15,
+        "linear_p": 2.7755575615628914e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073494,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.33811923791288,
+      "alpha_discriminant": -11.945184681270154,
+      "completed_square_discriminant": -14250310.45757893,
+      "completed_square_quadratic": [
+        231.33811923791288,
+        839.1176002535593,
+        16160.791889700178
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 28,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.218847493575595e-15,
+        "linear_p": 2.7755575615628914e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073491,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791288,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.457578925,
+      "completed_square_quadratic": [
+        231.33811923791288,
+        839.1176002535591,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 29,
+      "eigenvalues": [
+        0.41193990585242574,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -6.661338147750939e-15,
+        "linear_p": 3.3306690738754696e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.20624326269749418,
+        "qp": -0.553846849707349,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791285,
+      "alpha_discriminant": -11.94518468127015,
+      "completed_square_discriminant": -14250310.457578924,
+      "completed_square_quadratic": [
+        231.33811923791285,
+        839.1176002535593,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 30,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -6.661338147750939e-15,
+        "linear_p": 3.608224830031759e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073492,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.33811923791288,
+      "alpha_discriminant": -11.945184681270154,
+      "completed_square_discriminant": -14250310.45757893,
+      "completed_square_quadratic": [
+        231.33811923791288,
+        839.1176002535593,
+        16160.791889700178
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 31,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.6645352591003757e-15,
+        "linear_p": 2.42861286636753e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073488,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791288,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.457578925,
+      "completed_square_quadratic": [
+        231.33811923791288,
+        839.1176002535591,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 32,
+      "eigenvalues": [
+        0.4119399058524259,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.9968028886505635e-15,
+        "linear_p": 1.942890293094024e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073491,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791293,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.45757893,
+      "completed_square_quadratic": [
+        231.33811923791293,
+        839.1176002535591,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 33,
+      "eigenvalues": [
+        0.4119399058524259,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.9984014443252818e-15,
+        "linear_p": 1.249000902703301e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073491,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.33811923791302,
+      "alpha_discriminant": -11.94518468127016,
+      "completed_square_discriminant": -14250310.457578946,
+      "completed_square_quadratic": [
+        231.33811923791302,
+        839.1176002535597,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 34,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -5.551115123125783e-15,
+        "linear_p": 2.1510571102112408e-16,
+        "qq": 280.7908274688796,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073492,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.338119237913,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.45757894,
+      "completed_square_quadratic": [
+        231.338119237913,
+        839.1176002535594,
+        16160.791889700182
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 35,
+      "eigenvalues": [
+        0.41193990585242585,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.884981308350689e-15,
+        "linear_p": 1.3877787807814457e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.20624326269749424,
+        "qp": -0.5538468497073489,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.338119237913,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.457578944,
+      "completed_square_quadratic": [
+        231.338119237913,
+        839.1176002535595,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 36,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.886579864025407e-15,
+        "linear_p": 1.942890293094024e-16,
+        "qq": 280.7908274688796,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073492,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.338119237913,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.45757894,
+      "completed_square_quadratic": [
+        231.338119237913,
+        839.1176002535593,
+        16160.791889700182
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 37,
+      "eigenvalues": [
+        0.41193990585242585,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.774758283725532e-15,
+        "linear_p": 2.220446049250313e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.20624326269749424,
+        "qp": -0.553846849707349,
+        "qqp": -30.399999999999977,
+        "qpp": 0.777083333333332,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.3381192379129,
+      "alpha_discriminant": -11.945184681270154,
+      "completed_square_discriminant": -14250310.457578927,
+      "completed_square_quadratic": [
+        231.3381192379129,
+        839.117600253559,
+        16160.791889700175
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 38,
+      "eigenvalues": [
+        0.41193990585242574,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -6.217248937900877e-15,
+        "linear_p": 2.498001805406602e-16,
+        "qq": 280.7908274688796,
+        "pp": 0.20624326269749424,
+        "qp": -0.5538468497073492,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.33811923791293,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.457578937,
+      "completed_square_quadratic": [
+        231.33811923791293,
+        839.1176002535594,
+        16160.791889700182
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 39,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.440892098500626e-15,
+        "linear_p": 2.0816681711721685e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073489,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.33811923791296,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.457578942,
+      "completed_square_quadratic": [
+        231.33811923791296,
+        839.1176002535597,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 40,
+      "eigenvalues": [
+        0.4119399058524263,
+        561.5822015573026
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.2434497875801753e-14,
+        "linear_p": -4.996003610813204e-16,
+        "qq": 280.79082746887997,
+        "pp": 0.20624326269749452,
+        "qp": -0.5538468497073473,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791353,
+      "alpha_discriminant": -11.94518468127017,
+      "completed_square_discriminant": -14250310.457578987,
+      "completed_square_quadratic": [
+        231.33811923791353,
+        839.1176002535606,
+        16160.791889700196
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 41,
+      "eigenvalues": [
+        0.41193990585242635,
+        561.5822015573026
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.4210854715202004e-14,
+        "linear_p": -2.7755575615628914e-16,
+        "qq": 280.79082746887997,
+        "pp": 0.20624326269749454,
+        "qp": -0.5538468497073474,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791356,
+      "alpha_discriminant": -11.945184681270172,
+      "completed_square_discriminant": -14250310.457578989,
+      "completed_square_quadratic": [
+        231.33811923791356,
+        839.1176002535606,
+        16160.791889700196
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 42,
+      "eigenvalues": [
+        0.41193990585242635,
+        561.5822015573028
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.509903313490213e-14,
+        "linear_p": -3.3306690738754696e-16,
+        "qq": 280.7908274688801,
+        "pp": 0.20624326269749454,
+        "qp": -0.5538468497073475,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333304
+      },
+      "hessian_determinant": 231.33811923791367,
+      "alpha_discriminant": -11.94518468127017,
+      "completed_square_discriminant": -14250310.457579,
+      "completed_square_quadratic": [
+        231.33811923791367,
+        839.1176002535608,
+        16160.791889700204
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 43,
+      "eigenvalues": [
+        0.41193990585242635,
+        561.5822015573026
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.2434497875801753e-14,
+        "linear_p": -3.3306690738754696e-16,
+        "qq": 280.79082746887997,
+        "pp": 0.20624326269749454,
+        "qp": -0.5538468497073478,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791356,
+      "alpha_discriminant": -11.945184681270172,
+      "completed_square_discriminant": -14250310.457578989,
+      "completed_square_quadratic": [
+        231.33811923791356,
+        839.1176002535606,
+        16160.791889700196
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 44,
+      "eigenvalues": [
+        0.41193990585242607,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 8.881784197001252e-15,
+        "linear_p": 0.0,
+        "qq": 280.79082746887985,
+        "pp": 0.2062432626974944,
+        "qp": -0.5538468497073477,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791333,
+      "alpha_discriminant": -11.945184681270163,
+      "completed_square_discriminant": -14250310.457578966,
+      "completed_square_quadratic": [
+        231.33811923791333,
+        839.1176002535602,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 45,
+      "eigenvalues": [
+        0.4119399058524261,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 8.881784197001252e-15,
+        "linear_p": -8.326672684688674e-17,
+        "qq": 280.79082746887985,
+        "pp": 0.20624326269749443,
+        "qp": -0.5538468497073474,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791336,
+      "alpha_discriminant": -11.945184681270165,
+      "completed_square_discriminant": -14250310.457578968,
+      "completed_square_quadratic": [
+        231.33811923791336,
+        839.1176002535602,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 46,
+      "eigenvalues": [
+        0.4119399058524259,
+        561.5822015573021
+      ],
+      "energy_coefficients": {
+        "linear_q": 8.881784197001252e-16,
+        "linear_p": 1.6653345369377348e-16,
+        "qq": 280.79082746887974,
+        "pp": 0.20624326269749432,
+        "qp": -0.5538468497073483,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333321,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.33811923791313,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.457578948,
+      "completed_square_quadratic": [
+        231.33811923791313,
+        839.1176002535598,
+        16160.791889700182
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 47,
+      "eigenvalues": [
+        0.41193990585242635,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.0658141036401503e-14,
+        "linear_p": -1.942890293094024e-16,
+        "qq": 280.7908274688799,
+        "pp": 0.2062432626974945,
+        "qp": -0.5538468497073471,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791347,
+      "alpha_discriminant": -11.94518468127017,
+      "completed_square_discriminant": -14250310.457578983,
+      "completed_square_quadratic": [
+        231.33811923791347,
+        839.1176002535605,
+        16160.791889700196
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 48,
+      "eigenvalues": [
+        0.41193990585242624,
+        561.5822015573026
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.2434497875801753e-14,
+        "linear_p": -2.220446049250313e-16,
+        "qq": 280.79082746887997,
+        "pp": 0.2062432626974945,
+        "qp": -0.5538468497073477,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333306
+      },
+      "hessian_determinant": 231.3381192379135,
+      "alpha_discriminant": -11.945184681270169,
+      "completed_square_discriminant": -14250310.457578985,
+      "completed_square_quadratic": [
+        231.3381192379135,
+        839.1176002535606,
+        16160.791889700196
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 49,
+      "eigenvalues": [
+        0.41193990585242624,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.0658141036401503e-14,
+        "linear_p": -1.3877787807814457e-16,
+        "qq": 280.79082746887985,
+        "pp": 0.2062432626974945,
+        "qp": -0.5538468497073481,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.33811923791342,
+      "alpha_discriminant": -11.945184681270172,
+      "completed_square_discriminant": -14250310.457578976,
+      "completed_square_quadratic": [
+        231.33811923791342,
+        839.1176002535602,
+        16160.791889700193
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 50,
+      "eigenvalues": [
+        0.41193990585242596,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 4.440892098500626e-15,
+        "linear_p": 0.0,
+        "qq": 280.79082746887985,
+        "pp": 0.20624326269749435,
+        "qp": -0.5538468497073481,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.33811923791325,
+      "alpha_discriminant": -11.945184681270163,
+      "completed_square_discriminant": -14250310.457578965,
+      "completed_square_quadratic": [
+        231.33811923791325,
+        839.1176002535602,
+        16160.791889700193
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 51,
+      "eigenvalues": [
+        0.411939905852426,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 7.105427357601002e-15,
+        "linear_p": 8.326672684688674e-17,
+        "qq": 280.79082746887985,
+        "pp": 0.20624326269749438,
+        "qp": -0.5538468497073477,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.3381192379133,
+      "alpha_discriminant": -11.945184681270165,
+      "completed_square_discriminant": -14250310.457578968,
+      "completed_square_quadratic": [
+        231.3381192379133,
+        839.1176002535602,
+        16160.791889700193
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 52,
+      "eigenvalues": [
+        0.4119399058524261,
+        561.5822015573024
+      ],
+      "energy_coefficients": {
+        "linear_q": 7.105427357601002e-15,
+        "linear_p": -2.7755575615628914e-17,
+        "qq": 280.79082746887985,
+        "pp": 0.20624326269749443,
+        "qp": -0.553846849707348,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.33811923791336,
+      "alpha_discriminant": -11.94518468127017,
+      "completed_square_discriminant": -14250310.457578976,
+      "completed_square_quadratic": [
+        231.33811923791336,
+        839.1176002535603,
+        16160.791889700196
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 53,
+      "eigenvalues": [
+        0.4119399058524259,
+        561.5822015573021
+      ],
+      "energy_coefficients": {
+        "linear_q": 0.0,
+        "linear_p": 1.3877787807814457e-16,
+        "qq": 280.79082746887974,
+        "pp": 0.20624326269749432,
+        "qp": -0.5538468497073482,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.21145833333331
+      },
+      "hessian_determinant": 231.33811923791313,
+      "alpha_discriminant": -11.945184681270161,
+      "completed_square_discriminant": -14250310.457578953,
+      "completed_square_quadratic": [
+        231.33811923791313,
+        839.11760025356,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 54,
+      "eigenvalues": [
+        0.4119399058524262,
+        561.5822015573021
+      ],
+      "energy_coefficients": {
+        "linear_q": 4.440892098500626e-15,
+        "linear_p": 0.0,
+        "qq": 280.7908274688798,
+        "pp": 0.2062432626974944,
+        "qp": -0.553846849707348,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.33811923791328,
+      "alpha_discriminant": -11.945184681270169,
+      "completed_square_discriminant": -14250310.457578966,
+      "completed_square_quadratic": [
+        231.33811923791328,
+        839.1176002535602,
+        16160.791889700193
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 55,
+      "eigenvalues": [
+        0.41193990585242596,
+        561.5822015573021
+      ],
+      "energy_coefficients": {
+        "linear_q": 1.7763568394002505e-15,
+        "linear_p": 5.551115123125783e-17,
+        "qq": 280.79082746887974,
+        "pp": 0.20624326269749435,
+        "qp": -0.5538468497073482,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.33811923791316,
+      "alpha_discriminant": -11.945184681270165,
+      "completed_square_discriminant": -14250310.457578955,
+      "completed_square_quadratic": [
+        231.33811923791316,
+        839.11760025356,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 56,
+      "eigenvalues": [
+        0.4119399058524259,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.552713678800501e-15,
+        "linear_p": 1.1102230246251565e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073484,
+        "qqp": -30.399999999999974,
+        "qpp": 0.7770833333333322,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.33811923791302,
+      "alpha_discriminant": -11.94518468127016,
+      "completed_square_discriminant": -14250310.457578944,
+      "completed_square_quadratic": [
+        231.33811923791302,
+        839.1176002535598,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 57,
+      "eigenvalues": [
+        0.411939905852426,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.7763568394002505e-15,
+        "linear_p": 1.1102230246251565e-16,
+        "qq": 280.7908274688797,
+        "pp": 0.20624326269749432,
+        "qp": -0.5538468497073485,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333313
+      },
+      "hessian_determinant": 231.33811923791308,
+      "alpha_discriminant": -11.945184681270165,
+      "completed_square_discriminant": -14250310.45757895,
+      "completed_square_quadratic": [
+        231.33811923791308,
+        839.1176002535599,
+        16160.79188970019
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 58,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -4.440892098500626e-15,
+        "linear_p": 1.942890293094024e-16,
+        "qq": 280.7908274688796,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073488,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.338119237913,
+      "alpha_discriminant": -11.94518468127016,
+      "completed_square_discriminant": -14250310.45757894,
+      "completed_square_quadratic": [
+        231.338119237913,
+        839.1176002535595,
+        16160.791889700182
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 59,
+      "eigenvalues": [
+        0.41193990585242574,
+        561.5822015573019
+      ],
+      "energy_coefficients": {
+        "linear_q": -5.329070518200751e-15,
+        "linear_p": 2.220446049250313e-16,
+        "qq": 280.7908274688796,
+        "pp": 0.20624326269749424,
+        "qp": -0.5538468497073487,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333313
+      },
+      "hessian_determinant": 231.33811923791293,
+      "alpha_discriminant": -11.94518468127016,
+      "completed_square_discriminant": -14250310.457578938,
+      "completed_square_quadratic": [
+        231.33811923791293,
+        839.1176002535597,
+        16160.791889700185
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 60,
+      "eigenvalues": [
+        0.41193990585242585,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.552713678800501e-15,
+        "linear_p": 2.7755575615628914e-16,
+        "qq": 280.7908274688795,
+        "pp": 0.2062432626974943,
+        "qp": -0.5538468497073493,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.3381192379129,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.457578922,
+      "completed_square_quadratic": [
+        231.3381192379129,
+        839.1176002535592,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 61,
+      "eigenvalues": [
+        0.41193990585242585,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.7763568394002505e-15,
+        "linear_p": 2.498001805406602e-16,
+        "qq": 280.7908274688795,
+        "pp": 0.2062432626974943,
+        "qp": -0.5538468497073494,
+        "qqp": -30.399999999999988,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.3381192379129,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.457578922,
+      "completed_square_quadratic": [
+        231.3381192379129,
+        839.1176002535592,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 62,
+      "eigenvalues": [
+        0.41193990585242596,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.6645352591003757e-15,
+        "linear_p": 3.885780586188048e-16,
+        "qq": 280.79082746887957,
+        "pp": 0.2062432626974943,
+        "qp": -0.5538468497073491,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.33811923791296,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.45757893,
+      "completed_square_quadratic": [
+        231.33811923791296,
+        839.1176002535594,
+        16160.791889700173
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 63,
+      "eigenvalues": [
+        0.41193990585242585,
+        561.5822015573017
+      ],
+      "energy_coefficients": {
+        "linear_q": -3.552713678800501e-15,
+        "linear_p": 3.885780586188048e-16,
+        "qq": 280.7908274688795,
+        "pp": 0.2062432626974943,
+        "qp": -0.5538468497073493,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333323,
+        "qqpp": 15.211458333333308
+      },
+      "hessian_determinant": 231.3381192379129,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.457578922,
+      "completed_square_quadratic": [
+        231.3381192379129,
+        839.1176002535592,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 64,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -7.105427357601002e-15,
+        "linear_p": 4.440892098500626e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073499,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333325,
+        "qqpp": 15.211458333333313
+      },
+      "hessian_determinant": 231.3381192379128,
+      "alpha_discriminant": -11.945184681270161,
+      "completed_square_discriminant": -14250310.457578914,
+      "completed_square_quadratic": [
+        231.3381192379128,
+        839.117600253559,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 65,
+      "eigenvalues": [
+        0.4119399058524258,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -5.329070518200751e-15,
+        "linear_p": 3.608224830031759e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.20624326269749427,
+        "qp": -0.5538468497073498,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333315
+      },
+      "hessian_determinant": 231.3381192379128,
+      "alpha_discriminant": -11.945184681270161,
+      "completed_square_discriminant": -14250310.457578914,
+      "completed_square_quadratic": [
+        231.3381192379128,
+        839.1176002535591,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 66,
+      "eigenvalues": [
+        0.4119399058524257,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.0658141036401503e-14,
+        "linear_p": 4.440892098500626e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073497,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333313
+      },
+      "hessian_determinant": 231.33811923791274,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.457578912,
+      "completed_square_quadratic": [
+        231.33811923791274,
+        839.1176002535591,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 67,
+      "eigenvalues": [
+        0.41193990585242574,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.0658141036401503e-14,
+        "linear_p": 4.440892098500626e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.20624326269749424,
+        "qp": -0.5538468497073501,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333315
+      },
+      "hessian_determinant": 231.33811923791276,
+      "alpha_discriminant": -11.945184681270161,
+      "completed_square_discriminant": -14250310.457578912,
+      "completed_square_quadratic": [
+        231.33811923791276,
+        839.1176002535591,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 68,
+      "eigenvalues": [
+        0.4119399058524257,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.0658141036401503e-14,
+        "linear_p": 5.273559366969494e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.2062432626974942,
+        "qp": -0.55384684970735,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333312
+      },
+      "hessian_determinant": 231.33811923791274,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.45757891,
+      "completed_square_quadratic": [
+        231.33811923791274,
+        839.1176002535591,
+        16160.791889700167
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 69,
+      "eigenvalues": [
+        0.4119399058524256,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.0658141036401503e-14,
+        "linear_p": 4.996003610813204e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.20624326269749418,
+        "qp": -0.5538468497073498,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333325,
+        "qqpp": 15.211458333333313
+      },
+      "hessian_determinant": 231.3381192379127,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.45757891,
+      "completed_square_quadratic": [
+        231.3381192379127,
+        839.117600253559,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 70,
+      "eigenvalues": [
+        0.4119399058524256,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.0658141036401503e-14,
+        "linear_p": 5.273559366969494e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.20624326269749418,
+        "qp": -0.55384684970735,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333317
+      },
+      "hessian_determinant": 231.3381192379127,
+      "alpha_discriminant": -11.945184681270158,
+      "completed_square_discriminant": -14250310.457578912,
+      "completed_square_quadratic": [
+        231.3381192379127,
+        839.1176002535591,
+        16160.791889700173
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 71,
+      "eigenvalues": [
+        0.41193990585242557,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.4210854715202004e-14,
+        "linear_p": 5.273559366969494e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.20624326269749416,
+        "qp": -0.5538468497073503,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333325,
+        "qqpp": 15.211458333333315
+      },
+      "hessian_determinant": 231.33811923791268,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.457578909,
+      "completed_square_quadratic": [
+        231.33811923791268,
+        839.117600253559,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 72,
+      "eigenvalues": [
+        0.4119399058524255,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.509903313490213e-14,
+        "linear_p": 5.551115123125783e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.20624326269749413,
+        "qp": -0.5538468497073504,
+        "qqp": -30.39999999999998,
+        "qpp": 0.7770833333333325,
+        "qqpp": 15.211458333333315
+      },
+      "hessian_determinant": 231.33811923791262,
+      "alpha_discriminant": -11.945184681270154,
+      "completed_square_discriminant": -14250310.457578905,
+      "completed_square_quadratic": [
+        231.33811923791262,
+        839.117600253559,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 73,
+      "eigenvalues": [
+        0.4119399058524257,
+        561.5822015573015
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.1546319456101628e-14,
+        "linear_p": 4.440892098500626e-16,
+        "qq": 280.7908274688794,
+        "pp": 0.2062432626974942,
+        "qp": -0.5538468497073502,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333317
+      },
+      "hessian_determinant": 231.33811923791274,
+      "alpha_discriminant": -11.94518468127016,
+      "completed_square_discriminant": -14250310.457578914,
+      "completed_square_quadratic": [
+        231.33811923791274,
+        839.1176002535591,
+        16160.791889700173
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 74,
+      "eigenvalues": [
+        0.4119399058524255,
+        561.5822015573012
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.865174681370263e-14,
+        "linear_p": 5.828670879282072e-16,
+        "qq": 280.7908274688793,
+        "pp": 0.20624326269749413,
+        "qp": -0.5538468497073503,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333319
+      },
+      "hessian_determinant": 231.33811923791254,
+      "alpha_discriminant": -11.945184681270156,
+      "completed_square_discriminant": -14250310.4575789,
+      "completed_square_quadratic": [
+        231.33811923791254,
+        839.1176002535587,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 75,
+      "eigenvalues": [
+        0.41193990585242546,
+        561.5822015573012
+      ],
+      "energy_coefficients": {
+        "linear_q": -1.865174681370263e-14,
+        "linear_p": 6.106226635438361e-16,
+        "qq": 280.7908274688793,
+        "pp": 0.2062432626974941,
+        "qp": -0.5538468497073503,
+        "qqp": -30.399999999999984,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333319
+      },
+      "hessian_determinant": 231.3381192379125,
+      "alpha_discriminant": -11.945184681270154,
+      "completed_square_discriminant": -14250310.457578897,
+      "completed_square_quadratic": [
+        231.3381192379125,
+        839.1176002535587,
+        16160.79188970017
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 76,
+      "eigenvalues": [
+        0.4119399058524254,
+        561.5822015573012
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.220446049250313e-14,
+        "linear_p": 6.106226635438361e-16,
+        "qq": 280.7908274688793,
+        "pp": 0.20624326269749407,
+        "qp": -0.5538468497073504,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333319
+      },
+      "hessian_determinant": 231.33811923791248,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.457578897,
+      "completed_square_quadratic": [
+        231.33811923791248,
+        839.1176002535587,
+        16160.791889700171
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 77,
+      "eigenvalues": [
+        0.41193990585242535,
+        561.5822015573012
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.220446049250313e-14,
+        "linear_p": 6.938893903907228e-16,
+        "qq": 280.7908274688793,
+        "pp": 0.20624326269749407,
+        "qp": -0.5538468497073507,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333317
+      },
+      "hessian_determinant": 231.33811923791248,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.457578894,
+      "completed_square_quadratic": [
+        231.33811923791248,
+        839.1176002535586,
+        16160.791889700167
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 78,
+      "eigenvalues": [
+        0.4119399058524254,
+        561.582201557301
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.220446049250313e-14,
+        "linear_p": 6.661338147750939e-16,
+        "qq": 280.79082746887923,
+        "pp": 0.20624326269749405,
+        "qp": -0.5538468497073507,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333319
+      },
+      "hessian_determinant": 231.3381192379124,
+      "alpha_discriminant": -11.945184681270153,
+      "completed_square_discriminant": -14250310.45757889,
+      "completed_square_quadratic": [
+        231.3381192379124,
+        839.1176002535585,
+        16160.791889700167
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    },
+    {
+      "star": 79,
+      "eigenvalues": [
+        0.41193990585242524,
+        561.582201557301
+      ],
+      "energy_coefficients": {
+        "linear_q": -2.398081733190338e-14,
+        "linear_p": 6.661338147750939e-16,
+        "qq": 280.7908274688792,
+        "pp": 0.20624326269749402,
+        "qp": -0.5538468497073509,
+        "qqp": -30.399999999999977,
+        "qpp": 0.7770833333333326,
+        "qqpp": 15.211458333333319
+      },
+      "hessian_determinant": 231.3381192379123,
+      "alpha_discriminant": -11.94518468127015,
+      "completed_square_discriminant": -14250310.45757888,
+      "completed_square_quadratic": [
+        231.3381192379123,
+        839.1176002535583,
+        16160.791889700164
+      ],
+      "displacement_global_polynomial_minimum": 128.88739141552702
+    }
+  ],
+  "exact_nonnegative_polynomial_argument": "For every star E(s,r)=E0+A*s\u00b2+B*r\u00b2+T*s*r+W*s\u00b2*r+Z*s*r\u00b2+R*s\u00b2*r\u00b2. Linear coefficients vanish, but cubic terms do NOT. Set alpha(s)=B+Z*s+R*s\u00b2 and D(s)=4A*alpha(s)-(T+W*s)\u00b2. If both alpha(s)>0,D(s)>0 for all real s (positive leading terms, negative discriminants), completing the r-square proves E(s,r)>=E0 for all real s,r, at fixed covariance/phase. The displayed coefficient signs are numerical unless interval-certified.",
+  "scope": "Finite native W33 graph exhaustive numerical inequalities, with generous positive margins but not exact interval-certified signs. It is a *global* two-parameter coherent-displacement result for each of 80 stars at FIXED covariance, not lower spectral bound or vacuum uniqueness."
+}

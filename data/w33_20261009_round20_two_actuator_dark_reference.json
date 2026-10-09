@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "signal_run": {
+    "n": 16000,
+    "design_rank": 9,
+    "measured_optical_plus_leak": 0.1499658264540215,
+    "measured_reference_leak": 0.06988297564751807,
+    "calibrated_optical_estimate": 0.08008285080650344,
+    "conditional_gaussian_standard_error": 8.946194205092252e-05,
+    "true_optical": 0.08,
+    "true_leak": 0.07
+  },
+  "dark_null": {
+    "n": 16000,
+    "design_rank": 9,
+    "measured_optical_plus_leak": 0.06996582645402333,
+    "measured_reference_leak": 0.06988297564751807,
+    "calibrated_optical_estimate": 8.285080650526078e-05,
+    "conditional_gaussian_standard_error": 8.946194205092252e-05,
+    "true_optical": 0.0,
+    "true_leak": 0.07
+  },
+  "ten_percent_reference_gain_error_bias": -0.006917149193496383,
+  "one_percent_calibration_gain_uncertainty_floor": 0.0007058886429042229,
+  "linear_design": "Sensor Y has coefficient (optical+leak) on r1*r2*light; dark electronic reference Z has coefficient gain*leak on exactly same regressor. All nuisance regressors [1,r1,r2,light,r1light,r2light,r1r2,detector_swap] are included and orthogonalized by OLS.",
+  "identifiability": "With independently CALIBRATED reference gain, beta_opt=beta_Y-beta_Z/gain. With uncalibrated gain it is not identifiable even if X has full rank. Reference must couple to all relevant electronic leakage, exclude optical signal, and respond linearly under actual dark runs.",
+  "hardware_boundary": "Synthetic data only, not a lab demonstration; optical cross-coupling may not physically equal r1*r2. Real detector count statistics, loss, g(2), path dependence, correlated noise and reference drift would require separate modeling."
+}

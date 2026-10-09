@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "phase_angles": [
+    0.49,
+    -0.74,
+    1.22
+  ],
+  "best_grid_search_time": 10.350000000000001,
+  "optimized_grid_ranking": [
+    [
+      10.350000000000001,
+      0.083530550890556,
+      0.13676829057922557,
+      9
+    ],
+    [
+      10.3,
+      0.08339482078537902,
+      0.13848665262766102,
+      9
+    ],
+    [
+      10.25,
+      0.08136841396823102,
+      0.13877128966872126,
+      9
+    ],
+    [
+      7.75,
+      0.07456055610284651,
+      0.10166443726744656,
+      9
+    ],
+    [
+      7.7,
+      0.07407051780903606,
+      0.10243733638095343,
+      9
+    ],
+    [
+      7.800000000000001,
+      0.07399827041722606,
+      0.09846133226905984,
+      9
+    ],
+    [
+      7.65,
+      0.07256533077754657,
+      0.10076892428969964,
+      9
+    ],
+    [
+      7.8500000000000005,
+      0.07238111746726905,
+      0.09296517091958856,
+      9
+    ],
+    [
+      7.6000000000000005,
+      0.07011401592739963,
+      0.09677196483209405,
+      9
+    ],
+    [
+      7.9,
+      0.06974226976354525,
+      0.08741046987553835,
+      9
+    ],
+    [
+      10.4,
+      0.06795367560666532,
+      0.13479392472150264,
+      9
+    ],
+    [
+      7.550000000000001,
+      0.06681317352347094,
+      0.09067351657319156,
+      9
+    ]
+  ],
+  "representative_shot_budgets": [
+    {
+      "t": 2.0,
+      "min_pairwise_histogram_linf_distance": 0.001996643829863892,
+      "closest_pair_index": 3,
+      "Hoeffding_delta": 0.05,
+      "survival_shots_per_site_per_candidate": 19425830,
+      "total_five_candidate_model_site_shots": 7770332000,
+      "phase_radians_max_for_160_edges_pairwise_half_margin": 6.9759864537987306e-06,
+      "note": "This worst-case static per-edge 160-link phase-error bound is sufficient for retaining at least HALF the original histogram separation when errors affect both candidates, not tight. d_new >= d-4t sqrt(320)*epsilon >= d/2."
+    },
+    {
+      "t": 10.350000000000001,
+      "min_pairwise_histogram_linf_distance": 0.083530550890556,
+      "closest_pair_index": 9,
+      "Hoeffding_delta": 0.05,
+      "survival_shots_per_site_per_candidate": 11100,
+      "total_five_candidate_model_site_shots": 4440000,
+      "phase_radians_max_for_160_edges_pairwise_half_margin": 5.639492451367415e-05,
+      "note": "This worst-case static per-edge 160-link phase-error bound is sufficient for retaining at least HALF the original histogram separation when errors affect both candidates, not tight. d_new >= d-4t sqrt(320)*epsilon >= d/2."
+    },
+    {
+      "t": 10.3,
+      "min_pairwise_histogram_linf_distance": 0.08339482078537902,
+      "closest_pair_index": 9,
+      "Hoeffding_delta": 0.05,
+      "survival_shots_per_site_per_candidate": 11136,
+      "total_five_candidate_model_site_shots": 4454400,
+      "phase_radians_max_for_160_edges_pairwise_half_margin": 5.6576604444029085e-05,
+      "note": "This worst-case static per-edge 160-link phase-error bound is sufficient for retaining at least HALF the original histogram separation when errors affect both candidates, not tight. d_new >= d-4t sqrt(320)*epsilon >= d/2."
+    },
+    {
+      "t": 10.25,
+      "min_pairwise_histogram_linf_distance": 0.08136841396823102,
+      "closest_pair_index": 9,
+      "Hoeffding_delta": 0.05,
+      "survival_shots_per_site_per_candidate": 11697,
+      "total_five_candidate_model_site_shots": 4678800,
+      "phase_radians_max_for_160_edges_pairwise_half_margin": 5.5471129528752434e-05,
+      "note": "This worst-case static per-edge 160-link phase-error bound is sufficient for retaining at least HALF the original histogram separation when errors affect both candidates, not tight. d_new >= d-4t sqrt(320)*epsilon >= d/2."
+    }
+  ],
+  "theorem": "For empirical 80-site survival probabilities for five distinct candidates, each with N independent Bernoulli repetitions, simultaneous max error<=eta at confidence >=1-delta if N>=log(2*5*80/delta)/(2eta^2). Sorted order statistics are L-infinity nonexpansive; eta=d/4 preserves half the minimum pairwise histogram separation.",
+  "limitation": "A simulated five-hypothesis reference library, not a proven physical unknown-state assay; free of source-detector bias, cross-talk, non-Markov drift. Scanned finite time grid only; no guarantee of global optimal t, and device fabrication constraints are not specified."
+}
