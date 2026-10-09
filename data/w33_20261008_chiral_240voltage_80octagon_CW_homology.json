@@ -1,0 +1,45 @@
+{
+  "CW_Euler_char": -160,
+  "CW_edges_incidence_number_of_lifted_octagons_hist": {
+    "0": 160,
+    "2": 320
+  },
+  "CW_f_vector": [
+    240,
+    480,
+    80
+  ],
+  "F20_chiral_voltage_two_complex_faces": 80,
+  "GF2_boundary_ranks": [
+    239,
+    78
+  ],
+  "GF2_homology_betti_numbers": [
+    1,
+    163,
+    2
+  ],
+  "W33_base_octagon_check_count": 20,
+  "all_80_lifted_octagons_closed_8_edge_cycles": true,
+  "boundary_square_zero": true,
+  "closed_two_manifold_CW_complex": false,
+  "each_CW_edge_incident_to_exactly_two_octagons": false,
+  "face_lift_example": {
+    "base_octagon": 0,
+    "qubit_address_cycle": [
+      124,
+      214,
+      204,
+      217,
+      223,
+      137,
+      143,
+      130
+    ],
+    "sheet": 0
+  },
+  "four_lifts_per_octagon": 4,
+  "not_equivalent_topologically_to_original_W33_20apartment_torus": true,
+  "not_native_H4_tetrahedral_face_cell_complex": true,
+  "scope": "An explicit 240v 480e 80oct CW 2-complex with cellular homology. Closure of all Z check loops DOES NOT imply 2-manifold or encoded physical code; GF2 homology and edge-face incidence constrain this."
+}

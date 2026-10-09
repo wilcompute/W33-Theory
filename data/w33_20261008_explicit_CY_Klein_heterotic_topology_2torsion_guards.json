@@ -1,0 +1,35 @@
+{
+  "O_1_single_P1_factor_G_linearizable": false,
+  "O_2_single_P1_factor_G_linearizable": true,
+  "all_flat_Abelian_U1_holonomies_have_order_dividing_2": true,
+  "ambient_line_bundle_multidegree_G_linearization_criterion": "sum_i n_i even",
+  "c2TX_pairing_with_each_ambient_Hi": [
+    24,
+    24,
+    24,
+    24
+  ],
+  "cover_X_hodge": [
+    4,
+    68
+  ],
+  "cover_c2_class": "4*sum_{i<j} H_i H_j",
+  "cover_euler": -128,
+  "flat_pi1_Wilson_line_sole_source_of_Z3_or_Z6": false,
+  "no_FI_anomaly_free_nonAbelian_bundle_or_canonically_normalized_Yukawa_derived": true,
+  "pi1_quotient": "Z2 x Z2",
+  "projective_lift_commutator": "g*h = - h*g on each 2D coordinate, giving (-1)^sum_i n_i",
+  "quotient_Y_hodge": [
+    4,
+    20
+  ],
+  "quotient_euler": -32,
+  "quotient_rational_triple_intersection_for_descended_class": "2/4 = 1/2 for each distinct triple (not a statement that each individual Hi descends integrally)",
+  "triple_intersections_Hi_Hj_Hk_distinct": {
+    "012": 2,
+    "013": 2,
+    "023": 2,
+    "123": 2
+  },
+  "vanishing_self_intersections_Hi_squared": true
+}

@@ -1,0 +1,107 @@
+{
+  "4simplex_count": 2400,
+  "4simplex_type_hist": {
+    "(1, 4)": 600,
+    "(2, 3)": 600,
+    "(3, 2)": 600,
+    "(4, 1)": 600
+  },
+  "Lorentzian_signature_cases": [
+    {
+      "4simplex_volume_by_slice_composition": {
+        "(1, 4)": 0.01828117580706692,
+        "(2, 3)": 0.02779513346692986,
+        "(3, 2)": 0.02779513346692986,
+        "(4, 1)": 0.01828117580706692
+      },
+      "metric_signature_3spacelike_1timelike_all_2400": true,
+      "tau_over_a": 0.1,
+      "total_4volume": 55.291571128796136
+    },
+    {
+      "4simplex_volume_by_slice_composition": {
+        "(1, 4)": 0.02329237476562281,
+        "(2, 3)": 0.03294039229342062,
+        "(3, 2)": 0.03294039229342062,
+        "(4, 1)": 0.02329237476562281
+      },
+      "metric_signature_3spacelike_1timelike_all_2400": true,
+      "tau_over_a": 0.5,
+      "total_4volume": 67.47932047085212
+    },
+    {
+      "4simplex_volume_by_slice_composition": {
+        "(1, 4)": 0.03454817489953542,
+        "(2, 3)": 0.04540519732854869,
+        "(3, 2)": 0.045405197328548676,
+        "(4, 1)": 0.03454817489953542
+      },
+      "metric_signature_3spacelike_1timelike_all_2400": true,
+      "tau_over_a": 1.0,
+      "total_4volume": 95.94404667370091
+    },
+    {
+      "4simplex_volume_by_slice_composition": {
+        "(1, 4)": 0.061625831073954355,
+        "(2, 3)": 0.07725206757391319,
+        "(3, 2)": 0.07725206757391316,
+        "(4, 1)": 0.06162583107395434
+      },
+      "metric_signature_3spacelike_1timelike_all_2400": true,
+      "tau_over_a": 2.0,
+      "total_4volume": 166.65347837744102
+    },
+    {
+      "4simplex_volume_by_slice_composition": {
+        "(1, 4)": 0.29517973573551687,
+        "(2, 3)": 0.3618948492925045,
+        "(3, 2)": 0.3618948492925045,
+        "(4, 1)": 0.29517973573551565
+      },
+      "metric_signature_3spacelike_1timelike_all_2400": true,
+      "tau_over_a": 10.0,
+      "total_4volume": 788.4895020336248
+    }
+  ],
+  "all_4simplices_Lorentzian_for_every_positive_tau_over_a": true,
+  "all_4simplices_non_degenerate_Lorentzian_at_five_tau_values": true,
+  "all_global_spatial_edges_squared_length": "a^2",
+  "all_global_temporal_cross_edges_squared_length": "-tau^2",
+  "all_mixed_triangles_have_signature_1plus_1minus": true,
+  "all_spatial_triangles_have_positive_definite_2metric": true,
+  "exact_4simplex_Lorentzian_Gram_determinant_polynomials": {
+    "1": "-(8*u + 3)/16",
+    "2": "-(12*u + 7)/16",
+    "3": "-(12*u + 7)/16",
+    "4": "-(8*u + 3)/16"
+  },
+  "exact_per_4simplex_4volume_by_type": "(1,4),(4,1):sqrt(8*u+3)/96 ; (2,3),(3,2):sqrt(12*u+7)/96, u=(tau/a)^2, a=1",
+  "global_edges": 2280,
+  "global_ordered_prism_triangulation_need_not_preserve_full_F20_as_simplex_maps": true,
+  "hinge_spacetime_type_hist": {
+    "(0, 3)": 1200,
+    "(1, 2)": 1920,
+    "(2, 1)": 1920,
+    "(3, 0)": 1200
+  },
+  "interpretation": "Concrete global consistent Lorentzian edge-square assignment and nondegenerate 4D simplices for selected tau values; test of local realizability, not a dynamical gravitational solution.",
+  "mixed_interior_triangle_pentachoron_incidence_hist": {
+    "4": 1408,
+    "5": 2224,
+    "6": 208
+  },
+  "mixed_timelike_hinge_area_per_triangle_at_a1": "sqrt(u+1/4)/2",
+  "no_ADM_hypersurface_deformation_algebra_derived": true,
+  "no_regge_deficit_angles_or_Einstein_equations_derived": true,
+  "pure_spatial_boundary_triangle_pentachoron_incidence_hist": {
+    "2": 1424,
+    "3": 752,
+    "4": 224
+  },
+  "spatial_boundary_triangle_area_per_triangle_at_a1": "sqrt(3)/4",
+  "spatial_vertex_labels_per_slice": 120,
+  "total_hinges_triangles": 6240,
+  "total_mixed_hinge_area_at_a1": "1920*sqrt(u+1/4)",
+  "total_pure_spatial_boundary_hinge_area_at_a1": "600*sqrt(3)",
+  "two_spatial_time_slices": true
+}

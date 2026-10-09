@@ -1,0 +1,30 @@
+{
+  "F20_C4_generator_swaps_voltage_bits": true,
+  "F20_C5_generator_preserves_voltage_basis": true,
+  "F20_generator_order_r": 5,
+  "F20_generator_order_s": 4,
+  "F20_relation_s_r_sinv_equals_r_squared_verified_on_240_vertices": true,
+  "X_star_triangle_count": 40,
+  "X_star_triangle_voltages_hist": {
+    "1": 20,
+    "2": 20
+  },
+  "all_40_W33_star_triangles_lift_as_length_six_not_length_three": true,
+  "all_W33_20_Z_checks_lift_as_closed_eight_cycles_on_all_four_sheets": true,
+  "base_line_adjacency_edges": 120,
+  "base_qubit_vertices": 60,
+  "both_generators_act_as_true_240vertex_graph_automorphisms": true,
+  "connected_component_sizes": [
+    240
+  ],
+  "formal_chiral_Z2square_cover_vertices": 240,
+  "formal_cover_degree": 4,
+  "formal_cover_edges": 480,
+  "mathematical_scope": "Canonical colored voltage cover for this selected F20-equivariant W33 chiral adjacency. Formal 240-address graph; four sheets not a native H4 physical vertex representation. Cycles checked combinatorially.",
+  "not_CSS_check_faces_attached_or_native_gravity": true,
+  "not_native_600cell_120vertex_cover": true,
+  "octagon_face_count": 20,
+  "octagon_voltages_hist": {
+    "0": 20
+  }
+}

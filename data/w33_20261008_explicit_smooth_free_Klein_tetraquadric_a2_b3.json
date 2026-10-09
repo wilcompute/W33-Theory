@@ -1,0 +1,38 @@
+{
+  "Klein_four_g_h_polynomial_invariant": true,
+  "Klein_group_canonical_residue_form_preserved": true,
+  "actual_b3_is_not_any_singular_parameter": true,
+  "all_48_ambient_fixed_points_avoided": true,
+  "all_three_products_vanish_derivatives_have_two_independent_nonzero_coordinates": true,
+  "coefficient_a": 2,
+  "coefficient_b": 3,
+  "complex_geometric_smoothness_proven_by_three_case_derivative_elimination": true,
+  "exactly_one_product_zero_requires_forbidden_finite_group_fixed_value": true,
+  "explicit_polynomial": "prod_i(x_i^2+y_i^2)+2*prod_i(x_i^2-y_i^2)+3*prod_i(2*x_i*y_i)",
+  "free_quotient_euler_char": -32,
+  "free_quotient_hodge_numbers": [
+    4,
+    20
+  ],
+  "none_zero_singular_parameter_b_candidates_for_a2": [
+    "-2",
+    "-2/3",
+    "2/3",
+    "2"
+  ],
+  "nonidentity_Klein_ambient_fixed_loci_size": {
+    "D": 16,
+    "S": 16,
+    "T": 16
+  },
+  "nonunit_mod7_Jacobian_GB_in_prior_code_does_not_contradict_char0_smoothness": true,
+  "original_euler_char": -128,
+  "original_smooth_tetraquadric_hodge_numbers": [
+    4,
+    68
+  ],
+  "physical_heterotic_bundle_HYM_FI_anomalies_Yukawa_not_constructed": true,
+  "proof_limit": "Mathematical smooth free CY3 quotient with h11/h21, not physical anomaly-free P6, exact HYM/harmonic normalized Yukawa or QFT/TOE.",
+  "quotient_fundamental_group": "Z2 x Z2 (Lefschetz simply connected original, free cover)",
+  "quotient_h11_from_Lefschetz_H2_invariance": true
+}

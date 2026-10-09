@@ -1,0 +1,379 @@
+{
+  "background_model": "uniform admixture q_i=(1-beta)p_i + beta/27",
+  "calibration_norm": "l1 error of each two hypothesis output distribution <= epsilon (not TV epsilon); both distributions independently perturbed",
+  "coherent_coupler_drift_grid_rad": [
+    -0.002,
+    -0.001,
+    0,
+    0.001,
+    0.002
+  ],
+  "joint_guarantee": "Labeled known source/detectors, equal priors, independent survives and outputs; conditional likelihood error <=.025 via BC bound and >=.975 chance of n detections via exact binomial inversion. Union bound failure <=.05.",
+  "no_nonuniform_time_dependent_loss_or_correlated_detection": true,
+  "not_anonymous_port_or_any_real_device_measurement": true,
+  "number_of_model_conditional_scenarios": 36,
+  "only_grid_calibrated_common_detuning": true,
+  "robust_affinity_formula": "BC <= 1 - max(0,sqrt(1-BC_model)-sqrt(2 epsilon))**2",
+  "rows": [
+    {
+      "binomial_success_probability": 0.9771909292323986,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 18,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 9,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.6950787992357053
+    },
+    {
+      "binomial_success_probability": 0.9845151995838451,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 22,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 11,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7424687739888306
+    },
+    {
+      "binomial_success_probability": 0.9844332280510667,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 32,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 17,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8312636130337938
+    },
+    {
+      "binomial_success_probability": 0.9771909292323986,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 18,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 9,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.705675388470308
+    },
+    {
+      "binomial_success_probability": 0.9845151995838451,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 22,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 11,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.752199577203738
+    },
+    {
+      "binomial_success_probability": 0.9781545465596662,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 33,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 18,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8391223464798279
+    },
+    {
+      "binomial_success_probability": 0.9812171532905042,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 20,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 10,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7384448188164943
+    },
+    {
+      "binomial_success_probability": 0.9806720994086598,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 25,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 13,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7821880308754221
+    },
+    {
+      "binomial_success_probability": 0.9796560424622774,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 38,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 21,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8630975564147867
+    },
+    {
+      "binomial_success_probability": 0.976435661721611,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 23,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 12,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7710326126916353
+    },
+    {
+      "binomial_success_probability": 0.9769655861747812,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 28,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 15,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8118314339191751
+    },
+    {
+      "binomial_success_probability": 0.9752795998920292,
+      "chosen_calibrated_known_input": 23,
+      "joint_95percent_minimum_source_launches": 44,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 36,
+      "successful_photon_detections_required": 25,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8863743689410248
+    },
+    {
+      "binomial_success_probability": 0.9819009970160252,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 29,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 9,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7115496715251429
+    },
+    {
+      "binomial_success_probability": 0.9811571460766861,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 34,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 11,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7575871842396753
+    },
+    {
+      "binomial_success_probability": 0.9794312103922772,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 51,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 18,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8434576248323631
+    },
+    {
+      "binomial_success_probability": 0.9778485275220948,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 31,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 10,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7203895381871046
+    },
+    {
+      "binomial_success_probability": 0.9776123562550049,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 36,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 12,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7656852430079778
+    },
+    {
+      "binomial_success_probability": 0.9769044646034903,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 53,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 19,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8499516889640697
+    },
+    {
+      "binomial_success_probability": 0.9811571460766861,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 34,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 11,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7497555492518744
+    },
+    {
+      "binomial_success_probability": 0.9810274253261902,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 39,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 13,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7924987677993258
+    },
+    {
+      "binomial_success_probability": 0.9758567263312211,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 60,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 22,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8712460297085116
+    },
+    {
+      "binomial_success_probability": 0.9810274253261902,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 39,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 13,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.77956272778104
+    },
+    {
+      "binomial_success_probability": 0.9785681464642755,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 46,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 16,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.819556753281719
+    },
+    {
+      "binomial_success_probability": 0.9770238903172782,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 72,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 72,
+      "successful_photon_detections_required": 27,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8923594964823784
+    },
+    {
+      "binomial_success_probability": 0.9757863001714971,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 74,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 11,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7450011625839924
+    },
+    {
+      "binomial_success_probability": 0.9768695219666103,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 85,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 13,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.788167418786251
+    },
+    {
+      "binomial_success_probability": 0.9760025463695247,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 131,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 22,
+      "uniform_dark_background_fraction": 0.0,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8678294055658362
+    },
+    {
+      "binomial_success_probability": 0.9757863001714971,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 74,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 11,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7515478694767842
+    },
+    {
+      "binomial_success_probability": 0.9768695219666103,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 85,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 13,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.794130568410179
+    },
+    {
+      "binomial_success_probability": 0.9760025463695247,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 131,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 22,
+      "uniform_dark_background_fraction": 0.01,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8725307423438714
+    },
+    {
+      "binomial_success_probability": 0.97779238258997,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 80,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 12,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.7752342868704933
+    },
+    {
+      "binomial_success_probability": 0.9754267321781472,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 95,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 15,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.815638599210585
+    },
+    {
+      "binomial_success_probability": 0.9759494158359402,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 151,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 26,
+      "uniform_dark_background_fraction": 0.05,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8893284964783676
+    },
+    {
+      "binomial_success_probability": 0.9760856632740736,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 90,
+      "maximum_l1_model_to_true_per_hypothesis": 0.0,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 14,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8008186157913102
+    },
+    {
+      "binomial_success_probability": 0.9768436767486867,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 111,
+      "maximum_l1_model_to_true_per_hypothesis": 0.001,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 18,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.8387366702738313
+    },
+    {
+      "binomial_success_probability": 0.9765717729762287,
+      "chosen_calibrated_known_input": 11,
+      "joint_95percent_minimum_source_launches": 176,
+      "maximum_l1_model_to_true_per_hypothesis": 0.01,
+      "optical_layers": 144,
+      "successful_photon_detections_required": 31,
+      "uniform_dark_background_fraction": 0.1,
+      "worst_Bhattacharyya_upper_bound_with_bounded_errors": 0.9070505877187707
+    }
+  ]
+}

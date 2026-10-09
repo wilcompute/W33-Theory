@@ -1,0 +1,35 @@
+{
+  "X_CNOTs": 120,
+  "X_ancilla_count": 40,
+  "X_checks": 40,
+  "Z_ancilla_count": 20,
+  "Z_checks": 20,
+  "Z_data_CNOTs": 160,
+  "Z_flag_CNOTs": 40,
+  "Z_flag_count": 20,
+  "Z_flags": 20,
+  "all_cases_correctable_given_perfect_followup_full_X_and_Z_syndromes": true,
+  "all_layers_have_nonoverlapping_qubits": true,
+  "ambiguous_joint_observation_stabilizer_coset_keys": 0,
+  "data_qubits": 60,
+  "fault_cases_by_type": {
+    "gate": 4800,
+    "idle": 2520,
+    "no_fault": 1,
+    "prep": 240,
+    "readout": 80
+  },
+  "fault_model": "One post-CNOT two-qubit Pauli OR one initial ancilla Pauli OR one data idle Pauli at a layer boundary OR one readout bit flip. All other operations noiseless. Entire flagged 13-layer circuit, with ideal future 60-check data syndrome.",
+  "first_ambiguity": null,
+  "global_entangling_layers": 13,
+  "no_finite_noise_threshold_or_true_noisy_detector_graph": true,
+  "no_two_fault_correlated_or_imperfect_followup": true,
+  "only_one_fault_per_full_round": true,
+  "physical_weight_propagation_hist_note": {
+    "gate_physical_weight_gt3": 880
+  },
+  "single_fault_cases_including_no_fault": 7641,
+  "total_CNOTs": 320,
+  "total_ancillas": 80,
+  "unique_joint_syndrome_flag_future_ideal_syndrome_keys": 2039
+}
