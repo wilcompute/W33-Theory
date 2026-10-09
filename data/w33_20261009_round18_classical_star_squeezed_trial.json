@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "sampled_stars": [
+    {
+      "star": 0,
+      "minimum_low_rank_real_gaussian": 229.06535876948482,
+      "covariance_eigenvalues": [
+        4.42099780406122,
+        28.512576728370835,
+        10.922402654544872
+      ],
+      "gradient_inf": 1.9073486328125e-06,
+      "solver_success": false,
+      "isotropic_star_gaussian_optimum": 252.1662280692142,
+      "stationarity_not_global_proof": true
+    },
+    {
+      "star": 1,
+      "minimum_low_rank_real_gaussian": 229.06535876948482,
+      "covariance_eigenvalues": [
+        4.420997894347315,
+        28.512576596628715,
+        10.922404287124346
+      ],
+      "gradient_inf": 1.9073486328125e-06,
+      "solver_success": false,
+      "isotropic_star_gaussian_optimum": 252.16622806921418,
+      "stationarity_not_global_proof": true
+    },
+    {
+      "star": 39,
+      "minimum_low_rank_real_gaussian": 229.06535876948487,
+      "covariance_eigenvalues": [
+        4.4209978707513855,
+        28.512578195213546,
+        10.922402971810403
+      ],
+      "gradient_inf": 1.9073486328125e-06,
+      "solver_success": false,
+      "isotropic_star_gaussian_optimum": 252.1662280692142,
+      "stationarity_not_global_proof": true
+    },
+    {
+      "star": 40,
+      "minimum_low_rank_real_gaussian": 229.06535876948482,
+      "covariance_eigenvalues": [
+        4.420997882380247,
+        28.51257439239633,
+        10.922403515508575
+      ],
+      "gradient_inf": 3.814697265625e-06,
+      "solver_success": false,
+      "isotropic_star_gaussian_optimum": 252.16622806921418,
+      "stationarity_not_global_proof": true
+    },
+    {
+      "star": 41,
+      "minimum_low_rank_real_gaussian": 229.06535876948482,
+      "covariance_eigenvalues": [
+        4.420997919258834,
+        28.512577579377368,
+        10.922403653157739
+      ],
+      "gradient_inf": 1.9073486328125e-06,
+      "solver_success": false,
+      "isotropic_star_gaussian_optimum": 252.16622806921424,
+      "stationarity_not_global_proof": true
+    },
+    {
+      "star": 79,
+      "minimum_low_rank_real_gaussian": 229.06535876948482,
+      "covariance_eigenvalues": [
+        4.420997793426834,
+        28.512577728126022,
+        10.92240229250477
+      ],
+      "gradient_inf": 3.814697265625e-06,
+      "solver_success": false,
+      "isotropic_star_gaussian_optimum": 252.16622806921418,
+      "stationarity_not_global_proof": true
+    }
+  ],
+  "total_stars": 80,
+  "prior_centered_nonstar_complex_gaussian_energy": 128.88739141552713,
+  "restricted_method": "Schrodinger real Gaussian on 78-space, covariance with star-q and star-p 2-plane eigenvalues t1,t2 and t0 on 76D orthogonal complement; exact Wick expectation evaluated numerically and optimized with six seeds.",
+  "rigorous_variational_logic": "Each explicitly stated positive covariance defines a normalized Schwartz-state upper bound for the spectral infimum, even when optimizer stationarity is not rigorously certified.",
+  "limitation": "This restricted covariance family can fail to find true E0. Comparison with prior non-Gaussian Ritz trial is a variational bound only. No spontaneous vacuum selection, continuum EFT, or mass gap."
+}

@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "synthetic_null": {
+    "n": 1024,
+    "regression_total_flux": -3.807893362832264e-05,
+    "electronics_sham": 0.030131639750178615,
+    "port_swap": 0.00989409241669186,
+    "underlying_optical": 0,
+    "underlying_phase_wire_leak": 0,
+    "design_rank": 4,
+    "distinct_parameters": 5,
+    "observables_digest": [
+      0.027716115613564546,
+      -0.02671366514350227,
+      0.01934238933838527,
+      0.03420746152567744,
+      -0.03662438453194389,
+      0.01403293807681294,
+      -0.022135410154490852,
+      0.024502742281242242
+    ]
+  },
+  "synthetic_true_optical": {
+    "n": 1024,
+    "regression_total_flux": 0.07996192106637168,
+    "electronics_sham": 0.030131639750178636,
+    "port_swap": 0.009894092416691855,
+    "underlying_optical": 0.08,
+    "underlying_phase_wire_leak": 0.0,
+    "design_rank": 4,
+    "distinct_parameters": 5,
+    "observables_digest": [
+      -0.052283884386435456,
+      -0.10671366514350228,
+      0.09934238933838528,
+      0.11420746152567744,
+      -0.11662438453194388,
+      0.09403293807681296,
+      -0.10213541015449086,
+      0.10450274228124225
+    ]
+  },
+  "synthetic_phase_synchronous_leak": {
+    "n": 1024,
+    "regression_total_flux": 0.07996192106637168,
+    "electronics_sham": 0.030131639750178636,
+    "port_swap": 0.009894092416691855,
+    "underlying_optical": 0.0,
+    "underlying_phase_wire_leak": 0.08,
+    "design_rank": 4,
+    "distinct_parameters": 5,
+    "observables_digest": [
+      -0.052283884386435456,
+      -0.10671366514350228,
+      0.09934238933838528,
+      0.11420746152567744,
+      -0.11662438453194388,
+      0.09403293807681296,
+      -0.10213541015449086,
+      0.10450274228124225
+    ]
+  },
+  "counterfactual_exact_observational_equivalence": true,
+  "design_columns": [
+    "intercept",
+    "true_optical*r",
+    "unobserved_wire_leak*r",
+    "electronics_sham*e",
+    "detector_swap*d"
+  ],
+  "conditional_identifiability": "Independent sham and detector-swap labels identify artifacts tracking those labels, but cannot separate optical signal from leakage tracking the same r wire; exact design rank 4<5.",
+  "required_hardware_control": "Calibrate/physically isolate any phase-command-correlated electronics path, add independent actuation with demonstrably distinct causal paths and detector readout, and test dark/blocked optics. No synthetic statistics substitute for that certification.",
+  "scope": "Fully synthetic, even when artificial signal is detected. No device, gate fidelity, or physical chiral optical effect demonstrated."
+}

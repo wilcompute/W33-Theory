@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "graph_vertices": 80,
+  "graph_edges": 160,
+  "edge_cycle8_incidence_distribution": [
+    81
+  ],
+  "unique_8cycles": 1620,
+  "all_edge_counts_equal": true,
+  "prime": 1000003,
+  "cycle_derived_currents": [
+    {
+      "rep": [
+        0,
+        52,
+        68
+      ],
+      "first_even_moment": 8,
+      "phase_current_mod_p": [
+        440117,
+        760936,
+        597906
+      ],
+      "reverse": [
+        559886,
+        239067,
+        402097
+      ]
+    },
+    {
+      "rep": [
+        0,
+        52,
+        72
+      ],
+      "first_even_moment": 8,
+      "phase_current_mod_p": [
+        440117,
+        760936,
+        597906
+      ],
+      "reverse": [
+        559886,
+        239067,
+        402097
+      ]
+    },
+    {
+      "rep": [
+        0,
+        52,
+        70
+      ],
+      "first_even_moment": 8,
+      "phase_current_mod_p": [
+        440117,
+        760936,
+        597906
+      ],
+      "reverse": [
+        559886,
+        239067,
+        402097
+      ]
+    },
+    {
+      "rep": [
+        0,
+        52,
+        74
+      ],
+      "first_even_moment": 8,
+      "phase_current_mod_p": [
+        440117,
+        760936,
+        597906
+      ],
+      "reverse": [
+        559886,
+        239067,
+        402097
+      ]
+    },
+    {
+      "rep": [
+        0,
+        52,
+        90
+      ],
+      "first_even_moment": 8,
+      "phase_current_mod_p": [
+        440117,
+        760936,
+        597906
+      ],
+      "reverse": [
+        559886,
+        239067,
+        402097
+      ]
+    }
+  ],
+  "signed_flux_current": "d Tr A(phi)^8 / d phi_e is odd under simultaneous phase reversal and nonzero at rational phases. Gauge-orientation convention needed for sign.",
+  "autonomous_toy_plaquette_energy": "F(phi)=81*g*cos(2phi), g>0, for one unfrozen edge phase",
+  "degenerate_minima": [
+    "+pi/2",
+    "-pi/2"
+  ],
+  "hessian_minimum": "324*g",
+  "time_reversal_nogo": "An exact T-symmetric finite Hamiltonian cannot uniquely select a nonzero T-odd current in a nondegenerate T-invariant ground state; a symmetry-breaking preparation, environment, or thermodynamic limit is necessary.",
+  "scope": "Native 8-cycles; one active-edge flux while all other gauge links are frozen is an engineered toy action. No field equations, optical experiment, or spontaneous quantum T-breaking demonstrated."
+}

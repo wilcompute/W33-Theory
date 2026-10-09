@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "model": "Z6-II|Z6II_34__SM_20260917_1558",
+  "field_count": 176,
+  "exact_charge_integer_denominator": 18,
+  "cubic_repetition_policy": "monomials a<=b<=c (with replacement), not unordered distinct-only triples",
+  "screening": {
+    "gauge_neutral_with_repetition": 424,
+    "necessary_R_and_nonR_pass": 90,
+    "necessary_R_and_nonR_fail": 334,
+    "hidden_SU2_even_doublets": 90
+  },
+  "number_screened_by_R_but_not_worldsheet": 90,
+  "examples": [
+    {
+      "fields": [
+        "n_17",
+        "n_82",
+        "n_81"
+      ],
+      "necessary_R_and_nonR": true,
+      "total_oscillator_count": 5,
+      "corrected_R": [
+        [
+          "4/3",
+          "-1/3",
+          "0"
+        ],
+        [
+          "11/6",
+          "-1/3",
+          "-1/2"
+        ],
+        [
+          "11/6",
+          "-1/3",
+          "-1/2"
+        ]
+      ]
+    },
+    {
+      "fields": [
+        "n_17",
+        "n_82",
+        "n_83"
+      ],
+      "necessary_R_and_nonR": false,
+      "total_oscillator_count": 4,
+      "corrected_R": [
+        [
+          "4/3",
+          "-1/3",
+          "0"
+        ],
+        [
+          "11/6",
+          "-1/3",
+          "-1/2"
+        ],
+        [
+          "-1/6",
+          "2/3",
+          "-1/2"
+        ]
+      ]
+    }
+  ],
+  "required_amplitude_inputs_missing_from_field_schema": [
+    "constructing_space_group_element_full",
+    "left_moving_oscillator_polarizations",
+    "right_moving_picture_changing_distribution",
+    "gamma_eigenphase_full_action",
+    "worldsheet_instanton_solutions",
+    "kahler_complex_structure_moduli"
+  ],
+  "present_field_schema": [
+    "G",
+    "RQ",
+    "dim",
+    "fixed_point_translation",
+    "k",
+    "name",
+    "nonR",
+    "oscillator_count",
+    "q",
+    "q_shift",
+    "weights"
+  ],
+  "decisive_boundary": "Passing these necessary U1, corrected-R, nonR tests cannot infer nonzero superpotential amplitude. The source does not supply the polarized oscillator/constructing-group/instanton data needed for complete Rules 4/5, worldsheet correlator or F/D-flatness.",
+  "literature": [
+    "https://arxiv.org/abs/1107.2137",
+    "https://arxiv.org/abs/1401.6162"
+  ]
+}
