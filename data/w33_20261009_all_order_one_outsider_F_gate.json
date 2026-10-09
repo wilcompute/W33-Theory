@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.all_degree_one_outsider.v1",
+  "support_charge_rank": 6,
+  "outside_tested": 170,
+  "all_order_candidates": 11,
+  "max_observed_degree": 5,
+  "point_group_sector_zero": 11,
+  "monomials": [
+    {
+      "outside": "n_25",
+      "exponents": {
+        "n_56": 1
+      },
+      "total_degree": 2,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_43",
+      "exponents": {
+        "n_19": 1
+      },
+      "total_degree": 2,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_61",
+      "exponents": {
+        "n_19": 1
+      },
+      "total_degree": 2,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_7",
+      "exponents": {
+        "n_56": 1
+      },
+      "total_degree": 2,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_9",
+      "exponents": {
+        "n_54": 1
+      },
+      "total_degree": 2,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_72",
+      "exponents": {
+        "n_19": 1,
+        "n_82": 1
+      },
+      "total_degree": 3,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_77",
+      "exponents": {
+        "n_19": 1,
+        "n_82": 1
+      },
+      "total_degree": 3,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_93",
+      "exponents": {
+        "n_54": 1,
+        "n_56": 1,
+        "n_80": 1
+      },
+      "total_degree": 4,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_96",
+      "exponents": {
+        "n_54": 1,
+        "n_56": 1,
+        "n_80": 1
+      },
+      "total_degree": 4,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_16",
+      "exponents": {
+        "n_1": 1,
+        "n_19": 1,
+        "n_54": 1,
+        "n_56": 1
+      },
+      "total_degree": 5,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    },
+    {
+      "outside": "n_31",
+      "exponents": {
+        "n_1": 1,
+        "n_19": 1,
+        "n_54": 1,
+        "n_56": 1
+      },
+      "total_degree": 5,
+      "point_group_sector_mod6": 0,
+      "outsider_multiplicity": "1,1,1,1",
+      "representation": "1,1,1,1"
+    }
+  ],
+  "theorem": "Full support Q matrix has trivial nullspace. For each outsider, at most one rational exponent solution exists. The scan of ALL 170 outsiders is thus complete for holomorphic monomials with exactly one field outside the VEV support, with no imposed degree cutoff.",
+  "boundary": "Necessary gauge invariance and basic point-group only. No fixed-point selection, H momentum, R charges, oscillator, gamma, and no superpotential coefficients, F-flatness proof or cancellation with two-or-more outsiders."
+}

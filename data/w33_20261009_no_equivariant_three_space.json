@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "automorphism_subgroup": "PSp(4,3)",
+  "group_order": 25920,
+  "deck_rank": 81,
+  "character_norm_square": "25920/25920=1",
+  "prior_exact_character": "BT1688: independently enumerated all 25920 group elements",
+  "result": "No nontrivial PSp(4,3)-equivariant Z-linear homomorphism H1 -> lattice of rank 1 through 80, regardless of induced quotient action. In particular no equivariant rank-three deck quotient.",
+  "proof": "Tensor a presumed nonzero equivariant Z-homomorphism with C; image is nonzero quotient of an irreducible 81-dimensional complex module, hence dimension 81. Cannot map onto rank three.",
+  "boundary": "Applies to connected W33 Levi cycle lattice with full PSp symmetry. Spontaneous/explicit subgroup breaking or nonlinear emergent geometries remain possible. Rank-three quotient under a proper subgroup not excluded."
+}

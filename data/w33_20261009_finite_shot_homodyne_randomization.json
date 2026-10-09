@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "null_trials": 400,
+  "null_N": 3000,
+  "null_rejections": 1,
+  "null_empirical_rate": 0.0025,
+  "alternative_trials": 160,
+  "alternative_N": 24000,
+  "alternative_rejections": 159,
+  "alternative_empirical_power": 0.99375,
+  "pump_odd_detector_confound_rejections": 160,
+  "alpha": 0.01,
+  "seed": "null 0..399, alt 10000..10159, confound 30000..30159",
+  "drift": "Independent of sign, AR(1) rho=.98, stationary variance=.02",
+  "systematic": "Pump-even quadratic detector crosstalk 0.08; pump-odd confound 0.08 additionally tested",
+  "theorem": "Under sharp randomization null s independent of every readout, conditional type-I error <= alpha exactly at any N even under arbitrarily temporally correlated readouts.",
+  "limits": "Toy simulated power, no hardware, no general composite null with sign-dependent instruments, no physical gate demonstration. Monte Carlo counts are not certified exact power probabilities."
+}
