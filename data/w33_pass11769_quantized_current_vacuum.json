@@ -1,0 +1,154 @@
+{
+  "classical_zero": "Set a=1/sqrt20; q_point0=39a, q_other_points=-a, q_lines=0; p_point0=-a, p_other_points=a/39, p_lines=0. Both lie in W. Every non-star edge kills the position factor and each of the four star edges kills the momentum factor. Classical sum of squared current symbols is zero, while quantum H has no zero eigenvector; a strictly positive spectral infimum is NOT implied.",
+  "complex_trial": {
+    "edge_moments": {
+      "covariance": -0.03269228594664541,
+      "p_variance": 0.8499706008617952,
+      "q_variance": 0.8499706008617953
+    },
+    "energy": 128.88739141552713,
+    "exact_energy": "160*(m^2+b*m*(t+1/t)+b^2-4*b^2*t*m/(3*m*t+b))",
+    "f": -0.03846284320128045,
+    "m": 0.8493416490252569,
+    "minimum_scope": "Exact minimum within this two-real-parameter family; not all Gaussian states.",
+    "phase_equation": "f=-2*b/(3*m*t+b)",
+    "root_equation": "(t^2-1)*(3*m*t+b)^2-4*b^2*t^2=0; m=(6sqrt(10)+15)/40, b=1/20; unique positive root t>1.",
+    "root_residual": 3.413068438984368e-16,
+    "state": "psi \u221d exp(-q.C0^-1.q/(2t) + i f q.D.q/2), D=diag(+1 points,-1 lines)|W",
+    "t": 1.0007405168900636
+  },
+  "energy_units": "Central charge and overall energy unit are supplied conventions, not predictions for hbar or a physical mass scale.",
+  "exact_integer_checks": "160 actual incidences; T^2=30T, tr T=720 on both sides; G10^3=600G10; exact projected U,V Gram identities; U_e.V_e=0.",
+  "exact_root_bracket": {
+    "proof": "F increases with m for t>1; exact rational endpoint signs. The divided stationarity equation has strictly positive derivative for t>0, so there is exactly one positive root.",
+    "sqrt10_interval": [
+      "6324555320336758663997787088865437067439/2000000000000000000000000000000000000000",
+      "7905694150420948329997233861081796334299/2500000000000000000000000000000000000000"
+    ],
+    "t_interval": [
+      "100074051689/100000000000",
+      "1000740516891/1000000000000"
+    ]
+  },
+  "graph_locality": "Disjoint edge currents commute exactly, hence so do their squares. An iterated commutator ad_H^k(J_e) is a sum of current words supported within distance k of e in the line graph. Its commutator with J_f vanishes when distance(e,f)>k+1. This is a formal nested-commutator support theorem, not a Lieb-Robinson bound for these unbounded operators or a continuum causal limit.",
+  "isotropic_trial_energy": 168.09999999999988,
+  "literature": [
+    "https://arxiv.org/abs/math-ph/0505073"
+  ],
+  "lower_boundary": "H has a nonnegative Friedrichs extension and no zero eigenvector: simultaneous current annihilation would annihilate the whole Lie closure, including its represented identity center. No positive gap, compact resolvent or attained ground state is proved.",
+  "non_gaussian_descent": {
+    "coefficient_imag": -2324.51141684812,
+    "coefficient_real": -30150.526474224996,
+    "consequence": "Trial is not an eigenstate. Taking psi-epsilon*(H-E)psi gives strictly smaller Rayleigh quotient for sufficiently small positive epsilon.",
+    "point_kernel_direction": [
+      9,
+      -3,
+      -3,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      -3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "quartic_coefficient": "30240*(f+i/t)^2 != 0",
+    "sum_fourth_powers": 7560
+  },
+  "non_gaussian_ritz": {
+    "coefficients": [
+      [
+        -0.9997046604919922,
+        0.0
+      ],
+      [
+        -0.024230189800639745,
+        -0.0018680719513184453
+      ]
+    ],
+    "energy": 128.86806573183773,
+    "exact_coupling": "35*sqrt(6)*(f*t+i)^2/108",
+    "exact_diagonal": "(21600*f^2*m^2*t^3+4320*f^2*m*t^3+360*f^2*m*t^2+525*f^2*t^3+36*f^2*t^2+1440*f*m*t^2+144*f*t^2+7200*m^2*t+360*m*t^2+1440*m*t+360*m+36*t^2+193*t+36)/(45*t)",
+    "exact_energy": "(E+D-sqrt((D-E)^2+4*abs(K)^2))/2",
+    "gaussian_energy": 128.88739141552713,
+    "hermite_state_energy": 161.57131424796492,
+    "off_diagonal": [
+      -0.7926400165557711,
+      -0.06111006948783083
+    ],
+    "quadrature_checks": {
+      "coupling_error": 8.104925116011516e-15,
+      "diagonal_error": 1.4210854715202004e-13,
+      "norm_error": 1.6653345369377348e-15
+    },
+    "scope": "An explicit non-Gaussian variational upper bound; no ground-state attainment or gap claim.",
+    "state": "c0*psi+c1*He4(Y)*psi/sqrt(24), Y=w.q/sqrt(108t)"
+  },
+  "physical_boundary": "An explicit interacting 78-coordinate quantum model, with a proposed energy law. No continuum locality, 3+1 Lorentz symmetry, chiral matter, GR, mass spectrum or cosmological constant is derived. These currents cannot all be anomaly-free gauge constraints at nonzero central charge.",
+  "prior": "analysis/w33_pass11767_global_current_algebra.py; standard Schrodinger representation is prior mathematics.",
+  "proposed_hamiltonian": "H=sum_e J_e^2; J_e=(V_e.q+1/sqrt(20))*(U_e.p+1/sqrt(20)), [q_i,p_j]=i delta_ij on W=(u,s)^perp, dim W=78.",
+  "quantization": "For A=[[0,r,z],[0,B,v],[0,0,0]], hat(A)=p^T Bq+r.q+v.p+z I, tr B=0; [hat(A),hat(C)]=i hat([A,C]) on Schwartz space.",
+  "real_spectral_trial": {
+    "covariance": "C0=P_W+A_W/sqrt(10)+(4/sqrt(10)-1)*A_W^2/6",
+    "energy": 129.41046426743475,
+    "exact_energy": "649/10+(102/5)*sqrt(10)",
+    "scope": "Minimum only in the centered real Gaussian three-spectral-parameter class."
+  },
+  "rejected_linear_energy": "sum_e J_e=p^T Bsum q+8 I, Bsum=D(4P_W-A_W); Bsum^2=16P_W-A_W^2. Eigenvalues +/-sqrt(10), each multiplicity24, and +/-4, each multiplicity15. Coherent-state displacements make this operator unbounded above and below; it is not a stable energy.",
+  "schema": "w33.pass11769.quantized_current_vacuum.v1",
+  "source_sha256": "4ff81df8b8520b83cbfd91396e8dbf9040c1d434f0d80ef356a9d9eefe0675b9",
+  "spectral_inventory": {
+    "adjacency_minus_sqrt6": 24,
+    "adjacency_plus_sqrt6": 24,
+    "adjacency_zero": 30
+  },
+  "status": "PASS",
+  "ten_parameter_probe": {
+    "energy": 128.88739141552838,
+    "message": "Desired error not necessarily achieved due to precision loss.",
+    "optimizer_success": false,
+    "parameters": [
+      0.23574172635722138,
+      0.23574172045444705,
+      0.7127085165940045,
+      0.0007397864366535933,
+      0.0007399127156641726,
+      -0.03846291489023031,
+      0.03846282941788121,
+      3.555566193624579e-08,
+      -0.0384628962513772,
+      0.03846282132293484
+    ],
+    "scope": "An exploratory ten-parameter search, not a certified global minimum."
+  }
+}
