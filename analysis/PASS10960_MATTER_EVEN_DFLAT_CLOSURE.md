@@ -1,5 +1,8 @@
 # Pass 10960 — the FI term forces a B−L = ±1 condensate: exhaustive matter-even D-flat closure
 
+**Scope correction (2026-10-09, follow-up to the original certificate):** The exact 91-test pass remains valid **for this pass's all-label premise**, but the blanket conclusion that *no* W33 model can preserve matter parity is not established by that premise. In `Z6II_34__SM_20260917_1558`, the test requires all ten `bd`-labelled fields to have standard `B-L=-1/3`. An explicit E8 Weyl/lattice mapping to the published Lebedev et al. model-1 gauge vectors gives six of those fields `B-L=+2/3` instead. Restricting the physical-matter constraints to the standard-charge subset produces a **six-singlet, nonnegative, exactly FI-cancelling and even-under-an-admissible-continuous-B-L D-flat witness**. This does **not** establish an F-flat MSSM vacuum or full R-parity: no matching order-two character of the full nine-U1 lattice was found, and the geometric generator inversion and complete selection rules remain unchecked. The original stronger gate and its existing certificates must therefore be cited with this restriction. Reproduction and exact root-system certificates: [2026-10-09 five-front research and scope firewall](2026-10-09_five_frontiers_research_and_scope_firewall.md).
+
+
 Producer: `analysis/w33_pass10960_matter_even_dflat_closure.py`
 Ledger (frozen input): `data/w33_pass10960_heterotic_left_chiral_ledger.json.gz`
 Certificate: `data/w33_pass10960_matter_even_dflat_closure.json`
