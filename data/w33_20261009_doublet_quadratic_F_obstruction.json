@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "doublet_mass_matrix_names": [
+    "mu11",
+    "mu12",
+    "mu21",
+    "mu22"
+  ],
+  "doublet_vev_color_A": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "doublet_vev_color_B": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "spinor_gradient_matrix_D": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "-1"
+    ]
+  ],
+  "spinor_gradient_det": "-1",
+  "unique_bilinear_only_F_flat_mass_matrix": "M=0",
+  "singlet_pair_bilinears": [
+    [
+      "n_9",
+      "n_54"
+    ],
+    [
+      "n_37",
+      "n_38"
+    ]
+  ],
+  "gauge_eligible_bilinears": 6,
+  "theorem": "With this orientation and nonzero s,u,t, W consisting ONLY of the six indicated quadratic monomials has F=0 on the selected 13-field D-flat branch iff all six quadratic coefficients vanish. Any nonzero coefficient requires higher interactions/other VEVs for cancellation.",
+  "scope": "Algebraic conditional implication, not evidence that quadratic string couplings are generated. No full F-flatness, worldsheet R charges, nor superpotential coefficients known."
+}

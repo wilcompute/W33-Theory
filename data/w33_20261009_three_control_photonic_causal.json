@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "shots_per_trial": 90000,
+  "trials_per_arm": 72,
+  "alpha": 0.01,
+  "rejection_counts": {
+    "null": 0,
+    "signal": 51,
+    "route_dependent_detector": 72
+  },
+  "mean_4x_GSR_score": {
+    "null": 0.0011259506718807484,
+    "signal": -0.031680727243207335,
+    "route_dependent_detector": 0.22816742434592108
+  },
+  "predicted_4x_GSR_signal": -0.030444365242192187,
+  "theorem": "Under sharp route-null that R cannot change any measured output, for fixed S,G,weights, the independent Rademacher randomized R yields exact finite-N two-sided type-I probability <= alpha.",
+  "scope": "Simulated single-edge ideal quartic CV gate and artificial detector responses. Genuine gate-and-route-dependent detector coupling can still fake a signal. Physical bypass must be calibrated; no actual device or photon source demonstrated."
+}

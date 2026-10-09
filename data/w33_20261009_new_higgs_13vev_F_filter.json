@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.13vev_F_filter.v1",
+  "support": [
+    "n_17",
+    "n_47",
+    "n_50",
+    "n_80",
+    "n_82",
+    "n_9",
+    "n_54",
+    "n_37",
+    "n_38",
+    "n_35",
+    "n_36",
+    "n_39",
+    "n_40"
+  ],
+  "hidden_doublets": [
+    "n_35",
+    "n_36",
+    "n_39",
+    "n_40"
+  ],
+  "charge_rank": 8,
+  "enumeration_degree_max": 4,
+  "candidate_counts": {
+    "gauge_s2": 6,
+    "pg_s2": 6,
+    "candidate_s2": 6,
+    "gauge_out2": 9,
+    "pg_out2": 9,
+    "candidate_out2": 9,
+    "gauge_out3": 7,
+    "pg_out3": 7,
+    "candidate_out3": 7,
+    "gauge_s4": 20,
+    "pg_s4": 20,
+    "candidate_s4": 20,
+    "gauge_out4": 56,
+    "pg_out4": 56,
+    "candidate_out4": 56
+  },
+  "examples": {
+    "bilinears": [
+      [
+        "n_9",
+        "n_54"
+      ],
+      [
+        "n_37",
+        "n_38"
+      ],
+      [
+        "n_35",
+        "n_36"
+      ],
+      [
+        "n_35",
+        "n_40"
+      ],
+      [
+        "n_36",
+        "n_39"
+      ],
+      [
+        "n_39",
+        "n_40"
+      ]
+    ],
+    "one_outsider_bilinears": [
+      [
+        "n_17",
+        "n_52"
+      ],
+      [
+        "n_17",
+        "n_53"
+      ],
+      [
+        "n_17",
+        "n_64"
+      ],
+      [
+        "n_47",
+        "n_20"
+      ],
+      [
+        "n_50",
+        "n_16"
+      ],
+      [
+        "n_50",
+        "n_31"
+      ],
+      [
+        "n_9",
+        "n_65"
+      ],
+      [
+        "n_37",
+        "n_42"
+      ],
+      [
+        "n_38",
+        "n_41"
+      ]
+    ]
+  },
+  "no_constant_or_linear_support_terms": true,
+  "boundary": "U1 neutrality exact, twist k sum and hidden SU2 contraction checked. Space-group, gamma, H-momentum/R-charge, oscillator, nonperturbative couplings and cancellations NOT checked. Degree-2 terms are gauge-eligible only, not proven generated."
+}

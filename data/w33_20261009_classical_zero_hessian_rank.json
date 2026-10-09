@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "classical_zero": "q0=a*(39,-1x39,0x40), p0=a/39*(-39,1x39,0x40), a=1/sqrt20",
+  "currents": 160,
+  "nonzero_q_factor": 4,
+  "nonzero_p_factor": 156,
+  "gradient_jacobian_rank": 82,
+  "q_gradient_rank": 78,
+  "p_gradient_rank": 4,
+  "tangent_phase_dimension": 156,
+  "Hessian_rank": 82,
+  "Hessian_nullity": 74,
+  "theorem": "At a common classical zero of each quartic current square, Hessian(Hcl) = 2 J_gradient.T J_gradient. Its nullity is nonzero, so the purely quadratic harmonic approximation is noncoercive; higher-order terms and quantum commutator estimates are necessary for the physical gap.",
+  "scope": "Classical principal-symbol only. Quantum gap does not follow from Hessian degeneracy; overall Hessian scale omitted."
+}

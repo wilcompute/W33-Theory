@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "schema": "w33.20261009.nontrivial_he2_ritz.v1",
+  "quadrature_order": 13,
+  "irreps": {
+    "24_point_line_doublet": [
+      142.71933622421867,
+      145.17245508727007
+    ],
+    "15_point_and_line_singlets": [
+      143.6110807402656,
+      143.61108074026566
+    ]
+  },
+  "Gram_sector_norms": {
+    "24": 1.1851851851851851,
+    "15": 0.5925925925925926
+  },
+  "orbital_diagonal_blocks": {
+    "p": [
+      [
+        143.92729482710658,
+        9.593138519871646e-16
+      ],
+      [
+        16.07459199695721,
+        4.4554201032094665e-17
+      ],
+      [
+        1.8246452738734662,
+        -1.570247275887554e-16
+      ]
+    ],
+    "l": [
+      [
+        143.92729482710672,
+        6.531639676270297e-16
+      ],
+      [
+        16.074591996957224,
+        -1.2392160508885133e-16
+      ],
+      [
+        1.8246452738734478,
+        -1.3512514940914513e-16
+      ]
+    ]
+  },
+  "incidence_cross_blocks": [
+    [
+      -0.8320986815455023,
+      -0.0641522093105179
+    ],
+    [
+      -0.24038406355758707,
+      -0.018532860467483227
+    ]
+  ],
+  "theorem": "For PSp(4,3), each He2 point/line permutation module is 1+24+15. Incidence singular value sqrt6 on24, zero on15. Rayleigh-Ritz on the symmetry sectors gives ordered minmax UPPER bounds, with 24-fold or 15-fold representation multiplicities.",
+  "caveat": "States need not be true eigenstates and no statement about the actual ground irrep, lower energies, or physical gap follows. Quadrature comparisons required.",
+  "quadrature_13_14_max_energy_difference": 3.979039320256561e-13
+}
