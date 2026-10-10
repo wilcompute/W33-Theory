@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "source": "Round35 proven so11 centralizer and standard Spin11xSpin5 E8 branching",
+  "SO11xSO5_E8_decomposition": [
+    {
+      "sector": "adj_SO11",
+      "SO11_dim": 55,
+      "Spin5_dim": 1,
+      "dimension": 55
+    },
+    {
+      "sector": "adj_SO5",
+      "SO11_dim": 1,
+      "Spin5_dim": 10,
+      "dimension": 10
+    },
+    {
+      "sector": "vector_vector",
+      "SO11_dim": 11,
+      "Spin5_dim": 5,
+      "dimension": 55
+    },
+    {
+      "sector": "spinor_spinor",
+      "SO11_dim": 32,
+      "Spin5_dim": 4,
+      "dimension": 128
+    }
+  ],
+  "SO10xSpin5_E8_decomposition": [
+    {
+      "sector": "so10_adj",
+      "SO10_dim": 45,
+      "Spin5_dim": 1,
+      "dim": 45,
+      "spinorial_matter": false
+    },
+    {
+      "sector": "so10_vector_from_SO11_adj",
+      "SO10_dim": 10,
+      "Spin5_dim": 1,
+      "dim": 10,
+      "spinorial_matter": false
+    },
+    {
+      "sector": "so5_adj",
+      "SO10_dim": 1,
+      "Spin5_dim": 10,
+      "dim": 10,
+      "spinorial_matter": false
+    },
+    {
+      "sector": "so10_vector_cross_SO5_vector",
+      "SO10_dim": 10,
+      "Spin5_dim": 5,
+      "dim": 50,
+      "spinorial_matter": false
+    },
+    {
+      "sector": "so10_singlet_cross_SO5_vector",
+      "SO10_dim": 1,
+      "Spin5_dim": 5,
+      "dim": 5,
+      "spinorial_matter": false
+    },
+    {
+      "sector": "so10_chiral16",
+      "SO10_dim": 16,
+      "Spin5_dim": 4,
+      "dim": 64,
+      "spinorial_matter": true
+    },
+    {
+      "sector": "so10_antichiral16bar",
+      "SO10_dim": 16,
+      "Spin5_dim": 4,
+      "dim": 64,
+      "spinorial_matter": true
+    }
+  ],
+  "so10_chiral_matter_multiplet": "(16,4) + (16bar,4), dimensionality 64+64=128",
+  "su5_content": [
+    {
+      "so10": "16",
+      "parts": {
+        "10": 10,
+        "5bar": 5,
+        "1": 1
+      },
+      "lorentz_spin_dim": 4
+    },
+    {
+      "so10": "16bar",
+      "parts": {
+        "10bar": 10,
+        "5": 5,
+        "1": 1
+      },
+      "lorentz_spin_dim": 4
+    }
+  ],
+  "su5_complex_rep_net_chirality_by_Lorentz_spin_dim": {
+    "10_vs_10bar": 0,
+    "5bar_vs_5": 0
+  },
+  "physical_consequence": "Unprojected E8 spinorial matter sector is vectorlike as a complex Spin10/SU5 gauge representation: every 16 appears with its conjugate 16bar carrying the same finite Spin5 spinorial 4. The bare Lie embedding does not select a physical chiral generation or 3 families.",
+  "requirement": "Obtain a specified chirality-selective spectrum via 4D spacetime Weyl structure, orbifold/localized defects, index-theoretic flux, boundary projection, or equivalent dynamical mechanism. Check consistency with gauge anomalies, CPT and Lorentz representation, not by simply deleting the 16bar summand.",
+  "caveat": "A vectorlike compact internal representation does not alone rule out chiral 4D physics after dimensional reduction or projection. 4 is the dimension of ONE irreducible spin representation of finite Lorentz, NOT 4 independently observed families; no fermion masses or anomalies evaluated."
+}

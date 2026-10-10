@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source_formula": "alpha_inv_W33 = 137 + 1ᵀ M⁻¹ 1, M=(k−1)[(A−2I)²+I], W33 k=12 and A1=12*1",
+  "M_ones_eigenvalue": 1111,
+  "ones_vector_norm_squared": 40,
+  "correction_exact_fraction": "40/1111",
+  "alpha_inv_W33_exact_fraction": "152247/1111",
+  "alpha_inv_W33_decimal": "137.036003600360036003600360036003600360036003600360036003600",
+  "CODATA_2022_alpha_inv": "137.035999177",
+  "CODATA_2022_1sigma_absolute": "0.000000021",
+  "absolute_difference": "0.000004423360036003600360036003600360036003600360036003600",
+  "discrepancy_in_CODATA_standard_uncertainties": "210.636192190647636192190647636192190647636192190647619047619",
+  "authoritative_reference": "CODATA recommended values of the fundamental physical constants: 2022, Reviews of Modern Physics 97 (2025) 025002, https://physics.nist.gov/cuu/pdf/RevModPhys.97.025002.pdf",
+  "conclusion": "The graph rational is EXACT mathematics and numerically close at parts per 1e8, but differs from the CODATA 2022 empirical inverse fine structure constant by ~211 reported sigma. Treating the raw equality as an accurate/falsifiable physical prediction is scientifically untenable without independent derived radiative/scale corrections with error budget and no ex post fitting.",
+  "limitations": "The source formula by itself does not specify physical renormalization scheme, momentum scale, radiative corrections, a gauge field or a dynamical derivation of electric charge. This failure of the naive equality does not disprove other physics that may someday arise from W33."
+}

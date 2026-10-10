@@ -1,0 +1,350 @@
+{
+  "status": "PASS",
+  "generator": "Round31 EXACT cyclic degree17 voltage data, interpreted as integer Z-valued 1-cochain then reduced modulo p for each covering degree. These are DIFFERENT covers from independent earlier degree83 cover.",
+  "winding_cycle_flux_gcd": 1,
+  "first_absolute_winding_fluxes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13
+  ],
+  "coefficient_D_of_k_squared_band": 28.088357400780147,
+  "coefficient_checks_by_small_momentum": [
+    28.05318793350331,
+    28.08132104714964,
+    28.088357400780147
+  ],
+  "exact_1D_tower_argument": "The fixed connected integer-voltage cover is a graph periodic over deck group Z; finite quotients have Z_p decks. Floquet Laplacian is an 80x80 analytic 1-parameter Hermitian matrix L(k). Its bottom simple band is \u03bb0(k)=Dk\u00b2+O(k4), D>0 by connected nontrivial winding flux, other Bloch bands remain gapped at k=0. Heat kernel per cell of the infinite cover ~const t^-1/2, so running d_s(t)->1 at long time. A finite p quotient ultimately has d_s->0, but an intermediate 1D window widens as p grows.",
+  "spectral_dimension_tower": [
+    {
+      "cover_degree": 17,
+      "vertices": 1360,
+      "first_positive_gap": 0.6719405223809469,
+      "longest_running_dimension_near1": {
+        "start_t": 0.10748502514263064,
+        "end_t": 0.19148363420268277,
+        "span_ratio": 1.7814912723757335,
+        "length_points": 17
+      },
+      "longest_running_dimension_near3": {
+        "start_t": 0.7546454305735438,
+        "end_t": 1.0826367338740541,
+        "span_ratio": 1.434629681718514,
+        "length_points": 11
+      },
+      "samples": [
+        {
+          "t": 2.0,
+          "heat_trace": 0.02327754326803311,
+          "running_spectral_dimension": 4.345073687748005
+        },
+        {
+          "t": 5.0,
+          "heat_trace": 0.0020381758717461364,
+          "running_spectral_dimension": 5.491507009347772
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.0007585300237929562,
+          "running_spectral_dimension": 0.472099814388546
+        },
+        {
+          "t": 20.0,
+          "heat_trace": 0.0007353081898577075,
+          "running_spectral_dimension": 0.0005523415427292031
+        },
+        {
+          "t": 50.0,
+          "heat_trace": 0.0007352941176471073,
+          "running_spectral_dimension": 8.745384918957406e-13
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 0.0007352941176471354,
+          "running_spectral_dimension": -2.082043239819461e-13
+        },
+        {
+          "t": 200.0,
+          "heat_trace": 0.000735294117647212,
+          "running_spectral_dimension": -4.1640864796389797e-13
+        },
+        {
+          "t": 400.0,
+          "heat_trace": 0.000735294117647365,
+          "running_spectral_dimension": -8.32817295927796e-13
+        },
+        {
+          "t": 800.0,
+          "heat_trace": 0.0007352941176476713,
+          "running_spectral_dimension": -1.6656345918555919e-12
+        }
+      ]
+    },
+    {
+      "cover_degree": 31,
+      "vertices": 2480,
+      "first_positive_gap": 0.548105679790944,
+      "longest_running_dimension_near1": {
+        "start_t": 0.10748502514263064,
+        "end_t": 0.19148363420268277,
+        "span_ratio": 1.7814912723757335,
+        "length_points": 17
+      },
+      "longest_running_dimension_near3": {
+        "start_t": 0.7546454305735438,
+        "end_t": 1.0826367338740541,
+        "span_ratio": 1.434629681718514,
+        "length_points": 11
+      },
+      "samples": [
+        {
+          "t": 2.0,
+          "heat_trace": 0.023282856501230124,
+          "running_spectral_dimension": 4.345749799848027
+        },
+        {
+          "t": 5.0,
+          "heat_trace": 0.001864960862411519,
+          "running_spectral_dimension": 6.355560831739251
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.0004390307310502807,
+          "running_spectral_dimension": 1.1336539542802484
+        },
+        {
+          "t": 20.0,
+          "heat_trace": 0.00040327954679473095,
+          "running_spectral_dimension": 0.003299334139053717
+        },
+        {
+          "t": 50.0,
+          "heat_trace": 0.00040322580645301976,
+          "running_spectral_dimension": 1.9326574718812393e-10
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 0.0004032258064516549,
+          "running_spectral_dimension": -2.0820432362402212e-13
+        },
+        {
+          "t": 200.0,
+          "heat_trace": 0.0004032258064516969,
+          "running_spectral_dimension": -4.1640864796389797e-13
+        },
+        {
+          "t": 400.0,
+          "heat_trace": 0.0004032258064517808,
+          "running_spectral_dimension": -8.32817295927796e-13
+        },
+        {
+          "t": 800.0,
+          "heat_trace": 0.00040322580645194873,
+          "running_spectral_dimension": -1.6656345918555919e-12
+        }
+      ]
+    },
+    {
+      "cover_degree": 67,
+      "vertices": 5360,
+      "first_positive_gap": 0.21938571325546563,
+      "longest_running_dimension_near1": {
+        "start_t": 0.10748502514263064,
+        "end_t": 0.19148363420268277,
+        "span_ratio": 1.7814912723757335,
+        "length_points": 17
+      },
+      "longest_running_dimension_near3": {
+        "start_t": 0.7546454305735438,
+        "end_t": 1.0826367338740541,
+        "span_ratio": 1.434629681718514,
+        "length_points": 11
+      },
+      "samples": [
+        {
+          "t": 2.0,
+          "heat_trace": 0.02325819909171438,
+          "running_spectral_dimension": 4.356143258727957
+        },
+        {
+          "t": 5.0,
+          "heat_trace": 0.0017547179209743751,
+          "running_spectral_dimension": 6.867411846525245
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.0002624414806039283,
+          "running_spectral_dimension": 2.530647671534986
+        },
+        {
+          "t": 20.0,
+          "heat_trace": 0.0001912510484172151,
+          "running_spectral_dimension": 0.21891005704414115
+        },
+        {
+          "t": 50.0,
+          "heat_trace": 0.00018657359053861805,
+          "running_spectral_dimension": 0.0007556544858971099
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 0.0001865671642898028,
+          "running_spectral_dimension": 2.6029414059021064e-08
+        },
+        {
+          "t": 200.0,
+          "heat_trace": 0.00018656716417914335,
+          "running_spectral_dimension": -4.1639320618270993e-13
+        },
+        {
+          "t": 400.0,
+          "heat_trace": 0.00018656716417918216,
+          "running_spectral_dimension": -8.32817295927796e-13
+        },
+        {
+          "t": 800.0,
+          "heat_trace": 0.00018656716417925987,
+          "running_spectral_dimension": -1.6656345918555919e-12
+        }
+      ]
+    },
+    {
+      "cover_degree": 127,
+      "vertices": 10160,
+      "first_positive_gap": 0.06653502711549386,
+      "longest_running_dimension_near1": {
+        "start_t": 14.554905980239853,
+        "end_t": 34.60867343937812,
+        "span_ratio": 2.3778012366664423,
+        "length_points": 25
+      },
+      "longest_running_dimension_near3": {
+        "start_t": 0.7546454305735438,
+        "end_t": 1.0826367338740541,
+        "span_ratio": 1.434629681718514,
+        "length_points": 11
+      },
+      "samples": [
+        {
+          "t": 2.0,
+          "heat_trace": 0.02325819018075251,
+          "running_spectral_dimension": 4.3561498570403785
+        },
+        {
+          "t": 5.0,
+          "heat_trace": 0.0017537846683280942,
+          "running_spectral_dimension": 6.8752724264263465
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.0002531284596568429,
+          "running_spectral_dimension": 2.822694764972365
+        },
+        {
+          "t": 20.0,
+          "heat_trace": 0.00015210606255060407,
+          "running_spectral_dimension": 1.0209777053956912
+        },
+        {
+          "t": 50.0,
+          "heat_trace": 0.00010549516342834744,
+          "running_spectral_dimension": 0.4460882463397114
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 9.867903493751131e-05,
+          "running_spectral_dimension": 0.034230422291891514
+        },
+        {
+          "t": 200.0,
+          "heat_trace": 9.842552417397108e-05,
+          "running_spectral_dimension": 8.850745500201405e-05
+        },
+        {
+          "t": 400.0,
+          "heat_trace": 9.842519685097895e-05,
+          "running_spectral_dimension": 2.935092047582083e-10
+        },
+        {
+          "t": 800.0,
+          "heat_trace": 9.842519685047568e-05,
+          "running_spectral_dimension": -1.66563459022793e-12
+        }
+      ]
+    },
+    {
+      "cover_degree": 257,
+      "vertices": 20560,
+      "first_positive_gap": 0.01665649647624612,
+      "longest_running_dimension_near1": {
+        "start_t": 14.554905980239853,
+        "end_t": 141.40677558906827,
+        "span_ratio": 9.715402887593095,
+        "length_points": 64
+      },
+      "longest_running_dimension_near3": {
+        "start_t": 0.7546454305735438,
+        "end_t": 1.0826367338740541,
+        "span_ratio": 1.434629681718514,
+        "length_points": 11
+      },
+      "samples": [
+        {
+          "t": 2.0,
+          "heat_trace": 0.023258190180752304,
+          "running_spectral_dimension": 4.356149857040671
+        },
+        {
+          "t": 5.0,
+          "heat_trace": 0.0017537846544591947,
+          "running_spectral_dimension": 6.87527263949057
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.0002531231505855186,
+          "running_spectral_dimension": 2.823059764929284
+        },
+        {
+          "t": 20.0,
+          "heat_trace": 0.00015171988986864115,
+          "running_spectral_dimension": 1.0494186429668206
+        },
+        {
+          "t": 50.0,
+          "heat_trace": 9.47869294089777e-05,
+          "running_spectral_dimension": 1.014544011870377
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 6.717567526877149e-05,
+          "running_spectral_dimension": 0.9403032220955462
+        },
+        {
+          "t": 200.0,
+          "heat_trace": 5.211564898402222e-05,
+          "running_spectral_dimension": 0.44465567098048947
+        },
+        {
+          "t": 400.0,
+          "heat_trace": 4.876243400025965e-05,
+          "running_spectral_dimension": 0.03396763872648865
+        },
+        {
+          "t": 800.0,
+          "heat_trace": 4.863829113115243e-05,
+          "running_spectral_dimension": 8.703072533365407e-05
+        }
+      ]
+    }
+  ],
+  "relativistic_warning": "For H=tL, low band energy E(k)-E(0)\u223ctDk\u00b2, not Lorentz massless E=c|k|. Dynamic exponent z=2. The incidence W33 graph plus one deck winding coordinate cannot by itself yield isotropic three-dimensional Lorentzian massless propagation.",
+  "limits": "Proves 1D only for the FIXED integer-voltage one-generator tower and simple unweighted Laplacian; p-dependent voltage families, nonabelian deck groups, multiple independent deck coordinates, interacting ground states and altered Hamiltonians can behave differently."
+}

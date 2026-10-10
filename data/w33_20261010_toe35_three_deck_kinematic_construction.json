@@ -1,0 +1,272 @@
+{
+  "status": "PASS",
+  "three_selected_fundamental_chord_edge_indices": [
+    59,
+    93,
+    139
+  ],
+  "edge_flux_map": "All 160 edges carry 0\u2208Z\u00b3 except 3 selected spanning-tree chords carrying +e1,+e2,+e3. Fundamental cycle winding vectors span Z\u00b3 integrally; all finite Z_p\u00b3 quotients connected.",
+  "positive_diffusion_tensor_D3": [
+    [
+      0.006328081168624471,
+      7.812569180028119e-05,
+      7.81257167772405e-05
+    ],
+    [
+      7.812569180028119e-05,
+      0.006328081170068826,
+      -0.0002343677316632496
+    ],
+    [
+      7.81257167772405e-05,
+      -0.0002343677316632496,
+      0.006328081187945073
+    ]
+  ],
+  "diffusion_tensor_eigenvalues": [
+    0.0060498404592138014,
+    0.006371954156754372,
+    0.006562448910670201
+  ],
+  "asymptotic_theorem": "An infinite connected finite-range Z\u00b3-periodic graph whose fundamental deck winding spans Z\u00b3 integrally has a simple zero bottom Bloch band \u03bb0(k)=k\u1d40Dk+O(|k|4), with D positive definite. The integrated low-energy density scales E^(3/2) and per-cell heat trace scales t^(-3/2), hence diffusion spectral dimension asymptotically 3. Finite Z_p\u00b3 quotients return to d_s=0 at t\u226bp\u00b2/D.",
+  "tested_finite_quotients": [
+    {
+      "degree_per_axis": 3,
+      "vertices": 2160,
+      "spectral_gap": 0.019845452847795406,
+      "near3_diffusion_plateau": {
+        "start_t": 0.7345969969797418,
+        "end_t": 1.1377288654574373,
+        "span_ratio": 1.548779630375773,
+        "length_points": 8
+      },
+      "near1_diffusion_plateau": {
+        "start_t": 0.1058440647315945,
+        "end_t": 0.18575430546851376,
+        "span_ratio": 1.7549808384585408,
+        "length_points": 10
+      },
+      "dimension_samples": [
+        {
+          "t": 3.0,
+          "heat_trace": 0.014253136066209657,
+          "running_spectral_dimension": 2.149838003703347
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.008469932546296475,
+          "running_spectral_dimension": 0.7500784555872583
+        },
+        {
+          "t": 30.0,
+          "heat_trace": 0.00425235173664086,
+          "running_spectral_dimension": 1.8834582830684519
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 0.0009530189488200681,
+          "running_spectral_dimension": 2.5389986123334656
+        },
+        {
+          "t": 300.0,
+          "heat_trace": 0.0004702076833738657,
+          "running_spectral_dimension": 0.18430526253588334
+        },
+        {
+          "t": 1000.0,
+          "heat_trace": 0.00046296296964575825,
+          "running_spectral_dimension": 5.728883819152362e-07
+        },
+        {
+          "t": 3000.0,
+          "heat_trace": 0.0004629629629644088,
+          "running_spectral_dimension": -6.246129719448522e-12
+        },
+        {
+          "t": 10000.0,
+          "heat_trace": 0.0004629629629677825,
+          "running_spectral_dimension": -2.08204323981949e-11
+        }
+      ]
+    },
+    {
+      "degree_per_axis": 5,
+      "vertices": 10000,
+      "spectral_gap": 0.008920936665319677,
+      "near3_diffusion_plateau": {
+        "start_t": 0.7345969969797418,
+        "end_t": 1.1377288654574373,
+        "span_ratio": 1.548779630375773,
+        "length_points": 8
+      },
+      "near1_diffusion_plateau": {
+        "start_t": 0.1058440647315945,
+        "end_t": 0.18575430546851376,
+        "span_ratio": 1.7549808384585408,
+        "length_points": 10
+      },
+      "dimension_samples": [
+        {
+          "t": 3.0,
+          "heat_trace": 0.014253136063508776,
+          "running_spectral_dimension": 2.1498380095789718
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.00846957898163389,
+          "running_spectral_dimension": 0.7505744908082985
+        },
+        {
+          "t": 30.0,
+          "heat_trace": 0.004230828669051118,
+          "running_spectral_dimension": 1.9189197720643167
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 0.0007883077615340129,
+          "running_spectral_dimension": 3.4706894877703247
+        },
+        {
+          "t": 300.0,
+          "heat_trace": 0.0001476273258725272,
+          "running_spectral_dimension": 1.9855751578072172
+        },
+        {
+          "t": 1000.0,
+          "heat_trace": 0.00010008015830827204,
+          "running_spectral_dimension": 0.014293938934692085
+        },
+        {
+          "t": 3000.0,
+          "heat_trace": 0.00010000000000174187,
+          "running_spectral_dimension": 7.589491025249347e-10
+        },
+        {
+          "t": 10000.0,
+          "heat_trace": 0.00010000000000104102,
+          "running_spectral_dimension": -2.08204323981949e-11
+        }
+      ]
+    },
+    {
+      "degree_per_axis": 7,
+      "vertices": 27440,
+      "spectral_gap": 0.0048166074471809525,
+      "near3_diffusion_plateau": {
+        "start_t": 0.7345969969797418,
+        "end_t": 1.1377288654574373,
+        "span_ratio": 1.548779630375773,
+        "length_points": 8
+      },
+      "near1_diffusion_plateau": {
+        "start_t": 0.1058440647315945,
+        "end_t": 0.18575430546851376,
+        "span_ratio": 1.7549808384585408,
+        "length_points": 10
+      },
+      "dimension_samples": [
+        {
+          "t": 3.0,
+          "heat_trace": 0.014253136063508781,
+          "running_spectral_dimension": 2.149838009578959
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.008469578981371368,
+          "running_spectral_dimension": 0.7505744917699313
+        },
+        {
+          "t": 30.0,
+          "heat_trace": 0.0042308166086340955,
+          "running_spectral_dimension": 1.9189603641658182
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 0.0007858354387621723,
+          "running_spectral_dimension": 3.5009686819358246
+        },
+        {
+          "t": 300.0,
+          "heat_trace": 0.00011995652386546488,
+          "running_spectral_dimension": 3.08129428939826
+        },
+        {
+          "t": 1000.0,
+          "heat_trace": 3.8241630974893904e-05,
+          "running_spectral_dimension": 0.4602822466921398
+        },
+        {
+          "t": 3000.0,
+          "heat_trace": 3.644326464317615e-05,
+          "running_spectral_dimension": 9.195285801573602e-05
+        },
+        {
+          "t": 10000.0,
+          "heat_trace": 3.644314868842602e-05,
+          "running_spectral_dimension": -2.0820431700505475e-11
+        }
+      ]
+    },
+    {
+      "degree_per_axis": 9,
+      "vertices": 58320,
+      "spectral_gap": 0.0029807164405823983,
+      "near3_diffusion_plateau": {
+        "start_t": 296.2246477302776,
+        "end_t": 589.0827717876176,
+        "span_ratio": 1.9886352344454372,
+        "length_points": 12
+      },
+      "near1_diffusion_plateau": {
+        "start_t": 0.1058440647315945,
+        "end_t": 0.18575430546851376,
+        "span_ratio": 1.7549808384585408,
+        "length_points": 10
+      },
+      "dimension_samples": [
+        {
+          "t": 3.0,
+          "heat_trace": 0.01425313606350878,
+          "running_spectral_dimension": 2.1498380095789593
+        },
+        {
+          "t": 10.0,
+          "heat_trace": 0.008469578981371352,
+          "running_spectral_dimension": 0.7505744917699452
+        },
+        {
+          "t": 30.0,
+          "heat_trace": 0.004230816607413431,
+          "running_spectral_dimension": 1.918960371160939
+        },
+        {
+          "t": 100.0,
+          "heat_trace": 0.0007858200201510827,
+          "running_spectral_dimension": 3.501258006304195
+        },
+        {
+          "t": 300.0,
+          "heat_trace": 0.00011810202663986199,
+          "running_spectral_dimension": 3.2273190925478272
+        },
+        {
+          "t": 1000.0,
+          "heat_trace": 2.2918444563890766e-05,
+          "running_spectral_dimension": 1.6499107086975318
+        },
+        {
+          "t": 3000.0,
+          "heat_trace": 1.7160232723603103e-05,
+          "running_spectral_dimension": 0.01402787907121436
+        },
+        {
+          "t": 10000.0,
+          "heat_trace": 1.714677640622584e-05,
+          "running_spectral_dimension": 1.976917834215053e-11
+        }
+      ]
+    }
+  ],
+  "physical_boundary": "This constructs 3D kinematic DIFFUSION, not physical emergent 3+1D spacetime. Three independent macroscopic deck coordinates and port assignments are imposed from outside; no dynamical selector, local Lorentz symmetry, Einstein field equations or massless E=c|k| photon dispersion. The same k\u00b2 Bloch band yields z=2 nonrelativistic hopping.",
+  "group_contrast": "Round35 connected one-generator Z tower has d_s\u21921, illustrating that the asymptotic dimension follows chosen abelian deck RANK, not uniquely native finite W33 geometry."
+}
