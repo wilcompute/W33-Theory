@@ -14,7 +14,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'analysis'))
 from w33_20261009_toe26_css_matching_family import wilson
 from w33_20261010_toe35_three_deck_kinematic_construction import spanning_chords,matrix
 OUT=ROOT/'data/w33_20261010_toe37_quantum_graph_rank_selector.json'
-def run():
+def run(write=True):
  edges,D,C=wilson();cs=spanning_chords(edges);selected=[cs[i] for i in (5,30,65)]
  p=3
  spectra={}
@@ -53,6 +53,6 @@ def run():
    tested_ground_superpositions=cases,
    no_go='Rank selection depends on external masses, normalization, rank chemical potential and global transition amplitudes, none fixed by W33. Gaussian determinant depends on measure and counterterms. A three-sector Hilbert-space toy cannot establish spontaneous symmetry breaking, gravity, or stable thermodynamic 3D.',
    possible_use='Defines a repeatable effective-sector model and quantifies sensitivity to rank cost and scalar field mass rather than asserting unexplained 3D preference.')
- OUT.write_text(json.dumps(out,indent=2)+'\n')
+ if write:OUT.write_text(json.dumps(out,indent=2)+'\n')
  return out
 if __name__=='__main__':run()

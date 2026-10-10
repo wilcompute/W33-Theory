@@ -28,7 +28,7 @@ def rep4(perm):
   a=v[:5]
   G[:,i]=(a[:4]-a[4])%3
  return G
-def run():
+def run(write=True):
  gens=[rep4(p) for p in matrices()]
  assert len(gens)==4
  Gram=(np.eye(4,dtype=np.int64)+np.ones((4,4),dtype=np.int64))%3
@@ -66,6 +66,6 @@ def run():
    actual_nontrivial_Heisenberg_central_extension_compatible=bool(invariant_alt>0),
    conceptual_boundary='This is the 360-element A6 quadratic Minkowski quotient, not the faithful 720-element spinor Di. A nonabelian class-two F3 central extension E with commutator E/Z x E/Z -> Z3 requires invariant nonzero alternating form. If invariant dimension is0, no such construction for THIS A6 action with centre fixed. The earlier NON-SPLIT abelian S extension Z3.M does not need an alternating commutator and is not ruled out. No E8 embedding of full translations tested by this module calculation.',
    Lorentz_spinorial_warning='To represent a nontrivial spinorial double-cover action on M, its centre acts trivially on M by projection A6; a distinct spinor representation handles fermions.')
- OUT.write_text(json.dumps(out,indent=2)+'\n')
+ if write:OUT.write_text(json.dumps(out,indent=2)+'\n')
  return out
 if __name__=='__main__':run()

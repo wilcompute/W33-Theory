@@ -19,7 +19,7 @@ def rank3(A):
    if row!=rk and a[row,col]:a[row]=(a[row]-a[row,col]*a[rk])%3
   rk+=1
  return rk
-def run():
+def run(write=True):
  edges,D,C=wilson()
  F=np.zeros((40,40),dtype=np.int64)
  for p,l in edges:F[p,l-40]=1
@@ -50,7 +50,7 @@ def run():
    extra_W33_cover_Euler_char_formula='80p-160p=-80p for any degree-p covering of the Levi graph',
    contrast='The -80p vertex/edge de Rham index is an Euler-cochain count, NOT 80p Weyl fermions or 3 families. The native 40x40 bipartite fermionic point-line hopping has EXACTLY balanced 15+15 zero modes and index0. Round36 rectangular Q index+1 requires an externally unbalanced boundary.',
    no_go_scope='No net chirality from finite balanced point/line incidence hopping or finite native graph cochain index alone. Nontrivial chiral edge/bulk index with extra geometry, flux, nonlinear interactions and boundary conditions remains possible; those have not been derived from W33.')
- OUT.write_text(json.dumps(out,indent=2)+'\n')
+ if write:OUT.write_text(json.dumps(out,indent=2)+'\n')
  print('TOE37 index 0 singulars',sings,'F3 rank',r3,'Euler',(H0,H1),flush=True)
  return out
 if __name__=='__main__':run()

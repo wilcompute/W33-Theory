@@ -14,7 +14,7 @@ from w33_20261009_toe26_css_matching_family import wilson
 from w33_20261010_toe35_three_deck_kinematic_construction import spanning_chords
 from w33_20261010_toe36_incidence_relativistic_walk import gradient
 OUT=ROOT/'data/w33_20261010_toe37_flat_band_locality_tradeoff.json'
-def run():
+def run(write=True):
  edges,D,C=wilson();ch=spanning_chords(edges)
  flux=np.zeros((160,3),int)
  for dim,j in enumerate([ch[i] for i in (5,30,65)]):flux[j,dim]=1
@@ -61,7 +61,7 @@ def run():
    Hnonlocal='H=[[0,B†],[B,m(I-P)]], P=B(B†B)^-1B† for invertible L(k), shifts cycle modes to m and preserves ±sqrt λ. P is dense, momentum dependent, and singular in the zero-momentum limit because L(0) has a zero mode.',
    gauge_candidate='A physical quotient by ker B†, leaving C^80 ⊕ im B, also needs a gauge/constraint principle and local implementation; simply deleting the unwanted kernel is an imposed global operation.',
    caveat='Not a universal no-go for every possible local coupled-ancilla completion or gauge theory. We only falsify these TWO SIMPLE methods as simultaneous locality+flat-band-removal+z1 solutions.')
- OUT.write_text(json.dumps(result,indent=2)+'\n')
+ if write:OUT.write_text(json.dumps(result,indent=2)+'\n')
  print('TOE37 flat-band tradeoff ratios',ratios,'projector density',cases[0]['fraction_nonzero_offdiagonal_entries_in_required_edge_projector'],flush=True)
  return result
 if __name__=='__main__':run()

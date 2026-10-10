@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'analysis'))
 from w33_20261009_toe26_css_matching_family import wilson
 from w33_poisson_kemeny_green_kernel import poisson_kemeny_green_kernel_packet
 OUT=ROOT/'data/w33_20261010_toe37_maxwell_normalization_audit.json'
-def run():
+def run(write=True):
  ed,D,C=wilson()
  A=np.zeros((40,40),dtype=np.int64)
  lines=[[] for i in range(40)]
@@ -68,7 +68,7 @@ def run():
   sample_pair_energies=samples,
   gauge_coupling_obstruction='W33 fixes relative Green function and shell ratio 13/14 in the chosen identical-conductance graph model, but κ is arbitrary and dimensionful physical distance/charge normalizations are missing. Hence no parameter-free alpha(0), quantum electron vacuum polarization, beta function, or observed Coulomb law follows. Rescaling κ continuously changes the absolute interaction while leaving all graph counts fixed.',
   physics_boundary='An experimentally falsifiable resistor-network ratio would require 40 nodes connected according to W33 with equal measured conductance; that is a synthetic classical network, NOT a QED charge measurement. Native graph combinatorics alone cannot set physical electromagnetic alpha.')
- OUT.write_text(json.dumps(out,indent=2)+'\n')
+ if write:OUT.write_text(json.dumps(out,indent=2)+'\n')
  print('TOE37 MAXWELL resistance',adj,nonadj,'ratio',ratio,'kappa free',flush=True)
  return out
 if __name__=='__main__':run()

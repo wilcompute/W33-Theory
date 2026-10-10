@@ -73,6 +73,10 @@ For neutral point charges ±1, integrating out φ gives pair action magnitude `R
 
 An equal-conductance 40-node synthetic resistor network could verify this conditional shell ratio, but this is a classical graph test, NOT a measurement of QED coupling.
 
+## Reproducibility discipline
+
+Each producer accepts `run(write=False)` for side-effect-free regression evaluation. Frozen JSON certificates are preserved during tests. Exact group/rank/fraction values compare exactly; floating-point eigenvalues, eigenvectors, residual norms and probabilities compare recursively with explicit relative tolerance 1e−8 and absolute tolerance 1e−10, avoiding false divergences from BLAS execution-order rounding. All five Round37 focused tests pass under constrained BLAS threading. This is a numerical reproducibility improvement, not a changed mathematical or physics claim.
+
 ## Integrative verdict
 
 - Native balanced graph index **0**, 15+15 exact point-line null modes: chirality needs a physically derived boundary/index, and Pass11864 rules out Weyl helicity for the original finite Lorentz Di carrier.
