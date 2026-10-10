@@ -1,0 +1,363 @@
+{
+  "pass_id": 11899,
+  "cp_violation_toward_cusp": [
+    0.004274491439421935,
+    2.6281870755040515e-05,
+    1.4027137373862075e-07
+  ],
+  "group_order_on_even5": 51840,
+  "unitary_err": 6.8833827526759706e-15,
+  "conj_normalises": true,
+  "special_points": 13805,
+  "orbits": [
+    {
+      "rep": 23,
+      "orbit": 40,
+      "stabiliser": 648,
+      "cp_overlap": 1.0,
+      "contains_infinity_cusp": true,
+      "fixed_w33_points": 0,
+      "fixed_w33_lines": 1,
+      "fixed_splits": 0,
+      "flag": false
+    },
+    {
+      "rep": 4,
+      "orbit": 45,
+      "stabiliser": 576,
+      "cp_overlap": 1.0000000000000002,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 0,
+      "fixed_w33_lines": 0,
+      "fixed_splits": 1,
+      "flag": false,
+      "interior_point": [
+        [
+          -2.0000000000000004,
+          0.5773502691896256
+        ],
+        [
+          -1.387775001600022e-18,
+          -1.1547005383792515
+        ],
+        [
+          -7.165657892381218e-17,
+          1.1547005383792515
+        ],
+        [
+          -0.5000000000000002,
+          0.28867513459481287
+        ]
+      ],
+      "interior_ymin": 0.28867513459481287,
+      "interior_max_abs": 2.081665999466133
+    },
+    {
+      "rep": 0,
+      "orbit": 160,
+      "stabiliser": 162,
+      "cp_overlap": 1.0,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 1,
+      "fixed_w33_lines": 1,
+      "fixed_splits": 0,
+      "flag": true,
+      "interior_point": [
+        [
+          2.4968684104798773,
+          0.887366290960471
+        ],
+        [
+          -1.5004199073442743,
+          -0.8122900397622509
+        ],
+        [
+          -1.5024235680302094,
+          -0.8577129207742474
+        ],
+        [
+          1.496865760175428,
+          0.8873680358354776
+        ]
+      ],
+      "interior_ymin": 0.05236508213412244,
+      "interior_max_abs": 2.6498624103121378
+    },
+    {
+      "rep": 62,
+      "orbit": 216,
+      "stabiliser": 120,
+      "cp_overlap": 1.0,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 0,
+      "fixed_w33_lines": 0,
+      "fixed_splits": 0,
+      "flag": false,
+      "interior_point": [
+        [
+          -6.9013679752985885e-15,
+          1.290994448735789
+        ],
+        [
+          1.1213776147424382e-14,
+          -0.9341723589626718
+        ],
+        [
+          -4.0777866234765835e-15,
+          -0.35682208977311686
+        ],
+        [
+          -1.4999999999999998,
+          0.6454972243679027
+        ]
+      ],
+      "interior_ymin": 0.24655800006482487,
+      "interior_max_abs": 1.6329931618554518
+    },
+    {
+      "rep": 6,
+      "orbit": 240,
+      "stabiliser": 108,
+      "cp_overlap": 1.0000000000000002,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 1,
+      "fixed_w33_lines": 0,
+      "fixed_splits": 0,
+      "flag": false,
+      "interior_point": [
+        [
+          0.2520579801603349,
+          0.537465000922004
+        ],
+        [
+          0.15300296503589167,
+          -0.0245666230078602
+        ],
+        [
+          0.025796825583470524,
+          -0.17090986381817602
+        ],
+        [
+          -1.0149658472461338,
+          0.10576170110690775
+        ]
+      ],
+      "interior_ymin": 0.07627674658725207,
+      "interior_max_abs": 1.0204612724141418
+    },
+    {
+      "rep": 49,
+      "orbit": 540,
+      "stabiliser": 48,
+      "cp_overlap": 1.0,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 0,
+      "fixed_w33_lines": 0,
+      "fixed_splits": 1,
+      "flag": false,
+      "interior_point": [
+        [
+          1.3333333089054178,
+          0.8164965617923889
+        ],
+        [
+          -1.8047379059465394,
+          -0.8164965595119043
+        ],
+        [
+          -0.8619288182536773,
+          -0.8164965456967898
+        ],
+        [
+          0.6666667344571736,
+          1.2247448692608636
+        ]
+      ],
+      "interior_ymin": 0.05596765120165176,
+      "interior_max_abs": 1.9808446533878108
+    },
+    {
+      "rep": 29,
+      "orbit": 720,
+      "stabiliser": 36,
+      "cp_overlap": 0.9999999999999998,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 0,
+      "fixed_w33_lines": 1,
+      "fixed_splits": 1,
+      "flag": false,
+      "interior_point": [
+        [
+          -1.5000000014640862,
+          0.28867513359915975
+        ],
+        [
+          0.5000000000000001,
+          -0.2886751345948126
+        ],
+        [
+          0.5,
+          0.28867513459481287
+        ],
+        [
+          0.5000250539664871,
+          0.2886873993897448
+        ]
+      ],
+      "interior_ymin": 0.2886751335991598,
+      "interior_max_abs": 1.52752523290149
+    },
+    {
+      "rep": 50,
+      "orbit": 1620,
+      "stabiliser": 16,
+      "cp_overlap": 0.9999999999999998,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 0,
+      "fixed_w33_lines": 0,
+      "fixed_splits": 1,
+      "flag": false,
+      "interior_point": [
+        [
+          1.3333204772855707,
+          0.6666671139468642
+        ],
+        [
+          -0.288650903964804,
+          -0.4106780102428714
+        ],
+        [
+          0.28866393477982516,
+          0.7440214822056794
+        ],
+        [
+          0.3333565027776219,
+          0.3333304411474041
+        ]
+      ],
+      "interior_ymin": 0.127331489350286,
+      "interior_max_abs": 1.4907006862436414
+    },
+    {
+      "rep": 7,
+      "orbit": 2160,
+      "stabiliser": 12,
+      "cp_overlap": 1.0,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 1,
+      "fixed_w33_lines": 0,
+      "fixed_splits": 1,
+      "flag": false,
+      "interior_point": [
+        [
+          0.49999999999999956,
+          0.8660254037844393
+        ],
+        [
+          3.2920311074833735e-05,
+          -2.5265314083990017e-05
+        ],
+        [
+          -2.110797089261468e-12,
+          3.4747028422745153e-12
+        ],
+        [
+          0.6000000000000006,
+          0.19999999999999676
+        ]
+      ],
+      "interior_ymin": 0.19999999935359397,
+      "interior_max_abs": 1.0000000000000002
+    },
+    {
+      "rep": 25,
+      "orbit": 2880,
+      "stabiliser": 9,
+      "cp_overlap": 0.9999999999999998,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 1,
+      "fixed_w33_lines": 1,
+      "fixed_splits": 0,
+      "flag": true,
+      "interior_point": [
+        [
+          4.863576034131352e-16,
+          0.7778619134297187
+        ],
+        [
+          0.6736481776665078,
+          -0.3889309567148598
+        ],
+        [
+          -0.3711135994837677,
+          0.13507430374406612
+        ],
+        [
+          -1.1974654218172593,
+          0.542531787565606
+        ]
+      ],
+      "interior_ymin": 0.1098899726124784,
+      "interior_max_abs": 1.3146346172861565
+    },
+    {
+      "rep": 59,
+      "orbit": 5184,
+      "stabiliser": 5,
+      "cp_overlap": 0.9999999999999997,
+      "contains_infinity_cusp": false,
+      "fixed_w33_points": 0,
+      "fixed_w33_lines": 0,
+      "fixed_splits": 0,
+      "flag": false,
+      "interior_point": [
+        [
+          0.4999999999999999,
+          0.688190960235587
+        ],
+        [
+          0.49999969057604593,
+          -0.1624597440836954
+        ],
+        [
+          0.5000003094239545,
+          -0.16245995214921105
+        ],
+        [
+          -2.1015840333444853e-17,
+          0.8506508083520401
+        ]
+      ],
+      "interior_ymin": 0.5877852522922099,
+      "interior_max_abs": 0.8506508083520401
+    }
+  ],
+  "cusp_approach_defect": [
+    0.21132486540518702,
+    0.004122175505290926,
+    9.519150746539751e-07
+  ],
+  "cp_control_generic": [
+    0.9995145872162234,
+    0.9970665114903486,
+    0.9839762329889112,
+    0.9992596888598339,
+    0.9999771193405755
+  ],
+  "checks": {
+    "group_25920_projective": true,
+    "special_points_13805": true,
+    "eleven_orbits": true,
+    "cusps_are_the_40": true,
+    "cusp_approach": true,
+    "cusps_fix_one_w33_line": true,
+    "nodes_fix_one_split": true,
+    "flags_160": true,
+    "point_240_line_720": true,
+    "non_cusp_orbits_interior": true,
+    "all_special_cp_conserving": true,
+    "generic_kahler_cp_violating": true,
+    "cp_violation_suppressed_toward_cusp": true
+  },
+  "all_checks_pass": true
+}
