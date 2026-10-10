@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "SO10_content": "One complex chiral Weyl 16 decomposes to SU5 10+5bar+1, without its conjugate 16bar, provided boundary zero-mode selection is PHYSICALLY implemented.",
+  "interface_sites": 49,
+  "matrix_Q_shape": [
+    48,
+    49
+  ],
+  "mass_left": -0.7,
+  "mass_right": 0.7,
+  "root_at_site": 0,
+  "smallest_nonzero_singular_value": 0.5110401104364296,
+  "localized_profile_residual": 5.775178362556233e-17,
+  "one_wall_Q_index": 1,
+  "finite_square_closed_system_index": 0,
+  "normalized_probability_center": 0.6043677771171642,
+  "boundary_decay_ratio_exp_m": 0.4965853037914095,
+  "su5_anomaly_cubic_integer": 0,
+  "SM_U1_cubic_anomaly": "0",
+  "SM_gravitational_U1_mixed": "0",
+  "SU3sqU1_coeff": "0",
+  "SU2sqU1_coeff": "0",
+  "SU2_Witten_doublets": 4,
+  "key_caveat": "Rectangular Q carries an EXTERNALLY INSERTED one-site chiral imbalance and sign-changing domain-wall profile. A finite square periodic model has index0 and a mirror/boundary companion; no unpaired observed fermion or SO10 gauge dynamics derived from the W33/E8 finite geometry. Standard Model gauge anomalies cancelling for a 16 is established textbook group theory, not novel.",
+  "consistency_with_parallel": "Pass11855/11859 proved no purely E8 automorphism gives chirality; this construction uses extra geometric/boundary degrees of freedom, thus does not violate their no-go."
+}

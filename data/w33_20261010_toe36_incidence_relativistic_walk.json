@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "carrier": "same 3-generator W33 Levi cover from Round35; 80 base vertices 160 base edges",
+  "local_B": "For each oriented base incidence edge e=(a\u2192b) with deck flux f_e, B_ea=-1 and B_eb=e^{i k\u00b7f_e}, zero elsewhere.",
+  "local_chiral_H": "H=[[0,B\u2020],[B,0]] Hermitian 240\u00d7240 per Bloch cell, 4-neighbor vertex coupling to incident edges, 2-neighbor edge coupling to endpoints.",
+  "exact_H_squared": "H\u00b2=diag(B\u2020B,BB\u2020), B\u2020B=W33 voltage Laplacian L(k).",
+  "diffusion_tensor": [
+    [
+      0.006328096910459945,
+      7.812545893707071e-05,
+      7.812543865724948e-05
+    ],
+    [
+      7.812545893707071e-05,
+      0.00632809692901329,
+      -0.00023437036003256216
+    ],
+    [
+      7.812543865724948e-05,
+      -0.00023437036003256216,
+      0.0063280969880458345
+    ]
+  ],
+  "squared_acoustic_velocity_eigenvalues": [
+    0.006049854211091279,
+    0.006371969297865665,
+    0.006562467318562128
+  ],
+  "acoustic_velocity_eigenvalues": [
+    0.07778080875827455,
+    0.07982461586419107,
+    0.08100905701563331
+  ],
+  "directional_verified_dispersion": [
+    {
+      "k_direction": [
+        1,
+        0,
+        0
+      ],
+      "k_norm": 0.02,
+      "E_positive_nearest_zero": 0.0015909682213615768,
+      "linear_E_predicted": 0.0015909867265895019,
+      "measured_over_acoustic_prediction": 0.999988368710049,
+      "adjoint_matrix_identity_residual": 3.330785153093942e-19,
+      "zero_flat_edge_band_dimension": 80
+    },
+    {
+      "k_direction": [
+        0,
+        1,
+        0
+      ],
+      "k_norm": 0.02,
+      "E_positive_nearest_zero": 0.0015909682213615778,
+      "linear_E_predicted": 0.0015909867289218085,
+      "measured_over_acoustic_prediction": 0.999988367244117,
+      "adjoint_matrix_identity_residual": 3.330785153093942e-19,
+      "zero_flat_edge_band_dimension": 80
+    },
+    {
+      "k_direction": [
+        0,
+        0,
+        1
+      ],
+      "k_norm": 0.02,
+      "E_positive_nearest_zero": 0.001590968221361576,
+      "linear_E_predicted": 0.0015909867363426804,
+      "measured_over_acoustic_prediction": 0.9999883625798498,
+      "adjoint_matrix_identity_residual": 0.0,
+      "zero_flat_edge_band_dimension": 80
+    },
+    {
+      "k_direction": [
+        1,
+        1,
+        1
+      ],
+      "k_norm": 0.02,
+      "E_positive_nearest_zero": 0.001584423033033266,
+      "linear_E_predicted": 0.0015844263694953912,
+      "measured_over_acoustic_prediction": 0.999997894214468,
+      "adjoint_matrix_identity_residual": 9.927644260402432e-19,
+      "zero_flat_edge_band_dimension": 80
+    },
+    {
+      "k_direction": [
+        1,
+        2,
+        -1
+      ],
+      "k_norm": 0.02,
+      "E_positive_nearest_zero": 0.001613731560343387,
+      "linear_E_predicted": 0.001613739219186772,
+      "measured_over_acoustic_prediction": 0.9999952539770405,
+      "adjoint_matrix_identity_residual": 2.4455935161298715e-19,
+      "zero_flat_edge_band_dimension": 80
+    }
+  ],
+  "generic_flat_zero_modes": 80,
+  "zero_modes_at_k0": 82,
+  "spectral_dimension_isotropic_warning": "Three imposed deck axes produce 3D low-energy dispersion E\u00b1\u221d|k| but with nonidentical velocities; anisotropy not dynamically eliminated.",
+  "conceptual_achievement": "A LOCAL first-order-in-time, nearest-incidence linear square-root gives z=1 (wave-like) low-energy branch on W33-derived cover. It is a mathematical propagator candidate, not actual light or a Lorentzian quantum field.",
+  "physical_obstructions": "H has 80 exactly flat zero bands for generic k and 82 at k=0, owing to edge-cycle kernel. No physical fermionic antisymmetry, four Dirac gamma matrices, helicity/Weyl chirality, gauge constraint to remove zero bands, photons, Einstein equations or universal c derived. Proving a smooth 3D long-wavelength cone requires dealing with degeneracies and anisotropy."
+}

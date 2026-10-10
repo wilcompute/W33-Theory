@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "W33_alpha_inv_exact": "152247/1111",
+  "W33_alpha_inv": 137.03600360036003,
+  "CODATA22_Thomson_alpha_inv": 137.035999177,
+  "CODATA22_sigma": 2.1e-08,
+  "naive_discrepancy_in_sigma": 210.6361916633302,
+  "photon_one_loop_momentum_scheme": "On-shell-subtracted QED spacelike vacuum polarization, electron loop, Q\u00b2>0",
+  "exact_one_loop_formula": "alpha_inv(Q\u00b2) = alpha_inv(0) - (2/pi) integral_0^1 dx x(1-x) log[1 + (Q\u00b2/m_e\u00b2)x(1-x)]",
+  "sign": "Spacelike QED running ALWAYS makes alpha_inv(Q\u00b2) smaller than alpha_inv(0).",
+  "inferred_arbitrary_Q_over_me_to_match_CODATA_if_W33_is_Thomson_baseline": 0.014437817901870787,
+  "inferred_arbitrary_Q_keV": 7.37770979810927,
+  "smallQ_approximation_sqrt_15piDelta": 0.014437656678891476,
+  "independent_physics": "CODATA inverse alpha is Thomson/zero-momentum coupling, Q=0. Comparing W33 at Q=0 to CODATA at Q=0 leaves 210.6 sigma discrepancy. Selecting nonzero spacelike momentum Q merely to fit the number introduces an external unfixed parameter and changes the observable; it is NOT a parameter-free validation.",
+  "leading_beta_sign": "One-loop screening gives alpha running toward stronger coupling for spacelike Q, so positive delta alpha_inv from Q=0 is impossible. Any alternative scheme/electron-mass/UV boundary condition must be separately specified and derived before comparison, and tested on independent observables.",
+  "sources": [
+    "https://physics.nist.gov/cuu/pdf/RevModPhys.97.025002.pdf",
+    "https://qft.org/gauge-theories-standard-model/quantum-electrodynamics/vacuum-polarization-running-charge/"
+  ],
+  "scope": "One-loop only, electron contribution, fixed physical m_e and QED on-shell scheme. No derivation of photon gauge field, e, beta function or renormalization from W33 graph has been provided."
+}

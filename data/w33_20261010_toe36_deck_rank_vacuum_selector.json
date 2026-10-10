@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "selected_W33_cycle_chords": [
+    59,
+    93,
+    139
+  ],
+  "p": 3,
+  "rank_scenarios": [
+    {
+      "rank": 1,
+      "deck_type": "Z_3^1",
+      "vertices": 240,
+      "full_laplacian_gap": 0.019845452847795406,
+      "first_nontrivial_k_lowest_eigenvalue": 0.019845452847795406,
+      "Perron_adjacency_eigenvalue": 4,
+      "ground_one_free_boson": -4.0,
+      "ten_boson_free_ground_energy": -40.0,
+      "onsite_coherent_mean_field_energy_per_site": -0.75
+    },
+    {
+      "rank": 2,
+      "deck_type": "Z_3^2",
+      "vertices": 720,
+      "full_laplacian_gap": 0.019845452847795406,
+      "first_nontrivial_k_lowest_eigenvalue": 0.019845452847795406,
+      "Perron_adjacency_eigenvalue": 4,
+      "ground_one_free_boson": -4.0,
+      "ten_boson_free_ground_energy": -40.0,
+      "onsite_coherent_mean_field_energy_per_site": -0.75
+    },
+    {
+      "rank": 3,
+      "deck_type": "Z_3^3",
+      "vertices": 2160,
+      "full_laplacian_gap": 0.019845452847795406,
+      "first_nontrivial_k_lowest_eigenvalue": 0.019845452847795406,
+      "Perron_adjacency_eigenvalue": 4,
+      "ground_one_free_boson": -4.0,
+      "ten_boson_free_ground_energy": -40.0,
+      "onsite_coherent_mean_field_energy_per_site": -0.75
+    }
+  ],
+  "exact_free_boson_theorem": "Every connected 4-regular undirected graph (including these finite W33 deck lifts) has adjacency top eigenvalue exactly4 and a unique uniform Perron vector, so the hopping H=-tA single-particle ground energy is -4t, regardless of dimension. N noninteracting bosons have ground -4Nt; no spontaneous deck-rank preference.",
+  "coherent_uniform_Gross_Pitaevskii_energy": "At same density n on any 4-regular graph, onsite coherent-state mean-field energy per site -2t*n+(U/2)*n\u00b2 is independent of rank. This is a variational mean-field comparison, not exact many-body ground energy for U>0.",
+  "artificial_rank_chemical_potential": [
+    {
+      "explicit_added_cost_per_rank": -0.1,
+      "minimizing_deck_ranks": [
+        3
+      ],
+      "total_per_particle_energy_by_rank": [
+        -4.1,
+        -4.2,
+        -4.3
+      ]
+    },
+    {
+      "explicit_added_cost_per_rank": 0,
+      "minimizing_deck_ranks": [
+        1,
+        2,
+        3
+      ],
+      "total_per_particle_energy_by_rank": [
+        -4.0,
+        -4.0,
+        -4.0
+      ]
+    },
+    {
+      "explicit_added_cost_per_rank": 0.1,
+      "minimizing_deck_ranks": [
+        1
+      ],
+      "total_per_particle_energy_by_rank": [
+        -3.9,
+        -3.8,
+        -3.7
+      ]
+    }
+  ],
+  "obstruction": "A choice of deck rank cannot arise from this bare uniform free-boson energy functional; a finite graph model with r fixed does not even have a Hilbert-space operator that changes rank. A dynamical rank-changing graph Hamiltonian with locally specified move terms, entropy, normalization and a thermodynamic limit is an additional unproved input.",
+  "scope": "Exact 4-regular Perron theorem plus complete p3 spectral gaps; does not exclude interacting/quantum-graph ensembles, rank-dependent gauge flux energy or genuine dynamically emergent geometry."
+}
