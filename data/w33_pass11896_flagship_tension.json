@@ -1,0 +1,67 @@
+{
+  "pass_id": 11896,
+  "joint_multiplicities": {
+    "(1, 0)": 3,
+    "(-1, 0)": 2,
+    "(1, 1)": 1,
+    "(1, 2)": 1,
+    "(-1, 2)": 1,
+    "(-1, 1)": 1
+  },
+  "gauge_dim": 16,
+  "family_plane_states": 16,
+  "qutrit_plane_states": 14,
+  "family_block_types": {
+    "AAB": 6,
+    "Ace": 3,
+    "Adf": 3,
+    "Bcd": 2,
+    "Bef": 2
+  },
+  "block_labels": {
+    "(np.float64(1.0), 0.0)": "A",
+    "(np.float64(-1.0), 0.0)": "B",
+    "(np.float64(1.0), 2.094395)": "c",
+    "(np.float64(1.0), -2.094395)": "d",
+    "(np.float64(-1.0), -2.094395)": "e",
+    "(np.float64(-1.0), 2.094395)": "f"
+  },
+  "flat_points": {
+    "family_plane": [
+      {
+        "mu": 9.997050155501676e-12,
+        "unbroken": 2
+      },
+      {
+        "mu": 9.975586543764636e-12,
+        "unbroken": 2
+      },
+      {
+        "mu": 9.97619584606294e-12,
+        "unbroken": 2
+      }
+    ],
+    "qutrit_plane": [
+      {
+        "mu": 9.687004815365628e-12,
+        "unbroken": 4
+      },
+      {
+        "mu": 9.993678051702866e-12,
+        "unbroken": 4
+      },
+      {
+        "mu": 9.92788070251775e-12,
+        "unbroken": 4
+      }
+    ]
+  },
+  "checks": {
+    "flagship_multiplicities": true,
+    "gauge_su3_su2_u1_5": true,
+    "family_16_qutrit_14": true,
+    "flat_points_found": true,
+    "sm_broken_on_flat_directions": true
+  },
+  "all_checks_pass": true
+}
