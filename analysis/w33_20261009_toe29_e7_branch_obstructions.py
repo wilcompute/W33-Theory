@@ -1,0 +1,53 @@
+"""Round29 E8 exceptional-host obstruction via E7 maximal-rank subgroups.
+
+Any PSp4(3) action within the specified E7 subgroup of E8 and further
+restricted to E6 x U1, A7=SL8, or D6 x A1 has no Steinberg81 in E8.
+Representation dimension decomposition exact; existence of embeddings
+outside those subgroup chains remains unresolved.
+"""
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'data/w33_20261009_toe29_e7_exceptional_character_screen.json'
+def run():
+ # E8 ↓ E7 x A1: (133,1)+(1,3)+(56,2)
+ assert 133+3+56*2==248
+ # for simple PSp4(3), A1=SL2 projective image must be trivial:
+ # no faithful nontrivial map to PGL2(C); hence 133, 56,56, 1^3.
+ parent=[133,56,56,1,1,1]
+ E7={
+   'E6_times_U1':{'adjoint133':[78,27,27,1],
+                    'fundamental56':[27,27,1,1],
+                    'top_block':78,
+                    'description':'E7 adjoint=78(0)+27(+2)+27bar(-2)+1(0); 56=27(+1)+27bar(-1)+1(+3)+1(-3).'},
+   'SL8_A7':{'adjoint133':[63,70],
+              'fundamental56':[28,28],
+              'top_block':70,
+              'description':'133=sl8(63)+Lambda4(C8)(70); 56=Lambda2(C8)(28)+dual(28).'},
+   'SO12_times_SL2_D6A1':{'adjoint133':[66,3,64],
+                            'fundamental56':[32,24],
+                            'top_block':66,
+                            'description':'133=(66,1)+(1,3)+(32,2); 56=(32prime,1)+(12,2). Simple PSp4(3) cannot act nontrivially projectively on 2D SL2, so 64=32+32, 3=1+1+1; 56=32+12+12.'}
+ }
+ # inspect refined blocks with multiplicity:
+ refined={}
+ refined['E6_times_U1']=[78,27,27,1,27,27,1,1,27,27,1,1,1,1,1]
+ refined['SL8_A7']=[63,70,28,28,28,28,1,1,1]
+ refined['SO12_times_SL2_D6A1']=[66,1,1,1,32,32,32,12,12,32,12,12,1,1,1]
+ for name,blocks in refined.items():
+  assert sum(blocks)==248,(name,sum(blocks))
+  assert max(blocks)<81,(name,max(blocks))
+  E7[name]['full_E8_G_invariant_block_dimensions']=blocks
+  E7[name]['largest_block']=max(blocks)
+  E7[name]['Steinberg81_multiplicity']=0
+  print('E8 via E7',name,'max block',max(blocks),flush=True)
+ out=dict(status='PASS',G='PSp(4,3), nonabelian simple order 25920',
+  parent_E8_to_E7A1_branching={'133x1':133,'1x3':3,'56x2':112},
+  parent_G_restriction_blocks=parent,
+  full_E8_branching_tests=E7,
+  theorem='If a complex PSp4(3) embedding into E8 factors through E7xA1, and its E7 component factors through one of (i) E6xU1, (ii) SL8/Z, or (iii) Spin12xSL2, then the E8 adjoint restricted to PSp4(3) has NO Steinberg81 constituent. Each such subgroup branching splits e8 into invariant summands of dimension strictly below81; complete reducibility excludes St81.',
+  A1_obstruction='Every PSp4(3) -> PGL2(C) map is trivial since PSp4(3) is simple of order25920, not A5, the largest nonabelian simple finite subgroup of PGL2(C). The preimage in SL2 is central, so actions in SL2 components contribute scalar trivial factors.',
+  open_E8_exceptional_routes='Does not prove PSp4(3) embeds in E7 at all, and does not exclude E7 irreducible-133 constituent for embeddings OUTSIDE E6, SL8, Spin12xSL2. Mixed F4xG2 (26x7) and Spin16 remain open. No concrete PSp subgroup generators in E7 and no E8 matter operator/intertwiner have been constructed.',
+  references=['https://cds.cern.ch/record/1282603/files/JHEP11.083.pdf','https://ncatlab.org/nlab/show/E%E2%82%87'])
+ OUT.write_text(json.dumps(out,indent=2)+'\n');return out
+if __name__=='__main__':run()

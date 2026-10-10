@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "native_base_graph": "W(3,3) Levi incidence graph with v=80,e=160, regular degree4, girth8",
+  "cycle_group": "pi1(G) is free group F_(e-v+1)=F_81",
+  "random_cyclic_cover_samples": {
+    "1": [
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      }
+    ],
+    "2": [
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      }
+    ],
+    "3": [
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      }
+    ],
+    "5": [
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      }
+    ],
+    "7": [
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      }
+    ],
+    "11": [
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      },
+      {
+        "girth": 8,
+        "connected": true
+      }
+    ]
+  },
+  "abstract_normal_cover_existence": "For every integer L>=8, there exists a finite connected regular covering graph G_L->G with girth(G_L)>=L: the fundamental group is free and residually finite; the finite set of all nonidentity reduced closed-walk words of length <L can simultaneously be excluded by a finite-index normal subgroup. Normal covering exists via the associated finite quotient. No explicit size bound or canonical choice is supplied.",
+  "HGP_existence_theorem": "For ANY such connected 4-regular degree-m cover: incidence H shape (80m-1)x(160m), with rank80m-1; HGP CSS [[(160m)^2+(80m-1)^2,(80m+1)^2,girth(G_cover)]]_3. Native graph cycle code distance equals girth; HGP theorem gives d>=girth and an explicit cycle-tensor-link logical of weight girth gives d<=girth. The 2 graph endpoint check weights are 4 and the HGP row check weights are at most6.",
+  "asymptotic_rate": "(80m+1)^2/[(160m)^2+(80m-1)^2] ->1/5",
+  "distance_growth": "Choose covers avoiding closed reduced walks of length<=L: their girths and hence HGP code distance tend to infinity with m. For degree4 regular finite graphs Moore bound implies girth=O(log(number of graph vertices)) and hence d=O(log(n_HGP)); relative distance ->0.",
+  "status_of_q_3_symmetry": "Arbitrary finite covers depend on noncanonical quotient of F81 and can destroy PSp4(3) lifts; no PSp-equivariant cover family, physical locality or nonzero noise threshold is established.",
+  "explicit_parameters": [
+    {
+      "cover_degree": 1,
+      "Levi_vertices": 80,
+      "incidence_qutrits": 160,
+      "HGP_n": 31841,
+      "HGP_k": 6561,
+      "rate": 0.20605508620960397,
+      "girth_lower_bound_from_cover": 8
+    },
+    {
+      "cover_degree": 2,
+      "Levi_vertices": 160,
+      "incidence_qutrits": 320,
+      "HGP_n": 127681,
+      "HGP_k": 25921,
+      "rate": 0.20301376085713616,
+      "girth_lower_bound_from_cover": 8
+    },
+    {
+      "cover_degree": 5,
+      "Levi_vertices": 400,
+      "incidence_qutrits": 800,
+      "HGP_n": 799201,
+      "HGP_k": 160801,
+      "rate": 0.2012022006979471,
+      "girth_lower_bound_from_cover": 8
+    },
+    {
+      "cover_degree": 10,
+      "Levi_vertices": 800,
+      "incidence_qutrits": 1600,
+      "HGP_n": 3198401,
+      "HGP_k": 641601,
+      "rate": 0.2006005500873718,
+      "girth_lower_bound_from_cover": 8
+    },
+    {
+      "cover_degree": 100,
+      "Levi_vertices": 8000,
+      "incidence_qutrits": 16000,
+      "HGP_n": 319984001,
+      "HGP_k": 64016001,
+      "rate": 0.20006000550008748,
+      "girth_lower_bound_from_cover": 8
+    },
+    {
+      "cover_degree": 1000,
+      "Levi_vertices": 80000,
+      "incidence_qutrits": 160000,
+      "HGP_n": 31999840001,
+      "HGP_k": 6400160001,
+      "rate": 0.20000600005500008,
+      "girth_lower_bound_from_cover": 8
+    }
+  ],
+  "verification": "Random small cyclic covers preserve girth8, demonstrating that finite covers alone do not automatically improve distance. The unbounded-girth claim is a standard existence theorem, NOT numerically exhibited by these sample voltages.",
+  "references": [
+    "https://arxiv.org/abs/0903.0566"
+  ]
+}

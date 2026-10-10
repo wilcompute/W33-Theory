@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "data_qutrits": 160,
+  "Wilson_checks": 80,
+  "Gauss_checks": 79,
+  "per_round_data_SUM_operations": 956,
+  "sequential_ancilla_count": 159,
+  "cat_data_layer_ancilla_count": 956,
+  "exhaustive_single_after_SUM_Pauli_faults": 76480,
+  "naive_sequential_data_error_max": 8,
+  "independent_cat_transversal_data_error_max": 1,
+  "per_check_class": {
+    "WilsonZ": {
+      "single_after_SUM_Pauli_faults_enumerated": 51200,
+      "max_data_error_weight": 8,
+      "max_single_ancilla_hook_weight": 7
+    },
+    "GaussX": {
+      "single_after_SUM_Pauli_faults_enumerated": 25280,
+      "max_data_error_weight": 4,
+      "max_single_ancilla_hook_weight": 3
+    }
+  },
+  "independently_repeated_ideal_classical_readout_probability": "If each repeat has independent ternary report-flip probability p and unchanged true syndrome, majority of three fails when >=2 reports flip, bounded by 3p\u00b2-2p\u00b3. True 3-valued majority need not be unique if the three reports differ; this expression bounds plurality errors only under additional constraints. Not applicable automatically when data errors evolve between rounds.",
+  "new_verified_cat_requirement": "Construct and verify 8-qutrit Z-Wilson and 4-qutrit X-Gauss GHZ resources. Verify that any single fault in preparation, entangling or readout cannot cause unflagged high-weight data errors; implement detector history decoder. This is NOT done here.",
+  "boundary": "Exhaustive calculation certifies only after-gate single-fault propagation and one-to-one ancilla-data transversal layer. Correlated preparation faults, qudit leakage, idle noise, repeated changing syndromes, geometry, and experimental resources remain open. No circuit-level threshold is claimed.",
+  "context": "Round28 sequential circuit had 956 SUMs, 159 ancillas, measured 13/160 failed at p_gate=p_prep=p_meas=1e-4; the present cat design is a structural repair for the hook propagation only, not a comparable measured failure rate."
+}

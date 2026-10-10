@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "C8": {
+    "link_count": 8,
+    "eigenvalue_band_multiplicities": [
+      1,
+      2,
+      2,
+      2,
+      1
+    ],
+    "band_centers_over_t": [
+      -32.249031007527975,
+      -32.21268156730436,
+      -32.124756809331366,
+      -32.03659073231844,
+      -32.00000000000001
+    ],
+    "local_initial_doublon_band_weights": [
+      0.12403473420160409,
+      0.24834939602076464,
+      0.2490291224962203,
+      0.24971446140618073,
+      0.1250000000000132
+    ],
+    "scattering_leakage": 0.003872285875217152
+  },
+  "eight_site_cube_Q3_competitor": {
+    "link_count": 12,
+    "eigenvalue_band_multiplicities": [
+      1,
+      3,
+      3,
+      1
+    ],
+    "band_centers_over_t": [
+      -32.37645236299618,
+      -32.249984978655675,
+      -32.124515496597105,
+      -32.0
+    ],
+    "local_initial_doublon_band_weights": [
+      0.1235182418643062,
+      0.3720711871155983,
+      0.37355210188379134,
+      0.12500000000002032
+    ],
+    "scattering_leakage": 0.00585846913628385
+  },
+  "t_over_h_hypothetical_MHz": 5.0,
+  "assumed_T2_us": 100.0,
+  "Lorentzian_linewidth_FWHM_MHz": 0.006366197723675813,
+  "direct_scan": {
+    "freq_range_MHz": [
+      -0.9,
+      0.9
+    ],
+    "freq_step_MHz": 0.0050000000000000044,
+    "points": 361,
+    "shots_per_point": 8192,
+    "total_shots": 2957312,
+    "expected_center_freq_MHz": [
+      -0.6219742717421752,
+      -0.4402270706240756,
+      -0.0006032807591225264,
+      0.4402271043055066,
+      0.623180765897672
+    ],
+    "recovered_synthetic_center_freq_MHz": [
+      -0.62,
+      -0.44,
+      0.0,
+      0.44000000000000006,
+      0.6250000000000001
+    ],
+    "max_abs_peak_error_MHz": 0.0019742717421752376
+  },
+  "Ramsey_baseline": {
+    "times": 601,
+    "quadratures": 2,
+    "shots_per_quadrature": 8192,
+    "total_shots": 9846784
+  },
+  "shot_ratio_direct_to_Ramsey": 0.3003327787021631,
+  "model_distinction": "Ring C8 has five doublon bands multiplicities 1,2,2,2,1 while 3-cube Q3 has four bands 1,3,3,1 at U/t=32. These graphs have DIFFERENT LINK COUNTS (8 vs12), which must be calibrated; the spectral difference is a cross-check, not the sole way to infer connectivity.",
+  "experimental_requirements": "Direct spectroscopy assumes a separately accessible calibrated pair-selective transition with Lorentzian response and 100us coherence. Real device must demonstrate signal contrast, transition selection, Rabi dynamics, frequency reference, pair leakage and readout. The ~3-million vs ~9.85-million synthetic shot comparison ignores reset/readout latencies and contrasts. Neither setup is experimentally instantiated.",
+  "provenance": "Round28 synthetic complex IQ protocol with 601 x2 x8192 shots; Round29 adds an explicitly conditional direct-transition spectral surrogate, a second graph topology and a quantitative shot-count trade."
+}

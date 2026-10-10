@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "prior": "Pass11831-11833 already established five-dimensional traceless bivectors, 40+45+36 orbit, Kramers observer SL2(F9) Lorentz analogy, and Brouwer-Haemers 81-vertex null graph SRG(81,20,1,6). Those results are NOT discoveries of this pass.",
+  "exact_reconstructed_graph": "SRG(81,20,1,6)",
+  "adjacency_spectrum": {
+    "20": 1,
+    "2": 60,
+    "-7": 20
+  },
+  "full_Laplacian_spectrum": {
+    "0": 1,
+    "0.9": 60,
+    "1.35": 20
+  },
+  "graph_diameter": 2,
+  "heat_spectral_dimension_samples": [
+    {
+      "t": 0.25,
+      "heat_trace": 0.7800248471566996,
+      "spectral_dimension": 0.4936988910561978
+    },
+    {
+      "t": 0.5,
+      "heat_trace": 0.6103804630797207,
+      "spectral_dimension": 0.9744811265461693
+    },
+    {
+      "t": 1,
+      "heat_trace": 0.3775183308315281,
+      "spectral_dimension": 1.893735116146632
+    },
+    {
+      "t": 2,
+      "heat_trace": 0.15138325368012576,
+      "spectral_dimension": 3.5037190223033514
+    },
+    {
+      "t": 3,
+      "heat_trace": 0.06642936119968958,
+      "spectral_dimension": 4.57127382762496
+    },
+    {
+      "t": 4,
+      "heat_trace": 0.03370067858876305,
+      "spectral_dimension": 4.681529932707849
+    },
+    {
+      "t": 6,
+      "heat_trace": 0.015766242460720212,
+      "spectral_dimension": 2.368782808349046
+    },
+    {
+      "t": 8,
+      "heat_trace": 0.012903742451491658,
+      "spectral_dimension": 0.6255843479432592
+    },
+    {
+      "t": 12,
+      "heat_trace": 0.012360812505244904,
+      "spectral_dimension": 0.026465019391460676
+    },
+    {
+      "t": 20,
+      "heat_trace": 0.012345690294276238,
+      "spectral_dimension": 3.289875607562114e-05
+    }
+  ],
+  "finite_time_orientation_no_go": "For an additive group V=(F3)^4, any translation-invariant nontrivial strict partial chronology is impossible. If 0 precedes a nonzero v, translation invariance and transitivity give 0<v<2v<3v=0, violating irreflexivity. The 20 nonzero null directions are symmetric v and -v and the Brouwer-Haemers Cayley graph is undirected. A globally oriented, unbounded physical time variable must be EXTRA structure, e.g. nonperiodic Z cover, clock degree of freedom or a broken translation symmetry.",
+  "causal_scope": "The finite 81-vector tangent cone has well-defined null adjacency and finite observer stabilizer, but no causal partial order, continuum Lorentz invariance, Einstein dynamics, physical speed c or measured time scale. This refines Round28 native Levi graph wave no-go while respecting new parallel Pass11831 kinematic breakthrough.",
+  "mathematical_physics_context": "Analogy is finite-field Spin5/Sp4 and SL2(F9). F3 has no ordered real signature. The real AdS4 geometry is a comparison, not dynamically obtained."
+}
