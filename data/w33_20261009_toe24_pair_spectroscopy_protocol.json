@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "n_graph_sites": 80,
+  "n_links": 160,
+  "physical_model": "Attractive U>>t Bose-Hubbard model of two bosons on an engineered W33 80-site 160-link synthetic lattice; NOT actual elementary particles.",
+  "effective_pair_H": "-U I -(t^2/U)(8I+2A) +O(t^4/U^3)",
+  "band_spectroscopy": [
+    {
+      "adjacency_eigenvalue": 4.0,
+      "multiplicity": 1,
+      "weight_from_one_localized_doublon": 0.0125,
+      "gap_over_2t_squared_over_U": 0.0,
+      "energy_over_first_nonzero_gap": 0.0
+    },
+    {
+      "adjacency_eigenvalue": 2.449489742783178,
+      "multiplicity": 24,
+      "weight_from_one_localized_doublon": 0.3,
+      "gap_over_2t_squared_over_U": 1.5505102572168221,
+      "energy_over_first_nonzero_gap": 1.0
+    },
+    {
+      "adjacency_eigenvalue": 0.0,
+      "multiplicity": 30,
+      "weight_from_one_localized_doublon": 0.375,
+      "gap_over_2t_squared_over_U": 4.0,
+      "energy_over_first_nonzero_gap": 2.579795897113271
+    },
+    {
+      "adjacency_eigenvalue": -2.449489742783178,
+      "multiplicity": 24,
+      "weight_from_one_localized_doublon": 0.3,
+      "gap_over_2t_squared_over_U": 6.449489742783178,
+      "energy_over_first_nonzero_gap": 4.159591794226542
+    },
+    {
+      "adjacency_eigenvalue": -4.0,
+      "multiplicity": 1,
+      "weight_from_one_localized_doublon": 0.0125,
+      "gap_over_2t_squared_over_U": 8.0,
+      "energy_over_first_nonzero_gap": 5.159591794226542
+    }
+  ],
+  "nontrivial_gap_ratio_second_over_first": 2.579795897113271,
+  "measurements": "Prepare doublon |i,i> by local on-site two-boson injection, spectroscopically probe return amplitude / two-photon coincidence vs delay, Fourier resolve four nonzero internal band splittings. At a single incidence site, predicted FIVE band weights are {1,24,30,24,1}/80. Compare measured frequencies after removing overall t\u00b2/U; calibrate t independently using single-boson hopping and U via onsite interaction spectroscopy.",
+  "synthetic_on_site_noise_A_units": {
+    "0": {
+      "trials": 50,
+      "mean_second_over_first_gap": 2.579795897113272,
+      "max_abs_ratio_shift": 8.881784197001252e-16,
+      "mean_first_band_broadening": 1.509903313490213e-14,
+      "rigorous_Weyl_ratio_error_upper_bound": 0.0
+    },
+    "0.01": {
+      "trials": 50,
+      "mean_second_over_first_gap": 2.579795944332833,
+      "max_abs_ratio_shift": 4.1069090603862435e-06,
+      "mean_first_band_broadening": 0.011274834441568177,
+      "rigorous_Weyl_ratio_error_upper_bound": 0.0467791167061239
+    },
+    "0.03": {
+      "trials": 50,
+      "mean_second_over_first_gap": 2.5797942629180777,
+      "max_abs_ratio_shift": 4.0796016925526146e-05,
+      "mean_first_band_broadening": 0.03345430030717199,
+      "rigorous_Weyl_ratio_error_upper_bound": 0.14410350602206654
+    },
+    "0.05": {
+      "trials": 50,
+      "mean_second_over_first_gap": 2.5798098436141434,
+      "max_abs_ratio_shift": 9.751823994452735e-05,
+      "mean_first_band_broadening": 0.05560247000808664,
+      "rigorous_Weyl_ratio_error_upper_bound": 0.24679562790421303
+    },
+    "0.1": {
+      "trials": 50,
+      "mean_second_over_first_gap": 2.579811060486131,
+      "max_abs_ratio_shift": 0.0002870371515277803,
+      "mean_first_band_broadening": 0.11138252578803819,
+      "rigorous_Weyl_ratio_error_upper_bound": 0.5301397568783576
+    }
+  },
+  "finite_U_relative_error_in_first_gap": {
+    "16": -0.03790373949991965,
+    "32": -0.010084442639431312,
+    "64": -0.0025446884590983876,
+    "128": -0.0006373995295945178
+  },
+  "exclusion_criteria": "Reject native W33 simulator if five predicted band centers, multiplicities, and parameter-free relative ratios disagree beyond measured loss/inhomogeneity/model corrections in the controlled U/t extrapolation. This is a falsification of a specified quantum-simulator Hamiltonian, not a falsification of fundamental physical laws or a TOE.",
+  "confounders": [
+    "site-dependent hopping disorder",
+    "pair leakage into separated-particle continuum",
+    "loss and dephasing broadening",
+    "finite-U corrections",
+    "nonuniform address/readout calibration",
+    "graph implementation error"
+  ],
+  "caution": "All 80 native projector diagonals were independently verified equal rank/80 by numerical diagonalization. The proof uses bipartite +/- spectral pairing and PSp transitivity separately on points/lines; the 0 eigenspace has equal 15D point and line kernels. No vertex-transitive point/line swapping automorphism is assumed. Single-source individual mode amplitudes depend on imperfections. Band projectors, rather than isolated eigenvector overlaps, are invariant data."
+}

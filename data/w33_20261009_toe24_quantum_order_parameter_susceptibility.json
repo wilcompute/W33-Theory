@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "native_graph_vertices": 80,
+  "computational_Hilbert_dimensions": {
+    "2": 3240,
+    "3": 88560
+  },
+  "local_pin_field": 0.001,
+  "quantum_H": "H=-t sum_edges(b\u2020_i b_j+b\u2020_j b_i)-U sum_i n_i(n_i-1)/2-h n_0",
+  "pinned_density_and_susceptibility": {
+    "2": {
+      "0": {
+        "U_over_t": 0,
+        "energy0": -7.999999999999999,
+        "occupation_plus_h": 0.02501677391525713,
+        "occupation_minus_h": 0.02498324265810567,
+        "local_susceptibility": 0.016765628575729843,
+        "energy_second_derivative_susceptibility": 0.016765627108839,
+        "zero_field_density_exact": 0.025
+      },
+      "3": {
+        "U_over_t": 3,
+        "energy0": -8.07418198266376,
+        "occupation_plus_h": 0.025018788973589667,
+        "occupation_minus_h": 0.024981234090739456,
+        "local_susceptibility": 0.018777441425105873,
+        "energy_second_derivative_susceptibility": 0.018777424060090198,
+        "zero_field_density_exact": 0.025
+      },
+      "8": {
+        "U_over_t": 8,
+        "energy0": -9.920170662871925,
+        "occupation_plus_h": 0.025128535858502367,
+        "occupation_minus_h": 0.024872479358605953,
+        "local_susceptibility": 0.12802824994820675,
+        "energy_second_derivative_susceptibility": 0.12802736648609425,
+        "zero_field_density_exact": 0.025
+      },
+      "16": {
+        "U_over_t": 16,
+        "energy0": -16.98512916388235,
+        "occupation_plus_h": 0.025273289911413654,
+        "occupation_minus_h": 0.024731077646455955,
+        "local_susceptibility": 0.2711061324788492,
+        "energy_second_derivative_susceptibility": 0.271098436144257,
+        "zero_field_density_exact": 0.025
+      },
+      "32": {
+        "U_over_t": 32,
+        "energy0": -32.49806434590643,
+        "occupation_plus_h": 0.025546802554546968,
+        "occupation_minus_h": 0.024470308704150713,
+        "local_susceptibility": 0.5382469251981273,
+        "energy_second_derivative_susceptibility": 0.5381877485888253,
+        "zero_field_density_exact": 0.025
+      }
+    },
+    "3": {
+      "0": {
+        "U_over_t": 0,
+        "energy0": -12.0,
+        "occupation_plus_h": 0.03752516087288918,
+        "occupation_minus_h": 0.037474863987162016,
+        "local_susceptibility": 0.025148442863581755,
+        "energy_second_derivative_susceptibility": 0.025148445104150596,
+        "zero_field_density_exact": 0.0375
+      },
+      "4": {
+        "U_over_t": 4,
+        "energy0": -13.925777871114517,
+        "occupation_plus_h": 0.038262206456225085,
+        "occupation_minus_h": 0.03676103903054086,
+        "local_susceptibility": 0.7505837128421143,
+        "energy_second_derivative_susceptibility": 0.7505046930589288,
+        "zero_field_density_exact": 0.0375
+      },
+      "8": {
+        "U_over_t": 8,
+        "energy0": -24.85129221107782,
+        "occupation_plus_h": 0.04090571885123508,
+        "occupation_minus_h": 0.03449936266779621,
+        "local_susceptibility": 3.203178091719435,
+        "energy_second_derivative_susceptibility": 3.1975824654750795,
+        "zero_field_density_exact": 0.0375
+      }
+    }
+  },
+  "exact_PF_theorem": "On finite connected W33 hopping configuration graphs with finite N and t>0 the zero-field ground state is unique and PSp-invariant. Therefore lim_{h->0} <n_0>=N/80 and at any fixed finite N the analytic local susceptibility cannot signify true spontaneous symmetry breaking.",
+  "physical_next": "The response becomes sharply enhanced when attraction forms dimers or trimers; independent Feynman-Hellmann energy-curvature and occupation finite differences agree. A genuine spontaneously chosen vacuum would require a specified thermodynamic sequence, order of limits lim_{h->0}lim_{size->infty}, and a physically derived coupling.",
+  "provenance": "Round22 proved N=2 uniqueness; Round23 did N=3 Hilbert diagonalization. New: external source-field density susceptibility N2,N3, independent curvature check across couplings."
+}

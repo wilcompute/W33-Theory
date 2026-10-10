@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "group": "PSp(4,3), simple finite group order 25920",
+  "existing_source": "analysis/w33_pass4659_internal_e6_27_36_45_triangle.py, exact 27 Schlaefli carrier and PSp action; analysis/bt1688_exact_h1_character_irreducibility.py and Round21 integral Levi bridge, 81D irreducible Steinberg.",
+  "permutation27_adjacency_spectrum": {
+    "10": 1,
+    "1": 20,
+    "-5": 6
+  },
+  "natural_permutation27_dim": 27,
+  "tensor27_trivial3_decomposition": "3*(1+20+6), so has >=3-dimensional G-fixed vectors",
+  "steinberg81_invariant_vectors": 0,
+  "canonical_Hom_dim": "dim Hom_PSp(St81, Perm27 tensor C3_triv)=0",
+  "theorem": "A PSp-equivariant identification of the W33 irreducible Steinberg-81 with the NAIVE E6 27-line permutation module tensored with a TRIVIAL A2 triplet is impossible. Its dimensions coincide (81=27*3), but invariant-vector multiplicities are 0 vs 3, and target is reducible. This is a hard representation-theoretic obstruction to that specified model, not to a fundamentally different E8 matter embedding.",
+  "physical_scope": "One cannot promote the proven PSp-equivariant 45 tritangent dictionary to a canonical 81D matter intertwiner by taking three copies of the 27-line permutation representation. Need explicit nontrivial factors/projective actions or different symmetry breaking; E8 Jacobi is unaffected."
+}

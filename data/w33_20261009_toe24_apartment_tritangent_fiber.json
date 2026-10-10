@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "apartment_count": 1620,
+  "n_components": 45,
+  "size_each": 36,
+  "group": "PSp(4,3), order 25920",
+  "component_partition_equals_prior_Pass4585_4659_fiber_partition": true,
+  "explicit_45_to_45_equivariant_map": "Each A3-connected component of 36 point C4 apartments maps via unique Levi lift to 36 dual line C4 apartments grouped into THREE sets of 12 of the prior Pass4659 XOR labels; each of those sets has the SAME protected 16-line support. This identifies the component with a previously proven E6 tritangent. Existing Pass4616 and Pass4659 prove its PSp-equivariant equivalence to the 45 E6 tritangents.",
+  "protected_support_count": 45,
+  "points_per_support": 16,
+  "expected_PSp_stabilizer": 576,
+  "no_novelty_claim": "Pass4585/4616 and Pass4659 ALREADY proved 45 fibers and their equivalence to E6 tritangent supports, with stabilizer 576. The NEW finding is that the Round23 one-ray-change hopping graph has exactly these 45 fibers as its 45 connected components.",
+  "new_physical_scope": "The conditional hopping selection graph realizes a previously known E6 G-set as invariant quantum dynamical sectors when and only when A2 tunneling and other inter-fiber transitions are absent. No physical selection rule excludes them."
+}

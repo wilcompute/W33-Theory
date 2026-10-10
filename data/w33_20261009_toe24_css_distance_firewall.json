@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "native_n_links": 160,
+  "n_vertices": 80,
+  "Gauss_rank": 79,
+  "profiles": {
+    "avoid_incidence_edge": {
+      "selected_Wilson_rows": 1539,
+      "Wilson_rank_F3": 80,
+      "remaining_logical_qutrits": 1,
+      "unused_link_count": 1,
+      "verified_weight_one_logical_X_link_indices": [
+        0
+      ],
+      "exact_code_distance": 1,
+      "onsite_error": "A single link Pauli X on each unused incidence link COMMUTES with the chosen Gauss and Wilson checks but acts nontrivially on the logical subsystem. Hence a weight-one logical operator exists, and quantum code distance is exactly one.",
+      "local_splitting": "Adding -h(X_e+X_e dagger) with any selected weight-one logical e splits a logical qutrit energy as -2h,+h,+h, a gap of 3|h| for h>0. This is a first-order local perturbation acting INSIDE the ground space; no topological protection or macroscopic energy barrier."
+    },
+    "avoid_vertex": {
+      "selected_Wilson_rows": 1458,
+      "Wilson_rank_F3": 78,
+      "remaining_logical_qutrits": 3,
+      "unused_link_count": 4,
+      "verified_weight_one_logical_X_link_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "exact_code_distance": 1,
+      "onsite_error": "A single link Pauli X on each unused incidence link COMMUTES with the chosen Gauss and Wilson checks but acts nontrivially on the logical subsystem. Hence a weight-one logical operator exists, and quantum code distance is exactly one.",
+      "local_splitting": "Adding -h(X_e+X_e dagger) with any selected weight-one logical e splits a logical qutrit energy as -2h,+h,+h, a gap of 3|h| for h>0. This is a first-order local perturbation acting INSIDE the ground space; no topological protection or macroscopic energy barrier."
+    }
+  },
+  "obstruction": "The claimed logical survival from partial Wilson flatness is algebraically correct but all two geometrically simple selectors have distance ONE. The all-cycles flatness model has no logical qudits. A protected memory requires much more than nonzero first homology / a positive number of encoded qudits.",
+  "prior": "Round23 computed Wilson ranks and logical counts, BT744 proved 81 cycles through chamber span H1. New: elementary local Pauli logical witnesses, exact code distances, and first-order degeneracy splitting."
+}
