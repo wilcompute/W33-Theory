@@ -1,0 +1,66 @@
+{
+  "status": "EXACT_INTEGER_INCIDENCE_AND_NUMERIC_PURITY_SPECTRAL_CERTIFIED",
+  "incidence_shape": [
+    90,
+    40
+  ],
+  "W33_A_spectrum": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "gram_formula": "H.T@H=8I+J-A_W33",
+  "mean_purity": "3/5",
+  "exact_variance_formula": "Pure-state: (sum_p q_p^2 - 8/5)/135 = ||q-(1/5)1||^2/135; general 40-vector variance is (||P_2 q||^2+2||P_-4 q||^2)/135 if sum q=8",
+  "forbidden_minus_pure_max_norm_from_50_random": 5.571271793117313e-16,
+  "pure_graph_identity_max_residual_50_random": 2.4424906541753444e-15,
+  "mixed_example_minus_norm": 0.8818163074019444,
+  "mixed_example_tr_rho2": 0.52,
+  "mixed_example_all_40_graph_deficits_nonpositive": true,
+  "mixed_exact_deficit_sum_minus_90_one_minus_tr_rho2": -43.2,
+  "pure_max_variance_bound": "8/75, attained iff four q_p=2 and other q_p=0 (a two-qutrit stabilizer state)",
+  "pure_min_variance_bound": "0, attained iff all 40 q_p=1/5 (a SIC fiducial for the elementary-abelian two-qutrit Pauli group IF such a fiducial exists)",
+  "state_purity_theorem": "For every density matrix rho, (Aq-2q-2)_p=9 sum_j [Tr((Pi_j rho Pi_j)^2)-(Tr Pi_j rho)^2] <=0, where Pi_j are three rank-3 spectral projectors of W_p; equality for all 40 p iff rho is pure. Sum of all 40 deficits = 90(Tr rho^2-1).",
+  "projective_pauli_q": "q_p=2*abs(<psi|W_p|psi>)**2; sum_p q_p=8 for every pure two-qutrit state",
+  "cases": {
+    "stabilizer_00": {
+      "mean": 0.5999999999999999,
+      "variance": 0.10666666666666669,
+      "variance_from_W33_eigenspaces": 0.10666666666666666,
+      "norm_squared_lambda2": 14.399999999999999,
+      "norm_squared_lambda_minus4": 0.0,
+      "pauli_power_min": 0.0,
+      "pauli_power_max": 2.0
+    },
+    "theta_product": {
+      "mean": 0.6,
+      "variance": 0.02986129137296298,
+      "variance_from_W33_eigenspaces": 0.02986129137296297,
+      "norm_squared_lambda2": 4.031274335350002,
+      "norm_squared_lambda_minus4": -3.790419914415593e-16,
+      "pauli_power_min": 1.7869856266985198e-05,
+      "pauli_power_max": 1.3419200044806243
+    },
+    "theta_coupled": {
+      "mean": 0.6,
+      "variance": 0.029847147185980083,
+      "variance_from_W33_eigenspaces": 0.029847147185980073,
+      "norm_squared_lambda2": 4.02936487010731,
+      "norm_squared_lambda_minus4": 1.700558334847878e-16,
+      "pauli_power_min": 3.6690681716333926e-05,
+      "pauli_power_max": 1.3438711442243978
+    },
+    "random_pure": {
+      "mean": 0.6,
+      "variance": 0.008533775814008009,
+      "variance_from_W33_eigenspaces": 0.008533775814008005,
+      "norm_squared_lambda2": 1.1520597348910813,
+      "norm_squared_lambda_minus4": -1.6699810454817267e-16,
+      "pauli_power_min": 0.003181160565370144,
+      "pauli_power_max": 0.7033912632160325
+    }
+  },
+  "interpretation": "The first nonconstant full-Clifford-frame purity statistic is exactly a weighted two-eigenspace W33 graph Fourier energy. Not a complete Siegel invariant; not a physical vacuum or magic monotone proof.",
+  "prior": "TOE41 averaged 90 virtual factor purities to 3/5 and observed varying variance, but did not identify the exact W33 adjacency functional.",
+  "boundary": "Cannot identify unmarked theta moduli as physical vacua or claim that this functional is invariant under full Sp(4,Z) with automorphy multipliers."
+}
