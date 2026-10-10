@@ -1,0 +1,103 @@
+{
+  "pass_ids": [
+    11894,
+    11895
+  ],
+  "split": {
+    "even": 40,
+    "odd": 44
+  },
+  "grade1_odd": {
+    "generic_stabiliser": 0,
+    "commuting": 4
+  },
+  "qutrit_plane_even": {
+    "generic_stabiliser": 2,
+    "commuting": 4
+  },
+  "11894": {
+    "kempf_ness_mu": 1.0784003949351824e-10,
+    "cartan_dim": 4,
+    "cartan_max_mu": 5.216728037305421e-09,
+    "traces": [
+      [
+        10.000000006495954,
+        4.000000008305382
+      ],
+      [
+        10.00000000249867,
+        4.000000001228957
+      ],
+      [
+        10.000000004836402,
+        4.00000000460105
+      ]
+    ]
+  },
+  "11895": {
+    "min_F_runs": [
+      -3.2958368673599567,
+      -3.2958368673599567,
+      -3.2958368673599576,
+      -3.2958368660096125
+    ],
+    "minus_3_log3": -3.295836866004329,
+    "polished_F": -3.2958368673599554,
+    "spectrum": {
+      "-0.0": 12,
+      "0.333333": 27,
+      "1.0": 1
+    },
+    "unbroken": {
+      "dim": 12,
+      "centre": 1,
+      "rank": 4,
+      "ideal_dims": [
+        1,
+        3,
+        8
+      ],
+      "blocks": {
+        "5": [
+          2,
+          3
+        ],
+        "4": [
+          1,
+          3
+        ]
+      }
+    },
+    "family_plane_44": {
+      "(1,1)_0.0": 3,
+      "(3,1)_1.0": 6,
+      "(3,1)_-1.0": 3,
+      "(3,2)_0.5": 6,
+      "(8,1)_0.0": 8,
+      "(6,2)_-0.5": 12,
+      "(3,2)_-0.5": 6
+    },
+    "qutrit_plane_40": {
+      "(1,1)_0.0": 2,
+      "(3,1)_1.0": 3,
+      "(3,1)_-1.0": 3,
+      "(6,1)_1.0": 6,
+      "(3,2)_0.5": 6,
+      "(8,1)_0.0": 8,
+      "(3,2)_-0.5": 12
+    }
+  },
+  "checks": {
+    "split_40_44": true,
+    "z6_cartan_4": true,
+    "qutrit_plane_moduli_2": true,
+    "kempf_ness_flat": true,
+    "traces_constant": true,
+    "one_loop_min": true,
+    "unbroken_su3_su2_u1": true,
+    "five_is_3plus2_four_is_3plus1": true,
+    "exotic_matter": true,
+    "no_lepton_doublet": true
+  },
+  "all_checks_pass": true
+}
