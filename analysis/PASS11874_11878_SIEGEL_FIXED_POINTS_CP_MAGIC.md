@@ -157,3 +157,18 @@ functions, on one Ω. There R_sector = r_M(τ₁) r_M(τ₂)/2 becomes three pre
 * Freitag–Salvati Manni (Burkhardt invariants, Satake A₂(3)).
 * Corpus: Passes 11869–11873, 11645, 11657/11659, 11834–11837 (Di/Rac), 11651 (Hesse space).
 * Masses: Xing–Zhang–Zhou, PRD 77 (2008) 113016.
+
+## Cross-track (TOE Round 38, commit a50a847, read after this pass was pushed)
+
+* **Who owns the determinant law.** Round 38 Track B independently derived the leading determinant law
+  det Θ(ε) = (6πi)³ε³/2 · det[u₀,u₁,u₂] · det[v₀,v₁,v₂]. Its commit is earlier, so it owns that piece.
+  * The shape law σ₁σ₃/σ₂² = r(τ₁)r(τ₂)/2 here combines it with the 2×2-compound term σ₁σ₂ ≈ |ε'|·|g₀∧g₁|·|h₀∧h₁|.
+  * Because g₁ is odd and g₀, g₂ are even, the τ-dependence reduces to r = |g₀∧g₂|/|g₁|².
+* **A framing caveat that applies here.** Round 38 also proves that Schmidt data are frame-dependent: the CZ shear maps a
+  product point to a rank-3 one.
+  * So 11874's "rank one at product points" and 11876's universality test are statements about a *marked* tensor
+    splitting. In a magnetized T²×T² realisation, that is the physical left/right zero-mode assignment.
+  * They are not modular invariants.
+* **What is frame-free.** The magic (11877) and the CP order parameters (11878) are modular invariants. 11878 is a
+  frame-free, CP-odd, level-one modular observable of the genus-2 modulus, which is the object Round 38's
+  hypothesis 2 asks for.
