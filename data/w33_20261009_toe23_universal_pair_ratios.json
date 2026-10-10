@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "Hilbert_dimension": 3240,
+  "native_Levi_degree": 4,
+  "exact_second_order_Schrieffer_Wolff_numerator": "K=P H_hop (1-P) H_hop P = 8 I_80 + 2 A_Levi as an integer matrix",
+  "nonzero_adj_eigenvalue_multiplicities": {
+    "-4": 1,
+    "-sqrt6": 24,
+    "0": 30,
+    "sqrt6": 24,
+    "4": 1
+  },
+  "effective_low_energy_boson_pair_H": "H_eff=-U I -(t^2/U)(8I+2A)+O(t^4/U^3) in N=2 doublon sector, U>>t.",
+  "universal_band_gap_ratio_from_ground": {
+    "band_0": 2.579795897113271,
+    "band_-2.449489742783178": 4.159591794226542,
+    "band_-4": 5.159591794226542,
+    "band_sqrt6": 1.0
+  },
+  "exact_gap_ratio_forms": {
+    "gap_to_zero_over_first": "4/(4-sqrt6)",
+    "gap_to_minus_sqrt6_over_first": "(4+sqrt6)/(4-sqrt6)",
+    "gap_to_minus4_over_first": "8/(4-sqrt6)"
+  },
+  "rigorous_scope": "Second-order degenerate perturbation theory fixes all leading splitting ratios, independently of t or U, once the attractive Bose-Hubbard model on this exact native graph is assumed. This is a parameter-independent quantum-simulator signature in the U/t->infinity limit, not a prediction of an observed particle mass/coupling. Finite U corrections persist.",
+  "finite_U_numeric": {
+    "16": {
+      "exact_numerical_gap": 0.18646751504191528,
+      "leading_pair_gap": 0.19381378215210276,
+      "relative_error": -0.03790373949991965
+    },
+    "32": {
+      "exact_numerical_gap": 0.09592963909162933,
+      "leading_pair_gap": 0.09690689107605138,
+      "relative_error": -0.010084442639431312
+    },
+    "64": {
+      "exact_numerical_gap": 0.048330146614361524,
+      "leading_pair_gap": 0.04845344553802569,
+      "relative_error": -0.0025446884590983876
+    },
+    "128": {
+      "exact_numerical_gap": 0.02421128066731626,
+      "leading_pair_gap": 0.024226722769012846,
+      "relative_error": -0.0006373995295945178
+    }
+  },
+  "missing_TOE_scale": "Nothing in finite graph geometry chooses t, U, species, particle density or coupling to relativistic matter. A universal ratio measured in a device realizing a postulated Hamiltonian does not establish a fundamental Theory of Everything."
+}

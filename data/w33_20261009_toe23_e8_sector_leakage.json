@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "origin": "Existing validated E8=sl(9)+Lambda3(9)+Lambda3(9)* at Pass11681",
+  "source_grade_dimensions": [
+    80,
+    84,
+    84
+  ],
+  "naive_target_dimensions": [
+    86,
+    81,
+    81
+  ],
+  "truncated_positive_sector_basis": 81,
+  "excluded_basis_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ],
+  "grade_plus_plus_output_rank": 84,
+  "excluded_dual_grade_witnesses": [
+    {
+      "missing_dual_channel": [
+        0,
+        1,
+        2
+      ],
+      "allowed_input_triples": [
+        [
+          3,
+          4,
+          6
+        ],
+        [
+          5,
+          7,
+          8
+        ]
+      ],
+      "bracket_output_coefficient": [
+        -1.0,
+        0.0
+      ]
+    },
+    {
+      "missing_dual_channel": [
+        3,
+        4,
+        5
+      ],
+      "allowed_input_triples": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          2,
+          7,
+          8
+        ]
+      ],
+      "bracket_output_coefficient": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "missing_dual_channel": [
+        6,
+        7,
+        8
+      ],
+      "allowed_input_triples": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "bracket_output_coefficient": [
+        -1.0,
+        0.0
+      ]
+    }
+  ],
+  "mixed_to_sl9_offdiagonal_channels": 72,
+  "mixed_to_sl9_diagonal_full_rank": 9,
+  "theorem": "For this explicit, natural coordinate restriction from 84 to 81 trivectors, the original E8 bracket [81,81] produces ALL 84 dual trivector channels: every output complementary triple has an admissible disjoint pair of retained input triples. Hence the 81-subsector is NOT closed under the inherited E8 bracket. Mixed-sector pair brackets also generate all 80 sl9 channels (72 offdiagonal and 8 traceless diagonal). The E6+A2 86+81+81 grading cannot be obtained by simply dropping three 3-forms and relabeling the sl9 80-dimensional grade-zero sector.",
+  "limitation": "Only refutes this straightforward coordinate truncation, not all possible embeddings or regradings. The actual E8 E6xA2 grading is known to exist, and an intertwining identification of its 81 matter pieces with the W33 Steinberg module remains unconstructed."
+}

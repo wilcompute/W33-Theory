@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "all_160_edge_checks": {
+    "eightcycles_through_each_edge": 81,
+    "rank_through_each_edge": 81,
+    "rank_avoiding_each_edge": 80,
+    "independently_checked_edges": 160
+  },
+  "graph": "native Levi W(3,3) 80 vertices 160 edges",
+  "gauge_rank_F3": 79,
+  "full_flatness": {
+    "selector": "all 1620 cycles",
+    "checked_8cycles": 1620,
+    "cycle_rank_mod3": 81,
+    "physical_link_qutrits": 160,
+    "gauss_rank": 79,
+    "encoded_logical_qutrits": 0,
+    "stabilizer_rank": 160,
+    "encoded_hilbert_dimension": "3^0"
+  },
+  "selector_profiles": [
+    {
+      "selector": "cycles through point 0",
+      "checked_8cycles": 162,
+      "cycle_rank_mod3": 81,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 0,
+      "stabilizer_rank": 160,
+      "encoded_hilbert_dimension": "3^0"
+    },
+    {
+      "selector": "cycles through line endpoint 40",
+      "checked_8cycles": 162,
+      "cycle_rank_mod3": 81,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 0,
+      "stabilizer_rank": 160,
+      "encoded_hilbert_dimension": "3^0"
+    },
+    {
+      "selector": "cycles through incidence edge 0",
+      "checked_8cycles": 81,
+      "cycle_rank_mod3": 81,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 0,
+      "stabilizer_rank": 160,
+      "encoded_hilbert_dimension": "3^0"
+    },
+    {
+      "selector": "cycles touching point 0 or incident line",
+      "checked_8cycles": 243,
+      "cycle_rank_mod3": 81,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 0,
+      "stabilizer_rank": 160,
+      "encoded_hilbert_dimension": "3^0"
+    },
+    {
+      "selector": "cycles touching point 0 AND incident line",
+      "checked_8cycles": 81,
+      "cycle_rank_mod3": 81,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 0,
+      "stabilizer_rank": 160,
+      "encoded_hilbert_dimension": "3^0"
+    },
+    {
+      "selector": "cycles touching point 0 AND nonincident line",
+      "checked_8cycles": 9,
+      "cycle_rank_mod3": 9,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 72,
+      "stabilizer_rank": 88,
+      "encoded_hilbert_dimension": "3^72"
+    },
+    {
+      "selector": "cycles avoiding point 0",
+      "checked_8cycles": 1458,
+      "cycle_rank_mod3": 78,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 3,
+      "stabilizer_rank": 157,
+      "encoded_hilbert_dimension": "3^3"
+    },
+    {
+      "selector": "cycles avoiding incidence edge",
+      "checked_8cycles": 1539,
+      "cycle_rank_mod3": 80,
+      "physical_link_qutrits": 160,
+      "gauss_rank": 79,
+      "encoded_logical_qutrits": 1,
+      "stabilizer_rank": 159,
+      "encoded_hilbert_dimension": "3^1"
+    }
+  ],
+  "theorem": "Choose vertex- or incidence-edge-selected local Wilson eight-cycle constraints together with all 80 native vertex Gauss X stabilizers. Each selected Wilson Z operator commutes with Gauss because oriented cycle is closed; the independent Wilson rank r leaves exactly 160-79-r=81-r logical qutrits. These geometrically chosen families respect the stabilizer subgroup of their selector, unlike arbitrary cycle subsets. They yield many exactly soluble commuting Hamiltonians with nontrivial surviving qutrit logical sectors.",
+  "important_boundary": "The Wilson constraints are controlled assumptions of a finite graph Hamiltonian. Logical rank does not establish nonzero code distance, robust topological order, a physical excitation gap in the thermodynamic limit, or Standard Model gauge forces. Selection of a vertex/edge explicitly breaks full symplectic symmetry."
+}

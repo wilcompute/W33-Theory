@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "prior": "Pass4474 and other prior apartment works already establish 1620 apartment W33 C4 symplectic frames. Current work studies an explicitly chosen Hamiltonian on their OVERLAP RELATIONS.",
+  "frame_count": 1620,
+  "overlap_3_degree": 8,
+  "overlap_2_degree": 90,
+  "component_spectrum": {
+    "-4.0": 4,
+    "-2.0": 12,
+    "0.0": 9,
+    "2.0": 4,
+    "4.0": 6,
+    "8.0": 1
+  },
+  "component_triangles": 96,
+  "overlap_3_connected_components": 45,
+  "component_size": 36,
+  "component_36_spectral_gap": 3.9999999999999973,
+  "overlap_2_connected_components": 1,
+  "combined_graph_connected": true,
+  "conditional_H0": "H=-t A_3 on 1620 apartment basis, where A3 connects apartment ray sets sharing exactly three of four rays. Exactly 45 disconnected equal 36-state components; hence for t>0 exactly 45 degenerate lowest-energy states (uniform on each component). The frame vacuum is not uniquely selected by symmetry.",
+  "conditional_tunnel": "Add -epsilon A_2, where A2 connects apartments sharing exactly two rays. This remains PGSp-invariant and makes the graph connected, so any epsilon>0 yields unique positive fully symmetry-invariant ground state. The 45-fold frame degeneracy is therefore not symmetry protected against all invariant couplings.",
+  "tunneling_gaps": {
+    "0.01": {
+      "gap": 0.6589687977450467,
+      "max_eigenvalue": 8.899999999999991,
+      "exact_row_sum": 8.9
+    },
+    "0.1": {
+      "gap": 5.645667590911858,
+      "max_eigenvalue": 16.99999999999999,
+      "exact_row_sum": 17.0
+    },
+    "1": {
+      "gap": 47.23857744028222,
+      "max_eigenvalue": 97.99999999999999,
+      "exact_row_sum": 98.0
+    }
+  },
+  "pinned_component_response": {
+    "0.5": {
+      "E0": -8.014883943348465,
+      "selected_frame_probability": 0.03189513245493867
+    },
+    "2": {
+      "E0": -8.075570254817551,
+      "selected_frame_probability": 0.05117762544963002
+    },
+    "8": {
+      "E0": -9.587083715086392,
+      "selected_frame_probability": 0.6482844328554661
+    }
+  },
+  "conditional_spacetime": "Selecting one of 1620 apartment symplectic frames provides 4 affine coordinate axes on F3^4 but that 81-site four-torus does not have a broad 4-dimensional heat-kernel scaling plateau. Externally postulated C_m^4 coordinate refinements, with m=9,27,81, acquire running spectral dimension near4 for 1<<t<<m\u00b2; no W33 law fixes m or Lorentzian dynamics.",
+  "torus_heat": {
+    "3": [
+      {
+        "t": 1,
+        "return_probability": 0.054013319087241815,
+        "running_spectral_dimension": 3.702738551565269
+      },
+      {
+        "t": 4,
+        "return_probability": 0.012592320573743002,
+        "running_spectral_dimension": 0.23678633965034407
+      },
+      {
+        "t": 16,
+        "return_probability": 0.012345679016074208,
+        "running_spectral_dimension": 1.4496516648937183e-08
+      },
+      {
+        "t": 64,
+        "return_probability": 0.012345679012345677,
+        "running_spectral_dimension": 3.119758329960648e-39
+      },
+      {
+        "t": 256,
+        "return_probability": 0.012345679012345677,
+        "running_spectral_dimension": 1.0456110306457597e-163
+      }
+    ],
+    "9": [
+      {
+        "t": 1,
+        "return_probability": 0.04705949949984983,
+        "running_spectral_dimension": 4.428879672828424
+      },
+      {
+        "t": 4,
+        "return_probability": 0.0018388231250045677,
+        "running_spectral_dimension": 4.348585640648251
+      },
+      {
+        "t": 16,
+        "return_probability": 0.00018340323348662368,
+        "running_spectral_dimension": 1.3542744306863306
+      },
+      {
+        "t": 64,
+        "return_probability": 0.00015241617341939473,
+        "running_spectral_dimension": 7.527905824773989e-05
+      },
+      {
+        "t": 256,
+        "return_probability": 0.00015241579027587256,
+        "running_spectral_dimension": 9.342386443867473e-24
+      }
+    ],
+    "27": [
+      {
+        "t": 1,
+        "return_probability": 0.047059497858908554,
+        "running_spectral_dimension": 4.4288802728277235
+      },
+      {
+        "t": 4,
+        "return_probability": 0.0018361049650009956,
+        "running_spectral_dimension": 4.367276447214381
+      },
+      {
+        "t": 16,
+        "return_probability": 0.00010219434028923916,
+        "running_spectral_dimension": 4.066846737301144
+      },
+      {
+        "t": 64,
+        "return_probability": 6.409124913577973e-06,
+        "running_spectral_dimension": 3.708315821459131
+      },
+      {
+        "t": 256,
+        "return_probability": 1.8968851299874515e-06,
+        "running_spectral_dimension": 0.11098711803329628
+      }
+    ],
+    "81": [
+      {
+        "t": 1,
+        "return_probability": 0.047059497858908554,
+        "running_spectral_dimension": 4.428880272827724
+      },
+      {
+        "t": 4,
+        "return_probability": 0.0018361049650009937,
+        "running_spectral_dimension": 4.367276447214382
+      },
+      {
+        "t": 16,
+        "return_probability": 0.00010219433844869694,
+        "running_spectral_dimension": 4.066847305195532
+      },
+      {
+        "t": 64,
+        "return_probability": 6.233043968948877e-06,
+        "running_spectral_dimension": 4.015875303008679
+      },
+      {
+        "t": 256,
+        "return_probability": 3.8727589657760336e-07,
+        "running_spectral_dimension": 4.003329539269354
+      }
+    ]
+  },
+  "physical_boundary": "Geometric frame dynamics and chosen-geometry local lattice are toy Hamiltonians; no frame-to-vierbein field theory, Lorentzian light cone, Einstein equations, or matter coupling is derived."
+}

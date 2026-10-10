@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "graph_sites": 80,
+  "particle_number": 3,
+  "Fock_dimension": 88560,
+  "hopping_sparse_nnz": 1036800,
+  "model": "H=-t sum_Levi_edges(b\u2020_i b_j+h.c.)-U/2 sum_i n_i(n_i-1), fixed N=3, t=1",
+  "computed": {
+    "0": {
+      "E0": -11.999999999999993,
+      "gap": 1.5505102572167946,
+      "triple_onsite_probability": 0.00015625000000001038,
+      "max_density_deviation": 5.134781488891349e-16
+    },
+    "4": {
+      "E0": -13.92577787111433,
+      "gap": 0.13662013835589626,
+      "triple_onsite_probability": 0.7139362950745286,
+      "max_density_deviation": 3.842474949333763e-12
+    },
+    "8": {
+      "E0": -24.851292211077826,
+      "gap": 0.03568393928925673,
+      "triple_onsite_probability": 0.9408167600371216,
+      "max_density_deviation": 7.524613364340293e-08
+    }
+  },
+  "PF_theorem": "For any finite boson number N and t>0, the configuration hopping graph is connected and all nonzero off-diagonals are negative. Perron-Frobenius implies a strictly positive unique finite ground state. Graph symmetry therefore forces occupation <n_i>=N/80 for all sites, irrespective of attractive pair/trimer clustering. Exact finite-N spontaneous symmetry breaking is impossible in this model; symmetry-breaking may be probed via an external pinning field or a controlled large-system limit.",
+  "boundary": "N=3 is a full interacting 88560-dimensional native-graph quantum calculation, not finite density in the thermodynamic sense. No universal phase transition or symmetry-selected absolute site demonstrated."
+}
