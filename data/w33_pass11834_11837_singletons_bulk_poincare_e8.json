@@ -1,0 +1,507 @@
+{
+ "pass_ids": [
+  11834,
+  11835,
+  11836,
+  11837
+ ],
+ "weil": {
+  "order": 51840,
+  "mu3_cocycle_was_nontrivial": true,
+  "homomorphism_max_error": 1.8974118319232044e-14,
+  "clifford_action_max_error": 2.2472076870149058e-14
+ },
+ "singletons": {
+  "norms": {
+   "Rac": 1.0,
+   "Di": 1.0,
+   "Rac_vs_conj": 0.0,
+   "Di_vs_conj": 0.0,
+   "Rac_vs_Di": 0.0
+  },
+  "frobenius_schur": {
+   "Rac": 0.0,
+   "Di": -0.0
+  },
+  "bilinears": {
+   "Rac x Rac*": {
+    "dim": 25.0,
+    "norm": 2.0,
+    "<1>": 1.0,
+    "<contexts40>": 2.0,
+    "<splits45>": 2.0,
+    "<kramers36>": 1.0,
+    "<points40>": 2.0,
+    "<vectors80>": 2.0
+   },
+   "Di x Di*": {
+    "dim": 16.0,
+    "norm": 2.0,
+    "<1>": 1.0,
+    "<contexts40>": 1.0,
+    "<splits45>": 1.0,
+    "<kramers36>": 1.0,
+    "<points40>": 2.0,
+    "<vectors80>": 2.0
+   },
+   "Rac x Di*": {
+    "dim": 20.0,
+    "norm": 1.0,
+    "<1>": 0.0,
+    "<contexts40>": 0.0,
+    "<splits45>": 0.0,
+    "<kramers36>": 0.0,
+    "<points40>": 0.0,
+    "<vectors80>": 1.0
+   },
+   "Rac x Rac": {
+    "dim": 25.0,
+    "norm": 2.0,
+    "<1>": 0.0,
+    "<contexts40>": 1.0,
+    "<splits45>": 0.0,
+    "<kramers36>": 1.0,
+    "<points40>": 0.0,
+    "<vectors80>": 0.0
+   },
+   "Di x Di": {
+    "dim": 16.0,
+    "norm": 2.0,
+    "<1>": 0.0,
+    "<contexts40>": -0.0,
+    "<splits45>": 0.0,
+    "<kramers36>": -0.0,
+    "<points40>": 0.0,
+    "<vectors80>": 0.0
+   },
+   "Rac x Di": {
+    "dim": 20.0,
+    "norm": 1.0,
+    "<1>": 0.0,
+    "<contexts40>": 0.0,
+    "<splits45>": 0.0,
+    "<kramers36>": 0.0,
+    "<points40>": 0.0,
+    "<vectors80>": 0.0
+   },
+   "Sym2 Rac": {
+    "dim": 15.0,
+    "norm": 1.0,
+    "<1>": 0.0,
+    "<contexts40>": 1.0,
+    "<splits45>": 0.0,
+    "<kramers36>": 1.0,
+    "<points40>": 0.0,
+    "<vectors80>": 0.0
+   },
+   "Alt2 Rac": {
+    "dim": 10.0,
+    "norm": 1.0,
+    "<1>": -0.0,
+    "<contexts40>": 0.0,
+    "<splits45>": 0.0,
+    "<kramers36>": 0.0,
+    "<points40>": 0.0,
+    "<vectors80>": 0.0
+   },
+   "Sym2 Di": {
+    "dim": 10.0,
+    "norm": 1.0,
+    "<1>": -0.0,
+    "<contexts40>": -0.0,
+    "<splits45>": 0.0,
+    "<kramers36>": 0.0,
+    "<points40>": -0.0,
+    "<vectors80>": 0.0
+   },
+   "Alt2 Di": {
+    "dim": 6.0,
+    "norm": 1.0,
+    "<1>": 0.0,
+    "<contexts40>": -0.0,
+    "<splits45>": 0.0,
+    "<kramers36>": -0.0,
+    "<points40>": 0.0,
+    "<vectors80>": 0.0
+   }
+  },
+  "Rac.Rac* + Di.Di* == 1 + C[40 points]": true,
+  "Rac.Di* + Di.Rac* == C[80 vectors] - C[40 points]": true,
+  "overlaps": {
+   "gram": {
+    "C[36]-1": {
+     "C[36]-1": 2.0,
+     "C[40c]-1": 1.0,
+     "C[45]-1": 1.0,
+     "C[40p]-1": 0.0,
+     "RacRac*-1": 0.0,
+     "DiDi*-1": -0.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": 1.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": -0.0,
+     "RacDi": 0.0
+    },
+    "C[40c]-1": {
+     "C[36]-1": 1.0,
+     "C[40c]-1": 2.0,
+     "C[45]-1": 1.0,
+     "C[40p]-1": 1.0,
+     "RacRac*-1": 1.0,
+     "DiDi*-1": 0.0,
+     "RacDi*": -0.0,
+     "Sym2Rac": 1.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": -0.0,
+     "Alt2Di": -0.0,
+     "RacDi": 0.0
+    },
+    "C[45]-1": {
+     "C[36]-1": 1.0,
+     "C[40c]-1": 1.0,
+     "C[45]-1": 2.0,
+     "C[40p]-1": 1.0,
+     "RacRac*-1": 1.0,
+     "DiDi*-1": -0.0,
+     "RacDi*": -0.0,
+     "Sym2Rac": 0.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": -0.0,
+     "RacDi": 0.0
+    },
+    "C[40p]-1": {
+     "C[36]-1": 0.0,
+     "C[40c]-1": 1.0,
+     "C[45]-1": 1.0,
+     "C[40p]-1": 2.0,
+     "RacRac*-1": 1.0,
+     "DiDi*-1": 1.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": -0.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": 0.0,
+     "RacDi": 0.0
+    },
+    "RacRac*-1": {
+     "C[36]-1": 0.0,
+     "C[40c]-1": 1.0,
+     "C[45]-1": 1.0,
+     "C[40p]-1": 1.0,
+     "RacRac*-1": 1.0,
+     "DiDi*-1": 0.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": 0.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": 0.0,
+     "RacDi": -0.0
+    },
+    "DiDi*-1": {
+     "C[36]-1": -0.0,
+     "C[40c]-1": 0.0,
+     "C[45]-1": -0.0,
+     "C[40p]-1": 1.0,
+     "RacRac*-1": 0.0,
+     "DiDi*-1": 1.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": -0.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": 0.0,
+     "RacDi": 0.0
+    },
+    "RacDi*": {
+     "C[36]-1": 0.0,
+     "C[40c]-1": -0.0,
+     "C[45]-1": -0.0,
+     "C[40p]-1": 0.0,
+     "RacRac*-1": 0.0,
+     "DiDi*-1": 0.0,
+     "RacDi*": 1.0,
+     "Sym2Rac": 0.0,
+     "Alt2Rac": -0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": 0.0,
+     "RacDi": 0.0
+    },
+    "Sym2Rac": {
+     "C[36]-1": 1.0,
+     "C[40c]-1": 1.0,
+     "C[45]-1": 0.0,
+     "C[40p]-1": -0.0,
+     "RacRac*-1": 0.0,
+     "DiDi*-1": -0.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": 1.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": -0.0,
+     "RacDi": 0.0
+    },
+    "Alt2Rac": {
+     "C[36]-1": 0.0,
+     "C[40c]-1": 0.0,
+     "C[45]-1": 0.0,
+     "C[40p]-1": 0.0,
+     "RacRac*-1": 0.0,
+     "DiDi*-1": 0.0,
+     "RacDi*": -0.0,
+     "Sym2Rac": 0.0,
+     "Alt2Rac": 1.0,
+     "Sym2Di": -0.0,
+     "Alt2Di": 0.0,
+     "RacDi": 0.0
+    },
+    "Sym2Di": {
+     "C[36]-1": 0.0,
+     "C[40c]-1": -0.0,
+     "C[45]-1": 0.0,
+     "C[40p]-1": 0.0,
+     "RacRac*-1": 0.0,
+     "DiDi*-1": 0.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": 0.0,
+     "Alt2Rac": -0.0,
+     "Sym2Di": 1.0,
+     "Alt2Di": -0.0,
+     "RacDi": 0.0
+    },
+    "Alt2Di": {
+     "C[36]-1": -0.0,
+     "C[40c]-1": -0.0,
+     "C[45]-1": -0.0,
+     "C[40p]-1": 0.0,
+     "RacRac*-1": 0.0,
+     "DiDi*-1": 0.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": -0.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": -0.0,
+     "Alt2Di": 1.0,
+     "RacDi": 0.0
+    },
+    "RacDi": {
+     "C[36]-1": 0.0,
+     "C[40c]-1": 0.0,
+     "C[45]-1": 0.0,
+     "C[40p]-1": 0.0,
+     "RacRac*-1": -0.0,
+     "DiDi*-1": 0.0,
+     "RacDi*": 0.0,
+     "Sym2Rac": 0.0,
+     "Alt2Rac": 0.0,
+     "Sym2Di": 0.0,
+     "Alt2Di": 0.0,
+     "RacDi": 1.0
+    }
+   }
+  }
+ },
+ "bulk": {
+  "orthogonality_graph": {
+   "degree": [
+    15
+   ],
+   "lam": [
+    6
+   ],
+   "mu": [
+    6
+   ],
+   "spectrum": {
+    "15": 1,
+    "3": 15,
+    "-3": 20
+   }
+  },
+  "rank_C36": 3.0,
+  "common_bulk_boundary": 2.0,
+  "common_bulk_splits": 2.0,
+  "incidence_bulk_boundary": {
+   "shape": [
+    36,
+    40
+   ],
+   "row_sum": [
+    10
+   ],
+   "col_sum": [
+    9
+   ],
+   "rank": 16
+  },
+  "incidence_bulk_splits": {
+   "rank": 21
+  },
+  "bulk_eigenspaces_seen_by_boundary": {
+   "-3": {
+    "dim": 20,
+    "visible_from_boundary": 0
+   },
+   "3": {
+    "dim": 15,
+    "visible_from_boundary": 15
+   },
+   "15": {
+    "dim": 1,
+    "visible_from_boundary": 1
+   }
+  }
+ },
+ "poincare": {
+  "shell_sizes": {
+   "null": 20,
+   "split_type": 30,
+   "kramers_type": 30
+  },
+  "plane_wave_spectra": {
+   "connection_null": {
+    "null": [
+     -7.0
+    ],
+    "split_type": [
+     2.0
+    ],
+    "kramers_type": [
+     2.0
+    ],
+    "zero": [
+     20
+    ]
+   },
+   "connection_split_type": {
+    "null": [
+     3.0
+    ],
+    "split_type": [
+     3.0
+    ],
+    "kramers_type": [
+     -6.0
+    ],
+    "zero": [
+     30
+    ]
+   },
+   "connection_kramers_type": {
+    "null": [
+     3.0
+    ],
+    "split_type": [
+     -6.0
+    ],
+    "kramers_type": [
+     3.0
+    ],
+    "zero": [
+     30
+    ]
+   }
+  },
+  "little_groups": {
+   "null": {
+    "order": 36,
+    "with_parity": 72,
+    "element_orders": {
+     "1": 1,
+     "2": 1,
+     "3": 8,
+     "4": 18,
+     "6": 8
+    },
+    "n_classes": 12,
+    "n_linear_characters": 4,
+    "is_SL23_by_order_statistics": false,
+    "order3_elements_commute": true,
+    "n_order3": 8
+   },
+   "split_type": {
+    "order": 24,
+    "with_parity": 48,
+    "element_orders": {
+     "1": 1,
+     "2": 1,
+     "3": 8,
+     "4": 6,
+     "6": 8
+    },
+    "n_classes": 7,
+    "n_linear_characters": 3,
+    "is_SL23_by_order_statistics": true,
+    "order3_elements_commute": false,
+    "n_order3": 8
+   },
+   "kramers_type": {
+    "order": 24,
+    "with_parity": 48,
+    "element_orders": {
+     "1": 1,
+     "2": 1,
+     "3": 8,
+     "4": 6,
+     "6": 8
+    },
+    "n_classes": 7,
+    "n_linear_characters": 3,
+    "is_SL23_by_order_statistics": true,
+    "order3_elements_commute": false,
+    "n_order3": 8
+   }
+  },
+  "lorentz_order": 720
+ },
+ "e8": {
+  "content": {
+   "sl9 (80)": {
+    "dim": 80.0,
+    "norm": 5.0,
+    "<1>": 1.0,
+    "<contexts40>": 2.0,
+    "<splits45>": 2.0,
+    "<kramers36>": 1.0,
+    "<points40>": 3.0,
+    "<vectors80>": 5.0
+   },
+   "Lambda3 (84)": {
+    "dim": 84.0,
+    "norm": 7.0,
+    "<1>": 0.0,
+    "<contexts40>": 0.0,
+    "<splits45>": 0.0,
+    "<kramers36>": 0.0,
+    "<points40>": 0.0,
+    "<vectors80>": 0.0
+   },
+   "<Lambda3, Lambda3*>": 0.0
+  },
+  "lorentz_SL29": {
+   "dims": {
+    "sl9": 1,
+    "wedge3": 0,
+    "wedge3_dual": 0
+   },
+   "total": 1,
+   "closure_error": 0.0,
+   "killing_rank": 0,
+   "derived_dim": 0,
+   "centre_dim": 1,
+   "generic_centraliser_dim": 1
+  },
+  "all_Sp43": {
+   "dims": {
+    "sl9": 1,
+    "wedge3": 0,
+    "wedge3_dual": 0
+   },
+   "total": 1,
+   "closure_error": 0.0,
+   "killing_rank": 0,
+   "derived_dim": 0,
+   "centre_dim": 1,
+   "generic_centraliser_dim": 1
+  }
+ }
+}
