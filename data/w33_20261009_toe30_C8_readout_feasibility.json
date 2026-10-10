@@ -1,0 +1,375 @@
+{
+  "status": "PASS",
+  "native_geometry": "eight-site C8 Bose-Hubbard pair model, not an experimentally constructed W33 machine",
+  "tested_T2_us": [
+    25,
+    50,
+    100
+  ],
+  "tested_reset_overhead_us": [
+    5,
+    50,
+    500
+  ],
+  "contrast_pairs": [
+    [
+      0.2,
+      0.6
+    ],
+    [
+      0.6,
+      0.6
+    ],
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "readout_model": "For target ideal binomial IQ shot noise corresponding to 8192 shots at contrast1, require ceil(8192/[intrinsic_contrast*exp(-t_interrogate/T2)]\u00b2) shots per point. Direct scan:361 frequency points, model assumed 20us interrogation; IQ:601 delays times2 quadratures, mean30us interrogation. Time per shot = reset +5us readout + duration.",
+  "scenario_grid": [
+    {
+      "T2_us": 25,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 366191902,
+      "IQ_shots": 301508478,
+      "direct_total_seconds": 10985.75706,
+      "IQ_total_seconds": 12060.33912,
+      "direct_time_over_IQ_time": 0.9108995154026812,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 40688310,
+      "IQ_shots": 301508478,
+      "direct_total_seconds": 1220.6493,
+      "IQ_total_seconds": 12060.33912,
+      "direct_time_over_IQ_time": 0.10121185547558632,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 14647936,
+      "IQ_shots": 108543004,
+      "direct_total_seconds": 439.43808,
+      "IQ_total_seconds": 4341.72016,
+      "direct_time_over_IQ_time": 0.10121289806941404,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 366191902,
+      "IQ_shots": 301508478,
+      "direct_total_seconds": 27464.39265,
+      "IQ_total_seconds": 25628.22063,
+      "direct_time_over_IQ_time": 1.071646488709037,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 40688310,
+      "IQ_shots": 301508478,
+      "direct_total_seconds": 3051.62325,
+      "IQ_total_seconds": 25628.22063,
+      "direct_time_over_IQ_time": 0.11907277114774863,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 14647936,
+      "IQ_shots": 108543004,
+      "direct_total_seconds": 1098.5952,
+      "IQ_total_seconds": 9226.15534,
+      "direct_time_over_IQ_time": 0.1190739977287224,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 366191902,
+      "IQ_shots": 301508478,
+      "direct_total_seconds": 192250.74855,
+      "IQ_total_seconds": 161307.03573,
+      "direct_time_over_IQ_time": 1.191831141648368,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 40688310,
+      "IQ_shots": 301508478,
+      "direct_total_seconds": 21361.36275,
+      "IQ_total_seconds": 161307.03573,
+      "direct_time_over_IQ_time": 0.13242672679048678,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 25,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 14647936,
+      "IQ_shots": 108543004,
+      "direct_total_seconds": 7690.1664,
+      "IQ_total_seconds": 58070.50714,
+      "direct_time_over_IQ_time": 0.1324280909319436,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 164540551,
+      "IQ_shots": 90813504,
+      "direct_total_seconds": 4936.21653,
+      "IQ_total_seconds": 3632.54016,
+      "direct_time_over_IQ_time": 1.3588883570663675,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 18282484,
+      "IQ_shots": 90813504,
+      "direct_total_seconds": 548.47452,
+      "IQ_total_seconds": 3632.54016,
+      "direct_time_over_IQ_time": 0.15098925155448248,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 6581752,
+      "IQ_shots": 32693198,
+      "direct_total_seconds": 197.45256,
+      "IQ_total_seconds": 1307.72792,
+      "direct_time_over_IQ_time": 0.15098902224248603,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 164540551,
+      "IQ_shots": 90813504,
+      "direct_total_seconds": 12340.541325,
+      "IQ_total_seconds": 7719.14784,
+      "direct_time_over_IQ_time": 1.598692184783962,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 18282484,
+      "IQ_shots": 90813504,
+      "direct_total_seconds": 1371.1863,
+      "IQ_total_seconds": 7719.14784,
+      "direct_time_over_IQ_time": 0.17763441359350882,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 6581752,
+      "IQ_shots": 32693198,
+      "direct_total_seconds": 493.6314,
+      "IQ_total_seconds": 2778.92183,
+      "direct_time_over_IQ_time": 0.17763414381468942,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 164540551,
+      "IQ_shots": 90813504,
+      "direct_total_seconds": 86383.789275,
+      "IQ_total_seconds": 48585.22464,
+      "direct_time_over_IQ_time": 1.7779847662550605,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 18282484,
+      "IQ_shots": 90813504,
+      "direct_total_seconds": 9598.3041,
+      "IQ_total_seconds": 48585.22464,
+      "direct_time_over_IQ_time": 0.19755603007128547,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 50,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 6581752,
+      "IQ_shots": 32693198,
+      "direct_total_seconds": 3455.4198,
+      "IQ_total_seconds": 17490.86093,
+      "direct_time_over_IQ_time": 0.19755573003689764,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 110294886,
+      "IQ_shots": 49839728,
+      "direct_total_seconds": 3308.84658,
+      "IQ_total_seconds": 1993.58912,
+      "direct_time_over_IQ_time": 1.6597434981988664,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 12255228,
+      "IQ_shots": 49839728,
+      "direct_total_seconds": 367.65684,
+      "IQ_total_seconds": 1993.58912,
+      "direct_time_over_IQ_time": 0.18441956585316838,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 5,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 4412142,
+      "IQ_shots": 17942254,
+      "direct_total_seconds": 132.36426,
+      "IQ_total_seconds": 717.69016,
+      "direct_time_over_IQ_time": 0.18443092489940227,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 110294886,
+      "IQ_shots": 49839728,
+      "direct_total_seconds": 8272.11645,
+      "IQ_total_seconds": 4236.37688,
+      "direct_time_over_IQ_time": 1.9526394096457254,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 12255228,
+      "IQ_shots": 49839728,
+      "direct_total_seconds": 919.1421,
+      "IQ_total_seconds": 4236.37688,
+      "direct_time_over_IQ_time": 0.21696419512137458,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 50,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 4412142,
+      "IQ_shots": 17942254,
+      "direct_total_seconds": 330.91065,
+      "IQ_total_seconds": 1525.09159,
+      "direct_time_over_IQ_time": 0.21697755870517912,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 0.2,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 110294886,
+      "IQ_shots": 49839728,
+      "direct_total_seconds": 57904.81515,
+      "IQ_total_seconds": 26664.25448,
+      "direct_time_over_IQ_time": 2.1716270069891714,
+      "faster_protocol": "IQ"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 0.6,
+      "IQ_intrinsic_contrast": 0.6,
+      "direct_shots": 12255228,
+      "IQ_shots": 49839728,
+      "direct_total_seconds": 6433.9947,
+      "IQ_total_seconds": 26664.25448,
+      "direct_time_over_IQ_time": 0.24129662821909884,
+      "faster_protocol": "direct"
+    },
+    {
+      "T2_us": 100,
+      "reset_us": 500,
+      "direct_intrinsic_contrast": 1.0,
+      "IQ_intrinsic_contrast": 1.0,
+      "direct_shots": 4412142,
+      "IQ_shots": 17942254,
+      "direct_total_seconds": 2316.37455,
+      "IQ_total_seconds": 9599.10589,
+      "direct_time_over_IQ_time": 0.24131149052258238,
+      "faster_protocol": "direct"
+    }
+  ],
+  "idealized_first_gap_MHz": 0.1817472011180996,
+  "decay_limited_linewidth_FWHM_MHz_by_T2": {
+    "25": 0.012732395447351627,
+    "50": 0.006366197723675813,
+    "100": 0.0031830988618379067
+  },
+  "least_cost_direct_scenario": {
+    "T2_us": 100,
+    "reset_us": 5,
+    "direct_intrinsic_contrast": 1.0,
+    "IQ_intrinsic_contrast": 1.0,
+    "direct_shots": 4412142,
+    "IQ_shots": 17942254,
+    "direct_total_seconds": 132.36426,
+    "IQ_total_seconds": 717.69016,
+    "direct_time_over_IQ_time": 0.18443092489940227,
+    "faster_protocol": "direct"
+  },
+  "crucial_nonrobustness": "The Round29 30% shot-count win assumes equal readout contrast. A threefold smaller direct-transition contrast (0.2 vs 0.6) can make direct readout slower despite fewer scan points; which protocol wins depends on T2, contrast and reset time. Assumed overhead dominates absolute time. None of these assumptions is calibrated to a physical instrument.",
+  "next_hardware_gate": "Require experimentally measured pair transition contrast, per-site T2 under nonlinear U, reset/readout time, calibration drift, independently adjustable 8 links, 8 detunings and pair-loss channel before claiming a practical spectroscopy improvement."
+}

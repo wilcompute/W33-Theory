@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "prior": "The 81 tangent vectors, 20 null directions, finite group SL2(F9), spinor square map, and SRG(81,20,1,6) originate in parallel Pass11831\u201311833. Round29 proved finite translation-invariant strict chronology impossible. No claim of new finite AdS kinematics.",
+  "added_external_clock": "Take spacetime event set Z x F3^4 and edges (t,x)->(t+1,x+v) with any of twenty nonzero finite null vectors v. The projection t into Z gives a strict acyclic chronology; it is an *external nonperiodic time input*, not spontaneously emergent.",
+  "future_support_size_after_exact_steps": {
+    "0": 1,
+    "1": 20,
+    "2": 81,
+    "3": 81,
+    "4": 81,
+    "5": 81
+  },
+  "exact_two_step_path_counts": {
+    "diagonal": 20,
+    "lightlike": 1,
+    "nonlightlike": 6
+  },
+  "exact_two_step_path_count_identity": "A\u00b2=20I+A+6(J-I-A): from any location all 81 locations are reachable at exactly two null ticks, with 20 return loops, 1 path to each of 20 neighbors and 6 to each of 60 nonneighbors.",
+  "causal_metric_obstruction": "The causal future support saturates the finite 81-point spatial graph in 2 ticks; this fails a scale-extensive 3+1D light-cone growth law and has no physical length scale. The time extension is not Lorentz-invariant physical 3+1D Minkowski spacetime.",
+  "reversible_null_walk_spectrum": [
+    {
+      "eigenvalue": 1.0,
+      "multiplicity": 1
+    },
+    {
+      "eigenvalue": 0.1,
+      "multiplicity": 60
+    },
+    {
+      "eigenvalue": -0.35,
+      "multiplicity": 20
+    }
+  ],
+  "random_walk_mixing_and_return": [
+    {
+      "tick": 0,
+      "return_probability": 1.0,
+      "square_L2_dist_from_uniform": 0.9876543209876543,
+      "collision_probability": 1.0
+    },
+    {
+      "tick": 1,
+      "return_probability": 0.0,
+      "square_L2_dist_from_uniform": 0.03765432098765432,
+      "collision_probability": 0.049999999999999996
+    },
+    {
+      "tick": 2,
+      "return_probability": 0.049999999999999996,
+      "square_L2_dist_from_uniform": 0.00377932098765432,
+      "collision_probability": 0.016125
+    },
+    {
+      "tick": 3,
+      "return_probability": 0.002500000000000003,
+      "square_L2_dist_from_uniform": 0.0004546334876543208,
+      "collision_probability": 0.0128003125
+    },
+    {
+      "tick": 4,
+      "return_probability": 0.016125,
+      "square_L2_dist_from_uniform": 5.560926890432096e-05,
+      "collision_probability": 0.012401288281249999
+    },
+    {
+      "tick": 5,
+      "return_probability": 0.01105625,
+      "square_L2_dist_from_uniform": 6.811302107445983e-06,
+      "collision_probability": 0.012352490314453124
+    },
+    {
+      "tick": 8,
+      "return_probability": 0.012401288281249999,
+      "square_L2_dist_from_uniform": 1.2520846431858002e-08,
+      "collision_probability": 0.01234569153319211
+    },
+    {
+      "tick": 12,
+      "return_probability": 0.012346513388520509,
+      "square_L2_dist_from_uniform": 2.8195385782897687e-12,
+      "collision_probability": 0.012345679015165218
+    }
+  ],
+  "gauge_and_gravity_limits": "No emergent Einstein equations, 4D continuum, spin2 graviton, experimentally calibrated clock or physical c. Additional geometry with unbounded spatial growth, nontrivial energy action and causal order remains necessary."
+}

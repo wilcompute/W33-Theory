@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "code": "[[160,1,8]]_3",
+  "complete_check_count": 159,
+  "exhaustive_Pauli_fault_enumeration": {
+    "WilsonZ": {
+      "checks": 80,
+      "max_logical_equivalent_data_weight": {
+        "initial": 2,
+        "fanout": 2,
+        "data": 1
+      },
+      "fault_count_by_stage_and_effective_weight": {
+        "data:0": 5120,
+        "data:1": 46080,
+        "fanout:0": 4480,
+        "fanout:1": 20160,
+        "fanout:2": 20160,
+        "initial:0": 1280,
+        "initial:1": 480,
+        "initial:2": 3360
+      },
+      "enumerated_single_faults": 101120
+    },
+    "GaussX": {
+      "checks": 79,
+      "max_logical_equivalent_data_weight": {
+        "initial": 1,
+        "fanout": 2,
+        "data": 1
+      },
+      "fault_count_by_stage_and_effective_weight": {
+        "data:0": 2528,
+        "data:1": 22752,
+        "fanout:0": 3318,
+        "fanout:1": 9954,
+        "fanout:2": 5688,
+        "initial:0": 1106,
+        "initial:1": 1422
+      },
+      "enumerated_single_faults": 46768
+    }
+  },
+  "qutrit_cat_resource_preparation": "Prepare GHZ_w by root |+> and w-1 leaves |0>, then fanout SUM(root->leaf) for each leaf. Enumerate all 8 one-qutrit preparation Pauli errors for every cat input and all 80 nonidentity two-qutrit Pauli errors inserted after each fanout or transversal data-coupling SUM.",
+  "layout": "Wilson Z checks: data controls, GHZ-cat targets; Gauss X checks: GHZ-cat controls, data targets. Ancilla-data operations transversal, one per cat qutrit. For each final data Pauli error, minimize support over multiplication by the measured check stabilizer. This tests hook *support*, NOT measurement correctness.",
+  "limitation": "This does not demonstrate that the chosen GHZ state and data-CNOT directions correctly project the desired qutrit stabilizer eigenvalue! In particular global cat entanglement and final basis readout must be tested by a proper qutrit stabilizer/Clifford simulation. Cat verification, correlated measurement errors, multiple faults, detector history, and actual logical failure probability are missing. Thus no verified fault-tolerant measurement circuit or threshold.",
+  "scientific_context": "Upgrades Round29 one-fault transversal-data-only statement to include fanout preparation errors and cat input errors at Pauli-frame level, conditional on the logical measurement scheme being validated separately."
+}

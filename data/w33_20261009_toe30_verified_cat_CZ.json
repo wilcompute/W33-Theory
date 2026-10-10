@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "details": {
+    "WilsonZ": {
+      "checks": 80,
+      "faults_by_stage": {
+        "initial": 5120,
+        "fanout": 44800,
+        "verifier": 89600,
+        "data": 51200
+      },
+      "accepted_single_faults": 79360,
+      "rejected_single_faults": 111360,
+      "maximum_data_error_weight_modulo_measured_stabilizer": 1
+    },
+    "GaussX_as_Z_via_Fourier": {
+      "checks": 79,
+      "faults_by_stage": {
+        "initial": 2528,
+        "fanout": 18960,
+        "verifier": 37920,
+        "data": 25280
+      },
+      "accepted_single_faults": 39184,
+      "rejected_single_faults": 45504,
+      "maximum_data_error_weight_modulo_measured_stabilizer": 1
+    }
+  },
+  "total_verified_cat_ancillas": 1753,
+  "total_two_qutrit_ops": 3347,
+  "ideal_measurement_correctness": "GHZ_w is a +1 eigenstate of X_all. Conjugation by product CZ(cat_j,data_j)^h_j maps X_all -> X_all tensor product Z_j^h_j; measuring all cat_j in X and summing the ternary outcomes yields the Z-check eigenvalue. For Gauss X use ideal local Fourier changes to convert X to Z before/after.",
+  "verification_correctness": "GHZ is stabilized by Z_0 Z_j^-1. Measuring each with a fresh verifier |0> and paired SUM(+1 from root,-1 from leaf) detects relative cat X errors without revealing the GHZ superposition. Reject on any nonzero verifier report.",
+  "all_single_fault_model": "One nonidentity Pauli at any cat input, or one nonidentity two-qutrit Pauli AFTER any fanout, verification or data CZ gate. Exact mod3 Pauli propagation and ideal verifier acceptance; minimize final data-support over measured stabilizer. No simultaneous faults.",
+  "limitations": "Ideal verifier preparation/measurement, final cat X measurements, Fourier basis transformations and data state are assumed perfect. Errors at these untested operations, two faults, repeated rounds, leakage, hardware connectivity and decoded logical error rates are NOT characterized. This is single-fault conditional postselection, not a threshold theorem."
+}
