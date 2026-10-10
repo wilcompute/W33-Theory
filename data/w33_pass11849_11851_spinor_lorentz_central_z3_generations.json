@@ -1,0 +1,143 @@
+{
+ "pass_ids": [
+  11849,
+  11850,
+  11851
+ ],
+ "central_Z3": {
+  "c": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   2
+  ],
+  "fixes_A5_A2_A1_roots": {
+   "A5": true,
+   "A2": true,
+   "A1": true
+  },
+  "commutes_with_A6_lift": true,
+  "commutant_of_A6_and_tc": {
+   "dim": 12,
+   "closure_error": 6.935386815479589e-16,
+   "derived_dim": 11,
+   "centre_dim": 1,
+   "rank": 4,
+   "contains_su3_A2": true,
+   "contains_su2_alpha": true
+  }
+ },
+ "su5_L": {
+  "dim": 24,
+  "analysis": {
+   "dim": 24,
+   "closure_error": 2.220446049250313e-15,
+   "derived_dim": 24,
+   "centre_dim": 0,
+   "rank": 4
+  },
+  "homomorphism_error": 5.6964366670454866e-11,
+  "cartan_matrix": [
+   [
+    2,
+    -1,
+    -1,
+    0
+   ],
+   [
+    -1,
+    2,
+    0,
+    0
+   ],
+   [
+    -1,
+    0,
+    2,
+    -1
+   ],
+   [
+    0,
+    0,
+    -1,
+    2
+   ]
+  ]
+ },
+ "vector5_versus_Rac": {
+  "vector5_norm": 1.0,
+  "rac_norm_on_SL29": 1.0,
+  "overlap": -0.0
+ },
+ "Di": {
+  "SL29_generated_order": 720,
+  "frobenius_schur_indicator_on_SL29": -1.0,
+  "minus_one_is_minus_identity": true
+ },
+ "generator_order_errors": [
+  7.167504861766925e-09,
+  7.655259025599193e-08
+ ],
+ "Z_fixes_commutant": 1.8216525394911234e-12,
+ "spinor_lorentz": {
+  "automorphism_error": 5.0984047511958885e-09,
+  "minus_one_acts_nontrivially": true,
+  "commutant": {
+   "dim": 55,
+   "closure_error": 1.7009670157362727e-12,
+   "derived_dim": 55,
+   "centre_dim": 0,
+   "rank": 5,
+   "contains_su5_gut": true
+  }
+ },
+ "casimir_counts_by_spinor_sign": {
+  "1": {
+   "0.0": 10,
+   "0.166667": 55,
+   "0.3": 55
+  },
+  "-1": {
+   "0.229167": 128
+  }
+ },
+ "Z_squared_is_identity": true,
+ "spinor_matter": [
+  {
+   "casimir": 0.0,
+   "dim": 10
+  },
+  {
+   "casimir": 0.166667,
+   "dim": 55
+  },
+  {
+   "casimir": 0.229167,
+   "dim": 128
+  },
+  {
+   "casimir": 0.3,
+   "dim": 55
+  }
+ ],
+ "casimir_ratios_to_adjoint": {
+  "10_0": 0.0,
+  "55_1": 0.55556,
+  "128_2": 0.76389,
+  "55_3": 1.0
+ },
+ "so11_ratios_expected": {
+  "vector 10/18": 0.5556,
+  "spinor 13.75/18": 0.7639
+ },
+ "spinor_matter_blocks_match_so11_x_sp4": true,
+ "generations": {
+  "e6_dim": 78,
+  "e6_cap_su5gut_dim": 4,
+  "A2_inside_su5gut": true
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "pass_id": 11852,
+ "norms": {
+  "contact": 7191686.054282404,
+  "exchange15": 104081996.73637627,
+  "exchange20": 11197440.0
+ },
+ "rank_of_three_structures": 3,
+ "E20_relative_residual_outside_span_C_E15": 0.3162277660168346,
+ "hidden_20_detected_at_four_points": true,
+ "E20_supported_on_boundary_15": true,
+ "structures_symmetric": true,
+ "invariant_symmetric_forms_on_boundary_15": {
+  "sym2": 1.0,
+  "sym3": 1.0,
+  "sym4": 3.0
+ }
+}
