@@ -1,0 +1,137 @@
+{
+  "pass_ids": [
+    11884,
+    11885,
+    11886
+  ],
+  "11884_one_loop": {
+    "points": {
+      "witting_e0": {
+        "sum_e": 20.0,
+        "sum_e2": 8.0,
+        "zeros": 24,
+        "F": -6.591673732008657,
+        "scalar_over_vector_min": 2.6666666666581675,
+        "scalar_over_vector_max": 2.6666666666666687,
+        "distinct": [
+          -0.0,
+          0.333333,
+          1.0
+        ]
+      },
+      "witting_011": {
+        "sum_e": 20.000000000000014,
+        "sum_e2": 8.00000000000001,
+        "zeros": 24,
+        "F": -6.591673732008662,
+        "scalar_over_vector_min": 2.6666666666666643,
+        "scalar_over_vector_max": 2.6666666666805985,
+        "distinct": [
+          -0.0,
+          0.333333,
+          1.0
+        ]
+      },
+      "generic_0": {
+        "sum_e": 20.000000000000004,
+        "sum_e2": 8.000000000000002,
+        "zeros": 0,
+        "F": -6.250842277804474,
+        "scalar_over_vector_min": 2.666666666639658,
+        "scalar_over_vector_max": 2.666666666710044,
+        "distinct": [
+          0.007316,
+          0.012833,
+          0.016275,
+          0.034656,
+          0.04991,
+          0.054935
+        ]
+      },
+      "generic_1": {
+        "sum_e": 19.999999999999993,
+        "sum_e2": 7.999999999999992,
+        "zeros": 0,
+        "F": -6.252187055313504,
+        "scalar_over_vector_min": 2.666666666600556,
+        "scalar_over_vector_max": 2.666666667138523,
+        "distinct": [
+          0.003622,
+          0.009352,
+          0.012645,
+          0.022887,
+          0.034968,
+          0.062145
+        ]
+      },
+      "generic_2": {
+        "sum_e": 19.999999999999996,
+        "sum_e2": 7.999999999999997,
+        "zeros": 0,
+        "F": -6.274702494638876,
+        "scalar_over_vector_min": 2.6666666665800247,
+        "scalar_over_vector_max": 2.666666666709441,
+        "distinct": [
+          0.002528,
+          0.002594,
+          0.004281,
+          0.009077,
+          0.032434,
+          0.059222
+        ]
+      }
+    },
+    "minimisations": [
+      {
+        "F": -6.591673732008662,
+        "zeros": 24
+      },
+      {
+        "F": -6.59167373200866,
+        "zeros": 24
+      },
+      {
+        "F": -6.591673732008664,
+        "zeros": 24
+      },
+      {
+        "F": -6.591673732008664,
+        "zeros": 24
+      },
+      {
+        "F": -6.59167373200866,
+        "zeros": 24
+      }
+    ],
+    "minus_6_log3": -6.591673732008658
+  },
+  "11885_stability": {
+    "ker_dmu": 112,
+    "orbit_rank": 56,
+    "tree_flat_nongauge": 55,
+    "finite_tests": {
+      "0.02": {
+        "basis_min": 0.006029973966223956,
+        "random_min": 0.007928562146495288
+      },
+      "0.05": {
+        "basis_min": 0.035229287937784015,
+        "random_min": 0.04387166285713118
+      }
+    },
+    "phase_flatness": -8.881784197001252e-16,
+    "I12_at_ray": 0.001308887069155728
+  },
+  "checks": {
+    "traces_constant": true,
+    "scalars_proportional_to_vectors": true,
+    "witting_is_trinification_spectrum": true,
+    "generic_higher": true,
+    "global_minimum_at_witting": true,
+    "flat_count_55": true,
+    "strict_local_min": true,
+    "phase_exactly_flat": true,
+    "phase_physical": true
+  },
+  "all_checks_pass": true
+}
