@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "W33_Levi_points": 40,
+  "lines": 40,
+  "incidence_edges": 160,
+  "incidence_shape": [
+    40,
+    40
+  ],
+  "incidence_singular_values_multiplicity": {
+    "four": 1,
+    "sqrt_six": 24,
+    "zero": 15
+  },
+  "incidence_real_rank": 25,
+  "incidence_F3_rank": 25,
+  "left_hand_kernel_dimension": 15,
+  "right_hand_kernel_dimension": 15,
+  "native_point_line_chiral_Fredholm_index": 0,
+  "levi_0_1_cochain_kernel_dimensions": {
+    "H0": 1,
+    "H1": 81
+  },
+  "levi_Euler_characteristic": -80,
+  "extra_W33_cover_Euler_char_formula": "80p-160p=-80p for any degree-p covering of the Levi graph",
+  "contrast": "The -80p vertex/edge de Rham index is an Euler-cochain count, NOT 80p Weyl fermions or 3 families. The native 40x40 bipartite fermionic point-line hopping has EXACTLY balanced 15+15 zero modes and index0. Round36 rectangular Q index+1 requires an externally unbalanced boundary.",
+  "no_go_scope": "No net chirality from finite balanced point/line incidence hopping or finite native graph cochain index alone. Nontrivial chiral edge/bulk index with extra geometry, flux, nonlinear interactions and boundary conditions remains possible; those have not been derived from W33."
+}

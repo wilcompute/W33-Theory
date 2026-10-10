@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "W33_SRG_parameters": {
+    "v": 40,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4
+  },
+  "graph_laplacian_eigenvalues": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "exact_Green": "L+ = (7/80) I + (1/160) A - (13/3200) J",
+  "MP_pseudoinverse_residual": 6.27691897648057e-16,
+  "resistance_adjacent": "13/80",
+  "resistance_nonadjacent": "7/40",
+  "resistance_adjacent_over_nonadjacent": "13/14",
+  "earlier_independent_prior": "analysis/w33_poisson_kemeny_green_kernel.py (prior repo exact equivalent hitting/commute/resistance calculation): these resistances are NOT newly discovered here.",
+  "lattice_U1_electrostatic_model": "For positive arbitrary \u03ba, source rho with sum rho=0: S[phi]=(\u03ba/2)phi^T L phi-rho^T phi. Eliminating phi gives pair energy magnitude rho^T L+ rho/(2\u03ba); all predictions scale as \u03ba^-1. This is a *chosen* Gaussian U(1) graph action, not derived from W33 topology.",
+  "sample_pair_energies": [
+    {
+      "kappa": 1.0,
+      "neutral_adjacent_pair_action": 0.08125,
+      "neutral_nonadjacent_pair_action": 0.0875,
+      "invariant_shell_ratio": 0.9285714285714286
+    },
+    {
+      "kappa": 10.0,
+      "neutral_adjacent_pair_action": 0.008125,
+      "neutral_nonadjacent_pair_action": 0.008749999999999999,
+      "invariant_shell_ratio": 0.9285714285714286
+    },
+    {
+      "kappa": 137.0,
+      "neutral_adjacent_pair_action": 0.0005930656934306569,
+      "neutral_nonadjacent_pair_action": 0.0006386861313868613,
+      "invariant_shell_ratio": 0.9285714285714286
+    }
+  ],
+  "gauge_coupling_obstruction": "W33 fixes relative Green function and shell ratio 13/14 in the chosen identical-conductance graph model, but \u03ba is arbitrary and dimensionful physical distance/charge normalizations are missing. Hence no parameter-free alpha(0), quantum electron vacuum polarization, beta function, or observed Coulomb law follows. Rescaling \u03ba continuously changes the absolute interaction while leaving all graph counts fixed.",
+  "physics_boundary": "An experimentally falsifiable resistor-network ratio would require 40 nodes connected according to W33 with equal measured conductance; that is a synthetic classical network, NOT a QED charge measurement. Native graph combinatorics alone cannot set physical electromagnetic alpha."
+}

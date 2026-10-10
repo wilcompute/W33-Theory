@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "samples": [
+    {
+      "k_norm": 0.03,
+      "smallest_Laplacian_eigenvalue": 5.694957527268279e-06,
+      "intrinsic_linear_E_positive": 0.002386411013901059,
+      "local_uniform_edge_mass_negative_acoustic_E": -5.6949250950566466e-06,
+      "nonlocal_cycle_only_mass_negative_acoustic_E": -0.002386411013901059,
+      "projection_Hermitian_residual": 1.868697081086139e-13,
+      "projection_idempotence_residual": 2.7671344557506076e-12,
+      "cycle_projector_annihilates_B_residual": 2.4211247659788094e-13,
+      "fraction_nonzero_offdiagonal_entries_in_required_edge_projector": 0.9634433962264151
+    },
+    {
+      "k_norm": 0.015,
+      "smallest_Laplacian_eigenvalue": 1.423805935374382e-06,
+      "intrinsic_linear_E_positive": 0.0011932333951806672,
+      "local_uniform_edge_mass_negative_acoustic_E": -1.4238039081071463e-06,
+      "nonlocal_cycle_only_mass_negative_acoustic_E": -0.0011932333951806672,
+      "projection_Hermitian_residual": 3.704125019862617e-13,
+      "projection_idempotence_residual": 5.023628051964299e-13,
+      "cycle_projector_annihilates_B_residual": 4.44743871531825e-13,
+      "fraction_nonzero_offdiagonal_entries_in_required_edge_projector": 0.9634433962264151
+    },
+    {
+      "k_norm": 0.0075,
+      "smallest_Laplacian_eigenvalue": 3.5595564287143733e-07,
+      "intrinsic_linear_E_positive": 0.0005966201830909153,
+      "local_uniform_edge_mass_negative_acoustic_E": -3.5595551617362275e-07,
+      "nonlocal_cycle_only_mass_negative_acoustic_E": -0.0005966201830909153,
+      "projection_Hermitian_residual": 7.1138181819682e-13,
+      "projection_idempotence_residual": 5.098903265179312e-11,
+      "cycle_projector_annihilates_B_residual": 8.753166455228776e-13,
+      "fraction_nonzero_offdiagonal_entries_in_required_edge_projector": 0.9634433962264151
+    }
+  ],
+  "dispersion_halving_ratios": {
+    "intrinsic_E_at_k_over_E_at_half_k": 1.9999532560348203,
+    "local_mass_E_at_k_over_E_at_half_k": 3.999795942846986,
+    "exact_cycle_projector_E_at_k_over_E_at_half_k": 1.9999532560348203
+  },
+  "flat_modes_before": 80,
+  "flat_modes_after_local_uniform_edge_mass_at_E_equals_m": 80,
+  "flat_modes_after_exact_cycle_projector_at_E_equals_m": 80,
+  "physical_spectrum_note": "Both put former flat zero modes at energy +m, but local uniform edge mass changes acoustic dispersion to quadratic, whereas projector mass preserves \u00b1sqrt(L) while coupling edge channels nonlocally.",
+  "Hlocal": "H=[[0,B\u2020],[B,mI_edge]], eigenvalues (m\u00b1sqrt(m\u00b2+4\u03bb_j))/2 plus m repeated E\u2212V=80. At small \u03bb~k\u00b2, negative branch E_-~-\u03bb/m~k\u00b2.",
+  "Hnonlocal": "H=[[0,B\u2020],[B,m(I-P)]], P=B(B\u2020B)^-1B\u2020 for invertible L(k), shifts cycle modes to m and preserves \u00b1sqrt \u03bb. P is dense, momentum dependent, and singular in the zero-momentum limit because L(0) has a zero mode.",
+  "gauge_candidate": "A physical quotient by ker B\u2020, leaving C^80 \u2295 im B, also needs a gauge/constraint principle and local implementation; simply deleting the unwanted kernel is an imposed global operation.",
+  "caveat": "Not a universal no-go for every possible local coupled-ancilla completion or gauge theory. We only falsify these TWO SIMPLE methods as simultaneous locality+flat-band-removal+z1 solutions."
+}

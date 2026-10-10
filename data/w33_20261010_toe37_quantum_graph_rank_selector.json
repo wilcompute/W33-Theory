@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "base_W33_Levi_vertices": 80,
+  "deck_p": 3,
+  "total_vertices_by_rank": {
+    "1": 240,
+    "2": 720,
+    "3": 2160
+  },
+  "massive_scalar_one_loop_density": "f_r(m)= 1/(2 |V_r|) sum_{lambda in spectrum(L_r)} ln(lambda + m\u00b2). Gaussian scalar determinant at normalized unit measure; physically requires specifying measure, scalar couplings, and meaningful size normalization.",
+  "exact_free_hopping_degeneracy": "E_min(-t A)=-4t for every rank due to identical 4-regular covers, previously Round36.",
+  "one_loop_densities": {
+    "0.1": {
+      "1": 0.5955785365607447,
+      "2": 0.5983644615548559,
+      "3": 0.6002842031910266
+    },
+    "0.5": {
+      "1": 0.6495197441704758,
+      "2": 0.6496920152101369,
+      "3": 0.6498520427008723
+    },
+    "2.0": {
+      "1": 1.023156844939532,
+      "2": 1.0231569415028157,
+      "3": 1.0231570344079246
+    },
+    "10.0": {
+      "1": 2.322102964015947,
+      "2": 2.3221029640159476,
+      "3": 2.3221029640159476
+    }
+  },
+  "quantum_rank_hamiltonian": "H_rank = diag(f_r(m)+kappa*r) - g*(|1><2|+|2><1|+|2><3|+|3><2|) on the abstract rank sector basis. The offdiagonal jumps between globally distinct covers, so it is NOT a derived local microscopic geometry move.",
+  "tested_ground_superpositions": [
+    {
+      "mass": 0.1,
+      "rank_penalty": 0,
+      "transition_amplitude": 0.03,
+      "one_loop_effective_density_by_rank": [
+        0.5955785365607447,
+        0.5983644615548559,
+        0.6002842031910266
+      ],
+      "lowest_energy": 0.5556550995287134,
+      "ground_rank_probabilities": [
+        0.2800165621398958,
+        0.4959033654703883,
+        0.22408007238971595
+      ],
+      "most_probable_rank": 2
+    },
+    {
+      "mass": 0.5,
+      "rank_penalty": 0,
+      "transition_amplitude": 0.03,
+      "one_loop_effective_density_by_rank": [
+        0.6495197441704758,
+        0.6496920152101369,
+        0.6498520427008723
+      ],
+      "lowest_energy": 0.6072622219607395,
+      "ground_rank_probabilities": [
+        0.25198022631104566,
+        0.4999562581697337,
+        0.24806351551922043
+      ],
+      "most_probable_rank": 2
+    },
+    {
+      "mass": 2.0,
+      "rank_penalty": 0,
+      "transition_amplitude": 0.03,
+      "one_loop_effective_density_by_rank": [
+        1.023156844939532,
+        1.0231569415028157,
+        1.0231570344079246
+      ],
+      "lowest_energy": 0.9807305337169734,
+      "ground_rank_probabilities": [
+        0.250001121843504,
+        0.49999998921950695,
+        0.24999888893698902
+      ],
+      "most_probable_rank": 2
+    },
+    {
+      "mass": 10.0,
+      "rank_penalty": 0,
+      "transition_amplitude": 0.03,
+      "one_loop_effective_density_by_rank": [
+        2.322102964015947,
+        2.3221029640159476,
+        2.3221029640159476
+      ],
+      "lowest_energy": 2.279676557144755,
+      "ground_rank_probabilities": [
+        0.25000000000000455,
+        0.4999999999999985,
+        0.24999999999999672
+      ],
+      "most_probable_rank": 2
+    },
+    {
+      "mass": 0.5,
+      "rank_penalty": 0.05,
+      "transition_amplitude": 0.03,
+      "one_loop_effective_density_by_rank": [
+        0.6495197441704758,
+        0.6496920152101369,
+        0.6498520427008723
+      ],
+      "lowest_energy": 0.6839860089031922,
+      "ground_rank_probabilities": [
+        0.7775557080242155,
+        0.2084686736700744,
+        0.013975618305710357
+      ],
+      "most_probable_rank": 1
+    },
+    {
+      "mass": 0.5,
+      "rank_penalty": -0.05,
+      "transition_amplitude": 0.03,
+      "one_loop_effective_density_by_rank": [
+        0.6495197441704758,
+        0.6496920152101369,
+        0.6498520427008723
+      ],
+      "lowest_energy": 0.4842393937178724,
+      "ground_rank_probabilities": [
+        0.014227509558984339,
+        0.21008592284383007,
+        0.7756865675971851
+      ],
+      "most_probable_rank": 3
+    },
+    {
+      "mass": 0.5,
+      "rank_penalty": 0,
+      "transition_amplitude": 0.2,
+      "one_loop_effective_density_by_rank": [
+        0.6495197441704758,
+        0.6496920152101369,
+        0.6498520427008723
+      ],
+      "lowest_energy": 0.36684619303044314,
+      "ground_rank_probabilities": [
+        0.25029651122315044,
+        0.4999944165270999,
+        0.24970907224974898
+      ],
+      "most_probable_rank": 2
+    }
+  ],
+  "no_go": "Rank selection depends on external masses, normalization, rank chemical potential and global transition amplitudes, none fixed by W33. Gaussian determinant depends on measure and counterterms. A three-sector Hilbert-space toy cannot establish spontaneous symmetry breaking, gravity, or stable thermodynamic 3D.",
+  "possible_use": "Defines a repeatable effective-sector model and quantifies sensitivity to rank cost and scalar field mass rather than asserting unexplained 3D preference."
+}
