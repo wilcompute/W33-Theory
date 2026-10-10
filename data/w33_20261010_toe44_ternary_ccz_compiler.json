@@ -1,0 +1,342 @@
+{
+  "status": "EXACT_COMPUTATIONAL_BASIS_CCZ_DECOMPOSITION",
+  "R_gate": "diag(1,zeta9,zeta9**8) where zeta9=exp(2pi i/9)",
+  "Clifford_SUM": "|src,target> -> |src,target+src mod3>",
+  "phase_identity_mod9": "-sign*[f(a+b+c)-f(a+b)-f(a+c)-f(b+c)+f(a)+f(b)+f(c)]=3*sign*a*b*c (mod9)",
+  "phase_polynomial_pattern": [
+    [
+      [
+        0,
+        1,
+        2
+      ],
+      -1
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      1
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      1
+    ],
+    [
+      [
+        0
+      ],
+      -1
+    ],
+    [
+      [
+        1
+      ],
+      -1
+    ],
+    [
+      [
+        2
+      ],
+      -1
+    ]
+  ],
+  "magic_injection_correction_tables": {
+    "-1": [
+      {
+        "measurement": 0,
+        "magic_state": "R^1|+>",
+        "phase_correction_omega_exponents": [
+          0,
+          0,
+          0
+        ],
+        "Clifford_quadratic_coeff_a": 0,
+        "Clifford_linear_coeff_b": 0
+      },
+      {
+        "measurement": 1,
+        "magic_state": "R^1|+>",
+        "phase_correction_omega_exponents": [
+          0,
+          0,
+          1
+        ],
+        "Clifford_quadratic_coeff_a": 2,
+        "Clifford_linear_coeff_b": 1
+      },
+      {
+        "measurement": 2,
+        "magic_state": "R^1|+>",
+        "phase_correction_omega_exponents": [
+          0,
+          2,
+          0
+        ],
+        "Clifford_quadratic_coeff_a": 1,
+        "Clifford_linear_coeff_b": 1
+      }
+    ],
+    "1": [
+      {
+        "measurement": 0,
+        "magic_state": "R^-1|+>",
+        "phase_correction_omega_exponents": [
+          0,
+          0,
+          0
+        ],
+        "Clifford_quadratic_coeff_a": 0,
+        "Clifford_linear_coeff_b": 0
+      },
+      {
+        "measurement": 1,
+        "magic_state": "R^-1|+>",
+        "phase_correction_omega_exponents": [
+          0,
+          0,
+          2
+        ],
+        "Clifford_quadratic_coeff_a": 1,
+        "Clifford_linear_coeff_b": 2
+      },
+      {
+        "measurement": 2,
+        "magic_state": "R^-1|+>",
+        "phase_correction_omega_exponents": [
+          0,
+          1,
+          0
+        ],
+        "Clifford_quadratic_coeff_a": 2,
+        "Clifford_linear_coeff_b": 2
+      }
+    ]
+  },
+  "magic_injection_exact_proof": "For R^k use |M>=R^-k|+> on one ancilla, SUM(data->ancilla), measure ancilla outcome m, then diagonal Clifford C_m=diag(omega^{-q_mk(x)}), q_mk(x)=(-k f(m-x)-k f(x)+k f(m))/3. The output equals R^k applied to data up to the outcome-global zeta9^-k*f(m). Each m has probability 1/3, independent of data.",
+  "example_positive_ops": [
+    [
+      "SUM",
+      1,
+      0,
+      1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      1
+    ],
+    [
+      "R",
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      1,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      1,
+      0,
+      1
+    ],
+    [
+      "R",
+      0,
+      1
+    ],
+    [
+      "SUM",
+      1,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      1
+    ],
+    [
+      "R",
+      0,
+      1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      2,
+      1,
+      1
+    ],
+    [
+      "R",
+      1,
+      1
+    ],
+    [
+      "SUM",
+      2,
+      1,
+      -1
+    ],
+    [
+      "R",
+      0,
+      -1
+    ],
+    [
+      "R",
+      1,
+      -1
+    ],
+    [
+      "R",
+      2,
+      -1
+    ]
+  ],
+  "example_negative_ops": [
+    [
+      "SUM",
+      1,
+      0,
+      1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      1
+    ],
+    [
+      "R",
+      0,
+      1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      1,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      1,
+      0,
+      1
+    ],
+    [
+      "R",
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      1,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      1
+    ],
+    [
+      "R",
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      2,
+      0,
+      -1
+    ],
+    [
+      "SUM",
+      2,
+      1,
+      1
+    ],
+    [
+      "R",
+      1,
+      -1
+    ],
+    [
+      "SUM",
+      2,
+      1,
+      -1
+    ],
+    [
+      "R",
+      0,
+      1
+    ],
+    [
+      "R",
+      1,
+      1
+    ],
+    [
+      "R",
+      2,
+      1
+    ]
+  ],
+  "total_native_gate_resources": {
+    "R_ninth_root_gates": 315,
+    "SUM_two_qutrit_Clifford_gates": 450,
+    "naive_serial_primitive_count": 765,
+    "ideal_45_term_5_layer_bundled_primitive_depth": 85,
+    "three_qutrit_CCZ_terms": 45,
+    "logical_ancillas_required_before_magic_injection": 0,
+    "consumed_R_magic_states": 315,
+    "injection_SUM_gates": 315,
+    "injection_Z_measurements": 315,
+    "adaptive_single_qutrit_Clifford_corrections": 315,
+    "total_SUM_with_magic_injections": 765,
+    "max_concurrent_magic_ancillas_in_ideal_disjoint_layer": 9
+  },
+  "native_sign_count": {
+    "positive": 22,
+    "negative": 23
+  },
+  "verification": "Exact integer arithmetic modulo 9 on all 27 basis states for each sign; all 45 native triads are sign-verified.",
+  "boundary": "R is non-Clifford, and its ideal injection consumes one exactly prepared magic state, an extra SUM, one Z measurement, and a feed-forward Clifford correction per gate. The cost of preparing/fault-tolerantly distilling 315 magic states and photonic loss, feed-forward latency, routing, crosstalk and QEC is not established. Native depth 85 counts only the pre-injection abstract primitive schedule, NOT physical injected circuit depth."
+}

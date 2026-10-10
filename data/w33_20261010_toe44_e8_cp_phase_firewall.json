@@ -1,0 +1,21 @@
+{
+  "status": "CP_COEFFICIENT_REPHASE_FIREWALL_AND_INCOMPLETE_CW_ACTION",
+  "generalized_CP_one_I12_theorem": "For scalar V=V0+2Re(kappa12 I12(x)), with V0 depending only on Hermitian x products and a REAL polynomial tensor I12, arbitrary Arg kappa12 can be removed by x->exp(-i Arg kappa12/12)x. Equivalently a generalized CP conjugation with delta=-2 Arg kappa12/12 leaves V invariant. This rules out explicit CP from the lone complex coefficient; spontaneous CP breaking remains possible.",
+  "max_single_invariant_cp_residual_30_trials": 7.327471962526033e-15,
+  "two_invariants": "With nonzero independent I12,I18 and otherwise real-form couplings, invariant relative coefficient phase is Arg(kappa12^3/conj-free-kappa18^2)=3 Arg(kappa12)-2 Arg(kappa18) modulo pi; two phases cannot generally both be made real under one field rephasing.",
+  "example_alpha_12": 0.37,
+  "example_beta18_CP_compatible": 0.5549999999999999,
+  "example_beta18_CP_incompatible": 0.71,
+  "CP_compatible_max_residual": 5.10702591327572e-15,
+  "CP_incompatible_min_residual_over_12_branches": 0.21602812598173682,
+  "vector_witting_shape_F": -6.591673732008658,
+  "vector_generic_example_shape_F": -6.259923975791484,
+  "toy_missing_fermion_weight": {
+    "vector_only_shape_coefficient": 3,
+    "hypothetical_8_dirac_modes_with_mass_squared_y2_e": -20.9952,
+    "total_example": -17.9952,
+    "this_is_not_a_consistent_complete_representation": true
+  },
+  "cannot_calculate": "No Yukawa fermion representations, invariant contractions, gauge-fixing prescription, renormalization conditions and full scalar/ghost spectrum specified in this independent producer. A complete one-loop potential and actual CP-breaking vacuum cannot be reported.",
+  "physical_boundary": "Field rephasing is a Lagrangian basis redefinition not an SU(9) gauge rotation. Other complex Yukawas, theta angles or additional holomorphic terms can yield physical relative CP phases. Presence of a CP symmetry at the level of couplings does not rule out spontaneous CP breaking."
+}

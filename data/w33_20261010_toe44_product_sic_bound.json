@@ -1,0 +1,42 @@
+{
+  "status": "EXACT_SHARP_SEPARABLE_PURE_SIC_NO_GO",
+  "theorem": "For every pure product two-qutrit psi=a tensor b, sum_p q_p^2=U+V+(U*V)/2 >=5/2 with U=sum four local u_i^2>=1 and V analogous. Therefore W33 90-frame variance >=(5/2-8/5)/135=1/150. Equality for tensor product of two Hesse qutrit SIC fiducials.",
+  "product_lower_bound_variance": "1/150",
+  "exact_Hesse_local_projective_powers": "1/2 each",
+  "saturation_product_vector": [
+    [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        0.0
+      ],
+      [
+        -0.7071067811865475,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        0.0
+      ],
+      [
+        -0.7071067811865475,
+        0.0
+      ]
+    ]
+  ],
+  "numeric_saturation_variance": 0.006666666666666663,
+  "random_product_cases": 300,
+  "minimum_random_product_variance": 0.007447242413628638,
+  "previous_global_entangled_48start_best_variance": 0.0013168724279837088,
+  "consequence": "A hypothetical elementary-abelian dimension-9 SIC fiducial must be entangled. This alone neither proves existence nor nonexistence of such fiducials.",
+  "proof": "Single qutrit pure-state Pauli Parseval: sum u_i=2 and sum v_i=2, so by Cauchy Schwarz U,V>=1. For two qutrits the 40 projective classes consist of 4 local A, 4 local B and 32 two-site Paulis; each pair (i,j) produces two q=u_i v_j/2."
+}

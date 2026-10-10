@@ -1,0 +1,29 @@
+{
+  "status": "CHANNEL_IDENTIFIABILITY_NO_GO_SINGLE_INPUT_EXACT",
+  "input_probe_results": {
+    "primary_00": {
+      "trace_distance": 0.0,
+      "max_power_difference": 0.0,
+      "max_complex_exp_component_difference": 0.0,
+      "minus4_norm_E0": 8.326672684688674e-17,
+      "minus4_norm_E1": 8.326672684688674e-17,
+      "fourth_power_E0": 2.5204737600000002,
+      "fourth_power_E1": 2.5204737600000002
+    },
+    "secondary_interference_01_02": {
+      "trace_distance": 0.6299999999999999,
+      "max_power_difference": 0.0,
+      "max_complex_exp_component_difference": 0.6299999999999999,
+      "minus4_norm_E0": 1.295131117277227e-16,
+      "minus4_norm_E1": 1.295131117277227e-16,
+      "fourth_power_E0": 1.1027072699999994,
+      "fourth_power_E1": 1.1027072699999994
+    }
+  },
+  "channel_E0": "isotropic depolarizing E0(rho)=eta rho+(1-eta)I/9",
+  "channel_E1": "unitary-rotated depolarizing E1(rho)=eta U rho Udag+(1-eta)I/9, U=diag(1,1,-1,1,...,1)",
+  "eta": 0.63,
+  "theorem": "Since E0(|00><00|)=E1(|00><00|) but E0(psi2) != E1(psi2), no measurement or collection of W33 moments on the sole |00> output can identify which channel occurred.",
+  "proof": "Both maps CPTP for 0<=eta<=1; U stabilizes |00>. On psi2=(|01>+|02>)/sqrt2, U sends it to orthogonal psi2'=(|01>-|02>)/sqrt2, so outputs have trace distance eta.",
+  "limitation": "Channel identification requires multiple informationally complete input probes, not merely spectral invariants of a single output; phase-free q values may discard distinctions even with multiple probes."
+}
