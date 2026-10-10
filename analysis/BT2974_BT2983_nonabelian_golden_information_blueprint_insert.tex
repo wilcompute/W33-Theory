@@ -1,0 +1,69 @@
+\section{The route memory has two layers}
+\label{sec:bt2974-bt2983-blueprint}
+
+\begin{plain}
+The ten routing modes do not merely carry one error bit per link.  After local
+slot labels are removed, the complete connection is thirty-six small nonabelian
+holonomies.  Their parity bits remain useful as a fast outer syndrome, but they
+do not contain the whole route state.  The machine should therefore keep a
+protected $D_4$ route-memory core and expose only a smaller abelian shell to
+ordinary scheduling logic.
+\end{plain}
+
+\begin{spec}[Pass 2974 --- complete discrete route quotient]
+A spanning tree of $K_{10}$ uses nine of the forty-five links.  Gauge fixing the
+tree leaves thirty-six chord holonomies.  They classify the connection up to one
+simultaneous $D_4$ conjugation.  The exact quotient contains
+\[
+81{,}129{,}638{,}418{,}148{,}456{,}557{,}941{,}239{,}054{,}336
+\]
+states.  The existing thirty-six-bit curvature word is its sign projection, not
+a replacement for the nonabelian state.
+\end{spec}
+
+\begin{spec}[Pass 2975 --- why the ten-mode curvature has $S_6$ symmetry]
+The ten modes are the ten unordered $3+3$ partitions of six symbols.  Choosing
+one symbol turns them into the ten two-subsets of five symbols.  Disjoint pairs
+are Petersen neighbors, and the sixty triples containing an odd number of
+Petersen edges reproduce the router's odd-curvature faces.  This gives an exact
+$2$-$(10,3,4)$ design and an explicit degree-ten $S_6$ action.
+\end{spec}
+
+\begin{spec}[Pass 2976 --- pair-conditioned adaptive receiver]
+For a known conjugate pair, the ideal optimized receiver uses Bayesian posterior
+updates after each binary measurement and reaches
+\[
+P_{\rm success}(n)=\tfrac12\left(1+\sqrt{1-3^{-n}}\right).
+\]
+The local Pauli receiver remains cheaper but starts at $0.788675\ldots$ rather
+than the unrestricted one-copy value $0.908248\ldots$.  Readout-flip and erasure
+figures in the certificate are synthetic engineering profiles.
+\end{spec}
+
+\begin{spec}[Pass 2977 --- honest M36 search boundary]
+The full non-CSS search contains $213{,}648{,}435$ rank-four isotropic subspaces
+and is divided into $495$ duplicate-free pivot shards.  The completed
+$649{,}940$-subspace pilot found six non-CSS collinearity projectors, but all six
+accepted stabilizer states.  The full shard sweep remains a release-blocking
+open computation, not a completed theorem.
+\end{spec}
+
+\begin{plain}[Why the golden controller belongs outside the core]
+The shortest controller word that reduces to a two-dimensional rational quotient
+is $R_4^2U_6$, and that quotient runs the Fibonacci recursion.  Its balanced
+mechanical word is useful for spreading expensive calibration events.  Modulo
+two it rotates the three nonzero parity labels, but there is no corresponding
+order-three automorphism of $D_4$.  The golden controller can schedule and rotate
+the outer syndrome shell without rewriting the protected nonabelian memory.
+\end{plain}
+
+\begin{spec}[Passes 2979--2981 --- golden shell]
+The outer parity labels form $V_4$.  The Fibonacci quotient acts as $C_3$, giving
+$V_4\rtimes C_3\cong A_4$.  Since $|\operatorname{Aut}(D_4)|=8$ and its element
+orders are only $1,2,4$, this $C_3$ action has no faithful lift to the route core.
+The intended hierarchy is therefore
+\[
+\text{balanced golden scheduler}\longrightarrow A_4\text{ syndrome shell}
+\longrightarrow D_4\text{ route-memory core}.
+\]
+\end{spec}
