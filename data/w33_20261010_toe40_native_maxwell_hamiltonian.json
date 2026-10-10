@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "substrate": "W33 Levi three-deck curl/gauge 2-complex (Round38)",
+  "Hamiltonian": "H=1/2 ||E||^2+1/2 ||P(k) A||^2, with B(k)^dag E=0; A~A+B(k)phi",
+  "linear_dispersion_eigenvalue_ratio_double_k": [
+    3.999837136923676,
+    3.999855036539644
+  ],
+  "k_samples": [
+    {
+      "k": 0.01,
+      "closure": 0.0,
+      "curl_rank": 80,
+      "gradient_rank": 80,
+      "low_eigs": [
+        0.00019047360548238925,
+        0.00020519068074822331,
+        99.59229609825707
+      ],
+      "maxwell_light_modes": 2,
+      "gauge_energy_difference": 3.637978807091713e-12,
+      "gauss_force_residual": 1.56964020692204e-13
+    },
+    {
+      "k": 0.02,
+      "closure": 0.0,
+      "curl_rank": 80,
+      "gradient_rank": 80,
+      "low_eigs": [
+        0.0007618634008122096,
+        0.0008207329778417791,
+        99.59238685942914
+      ],
+      "maxwell_light_modes": 2,
+      "gauge_energy_difference": 0.0,
+      "gauss_force_residual": 1.56964020692204e-13
+    }
+  ],
+  "boundary": "This is a positive gauge-constrained *linear* Bloch model, not a quantized Maxwell theory. Continuous rotational/Lorentz invariance, physical units and photon-matter coupling are unproved."
+}

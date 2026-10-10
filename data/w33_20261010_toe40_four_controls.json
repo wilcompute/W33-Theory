@@ -1,0 +1,52 @@
+{
+  "schema": "w33.toe40.four_controls.v1",
+  "modular": {
+    "status": "OBSTRUCTION",
+    "initial_purity": 1.0,
+    "sheared_purity": 0.8955915583483036,
+    "CZ_orbit_purity": 0.9303943722322024,
+    "S_modular_generator_defect": 0.13212091411452387,
+    "shear_series_residual": 5.3885175195531734e-17,
+    "CP_invariance_verified": true,
+    "boundary": "Not a full Siegel modular invariant; no stabilised vacuum."
+  },
+  "chirality": {
+    "status": "EXACT_ZERO_INDEX",
+    "spectrum": {
+      "16": 1,
+      "6": 24,
+      "0": 15
+    },
+    "point_kernel": 15,
+    "line_kernel": 15,
+    "Dirac_index": 0,
+    "boundary": "Balanced untwisted Levi Dirac has no unpaired physical Weyl fermion."
+  },
+  "ccz": {
+    "status": "EXACT_NONCLIFFORD_SURROGATE",
+    "dimension": 27,
+    "nonzero_third_mixed_difference": 1,
+    "unitarity_verified": true,
+    "X_conjugation": "qutrit CZ phase omega^(b*c)",
+    "depolarizing_p": 0.01,
+    "global_depolarizing_state_fidelity": 0.9903703703703703,
+    "boundary": "CCZ_3 is not itself the 27-variable 45-triad E6 cubic."
+  },
+  "falsifiers": {
+    "status": "REJECTS_TWO_STRICT_INTERPRETATIONS",
+    "archived_alpha_inverse": 137.03600360036003,
+    "CODATA2022_inverse": 137.035999177,
+    "uncertainty": 2.1e-08,
+    "conditional_sigma_discrepancy": 210.6361916633302,
+    "shape_ratios_from_Pass11876_rounded": {
+      "up": 0.569,
+      "down": 2.77,
+      "charged_lepton": 0.081
+    },
+    "minimax_multiplicative_mismatch": 5.847865496418119,
+    "extreme_shape_ratio": 34.19753086419753,
+    "second_ratio_spread": 16.38888888888889,
+    "boundary": "Not a theory-derived prediction. Existing archive has competing alpha recipes; fermion values are rounded and scheme dependent."
+  },
+  "boundary": "Mathematics and negative controls only; Maxwell is separately verified from actual W33 local complex."
+}
