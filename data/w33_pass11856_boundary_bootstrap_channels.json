@@ -1,0 +1,112 @@
+{
+ "pass_id": 11856,
+ "channels": [
+  {
+   "dim": 60,
+   "C": -0.0,
+   "C_scalar": true,
+   "E15": -0.712594,
+   "E15_scalar": true,
+   "E20": 0.0,
+   "E20_scalar": true,
+   "D": 0.666667,
+   "D_scalar": true,
+   "swap": 1.0,
+   "swap_scalar": true
+  },
+  {
+   "dim": 105,
+   "C": -0.0,
+   "C_scalar": true,
+   "E15": -0.0,
+   "E15_scalar": true,
+   "E20": 0.0,
+   "E20_scalar": true,
+   "D": -0.0,
+   "D_scalar": true,
+   "swap": -1.0,
+   "swap_scalar": true
+  },
+  {
+   "dim": 24,
+   "C": -0.0,
+   "C_scalar": true,
+   "E15": 0.712594,
+   "E15_scalar": true,
+   "E20": -0.977289,
+   "E20_scalar": true,
+   "D": 0.666667,
+   "D_scalar": true,
+   "swap": 1.0,
+   "swap_scalar": true
+  },
+  {
+   "dim": 20,
+   "C": 1.818255,
+   "C_scalar": true,
+   "E15": 2.137781,
+   "E15_scalar": true,
+   "E20": 2.443224,
+   "E20_scalar": true,
+   "D": 0.666667,
+   "D_scalar": true,
+   "swap": 1.0,
+   "swap_scalar": true
+  },
+  {
+   "dim": 15,
+   "C": 1.818255,
+   "C_scalar": true,
+   "E15": 2.850374,
+   "E15_scalar": true,
+   "E20": 1.954579,
+   "E20_scalar": true,
+   "D": 0.666667,
+   "D_scalar": true,
+   "swap": 1.0,
+   "swap_scalar": true
+  },
+  {
+   "dim": 1,
+   "C": 4.545637,
+   "C_scalar": true,
+   "E15": 4.275561,
+   "E15_scalar": true,
+   "E20": 3.909158,
+   "E20_scalar": true,
+   "D": 5.666667,
+   "D_scalar": true,
+   "swap": 1.0,
+   "swap_scalar": true
+  }
+ ],
+ "all_structures_scalar_on_channels": true,
+ "channels_fed_only_by_hidden_20": [],
+ "E20_support_dims": [
+  1,
+  15,
+  20,
+  24
+ ],
+ "characters": {
+  "Sym2_15": {
+   "norm": 6.0,
+   "known_constituents": {
+    "1": 1.0,
+    "15_S": 1.0,
+    "20_b": 1.0,
+    "24": 1.0
+   },
+   "dims_covered": 60.0,
+   "dim": 120
+  },
+  "Alt2_15": {
+   "norm": 2.0,
+   "known_constituents": {
+    "24": 1.0
+   },
+   "dims_covered": 24.0,
+   "dim": 105
+  }
+ }
+}

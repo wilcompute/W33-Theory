@@ -1287,6 +1287,23 @@ quartics on the boundary $15$, and contact, $15$-exchange and $20$-exchange diag
 and three-point functions, appears in the four-point function.
 \tierT\,\tierC\ (\cert{w33\_pass11849\_11851\_spinor\_lorentz\_central\_z3\_generations.py}, \cert{w33\_pass11852\_bulk\_four\_point.py}; Lean \texttt{W33.Pass11853HyperchargeSpectrum})
 
+Three sharp limits follow.
+\begin{itemize}
+\item \emph{No exact family symmetry.} With the family $SU(3)$ inside $SU(5)_L$, the centraliser of grand unification and
+family in $E_8$ is $\mathfrak{su}(2)\oplus\mathfrak u(1)$, which no copy of $A_6$ or $SL(2,9)$ fits into. Three generations cannot
+come from an exact family $SU(3)$ that commutes with both the grand-unified group and the Lorentz group.
+\item \emph{No chirality from Lorentz-commuting projections.} An automorphism commuting with the spinorial Lorentz group acts
+on Di by $\pm1$. The $\mathfrak{so}(11)$ spinor is quaternionic, so every such projection leaves the spinorial matter
+vector-like. Chirality needs a projection that breaks the commutation, and a phase $i$ on Di keeps exactly one $16$.
+\item \emph{The boundary fixes the bulk.} The $s$-channel decomposition of the four-point function has channels
+$1,15,20,24,60$. The $60$ channel is fed only by $15$-exchange and the $24$ channel by both exchanges but not by contact, so the
+boundary data determine the cubic coupling, then the hidden $20$'s coupling, then the quartic, with two crossing relations to
+spare.
+\end{itemize}
+Spinorial Lorentz together with the central translation commutes with $\mathfrak{su}(3)\oplus\mathfrak{so}(5)\oplus\mathfrak u(1)$,
+which contains the left--right-symmetric algebra.
+\tierT\,\tierC\ (\cert{w33\_pass11854\_11857\_family\_nogo\_chirality\_firewall\_combined.py}, \cert{w33\_pass11856\_boundary\_bootstrap\_channels.py}; Lean \texttt{W33.Pass11858A5LatticeMod3})
+
 \begin{keyidea}
 Three layers of time, exactly separated: a finite present with a light cone ($27$
 events, $t^2-x^2-y^2$); an unbounded, oriented history (a free group, an $8$-regular tree,

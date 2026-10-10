@@ -1,0 +1,83 @@
+{
+ "pass_ids": [
+  11854,
+  11855,
+  11857
+ ],
+ "sl5_homomorphism_error": 9.908023554608492e-12,
+ "centraliser_gut_plus_family": {
+  "dim": 4,
+  "closure_error": 3.549459581993228e-15,
+  "derived_dim": 3,
+  "centre_dim": 1,
+  "rank": 2
+ },
+ "centraliser_sm_plus_family": {
+  "dim": 5,
+  "closure_error": 2.9544556228705152e-15,
+  "derived_dim": 3,
+  "centre_dim": 2,
+  "rank": 3
+ },
+ "combined": {
+  "tc_commutes_with_spinor_lift": [
+   2.1566578442039176e-13,
+   9.445132628981239e-14
+  ],
+  "so11_dim": 55,
+  "commutant": {
+   "dim": 19,
+   "closure_error": 3.303856601282755e-14,
+   "derived_dim": 18,
+   "centre_dim": 1,
+   "rank": 5,
+   "contains_su3_A2": true,
+   "contains_su2_alpha": true,
+   "inside_SM_of_11850": false,
+   "centraliser_of_su2_alpha_inside": {
+    "dim": 12,
+    "closure_error": 4.288464859858326e-14,
+    "derived_dim": 11,
+    "centre_dim": 1,
+    "rank": 4,
+    "contains_su3_A2": true
+   },
+   "centraliser_of_su3_inside": {
+    "dim": 11,
+    "closure_error": 2.080690280244621e-14,
+    "derived_dim": 10,
+    "centre_dim": 1,
+    "rank": 3,
+    "contains_su2_alpha": true
+   },
+   "structure_su3_u1_so5": true
+  }
+ },
+ "chirality_firewall": {
+  "spinor_dim": 32,
+  "quaternionic_structure": true,
+  "J_commutes_with_spin11": true,
+  "trials": 200,
+  "nonempty_kept_spaces": 182,
+  "all_kept_spaces_J_invariant": true,
+  "worst_J_error": 4.534990893594049e-15,
+  "spin10_volume_projection": {
+   "lorentz_commuting_+1": {
+    "kept_dim_in_32": 0,
+    "net_16_minus_16bar": 0.0
+   },
+   "lorentz_commuting_-1": {
+    "kept_dim_in_32": 0,
+    "net_16_minus_16bar": 0.0
+   },
+   "lorentz_breaking_i": {
+    "kept_dim_in_32": 16,
+    "net_16_minus_16bar": 16.0
+   },
+   "lorentz_breaking_-i": {
+    "kept_dim_in_32": 16,
+    "net_16_minus_16bar": -16.0
+   }
+  }
+ }
+}
