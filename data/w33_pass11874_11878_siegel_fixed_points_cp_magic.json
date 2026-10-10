@@ -1,0 +1,315 @@
+{
+  "pass_ids": [
+    11874,
+    11875,
+    11876,
+    11877,
+    11878
+  ],
+  "11875_weil_5_plus_4": {
+    "dims": {
+      "even": 5,
+      "odd": 4
+    },
+    "max_errors": {
+      "values_even": 1.3882123939089718e-16,
+      "gradients_odd": 8.911018103614696e-16,
+      "S_law": 2.3525204118543076e-15,
+      "X_equals_minus_Omega": 2.136739964154036e-15
+    },
+    "commutant_dims": {
+      "even": 1,
+      "odd": 1
+    }
+  },
+  "11876_hierarchy": {
+    "law_rel_err_max": 1.2400556563575528e-08,
+    "invariance": {
+      "r": 2.7660349451130246,
+      "r_S": 2.7660349451130246,
+      "r_T2": 2.7660349451130246,
+      "r_T": 1.9241133142269535
+    },
+    "near_cusp_1": {
+      "1+i/1": 1.414213562373095,
+      "1+i/2": 0.17157287525380982,
+      "1+i/4": 0.002601764845449675,
+      "1+i/8": 5.984697659223662e-07
+    },
+    "near_cusp_inf": {
+      "0.3+1i": 2.4727310554860154,
+      "0.3+2i": 5.792749208630159,
+      "0.3+4i": 46.629482510987465,
+      "0.3+8i": 3074.8359196391148
+    },
+    "exact_values": {
+      "r_1_plus_i": 1.414213562373095,
+      "sqrt2": 1.4142135623730951,
+      "r_1_plus_i_over_2": 0.17157287525380982,
+      "three_minus_2sqrt2": 0.1715728752538097
+    },
+    "measured": {
+      "u": {
+        "R": 0.569105415217102,
+        "eps": 0.0036051252184041934
+      },
+      "d": {
+        "R": 2.770578512396694,
+        "eps": 0.01903114186851211
+      },
+      "e": {
+        "R": 0.08052657710280373,
+        "eps": 0.05882352941176471
+      }
+    },
+    "R_spread": 34.40576530230079,
+    "eps_spread": 16.31663974151858
+  },
+  "11877_magic": {
+    "invariance": {
+      "S": 5.551115123125783e-16,
+      "shear": 1.1102230246251565e-16,
+      "CP": 1.1102230246251565e-16
+    },
+    "cusp_inf": 0.00045305361929979556,
+    "one_qutrit_near_cusp_1": {
+      "1+i/1": 0.5634893626556111,
+      "1+i/2": 0.6912556776567644,
+      "1+i/4": 0.6931467572917924,
+      "1+i/8": 0.6931471805599233,
+      "1+i/16": 0.6931471805599463
+    },
+    "log2": 0.6931471805599453,
+    "limit_state_err": 2.0972638947422294e-14,
+    "one_qutrit_grid_sup": 0.6931471805599454,
+    "one_qutrit_at_i": 0.47000362924573574,
+    "one_qutrit_at_rho": 0.5704396746241858
+  },
+  "11878_genus2_cp": {
+    "invariance": {
+      "S": 1.455367425431762e-13,
+      "shear": 1.1218000689255123e-13,
+      "diag_shift": 8.816175921008771e-14,
+      "swap": 1.5201477677080568e-13,
+      "T1_outside_theta_group": 1.1423107682622584e-13,
+      "S1_genus1": 7.944373254215776e-14
+    },
+    "cp_conjugates": 2.04584519276017e-13,
+    "im_ratio": {
+      "pure_imaginary": 1.8476788977532315e-14,
+      "integer_real_part": 1.3456159994877821e-13,
+      "generic": 0.8625796049195286,
+      "opposite_arrows": 9.124171574907063e-13,
+      "equal_arrows": 0.05692460038560884,
+      "one_cp_even_factor": 0.12253238277383503
+    }
+  },
+  "11874_fixed_points": [
+    {
+      "point": "y2=x5-1 (C10)",
+      "Omega": [
+        [
+          "(-0.309017+0.951057j)",
+          "(0.5-0.363271j)"
+        ],
+        [
+          "(0.5-0.363271j)",
+          "(0.309017+0.951057j)"
+        ]
+      ],
+      "stabiliser_order": 10,
+      "injective_mod3": true,
+      "orbits_on_40_points": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "schmidt_sv": [
+        1.0,
+        0.2349596331334327,
+        0.16037602956750013
+      ],
+      "product_state": false,
+      "cp_conserving_lattice_isomorphisms": 10,
+      "magic": 1.1623984694509528
+    },
+    {
+      "point": "y2=x6-1",
+      "Omega": [
+        [
+          "1.154701j",
+          "0.57735j"
+        ],
+        [
+          "0.57735j",
+          "1.154701j"
+        ]
+      ],
+      "stabiliser_order": 24,
+      "injective_mod3": true,
+      "orbits_on_40_points": [
+        2,
+        2,
+        6,
+        6,
+        6,
+        6,
+        12
+      ],
+      "schmidt_sv": [
+        1.0,
+        0.18539182552637695,
+        0.13223295683787
+      ],
+      "product_state": false,
+      "cp_conserving_lattice_isomorphisms": 24,
+      "magic": 1.0046134431291354
+    },
+    {
+      "point": "E_i x E_rho",
+      "Omega": [
+        [
+          "1j",
+          "0j"
+        ],
+        [
+          "0j",
+          "(0.5+0.866025j)"
+        ]
+      ],
+      "stabiliser_order": 24,
+      "injective_mod3": true,
+      "orbits_on_40_points": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        4,
+        12,
+        12
+      ],
+      "schmidt_sv": [
+        1.0,
+        8.305177484590918e-17,
+        2.366739446978514e-17
+      ],
+      "product_state": true,
+      "cp_conserving_lattice_isomorphisms": 24,
+      "magic": 1.0404433038699203
+    },
+    {
+      "point": "E_i x E_i",
+      "Omega": [
+        [
+          "1j",
+          "0j"
+        ],
+        [
+          "0j",
+          "1j"
+        ]
+      ],
+      "stabiliser_order": 32,
+      "injective_mod3": true,
+      "orbits_on_40_points": [
+        4,
+        4,
+        8,
+        8,
+        16
+      ],
+      "schmidt_sv": [
+        1.0,
+        3.52161535388551e-17,
+        1.2076013044852888e-17
+      ],
+      "product_state": true,
+      "cp_conserving_lattice_isomorphisms": 32,
+      "magic": 0.9400072584914715
+    },
+    {
+      "point": "Bolza y2=x5-x",
+      "Omega": [
+        [
+          "(0.333333+0.942809j)",
+          "(-0.333333+0.471405j)"
+        ],
+        [
+          "(-0.333333+0.471405j)",
+          "(0.333333+0.942809j)"
+        ]
+      ],
+      "stabiliser_order": 48,
+      "injective_mod3": true,
+      "orbits_on_40_points": [
+        4,
+        4,
+        8,
+        12,
+        12
+      ],
+      "schmidt_sv": [
+        1.0,
+        0.2926270452061743,
+        0.137537649478077
+      ],
+      "product_state": false,
+      "cp_conserving_lattice_isomorphisms": 48,
+      "magic": 1.222815892127415
+    },
+    {
+      "point": "E_rho x E_rho",
+      "Omega": [
+        [
+          "(0.5+0.866025j)",
+          "0j"
+        ],
+        [
+          "0j",
+          "(0.5+0.866025j)"
+        ]
+      ],
+      "stabiliser_order": 72,
+      "injective_mod3": true,
+      "orbits_on_40_points": [
+        2,
+        2,
+        6,
+        12,
+        18
+      ],
+      "schmidt_sv": [
+        1.0,
+        6.465215733130797e-17,
+        1.8789236696726703e-17
+      ],
+      "product_state": true,
+      "cp_conserving_lattice_isomorphisms": 72,
+      "magic": 1.14087934924837
+    }
+  ],
+  "checks": {
+    "fixed_point_stabilisers_are_gottschling": true,
+    "stabilisers_inject_mod3": true,
+    "fixed_points_cp_conserving": true,
+    "product_points_rank_one": true,
+    "weil_even5_odd4": true,
+    "weil_irreducible": true,
+    "hierarchy_law": true,
+    "r_theta_group_invariant": true,
+    "r_exact_values": true,
+    "one_modulus_excluded": true,
+    "magic_modular": true,
+    "magic_sup_at_cusp_1": true,
+    "cp_invariant_modular": true,
+    "cp_real_on_cp_loci": true,
+    "opposite_arrows_cancel": true
+  },
+  "all_checks_pass": true
+}
