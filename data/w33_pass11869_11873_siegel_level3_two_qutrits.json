@@ -1,0 +1,70 @@
+{
+  "pass_ids": [
+    11869,
+    11870,
+    11871,
+    11872,
+    11873
+  ],
+  "11869_siegel_is_clifford": {
+    "max_errors": {
+      "S": 3.066991105526995e-15,
+      "S_factor": 4.467416615642912e-16,
+      "shear_CZ": 9.106885210113025e-17,
+      "diag_shift_phase": 3.376611507232129e-16,
+      "CP": 0.0,
+      "swap": 1.1188630228279524e-16
+    },
+    "all_exact": true,
+    "order_generated_mod3": 51840,
+    "order_on_40_points": 25920,
+    "order_on_40_points_with_CP": 51840,
+    "CP_preserves_W33": true
+  },
+  "11870_genus_one_arrow_is_modular_cp": {
+    "max_rel_err_j_hesse_vs_j_tau": 2.754727479360363e-15,
+    "CP_conj": 0.0,
+    "max_rel_Im_j_on_CP_loci": 1.2095242420232328e-15,
+    "min_rel_Im_j_generic": 0.2384159106279989
+  },
+  "11871_coble_on_burkhardt": {
+    "cubic_group_order": 103680,
+    "theta_null_max_gradient_sv_ratio": 1.1609410326754892e-16,
+    "random_even_min_gradient_sv_ratio": 0.026599507418822808,
+    "theta_null_max_abs_I4_of_coble": 4.112175138549231e-15,
+    "random_min_abs_I4": 0.7248634464046338
+  },
+  "11872_product_iff_factorised": [
+    {
+      "diagonal_sv2_over_sv1": 3.880189881090187e-17,
+      "slope_sv2": 0.9999768954657544,
+      "slope_sv3": 1.9999410083253086,
+      "sv1_sv3_over_sv2sq": 4.365014965132389
+    },
+    {
+      "diagonal_sv2_over_sv1": 4.143782371095844e-17,
+      "slope_sv2": 0.9999953360584741,
+      "slope_sv3": 1.9999670916919599,
+      "sv1_sv3_over_sv2sq": 4.318869929434136
+    },
+    {
+      "diagonal_sv2_over_sv1": 2.0923507791622938e-17,
+      "slope_sv2": 0.9999132467801789,
+      "slope_sv3": 2.0000103857874425,
+      "sv1_sv3_over_sv2sq": 5.352953620886522
+    }
+  ],
+  "checks": {
+    "siegel_generators_act_exactly_as_clifford": true,
+    "level3_quotient_is_Sp43": true,
+    "on_points_PSp43": true,
+    "with_CP_PGSp43_WE6": true,
+    "genus1_hesse_j_is_j_tau": true,
+    "genus1_CP_loci_real_j": true,
+    "coble_singular_at_theta_null": true,
+    "coble_on_burkhardt": true,
+    "product_iff_factorised": true,
+    "schmidt_1_eps_eps2": true
+  },
+  "all_checks_pass": true
+}

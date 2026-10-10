@@ -1194,6 +1194,49 @@ chain ($570$ cases per run). No tick saturates the bound everywhere, so the law 
 The cases that fall short are not confined to the edges of the chain. \tierC\
 (\cert{w33\_pass11231\_dynamical\_area\_law.py})
 
+\subsection{The forty points as the level-3 structure of a modulus}
+\label{sec:siegel}
+
+The open entries of the scorecard --- masses, mixing, and the datum that would choose a chirality --- are what a
+\emph{modulus} supplies in string compactifications: its vacuum value breaks the symmetries, and modular forms
+evaluated there are the couplings. The geometry already is the level-three structure of such a modulus.
+Let $A=\C^2/(\Z^2+\Omega\Z^2)$ be an abelian surface with period matrix $\Omega$ in the Siegel half-space. Its nine
+level-three theta functions $f_c(z)=\theta[c/3,0](3z,3\Omega)$, $c\in\F_3^2$, are a two-qutrit register: translation
+by the $81$ points of order three acts as the Pauli group, the Weil pairing on those points is the commutator, so
+$A[3]$ \emph{is} the symplectic space of $\W$.
+
+\begin{result}{Theorem 9.8 (the Siegel modular group is the Clifford group) \hfill \tierC}
+On the theta-null state $\psi(\Omega)_c=f_c(0)$, the modular map $\Omega\mapsto-\Omega^{-1}$ acts as the qutrit
+Hadamards $F\otimes F$ (with weight $\tfrac12$), the shear $\Omega_{12}\mapsto\Omega_{12}+1$ as $CZ_3$, the shift
+$\Omega_{11}\mapsto\Omega_{11}+2$ as a phase gate, exchange of the two tori as SWAP, and $\Omega\mapsto-\bar\Omega$ as
+complex conjugation. Reduced mod $3$ these generate $\Sp(4,3)$, the finite Siegel modular group
+$\Gamma_{2,3}$; on the forty points they act as $\PSp(4,3)$, and adding $\Omega\mapsto-\bar\Omega$ (multiplier $-1$)
+gives $\PGSp(4,3)=W(E_6)$. \cert{w33\_pass11869\_11873\_siegel\_level3\_two\_qutrits.py}
+\end{result}
+
+So the one antiunitary coset of Corollary~9.7 --- time reversal, chirality exchange --- is the \emph{generalised CP} of
+the modulus. Three consequences are exact.
+\begin{itemize}
+\item \textbf{The arrow is the CP sign of the modulus.} For one qutrit and an elliptic curve $E_\tau$, the Hesse
+  cubic through the theta-null state is $E_\tau$ itself, $j(E_{\psi(\tau)})=j(\tau)$; with Pass~11645,
+  $\mathrm{sign}\,W=\mathrm{sign}\,\mathrm{Im}\,j(\tau)$, which vanishes exactly on the CP-conserving locus of modular
+  flavour models.
+\item \textbf{The Hesse space is the space of tori.} Every two-qutrit theta-null state is a singular point of a unique
+  Heisenberg-invariant cubic (the Coble cubic), and its coefficients lie on the Burkhardt quartic; random states are
+  singular points of none.
+\item \textbf{Factorisation is factorisation.} $\psi(\Omega)$ is a product state exactly when the torus splits,
+  $\Omega_{12}=0$; near such a point its Schmidt spectrum is $(1,\varepsilon,\varepsilon^2)$ with
+  $\varepsilon\propto\Omega_{12}$.
+\end{itemize}
+
+\begin{boundary}[What this does and does not give]
+The datum the chirality no-go asks for from outside now has a name, the vacuum value of $\Omega$, which breaks
+generalised CP unless it lies on the real locus; and a three-generation hierarchy has a geometric source. Neither is a
+prediction yet: no moduli stabilisation, no fit, no string model is claimed, and the natural home is a magnetized or
+intersecting-brane $T^4$ rather than the heterotic orbifolds of this section. The mathematics (Mumford, Coble,
+Burkhardt, Freitag--Salvati~Manni) is classical; the identification with the qutrit objects is the new step. \tierB
+\end{boundary}
+
 \subsection{What we do not count as evidence}
 
 The older manuscripts contain many numerical coincidences: $1/\alpha\approx137$ written as a
