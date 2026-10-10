@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "counts": {
+    "min_vertices": 80,
+    "min_links": 160,
+    "required_local_double_occupancy": "Bosonic 2-particle doublon |i,i>, with attractive on-site interaction U; hard-core qubit-only arrays cannot host this state",
+    "site_specific_double_boson_loading": true,
+    "site_resolved_two_boson_coincidence_or_parity": true,
+    "independently_calibrated_hopping_and_on_site_Kerr": true,
+    "programmable_all_160_link_hopping_with_independently_checkable_topology": true,
+    "proposed_coherent_simulator_type": "Nonlinear multimode bosonic lattice (e.g., superconducting circuit resonators with Kerr sites and tunable couplers). Not established as a realizable 80x160 device.",
+    "single_photon_holonet_boundary": "A single-photon linear-optical system does not realize the assumed two-boson attractive onsite U; a real nonlinear or measurement-induced effective interaction must be independently demonstrated."
+  },
+  "assumed_single_boson_hopping_frequency_MHz": 5.0,
+  "hypotheses": [
+    {
+      "U_over_t": 16,
+      "t_over_h_MHz": 5.0,
+      "U_over_h_MHz": 80.0,
+      "leading_first_gap_over_h_MHz": 0.9690689107605138,
+      "exact_first_gap_over_h_MHz": 0.9323375752095764,
+      "max_frequency_resolution_time_one_beat_us": 1.0319183588453082,
+      "nominal_10_gap_cycles_acquisition_time_us": 10.319183588453084,
+      "finite_U_relative_error": -0.03790373949991965
+    },
+    {
+      "U_over_t": 32,
+      "t_over_h_MHz": 5.0,
+      "U_over_h_MHz": 160.0,
+      "leading_first_gap_over_h_MHz": 0.4845344553802569,
+      "exact_first_gap_over_h_MHz": 0.47964819545814663,
+      "max_frequency_resolution_time_one_beat_us": 2.0638367176906165,
+      "nominal_10_gap_cycles_acquisition_time_us": 20.63836717690617,
+      "finite_U_relative_error": -0.010084442639431312
+    },
+    {
+      "U_over_t": 64,
+      "t_over_h_MHz": 5.0,
+      "U_over_h_MHz": 320.0,
+      "leading_first_gap_over_h_MHz": 0.24226722769012846,
+      "exact_first_gap_over_h_MHz": 0.24165073307180762,
+      "max_frequency_resolution_time_one_beat_us": 4.127673435381233,
+      "nominal_10_gap_cycles_acquisition_time_us": 41.27673435381234,
+      "finite_U_relative_error": -0.0025446884590983876
+    },
+    {
+      "U_over_t": 128,
+      "t_over_h_MHz": 5.0,
+      "U_over_h_MHz": 640.0,
+      "leading_first_gap_over_h_MHz": 0.12113361384506423,
+      "exact_first_gap_over_h_MHz": 0.1210564033365813,
+      "max_frequency_resolution_time_one_beat_us": 8.255346870762466,
+      "nominal_10_gap_cycles_acquisition_time_us": 82.55346870762467,
+      "finite_U_relative_error": -0.0006373995295945178
+    }
+  ],
+  "selected_U_over_t": 32,
+  "selected_ideal_fh_gap_MHz": 0.47964819545814663,
+  "selected_Tcoh_hypothesis_us": 100,
+  "corresponding_lorentzian_dephasing_FWHM_kHz": 3.1830988618379066,
+  "measurement_protocol": "Calibrate all 80 site frequencies and 160 graph links; isolate the two-boson sector; verify local doublon population and attractive U; initialize |i,i>; measure coherent return probability or frequency-selective transitions to resolve 5 doublon bands. Record at least ten cycles of smallest gap, repeat on point and line node classes, and compare local integrated band weights [1,24,30,24,1]/80. Vary U/t=16,32,64,128 and extrapolate finite-U corrections; measure loss and spectral broadening independently.",
+  "conservative_targets": "Under the illustrative t/h=5MHz, U/t=32 hypothesis, first doublon gap/h is about 0.48MHz and ten beating periods require >20 microseconds; low-dephasing target T2~100 microseconds gives Lorentzian FWHM ~3.2kHz, excluding other disorder/loss. These are dimensionally consistent engineering specifications, not empirical device measurements.",
+  "failure_conditions": "No direct two-boson onsite attractive Hubbard U; incomplete 160-link W33 connectivity; coherence shorter than Fourier integration; link-frequency spread comparable to first gap; inability to resolve local doublon vs separated bosons; nonuniform coupling invalidating predicted degeneracies.",
+  "literature_links": [
+    "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.7.L022038",
+    "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.109.053317"
+  ],
+  "caution": "Published demonstrations of tunneling spectroscopy or Rydberg Hubbard proposals DO NOT demonstrate this exact 80-node, 160-link implementation. Targets are conditional and not a feasibility commitment."
+}

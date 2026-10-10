@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "apartment_hilbert_space": 1620,
+  "sector_count": 45,
+  "frame_states_per_sector": 36,
+  "overlap_three_degree": 8,
+  "overlap_two_degree": 90,
+  "quotient_exact_equitability": false,
+  "quotient_matrix_entries": {
+    "0.0": 540,
+    "2.25": 1440,
+    "18.0": 45
+  },
+  "quotient_adjacency_eigenvalues": {
+    "9.0": 20,
+    "22.5": 24,
+    "90.0": 1
+  },
+  "quotient_degree": 90.0,
+  "nonzero_cross_sector_overlap_two_edges": 58320,
+  "projected_45_e6_SRG": "45-vertex graph SRG(45,32,22,24), with quotient = 18 I + (9/4) A_45, exact verified matrix identity",
+  "caution_non_equitable": "The uniform sector subspace is NOT invariant under A2: the 45x45 matrix is a compression, not an exact isolated dynamics. In particular 9/4 off-diagonal entries are averaged amplitudes; the full 1620x1620 system couples to intrafiber excitations.",
+  "exact_charge_conservation": "For each tritangent-label r the orthogonal projector P_r onto its 36 apartment states commutes with A3. The full family P_r defines a conserved E6-tritangent label (superselection) for H=-t A3 or any Hamiltonian block diagonal in this partition.",
+  "symmetry_no_go": "Overlap-two A2 is ALSO PSp-invariant but has nonzero matrix elements between different tritangent sectors, so [A2,P_r] != 0. Thus PSp alone does NOT enforce their superselection; forbidding A2 requires an extra physical conservation law, locality principle or fundamental charge, not supplied by W33 symmetry.",
+  "physical_status": "A precise structural test and conditional sector symmetry. Physical gauge origin of the 45-valued charge and stability under generic interactions are not established."
+}
