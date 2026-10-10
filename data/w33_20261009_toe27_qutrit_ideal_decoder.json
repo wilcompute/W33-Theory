@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "code": "[[160,1,8]]_3",
+  "check_matrix_dimensions": {
+    "X_error_Wilson_H": [
+      80,
+      160
+    ],
+    "Z_error_Gauss_H": [
+      79,
+      160
+    ]
+  },
+  "shortest_recovery_radius": 3,
+  "decoder": "Exact meet-in-the-middle ternary syndrome lookup: precompute 320 one-link syndromes and at most 50,880 two-link syndromes, search up to a third link; separate X/Z CSS channels.",
+  "syndrome_columns_nonzero_and_unique_X": true,
+  "syndrome_columns_nonzero_and_unique_Z": true,
+  "exact_radius_tests": [
+    {
+      "error_support_size": 0,
+      "trials": 20,
+      "recovered_all": true
+    },
+    {
+      "error_support_size": 1,
+      "trials": 20,
+      "recovered_all": true
+    },
+    {
+      "error_support_size": 2,
+      "trials": 20,
+      "recovered_all": true
+    },
+    {
+      "error_support_size": 3,
+      "trials": 20,
+      "recovered_all": true
+    }
+  ],
+  "iid_depolarizing_8_Paulis_samples": {
+    "0.002": {
+      "trials": 500,
+      "physical_Pauli_error_probability": 0.002,
+      "logical_recovery_failure_count": 0,
+      "empirical_failure_fraction": 0.0,
+      "empirical_error_weight_counts": {
+        "0": 351,
+        "1": 124,
+        "2": 23,
+        "3": 1,
+        "4": 1
+      },
+      "binomial_P_at_least_four_errors": 0.0003281464496188978
+    },
+    "0.005": {
+      "trials": 500,
+      "physical_Pauli_error_probability": 0.005,
+      "logical_recovery_failure_count": 2,
+      "empirical_failure_fraction": 0.004,
+      "empirical_error_weight_counts": {
+        "0": 255,
+        "1": 154,
+        "2": 63,
+        "3": 26,
+        "4": 2
+      },
+      "binomial_P_at_least_four_errors": 0.008869241750917582
+    },
+    "0.01": {
+      "trials": 500,
+      "physical_Pauli_error_probability": 0.01,
+      "logical_recovery_failure_count": 23,
+      "empirical_failure_fraction": 0.046,
+      "empirical_error_weight_counts": {
+        "0": 103,
+        "1": 167,
+        "2": 122,
+        "3": 72,
+        "4": 24,
+        "5": 8,
+        "6": 3,
+        "8": 1
+      },
+      "binomial_P_at_least_four_errors": 0.0778415091295516
+    },
+    "0.02": {
+      "trials": 500,
+      "physical_Pauli_error_probability": 0.02,
+      "logical_recovery_failure_count": 178,
+      "empirical_failure_fraction": 0.356,
+      "empirical_error_weight_counts": {
+        "0": 12,
+        "1": 49,
+        "2": 105,
+        "3": 117,
+        "4": 104,
+        "5": 61,
+        "6": 29,
+        "7": 14,
+        "8": 5,
+        "9": 4
+      },
+      "binomial_P_at_least_four_errors": 0.39792512920511686
+    }
+  },
+  "upper_bound_circuit_FREE": "Any arbitrary Pauli error on at most 3 physical qutrits is corrected up to its stabilizer class by this ideal-syndrome decoder, since each component X/Z has weight <=3. Under independent p total nonidentity errors, logical failure is bounded by Binomial(160,p) tail >=4. This is a perfect-syndrome data-error-only statement, not a threshold.",
+  "limitations": "Decoder assumes noiseless Gauss/Wilson syndrome and connectivity to all 159 independent stabilizers; ignores hook errors, ancilla faults, measurement noise, correlated loss/leakage and decoding latency. Not a fault-tolerant threshold."
+}

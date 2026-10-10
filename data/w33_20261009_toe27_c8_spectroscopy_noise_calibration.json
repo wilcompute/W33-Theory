@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "native_minimal_geometry": "Levi apartment C8: 8 sites, 8 links",
+  "H_two_boson_dim": 36,
+  "U_over_t": 32,
+  "t_over_h_hypothetical_MHz": 5.0,
+  "ideal_C8_five_band_spectrum": {
+    "centers": [
+      -32.249031007527975,
+      -32.21268156730436,
+      -32.124756809331366,
+      -32.03659073231844,
+      -32.00000000000001
+    ],
+    "first_gap": 0.03634944022361708,
+    "local_band_probabilities": [
+      0.12403473420160409,
+      0.24834939602076464,
+      0.2490291224962203,
+      0.24971446140618073,
+      0.1250000000000132
+    ],
+    "leakage": 0.003872285875217041,
+    "first_band_internal_splitting": 1.4210854715202004e-14,
+    "bound_scattering_energy_gap": 28.32359402332599
+  },
+  "smallest_nonzero_band_gap_over_h_MHz": 0.1817472011180854,
+  "min_ten_gap_cycles_coherent_acquisition_us": 55.0214800474576,
+  "synthetic_bounded_independent_onsite_link_noise_in_t_units": {
+    "0": {
+      "synthetic_samples": 72,
+      "max_abs_first_gap_relative_shift": 0.0,
+      "rms_first_gap_relative_shift": 0.0,
+      "mean_leakage": 0.003872285875217041,
+      "mean_first_excited_pair_band_splitting": 1.4210854715202004e-14,
+      "max_abs_centre_detuning_vs_ideal": 0.0
+    },
+    "0.0005": {
+      "synthetic_samples": 72,
+      "max_abs_first_gap_relative_shift": 0.0006253756881782202,
+      "rms_first_gap_relative_shift": 0.00021074631208482884,
+      "mean_leakage": 0.003872294845867302,
+      "mean_first_excited_pair_band_splitting": 0.00036810342039197665,
+      "max_abs_centre_detuning_vs_ideal": 0.0006271533749284686
+    },
+    "0.001": {
+      "synthetic_samples": 72,
+      "max_abs_first_gap_relative_shift": 0.003641112595210272,
+      "rms_first_gap_relative_shift": 0.0005549851826416695,
+      "mean_leakage": 0.003872298142090903,
+      "mean_first_excited_pair_band_splitting": 0.0007519058053488218,
+      "max_abs_centre_detuning_vs_ideal": 0.0010625375005268722
+    },
+    "0.002": {
+      "synthetic_samples": 72,
+      "max_abs_first_gap_relative_shift": 0.005464644405931418,
+      "rms_first_gap_relative_shift": 0.0014760869478349127,
+      "mean_leakage": 0.0038725248728852754,
+      "mean_first_excited_pair_band_splitting": 0.0013859306206797466,
+      "max_abs_centre_detuning_vs_ideal": 0.0022711580471934667
+    },
+    "0.005": {
+      "synthetic_samples": 72,
+      "max_abs_first_gap_relative_shift": 0.04040645892436401,
+      "rms_first_gap_relative_shift": 0.00908766339700755,
+      "mean_leakage": 0.0038734923946588257,
+      "mean_first_excited_pair_band_splitting": 0.0036693172712479617,
+      "max_abs_centre_detuning_vs_ideal": 0.0043137063885865246
+    }
+  },
+  "native_C8_exact_band_multiplicities": [
+    1,
+    2,
+    2,
+    2,
+    1
+  ],
+  "native_C8_boson_computation": "H=-sum_i t_i(b\u2020_i b_(i+1)+h.c.)-U sum_i n_i(n_i-1)/2+sum_i detune_i n_i, with exact 2-boson occupation sqrt factors.",
+  "important_readout_correction": "Complex phase-sensitive Loschmidt amplitude A(t)=<2_0|e^{-i Ht}|2_0> has Fourier components at the energy bands, whereas probability-only return P(t)=abs(A(t))\u00b2 contains PAIRWISE energy DIFFERENCES. Consequently five absolute band centers cannot generally be extracted directly from a Fourier transform of return probability alone. Use Ramsey/quadrature phase reference or frequency-selective spectroscopy.",
+  "protocol": "Start with C8 8 nodes and one-site |2> pair; calibrate eight link couplings and onsite detunings, apply genuinely attractive U, measure complex pair-return via a phase-reference interferometer or transition spectroscopy, resolve five band groups and the bound/scattering gap, fit U/t, noise, and leakage. Quantify both coherent capture and pair-loss channel separately.",
+  "limitations": "All 72x5 disorder trials are synthetic independent uniformly distributed in [-sigma,sigma] in units of t; not hardware verification or worst-case control certification. For U=32t and t/h=5MHz, ten cycles require about55us; device coherence and nonlinear mode availability are unverified."
+}

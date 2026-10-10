@@ -1,0 +1,1333 @@
+{
+  "status": "PASS",
+  "geometry": "W(3,q) incidence Levi graph, q prime power",
+  "graph_diameter": 4,
+  "exact_graph_adjacency_spectrum": "+(q+1)^1, -(q+1)^1, +sqrt(2q)^mr, -sqrt(2q)^mr, 0^(2ms), where mr=q(q+1)^2/2, ms=q(q^2+1)/2",
+  "normalized_graph_laplacian": "L=I-A/(q+1)",
+  "heat_trace": "H_q(t)=Tr(exp(-tL))/[2(q+1)(q\u00b2+1)]",
+  "heat_density_limit_at_each_fixed_positive_t": "exp(-t)",
+  "spectral_dimension_limit": "d_s(t)=-2d(log H)/d(log t) -> 2t",
+  "no_4d_plateau": "The limiting d_s(t)=2t equals four ONLY at isolated t=2 and cannot remain near 4 across a scale range. Graph diameter remains four for all q, while normalized nontrivial adjacency eigenvalues collapse sqrt(2q)/(q+1)->0. This is an exact obstruction to interpreting the raw normalized Levi graph large-q family as a 4-dimensional diffusion continuum; it does not rule out additional dynamics, long-range interpolating constructions, or physics beyond adjacency.",
+  "e6_sector_charge": "For W33 q3 1620-frame apartments, the prior Round26 exact model has 45 connected E6 labels at A3 and a symmetry-allowed A2 that creates a positive first-order 67.5 epsilon tunneling gap. Therefore PSp symmetry alone does not protect an emergent 45-valued gauge charge. Imposing U(1)^45 (one independent number for each sector) would forbid tunneling as an EXTRA ASSUMPTION, but without a microscopic gauge principle this is engineering, not a derivation.",
+  "data": {
+    "2": [
+      {
+        "q": 2,
+        "Levi_sites": 30,
+        "normalized_adjacency_nontrivial_r": 0.6666666666666666,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.33333333333333337,
+            "mult": 9
+          },
+          {
+            "lambda": 1.6666666666666665,
+            "mult": 9
+          },
+          {
+            "lambda": 1,
+            "mult": 10
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.6320968479625668,
+        "discrete_spectral_dimension": 0.8363425020953141,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 2,
+        "Levi_sites": 30,
+        "normalized_adjacency_nontrivial_r": 0.6666666666666666,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.33333333333333337,
+            "mult": 9
+          },
+          {
+            "lambda": 1.6666666666666665,
+            "mult": 9
+          },
+          {
+            "lambda": 1,
+            "mult": 10
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.43209306385510654,
+        "discrete_spectral_dimension": 1.3781279543161364,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 2,
+        "Levi_sites": 30,
+        "normalized_adjacency_nontrivial_r": 0.6666666666666666,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.33333333333333337,
+            "mult": 9
+          },
+          {
+            "lambda": 1.6666666666666665,
+            "mult": 9
+          },
+          {
+            "lambda": 1,
+            "mult": 10
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.2437829494224487,
+        "discrete_spectral_dimension": 1.8953173307977333,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 2,
+        "Levi_sites": 30,
+        "normalized_adjacency_nontrivial_r": 0.6666666666666666,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.33333333333333337,
+            "mult": 9
+          },
+          {
+            "lambda": 1.6666666666666665,
+            "mult": 9
+          },
+          {
+            "lambda": 1,
+            "mult": 10
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.11891065995896143,
+        "discrete_spectral_dimension": 2.2284702052299856,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 2,
+        "Levi_sites": 30,
+        "normalized_adjacency_nontrivial_r": 0.6666666666666666,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.33333333333333337,
+            "mult": 9
+          },
+          {
+            "lambda": 1.6666666666666665,
+            "mult": 9
+          },
+          {
+            "lambda": 1,
+            "mult": 10
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.05429067920635147,
+        "discrete_spectral_dimension": 2.0809415987303335,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ],
+    "3": [
+      {
+        "q": 3,
+        "Levi_sites": 80,
+        "normalized_adjacency_nontrivial_r": 0.6123724356957945,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.38762756430420553,
+            "mult": 24
+          },
+          {
+            "lambda": 1.6123724356957945,
+            "mult": 24
+          },
+          {
+            "lambda": 1,
+            "mult": 30
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.6256582491052856,
+        "discrete_spectral_dimension": 0.8765981551152349,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 3,
+        "Levi_sites": 80,
+        "normalized_adjacency_nontrivial_r": 0.6123724356957945,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.38762756430420553,
+            "mult": 24
+          },
+          {
+            "lambda": 1.6123724356957945,
+            "mult": 24
+          },
+          {
+            "lambda": 1,
+            "mult": 30
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.41557018476246277,
+        "discrete_spectral_dimension": 1.5242567366765025,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 3,
+        "Levi_sites": 80,
+        "normalized_adjacency_nontrivial_r": 0.6123724356957945,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.38762756430420553,
+            "mult": 24
+          },
+          {
+            "lambda": 1.6123724356957945,
+            "mult": 24
+          },
+          {
+            "lambda": 1,
+            "mult": 30
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.21358533159513624,
+        "discrete_spectral_dimension": 2.3223438562017065,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 3,
+        "Levi_sites": 80,
+        "normalized_adjacency_nontrivial_r": 0.6123724356957945,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.38762756430420553,
+            "mult": 24
+          },
+          {
+            "lambda": 1.6123724356957945,
+            "mult": 24
+          },
+          {
+            "lambda": 1,
+            "mult": 30
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.0834888666380372,
+        "discrete_spectral_dimension": 3.0960791176364664,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 3,
+        "Levi_sites": 80,
+        "normalized_adjacency_nontrivial_r": 0.6123724356957945,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.38762756430420553,
+            "mult": 24
+          },
+          {
+            "lambda": 1.6123724356957945,
+            "mult": 24
+          },
+          {
+            "lambda": 1,
+            "mult": 30
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.026127525817195962,
+        "discrete_spectral_dimension": 3.2825832801904915,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ],
+    "5": [
+      {
+        "q": 5,
+        "Levi_sites": 312,
+        "normalized_adjacency_nontrivial_r": 0.5270462766947299,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.4729537233052701,
+            "mult": 90
+          },
+          {
+            "lambda": 1.52704627669473,
+            "mult": 90
+          },
+          {
+            "lambda": 1,
+            "mult": 130
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.6192474006922603,
+        "discrete_spectral_dimension": 0.9173340100812237,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 5,
+        "Levi_sites": 312,
+        "normalized_adjacency_nontrivial_r": 0.5270462766947299,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.4729537233052701,
+            "mult": 90
+          },
+          {
+            "lambda": 1.52704627669473,
+            "mult": 90
+          },
+          {
+            "lambda": 1,
+            "mult": 130
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.39932635356495405,
+        "discrete_spectral_dimension": 1.6769862078907873,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 5,
+        "Levi_sites": 312,
+        "normalized_adjacency_nontrivial_r": 0.5270462766947299,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.4729537233052701,
+            "mult": 90
+          },
+          {
+            "lambda": 1.52704627669473,
+            "mult": 90
+          },
+          {
+            "lambda": 1,
+            "mult": 130
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.1852763776946101,
+        "discrete_spectral_dimension": 2.8122805194204528,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 5,
+        "Levi_sites": 312,
+        "normalized_adjacency_nontrivial_r": 0.5270462766947299,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.4729537233052701,
+            "mult": 90
+          },
+          {
+            "lambda": 1.52704627669473,
+            "mult": 90
+          },
+          {
+            "lambda": 1,
+            "mult": 130
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.054978814654262784,
+        "discrete_spectral_dimension": 4.246985780612737,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 5,
+        "Levi_sites": 312,
+        "normalized_adjacency_nontrivial_r": 0.5270462766947299,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.4729537233052701,
+            "mult": 90
+          },
+          {
+            "lambda": 1.52704627669473,
+            "mult": 90
+          },
+          {
+            "lambda": 1,
+            "mult": 130
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.009905947604698378,
+        "discrete_spectral_dimension": 5.240247795156336,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ],
+    "7": [
+      {
+        "q": 7,
+        "Levi_sites": 800,
+        "normalized_adjacency_nontrivial_r": 0.46770717334674267,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.5322928266532574,
+            "mult": 224
+          },
+          {
+            "lambda": 1.4677071733467426,
+            "mult": 224
+          },
+          {
+            "lambda": 1,
+            "mult": 350
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.6160540861732232,
+        "discrete_spectral_dimension": 0.9378631059400979,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 7,
+        "Levi_sites": 800,
+        "normalized_adjacency_nontrivial_r": 0.46770717334674267,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.5322928266532574,
+            "mult": 224
+          },
+          {
+            "lambda": 1.4677071733467426,
+            "mult": 224
+          },
+          {
+            "lambda": 1,
+            "mult": 350
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.3913252850385555,
+        "discrete_spectral_dimension": 1.7556655205836909,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 7,
+        "Levi_sites": 800,
+        "normalized_adjacency_nontrivial_r": 0.46770717334674267,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.5322928266532574,
+            "mult": 224
+          },
+          {
+            "lambda": 1.4677071733467426,
+            "mult": 224
+          },
+          {
+            "lambda": 1,
+            "mult": 350
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.17191632151549233,
+        "discrete_spectral_dimension": 3.0824448278905225,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 7,
+        "Levi_sites": 800,
+        "normalized_adjacency_nontrivial_r": 0.46770717334674267,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.5322928266532574,
+            "mult": 224
+          },
+          {
+            "lambda": 1.4677071733467426,
+            "mult": 224
+          },
+          {
+            "lambda": 1,
+            "mult": 350
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.04335528916137092,
+        "discrete_spectral_dimension": 4.963543459947071,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 7,
+        "Levi_sites": 800,
+        "normalized_adjacency_nontrivial_r": 0.46770717334674267,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.5322928266532574,
+            "mult": 224
+          },
+          {
+            "lambda": 1.4677071733467426,
+            "mult": 224
+          },
+          {
+            "lambda": 1,
+            "mult": 350
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.0053597963790299056,
+        "discrete_spectral_dimension": 6.7415754660310565,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ],
+    "11": [
+      {
+        "q": 11,
+        "Levi_sites": 2928,
+        "normalized_adjacency_nontrivial_r": 0.39086797998528583,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.6091320200147141,
+            "mult": 792
+          },
+          {
+            "lambda": 1.3908679799852859,
+            "mult": 792
+          },
+          {
+            "lambda": 1,
+            "mult": 1342
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.6128697453885285,
+        "discrete_spectral_dimension": 0.9584892013817596,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 11,
+        "Levi_sites": 2928,
+        "normalized_adjacency_nontrivial_r": 0.39086797998528583,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.6091320200147141,
+            "mult": 792
+          },
+          {
+            "lambda": 1.3908679799852859,
+            "mult": 792
+          },
+          {
+            "lambda": 1,
+            "mult": 1342
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.3834131175504827,
+        "discrete_spectral_dimension": 1.835786573340886,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 11,
+        "Levi_sites": 2928,
+        "normalized_adjacency_nontrivial_r": 0.39086797998528583,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.6091320200147141,
+            "mult": 792
+          },
+          {
+            "lambda": 1.3908679799852859,
+            "mult": 792
+          },
+          {
+            "lambda": 1,
+            "mult": 1342
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.1591243486753829,
+        "discrete_spectral_dimension": 3.370166993971177,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 11,
+        "Levi_sites": 2928,
+        "normalized_adjacency_nontrivial_r": 0.39086797998528583,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.6091320200147141,
+            "mult": 792
+          },
+          {
+            "lambda": 1.3908679799852859,
+            "mult": 792
+          },
+          {
+            "lambda": 1,
+            "mult": 1342
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.033432059859930384,
+        "discrete_spectral_dimension": 5.802545907576132,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 11,
+        "Levi_sites": 2928,
+        "normalized_adjacency_nontrivial_r": 0.39086797998528583,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.6091320200147141,
+            "mult": 792
+          },
+          {
+            "lambda": 1.3908679799852859,
+            "mult": 792
+          },
+          {
+            "lambda": 1,
+            "mult": 1342
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.0025685116728383123,
+        "discrete_spectral_dimension": 8.84393170084829,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ],
+    "31": [
+      {
+        "q": 31,
+        "Levi_sites": 61568,
+        "normalized_adjacency_nontrivial_r": 0.2460627460628691,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.753937253937131,
+            "mult": 15872
+          },
+          {
+            "lambda": 1.246062746062869,
+            "mult": 15872
+          },
+          {
+            "lambda": 1,
+            "mult": 29822
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.6089029588101114,
+        "discrete_spectral_dimension": 0.9843959388953657,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 31,
+        "Levi_sites": 61568,
+        "normalized_adjacency_nontrivial_r": 0.2460627460628691,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.753937253937131,
+            "mult": 15872
+          },
+          {
+            "lambda": 1.246062746062869,
+            "mult": 15872
+          },
+          {
+            "lambda": 1,
+            "mult": 29822
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.37365710319600776,
+        "discrete_spectral_dimension": 1.937833018228663,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 31,
+        "Levi_sites": 61568,
+        "normalized_adjacency_nontrivial_r": 0.2460627460628691,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.753937253937131,
+            "mult": 15872
+          },
+          {
+            "lambda": 1.246062746062869,
+            "mult": 15872
+          },
+          {
+            "lambda": 1,
+            "mult": 29822
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.14396900549835745,
+        "discrete_spectral_dimension": 3.7552020746929475,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 31,
+        "Levi_sites": 61568,
+        "normalized_adjacency_nontrivial_r": 0.2460627460628691,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.753937253937131,
+            "mult": 15872
+          },
+          {
+            "lambda": 1.246062746062869,
+            "mult": 15872
+          },
+          {
+            "lambda": 1,
+            "mult": 29822
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.02328684159487145,
+        "discrete_spectral_dimension": 7.075569412534748,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 31,
+        "Levi_sites": 61568,
+        "normalized_adjacency_nontrivial_r": 0.2460627460628691,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.753937253937131,
+            "mult": 15872
+          },
+          {
+            "lambda": 1.246062746062869,
+            "mult": 15872
+          },
+          {
+            "lambda": 1,
+            "mult": 29822
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.0008100094371139315,
+        "discrete_spectral_dimension": 12.728295518808022,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ],
+    "101": [
+      {
+        "q": 101,
+        "Levi_sites": 2081208,
+        "normalized_adjacency_nontrivial_r": 0.13933990591717543,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.8606600940828246,
+            "mult": 525402
+          },
+          {
+            "lambda": 1.1393399059171754,
+            "mult": 525402
+          },
+          {
+            "lambda": 1,
+            "mult": 1030402
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.6072742592972276,
+        "discrete_spectral_dimension": 0.9951000600330941,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 101,
+        "Levi_sites": 2081208,
+        "normalized_adjacency_nontrivial_r": 0.13933990591717543,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.8606600940828246,
+            "mult": 525402
+          },
+          {
+            "lambda": 1.1393399059171754,
+            "mult": 525402
+          },
+          {
+            "lambda": 1,
+            "mult": 1030402
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.36968570632848835,
+        "discrete_spectral_dimension": 1.9804244298611169,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 101,
+        "Levi_sites": 2081208,
+        "normalized_adjacency_nontrivial_r": 0.13933990591717543,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.8606600940828246,
+            "mult": 525402
+          },
+          {
+            "lambda": 1.1393399059171754,
+            "mult": 525402
+          },
+          {
+            "lambda": 1,
+            "mult": 1030402
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.13800623216858102,
+        "discrete_spectral_dimension": 3.9220811199090715,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 101,
+        "Levi_sites": 2081208,
+        "normalized_adjacency_nontrivial_r": 0.13933990591717543,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.8606600940828246,
+            "mult": 525402
+          },
+          {
+            "lambda": 1.1393399059171754,
+            "mult": 525402
+          },
+          {
+            "lambda": 1,
+            "mult": 1030402
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.01979005326899365,
+        "discrete_spectral_dimension": 7.694215524438455,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 101,
+        "Levi_sites": 2081208,
+        "normalized_adjacency_nontrivial_r": 0.13933990591717543,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.8606600940828246,
+            "mult": 525402
+          },
+          {
+            "lambda": 1.1393399059171754,
+            "mult": 525402
+          },
+          {
+            "lambda": 1,
+            "mult": 1030402
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.0004525340132255408,
+        "discrete_spectral_dimension": 14.847880356335542,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ],
+    "1009": [
+      {
+        "q": 1009,
+        "Levi_sites": 2056525640,
+        "normalized_adjacency_nontrivial_r": 0.044477381079636044,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.9555226189203639,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1.044477381079636,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1,
+            "mult": 1027244738
+          }
+        ],
+        "time": 0.5,
+        "normalized_heat_trace": 0.60660572848364,
+        "discrete_spectral_dimension": 0.9995049709368369,
+        "limiting_heat_trace": 0.6065306597126334,
+        "limiting_spectral_dimension": 1.0
+      },
+      {
+        "q": 1009,
+        "Levi_sites": 2056525640,
+        "normalized_adjacency_nontrivial_r": 0.044477381079636044,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.9555226189203639,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1.044477381079636,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1,
+            "mult": 1027244738
+          }
+        ],
+        "time": 1.0,
+        "normalized_heat_trace": 0.3680615897468475,
+        "discrete_spectral_dimension": 1.9980201289876838,
+        "limiting_heat_trace": 0.36787944117144233,
+        "limiting_spectral_dimension": 2.0
+      },
+      {
+        "q": 1009,
+        "Levi_sites": 2056525640,
+        "normalized_adjacency_nontrivial_r": 0.044477381079636044,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.9555226189203639,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1.044477381079636,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1,
+            "mult": 1027244738
+          }
+        ],
+        "time": 2.0,
+        "normalized_heat_trace": 0.135603450759633,
+        "discrete_spectral_dimension": 3.9920844360589895,
+        "limiting_heat_trace": 0.1353352832366127,
+        "limiting_spectral_dimension": 4.0
+      },
+      {
+        "q": 1009,
+        "Levi_sites": 2056525640,
+        "normalized_adjacency_nontrivial_r": 0.044477381079636044,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.9555226189203639,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1.044477381079636,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1,
+            "mult": 1027244738
+          }
+        ],
+        "time": 4.0,
+        "normalized_heat_trace": 0.018461096641247562,
+        "discrete_spectral_dimension": 7.968400204586835,
+        "limiting_heat_trace": 0.01831563888873418,
+        "limiting_spectral_dimension": 8.0
+      },
+      {
+        "q": 1009,
+        "Levi_sites": 2056525640,
+        "normalized_adjacency_nontrivial_r": 0.044477381079636044,
+        "normalized_Laplacian_spectrum": [
+          {
+            "lambda": 0,
+            "mult": 1
+          },
+          {
+            "lambda": 2,
+            "mult": 1
+          },
+          {
+            "lambda": 0.9555226189203639,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1.044477381079636,
+            "mult": 514640450
+          },
+          {
+            "lambda": 1,
+            "mult": 1027244738
+          }
+        ],
+        "time": 8.0,
+        "normalized_heat_trace": 0.00034620423375178347,
+        "discrete_spectral_dimension": 15.874569393066368,
+        "limiting_heat_trace": 0.00033546262790251185,
+        "limiting_spectral_dimension": 16.0
+      }
+    ]
+  },
+  "limiting_data": {
+    "0.5": {
+      "H": 0.6065306597126334,
+      "spectral_dimension": 1.0
+    },
+    "1.0": {
+      "H": 0.36787944117144233,
+      "spectral_dimension": 2.0
+    },
+    "2.0": {
+      "H": 0.1353352832366127,
+      "spectral_dimension": 4.0
+    },
+    "4.0": {
+      "H": 0.01831563888873418,
+      "spectral_dimension": 8.0
+    },
+    "8.0": {
+      "H": 0.00033546262790251185,
+      "spectral_dimension": 16.0
+    }
+  },
+  "physical_scope": "A falsifiable mathematical no-go for the simplest normalized adjacency diffusion as 3+1D spacetime and an explicit superselection symmetry gap. Does not produce Einstein equations, a Lorentz cone, effective field equations or a protected physical frame vacuum."
+}
