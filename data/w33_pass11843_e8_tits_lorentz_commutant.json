@@ -1,0 +1,52 @@
+{
+ "pass_id": 11843,
+ "e8": {
+  "dim": 248,
+  "roots": 240,
+  "jacobi_max": 3.410605131648481e-13,
+  "sign": 1
+ },
+ "subsystems": {
+  "E6": 72,
+  "A2": 6,
+  "A5": 30,
+  "A1": 2
+ },
+ "tits_automorphism_max_error": 3.108624468950438e-14,
+ "commutants": {
+  "lorentz_W(A5)'_even_tits_words": {
+   "dim": 11,
+   "closure_error": 1.1102230246251565e-15,
+   "derived_dim": 11,
+   "centre_dim": 0,
+   "rank": 3,
+   "killing_rank": 11
+  },
+  "with_parity_W(A5)_all_tits": {
+   "dim": 11,
+   "closure_error": 1.0245914161514e-15,
+   "derived_dim": 11,
+   "centre_dim": 0,
+   "rank": 3,
+   "killing_rank": 11
+  },
+  "with_torus_2_elements": {
+   "dim": 11,
+   "closure_error": 6.895453606539463e-16,
+   "derived_dim": 11,
+   "centre_dim": 0,
+   "rank": 3,
+   "killing_rank": 11
+  },
+  "control_W(E6)'_even_words": {
+   "dim": 8,
+   "closure_error": 6.516667162012403e-16,
+   "derived_dim": 8,
+   "centre_dim": 0,
+   "rank": 2,
+   "killing_rank": 8
+  },
+  "contains_su3_A2": true,
+  "contains_su2_alpha": true
+ }
+}

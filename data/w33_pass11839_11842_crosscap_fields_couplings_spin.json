@@ -1,0 +1,166 @@
+{
+ "pass_ids": [
+  11839,
+  11840,
+  11841,
+  11842
+ ],
+ "crosscap": {
+  "T_squared_equals_P": true,
+  "symmetric_on_Rac": true,
+  "antisymmetric_on_Di": true,
+  "no_Rac_Di_mixing": true,
+  "rac_equivariance_max_error": 8.18017660973507e-15,
+  "span_rank_rac": 15,
+  "span_rank_di": 6,
+  "image_in_bulk_eigenvalue3_max_residual": 1.7342238036525468e-14,
+  "bulk_two_point_by_relation": {
+   "non-orthogonal:-1.0": 720,
+   "orthogonal:1.0": 540,
+   "same:5.0": 36
+  },
+  "boundary_to_bulk_kernel": {
+   "non-orthogonal:1.0": 1080,
+   "orthogonal:1.0": 360
+  }
+ },
+ "free_fields": {
+  "shell_propagators": {
+   "null": {
+    "zero": [
+     0.24691358
+    ],
+    "null": [
+     -0.08641975
+    ],
+    "split_type": [
+     0.02469136
+    ],
+    "kramers_type": [
+     0.02469136
+    ]
+   },
+   "split_type": {
+    "zero": [
+     0.37037037
+    ],
+    "null": [
+     0.03703704
+    ],
+    "split_type": [
+     0.03703704
+    ],
+    "kramers_type": [
+     -0.07407407
+    ]
+   },
+   "kramers_type": {
+    "zero": [
+     0.37037037
+    ],
+    "null": [
+     0.03703704
+    ],
+    "split_type": [
+     -0.07407407
+    ],
+    "kramers_type": [
+     0.03703704
+    ]
+   }
+  },
+  "spinor_helicity": {
+   "dims": {
+    "helicity_0": 20.0,
+    "helicity_1": 20.0,
+    "helicity_2": 20.0,
+    "helicity_3": 20.0
+   },
+   "norms": {
+    "helicity_0": 1.0,
+    "helicity_1": 1.0,
+    "helicity_2": 1.0,
+    "helicity_3": 1.0
+   },
+   "cross": {
+    "0-1": 0.0,
+    "0-2": 0.0,
+    "0-3": 0.0,
+    "1-2": 0.0,
+    "1-3": 0.0,
+    "2-3": 0.0
+   }
+  }
+ },
+ "couplings": {
+  "nonzero_cubic_invariants": {
+   "Rac | Rac | S15 (bulk&boundary)": 1.0,
+   "Rac | Rac* | X24 (boundary, splits)": 1.0,
+   "Rac | A10 (Alt2 Rac) | A10 (Alt2 Rac)": 1.0,
+   "Rac | c20 (Rac Di*) | c20 (Rac Di*)": 1.0,
+   "Rac* | Rac* | S15 (bulk&boundary)": 1.0,
+   "Rac* | Rac* | A10 (Alt2 Rac)": 1.0,
+   "Rac* | Di | c20 (Rac Di*)": 1.0,
+   "Di | Di | A10 (Alt2 Rac)": 1.0,
+   "Di | Di* | D15 (points)": 1.0,
+   "Di* | A10 (Alt2 Rac) | c20 (Rac Di*)": 1.0,
+   "S15 (bulk&boundary) | S15 (bulk&boundary) | S15 (bulk&boundary)": 1.0,
+   "S15 (bulk&boundary) | S15 (bulk&boundary) | b20 (bulk, splits)": 1.0,
+   "S15 (bulk&boundary) | S15 (bulk&boundary) | X24 (boundary, splits)": 2.0,
+   "S15 (bulk&boundary) | b20 (bulk, splits) | b20 (bulk, splits)": 1.0,
+   "S15 (bulk&boundary) | X24 (boundary, splits) | X24 (boundary, splits)": 1.0,
+   "S15 (bulk&boundary) | X24 (boundary, splits) | A10 (Alt2 Rac)": 1.0,
+   "b20 (bulk, splits) | b20 (bulk, splits) | b20 (bulk, splits)": 2.0,
+   "b20 (bulk, splits) | b20 (bulk, splits) | X24 (boundary, splits)": 1.0,
+   "b20 (bulk, splits) | b20 (bulk, splits) | D15 (points)": 1.0,
+   "b20 (bulk, splits) | X24 (boundary, splits) | X24 (boundary, splits)": 1.0,
+   "b20 (bulk, splits) | D15 (points) | D15 (points)": 1.0,
+   "b20 (bulk, splits) | A10 (Alt2 Rac) | A10 (Alt2 Rac)": 1.0,
+   "b20 (bulk, splits) | c20 (Rac Di*) | c20 (Rac Di*)": 1.0,
+   "X24 (boundary, splits) | X24 (boundary, splits) | X24 (boundary, splits)": 3.0,
+   "X24 (boundary, splits) | X24 (boundary, splits) | D15 (points)": 1.0,
+   "X24 (boundary, splits) | D15 (points) | D15 (points)": 1.0,
+   "X24 (boundary, splits) | c20 (Rac Di*) | c20 (Rac Di*)": 1.0,
+   "D15 (points) | D15 (points) | D15 (points)": 2.0,
+   "D15 (points) | c20 (Rac Di*) | c20 (Rac Di*)": 1.0
+  },
+  "symmetric_cubic_self_couplings": {
+   "S15 (bulk&boundary)": 1.0,
+   "b20 (bulk, splits)": 2.0,
+   "X24 (boundary, splits)": 2.0,
+   "D15 (points)": 1.0
+  }
+ },
+ "massive_spin": {
+  "kramers_type": {
+   "order": 24,
+   "decomposition": {
+    "Rac": {
+     "1_1": 1.0,
+     "1_2": 1.0,
+     "3": 1.0
+    },
+    "Di": {
+     "2_0": 2.0
+    }
+   },
+   "order3_generator_is_diagonal_phase_gate": false,
+   "order3_generator_is_transvection": false
+  },
+  "split_type": {
+   "order": 24,
+   "decomposition": {
+    "Rac": {
+     "1_0": 2.0,
+     "3": 1.0
+    },
+    "Di": {
+     "2_1": 1.0,
+     "2_2": 1.0
+    }
+   },
+   "order3_generator_is_diagonal_phase_gate": false,
+   "order3_generator_is_transvection": false
+  }
+ }
+}
