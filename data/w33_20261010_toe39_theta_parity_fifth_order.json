@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "tau1": "(0.173+1.07j)",
+      "tau2": "(0.286+1.29j)",
+      "parity_residual": 1.1188630228279524e-16,
+      "off_block_residual": 9.313703737442105e-17,
+      "odd_determinant_residual": 3.8116576741099243e-19,
+      "split_even_det_residual": 8.326552446565241e-17,
+      "split_odd_residual": 1.9992584055421828e-17,
+      "epsilons": [
+        0.08,
+        0.04,
+        0.02,
+        0.01
+      ],
+      "leading_cubic_relative_errors": [
+        0.006967605441144784,
+        0.00174564321815107,
+        0.0004366451358998098,
+        0.00010917593644318876
+      ],
+      "halving_error_ratios": [
+        0.2505370364175299,
+        0.2501342378325684,
+        0.25003355692536483
+      ]
+    },
+    {
+      "tau1": "(0.113+1.31j)",
+      "tau2": "(-0.21+1.19j)",
+      "parity_residual": 1.6711069443220836e-16,
+      "off_block_residual": 7.333024843573843e-17,
+      "odd_determinant_residual": 2.486854149085295e-19,
+      "split_even_det_residual": 5.561910515487289e-17,
+      "split_odd_residual": 6.144513603139285e-18,
+      "epsilons": [
+        0.08,
+        0.04,
+        0.02,
+        0.01
+      ],
+      "leading_cubic_relative_errors": [
+        0.00711336427467162,
+        0.0017827937819291982,
+        0.0004459776901133439,
+        0.00011151188864616418
+      ],
+      "halving_error_ratios": [
+        0.25062596446482405,
+        0.25015663316412406,
+        0.25003916365821743
+      ]
+    },
+    {
+      "tau1": "1j",
+      "tau2": "(0.5+1.05j)",
+      "parity_residual": 2.220446049250313e-16,
+      "off_block_residual": 1.1366678193247842e-16,
+      "odd_determinant_residual": 6.392916287863899e-19,
+      "split_even_det_residual": 0.0,
+      "split_odd_residual": 1.30631121211963e-17,
+      "epsilons": [
+        0.08,
+        0.04,
+        0.02,
+        0.01
+      ],
+      "leading_cubic_relative_errors": [
+        0.006992924457694216,
+        0.001752226588950701,
+        0.00043830716536097635,
+        0.00010959246117439859
+      ],
+      "halving_error_ratios": [
+        0.2505713596008821,
+        0.250142971305698,
+        0.25003575080535495
+      ]
+    }
+  ],
+  "theorem": "P Theta(e)=Theta(-e)=Theta(e) P; P Theta(e) P=Theta(e); det Theta(-e)=-det Theta(e).",
+  "block": "In P-parity coordinates Theta(e)=Theta_even(e**2) direct_sum e*Theta_odd(e**2), with a 2x2 even block and 1x1 odd block.",
+  "determinant": "det Theta(e)=C*e**3+O(e**5); C=(6*pi*i)**3/2*det(u0,u1,u2)*det(v0,v1,v2).",
+  "boundary": "Exact analytic theta-series parity plus numerical truncation tests. Does not fix a modulus, assign Yukawa couplings, or derive measured masses."
+}
