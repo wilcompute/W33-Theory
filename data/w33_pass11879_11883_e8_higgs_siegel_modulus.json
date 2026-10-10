@@ -1,0 +1,183 @@
+{
+  "pass_ids": [
+    11879,
+    11880,
+    11881,
+    11882,
+    11883
+  ],
+  "11879_weierstrass": {
+    "forward": [
+      {
+        "burkhardt_residual": 1.876741617467928e-19,
+        "odd": [
+          {
+            "oddness": 4.874826219311097e-16,
+            "maschke_vs_coble": 2.220446049250313e-16
+          },
+          {
+            "oddness": 6.464334411848518e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 5.013467934826215e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 3.2745889317653564e-16,
+            "maschke_vs_coble": 2.220446049250313e-16
+          },
+          {
+            "oddness": 1.0804634539722866e-15,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 6.170172892765916e-16,
+            "maschke_vs_coble": 2.220446049250313e-16
+          }
+        ],
+        "even_min_mismatch": 2.4902424794581712e-05,
+        "odd_points_pairwise_min_separation": 0.21695255431487537
+      },
+      {
+        "burkhardt_residual": 7.870910081515528e-19,
+        "odd": [
+          {
+            "oddness": 7.296911191661183e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 6.703353025938786e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 6.404662485488997e-16,
+            "maschke_vs_coble": 1.1102230246251565e-16
+          },
+          {
+            "oddness": 2.705644721183145e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 9.095475976602597e-16,
+            "maschke_vs_coble": 2.220446049250313e-16
+          },
+          {
+            "oddness": 9.709468271716508e-16,
+            "maschke_vs_coble": 2.220446049250313e-16
+          }
+        ],
+        "even_min_mismatch": 0.0016990029202630375,
+        "odd_points_pairwise_min_separation": 0.18196348681675822
+      },
+      {
+        "burkhardt_residual": 3.4026308888808578e-18,
+        "odd": [
+          {
+            "oddness": 3.180231938722972e-16,
+            "maschke_vs_coble": 2.220446049250313e-16
+          },
+          {
+            "oddness": 5.96708541967856e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 5.024954375843588e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 3.2022440915931527e-16,
+            "maschke_vs_coble": 0.0
+          },
+          {
+            "oddness": 6.996699884431051e-16,
+            "maschke_vs_coble": 1.1102230246251565e-16
+          },
+          {
+            "oddness": 6.863941020404001e-16,
+            "maschke_vs_coble": 2.220446049250313e-16
+          }
+        ],
+        "even_min_mismatch": 0.0008734200786351121,
+        "odd_points_pairwise_min_separation": 0.18528293601304158
+      }
+    ],
+    "inverse": [
+      {
+        "coble_fit_residual": 3.678309163785945e-14,
+        "c_vs_nearest_odd_theta": 2.220446049250313e-16
+      },
+      {
+        "coble_fit_residual": 2.202855666601441e-15,
+        "c_vs_nearest_odd_theta": 0.0
+      },
+      {
+        "coble_fit_residual": 5.850712337505301e-13,
+        "c_vs_nearest_odd_theta": 1.1102230246251565e-16
+      }
+    ]
+  },
+  "11880_breaking": {
+    "generic_stabiliser_dim": 0,
+    "random_84_stabiliser_dim": 0,
+    "pauli_generators_fix_vev": 1.793620188084545e-15,
+    "pauli_dets": [
+      1.0,
+      1.0,
+      0.9999999999999998,
+      0.9999999999999998
+    ],
+    "omega_I_fixes": 1.0934428697813141e-15,
+    "zeta9_I_moves": 2.765288744295814,
+    "witting_stabiliser_dims": [
+      24
+    ],
+    "witting_count": 40,
+    "witting_algebra_rank": 6,
+    "witting_algebra_center": 0,
+    "witting_unitary_stabiliser_dim": 24,
+    "generic_unitary_stabiliser_dim": 0
+  },
+  "11881_potential": {
+    "independent_quartic_invariants": 2,
+    "cartan_ratio_minus_ninth": 5.551115123125783e-17,
+    "witting_ratio_minus_ninth": 0.0,
+    "random_ratio_min": 0.1325456609577555,
+    "moment_map_rank": 80,
+    "kempf_ness_local_dim": 88,
+    "decomposable_ratio": 0.3333333333333333,
+    "decomposable_unitary_stabiliser_dim": 44
+  },
+  "11882_invariants": {
+    "invariant_counts_by_degree": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 1
+    }
+  },
+  "checks": {
+    "coble_on_burkhardt": true,
+    "six_odd_thetas_are_odd_and_map_to_coble": true,
+    "ten_even_fail": true,
+    "six_points_distinct": true,
+    "every_cartan_point_is_an_odd_theta": true,
+    "generic_vev_breaks_su9_to_finite": true,
+    "pauli_group_unbroken": true,
+    "witting_rays_trinification": true,
+    "two_quartic_invariants": true,
+    "cartan_saturates_bound": true,
+    "kempf_ness_dim_88": true,
+    "negative_branch_su3_su6": true,
+    "lowest_holomorphic_invariant_degree_12": true
+  },
+  "all_checks_pass": true
+}
