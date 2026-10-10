@@ -1,0 +1,200 @@
+{
+ "pass_ids": [
+  11864,
+  11865,
+  11866
+ ],
+ "chirality": {
+  "SL29_ambivalent": true,
+  "elements_with_g2_eq_1": 2,
+  "elements_with_g2_eq_minus1": 90,
+  "A6_involution_count": 45,
+  "frobenius_schur_conclusion": "all A6 irreps real, all faithful SL(2,9) irreps quaternionic",
+  "null_little_group_order": 36,
+  "Di_helicity_multiplicities": {
+   "n=0": 0.0,
+   "n=1": 0.0,
+   "n=2": -0.0,
+   "n=3": 0.0
+  },
+  "Di_in_2dim_little_group_reps": 4.0,
+  "weyl_balance": true
+ },
+ "charged_sector_little_groups": {
+  "0": [
+   {
+    "orbit": 1,
+    "stabiliser_order": 360,
+    "element_orders": {
+     "1": 1,
+     "2": 45,
+     "3": 80,
+     "4": 90,
+     "5": 144
+    },
+    "structure": "A6",
+    "spin_lift_order": 720
+   },
+   {
+    "orbit": 20,
+    "stabiliser_order": 18,
+    "element_orders": {
+     "1": 1,
+     "2": 9,
+     "3": 8
+    },
+    "structure": "3^2:2",
+    "spin_lift_order": 36
+   },
+   {
+    "orbit": 30,
+    "stabiliser_order": 12,
+    "element_orders": {
+     "1": 1,
+     "2": 3,
+     "3": 8
+    },
+    "structure": "A4",
+    "spin_lift_order": 24
+   },
+   {
+    "orbit": 30,
+    "stabiliser_order": 12,
+    "element_orders": {
+     "1": 1,
+     "2": 3,
+     "3": 8
+    },
+    "structure": "A4",
+    "spin_lift_order": 24
+   }
+  ],
+  "1": [
+   {
+    "orbit": 6,
+    "stabiliser_order": 60,
+    "element_orders": {
+     "1": 1,
+     "2": 15,
+     "3": 20,
+     "5": 24
+    },
+    "structure": "A5",
+    "spin_lift_order": 120
+   },
+   {
+    "orbit": 15,
+    "stabiliser_order": 24,
+    "element_orders": {
+     "1": 1,
+     "2": 9,
+     "3": 8,
+     "4": 6
+    },
+    "structure": "S4",
+    "spin_lift_order": 48
+   },
+   {
+    "orbit": 60,
+    "stabiliser_order": 6,
+    "element_orders": {
+     "1": 1,
+     "2": 3,
+     "3": 2
+    },
+    "structure": "S3",
+    "spin_lift_order": 12
+   }
+  ],
+  "2": [
+   {
+    "orbit": 6,
+    "stabiliser_order": 60,
+    "element_orders": {
+     "1": 1,
+     "2": 15,
+     "3": 20,
+     "5": 24
+    },
+    "structure": "A5",
+    "spin_lift_order": 120
+   },
+   {
+    "orbit": 15,
+    "stabiliser_order": 24,
+    "element_orders": {
+     "1": 1,
+     "2": 9,
+     "3": 8,
+     "4": 6
+    },
+    "structure": "S4",
+    "spin_lift_order": 48
+   },
+   {
+    "orbit": 60,
+    "stabiliser_order": 6,
+    "element_orders": {
+     "1": 1,
+     "2": 3,
+     "3": 2
+    },
+    "structure": "S3",
+    "spin_lift_order": 12
+   }
+  ]
+ },
+ "bl_breaking": {
+  "sm_singlet_dim": 25,
+  "sm_singlets_by_BL_and_spinor_sign": {
+   "BL=-3/4,spinor_sign=-1": 4,
+   "BL=0,spinor_sign=1": 17,
+   "BL=3/4,spinor_sign=-1": 4
+  },
+  "BL_charged_sm_singlets_all_in_spinor_block": true,
+  "BL_plus_singlet_dim": 4,
+  "bilinear_singular_values_smallest": [
+   0.23777490918964042,
+   0.018412670864167122,
+   2.154098648689211e-07
+  ],
+  "W_invariant_under_lorentz_error": 6.10489974535197e-08,
+  "lorentz_invariant_bilinears": 1,
+  "symmetric": 0,
+  "antisymmetric": 1,
+  "stabiliser_singular_values": [
+   0.7379588408773504,
+   0.3991979043277384,
+   0.005412216465130561,
+   0.005412216464825646,
+   4.612602284341835e-10,
+   2.0989625945391072e-10,
+   2.0943699788634904e-10,
+   1.9587955064147995e-10,
+   2.561300922117492e-13,
+   1.1038657629617505e-13,
+   7.10636435961221e-14,
+   4.5606535226319454e-14,
+   2.8377153112635137e-14,
+   2.5661873701849757e-14,
+   1.907882137883598e-14,
+   1.718459948342721e-14,
+   1.6351053364432597e-14,
+   1.4291059559242138e-14,
+   1.0881664138010987e-14
+  ],
+  "stabiliser_of_generic_condensate": {
+   "dim": 15,
+   "closure_error": 2.392193819330827e-09,
+   "derived_dim": 14,
+   "centre_dim": 0,
+   "rank": 4,
+   "contains_su3": true,
+   "contains_su2_alpha": true,
+   "contains_Y": true,
+   "killing_rank": 12,
+   "nilradical_dim": 3,
+   "levi_is_SM_algebra": true
+  }
+ }
+}

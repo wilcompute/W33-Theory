@@ -1315,6 +1315,16 @@ rank. Reflection positivity of the boundary four-point function gives exact inte
 $g_3^2\le1/48$, $g'^2\le1/8+6g_3^2$ and $g_4\le1/12$ on the bulk couplings.
 \tierT\,\tierC\ (\cert{w33\_pass11859\_11862\_parity\_orbifold\_sectors\_breaking.py}, \cert{w33\_pass11861\_bootstrap\_positivity\_bounds.py}; Lean \texttt{W33.Pass11863A6NotInSL2})
 
+The finite Lorentz group is ambivalent: every element is conjugate to its inverse, so every representation is self-conjugate and
+there is no analogue of a Weyl spinor. Its spinor Di carries no helicity at all on the light cone, since the massless little group
+acts on it only through continuous-spin-type representations. So no chiral fermion can be built from Di. In the other direction
+the structure is generous. Every $B-L$-charged singlet of the Standard Model is a Lorentz spinor, and exactly one Lorentz-invariant
+bilinear of them exists: a Majorana-type $\nu^c\nu^c$ condensate. Its unbroken symmetry is exactly $\mathfrak{su}(3)\oplus\mathfrak{su}(2)
+\oplus\mathfrak u(1)_Y$, the left--right seesaw pattern, here forced as the unique option. Coloured (charged-sector) momenta have only
+rotation little groups (icosahedral, octahedral, dihedral); only colour singlets reach the light cone. At one loop the bubble and box
+are positive in every channel, so the tree-level positivity bounds mark loss of perturbative control, not exclusions.
+\tierT\,\tierC\ (\cert{w33\_pass11864\_11866\_weyl\_chirality\_bl\_quark\_sectors.py}, \cert{w33\_pass11867\_one\_loop\_positivity.py}; Lean \texttt{W33.Pass11868A6NotInGL2RealFixed})
+
 \begin{keyidea}
 Three layers of time, exactly separated: a finite present with a light cone ($27$
 events, $t^2-x^2-y^2$); an unbounded, oriented history (a free group, an $8$-regular tree,

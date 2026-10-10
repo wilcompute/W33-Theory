@@ -1,0 +1,84 @@
+{
+ "pass_id": 11867,
+ "convention": "1PI four-point diagrams of the phi^3 + phi^4\nbulk theory, with Euclidean vertex factors (-g3), (-g4) and the stated combinatorial weights:\n  bubble   (g4^2 / 2)  sum_{p,q} K_a K_b (p) G(p,q)^2 K_c K_d (q)                       + t + u\n  triangle (-g4 g3^2)  sum_{p,q,r} K_a K_b (p) G(p,q) G(p,r) G(q,r) K_c(q) K_d(r)    over the 6 pairs at the quartic vertex\n  box      (g3^4)      sum K_a(p) G(p,q) K_b(q) G(q,r) K_c(r) G(r,s) K_d(s) G(s,p)    over the 3 cyclic orders",
+ "channels": [
+  {
+   "dim": 105,
+   "swap": -1.0,
+   "D": 0.0,
+   "C": 0.0,
+   "E15": -0.0,
+   "Bub": 0.0,
+   "Tri": -0.0,
+   "Box": -0.0
+  },
+  {
+   "dim": 60,
+   "swap": 1.0,
+   "D": 2.0,
+   "C": 0.0,
+   "E15": -96.0,
+   "Bub": 144.0,
+   "Tri": 3840.0,
+   "Box": 15360.0
+  },
+  {
+   "dim": 24,
+   "swap": 1.0,
+   "D": 2.0,
+   "C": -0.0,
+   "E15": 96.0,
+   "Bub": 144.0,
+   "Tri": 768.0,
+   "Box": 3072.0
+  },
+  {
+   "dim": 20,
+   "swap": 1.0,
+   "D": 2.0,
+   "C": 24.0,
+   "E15": 288.0,
+   "Bub": 1008.0,
+   "Tri": 18432.0,
+   "Box": 46080.0
+  },
+  {
+   "dim": 15,
+   "swap": 1.0,
+   "D": 2.0,
+   "C": 24.0,
+   "E15": 384.0,
+   "Bub": 1008.0,
+   "Tri": 16896.0,
+   "Box": 39936.0
+  },
+  {
+   "dim": 1,
+   "swap": 1.0,
+   "D": 17.0,
+   "C": 60.0,
+   "E15": 576.0,
+   "Bub": 3384.0,
+   "Tri": 62208.0,
+   "Box": 179712.0
+  }
+ ],
+ "regions_g_prime_zero": {
+  "tree": {
+   "max_g3_squared": 0.02075,
+   "g4_window_at_g3_zero": [
+    -0.4,
+    0.08250000000000007
+   ],
+   "allowed_fraction_of_grid": 0.33215681548182713
+  },
+  "one_loop": {
+   "max_g3_squared": 0.06,
+   "g4_window_at_g3_zero": [
+    -0.4,
+    0.2
+   ],
+   "allowed_fraction_of_grid": 0.897401904237186
+  }
+ }
+}
