@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "code": "[[160,1,8]]_3",
+  "hypothesis": "One or a few Pauli X/Z data events per round. Joint sparse-greedy selector scores each candidate error against ALL its affected stabilizers and all future time bins, using actual W33 syndrome columns, rather than independent check filters.",
+  "data_event_prior": "Each channel each data qudit error p=0.0005, nonzero F3 Pauli \u00b1 equally likely; log event/no-event ratio log((1-pd)/(pd/2)). Readout error probability pm, wrong ternary outcome symmetric; log correct/wrong ratio log((1-pm)/(pm/2)).",
+  "greedy_scope": "Select one event-time-channel-edge-amplitude candidate with positive log posterior improvement, update entire future predicted check history; stop at no gain or 8 events. This is NOT global maximum likelihood, circuit-level GHZ/CZ propagation, joint full data error probability, or detector-matching decoder with actual gates.",
+  "outcomes": [
+    {
+      "p_data_per_channel_round": 0.0005,
+      "p_report": 0.01,
+      "rounds": 5,
+      "trials": 180,
+      "true_data_events": 165,
+      "joint_selected_events": 155,
+      "mismatched_check_values_total": {
+        "raw": 279,
+        "individual": 80,
+        "joint": 14,
+        "ideal": 0
+      },
+      "logical_failures": {
+        "raw": 144,
+        "individual": 40,
+        "joint": 13,
+        "ideal": 1
+      }
+    },
+    {
+      "p_data_per_channel_round": 0.0005,
+      "p_report": 0.02,
+      "rounds": 5,
+      "trials": 180,
+      "true_data_events": 148,
+      "joint_selected_events": 150,
+      "mismatched_check_values_total": {
+        "raw": 572,
+        "individual": 127,
+        "joint": 23,
+        "ideal": 0
+      },
+      "logical_failures": {
+        "raw": 171,
+        "individual": 35,
+        "joint": 14,
+        "ideal": 0
+      }
+    },
+    {
+      "p_data_per_channel_round": 0.0005,
+      "p_report": 0.04,
+      "rounds": 5,
+      "trials": 180,
+      "true_data_events": 155,
+      "joint_selected_events": 119,
+      "mismatched_check_values_total": {
+        "raw": 1186,
+        "individual": 147,
+        "joint": 61,
+        "ideal": 0
+      },
+      "logical_failures": {
+        "raw": 180,
+        "individual": 53,
+        "joint": 36,
+        "ideal": 1
+      }
+    }
+  ],
+  "seed": 320320,
+  "reproducibility": "Uses exact Round32 RNG stream and model, compare raw, Round32 independent ternary HMM, joint sparse time-event selector and ideal true syndrome on the SAME 180 trials per setting.",
+  "caution": "Finite seeded Monte Carlo. Compare all channels and stabilizer-equivalent logical recovery; no threshold or physical universal quantum device."
+}

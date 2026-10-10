@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "group": "A6=W(A5) derived, PSL(2,9), order360",
+  "generators": [
+    [
+      1,
+      2,
+      0,
+      3,
+      4,
+      5
+    ],
+    [
+      1,
+      3,
+      2,
+      0,
+      4,
+      5
+    ],
+    [
+      1,
+      4,
+      2,
+      3,
+      0,
+      5
+    ],
+    [
+      1,
+      5,
+      2,
+      3,
+      4,
+      0
+    ]
+  ],
+  "generator_order": 360,
+  "Cartan_A5_3torsion_module": "S={x∈F3^6: Σx=0}, dimension5, A6 permutes coordinates",
+  "invariant_ones_vector_dim": 1,
+  "invariant_functional_dim": 0,
+  "orbit_generated_submodule_dim_counts": {
+    "1": 2,
+    "5": 240
+  },
+  "proper_nonzero_submodules": "Exactly C=<ones>, dimension1, not a 4D A6-stable submodule",
+  "exact_four_dimensional_quotient": "S/C has dimension4 and carries A6 representation, but is NONSPLITTING (not a submodule of S).",
+  "theorem": "For this standard A5 root-torus 3-torsion action, there is NO 4D A6-stable subgroup implementing the 4D finite translations as an honest subgroup of T_A5[3]. The desired 4D module exists as quotient S/C but NOT a Lorentz-equivariant subspace of the five-dimensional A5 torus, since the extension 0→C→S→S/C→0 does not split.",
+  "scope": "Verified exact finite F3 computations, closure order360 and exhaustive nonzero vector invariant spans. Does NOT rule out finite Poincare embedding in E8 using extra A2/A1 torus components, other 3-subgroups, or a non-Cartan construction. Not an observed physics theorem.",
+  "parallel_prior": "Tits A5 in E8 Lorentz and su3+su2 commutant are published in parallel Pass11843; this is a new modular-translation representation test for a specific Tits torus."
+}

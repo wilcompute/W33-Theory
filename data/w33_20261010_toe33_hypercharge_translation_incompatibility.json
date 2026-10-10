@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "parallel_prior_certificate": "data/w33_pass11844_11846_e8_poincare_lifts_matter.json",
+  "parent_faithful_A6_commutant_dim": 24,
+  "with_hypercharge_rotation_A6_Z7_commutant_dim": 12,
+  "with_central_3_extension_translations_commutant_dim": 11,
+  "with_both_T_and_Z7_hypercharge_commutant_dim_proved": 11,
+  "retained_gauge_algebra": "su(3)\u2295su(2)",
+  "centre_dim": 0,
+  "theorem": "Let L=A6 faithful adjacent-Tits Lorentz subgroup, T=central-Z3-extended finite Minkowski translation subgroup constructed in Pass11844, and R=Z7(Y) hypercharge rotation constructed in Pass11845. Then c_e8(<L,T,R>)=su3\u2295su2 (dimension11, zero centre). Proof: c(<L,T,R>)\u2282c(<L,T>)=su3\u2295su2; every su3\u2295su2 generator also commutes with L,T and R by both parallel certificates. Therefore the two sides are equal.",
+  "physical_firewall": "In this SPECIFIED faithful-A6+Cartan-translation+hypercharge-rotation embedding, a commuting full Standard-Model algebra su3\u2295su2\u2295u1 cannot survive once translations are imposed. By contrast faithful A6+hypercharge alone has dimension12. This restricts one choice of geometric/gauge common commutant, not possible alternative E8 spacetime/gauge dynamics or spontaneous symmetry breaking.",
+  "priority": "The su5 Lorentz commutant, Z7(Y) hypercharge, translation central extension and each separate commutant were already independently constructed by parallel Pass11844\u201311846, committed while this pass was in progress. This script asserts that prior work and proves their combined-generator intersection corollary; no new E8 matrices or Lie brackets constructed in this script.",
+  "new_thing": "Exact no-hypercharge-if-full-translations-in-same-faithful-Tits-lift consequence. The separate 4D modular non-splitting is ALSO already in parallel Pass11844 and must not be misrepresented as newly discovered here."
+}

@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "specified_target": {
+    "sites": 8,
+    "links": 8,
+    "U_over_h_MHz": 160.0,
+    "t_over_h_MHz": 5.0,
+    "U_over_t": 32.0,
+    "target_first_pair_band_gap_MHz": 0.181747201118
+  },
+  "primary_empirical_calibration": "Coupled transmons npj Quantum Information (2018): typical relaxation T1 15\u201340 us. Actual published numbers; not measured for the proposed C8 device.",
+  "measured_reference_T1_pair_survival_if_reused_under_independent_markov_model": [
+    {
+      "T1_us": 15.0,
+      "interrogation_us": 20.0,
+      "no_loss_two_excitations": 0.06948345122280154
+    },
+    {
+      "T1_us": 15.0,
+      "interrogation_us": 60.0,
+      "no_loss_two_excitations": 0.00033546262790251185
+    },
+    {
+      "T1_us": 40.0,
+      "interrogation_us": 20.0,
+      "no_loss_two_excitations": 0.36787944117144233
+    },
+    {
+      "T1_us": 40.0,
+      "interrogation_us": 60.0,
+      "no_loss_two_excitations": 0.049787068367863944
+    }
+  ],
+  "half_pair_survival_required_T1_us": {
+    "20.0": 57.70780163555854,
+    "60.0": 173.1234049066756
+  },
+  "relevant_published_devices": [
+    {
+      "platform": "Two coupled transmons with tunable hopping and cross-Kerr",
+      "year": 2018,
+      "doi": "10.1038/s41534-018-0088-9",
+      "observed": "Tunable hopping and nonlinear cross-Kerr in single/two excitation manifolds; reported typical T1 of 15\u201340 microseconds at coupler bias points",
+      "measured_T1_us_range": [
+        15,
+        40
+      ],
+      "mismatch": "Only two transmons, not C8 ring; under Markov pair loss this published T1 interval gives <5% pair survival at 60us. A redesigned platform might have better T1."
+    },
+    {
+      "platform": "Single Cooper-pair-pairing high-impedance superconducting oscillator",
+      "year": 2025,
+      "doi": "10.1038/s41467-025-62047-8",
+      "observed": "Nonmonotonic interaction processes of orders2,3,4 with amplitudes >70MHz, linewidth about200kHz",
+      "mismatch": "High-order interaction spectrum alternating sign is NOT the assumed simple uniform attractive Kerr U/h=160MHz; single nonlinear resonator, not 8-site coherent pair ring. No measured 60us pair survival provided."
+    },
+    {
+      "platform": "21-resonator driven-dissipative Bose-Hubbard chain",
+      "year": 2026,
+      "doi": "10.1103/rvhv-ms4t",
+      "observed": "21 resonators, driven-dissipative multimode first-order phase transition; switching times range from milliseconds to143seconds",
+      "mismatch": "143s is metastable PHASE SWITCHING, not coherence T1 or two-boson survival; no exact 8-site pair-level U/t=32 laboratory demonstration."
+    }
+  ],
+  "unmeasured_requirements": [
+    "exact attractive -U n(n-1)/2 on each of 8 sites",
+    "all 8 hopping links closed in ring",
+    "two-excitation coherent hopping t/h near5MHz",
+    "pair preparation/readout contrast",
+    "T1 and T2 under actual nonlinear coupler biases",
+    "two-photon correlated loss, detuning and drift"
+  ],
+  "no_go_scope": "Existing 2018 2-transmon reported lifetime does NOT meet this hypothetical 60us C8 survival criterion under the stated independent exponential loss model. It does NOT rule out other transmon platforms. Large nonlinear terms in a 2025 oscillator do NOT prove a 160MHz uniform attractive Kerr ring. Metastable classical 143-second phase switching does NOT imply 143-second photon lifetime.",
+  "key_external_sources": [
+    "https://www.nature.com/articles/s41534-018-0088-9",
+    "https://www.nature.com/articles/s41467-025-62047-8",
+    "https://journals.aps.org/prxquantum/abstract/10.1103/rvhv-ms4t"
+  ]
+}

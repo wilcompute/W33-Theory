@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "theorem": "Any finite graph that is 4-regular, bipartite and girth>=2r contains at least 3^r-1 vertices by breadth-first exploration of disjoint depth(r-1) neighborhoods around the two endpoints of an edge. A degree-m W33 Levi cover has 80m vertices, so m>=ceil((3^r-1)/80).",
+  "target_bounds": [
+    {
+      "target_girth_at_least": 8,
+      "minimum_vertices": 80,
+      "minimum_W33_cover_degree": 1,
+      "minimum_HGP_n_at_that_degree": 31841
+    },
+    {
+      "target_girth_at_least": 10,
+      "minimum_vertices": 242,
+      "minimum_W33_cover_degree": 4,
+      "minimum_HGP_n_at_that_degree": 511361
+    },
+    {
+      "target_girth_at_least": 12,
+      "minimum_vertices": 728,
+      "minimum_W33_cover_degree": 10,
+      "minimum_HGP_n_at_that_degree": 3198401
+    },
+    {
+      "target_girth_at_least": 14,
+      "minimum_vertices": 2186,
+      "minimum_W33_cover_degree": 28,
+      "minimum_HGP_n_at_that_degree": 25083521
+    },
+    {
+      "target_girth_at_least": 16,
+      "minimum_vertices": 6560,
+      "minimum_W33_cover_degree": 82,
+      "minimum_HGP_n_at_that_degree": 215154881
+    }
+  ],
+  "role": "These bounds are rigorous for ANY 4-regular bipartite W33 covering graph, including nonabelian and nonnormal covers. In particular m<=3 impossible for girth10 and m<=9 impossible for girth12, independent of CP-SAT. They do NOT prove m=13 impossible for girth10 or m=17 minimal.",
+  "prior": "Base W33 Levi girth8, 80 vertices. Round30 degree83 and Round31 degree17 both have exact girth10."
+}
