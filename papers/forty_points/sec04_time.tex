@@ -1104,11 +1104,23 @@ necessary selection rules: gauge charges, hidden $N$-ality, point-group sector a
 tree-level up Yukawa is $g\,\varepsilon_{\alpha\beta}$, so $m_t=m_c$. In ten models, the flagship among them, it stays exactly
 $g\,\varepsilon_{\alpha\beta}$ to all orders whatever the hidden-neutral condensates; in each of them no gauge-neutral singlet
 monomial carries $H$-momentum. With hidden-neutral condensates the down and lepton Yukawas vanish to all orders by gauge
-invariance alone in $22$ of $33$ models. With hidden composites they first appear at degree $15$ or more, and, in $22$ of
-$24$ analysable models, at degree at least $8$ even without the $H$-momentum rule. Fractional electric charges are labelled by $\mathbb Z_2\times\mathbb Z_3$:
+invariance alone in $22$ of $33$ models. With hidden composites they first appear at degree $12$ or more (degree $4$ in two
+models), using the corrected $H$-momentum rule of Cabo Bizet et al. Fractional electric charges are labelled by $\mathbb Z_2\times\mathbb Z_3$:
 one bit of twist parity and one qutrit, the fixed point of the order-three plane. These are degeneracy and suppression
 statements valid for every coefficient, not mass predictions. As perturbative superpotential vacua they disfavour the class.
 \tierT\,\tierC\ (\cert{w33\_pass11810\_11813\_yukawa\_textures.py}; Lean \texttt{W33.Pass11815LevelCharges})
+
+\emph{Why the even-order class splits.} The W(3,3) vacuum $3(84)+27(\overline9)$ is three copies of the minimal anomaly-free
+three-generation content $84+9\times\overline9$ of $SU(9)$ flavour unification. Two theorems of the two-qutrit $E_8$ then
+control its Yukawa sector. First, the cubic $\varepsilon(x\wedge y\wedge z)$ on $\Lambda^3\mathbb C^9$ is alternating, so when
+families are copies the top Yukawa is $\sum_k\varepsilon_{ijk}h_k$, with singular values $(|h|,|h|,0)$; with a single copy it
+vanishes. Second, the $\mathbb Z_9$ centre forbids $84\cdot\overline9\cdot\overline9$, so the bottom Yukawa needs the quartic
+$84\cdot\overline9^3$, one field beyond the top. In $\mathbb Z_6$-I the two planes with equal twist are such copies, giving
+$m_t=m_c$. The hidden $SU(5)$ confines at $\Lambda/M_s\approx4\times10^{-9}$, so composite bottom and tau masses are negligible
+and the class is excluded. In $\mathbb Z_6$-II all twists differ: the W(3,3) $SU(9)$ models and the Codex benchmark have
+hierarchical up matrices with a single cubic top, and down entries with ordinary singlets. The live branch is therefore the
+one whose geometry breaks the copy symmetry.
+\tierT\,\tierC\ (\cert{w33\_pass11818\_11821\_su9\_flavour\_and\_corrected\_textures.py}; Lean \texttt{W33.Pass11822SU9Flavour})
 
 All of this is one law.
 

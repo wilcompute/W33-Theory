@@ -34,6 +34,13 @@ Nine models whose hidden representations are SO-type (dimensions 8, 16) are excl
 
 ## 11810 — up quarks: top = charm at tree level
 
+> **Correction (Pass 11818).** The R rule used here treated each G2 plane separately. The correct Z6-I rule (arXiv:1301.2322, eqs. 3.53–3.54) conserves only plane 3 and **one combined, γ-corrected charge for the two G2 planes**, which is weaker. Re-derived with it:
+> * The tree-level ε texture is unchanged and exact (10D super-Yang–Mills ε_ijk).
+> * The same **10 models** have no fully neutral hidden-neutral singlet monomial at all, so their top–charm degeneracy is exact to all orders.
+> * With hidden composites the first neutral monomial has degree **3–9** (not ≥ 6).
+> * Down and lepton entries via composites first appear at degree **≥ 12** (4 in two models), not ≥ 15.
+> * The rule-free statement (down and lepton zero to all orders with hidden-neutral condensates in 22/33) is unaffected.
+
 **Tree level.** In all 33 core models the only cubic up couplings are Q_α u^c_β H with α ≠ β on the two degenerate planes. So
 
   **Y_up = g ε_αβ, and m_t = m_c at string tree level.**

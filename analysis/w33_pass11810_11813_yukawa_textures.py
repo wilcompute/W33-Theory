@@ -104,7 +104,22 @@ def min_degree(fields, ins, base, hid=(), variant="none", use_r=True, r_target=N
     rows.append([fields[s]["k"] for s in ins])
     rhs.append(-sum(fields[n]["k"] for n in base))
     mods.append(6)
-    if use_r:
+    if use_r and variant == "cabo":
+        # arXiv:1301.2322 eqs. (3.53)-(3.54) for Z6-I on G2 x G2 x (prime plane), in orbifolder's sign convention:
+        # plane 3: sum R3 = -1 mod 3;  planes 1+2 combined: sum (R1 + R2 + 6 gamma) = -2 mod 6.
+        r3 = lambda f: rv(f, "none")[2]  # noqa: E731
+        r12 = lambda f: rv(f, "none")[0] + rv(f, "none")[1] + 6 * (f["gam"][0] if f["gam"] else F(0))  # noqa: E731
+        t3 = (-1 if r_target is None else r_target[2]) - sum(r3(fields[n]) for n in base)
+        t12 = (-2 if r_target is None else r_target[0]) - sum(r12(fields[n]) for n in base)
+        rows.append([float(3 * r3(fields[s])) for s in ins]); rhs.append(float(3 * t3)); mods.append(9)
+        rows.append([float(3 * r12(fields[s])) for s in ins]); rhs.append(float(3 * t12)); mods.append(18)
+    elif use_r and variant == "z6ii":
+        # arXiv:1301.2322 for Z6-II on G2 x SU(3) x SO(4): plane 1 (non-prime) R1 + 6 gamma = -1 mod 6, R2 = -1 mod 3, R3 = -1 mod 2
+        rr = lambda f: [rv(f, "none")[0] + 6 * (f["gam"][0] if f["gam"] else F(0)), rv(f, "none")[1], rv(f, "none")[2]]  # noqa: E731
+        for i, m in enumerate((6, 3, 2)):
+            t = (-1 if r_target is None else r_target[i]) - sum(rr(fields[n])[i] for n in base)
+            rows.append([float(3 * rr(fields[s])[i]) for s in ins]); rhs.append(float(3 * t)); mods.append(3 * m)
+    elif use_r:
         for i in range(3):
             rows.append([float(3 * rv(fields[s], variant)[i]) for s in ins])
             tgt = (-1 if r_target is None else r_target[i]) - sum(rv(fields[n], variant)[i] for n in base)

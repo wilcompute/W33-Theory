@@ -53,3 +53,4 @@ import W33.Pass1106CliffordFirewallCarrier
 import W33.Pass1390FrameCrossMatching
 import W33.CosineSequence
 import W33.Pass11815LevelCharges
+import W33.Pass11822SU9Flavour
