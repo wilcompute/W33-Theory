@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "order3_transvection_witnesses": [
+    {
+      "seed_point": 0,
+      "char_order3": [
+        81,
+        0,
+        0
+      ],
+      "char3_nilpotent_ranks": [
+        54,
+        27
+      ],
+      "mod3_jordan_three_blocks": 27,
+      "integral_cycle_metric_preserved": true
+    },
+    {
+      "seed_point": 1,
+      "char_order3": [
+        81,
+        0,
+        0
+      ],
+      "char3_nilpotent_ranks": [
+        54,
+        27
+      ],
+      "mod3_jordan_three_blocks": 27,
+      "integral_cycle_metric_preserved": true
+    },
+    {
+      "seed_point": 4,
+      "char_order3": [
+        81,
+        0,
+        0
+      ],
+      "char3_nilpotent_ranks": [
+        54,
+        27
+      ],
+      "mod3_jordan_three_blocks": 27,
+      "integral_cycle_metric_preserved": true
+    },
+    {
+      "seed_point": 5,
+      "char_order3": [
+        81,
+        0,
+        0
+      ],
+      "char3_nilpotent_ranks": [
+        54,
+        27
+      ],
+      "mod3_jordan_three_blocks": 27,
+      "integral_cycle_metric_preserved": true
+    },
+    {
+      "seed_point": 13,
+      "char_order3": [
+        81,
+        0,
+        0
+      ],
+      "char3_nilpotent_ranks": [
+        54,
+        27
+      ],
+      "mod3_jordan_three_blocks": 27,
+      "integral_cycle_metric_preserved": true
+    }
+  ],
+  "irrep_prior": "Complex irreducibility of the 81 Steinberg (Levi H1) is prior Pass20260901/BT1688, not new. On every PSp element its character is the same as the clique harmonic H1, prior Pass20260901.",
+  "theorem": "Every sampled transvection has order 3 on H1, trace g=trace g\u00b2=0, so over C its eigenvalue multiplicities at (1,w,w\u00b2) are exactly (27,27,27). Mod3, g=I+N where N\u00b3=0, rank N=54,rank N\u00b2=27: the restricted 81 module consists of 27 Jordan blocks of size 3. This exact local regularity is not a selected physical generation clock.",
+  "quadratic_mass_obstruction": "The 81-dimensional complex PSp irreducible Steinberg module has scalar commutant by Schur. Any Hermitian quadratic operator commuting with ALL PSp actions is m\u00b2I, and cannot split it into three masses. Choosing a transvection or star is symmetry breaking that requires a dynamical selection rule.",
+  "odd_dim_alternating_nogo": "There is no nondegenerate alternating bilinear form on an 81D vector space, including over F3. A canonical symplectic Pauli phase space uses H1(F3) plus its dual, total dimension 162; standard finite Heisenberg group has order 3^163 and its irrep Hilbert dimension 3^81. The 81-dimensional coefficient module is not the 3^81-dimensional Hilbert space of 81 logical qutrits.",
+  "physical_boundary": "No masses, clock rate, physical generations, Lorentz symmetry, scale or selection potential are derived from these finite representation statements."
+}

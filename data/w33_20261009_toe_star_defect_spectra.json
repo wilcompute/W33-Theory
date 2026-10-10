@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "harmonic_cycle_dimension": 81,
+  "full_group_invariant_mass_nogo": "The 81 real harmonic cycles form the complex irreducible Steinberg module of PSp(4,3), established in prior BT1688 / Pass20260901. By Schur lemma every exactly PSp-invariant complex-linear Hermitian quadratic mass operator on this module is scalar. Therefore unbroken full symmetry CANNOT produce multiple masses or choose 3 generations within these 81 modes. Breaking the symmetry or adding distinct representations/dynamics is necessary.",
+  "canonical_projector": "The previous 160x160 signed chamber-distance matrix K satisfies K\u00b2=160K, K^T=K, rank(K)=81, so P=K/160 is the Euclidean projector onto the Levi 81 cycle space.",
+  "all80_single_stars": {
+    "count": 80,
+    "principal_block_exact": "K_{star,star}=108 I4-27 J4",
+    "nonzero_eigenvalue_of_P Pstar P": "27/40 repeated 3",
+    "remaining_harmonic_eigenvalue": "0 repeated 78"
+  },
+  "all3160_distinct_vertex_pairs": {
+    "line_line_intersect": {
+      "count": 240,
+      "representative": [
+        40,
+        41
+      ],
+      "union_flag_count": 8,
+      "nonzero_eigenvalues_of_two_star_harmonic_operator": [
+        0.45,
+        0.675,
+        0.675,
+        0.675,
+        0.675,
+        0.9
+      ],
+      "characteristic_polynomial_of_integer_K_union": "z**2*(z - 144)*(z - 108)**4*(z - 72)"
+    },
+    "line_line_skew": {
+      "count": 540,
+      "representative": [
+        40,
+        45
+      ],
+      "union_flag_count": 8,
+      "nonzero_eigenvalues_of_two_star_harmonic_operator": [
+        0.65,
+        0.65,
+        0.65,
+        0.7,
+        0.7,
+        0.7
+      ],
+      "characteristic_polynomial_of_integer_K_union": "z**2*(z - 112)**3*(z - 104)**3"
+    },
+    "point_line_incident": {
+      "count": 160,
+      "representative": [
+        0,
+        40
+      ],
+      "union_flag_count": 7,
+      "nonzero_eigenvalues_of_two_star_harmonic_operator": [
+        0.675,
+        0.675,
+        0.675,
+        0.675,
+        0.84375
+      ],
+      "characteristic_polynomial_of_integer_K_union": "z**2*(z - 135)*(z - 108)**4"
+    },
+    "point_line_nonincident": {
+      "count": 1440,
+      "representative": [
+        0,
+        44
+      ],
+      "union_flag_count": 8,
+      "nonzero_eigenvalues_of_two_star_harmonic_operator": [
+        0.6,
+        0.675,
+        0.675,
+        0.675,
+        0.675,
+        0.75
+      ],
+      "characteristic_polynomial_of_integer_K_union": "z**2*(z - 120)*(z - 108)**4*(z - 96)"
+    },
+    "point_point_collinear": {
+      "count": 240,
+      "representative": [
+        0,
+        4
+      ],
+      "union_flag_count": 8,
+      "nonzero_eigenvalues_of_two_star_harmonic_operator": [
+        0.45,
+        0.675,
+        0.675,
+        0.675,
+        0.675,
+        0.9
+      ],
+      "characteristic_polynomial_of_integer_K_union": "z**2*(z - 144)*(z - 108)**4*(z - 72)"
+    },
+    "point_point_far": {
+      "count": 540,
+      "representative": [
+        0,
+        1
+      ],
+      "union_flag_count": 8,
+      "nonzero_eigenvalues_of_two_star_harmonic_operator": [
+        0.65,
+        0.65,
+        0.65,
+        0.7,
+        0.7,
+        0.7
+      ],
+      "characteristic_polynomial_of_integer_K_union": "z**2*(z - 112)**3*(z - 104)**3"
+    }
+  },
+  "physical_interpretation": "A CHOSEN point or line selector supports an exactly 3-dimensional quadratic deformation of the otherwise degenerate 81 harmonic sector. Two chosen selectors produce relation-dependent spectra with fixed algebraic ratios. These are conditional geometry-defined Hamiltonians, not derived particle masses. A dynamical symmetry-breaking potential must select the point/line for actual physics.",
+  "caution": "A finite graph with a selected site and an arbitrary coefficient lambda is not a predictive mass/energy theory, and the 3 excited directions are not automatically the Standard Model generations."
+}
