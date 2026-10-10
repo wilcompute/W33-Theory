@@ -1,0 +1,94 @@
+{
+  "pass_id": [
+    11897,
+    11898
+  ],
+  "part_11897": {
+    "inversion_rel_err": [
+      5.92411221259055e-16,
+      4.284870364776009e-16,
+      3.3588084035783583e-16
+    ],
+    "translation_rel_err": {
+      "diag": 4.389742257946892e-17,
+      "offdiag_1": 2.502538122515124e-17,
+      "offdiag_w": 4.907881046236334e-17,
+      "offdiag_sqrt-3": 2.5516851879484135e-17
+    },
+    "gl2_perm_rel_err": 1.1105267100962044e-16,
+    "even_rel_err": 5.729438766238078e-17,
+    "projective_order_full": 51840,
+    "projective_order_diagonal_moduli": 576,
+    "linear_order": 103680,
+    "symplectic_image_order": 51840,
+    "symplectic_preserves_form": true,
+    "w33_points": 40,
+    "w33_degree": 12,
+    "w33_eigenvalues": [
+      -4.0,
+      2.0,
+      12.0
+    ]
+  },
+  "part_11898": {
+    "group_on_even5_linear_order": 51840,
+    "jacobian_real_rank": 8,
+    "invariant_quartics": 1,
+    "invariant_dims": {
+      "4": 1,
+      "6": 1,
+      "8": 1,
+      "10": 2,
+      "12": 3,
+      "14": 2,
+      "16": 4,
+      "18": 5
+    },
+    "siegel_slice_ranks": {
+      "4": 1,
+      "6": 1,
+      "8": 1,
+      "10": 2,
+      "12": 3,
+      "14": 2,
+      "16": 4,
+      "18": 4
+    },
+    "dual_burkhardt_defect_siegel": [
+      1.79207729205491e-16,
+      8.252642622303189e-17,
+      1.1078863781092678e-16,
+      3.102884576310367e-17
+    ],
+    "dual_burkhardt_defect_generic": [
+      0.0011220166044840054,
+      0.004853038817772575,
+      0.00019090172802252835,
+      0.01198085215766899
+    ],
+    "genus3_inversion_rel_err": 8.366877155826886e-16,
+    "genus3_even_functions": 14,
+    "sp63_order": 9170703360
+  },
+  "checks": {
+    "inversion_weight_one_fourier": true,
+    "translations_phase_gates": true,
+    "gl2_permutes_fixed_points": true,
+    "odd_part_vanishes": true,
+    "projective_group_51840": true,
+    "isomorphic_to_sp43": true,
+    "linear_order_103680": true,
+    "diagonal_moduli_only_576": true,
+    "w33_srg_40_12_2_4": true,
+    "thetas_dominant_onto_P4": true,
+    "unique_invariant_quartic": true,
+    "invariant_dims": true,
+    "siegel_slice_first_relation_degree_18": true,
+    "siegel_slice_in_dual_burkhardt": true,
+    "generic_kahler_not_in_dual_burkhardt": true,
+    "genus3_inversion": true,
+    "genus3_14_even": true,
+    "sp63_order": true
+  },
+  "all_checks_pass": true
+}
