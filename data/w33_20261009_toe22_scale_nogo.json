@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "Hilbert_dimension": 3240,
+  "quantum_model": "fixed N=2 Bose Hubbard native 80-site Levi graph",
+  "Feynman_Hellmann_U_8": {
+    "central_difference_dE0_dU": -0.7620153524281914,
+    "minus_doublon_probability": -0.7620181328969872,
+    "difference": 2.780468795759994e-06
+  },
+  "scale_covariance": [
+    {
+      "scale": 0.5,
+      "E0": -4.960085331435958,
+      "gap": 0.18150097111076136,
+      "relative_error": 1.7763568394002505e-15
+    },
+    {
+      "scale": 1.7,
+      "E0": -16.864290126882274,
+      "gap": 0.617103301776595,
+      "relative_error": 1.7763568394002505e-14
+    },
+    {
+      "scale": 3,
+      "E0": -29.76051198861575,
+      "gap": 1.0890058266646498,
+      "relative_error": 7.105427357601002e-14
+    }
+  ],
+  "strong_coupling_U32": {
+    "exact_gap": 0.09592963909170038,
+    "leading_2t2_over_U_gap": 0.09690689107605138,
+    "relative_difference": -0.010084442638698121
+  },
+  "scale_identifiability_nogo": "For H(t,U)=t H(1,U/t), multiplying both couplings by c>0 multiplies all finite-system energy eigenvalues and gaps by c while leaving eigenvectors, all dimensionless correlations and gap ratios unchanged. Graph incidence cannot determine t in eV or GeV. The quantum low-band gap ~2t\u00b2(4-sqrt6)/U supplies a TUNABLE emergent scale but not an absolute prediction.",
+  "thermodynamic_limit_boundary": "The partition function Z(beta;t,U)=Tr exp[-beta H(t,U)] is real analytic in couplings and inverse temperature for every finite 3240-dimensional Hilbert space at finite beta. Hence a true nonanalytic critical point or universal continuum running beta function requires an additional limiting procedure; the finite W33 device alone cannot demonstrate it.",
+  "scope": "No fitted Standard Model mass, no derived fundamental beta coefficient, no spontaneous vacuum or physical dimensional transmutation; a rigorously constrained non-identifiability test."
+}

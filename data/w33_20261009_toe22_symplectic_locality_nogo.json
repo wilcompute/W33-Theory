@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "carrier": "F3^4 as 81-site affine translation group",
+  "number_translation_states": 81,
+  "nonzero_translation_directions": 80,
+  "symplectic_nonzero_orbit_size": 80,
+  "theorem": "Sp(4,3) acts transitively on ALL 80 nonzero vectors of F3^4 (direct BFS using 40 transvection generators). Every translation-invariant Cayley hopping graph invariant under full Sp4(3) is therefore either edgeless or complete K81: its nonzero displacement set must be a union of Sp-orbits, and there is only one nontrivial orbit. Any four-axis sparse lattice or finite 4D torus requires choosing a basis/axis orbit and BREAKS this symmetry, or a different representation/geometry.",
+  "complete_graph_laplacian_eigenvalues": {
+    "zero": 1,
+    "81_over_80": 80
+  },
+  "heat_formula": "P(t)=(1+80 exp(-81t/80))/81 for normalized Laplacian",
+  "samples": [
+    {
+      "t": 0.25,
+      "heat": 0.7791316833623827,
+      "running_dimension": 0.4982282494622374
+    },
+    {
+      "t": 1,
+      "heat": 0.37116994504593703,
+      "running_dimension": 1.9576454085690964
+    },
+    {
+      "t": 2,
+      "heat": 0.14270996858057305,
+      "running_dimension": 3.699639051165719
+    },
+    {
+      "t": 4,
+      "heat": 0.029552962606907176,
+      "running_dimension": 4.7162444919607545
+    },
+    {
+      "t": 8,
+      "heat": 0.012645470753658142,
+      "running_dimension": 0.38406053075223956
+    },
+    {
+      "t": 20,
+      "heat": 0.012345680597756105,
+      "running_dimension": 5.200938230906025e-06
+    }
+  ],
+  "family_extension": "For the natural Sp(4,q) action on affine Fq^4, Witt transitivity gives one orbit of all q^4-1 nonzero displacement vectors; full Sp-invariant translation hopping is likewise complete K_(q^4).",
+  "prior": "Prior q-family Levi heat-kernel and Cartesian W33 power tests addressed different graphs. This new affine-translation locality obstruction concerns full unbroken Sp4 action.",
+  "physical_boundary": "This does not forbid local Lorentzian physics if symplectic symmetry is broken, represented internally, gauge-redundant or implemented nonlinearly on an expanded carrier. It forbids only the naive fully symmetric translation Cayley kinetic construction."
+}

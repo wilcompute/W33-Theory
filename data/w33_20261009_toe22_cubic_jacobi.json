@@ -1,0 +1,160 @@
+{
+  "status": "PASS_JACOBI_OBSTRUCTION",
+  "group_order": 51840,
+  "unique_alternating_cubic_prior_dimension": 1,
+  "seed_triple": [
+    17,
+    42,
+    150
+  ],
+  "orbit_nonzero_flag_triples": 51840,
+  "evaluations": [
+    -3780,
+    -8047,
+    10381
+  ],
+  "jacobi_mod_prime": 101,
+  "jacobi_witnesses": [
+    {
+      "case": 0,
+      "nonzero": 81,
+      "first8": [
+        6,
+        28,
+        99,
+        25,
+        97,
+        71,
+        31,
+        85
+      ]
+    },
+    {
+      "case": 1,
+      "nonzero": 81,
+      "first8": [
+        94,
+        47,
+        96,
+        91,
+        41,
+        65,
+        20,
+        42
+      ]
+    },
+    {
+      "case": 2,
+      "nonzero": 79,
+      "first8": [
+        77,
+        29,
+        21,
+        14,
+        75,
+        72,
+        74,
+        69
+      ]
+    },
+    {
+      "case": 3,
+      "nonzero": 78,
+      "first8": [
+        99,
+        41,
+        6,
+        37,
+        0,
+        96,
+        45,
+        44
+      ]
+    },
+    {
+      "case": 4,
+      "nonzero": 79,
+      "first8": [
+        87,
+        15,
+        84,
+        31,
+        27,
+        48,
+        65,
+        61
+      ]
+    },
+    {
+      "case": 5,
+      "nonzero": 77,
+      "first8": [
+        0,
+        56,
+        33,
+        92,
+        44,
+        12,
+        41,
+        23
+      ]
+    },
+    {
+      "case": 6,
+      "nonzero": 80,
+      "first8": [
+        15,
+        60,
+        93,
+        97,
+        32,
+        69,
+        58,
+        1
+      ]
+    },
+    {
+      "case": 7,
+      "nonzero": 81,
+      "first8": [
+        19,
+        24,
+        53,
+        51,
+        5,
+        99,
+        14,
+        68
+      ]
+    }
+  ],
+  "elementary_cycle_Jacobi_witness": {
+    "cycle_basis_indices": [
+      13,
+      58,
+      64
+    ],
+    "jacobi_first16": [
+      13,
+      10,
+      89,
+      99,
+      8,
+      99,
+      88,
+      98,
+      6,
+      13,
+      79,
+      9,
+      89,
+      46,
+      36,
+      11
+    ],
+    "nonzero_entries": 78
+  },
+  "independent_full_form_symmetry_checks": 5,
+  "proof": "The unique (by prior character census) PGSp-invariant alternating cubic is constructed as a signed Reynolds orbit of a flag triple. Restriction to the 81 cycle lattice is nonzero, as witnessed by integer evaluations. Raising one index using integral cycle Gram defines an equivariant antisymmetric bracket on 81 modes. Exact nonzero Jacobi vector modulo101 disproves the rational Jacobi identity (Gram invertible mod101).",
+  "boundary": "This excludes the 81-only Gram-dual bracket, NOT the larger E8 Z3-graded algebra with extra E6+A2 adjoint channels. More mixed interaction tensors remain necessary."
+}

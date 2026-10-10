@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "n_physical_qutrit_edges": 160,
+  "n_vertex_gauss_constraints": 80,
+  "n_eightcycle_wilson_terms": 1620,
+  "vertex_operator_weight": 4,
+  "wilson_operator_weight": 8,
+  "gauge_star_rank_over_F3": 79,
+  "independent_wilson_rank_over_F3": 81,
+  "full_stabilizer_rank": 160,
+  "gauge_only_code_parameters": "[[160,81]]_3 before imposing flatness (no code distance claimed)",
+  "flatness_plus_gauss_code_parameters": "[[160,0]]_3",
+  "unique_ground_state_dimension": 1,
+  "Hamiltonian": "H=-g sum_v (G_v+G_v\u2020) -k sum_(1620 8cycles) (W_c+W_c\u2020), g,k>0; choose G_v=X^(D_v), W_c=Z^(C_c), omega=e^(2pi i/3)",
+  "exact_all_commutators_zero": true,
+  "exact_logical_count_explanation": "Gauss X checks rank79, leaving 160-79=81 encoded qutrits. The entire 8-cycle Z flatness stabilizer family has rank81 and is linearly independent of Gauss X in the symplectic Pauli check matrix; adding it uses all remaining stabilizer degrees and leaves zero encoded qutrits. Because rank79+rank81=160, the common +1 eigenspace has dimension 3^(160-160)=1. Flatness is a CHOICE of Hamiltonian, not automatically a required gauge condition.",
+  "gap_bound": "Any violation of a stabilizer with nontrivial cube-root eigenvalue raises its -g(X+X\u2020) energy by 3g or its -k(Z+Z\u2020) energy by 3k. Because all 1620 and 80 terms commute, the spectral gap is at least 3*min(g,k), but potentially larger from syndrome redundancies.",
+  "boundary": "An explicit local commuting 80+1620 term model and exact ground degeneracy count, not a derived fundamental interaction. Eight-cycle fluxes are all geometrically local on the Levi graph, but the model has no 4D continuum, Lorentzian propagation, matter or couplings."
+}
