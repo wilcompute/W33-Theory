@@ -128,3 +128,11 @@ as the non-split ℤ₃ · M of 11844, which parallel Round 33 also found.
   * The Lean module facts.
 * **Scope.** These are kinematic and representation-theoretic statements. No vacuum, symmetry-breaking dynamics or
   chirality mechanism is derived. The firewall says where chirality cannot come from, not where it does.
+
+## Correction (Pass 11859)
+
+The "contrast" in 11855, where a Lorentz-breaking phase i on Di keeps exactly one 16, holds in the abstract product
+32 ⊗ Di but is **not an automorphism of E₈**. Inside E₈ the 1̄6̄ pairs with Di*, on which that phase acts as −i. In fact
+no single automorphism of E₈ yields a chiral fixed spectrum (the adjoint is a real representation). 11855's theorem for
+Lorentz-commuting projections stands as a special case. Chirality requires pairing complex E₈ eigenspaces with complex
+geometric sectors. See `analysis/PASS11859_11863_PARITY_ORBIFOLD_TRIALITY_POSITIVITY.md`.

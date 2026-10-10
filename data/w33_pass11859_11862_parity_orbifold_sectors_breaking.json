@@ -1,0 +1,583 @@
+{
+ "pass_ids": [
+  11859,
+  11860,
+  11862
+ ],
+ "sl5_hom_error": 6.442315717634359e-11,
+ "parity_orbifold": {
+  "samples": [
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 12,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 2,
+    "kept_dim": 64,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 12,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 12,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 12,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 4,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 6,
+    "kept_dim": 32,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   },
+   {
+    "h_order_on_Di": 8,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0,
+    "normalises_so11": true
+   }
+  ],
+  "any_chiral": false,
+  "kept_dims": [
+   [
+    0,
+    13
+   ],
+   [
+    32,
+    10
+   ],
+   [
+    64,
+    1
+   ]
+  ],
+  "control_lorentz_elements": [
+   {
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   }
+  ]
+ },
+ "gut_phase_times_element": {
+  "X_charges_on_spinor_block": {
+   "-5": 4,
+   "-3": 20,
+   "-1": 40,
+   "1": 40,
+   "3": 20,
+   "5": 4
+  },
+  "rows": [
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": false,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": false,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": false,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": false,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": false,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": false,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": false,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "parity",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 64,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 64,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   },
+   {
+    "kind": "lorentz",
+    "Di_eigenvalues_conjugate_paired": true,
+    "kept_dim": 0,
+    "net_10": 0.0,
+    "net_5bar": 0.0
+   }
+  ],
+  "any_chiral": false,
+  "chiral_iff_unpaired": false
+ },
+ "sectors": {
+  "0": {
+   "size": 81,
+   "orbits": [
+    1,
+    20,
+    30,
+    30
+   ]
+  },
+  "1": {
+   "size": 81,
+   "orbits": [
+    6,
+    15,
+    60
+   ]
+  },
+  "2": {
+   "size": 81,
+   "orbits": [
+    6,
+    15,
+    60
+   ]
+  },
+  "k1_k2_isomorphic_orbit_structure": true,
+  "k1_matches_k0": false
+ },
+ "breaking": {
+  "commutant_dim": 19,
+  "centre_dim": 1,
+  "contains_SM_algebra": true,
+  "centre_spectrum_on_E8": {
+   "-1": 3,
+   "-3/4": 16,
+   "-1/2": 30,
+   "-1/4": 48,
+   "0": 54,
+   "1/4": 48,
+   "1/2": 30,
+   "3/4": 16,
+   "1": 3
+  },
+  "centre_spectrum_on_spinor_block": {
+   "-3/4": 16,
+   "-1/4": 48,
+   "1/4": 48,
+   "3/4": 16
+  },
+  "rank": 5,
+  "tc_equals_exp_8pi_i_Y": 9.267903546942815e-08,
+  "central_charge_by_hypercharge": {
+   "Y=-1": {
+    "q": 0,
+    "count": 5
+   },
+   "Y=-5/6": {
+    "q": 2,
+    "count": 6
+   },
+   "Y=-2/3": {
+    "q": 1,
+    "count": 15
+   },
+   "Y=-1/2": {
+    "q": 0,
+    "count": 20
+   },
+   "Y=-1/3": {
+    "q": 2,
+    "count": 30
+   },
+   "Y=-1/6": {
+    "q": 1,
+    "count": 30
+   },
+   "Y=0": {
+    "q": 0,
+    "count": 36
+   },
+   "Y=1/6": {
+    "q": 2,
+    "count": 30
+   },
+   "Y=1/3": {
+    "q": 1,
+    "count": 30
+   },
+   "Y=1/2": {
+    "q": 0,
+    "count": 20
+   },
+   "Y=2/3": {
+    "q": 2,
+    "count": 15
+   },
+   "Y=5/6": {
+    "q": 1,
+    "count": 6
+   },
+   "Y=1": {
+    "q": 0,
+    "count": 5
+   }
+  },
+  "q_equals_12Y_mod_3": true
+ },
+ "lorentz_parts": {
+  "Di": 1.0,
+  "vector5": 1.0,
+  "Sym2Di": 1.0,
+  "overlaps": {
+   "Di_vector5": -0.0,
+   "Di_Sym2": -0.0,
+   "vector5_Sym2": -0.0
+  }
+ }
+}

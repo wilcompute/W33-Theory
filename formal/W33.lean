@@ -58,3 +58,4 @@ import W33.Pass11838CliffordQuadric
 import W33.Pass11848CrosscapProjector
 import W33.Pass11853HyperchargeSpectrum
 import W33.Pass11858A5LatticeMod3
+import W33.Pass11863A6NotInSL2

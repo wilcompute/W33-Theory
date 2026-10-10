@@ -1294,7 +1294,8 @@ family in $E_8$ is $\mathfrak{su}(2)\oplus\mathfrak u(1)$, which no copy of $A_6
 come from an exact family $SU(3)$ that commutes with both the grand-unified group and the Lorentz group.
 \item \emph{No chirality from Lorentz-commuting projections.} An automorphism commuting with the spinorial Lorentz group acts
 on Di by $\pm1$. The $\mathfrak{so}(11)$ spinor is quaternionic, so every such projection leaves the spinorial matter
-vector-like. Chirality needs a projection that breaks the commutation, and a phase $i$ on Di keeps exactly one $16$.
+vector-like. (In fact no single automorphism of $E_8$ yields a chiral fixed spectrum, since the adjoint is real;
+chirality must come from pairing complex $E_8$ eigenspaces with complex geometric sectors.)
 \item \emph{The boundary fixes the bulk.} The $s$-channel decomposition of the four-point function has channels
 $1,15,20,24,60$. The $60$ channel is fed only by $15$-exchange and the $24$ channel by both exchanges but not by contact, so the
 boundary data determine the cubic coupling, then the hidden $20$'s coupling, then the quartic, with two crossing relations to
@@ -1303,6 +1304,16 @@ spare.
 Spinorial Lorentz together with the central translation commutes with $\mathfrak{su}(3)\oplus\mathfrak{so}(5)\oplus\mathfrak u(1)$,
 which contains the left--right-symmetric algebra.
 \tierT\,\tierC\ (\cert{w33\_pass11854\_11857\_family\_nogo\_chirality\_firewall\_combined.py}, \cert{w33\_pass11856\_boundary\_bootstrap\_channels.py}; Lean \texttt{W33.Pass11858A5LatticeMod3})
+
+The central translation has a familiar name. On $E_8$ it acts as $\exp(8\pi i Y)$, which is colour triality: phase $\omega^{\mp1}$
+on quarks and antiquarks and $1$ on every colour singlet. It removes exactly the coloured $X,Y$ bosons of $\mathfrak{su}(5)$, which
+is why Lorentz and the central translation together commute with the Standard-Model algebra. The translations' characters fall
+into three central-charge sectors. The neutral one is Minkowski momentum space ($1+20+30+30$); the two charged ones are conjugate,
+with orbits $6+15+60$. So the geometry supplies a $1+2$ pattern, not three identical copies. In the spinorial structure the extra
+$\mathfrak u(1)$ is $B-L$: lepton charge three times quark charge. Lorentz-invariant vevs cannot remove it, because they preserve
+rank. Reflection positivity of the boundary four-point function gives exact integer channel data, hence the bounds
+$g_3^2\le1/48$, $g'^2\le1/8+6g_3^2$ and $g_4\le1/12$ on the bulk couplings.
+\tierT\,\tierC\ (\cert{w33\_pass11859\_11862\_parity\_orbifold\_sectors\_breaking.py}, \cert{w33\_pass11861\_bootstrap\_positivity\_bounds.py}; Lean \texttt{W33.Pass11863A6NotInSL2})
 
 \begin{keyidea}
 Three layers of time, exactly separated: a finite present with a light cone ($27$
