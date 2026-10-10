@@ -1,0 +1,96 @@
+{
+  "pass_id": 11893,
+  "mass_matrix_rank": 56,
+  "mass_matrix_antisymmetry": 0.0,
+  "su9_orbit_dim": 56,
+  "massless": {
+    "X1": 28,
+    "X2": 28,
+    "X3": 28
+  },
+  "unbroken_dim": 24,
+  "commutant_on_massless_28": 2,
+  "commutant_on_9bar": 3,
+  "singlet_is_the_modulus": 1.922962686383564e-16,
+  "su2_embeddings": {
+    "trivial x trivial": {
+      "spins_per_333": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "net_quark_doublets": 0
+    },
+    "trivial x 2+1": {
+      "spins_per_333": [
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "net_quark_doublets": 9
+    },
+    "trivial x principal": {
+      "spins_per_333": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "net_quark_doublets": 0
+    },
+    "2+1 x 2+1": {
+      "spins_per_333": [
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "net_quark_doublets": 6
+    },
+    "2+1 x principal": {
+      "spins_per_333": [
+        0.5,
+        1.0,
+        1.5
+      ],
+      "net_quark_doublets": 3
+    },
+    "principal x principal": {
+      "spins_per_333": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "net_quark_doublets": 0
+    }
+  },
+  "sm_compatible": {
+    "trivial x trivial": false,
+    "trivial x 2+1": false,
+    "trivial x principal": false,
+    "2+1 x 2+1": false,
+    "2+1 x principal": false,
+    "principal x principal": false
+  },
+  "checks": {
+    "mass_rank_56": true,
+    "eaten_56": true,
+    "unbroken_su3_cubed": true,
+    "massless_28_each": true,
+    "irreducible_27_plus_1": true,
+    "ninebar_three_triplets": true,
+    "anomaly_free": true,
+    "no_sm_embedding": true,
+    "three_doublets_only_with_exotics": true
+  },
+  "all_checks_pass": true
+}
