@@ -1,0 +1,52 @@
+name: Pass 425-429 Blob Diagnostic
+
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.ref == 'agent/pass425-429-five-frontiers'
+    runs-on: ubuntu-24.04
+    env:
+      RELEASE_BLOB_SHA: 13ddbd06c7fcff7f1f4de2a278b85428ccf1c440
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect blob layers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64, hashlib, io, json, os, tarfile, urllib.request
+          url=f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/git/blobs/{os.environ['RELEASE_BLOB_SHA']}"
+          req=urllib.request.Request(url,headers={'Authorization':f"Bearer {os.environ['GH_TOKEN']}",'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'})
+          with urllib.request.urlopen(req) as response: payload=json.load(response)
+          raw=base64.b64decode(''.join(payload['content'].split()),validate=True)
+          candidates=[('api-decoded',raw)]
+          for depth in range(1,4):
+              try:
+                  raw=base64.b64decode(''.join(raw.decode().split()),validate=True)
+                  candidates.append((f'unwrap-{depth}',raw))
+              except Exception as exc:
+                  candidates.append((f'unwrap-{depth}-error',repr(exc).encode()))
+                  break
+          report={'blob_sha':os.environ['RELEASE_BLOB_SHA'],'api_size':payload.get('size'),'candidates':[]}
+          for label,data in candidates:
+              row={'label':label,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'prefix_hex':data[:32].hex()}
+              try:
+                  with tarfile.open(fileobj=io.BytesIO(data),mode='r:*') as archive:
+                      row['tar_names']=[m.name for m in archive.getmembers() if m.isfile()]
+              except Exception as exc:
+                  row['tar_error']=repr(exc)
+              report['candidates'].append(row)
+          open('/tmp/pass425429-blob-diagnostic.json','w').write(json.dumps(report,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(report,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass425-429-blob-diagnostic
+          path: /tmp/pass425429-blob-diagnostic.json
