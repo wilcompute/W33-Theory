@@ -1,0 +1,68 @@
+{
+  "pass_ids": [
+    11887,
+    11888,
+    11889
+  ],
+  "11887_11888_e6_and_families": {
+    "centralisers": {
+      "witting_e0": {
+        "dim": 80,
+        "grades": [
+          24,
+          28,
+          28
+        ]
+      },
+      "generic": {
+        "dim": 8,
+        "grades": [
+          0,
+          4,
+          4
+        ]
+      }
+    },
+    "derived_dim": 78,
+    "centre_dim": 2,
+    "weight_multiplicities": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      80
+    ],
+    "commutant_on_27": 1,
+    "family_triple_sums_to_zero": true,
+    "family_negatives_present": true,
+    "singlets_are_roots": true
+  },
+  "11889_w33_point": {
+    "hits_per_ray": [
+      1
+    ],
+    "distinct_points": 40,
+    "pauli_fixed_algebra_dims": [
+      86
+    ]
+  },
+  "checks": {
+    "ray_centraliser_80": true,
+    "generic_centraliser_cartan": true,
+    "e6": true,
+    "decomposition": true,
+    "three_families": true,
+    "unique_w33_point_per_ray": true,
+    "bijection_40": true,
+    "pauli_centraliser_E6A2": true
+  },
+  "all_checks_pass": true
+}
