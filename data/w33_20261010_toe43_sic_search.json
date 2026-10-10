@@ -1,0 +1,339 @@
+{
+  "status": "NO_FIDUCIAL_FOUND_NOT_A_PROOF",
+  "field": "F3^4 tensor-product Pauli group; distinguishes Z9^2 cyclic",
+  "search_restarts": 48,
+  "target_nontrivial_projective_overlap_sq": 0.1,
+  "residuals": [
+    {
+      "sum_sq_over_40": 0.04899318235959006,
+      "max_abs_residual": 0.09752750072779336,
+      "iterations": 89,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897133252227851,
+      "max_abs_residual": 0.09899421511595267,
+      "iterations": 147,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.048971332143766026,
+      "max_abs_residual": 0.09900058321243205,
+      "iterations": 177,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.045623549558724955,
+      "max_abs_residual": 0.06786067563982943,
+      "iterations": 50,
+      "status": 3
+    },
+    {
+      "sum_sq_over_40": 0.04562354955788283,
+      "max_abs_residual": 0.06786062095718054,
+      "iterations": 66,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04444444444445021,
+      "max_abs_residual": 0.09999999999999999,
+      "iterations": 34,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.048971332147585325,
+      "max_abs_residual": 0.09900115208607607,
+      "iterations": 165,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04562355224967127,
+      "max_abs_residual": 0.0678610195137333,
+      "iterations": 79,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.048971332153999986,
+      "max_abs_residual": 0.09899925935864627,
+      "iterations": 168,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04562354955784128,
+      "max_abs_residual": 0.06786061853100142,
+      "iterations": 61,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.045623549558007195,
+      "max_abs_residual": 0.06786058678438067,
+      "iterations": 55,
+      "status": 3
+    },
+    {
+      "sum_sq_over_40": 0.045623549574202324,
+      "max_abs_residual": 0.06786064040052482,
+      "iterations": 58,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897183351018097,
+      "max_abs_residual": 0.09893199905801597,
+      "iterations": 134,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897209569390602,
+      "max_abs_residual": 0.09872453146608472,
+      "iterations": 102,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.045623549557834354,
+      "max_abs_residual": 0.06786061924082372,
+      "iterations": 54,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.0491685408561791,
+      "max_abs_residual": 0.09895575169402548,
+      "iterations": 99,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04562354955820358,
+      "max_abs_residual": 0.06786064725077429,
+      "iterations": 46,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.048971332805243024,
+      "max_abs_residual": 0.09899989771705482,
+      "iterations": 155,
+      "status": 3
+    },
+    {
+      "sum_sq_over_40": 0.04897133214281952,
+      "max_abs_residual": 0.09900039038532658,
+      "iterations": 187,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897133738395887,
+      "max_abs_residual": 0.09898310256550437,
+      "iterations": 146,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897133225624246,
+      "max_abs_residual": 0.09900349531194681,
+      "iterations": 151,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.0489713321507227,
+      "max_abs_residual": 0.09900134703765419,
+      "iterations": 145,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.048974692666469796,
+      "max_abs_residual": 0.09849491375450209,
+      "iterations": 97,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897360214384045,
+      "max_abs_residual": 0.0989065210114846,
+      "iterations": 125,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04562354955782958,
+      "max_abs_residual": 0.06786061880321703,
+      "iterations": 45,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.045623549557838025,
+      "max_abs_residual": 0.06786061426335574,
+      "iterations": 49,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.048971496218455854,
+      "max_abs_residual": 0.09900115915102317,
+      "iterations": 144,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.048971347189607696,
+      "max_abs_residual": 0.09896061492035187,
+      "iterations": 98,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.045623549557863706,
+      "max_abs_residual": 0.06786061666377838,
+      "iterations": 54,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04562354955783264,
+      "max_abs_residual": 0.06786061814632122,
+      "iterations": 57,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04927103108870947,
+      "max_abs_residual": 0.09700277587634376,
+      "iterations": 81,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897133218099541,
+      "max_abs_residual": 0.09899821923700315,
+      "iterations": 142,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.045623549557836936,
+      "max_abs_residual": 0.06786061755664635,
+      "iterations": 57,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04562354955784745,
+      "max_abs_residual": 0.06786062184221517,
+      "iterations": 41,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.048971332141721356,
+      "max_abs_residual": 0.09900045189685294,
+      "iterations": 191,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04562354955783418,
+      "max_abs_residual": 0.0678606203359151,
+      "iterations": 49,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.048997320117439326,
+      "max_abs_residual": 0.09733962550681008,
+      "iterations": 111,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.045623549557947514,
+      "max_abs_residual": 0.06786070038638435,
+      "iterations": 43,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04904933986809391,
+      "max_abs_residual": 0.09836231149759052,
+      "iterations": 82,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.049021280357117156,
+      "max_abs_residual": 0.09770872570085296,
+      "iterations": 64,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.048971332890641435,
+      "max_abs_residual": 0.09899717301085571,
+      "iterations": 154,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897133214091695,
+      "max_abs_residual": 0.099000155608488,
+      "iterations": 192,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.04897133557988188,
+      "max_abs_residual": 0.09899802343958085,
+      "iterations": 132,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.048971337022508304,
+      "max_abs_residual": 0.09900853496397516,
+      "iterations": 118,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.044444444444481264,
+      "max_abs_residual": 0.09999999999999987,
+      "iterations": 55,
+      "status": 2
+    },
+    {
+      "sum_sq_over_40": 0.0456235495644855,
+      "max_abs_residual": 0.06786062439093668,
+      "iterations": 47,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04897173455877759,
+      "max_abs_residual": 0.09881346095963543,
+      "iterations": 91,
+      "status": 1
+    },
+    {
+      "sum_sq_over_40": 0.04562354955792521,
+      "max_abs_residual": 0.06786059912491732,
+      "iterations": 57,
+      "status": 3
+    }
+  ],
+  "best_sum_squared_residual": 0.04444444444445021,
+  "best_max_absolute_overlap_sq_deviation": 0.09999999999999999,
+  "best_purity_variance": 0.0013168724279837088,
+  "best_state": [
+    [
+      0.24133131942121516,
+      -0.054501609803731345
+    ],
+    [
+      -0.039090399320889764,
+      0.12570593461419538
+    ],
+    [
+      0.11255620693019219,
+      -0.36195587141365443
+    ],
+    [
+      -0.07346577127381798,
+      0.2362498947189902
+    ],
+    [
+      0.1284097029329458,
+      -0.028999773307951074
+    ],
+    [
+      0.11255619040412099,
+      -0.3619558709355545
+    ],
+    [
+      0.013575942535714172,
+      -0.043657214890602335
+    ],
+    [
+      -0.1724461032411585,
+      0.5545485533497566
+    ],
+    [
+      0.45355452903107246,
+      -0.10242963177739862
+    ]
+  ],
+  "mathematical_endpoint": "All 40 projective overlap squares =1/10 iff zero W33 90-frame purity variance iff elementary-abelian Pauli covariant SIC fiducial",
+  "boundary": "48 nonconvex numerical searches are neither a global bound nor SIC nonexistence proof. A cyclic d=9 SIC is not the same displacement group."
+}

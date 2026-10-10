@@ -1,0 +1,175 @@
+{
+  "status": "PASS_UNBIASED_TEN_MUB_PURITY_EXPERIMENT_SIMULATOR",
+  "complete_W33_line_count": 40,
+  "projective_paulis": 40,
+  "chosen_symplectic_spread_line_indices": [
+    0,
+    13,
+    17,
+    21,
+    23,
+    27,
+    28,
+    33,
+    34,
+    38
+  ],
+  "line_point_sets": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      13,
+      22,
+      31
+    ],
+    [
+      5,
+      16,
+      26,
+      36
+    ],
+    [
+      6,
+      19,
+      30,
+      38
+    ],
+    [
+      7,
+      17,
+      29,
+      32
+    ],
+    [
+      8,
+      20,
+      24,
+      34
+    ],
+    [
+      9,
+      14,
+      25,
+      39
+    ],
+    [
+      10,
+      21,
+      27,
+      33
+    ],
+    [
+      11,
+      15,
+      28,
+      35
+    ],
+    [
+      12,
+      18,
+      23,
+      37
+    ]
+  ],
+  "counts": {
+    "MUB_settings": 10,
+    "projective_pauli_classes_per_setting": 4,
+    "outcomes_per_setting": 9
+  },
+  "simulator": {
+    "m_pairs_per_setting": 160,
+    "Monte_Carlo_repetitions": 1500,
+    "readout_confusion_epsilon": 0.05,
+    "total_copies_per_trial": 3200
+  },
+  "states": {
+    "stabilizer": {
+      "0.0": {
+        "mean": 0.9995750000000001,
+        "true_purity": 1.0,
+        "predicted_standard_error": 0.07453559924999298,
+        "monte_carlo_standard_error": 0.07481302159695849,
+        "calibration": "9-outcome symmetric white-confusion eps; known eps required",
+        "pairs_per_basis": 160,
+        "number_of_bases": 10,
+        "total_copies": 3200,
+        "mean_error": -0.0004249999999998977,
+        "ideal_entangling_swap_test_se_same_copy_budget": 0.0
+      },
+      "0.05": {
+        "mean": 0.9978439519852264,
+        "true_purity": 1.0,
+        "predicted_standard_error": 0.08618673854095223,
+        "monte_carlo_standard_error": 0.08482281717372775,
+        "calibration": "9-outcome symmetric white-confusion eps; known eps required",
+        "pairs_per_basis": 160,
+        "number_of_bases": 10,
+        "total_copies": 3200,
+        "mean_error": -0.0021560480147736483,
+        "ideal_entangling_swap_test_se_same_copy_budget": null
+      }
+    },
+    "maximally_mixed": {
+      "0.0": {
+        "mean": 0.11409999999999998,
+        "true_purity": 0.1111111111111111,
+        "predicted_standard_error": 0.07856742013183861,
+        "monte_carlo_standard_error": 0.07868055405493106,
+        "calibration": "9-outcome symmetric white-confusion eps; known eps required",
+        "pairs_per_basis": 160,
+        "number_of_bases": 10,
+        "total_copies": 3200,
+        "mean_error": 0.0029888888888888743,
+        "ideal_entangling_swap_test_se_same_copy_budget": 0.024845199749997663
+      },
+      "0.05": {
+        "mean": 0.10807479224376725,
+        "true_purity": 0.1111111111111111,
+        "predicted_standard_error": 0.08705531316547215,
+        "monte_carlo_standard_error": 0.08796333680445383,
+        "calibration": "9-outcome symmetric white-confusion eps; known eps required",
+        "pairs_per_basis": 160,
+        "number_of_bases": 10,
+        "total_copies": 3200,
+        "mean_error": -0.0030363188673438596,
+        "ideal_entangling_swap_test_se_same_copy_budget": null
+      }
+    },
+    "half_depolarized": {
+      "0.0": {
+        "mean": 0.3314749999999999,
+        "true_purity": 0.3333333333333334,
+        "predicted_standard_error": 0.08333333333333334,
+        "monte_carlo_standard_error": 0.08469794735720783,
+        "calibration": "9-outcome symmetric white-confusion eps; known eps required",
+        "pairs_per_basis": 160,
+        "number_of_bases": 10,
+        "total_copies": 3200,
+        "mean_error": -0.0018583333333335172,
+        "ideal_entangling_swap_test_se_same_copy_budget": 0.023570226039551584
+      },
+      "0.05": {
+        "mean": 0.33341643582640806,
+        "true_purity": 0.3333333333333334,
+        "predicted_standard_error": 0.09201595005085457,
+        "monte_carlo_standard_error": 0.08788066861700423,
+        "calibration": "9-outcome symmetric white-confusion eps; known eps required",
+        "pairs_per_basis": 160,
+        "number_of_bases": 10,
+        "total_copies": 3200,
+        "mean_error": 8.310249307463824e-05,
+        "ideal_entangling_swap_test_se_same_copy_budget": null
+      }
+    }
+  },
+  "unbiased_pairwise_estimator": "P_hat=sum_{b=1}^{10} mean_{pairs} 1[outcome1==outcome2] -1 at eps=0",
+  "calibrated_estimator": "P_hat=1/9+(sum_b pair_collision_mean_b -10/9)/(1-eps)^2",
+  "state_purity_identity": "sum_{b,j}p_{bj}^2=1+Tr(rho^2); sum_{p in line}q_p=9*collision_probability-1",
+  "variance_model": "For independent disjoint pairs: Var(P_hat)=sum_b c_b(1-c_b)/(m*(1-eps)^4).",
+  "boundary": "Assumes trusted MUB implementation, calibrated symmetric classical readout and independent copies. No lab hardware, SPAM drift or uncalibrated noise immunity."
+}

@@ -1,0 +1,269 @@
+{
+  "status": "PASS_VECTOR_ONLY_ONE_LOOP_SHAPE_VARIES",
+  "representation": "su(9) compact gauge generators acting on Lambda^3 C^9, normalized Cartan vevs",
+  "generator_count": 80,
+  "cartan_dimension_complex": 4,
+  "mass_matrix": "Q_ab=Re <A_a . T, A_b . T>, generator norm Tr(A_a^dag A_b)=delta_ab",
+  "witting_massless_gauge_bosons": 24,
+  "generic_massless_gauge_bosons": 0,
+  "trace_Q_spread_across_samples": 2.1316282072803006e-14,
+  "trace_Q2_spread_across_samples": 1.9539925233402755e-14,
+  "cw_log_shape_spread": 0.35930716564307463,
+  "cases": {
+    "witting_0": {
+      "unbroken_gauge_bosons": 24,
+      "trace_mass_squared_proxy": 20.0,
+      "trace_mass_fourth_proxy": 7.999999999999995,
+      "cw_vector_log_shape": -6.591673732008658,
+      "positive_gap": 0.33333333333333326,
+      "smallest_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "largest_eigenvalues": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        1.0,
+        1.0000000000000004
+      ]
+    },
+    "witting_1": {
+      "unbroken_gauge_bosons": 24,
+      "trace_mass_squared_proxy": 20.000000000000004,
+      "trace_mass_fourth_proxy": 7.9999999999999964,
+      "cw_vector_log_shape": -6.591673732008658,
+      "positive_gap": 0.33333333333333326,
+      "smallest_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "largest_eigenvalues": [
+        0.33333333333333337,
+        0.33333333333333337,
+        0.33333333333333337,
+        1.0000000000000002,
+        1.0000000000000007
+      ]
+    },
+    "witting_2": {
+      "unbroken_gauge_bosons": 24,
+      "trace_mass_squared_proxy": 20.000000000000004,
+      "trace_mass_fourth_proxy": 7.999999999999996,
+      "cw_vector_log_shape": -6.591673732008658,
+      "positive_gap": 0.33333333333333326,
+      "smallest_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "largest_eigenvalues": [
+        0.33333333333333337,
+        0.33333333333333337,
+        0.33333333333333337,
+        1.0000000000000002,
+        1.0000000000000004
+      ]
+    },
+    "witting_3": {
+      "unbroken_gauge_bosons": 24,
+      "trace_mass_squared_proxy": 20.0,
+      "trace_mass_fourth_proxy": 7.999999999999995,
+      "cw_vector_log_shape": -6.591673732008658,
+      "positive_gap": 0.33333333333333326,
+      "smallest_eigenvalues": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "largest_eigenvalues": [
+        0.33333333333333337,
+        0.33333333333333337,
+        0.33333333333333337,
+        1.0000000000000002,
+        1.0000000000000002
+      ]
+    },
+    "generic_0": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 19.999999999999996,
+      "trace_mass_fourth_proxy": 7.999999999999993,
+      "cw_vector_log_shape": -6.259923975791484,
+      "positive_gap": 0.00908891163607417,
+      "smallest_eigenvalues": [
+        0.00908891163607417,
+        0.009088911636074209,
+        0.016457798128508058,
+        0.016457798128508106,
+        0.021373071301583665
+      ],
+      "largest_eigenvalues": [
+        0.6114089662695447,
+        0.6539819240237689,
+        0.6539819240237698,
+        0.790592584746732,
+        0.7905925847467323
+      ]
+    },
+    "generic_1": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 19.99999999999999,
+      "trace_mass_fourth_proxy": 7.999999999999996,
+      "cw_vector_log_shape": -6.269213189342166,
+      "positive_gap": 0.010026146006040433,
+      "smallest_eigenvalues": [
+        0.010026146006040433,
+        0.01002614600604071,
+        0.013571719837164127,
+        0.013571719837164143,
+        0.01798607822998904
+      ],
+      "largest_eigenvalues": [
+        0.5346597745223868,
+        0.71499147417019,
+        0.7149914741701909,
+        0.7929074683949403,
+        0.7929074683949412
+      ]
+    },
+    "generic_2": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 19.999999999999986,
+      "trace_mass_fourth_proxy": 7.999999999999986,
+      "cw_vector_log_shape": -6.236784637452356,
+      "positive_gap": 0.012067638000781158,
+      "smallest_eigenvalues": [
+        0.012067638000781158,
+        0.01206763800078126,
+        0.024103050667787458,
+        0.024103050667787573,
+        0.024934686762418796
+      ],
+      "largest_eigenvalues": [
+        0.641693831804544,
+        0.6727094662271896,
+        0.6727094662271906,
+        0.7073208072883425,
+        0.7073208072883428
+      ]
+    },
+    "generic_3": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 19.999999999999982,
+      "trace_mass_fourth_proxy": 7.9999999999999885,
+      "cw_vector_log_shape": -6.234729889632112,
+      "positive_gap": 0.006654575545098101,
+      "smallest_eigenvalues": [
+        0.006654575545098101,
+        0.006654575545098114,
+        0.020209571508419972,
+        0.02020957150842007,
+        0.037263890728893564
+      ],
+      "largest_eigenvalues": [
+        0.6507840278447414,
+        0.6876193767484028,
+        0.687619376748403,
+        0.6941836365785481,
+        0.6941836365785485
+      ]
+    },
+    "generic_4": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 19.999999999999993,
+      "trace_mass_fourth_proxy": 7.999999999999993,
+      "cw_vector_log_shape": -6.232366566365584,
+      "positive_gap": 0.0013941957687651396,
+      "smallest_eigenvalues": [
+        0.0013941957687651396,
+        0.001394195768765559,
+        0.01120593692205062,
+        0.011205936922050934,
+        0.014847308823328532
+      ],
+      "largest_eigenvalues": [
+        0.6407186971740293,
+        0.647519968841029,
+        0.6475199688410301,
+        0.6939008632945347,
+        0.6939008632945352
+      ]
+    },
+    "generic_5": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 20.0,
+      "trace_mass_fourth_proxy": 8.000000000000005,
+      "cw_vector_log_shape": -6.238062282430027,
+      "positive_gap": 0.010568646555314623,
+      "smallest_eigenvalues": [
+        0.010568646555314623,
+        0.010568646555314755,
+        0.016992800421610735,
+        0.01699280042161081,
+        0.03795664026807855
+      ],
+      "largest_eigenvalues": [
+        0.6417891927899296,
+        0.6931337652941645,
+        0.6931337652941646,
+        0.7138737533469104,
+        0.7138737533469114
+      ]
+    },
+    "generic_6": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 19.999999999999996,
+      "trace_mass_fourth_proxy": 7.999999999999999,
+      "cw_vector_log_shape": -6.373523811226256,
+      "positive_gap": 0.005953963657251942,
+      "smallest_eigenvalues": [
+        0.005953963657251942,
+        0.005953963657252609,
+        0.008465540843297465,
+        0.008465540843297682,
+        0.008647484879928
+      ],
+      "largest_eigenvalues": [
+        0.5360541299772996,
+        0.5509813013442904,
+        0.5509813013442909,
+        0.9097654764613916,
+        0.9097654764613918
+      ]
+    },
+    "generic_7": {
+      "unbroken_gauge_bosons": 0,
+      "trace_mass_squared_proxy": 20.0,
+      "trace_mass_fourth_proxy": 8.000000000000002,
+      "cw_vector_log_shape": -6.31978050840709,
+      "positive_gap": 0.0016619555890300618,
+      "smallest_eigenvalues": [
+        0.0016619555890300618,
+        0.0016619555890300885,
+        0.009097426867993997,
+        0.009097426867994038,
+        0.010530892865428328
+      ],
+      "largest_eigenvalues": [
+        0.4989907833553718,
+        0.6639220891147535,
+        0.6639220891147537,
+        0.8645893296198623,
+        0.8645893296198626
+      ]
+    }
+  },
+  "one_loop_vector_only_formula": "V1_vector=(3/(64 pi^2))*sum_a m_a^4*(log(m_a^2/mu^2)-5/6) with m_a^2=proportional_to g^2 |v|^2 e_a. Shape variation from sum e_a^2 log(e_a) even when sum e_a^2 is constant.",
+  "interpretation": "The degree-12 lowest holomorphic invariant does not prohibit radiative vector-loop dependence on the genus-two Cartan modulus at effective dimension four (logs). Claimed generic physical phase stays flat until dimension12 requires an extra cancellation or symmetry.",
+  "boundary": "This is vector-boson shape only; not an SU9+84 complete Coleman-Weinberg potential. Gauge dependence, scalar/ghost terms, RG running, fermions, dark-vs-visible embedding, CP selection and vacuum metastability remain unproved."
+}
