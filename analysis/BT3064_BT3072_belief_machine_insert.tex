@@ -1,0 +1,57 @@
+% Passes 3064--3072: noisy predictive synchronization closure.
+\section*{Belief-machine closure: noisy $D_4$ inference and edit-aware control}
+
+The exact adaptive controller is extended from hard symbols to calibrated likelihoods.
+Conditional on one of the $1436$ collision classes left by the common $23$-triangle panel,
+a nine-outcome model (eight $D_4$ symbols plus erasure) separates partial rotation,
+conjugation drift, dark outcomes, and loss.  Exact two-step Bayes optimization at probe cost
+$10^{-3}$ gives conditional residual errors $6.404017\times10^{-4}$,
+$7.574986\times10^{-4}$, and $1.316780\times10^{-3}$ for the mild, moderate, and severe
+synthetic profiles.  These are model values, not laboratory fidelities, and the base class
+is assumed exact.
+
+Histories are then quotiented by future action: identical next tests and identical
+observation-indexed future states define one causal state.  Exact Moore-machine
+minimization gives
+\[
+1436\longrightarrow457
+\]
+initial future-action states and $470$ recursive states including STOP.  Under the frozen
+sparse prior, conditional memory falls from $8.280979504$ to $7.202688649$ bits and fixed
+storage from $11$ to $9$ bits.  Downstream correction labels remain separately typed.
+
+A verified $28$-triangle schedule already separates all $48826$ exact $D_4$ hypotheses,
+so the remaining fixed-schedule problem is $27$ versus $28$.  On the central $r^2$
+restriction, a size-$27$ schedule must expose every nonzero edge difference of weight at
+most four.  The proof-producing SAT instance has
+\[
+\sum_{j=1}^{4}{45\choose j}=164220
+\]
+separation clauses, an at-most-$27$ constraint, and a valid $S_{10}$ symmetry breaker.
+The exact status remains $23\le m^\star_{\rm fixed}\le28$ until an independently checked
+UNSAT proof or a full-$D_4$-verified $27$-row model is observed.
+
+The omitted-slot word $102332001123$ retains cyclic Hamming distance nine, but an isolated
+cyclic phase block cannot correct one insertion/deletion: adjacent rotations are related by
+one deletion and one insertion.  Ordering the same three distinct curvature pilots supplies
+a six-symbol indexing alphabet without adding an optical mode.  The order word
+$124523021541$ has finite insertion/deletion score $1/2$; paired with the omitted slot, the
+score is $3/5$.
+
+Two outside-box reductions sharpen the hardware.  Conjugation-invariant $D_4$ convolution
+diagonalizes into four one-dimensional character gains and one scalar two-dimensional
+block; for the rational demonstration kernel the nontrivial gains are
+$43/50,22/25,9/10,89/100$.  Separately, the controller may choose the syndrome alphabet.
+In the moderate synthetic model, one-probe conditional errors are
+\[
+0.001222911\ (D_4),\quad0.001239361\ ({\rm conjugacy}),\quad
+0.002411084\ (V_4),\quad0.004097881\ ({\rm reflection}).
+\]
+The conjugacy-class detector retains $99.6683\%$ of the full detector's risk reduction,
+so the physical action is $(\hbox{triangle},\hbox{sensor alphabet})$ rather than triangle
+alone.
+
+A synthesizable three-score likelihood accumulator, posterior-gap stopping core, and
+protocol testbench are committed.  SAT proof checking, RTL simulation/synthesis/placement,
+front-door materialization, three PDF builds, fully noisy base inference, and laboratory
+likelihood calibration remain separately gated evidence.
