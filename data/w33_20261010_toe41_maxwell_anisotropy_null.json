@@ -1,0 +1,137 @@
+{
+  "status": "STRICT_ISOTROPIC_MAXWELL_NULL_REJECTED",
+  "prior_locked_null": {
+    "units": "Dimensionless lattice/deck momentum, equal unit curl-edge weights and canonical kinetic energy",
+    "strict_two_polarization_degeneracy": true,
+    "isotropic_speed_across_each_unit_direction": true,
+    "tolerance_for_exact_relativistic_null": 0.001,
+    "precomparison_assumption": "The lattice eigenfrequencies omega_1,omega_2 should agree at the same |k| in a strictly isotropic continuum Maxwell candidate"
+  },
+  "directions": {
+    "x": {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "k_norm": 0.015,
+      "two_curl_eigenvalues": [
+        0.00042855834141275516,
+        0.00046167206062253064
+      ],
+      "third_gap": 99.59233391728382,
+      "two_low_speed_estimates": [
+        1.3801100461964058,
+        1.4324370230446521
+      ],
+      "polarization_ratio": 1.0379150756799864,
+      "fractional_birefringence": 0.03720967191661356
+    },
+    "y": {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "k_norm": 0.015,
+      "two_curl_eigenvalues": [
+        0.0004391376260858776,
+        0.0004505498566398985
+      ],
+      "third_gap": 99.59230283103942,
+      "two_low_speed_estimates": [
+        1.3970407233162176,
+        1.4150773149508256
+      ],
+      "polarization_ratio": 1.0129105697017862,
+      "fractional_birefringence": 0.012827762838662982
+    },
+    "z": {
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "k_norm": 0.015,
+      "two_curl_eigenvalues": [
+        0.00043913634225073233,
+        0.0004505511503373769
+      ],
+      "third_gap": 99.5923079748337,
+      "two_low_speed_estimates": [
+        1.3970386811645272,
+        1.4150793465579972
+      ],
+      "polarization_ratio": 1.012913504569846,
+      "fractional_birefringence": 0.012830660175441279
+    },
+    "xy": {
+      "direction": [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ],
+      "k_norm": 0.015,
+      "two_curl_eigenvalues": [
+        0.00043186371298079837,
+        0.0004638039540003275
+      ],
+      "third_gap": 99.59233259527556,
+      "two_low_speed_estimates": [
+        1.3854220584048238,
+        1.4357405429492205
+      ],
+      "polarization_ratio": 1.0363199677954698,
+      "fractional_birefringence": 0.035672161909594186
+    },
+    "xz": {
+      "direction": [
+        0.7071067811865475,
+        0.0,
+        0.7071067811865475
+      ],
+      "k_norm": 0.015,
+      "two_curl_eigenvalues": [
+        0.00043186231172933867,
+        0.00046380410134281056
+      ],
+      "third_gap": 99.59230776274356,
+      "two_low_speed_estimates": [
+        1.385419810790359,
+        1.435740771004154
+      ],
+      "polarization_ratio": 1.0363218136638943,
+      "fractional_birefringence": 0.03567394251750561
+    },
+    "xyz": {
+      "direction": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "k_norm": 0.015,
+      "two_curl_eigenvalues": [
+        0.00042856357810847236,
+        0.0004578778328468131
+      ],
+      "third_gap": 99.59233822705167,
+      "two_low_speed_estimates": [
+        1.3801184781805629,
+        1.4265386747054145
+      ],
+      "polarization_ratio": 1.0336349358832209,
+      "fractional_birefringence": 0.03307863696648487
+    }
+  },
+  "max_polarization_ratio_defect": 0.03791507567998642,
+  "all_speed_max_over_min": 1.0403089050478742,
+  "constraint_projector": {
+    "hermiticity_defect": 1.665987693272365e-16,
+    "idempotence_defect": 1.2212454387333867e-15,
+    "gauss_projector_defect": 1.1796202182168834e-15,
+    "transverse_dimension": 80,
+    "canonical_bracket": "on the Gauss-reduced linear phase space, [A_i,E_j]=i Q_ij, Q=T T^dag; no Fock representation or matter coupling constructed"
+  },
+  "interpretation": "For fixed deck marking and equal plaquette weights, lowest native W33 Maxwell Bloch branches are not strictly degenerate/isotropic. This falsifies a specific finite-lattice strict Maxwell identification; changing weights, taking an RG limit or physical coupling could change the result.",
+  "boundary": "No translation of deck momentum into physical energy/length, no laboratory constraint, no universal c, no claim about astrophysical birefringence."
+}

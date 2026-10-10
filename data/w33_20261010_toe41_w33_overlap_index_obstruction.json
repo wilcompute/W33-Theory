@@ -1,0 +1,33 @@
+{
+  "status": "PASS_ZERO_INDEX_FOR_THIS_KERNEL",
+  "vertices": 80,
+  "edges": 160,
+  "full_gauge_covariance_defect": 1.3324417158011136e-15,
+  "spectral_pairing_defect": 3.552713678800501e-15,
+  "zero_gauge": {
+    "min_spectral_gap": 1.199999999999998,
+    "plus": 40,
+    "minus": 40,
+    "index": 0,
+    "gw_defect": 2.886579864025407e-15,
+    "index_formula": -0.0
+  },
+  "random_link_phases": {
+    "min_spectral_gap": 1.2008528582184979,
+    "plus": 40,
+    "minus": 40,
+    "index": 0,
+    "gw_defect": 2.443160476028261e-15,
+    "index_formula": -0.0
+  },
+  "gauge_transformed": {
+    "min_spectral_gap": 1.2008528582184979,
+    "plus": 40,
+    "minus": 40,
+    "index": 0,
+    "gw_defect": 1.3348671786163112e-15,
+    "index_formula": -0.0
+  },
+  "analytic_theorem": "Under SVD M=U S V^dag, H=[r MM^dag-mI,M; M^dag,-r M^dag M+mI] decomposes into 40 traceless Hermitian 2x2 blocks with eigenvalues +/-sqrt((r s^2-m)^2+s^2). Hence Tr sign H=0 for every gauged M, so index(Dov)=-.5Tr sign(H)=0.",
+  "boundary": "Native W33 Levi graph and local two-hop Wilson-style regulator. This is not a 4D anomaly-free continuum chiral construction or a theorem ruling out other regulators/topologies."
+}

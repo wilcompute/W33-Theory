@@ -1,0 +1,41 @@
+{
+  "status": "PASS_NO_GO",
+  "projective_points": 40,
+  "nondegenerate_planes": 90,
+  "incidence_per_nonzero_pauli": [
+    9
+  ],
+  "universal_clifford_twirl_purity": 0.6,
+  "cases": {
+    "product_theta": {
+      "mean": 0.5999999999999999,
+      "min": 0.33878647345647694,
+      "max": 1.0,
+      "variance": 0.029861291372962985,
+      "total_nonidentity_pauli_power": 7.999999999999998
+    },
+    "CZ_sheared_theta": {
+      "mean": 0.5999999999999999,
+      "min": 0.33878647345647694,
+      "max": 1.0,
+      "variance": 0.029861291372962992,
+      "total_nonidentity_pauli_power": 7.999999999999999
+    },
+    "nonseparable_theta": {
+      "mean": 0.5999999999999999,
+      "min": 0.3391196198077186,
+      "max": 0.9978005384937457,
+      "variance": 0.029847147185980083,
+      "total_nonidentity_pauli_power": 8.0
+    },
+    "generic_random": {
+      "mean": 0.6,
+      "min": 0.41904503461284376,
+      "max": 0.7851973581122366,
+      "variance": 0.008132808986589116,
+      "total_nonidentity_pauli_power": 8.0
+    }
+  },
+  "derivation": "Each of 90 nondegenerate symplectic 2-planes has 8 nonidentity Pauli operators. Each of 80 nonidentity Paulis lies in 9 such planes. For normalized pure 9-state sum_{v!=0}|<W_v>|^2=8. Thus mean reduced-factor purity=(1+(9/90)*8)/3=3/5 exactly.",
+  "boundary": "Finite Sp(4,3) / Clifford-frame invariant. Does not identify a full Siegel modular function or construct a CP-breaking potential. A nonconstant modular vacuum observable requires more than this averaged quartic purity."
+}
