@@ -1258,9 +1258,22 @@ under $J$: four irreducible, inequivalent $20$-dimensional representations, a fi
 bulk $20$ has no Rac$\cdot$Rac vertex and is reached only through boson--fermion pairs (Rac$\otimes\overline{\mathrm{Di}})^2$.
 The massive little group never carries three labelled doublets, so the ``three generations from spin'' reading fails. In
 $E_8$ the answer depends on the embedding. Through the Weil route the finite Lorentz group commutes with a single
-$\mathfrak u(1)$; through $PSp(4,3)\cong W(E_6)'$ and Tits lifts it commutes with exactly $\mathfrak{su}(3)\oplus\mathfrak{su}(2)$:
-the $A_2$ centralising $E_6$, and the $SU(2)$ of the time reversal's own root.
+$\mathfrak u(1)$; through $PSp(4,3)\cong W(E_6)'$ and the Tits lift extended by its order-$2$ torus elements it commutes
+with exactly $\mathfrak{su}(3)\oplus\mathfrak{su}(2)$: the $A_2$ centralising $E_6$, and the $SU(2)$ of the time reversal's own
+root (the faithful lift is treated below).
 \tierT\,\tierC\ (\cert{w33\_pass11839\_11842\_crosscap\_fields\_couplings\_spin.py}, \cert{w33\_pass11843\_e8\_tits\_lorentz\_commutant.py})
+
+The faithful lift sharpens this. The finite Lorentz group $A_6$, lifted to $E_8$ as a group of order exactly $360$,
+commutes with $\mathfrak{su}(5)$, the Georgi--Glashow algebra. The order-$2$ torus elements of the Tits extension break it to
+$\mathfrak{su}(3)\oplus\mathfrak{su}(2)$. The one direction they break has ad-spectrum on $E_8$ exactly
+$0^{36},(\pm\frac16)^{30},(\pm\frac13)^{30},(\pm\frac12)^{20},(\pm\frac23)^{15},(\pm\frac56)^{6},(\pm1)^{5}$, which is the Standard-Model
+hypercharge; the faithful $A_6$ together with an order-$7$ hypercharge rotation commutes with exactly $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)_Y$. Under hypercharge, colour, weak isospin and Lorentz, $E_8$ arranges $(Q,u^c,e^c)$ in a Lorentz $5$ and $(d^c,L)$ in a
+Lorentz $10$. Translations do not split off: the Minkowski module occurs only as the quotient of the $A_5$ lattice mod $3$ by a
+central $\mathbb Z_3$. The resulting finite Poincar\'e group commutes with exactly $\mathfrak{su}(3)\oplus\mathfrak{su}(2)$. A finite
+bulk path integral closes the loop. With the crosscap propagator, the boundary two-point function is $216$ times the projector
+onto the boundary $15$, and the tree cubic Witten diagram is exactly proportional to the boundary's own cubic, as multiplicity one
+requires. The hidden bulk $20$ never reaches the boundary at tree level but circulates in loops.
+\tierT\,\tierC\ (\cert{w33\_pass11844\_11846\_e8\_poincare\_lifts\_matter.py}, \cert{w33\_pass11847\_finite\_bulk\_path\_integral.py}; Lean \texttt{W33.Pass11848CrosscapProjector})
 
 \begin{keyidea}
 Three layers of time, exactly separated: a finite present with a light cone ($27$

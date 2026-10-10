@@ -1,0 +1,248 @@
+{
+ "pass_ids": [
+  11844,
+  11845,
+  11846
+ ],
+ "lifts": {
+  "adjacent_tits_order": 360,
+  "permutation_order": 360,
+  "permutation_convention": 0,
+  "extension_contains_h_beta1_product": false
+ },
+ "commutants": {
+  "A6_adjacent": {
+   "dim": 24,
+   "closure_error": 2.150160900215087e-15,
+   "derived_dim": 24,
+   "centre_dim": 0,
+   "rank": 4,
+   "killing_rank": 24
+  },
+  "A6_permutation": {
+   "dim": 24,
+   "closure_error": 1.9714843821894758e-15,
+   "derived_dim": 24,
+   "centre_dim": 0,
+   "rank": 4,
+   "killing_rank": 24
+  },
+  "extension_11843": {
+   "dim": 11,
+   "closure_error": 8.881784197001252e-16,
+   "derived_dim": 11,
+   "centre_dim": 0,
+   "rank": 3,
+   "killing_rank": 11
+  },
+  "A6_plus_torus_signs": {
+   "dim": 11,
+   "closure_error": 9.550645573344332e-16,
+   "derived_dim": 11,
+   "centre_dim": 0,
+   "rank": 3,
+   "killing_rank": 11
+  },
+  "ext_inside_A6_adjacent": true,
+  "A6_adjacent_equals_permutation": false
+ },
+ "hypercharge": {
+  "centraliser_dim": 1,
+  "spectrum": {
+   "-1": 5,
+   "-5/6": 6,
+   "-2/3": 15,
+   "-1/2": 20,
+   "-1/3": 30,
+   "-1/6": 30,
+   "0": 36,
+   "1/6": 30,
+   "1/3": 30,
+   "1/2": 20,
+   "2/3": 15,
+   "5/6": 6,
+   "1": 5
+  },
+  "equals_georgi_glashow_pattern": true
+ },
+ "A6_plus_hypercharge_rotation_commutant": {
+  "dim": 12,
+  "closure_error": 6.944715397541011e-14,
+  "derived_dim": 11,
+  "centre_dim": 1,
+  "rank": 4,
+  "killing_rank": 11,
+  "contains_su3_A2": true,
+  "contains_su2_alpha": true
+ },
+ "matter": [
+  {
+   "Y": "-1",
+   "su2_casimir": 0.0,
+   "su3_casimir": 0.0,
+   "dim": 5,
+   "lorentz_char_norm": 1.0,
+   "lorentz_invariants": 0.0
+  },
+  {
+   "Y": "-5/6",
+   "su2_casimir": 0.025,
+   "su3_casimir": 0.0444,
+   "dim": 6,
+   "lorentz_char_norm": 36.0,
+   "lorentz_invariants": 6.0
+  },
+  {
+   "Y": "-2/3",
+   "su2_casimir": 0.0,
+   "su3_casimir": 0.0444,
+   "dim": 15,
+   "lorentz_char_norm": 9.0,
+   "lorentz_invariants": 0.0
+  },
+  {
+   "Y": "-1/2",
+   "su2_casimir": 0.025,
+   "su3_casimir": 0.0,
+   "dim": 20,
+   "lorentz_char_norm": 4.0,
+   "lorentz_invariants": 0.0
+  },
+  {
+   "Y": "-1/3",
+   "su2_casimir": 0.0,
+   "su3_casimir": 0.0444,
+   "dim": 30,
+   "lorentz_char_norm": 9.0,
+   "lorentz_invariants": 0.0
+  },
+  {
+   "Y": "-1/6",
+   "su2_casimir": 0.025,
+   "su3_casimir": 0.0444,
+   "dim": 30,
+   "lorentz_char_norm": 36.0,
+   "lorentz_invariants": -0.0
+  },
+  {
+   "Y": "0",
+   "su2_casimir": 0.0,
+   "su3_casimir": -0.0,
+   "dim": 25,
+   "lorentz_char_norm": 4.0,
+   "lorentz_invariants": 1.0
+  },
+  {
+   "Y": "0",
+   "su2_casimir": 0.0,
+   "su3_casimir": 0.1,
+   "dim": 8,
+   "lorentz_char_norm": 64.0,
+   "lorentz_invariants": 8.0
+  },
+  {
+   "Y": "0",
+   "su2_casimir": 0.0667,
+   "su3_casimir": 0.0,
+   "dim": 3,
+   "lorentz_char_norm": 9.0,
+   "lorentz_invariants": 3.0
+  },
+  {
+   "Y": "1/6",
+   "su2_casimir": 0.025,
+   "su3_casimir": 0.0444,
+   "dim": 30,
+   "lorentz_char_norm": 36.0,
+   "lorentz_invariants": 0.0
+  },
+  {
+   "Y": "1/3",
+   "su2_casimir": 0.0,
+   "su3_casimir": 0.0444,
+   "dim": 30,
+   "lorentz_char_norm": 9.0,
+   "lorentz_invariants": -0.0
+  },
+  {
+   "Y": "1/2",
+   "su2_casimir": 0.025,
+   "su3_casimir": 0.0,
+   "dim": 20,
+   "lorentz_char_norm": 4.0,
+   "lorentz_invariants": 0.0
+  },
+  {
+   "Y": "2/3",
+   "su2_casimir": 0.0,
+   "su3_casimir": 0.0444,
+   "dim": 15,
+   "lorentz_char_norm": 9.0,
+   "lorentz_invariants": 0.0
+  },
+  {
+   "Y": "5/6",
+   "su2_casimir": 0.025,
+   "su3_casimir": 0.0444,
+   "dim": 6,
+   "lorentz_char_norm": 36.0,
+   "lorentz_invariants": 6.0
+  },
+  {
+   "Y": "1",
+   "su2_casimir": -0.0,
+   "su3_casimir": 0.0,
+   "dim": 5,
+   "lorentz_char_norm": 1.0,
+   "lorentz_invariants": 0.0
+  }
+ ],
+ "translations": {
+  "submodule_dims": {
+   "1": 13,
+   "2": 13,
+   "3": 1,
+   "5": 1,
+   "6": 13,
+   "7": 13,
+   "8": 1
+  },
+  "four_dim_submodules": 0,
+  "five_dim": {
+   "form_rank_mod3": 4,
+   "radical_size": 3,
+   "invariant_lines_inside": 1,
+   "q_counts": {
+    "0": 62,
+    "1": 90,
+    "2": 90
+   },
+   "equals_A5_lattice_mod3": true,
+   "quotient_orbits_nonzero": [
+    20,
+    30,
+    30
+   ]
+  },
+  "poincare_with_central_Z3_commutants": {
+   "A6_adjacent": {
+    "dim": 11,
+    "closure_error": 1.2034357617931399e-15,
+    "derived_dim": 11,
+    "centre_dim": 0,
+    "rank": 3,
+    "contains_su3_A2": true,
+    "contains_su2_alpha": true
+   },
+   "extension_11843": {
+    "dim": 11,
+    "closure_error": 1.2160349700410232e-15,
+    "derived_dim": 11,
+    "centre_dim": 0,
+    "rank": 3,
+    "contains_su3_A2": true,
+    "contains_su2_alpha": true
+   }
+  }
+ }
+}

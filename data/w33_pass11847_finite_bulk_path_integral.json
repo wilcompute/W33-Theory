@@ -1,0 +1,34 @@
+{
+ "pass_id": 11847,
+ "bulk_spectrum": {
+  "-3.0": 20,
+  "3.0": 15,
+  "15.0": 1
+ },
+ "boundary_spectrum": {
+  "-4.0": 15,
+  "2.0": 24,
+  "12.0": 1
+ },
+ "G_equals_12_projector_15": true,
+ "boundary_two_point": {
+  "meet:-27.0": 480,
+  "opposite:9.0": 1080,
+  "same:81.0": 40
+ },
+ "two_point_is_multiple_of_boundary_15_projector": true,
+ "two_point_coefficient": 216.0,
+ "hidden_20_invisible": true,
+ "tree_three_point_nonzero": true,
+ "tree_three_point_equals_c_times_boundary_cubic": true,
+ "tree_three_point_coefficient": 186624.0,
+ "tree_three_point_distinct_values": 7,
+ "bubble_G_hadamard_G_eigen_components": {
+  "-3.0": 24.0,
+  "3.0": 24.0,
+  "15.0": 60.0
+ },
+ "one_loop_two_point_is_multiple_of_boundary_15": true,
+ "one_loop_over_tree_two_point": 288.0,
+ "hidden_20_circulates_in_bubble": true
+}
