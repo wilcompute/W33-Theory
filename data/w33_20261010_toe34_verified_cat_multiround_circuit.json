@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "code": "[[160,1,8]]_3",
+  "noise_model": "Independent uniform 80 nonidentity 2-qutrit Pauli faults after each cat fanout SUM, parity-verifier SUM and transversal data CZ; independent ternary verifier report flips and final individual cat X readout flips. All syndrome reports are recorded sequentially with potentially changing data errors, for three rounds.",
+  "check_count": {
+    "WilsonZ": 80,
+    "GaussX": 79
+  },
+  "data_CZ_gates_per_accepted_round": 956,
+  "Fourier_basis_changes": "Assumed IDEAL. Gauss X checks are modeled by transformed temporary basis, with physical data X\u2194Z frame mapping.",
+  "cat_input_states": "Assumed ideal |+> root and |0> leaves and |0> verifier ancilla. Noise injected after gates, rather than all state preparation steps.",
+  "relative_gate_measurement": "Physical Pauli frames propagate exactly through SUM/CZ, while syndrome readouts are ideal check eigenvalues at the time of each data-CZ interaction, modified by cat Z errors and stochastic X readout flips. Cat retries are performed before coupling to data.",
+  "outcomes": [
+    {
+      "two_qutrit_Pauli_fault_probability_after_each_gate": 0.0,
+      "verifier_ternary_readout_error_probability": 0.0,
+      "each_cat_final_X_readout_error_probability": 0.0,
+      "trials": 60,
+      "rounds": 3,
+      "full_round_checks": 159,
+      "logical_failures": {
+        "raw": 0,
+        "joint": 0,
+        "ideal": 0
+      },
+      "wrong_final_syndrome_totals": {
+        "raw": 0,
+        "joint": 0,
+        "ideal": 0
+      },
+      "circuit_event_totals": {
+        "fanout_gates": 143460,
+        "verify_gates": 286920,
+        "cat_attempts": 28620,
+        "data_CZ_gates": 172080
+      }
+    },
+    {
+      "two_qutrit_Pauli_fault_probability_after_each_gate": 0.0001,
+      "verifier_ternary_readout_error_probability": 0.001,
+      "each_cat_final_X_readout_error_probability": 0.001,
+      "trials": 60,
+      "rounds": 3,
+      "full_round_checks": 159,
+      "logical_failures": {
+        "raw": 44,
+        "joint": 6,
+        "ideal": 0
+      },
+      "wrong_final_syndrome_totals": {
+        "raw": 95,
+        "joint": 38,
+        "ideal": 0
+      },
+      "circuit_event_totals": {
+        "fanout_gates": 144381,
+        "verify_gates": 288762,
+        "cat_attempts": 28775,
+        "data_CZ_gates": 172080,
+        "verifier_readout_faults": 126,
+        "cat_rejections": 155,
+        "data_CZ_faults": 15,
+        "fanout_faults": 9,
+        "cat_final_readout_faults": 185,
+        "verify_faults": 27
+      }
+    },
+    {
+      "two_qutrit_Pauli_fault_probability_after_each_gate": 0.0004,
+      "verifier_ternary_readout_error_probability": 0.003,
+      "each_cat_final_X_readout_error_probability": 0.003,
+      "trials": 60,
+      "rounds": 3,
+      "full_round_checks": 159,
+      "logical_failures": {
+        "raw": 58,
+        "joint": 20,
+        "ideal": 0
+      },
+      "wrong_final_syndrome_totals": {
+        "raw": 304,
+        "joint": 140,
+        "ideal": 0
+      },
+      "circuit_event_totals": {
+        "fanout_gates": 146762,
+        "verify_gates": 293524,
+        "cat_attempts": 29186,
+        "data_CZ_gates": 172080,
+        "cat_final_readout_faults": 532,
+        "verifier_readout_faults": 421,
+        "cat_rejections": 566,
+        "verify_faults": 123,
+        "data_CZ_faults": 71,
+        "fanout_faults": 66
+      }
+    }
+  ],
+  "ceiling": "NOT a full fault-tolerant syndrome extraction theorem: two-fault noise accepted, ideal basis rotations, ideal cat source preparations, no measurement crosstalk or leakage, no detector-history decoder for rejected attempts, approximate greedy joint decoder. Seeded finite Monte Carlo does not yield threshold."
+}

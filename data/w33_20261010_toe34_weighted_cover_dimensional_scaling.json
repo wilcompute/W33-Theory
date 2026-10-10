@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "method": "Exact 80\u00d780 Hermitian Bloch blocks for cyclic 1,17,83 voltages, with invariant positive edge weights on all sheets. Weighted Laplacian diag(sum weights)-weighted adjacency. Heat trace and d_s=2t*weighted mean lambda.",
+  "scenarios": [
+    {
+      "scenario": "native80",
+      "deck_degree": 1,
+      "n": 80,
+      "spectral_gap": 1.5505102572168172,
+      "plateaus": {
+        "3": {
+          "start_t": 0.7349242766953816,
+          "end_t": 1.1229049907037585,
+          "span_ratio": 1.5279193058541334,
+          "length_points": 12
+        },
+        "4": {
+          "start_t": null,
+          "end_t": null,
+          "span_ratio": 1.0,
+          "length_points": 0
+        }
+      },
+      "has_3D_decade": false,
+      "has_4D_decade": false,
+      "diffusion_samples": [
+        {
+          "t": 0.2,
+          "heat_trace": 0.48612336412693746,
+          "running_spectral_dimension": 1.2901865586960186
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.2135853315951362,
+          "running_spectral_dimension": 2.3223438562017065
+        },
+        {
+          "t": 1.0,
+          "heat_trace": 0.08348886663803726,
+          "running_spectral_dimension": 3.0960791176364646
+        },
+        {
+          "t": 2.0,
+          "heat_trace": 0.026127525817195983,
+          "running_spectral_dimension": 3.282583280190486
+        },
+        {
+          "t": 4.0,
+          "heat_trace": 0.013107630022769146,
+          "running_spectral_dimension": 0.5750787659457524
+        },
+        {
+          "t": 8.0,
+          "heat_trace": 0.012501230543202384,
+          "running_spectral_dimension": 0.0024419610368503685
+        },
+        {
+          "t": 16.0,
+          "heat_trace": 0.01250000000504766,
+          "running_spectral_dimension": 2.0034862206953442e-08
+        }
+      ]
+    },
+    {
+      "scenario": "p17_uniform",
+      "deck_degree": 17,
+      "n": 1360,
+      "spectral_gap": 0.6719405223809469,
+      "plateaus": {
+        "3": {
+          "start_t": 0.7349242766953816,
+          "end_t": 1.0804548177789175,
+          "span_ratio": 1.4701580176902425,
+          "length_points": 11
+        },
+        "4": {
+          "start_t": 1.5283901334548529,
+          "end_t": 1.853174150925149,
+          "span_ratio": 1.212500728944211,
+          "length_points": 6
+        }
+      },
+      "has_3D_decade": false,
+      "has_4D_decade": false,
+      "diffusion_samples": [
+        {
+          "t": 0.2,
+          "heat_trace": 0.4861233547441956,
+          "running_spectral_dimension": 1.290186862689691
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.2135806682575741,
+          "running_spectral_dimension": 2.3226646854882143
+        },
+        {
+          "t": 1.0,
+          "heat_trace": 0.08327601762011862,
+          "running_spectral_dimension": 3.1281576871887706
+        },
+        {
+          "t": 2.0,
+          "heat_trace": 0.02327754326803311,
+          "running_spectral_dimension": 4.345073687748005
+        },
+        {
+          "t": 4.0,
+          "heat_trace": 0.0038730883509765467,
+          "running_spectral_dimension": 5.845938326480842
+        },
+        {
+          "t": 8.0,
+          "heat_trace": 0.0008461414100478527,
+          "running_spectral_dimension": 1.6630978923385542
+        },
+        {
+          "t": 16.0,
+          "heat_trace": 0.0007355524345653419,
+          "running_spectral_dimension": 0.00825253921042813
+        }
+      ]
+    },
+    {
+      "scenario": "p17_modest_edge_weight",
+      "deck_degree": 17,
+      "n": 1360,
+      "spectral_gap": 0.6342531992848196,
+      "plateaus": {
+        "3": {
+          "start_t": 0.7938078639459528,
+          "end_t": 1.1229049907037585,
+          "span_ratio": 1.4145803307136455,
+          "length_points": 10
+        },
+        "4": {
+          "start_t": 1.5884393131097259,
+          "end_t": 1.925983825029184,
+          "span_ratio": 1.2125007289442107,
+          "length_points": 6
+        }
+      },
+      "has_3D_decade": false,
+      "has_4D_decade": false,
+      "diffusion_samples": [
+        {
+          "t": 0.2,
+          "heat_trace": 0.48846109495782003,
+          "running_spectral_dimension": 1.273485288386363
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.21776813492024996,
+          "running_spectral_dimension": 2.274654945855651
+        },
+        {
+          "t": 1.0,
+          "heat_trace": 0.08650330686061829,
+          "running_spectral_dimension": 3.071792746347397
+        },
+        {
+          "t": 2.0,
+          "heat_trace": 0.024728316031041697,
+          "running_spectral_dimension": 4.266346389491652
+        },
+        {
+          "t": 4.0,
+          "heat_trace": 0.004227742332442766,
+          "running_spectral_dimension": 5.812186560659429
+        },
+        {
+          "t": 8.0,
+          "heat_trace": 0.0008708200077871751,
+          "running_spectral_dimension": 1.9143861713669816
+        },
+        {
+          "t": 16.0,
+          "heat_trace": 0.0007356854628650528,
+          "running_spectral_dimension": 0.012011465335769484
+        }
+      ]
+    },
+    {
+      "scenario": "p17_strong_edge_weight",
+      "deck_degree": 17,
+      "n": 1360,
+      "spectral_gap": 0.5099694092023062,
+      "plateaus": {
+        "3": {
+          "start_t": 1.0396094263772397,
+          "end_t": 1.4150162329635774,
+          "span_ratio": 1.361103696312691,
+          "length_points": 9
+        },
+        "4": {
+          "start_t": 1.925983825029184,
+          "end_t": 2.3352567917826454,
+          "span_ratio": 1.212500728944211,
+          "length_points": 6
+        }
+      },
+      "has_3D_decade": false,
+      "has_4D_decade": false,
+      "diffusion_samples": [
+        {
+          "t": 0.2,
+          "heat_trace": 0.5009532712974376,
+          "running_spectral_dimension": 1.185465465948047
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.24146339989431337,
+          "running_spectral_dimension": 2.012749525376854
+        },
+        {
+          "t": 1.0,
+          "heat_trace": 0.10669452348448445,
+          "running_spectral_dimension": 2.736377048747757
+        },
+        {
+          "t": 2.0,
+          "heat_trace": 0.034642883719282494,
+          "running_spectral_dimension": 3.843423071930102
+        },
+        {
+          "t": 4.0,
+          "heat_trace": 0.0069614340768172816,
+          "running_spectral_dimension": 5.452758066535337
+        },
+        {
+          "t": 8.0,
+          "heat_trace": 0.001124018939522273,
+          "running_spectral_dimension": 3.5907960986863587
+        },
+        {
+          "t": 16.0,
+          "heat_trace": 0.000738250936193497,
+          "running_spectral_dimension": 0.07481737222320427
+        }
+      ]
+    },
+    {
+      "scenario": "p83_uniform",
+      "deck_degree": 83,
+      "n": 6640,
+      "spectral_gap": 0.12927266326966722,
+      "plateaus": {
+        "3": {
+          "start_t": 0.7349242766953816,
+          "end_t": 1.0804548177789175,
+          "span_ratio": 1.4701580176902425,
+          "length_points": 11
+        },
+        "4": {
+          "start_t": 1.5283901334548529,
+          "end_t": 1.853174150925149,
+          "span_ratio": 1.212500728944211,
+          "length_points": 6
+        }
+      },
+      "has_3D_decade": false,
+      "has_4D_decade": false,
+      "diffusion_samples": [
+        {
+          "t": 0.2,
+          "heat_trace": 0.4861233547434341,
+          "running_spectral_dimension": 1.290186862720618
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.21358066591060443,
+          "running_spectral_dimension": 2.3226648905084777
+        },
+        {
+          "t": 1.0,
+          "heat_trace": 0.08327560060863466,
+          "running_spectral_dimension": 3.128240014270401
+        },
+        {
+          "t": 2.0,
+          "heat_trace": 0.023257335651941914,
+          "running_spectral_dimension": 4.356575607176697
+        },
+        {
+          "t": 4.0,
+          "heat_trace": 0.003682574116193369,
+          "running_spectral_dimension": 6.364105798197821
+        },
+        {
+          "t": 8.0,
+          "heat_trace": 0.00040225753681604793,
+          "running_spectral_dimension": 4.742758535222134
+        },
+        {
+          "t": 16.0,
+          "heat_trace": 0.00018944923914369148,
+          "running_spectral_dimension": 0.9075328366058922
+        }
+      ]
+    }
+  ],
+  "one_decade_criterion": "Peak uninterrupted sampled time ratio \u226510 with 3D band [2.75,3.25] or 4D [3.75,4.25], 240 log samples t\u2208[0.03,300].",
+  "interpretation": "Tests TWO explicit girth10 covers and fixed edge-weight toy Hamiltonians, not a thermodynamic sequence proving a dimension. Edge weights imposed externally, not dynamically selected or spontaneous. No Einstein or Lorentzian continuum inferred."
+}

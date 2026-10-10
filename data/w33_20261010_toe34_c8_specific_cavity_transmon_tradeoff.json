@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "device_architecture": "eight copies of tunable cQED high-Q storage cavities each coupled to a flux-tunable transmon, coupled as an eight-link periodic bosonic ring (PROPOSED, NOT BUILT)",
+  "measured_reference_components": [
+    {
+      "paper": "2024 Nature Communications on-demand interaction regimes",
+      "url": "https://www.nature.com/articles/s41467-024-50201-7",
+      "observed": "one 200us average lifetime bosonic cavity; cavity-transmon coupling g/2pi=6.65MHz; rapid transmon tuning; NOT an eight-site ring or Kerr 160MHz"
+    },
+    {
+      "paper": "2018 npj Quantum Information tunable coupled transmons",
+      "url": "https://www.nature.com/articles/s41534-018-0088-9",
+      "observed": "two-transmon unit with measured relaxation T1 15\u201340us; independent from 2024 cavity"
+    },
+    {
+      "paper": "2020 npj Quantum Information transmon BH design",
+      "url": "https://www.nature.com/articles/s41534-020-0269-1",
+      "observed": "typical transmon anharmonicity approx -250MHz, an indicative design value NOT measured for 2024 storage device"
+    }
+  ],
+  "target": {
+    "sites": 8,
+    "links": 8,
+    "t_MHz": 5,
+    "K_required_MHz": 160,
+    "window_us": 60,
+    "pair_survival_min": 0.5
+  },
+  "equations": "Independent Markov loss T_eff^-1=(1-r)/T_cavity+r/T_transmon; K_eff\u2248K_transmon*r\u00b2 in perturbative participation model, with r\u2248(g/Delta)\u00b2 for far-detuned mixing. Both are explicitly hypothetical scaling assumptions; nonlinear devices require full circuit quantization.",
+  "minimum_r_to_reach_160MHz_Kerr": 0.8,
+  "survival_requisite_effective_T1_us": 173.1234049066756,
+  "parameter_grid": [
+    {
+      "referenced_transmon_T1_us": 15.0,
+      "max_transmon_participation_for_50percent_pair_survival": 0.012587456832425048,
+      "largest_inherited_Kerr_MHz_at_survival_limit": 0.03961101737704101,
+      "required_detuning_min_MHz_in_perturbative_r_g_over_delta_squared_model": 59.272418504779914,
+      "sampled_cases": [
+        {
+          "anharmonic_mode_participation": 0.01,
+          "lifetime_us": 178.04154302670625,
+          "inherited_attractive_Kerr_over_h_MHz": 0.025,
+          "two_particle_survival_60us": 0.5096658316912477,
+          "passes_50_percent_pair_survival": true,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.02,
+          "lifetime_us": 160.42780748663102,
+          "inherited_attractive_Kerr_over_h_MHz": 0.1,
+          "two_particle_survival_60us": 0.4733122312097393,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.04,
+          "lifetime_us": 133.92857142857142,
+          "inherited_attractive_Kerr_over_h_MHz": 0.4,
+          "two_particle_survival_60us": 0.40819919527792264,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.1,
+          "lifetime_us": 89.55223880597013,
+          "inherited_attractive_Kerr_over_h_MHz": 2.5,
+          "two_particle_survival_60us": 0.26184566858032593,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.25,
+          "lifetime_us": 48.97959183673469,
+          "inherited_attractive_Kerr_over_h_MHz": 15.625,
+          "two_particle_survival_60us": 0.0862935864993705,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.5,
+          "lifetime_us": 27.906976744186046,
+          "inherited_attractive_Kerr_over_h_MHz": 62.5,
+          "two_particle_survival_60us": 0.013568559012200934,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.8,
+          "lifetime_us": 18.40490797546012,
+          "inherited_attractive_Kerr_over_h_MHz": 160.0,
+          "two_particle_survival_60us": 0.0014736691023539935,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": true
+        }
+      ]
+    },
+    {
+      "referenced_transmon_T1_us": 40.0,
+      "max_transmon_participation_for_50percent_pair_survival": 0.03881132523331056,
+      "largest_inherited_Kerr_MHz_at_survival_limit": 0.37657974159145224,
+      "required_detuning_min_MHz_in_perturbative_r_g_over_delta_squared_model": 33.75533397084015,
+      "sampled_cases": [
+        {
+          "anharmonic_mode_participation": 0.01,
+          "lifetime_us": 192.30769230769232,
+          "inherited_attractive_Kerr_over_h_MHz": 0.025,
+          "two_particle_survival_60us": 0.535796957667456,
+          "passes_50_percent_pair_survival": true,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.02,
+          "lifetime_us": 185.18518518518516,
+          "inherited_attractive_Kerr_over_h_MHz": 0.1,
+          "two_particle_survival_60us": 0.5230909131025008,
+          "passes_50_percent_pair_survival": true,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.04,
+          "lifetime_us": 172.41379310344828,
+          "inherited_attractive_Kerr_over_h_MHz": 0.4,
+          "two_particle_survival_60us": 0.49857562299121655,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.1,
+          "lifetime_us": 142.85714285714283,
+          "inherited_attractive_Kerr_over_h_MHz": 2.5,
+          "two_particle_survival_60us": 0.4317105234290796,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.25,
+          "lifetime_us": 100.0,
+          "inherited_attractive_Kerr_over_h_MHz": 15.625,
+          "two_particle_survival_60us": 0.30119421191220214,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.5,
+          "lifetime_us": 66.66666666666666,
+          "inherited_attractive_Kerr_over_h_MHz": 62.5,
+          "two_particle_survival_60us": 0.1652988882215865,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.8,
+          "lifetime_us": 47.61904761904761,
+          "inherited_attractive_Kerr_over_h_MHz": 160.0,
+          "two_particle_survival_60us": 0.0804596067495324,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": true
+        }
+      ]
+    },
+    {
+      "referenced_transmon_T1_us": 100.0,
+      "max_transmon_participation_for_50percent_pair_survival": 0.15524530093324224,
+      "largest_inherited_Kerr_MHz_at_survival_limit": 6.025275865463236,
+      "required_detuning_min_MHz_in_perturbative_r_g_over_delta_squared_model": 16.877666985420074,
+      "sampled_cases": [
+        {
+          "anharmonic_mode_participation": 0.01,
+          "lifetime_us": 198.01980198019803,
+          "inherited_attractive_Kerr_over_h_MHz": 0.025,
+          "two_particle_survival_60us": 0.5455286251592933,
+          "passes_50_percent_pair_survival": true,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.02,
+          "lifetime_us": 196.07843137254903,
+          "inherited_attractive_Kerr_over_h_MHz": 0.1,
+          "two_particle_survival_60us": 0.5422652533139832,
+          "passes_50_percent_pair_survival": true,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.04,
+          "lifetime_us": 192.30769230769232,
+          "inherited_attractive_Kerr_over_h_MHz": 0.4,
+          "two_particle_survival_60us": 0.535796957667456,
+          "passes_50_percent_pair_survival": true,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.1,
+          "lifetime_us": 181.8181818181818,
+          "inherited_attractive_Kerr_over_h_MHz": 2.5,
+          "two_particle_survival_60us": 0.5168513344916992,
+          "passes_50_percent_pair_survival": true,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.25,
+          "lifetime_us": 160.0,
+          "inherited_attractive_Kerr_over_h_MHz": 15.625,
+          "two_particle_survival_60us": 0.4723665527410147,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.5,
+          "lifetime_us": 133.33333333333334,
+          "inherited_attractive_Kerr_over_h_MHz": 62.5,
+          "two_particle_survival_60us": 0.40656965974059917,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": false
+        },
+        {
+          "anharmonic_mode_participation": 0.8,
+          "lifetime_us": 111.11111111111111,
+          "inherited_attractive_Kerr_over_h_MHz": 160.0,
+          "two_particle_survival_60us": 0.3395955256449391,
+          "passes_50_percent_pair_survival": false,
+          "passes_160MHz_inherited_Kerr": true
+        }
+      ]
+    }
+  ],
+  "conditional_conclusion": "With 200us cavity and representative 15-100us transmon lifetimes, no sampled participation point simultaneously meets Kerr160MHz and 50% two-photon survival at 60us in this simplified inherited-Kerr model. This rules out THIS NAIVE DISPERSIVE IMPLEMENTATION under its assumptions; not all possible transmon/tunable-coupler/nonlinear-resonator architectures.",
+  "source_boundary": "Physical measurements belong to three DIFFERENT published devices. Combining figures is a speculative design; no physical 8-ring, T2, Kerr value, pair driving, readout fidelity or lab characterization exists."
+}

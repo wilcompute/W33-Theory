@@ -1,0 +1,347 @@
+{
+  "status": "PASS",
+  "prime": 13,
+  "seed": 340013,
+  "budget": 45000,
+  "completed_iterations": 45000,
+  "best_zero_holonomy_8cycles": 2,
+  "improvement_milestones": [
+    {
+      "step": 0,
+      "violations": 124
+    },
+    {
+      "step": 1,
+      "violations": 114
+    },
+    {
+      "step": 2,
+      "violations": 107
+    },
+    {
+      "step": 3,
+      "violations": 99
+    },
+    {
+      "step": 4,
+      "violations": 95
+    },
+    {
+      "step": 5,
+      "violations": 87
+    },
+    {
+      "step": 6,
+      "violations": 82
+    },
+    {
+      "step": 7,
+      "violations": 78
+    },
+    {
+      "step": 8,
+      "violations": 75
+    },
+    {
+      "step": 9,
+      "violations": 70
+    },
+    {
+      "step": 10,
+      "violations": 68
+    },
+    {
+      "step": 11,
+      "violations": 64
+    },
+    {
+      "step": 12,
+      "violations": 63
+    },
+    {
+      "step": 13,
+      "violations": 60
+    },
+    {
+      "step": 14,
+      "violations": 59
+    },
+    {
+      "step": 15,
+      "violations": 55
+    },
+    {
+      "step": 16,
+      "violations": 53
+    },
+    {
+      "step": 17,
+      "violations": 49
+    },
+    {
+      "step": 18,
+      "violations": 45
+    },
+    {
+      "step": 19,
+      "violations": 43
+    },
+    {
+      "step": 20,
+      "violations": 42
+    },
+    {
+      "step": 21,
+      "violations": 39
+    },
+    {
+      "step": 22,
+      "violations": 37
+    },
+    {
+      "step": 23,
+      "violations": 35
+    },
+    {
+      "step": 24,
+      "violations": 34
+    },
+    {
+      "step": 25,
+      "violations": 30
+    },
+    {
+      "step": 26,
+      "violations": 29
+    },
+    {
+      "step": 28,
+      "violations": 26
+    },
+    {
+      "step": 29,
+      "violations": 25
+    },
+    {
+      "step": 31,
+      "violations": 22
+    },
+    {
+      "step": 32,
+      "violations": 19
+    },
+    {
+      "step": 36,
+      "violations": 18
+    },
+    {
+      "step": 44,
+      "violations": 15
+    },
+    {
+      "step": 48,
+      "violations": 13
+    },
+    {
+      "step": 49,
+      "violations": 11
+    },
+    {
+      "step": 148,
+      "violations": 9
+    },
+    {
+      "step": 399,
+      "violations": 8
+    },
+    {
+      "step": 429,
+      "violations": 7
+    },
+    {
+      "step": 430,
+      "violations": 6
+    },
+    {
+      "step": 541,
+      "violations": 5
+    },
+    {
+      "step": 4293,
+      "violations": 4
+    },
+    {
+      "step": 17151,
+      "violations": 3
+    },
+    {
+      "step": 29470,
+      "violations": 2
+    }
+  ],
+  "best_voltages": [
+    5,
+    8,
+    5,
+    10,
+    0,
+    6,
+    12,
+    0,
+    10,
+    3,
+    4,
+    1,
+    2,
+    9,
+    7,
+    0,
+    1,
+    4,
+    11,
+    9,
+    9,
+    5,
+    6,
+    9,
+    7,
+    7,
+    5,
+    8,
+    10,
+    7,
+    4,
+    7,
+    3,
+    6,
+    9,
+    2,
+    4,
+    6,
+    4,
+    11,
+    11,
+    3,
+    9,
+    0,
+    6,
+    11,
+    5,
+    7,
+    7,
+    11,
+    5,
+    1,
+    12,
+    11,
+    1,
+    3,
+    9,
+    1,
+    11,
+    4,
+    1,
+    7,
+    4,
+    6,
+    2,
+    10,
+    8,
+    3,
+    0,
+    2,
+    2,
+    10,
+    6,
+    1,
+    1,
+    2,
+    9,
+    4,
+    10,
+    0,
+    1,
+    1,
+    3,
+    4,
+    4,
+    6,
+    0,
+    12,
+    12,
+    9,
+    10,
+    5,
+    7,
+    5,
+    0,
+    4,
+    1,
+    9,
+    6,
+    10,
+    5,
+    3,
+    4,
+    8,
+    3,
+    5,
+    6,
+    10,
+    5,
+    6,
+    7,
+    3,
+    12,
+    7,
+    11,
+    4,
+    10,
+    12,
+    4,
+    3,
+    5,
+    10,
+    5,
+    4,
+    7,
+    12,
+    1,
+    4,
+    9,
+    10,
+    9,
+    4,
+    6,
+    4,
+    9,
+    8,
+    0,
+    1,
+    8,
+    3,
+    2,
+    10,
+    7,
+    8,
+    9,
+    7,
+    7,
+    1,
+    3,
+    12,
+    6,
+    0,
+    8,
+    11,
+    8,
+    8,
+    10,
+    8,
+    7,
+    2
+  ],
+  "proven_feasible": false,
+  "proven_infeasible": false,
+  "caution": "A valid zero-obstruction assignment is an exact checkable YES. Positive residual count is only incomplete stochastic optimization, not mathematical NO. No exact degree13 impossibility derived."
+}
