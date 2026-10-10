@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "cases": {
+    "3": {
+      "matching": [
+        0,
+        4,
+        8
+      ],
+      "status": 0,
+      "objective": 3.0,
+      "dual_bound": 3.0,
+      "mip_gap": 0.0,
+      "certified_optimal": true
+    },
+    "4": {
+      "matching": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "status": 0,
+      "objective": 4.0,
+      "dual_bound": 4.0,
+      "mip_gap": 0.0,
+      "certified_optimal": true
+    },
+    "5": {
+      "matching": [
+        0,
+        93,
+        153,
+        44,
+        38
+      ],
+      "status": 0,
+      "objective": 5.0,
+      "dual_bound": 5.0,
+      "mip_gap": 0.0,
+      "certified_optimal": true
+    },
+    "6": {
+      "matching": [
+        82,
+        65,
+        122,
+        90,
+        149,
+        60
+      ],
+      "status": 0,
+      "objective": 6.000000000000104,
+      "dual_bound": 6.0,
+      "mip_gap": 1.7319479184152142e-14,
+      "certified_optimal": true
+    },
+    "7": {
+      "matching": [
+        128,
+        6,
+        34,
+        37,
+        156,
+        144,
+        143
+      ],
+      "status": 0,
+      "objective": 7.000000000000015,
+      "dual_bound": 7.0,
+      "mip_gap": 2.1570047335574425e-15,
+      "certified_optimal": true
+    },
+    "8": {
+      "matching": [
+        45,
+        135,
+        76,
+        157,
+        55,
+        20,
+        128,
+        123
+      ],
+      "status": 0,
+      "objective": 7.999999999999869,
+      "dual_bound": 7.999999999999869,
+      "mip_gap": 0.0,
+      "certified_optimal": true
+    }
+  },
+  "model": "Integer optimization over 80 ternary vertex potentials and 160 edge error indicators, binary one-hot labeling, all 6x160 edge agreement inequalities, fixing root gauge to 0.",
+  "theorem": "Every F3 edge cochain in the nontrivial Wilson hyperplane annihilator is gauge-equivalent to one of f,2f, and one vertex-gradient. The integer MILP certifies minimum Hamming support of the f+cut cohomology coset. This is logically stronger than checking small-error syndromes, but does not by itself prove the selected 8-cycles span a rank80 hyperplane.",
+  "caveat": "Only status 0 with objective=dual bound and mip gap=0 is a certified global exact distance; terminated MILP runs are incomplete."
+}

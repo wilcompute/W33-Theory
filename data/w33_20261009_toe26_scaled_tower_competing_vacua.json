@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "family": "Levi incidence graph W(3,q), v=2(q+1)(q\u00b2+1), degree k=q+1",
+  "fixed_density_rho": 0.5,
+  "scaled_hopping_t0": 1.0,
+  "example_scaled_coupling_u": 5.0,
+  "suggested_scaling": "t(q)=t0/(q+1); U(q)=u/[2(q+1)(q\u00b2+1)]",
+  "q_examples": [
+    {
+      "q": 2,
+      "sites": 30,
+      "bosons": 15,
+      "degree": 3,
+      "scaled_t": 0.3333333333333333,
+      "scaled_U": 0.16666666666666666,
+      "uniform_trial_E_per_site": -0.5194444444444445,
+      "collapsed_trial_E_per_site": -0.5833333333333334,
+      "min_101_family_trial_E_per_site": -0.5959098293732004,
+      "min_trial_a": 0.98,
+      "rigorous_E0_over_v_lower": -1.0833333333333335,
+      "rigorous_E0_over_v_upper": -0.5833333333333334,
+      "finite_q_variational_endpoints_gap": 0.06388888888888888
+    },
+    {
+      "q": 3,
+      "sites": 80,
+      "bosons": 40,
+      "degree": 4,
+      "scaled_t": 0.25,
+      "scaled_U": 0.0625,
+      "uniform_trial_E_per_site": -0.5076171875,
+      "collapsed_trial_E_per_site": -0.609375,
+      "min_101_family_trial_E_per_site": -0.6134327288072713,
+      "min_trial_a": 0.99,
+      "rigorous_E0_over_v_lower": -1.109375,
+      "rigorous_E0_over_v_upper": -0.609375,
+      "finite_q_variational_endpoints_gap": 0.10175781250000004
+    },
+    {
+      "q": 5,
+      "sites": 312,
+      "bosons": 156,
+      "degree": 6,
+      "scaled_t": 0.16666666666666666,
+      "scaled_U": 0.016025641025641024,
+      "uniform_trial_E_per_site": -0.501990364069691,
+      "collapsed_trial_E_per_site": -0.6209935897435898,
+      "min_101_family_trial_E_per_site": -0.6209935897435898,
+      "min_trial_a": 1.0,
+      "rigorous_E0_over_v_lower": -1.1209935897435899,
+      "rigorous_E0_over_v_upper": -0.6209935897435898,
+      "finite_q_variational_endpoints_gap": 0.11900322567389876
+    },
+    {
+      "q": 7,
+      "sites": 800,
+      "bosons": 400,
+      "degree": 8,
+      "scaled_t": 0.125,
+      "scaled_U": 0.00625,
+      "uniform_trial_E_per_site": -0.500779296875,
+      "collapsed_trial_E_per_site": -0.6234375,
+      "min_101_family_trial_E_per_site": -0.6234375,
+      "min_trial_a": 1.0,
+      "rigorous_E0_over_v_lower": -1.1234375,
+      "rigorous_E0_over_v_upper": -0.6234375,
+      "finite_q_variational_endpoints_gap": 0.12265820312499998
+    },
+    {
+      "q": 11,
+      "sites": 2928,
+      "bosons": 1464,
+      "degree": 12,
+      "scaled_t": 0.08333333333333333,
+      "scaled_U": 0.0017076502732240437,
+      "uniform_trial_E_per_site": -0.5002133104806802,
+      "collapsed_trial_E_per_site": -0.624573087431694,
+      "min_101_family_trial_E_per_site": -0.624573087431694,
+      "min_trial_a": 1.0,
+      "rigorous_E0_over_v_lower": -1.1245730874316942,
+      "rigorous_E0_over_v_upper": -0.624573087431694,
+      "finite_q_variational_endpoints_gap": 0.12435977695101386
+    },
+    {
+      "q": 31,
+      "sites": 61568,
+      "bosons": 30784,
+      "degree": 32,
+      "scaled_t": 0.03125,
+      "scaled_U": 8.121101871101872e-05,
+      "uniform_trial_E_per_site": -0.5000101510475774,
+      "collapsed_trial_E_per_site": -0.6249796972453222,
+      "min_101_family_trial_E_per_site": -0.6249796972453222,
+      "min_trial_a": 1.0,
+      "rigorous_E0_over_v_lower": -1.124979697245322,
+      "rigorous_E0_over_v_upper": -0.6249796972453222,
+      "finite_q_variational_endpoints_gap": 0.12496954619774481
+    },
+    {
+      "q": 101,
+      "sites": 2081208,
+      "bosons": 1040604,
+      "degree": 102,
+      "scaled_t": 0.00980392156862745,
+      "scaled_U": 2.4024508842941216e-06,
+      "uniform_trial_E_per_site": -0.5000003003060719,
+      "collapsed_trial_E_per_site": -0.6249993993872789,
+      "min_101_family_trial_E_per_site": -0.6249993993872789,
+      "min_trial_a": 1.0,
+      "rigorous_E0_over_v_lower": -1.1249993993872789,
+      "rigorous_E0_over_v_upper": -0.6249993993872789,
+      "finite_q_variational_endpoints_gap": 0.12499909908120699
+    }
+  ],
+  "variational_scan_across_u": {
+    "2.0": {
+      "uniform_limit": -0.5,
+      "localized_limit": -0.25,
+      "best_alpha_limit": 0.0,
+      "variational_limit_energy": -0.5
+    },
+    "3.5": {
+      "uniform_limit": -0.5,
+      "localized_limit": -0.4375,
+      "best_alpha_limit": 0.0,
+      "variational_limit_energy": -0.5
+    },
+    "4.0": {
+      "uniform_limit": -0.5,
+      "localized_limit": -0.5,
+      "best_alpha_limit": 0.0,
+      "variational_limit_energy": -0.5
+    },
+    "4.5": {
+      "uniform_limit": -0.5,
+      "localized_limit": -0.5625,
+      "best_alpha_limit": 1.0,
+      "variational_limit_energy": -0.5625
+    },
+    "6.0": {
+      "uniform_limit": -0.5,
+      "localized_limit": -0.75,
+      "best_alpha_limit": 1.0,
+      "variational_limit_energy": -0.75
+    }
+  },
+  "thermodynamic_exact_bounds": "For N/v->rho, t=t0/k, U=u/v, the full many-boson ground-energy density satisfies -t0*rho-u*rho\u00b2/2 <= liminf E0/v <= limsup E0/v <= -max(t0*rho,u*rho\u00b2/2). Thus the pathology E0/v->-infinity of fixed U is removed, although a unique thermodynamic ground-energy limit is NOT established.",
+  "one_site_plus_uniform_coherent_trial": "For psi=(sqrt(a)|site0>+sqrt(1-a)|uniform>)/norm, E_N/v -> -t0*rho(1-a)-u*rho\u00b2 a\u00b2/2. It is strictly concave in a for u>0, so this restricted variational family has endpoint minimizers and a FIRST-ORDER CROSSING at u*rho=2*t0. This does not prove a phase transition in the full quantum Bose-Hubbard model.",
+  "remaining_physics": "No true continuum limit, susceptibility divergence, Lorentzian 3+1D causal geometry, critical exponents, or finite-size exact spectrum is obtained. Coupling scaling is an explicitly free dynamical assumption.",
+  "prior": "Round25 proved fixed-U energy density divergence and proposed this scaling; Round26 explicitly computes variational interpolation and rigourous energy density bounds without claiming the trial transition physical."
+}

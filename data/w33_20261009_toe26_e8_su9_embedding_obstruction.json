@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "subgroup": "PSp(4,3), order 25920",
+  "candidate_SU9_representation": "9=6_schlafli + 1 +1 +1, existing W33 27-permutation Schlaefli 6D eigenspace",
+  "origin": "Pass7017-7024 proves 27 Schlaefli permutation decomposition 1+6+20; Pass11681 implements E8 sl9 + Lambda3(9) + dual.",
+  "E8_su9_grading": [
+    80,
+    84,
+    84
+  ],
+  "wedge3_grade_by_six_basis": {
+    "0": 1,
+    "1": 18,
+    "2": 45,
+    "3": 20
+  },
+  "wedge3_invariant_block_dimensions": [
+    20,
+    15,
+    15,
+    15,
+    6,
+    6,
+    6,
+    1
+  ],
+  "sl9_invariant_block_dimensions": [
+    36,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "full_E8_invariant_block_max_dimension": 36,
+  "predicted_Steinberg81_multiplicity": 0,
+  "proof": "The fixed splitting 9=V6 + C^3 triv induces a PSp-invariant direct sum of sl9 into End(V6) (36), six copies V6 (6 each), eight singlets; and Lambda3(9) into Lambda3 V6(20), three copies Lambda2 V6(15 each), three copies V6(6 each), and one singlet, plus the complex dual. Each invariant summand has dimension at most36. By Maschke semisimplicity, the irreducible Steinberg81 cannot occur in any summand and hence has multiplicity ZERO in the 248-dimensional restricted E8 adjoint. The construction really embeds G in SL9 (simple G implies detV6 is a trivial 1D character).",
+  "boundary": "Concrete SU9 non-E6-factor-preserving embedding using the SIX-dimensional Schlaefli G-module only. Does not exclude another embedding of PSp4(3) into E8, nor does it construct an E8 matter intertwiner. Statement remains conditional on prior Schlaefli 6D irreducible being complex over the chosen field.",
+  "next_diagnostic": "Search SL9 embeddings from OTHER <=9-dimensional nontrivial G modules and search exceptional E8 embeddings not factoring through the SU9 maximal-rank subgroup."
+}

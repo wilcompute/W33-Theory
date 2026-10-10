@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "prior": "Round23 45x36 components, Round24 exact E6-tritangent identification, Round25 SRG45 compression Q=18I+(9/4)B already established.",
+  "sector_count": 45,
+  "states_per_sector": 36,
+  "exact_projected_tunneling_eigenspectrum": {
+    "9.0": 20,
+    "22.5": 24,
+    "90.0": 1
+  },
+  "first_order_vacuum_gap_per_epsilon": "67.5",
+  "finite_tunneling_gap": [
+    {
+      "epsilon": 0.001,
+      "full_gap": 0.06733584450954844,
+      "projected_first_order_gap": 0.0675,
+      "relative_correction": -0.0024319331918750686
+    },
+    {
+      "epsilon": 0.003,
+      "full_gap": 0.20102965797265782,
+      "projected_first_order_gap": 0.2025,
+      "relative_correction": -0.0072609482831713645
+    },
+    {
+      "epsilon": 0.01,
+      "full_gap": 0.6589687977450609,
+      "projected_first_order_gap": 0.675,
+      "relative_correction": -0.023749929266576486
+    }
+  ],
+  "sector_projectors_commute_with_A3": true,
+  "sector_projectors_commute_with_A2": false,
+  "no_go": "A3 sector projectors define a complete commuting set of 45-sector superselection charges only IF all added terms preserve that block partition. A2 is simultaneously PSp-invariant, geometrically local in the chosen frame-overlap metric, and violates each sector projector. It lifts the 45-fold degeneracy already at first order. Invariant diagonal potentials on the transitive 45 E6 tritangent carrier are necessarily constant, so full PSp symmetry alone cannot energetically select one preferred sector.",
+  "physical_condition": "To prohibit A2 one must specify an additional conserved non-scalar operator, selection rule, emergent gauge charge, or engineered superselection restriction. None follows from W33 geometry by itself.",
+  "caution": "Q is only the degenerate first-order compression; A2 does not preserve sector-uniform vectors. Exact finite-epsilon splittings were computed on the full 1620D matrix. Not a fundamental vacuum law."
+}

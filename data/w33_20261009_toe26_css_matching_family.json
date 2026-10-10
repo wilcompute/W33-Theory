@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "n_physical_qutrits": 160,
+  "rank_Gauss_X": 79,
+  "all_native_wilson_eightcycle_rank": 81,
+  "matching_css_codes": {
+    "3": {
+      "matching_edges": [
+        0,
+        4,
+        8
+      ],
+      "selected_eight_cycles": 1395,
+      "Wilson_rank": 80,
+      "independent_weight_eight_checks": 80,
+      "code_parameters": "[[160,1,3]]_3",
+      "X_distance": 3,
+      "Z_distance": 8,
+      "overall_distance": 3,
+      "local_Z_logical_eightcycle_index": 3,
+      "all_weight_one_two_X_detected": true
+    },
+    "4": {
+      "matching_edges": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "selected_eight_cycles": 1332,
+      "Wilson_rank": 80,
+      "independent_weight_eight_checks": 80,
+      "code_parameters": "[[160,1,4]]_3",
+      "X_distance": 4,
+      "Z_distance": 8,
+      "overall_distance": 4,
+      "local_Z_logical_eightcycle_index": 3,
+      "all_weight_one_two_X_detected": true
+    },
+    "5": {
+      "matching_edges": [
+        0,
+        93,
+        153,
+        44,
+        38
+      ],
+      "selected_eight_cycles": 1253,
+      "Wilson_rank": 80,
+      "independent_weight_eight_checks": 80,
+      "code_parameters": "[[160,1,5]]_3",
+      "X_distance": 5,
+      "Z_distance": 8,
+      "overall_distance": 5,
+      "local_Z_logical_eightcycle_index": 0,
+      "all_weight_one_two_X_detected": true
+    },
+    "6": {
+      "matching_edges": [
+        82,
+        65,
+        122,
+        90,
+        149,
+        60
+      ],
+      "selected_eight_cycles": 1198,
+      "Wilson_rank": 80,
+      "independent_weight_eight_checks": 80,
+      "code_parameters": "[[160,1,6]]_3",
+      "X_distance": 6,
+      "Z_distance": 8,
+      "overall_distance": 6,
+      "local_Z_logical_eightcycle_index": 6,
+      "all_weight_one_two_X_detected": true
+    },
+    "7": {
+      "matching_edges": [
+        128,
+        6,
+        34,
+        37,
+        156,
+        144,
+        143
+      ],
+      "selected_eight_cycles": 1137,
+      "Wilson_rank": 80,
+      "independent_weight_eight_checks": 80,
+      "code_parameters": "[[160,1,7]]_3",
+      "X_distance": 7,
+      "Z_distance": 8,
+      "overall_distance": 7,
+      "local_Z_logical_eightcycle_index": 1,
+      "all_weight_one_two_X_detected": true
+    },
+    "8": {
+      "matching_edges": [
+        45,
+        135,
+        76,
+        157,
+        55,
+        20,
+        128,
+        123
+      ],
+      "selected_eight_cycles": 1074,
+      "Wilson_rank": 80,
+      "independent_weight_eight_checks": 80,
+      "code_parameters": "[[160,1,8]]_3",
+      "X_distance": 8,
+      "Z_distance": 8,
+      "overall_distance": 8,
+      "local_Z_logical_eightcycle_index": 4,
+      "all_weight_one_two_X_detected": true
+    }
+  },
+  "highest_verified_code": "[[160,1,8]]_3",
+  "proof_of_X_distance": "Let f be supported on r pairwise disjoint edges, 3<=r<=8. Each nontrivial logical X has cochain f+D^T phi (or twice it) for a ternary potential phi, since the selected Wilson rows span exactly the 80D hyperplane ker(f) within 81D cycle space. Write T for the set of edges across unequal phi labels. If |T|>=16, Hamming wt(f+D^T phi)>=|T|-r>=r. If |T|<16, spectral expansion with Levi degree4 and nontrivial adjacency eigenvalue sqrt6 forces each phi color class size <=10 or >=70. One class has >=70 vertices. Let S be the other <=10. Girth8 forces an induced subgraph on <=10 vertices to have <=1 independent cycle, giving |boundary S|>=16 whenever |S|>=7. Therefore |S|<=6, and the induced subgraph is a forest, so |boundary S|>=2|S|+2. Because f is supported on a matching, at most |S| of its edges can cross phi color classes. Hence wt(f+D^T phi)>=r+|T|-2|S|>=r+2. Constant phi has weight exactly r. Thus d_X=r.",
+  "proof_of_Z_distance": "Nontrivial Z logicals lie in ker(D) and have weight at least girth8. Since all native 8cycle rows span rank81 but the selected hyperplane has rank80, an omitted native 8cycle pairs nontrivially with f, has weight8, and is a Z logical. Thus d_Z=8. Hence d=min(r,8)=r. The r=8 code saturates the upper bound imposed by length-eight cycles.",
+  "confidence": "Analytic combinatorial bound plus exact finite-field ranks and 160 syndrome-column checks. An independent 400-variable ternary minimum-weight ILP checks the coset optima in companion producer.",
+  "hardware_boundary": "Exact ideal CSS codes, not a measured threshold, scalable q-family, practical decoder, or immunity to correlated circuit faults. The matching picks edges and breaks full PSp symmetry."
+}

@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "prototype": "8-site 8-link native W33 Levi apartment C8",
+  "native_graph_girth": 8,
+  "two_boson_fock_dimension": 36,
+  "two_boson_bosonic_site_capacity": 2,
+  "exact_pair_perturbation_numerator": "4 I_8+2 A_C8",
+  "five_pair_band_multiplicities": [
+    1,
+    2,
+    2,
+    2,
+    1
+  ],
+  "exact_asymptotic_local_spectral_weights": [
+    0.125,
+    0.25,
+    0.25,
+    0.25,
+    0.125
+  ],
+  "exact_leading_gap_ratios": [
+    0.0,
+    1.0,
+    3.414213562373096,
+    5.828427124746191,
+    6.828427124746192
+  ],
+  "W33_full_80_comparison": "Full Levi W33 has five bands multiplicities [1,24,30,24,1]/80 and second-to-first normalized gap 4/(4-sqrt6)=2.5797959. C8 alone has five bands [1,2,2,2,1]/8, second-to-first ratio 2/(2-sqrt2)=3.41421356. C8 is a primitive interaction/readout prototype, not evidence of full W33 five-band spectrum.",
+  "modeled_U_over_t_cases": {
+    "8": {
+      "bound_band_centers_over_t": [
+        -8.944409918773866,
+        -8.812233485190333,
+        -8.485292701585418,
+        -8.145130083615218,
+        -7.999999999999999
+      ],
+      "first_gap_over_t": 0.13217643358353293,
+      "leading_first_gap_over_t": 0.1464466094067262,
+      "finite_U_gap_relative_error": -0.09744285566599031,
+      "doublon_initial_state_band_probabilities": [
+        0.11179055857387753,
+        0.2269702388247813,
+        0.2356999838524305,
+        0.245545514000194,
+        0.12499999999999806
+      ],
+      "probability_leaked_to_scattering_bands": 0.054993704748718675,
+      "first_gap_hypothetical_MHz": 0.6608821679176646,
+      "ten_gap_cycles_hypothetical_us": 15.131290395545731
+    },
+    "16": {
+      "bound_band_centers_over_t": [
+        -16.492424140072693,
+        -16.421230924347256,
+        -16.24807691962829,
+        -16.07305651464406,
+        -16.0
+      ],
+      "first_gap_over_t": 0.07119321572543669,
+      "leading_first_gap_over_t": 0.0732233047033631,
+      "finite_U_gap_relative_error": -0.027724629285042046,
+      "doublon_initial_state_band_probabilities": [
+        0.12126772677037113,
+        0.24358717926826912,
+        0.24618297015130838,
+        0.2488636805102947,
+        0.12499999999999797
+      ],
+      "probability_leaked_to_scattering_bands": 0.015098443299758735,
+      "first_gap_hypothetical_MHz": 0.35596607862718344,
+      "ten_gap_cycles_hypothetical_us": 28.0925644335717
+    },
+    "32": {
+      "bound_band_centers_over_t": [
+        -32.249031007527975,
+        -32.21268156730436,
+        -32.124756809331366,
+        -32.03659073231844,
+        -32.00000000000001
+      ],
+      "first_gap_over_t": 0.03634944022361708,
+      "leading_first_gap_over_t": 0.03661165235168155,
+      "finite_U_gap_relative_error": -0.007161985630851464,
+      "doublon_initial_state_band_probabilities": [
+        0.12403473420160409,
+        0.24834939602076464,
+        0.2490291224962203,
+        0.24971446140618073,
+        0.1250000000000132
+      ],
+      "probability_leaked_to_scattering_bands": 0.003872285875217041,
+      "first_gap_hypothetical_MHz": 0.1817472011180854,
+      "ten_gap_cycles_hypothetical_us": 55.0214800474576
+    },
+    "64": {
+      "bound_band_centers_over_t": [
+        -64.12487816764087,
+        -64.10660538697736,
+        -64.0624695121951,
+        -64.01830320893002,
+        -63.99999999999998
+      ],
+      "first_gap_over_t": 0.01827278066350857,
+      "leading_first_gap_over_t": 0.018305826175840777,
+      "finite_U_gap_relative_error": -0.0018051909820829826,
+      "doublon_initial_state_band_probabilities": [
+        0.12475657230932921,
+        0.24958426520114543,
+        0.24975621642154214,
+        0.24992852353195685,
+        0.12499999999972859
+      ],
+      "probability_leaked_to_scattering_bands": 0.0009744225362977588,
+      "first_gap_hypothetical_MHz": 0.09136390331754285,
+      "ten_gap_cycles_hypothetical_us": 109.45241651119225
+    }
+  },
+  "illustrative_hopping_t_over_h_MHz": 5.0,
+  "experimental_minimum": "Eight sites arranged in a single length-eight bipartite ring, attractive onsite bosonic two-particle U, pair loading on one site, coherent return/correlation spectroscopy, independent calibration of t and U, measured loss/dephasing/disorder. Full 80-site/160-link W33 design only after this primitive test.",
+  "no_hardware_claim": "All spectra are computed for a specified toy Hamiltonian, not experimental data. This prototype does not test an E8 embedding or gravity."
+}
