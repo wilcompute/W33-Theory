@@ -1,0 +1,134 @@
+{
+  "pass_ids": [
+    11890,
+    11891,
+    11892
+  ],
+  "11890_hosotani": {
+    "linear_root_map_error": 2.1760371282653068e-14,
+    "omega_closure": 2.1868857395626282e-15,
+    "regimes": {
+      "bosons_only": {
+        "V": -645.5492909538582,
+        "V_at_0": -645.5492909538594,
+        "massless_vectors": 80,
+        "massless_fermions": 0,
+        "root_components": [
+          240
+        ]
+      },
+      "SS_nF1": {
+        "V": -932.4638374375965,
+        "V_at_0": -932.4638374376003,
+        "massless_vectors": 80,
+        "massless_fermions": 0,
+        "root_components": [
+          240
+        ]
+      },
+      "SS_nF2": {
+        "V": -1219.378383921337,
+        "V_at_0": -1219.3783839213406,
+        "massless_vectors": 80,
+        "massless_fermions": 0,
+        "root_components": [
+          240
+        ]
+      },
+      "SS_nF4": {
+        "V": -1793.2074768888187,
+        "V_at_0": -1793.2074768888228,
+        "massless_vectors": 80,
+        "massless_fermions": 0,
+        "root_components": [
+          240
+        ]
+      },
+      "periodic_nF2": {
+        "V": -32.27982053487965,
+        "V_at_0": 645.5492909538594,
+        "massless_vectors": 16,
+        "massless_fermions": 16,
+        "root_components": [
+          24,
+          24
+        ]
+      }
+    },
+    "periodic_vacuum_factorisation": {
+      "centraliser_dim": 56,
+      "fix_dim": 32,
+      "best_intersection": 32,
+      "perp_intersection": 32,
+      "spans_centraliser": true
+    }
+  },
+  "11891_cusp": {
+    "directions": [
+      {
+        "im_max": [
+          4.522895097149254,
+          5.184583630703169,
+          5.846338044817096,
+          6.5081324571486014,
+          7.169952952647887
+        ],
+        "slopes": [
+          0.9546147659713232,
+          0.9547098115285444,
+          0.9547675167586887,
+          0.954805146815496
+        ],
+        "max_residual": 9.33481190748042e-16
+      },
+      {
+        "im_max": [
+          4.5940907242376925,
+          5.253717551096424,
+          5.913965105229958,
+          6.574610519268131,
+          7.235526166510832
+        ],
+        "slopes": [
+          0.9516403519464143,
+          0.9525358721075179,
+          0.9531098626189073,
+          0.9534997267229648
+        ],
+        "max_residual": 6.40787230577274e-16
+      }
+    ],
+    "three_over_pi": 0.954929658551372
+  },
+  "11892_fermions": {
+    "G_witting": -19.775021196025975,
+    "minus_18_log3": -19.775021196025975,
+    "G_min": -21.85392261898054,
+    "G_max": -19.775021196005238,
+    "G_at_C10_odd_thetas": [
+      -21.853922618980523,
+      -21.797561379873372,
+      -21.79756137987337,
+      -21.797561379873365,
+      -21.797561379873365,
+      -21.79756137987336
+    ],
+    "G_min_torus_distance_to_C10": 3.611728557580167e-08,
+    "inversion_residual": 9.647807741255788e-16,
+    "F_max": -6.226557490803848,
+    "F_max_reduced_im_max": 15.033249736227551,
+    "F_max_massless_vectors": 4
+  },
+  "checks": {
+    "root_map_linear_and_omega_closed": true,
+    "bosons_restore_su9": true,
+    "ss_keeps_su9": true,
+    "periodic_nF2_breaks_to_D4D4": true,
+    "periodic_vacuum_is_factorisation": true,
+    "cusp_log_law": true,
+    "soft_negative_selects_trinification": true,
+    "soft_positive_selects_C10_weierstrass": true,
+    "fermion_dominated_runs_to_cusp": true
+  },
+  "all_checks_pass": true
+}
