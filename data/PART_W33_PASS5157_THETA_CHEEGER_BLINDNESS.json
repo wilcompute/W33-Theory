@@ -1,0 +1,14 @@
+{
+  "pass":5157,
+  "status":"THEOREM_FIRST_ORDER_THETA_EXPANSION_BLINDNESS",
+  "statement":"Every nonzero apartment-code support has theta conductance exactly 1/2, independent of its Hamming weight.",
+  "anchors":[
+    {"q":2,"theta_degree":8,"inside_degree":4,"outside_degree":4},
+    {"q":3,"theta_degree":16,"inside_degree":8,"outside_degree":8},
+    {"q":4,"theta_degree":24,"inside_degree":12,"outside_degree":12},
+    {"q":5,"theta_degree":32,"inside_degree":16,"outside_degree":16}
+  ],
+  "no_go":"First-order theta conductance alone cannot distinguish minimum q^4 support from heavier codewords.",
+  "repair":"Pass5151 second moment and Pass5152 centered Rayleigh.",
+  "boundary":"Higher-order/centered spectral methods remain available."
+}

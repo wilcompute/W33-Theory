@@ -1,0 +1,54 @@
+\ifdefined\WPassFiveOneFiveZeroLoaded\else
+\gdef\WPassFiveOneFiveZeroLoaded{1}
+\subsection*{Passes 5150--5157: exterior theta curvature, centered spectrum, and $q=4$ root-coset torsion}
+Pass~5119 already proves that every apartment-code support is half-regular in the intrinsic theta graph.  The complementary exterior law is that every unselected apartment has an even number $t_v$ of selected theta-neighbours.  Consequently
+\[
+ A_{\rm active}=2(q-1)|S|,\qquad
+ \sum_{v\notin S}t_v=4(q-1)|S|,
+\]
+and, with $b_{2r}=\#\{v\notin S:t_v=2r\}$,
+\[
+ \sum_r r b_{2r}=2(q-1)|S|.
+\]
+A chamber star has only the $b_2$ term.
+
+This yields a quantized second-moment curvature theorem.  Let $D=8(q-1)$, $k=D/2$, and let $A_\Theta$ be theta adjacency.  For $x=\mathbf1_S$,
+\[
+ x^TA_\Theta^2x\ge k(k+2)|S|,
+\]
+with exact defect
+\[
+ \Delta_2=x^TA_\Theta^2x-k(k+2)|S|
+ =\sum_{v\notin S}t_v(t_v-2)\in8\mathbb Z_{\ge0}.
+\]
+Equality holds iff every exterior boundary apartment has exactly two selected neighbours.  Chamber stars attain equality for $q=2,3,4,5$.  Exhaustively over the full $[90,16,16]_2$ code at $q=2$, exactly $45$ of the $65535$ nonzero words have $\Delta_2=0$; all have weight $16$, and the smallest positive defect is $64$.
+
+The corresponding simple theta random walk is blind at one step but detects curvature at two.  Starting uniformly on $S$,
+\[
+ \Pr[X_1\in S]=\frac12,
+\qquad
+ \Pr[X_2\in S]\ge\frac14+\frac1D,
+\]
+with excess $\Delta_2/(D^2|S|)$.  The chamber-star equality values are $3/8,5/16,7/24,9/32$ for $q=2,3,4,5$.
+
+Ordinary first-order conductance is therefore identically $1/2$ on every nonzero codeword and cannot by itself prove the minimum-distance theorem.  Centering restores the lost information.  If $N$ is the apartment count, $\alpha=|S|/N$, and $y=x-\alpha\mathbf1$, then
+\[
+ \rho(S)=\frac{y^TA_\Theta y}{y^Ty}
+ =D\frac{1/2-\alpha}{1-\alpha},
+\qquad
+ \alpha=\frac{D/2-\rho}{D-\rho}.
+\]
+Thus the centered theta Rayleigh quotient determines the support weight exactly; the remaining distance problem is an extremal constraint on which centered quotients can occur for codewords.
+
+On the arithmetic side, the $256\times256$ $q=4$ $C_2$ root-coset incidence matrix has exact Smith form
+\[
+ 1^{180}\oplus2^4\oplus0^{72},
+\qquad
+ \operatorname{coker}M_4\cong\mathbb Z^{72}\oplus(\mathbb Z/2)^4.
+\]
+Thus the characteristic-two rank loss is exactly four integral torsion directions.  The universal column-sum relation supplies one explicit defining-characteristic relation; combining prior certified ranks gives total native drops $0,1,4,8,10$ at $q=2,3,4,5,7$, so additional hidden modular defect is forced from $q\ge4$ onward.
+
+Finally, two statistics of the positive-root poset organize two different structures.  $N=|\Phi^+|$ controls the maximal-unipotent volume $q^N$ and first root-direction count $Nq^{N-1}$, whereas $H=\sum_{\alpha>0}\mathrm{ht}(\alpha)$ controls the top Jennings degree $(p-1)H$ in the previously proved safe range.  For $A_2,C_2,G_2$ the pairs are $(N,H)=(3,4),(4,7),(6,16)$.  Hence the $C_2$ derivative $q^4\mapsto4q^3$ and the $C_2$ group-ring depth $7(p-1)$ are related root statistics but are not the same invariant.
+
+\textbf{Boundary.}  These refinements do not prove the $q=5$ or all-$q$ minimum-distance theorem.  Prior q=7 rank and safe Jennings results remain owned by Passes~5118--5125 and are used only as certified inputs.  Random-walk statements are finite graph theorems, not hardware diffusion, and Jennings depth is algebraic nilpotence rather than physical latency.
+\fi
