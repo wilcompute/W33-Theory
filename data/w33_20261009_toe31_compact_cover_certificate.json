@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "p": 17,
+  "graph_vertices": 1360,
+  "graph_edges": 2720,
+  "no_base_eight_cycle_zero_holonomy": true,
+  "connected": true,
+  "degree": 4,
+  "exact_girth": 10,
+  "length10_cycle": [
+    349,
+    917,
+    237,
+    702,
+    0,
+    696,
+    80,
+    752,
+    123,
+    1092
+  ],
+  "HGP_parameters": "[[9245281,1852321,10]]_3",
+  "HGP_n": 9245281,
+  "HGP_k": 1852321,
+  "HGP_rate": 0.20035313150568382,
+  "HGP_stabilizer_weight_max": 6,
+  "note": "Independent reparse and full graph construction verifies Round31 first explicit smaller cover; qutrit HGP parameters follow standard full-row-rank incidence HGP distance equality, no n\u00d7n quantum checks materialized. No proof minimal prime or practical hardware."
+}

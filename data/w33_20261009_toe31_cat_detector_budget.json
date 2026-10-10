@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "base_code": "[[160,1,8]]_3",
+  "verification_measurements_per_extraction_attempt": 797,
+  "stabilizer_outcomes_per_round": 159,
+  "data_interactions_per_round": 956,
+  "exact_model": "Independent symmetric ternary report flips: with probability p a true ternary outcome is shifted by +1 or -1 equiprobably. Verifier acceptance model assumes every true verifier syndrome is zero; classical flips alone reject attempts. Does NOT represent quantum gate faults.",
+  "global_repeat_vs_per_check_reprep": "If requiring ALL 797 verifier outcomes to be correctly reported in a single global batch, acceptance probability (1-p)^797. Expected global batches 1/(1-p)^797. Independent local preparation/retry of each check instead requires sum_{checks}(1-p)^-(weight-1) preparation attempts in expectation; must not infer this is necessarily a physically schedulable full FT protocol.",
+  "strict_majority3_wrong": "For unchanged ternary syndrome read 3 independent times, strict majority returns incorrect value with probability (3/2)p\u00b2 -(1/2)p\u00b3. Three distinct reports yield no strict majority, probability (3/2)p\u00b2(1-p). Neither counts data faults propagated during rounds.",
+  "time_varying_syndrome_counterexample": "Even with noiseless measurement and true syndrome history [0,0,1], majority returns0 while current syndrome is1. Repeated readouts require a space-time detector-history decoder for evolving errors; raw majority cannot be treated as a fault-tolerant syndrome decoder.",
+  "sample_probabilities": [
+    {
+      "p": 0.0001,
+      "full_round_all_verifiers_clean_probability": 0.9233896428745579,
+      "mean_global_rounds_until_all_clean": 1.082966446198108,
+      "mean_per_check_prep_attempts_for_159_accepted_checks": 159.07972714751182,
+      "single_readout_any_check_corrupt_probability": 0.015775044803225335,
+      "three_round_majority_one_check_wrong_probability": 1.49995e-08,
+      "three_round_majority_one_check_no_strict_majority_probability": 1.4998500000000004e-08,
+      "three_round_any_wrong_check_probability": 2.3849176700174723e-06,
+      "three_round_any_erased_check_probability": 2.384758673978915e-06
+    },
+    {
+      "p": 0.001,
+      "full_round_all_verifiers_clean_probability": 0.45049929544903516,
+      "mean_global_rounds_until_all_clean": 2.219759298409668,
+      "mean_per_check_prep_attempts_for_159_accepted_checks": 159.7997215280237,
+      "single_readout_any_check_corrupt_probability": 0.14707149678504594,
+      "three_round_majority_one_check_wrong_probability": 1.4995e-06,
+      "three_round_majority_one_check_no_strict_majority_probability": 1.4985000000000001e-06,
+      "three_round_any_wrong_check_probability": 0.00023839225879607184,
+      "three_round_any_erased_check_probability": 0.0002382332964540046
+    },
+    {
+      "p": 0.005,
+      "full_round_all_verifiers_clean_probability": 0.018407523107991226,
+      "mean_global_rounds_until_all_clean": 54.32561426832444,
+      "mean_per_check_prep_attempts_for_159_accepted_checks": 163.05380011250998,
+      "single_readout_any_check_corrupt_probability": 0.5493183884814301,
+      "three_round_majority_one_check_wrong_probability": 3.7437499999999995e-05,
+      "three_round_majority_one_check_no_strict_majority_probability": 3.73125e-05,
+      "three_round_any_wrong_check_probability": 0.005934991866439643,
+      "three_round_any_erased_check_probability": 0.005915233889619231
+    },
+    {
+      "p": 0.01,
+      "full_round_all_verifiers_clean_probability": 0.00033208563842715877,
+      "mean_global_rounds_until_all_clean": 3011.271444125834,
+      "mean_per_check_prep_attempts_for_159_accepted_checks": 167.24909378945804,
+      "single_readout_any_check_corrupt_probability": 0.7976999728712229,
+      "three_round_majority_one_check_wrong_probability": 0.00014949999999999997,
+      "three_round_majority_one_check_no_strict_majority_probability": 0.00014849999999999998,
+      "three_round_any_wrong_check_probability": 0.023491942236962937,
+      "three_round_any_erased_check_probability": 0.0233366419699903
+    },
+    {
+      "p": 0.02,
+      "full_round_all_verifiers_clean_probability": 1.0166754272642407e-07,
+      "mean_global_rounds_until_all_clean": 9835980.817308504,
+      "mean_per_check_prep_attempts_for_159_accepted_checks": 176.08868623906193,
+      "single_readout_any_check_corrupt_probability": 0.959733300368452,
+      "three_round_majority_one_check_wrong_probability": 0.000596,
+      "three_round_majority_one_check_no_strict_majority_probability": 0.000588,
+      "three_round_any_wrong_check_probability": 0.0904381244953888,
+      "three_round_any_erased_check_probability": 0.08927973944918277
+    }
+  ],
+  "scope": "This is a precise resource and readout model to audit Round30, not a complete physical circuit-level noise simulator, verified GHZ scheme, decoder threshold, or experimental calibration."
+}

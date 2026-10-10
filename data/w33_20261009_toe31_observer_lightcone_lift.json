@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "finite_tangent_field": "F3^4 with split nondegenerate Q=x\u00b2+y\u00b2+z\u00b2\u2212t\u00b2 mod3",
+  "finite_null_nonzero": 20,
+  "exact_null_by_residue_time": {
+    "0": 8,
+    "1": 6,
+    "2": 6
+  },
+  "null_timelike_forward_mod3_vectors": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      0,
+      1
+    ]
+  ],
+  "six_selected_integer_spatial_directions": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      -1,
+      0,
+      0
+    ]
+  ],
+  "selected_forward_rule": "Replace time F3 coordinate with external Z clock; lift spatial coordinates F3\u00b3 to Z\u00b3. Only retain the 6 Q-null classes with temporal residue +1, mapped to spatial \u00b1e_1, \u00b1e_2, \u00b1e_3. Discard the 8 finite null vectors of time-residue0 and 6 time-residue\u22121; this breaks the full finite Lorentz group.",
+  "exact_future_l1_ball_size": "|B_r|=(4r\u00b3+6r\u00b2+8r+3)/3, polynomial ~4r\u00b3/3, not saturating at 81 after two ticks.",
+  "future_ball_samples": [
+    {
+      "r": 0,
+      "size": 1,
+      "mod3_spatial_image_size": 1
+    },
+    {
+      "r": 1,
+      "size": 7,
+      "mod3_spatial_image_size": 7
+    },
+    {
+      "r": 2,
+      "size": 25,
+      "mod3_spatial_image_size": 19
+    },
+    {
+      "r": 3,
+      "size": 63,
+      "mod3_spatial_image_size": 27
+    },
+    {
+      "r": 4,
+      "size": 129,
+      "mod3_spatial_image_size": 27
+    },
+    {
+      "r": 5,
+      "size": 231,
+      "mod3_spatial_image_size": 27
+    },
+    {
+      "r": 6,
+      "size": 377,
+      "mod3_spatial_image_size": 27
+    },
+    {
+      "r": 7,
+      "size": 575,
+      "mod3_spatial_image_size": 27
+    },
+    {
+      "r": 8,
+      "size": 833,
+      "mod3_spatial_image_size": 27
+    },
+    {
+      "r": 9,
+      "size": 1159,
+      "mod3_spatial_image_size": 27
+    },
+    {
+      "r": 10,
+      "size": 1561,
+      "mod3_spatial_image_size": 27
+    }
+  ],
+  "finite_spatial_projection": "Modulo3 quotient maps infinite Z\u00b3 spatial growth back into 27 finite classes and eventually saturates; the 81 total original points also include the time residue.",
+  "conclusion": "An expanding 3-dimensional spatial causal ball IS constructible by lifting/choosing an observer and six rays, but all of its infinite spatial size, time orientation and anisotropic cubic locality are imposed via Z\u00b3 and Z. This is NOT derived physical Minkowski spacetime; isotropic Lorentz invariance, Einstein dynamics and 3+1D gravitational continuum are not established.",
+  "prior": "Builds on parallel Pass11831\u201311838 finite tangent Q and Round30 external Z clock saturation obstruction."
+}

@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "device_type": "hypothetical eight nonlinear bosonic sites in C8 ring, not built",
+  "geometry_sites": 8,
+  "calibrated_links_needed": 8,
+  "onsite_detuning_controls_needed": 8,
+  "onsite_nonlinearities_needed": 8,
+  "assumed_t_over_h_MHz": 5,
+  "assumed_U_over_t": 32,
+  "required_attractive_pair_binding_U_over_h_MHz": 160,
+  "slow_first_boundpair_gap_over_h_MHz": 0.181747201118,
+  "ratio_binding_carrier_to_first_gap": 880.3436807597353,
+  "two_boson_survival_model": "Assume independent exponential single-photon amplitude-damping lifetime T1 for each of two photons. No-loss survival at evolution t is exp(-2t/T1). This is a conditional Markovian loss model, not a measured photonic-chip lifetime.",
+  "pair_survival_50_percent_at_60us_requires_T1_us_greater_than": 173.1234049066756,
+  "time_averaged_survival_over_sweep": "(1-exp(-2T/T1))/(2T/T1) for delays uniformly spanning 0 to T",
+  "hypothetical_lifetime_coherence_grid": [
+    {
+      "T1_us": 25.0,
+      "T2_us": 25.0,
+      "pair_survival_last_60us": 0.00822974704902003,
+      "pair_survival_mean_over_60us": 0.20661880269812083,
+      "coherent_pair_visibility_at_30us": 0.027323722447292566,
+      "conservative_shot_multiplier_at_30us": 1339.4307643944173
+    },
+    {
+      "T1_us": 25.0,
+      "T2_us": 50.0,
+      "pair_survival_last_60us": 0.00822974704902003,
+      "pair_survival_mean_over_60us": 0.20661880269812083,
+      "coherent_pair_visibility_at_30us": 0.04978706836786395,
+      "conservative_shot_multiplier_at_30us": 403.428793492735
+    },
+    {
+      "T1_us": 25.0,
+      "T2_us": 100.0,
+      "pair_survival_last_60us": 0.00822974704902003,
+      "pair_survival_mean_over_60us": 0.20661880269812083,
+      "coherent_pair_visibility_at_30us": 0.06720551273974977,
+      "conservative_shot_multiplier_at_30us": 221.40641620418705
+    },
+    {
+      "T1_us": 50.0,
+      "T2_us": 25.0,
+      "pair_survival_last_60us": 0.09071795328941251,
+      "pair_survival_mean_over_60us": 0.37886751946274483,
+      "coherent_pair_visibility_at_30us": 0.09071795328941253,
+      "conservative_shot_multiplier_at_30us": 121.51041751873481
+    },
+    {
+      "T1_us": 50.0,
+      "T2_us": 50.0,
+      "pair_survival_last_60us": 0.09071795328941251,
+      "pair_survival_mean_over_60us": 0.37886751946274483,
+      "coherent_pair_visibility_at_30us": 0.1652988882215866,
+      "conservative_shot_multiplier_at_30us": 36.59823444367797
+    },
+    {
+      "T1_us": 50.0,
+      "T2_us": 100.0,
+      "pair_survival_last_60us": 0.09071795328941251,
+      "pair_survival_mean_over_60us": 0.37886751946274483,
+      "coherent_pair_visibility_at_30us": 0.22313016014842987,
+      "conservative_shot_multiplier_at_30us": 20.085536923187657
+    },
+    {
+      "T1_us": 100.0,
+      "T2_us": 25.0,
+      "pair_survival_last_60us": 0.30119421191220214,
+      "pair_survival_mean_over_60us": 0.5823381567398316,
+      "coherent_pair_visibility_at_30us": 0.1652988882215866,
+      "conservative_shot_multiplier_at_30us": 36.59823444367797
+    },
+    {
+      "T1_us": 100.0,
+      "T2_us": 50.0,
+      "pair_survival_last_60us": 0.30119421191220214,
+      "pair_survival_mean_over_60us": 0.5823381567398316,
+      "coherent_pair_visibility_at_30us": 0.3011942119122022,
+      "conservative_shot_multiplier_at_30us": 11.023176380641594
+    },
+    {
+      "T1_us": 100.0,
+      "T2_us": 100.0,
+      "pair_survival_last_60us": 0.30119421191220214,
+      "pair_survival_mean_over_60us": 0.5823381567398316,
+      "coherent_pair_visibility_at_30us": 0.40656965974059917,
+      "conservative_shot_multiplier_at_30us": 6.049647464412944
+    },
+    {
+      "T1_us": 200.0,
+      "T2_us": 25.0,
+      "pair_survival_last_60us": 0.5488116360940265,
+      "pair_survival_mean_over_60us": 0.7519806065099559,
+      "coherent_pair_visibility_at_30us": 0.22313016014842987,
+      "conservative_shot_multiplier_at_30us": 20.085536923187657
+    },
+    {
+      "T1_us": 200.0,
+      "T2_us": 50.0,
+      "pair_survival_last_60us": 0.5488116360940265,
+      "pair_survival_mean_over_60us": 0.7519806065099559,
+      "coherent_pair_visibility_at_30us": 0.40656965974059917,
+      "conservative_shot_multiplier_at_30us": 6.049647464412944
+    },
+    {
+      "T1_us": 200.0,
+      "T2_us": 100.0,
+      "pair_survival_last_60us": 0.5488116360940265,
+      "pair_survival_mean_over_60us": 0.7519806065099559,
+      "coherent_pair_visibility_at_30us": 0.5488116360940265,
+      "conservative_shot_multiplier_at_30us": 3.3201169227365463
+    },
+    {
+      "T1_us": 500.0,
+      "T2_us": 25.0,
+      "pair_survival_last_60us": 0.7866278610665535,
+      "pair_survival_mean_over_60us": 0.8890505788893606,
+      "coherent_pair_visibility_at_30us": 0.2671353019658504,
+      "conservative_shot_multiplier_at_30us": 14.013203607733612
+    },
+    {
+      "T1_us": 500.0,
+      "T2_us": 50.0,
+      "pair_survival_last_60us": 0.7866278610665535,
+      "pair_survival_mean_over_60us": 0.8890505788893606,
+      "coherent_pair_visibility_at_30us": 0.4867522559599717,
+      "conservative_shot_multiplier_at_30us": 4.220695816996552
+    },
+    {
+      "T1_us": 500.0,
+      "T2_us": 100.0,
+      "pair_survival_last_60us": 0.7866278610665535,
+      "pair_survival_mean_over_60us": 0.8890505788893606,
+      "coherent_pair_visibility_at_30us": 0.6570468198150567,
+      "conservative_shot_multiplier_at_30us": 2.316366976781092
+    }
+  ],
+  "unresolved_mechanisms": "Pair-selective drive and spectroscopic contrast, independent two-boson loading, frequency drift, Kerr nonuniformity, correlated two-photon loss, qubit leakage, phase reference, readout and reset need laboratory measurements. Assumed 160MHz Kerr and 5MHz couplings are specifications, not experimentally demonstrated.",
+  "numerical_prediction": "Even if an assumed T2 supports nominal linewidth smaller than the 0.182MHz gap, short T1 destroys a large fraction of two-particle survival and can overwhelm shot-count advantages. The absolute 160MHz carrier and 0.182MHz gap imply demanding frequency calibration across two orders of magnitude.",
+  "status_of_completion": "Completed analytic hardware resource and decoherence acceptance calculations for five assumed T1 values and three assumed T2 values; no actual hardware test or physically calibrated parameters supplied."
+}

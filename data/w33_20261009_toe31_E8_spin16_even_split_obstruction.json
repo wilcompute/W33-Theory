@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "source": "Standard E8 maximal D8 branching 248=120_so16+128_halfspin, and standard complex halfspin factor branching.",
+  "theorem": "Let G be a finite PERFECT group acting inside Spin16 (or its E8 HSpin16 image), whose 16D complex orthogonal vector representation decomposes as a direct sum of two nondegenerate G-invariant orthogonal even-dimensional subspaces of dimensions a and b=16-a, with 4<=a<=12. Then the restricted E8 adjoint is a direct sum of G-invariant modules of dimension at most66 from so16 and two 64D halfspin pieces. It contains NO irreducible 81-dimensional constituent, including the W33 Steinberg81.",
+  "proof": "As G is perfect, its determinant characters on each invariant Va and Vb must be trivial, so its image preserves the oriented SO(a)\u00d7SO(b) factors and cannot exchange halfspin summands. Under Spin(a)\u00d7Spin(b), so16=\u039b\u00b2Va\u2295\u039b\u00b2Vb\u2295(Va\u2297Vb), dimensions binom(a,2),binom(b,2),ab. The selected halfspin128 decomposes (S_a^+\u2297S_b^+)\u2295(S_a^-\u2297S_b^-), each of dimension 2^(a/2-1+b/2-1)=64. Enumerate a=4,6,8,10,12: all adj pieces<=66 and spin pieces64. Over C finite-group representations are semisimple; an irrep of dimension81 cannot occur within any invariant summand <81.",
+  "cases": [
+    {
+      "even_orthogonal_submodule_dimensions": [
+        4,
+        12
+      ],
+      "so16_G_invariant_blocks": [
+        6,
+        66,
+        48
+      ],
+      "halfspin_G_invariant_blocks": [
+        64,
+        64
+      ],
+      "largest_invariant_block": 66,
+      "St81_multiplicity": 0
+    },
+    {
+      "even_orthogonal_submodule_dimensions": [
+        6,
+        10
+      ],
+      "so16_G_invariant_blocks": [
+        15,
+        45,
+        60
+      ],
+      "halfspin_G_invariant_blocks": [
+        64,
+        64
+      ],
+      "largest_invariant_block": 64,
+      "St81_multiplicity": 0
+    },
+    {
+      "even_orthogonal_submodule_dimensions": [
+        8,
+        8
+      ],
+      "so16_G_invariant_blocks": [
+        28,
+        28,
+        64
+      ],
+      "halfspin_G_invariant_blocks": [
+        64,
+        64
+      ],
+      "largest_invariant_block": 64,
+      "St81_multiplicity": 0
+    },
+    {
+      "even_orthogonal_submodule_dimensions": [
+        10,
+        6
+      ],
+      "so16_G_invariant_blocks": [
+        45,
+        15,
+        60
+      ],
+      "halfspin_G_invariant_blocks": [
+        64,
+        64
+      ],
+      "largest_invariant_block": 64,
+      "St81_multiplicity": 0
+    },
+    {
+      "even_orthogonal_submodule_dimensions": [
+        12,
+        4
+      ],
+      "so16_G_invariant_blocks": [
+        66,
+        6,
+        48
+      ],
+      "halfspin_G_invariant_blocks": [
+        64,
+        64
+      ],
+      "largest_invariant_block": 66,
+      "St81_multiplicity": 0
+    }
+  ],
+  "concrete_PSp4_3_SO16_candidate": "The ATLAS G=PSp4(3) complex 5a,5b=5a*,6_real gives a faithful real/orthogonal 16D representation 5a\u22955b\u22956, splitting into nondegenerate orthogonal 10D and 6D submodules. Every LIFT of this orthogonal action to E8 HSpin16 (if any exists) has St81 multiplicity0 by the dimension theorem.",
+  "candidate_SO16_blocks": {
+    "adjoint": [
+      45,
+      15,
+      60
+    ],
+    "halfspin": [
+      64,
+      64
+    ]
+  },
+  "candidate_spin_lift_warning": "An orthogonal G->SO16 homomorphism need not lift to the Spin16 central extension and need not define the relevant HSpin16 subgroup of E8. The theorem is conditional on such an E8 embedding existing; it nevertheless excludes Steinberg81 in any such lifted candidate.",
+  "surviving_spin16_cases": "An irreducible 16D orthogonal PSp module, odd+odd decompositions and 2+14 splits are NOT excluded by this argument. Neither existence nor irreducible Steinberg81 character restriction in those cases was computed.",
+  "interpretation": "A stronger subgroup-generic E8 no-go than the Round30 F4xG2 closure for this broad, explicitly stated class of reducible D8 embeddings. Does not prove an overall E8 embedding no-go or physical matter.",
+  "sources": [
+    "https://arxiv.org/abs/math/0607640",
+    "https://brauer.maths.qmul.ac.uk/Atlas/v3/clas/U42/"
+  ]
+}
