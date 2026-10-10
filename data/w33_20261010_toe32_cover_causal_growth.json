@@ -1,0 +1,382 @@
+{
+  "status": "PASS",
+  "base": "connected degree17 W33 Levi cover with 1360 vertices and exact girth10",
+  "n": 1360,
+  "degree": 4,
+  "girth": 10,
+  "sampled_root_ball_growth": [
+    {
+      "root": 0,
+      "diameter_eccentricity": 9,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        271,
+        462,
+        368,
+        97
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        432,
+        894,
+        1262,
+        1359
+      ]
+    },
+    {
+      "root": 1,
+      "diameter_eccentricity": 9,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        271,
+        462,
+        368,
+        97
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        432,
+        894,
+        1262,
+        1359
+      ]
+    },
+    {
+      "root": 16,
+      "diameter_eccentricity": 9,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        271,
+        462,
+        368,
+        97
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        432,
+        894,
+        1262,
+        1359
+      ]
+    },
+    {
+      "root": 17,
+      "diameter_eccentricity": 8,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        282,
+        475,
+        358,
+        84
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        443,
+        918,
+        1276,
+        1360
+      ]
+    },
+    {
+      "root": 34,
+      "diameter_eccentricity": 9,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        281,
+        467,
+        358,
+        92
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        442,
+        909,
+        1267,
+        1359
+      ]
+    },
+    {
+      "root": 51,
+      "diameter_eccentricity": 8,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        279,
+        462,
+        361,
+        97
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        440,
+        902,
+        1263,
+        1360
+      ]
+    },
+    {
+      "root": 68,
+      "diameter_eccentricity": 8,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        277,
+        464,
+        363,
+        95
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        438,
+        902,
+        1265,
+        1360
+      ]
+    },
+    {
+      "root": 85,
+      "diameter_eccentricity": 8,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        267,
+        461,
+        373,
+        98
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        428,
+        889,
+        1262,
+        1360
+      ]
+    },
+    {
+      "root": 170,
+      "diameter_eccentricity": 9,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        285,
+        460,
+        354,
+        99
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        446,
+        906,
+        1260,
+        1359
+      ]
+    },
+    {
+      "root": 340,
+      "diameter_eccentricity": 9,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        272,
+        457,
+        366,
+        102
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        433,
+        890,
+        1256,
+        1358
+      ]
+    },
+    {
+      "root": 680,
+      "diameter_eccentricity": 8,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        273,
+        465,
+        367,
+        94
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        434,
+        899,
+        1266,
+        1360
+      ]
+    },
+    {
+      "root": 1000,
+      "diameter_eccentricity": 8,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        269,
+        470,
+        371,
+        89
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        430,
+        900,
+        1271,
+        1360
+      ]
+    },
+    {
+      "root": 1359,
+      "diameter_eccentricity": 8,
+      "first_nine_shell_sizes": [
+        1,
+        4,
+        12,
+        36,
+        108,
+        282,
+        471,
+        358,
+        88
+      ],
+      "radius_0_to_8_balls": [
+        1,
+        5,
+        17,
+        53,
+        161,
+        443,
+        914,
+        1272,
+        1360
+      ]
+    }
+  ],
+  "infinite_degree4_tree_shell_r0_to4": [
+    1,
+    4,
+    12,
+    36,
+    108
+  ],
+  "sampled_native_ball_counts_r0_to4": [
+    1,
+    5,
+    17,
+    53,
+    161
+  ],
+  "cubic_Z3_spatial_ball_counts_r0_to4": [
+    1,
+    7,
+    25,
+    63,
+    129
+  ],
+  "exact_reason": "In a 4-regular graph of girth 10 the rooted neighborhood through radius4 is a tree, so shells grow as 4*3^(r-1) for 1<=r<=4. By contrast Z3 cubic lattice ball volume = (4r\u00b3+6r\u00b2+8r+3)/3; this is imposed locality, not the same volume growth.",
+  "t_dimensionless": 0.1,
+  "conservative_continuous_time_amplitude_upper_bound_by_distance": {
+    "1": 0.49182469764127035,
+    "2": 0.09182469764127044,
+    "3": 0.011824697641270365,
+    "4": 0.001158030974603541,
+    "5": 9.13643079369919e-05,
+    "6": 6.030974603721262e-06,
+    "7": 3.4208571464411364e-07,
+    "8": 1.7006349661841114e-08
+  },
+  "quantum_dynamical_no_strict_cone": "For U(t)=exp(-it A), the Taylor coefficient for first nonzero graph-distance d is (-i)^d(A^d)uv/d!, nonzero because positive walk count. Thus a strictly vanishing finite-speed cone is not a property of continuous-time finite-range quantum hopping; approximate Lieb\u2013Robinson behavior is possible instead. The tail bound uses graph max row sum4.",
+  "distinction": "No physical spacetime, metric, universal c, Einstein dynamics or critical spectral dimension derived. Existing Round28 LEAPFROG strict discrete step-cone uses a different dynamical update."
+}

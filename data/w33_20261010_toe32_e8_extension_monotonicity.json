@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "parallel_certificate_filename": "data/w33_pass11843_e8_tits_lorentz_commutant.json",
+  "parallel_certificate_top_level_keys": [
+    "pass_id",
+    "e8",
+    "subsystems",
+    "tits_automorphism_max_error",
+    "commutants"
+  ],
+  "lorentz_tits_centralizer": "su(3)\u2295su(2)",
+  "dimension": 11,
+  "algebraic_centre_dimension": 0,
+  "statement": "For any H with L\u2282H\u2282Aut(e8), c_e8(H)\u2282c_e8(L)=su3\u2295su2. Therefore any extension by finite translations cannot add a commuting independent hypercharge u1 while retaining the full su3 and su2 as the commutant: the centralizer of su3\u2295su2 inside itself is zero. Any subalgebra containing the full su3\u2295su2 and extra line within the same c_e8(L) is impossible by dimension11.",
+  "converse_limit": "A subalgebra of su3+su2 can have a nontrivial centre after symmetry reduction, but that centre cannot coexist with the FULL original su3+su2 (dimension11). Translation extension may preserve 11 or reduce it, not reach the Standard Model total dimension12.",
+  "comparison": "Weil E8 route has commutant u1 but is a distinct representation, and direct sums of commutants from inequivalent actions are not a single E8 representation. To obtain SM gauge commutant SU3xSU2xU1 with same finite Lorentz target, must change embedding, enlarge Lie algebra, or abandon commutant identification.",
+  "novelty_boundary": "The dimension11 and centre0 and Weil u1 are prior parallel Pass11837 and 11843 results; the subgroup-extension monotonicity deduction and hypercharge obstruction for all containing groups in the FIXED Tits embedding are new here. No actual 248-dimensional subgroup action for translations constructed.",
+  "source": "analysis/PASS11839_11843_CROSSCAP_HOLOGRAPHY_FREE_FIELDS_E8_COMMUTANT.md"
+}

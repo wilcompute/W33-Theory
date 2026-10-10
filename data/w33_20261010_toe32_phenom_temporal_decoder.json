@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "model": "5-round iid data-X/Z errors on 160 links (each channel probability pd, nonzero F3 Pauli uniform); 80 Wilson-Z+79 Gauss-X check reports independently incorrect with probability pm, shifted by \u00b11 equiprobably. Independent 3-state forward Bayesian filter per check with assumed symmetric change probability weight*pd; truth couples checks through same data errors, thus filter is APPROXIMATE, not exact MAP on code.",
+  "runs": [
+    {
+      "p_data_per_channel_per_round": 0.0005,
+      "p_measurement_per_check": 0.01,
+      "rounds": 5,
+      "trials": 180,
+      "average_wrong_final_check_values_raw": 1.55,
+      "average_wrong_final_check_values_temporal": 0.4444444444444444,
+      "shots_with_any_wrong_check_raw": 144,
+      "shots_with_any_wrong_check_temporal": 40,
+      "logical_recovery_failures_raw": 144,
+      "logical_recovery_failures_temporal": 40,
+      "ideal_syndrome_recovery_failures": 1
+    },
+    {
+      "p_data_per_channel_per_round": 0.0005,
+      "p_measurement_per_check": 0.02,
+      "rounds": 5,
+      "trials": 180,
+      "average_wrong_final_check_values_raw": 3.1777777777777776,
+      "average_wrong_final_check_values_temporal": 0.7055555555555556,
+      "shots_with_any_wrong_check_raw": 171,
+      "shots_with_any_wrong_check_temporal": 35,
+      "logical_recovery_failures_raw": 171,
+      "logical_recovery_failures_temporal": 35,
+      "ideal_syndrome_recovery_failures": 0
+    },
+    {
+      "p_data_per_channel_per_round": 0.0005,
+      "p_measurement_per_check": 0.04,
+      "rounds": 5,
+      "trials": 180,
+      "average_wrong_final_check_values_raw": 6.588888888888889,
+      "average_wrong_final_check_values_temporal": 0.8166666666666667,
+      "shots_with_any_wrong_check_raw": 180,
+      "shots_with_any_wrong_check_temporal": 53,
+      "logical_recovery_failures_raw": 180,
+      "logical_recovery_failures_temporal": 53,
+      "ideal_syndrome_recovery_failures": 1
+    }
+  ],
+  "source_check_geometry": "Native 80 weight8 and 79 weight4 rows of [[160,1,8]]_3",
+  "important_limit": "Does not simulate GHZ/CZ gates, cat postselection, non-Pauli noise, coherent leakage, causal syndrome circuitry or fault-tolerant spacetime matching. Independently filtering check histories can output inconsistent measured syndromes, therefore decoder may still fail. Seeded finite Monte Carlo cannot establish noise threshold.",
+  "acceptance": "Compared both reported syndrome accuracy and full radius3 decoder stabilizer-equivalent logical recovery, plus ideal-syndrome reference."
+}

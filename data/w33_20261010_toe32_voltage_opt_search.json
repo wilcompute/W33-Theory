@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "attempts": [
+    {
+      "p": 4,
+      "found": false,
+      "best_violations": 255,
+      "trials": 15000
+    },
+    {
+      "p": 5,
+      "found": false,
+      "best_violations": 178,
+      "trials": 15000
+    },
+    {
+      "p": 7,
+      "found": false,
+      "best_violations": 88,
+      "trials": 18000
+    },
+    {
+      "p": 8,
+      "found": false,
+      "best_violations": 65,
+      "trials": 15000
+    },
+    {
+      "p": 11,
+      "found": false,
+      "best_violations": 23,
+      "trials": 30000
+    },
+    {
+      "p": 13,
+      "found": false,
+      "best_violations": 8,
+      "trials": 48000
+    }
+  ],
+  "successful_degrees": [],
+  "frozen_rng": "np.random.default_rng(320000+p) for each p",
+  "scope": "Stochastic search, success is a checkable certificate; all failed p are UNKNOWN, not proven infeasible. No further claims of minimal cover degree.",
+  "binary_double_cover_impossible": "Already exact GF2 no-go from Round31; cyclic p4 or p8 are not ruled out."
+}
