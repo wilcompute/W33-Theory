@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "selected_chords": [
+    59,
+    93,
+    139
+  ],
+  "n_zero_winding_native_octagons": 1382,
+  "zero_winding_8cycle_rank_at_zero": 78,
+  "exact_F3_rank_zero_winding_8cycles": 78,
+  "nonzero_winding_octagons": 238,
+  "full_octagon_deck_winding_histogram": {
+    "(np.int64(0), np.int64(0), np.int64(0))": 1382,
+    "(np.int64(0), np.int64(-1), np.int64(0))": 37,
+    "(np.int64(-1), np.int64(0), np.int64(0))": 44,
+    "(np.int64(0), np.int64(0), np.int64(1))": 21,
+    "(np.int64(1), np.int64(0), np.int64(0))": 35,
+    "(np.int64(0), np.int64(0), np.int64(-1))": 56,
+    "(np.int64(0), np.int64(1), np.int64(0))": 40,
+    "(np.int64(1), np.int64(1), np.int64(0))": 1,
+    "(np.int64(0), np.int64(1), np.int64(-1))": 2,
+    "(np.int64(-1), np.int64(0), np.int64(-1))": 1,
+    "(np.int64(0), np.int64(-1), np.int64(1))": 1
+  },
+  "commutator_plaquette_lengths": [
+    32,
+    40,
+    40
+  ],
+  "cases": [
+    {
+      "k": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "base_gradient_rank": 79,
+      "plaquette_boundary_rank": 78,
+      "transverse_harmonic_dim": 3,
+      "max_d1_d2_violation": 0.0,
+      "lowest_transverse_curl_eigenvalues": []
+    },
+    {
+      "k": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "base_gradient_rank": 80,
+      "plaquette_boundary_rank": 80,
+      "transverse_harmonic_dim": 0,
+      "max_d1_d2_violation": 0.0,
+      "lowest_transverse_curl_eigenvalues": [
+        0.0007618634008122096,
+        0.0008207329778417791,
+        99.59238685942914,
+        105.08149184470994,
+        110.9221310170393
+      ]
+    },
+    {
+      "k": [
+        0.01,
+        0.0,
+        0.0
+      ],
+      "base_gradient_rank": 80,
+      "plaquette_boundary_rank": 80,
+      "transverse_harmonic_dim": 0,
+      "max_d1_d2_violation": 0.0,
+      "lowest_transverse_curl_eigenvalues": [
+        0.00019047360548238925,
+        0.00020519068074822331,
+        99.59229609825707,
+        105.08144918582194,
+        110.92205090234383
+      ]
+    },
+    {
+      "k": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "base_gradient_rank": 80,
+      "plaquette_boundary_rank": 80,
+      "transverse_harmonic_dim": 0,
+      "max_d1_d2_violation": 0.0,
+      "lowest_transverse_curl_eigenvalues": [
+        0.0007806715446190096,
+        0.0008009595321698712,
+        99.59233159795248,
+        105.0815191592125,
+        110.92224890297169
+      ]
+    },
+    {
+      "k": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "base_gradient_rank": 80,
+      "plaquette_boundary_rank": 80,
+      "transverse_harmonic_dim": 0,
+      "max_d1_d2_violation": 0.0,
+      "lowest_transverse_curl_eigenvalues": [
+        0.0007806674883483782,
+        0.0008009636203012388,
+        99.59234074191265,
+        105.08155275380557,
+        110.92225548736387
+      ]
+    },
+    {
+      "k": [
+        0.02,
+        0.017,
+        -0.012
+      ],
+      "base_gradient_rank": 80,
+      "plaquette_boundary_rank": 80,
+      "transverse_harmonic_dim": 0,
+      "max_d1_d2_violation": 1.0739476078640045e-16,
+      "lowest_transverse_curl_eigenvalues": [
+        0.0016108965151611148,
+        0.001718869861973887,
+        99.59247087524733,
+        105.08168096691173,
+        110.92248784474633
+      ]
+    }
+  ],
+  "theoretical": "Genuinely closed plaquette boundaries are local zero-deck-winding octagons and three finite commutator loops. Their twisted Bloch chain maps obey B(k)\u2020\u22022(k)=0 (the discrete Bianchi law), without any all-to-all edge-cycle projector. Transverse modes correspond to divergence-free edge cochains and must not be discarded as gauge.",
+  "photons_claim": "A gauge-invariant local curl sector may allow two low-energy transverse polarizations if the plaquette rank rises from78 at zero to80 generic k, with curl eigenvalues proportional to k\u00b2. This is NOT itself quantum electrodynamics, a derived universal c, a free Maxwell physical Hamiltonian, or an observed photon.",
+  "new_vs_prior": "Round37 tested edge onsite mI (destroys z1) and dense projector (preserves z1 but nonlocal); these explicit W33 degree-8 plus commutator plaquettes offer a third, finite-range derivative/gauge completion subject to rank tests."
+}

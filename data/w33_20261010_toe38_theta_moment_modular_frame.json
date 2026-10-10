@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "base_moduli": [
+    "(0.173+1.07j)",
+    "(0.286+1.29j)"
+  ],
+  "moment_series": "Theta_ab(eps)=\u03a3_{r\u22650}(6\u03c0 i eps)^r u_r(a)v_r(b)/r!, with u_r(a)=\u03a3_n(n+a/3)^r exp(3\u03c0i \u03c41(n+a/3)^2). Each order-r coefficient has matrix rank1.",
+  "determinant_first_nonzero_term": "det Theta(eps)=((6\u03c0i)^3/2) det[u0,u1,u2] det[v0,v1,v2] eps^3+O(eps^4).",
+  "determinant_leading_coefficient_magnitude": 0.141459528610544,
+  "eps_magnitudes": [
+    0.024000000000000004,
+    0.012000000000000002,
+    0.006000000000000001
+  ],
+  "singular_values": [
+    [
+      1.1804846165771063,
+      0.007821048221688677,
+      0.0002117094148764655
+    ],
+    [
+      1.1805034774780756,
+      0.00391136325154578,
+      5.293347549942698e-05
+    ],
+    [
+      1.1805081933929609,
+      0.0019557865303635826,
+      1.3233751434231926e-05
+    ]
+  ],
+  "log2_halfsize_slopes_sigma2_sigma3": [
+    0.9996904521691165,
+    1.9998331420191857
+  ],
+  "leading_determinant_relative_errors": [
+    0.0006287858106851214,
+    0.00015721440243841446,
+    3.93047214265275e-05
+  ],
+  "CP_schmidt_invariance_max_abs_difference": 0.0,
+  "modular_shear_CZ_coefficient_error": 4.654751537338637e-17,
+  "product_original_normalized_small_singular_values": [
+    1.0,
+    3.979108615031052e-17,
+    2.3316278037216933e-17
+  ],
+  "product_after_integral_omega12_shear_normalized_singular_values": [
+    1.0,
+    0.2002218970334707,
+    0.13269249105191228
+  ],
+  "entropy_before_shear_nats": -0.0,
+  "entropy_after_shear_nats": 0.24525480269032557,
+  "interpretation": "The 1:eps:eps\u00b2 hierarchy of Pass11872 arises from a rank1 moment expansion, not a free mass prediction. The modular transformation Omega12\u2192Omega12+1 acts via ENTANGLING CZ on a marked two-qutrit tensor factorization and generally maps a rank1 theta matrix to rank3, although the principally polarised torus is modularly equivalent. Therefore Schmidt entropy in a fixed marking is NOT a physical modular-invariant observable. By contrast generalised CP complex conjugates the state and preserves its Schmidt singular values.",
+  "source_priority": "Pass11869\u201311873 already established the theta-Clifford transform and observed Schmidt scaling. New here: explicit determinant leading coefficient, cross-checked singular slopes, and modular-frame/gauge noninvariance of two-qutrit entanglement under shear.",
+  "physics_boundary": "No Yukawa map, chiral fermions, fixed modulus, dynamical CP breaking, or physical generations obtained."
+}
