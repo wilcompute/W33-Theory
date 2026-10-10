@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "small_explicit_sparse_stabilizers": [
+    {
+      "q": 2,
+      "underlying_GQ_E": 45,
+      "underlying_incidence_check_rank": 29,
+      "physical_qutrits": 2866,
+      "independent_X_stabilizer_rank": 1305,
+      "independent_Z_stabilizer_rank": 1305,
+      "logical_qutrits": 256,
+      "exact_code_parameters": "[[2866,256,8]]_3",
+      "rate": 0.08932309839497557,
+      "logical_Z_weight_eight_witness": true,
+      "Hx_matrix_shape": [
+        1305,
+        2866
+      ],
+      "Hz_matrix_shape": [
+        1305,
+        2866
+      ],
+      "max_check_weight": 5,
+      "max_qudit_X_check_degree": 3,
+      "certified_distance_upper": 8,
+      "certified_distance_lower": 8
+    },
+    {
+      "q": 3,
+      "underlying_GQ_E": 160,
+      "underlying_incidence_check_rank": 79,
+      "physical_qutrits": 31841,
+      "independent_X_stabilizer_rank": 12640,
+      "independent_Z_stabilizer_rank": 12640,
+      "logical_qutrits": 6561,
+      "exact_code_parameters": "[[31841,6561,8]]_3",
+      "rate": 0.20605508620960397,
+      "logical_Z_weight_eight_witness": true,
+      "Hx_matrix_shape": [
+        12640,
+        31841
+      ],
+      "Hz_matrix_shape": [
+        12640,
+        31841
+      ],
+      "max_check_weight": 6,
+      "max_qudit_X_check_degree": 4,
+      "certified_distance_upper": 8,
+      "certified_distance_lower": 8
+    }
+  ],
+  "analytic_q_family": [
+    {
+      "q": 2,
+      "physical_qutrits": 2866,
+      "logical_qutrits": 256,
+      "rate": 0.08932309839497557,
+      "code_distance": 8,
+      "variable_check_weight_at_most_q_plus_3": 5
+    },
+    {
+      "q": 3,
+      "physical_qutrits": 31841,
+      "logical_qutrits": 6561,
+      "rate": 0.20605508620960397,
+      "code_distance": 8,
+      "variable_check_weight_at_most_q_plus_3": 6
+    },
+    {
+      "q": 5,
+      "physical_qutrits": 972817,
+      "logical_qutrits": 390625,
+      "rate": 0.40154006354740923,
+      "code_distance": 8,
+      "variable_check_weight_at_most_q_plus_3": 8
+    },
+    {
+      "q": 7,
+      "physical_qutrits": 10878401,
+      "logical_qutrits": 5764801,
+      "rate": 0.52993091539832,
+      "code_distance": 8,
+      "variable_check_weight_at_most_q_plus_3": 10
+    },
+    {
+      "q": 11,
+      "physical_qutrits": 317201953,
+      "logical_qutrits": 214358881,
+      "rate": 0.6757804577577743,
+      "code_distance": 8,
+      "variable_check_weight_at_most_q_plus_3": 14
+    },
+    {
+      "q": 31,
+      "physical_qutrits": 974188863233,
+      "logical_qutrits": 852891037441,
+      "rate": 0.8754883879605706,
+      "code_distance": 8,
+      "variable_check_weight_at_most_q_plus_3": 34
+    },
+    {
+      "q": 101,
+      "physical_qutrits": 11270372371402513,
+      "logical_qutrits": 10828567056280801,
+      "rate": 0.9607994039094262,
+      "code_distance": 8,
+      "variable_check_weight_at_most_q_plus_3": 104
+    }
+  ],
+  "theorem": "Tensor the native W(3,q)  (V-1)xE ternary vertex-edge incidence check H with itself using the Tillich-Zemor hypergraph-product CSS recipe. Physical n=E^2+(V-1)^2, encoded k=(E-V+1)^2=q^8, and (for full-row-rank H with girth8 classical cycle code) distance exactly8. The HGP lower bound d>=8 and an explicit weight-eight logical Z witness give equality. Rate k/n tends to1 as q->infinity, but distance remains8.",
+  "interpretation": "The HGP construction solves POSITIVE RATE but NOT GROWING DISTANCE. A high-rate code with fixed distance cannot correct a growing number of worst-case errors. Check weight grows <=q+3; not bounded-LDPC as q grows.",
+  "alternative_conditional": "Replacing the building Levi graph by a bounded-degree large-girth graph family with linear cycle-space rank would give, by the same HGP theorem, a constant-rate quantum code with distance growing as that girth, generally O(log n) for bounded-degree graphs. This is a graph-theoretic alternative, NOT a W33-derived theorem or a polynomial-distance topological code.",
+  "proof_boundary": "Uses standard hypergraph-product minimum distance lower bound and full-row-rank classical incidence matrices. Validated explicit q2/q3 CSS commutation and ranks from formula, and an eight-link logical witness. No decoder/noisy threshold for HGP itself.",
+  "sources": [
+    "https://arxiv.org/abs/0903.0566"
+  ]
+}

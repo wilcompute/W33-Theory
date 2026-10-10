@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "G": "PSp(4,3) order25920",
+  "branching": {
+    "F4xG2": {
+      "adjF4": 52,
+      "adjG2": 14,
+      "tensor26x7": 182
+    },
+    "E7xA1": {
+      "adjE7": 133,
+      "adjA1": 3,
+      "tensor56x2": 112
+    },
+    "Spin16": {
+      "adjSO16": 120,
+      "halfspin": 128
+    }
+  },
+  "no_go_F4_only": true,
+  "no_go_G2_only": true,
+  "F4_only_largest_G_invariant_block": 52,
+  "G2_only_largest_G_invariant_block": 14,
+  "E7_A1_trivial_A1_under_simple_G": true,
+  "E7_factor_only_invariant_block_dimensions": [
+    133,
+    56,
+    56,
+    1,
+    1,
+    1
+  ],
+  "necessary_host_for_St81_in_E7xA1": "E7 adjoint133 only; the 56x2 and A1 adjoint cannot contain 81 after SL2 projection is trivial.",
+  "necessary_host_for_St81_in_F4xG2": "(26,7) 182D mixed tensor ONLY if PSp has nontrivial actions in both F4 and G2. Factor-only embeddings rigorously exclude St81.",
+  "necessary_host_for_St81_in_SO16": "SO16 adjoint120 OR halfspin128; dimensional screening alone cannot decide either.",
+  "proof": "For factor-only F4, the adjoint248 has invariant blocks 52, 14 scalar singlets, and seven copies of26, all strictly less than81; similarly for G2 alone, blocks14,52 scalar singlets,26 copies of7. For E7xA1, a nontrivial homomorphism of simple PSp4(3) to SL2(C) would be an injection up to finite center, impossible by the finite-subgroup classification of PGL2(C); hence A1 factor is trivial and two copies of 56 and three singlets exclude St81 except possibly in the adjoint133.",
+  "honest_boundary": "These are exact conditional representation-theoretic screening statements, NOT actual exceptional-subgroup embeddings of PSp4(3), class fusions, Lie brackets, nor evidence an 81D constituent exists. Diagonal F4xG2, E7 adjoint133, SO16 120/128, and exceptional non-maximal embeddings remain open.",
+  "sources": [
+    "https://citeseerx.ist.psu.edu/document?doi=d31040221791fece0816c9adfa04522248c27456&repid=rep1&type=pdf",
+    "https://en.wikipedia.org/wiki/E8_(mathematics)"
+  ]
+}

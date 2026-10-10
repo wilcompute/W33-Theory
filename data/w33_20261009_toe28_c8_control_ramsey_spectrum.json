@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "n_physical_sites": 8,
+  "n_links": 8,
+  "two_boson_Fock_dimension": 36,
+  "U_over_t": 32,
+  "t_over_h_assumed_MHz": 5.0,
+  "phase_reference_carrier_MHz": -160.6231807658977,
+  "acquisition_us": 60.0,
+  "sample_step_us": 0.1,
+  "shots_per_quadrature_per_time": 8192,
+  "total_estimated_shots": 9846784,
+  "assumed_T2_us": 100.0,
+  "expected_demodulated_five_band_freq_MHz": [
+    -0.6219742717421752,
+    -0.44022707062408983,
+    -0.0006032807591225264,
+    0.4402271043055066,
+    0.623180765897672
+  ],
+  "recovered_synthetic_five_band_freq_MHz": [
+    -0.6156405990016639,
+    -0.43261231281198,
+    -0.0,
+    0.43261231281198,
+    0.6156405990016639
+  ],
+  "max_abs_recovery_error_MHz": 0.007614791493526618,
+  "bound_to_scattering_probability": 0.0038722858752163474,
+  "first_gap_MHz": 0.1817472011180854,
+  "ten_gap_cycles_us": 55.0214800474576,
+  "probability_only_dominant_positive_frequency_MHz": 0.016638935108153077,
+  "reference_readout": "Complex A(t) referenced to a known pair-energy oscillator retains signed band frequencies. |A(t)|\u00b2 has only band differences; it cannot generally recover absolute band energies. Quantum control to perform this complex measurement must be designed and physically validated.",
+  "control_sequence": [
+    {
+      "step": 1,
+      "operation": "CALIBRATE_SITE_FREQUENCIES",
+      "targets": 8,
+      "fit": "site detunings"
+    },
+    {
+      "step": 2,
+      "operation": "CALIBRATE_RING_HOPPING",
+      "targets": 8,
+      "fit": "eight t_i"
+    },
+    {
+      "step": 3,
+      "operation": "CALIBRATE_ONSITE_ATTRACTION",
+      "targets": 8,
+      "fit": "U_i>0 in H=-U_i n_i(n_i-1)/2"
+    },
+    {
+      "step": 4,
+      "operation": "PREPARE_DOUBLON",
+      "state": "|2_0> on site 0, others vacuum"
+    },
+    {
+      "step": 5,
+      "operation": "REFERENCE_FRAME",
+      "frequency_MHz": -160.6231807658977,
+      "basis": "complex pair-coherence quadratures, not probability only"
+    },
+    {
+      "step": 6,
+      "operation": "FREE_EVOLUTION_SWEEP",
+      "first_us": 0.0,
+      "last_us": 60.0,
+      "sample_step_us": 0.1,
+      "n_samples": 601
+    },
+    {
+      "step": 7,
+      "operation": "MEASURE_IQ",
+      "shots_per_quadrature_per_time": 8192,
+      "hypothetical_T2_us": 100.0
+    },
+    {
+      "step": 8,
+      "operation": "FIT_FIVE_BINDING_BANDS",
+      "method": "demodulated complex Fourier spectrum and 36-state model"
+    },
+    {
+      "step": 9,
+      "operation": "INDEPENDENT_VALIDATION",
+      "measure": "pair continuum leakage, site-resolved pair events, loss and phase reference"
+    }
+  ],
+  "caveat": "All 60us simulated IQ traces and shot noise are synthetic. No instrument calibration, feasible entangled reference or 80-site W33 demonstration is claimed. Hypothetical long coherence and 8192 shots per quadrature per time imply about 9.85 million samples, a substantial resource requirement."
+}

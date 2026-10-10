@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "code": "[[160,1,8]]_3",
+  "Wilson_weight8_check_count": 80,
+  "Gauss_weight4_check_count": 79,
+  "physical_SUM_gates_per_full_round": 956,
+  "ancilla_preparations_and_measurements_per_round": 159,
+  "noise_model": "Sequential syndrome extraction: Wilson Z measured with data->ancilla SUM^h on |0> ancilla; Gauss X measured with ancilla->data SUM^h on |+> ancilla. Exact F3 Pauli conjugation x_target+=h*x_control,z_control-=h*z_target; independent two-qutrit nonidentity Pauli inserted after each SUM with probability p_gate; ancilla prep and readout flips independently per check.",
+  "simulation": {
+    "g0_p0": {
+      "p_data": 0.002,
+      "p_gate": 0,
+      "p_prep": 0,
+      "p_meas": 0,
+      "trials": 160,
+      "failures": 0,
+      "failure_rate": 0.0,
+      "no_syndrome_decoder_result": 0,
+      "total_injected_gate_prep_measure_faults": [
+        0,
+        0,
+        0
+      ]
+    },
+    "g0.0001_p0.0001": {
+      "p_data": 0.002,
+      "p_gate": 0.0001,
+      "p_prep": 0.0001,
+      "p_meas": 0.0001,
+      "trials": 160,
+      "failures": 13,
+      "failure_rate": 0.08125,
+      "no_syndrome_decoder_result": 5,
+      "total_injected_gate_prep_measure_faults": [
+        7,
+        5,
+        3
+      ]
+    },
+    "g0.0003_p0.0003": {
+      "p_data": 0.002,
+      "p_gate": 0.0003,
+      "p_prep": 0.0003,
+      "p_meas": 0.0003,
+      "trials": 160,
+      "failures": 58,
+      "failure_rate": 0.3625,
+      "no_syndrome_decoder_result": 30,
+      "total_injected_gate_prep_measure_faults": [
+        58,
+        8,
+        10
+      ]
+    },
+    "g0.001_p0.001": {
+      "p_data": 0.002,
+      "p_gate": 0.001,
+      "p_prep": 0.001,
+      "p_meas": 0.001,
+      "trials": 160,
+      "failures": 116,
+      "failure_rate": 0.725,
+      "no_syndrome_decoder_result": 70,
+      "total_injected_gate_prep_measure_faults": [
+        153,
+        23,
+        36
+      ]
+    }
+  },
+  "maximum_single_ancilla_Z_hook_on_Wilson_data_Z": 7,
+  "maximum_single_ancilla_X_hook_on_Gauss_data_X": 3,
+  "hook_consequence": "A single ancilla phase error during an eight-link Wilson check can generate a correlated Z data error of weight up to seven, even though the code distance is eight. These hook faults are outside the guaranteed <=3 arbitrary-data-error correction radius. The circuit ordering must be optimized for fault tolerance.",
+  "correctness": "Scores correction modulo X Gauss and Z Wilson stabilizer equivalence, not literal physical-error equality.",
+  "disclaimer": "Full one-round circuit-level qutrit Pauli-channel model; NOT repeated fault-tolerant rounds, noisy gauge-fixing, leakage, coherent gate errors, or a demonstrated threshold. Zero failures in finite Monte Carlo samples does not prove fault tolerance."
+}
