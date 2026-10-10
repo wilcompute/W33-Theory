@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "group_order": 25920,
+  "representation": "W33 Levi 81D irreducible Steinberg over characteristic zero",
+  "invariant_dimensions": {
+    "sym3": 4,
+    "exterior3": 5,
+    "S21": 6,
+    "wedge2_times_V": 11,
+    "V_squared": 1,
+    "V_trace": 0
+  },
+  "projective_similitude_group_order": 51840,
+  "extended_similitude_invariant_dimensions": {
+    "sym3": 3,
+    "exterior3": 1,
+    "S21": 3,
+    "wedge2_times_V": 4,
+    "V_squared": 1,
+    "V_trace": 0
+  },
+  "character_examples": {
+    "81": {
+      "chi": 81,
+      "chi2": 81,
+      "chi3": 81
+    },
+    "0": {
+      "chi": 0,
+      "chi2": 0,
+      "chi3": 81
+    },
+    "-3": {
+      "chi": -3,
+      "chi2": 9,
+      "chi3": -3
+    },
+    "1": {
+      "chi": 1,
+      "chi2": 1,
+      "chi3": 1
+    },
+    "-1": {
+      "chi": -1,
+      "chi2": -3,
+      "chi3": -1
+    },
+    "9": {
+      "chi": 9,
+      "chi2": 81,
+      "chi3": 9
+    }
+  },
+  "exact_formulas": {
+    "Sym3": "(chi(g)^3+3 chi(g)chi(g\u00b2)+2 chi(g\u00b3))/6",
+    "Lambda3": "(chi(g)^3-3 chi(g)chi(g\u00b2)+2 chi(g\u00b3))/6",
+    "Hom_G(Lambda2 V,V)": "average chi(g)*(chi(g)^2-chi(g\u00b2))/2 for self-dual V"
+  },
+  "physical_bridge": "E8 complex Z3 grading under E6xA2 has 248=(78+8)+81+81. Bare dimension equality is not an E8 bracket. The PSp invariant alternating cubic space has dimension five, but extending to projective GSp similitudes of order 51840 leaves EXACTLY ONE invariant alternating cubic up to scale. This gives a UNIQUE metric-compatible antisymmetric candidate on the Steinberg 81 under extended symmetry; it has not been constructed explicitly or tested for Jacobi, E6xA2 interaction grading, real form, or physical locality.",
+  "prior_art": "Existing analysis/w33_pass11681_e8_from_two_qutrits.py already builds E8 via sl9+Lambda3(9)+Lambda3(9)*; we do not re-claim this. The present representation is the DIFFERENT 81D Levi Steinberg, not an identified E8 E6xA2 matter 81."
+}

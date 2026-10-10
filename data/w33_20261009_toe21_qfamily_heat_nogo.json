@@ -1,0 +1,516 @@
+{
+  "status": "PASS",
+  "family": "native symplectic generalized quadrangle W(3,q), unmodified degree-normalized Levi Laplacian L/(q+1)",
+  "spectra_formula": "Levi graph: 0^1,(2k)^1,(k-sqrt(2q))^f,(k+sqrt(2q))^f,k^(2g), k=q+1, f=q(k+1)^2/2, g=q(q\u00b2+1)/2; total 2(k)(q\u00b2+1).",
+  "exact_asymptotic": "At fixed normalized heat time t and q -> infinity, empirical Laplacian eigenvalue distribution tends to delta_1: P_q(t)=Tr(exp(-t L/k))/|V| -> exp(-t). Therefore running spectral dimension d_s(q,t)=-2 d ln P_q/d ln t -> 2t, NOT the constant 4 (or other constant) on any finite open interval.",
+  "spectral_gap_normalized_limit": 1,
+  "finite_q_asymptotic": "At fixed q, long-time return -> 1/|V| and running dimension -> 0.",
+  "prior_art": "analysis/w33_20261009_w33_cartesian_power_spectral.py already covers the distinct n-fold Cartesian W33 replication no-go. Here we vary q in single symplectic generalized quadrangles instead.",
+  "rows": {
+    "2": {
+      "n_points": 15,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          1.0,
+          9
+        ],
+        [
+          5.0,
+          9
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.7869367964631528,
+          "running_dimension": 0.45852500362455856,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 0.04147499637544144
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6320968479625669,
+          "running_dimension": 0.8363425020953139,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 0.1636574979046861
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.43209306385510654,
+          "running_dimension": 1.378127954316136,
+          "limit_dimension": 2,
+          "distance_to_limit": 0.621872045683864
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.24378294942244869,
+          "running_dimension": 1.8953173307977336,
+          "limit_dimension": 4,
+          "distance_to_limit": 2.1046826692022664
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.11891065995896145,
+          "running_dimension": 2.228470205229985,
+          "limit_dimension": 8,
+          "distance_to_limit": 5.771529794770014
+        }
+      ],
+      "normalized_nonzero_gap": 0.3333333333333333
+    },
+    "3": {
+      "n_points": 40,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          1.5505102572168221,
+          24
+        ],
+        [
+          6.449489742783178,
+          24
+        ],
+        [
+          4,
+          30
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.7848990433073059,
+          "running_dimension": 0.4688512585891157,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 0.031148741410884306
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6256582491052856,
+          "running_dimension": 0.876598155115235,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 0.12340184488476502
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.41557018476246277,
+          "running_dimension": 1.5242567366765023,
+          "limit_dimension": 2,
+          "distance_to_limit": 0.4757432633234977
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.21358533159513624,
+          "running_dimension": 2.3223438562017065,
+          "limit_dimension": 4,
+          "distance_to_limit": 1.6776561437982935
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.0834888666380372,
+          "running_dimension": 3.096079117636466,
+          "limit_dimension": 8,
+          "distance_to_limit": 4.9039208823635345
+        }
+      ],
+      "normalized_nonzero_gap": 0.38762756430420553
+    },
+    "5": {
+      "n_points": 156,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          2.8377223398316205,
+          90
+        ],
+        [
+          9.16227766016838,
+          90
+        ],
+        [
+          6,
+          130
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.7828634973765397,
+          "running_dimension": 0.4792087406834471,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 0.0207912593165529
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6192474006922603,
+          "running_dimension": 0.9173340100812238,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 0.08266598991877616
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.39932635356495405,
+          "running_dimension": 1.6769862078907871,
+          "limit_dimension": 2,
+          "distance_to_limit": 0.3230137921092129
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.1852763776946101,
+          "running_dimension": 2.8122805194204523,
+          "limit_dimension": 4,
+          "distance_to_limit": 1.1877194805795477
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.054978814654262784,
+          "running_dimension": 4.246985780612737,
+          "limit_dimension": 8,
+          "distance_to_limit": 3.7530142193872633
+        }
+      ],
+      "normalized_nonzero_gap": 0.4729537233052701
+    },
+    "11": {
+      "n_points": 1464,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          7.30958424017657,
+          792
+        ],
+        [
+          16.69041575982343,
+          792
+        ],
+        [
+          12,
+          1342
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.7808305979724245,
+          "running_dimension": 0.4895931155440312,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 0.010406884455968823
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6128697453885285,
+          "running_dimension": 0.9584892013817599,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 0.04151079861824014
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.3834131175504826,
+          "running_dimension": 1.8357865733408865,
+          "limit_dimension": 2,
+          "distance_to_limit": 0.16421342665911354
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.15912434867538286,
+          "running_dimension": 3.3701669939711776,
+          "limit_dimension": 4,
+          "distance_to_limit": 0.6298330060288224
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.03343205985993037,
+          "running_dimension": 5.802545907576133,
+          "limit_dimension": 8,
+          "distance_to_limit": 2.1974540924238672
+        }
+      ],
+      "normalized_nonzero_gap": 0.6091320200147142
+    },
+    "31": {
+      "n_points": 30784,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          64,
+          1
+        ],
+        [
+          24.12599212598819,
+          15872
+        ],
+        [
+          39.87400787401181,
+          15872
+        ],
+        [
+          32,
+          29822
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.7795615744556907,
+          "running_dimension": 0.4960950606463223,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 0.0039049393536776944
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6089029588101114,
+          "running_dimension": 0.9843959388953656,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 0.015604061104634415
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.37365710319600776,
+          "running_dimension": 1.937833018228663,
+          "limit_dimension": 2,
+          "distance_to_limit": 0.06216698177133706
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.14396900549835745,
+          "running_dimension": 3.755202074692948,
+          "limit_dimension": 4,
+          "distance_to_limit": 0.24479792530705202
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.02328684159487145,
+          "running_dimension": 7.075569412534749,
+          "limit_dimension": 8,
+          "distance_to_limit": 0.9244305874652508
+        }
+      ],
+      "normalized_nonzero_gap": 0.753937253937131
+    },
+    "101": {
+      "n_points": 1040604,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          204,
+          1
+        ],
+        [
+          87.7873295964481,
+          525402
+        ],
+        [
+          116.2126704035519,
+          525402
+        ],
+        [
+          102,
+          1030402
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.779039410501431,
+          "running_dimension": 0.49877463616357587,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 0.0012253638364241315
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6072742592972276,
+          "running_dimension": 0.9951000600330943,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 0.004899939966905742
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.36968570632848835,
+          "running_dimension": 1.980424429861117,
+          "limit_dimension": 2,
+          "distance_to_limit": 0.019575570138882892
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.13800623216858102,
+          "running_dimension": 3.922081119909071,
+          "limit_dimension": 4,
+          "distance_to_limit": 0.07791888009092895
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.019790053268993652,
+          "running_dimension": 7.694215524438456,
+          "limit_dimension": 8,
+          "distance_to_limit": 0.305784475561544
+        }
+      ],
+      "normalized_nonzero_gap": 0.8606600940828245
+    },
+    "1001": {
+      "n_points": 1004006004,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          2004,
+          1
+        ],
+        [
+          957.2562853576059,
+          502504002
+        ],
+        [
+          1046.7437146423943,
+          502504002
+        ],
+        [
+          1002,
+          1003004002
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.7788250722703629,
+          "running_dimension": 0.4998752507991626,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 0.00012474920083738184
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6066063278600036,
+          "running_dimension": 0.999501018773652,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 0.0004989812263479498
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.36806304426854664,
+          "running_dimension": 1.9980043242679388,
+          "limit_dimension": 2,
+          "distance_to_limit": 0.001995675732061164
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.1356055932408254,
+          "running_dimension": 3.9920212800176844,
+          "limit_dimension": 4,
+          "distance_to_limit": 0.007978719982315585
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.018462261068826813,
+          "running_dimension": 7.968148579523912,
+          "limit_dimension": 8,
+          "distance_to_limit": 0.031851420476088244
+        }
+      ],
+      "normalized_nonzero_gap": 0.9553455941692673
+    },
+    "1000001": {
+      "n_points": 1000004000006000004,
+      "spectral_data": [
+        [
+          0,
+          1
+        ],
+        [
+          2000004,
+          1
+        ],
+        [
+          998587.7857305203,
+          500002500004000002
+        ],
+        [
+          1001416.2142694797,
+          500002500004000002
+        ],
+        [
+          1000002,
+          1000003000004000002
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.25,
+          "heat_trace": 0.7788008074088809,
+          "running_dimension": 0.49999987500025134,
+          "limit_dimension": 0.5,
+          "distance_to_limit": 1.2499974866297947e-07
+        },
+        {
+          "t": 0.5,
+          "heat_trace": 0.6065307355288175,
+          "running_dimension": 0.9999995000010207,
+          "limit_dimension": 1.0,
+          "distance_to_limit": 4.999989793308401e-07
+        },
+        {
+          "t": 1,
+          "heat_trace": 0.3678796251108257,
+          "running_dimension": 1.9999980000043331,
+          "limit_dimension": 2,
+          "distance_to_limit": 1.9999956668570462e-06
+        },
+        {
+          "t": 2,
+          "heat_trace": 0.13533555390681828,
+          "running_dimension": 3.999992000021333,
+          "limit_dimension": 4,
+          "distance_to_limit": 7.999978667072583e-06
+        },
+        {
+          "t": 4,
+          "heat_trace": 0.018315785413942968,
+          "running_dimension": 7.999968000149334,
+          "limit_dimension": 8,
+          "distance_to_limit": 3.1999850666153407e-05
+        }
+      ],
+      "normalized_nonzero_gap": 0.9985857885589432
+    }
+  },
+  "limitation": "This refutes only the naive unmodified normalized graph-Laplacian scaling. Other evolving graph sequences with local refinement, weighted graph Laplacians, interaction-generated metrics or Lorentzian actions are not ruled out. Positive heat evolution alone cannot give Lorentzian causality or Einstein equations."
+}

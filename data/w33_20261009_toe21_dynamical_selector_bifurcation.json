@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "finite_graph": 80,
+  "Levi_degree": 4,
+  "model": "Normalized complex amplitude psi on the 80 Levi nodes, sum |psi_i|\u00b2=1; E=-t psi\u2020A psi-g sum |psi_i|^4, real nonnegative phase representative suffices by graph connectedness and Perron-Frobenius. t=1 units.",
+  "exact_symmetry": "The same A and quartic onsite term are invariant under ALL automorphisms of the uncolored Levi graph; in particular type-preserving PSp(4,3).",
+  "exact_uniform_energy": "-4t-g/80",
+  "exact_basis_trial_energy": "-g",
+  "trial_crossing_g_over_t": 4.050632911392405,
+  "local_uniform_hessian_threshold_g_over_t": 31.010205144336442,
+  "certified_coexistence_interval": "320/79 < g/t < 20*(4-sqrt(6))",
+  "theorem": "For g/t>320/79 (~4.050633), a normalized site-basis vector has strictly lower energy than uniform. For g/t<20*(4-sqrt6) (~31.010205), the uniform PSp-invariant state has strictly positive Hessian for ALL transverse tangent modes; hence it is a strict local minimum. Every PSp-invariant positive normalized state must be constant on the point and line fibers; for g/t<160, the minimum of the PSp-invariant family is uniform. Thus throughout the displayed interval all global minimizers BREAK PSp(4,3) while the symmetric state stays locally stable. This is a finite nonlinear mean-field symmetry-breaking bifurcation (metastability), NOT a quantum spontaneous-symmetry-breaking theorem.",
+  "local_stability_derivation": "For x=sqrt(1-eps\u00b2)u+eps v, v perp u, ||v||=1 eigenvector of A with eigenvalue lambda, E(x)-E(u)=[t(4-lambda)-4g/80]eps\u00b2+O(eps\u00b3). Largest transverse eigenvalue sqrt6, so positive if g<20t(4-sqrt6).",
+  "quantum_nogo": "For any finite 80-level single-particle Hermitian H=-tA (t>0) the Perron-Frobenius ground eigenvector is unique, positive, and fully symmetry invariant. Nonlinear focusing mean-field energy is a NEW assumption and cannot by itself establish exact finite-system quantum degenerate vacua; a thermodynamic limit and dynamical quartic origin are missing.",
+  "numerical_multistart": {
+    "0": {
+      "best_energy": -4.000000000000001,
+      "max_site_probability": 0.012500000000000002,
+      "participation_ratio": 79.99999999999996,
+      "uniform_energy": -4.0,
+      "basis_vector_trial_energy": 0,
+      "converged_gradient_inf": 2.2204460492503136e-16
+    },
+    "3": {
+      "best_energy": -4.0375000000000005,
+      "max_site_probability": 0.012500000000000002,
+      "participation_ratio": 79.99999999999996,
+      "uniform_energy": -4.0375,
+      "basis_vector_trial_energy": -3,
+      "converged_gradient_inf": 1.1102230246251568e-16
+    },
+    "5": {
+      "best_energy": -5.406441072023479,
+      "max_site_probability": 0.9568086129257044,
+      "participation_ratio": 1.091799168747723,
+      "uniform_energy": -4.0625,
+      "basis_vector_trial_energy": -5,
+      "converged_gradient_inf": 2.040045812774792e-08
+    },
+    "10": {
+      "best_energy": -10.20076179440295,
+      "max_site_probability": 0.9898199196616956,
+      "participation_ratio": 1.0206487563346078,
+      "uniform_energy": -4.125,
+      "basis_vector_trial_energy": -10,
+      "converged_gradient_inf": 7.813562837592945e-10
+    },
+    "20": {
+      "best_energy": -20.100094105672838,
+      "max_site_probability": 0.997488986311414,
+      "participation_ratio": 1.0050394202344408,
+      "uniform_energy": -4.25,
+      "basis_vector_trial_energy": -20,
+      "converged_gradient_inf": 7.524369007661177e-09
+    },
+    "32": {
+      "best_energy": -32.06252292186332,
+      "max_site_probability": 0.9990217639628507,
+      "participation_ratio": 1.0019591068379685,
+      "uniform_energy": -4.4,
+      "basis_vector_trial_energy": -32,
+      "converged_gradient_inf": 9.838914858061901e-08
+    }
+  },
+  "physically_free_parameters": [
+    "t hopping energy overall scale",
+    "g focusing interaction magnitude",
+    "choice of state preparation and thermodynamic scaling"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "cycle_rank": 81,
+  "field": "F3",
+  "physical_pauli_symplectic_dimension": 162,
+  "heisenberg_group_order": "3^163",
+  "Schrodinger_Hilbert_dimension": "3^81",
+  "mod3_gram_perfect": true,
+  "group_action_records": [
+    {
+      "seed": 0,
+      "cycle_matrix_order": 3,
+      "mod3_rank_A_minus_I": 54,
+      "electric_dual_formula": "A^-T mod3 = (A\u00b2)^T mod3",
+      "canonical_gram_preserved": true,
+      "phase_space_pairing_preserved": true,
+      "electric_support_from_first_generator": 1,
+      "magnetic_support_from_first_generator": 1
+    },
+    {
+      "seed": 1,
+      "cycle_matrix_order": 3,
+      "mod3_rank_A_minus_I": 54,
+      "electric_dual_formula": "A^-T mod3 = (A\u00b2)^T mod3",
+      "canonical_gram_preserved": true,
+      "phase_space_pairing_preserved": true,
+      "electric_support_from_first_generator": 1,
+      "magnetic_support_from_first_generator": 2
+    },
+    {
+      "seed": 4,
+      "cycle_matrix_order": 3,
+      "mod3_rank_A_minus_I": 54,
+      "electric_dual_formula": "A^-T mod3 = (A\u00b2)^T mod3",
+      "canonical_gram_preserved": true,
+      "phase_space_pairing_preserved": true,
+      "electric_support_from_first_generator": 1,
+      "magnetic_support_from_first_generator": 1
+    },
+    {
+      "seed": 5,
+      "cycle_matrix_order": 3,
+      "mod3_rank_A_minus_I": 54,
+      "electric_dual_formula": "A^-T mod3 = (A\u00b2)^T mod3",
+      "canonical_gram_preserved": true,
+      "phase_space_pairing_preserved": true,
+      "electric_support_from_first_generator": 1,
+      "magnetic_support_from_first_generator": 1
+    },
+    {
+      "seed": 13,
+      "cycle_matrix_order": 3,
+      "mod3_rank_A_minus_I": 54,
+      "electric_dual_formula": "A^-T mod3 = (A\u00b2)^T mod3",
+      "canonical_gram_preserved": true,
+      "phase_space_pairing_preserved": true,
+      "electric_support_from_first_generator": 1,
+      "magnetic_support_from_first_generator": 2
+    }
+  ],
+  "weyl_3by3_validation": {
+    "weyl_relation": "Z X = omega X Z",
+    "product_phase": "omega^(b*c)",
+    "max_100_random_exact_3by3_product_error": 1.2519816037736372e-15,
+    "single_qutrit_example_H_eigenvalues": [
+      -2.7320508075688776,
+      0.7320508075688776,
+      2.0
+    ],
+    "example_ground_gap": 3.4641016151377553
+  },
+  "theorem": "The 81D mod3 Levi cycle space V is noncanonically coordinate-isomorphic to F3^81 but canonically pairs with V*=Hom_F3(V,F3). H=V + V* has standard nondegenerate alternating form <(x,z),(a,b)>=z.a - b.x. For every G automorphism represented integrally by A on cycles, diag(A,A^-T) preserves this symplectic form exactly. For the five actual PSp transvections, A^3=I, hence A^-T=(A\u00b2)^T. The central extension Heis(H) has order 3^(2*81+1) and unique fixed nontrivial-central-character irrep Hilbert dimension 3^81.",
+  "obstruction": "Native individual cycle coordinates depend on a chosen spanning tree. Local single-qutrit kinetic terms in those 81 coordinates are not invariant under the full PSp group, and the finite Heisenberg algebra by itself chooses neither a local Hamiltonian nor causal propagation.",
+  "physical_status": "Quantum information algebra follows exactly. No novel arbitrary 81-qutrit device or realistic local stabilizer Hamiltonian follows. Small explicit qutrit spectrum is merely a tunable control."
+}
