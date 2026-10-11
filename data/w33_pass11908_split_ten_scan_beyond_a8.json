@@ -1,0 +1,42 @@
+{
+  "pass_id": 11908,
+  "new_models": 109,
+  "kinds": {
+    "twisted_one_torus": 73,
+    "untwisted": 36
+  },
+  "twisted": 73,
+  "local_ten": 73,
+  "untwisted_all_eps": true,
+  "up_escape": [],
+  "down_escape": 9,
+  "per_class": {
+    "E6xSU3 x E6xSU3 (A5xA1xA1 | A5xA1xA1) | untwisted": 23,
+    "E6xSU3 x E6xSU3 (D5xA2 | A5xA1xA1) | untwisted": 4,
+    "E6xSU3 x E8 (A5xA1xA1 | D8) | twisted_one_torus": 1,
+    "E6xSU3 x E8 (D5xA2 | D8) | twisted_one_torus": 66,
+    "E6xSU3 x E8 (D5xA2 | D8) | untwisted": 1,
+    "E7xU1 x SO14xU1 (A7 | A6) | twisted_one_torus": 4,
+    "E7xU1 x SO14xU1 (A7 | A6) | untwisted": 2,
+    "E7xU1 x SO14xU1 (D6xA1 | D4xA3) | twisted_one_torus": 2,
+    "E7xU1 x SO14xU1 (D6xA1 | D4xA3) | untwisted": 6
+  },
+  "combined_models": 600,
+  "combined_up_escape": 0,
+  "provenance_sources": {
+    "a8_sm_all.txt": "9ed6c9ad7977424a9731b637e7c0dea693facbb9ba66a82e7f8d1e7272ffff8b",
+    "rescan_all_SM.txt": "4dfe22e7276179d8646730b00df37681eaffb7a12fcea5da2f6020f5a1f4db07",
+    "split10_all_SM.txt": "0de820436d4a5897278e7567fd38e711a01bb3fffbaa4149c066b11c1d4d6770"
+  },
+  "checks": {
+    "new_109": true,
+    "twisted_73_untwisted_36": true,
+    "local_ten_in_all_twisted": true,
+    "untwisted_all_eps": true,
+    "no_up_escape": true,
+    "several_shift_classes": true,
+    "provenance_600_with_sha": true,
+    "combined_zero_of_600": true
+  },
+  "all_checks_pass": true
+}

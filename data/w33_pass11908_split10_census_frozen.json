@@ -1,0 +1,2111 @@
+{
+ "A8SM_20261011_379_TF": {
+  "label": "A8SM_20261011_379_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": true,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_913_TF": {
+  "label": "A8SM_20261011_913_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_1285_TF": {
+  "label": "A8SM_20261011_1285_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_2541_TF": {
+  "label": "A8SM_20261011_2541_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_3556_TF": {
+  "label": "A8SM_20261011_3556_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    2,
+    2
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    1,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_4807_TF": {
+  "label": "A8SM_20261011_4807_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": true,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_6282_TF": {
+  "label": "A8SM_20261011_6282_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_7031_TF": {
+  "label": "A8SM_20261011_7031_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": true,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_8233_TF": {
+  "label": "A8SM_20261011_8233_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_9549_TF": {
+  "label": "A8SM_20261011_9549_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": true,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_13256_TF": {
+  "label": "A8SM_20261011_13256_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_19279_TF": {
+  "label": "A8SM_20261011_19279_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261016_38_TF": {
+  "label": "A8SM_20261016_38_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_2901_TF": {
+  "label": "A8SM_20261016_2901_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_5951_TF": {
+  "label": "A8SM_20261016_5951_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_12769_TF": {
+  "label": "A8SM_20261016_12769_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_544_TF": {
+  "label": "A8SM_20261018_544_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_17561_TF": {
+  "label": "A8SM_20261018_17561_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261019_14783_TF": {
+  "label": "A8SM_20261019_14783_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    1,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_382_TF": {
+  "label": "A8SM_20261011_382_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_923_TF": {
+  "label": "A8SM_20261011_923_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_1365_TF": {
+  "label": "A8SM_20261011_1365_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_2825_TF": {
+  "label": "A8SM_20261011_2825_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_4454_TF": {
+  "label": "A8SM_20261011_4454_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": true,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_5088_TF": {
+  "label": "A8SM_20261011_5088_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_6371_TF": {
+  "label": "A8SM_20261011_6371_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_7163_TF": {
+  "label": "A8SM_20261011_7163_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_8683_TF": {
+  "label": "A8SM_20261011_8683_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_9902_TF": {
+  "label": "A8SM_20261011_9902_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": true,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_13262_TF": {
+  "label": "A8SM_20261011_13262_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261012_1194_TF": {
+  "label": "A8SM_20261012_1194_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": []
+ },
+ "A8SM_20261016_40_TF": {
+  "label": "A8SM_20261016_40_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_3037_TF": {
+  "label": "A8SM_20261016_3037_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_6813_TF": {
+  "label": "A8SM_20261016_6813_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_12845_TF": {
+  "label": "A8SM_20261016_12845_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_743_TF": {
+  "label": "A8SM_20261018_743_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261019_983_TF": {
+  "label": "A8SM_20261019_983_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261011_534_TF": {
+  "label": "A8SM_20261011_534_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_958_TF": {
+  "label": "A8SM_20261011_958_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_1411_TF": {
+  "label": "A8SM_20261011_1411_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    2,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    1,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_3189_TF": {
+  "label": "A8SM_20261011_3189_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_4629_TF": {
+  "label": "A8SM_20261011_4629_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_5138_TF": {
+  "label": "A8SM_20261011_5138_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_6658_TF": {
+  "label": "A8SM_20261011_6658_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_7502_TF": {
+  "label": "A8SM_20261011_7502_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    1,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    1,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_8781_TF": {
+  "label": "A8SM_20261011_8781_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_10497_TF": {
+  "label": "A8SM_20261011_10497_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    1,
+    2
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    1,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_13567_TF": {
+  "label": "A8SM_20261011_13567_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261014_2920_TF": {
+  "label": "A8SM_20261014_2920_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_294_TF": {
+  "label": "A8SM_20261016_294_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_3147_TF": {
+  "label": "A8SM_20261016_3147_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_8046_TF": {
+  "label": "A8SM_20261016_8046_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_15347_TF": {
+  "label": "A8SM_20261016_15347_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_1771_TF": {
+  "label": "A8SM_20261018_1771_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261019_1604_TF": {
+  "label": "A8SM_20261019_1604_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    1,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_548_TF": {
+  "label": "A8SM_20261011_548_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_979_TF": {
+  "label": "A8SM_20261011_979_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    2,
+    2
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    1,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_1538_TF": {
+  "label": "A8SM_20261011_1538_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_3400_TF": {
+  "label": "A8SM_20261011_3400_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_4771_TF": {
+  "label": "A8SM_20261011_4771_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_5637_TF": {
+  "label": "A8SM_20261011_5637_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 0,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261011_6700_TF": {
+  "label": "A8SM_20261011_6700_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_7579_TF": {
+  "label": "A8SM_20261011_7579_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_8884_TF": {
+  "label": "A8SM_20261011_8884_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_10861_TF": {
+  "label": "A8SM_20261011_10861_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_17400_TF": {
+  "label": "A8SM_20261011_17400_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261014_12227_TF": {
+  "label": "A8SM_20261014_12227_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_1151_TF": {
+  "label": "A8SM_20261016_1151_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_3488_TF": {
+  "label": "A8SM_20261016_3488_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_8783_TF": {
+  "label": "A8SM_20261016_8783_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_18080_TF": {
+  "label": "A8SM_20261016_18080_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_8286_TF": {
+  "label": "A8SM_20261018_8286_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    2,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261019_3765_TF": {
+  "label": "A8SM_20261019_3765_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    2,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_821_TF": {
+  "label": "A8SM_20261011_821_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_1159_TF": {
+  "label": "A8SM_20261011_1159_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_1828_TF": {
+  "label": "A8SM_20261011_1828_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_3450_TF": {
+  "label": "A8SM_20261011_3450_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_4775_TF": {
+  "label": "A8SM_20261011_4775_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_6009_TF": {
+  "label": "A8SM_20261011_6009_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_6742_TF": {
+  "label": "A8SM_20261011_6742_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_7807_TF": {
+  "label": "A8SM_20261011_7807_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    1
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_9273_TF": {
+  "label": "A8SM_20261011_9273_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_11438_TF": {
+  "label": "A8SM_20261011_11438_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_18456_TF": {
+  "label": "A8SM_20261011_18456_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261014_12299_TF": {
+  "label": "A8SM_20261014_12299_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_2132_TF": {
+  "label": "A8SM_20261016_2132_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_4047_TF": {
+  "label": "A8SM_20261016_4047_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_10113_TF": {
+  "label": "A8SM_20261016_10113_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_18515_TF": {
+  "label": "A8SM_20261016_18515_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_9005_TF": {
+  "label": "A8SM_20261018_9005_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    2,
+    2
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261019_6872_TF": {
+  "label": "A8SM_20261019_6872_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    1,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    1
+   ]
+  ]
+ },
+ "A8SM_20261011_879_TF": {
+  "label": "A8SM_20261011_879_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_1283_TF": {
+  "label": "A8SM_20261011_1283_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_2385_TF": {
+  "label": "A8SM_20261011_2385_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": true,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_3540_TF": {
+  "label": "A8SM_20261011_3540_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_4778_TF": {
+  "label": "A8SM_20261011_4778_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_6167_TF": {
+  "label": "A8SM_20261011_6167_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_6847_TF": {
+  "label": "A8SM_20261011_6847_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_8188_TF": {
+  "label": "A8SM_20261011_8188_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_9287_TF": {
+  "label": "A8SM_20261011_9287_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_11982_TF": {
+  "label": "A8SM_20261011_11982_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261011_18531_TF": {
+  "label": "A8SM_20261011_18531_TF",
+  "kind": "twisted_one_torus",
+  "Q_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "U_same": true,
+  "E_same": true,
+  "D_all_same": false,
+  "L_all_same": false,
+  "up_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ],
+  "down_wilson_patterns": [
+   [
+    0,
+    0
+   ]
+  ]
+ },
+ "A8SM_20261014_16590_TF": {
+  "label": "A8SM_20261014_16590_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_2147_TF": {
+  "label": "A8SM_20261016_2147_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_5263_TF": {
+  "label": "A8SM_20261016_5263_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261016_12588_TF": {
+  "label": "A8SM_20261016_12588_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_16_TF": {
+  "label": "A8SM_20261018_16_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261018_16370_TF": {
+  "label": "A8SM_20261018_16370_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ },
+ "A8SM_20261019_9318_TF": {
+  "label": "A8SM_20261019_9318_TF",
+  "kind": "untwisted",
+  "untwisted_up_rows": 3,
+  "untwisted_all_eps": true
+ }
+}
