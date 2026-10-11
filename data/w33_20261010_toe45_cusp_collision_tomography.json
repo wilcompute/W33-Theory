@@ -1,0 +1,69 @@
+{
+  "status": "PASS_EXACT_W33_CUSP_COLLISION_RECONSTRUCTION_AND_MIXED_DARK_NOGO",
+  "geometry": {
+    "points": 40,
+    "cusps_context_lines": 40,
+    "line_size": 4,
+    "incidence_shape": [
+      40,
+      40
+    ],
+    "point_valence": 4,
+    "line_valence": 4,
+    "gram": "N^T N=4I+A_W33",
+    "rank": 25,
+    "singular_values_squared": {
+      "16": 1,
+      "6": 24,
+      "0": 15
+    },
+    "one_Wilson_point_incident_cusps": 4,
+    "nonincident_cusps": 36,
+    "one_nonincident_cusp_commuting_points_with_Wilson": 1,
+    "incident_flag_total": 160,
+    "nonincident_pair_total": 1440
+  },
+  "exact_cusp_collision_law": "C_L=sum_outcome_j Pr_L(j)^2=(1+sum_{p in L}q_p)/9",
+  "pure_reconstruction": "For rho pure: q=1/5 * 1 + (1/6) N^T (9C-1-4/5 * 1).",
+  "pure_cases": 64,
+  "max_pure_reconstruction_error": 5.551115123125783e-16,
+  "max_pure_minus_sector": 3.0531133177191805e-16,
+  "mixed_reconstruction": "For arbitrary rho: m=(9Trrho\u00b2-1)/40; q_visible=m*1 + (N^T(Nq-4m*1))/6=(P_const+P_2)q. All 15 P_-4 dimensions are annihilated by N.",
+  "cusp_factorization_variance_duality": {
+    "nondegenerate_frame_count": 90,
+    "identity_general": "Var_{90}(P_L) = (1/10) sum_{40 cusps}(C_L-mean(C))^2 + (2/135)||P_-4 q||^2 >= (1/10)sum(C_L-mean(C))^2",
+    "mean_C_general": "(1+Tr(rho^2))/10",
+    "mean_virtual_purity_general": "3*(1+Tr(rho^2))/10",
+    "pure_equality": "The gap vanishes for every pure two-qutrit rho, regardless of entanglement.",
+    "dark_mixed_variance": 2.6903703703271075e-13,
+    "dark_mixed_cusp_variance": 0.0,
+    "dark_mixed_predicted_gap": 2.6903703703703426e-13,
+    "baseline_same_cusps_mixed_variance": 3.0814879110195774e-33,
+    "pure_example_frame_and_cusp_variance": [
+      0.018441135523083806,
+      0.018441135523083806,
+      3.6878437715198274e-33
+    ],
+    "random_mixed_cases": 20,
+    "random_mixed_max_dark_variance_gap": 0.0001740936651587299
+  },
+  "positive_counterexample": {
+    "q_baseline": 1e-05,
+    "dark_delta_scale": 2e-06,
+    "rigorous_perturbation_norm_upper_bound": 0.17878328377952502,
+    "rigorous_lower_bound_on_rho_eigenvalues": 0.091246301802275,
+    "min_eigenvalue_rho_plus": 0.10736726543978203,
+    "min_eigenvalue_rho_baseline": 0.10737092087371457,
+    "min_eigenvalue_rho_minus": 0.10736726181721853,
+    "purity_rho_plus": 0.11115555555555556,
+    "purity_rho_minus": 0.11115555555555556,
+    "max_cusp_collision_difference": 2.2587545260114677e-20,
+    "baseline_vs_dark_max_cusp_collision_difference": 2.4846299786126142e-20,
+    "dark_sector_difference_norm": 8.522910301064871e-06,
+    "density_operator_difference_norm": 0.00045034796151398993,
+    "max_full_MUB_projector_collision_check": 4.163336342344337e-17
+  },
+  "proof_of_existence": "For any sufficiently small strictly positive q, rho=(I+sum_p sqrt(q_p/2)*(W_p+W_p^dag))/9 has exactly Pauli powers q. It is rigorously positive since each W_p is unitary and ||sum mu_p(W_p+W_pdag)|| <= 2 sum mu_p <1; the numeric minimum eigenvalue independently corroborates this. Taking qplus/qminus=t1 +/- epsilon*h with h in ker N generates physical density matrices of equal purity and identical all-context collision observables but different P_minus q.",
+  "research_credit": "Classical 40x40 point-line incidence singular rank 25 is previously in Pass4952. Pure-sector identity Aq=2q+2 from TOE42. New here is their fusion with Pass11899 40 cusp lines, Pass11900 holonomy point, explicit pure-state reconstruction and a physical two-density-matrix cusp-collision no-go.",
+  "boundary": "Cusps are algebraically identified with maximal commuting Pauli contexts; the 40 collision statistics are experimentally defined but no actual K\u00e4hler cusp is a laboratory measurement apparatus. The theorem applies to Pauli-context collision observables, not full nine-outcome distributions (which contain more information). No inference that a physical TOE has been established."
+}
