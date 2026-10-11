@@ -1,0 +1,349 @@
+{
+  "pass_id": 11924,
+  "residual_symmetry": [
+    {
+      "covariance_residual": 1.2947314098277875e-15,
+      "stabiliser": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "generic_group": 1,
+      "misaligned_common": 2,
+      "misaligned_commutant": 5
+    },
+    {
+      "covariance_residual": 2.916317306881066e-15,
+      "stabiliser": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "generic_group": 1,
+      "misaligned_common": 2,
+      "misaligned_commutant": 5
+    },
+    {
+      "covariance_residual": 1.2592132953610405e-15,
+      "stabiliser": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "generic_group": 1,
+      "misaligned_common": 2,
+      "misaligned_commutant": 5
+    },
+    {
+      "covariance_residual": 6.521083742145178e-16,
+      "stabiliser": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "generic_group": 1,
+      "misaligned_common": 2,
+      "misaligned_commutant": 5
+    },
+    {
+      "covariance_residual": 3.4755478145461824e-15,
+      "stabiliser": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "generic_group": 1,
+      "misaligned_common": 2,
+      "misaligned_commutant": 5
+    }
+  ],
+  "two_triplet": {
+    "description": "two Delta(54) triplets (Higgs, flavon): general self-potentials + lam * general mixed quartic; global minimum at lam=0.1 continued to 0.01, 0.001; gap of Y(h)=h_{a+b}g_{a-b} (analysis/w33_pass11924_two_triplet_scan.py)",
+    "seeds": {
+      "d54": [
+        1,
+        2,
+        4
+      ],
+      "d27": [
+        3
+      ]
+    },
+    "trials_per_seed": 40,
+    "d54": {
+      "vacua": 120,
+      "locked": 32,
+      "unlocked": 88,
+      "linear_in_lam": 79,
+      "other": 9,
+      "locked_pauli_min": 0.9999999999999715,
+      "median_gap_at_0p1_unlocked": 0.017295617962279807,
+      "median_ratio_0p1_0p01": 9.8143756515117
+    },
+    "d27_control": {
+      "vacua": 40,
+      "locked": 12,
+      "unlocked": 28,
+      "linear_in_lam": 26,
+      "other": 2,
+      "locked_pauli_min": 0.9999999999999937,
+      "median_gap_at_0p1_unlocked": 0.01871327225994399,
+      "median_ratio_0p1_0p01": 10.022396721039357
+    },
+    "check_row": {
+      "sym": "d54",
+      "seed": 1,
+      "trial": 0,
+      "row": [
+        0.05725890832597508,
+        0.005127401870528505,
+        0.0005042179409952865,
+        0.9974960202126424
+      ]
+    },
+    "checks": {
+      "locked_vacua_have_exact_stabiliser_higgs": true,
+      "most_delta54_vacua_unlock": true,
+      "unlocking_linear_in_mixing": true,
+      "delta27_control_agrees": true
+    }
+  },
+  "scan_repro_max_diff": 0.0,
+  "checks": {
+    "delta54_covariant": true,
+    "stabiliser_states_keep_s3_with_doublet": true,
+    "generic_h_no_symmetry": true,
+    "misaligned_pair_only_z2": true,
+    "locked_vacua_have_exact_stabiliser_higgs": true,
+    "most_delta54_vacua_unlock": true,
+    "unlocking_linear_in_mixing": true,
+    "delta27_control_agrees": true,
+    "scan_reproduces": true
+  },
+  "all_checks_pass": true
+}
