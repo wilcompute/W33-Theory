@@ -1,0 +1,60 @@
+{
+  "pass_id": 11923,
+  "worst_stabiliser_gap": 1.3852104138535248e-15,
+  "haar_min_gap": 0.0009987271781941038,
+  "degenerate_found": 60,
+  "degenerate_clearly_nonstabiliser": 54,
+  "min_pauli_expectation_among_them": 0.507113478242764,
+  "potential_trials": 300,
+  "max_infidelity_to_stabiliser": 5.864386753984263e-11,
+  "max_gap_snapped": 1.825195409314665e-16,
+  "max_dV_snapped": -4.440892098500626e-16,
+  "magic_gap_points": [
+    [
+      8.454459354858768e-12,
+      1.3403908322731646e-06
+    ],
+    [
+      1.5091261574868483e-10,
+      4.697235609144886e-06
+    ],
+    [
+      5.082170241491834e-10,
+      9.00452697934785e-06
+    ],
+    [
+      2.3978818884884025e-08,
+      9.605406211334404e-05
+    ],
+    [
+      3.580787641347708e-07,
+      0.0002175968469835201
+    ],
+    [
+      1.6793231925841288e-06,
+      0.0006664155259640856
+    ],
+    [
+      2.2020176206683924e-05,
+      0.002792453235437313
+    ],
+    [
+      0.00016136577041773073,
+      0.008064469320203618
+    ],
+    [
+      0.0020887438907926793,
+      0.02310663965167406
+    ]
+  ],
+  "loglog_slope_gap_vs_magic": 0.5170578917701487,
+  "checks": {
+    "all_stabiliser_states_lock": true,
+    "haar_unlocks": true,
+    "converse_fails": true,
+    "delta54_minima_are_stabiliser": true,
+    "lock_at_every_delta54_vacuum": true,
+    "splitting_is_sqrt_magic": true
+  },
+  "all_checks_pass": true
+}
