@@ -1,0 +1,25 @@
+{
+  "pass_id": 11902,
+  "models": 104,
+  "kinds": {
+    "untwisted": 73,
+    "twisted_one_torus": 31
+  },
+  "untwisted_up_rows": 219,
+  "twisted_models_up_single_pointed": 31,
+  "twisted_models": 31,
+  "down_escape_capable_models": [
+    "56"
+  ],
+  "congruence_worst": 9.510269922854126e-16,
+  "congruence_control_min": 0.0023556176821806388,
+  "checks": {
+    "all_104": true,
+    "two_kinds_73_31": true,
+    "untwisted_top_equals_charm_all_rows": true,
+    "congruence_preserves_s_s_0": true,
+    "twisted_up_single_pointed_all": true,
+    "only_model_56_down_escape": true
+  },
+  "all_checks_pass": true
+}
