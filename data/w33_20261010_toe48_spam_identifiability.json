@@ -1,0 +1,60 @@
+{
+  "status": "TOE48_GENERAL_READOUT_CI_AND_MNAR_IDENTIFIABILITY_FIREWALL",
+  "general_confusion": {
+    "settings": 10,
+    "outcomes": 9,
+    "max_inverse_corrected_eigenvalue_magnitude": 1.1378333620078953,
+    "total_attempted_copies_per_trial": 48000,
+    "independent_blocks": 4,
+    "shots_each_setting_each_block": 1200,
+    "random_trials": 150,
+    "true_gap": 7.694493405019666e-05,
+    "mean_estimated_gap": 7.748508808766522e-05,
+    "sd_estimated_gap": 1.2706241299497548e-05,
+    "confidence_target": 0.95,
+    "a_priori_uniform_Hoeffding_radius": 1.1360023384223088,
+    "empirical_coverage": 1.0,
+    "proof": "For 160 complex means=320 real bounded components, union Hoeffding: Pr(max |component error|> B sqrt(2 ln(640/alpha)/n))<=alpha. If |mu error|<=e=sqrt(2)t, power-pair error<=4e+2e\u00b2. Since ||q||<=4, G=(2/135)<Pq,Pq>, the gap error bounded by (2/135)(8sqrt40 dq +40 dq\u00b2). Readout matrices known, invertible, and sampling independent."
+  },
+  "MNAR": {
+    "outcome_efficiencies_case0": [
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "outcome_efficiencies_case1": [
+      0.68,
+      0.7100000000000001,
+      0.74,
+      0.77,
+      0.8,
+      0.8300000000000001,
+      0.8600000000000001,
+      0.89,
+      0.92
+    ],
+    "same_postselected_outcomes": [
+      0.1111111111111111,
+      0.1111111111111111,
+      0.1111111111111111,
+      0.1111111111111111,
+      0.1111111111111111,
+      0.1111111111111111,
+      0.1111111111111111,
+      0.1111111111111111,
+      0.1111111111111111
+    ],
+    "different_state_purity0": 0.11111111111111112,
+    "different_state_purity1": 0.11217586468688834,
+    "purity_difference": 0.0010647535757772192,
+    "identical_postselection_residual": 2.7755575615628914e-17
+  },
+  "conclusion": "General KNOWN full-rank readout can be corrected with a finite-sample (loose) a priori interval. Outcome-dependent UNKNOWN detector efficiencies make even nine-basis postselected probabilities non-identifying: different physical quantum density matrices have identical survivors. No sample size repairs this unless efficiencies are independently bounded/calibrated.",
+  "physical_boundary": "Synthetic confusion matrices, one basis MNAR witness, no calibrated photonic apparatus, no unknown confusion confidence procedure. The Hoeffding interval may be much wider than the physical gap range and does not imply useful power."
+}

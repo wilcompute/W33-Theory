@@ -1,0 +1,17 @@
+{
+  "status": "44_ROW_EXPLICIT_NAIMARK_ISOMETRY_GIVENS_QR_PASS",
+  "input_modes": 9,
+  "even_rankone_outcomes": 40,
+  "odd_rankone_refinement": 4,
+  "reported_coarse_grained_outcomes": 41,
+  "fine_grained_modes": 44,
+  "ancilla_dimension_for_9xD": 5,
+  "nearest_neighbor_two_mode_SU2_ops": 334,
+  "mathematical_worst_case_bound_2mode_ops": 351,
+  "max_40_state_amplitude_reconstruction_error": 5.881301029635769e-16,
+  "povm_frame_isometry_error": 1.3322676295501878e-15,
+  "QR_residual": 6.661338147750939e-16,
+  "source": "TOE47 40 even cusp-ray projectors plus rank4 odd complement",
+  "no_optics_claim": "Pure 44-mode passive linear-optical one-photon isometry, arbitrary calibrated two-mode SU(2) rotations with internal phases. No leakage, pump power, coherence, loss, detector count, fault tolerance or actual Clifford/magic decomposition evaluated. 41 coarse outcomes require resolving 40 cusp bins plus merging four odd rails.",
+  "resource_lower_bound": "44 fine outcome basis modes for a rank-one refinement; 41 distinct coarse outcomes (some rank>1), and 5-dimensional ancillary register if using a 9xD tensor ancilla."
+}

@@ -1,0 +1,53 @@
+{
+  "status": "491_MODEL_PHYSICAL_WILSON_EMBEDDING_NOT_RECOVERABLE_FROM_FROZEN_INPUTS",
+  "census_records": 491,
+  "categories": {
+    "untwisted": 339,
+    "twisted_one_torus": 152
+  },
+  "observed_record_fields": [
+    "D_all_same",
+    "E_same",
+    "L_all_same",
+    "Q_points",
+    "U_same",
+    "down_wilson_patterns",
+    "kind",
+    "label",
+    "untwisted_all_eps",
+    "untwisted_up_rows",
+    "up_wilson_patterns"
+  ],
+  "absent_required_gauge_holonomy_fields": [
+    "pauli_vector",
+    "weyl_operator",
+    "gauge_holonomy_matrix",
+    "wilson_matrix",
+    "wilson_embedding",
+    "wilson_vectors",
+    "gauge_shift_16",
+    "shift_vector",
+    "modular_invariant_shift"
+  ],
+  "twisted_local_ten": 152,
+  "up_escape_capable_recorded": 0,
+  "five_down_escape_labels": [
+    "A8SM_20260928_1953_TF",
+    "A8SM_20260941_14433_TF",
+    "A8SM_20260972_26454_TF",
+    "A8SM_20260972_3352_TF",
+    "A8SM_20260972_44461_TF"
+  ],
+  "geometric_candidate_w33_point_labels": 40,
+  "indistinguishable_combinatorial_model_point_assignments": 19640,
+  "unlabelled_selector_incidence_for_each_candidate": [
+    4,
+    36
+  ],
+  "maximum_unlabelled_geometry_discrimination_bits": 0,
+  "minimum_pauli_point_address_bits_if_missing": 5.321928094887363,
+  "orbifolder_other_archive_source": "orbifolder 1.2, ~/orb/p1109x/susy87.txt (87 Z6-I W(3,3) SM parents)",
+  "orbifolder_other_archive_different_model_family": true,
+  "proof": "For all 40 symplectic Pauli points the number of incident W33 lines is four. The per-model frozen data list Z3 torus positions and Yukawa localization types, NOT a gauge-space Wilson matrix or a map of its actual representation to a 9D Pauli unitary. The 491x40 candidate assignments produce identical unlabelled 4:36 counts. The separate older Z6-I orbifolder archive is not an identifier-preserving matrix dump for this 491-model class.",
+  "boundary": "This is a PROVENANCE/identifiability obstruction for currently accessible frozen certificates, NOT proof the original orbifolder source data can never be retrieved. No physical model-specific Wilson charges or SM Yukawa predictions have been fabricated."
+}
