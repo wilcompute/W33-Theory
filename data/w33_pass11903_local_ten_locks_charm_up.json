@@ -1,0 +1,31 @@
+{
+  "pass_id": 11903,
+  "untwisted_up_rows": 1017,
+  "models": 491,
+  "kinds": {
+    "untwisted": 339,
+    "twisted_one_torus": 152
+  },
+  "twisted_models": 152,
+  "local_ten_models": 152,
+  "five_bar_split_models": 152,
+  "up_escape_capable": [],
+  "down_escape_capable": [
+    "A8SM_20260928_1953_TF",
+    "A8SM_20260972_26454_TF",
+    "A8SM_20260972_3352_TF",
+    "A8SM_20260972_44461_TF",
+    "A8SM_20260941_14433_TF"
+  ],
+  "higgs_point_forced": true,
+  "checks": {
+    "census_491": true,
+    "kinds_339_152": true,
+    "untwisted_all_eps": true,
+    "local_ten_in_all_twisted": true,
+    "higgs_forced_to_same_point": true,
+    "no_up_escape": true,
+    "down_escape_only_where_5bar_split": true
+  },
+  "all_checks_pass": true
+}
