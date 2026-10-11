@@ -1374,6 +1374,19 @@ Up ratios of the observed order are reached at ${\rm Im}\,\Omega\approx25$, $\de
 ratios: this shows existence, not a prediction). Non-renormalisable couplings in the heterotic survivors give charm and
 up at equal order (Pass 11103), and their coefficients differ only through the $O(Z_{12}^3)$ K\"ahler breaking, so they
 give no parametric split. \cert{w33\_pass11904\_magnetized\_unlock\_and\_theta\_zero\_law.py}
+The theta-zero law is one case of a general statement about symmetric Wilson lines. The level-3 Heisenberg--reflection
+group acts on the Wilson-line argument by $z\mapsto z+1$, $z\mapsto z+\Omega/3$ (shifting the characteristic) and
+$z\mapsto -z$. Its reflections $z\mapsto -z+m+k\Omega/3$ fix the points $z=m/2+k\Omega/6$. At each of them, two of
+(top, charm, up) coincide exactly, because the reflection pairs $c\leftrightarrow -c-k \pmod 3$:
+\begin{itemize}
+\item for $k\equiv0$, $m_c=m_u$;
+\item for $k\not\equiv0$, the top equals one of the light quarks.
+\end{itemize}
+These coincidences occur only at those points, and the theta-zero law is the case $k=3$. Invariant potentials for the
+Wilson line have their symmetric critical points exactly there, so no symmetric Wilson-line vacuum gives
+$m_t\gg m_c\gg m_u$. The hierarchy point of Pass 11904 ($\delta\approx0.06$; the symmetric offsets are $0$ and $\tfrac16$)
+is generic. In the magnetized home the up hierarchy is therefore a property of a dynamically selected Wilson line, not
+of a symmetric one. \cert{w33\_pass11905\_symmetric\_wilson\_lines\_degenerate.py}
 
 \begin{boundary}[What this does and does not give]
 The datum the chirality no-go asks for from outside now has a name, the vacuum value of $\Omega$, which breaks
