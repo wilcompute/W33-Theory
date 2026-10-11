@@ -1,0 +1,63 @@
+{
+  "pass_id": 11915,
+  "periodicity_max": 3.886431818406709e-14,
+  "gram_offdiag_max": 2.2204466683348427e-16,
+  "mode_counts": {
+    "[[2, 1], [1, 2]]": 3,
+    "[[1, 0], [0, 3]]": 3,
+    "[[4, 2], [2, 4]]": 12,
+    "[[3, 1], [1, 5]]": 14
+  },
+  "key_slopes_over_pi": {
+    "rect x rect": [
+      -1.33
+    ],
+    "A2 x A2": [
+      -2.67,
+      -0.67
+    ],
+    "A2 x rect": [
+      -2.0
+    ]
+  },
+  "attainable_up_over_down_ratios": [
+    0.167,
+    0.25,
+    0.333,
+    0.334,
+    0.5,
+    0.666,
+    0.667,
+    0.668,
+    1.0,
+    1.333,
+    1.335,
+    1.336,
+    1.999,
+    2.667,
+    3.999
+  ],
+  "observed_ratio": 1.605,
+  "up_one_entry_per_row": true,
+  "down_full_matrices": 14,
+  "ckm_sample_medians": {
+    "mc_mt": 0.010435040742559642,
+    "mu_mc": 0.5543095993511231,
+    "ms_mb": 0.0102755709131866,
+    "md_ms": 0.11611890484914128,
+    "Vus": 0.011079266358257591,
+    "Vcb": 0.00011326275101789996,
+    "Vub": 0.00019352303890936835
+  },
+  "checks": {
+    "zero_modes_periodic": true,
+    "zero_modes_orthonormal": true,
+    "mode_counts_det": true,
+    "slopes_quantised": true,
+    "observed_ratio_not_attainable": true,
+    "up_keeps_class_selection": true,
+    "down_breaks_class_selection": true,
+    "generic_wilson_ckm_too_small": true
+  },
+  "all_checks_pass": true
+}
