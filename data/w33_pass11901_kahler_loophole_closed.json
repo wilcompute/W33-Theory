@@ -1,0 +1,34 @@
+{
+  "pass_id": 11901,
+  "survivor_models": 12,
+  "higgs_rows": 72,
+  "geo_patterns": {
+    "[0, 1, 1]": 72
+  },
+  "even_light_entries_rel_diff": [
+    4.983439256493809e-16,
+    5.294648187743646e-16,
+    1.5606155751914901e-16
+  ],
+  "control_a_nonzero_rel_diff": [
+    2.3556287837047645,
+    3.1079761851103194,
+    0.5708526089718365
+  ],
+  "top_cost_theta_ratio": {
+    "0.3": 0.991684644619094,
+    "0.5": 0.874902902104895,
+    "1.0": 0.3660254037844386,
+    "2.0": 0.04549306634802661,
+    "rho": 0.49999999999999983
+  },
+  "checks": {
+    "twelve_models": true,
+    "all_rows_single_pointed_on_wilson_tori": true,
+    "light_entries_equal_all_kahler_moduli": true,
+    "control_a_nonzero_splits": true,
+    "top_cost_monotone": true,
+    "same_normalisation_as_pass_11109": true
+  },
+  "all_checks_pass": true
+}

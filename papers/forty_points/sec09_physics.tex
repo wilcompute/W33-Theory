@@ -1331,6 +1331,16 @@ pair is degenerate exactly, for all moduli, because $\theta$ is even. When the c
 at diagonal moduli and is split by the off-diagonal modulus at third order: each torus rotation fixes its cosets, so
 the first odd term is $(\bar x_1x_2)^3$. Mixing is still absent at this level (the diagonal selection rule).
 \cert{w33\_pass11900\_three\_generations\_over\_a\_w33\_point.py}
+Applied to the twelve surviving $SO(16)\times SO(16)$ $A_8$ models, this closes the K\"ahler escape route left open for
+$m_c=m_u$. In all 72 Higgs choices, up and down, the renormalisable twisted triangles sit at one point of both
+Wilson-line tori: $a=0$, and only the family torus separates the light entries. Their couplings are
+$\theta_{(\pm1,0,0)}(Z)$ of the full nine-modulus Hermitian matrix, and the instanton sum is even under $x\mapsto -x$
+on all three tori. So the two are equal for every $Z$ (to $10^{-15}$; with $a\neq0$ they differ at $O(1)$), and
+$m_c=m_u$, $m_s=m_d$ hold for all K\"ahler moduli. The escape needs $a\neq0$ on some Wilson-line torus. Because the
+Wilson-line classes are common to the three families, the top then pays that torus's instanton factor
+$\theta_{(0,a)}/\theta_{(0,0)}$, which is $\tfrac12$ at the self-dual point (the normalisation agrees with Pass 11109). A
+light-pair split is bought with a top suppression, and this is the criterion for the next scan.
+\cert{w33\_pass11901\_kahler\_loophole\_closed.py}
 
 \begin{boundary}[What this does and does not give]
 The datum the chirality no-go asks for from outside now has a name, the vacuum value of $\Omega$, which breaks
