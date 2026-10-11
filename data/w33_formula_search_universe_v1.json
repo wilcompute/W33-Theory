@@ -349325,6 +349325,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "85ee472f40cda8aa89fecd1830bb084a58e0b1617c56dd1dbe5ddcfcaed87067",
+      "normalized_formula": "*Pass11903'slock(m_c=m_uforeveryK\u00e4hlermodulus)isthecasewherehisasingleHiggsrow,aZ-eigenstate",
+      "numeric_literals": [
+        "1903"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11923_STABILISER_HIGGS_LOCK.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 27,
+          "path": "analysis/PASS11923_STABILISER_HIGGS_LOCK.md",
+          "raw": "* Pass 11903's lock (m_c = m_u for every K\u00e4hler modulus) is the case where h is a single Higgs row, a Z-eigenstate.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "fa50d0a81ac523ac4c3607e80d7fb719f42c56f10c2525934345a0797a54632f",
+      "structural_formula": "*Pass1#'slock(m_c=m_uforeveryK\u00e4hlermodulus)isthecasewherehisasingleHiggsrow,aZ-eigenstate"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fb134b7d0747b2f11daee4bd0942fc972274d5187564407ba7acd9e3300625c0",
       "normalized_formula": "*Product:theta(G)*theta(Gbar)=40=v",
       "numeric_literals": [
@@ -383513,6 +383540,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "61d637003f3832df08cc1a6d374a736e64bd8cbf6630c1aaa52440d38fc27700",
+      "normalized_formula": "1.Pass11903'slockisthecaseh=Z-eigenstate(oneHiggsrow);Pass11918'slemmaisthesamematrix",
+      "numeric_literals": [
+        "1",
+        "1903",
+        "1918"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11923_stabiliser_higgs_lock.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass11923_stabiliser_higgs_lock.py",
+          "raw": "1. Pass 11903's lock is the case h = Z-eigenstate (one Higgs row); Pass 11918's lemma is the same matrix.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "27e951f26d27f6fb4a18872a32aa74123a0b2de078966911c2ed6aa7593fdfef",
+      "structural_formula": "#.Pass1#'slockisthecaseh=Z-eigenstate(oneHiggsrow);Pass1#'slemmaisthesamematrix"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0889875395382ca7f6003e296f0ee0d398038680c2d569e8e02d4c6b47f16f61",
       "normalized_formula": "1.Photonspin=1=LAM//LAM(spin-1gaugeboson)",
       "numeric_literals": [
@@ -387697,7 +387753,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1511,
+          "line": 1513,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -695029,6 +695085,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "259d6a712cef0c4607a7462919cdd9ea66c2f020107307f24765ed9cdd3df7ee",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11923_stabiliser_higgs_lock.json\"",
+      "numeric_literals": [
+        "1923",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11923_stabiliser_higgs_lock.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/w33_pass11923_stabiliser_higgs_lock.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11923_stabiliser_higgs_lock.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cd91e03d7d0f95345f30a8a5484c0ae4f5ddd25ee4d7f83fc45b6d6e5b960777",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_stabiliser_higgs_lock.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "aab37f992baf2cd5bed12119ac57d7f8a1df356323b0ea424c4de10088e60593",
       "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass1193_s5_a5_coset_bridge.json\"",
       "numeric_literals": [
@@ -955518,7 +955602,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1516,
+          "line": 1518,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1307389,6 +1307473,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "362b9709f5b44c5f6ed85c1050da3f8d9820da1eab354ee7ec4733428139fb1e",
+      "normalized_formula": "lock_at_every_delta54_vacuum=max(gaps_snapped)<1e-12",
+      "numeric_literals": [
+        "1e-12",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11923_stabiliser_higgs_lock.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 122,
+          "path": "analysis/w33_pass11923_stabiliser_higgs_lock.py",
+          "raw": "lock_at_every_delta54_vacuum=max(gaps_snapped) < 1e-12,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4fe2bb7e7a2281a1f0a249da941412eafd7f186913976a6febd62d1a4ce71017",
+      "structural_formula": "lock_at_every_delta5#_vacuum=max(gaps_snapped)<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "36207442c3d36e5fb298f282fd924f65a1ec1c496bc9875ff2c61857dc8ad0bb",
       "normalized_formula": "lockingrelationsin^2th_12+sin^2th_23=11/13,andthedelta_CPgap(15/17isthequark",
       "numeric_literals": [
@@ -1544243,7 +1544355,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1512,
+          "line": 1514,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1762761,9 +1762873,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T16:29:32-04:00",
+  "frozen_at": "2026-10-11T19:00:11-04:00",
   "pass": 398,
-  "repository_head": "58b1fbd1036e1c3548f7a44f4199eefa89cb30b9",
+  "repository_head": "053fd1e0482cc45ab11c64ba731fe7dedd515ec5",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1821941,6 +1822053,14 @@
     },
     {
       "exact_formula_ids": [
+        "61d637003f3832df08cc1a6d374a736e64bd8cbf6630c1aaa52440d38fc27700"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "27e951f26d27f6fb4a18872a32aa74123a0b2de078966911c2ed6aa7593fdfef",
+      "structural_formula": "#.Pass1#'slockisthecaseh=Z-eigenstate(oneHiggsrow);Pass1#'slemmaisthesamematrix"
+    },
+    {
+      "exact_formula_ids": [
         "06c7307c8183edb67d86865d661c672b2971755cf2aa47e71db248a7357c0ccd"
       ],
       "exact_member_count": 1,
@@ -1879662,6 +1879782,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c66fc8b9d66cae666041249ffc9f5e3e5eb0ee307cca6886587cec08070f1dab",
       "structural_formula": "*Pass1#'sgradinglemma(\u03a0=W(v)commuteswithV_MT1;Uhas\u03a0-degree\u03c9(v,a))suggestsanoperatorformofthe"
+    },
+    {
+      "exact_formula_ids": [
+        "85ee472f40cda8aa89fecd1830bb084a58e0b1617c56dd1dbe5ddcfcaed87067"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fa50d0a81ac523ac4c3607e80d7fb719f42c56f10c2525934345a0797a54632f",
+      "structural_formula": "*Pass1#'slock(m_c=m_uforeveryK\u00e4hlermodulus)isthecasewherehisasingleHiggsrow,aZ-eigenstate"
     },
     {
       "exact_formula_ids": [
@@ -1950058,6 +1950186,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9508df0af2a2086d1ba1c9971be607e91d15bac66db05681f1e71be20acd6edd",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_so1#xso1#_a8_standard_models.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "259d6a712cef0c4607a7462919cdd9ea66c2f020107307f24765ed9cdd3df7ee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cd91e03d7d0f95345f30a8a5484c0ae4f5ddd25ee4d7f83fc45b6d6e5b960777",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_stabiliser_higgs_lock.json\""
     },
     {
       "exact_formula_ids": [
@@ -2113431,6 +2113567,14 @@
     },
     {
       "exact_formula_ids": [
+        "362b9709f5b44c5f6ed85c1050da3f8d9820da1eab354ee7ec4733428139fb1e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4fe2bb7e7a2281a1f0a249da941412eafd7f186913976a6febd62d1a4ce71017",
+      "structural_formula": "lock_at_every_delta5#_vacuum=max(gaps_snapped)<#"
+    },
+    {
+      "exact_formula_ids": [
         "36207442c3d36e5fb298f282fd924f65a1ec1c496bc9875ff2c61857dc8ad0bb"
       ],
       "exact_member_count": 1,
@@ -2233781,20 +2233925,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86717813,
-    "exact_formula_families": 60275,
-    "files_scanned": 11874,
-    "formula_occurrences": 66214,
+    "bytes_scanned": 86730377,
+    "exact_formula_families": 60279,
+    "files_scanned": 11876,
+    "formula_occurrences": 66218,
     "status_occurrences": {
-      "certified_or_theorem": 4827,
+      "certified_or_theorem": 4828,
       "killed_or_retracted": 1560,
       "open_or_conditional": 2146,
       "preregistered": 32,
       "retrospective_fit": 5106,
-      "unclassified": 52543
+      "unclassified": 52546
     },
-    "structural_families": 58671
+    "structural_families": 58675
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "9cafbe5815cc26f0455de38a049660b96bcd3cec162f7db2e97cab284e007204"
+  "universe_sha256": "dbeb70c35920ba90224cdcd9660a861fa00603e9c657256fbf498450646cb649"
 }
