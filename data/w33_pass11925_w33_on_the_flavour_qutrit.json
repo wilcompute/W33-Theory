@@ -1,0 +1,42 @@
+{
+  "pass_id": 11925,
+  "rays": 40,
+  "X_Z_permute_rays": true,
+  "collinear": 12,
+  "noncollinear": 27,
+  "noncollinear_overlap": [
+    0.3333333333
+  ],
+  "collinear_min_fidelity_to_stabiliser": 0.9999999999999999,
+  "isotropic_lines_through_v": 4,
+  "projected_strange_states": 9,
+  "fibre_sizes": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "fibres_are_hyperbolic_lines": true,
+  "strange_in_orbit": true,
+  "M2_projected": [
+    0.6931471806
+  ],
+  "M2_max_found": 0.6931471805599478,
+  "stabiliser_yukawa_max_gap": 1.2803650903032827e-15,
+  "strange_yukawa_deviation_from_110": 1.0756015600090404e-15,
+  "checks": {
+    "hessian_paulis_permute_witting_rays": true,
+    "collinear_points_are_the_12_stabiliser_states": true,
+    "four_isotropic_lines_are_four_bases": true,
+    "noncollinear_project_3to1_onto_9_strange_states": true,
+    "strange_states_have_maximal_magic": true,
+    "stabiliser_higgs_locks_mc_mu": true,
+    "strange_higgs_gives_theta_zero_law": true
+  },
+  "all_checks_pass": true
+}
