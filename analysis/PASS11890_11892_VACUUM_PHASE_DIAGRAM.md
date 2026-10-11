@@ -74,8 +74,11 @@ This joins two earlier results:
 * the radiative vacuum, which sits exactly on the cusp (11884);
 * the (1, ε, ε²) theta hierarchy (11872/11876).
 
-Small corrections that displace the vacuum by δ give ε ∝ δ. A natural source is the dimension-12 holomorphic operator,
-with δ ∼ (v/Λ)⁸·(couplings).
+Small corrections that genuinely displace the vacuum by δ give ε ∝ δ. The 2026-10-11 Witting-displacement
+firewall corrects the proposed source: a G32-invariant degree-12 scalar cannot itself generate a projective tangent force
+at a Witting ray, because the exact G25 point stabiliser has no invariant tangent or cotangent vector. The degree-12
+operator may lift the common phase or change transverse stability, but a small nonzero δ requires explicit little-group
+breaking, a coupled symmetry-breaking background, or a bifurcation.
 
 ## 11892: fermion loops
 

@@ -1,0 +1,60 @@
+{
+  "checks": {
+    "actual_repo_transverse_triplet_matches_G25_H27": true,
+    "flavour_qutrit_is_three_dimensional": true,
+    "no_G25_fixed_cotangent": true,
+    "no_G25_fixed_tangent": true,
+    "orders_648_155520": true,
+    "radiative_Witting_ray_projectively_strict": true
+  },
+  "exact_group_data": {
+    "G25_cotangent_fixed_dimension": 0,
+    "G25_degrees": [
+      6,
+      9,
+      12
+    ],
+    "G25_order": 648,
+    "G25_tangent_fixed_dimension": 0,
+    "G32_degrees": [
+      12,
+      18,
+      24,
+      30
+    ],
+    "G32_order": 155520
+  },
+  "flavour_weld": {
+    "firewall": "No phase-resolved intertwiner between the Pass11921 theta-function Higgs basis and the Pass11664 transverse basis is constructed here. Representation compatibility is not a derived physical coupling.",
+    "pass11921_flux_factorises_W33_into_two_qutrits": true,
+    "pass11921_up_Higgs_top_space_dimension": 3,
+    "representation_target": "The exact Witting tangent is already the G25/H27 qutrit triplet of Pass11664. Pass11921 independently produces a three-dimensional up-Higgs flavour qutrit. Therefore the minimal symmetry-breaking spurion needed to move the Witting vacuum has exactly the representation type required by the flavour sector.",
+    "transverse_Witting_module_dimension": 3
+  },
+  "pass11891_correction": {
+    "allowed_alternatives": [
+      "an explicit G32-breaking spurion in the transverse G25 triplet",
+      "a bifurcation after an invariant correction changes a tangent Hessian sign",
+      "a cross-sector coupling whose background breaks the Witting stabilizer"
+    ],
+    "reason": "The invariant has zero projective tangent differential at every Witting ray. It can lift the common phase or change tangent Hessian/stability, but cannot supply a linear displacement force.",
+    "stands": "Im(Omega)~(3/pi)log(1/delta) and the theta hierarchy epsilon is linear in an externally supplied projective displacement delta.",
+    "withdraw": "A G32-invariant degree-12 scalar operator by itself generically produces delta~(v/Lambda)^8."
+  },
+  "physics_consequence": "A realistic hierarchy cannot be attributed to a fully G32-symmetric higher-dimensional correction if it relies on moving off the radiative Witting ray. The displacement source must break the Witting-ray little group (or arise after a stability bifurcation).",
+  "repo_identification": {
+    "H27_relation": "ZX=omega XZ; center=omega I3",
+    "actual_Witting_transverse_triplet_is_G25_H27": true,
+    "one_loop_Witting_is_strict_projective_minimum": true,
+    "one_loop_common_phase_flat": true
+  },
+  "schema": "w33.20261011.witting-displacement-firewall.v1",
+  "sources": {
+    "analysis/w33_pass1068_chevie_g25_g32_matrices.py": "eb4573bde8f611824baafd77efdbaf59160908addb2db5d297a2d295f66dd151",
+    "data/w33_pass11664_11671_kernel_dynamics.json": "9e1cd14be31d003406daf0773390a81f93ee166c83b40b55ca076126825c35e9",
+    "data/w33_pass11884_11886_one_loop_trinification.json": "35737f656cd765043c6eac836f4d8cc1f418d24ea284adc955fafd203d24be05",
+    "data/w33_pass11921_flavour_qutrits.json": "bd84f8505036764da20f9cc45c3f2d5b7b1ce1937f12646eda5214983aebb95a"
+  },
+  "status": "PASS_G32_INVARIANTS_CANNOT_PERTURBATIVELY_DISPLACE_A_WITTING_RAY",
+  "theorem": "Let r be a Witting ray and T_r its three-complex-dimensional projective Cartan tangent. The pointwise stabilizer contains the exact G25 parabolic of order 648. Its action on T_r and on T_r^* has no trivial submodule. Hence for every differentiable G32-invariant scalar V, dV_r restricted to T_r is zero. In particular any scalar potential made only from the G32 invariant generators of degrees 12,18,24,30 keeps every Witting ray an exact stationary ray."
+}
