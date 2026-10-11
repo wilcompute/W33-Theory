@@ -4001,6 +4001,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bfe015c9c24a53d0f1b6b2cc0bdf02319a58a8e7f48d5b1787f569cc55b1616b",
+      "normalized_formula": "\"\"\"Pass11924:whystabiliserHiggsvacualockm_c=m_u(aresidualS3),andhowamisalignedflavonunlocksit",
+      "numeric_literals": [
+        "1924"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "\"\"\"Pass 11924: why stabiliser Higgs vacua lock m_c = m_u (a residual S3), and how a misaligned flavon unlocks it.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bb3236edae1c289f663de898b5205c77d0ecc148214ed233a182de208583fd06",
+      "structural_formula": "\"\"\"Pass1#:whystabiliserHiggsvacualockm_c=m_u(aresidualS3),andhowamisalignedflavonunlocksit"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8372ad2fccf0b1cd406d1064b2b96b29425bea38270343c592d1757924729bd0",
       "normalized_formula": "\"\"\"Pass2304:completeq=27spectraforfourstandardspreadfamilies",
       "numeric_literals": [
@@ -231369,6 +231396,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "50899c396f507123ebf9142e2654328e51f9d95962aea3fe84ecc1c7e8dad80c",
+      "normalized_formula": "#Pass11924:whystabiliserHiggsvacualockcharm=up(aresidualS3),andhowamisalignedflavonunlocksit",
+      "numeric_literals": [
+        "1924"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md",
+          "raw": "# Pass 11924: why stabiliser Higgs vacua lock charm = up (a residual S\u2083), and how a misaligned flavon unlocks it",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0a2ecfef7957dfbbbb5186332a8e874f6f3d564a614c712c44df5e420605fc3c",
+      "structural_formula": "#Pass1#:whystabiliserHiggsvacualockcharm=up(aresidualS3),andhowamisalignedflavonunlocksit"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4e4d9d61d55bb2d29981067923d83108f2106b310299dab74f495b265d9df148",
       "normalized_formula": "#Pass356:CSSDistanced=q+1\u2014TheLowerBoundArgument",
       "numeric_literals": [
@@ -333807,6 +333861,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "19aa1ecafa0d29f0bb0b33eff7c3bc6fb0e5839a00fefbc68b515830c8e85276",
+      "normalized_formula": "(C_de=C_{-d,-e}forDelta(54);unconstrainedfortheDelta(27)control).Foreachcouplingdraw,theglobalminimum",
+      "numeric_literals": [
+        "27",
+        "54"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_two_triplet_scan.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 2,
+          "path": "analysis/w33_pass11924_two_triplet_scan.py",
+          "raw": "(C_de = C_{-d,-e} for Delta(54); unconstrained for the Delta(27) control). For each coupling draw, the global minimum",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8c90936307779e58dbf9dc16bb1e7449d6639603dd4f98edc50537ec55276a40",
+      "structural_formula": "(C_de=C_{-d,-e}forDelta(#);unconstrainedfortheDelta(#)control).Foreachcouplingdraw,theglobalminimum"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4810707780997bd0fc0301eac38a6f58b0acbbdb73b1e1278260bdd7fd7f0e76",
       "normalized_formula": "(Cabibbo~13deg),theoppositeregime",
       "numeric_literals": [
@@ -348921,6 +349003,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "92ab28b23f3a7d21133841f72a43dfae9e231fc8f003fb5ac6420e88ee15a364",
+      "normalized_formula": "*Itsactiononthefamilyqutrithascommutantdimension2,i.e.Q=^1+2^",
+      "numeric_literals": [
+        "+2",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md",
+          "raw": "* Its action on the family qutrit has commutant dimension 2, i.e. Q = **1 + 2**.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "218b50e2a5e427e1ca26e876907f121d6bc774a84f27e2faa4db19301d6fbf2b",
+      "structural_formula": "*Itsactiononthefamilyqutrithascommutantdimension2,i.e.Q=^##^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "efc5c393d12ef39ddef6abd2f87b8db3ac7187a798a2be81f23fcbaddb25a962",
       "normalized_formula": "*K-v=1/S_holo(Kemenyexcess=inverseholographicentropy)",
       "numeric_literals": [
@@ -353642,6 +353752,35 @@
       },
       "structural_family_id": "33933e9c10b6a67fe32a419c605454cf9d0cde89c725570057ddc182b2e1fc34",
       "structural_formula": "*^Thelaw.^Aone-gatetickisU=W(a)V_MT1,withz1themagicaxis.Themagic-axislawF\u2032(Pass1#)says:if"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7fe2ae31ed41d50c5f032571931da5bff784a3a13e6d6322c6302d162993d4ac",
+      "normalized_formula": "*^Thenon-linearcasesswitchbranch.^The9non-linear\u0394(54)casesswitchvacuumbranchbetween\u03bb=0.1and0.01",
+      "numeric_literals": [
+        ".01",
+        "0.1",
+        "54"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 57,
+          "path": "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md",
+          "raw": "* **The non-linear cases switch branch.** The 9 non-linear \u0394(54) cases switch vacuum branch between \u03bb = 0.1 and 0.01.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "688edfc9cf967833381fc11f15102262ef2dc0d1f45e19d46789b2d3c3ea5ab3",
+      "structural_formula": "*^Thenon-linearcasesswitchbranch.^The9non-linear\u0394(#)casesswitchvacuumbranchbetween\u03bb=#and0#"
     },
     {
       "file_count": 1,
@@ -383284,6 +383423,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "258ea6594d0993500a5512499bcdc7fd7f8dc17181e9f8aa1b60656883034230",
+      "normalized_formula": "1.Covariance.All18projectiveelementsUofDelta(54)actcovariantly:UY(h)U^T=Y(V_Uh)foralinearmapV_Uon",
+      "numeric_literals": [
+        "1",
+        "54",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "1. Covariance. All 18 projective elements U of Delta(54) act covariantly: U Y(h) U^T = Y(V_U h) for a linear map V_U on",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "9b303c6495145e2867a4732f5342c016b1ea519a1fa0c59520cf14314e9c8756",
+      "structural_formula": "#.Covariance.All1#projectiveelementsUofDelta(#)actcovariantly:UY(h)U^T=Y(V_Uh)foralinearmapV_Uon"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6fe70ecfa18e49d17e581879714a4cdcb878cebbdac3ea4143aeef78587eb8d0",
       "normalized_formula": "1.E6breaking(M_E6~10^17GeV)",
       "numeric_literals": [
@@ -387926,7 +388094,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1532,
+          "line": 1534,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -406093,6 +406261,33 @@
       },
       "structural_family_id": "fcbacf58929dd248625ba5aeb8cd0460e442bb926b1e54135693503f8c795cfc",
       "structural_formula": "#.Theglobalpairledgerfixes`summ^#n_m=#,#,#,#,#`butcannotdeterminethesingletoncount.Adeterministic4#-shardbitmap-unioncontractfreezesthemissingcomputation"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6355b41853181ded11f9fc53ec59e5997e47b59489e4b802474a754bc5978415",
+      "normalized_formula": "2.Theorem(residualS3).Eachofthe12qutritstabiliserstateshhasresidualgroup{U:V_Uh~h}ofprojective",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "2. Theorem (residual S3). Each of the 12 qutrit stabiliser states h has residual group {U : V_U h ~ h} of projective",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "18e72acd8349d47967f63e327b523bae73b6896c194b032bcf1e105e094cfa86",
+      "structural_formula": "#.Theorem(residualS3).Eachofthe1#qutritstabiliserstateshhasresidualgroup{U:V_Uh~h}ofprojective"
     },
     {
       "file_count": 1,
@@ -707973,6 +708168,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "839fdfc0922f9a479b1aab1da8a6d68d8f0af89765f9fee45751b307e8382a88",
+      "normalized_formula": "Over120randomDelta(54)couplingdraws(globalminimumatlam=0.1,continuedto0.01and0.001):32vacuakeep",
+      "numeric_literals": [
+        ".001",
+        ".01",
+        "0.1",
+        "20",
+        "32",
+        "54"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "Over 120 random Delta(54) coupling draws (global minimum at lam = 0.1, continued to 0.01 and 0.001): 32 vacua keep",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6426f2c19bea2f2615d5e9d35fee0e083bc464fc04df66fc905501c0f3f9ee49",
+      "structural_formula": "Over1#randomDelta(#)couplingdraws(globalminimumatlam=#,continuedto0#and0#):#vacuakeep"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0bf610e13933fc39a7d16b2f7792550bfdd04b8f2e4153f676baa8140275e68a",
       "normalized_formula": "Over`F3`,themap`K^T:F3^45->F3^240`haskernelexactlytheconstantsand",
       "numeric_literals": [
@@ -761944,6 +762171,33 @@
       },
       "structural_family_id": "fb804320ec79f7e86c61b45e4e93b1950dca7f0332dd6f6dc4f080cedd639840",
       "structural_formula": "So^\u039b#=\u2212#\u2044#M1#I=#M1#>#^(M=M_s/#\u03c0).Itis^positive^,asAlvarez-Gaum\u00e9etal.found"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7282d3d3a782410e88156f841e2d639f9d32c0023fe43c34d381f51505d97612",
+      "normalized_formula": "SoaflavontripletcoupledtotheHiggsliftsm_c=m_uinaboutthreequartersofDelta(54)vacua,atfirstorderin",
+      "numeric_literals": [
+        "54"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "So a flavon triplet coupled to the Higgs lifts m_c = m_u in about three quarters of Delta(54) vacua, at first order in",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2ab017fad54935506eaa5e987cbabdf0d00c046e98c2bd5280868322fdc03f89",
+      "structural_formula": "SoaflavontripletcoupledtotheHiggsliftsm_c=m_uinaboutthreequartersofDelta(#)vacua,atfirstorderin"
     },
     {
       "file_count": 1,
@@ -956330,7 +956584,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1537,
+          "line": 1539,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -981551,6 +981805,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f24860a1bc03350f64f450930c37e68aa080f755d5e64537dfc9ec6dcf0b2355",
+      "normalized_formula": "^Covariance.^All18projectiveelementsUactcovariantly:UY(h)UT=Y(V_Uh)foralinearmapV_UontheHiggs",
+      "numeric_literals": [
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md",
+          "raw": "**Covariance.** All 18 projective elements U act covariantly: U Y(h) U\u1d40 = Y(V_U h) for a linear map V_U on the Higgs",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "6389f8a5890d86f7d06211e83327b3f61b8130a783f1df554494d810252b2b39",
+      "structural_formula": "^Covariance.^All1#projectiveelementsUactcovariantly:UY(h)UT=Y(V_Uh)foralinearmapV_UontheHiggs"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e6eb01107890b2fe21905947cfa359ea8534ff73d4025d197a602c5cb3fac0c9",
       "normalized_formula": "^Criterion.^Avacuum\u03c8enterse8through\u03c1=|\u03c8\u27e9\u27e8\u03c8|\u2212I/9,whichliesintheoperatorgradesl(9).Thevacuumleavesageneratorunbrokenwhenthegeneratorcommuteswith\u03c1.Forthevectorcriterionin11708,thegeneratormustannihilate\u03c8itself",
       "numeric_literals": [
@@ -982738,6 +983019,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8680ac7287a8bd7044a4971ac573ce28938bfc57f40d4a2c856a9b16578ab271",
+      "normalized_formula": "^Procedure.^Foreachcouplingdraw,findtheglobalminimumat\u03bb=0.1(20starts),thencontinueitto\u03bb=0.01",
+      "numeric_literals": [
+        "0.01",
+        "0.1",
+        "20"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md",
+          "raw": "**Procedure.** For each coupling draw, find the global minimum at \u03bb = 0.1 (20 starts), then continue it to \u03bb = 0.01",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c81b5ed3d89bac162e244ce0b8c75e9f1b0c26d60a7623a4cde90ef1441e255a",
+      "structural_formula": "^Procedure.^Foreachcouplingdraw,findtheglobalminimumat\u03bb=#(#starts),thencontinueitto\u03bb=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ff0c131567679d5bf0698298c006b69fa9693f1d0b221ba82dbfeaeb30c3b13c",
       "normalized_formula": "^Proofsketch:^Themod-3collisionofeigenvalues2\u2261\u22121\u2261\u22124mod3forcesthetworationaleigenspacestomergeintoasingleF3-eigenspaceofdimension39.TheJordanblockstructureof(A+I)2overF3onthisspacehasnullity10inthesecondpowerversusthefirst.Since\u03a64(3)=(32+1)=10countsexactlythecyclotomicobstructionatp=3fordegree-4unityroots,thisisnotacoincidence:theRamanujangraphpropertyforcesthediscriminantofthecharacteristicpolynomialmod3tofactoras\u03a64(3)^eforthecollisionmultiplicitye=1.\u25a1",
       "numeric_literals": [
@@ -983226,6 +983536,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "53378775639d23ee2b0b9179c62f785a6004bc49d4c9a3ddb86e4f3d9f13caea",
+      "normalized_formula": "^Setup.^TheupYukawaisY_u(h)_{ab}=h_{a+b}g_{a\u2212b},withgeven.\u0394(54)=\u27e8X,Z,R\u27e9actsonthefamilyqutritby",
+      "numeric_literals": [
+        "54"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md",
+          "raw": "**Setup.** The up Yukawa is Y_u(h)_{ab} = h_{a+b} g_{a\u2212b}, with g even. \u0394(54) = \u27e8X, Z, R\u27e9 acts on the family qutrit by",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "a216f4b475788f5d2f3a7c5a3c1ced0e5210648a4f8e8fca8f8da5f29d3707b4",
+      "structural_formula": "^Setup.^TheupYukawaisY_u(h)_{ab}=h_{a+b}g_{a\u2212b},withgeven.\u0394(#)=\u27e8X,Z,R\u27e9actsonthefamilyqutritby"
+    },
+    {
+      "file_count": 1,
       "formula_id": "643be00e0b64579eb229fb7f1e14d9f3d9f55df4b2727414e57f09c3a172b993",
       "normalized_formula": "^Setup:^Injectsingle-photon(orcoherentstate)intomodev0.Evolvefortimet=nTwhereT=2\u03c0/gcd(12,2,4)=\u03c0/2",
       "numeric_literals": [
@@ -983252,6 +983589,38 @@
       },
       "structural_family_id": "9ab8b299c6b1357fda982d1fac1793653dd1c14567330e3e8f2285c7319cc69f",
       "structural_formula": "^Setup:^Injectsingle-photon(orcoherentstate)intomodev0.Evolvefortimet=nTwhereT=#\u03c0/gcd(#,#,#)=\u03c0/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c3ee7caf499f4a8dd2a81236001699275639436fe6ba4e46d6f16e4bd0457944",
+      "normalized_formula": "^Size.^Thesplittingisabout\u03bb\u00b70.17ofthetopYukawaagainst\u03b5=0.1.Arealisticm_u/m_c\u22482\u00b710\u22123needsanO(1)",
+      "numeric_literals": [
+        "0.1",
+        "0.17",
+        "1",
+        "10",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 66,
+          "path": "analysis/PASS11924_RESIDUAL_S3_AND_MISALIGNED_FLAVON.md",
+          "raw": "**Size.** The splitting is about \u03bb\u00b70.17 of the top Yukawa against \u03b5 = 0.1. A realistic m_u/m_c \u2248 2\u00b710\u207b\u00b3 needs an O(1)",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "1c94a6a796b8ab30060e56f653aa718ce231dae65517dcd91eae799468fdc3dd",
+      "structural_formula": "^Size.^Thesplittingisabout\u03bb\u00b7#ofthetopYukawaagainst\u03b5=#.Arealisticm_u/m_c\u2248#\u00b7#\u2212#needsanO(#)"
     },
     {
       "file_count": 1,
@@ -1344500,6 +1344869,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6669f301c598582bc1d66d03ceb98c0eb00fe8d3f3219d7dea703e693389f534",
+      "normalized_formula": "m_u/m_c\u22482\\times10^{-3}",
+      "numeric_literals": [
+        "-3",
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1522,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "m_u/m_c\\approx2\\times10^{-3}",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "b4c202e07faadea279a1bdce3271850deb244968b7633cc82e79ea5d511808b9",
+      "structural_formula": "m_u/m_c\u2248#\\times1#^{#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "32cf7d38ca789671e309251dd3f3e4cab6c5a9fd2d535d9562f54e80ce5fc4d5",
       "normalized_formula": "m_u/m_t=39/3,351,040",
       "numeric_literals": [
@@ -1357251,6 +1357649,61 @@
       },
       "structural_family_id": "9b64f0ef7133b38fca95baa51632c43c8017f6a4e5f7370bf3f8cb18e0bc6ac8",
       "structural_formula": "mirrorslots=#*#*(#W3#instances)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9aedb2aa2bc5416f2a0a5cd5ba3832ce714f9016fe7bb05740a9508c02bea1c9",
+      "normalized_formula": "misaligned_commutant=commutant_dim([els[k][0]forkincommon])))",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 84,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "misaligned_commutant=commutant_dim([els[k][0] for k in common])))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "81a86bd802a83ac979590f86dec22aae2e2e0b1c66f140632d524769c03dbc48",
+      "structural_formula": "misaligned_commutant=commutant_dim([els[k][#]forkincommon])))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "058107263b6aa7ec877b30a619bc7f7e02d8ea36b2b56f6a49cb50a502dcf4af",
+      "normalized_formula": "misaligned_pair_only_z2=all(o[\"misaligned_common\"]=2ando[\"misaligned_commutant\"]=5foroinout)",
+      "numeric_literals": [
+        "2",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 93,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "misaligned_pair_only_z2=all(o[\"misaligned_common\"] == 2 and o[\"misaligned_commutant\"] == 5 for o in out),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0ee0a983a952e49b2d653c31ed01e24f5768dc4182ba159789206c216a7ef7fb",
+      "structural_formula": "misaligned_pair_only_z2=all(o[\"misaligned_common\"]=#ando[\"misaligned_commutant\"]=#foroinout)"
     },
     {
       "file_count": 1,
@@ -1386335,6 +1386788,34 @@
       },
       "structural_family_id": "c7d042f1e744d2bd362e3958b2d6049d2d0287e93d8d35a428ca7f0aee4ac593",
       "structural_formula": "order5#;|Sp(#,F2)|/|W(E6)|=#(bitangents);SRG(#,#,#,#)has2#edges=|E8roots|;complement"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7227e29ba02250a1629556eb16d35b31eda9098821f729b02f0c413a27fd7845",
+      "normalized_formula": "order6(anS3=Z3x|Z2),whoseactiononQhascommutantdimension2,i.e.Q=1+2.SinceYY^daggercommutes",
+      "numeric_literals": [
+        "+2",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "order 6 (an S3 = Z3 x| Z2), whose action on Q has commutant dimension 2, i.e. Q = 1 + 2. Since Y Y^dagger commutes",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "a8af13a2ed5725d619d864ea1272dd73cdc3a26600f386bf54785ea0ee11ae25",
+      "structural_formula": "order6(anS3=Z3x|Z2),whoseactiononQhascommutantdimension2,i.e.Q=##.SinceYY^daggercommutes"
     },
     {
       "file_count": 1,
@@ -1545656,7 +1546137,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1533,
+          "line": 1535,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1636799,6 +1637280,33 @@
       },
       "structural_family_id": "c66b94f4ca6cb25f1a9ec3ec43d8e60551e2c341d3b34e0f18d8a7f780932e5f",
       "structural_formula": "st[f\"dimker(M+I)={kernel_dim_mod3((M+np.eye(#,dtype=np.int6#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "714d38cd91d8abb810f2f11db538b95856c2faf9eb42620ec355dc7bceb41aff",
+      "normalized_formula": "stab=[(len(stabgroup(els,h)),commutant_dim([els[k][0]forkinstabgroup(els,h)]))forhinSTAB]",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 79,
+          "path": "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py",
+          "raw": "stab = [(len(stabgroup(els, h)), commutant_dim([els[k][0] for k in stabgroup(els, h)])) for h in STAB]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6d2eda73e2c7e42ee24640bf39daf821a49643f31a5367a227abc62861376667",
+      "structural_formula": "stab=[(len(stabgroup(els,h)),commutant_dim([els[k][#]forkinstabgroup(els,h)]))forhinSTAB]"
     },
     {
       "file_count": 1,
@@ -1764459,9 +1764967,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T19:34:10-04:00",
+  "frozen_at": "2026-10-11T19:39:04-04:00",
   "pass": 398,
-  "repository_head": "34e149d795a4dac647c9d75ba21528b2cbbc2acf",
+  "repository_head": "c92d9751a2e94abdbb46b0089bfdd2fd7e15285c",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1765609,6 +1766117,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ec140426d6528a5235a44cdf47af32615fd0b42f8671523a09bfb9d2fe19966c",
       "structural_formula": "\"\"\"Pass1#:themagnetizedhomeunlocksthecharm-uppairatfirstorder;amasslessupforcestop=charm"
+    },
+    {
+      "exact_formula_ids": [
+        "bfe015c9c24a53d0f1b6b2cc0bdf02319a58a8e7f48d5b1787f569cc55b1616b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bb3236edae1c289f663de898b5205c77d0ecc148214ed233a182de208583fd06",
+      "structural_formula": "\"\"\"Pass1#:whystabiliserHiggsvacualockm_c=m_u(aresidualS3),andhowamisalignedflavonunlocksit"
     },
     {
       "exact_formula_ids": [
@@ -1822951,6 +1823467,14 @@
     },
     {
       "exact_formula_ids": [
+        "258ea6594d0993500a5512499bcdc7fd7f8dc17181e9f8aa1b60656883034230"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b303c6495145e2867a4732f5342c016b1ea519a1fa0c59520cf14314e9c8756",
+      "structural_formula": "#.Covariance.All1#projectiveelementsUofDelta(#)actcovariantly:UY(h)U^T=Y(V_Uh)foralinearmapV_Uon"
+    },
+    {
+      "exact_formula_ids": [
         "816e2ab5776fb6cf05cd786d531a0164f3109e97f5fc416b2b79650a883041c0"
       ],
       "exact_member_count": 1,
@@ -1824388,6 +1824912,14 @@
       "exact_member_count": 1,
       "structural_family_id": "27a51fa9f5cae352d04c6e48c4791d0140bf18ccf863177797ec5cea4d341db9",
       "structural_formula": "#.Theoptimalmatching(Hungarian)givesmaximumdistance\u2248#"
+    },
+    {
+      "exact_formula_ids": [
+        "6355b41853181ded11f9fc53ec59e5997e47b59489e4b802474a754bc5978415"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "18e72acd8349d47967f63e327b523bae73b6896c194b032bcf1e105e094cfa86",
+      "structural_formula": "#.Theorem(residualS3).Eachofthe1#qutritstabiliserstateshhasresidualgroup{U:V_Uh~h}ofprojective"
     },
     {
       "exact_formula_ids": [
@@ -1844038,6 +1844570,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a0298dcb16f187a7112c266cb5964f53373b2a8a510a71768df5aa4238a4a2bd",
       "structural_formula": "#Pass1#:themagnetizedhomeunlockscharm\u2013up;amasslessupforcestop=charm;theremainingheteroticlevers"
+    },
+    {
+      "exact_formula_ids": [
+        "50899c396f507123ebf9142e2654328e51f9d95962aea3fe84ecc1c7e8dad80c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0a2ecfef7957dfbbbb5186332a8e874f6f3d564a614c712c44df5e420605fc3c",
+      "structural_formula": "#Pass1#:whystabiliserHiggsvacualockcharm=up(aresidualS3),andhowamisalignedflavonunlocksit"
     },
     {
       "exact_formula_ids": [
@@ -1877228,6 +1877768,14 @@
     },
     {
       "exact_formula_ids": [
+        "19aa1ecafa0d29f0bb0b33eff7c3bc6fb0e5839a00fefbc68b515830c8e85276"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8c90936307779e58dbf9dc16bb1e7449d6639603dd4f98edc50537ec55276a40",
+      "structural_formula": "(C_de=C_{-d,-e}forDelta(#);unconstrainedfortheDelta(#)control).Foreachcouplingdraw,theglobalminimum"
+    },
+    {
+      "exact_formula_ids": [
         "4810707780997bd0fc0301eac38a6f58b0acbbdb73b1e1278260bdd7fd7f0e76"
       ],
       "exact_member_count": 1,
@@ -1881307,6 +1881855,14 @@
     },
     {
       "exact_formula_ids": [
+        "92ab28b23f3a7d21133841f72a43dfae9e231fc8f003fb5ac6420e88ee15a364"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "218b50e2a5e427e1ca26e876907f121d6bc774a84f27e2faa4db19301d6fbf2b",
+      "structural_formula": "*Itsactiononthefamilyqutrithascommutantdimension2,i.e.Q=^##^"
+    },
+    {
+      "exact_formula_ids": [
         "efc5c393d12ef39ddef6abd2f87b8db3ac7187a798a2be81f23fcbaddb25a962"
       ],
       "exact_member_count": 1,
@@ -1882616,6 +1883172,14 @@
       "exact_member_count": 1,
       "structural_family_id": "33933e9c10b6a67fe32a419c605454cf9d0cde89c725570057ddc182b2e1fc34",
       "structural_formula": "*^Thelaw.^Aone-gatetickisU=W(a)V_MT1,withz1themagicaxis.Themagic-axislawF\u2032(Pass1#)says:if"
+    },
+    {
+      "exact_formula_ids": [
+        "7fe2ae31ed41d50c5f032571931da5bff784a3a13e6d6322c6302d162993d4ac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "688edfc9cf967833381fc11f15102262ef2dc0d1f45e19d46789b2d3c3ea5ab3",
+      "structural_formula": "*^Thenon-linearcasesswitchbranch.^The9non-linear\u0394(#)casesswitchvacuumbranchbetween\u03bb=#and0#"
     },
     {
       "exact_formula_ids": [
@@ -1955424,6 +1955988,14 @@
     },
     {
       "exact_formula_ids": [
+        "839fdfc0922f9a479b1aab1da8a6d68d8f0af89765f9fee45751b307e8382a88"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6426f2c19bea2f2615d5e9d35fee0e083bc464fc04df66fc905501c0f3f9ee49",
+      "structural_formula": "Over1#randomDelta(#)couplingdraws(globalminimumatlam=#,continuedto0#and0#):#vacuakeep"
+    },
+    {
+      "exact_formula_ids": [
         "0bf610e13933fc39a7d16b2f7792550bfdd04b8f2e4153f676baa8140275e68a"
       ],
       "exact_member_count": 1,
@@ -1969892,6 +1970464,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fb804320ec79f7e86c61b45e4e93b1950dca7f0332dd6f6dc4f080cedd639840",
       "structural_formula": "So^\u039b#=\u2212#\u2044#M1#I=#M1#>#^(M=M_s/#\u03c0).Itis^positive^,asAlvarez-Gaum\u00e9etal.found"
+    },
+    {
+      "exact_formula_ids": [
+        "7282d3d3a782410e88156f841e2d639f9d32c0023fe43c34d381f51505d97612"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2ab017fad54935506eaa5e987cbabdf0d00c046e98c2bd5280868322fdc03f89",
+      "structural_formula": "SoaflavontripletcoupledtotheHiggsliftsm_c=m_uinaboutthreequartersofDelta(#)vacua,atfirstorderin"
     },
     {
       "exact_formula_ids": [
@@ -2026348,6 +2026928,14 @@
     },
     {
       "exact_formula_ids": [
+        "f24860a1bc03350f64f450930c37e68aa080f755d5e64537dfc9ec6dcf0b2355"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6389f8a5890d86f7d06211e83327b3f61b8130a783f1df554494d810252b2b39",
+      "structural_formula": "^Covariance.^All1#projectiveelementsUactcovariantly:UY(h)UT=Y(V_Uh)foralinearmapV_UontheHiggs"
+    },
+    {
+      "exact_formula_ids": [
         "e6eb01107890b2fe21905947cfa359ea8534ff73d4025d197a602c5cb3fac0c9"
       ],
       "exact_member_count": 1,
@@ -2026660,6 +2027248,14 @@
     },
     {
       "exact_formula_ids": [
+        "8680ac7287a8bd7044a4971ac573ce28938bfc57f40d4a2c856a9b16578ab271"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c81b5ed3d89bac162e244ce0b8c75e9f1b0c26d60a7623a4cde90ef1441e255a",
+      "structural_formula": "^Procedure.^Foreachcouplingdraw,findtheglobalminimumat\u03bb=#(#starts),thencontinueitto\u03bb=#"
+    },
+    {
+      "exact_formula_ids": [
         "ff0c131567679d5bf0698298c006b69fa9693f1d0b221ba82dbfeaeb30c3b13c"
       ],
       "exact_member_count": 1,
@@ -2026788,11 +2027384,27 @@
     },
     {
       "exact_formula_ids": [
+        "53378775639d23ee2b0b9179c62f785a6004bc49d4c9a3ddb86e4f3d9f13caea"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a216f4b475788f5d2f3a7c5a3c1ced0e5210648a4f8e8fca8f8da5f29d3707b4",
+      "structural_formula": "^Setup.^TheupYukawaisY_u(h)_{ab}=h_{a+b}g_{a\u2212b},withgeven.\u0394(#)=\u27e8X,Z,R\u27e9actsonthefamilyqutritby"
+    },
+    {
+      "exact_formula_ids": [
         "643be00e0b64579eb229fb7f1e14d9f3d9f55df4b2727414e57f09c3a172b993"
       ],
       "exact_member_count": 1,
       "structural_family_id": "9ab8b299c6b1357fda982d1fac1793653dd1c14567330e3e8f2285c7319cc69f",
       "structural_formula": "^Setup:^Injectsingle-photon(orcoherentstate)intomodev0.Evolvefortimet=nTwhereT=#\u03c0/gcd(#,#,#)=\u03c0/#"
+    },
+    {
+      "exact_formula_ids": [
+        "c3ee7caf499f4a8dd2a81236001699275639436fe6ba4e46d6f16e4bd0457944"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1c94a6a796b8ab30060e56f653aa718ce231dae65517dcd91eae799468fdc3dd",
+      "structural_formula": "^Size.^Thesplittingisabout\u03bb\u00b7#ofthetopYukawaagainst\u03b5=#.Arealisticm_u/m_c\u2248#\u00b7#\u2212#needsanO(#)"
     },
     {
       "exact_formula_ids": [
@@ -2124881,6 +2125493,14 @@
     },
     {
       "exact_formula_ids": [
+        "6669f301c598582bc1d66d03ceb98c0eb00fe8d3f3219d7dea703e693389f534"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b4c202e07faadea279a1bdce3271850deb244968b7633cc82e79ea5d511808b9",
+      "structural_formula": "m_u/m_c\u2248#\\times1#^{#}"
+    },
+    {
+      "exact_formula_ids": [
         "32cf7d38ca789671e309251dd3f3e4cab6c5a9fd2d535d9562f54e80ce5fc4d5"
       ],
       "exact_member_count": 1,
@@ -2128377,6 +2128997,22 @@
       "exact_member_count": 1,
       "structural_family_id": "9b64f0ef7133b38fca95baa51632c43c8017f6a4e5f7370bf3f8cb18e0bc6ac8",
       "structural_formula": "mirrorslots=#*#*(#W3#instances)"
+    },
+    {
+      "exact_formula_ids": [
+        "9aedb2aa2bc5416f2a0a5cd5ba3832ce714f9016fe7bb05740a9508c02bea1c9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "81a86bd802a83ac979590f86dec22aae2e2e0b1c66f140632d524769c03dbc48",
+      "structural_formula": "misaligned_commutant=commutant_dim([els[k][#]forkincommon])))"
+    },
+    {
+      "exact_formula_ids": [
+        "058107263b6aa7ec877b30a619bc7f7e02d8ea36b2b56f6a49cb50a502dcf4af"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0ee0a983a952e49b2d653c31ed01e24f5768dc4182ba159789206c216a7ef7fb",
+      "structural_formula": "misaligned_pair_only_z2=all(o[\"misaligned_common\"]=#ando[\"misaligned_commutant\"]=#foroinout)"
     },
     {
       "exact_formula_ids": [
@@ -2136203,6 +2136839,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c7d042f1e744d2bd362e3958b2d6049d2d0287e93d8d35a428ca7f0aee4ac593",
       "structural_formula": "order5#;|Sp(#,F2)|/|W(E6)|=#(bitangents);SRG(#,#,#,#)has2#edges=|E8roots|;complement"
+    },
+    {
+      "exact_formula_ids": [
+        "7227e29ba02250a1629556eb16d35b31eda9098821f729b02f0c413a27fd7845"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a8af13a2ed5725d619d864ea1272dd73cdc3a26600f386bf54785ea0ee11ae25",
+      "structural_formula": "order6(anS3=Z3x|Z2),whoseactiononQhascommutantdimension2,i.e.Q=##.SinceYY^daggercommutes"
     },
     {
       "exact_formula_ids": [
@@ -2202400,6 +2203044,14 @@
     },
     {
       "exact_formula_ids": [
+        "714d38cd91d8abb810f2f11db538b95856c2faf9eb42620ec355dc7bceb41aff"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6d2eda73e2c7e42ee24640bf39daf821a49643f31a5367a227abc62861376667",
+      "structural_formula": "stab=[(len(stabgroup(els,h)),commutant_dim([els[k][#]forkinstabgroup(els,h)]))forhinSTAB]"
+    },
+    {
+      "exact_formula_ids": [
         "5a9d1646cc3f155c12b20cfd6680b63626b0c620665f056e8e047c63d8da1969"
       ],
       "exact_member_count": 1,
@@ -2235951,20 +2236603,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86760896,
-    "exact_formula_families": 60334,
-    "files_scanned": 11878,
-    "formula_occurrences": 66276,
+    "bytes_scanned": 86774986,
+    "exact_formula_families": 60352,
+    "files_scanned": 11881,
+    "formula_occurrences": 66294,
     "status_occurrences": {
-      "certified_or_theorem": 4828,
+      "certified_or_theorem": 4835,
       "killed_or_retracted": 1563,
       "open_or_conditional": 2146,
       "preregistered": 32,
-      "retrospective_fit": 5107,
-      "unclassified": 52600
+      "retrospective_fit": 5108,
+      "unclassified": 52610
     },
-    "structural_families": 58730
+    "structural_families": 58748
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "0f311131bb2290517c92f85516bc8c152f4cc575f43cfbd605f2dcf47ecc07c7"
+  "universe_sha256": "18648b241b45a0f5029133a9c38a0c6b9f2fe9c45099165d41ab0ccedb1f3712"
 }
