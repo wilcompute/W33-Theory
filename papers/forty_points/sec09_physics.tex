@@ -1279,9 +1279,12 @@ The source of that displacement is now constrained sharply.  The exact $G_{25}$ 
 no fixed vector in the three-complex-dimensional projective tangent and no fixed covector in its dual.  Therefore every
 differentiable $G_{32}$-invariant scalar---including functions of the degree-$12,18,24,30$ generators---has zero
 projective tangent differential at the ray.  A symmetric degree-$12$ correction can lift the common phase or alter
-stability, but cannot by itself supply a perturbative $\delta\sim(v/\Lambda)^8$ force.  A nonzero small displacement
-requires a little-group-breaking spurion, a coupled breaking sector, or a bifurcation.
+stability, but cannot by itself supply a perturbative $\delta\sim(v/\Lambda)^8$ force.  After the common
+$\mathbf{84}$ phase is relaxed, a single nonzero invariant harmonic actually stabilises the ray at quadratic order;
+an invariant-driven instability needs competing phase harmonics (for example degrees $12$ and $18$), a phase-fixing
+sector, or explicit little-group breaking.
 \cert{w33\_20261011\_witting\_displacement\_firewall.py}
+\cert{w33\_20261011\_execute\_all5\_witting\_flavour\_frontier.py}
 In the chiral heterotic realisation ($T^6/\Z_3$, three untwisted $\mathbf{84}$s and twenty-seven twisted
 $\overline{\mathbf9}$s, cubic coupling the $E_8$ bracket) the trinification vacuum is $F$- and $D$-flat and leaves
 $3[(3,3,3)+1]+27[(\bar3,1,1)+(1,\bar3,1)+(1,1,\bar3)]$ massless: three families, one per plane, but of the wrong
@@ -1499,6 +1502,22 @@ The structure behind these results is a W(3,3) factorisation. For a dual pair th
 The neutrinos are the mirror image on the second qutrit. The Weinberg channel $L\cdot L$ (flux $2N_5$) is monomial for every det-3 flux, its top-Yukawa Higgs-pair space is exactly three-dimensional, and because both $L$ carry the same Wilson line every single-class neutrino mass matrix has an exactly degenerate pair: $M_\nu(h)_{bb'}=h_{b+b'}\,g'_{b-b'}$ with $g'_+=g'_-$, automatically symmetric. Up quarks and neutrinos are the single-qutrit sectors and down quarks and charged leptons the two-qutrit theta state, so the CKM and the PMNS are the two marginal Schmidt bases of one state. A complementarity test (anisotropic $\Omega$, 240 moduli) is negative: the two mixing distances are positively correlated ($+0.47$), and where the lepton mixing becomes PMNS-like the quark mixing is large too. \cert{w33\_pass11922\_neutrino\_qutrit\_complementarity.py}
 
 The heterotic charm--up lock of the local-$\mathbf{10}$ census is the same theorem. There the family qutrit is the three fixed points of the Wilson-line-free torus, the space-group rule allows $Q_au_bH_k$ iff $a+b\equiv k$, and theta evenness equates the two off-diagonal couplings, so again $Y_u(h)_{ab}=h_{a+b}\,g_{a-b}$ with $g_+=g_-$. Every one of the twelve qutrit stabiliser states $h$ locks a degenerate pair (the converse fails), and every global minimum of the general $\Delta(54)$-invariant potential of the Higgs triplet is a stabiliser state. The lock therefore survives the whole Higgs triplet at every $\Delta(54)$-symmetric vacuum; near a stabiliser state the splitting grows like the square root of the Higgs's stabiliser magic. A split charm and up quark needs a magic Higgs. \cert{w33\_pass11923\_stabiliser\_higgs\_lock.py}
+
+The Witting tangent and this flavour Higgs now meet at the operator level.  Their physical $H_{27}$ clock and shift
+matrices are identical, and the map $Y_u(h)_{ab}=h_{a+b}g_{a-b}$ intertwines those actions exactly.  In fact the
+computed charged-family modular image and Witting $G_{25}$ image coincide as a $216$-element projective matrix set in
+this same qutrit basis (after canonical projective normalisation at $10^{-9}$), extending the intertwiner to the whole
+projective one-qutrit Clifford/Hessian group at the certified numerical level.  The tensor cube
+has three $H_{27}$ singlets but no $G_{25}$ singlet, so an $H_{27}$-covariant cubic can break the larger Witting little
+group.  The actual $E_8$ cubic does source all three Witting tangent directions from the massless $27\times27$, but at
+this trinification vacuum those $27$s are the coloured $(3,3,3)$ states, so it is not an acceptable SM-preserving source.
+For mixing, independent left/right local qutrit adjoints $(8,1)\oplus(1,8)$ move the CKM and PMNS Schmidt bases
+separately without changing the singular masses in the frozen test point.  Finally the untwisted heterotic matter
+operator obeys the exact D-flat spectral lock $m^2=e_{\rm vector}/6$: in the $E_8$ $\mathbb Z_3$ grading, Jacobi turns
+$M_x^\dagger M_x-D_xD_x^\dagger$ into $\operatorname{ad}_{[x^\dagger,x]}=0$, and the factor six is only the
+antisymmetric-tensor norm convention.  The exact $N=1$ completion still cancels the flat-direction one-loop potential;
+retaining the forty-ray selector therefore needs
+a specified SUSY-breaking supertrace imbalance. \cert{w33\_20261011\_execute\_all5\_witting\_flavour\_frontier.py}
 
 \begin{boundary}[What this does and does not give]
 The datum the chirality no-go asks for from outside now has a name, the vacuum value of $\Omega$, which breaks

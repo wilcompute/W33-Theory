@@ -1,0 +1,164 @@
+{
+  "1_intertwiner": {
+    "G25_invariant_trilinear_dimension": 0,
+    "G25_tail_singulars": [
+      2.2360679774997902,
+      2.2360679774997902,
+      1.893617289112799,
+      1.7320508075688776,
+      1.4142135623730945
+    ],
+    "H27_invariant_trilinear_dimension": 3,
+    "H27_tail_singulars": [
+      1.7320508075688767,
+      1.7320508075688765,
+      8.154019485406769e-16,
+      6.840260029938126e-16,
+      6.511357335490484e-16
+    ],
+    "Witting_minus_family": 0,
+    "Witting_projective_order": 216,
+    "X_generator_residual": 0.0,
+    "Z_generator_residual": 3.510833468576701e-16,
+    "family_Z2_centralizer_linear_order": 1296,
+    "family_minus_Witting": 0,
+    "family_projective_order": 216,
+    "full_projective_sets_identical": true,
+    "identity_intertwiner": "The flavour class basis and physical Witting tangent use the same canonical X,Z matrices.",
+    "projective_completion": "The charged-family modular Clifford matrices and Witting G25/Z matrices are the identical 216-element projective set in this same basis.",
+    "projective_matrix_intersection": 216,
+    "yukawa_X_covariance_residual": 0.0,
+    "yukawa_Z_covariance_residual": 2.808666774861361e-15
+  },
+  "2_bifurcation": {
+    "CW_hessian_mean": 7.211095620629493,
+    "CW_hessian_spread": 6.661338147750939e-08,
+    "CW_transverse_hessian": [
+      7.211095631731723,
+      7.211095631731723,
+      7.211095653936184,
+      7.211095587322802,
+      7.211095631731723,
+      7.211095587322802
+    ],
+    "G25_tangent_invariant_degrees": [
+      6,
+      9,
+      12
+    ],
+    "competing_12_18_witness": {
+      "A12": 3.0,
+      "A18": -1.5,
+      "phase_hessian": 54.0,
+      "phase_stable": true,
+      "projective_hessian": -1.788904379370507,
+      "projectively_unstable": true
+    },
+    "nonanalytic_term": "Along the displayed real tangent, the 24 zero vector modes split as 0^4,(t^2/3)^18,(t^2)^2, giving 4 t^4 log(t^2) in F before analytic O(t^4) terms.",
+    "single_harmonic_result": "After relaxing the common 84 phase, any lone nonzero G32 invariant harmonic stabilizes the Witting ray at quadratic order; it cannot by itself cause the desired projective bifurcation.",
+    "zero_mode_splitting": {
+      "one": 2,
+      "one_third": 18,
+      "remain_zero": 4,
+      "sum_slope_squares": 3.9999999055297977
+    }
+  },
+  "3_gauge_invariant_source": {
+    "G25_cubic_invariant_dimension": 0,
+    "H27_cubic_invariant_dimension": 3,
+    "cartan_three_leg_max": 0.0,
+    "expected_equal_singular_value": 4.898979485566356,
+    "massless_kernel_dimension": 28,
+    "massless_nonmodulus_dimension": 27,
+    "reading": "The E8 cubic can source every complex Witting tangent direction from two backgrounds in the actual massless 27, but its restriction to three Cartan-tangent legs vanishes. In Pass11893 that 27 is the coloured (3,3,3), so this is not an SM-preserving vacuum source in the tested heterotic sector.",
+    "source_rank": 3,
+    "source_singular_values": [
+      4.898979485566356,
+      4.898979485566356,
+      4.898979485566356
+    ],
+    "witting_mass_rank": 56
+  },
+  "4_schmidt_adjoint": {
+    "baseline_CKM_distance": 0.744041566612866,
+    "baseline_PMNS_distance": 0.4999700805008153,
+    "best_left_adjoint": {
+      "distance": 0.25280627080680934,
+      "epsilon": -0.6000000000000001,
+      "generator": 0
+    },
+    "best_right_adjoint": {
+      "distance": 0.3270916753943561,
+      "epsilon": -0.7000000000000001,
+      "generator": 6
+    },
+    "beta": 0.8087233108680282,
+    "combined_CKM_distance": 0.25280627080681173,
+    "combined_PMNS_distance": 0.32709167539435585,
+    "down_mass_singular_drift": 6.245004513516506e-17,
+    "lepton_mass_singular_drift": 1.1102230246251565e-16,
+    "representation_target": "Independent marginal rotations live in (8,1)+(1,8) under local SU(3)xSU(3), not in another scalar (1,1) modulus. This is a tangent-space target, not yet a derived compactification operator.",
+    "sample": 4,
+    "seed": 61,
+    "t": 1.2877556667636183
+  },
+  "5_physical_one_loop": {
+    "N1_completion": "Pass11892: the exact N=1 chiral-84 plus gaugino completion cancels the flat-direction one-loop potential.",
+    "gauge_boundary": "A complete off-shell effective-potential claim still requires a declared gauge/ghost/Goldstone and renormalisation prescription; only extrema/energy differences can be promoted to physical statements after the corresponding Nielsen-identity consistency check.",
+    "generic": {
+      "matter_zeros": 4,
+      "nonzero_count": 80,
+      "operator_identity_relative_residual": 1.7924609175331756e-16,
+      "ratio_max": 0.16666666666667024,
+      "ratio_min": 0.16666666666666635,
+      "ratio_std": 4.802496647475075e-16,
+      "vector_zeros": 0
+    },
+    "heterotic_tree_spectrum_pass": true,
+    "soft_breaking": {
+      "fermion_dominated_runs_cusp": true,
+      "negative_mass_squared_selects_witting": true,
+      "positive_mass_squared_selects_C10": true
+    },
+    "spectral_law": "For the tested Witting and generic Cartan points, the nonzero untwisted X2-X3 squared singular masses are e_vector/6. In sorted 3-form coordinates M_x^dag M_x=D_x D_x^dag at ~1e-15 or better; the factor 1/6 is the norm conversion to the full antisymmetric tensor used by the vector spectrum.",
+    "twisted_sector_boundary": "Pass11893 leaves the 27 twisted 9bar copies massless at this tree-level Witting vacuum, so no x-dependent mass determinant for them is present in that declared model.",
+    "witting": {
+      "matter_zeros": 28,
+      "nonzero_count": 56,
+      "operator_identity_relative_residual": 2.4528332911247114e-16,
+      "ratio_max": 0.16666666666666682,
+      "ratio_min": 0.16666666666666657,
+      "ratio_std": 4.7498309058586995e-17,
+      "vector_zeros": 24
+    }
+  },
+  "all_checks_pass": true,
+  "checks": {
+    "CW_witting_hessian_isotropic_positive": true,
+    "CW_zero_split_exact_pattern": true,
+    "Cartan_cubic_vanishes": true,
+    "E8_cubic_surjects_massless27_to_tangent": true,
+    "H27_cubic_but_no_G25_cubic": true,
+    "adjoints_separate_marginals_without_mass_drift": true,
+    "exact_H27_generator_match": true,
+    "full_projective_intertwiner": true,
+    "mass_orbit_operator_identity": true,
+    "matter_vector_spectral_lock_generic": true,
+    "matter_vector_spectral_lock_witting": true,
+    "single_phase_relaxed_harmonic_stabilizes": true,
+    "two_harmonics_can_bifurcate": true,
+    "yukawa_map_H27_covariant": true
+  },
+  "schema": "w33.20261011.execute-all5-witting-flavour-frontier.v1",
+  "sources": {
+    "analysis/w33_pass11664_11671_kernel_dynamics.py": "28b54c9464c1ae6f83d920bc8b138b6e92d1280d5e90e474a592bde0eea95839",
+    "analysis/w33_pass11681_e8_from_two_qutrits.py": "fa594309eb321a5e1bd90bcba7bf37ae70cc85885c66cc16f37373fe0424da7e",
+    "analysis/w33_pass11884_11886_one_loop_trinification.py": "bfb973ffe5022c3a4d8d8d6d0b61ccae12c10348301116fb9d288391ec2d4c95",
+    "analysis/w33_pass11890_11892_vacuum_phase_diagram.py": "25086d0710281f9d7b8eb34e304e969b0e4c202cd3ac39ecbe287b34a802e4f9",
+    "analysis/w33_pass11893_trinification_chiral_spectrum.py": "0b5a45d6cdb8f38cbe2da3d7e01245d4f256678ceb1068ab1318645204491352",
+    "analysis/w33_pass11900_three_generations_over_a_w33_point.py": "78f1f7baa114e3bcf1ab3b463768cd7892e6084e37df021ce024563176ff475b",
+    "analysis/w33_pass11921_flavour_qutrits.py": "15ba065c12c7aa15af7df252190f4ae57d2e3d318167eb24dee4c7d67089eb70",
+    "analysis/w33_pass11922_neutrino_qutrit_complementarity.py": "283de0e1ebeceff0c455796f6b3e33fc37e8a4deb22667d1e32891ba6d3e5900",
+    "analysis/w33_pass11923_stabiliser_higgs_lock.py": "3f4bcad765f10585d22673fa827a22b736c90fe417b54d8cf7e128fd5ba15ddc"
+  }
+}

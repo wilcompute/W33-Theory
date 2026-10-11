@@ -55,15 +55,16 @@ What must be withdrawn is the proposed source
 \]
 from a \(G_{32}\)-invariant degree-12 scalar by itself. Such an operator has
 zero tangent force at the Witting ray.
-It may lift the common phase, modify the transverse Hessian, or eventually
-cause a symmetry-breaking bifurcation. It cannot produce a generic
-perturbative linear displacement of a projectively stable Witting minimum.
+It may lift the common phase or modify transverse stability. The execute-all-five follow-up sharpens the
+bifurcation option: after the common 84 phase is relaxed, any single nonzero invariant harmonic stabilises the Witting
+ray at quadratic order. An invariant-driven projective instability therefore needs competing phase harmonics (minimally
+two degrees, such as 12 and 18) or another sector that fixes the phase. It cannot produce a generic perturbative linear
+displacement of a projectively stable Witting minimum.
 
 Thus a nonzero small \(\delta\) requires at least one of:
 
 1. an explicit \(G_{32}\)-breaking transverse spurion;
-2. a bifurcation after an invariant term drives a tangent Hessian eigenvalue
-   through zero;
+2. a competing-harmonic or phase-fixed bifurcation that changes the tangent Hessian sign;
 3. a coupled sector whose background itself breaks the Witting stabilizer.
 
 ## New cross-sector target: the flavour qutrit is in the right slot
