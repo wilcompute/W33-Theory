@@ -349834,6 +349834,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "230173e3de5b7a1812063494cbd4db7b2b57952443a8150eb94fee28956698e5",
+      "normalized_formula": "*TheHiggsfluxes2N10=[[4,2],[2,4]]andN10+N5=[[3,1],[1,5]]carry12and14modes",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md",
+          "raw": "* The Higgs fluxes 2N\u2081\u2080 = [[4,2],[2,4]] and N\u2081\u2080 + N\u2085 = [[3,1],[1,5]] carry 12 and 14 modes.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7cea83958259d08b0fef583f25c0abeaeb565df7de169629d65b80b934fd16f1",
+      "structural_formula": "*TheHiggsfluxes2N1#=[[#,#],[#,#]]andN1#+N5=[[#,#],[#,#]]carry1#and1#modes"
+    },
+    {
+      "file_count": 1,
       "formula_id": "54cb82903470781bbadadb240931504e4377ded1aecbe18134df7400815556a4",
       "normalized_formula": "*TheMUBverticesallhavexyz>0,andPass11600'svacuumpotentialpinsxyz>0",
       "numeric_literals": [
@@ -384553,6 +384585,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6f041a7c9583a50948a68bf80d2b51e5911527e28a1c6522e2e277a722b37294",
+      "normalized_formula": "1.^Thedown/leptonrelationisautomatic.^InSU(5),downandleptonYukawasareboth10\u00b75\u0304,soI_down=I_lepton",
+      "numeric_literals": [
+        "0",
+        "1",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md",
+          "raw": "1. **The down/lepton relation is automatic.** In SU(5), down and lepton Yukawas are both 10\u00b75\u0304, so I_down = I_lepton.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "00f27bf3ca1216a8a117314a3f482adb93eee3c832ca5e6a6326d39e1089da9a",
+      "structural_formula": "#.^Thedown/leptonrelationisautomatic.^InSU(#),downandleptonYukawasareboth1#\u00b7#\u0304,soI_down=I_lepton"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0d1c6ad92f28abb713dcb0f1e0f737ed7a6e06e2a08b537e962fe4f6fefa4fb4",
       "normalized_formula": "1.^Twotunablycoupledsuperconductingtransmons^(npjQuantumInformation,2018),https://doi.org/10.1038/s41534-018-0088-9\u2014showstunablehopping,cross-Kerrand^measuredtypicalT1between15and40microseconds^acrosscouplerbiases.Ifonenaivelyusestheseactuallifetimesintheaboveconditionaltwo-excitationMarkovmodelat60\u03bcs,expectedsurvivalis`exp(-120/15)=0.000335`through`exp(-120/40)=0.04979`,i.e.^0.0335",
       "numeric_literals": [
@@ -386976,7 +387037,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1471,
+          "line": 1486,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -404098,6 +404159,35 @@
       },
       "structural_family_id": "8286b6223ef8fdedd072ce0e006247f7d5325c0b3b8cbb94f58a0a335a62267b",
       "structural_formula": "#.AreversingLfixesthethreecosetsjz1+R_M,sincethe|\u03c4_j|aredistinct.SoLz1=z1+\u03bar1"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7079b69fc1388c8195a25cbde22856f49eb22a1c10ff98e355757f236d6de1bc",
+      "normalized_formula": "2.Classselectionbrokengeometrically:theupHiggslattice(det2N10=12)keepstheZ3one-entry-per-row",
+      "numeric_literals": [
+        "0",
+        "12",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "2. Class selection broken geometrically: the up Higgs lattice (det 2N10 = 12) keeps the Z3 one-entry-per-row",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "13a4ac7bd3fcdfec75ba1daf081ebedd28ec5c02681cc8665a4b9d6ab75b7998",
+      "structural_formula": "#.Classselectionbrokengeometrically:theupHiggslattice(det2N1#=#)keepstheZ3one-entry-per-row"
     },
     {
       "file_count": 1,
@@ -422593,6 +422683,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f65b322bcbbadd71a934adbd83014c9e77ee37f8ab89ef3ed3241af9dd6dc758",
+      "normalized_formula": "3.ButwithgenericWilsonlines(40randomsamples,t=1.8,A2/rect)theCKMismostlytiny(medianV_us0.011",
+      "numeric_literals": [
+        ".011",
+        "1.8",
+        "3",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "3. But with generic Wilson lines (40 random samples, t = 1.8, A2 / rect) the CKM is mostly tiny (median V_us 0.011,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "93453d44e401437373b4324d78bc959855fb9d678d6601b2bc42bcb749c27900",
+      "structural_formula": "#.ButwithgenericWilsonlines(#randomsamples,t=#,A2/rect)theCKMismostlytiny(medianV_us0#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "20e36a6f3bd235b92d3d5e897aa50fd20933268670bc173abba30d46dd794d8e",
       "normalized_formula": "3.CENTERANALYSIS:Understandwhydim(Z)=242=2\u00d7112from",
       "numeric_literals": [
@@ -432521,6 +432641,64 @@
       },
       "structural_family_id": "af115ee152b12236fb19b57f532776bfc2c4a52e0128f136c7fdb273b1dcad3e",
       "structural_formula": "#.Wbosondecaywidth:Gamma_W/m_W=#/#PartMCLXVPHYSICS!PDGmatch"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "61a60fa97daef44863c2ebe003268d265d72b76c7d64cf3ea5d8fcef953156fe",
+      "normalized_formula": "4.^(nottested)^AgeometricSchmidthierarchy(1,\u03b5,\u03b52),whichwouldpredictm_u/m_c~m_c/m_t",
+      "numeric_literals": [
+        "1",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md",
+          "raw": "4. **(not tested)** A geometric Schmidt hierarchy (1, \u03b5, \u03b5\u00b2), which would predict m_u/m_c ~ m_c/m_t.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "0f94dda128bcdc6c72ee5493e231f2f00a7769779be7a6e4afc537aa0d9c9ed8",
+      "structural_formula": "#.^(nottested)^AgeometricSchmidthierarchy(#,\u03b5,\u03b5#),whichwouldpredictm_u/m_c~m_c/m_t"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9cb71ca971bfeb68d6ae9ea7abfdb77ca027009ddd91919570fd7eb50c8f076b",
+      "normalized_formula": "4.^GenericWilsonlinesdonotgivearealisticCKM.^40randomsamplesatt=1.8(A2/rect)",
+      "numeric_literals": [
+        "1.8",
+        "4",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 71,
+          "path": "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md",
+          "raw": "4. **Generic Wilson lines do not give a realistic CKM.** 40 random samples at t = 1.8 (A\u2082/rect):",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7c659ea97b201441d2e78ac773854cc7502adb70b8adda07b69ffba85fdcb35d",
+      "structural_formula": "#.^GenericWilsonlinesdonotgivearealisticCKM.^#randomsamplesatt=#(A2/rect)"
     },
     {
       "file_count": 1,
@@ -556025,6 +556203,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f8a11b44b059c33445b7b01b26894e2c42bfb3d8a8f7c14ccf4d5655b9f63c68",
+      "normalized_formula": "CKMS=ROOT/\"data\"/\"w33_pass11915_ckm_wilson_sample_frozen.json\"",
+      "numeric_literals": [
+        "1915",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 42,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "CKMS = ROOT / \"data\" / \"w33_pass11915_ckm_wilson_sample_frozen.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e19b5d227724580212699652628caff0d8c7010db2eb7749744fa5bae1e95656",
+      "structural_formula": "CKMS=ROOT/\"data\"/\"w3#_pass1#_ckm_wilson_sample_frozen.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "95871c70b9be0bbbeee2bb0cba1ccbc26c220eea275cd81c7457989483d0d39c",
       "normalized_formula": "CKM_TARGET_2025=np.array(",
       "numeric_literals": [
@@ -565094,6 +565300,34 @@
       },
       "structural_family_id": "5636806343f25b52eed1b311b026bf5ad108f6d5509a005df30d634160c01dc5",
       "structural_formula": "Constantterm=dim(s_1#)#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4cb82f22c815797cf70d5d3f829a14f85adb65470e7123e52e4c17167b93417c",
+      "normalized_formula": "Construction(verifiedhere):zeromodespsi^{j,N}(z)~exp(ipi(Nz).(ImOmega)^{-1}.Imz)theta[j,0](Nz,NOmega)",
+      "numeric_literals": [
+        "-1",
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "Construction (verified here): zero modes psi^{j,N}(z) ~ exp(i pi (Nz).(Im Omega)^{-1}.Im z) theta[j,0](Nz, N Omega),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "17a32bb18b2b2749fe0e20b9764ebb3b8a09708a9eca5bd6647f435f7acd496c",
+      "structural_formula": "Construction(verifiedhere):zeromodespsi^{j,N}(z)~exp(ipi(Nz).(ImOmega)^{#}.Imz)theta[j,#](Nz,NOmega)"
     },
     {
       "file_count": 1,
@@ -678746,6 +678980,37 @@
       },
       "structural_family_id": "820778f31a0c3610b9779db5ba4fa05bcfdd6e0522a2a068296f67a9c6098e59",
       "structural_formula": "N(\u03bc,\u03bb)=q!,N(\u03bc#,\u03bb)=\u0398,N(q!,\u03bb)=g"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2825c1ae53cb389b757df8212ac7c1a7eaecb807e44b738552b4e23c573013f5",
+      "normalized_formula": "N10+N5).SoI_down=I_leptonisautomatic(data:1.91e-5vs1.64e-5,Pass11910),andtheup/downdifferencebecomes",
+      "numeric_literals": [
+        ".64",
+        "0",
+        "1.91e-5",
+        "1910",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "N10 + N5). So I_down = I_lepton is automatic (data: 1.91e-5 vs 1.64e-5, Pass 11910), and the up/down difference becomes",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a5cd1f80886e283eb2a003c10751130074d47f879a273c5c50f86ca8ef43f217",
+      "structural_formula": "N1#+N5).SoI_down=I_leptonisautomatic(data:#vs1#e-#,Pass1#),andtheup/downdifferencebecomes"
     },
     {
       "file_count": 1,
@@ -837803,6 +838068,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fb259fc5a794718e02f1f39d16d276fffb5331471015a294737d555acc05b3fa",
+      "normalized_formula": "[[2,1],[1,2]]andtherectangularformx^2+3y^2=diag(1,3)--thetwothetasystemsofthiscorpus(Eisenstein/",
+      "numeric_literals": [
+        "+3",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "[[2,1],[1,2]] and the rectangular form x^2 + 3y^2 = diag(1,3) -- the two theta systems of this corpus (Eisenstein /",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1b11ff995f69541aa26ebe0cf465f583eca43afaa2cc32386be2bc09cc759e05",
+      "structural_formula": "[[#,#],[#,#]]andtherectangularformx^##y^#=diag(#,#)--thetwothetasystemsofthiscorpus(Eisenstein/"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0a89a4a819b6b7d9a3b965a002bfc1c474f14fb63c03642e674493c59fdd94cb",
       "normalized_formula": "[[240,81,3]]_3,\\qquadd_X=3,\\qquadd_Z=4",
       "numeric_literals": [
@@ -953230,7 +953525,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1476,
+          "line": 1491,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1164077,6 +1164372,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ba942a746c5178af493203ceae3759d3a79d170846b657b7f3f5559d03e54602",
+      "normalized_formula": "defyukawas(T,NQ,NR,zQ=np.zeros(2),zR=np.zeros(2))",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 79,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "def yukawas(T, NQ, NR, zQ=np.zeros(2), zR=np.zeros(2)):",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "443e8a0e998c993220beee18fff0e0749dd290c0bea79a3afdfcda12713897f2",
+      "structural_formula": "defyukawas(T,NQ,NR,zQ=np.zeros(#),zR=np.zeros(#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bbd0949b75352d3080f003ff1431588330a1ffa464c820de07745842bc2e7f99",
       "normalized_formula": "defzeta_loop_equilibrium_summary(max_n:int=12)->Dict[str,object]",
       "numeric_literals": [
@@ -1182160,6 +1182482,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7eb40123b07f2ea9ee6d25dbc9ce1a78570a47b70c164454ae11bd10320f5bbf",
+      "normalized_formula": "dn=yukawas(Ts[2.5],A2,RE)",
+      "numeric_literals": [
+        "2.5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 127,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "dn = yukawas(Ts[2.5], A2, RE)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "05f4113b7760100a89a36416da353a1fb67fd5e30132ff0a97f4ff7b8000c50f",
+      "structural_formula": "dn=yukawas(Ts[#],A2,RE)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ef2a0f695cf21f0984d9efea8874c1177245facb98882957636cf2378edb60f3",
       "normalized_formula": "dn_ph=np.array([0,math.sin(th),0])",
       "numeric_literals": [
@@ -1183073,6 +1183422,35 @@
       },
       "structural_family_id": "5147a89aefe59c3611bb78f94acd55b33fb7fcca26e6f341850464ec12aafd4b",
       "structural_formula": "down=json.loads((ROOT/'data/w3#_pass1#_1#_five_physical_fronts.json').read_text())['pass1#']['mass_sectors']['d']"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "06fa80373bacce2f4f7ffbb2251da33aaf5aa1e175719ffecbe79182bc8f25cb",
+      "normalized_formula": "down_full_matrices=full_down,ckm_sample_medians=dict(mc_mt=med[0],mu_mc=med[1],ms_mb=med[2]",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 137,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "down_full_matrices=full_down, ckm_sample_medians=dict(mc_mt=med[0], mu_mc=med[1], ms_mb=med[2],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "595e2f13d1c400b6f316d5f5455c13a63ce54294007e36617f8181d25e2722e6",
+      "structural_formula": "down_full_matrices=full_down,ckm_sample_medians=dict(mc_mt=med[#],mu_mc=med[#],ms_mb=med[#]"
     },
     {
       "file_count": 1,
@@ -1243210,6 +1243588,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cbf33754bc37837932f17e56e8842e89392573737fed0eb82a91462c1d030d1f",
+      "normalized_formula": "generic_wilson_ckm_too_small=med[4]<0.05andmed[5]<0.01",
+      "numeric_literals": [
+        "0.01",
+        "0.05",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 147,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "generic_wilson_ckm_too_small=med[4] < 0.05 and med[5] < 0.01,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f2eb29dac4ce01fb277b36666de1f1df5782e50b8ca0335e49dda58b7c27113d",
+      "structural_formula": "generic_wilson_ckm_too_small=med[#]<#andmed[#]<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "90696de9362232adc4f2accf10ac839e5c89fda810e7fed5beea584a0577c587",
       "normalized_formula": "genericcomplexYukawaansatz.Its<code>2592</code>nonzeroentriesareexactlyantisymmetricinthe",
       "numeric_literals": [
@@ -1275541,6 +1275949,33 @@
       },
       "structural_family_id": "48d9c46ad2b9f9ecbe1e186d5eafb142a88400f6548d090d04158e7225e34a6f",
       "structural_formula": "invariants(mu=#=d,Phi_4=#,theta=arccos(#/#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fa96d5f7d6a2300dc44d2d96c573e7f821c6d00c9d61abcebdb6398569c404ea",
+      "normalized_formula": "invariantstrongly:\u03b5=0.01multipliesitbyabout8.Theup/downratiocouldthereforecomefromtheHiggsprofile",
+      "numeric_literals": [
+        "0.01"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 77,
+          "path": "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md",
+          "raw": "invariant strongly: \u03b5 = 0.01 multiplies it by about 8. The up/down ratio could therefore come from the Higgs profile,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "35ef62957e87f27c3290a2b94f48c26c1cb4a77283276ddf7c72a6bb0bf8a58d",
+      "structural_formula": "invariantstrongly:\u03b5=#multipliesitbyabout8.Theup/downratiocouldthereforecomefromtheHiggsprofile"
     },
     {
       "file_count": 1,
@@ -1540424,7 +1540859,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1472,
+          "line": 1487,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1569852,6 +1570287,33 @@
       },
       "structural_family_id": "2a1da317703801b6d5056a14cc20d5d5b9abda396a8831d09d5bf43df94fa5d2",
       "structural_formula": "res=dict(pass_id=#,sm_vacuum_nu=sm,susy_standard_mediation_nu=susy_std,hierarchical_band=band)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "01135074958364ebcd2398d5c45fdb6a1a3eaf5a270d58a5c5c7b6924fb40b28",
+      "normalized_formula": "res=dict(pass_id=11915,periodicity_max=max(per),gram_offdiag_max=gram,mode_counts=counts,key_slopes_over_pi=key",
+      "numeric_literals": [
+        "11915"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 135,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "res = dict(pass_id=11915, periodicity_max=max(per), gram_offdiag_max=gram, mode_counts=counts, key_slopes_over_pi=key,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b43f2b1c5c1c4f5f9ff87ffe359fbbf3f00a120826f871f0a2c00a0be5a15e49",
+      "structural_formula": "res=dict(pass_id=#,periodicity_max=max(per),gram_offdiag_max=gram,mode_counts=counts,key_slopes_over_pi=key"
     },
     {
       "file_count": 1,
@@ -1601386,6 +1601848,34 @@
       },
       "structural_family_id": "0a4c10c0a6c0b35b1f54c2960b56391876a349e500eb06413e93a090d5419246",
       "structural_formula": "selectedsolvedYukawapacket=##=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "288a0ef0588fb60f78be950eeea6839b0aeb1f9cdd24513ec38fe5deba72fdc1",
+      "normalized_formula": "selection,butthedownHiggslattice(det(N10+N5)=14,coprimeto3)doesnot--thedownYukawasarefull3x3",
+      "numeric_literals": [
+        "0",
+        "14"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "selection, but the down Higgs lattice (det(N10 + N5) = 14, coprime to 3) does not -- the down Yukawas are full 3x3",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "f08d19ab61d668e4d5451c36878719e17917b824c7e0e19a46f711576aa28aa0",
+      "structural_formula": "selection,butthedownHiggslattice(det(N1#+N5)=#,coprimeto3)doesnot--thedownYukawasarefull3x3"
     },
     {
       "file_count": 1,
@@ -1633558,6 +1634048,33 @@
       },
       "structural_family_id": "2879458976e7db9c4b820a8d4c3e75ea2fbfe7fc366adb27a2b31886fd9e6cf2",
       "structural_formula": "strongestmatchesarecost-#(sin^#th_W=q/Phi_3,M_Z=Phi_3Phi_6,CCexponent=vq"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "902a2a34beb0374cec82e67f99dc5de2381045b27d80b305b48a978ace5dd0e6",
+      "normalized_formula": "strongly(eps=0.01->x8),sotheup/downratiocouldcomefromtheHiggsprofile,atthepriceofafree",
+      "numeric_literals": [
+        "0.01"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 29,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "strongly (eps = 0.01 -> x8), so the up/down ratio could come from the Higgs profile, at the price of a free",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9bea61eadff5f56aa404e1f7e19ee96bac09d17f5048ab0e96368eb03dd09c04",
+      "structural_formula": "strongly(eps=#->x8),sotheup/downratiocouldcomefromtheHiggsprofile,atthepriceofafree"
     },
     {
       "file_count": 1,
@@ -1682401,6 +1682918,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4d4c0d0b234cf35982859d19f0ef2d0a131ab293f2953af1d81dce6f93793ea2",
+      "normalized_formula": "up=yukawas(Ts[2.5],A2,A2)",
+      "numeric_literals": [
+        "2.5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 126,
+          "path": "analysis/w33_pass11915_su5_matrix_fluxes_on_t4.py",
+          "raw": "up = yukawas(Ts[2.5], A2, A2)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fdbc458652aab8990c4b2f92e16ca880b7c0c9413954bb1a4d92a3e48ab56c93",
+      "structural_formula": "up=yukawas(Ts[#],A2,A2)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "27e8a3ba3b780453c666cb04aa9bd5444aacd30003f15bad3253caf65e4be51d",
       "normalized_formula": "up_ratio=seesaw_ratio(cases[\"up-type10:5:1(Y_nu=Y_up,GUT)\"])[0]",
       "numeric_literals": [
@@ -1707262,6 +1707806,37 @@
       },
       "structural_family_id": "2be9eb7f9abd04f58aef68b8d5a17f9e43a04132aaf842526ef61941d00a6e51",
       "structural_formula": "x1#<>#),AbsInt))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8524f7dd94d7aec24f84eef6bccb713d5df04b11ec122241a4557b6808bc76d6",
+      "normalized_formula": "x2+3y2=diag(1,3).Theyarethecorpus'stwothetasystems:Eisenstein/Hermitian(11897)andlevel-3\u221a3Z(11869)",
+      "numeric_literals": [
+        "+3",
+        "1",
+        "11869",
+        "11897",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/PASS11915_SU5_MATRIX_FLUXES_ON_T4.md",
+          "raw": "x\u00b2 + 3y\u00b2 = diag(1,3). They are the corpus's two theta systems: Eisenstein/Hermitian (11897) and level-3 \u221a3\u2124 (11869).",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "90f1cb32d5045daf738a11b50f1babb96aef86335da40f3b849e5fd098c74e52",
+      "structural_formula": "x2#y2=diag(#,#).Theyarethecorpus'stwothetasystems:Eisenstein/Hermitian(#)andlevel-#\u221a#Z(#)"
     },
     {
       "file_count": 1,
@@ -1758180,9 +1758755,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T01:21:34-04:00",
+  "frozen_at": "2026-10-11T02:04:11-04:00",
   "pass": 398,
-  "repository_head": "e2b67c370fe13714e6c7cf3c23111a167d78c958",
+  "repository_head": "f1ef21a8ca715219fde5c33d95db7ddc4279de06",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1816328,6 +1816903,14 @@
     },
     {
       "exact_formula_ids": [
+        "f65b322bcbbadd71a934adbd83014c9e77ee37f8ab89ef3ed3241af9dd6dc758"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "93453d44e401437373b4324d78bc959855fb9d678d6601b2bc42bcb749c27900",
+      "structural_formula": "#.ButwithgenericWilsonlines(#randomsamples,t=#,A2/rect)theCKMismostlytiny(medianV_us0#"
+    },
+    {
+      "exact_formula_ids": [
         "20e36a6f3bd235b92d3d5e897aa50fd20933268670bc173abba30d46dd794d8e"
       ],
       "exact_member_count": 1,
@@ -1816461,6 +1817044,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f038f1157df5cc4822a350eebfce1bf068175a599cc9a1ec4a5d2ed8fcc5957f",
       "structural_formula": "#.Chromaticpolynomialzeros:P(G;k)=#fork=#,#,#,#since\u03c7(W(#,#))=#"
+    },
+    {
+      "exact_formula_ids": [
+        "7079b69fc1388c8195a25cbde22856f49eb22a1c10ff98e355757f236d6de1bc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "13a4ac7bd3fcdfec75ba1daf081ebedd28ec5c02681cc8665a4b9d6ab75b7998",
+      "structural_formula": "#.Classselectionbrokengeometrically:theupHiggslattice(det2N1#=#)keepstheZ3one-entry-per-row"
     },
     {
       "exact_formula_ids": [
@@ -1818153,6 +1818744,14 @@
     },
     {
       "exact_formula_ids": [
+        "61a60fa97daef44863c2ebe003268d265d72b76c7d64cf3ea5d8fcef953156fe"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0f94dda128bcdc6c72ee5493e231f2f00a7769779be7a6e4afc537aa0d9c9ed8",
+      "structural_formula": "#.^(nottested)^AgeometricSchmidthierarchy(#,\u03b5,\u03b5#),whichwouldpredictm_u/m_c~m_c/m_t"
+    },
+    {
+      "exact_formula_ids": [
         "4feba8c9310263d4ffef8f40f3279380ea0b92c1bb2a0092315b99e010dc0ff7"
       ],
       "exact_member_count": 1,
@@ -1818302,6 +1818901,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a0a124225693513409264f660046308bcd2637499f77caf2ea0b9fe339d67966",
       "structural_formula": "#.^Gate3reducedtoanamedidealclass.^Sheetquintic`f=x5\u2212#x3\u2212#x2#x+#`,irreducibleoverQ(itsx4andx3coefficients0and\u2212#independentlyreproducetheuniversaltracelaws).Gate3=arethetwoZ[\u03b6#]-ordersinthesameidealclassof`K=Q(zeta_5)[x]/(f)`?Needspari/sage.Standalonenote`papers/heisenberg_weyl_determinant_law.tex`extractsthearithmeticforoutsidereaders"
+    },
+    {
+      "exact_formula_ids": [
+        "9cb71ca971bfeb68d6ae9ea7abfdb77ca027009ddd91919570fd7eb50c8f076b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7c659ea97b201441d2e78ac773854cc7502adb70b8adda07b69ffba85fdcb35d",
+      "structural_formula": "#.^GenericWilsonlinesdonotgivearealisticCKM.^#randomsamplesatt=#(A2/rect)"
     },
     {
       "exact_formula_ids": [
@@ -1818838,6 +1819445,14 @@
       "exact_member_count": 1,
       "structural_family_id": "daadb4f2deea8626ab8d7a709b0db7aa80901f6063ac35599bba956375ac4f78",
       "structural_formula": "#.^Thedoubletnormisastabilisermoment:^\u03c1=M3\u2212M1#,whereM_k=\u03a3_s|\u27e8s|\u03c8\u27e9|^{#k}isPass1#'smomentover"
+    },
+    {
+      "exact_formula_ids": [
+        "6f041a7c9583a50948a68bf80d2b51e5911527e28a1c6522e2e277a722b37294"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "00f27bf3ca1216a8a117314a3f482adb93eee3c832ca5e6a6326d39e1089da9a",
+      "structural_formula": "#.^Thedown/leptonrelationisautomatic.^InSU(#),downandleptonYukawasareboth1#\u00b7#\u0304,soI_down=I_lepton"
     },
     {
       "exact_formula_ids": [
@@ -1875172,6 +1875787,14 @@
     },
     {
       "exact_formula_ids": [
+        "230173e3de5b7a1812063494cbd4db7b2b57952443a8150eb94fee28956698e5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7cea83958259d08b0fef583f25c0abeaeb565df7de169629d65b80b934fd16f1",
+      "structural_formula": "*TheHiggsfluxes2N1#=[[#,#],[#,#]]andN1#+N5=[[#,#],[#,#]]carry1#and1#modes"
+    },
+    {
+      "exact_formula_ids": [
         "54cb82903470781bbadadb240931504e4377ded1aecbe18134df7400815556a4"
       ],
       "exact_member_count": 1,
@@ -1907739,6 +1908362,14 @@
     },
     {
       "exact_formula_ids": [
+        "f8a11b44b059c33445b7b01b26894e2c42bfb3d8a8f7c14ccf4d5655b9f63c68"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e19b5d227724580212699652628caff0d8c7010db2eb7749744fa5bae1e95656",
+      "structural_formula": "CKMS=ROOT/\"data\"/\"w3#_pass1#_ckm_wilson_sample_frozen.json\""
+    },
+    {
+      "exact_formula_ids": [
         "95871c70b9be0bbbeee2bb0cba1ccbc26c220eea275cd81c7457989483d0d39c"
       ],
       "exact_member_count": 1,
@@ -1910248,6 +1910879,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5636806343f25b52eed1b311b026bf5ad108f6d5509a005df30d634160c01dc5",
       "structural_formula": "Constantterm=dim(s_1#)#"
+    },
+    {
+      "exact_formula_ids": [
+        "4cb82f22c815797cf70d5d3f829a14f85adb65470e7123e52e4c17167b93417c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "17a32bb18b2b2749fe0e20b9764ebb3b8a09708a9eca5bd6647f435f7acd496c",
+      "structural_formula": "Construction(verifiedhere):zeromodespsi^{j,N}(z)~exp(ipi(Nz).(ImOmega)^{#}.Imz)theta[j,#](Nz,NOmega)"
     },
     {
       "exact_formula_ids": [
@@ -1941082,6 +1941721,14 @@
       "exact_member_count": 1,
       "structural_family_id": "820778f31a0c3610b9779db5ba4fa05bcfdd6e0522a2a068296f67a9c6098e59",
       "structural_formula": "N(\u03bc,\u03bb)=q!,N(\u03bc#,\u03bb)=\u0398,N(q!,\u03bb)=g"
+    },
+    {
+      "exact_formula_ids": [
+        "2825c1ae53cb389b757df8212ac7c1a7eaecb807e44b738552b4e23c573013f5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a5cd1f80886e283eb2a003c10751130074d47f879a273c5c50f86ca8ef43f217",
+      "structural_formula": "N1#+N5).SoI_down=I_leptonisautomatic(data:#vs1#e-#,Pass1#),andtheup/downdifferencebecomes"
     },
     {
       "exact_formula_ids": [
@@ -1984166,6 +1984813,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e849db662402a4b3be6e0e4a1d2ef753b8764118265e46e4ce211ecd900ab9dc",
       "structural_formula": "[[#,#,d_Z=#]]_3"
+    },
+    {
+      "exact_formula_ids": [
+        "fb259fc5a794718e02f1f39d16d276fffb5331471015a294737d555acc05b3fa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1b11ff995f69541aa26ebe0cf465f583eca43afaa2cc32386be2bc09cc759e05",
+      "structural_formula": "[[#,#],[#,#]]andtherectangularformx^##y^#=diag(#,#)--thetwothetasystemsofthiscorpus(Eisenstein/"
     },
     {
       "exact_formula_ids": [
@@ -2069957,6 +2070612,14 @@
     },
     {
       "exact_formula_ids": [
+        "ba942a746c5178af493203ceae3759d3a79d170846b657b7f3f5559d03e54602"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "443e8a0e998c993220beee18fff0e0749dd290c0bea79a3afdfcda12713897f2",
+      "structural_formula": "defyukawas(T,NQ,NR,zQ=np.zeros(#),zR=np.zeros(#))"
+    },
+    {
+      "exact_formula_ids": [
         "bbd0949b75352d3080f003ff1431588330a1ffa464c820de07745842bc2e7f99"
       ],
       "exact_member_count": 1,
@@ -2074870,6 +2075533,14 @@
     },
     {
       "exact_formula_ids": [
+        "7eb40123b07f2ea9ee6d25dbc9ce1a78570a47b70c164454ae11bd10320f5bbf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "05f4113b7760100a89a36416da353a1fb67fd5e30132ff0a97f4ff7b8000c50f",
+      "structural_formula": "dn=yukawas(Ts[#],A2,RE)"
+    },
+    {
+      "exact_formula_ids": [
         "ef2a0f695cf21f0984d9efea8874c1177245facb98882957636cf2378edb60f3"
       ],
       "exact_member_count": 1,
@@ -2075107,6 +2075778,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5147a89aefe59c3611bb78f94acd55b33fb7fcca26e6f341850464ec12aafd4b",
       "structural_formula": "down=json.loads((ROOT/'data/w3#_pass1#_1#_five_physical_fronts.json').read_text())['pass1#']['mass_sectors']['d']"
+    },
+    {
+      "exact_formula_ids": [
+        "06fa80373bacce2f4f7ffbb2251da33aaf5aa1e175719ffecbe79182bc8f25cb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "595e2f13d1c400b6f316d5f5455c13a63ce54294007e36617f8181d25e2722e6",
+      "structural_formula": "down_full_matrices=full_down,ckm_sample_medians=dict(mc_mt=med[#],mu_mc=med[#],ms_mb=med[#]"
     },
     {
       "exact_formula_ids": [
@@ -2091488,6 +2092167,14 @@
     },
     {
       "exact_formula_ids": [
+        "cbf33754bc37837932f17e56e8842e89392573737fed0eb82a91462c1d030d1f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f2eb29dac4ce01fb277b36666de1f1df5782e50b8ca0335e49dda58b7c27113d",
+      "structural_formula": "generic_wilson_ckm_too_small=med[#]<#andmed[#]<#"
+    },
+    {
+      "exact_formula_ids": [
         "90696de9362232adc4f2accf10ac839e5c89fda810e7fed5beea584a0577c587"
       ],
       "exact_member_count": 1,
@@ -2100458,6 +2101145,14 @@
       "exact_member_count": 1,
       "structural_family_id": "48d9c46ad2b9f9ecbe1e186d5eafb142a88400f6548d090d04158e7225e34a6f",
       "structural_formula": "invariants(mu=#=d,Phi_4=#,theta=arccos(#/#))"
+    },
+    {
+      "exact_formula_ids": [
+        "fa96d5f7d6a2300dc44d2d96c573e7f821c6d00c9d61abcebdb6398569c404ea"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "35ef62957e87f27c3290a2b94f48c26c1cb4a77283276ddf7c72a6bb0bf8a58d",
+      "structural_formula": "invariantstrongly:\u03b5=#multipliesitbyabout8.Theup/downratiocouldthereforecomefromtheHiggsprofile"
     },
     {
       "exact_formula_ids": [
@@ -2178066,6 +2178761,14 @@
     },
     {
       "exact_formula_ids": [
+        "01135074958364ebcd2398d5c45fdb6a1a3eaf5a270d58a5c5c7b6924fb40b28"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b43f2b1c5c1c4f5f9ff87ffe359fbbf3f00a120826f871f0a2c00a0be5a15e49",
+      "structural_formula": "res=dict(pass_id=#,periodicity_max=max(per),gram_offdiag_max=gram,mode_counts=counts,key_slopes_over_pi=key"
+    },
+    {
+      "exact_formula_ids": [
         "2d1906ddda7a09eb739a889964ee6b77f4307e3fd2c594a5ddf96c23baec1fd2"
       ],
       "exact_member_count": 1,
@@ -2186541,6 +2187244,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0a4c10c0a6c0b35b1f54c2960b56391876a349e500eb06413e93a090d5419246",
       "structural_formula": "selectedsolvedYukawapacket=##=#"
+    },
+    {
+      "exact_formula_ids": [
+        "288a0ef0588fb60f78be950eeea6839b0aeb1f9cdd24513ec38fe5deba72fdc1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f08d19ab61d668e4d5451c36878719e17917b824c7e0e19a46f711576aa28aa0",
+      "structural_formula": "selection,butthedownHiggslattice(det(N1#+N5)=#,coprimeto3)doesnot--thedownYukawasarefull3x3"
     },
     {
       "exact_formula_ids": [
@@ -2195237,6 +2195948,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2879458976e7db9c4b820a8d4c3e75ea2fbfe7fc366adb27a2b31886fd9e6cf2",
       "structural_formula": "strongestmatchesarecost-#(sin^#th_W=q/Phi_3,M_Z=Phi_3Phi_6,CCexponent=vq"
+    },
+    {
+      "exact_formula_ids": [
+        "902a2a34beb0374cec82e67f99dc5de2381045b27d80b305b48a978ace5dd0e6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9bea61eadff5f56aa404e1f7e19ee96bac09d17f5048ab0e96368eb03dd09c04",
+      "structural_formula": "strongly(eps=#->x8),sotheup/downratiocouldcomefromtheHiggsprofile,atthepriceofafree"
     },
     {
       "exact_formula_ids": [
@@ -2208546,6 +2209265,14 @@
     },
     {
       "exact_formula_ids": [
+        "4d4c0d0b234cf35982859d19f0ef2d0a131ab293f2953af1d81dce6f93793ea2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fdbc458652aab8990c4b2f92e16ca880b7c0c9413954bb1a4d92a3e48ab56c93",
+      "structural_formula": "up=yukawas(Ts[#],A2,A2)"
+    },
+    {
+      "exact_formula_ids": [
         "27e8a3ba3b780453c666cb04aa9bd5444aacd30003f15bad3253caf65e4be51d"
       ],
       "exact_member_count": 1,
@@ -2215164,6 +2215891,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2be9eb7f9abd04f58aef68b8d5a17f9e43a04132aaf842526ef61941d00a6e51",
       "structural_formula": "x1#<>#),AbsInt))"
+    },
+    {
+      "exact_formula_ids": [
+        "8524f7dd94d7aec24f84eef6bccb713d5df04b11ec122241a4557b6808bc76d6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "90f1cb32d5045daf738a11b50f1babb96aef86335da40f3b849e5fd098c74e52",
+      "structural_formula": "x2#y2=diag(#,#).Theyarethecorpus'stwothetasystems:Eisenstein/Hermitian(#)andlevel-#\u221a#Z(#)"
     },
     {
       "exact_formula_ids": [
@@ -2227934,20 +2228669,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86590666,
-    "exact_formula_families": 60115,
-    "files_scanned": 11854,
-    "formula_occurrences": 66047,
+    "bytes_scanned": 86605744,
+    "exact_formula_families": 60135,
+    "files_scanned": 11856,
+    "formula_occurrences": 66067,
     "status_occurrences": {
       "certified_or_theorem": 4817,
       "killed_or_retracted": 1545,
-      "open_or_conditional": 2142,
+      "open_or_conditional": 2144,
       "preregistered": 32,
-      "retrospective_fit": 5092,
-      "unclassified": 52419
+      "retrospective_fit": 5094,
+      "unclassified": 52435
     },
-    "structural_families": 58513
+    "structural_families": 58533
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "9b944916e7848c7c486cc2467055e6f5a4536f7620232620ba3602a94e9c7c43"
+  "universe_sha256": "f40f27d20c27adc24f3f4d80fa99e8055171f569696907d91382ca4c30f61d29"
 }
