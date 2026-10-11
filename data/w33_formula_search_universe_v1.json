@@ -386509,7 +386509,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1440,
+          "line": 1446,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -951895,7 +951895,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1445,
+          "line": 1451,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1289789,6 +1289789,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2a258b0d9e11de3a8aa7cb20e6b3c029e872678bdd83f5300e454f857b81a11f",
+      "normalized_formula": "knownZ6-IIStandardModelSM_1_55(WSL~/orb/build/bhlr_sm_scan.txt)asSM",
+      "numeric_literals": [
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11911_susy_z3_scan.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass11911_susy_z3_scan.py",
+          "raw": "known Z6-II Standard Model SM_1_55 (WSL ~/orb/build/bhlr_sm_scan.txt) as SM.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fbd16310bbd19a2d872ee71467fbf9dbbfb0714ae19a83f85f4b5072652161bc",
+      "structural_formula": "knownZ6-IIStandardModelSM_1_5#(WSL~/orb/build/bhlr_sm_scan.txt)asSM"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b113672afd523095e524e2b57eb12a549d34017662b9f9aae7f1e4e52e76993a",
       "normalized_formula": "known_theta_E8=[1,240,2160,6720,17520,30240,60480,82560,140400]",
       "numeric_literals": [
@@ -1538565,7 +1538592,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1441,
+          "line": 1447,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1601638,6 +1601665,37 @@
       },
       "structural_family_id": "0433c6f20a6c0742c7f36256b386ee4689370698686ececfc2337e91073b6624",
       "structural_formula": "shellstatementsharper:everypoint-perpisa1#-pointtangenthyperplane<code>PG(#,#)</code>,its"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2854bf36998daecfc511445ed5cc7b2856e3914073cf8de949f4c706e530f4b2",
+      "normalized_formula": "shiftSU9xSO14xU1;20,000drawseach(seeds20261021-20261024).Standard-Model-like=theorbifolderSMcriterion",
+      "numeric_literals": [
+        "-20261024",
+        "000",
+        "0261021",
+        "20",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11911_susy_z3_scan.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass11911_susy_z3_scan.py",
+          "raw": "shift SU9 x SO14xU1; 20,000 draws each (seeds 20261021-20261024). Standard-Model-like = the orbifolder SM criterion",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "825b4c6aa22ad5d5f63d008d92d3f206f33f1c32065449282c0f91a4cf6b731d",
+      "structural_formula": "shiftSU9xSO1#xU1;#,#drawseach(seeds2##).Standard-Model-like=theorbifolderSMcriterion"
     },
     {
       "file_count": 1,
@@ -1714105,6 +1714163,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ee77a751da91d1b827dcbd9cffca95f711a8958f2afc0de2c6b92b179e0f38fc",
+      "normalized_formula": "zero_sm_like=all(f[\"SM\"]=0forfinfinal.values())",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11911_susy_z3_scan.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/w33_pass11911_susy_z3_scan.py",
+          "raw": "zero_sm_like=all(f[\"SM\"] == 0 for f in final.values()),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a97af2937aa0cdf8116f5ac194723253e6a08eace705b6677c72353a569fd241",
+      "structural_formula": "zero_sm_like=all(f[\"SM\"]=#forfinfinal.values())"
+    },
+    {
+      "file_count": 1,
       "formula_id": "74ff7abadd43149ffe338be26d976376529be4323e4ff5bc99646cba099861f4",
       "normalized_formula": "zero_sum_blocks={BforBincombinations(sorted(labels),3)ifvxor3(*B)=(0,0,0,0)}",
       "numeric_literals": [
@@ -1755957,9 +1756042,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-10T22:40:08-04:00",
+  "frozen_at": "2026-10-10T22:49:30-04:00",
   "pass": 398,
-  "repository_head": "ef6682545dc35b8abd644b0623c3e1fd519f4215",
+  "repository_head": "5e196387f1e6beb6125e8a51eec1cfd84239ab15",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2101799,6 +2101884,14 @@
     },
     {
       "exact_formula_ids": [
+        "2a258b0d9e11de3a8aa7cb20e6b3c029e872678bdd83f5300e454f857b81a11f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fbd16310bbd19a2d872ee71467fbf9dbbfb0714ae19a83f85f4b5072652161bc",
+      "structural_formula": "knownZ6-IIStandardModelSM_1_5#(WSL~/orb/build/bhlr_sm_scan.txt)asSM"
+    },
+    {
+      "exact_formula_ids": [
         "b113672afd523095e524e2b57eb12a549d34017662b9f9aae7f1e4e52e76993a"
       ],
       "exact_member_count": 1,
@@ -2184425,6 +2184518,14 @@
     },
     {
       "exact_formula_ids": [
+        "2854bf36998daecfc511445ed5cc7b2856e3914073cf8de949f4c706e530f4b2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "825b4c6aa22ad5d5f63d008d92d3f206f33f1c32065449282c0f91a4cf6b731d",
+      "structural_formula": "shiftSU9xSO1#xU1;#,#drawseach(seeds2##).Standard-Model-like=theorbifolderSMcriterion"
+    },
+    {
+      "exact_formula_ids": [
         "2c6cda53f69aa4a5f1254b545028463e31b1b3977edd249ef29cdef4d21fe0ea"
       ],
       "exact_member_count": 1,
@@ -2214703,6 +2214804,14 @@
     },
     {
       "exact_formula_ids": [
+        "ee77a751da91d1b827dcbd9cffca95f711a8958f2afc0de2c6b92b179e0f38fc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a97af2937aa0cdf8116f5ac194723253e6a08eace705b6677c72353a569fd241",
+      "structural_formula": "zero_sm_like=all(f[\"SM\"]=#forfinfinal.values())"
+    },
+    {
+      "exact_formula_ids": [
         "74ff7abadd43149ffe338be26d976376529be4323e4ff5bc99646cba099861f4"
       ],
       "exact_member_count": 1,
@@ -2225118,20 +2225227,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86516839,
-    "exact_formula_families": 60040,
-    "files_scanned": 11840,
-    "formula_occurrences": 65968,
+    "bytes_scanned": 86523162,
+    "exact_formula_families": 60043,
+    "files_scanned": 11842,
+    "formula_occurrences": 65971,
     "status_occurrences": {
       "certified_or_theorem": 4807,
       "killed_or_retracted": 1543,
       "open_or_conditional": 2136,
       "preregistered": 32,
       "retrospective_fit": 5087,
-      "unclassified": 52363
+      "unclassified": 52366
     },
-    "structural_families": 58439
+    "structural_families": 58442
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "2f9d1d32faae41f668fd5b09f6f4acc45b9f6d78571b78217a5a232d2d929da3"
+  "universe_sha256": "9286d220821cb31b9afcd3749ab2c72b0048f6f79ad7471aadfea060fc524f72"
 }
