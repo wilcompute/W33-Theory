@@ -357759,6 +357759,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1e614b50b80de1ad90d721c23f59290b5c11c03b0e3dd2aa89860b350940b200",
+      "normalized_formula": "*\u03b2>0doesfavourPMNS-likeleptonmixing,butthequarkmixingisthenlargetoo",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11922_NEUTRINO_QUTRIT_COMPLEMENTARITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 69,
+          "path": "analysis/PASS11922_NEUTRINO_QUTRIT_COMPLEMENTARITY.md",
+          "raw": "* \u03b2 > 0 does favour PMNS-like lepton mixing, but the quark mixing is then large too.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fd9fc21f9f1622923f495935ed8effaa054115d0a71c6da1bad50d49e4bc76f3",
+      "structural_formula": "*\u03b2>#doesfavourPMNS-likeleptonmixing,butthequarkmixingisthenlargetoo"
+    },
+    {
+      "file_count": 1,
       "formula_id": "32cb6fffd614443cc182f63e426942d64f48263e073dcd80785cf1b5091b0acc",
       "normalized_formula": "*\u03c9(w,t_k)=0,sincet_k\u2208spanz1.Andr_Q=0,sinceQz1=z1",
       "numeric_literals": [
@@ -387642,7 +387669,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1502,
+          "line": 1504,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -556869,6 +556896,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f8b1c21b2937ef4438576fac841a42f123b7706f109ff870a17afbcfecbe17e1",
+      "normalized_formula": "CKM=np.array([[0.974,0.2245,0.0038],[0.221,0.973,0.041],[0.0086,0.040,0.999]])",
+      "numeric_literals": [
+        "0.0038",
+        "0.0086",
+        "0.040",
+        "0.041",
+        "0.221",
+        "0.2245",
+        "0.973",
+        "0.974",
+        "0.999"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "CKM = np.array([[0.974, 0.2245, 0.0038], [0.221, 0.973, 0.041], [0.0086, 0.040, 0.999]])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fcd0a5a46d18e7871d33bd10b5397edb316aa2b74d17dbc92aae8a295ffaeb9b",
+      "structural_formula": "CKM=np.array([[#,#,#],[#,#,#],[#,#,#]])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "321600de9a0b721a5952f5764b0436451fc8309aaa2b2035362af3f8d334f326",
       "normalized_formula": "CKM={\"theta12\":13.04,\"theta23\":2.38,\"theta13\":0.201}",
       "numeric_literals": [
@@ -649270,6 +649332,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7000238b0cdc0d56415d8af63b5dc1ec5e5fbe0a79ba535ea23dfb661458899e",
+      "normalized_formula": "LLH_uH_u)ismonomialperHiggs-pairmode(qutrit-2selection,Pass11921:K(L_{2N5})[3]=K5),andits",
+      "numeric_literals": [
+        "1921",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "L L H_u H_u) is monomial per Higgs-pair mode (qutrit-2 selection, Pass 11921: K(L_{2 N5})[3] = K5), and its",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "296cd08d260613149e7cfb02ace4f18b6379abcac53e70b58a0c07974bcf183b",
+      "structural_formula": "LLH_uH_u)ismonomialperHiggs-pairmode(qutrit-#selection,Pass1#:K(L_{#N5})[#]=K5),andits"
+    },
+    {
+      "file_count": 1,
       "formula_id": "82541feb0be4567b4c67199123a0ca0177a2f94d729a235f914f58d7f29e43bd",
       "normalized_formula": "LORENTZ_LITTLE=8#littlegrouporderformasslessparticles(helicity)",
       "numeric_literals": [
@@ -694855,6 +694946,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3dff740f2fc4093c6f621cb6cdb9021316126c12ab2b13550893a3ece9158bd6",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11922_neutrino_qutrit_complementarity.json\"",
+      "numeric_literals": [
+        "1922",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11922_neutrino_qutrit_complementarity.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6fd2da76c4df59e360d38c207fa36b4a039fa9aeb2be0c8fcad03cbeb0c669c3",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_neutrino_qutrit_complementarity.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "aab37f992baf2cd5bed12119ac57d7f8a1df356323b0ea424c4de10088e60593",
       "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass1193_s5_a5_coset_bridge.json\"",
       "numeric_literals": [
@@ -715331,6 +715450,41 @@
       },
       "structural_family_id": "027275fcdcd548b048bc63b11e423a469985c79fa68ad4af2fdc5bad7b83b533",
       "structural_formula": "PMNS:sin^#theta_1#=mu/Phi_3=#/#,etc"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4a558f81b34290f1d466d2302511a5f77ef8b0443565ec0f6df2d70ee76f1136",
+      "normalized_formula": "PMNS=np.array([[0.82,0.55,0.15],[0.37,0.58,0.72],[0.42,0.60,0.68]])",
+      "numeric_literals": [
+        "0.15",
+        "0.37",
+        "0.42",
+        "0.55",
+        "0.58",
+        "0.60",
+        "0.68",
+        "0.72",
+        "0.82"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "PMNS = np.array([[0.82, 0.55, 0.15], [0.37, 0.58, 0.72], [0.42, 0.60, 0.68]])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9b50d9193eefd61501567386009a766da998504bacebde06ff0b3816bf15f80b",
+      "structural_formula": "PMNS=np.array([[#,#,#],[#,#,#],[#,#,#]])"
     },
     {
       "file_count": 2,
@@ -955219,7 +955373,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1507,
+          "line": 1509,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1134862,6 +1135016,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "08ca2bde95937e813a7bd3050dab1762e14aa6fe8d3d4870464f1efb6849f614",
+      "normalized_formula": "complementary.beta>0.4favoursPMNS-likeleptonmixing(medianlog-distance1.0)butthenV_us=0.4-0.8;thebest",
+      "numeric_literals": [
+        "-0.8",
+        ".0",
+        "0.4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "complementary. beta > 0.4 favours PMNS-like lepton mixing (median log-distance 1.0) but then V_us = 0.4-0.8; the best",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f966547367856538792b32262b99ba37436d0a8fdf70d1d121dce6488efe57b8",
+      "structural_formula": "complementary.beta>#favoursPMNS-likeleptonmixing(medianlog-distance1#)butthenV_us=##;thebest"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7711c3b02e08e0a1675aca774a4a8a82b68759247c6a2f80d5abe608ca5c635a",
       "normalized_formula": "complementasinglerung/edge.Q(5,3),witht=9,hasa7-rungcomplementandan",
       "numeric_literals": [
@@ -1283497,6 +1283680,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e3f9172e550892ac9599df9b059f785a2d5a8dc9bacd306b2bc58d3856f4de9a",
+      "normalized_formula": "jointpointhasV_us=0.38.The'hierarchical10/anarchic5bar'patterndoesnotarisefrommodulusanisotropy",
+      "numeric_literals": [
+        "0",
+        "0.38"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "joint point has V_us = 0.38. The 'hierarchical 10 / anarchic 5bar' pattern does not arise from modulus anisotropy.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c337c37bf9203c94a0df540c9e1dd34e73fbb69cf1764e2611f7aa7dd6c03d5f",
+      "structural_formula": "jointpointhasV_us=#.The'hierarchical1#/anarchic5bar'patterndoesnotarisefrommodulusanisotropy"
+    },
+    {
+      "file_count": 1,
       "formula_id": "02965439546bc9fbfcb97ea08246abe83bf4cd48351133f81559c78b194db1f7",
       "normalized_formula": "jordan=max(len(S)-num_rank(S-z*np.eye(4),1e-7)forzinev)#maxgeometricmultiplicity",
       "numeric_literals": [
@@ -1332778,6 +1332989,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6e22f242a8a26f89cb606675f605922be28ca5273b1892d5a3f554d1fafa4c71",
+      "normalized_formula": "m_nu_equals_h_bplusb_g_symmetric=mc[\"h_form_and_gplus_eq_gminus_spread\"]<1e-8",
+      "numeric_literals": [
+        "1e-8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 153,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "m_nu_equals_h_bplusb_g_symmetric=mc[\"h_form_and_gplus_eq_gminus_spread\"] < 1e-8,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f0e60e8b50d445e0774ee39f12469e685745c649628f938b65535a4e0a611918",
+      "structural_formula": "m_nu_equals_h_bplusb_g_symmetric=mc[\"h_form_and_gplus_eq_gminus_spread\"]<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cd95b6b08081fde1a93ea5497254ac7b19ff9456d3372776717ee3d033784932",
       "normalized_formula": "m_nu_heaviest=abs(g2)*v_EW^2/M_GUT*1e9#converttoeV",
       "numeric_literals": [
@@ -1349981,6 +1350219,33 @@
       },
       "structural_family_id": "ae888fc251a2a8a836f8ac7e391b7142d760cc460ca7a21c4dd16cdf847305e7",
       "structural_formula": "matrix<code>[[#,#],[#,#]]</code>or<code>[[#,#],[#,#]]</code>,andthosetwoaregauge-equivalentover"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "386054124830251363b206626e6415a6c925d3f0d20c3ccb9d9c0c1d2bfd8155",
+      "normalized_formula": "matrixhasanEXACTLYdegeneratepair(to1e-12),andinthequtritspaceM_nu(h)_{bb'}=h_{b+b'}g'_{b-b'}with",
+      "numeric_literals": [
+        "12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "matrix has an EXACTLY degenerate pair (to 1e-12), and in the qutrit space M_nu(h)_{bb'} = h_{b+b'} g'_{b-b'} with",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "18e9dfd27c2305020b5243d7936a0e2c9ebc5b0db88c44ad048fb25320e64e28",
+      "structural_formula": "matrixhasanEXACTLYdegeneratepair(to1e-#),andinthequtritspaceM_nu(h)_{bb'}=h_{b+b'}g'_{b-b'}with"
     },
     {
       "file_count": 1,
@@ -1369619,6 +1369884,33 @@
       },
       "structural_family_id": "25c4849fd21686c7a88d876f0ac694b70655a4d882c0c9a762041448bf433871",
       "structural_formula": "no_base_at_infinity=True,pullback_zero_line='O(#)',exact_first_Chern_class=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "79528222d6e30c1e2f372f98613e182a5d448e1b84f1f0097cbc3e09628a3005",
+      "normalized_formula": "no_complementarity=fz[\"corr_ckm_pmns_dist\"]>0.2",
+      "numeric_literals": [
+        "0.2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 154,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "no_complementarity=fz[\"corr_ckm_pmns_dist\"] > 0.2,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b807b785affe325ec400ce7e9d9687666c9ad67421ffc5b496e60e45c283f5de",
+      "structural_formula": "no_complementarity=fz[\"corr_ckm_pmns_dist\"]>#"
     },
     {
       "file_count": 1,
@@ -1543752,7 +1544044,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1503,
+          "line": 1505,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1621862,6 +1622154,33 @@
       },
       "structural_family_id": "42191e57e55fb261dec1dc8e695fa552d87320464db973486211f87a743754a2",
       "structural_formula": "single_addition_boundary='All4#evenSM-neutralfieldsoutsidethe1#-fieldsupportweretestedwithanexactunboundedreal-conerelaxation.Onlyn6#,n7#(hiddenSU4fundamentals)relaxtheup-maskbeyondrank1;neitherhasapositive-degreeholomorphicSU4invariantasthesolenewchargedflavor.ThusnosingleelementaryadditionrepairsthedeclaredHuup-Yukawarank.Coordinatedhiddenflavors,changedHiggsbasisandnonperturbativemechanismsremainopen.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6001cfb0048130c1b79f8a5a4da5d499ab049b6dbd3ad4fc0d059917bf32d477",
+      "normalized_formula": "single_class_degenerate_pair=mc[\"max_degenerate_gap\"]<1e-12",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11922_neutrino_qutrit_complementarity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 151,
+          "path": "analysis/w33_pass11922_neutrino_qutrit_complementarity.py",
+          "raw": "single_class_degenerate_pair=mc[\"max_degenerate_gap\"] < 1e-12,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "49eaa11075214958526b893c4e8bfdbf0d5c2e15aab0121caa6e92504458021f",
+      "structural_formula": "single_class_degenerate_pair=mc[\"max_degenerate_gap\"]<#"
     },
     {
       "file_count": 1,
@@ -1741369,6 +1741688,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b8bb203b16bb3fd5ef4084cf9fffacc029017b2cab57b6a9fba48afb8faafac9",
+      "normalized_formula": "|bestjointpoint|t=1.29,\u03b2=0.81:PMNSdistance0.50,butV_us=0.38,V_cb=0.033,V_ub=0.028|",
+      "numeric_literals": [
+        ".50",
+        "0.028",
+        "0.033",
+        "0.38",
+        "0.81",
+        "1.29"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11922_NEUTRINO_QUTRIT_COMPLEMENTARITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/PASS11922_NEUTRINO_QUTRIT_COMPLEMENTARITY.md",
+          "raw": "| best joint point | t = 1.29, \u03b2 = 0.81: PMNS distance 0.50, but V_us = 0.38, V_cb = 0.033, V_ub = 0.028 |",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e1e3e9af5d5d970f2b8effd3d1ab74d15b805c9cb7065b57503ebd1746fb5684",
+      "structural_formula": "|bestjointpoint|t=#,\u03b2=#:PMNSdistance0#,butV_us=#,V_cb=#,V_ub=#|"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2703f6ea0c6eb978050776a07a06fe60b8ab726c9cf75029a0c1273f5cb8215f",
       "normalized_formula": "|boundary-heavymixing`E4<->E10`,`E4<->E16`|1|2|0|2|2|2|9|",
       "numeric_literals": [
@@ -1762184,9 +1762535,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T14:21:25-04:00",
+  "frozen_at": "2026-10-11T16:23:27-04:00",
   "pass": 398,
-  "repository_head": "4d02ff62c1e59ac582a18b2597eab804e57e68fe",
+  "repository_head": "cd0f8096c11424126291372a8661a6c910731846",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1881473,6 +1881824,14 @@
     },
     {
       "exact_formula_ids": [
+        "1e614b50b80de1ad90d721c23f59290b5c11c03b0e3dd2aa89860b350940b200"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fd9fc21f9f1622923f495935ed8effaa054115d0a71c6da1bad50d49e4bc76f3",
+      "structural_formula": "*\u03b2>#doesfavourPMNS-likeleptonmixing,butthequarkmixingisthenlargetoo"
+    },
+    {
+      "exact_formula_ids": [
         "32cb6fffd614443cc182f63e426942d64f48263e073dcd80785cf1b5091b0acc"
       ],
       "exact_member_count": 1,
@@ -1911975,6 +1912334,14 @@
     },
     {
       "exact_formula_ids": [
+        "f8b1c21b2937ef4438576fac841a42f123b7706f109ff870a17afbcfecbe17e1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fcd0a5a46d18e7871d33bd10b5397edb316aa2b74d17dbc92aae8a295ffaeb9b",
+      "structural_formula": "CKM=np.array([[#,#,#],[#,#,#],[#,#,#]])"
+    },
+    {
+      "exact_formula_ids": [
         "321600de9a0b721a5952f5764b0436451fc8309aaa2b2035362af3f8d334f326"
       ],
       "exact_member_count": 1,
@@ -1937141,6 +1937508,14 @@
     },
     {
       "exact_formula_ids": [
+        "7000238b0cdc0d56415d8af63b5dc1ec5e5fbe0a79ba535ea23dfb661458899e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "296cd08d260613149e7cfb02ace4f18b6379abcac53e70b58a0c07974bcf183b",
+      "structural_formula": "LLH_uH_u)ismonomialperHiggs-pairmode(qutrit-#selection,Pass1#:K(L_{#N5})[#]=K5),andits"
+    },
+    {
+      "exact_formula_ids": [
         "82541feb0be4567b4c67199123a0ca0177a2f94d729a235f914f58d7f29e43bd"
       ],
       "exact_member_count": 1,
@@ -1949356,6 +1949731,14 @@
     },
     {
       "exact_formula_ids": [
+        "3dff740f2fc4093c6f621cb6cdb9021316126c12ab2b13550893a3ece9158bd6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6fd2da76c4df59e360d38c207fa36b4a039fa9aeb2be0c8fcad03cbeb0c669c3",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_neutrino_qutrit_complementarity.json\""
+    },
+    {
+      "exact_formula_ids": [
         "4ca0f530bd4bb5e16ebec6505a89d7bd7ecc804cc184ce74263a90eff1d96a60"
       ],
       "exact_member_count": 1,
@@ -1954942,6 +1955325,14 @@
       "exact_member_count": 1,
       "structural_family_id": "027275fcdcd548b048bc63b11e423a469985c79fa68ad4af2fdc5bad7b83b533",
       "structural_formula": "PMNS:sin^#theta_1#=mu/Phi_3=#/#,etc"
+    },
+    {
+      "exact_formula_ids": [
+        "4a558f81b34290f1d466d2302511a5f77ef8b0443565ec0f6df2d70ee76f1136"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b50d9193eefd61501567386009a766da998504bacebde06ff0b3816bf15f80b",
+      "structural_formula": "PMNS=np.array([[#,#,#],[#,#,#],[#,#,#]])"
     },
     {
       "exact_formula_ids": [
@@ -2065992,6 +2066383,14 @@
     },
     {
       "exact_formula_ids": [
+        "08ca2bde95937e813a7bd3050dab1762e14aa6fe8d3d4870464f1efb6849f614"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f966547367856538792b32262b99ba37436d0a8fdf70d1d121dce6488efe57b8",
+      "structural_formula": "complementary.beta>#favoursPMNS-likeleptonmixing(medianlog-distance1#)butthenV_us=##;thebest"
+    },
+    {
+      "exact_formula_ids": [
         "7711c3b02e08e0a1675aca774a4a8a82b68759247c6a2f80d5abe608ca5c635a"
       ],
       "exact_member_count": 1,
@@ -2106640,6 +2107039,14 @@
     },
     {
       "exact_formula_ids": [
+        "e3f9172e550892ac9599df9b059f785a2d5a8dc9bacd306b2bc58d3856f4de9a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c337c37bf9203c94a0df540c9e1dd34e73fbb69cf1764e2611f7aa7dd6c03d5f",
+      "structural_formula": "jointpointhasV_us=#.The'hierarchical1#/anarchic5bar'patterndoesnotarisefrommodulusanisotropy"
+    },
+    {
+      "exact_formula_ids": [
         "02965439546bc9fbfcb97ea08246abe83bf4cd48351133f81559c78b194db1f7"
       ],
       "exact_member_count": 1,
@@ -2119447,6 +2119854,14 @@
     },
     {
       "exact_formula_ids": [
+        "6e22f242a8a26f89cb606675f605922be28ca5273b1892d5a3f554d1fafa4c71"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f0e60e8b50d445e0774ee39f12469e685745c649628f938b65535a4e0a611918",
+      "structural_formula": "m_nu_equals_h_bplusb_g_symmetric=mc[\"h_form_and_gplus_eq_gminus_spread\"]<#"
+    },
+    {
+      "exact_formula_ids": [
         "cd95b6b08081fde1a93ea5497254ac7b19ff9456d3372776717ee3d033784932"
       ],
       "exact_member_count": 1,
@@ -2124076,6 +2124491,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ae888fc251a2a8a836f8ac7e391b7142d760cc460ca7a21c4dd16cdf847305e7",
       "structural_formula": "matrix<code>[[#,#],[#,#]]</code>or<code>[[#,#],[#,#]]</code>,andthosetwoaregauge-equivalentover"
+    },
+    {
+      "exact_formula_ids": [
+        "386054124830251363b206626e6415a6c925d3f0d20c3ccb9d9c0c1d2bfd8155"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "18e9dfd27c2305020b5243d7936a0e2c9ebc5b0db88c44ad048fb25320e64e28",
+      "structural_formula": "matrixhasanEXACTLYdegeneratepair(to1e-#),andinthequtritspaceM_nu(h)_{bb'}=h_{b+b'}g'_{b-b'}with"
     },
     {
       "exact_formula_ids": [
@@ -2129288,6 +2129711,14 @@
       "exact_member_count": 1,
       "structural_family_id": "25c4849fd21686c7a88d876f0ac694b70655a4d882c0c9a762041448bf433871",
       "structural_formula": "no_base_at_infinity=True,pullback_zero_line='O(#)',exact_first_Chern_class=#"
+    },
+    {
+      "exact_formula_ids": [
+        "79528222d6e30c1e2f372f98613e182a5d448e1b84f1f0097cbc3e09628a3005"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b807b785affe325ec400ce7e9d9687666c9ad67421ffc5b496e60e45c283f5de",
+      "structural_formula": "no_complementarity=fz[\"corr_ckm_pmns_dist\"]>#"
     },
     {
       "exact_formula_ids": [
@@ -2196092,6 +2196523,14 @@
     },
     {
       "exact_formula_ids": [
+        "6001cfb0048130c1b79f8a5a4da5d499ab049b6dbd3ad4fc0d059917bf32d477"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "49eaa11075214958526b893c4e8bfdbf0d5c2e15aab0121caa6e92504458021f",
+      "structural_formula": "single_class_degenerate_pair=mc[\"max_degenerate_gap\"]<#"
+    },
+    {
+      "exact_formula_ids": [
         "f64750e6bccab19408de2c951884e3ff3b4f3518593e7f6f8311c990de910f9b"
       ],
       "exact_member_count": 1,
@@ -2228206,6 +2228645,14 @@
     },
     {
       "exact_formula_ids": [
+        "b8bb203b16bb3fd5ef4084cf9fffacc029017b2cab57b6a9fba48afb8faafac9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e1e3e9af5d5d970f2b8effd3d1ab74d15b805c9cb7065b57503ebd1746fb5684",
+      "structural_formula": "|bestjointpoint|t=#,\u03b2=#:PMNSdistance0#,butV_us=#,V_cb=#,V_ub=#|"
+    },
+    {
+      "exact_formula_ids": [
         "2703f6ea0c6eb978050776a07a06fe60b8ab726c9cf75029a0c1273f5cb8215f"
       ],
       "exact_member_count": 1,
@@ -2233044,20 +2233491,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86692286,
-    "exact_formula_families": 60255,
-    "files_scanned": 11870,
-    "formula_occurrences": 66193,
+    "bytes_scanned": 86705603,
+    "exact_formula_families": 60267,
+    "files_scanned": 11872,
+    "formula_occurrences": 66205,
     "status_occurrences": {
       "certified_or_theorem": 4826,
       "killed_or_retracted": 1557,
       "open_or_conditional": 2145,
       "preregistered": 32,
       "retrospective_fit": 5106,
-      "unclassified": 52527
+      "unclassified": 52539
     },
-    "structural_families": 58651
+    "structural_families": 58663
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "2c8e21d6f78650d717e6f9c180e9364a32b0f5a6e7b9adea09fbff5dce4d1f06"
+  "universe_sha256": "2a0877e35940c2bb2bc82d141bedef0edf487a7c1fad25682b4f400f42bcd5fc"
 }
