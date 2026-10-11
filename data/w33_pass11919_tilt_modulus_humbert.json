@@ -1,0 +1,91 @@
+{
+  "pass_id": 11919,
+  "humbert_on_slice_max": 1.5888218580782548e-14,
+  "humbert_off_slice_detects": true,
+  "index_form_ok": true,
+  "m_with_square_discriminant": [
+    4
+  ],
+  "zero_index_fluxes": {
+    "[[1, 0], [0, 3]]": {
+      "dets": [
+        0,
+        0
+      ],
+      "lines": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "[[2, 1], [1, 2]]": {
+      "dets": [
+        0,
+        0
+      ],
+      "lines": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    }
+  },
+  "galois_swap": [
+    {
+      "N1": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "omega2_is_x_plus_y_N2": true,
+      "max_spectrum_diff": 0.0
+    },
+    {
+      "N1": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "omega2_is_x_plus_y_N2": true,
+      "max_spectrum_diff": 0.0
+    }
+  ],
+  "commutant_dims_with_extra_flux": [
+    1
+  ],
+  "humbert_discriminants": {
+    "[[1, 0], [0, 3]]": 4,
+    "[[2, 1], [1, 2]]": 4,
+    "[[1, 1], [1, 4]]": 13,
+    "[[3, 3], [3, 4]]": 37
+  },
+  "checks": {
+    "compatibility_is_singular_relation": true,
+    "index_form_u2_muv_3v2": true,
+    "square_discriminant_only_m4": true,
+    "zero_index_fluxes_are_frame_lines": true,
+    "galois_swap_is_rotation": true,
+    "extra_flux_forces_scalar_omega": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,135 @@
+{
+  "pass_id": 11920,
+  "slopes_times_3_over_pi": {
+    "A2 down": {
+      "s2/s1": [
+        -4.0,
+        -2.005,
+        -2.0,
+        0.0
+      ],
+      "s3/s2": []
+    },
+    "A2 up": {
+      "s2/s1": [
+        -4.0,
+        -0.0
+      ],
+      "s3/s2": [
+        -2.0,
+        -0.0
+      ]
+    },
+    "114 down": {
+      "s2/s1": [
+        -5.0,
+        -3.005,
+        -3.0,
+        -1.002,
+        -1.0,
+        -0.998
+      ],
+      "s3/s2": []
+    }
+  },
+  "slope_max_dev_from_integer": 0.004891265130510636,
+  "a2_up_symmetric_wilson_max_gap": 1.2985219444169948e-15,
+  "reproduced_rows_max_diff": 0.0,
+  "frozen": {
+    "pair": "A2",
+    "seeds": [
+      5,
+      6,
+      7
+    ],
+    "samples_per_seed": 70,
+    "theta_truncation_K": 4,
+    "grid_G": 12,
+    "rows": 40320,
+    "moduli": 210,
+    "data_mz_xzz": {
+      "md": 0.0527,
+      "sb": 0.019,
+      "uc": 0.00205,
+      "ct": 0.00361,
+      "emu": 0.00474,
+      "mutau": 0.0588,
+      "Vus": 0.2245,
+      "Vcb": 0.041,
+      "Vub": 0.00382
+    },
+    "quantiles_10_50_90": {
+      "md": [
+        1.1311378703244573e-16,
+        7.549817601012868e-16,
+        1.0593435358254595e-14
+      ],
+      "sb": [
+        0.0011030372615044393,
+        0.0966077457046659,
+        0.675012484405257
+      ],
+      "uc": [
+        0.014234887303625838,
+        0.2112669625738317,
+        0.7774425610735596
+      ],
+      "ct": [
+        0.0010572333567049562,
+        0.15023621613080784,
+        0.7210024303770091
+      ],
+      "emu": [
+        1.1040545954756785e-16,
+        6.980016363291957e-16,
+        1.0849601782457335e-14
+      ],
+      "mutau": [
+        0.0012582977635165115,
+        0.0956375398984544,
+        0.6558459905862011
+      ],
+      "Vus": [
+        3.629698174050221e-10,
+        0.015135068200361517,
+        0.9999999089999215
+      ],
+      "Vcb": [
+        1.3354450791664044e-11,
+        0.00011217319363326796,
+        0.9999999999999987
+      ],
+      "Vub": [
+        1.3354585619113572e-11,
+        0.00011217319363411804,
+        0.9999999999999987
+      ],
+      "Vtd": [
+        1.1511185401228561e-08,
+        0.028441681097693555,
+        0.9999980981660439
+      ]
+    },
+    "frac_md_ms_gt_001": 0.0,
+    "max_md_ms": 1.223435424957317e-07,
+    "max_me_mmu": 1.1337373998373087e-07,
+    "median_mutau_over_sb": 0.9970059750709024,
+    "frac_near_permutation_ckm": 0.8086805555555555,
+    "aligned_rows": 5631,
+    "aligned_all_angles_nonzero": 893,
+    "aligned_with_Vcb_zero": 4699,
+    "realistic_quark_mass_rows": 63,
+    "realistic_mass_and_hier_nonzero_ckm": 0,
+    "check_seed": 5
+  },
+  "worst_sample_K7_max_md_ms": 2.8422928993858964e-15,
+  "worst_sample_K7_max_me_mmu": 2.3662702295222036e-15,
+  "checks": {
+    "slopes_are_multiples_of_pi_over_3": true,
+    "a2_up_degenerate_at_symmetric_wilson": true,
+    "a2_md_me_zero_under_hypercharge": true,
+    "no_realistic_mass_row_has_hierarchical_ckm": true,
+    "frozen_scan_reproduces": true
+  },
+  "all_checks_pass": true
+}
