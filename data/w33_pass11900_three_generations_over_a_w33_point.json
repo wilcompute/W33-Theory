@@ -1,0 +1,74 @@
+{
+  "pass_id": 11900,
+  "centraliser_linear": 1296,
+  "centraliser_projective": 648,
+  "class_leak": 1.4360308324098685e-15,
+  "class_images": {
+    "0": {
+      "modular_linear": 48,
+      "modular_projective": 24,
+      "with_space_group_projective": 216
+    },
+    "1": {
+      "modular_linear": 1296,
+      "modular_projective": 216,
+      "with_space_group_projective": 216
+    },
+    "2": {
+      "modular_linear": 1296,
+      "modular_projective": 216,
+      "with_space_group_projective": 216
+    }
+  },
+  "restriction_identities": {
+    "0": {
+      "transvection_is_X1a": 0.0,
+      "offdiag_B_is_Z1_2a": 0.0
+    },
+    "1": {
+      "transvection_is_X1a": 0.0,
+      "offdiag_B_is_Z1_2a": 5.978733960281817e-16
+    },
+    "2": {
+      "transvection_is_X1a": 0.0,
+      "offdiag_B_is_Z1_2a": 1.1801832636420706e-15
+    }
+  },
+  "yukawa_degeneracy": [
+    {
+      "neutral": 1.0819311090436407e-15,
+      "charged": 2.3687927418224013
+    },
+    {
+      "neutral": 3.4358600825780193e-16,
+      "charged": 0.5947140495641591
+    },
+    {
+      "neutral": 1.2006652827887983e-14,
+      "charged": 0.49567911004303966
+    },
+    {
+      "neutral": 3.596850071859411e-16,
+      "charged": 1.306793869010529
+    }
+  ],
+  "diagonal_moduli_charged_split": 5.766278991978838e-16,
+  "split_over_offdiag_cubed": [
+    86.66457457527302,
+    86.60155956758949,
+    86.5858219552723
+  ],
+  "checks": {
+    "centraliser_is_point_stabiliser": true,
+    "classes_preserved": true,
+    "neutral_class_only_T_prime": true,
+    "charged_classes_full_clifford": true,
+    "all_classes_clifford_with_space_group": true,
+    "transvection_and_B_restrict_to_paulis": true,
+    "neutral_light_pair_exactly_degenerate": true,
+    "charged_light_pair_split": true,
+    "degenerate_at_diagonal_moduli": true,
+    "split_cubic_in_offdiag": true
+  },
+  "all_checks_pass": true
+}
