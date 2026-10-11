@@ -1,0 +1,109 @@
+{
+  "status": "NORMALIZED_RELATIVE_WILSON_UNBLOCKS_SINGLE_HIGGS_DEGENERACY_BUT_NOT_CKM",
+  "flux": {
+    "left": 3,
+    "right": 3,
+    "Higgs_conjugate": -6
+  },
+  "wavefunction_shifts": "s_L=s, s_R=-s, s_H=0 satisfying 3s_L+3s_R-6s_H=0",
+  "torus_tau_im": 1.45,
+  "grid": 128,
+  "sampled_shifts": [
+    {
+      "wilson_shift": 0.0,
+      "k0_two_offdiag_magnitudes": [
+        0.06930637005940327,
+        0.06930637005940327
+      ],
+      "split": 0.0,
+      "ratio_split_over_s": null,
+      "k0_singular_values": [
+        1.4441832852767247,
+        0.0693063700594033,
+        0.06930637005940325
+      ],
+      "forbidden_max": 6.187587093033038e-16
+    },
+    {
+      "wilson_shift": 0.002,
+      "k0_two_offdiag_magnitudes": [
+        0.06681968899433352,
+        0.07186997102084101
+      ],
+      "split": 0.005050282026507494,
+      "ratio_split_over_s": 2.525141013253747,
+      "k0_singular_values": [
+        1.444025405068356,
+        0.07186997102084103,
+        0.06681968899433353
+      ],
+      "forbidden_max": 5.997994473647429e-16
+    },
+    {
+      "wilson_shift": 0.004,
+      "k0_two_offdiag_magnitudes": [
+        0.06440823917714418,
+        0.0745121921059706
+      ],
+      "split": 0.010103952928826418,
+      "ratio_split_over_s": 2.5259882322066045,
+      "k0_singular_values": [
+        1.4435518679938988,
+        0.07451219210597057,
+        0.06440823917714418
+      ],
+      "forbidden_max": 6.025827229944648e-16
+    },
+    {
+      "wilson_shift": 0.008,
+      "k0_two_offdiag_magnitudes": [
+        0.059804342851821804,
+        0.08003934677865292
+      ],
+      "split": 0.020235003926831113,
+      "ratio_split_over_s": 2.529375490853889,
+      "k0_singular_values": [
+        1.4416592720498365,
+        0.0800393467786529,
+        0.059804342851821776
+      ],
+      "forbidden_max": 5.991370986834489e-16
+    },
+    {
+      "wilson_shift": 0.016,
+      "k0_two_offdiag_magnitudes": [
+        0.05142654585007378,
+        0.09211292397806434
+      ],
+      "split": 0.04068637812799056,
+      "ratio_split_over_s": 2.54289863299941,
+      "k0_singular_values": [
+        1.434113668999761,
+        0.09211292397806431,
+        0.0514265458500738
+      ],
+      "forbidden_max": 6.17264824448877e-16
+    },
+    {
+      "wilson_shift": 0.04,
+      "k0_two_offdiag_magnitudes": [
+        0.032035004969662606,
+        0.1374908371021759
+      ],
+      "split": 0.1054558321325133,
+      "ratio_split_over_s": 2.6363958033128325,
+      "k0_singular_values": [
+        1.3823887645643447,
+        0.13749083710217594,
+        0.032035004969662585
+      ],
+      "forbidden_max": 5.788237644632008e-16
+    }
+  ],
+  "small_shift_linear_ratio_range": [
+    2.525141013253747,
+    2.529375490853889
+  ],
+  "math_statement": "For equal left/right backgrounds sL=sR=0, k-fixed Yij is symmetric with equal off-diagonal entries; for opposite continuous Wilson displacements sL=-sR!=0, i+j-k=0 mod3 remains exact, but generally Y12!=Y21. The twofold degeneracy of a single k-fixed monomial Yukawa matrix is lifted continuously (linearly to leading order near s=0). Still YYdagger is diagonal for every single k, so CKM remains trivial in this restricted setup.",
+  "physical_boundaries": "Toy flat torus wavefunction/Wilson displacement ansatz, not a full globally quantized gauge bundle and tadpole/anomaly-free compactification. Multiple Higgs fields, charged field content, brane stacks, D/F-flat potential, Yukawa flavor fits and RG running not supplied."
+}

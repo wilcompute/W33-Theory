@@ -1,0 +1,31 @@
+{
+  "status": "ONE_FIXED_40_OUTCOME_IC_POVM_ESTIMATES_D5_PURITY",
+  "single_POVM": "40 outcomes E_r=P_r/8 on 5D even Weil Hilbert space; sum E_r=I5",
+  "exact_identity": "sum_r Pr(outcome=r)^2=(1+Tr(rho^2))/48",
+  "unbiased_pair_estimator": "P_hat=48*(1/m)*sum_{j=1}^m indicator(Y_j=Yprime_j)-1; each pair uses two independent copies",
+  "trusted_uniform_confusion": "observed p_r=(1-eps)p_r+eps/40, C_obs=(1-eps)^2 C +(1-(1-eps)^2)/40; invert exactly if eps is known",
+  "readout_eps": 0.06,
+  "pairs_per_trial": 6500,
+  "simulated_repetitions": 1200,
+  "cases": {
+    "pure": {
+      "true_purity": 1.0000000000000004,
+      "exact_collision": 0.0416666666666667,
+      "noisy_collision": 0.0397266666666667,
+      "calibrated_estimate_mean": 0.99822404847303,
+      "empirical_standard_deviation": 0.13603347810228233,
+      "predicted_single_trial_se": 0.13160347269550596,
+      "total_copies_per_trial": 13000
+    },
+    "maximally_mixed": {
+      "true_purity": 0.20000000000000004,
+      "exact_collision": 0.025000000000000015,
+      "noisy_collision": 0.025000000000000015,
+      "calibrated_estimate_mean": 0.1951875195877006,
+      "empirical_standard_deviation": 0.10422386704663948,
+      "predicted_single_trial_se": 0.10519646934017433,
+      "total_copies_per_trial": 13000
+    }
+  },
+  "physical_boundary": "40-outcome POVM is mathematically defined in Hilbert dimension 5. No optical circuit implementing it has been compiled. It is not a purity estimator on the original dimension-9 two-qutrit state unless an additional physical encoding is specified. Shot variance can be large and needs comparison against other measurements; uniform known detector error is idealized."
+}

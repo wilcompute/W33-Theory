@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_W33_40_COLLISION_FISHER_RANK25_VS_10_MUB_RANK80",
+  "state": {
+    "min_eigenvalue": 0.0021917366691016214,
+    "min_pauli_power": 0.0009960730727100293
+  },
+  "real_density_parameter_count": 80,
+  "collision_scalar_count": 40,
+  "collision_fisher_rank": 25,
+  "collision_fisher_nullity": 55,
+  "full_MUB_basis_count": 10,
+  "full_MUB_projector_outcomes": 90,
+  "full_MUB_fisher_rank": 80,
+  "full_MUB_fisher_nullity": 0,
+  "one_dark_fixed_purity_direction": {
+    "collision_Fisher_quadratic": 1.569129453628683e-17,
+    "full_MUB_Fisher_quadratic": 25.693972784125272,
+    "collision_score_norm": 1.0721942408763127e-16,
+    "full_MUB_score_norm": 1.6237883690359394,
+    "purity_tangent_derivative": -1.1657341758564144e-15
+  },
+  "proof": "At generic full-rank rho with nonzero Weyl expectations, dC=(1/9)N dq, dq=4(x dx+y dy) for each Pauli; thus collision Jacobian rank rank N=25, leaves 55 invisible real state dimensions (40 phases + 15 dark powers). Ten complete MUB bases form informationally complete projective 2-design: their probabilities span 80 real density directions; J rank80; explicit Fisher calculation confirms.",
+  "boundary": "Fisher rank concerns local identifiability and ideal repeated independent preparations, not channel QFI, optimum POVMs, finite sample confidence intervals or actual optics. Rank drops at special zero-expectation and rank-deficient states."
+}

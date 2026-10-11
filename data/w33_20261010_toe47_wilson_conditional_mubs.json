@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_FOUR_QUTRIT_MUBS_PER_WILSON_CHARGE_SECTOR",
+  "canonical_Wilson_holonomy": "Z2",
+  "projective_W33_vector": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "wilson_point_index": 0,
+  "four_incident_W33_line_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "charge_values": 3,
+  "rank_of_each_charge_sector": 3,
+  "bases_per_charge_sector": 4,
+  "basis_vectors_per_sector_per_context": 3,
+  "maximum_conditional_MUB_overlap_error": 2.405483220021173e-16,
+  "max_cross_charge_overlap": 8.112613320606216e-17,
+  "block_collision_identity": "Sum over 4 Wilson-compatible 9-outcome bases and all outcomes of p(basis,outcome)^2 = sum_charge (Tr(rho_charge\u00b2)+(Tr rho_charge)^2), rho_charge=Q_charge rho Q_charge",
+  "charge_supported_purity": "For normalized rho supported in one Wilson charge, sum of four basis collision probabilities=1+Tr rho\u00b2 (four complete qutrit MUBs)",
+  "random_full_rank_density_trials": 44,
+  "max_collision_block_identity_error": 1.1102230246251565e-16,
+  "physics_boundary": "Pauli Z2 is a chosen idealized Wilson holonomy on a two-qutrit representation; a physical heterotic Wilson line requires a verified gauge-bundle embedding. No inference that all 491 scanned models have this canonical W33 Pauli operator or that a holonomy selects allowed SM Yukawas."
+}

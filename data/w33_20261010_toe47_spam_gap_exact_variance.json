@@ -1,0 +1,47 @@
+{
+  "status": "EXACT_CONDITIONAL_QUARTIC_VARIANCE_WITH_MAR_LOSS_AND_BASIS_CONFUSION",
+  "shots": {
+    "attempted_per_setting_per_block": 1000,
+    "basis_count": 10,
+    "four_blocks": 4,
+    "total_attempted_copies_per_trial": 40000,
+    "replicates": 240
+  },
+  "basis_readout_eps": [
+    0.04,
+    0.05333333333333333,
+    0.06666666666666667,
+    0.07999999999999999,
+    0.09333333333333332,
+    0.10666666666666666,
+    0.12,
+    0.13333333333333333,
+    0.14666666666666667,
+    0.16
+  ],
+  "basis_per_copy_loss": [
+    0.04,
+    0.06666666666666667,
+    0.09333333333333334,
+    0.12,
+    0.14666666666666667,
+    0.17333333333333334,
+    0.2,
+    0.22666666666666668,
+    0.25333333333333335,
+    0.28
+  ],
+  "rho_true_gap": 7.694493405019666e-05,
+  "mean_calibrated_estimate": 7.643781387722366e-05,
+  "empirical_variance": 2.512636376077246e-10,
+  "mean_exact_conditional_variance": 2.6488645030953746e-10,
+  "variance_ratio_empirical_to_exact": 0.9485711228872081,
+  "mean_uncalibrated_estimate": 5.184980161961073e-05,
+  "corrected_estimator": "z_{b,p}=sample average of eigenvalue(Wp)/(1-eps_basis) among survived outputs; q_AB=2Re(zA conj zB); ghat=(2/135)(Pminus q_AB).(Pminus q_CD). Conditional on count array n>0: E ghat=g.",
+  "exact_covariance_formula": "For blocks a,b: ES_a,pq=mu_p conj(mu_q)+C_pq/n_a, EP_a,pq=mu_p mu_q+P_pq/n_a; Cov(q_ab,p,q_ab,q)=2Re(EP_a,pq conj(EP_b,pq)+ES_a,pq conj(ES_b,pq))-q_p q_q; off-base block covariance=0.",
+  "exact_variance_formula": "For C_ab and C_cd covariance matrices and t=Pminus q: Var(ghat|n)=(2/135)^2*(Tr(P C_ab P C_cd)+t^T(C_ab+C_cd)t).",
+  "very_conservative_distribution_free_95pct_radius": 2.375921653803687,
+  "minimum_observed_valid_pairs_per_setting_and_block": 474,
+  "warning": "The McDiarmid radius is conditional on the observed minimum valid count across the simulated trials and exact known confusion parameters, and is deliberately loose; NOT a uniform unconditional bound for arbitrary future data. Conditional exact moments assume TRUE probabilities/epsilon and survival MAR. This is an oracle variance benchmark, not a plug-in confidence interval and does not handle uncertain calibration, outcome-dependent loss, drift, or coherently correlated detector errors.",
+  "prior_art": "MUB classical shadows, independent-sample quartic U-statistics and symmetric detector correction are established tools; the exact W33 -4 statistic and formula here are this producer's specialized implementation."
+}
