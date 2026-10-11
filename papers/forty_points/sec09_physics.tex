@@ -1359,6 +1359,21 @@ and $m_c=m_u$ holds for every K\"ahler modulus. In prime $\Z_3$ orbifolds, a loc
 incompatible with a tree-level charm--up hierarchy. No model escapes in the up sector (0/491). The $\bar{\mathbf5}$ is
 split across points, and this is why the down sector escapes in five models. Splitting charm from up through the $\W$
 modulus requires splitting the $\mathbf{10}$. \cert{w33\_pass11903\_local\_ten\_locks\_charm\_up.py}
+The magnetized home behaves differently. On $T^4$ with flux 3 on each torus the zero modes are the level-3 Siegel
+thetas above, and the lock is lifted at first order in two ways. The off-diagonal Siegel modulus $\Omega_{12}$ lifts it
+when $a\neq0$, at linear order where heterotic $\Z_3$ gives cubic order, because a real period lattice lacks the
+Eisenstein coset rigidity. A continuous Wilson line lifts it even at $a=0$: heterotic Wilson lines are quantised Pauli
+displacements, while magnetized ones are continuous Weyl displacements. A theta-zero law caps how far this goes.
+$\theta[a,0](z,\Omega)$ vanishes at $z^*=\tfrac12+(\tfrac12-a)\Omega$, and there the other two level-3 thetas have equal
+modulus: the substitution $n\mapsto-1-n$ exchanges their sums. With a localised Higgs, an exactly massless up quark
+therefore forces top $=$ charm. This one statement covers the Hesse alignments of Pass 11114, the symmetric K\"ahler
+points of Pass 11899 and the magnetized Wilson-line zeros. The hierarchy comes instead from the near-cusp Gaussian
+regime. There $m_um_c/m_t^2=e^{-2\pi\,{\rm Im}\,\Omega/9}$, independently of the Wilson-line offset $\delta$, while
+$m_u/m_c=e^{-4\pi\,{\rm Im}\,\Omega\,\delta/3}$: the torus area sets the product and the Wilson line sets the split.
+Up ratios of the observed order are reached at ${\rm Im}\,\Omega\approx25$, $\delta\approx0.06$ (two parameters, two
+ratios: this shows existence, not a prediction). Non-renormalisable couplings in the heterotic survivors give charm and
+up at equal order (Pass 11103), and their coefficients differ only through the $O(Z_{12}^3)$ K\"ahler breaking, so they
+give no parametric split. \cert{w33\_pass11904\_magnetized\_unlock\_and\_theta\_zero\_law.py}
 
 \begin{boundary}[What this does and does not give]
 The datum the chirality no-go asks for from outside now has a name, the vacuum value of $\Omega$, which breaks

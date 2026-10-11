@@ -1,0 +1,51 @@
+{
+  "pass_id": 11904,
+  "gaussian_invariant_ratio": [
+    0.9999999999995106,
+    0.9999999999727779,
+    0.9999999969699571,
+    0.9999983774604053
+  ],
+  "fit_im_omega_delta": [
+    25.254217680517904,
+    0.06028406677354113
+  ],
+  "fit_residual": [
+    0.0,
+    -8.881784197001252e-16
+  ],
+  "siegel_offdiag_split_over_s": {
+    "a=0": [
+      0.0,
+      3.554526296877912e-14,
+      1.7241983844412046e-14
+    ],
+    "a=1": [
+      2.78487987818635,
+      2.774745008082664,
+      2.7697105265169566
+    ]
+  },
+  "wilson_line_split_over_zeta": [
+    4.4688770013174794,
+    4.4505521546110955,
+    4.441353719875632
+  ],
+  "theta_zero_max_rel_diff": 6.478078986504166e-16,
+  "control_generic_spread": 0.21450499294452688,
+  "near_zero_mu_over_mc_per_dz": [
+    1.5761178869387422,
+    1.576082585284057
+  ],
+  "checks": {
+    "a0_locked": true,
+    "a1_linear_in_omega12": true,
+    "wilson_line_linear_even_at_a0": true,
+    "theta_zero_law": true,
+    "control_nonvacuous": true,
+    "mu_over_mc_linear_near_zero": true,
+    "gaussian_invariant_delta_independent": true,
+    "up_hierarchy_reachable": true
+  },
+  "all_checks_pass": true
+}
