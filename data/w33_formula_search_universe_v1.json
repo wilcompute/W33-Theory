@@ -348039,6 +348039,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fc03e701861fcdaa601cd16a5cb6708860ef5e70db71fb6feb8f2b6ae96bee5a",
+      "normalized_formula": "*Forthesetwopairsm_d=m_e=0foreverycompatiblemodulus.Checked:maxs3/s1\u22642\u00b710\u221215at\u03a9=i(1.2+0.05N1)",
+      "numeric_literals": [
+        "+0.05",
+        "0",
+        "1.2",
+        "10",
+        "15",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11917_DUAL_PAIR_SINGULARITY_PROOF.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/PASS11917_DUAL_PAIR_SINGULARITY_PROOF.md",
+          "raw": "* For these two pairs m_d = m_e = 0 for every compatible modulus. Checked: max s\u2083/s\u2081 \u2264 2\u00b710\u207b\u00b9\u2075 at \u03a9 = i(1.2 + 0.05N\u2081).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "de30d4c372dbb75a3aafb7be155dc04910e8276fa4a3c70e69cb73a20695a1eb",
+      "structural_formula": "*Forthesetwopairsm_d=m_e=#foreverycompatiblemodulus.Checked:maxs3/s1\u2264#\u00b7#\u2212#at\u03a9=i(##N1)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e6480e7d3e4ff836820ebeda956abfde013a9fc9d41642321c34e7023820c4e4",
       "normalized_formula": "*Fourth-levelclocks(zeta27phases):SM-shapedin~9.5",
       "numeric_literals": [
@@ -349891,6 +349923,33 @@
       },
       "structural_family_id": "1103266177e02fca8e1c4655121cdd308f4084e27c23aa2b81d5379c024cb9b8",
       "structural_formula": "*TheBCtwistangletheta=acos(#/#)hastheta/piirrational,bythe"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e3dd736b62229a13dcec1f98d01dc004d9adcfcef493613d38432a62851362d6",
+      "normalized_formula": "*TheHiggscarriesN1+N2=m\u00b71",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11917_DUAL_PAIR_SINGULARITY_PROOF.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/PASS11917_DUAL_PAIR_SINGULARITY_PROOF.md",
+          "raw": "* The Higgs carries N\u2081 + N\u2082 = m\u00b71.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "5e00266628c4deb58b2090a77be9f4e0f7d77548ce21125ab56ce28b3e2dcbfc",
+      "structural_formula": "*TheHiggscarriesN1+N2=m\u00b7#"
     },
     {
       "file_count": 1,
@@ -387128,7 +387187,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1492,
+          "line": 1494,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -683768,6 +683827,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c95ce30a8dcbf21e32b264c89cec2b066b1c02b60a80733919ac6f6de08c1653",
+      "normalized_formula": "N_1m^{-1}N_2=(3/m)\\mathbf1",
+      "numeric_literals": [
+        "-1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1482,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "N_1m^{-1}N_2=(3/m)\\mathbf1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "88cbec94add819eb38c3ab2bd894264d0c6f2f6c257e42417b82ecc325921d44",
+      "structural_formula": "N_1m^{#}N_2=(#/m)\\mathbf1"
+    },
+    {
+      "file_count": 1,
       "formula_id": "054541a387820cfd18567bba9f8c2d36ac2a4d263e6b9d3c151428aa4cf3fc66",
       "normalized_formula": "N_3(heaviestRHN)9.3q^2(=v^2/m_nu3)",
       "numeric_literals": [
@@ -693966,6 +694053,34 @@
       },
       "structural_family_id": "1ed7b971d3dc334ab8a204ae4f1913c117097b242780372d2bdd43ee6b46681f",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_dual_flux_massless_first_generation.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "73481138c83b00120bfcca26a9db4463f8b0a0fcf4c2139bf47e1abd73f39201",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11917_dual_pair_singularity_proof.json\"",
+      "numeric_literals": [
+        "1917",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 41,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11917_dual_pair_singularity_proof.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b691f936d2a52275f8e932062910112ee01deecfb1813eb0a7f05a2e43a6b374",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_dual_pair_singularity_proof.json\""
     },
     {
       "file_count": 1,
@@ -755279,6 +755394,38 @@
       },
       "structural_family_id": "f7dd1026905a331a4da1b953df5446db03bdfec47340a9456b94d135b24cfdba",
       "structural_formula": "SettingasinPasses1#/#:U=W(a)V_MT1;asolution(Q,k)of(S)givesA=QJ,anti-symplectic,with"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5b93fd34f7a6ab63151162c64d7c2a2bad018f9d4f95cde4ddcac956514b1f2f",
+      "normalized_formula": "Setup(Pass11915/11916):10fluxN1,5barfluxN2=3N1^{-1}(det3),HiggsfluxN1+N2=m1(Cayley-Hamilton)",
+      "numeric_literals": [
+        "-1",
+        "10",
+        "11916",
+        "1915",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "Setup (Pass 11915/11916): 10 flux N1, 5bar flux N2 = 3 N1^{-1} (det 3), Higgs flux N1 + N2 = m 1 (Cayley-Hamilton),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c89a78f602144db2990e3684fafe3684b72aa2695ee10e00c1f95d09b95d610a",
+      "structural_formula": "Setup(Pass1#/#):#fluxN1,#barfluxN2=#N1^{#}(det3),HiggsfluxN1+N2=m1(Cayley-Hamilton)"
     },
     {
       "file_count": 1,
@@ -832986,6 +833133,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9d4f078ae2ca25af10e11db0711b4b335cc6ae6d91957562eb13e3ba3f8e30e8",
+      "normalized_formula": "Y^c_{ab}=\\sum_ke^{\\pii(3/m)u\\cdot\\Omegau}",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1482,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "Y^c_{ab}=\\sum_k e^{\\pi i(3/m)u\\cdot\\Omega u}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "87d79c72bc503e298397fbf19e5b1d5d5a23f5a609dabd5b3c49cad92936857b",
+      "structural_formula": "Y^c_{ab}=\\sum_ke^{\\pii(#/m)u\\cdot\\Omegau}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "21113bf90620626a1891d9cd69c20dbc358e230b7fc6496a9eb09f851bf39c83",
       "normalized_formula": "Y_0=\\begin{pmatrix}100\\\\001\\\\010\\end{pmatrix},\\qquadY_1=\\begin{pmatrix}001\\\\010\\\\100\\end{pmatrix},\\qquadY_2=\\begin{pmatrix}010\\\\100\\\\001\\end{pmatrix}",
       "numeric_literals": [
@@ -834177,6 +834351,33 @@
       },
       "structural_family_id": "4bd8b700a82c7d96cb09d09ee9fbe746d68747b8316c689699215e2cd35fbda8",
       "structural_formula": "Yflat=yukawa_operator(#,flat_blocks)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a8f5cbfd9f342805038a3ebb5cea8a95215b764160d349d354e06009ab072656",
+      "normalized_formula": "Yn,Yf=F.yukawas(F.T4(Om,14),N1,N2),formula(N1,N2,Om)",
+      "numeric_literals": [
+        "14"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 91,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "Yn, Yf = F.yukawas(F.T4(Om, 14), N1, N2), formula(N1, N2, Om)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5c5895a3c352fa4ac96a27c99e5b7bf2aa92abf63445884bb3460da28fc859db",
+      "structural_formula": "Yn,Yf=F.yukawas(F.T4(Om,#),N1,N2),formula(N1,N2,Om)"
     },
     {
       "file_count": 1,
@@ -912187,6 +912388,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "19574852c32bd4378f82c1883de3a388be644a839580ed2814083d33f6931f77",
+      "normalized_formula": "\\gcd(m,3)=1",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1482,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "\\gcd(m,3)=1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "42d16dc907f50a491c7b0577e5d76a80eb849ab86c03cb496816ec140d684f91",
+      "structural_formula": "\\gcd(m,#)=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b8b312e2180e0f8d54c07037f9934a83de4572dbdd128b2ba2278d5d5a0c5ccc",
       "normalized_formula": "\\gcd(|B|,5)=1",
       "numeric_literals": [
@@ -953755,7 +953984,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1497,
+          "line": 1499,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -981572,6 +981801,34 @@
       },
       "structural_family_id": "65292c379c88373f246f033fb21df41c8848afc51f6cefd4597848b2cd24a447",
       "structural_formula": "^Thevacuum.^With\u03bb,\u03bc>#,theboundedpotential"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f32d55da07bd84ca9aed06004fa6551661d556ad119ec6214b4ad08484e65204",
+      "normalized_formula": "^Twoframesonly.^Mod3bothfluxeshaverank1:N1\u2261\u03bbvvTandN2\u2261\u03bcwwT,withv\u00b7w\u22610becauseN1N2=3.Since",
+      "numeric_literals": [
+        "0",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11917_DUAL_PAIR_SINGULARITY_PROOF.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 38,
+          "path": "analysis/PASS11917_DUAL_PAIR_SINGULARITY_PROOF.md",
+          "raw": "**Two frames only.** Mod 3 both fluxes have rank 1: N\u2081 \u2261 \u03bbvv\u1d40 and N\u2082 \u2261 \u03bcww\u1d40, with v\u00b7w \u2261 0 because N\u2081N\u2082 = 3. Since",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d4861c0aba0c448c1baa16bca26586e8d6d2bffe66b16e93236bf6bb19c74110",
+      "structural_formula": "^Twoframesonly.^Mod3bothfluxeshaverank1:N1\u2261\u03bbvvTandN2\u2261\u03bcwwT,withv\u00b7w\u2261#becauseN1N2=#.Since"
     },
     {
       "file_count": 1,
@@ -1197266,6 +1197523,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "51d03a6c9972e28e37e064af6528d0ecb5addf5f21c5878e986bab1ee6b317fd",
+      "normalized_formula": "ev=np.linalg.eigh(np.array(N1,float))[1]",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 115,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "ev = np.linalg.eigh(np.array(N1, float))[1]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7013b7a16efb8f4676f6d2bba61f15cd7a18354b8a89826881d4fd8f35a0fac1",
+      "structural_formula": "ev=np.linalg.eigh(np.array(N1,float))[#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "25c72fd4f1dbb4b8daa133db6a83f7f3584b5ddbbebb2c0b3ca8e7814d7df7cf",
       "normalized_formula": "ev=np.linalg.eigvals(1j*omega@sigma)",
       "numeric_literals": [
@@ -1228960,6 +1229244,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0a3d43619556ddd0f6c043c8a32b3a5f1281ba30745dd04756e6b8f2a3e6b187",
+      "normalized_formula": "forced_pairs_stay_singular=all(r[\"max_s3\"]<1e-12forrinforced)",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 138,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "forced_pairs_stay_singular=all(r[\"max_s3\"] < 1e-12 for r in forced),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "329236036989d59a8661340e7147ece43779c3157f0afcbac56f82cc422d5442",
+      "structural_formula": "forced_pairs_stay_singular=all(r[\"max_s3\"]<#forrinforced)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f43592e23d2239fa025be92a910b6624a281d70db834307fbc2f5d0216778dbe",
       "normalized_formula": "forces[\"em_u1\"]=True#dim=1",
       "numeric_literals": [
@@ -1232892,6 +1233203,38 @@
       },
       "structural_family_id": "425bd239b0a87e8d66b19710bdc5572b18fa974a8a3272311830c4bf0786ee51",
       "structural_formula": "fractionreturnsPhi4=#andthepumpChernnumberreturnslambda=#.Bothare"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "18ffb303d899b6e1dcd489c47e3d2f87c07671abdc017f3c394ebc02c9d4001e",
+      "normalized_formula": "frame-diagonalandm_d=m_e=0forallmoduli.Forthefourirrationalpairs(1,+-1,4),(3,+-3,4)theeigenframeis",
+      "numeric_literals": [
+        "-1",
+        "-3",
+        "0",
+        "1",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "frame-diagonal and m_d = m_e = 0 for all moduli. For the four irrational pairs (1,+-1,4), (3,+-3,4) the eigenframe is",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "83df18e7bb21349c96ff88dadb89a5b88f2e3f85d28774ebeb0c710be8ec85e1",
+      "structural_formula": "frame-diagonalandm_d=m_e=#forallmoduli.Forthefourirrationalpairs(#,+#,#),(#,+#,#)theeigenframeis"
     },
     {
       "file_count": 1,
@@ -1237988,6 +1238331,34 @@
       },
       "structural_family_id": "bb4c8d4b3bb0b01f25b2e2c43bb98b74d2bccd17877248f0d20e08fffdb6c63b",
       "structural_formula": "g_agg=alpha*lambda_/(#*math.pi*f_a)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c38d83fc9775757a736444d5030494b93b05e8ceb2ed3987e2801d0cbd8b36b3",
+      "normalized_formula": "g_cfactorisesoneachcoset,sorankY^c<=1(axes)or<=2(diagonals),foreveryHiggsmodeandeveryWilsonline",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "g_c factorises on each coset, so rank Y^c <= 1 (axes) or <= 2 (diagonals), for every Higgs mode and every Wilson line",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "34fc46bed6bbd2bfc2a9c9a0df3ecef502e27db9b4d163ee76eb343e7c63bceb",
+      "structural_formula": "g_cfactorisesoneachcoset,sorankY^c<=#(axes)or<=#(diagonals),foreveryHiggsmodeandeveryWilsonline"
     },
     {
       "file_count": 1,
@@ -1271969,6 +1272340,34 @@
       },
       "structural_family_id": "f572be526588a193c14722979a7fb1198ebb67fec45f9661a47492d783562e35",
       "structural_formula": "inactive_rank+singled_rank=int(MU+#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1df0f1ce7b24bdb6c4a61f936f4ab92abc24df6ba3b0a61cd98bc0fc68c7b02c",
+      "normalized_formula": "inatensorframefixedbythefluxmod3,andm_d=0is\"factorisedtorus\"(Pass11872)inthatframe",
+      "numeric_literals": [
+        "0",
+        "1872"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 2,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "in a tensor frame fixed by the flux mod 3, and m_d = 0 is \"factorised torus\" (Pass 11872) in that frame.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ed411252633805419f81e420b9f17cf13fe9e72622b14b2dd63c39800614da82",
+      "structural_formula": "inatensorframefixedbythefluxmod3,andm_d=#is\"factorisedtorus\"(Pass1#)inthatframe"
     },
     {
       "file_count": 1,
@@ -1541340,7 +1541739,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1493,
+          "line": 1495,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1656656,6 +1657055,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e436de8f8208964dbcd1cccc87071a4438810bcc85cb0f7c414078e996842520",
+      "normalized_formula": "thelevel-3thetavectorf_c(qmod3)=sum_{q'=qmod3}g_c(q'),g_cGaussianofmetric(m/3)Omega",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11917_dual_pair_singularity_proof.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass11917_dual_pair_singularity_proof.py",
+          "raw": "the level-3 theta vector f_c(q mod 3) = sum_{q' = q mod 3} g_c(q'), g_c Gaussian of metric (m/3) Omega,",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "72284830242906a766758b5c8be5b25c71335911690f2e2369597ce15e4c1d3c",
+      "structural_formula": "thelevel-#thetavectorf_c(qmod3)=sum_{q'=qmod3}g_c(q'),g_cGaussianofmetric(m/#)Omega"
+    },
+    {
+      "file_count": 1,
       "formula_id": "498d933bcf970401b0cca1934190a52336e8755fecc2a1c05aa4f689da005017",
       "normalized_formula": "thelightestneutrino(~2meV),the0nubbeffectivemass(~1.4meV),andm_betabeta.Sothe",
       "numeric_literals": [
@@ -1680371,6 +1680797,33 @@
       },
       "structural_family_id": "cf8a0046f5f85659933c0573cb741ffed23537635daf9831c38f3459dbb57849",
       "structural_formula": "u=exp(-r/a),E_B=#/(#mua^#),fora>#.Thereducedmassandscattering"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7055540af6264e45feb5e700c31a2e2c67f0e50341fbbbe61dadca9af01497ac",
+      "normalized_formula": "u=k+(N_2a-N_1b)/3",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1482,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "u=k+(N_2a-N_1b)/3",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "abcbd010041a62f80a74883b12c3f128c6e1d20d7fd3bca469dba9934d713e21",
+      "structural_formula": "u=k+(N_2a-N_1b)/#"
     },
     {
       "file_count": 1,
@@ -1759291,9 +1759744,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T02:35:18-04:00",
+  "frozen_at": "2026-10-11T12:34:47-04:00",
   "pass": 398,
-  "repository_head": "ec563b96c075809112eb5a8ce5a4be4618b28096",
+  "repository_head": "23818560191831c56d9ece2720cbdfa209c5b186",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1875819,6 +1876272,14 @@
     },
     {
       "exact_formula_ids": [
+        "fc03e701861fcdaa601cd16a5cb6708860ef5e70db71fb6feb8f2b6ae96bee5a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "de30d4c372dbb75a3aafb7be155dc04910e8276fa4a3c70e69cb73a20695a1eb",
+      "structural_formula": "*Forthesetwopairsm_d=m_e=#foreverycompatiblemodulus.Checked:maxs3/s1\u2264#\u00b7#\u2212#at\u03a9=i(##N1)"
+    },
+    {
+      "exact_formula_ids": [
         "e6480e7d3e4ff836820ebeda956abfde013a9fc9d41642321c34e7023820c4e4"
       ],
       "exact_member_count": 1,
@@ -1876336,6 +1876797,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1103266177e02fca8e1c4655121cdd308f4084e27c23aa2b81d5379c024cb9b8",
       "structural_formula": "*TheBCtwistangletheta=acos(#/#)hastheta/piirrational,bythe"
+    },
+    {
+      "exact_formula_ids": [
+        "e3dd736b62229a13dcec1f98d01dc004d9adcfcef493613d38432a62851362d6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5e00266628c4deb58b2090a77be9f4e0f7d77548ce21125ab56ce28b3e2dcbfc",
+      "structural_formula": "*TheHiggscarriesN1+N2=m\u00b7#"
     },
     {
       "exact_formula_ids": [
@@ -1943463,6 +1943932,14 @@
     },
     {
       "exact_formula_ids": [
+        "c95ce30a8dcbf21e32b264c89cec2b066b1c02b60a80733919ac6f6de08c1653"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "88cbec94add819eb38c3ab2bd894264d0c6f2f6c257e42417b82ecc325921d44",
+      "structural_formula": "N_1m^{#}N_2=(#/m)\\mathbf1"
+    },
+    {
+      "exact_formula_ids": [
         "054541a387820cfd18567bba9f8c2d36ac2a4d263e6b9d3c151428aa4cf3fc66"
       ],
       "exact_member_count": 1,
@@ -1946020,6 +1946497,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1ed7b971d3dc334ab8a204ae4f1913c117097b242780372d2bdd43ee6b46681f",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_dual_flux_massless_first_generation.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "73481138c83b00120bfcca26a9db4463f8b0a0fcf4c2139bf47e1abd73f39201"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b691f936d2a52275f8e932062910112ee01deecfb1813eb0a7f05a2e43a6b374",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_dual_pair_singularity_proof.json\""
     },
     {
       "exact_formula_ids": [
@@ -1962860,6 +1963345,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f7dd1026905a331a4da1b953df5446db03bdfec47340a9456b94d135b24cfdba",
       "structural_formula": "SettingasinPasses1#/#:U=W(a)V_MT1;asolution(Q,k)of(S)givesA=QJ,anti-symplectic,with"
+    },
+    {
+      "exact_formula_ids": [
+        "5b93fd34f7a6ab63151162c64d7c2a2bad018f9d4f95cde4ddcac956514b1f2f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c89a78f602144db2990e3684fafe3684b72aa2695ee10e00c1f95d09b95d610a",
+      "structural_formula": "Setup(Pass1#/#):#fluxN1,#barfluxN2=#N1^{#}(det3),HiggsfluxN1+N2=m1(Cayley-Hamilton)"
     },
     {
       "exact_formula_ids": [
@@ -1983982,6 +1984475,14 @@
     },
     {
       "exact_formula_ids": [
+        "9d4f078ae2ca25af10e11db0711b4b335cc6ae6d91957562eb13e3ba3f8e30e8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "87d79c72bc503e298397fbf19e5b1d5d5a23f5a609dabd5b3c49cad92936857b",
+      "structural_formula": "Y^c_{ab}=\\sum_ke^{\\pii(#/m)u\\cdot\\Omegau}"
+    },
+    {
+      "exact_formula_ids": [
         "21113bf90620626a1891d9cd69c20dbc358e230b7fc6496a9eb09f851bf39c83"
       ],
       "exact_member_count": 1,
@@ -1984307,6 +1984808,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4bd8b700a82c7d96cb09d09ee9fbe746d68747b8316c689699215e2cd35fbda8",
       "structural_formula": "Yflat=yukawa_operator(#,flat_blocks)"
+    },
+    {
+      "exact_formula_ids": [
+        "a8f5cbfd9f342805038a3ebb5cea8a95215b764160d349d354e06009ab072656"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5c5895a3c352fa4ac96a27c99e5b7bf2aa92abf63445884bb3460da28fc859db",
+      "structural_formula": "Yn,Yf=F.yukawas(F.T4(Om,#),N1,N2),formula(N1,N2,Om)"
     },
     {
       "exact_formula_ids": [
@@ -2004087,6 +2004596,14 @@
     },
     {
       "exact_formula_ids": [
+        "19574852c32bd4378f82c1883de3a388be644a839580ed2814083d33f6931f77"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "42d16dc907f50a491c7b0577e5d76a80eb849ab86c03cb496816ec140d684f91",
+      "structural_formula": "\\gcd(m,#)=#"
+    },
+    {
+      "exact_formula_ids": [
         "b8b312e2180e0f8d54c07037f9934a83de4572dbdd128b2ba2278d5d5a0c5ccc"
       ],
       "exact_member_count": 1,
@@ -2021145,6 +2021662,14 @@
       "exact_member_count": 1,
       "structural_family_id": "65292c379c88373f246f033fb21df41c8848afc51f6cefd4597848b2cd24a447",
       "structural_formula": "^Thevacuum.^With\u03bb,\u03bc>#,theboundedpotential"
+    },
+    {
+      "exact_formula_ids": [
+        "f32d55da07bd84ca9aed06004fa6551661d556ad119ec6214b4ad08484e65204"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d4861c0aba0c448c1baa16bca26586e8d6d2bffe66b16e93236bf6bb19c74110",
+      "structural_formula": "^Twoframesonly.^Mod3bothfluxeshaverank1:N1\u2261\u03bbvvTandN2\u2261\u03bcwwT,withv\u00b7w\u2261#becauseN1N2=#.Since"
     },
     {
       "exact_formula_ids": [
@@ -2080115,6 +2080640,14 @@
     },
     {
       "exact_formula_ids": [
+        "51d03a6c9972e28e37e064af6528d0ecb5addf5f21c5878e986bab1ee6b317fd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7013b7a16efb8f4676f6d2bba61f15cd7a18354b8a89826881d4fd8f35a0fac1",
+      "structural_formula": "ev=np.linalg.eigh(np.array(N1,float))[#]"
+    },
+    {
+      "exact_formula_ids": [
         "25c72fd4f1dbb4b8daa133db6a83f7f3584b5ddbbebb2c0b3ca8e7814d7df7cf"
       ],
       "exact_member_count": 1,
@@ -2088749,6 +2089282,14 @@
     },
     {
       "exact_formula_ids": [
+        "0a3d43619556ddd0f6c043c8a32b3a5f1281ba30745dd04756e6b8f2a3e6b187"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "329236036989d59a8661340e7147ece43779c3157f0afcbac56f82cc422d5442",
+      "structural_formula": "forced_pairs_stay_singular=all(r[\"max_s3\"]<#forrinforced)"
+    },
+    {
+      "exact_formula_ids": [
         "f43592e23d2239fa025be92a910b6624a281d70db834307fbc2f5d0216778dbe"
       ],
       "exact_member_count": 1,
@@ -2089829,6 +2090370,14 @@
       "exact_member_count": 1,
       "structural_family_id": "425bd239b0a87e8d66b19710bdc5572b18fa974a8a3272311830c4bf0786ee51",
       "structural_formula": "fractionreturnsPhi4=#andthepumpChernnumberreturnslambda=#.Bothare"
+    },
+    {
+      "exact_formula_ids": [
+        "18ffb303d899b6e1dcd489c47e3d2f87c07671abdc017f3c394ebc02c9d4001e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "83df18e7bb21349c96ff88dadb89a5b88f2e3f85d28774ebeb0c710be8ec85e1",
+      "structural_formula": "frame-diagonalandm_d=m_e=#forallmoduli.Forthefourirrationalpairs(#,+#,#),(#,+#,#)theeigenframeis"
     },
     {
       "exact_formula_ids": [
@@ -2091140,6 +2091689,14 @@
       "exact_member_count": 1,
       "structural_family_id": "bb4c8d4b3bb0b01f25b2e2c43bb98b74d2bccd17877248f0d20e08fffdb6c63b",
       "structural_formula": "g_agg=alpha*lambda_/(#*math.pi*f_a)"
+    },
+    {
+      "exact_formula_ids": [
+        "c38d83fc9775757a736444d5030494b93b05e8ceb2ed3987e2801d0cbd8b36b3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "34fc46bed6bbd2bfc2a9c9a0df3ecef502e27db9b4d163ee76eb343e7c63bceb",
+      "structural_formula": "g_cfactorisesoneachcoset,sorankY^c<=#(axes)or<=#(diagonals),foreveryHiggsmodeandeveryWilsonline"
     },
     {
       "exact_formula_ids": [
@@ -2100552,6 +2101109,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f572be526588a193c14722979a7fb1198ebb67fec45f9661a47492d783562e35",
       "structural_formula": "inactive_rank+singled_rank=int(MU+#)"
+    },
+    {
+      "exact_formula_ids": [
+        "1df0f1ce7b24bdb6c4a61f936f4ab92abc24df6ba3b0a61cd98bc0fc68c7b02c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ed411252633805419f81e420b9f17cf13fe9e72622b14b2dd63c39800614da82",
+      "structural_formula": "inatensorframefixedbythefluxmod3,andm_d=#is\"factorisedtorus\"(Pass1#)inthatframe"
     },
     {
       "exact_formula_ids": [
@@ -2202636,6 +2203201,14 @@
     },
     {
       "exact_formula_ids": [
+        "e436de8f8208964dbcd1cccc87071a4438810bcc85cb0f7c414078e996842520"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "72284830242906a766758b5c8be5b25c71335911690f2e2369597ce15e4c1d3c",
+      "structural_formula": "thelevel-#thetavectorf_c(qmod3)=sum_{q'=qmod3}g_c(q'),g_cGaussianofmetric(m/#)Omega"
+    },
+    {
+      "exact_formula_ids": [
         "498d933bcf970401b0cca1934190a52336e8755fecc2a1c05aa4f689da005017"
       ],
       "exact_member_count": 1,
@@ -2209101,6 +2209674,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cf8a0046f5f85659933c0573cb741ffed23537635daf9831c38f3459dbb57849",
       "structural_formula": "u=exp(-r/a),E_B=#/(#mua^#),fora>#.Thereducedmassandscattering"
+    },
+    {
+      "exact_formula_ids": [
+        "7055540af6264e45feb5e700c31a2e2c67f0e50341fbbbe61dadca9af01497ac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "abcbd010041a62f80a74883b12c3f128c6e1d20d7fd3bca469dba9934d713e21",
+      "structural_formula": "u=k+(N_2a-N_1b)/#"
     },
     {
       "exact_formula_ids": [
@@ -2229357,20 +2229938,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86615661,
-    "exact_formula_families": 60154,
-    "files_scanned": 11858,
-    "formula_occurrences": 66086,
+    "bytes_scanned": 86631385,
+    "exact_formula_families": 60170,
+    "files_scanned": 11860,
+    "formula_occurrences": 66102,
     "status_occurrences": {
-      "certified_or_theorem": 4820,
+      "certified_or_theorem": 4823,
       "killed_or_retracted": 1546,
       "open_or_conditional": 2145,
       "preregistered": 32,
       "retrospective_fit": 5094,
-      "unclassified": 52449
+      "unclassified": 52462
     },
-    "structural_families": 58552
+    "structural_families": 58568
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "cbf8423e55ef4a3ac16602062a81f177b671db059d9582305f16b7aa7cd6c8bd"
+  "universe_sha256": "ea9f70dd05fef2e8c26ffa401bc47cd7e6c6ed83164eb89d68019360d3d5e3a3"
 }
