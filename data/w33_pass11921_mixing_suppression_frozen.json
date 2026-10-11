@@ -1,0 +1,22 @@
+{
+ "114": {
+  "aligned": 12712,
+  "vcb_below_1e12": 4550,
+  "vcb_1e12_to_1e5": 6483,
+  "vcb_above_1e5": 1679,
+  "logslope_vcb_vs_ms_mb": 1.0378857493568214,
+  "median_vcb_over_ms_mb": 4.0177099153614043e-07,
+  "median_vus_over_sqrt_ms_mb": 0.03334493481187372
+ },
+ "A2": {
+  "aligned": 5631,
+  "vcb_below_1e12": 787,
+  "vcb_1e12_to_1e5": 3912,
+  "vcb_above_1e5": 932,
+  "logslope_vcb_vs_ms_mb": 1.4282363094123707,
+  "median_vcb_over_ms_mb": 2.838806709695608e-07,
+  "median_vus_over_sqrt_ms_mb": 0.043264713704685126
+ },
+ "median_vcb_over_ms_mb": 4.0177099153614043e-07,
+ "data_vcb_over_ms_mb": 2.1578947368421053
+}

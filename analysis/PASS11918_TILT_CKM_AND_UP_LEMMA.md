@@ -57,12 +57,22 @@ with hypercharges Q 1/6, u^c −2/3, e^c 1, d^c 1/3, L −1/2.
 |---|---|
 | does the tilt make m_d/m_s realistic? | **yes**: m_d/m_s > 0.01 in 17% of rows; 90th percentile 0.047 |
 | does Gatto–Sartori–Tonin emerge? | **no**: corr(log V_us, log √(m_d/m_s)) = 0.11 over 14 595 hierarchical rows; median V_us/√(m_d/m_s) = 0.065 |
-| what does the CKM look like? | 82% of rows near-permutation (an off-diagonal entry > 0.9); of the 12 712 aligned rows, 87% have V_cb = 0 exactly |
+| what does the CKM look like? | 82% of rows near-permutation (an off-diagonal entry > 0.9); of the 12 712 aligned rows, 87% have V_cb < 10⁻⁵ (see the correction below) |
 | realistic quark masses and CKM together? | **0 of 222** rows with m_s/m_b, m_u/m_c, m_c/m_t within ×3 have a hierarchical CKM with all three angles nonzero |
 
 **Numerical note.** The 11915 module truncates the theta series at |n_i| ≤ 4. That is accurate to about 10⁻⁷ of the
 largest singular value at large Wilson-line offsets. The frozen scans use it, and are reproducible bit for bit. Exact
 zeros are certified with |n_i| ≤ 7 (Pass 11920).
+
+**Correction (Pass 11921).** "V_cb = 0 exactly" was an over-read of a 10⁻⁵ threshold.
+* **The breakdown.** Of the 12 712 aligned rows:
+  * 4550 lie below 10⁻¹², the double-precision floor;
+  * 6483 lie between 10⁻¹² and 10⁻⁵;
+  * 1679 lie above 10⁻⁵.
+* **The cause.** These are Gaussian suppressions exp(−π(m/3) Im|q|²), not a selection rule. A re-run sample gives
+  V_cb = 6.1·10⁻⁶, identical at theta truncation |n_i| ≤ 4 and ≤ 7.
+* **What survives.** The physical conclusion stands and sharpens. Aligned mixing scales like m_s/m_b (log-slope 1.04),
+  with median V_cb/(m_s/m_b) ≈ 4·10⁻⁷. The data have about 2.
 
 ## Reading
 
