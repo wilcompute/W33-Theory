@@ -1,0 +1,14 @@
+{
+  "status": "TOE49_CW_MATCHING_SCALE_IS_NOT_A_PHYSICAL_WILSON_VACUUM_PARAMETER",
+  "msoft_GeV": 1000.0,
+  "Q0_GeV": 630.7,
+  "Q1_GeV": 1100.0,
+  "field_dependent_scale_shift_coefficient_GeV2": -42268.802465030545,
+  "field_independent_shift_GeV4": -63403203697.54582,
+  "counterterm_shift_needed_GeV2": 42268.802465030545,
+  "max_52_points_absolute_Vshift_formula_error_GeV4": 2.288818359375e-05,
+  "max_52_points_relative_Vshift_error": 3.6099411794606117e-16,
+  "derivation": "For S=m\u00b2+msoft\u00b2, V(Q)=(3/16pi\u00b2)sum[S\u00b2(log(S/Q\u00b2)-3/2)-m\u2074(log(m\u00b2/Q\u00b2)-3/2)]. V(Q1)-V(Q0)=-(3/(8pi\u00b2))log(Q1/Q0) sum[2 msoft\u00b2 m\u00b2+msoft\u2074]. This equals alpha sum m\u00b2 + constant with alpha= -3 msoft\u00b2 log(Q1/Q0)/(4pi\u00b2).",
+  "conclusion": "The vacuum location found by scanning the renormalization/matching scale Q with fixed tree-level Wilson-flat potential changes if one includes allowed finite Wilson/Higgs mass counterterms. Changing Q by itself is not a tunable physical mechanism or prediction; one must specify full renormalized matching conditions, RG running, gauge/down/lepton sectors and all Wilson-dependent local terms. The Pass11909 restricted fixed-coupling potential is mathematically calculated correctly, but its Q-dependent vacuum should not be construed as scheme-independent.",
+  "boundary": "This is a formal one-loop scale identity and counterterm dependence, not proof that a particular UV supersymmetric completion admits or excludes the hierarchical vacuum."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "TOE49_CROSS_SECTOR_AREA_AND_RANDOM_SCAN_BOUNDARY",
+  "cross_sector": {
+    "reference": "Pass11910 fixed MZ running masses",
+    "invariant_up": 2.6665748557794563e-08,
+    "invariant_down": 1.909699357047928e-05,
+    "invariant_lepton": 1.639021350899457e-05,
+    "inferred_Im_tau_up": 4.163466076837189,
+    "down": 2.594061556859989,
+    "lepton": 2.6305509705208543,
+    "required_effective_area_up_over_down": 1.6049989507099063,
+    "invariant_down_over_up": 716.1619156907976,
+    "shared_tau_one_higgs_obstruction": "Pass11910 says same gaussian e^(-4pi Im tau/3) for up, down and lepton. Their frozen masses imply up/down invariants differ by ~716 and effective Im tau ratio~1.605, violating the shared-tau ansatz. Sector-dependent torus/flux, nonlocal Higgs, modified wavefunction kinetics or threshold effects are needed; the formula is asymptotic near a hierarchy branch, not exact over arbitrary Wilson directions."
+  },
+  "supersymmetric_Z3_scan": {
+    "draws_total": 80000,
+    "successes_reported": 0,
+    "model_groups_reported": 4,
+    "conditional_95pct_one_sided_binomial_upper_hit_probability_if_IID": 3.744595230226189e-05,
+    "conditional_95pct_per_20000_draw_class": 0.000149775396222962,
+    "claim_scope": "Only the four specified shift classes, orbifolder's SM-like criteria (including vector-like exotics), and their reported random draw protocol. No mathematical exclusion of all supersymmetric E8xE8 Z3 compactifications, no proof of independence of inequivalent spectra. The 80k trials across four distributions cannot be treated as one uniform sampler of the complete model landscape."
+  },
+  "math_proof": "For iid Bernoulli success probability p, P(0 successes in N)=(1-p)^N. Solve (1-p)^N=.05 for the one-sided 95% upper confidence endpoint p=1-.05^(1/N)."
+}

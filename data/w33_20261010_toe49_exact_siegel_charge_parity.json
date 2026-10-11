@@ -1,0 +1,135 @@
+{
+  "status": "TOE49_EXACT_FINITE_SIEGEL_CHARGE_PARITY_LOCK",
+  "n_random_positive_definite_complex_Siegel_moduli": 36,
+  "max_class_zero_complex_light_amplitude_difference": 2.7755575615628914e-16,
+  "max_class_1_2_charge_mirror_complex_difference": 2.776424787817943e-16,
+  "strong_entangling_off_diagonal_Omega12": [
+    0.46,
+    1.23
+  ],
+  "examples": [
+    {
+      "Omega_real": [
+        [
+          0.09541604373878805,
+          -0.2973262803211757
+        ],
+        [
+          -0.2973262803211757,
+          0.7929380461038426
+        ]
+      ],
+      "Omega_imag": [
+        [
+          3.6474377060099217,
+          0.6034208999379824
+        ],
+        [
+          0.6034208999379824,
+          1.4703866750590338
+        ]
+      ],
+      "class_zero_light_difference": 5.553824967135427e-17,
+      "charge_mirror_error": 1.6184142622847344e-16
+    },
+    {
+      "Omega_real": [
+        [
+          0.3231886636494806,
+          0.3966129284171584
+        ],
+        [
+          0.3966129284171584,
+          0.3266582384906482
+        ]
+      ],
+      "Omega_imag": [
+        [
+          1.9129442559664112,
+          -0.13552223304488004
+        ],
+        [
+          -0.13552223304488004,
+          1.3303040142109863
+        ]
+      ],
+      "class_zero_light_difference": 2.237726045655905e-16,
+      "charge_mirror_error": 1.6653345369377348e-16
+    },
+    {
+      "Omega_real": [
+        [
+          0.7923000303604874,
+          0.006672810367885779
+        ],
+        [
+          0.006672810367885779,
+          0.7907089140813738
+        ]
+      ],
+      "Omega_imag": [
+        [
+          5.942927296801855,
+          -2.193975645206164
+        ],
+        [
+          -2.193975645206164,
+          2.7020092429022196
+        ]
+      ],
+      "class_zero_light_difference": 6.938893903907228e-17,
+      "charge_mirror_error": 1.6653345369377348e-16
+    },
+    {
+      "Omega_real": [
+        [
+          0.03605667297981294,
+          -0.5273624435052071
+        ],
+        [
+          -0.5273624435052071,
+          -0.09642678988022951
+        ]
+      ],
+      "Omega_imag": [
+        [
+          4.053216974397317,
+          -0.40225167882543783
+        ],
+        [
+          -0.40225167882543783,
+          2.4150623269051286
+        ]
+      ],
+      "class_zero_light_difference": 1.3878397658136742e-16,
+      "charge_mirror_error": 1.1102230246251565e-16
+    },
+    {
+      "Omega_real": [
+        [
+          0.5082466080013132,
+          0.09566959582685668
+        ],
+        [
+          0.09566959582685668,
+          0.017563630125937663
+        ]
+      ],
+      "Omega_imag": [
+        [
+          3.541052785757846,
+          0.30380480506551777
+        ],
+        [
+          0.30380480506551777,
+          1.7891841681004654
+        ]
+      ],
+      "class_zero_light_difference": 5.721958498152797e-17,
+      "charge_mirror_error": 2.8609792490763984e-17
+    }
+  ],
+  "proof": "At zero theta argument, Theta[alpha](0,Omega)=sum_{n in Z\u00b2} exp(i pi(n+alpha)^T Omega(n+alpha)) is exactly even under alpha->-alpha, by n->-n (with the integer-characteristic shift). Taking alpha=(c/3,0), 1/3 and 2/3 are negatives modulo integers, so the complex amplitudes coincide exactly FOR ALL symmetric Omega in the Siegel upper half-space. Taking alpha=(c/3,1/3) and (-c/3,2/3) gives exact class-1/class-2 charge mirroring at every finite Omega, not only the leading Gaussian term.",
+  "physics_consequence": "An off-diagonal W33-entangling complex-structure modulus alone cannot lift the a=0 light pair in a localized-Higgs zero-theta-argument sector, even outside the Gaussian approximation. For a=1,2 its mirror pair has the same multiset of masses. Wilson shifts, nonlocalized Higgs, additional characteristics, sector-changing couplings or other operators may change these identities.",
+  "boundary": "Exact special theta characteristics at zero argument; no dynamical moduli stabilization, physical Yang-Mills spectrum, or proof of actual flux vacuum."
+}

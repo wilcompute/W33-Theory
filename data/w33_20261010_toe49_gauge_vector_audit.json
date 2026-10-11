@@ -1,0 +1,11449 @@
+{
+  "status": "TOE49_600_FROZEN_GAUGE_WILSON_VECTOR_ROWS_INSPECTED_NO_PAULI_LIFT",
+  "total_models": 600,
+  "model_source_counts": {
+    "a8_sm_all.txt": 104,
+    "rescan_all_SM.txt": 387,
+    "split10_all_SM.txt": 109
+  },
+  "source_digest_claims": {
+    "a8_sm_all.txt": {
+      "sha256": "9ed6c9ad7977424a9731b637e7c0dea693facbb9ba66a82e7f8d1e7272ffff8b",
+      "family": "A8 SO16^2 (Pass 11095)"
+    },
+    "rescan_all_SM.txt": {
+      "sha256": "4dfe22e7276179d8646730b00df37681eaffb7a12fcea5da2f6020f5a1f4db07",
+      "family": "A8 SO16^2 rescan (Pass 11108)"
+    },
+    "split10_all_SM.txt": {
+      "sha256": "0de820436d4a5897278e7567fd38e711a01bb3fffbaa4149c066b11c1d4d6770",
+      "family": "split-10 scan (Pass 11908)"
+    }
+  },
+  "actual_frozen_json_sha256": "e3413df6166a841a09e1a2d976519535283f52492ad23f312ab32d672379a56a",
+  "all_models_have_9_rows_of_16_rationals": true,
+  "rows_0_1_2": "First three rows include shift/orbifold parameters; remaining rows 3..8 examined as six Wilson vectors, matching Pass11908 file documentation (not gauge-equivalence reduced).",
+  "n_distinct_nonzero_W_distribution": {
+    "2": 593,
+    "3": 7
+  },
+  "zero_W_rows_distribution": {
+    "2": 593,
+    "0": 7
+  },
+  "raw_W_vector_distinct_including_zero_distribution": {
+    "3": 600
+  },
+  "coordinate_denominator_counts": {
+    "1": 29378,
+    "3": 10318,
+    "2": 2626,
+    "6": 15278
+  },
+  "n_W_rows_with_nonintegral_3W_coordinates": 1680,
+  "model_details": {
+    "A8SM_20260928_1335_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_1577_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_3294_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_4146_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_5110_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_5752_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_6276_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_8460_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_8780_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_9434_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_9509_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_9787_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10338_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14146_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_16457_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_18875_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_137_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_639_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_851_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_904_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_1691_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_1799_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2303_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2356_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2373_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2375_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2519_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2889_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_3298_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_4168_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_5468_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_5798_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_6573_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_7339_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_7414_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_7753_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_9767_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10966_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_11188_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_13698_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14681_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_15565_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_16432_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_16834_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_17793_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_17993_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_18573_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_19529_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_19635_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_19804_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_438_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_515_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_533_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_783_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_1279_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_1953_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2233_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2321_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2866_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_3721_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_3762_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_3994_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_4537_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_6052_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_7100_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_7616_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_9667_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10006_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10086_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10139_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10269_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10545_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_10740_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_10864_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_12722_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14359_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14608_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14914_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14993_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_17724_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_19483_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_1295_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_1356_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_2423_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_3250_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_3284_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_3572_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_4200_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_4582_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_5760_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260928_6322_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_7833_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_7974_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_8363_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_8904_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_9246_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_9594_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_11138_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_11397_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14376_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_14861_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_15495_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_16222_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260928_18197_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_2291_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_2295_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_3442_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_3578_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_4290_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_4532_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_5522_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_6241_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_6624_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_7061_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_7243_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_7763_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_9465_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_10190_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_12428_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_13666_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_14029_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_14433_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_14559_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_15764_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_18174_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_21509_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_21592_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_21853_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_22673_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_23845_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_24212_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_24974_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_25437_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_25441_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_29332_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_32282_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_32411_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260941_34217_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_66_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_1207_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_3530_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_3811_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_6389_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_8217_TF": {
+      "n_nonzero_W": 6,
+      "n_distinct_nonzero_W": 3,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_8409_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_18223_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_25222_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_25639_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_25773_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_26895_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_30472_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_31984_TF": {
+      "n_nonzero_W": 6,
+      "n_distinct_nonzero_W": 3,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_32841_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_32916_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_36621_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_37308_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_38292_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_42289_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_46043_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_47553_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260942_49067_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_312_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_346_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_765_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_1450_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_1963_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_2232_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_2600_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_3704_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_4165_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_4340_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_6217_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_6470_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_7113_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_7410_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_7639_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_7992_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_8294_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_8755_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_9806_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260951_10789_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_11418_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_11791_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_12355_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_12851_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_13823_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_13932_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_14443_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_17888_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_18683_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_18876_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_19807_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_19818_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_20264_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_20919_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_22697_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_23806_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_24165_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_24243_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_24383_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_24495_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_28557_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_28954_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_30956_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_32857_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_35899_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_36750_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_38004_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_38335_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_38359_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_39569_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260951_41332_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260951_45530_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_127_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_378_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_1019_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_1033_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_1845_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_2057_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_2432_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_2613_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_2962_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_3826_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_4449_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_4739_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_5146_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_5306_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_5678_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_6253_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_6825_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_7104_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_7375_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_8139_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_8852_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_8981_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_10968_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_12363_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_12607_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_14154_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_14872_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_15901_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_18040_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_19656_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_20068_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_21627_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_22074_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_22091_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_26922_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_27297_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_27928_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260952_30046_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_31887_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_33292_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_35140_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_35410_TF": {
+      "n_nonzero_W": 6,
+      "n_distinct_nonzero_W": 3,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_37145_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_37810_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_38038_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_38562_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_41545_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_41700_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_43987_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_45280_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_45293_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_45400_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_46657_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_47554_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260952_48243_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_967_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_1089_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_1324_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_1399_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_2320_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_3185_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_3818_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_4372_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_4753_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_5285_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_5514_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_5904_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_6064_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_6854_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_7546_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_7638_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_7697_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_8461_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_9416_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_10465_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_10705_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_10766_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_12197_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_14027_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_14080_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_16516_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_17747_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_17871_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_18172_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_18957_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_19247_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_19515_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_19818_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_20971_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_22095_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_22221_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_22953_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_23578_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_23998_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_24269_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_24626_TF": {
+      "n_nonzero_W": 6,
+      "n_distinct_nonzero_W": 3,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_24765_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_25809_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_26040_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_26101_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_26656_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_28900_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_29486_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_31451_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_32496_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_33095_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_33368_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_33801_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_35451_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_37716_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_38564_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_39092_TF": {
+      "n_nonzero_W": 6,
+      "n_distinct_nonzero_W": 3,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_39595_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_40028_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_40521_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_40864_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_42685_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_43104_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_44870_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_45261_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_45446_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_45567_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_47090_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_47117_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_47816_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260971_49386_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260971_49896_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_304_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_535_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_994_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_1304_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_1458_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_1541_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_2080_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_3352_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_4053_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_4571_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_5220_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_5273_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_6203_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_6246_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_6595_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_6883_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_7236_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_7247_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_7494_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_7497_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_7594_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_9080_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_9734_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_9786_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_9927_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_10118_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_10412_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_10465_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_11129_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_12136_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_13155_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_13743_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_14758_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_15531_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_15563_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_17224_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_19499_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_19688_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_22524_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_24620_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_25748_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_26454_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_26843_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_28353_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_28658_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_28854_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_29857_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_31386_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_31451_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_31860_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_35343_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_35437_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_36212_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_40367_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_41545_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_42557_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_44461_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_47059_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_48091_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_49005_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_49302_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260972_49493_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260972_49839_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_2057_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_2140_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_2498_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_2661_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_3350_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_3732_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_3816_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_3992_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_4621_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_5375_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_7514_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_7984_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260981_9817_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_10961_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_12073_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_12522_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_13549_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_14256_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_14964_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_15272_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_16538_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_16861_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_17691_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_17715_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_18575_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_19322_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_20251_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260981_25191_TF": {
+      "n_nonzero_W": 6,
+      "n_distinct_nonzero_W": 3,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_26415_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_27659_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_28924_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_29289_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_29913_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_29931_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_30323_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_30391_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_34074_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_38276_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260981_38694_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_42642_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_45288_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_46309_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_47203_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_47891_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_48011_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260981_48256_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_181_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_1645_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_1850_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_2528_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_3226_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_4782_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260982_4926_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_6486_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_7387_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_7518_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_8666_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_8759_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_8775_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_10472_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_10636_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_12231_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_12895_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_14264_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_14375_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_14848_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_15877_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_17847_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_18159_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_20548_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_21394_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_24197_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_26292_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_26864_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_27212_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_31150_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_32387_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_33010_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_34377_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_34586_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20260982_37400_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_38807_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_39888_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_42802_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_44552_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_44916_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_47048_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20260982_48621_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_379_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_382_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_534_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_548_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_821_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_879_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_913_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_923_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_958_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_979_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_1159_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_1283_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_1285_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_1365_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_1411_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_1538_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_1828_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_2385_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_2541_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_2825_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_3189_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_3400_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_3450_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_3540_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261011_3556_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_4454_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_4629_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_4771_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_4775_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_4778_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_4807_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_5088_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_5138_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_5637_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6009_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6167_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6282_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6371_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6658_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6700_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6742_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_6847_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_7031_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_7163_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_7502_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_7579_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_7807_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261011_8188_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_8233_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_8683_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_8781_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261011_8884_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_9273_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_9287_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_9549_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_9902_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_10497_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261011_10861_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_11438_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_11982_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_13256_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_13262_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_13567_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_17400_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_18456_TF": {
+      "n_nonzero_W": 6,
+      "n_distinct_nonzero_W": 3,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_18531_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261011_19279_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261012_1194_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261014_2920_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261014_12227_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261014_12299_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261014_16590_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_38_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_40_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_294_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261016_1151_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_2132_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_2147_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_2901_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_3037_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_3147_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_3488_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261016_4047_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_5263_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_5951_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261016_6813_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_8046_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_8783_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_10113_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_12588_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": false
+    },
+    "A8SM_20261016_12769_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_12845_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_15347_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_18080_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261016_18515_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_16_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_544_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_743_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_1771_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_8286_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_9005_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_16370_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261018_17561_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261019_983_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261019_1604_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261019_3765_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261019_6872_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261019_9318_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    },
+    "A8SM_20261019_14783_TF": {
+      "n_nonzero_W": 4,
+      "n_distinct_nonzero_W": 2,
+      "W_equalities": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "has_noninteger_3W_coordinate": true
+    }
+  },
+  "provenance_conclusion": "TOE48 frozen-input ABSENCE is superseded: 600 source-model definitions now include explicit 16-rational-coordinate shift/Wilson rows and source SHA claims; their Cartan vectors can be enumerated and indexed. Raw original input bytes are not themselves provided by this JSON, and a canonical gauge-root-lattice / weight-lattice quotient plus physical 9D W33 Pauli representation is still NOT specified. One cannot assign a nonabelian X,Z Pauli action or Yang-Mills/Yukawa predictions merely by labelling raw Wilson vectors as W33 points.",
+  "abelian_cartans": "All Cartan holonomy matrices commute in their common diagonal weight basis, hence under ANY honest representation their images commute. If mapped faithfully into two-qutrit Weyl projective operators WITHOUT central phases, the corresponding Pauli labels must form an isotropic commuting subset; at most a maximal 2D F3-subspace (four projective W33 points). More general projective lifts need an explicit cocycle/gauge action, never inferred from frozen 16D rows.",
+  "scientific_boundary": "A rank statistic on the six Wilson rows is not gauge-lattice equivalence, not an exhaustive list of physically inequivalent holonomies, and not a full 9D representation theorem."
+}
