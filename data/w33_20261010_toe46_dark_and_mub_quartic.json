@@ -1,0 +1,49 @@
+{
+  "status": "EXACT_LOCAL_15D_DARK_FIBER_AND_UNBIASED_TEN_MUB_GAP_ESTIMATOR",
+  "full_rank_state_min_eigen": 0.0001648408888879157,
+  "min_pauli_power": 0.0024916427315996477,
+  "dark_sector_dimension": 15,
+  "local_physical_fiber_dimension": "at least 15 independent Pauli-power perturbations around ANY positive-definite rho with all q_p>0; the Weyl inverse rho(mu) stays positive by openness",
+  "analytic_perturbation_upper_bound": 2.0971212918362736e-06,
+  "chosen_power_epsilon": 1e-07,
+  "physical_plus_min_eigen": 0.00016480643457727896,
+  "physical_minus_min_eigen": 0.00016487534307694734,
+  "same_purity_abs_difference": 5.551259161075103e-17,
+  "same_cusp_max_difference": 1.2335811384723961e-17,
+  "different_density_frobenius": 5.324774268028283e-07,
+  "measurement": {
+    "settings": 10,
+    "distinct_context_lines": [
+      0,
+      13,
+      17,
+      21,
+      23,
+      27,
+      28,
+      33,
+      34,
+      38
+    ],
+    "four_independent_blocks": 4,
+    "shots_per_basis_per_block": 960,
+    "prepared_copies_per_trial": 38400,
+    "trials": 160,
+    "formula": "qab_p=2 Re(muA_p conj(muB_p)); qcd similarly; ghat=(2/135) (P-4 qab) dot (P-4 qcd). E ghat=g exactly assuming independent ideal identically prepared copies. Negative estimates allowed."
+  },
+  "random_mixed_Wishart": {
+    "true_gap": 0.0001547164813565162,
+    "estimate_mean": 0.00015495873541019988,
+    "standard_error_of_MC_mean": 1.8643477746718936e-06,
+    "sample_standard_deviation": 2.3582341274518243e-05,
+    "fraction_estimates_negative": 0.0
+  },
+  "random_pure_Haar": {
+    "true_gap": 2.1355197164022932e-33,
+    "estimate_mean": -5.316511899519243e-07,
+    "standard_error_of_MC_mean": 1.7974834157738343e-06,
+    "sample_standard_deviation": 2.273656660089899e-05,
+    "fraction_estimates_negative": 0.45625
+  },
+  "scientific_boundary": "Full 15D fiber applies to strictly full-rank rho with every Pauli expectation nonzero, not every boundary/low-rank state. Ten MUB implementation is ideal; readout bias, shot correlations, optical implementation and confidence guarantees are untested. Mixedness witness gap is one-sided and zero for some mixed states."
+}

@@ -1,0 +1,47 @@
+{
+  "status": "CENSUS491_WILSON_CUSP_GEOMETRIC_SELECTOR_AND_FLAVOR_FIREWALL",
+  "census": {
+    "records": 491,
+    "kinds": {
+      "untwisted": 339,
+      "twisted_one_torus": 152
+    },
+    "twisted_local_10": 152,
+    "renormalizable_up_non_single_point_patterns": 0,
+    "down_non_single_point_models": 5,
+    "down_non_single_point_labels": [
+      "A8SM_20260928_1953_TF",
+      "A8SM_20260972_26454_TF",
+      "A8SM_20260972_3352_TF",
+      "A8SM_20260972_44461_TF",
+      "A8SM_20260941_14433_TF"
+    ],
+    "twisted_Q_point_patterns": {
+      "[[1, 2]]": 17,
+      "[[1, 0]]": 75,
+      "[[0, 1]]": 10,
+      "[[0, 2]]": 7,
+      "[[2, 2]]": 6,
+      "[[2, 0]]": 28,
+      "[[1, 1]]": 2,
+      "[[2, 1]]": 7
+    },
+    "down_pattern_distribution": {
+      "[[0, 0]]": 138,
+      "[]": 9,
+      "[[1, 1]]": 4,
+      "[[0, 1]]": 1
+    }
+  },
+  "geometry": {
+    "projective_points": 40,
+    "cusps": 40,
+    "all_40_holonomy_choices_incidence_4_36": true,
+    "every_nonincident_context_has_exactly_one_commuting_pauli": true,
+    "incident_flags": 160
+  },
+  "no_discriminative_information": "Each Wilson-point p has EXACTLY the same [4,36] incidence fingerprint under Sp(4,3) transitivity. Therefore a raw 4:36 count alone cannot distinguish or predict which of the 491 models admits up-sector splitting. A model-by-model embedding of each torus Wilson line into an actual projective Pauli p and physical Yukawa selection operators is necessary.",
+  "zero_model_discrimination_from_unlabelled_incidence": true,
+  "source_boundary": "The frozen census includes torus localization Q_points, field family kind and allowed triangles; it does NOT identify projective W33 p for each local model, nor a map from cusp lines to modulus-dependent Yukawa operators. Claiming a 491-model physical 4:36 selection directly from current columns would fabricate data.",
+  "proof": "W(3,3) collinearity defines maximal isotropic lines. For fixed projective p, p lies on 4 lines; each nonincident totally isotropic 2-plane L intersects p^perp in exactly one projective point because p^perp has dim3 and L dim2 but L not fully contained in p^perp. All 40 points lie in one Sp4(3) orbit."
+}

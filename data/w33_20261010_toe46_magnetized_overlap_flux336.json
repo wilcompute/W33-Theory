@@ -1,0 +1,220 @@
+{
+  "status": "FLUX336_NORMALIZED_OVERLAP_SELECTION_AND_SINGLE_HIGGS_DOUBLE_DEGENERACY",
+  "flux_numbers": {
+    "I_ab": 3,
+    "I_bc": 3,
+    "I_ca": -6,
+    "gcd": 3
+  },
+  "tau_im": 1.45,
+  "torus_coordinate_grid": 144,
+  "truncation_nmax": 8,
+  "max_L2_orthonormality_error_M3": 2.2204461041090375e-16,
+  "max_L2_orthonormality_error_M6": 4.21059711734606e-16,
+  "max_forbidden_overlap": 6.349245331589584e-16,
+  "min_allowed_overlap": 0.0031126747327755184,
+  "selection": "i+j-k = 0 mod 3 (with equal left/right Gaussian wavefunction background)",
+  "all_six_fixed_Higgs_rows": [
+    {
+      "higgs_index": 0,
+      "nonzero_entries": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "normalized_singular_values": [
+        1.0,
+        0.04799000983183606,
+        0.047990009831835996
+      ],
+      "singular_values": [
+        1.4441832852767256,
+        0.06930637005940336,
+        0.06930637005940327
+      ],
+      "YYdag_offdiagonal_max": 1.8233914465620103e-16
+    },
+    {
+      "higgs_index": 1,
+      "nonzero_entries": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "normalized_singular_values": [
+        1.0,
+        0.9999999999999999,
+        0.004605064381515188
+      ],
+      "singular_values": [
+        0.675924259662873,
+        0.6759242596628728,
+        0.0031126747327755197
+      ],
+      "YYdag_offdiagonal_max": 4.633889650022745e-16
+    },
+    {
+      "higgs_index": 2,
+      "nonzero_entries": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "normalized_singular_values": [
+        1.0,
+        0.04799000983183648,
+        0.04799000983183643
+      ],
+      "singular_values": [
+        1.4441832852767218,
+        0.0693063700594038,
+        0.06930637005940372
+      ],
+      "YYdag_offdiagonal_max": 2.281052955715592e-16
+    },
+    {
+      "higgs_index": 3,
+      "nonzero_entries": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "normalized_singular_values": [
+        1.0,
+        1.0,
+        0.00460506438151521
+      ],
+      "singular_values": [
+        0.6759242596628757,
+        0.6759242596628757,
+        0.003112674732775547
+      ],
+      "YYdag_offdiagonal_max": 1.4432221352172963e-16
+    },
+    {
+      "higgs_index": 4,
+      "nonzero_entries": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "normalized_singular_values": [
+        1.0,
+        0.04799000983183613,
+        0.04799000983183612
+      ],
+      "singular_values": [
+        1.4441832852767191,
+        0.06930637005940316,
+        0.06930637005940314
+      ],
+      "YYdag_offdiagonal_max": 8.266097668215142e-17
+    },
+    {
+      "higgs_index": 5,
+      "nonzero_entries": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "normalized_singular_values": [
+        1.0,
+        0.9999999999999999,
+        0.0046050643815151475
+      ],
+      "singular_values": [
+        0.6759242596628798,
+        0.6759242596628797,
+        0.0031126747327755236
+      ],
+      "YYdag_offdiagonal_max": 5.62509546575109e-17
+    }
+  ],
+  "independent_two_Higgs_example": {
+    "mass_matrix_commutator_norm": 1.1707245362887801,
+    "imag_trace_of_commutator_cubed": -0.0020740264026738496,
+    "absolute_mixing_matrix": [
+      [
+        0.06924194482438621,
+        0.841458610632132,
+        0.5358665502436017
+      ],
+      [
+        0.1721212017135873,
+        0.5370256570012855,
+        0.8258194328320253
+      ],
+      [
+        0.9826392242311557,
+        0.059589011699974465,
+        0.17569662685155066
+      ]
+    ],
+    "up_squared_masses": [
+      0.0019495256516243189,
+      0.010972494714270439,
+      2.2651014666375224
+    ],
+    "down_squared_masses": [
+      3.5524278619329594e-05,
+      1.1149384959789606,
+      2.090792303963874
+    ]
+  },
+  "theorem": "For Iab=Ibc=3, Ica=-6 and identical left/right zero-mode backgrounds, each fixed Higgs index k has Y_ij=Y_ji and support i+j=k mod3. Thus Y_k is a 3x3 monomial reflection permutation matrix with a 2x2 transposition block; two nonzero singular values are exactly equal for ANY such symmetric overlaps. The third can differ. Every single-Higgs YY^dagger is diagonal, hence if up/down each use one fixed k, their left handed mass metrics commute and CKM mixing is zero up to mass degeneracies.",
+  "limitation": "Minimal flux benchmark, NOT an actual anomaly-free Standard Model; identical left and right magnetic backgrounds and one Higgs zero mode are restrictive. Relative Wilson lines, distinct flux patterns, multi-Higgs mixing, warped metrics and full superpotential can break the degeneracy. Continuum grid is a numerical integration with checked convergence/selection, not a globally normalized string Yukawa matrix including all sectors."
+}
