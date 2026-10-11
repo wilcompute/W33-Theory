@@ -3915,6 +3915,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "090bac5192024764f8944484b07417fec1003c6803f3c785d1f4b97d2a03c0fe",
+      "normalized_formula": "\"\"\"Pass11916:dualdet-3fluxesforceamasslessfamily--theentangling-compatibleSU(5)assignmentgivesm_d=m_e=0",
+      "numeric_literals": [
+        "0",
+        "1916",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "\"\"\"Pass 11916: dual det-3 fluxes force a massless family -- the entangling-compatible SU(5) assignment gives m_d = m_e = 0.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6fbbc9ae842ecec9619b82a4ea31c3fb35ebc84d29ab8144665f62c46f3bd839",
+      "structural_formula": "\"\"\"Pass1#:dualdet-#fluxesforceamasslessfamily--theentangling-compatibleSU(#)assignmentgivesm_d=m_e=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8372ad2fccf0b1cd406d1064b2b96b29425bea38270343c592d1757924729bd0",
       "normalized_formula": "\"\"\"Pass2304:completeq=27spectraforfourstandardspreadfamilies",
       "numeric_literals": [
@@ -230938,6 +230968,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a3c2333b9f54017fa9245c13553150d085b6bafd714f6726435b24ab8d9aad83",
+      "normalized_formula": "#Pass11916:dualdet-3fluxesforceamasslessfamily\u2014theentangling-compatibleSU(5)assignmentgivesm_d=m_e=0",
+      "numeric_literals": [
+        "0",
+        "1916",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md",
+          "raw": "# Pass 11916: dual det-3 fluxes force a massless family \u2014 the entangling-compatible SU(5) assignment gives m_d = m_e = 0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "acf88b61ebca9a2854dcf943649b27dbd6e3040765ee868b0a75c604d653c347",
+      "structural_formula": "#Pass1#:dualdet-#fluxesforceamasslessfamily\u2014theentangling-compatibleSU(#)assignmentgivesm_d=m_e=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4e4d9d61d55bb2d29981067923d83108f2106b310299dab74f495b265d9df148",
       "normalized_formula": "#Pass356:CSSDistanced=q+1\u2014TheLowerBoundArgument",
       "numeric_literals": [
@@ -350916,6 +350976,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4bb67e974a14333a59e405672e0c8289e0f391576104b329289a864b6ad55b0b",
+      "normalized_formula": "*Theupslopevariescontinuouslywiththeentanglingparameter\u03b2,where\u03a9=it[[1,\u03b2],[\u03b2,1]]:s/\u03c0=\u22128/3,\u22122.34,\u22122",
+      "numeric_literals": [
+        "1",
+        "2",
+        "2.34",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 58,
+          "path": "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md",
+          "raw": "* The up slope varies continuously with the entangling parameter \u03b2, where \u03a9 = it[[1,\u03b2],[\u03b2,1]]: s/\u03c0 = \u22128/3, \u22122.34, \u22122,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "69a7b9b8069fbb3609128d63ab4fc0258dd6b7d79a566cead96278ca39ff99a8",
+      "structural_formula": "*Theupslopevariescontinuouslywiththeentanglingparameter\u03b2,where\u03a9=it[[#,\u03b2],[\u03b2,#]]:s/\u03c0=\u2212#/#,\u2212#,\u2212#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "affd843fec0599d1ab60df086f29150cdf16dd2adb498f44f285eae068b68e16",
       "normalized_formula": "*The\u0394(54)degeneracyofPasses11102and11103reachestheleptons:m_\u03bc/m_e\u2248207isnotgenerated",
       "numeric_literals": [
@@ -387037,7 +387128,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1486,
+          "line": 1492,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -678983,6 +679074,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cdd935fd13c016e80ca57ef28cd5017a1f49235aa91e4550a34e7b2c2063ac32",
+      "normalized_formula": "N+3N^{-1}=({\\rmtr}N)\\mathbf1",
+      "numeric_literals": [
+        "-1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1477,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "N+3N^{-1}=({\\rm tr}\\,N)\\mathbf1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0b745dcb46691a2b5ffd8d425a961884a58c7911535254119d0201ae00fc3fe2",
+      "structural_formula": "N+#N^{#}=({\\rmtr}N)\\mathbf1"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2825c1ae53cb389b757df8212ac7c1a7eaecb807e44b738552b4e23c573013f5",
       "normalized_formula": "N10+N5).SoI_down=I_leptonisautomatic(data:1.91e-5vs1.64e-5,Pass11910),andtheup/downdifferencebecomes",
       "numeric_literals": [
@@ -693819,6 +693938,34 @@
       },
       "structural_family_id": "f809e1c38fd5fe22a58f1f390cafef422e6fa78faa7dfb68fb6f5467cf2b90df",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_higgs_is_the_flavour_lever.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fc8815a575d3f3e5db367b8b7d8b4be1a988b8f4c2aa634c3bf079234c570c1c",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11916_dual_flux_massless_first_generation.json\"",
+      "numeric_literals": [
+        "1916",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 34,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11916_dual_flux_massless_first_generation.json\"",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "1ed7b971d3dc334ab8a204ae4f1913c117097b242780372d2bdd43ee6b46681f",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_dual_flux_massless_first_generation.json\""
     },
     {
       "file_count": 1,
@@ -739190,6 +739337,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3db22c0c7865a4f1744aa85334ec3c2e189dda8d2cd097f6ceefb091279e859e",
+      "normalized_formula": "Recorded(frozen):theupslopevariescontinuouslywiththeentanglingparameterbeta(Omega=it[[1,beta],[beta,1]])",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "Recorded (frozen): the up slope varies continuously with the entangling parameter beta (Omega = i t [[1,beta],[beta,1]]):",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "178f351602c3c00abfb5792d21be83e6c88d26083d5a06caa72777694fa5f9e4",
+      "structural_formula": "Recorded(frozen):theupslopevariescontinuouslywiththeentanglingparameterbeta(Omega=it[[#,beta],[beta,#]])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a346ba3d71f32614db815c638eefdcacd85b97b4b42ecf9137904aed3f2d3f77",
       "normalized_formula": "Recurrence(CLXVII)</strong>\u2014r+s=-\u03bb,r\u00b7s=\u03bc-k,r-s=\u03bb+\u03bc=6;k+r+s=\u03b8=10=Lov\u00e1sztheta(stunning!)",
       "numeric_literals": [
@@ -761597,6 +761771,34 @@
       },
       "structural_family_id": "562f9c0b1cddf2f9d9e22164a886ee484873e379e988a42795d6412b0e63f933",
       "structural_formula": "Sowithinthereducedlocalmodel,anonzerobridgevacuumisstablepreciselywhen<code>vA>#</code>"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "af1469da6efa2ed08600be6abe8ac565ffdb6740f06f237c68fa0d303dc31385",
+      "normalized_formula": "Sowiththeentanglingmodulusswitchedon,theSU(5)fluxes(10,5bar)mustbe(A2,A2'):up=A2xA2,downand",
+      "numeric_literals": [
+        "10",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "So with the entangling modulus switched on, the SU(5) fluxes (10, 5bar) must be (A2, A2'): up = A2 x A2, down and",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "aa990f6944c18e8b042c86a18e82aaf354379e25065bf022e9327ea3bb8525fc",
+      "structural_formula": "Sowiththeentanglingmodulusswitchedon,theSU(#)fluxes(#,#bar)mustbe(A2,A2'):up=A2xA2,downand"
     },
     {
       "file_count": 1,
@@ -846886,6 +847088,34 @@
       },
       "structural_family_id": "abff7f188883b16637668fde1f3f512be3e4387ccd5b23c5672bae98c10d7fe1",
       "structural_formula": "\\Omega_c=\\frac{\\langle1#\\rangle^#\\varphi^{\\phi(L)-\\phi(L_0)}}{\\prod_{\\text{edges}(L,L')\\inc}\\langleLL'\\rangle},\\label{eq:omega_c}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4765b7cd1ce280d4adf4e1f5821216136b0e19ab9448171480fb0d4ba7cb2437",
+      "normalized_formula": "\\Omega_{11}=\\Omega_{22}",
+      "numeric_literals": [
+        "11",
+        "22"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1476,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "\\Omega_{11}=\\Omega_{22}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e9367f95e8000da41ada6b10aa63ffa961f0036d0a580bb452719364ae6535a4",
+      "structural_formula": "\\Omega_{#}=\\Omega_{#}"
     },
     {
       "file_count": 1,
@@ -953525,7 +953755,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1491,
+          "line": 1497,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -979668,6 +979898,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7425246e8e4566e3ecda835d627a09dc4740d34668509fb1331fe7def55a2cfa",
+      "normalized_formula": "^Partialexplanation.^Adualpairisrelatedbythe90\u00b0latticerotationR,sinceadj(N)=RTNR.ButRisnota",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md",
+          "raw": "**Partial explanation.** A dual pair is related by the 90\u00b0 lattice rotation R, since adj(N) = R\u1d40NR. But R is not a",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "e4196a0d3add5c046489ddcbfa7d8075d81c006ad290a3d8e60a1ac725f93c8c",
+      "structural_formula": "^Partialexplanation.^Adualpairisrelatedbythe9#\u00b0latticerotationR,sinceadj(N)=RTNR.ButRisnota"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0f14404be2b7f0a75ccab522d66afc02a833ea897e21ab350e4e9dff569bc9be",
       "normalized_formula": "^Pass5028.^The160flag-coversarethechambersoftheW33C2building.If`ell`isgallerydistance,theintegerkernel`R(f,g)=(-1)^ell3^(4-ell)`takesvalues`81,-27,9,-3,1`andsatisfies`R^2=160R`withzeropanelsums.Hence`P_St=R/160`istherank-81chamber/Steinbergprojector.WithPass5023thisistheexistingW33HodgeH1.Becauseitdependsonlyonrelativechamberposition,itliesintheflag-flagcornerofthePass5018coherentconfiguration",
       "numeric_literals": [
@@ -981574,6 +981831,64 @@
       },
       "structural_family_id": "da05600d1eb7f4bb26e2381cc177879170834abadf63d7048752b5c0ae436185",
       "structural_formula": "^WhatsurvivesinPass3#,anditisthesubstantivepart:^thepiecesarean`FS=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "741942f41f3af308b6cafbab8bc21ab71009cabb761d89b75e9894d6ecb9dc3e",
+      "normalized_formula": "^Whatthissuggests.^Thedatahavem_d/m_s\u22480.05andm_e/m_\u03bc\u22480.005.Thestructurepointstothesebeing",
+      "numeric_literals": [
+        "0.005",
+        "0.05"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md",
+          "raw": "**What this suggests.** The data have m_d/m_s \u2248 0.05 and m_e/m_\u03bc \u2248 0.005. The structure points to these being",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "087d0d2f5c804304c3b65b6369f8d15cdf018662163bc2c6701d845828a28aea",
+      "structural_formula": "^Whatthissuggests.^Thedatahavem_d/m_s\u2248#andm_e/m_\u03bc\u2248#.Thestructurepointstothesebeing"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "27370e3ade79566bb43c4e556baad7e7f9956136ab1e77d4bf2a07eb906cfb42",
+      "normalized_formula": "^Whentheentanglingmodulusison.^Suppose\u03a912\u22600and\u03a911=\u03a922(thelatterisrequiredbytheA2/Eisenstein10",
+      "numeric_literals": [
+        "0",
+        "11",
+        "12",
+        "22"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md",
+          "raw": "**When the entangling modulus is on.** Suppose \u03a9\u2081\u2082 \u2260 0 and \u03a9\u2081\u2081 = \u03a9\u2082\u2082 (the latter is required by the A\u2082/Eisenstein 10",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "f6b66645e7d324b0227c091d80dffb71de3533a260883bbc81286d82528e6d85",
+      "structural_formula": "^Whentheentanglingmodulusison.^Suppose\u03a9#\u2260#and\u03a9#=\u03a9#(thelatterisrequiredbytheA2/Eisenstein1#"
     },
     {
       "file_count": 1,
@@ -990826,6 +991141,33 @@
       },
       "structural_family_id": "d30371479b4ddcf8d9a3b8ca70619dbc9f4b9b3ed80df34ed283254363c3763d",
       "structural_formula": "a2=k-b1-c2#WRONG:a2fordistance2,butdiameter=#sonob2"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "77ea858bb20b9cc6334e5931e9a861882a5f68f95b80f8ed3ba7b2ece0ec4ec5",
+      "normalized_formula": "a2_a2prime_always_singular=all(r[\"max_s3_over_s1\"]<1e-12forrinrows)",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 85,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "a2_a2prime_always_singular=all(r[\"max_s3_over_s1\"] < 1e-12 for r in rows),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ebb99d5721f518b0ac9acf582f71ce035caeac7b29529d5ba7fce91277bdeedc",
+      "structural_formula": "a2_a2prime_always_singular=all(r[\"max_s3_over_s1\"]<#forrinrows)"
     },
     {
       "file_count": 1,
@@ -1091583,6 +1091925,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d1b8f443e6c35062306cdb1f1fae271918ebd4244977782a3291a9558637585e",
+      "normalized_formula": "cayley_hamilton_scalar_higgs=cayley<1e-12",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 83,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "cayley_hamilton_scalar_higgs=cayley < 1e-12,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "060ecdc285a82b9efa31561f4d003e9a61f3feee1750add2294b777fd826a945",
+      "structural_formula": "cayley_hamilton_scalar_higgs=cayley<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9ee1857e544cfc5abc39eb8bb2222f86e1d324fdff4a028683c2724c2b105bf3",
       "normalized_formula": "cc_TeV=4*math.log10(M_susy_TeV/M_Pl_red)",
       "numeric_literals": [
@@ -1191613,6 +1191982,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d3e5e3397b4ec2e1ea335e474fdba53aa8ea5c03f13f9554f667ce9c2a1ecbce",
+      "normalized_formula": "entanglingmodulus(Omega12!=0)withOmega11=Omega22(requiredbytheA2/Eisenstein10flux),adet-3form",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "entangling modulus (Omega12 != 0) with Omega11 = Omega22 (required by the A2 / Eisenstein 10 flux), a det-3 form",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "93e21729ffba9a9bc94dbf03c7772a2f3b0c664ae79639adcf2a926bea782532",
+      "structural_formula": "entanglingmodulus(Omega1#!=#)withOmega1#=Omega2#(requiredbytheA2/Eisenstein1#flux),adet-#form"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d6f23469f4f5563e067a53b5448d852de46c8233bcf272ad8b1804f9dbef307e",
       "normalized_formula": "entanglingops=E=240",
       "numeric_literals": [
@@ -1198999,6 +1199398,33 @@
       },
       "structural_family_id": "5ac67064c3ad0682207fa76c886456c1e0e9d463e58078101fdd372b5ac415e1",
       "structural_formula": "every_character_sector_dimension_per_line=#,exotic_mass_matrices=masses"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "be53ce543f1d0ea62313549ffea6f3208759316e6b1815a7347c18027860d18b",
+      "normalized_formula": "every_dual_pair_singular=all(v<1e-12forvindual_res.values())",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 86,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "every_dual_pair_singular=all(v < 1e-12 for v in dual_res.values()),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6ea75a605a9ce414ce95a241e06706085c016fdd8d4a8c12da43ba2af6a7be40",
+      "structural_formula": "every_dual_pair_singular=all(v<#forvindual_res.values())"
     },
     {
       "file_count": 1,
@@ -1301391,6 +1301817,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "924799441e07caf259ef74ca4b9a43e8a23b684badf9ca3a3ae62c6d65034cf5",
+      "normalized_formula": "liftingthezerobyaHiggsadmixture(corr(logV_us,logsqrt(m_d/m_s))=0.06over362hierarchicalsamples)",
+      "numeric_literals": [
+        "0.06",
+        "62"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "lifting the zero by a Higgs admixture (corr(log V_us, log sqrt(m_d/m_s)) = 0.06 over 362 hierarchical samples).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "440978631d4d5289bad41f0e70abf892d0946912e82a0a90f2a62f0d040efaca",
+      "structural_formula": "liftingthezerobyaHiggsadmixture(corr(logV_us,logsqrt(m_d/m_s))=#over3#hierarchicalsamples)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "25b01fce19d65530273e1d1818b1a6f639be608e5afa2777183c560ece50a71e",
       "normalized_formula": "light,notmassless.</strong>DoestheZ3graderuleforcem1=0?NO\u2014therulegives",
       "numeric_literals": [
@@ -1324890,6 +1325344,33 @@
       },
       "structural_family_id": "146ea97b64d2a6105c266976b9c5110527b1c6de270a9df7fe1f732b39cd10ec",
       "structural_formula": "m_d=m_b*epsilon^#*##hierarchy"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c1099b92c241d604e423fee89d6b34b84d76ab34c97e954970677ea0a5c8380c",
+      "normalized_formula": "m_d=m_e=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 546,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "m_d=m_e=0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "45ca151769d106aea8efd75d7794bcaff74bc6b8df1f1ee1c7505bf8e128edcf",
+      "structural_formula": "m_d=m_e=#"
     },
     {
       "file_count": 1,
@@ -1540859,7 +1541340,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1487,
+          "line": 1493,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1570317,6 +1570798,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "67798032042674e3369f5efc2b20cfbed84eb1276cf8d787ba0968faacf705a9",
+      "normalized_formula": "res=dict(pass_id=11916,det3_forms=len(forms),entangling_compatible=compatible,cayley_hamilton_err=cayley",
+      "numeric_literals": [
+        "11916"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11916_dual_flux_massless_first_generation.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/w33_pass11916_dual_flux_massless_first_generation.py",
+          "raw": "res = dict(pass_id=11916, det3_forms=len(forms), entangling_compatible=compatible, cayley_hamilton_err=cayley,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "254406af62b690500021a873dee0ebc3c6d4cb6aa6b6bc39278c7d390401418e",
+      "structural_formula": "res=dict(pass_id=#,det3_forms=len(forms),entangling_compatible=compatible,cayley_hamilton_err=cayley"
+    },
+    {
+      "file_count": 1,
       "formula_id": "94c6e16ebcedd71c9ab8a8c73beb8c62a718f588aabfe768608341f16c441d53",
       "normalized_formula": "res=dict(pass_id=[11132,11133],n_models=len(d),conjugation_bijection=bijection,bottom_eps3_without_T=bottom3",
       "numeric_literals": [
@@ -1596268,6 +1596776,34 @@
       },
       "structural_family_id": "1a11b7ea611129314e26b5e739be320cbb375a8c52f29eddc47c36eeac9aa740",
       "structural_formula": "sample_wall=completed_defect_spectral_uniform_wall_packet(#^#,#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bba9c03306a8e23923ccc4bc1e831d57a364fe4622f5e7a93791755b9f97ba9d",
+      "normalized_formula": "samples,corr(logV_us,log\u221a(m_d/m_s))=0.06,andthemedianofV_us/\u221a(m_d/m_s)is14",
+      "numeric_literals": [
+        "0.06",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 61,
+          "path": "analysis/PASS11916_DUAL_FLUX_MASSLESS_FIRST_GENERATION.md",
+          "raw": "samples, corr(log V_us, log \u221a(m_d/m_s)) = 0.06, and the median of V_us/\u221a(m_d/m_s) is 14.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5f6f282d1030f364464784c92a57d79352ca404c0680858bb43b0258246bb4a5",
+      "structural_formula": "samples,corr(logV_us,log\u221a(m_d/m_s))=#,andthemedianofV_us/\u221a(m_d/m_s)is1#"
     },
     {
       "file_count": 1,
@@ -1758755,9 +1759291,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T02:04:11-04:00",
+  "frozen_at": "2026-10-11T02:35:18-04:00",
   "pass": 398,
-  "repository_head": "f1ef21a8ca715219fde5c33d95db7ddc4279de06",
+  "repository_head": "ec563b96c075809112eb5a8ce5a4be4618b28096",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1759833,6 +1760369,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c056bec607cda2c2fda80d19a78ac3acdb5797f490fcc1ae44844add3b469dc3",
       "structural_formula": "\"\"\"Pass1#:attheone-loop-stabilisedfamilymodulusT*=rhothetree-levelYukawasgivem_c=m_u=m_t/#--the"
+    },
+    {
+      "exact_formula_ids": [
+        "090bac5192024764f8944484b07417fec1003c6803f3c785d1f4b97d2a03c0fe"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6fbbc9ae842ecec9619b82a4ea31c3fb35ebc84d29ab8144665f62c46f3bd839",
+      "structural_formula": "\"\"\"Pass1#:dualdet-#fluxesforceamasslessfamily--theentangling-compatibleSU(#)assignmentgivesm_d=m_e=#"
     },
     {
       "exact_formula_ids": [
@@ -1838137,6 +1838681,14 @@
     },
     {
       "exact_formula_ids": [
+        "a3c2333b9f54017fa9245c13553150d085b6bafd714f6726435b24ab8d9aad83"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "acf88b61ebca9a2854dcf943649b27dbd6e3040765ee868b0a75c604d653c347",
+      "structural_formula": "#Pass1#:dualdet-#fluxesforceamasslessfamily\u2014theentangling-compatibleSU(#)assignmentgivesm_d=m_e=#"
+    },
+    {
+      "exact_formula_ids": [
         "b6fa1b0063d55b4bcbe1b07e585a99f07de60c1526b1d886f78440f7530e06da"
       ],
       "exact_member_count": 1,
@@ -1876080,6 +1876632,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3fad7aaf9c59dc3056543a67215da6f0ad9fcd0a837a9afdb7e0307baf509967",
       "structural_formula": "*Thetwogoodrulesareprovedatn=#oneveryclass,andatn=#onabout9#"
+    },
+    {
+      "exact_formula_ids": [
+        "4bb67e974a14333a59e405672e0c8289e0f391576104b329289a864b6ad55b0b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "69a7b9b8069fbb3609128d63ab4fc0258dd6b7d79a566cead96278ca39ff99a8",
+      "structural_formula": "*Theupslopevariescontinuouslywiththeentanglingparameter\u03b2,where\u03a9=it[[#,\u03b2],[\u03b2,#]]:s/\u03c0=\u2212#/#,\u2212#,\u2212#"
     },
     {
       "exact_formula_ids": [
@@ -1941724,6 +1942284,14 @@
     },
     {
       "exact_formula_ids": [
+        "cdd935fd13c016e80ca57ef28cd5017a1f49235aa91e4550a34e7b2c2063ac32"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0b745dcb46691a2b5ffd8d425a961884a58c7911535254119d0201ae00fc3fe2",
+      "structural_formula": "N+#N^{#}=({\\rmtr}N)\\mathbf1"
+    },
+    {
+      "exact_formula_ids": [
         "2825c1ae53cb389b757df8212ac7c1a7eaecb807e44b738552b4e23c573013f5"
       ],
       "exact_member_count": 1,
@@ -1945444,6 +1946012,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3e079ab30dccc83cd095bc56535abdabbe56facf718dc92abde8d6fc04838f34",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_deep_decay.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "fc8815a575d3f3e5db367b8b7d8b4be1a988b8f4c2aa634c3bf079234c570c1c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1ed7b971d3dc334ab8a204ae4f1913c117097b242780372d2bdd43ee6b46681f",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_dual_flux_massless_first_generation.json\""
     },
     {
       "exact_formula_ids": [
@@ -1957948,6 +1958524,14 @@
     },
     {
       "exact_formula_ids": [
+        "3db22c0c7865a4f1744aa85334ec3c2e189dda8d2cd097f6ceefb091279e859e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "178f351602c3c00abfb5792d21be83e6c88d26083d5a06caa72777694fa5f9e4",
+      "structural_formula": "Recorded(frozen):theupslopevariescontinuouslywiththeentanglingparameterbeta(Omega=it[[#,beta],[beta,#]])"
+    },
+    {
+      "exact_formula_ids": [
         "a346ba3d71f32614db815c638eefdcacd85b97b4b42ecf9137904aed3f2d3f77"
       ],
       "exact_member_count": 1,
@@ -1964108,6 +1964692,14 @@
       "exact_member_count": 1,
       "structural_family_id": "562f9c0b1cddf2f9d9e22164a886ee484873e379e988a42795d6412b0e63f933",
       "structural_formula": "Sowithinthereducedlocalmodel,anonzerobridgevacuumisstablepreciselywhen<code>vA>#</code>"
+    },
+    {
+      "exact_formula_ids": [
+        "af1469da6efa2ed08600be6abe8ac565ffdb6740f06f237c68fa0d303dc31385"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aa990f6944c18e8b042c86a18e82aaf354379e25065bf022e9327ea3bb8525fc",
+      "structural_formula": "Sowiththeentanglingmodulusswitchedon,theSU(#)fluxes(#,#bar)mustbe(A2,A2'):up=A2xA2,downand"
     },
     {
       "exact_formula_ids": [
@@ -1987078,6 +1987670,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8bb7b8d2335947aa889ffdbeed7e4da99206432098f2f50d0a39596fffc43760",
       "structural_formula": "\\Omega_{#}=#"
+    },
+    {
+      "exact_formula_ids": [
+        "4765b7cd1ce280d4adf4e1f5821216136b0e19ab9448171480fb0d4ba7cb2437"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e9367f95e8000da41ada6b10aa63ffa961f0036d0a580bb452719364ae6535a4",
+      "structural_formula": "\\Omega_{#}=\\Omega_{#}"
     },
     {
       "exact_formula_ids": [
@@ -2020116,6 +2020716,14 @@
     },
     {
       "exact_formula_ids": [
+        "7425246e8e4566e3ecda835d627a09dc4740d34668509fb1331fe7def55a2cfa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e4196a0d3add5c046489ddcbfa7d8075d81c006ad290a3d8e60a1ac725f93c8c",
+      "structural_formula": "^Partialexplanation.^Adualpairisrelatedbythe9#\u00b0latticerotationR,sinceadj(N)=RTNR.ButRisnota"
+    },
+    {
+      "exact_formula_ids": [
         "73a1614245be07e85a0ba947d734be09af220e4579d1b8d117363e37f8540525"
       ],
       "exact_member_count": 1,
@@ -2020609,6 +2021217,22 @@
       "exact_member_count": 1,
       "structural_family_id": "da05600d1eb7f4bb26e2381cc177879170834abadf63d7048752b5c0ae436185",
       "structural_formula": "^WhatsurvivesinPass3#,anditisthesubstantivepart:^thepiecesarean`FS=#"
+    },
+    {
+      "exact_formula_ids": [
+        "741942f41f3af308b6cafbab8bc21ab71009cabb761d89b75e9894d6ecb9dc3e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "087d0d2f5c804304c3b65b6369f8d15cdf018662163bc2c6701d845828a28aea",
+      "structural_formula": "^Whatthissuggests.^Thedatahavem_d/m_s\u2248#andm_e/m_\u03bc\u2248#.Thestructurepointstothesebeing"
+    },
+    {
+      "exact_formula_ids": [
+        "27370e3ade79566bb43c4e556baad7e7f9956136ab1e77d4bf2a07eb906cfb42"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f6b66645e7d324b0227c091d80dffb71de3533a260883bbc81286d82528e6d85",
+      "structural_formula": "^Whentheentanglingmodulusison.^Suppose\u03a9#\u2260#and\u03a9#=\u03a9#(thelatterisrequiredbytheA2/Eisenstein1#"
     },
     {
       "exact_formula_ids": [
@@ -2023040,6 +2023664,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d30371479b4ddcf8d9a3b8ca70619dbc9f4b9b3ed80df34ed283254363c3763d",
       "structural_formula": "a2=k-b1-c2#WRONG:a2fordistance2,butdiameter=#sonob2"
+    },
+    {
+      "exact_formula_ids": [
+        "77ea858bb20b9cc6334e5931e9a861882a5f68f95b80f8ed3ba7b2ece0ec4ec5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ebb99d5721f518b0ac9acf582f71ce035caeac7b29529d5ba7fce91277bdeedc",
+      "structural_formula": "a2_a2prime_always_singular=all(r[\"max_s3_over_s1\"]<#forrinrows)"
     },
     {
       "exact_formula_ids": [
@@ -2050408,6 +2051040,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e625c37ffdd0c6d3613cc5ebd7d8ae053869ee70090433b830f212b04f921c52",
       "structural_formula": "caveat~#isthe[[#,#,#]]_3stand-in(A~#);thesubstrate's[[#,#,#]]_3has"
+    },
+    {
+      "exact_formula_ids": [
+        "d1b8f443e6c35062306cdb1f1fae271918ebd4244977782a3291a9558637585e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "060ecdc285a82b9efa31561f4d003e9a61f3feee1750add2294b777fd826a945",
+      "structural_formula": "cayley_hamilton_scalar_higgs=cayley<#"
     },
     {
       "exact_formula_ids": [
@@ -2078021,6 +2078661,14 @@
     },
     {
       "exact_formula_ids": [
+        "d3e5e3397b4ec2e1ea335e474fdba53aa8ea5c03f13f9554f667ce9c2a1ecbce"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "93e21729ffba9a9bc94dbf03c7772a2f3b0c664ae79639adcf2a926bea782532",
+      "structural_formula": "entanglingmodulus(Omega1#!=#)withOmega1#=Omega2#(requiredbytheA2/Eisenstein1#flux),adet-#form"
+    },
+    {
+      "exact_formula_ids": [
         "d6f23469f4f5563e067a53b5448d852de46c8233bcf272ad8b1804f9dbef307e"
       ],
       "exact_member_count": 1,
@@ -2080033,6 +2080681,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5ac67064c3ad0682207fa76c886456c1e0e9d463e58078101fdd372b5ac415e1",
       "structural_formula": "every_character_sector_dimension_per_line=#,exotic_mass_matrices=masses"
+    },
+    {
+      "exact_formula_ids": [
+        "be53ce543f1d0ea62313549ffea6f3208759316e6b1815a7347c18027860d18b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6ea75a605a9ce414ce95a241e06706085c016fdd8d4a8c12da43ba2af6a7be40",
+      "structural_formula": "every_dual_pair_singular=all(v<#forvindual_res.values())"
     },
     {
       "exact_formula_ids": [
@@ -2107737,6 +2108393,14 @@
     },
     {
       "exact_formula_ids": [
+        "924799441e07caf259ef74ca4b9a43e8a23b684badf9ca3a3ae62c6d65034cf5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "440978631d4d5289bad41f0e70abf892d0946912e82a0a90f2a62f0d040efaca",
+      "structural_formula": "liftingthezerobyaHiggsadmixture(corr(logV_us,logsqrt(m_d/m_s))=#over3#hierarchicalsamples)"
+    },
+    {
+      "exact_formula_ids": [
         "25b01fce19d65530273e1d1818b1a6f639be608e5afa2777183c560ece50a71e"
       ],
       "exact_member_count": 1,
@@ -2113874,6 +2114538,14 @@
       "exact_member_count": 1,
       "structural_family_id": "146ea97b64d2a6105c266976b9c5110527b1c6de270a9df7fe1f732b39cd10ec",
       "structural_formula": "m_d=m_b*epsilon^#*##hierarchy"
+    },
+    {
+      "exact_formula_ids": [
+        "c1099b92c241d604e423fee89d6b34b84d76ab34c97e954970677ea0a5c8380c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "45ca151769d106aea8efd75d7794bcaff74bc6b8df1f1ee1c7505bf8e128edcf",
+      "structural_formula": "m_d=m_e=#"
     },
     {
       "exact_formula_ids": [
@@ -2178665,6 +2179337,14 @@
     },
     {
       "exact_formula_ids": [
+        "67798032042674e3369f5efc2b20cfbed84eb1276cf8d787ba0968faacf705a9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "254406af62b690500021a873dee0ebc3c6d4cb6aa6b6bc39278c7d390401418e",
+      "structural_formula": "res=dict(pass_id=#,det3_forms=len(forms),entangling_compatible=compatible,cayley_hamilton_err=cayley"
+    },
+    {
+      "exact_formula_ids": [
         "039c2ccb266277b6a2624c33d9e807bc45072fcf825a9cc278bd0dcfc24a5059"
       ],
       "exact_member_count": 1,
@@ -2185668,6 +2186348,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1a11b7ea611129314e26b5e739be320cbb375a8c52f29eddc47c36eeac9aa740",
       "structural_formula": "sample_wall=completed_defect_spectral_uniform_wall_packet(#^#,#)"
+    },
+    {
+      "exact_formula_ids": [
+        "bba9c03306a8e23923ccc4bc1e831d57a364fe4622f5e7a93791755b9f97ba9d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5f6f282d1030f364464784c92a57d79352ca404c0680858bb43b0258246bb4a5",
+      "structural_formula": "samples,corr(logV_us,log\u221a(m_d/m_s))=#,andthemedianofV_us/\u221a(m_d/m_s)is1#"
     },
     {
       "exact_formula_ids": [
@@ -2228669,20 +2229357,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86605744,
-    "exact_formula_families": 60135,
-    "files_scanned": 11856,
-    "formula_occurrences": 66067,
+    "bytes_scanned": 86615661,
+    "exact_formula_families": 60154,
+    "files_scanned": 11858,
+    "formula_occurrences": 66086,
     "status_occurrences": {
-      "certified_or_theorem": 4817,
-      "killed_or_retracted": 1545,
-      "open_or_conditional": 2144,
+      "certified_or_theorem": 4820,
+      "killed_or_retracted": 1546,
+      "open_or_conditional": 2145,
       "preregistered": 32,
       "retrospective_fit": 5094,
-      "unclassified": 52435
+      "unclassified": 52449
     },
-    "structural_families": 58533
+    "structural_families": 58552
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "f40f27d20c27adc24f3f4d80fa99e8055171f569696907d91382ca4c30f61d29"
+  "universe_sha256": "cbf8423e55ef4a3ac16602062a81f177b671db059d9582305f16b7aa7cd6c8bd"
 }
