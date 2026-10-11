@@ -1,0 +1,61 @@
+{
+  "pass_id": 11910,
+  "invariants_exact_texture": [
+    1.862814606620828e-05,
+    1.8643733258493188e-05,
+    1.863015115798863e-05
+  ],
+  "invariant_predicted": 1.8627817453936843e-05,
+  "data_MZ": {
+    "u": 0.00127,
+    "c": 0.619,
+    "t": 171.7,
+    "d": 0.0029,
+    "s": 0.055,
+    "b": 2.89,
+    "e": 0.00048657,
+    "mu": 0.10271814,
+    "tau": 1.74624
+  },
+  "data_invariants": {
+    "up": 2.6665748557794563e-08,
+    "down": 1.909699357047928e-05,
+    "lept": 1.639021350899457e-05
+  },
+  "implied_im_tau": {
+    "up": 4.163466076837189,
+    "down": 2.594061556859989,
+    "lept": 2.6305509705208543
+  },
+  "ckm_localised_abs": [
+    [
+      0.0,
+      1.0000000000000007,
+      0.0
+    ],
+    [
+      2.220446049250313e-16,
+      4.46709318114706e-16,
+      1.0
+    ],
+    [
+      0.9999999999999999,
+      0.0,
+      0.0
+    ]
+  ],
+  "ckm_is_permutation": true,
+  "admixture_mixing": [
+    0.07439761099958624,
+    0.14755083826026602,
+    0.2857499729462252
+  ],
+  "checks": {
+    "invariant_universal": true,
+    "down_lepton_agree": true,
+    "up_disagrees": true,
+    "localised_ckm_trivial": true,
+    "admixture_mixing_linear": true
+  },
+  "all_checks_pass": true
+}
