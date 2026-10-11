@@ -1,0 +1,281 @@
+{
+  "pass_id": 11917,
+  "formula_check": [
+    {
+      "N1": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "ratio_rel_spread": 1.399729428197489e-09,
+      "ratio_phase_spread": 7.519196620821005e-10,
+      "max_numeric_where_formula_zero": 1.0171584951146733e-08
+    },
+    {
+      "N1": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "ratio_rel_spread": 3.874844998836669e-09,
+      "ratio_phase_spread": 1.7059256483851983e-09,
+      "max_numeric_where_formula_zero": 1.1790218672071774e-08
+    }
+  ],
+  "det3_forms_checked": 32,
+  "gcd_m_3_is_1": true,
+  "dual_lines_orthogonal_mod3": true,
+  "f3_lines_anisotropic": true,
+  "orthogonal_frames": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  ],
+  "scalar_omega_ranks": [
+    {
+      "N1": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "frame": "axes",
+      "max_s2": 1.203764627901008e-15,
+      "max_s3": 7.411075639802569e-17
+    },
+    {
+      "N1": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "frame": "diagonals",
+      "max_s2": 0.7568414881984509,
+      "max_s3": 2.2766268854155982e-15
+    },
+    {
+      "N1": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "frame": "diagonals",
+      "max_s2": 0.9605661320257214,
+      "max_s3": 1.979948521302476e-15
+    },
+    {
+      "N1": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "frame": "diagonals",
+      "max_s2": 0.9605661320257131,
+      "max_s3": 4.2494708986576814e-14
+    },
+    {
+      "N1": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "frame": "axes",
+      "max_s2": 1.450400721179445e-13,
+      "max_s3": 4.398417862205724e-15
+    },
+    {
+      "N1": [
+        [
+          3,
+          -3
+        ],
+        [
+          -3,
+          4
+        ]
+      ],
+      "frame": "axes",
+      "max_s2": 1.996534220482081e-13,
+      "max_s3": 7.263758756168751e-15
+    }
+  ],
+  "nonscalar_lift": [
+    {
+      "N1": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "eigenframe_rational": true,
+      "y": 0.05,
+      "max_s3": 1.4442077232182972e-16
+    },
+    {
+      "N1": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "eigenframe_rational": true,
+      "y": 0.05,
+      "max_s3": 2.017338899153596e-15
+    },
+    {
+      "N1": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "eigenframe_rational": false,
+      "y": 0.05,
+      "max_s3": 0.0004823104646666488
+    },
+    {
+      "N1": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "eigenframe_rational": false,
+      "y": 0.05,
+      "max_s3": 0.00046815577674764574
+    },
+    {
+      "N1": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "eigenframe_rational": false,
+      "y": 0.05,
+      "max_s3": 4.4097988045221565e-09
+    },
+    {
+      "N1": [
+        [
+          3,
+          -3
+        ],
+        [
+          -3,
+          4
+        ]
+      ],
+      "eigenframe_rational": false,
+      "y": 0.05,
+      "max_s3": 4.74080331600311e-09
+    }
+  ],
+  "linear_lift": {
+    "pair": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "ys": [
+      0.0003,
+      0.001,
+      0.003
+    ],
+    "median_s3_over_s2": [
+      6.375068255680248e-07,
+      2.093263783019035e-06,
+      6.0166671215059175e-06
+    ],
+    "log_slope": 0.9750723293628235
+  },
+  "checks": {
+    "formula_matches_overlaps": true,
+    "gcd_m_3_is_1": true,
+    "dual_lines_orthogonal_mod3": true,
+    "exactly_two_orthogonal_frames": true,
+    "axes_rank_one": true,
+    "diagonals_rank_two": true,
+    "rational_eigenframe_exactly_a2_and_rect": true,
+    "forced_pairs_stay_singular": true,
+    "irrational_pairs_lift": true,
+    "lift_is_linear": true
+  },
+  "all_checks_pass": true
+}
