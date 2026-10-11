@@ -1,0 +1,39 @@
+{
+  "pass_id": 11914,
+  "w33_points": 40,
+  "full_rank_configs": 2214,
+  "log10_invariant_range": [
+    -7.655667318776699,
+    -7.655337927515383
+  ],
+  "spread": {
+    "up_ratios": [
+      0.0036030365101834363,
+      0.0016971378004664302
+    ],
+    "spread_median": {
+      "ms_mb": 0.8407467960166066,
+      "md_ms": 0.6974857559541772,
+      "Vus": 0.5813882358465667,
+      "Vcb": 0.5771171052443442,
+      "Vub": 0.5759930219366336
+    }
+  },
+  "class_mixing_cross": 1.047506947029007e-15,
+  "class_mixing_same_min": 0.046418587065116285,
+  "data_MZ": {
+    "ms_mb": 0.019,
+    "md_ms": 0.053,
+    "Vus": 0.225,
+    "Vcb": 0.041,
+    "Vub": 0.0037
+  },
+  "checks": {
+    "forty_points": true,
+    "invariant_universal": true,
+    "spread_phase_anarchic": true,
+    "class_selection_exact": true,
+    "up_fit_reproduced": true
+  },
+  "all_checks_pass": true
+}

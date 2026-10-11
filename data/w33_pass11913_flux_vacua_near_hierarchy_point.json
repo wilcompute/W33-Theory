@@ -1,0 +1,70 @@
+{
+  "pass_id": 11913,
+  "calibration": {
+    "N_primitive_21": 4.0,
+    "W_21": 0.0,
+    "W_03": 8.0
+  },
+  "points": [
+    {
+      "Omega": [
+        "4",
+        "1",
+        "4"
+      ],
+      "g": "1",
+      "kernel_dim": 12,
+      "min_N": 8,
+      "min_N_rank": 6,
+      "min_N_block_rank": 0,
+      "min_N_all_moduli_fixed": 608
+    },
+    {
+      "Omega": [
+        "4",
+        "1/2",
+        "4"
+      ],
+      "g": "2",
+      "kernel_dim": 12,
+      "min_N": 16,
+      "min_N_rank": 6,
+      "min_N_block_rank": 0,
+      "min_N_all_moduli_fixed": 17964
+    },
+    {
+      "Omega": [
+        "4",
+        "3/4",
+        "3"
+      ],
+      "g": "2",
+      "kernel_dim": 12,
+      "min_N": 48,
+      "min_N_rank": 6,
+      "min_N_block_rank": 0,
+      "min_N_all_moduli_fixed": 27392
+    },
+    {
+      "Omega": [
+        "17/4",
+        "3/4",
+        "5"
+      ],
+      "g": "2",
+      "kernel_dim": 12,
+      "min_N": 68,
+      "min_N_rank": 6,
+      "min_N_block_rank": 0,
+      "min_N_all_moduli_fixed": 514148
+    }
+  ],
+  "checks": {
+    "calibration_isd_positive": true,
+    "primitive_solutions_exist": true,
+    "low_tadpole_leaves_block_flat": true,
+    "full_fixing_exceeds_orientifold_bound": true,
+    "smallest_tadpole_within_bound": true
+  },
+  "all_checks_pass": true
+}
