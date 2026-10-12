@@ -1,0 +1,163 @@
+{
+  "pass_id": 11928,
+  "unitarity_residual": {
+    "10": 1.266944604429591e-15,
+    "5bar": 1.0281695188660765e-15,
+    "Hu": 3.9386618969688876e-15,
+    "Hd": 3.998956273922866e-15
+  },
+  "charges": {
+    "10": [
+      0,
+      0,
+      2
+    ],
+    "5bar": [
+      0,
+      0,
+      2
+    ],
+    "Hu": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2
+    ],
+    "Hd": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "fixed_points": 9,
+  "fixed_set_isotropic": true,
+  "L_cap_K10": 3,
+  "L_cap_K5": 3,
+  "charge2_generation_abs": [
+    0.5773502691896257,
+    0.5773502691896257,
+    0.5773502691896261
+  ],
+  "fixed_point_local_charges": [
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "fixed_point_eigen_residual": 1.9012062801353155e-15,
+  "blowup_commutator_with_rho": 1.882017449202144e-15,
+  "blowup_traceless_rank": {
+    "10": 3,
+    "5bar": 3
+  },
+  "planes": 130,
+  "scalar_on_10": 1,
+  "scalar_on_5bar": 1,
+  "near_point_scaling": {
+    "0": {
+      "rows": [
+        [
+          0.01,
+          0.3422063622679519,
+          0.0001863769681814243
+        ],
+        [
+          0.003,
+          0.3421849501860845,
+          1.7221462866948078e-05
+        ],
+        [
+          0.001,
+          0.3421833086924837,
+          1.9271480706690326e-06
+        ]
+      ],
+      "slope_mc_mt": 2.9620341175113596e-05,
+      "slope_mu_mc": 1.9853600518535963
+    },
+    "1": {
+      "rows": [
+        [
+          0.01,
+          0.035949332625601356,
+          0.6122532658211992
+        ],
+        [
+          0.003,
+          0.010724983655195756,
+          0.6157447323958833
+        ],
+        [
+          0.001,
+          0.00356949495139714,
+          0.6167230230085055
+        ]
+      ],
+      "slope_mc_mt": 1.0031085344915285,
+      "slope_mu_mc": -0.0031839804948704037
+    },
+    "2": {
+      "rows": [
+        [
+          0.01,
+          0.9799029610306047,
+          0.0003944756302124616
+        ],
+        [
+          0.003,
+          0.9939703496085607,
+          3.506179309190442e-05
+        ],
+        [
+          0.001,
+          0.9979899697999544,
+          3.882391781539409e-06
+        ]
+      ],
+      "slope_mc_mt": -0.008005204182514278,
+      "slope_mu_mc": 2.006975989623969
+    }
+  },
+  "checks": {
+    "rho_unitary_on_all_zero_modes": true,
+    "generation_charges_002": true,
+    "higgs_charge_multiplicities": true,
+    "nine_fixed_points_form_a_w33_line": true,
+    "line_splits_across_factorisation": true,
+    "charge2_generation_unbiased": true,
+    "fixed_point_vectors_are_charge_eigenvectors": true,
+    "blowups_commute_with_residual_z3": true,
+    "blowup_image_rank_three": true,
+    "only_factor_planes_scalar": true,
+    "charge0_mu_mc_eps2": true,
+    "charge1_mc_mt_eps": true,
+    "charge2_mu_mc_eps2": true
+  },
+  "all_checks_pass": true
+}
