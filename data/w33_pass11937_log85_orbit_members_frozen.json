@@ -1,0 +1,329 @@
+{
+ "description": "all 54 members of the log(8/5) Clifford orbit, displaced by t = 0.005 off the Witting ray and inverted to Omega (scratch conic/members.py)",
+ "members": [
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 2e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 2e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 7e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 9e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 3e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 1e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 2e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 9e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 6e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 2e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 3e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 7e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 3e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 5e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 1e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 3e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 4e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 9e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 1e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 6e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 9e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 8e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 3e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-15
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 3e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 6e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 3e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 9e-17
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 8e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 4e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728-0j",
+   "residual": 5e-16
+  },
+  {
+   "b_over_a": 0.7962,
+   "s2_over_t": 0.4653,
+   "j": "1728+0j",
+   "residual": 7e-16
+  }
+ ]
+}
