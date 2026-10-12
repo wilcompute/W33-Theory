@@ -382732,6 +382732,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8d30e39c0dddb7a4628829ddaf3f798dd43b2635a1bfec0cd40b325fa73da5d9",
+      "normalized_formula": "1,1,1/3,3,3/2,2,2.In^allnine^,theupspectrumnearthepointhasadegeneratepair,m_u/m_c\u22481or",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11929_JOINT_RESIDUAL_LOCK.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/PASS11929_JOINT_RESIDUAL_LOCK.md",
+          "raw": "1, 1, 1 / 3, 3, 3 / 2, 2, 2. In **all nine**, the up spectrum near the point has a degenerate pair, m_u/m_c \u2248 1 or",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6dd42092825e631e8c774e6653439f435d6694c3fd8231f281910d80d2eeb18e",
+      "structural_formula": "#,#,#/#,#,#/#,#,#.In^allnine^,theupspectrumnearthepointhasadegeneratepair,m_u/m_c\u2248#or"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fa93704698b5989162ebbe05583cd8a404b02629f623803caddbad98121e45d8",
       "normalized_formula": "1,\\d(q),\\1,\\q^2-1,\\1,\\d(q),\\1,\\qquadd(q)=\\tfrac12(q-1)(q^2+q+2)",
       "numeric_literals": [
@@ -388518,7 +388547,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1565,
+          "line": 1567,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -958545,7 +958574,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1570,
+          "line": 1572,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1283456,6 +1283485,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b64e13081545eeb5d3c8d1c0fdc9e8d836573d4d9c39d6e6610d409bde374c00",
+      "normalized_formula": "isLOCKED:m_u/m_c~1orm_c/m_t~1(adegeneratepair),independentofeps.AHiggsthatpreservesPisa",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11929_joint_residual_lock.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_pass11929_joint_residual_lock.py",
+          "raw": "is LOCKED: m_u/m_c ~ 1 or m_c/m_t ~ 1 (a degenerate pair), independent of eps. A Higgs that preserves P is a",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "81763eaee7b8f639e0f5983b6c3068da6a80ad92ce0e88fa17191b297946bd91",
+      "structural_formula": "isLOCKED:m_u/m_c~#orm_c/m_t~#(adegeneratepair),independentofeps.AHiggsthatpreservesPisa"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a9e5f2c51ebb99f672d666074d439bdf73eeeebfa7aa2f87a8656fbe59be1f1f",
       "normalized_formula": "is^anti-symplectic^,notsymplectic:S^2=1andS^TOmegaS=-Omega,withOmega((q,p),(q',p'))=q.p'-p.q'.BythestandardFourierimplementationthereisanantiunitaryonL2(W)",
       "numeric_literals": [
@@ -1331058,6 +1331114,33 @@
       },
       "structural_family_id": "37c2070d52597035585a8465f0fe4081af34e60a7e77ae120b94ff0d15142f5f",
       "structural_formula": "m_c/m_t\u2248#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fb6e37279896e29cc7df8c3e0243be331a13a824ce0882aef768b5d058580b63",
+      "normalized_formula": "m_c/m_t\u22481,forevery\u03b5",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11929_JOINT_RESIDUAL_LOCK.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/PASS11929_JOINT_RESIDUAL_LOCK.md",
+          "raw": "m_c/m_t \u2248 1, for every \u03b5.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "200de9da206b876d9ffeded5c3c147438da6be47cf1a456082bbc2fed5104773",
+      "structural_formula": "m_c/m_t\u2248#,forevery\u03b5"
     },
     {
       "file_count": 1,
@@ -1548736,7 +1548819,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1566,
+          "line": 1568,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1679448,6 +1679531,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3c67033d7cda4a82953c64bd27cab6116f142651ba855b73145fffa316a68a34",
+      "normalized_formula": "three_never_coupling_higgs=res[\"stacked_rank\"]=9",
+      "numeric_literals": [
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11929_joint_residual_lock.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 106,
+          "path": "analysis/w33_pass11929_joint_residual_lock.py",
+          "raw": "three_never_coupling_higgs=res[\"stacked_rank\"] == 9,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d958b16490ad81ded34b1f73b379c00d6d035336842dae2f68412478387adb30",
+      "structural_formula": "three_never_coupling_higgs=res[\"stacked_rank\"]=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8e170ab924ad08d837802779396f53d64be45b5ff8b12d6c74ef21fd1659b7b2",
       "normalized_formula": "threebridgechoices.Thustheuniquecarrieris<code>K2,2\u00d7F3^3=108</code>,andthe",
       "numeric_literals": [
@@ -1768090,9 +1768200,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T21:15:01-04:00",
+  "frozen_at": "2026-10-11T21:38:15-04:00",
   "pass": 398,
-  "repository_head": "ede836def408f2e0ebe12232814f6cafdde4f3c1",
+  "repository_head": "7221791c0dd4b98eb3dbb6fa718d737c6fbd9c0a",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1825251,6 +1825361,14 @@
       "exact_member_count": 1,
       "structural_family_id": "276e069481ac9cb4d3f8da3d2c69b8f2e72b77c8571eaa87130a81311ecc0fc7",
       "structural_formula": "#,#,#,\\mathbf{#},#,\\mathbf{#},\\mathbf{#},#,#,\\mathbf{#},#\\qquad(m=#,\\dots,#)"
+    },
+    {
+      "exact_formula_ids": [
+        "8d30e39c0dddb7a4628829ddaf3f798dd43b2635a1bfec0cd40b325fa73da5d9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6dd42092825e631e8c774e6653439f435d6694c3fd8231f281910d80d2eeb18e",
+      "structural_formula": "#,#,#/#,#,#/#,#,#.In^allnine^,theupspectrumnearthepointhasadegeneratepair,m_u/m_c\u2248#or"
     },
     {
       "exact_formula_ids": [
@@ -2112530,6 +2112648,14 @@
     },
     {
       "exact_formula_ids": [
+        "b64e13081545eeb5d3c8d1c0fdc9e8d836573d4d9c39d6e6610d409bde374c00"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "81763eaee7b8f639e0f5983b6c3068da6a80ad92ce0e88fa17191b297946bd91",
+      "structural_formula": "isLOCKED:m_u/m_c~#orm_c/m_t~#(adegeneratepair),independentofeps.AHiggsthatpreservesPisa"
+    },
+    {
+      "exact_formula_ids": [
         "a9e5f2c51ebb99f672d666074d439bdf73eeeebfa7aa2f87a8656fbe59be1f1f"
       ],
       "exact_member_count": 1,
@@ -2124873,6 +2124999,14 @@
       "exact_member_count": 1,
       "structural_family_id": "37c2070d52597035585a8465f0fe4081af34e60a7e77ae120b94ff0d15142f5f",
       "structural_formula": "m_c/m_t\u2248#"
+    },
+    {
+      "exact_formula_ids": [
+        "fb6e37279896e29cc7df8c3e0243be331a13a824ce0882aef768b5d058580b63"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "200de9da206b876d9ffeded5c3c147438da6be47cf1a456082bbc2fed5104773",
+      "structural_formula": "m_c/m_t\u2248#,forevery\u03b5"
     },
     {
       "exact_formula_ids": [
@@ -2217605,6 +2217739,14 @@
     },
     {
       "exact_formula_ids": [
+        "3c67033d7cda4a82953c64bd27cab6116f142651ba855b73145fffa316a68a34"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d958b16490ad81ded34b1f73b379c00d6d035336842dae2f68412478387adb30",
+      "structural_formula": "three_never_coupling_higgs=res[\"stacked_rank\"]=#"
+    },
+    {
+      "exact_formula_ids": [
         "8e170ab924ad08d837802779396f53d64be45b5ff8b12d6c74ef21fd1659b7b2"
       ],
       "exact_member_count": 1,
@@ -2240527,20 +2240669,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86865646,
-    "exact_formula_families": 60460,
-    "files_scanned": 11895,
-    "formula_occurrences": 66411,
+    "bytes_scanned": 86875547,
+    "exact_formula_families": 60464,
+    "files_scanned": 11897,
+    "formula_occurrences": 66415,
     "status_occurrences": {
       "certified_or_theorem": 4851,
       "killed_or_retracted": 1569,
       "open_or_conditional": 2147,
       "preregistered": 32,
       "retrospective_fit": 5114,
-      "unclassified": 52698
+      "unclassified": 52702
     },
-    "structural_families": 58847
+    "structural_families": 58851
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "8c2a547e67aaa42a93fee53832cb309fd59f9f385e68d023e4f81fe9aac7038c"
+  "universe_sha256": "62ea5296e8b840e94525f49477d38ceb77f32405ebb2380cc325cf7b2e6da275"
 }
