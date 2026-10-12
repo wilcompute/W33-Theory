@@ -1,0 +1,132 @@
+{
+  "checks": {
+    "commutants_1_1_1_2": true,
+    "large_singular_gap": true,
+    "large_soft_series_replays": true,
+    "p1_20": true,
+    "p2_8": true,
+    "p3_4": true,
+    "p4_varies": true
+  },
+  "commutants": {
+    "1": {
+      "commutant_dimension": 1,
+      "largest_null_singular": 2.716323960432501e-16,
+      "singular_gap_ratio": 3134817278022682.0,
+      "smallest_nonzero_singular": 0.8515179283870804,
+      "sym_dimension": 4
+    },
+    "2": {
+      "commutant_dimension": 1,
+      "largest_null_singular": 7.447282318512643e-16,
+      "singular_gap_ratio": 1143394183231588.5,
+      "smallest_nonzero_singular": 0.8515179283870813,
+      "sym_dimension": 10
+    },
+    "3": {
+      "commutant_dimension": 1,
+      "largest_null_singular": 8.703067316544348e-16,
+      "singular_gap_ratio": 978411285832942.8,
+      "smallest_nonzero_singular": 0.8515179283870814,
+      "sym_dimension": 20
+    },
+    "4": {
+      "commutant_dimension": 2,
+      "largest_null_singular": 1.3056612208895154e-15,
+      "singular_gap_ratio": 652173714562007.1,
+      "smallest_nonzero_singular": 0.8515179283870806,
+      "sym_dimension": 35
+    }
+  },
+  "external_context": "The rigidity is consistent with the classical spherical-7-design property of the E8 minimal shell; the present certificate concerns the repository's actual four-dimensional G32 Cartan representation.",
+  "large_soft_expansion": {
+    "first_nonradial_correction_after_minus_F": "-p4/(12 s^2), because p3=4 is radial",
+    "formula": "H_s = radial(s,p1,p2) - F + p3/(3s) - p4/(12s^2) + p5/(30s^3) - p6/(60s^4)+...",
+    "rows": [
+      {
+        "error": 1.1071416672336909e-07,
+        "exact_angularized": 6.527068886116467,
+        "s": 10.0,
+        "series_through_s^-4": 6.5270687754023005
+      },
+      {
+        "error": 4.5649173330275516e-10,
+        "exact_angularized": 6.439939611096634,
+        "s": 30.0,
+        "series_through_s^-4": 6.439939610640142
+      },
+      {
+        "error": -1.7496848414566557e-10,
+        "exact_angularized": 6.409032763913274,
+        "s": 100.0,
+        "series_through_s^-4": 6.409032764088242
+      }
+    ]
+  },
+  "moment_replay": {
+    "max_rigid_residual": 2.1316282072803006e-14,
+    "p1_range": [
+      19.99999999999998,
+      20.00000000000002
+    ],
+    "p2_range": [
+      7.999999999999981,
+      8.000000000000018
+    ],
+    "p3_range": [
+      3.9999999999999862,
+      4.000000000000013
+    ],
+    "p4_range": [
+      2.226244059861953,
+      2.5706236519715358
+    ],
+    "p5_range": [
+      1.3046751247124015,
+      2.022132608274029
+    ],
+    "p6_range": [
+      0.7848254415955997,
+      1.7870176250080059
+    ],
+    "trials": 128
+  },
+  "schema": "w33.20261011.g32-spectral-moment-rigidity.v1",
+  "scope": "The commutant dimensions use double-precision matrices for the exact committed finite-group generators but have a >0.8 singular gap. This is a numerical representation certificate, not an exact CHEVIE character-table proof.",
+  "sources": {
+    "analysis/w33_pass11879_11883_e8_higgs_siegel_modulus.py": "30f85c53ad16c2029288c8e0afa364d572c1e322b4635f5481a8300c78886a66",
+    "analysis/w33_pass11884_11886_one_loop_trinification.py": "bfb973ffe5022c3a4d8d8d6d0b61ccae12c10348301116fb9d288391ec2d4c95"
+  },
+  "status": "PASS_G32_SYMMETRIC_POWER_COMMUTANTS_FORCE_P1_P2_P3_RADIAL_P4_FIRST_ANGULAR",
+  "theorem": "For the committed G32 Cartan representation, End_G(Sym^k C^4) has dimension 1 for k=1,2,3 and 2 for k=4. Therefore every invariant Hermitian form of bidegree (k,k) is radial through k=3, while one new angular invariant appears at k=4. The vector mass moments obey p1=20, p2=8, p3=4 on the unit Cartan sphere; p4 is the first varying power sum.",
+  "witting_calibration": {
+    "exact_first_three": [
+      "20",
+      "8",
+      "4"
+    ],
+    "exact_p4": "8/3",
+    "moments": [
+      20.0,
+      8.0,
+      4.000000000000001,
+      2.6666666666666687,
+      2.222222222222225,
+      2.074074074074078
+    ],
+    "spectrum": [
+      [
+        -0.0,
+        24
+      ],
+      [
+        0.333333333333,
+        54
+      ],
+      [
+        1.0,
+        2
+      ]
+    ]
+  }
+}
