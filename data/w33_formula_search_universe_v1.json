@@ -348144,6 +348144,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a8cced99913a9b28d1a3de510e6091fada90d2bf070f2a60a2ce4e553a81803f",
+      "normalized_formula": "*Anarbitrarilyweaksoftsupertracedisplacesthevacuumbylogt*=\u2212\u03ba/(32r)\u22121/2\u2212C_G/16,alongthedirectionthat",
+      "numeric_literals": [
+        "1",
+        "16",
+        "2",
+        "32"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11935_SOFT_SUPERTRACE_SELECTS_LOG85_ORBIT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/PASS11935_SOFT_SUPERTRACE_SELECTS_LOG85_ORBIT.md",
+          "raw": "* An arbitrarily weak soft supertrace displaces the vacuum by log t* = \u2212\u03ba/(32r) \u2212 1/2 \u2212 C_G/16, along the direction that",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4650442da2ec009ceb6c162d2842f365f80fbf763e3cafc5efdf4486d726d5bd",
+      "structural_formula": "*Anarbitrarilyweaksoftsupertracedisplacesthevacuumbylogt*=\u2212\u03ba/(#r)\u2212#/#\u2212C_G/#,alongthedirectionthat"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2ee0eea9ba22f4e5fe2616624b0d9770159c6fc00b6de27744f63898ffaccf3f",
       "normalized_formula": "*Anm3ofabout1meVisbelownear-termdirectreach,butitfixes\u03a3m_\u03bd\u22480.10eV,whichcosmologyisapproaching",
       "numeric_literals": [
@@ -350169,6 +350199,35 @@
       },
       "structural_family_id": "fa50d0a81ac523ac4c3607e80d7fb719f42c56f10c2525934345a0797a54632f",
       "structural_formula": "*Pass1#'slock(m_c=m_uforeveryK\u00e4hlermodulus)isthecasewherehisasingleHiggsrow,aZ-eigenstate"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "36779d81054f85131b8d683b0259294e7a8149098b13fd21c14bfc52bf8c7060",
+      "normalized_formula": "*Pass11926:Clifford/G25-invarianttangentpotentialshavespecialorbits;onehasM2=log(8/5),Cliffordstabiliser",
+      "numeric_literals": [
+        "1926",
+        "5",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py",
+          "raw": "* Pass 11926: Clifford/G25-invariant tangent potentials have special orbits; one has M2 = log(8/5), Clifford stabiliser",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a3f525331d974396f701502fc2c352b96708cac30721768a01ae527aff9826a3",
+      "structural_formula": "*Pass1#:Clifford/G2#-invarianttangentpotentialshavespecialorbits;onehasM2=log(#/#),Cliffordstabiliser"
     },
     {
       "file_count": 1,
@@ -388834,7 +388893,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1571,
+          "line": 1573,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -665220,28 +665279,43 @@
       "structural_formula": "M_2=#"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "3d87236ccb082fbeb0c36fed80cb1b56b7616e303c45b5066f0973f2d7a194b5",
       "normalized_formula": "M_2=\\log\\tfrac85",
       "numeric_literals": [
         "5"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 3,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "papers/forty_points/appA_ledger.tex",
         "papers/forty_points/sec09_physics.tex"
       ],
       "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 570,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "M_2=\\log\\tfrac85",
+          "status": "unclassified"
+        },
         {
           "category": "inline_math",
           "line": 1538,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "M_2=\\log\\tfrac85",
           "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "M_2=\\log\\tfrac85",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "unclassified": 3
       },
       "structural_family_id": "2acadab32b851e46eaa9182c45e1d0b610e63fea2c6e82560af78fe0ee87b6ce",
       "structural_formula": "M_2=\\log\\tfrac8#"
@@ -743801,6 +743875,34 @@
       },
       "structural_family_id": "6e73dbce3597afdcbb7e13547df150f659d6c248c54207e1abefdd8999eb073c",
       "structural_formula": "Result:#/sqrt(#)=#.PDG:#.Error:#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a10f9c55a3057430317615d4bfecac98c764b658186c6ead2cf23170e5c0ce0b",
+      "normalized_formula": "Result:minimisingC_GoverCP^2fromindependentstartsconvergeseverytimetoC_G=3.69343;polishedwiththe",
+      "numeric_literals": [
+        "2",
+        "3.69343"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py",
+          "raw": "Result: minimising C_G over CP^2 from independent starts converges every time to C_G = 3.69343; polished with the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ad91ba92972893c0faa4347a099d5cfced4de9937d7cc5ac3e57529cc7a4da17",
+      "structural_formula": "Result:minimisingC_GoverCP^#fromindependentstartsconvergeseverytimetoC_G=#;polishedwiththe"
     },
     {
       "file_count": 1,
@@ -959151,7 +959253,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1576,
+          "line": 1578,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -985667,6 +985769,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c7927b24cce72b0a80d2f3dd66ca912177cf1699f6cc9e0dbdd6432fa98d93bd",
+      "normalized_formula": "^Pass11926.^Clifford-invarianttangentpotentialshavespecialorbits.OneofthemhasM2=log(8/5),aClifford",
+      "numeric_literals": [
+        "1926",
+        "5",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11935_SOFT_SUPERTRACE_SELECTS_LOG85_ORBIT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/PASS11935_SOFT_SUPERTRACE_SELECTS_LOG85_ORBIT.md",
+          "raw": "**Pass 11926.** Clifford-invariant tangent potentials have special orbits. One of them has M\u2082 = log(8/5), a Clifford",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b1202f1b8ff936c7953296cae558845c18c1118bfb02d4d610806a04b7a59dec",
+      "structural_formula": "^Pass1#.^Clifford-invarianttangentpotentialshavespecialorbits.OneofthemhasM2=log(#/#),aClifford"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0f14404be2b7f0a75ccab522d66afc02a833ea897e21ab350e4e9dff569bc9be",
       "normalized_formula": "^Pass5028.^The160flag-coversarethechambersoftheW33C2building.If`ell`isgallerydistance,theintegerkernel`R(f,g)=(-1)^ell3^(4-ell)`takesvalues`81,-27,9,-3,1`andsatisfies`R^2=160R`withzeropanelsums.Hence`P_St=R/160`istherank-81chamber/Steinbergprojector.WithPass5023thisistheexistingW33HodgeH1.Becauseitdependsonlyonrelativechamberposition,itliesintheflag-flagcornerofthePass5018coherentconfiguration",
       "numeric_literals": [
@@ -987108,6 +987239,33 @@
       },
       "structural_family_id": "7df73efc8f6085fca3008bdf36d38ccb1a506135718623702ffec389a342235f",
       "structural_formula": "^ThelawF\u2032(Pass1#).^LetU=W(a)V_MT1andv=z1+Mz1.IfM2z1=z1,everyframewith\u03c9(a,v)\u2260#violates"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "355fe45fd353366a2535d0a1f7ac8b0230a76559e2b94da591ff89589892aed4",
+      "normalized_formula": "^Theminimum.^MinimisingC_GoverCP2fromsixindependentstartsconvergeseverytimeto^C_G=3.69343^",
+      "numeric_literals": [
+        "3.69343"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11935_SOFT_SUPERTRACE_SELECTS_LOG85_ORBIT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/PASS11935_SOFT_SUPERTRACE_SELECTS_LOG85_ORBIT.md",
+          "raw": "**The minimum.** Minimising C_G over CP\u00b2 from six independent starts converges every time to **C_G = 3.69343**.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9d779061910746e39ac2134e701b594105a5d0b02906a320a2732bbdea7fa6fa",
+      "structural_formula": "^Theminimum.^MinimisingC_GoverCP2fromsixindependentstartsconvergeseverytimeto^C_G=#^"
     },
     {
       "file_count": 1,
@@ -1038666,6 +1038824,35 @@
       },
       "structural_family_id": "3fe951ad0b0f46da0550e29795dd7ec315e9428867012d1f4be566a7a3965256",
       "structural_formula": "asafreechoice;thenetis~#bits->odds~#^{#}againstchance.ONLYifonegrantsa"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e16d515e59c4711f55a27d22ae43116494eb5ba8258773d6b524936a2f43a3bc",
+      "normalized_formula": "aseps->0(minm_c/m_toverthe54members>=0.36):theselecteddirectiondoesnotbyitselfgivetheuphierarchy",
+      "numeric_literals": [
+        "0",
+        "0.36",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py",
+          "raw": "as eps -> 0 (min m_c/m_t over the 54 members >= 0.36): the selected direction does not by itself give the up hierarchy,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c3701133aa9f0e704a75df64c8dee65b88212add56a845bb475571d906b0d455",
+      "structural_formula": "aseps->#(minm_c/m_toverthe5#members>=#):theselecteddirectiondoesnotbyitselfgivetheuphierarchy"
     },
     {
       "file_count": 1,
@@ -1185044,6 +1185231,36 @@
       },
       "structural_family_id": "5ecfa32134f6760767b81a394e223ccba7ee9fed7efbbe5ddc46d2d267338faa",
       "structural_formula": "direction=(#,(v_u[#]*inv)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e980363f1e07c0d205788ffbb97c5806e077cd8ee1ab36a906fbe60bcb8f7284",
+      "normalized_formula": "directionminimisingC_G(logt*=-kappa/(32r)-1/2-C_G/16).Itreportedanintermediate-magicwitnessanda",
+      "numeric_literals": [
+        "-1",
+        "16",
+        "2",
+        "32"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py",
+          "raw": "direction minimising C_G (log t* = -kappa/(32 r) - 1/2 - C_G/16). It reported an intermediate-magic witness and a",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8ad471e07b6c917cebe9f51f0b690304832cf4926a9b8d59359aacdd686efc2d",
+      "structural_formula": "directionminimisingC_G(logt*=-kappa/(#r)#/#-C_G/#).Itreportedanintermediate-magicwitnessanda"
     },
     {
       "file_count": 1,
@@ -1385622,6 +1385839,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "19d83da4562e20ab8b111cea07440fa318469071a580310f093b865565324ccc",
+      "normalized_formula": "oforder4,orbit54,andunlocksm_c!=m_uwithO(1)ratios",
+      "numeric_literals": [
+        "1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py",
+          "raw": "of order 4, orbit 54, and unlocks m_c != m_u with O(1) ratios.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "26821a9234c1eeafad1a40ef65ffe71c0e48e204d30ca4e633fdfd74e852c21a",
+      "structural_formula": "oforder4,orbit5#,andunlocksm_c!=m_uwithO(#)ratios"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d1205d1308b519b754b326f94fdc43a9b8507ffc9a138fb6b7972ea3e93081ee",
       "normalized_formula": "oforder<code>28,841,108,255,539,200</code>.Itisnotonecommonexchangeaction:theQRoddcosethas",
       "numeric_literals": [
@@ -1550277,7 +1550522,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1572,
+          "line": 1574,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1611862,6 +1612107,33 @@
       },
       "structural_family_id": "8bf4a1841562b0a2cd3a1180f2e4683c8b4f51b533a67d0b0db2238ad911de71",
       "structural_formula": "selector=_load_json(\"w3#_selected_yukawa_spin1#_bridge_summary.json\")"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ad0439214fff782a66ee8257c77675c966e45741aef54fa24402ba3f8554da07",
+      "normalized_formula": "selectorV_r=F+rGopensthe24zeromodeswithtotalslope8andafiniteangularcoefficientC_G(u)dependingon",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass11935_soft_supertrace_selects_log85_orbit.py",
+          "raw": "selector V_r = F + r G opens the 24 zero modes with total slope 8 and a finite angular coefficient C_G(u) depending on",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f532ea47d9322bb1b2ec9781125d40e0ae6014560fbcb8e00dde95fdf92360e9",
+      "structural_formula": "selectorV_r=F+rGopensthe2#zeromodeswithtotalslope8andafiniteangularcoefficientC_G(u)dependingon"
     },
     {
       "file_count": 1,
@@ -1770114,9 +1770386,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T23:04:55-04:00",
+  "frozen_at": "2026-10-11T23:22:29-04:00",
   "pass": 398,
-  "repository_head": "ac431b614a45e7e16e5432b2ff7e59e68b17687f",
+  "repository_head": "fac1e620ebf18d77a53ceee3864ab7b33f7a39ed",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1886858,6 +1887130,14 @@
     },
     {
       "exact_formula_ids": [
+        "a8cced99913a9b28d1a3de510e6091fada90d2bf070f2a60a2ce4e553a81803f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4650442da2ec009ceb6c162d2842f365f80fbf763e3cafc5efdf4486d726d5bd",
+      "structural_formula": "*Anarbitrarilyweaksoftsupertracedisplacesthevacuumbylogt*=\u2212\u03ba/(#r)\u2212#/#\u2212C_G/#,alongthedirectionthat"
+    },
+    {
+      "exact_formula_ids": [
         "2ee0eea9ba22f4e5fe2616624b0d9770159c6fc00b6de27744f63898ffaccf3f"
       ],
       "exact_member_count": 1,
@@ -1887391,6 +1887671,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ffd1a190d73f68fdd47f34b9855438746b464984587ed04bf73e7d903dc38f98",
       "structural_formula": "*Pass1#(master):I(sigma)=tr[rho^{(x)#}prod_pP_{sigma_p}],athird-momentinvariantofthegate'sChoi"
+    },
+    {
+      "exact_formula_ids": [
+        "36779d81054f85131b8d683b0259294e7a8149098b13fd21c14bfc52bf8c7060"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a3f525331d974396f701502fc2c352b96708cac30721768a01ae527aff9826a3",
+      "structural_formula": "*Pass1#:Clifford/G2#-invarianttangentpotentialshavespecialorbits;onehasM2=log(#/#),Cliffordstabiliser"
     },
     {
       "exact_formula_ids": [
@@ -1970566,6 +1970854,14 @@
     },
     {
       "exact_formula_ids": [
+        "a10f9c55a3057430317615d4bfecac98c764b658186c6ead2cf23170e5c0ce0b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ad91ba92972893c0faa4347a099d5cfced4de9937d7cc5ac3e57529cc7a4da17",
+      "structural_formula": "Result:minimisingC_GoverCP^#fromindependentstartsconvergeseverytimetoC_G=#;polishedwiththe"
+    },
+    {
+      "exact_formula_ids": [
         "68ea6a06f983deeaf9916e6c1d76d6e81f22a330946b910139179f01bbfa770c"
       ],
       "exact_member_count": 1,
@@ -2033090,6 +2033386,14 @@
     },
     {
       "exact_formula_ids": [
+        "c7927b24cce72b0a80d2f3dd66ca912177cf1699f6cc9e0dbdd6432fa98d93bd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b1202f1b8ff936c7953296cae558845c18c1118bfb02d4d610806a04b7a59dec",
+      "structural_formula": "^Pass1#.^Clifford-invarianttangentpotentialshavespecialorbits.OneofthemhasM2=log(#/#),aClifford"
+    },
+    {
+      "exact_formula_ids": [
         "73a1614245be07e85a0ba947d734be09af220e4579d1b8d117363e37f8540525"
       ],
       "exact_member_count": 1,
@@ -2033463,6 +2033767,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7df73efc8f6085fca3008bdf36d38ccb1a506135718623702ffec389a342235f",
       "structural_formula": "^ThelawF\u2032(Pass1#).^LetU=W(a)V_MT1andv=z1+Mz1.IfM2z1=z1,everyframewith\u03c9(a,v)\u2260#violates"
+    },
+    {
+      "exact_formula_ids": [
+        "355fe45fd353366a2535d0a1f7ac8b0230a76559e2b94da591ff89589892aed4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9d779061910746e39ac2134e701b594105a5d0b02906a320a2732bbdea7fa6fa",
+      "structural_formula": "^Theminimum.^MinimisingC_GoverCP2fromsixindependentstartsconvergeseverytimeto^C_G=#^"
     },
     {
       "exact_formula_ids": [
@@ -2047384,6 +2047696,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3fe951ad0b0f46da0550e29795dd7ec315e9428867012d1f4be566a7a3965256",
       "structural_formula": "asafreechoice;thenetis~#bits->odds~#^{#}againstchance.ONLYifonegrantsa"
+    },
+    {
+      "exact_formula_ids": [
+        "e16d515e59c4711f55a27d22ae43116494eb5ba8258773d6b524936a2f43a3bc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c3701133aa9f0e704a75df64c8dee65b88212add56a845bb475571d906b0d455",
+      "structural_formula": "aseps->#(minm_c/m_toverthe5#members>=#):theselecteddirectiondoesnotbyitselfgivetheuphierarchy"
     },
     {
       "exact_formula_ids": [
@@ -2087585,6 +2087905,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5ecfa32134f6760767b81a394e223ccba7ee9fed7efbbe5ddc46d2d267338faa",
       "structural_formula": "direction=(#,(v_u[#]*inv)"
+    },
+    {
+      "exact_formula_ids": [
+        "e980363f1e07c0d205788ffbb97c5806e077cd8ee1ab36a906fbe60bcb8f7284"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8ad471e07b6c917cebe9f51f0b690304832cf4926a9b8d59359aacdd686efc2d",
+      "structural_formula": "directionminimisingC_G(logt*=-kappa/(#r)#/#-C_G/#).Itreportedanintermediate-magicwitnessanda"
     },
     {
       "exact_formula_ids": [
@@ -2141577,6 +2141905,14 @@
       "exact_member_count": 1,
       "structural_family_id": "52f44a5d125d9b73318adfd686124ac2bf1d8df9779711c1ef1d146c575981d1",
       "structural_formula": "ofmassgap>#in4DSU(N)pureYang-Mills"
+    },
+    {
+      "exact_formula_ids": [
+        "19d83da4562e20ab8b111cea07440fa318469071a580310f093b865565324ccc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "26821a9234c1eeafad1a40ef65ffe71c0e48e204d30ca4e633fdfd74e852c21a",
+      "structural_formula": "oforder4,orbit5#,andunlocksm_c!=m_uwithO(#)ratios"
     },
     {
       "exact_formula_ids": [
@@ -2201313,6 +2201649,14 @@
     },
     {
       "exact_formula_ids": [
+        "ad0439214fff782a66ee8257c77675c966e45741aef54fa24402ba3f8554da07"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f532ea47d9322bb1b2ec9781125d40e0ae6014560fbcb8e00dde95fdf92360e9",
+      "structural_formula": "selectorV_r=F+rGopensthe2#zeromodeswithtotalslope8andafiniteangularcoefficientC_G(u)dependingon"
+    },
+    {
+      "exact_formula_ids": [
         "a240f20938ff0f1cdd59aa27ff1a5248b760b3ca1ee5a03d699b6d298e39792f"
       ],
       "exact_member_count": 1,
@@ -2243104,20 +2243448,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86915162,
-    "exact_formula_families": 60530,
-    "files_scanned": 11907,
-    "formula_occurrences": 66484,
+    "bytes_scanned": 86923351,
+    "exact_formula_families": 60539,
+    "files_scanned": 11909,
+    "formula_occurrences": 66495,
     "status_occurrences": {
       "certified_or_theorem": 4854,
       "killed_or_retracted": 1574,
       "open_or_conditional": 2159,
       "preregistered": 32,
       "retrospective_fit": 5117,
-      "unclassified": 52748
+      "unclassified": 52759
     },
-    "structural_families": 58916
+    "structural_families": 58925
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "a3c7bafaece50b623707ac834158ca6e1659b5b802a43b68238aea5148903e9a"
+  "universe_sha256": "421309738a88ef93774e3b46f2f70e07df85114536acd04d1348def4ad00490c"
 }
