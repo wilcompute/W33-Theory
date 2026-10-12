@@ -231676,6 +231676,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "10ddc83b5267a7893daed9321de02210244ac96e91b9443c0448c13214c8e923",
+      "normalized_formula": "#Pass11930:thefixed-point-avoidingHiggsrealisesthetheta-zerolaw\u2014intheWeinbergchannel,aninvertedneutrinospectrumwithm3\u22480",
+      "numeric_literals": [
+        "0",
+        "1930"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md",
+          "raw": "# Pass 11930: the fixed-point-avoiding Higgs realises the theta-zero law \u2014 in the Weinberg channel, an inverted neutrino spectrum with m\u2083 \u2248 0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "f0bcf64b5d83d29ac291c0ac30e50644514fd385bdabc135742c2460a62fd345",
+      "structural_formula": "#Pass1#:thefixed-point-avoidingHiggsrealisesthetheta-zerolaw\u2014intheWeinbergchannel,aninvertedneutrinospectrumwithm3\u2248#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4e4d9d61d55bb2d29981067923d83108f2106b310299dab74f495b265d9df148",
       "normalized_formula": "#Pass356:CSSDistanced=q+1\u2014TheLowerBoundArgument",
       "numeric_literals": [
@@ -265445,6 +265473,35 @@
       },
       "structural_family_id": "2991b59c67bd3397d7a29b18ee80e6a32e580f91758aaed548e7ff83ab0e2a9b",
       "structural_formula": "#negativefermionsupertraceweighttothesameF;y=#vsy=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2524e674769214ddb04e66bcc9d50a2a2af6c711f758468feb06d8022a34bd0e",
+      "normalized_formula": "#neutrinoreading:invertedordering,Dm2_21/|Dm2_32|=0.0305~2deltawithdelta=1-m2/m1=aeps",
+      "numeric_literals": [
+        "0.0305",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 91,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "# neutrino reading: inverted ordering, Dm2_21/|Dm2_32| = 0.0305 ~ 2 delta with delta = 1 - m2/m1 = a eps",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "47851d095bec9b34d58de82a269fec46eed12eb89a272e299535495ddff0f11b",
+      "structural_formula": "#neutrinoreading:invertedordering,Dm2_2#/|Dm2_3#|=#~#deltawithdelta=#-m2/m1=aeps"
     },
     {
       "file_count": 1,
@@ -353063,6 +353120,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "11157fa87213b75781d5ceafb55c38bfc6d665743a92f594c2bc47c7027ec413",
+      "normalized_formula": "*^Effectivemass.^Theneutrinolessdouble-betaeffectivemasswouldbem_\u03b2\u03b2\u224815\u201350meV",
+      "numeric_literals": [
+        "15",
+        "50"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 51,
+          "path": "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md",
+          "raw": "* **Effective mass.** The neutrinoless double-beta effective mass would be m_\u03b2\u03b2 \u2248 15\u201350 meV.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "12c647e67881244d00789af2b937c6aed26aef8fbc48791753fa037298909fd0",
+      "structural_formula": "*^Effectivemass.^Theneutrinolessdouble-betaeffectivemasswouldbem_\u03b2\u03b2\u2248#\u2013#meV"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1f96381fd12b833566aa58ea65eab7c0415cd83015c55d36858cb9b42441275c",
       "normalized_formula": "*^Families=copies.^TheYukawamatrixisM_ij=\u03a3_k\u03b5_ijkh_k.Itisantisymmetric,withsingularvalues^(|h|,|h|,0)^:adegeneratepairandamasslessfamily",
       "numeric_literals": [
@@ -388547,7 +388632,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1567,
+          "line": 1569,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -405844,6 +405929,35 @@
       },
       "structural_family_id": "00ec66379a01701d9a931c3c947d79fd7d7f569cd89e982e9e06e75eece03a75",
       "structural_formula": "#.Delta_j:=kappa_j-kappa_{j-#}=sum_i[min(a_i,j)-min(a_i,j-#)]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7403644d8d5b73b0411703fba28f70f26c2169a077bb40ac81f3eda2bd10c6cc",
+      "normalized_formula": "2.EVERYHiggsinthatspacegivestheYukawaspectrum(1,1,0)exactlyatOmega=w(checkedonrandomcombinations)",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "2. EVERY Higgs in that space gives the Yukawa spectrum (1, 1, 0) exactly at Omega = w (checked on random combinations):",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "21ce7a35911a3eae0a780e31356eaf6aa74644ebd1ca6d35c572a392363479bf",
+      "structural_formula": "#.EVERYHiggsinthatspacegivestheYukawaspectrum(#,#,#)exactlyatOmega=w(checkedonrandomcombinations)"
     },
     {
       "file_count": 1,
@@ -697071,6 +697185,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0f1246b6856c93244bae1d9564ec26136acbbbec9b773e17ac65f1b026698e18",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11930_fixed_point_avoiding_higgs.json\"",
+      "numeric_literals": [
+        "1930",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 35,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11930_fixed_point_avoiding_higgs.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "221718ab2d0da908d75cac49e76003dec0b3367f44ff737423f99d61140c2c3d",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_fixed_point_avoiding_higgs.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "aab37f992baf2cd5bed12119ac57d7f8a1df356323b0ea424c4de10088e60593",
       "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass1193_s5_a5_coset_bridge.json\"",
       "numeric_literals": [
@@ -958574,7 +958716,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1572,
+          "line": 1574,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -976299,6 +976441,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b69fd0e17048f0279afbf655005631aedac83dd47412266a839673bd6307a179",
+      "normalized_formula": "\\varepsilon\u22480.02",
+      "numeric_literals": [
+        "0.02"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1557,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "\\varepsilon\\approx0.02",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "3ed5f853c3e9dba24d92ba9078f3071d1d7407973bec5f5647e05fa1197d8bea",
+      "structural_formula": "\\varepsilon\u2248#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f32069c1a5582d79649ec07fc63439348b5220417500d94d7d138c4cf8c4fcfd",
       "normalized_formula": "\\varphi(9)=6",
       "numeric_literals": [
@@ -984883,6 +985052,41 @@
       },
       "structural_family_id": "3a9fe8be169f100a823a6aead9925f60bc75e728a62569a9e09be878c2e13a19",
       "structural_formula": "^Nonewsmallercoverwasfound.^Thesefailuresare^not^mathematicalnonexistenceclaims.Inparticularthep=#candidateisnearfeasiblebutstillFAILStoeliminateeight-cycles,soDONOTpublishdistance1#forp1#.Onlypriordegree1#remainsacertifiedexactgirth1#cover.Nogirth1#coverproducedeither"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e88584f7658b469bae35130a7e5fc4eddafda9d0c67ca39a468dd2b5529877c9",
+      "normalized_formula": "^Numbers.^Matching\u0394m221/|\u0394m232|\u22480.031fixes\u03b5\u22480.02\u20130.05andthengivesm3/m1\u22483\u00b710\u22124\u20132\u00b710\u22123.Form1\u22480.05eV",
+      "numeric_literals": [
+        "0.02",
+        "0.031",
+        "0.05",
+        "10",
+        "2",
+        "21",
+        "3",
+        "32",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md",
+          "raw": "**Numbers.** Matching \u0394m\u00b2\u2082\u2081/|\u0394m\u00b2\u2083\u2082| \u2248 0.031 fixes \u03b5 \u2248 0.02\u20130.05 and then gives m\u2083/m\u2081 \u2248 3\u00b710\u207b\u2074 \u2013 2\u00b710\u207b\u00b3. For m\u2081 \u2248 0.05 eV",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4b21c0b84e29db564422b426c8bdc5d30136ee4eb2bda70514e10b7a6a420592",
+      "structural_formula": "^Numbers.^Matching\u0394m2#/|\u0394m2#|\u2248#fixes\u03b5\u2248#\u2013#andthengivesm3/m1\u2248#\u00b7#\u2212#\u2013#\u00b7#\u2212#.Form1\u2248#eV"
     },
     {
       "file_count": 1,
@@ -1151515,6 +1151719,35 @@
       },
       "structural_family_id": "84e4c227097dc90974085c01352e1b305219fb22bad4f62e112235b7cb0cdb5c",
       "structural_formula": "current_norm_sq=sum(x^#forxinr8)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2992ba0ef5b903a132e133f63cd0d658a7d8327ff28e333311320ba688bec9b7",
+      "normalized_formula": "currentglobalfits,sothereadingisfalsifiable(JUNO,DUNE,0nu-beta-betaatm_bb~15-50meV)",
+      "numeric_literals": [
+        "-50",
+        "0",
+        "15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "current global fits, so the reading is falsifiable (JUNO, DUNE, 0nu-beta-beta at m_bb ~ 15-50 meV).",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "4704434124f9f7ba086cd6ffb677b163cc9010dc18567a45dbcbb3b0898381e8",
+      "structural_formula": "currentglobalfits,sothereadingisfalsifiable(JUNO,DUNE,#nu-beta-betaatm_bb~##meV)"
     },
     {
       "file_count": 1,
@@ -1318994,6 +1319227,77 @@
       },
       "structural_family_id": "20c6ff37f9aec6de932cda0dcc562883a74890f242fecf3294bf5cff0c40f67c",
       "structural_formula": "m_3(x)=\\sum_ee^#x_e,\\qquadm_5(x)=\\sum_ee^#x_e"
+    },
+    {
+      "file_count": 2,
+      "formula_id": "0a15e79bdac0af46af10d769b9a0e340ca1843d421325fca48fd346065c4f3b3",
+      "normalized_formula": "m_3/m_1~10^{-3}",
+      "numeric_literals": [
+        "-3",
+        "10"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex",
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 565,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "m_3/m_1\\sim10^{-3}",
+          "status": "open_or_conditional"
+        },
+        {
+          "category": "inline_math",
+          "line": 1557,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "m_3/m_1\\sim10^{-3}",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 2
+      },
+      "structural_family_id": "09c8c7128dd74889e249bba33d60078d9f7015188e2721d423169d10d6d19a9d",
+      "structural_formula": "m_3/m_1~#^{#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "775204ca1ce68d11a0e44afff0a7dacb18ef953bc9e8c2bcd07d455eb37c7990",
+      "normalized_formula": "m_3/m_1~eps^2:matchingDm2_21/|Dm2_32|~0.03fixeseps~0.02-0.05andgivesm_3~3e-4-2e-3m_1(~2e-5-1e-4eV)",
+      "numeric_literals": [
+        "-0.05",
+        "-1e-4",
+        "-2e-3",
+        "0.02",
+        "0.03",
+        "1",
+        "2",
+        "2e-5",
+        "3e-4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "m_3/m_1 ~ eps^2: matching Dm2_21/|Dm2_32| ~ 0.03 fixes eps ~ 0.02-0.05 and gives m_3 ~ 3e-4 - 2e-3 m_1 (~2e-5 - 1e-4 eV).",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "b20e315f0c415ae0ef6da3263c2be380b6966e532bd5eae8147e07b18c3b403e",
+      "structural_formula": "m_3/m_1~eps^#:matchingDm2_2#/|Dm2_3#|~#fixeseps~##andgivesm_3~##m_1(~##eV)"
     },
     {
       "file_count": 1,
@@ -1538484,6 +1538788,31 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c389722a1765d5533d60398f3f353f10d2d53110a6cfcfee7a527a374e8c2a1c",
+      "normalized_formula": "projector|psi^H(p)><psi^H(p)|.Higgsmodesvanishingatall9fixedpointsareuntouchedbyeveryblow-up,whatever",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "projector |psi^H(p)><psi^H(p)|. Higgs modes vanishing at all 9 fixed points are untouched by every blow-up, whatever",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c389722a1765d5533d60398f3f353f10d2d53110a6cfcfee7a527a374e8c2a1c",
+      "structural_formula": "projector|psi^H(p)><psi^H(p)|.Higgsmodesvanishingatall9fixedpointsareuntouchedbyeveryblow-up,whatever"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cc9c98de17278793a0a2f6ff8b5495b15cea3babf6c3b4fe21399edfc72b7814",
       "normalized_formula": "promotedinternalgauge-packagerank.Atthesametime<code>det(2I+J)=576=24<sup>2</sup></code>,so",
       "numeric_literals": [
@@ -1548819,7 +1549148,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1568,
+          "line": 1570,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1578485,6 +1578814,33 @@
       },
       "structural_family_id": "ec921f4340c741254c4b5b102e9916f2a1ed399bb4d39e7f7f2d7e077ad72b35",
       "structural_formula": "res=dict(pass_id=#,clifford_projective_order=len(G),nonconstant_invariants_by_bidegree=ranks,orbits=orbits"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "435318b2fc842c1c05f0061ec7a41df06e3e6dbf33a8633b5ec53f249c3b8a70",
+      "normalized_formula": "res=dict(pass_id=11930,fixed_points=len(fixed_points()),up=up,weinberg=nu,down=dn)",
+      "numeric_literals": [
+        "11930"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 90,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "res = dict(pass_id=11930, fixed_points=len(fixed_points()), up=up, weinberg=nu, down=dn)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2754dc7e46b591b83ad1b07c78f98a1c743bf210cb2b8d15c0bb530013f14341",
+      "structural_formula": "res=dict(pass_id=#,fixed_points=len(fixed_points()),up=up,weinberg=nu,down=dn)"
     },
     {
       "file_count": 1,
@@ -1635398,6 +1635754,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6f7dc7b3bd987d78bc85d0eec9c26cdde2aa8d7486c7e4157a5908251e43f78d",
+      "normalized_formula": "spacegivestheYukawaspectrum^(1,1,0)exactly^at\u03a9=\u03c9,checkedonrandomcombinationsto10\u22129.Thatisthe",
+      "numeric_literals": [
+        "0",
+        "1",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md",
+          "raw": "space gives the Yukawa spectrum **(1, 1, 0) exactly** at \u03a9 = \u03c9, checked on random combinations to 10\u207b\u2079. That is the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5cbda1d89bfcfb8970259ba2d9be9ac14e05153dada99cbb12f07e4e03fd52b1",
+      "structural_formula": "spacegivestheYukawaspectrum^(#,#,#)exactly^at\u03a9=\u03c9,checkedonrandomcombinationsto1#\u2212#.Thatisthe"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e7b3808c9c055d0df5bfc787886184c21fd0e7d5856bea369649f0e16103c114",
       "normalized_formula": "spaces[str(target)]={'dimension':int(Q.shape[1]),'blocks':[{k:vfork,vinb.items()ifk!='basis'}forbinblocks],'equal_dimension_mixing':mixing}",
       "numeric_literals": [
@@ -1662051,6 +1662436,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1913270775ad58fb4b43257dec14613e24cc72790fd5736586e8c57cc67f0ac3",
+      "normalized_formula": "thatism3\u22482\u00b710\u22125\u201310\u22124eV.Thespreadcomesfromtheunfixeddirectioninsidethe4-dimensionalspace",
+      "numeric_literals": [
+        "10",
+        "2",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/PASS11930_FIXED_POINT_AVOIDING_HIGGS.md",
+          "raw": "that is m\u2083 \u2248 2\u00b710\u207b\u2075 \u2013 10\u207b\u2074 eV. The spread comes from the unfixed direction inside the 4-dimensional space.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "cfffa548ebff0df6e4f3a6bf5cd2b038161ed3b84a5bd87dd73c40160ca424eb",
+      "structural_formula": "thatism3\u2248#\u00b7#\u2212#\u2013#\u2212#eV.Thespreadcomesfromtheunfixeddirectioninsidethe4-dimensionalspace"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9070d41309fb216e0a06ac59e7269a8e7a47ce67e148f93a18cf55537b34f021",
       "normalized_formula": "thatmoonshinerelation,notasaWitting/cyclotomicinvariant.Soalpha=137is",
       "numeric_literals": [
@@ -1678448,6 +1678863,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bc9d0dfc96a26ea5e679574d906f8fedbe6356ef4f8bd6465bdf38648634dc71",
+      "normalized_formula": "theta_zero_law_exact_at_w=all(max(max(a,b)fora,binc[\"at_w\"])<1e-9forcin(up,nu))",
+      "numeric_literals": [
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 101,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "theta_zero_law_exact_at_w=all(max(max(a, b) for a, b in c[\"at_w\"]) < 1e-9 for c in (up, nu)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d105278968b9079dda6f052a476a5a4fa2794c72390441fb66eaf32889467de6",
+      "structural_formula": "theta_zero_law_exact_at_w=all(max(max(a,b)fora,binc[\"at_w\"])<#forcin(up,nu))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bd4fd8bed1a9e77c74b1fa28328707984c019098cb48f1ea12fd8765275f711f",
       "normalized_formula": "theta_zero_law_physical=all(z[0]<1e-10andabs(z[1]-z[2])<1e-10forzinout[\"theta_zero_points\"])",
       "numeric_literals": [
@@ -1691861,6 +1692303,35 @@
       },
       "structural_family_id": "fdbc458652aab8990c4b2f92e16ca880b7c0c9413954bb1a4d92a3e48ab56c93",
       "structural_formula": "up=yukawas(Ts[#],A2,A2)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7dce69fcc112159b27dc46e2d34c8d31717301d4372f23902f4d406dbfc3d110",
+      "normalized_formula": "up_and_weinberg_avoiding_space_4dim_charge2=all(c[\"fixed_point_rank\"]=8andc[\"avoiding_dim\"]=4andc[\"charges\"]=[2,2,2,2]",
+      "numeric_literals": [
+        "2",
+        "4",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11930_fixed_point_avoiding_higgs.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/w33_pass11930_fixed_point_avoiding_higgs.py",
+          "raw": "up_and_weinberg_avoiding_space_4dim_charge2=all(c[\"fixed_point_rank\"] == 8 and c[\"avoiding_dim\"] == 4 and c[\"charges\"] == [2, 2, 2, 2]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4c1d44ba9507bbbfb59b6136a4254414405b02fc21fc7c59b1e51b860c4af30a",
+      "structural_formula": "up_and_weinberg_avoiding_space_4dim_charge2=all(c[\"fixed_point_rank\"]=#andc[\"avoiding_dim\"]=#andc[\"charges\"]=[#,#,#,#]"
     },
     {
       "file_count": 1,
@@ -1768200,9 +1768671,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T21:38:15-04:00",
+  "frozen_at": "2026-10-11T22:03:23-04:00",
   "pass": 398,
-  "repository_head": "7221791c0dd4b98eb3dbb6fa718d737c6fbd9c0a",
+  "repository_head": "3bcaa2a68af35241219da6e2f8a26ddee394c245",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1826852,6 +1827323,14 @@
     },
     {
       "exact_formula_ids": [
+        "7403644d8d5b73b0411703fba28f70f26c2169a077bb40ac81f3eda2bd10c6cc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "21ce7a35911a3eae0a780e31356eaf6aa74644ebd1ca6d35c572a392363479bf",
+      "structural_formula": "#.EVERYHiggsinthatspacegivestheYukawaspectrum(#,#,#)exactlyatOmega=w(checkedonrandomcombinations)"
+    },
+    {
+      "exact_formula_ids": [
         "eee116dc61abb1ee92e4bdd8ff8414b2f74191e6b5f4257af8116bdae6606beb"
       ],
       "exact_member_count": 1,
@@ -1847918,6 +1848397,14 @@
     },
     {
       "exact_formula_ids": [
+        "10ddc83b5267a7893daed9321de02210244ac96e91b9443c0448c13214c8e923"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f0bcf64b5d83d29ac291c0ac30e50644514fd385bdabc135742c2460a62fd345",
+      "structural_formula": "#Pass1#:thefixed-point-avoidingHiggsrealisesthetheta-zerolaw\u2014intheWeinbergchannel,aninvertedneutrinospectrumwithm3\u2248#"
+    },
+    {
+      "exact_formula_ids": [
         "7ea5e9b1e29a1601116244d476a5557716ed6ec5892d039bb9b9c2552b3c130e"
       ],
       "exact_member_count": 1,
@@ -1861158,6 +1861645,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2991b59c67bd3397d7a29b18ee80e6a32e580f91758aaed548e7ff83ab0e2a9b",
       "structural_formula": "#negativefermionsupertraceweighttothesameF;y=#vsy=#"
+    },
+    {
+      "exact_formula_ids": [
+        "2524e674769214ddb04e66bcc9d50a2a2af6c711f758468feb06d8022a34bd0e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "47851d095bec9b34d58de82a269fec46eed12eb89a272e299535495ddff0f11b",
+      "structural_formula": "#neutrinoreading:invertedordering,Dm2_2#/|Dm2_3#|=#~#deltawithdelta=#-m2/m1=aeps"
     },
     {
       "exact_formula_ids": [
@@ -1886293,6 +1886788,14 @@
       "exact_member_count": 1,
       "structural_family_id": "17bd6399477c473ed435f1f4a1d052a4552d7c62c95a0fbd92df4536c26e823b",
       "structural_formula": "*^Eachtwisted9\u0304^=threeinequivalentanti-triplets(commutantdimension3)"
+    },
+    {
+      "exact_formula_ids": [
+        "11157fa87213b75781d5ceafb55c38bfc6d665743a92f594c2bc47c7027ec413"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "12c647e67881244d00789af2b937c6aed26aef8fbc48791753fa037298909fd0",
+      "structural_formula": "*^Effectivemass.^Theneutrinolessdouble-betaeffectivemasswouldbem_\u03b2\u03b2\u2248#\u2013#meV"
     },
     {
       "exact_formula_ids": [
@@ -1955788,6 +1956291,14 @@
       "exact_member_count": 1,
       "structural_family_id": "50058e11379bf188e4f7fd1f4312674a902e23817078408e901a6e16d2c8fa98",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_filtration_uniform_in_p.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "0f1246b6856c93244bae1d9564ec26136acbbbec9b773e17ac65f1b026698e18"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "221718ab2d0da908d75cac49e76003dec0b3367f44ff737423f99d61140c2c3d",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_fixed_point_avoiding_higgs.json\""
     },
     {
       "exact_formula_ids": [
@@ -2028826,6 +2029337,14 @@
     },
     {
       "exact_formula_ids": [
+        "b69fd0e17048f0279afbf655005631aedac83dd47412266a839673bd6307a179"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3ed5f853c3e9dba24d92ba9078f3071d1d7407973bec5f5647e05fa1197d8bea",
+      "structural_formula": "\\varepsilon\u2248#"
+    },
+    {
+      "exact_formula_ids": [
         "f32069c1a5582d79649ec07fc63439348b5220417500d94d7d138c4cf8c4fcfd"
       ],
       "exact_member_count": 1,
@@ -2030957,6 +2031476,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3a9fe8be169f100a823a6aead9925f60bc75e728a62569a9e09be878c2e13a19",
       "structural_formula": "^Nonewsmallercoverwasfound.^Thesefailuresare^not^mathematicalnonexistenceclaims.Inparticularthep=#candidateisnearfeasiblebutstillFAILStoeliminateeight-cycles,soDONOTpublishdistance1#forp1#.Onlypriordegree1#remainsacertifiedexactgirth1#cover.Nogirth1#coverproducedeither"
+    },
+    {
+      "exact_formula_ids": [
+        "e88584f7658b469bae35130a7e5fc4eddafda9d0c67ca39a468dd2b5529877c9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4b21c0b84e29db564422b426c8bdc5d30136ee4eb2bda70514e10b7a6a420592",
+      "structural_formula": "^Numbers.^Matching\u0394m2#/|\u0394m2#|\u2248#fixes\u03b5\u2248#\u2013#andthengivesm3/m1\u2248#\u00b7#\u2212#\u2013#\u00b7#\u2212#.Form1\u2248#eV"
     },
     {
       "exact_formula_ids": [
@@ -2076581,6 +2077108,14 @@
     },
     {
       "exact_formula_ids": [
+        "2992ba0ef5b903a132e133f63cd0d658a7d8327ff28e333311320ba688bec9b7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4704434124f9f7ba086cd6ffb677b163cc9010dc18567a45dbcbb3b0898381e8",
+      "structural_formula": "currentglobalfits,sothereadingisfalsifiable(JUNO,DUNE,#nu-beta-betaatm_bb~##meV)"
+    },
+    {
+      "exact_formula_ids": [
         "55281170eeed36e1e7a9d8cfb9d9d8d7089eea8b82763df63c15dec913958b77"
       ],
       "exact_member_count": 1,
@@ -2121780,6 +2122315,22 @@
       "exact_member_count": 1,
       "structural_family_id": "20c6ff37f9aec6de932cda0dcc562883a74890f242fecf3294bf5cff0c40f67c",
       "structural_formula": "m_3(x)=\\sum_ee^#x_e,\\qquadm_5(x)=\\sum_ee^#x_e"
+    },
+    {
+      "exact_formula_ids": [
+        "0a15e79bdac0af46af10d769b9a0e340ca1843d421325fca48fd346065c4f3b3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "09c8c7128dd74889e249bba33d60078d9f7015188e2721d423169d10d6d19a9d",
+      "structural_formula": "m_3/m_1~#^{#}"
+    },
+    {
+      "exact_formula_ids": [
+        "775204ca1ce68d11a0e44afff0a7dacb18ef953bc9e8c2bcd07d455eb37c7990"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b20e315f0c415ae0ef6da3263c2be380b6966e532bd5eae8147e07b18c3b403e",
+      "structural_formula": "m_3/m_1~eps^#:matchingDm2_2#/|Dm2_3#|~#fixeseps~##andgivesm_3~##m_1(~##eV)"
     },
     {
       "exact_formula_ids": [
@@ -2181873,6 +2182424,14 @@
     },
     {
       "exact_formula_ids": [
+        "c389722a1765d5533d60398f3f353f10d2d53110a6cfcfee7a527a374e8c2a1c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c389722a1765d5533d60398f3f353f10d2d53110a6cfcfee7a527a374e8c2a1c",
+      "structural_formula": "projector|psi^H(p)><psi^H(p)|.Higgsmodesvanishingatall9fixedpointsareuntouchedbyeveryblow-up,whatever"
+    },
+    {
+      "exact_formula_ids": [
         "cc9c98de17278793a0a2f6ff8b5495b15cea3babf6c3b4fe21399edfc72b7814"
       ],
       "exact_member_count": 1,
@@ -2190325,6 +2190884,14 @@
       "exact_member_count": 1,
       "structural_family_id": "001cdea5d79238879dbe11e71fbee443badb0ea7eb9c8c1567970144f00826ed",
       "structural_formula": "res=dict(pass_id=#,family_torus_quantum_numbers_zero=zero,tachyon_state_counts=counts"
+    },
+    {
+      "exact_formula_ids": [
+        "435318b2fc842c1c05f0061ec7a41df06e3e6dbf33a8633b5ec53f249c3b8a70"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2754dc7e46b591b83ad1b07c78f98a1c743bf210cb2b8d15c0bb530013f14341",
+      "structural_formula": "res=dict(pass_id=#,fixed_points=len(fixed_points()),up=up,weinberg=nu,down=dn)"
     },
     {
       "exact_formula_ids": [
@@ -2205724,6 +2206291,14 @@
     },
     {
       "exact_formula_ids": [
+        "6f7dc7b3bd987d78bc85d0eec9c26cdde2aa8d7486c7e4157a5908251e43f78d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5cbda1d89bfcfb8970259ba2d9be9ac14e05153dada99cbb12f07e4e03fd52b1",
+      "structural_formula": "spacegivestheYukawaspectrum^(#,#,#)exactly^at\u03a9=\u03c9,checkedonrandomcombinationsto1#\u2212#.Thatisthe"
+    },
+    {
+      "exact_formula_ids": [
         "e7b3808c9c055d0df5bfc787886184c21fd0e7d5856bea369649f0e16103c114"
       ],
       "exact_member_count": 1,
@@ -2212963,6 +2213538,14 @@
     },
     {
       "exact_formula_ids": [
+        "1913270775ad58fb4b43257dec14613e24cc72790fd5736586e8c57cc67f0ac3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cfffa548ebff0df6e4f3a6bf5cd2b038161ed3b84a5bd87dd73c40160ca424eb",
+      "structural_formula": "thatism3\u2248#\u00b7#\u2212#\u2013#\u2212#eV.Thespreadcomesfromtheunfixeddirectioninsidethe4-dimensionalspace"
+    },
+    {
+      "exact_formula_ids": [
         "9070d41309fb216e0a06ac59e7269a8e7a47ce67e148f93a18cf55537b34f021"
       ],
       "exact_member_count": 1,
@@ -2217435,6 +2218018,14 @@
     },
     {
       "exact_formula_ids": [
+        "bc9d0dfc96a26ea5e679574d906f8fedbe6356ef4f8bd6465bdf38648634dc71"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d105278968b9079dda6f052a476a5a4fa2794c72390441fb66eaf32889467de6",
+      "structural_formula": "theta_zero_law_exact_at_w=all(max(max(a,b)fora,binc[\"at_w\"])<#forcin(up,nu))"
+    },
+    {
+      "exact_formula_ids": [
         "bd4fd8bed1a9e77c74b1fa28328707984c019098cb48f1ea12fd8765275f711f"
       ],
       "exact_member_count": 1,
@@ -2221133,6 +2221724,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fdbc458652aab8990c4b2f92e16ca880b7c0c9413954bb1a4d92a3e48ab56c93",
       "structural_formula": "up=yukawas(Ts[#],A2,A2)"
+    },
+    {
+      "exact_formula_ids": [
+        "7dce69fcc112159b27dc46e2d34c8d31717301d4372f23902f4d406dbfc3d110"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4c1d44ba9507bbbfb59b6136a4254414405b02fc21fc7c59b1e51b860c4af30a",
+      "structural_formula": "up_and_weinberg_avoiding_space_4dim_charge2=all(c[\"fixed_point_rank\"]=#andc[\"avoiding_dim\"]=#andc[\"charges\"]=[#,#,#,#]"
     },
     {
       "exact_formula_ids": [
@@ -2240669,20 +2241268,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86875547,
-    "exact_formula_families": 60464,
-    "files_scanned": 11897,
-    "formula_occurrences": 66415,
+    "bytes_scanned": 86886251,
+    "exact_formula_families": 60480,
+    "files_scanned": 11899,
+    "formula_occurrences": 66432,
     "status_occurrences": {
-      "certified_or_theorem": 4851,
+      "certified_or_theorem": 4852,
       "killed_or_retracted": 1569,
-      "open_or_conditional": 2147,
+      "open_or_conditional": 2154,
       "preregistered": 32,
       "retrospective_fit": 5114,
-      "unclassified": 52702
+      "unclassified": 52711
     },
-    "structural_families": 58851
+    "structural_families": 58867
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "62ea5296e8b840e94525f49477d38ceb77f32405ebb2380cc325cf7b2e6da275"
+  "universe_sha256": "466d6560eb41965b8ee77264a22593a25039387b141ed81138e90d83a623f774"
 }
