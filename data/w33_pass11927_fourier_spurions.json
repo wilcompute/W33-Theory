@@ -1,0 +1,54 @@
+{
+  "pass_id": 11927,
+  "results": {
+    "A2": {
+      "modes": 540,
+      "counts": {
+        "N5": 62,
+        "N10": 70,
+        "other": 408
+      },
+      "unclassified_small": 84,
+      "unclassified_large": 0,
+      "residue_classes": 80,
+      "label_consistent_mod3": true,
+      "additive_pairs_tested": 1574,
+      "additive": true,
+      "gaussian_formfactor_r2": 1.0
+    },
+    "114": {
+      "modes": 414,
+      "counts": {
+        "N5": 42,
+        "N10": 48,
+        "other": 324
+      },
+      "unclassified_small": 210,
+      "unclassified_large": 0,
+      "residue_classes": 80,
+      "label_consistent_mod3": true,
+      "additive_pairs_tested": 1574,
+      "additive": true,
+      "gaussian_formfactor_r2": 1.0
+    }
+  },
+  "checks": {
+    "A2_pure_81_from_N5": true,
+    "A2_pure_18_from_N10": true,
+    "A2_generic_modes_are_88": true,
+    "A2_all_8_paulis_each": true,
+    "A2_label_is_function_of_k_mod3": true,
+    "A2_label_additive": true,
+    "A2_unclassified_only_suppressed": true,
+    "A2_formfactor_gaussian": true,
+    "114_pure_81_from_N5": true,
+    "114_pure_18_from_N10": true,
+    "114_generic_modes_are_88": true,
+    "114_all_8_paulis_each": true,
+    "114_label_is_function_of_k_mod3": true,
+    "114_label_additive": true,
+    "114_unclassified_only_suppressed": true,
+    "114_formfactor_gaussian": true
+  },
+  "all_checks_pass": true
+}
