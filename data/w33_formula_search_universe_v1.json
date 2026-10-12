@@ -342007,6 +342007,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0dba1db464f78dde47529ba60c053f294356a4b17a4663e8dd248ce167a0df1c",
+      "normalized_formula": "(m_c/m_t~4e-3,m_s/m_b~0.02,m_mu/m_tau~0.06).Theinverted-orderingpredictionofPass11933thereforeneedsa",
+      "numeric_literals": [
+        "0.02",
+        "0.06",
+        "1933",
+        "4e-3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "(m_c/m_t ~ 4e-3, m_s/m_b ~ 0.02, m_mu/m_tau ~ 0.06). The inverted-ordering prediction of Pass 11933 therefore needs a",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ddd7f33e0b0c81564dec320d317701708f383cb90ec2d0e472a836499c55c392",
+      "structural_formula": "(m_c/m_t~#,m_s/m_b~#,m_mu/m_tau~#).Theinverted-orderingpredictionofPass1#thereforeneedsa"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4e5fd01f5da6c97ba9eb19e6ddec03f5b16d874e3542829f9d4740a79ac223ad",
       "normalized_formula": "(m_c/m_t\u22484\u00b710\u22123,m_u/m_c\u22482\u00b710\u22123)",
       "numeric_literals": [
@@ -352476,6 +352506,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "234fd0ab7f0b3f76c152c8a04ded80567952d0f6857784c876a361e3c198fa33",
+      "normalized_formula": "*Weinberg(L.L,2A2'):(1,1,0)->invertedordering(Pass11933)",
+      "numeric_literals": [
+        "0",
+        "1",
+        "1933",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "* Weinberg (L.L, 2A2'): (1,1,0) -> inverted ordering (Pass 11933).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "353ca5a402ca0f94b7cbd635553f1e31d143c264262218184e836f64035940c6",
+      "structural_formula": "*Weinberg(L.L,#A2'):(#,#,#)->invertedordering(Pass1#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4a419df4bc1f4408654d659dc9752d1abbdc23e4035c1c87e3b645ef069fc103",
       "normalized_formula": "*Whenz1\u2208R_M=Im(M\u2212I)andthetwistedmoduli|\u03a3_j\u03c4_j\u03c9^{js+qj2}|areconstant(q=0),magnitudescertify",
       "numeric_literals": [
@@ -355607,6 +355667,37 @@
       },
       "structural_family_id": "111d224cf97c3887c5ad2c444705194d696b6a1ccbff4ec2009acf5ebb80534a",
       "structural_formula": "*dimC=F2#-rankoftheincidencematrix(Sastry-Sin)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3b4c086626fbdf5c27f51ef701fa06554b297337b3e80c17af1f667d1a0d90bd",
+      "normalized_formula": "*down/chargedlepton(10.5bar,H_dflux4.1):topspace1-dim,charge2->(1,1,0)atwand(1,1-O(eps^2),0)",
+      "numeric_literals": [
+        ".1",
+        "0",
+        "1",
+        "10.5",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "* down / charged lepton (10.5bar, H_d flux 4.1): top space 1-dim, charge 2 -> (1,1,0) at w and (1, 1 - O(eps^2), 0)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d3b36a9c9b83ca289fdba0fbbc1875c2b1309e2383fc5ae0442cbfcc3a4c3443",
+      "structural_formula": "*down/chargedlepton(#bar,H_dflux4#):topspace1-dim,charge2->(#,#,#)atwand(#,#-O(eps^#),#)"
     },
     {
       "file_count": 1,
@@ -543527,6 +543618,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "00eeff78d24fa745a8a3c0b648ca2f2c138d04af903fcb74c8af85e8de8a6ef9",
+      "normalized_formula": "AttheEisensteinpoint(A2dualpair,Omega=w.1),foreachYukawachanneltaketheradiativetopspaceofthe",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "At the Eisenstein point (A2 dual pair, Omega = w.1), for each Yukawa channel take the radiative top space of the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e61a4f655a9aecb20a7bfb49867018e0bfb67f46b725b2d7c249d6d3f1ede32c",
+      "structural_formula": "AttheEisensteinpoint(A2dualpair,Omega=w.#),foreachYukawachanneltaketheradiativetopspaceofthe"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8b8fb628574d37ab9de3e53a99493e1a476a315ae1a68de016a088377c6f1622",
       "normalized_formula": "AttheGUTscale(E~M_GUT~10^16GeV)",
       "numeric_literals": [
@@ -558075,6 +558193,36 @@
       },
       "structural_family_id": "c6442633f71d65cd8786f50c4b461158a39628ee11a046d2c7c2d22ecc16500a",
       "structural_formula": "CHANNEL:Lov\u00e1szTheta(G)=Phi4=#(qutritchannelcapacity)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9fe8cdd9ed19dc06dd6be5e61b0191a7ac23dcad72fb29a1729109f62b7383ff",
+      "normalized_formula": "CHANNELS={\"up\":(A2,A2,[[4,2],[2,4]]),\"down_lepton\":(A2,A2M,[[4,0],[0,4]]),\"weinberg\":(A2M,A2M,[[4,-2],[-2,4]])}",
+      "numeric_literals": [
+        "-2",
+        "0",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "CHANNELS = {\"up\": (A2, A2, [[4, 2], [2, 4]]), \"down_lepton\": (A2, A2M, [[4, 0], [0, 4]]), \"weinberg\": (A2M, A2M, [[4, -2], [-2, 4]])}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "994cdf88b2e9ef35b1e9a9f841ea7890a299069ffe345609e883dd0edb05c9a7",
+      "structural_formula": "CHANNELS={\"up\":(A2,A2,[[#,#],[#,#]]),\"down_lepton\":(A2,A2M,[[#,#],[#,#]]),\"weinberg\":(A2M,A2M,[[#,#],[#,#]])}"
     },
     {
       "file_count": 1,
@@ -697404,6 +697552,34 @@
       },
       "structural_family_id": "75fe82429517cb65c4d04dee08a375500ae624c9c098f0f0da222e412da52bd1",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_radiative_neutrino_relation.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2eb08248fb9199ecdc791031058c64b408ebdeef8b71e5da1457be4aca3cee5e",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11934_uniform_radiative_z3_fails.json\"",
+      "numeric_literals": [
+        "1934",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11934_uniform_radiative_z3_fails.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f236675932ed2d65471476bebfbc0c8b50931e0005480023db68eae6d8eb17d5",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_uniform_radiative_z3_fails.json\""
     },
     {
       "file_count": 1,
@@ -1030514,6 +1030690,35 @@
       "structural_formula": "anddet(Gram)=#,theE8Cartandeterminant.Verifiedheredirectly"
     },
     {
+      "file_count": 1,
+      "formula_id": "bf77c51f22ca204e5ed732ed92fd0ec3af5855bd64bc7a11e723bc51128e2863",
+      "normalized_formula": "anddev(res[\"channels\"][\"down_lepton\"][\"directions\"][0][\"spectra\"][\"0.0\"])<1e-9",
+      "numeric_literals": [
+        "0",
+        "0.0",
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 74,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "and dev(res[\"channels\"][\"down_lepton\"][\"directions\"][0][\"spectra\"][\"0.0\"]) < 1e-9,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "61d9de42600ef6b11b5316c6e5dd1edb76d01d0021bbc22b9ed22245a45b1a93",
+      "structural_formula": "anddev(res[\"channels\"][\"down_lepton\"][\"directions\"][#][\"spectra\"][\"#\"])<#"
+    },
+    {
       "file_count": 2,
       "formula_id": "2602f0a872305eb25cfd49d1bdfaa36ee4e19556bea39c8dd64f523797573f18",
       "normalized_formula": "anddict(distance_counts)={0:1,1:6,2:18,3:54,4:81}",
@@ -1175248,6 +1175453,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8eda356c597dc982d33d2c02d433441a2f6b49d5dc3a7c8f162b725e28d66a9d",
+      "normalized_formula": "dev=lambdas:abs(1-s[1])+s[2]",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 70,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "dev = lambda s: abs(1 - s[1]) + s[2]",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "cdbfb8a608826b30ba66b0144fd10820c57a388360eec17f3780d78e20be0745",
+      "structural_formula": "dev=lambdas:abs(#-s[#])+s[#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "db139d0b40028c86389c30bef3530ee8e2b9ee984349112dd820065de70d75d5",
       "normalized_formula": "dev=max(abs(x)forxin(B*B*B-3*B+I-(B+I)*(I+U+U*U)))",
       "numeric_literals": [
@@ -1190229,6 +1190462,65 @@
       },
       "structural_family_id": "5d806fc0e196142d7f6a883940e6a4332370cc9f49e827193f8e648733d9dfe7",
       "structural_formula": "down_lepton_agree=abs(np.log(I[\"down\"]/I[\"lept\"]))<np.log(#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "00212efd91848f55a02cd76420c5e7290fb679944d555122746c206224eb4ec5",
+      "normalized_formula": "down_lepton_heavy_pair_stays_degenerate=abs(1-res[\"channels\"][\"down_lepton\"][\"directions\"][0][\"spectra\"][\"0.01\"][1])<1e-3",
+      "numeric_literals": [
+        "0",
+        "0.01",
+        "1",
+        "1e-3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 75,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "down_lepton_heavy_pair_stays_degenerate=abs(1 - res[\"channels\"][\"down_lepton\"][\"directions\"][0][\"spectra\"][\"0.01\"][1]) < 1e-3,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "898d128d0ebc189dce3557abc946a72c466aa1235b36159c80ae3938e939ba43",
+      "structural_formula": "down_lepton_heavy_pair_stays_degenerate=abs(#-res[\"channels\"][\"down_lepton\"][\"directions\"][#][\"spectra\"][\"#\"][#])<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "36e8579d2cb86421e895d24e1818722f2c4a49c54b09ae31ee0051387e6737a8",
+      "normalized_formula": "down_lepton_top1_charge2_110=res[\"channels\"][\"down_lepton\"][\"top_dim\"]=1andlist(res[\"channels\"][\"down_lepton\"][\"symmetric_dims\"])=[2]",
+      "numeric_literals": [
+        "1",
+        "10",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 73,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "down_lepton_top1_charge2_110=res[\"channels\"][\"down_lepton\"][\"top_dim\"] == 1 and list(res[\"channels\"][\"down_lepton\"][\"symmetric_dims\"]) == [2]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4089bf787320f15e1c1f25bf501f1109aecf7c27d02eb2bbb2dad0e5b43b9814",
+      "structural_formula": "down_lepton_top1_charge2_1#=res[\"channels\"][\"down_lepton\"][\"top_dim\"]=#andlist(res[\"channels\"][\"down_lepton\"][\"symmetric_dims\"])=[#]"
     },
     {
       "file_count": 1,
@@ -1373301,6 +1373593,33 @@
       },
       "structural_family_id": "8fc842ce2e5c16fd04dc36ac36845a659dac3ad4fecb3898a41c85dc45d58040",
       "structural_formula": "near_mass_over_lambda_eta2=float(masses[#]/(lam*eta^#)),far_mass_over_1#lambda_eta4=float(masses[#]/(#*lam*eta^#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fcbabb154f1631210ba33e94dcac88e1ae91b5b2adde801d49570f75eb407d99",
+      "normalized_formula": "nearby:m_b=m_sandm_tau=m_mu,withthelightestexactlymassless(thedual-pairzeroofPass11916)",
+      "numeric_literals": [
+        "1916"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "nearby: m_b = m_s and m_tau = m_mu, with the lightest exactly massless (the dual-pair zero of Pass 11916);",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0aab83c7916684c6679a44765915b52ee822f769dd499cc039162fb719a4747f",
+      "structural_formula": "nearby:m_b=m_sandm_tau=m_mu,withthelightestexactlymassless(thedual-pairzeroofPass1#)"
     },
     {
       "file_count": 1,
@@ -1693403,6 +1693722,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "82600969017ee62ab695ea6bec04a15e11279bad88a05ddc4b7ee0a19c25a413",
+      "normalized_formula": "up_top3_and_110=res[\"channels\"][\"up\"][\"top_dim\"]=3andall(dev(d[\"spectra\"][\"0.0\"])<1e-9fordinres[\"channels\"][\"up\"][\"directions\"])",
+      "numeric_literals": [
+        "0.0",
+        "10",
+        "1e-9",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "up_top3_and_110=res[\"channels\"][\"up\"][\"top_dim\"] == 3 and all(dev(d[\"spectra\"][\"0.0\"]) < 1e-9 for d in res[\"channels\"][\"up\"][\"directions\"]),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ac71e7c70d7c52fc15a09a5179c80761c9a24577749a88e3efaa5c648afc308d",
+      "structural_formula": "up_top3_and_1#=res[\"channels\"][\"up\"][\"top_dim\"]=#andall(dev(d[\"spectra\"][\"#\"])<#fordinres[\"channels\"][\"up\"][\"directions\"])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d5614ce0591e9899af92f8538e2856d0ee98acb11426211a4f9bec78cce71a2f",
       "normalized_formula": "up_top_space_exactly_three=all(abs(q[\"top_gram_eigs\"][2]-1)<1e-9andq[\"top_gram_eigs\"][3]<0.99forqinqs)",
       "numeric_literals": [
@@ -1712539,6 +1712888,35 @@
       },
       "structural_family_id": "3ad3bd0def8bc4a41744ca47c5207efc04103979c4a0763fa1df75c0f8699214",
       "structural_formula": "weil_irreducible=w[\"commutant_dims\"]=dict(even=#,odd=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2f2c43a1d71cc192531da365664c382729a4afde71900c29040e3f1419034ec4",
+      "normalized_formula": "weinberg_110=all(dev(d[\"spectra\"][\"0.0\"])<1e-9fordinres[\"channels\"][\"weinberg\"][\"directions\"])",
+      "numeric_literals": [
+        "0.0",
+        "10",
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11934_uniform_radiative_z3_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 76,
+          "path": "analysis/w33_pass11934_uniform_radiative_z3_fails.py",
+          "raw": "weinberg_110=all(dev(d[\"spectra\"][\"0.0\"]) < 1e-9 for d in res[\"channels\"][\"weinberg\"][\"directions\"]),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "11d0e19101ebd08f06de4334aafd3a21051604b8a0bdab14d351f6bb23477913",
+      "structural_formula": "weinberg_1#=all(dev(d[\"spectra\"][\"#\"])<#fordinres[\"channels\"][\"weinberg\"][\"directions\"])"
     },
     {
       "file_count": 1,
@@ -1749157,6 +1749535,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "aaed3acc88b338feb3322f9e6a665e31ef1d2a2d798cce94017fb2c6f7a06f3b",
+      "normalized_formula": "|down/chargedleptons(10\u00b75\u0304)|H_d,flux4\u00b71|1(charge2)|1|(1,1,0)|(1,1\u2212O(\u03b52),0):m_b=m_s,m_\u03c4=m_\u03bc,lightestexactlymassless|",
+      "numeric_literals": [
+        "0",
+        "1",
+        "10",
+        "2",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11934_UNIFORM_RADIATIVE_Z3_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/PASS11934_UNIFORM_RADIATIVE_Z3_FAILS.md",
+          "raw": "| down / charged leptons (10\u00b75\u0304) | H_d, flux 4\u00b71 | 1 (charge 2) | 1 | (1, 1, 0) | (1, 1 \u2212 O(\u03b5\u00b2), 0): m_b = m_s, m_\u03c4 = m_\u03bc, lightest exactly massless |",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "a8dc9f023347b5159ba420e0170506504d80b82343f7e4ddbe13be96558b788b",
+      "structural_formula": "|down/chargedleptons(#\u00b7#\u0304)|H_d,flux4\u00b7#|#(charge2)|#|(#,#,#)|(#,#\u2212O(\u03b5#),#):m_b=m_s,m_\u03c4=m_\u03bc,lightestexactlymassless|"
+    },
+    {
+      "file_count": 1,
       "formula_id": "79cb244fc65596389ff59b112da498ec54e51d2c8c3d537424f82811d353fbb9",
       "normalized_formula": "|downvslepton|median(m_\u03bc/m_\u03c4)/(m_s/m_b)=1.00:noGeorgi\u2013Jarlskogfactor(Pass11918)|",
       "numeric_literals": [
@@ -1750182,6 +1750591,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6ebd6aceb3f046a0f816e42d1888d88318bb4d740fe496d48cf71b1c5ae8b403",
+      "normalized_formula": "|m_c/m_t|\u22484\u00b710\u22123|1|",
+      "numeric_literals": [
+        "1",
+        "10",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11934_UNIFORM_RADIATIVE_Z3_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 27,
+          "path": "analysis/PASS11934_UNIFORM_RADIATIVE_Z3_FAILS.md",
+          "raw": "| m_c/m_t | \u2248 4\u00b710\u207b\u00b3 | 1 |",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "8ec5546ac5e46e3a23227f81502c1965fcb78f81340ba96b8f29827e820760b7",
+      "structural_formula": "|m_c/m_t|\u2248#\u00b7#\u2212#|#|"
+    },
+    {
+      "file_count": 1,
       "formula_id": "20f1b87fae842b48cd4755b303f35d462a789e6a6a9b511750db8072dd845e3f",
       "normalized_formula": "|m_p=(q^2/lam)*Lambda_QCD|",
       "numeric_literals": [
@@ -1750206,6 +1750645,34 @@
       },
       "structural_family_id": "60f65a538d2a2b58636317637a39d90881b8c328e44c620c05516f5057b96ba9",
       "structural_formula": "|m_p=(q^#/lam)*Lambda_QCD|"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "493ba668214e010507aa35cf36be535ed620be813c92fe4958d02d3943a40969",
+      "normalized_formula": "|m_s/m_b|\u22480.02|\u22481|",
+      "numeric_literals": [
+        "0.02",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11934_UNIFORM_RADIATIVE_Z3_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/PASS11934_UNIFORM_RADIATIVE_Z3_FAILS.md",
+          "raw": "| m_s/m_b | \u2248 0.02 | \u2248 1 |",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "5bb1c0ce93b6244d6d4f3392c10c8134389825e662d99c4ce1d60fdc9246ef5e",
+      "structural_formula": "|m_s/m_b|\u2248#|\u2248#|"
     },
     {
       "file_count": 1,
@@ -1769647,9 +1770114,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T22:55:47-04:00",
+  "frozen_at": "2026-10-11T23:04:55-04:00",
   "pass": 398,
-  "repository_head": "fe0193728c1bb63cc3e45fd907036b183ea7c507",
+  "repository_head": "ac431b614a45e7e16e5432b2ff7e59e68b17687f",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1884757,6 +1885224,14 @@
     },
     {
       "exact_formula_ids": [
+        "0dba1db464f78dde47529ba60c053f294356a4b17a4663e8dd248ce167a0df1c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ddd7f33e0b0c81564dec320d317701708f383cb90ec2d0e472a836499c55c392",
+      "structural_formula": "(m_c/m_t~#,m_s/m_b~#,m_mu/m_tau~#).Theinverted-orderingpredictionofPass1#thereforeneedsa"
+    },
+    {
+      "exact_formula_ids": [
         "4e5fd01f5da6c97ba9eb19e6ddec03f5b16d874e3542829f9d4740a79ac223ad"
       ],
       "exact_member_count": 1,
@@ -1887599,6 +1888074,14 @@
     },
     {
       "exact_formula_ids": [
+        "234fd0ab7f0b3f76c152c8a04ded80567952d0f6857784c876a361e3c198fa33"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "353ca5a402ca0f94b7cbd635553f1e31d143c264262218184e836f64035940c6",
+      "structural_formula": "*Weinberg(L.L,#A2'):(#,#,#)->invertedordering(Pass1#)"
+    },
+    {
+      "exact_formula_ids": [
         "4a419df4bc1f4408654d659dc9752d1abbdc23e4035c1c87e3b645ef069fc103"
       ],
       "exact_member_count": 1,
@@ -1888468,6 +1888951,14 @@
       "exact_member_count": 1,
       "structural_family_id": "111d224cf97c3887c5ad2c444705194d696b6a1ccbff4ec2009acf5ebb80534a",
       "structural_formula": "*dimC=F2#-rankoftheincidencematrix(Sastry-Sin)"
+    },
+    {
+      "exact_formula_ids": [
+        "3b4c086626fbdf5c27f51ef701fa06554b297337b3e80c17af1f667d1a0d90bd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d3b36a9c9b83ca289fdba0fbbc1875c2b1309e2383fc5ae0442cbfcc3a4c3443",
+      "structural_formula": "*down/chargedlepton(#bar,H_dflux4#):topspace1-dim,charge2->(#,#,#)atwand(#,#-O(eps^#),#)"
     },
     {
       "exact_formula_ids": [
@@ -1915858,6 +1916349,14 @@
     },
     {
       "exact_formula_ids": [
+        "00eeff78d24fa745a8a3c0b648ca2f2c138d04af903fcb74c8af85e8de8a6ef9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e61a4f655a9aecb20a7bfb49867018e0bfb67f46b725b2d7c249d6d3f1ede32c",
+      "structural_formula": "AttheEisensteinpoint(A2dualpair,Omega=w.#),foreachYukawachanneltaketheradiativetopspaceofthe"
+    },
+    {
+      "exact_formula_ids": [
         "8b8fb628574d37ab9de3e53a99493e1a476a315ae1a68de016a088377c6f1622"
       ],
       "exact_member_count": 1,
@@ -1919787,6 +1920286,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c6442633f71d65cd8786f50c4b461158a39628ee11a046d2c7c2d22ecc16500a",
       "structural_formula": "CHANNEL:Lov\u00e1szTheta(G)=Phi4=#(qutritchannelcapacity)"
+    },
+    {
+      "exact_formula_ids": [
+        "9fe8cdd9ed19dc06dd6be5e61b0191a7ac23dcad72fb29a1729109f62b7383ff"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "994cdf88b2e9ef35b1e9a9f841ea7890a299069ffe345609e883dd0edb05c9a7",
+      "structural_formula": "CHANNELS={\"up\":(A2,A2,[[#,#],[#,#]]),\"down_lepton\":(A2,A2M,[[#,#],[#,#]]),\"weinberg\":(A2M,A2M,[[#,#],[#,#]])}"
     },
     {
       "exact_formula_ids": [
@@ -1957619,6 +1958126,14 @@
       "exact_member_count": 1,
       "structural_family_id": "83c4f2b738772e7b83292511d53f77d813c8005f52185ff3ebd0c8b6dd08691e",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_two_qutrit_cp_mixing.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "2eb08248fb9199ecdc791031058c64b408ebdeef8b71e5da1457be4aca3cee5e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f236675932ed2d65471476bebfbc0c8b50931e0005480023db68eae6d8eb17d5",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_uniform_radiative_z3_fails.json\""
     },
     {
       "exact_formula_ids": [
@@ -2044700,6 +2045215,14 @@
     },
     {
       "exact_formula_ids": [
+        "bf77c51f22ca204e5ed732ed92fd0ec3af5855bd64bc7a11e723bc51128e2863"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "61d9de42600ef6b11b5316c6e5dd1edb76d01d0021bbc22b9ed22245a45b1a93",
+      "structural_formula": "anddev(res[\"channels\"][\"down_lepton\"][\"directions\"][#][\"spectra\"][\"#\"])<#"
+    },
+    {
+      "exact_formula_ids": [
         "2602f0a872305eb25cfd49d1bdfaa36ee4e19556bea39c8dd64f523797573f18"
       ],
       "exact_member_count": 1,
@@ -2084487,6 +2085010,14 @@
     },
     {
       "exact_formula_ids": [
+        "8eda356c597dc982d33d2c02d433441a2f6b49d5dc3a7c8f162b725e28d66a9d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cdbfb8a608826b30ba66b0144fd10820c57a388360eec17f3780d78e20be0745",
+      "structural_formula": "dev=lambdas:abs(#-s[#])+s[#]"
+    },
+    {
+      "exact_formula_ids": [
         "db139d0b40028c86389c30bef3530ee8e2b9ee984349112dd820065de70d75d5"
       ],
       "exact_member_count": 1,
@@ -2088517,6 +2089048,22 @@
       "exact_member_count": 1,
       "structural_family_id": "5d806fc0e196142d7f6a883940e6a4332370cc9f49e827193f8e648733d9dfe7",
       "structural_formula": "down_lepton_agree=abs(np.log(I[\"down\"]/I[\"lept\"]))<np.log(#)"
+    },
+    {
+      "exact_formula_ids": [
+        "00212efd91848f55a02cd76420c5e7290fb679944d555122746c206224eb4ec5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "898d128d0ebc189dce3557abc946a72c466aa1235b36159c80ae3938e939ba43",
+      "structural_formula": "down_lepton_heavy_pair_stays_degenerate=abs(#-res[\"channels\"][\"down_lepton\"][\"directions\"][#][\"spectra\"][\"#\"][#])<#"
+    },
+    {
+      "exact_formula_ids": [
+        "36e8579d2cb86421e895d24e1818722f2c4a49c54b09ae31ee0051387e6737a8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4089bf787320f15e1c1f25bf501f1109aecf7c27d02eb2bbb2dad0e5b43b9814",
+      "structural_formula": "down_lepton_top1_charge2_1#=res[\"channels\"][\"down_lepton\"][\"top_dim\"]=#andlist(res[\"channels\"][\"down_lepton\"][\"symmetric_dims\"])=[#]"
     },
     {
       "exact_formula_ids": [
@@ -2137695,6 +2138242,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8fc842ce2e5c16fd04dc36ac36845a659dac3ad4fecb3898a41c85dc45d58040",
       "structural_formula": "near_mass_over_lambda_eta2=float(masses[#]/(lam*eta^#)),far_mass_over_1#lambda_eta4=float(masses[#]/(#*lam*eta^#))"
+    },
+    {
+      "exact_formula_ids": [
+        "fcbabb154f1631210ba33e94dcac88e1ae91b5b2adde801d49570f75eb407d99"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0aab83c7916684c6679a44765915b52ee822f769dd499cc039162fb719a4747f",
+      "structural_formula": "nearby:m_b=m_sandm_tau=m_mu,withthelightestexactlymassless(thedual-pairzeroofPass1#)"
     },
     {
       "exact_formula_ids": [
@@ -2223000,6 +2223555,14 @@
     },
     {
       "exact_formula_ids": [
+        "82600969017ee62ab695ea6bec04a15e11279bad88a05ddc4b7ee0a19c25a413"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ac71e7c70d7c52fc15a09a5179c80761c9a24577749a88e3efaa5c648afc308d",
+      "structural_formula": "up_top3_and_1#=res[\"channels\"][\"up\"][\"top_dim\"]=#andall(dev(d[\"spectra\"][\"#\"])<#fordinres[\"channels\"][\"up\"][\"directions\"])"
+    },
+    {
+      "exact_formula_ids": [
         "d5614ce0591e9899af92f8538e2856d0ee98acb11426211a4f9bec78cce71a2f"
       ],
       "exact_member_count": 1,
@@ -2228018,6 +2228581,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3ad3bd0def8bc4a41744ca47c5207efc04103979c4a0763fa1df75c0f8699214",
       "structural_formula": "weil_irreducible=w[\"commutant_dims\"]=dict(even=#,odd=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "2f2c43a1d71cc192531da365664c382729a4afde71900c29040e3f1419034ec4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "11d0e19101ebd08f06de4334aafd3a21051604b8a0bdab14d351f6bb23477913",
+      "structural_formula": "weinberg_1#=all(dev(d[\"spectra\"][\"#\"])<#fordinres[\"channels\"][\"weinberg\"][\"directions\"])"
     },
     {
       "exact_formula_ids": [
@@ -2237767,6 +2238338,14 @@
     },
     {
       "exact_formula_ids": [
+        "aaed3acc88b338feb3322f9e6a665e31ef1d2a2d798cce94017fb2c6f7a06f3b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a8dc9f023347b5159ba420e0170506504d80b82343f7e4ddbe13be96558b788b",
+      "structural_formula": "|down/chargedleptons(#\u00b7#\u0304)|H_d,flux4\u00b7#|#(charge2)|#|(#,#,#)|(#,#\u2212O(\u03b5#),#):m_b=m_s,m_\u03c4=m_\u03bc,lightestexactlymassless|"
+    },
+    {
+      "exact_formula_ids": [
         "79cb244fc65596389ff59b112da498ec54e51d2c8c3d537424f82811d353fbb9"
       ],
       "exact_member_count": 1,
@@ -2238047,11 +2238626,27 @@
     },
     {
       "exact_formula_ids": [
+        "6ebd6aceb3f046a0f816e42d1888d88318bb4d740fe496d48cf71b1c5ae8b403"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8ec5546ac5e46e3a23227f81502c1965fcb78f81340ba96b8f29827e820760b7",
+      "structural_formula": "|m_c/m_t|\u2248#\u00b7#\u2212#|#|"
+    },
+    {
+      "exact_formula_ids": [
         "20f1b87fae842b48cd4755b303f35d462a789e6a6a9b511750db8072dd845e3f"
       ],
       "exact_member_count": 1,
       "structural_family_id": "60f65a538d2a2b58636317637a39d90881b8c328e44c620c05516f5057b96ba9",
       "structural_formula": "|m_p=(q^#/lam)*Lambda_QCD|"
+    },
+    {
+      "exact_formula_ids": [
+        "493ba668214e010507aa35cf36be535ed620be813c92fe4958d02d3943a40969"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5bb1c0ce93b6244d6d4f3392c10c8134389825e662d99c4ce1d60fdc9246ef5e",
+      "structural_formula": "|m_s/m_b|\u2248#|\u2248#|"
     },
     {
       "exact_formula_ids": [
@@ -2242509,20 +2243104,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86908168,
-    "exact_formula_families": 60514,
-    "files_scanned": 11905,
-    "formula_occurrences": 66468,
+    "bytes_scanned": 86915162,
+    "exact_formula_families": 60530,
+    "files_scanned": 11907,
+    "formula_occurrences": 66484,
     "status_occurrences": {
       "certified_or_theorem": 4854,
-      "killed_or_retracted": 1573,
+      "killed_or_retracted": 1574,
       "open_or_conditional": 2159,
       "preregistered": 32,
-      "retrospective_fit": 5114,
-      "unclassified": 52736
+      "retrospective_fit": 5117,
+      "unclassified": 52748
     },
-    "structural_families": 58900
+    "structural_families": 58916
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "486565cc40975e42134a734726fca514e426503ba9605b590329f87a35ba9e76"
+  "universe_sha256": "a3c7bafaece50b623707ac834158ca6e1659b5b802a43b68238aea5148903e9a"
 }
