@@ -1,0 +1,215 @@
+{
+  "pass_id": 11931,
+  "rows": [
+    {
+      "N": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.8027007568888428,
+      "min_dev": 0.44231832122411285
+    },
+    {
+      "N": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.9612571448310541,
+      "min_dev": 0.34631177900242605
+    },
+    {
+      "N": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.8319531309882847,
+      "min_dev": 0.4039730322138683
+    },
+    {
+      "N": [
+        [
+          2,
+          -1
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "eisenstein_class": true,
+      "fixed_point_rank": 8,
+      "protected_dim": 4,
+      "max_dev": 3.344301590163377e-15,
+      "min_dev": 1.1740157354501474e-15
+    },
+    {
+      "N": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "eisenstein_class": true,
+      "fixed_point_rank": 8,
+      "protected_dim": 4,
+      "max_dev": 3.667608922164949e-15,
+      "min_dev": 2.104209094496162e-15
+    },
+    {
+      "N": [
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.899493124687841,
+      "min_dev": 0.34602794624548966
+    },
+    {
+      "N": [
+        [
+          3,
+          -3
+        ],
+        [
+          -3,
+          4
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.7847245501008079,
+      "min_dev": 0.3989531133928282
+    },
+    {
+      "N": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.7453360447503614,
+      "min_dev": 0.16634044584942126
+    },
+    {
+      "N": [
+        [
+          4,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.8582323929312872,
+      "min_dev": 0.42908079574084307
+    },
+    {
+      "N": [
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.7919411606366199,
+      "min_dev": 0.43768201783791993
+    },
+    {
+      "N": [
+        [
+          4,
+          -3
+        ],
+        [
+          -3,
+          3
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.9283493021491771,
+      "min_dev": 0.2700387474530173
+    },
+    {
+      "N": [
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eisenstein_class": false,
+      "fixed_point_rank": 6,
+      "protected_dim": 6,
+      "max_dev": 0.8302282099323515,
+      "min_dev": 0.43237306632902883
+    }
+  ],
+  "checks": {
+    "twelve_forms": true,
+    "eisenstein_pair_rank8_dim4_exact": true,
+    "other_class_rank6_dim6_generic": true
+  },
+  "all_checks_pass": true
+}
