@@ -100,6 +100,9 @@ band).
 * **Unconstrained quantities.** PMNS angles and Majorana phases are not addressed.
 
 **Rediscovery check.**
-* Searched the corpus for "m1 m3", "m_u m_t", "DESI" and "0.0596": no prior statement.
+* Searched the corpus for "m1 m3", "m_u m_t", "DESI" and "0.0596". No prior statement of the relation exists.
+* DESI itself was met before: the older physics track resolved a DESI tension of its geometric-cascade neutrino texture
+  with a type-I seesaw (commit 39af532c8, `w33_neutrino_seesaw_texture.py`; Continuity decision f2652072). That is a
+  different mechanism. It is cited here because it is the corpus's earlier contact with the same bound.
 * The old physics track's Σm_ν ≈ 0.101 eV (CCXLIX, μ_eff² = 1/4) coincides numerically with the Pass 11933 IO sum.
   It is noted, not used.
