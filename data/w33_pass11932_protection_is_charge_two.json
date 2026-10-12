@@ -1,0 +1,53 @@
+{
+  "pass_id": 11932,
+  "up": {
+    "protected_dim": 4,
+    "charge_multiplicities": [
+      3,
+      5,
+      4
+    ],
+    "distance_to_charge2_sector": 6.190867415265892e-15,
+    "generation_charges": [
+      0,
+      0,
+      2
+    ],
+    "forbidden_entries_max": 3.389990629528536e-15,
+    "spectrum_dev_from_110": 3.675383116784896e-15
+  },
+  "weinberg": {
+    "protected_dim": 4,
+    "charge_multiplicities": [
+      3,
+      5,
+      4
+    ],
+    "distance_to_charge2_sector": 3.877839675929085e-15,
+    "generation_charges": [
+      0,
+      0,
+      2
+    ],
+    "forbidden_entries_max": 2.8764950489940905e-15,
+    "spectrum_dev_from_110": 3.2474656525806305e-15
+  },
+  "down": {
+    "protected_dim": 7,
+    "charge_multiplicities": [
+      5,
+      5,
+      6
+    ],
+    "distance_to_charge2_sector": null
+  },
+  "checks": {
+    "protected_equals_charge2_up": true,
+    "protected_equals_charge2_weinberg": true,
+    "down_protected_not_a_charge_sector": true,
+    "generations_002": true,
+    "only_02_pairs_couple": true,
+    "spectrum_110": true
+  },
+  "all_checks_pass": true
+}
