@@ -388518,7 +388518,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1563,
+          "line": 1565,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -434183,6 +434183,34 @@
       },
       "structural_family_id": "de0627a1feeeb1d65abc1af2bc02b1dc3f0918a118a6426ba97c1ee5f33a8bf0",
       "structural_formula": "#.NUM_TRIADS=#=V(W(#,#)vertexcount=triadsofdouble-sixes!)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "91438f2752298df5c5b04eb606b9c8db9de42635be61b3baedca13d1acaa850e",
+      "normalized_formula": "4.Nearthepoint,Omega=w.1+eps(a+bJ),withtheHiggsinafixedZ3-chargesector,theupspectrumscales",
+      "numeric_literals": [
+        "1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "4. Near the point, Omega = w.1 + eps (a + b J), with the Higgs in a fixed Z3-charge sector, the up spectrum scales",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "01f750a8337e6298d7fddd0b4c0c095718c068648d148cb4a9436823c92e0cba",
+      "structural_formula": "#.Nearthepoint,Omega=w.#+eps(a+bJ),withtheHiggsinafixedZ3-chargesector,theupspectrumscales"
     },
     {
       "file_count": 1,
@@ -629755,6 +629783,89 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e15ef2d2a97c02d40062647be355535d15f9e8f86a8c5f9d1d05f4b65232c137",
+      "normalized_formula": "Higgscharge0:m_c/m_t->O(1)constant,m_u/m_c~eps^2",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "Higgs charge 0: m_c/m_t -> O(1) constant, m_u/m_c ~ eps^2;",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "e7cdd968aa285d38cbe5715baf5c369526804394cc55da3b515ffdbca741445b",
+      "structural_formula": "Higgscharge0:m_c/m_t->O(#)constant,m_u/m_c~eps^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9f17c1220c6463c1f65b5ebe94d6781b4db5b16cf1da58e5ce60070d180b35cc",
+      "normalized_formula": "Higgscharge1:m_c/m_t~eps,m_u/m_c->O(1)constant",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "Higgs charge 1: m_c/m_t ~ eps, m_u/m_c -> O(1) constant;",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6e5359066080b11c461c7e46a485035be084a3baaa0c698892014e8c929cc3a3",
+      "structural_formula": "Higgscharge1:m_c/m_t~eps,m_u/m_c->O(#)constant"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5dfbbb4d4f183a9baa1e35519e892ccd2fe95671d0bb073b1d98f65b3a14a758",
+      "normalized_formula": "Higgscharge2:m_c/m_t->1-O(eps),m_u/m_c~eps^2",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "Higgs charge 2: m_c/m_t -> 1 - O(eps), m_u/m_c ~ eps^2.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6fe92aa91d07f640ca4dc75ae37d098382b86b51d22f840bac030ce89ef24876",
+      "structural_formula": "Higgscharge2:m_c/m_t->#-O(eps),m_u/m_c~eps^#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "dffd84d6c453df95377c5c1ad33cda07f8d06076bbab5409d429eeda5783c8d5",
       "normalized_formula": "Higgsdoublet:4=murealcomponents(onecomplexSU(2)doublet)",
       "numeric_literals": [
@@ -737061,6 +737172,34 @@
       },
       "structural_family_id": "0f5aa3255dc567891d698c00ffe4b6362b4506fb1fb37087975d594b47acba9a",
       "structural_formula": "R1->#protectedlogicalqudits,canonicalintegralE8lift/gaugefixing"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "73f5ce03cd44a63ab35a856769e9c40ab609146ac9d60ee44997f4bcf6c5e54c",
+      "normalized_formula": "R10=Rs[\"10\"].T#fixed-pointVALUEvectors(psi_b(p))_btransformbyR^T:sum_aR_abpsi_a(p)=lambda_ppsi_b(p)",
+      "numeric_literals": [
+        "0",
+        "10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 103,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "R10 = Rs[\"10\"].T # fixed-point VALUE vectors (psi_b(p))_b transform by R^T: sum_a R_ab psi_a(p) = lambda_p psi_b(p)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7b23ab5b8883ba01ef4ab5b0074ab8fcd452f76db91cdeffccb26a5a84a6f0d5",
+      "structural_formula": "R1#=Rs[\"#\"].T#fixed-pointVALUEvectors(psi_b(p))_btransformbyR^T:sum_aR_abpsi_a(p)=lambda_ppsi_b(p)"
     },
     {
       "file_count": 1,
@@ -958406,7 +958545,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1568,
+          "line": 1570,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -985497,6 +985636,33 @@
       },
       "structural_family_id": "520f8397e31581c1e35db8452cd14fc451abb12e8acccc07533b42551471496c",
       "structural_formula": "^Setup.^Atwo-qutritCliffordgateisS=[[S_AA,S_AB],[S_BA,S_BB]]\u2208Sp(#,#).ItsChoistatelivesonA_in,B_in"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6bcd5e264cb3673f7691c240f6166a7c2bf8607f1523ccc80e6a8c6146f65f93",
+      "normalized_formula": "^Setup.^Perturbthemodulusas\u03a9=\u03c9\u00b71+\u03b5(a+bJ),withtheHiggsinafixedZ3-chargesector.Fitsarelog\u2013logover",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11928_EISENSTEIN_POINT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/PASS11928_EISENSTEIN_POINT.md",
+          "raw": "**Setup.** Perturb the modulus as \u03a9 = \u03c9\u00b71 + \u03b5(a + bJ), with the Higgs in a fixed \u2124\u2083-charge sector. Fits are log\u2013log over",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0b47f88343965b9fd3ba7e30b09bdf730352dcdf9c8fcd8e666661d569d7c929",
+      "structural_formula": "^Setup.^Perturbthemodulusas\u03a9=\u03c9\u00b7#+\u03b5(a+bJ),withtheHiggsinafixedZ3-chargesector.Fitsarelog\u2013logover"
     },
     {
       "file_count": 1,
@@ -1204307,6 +1204473,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "84d73bc75be4311a93fae9ef284afb89b94cb3e8ef6248e892c0fdcb9164c377",
+      "normalized_formula": "ev=np.vdot(v,R10@v)#Ractsoncoefficientvectorsinthemodebasis",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 107,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "ev = np.vdot(v, R10 @ v) # R acts on coefficient vectors in the mode basis",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bb78598684cf1ebaf04a0bc568bdd73f41cbd4838d88d9690e93d6a4a9021ae9",
+      "structural_formula": "ev=np.vdot(v,R1#@v)#Ractsoncoefficientvectorsinthemodebasis"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b9b7deeba8e59c8641ce90064500e45e45d6e5607f0d52b0c839d34b33ffcc64",
       "normalized_formula": "ev=sorted(np.linalg.eigvalsh(M/8.0))",
       "numeric_literals": [
@@ -1261524,6 +1261717,35 @@
       },
       "structural_family_id": "06a94f45a70eef551d8c97c4fb5d8aa365ba22514a28942a10b332e28ad8115c",
       "structural_formula": "higgs_IR_fixed=phi_golden-#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e9a3454f9fabb08e13074cb8716c219d57837576b6ff4283041b4f7d5dcf0c09",
+      "normalized_formula": "higgs_charge_multiplicities=[res[\"charges\"][\"Hu\"].count(k)forkinrange(3)]=[3,5,4]",
+      "numeric_literals": [
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 166,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "higgs_charge_multiplicities=[res[\"charges\"][\"Hu\"].count(k) for k in range(3)] == [3, 5, 4]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "aef3ad2cecbac7a48cc65141f450d2454d548d34f9f92c25847e282497f067ad",
+      "structural_formula": "higgs_charge_multiplicities=[res[\"charges\"][\"Hu\"].count(k)forkinrange(#)]=[#,#,#]"
     },
     {
       "file_count": 1,
@@ -1373872,6 +1374094,34 @@
       },
       "structural_family_id": "f6aca208ca0ec0fe4f05dbeaaae4df7d31a50f9908858aeecb6de3f266bb7122",
       "structural_formula": "nilpotentInner:=First(hEndBasisInner,matrix->RankMat(matrix)=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ab82a22acc8217cd60ba23894796ce64321b4c0fff5e07a5838de256a841c72b",
+      "normalized_formula": "nine_fixed_points_form_a_w33_line=len(L)=9andres[\"fixed_set_isotropic\"]",
+      "numeric_literals": [
+        "3",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 168,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "nine_fixed_points_form_a_w33_line=len(L) == 9 and res[\"fixed_set_isotropic\"],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e5b2fb0d9a4c725cc482ce9cea38942fc41be435df553d95e611a59997abcfba",
+      "structural_formula": "nine_fixed_points_form_a_w3#_line=len(L)=#andres[\"fixed_set_isotropic\"]"
     },
     {
       "file_count": 1,
@@ -1548486,7 +1548736,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1564,
+          "line": 1566,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1580268,6 +1580518,33 @@
       },
       "structural_family_id": "2b24a0be54cf7225440c259f95494154990c10ee356b5b2c23ee8a2836369448",
       "structural_formula": "resid=eps+#*after;resid[change:]+=##*np.sin(np.arange(T-change)/#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6652a232b0d2782b6c1cbbbeb729095e5699bf3f7c9a28cbeae8e4b272415fbf",
+      "normalized_formula": "resid=np.linalg.norm(R10@v-ev*v)",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11928_eisenstein_point.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 108,
+          "path": "analysis/w33_pass11928_eisenstein_point.py",
+          "raw": "resid = np.linalg.norm(R10 @ v - ev * v)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3e3d2d94270b7e128aaca6efa285efc560975056144ab3bc0ae40747abd27bf1",
+      "structural_formula": "resid=np.linalg.norm(R1#@v-ev*v)"
     },
     {
       "file_count": 1,
@@ -1767813,9 +1768090,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T21:10:53-04:00",
+  "frozen_at": "2026-10-11T21:15:01-04:00",
   "pass": 398,
-  "repository_head": "850a532ac203dfedd62bba09be136036e2dee502",
+  "repository_head": "ede836def408f2e0ebe12232814f6cafdde4f3c1",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1827014,6 +1827291,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b594675a238e04b6e46d7838215e02a9a6c6513c696584b56b50e3ad04185071",
       "structural_formula": "#.NUM_TRITANGENT_PLANES=#=C(#,#)=AUT_ORDER/#"
+    },
+    {
+      "exact_formula_ids": [
+        "91438f2752298df5c5b04eb606b9c8db9de42635be61b3baedca13d1acaa850e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "01f750a8337e6298d7fddd0b4c0c095718c068648d148cb4a9436823c92e0cba",
+      "structural_formula": "#.Nearthepoint,Omega=w.#+eps(a+bJ),withtheHiggsinafixedZ3-chargesector,theupspectrumscales"
     },
     {
       "exact_formula_ids": [
@@ -1937429,6 +1937714,30 @@
     },
     {
       "exact_formula_ids": [
+        "e15ef2d2a97c02d40062647be355535d15f9e8f86a8c5f9d1d05f4b65232c137"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e7cdd968aa285d38cbe5715baf5c369526804394cc55da3b515ffdbca741445b",
+      "structural_formula": "Higgscharge0:m_c/m_t->O(#)constant,m_u/m_c~eps^#"
+    },
+    {
+      "exact_formula_ids": [
+        "9f17c1220c6463c1f65b5ebe94d6781b4db5b16cf1da58e5ce60070d180b35cc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6e5359066080b11c461c7e46a485035be084a3baaa0c698892014e8c929cc3a3",
+      "structural_formula": "Higgscharge1:m_c/m_t~eps,m_u/m_c->O(#)constant"
+    },
+    {
+      "exact_formula_ids": [
+        "5dfbbb4d4f183a9baa1e35519e892ccd2fe95671d0bb073b1d98f65b3a14a758"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6fe92aa91d07f640ca4dc75ae37d098382b86b51d22f840bac030ce89ef24876",
+      "structural_formula": "Higgscharge2:m_c/m_t->#-O(eps),m_u/m_c~eps^#"
+    },
+    {
+      "exact_formula_ids": [
         "dffd84d6c453df95377c5c1ad33cda07f8d06076bbab5409d429eeda5783c8d5"
       ],
       "exact_member_count": 1,
@@ -1966411,6 +1966720,14 @@
       "exact_member_count": 1,
       "structural_family_id": "05802aa8d430fb60dfa61210a121c166cee6b9f59cf9902a5d05c4899aa46d8a",
       "structural_formula": "R1#<=ker_F3(Cartanpoint-tritangentincidence)"
+    },
+    {
+      "exact_formula_ids": [
+        "73f5ce03cd44a63ab35a856769e9c40ab609146ac9d60ee44997f4bcf6c5e54c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7b23ab5b8883ba01ef4ab5b0074ab8fcd452f76db91cdeffccb26a5a84a6f0d5",
+      "structural_formula": "R1#=Rs[\"#\"].T#fixed-pointVALUEvectors(psi_b(p))_btransformbyR^T:sum_aR_abpsi_a(p)=lambda_ppsi_b(p)"
     },
     {
       "exact_formula_ids": [
@@ -2030725,6 +2031042,14 @@
     },
     {
       "exact_formula_ids": [
+        "6bcd5e264cb3673f7691c240f6166a7c2bf8607f1523ccc80e6a8c6146f65f93"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0b47f88343965b9fd3ba7e30b09bdf730352dcdf9c8fcd8e666661d569d7c929",
+      "structural_formula": "^Setup.^Perturbthemodulusas\u03a9=\u03c9\u00b7#+\u03b5(a+bJ),withtheHiggsinafixedZ3-chargesector.Fitsarelog\u2013logover"
+    },
+    {
+      "exact_formula_ids": [
         "53378775639d23ee2b0b9179c62f785a6004bc49d4c9a3ddb86e4f3d9f13caea"
       ],
       "exact_member_count": 1,
@@ -2090540,6 +2090865,14 @@
     },
     {
       "exact_formula_ids": [
+        "84d73bc75be4311a93fae9ef284afb89b94cb3e8ef6248e892c0fdcb9164c377"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bb78598684cf1ebaf04a0bc568bdd73f41cbd4838d88d9690e93d6a4a9021ae9",
+      "structural_formula": "ev=np.vdot(v,R1#@v)#Ractsoncoefficientvectorsinthemodebasis"
+    },
+    {
+      "exact_formula_ids": [
         "b9b7deeba8e59c8641ce90064500e45e45d6e5607f0d52b0c839d34b33ffcc64"
       ],
       "exact_member_count": 1,
@@ -2106082,6 +2106415,14 @@
       "exact_member_count": 1,
       "structural_family_id": "06a94f45a70eef551d8c97c4fb5d8aa365ba22514a28942a10b332e28ad8115c",
       "structural_formula": "higgs_IR_fixed=phi_golden-#"
+    },
+    {
+      "exact_formula_ids": [
+        "e9a3454f9fabb08e13074cb8716c219d57837576b6ff4283041b4f7d5dcf0c09"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aef3ad2cecbac7a48cc65141f450d2454d548d34f9f92c25847e282497f067ad",
+      "structural_formula": "higgs_charge_multiplicities=[res[\"charges\"][\"Hu\"].count(k)forkinrange(#)]=[#,#,#]"
     },
     {
       "exact_formula_ids": [
@@ -2136044,6 +2136385,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f6aca208ca0ec0fe4f05dbeaaae4df7d31a50f9908858aeecb6de3f266bb7122",
       "structural_formula": "nilpotentInner:=First(hEndBasisInner,matrix->RankMat(matrix)=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "ab82a22acc8217cd60ba23894796ce64321b4c0fff5e07a5838de256a841c72b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e5b2fb0d9a4c725cc482ce9cea38942fc41be435df553d95e611a59997abcfba",
+      "structural_formula": "nine_fixed_points_form_a_w3#_line=len(L)=#andres[\"fixed_set_isotropic\"]"
     },
     {
       "exact_formula_ids": [
@@ -2190565,6 +2190914,14 @@
     },
     {
       "exact_formula_ids": [
+        "6652a232b0d2782b6c1cbbbeb729095e5699bf3f7c9a28cbeae8e4b272415fbf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3e3d2d94270b7e128aaca6efa285efc560975056144ab3bc0ae40747abd27bf1",
+      "structural_formula": "resid=np.linalg.norm(R1#@v-ev*v)"
+    },
+    {
+      "exact_formula_ids": [
         "1c42d1549ec2b978584de84cfcc8843adf1f9fa40329dc58fad0b9a4e24df1d1"
       ],
       "exact_member_count": 1,
@@ -2240170,20 +2240527,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86849691,
-    "exact_formula_families": 60450,
-    "files_scanned": 11893,
-    "formula_occurrences": 66401,
+    "bytes_scanned": 86865646,
+    "exact_formula_families": 60460,
+    "files_scanned": 11895,
+    "formula_occurrences": 66411,
     "status_occurrences": {
       "certified_or_theorem": 4851,
-      "killed_or_retracted": 1567,
+      "killed_or_retracted": 1569,
       "open_or_conditional": 2147,
       "preregistered": 32,
       "retrospective_fit": 5114,
-      "unclassified": 52690
+      "unclassified": 52698
     },
-    "structural_families": 58837
+    "structural_families": 58847
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "8c13170e524846a1aedf4ad13b31c47dbbc106b4ce240f598222aaa057fd3fdc"
+  "universe_sha256": "8c2a547e67aaa42a93fee53832cb309fd59f9f385e68d023e4f81fe9aac7038c"
 }
