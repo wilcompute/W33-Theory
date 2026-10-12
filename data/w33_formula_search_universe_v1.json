@@ -384139,6 +384139,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "31adfb3f335dabb689c922fc21efe87e401a73381b01ba808105c1c2ef5edcf2",
+      "normalized_formula": "1.Fortheup(2A2)andWeinberg(2A2')mediatorsatOmega=w.1,the4-dimspaceofmodesvanishingatall9fixed",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 3,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "1. For the up (2A2) and Weinberg (2A2') mediators at Omega = w.1, the 4-dim space of modes vanishing at all 9 fixed",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c250a103770ab3ebac0d3b895e16865a6e605ade057beb6c8c1213712ba0ab63",
+      "structural_formula": "#.Fortheup(#A2)andWeinberg(#A2')mediatorsatOmega=w.#,the4-dimspaceofmodesvanishingatall9fixed"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6f843ef31991abb18a970fd9827d4690afa6ee4b1689a1f7e393482814263778",
       "normalized_formula": "1.GAUGESYMMETRY=LATTICEHARDNESS",
       "numeric_literals": [
@@ -516346,6 +516374,33 @@
       },
       "structural_family_id": "976018c95732d3083479475b21f9873d1c1c3a708008f6b8b5d4dd207334bdc3",
       "structural_formula": "=>M_R=y_D^#*v^#/(#*m_nu)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9b630839b2a1152c3216ed55f2d6dcb18306ff0ea36fb87b83c93c444dbeb22d",
+      "normalized_formula": "=>TheassumptionofPass11930(positivelocalisedblow-upmasses)isreplacedbyadiscreteone:themediator",
+      "numeric_literals": [
+        "1930"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "=> The assumption of Pass 11930 (positive localised blow-up masses) is replaced by a discrete one: the mediator",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ee5cbb5e777db277d527399fb630d84cf72b5b7930368f96b1a79aed0d37b434",
+      "structural_formula": "=>TheassumptionofPass1#(positivelocalisedblow-upmasses)isreplacedbyadiscreteone:themediator"
     },
     {
       "file_count": 1,
@@ -986648,6 +986703,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b072243b88ab13507270c77d1d8c9f176b56cb158279b1a611341904fa6184b2",
+      "normalized_formula": "^Theequality.^Fortheupmediator(flux2A2)andtheWeinbergmediator(flux2A2\u2032)at\u03a9=\u03c9\u00b71,Pass11930founda",
+      "numeric_literals": [
+        "1",
+        "1930"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11932_PROTECTION_IS_CHARGE_TWO.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/PASS11932_PROTECTION_IS_CHARGE_TWO.md",
+          "raw": "**The equality.** For the up mediator (flux 2A\u2082) and the Weinberg mediator (flux 2A\u2082\u2032) at \u03a9 = \u03c9\u00b71, Pass 11930 found a",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "89fc87cc11a6eb10c208aaf1d3d82dd2d0cd70e999e1587de5c2df3fd8f66a82",
+      "structural_formula": "^Theequality.^Fortheupmediator(flux2A2)andtheWeinbergmediator(flux2A2\u2032)at\u03a9=\u03c9\u00b7#,Pass1#founda"
+    },
+    {
+      "file_count": 1,
       "formula_id": "941cc86418a99f6186d9d0a13d7d382cde2b0f9d17dccd8e934005057f2fff45",
       "normalized_formula": "^ThelawF\u2032(Pass11420).^LetU=W(a)V_MT1andv=z1+Mz1.IfM2z1=z1,everyframewith\u03c9(a,v)\u22600violates",
       "numeric_literals": [
@@ -1175041,6 +1175124,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "daeb09bc06504eed5d2f495592b82d9137770894cebb317c374f8b6aaea8762f",
+      "normalized_formula": "dev=max(dev,float(abs(1-sv[1]/sv[0])+sv[2]/sv[0]))",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 65,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "dev = max(dev, float(abs(1 - sv[1] / sv[0]) + sv[2] / sv[0]))",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "452817f35240c66352b67d34bfbd40918fbbb530a687434c79e5eacfd5ed5cc1",
+      "structural_formula": "dev=max(dev,float(abs(#-sv[#]/sv[#])+sv[#]/sv[#]))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "45118b1434b7682feed59f172c4087898b7dfc2ec7053f2b3b99f865f0dd167a",
       "normalized_formula": "dev=np.abs(M-tr[...,None,None]*np.eye(9)).max(axis=(-1,-2))",
       "numeric_literals": [
@@ -1235055,6 +1235167,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8a3e08d2c41b841a258c347b6ba4c33428d28f7785d7611b2a77b4f8f4f45a2e",
+      "normalized_formula": "forb,dev=0.0,0.0",
+      "numeric_literals": [
+        "0.0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 57,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "forb, dev = 0.0, 0.0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9cbe82815c4d821a15924532281de074419a6e4afba6c323f461d984e3876050",
+      "structural_formula": "forb,dev=#,#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "94e6f24ed822f6de82a91202d1d52d93b5026c9e107fe3c98a1254d171e03e7a",
       "normalized_formula": "forbi-adjointscalars(CatalannumbersC5=42);cosmologicalpolytopesforwavefunctionofuniverse",
       "numeric_literals": [
@@ -1250002,6 +1250141,35 @@
       },
       "structural_family_id": "a90d22a279a258a689bb3268361b07306b4a15a35d83d75515864bf343fff523",
       "structural_formula": "generations=Z(gaugegroup)=Z3(BT8#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9cd77f4ceae6f56ae2cc92b7f5345ede79a40f432ced0a7e25a0ebbc233cd83b",
+      "normalized_formula": "generations_002=res[\"up\"][\"generation_charges\"]=[0,0,2]andres[\"weinberg\"][\"generation_charges\"]=[0,0,2]",
+      "numeric_literals": [
+        "0",
+        "02",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "generations_002=res[\"up\"][\"generation_charges\"] == [0, 0, 2] and res[\"weinberg\"][\"generation_charges\"] == [0, 0, 2],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "71df5668db8313bc54ef0294df28e31f606b0f1a9b43c8ddf01e22eb46b63de6",
+      "structural_formula": "generations_0#=res[\"up\"][\"generation_charges\"]=[#,#,#]andres[\"weinberg\"][\"generation_charges\"]=[#,#,#]"
     },
     {
       "file_count": 1,
@@ -1387860,6 +1388028,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8fa36be571b1ac592f3bf87e101b11cdeb9ae894f834b1639541dd58c81bed1a",
+      "normalized_formula": "only_02_pairs_couple=max(res[\"up\"][\"forbidden_entries_max\"],res[\"weinberg\"][\"forbidden_entries_max\"])<1e-9",
+      "numeric_literals": [
+        "1e-9",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 73,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "only_02_pairs_couple=max(res[\"up\"][\"forbidden_entries_max\"], res[\"weinberg\"][\"forbidden_entries_max\"]) < 1e-9,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7feb71dc0729699f9d7fae0439ebe19bc462005a8d5166838a120f3682371ea4",
+      "structural_formula": "only_0#_pairs_couple=max(res[\"up\"][\"forbidden_entries_max\"],res[\"weinberg\"][\"forbidden_entries_max\"])<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "224a741604923069532faeedcb2e7ba91b60e898b1ee98bd7f3ad8d843de6326",
       "normalized_formula": "only_z3_gives_tachyon_free_sm=all(v[\"sm_and_tachyon_free\"]=0fork,vintable.items()if\"Z3(\"notink))",
       "numeric_literals": [
@@ -1387884,6 +1388080,34 @@
       },
       "structural_family_id": "0474a6dcad0fff75aa1d5a19f05685ec53d23be6683848451d011501bee352bd",
       "structural_formula": "only_z3_gives_tachyon_free_sm=all(v[\"sm_and_tachyon_free\"]=#fork,vintable.items()if\"Z3(\"notink))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4aef8515698891bae0644651a9d69eb14478d4d15feda496e7ab2c5e802a08a6",
+      "normalized_formula": "onlypairswithq_a+q_b=2mod3,i.e.the(0,2)pairs,sothesymmetricYukawais",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "only pairs with q_a + q_b = 2 mod 3, i.e. the (0,2) pairs, so the symmetric Yukawa is",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "98bba2e7b3a472665767b013a550458e4f0b1bb2321b91c1b27b41bebf4827af",
+      "structural_formula": "onlypairswithq_a+q_b=#mod3,i.e.the(#,#)pairs,sothesymmetricYukawais"
     },
     {
       "file_count": 1,
@@ -1432128,6 +1432352,35 @@
       },
       "structural_family_id": "b7c19fc2143c01d0ac6a1ec26624fde34430cc99f4b0773cdf0d733dc430be24",
       "structural_formula": "pointreflectionabouttheheavygeneration'sfixedpoint--thePass1#mechanismthatforcesm_c=m_u--so"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5884187b2a38430ff9a6194ba9029a50044cf7598416423eb2cf258700aa737e",
+      "normalized_formula": "points(Pass11930)EQUALStherho-charge-2eigenspace(projectordistance~1e-15):charge-2modesvanishatevery",
+      "numeric_literals": [
+        "1930",
+        "1e-15",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "points (Pass 11930) EQUALS the rho-charge-2 eigenspace (projector distance ~1e-15): charge-2 modes vanish at every",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "734641abced3a57e699708f602917217cabb14cd08b0b3a0f5e4b9ca01a26b86",
+      "structural_formula": "points(Pass1#)EQUALStherho-charge-#eigenspace(projectordistance~#):charge-#modesvanishatevery"
     },
     {
       "file_count": 1,
@@ -1539933,6 +1540186,60 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6fc720db8ae9a7c025b5dc82dca857edafb6f12fe6867958e0dae7dd7b30de29",
+      "normalized_formula": "protected_equals_charge2_up=res[\"up\"][\"distance_to_charge2_sector\"]isnotNoneandres[\"up\"][\"distance_to_charge2_sector\"]<1e-9",
+      "numeric_literals": [
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 69,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "protected_equals_charge2_up=res[\"up\"][\"distance_to_charge2_sector\"] is not None and res[\"up\"][\"distance_to_charge2_sector\"] < 1e-9,",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "27456a505b4fecffc34c608c51ae3b8adadd9bd201bea8e06ffef25fa355169a",
+      "structural_formula": "protected_equals_charge2_up=res[\"up\"][\"distance_to_charge2_sector\"]isnotNoneandres[\"up\"][\"distance_to_charge2_sector\"]<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "331b62e3d243b515da07e432cd7ba83289fea8e8cbd9df15a2de4ed525700d5b",
+      "normalized_formula": "protected_equals_charge2_weinberg=res[\"weinberg\"][\"distance_to_charge2_sector\"]isnotNoneandres[\"weinberg\"][\"distance_to_charge2_sector\"]<1e-9",
+      "numeric_literals": [
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 70,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "protected_equals_charge2_weinberg=res[\"weinberg\"][\"distance_to_charge2_sector\"] is not None and res[\"weinberg\"][\"distance_to_charge2_sector\"] < 1e-9,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8518924bf8acddea4f14bd59f0e6edcffbf95c578f96c661fe62cc5456d7c8b8",
+      "structural_formula": "protected_equals_charge2_weinberg=res[\"weinberg\"][\"distance_to_charge2_sector\"]isnotNoneandres[\"weinberg\"][\"distance_to_charge2_sector\"]<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6ab8d7334f71d4d3aa972a5d8a460450a51ddc7ddc43813075e2f67d9bb6d1c5",
       "normalized_formula": "protectedatALLorders,butanoutsidesingletn_36appearslinearlyatorder4(F~eps^3M_s^2),and",
       "numeric_literals": [
@@ -1574051,6 +1574358,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9c541c22e30ed0e7b6d9e2863f15691b1fa8229d54e8758c9cf654fffefdd832",
+      "normalized_formula": "rec.update(generation_charges=sorted(int(x)forxinqg),forbidden_entries_max=forb,spectrum_dev_from_110=dev)",
+      "numeric_literals": [
+        "10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 66,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "rec.update(generation_charges=sorted(int(x) for x in qg), forbidden_entries_max=forb, spectrum_dev_from_110=dev)",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "6f8f66ddc904effe0358a12d6ead80394ba92c05900e881b7b57afc0cf875a11",
+      "structural_formula": "rec.update(generation_charges=sorted(int(x)forxinqg),forbidden_entries_max=forb,spectrum_dev_from_1#=dev)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7a0d7883d82e032558ef6adfa6ab3ee60f7db52dc70561ccce68759e09a1fefb",
       "normalized_formula": "rec.update(status='COUNTEREXAMPLE_HOFFMAN_DISTANCE_BELOW40',witness_weight=wt",
       "numeric_literals": [
@@ -1574471,6 +1574805,33 @@
       },
       "structural_family_id": "69209ae9e0d4c42b7724d3893b6e97fc74b99141950e186dd3df7b039e64f9ae",
       "structural_formula": "rec={'lines':len(lines),'binary_adjacency_rank':r,'proved_distance_by_general_theorem':q+#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "70df9c2cd6a04246498d4032c07935c3a4dfffe10eaf8462cbc0110621b993de",
+      "normalized_formula": "rec[\"distance_to_charge2_sector\"]=float(np.linalg.norm(K@K.conj().T-S@S.conj().T))ifS.shape[1]=K.shape[1]elseNone",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "rec[\"distance_to_charge2_sector\"] = float(np.linalg.norm(K @ K.conj().T - S @ S.conj().T)) if S.shape[1] == K.shape[1] else None",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7c82fe275e12d2dcfc26b7adf5272180b1f718a7c9fff42b0b19509843022f28",
+      "structural_formula": "rec[\"distance_to_charge2_sector\"]=float(np.linalg.norm(K@K.conj().T-S@S.conj().T))ifS.shape[#]=K.shape[#]elseNone"
     },
     {
       "file_count": 1,
@@ -1638196,6 +1638557,34 @@
       },
       "structural_family_id": "125967450edb8653ecc791cca4357210bb21b9b627dab739d62bf6e5d1cf1289",
       "structural_formula": "spectrum={str(int(ev)):int(mult)forev,multinsorted(sp.Matrix(A).eigenvals().items(),key=lambdakv:kv[#])}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9c6a373b14e53191fc76408fa5a9cef410004f33c7ba9330009ce315b4bda303",
+      "normalized_formula": "spectrum_110=max(res[\"up\"][\"spectrum_dev_from_110\"],res[\"weinberg\"][\"spectrum_dev_from_110\"])<1e-9",
+      "numeric_literals": [
+        "10",
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11932_protection_is_charge_two.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 74,
+          "path": "analysis/w33_pass11932_protection_is_charge_two.py",
+          "raw": "spectrum_110=max(res[\"up\"][\"spectrum_dev_from_110\"], res[\"weinberg\"][\"spectrum_dev_from_110\"]) < 1e-9,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a80812877124e43a2e9b1f9d8ee321123e30beabf83a56afba6368399ca9cb5e",
+      "structural_formula": "spectrum_1#=max(res[\"up\"][\"spectrum_dev_from_1#\"],res[\"weinberg\"][\"spectrum_dev_from_1#\"])<#"
     },
     {
       "file_count": 3,
@@ -1768814,9 +1769203,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T22:18:39-04:00",
+  "frozen_at": "2026-10-11T22:31:27-04:00",
   "pass": 398,
-  "repository_head": "afa7add15c1a452c6ccd8176f274714d28134696",
+  "repository_head": "fdd722c968084929f9917a1464e459c3682351a0",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1827591,6 +1827980,14 @@
       "exact_member_count": 1,
       "structural_family_id": "52256cfa3b1d65b412babdd45685502417bccdabb005b13f3b7cc58ad7431cc7",
       "structural_formula": "#.Fluxescannotproduceasmalltilt:anyfurtherblockfluxoutsideQ[N1]hascommutant=scalarsandforcesy=#"
+    },
+    {
+      "exact_formula_ids": [
+        "31adfb3f335dabb689c922fc21efe87e401a73381b01ba808105c1c2ef5edcf2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c250a103770ab3ebac0d3b895e16865a6e605ade057beb6c8c1213712ba0ab63",
+      "structural_formula": "#.Fortheup(#A2)andWeinberg(#A2')mediatorsatOmega=w.#,the4-dimspaceofmodesvanishingatall9fixed"
     },
     {
       "exact_formula_ids": [
@@ -1907701,6 +1908098,14 @@
       "exact_member_count": 1,
       "structural_family_id": "976018c95732d3083479475b21f9873d1c1c3a708008f6b8b5d4dd207334bdc3",
       "structural_formula": "=>M_R=y_D^#*v^#/(#*m_nu)"
+    },
+    {
+      "exact_formula_ids": [
+        "9b630839b2a1152c3216ed55f2d6dcb18306ff0ea36fb87b83c93c444dbeb22d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ee5cbb5e777db277d527399fb630d84cf72b5b7930368f96b1a79aed0d37b434",
+      "structural_formula": "=>TheassumptionofPass1#(positivelocalisedblow-upmasses)isreplacedbyadiscreteone:themediator"
     },
     {
       "exact_formula_ids": [
@@ -2032038,6 +2032443,14 @@
     },
     {
       "exact_formula_ids": [
+        "b072243b88ab13507270c77d1d8c9f176b56cb158279b1a611341904fa6184b2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "89fc87cc11a6eb10c208aaf1d3d82dd2d0cd70e999e1587de5c2df3fd8f66a82",
+      "structural_formula": "^Theequality.^Fortheupmediator(flux2A2)andtheWeinbergmediator(flux2A2\u2032)at\u03a9=\u03c9\u00b7#,Pass1#founda"
+    },
+    {
+      "exact_formula_ids": [
         "941cc86418a99f6186d9d0a13d7d382cde2b0f9d17dccd8e934005057f2fff45"
       ],
       "exact_member_count": 1,
@@ -2083598,6 +2084011,14 @@
     },
     {
       "exact_formula_ids": [
+        "daeb09bc06504eed5d2f495592b82d9137770894cebb317c374f8b6aaea8762f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "452817f35240c66352b67d34bfbd40918fbbb530a687434c79e5eacfd5ed5cc1",
+      "structural_formula": "dev=max(dev,float(abs(#-sv[#]/sv[#])+sv[#]/sv[#]))"
+    },
+    {
+      "exact_formula_ids": [
         "45118b1434b7682feed59f172c4087898b7dfc2ec7053f2b3b99f865f0dd167a"
       ],
       "exact_member_count": 1,
@@ -2099919,6 +2100340,14 @@
     },
     {
       "exact_formula_ids": [
+        "8a3e08d2c41b841a258c347b6ba4c33428d28f7785d7611b2a77b4f8f4f45a2e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9cbe82815c4d821a15924532281de074419a6e4afba6c323f461d984e3876050",
+      "structural_formula": "forb,dev=#,#"
+    },
+    {
+      "exact_formula_ids": [
         "94e6f24ed822f6de82a91202d1d52d93b5026c9e107fe3c98a1254d171e03e7a"
       ],
       "exact_member_count": 1,
@@ -2103966,6 +2104395,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a90d22a279a258a689bb3268361b07306b4a15a35d83d75515864bf343fff523",
       "structural_formula": "generations=Z(gaugegroup)=Z3(BT8#)"
+    },
+    {
+      "exact_formula_ids": [
+        "9cd77f4ceae6f56ae2cc92b7f5345ede79a40f432ced0a7e25a0ebbc233cd83b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "71df5668db8313bc54ef0294df28e31f606b0f1a9b43c8ddf01e22eb46b63de6",
+      "structural_formula": "generations_0#=res[\"up\"][\"generation_charges\"]=[#,#,#]andres[\"weinberg\"][\"generation_charges\"]=[#,#,#]"
     },
     {
       "exact_formula_ids": [
@@ -2140920,11 +2141357,27 @@
     },
     {
       "exact_formula_ids": [
+        "8fa36be571b1ac592f3bf87e101b11cdeb9ae894f834b1639541dd58c81bed1a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7feb71dc0729699f9d7fae0439ebe19bc462005a8d5166838a120f3682371ea4",
+      "structural_formula": "only_0#_pairs_couple=max(res[\"up\"][\"forbidden_entries_max\"],res[\"weinberg\"][\"forbidden_entries_max\"])<#"
+    },
+    {
+      "exact_formula_ids": [
         "224a741604923069532faeedcb2e7ba91b60e898b1ee98bd7f3ad8d843de6326"
       ],
       "exact_member_count": 1,
       "structural_family_id": "0474a6dcad0fff75aa1d5a19f05685ec53d23be6683848451d011501bee352bd",
       "structural_formula": "only_z3_gives_tachyon_free_sm=all(v[\"sm_and_tachyon_free\"]=#fork,vintable.items()if\"Z3(\"notink))"
+    },
+    {
+      "exact_formula_ids": [
+        "4aef8515698891bae0644651a9d69eb14478d4d15feda496e7ab2c5e802a08a6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "98bba2e7b3a472665767b013a550458e4f0b1bb2321b91c1b27b41bebf4827af",
+      "structural_formula": "onlypairswithq_a+q_b=#mod3,i.e.the(#,#)pairs,sothesymmetricYukawais"
     },
     {
       "exact_formula_ids": [
@@ -2152667,6 +2153120,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b7c19fc2143c01d0ac6a1ec26624fde34430cc99f4b0773cdf0d733dc430be24",
       "structural_formula": "pointreflectionabouttheheavygeneration'sfixedpoint--thePass1#mechanismthatforcesm_c=m_u--so"
+    },
+    {
+      "exact_formula_ids": [
+        "5884187b2a38430ff9a6194ba9029a50044cf7598416423eb2cf258700aa737e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "734641abced3a57e699708f602917217cabb14cd08b0b3a0f5e4b9ca01a26b86",
+      "structural_formula": "points(Pass1#)EQUALStherho-charge-#eigenspace(projectordistance~#):charge-#modesvanishatevery"
     },
     {
       "exact_formula_ids": [
@@ -2182879,6 +2183340,22 @@
     },
     {
       "exact_formula_ids": [
+        "6fc720db8ae9a7c025b5dc82dca857edafb6f12fe6867958e0dae7dd7b30de29"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "27456a505b4fecffc34c608c51ae3b8adadd9bd201bea8e06ffef25fa355169a",
+      "structural_formula": "protected_equals_charge2_up=res[\"up\"][\"distance_to_charge2_sector\"]isnotNoneandres[\"up\"][\"distance_to_charge2_sector\"]<#"
+    },
+    {
+      "exact_formula_ids": [
+        "331b62e3d243b515da07e432cd7ba83289fea8e8cbd9df15a2de4ed525700d5b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8518924bf8acddea4f14bd59f0e6edcffbf95c578f96c661fe62cc5456d7c8b8",
+      "structural_formula": "protected_equals_charge2_weinberg=res[\"weinberg\"][\"distance_to_charge2_sector\"]isnotNoneandres[\"weinberg\"][\"distance_to_charge2_sector\"]<#"
+    },
+    {
+      "exact_formula_ids": [
         "6ab8d7334f71d4d3aa972a5d8a460450a51ddc7ddc43813075e2f67d9bb6d1c5"
       ],
       "exact_member_count": 1,
@@ -2189798,6 +2190275,14 @@
     },
     {
       "exact_formula_ids": [
+        "9c541c22e30ed0e7b6d9e2863f15691b1fa8229d54e8758c9cf654fffefdd832"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6f8f66ddc904effe0358a12d6ead80394ba92c05900e881b7b57afc0cf875a11",
+      "structural_formula": "rec.update(generation_charges=sorted(int(x)forxinqg),forbidden_entries_max=forb,spectrum_dev_from_1#=dev)"
+    },
+    {
+      "exact_formula_ids": [
         "7a0d7883d82e032558ef6adfa6ab3ee60f7db52dc70561ccce68759e09a1fefb"
       ],
       "exact_member_count": 1,
@@ -2189915,6 +2190400,14 @@
       "exact_member_count": 1,
       "structural_family_id": "69209ae9e0d4c42b7724d3893b6e97fc74b99141950e186dd3df7b039e64f9ae",
       "structural_formula": "rec={'lines':len(lines),'binary_adjacency_rank':r,'proved_distance_by_general_theorem':q+#"
+    },
+    {
+      "exact_formula_ids": [
+        "70df9c2cd6a04246498d4032c07935c3a4dfffe10eaf8462cbc0110621b993de"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7c82fe275e12d2dcfc26b7adf5272180b1f718a7c9fff42b0b19509843022f28",
+      "structural_formula": "rec[\"distance_to_charge2_sector\"]=float(np.linalg.norm(K@K.conj().T-S@S.conj().T))ifS.shape[#]=K.shape[#]elseNone"
     },
     {
       "exact_formula_ids": [
@@ -2207089,6 +2207582,14 @@
       "exact_member_count": 1,
       "structural_family_id": "125967450edb8653ecc791cca4357210bb21b9b627dab739d62bf6e5d1cf1289",
       "structural_formula": "spectrum={str(int(ev)):int(mult)forev,multinsorted(sp.Matrix(A).eigenvals().items(),key=lambdakv:kv[#])}"
+    },
+    {
+      "exact_formula_ids": [
+        "9c6a373b14e53191fc76408fa5a9cef410004f33c7ba9330009ce315b4bda303"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a80812877124e43a2e9b1f9d8ee321123e30beabf83a56afba6368399ca9cb5e",
+      "structural_formula": "spectrum_1#=max(res[\"up\"][\"spectrum_dev_from_1#\"],res[\"weinberg\"][\"spectrum_dev_from_1#\"])<#"
     },
     {
       "exact_formula_ids": [
@@ -2241451,20 +2241952,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86891687,
-    "exact_formula_families": 60485,
-    "files_scanned": 11901,
-    "formula_occurrences": 66437,
+    "bytes_scanned": 86899412,
+    "exact_formula_families": 60499,
+    "files_scanned": 11903,
+    "formula_occurrences": 66451,
     "status_occurrences": {
-      "certified_or_theorem": 4852,
-      "killed_or_retracted": 1570,
+      "certified_or_theorem": 4853,
+      "killed_or_retracted": 1573,
       "open_or_conditional": 2155,
       "preregistered": 32,
       "retrospective_fit": 5114,
-      "unclassified": 52714
+      "unclassified": 52724
     },
-    "structural_families": 58872
+    "structural_families": 58886
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "43f5c5f19007b962c99e2a851cb2583a12abf99a5d4c6f13a70a3859b87e10ee"
+  "universe_sha256": "d7428bc2d9f6f876ea3c1c6b61d74968e307493e372d011c53678100e7566fb4"
 }
