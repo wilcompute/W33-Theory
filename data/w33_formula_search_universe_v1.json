@@ -341612,6 +341612,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4e5fd01f5da6c97ba9eb19e6ddec03f5b16d874e3542829f9d4740a79ac223ad",
+      "normalized_formula": "(m_c/m_t\u22484\u00b710\u22123,m_u/m_c\u22482\u00b710\u22123)",
+      "numeric_literals": [
+        "10",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11926_G25_TANGENT_VACUA.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 56,
+          "path": "analysis/PASS11926_G25_TANGENT_VACUA.md",
+          "raw": "(m_c/m_t \u2248 4\u00b710\u207b\u00b3, m_u/m_c \u2248 2\u00b710\u207b\u00b3).",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "4400a35671cff7a0a56b37e1dcc32dc01070d144ac52d9d255f31e7f02a1541a",
+      "structural_formula": "(m_c/m_t\u2248#\u00b7#\u2212#,m_u/m_c\u2248#\u00b7#\u2212#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f286765e4eceb4ef50fff09402de5fda9886bd90d62e78423692728c6025ab15",
       "normalized_formula": "(m_e,m_\\mu,m_\\tau)=(0.511,105.66,1776.86)\\mathrm{MeV}",
       "numeric_literals": [
@@ -350871,6 +350901,34 @@
       },
       "structural_family_id": "5b065d8484671a8483d301a9eba0cbde284526432794bd83f902f3772a4f7341",
       "structural_formula": "*ThearrowAisPass1#;exactn=#,#ismaster'sPass1#;c(S),theplaneformulaandtheall-ntheoremarethispass.Theoperational-mereologyideaofminimisingscramblingoversubsystemstructuresisZanardi,Dallas,AndreadakisLloyd,Quantum8,#(#),citedinPass1#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6679c25ca49060360efe545fdc8ee08a60a69e73f726608481d05c69711c123d",
+      "normalized_formula": "*Theboundsonm_c/m_tareminimaovereverymemberofeachorbit,at\u03b5=10\u22123",
+      "numeric_literals": [
+        "10",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11926_G25_TANGENT_VACUA.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 51,
+          "path": "analysis/PASS11926_G25_TANGENT_VACUA.md",
+          "raw": "* The bounds on m_c/m_t are minima over every member of each orbit, at \u03b5 = 10\u207b\u00b3.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "7094b6b6ba1344529d123b0257afff3f1b2468867b6218ebb5bfdb1c1aeea320",
+      "structural_formula": "*Theboundsonm_c/m_tareminimaovereverymemberofeachorbit,at\u03b5=#\u2212#"
     },
     {
       "file_count": 1,
@@ -388150,7 +388208,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1536,
+          "line": 1538,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -425191,6 +425249,35 @@
       },
       "structural_family_id": "a51218b07d6470cf239bc432c68cd3bd6bf3f660c54ec9a80b1e3b1ca2ec7715",
       "structural_formula": "#.ThesubstrateYukawacouplingy_t=sqrt(#)*m_t/vEW"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1811b120977b349fe87557c6cb9082ce3278d217c846bc1e3617475612dbadaa",
+      "normalized_formula": "3.TheunlockingorbitsareNOThierarchical:forg=(1,eps,eps)andeverymemberofeachorbit,m_c/m_tstays>=0.36",
+      "numeric_literals": [
+        "0.36",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11926_g25_tangent_vacua.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass11926_g25_tangent_vacua.py",
+          "raw": "3. The unlocking orbits are NOT hierarchical: for g = (1, eps, eps) and every member of each orbit, m_c/m_t stays >= 0.36",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "901d448ad7200fe4aef41acb30518f77f854229e931610a84652acb1d6b5d612",
+      "structural_formula": "#.TheunlockingorbitsareNOThierarchical:forg=(#,eps,eps)andeverymemberofeachorbit,m_c/m_tstays>=#"
     },
     {
       "file_count": 1,
@@ -663707,6 +663794,60 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3d87236ccb082fbeb0c36fed80cb1b56b7616e303c45b5066f0973f2d7a194b5",
+      "normalized_formula": "M_2=\\log\\tfrac85",
+      "numeric_literals": [
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1526,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "M_2=\\log\\tfrac85",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2acadab32b851e46eaa9182c45e1d0b610e63fea2c6e82560af78fe0ee87b6ce",
+      "structural_formula": "M_2=\\log\\tfrac8#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f6338f9f703a308faee31d778646fcaf5aff2cfbadffd914181465bf28ff4d49",
+      "normalized_formula": "M_2\u22480.691",
+      "numeric_literals": [
+        "0.691"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1526,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "M_2\\approx0.691",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "937c45ed3f0df543f68fc65f840fad8a4e4af6762b3094a5b9138f88213d2eaa",
+      "structural_formula": "M_2\u2248#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "63e9f28f4e24977f1d4bf97db3d7b4303ddb4a062063a3a21c6b7bfa075deccb",
       "normalized_formula": "M_3(\\mathbbQ)\\otimes(\\mathbbQ\\oplus\\mathbbQ),\\qquad\\dim=18",
       "numeric_literals": [
@@ -695836,6 +695977,35 @@
       },
       "structural_family_id": "cd91e03d7d0f95345f30a8a5484c0ae4f5ddd25ee4d7f83fc45b6d6e5b960777",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_stabiliser_higgs_lock.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3504f3bc992177cb435db9680f5365754b827e1edc8c5925937c299100081401",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11926_g25_tangent_vacua.json\"",
+      "numeric_literals": [
+        "1926",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11926_g25_tangent_vacua.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/w33_pass11926_g25_tangent_vacua.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11926_g25_tangent_vacua.json\"",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "38f6d1358893277ea10b3b2cb704dfbfed78d73f274977070325188386c55829",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_g2#_tangent_vacua.json\""
     },
     {
       "file_count": 1,
@@ -741266,6 +741436,34 @@
       },
       "structural_family_id": "9faeb25d2a57b1de71e59deac8269cf3ac22269c608a29abc1c9edc9da512835",
       "structural_formula": "Reading:m_c/m_u~#cannotcomefromanyVEValignmentoftheSM-neutralscalarsinthesemodels;itneedsanO(#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "45726e9ee47b3965b15d14af9f01056f3484088c06c210285476eb8f5f0744e0",
+      "normalized_formula": "Reading:noG25-symmetricvacuumoftheWittingtangentgivestheobserveduphierarchy(m_c/m_t~4e-3",
+      "numeric_literals": [
+        "4e-3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11926_g25_tangent_vacua.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/w33_pass11926_g25_tangent_vacua.py",
+          "raw": "Reading: no G25-symmetric vacuum of the Witting tangent gives the observed up hierarchy (m_c/m_t ~ 4e-3,",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "b5ab8e7d5452492a1d25ee23c9292e37f2989dd10189a819d496b6c8d6f62c10",
+      "structural_formula": "Reading:noG2#-symmetricvacuumoftheWittingtangentgivestheobserveduphierarchy(m_c/m_t~#"
     },
     {
       "file_count": 1,
@@ -956697,7 +956895,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1541,
+          "line": 1543,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1345121,6 +1345319,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fe711b587bb1a14cea1e8cb3fa6dcb888a5d4a8382a1780ae9575fc88c2f6473",
+      "normalized_formula": "m_u/m_c~2e-3);itneedsasmallG25-breakingparameter,e.g.theH27-covariantcubicof34e149d79",
+      "numeric_literals": [
+        "2e-3",
+        "4e149",
+        "5",
+        "7",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11926_g25_tangent_vacua.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/w33_pass11926_g25_tangent_vacua.py",
+          "raw": "m_u/m_c ~ 2e-3); it needs a small G25-breaking parameter, e.g. the H27-covariant cubic of 34e149d79.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "e1100bc22cbba51665ea56e39e3c270a59a042744840dfb5b426c065ca126462",
+      "structural_formula": "m_u/m_c~#);itneedsasmallG2#-breakingparameter,e.g.theH2#-covariantcubicof3#d7#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6669f301c598582bc1d66d03ceb98c0eb00fe8d3f3219d7dea703e693389f534",
       "normalized_formula": "m_u/m_c\u22482\\times10^{-3}",
       "numeric_literals": [
@@ -1546389,7 +1546618,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1537,
+          "line": 1539,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1568643,6 +1568872,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a056b3e00cb4cf148a0488ba7d911a04a5eccf5048357ed44bb6031d0e7e1270",
+      "normalized_formula": "ranks[k]=int(np.linalg.matrix_rank(M,tol=1e-9))-1#non-constantinvariants",
+      "numeric_literals": [
+        "-1",
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11926_g25_tangent_vacua.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/w33_pass11926_g25_tangent_vacua.py",
+          "raw": "ranks[k] = int(np.linalg.matrix_rank(M, tol=1e-9)) - 1 # non-constant invariants",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ed1ef5e80e5b9520b187157dce08f93e48bb5243f26f50617a05b49ea76e4d87",
+      "structural_formula": "ranks[k]=int(np.linalg.matrix_rank(M,tol=#))##non-constantinvariants"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8456801f46356b8606203079f7ccd1bf65dcbc7c111f0d0ffe62bbe98b4de7f7",
       "normalized_formula": "rate(k-1)/k=11/12(11=k-1,theSAME11asPMNS11/13)",
       "numeric_literals": [
@@ -1575957,6 +1576214,33 @@
       },
       "structural_family_id": "254406af62b690500021a873dee0ebc3c6d4cb6aa6b6bc39278c7d390401418e",
       "structural_formula": "res=dict(pass_id=#,det3_forms=len(forms),entangling_compatible=compatible,cayley_hamilton_err=cayley"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d34da08fe0d856799cda375793d7c277a24f46a0d39880945e910c39daa0f526",
+      "normalized_formula": "res=dict(pass_id=11926,clifford_projective_order=len(G),nonconstant_invariants_by_bidegree=ranks,orbits=orbits",
+      "numeric_literals": [
+        "11926"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11926_g25_tangent_vacua.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 119,
+          "path": "analysis/w33_pass11926_g25_tangent_vacua.py",
+          "raw": "res = dict(pass_id=11926, clifford_projective_order=len(G), nonconstant_invariants_by_bidegree=ranks, orbits=orbits,",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "ec921f4340c741254c4b5b102e9916f2a1ed399bb4d39e7f7f2d7e077ad72b35",
+      "structural_formula": "res=dict(pass_id=#,clifford_projective_order=len(G),nonconstant_invariants_by_bidegree=ranks,orbits=orbits"
     },
     {
       "file_count": 1,
@@ -1639883,6 +1640167,36 @@
       },
       "structural_family_id": "fce724ef40f5797dd7d7dbdefa5973a216801d78c36f0b9faac275d71b4166c5",
       "structural_formula": "strange_higgs_gives_theta_zero_law=strange_dev<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "48eaca107ee2864f7e8b62ffd321d89aa3d8f877102568dfeef8dea00944d194",
+      "normalized_formula": "strangestatesM2=log2,stabiliser24,orbit9(61hits)->(1,1,0):theta-zerolaw,locked",
+      "numeric_literals": [
+        "0",
+        "1",
+        "4",
+        "61"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11926_g25_tangent_vacua.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass11926_g25_tangent_vacua.py",
+          "raw": "strange states M2 = log 2, stabiliser 24, orbit 9 (61 hits) -> (1,1,0): theta-zero law, locked",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8e817c46c504928e354ba4560833420905caadf2358f7685a50bde4ff7dc0860",
+      "structural_formula": "strangestatesM2=log2,stabiliser2#,orbit9(#hits)->(#,#,#):theta-zerolaw,locked"
     },
     {
       "file_count": 1,
@@ -1765449,9 +1765763,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T19:54:18-04:00",
+  "frozen_at": "2026-10-11T20:18:47-04:00",
   "pass": 398,
-  "repository_head": "17237e7a51550e12d0a2e449c5915a0c044a5acd",
+  "repository_head": "419bd1d4907f17ab3077e7a74f70a478187455ee",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1825461,6 +1825775,14 @@
     },
     {
       "exact_formula_ids": [
+        "1811b120977b349fe87557c6cb9082ce3278d217c846bc1e3617475612dbadaa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "901d448ad7200fe4aef41acb30518f77f854229e931610a84652acb1d6b5d612",
+      "structural_formula": "#.TheunlockingorbitsareNOThierarchical:forg=(#,eps,eps)andeverymemberofeachorbit,m_c/m_tstays>=#"
+    },
+    {
+      "exact_formula_ids": [
         "b05be42a2e297b5bf724d72280a65781908b0c7540cfa32760687f6d060a9a85"
       ],
       "exact_member_count": 1,
@@ -1880367,6 +1880689,14 @@
     },
     {
       "exact_formula_ids": [
+        "4e5fd01f5da6c97ba9eb19e6ddec03f5b16d874e3542829f9d4740a79ac223ad"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4400a35671cff7a0a56b37e1dcc32dc01070d144ac52d9d255f31e7f02a1541a",
+      "structural_formula": "(m_c/m_t\u2248#\u00b7#\u2212#,m_u/m_c\u2248#\u00b7#\u2212#)"
+    },
+    {
+      "exact_formula_ids": [
         "f286765e4eceb4ef50fff09402de5fda9886bd90d62e78423692728c6025ab15"
       ],
       "exact_member_count": 1,
@@ -1882870,6 +1883200,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5b065d8484671a8483d301a9eba0cbde284526432794bd83f902f3772a4f7341",
       "structural_formula": "*ThearrowAisPass1#;exactn=#,#ismaster'sPass1#;c(S),theplaneformulaandtheall-ntheoremarethispass.Theoperational-mereologyideaofminimisingscramblingoversubsystemstructuresisZanardi,Dallas,AndreadakisLloyd,Quantum8,#(#),citedinPass1#"
+    },
+    {
+      "exact_formula_ids": [
+        "6679c25ca49060360efe545fdc8ee08a60a69e73f726608481d05c69711c123d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7094b6b6ba1344529d123b0257afff3f1b2468867b6218ebb5bfdb1c1aeea320",
+      "structural_formula": "*Theboundsonm_c/m_tareminimaovereverymemberofeachorbit,at\u03b5=#\u2212#"
     },
     {
       "exact_formula_ids": [
@@ -1944426,6 +1944764,22 @@
     },
     {
       "exact_formula_ids": [
+        "3d87236ccb082fbeb0c36fed80cb1b56b7616e303c45b5066f0973f2d7a194b5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2acadab32b851e46eaa9182c45e1d0b610e63fea2c6e82560af78fe0ee87b6ce",
+      "structural_formula": "M_2=\\log\\tfrac8#"
+    },
+    {
+      "exact_formula_ids": [
+        "f6338f9f703a308faee31d778646fcaf5aff2cfbadffd914181465bf28ff4d49"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "937c45ed3f0df543f68fc65f840fad8a4e4af6762b3094a5b9138f88213d2eaa",
+      "structural_formula": "M_2\u2248#"
+    },
+    {
+      "exact_formula_ids": [
         "63e9f28f4e24977f1d4bf97db3d7b4303ddb4a062063a3a21c6b7bfa075deccb"
       ],
       "exact_member_count": 1,
@@ -1952746,6 +1953100,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f1566052a758d13a508fb3ce6331c8720fcc92cee450dd20829adcf1264a59fd",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_fractional_fermion_masses.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "3504f3bc992177cb435db9680f5365754b827e1edc8c5925937c299100081401"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "38f6d1358893277ea10b3b2cb704dfbfed78d73f274977070325188386c55829",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_g2#_tangent_vacua.json\""
     },
     {
       "exact_formula_ids": [
@@ -1965215,6 +1965577,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9faeb25d2a57b1de71e59deac8269cf3ac22269c608a29abc1c9edc9da512835",
       "structural_formula": "Reading:m_c/m_u~#cannotcomefromanyVEValignmentoftheSM-neutralscalarsinthesemodels;itneedsanO(#)"
+    },
+    {
+      "exact_formula_ids": [
+        "45726e9ee47b3965b15d14af9f01056f3484088c06c210285476eb8f5f0744e0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b5ab8e7d5452492a1d25ee23c9292e37f2989dd10189a819d496b6c8d6f62c10",
+      "structural_formula": "Reading:noG2#-symmetricvacuumoftheWittingtangentgivestheobserveduphierarchy(m_c/m_t~#"
     },
     {
       "exact_formula_ids": [
@@ -2126047,6 +2126417,14 @@
     },
     {
       "exact_formula_ids": [
+        "fe711b587bb1a14cea1e8cb3fa6dcb888a5d4a8382a1780ae9575fc88c2f6473"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e1100bc22cbba51665ea56e39e3c270a59a042744840dfb5b426c065ca126462",
+      "structural_formula": "m_u/m_c~#);itneedsasmallG2#-breakingparameter,e.g.theH2#-covariantcubicof3#d7#"
+    },
+    {
+      "exact_formula_ids": [
         "6669f301c598582bc1d66d03ceb98c0eb00fe8d3f3219d7dea703e693389f534"
       ],
       "exact_member_count": 1,
@@ -2185020,6 +2185398,14 @@
     },
     {
       "exact_formula_ids": [
+        "a056b3e00cb4cf148a0488ba7d911a04a5eccf5048357ed44bb6031d0e7e1270"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ed1ef5e80e5b9520b187157dce08f93e48bb5243f26f50617a05b49ea76e4d87",
+      "structural_formula": "ranks[k]=int(np.linalg.matrix_rank(M,tol=#))##non-constantinvariants"
+    },
+    {
+      "exact_formula_ids": [
         "8456801f46356b8606203079f7ccd1bf65dcbc7c111f0d0ffe62bbe98b4de7f7"
       ],
       "exact_member_count": 1,
@@ -2186885,6 +2187271,14 @@
       "exact_member_count": 1,
       "structural_family_id": "26517515296b1694339bfefe816b319ce538e1762fd17a9a2073ffb96a223d58",
       "structural_formula": "res=dict(pass_id=#,charpoly_coeffs=target,deviation=dev,max_imag=imag,top_eigenvalue=top"
+    },
+    {
+      "exact_formula_ids": [
+        "d34da08fe0d856799cda375793d7c277a24f46a0d39880945e910c39daa0f526"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ec921f4340c741254c4b5b102e9916f2a1ed399bb4d39e7f7f2d7e077ad72b35",
+      "structural_formula": "res=dict(pass_id=#,clifford_projective_order=len(G),nonconstant_invariants_by_bidegree=ranks,orbits=orbits"
     },
     {
       "exact_formula_ids": [
@@ -2204267,6 +2204661,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fce724ef40f5797dd7d7dbdefa5973a216801d78c36f0b9faac275d71b4166c5",
       "structural_formula": "strange_higgs_gives_theta_zero_law=strange_dev<#"
+    },
+    {
+      "exact_formula_ids": [
+        "48eaca107ee2864f7e8b62ffd321d89aa3d8f877102568dfeef8dea00944d194"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8e817c46c504928e354ba4560833420905caadf2358f7685a50bde4ff7dc0860",
+      "structural_formula": "strangestatesM2=log2,stabiliser2#,orbit9(#hits)->(#,#,#):theta-zerolaw,locked"
     },
     {
       "exact_formula_ids": [
@@ -2237221,20 +2237623,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86787619,
-    "exact_formula_families": 60369,
-    "files_scanned": 11883,
-    "formula_occurrences": 66311,
+    "bytes_scanned": 86798846,
+    "exact_formula_families": 60380,
+    "files_scanned": 11885,
+    "formula_occurrences": 66322,
     "status_occurrences": {
       "certified_or_theorem": 4835,
-      "killed_or_retracted": 1565,
+      "killed_or_retracted": 1566,
       "open_or_conditional": 2146,
       "preregistered": 32,
-      "retrospective_fit": 5108,
-      "unclassified": 52625
+      "retrospective_fit": 5114,
+      "unclassified": 52629
     },
-    "structural_families": 58765
+    "structural_families": 58776
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "3efc33050dd2230b9f7f80ff0b246cdd779829a551261d674fa2f208c039b191"
+  "universe_sha256": "003e1d3a7237ad7c9edfbbef2453423d23c5938b3ab4a636b1f2b4aef61f9fde"
 }
