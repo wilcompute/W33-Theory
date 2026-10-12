@@ -1,0 +1,34 @@
+{
+  "pass_id": 11935,
+  "cg_runs": [
+    3.6934304555927993,
+    3.693430473199523,
+    3.6934304773085644,
+    3.6934304832965577,
+    3.6934304944853973,
+    3.693430497116472
+  ],
+  "cg_min": 3.6934304555927993,
+  "polished_M2": 0.4700036292457359,
+  "log_8_5": 0.47000362924573563,
+  "polished_pauli_max": 0.6830127018922195,
+  "clifford_stabiliser": 4,
+  "cg_polished": 3.693430658756553,
+  "named_cg": {
+    "strange": 5.046495630518716,
+    "stabiliser": 3.999999538467548,
+    "T_log95": 3.7421175474554125
+  },
+  "orbit_size": 54,
+  "min_mc_mt_over_orbit": 0.3665263343508538,
+  "up_gap_polished": 0.10851267619953701,
+  "checks": {
+    "all_runs_same_minimum": true,
+    "minimiser_is_log85_orbit": true,
+    "polished_point_is_minimum": true,
+    "below_other_special_orbits": true,
+    "orbit_size_54": true,
+    "unlocks_but_not_hierarchical": true
+  },
+  "all_checks_pass": true
+}
