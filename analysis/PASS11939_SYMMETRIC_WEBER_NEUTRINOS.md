@@ -1,5 +1,9 @@
 # Pass 11939: the symmetric-channel Weber law — normal ordering and m₁m₃/m₂² = m_u m_t/m_c²
 
+> **Corrected by Pass 11940.** "One home" must mean a shared τ, not a shared Ω: a shared Ω would make all neutrino
+> ratios equal the up ratios, which is excluded. The type-I seesaw with Dirac and Majorana theta nulls at the same τ
+> supplies the needed channel-specific Ω₁₂ and preserves the invariant.
+
 Producer: `analysis/w33_pass11939_symmetric_weber_neutrinos.py`
 Certificate: `data/w33_pass11939_symmetric_weber_neutrinos.json`
 Regression: `tests/test_w33_pass11939.py`
