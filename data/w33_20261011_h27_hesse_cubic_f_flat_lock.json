@@ -1,0 +1,142 @@
+{
+  "checks": {
+    "H27_cubic_invariant_dimension_two": true,
+    "basis_is_Hesse_pencil": true,
+    "critical_union_equals_stabilizers": true,
+    "critical_union_has_12_rays": true,
+    "four_singular_members": true,
+    "gradients_vanish": true
+  },
+  "degree3": {
+    "H27_invariant_dimension": 2,
+    "Z_allowed_monomials": [
+      [
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        3,
+        0,
+        0
+      ]
+    ],
+    "all_monomials": [
+      [
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ]
+    ],
+    "basis": [
+      "S=x^3+y^3+z^3",
+      "P=xyz"
+    ],
+    "orbit_sums": [
+      [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "physics_boundary": {
+    "consequence": "Breaking projective G25 down to H27 with only a supersymmetric cubic does not produce a nonzero F-flat magic Higgs: every nonzero F-flat vacuum is a stabilizer state and therefore remains in the Pass11923 charm-up lock.",
+    "not_ruled_out": [
+      "non-F-flat soft or radiative dynamics on the same Hesse pencil",
+      "higher-degree H27 invariants",
+      "explicit breaking below H27",
+      "couplings to additional fields whose background changes the F-term equations"
+    ]
+  },
+  "schema": "w33.20261011.h27-hesse-cubic-f-flat-lock.v1",
+  "singular_pencil": {
+    "coefficient_condition": "alpha=0 or beta^3+27 alpha^3=0",
+    "critical_rays_per_member": 3,
+    "equals_qutrit_stabilizer_set": true,
+    "max_gradient_residual": 1.2951686074803717e-15,
+    "projective_members": 4,
+    "union_critical_rays": 12
+  },
+  "sources": {
+    "analysis/w33_20261011_execute_all5_witting_flavour_frontier.py": "826bb7570ec935a5e8b21caae05ba234776ea8a589c5a0261bcff4b5caf0d1de",
+    "analysis/w33_pass11664_11671_kernel_dynamics.py": "28b54c9464c1ae6f83d920bc8b138b6e92d1280d5e90e474a592bde0eea95839",
+    "analysis/w33_pass11923_stabiliser_higgs_lock.py": "3f4bcad765f10585d22673fa827a22b736c90fe417b54d8cf7e128fd5ba15ddc"
+  },
+  "status": "PASS_H27_CUBIC_F_FLAT_VACUA_ARE_EXACTLY_STABILIZER_STATES",
+  "theorem": "For W=alpha(x^3+y^3+z^3)+beta xyz, a nonzero complex F-flat critical ray exists iff alpha=0 or beta^3+27 alpha^3=0. These four projective coefficient values are the four singular Hesse members. Their critical rays are exactly the 12 qutrit stabilizer states."
+}

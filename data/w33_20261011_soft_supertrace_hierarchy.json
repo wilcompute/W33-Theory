@@ -1,0 +1,156 @@
+{
+  "Witting_values": {
+    "F": -6.591673732008657,
+    "G": -19.775021196025975
+  },
+  "all_checks_pass": true,
+  "angular_witnesses": {
+    "T_state": {
+      "C_G": 3.7421175474554125,
+      "magic_M2": 0.5877866649021182,
+      "opened_zero_modes": 24,
+      "pauli_max": 0.5773502691896261,
+      "sum_zero_slopes": 7.999999680153286
+    },
+    "intermediate_witness": {
+      "C_G": 3.7044423503778905,
+      "covariance_control": 7.02348181641963e-16,
+      "magic_M2": 0.4801542177016053,
+      "max_fidelity_to_stabiliser": 0.7948622090862879,
+      "opened_zero_modes": 24,
+      "pauli_max": 0.6931375385131674,
+      "residual_Delta54_projective_order": 1,
+      "sum_zero_slopes": 7.999999680107411,
+      "up_gap": 0.12361795791702103,
+      "up_singular_values_normalised": [
+        1.0,
+        0.876382042082979,
+        0.6773677168648317
+      ]
+    },
+    "stabiliser": {
+      "C_G": 3.999999538467548,
+      "magic_M2": -0.0,
+      "opened_zero_modes": 20,
+      "pauli_max": 1.0,
+      "sum_zero_slopes": 7.999999675442771
+    },
+    "strange": {
+      "C_G": 5.046495630518716,
+      "magic_M2": 0.6931471805599461,
+      "opened_zero_modes": 16,
+      "pauli_max": 0.49999999999999994,
+      "sum_zero_slopes": 7.999999667754763
+    }
+  },
+  "asymptotic": {
+    "A_zero_mode_sum": 7.999998640316908,
+    "C_G": 3.9999976583376573,
+    "DeltaF": "(kappa_F/2) t^2 + 4 t^4 log(t^2) + O(t^4)",
+    "DeltaG": "8 t^2 log(t^2) + 4 t^2 + o(t^2)",
+    "cusp_weld": "Pass11891 gives epsilon proportional to projective displacement delta. With delta~t_*, this effective branch gives epsilon proportional to exp[-kappa_F/(32 r)] up to a non-universal prefactor.",
+    "essential_scaling": "log t_* = -kappa_F/(32 r) - 1/2 - C_G/16 + o(1)",
+    "kappa_F": 7.211078181196879,
+    "leading_exponent": -0.22534619316240248,
+    "reason": "t^2 log(t^2) has zero first derivative at t=0 but dominates every finite positive t^2 curvature negatively for r>0.",
+    "stationary_but_not_minimum_for_r_positive": true
+  },
+  "checks": {
+    "F_curvature_converges": true,
+    "G_finite_coefficient_converges_to_4": true,
+    "essential_scaling_directly_resolved": true,
+    "intermediate_beats_three_endpoint_directions": true,
+    "intermediate_breaks_residual_symmetry": true,
+    "intermediate_magic_is_strict": true,
+    "intermediate_unlocks_up_pair": true,
+    "zero_mode_pattern_4_18_2": true,
+    "zero_mode_sum_is_8": true
+  },
+  "interpretation": {
+    "firewall_consistency": "The G32-invariant loop potential does not exert a linear force at the Witting ray. The ray remains stationary. The escape is a nonanalytic bifurcation through the logarithmic opening of massless gauge modes.",
+    "flavour_bridge": "The explicit lower-C_G witness has intermediate qutrit magic, trivial projective Delta54 residual symmetry, and a nondegenerate up Yukawa. It lies between the stabiliser and Strange endpoints of Pass11925.",
+    "scope": "The relative coefficient r is supplied, not derived. This is not a UV prediction of quark masses, a complete 1PI potential, or a proof of the global minimum for every r. Gauge/Goldstone/ghost and renormalisation bookkeeping remain required for a physical off-shell effective potential."
+  },
+  "local_stabiliser_tangent": [
+    {
+      "C_G": 3.999999538467548,
+      "kappa_F": 7.211095631731723,
+      "remain_zero": 4,
+      "slope_one": 2,
+      "slope_one_third": 18,
+      "slope_sum": 7.999999675442771,
+      "t": 0.0002
+    },
+    {
+      "C_G": 3.999998806741865,
+      "kappa_F": 7.211088694071401,
+      "remain_zero": 4,
+      "slope_one": 2,
+      "slope_one_third": 18,
+      "slope_sum": 7.999999279264691,
+      "t": 0.0003
+    },
+    {
+      "C_G": 3.9999965099334496,
+      "kappa_F": 7.211067668322357,
+      "remain_zero": 4,
+      "slope_one": 2,
+      "slope_one_third": 18,
+      "slope_sum": 7.999998001369124,
+      "t": 0.0005
+    },
+    {
+      "C_G": 3.999991054306769,
+      "kappa_F": 7.211019445452216,
+      "remain_zero": 4,
+      "slope_one": 2,
+      "slope_one_third": 18,
+      "slope_sum": 7.9999948801914424,
+      "t": 0.0008
+    }
+  ],
+  "potential": "V_r = F + r G, F=sum e^2 log e, G=sum e log e",
+  "radial_checks": [
+    {
+      "deltaV": -1.5972562890098655e-07,
+      "log_error": 0.00010096352293498256,
+      "log_t": -7.188361551906096,
+      "predicted_log_t": -7.188462515429031,
+      "r": 0.035,
+      "t": 0.0007553256691093736
+    },
+    {
+      "deltaV": -9.1321702839764e-07,
+      "log_error": 0.00045627568905270977,
+      "log_t": -6.3831984070171135,
+      "predicted_log_t": -6.383654682706166,
+      "r": 0.04,
+      "t": 0.001689709924618213
+    },
+    {
+      "deltaV": -1.0896726831433065e-05,
+      "log_error": 0.0029834946199631673,
+      "log_t": -5.25394022227419,
+      "predicted_log_t": -5.256923716894153,
+      "r": 0.05,
+      "t": 0.005226882691636008
+    },
+    {
+      "deltaV": -5.915854951577871e-05,
+      "log_error": 0.009818616063753005,
+      "log_t": -4.495951123622393,
+      "predicted_log_t": -4.505769739686146,
+      "r": 0.06,
+      "t": 0.011154066672033891
+    }
+  ],
+  "schema": "w33.20261011.soft-supertrace-hierarchy.v1",
+  "sources": {
+    "analysis/w33_20261011_witting_displacement_firewall.py": "a703ff6df7164d8433262f0ea94d59c7cc48e02469cdaf3851fa832da8758aa4",
+    "analysis/w33_pass11884_11886_one_loop_trinification.py": "bfb973ffe5022c3a4d8d8d6d0b61ccae12c10348301116fb9d288391ec2d4c95",
+    "analysis/w33_pass11890_11892_vacuum_phase_diagram.py": "25086d0710281f9d7b8eb34e304e969b0e4c202cd3ac39ecbe287b34a802e4f9",
+    "analysis/w33_pass11923_stabiliser_higgs_lock.py": "3f4bcad765f10585d22673fa827a22b736c90fe417b54d8cf7e128fd5ba15ddc",
+    "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py": "03e3a786076c43b7658443353b9a4cf12e98d5f74fbd37d760470486a3b97d60",
+    "analysis/w33_pass11925_w33_on_the_flavour_qutrit.py": "57a8adbd1430436e74930391b3ed836ec2836c2b3ac681d3dea97f70ca966c78"
+  }
+}
