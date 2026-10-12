@@ -1,0 +1,81 @@
+{
+  "pass_id": 11941,
+  "scan_record": {
+    "exact_fits_up_wilson_free": 6,
+    "im_minus_inv_tau_d_exact": [
+      3.69,
+      3.75
+    ],
+    "best_cost_im_tau_d_ge_015": 0.00355,
+    "im_minus_inv_tau_d_all_good_fits": [
+      3.47,
+      3.81
+    ],
+    "fits_run": 26
+  },
+  "parity_max_violation": 1.9429000437221586e-16,
+  "isolated_generation_max_entry": 1.0000000000000002,
+  "near_product_no_wilson": {
+    "Vus": 4.5513249963388185e-14,
+    "Vcb": 3.4236394397703446e-17,
+    "Vub": 3.4456720165311415e-05
+  },
+  "fit": {
+    "x": [
+      0.5850641310964246,
+      0.2950885731201953,
+      -0.12607534783203114,
+      0.0886250978416075,
+      -0.001774367623304739,
+      0.0004925056198951474,
+      0.023879064621014728,
+      0.00967326689616481,
+      0.00969111124620771,
+      0.012627532616324336,
+      -0.05570431336131652,
+      0.009793278393455396
+    ],
+    "observables": {
+      "mc_mt": 0.0036847735633370755,
+      "mu_mc": 0.001983870968501215,
+      "ms_mb": 0.018531468531030385,
+      "md_ms": 0.05037735848598087,
+      "Vus": 0.2249999997827497,
+      "Vcb": 0.041100000029413136,
+      "Vub": 0.0038200000030772984,
+      "J": 3.079999999125666e-05
+    },
+    "max_log_residual": 9.655568571574575e-10,
+    "tau": [
+      0.5850641310964246,
+      0.2950885731201953
+    ],
+    "tau_d": [
+      -0.12607534783203114,
+      0.0886250978416075
+    ],
+    "eps_u": 0.0018414511256779017,
+    "eps_d": 0.025763963585190754,
+    "wilson_d": [
+      0.015917669966509184,
+      0.05655863177930904
+    ],
+    "weber_f8_tau": 1.467557155340789,
+    "im_minus_inv_tau_d": 3.7316771369546142,
+    "down_without_wilson": {
+      "R_d": 19.50843599542789,
+      "ms_mb": 0.009612953647955355
+    }
+  },
+  "checks": {
+    "central_inversion_parity_exact": true,
+    "isolated_generation": true,
+    "near_product_vus_vcb_zero": true,
+    "all_eight_quark_observables_fit": true,
+    "near_product_regime": true,
+    "up_weber_law_intact": true,
+    "down_factor_in_cusp_regime": true,
+    "wilson_lines_change_down_weber": true
+  },
+  "all_checks_pass": true
+}
