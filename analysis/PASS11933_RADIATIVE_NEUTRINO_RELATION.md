@@ -51,3 +51,10 @@ solar splitting.
 * An m₃ of about 1 meV is below near-term direct reach, but it fixes Σm_ν ≈ 0.10 eV, which cosmology is approaching.
 
 **Open.** A derivation of radiative selection beyond the leading-coupling argument, and of the ℤ₃-respecting vacuum.
+
+## Caveat (Pass 11934)
+
+Applied uniformly to every Yukawa channel, the same radiative + residual-ℤ₃ principle gives (1, 1, 0) in the up, down
+and charged-lepton sectors too. Those give top = charm, m_b = m_s and m_τ = m_μ, which are excluded. The inverted-ordering
+reading therefore needs a reason specific to the neutrino mediator. It is **not** a consequence of a universal selection
+rule.
