@@ -1,0 +1,72 @@
+{
+  "pass_id": 11926,
+  "clifford_projective_order": 216,
+  "nonconstant_invariants_by_bidegree": {
+    "2": 0,
+    "3": 1,
+    "4": 2
+  },
+  "orbits": [
+    {
+      "hits": 61,
+      "M2": 0.6931471805599451,
+      "pmax": 0.5000000000000003,
+      "stabiliser": 24,
+      "orbit": 9,
+      "max_gap": 4.847170379611836e-16,
+      "min_gap": 0.0,
+      "min_mc_mt_over_orbit_eps1e3": 0.999999999999998
+    },
+    {
+      "hits": 37,
+      "M2": 1.1102230246251565e-16,
+      "pmax": 1.0,
+      "stabiliser": 18,
+      "orbit": 12,
+      "max_gap": 5.1356067956249595e-16,
+      "min_gap": 0.0,
+      "min_mc_mt_over_orbit_eps1e3": 0.0009999999999999998
+    },
+    {
+      "hits": 17,
+      "M2": 0.4700036292457343,
+      "pmax": 0.6830127018922196,
+      "stabiliser": 4,
+      "orbit": 54,
+      "max_gap": 0.4307065411522234,
+      "min_gap": 0.013593067702939337,
+      "min_mc_mt_over_orbit_eps1e3": 0.36652633435085374
+    },
+    {
+      "hits": 4,
+      "M2": 0.587786664902119,
+      "pmax": 0.5773502691896258,
+      "stabiliser": 3,
+      "orbit": 72,
+      "max_gap": 0.36640506304348763,
+      "min_gap": 0.03738589959173283,
+      "min_mc_mt_over_orbit_eps1e3": 0.5320895178602894
+    },
+    {
+      "hits": 1,
+      "M2": 0.6908414691468066,
+      "pmax": 0.5348215936335845,
+      "stabiliser": 3,
+      "orbit": 72,
+      "max_gap": 0.3294904724380285,
+      "min_gap": 0.011477063814637336,
+      "min_mc_mt_over_orbit_eps1e3": 0.5096476358655176
+    }
+  ],
+  "draws": 120,
+  "checks": {
+    "clifford_order_216": true,
+    "invariant_counts_0_1_2": true,
+    "strange_and_stabiliser_orbits": true,
+    "log8over5_and_log9over5_orbits": true,
+    "symmetric_endpoints_lock": true,
+    "other_orbits_unlock": true,
+    "no_orbit_gives_up_hierarchy": true
+  },
+  "all_checks_pass": true
+}
