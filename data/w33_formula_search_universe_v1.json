@@ -191166,6 +191166,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "839b807f366480b5433c0150dac0fac04474812c756ad8efd2e359f5dbd2c9e8",
+      "normalized_formula": "##Results(A2and(1,1,4),allwavevectorswith|ki|\u22642,gridG=20)",
+      "numeric_literals": [
+        "1",
+        "2",
+        "20",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11927_FOURIER_SPURIONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/PASS11927_FOURIER_SPURIONS.md",
+          "raw": "## Results (A\u2082 and (1,1,4), all wavevectors with |k\u1d62| \u2264 2, grid G = 20)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c3be7bf4239f8e657b3af4f3923885db4b7de7ec9c458ccc7738a3112fb6444d",
+      "structural_formula": "##Results(A2and(#,#,#),allwavevectorswith|ki|\u2264#,gridG=#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2df152d3af0830b7b601e2035fd6be9ec967b47494978d15ba87d563a24a2d44",
       "normalized_formula": "##T1:alpha(W(3,3))=7=Phi6(CORRECTIONtotheGraphTheorytable)",
       "numeric_literals": [
@@ -388208,7 +388238,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1538,
+          "line": 1540,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -426317,6 +426347,35 @@
       },
       "structural_family_id": "034889b76617afd60186a112f6b8139a852cdefe192ee8106c7ce8038d285e2d",
       "structural_formula": "#.theE7quarticQ=(#/#)coeff_fad_x^#e_theta,exactE7invariance"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "25a17d043e1310b82746df1f08d5374eef6902e392b24443d784e16be733581f",
+      "normalized_formula": "3.thePaulilabelisafunctionofthewavevectormod3,additiveinthewavevector(ahomomorphismZ^4->F3^2xF3^2",
+      "numeric_literals": [
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11927_fourier_spurions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_pass11927_fourier_spurions.py",
+          "raw": "3. the Pauli label is a function of the wavevector mod 3, additive in the wavevector (a homomorphism Z^4 -> F3^2 x F3^2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1cf24fbfd6fe681584c4d8509037e4db25b85fcb15ad1be911f0b73e2f38c31b",
+      "structural_formula": "#.thePaulilabelisafunctionofthewavevectormod3,additiveinthewavevector(ahomomorphismZ^#->F3^#xF3^#"
     },
     {
       "file_count": 1,
@@ -956895,7 +956954,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1543,
+          "line": 1545,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1539108,6 +1539167,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d2bcad9259f9985c7b6b7dfd822c569af585fedab57d7ba9fe6d6b1a25a2de4f",
+      "normalized_formula": "pure_81_from_N5=pure81,pure_18_from_N10=pure18,generic_modes_are_88=mixed",
+      "numeric_literals": [
+        "0",
+        "1",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11927_fourier_spurions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 129,
+          "path": "analysis/w33_pass11927_fourier_spurions.py",
+          "raw": "pure_81_from_N5=pure81, pure_18_from_N10=pure18, generic_modes_are_88=mixed,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a1b428981a40ac6da4fa258695c97675584bc7b3155df6b1dd1ae260d3b296ba",
+      "structural_formula": "pure_8#_from_N5=pure8#,pure_1#_from_N1#=pure1#,generic_modes_are_8#=mixed"
+    },
+    {
+      "file_count": 1,
       "formula_id": "def9a3987dc0150cb60dd877b65295d2e82b1ab90dd7a131756bfe3afc98b59b",
       "normalized_formula": "pure_BL_mass_quadratic_form='1/5att=s=1/10,inthesuppliedcanonicalunit-couplingconvention'",
       "numeric_literals": [
@@ -1546618,7 +1546706,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1539,
+          "line": 1541,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1765763,9 +1765851,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-11T20:18:47-04:00",
+  "frozen_at": "2026-10-11T20:36:11-04:00",
   "pass": 398,
-  "repository_head": "419bd1d4907f17ab3077e7a74f70a478187455ee",
+  "repository_head": "a87d3efe8b0dc8518953472bc321d83bcdff2906",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1821578,6 +1821666,14 @@
     },
     {
       "exact_formula_ids": [
+        "839b807f366480b5433c0150dac0fac04474812c756ad8efd2e359f5dbd2c9e8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c3be7bf4239f8e657b3af4f3923885db4b7de7ec9c458ccc7738a3112fb6444d",
+      "structural_formula": "##Results(A2and(#,#,#),allwavevectorswith|ki|\u2264#,gridG=#)"
+    },
+    {
+      "exact_formula_ids": [
         "2df152d3af0830b7b601e2035fd6be9ec967b47494978d15ba87d563a24a2d44"
       ],
       "exact_member_count": 1,
@@ -1827214,6 +1827310,14 @@
       "exact_member_count": 1,
       "structural_family_id": "034889b76617afd60186a112f6b8139a852cdefe192ee8106c7ce8038d285e2d",
       "structural_formula": "#.theE7quarticQ=(#/#)coeff_fad_x^#e_theta,exactE7invariance"
+    },
+    {
+      "exact_formula_ids": [
+        "25a17d043e1310b82746df1f08d5374eef6902e392b24443d784e16be733581f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1cf24fbfd6fe681584c4d8509037e4db25b85fcb15ad1be911f0b73e2f38c31b",
+      "structural_formula": "#.thePaulilabelisafunctionofthewavevectormod3,additiveinthewavevector(ahomomorphismZ^#->F3^#xF3^#"
     },
     {
       "exact_formula_ids": [
@@ -2179637,6 +2179741,14 @@
     },
     {
       "exact_formula_ids": [
+        "d2bcad9259f9985c7b6b7dfd822c569af585fedab57d7ba9fe6d6b1a25a2de4f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a1b428981a40ac6da4fa258695c97675584bc7b3155df6b1dd1ae260d3b296ba",
+      "structural_formula": "pure_8#_from_N5=pure8#,pure_1#_from_N1#=pure1#,generic_modes_are_8#=mixed"
+    },
+    {
+      "exact_formula_ids": [
         "def9a3987dc0150cb60dd877b65295d2e82b1ab90dd7a131756bfe3afc98b59b"
       ],
       "exact_member_count": 1,
@@ -2237623,20 +2237735,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86798846,
-    "exact_formula_families": 60380,
-    "files_scanned": 11885,
-    "formula_occurrences": 66322,
+    "bytes_scanned": 86811040,
+    "exact_formula_families": 60383,
+    "files_scanned": 11887,
+    "formula_occurrences": 66325,
     "status_occurrences": {
       "certified_or_theorem": 4835,
       "killed_or_retracted": 1566,
       "open_or_conditional": 2146,
       "preregistered": 32,
       "retrospective_fit": 5114,
-      "unclassified": 52629
+      "unclassified": 52632
     },
-    "structural_families": 58776
+    "structural_families": 58779
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "003e1d3a7237ad7c9edfbbef2453423d23c5938b3ab4a636b1f2b4aef61f9fde"
+  "universe_sha256": "4bfab4604146d992f533771e8d539c2dbc9b447d959dbd80d7801d6a6de4e244"
 }
