@@ -1,0 +1,56 @@
+{
+  "type": "publication_attestation",
+  "science_sha": "637750ae616ae8a9099e2fe7269953a2ec580cc9",
+  "science_commits": [
+    "c1deed40d",
+    "d3d053ea0"
+  ],
+  "reservation": "c0db5a4ec9bf4537564b56cbfb8216b97dd6e8ca",
+  "run_id": 38409169059,
+  "job_id": 115336630913,
+  "conclusion": "success",
+  "run_url": "https://github.com/wilcompute/W33-Theory/actions/runs/38409169059",
+  "hosted_counts_and_seconds": [
+    [
+      "23",
+      "2.05"
+    ],
+    [
+      "19",
+      "1.33"
+    ]
+  ],
+  "local_checks": 23,
+  "local_seconds": 11.48,
+  "result_index": {
+    "files": 12096,
+    "distinctive_results": 16730,
+    "unique": 7323
+  },
+  "hashes_lf": {
+    "analysis/w33_pass11965_11966_cp_transmission_soft_modulus.py": "3ae2c50b1c762d1be11ac1e77841ae779edc206de3ca45d6abad995beb772fc1",
+    "analysis/w33_pass11967_flavour_orientation_selector.py": "1830ef375256abf6a582cfc60600cb6d819b757f08d581a10daa6bab315d4158",
+    "analysis/w33_pass11968_native_spin2_constraint_completion.py": "e52e8ead1f53d8c7dd2722c6944a716bd4389cedcd95bd8fb34d1155a1941a4d",
+    "analysis/w33_pass11969_quantum_gauge_fermion.py": "964f4f778105e94a340b79fcb3084f81751108aefb003c88ce46dbc9d71d2e38",
+    "analysis/w33_pass11969_full_native_gauss_compiler.py": "6b3d122bcbad8e69c1ed3d065a27f0cc78c215ff219429ebd39a2a94957a33cc",
+    "analysis/PASS11965_11969_FIVE_DYNAMICAL_FRONTS.md": "032e24d9e271fe28a48e7472377be996121ed85afceac472a177dfc500563d93",
+    "tests/test_w33_pass11965_11969_five_dynamical_fronts.py": "7ba57473fd8a01e0f84aa8727273b1650c1857f5f319669c21ed5becf263238d",
+    ".github/workflows/pass11965-11969-five-dynamical-fronts.yml": "c38c3feea224841e0eaa8d0704767b845e563fa20ceeba7fa0faf48019d4a840",
+    "data/w33_pass11965_11966_cp_transmission_soft_modulus.json": "ce3ab07602b2a6b04746a4722394bff8bc4e5c0f63ad4abfa7c046868ab16c85",
+    "data/w33_pass11967_flavour_orientation_selector.json": "2d82a850973e329a6610c640c8ed99eb0f6ebe2d8dc2f9559730643f682d70af",
+    "data/w33_pass11968_native_spin2_constraint_completion.json": "1e6092174dffaa1aefca8698e92be71b45995de20fb85a848914d768fb51b910",
+    "data/w33_pass11969_quantum_gauge_fermion.json": "e85b53293b9f05f2b0ff26bfece9bdf52558fad8cc4cf14d0a4da1eef9b283af",
+    "data/w33_pass11969_full_native_gauss_compiler.json": "bd21a1c3fbc8e5054deaafa83c78427cec4422beda5eb7e30115122fe2ef97df",
+    "docs/index.html": "cd497d458776e45962eb4bbd280e77b383775180a0c97cd90c4904d59f13c530",
+    "RESULTS_INDEX.md": "63beeda64960445d614e7c18be21fa50fa46c6d59beeb31581a0363e16ecb928"
+  },
+  "input_hashes_lf": {
+    "analysis/w33_pass11952_11955_threshold_vacuum_loop_leptons.py": "2884f88922bbe761c6b133cdc592771f6aca06b5c89e94f76bafeb8b1f9ae3b5",
+    "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py": "fbda88ffa1af9af9edc310482ed78463144d25582560681cfde9ba8b6fe40555",
+    "data/w33_pass11960_11961_clebsch_and_shared_cone.json": "c88503d17f85ffd2af756c9f8c6e74ea6a0efbe7bba7e8a7d219c6e416d6c91a",
+    "analysis/w33_20261010_toe38_local_maxwell_2complex.py": "6be80936afff79d71f3d8037bf98abc41146a019f9e5e81c0cd324f49424b813",
+    "analysis/w33_20261010_toe35_three_deck_kinematic_construction.py": "aff04a4a3b30edcb78078a70cab1e5fa2f3f84852f48e2c1c0f39c3c31f853da"
+  },
+  "guard": "Post-refresh guard emitted no collisions. Result searches and explicit prior citations retained.",
+  "scope": "Five research fronts and full finite native gauge/fermion operator executed. Does not solve selected realistic three-family flavour vacuum, nonlinear Einstein gravity or native interacting4D chiral continuum. No full semantic reading of every changed corpus file claimed."
+}
