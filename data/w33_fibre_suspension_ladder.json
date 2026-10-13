@@ -1,14 +1,14 @@
 {
-  "boundary": "Software control costs on certified finite geometry. The 216 carriers remain inequivalent construction-time forks; suspension retains a shared coordinate, it does not convert between carriers. No device claim.",
-  "certificate_sha256": "sha256:41fd5c87e42c2b759d37727b1c062cb59f28ac8f3b720aec998a7e4b5721426e",
+  "boundary": "Software counts on certified finite geometry.  The 216 carriers remain inequivalent construction-time forks.  No claim that the fibre base maps to a retained point region; that map is open.  No device claim.",
+  "certificate_sha256": "sha256:d11155c4f219c04040ea9c4d274be6a53171abf1386b0b9f9d79979630dbc283",
   "checks": {
-    "cycle_is_72": true,
-    "fibre_product_is_36x6x6": true,
-    "full_carrier_boundary_zero": true,
-    "ladder_certificate_pass_and_rung9_is_36": true,
-    "suspension_boundary_equals_spectral_min": true,
-    "suspension_region_is_rung9_on_all_36_spreads": true,
-    "zero_migration": true
+    "base_is_not_a_rung9_region": true,
+    "every_36_point_region_attains_boundary_36": true,
+    "exactly_36_spreads": true,
+    "fibre_product_is_36x6x6_counted": true,
+    "ladder_certificate_pass": true,
+    "rung9_regions_are_the_40_line_complements": true,
+    "whole_carrier_boundary_is_zero": true
   },
   "fibre": {
     "base_states": 36,
@@ -16,22 +16,29 @@
     "hypervisor_states": 1296,
     "projections": "both onto, exactly six-to-one, mutually independent"
   },
-  "schema": "w33.fibre-suspension-ladder.v1",
+  "identification": {
+    "base_states": 36,
+    "claim_tested": "the 36-state base is a rung-9 (36-point) region",
+    "counts_equal": false,
+    "distinct_rung9_regions": 40,
+    "psp43_stabiliser_orders": {
+      "base_spreads": 720,
+      "rung9_regions": 648
+    },
+    "verdict": "RETRACTED: 36 != 40 and 720 != 648, so no equivariant identification exists"
+  },
+  "schema": "w33.fibre-suspension-ladder.v2",
   "source_certificates": [
     "data/w33_spread_ladder_reversible_gc.json",
     "data/PASS20260903_finite_control_unbounded_guest_hypervisor.json"
   ],
   "status": "PASS",
+  "supersedes": "c2df9ac5f (schema v1 claimed base = rung 9; retracted)",
   "suspension": {
-    "attains_minimum": true,
-    "migration_on_suspend_or_resume": 0,
-    "nested_inside_full_carrier": "rung 9 subset of rung 10 (40 points, boundary 0)",
+    "cycle_boundary_for_any_36_point_region": 72,
     "release_boundary": 36,
-    "retention_points": 36,
-    "shared_not_summed": "the hypervisor's own control state pins the SAME 36-point base; two-fork suspension does not double the region",
     "spectral_minimum_at_36": 36,
-    "suspend_resume_cycle_boundary": 72,
-    "suspended_state": "shared base coordinate b in 36 (one fork's fibre tag reclaimed)"
+    "verified_statement": "any 36-point retention on W(3,3) has release boundary >= 36"
   },
-  "theorem": "Suspending one 216-state fork of the 1296 fibre hypervisor retains exactly the shared 36-state base, which is ladder rung 9: its release boundary 36 attains the spectral minimum m(40-m)/4, the suspend/resume cycle costs 72 boundary crossings (the minimum for any 36-point retention on W(3,3)), and nesting inside rung 10 gives zero retained-point migration.  The base is shared, so hypervisor control state adds no second region."
+  "theorem": "Every 36-point region of W(3,3) that is a union of nine spread lines is the complement of a line, attains boundary 36 = m(40-m)/4, and costs 72 crossings per release/restore cycle.  The 36 spreads that index the fibre base are NOT these regions (36 != 40; stabiliser orders 720 != 648), so the earlier 'suspension is rung 9' corollary is withdrawn."
 }

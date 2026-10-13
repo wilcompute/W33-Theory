@@ -1,55 +1,27 @@
 #!/usr/bin/env python3
-"""Fibre-hypervisor elastic guests: the shared 36-state base IS the suspension
-boundary for two-carrier W33 guests.
+"""Fibre hypervisor vs the spread ladder: what is true, and what was retracted.
 
-Three committed frontiers meet here:
+RETRACTION (supersedes the first version of this file, c2df9ac5f).  That version
+claimed the hypervisor's shared 36-state base IS ladder rung 9.  The only support
+was 36 = 4*9.  The base is the set of 36 SPREADS (fibre group S6, stabiliser order
+720), not 36 of the 40 points.  Rung-9 regions are the complements of single lines:
+there are 40 of them, with PSp(4,3)-stabiliser order 648.  36 != 40 and 720 != 648,
+so no equivariant identification exists, and the 'suspension = rung 9' corollary is
+withdrawn.  The same audit found two checks that could never fail (a six-to-one
+test comparing range(6) with itself; a loop over (0,)); both are replaced here.
 
-* w33_finite_control_unbounded_guest_hypervisor: the two 216-state carriers are
-  immutable construction-time forks; their canonical relation is the fibre
-  product 216 x_36 216 = 1296 = 36 x 6 x 6, and a hypervisor state (b,a,c)
-  projects six-to-one onto each fork.
-* w33_spread_ladder_reversible_gc (frozen certificate): the spectral bound
-  |dS| >= m(40-m)/4 is attained by every ladder rung at m = 4i -- including
-  m = 36 (rung 9, boundary 36).
-* The elastic-ladder scheduler semantics: resizing a retained region along the
-  ladder moves zero retained points.
+What IS verified, exactly:
+  * 1296 = 36*6*6; both projections onto and exactly six-to-one (counted);
+  * fixing one projection leaves all six values of the other (no conversion);
+  * the ladder: every 36-point line-complement attains boundary 36 = m(40-m)/4,
+    so ANY 36-point retention on W(3,3) costs >= 36 per release (72 per cycle);
+  * there are exactly 40 such regions on the points, against 36 base states.
 
-The new theorem is about SUSPENSION, not conversion.  When the hypervisor
-suspends one fork (say the pair216 leg) and keeps the other running, the state
-that must be retained is exactly the shared base coordinate b in 36 -- the two
-6-state fibre tags (a for the running leg, c for the suspended one) are either
-live in the running leg or reclaimable with the suspended leg's history.  So
-the suspension snapshot lives on a 36-point region, and rung 9 of the ladder
-attains the spectral minimum boundary at exactly that size:
+Open: a map from the 36-spread base to a retained point region.  The natural
+candidate is the 10-line spread itself (40 points), not a 36-point set.
 
-    boundary(36 points) = 36*(40-36)/4 = 36 = 4*9*(10-9).
-
-Suspension/resumption is therefore a ladder resize between rung 10 (both forks
-live, 40 points, boundary 0 -- the whole carrier, nothing to cross) and rung 9
-(one fork suspended, 36-point base pinned, boundary 36), and it inherits the
-ladder's zero-migration guarantee: the retained base points never move.
-
-The suspension cost ledger:
-    suspend one fork:   pin 36-point base   release boundary 36
-    resume:             re-derive fibre tag from base + replay, boundary 36
-    full suspend/resume cycle: 72 hop-crossings
-    simultaneous base pinning for the hypervisor's OWN control state stays
-    inside the same rung because the base coordinate is shared, not summed.
-
-Verified here exactly:
-  * 1296 = 36*6*6 hypervisor states, both projections onto, six-to-one;
-  * fixing one projection never determines the other (no conversion smuggled);
-  * the 36-point suspension region is exactly a rung-9 ladder state and attains
-    the spectral minimum boundary 36;
-  * suspend/resume is nested with the guest checkpoint ladder (rung 9 subset of
-    rung 10), so the zero-migration theorem applies;
-  * the suspension cycle costs 72 boundary crossings, the minimum possible for
-    any 36-point retention on W(3,3).
-
-Honesty boundary: software hop-crossing counts on certified finite geometry.
-No claim that a physical two-carrier device exists; the 216-carriers remain
-inequivalent and unconverted; the fibre product remains a hypervisor, not an
-opcode.
+Boundary: software counts on certified finite geometry; no device claim; the two
+216 carriers stay inequivalent forks.
 """
 from __future__ import annotations
 
@@ -120,80 +92,75 @@ def verify() -> dict[str, Any]:
         and ladder_cert["reversible_gc_economics"]["per_tier_release_boundary"][8] == 36
     )
 
-    # Fibre product structure (re-derived, not assumed).
-    projections_onto = True
-    six_to_one = True
-    independent = True
+    # Fibre product: count preimages instead of assuming them.
+    from collections import Counter
+    proj_c, proj_p = Counter(), Counter()
     for packed in range(HYPERVISOR_STATES):
         h = FibreProductAddress.unpack(packed)
-        if not (0 <= h.circuit216 < 216 and 0 <= h.pair216 < 216):
-            projections_onto = False
-    for base in range(BASE_STATES):
-        for a in range(FIBRE_SIZE):
-            preimages_c = [c for c in range(FIBRE_SIZE)]
-            if len(preimages_c) != 6:
-                six_to_one = False
-            # fixing (base,a) leaves all six c values: the other fork is free
-            if {FibreProductAddress(base, a, c).pair216 for c in range(FIBRE_SIZE)} != {
-                6 * base + c for c in range(FIBRE_SIZE)
-            }:
-                independent = False
+        proj_c[h.circuit216] += 1
+        proj_p[h.pair216] += 1
+    projections_onto = len(proj_c) == 216 and len(proj_p) == 216
+    six_to_one = set(proj_c.values()) == {6} and set(proj_p.values()) == {6}
+    independent = all(
+        {FibreProductAddress(b, a, c).pair216 for c in range(FIBRE_SIZE)}
+        == {6 * b + c for c in range(FIBRE_SIZE)}
+        for b in range(BASE_STATES) for a in range(FIBRE_SIZE)
+    )
     fibre_structure_ok = (
-        HYPERVISOR_STATES == 1296
-        and BASE_STATES * FIBRE_SIZE * FIBRE_SIZE == 1296
-        and projections_onto
-        and six_to_one
-        and independent
+        HYPERVISOR_STATES == 1296 == BASE_STATES * FIBRE_SIZE * FIBRE_SIZE
+        and projections_onto and six_to_one and independent
     )
 
-    # The 36-point suspension region is ladder rung 9: verify on every spread.
     spreads = find_spreads()
-    rung9_results = []
-    for sp in spreads:
-        pts = frozenset(p for line_id in sp[:9] for p in GEOMETRY.lines[line_id])
-        b = boundary_of(pts)
-        spectral_min = 36 * (V - 36) // 4
-        rung9_results.append(len(pts) == 36 and b == spectral_min == 36)
-    rung10_full = all(
-        boundary_of(frozenset(range(V)) ) == 0 for _ in (0,)
+    line_sets = {frozenset(line) for line in GEOMETRY.lines}
+    regions = {
+        frozenset(p for i, l in enumerate(sp) if i != omit for p in GEOMETRY.lines[l])
+        for sp in spreads for omit in range(10)
+    }
+    regions_are_line_complements = all(
+        frozenset(range(V)) - r in line_sets for r in regions
     )
+    all_36_point_regions_tight = all(len(r) == 36 and boundary_of(r) == 36 for r in regions)
+    whole_carrier_boundary = boundary_of(frozenset(range(V)))
 
+    identification = {
+        "claim_tested": "the 36-state base is a rung-9 (36-point) region",
+        "base_states": BASE_STATES,
+        "distinct_rung9_regions": len(regions),
+        "counts_equal": BASE_STATES == len(regions),
+        "psp43_stabiliser_orders": {"base_spreads": 25920 // 36, "rung9_regions": 25920 // len(regions)},
+        "verdict": "RETRACTED: 36 != 40 and 720 != 648, so no equivariant identification exists",
+    }
     suspension = {
-        "suspended_state": "shared base coordinate b in 36 (one fork's fibre tag reclaimed)",
-        "retention_points": 36,
+        "verified_statement": "any 36-point retention on W(3,3) has release boundary >= 36",
         "release_boundary": 36,
         "spectral_minimum_at_36": 36 * (V - 36) // 4,
-        "attains_minimum": True,
-        "suspend_resume_cycle_boundary": 72,
-        "nested_inside_full_carrier": "rung 9 subset of rung 10 (40 points, boundary 0)",
-        "migration_on_suspend_or_resume": 0,
-        "shared_not_summed": (
-            "the hypervisor's own control state pins the SAME 36-point base; "
-            "two-fork suspension does not double the region"
-        ),
+        "cycle_boundary_for_any_36_point_region": 72,
     }
 
     checks = {
-        "ladder_certificate_pass_and_rung9_is_36": ladder_ok,
-        "fibre_product_is_36x6x6": fibre_structure_ok,
-        "suspension_region_is_rung9_on_all_36_spreads": all(rung9_results) and len(rung9_results) == 36,
-        "full_carrier_boundary_zero": rung10_full,
-        "suspension_boundary_equals_spectral_min": suspension["release_boundary"] == suspension["spectral_minimum_at_36"],
-        "cycle_is_72": suspension["suspend_resume_cycle_boundary"] == 72,
-        "zero_migration": suspension["migration_on_suspend_or_resume"] == 0,
+        "ladder_certificate_pass": ladder_ok,
+        "fibre_product_is_36x6x6_counted": fibre_structure_ok,
+        "exactly_36_spreads": len(spreads) == 36,
+        "rung9_regions_are_the_40_line_complements": len(regions) == 40 and regions_are_line_complements,
+        "every_36_point_region_attains_boundary_36": all_36_point_regions_tight,
+        "whole_carrier_boundary_is_zero": whole_carrier_boundary == 0,
+        "base_is_not_a_rung9_region": not identification["counts_equal"]
+        and identification["psp43_stabiliser_orders"]["base_spreads"]
+        != identification["psp43_stabiliser_orders"]["rung9_regions"],
     }
     payload = {
-        "schema": "w33.fibre-suspension-ladder.v1",
+        "schema": "w33.fibre-suspension-ladder.v2",
         "status": "PASS" if all(checks.values()) else "FAIL",
+        "supersedes": "c2df9ac5f (schema v1 claimed base = rung 9; retracted)",
         "theorem": (
-            "Suspending one 216-state fork of the 1296 fibre hypervisor retains "
-            "exactly the shared 36-state base, which is ladder rung 9: its release "
-            "boundary 36 attains the spectral minimum m(40-m)/4, the suspend/resume "
-            "cycle costs 72 boundary crossings (the minimum for any 36-point "
-            "retention on W(3,3)), and nesting inside rung 10 gives zero "
-            "retained-point migration.  The base is shared, so hypervisor control "
-            "state adds no second region."
+            "Every 36-point region of W(3,3) that is a union of nine spread lines is the "
+            "complement of a line, attains boundary 36 = m(40-m)/4, and costs 72 "
+            "crossings per release/restore cycle.  The 36 spreads that index the fibre "
+            "base are NOT these regions (36 != 40; stabiliser orders 720 != 648), so the "
+            "earlier 'suspension is rung 9' corollary is withdrawn."
         ),
+        "identification": identification,
         "fibre": {
             "hypervisor_states": HYPERVISOR_STATES,
             "base_states": BASE_STATES,
@@ -206,9 +173,9 @@ def verify() -> dict[str, Any]:
             "data/PASS20260903_finite_control_unbounded_guest_hypervisor.json",
         ],
         "boundary": (
-            "Software control costs on certified finite geometry. The 216 carriers "
-            "remain inequivalent construction-time forks; suspension retains a shared "
-            "coordinate, it does not convert between carriers. No device claim."
+            "Software counts on certified finite geometry.  The 216 carriers remain "
+            "inequivalent construction-time forks.  No claim that the fibre base maps to "
+            "a retained point region; that map is open.  No device claim."
         ),
         "checks": checks,
     }
@@ -224,8 +191,8 @@ def main() -> int:
         fh.write("\n")
     print(payload["status"], payload["certificate_sha256"])
     s = payload["suspension"]
-    print(f"  suspend boundary={s['release_boundary']} cycle={s['suspend_resume_cycle_boundary']}"
-          f" migration={s['migration_on_suspend_or_resume']}")
+    print(f"  any 36-point region: boundary={s['release_boundary']} cycle={s['cycle_boundary_for_any_36_point_region']}")
+    print(f"  identification: {payload['identification']['verdict']}")
     print(f"  wrote {os.path.abspath(OUT)}")
     return 0 if payload["status"] == "PASS" else 1
 

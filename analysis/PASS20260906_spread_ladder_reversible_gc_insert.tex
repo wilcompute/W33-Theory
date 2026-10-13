@@ -60,14 +60,14 @@ The Holotrade control-plane object is
 the placement half of reversible scheduling; it does not supply measured energy,
 physical routing, or a hardware claim.
 
-\paragraph{Corollary: hypervisor suspension is rung 9.}
-When the $1296$-state fibre hypervisor ($216\times_{36}216=36\times6\times6$) suspends
-one $216$-state guest fork, the state that must be retained is exactly the shared
-$36$-state base coordinate --- and a $36$-point region is rung $9$ of the ladder, with
-release boundary $36=36\cdot4/4$, the spectral minimum.  Suspend/resume therefore costs
-$72$ boundary crossings, the minimum possible for any $36$-point retention on $W(3,3)$,
-and nesting inside rung $10$ gives zero retained-point migration.  The base is shared,
-so hypervisor control state adds no second region.  Certificate:
-\texttt{analysis/w33\_fibre\_suspension\_ladder.py},
-\texttt{data/w33\_fibre\_suspension\_ladder.json}
-(\texttt{sha256:41fd5c87e42c2b759d37727b1c062cb59f28ac8f3b720aec998a7e4b5721426e}).
+\paragraph{Correction: hypervisor suspension is \emph{not} rung 9.}
+A first version of this insert claimed that the shared $36$-state base of the $1296$-state
+fibre hypervisor is ladder rung $9$, on the strength of $36=4\cdot9$.  That identification
+was never constructed and is false.  The base is the set of $36$ spreads (fibre group
+$S_6$, $\PSp(4,3)$-stabiliser order $720$); the rung-$9$ regions are the complements of
+single lines, of which there are $40$ (stabiliser order $648$).  Since $36\neq40$ and
+$720\neq648$, no equivariant identification exists.  What survives is the exact statement
+that every $36$-point union of nine spread lines has boundary $36=m(40-m)/4$, so any
+$36$-point retention costs at least $72$ crossings per release/restore cycle.  A map
+from the spread base to a retained region is open.  Certificate:
+\texttt{analysis/w33\_fibre\_suspension\_ladder.py} (schema v2; v1 retracted).

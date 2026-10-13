@@ -28,7 +28,13 @@ def test_certificate_matches_frozen_artifact() -> None:
 def test_suspension_core_numbers() -> None:
     payload = verify()
     s = payload["suspension"]
-    assert s["retention_points"] == 36
     assert s["release_boundary"] == 36
-    assert s["suspend_resume_cycle_boundary"] == 72
+    assert s["cycle_boundary_for_any_36_point_region"] == 72
     assert payload["fibre"]["hypervisor_states"] == 1296
+
+
+def test_base_is_not_a_rung9_region() -> None:
+    ident = verify()["identification"]
+    assert ident["base_states"] == 36
+    assert ident["distinct_rung9_regions"] == 40
+    assert ident["psp43_stabiliser_orders"] == {"base_spreads": 720, "rung9_regions": 648}
