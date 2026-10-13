@@ -1,0 +1,317 @@
+replay	Set up job	﻿2026-10-13T15:26:57.0103564Z Current runner version: '2.337.0'
+replay	Set up job	2026-10-13T15:26:57.0127811Z ##[group]Runner Image Provisioner
+replay	Set up job	2026-10-13T15:26:57.0129035Z Hosted Compute Agent
+replay	Set up job	2026-10-13T15:26:57.0129831Z Version: 20261002.596
+replay	Set up job	2026-10-13T15:26:57.0130584Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+replay	Set up job	2026-10-13T15:26:57.0131323Z Build Date: 2026-10-02T22:28:27Z
+replay	Set up job	2026-10-13T15:26:57.0132071Z Worker ID: {a961bcda-f288-4edf-aae4-068da7b128b7}
+replay	Set up job	2026-10-13T15:26:57.0132809Z Region: westus2
+replay	Set up job	2026-10-13T15:26:57.0133377Z Cloud: Azure
+replay	Set up job	2026-10-13T15:26:57.0133961Z ##[endgroup]
+replay	Set up job	2026-10-13T15:26:57.0135659Z ##[group]Operating System
+replay	Set up job	2026-10-13T15:26:57.0136379Z Ubuntu
+replay	Set up job	2026-10-13T15:26:57.0136924Z 24.04.5
+replay	Set up job	2026-10-13T15:26:57.0137473Z LTS
+replay	Set up job	2026-10-13T15:26:57.0138032Z ##[endgroup]
+replay	Set up job	2026-10-13T15:26:57.0138588Z ##[group]Runner Image
+replay	Set up job	2026-10-13T15:26:57.0139407Z Image: ubuntu-24.04
+replay	Set up job	2026-10-13T15:26:57.0140064Z Version: 20261004.327.1
+replay	Set up job	2026-10-13T15:26:57.0141186Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+replay	Set up job	2026-10-13T15:26:57.0143021Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+replay	Set up job	2026-10-13T15:26:57.0143968Z ##[endgroup]
+replay	Set up job	2026-10-13T15:26:57.0145265Z ##[group]GITHUB_TOKEN Permissions
+replay	Set up job	2026-10-13T15:26:57.0147458Z Contents: read
+replay	Set up job	2026-10-13T15:26:57.0148207Z Metadata: read
+replay	Set up job	2026-10-13T15:26:57.0149011Z Packages: read
+replay	Set up job	2026-10-13T15:26:57.0149653Z ##[endgroup]
+replay	Set up job	2026-10-13T15:26:57.0151730Z Secret source: Actions
+replay	Set up job	2026-10-13T15:26:57.0152746Z Cache mode: write
+replay	Set up job	2026-10-13T15:26:57.0153459Z Prepare workflow directory
+replay	Set up job	2026-10-13T15:26:57.0599575Z Prepare all required actions
+replay	Set up job	2026-10-13T15:26:57.0647109Z Getting action download info
+replay	Set up job	2026-10-13T15:26:57.3947042Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+replay	Set up job	2026-10-13T15:26:57.5024428Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+replay	Set up job	2026-10-13T15:26:57.6767042Z Complete job name: replay
+replay	Run actions/checkout@v4	﻿2026-10-13T15:26:57.7641982Z ##[group]Run actions/checkout@v4
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7642900Z with:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7643369Z   repository: wilcompute/W33-Theory
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7647167Z   token: ***
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7647632Z   ssh-strict: true
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7648096Z   ssh-user: git
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7648569Z   persist-credentials: true
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7649399Z   clean: true
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7649883Z   sparse-checkout-cone-mode: true
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7650428Z   fetch-depth: 1
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7650891Z   fetch-tags: false
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7651360Z   show-progress: true
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7651826Z   lfs: false
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7652262Z   submodules: false
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7652741Z   set-safe-directory: true
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7653273Z   allow-unsafe-pr-checkout: false
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7654225Z env:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7654695Z   OPENBLAS_NUM_THREADS: 1
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.7655194Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8643383Z Syncing repository: wilcompute/W33-Theory
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8645723Z ##[group]Getting Git version info
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8646581Z Working directory is '/home/runner/work/W33-Theory/W33-Theory'
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8647855Z [command]/usr/bin/git version
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8753076Z git version 2.55.0
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8780990Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8798883Z Temporarily overriding HOME='/home/runner/work/_temp/e973166c-2623-466a-996e-661c843e1582' before making global git config changes
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8800604Z Adding repository directory to the temporary git global config as a safe directory
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8805825Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8862742Z Deleting the contents of '/home/runner/work/W33-Theory/W33-Theory'
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8867745Z ##[group]Initializing the repository
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8873451Z [command]/usr/bin/git init /home/runner/work/W33-Theory/W33-Theory
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8991330Z hint: Using 'master' as the name for the initial branch. This default branch name
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8992711Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8994042Z hint: to use in all of your new repositories, which will suppress this warning,
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8995373Z hint: call:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8996052Z hint:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8996882Z hint: 	git config --global init.defaultBranch <name>
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8997844Z hint:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.8998979Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9000329Z hint: 'development'. The just-created branch can be renamed via this command:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9001633Z hint:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9002143Z hint: 	git branch -m <name>
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9002643Z hint:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9003287Z hint: Disable this message with "git config set advice.defaultBranchName false"
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9004837Z Initialized empty Git repository in /home/runner/work/W33-Theory/W33-Theory/.git/
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9009088Z [command]/usr/bin/git remote add origin https://github.com/wilcompute/W33-Theory
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9062338Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9063938Z ##[group]Disabling automatic garbage collection
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9066243Z [command]/usr/bin/git config --local gc.auto 0
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9098333Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9099682Z ##[group]Setting up auth
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9106086Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9137789Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9548529Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9586824Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9811506Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+replay	Run actions/checkout@v4	2026-10-13T15:26:57.9848231Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+replay	Run actions/checkout@v4	2026-10-13T15:26:58.0081786Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+replay	Run actions/checkout@v4	2026-10-13T15:26:58.0121905Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:26:58.0122842Z ##[group]Fetching the repository
+replay	Run actions/checkout@v4	2026-10-13T15:26:58.0132423Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +896f36f6d247ef0ed555d5dd6708402c924629cf:refs/remotes/origin/master
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2331875Z From https://github.com/wilcompute/W33-Theory
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2333121Z  * [new ref]           896f36f6d247ef0ed555d5dd6708402c924629cf -> origin/master
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2336607Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2337626Z ##[group]Determining the checkout info
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2340649Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2346722Z [command]/usr/bin/git sparse-checkout disable
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2401446Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2434558Z ##[group]Checking out the ref
+replay	Run actions/checkout@v4	2026-10-13T15:27:09.2439968Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.2754930Z Updating files:  30% (10826/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.3011937Z Updating files:  31% (10901/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.3265438Z Updating files:  32% (11253/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.3516796Z Updating files:  33% (11604/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.4636366Z Updating files:  34% (11956/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.4854159Z Updating files:  35% (12308/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.5633986Z Updating files:  36% (12659/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.5938000Z Updating files:  37% (13011/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.6155663Z Updating files:  38% (13362/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.6518156Z Updating files:  39% (13714/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.7840540Z Updating files:  40% (14066/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.8759835Z Updating files:  41% (14417/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.8921690Z Updating files:  42% (14769/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.9115725Z Updating files:  43% (15121/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.9325044Z Updating files:  44% (15472/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.9489791Z Updating files:  45% (15824/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.9679511Z Updating files:  46% (16175/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:10.9837699Z Updating files:  47% (16527/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.0029815Z Updating files:  48% (16879/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.0210184Z Updating files:  49% (17230/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.0411304Z Updating files:  50% (17582/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.0567739Z Updating files:  51% (17934/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.0841964Z Updating files:  52% (18285/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.1047287Z Updating files:  53% (18637/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.1251136Z Updating files:  54% (18989/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.3703311Z Updating files:  55% (19340/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.3704311Z Updating files:  55% (19690/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.3948174Z Updating files:  56% (19692/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.4351405Z Updating files:  57% (20043/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.6540847Z Updating files:  58% (20395/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.6751147Z Updating files:  59% (20747/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.7015460Z Updating files:  60% (21098/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.7263618Z Updating files:  61% (21450/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.7418055Z Updating files:  62% (21802/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.7610654Z Updating files:  63% (22153/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.7864601Z Updating files:  64% (22505/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.8246737Z Updating files:  65% (22856/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.8596931Z Updating files:  66% (23208/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.8885223Z Updating files:  67% (23560/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.9158406Z Updating files:  68% (23911/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:11.9396705Z Updating files:  69% (24263/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.1595000Z Updating files:  70% (24615/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.1911670Z Updating files:  71% (24966/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.2117338Z Updating files:  72% (25318/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.2314673Z Updating files:  73% (25669/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.2489481Z Updating files:  74% (26021/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.2654096Z Updating files:  75% (26373/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.2702639Z Updating files:  76% (26724/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.2841020Z Updating files:  76% (26811/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.3326328Z Updating files:  77% (27076/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.3654915Z Updating files:  78% (27428/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.3843613Z Updating files:  79% (27779/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.4047509Z Updating files:  80% (28131/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.4301902Z Updating files:  81% (28483/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.4574222Z Updating files:  82% (28834/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.4747846Z Updating files:  83% (29186/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.4940035Z Updating files:  84% (29537/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.5182867Z Updating files:  85% (29889/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.5418359Z Updating files:  86% (30241/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.5624614Z Updating files:  87% (30592/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.5847799Z Updating files:  88% (30944/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.6032154Z Updating files:  89% (31296/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.6201879Z Updating files:  90% (31647/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.6360572Z Updating files:  91% (31999/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.6537464Z Updating files:  92% (32350/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.6715122Z Updating files:  93% (32702/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.6959544Z Updating files:  94% (33054/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.7164784Z Updating files:  95% (33405/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.7382196Z Updating files:  96% (33757/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.7559541Z Updating files:  97% (34109/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.7813581Z Updating files:  98% (34460/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.8362825Z Updating files:  99% (34812/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.8363758Z Updating files: 100% (35163/35163)
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.8364568Z Updating files: 100% (35163/35163), done.
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.8674779Z Reset branch 'master'
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.8677021Z branch 'master' set up to track 'origin/master'.
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.9533418Z ##[endgroup]
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.9576346Z [command]/usr/bin/git log -1 --format=%H
+replay	Run actions/checkout@v4	2026-10-13T15:27:12.9608967Z 896f36f6d247ef0ed555d5dd6708402c924629cf
+replay	Run actions/setup-python@v5	﻿2026-10-13T15:27:12.9940445Z ##[group]Run actions/setup-python@v5
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9940804Z with:
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9941038Z   python-version: 3.12
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9941276Z   check-latest: false
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9943779Z   token: ***
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9944001Z   update-environment: true
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9944248Z   allow-prereleases: false
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9944480Z   freethreaded: false
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9944684Z env:
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9944872Z   OPENBLAS_NUM_THREADS: 1
+replay	Run actions/setup-python@v5	2026-10-13T15:27:12.9945091Z ##[endgroup]
+replay	Run actions/setup-python@v5	2026-10-13T15:27:13.1260821Z ##[group]Installed versions
+replay	Run actions/setup-python@v5	2026-10-13T15:27:13.1364547Z (node:2596) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+replay	Run actions/setup-python@v5	2026-10-13T15:27:13.1365817Z (Use `node --trace-deprecation ...` to show where the warning was created)
+replay	Run actions/setup-python@v5	2026-10-13T15:27:13.1366644Z Successfully set up CPython (3.12.15)
+replay	Run actions/setup-python@v5	2026-10-13T15:27:13.1367502Z ##[endgroup]
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	﻿2026-10-13T15:27:13.1535134Z ##[group]Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1535895Z [36;1mpython -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2[0m
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1851174Z shell: /usr/bin/bash -e {0}
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1851555Z env:
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1851824Z   OPENBLAS_NUM_THREADS: 1
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1852225Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1852811Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1853381Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1853886Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1854411Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1854920Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:13.1855350Z ##[endgroup]
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.3277771Z Collecting numpy==2.3.5
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.3864645Z   Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.5461266Z Collecting scipy==1.17.0
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.5543950Z   Downloading scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.5886965Z Collecting sympy==1.14.0
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.5958634Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.6133380Z Collecting mpmath==1.3.0
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.6204891Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.6522907Z Collecting pytest==8.4.2
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.6598727Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.6780786Z Collecting iniconfig>=1 (from pytest==8.4.2)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.6853233Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.7042401Z Collecting packaging>=20 (from pytest==8.4.2)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.7115834Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.7274765Z Collecting pluggy<2,>=1.5 (from pytest==8.4.2)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.7347579Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.7568477Z Collecting pygments>=2.7.2 (from pytest==8.4.2)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.7639613Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:14.7753096Z Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.0883199Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 56.1 MB/s  0:00:00
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.0959701Z Downloading scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.0 MB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.2615103Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 213.5 MB/s  0:00:00
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.2701807Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.2921093Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 312.7 MB/s  0:00:00
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.2999558Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.3048910Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 101.3 MB/s  0:00:00
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.3124120Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.3222786Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.3315956Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.3402582Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.3495827Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.3565139Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 231.4 MB/s  0:00:00
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:15.5449923Z Installing collected packages: mpmath, sympy, pygments, pluggy, packaging, numpy, iniconfig, scipy, pytest
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:29.2449302Z 
+replay	Run python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 mpmath==1.3.0 pytest==8.4.2	2026-10-13T15:27:29.2465260Z Successfully installed iniconfig-2.3.1 mpmath-1.3.0 numpy-2.3.5 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-8.4.2 scipy-1.17.0 sympy-1.14.0
+replay	Frozen physical controls	﻿2026-10-13T15:27:29.3141798Z ##[group]Run python -m pytest --noconftest --ignore-glob=tests/test_*.py -o addopts='' -q tests/test_w33_pass11975_11979_dynamical_completion.py tests/test_w33_pass11970_11974_native_dynamical_targets.py
+replay	Frozen physical controls	2026-10-13T15:27:29.3143207Z [36;1mpython -m pytest --noconftest --ignore-glob=tests/test_*.py -o addopts='' -q tests/test_w33_pass11975_11979_dynamical_completion.py tests/test_w33_pass11970_11974_native_dynamical_targets.py[0m
+replay	Frozen physical controls	2026-10-13T15:27:29.3209978Z shell: /usr/bin/bash -e {0}
+replay	Frozen physical controls	2026-10-13T15:27:29.3210234Z env:
+replay	Frozen physical controls	2026-10-13T15:27:29.3210431Z   OPENBLAS_NUM_THREADS: 1
+replay	Frozen physical controls	2026-10-13T15:27:29.3210735Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Frozen physical controls	2026-10-13T15:27:29.3211199Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+replay	Frozen physical controls	2026-10-13T15:27:29.3211629Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Frozen physical controls	2026-10-13T15:27:29.3212001Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Frozen physical controls	2026-10-13T15:27:29.3212376Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Frozen physical controls	2026-10-13T15:27:29.3212790Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+replay	Frozen physical controls	2026-10-13T15:27:29.3213109Z ##[endgroup]
+replay	Frozen physical controls	2026-10-13T15:27:33.9745446Z .......................                                                  [100%]
+replay	Frozen physical controls	2026-10-13T15:27:33.9746101Z 23 passed in 4.30s
+replay	Regenerate five candidates	﻿2026-10-13T15:27:34.0732406Z ##[group]Run python analysis/w33_pass11975_mediator_flavour_matching.py
+replay	Regenerate five candidates	2026-10-13T15:27:34.0733019Z [36;1mpython analysis/w33_pass11975_mediator_flavour_matching.py[0m
+replay	Regenerate five candidates	2026-10-13T15:27:34.0733480Z [36;1mpython analysis/w33_pass11976_metric_lapse_bracket.py[0m
+replay	Regenerate five candidates	2026-10-13T15:27:34.0733899Z [36;1mpython analysis/w33_pass11977_native_overlap.py[0m
+replay	Regenerate five candidates	2026-10-13T15:27:34.0734324Z [36;1mpython analysis/w33_pass11978_full_singlet_soft_vacuum.py[0m
+replay	Regenerate five candidates	2026-10-13T15:27:34.0734773Z [36;1mpython analysis/w33_pass11979_native_patch_decimation.py[0m
+replay	Regenerate five candidates	2026-10-13T15:27:34.0797821Z shell: /usr/bin/bash -e {0}
+replay	Regenerate five candidates	2026-10-13T15:27:34.0798086Z env:
+replay	Regenerate five candidates	2026-10-13T15:27:34.0798291Z   OPENBLAS_NUM_THREADS: 1
+replay	Regenerate five candidates	2026-10-13T15:27:34.0798602Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerate five candidates	2026-10-13T15:27:34.0799402Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+replay	Regenerate five candidates	2026-10-13T15:27:34.0799854Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerate five candidates	2026-10-13T15:27:34.0800250Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerate five candidates	2026-10-13T15:27:34.0800692Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerate five candidates	2026-10-13T15:27:34.0801093Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+replay	Regenerate five candidates	2026-10-13T15:27:34.0801448Z ##[endgroup]
+replay	Regenerate five candidates	2026-10-13T15:27:35.7258601Z PASS [(0.06270607359223282, 0.7383287233527243), (0.060842042323796953, 0.10747013286567074), (1.1492713402813757e-09, 0.3791191420469414), (0.053611299155474766, 0.08351114469419803), (0.04988697472305644, 0.09861770295547712), (1.0910002514766792e-08, 0.10240337507252027)]
+replay	Regenerate five candidates	2026-10-13T15:27:37.5543902Z PASS {'lapse_N_vertex': 0, 'lapse_M_vertex': 40, 'p_vertex': 0, 'q_vertex': 0, 'coefficient': '-2452420000/366506427'} 6.691342414030846
+replay	Regenerate five candidates	2026-10-13T15:27:39.6885895Z PASS {'gap': 0.49999999999994654, 'index': 0, 'GW_max': 1.2838863671457043e-14} 2.511825094549516e-14 {'wall_layers': 1024, 'sign_error_max': 5.786436210963863e-06, 'GW_spectral_defect': 1.1572838939044594e-05, 'gap_bound': 5.786452952501278e-06}
+replay	Regenerate five candidates	2026-10-13T15:27:46.9455160Z PASS -9.564244962551475e-10 0.580594780266081 8.79797485794039e-07
+replay	Regenerate five candidates	2026-10-13T15:27:49.4781557Z decimation {'penalty': 20.0, 'E0': -0.10975212079261443, 'energy_shift': -0.2117573253961198, 'scaled_shift': -4.235146507922396, 'predicted_scaled_shift': np.float64(-4.409917065407866), 'error': np.float64(0.17477055748546988), 'mean_internal_defects': 0.010140139099493989, 'residual': 4.051909668128066e-12}
+replay	Regenerate five candidates	2026-10-13T15:27:50.6794166Z decimation {'penalty': 40.0, 'E0': -0.006089343851666448, 'energy_shift': -0.10809454845517182, 'scaled_shift': -4.3237819382068725, 'predicted_scaled_shift': np.float64(-4.409917065407866), 'error': np.float64(0.08613512720099337), 'mean_internal_defects': 0.0026476392917707597, 'residual': 1.3076368541843066e-13}
+replay	Regenerate five candidates	2026-10-13T15:27:51.8744500Z decimation {'penalty': 80.0, 'E0': 0.047414856794671, 'energy_shift': -0.05459034780883437, 'scaled_shift': -4.36722782470675, 'predicted_scaled_shift': np.float64(-4.409917065407866), 'error': np.float64(0.04268924070111613), 'mean_internal_defects': 0.0006756465236604304, 'residual': 2.5497188122274507e-12}
+replay	Regenerate five candidates	2026-10-13T15:27:51.8761300Z PASS exact subdivision [[8, 4], [4, 8]] 4.409917065407866
+replay	Regenerated physical controls	﻿2026-10-13T15:27:51.9649746Z ##[group]Run python -m pytest --noconftest --ignore-glob=tests/test_*.py -o addopts='' -q tests/test_w33_pass11975_11979_dynamical_completion.py
+replay	Regenerated physical controls	2026-10-13T15:27:51.9650833Z [36;1mpython -m pytest --noconftest --ignore-glob=tests/test_*.py -o addopts='' -q tests/test_w33_pass11975_11979_dynamical_completion.py[0m
+replay	Regenerated physical controls	2026-10-13T15:27:51.9714759Z shell: /usr/bin/bash -e {0}
+replay	Regenerated physical controls	2026-10-13T15:27:51.9715015Z env:
+replay	Regenerated physical controls	2026-10-13T15:27:51.9715206Z   OPENBLAS_NUM_THREADS: 1
+replay	Regenerated physical controls	2026-10-13T15:27:51.9715517Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerated physical controls	2026-10-13T15:27:51.9715978Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+replay	Regenerated physical controls	2026-10-13T15:27:51.9716650Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerated physical controls	2026-10-13T15:27:51.9717048Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerated physical controls	2026-10-13T15:27:51.9717433Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+replay	Regenerated physical controls	2026-10-13T15:27:51.9717827Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+replay	Regenerated physical controls	2026-10-13T15:27:51.9718186Z ##[endgroup]
+replay	Regenerated physical controls	2026-10-13T15:27:54.9010325Z .............                                                            [100%]
+replay	Regenerated physical controls	2026-10-13T15:27:54.9011043Z 13 passed in 2.68s
+replay	Post Run actions/setup-python@v5	﻿2026-10-13T15:27:55.0051715Z Post job cleanup.
+replay	Post Run actions/setup-python@v5	2026-10-13T15:27:55.1229318Z (node:2650) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+replay	Post Run actions/setup-python@v5	2026-10-13T15:27:55.1230236Z (Use `node --trace-deprecation ...` to show where the warning was created)
+replay	Post Run actions/checkout@v4	﻿2026-10-13T15:27:55.1478056Z Post job cleanup.
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2359240Z [command]/usr/bin/git version
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2395548Z git version 2.55.0
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2435497Z Temporarily overriding HOME='/home/runner/work/_temp/6d67a042-c326-4b3a-a438-dc12272f0b6a' before making global git config changes
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2436813Z Adding repository directory to the temporary git global config as a safe directory
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2441597Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2482820Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2520523Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2812444Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2838133Z http.https://github.com/.extraheader
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2851530Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.2899304Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.3188397Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+replay	Post Run actions/checkout@v4	2026-10-13T15:27:55.3232255Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+replay	Complete job	﻿2026-10-13T15:27:55.3640021Z Cleaning up orphan processes
+replay	Complete job	2026-10-13T15:27:55.3952911Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

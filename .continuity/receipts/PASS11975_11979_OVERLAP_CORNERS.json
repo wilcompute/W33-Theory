@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "k_over_pi": [
+        0,
+        0,
+        1
+      ],
+      "DW_Hermitian_gap": 1.8571096109529845,
+      "minimum_overlap_singular_value": 1.7208010845881097,
+      "zero_modes_below1e-8": 0,
+      "Wilson_scalar_min": -0.23117243550980965
+    },
+    {
+      "k_over_pi": [
+        0,
+        1,
+        0
+      ],
+      "DW_Hermitian_gap": 1.8571096109530136,
+      "minimum_overlap_singular_value": 1.720801084588106,
+      "zero_modes_below1e-8": 0,
+      "Wilson_scalar_min": -0.23117243550986166
+    },
+    {
+      "k_over_pi": [
+        0,
+        1,
+        1
+      ],
+      "DW_Hermitian_gap": 3.7498084570635672,
+      "minimum_overlap_singular_value": 1.6987862908105296,
+      "zero_modes_below1e-8": 0,
+      "Wilson_scalar_min": 0.04166459702414116
+    },
+    {
+      "k_over_pi": [
+        1,
+        0,
+        0
+      ],
+      "DW_Hermitian_gap": 1.8825727283483522,
+      "minimum_overlap_singular_value": 1.7209249735041763,
+      "zero_modes_below1e-8": 0,
+      "Wilson_scalar_min": -0.23117243550982292
+    },
+    {
+      "k_over_pi": [
+        1,
+        0,
+        1
+      ],
+      "DW_Hermitian_gap": 3.8282599238039565,
+      "minimum_overlap_singular_value": 1.700206094563755,
+      "zero_modes_below1e-8": 0,
+      "Wilson_scalar_min": 0.04988204602440882
+    },
+    {
+      "k_over_pi": [
+        1,
+        1,
+        0
+      ],
+      "DW_Hermitian_gap": 3.8282599238039707,
+      "minimum_overlap_singular_value": 1.7002060945637565,
+      "zero_modes_below1e-8": 0,
+      "Wilson_scalar_min": 0.04988204602441049
+    },
+    {
+      "k_over_pi": [
+        1,
+        1,
+        1
+      ],
+      "DW_Hermitian_gap": 5.483695969452079,
+      "minimum_overlap_singular_value": 1.6788794689795852,
+      "zero_modes_below1e-8": 0,
+      "Wilson_scalar_min": 0.3358400819384215
+    }
+  ],
+  "scope": "Extra locally executed7nonorigin spatialcorners atomega0: no extra overlapzero. Not an all-momentum no-doubling proof or part of hosted13tests."
+}

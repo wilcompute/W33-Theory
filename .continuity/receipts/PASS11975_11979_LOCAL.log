@@ -1,0 +1,3 @@
+OPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest --noconftest --ignore-glob=tests/test_*.py -o addopts= -q tests/test_w33_pass11975_11979_dynamical_completion.py tests/test_w33_pass11970_11974_native_dynamical_targets.py
+.......................                                                  [100%]
+23 passed in 30.53s

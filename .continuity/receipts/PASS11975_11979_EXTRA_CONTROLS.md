@@ -1,0 +1,7 @@
+# Extra local controls for11975-11979
+
+The seven nonorigin spatial Brillouin corners have no overlap zero numerically. This does not establish all-momentum single-species overlap or uniform locality; the main hosted kernel certificate keeps that boundary open.
+
+A dimension7 gauge-neutral CP portal links the actual11958 singlet branch to the11975 family currents. Its coefficient and reflection-sign assignment are added model choices; the clock Weyl channel is excluded because its paired current is CP even. Gradient,CP/reflection covariance and CP-conjugate energies pass. Twelve continuations at kappa1/2 have all8normal curvatures positive (minimum 0.0834325634178539), but no robust weakCP invariant. Ten quark Gram pairs retain a family-unitary generalizedCP, and two degenerate pairs instead admit a separately constructed continuous mass-sector CP. Do not claim all twelve preserve a finite family map.
+
+The potential retains combinedCPxreflection. To obtain physical weakCP one must break a shared mass-sector generalizedCP and lift the relevant degeneracy; an ordinary singlet CP phase alone does not establish that. This probe is not a universal no-go or a full coupled-vacuum/loop calculation. A restricted radial-force bound uses supplied Higgs/flavon norms246/10000GeV; it is not high-scale flavon safety. The executable source and JSON are included beside this note. These extra controls are local and additional to hosted23frozen/13regenerated checks.

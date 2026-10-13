@@ -1,0 +1,51 @@
+{
+  "science_sha": "896f36f6d247ef0ed555d5dd6708402c924629cf",
+  "hosted_run": 38422137311,
+  "hosted_job": 115381949185,
+  "hosted_conclusion": "success",
+  "hosted_frozen_tests": 23,
+  "hosted_regenerated_tests": 13,
+  "local_tests": 23,
+  "local_seconds": 30.53,
+  "artifact_sha256_lf": {
+    "analysis/w33_pass11975_mediator_flavour_matching.py": "2c298e88468212ca5bf92cabd63bb484083c6d581ee9f088918ce9c374aeb122",
+    "analysis/w33_pass11976_metric_lapse_bracket.py": "b7a440ce1cd9a99ca82393a3672b9717b5c9cefd761d0072fdb1bd019b1b5327",
+    "analysis/w33_pass11977_native_overlap.py": "39ccffabb12fa55e332e9bfebc02d807ad46baf3e43b4801fd0960535f0b2f02",
+    "analysis/w33_pass11978_full_singlet_soft_vacuum.py": "ce798dfec5aef87d2fafa98e46e11416ef3782d07d5aee9575437932c4b15698",
+    "analysis/w33_pass11979_native_patch_decimation.py": "a6f1191c9b48cc5ef214a0d18b6a7e866c871d508497408f2cd11d3c45634485",
+    "data/w33_pass11975_mediator_flavour_matching.json": "3502ce8da2ef7fa19339514a05bddfe9a24d6de84bbc390185b0eb382049ad2f",
+    "data/w33_pass11976_metric_lapse_bracket.json": "cb816658afd69da5d94f6020ac7fc668026026b7312ab3c4e781b151bc23c0ec",
+    "data/w33_pass11977_native_overlap.json": "d182925e37e8bef31064d27623294a40fc0df814c931d75293e4ad3343810074",
+    "data/w33_pass11978_full_singlet_soft_vacuum.json": "4cc63ac4dcbb3b1e74d98d071c259225e320439a2f5992b25d749668229a7545",
+    "data/w33_pass11979_native_patch_decimation.json": "b2a1906a2fbae698ec43a77bacd072ba02876beab3554bb3a165564972d6cffa",
+    "analysis/PASS11975_11979_DYNAMICAL_COMPLETION.md": "f6b24c4a88a5f2004e13a75f660c81ec4a2b1729501086b49d0306b99fe64572",
+    "tests/test_w33_pass11975_11979_dynamical_completion.py": "6213b38bb51567aa363855c9b60732c234df33dffcd5e3b4b77e006e00495150",
+    ".github/workflows/pass11975-11979-dynamical-completion.yml": "77460c95170460922dca2c16e53254ed437ba72a36695cdd44f8205225523fb3"
+  },
+  "extra_local_controls_sha256_lf": {
+    ".continuity/receipts/PASS11975_11979_CP_PORTAL_PROBE.py": "7ce942c134b158801ef5122a89b786762429ff24f98662e6f62be403a13ce49b",
+    ".continuity/receipts/PASS11975_11979_CP_PORTAL_PROBE.json": "58a681cc6379205129b6113e9cbc10d8ca31d1a5e33ced0f6a4e8ef772d33e1b",
+    ".continuity/receipts/PASS11975_11979_OVERLAP_CORNERS.json": "18775d6fe06f2601421dff9acf7e110a422b93803007a88e346e5add20268ab2",
+    ".continuity/receipts/PASS11975_11979_EXTRA_CONTROLS.md": "b5b77e98b73324db0071b556425fc3a0c46bdd87d22922cb3c80bd42685066f7"
+  },
+  "input_sha256_lf": {
+    "analysis/w33_pass11970_native_wilson_dirac.py": "5909b869f1a189fb60559b1276ff61c669cc63cea3e257b3014a6c840c30c321",
+    "data/w33_pass11956_local_electric_metric.json": "6607b2b979531725b463cdea004331250be103bf2eb1e03c1f6510347ca199cb",
+    "data/w33_pass11973_mediation_transmission.json": "b9b7784d732996a8171d6aa466ea2c68064e829ee493a8544eea67a4d6b00a65",
+    "analysis/w33_pass11974_coupled_patch_matter.py": "e279a2d327d7bbe771895b96faa937683869946c0830fecfbbe8ad6e5c80d31c",
+    "data/w33_20261013_toe57_two_plaquette_quantum.json": "919243b48e9fc1829c301c76cfaa7d860e1052ab8f40cea77f924e1f5bf76daa",
+    "analysis/w33_20261010_toe38_local_maxwell_2complex.py": "6be80936afff79d71f3d8037bf98abc41146a019f9e5e81c0cd324f49424b813",
+    "analysis/w33_pass11957_11959_color_threshold_and_cp_quality.py": "f506c6d0a195ecda441d97d43e38dacb9b6a2eeb2c470614f356f7df14f87ba5",
+    "analysis/w33_pass11924_residual_s3_and_misaligned_flavon.py": "03e3a786076c43b7658443353b9a4cf12e98d5f74fbd37d760470486a3b97d60"
+  },
+  "results_index_files": 12108,
+  "peer_catalogue_integrated": "8e54ca19d",
+  "open": [
+    "Physical flavour coefficient selection and nondegenerate weakCP vacuum",
+    "Nonlinear nativeGR and continuum constraint closure",
+    "Time-dependent chiral4D topology/measure/locality",
+    "Dynamical hidden stabilization/fullE6/colored loops",
+    "Observed cosmological constant and physicalcoupling predictions"
+  ],
+  "scope": "Five explicit candidates and their limits; full canonical pinned-hidden28singlet scalarvacuum stable, not fullTOE. Extra CPportal remains weakCPblind in sampled minima; exact gauge-subdivision equivalence forbids W33-uniqueness inference from tested fluxsector."
+}

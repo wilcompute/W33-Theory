@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "operator": "Vportal=kappa Im(S1 T2 Pdag)/Lambda\u00b3 * Im sum_{a=(1,0),(1,1),(1,2)} j_a(h)* j_a(phi). Exclude the clock channel: it is CP-even under ordinary conjugation.",
+  "symmetry": "Assign prior singlet S2,T2 and multiplierlambda3 the Delta54 reflection-sign character; others even. This preserves its superpotential. The singlet factor and family current factor both reverse under reflection and CP; their product is invariant. X/Z current phases cancel and the singlet factor is gauge neutral.",
+  "existing_source": "11958 home gives Im(S1 T2 Pdag)/Lambda\u00b3=-rho\u00b2=-1/1024. Coupling kappa is supplied; no UV coefficient prediction.",
+  "orientation_checks": [
+    {
+      "trial": 0,
+      "kappa": 1.0,
+      "gamma": -0.0009765625,
+      "weak_CP_trace": -1.1734202189942489e-17,
+      "gradient_norm": 2.0057200179360777e-09,
+      "optimizer_success": true,
+      "CP_conjugate_energy_residual": 2.220446049250313e-16,
+      "normal_Hessian_min": 0.7383125911578445,
+      "common_generalized_CP_residual": 1.000025099569089e-11,
+      "common_generalized_CP_label": [
+        0,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 0,
+      "kappa": 2.0,
+      "gamma": -0.001953125,
+      "weak_CP_trace": 1.7391067060427256e-17,
+      "gradient_norm": 1.0412424718159126e-10,
+      "optimizer_success": true,
+      "CP_conjugate_energy_residual": 2.220446049250313e-16,
+      "normal_Hessian_min": 0.7382642065334377,
+      "common_generalized_CP_residual": 1.1542512914092755e-11,
+      "common_generalized_CP_label": [
+        0,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 1,
+      "kappa": 1.0,
+      "gamma": -0.0009765625,
+      "weak_CP_trace": 2.2081164395603228e-14,
+      "gradient_norm": 1.967127862382104e-09,
+      "optimizer_success": false,
+      "CP_conjugate_energy_residual": 0.0,
+      "normal_Hessian_min": 0.1073662431737595,
+      "common_generalized_CP_residual": 5.286059786824812e-09,
+      "common_generalized_CP_label": [
+        0,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 1,
+      "kappa": 2.0,
+      "gamma": -0.001953125,
+      "weak_CP_trace": 5.058353378993379e-14,
+      "gradient_norm": 2.4659724516661335e-09,
+      "optimizer_success": false,
+      "CP_conjugate_energy_residual": 3.3306690738754696e-16,
+      "normal_Hessian_min": 0.10705934823430681,
+      "common_generalized_CP_residual": 5.550935400028574e-09,
+      "common_generalized_CP_label": [
+        0,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 2,
+      "kappa": 1.0,
+      "gamma": -0.0009765625,
+      "weak_CP_trace": 8.892238341747087e-39,
+      "gradient_norm": 1.4785528912725308e-09,
+      "optimizer_success": true,
+      "CP_conjugate_energy_residual": 3.3306690738754696e-16,
+      "normal_Hessian_min": 0.3791170605642047,
+      "common_generalized_CP_residual": 0.23459203713562818,
+      "common_generalized_CP_label": [
+        0,
+        2,
+        0
+      ],
+      "accidental_degenerate_mass_CP_residual": 3.5052007721783523e-10
+    },
+    {
+      "trial": 2,
+      "kappa": 2.0,
+      "gamma": -0.001953125,
+      "weak_CP_trace": 8.892238341747087e-39,
+      "gradient_norm": 1.479261176917117e-09,
+      "optimizer_success": true,
+      "CP_conjugate_energy_residual": 3.3306690738754696e-16,
+      "normal_Hessian_min": 0.37911081606568553,
+      "common_generalized_CP_residual": 0.23459203713562818,
+      "common_generalized_CP_label": [
+        0,
+        2,
+        0
+      ],
+      "accidental_degenerate_mass_CP_residual": 3.5052007721783523e-10
+    },
+    {
+      "trial": 3,
+      "kappa": 1.0,
+      "gamma": -0.0009765625,
+      "weak_CP_trace": -1.7319835036660026e-15,
+      "gradient_norm": 2.2421640924389704e-09,
+      "optimizer_success": false,
+      "CP_conjugate_energy_residual": 3.3306690738754696e-16,
+      "normal_Hessian_min": 0.08349149458746827,
+      "common_generalized_CP_residual": 1.0433176395820785e-10,
+      "common_generalized_CP_label": [
+        1,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 3,
+      "kappa": 2.0,
+      "gamma": -0.001953125,
+      "weak_CP_trace": -2.1030650716415097e-15,
+      "gradient_norm": 3.132926687494535e-10,
+      "optimizer_success": true,
+      "CP_conjugate_energy_residual": 1.1102230246251565e-16,
+      "normal_Hessian_min": 0.0834325634178539,
+      "common_generalized_CP_residual": 1.1786615261087e-10,
+      "common_generalized_CP_label": [
+        1,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 4,
+      "kappa": 1.0,
+      "gamma": -0.0009765625,
+      "weak_CP_trace": -4.565762023810122e-14,
+      "gradient_norm": 2.022244449559055e-08,
+      "optimizer_success": false,
+      "CP_conjugate_energy_residual": 1.1102230246251565e-16,
+      "normal_Hessian_min": 0.09873272898216465,
+      "common_generalized_CP_residual": 2.9399226342968094e-09,
+      "common_generalized_CP_label": [
+        0,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 4,
+      "kappa": 2.0,
+      "gamma": -0.001953125,
+      "weak_CP_trace": 3.165194220783351e-14,
+      "gradient_norm": 1.1431237752914886e-09,
+      "optimizer_success": true,
+      "CP_conjugate_energy_residual": 2.220446049250313e-16,
+      "normal_Hessian_min": 0.09907672135628603,
+      "common_generalized_CP_residual": 1.1297853347570158e-09,
+      "common_generalized_CP_label": [
+        0,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 5,
+      "kappa": 1.0,
+      "gamma": -0.0009765625,
+      "weak_CP_trace": -2.9273044074767066e-27,
+      "gradient_norm": 5.484969922128953e-09,
+      "optimizer_success": false,
+      "CP_conjugate_energy_residual": 5.551115123125783e-17,
+      "normal_Hessian_min": 0.09898755608249889,
+      "common_generalized_CP_residual": 7.157316814826921e-09,
+      "common_generalized_CP_label": [
+        1,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    },
+    {
+      "trial": 5,
+      "kappa": 2.0,
+      "gamma": -0.001953125,
+      "weak_CP_trace": -2.9273044074767066e-27,
+      "gradient_norm": 5.464628581847969e-09,
+      "optimizer_success": false,
+      "CP_conjugate_energy_residual": 5.551115123125783e-17,
+      "normal_Hessian_min": 0.09556516060919804,
+      "common_generalized_CP_residual": 7.157316814826921e-09,
+      "common_generalized_CP_label": [
+        1,
+        0,
+        1
+      ],
+      "accidental_degenerate_mass_CP_residual": null
+    }
+  ],
+  "numerically_nonzero_CP_samples": 0,
+  "residual_antiunitary": "For fixed gamma the added family potential remains invariant under h->R h*,phi->R phi*: CP and reflection each flip its odd current, their product leaves it invariant. The existing singlet CP branch is also fixed by this combined operation. A nonzero ordinary CP-odd source need not break generalizedCP. Each sampled pair of quark Gram matrices is tested against all18 supplied family-unitary CP maps.",
+  "conclusion": "These12continued samples do NOT generate robust weakCP. Ten pairs retain a checked family-unitary CP map. Two instead have degenerate Gram spectra, admitting a separately constructed continuous mass-sector CP map; do not claim they preserve one of the18 family maps. Positive orientation curvatures and the potential CPxreflection symmetry identify a symmetry-breaking/bifurcation target. No universal exclusion of allcouplings or additional fields.",
+  "radial_backreaction_scale_bound_at_vh246_vphi1e4": 5.440747858476649e-21,
+  "bound_scope": "Only leading restricted radial force estimate, using |sum jh* jphi|<=|h|\u00b2|phi|\u00b2 and prior high-norm curvature. Supplied physical norms; no full coupled Hessian, loop matching or high-flavon-scale safety.",
+  "scope": "Extra locally executed allowed-operator probe, not part of hosted13tests. Continuation starts at prior minima, not a global search. CP conjugates checked; realistic spectra/mixing and full singlet backreaction not established. Dimension7 coefficient and symmetry assignment are additional model choices."
+}
