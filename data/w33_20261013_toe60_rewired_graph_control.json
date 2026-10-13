@@ -1,0 +1,297 @@
+{
+  "status": "PASS_TOE60_DEGREE_MATCHED_RANDOM_CONTROL",
+  "W33_eight_step_flat_holonomy_on_TOE59": 8,
+  "rewired_graphs": [
+    {
+      "trial": 0,
+      "switches": 414,
+      "selected_voltage_edges": [
+        125,
+        11,
+        115
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 1,
+      "switches": 429,
+      "selected_voltage_edges": [
+        35,
+        159,
+        53
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 2,
+      "switches": 426,
+      "selected_voltage_edges": [
+        90,
+        26,
+        68
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 3,
+      "switches": 431,
+      "selected_voltage_edges": [
+        7,
+        100,
+        142
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 4,
+      "switches": 432,
+      "selected_voltage_edges": [
+        105,
+        111,
+        153
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 5,
+      "switches": 425,
+      "selected_voltage_edges": [
+        80,
+        122,
+        154
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 6,
+      "switches": 420,
+      "selected_voltage_edges": [
+        23,
+        60,
+        113
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 7,
+      "switches": 426,
+      "selected_voltage_edges": [
+        50,
+        123,
+        128
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 8,
+      "switches": 424,
+      "selected_voltage_edges": [
+        36,
+        47,
+        27
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 9,
+      "switches": 431,
+      "selected_voltage_edges": [
+        3,
+        97,
+        120
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 10,
+      "switches": 421,
+      "selected_voltage_edges": [
+        155,
+        158,
+        58
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 11,
+      "switches": 424,
+      "selected_voltage_edges": [
+        16,
+        84,
+        92
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 12,
+      "switches": 425,
+      "selected_voltage_edges": [
+        1,
+        158,
+        7
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 13,
+      "switches": 438,
+      "selected_voltage_edges": [
+        8,
+        66,
+        107
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 14,
+      "switches": 422,
+      "selected_voltage_edges": [
+        113,
+        84,
+        13
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 15,
+      "switches": 420,
+      "selected_voltage_edges": [
+        17,
+        50,
+        140
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 16,
+      "switches": 421,
+      "selected_voltage_edges": [
+        17,
+        83,
+        26
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 17,
+      "switches": 431,
+      "selected_voltage_edges": [
+        73,
+        59,
+        150
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 18,
+      "switches": 424,
+      "selected_voltage_edges": [
+        31,
+        16,
+        155
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 19,
+      "switches": 426,
+      "selected_voltage_edges": [
+        102,
+        75,
+        26
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 20,
+      "switches": 426,
+      "selected_voltage_edges": [
+        116,
+        101,
+        114
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 21,
+      "switches": 433,
+      "selected_voltage_edges": [
+        110,
+        88,
+        5
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 22,
+      "switches": 419,
+      "selected_voltage_edges": [
+        28,
+        59,
+        60
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 23,
+      "switches": 417,
+      "selected_voltage_edges": [
+        19,
+        80,
+        79
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 24,
+      "switches": 430,
+      "selected_voltage_edges": [
+        103,
+        124,
+        108
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 25,
+      "switches": 439,
+      "selected_voltage_edges": [
+        8,
+        71,
+        121
+      ],
+      "single_pi_shortest_winding": 6
+    },
+    {
+      "trial": 26,
+      "switches": 432,
+      "selected_voltage_edges": [
+        78,
+        98,
+        157
+      ],
+      "single_pi_shortest_winding": 4
+    },
+    {
+      "trial": 27,
+      "switches": 422,
+      "selected_voltage_edges": [
+        136,
+        16,
+        45
+      ],
+      "single_pi_shortest_winding": 4
+    }
+  ],
+  "frequency": {
+    "4": 12,
+    "6": 16,
+    "8": 0,
+    "10": 0,
+    "12": 0,
+    "None": 0
+  },
+  "rewire_method": "Start from native 40+40 Levi bipartite 4-regular graph, perform 500 attempted disjoint bipartite two-edge switches preserving 80 vertices,160 edges and degree4. Randomly assign three signed one-edge deck markers and BFS the Z2 parity-double graph for character (1,0,0).",
+  "limitation": "Switched graphs do NOT preserve generalized-quadrangle incidence, 1385 W33 plaquettes, gauge-flatness of new arbitrary chord markers, or model dynamics. This is a graph-theoretic negative control only and cannot establish the uniqueness of W33 or a physical light/matter field.",
+  "evidence": "Non-W33 matched-degree graphs may detect marked parity holonomy at shorter loops than W33's eight-step response. Degree and site counts do not determine winding threshold; local girth/marking matter."
+}

@@ -1,0 +1,429 @@
+{
+  "status": "PASS_TOE60_NUMERIC_ALL_SAMPLED_HALF_FILLED_FLUX",
+  "reference": "One finite static 80-site nearest-neighbor spinless fermion at chemical potential mu=0 with actual W33 three-deck Z2 characters.",
+  "tested_inverse_temperatures": [
+    0.1,
+    0.2,
+    0.4,
+    0.8,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    20.0,
+    50.0
+  ],
+  "rows": [
+    {
+      "corner": [
+        0,
+        0,
+        0
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": 0.0
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": 0.0
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -0.0,
+      "strict_lower_at_all_sampled_beta": null
+    },
+    {
+      "corner": [
+        0,
+        0,
+        1
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": -6.640448191319592e-09
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": -7.825370289538114e-07
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": -7.380856533245606e-05
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": -0.003642121875060411
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": -0.010060115637415379
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": -0.09505534292367201
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": -0.2826145189215623
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": -0.4414233622203483
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": -0.5451836885005221
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": -0.5867725172478302
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -0.6144984044702255,
+      "strict_lower_at_all_sampled_beta": true
+    },
+    {
+      "corner": [
+        0,
+        1,
+        0
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": -6.640334504481871e-09
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": -7.825370289538114e-07
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": -7.380856533245606e-05
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": -0.003642121875074622
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": -0.010060115637415379
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": -0.09505534292367201
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": -0.2826145189215765
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": -0.4414233622203767
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": -0.5451836885005363
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": -0.5867725172478444
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -0.614498404470254,
+      "strict_lower_at_all_sampled_beta": true
+    },
+    {
+      "corner": [
+        0,
+        1,
+        1
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": -1.278885974898003e-08
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": -1.5070872905198485e-06
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": -0.0001421248657891283
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": -0.0070047893860873955
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": -0.019331132766296832
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": -0.18203341298303144
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": -0.5421462132131012
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": -0.853589034736757
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": -1.0607710590620414
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": -1.143948685343723
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -1.1994004597885066,
+      "strict_lower_at_all_sampled_beta": true
+    },
+    {
+      "corner": [
+        1,
+        0,
+        0
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": -6.640334504481871e-09
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": -7.825370289538114e-07
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": -7.380856533245606e-05
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": -0.003642121875060411
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": -0.010060115637415379
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": -0.09505534292367201
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": -0.2826145189215623
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": -0.4414233622203625
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": -0.5451836885005363
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": -0.5867725172478444
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -0.6144984044702397,
+      "strict_lower_at_all_sampled_beta": true
+    },
+    {
+      "corner": [
+        1,
+        0,
+        1
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": -1.3118210517859552e-08
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": -1.5463403428839229e-06
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": -0.0001459823438665353
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": -0.0072172173101137105
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": -0.019948649656711837
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": -0.1887514835845252
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": -0.561327735799992
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": -0.8776018196307831
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": -1.0850361359086875
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": -1.168213787162621
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -1.2236655616074188,
+      "strict_lower_at_all_sampled_beta": true
+    },
+    {
+      "corner": [
+        1,
+        1,
+        0
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": -1.3118210517859552e-08
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": -1.5463403428839229e-06
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": -0.0001459823438665353
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": -0.0072172173101137105
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": -0.019948649656683415
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": -0.1887514835845252
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": -0.5613277357999777
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": -0.8776018196307689
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": -1.0850361359086733
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": -1.1682137871626068
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -1.2236655616074046,
+      "strict_lower_at_all_sampled_beta": true
+    },
+    {
+      "corner": [
+        1,
+        1,
+        1
+      ],
+      "values": [
+        {
+          "beta": 0.1,
+          "DeltaF": -1.9103936210740358e-08
+        },
+        {
+          "beta": 0.2,
+          "DeltaF": -2.252159276849852e-06
+        },
+        {
+          "beta": 0.4,
+          "DeltaF": -0.0002126665255559601
+        },
+        {
+          "beta": 0.8,
+          "DeltaF": -0.01051383137404116
+        },
+        {
+          "beta": 1.0,
+          "DeltaF": -0.02905238972577706
+        },
+        {
+          "beta": 2.0,
+          "DeltaF": -0.2744521663244086
+        },
+        {
+          "beta": 4.0,
+          "DeltaF": -0.8167936789520098
+        },
+        {
+          "beta": 8.0,
+          "DeltaF": -1.283476892192141
+        },
+        {
+          "beta": 20.0,
+          "DeltaF": -1.5940822419716412
+        },
+        {
+          "beta": 50.0,
+          "DeltaF": -1.7188486134372667
+        }
+      ],
+      "zero_temperature_fermion_filled_sea_shift": -1.802026275104467,
+      "strict_lower_at_all_sampled_beta": true
+    }
+  ],
+  "exact_zero_temperature_formula": "For bipartite hopping H the spectrum is \u00b1 paired, so at mu=0 the spinless grand ground energy is F_infinity(H)=-(1/2) Tr|H|. This does not establish an all-beta free-energy inequality; the seven nontrivial pi corners are preferred numerically at listed finite betas and at zero temperature.",
+  "majorization_caveat": "The strong Ky-Fan majorization of squared energies needed for a simple convexity theorem was explicitly numerically FALSE in the separate TOE60 majorization probe. Numerical sampling across positive betas is not a continuum proof and does not show these corners are global minimizers among all U1 connections.",
+  "prior_work": "Pass11964 already identified three-pi holonomy at beta4. Lieb flux-phase theorem for planar bipartite periodic graph does not transfer to this nonplanar W33 Levi cover without checking hypotheses."
+}

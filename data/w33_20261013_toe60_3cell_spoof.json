@@ -1,0 +1,21 @@
+{
+  "status": "PASS_TOE60_ALGEBRAIC_3CELL_HOMOLOGY_SPOOF",
+  "original_n2": 1385,
+  "rank_d2": 78,
+  "two_cycle_kernel_basis_dimension": 1307,
+  "max_boundary2_boundary3_residual_on_1307_implicit_cycles": 3.073929999430902e-15,
+  "construction": "Pivoted QR on P.T chooses 78 independent 2-cell boundary rows and 1307 nonpivot 2-cells. Express each nonpivot boundary in the pivot basis, forming 1307 independent implicit 2-cycles. Attach 1304 formal independent 3-cell boundaries along 1304 cycles and one additional formal 3-cell with zero cellular boundary.",
+  "constructed_chain_counts": {
+    "C0": 80,
+    "C1": 160,
+    "C2": 1385,
+    "C3": 1305
+  },
+  "constructed_rational_betti": [
+    1,
+    3,
+    3,
+    1
+  ],
+  "WARNING": "This is purely linear-algebraic artificial cellular chain completion. A zero-boundary 3-cell may be a wedged S3 and need not define a fundamental orientation class. It does NOT yield a manifold, locality, cellular attaching maps, cup products, 3+1D spacetime, chirality or gravity. Its purpose is to demonstrate that even matching the full T3 rational Betti list is insufficient evidence of physical 3-space."
+}

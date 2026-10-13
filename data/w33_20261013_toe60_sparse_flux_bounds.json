@@ -1,0 +1,99 @@
+{
+  "status": "PASS_TOE60_SPARSE_3LOOP_SCHUR_BOUNDS_REFINEMENT",
+  "selected_native_signed_Gram": [
+    [
+      8,
+      -4,
+      -4
+    ],
+    [
+      -4,
+      8,
+      4
+    ],
+    [
+      -4,
+      4,
+      8
+    ]
+  ],
+  "cases": [
+    {
+      "g": 0.7,
+      "rows": [
+        {
+          "N": 4,
+          "states": 729,
+          "E_upper_variational": 3.604965129379521,
+          "schur_lower_using_numeric_ritz": 3.4554703580945247,
+          "interval_width": 0.1494947712849961,
+          "ground_vector_residual_norm": 6.975187145327553e-14,
+          "first_excitation_gap": 1.7818495483650367,
+          "outside_electric_min": 24.49999999999998
+        },
+        {
+          "N": 5,
+          "states": 1331,
+          "E_upper_variational": 3.6049651257061965,
+          "schur_lower_using_numeric_ritz": 3.5063480769366464,
+          "interval_width": 0.09861704876955013,
+          "ground_vector_residual_norm": 8.317597931105245e-14,
+          "first_excitation_gap": 1.7818495221667776,
+          "outside_electric_min": 35.27999999999997
+        },
+        {
+          "N": 6,
+          "states": 2197,
+          "E_upper_variational": 3.604965125704539,
+          "schur_lower_using_numeric_ritz": 3.5346353721015937,
+          "interval_width": 0.07032975360294547,
+          "ground_vector_residual_norm": 1.6358036957592854e-13,
+          "first_excitation_gap": 1.7818495221531454,
+          "outside_electric_min": 48.01999999999996
+        }
+      ],
+      "best_lower": 3.5346353721015937,
+      "best_upper": 3.604965125704539
+    },
+    {
+      "g": 1.1,
+      "rows": [
+        {
+          "N": 4,
+          "states": 729,
+          "E_upper_variational": 2.268405795680827,
+          "schur_lower_using_numeric_ritz": 2.2596088513669477,
+          "interval_width": 0.00879694431387934,
+          "ground_vector_residual_norm": 1.0462794448493697e-13,
+          "first_excitation_gap": 4.214511729454635,
+          "outside_electric_min": 60.499999999999964
+        },
+        {
+          "N": 5,
+          "states": 1331,
+          "E_upper_variational": 2.2684057956808243,
+          "schur_lower_using_numeric_ritz": 2.2623686658386872,
+          "interval_width": 0.006037129842137112,
+          "ground_vector_residual_norm": 1.8669253621869207e-13,
+          "first_excitation_gap": 4.214511729454635,
+          "outside_electric_min": 87.11999999999995
+        },
+        {
+          "N": 6,
+          "states": 2197,
+          "E_upper_variational": 2.26840579568082,
+          "schur_lower_using_numeric_ritz": 2.264001590794556,
+          "interval_width": 0.004404204886264029,
+          "ground_vector_residual_norm": 2.9294934283431945e-13,
+          "first_excitation_gap": 4.214511729454157,
+          "outside_electric_min": 118.57999999999993
+        }
+      ],
+      "best_lower": 2.264001590794556,
+      "best_upper": 2.26840579568082
+    }
+  ],
+  "derivation": "For full selected 3-rotor H on l\u00b2(Z\u00b3), exterior C>=cN=g\u00b2 \u03bbmin(G)(N+1)\u00b2/2 and finite-to-exterior coupling norm squared 3/(4g4). Given EXACT finite-block ground eN, full E in [max(0,eN-b\u00b2/(cN-eN)),eN]. Here eN is numerically approximated by sparse Ritz with explicitly reported finite eigenvector residual; these numbers are numerically verified enclosures, not machine-interval certified bounds.",
+  "caveat": "Numerical eigenvector residual does not by itself rigorously certify which eigenvalue is the smallest, and floating-point rounding is not outward-bounded. The exact Schur theorem is rigorous; tabulated numeric endpoints are approximate. Other 1382 native plaquettes and all quantum charged matter are absent.",
+  "prior": "Extends TOE58/TOE59 selected 3-loop Schur approach; no claim of novel general Ritz or resolvent theorem."
+}

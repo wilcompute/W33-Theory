@@ -1,0 +1,51 @@
+{
+  "status": "PASS_TOE60_EXACT_BLOCH_LEIBNIZ_ASYMPTOTIC_COEFFICIENT",
+  "formula": "Let B be the 160x80 native oriented gradient and V_e the 3D deck voltage. For constant internal scalar 1 and D_i(k)=C(k)^H diag(J_i) B(k), the restricted product defect [D_i(a(p+q))-D_i(ap)-D_i(aq)]1/a equals a/2 B.T diag(J_i) [(V p)(V q)] + O(a\u00b2). This follows by expanding each edge phase exp(i a V k); signs at source/target are opposite at quadratic order.",
+  "exact_leading_coeff_rms": 1.4684458905023818,
+  "test_momenta": [
+    [
+      0.9,
+      -0.4,
+      0.35
+    ],
+    [
+      -0.35,
+      0.6,
+      0.2
+    ]
+  ],
+  "rms_records": [
+    {
+      "a": 0.2,
+      "rms_error": 0.2933162695309051,
+      "limit_coefficient_residual": 0.06710497997739338,
+      "relative_vs_Oa_limit": 0.045697958917938444
+    },
+    {
+      "a": 0.1,
+      "rms_error": 0.1467979566253579,
+      "limit_coefficient_residual": 0.03356318886884123,
+      "relative_vs_Oa_limit": 0.022856265311457038
+    },
+    {
+      "a": 0.05,
+      "rms_error": 0.0734164648826882,
+      "limit_coefficient_residual": 0.016782931957893123,
+      "relative_vs_Oa_limit": 0.011429043498600673
+    },
+    {
+      "a": 0.025,
+      "rms_error": 0.03671041853883828,
+      "limit_coefficient_residual": 0.008391633174475074,
+      "relative_vs_Oa_limit": 0.005714635608128636
+    },
+    {
+      "a": 0.0125,
+      "rms_error": 0.018355482540239068,
+      "limit_coefficient_residual": 0.004195837486799233,
+      "relative_vs_Oa_limit": 0.002857332036500004
+    }
+  ],
+  "conclusion": "The observed approximately 0.5 ratio on lattice-spacing halving is a direct consequence of analytic Bloch phase Taylor expansion on constant internal plane-wave profiles. The same finite graph fails exact derivation on general vertex fields. An O(a) restricted defect is NOT Einstein constraint closure nor uniform RG.",
+  "prior_work": "TOE59 established empirical 0.5 halving. Pass11970 constructs the rational current derivative; this gives its explicit leading bilinear term."
+}

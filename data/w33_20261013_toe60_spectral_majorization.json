@@ -1,0 +1,109 @@
+{
+  "results": [
+    {
+      "corner": [
+        0,
+        0,
+        0
+      ],
+      "min_partial_majorization_margin": 0.0,
+      "min_proper_partial_margin": 0.0,
+      "k_with_min_margin": 1,
+      "max_spectral_radius": 4.000000000000002,
+      "sum_squares": 320.00000000000017,
+      "passes_majorization_to_numerical_tol": true
+    },
+    {
+      "corner": [
+        0,
+        0,
+        1
+      ],
+      "min_partial_majorization_margin": -4.073539708372141,
+      "min_proper_partial_margin": -4.073539708372141,
+      "k_with_min_margin": 4,
+      "max_spectral_radius": 3.97311724355098,
+      "sum_squares": 320.00000000000006,
+      "passes_majorization_to_numerical_tol": false
+    },
+    {
+      "corner": [
+        0,
+        1,
+        0
+      ],
+      "min_partial_majorization_margin": -4.073539708372206,
+      "min_proper_partial_margin": -4.073539708372206,
+      "k_with_min_margin": 12,
+      "max_spectral_radius": 3.973117243550983,
+      "sum_squares": 320.0000000000002,
+      "passes_majorization_to_numerical_tol": false
+    },
+    {
+      "corner": [
+        0,
+        1,
+        1
+      ],
+      "min_partial_majorization_margin": -7.96415975803413,
+      "min_proper_partial_margin": -7.96415975803413,
+      "k_with_min_margin": 12,
+      "max_spectral_radius": 3.9458335402975844,
+      "sum_squares": 320.00000000000006,
+      "passes_majorization_to_numerical_tol": false
+    },
+    {
+      "corner": [
+        1,
+        0,
+        0
+      ],
+      "min_partial_majorization_margin": -4.073539708372176,
+      "min_proper_partial_margin": -4.073539708372176,
+      "k_with_min_margin": 8,
+      "max_spectral_radius": 3.9731172435509823,
+      "sum_squares": 320.00000000000017,
+      "passes_majorization_to_numerical_tol": false
+    },
+    {
+      "corner": [
+        1,
+        0,
+        1
+      ],
+      "min_partial_majorization_margin": -8.114845794113396,
+      "min_proper_partial_margin": -8.114845794113396,
+      "k_with_min_margin": 12,
+      "max_spectral_radius": 3.94501179539756,
+      "sum_squares": 320.00000000000006,
+      "passes_majorization_to_numerical_tol": false
+    },
+    {
+      "corner": [
+        1,
+        1,
+        0
+      ],
+      "min_partial_majorization_margin": -8.114845794113426,
+      "min_proper_partial_margin": -8.114845794113426,
+      "k_with_min_margin": 12,
+      "max_spectral_radius": 3.9450117953975607,
+      "sum_squares": 320.00000000000006,
+      "passes_majorization_to_numerical_tol": false
+    },
+    {
+      "corner": [
+        1,
+        1,
+        1
+      ],
+      "min_partial_majorization_margin": -11.97475092495479,
+      "min_proper_partial_margin": -11.97475092495479,
+      "k_with_min_margin": 12,
+      "max_spectral_radius": 3.9164159918061556,
+      "sum_squares": 320.0000000000001,
+      "passes_majorization_to_numerical_tol": false
+    }
+  ],
+  "scope": "Numerical Ky-Fan partial sum comparisons of squared single-particle energies for eight real Z2 flat holonomies. Strong majorization is not a theorem absent exact eigenvalue control; if violated report the explicit failing partial sum."
+}
