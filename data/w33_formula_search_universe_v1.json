@@ -634556,6 +634556,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fbfa79a228be9d5efefdc99f720c2b8da3dd494648542c0dc1b2dee94af0cb73",
+      "normalized_formula": "Hamiltonian='H=g2sum_en_e2/2+msum_v(-1)^color_vocc_v-kappasum_e(psi_b\u2020U_lower,epsi_a+h.c.)+beta/g2sum_p[1-(S_p+S_p\u2020)/2].S_pshiftsallelectricfluxesbytheintegerplaquetteboundary.'",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 128,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "Hamiltonian='H=g\u00b2 sum_e n_e\u00b2/2 +m sum_v(-1)^color_v occ_v -kappa sum_e(psi_b\u2020 U_lower,e psi_a+h.c.) +beta/g\u00b2 sum_p[1-(S_p+S_p\u2020)/2]. S_p shifts all electric fluxes by the integer plaquette boundary.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "49d4eb009bf25ee7213d77ca95364390799080978a83502ea9c84f003a1355df",
+      "structural_formula": "Hamiltonian='H=g2sum_en_e2/#+msum_v(#)^color_vocc_v-kappasum_e(psi_b\u2020U_lower,epsi_a+h.c.)+beta/g2sum_p[#-(S_p+S_p\u2020)/#].S_pshiftsallelectricfluxesbytheintegerplaquetteboundary.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a4cd9ac3aae5863f841e44c69269d24e3ff06becad859d94fdeb1633294c9129",
       "normalized_formula": "Hamiltonian='sum_e|L_e|^2/(2I)+kappasum_all1620_octagons[1-ReTr(W)/2]'",
       "numeric_literals": [
@@ -1175236,6 +1175265,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0b365eeb29d758c05a2482373dc509cff0424250dcf9f8fc6702d3fe3865d617",
+      "normalized_formula": "defapply_H(self,state,g=.8,beta=.4,kappa=.7,mass=.3)",
+      "numeric_literals": [
+        ".3",
+        ".4",
+        ".7",
+        ".8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 82,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "def apply_H(self,state,g=.8,beta=.4,kappa=.7,mass=.3):",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0fa00decea6b05ddbdcab445394f543f869a565add3140bf48af354c45639b4f",
+      "structural_formula": "defapply_H(self,state,g=#,beta=#,kappa=#,mass=#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fca5989f636c8181a0833037ef21c487d0c41f9261277b8498448adf90db0944",
       "normalized_formula": "defapply_eom_ring(control_trit,visibility=0.94,ring_q=18.0)",
       "numeric_literals": [
@@ -1245115,6 +1245174,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6085475477f675882eb0e4ac2b8c8d9c1b7bf95edfab57fae03ae5f5c124cc66",
+      "normalized_formula": "fermion_sector_dimension=str(comb(80,40))",
+      "numeric_literals": [
+        "40",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 125,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "fermion_sector_dimension=str(comb(80,40)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "37d88d2e02d9b34433db5340e151661ac71f746905d4aea55e4b30e6a12763be",
+      "structural_formula": "fermion_sector_dimension=str(comb(#,#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "38ff9a40a34506a0a3d6ba55c31a05acd9a0c7d39246cc529a77981c1f1dd372",
       "normalized_formula": "fermion_seed[\"shifted_gaussian_norm\"]=17",
       "numeric_literals": [
@@ -1245965,6 +1246052,34 @@
       },
       "structural_family_id": "dd92e2a6f74142a268e5dae0a3406a831909507ea9bb4cef5199fa261cb0290f",
       "structural_formula": "files=['data/w3#_pass1#_native_plane_holonomy.json','data/w3#_pass1#_1#_validated_dynamics.json','analysis/w3#_pass1#_1#_pin_regge_vacuum_noise.py','analysis/w3#_pass1#_scale_and_sequestering.py','analysis/w3#_pass1#_closed_history_flux.py','analysis/w3#_pass1#_history_quadratic_shell_scheme.py']"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0e0db0ab81fe3f2cc102ce0267785cb73fc5802fe2c1a6c49a45ffc7beedc90c",
+      "normalized_formula": "filled=sorted(map(int,rng.choice(80,40,replace=False)))",
+      "numeric_literals": [
+        "40",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 103,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "filled=sorted(map(int,rng.choice(80,40,replace=False)))",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "b8bb0fade29efb059add58fa5f665fc877c77a507299ad4039e40f8c1795ba17",
+      "structural_formula": "filled=sorted(map(int,rng.choice(#,#,replace=False)))"
     },
     {
       "file_count": 1,
@@ -1295378,7 +1295493,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 183,
+          "line": 203,
           "path": "analysis/PASS11965_11969_FIVE_DYNAMICAL_FRONTS.md",
           "raw": "initial `m_lat=0` regulator missed the known Schwinger gap by about21% at",
           "status": "unclassified"
@@ -1351539,7 +1351654,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 187,
+          "line": 207,
           "path": "analysis/PASS11965_11969_FIVE_DYNAMICAL_FRONTS.md",
           "raw": "m_lat=m_physical-e\u00b2a/8",
           "status": "unclassified"
@@ -1427592,6 +1427707,35 @@
       },
       "structural_family_id": "43e7880cd169b1e288d376e0e5ea22635a921a4bfc941e535fd4bde941e93546",
       "structural_formula": "out[name]={\"opcodes\":len(gens),\"program_erasure_bits\":#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0e9177434b2dae306f7a56cfb4f0cd523bd9ba41db698e6061e13ae652ba6508",
+      "normalized_formula": "out[state]+=g*g*float(n@n)/2+mass*float((1-2*self.background)@occ)",
+      "numeric_literals": [
+        "-2",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 84,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "out[state]+=g*g*float(n@n)/2+mass*float((1-2*self.background)@occ)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bb04cc953a3cee45c0166e3b5b298176fb2758bb942a54a36cdccf322a102c47",
+      "structural_formula": "out[state]+=g*g*float(n@n)/#+mass*float((##*self.background)@occ)"
     },
     {
       "file_count": 1,
@@ -1628748,6 +1628892,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "efa604cd5f8fd5fd3626ba03af3ec21be99d0d62269e5d519944ee02e1586727",
+      "normalized_formula": "scope='FULLdeclaredfinitenativeU1/fermionoperator,includingeverysuppliedplaquetterowandedgehop,compiledmatrix-free.Nofull-spectrumdiagonalization,chiral3+1DWeylinterpretation,interactingcontinuumlimit,gravityorselectedphysicalcoupling.Background,massesandcouplingsaresupplied;exteriorfreezingappliesonlytotheseparateoctagonbenchmark,notthiscompiler.'",
+      "numeric_literals": [
+        "+1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 134,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "scope='FULL declared finite native U1/fermion operator, including every supplied plaquette row and edge hop, compiled matrix-free. No full-spectrum diagonalization, chiral3+1D Weyl interpretation, interacting continuum limit, gravity or selected physical coupling. Background, masses and couplings are supplied; exterior freezing applies only to the separate octagon benchmark, not this compiler.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6bd75146d2ce62b08b647b8253c64e0d79192fa18058a69c9c35357080d3e7d3",
+      "structural_formula": "scope='FULLdeclaredfinitenativeU1/fermionoperator,includingeverysuppliedplaquetterowandedgehop,compiledmatrix-free.Nofull-spectrumdiagonalization,chiral3#DWeylinterpretation,interactingcontinuumlimit,gravityorselectedphysicalcoupling.Background,massesandcouplingsaresupplied;exteriorfreezingappliesonlytotheseparateoctagonbenchmark,notthiscompiler.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b1cc3a89cadc617fb5b0382ee76fd0864ceca35e3e2dccf658e2e763d31d6a54",
       "normalized_formula": "scope='Finitecompactgroundsector,notitsunknownW33multiplicityorathermodynamicspontaneous-symmetry-breakingproof.')",
       "numeric_literals": [
@@ -1657444,6 +1657615,35 @@
       },
       "structural_family_id": "cdeb348fac5886e72cbbeb61c40e734f121ccff27408dcc8125405623208f05f",
       "structural_formula": "spacingf=#=alpha_GUT^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8e733297c62c253fcaafacfc5d5159d5b0a84bd32920bf5f0a7f91633f8e061c",
+      "normalized_formula": "spanning_tree_links=79,integer_chord_fluxes=81,fermion_number=40",
+      "numeric_literals": [
+        "40",
+        "79",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 124,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "spanning_tree_links=79,integer_chord_fluxes=81,fermion_number=40,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "951009cd916fedd7ddf029640ce559e1e03c1d485f45375de2227db6a9ecd688",
+      "structural_formula": "spanning_tree_links=#,integer_chord_fluxes=#,fermion_number=#"
     },
     {
       "file_count": 1,
@@ -1734723,6 +1734923,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "94c201376919d3ab1da7babd5cdabf37c5ebc509e682028489f85940fbd95dce",
+      "normalized_formula": "well_definedness='Electricquadraticoperatorisself-adjointonitsnaturaldiagonaldomain.Finitesumsofunitaryplaquetteshiftsandbounded80-sitefermionhoppingareboundedsymmetricperturbations;thedisplayedHamiltonianisself-adjointandsemibounded.Thisisstandardfinitelatticegaugequantization,appliedtothenamednativemaps.'",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11969_full_native_gauss_compiler.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 130,
+          "path": "analysis/w33_pass11969_full_native_gauss_compiler.py",
+          "raw": "well_definedness='Electric quadratic operator is self-adjoint on its natural diagonal domain. Finite sums of unitary plaquette shifts and bounded80-site fermion hopping are bounded symmetric perturbations; the displayed Hamiltonian is self-adjoint and semibounded. This is standard finite lattice gauge quantization, applied to the named native maps.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6f0399f038c8c429dd76103496264b79f027c19f9683bc7d8be4a5be6244b45f",
+      "structural_formula": "well_definedness='Electricquadraticoperatorisself-adjointonitsnaturaldiagonaldomain.Finitesumsofunitaryplaquetteshiftsandbounded8#-sitefermionhoppingareboundedsymmetricperturbations;thedisplayedHamiltonianisself-adjointandsemibounded.Thisisstandardfinitelatticegaugequantization,appliedtothenamednativemaps.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "39f223320566dea43a577538b1a136052591baf32d553d7dbec96c982dccfba4",
       "normalized_formula": "wetakethetransferT=1(theOPTIMISTIC,cosmic-variance-limitedcase--thereal",
       "numeric_literals": [
@@ -1792346,9 +1792573,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T09:46:09-04:00",
+  "frozen_at": "2026-10-13T09:56:39-04:00",
   "pass": 398,
-  "repository_head": "c1deed40d186f9666c4626c625218990abf26c0a",
+  "repository_head": "637750ae616ae8a9099e2fe7269953a2ec580cc9",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1963267,6 +1963494,14 @@
     },
     {
       "exact_formula_ids": [
+        "fbfa79a228be9d5efefdc99f720c2b8da3dd494648542c0dc1b2dee94af0cb73"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "49d4eb009bf25ee7213d77ca95364390799080978a83502ea9c84f003a1355df",
+      "structural_formula": "Hamiltonian='H=g2sum_en_e2/#+msum_v(#)^color_vocc_v-kappasum_e(psi_b\u2020U_lower,epsi_a+h.c.)+beta/g2sum_p[#-(S_p+S_p\u2020)/#].S_pshiftsallelectricfluxesbytheintegerplaquetteboundary.'"
+    },
+    {
+      "exact_formula_ids": [
         "a4cd9ac3aae5863f841e44c69269d24e3ff06becad859d94fdeb1633294c9129"
       ],
       "exact_member_count": 1,
@@ -2107021,6 +2107256,14 @@
     },
     {
       "exact_formula_ids": [
+        "0b365eeb29d758c05a2482373dc509cff0424250dcf9f8fc6702d3fe3865d617"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0fa00decea6b05ddbdcab445394f543f869a565add3140bf48af354c45639b4f",
+      "structural_formula": "defapply_H(self,state,g=#,beta=#,kappa=#,mass=#)"
+    },
+    {
+      "exact_formula_ids": [
         "fca5989f636c8181a0833037ef21c487d0c41f9261277b8498448adf90db0944"
       ],
       "exact_member_count": 1,
@@ -2126157,6 +2126400,14 @@
     },
     {
       "exact_formula_ids": [
+        "6085475477f675882eb0e4ac2b8c8d9c1b7bf95edfab57fae03ae5f5c124cc66"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "37d88d2e02d9b34433db5340e151661ac71f746905d4aea55e4b30e6a12763be",
+      "structural_formula": "fermion_sector_dimension=str(comb(#,#))"
+    },
+    {
+      "exact_formula_ids": [
         "38ff9a40a34506a0a3d6ba55c31a05acd9a0c7d39246cc529a77981c1f1dd372"
       ],
       "exact_member_count": 1,
@@ -2126394,6 +2126645,14 @@
       "exact_member_count": 1,
       "structural_family_id": "dd92e2a6f74142a268e5dae0a3406a831909507ea9bb4cef5199fa261cb0290f",
       "structural_formula": "files=['data/w3#_pass1#_native_plane_holonomy.json','data/w3#_pass1#_1#_validated_dynamics.json','analysis/w3#_pass1#_1#_pin_regge_vacuum_noise.py','analysis/w3#_pass1#_scale_and_sequestering.py','analysis/w3#_pass1#_closed_history_flux.py','analysis/w3#_pass1#_history_quadratic_shell_scheme.py']"
+    },
+    {
+      "exact_formula_ids": [
+        "0e0db0ab81fe3f2cc102ce0267785cb73fc5802fe2c1a6c49a45ffc7beedc90c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b8bb0fade29efb059add58fa5f665fc877c77a507299ad4039e40f8c1795ba17",
+      "structural_formula": "filled=sorted(map(int,rng.choice(#,#,replace=False)))"
     },
     {
       "exact_formula_ids": [
@@ -2175192,6 +2175451,14 @@
       "exact_member_count": 1,
       "structural_family_id": "43e7880cd169b1e288d376e0e5ea22635a921a4bfc941e535fd4bde941e93546",
       "structural_formula": "out[name]={\"opcodes\":len(gens),\"program_erasure_bits\":#"
+    },
+    {
+      "exact_formula_ids": [
+        "0e9177434b2dae306f7a56cfb4f0cd523bd9ba41db698e6061e13ae652ba6508"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bb04cc953a3cee45c0166e3b5b298176fb2758bb942a54a36cdccf322a102c47",
+      "structural_formula": "out[state]+=g*g*float(n@n)/#+mass*float((##*self.background)@occ)"
     },
     {
       "exact_formula_ids": [
@@ -2228158,6 +2228425,14 @@
     },
     {
       "exact_formula_ids": [
+        "efa604cd5f8fd5fd3626ba03af3ec21be99d0d62269e5d519944ee02e1586727"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6bd75146d2ce62b08b647b8253c64e0d79192fa18058a69c9c35357080d3e7d3",
+      "structural_formula": "scope='FULLdeclaredfinitenativeU1/fermionoperator,includingeverysuppliedplaquetterowandedgehop,compiledmatrix-free.Nofull-spectrumdiagonalization,chiral3#DWeylinterpretation,interactingcontinuumlimit,gravityorselectedphysicalcoupling.Background,massesandcouplingsaresupplied;exteriorfreezingappliesonlytotheseparateoctagonbenchmark,notthiscompiler.'"
+    },
+    {
+      "exact_formula_ids": [
         "b1cc3a89cadc617fb5b0382ee76fd0864ceca35e3e2dccf658e2e763d31d6a54"
       ],
       "exact_member_count": 1,
@@ -2235929,6 +2236204,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cdeb348fac5886e72cbbeb61c40e734f121ccff27408dcc8125405623208f05f",
       "structural_formula": "spacingf=#=alpha_GUT^#"
+    },
+    {
+      "exact_formula_ids": [
+        "8e733297c62c253fcaafacfc5d5159d5b0a84bd32920bf5f0a7f91633f8e061c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "951009cd916fedd7ddf029640ce559e1e03c1d485f45375de2227db6a9ecd688",
+      "structural_formula": "spanning_tree_links=#,integer_chord_fluxes=#,fermion_number=#"
     },
     {
       "exact_formula_ids": [
@@ -2256830,6 +2257113,14 @@
     },
     {
       "exact_formula_ids": [
+        "94c201376919d3ab1da7babd5cdabf37c5ebc509e682028489f85940fbd95dce"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6f0399f038c8c429dd76103496264b79f027c19f9683bc7d8be4a5be6244b45f",
+      "structural_formula": "well_definedness='Electricquadraticoperatorisself-adjointonitsnaturaldiagonaldomain.Finitesumsofunitaryplaquetteshiftsandbounded8#-sitefermionhoppingareboundedsymmetricperturbations;thedisplayedHamiltonianisself-adjointandsemibounded.Thisisstandardfinitelatticegaugequantization,appliedtothenamednativemaps.'"
+    },
+    {
+      "exact_formula_ids": [
         "39f223320566dea43a577538b1a136052591baf32d553d7dbec96c982dccfba4"
       ],
       "exact_member_count": 1,
@@ -2271448,20 +2271739,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87500270,
-    "exact_formula_families": 61301,
-    "files_scanned": 11991,
-    "formula_occurrences": 67276,
+    "bytes_scanned": 87509379,
+    "exact_formula_families": 61309,
+    "files_scanned": 11992,
+    "formula_occurrences": 67284,
     "status_occurrences": {
       "certified_or_theorem": 4896,
-      "killed_or_retracted": 1632,
+      "killed_or_retracted": 1633,
       "open_or_conditional": 2242,
       "preregistered": 33,
       "retrospective_fit": 5214,
-      "unclassified": 53259
+      "unclassified": 53266
     },
-    "structural_families": 59679
+    "structural_families": 59687
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "abe0b3f6c7389c2be921982d0b54617a9114c3e4fff4a0efe573a6de6f7c969f"
+  "universe_sha256": "fe8dad91e992af6764e8e38bcb2712dc85429999e56841cd55472cc3b4f8979d"
 }
