@@ -1,0 +1,417 @@
+{
+  "status": "PASS",
+  "11960": {
+    "status": "PASS",
+    "clebsch_factor": -3,
+    "quark_masses_and_CKM_held_fixed": true,
+    "charged_targets": [
+      0.0002786386750962067,
+      0.05882238409382445
+    ],
+    "two_real_diagonal_45_coefficients_fits": [
+      {
+        "coefficients": [
+          0.018965689693135335,
+          -0.026200697082817467
+        ],
+        "charged_ratios": [
+          0.00027863867509620664,
+          0.05882238409382433
+        ],
+        "max_log_residual": 1.9984014443252837e-15,
+        "neutrino_probe": {
+          "log_bare_ratios": [
+            11.999999999999996,
+            6.7801429854001825
+          ],
+          "observables": [
+            0.05446656684214191,
+            0.5828374820282834,
+            0.020305644315505442,
+            0.028234993422842115
+          ],
+          "weighted_loss": 444.4827361935622,
+          "J": 0.007128132141525105
+        },
+        "two_real_offdiagonal_neutrino_roots": [
+          {
+            "real_bare_Majorana": [
+              [
+                167.62373627152724,
+                -9.384586895400208,
+                6.60432395115307
+              ],
+              [
+                -9.384586895400208,
+                1.1335064441634637,
+                0.0
+              ],
+              [
+                6.60432395115307,
+                0.0,
+                1.0
+              ]
+            ],
+            "smallest_bare_eigenvalue": 0.29699456711362315,
+            "delta_deg": 79.38483149918176,
+            "J": 0.03258086432000108,
+            "PMNS_abs_squared": [
+              [
+                0.6805488000000007,
+                0.29725119999999927,
+                0.022199999999999987
+              ],
+              [
+                0.15115135356852727,
+                0.2885692464314734,
+                0.5602793999999998
+              ],
+              [
+                0.16829984643147197,
+                0.41417955356852754,
+                0.4175206000000011
+              ]
+            ],
+            "parameters": [
+              5.121721802551961,
+              0.12531587613981438,
+              -1.0073770938329025,
+              0.7547745990102882
+            ],
+            "observables": [
+              0.30399999999999927,
+              0.5729999999999997,
+              0.022199999999999987,
+              0.02960000000000004
+            ],
+            "max_scaled_residual": 6.013708050052931e-14,
+            "fit_jacobian_smallest_singular": 25.419832190632313
+          },
+          {
+            "real_bare_Majorana": [
+              [
+                181.63638374344677,
+                -12.088352376830814,
+                4.624697649966747
+              ],
+              [
+                -12.088352376830816,
+                1.1507734732598311,
+                0.0
+              ],
+              [
+                4.624697649966747,
+                0.0,
+                1.0
+              ]
+            ],
+            "smallest_bare_eigenvalue": 0.20511014731456795,
+            "delta_deg": 247.42379258314332,
+            "J": -0.030607989853473076,
+            "PMNS_abs_squared": [
+              [
+                0.6805488000000004,
+                0.29725120000000027,
+                0.022200000000000022
+              ],
+              [
+                0.1126317432065665,
+                0.327088856793434,
+                0.5602794000000001
+              ],
+              [
+                0.20681945679343366,
+                0.3756599432065661,
+                0.41752060000000035
+              ]
+            ],
+            "parameters": [
+              5.202006797109779,
+              0.14043430173426932,
+              -1.3808248851833107,
+              0.5666954950315704
+            ],
+            "observables": [
+              0.30400000000000027,
+              0.5730000000000001,
+              0.022200000000000022,
+              0.029600000000000043
+            ],
+            "max_scaled_residual": 4.163336342344337e-14,
+            "fit_jacobian_smallest_singular": 23.34089163604842
+          }
+        ]
+      },
+      {
+        "coefficients": [
+          -0.18801632910792332,
+          0.01044918873749332
+        ],
+        "charged_ratios": [
+          0.00027863867509625467,
+          0.05882238409382442
+        ],
+        "max_log_residual": 1.7208456881688445e-13,
+        "neutrino_probe": {
+          "log_bare_ratios": [
+            3.6626267662791836,
+            -11.999999999959694
+          ],
+          "observables": [
+            0.03464600324012761,
+            0.9262594857628955,
+            0.032289497316210225,
+            0.03580271542158685
+          ],
+          "weighted_loss": 1137.0568254718178,
+          "J": 0.008255369156669846
+        },
+        "two_real_offdiagonal_neutrino_roots": [
+          {
+            "real_bare_Majorana": [
+              [
+                107.8845808248348,
+                -6.9976970275744526,
+                4.655916954992537
+              ],
+              [
+                -6.997697027574453,
+                0.8878940239370158,
+                0.0
+              ],
+              [
+                4.655916954992537,
+                0.0,
+                1.0
+              ]
+            ],
+            "smallest_bare_eigenvalue": 0.2620764697412752,
+            "delta_deg": 302.50821127620475,
+            "J": -0.027954305966078202,
+            "PMNS_abs_squared": [
+              [
+                0.6805488000000011,
+                0.29725119999999966,
+                0.02220000000000001
+              ],
+              [
+                0.17509943841935968,
+                0.2646211615806405,
+                0.5602793999999998
+              ],
+              [
+                0.14435176158063978,
+                0.43812763841936087,
+                0.4175206000000005
+              ]
+            ],
+            "parameters": [
+              4.681061959595051,
+              -0.11890288552511004,
+              -1.0459355749293926,
+              0.6557459111835354
+            ],
+            "observables": [
+              0.30399999999999966,
+              0.5729999999999997,
+              0.02220000000000001,
+              0.02960000000000014
+            ],
+            "max_scaled_residual": 1.3877787807814457e-13,
+            "fit_jacobian_smallest_singular": 10.577375522675018
+          }
+        ]
+      },
+      {
+        "coefficients": [
+          0.010406908676221377,
+          -0.0262006970828176
+        ],
+        "charged_ratios": [
+          0.0002786386750962069,
+          0.05882238409382457
+        ],
+        "max_log_residual": 2.2204460492503107e-15,
+        "neutrino_probe": {
+          "log_bare_ratios": [
+            11.999999999999996,
+            6.780142986437023
+          ],
+          "observables": [
+            0.05446656685399285,
+            0.5828374819517866,
+            0.0203056443030316,
+            0.02823499345450931
+          ],
+          "weighted_loss": 444.48273619355246,
+          "J": 0.0071281321362769955
+        },
+        "two_real_offdiagonal_neutrino_roots": [
+          {
+            "real_bare_Majorana": [
+              [
+                167.62373627152516,
+                -9.38458689540007,
+                6.604323951153061
+              ],
+              [
+                -9.384586895400068,
+                1.1335064441634497,
+                0.0
+              ],
+              [
+                6.604323951153061,
+                0.0,
+                1.0
+              ]
+            ],
+            "smallest_bare_eigenvalue": 0.29699456711362116,
+            "delta_deg": 79.3848314991819,
+            "J": 0.03258086432000115,
+            "PMNS_abs_squared": [
+              [
+                0.6805487999999985,
+                0.2972512000000006,
+                0.02219999999999997
+              ],
+              [
+                0.15115135356852757,
+                0.28856924643147386,
+                0.5602794000000001
+              ],
+              [
+                0.168299846431473,
+                0.4141795535685261,
+                0.41752060000000124
+              ]
+            ],
+            "parameters": [
+              5.121721802551948,
+              0.12531587613980172,
+              -1.0073770938329,
+              0.754774599010292
+            ],
+            "observables": [
+              0.3040000000000006,
+              0.5730000000000001,
+              0.02219999999999997,
+              0.02960000000000006
+            ],
+            "max_scaled_residual": 5.898059818321144e-14,
+            "fit_jacobian_smallest_singular": 25.41983555040992
+          },
+          {
+            "real_bare_Majorana": [
+              [
+                181.6363837434429,
+                -12.088352376830617,
+                4.62469764996673
+              ],
+              [
+                -12.088352376830619,
+                1.150773473259824,
+                0.0
+              ],
+              [
+                4.62469764996673,
+                0.0,
+                1.0
+              ]
+            ],
+            "smallest_bare_eigenvalue": 0.20511014731456917,
+            "delta_deg": 247.42379258314233,
+            "J": -0.030607989853472833,
+            "PMNS_abs_squared": [
+              [
+                0.6805487999999996,
+                0.2972512000000004,
+                0.022199999999999987
+              ],
+              [
+                0.11263174320656535,
+                0.3270888567934359,
+                0.5602794000000004
+              ],
+              [
+                0.20681945679343516,
+                0.3756599432065646,
+                0.4175206000000008
+              ]
+            ],
+            "parameters": [
+              5.202006797109758,
+              0.14043430173426297,
+              -1.3808248851833036,
+              0.5666954950315726
+            ],
+            "observables": [
+              0.3040000000000004,
+              0.5730000000000004,
+              0.022199999999999987,
+              0.02959999999999991
+            ],
+            "max_scaled_residual": 9.020562075079397e-14,
+            "fit_jacobian_smallest_singular": 23.340893138200894
+          }
+        ]
+      }
+    ],
+    "one_22_coefficient_scan": {
+      "interval": [
+        -0.3,
+        0.3
+      ],
+      "grid_points": 6001,
+      "best": -0.026697240484393512,
+      "log_residual_norm": 1.2308040143924388,
+      "ratios": [
+        0.0009539686353490166,
+        0.059699955215683116
+      ]
+    },
+    "neutrino_targets": [
+      0.304,
+      0.573,
+      0.0222,
+      0.0296
+    ],
+    "neutrino_comparator_errors": [
+      0.012,
+      0.02,
+      0.0006,
+      0.001
+    ],
+    "meaning": "Two real45 coefficients repair two supplied lepton ratios without changing quark fit; coefficients are fitted, not predicted. Restricted positive diagonal bare Majorana sector tested with shared A; finite multistart is not a universal no-go.",
+    "scope": "SU5-level Higgs45 input, not a full E6 Higgs vacuum, proton-stability/gauge-unification model or RG-evolved GUT prediction. Targets use repo M_Z charged ratios; neutrino numbers are declared comparators.",
+    "prior": [
+      "11910/11942/11943 already discuss Georgi-Jarlskog-like and Wilson-line lepton splitting",
+      "11955 owns shared-kernel mass equality"
+    ],
+    "primary": "https://arxiv.org/abs/2402.15124 gives a distinct45-Higgs GUT and proton/gauge constraints"
+  },
+  "11961": {
+    "status": "PASS",
+    "ADM_ansatz": "Hg=a/sqrt(q)(pi_ij pi^ij-lambda pi^2)-b sqrt(q) R+c sqrt(q)",
+    "flat_gravity_bracket": "-4*pi*a*b*lam",
+    "flat_momentum_smearing": "-2*pi",
+    "nonconstant_trace_obstruction": "-2*pi*a*b*(2*lam - 1)",
+    "necessary_standard_branch_lambda": "1/2",
+    "matter_bracket": "-pi*alpha*beta/2",
+    "matter_momentum_smearing": "-pi/2",
+    "shared_foliation_requirement": "a b=alpha beta=2 for11956 leading Maxwell units; a and c remain free",
+    "native_isotropic_weight_fiber_dimension": 154,
+    "selector_hessian_rank": 6,
+    "selector_hessian_zero_modes": 154,
+    "selector": "V=sum_{six independent entries}(G(w)-I/2)^2; at an exact root Hessian=2J^T J, rank6 by11956. This supplied selector does not determine154 microscopic weight directions.",
+    "scope": "Exact flat-slice necessary constraint calculations and implicit-function dimension count; standard ADM completion is imported continuum prior art, not derived from the native finite graph. Full nonlinear lattice constraints, quantum closure, micro-weight dynamics and physical G/Lambda remain open.",
+    "primary": [
+      "https://inspirehep.net/literature/113155",
+      "https://arxiv.org/abs/gr-qc/0511070"
+    ],
+    "prior": "11956 owns local cone root;11301 owns finite pointwise Leibniz obstruction;11323 owns native nonlinear lapse failure"
+  },
+  "input_sha256_lf": {
+    "analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py": "edd590c157d79b2d8460adeaa3e329aab6999ed824fb3986961ae566692fe857",
+    "data/w33_pass11956_local_electric_metric.json": "6607b2b979531725b463cdea004331250be103bf2eb1e03c1f6510347ca199cb"
+  }
+}
