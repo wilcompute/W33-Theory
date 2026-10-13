@@ -1,0 +1,668 @@
+{
+  "status": "PASS",
+  "native": {
+    "native_vertices": [
+      0,
+      40,
+      4,
+      44,
+      1,
+      45,
+      13,
+      41
+    ],
+    "native_Gauss_max_residual": 0,
+    "physically_coupled_site_fermions": 8,
+    "background_occupations": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    "full_fermion_pattern_count": 70,
+    "flux_cutoff_sweep": [
+      {
+        "cutoff": 1,
+        "dimension": 210,
+        "ground_energy": -2.928991607579171,
+        "gap": 1.0844334609244939,
+        "second_gap": 1.5741900186295406,
+        "boundary_probability": 0.13670848320167464,
+        "mean_occupations": [
+          0.23203448037113306,
+          0.7640763939971111,
+          0.23455820795265794,
+          0.76499731297867,
+          0.2350026870213316,
+          0.7654417920473436,
+          0.2359236060028906,
+          0.7679655196288685
+        ],
+        "electric_flux_second_moment": 1.1414586676467766,
+        "eigenpair_residual": 4.57321299187059e-15
+      },
+      {
+        "cutoff": 2,
+        "dimension": 350,
+        "ground_energy": -2.934971588897172,
+        "gap": 1.0822806279234332,
+        "second_gap": 1.5753720560884419,
+        "boundary_probability": 0.0012171799729069949,
+        "mean_occupations": [
+          0.23490802193833282,
+          0.7650820354829202,
+          0.23491412160165884,
+          0.7650848498022803,
+          0.23491515019771686,
+          0.7650858783983376,
+          0.23491796451707644,
+          0.7650919780616638
+        ],
+        "electric_flux_second_moment": 1.1684067596835563,
+        "eigenpair_residual": 1.0845763785334953e-14
+      },
+      {
+        "cutoff": 3,
+        "dimension": 490,
+        "ground_energy": -2.934984104958112,
+        "gap": 1.082278019545515,
+        "second_gap": 1.5753750683226884,
+        "boundary_probability": 9.477571007659387e-07,
+        "mean_occupations": [
+          0.23491515453222436,
+          0.765084841980516,
+          0.2349151565399486,
+          0.7650848431171331,
+          0.2349151568828681,
+          0.7650848434600556,
+          0.23491515801948654,
+          0.7650848454677784
+        ],
+        "electric_flux_second_moment": 1.1685332868960037,
+        "eigenpair_residual": 1.2411507501064095e-14
+      },
+      {
+        "cutoff": 4,
+        "dimension": 630,
+        "ground_energy": -2.9349841091127895,
+        "gap": 1.0822780180198597,
+        "second_gap": 1.5753750694364643,
+        "boundary_probability": 1.5692620328645911e-10,
+        "mean_occupations": [
+          0.23491515696014975,
+          0.765084843039526,
+          0.23491515696032705,
+          0.7650848430396444,
+          0.2349151569603579,
+          0.7650848430396757,
+          0.23491515696047655,
+          0.7650848430398535
+        ],
+        "electric_flux_second_moment": 1.168533353947051,
+        "eigenpair_residual": 2.2857807373223997e-14
+      }
+    ],
+    "bare_fermion_hop_negative_control_nonzero_Gauss_generators": 2,
+    "operator_rule": "For oriented a->b hopping psi_b\u2020 psi_a, rotor lowers n_ab by1. Fermion charge change and electric divergence change cancel at both vertices; a bare fermion hop without rotor does not commute with Gauss.",
+    "scope": "All8 site fermions and the global rotor integer are quantum and interact. This is the chosen native octagon subsystem with boundary exterior links frozen; full native hopping and all other plaquette shifts do not preserve this subsystem."
+  },
+  "one_dimensional_refinement": {
+    "length": 8.0,
+    "dimensionful_charge_input": 0.7,
+    "samples": [
+      {
+        "sites": 4,
+        "spacing": 2.0,
+        "bare_dimensionless_charge": 1.4,
+        "cutoff_sweep": [
+          {
+            "cutoff": 2,
+            "dimension": 30,
+            "ground_energy": -0.3416667534474877,
+            "gap": 0.6197587045233635,
+            "second_gap": 0.8316667534474875,
+            "boundary_probability": 5.477858133978564e-08,
+            "mean_occupations": [
+              0.18033636980041767,
+              0.8196636301995808,
+              0.18033636980041773,
+              0.8196636301995804
+            ],
+            "electric_flux_second_moment": 0.36278001482913863,
+            "eigenpair_residual": 2.54449654344408e-15
+          },
+          {
+            "cutoff": 3,
+            "dimension": 42,
+            "ground_energy": -0.34166675344748526,
+            "gap": 0.6197587045233626,
+            "second_gap": 0.8316667534474862,
+            "boundary_probability": 1.4405707462418927e-18,
+            "mean_occupations": [
+              0.1803363698004179,
+              0.8196636301995815,
+              0.18033636980041776,
+              0.8196636301995818
+            ],
+            "electric_flux_second_moment": 0.3627800148291393,
+            "eigenpair_residual": 5.430608133193636e-15
+          }
+        ],
+        "static_potentials": [
+          {
+            "distance": 2.0,
+            "energy_shift": 0.5288512405100786
+          },
+          {
+            "distance": 4.0,
+            "energy_shift": 0.5286719451941371
+          }
+        ],
+        "effective_charge_from_continuum_kernel": 0.8708167114088495,
+        "fit_max_energy_residual": 0.06216146014393781,
+        "benchmark_massless_continuum_gap": 0.39493270848342943
+      },
+      {
+        "sites": 6,
+        "spacing": 1.3333333333333333,
+        "bare_dimensionless_charge": 0.9333333333333332,
+        "cutoff_sweep": [
+          {
+            "cutoff": 2,
+            "dimension": 100,
+            "ground_energy": -1.0491919298516315,
+            "gap": 0.5345682609579987,
+            "second_gap": 0.8507631124243489,
+            "boundary_probability": 6.233873367021214e-07,
+            "mean_occupations": [
+              0.2897937332787574,
+              0.7102062667212466,
+              0.28979373327875746,
+              0.710206266721247,
+              0.2897937332787575,
+              0.7102062667212469
+            ],
+            "electric_flux_second_moment": 0.8884418050049848,
+            "eigenpair_residual": 3.5253703086550674e-15
+          },
+          {
+            "cutoff": 3,
+            "dimension": 140,
+            "ground_energy": -1.0491919298516341,
+            "gap": 0.5345682609579984,
+            "second_gap": 0.8507631124243625,
+            "boundary_probability": 7.047983248133423e-18,
+            "mean_occupations": [
+              0.28979373327875585,
+              0.7102062667212433,
+              0.28979373327875546,
+              0.7102062667212429,
+              0.2897937332787559,
+              0.7102062667212432
+            ],
+            "electric_flux_second_moment": 0.8884418050049813,
+            "eigenpair_residual": 8.74662624792935e-15
+          }
+        ],
+        "static_potentials": [
+          {
+            "distance": 1.3333333333333333,
+            "energy_shift": 0.3785511484585353
+          },
+          {
+            "distance": 2.6666666666666665,
+            "energy_shift": 0.428596591353017
+          },
+          {
+            "distance": 4.0,
+            "energy_shift": 0.6917280938177784
+          }
+        ],
+        "effective_charge_from_continuum_kernel": 0.8793184693025816,
+        "fit_max_energy_residual": 0.11278883602371548,
+        "benchmark_massless_continuum_gap": 0.39493270848342943
+      },
+      {
+        "sites": 8,
+        "spacing": 1.0,
+        "bare_dimensionless_charge": 0.7,
+        "cutoff_sweep": [
+          {
+            "cutoff": 2,
+            "dimension": 350,
+            "ground_energy": -2.111288111062088,
+            "gap": 0.49813103126268965,
+            "second_gap": 0.8713072048789969,
+            "boundary_probability": 4.295016824921709e-06,
+            "mean_occupations": [
+              0.3484058144403247,
+              0.6515941855596756,
+              0.34840581444032354,
+              0.6515941855596749,
+              0.3484058144403261,
+              0.651594185559677,
+              0.34840581444032537,
+              0.6515941855596762
+            ],
+            "electric_flux_second_moment": 1.455763235119639,
+            "eigenpair_residual": 9.796051546852965e-15
+          },
+          {
+            "cutoff": 3,
+            "dimension": 490,
+            "ground_energy": -2.11128811106208,
+            "gap": 0.49813103126248226,
+            "second_gap": 0.8713072048789943,
+            "boundary_probability": 2.4307477933727273e-16,
+            "mean_occupations": [
+              0.3484058144403281,
+              0.6515941855596737,
+              0.3484058144403304,
+              0.6515941855596736,
+              0.3484058144403285,
+              0.6515941855596745,
+              0.34840581444032914,
+              0.6515941855596745
+            ],
+            "electric_flux_second_moment": 1.455763235119752,
+            "eigenpair_residual": 1.419365887856436e-14
+          }
+        ],
+        "static_potentials": [
+          {
+            "distance": 1.0,
+            "energy_shift": 0.2987054856782314
+          },
+          {
+            "distance": 2.0,
+            "energy_shift": 0.35065226338223177
+          },
+          {
+            "distance": 3.0,
+            "energy_shift": 0.579199735850634
+          },
+          {
+            "distance": 4.0,
+            "energy_shift": 0.48238374780852666
+          }
+        ],
+        "effective_charge_from_continuum_kernel": 0.8150956754788717,
+        "fit_max_energy_residual": 0.08027568368759663,
+        "benchmark_massless_continuum_gap": 0.39493270848342943
+      },
+      {
+        "sites": 10,
+        "spacing": 0.8,
+        "bare_dimensionless_charge": 0.5599999999999999,
+        "cutoff_sweep": [
+          {
+            "cutoff": 2,
+            "dimension": 1260,
+            "ground_energy": -3.508000645250107,
+            "gap": 0.47721439777179153,
+            "second_gap": 0.8664449113246722,
+            "boundary_probability": 1.539934307439627e-05,
+            "mean_occupations": [
+              0.3828843289654695,
+              0.6171156710345108,
+              0.3828843289654397,
+              0.6171156710344814,
+              0.3828843289654512,
+              0.6171156710345522,
+              0.3828843289655213,
+              0.6171156710345633,
+              0.38288432896549185,
+              0.6171156710345334
+            ],
+            "electric_flux_second_moment": 2.0453053973579585,
+            "eigenpair_residual": 1.1687551057575136e-14
+          },
+          {
+            "cutoff": 3,
+            "dimension": 1764,
+            "ground_energy": -3.5080006452501653,
+            "gap": 0.4772143977680319,
+            "second_gap": 0.8664449112429939,
+            "boundary_probability": 6.276783157612827e-15,
+            "mean_occupations": [
+              0.3828843289655404,
+              0.617115671034463,
+              0.3828843289655379,
+              0.6171156710344609,
+              0.38288432896553853,
+              0.6171156710344624,
+              0.3828843289655403,
+              0.6171156710344636,
+              0.3828843289655395,
+              0.6171156710344656
+            ],
+            "electric_flux_second_moment": 2.045305397360878,
+            "eigenpair_residual": 2.0388666352097415e-14
+          }
+        ],
+        "static_potentials": [
+          {
+            "distance": 0.8,
+            "energy_shift": 0.24766215671318426
+          },
+          {
+            "distance": 1.6,
+            "energy_shift": 0.29642036686952933
+          },
+          {
+            "distance": 2.4000000000000004,
+            "energy_shift": 0.4900930744613303
+          },
+          {
+            "distance": 3.2,
+            "energy_shift": 0.45066816690259026
+          },
+          {
+            "distance": 4.0,
+            "energy_shift": 0.5815006394189974
+          }
+        ],
+        "effective_charge_from_continuum_kernel": 0.8127635508346298,
+        "fit_max_energy_residual": 0.06741719021369713,
+        "benchmark_massless_continuum_gap": 0.39493270848342943
+      }
+    ],
+    "scope": "Separate finite-ring staggered Schwinger benchmark with supplied physical length/charge and standard1D continuum screening kernel. Finite-size and flux-cutoff comparisons do not determine4D W33 running, chiral SM charges or physical units; the engineering e*a trajectory is specified, not a derived beta function.",
+    "primary": "https://arxiv.org/abs/2104.00025"
+  },
+  "exact_mass_matching": {
+    "lattice_mass_shift": "m_lat=m_physical-e\u00b2*a/8",
+    "exact_integer_map": "occ_i -> occ_(i+1); n_i -> n_(i+1)+(1+(-1)^i)/2; theta -> theta-pi. Fermion translation sign=(-1)^[(N/2-1)*occ_0].",
+    "exact_diagonal_energy_cases": 490,
+    "exact_energy_difference": "0",
+    "projected_kinetic_intertwiner_bulk_residual": 1.7763568394002505e-15,
+    "projection_boundary": "Finite winding cutoff is not invariant under the integer map; exact statement is untruncated, bulk test excludes boundary columns.",
+    "theta_interpretation": "For unit-charge fermions the one-site map relates distinct theta theories; it is parameter covariance, not an internal symmetry at fixed theta.",
+    "prior_art": "Dempsey,Klebanov,Pufu,Zan2022; not a newly discovered mass-shift theorem.",
+    "primary": "https://arxiv.org/abs/2206.05308"
+  },
+  "mass_matched_refinement": {
+    "samples": [
+      {
+        "sites": 4,
+        "spacing": 2.0,
+        "mass_counterterm": -0.12249999999999998,
+        "dimension": 42,
+        "ground_energy": -0.20724926033423458,
+        "gap": 0.40738630442507884,
+        "second_gap": 0.6884366742770547,
+        "boundary_probability": 5.608481268486427e-18,
+        "mean_occupations": [
+          0.2798497769037155,
+          0.720150223096285,
+          0.27984977690371504,
+          0.7201502230962866
+        ],
+        "electric_flux_second_moment": 0.5665908606952186,
+        "eigenpair_residual": 7.841048534573494e-15,
+        "fractional_gap_error": 0.03153346297771109
+      },
+      {
+        "sites": 6,
+        "spacing": 1.3333333333333333,
+        "mass_counterterm": -0.08166666666666665,
+        "dimension": 140,
+        "ground_energy": -0.9617901271535128,
+        "gap": 0.39474493769641084,
+        "second_gap": 0.7528508444080111,
+        "boundary_probability": 2.0307177453623062e-17,
+        "mean_occupations": [
+          0.3563257187778781,
+          0.6436742812221248,
+          0.35632571877787805,
+          0.6436742812221248,
+          0.3563257187778783,
+          0.6436742812221246
+        ],
+        "electric_flux_second_moment": 1.1042504083593938,
+        "eigenpair_residual": 7.366639825951004e-15,
+        "fractional_gap_error": -0.00047545007791238714
+      },
+      {
+        "sites": 8,
+        "spacing": 1.0,
+        "mass_counterterm": -0.06124999999999999,
+        "dimension": 490,
+        "ground_energy": -2.0477102016148514,
+        "gap": 0.39345038877407656,
+        "second_gap": 0.7722500006184414,
+        "boundary_probability": 5.022067243397777e-16,
+        "mean_occupations": [
+          0.393325605441116,
+          0.6066743945588836,
+          0.39332560544111544,
+          0.6066743945588835,
+          0.39332560544111583,
+          0.6066743945588841,
+          0.39332560544111594,
+          0.6066743945588845
+        ],
+        "electric_flux_second_moment": 1.6641412610650657,
+        "eigenpair_residual": 9.60321655438082e-15,
+        "fractional_gap_error": -0.0037533475387365733
+      },
+      {
+        "sites": 10,
+        "spacing": 0.8,
+        "mass_counterterm": -0.048999999999999995,
+        "dimension": 1764,
+        "ground_energy": -3.458337981882714,
+        "gap": 0.39358283588551934,
+        "second_gap": 0.779570303737783,
+        "boundary_probability": 1.1411931535442105e-14,
+        "mean_occupations": [
+          0.4150509611819173,
+          0.5849490388180825,
+          0.4150509611819184,
+          0.5849490388180835,
+          0.4150509611819181,
+          0.5849490388180827,
+          0.4150509611819177,
+          0.5849490388180816,
+          0.41505096118191803,
+          0.584949038818081
+        ],
+        "electric_flux_second_moment": 2.2456623429700215,
+        "eigenpair_residual": 1.3995812886175828e-14,
+        "fractional_gap_error": -0.003417981263425074
+      },
+      {
+        "sites": 12,
+        "spacing": 0.6666666666666666,
+        "mass_counterterm": -0.040833333333333326,
+        "dimension": 6468,
+        "ground_energy": -5.191221826709458,
+        "gap": 0.39385256251582934,
+        "second_gap": 0.7830654998423219,
+        "boundary_probability": 1.4492858146151538e-13,
+        "mean_occupations": [
+          0.42937463947420845,
+          0.5706253605257935,
+          0.42937463947420773,
+          0.5706253605257934,
+          0.4293746394742088,
+          0.5706253605257927,
+          0.42937463947420845,
+          0.5706253605257929,
+          0.4293746394742086,
+          0.5706253605257934,
+          0.4293746394742077,
+          0.5706253605257933
+        ],
+        "electric_flux_second_moment": 2.846312669928802,
+        "eigenpair_residual": 1.8932988358682296e-14,
+        "fractional_gap_error": -0.002735012685446958
+      }
+    ],
+    "benchmark": 0.39493270848342943,
+    "scope": "Known1D regulator mass matching, explicitly verified on our Hamiltonian. Standard Schwinger continuum control, not W33-derived charge or4D running."
+  },
+  "matched_static_screening": {
+    "samples": [
+      {
+        "sites": 8,
+        "spacing": 1.0,
+        "potentials": [
+          {
+            "distance": 1.0,
+            "source_plus_minus_energy": [
+              0.29992432658672263,
+              0.06913195726299648
+            ],
+            "source_sign_mean": 0.18452814192485956
+          },
+          {
+            "distance": 2.0,
+            "source_plus_minus_energy": [
+              0.3053896196198793,
+              0.3053896196198842
+            ],
+            "source_sign_mean": 0.30538961961988176
+          },
+          {
+            "distance": 3.0,
+            "source_plus_minus_energy": [
+              0.5156319582029569,
+              0.21858181035729696
+            ],
+            "source_sign_mean": 0.36710688428012694
+          },
+          {
+            "distance": 4.0,
+            "source_plus_minus_energy": [
+              0.3884632445098686,
+              0.388463244509869
+            ],
+            "source_sign_mean": 0.3884632445098688
+          }
+        ],
+        "extracted_screening_charge": 0.6785999737750819,
+        "held_out_separation": 4.0,
+        "held_out_prediction": 0.3875576718952431,
+        "held_out_actual": 0.3884632445098688,
+        "held_out_error": 0.0009055726146257048
+      },
+      {
+        "sites": 10,
+        "spacing": 0.8,
+        "potentials": [
+          {
+            "distance": 0.8,
+            "source_plus_minus_energy": [
+              0.2482259544625549,
+              0.0687281936046058
+            ],
+            "source_sign_mean": 0.15847707403358036
+          },
+          {
+            "distance": 1.6,
+            "source_plus_minus_energy": [
+              0.27078583282761226,
+              0.2707858328276327
+            ],
+            "source_sign_mean": 0.2707858328276225
+          },
+          {
+            "distance": 2.4000000000000004,
+            "source_plus_minus_energy": [
+              0.4511931593847178,
+              0.23167620529933286
+            ],
+            "source_sign_mean": 0.34143468234202534
+          },
+          {
+            "distance": 3.2,
+            "source_plus_minus_energy": [
+              0.38261617149312066,
+              0.382616171493118
+            ],
+            "source_sign_mean": 0.38261617149311933
+          },
+          {
+            "distance": 4.0,
+            "source_plus_minus_energy": [
+              0.5119372662787658,
+              0.2786671661981548
+            ],
+            "source_sign_mean": 0.3953022162384603
+          }
+        ],
+        "extracted_screening_charge": 0.6868438213697162,
+        "held_out_separation": 4.0,
+        "held_out_prediction": 0.3955567687009562,
+        "held_out_actual": 0.3953022162384603,
+        "held_out_error": 0.0002545524624958939
+      },
+      {
+        "sites": 12,
+        "spacing": 0.6666666666666666,
+        "potentials": [
+          {
+            "distance": 0.6666666666666666,
+            "source_plus_minus_energy": [
+              0.21213507411733445,
+              0.06343634640654816
+            ],
+            "source_sign_mean": 0.1377857102619413
+          },
+          {
+            "distance": 1.3333333333333333,
+            "source_plus_minus_energy": [
+              0.24105324894082436,
+              0.24105324894078883
+            ],
+            "source_sign_mean": 0.2410532489408066
+          },
+          {
+            "distance": 2.0,
+            "source_plus_minus_energy": [
+              0.4000936761813376,
+              0.22655095819988258
+            ],
+            "source_sign_mean": 0.3133223171906101
+          },
+          {
+            "distance": 2.6666666666666665,
+            "source_plus_minus_energy": [
+              0.3626031270155634,
+              0.3626031270155945
+            ],
+            "source_sign_mean": 0.36260312701557895
+          },
+          {
+            "distance": 3.333333333333333,
+            "source_plus_minus_energy": [
+              0.48373172070649595,
+              0.29683768954436296
+            ],
+            "source_sign_mean": 0.39028470512542945
+          },
+          {
+            "distance": 4.0,
+            "source_plus_minus_energy": [
+              0.39954713943898135,
+              0.3995471394389405
+            ],
+            "source_sign_mean": 0.3995471394389609
+          }
+        ],
+        "extracted_screening_charge": 0.6910534215233813,
+        "held_out_separation": 4.0,
+        "held_out_prediction": 0.3996565036711689,
+        "held_out_actual": 0.3995471394389609,
+        "held_out_error": 0.00010936423220797575
+      }
+    ],
+    "known_dimensionful_charge_input": 0.7,
+    "scope": "Effective charge matching in a standard1D regulator, after known mass counterterm and explicit source-sign averaging. This is a finite-spacing extraction against a known continuum kernel, with one held-out separation. It does not predict the supplied charge, establish a4D beta function, or construct a native W33 refinement tower."
+  }
+}

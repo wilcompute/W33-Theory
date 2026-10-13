@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "orientation": {
+    "spectral_orbit_traces": [
+      [
+        4.200000000000001,
+        10.040000000000003,
+        28.008000000000017
+      ],
+      [
+        4.200000000000001,
+        10.040000000000006,
+        28.008000000000028
+      ],
+      [
+        4.200000000000001,
+        10.040000000000006,
+        28.008000000000024
+      ]
+    ],
+    "mixed_potential_variation_analytic": -3.1815884216110906,
+    "finite_difference_variation": -3.181588421252712,
+    "random_mixed_potential": -14.673245433292326,
+    "alignment_global_minimum": -31.2,
+    "opposite_extremum": -8.8,
+    "theorem": "For simple spectra, stationarity of -Tr(A U B Udagger) gives [A,U B Udagger]=0. Global minimum pairs eigenvalues in the same order (trace rearrangement); all stationary orientations are permutations, with no mixing. Separate-sector spectral potentials leave all orientations flat.",
+    "implication": "A spectral mass potential or a single linear mixed trace cannot select observed mixing. Competing orientation invariants are required; their coefficients must be derived rather than fitted."
+  },
+  "lepton_branches": {
+    "branches": [
+      {
+        "delta_deg": 280.61516850081824,
+        "masses_eV": [
+          0.007073813681977004,
+          0.011137272556929059,
+          0.050497909263724224
+        ],
+        "Majorana_CW_eV_fourth": 1.544384488796421e-07,
+        "quartic_invariant_eV_fourth": 6.520587604885544e-06
+      },
+      {
+        "delta_deg": 112.57620741685666,
+        "masses_eV": [
+          0.002043872060061697,
+          0.00884179919461537,
+          0.05004175669376427
+        ],
+        "Majorana_CW_eV_fourth": 1.4892629131955746e-07,
+        "quartic_invariant_eV_fourth": 6.277033674451259e-06
+      },
+      {
+        "delta_deg": 57.49178872379524,
+        "masses_eV": [
+          0.0036311632646772118,
+          0.009337309390544024,
+          0.0501316800701387
+        ],
+        "Majorana_CW_eV_fourth": 1.499815945333596e-07,
+        "quartic_invariant_eV_fourth": 6.323875724677826e-06
+      },
+      {
+        "delta_deg": 280.6151685008181,
+        "masses_eV": [
+          0.007073813681977001,
+          0.011137272556929059,
+          0.05049790926372423
+        ],
+        "Majorana_CW_eV_fourth": 1.5443844887964216e-07,
+        "quartic_invariant_eV_fourth": 6.520587604885548e-06
+      },
+      {
+        "delta_deg": 112.57620741685767,
+        "masses_eV": [
+          0.002043872060061743,
+          0.008841799194615365,
+          0.05004175669376427
+        ],
+        "Majorana_CW_eV_fourth": 1.4892629131955746e-07,
+        "quartic_invariant_eV_fourth": 6.277033674451259e-06
+      }
+    ],
+    "counterterm_crossings": [
+      {
+        "branch_i": 1,
+        "branch_j": 0,
+        "allowed_counterterm_crossing": -0.02263218479067782
+      },
+      {
+        "branch_i": 2,
+        "branch_j": 0,
+        "allowed_counterterm_crossing": -0.022656762477061793
+      },
+      {
+        "branch_i": 2,
+        "branch_j": 1,
+        "allowed_counterterm_crossing": -0.022528971483908325
+      },
+      {
+        "branch_i": 3,
+        "branch_j": 1,
+        "allowed_counterterm_crossing": -0.022632184790677724
+      },
+      {
+        "branch_i": 3,
+        "branch_j": 2,
+        "allowed_counterterm_crossing": -0.022656762477061672
+      },
+      {
+        "branch_i": 4,
+        "branch_j": 0,
+        "allowed_counterterm_crossing": -0.02263218479067782
+      },
+      {
+        "branch_i": 4,
+        "branch_j": 2,
+        "allowed_counterterm_crossing": -0.022528971483908325
+      },
+      {
+        "branch_i": 4,
+        "branch_j": 3,
+        "allowed_counterterm_crossing": -0.022632184790677724
+      }
+    ],
+    "rankings": [
+      {
+        "coefficient": -1.0226321847906779,
+        "ordering": [
+          3,
+          0,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.9773678152093221,
+        "ordering": [
+          1,
+          4,
+          2,
+          0,
+          3
+        ]
+      }
+    ],
+    "supplied_scale": "Delta m31\u00b2=.0025 eV\u00b2, subtraction mu=1eV; not derived",
+    "allowed_counterterm": "c Tr[(Mnu\u2020 Mnu)^2] is weak-basis invariant and CP even; its coefficient is an unspecified UV scalar-potential matching datum",
+    "conclusion": "One-loop neutrino vacuum energy does not select a physical lepton phase from these fitted roots without fixing the allowed invariant counterterm. A chosen subtraction convention is not a dynamical prediction.",
+    "prior": "TOE51 already owns branch-dependent masses and m_bb;11960 owns the fitted roots. This audits a proposed dynamical ranking."
+  },
+  "Majorana_sensitive_positive_control": {
+    "Yukawa_singular_values": [
+      "1/3",
+      "2/3"
+    ],
+    "orthogonal_RH_invariant": "I_R=Tr[(Ynu Ynu.T)(Ynu Ynu.T)dagger]",
+    "exact_orientation_potential": "For S=U_R U_R.T, t=|S11|\u00b2=|S22|\u00b2, I_R=2 y1\u00b2 y2\u00b2+t(y1\u00b2-y2\u00b2)\u00b2. Positive coefficient selects t=0 globally on the2D unitary orbit.",
+    "invariant_at_minimum": "8/81",
+    "invariant_at_diagonal_orientation": "17/81",
+    "seesaw_matrix_unit_M": [
+      [
+        "0",
+        "2/9"
+      ],
+      [
+        "2/9",
+        "0"
+      ]
+    ],
+    "Takagi_mass_both": "2/9",
+    "boundary": "Known O2-right-handed Majorana orientation mechanism, not a newly discovered flavour theorem. Singular values and degenerate heavy mass are supplied. The exact light masses are degenerate, so the displayed45-degree Takagi basis does not predict an observable mixing angle;3-family splitting, coefficient selection and UV embedding remain open.",
+    "primary": "https://arxiv.org/abs/1306.5922"
+  },
+  "scope": "Executed two concrete selector candidates and their obstructions. No unique flavour coefficients, mass scale or out-of-sample selected branch derived."
+}

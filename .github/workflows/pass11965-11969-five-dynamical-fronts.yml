@@ -1,0 +1,45 @@
+name: Pass11965-11969 five dynamical research fronts
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass11965_11966_cp_transmission_soft_modulus.py'
+      - 'analysis/w33_pass11967_flavour_orientation_selector.py'
+      - 'analysis/w33_pass11968_native_spin2_constraint_completion.py'
+      - 'analysis/w33_pass11969_quantum_gauge_fermion.py'
+      - 'data/w33_pass11965_11966_cp_transmission_soft_modulus.json'
+      - 'data/w33_pass11967_flavour_orientation_selector.json'
+      - 'data/w33_pass11968_native_spin2_constraint_completion.json'
+      - 'data/w33_pass11969_quantum_gauge_fermion.json'
+      - 'tests/test_w33_pass11965_11969_five_dynamical_fronts.py'
+      - '.github/workflows/pass11965-11969-five-dynamical-fronts.yml'
+  workflow_dispatch:
+jobs:
+  exact-science-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 pytest==8.4.2
+      - name: Frozen science and earlier quotient controls
+        run: >-
+          python -m pytest --noconftest --ignore-glob=tests/test_*.py -q
+          tests/test_w33_pass11965_11969_five_dynamical_fronts.py
+          tests/test_w33_pass11964_holonomy_cp_quotient.py
+      - name: Regenerate CP and soft fronts
+        run: python analysis/w33_pass11965_11966_cp_transmission_soft_modulus.py
+      - name: Regenerate flavour selector front
+        run: python analysis/w33_pass11967_flavour_orientation_selector.py
+      - name: Regenerate native constraint front
+        run: python analysis/w33_pass11968_native_spin2_constraint_completion.py
+      - name: Regenerate interacting quantum front
+        run: python analysis/w33_pass11969_quantum_gauge_fermion.py
+      - name: Check regenerated certificates
+        run: >-
+          python -m pytest --noconftest --ignore-glob=tests/test_*.py -q
+          tests/test_w33_pass11965_11969_five_dynamical_fronts.py

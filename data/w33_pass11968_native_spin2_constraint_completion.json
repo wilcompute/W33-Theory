@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "native_dimensions": {
+    "vertices": 80,
+    "links": 160,
+    "symmetric_tensor_configuration": 480
+  },
+  "derivative": "D_i=C.T diag(j_i) B/2, C unsigned endpoint incidence, j_i weighted-uniform harmonic projection of the three native unit voltages; B.T j_i=0 makes D_i antisymmetric.",
+  "derivative_commutator_norms": [
+    0.013050383136138188,
+    0.013050383136138186,
+    0.02245438083648712
+  ],
+  "naive_linear_constraints": "H=sum_i D_i\u00b2 Tr(h)-sum_ij sym(D_i D_j)h_ij; M_i=sum_j D_j pi_ij",
+  "exact_poisson_witness": {
+    "H_vertex": 34,
+    "M_component": 1,
+    "M_vertex": 70,
+    "bracket": "8667/4096000"
+  },
+  "naive_max_bracket": 0.0021159667968750004,
+  "completion": "P_M=orthogonal projector onto row(M); Hc=H(I-P_M); P_H=row projector of Hc; Q=I-P_M-P_H. Constraints Hc q=0,M p=0 commute exactly because Hc M.T=0. Hamiltonian=(p.T Q p+q.T Q (I6 tensor B.T B) Q q)/2 is gauge invariant.",
+  "momentum_rank": 234,
+  "completed_H_rank": 78,
+  "physical_configuration": 168,
+  "completed_constraint_bracket_max": 4.473574972068339e-18,
+  "physical_projector_idempotence": 2.4147350785597155e-15,
+  "Hamiltonian_constraint_flow_residual": 1.9548165169913645e-16,
+  "finite_gauge_energy_change": 0.0,
+  "offsite_projector_norm_fraction": 0.6746826968915595,
+  "scope": "A new specified native derivative attempt and explicitly projected finite linear canonical completion. The projection is nonlocal and an added choice. Physical configuration count is not a helicity-two proof. No nonlinear hypersurface-deformation algebra, dynamically curved spacetime, coupling to stress energy or continuum gravitational limit.",
+  "prior": [
+    "11955 continuum Fierz-Pauli positive control",
+    "11301 native scalar lapse obstruction",
+    "11306 parametrized multi-clock closure; different completion"
+  ],
+  "primary": "https://arxiv.org/abs/1304.5983"
+}
