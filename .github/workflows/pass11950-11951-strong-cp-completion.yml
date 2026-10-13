@@ -1,0 +1,42 @@
+name: Pass11950-11951 strong CP completion
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py'
+      - 'analysis/w33_20261010_toe39_theta_parity_fifth_order.py'
+      - 'analysis/w33_pass11942_hypercharge_wilson_leptons.py'
+      - 'analysis/w33_pass11949_axiflavon_quality_fails.py'
+      - 'data/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.json'
+      - 'data/w33_qpsi_matter_parity_e8_d8_bridge.json'
+      - 'tests/test_w33_pass11950_11951_strong_cp_completion.py'
+      - '.github/workflows/pass11950-11951-strong-cp-completion.yml'
+  workflow_dispatch:
+jobs:
+  exact-science-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5 sympy==1.14.0 pytest==8.4.2
+      - name: Frozen certificate and independent controls
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: >-
+          python -m pytest --noconftest --ignore-glob=tests/test_*.py -q
+          tests/test_w33_pass11950_11951_strong_cp_completion.py
+          tests/test_w33_20261010_toe39_theta_parity.py
+          tests/test_w33_pass11949.py
+      - name: Regenerate both new fronts
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py
+      - name: Independently check regenerated science
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: >-
+          python -m pytest --noconftest --ignore-glob=tests/test_*.py -q
+          tests/test_w33_pass11950_11951_strong_cp_completion.py

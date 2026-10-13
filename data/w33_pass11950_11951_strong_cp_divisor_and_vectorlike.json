@@ -1,0 +1,333 @@
+{
+  "schema": "w33.pass11950_11951.strong_cp.v1",
+  "status": "PASS",
+  "input_normalized_sha256": {
+    "analysis/w33_20261010_toe39_theta_parity_fifth_order.py": "438b8c998cc7b631e0cc279f7b0d20974e38b4db3f2f8af6cafe4990a8f82cca",
+    "analysis/w33_pass11942_hypercharge_wilson_leptons.py": "5c1c6e351e20204ad2ac76b5945d610218101d1d620e117b27b130224df1cfd4",
+    "data/w33_qpsi_matter_parity_e8_d8_bridge.json": "dd1d892d52a012fb77da9cf378cf8287b7c7fbefa0468ef87b2ae6be70ea637f"
+  },
+  "pass11950": {
+    "status": "PASS",
+    "cases": [
+      {
+        "fit": "A",
+        "tau": [
+          0.5676301021362735,
+          0.5016770343629002
+        ],
+        "theta_leading_coefficient": [
+          -1.2994430552402343,
+          3.874167435282373
+        ],
+        "determinant_winding": 3.0,
+        "product_locus_metric": 1.986650923159201,
+        "samples": [
+          {
+            "epsilon": 0.01,
+            "determinant_over_epsilon_cubed": [
+              -1.2982453761827293,
+              3.874353035088344
+            ],
+            "leading_relative_error": 0.0002965957037822478,
+            "chi10_over_epsilon_squared": [
+              53.579716411261415,
+              -1758.6202194082248
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -1.6160533450623987e-09,
+              2.6048628957384872e-09
+            ]
+          },
+          {
+            "epsilon": 0.005,
+            "determinant_over_epsilon_cubed": [
+              -1.2991435183669031,
+              3.87421396238714
+            ],
+            "leading_relative_error": 7.41820168357656e-05,
+            "chi10_over_epsilon_squared": [
+              54.155191222007154,
+              -1760.0426915682717
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -1.6109990094162159e-09,
+              2.599429287180362e-09
+            ]
+          },
+          {
+            "epsilon": 0.0025,
+            "determinant_over_epsilon_cubed": [
+              -1.2993681636638037,
+              3.874179075038697
+            ],
+            "leading_relative_error": 1.854758337721892e-05,
+            "chi10_over_epsilon_squared": [
+              54.29920845229107,
+              -1760.3984636826076
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -1.6097377944347388e-09,
+              2.5980723918439155e-09
+            ]
+          },
+          {
+            "epsilon": 0.00125,
+            "determinant_over_epsilon_cubed": [
+              -1.2994243317858745,
+              3.8741703458045356
+            ],
+            "leading_relative_error": 4.637053239114138e-06,
+            "chi10_over_epsilon_squared": [
+              54.33522204872684,
+              -1760.4874163411505
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -1.6094226384965035e-09,
+              2.597733262247182e-09
+            ]
+          }
+        ]
+      },
+      {
+        "fit": "B",
+        "tau": [
+          -0.9577129568239413,
+          0.8723822872735182
+        ],
+        "theta_leading_coefficient": [
+          0.2712713445622892,
+          0.2036092426221277
+        ],
+        "determinant_winding": 3.0,
+        "product_locus_metric": 0.656986319136831,
+        "samples": [
+          {
+            "epsilon": 0.01,
+            "determinant_over_epsilon_cubed": [
+              0.2712375240283002,
+              0.20358064129166542
+            ],
+            "leading_relative_error": 0.00013058728617786153,
+            "chi10_over_epsilon_squared": [
+              -2.0495433439232897,
+              -1.062577068454024
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -0.009246561170570173,
+              0.0013706664275355972
+            ]
+          },
+          {
+            "epsilon": 0.005,
+            "determinant_over_epsilon_cubed": [
+              0.2712628886623394,
+              0.20360209135850107
+            ],
+            "leading_relative_error": 3.265031942741829e-05,
+            "chi10_over_epsilon_squared": [
+              -2.049967698601312,
+              -1.0627659604843829
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -0.009242864099663847,
+              0.0013696719490523465
+            ]
+          },
+          {
+            "epsilon": 0.0025,
+            "determinant_over_epsilon_cubed": [
+              0.2712692305377205,
+              0.20360745474329098
+            ],
+            "leading_relative_error": 8.162811280121932e-06,
+            "chi10_over_epsilon_squared": [
+              -2.050073789413645,
+              -1.0628131786956907
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -0.009241940277405845,
+              0.001369423397722109
+            ]
+          },
+          {
+            "epsilon": 0.00125,
+            "determinant_over_epsilon_cubed": [
+              0.27127081609552955,
+              0.20360879568796356
+            ],
+            "leading_relative_error": 2.0405464921421947e-06,
+            "chi10_over_epsilon_squared": [
+              -2.0501003122506396,
+              -1.062824982948493
+            ],
+            "squared_divisor_cancelled_ratio": [
+              -0.009241709353115548,
+              0.001369361264171161
+            ]
+          }
+        ]
+      }
+    ],
+    "determinant_order": 3,
+    "chi10_order": 2,
+    "physical_combination": "A=exp(-8*pi^2*f3)*det(Yu)*det(Yd), theta_bar=arg A",
+    "local_regular_threshold_theorem": "In a fixed physical marking, with det Yd nonzero and finite holomorphic f3, A has a zero of order3 at epsilon=0. A nonzero holomorphic function with real positive values on a complex open set must be constant. Therefore the declared theta family cannot have an identically zero theta_bar on such an open set with a regular f3 across this separating divisor.",
+    "required_logarithm": "f3=(3/(8*pi^2))*log(epsilon)+regular, if A is nonzero constant",
+    "required_gauge_factor_pole_order": 3,
+    "required_f3_monodromy": "3*i/(4*pi); theta3 shifts by -6*pi",
+    "Igusa_candidate": "f3=(3/(16*pi^2))*log(chi10)+regular removes the local order3 divisor",
+    "squared_branch_free_test": "(det Yu)^2/(chi10)^3 has a finite generically nonzero separating limit",
+    "limitation": "A pole-cancelling threshold is not derived from a colored spectrum. Cancelling a local divisor does not make A globally constant or establish modular covariance of an unmarked Yukawa determinant. Nonconstant regular f3 pieces, CP-breaking dilaton/gluino/Higgs phases and SUSY-breaking loops remain. No axion-quality conclusion is superseded.",
+    "priority": [
+      "analysis/2026-10-10_toe39_theta_parity_fifth_order.md",
+      "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
+      "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md"
+    ]
+  },
+  "pass11951": {
+    "status": "PASS",
+    "exact_example": {
+      "real_light_mass": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          3
+        ]
+      ],
+      "complex_B": [
+        "1 + I",
+        "2 - I",
+        "1 + 2*I"
+      ],
+      "mu": 2,
+      "full_determinant": "14",
+      "light_CP_invariant": "119/64",
+      "inverse_upper_block_sensitivity": [
+        "3/7 + I/14",
+        "2/7 - 2*I/7",
+        "1/14 + 3*I/7"
+      ]
+    },
+    "inverse_construction": {
+      "real_m": [
+        [
+          0.058745196738713396,
+          0.0,
+          0.0
+        ],
+        [
+          0.0024618206479631653,
+          0.044882578540803256,
+          0.0
+        ],
+        [
+          0.028850747344087057,
+          0.9161914908906028,
+          0.40184043908850253
+        ]
+      ],
+      "B": [
+        [
+          60.9501333539724,
+          -0.0
+        ],
+        [
+          -3.349126131305517,
+          3.2815674603255527
+        ],
+        [
+          3.2599605166892944,
+          1.4283863328890918
+        ]
+      ],
+      "mu": 1.0,
+      "target_light_masses": [
+        0.0009335664335664337,
+        0.01853146853146853,
+        1.0
+      ],
+      "J": 3.080000000000401e-05,
+      "matrix_reconstruction_error": 6.166399856011306e-19,
+      "finite_heavy_checks": [
+        {
+          "heavy_scale": 100.0,
+          "max_light_mass_relative_error": 8.199374512685154e-11,
+          "determinant_phase": 0.0,
+          "weak_unitarity_defect": 1.8242991040292156e-10
+        },
+        {
+          "heavy_scale": 1000.0,
+          "max_light_mass_relative_error": 7.877742902451246e-11,
+          "determinant_phase": -2.1684043449710093e-19,
+          "weak_unitarity_defect": 1.823795282139986e-12
+        },
+        {
+          "heavy_scale": 10000.0,
+          "max_light_mass_relative_error": 8.309453125576738e-10,
+          "determinant_phase": -2.1684043449710093e-19,
+          "weak_unitarity_defect": 1.7892266257584908e-14
+        }
+      ],
+      "perturbative_common_rescale": 0.015625,
+      "largest_rescaled_B_component": 0.9523458336558187,
+      "rescaled_mu": 0.015625
+    },
+    "formula": "M=[[m,0],[B,mu]], det M=mu det m; H_light=m m^T-m B^dagger B m^T/(mu^2+|B|^2)",
+    "E6_parity_obstruction": "For the certified standard (-1)^Qpsi, d^c in16 is odd while D in10 is even. D d^c is odd; every product of parity-even condensates leaves it forbidden. The 27^3 mixing needs an odd16 background. Thus native10 exotics cannot carry the Barr mixing block in an unbroken standard-matter-parity vacuum, at any order. This does not apply to alternative parity assignments or vectorlike16 additions.",
+    "parity_compatible_SM_EFT": {
+      "X_charges": {
+        "Q": 0,
+        "d_c": 0,
+        "H_d": 0,
+        "D": 1,
+        "D_c": -1,
+        "S1": -1,
+        "S2": -1,
+        "T1": 1,
+        "T2": 1
+      },
+      "matter_parities": {
+        "Q": -1,
+        "d_c": -1,
+        "H_d": 1,
+        "D": -1,
+        "D_c": -1,
+        "S1": 1,
+        "S2": 1,
+        "T1": 1,
+        "T2": 1
+      },
+      "declared_SM_fields": "D=(3,1,-1/3), Dc=(bar3,1,+1/3); S,T gauge singlets",
+      "superpotential": "Q*m*d_c*H_d+mu*D*D_c+sum_ij lambda_ij*S_i*D*d_c_j+sum c_ijkl*S_i*S_j*T_k*T_l/Lambda",
+      "all_order_holomorphic_zero": "Q*H_d*Dc has X=-1; dressing by any nonnegative S1,S2 powers cannot neutralize it when T1=T2=0",
+      "anomaly_sums": {
+        "SU3_squared_X": "0",
+        "Y_squared_X": "0",
+        "Y_X_squared": "0",
+        "gravity_X": "0",
+        "X_cubed": "0"
+      },
+      "D_flat_background": "xi=2, S1=1,S2=i, T1=T2=0: D_X=xi-|S1|^2-|S2|^2=0",
+      "declared_CP_invariant_alignment_potential": "lambda_r*(|S1|^2+|S2|^2-2)^2+lambda_a*(|S1|^2-|S2|^2)^2+kappa*(Re(S1bar*S2))^2, all coefficients positive",
+      "alignment": "S2=+/-i*S1, |S1|=|S2|=1; supplies physical relative CP phase, while the common phase is gauged",
+      "alignment_hessian_eigenvalues_unit_coefficients": {
+        "16": 2,
+        "4": 1,
+        "0": 1
+      },
+      "FI_boundary": "Constant xi is a rigid EFT input; no gauge-invariant supergravity/string FI realization supplied",
+      "supersymmetric_part_boundary": "D-flat background and holomorphic zero do not derive the additional alignment potential or actual SUSY breaking"
+    },
+    "scope": "Standard Nelson--Barr construction and inverse reconstruction, not new general mechanisms. The repo-specific connection is its compatibility gate against the stored E6 parity. The explicit anomaly-free SM-level EFT adds fields and a U1, not a certified E6/string embedding. Quark input is reconstructed, not predicted. Radiative theta, gluino phases, spectator dynamics, proton operators, leptons, neutrinos and gravity remain uncomputed."
+  }
+}
