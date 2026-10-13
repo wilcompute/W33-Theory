@@ -353535,6 +353535,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5428cc789afb24180037cc9159fbd7fa3aba6d08294fed39c3bffebee29c73e8",
+      "normalized_formula": "*With\u03bd3oddanda\u03bc\u2013\u03c4-cleanneutrinosector,|U_e3|=\u2016P_odde\u2016exactly(Pass11944)",
+      "numeric_literals": [
+        "1944",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md",
+          "raw": "* With \u03bd\u2083 odd and a \u03bc\u2013\u03c4-clean neutrino sector, |U_e3| = \u2016P_odd e\u2016 exactly (Pass 11944).",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "b1d4834262805ca8384cd0e651a7b933c779fa99331cf0f4d8a7efdaba343f49",
+      "structural_formula": "*With\u03bd#oddanda\u03bc\u2013\u03c4-cleanneutrinosector,|U_e3|=\u2016P_odde\u2016exactly(Pass1#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "70d84a0544da4a98afa00665d748f44dfc2860487bad4642f28c886a9a3eb94b",
       "normalized_formula": "*Witten-twisted\u03b2sectorswithK=3cosets,onthe864-pointfundamental-domaingrid,withthetailfit",
       "numeric_literals": [
@@ -385498,6 +385526,34 @@
       },
       "structural_family_id": "7ca7a99c50a163d6ff3202e634d7232548700a643f05300e5e69aaebb3510909",
       "structural_formula": "#.Bekensteinbound:maxentropyS_max=#*pi*R*E=#(edgecount=\"area\")"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "61807b66ad6b5e7a8c4a2c7df5eddd6ecfa1cd84423cb4a67d2c9c97a3ef9cac",
+      "normalized_formula": "1.Branch(b),oddnu3,failsontheta13.Withnu3odd,|U_e3|=||P_odde||exactly.Inthee-evenclass(theclass",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "1. Branch (b), odd nu3, fails on theta13. With nu3 odd, |U_e3| = ||P_odd e|| exactly. In the e-even class (the class",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "71dfb389210c62a1ccadc03c7fc9cf4bcd36fa315ede7a0281b4966b86403ca8",
+      "structural_formula": "#.Branch(b),oddnu3,failsontheta1#.Withnu3odd,|U_e3|=||P_odde||exactly.Inthee-evenclass(theclass"
     },
     {
       "file_count": 1,
@@ -556958,6 +557014,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "85104d9bfae26d443587f6ddcdd0c91d0d868c1e258c85cb6b85c4105978c1ca",
+      "normalized_formula": "C45=ROOT/\"data\"/\"w33_pass11945_lepton_mu_tau_classes.json\"",
+      "numeric_literals": [
+        "1945",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 35,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "C45 = ROOT / \"data\" / \"w33_pass11945_lepton_mu_tau_classes.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "eec54109acba830e99b190a57ba3d2545d136c0c3b5d20f273f30663b6465d52",
+      "structural_formula": "C4#=ROOT/\"data\"/\"w3#_pass1#_lepton_mu_tau_classes.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "e482cd5dc820d1e239306a63443ef507eda750a83e4c0b596c816b5914d7f83d",
       "normalized_formula": "C4=360C2=240C0=10560lambda_2=Theta=10",
       "numeric_literals": [
@@ -572852,6 +572937,38 @@
       },
       "structural_family_id": "66382c831e78db87fd749263c368882db9fc1dc0d7e4d018b2b0d8c44af90d95",
       "structural_formula": "DATA=ROOT/\"data\"/\"w3#_pass1#_polygamy_optimum_state.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "27be426ec09d6989c39127c8e3558a1f44b0d7c8c68d3638d21c52938d88b5bb",
+      "normalized_formula": "DATA=dict(Ue3=0.148,theta13_deg=8.6,dm_ratio=7.42e-5/2.51e-3,Vcd=0.221)",
+      "numeric_literals": [
+        "0.148",
+        "0.221",
+        "2.51e-3",
+        "3",
+        "7.42e-5",
+        "8.6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "DATA = dict(Ue3=0.148, theta13_deg=8.6, dm_ratio=7.42e-5 / 2.51e-3, Vcd=0.221)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "205444ea7f2069f1dd90a79d43e285523b2e5d6ed6dfe45ddabe6cacd60daccf",
+      "structural_formula": "DATA=dict(Ue3=#,theta1#_deg=#,dm_ratio=#/#,Vcd=#)"
     },
     {
       "file_count": 1,
@@ -700243,6 +700360,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3664e971697eea35bbe8fe27ed88f0e5c275e157d9f2b99203f57e0ed739dc1e",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11946_reactor_angle_needs_neutrino_breaking.json\"",
+      "numeric_literals": [
+        "1946",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 34,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11946_reactor_angle_needs_neutrino_breaking.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "39daaba3dd0fb83c4d7c6480020ef9c71ef91b421ccc88edd9ba3a3ac5d87cb8",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_reactor_angle_needs_neutrino_breaking.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "0e8bf54813ae09975b8ffb40c2c2eda3883ee020f6009f102f97b6ebf6841b48",
       "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass1310_1314_literal_a5_coset_correction.json\"",
       "numeric_literals": [
@@ -813272,6 +813417,34 @@
       },
       "structural_family_id": "9439457c522f26416367cb89d322a04b83e2ae819142e65f36bafaf91d9c4503",
       "structural_formula": "U,D=vacuum(e);V=mixing(e);dirs=[np.diag([#.,#.,#.]),np.diag([#.,#.,#.])];cols=[];h=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6b5d94633f70bfb9981d71edf89956072b3e3979d10f998b208c7b28b433b45f",
+      "normalized_formula": "U,s,_=np.linalg.svd(theta_null_2(Om,N=25).reshape(3,3))",
+      "numeric_literals": [
+        "25",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 56,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "U, s, _ = np.linalg.svd(theta_null_2(Om, N=25).reshape(3, 3))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3c74b71d46beeebd9676a6c79d81ef1949ade67c09137daad91035d50e682471",
+      "structural_formula": "U,s,_=np.linalg.svd(theta_null_2(Om,N=#).reshape(#,#))"
     },
     {
       "file_count": 1,
@@ -986819,6 +986992,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f8be4da8a7216ea835c6971a7b4948b70f988a1ed9afa882d291a8153db9da63",
+      "normalized_formula": "^2.Theodd-\u03bd2branchisimpossible.^Itneedsallthreechargedleptonsabout0.58odd;thefitsgive\u03c72=87and45",
+      "numeric_literals": [
+        ".58",
+        "2",
+        "5",
+        "87"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md",
+          "raw": "**2. The odd-\u03bd\u2082 branch is impossible.** It needs all three charged leptons about 0.58 odd; the fits give \u03c7\u00b2 = 87 and 45",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "54f04b97fb64aa9e004c7eb9b5a5729e3f8977228d1789261a60a97859fea88b",
+      "structural_formula": "^#.Theodd-\u03bd#branchisimpossible.^Itneedsallthreechargedleptonsabout0#odd;thefitsgive\u03c7#=#and4#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fca2922323f9bf7e8ac161752de0769569e5c420401b7d170714414b1efd112e",
       "normalized_formula": "^20blocksofsize3^,eachusingexactly^q2\u22121=3^distinctlines\u2014thesame",
       "numeric_literals": [
@@ -991996,6 +992199,34 @@
       },
       "structural_family_id": "df4c77d79a6eed2b22118fe3b08a4e0090dc8019ffc32d15d05668a25ef3fae8",
       "structural_formula": "^Whatworks.^Thetiltsolvesthefirst-generationmass*size*problem:m_d/m_s\u2248#isgeneric"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c48f88fc13840a87b94266015eee30b09d38fdc0333df5ea2d2a866911a249d2",
+      "normalized_formula": "^What\u03b813requires.^\u03bc\u2013\u03c4breakingintheneutrinosectoritself,ofsizeabout|U_e3|=0.148.Thatiscomparableto",
+      "numeric_literals": [
+        "0.148",
+        "13"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 31,
+          "path": "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md",
+          "raw": "**What \u03b8\u2081\u2083 requires.** \u03bc\u2013\u03c4 breaking in the neutrino sector itself, of size about |U_e3| = 0.148. That is comparable to",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "8b66b136e314ee29970da6ae754b096eb9ce61607ea1c951a7380dd64537ad07",
+      "structural_formula": "^What\u03b8#requires.^\u03bc\u2013\u03c4breakingintheneutrinosectoritself,ofsizeabout|U_e3|=#.Thatiscomparableto"
     },
     {
       "file_count": 1,
@@ -1093774,6 +1094005,34 @@
       },
       "structural_family_id": "7253bef7a5e0155f024b0d6e73515c3bbce497045fa7a401368aeb0f305a919c",
       "structural_formula": "branch_action='sum_ab||[Phi_a,Phi_b]-iepsilon_abcPhi_c||^#+||tsum_aPhi_a^#-I5||^#,suppliedcompactauxiliary0<=t<=#'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "aff476a8c44ed26b5c4e4603550b241d0064303378802bf8e84a20174d65ff4c",
+      "normalized_formula": "branch_b_theta13_bounded_below_one_degree=res[\"e_even_class_theta13_max_deg\"]<1.0<DATA[\"theta13_deg\"]",
+      "numeric_literals": [
+        "1.0",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 63,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "branch_b_theta13_bounded_below_one_degree=res[\"e_even_class_theta13_max_deg\"] < 1.0 < DATA[\"theta13_deg\"],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b06a6fc2e8e67e6551bb10b061eb7f8416ddb4418c1a36c4342aff7dfc8b0a47",
+      "structural_formula": "branch_b_theta1#_bounded_below_one_degree=res[\"e_even_class_theta1#_max_deg\"]<#<DATA[\"theta1#_deg\"]"
     },
     {
       "file_count": 1,
@@ -1380079,6 +1380338,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3da7ff669469a472b8eca1a51e5e580fa1d354b40b14ad76e3286e6a55f675b5",
+      "normalized_formula": "needed_breaking_comparable_to_quarks=0.5<DATA[\"Ue3\"]/DATA[\"Vcd\"]<1.0",
+      "numeric_literals": [
+        "0.5",
+        "1.0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "needed_breaking_comparable_to_quarks=0.5 < DATA[\"Ue3\"] / DATA[\"Vcd\"] < 1.0,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "71481c0f213075d42c88a258a04b438c2297e515d8a87b8dc4a15a4e48e88cc4",
+      "structural_formula": "needed_breaking_comparable_to_quarks=#<DATA[\"Ue3\"]/DATA[\"Vcd\"]<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "dafbe22b10b669d6e4bb0ffd16b6c31dd9820694a7d9fb6678c3b4f61f7055d8",
       "normalized_formula": "needed_eps=[0.116,0.151],fi_mechanism_applies=False)",
       "numeric_literals": [
@@ -1380133,6 +1380420,34 @@
       },
       "structural_family_id": "a0d33b596d511d9d55ca7beb013137a6431c3247de361ea8b241f8fc4f294315",
       "structural_formula": "needed_spin_map='Chooseaspinstructure,a4Dgeometry/tetradandSpintransport;buildDspinonsite-spinorfiberswithcovariantedgecouplings,thenverifyCliffordprincipalsymbolandcomparethefulldeterminantincludingzeromodes.Existing1#/forty_pointsSpin(#,#)matterisaninternalcarriermap,notthisspacetimeoperator.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8e21b88ab40d96bda8cd0880081517a93d8138601d3f8279826245709d8745ce",
+      "normalized_formula": "neededfortheta23)theelectron'soddcontentisatmost~0.0095overallsolutionsonbothquarkfits,so",
+      "numeric_literals": [
+        "0.0095",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "needed for theta23) the electron's odd content is at most ~0.0095 over all solutions on both quark fits, so",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "a2f0180ec45fde3ccb3ff25d04ee33e263894802a9030af2fdf8654d1a1d5da5",
+      "structural_formula": "neededfortheta2#)theelectron'soddcontentisatmost~#overallsolutionsonbothquarkfits,so"
     },
     {
       "file_count": 1,
@@ -1391739,6 +1392054,33 @@
       },
       "structural_family_id": "d4cf80c686375df93bfb971061c2f9ec1ffb6388f6ece6ae0771cd27a867ec6f",
       "structural_formula": "odd_dim_alternating_nogo='Thereisnonondegeneratealternatingbilinearformonan8#Dvectorspace,includingoverF3.AcanonicalsymplecticPauliphasespaceusesH1(F3)plusitsdual,totaldimension1#;standardfiniteHeisenberggrouphasorder3^#anditsirrepHilbertdimension3^#.The8#-dimensionalcoefficientmoduleisnotthe3^#-dimensionalHilbertspaceof8#logicalqutrits.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ccc53cae5fba303d7fd399084a5631d210a3289e9a0f5cad11ca0cc0dac91b97",
+      "normalized_formula": "odd_heaviest_is_quasi_degenerate=res[\"direct_scan\"][\"dm_ratio_min\"]>5*DATA[\"dm_ratio\"]",
+      "numeric_literals": [
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 66,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "odd_heaviest_is_quasi_degenerate=res[\"direct_scan\"][\"dm_ratio_min\"] > 5 * DATA[\"dm_ratio\"],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6e90c3cbd5179e2d1bb850226241e0c4d29f0f954cad29782bc7bf646a5ce96b",
+      "structural_formula": "odd_heaviest_is_quasi_degenerate=res[\"direct_scan\"][\"dm_ratio_min\"]>#*DATA[\"dm_ratio\"]"
     },
     {
       "file_count": 1,
@@ -1542231,6 +1542573,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a09f00631c0b363cc7bf771ec392ff271fe9516b2233fa11604b7a9514733b8c",
+      "normalized_formula": "print(json.dumps(res[\"checks\"],indent=1),res[\"all_checks_pass\"],res[\"e_even_class_theta13_max_deg\"],res[\"direct_scan\"])",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 71,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "print(json.dumps(res[\"checks\"], indent=1), res[\"all_checks_pass\"], res[\"e_even_class_theta13_max_deg\"], res[\"direct_scan\"])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ad08c4ceb5f3777f8cb8a0aeb0383be91e1204daf1a5c6c56803cecc9e7eeccb",
+      "structural_formula": "print(json.dumps(res[\"checks\"],indent=#),res[\"all_checks_pass\"],res[\"e_even_class_theta1#_max_deg\"],res[\"direct_scan\"])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8f00d4dd3e3ab03ff9b7072ba9b14810a4386762d2919be9fcce8a813cedd4dc",
       "normalized_formula": "print(json.dumps(res[\"checks\"],indent=1),res[\"all_checks_pass\"],res[\"kappa_quantiles\"],res[\"m3_meV_quantiles\"])",
       "numeric_literals": [
@@ -1570629,6 +1570999,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0b710a6b1a3e3ee1761cc0af3d9b2678d3a6e08cb8342c0dc87a7f6335a09e6e",
+      "normalized_formula": "quasi-degenerately:Dm21/Dm31>=0.26there,against0.0296measured.(AseesawwithdifferentDiracandMajoranahomes",
+      "numeric_literals": [
+        ".0296",
+        "0.26",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "quasi-degenerately: Dm21/Dm31 >= 0.26 there, against 0.0296 measured. (A seesaw with different Dirac and Majorana homes",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "4dbd224ba1afe02018d8ebb666fdbc2e1ac1c34d7ca6397b11aa7f78fe214ef4",
+      "structural_formula": "quasi-degenerately:Dm2#/Dm3#>=#there,against0#measured.(AseesawwithdifferentDiracandMajoranahomes"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3d730ddbe7a3ff151158175596a67f72769f88455aaedb8d76ba12d46807213d",
       "normalized_formula": "query='T_P=PtensorX+(I-P)tensorIforrank-onePontheququart.Itisasupplieddata/ancillacoupling,notimpliedbythe40-raygraph.'",
       "numeric_literals": [
@@ -1581475,6 +1581874,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a9cb263f86410d005685ed4e4dbd44f4a5149741b847342d7fb4a6a7aac25a75",
+      "normalized_formula": "reactoranglerequiresmu-taubreakingintheneutrinosectoritself,ofsize||P_odd||_nu~|U_e3|=0.148--comparable",
+      "numeric_literals": [
+        "0.148"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "reactor angle requires mu-tau breaking in the neutrino sector itself, of size ||P_odd||_nu ~ |U_e3| = 0.148 -- comparable",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "787f2fb5ccb8737ce5178a2691240bd796013a0ee394529930374a54748eb1bb",
+      "structural_formula": "reactoranglerequiresmu-taubreakingintheneutrinosectoritself,ofsize||P_odd||_nu~|U_e3|=#--comparable"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e2069b33a0e3ce0f2ab3aac1c7dc159be3d5226797cb7acf23160030c8728fde",
       "normalized_formula": "reading,nottwohoursofcompute.Costofthewholearc:~15passes",
       "numeric_literals": [
@@ -1588127,6 +1588553,35 @@
       },
       "structural_family_id": "196c3644455fe0a2c9225248e7b6d97a7a674ce7a1e808fef9a27ef5124da088",
       "structural_formula": "res[\"distinct_roots\"]=len({tuple(np.round(a,#))forainalpha})"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "873815d616ef7b616127594a638db8b5141dc6e6c3f9fe51746599ec14cdf750",
+      "normalized_formula": "res[\"e_even_class_theta13_max_deg\"]=max(f[\"e_even_class\"][\"theta13_deg\"][1]forfinc45[\"fits\"].values())",
+      "numeric_literals": [
+        "1",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "res[\"e_even_class_theta13_max_deg\"] = max(f[\"e_even_class\"][\"theta13_deg\"][1] for f in c45[\"fits\"].values())",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3140265e992325a5ebbb738ecb29da0e4429b4c3bbe57075190fffb989be8bc7",
+      "structural_formula": "res[\"e_even_class_theta1#_max_deg\"]=max(f[\"e_even_class\"][\"theta1#_deg\"][#]forfinc4#[\"fits\"].values())"
     },
     {
       "file_count": 1,
@@ -1673961,6 +1674416,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "165e86ef82e794494987e69b6d604c70f4ea9849ac76a07e3ab1ef3db9738179",
+      "normalized_formula": "thedown-sectorbreakingbehindtheCabibboangle(|V_cd|=0.221,Pass11944).Bothmixingmatricesthenmeasureone",
+      "numeric_literals": [
+        "0.221",
+        "1944"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/PASS11946_REACTOR_ANGLE_NEEDS_NEUTRINO_BREAKING.md",
+          "raw": "the down-sector breaking behind the Cabibbo angle (|V_cd| = 0.221, Pass 11944). Both mixing matrices then measure one",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e544a11e5279d1b3445d2a136e630522cf81262e48a1934aeffda9340c769543",
+      "structural_formula": "thedown-sectorbreakingbehindtheCabibboangle(|V_cd|=#,Pass1#).Bothmixingmatricesthenmeasureone"
+    },
+    {
+      "file_count": 1,
       "formula_id": "887d0b5eb38707beeda66bce54af53ee17ac609e31b330d497ed69fe96c3111d",
       "normalized_formula": "theelectricchargeQ=T_3+YofeveryfermionintheE627/oneStandardModelgeneration,all",
       "numeric_literals": [
@@ -1680803,6 +1681286,35 @@
       },
       "structural_family_id": "8c7ae6ccd88e3dd21e65e21f015b67139707a07ccb367f164c303ed7a9e6e763",
       "structural_formula": "theta1#/theta2#->(d3-d2)/(d3-d1)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c17ed33e530594d07190cc48c93e90f7498754a94b68e1f3d144a35febf77d66",
+      "normalized_formula": "theta13<=0.54deg,againstthemeasured8.6deg",
+      "numeric_literals": [
+        ".6",
+        "0.54",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "theta13 <= 0.54 deg, against the measured 8.6 deg.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "08ef669e21801c183224e71659ed45f0dbbe5642e3681181f51c4b4f93fd4c94",
+      "structural_formula": "theta1#<=#deg,againstthemeasured8#deg"
     },
     {
       "file_count": 2,
@@ -1692475,6 +1692987,34 @@
       },
       "structural_family_id": "a83a8cf87b9e23434b808e73b638f8ad13a286510a0f23874a60e75756bd5af8",
       "structural_formula": "totals={\"R_ninth_root_gates\":#*#,\"SUM_two_qutrit_Clifford_gates\":#*#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6d91332a35859f177ca0adaa80510d32f06c360f9786d295a8c5f1e254085fb7",
+      "normalized_formula": "tothedown-sectorbreakingthatgivestheCabibboangle(|V_cd|=0.221,Pass11944).Theminimalsourcecompatiblewith",
+      "numeric_literals": [
+        "0.221",
+        "1944"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_pass11946_reactor_angle_needs_neutrino_breaking.py",
+          "raw": "to the down-sector breaking that gives the Cabibbo angle (|V_cd| = 0.221, Pass 11944). The minimal source compatible with",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "97c776fa9b0e0f635ade45127a18c9a0f945cbc38d6ec044fcac730426f1a53e",
+      "structural_formula": "tothedown-sectorbreakingthatgivestheCabibboangle(|V_cd|=#,Pass1#).Theminimalsourcecompatiblewith"
     },
     {
       "file_count": 1,
@@ -1763056,6 +1763596,60 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b1f0cdcced57eff6f95d1589dee86576ac2ac8aa21e0994586d7f75b41bc6685",
+      "normalized_formula": "~0.15",
+      "numeric_literals": [
+        "0.15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 581,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "\\sim0.15",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fc3621d35f6ee3ee6c40adc661d2bbcb25f6ddecbc776d62a37cd44ea15e3938",
+      "structural_formula": "~#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0e86584990a3a543dc56c439745a2a7e0dd2c519acef680ae849e7db3080f3f2",
+      "normalized_formula": "~0.22",
+      "numeric_literals": [
+        "0.22"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 581,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "\\sim0.22",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fc3621d35f6ee3ee6c40adc661d2bbcb25f6ddecbc776d62a37cd44ea15e3938",
+      "structural_formula": "~#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "867c2208c9e741038059178713c4ef1cc0aaa5dfe50fcb9f33914aee7357254d",
       "normalized_formula": "~0.26",
       "numeric_literals": [
@@ -1778802,9 +1779396,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-12T21:31:05-04:00",
+  "frozen_at": "2026-10-12T21:42:31-04:00",
   "pass": 398,
-  "repository_head": "11d8c79cd171bbb2800b95066094979c1d3bc253",
+  "repository_head": "d49f4b1b1eaf2c06a80ba7e74ed120522bbc7550",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1837179,6 +1837773,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b9c018682a8983eba0e57d198507992d148c0f9253826f0403a583d2f0d08fbe",
       "structural_formula": "#.Bracket[V_g1,V_g2]->V_{g1+g2}withcoeffomega(g1,g2)"
+    },
+    {
+      "exact_formula_ids": [
+        "61807b66ad6b5e7a8c4a2c7df5eddd6ecfa1cd84423cb4a67d2c9c97a3ef9cac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "71dfb389210c62a1ccadc03c7fc9cf4bcd36fa315ede7a0281b4966b86403ca8",
+      "structural_formula": "#.Branch(b),oddnu3,failsontheta1#.Withnu3odd,|U_e3|=||P_odde||exactly.Inthee-evenclass(theclass"
     },
     {
       "exact_formula_ids": [
@@ -1897107,6 +1897709,14 @@
     },
     {
       "exact_formula_ids": [
+        "5428cc789afb24180037cc9159fbd7fa3aba6d08294fed39c3bffebee29c73e8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b1d4834262805ca8384cd0e651a7b933c779fa99331cf0f4d8a7efdaba343f49",
+      "structural_formula": "*With\u03bd#oddanda\u03bc\u2013\u03c4-cleanneutrinosector,|U_e3|=\u2016P_odde\u2016exactly(Pass1#)"
+    },
+    {
+      "exact_formula_ids": [
         "70d84a0544da4a98afa00665d748f44dfc2860487bad4642f28c886a9a3eb94b"
       ],
       "exact_member_count": 1,
@@ -1928664,6 +1929274,14 @@
     },
     {
       "exact_formula_ids": [
+        "85104d9bfae26d443587f6ddcdd0c91d0d868c1e258c85cb6b85c4105978c1ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "eec54109acba830e99b190a57ba3d2545d136c0c3b5d20f273f30663b6465d52",
+      "structural_formula": "C4#=ROOT/\"data\"/\"w3#_pass1#_lepton_mu_tau_classes.json\""
+    },
+    {
+      "exact_formula_ids": [
         "e482cd5dc820d1e239306a63443ef507eda750a83e4c0b596c816b5914d7f83d"
       ],
       "exact_member_count": 1,
@@ -1932988,6 +1933606,14 @@
       "exact_member_count": 1,
       "structural_family_id": "bada89b21c0502b84d86855c4fd61ca43d0ddb1f3c8b4e1f4772be4e443d9f70",
       "structural_formula": "DATA=ROOT/\"data\"/\"w3#_pass1#_singlet_vev_draws.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "27be426ec09d6989c39127c8e3558a1f44b0d7c8c68d3638d21c52938d88b5bb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "205444ea7f2069f1dd90a79d43e285523b2e5d6ed6dfe45ddabe6cacd60daccf",
+      "structural_formula": "DATA=dict(Ue3=#,theta1#_deg=#,dm_ratio=#/#,Vcd=#)"
     },
     {
       "exact_formula_ids": [
@@ -1967410,6 +1968036,14 @@
     },
     {
       "exact_formula_ids": [
+        "3664e971697eea35bbe8fe27ed88f0e5c275e157d9f2b99203f57e0ed739dc1e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "39daaba3dd0fb83c4d7c6480020ef9c71ef91b421ccc88edd9ba3a3ac5d87cb8",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_reactor_angle_needs_neutrino_breaking.json\""
+    },
+    {
+      "exact_formula_ids": [
         "7ff16650f582ebf0eb5a9e7065686249e86062d30d50450834357e1cdeabac3b"
       ],
       "exact_member_count": 1,
@@ -1998247,6 +1998881,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9439457c522f26416367cb89d322a04b83e2ae819142e65f36bafaf91d9c4503",
       "structural_formula": "U,D=vacuum(e);V=mixing(e);dirs=[np.diag([#.,#.,#.]),np.diag([#.,#.,#.])];cols=[];h=#"
+    },
+    {
+      "exact_formula_ids": [
+        "6b5d94633f70bfb9981d71edf89956072b3e3979d10f998b208c7b28b433b45f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3c74b71d46beeebd9676a6c79d81ef1949ade67c09137daad91035d50e682471",
+      "structural_formula": "U,s,_=np.linalg.svd(theta_null_2(Om,N=#).reshape(#,#))"
     },
     {
       "exact_formula_ids": [
@@ -2042005,6 +2042647,14 @@
     },
     {
       "exact_formula_ids": [
+        "f8be4da8a7216ea835c6971a7b4948b70f988a1ed9afa882d291a8153db9da63"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "54f04b97fb64aa9e004c7eb9b5a5729e3f8977228d1789261a60a97859fea88b",
+      "structural_formula": "^#.Theodd-\u03bd#branchisimpossible.^Itneedsallthreechargedleptonsabout0#odd;thefitsgive\u03c7#=#and4#"
+    },
+    {
+      "exact_formula_ids": [
         "f778cc24127ff1c9810c9c3e54300ad1de9088764b64f685ad325b9d43b39fd4"
       ],
       "exact_member_count": 1,
@@ -2043458,6 +2044108,14 @@
       "exact_member_count": 1,
       "structural_family_id": "df4c77d79a6eed2b22118fe3b08a4e0090dc8019ffc32d15d05668a25ef3fae8",
       "structural_formula": "^Whatworks.^Thetiltsolvesthefirst-generationmass*size*problem:m_d/m_s\u2248#isgeneric"
+    },
+    {
+      "exact_formula_ids": [
+        "c48f88fc13840a87b94266015eee30b09d38fdc0333df5ea2d2a866911a249d2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8b66b136e314ee29970da6ae754b096eb9ce61607ea1c951a7380dd64537ad07",
+      "structural_formula": "^What\u03b8#requires.^\u03bc\u2013\u03c4breakingintheneutrinosectoritself,ofsizeabout|U_e3|=#.Thatiscomparableto"
     },
     {
       "exact_formula_ids": [
@@ -2071133,6 +2071791,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7253bef7a5e0155f024b0d6e73515c3bbce497045fa7a401368aeb0f305a919c",
       "structural_formula": "branch_action='sum_ab||[Phi_a,Phi_b]-iepsilon_abcPhi_c||^#+||tsum_aPhi_a^#-I5||^#,suppliedcompactauxiliary0<=t<=#'"
+    },
+    {
+      "exact_formula_ids": [
+        "aff476a8c44ed26b5c4e4603550b241d0064303378802bf8e84a20174d65ff4c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b06a6fc2e8e67e6551bb10b061eb7f8416ddb4418c1a36c4342aff7dfc8b0a47",
+      "structural_formula": "branch_b_theta1#_bounded_below_one_degree=res[\"e_even_class_theta1#_max_deg\"]<#<DATA[\"theta1#_deg\"]"
     },
     {
       "exact_formula_ids": [
@@ -2148680,6 +2149346,14 @@
     },
     {
       "exact_formula_ids": [
+        "3da7ff669469a472b8eca1a51e5e580fa1d354b40b14ad76e3286e6a55f675b5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "71481c0f213075d42c88a258a04b438c2297e515d8a87b8dc4a15a4e48e88cc4",
+      "structural_formula": "needed_breaking_comparable_to_quarks=#<DATA[\"Ue3\"]/DATA[\"Vcd\"]<#"
+    },
+    {
+      "exact_formula_ids": [
         "dafbe22b10b669d6e4bb0ffd16b6c31dd9820694a7d9fb6678c3b4f61f7055d8"
       ],
       "exact_member_count": 1,
@@ -2148693,6 +2149367,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a0d33b596d511d9d55ca7beb013137a6431c3247de361ea8b241f8fc4f294315",
       "structural_formula": "needed_spin_map='Chooseaspinstructure,a4Dgeometry/tetradandSpintransport;buildDspinonsite-spinorfiberswithcovariantedgecouplings,thenverifyCliffordprincipalsymbolandcomparethefulldeterminantincludingzeromodes.Existing1#/forty_pointsSpin(#,#)matterisaninternalcarriermap,notthisspacetimeoperator.'"
+    },
+    {
+      "exact_formula_ids": [
+        "8e21b88ab40d96bda8cd0880081517a93d8138601d3f8279826245709d8745ce"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a2f0180ec45fde3ccb3ff25d04ee33e263894802a9030af2fdf8654d1a1d5da5",
+      "structural_formula": "neededfortheta2#)theelectron'soddcontentisatmost~#overallsolutionsonbothquarkfits,so"
     },
     {
       "exact_formula_ids": [
@@ -2151908,6 +2152590,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d4cf80c686375df93bfb971061c2f9ec1ffb6388f6ece6ae0771cd27a867ec6f",
       "structural_formula": "odd_dim_alternating_nogo='Thereisnonondegeneratealternatingbilinearformonan8#Dvectorspace,includingoverF3.AcanonicalsymplecticPauliphasespaceusesH1(F3)plusitsdual,totaldimension1#;standardfiniteHeisenberggrouphasorder3^#anditsirrepHilbertdimension3^#.The8#-dimensionalcoefficientmoduleisnotthe3^#-dimensionalHilbertspaceof8#logicalqutrits.'"
+    },
+    {
+      "exact_formula_ids": [
+        "ccc53cae5fba303d7fd399084a5631d210a3289e9a0f5cad11ca0cc0dac91b97"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6e90c3cbd5179e2d1bb850226241e0c4d29f0f954cad29782bc7bf646a5ce96b",
+      "structural_formula": "odd_heaviest_is_quasi_degenerate=res[\"direct_scan\"][\"dm_ratio_min\"]>#*DATA[\"dm_ratio\"]"
     },
     {
       "exact_formula_ids": [
@@ -2193415,6 +2194105,14 @@
     },
     {
       "exact_formula_ids": [
+        "a09f00631c0b363cc7bf771ec392ff271fe9516b2233fa11604b7a9514733b8c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ad08c4ceb5f3777f8cb8a0aeb0383be91e1204daf1a5c6c56803cecc9e7eeccb",
+      "structural_formula": "print(json.dumps(res[\"checks\"],indent=#),res[\"all_checks_pass\"],res[\"e_even_class_theta1#_max_deg\"],res[\"direct_scan\"])"
+    },
+    {
+      "exact_formula_ids": [
         "8f00d4dd3e3ab03ff9b7072ba9b14810a4386762d2919be9fcce8a813cedd4dc"
       ],
       "exact_member_count": 1,
@@ -2199072,6 +2199770,14 @@
     },
     {
       "exact_formula_ids": [
+        "0b710a6b1a3e3ee1761cc0af3d9b2678d3a6e08cb8342c0dc87a7f6335a09e6e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4dbd224ba1afe02018d8ebb666fdbc2e1ac1c34d7ca6397b11aa7f78fe214ef4",
+      "structural_formula": "quasi-degenerately:Dm2#/Dm3#>=#there,against0#measured.(AseesawwithdifferentDiracandMajoranahomes"
+    },
+    {
+      "exact_formula_ids": [
         "3d730ddbe7a3ff151158175596a67f72769f88455aaedb8d76ba12d46807213d"
       ],
       "exact_member_count": 1,
@@ -2201782,6 +2202488,14 @@
     },
     {
       "exact_formula_ids": [
+        "a9cb263f86410d005685ed4e4dbd44f4a5149741b847342d7fb4a6a7aac25a75"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "787f2fb5ccb8737ce5178a2691240bd796013a0ee394529930374a54748eb1bb",
+      "structural_formula": "reactoranglerequiresmu-taubreakingintheneutrinosectoritself,ofsize||P_odd||_nu~|U_e3|=#--comparable"
+    },
+    {
+      "exact_formula_ids": [
         "e2069b33a0e3ce0f2ab3aac1c7dc159be3d5226797cb7acf23160030c8728fde"
       ],
       "exact_member_count": 1,
@@ -2203667,6 +2204381,14 @@
       "exact_member_count": 1,
       "structural_family_id": "196c3644455fe0a2c9225248e7b6d97a7a674ce7a1e808fef9a27ef5124da088",
       "structural_formula": "res[\"distinct_roots\"]=len({tuple(np.round(a,#))forainalpha})"
+    },
+    {
+      "exact_formula_ids": [
+        "873815d616ef7b616127594a638db8b5141dc6e6c3f9fe51746599ec14cdf750"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3140265e992325a5ebbb738ecb29da0e4429b4c3bbe57075190fffb989be8bc7",
+      "structural_formula": "res[\"e_even_class_theta1#_max_deg\"]=max(f[\"e_even_class\"][\"theta1#_deg\"][#]forfinc4#[\"fits\"].values())"
     },
     {
       "exact_formula_ids": [
@@ -2226811,6 +2227533,14 @@
     },
     {
       "exact_formula_ids": [
+        "165e86ef82e794494987e69b6d604c70f4ea9849ac76a07e3ab1ef3db9738179"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e544a11e5279d1b3445d2a136e630522cf81262e48a1934aeffda9340c769543",
+      "structural_formula": "thedown-sectorbreakingbehindtheCabibboangle(|V_cd|=#,Pass1#).Bothmixingmatricesthenmeasureone"
+    },
+    {
+      "exact_formula_ids": [
         "887d0b5eb38707beeda66bce54af53ee17ac609e31b330d497ed69fe96c3111d"
       ],
       "exact_member_count": 1,
@@ -2228641,6 +2229371,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8c7ae6ccd88e3dd21e65e21f015b67139707a07ccb367f164c303ed7a9e6e763",
       "structural_formula": "theta1#/theta2#->(d3-d2)/(d3-d1)"
+    },
+    {
+      "exact_formula_ids": [
+        "c17ed33e530594d07190cc48c93e90f7498754a94b68e1f3d144a35febf77d66"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "08ef669e21801c183224e71659ed45f0dbbe5642e3681181f51c4b4f93fd4c94",
+      "structural_formula": "theta1#<=#deg,againstthemeasured8#deg"
     },
     {
       "exact_formula_ids": [
@@ -2231880,6 +2232618,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a83a8cf87b9e23434b808e73b638f8ad13a286510a0f23874a60e75756bd5af8",
       "structural_formula": "totals={\"R_ninth_root_gates\":#*#,\"SUM_two_qutrit_Clifford_gates\":#*#"
+    },
+    {
+      "exact_formula_ids": [
+        "6d91332a35859f177ca0adaa80510d32f06c360f9786d295a8c5f1e254085fb7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "97c776fa9b0e0f635ade45127a18c9a0f945cbc38d6ec044fcac730426f1a53e",
+      "structural_formula": "tothedown-sectorbreakingthatgivestheCabibboangle(|V_cd|=#,Pass1#).Theminimalsourcecompatiblewith"
     },
     {
       "exact_formula_ids": [
@@ -2250612,6 +2251358,8 @@
         "7f3190988426f9d8908ec04514c13bbe92afea936377b4ab02bf432144f602b2",
         "8381e0214b0f9a3c3275cb52651b71b5939579010f96115c91f32a78c894db07",
         "58d8a4a72df03d7179bfa270d1c6c4838303a71c237cc94344cb618b21ef1ee5",
+        "b1f0cdcced57eff6f95d1589dee86576ac2ac8aa21e0994586d7f75b41bc6685",
+        "0e86584990a3a543dc56c439745a2a7e0dd2c519acef680ae849e7db3080f3f2",
         "867c2208c9e741038059178713c4ef1cc0aaa5dfe50fcb9f33914aee7357254d",
         "7d44cdd25c5893285e3e85141d6e9e11e837ee33ddfa3f8878a2a57f553b2ef0",
         "cdd314ef1007d2de8fcb2d84ced426909af8fe85d2044583b818e75764bb4faf",
@@ -2250664,7 +2251412,7 @@
         "5af1e07127e23780b027473fb2b7724521dbfead8c2b1ae06aec07071ef107d0",
         "bb153ebbd9bf8a785cd725ccf6279e76dcb17929b8104a90f6f83be3d02598bb"
       ],
-      "exact_member_count": 54,
+      "exact_member_count": 56,
       "structural_family_id": "fc3621d35f6ee3ee6c40adc661d2bbcb25f6ddecbc776d62a37cd44ea15e3938",
       "structural_formula": "~#"
     },
@@ -2254141,20 +2254889,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87045189,
-    "exact_formula_families": 60828,
-    "files_scanned": 11929,
-    "formula_occurrences": 66797,
+    "bytes_scanned": 87053184,
+    "exact_formula_families": 60849,
+    "files_scanned": 11931,
+    "formula_occurrences": 66818,
     "status_occurrences": {
-      "certified_or_theorem": 4864,
+      "certified_or_theorem": 4865,
       "killed_or_retracted": 1593,
       "open_or_conditional": 2165,
       "preregistered": 32,
-      "retrospective_fit": 5190,
-      "unclassified": 52953
+      "retrospective_fit": 5197,
+      "unclassified": 52966
     },
-    "structural_families": 59209
+    "structural_families": 59228
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "6c25b630c3dee3b767f91c519d441985aeeef1b89cfddbda276e6b4165bad81f"
+  "universe_sha256": "dbde9c8a71c626682ce603d87eb08a10f93751c706002ca7d808943d632fcfae"
 }
