@@ -1,0 +1,129 @@
+{
+  "status": "PASS_TOE61_STAGGERED_MASS_ALL_TEMPERATURE_FLUX_THEOREM",
+  "numeric_test_count": 20,
+  "samples": [
+    {
+      "mass": 0.0,
+      "beta": 0.2,
+      "three_pi_minus_trivial": -2.252159276849852e-06,
+      "three_pi_minus_second_best": -7.058189339659293e-07
+    },
+    {
+      "mass": 0.0,
+      "beta": 1.0,
+      "three_pi_minus_trivial": -0.02905238972577706,
+      "three_pi_minus_second_best": -0.009103740069065225
+    },
+    {
+      "mass": 0.0,
+      "beta": 4.0,
+      "three_pi_minus_trivial": -0.8167936789520098,
+      "three_pi_minus_second_best": -0.25546594315201787
+    },
+    {
+      "mass": 0.0,
+      "beta": 15.0,
+      "three_pi_minus_trivial": -1.5247724003952499,
+      "three_pi_minus_second_best": -0.48594526629442214
+    },
+    {
+      "mass": 0.15,
+      "beta": 0.2,
+      "three_pi_minus_trivial": -2.2513602857543447e-06,
+      "three_pi_minus_second_best": -7.055685387058475e-07
+    },
+    {
+      "mass": 0.15,
+      "beta": 1.0,
+      "three_pi_minus_trivial": -0.02887967710783812,
+      "three_pi_minus_second_best": -0.009049657416596801
+    },
+    {
+      "mass": 0.15,
+      "beta": 4.0,
+      "three_pi_minus_trivial": -0.7901491219666781,
+      "three_pi_minus_second_best": -0.24708531517796928
+    },
+    {
+      "mass": 0.15,
+      "beta": 15.0,
+      "three_pi_minus_trivial": -1.3547704997000096,
+      "three_pi_minus_second_best": -0.43022318304220164
+    },
+    {
+      "mass": 0.8,
+      "beta": 0.2,
+      "three_pi_minus_trivial": -2.2295690769169596e-06,
+      "three_pi_minus_second_best": -6.987388019297214e-07
+    },
+    {
+      "mass": 0.8,
+      "beta": 1.0,
+      "three_pi_minus_trivial": -0.024611640526075007,
+      "three_pi_minus_second_best": -0.007713066153598902
+    },
+    {
+      "mass": 0.8,
+      "beta": 4.0,
+      "three_pi_minus_trivial": -0.3853542520069482,
+      "three_pi_minus_second_best": -0.12027972804463616
+    },
+    {
+      "mass": 0.8,
+      "beta": 15.0,
+      "three_pi_minus_trivial": -0.43051899498053103,
+      "three_pi_minus_second_best": -0.13449099418002675
+    },
+    {
+      "mass": 2.0,
+      "beta": 0.2,
+      "three_pi_minus_trivial": -2.115509289524198e-06,
+      "three_pi_minus_second_best": -6.629905442423478e-07
+    },
+    {
+      "mass": 2.0,
+      "beta": 1.0,
+      "three_pi_minus_trivial": -0.01144631710896249,
+      "three_pi_minus_second_best": -0.0035885972424694046
+    },
+    {
+      "mass": 2.0,
+      "beta": 4.0,
+      "three_pi_minus_trivial": -0.05213478150896833,
+      "three_pi_minus_second_best": -0.016311863278303917
+    },
+    {
+      "mass": 2.0,
+      "beta": 15.0,
+      "three_pi_minus_trivial": -0.052365494726473116,
+      "three_pi_minus_second_best": -0.01638367869067281
+    },
+    {
+      "mass": 10.0,
+      "beta": 0.2,
+      "three_pi_minus_trivial": -5.960810085525736e-07,
+      "three_pi_minus_second_best": -1.8679531876841793e-07
+    },
+    {
+      "mass": 10.0,
+      "beta": 1.0,
+      "three_pi_minus_trivial": -1.1458701010269579e-05,
+      "three_pi_minus_second_best": -3.5920054415328195e-06
+    },
+    {
+      "mass": 10.0,
+      "beta": 4.0,
+      "three_pi_minus_trivial": -1.1555114951988799e-05,
+      "three_pi_minus_second_best": -3.6222413086761662e-06
+    },
+    {
+      "mass": 10.0,
+      "beta": 15.0,
+      "three_pi_minus_trivial": -1.1555114951988799e-05,
+      "three_pi_minus_second_best": -3.622241365519585e-06
+    }
+  ],
+  "conditional_exact_theorem": "H_{c,m}=[[mI,-B_c],[-B_c^T,-mI]] has eigenvalues \u00b1sqrt(\u03c3_j(B_c)^2+m\u00b2). For every t>=0, det(I+t(K_c+m\u00b2 I))=(1+m\u00b2t)^40 det(I+t/(1+m\u00b2t) K_c). Since TOE61 proves exact nonnegative coefficientwise determinant differences and three-pi dominates every other Z2 corner, the dominance survives ANY real staggered mass m and every beta>0 at chemical potential0 via cosh Weierstrass product.",
+  "physics_limits": "One uniform sublattice-staggered spinless mass and half-filled fixed finite graph. Not general onsite potentials, chiral Standard Model, physical Dirac mass generation, interacting fermions, continuous U1 minimization, thermal gauge backreaction, or observed CP.",
+  "prior": "Mass deformation via H\u00b2=K+m\u00b2 and Weierstrass product is elementary standard. The W33-specific coefficient certificates are TOE61."
+}

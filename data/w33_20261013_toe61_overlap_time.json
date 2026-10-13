@@ -1,0 +1,107 @@
+{
+  "status": "PASS_TOE61_STATIC_OVERLAP_TIME_REFLECTION_BOUNDARY",
+  "actual_W33_spinor_band_count": 320,
+  "sampled_random_gauge_phase_bound": 0.16,
+  "model": "Existing Pass11977 Hermitian Euclidean Wilson overlap kernel Q(k,omega) on 80 site/4 spinor graph, supplied mass and static site gauge phases.",
+  "rows": [
+    {
+      "Wilson_mass": 0.5,
+      "omega": 0.0,
+      "Hermitian_gap": 0.5333342710781372,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 0.5,
+      "omega": 0.3,
+      "Hermitian_gap": 0.5843753949248333,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 0.5,
+      "omega": 0.85,
+      "Hermitian_gap": 0.8472527384034313,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 0.5,
+      "omega": 1.57,
+      "Hermitian_gap": 1.2460098123684378,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 0.5,
+      "omega": 2.4,
+      "Hermitian_gap": 1.5748561483553603,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 0.5,
+      "omega": 3.141592653589793,
+      "Hermitian_gap": 1.6758935099415073,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 3.0,
+      "omega": 0.0,
+      "Hermitian_gap": 2.875344946717166,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 3.0,
+      "omega": 0.3,
+      "Hermitian_gap": 2.8468047996068733,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 3.0,
+      "omega": 0.85,
+      "Hermitian_gap": 2.649989977607255,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 3.0,
+      "omega": 1.57,
+      "Hermitian_gap": 2.1441487947549205,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 3.0,
+      "omega": 2.4,
+      "Hermitian_gap": 1.366530390612336,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    },
+    {
+      "Wilson_mass": 3.0,
+      "omega": 3.141592653589793,
+      "Hermitian_gap": 0.9450883935819991,
+      "local_signature": 0,
+      "local_overlap_index": 0,
+      "reflection_pairing_error": 0.0
+    }
+  ],
+  "exact_symmetry_test": "For static spatial link phases R Q(k,omega) R=-Q(k,-omega) where R=i gamma4 gamma5. Index signature at \u00b1omega is opposite. At temporal corners0 and\u03c0, self-pairing forces exact zero if gapped. A connected gapped fixed-spatial-phase omega sweep cannot generate a nonzero pointwise signature without gap closing. This is not a statement that all topologically nontrivial 4D overlap fields have zero index.",
+  "physics_boundary": "These are matrix signatures in a family parameterized by Euclidean frequency, NOT a Dirac index of a full discretized physical 4D gauge bundle, chiral gauge measure, SM generations, gravitational anomaly, or quantum TOE. No temporal gauge links on a 4-cell spatial completion were built.",
+  "prior": "Pass11977 already proves this reflection identity and static corner zero index; new mass/time scans are only regression and acceptance tests."
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_TOE61_FULL_DECLARED_GAUSS_OPERATOR_AUDIT",
+  "full_native_sites": 80,
+  "native_links": 160,
+  "chord_integer_flux_coordinates": 81,
+  "declared_wilson_rows": 1385,
+  "nonidentity_native_wilson_flux_shifts": 1382,
+  "exact_identity_rows": [
+    1382,
+    1383,
+    1384
+  ],
+  "pairwise_unique_active_plaquette_shifts_up_to_sign": 1382,
+  "tested_nonzero_fermion_hops": 160,
+  "exact_gauss_invariance_of_all_plaquette_shifts": true,
+  "exact_local_gauss_invariance_of_all_160_fermion_hops": true,
+  "fermion_hopping_wilson_commutation_checks_pass": true,
+  "interpretation": "The three formally added TOE38 deck commutator 2-cells have ZERO signed native 160-link chain at k=0. Hence the Pass11969 full finite-graph Hamiltonian lists 1385 plaquette rows but only 1382 distinct NONTRIVIAL flux-shift operators; the last three rows are identity with zero magnetic excitation for the standard (1\u2212cos P\u00b7A) term. In a nonzero Bloch representation they may carry additional holonomy structure; static k0 identities must not be counted as interacting plaquettes.",
+  "physical_limits": "Exact audit of operator actions at one checkerboard Fock state (all 160 legal hops) and all plaquette moves, not diagonalization of full 2^80 fermionic Hilbert, charge screening, a chiral Weyl theory, dynamical Lorentz continuum or a physical experimental prediction.",
+  "prior": "TOE38 constructed 1382 local octagons plus 3 formal commutators, and Pass11969 constructed the full Gauss compiler. This audits their physical active operator count, without claiming the earlier constructs as new."
+}

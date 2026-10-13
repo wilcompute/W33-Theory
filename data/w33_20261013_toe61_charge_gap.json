@@ -1,0 +1,193 @@
+{
+  "status": "PASS_TOE61_SELECTED_THREE_LOOP_CHARGED_GAP_BOUNDS",
+  "native_3_loop_Gram": [
+    [
+      8,
+      -4,
+      -4
+    ],
+    [
+      -4,
+      8,
+      4
+    ],
+    [
+      -4,
+      4,
+      8
+    ]
+  ],
+  "charged_reference_edge": 0,
+  "charge_overlap_vector": [
+    1,
+    0,
+    0
+  ],
+  "shifted_quadratic_vector": [
+    0.1875,
+    0.0625,
+    0.0625
+  ],
+  "orthogonal_projection_remainder_norm_sq": 0.8125,
+  "cases": [
+    {
+      "g": 0.7,
+      "neutral": [
+        {
+          "N": 4,
+          "states": 729,
+          "charged": false,
+          "ritz_E": 3.6049651293795284,
+          "ritz_gap": 1.7818495483650905,
+          "ground_eigenvector_residual": 5.3809130350969365e-14,
+          "outside_electric_bound": 24.49999999999998,
+          "approximate_Schur_lower": 3.455470358094532,
+          "width": 0.14949477128499655
+        },
+        {
+          "N": 5,
+          "states": 1331,
+          "charged": false,
+          "ritz_E": 3.6049651257061903,
+          "ritz_gap": 1.78184952216681,
+          "ground_eigenvector_residual": 8.23741241873009e-14,
+          "outside_electric_bound": 35.27999999999997,
+          "approximate_Schur_lower": 3.50634807693664,
+          "width": 0.09861704876955013
+        },
+        {
+          "N": 6,
+          "states": 2197,
+          "charged": false,
+          "ritz_E": 3.6049651257045374,
+          "ritz_gap": 1.7818495221531196,
+          "ground_eigenvector_residual": 1.403643851103579e-13,
+          "outside_electric_bound": 48.01999999999996,
+          "approximate_Schur_lower": 3.534635372101592,
+          "width": 0.07032975360294547
+        }
+      ],
+      "charged": [
+        {
+          "N": 4,
+          "states": 729,
+          "charged": true,
+          "ritz_E": 3.811976517435811,
+          "ritz_gap": 1.6814427117261865,
+          "ground_eigenvector_residual": 6.357095799835413e-14,
+          "outside_electric_bound": 22.709739190907296,
+          "approximate_Schur_lower": 3.6466818996046513,
+          "width": 0.16529461783115984
+        },
+        {
+          "N": 5,
+          "states": 1331,
+          "charged": true,
+          "ritz_E": 3.811976512159075,
+          "ritz_gap": 1.681442668037079,
+          "ground_eigenvector_residual": 5.880102342382592e-14,
+          "outside_electric_bound": 33.08345265408875,
+          "approximate_Schur_lower": 3.7052617553142397,
+          "width": 0.10671475684483545
+        },
+        {
+          "N": 6,
+          "states": 2197,
+          "charged": true,
+          "ritz_E": 3.8119765121565523,
+          "ritz_gap": 1.681442668011428,
+          "ground_eigenvector_residual": 9.774508342063686e-14,
+          "outside_electric_bound": 45.41716611727021,
+          "approximate_Schur_lower": 3.7368969730744497,
+          "width": 0.07507953908210263
+        }
+      ],
+      "charge_excitation_gap_numeric_interval": [
+        0.13193184736991226,
+        0.27734114005496036
+      ],
+      "E_q_minus_E_zero_at_N6": 0.2070113864520149
+    },
+    {
+      "g": 1.1,
+      "neutral": [
+        {
+          "N": 4,
+          "states": 729,
+          "charged": false,
+          "ritz_E": 2.268405795680829,
+          "ritz_gap": 4.214511729454445,
+          "ground_eigenvector_residual": 9.296623950777425e-14,
+          "outside_electric_bound": 60.499999999999964,
+          "approximate_Schur_lower": 2.2596088513669494,
+          "width": 0.00879694431387934
+        },
+        {
+          "N": 5,
+          "states": 1331,
+          "charged": false,
+          "ritz_E": 2.268405795680821,
+          "ritz_gap": 4.214511729454627,
+          "ground_eigenvector_residual": 2.2017850495526085e-13,
+          "outside_electric_bound": 87.11999999999996,
+          "approximate_Schur_lower": 2.2623686658386837,
+          "width": 0.006037129842137112
+        },
+        {
+          "N": 6,
+          "states": 2197,
+          "charged": false,
+          "ritz_E": 2.2684057956808292,
+          "ritz_gap": 4.214511729454648,
+          "ground_eigenvector_residual": 4.666720524506897e-13,
+          "outside_electric_bound": 118.57999999999993,
+          "approximate_Schur_lower": 2.264001590794565,
+          "width": 0.004404204886264029
+        }
+      ],
+      "charged": [
+        {
+          "N": 4,
+          "states": 729,
+          "charged": true,
+          "ritz_E": 2.868462841829923,
+          "ritz_gap": 3.1557682258182025,
+          "ground_eigenvector_residual": 1.0329395075654662e-13,
+          "outside_electric_bound": 56.07915187958742,
+          "approximate_Schur_lower": 2.858835827017912,
+          "width": 0.009627014812011225
+        },
+        {
+          "N": 5,
+          "states": 1331,
+          "charged": true,
+          "ritz_E": 2.868462841829917,
+          "ritz_gap": 3.1557682258180604,
+          "ground_eigenvector_residual": 2.2978029710443364e-13,
+          "outside_electric_bound": 81.69587288050491,
+          "approximate_Schur_lower": 2.861964339706449,
+          "width": 0.006498502123467809
+        },
+        {
+          "N": 6,
+          "states": 2197,
+          "charged": true,
+          "ritz_E": 2.868462841829923,
+          "ritz_gap": 3.155768225817702,
+          "ground_eigenvector_residual": 2.971170932716983e-13,
+          "outside_electric_bound": 112.15259388142239,
+          "approximate_Schur_lower": 2.86377542667961,
+          "width": 0.0046874151503133454
+        }
+      ],
+      "charge_excitation_gap_numeric_interval": [
+        0.5953696309987806,
+        0.604461251035358
+      ],
+      "E_q_minus_E_zero_at_N6": 0.6000570461490939
+    }
+  ],
+  "conditional_theorem": "For any selected 3-loop electric flux E=C.Tm+q with nonzero fixed native edge q, Gauss charge B.T E=B.Tq is constant. Outside |m|_infty>N, use ||C.Tm+q||\u00b2=(m+G^-1 Cq).T G(m+G^-1 Cq)+||q||\u00b2\u2212(Cq).T G^-1(Cq). Thus C_ext >=g\u00b2/2[\u03bbmin(G) max(0,N+1-||G^-1Cq||)\u00b2+q_perp\u00b2]. Compare with triangle inequality ||C.Tm+q||>=sqrt \u03bbmin(G)(N+1)\u2212||q||. Wilson magnetic potential is PSD; finite-to-outside hop norm squared 3/(4g\u2074); Schur gives lower L=E_N\u2212b\u00b2/(C_ext\u2212E_N). Subtract neutral and charged intervals to enclose E_charged\u2212E_neutral. Finite blocks preserve exact Gauss.",
+  "precision": "Numbers use ordinary float sparse Ritz eigenvalues and residuals, not outward-rounded interval eigenvalues; exact mathematical Schur inequalities apply to exact finite-block eigenvalues. This is NOT a rigorously machine-certified numerical spectral interval.",
+  "physics_scope": "Only the selected 3 Wilson plaquette shifts with fixed external electric string q; no dynamical fermions, no full 1385 plaquettes, no charge screening/confinement, no physical electric charge or full continuum QED."
+}
