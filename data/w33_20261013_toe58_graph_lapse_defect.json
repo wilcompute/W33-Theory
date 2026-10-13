@@ -1,0 +1,18 @@
+{
+  "status": "PASS_TOE58_SMOOTH_GRAPH_LAPSE_GRAVITY_DEFECT",
+  "native_graph_eigenvalues_first_four": [
+    -5.078777045828633e-16,
+    1.550510257216817,
+    1.550510257216818,
+    1.550510257216819
+  ],
+  "lapses": "N=1+.25 normalized first nonconstant graph eigenvector, M=1+.23 next eigenvector. Conformal metric a=1+.1 third eigenvector, g_ab=a\u00b2 delta_ab.",
+  "max_actual_minus_target": 321.27240809928225,
+  "max_flat_metric_defect": 305.31536583845383,
+  "random_p_q_bracket_witness": 941.9213895081177,
+  "proportional_lapses_actual_max": 0.0,
+  "proportional_lapses_target_max": 0.0,
+  "exact_D_skew_max": 0.0,
+  "conclusion": "The prior11976 canonical matter hypersurface-bracket closure defect persists even for low-eigenvalue native graph lapse profiles and positive smoothly varying graph metric samples, not merely delta-sourced lapses. It remains a failure of specified derivative/product/constraint maps only.",
+  "physics_boundary": "Low graph Laplacian modes are not a controlled 3+1D smooth refinement. This neither supplies a gravity theory nor proves any general no-go for discrete or emergent gravity; suitable perfect/coarse actions may restore diffeomorphisms."
+}

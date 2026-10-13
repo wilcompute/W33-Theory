@@ -1,0 +1,78 @@
+{
+  "status": "PASS_TOE58_STATIC_NATIVE_OVERLAP_NO_CHIRAL_INDEX",
+  "index_zero_cases": [
+    {
+      "m0": 0.3,
+      "time_corner": 0.0,
+      "gap": 0.6189143238901879,
+      "anticommutator": 0.0,
+      "index": 0
+    },
+    {
+      "m0": 0.3,
+      "time_corner": 3.141592653589793,
+      "gap": 2.170104095252414,
+      "anticommutator": 2.449293598294707e-16,
+      "index": 0
+    },
+    {
+      "m0": 0.5,
+      "time_corner": 0.0,
+      "gap": 0.6190139372729339,
+      "anticommutator": 0.0,
+      "index": 0
+    },
+    {
+      "m0": 0.5,
+      "time_corner": 3.141592653589793,
+      "gap": 1.9802681187610263,
+      "anticommutator": 2.449293598294707e-16,
+      "index": 0
+    },
+    {
+      "m0": 1.5,
+      "time_corner": 0.0,
+      "gap": 1.2477263899751112,
+      "anticommutator": 0.0,
+      "index": 0
+    },
+    {
+      "m0": 1.5,
+      "time_corner": 3.141592653589793,
+      "gap": 1.080486547979211,
+      "anticommutator": 2.449293598294707e-16,
+      "index": 0
+    },
+    {
+      "m0": 3.0,
+      "time_corner": 0.0,
+      "gap": 2.638576093255322,
+      "anticommutator": 0.0,
+      "index": 0
+    },
+    {
+      "m0": 3.0,
+      "time_corner": 3.141592653589793,
+      "gap": 0.851946857602879,
+      "anticommutator": 2.449293598294707e-16,
+      "index": 0
+    },
+    {
+      "m0": 7.0,
+      "time_corner": 0.0,
+      "gap": 6.3637039021116975,
+      "anticommutator": 0.0,
+      "index": 0
+    },
+    {
+      "m0": 7.0,
+      "time_corner": 3.141592653589793,
+      "gap": 4.561841391008813,
+      "anticommutator": 2.449293598294707e-16,
+      "index": 0
+    }
+  ],
+  "basis": 320,
+  "exact_symmetry": "For static link phases and omega=0 or pi, R=i gamma_time gamma5 tensor I_80 anticommutes with the Hermitian Q=gamma5 DW regardless of Wilson m0 and spatial phases. Where Q is invertible its spectrum is \u00b1 paired and overlap index -Tr signQ /2=0.",
+  "physics_boundary": "No time-dependent 4D link topology, nonzero instanton background, Weyl chiral measure, three generations or gauge anomaly cancellation. No inference that all 4D overlap operators have index0. Wilson masses chosen were externally supplied, not derived by W33."
+}

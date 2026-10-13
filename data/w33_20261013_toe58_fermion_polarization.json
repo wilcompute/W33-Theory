@@ -1,0 +1,93 @@
+{
+  "status": "PASS_TOE58_NATIVE_FERMION_STATIC_WARD_POLARIZATION",
+  "basis": [
+    "harmonic1",
+    "harmonic2",
+    "harmonic3",
+    "plaquette0",
+    "plaquette186",
+    "gauge1",
+    "gauge2"
+  ],
+  "note": "Actual basis has 7 directions total, 3 harmonic plus 2 plaquette plus 2 pure-gauge.",
+  "finite_difference_step": 0.12,
+  "Hessian": [
+    [
+      -0.1798143511974912,
+      0.00017015409624497756,
+      4.7131204124658176e-05,
+      -4.671792829134979e-06,
+      3.133216155662113e-06,
+      0.0,
+      0.0
+    ],
+    [
+      0.00017015409624497756,
+      -0.17984656592023246,
+      0.00010814148786329901,
+      -1.2441031908376015e-05,
+      -2.0653730577654037e-06,
+      0.0,
+      -4.934324553889585e-13
+    ],
+    [
+      4.7131204124658176e-05,
+      0.00010814148786329901,
+      -0.17980490120016335,
+      -8.243831296618333e-06,
+      -9.25028448901028e-07,
+      0.0,
+      4.934324553889585e-13
+    ],
+    [
+      -4.671792829134979e-06,
+      -1.2441031908376015e-05,
+      -8.243831296618333e-06,
+      -0.17973327489626298,
+      0.08944984213924793,
+      0.0,
+      0.0
+    ],
+    [
+      3.133216155662113e-06,
+      -2.0653730577654037e-06,
+      -9.25028448901028e-07,
+      0.08944984213924793,
+      -0.17973327489626298,
+      0.0,
+      4.934324553889585e-13
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.973729821555834e-12,
+      4.934324553889585e-13
+    ],
+    [
+      0.0,
+      -4.934324553889585e-13,
+      4.934324553889585e-13,
+      0.0,
+      4.934324553889585e-13,
+      4.934324553889585e-13,
+      1.973729821555834e-12
+    ]
+  ],
+  "harmonic_Hessian_eigenvalues": [
+    -0.18001453826458705,
+    -0.1798502385456043,
+    -0.1796010415076956
+  ],
+  "plaquette_Hessian_eigenvalues": [
+    -0.2691831170355109,
+    -0.09028343275701506
+  ],
+  "max_two_pure_gauge_rows_or_columns": 1.973729821555834e-12,
+  "finite_U1_gauge_free_energy_residual": 0.0,
+  "bare_magnetic_harmonic_curl_norm": 1.1386706753094177e-14,
+  "conclusion": "Integrating out the specified finite spinless fermion generates a gauge-invariant response that is nonzero in the harmonic H1 sector, which the bare Maxwell magnetic curl P cannot see. The static matter determinant respects exact local U1 Ward zero modes but makes trivial holonomy unstable.",
+  "scope": "A finite 80-site spinless static one-loop susceptibility at beta=4, not a 4D photon polarization tensor, physical Debye screening, anomaly cancellation, renormalized fine-structure constant or Lorentz-invariant interacting continuum."
+}

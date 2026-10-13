@@ -1,0 +1,472 @@
+{
+  "status": "PASS_TOE58_HOLONOMY_PARAMETER_PHASE_DIAGRAM_NO_UNIQUE_VACUUM",
+  "native_sites": 80,
+  "native_links": 160,
+  "three_deck_voltages": true,
+  "corners": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "corner_symmetry": "All static pi-corner connections exp(i volts\u00b7phi) have real \u00b11 link phases, and are exactly invariant under link complex conjugation; no corner by itself signals spontaneous physical CP.",
+  "fixed_external_mu_and_temperature_grid": [
+    {
+      "inverse_temperature": 0.5,
+      "chemical_potential": -4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -23.370127762056136,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -23.370090740730536,
+      "trivial_energy": -23.370127762056136,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 0.5,
+      "chemical_potential": -3.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -44.25871252791167,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -44.258245115137285,
+      "trivial_energy": -44.25871252791167,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 0.5,
+      "chemical_potential": -1.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -93.62757338103773,
+      "zero_minus_min": 0.00035522234378504436,
+      "full_three_pi_energy": -93.62757338103773,
+      "trivial_energy": -93.62721815869395,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 0.5,
+      "chemical_potential": 0.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -129.61557271863404,
+      "zero_minus_min": 0.0008250132216574002,
+      "full_three_pi_energy": -129.61557271863404,
+      "trivial_energy": -129.61474770541238,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 0.5,
+      "chemical_potential": 1.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -173.62757338103773,
+      "zero_minus_min": 0.00035522234378504436,
+      "full_three_pi_energy": -173.62757338103773,
+      "trivial_energy": -173.62721815869395,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 0.5,
+      "chemical_potential": 3.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -284.25871252791165,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -284.25824511513724,
+      "trivial_energy": -284.25871252791165,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 0.5,
+      "chemical_potential": 4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -383.37012776205614,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -383.3700907407306,
+      "trivial_energy": -383.37012776205614,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 2.0,
+      "chemical_potential": -4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -0.35553556031527817,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -0.34928118930338087,
+      "trivial_energy": -0.35553556031527817,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 2.0,
+      "chemical_potential": -3.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -4.613325272004455,
+      "zero_minus_min": 0.0675371367342672,
+      "full_three_pi_energy": -4.613325272004455,
+      "trivial_energy": -4.545788135270188,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 2.0,
+      "chemical_potential": -1.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -40.34842651045861,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -40.23525724544059,
+      "trivial_energy": -40.34842651045861,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 2.0,
+      "chemical_potential": 0.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -73.63798609537528,
+      "zero_minus_min": 0.2744521663244086,
+      "full_three_pi_energy": -73.63798609537528,
+      "trivial_energy": -73.36353392905087,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 2.0,
+      "chemical_potential": 1.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -120.34842651045861,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -120.2352572454406,
+      "trivial_energy": -120.34842651045861,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 2.0,
+      "chemical_potential": 3.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -244.61332527200446,
+      "zero_minus_min": 0.06753713673427342,
+      "full_three_pi_energy": -244.61332527200446,
+      "trivial_energy": -244.5457881352702,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 2.0,
+      "chemical_potential": 4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -360.3555355603153,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -360.3492811893034,
+      "trivial_energy": -360.3555355603153,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 4.0,
+      "chemical_potential": -4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -0.03337645304475987,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -0.025497832111030638,
+      "trivial_energy": -0.03337645304475987,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 4.0,
+      "chemical_potential": -3.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -1.753596967471394,
+      "zero_minus_min": 0.11973392348771505,
+      "full_three_pi_energy": -1.753596967471394,
+      "trivial_energy": -1.633863043983679,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 4.0,
+      "chemical_potential": -1.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -37.942060816247576,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -37.519394354813286,
+      "trivial_energy": -37.942060816247576,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 4.0,
+      "chemical_potential": 0.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -68.80381817641133,
+      "zero_minus_min": 0.8167936789520098,
+      "full_three_pi_energy": -68.80381817641133,
+      "trivial_energy": -67.98702449745932,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 4.0,
+      "chemical_potential": 1.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -117.94206081624755,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -117.51939435481327,
+      "trivial_energy": -117.94206081624755,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 4.0,
+      "chemical_potential": 3.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -241.75359696747137,
+      "zero_minus_min": 0.11973392348770062,
+      "full_three_pi_energy": -241.75359696747137,
+      "trivial_energy": -241.63386304398367,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 4.0,
+      "chemical_potential": 4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -360.03337645304475,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -360.025497832111,
+      "trivial_energy": -360.03337645304475,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 12.0,
+      "chemical_potential": -4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -0.0002063071359946849,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -7.572863153522096e-05,
+      "trivial_energy": -0.0002063071359946849,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 12.0,
+      "chemical_potential": -3.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -1.0027028132573477,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -0.9777107135085061,
+      "trivial_energy": -1.0027028132573477,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 12.0,
+      "chemical_potential": -1.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -37.78776924312252,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -37.077367263043065,
+      "trivial_energy": -37.78776924312252,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 12.0,
+      "chemical_potential": 0.0,
+      "minimizing_pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_min": -65.9761247267647,
+      "zero_minus_min": 1.4555029485678688,
+      "full_three_pi_energy": -65.9761247267647,
+      "trivial_energy": -64.52062177819683,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 12.0,
+      "chemical_potential": 1.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -117.78776924312251,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -117.07736726304306,
+      "trivial_energy": -117.78776924312251,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 12.0,
+      "chemical_potential": 3.0,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -241.00270281325734,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -240.9777107135085,
+      "trivial_energy": -241.00270281325734,
+      "lowest_corner_degeneracy": 1
+    },
+    {
+      "inverse_temperature": 12.0,
+      "chemical_potential": 4.5,
+      "minimizing_pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_min": -360.000206307136,
+      "zero_minus_min": 0.0,
+      "full_three_pi_energy": -360.0000757286316,
+      "trivial_energy": -360.000206307136,
+      "lowest_corner_degeneracy": 1
+    }
+  ],
+  "number_distinct_selected_pi_corners": 2,
+  "selected_pi_corners": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "half_filling_beta4_reproduces_prior11964": {
+    "inverse_temperature": 4.0,
+    "chemical_potential": 0.0,
+    "minimizing_pi_corner": [
+      1,
+      1,
+      1
+    ],
+    "free_energy_min": -68.80381817641133,
+    "zero_minus_min": 0.8167936789520098,
+    "full_three_pi_energy": -68.80381817641133,
+    "trivial_energy": -67.98702449745932,
+    "lowest_corner_degeneracy": 1
+  },
+  "limitation": "Grand-canonical finite spinless fermions, selected deck marking, externally supplied filling and temperature, no dynamical gauge ground state. Other generic flat holonomies may beat the eight corners; this grid is NOT a certified global phase diagram. It predicts neither the observed CP phase nor alpha, physical mu, beta, mass, Newton G or cosmology.",
+  "physics_gate": "Vacuum selection depends on supplied matter filling, T, charges and representation; even at a selected corner it is conjugation-fixed. A TOE must dynamically determine those parameters and generate a nonzero gauge-invariant CP-odd observable, not infer CP from nonzero Wilson angles."
+}
