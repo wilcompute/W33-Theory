@@ -1,0 +1,69 @@
+{
+  "pass_id": 11944,
+  "lemma_max_violation": 2.220446049250313e-16,
+  "odd_column_equality_max_dev": 3.3306690738754696e-16,
+  "inversion_is_mu_tau_swap": true,
+  "fits": {
+    "A": {
+      "charm_is_odd": 4.440892098500626e-16,
+      "charm_row_b_s_d": [
+        0.04121145775197892,
+        0.9733274004675487,
+        0.22568869543918435
+      ],
+      "down_odd_b_s_d": [
+        0.04121145775197887,
+        0.9733274004675477,
+        0.22568869543918968
+      ],
+      "identity_dev": 5.329070518200751e-15,
+      "lepton_odd_tau_mu_e": [
+        0.7009294632092828,
+        0.07975827775462373,
+        0.708757013887526
+      ]
+    },
+    "B": {
+      "charm_is_odd": 4.440892098500626e-16,
+      "charm_row_b_s_d": [
+        0.04121449655871221,
+        0.9733220925506191,
+        0.22571103080331542
+      ],
+      "down_odd_b_s_d": [
+        0.04121449655871223,
+        0.9733220925506191,
+        0.2257110308033171
+      ],
+      "identity_dev": 1.6653345369377348e-15,
+      "lepton_odd_tau_mu_e": [
+        0.7033500712319647,
+        0.08246119078481087,
+        0.7060444952779826
+      ]
+    }
+  },
+  "data_pmns_nu2_column_e_mu_tau": [
+    0.5479470777365273,
+    0.6046496934517694,
+    0.5780594677095787
+  ],
+  "data_Ue3": 0.14832396974191325,
+  "data_ckm_charm_row": {
+    "Vcd": 0.221,
+    "Vcs": 0.975,
+    "Vcb": 0.0411
+  },
+  "checks": {
+    "inversion_is_mu_tau_reflection": true,
+    "lemma_inequality": true,
+    "odd_column_equals_odd_content": true,
+    "up_charm_is_the_odd_state": true,
+    "ckm_charm_row_is_down_odd_content": true,
+    "fit_charm_row_matches_data": true,
+    "data_needs_all_leptons_one_third_odd": true,
+    "minimal_fits_have_wrong_lepton_odd_content": true,
+    "branch_b_needs_only_mild_breaking": true
+  },
+  "all_checks_pass": true
+}
