@@ -174752,6 +174752,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "534e863286c450ecbf2802ddc8674d12bcd7c395559c85cc6dfcd6b739f645ff",
+      "normalized_formula": "\"theorem\":\"Theleadingbeta^7free-fermionflatW33U(1)^3holonomypotentialhasuniqueglobalthree-piminimumforallindependentpositivelinkhoppingmagnitudesin[1-e,1+e]whene<=(11^(1/8)-1)/(11^(1/8)+1).Exactsignedsquareidentitysuppliesanonnegativequadraticplusstrictlypositivequarticremainder.\"",
+      "numeric_literals": [
+        "+1",
+        "-1",
+        "1",
+        "11",
+        "3",
+        "7",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe64_signed_square_flux_robustness.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 129,
+          "path": "analysis/w33_20261013_toe64_signed_square_flux_robustness.py",
+          "raw": "\"theorem\": \"The leading beta^7 free-fermion flat W33 U(1)^3 holonomy potential has unique global three-pi minimum for all independent positive link hopping magnitudes in [1-e,1+e] when e <= (11^(1/8)-1)/(11^(1/8)+1). Exact signed square identity supplies a nonnegative quadratic plus strictly positive quartic remainder.\",",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "c5762a9b520e67980d3cb2686b980d73cd04d854d71e0469713785d4923ccc98",
+      "structural_formula": "\"theorem\":\"Theleadingbeta^#free-fermionflatW3#U(#)^#holonomypotentialhasuniqueglobalthree-piminimumforallindependentpositivelinkhoppingmagnitudesin[#-e,#+e]whene<=(#^(#/#)#)/(#^(#/#)#).Exactsignedsquareidentitysuppliesanonnegativequadraticplusstrictlypositivequarticremainder.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "e3d59272a1679ae0283d1132008879d7a13a2224cb6453f11cab1cd1a86ce588",
       "normalized_formula": "\"theorem\":\"Theordinary35-dimensionalcut-spaceIsingpolynomialisnowexact.Amarked-double-sixK6chartreducesthecomputationfrom2^35cutwordsto156unlabeledsix-vertexgraphrepresentativestimes2^20triadstates,withexactS6orbitweights.Thecutenumeratorhas82nonzeroweightlevels,minimum20,maximum216,andexactly120maximumcuts.CombiningitwiththefrozenPass4859non-cutswitchingcosetgivesthecomplete2^36-wordenumeratorofK=[360,36,20]_2.AMacWilliamscross-checkrecoversdualcoefficientsA1=A2=0andA3=1080.\"",
       "numeric_literals": [
@@ -588576,6 +588609,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a1998db0c53ba8db5db849da5a70758983e18f2b0c87d30f7b89b7381d6a68c2",
+      "normalized_formula": "Diagonalizingtheantisymmetric2\u20133directiongives`77-7r`;theremainingsymmetric2x2blockhasdeterminant`6083-233r`andpositivediagonaluptotherelevantboundary.Consequently,`D-r*M_signed`ispositivesemidefinitefor`r<=11`andstrictlypositivedefinitefor`r<11",
+      "numeric_literals": [
+        "-233",
+        "-7",
+        "11",
+        "3",
+        "6083",
+        "77"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe64_signed_square_flux_robustness.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/2026-10-13_toe64_signed_square_flux_robustness.md",
+          "raw": "Diagonalizing the antisymmetric 2\u20133 direction gives `77-7r`; the remaining symmetric 2x2 block has determinant `6083-233r` and positive diagonal up to the relevant boundary. Consequently, `D-r*M_signed` is positive semidefinite for `r<=11` and strictly positive definite for `r<11`.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cf80534f01f53e8d54191502c03fdc1dc15597277e6b825e218ad219fbf3e69c",
+      "structural_formula": "Diagonalizingtheantisymmetric2\u2013#directiongives`##r`;theremainingsymmetric2x2blockhasdeterminant`##r`andpositivediagonaluptotherelevantboundary.Consequently,`D-r*M_signed`ispositivesemidefinitefor`r<=#`andstrictlypositivedefinitefor`r<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "915b85d4c824c34cb085204464dde5e033db010c75ae47c48114e145f78ea634",
       "normalized_formula": "Dim24=f(eta-exp):Leechoptimal(CKMRV2017)",
       "numeric_literals": [
@@ -617373,6 +617438,35 @@
       },
       "structural_family_id": "926b114a971b164dfe0950fd06e39fcf34c611ca896b245f75b1a511d38e8091",
       "structural_formula": "Fortheharmonickernel`K=#I-A_Levi`,thepoint-lineincidencesingularvaluesare`#^#`,`(sqrt6)^#`and`#^#`.The1#zerochannelsarespectators.Eachnonzerosingularvalueproducesanindependenttwo-modethermalGaussianpair"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9868f79f14d539c003dcc2f77bd5c48e8042735dc78005454125b442034adb5b",
+      "normalized_formula": "Forthelarger^artificialindependentFourier-amplitudeintervalbox^,thethresholdisoptimalfor*local*stability:choosingeverysingle-axiscoefficientatitsallowedminimumandeverymixedcoefficientatitsallowedmaximummakestheantisymmetricHessiannegativeassoonas`r>11`;anexplicitbox-allowedcounterexampleisrecordedatepsilon=0.155.SuchsimultaneousFourierextremesneed^not^berealizablebyanysinglecollectionofW33edge-producthoppings.Thereforenooptimalphysicaldisorderthreshold,phasetransition,orlossofW33minimumabovethisepsilonisasserted",
+      "numeric_literals": [
+        "0.155",
+        "11",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe64_signed_square_flux_robustness.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/2026-10-13_toe64_signed_square_flux_robustness.md",
+          "raw": "For the larger **artificial independent Fourier-amplitude interval box**, the threshold is optimal for *local* stability: choosing every single-axis coefficient at its allowed minimum and every mixed coefficient at its allowed maximum makes the antisymmetric Hessian negative as soon as `r>11`; an explicit box-allowed counterexample is recorded at epsilon=0.155. Such simultaneous Fourier extremes need **not** be realizable by any single collection of W33 edge-product hoppings. Therefore no optimal physical disorder threshold, phase transition, or loss of W33 minimum above this epsilon is asserted.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "4df80ff2e05270caf4ed3ac5348399ab0dd9ea5a083e6d20e8a129358d27266e",
+      "structural_formula": "Forthelarger^artificialindependentFourier-amplitudeintervalbox^,thethresholdisoptimalfor*local*stability:choosingeverysingle-axiscoefficientatitsallowedminimumandeverymixedcoefficientatitsallowedmaximummakestheantisymmetricHessiannegativeassoonas`r>#`;anexplicitbox-allowedcounterexampleisrecordedatepsilon=#.SuchsimultaneousFourierextremesneed^not^berealizablebyanysinglecollectionofW3#edge-producthoppings.Thereforenooptimalphysicaldisorderthreshold,phasetransition,orlossofW3#minimumabovethisepsilonisasserted"
     },
     {
       "file_count": 1,
@@ -686699,6 +686793,36 @@
       },
       "structural_family_id": "7e80ebf9d759d3baed60dd4260bb51876dae1b2a8211a20f159a8ad2ed51c0d5",
       "structural_formula": "M_scale=##GeV"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5979b8d4710013a13c4649a9cad78727b3b4cb5528e1308ae765bc19824314dd",
+      "normalized_formula": "M_signed=[[2,1,1],[1,4,-3],[1,-3,4]]",
+      "numeric_literals": [
+        "-3",
+        "1",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe64_signed_square_flux_robustness.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/2026-10-13_toe64_signed_square_flux_robustness.md",
+          "raw": "M_signed=[[2,1,1],[1,4,-3],[1,-3,4]].",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a5057a06dd31d6d122a079ff25933646dbf82658b459260223732f4489e2533c",
+      "structural_formula": "M_signed=[[#,#,#],[#,#,#],[#,#,#]]"
     },
     {
       "file_count": 1,
@@ -826116,6 +826240,35 @@
       },
       "structural_family_id": "2e17c8df63193b0133aeadb2e3b27e93d23168e9f52b7ae5341f84665dd42930",
       "structural_formula": "UsingfrozenTOE5#N=#upperenergies,obtain"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6257686256af2a627215e68fa752536caa98a5c356662e8ed74eba292722d068",
+      "normalized_formula": "UsingnativeTOE59/TOE62loopcensus,letthe^positiveweightedsixFourieramplitudes^be`a=(a1,a2,a3)`and`(d,e,f)`for`cos(phi1+phi2),cos(phi1+phi3),cos(phi2-phi3)`.Under`phi=pi+delta`,define`u_i=1-cos(delta_i)`and`t_i=sin(delta_i)/sqrt(2)`.Theexactelementaryidentity`u_i=t_i^2+u_i^2/2`yields^withoutapproximation^",
+      "numeric_literals": [
+        "1",
+        "2",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe64_signed_square_flux_robustness.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-13_toe64_signed_square_flux_robustness.md",
+          "raw": "Using native TOE59/TOE62 loop census, let the **positive weighted six Fourier amplitudes** be `a=(a1,a2,a3)` and `(d,e,f)` for `cos(phi1+phi2),cos(phi1+phi3),cos(phi2-phi3)`. Under `phi=pi+delta`, define `u_i=1-cos(delta_i)` and `t_i=sin(delta_i)/sqrt(2)`. The exact elementary identity `u_i=t_i^2+u_i^2/2` yields **without approximation**:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9b28d7130158cc25f10d0ebd0baba9a63a502212cb8093657e53d329cd242fa6",
+      "structural_formula": "UsingnativeTOE5#/TOE6#loopcensus,letthe^positiveweightedsixFourieramplitudes^be`a=(a1,a2,a3)`and`(d,e,f)`for`cos(phi1+phi2),cos(phi1+phi3),cos(phi2-phi3)`.Under`phi=pi+delta`,define`u_i=#-cos(delta_i)`and`t_i=sin(delta_i)/sqrt(#)`.Theexactelementaryidentity`u_i=t_i^#+u_i^#/#`yields^withoutapproximation^"
     },
     {
       "file_count": 1,
@@ -1683667,6 +1683820,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3bcfdbda93e3f64c619d5015ae952262c1710b698227586de1b5813d82717dd4",
+      "normalized_formula": "t=np.sin(delta)/math.sqrt(2)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe64_signed_square_flux_robustness.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/w33_20261013_toe64_signed_square_flux_robustness.py",
+          "raw": "t = np.sin(delta) / math.sqrt(2)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fa1f988f903a28813f50c3d066ece617a01266f1a7ff2288b44bb8d6a42b777c",
+      "structural_formula": "t=np.sin(delta)/math.sqrt(#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2c1fe42258016de814397450f2a7bb514566bcadc25cfb5f951fa6266e60f993",
       "normalized_formula": "t=np.tanh(beta*es/2)",
       "numeric_literals": [
@@ -1718936,6 +1719116,33 @@
       },
       "structural_family_id": "7b154b21d8adf71240b242cc7e78b5b21385ab4e1822731fb5c72b55b8da8fa7",
       "structural_formula": "u=#+t.SinceP(t)=sum_mc_m(#+t)^mwherec_mcountsmetricedgeclasses"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cfa14058129445fd1a4ffe5616867a0088ecdbf91bba617828d9a1d649115300",
+      "normalized_formula": "u=1-np.cos(delta)",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe64_signed_square_flux_robustness.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/w33_20261013_toe64_signed_square_flux_robustness.py",
+          "raw": "u = 1 - np.cos(delta)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6a2bde3e241240bb846483d502232f9203d4032e649a46f5112016bcce41e529",
+      "structural_formula": "u=#-np.cos(delta)"
     },
     {
       "file_count": 1,
@@ -1800207,9 +1800414,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T16:22:51-04:00",
+  "frozen_at": "2026-10-13T16:30:54-04:00",
   "pass": 398,
-  "repository_head": "22a67ac7bee53188adb4a74727be2a55b708693d",
+  "repository_head": "bc582d83545d5e2d7998ceb153a111a044458d05",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1849189,6 +1849396,14 @@
       "exact_member_count": 1,
       "structural_family_id": "828c0c723da64ae2c03d3776f6f3318d5f8a57a7e031376207e3b4df5d3bc1ad",
       "structural_formula": "\"theorem\":\"Thefixed-dimensional3-adic-resolutiontoweravoidstheH(n,#)dimension-growthfirewall:itsscalargapclosesasN^#,whilethePineventvectordifferencesconvergetocovariantfirstderivatives.TheirCliffordcontractionhastheDiracprincipalsymbolforg=E^TEandexposesgaugecurvaturethroughcommutators.\""
+    },
+    {
+      "exact_formula_ids": [
+        "534e863286c450ecbf2802ddc8674d12bcd7c395559c85cc6dfcd6b739f645ff"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c5762a9b520e67980d3cb2686b980d73cd04d854d71e0469713785d4923ccc98",
+      "structural_formula": "\"theorem\":\"Theleadingbeta^#free-fermionflatW3#U(#)^#holonomypotentialhasuniqueglobalthree-piminimumforallindependentpositivelinkhoppingmagnitudesin[#-e,#+e]whene<=(#^(#/#)#)/(#^(#/#)#).Exactsignedsquareidentitysuppliesanonnegativequadraticplusstrictlypositivequarticremainder.\""
     },
     {
       "exact_formula_ids": [
@@ -1958782,6 +1958997,14 @@
     },
     {
       "exact_formula_ids": [
+        "a1998db0c53ba8db5db849da5a70758983e18f2b0c87d30f7b89b7381d6a68c2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cf80534f01f53e8d54191502c03fdc1dc15597277e6b825e218ad219fbf3e69c",
+      "structural_formula": "Diagonalizingtheantisymmetric2\u2013#directiongives`##r`;theremainingsymmetric2x2blockhasdeterminant`##r`andpositivediagonaluptotherelevantboundary.Consequently,`D-r*M_signed`ispositivesemidefinitefor`r<=#`andstrictlypositivedefinitefor`r<#"
+    },
+    {
+      "exact_formula_ids": [
         "915b85d4c824c34cb085204464dde5e033db010c75ae47c48114e145f78ea634"
       ],
       "exact_member_count": 1,
@@ -1966400,6 +1966623,14 @@
       "exact_member_count": 1,
       "structural_family_id": "926b114a971b164dfe0950fd06e39fcf34c611ca896b245f75b1a511d38e8091",
       "structural_formula": "Fortheharmonickernel`K=#I-A_Levi`,thepoint-lineincidencesingularvaluesare`#^#`,`(sqrt6)^#`and`#^#`.The1#zerochannelsarespectators.Eachnonzerosingularvalueproducesanindependenttwo-modethermalGaussianpair"
+    },
+    {
+      "exact_formula_ids": [
+        "9868f79f14d539c003dcc2f77bd5c48e8042735dc78005454125b442034adb5b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4df80ff2e05270caf4ed3ac5348399ab0dd9ea5a083e6d20e8a129358d27266e",
+      "structural_formula": "Forthelarger^artificialindependentFourier-amplitudeintervalbox^,thethresholdisoptimalfor*local*stability:choosingeverysingle-axiscoefficientatitsallowedminimumandeverymixedcoefficientatitsallowedmaximummakestheantisymmetricHessiannegativeassoonas`r>#`;anexplicitbox-allowedcounterexampleisrecordedatepsilon=#.SuchsimultaneousFourierextremesneed^not^berealizablebyanysinglecollectionofW3#edge-producthoppings.Thereforenooptimalphysicaldisorderthreshold,phasetransition,orlossofW3#minimumabovethisepsilonisasserted"
     },
     {
       "exact_formula_ids": [
@@ -1985233,6 +1985464,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7e80ebf9d759d3baed60dd4260bb51876dae1b2a8211a20f159a8ad2ed51c0d5",
       "structural_formula": "M_scale=##GeV"
+    },
+    {
+      "exact_formula_ids": [
+        "5979b8d4710013a13c4649a9cad78727b3b4cb5528e1308ae765bc19824314dd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a5057a06dd31d6d122a079ff25933646dbf82658b459260223732f4489e2533c",
+      "structural_formula": "M_signed=[[#,#,#],[#,#,#],[#,#,#]]"
     },
     {
       "exact_formula_ids": [
@@ -2023109,6 +2023348,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2e17c8df63193b0133aeadb2e3b27e93d23168e9f52b7ae5341f84665dd42930",
       "structural_formula": "UsingfrozenTOE5#N=#upperenergies,obtain"
+    },
+    {
+      "exact_formula_ids": [
+        "6257686256af2a627215e68fa752536caa98a5c356662e8ed74eba292722d068"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b28d7130158cc25f10d0ebd0baba9a63a502212cb8093657e53d329cd242fa6",
+      "structural_formula": "UsingnativeTOE5#/TOE6#loopcensus,letthe^positiveweightedsixFourieramplitudes^be`a=(a1,a2,a3)`and`(d,e,f)`for`cos(phi1+phi2),cos(phi1+phi3),cos(phi2-phi3)`.Under`phi=pi+delta`,define`u_i=#-cos(delta_i)`and`t_i=sin(delta_i)/sqrt(#)`.Theexactelementaryidentity`u_i=t_i^#+u_i^#/#`yields^withoutapproximation^"
     },
     {
       "exact_formula_ids": [
@@ -2250925,6 +2251172,14 @@
     },
     {
       "exact_formula_ids": [
+        "3bcfdbda93e3f64c619d5015ae952262c1710b698227586de1b5813d82717dd4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fa1f988f903a28813f50c3d066ece617a01266f1a7ff2288b44bb8d6a42b777c",
+      "structural_formula": "t=np.sin(delta)/math.sqrt(#)"
+    },
+    {
+      "exact_formula_ids": [
         "2c1fe42258016de814397450f2a7bb514566bcadc25cfb5f951fa6266e60f993"
       ],
       "exact_member_count": 1,
@@ -2260553,6 +2260808,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3b162f027098408ee3bb1bbd0acc21c2f4e1e33cb10ab5f651183918652c1f03",
       "structural_formula": "u=#,#inafieldofcharacteristictwo).Hencethenumberofmissing"
+    },
+    {
+      "exact_formula_ids": [
+        "cfa14058129445fd1a4ffe5616867a0088ecdbf91bba617828d9a1d649115300"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6a2bde3e241240bb846483d502232f9203d4032e649a46f5112016bcce41e529",
+      "structural_formula": "u=#-np.cos(delta)"
     },
     {
       "exact_formula_ids": [
@@ -2281469,20 +2281732,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87791333,
-    "exact_formula_families": 61571,
-    "files_scanned": 12046,
-    "formula_occurrences": 67547,
+    "bytes_scanned": 87801059,
+    "exact_formula_families": 61578,
+    "files_scanned": 12048,
+    "formula_occurrences": 67554,
     "status_occurrences": {
-      "certified_or_theorem": 4944,
+      "certified_or_theorem": 4946,
       "killed_or_retracted": 1645,
       "open_or_conditional": 2247,
       "preregistered": 33,
       "retrospective_fit": 5231,
-      "unclassified": 53447
+      "unclassified": 53452
     },
-    "structural_families": 59949
+    "structural_families": 59956
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "14c367d851f67c8d6c95550285d0ca6558fd56dfa7fe9febb816cbb9f2a71dd5"
+  "universe_sha256": "712de373f9c280291872b8009c6c887eb261e5c8d5f376f2afd1b4c214c67e14"
 }
