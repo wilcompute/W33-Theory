@@ -7,10 +7,12 @@ on:
       - 'analysis/w33_pass11967_flavour_orientation_selector.py'
       - 'analysis/w33_pass11968_native_spin2_constraint_completion.py'
       - 'analysis/w33_pass11969_quantum_gauge_fermion.py'
+      - 'analysis/w33_pass11969_full_native_gauss_compiler.py'
       - 'data/w33_pass11965_11966_cp_transmission_soft_modulus.json'
       - 'data/w33_pass11967_flavour_orientation_selector.json'
       - 'data/w33_pass11968_native_spin2_constraint_completion.json'
       - 'data/w33_pass11969_quantum_gauge_fermion.json'
+      - 'data/w33_pass11969_full_native_gauss_compiler.json'
       - 'tests/test_w33_pass11965_11969_five_dynamical_fronts.py'
       - '.github/workflows/pass11965-11969-five-dynamical-fronts.yml'
   workflow_dispatch:
@@ -39,6 +41,8 @@ jobs:
         run: python analysis/w33_pass11968_native_spin2_constraint_completion.py
       - name: Regenerate interacting quantum front
         run: python analysis/w33_pass11969_quantum_gauge_fermion.py
+      - name: Regenerate full native operator compiler
+        run: python analysis/w33_pass11969_full_native_gauss_compiler.py
       - name: Check regenerated certificates
         run: >-
           python -m pytest --noconftest --ignore-glob=tests/test_*.py -q

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "native_sites": 80,
+  "native_links": 160,
+  "plaquette_rows": 1385,
+  "spanning_tree_links": 79,
+  "integer_chord_fluxes": 81,
+  "fermion_number": 40,
+  "fermion_sector_dimension": "107507208733336176461620",
+  "physical_Hilbert_space": "ell\u00b2(Z^81) tensor wedge^40(C^80), with fixed staggered background on the native40+40 bipartition",
+  "exact_Gauss_solution": "Fill chord fluxes; solve tree fluxes by signed subtree charge sums. A reduced oriented tree incidence matrix is unimodular, so every integral neutral charge/chord assignment has one integral tree solution, and every Gauss-compatible flux is reached uniquely.",
+  "Hamiltonian": "H=g\u00b2 sum_e n_e\u00b2/2 +m sum_v(-1)^color_v occ_v -kappa sum_e(psi_b\u2020 U_lower,e psi_a+h.c.) +beta/g\u00b2 sum_p[1-(S_p+S_p\u2020)/2]. S_p shifts all electric fluxes by the integer plaquette boundary.",
+  "operator_coordinates": "An oriented fermion hop lowers the crossed link; chord integer changes only if this is a chord. Plaquette shifts chord vector by P[row,chords]. Tree solve reconstructs exactly the complete link move in both cases.",
+  "well_definedness": "Electric quadratic operator is self-adjoint on its natural diagonal domain. Finite sums of unitary plaquette shifts and bounded80-site fermion hopping are bounded symmetric perturbations; the displayed Hamiltonian is self-adjoint and semibounded. This is standard finite lattice gauge quantization, applied to the named native maps.",
+  "random_full_Gauss_states": 16,
+  "legal_hops_verified": 1312,
+  "plaquette_moves_verified": 1385,
+  "zero_plaquette_chain_rows": 3,
+  "one_state_Hamiltonian_action_support": 2847,
+  "scope": "FULL declared finite native U1/fermion operator, including every supplied plaquette row and edge hop, compiled matrix-free. No full-spectrum diagonalization, chiral3+1D Weyl interpretation, interacting continuum limit, gravity or selected physical coupling. Background, masses and couplings are supplied; exterior freezing applies only to the separate octagon benchmark, not this compiler.",
+  "prior": [
+    "TOE38 native complex",
+    "TOE55 classical matter/Gauss",
+    "TOE56-57 quantum plaquette truncations",
+    "11969 coupled octagon and separate1D calibration"
+  ]
+}

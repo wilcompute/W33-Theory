@@ -179,6 +179,26 @@ At winding cutoffs1,2,3,4 the native gap is respectively
 630 states. All eight fermions and the rotor are quantum and coupled.
 Exterior links are frozen: this is not the full1385-plaquette native theory.
 
+The front now also defines the **full declared finite native operator**.
+Its physical Hilbert space is
+`ell²(Z^81) tensor wedge^40(C^80)`, with79 tree links reconstructed from
+the80 site charges and81 integer chord fluxes. Signed subtree charge sums
+solve Gauss exactly; tree unimodularity proves the coordinate map is
+bijective over integers. Every native edge hop and every supplied plaquette
+shift has an explicit action in these coordinates. Zero commutator-chain
+rows contribute identity Wilson operators, whose magnetic terms cancel.
+
+The matrix-free compiler verifies1312 legal fermion hops in16 full random
+states and all1385 plaquette moves. Acting on one state generates2847
+nonzero-or-diagonal destination entries without enumerating the Fock space,
+whose half-filled dimension is107507208733336176461620. Electric energy is
+a self-adjoint positive diagonal operator; the finite magnetic-shift and
+fermion-hopping sums are bounded symmetric perturbations. Thus the named
+full Hamiltonian has a self-adjoint semibounded closure. This defines the
+quantum model; it is not a whole-spectrum diagonalization or4D continuum
+proof. The exterior-freezing limitation applies to the octagon benchmark,
+not to this full compiler.
+
 A separate standard1D refinement provides a real continuum control. The
 initial `m_lat=0` regulator missed the known Schwinger gap by about21% at
 ten sites. The published mass matching
@@ -214,7 +234,8 @@ link/continuum work is also [prior art](https://arxiv.org/abs/2104.00025).
 
 ## Reproduce and remaining boundary
 
-Run the four `w33_pass11965_11966`, `11967`, `11968`, `11969` producers and
+Run the five `w33_pass11965_11966`, `11967`, `11968`, `11969_quantum`,
+`11969_full_native` producers and
 `tests/test_w33_pass11965_11969_five_dynamical_fronts.py`. Certificates retain
 the mathematical and physical scope of each front; the dedicated hosted
 workflow checks frozen and regenerated results separately.

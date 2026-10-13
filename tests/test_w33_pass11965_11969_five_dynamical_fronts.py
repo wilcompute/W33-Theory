@@ -11,6 +11,7 @@ import w33_pass11965_11966_cp_transmission_soft_modulus as cp
 import w33_pass11967_flavour_orientation_selector as flavour
 import w33_pass11968_native_spin2_constraint_completion as gravity
 import w33_pass11969_quantum_gauge_fermion as quantum
+import w33_pass11969_full_native_gauss_compiler as native
 
 
 def stored(name):
@@ -159,3 +160,35 @@ def test_charge_extraction_retains_a_held_out_distance():
     assert all(x['held_out_separation']==4. for x in d['samples'])
     assert all(abs(x['extracted_screening_charge']-.7)<.04 for x in d['samples'])
     assert all(x['held_out_error']<.02 for x in d['samples'])
+
+
+@pytest.fixture(scope='module')
+def native_compiler():return native.NativeGaussCompiler()
+
+
+def test_full_native_integer_coordinate_map_is_bijective(native_compiler):
+    c=native_compiler
+    bits=sum(1<<i for i in range(40));l=tuple(i%5-2 for i in range(81))
+    n=c.flux((bits,l))
+    assert np.array_equal(n[c.chords],l)
+    assert np.array_equal(c.B.T@n+c.occupation(bits)-c.background,np.zeros(80))
+    assert len(c.chords)==160-80+1
+
+
+def test_full_native_action_has_hermitian_reverse_moves(native_compiler):
+    c=native_compiler;state=(sum(1<<i for i in range(40)),tuple([0]*81))
+    action=c.apply_H(state)
+    edge=next(e for e in range(160) if c.hop(state,e) is not None)
+    target,_,direction=c.hop(state,edge)
+    assert action[target]==c.apply_H(target)[state]
+    delta=c.flux(target)-c.flux(state)
+    assert np.count_nonzero(delta)==1 and delta[edge]==-direction
+
+
+def test_full_native_plaquette_map_preserves_all_gauss_generators(native_compiler):
+    c=native_compiler;state=(sum(1<<i for i in range(40)),tuple([0]*81))
+    n=c.flux(state)
+    for row in (0,250,1000,1384):
+        shifted=c.plaquette(state,row)
+        assert np.array_equal(c.flux(shifted)-n,c.P[row])
+        assert c.plaquette(shifted,row,-1)==state
