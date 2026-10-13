@@ -547347,6 +547347,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "74c340a2c4e5a120c0e3c7a00638b9e97a63c5ce595c3289bea7cb83d5993409",
+      "normalized_formula": "Atradius=.02,v_mean2lieswithin1.1e-4of2inallsixdirections,consistentwiththepreviouslyestablishedleadingacousticcone.Thesimplefinite-differencecoefficient[v_mean2(.04)\u2212v_mean2(.02)]/(.042\u2212.022),aproxyfortheorder-|k|^4terminomega2,is",
+      "numeric_literals": [
+        ".02",
+        ".022",
+        ".04",
+        ".042",
+        ".1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md",
+          "raw": "At radius=.02, v_mean\u00b2 lies within 1.1e-4 of 2 in all six directions, consistent with the previously established leading acoustic cone. The simple finite-difference coefficient [v_mean\u00b2(.04)\u2212v_mean\u00b2(.02)]/(.04\u00b2\u2212.02\u00b2), a proxy for the order-|k|^4 term in omega\u00b2, is:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d244ef4f9b702dbef0c42582030c96ae5016445189c94663711e4df298e65c39",
+      "structural_formula": "Atradius=#,v_mean2lieswithin1#e-#of2inallsixdirections,consistentwiththepreviouslyestablishedleadingacousticcone.Thesimplefinite-differencecoefficient[v_mean2(#)\u2212v_mean2(#)]/(#\u2212#),aproxyfortheorder-|k|^#terminomega2,is"
+    },
+    {
+      "file_count": 1,
       "formula_id": "782daec9b9f8ef645b7603fe55bf13d05077af822fa6a6d3275870293b0d5789",
       "normalized_formula": "Ats=u=t=1/10theproducerbuildstheactual12x12realgaugemassGram",
       "numeric_literals": [
@@ -583988,6 +584020,34 @@
       },
       "structural_family_id": "ebd11113c57149237cf3efd783a250cb44bb2933af4d9cadbcf84c52f6a9fe47",
       "structural_formula": "Definetwoindependentlyrandomizedbinaryswitchespershot:pumpsign`S_i\u2208{\u00b1#}`andnonlinear-gateenable`G_i\u2208{\u00b1#}`(on/off);readatwo-modehomodynestatistic`W_i=P_X,i(P_Y,i2-v_Y)`.Usefactorialinteractionscore`T=sumG_iS_iW_i`.Inexpectationthiscancels*pump-only*and*gate-only*nuisancetermswhilepreservingatruesignalthatrequires*both*pumpsignandthegate.Underthestrong^sharpgate-null^thatswitchingGchangesnoreadout,conditionalonSandallobservedW,independentbalancedGmakesthefinite-NHoeffdingtest"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "55c81fb8aca4eb4e679e4104150f894ffb6dd4e1310b84a21933e2b9aa620494",
+      "normalized_formula": "Definev_mean2(k)=(omega_12+omega_22)/(2|k|2).Atradius|k|=.16",
+      "numeric_literals": [
+        ".16",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md",
+          "raw": "Define v_mean\u00b2(k)=(omega_1\u00b2+omega_2\u00b2)/(2|k|\u00b2). At radius |k|=.16:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0052919891efcdb49ab1236bbe70dfe559dcdf84188663c8cc98e11d5460c2fd",
+      "structural_formula": "Definev_mean2(k)=(omega_1#+omega_2#)/(#|k|#).Atradius|k|=#"
     },
     {
       "file_count": 1,
@@ -748975,6 +749035,45 @@
       },
       "structural_family_id": "e5b969c82968dcc5e4f37593d4ba05466627e3cf92c42e416e1a9e75650e4877",
       "structural_formula": "ReconstructedallFIVEdistinctstoredparameterrootsfromPass1#'sactualfittedrealMajoranamatrices,sharedWeylkernelandcharged-leptonClebschmatrices,preservingmassorderinganditsphysicalCKMconvention.ChoseDeltam3#=#eV2onlyasanEXTERNALillustrativeabsolutenormalization(notdynamicallyderived).Inthefittedchargedbasiscomputedconditionalm_bb=|M_nu,ee|andsumofallthreelightmasses"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a115f4963b03819b1ea1d9400cbc3b5cb983d144e7bf7bd9b630650575c9a0ca",
+      "normalized_formula": "ReconstructtheactualTOE38plaquette+commutatoroperatorwithitsselectedW33deckmarkingand160positivePass11956kineticweights.Atsixwavevectordirectionsx,y,z,(1,1,0),(1,1,1),(2,-1,3)andfourradii.02,.04,.08,.16,diagonalizetheHermitian160x160matrixH(k).Thegaugezeromodesareexcludedandthetwosmalleststrictlypositiveeigenvaluesretained.Thethirdpositivemoderemainsgappedatomega2about91.57,andtheexactlocalgaugeclosureP(k)B(k)=0isnumericallyverified",
+      "numeric_literals": [
+        "-1",
+        ".04",
+        ".08",
+        ".16",
+        "0",
+        "02",
+        "1",
+        "1.57",
+        "1956",
+        "2",
+        "3",
+        "60",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 31,
+          "path": "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md",
+          "raw": "Reconstruct the actual TOE38 plaquette+commutator operator with its selected W33 deck marking and 160 positive Pass11956 kinetic weights. At six wavevector directions x, y, z, (1,1,0), (1,1,1), (2,-1,3) and four radii .02, .04, .08, .16, diagonalize the Hermitian 160x160 matrix H(k). The gauge zero modes are excluded and the two smallest strictly positive eigenvalues retained. The third positive mode remains gapped at omega\u00b2 about91.57, and the exact local gauge closure P(k)B(k)=0 is numerically verified.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "88e859641cc0f3976db47cd3f7ba82b24cca8d42894c2bef9d7dbbc3672b4d09",
+      "structural_formula": "ReconstructtheactualTOE3#plaquette+commutatoroperatorwithitsselectedW3#deckmarkingand1#positivePass1#kineticweights.Atsixwavevectordirectionsx,y,z,(#,#,#),(#,#,#),(#,#,#)andfourradii.#,#,#,#,diagonalizetheHermitian1#x1#matrixH(k).Thegaugezeromodesareexcludedandthetwosmalleststrictlypositiveeigenvaluesretained.Thethirdpositivemoderemainsgappedatomega2about9#,andtheexactlocalgaugeclosureP(k)B(k)=#isnumericallyverified"
     },
     {
       "file_count": 1,
@@ -995094,6 +995193,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "67f31ce453ebf27a194a02a7c748d9b60642171a1ad4fc65aafed9cc317f1cbc",
+      "normalized_formula": "^Theorem(standardlattice-dispersionobstruction,appliedtothisW33model):^Foranyconstantc>0thereisnononemptyopensetUinrealthree-momentumspacesuchthatc2|k|2isaneigenvalueofH(k)foreverykinU",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/2026-10-13_toe54_physics_lorentz_continuum_gate.md",
+          "raw": "**Theorem (standard lattice-dispersion obstruction, applied to this W33 model):** For any constant c>0 there is no nonempty open set U in real three-momentum space such that c\u00b2|k|\u00b2 is an eigenvalue of H(k) for every k in U.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "2eb2a1f62a37aa8468f968019e7cc981df05c348c62cfb5eb606bda53aaf24cd",
+      "structural_formula": "^Theorem(standardlattice-dispersionobstruction,appliedtothisW3#model):^Foranyconstantc>#thereisnononemptyopensetUinrealthree-momentumspacesuchthatc2|k|#isaneigenvalueofH(k)foreverykinU"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d97686c50c888a82b2d207b260a03ef840e42b0a410fc903b28aef7a36da7ebb",
       "normalized_formula": "^Theorem20(TheAlphaCode):^Letp=137=\u03b1\u22121(theintegerpartoftheinversefinestructureconstant).Then",
       "numeric_literals": [
@@ -1074722,6 +1074850,33 @@
       },
       "structural_family_id": "402f35455ccd29bfa5e95db7e6de89b02dd262ceb287a4c3d3762f75f83283c6",
       "structural_formula": "assertnp.max(np.abs(np.sort(ev)-np.sort(np.array(pred))))<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "09d60a409217088b645081a3306ccdd2987ee6500ae1cfa193e73d094e91f69d",
+      "normalized_formula": "assertnrm_bound>0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe54_lorentz_dispersion.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 64,
+          "path": "analysis/w33_20261013_toe54_lorentz_dispersion.py",
+          "raw": "assert nrm_bound>0",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "d94501a1aa2496cce7216421be7e127896dbb94eb9650b868d10fc606becb377",
+      "structural_formula": "assertnrm_bound>#"
     },
     {
       "file_count": 1,
@@ -1392731,6 +1392886,34 @@
       },
       "structural_family_id": "bf8983d7551191faacd9afb5ab69f84404d643bc7550a12eee204df1df429aaf",
       "structural_formula": "nr,ne,A,leafset,mask,lam=found;cols,num,den=admissible_columns(A);adj=compatibility(cols,num,den);clique,nodes=maximum_clique(adj);proof=prove(adj,(#<<len(adj))#,len(clique));assertverify(adj,(#<<len(adj))#,len(clique),proof)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1d7fff4dc5e029fc438dfc95593d9f4d3a2f2bea26438b82ef046aa27540a078",
+      "normalized_formula": "nrm_bound=float(sum((len(walk)-1)^2forwalkinloops))/min(w)",
+      "numeric_literals": [
+        "-1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe54_lorentz_dispersion.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 63,
+          "path": "analysis/w33_20261013_toe54_lorentz_dispersion.py",
+          "raw": "nrm_bound=float(sum((len(walk)-1)**2 for walk in loops))/min(w)",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "a641afdfbab9a7e6deb3552c2d49138baaa1852f81bc3f1c6ac5721c3e538f8e",
+      "structural_formula": "nrm_bound=float(sum((len(walk)#)^#forwalkinloops))/min(w)"
     },
     {
       "file_count": 1,
@@ -1787396,9 +1787579,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T01:24:19-04:00",
+  "frozen_at": "2026-10-13T01:37:20-04:00",
   "pass": 398,
-  "repository_head": "1ab8195e987adf2b20509beffa4afa15345c3df2",
+  "repository_head": "57865bcc77999f5d98f54e935a3d1259500bcc85",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1934640,6 +1934823,14 @@
     },
     {
       "exact_formula_ids": [
+        "74c340a2c4e5a120c0e3c7a00638b9e97a63c5ce595c3289bea7cb83d5993409"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d244ef4f9b702dbef0c42582030c96ae5016445189c94663711e4df298e65c39",
+      "structural_formula": "Atradius=#,v_mean2lieswithin1#e-#of2inallsixdirections,consistentwiththepreviouslyestablishedleadingacousticcone.Thesimplefinite-differencecoefficient[v_mean2(#)\u2212v_mean2(#)]/(#\u2212#),aproxyfortheorder-|k|^#terminomega2,is"
+    },
+    {
+      "exact_formula_ids": [
         "782daec9b9f8ef645b7603fe55bf13d05077af822fa6a6d3275870293b0d5789"
       ],
       "exact_member_count": 1,
@@ -1944712,6 +1944903,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ebd11113c57149237cf3efd783a250cb44bb2933af4d9cadbcf84c52f6a9fe47",
       "structural_formula": "Definetwoindependentlyrandomizedbinaryswitchespershot:pumpsign`S_i\u2208{\u00b1#}`andnonlinear-gateenable`G_i\u2208{\u00b1#}`(on/off);readatwo-modehomodynestatistic`W_i=P_X,i(P_Y,i2-v_Y)`.Usefactorialinteractionscore`T=sumG_iS_iW_i`.Inexpectationthiscancels*pump-only*and*gate-only*nuisancetermswhilepreservingatruesignalthatrequires*both*pumpsignandthegate.Underthestrong^sharpgate-null^thatswitchingGchangesnoreadout,conditionalonSandallobservedW,independentbalancedGmakesthefinite-NHoeffdingtest"
+    },
+    {
+      "exact_formula_ids": [
+        "55c81fb8aca4eb4e679e4104150f894ffb6dd4e1310b84a21933e2b9aa620494"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0052919891efcdb49ab1236bbe70dfe559dcdf84188663c8cc98e11d5460c2fd",
+      "structural_formula": "Definev_mean2(k)=(omega_1#+omega_2#)/(#|k|#).Atradius|k|=#"
     },
     {
       "exact_formula_ids": [
@@ -1989238,6 +1989437,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e5b969c82968dcc5e4f37593d4ba05466627e3cf92c42e416e1a9e75650e4877",
       "structural_formula": "ReconstructedallFIVEdistinctstoredparameterrootsfromPass1#'sactualfittedrealMajoranamatrices,sharedWeylkernelandcharged-leptonClebschmatrices,preservingmassorderinganditsphysicalCKMconvention.ChoseDeltam3#=#eV2onlyasanEXTERNALillustrativeabsolutenormalization(notdynamicallyderived).Inthefittedchargedbasiscomputedconditionalm_bb=|M_nu,ee|andsumofallthreelightmasses"
+    },
+    {
+      "exact_formula_ids": [
+        "a115f4963b03819b1ea1d9400cbc3b5cb983d144e7bf7bd9b630650575c9a0ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "88e859641cc0f3976db47cd3f7ba82b24cca8d42894c2bef9d7dbbc3672b4d09",
+      "structural_formula": "ReconstructtheactualTOE3#plaquette+commutatoroperatorwithitsselectedW3#deckmarkingand1#positivePass1#kineticweights.Atsixwavevectordirectionsx,y,z,(#,#,#),(#,#,#),(#,#,#)andfourradii.#,#,#,#,diagonalizetheHermitian1#x1#matrixH(k).Thegaugezeromodesareexcludedandthetwosmalleststrictlypositiveeigenvaluesretained.Thethirdpositivemoderemainsgappedatomega2about9#,andtheexactlocalgaugeclosureP(k)B(k)=#isnumericallyverified"
     },
     {
       "exact_formula_ids": [
@@ -2052903,6 +2053110,14 @@
     },
     {
       "exact_formula_ids": [
+        "67f31ce453ebf27a194a02a7c748d9b60642171a1ad4fc65aafed9cc317f1cbc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2eb2a1f62a37aa8468f968019e7cc981df05c348c62cfb5eb606bda53aaf24cd",
+      "structural_formula": "^Theorem(standardlattice-dispersionobstruction,appliedtothisW3#model):^Foranyconstantc>#thereisnononemptyopensetUinrealthree-momentumspacesuchthatc2|k|#isaneigenvalueofH(k)foreverykinU"
+    },
+    {
+      "exact_formula_ids": [
         "d97686c50c888a82b2d207b260a03ef840e42b0a410fc903b28aef7a36da7ebb"
       ],
       "exact_member_count": 1,
@@ -2074558,6 +2074773,14 @@
       "exact_member_count": 1,
       "structural_family_id": "402f35455ccd29bfa5e95db7e6de89b02dd262ceb287a4c3d3762f75f83283c6",
       "structural_formula": "assertnp.max(np.abs(np.sort(ev)-np.sort(np.array(pred))))<#"
+    },
+    {
+      "exact_formula_ids": [
+        "09d60a409217088b645081a3306ccdd2987ee6500ae1cfa193e73d094e91f69d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d94501a1aa2496cce7216421be7e127896dbb94eb9650b868d10fc606becb377",
+      "structural_formula": "assertnrm_bound>#"
     },
     {
       "exact_formula_ids": [
@@ -2160772,6 +2160995,14 @@
       "exact_member_count": 1,
       "structural_family_id": "bf8983d7551191faacd9afb5ab69f84404d643bc7550a12eee204df1df429aaf",
       "structural_formula": "nr,ne,A,leafset,mask,lam=found;cols,num,den=admissible_columns(A);adj=compatibility(cols,num,den);clique,nodes=maximum_clique(adj);proof=prove(adj,(#<<len(adj))#,len(clique));assertverify(adj,(#<<len(adj))#,len(clique),proof)"
+    },
+    {
+      "exact_formula_ids": [
+        "1d7fff4dc5e029fc438dfc95593d9f4d3a2f2bea26438b82ef046aa27540a078"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a641afdfbab9a7e6deb3552c2d49138baaa1852f81bc3f1c6ac5721c3e538f8e",
+      "structural_formula": "nrm_bound=float(sum((len(walk)#)^#forwalkinloops))/min(w)"
     },
     {
       "exact_formula_ids": [
@@ -2265114,20 +2265345,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87310875,
-    "exact_formula_families": 61128,
-    "files_scanned": 11964,
-    "formula_occurrences": 67103,
+    "bytes_scanned": 87323837,
+    "exact_formula_families": 61134,
+    "files_scanned": 11966,
+    "formula_occurrences": 67109,
     "status_occurrences": {
-      "certified_or_theorem": 4874,
+      "certified_or_theorem": 4875,
       "killed_or_retracted": 1624,
-      "open_or_conditional": 2223,
+      "open_or_conditional": 2226,
       "preregistered": 32,
       "retrospective_fit": 5199,
-      "unclassified": 53151
+      "unclassified": 53153
     },
-    "structural_families": 59506
+    "structural_families": 59512
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "a7b00646b912c8ad67d32a2a2cc48c2985386e3b3804a78a25a2938b0d9ba981"
+  "universe_sha256": "e638befcd8e6e60a6cbec47e980aa19055b67e70692106c893b741964f43460d"
 }
