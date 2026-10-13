@@ -1,0 +1,341 @@
+{
+  "status": "PASS_FORMAL_FIXED_FREE_BAND_A2_CORRECTION_SUPPRESSION",
+  "model": "TOE54 actual native W33 two lowest positive bands; pphysical dimensionless comparison fixed |p|=0.16 and a in {1,1/2,1/4}",
+  "definition": "omega_a\u00b2(p)=lambda_W33(a*p)/a\u00b2, with external time rescaling; compare omega_a\u00b2/p\u00b2 to 2.",
+  "per_direction": [
+    {
+      "direction": "axis_x",
+      "sequence": [
+        {
+          "a": 1.0,
+          "omega2_over_a2": [
+            0.05102645631075329,
+            0.05104372358570477
+          ],
+          "squared_phase_speeds": [
+            1.9932209496388003,
+            1.9938954525665924
+          ],
+          "mean_speed_squared": 1.9935582011026964,
+          "mean_speed_squared_absolute_error": 0.006441798897303563,
+          "squared_polarization_difference": 0.0006745029277921422
+        },
+        {
+          "a": 0.5,
+          "omega2_over_a2": [
+            0.05115653446426058,
+            0.05116087112998849
+          ],
+          "squared_phase_speeds": [
+            1.9983021275101787,
+            1.9984715285151753
+          ],
+          "mean_speed_squared": 1.998386828012677,
+          "mean_speed_squared_absolute_error": 0.0016131719873229144,
+          "squared_polarization_difference": 0.0001694010049966277
+        },
+        {
+          "a": 0.25,
+          "omega2_over_a2": [
+            0.05118912863071149,
+            0.05119021404044485
+          ],
+          "squared_phase_speeds": [
+            1.9995753371371674,
+            1.9996177359548768
+          ],
+          "mean_speed_squared": 1.9995965365460222,
+          "mean_speed_squared_absolute_error": 0.0004034634539777926,
+          "squared_polarization_difference": 4.239881770939924e-05
+        }
+      ],
+      "mean_speed_error_halving_ratios": [
+        0.2504225936016356,
+        0.2501056658238573
+      ],
+      "polarization_split_halving_ratios": [
+        0.25114939908582734,
+        0.2502866952309007
+      ]
+    },
+    {
+      "direction": "axis_y",
+      "sequence": [
+        {
+          "a": 1.0,
+          "omega2_over_a2": [
+            0.05102978669472477,
+            0.051035678014388706
+          ],
+          "squared_phase_speeds": [
+            1.9933510427626864,
+            1.9935811724370587
+          ],
+          "mean_speed_squared": 1.9934661075998725,
+          "mean_speed_squared_absolute_error": 0.006533892400127472,
+          "squared_polarization_difference": 0.00023012967437230358
+        },
+        {
+          "a": 0.5,
+          "omega2_over_a2": [
+            0.05115737104939972,
+            0.051158850750183504
+          ],
+          "squared_phase_speeds": [
+            1.9983348066171764,
+            1.998392607429043
+          ],
+          "mean_speed_squared": 1.9983637070231097,
+          "mean_speed_squared_absolute_error": 0.0016362929768902745,
+          "squared_polarization_difference": 5.780081186657071e-05
+        },
+        {
+          "a": 0.25,
+          "omega2_over_a2": [
+            0.051189338026741985,
+            0.051189708384245955
+          ],
+          "squared_phase_speeds": [
+            1.9995835166696088,
+            1.9995979837596076
+          ],
+          "mean_speed_squared": 1.9995907502146082,
+          "mean_speed_squared_absolute_error": 0.00040924978539180756,
+          "squared_polarization_difference": 1.4467089998859706e-05
+        }
+      ],
+      "mean_speed_error_halving_ratios": [
+        0.25043157687420003,
+        0.2501078909289059
+      ],
+      "polarization_split_halving_ratios": [
+        0.25116626973130207,
+        0.25029215908344005
+      ]
+    },
+    {
+      "direction": "axis_z",
+      "sequence": [
+        {
+          "a": 1.0,
+          "omega2_over_a2": [
+            0.051015129249408965,
+            0.05104918072086486
+          ],
+          "squared_phase_speeds": [
+            1.9927784863050375,
+            1.9941086219087836
+          ],
+          "mean_speed_squared": 1.9934435541069107,
+          "mean_speed_squared_absolute_error": 0.0065564458930893466,
+          "squared_polarization_difference": 0.0013301356037460632
+        },
+        {
+          "a": 0.5,
+          "omega2_over_a2": [
+            0.05115368843108741,
+            0.05116224128143016
+          ],
+          "squared_phase_speeds": [
+            1.998190954339352,
+            1.9985250500558656
+          ],
+          "mean_speed_squared": 1.9983580021976088,
+          "mean_speed_squared_absolute_error": 0.0016419978023911597,
+          "squared_polarization_difference": 0.00033409571651366043
+        },
+        {
+          "a": 0.25,
+          "omega2_over_a2": [
+            0.05118841623009987,
+            0.051190556945873565
+          ],
+          "squared_phase_speeds": [
+            1.9995475089882762,
+            1.999631130698186
+          ],
+          "mean_speed_squared": 1.999589319843231,
+          "mean_speed_squared_absolute_error": 0.0004106801567689278,
+          "squared_polarization_difference": 8.362170990983131e-05
+        }
+      ],
+      "mean_speed_error_halving_ratios": [
+        0.2504402277035284,
+        0.25011005262666897
+      ],
+      "polarization_split_halving_ratios": [
+        0.25117417770996137,
+        0.25029267295742835
+      ]
+    },
+    {
+      "direction": "diagonal_xy",
+      "sequence": [
+        {
+          "a": 1.0,
+          "omega2_over_a2": [
+            0.051086560025522726,
+            0.0511015346933322
+          ],
+          "squared_phase_speeds": [
+            1.9955687509969813,
+            1.996153698958289
+          ],
+          "mean_speed_squared": 1.9958612249776353,
+          "mean_speed_squared_absolute_error": 0.004138775022364705,
+          "squared_polarization_difference": 0.0005849479613078135
+        },
+        {
+          "a": 0.5,
+          "omega2_over_a2": [
+            0.051171432362175015,
+            0.05117553048577107
+          ],
+          "squared_phase_speeds": [
+            1.9988840766474614,
+            1.9990441596004325
+          ],
+          "mean_speed_squared": 1.998964118123947,
+          "mean_speed_squared_absolute_error": 0.0010358818760529687,
+          "squared_polarization_difference": 0.00016008295297109676
+        },
+        {
+          "a": 0.25,
+          "omega2_over_a2": [
+            0.05119271150967784,
+            0.05119402539615016
+          ],
+          "squared_phase_speeds": [
+            1.9997152933467908,
+            1.9997666170371156
+          ],
+          "mean_speed_squared": 1.9997409551919532,
+          "mean_speed_squared_absolute_error": 0.0002590448080468377,
+          "squared_polarization_difference": 5.132369032478934e-05
+        }
+      ],
+      "mean_speed_error_halving_ratios": [
+        0.2502870705596154,
+        0.2500717640064124
+      ],
+      "polarization_split_halving_ratios": [
+        0.2736704178149231,
+        0.32060684396580263
+      ]
+    },
+    {
+      "direction": "diagonal_xyz",
+      "sequence": [
+        {
+          "a": 1.0,
+          "omega2_over_a2": [
+            0.05109224171631749,
+            0.05111831913323899
+          ],
+          "squared_phase_speeds": [
+            1.9957906920436517,
+            1.996809341142148
+          ],
+          "mean_speed_squared": 1.9963000165928997,
+          "mean_speed_squared_absolute_error": 0.0036999834071003157,
+          "squared_polarization_difference": 0.0010186490984962493
+        },
+        {
+          "a": 0.5,
+          "omega2_over_a2": [
+            0.05117302252330175,
+            0.05117956176132938
+          ],
+          "squared_phase_speeds": [
+            1.9989461923164744,
+            1.9992016313019287
+          ],
+          "mean_speed_squared": 1.9990739118092016,
+          "mean_speed_squared_absolute_error": 0.0009260881907984242,
+          "squared_polarization_difference": 0.000255438985454326
+        },
+        {
+          "a": 0.25,
+          "omega2_over_a2": [
+            0.05119325326071632,
+            0.05119488931328377
+          ],
+          "squared_phase_speeds": [
+            1.999736455496731,
+            1.9998003638001471
+          ],
+          "mean_speed_squared": 1.9997684096484392,
+          "mean_speed_squared_absolute_error": 0.00023159035156083974,
+          "squared_polarization_difference": 6.390830341618248e-05
+        }
+      ],
+      "mean_speed_error_halving_ratios": [
+        0.2502952280870366,
+        0.2500737552448162
+      ],
+      "polarization_split_halving_ratios": [
+        0.25076249105939447,
+        0.2501900925675641
+      ]
+    },
+    {
+      "direction": "skew",
+      "sequence": [
+        {
+          "a": 1.0,
+          "omega2_over_a2": [
+            0.0510652975870378,
+            0.05110313074134544
+          ],
+          "squared_phase_speeds": [
+            1.994738186993664,
+            1.9962160445838062
+          ],
+          "mean_speed_squared": 1.9954771157887352,
+          "mean_speed_squared_absolute_error": 0.004522884211264788,
+          "squared_polarization_difference": 0.0014778575901421842
+        },
+        {
+          "a": 0.5,
+          "omega2_over_a2": [
+            0.05116617778623117,
+            0.05117584940540815
+          ],
+          "squared_phase_speeds": [
+            1.998678819774655,
+            1.9990566173987556
+          ],
+          "mean_speed_squared": 1.9988677185867054,
+          "mean_speed_squared_absolute_error": 0.001132281413294578,
+          "squared_polarization_difference": 0.00037779762410061757
+        },
+        {
+          "a": 0.25,
+          "omega2_over_a2": [
+            0.05119145310090979,
+            0.0511940486947423
+          ],
+          "squared_phase_speeds": [
+            1.9996661367542887,
+            1.9997675271383708
+          ],
+          "mean_speed_squared": 1.9997168319463299,
+          "mean_speed_squared_absolute_error": 0.0002831680536701242,
+          "squared_polarization_difference": 0.00010139038408207846
+        }
+      ],
+      "mean_speed_error_halving_ratios": [
+        0.250344992355651,
+        0.2500862862759492
+      ],
+      "polarization_split_halving_ratios": [
+        0.2556387209570509,
+        0.26837221203666306
+      ]
+    }
+  ],
+  "n_directions": 6,
+  "reference_scaling": "For a smooth even low-energy dispersion lambda(k)=2|k|\u00b2 + O(|k|^4), the rescaled correction is O(a\u00b2 |p|^4). The sampled halving ratios are compatible with this, not an exact proof of a differentiable interacting QFT continuum.",
+  "physical_gate": "Scaling a formal Fourier variable and energy by hand does not determine a physical graph spacing or coarse-graining of interacting couplings, a renormalization-group flow, Ward identities of quantized photons, or gravity. A W33 sequence of refined local systems is not constructed.",
+  "input_certificate": "data/w33_20261013_toe54_finite_lorentz_dispersion.json"
+}

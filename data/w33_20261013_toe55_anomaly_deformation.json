@@ -1,0 +1,68 @@
+{
+  "status": "PASS_ANOMALY_FREE_HYPERCHARGE_CONTINUOUS_DEFORMATION",
+  "left_handed_fields": [
+    {
+      "field": "Q",
+      "su3_dimension": 3,
+      "su2_dimension": 2,
+      "su3_cubic_chirality": 1,
+      "hypercharge_Y": "1/6",
+      "B_minus_L": "1/3"
+    },
+    {
+      "field": "u_c",
+      "su3_dimension": 3,
+      "su2_dimension": 1,
+      "su3_cubic_chirality": -1,
+      "hypercharge_Y": "-2/3",
+      "B_minus_L": "-1/3"
+    },
+    {
+      "field": "d_c",
+      "su3_dimension": 3,
+      "su2_dimension": 1,
+      "su3_cubic_chirality": -1,
+      "hypercharge_Y": "1/3",
+      "B_minus_L": "-1/3"
+    },
+    {
+      "field": "L",
+      "su3_dimension": 1,
+      "su2_dimension": 2,
+      "su3_cubic_chirality": 0,
+      "hypercharge_Y": "-1/2",
+      "B_minus_L": "-1"
+    },
+    {
+      "field": "e_c",
+      "su3_dimension": 1,
+      "su2_dimension": 1,
+      "su3_cubic_chirality": 0,
+      "hypercharge_Y": "1",
+      "B_minus_L": "1"
+    },
+    {
+      "field": "nu_c",
+      "su3_dimension": 1,
+      "su2_dimension": 1,
+      "su3_cubic_chirality": 0,
+      "hypercharge_Y": "0",
+      "B_minus_L": "1"
+    }
+  ],
+  "hypercharge_family": "Y(t)=Y_SM+t*(B-L), with left-handed nu_c included",
+  "SU3_cubic_anomaly": "0",
+  "SU3_sq_U1_anomaly": "0",
+  "SU2_sq_U1_anomaly": "0",
+  "gravitational_U1_anomaly": "0",
+  "U1_cubed_anomaly": "0",
+  "SU2_Witten_doublet_count": 4,
+  "SU2_Witten_even": true,
+  "nonstandard_t": "1/7",
+  "nonstandard_neutrino_electric_charge": "-1/7",
+  "control_shift_only_Q_hypercharge": "1/6",
+  "control_SU2_sq_U1_anomaly_nonzero": "1/4",
+  "result": "Anomaly cancellation plus this selected SM+nu_c representation list DOES NOT fix the physical hypercharges: continuous anomaly-free Y+t(B-L). Observational charge quantization and additional group/UV input must select t=0. This is not a new result about SM; it is a W33 project selection gate.",
+  "derivation_scope": "Source fields taken as known Standard Model+sterile nu_c, not derived from W33 40 graph. Chiral gauge lattice regulator or observed neutrino electric charge not derived here.",
+  "prior_art": "Textbook SM anomaly cancellation and anomaly-free B-L with three sterile neutrinos; global Witten SU2 even-doublet check."
+}

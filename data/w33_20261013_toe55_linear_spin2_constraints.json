@@ -1,0 +1,15 @@
+{
+  "status": "PASS_LINEARIZED_SPIN2_CONSTRAINT_POSITIVE_CONTROL",
+  "model": "Continuum massless spin2 linearized Fierz-Pauli; independent benchmark NOT derived from W33",
+  "canonical_spatial_h_components": 6,
+  "canonical_pi_components": 6,
+  "linearized_H_constraint_gradient": "[-k1**2 - k2**2, -k0**2 - k2**2, -k0**2 - k1**2, 2*k0*k1, 2*k0*k2, 2*k1*k2]",
+  "momentum_constraint_gradient": "C_i=k_j*pi_ij; offdiagonal canonical p_ij=2*pi_ij",
+  "analytic_H_vs_momentum_poisson_bracket_matrix": "Matrix([[0, 0, 0]])",
+  "constraint_classification": "4 linearly independent first-class constraints for every nonzero 3-vector k",
+  "phase_space_count": "12-2*4=4 physical real phase dimensions, two configuration polarizations",
+  "TT_projector_rank_at_k_1_2_3": 2,
+  "TT_gauge_shift_exactly_zero": true,
+  "native_W33_gravity_status": "NO map, action or Poisson-closed nonlinear Hamiltonian/diffeomorphism constraint algebra of this type exists in this certificate. TOE51 native Maxwell+160 metric scalar pairs still retains scalar oscillators and cannot be called gravity.",
+  "prior_art": "Standard massless Fierz-Pauli canonical linearized GR, not novel spin-two physics."
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PASS_TOE55_FIVE_FRONT_UNIFIED_CLASSICAL_ACTION_EVIDENCE_LEDGER",
+  "prior_repo_owner_alpha": "TOE40 precomputed W33 137+40/1111 vs 2022 CODATA error >210 sigma. This repetition is a regression; no independent new physical inference.",
+  "bare_W33_inverse_alpha_fraction": "152247/1111",
+  "bare_W33_inverse_alpha_decimal": 137.03600360036003,
+  "CODATA2022_NIST_inverse_alpha": 137.035999177,
+  "CODATA2022_inverse_alpha_std_uncertainty": 2.1e-08,
+  "uncorrected_delta_alpha_inverse": 4.4233600360036e-06,
+  "uncorrected_discrepancy_sigma_if_treated_as_exact": 210.63619219064765,
+  "important_scope": "Neither a missing renormalization correction nor a physical uncertainty budget is computed; sigma comparison invalidates the claim of an exact uncorrected bare prediction, NOT an entire W33 UV completion.",
+  "native_action_gauge_coupling_families": {
+    "0.1": {
+      "illustrative_tree_inverse_alpha_if_canonical_QED_normalization": 1256.637061435917,
+      "native_hopping_energy": 364.11506334351674
+    },
+    "0.3": {
+      "illustrative_tree_inverse_alpha_if_canonical_QED_normalization": 139.62634015954637,
+      "native_hopping_energy": 364.17629855666473
+    },
+    "0.7": {
+      "illustrative_tree_inverse_alpha_if_canonical_QED_normalization": 25.645654315018724,
+      "native_hopping_energy": 364.07518019810254
+    }
+  },
+  "lattice_to_QED_normalization_warning": "Illustrative alpha=g\u00b2/4pi only in canonical continuum U1 normalization and with fixed matter charge, and not established for this dimensionless native lattice. Photon spectrum and gauge closure do not select any g.",
+  "shared_native_action": "Classical W33 Hamiltonian H(E,A,w,pw,z,p;g,kappa,m\u00b2,M,kw,w0) built in native_matter_gauge producer. Its U1 constraints form an Abelian first-class algebra; the same action contains dynamical link weights and charged scalar matter.",
+  "canonical_configuration_variables": {
+    "Maxwell_links": 160,
+    "complex_scalar_site_real_components": 160,
+    "metric_link_scalar_variables": 160,
+    "total": 480
+  },
+  "constraints": {
+    "charged_local_U1_first_class": 80,
+    "native_gravitational_Hamiltonian_and_spatial_diffeomorphism": 0,
+    "physical_configuration_count_at_generic_scalar_configuration_after_U1_reduction": 400
+  },
+  "link_weight_momentum_Hessian": {
+    "dimension": 160,
+    "M": 2.0,
+    "full_rank": 160,
+    "eigenvalue_all": 0.5,
+    "meaning": "No primary constraints for w, and all 160 link-weight scalar momenta are dynamical"
+  },
+  "not_spin2": "The constrained 480-config scalar+Maxwell finite theory still has 400 classical physical configuration dimensions, including 160 dynamical weight scalar modes. It is NOT Einstein gravity, nor a demonstrated spin-two field. Comparing different lattices' mode counts is not physical degree matching.",
+  "anomaly_gate": "Anomaly cancellation was checked for a *supplied* SM+nu_c generation, with a continuum Y+t(B-L) family. Native action contains only complex scalars, not those Weyl fermions.",
+  "five_front_gate_status": {
+    "dynamical_gravity": "FAIL_NATIVE: only known continuum Fierz-Pauli spin2 benchmark passes",
+    "electromagnetism": "PASS_CLASSICAL_NATIVE_LOCAL_U1: photon QED and continuum Lorentz unproved",
+    "standard_model": "PASS_ANOMALY_BENCHMARK: actual W33-derived chiral spectrum unproved",
+    "fundamental_constants": "FAIL_UNIQUE: g remains continuous; historical rational alpha differs from precise CODATA",
+    "one_common_action": "PASS_FINITE_CLASSICAL_U1_SCALAR_WEIGHT_ONLY: fails quantum chiral SM and gravity"
+  },
+  "does_not_prove": "This is a rigorous consistency/evidence partition, not a positive Theory of Everything or a no-go theorem for all possible W33 extensions."
+}

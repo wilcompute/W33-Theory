@@ -1,0 +1,32 @@
+{
+  "status": "PASS_NATIVE_W33_CLASSICAL_U1_SCALAR_MATTER_METRIC_ACTION",
+  "w33_native_sites": 80,
+  "w33_native_links": 160,
+  "plaquette_rows": 1385,
+  "max_plaquette_gradient_residual": 0.0,
+  "action": "H=sum_e E_e\u00b2/(2w_e)+||P A||\u00b2/2+sum_v [|p_v|\u00b2+m\u00b2|z_v|\u00b2]/2 +\u03ba sum_(a->b)|z_b-exp(ig A_e)z_a|\u00b2/2+sum_e[pw_e\u00b2/(2M)+kw(w_e-w0)\u00b2]/2",
+  "gauge": "A->A+B \u03c7/g ; z,p->exp(i\u03c7_v)*(z,p); E,w,pw invariant",
+  "gauss": "C_v=(B.T E)_v/g+Im(conj(z_v)*p_v). Canonical local U1 gauge generator, 80 Abelian first-class constraints for generic charged matter.",
+  "gauss_poisson_algebra": "{C_v,C_u}=0 identically, local charges J_v=x_v p_yv-y_v p_xv, commuting across sites; electric E commutes with J.",
+  "gauge_orbit_trials": [
+    0.1,
+    0.3,
+    0.7
+  ],
+  "sample": {
+    "max_energy_change_under_finite_gauge_transform": 3.410605131648481e-13,
+    "max_gauss_residual": 6.439293542825908e-15,
+    "initial_total_energy": 897.5389966747791,
+    "hopping": 364.11506334351674,
+    "ward_derivative_g_0.1": 0.0,
+    "ward_derivative_g_0.3": 0.0,
+    "ward_derivative_g_0.7": 0.0
+  },
+  "free_gauge_coupling_values_hopping_energy": {
+    "0.1": 364.11506334351674,
+    "0.3": 364.17629855666473,
+    "0.7": 364.07518019810254
+  },
+  "gauge_coupling_freedom": "The graph and magnetic/electric kinetic spectrum remain unchanged when varying free g. Coupled matter hopping varies. Quantized physical \u03b1 requires additional dynamical normalization and matching; this finite model leaves g unspecified.",
+  "scope": "An explicit single finite classical Hamiltonian coupling scalar charge, W33 Maxwell and dynamical link-weight scalar variables. Gauge closure survives, but there is no Lorentzian continuum limit, spin-1/2 chiral fermion, nonabelian SM, Einstein constraints, quantization, renormalized coupling or prediction of nature."
+}
