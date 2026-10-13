@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "branch_native_vertices": [
+    41,
+    44
+  ],
+  "path_lengths": [
+    4,
+    4,
+    4
+  ],
+  "native_cycle_Gram": [
+    [
+      8,
+      4
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "collapsed_theta_cycle_Gram": [
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "exact_pure_gauge_equivalence": "Native patch is a theta graph with each of3 edges subdivided4times. Neutral Gauss flux is constant on each path. Native cycle Gram is4times the3-edge theta Gram; g_small=2g_native and beta_small=4beta_native make the ENTIRE pure compact rotor Hamiltonian identical, including all contained plaquette shifts at every cutoff.",
+  "matter_difference": "Native11sites have9 additional intermediate fermions. The two branch sites have the SAME original bipartite color. Freezing intermediate occupations in the native neutral half-filled sector fills both branches (or neither if colors reversed); it is NOT equivalent to a half-filled two-site spinless hopping model.",
+  "added_penalty": "M sum_internal |occ-background|, with fixed original particle number; every gauge-invariant hop retained. This is an added decimation parameter, not a derived fermion mass.",
+  "flux_cutoff": 2,
+  "dimension": 11550,
+  "pure_ground_with_frozen_matter": 0.10200520460350537,
+  "leading_virtual_hop_coefficient": 4.409917065407866,
+  "infinite_flux_leading_coefficient": "9*kappa\u00b2=4.41:6branch/internal hops costM,6internal/internal hops cost2M. Finite-cutoff coefficient additionally excludes blocked chord hops.",
+  "heavy_matter_checks": [
+    {
+      "penalty": 20.0,
+      "E0": -0.10975212079261443,
+      "energy_shift": -0.2117573253961198,
+      "scaled_shift": -4.235146507922396,
+      "predicted_scaled_shift": -4.409917065407866,
+      "error": 0.17477055748546988,
+      "mean_internal_defects": 0.010140139099493989,
+      "residual": 4.051909668128066e-12
+    },
+    {
+      "penalty": 40.0,
+      "E0": -0.006089343851666448,
+      "energy_shift": -0.10809454845517182,
+      "scaled_shift": -4.3237819382068725,
+      "predicted_scaled_shift": -4.409917065407866,
+      "error": 0.08613512720099337,
+      "mean_internal_defects": 0.0026476392917707597,
+      "residual": 1.3076368541843066e-13
+    },
+    {
+      "penalty": 80.0,
+      "E0": 0.047414856794671,
+      "energy_shift": -0.05459034780883437,
+      "scaled_shift": -4.36722782470675,
+      "predicted_scaled_shift": -4.409917065407866,
+      "error": 0.04268924070111613,
+      "mean_internal_defects": 0.0006756465236604304,
+      "residual": 2.5497188122274507e-12
+    }
+  ],
+  "scope": "Exact pure-gauge subdivision equivalence and numerical interacting heavy-matter approach on the specified finite patch. Shows these flux spectra are not W33-specific evidence. No full80site equivalence, continuum matching, physical coupling selection or interactingSM prediction.",
+  "prior": [
+    "11974 full two-loop matter patch",
+    "TOE57 pure-gauge flux/coupling scaling",
+    "11970 simpler free Dirac control"
+  ]
+}

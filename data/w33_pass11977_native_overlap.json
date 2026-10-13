@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "kernel_bands": 320,
+  "origin": {
+    "gap": 0.49999999999994654,
+    "index": 0,
+    "GW_max": 1.2838863671457043e-14
+  },
+  "origin_massless_spinors": 4,
+  "Euclidean_kernel": "DW=i gamma4 sin(omega)+i sum_i gamma_i K_i(k)+r L(k)+rt(1-cos omega)-m0; Q=gamma5 DW; Dov=I+gamma5 sign(Q). r10,rt1,m0.5.",
+  "exact_relation": "D gamma5+gamma5 D=D gamma5 D, whenever Q is gapped. hat_gamma5=gamma5(I-D)=-sign Q squares toI; modified chiral projectors are defined exactly.",
+  "low_momentum_checks": [
+    {
+      "gap": 0.5002209269874318,
+      "index": 0,
+      "GW_max": 1.6475709938602924e-13,
+      "spacing": 0.02,
+      "scaled_singular_values": [
+        0.9997124233815183,
+        0.9997124233815313,
+        0.9997599780606101,
+        0.9997599780606388
+      ],
+      "error": 0.0002875766184816664
+    },
+    {
+      "gap": 0.5000552418028482,
+      "index": 0,
+      "GW_max": 4.966843086282361e-13,
+      "spacing": 0.01,
+      "scaled_singular_values": [
+        0.999922117854741,
+        0.9999221178547553,
+        0.999945934549542,
+        0.999945934549547
+      ],
+      "error": 7.78821452589451e-05
+    },
+    {
+      "gap": 0.5000138113570121,
+      "index": 0,
+      "GW_max": 1.3954896945905043e-13,
+      "spacing": 0.005,
+      "scaled_singular_values": [
+        0.9999775484153303,
+        0.9999775484154835,
+        0.9999894616928848,
+        0.9999894616929418
+      ],
+      "error": 2.2451584669735958e-05
+    }
+  ],
+  "static_random_gauge": {
+    "gap": 0.43268173208818367,
+    "index": 0,
+    "GW_max": 4.618527782615951e-14
+  },
+  "gauge_covariance_max": 2.511825094549516e-14,
+  "static_pairing": "At omega0 orpi, R=i gamma4 gamma5 anticommutes with Q for EVERY static link phase. Hence signQ trace and overlap index are0 when gapped. At general omega, R Q(k,omega) R=-Q(k,-omega), so time-reflected free/static sectors also pair. This is a new kernel application of the prior paired-spectrum obstruction, not an all4D-topology no-go.",
+  "finite_domain_wall": [
+    {
+      "wall_layers": 16,
+      "sign_error_max": 0.9006944891965254,
+      "GW_spectral_defect": 0.990138415524061,
+      "gap_bound": 1.6386609188163064
+    },
+    {
+      "wall_layers": 64,
+      "sign_error_max": 0.6213047572471377,
+      "GW_spectral_defect": 0.8565899131163508,
+      "gap_bound": 0.9012938290939032
+    },
+    {
+      "wall_layers": 256,
+      "sign_error_max": 0.07921796693090588,
+      "GW_spectral_defect": 0.15216044757714564,
+      "gap_bound": 0.08248511863090327
+    },
+    {
+      "wall_layers": 1024,
+      "sign_error_max": 5.786436210963863e-06,
+      "GW_spectral_defect": 1.1572838939044594e-05,
+      "gap_bound": 5.786452952501278e-06
+    }
+  ],
+  "scope": "Exact GW construction with demonstrated native low Dirac modes and approximate finite-wall error, on supplied Euclidean-time extension. Free/static gauge index0; no topological charge3, anomaly-free chiral gauge measure, three-family count, uniform gap for all fields, interacting continuum or locality proof for signQ.",
+  "prior": [
+    "11970 native harmonic Wilson kernel",
+    "TOE41 different graph-only overlap pairing",
+    "11423-11427 and11582 external4D overlap index controls"
+  ],
+  "primary": "https://arxiv.org/abs/hep-lat/9801031"
+}
