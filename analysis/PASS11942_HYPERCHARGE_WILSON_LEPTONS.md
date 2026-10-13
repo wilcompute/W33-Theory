@@ -1,5 +1,9 @@
 # Pass 11942: a hypercharge Wilson line on the 5̄ torus fixes the lepton ratios from the quark fit
 
+> **Corrected by Pass 11943.** A fifth chain (branch B, seed 7) excludes the data. The claim "near the centre of every
+> chain's band" is withdrawn. Over the quark-acceptable region the rule gives m_μ/m_τ ≈ 0.029–0.081 and
+> m_e/m_μ ≈ 0.002–0.017: this contains the data and excludes minimal SU(5), but it is a band, not a sharp prediction.
+
 Producer: `analysis/w33_pass11942_hypercharge_wilson_leptons.py`
 Certificate: `data/w33_pass11942_hypercharge_wilson_leptons.json`
 Regression: `tests/test_w33_pass11942.py`
