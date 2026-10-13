@@ -4084,6 +4084,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "52fc121e61e25f5fb8903420007b3dd0157cc92d7b485e48f23fa825b24d8304",
+      "normalized_formula": "\"\"\"Pass11948:theaxiflavondecayconstantisfixedbytheup-quarkmasses--f_a~5e15GeV,m_a~1neV",
+      "numeric_literals": [
+        "1",
+        "1948",
+        "5e15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "\"\"\"Pass 11948: the axiflavon decay constant is fixed by the up-quark masses -- f_a ~ 5e15 GeV, m_a ~ 1 neV.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "19072237c2e3da151fe4f4edbac4e1a8c4d53c66d4fcca405fa4dec890c875aa",
+      "structural_formula": "\"\"\"Pass1#:theaxiflavondecayconstantisfixedbytheup-quarkmasses--f_a~#GeV,m_a~#neV"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8372ad2fccf0b1cd406d1064b2b96b29425bea38270343c592d1757924729bd0",
       "normalized_formula": "\"\"\"Pass2304:completeq=27spectraforfourstandardspreadfamilies",
       "numeric_literals": [
@@ -231852,6 +231881,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9305d5e56dac1c504b9ffa96724bec3059b49fb1e33e620ccde8b553fb178052",
+      "normalized_formula": "#Pass11948:theaxiflavondecayconstantisfixedbytheup-quarkmasses\u2014f_a\u22484\u20135\u00b71015GeV,m_a\u22481.1\u20131.5neV",
+      "numeric_literals": [
+        "1.1",
+        "1.5",
+        "1015",
+        "1948",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "# Pass 11948: the axiflavon decay constant is fixed by the up-quark masses \u2014 f_a \u2248 4\u20135\u00b710\u00b9\u2075 GeV, m_a \u2248 1.1\u20131.5 neV",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "b6f7ebe62d497e412e173049945970f105abe0acbd9f6f2be7fa47c0ddcaef3e",
+      "structural_formula": "#Pass1#:theaxiflavondecayconstantisfixedbytheup-quarkmasses\u2014f_a\u2248#\u2013#\u00b7#GeV,m_a\u2248#\u2013#neV"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4e4d9d61d55bb2d29981067923d83108f2106b310299dab74f495b265d9df148",
       "normalized_formula": "#Pass356:CSSDistanced=q+1\u2014TheLowerBoundArgument",
       "numeric_literals": [
@@ -350251,6 +350312,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e12c205b3b3c06699b9070a1a9e3bc4352ba310833405a5e6c9ae5f7a66415f3",
+      "normalized_formula": "*K=\u2212logdetIm\u03a9.OtherK\u00e4hlercontributions,suchasbraneandK\u00e4hler-modulimixing,rescalef_abyO(1)",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "* K = \u2212log det Im \u03a9. Other K\u00e4hler contributions, such as brane and K\u00e4hler-moduli mixing, rescale f_a by O(1).",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "6318966cca6d1813051f4c003027497aba267443fae38497a16ec6a4a87584a4",
+      "structural_formula": "*K=\u2212logdetIm\u03a9.OtherK\u00e4hlercontributions,suchasbraneandK\u00e4hler-modulimixing,rescalef_abyO(#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "23fbe3d9135a4c4ad9e798ad44f9bc82072d65faccc82b956d600de4bc921b90",
       "normalized_formula": "*Koide=(q\u22121)/q",
       "numeric_literals": [
@@ -354597,6 +354685,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "438a8391029cf95249d00ebaa89327ab66a2a5c52ac204d5b92735da1e2ce19e",
+      "normalized_formula": "*^Mass.^m_a=5.69\u03bceV\u00b7(1012GeV/f_a)=^1.1\u20131.5neV^,i.e.afrequencyof^270\u2013370kHz^",
+      "numeric_literals": [
+        "1.1",
+        "1.5",
+        "1012",
+        "270",
+        "370",
+        "5.69"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 38,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "* **Mass.** m_a = 5.69 \u03bceV\u00b7(10\u00b9\u00b2 GeV/f_a) = **1.1\u20131.5 neV**, i.e. a frequency of **270\u2013370 kHz**.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "939dcf99f844292461ab131979c722968c274fd701df2480fd6805e0d7d964e5",
+      "structural_formula": "*^Mass.^m_a=#\u03bceV\u00b7(#GeV/f_a)=^#\u2013#neV^,i.e.afrequencyof^#\u2013#kHz^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3c284e5d3a3fa0d3eb8424d3fb22b6aa52bcaf65ed43566d078cd10737b2a366",
       "normalized_formula": "*^Master'sPass11201^usesthethird-momentinvariantI(\u03c3)=tr[\u03c1^{\u22973}\u220f_pP_{\u03c3_p}]ofthegate'sChoistate",
       "numeric_literals": [
@@ -354879,6 +354999,35 @@
       },
       "structural_family_id": "1468f100df4b5c356dcd03cb03e08bc0f82a0e68df28734706c3f6e4e890183e",
       "structural_formula": "*^PhasesonbothqutritsbreakTalreadywithtwogates^,atthe2\u03c0/#levelF=(##cos2\u03c0/#)/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "30a67053255ba23fa05ab1f86a699766db6b794362e621c05d95c96fcc8e37c9",
+      "normalized_formula": "*^Photoncoupling.^Theanomalysitsintheupsectoronly,soE/N=2\u00b7N_c\u00b7Q_u2=8/3and",
+      "numeric_literals": [
+        "2",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 39,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "* **Photon coupling.** The anomaly sits in the up sector only, so E/N = 2\u00b7N_c\u00b7Q_u\u00b2 = 8/3 and",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3a4994778cee4e0919cb1f3bb94ac4c406552cfeb810780ba8f2ddebb313f11d",
+      "structural_formula": "*^Photoncoupling.^Theanomalysitsintheupsectoronly,soE/N=#\u00b7N_c\u00b7Q_u2=#/#and"
     },
     {
       "file_count": 1,
@@ -407843,6 +407992,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "427a6b09f48cdeec23fdd69656e6741e54b981b467c8b75f1bf3bb58baf21a05",
+      "normalized_formula": "2.Fixedbytheupmasses.m_c/m_t=kappa(tau)|Omega12|neartheproductlocus,sof_a=M_P(m_c/m_t)/(3kappaImtau)",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "2. Fixed by the up masses. m_c/m_t = kappa(tau) |Omega12| near the product locus, so f_a = M_P (m_c/m_t)/(3 kappa Im tau).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5f5b9c552ea21643d358b63d03a92741cbe8d9d1f031f69195dc1a55debfc761",
+      "structural_formula": "#.Fixedbytheupmasses.m_c/m_t=kappa(tau)|Omega1#|neartheproductlocus,sof_a=M_P(m_c/m_t)/(#kappaImtau)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1bc50cd50e3dcc9a404bdf3b67462fe512f45f5cb7f821828636fe27fec306da",
       "normalized_formula": "2.FractalsubstratehasCONSTANTB/Vratio=q/Phi_4ateverytier",
       "numeric_literals": [
@@ -427164,6 +427341,39 @@
       },
       "structural_family_id": "bad2e7a6d18600f736d0c85fbbfadbab7ee69cce56471e558803f399c5ea15bd",
       "structural_formula": "#.Period-#invariancetheta_3(tau+#)=theta_3(tau)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0b0696d1ea22c3e89b920bb4f20f0a06c278df698e757c2c7f120534cd33cf62",
+      "normalized_formula": "3.Phenomenology(standardformulae).m_a=5.69ueV(1e12GeV/f_a)=1.1-1.5neV(frequency~270-360kHz).Theanomaly",
+      "numeric_literals": [
+        "-1.5",
+        "-360",
+        "1.1",
+        "1e12",
+        "270",
+        "3",
+        "5.69"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "3. Phenomenology (standard formulae). m_a = 5.69 ueV (1e12 GeV/f_a) = 1.1-1.5 neV (frequency ~270-360 kHz). The anomaly",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "891e1ee5081df7487f2d67d9e44d5372d47f96e7aa2703a3790df1a46b76b521",
+      "structural_formula": "#.Phenomenology(standardformulae).m_a=#ueV(#GeV/f_a)=##neV(frequency~##kHz).Theanomaly"
     },
     {
       "file_count": 1,
@@ -530378,6 +530588,34 @@
       "structural_formula": "ALPHA=#"
     },
     {
+      "file_count": 1,
+      "formula_id": "05f6bef2c7707a6766d7e38f15ab8a904527650fe39194cac202055dc2ab1011",
+      "normalized_formula": "ALPHA=1/137.036",
+      "numeric_literals": [
+        "1",
+        "137.036"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 42,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "ALPHA = 1 / 137.036",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "59fe198dba38fde059e3ae03e4f22a2ca40eabb0ce9a7a386339265cb090f89f",
+      "structural_formula": "ALPHA=#/#"
+    },
+    {
       "file_count": 35,
       "formula_id": "8339bc690fa193d1dcbf5a4f5f319a2af01dcc4199cd313666bb6476604f4196",
       "normalized_formula": "ALPHA=10",
@@ -539782,6 +540020,34 @@
       },
       "structural_family_id": "66c98994b301bda4b6f9b7ebe179a95c54f20c650598bf3c8544a6e693edc152",
       "structural_formula": "Allthreecontaintwopointson`L=<e1,e2>`andtwoonthedisjointline`M=<f1,f2>`.ExactW(#,#)andW(#,#)checksforeverynonzeroaplacethesethreeapartmentsononetriangleoftheline-sidelocalK_(q+#).HencethestandardV1,#boundaryisexactlyaline-thetarelation.Withorderedgeodesicroots`R0,R1,R2`,chooseorientedapartments`Aij=Ri-Rj`;thentherelationisalreadyintegral"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "778317d91394e2b67dc6bda11a0a3ea408f81a9ebae29914684e77ff01b66ccc",
+      "normalized_formula": "AlongthewholeWeberlevelcurve|f(tau)|^8=2sqrt(m_um_t/m_c^2),theweight-zerocombinationkappaImtauvaries",
+      "numeric_literals": [
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "Along the whole Weber level curve |f(tau)|^8 = 2 sqrt(m_u m_t/m_c^2), the weight-zero combination kappa Im tau varies",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9ceac1055d09b7d19b4cb63f2b3749267d23935ac48658e76011e6fcec141685",
+      "structural_formula": "AlongthewholeWeberlevelcurve|f(tau)|^#=#sqrt(m_um_t/m_c^#),theweight-zerocombinationkappaImtauvaries"
     },
     {
       "file_count": 1,
@@ -585571,6 +585837,42 @@
       "structural_formula": "E/C=#"
     },
     {
+      "file_count": 2,
+      "formula_id": "b30b39b87adccd3e620faa32206b2cfb08fe417b3fe04b7252d06e1e8a336f01",
+      "normalized_formula": "E/N=8/3",
+      "numeric_literals": [
+        "3",
+        "8"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex",
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 583,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "E/N=8/3",
+          "status": "open_or_conditional"
+        },
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "E/N=8/3",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 2
+      },
+      "structural_family_id": "2e2e6df79830fa052b71dee21343026718c30b975d7d444e8fc679f9fb58c1af",
+      "structural_formula": "E/N=#/#"
+    },
+    {
       "file_count": 1,
       "formula_id": "99df66d4a1a9de0c129f69c35d61f01bf569cffdca931ff7c48bdf7bf913ae16",
       "normalized_formula": "E/U=0^3+2^{18}+4^{36}+6^{18}+10^9",
@@ -619874,6 +620176,34 @@
       },
       "structural_family_id": "fe576327331cf6e5c6c587b1c07a607be982071965f2a340f0d5cac0f4a96a3f",
       "structural_formula": "Gc[(N1,N2,j1,j2)]=gauge1#(w,z,tau)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "dbc618e2ab4949aed017402f6f7eab8d7c7d585995bbd70cdc610411c35d1c79",
+      "normalized_formula": "GeV^-1.Asallofdarkmatterviamisalignmentitneedsaninitialangle~0.007(pre-inflationaryPQbreaking,where",
+      "numeric_literals": [
+        "-1",
+        "0.007"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "GeV^-1. As all of dark matter via misalignment it needs an initial angle ~0.007 (pre-inflationary PQ breaking, where",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "6fdf804a0e665f2f8b02239ba3eda2c01e2b12d376fc7566b34ec38c145157ba",
+      "structural_formula": "GeV^#.Asallofdarkmatterviamisalignmentitneedsaninitialangle~#(pre-inflationaryPQbreaking,where"
     },
     {
       "file_count": 1,
@@ -700507,6 +700837,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "be80eebb83df4aba788377286b7fcf657bb31476f43967912799d3a8caef8bd7",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11948_axiflavon_decay_constant.json\"",
+      "numeric_literals": [
+        "1948",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 38,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11948_axiflavon_decay_constant.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3ccc4fe623e44c30331387d2182c3b0a021bbd76cd5f78e646cde072abf109a9",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_axiflavon_decay_constant.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "0e8bf54813ae09975b8ffb40c2c2eda3883ee020f6009f102f97b6ebf6841b48",
       "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass1310_1314_literal_a5_coset_correction.json\"",
       "numeric_literals": [
@@ -726325,6 +726683,36 @@
       },
       "structural_family_id": "15f6016c091f544cc12d87de8dffd56c01fe395991104dbaa4ed1d1d01ff6a9b",
       "structural_formula": "Pass1#matchedm_c/m_t(t\u2248#\u00b7#\u2212#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "794d9096c8993de50356337754cfcf8c0f09b3812733862b4022a6321ffa1bf3",
+      "normalized_formula": "Pass11938(m_um_t/m_c^2=|f(tau)|^16/4ontheswap-symmetricuphome)",
+      "numeric_literals": [
+        "16",
+        "1938",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "Pass 11938 (m_u m_t / m_c^2 = |f(tau)|^16/4 on the swap-symmetric up home).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a5b4a30ad590bdc54cbca58f3fa3796c792348982a363daf9f98bf5a543c4bf2",
+      "structural_formula": "Pass1#(m_um_t/m_c^#=|f(tau)|^#/#ontheswap-symmetricuphome)"
     },
     {
       "file_count": 1,
@@ -922491,6 +922879,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "029213ed025b058ed4e4f79863469f214b84bd86dfec3b5365ebeee113f8d216",
+      "normalized_formula": "\\kappa\\mathrm{Im}\\tau=0.584",
+      "numeric_literals": [
+        "0.584"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 583,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "\\kappa\\mathrm{Im}\\tau=0.584",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "652c4cd5c670b442320f6030e57aab60d01b71431df63bd6f388094e5ac6b302",
+      "structural_formula": "\\kappa\\mathrm{Im}\\tau=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "772fb95285821246d3d34ac14d789e1e585073e0a25ce538c486138f8cc8cd5a",
       "normalized_formula": "\\kappa^2=1",
       "numeric_literals": [
@@ -987976,6 +988391,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2cded640da3165bea4d6ad60a28a1e1cdb45d510742ab8999d8c516755ceb2c6",
+      "normalized_formula": "^AlongtheWebercurve.^AlongthewholeWeberlevelcurve|f(\u03c4)|8=2\u221a(m_um_t/m_c2)(22points),theweight-zero",
+      "numeric_literals": [
+        "2",
+        "22",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "**Along the Weber curve.** Along the whole Weber level curve |\ud835\udd23(\u03c4)|\u2078 = 2\u221a(m_u m_t/m_c\u00b2) (22 points), the weight-zero",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a30d2ff9d39369066bea81a3004cf1fab4c9d113f2905b82c3ff36e8467ef091",
+      "structural_formula": "^AlongtheWebercurve.^AlongthewholeWeberlevelcurve|f(\u03c4)|#=#\u221a(m_um_t/m_c2)(#points),theweight-zero"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a3cbbf9685f90d3e7caef3bf8f477c4b3a20b306add41ce85ac56e5ed82e9678",
       "normalized_formula": "^Arithmetic:^The\u03a64(3)=10phenomenonconnectsthespectralgap,Laplacianeigenvalue,and3-primaryeigenlatticerankintoasinglecyclotomicidentityarisingfromthesymplecticconstruction",
       "numeric_literals": [
@@ -991433,6 +991877,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0fe0af4d65114d300698b995a91db97404349b07fa21d329ec33d81c61ead2d4",
+      "normalized_formula": "^Thedecayconstant.^Write\u03a912=r\u00b7e^{i\u03c6}.Thecanonicalfieldisa=M_P\u00b7r\u00b7\u03c6/\u221a(Im\u03c41\u00b7Im\u03c42).Since\u03b8\u0304=3\u03c6",
+      "numeric_literals": [
+        "1",
+        "12",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "**The decay constant.** Write \u03a9\u2081\u2082 = r\u00b7e^{i\u03c6}. The canonical field is a = M_P\u00b7r\u00b7\u03c6/\u221a(Im \u03c4\u2081\u00b7Im \u03c4\u2082). Since \u03b8\u0304 = 3\u03c6,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "006cb9ecdc5337ab8c2227edb43ece8c62569c5e95771765224c5eaabd4b2964",
+      "structural_formula": "^Thedecayconstant.^Write\u03a9#=r\u00b7e^{i\u03c6}.Thecanonicalfieldisa=M_P\u00b7r\u00b7\u03c6/\u221a(Im\u03c4#\u00b7Im\u03c4#).Since\u03b8\u0304=#\u03c6"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b072243b88ab13507270c77d1d8c9f176b56cb158279b1a611341904fa6184b2",
       "normalized_formula": "^Theequality.^Fortheupmediator(flux2A2)andtheWeinbergmediator(flux2A2\u2032)at\u03a9=\u03c9\u00b71,Pass11930founda",
       "numeric_literals": [
@@ -992715,6 +993189,36 @@
       },
       "structural_family_id": "e07e304dea0fbe66969272c37fba39a4bae0ecd47045f996e74d996a3341f53d",
       "structural_formula": "^eHSiqq)|GE!ubw"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bbbac89e946ff69e92937baa14fe5d03e5810f97d598186d4a2c4786b78ac143",
+      "normalized_formula": "^f_a=M_P\u00b7|\u03a912|/(3\u00b7\u221a(Im\u03c41\u00b7Im\u03c42))^",
+      "numeric_literals": [
+        "1",
+        "12",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "**f_a = M_P\u00b7|\u03a9\u2081\u2082| / (3\u00b7\u221a(Im \u03c4\u2081\u00b7Im \u03c4\u2082))**.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dbab00db3224dab01c1b378a75360f35ae8fbc1bd815103073462f60b55f9b20",
+      "structural_formula": "^f_a=M_P\u00b7|\u03a9#|/(#\u00b7\u221a(Im\u03c4#\u00b7Im\u03c4#))^"
     },
     {
       "file_count": 1,
@@ -1182111,6 +1182615,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c8d70ee85a290cffba6e0ef543eccac234e68b257f09c752d667517044b42030",
+      "normalized_formula": "differences).WritingOmega12=re^{iphi},thecanonicalfieldisa=M_Prphi/sqrt(Imtau1Imtau2),and",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "differences). Writing Omega12 = r e^{i phi}, the canonical field is a = M_P r phi / sqrt(Im tau1 Im tau2), and",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cd67153a11ef71efe57309339a38920829308b917b0c1165508c9f8355236a8b",
+      "structural_formula": "differences).WritingOmega1#=re^{iphi},thecanonicalfieldisa=M_Prphi/sqrt(Imtau1Imtau2),and"
+    },
+    {
+      "file_count": 1,
       "formula_id": "dce5049238296cbedb09e1afd10a1b9d110fe3e46705f695de0a172db53e5d36",
       "normalized_formula": "different_pos=(v_nonzero[0]!=w_nonzero[0])ifv_nonzeroandw_nonzeroelseFalse",
       "numeric_literals": [
@@ -1234144,6 +1234675,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6706cbf82f4ace3a4842cbb9c225b5f1c56e36b7209468f318fc173e79bbffda",
+      "normalized_formula": "f_a=(5.06-5.12)x1e15GeV(M_Z-scaleratios;bothquarkfitsgive5.12e15)",
+      "numeric_literals": [
+        "-5.12",
+        ".12",
+        "5",
+        "5.06"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "f_a = (5.06 - 5.12) x 1e15 GeV (M_Z-scale ratios; both quark fits give 5.12e15),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c4dd258a85381f89aa5e4edaa0dd1c2c3e40af70fca85ee9ea75b3dcf58f952d",
+      "structural_formula": "f_a=(##)x1e1#GeV(M_Z-scaleratios;bothquarkfitsgive5#e1#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "429cef8da3d0033c116149db8df2d7280d4728dc08b14bd7a7b5beaf91df176c",
       "normalized_formula": "f_a=9840",
       "numeric_literals": [
@@ -1234229,6 +1234790,116 @@
       },
       "structural_family_id": "7c29b7b95b8f22d072b77e38fafe9143b37269e91fb550eac1802b1c43b44f02",
       "structural_formula": "f_a=M_GUT*epsilon^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "da38a31359ecce11c54b973d185bf47e5e5b7799ca808ec048afaf09b7a9b7ba",
+      "normalized_formula": "f_a=M_P(m_c/m_t)/(3\\kappa\\mathrm{Im}\\tau)",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 583,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "f_a=M_P(m_c/m_t)/(3\\kappa\\mathrm{Im}\\tau)",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "e6edbab22f495fb4e249b2c89ee698ebe529c3537129a4d855be4319e5382b5f",
+      "structural_formula": "f_a=M_P(m_c/m_t)/(#\\kappa\\mathrm{Im}\\tau)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "432cee72610fbec637671c0c714aa0cb0e5b5c6116e8881f7da1d3e3e71895e6",
+      "normalized_formula": "f_a=M_P|Omega12|/(3sqrt(Imtau1Imtau2))",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "f_a = M_P |Omega12| / (3 sqrt(Im tau1 Im tau2)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d188c206824c7989021cc2ce139b8e83b21c41c08ba9d6c4405cc7028be1939b",
+      "structural_formula": "f_a=M_P|Omega1#|/(#sqrt(Imtau1Imtau2))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2ac6711b585c45ca405305777d126fe66cbec6656c94dd40d7bb996bd238fdf6",
+      "normalized_formula": "f_a=M_P|\\Omega_{12}|/(3\\sqrt{\\mathrm{Im}\\tau_1\\mathrm{Im}\\tau_2})",
+      "numeric_literals": [
+        "12",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "f_a=M_P|\\Omega_{12}|/(3\\sqrt{\\mathrm{Im}\\tau_1\\mathrm{Im}\\tau_2})",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "154371a11283d4af299a33359ec158478a3b8bbdd534e57c2b79adc760e4a925",
+      "structural_formula": "f_a=M_P|\\Omega_{#}|/(#\\sqrt{\\mathrm{Im}\\tau_1\\mathrm{Im}\\tau_2})"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2a97e53d14857cca702a404487a49ee7708fe7bc65c0350c4ff49b5f41f5a8bd",
+      "normalized_formula": "f_a=M_P\u00b7(m_c/m_t)/(3\u00b7\u03ba\u00b7Im\u03c4)",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "f_a = M_P\u00b7(m_c/m_t) / (3\u00b7\u03ba\u00b7Im \u03c4).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c7f026403d4c4c8ddf71e6526d48cc6b3efc1fa9aa196ef4c55fe4006f51c322",
+      "structural_formula": "f_a=M_P\u00b7(m_c/m_t)/(#\u00b7\u03ba\u00b7Im\u03c4)"
     },
     {
       "file_count": 1,
@@ -1234349,6 +1235020,41 @@
       },
       "structural_family_id": "7ed28aa27b93df40c467d51b8a70b7909043126b2d957859a155ce539f5c75b8",
       "structural_formula": "f_a~(#)^#/(#GeV)=#GeV"
+    },
+    {
+      "file_count": 2,
+      "formula_id": "600e5340e29f7901d0d0851ea5d84aac94b62d4d66be9cd07d074267a7bc595c",
+      "normalized_formula": "f_a\u2248(3.7",
+      "numeric_literals": [
+        "3.7"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex",
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 583,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "f_a\\approx(3.7",
+          "status": "open_or_conditional"
+        },
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "f_a\\approx(3.7",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 2
+      },
+      "structural_family_id": "5b0d3c8282b8d2dba2d2d6b80dfbb02d7fc981de296d2e2b39252a6c51d66bf9",
+      "structural_formula": "f_a\u2248(#"
     },
     {
       "file_count": 1,
@@ -1235816,6 +1236522,34 @@
       },
       "structural_family_id": "3e36509724b5dab34ce1f3592e6b41c1c5ece00af585ddeaf746dd726891dc25",
       "structural_formula": "fake_monster_simple_roots=M_LAM##\u2713"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "89c5be969c945c62d2c88829e745aec6277e169e3d04ba148ce01d3d599bde24",
+      "normalized_formula": "fallingto~3.7e15GeViftheGUT-scalem_c/m_t(~0.0027)isused",
+      "numeric_literals": [
+        "0.0027",
+        "3.7e15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "falling to ~3.7e15 GeV if the GUT-scale m_c/m_t (~0.0027) is used.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7a454a32f027acbaba2ba698f6f5806972e99ea814010c63542078f130d9d53e",
+      "structural_formula": "fallingto~#GeViftheGUT-scalem_c/m_t(~#)isused"
     },
     {
       "file_count": 1,
@@ -1250765,6 +1251499,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fcdcc0d6fcccfa752ad18c17567c8400de0da7cbb29e761b3ec1bede4cc53124",
+      "normalized_formula": "g_a\u03b3\u03b3=\u03b1/(2\u03c0f_a)\u00b7(E/N\u22121.92)\u2248^1.7\u20132.3\u00b710\u221219GeV\u22121^",
+      "numeric_literals": [
+        "1",
+        "1.7",
+        "1.92",
+        "10",
+        "19",
+        "2",
+        "2.3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "g_a\u03b3\u03b3 = \u03b1/(2\u03c0f_a)\u00b7(E/N \u2212 1.92) \u2248 **1.7\u20132.3\u00b710\u207b\u00b9\u2079 GeV\u207b\u00b9**.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8d3635b81a2f954c828d13b6d26c9d1738735f5ae69a40b9deb7a64058ba03b1",
+      "structural_formula": "g_a\u03b3\u03b3=\u03b1/(#\u03c0f_a)\u00b7(E/N\u2212#)\u2248^#\u2013#\u00b7#\u2212#GeV\u2212#^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c38d83fc9775757a736444d5030494b93b05e8ceb2ed3987e2801d0cbd8b36b3",
       "normalized_formula": "g_cfactorisesoneachcoset,sorankY^c<=1(axes)or<=2(diagonals),foreveryHiggsmodeandeveryWilsonline",
       "numeric_literals": [
@@ -1251193,6 +1251960,35 @@
       },
       "structural_family_id": "89d4408fe4e02a39ac00cbaccf411c52172b8cd45247c5c4cbf7d831dbc89747",
       "structural_formula": "g_{\\rmOtto,visible}=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0a096b00b08b620fc2bb21c48c181db25386281c93bb570f9b1fa7ce18a333ba",
+      "normalized_formula": "g_{a\\gamma\\gamma}\u22482\\times10^{-19}",
+      "numeric_literals": [
+        "-19",
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "g_{a\\gamma\\gamma}\\approx2\\times10^{-19}",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "71dbd6c40b7e55584cd1a8078f07c7df205c5a8f154642d15154816e14279af2",
+      "structural_formula": "g_{a\\gamma\\gamma}\u2248#\\times1#^{#}"
     },
     {
       "file_count": 1,
@@ -1304086,6 +1304882,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "28a463da6b3ab703776790749e2ba9c3dd3584996f2f601a5b07ea7d581ebf31",
+      "normalized_formula": "kappa_im_nearly_constant=(max(kim)-min(kim))/np.mean(kim)<0.02andlen(curve)>10",
+      "numeric_literals": [
+        "0.02",
+        "10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 103,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "kappa_im_nearly_constant=(max(kim) - min(kim)) / np.mean(kim) < 0.02 and len(curve) > 10,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "47b10e8335a07850aa1f594e6fbfe6c3a88d51922cd47f5b3529ecafbd3f16ed",
+      "structural_formula": "kappa_im_nearly_constant=(max(kim)-min(kim))/np.mean(kim)<#andlen(curve)>#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "70471a1dd3b79b4cffd5724d63b56588ce056cde5a604fc2f6f7f2e1ef71b4c9",
       "normalized_formula": "kappa_j-kappa_{j-1}=sum_{e>=j}m_e",
       "numeric_literals": [
@@ -1336298,6 +1337122,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e79303c170928e948ca6adb62554068d1efca2e612dbf6da8eb93c6390321d2e",
+      "normalized_formula": "m_a=[5.69e-6*1e12/fforfinfa_band[::-1]]",
+      "numeric_literals": [
+        "-1",
+        "1e12",
+        "5.69e-6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 94,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "m_a = [5.69e-6 * 1e12 / f for f in fa_band[::-1]]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "983e0c68b11200c1f6d6b6d11193d251cd0a6437a534bc325897470cb886bc8f",
+      "structural_formula": "m_a=[#*#/fforfinfa_band[::#]]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "89983712830fff250c3f7790f00520320594c442f7bff5e5879c3c17206d8397",
       "normalized_formula": "m_a=\\pi\\times10^{-14}",
       "numeric_literals": [
@@ -1336620,6 +1337473,41 @@
       },
       "structural_family_id": "ca394d2c5c691b0ac60187611838d32eec4080f7e964a5ab570ef639e91f4be0",
       "structural_formula": "m_a~\\Phi_6\\cdot\\frac{\\Lambda_{QCD}^#}{f_a}~\\frac{#\\cdot(#)^#}{#}~#\\times1#^{#}\\\\text{GeV}~#\\\\text{keV}"
+    },
+    {
+      "file_count": 2,
+      "formula_id": "ef4b34ed8e576cdb739abd7b0d366f9d9af859510061da35c179f5a8d6ef9b43",
+      "normalized_formula": "m_a\u22481.1",
+      "numeric_literals": [
+        "1.1"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex",
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 583,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "m_a\\approx1.1",
+          "status": "open_or_conditional"
+        },
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "m_a\\approx1.1",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 2
+      },
+      "structural_family_id": "edc263543d5483fe8032c5f2f501004559b43018dbc8c06fccc46cad17071e30",
+      "structural_formula": "m_a\u2248#"
     },
     {
       "file_count": 1,
@@ -1338665,6 +1339553,33 @@
       },
       "structural_family_id": "545328023794aeda15c586787ec4a9a581c1099a8cedabd8c3546ef8a931b91d",
       "structural_formula": "m_c/m_t=#/\\alpha^{#}=#/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9f6530ae627d945aab7d2074017e51e44aad9495a4c8de0cbcf6ec6fd103b3aa",
+      "normalized_formula": "m_c/m_t=\\kappa(\\tau)|\\Omega_{12}|",
+      "numeric_literals": [
+        "12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "m_c/m_t=\\kappa(\\tau)|\\Omega_{12}|",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "f4c487829854aac39de0048215835cb2b143214c844e6c4633038272f4fce966",
+      "structural_formula": "m_c/m_t=\\kappa(\\tau)|\\Omega_{#}|"
     },
     {
       "file_count": 1,
@@ -1360431,6 +1361346,34 @@
       },
       "structural_family_id": "a5d60ec2ea6f67c45bf1632271bc5404e407af700d2b020cd9fef3d3e339c9d1",
       "structural_formula": "mass_gap=#^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "df24aed42a1b14b268c549054f5c706d61ce83532680a96a2e28cfbc9f94370a",
+      "normalized_formula": "mass_in_neV_window_lower_edge=1e-9<min(m_a)andmax(m_a)<2e-9",
+      "numeric_literals": [
+        "1e-9",
+        "2e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 105,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "mass_in_neV_window_lower_edge=1e-9 < min(m_a) and max(m_a) < 2e-9,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a78d53d259c31ef745abd43a7bd1cdc86126291f4490fb0292dd07811e650534",
+      "structural_formula": "mass_in_neV_window_lower_edge=#<min(m_a)andmax(m_a)<#"
     },
     {
       "file_count": 1,
@@ -1589062,6 +1590005,65 @@
     },
     {
       "file_count": 1,
+      "formula_id": "53621249079c604e809597d70ad961b351f1a210169bbdf7090cc6492a5ac871",
+      "normalized_formula": "res[\"frequency_kHz\"]=[m/4.135667e-15/1e3forminm_a]",
+      "numeric_literals": [
+        "1e3",
+        "4.135667e-15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 96,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "res[\"frequency_kHz\"] = [m / 4.135667e-15 / 1e3 for m in m_a]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fd42cbcc7b3e66e289c6e2e5cd08d767cf697bd29236c794df42c9d1abd5da7a",
+      "structural_formula": "res[\"frequency_kHz\"]=[m/#/#forminm_a]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7839041498d81619338bf6e3438cd09a33ab71bd6cc6f279da19faedc7a1da15",
+      "normalized_formula": "res[\"g_agamma_per_GeV\"]=[ALPHA/(2*np.pi*f)*(8/3-1.92)forfinfa_band[::-1]]",
+      "numeric_literals": [
+        "-1",
+        "-1.92",
+        "2",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 98,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "res[\"g_agamma_per_GeV\"] = [ALPHA / (2 * np.pi * f) * (8 / 3 - 1.92) for f in fa_band[::-1]]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b9bcd07c99237a95381acd594375b4bbd78747dcd8f4a6d40ffc886a4f0b5491",
+      "structural_formula": "res[\"g_agamma_per_GeV\"]=[ALPHA/(#*np.pi*f)*(#/##)forfinfa_band[::#]]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b11b63b037c71486603316085bacd4c725a748b060becda22d84688fa1d12ef2",
       "normalized_formula": "res[\"independence_number\"]={\"alpha\":7,\"lov\u00e1sz_theta\":10",
       "numeric_literals": [
@@ -1612374,6 +1613376,33 @@
       },
       "structural_family_id": "5fe7b9b30bdff399908a4fd52954779c3b9d9bddec0917d97be25dfe38acbe93",
       "structural_formula": "s=math.sin(theta)*np.exp(#j*(alpha+phi))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7f3f6b5508a1db3c5e57f1f5b1fe6cd889bc5ce51abca20ff24c97946a048a8b",
+      "normalized_formula": "s=np.linalg.svd(P42.theta(np.array([[tau,e],[e,tau]])),compute_uv=False)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 59,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "s = np.linalg.svd(P42.theta(np.array([[tau, e], [e, tau]])), compute_uv=False)",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "04e722eb5433af02f3fbe15f10ad8c42a310fd943dd98d6390c5144aa5d9be6b",
+      "structural_formula": "s=np.linalg.svd(P4#.theta(np.array([[tau,e],[e,tau]])),compute_uv=False)"
     },
     {
       "file_count": 2,
@@ -1641347,6 +1642376,38 @@
       },
       "structural_family_id": "d1e35bf30cb71142d8a83c5ccbf52eb5dd0dacee1d61a42ecf31a08ca91c23f8",
       "structural_formula": "site/gauge-parametermodes;theabsenceofanequivariantalternating8x8->#bracket"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4de13fb47284e705f543c51eb37f3c56dba8418f705652e0472f380516a0b5f2",
+      "normalized_formula": "sitsintheupsectoronly,soE/N=2N_cQ_u^2=8/3andg_agamma=alpha/(2pif_a)(E/N-1.92)~1.7-2.3e-19",
+      "numeric_literals": [
+        "-2.3e-19",
+        "1.7",
+        "1.92",
+        "2",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "sits in the up sector only, so E/N = 2 N_c Q_u^2 = 8/3 and g_agamma = alpha/(2 pi f_a) (E/N - 1.92) ~ 1.7-2.3e-19",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "245c7eda299498a122655babada334df7cf386b57c674c1d51eb55b0b0b2d3e6",
+      "structural_formula": "sitsintheupsectoronly,soE/N=#N_cQ_u^#=#/#andg_agamma=alpha/(#pif_a)(E/N-#)~##"
     },
     {
       "file_count": 1,
@@ -1680772,6 +1681833,33 @@
       },
       "structural_family_id": "0da9c409279123d620882652c4761b3bcf559eedbe1709377e09ed09386c0e2f",
       "structural_formula": "theta-alpha=q=#(overthe4#rays).SothemagicINJECTIONrateisbounded"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "31e0725a8567a42f93f24e18f7f55d0976aab1e58733af19a9871067b765ae36",
+      "normalized_formula": "theta-bar=3phigives",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11948_axiflavon_decay_constant.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass11948_axiflavon_decay_constant.py",
+          "raw": "theta-bar = 3 phi gives",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2df2f47db268afa8362e3a4f703618124d1bf1fe25ce2577950058e14c8b28c2",
+      "structural_formula": "theta-bar=#phigives"
     },
     {
       "file_count": 1,
@@ -1779763,9 +1780851,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-12T21:50:44-04:00",
+  "frozen_at": "2026-10-12T21:56:42-04:00",
   "pass": 398,
-  "repository_head": "bf85b3c6b653723bad6339fd766c98a231352498",
+  "repository_head": "6f6b95497a673ec677d84fba8b1ae5930338f352",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1780905,6 +1781993,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6b648d3ca16b52e26ffde37345780798e08fefff8fb4afcaa32265cf19197fa8",
       "structural_formula": "\"\"\"Pass1#:theWeberinvariantisseesaw-invariant--themechanismbehindm1m3/m2^#=m_um_t/m_c^#"
+    },
+    {
+      "exact_formula_ids": [
+        "52fc121e61e25f5fb8903420007b3dd0157cc92d7b485e48f23fa825b24d8304"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "19072237c2e3da151fe4f4edbac4e1a8c4d53c66d4fcca405fa4dec890c875aa",
+      "structural_formula": "\"\"\"Pass1#:theaxiflavondecayconstantisfixedbytheup-quarkmasses--f_a~#GeV,m_a~#neV"
     },
     {
       "exact_formula_ids": [
@@ -1838591,6 +1839687,14 @@
     },
     {
       "exact_formula_ids": [
+        "427a6b09f48cdeec23fdd69656e6741e54b981b467c8b75f1bf3bb58baf21a05"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5f5b9c552ea21643d358b63d03a92741cbe8d9d1f031f69195dc1a55debfc761",
+      "structural_formula": "#.Fixedbytheupmasses.m_c/m_t=kappa(tau)|Omega1#|neartheproductlocus,sof_a=M_P(m_c/m_t)/(#kappaImtau)"
+    },
+    {
+      "exact_formula_ids": [
         "147fa4c52d0b3cc3d5737199537698103dbcec1be98e0010f53b7380484a106b"
       ],
       "exact_member_count": 1,
@@ -1839220,6 +1840324,14 @@
       "exact_member_count": 1,
       "structural_family_id": "bad2e7a6d18600f736d0c85fbbfadbab7ee69cce56471e558803f399c5ea15bd",
       "structural_formula": "#.Period-#invariancetheta_3(tau+#)=theta_3(tau)"
+    },
+    {
+      "exact_formula_ids": [
+        "0b0696d1ea22c3e89b920bb4f20f0a06c278df698e757c2c7f120534cd33cf62"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "891e1ee5081df7487f2d67d9e44d5372d47f96e7aa2703a3790df1a46b76b521",
+      "structural_formula": "#.Phenomenology(standardformulae).m_a=#ueV(#GeV/f_a)=##neV(frequency~##kHz).Theanomaly"
     },
     {
       "exact_formula_ids": [
@@ -1859599,6 +1860711,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6f3858e477f4cd1167592d20fa7ce33dcbaf2bd1fbfba8f99c4409647c5853d1",
       "structural_formula": "#Pass1#:theK\u00e4hlerescaperouteform_c=m_uisclosedinall1#survivors"
+    },
+    {
+      "exact_formula_ids": [
+        "9305d5e56dac1c504b9ffa96724bec3059b49fb1e33e620ccde8b553fb178052"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b6f7ebe62d497e412e173049945970f105abe0acbd9f6f2be7fa47c0ddcaef3e",
+      "structural_formula": "#Pass1#:theaxiflavondecayconstantisfixedbytheup-quarkmasses\u2014f_a\u2248#\u2013#\u00b7#GeV,m_a\u2248#\u2013#neV"
     },
     {
       "exact_formula_ids": [
@@ -1897180,6 +1898300,14 @@
     },
     {
       "exact_formula_ids": [
+        "e12c205b3b3c06699b9070a1a9e3bc4352ba310833405a5e6c9ae5f7a66415f3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6318966cca6d1813051f4c003027497aba267443fae38497a16ec6a4a87584a4",
+      "structural_formula": "*K=\u2212logdetIm\u03a9.OtherK\u00e4hlercontributions,suchasbraneandK\u00e4hler-modulimixing,rescalef_abyO(#)"
+    },
+    {
+      "exact_formula_ids": [
         "23fbe3d9135a4c4ad9e798ad44f9bc82072d65faccc82b956d600de4bc921b90"
       ],
       "exact_member_count": 1,
@@ -1898388,6 +1899516,14 @@
     },
     {
       "exact_formula_ids": [
+        "438a8391029cf95249d00ebaa89327ab66a2a5c52ac204d5b92735da1e2ce19e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "939dcf99f844292461ab131979c722968c274fd701df2480fd6805e0d7d964e5",
+      "structural_formula": "*^Mass.^m_a=#\u03bceV\u00b7(#GeV/f_a)=^#\u2013#neV^,i.e.afrequencyof^#\u2013#kHz^"
+    },
+    {
+      "exact_formula_ids": [
         "3c284e5d3a3fa0d3eb8424d3fb22b6aa52bcaf65ed43566d078cd10737b2a366"
       ],
       "exact_member_count": 1,
@@ -1898465,6 +1899601,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1468f100df4b5c356dcd03cb03e08bc0f82a0e68df28734706c3f6e4e890183e",
       "structural_formula": "*^PhasesonbothqutritsbreakTalreadywithtwogates^,atthe2\u03c0/#levelF=(##cos2\u03c0/#)/#"
+    },
+    {
+      "exact_formula_ids": [
+        "30a67053255ba23fa05ab1f86a699766db6b794362e621c05d95c96fcc8e37c9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3a4994778cee4e0919cb1f3bb94ac4c406552cfeb810780ba8f2ddebb313f11d",
+      "structural_formula": "*^Photoncoupling.^Theanomalysitsintheupsectoronly,soE/N=#\u00b7N_c\u00b7Q_u2=#/#and"
     },
     {
       "exact_formula_ids": [
@@ -1922548,6 +1923692,14 @@
     },
     {
       "exact_formula_ids": [
+        "05f6bef2c7707a6766d7e38f15ab8a904527650fe39194cac202055dc2ab1011"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "59fe198dba38fde059e3ae03e4f22a2ca40eabb0ce9a7a386339265cb090f89f",
+      "structural_formula": "ALPHA=#/#"
+    },
+    {
+      "exact_formula_ids": [
         "3cfcc413dc8934927e47e5f1ab22dc8527d1419a0fe20cdbe83b7c39c6b772da"
       ],
       "exact_member_count": 1,
@@ -1924955,6 +1926107,14 @@
       "exact_member_count": 1,
       "structural_family_id": "66c98994b301bda4b6f9b7ebe179a95c54f20c650598bf3c8544a6e693edc152",
       "structural_formula": "Allthreecontaintwopointson`L=<e1,e2>`andtwoonthedisjointline`M=<f1,f2>`.ExactW(#,#)andW(#,#)checksforeverynonzeroaplacethesethreeapartmentsononetriangleoftheline-sidelocalK_(q+#).HencethestandardV1,#boundaryisexactlyaline-thetarelation.Withorderedgeodesicroots`R0,R1,R2`,chooseorientedapartments`Aij=Ri-Rj`;thentherelationisalreadyintegral"
+    },
+    {
+      "exact_formula_ids": [
+        "778317d91394e2b67dc6bda11a0a3ea408f81a9ebae29914684e77ff01b66ccc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9ceac1055d09b7d19b4cb63f2b3749267d23935ac48658e76011e6fcec141685",
+      "structural_formula": "AlongthewholeWeberlevelcurve|f(tau)|^#=#sqrt(m_um_t/m_c^#),theweight-zerocombinationkappaImtauvaries"
     },
     {
       "exact_formula_ids": [
@@ -1937516,6 +1938676,14 @@
     },
     {
       "exact_formula_ids": [
+        "b30b39b87adccd3e620faa32206b2cfb08fe417b3fe04b7252d06e1e8a336f01"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2e2e6df79830fa052b71dee21343026718c30b975d7d444e8fc679f9fb58c1af",
+      "structural_formula": "E/N=#/#"
+    },
+    {
+      "exact_formula_ids": [
         "99df66d4a1a9de0c129f69c35d61f01bf569cffdca931ff7c48bdf7bf913ae16"
       ],
       "exact_member_count": 1,
@@ -1946678,6 +1947846,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fe576327331cf6e5c6c587b1c07a607be982071965f2a340f0d5cac0f4a96a3f",
       "structural_formula": "Gc[(N1,N2,j1,j2)]=gauge1#(w,z,tau)"
+    },
+    {
+      "exact_formula_ids": [
+        "dbc618e2ab4949aed017402f6f7eab8d7c7d585995bbd70cdc610411c35d1c79"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6fdf804a0e665f2f8b02239ba3eda2c01e2b12d376fc7566b34ec38c145157ba",
+      "structural_formula": "GeV^#.Asallofdarkmatterviamisalignmentitneedsaninitialangle~#(pre-inflationaryPQbreaking,where"
     },
     {
       "exact_formula_ids": [
@@ -1968043,6 +1969219,14 @@
     },
     {
       "exact_formula_ids": [
+        "be80eebb83df4aba788377286b7fcf657bb31476f43967912799d3a8caef8bd7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3ccc4fe623e44c30331387d2182c3b0a021bbd76cd5f78e646cde072abf109a9",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_axiflavon_decay_constant.json\""
+    },
+    {
+      "exact_formula_ids": [
         "aee4d00cdd4e9fd505cd00fb867c881d4e9b8b2b99b58e73c829bdfe00fd777b"
       ],
       "exact_member_count": 1,
@@ -1975369,6 +1976553,14 @@
       "exact_member_count": 1,
       "structural_family_id": "630fa565d3f60f2983f94fd2fb112d2e821d1de9783b354228f3109151a29dd6",
       "structural_formula": "Pass1#(factorisationsactasreflectionsonlyatn=#)thissinglesouttwoqutritstwice"
+    },
+    {
+      "exact_formula_ids": [
+        "794d9096c8993de50356337754cfcf8c0f09b3812733862b4022a6321ffa1bf3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a5b4a30ad590bdc54cbca58f3fa3796c792348982a363daf9f98bf5a543c4bf2",
+      "structural_formula": "Pass1#(m_um_t/m_c^#=|f(tau)|^#/#ontheswap-symmetricuphome)"
     },
     {
       "exact_formula_ids": [
@@ -2027322,6 +2028514,14 @@
     },
     {
       "exact_formula_ids": [
+        "029213ed025b058ed4e4f79863469f214b84bd86dfec3b5365ebeee113f8d216"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "652c4cd5c670b442320f6030e57aab60d01b71431df63bd6f388094e5ac6b302",
+      "structural_formula": "\\kappa\\mathrm{Im}\\tau=#"
+    },
+    {
+      "exact_formula_ids": [
         "772fb95285821246d3d34ac14d789e1e585073e0a25ce538c486138f8cc8cd5a"
       ],
       "exact_member_count": 1,
@@ -2043350,6 +2044550,14 @@
     },
     {
       "exact_formula_ids": [
+        "2cded640da3165bea4d6ad60a28a1e1cdb45d510742ab8999d8c516755ceb2c6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a30d2ff9d39369066bea81a3004cf1fab4c9d113f2905b82c3ff36e8467ef091",
+      "structural_formula": "^AlongtheWebercurve.^AlongthewholeWeberlevelcurve|f(\u03c4)|#=#\u221a(m_um_t/m_c2)(#points),theweight-zero"
+    },
+    {
+      "exact_formula_ids": [
         "a3cbbf9685f90d3e7caef3bf8f477c4b3a20b306add41ce85ac56e5ed82e9678"
       ],
       "exact_member_count": 1,
@@ -2044270,6 +2045478,14 @@
     },
     {
       "exact_formula_ids": [
+        "0fe0af4d65114d300698b995a91db97404349b07fa21d329ec33d81c61ead2d4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "006cb9ecdc5337ab8c2227edb43ece8c62569c5e95771765224c5eaabd4b2964",
+      "structural_formula": "^Thedecayconstant.^Write\u03a9#=r\u00b7e^{i\u03c6}.Thecanonicalfieldisa=M_P\u00b7r\u00b7\u03c6/\u221a(Im\u03c4#\u00b7Im\u03c4#).Since\u03b8\u0304=#\u03c6"
+    },
+    {
+      "exact_formula_ids": [
         "b072243b88ab13507270c77d1d8c9f176b56cb158279b1a611341904fa6184b2"
       ],
       "exact_member_count": 1,
@@ -2044619,6 +2045835,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e07e304dea0fbe66969272c37fba39a4bae0ecd47045f996e74d996a3341f53d",
       "structural_formula": "^eHSiqq)|GE!ubw"
+    },
+    {
+      "exact_formula_ids": [
+        "bbbac89e946ff69e92937baa14fe5d03e5810f97d598186d4a2c4786b78ac143"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dbab00db3224dab01c1b378a75360f35ae8fbc1bd815103073462f60b55f9b20",
+      "structural_formula": "^f_a=M_P\u00b7|\u03a9#|/(#\u00b7\u221a(Im\u03c4#\u00b7Im\u03c4#))^"
     },
     {
       "exact_formula_ids": [
@@ -2096470,6 +2097694,14 @@
     },
     {
       "exact_formula_ids": [
+        "c8d70ee85a290cffba6e0ef543eccac234e68b257f09c752d667517044b42030"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cd67153a11ef71efe57309339a38920829308b917b0c1165508c9f8355236a8b",
+      "structural_formula": "differences).WritingOmega1#=re^{iphi},thecanonicalfieldisa=M_Prphi/sqrt(Imtau1Imtau2),and"
+    },
+    {
+      "exact_formula_ids": [
         "dce5049238296cbedb09e1afd10a1b9d110fe3e46705f695de0a172db53e5d36"
       ],
       "exact_member_count": 1,
@@ -2110557,6 +2111789,14 @@
     },
     {
       "exact_formula_ids": [
+        "6706cbf82f4ace3a4842cbb9c225b5f1c56e36b7209468f318fc173e79bbffda"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c4dd258a85381f89aa5e4edaa0dd1c2c3e40af70fca85ee9ea75b3dcf58f952d",
+      "structural_formula": "f_a=(##)x1e1#GeV(M_Z-scaleratios;bothquarkfitsgive5#e1#)"
+    },
+    {
+      "exact_formula_ids": [
         "f6a1e1fc8bbf3e027a8cd3f31c704efff77ae24bd94712942f28486b8db657cd"
       ],
       "exact_member_count": 1,
@@ -2110570,6 +2111810,38 @@
       "exact_member_count": 1,
       "structural_family_id": "7c29b7b95b8f22d072b77e38fafe9143b37269e91fb550eac1802b1c43b44f02",
       "structural_formula": "f_a=M_GUT*epsilon^#"
+    },
+    {
+      "exact_formula_ids": [
+        "da38a31359ecce11c54b973d185bf47e5e5b7799ca808ec048afaf09b7a9b7ba"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e6edbab22f495fb4e249b2c89ee698ebe529c3537129a4d855be4319e5382b5f",
+      "structural_formula": "f_a=M_P(m_c/m_t)/(#\\kappa\\mathrm{Im}\\tau)"
+    },
+    {
+      "exact_formula_ids": [
+        "432cee72610fbec637671c0c714aa0cb0e5b5c6116e8881f7da1d3e3e71895e6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d188c206824c7989021cc2ce139b8e83b21c41c08ba9d6c4405cc7028be1939b",
+      "structural_formula": "f_a=M_P|Omega1#|/(#sqrt(Imtau1Imtau2))"
+    },
+    {
+      "exact_formula_ids": [
+        "2ac6711b585c45ca405305777d126fe66cbec6656c94dd40d7bb996bd238fdf6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "154371a11283d4af299a33359ec158478a3b8bbdd534e57c2b79adc760e4a925",
+      "structural_formula": "f_a=M_P|\\Omega_{#}|/(#\\sqrt{\\mathrm{Im}\\tau_1\\mathrm{Im}\\tau_2})"
+    },
+    {
+      "exact_formula_ids": [
+        "2a97e53d14857cca702a404487a49ee7708fe7bc65c0350c4ff49b5f41f5a8bd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c7f026403d4c4c8ddf71e6526d48cc6b3efc1fa9aa196ef4c55fe4006f51c322",
+      "structural_formula": "f_a=M_P\u00b7(m_c/m_t)/(#\u00b7\u03ba\u00b7Im\u03c4)"
     },
     {
       "exact_formula_ids": [
@@ -2110602,6 +2111874,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7ed28aa27b93df40c467d51b8a70b7909043126b2d957859a155ce539f5c75b8",
       "structural_formula": "f_a~(#)^#/(#GeV)=#GeV"
+    },
+    {
+      "exact_formula_ids": [
+        "600e5340e29f7901d0d0851ea5d84aac94b62d4d66be9cd07d074267a7bc595c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5b0d3c8282b8d2dba2d2d6b80dfbb02d7fc981de296d2e2b39252a6c51d66bf9",
+      "structural_formula": "f_a\u2248(#"
     },
     {
       "exact_formula_ids": [
@@ -2111002,6 +2112282,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3e36509724b5dab34ce1f3592e6b41c1c5ece00af585ddeaf746dd726891dc25",
       "structural_formula": "fake_monster_simple_roots=M_LAM##\u2713"
+    },
+    {
+      "exact_formula_ids": [
+        "89c5be969c945c62d2c88829e745aec6277e169e3d04ba148ce01d3d599bde24"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7a454a32f027acbaba2ba698f6f5806972e99ea814010c63542078f130d9d53e",
+      "structural_formula": "fallingto~#GeViftheGUT-scalem_c/m_t(~#)isused"
     },
     {
       "exact_formula_ids": [
@@ -2115073,6 +2116361,14 @@
     },
     {
       "exact_formula_ids": [
+        "fcdcc0d6fcccfa752ad18c17567c8400de0da7cbb29e761b3ec1bede4cc53124"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8d3635b81a2f954c828d13b6d26c9d1738735f5ae69a40b9deb7a64058ba03b1",
+      "structural_formula": "g_a\u03b3\u03b3=\u03b1/(#\u03c0f_a)\u00b7(E/N\u2212#)\u2248^#\u2013#\u00b7#\u2212#GeV\u2212#^"
+    },
+    {
+      "exact_formula_ids": [
         "c38d83fc9775757a736444d5030494b93b05e8ceb2ed3987e2801d0cbd8b36b3"
       ],
       "exact_member_count": 1,
@@ -2115190,6 +2116486,14 @@
       "exact_member_count": 1,
       "structural_family_id": "89d4408fe4e02a39ac00cbaccf411c52172b8cd45247c5c4cbf7d831dbc89747",
       "structural_formula": "g_{\\rmOtto,visible}=#"
+    },
+    {
+      "exact_formula_ids": [
+        "0a096b00b08b620fc2bb21c48c181db25386281c93bb570f9b1fa7ce18a333ba"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "71dbd6c40b7e55584cd1a8078f07c7df205c5a8f154642d15154816e14279af2",
+      "structural_formula": "g_{a\\gamma\\gamma}\u2248#\\times1#^{#}"
     },
     {
       "exact_formula_ids": [
@@ -2129468,6 +2130772,14 @@
     },
     {
       "exact_formula_ids": [
+        "28a463da6b3ab703776790749e2ba9c3dd3584996f2f601a5b07ea7d581ebf31"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "47b10e8335a07850aa1f594e6fbfe6c3a88d51922cd47f5b3529ecafbd3f16ed",
+      "structural_formula": "kappa_im_nearly_constant=(max(kim)-min(kim))/np.mean(kim)<#andlen(curve)>#"
+    },
+    {
+      "exact_formula_ids": [
         "70471a1dd3b79b4cffd5724d63b56588ce056cde5a604fc2f6f7f2e1ef71b4c9"
       ],
       "exact_member_count": 1,
@@ -2137960,6 +2139272,14 @@
     },
     {
       "exact_formula_ids": [
+        "e79303c170928e948ca6adb62554068d1efca2e612dbf6da8eb93c6390321d2e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "983e0c68b11200c1f6d6b6d11193d251cd0a6437a534bc325897470cb886bc8f",
+      "structural_formula": "m_a=[#*#/fforfinfa_band[::#]]"
+    },
+    {
+      "exact_formula_ids": [
         "89983712830fff250c3f7790f00520320594c442f7bff5e5879c3c17206d8397"
       ],
       "exact_member_count": 1,
@@ -2138037,6 +2139357,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ca394d2c5c691b0ac60187611838d32eec4080f7e964a5ab570ef639e91f4be0",
       "structural_formula": "m_a~\\Phi_6\\cdot\\frac{\\Lambda_{QCD}^#}{f_a}~\\frac{#\\cdot(#)^#}{#}~#\\times1#^{#}\\\\text{GeV}~#\\\\text{keV}"
+    },
+    {
+      "exact_formula_ids": [
+        "ef4b34ed8e576cdb739abd7b0d366f9d9af859510061da35c179f5a8d6ef9b43"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "edc263543d5483fe8032c5f2f501004559b43018dbc8c06fccc46cad17071e30",
+      "structural_formula": "m_a\u2248#"
     },
     {
       "exact_formula_ids": [
@@ -2138590,6 +2139918,14 @@
       "exact_member_count": 1,
       "structural_family_id": "12eef6df0152f3fb610a8b35fd51e3fd5b93578d3169ffbcbbb6c16ccfc2a4c9",
       "structural_formula": "m_c/m_t=#t"
+    },
+    {
+      "exact_formula_ids": [
+        "9f6530ae627d945aab7d2074017e51e44aad9495a4c8de0cbcf6ec6fd103b3aa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f4c487829854aac39de0048215835cb2b143214c844e6c4633038272f4fce966",
+      "structural_formula": "m_c/m_t=\\kappa(\\tau)|\\Omega_{#}|"
     },
     {
       "exact_formula_ids": [
@@ -2144418,6 +2145754,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a5d60ec2ea6f67c45bf1632271bc5404e407af700d2b020cd9fef3d3e339c9d1",
       "structural_formula": "mass_gap=#^#"
+    },
+    {
+      "exact_formula_ids": [
+        "df24aed42a1b14b268c549054f5c706d61ce83532680a96a2e28cfbc9f94370a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a78d53d259c31ef745abd43a7bd1cdc86126291f4490fb0292dd07811e650534",
+      "structural_formula": "mass_in_neV_window_lower_edge=#<min(m_a)andmax(m_a)<#"
     },
     {
       "exact_formula_ids": [
@@ -2204895,6 +2206239,22 @@
     },
     {
       "exact_formula_ids": [
+        "53621249079c604e809597d70ad961b351f1a210169bbdf7090cc6492a5ac871"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fd42cbcc7b3e66e289c6e2e5cd08d767cf697bd29236c794df42c9d1abd5da7a",
+      "structural_formula": "res[\"frequency_kHz\"]=[m/#/#forminm_a]"
+    },
+    {
+      "exact_formula_ids": [
+        "7839041498d81619338bf6e3438cd09a33ab71bd6cc6f279da19faedc7a1da15"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b9bcd07c99237a95381acd594375b4bbd78747dcd8f4a6d40ffc886a4f0b5491",
+      "structural_formula": "res[\"g_agamma_per_GeV\"]=[ALPHA/(#*np.pi*f)*(#/##)forfinfa_band[::#]]"
+    },
+    {
+      "exact_formula_ids": [
         "b11b63b037c71486603316085bacd4c725a748b060becda22d84688fa1d12ef2"
       ],
       "exact_member_count": 1,
@@ -2211042,6 +2212402,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5fe7b9b30bdff399908a4fd52954779c3b9d9bddec0917d97be25dfe38acbe93",
       "structural_formula": "s=math.sin(theta)*np.exp(#j*(alpha+phi))"
+    },
+    {
+      "exact_formula_ids": [
+        "7f3f6b5508a1db3c5e57f1f5b1fe6cd889bc5ce51abca20ff24c97946a048a8b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "04e722eb5433af02f3fbe15f10ad8c42a310fd943dd98d6390c5144aa5d9be6b",
+      "structural_formula": "s=np.linalg.svd(P4#.theta(np.array([[tau,e],[e,tau]])),compute_uv=False)"
     },
     {
       "exact_formula_ids": [
@@ -2218954,6 +2220322,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d1e35bf30cb71142d8a83c5ccbf52eb5dd0dacee1d61a42ecf31a08ca91c23f8",
       "structural_formula": "site/gauge-parametermodes;theabsenceofanequivariantalternating8x8->#bracket"
+    },
+    {
+      "exact_formula_ids": [
+        "4de13fb47284e705f543c51eb37f3c56dba8418f705652e0472f380516a0b5f2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "245c7eda299498a122655babada334df7cf386b57c674c1d51eb55b0b0b2d3e6",
+      "structural_formula": "sitsintheupsectoronly,soE/N=#N_cQ_u^#=#/#andg_agamma=alpha/(#pif_a)(E/N-#)~##"
     },
     {
       "exact_formula_ids": [
@@ -2229674,6 +2231050,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0da9c409279123d620882652c4761b3bcf559eedbe1709377e09ed09386c0e2f",
       "structural_formula": "theta-alpha=q=#(overthe4#rays).SothemagicINJECTIONrateisbounded"
+    },
+    {
+      "exact_formula_ids": [
+        "31e0725a8567a42f93f24e18f7f55d0976aab1e58733af19a9871067b765ae36"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2df2f47db268afa8362e3a4f703618124d1bf1fe25ce2577950058e14c8b28c2",
+      "structural_formula": "theta-bar=#phigives"
     },
     {
       "exact_formula_ids": [
@@ -2255360,20 +2256744,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87063319,
-    "exact_formula_families": 60862,
-    "files_scanned": 11933,
-    "formula_occurrences": 66831,
+    "bytes_scanned": 87072803,
+    "exact_formula_families": 60899,
+    "files_scanned": 11935,
+    "formula_occurrences": 66871,
     "status_occurrences": {
-      "certified_or_theorem": 4865,
-      "killed_or_retracted": 1593,
-      "open_or_conditional": 2185,
+      "certified_or_theorem": 4866,
+      "killed_or_retracted": 1594,
+      "open_or_conditional": 2198,
       "preregistered": 32,
       "retrospective_fit": 5182,
-      "unclassified": 52974
+      "unclassified": 52999
     },
-    "structural_families": 59241
+    "structural_families": 59278
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "ef2b72d5465ccf3adc81457038ec8e1c1c0816e2cfc46df20dcb7247fddf63ec"
+  "universe_sha256": "31107a69c3aeda53a0855611c0bf2fd0b41a60fa7ad68254acb59c6e85144f84"
 }
