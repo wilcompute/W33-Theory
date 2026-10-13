@@ -1,0 +1,41 @@
+{
+  "type": "publication_attestation",
+  "science_sha": "3429a5eb9d919fc22b2c738de811d946b36a5ac3",
+  "reservation": "f5c5150cc",
+  "superseded_science_sha": "b577dc9a1db90b00e1a526f966f7a8e5a79312ab",
+  "correction": "Use conjugate kinetic square root in Weyl charged-lepton convention; physical quark J positive; earlier PMNS phases conjugated.",
+  "run_id": 38343919919,
+  "job_id": 115120855448,
+  "conclusion": "success",
+  "run_url": "https://github.com/wilcompute/W33-Theory/actions/runs/38343919919",
+  "hosted_counts_and_seconds": [
+    [
+      "42",
+      "12.97"
+    ],
+    [
+      "23",
+      "2.68"
+    ]
+  ],
+  "local_full_checks": 42,
+  "local_full_seconds": 21.45,
+  "result_index": {
+    "files": 12049,
+    "distinctive_results": 16673,
+    "unique": 7284
+  },
+  "hashes_lf": {
+    "analysis/w33_pass11957_11959_color_threshold_and_cp_quality.py": "f506c6d0a195ecda441d97d43e38dacb9b6a2eeb2c470614f356f7df14f87ba5",
+    "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py": "fbda88ffa1af9af9edc310482ed78463144d25582560681cfde9ba8b6fe40555",
+    "analysis/PASS11957_11961_SELECTION_COMPLETION.md": "192930c22892716a0ec059c9d6b3bfd964d0faa998ebed4ab40c54d952a864fe",
+    "tests/test_w33_pass11957_11961_selection_completion.py": "2eaf7322f1356601398996dcde9b4be4ea181d2f7db6c705ef2d6baeb2aac847",
+    ".github/workflows/pass11957-11961-selection-completion.yml": "66b1de02db8d03bcf153ec2af25e3bfe957cbbccc857195abbc58e08d9f0e7e4",
+    "data/w33_pass11957_11959_color_threshold_and_cp_quality.json": "2e3b6252b5362f7fbfbea4195c96887e2c22c59187475224a7377e608ed1d156",
+    "data/w33_pass11960_11961_clebsch_and_shared_cone.json": "c88503d17f85ffd2af756c9f8c6e74ea6a0efbe7bba7e8a7d219c6e416d6c91a",
+    "docs/index.html": "d3d58e42008a041afe67766ad07d60d1fb81461f0a0422df6c3eba941489e39f",
+    "RESULTS_INDEX.md": "4808e130cf43ac08077e5f99a6f988b1f5c993ad7ae8b518c1dbe1474b195937"
+  },
+  "scope": "Declared local threshold and anomaly-free added-field model; no full E6 vacuum, complete soft theta, scale prediction or native graph gravity. Intake inventory is not a full human semantic reading of every file.",
+  "guard": "Lexical deficit@12 advisory reviewed against earlier Regge/Einstein-Hilbert scripts, retained. Forced arithmetic and CSS token scans zero. Not a clean lexical guard claim."
+}
