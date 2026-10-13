@@ -231902,11 +231902,11 @@
           "line": 1,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "# Pass 11948: the axiflavon decay constant is fixed by the up-quark masses \u2014 f_a \u2248 4\u20135\u00b710\u00b9\u2075 GeV, m_a \u2248 1.1\u20131.5 neV",
-          "status": "certified_or_theorem"
+          "status": "killed_or_retracted"
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1
+        "killed_or_retracted": 1
       },
       "structural_family_id": "b6f7ebe62d497e412e173049945970f105abe0acbd9f6f2be7fa47c0ddcaef3e",
       "structural_formula": "#Pass1#:theaxiflavondecayconstantisfixedbytheup-quarkmasses\u2014f_a\u2248#\u2013#\u00b7#GeV,m_a\u2248#\u2013#neV"
@@ -331296,6 +331296,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fa36f5ea2e213edf195ff57089ab013910c9c747a607d9271ead346b75536462",
+      "normalized_formula": "(3/16pi^2)4m_t^4delta~1e2GeV^4(~1GeV^4evenwithTeV-scalesupersymmetrycuttingofftheUVpart),against",
+      "numeric_literals": [
+        "1",
+        "16",
+        "1e2",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "(3/16 pi^2) 4 m_t^4 delta ~ 1e2 GeV^4 (~1 GeV^4 even with TeV-scale supersymmetry cutting off the UV part), against",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "8c913c31559ae539c832b05eb4bbc21eef2fd7f65017a175defc1bf86f0eb685",
+      "structural_formula": "(#/#pi^#)#m_t^#delta~#GeV^#(~#GeV^#evenwithTeV-scalesupersymmetrycuttingofftheUVpart),against"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1266dbf20d544da086cb8d2668b3a5726156802ae23f6702940155004c0265e9",
       "normalized_formula": "(30,54,78,80)=(h(E_8),2q^3,\\dimE_6,2v)",
       "numeric_literals": [
@@ -350325,7 +350357,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 50,
+          "line": 54,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "* K = \u2212log det Im \u03a9. Other K\u00e4hler contributions, such as brane and K\u00e4hler-moduli mixing, rescale f_a by O(1).",
           "status": "open_or_conditional"
@@ -352214,6 +352246,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "54c73a38424ad0c75a83b37069ba3dac85598c215dc16064ee46ce8ff15b5002",
+      "normalized_formula": "*TheaxionpredictionofPass11948(f_a\u22484\u20135\u00b71015GeV,m_a\u22481.1\u20131.5neV),asasolutiontostrongCP",
+      "numeric_literals": [
+        "1.1",
+        "1.5",
+        "1015",
+        "1948",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md",
+          "raw": "* The axion prediction of Pass 11948 (f_a \u2248 4\u20135\u00b710\u00b9\u2075 GeV, m_a \u2248 1.1\u20131.5 neV), as a solution to strong CP.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "5aa19428a5f2c8c6d2dda99f21f4c6c83155a3799b20e2fa6e23d37a87e80b28",
+      "structural_formula": "*TheaxionpredictionofPass1#(f_a\u2248#\u2013#\u00b7#GeV,m_a\u2248#\u2013#neV),asasolutiontostrongCP"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6679c25ca49060360efe545fdc8ee08a60a69e73f726608481d05c69711c123d",
       "normalized_formula": "*Theboundsonm_c/m_tareminimaovereverymemberofeachorbit,at\u03b5=10\u22123",
       "numeric_literals": [
@@ -352815,6 +352879,34 @@
       },
       "structural_family_id": "8d8c2aef67851f9a191f4014efbe46cf577dcb8aab5bdb703da88bb3619b2c64",
       "structural_formula": "*Therenormalizableflatset\u03bc=#isthesetofflatconnections,sinceF_{zz\u0304}=[x,x\u2020]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ab6748fe1a35a79dc6457317caaee6f7630fc4f2e15a6f61bff0989d1a93faa3",
+      "normalized_formula": "*Therephasingstructure(argdetY_u=3\u00b7arg\u03b5+O(|\u03b5|2))",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md",
+          "raw": "* The rephasing structure (arg det Y_u = 3\u00b7arg \u03b5 + O(|\u03b5|\u00b2)).",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "fecd9ed79ed1fcbc9309143256debcfdc66f7c71b92b3a9b5715178bc2b0e5fe",
+      "structural_formula": "*Therephasingstructure(argdetY_u=#\u00b7arg\u03b5+O(|\u03b5|#))"
     },
     {
       "file_count": 1,
@@ -354703,7 +354795,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 38,
+          "line": 42,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "* **Mass.** m_a = 5.69 \u03bceV\u00b7(10\u00b9\u00b2 GeV/f_a) = **1.1\u20131.5 neV**, i.e. a frequency of **270\u2013370 kHz**.",
           "status": "unclassified"
@@ -355017,7 +355109,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 39,
+          "line": 43,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "* **Photon coupling.** The anomaly sits in the up sector only, so E/N = 2\u00b7N_c\u00b7Q_u\u00b2 = 8/3 and",
           "status": "unclassified"
@@ -385996,6 +386088,36 @@
       },
       "structural_family_id": "3a65b9a49f2562c12ce0c84c24fe16ed4700e8893641eb4e15842d014f8af55a",
       "structural_formula": "#.Exactstructure.NearaproducthometheupYukawaisY_u=sum_kc_kf_kf_k^Twithc_k=(#piieps)^k/k!"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e9d8e8c2a62bb22df2c6742bd3c825d3a78297beefedc12f5c9c695b13e3546a",
+      "normalized_formula": "1.Explicitbreaking.Pass11947showedargdetY_u=3argeps_u+O(|eps|^2)andthatthequarkobservablesmoveonlyby",
+      "numeric_literals": [
+        "1",
+        "1947",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "1. Explicit breaking. Pass 11947 showed arg det Y_u = 3 arg eps_u + O(|eps|^2) and that the quark observables move only by",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "51dc772ac99f183b72dfa95ffa2edbefc5710361a9b69333f2a71424261d861c",
+      "structural_formula": "#.Explicitbreaking.Pass1#showedargdetY_u=#argeps_u+O(|eps|^#)andthatthequarkobservablesmoveonlyby"
     },
     {
       "file_count": 1,
@@ -427976,6 +428098,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "99345bbd604dd5854dd791721a8fb54493f1af0288fa39ca5b066aea1e24e6ee",
+      "normalized_formula": "3.Whereitlands.Thetoploop'sextremainphisitattheta-bar={-3.11,0.04}(fitA)and{-1.80,1.34}(fitB)for",
+      "numeric_literals": [
+        "-1.80",
+        "-3.11",
+        "0.04",
+        "1.34",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "3. Where it lands. The top loop's extrema in phi sit at theta-bar = {-3.11, 0.04} (fit A) and {-1.80, 1.34} (fit B) for",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "954fd689ee5ff885e3af9aca13375094edc193253aefe5b32de7a73a1b471974",
+      "structural_formula": "#.Whereitlands.Thetoploop'sextremainphisitattheta-bar={#,#}(fitA)and{#,#}(fitB)for"
+    },
+    {
+      "file_count": 1,
       "formula_id": "697f073c2490358de0946123ad361f0234a17ba72edf631d35404c10ca928aa5",
       "normalized_formula": "3.Witten-Reshetikhin-TuraevInvariant:k_WRT=AUT_ORDER/V=51840/40=1296=6^4",
       "numeric_literals": [
@@ -436545,6 +436698,35 @@
       },
       "structural_family_id": "01f750a8337e6298d7fddd0b4c0c095718c068648d148cb4a9436823c92e0cba",
       "structural_formula": "#.Nearthepoint,Omega=w.#+eps(a+bJ),withtheHiggsinafixedZ3-chargesector,theupspectrumscales"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5b688dc3f62321a41670accff05825165fb6f60d586f1f9bf17291adcf6cc4d5",
+      "normalized_formula": "4.Observation(twofits,notderived).Ateveryextremumofm_t(phi),argdetY_u=+-pi/4or+-3pi/4to~1",
+      "numeric_literals": [
+        "-3",
+        "1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "4. Observation (two fits, not derived). At every extremum of m_t(phi), arg det Y_u = +-pi/4 or +-3pi/4 to ~1%.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "d6e05d16a3131a28663dc757b9269f9c3098ce752402121ca96aefbb386af6c6",
+      "structural_formula": "#.Observation(twofits,notderived).Ateveryextremumofm_t(phi),argdetY_u=+-pi/#or+#pi/#to~#"
     },
     {
       "file_count": 1,
@@ -525024,6 +525206,42 @@
       "structural_formula": ">^Thetwo-qutritSU(#)nevergivesarenormalizable,non-degeneratetopYukawabyitself.^Thecompactificationgeometrymustsplitthecopies.Z6-IIdoes;Z6-Icannot"
     },
     {
+      "file_count": 2,
+      "formula_id": "e0afea8315500d9ae1e598c4d9f3bfdca487e2bf3fbefa9f86936b1ce5f30f9d",
+      "normalized_formula": ">^Withdrawnasastrong-CPsolutionbyPass11949.^ThethetaYukawabreakstheFroggatt\u2013NielsenU(1)explicitly",
+      "numeric_literals": [
+        "1",
+        "1949"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
+        "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 3,
+          "path": "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
+          "raw": "> **Withdrawn as a strong-CP solution by Pass 11949.** The theta Yukawa breaks the Froggatt\u2013Nielsen U(1) explicitly",
+          "status": "killed_or_retracted"
+        },
+        {
+          "category": "relation_line",
+          "line": 3,
+          "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
+          "raw": "> **Withdrawn as a strong-CP solution by Pass 11949.** The theta Yukawa breaks the Froggatt\u2013Nielsen U(1) explicitly",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 2
+      },
+      "structural_family_id": "7b17eac02779c770c082a910bbbccf1fb4095d33a513af3d41188b8406cc6da4",
+      "structural_formula": ">^Withdrawnasastrong-CPsolutionbyPass1#.^ThethetaYukawabreakstheFroggatt\u2013NielsenU(#)explicitly"
+    },
+    {
       "file_count": 1,
       "formula_id": "d463e2d9a2278e4cc7d2bf38211bae6558bdbf0c4ae000c8b90d2f69570e884a",
       "normalized_formula": ">^Worst-caseprogramlengthvariesfrom19to23\u2014a21",
@@ -544538,6 +544756,34 @@
       },
       "structural_family_id": "4c10477143505c8df3aa55c027b4b181d39377d56c1d0b03328e87fe7848d275",
       "structural_formula": "AternaryCSScodehasq+#=muanyonclasses(Z_qgaugetheory)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f164f8a59774ec3383e7b4601a8cb19ff4e37209cd1899cdc701866b16e78b45",
+      "normalized_formula": "Ateveryextremumofm_t(\u03c6),argdetY_u=\u00b1\u03c0/4or\u00b13\u03c0/4toabout1",
+      "numeric_literals": [
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 56,
+          "path": "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md",
+          "raw": "At every extremum of m_t(\u03c6), arg det Y_u = \u00b1\u03c0/4 or \u00b13\u03c0/4 to about 1% (0.776 and \u22122.366, against 0.785 and \u22122.356).",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "57d6853a4c6cb44b9c8819a524be18d7b9ca2968f2a5019a24d6a7bd5b5ac708",
+      "structural_formula": "Ateveryextremumofm_t(\u03c6),argdetY_u=\u00b1\u03c0/#or\u00b1#\u03c0/#toabout1"
     },
     {
       "file_count": 1,
@@ -683499,7 +683745,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 27,
+          "line": 31,
           "path": "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
           "raw": "Measured: the deviation from 3\u03c6 scales as |\u03b5|^2.00 (1.3\u00b710\u207b\u2076 at \u03b5 = 10\u207b\u00b3, 1.1\u00b710\u207b\u00b3 at 3\u00b710\u207b\u00b2).",
           "status": "retrospective_fit"
@@ -842814,6 +843060,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f6e976172207bbda2adf46b3288d0189bee87f605a75c456d791a5c8b6088f5b",
+      "normalized_formula": "Yu=P42.theta(np.array([[tau,e],[e,tau]]))",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 48,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "Yu = P42.theta(np.array([[tau, e], [e, tau]]))",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "78f7a9c550329df80175c185266fce025ac2d7c12850b18664b84bfbc6ded41f",
+      "structural_formula": "Yu=P4#.theta(np.array([[tau,e],[e,tau]]))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6db6f364d98ae43cd1cd807feb31066fa541b9c8f8e5fcdbbc740b3c9d5ebd93",
       "normalized_formula": "Yu=P42.theta(np.array([[tau,eu],[eu,tau]]))",
       "numeric_literals": [
@@ -872850,18 +873123,26 @@
       "structural_formula": "\\bar\\lambda=\\bar\\mu=#=h(E_7)"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "d2721957c6317ad04846a9cf3cdd1927adc0fc9c3534aaec3f17038d455daf76",
       "normalized_formula": "\\bar\\theta=O(1)",
       "numeric_literals": [
         "1"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "papers/forty_points/appA_ledger.tex",
         "papers/forty_points/sec09_physics.tex"
       ],
       "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 584,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "\\bar\\theta=O(1)",
+          "status": "open_or_conditional"
+        },
         {
           "category": "inline_math",
           "line": 1561,
@@ -872871,7 +873152,7 @@
         }
       ],
       "status_profile": {
-        "open_or_conditional": 1
+        "open_or_conditional": 2
       },
       "structural_family_id": "d7dedd3ccfec413858abadc4a4e7914addd06c21ceae39e73ba0386ecb26803e",
       "structural_formula": "\\bar\\theta=O(#)"
@@ -988406,7 +988687,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 28,
+          "line": 32,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "**Along the Weber curve.** Along the whole Weber level curve |\ud835\udd23(\u03c4)|\u2078 = 2\u221a(m_u m_t/m_c\u00b2) (22 points), the weight-zero",
           "status": "unclassified"
@@ -991893,7 +992174,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 16,
+          "line": 20,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "**The decay constant.** Write \u03a9\u2081\u2082 = r\u00b7e^{i\u03c6}. The canonical field is a = M_P\u00b7r\u00b7\u03c6/\u221a(Im \u03c4\u2081\u00b7Im \u03c4\u2082). Since \u03b8\u0304 = 3\u03c6,",
           "status": "unclassified"
@@ -992339,6 +992620,35 @@
       },
       "structural_family_id": "f115121704b68f82813c12010d5b0e52bc73d0c2902d5b19bddcf8537e608ae9",
       "structural_formula": "^Theprediction.^An^invertedorderingwithm3\u2248#meV^(#\u2013#meV)form1\u2248#meV"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cf7bdeffe940b4e6086dff3d89b43c9ef6fea69387535199ee9dab6add559701",
+      "normalized_formula": "^Theresidual.^Pass11947showedthatargdetY_u=3\u00b7arg\u03b5_u+O(|\u03b5|2),andthatquarkobservablesmovebyatmost",
+      "numeric_literals": [
+        "1947",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md",
+          "raw": "**The residual.** Pass 11947 showed that arg det Y_u = 3\u00b7arg \u03b5_u + O(|\u03b5|\u00b2), and that quark observables move by at most",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "35fbb5eec6f64d032f863ce2ce07422b481cb2e9e8f6821fe341469aeb991b5e",
+      "structural_formula": "^Theresidual.^Pass1#showedthatargdetY_u=#\u00b7arg\u03b5_u+O(|\u03b5|#),andthatquarkobservablesmovebyatmost"
     },
     {
       "file_count": 1,
@@ -993208,7 +993518,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 18,
+          "line": 22,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "**f_a = M_P\u00b7|\u03a9\u2081\u2082| / (3\u00b7\u221a(Im \u03c4\u2081\u00b7Im \u03c4\u2082))**.",
           "status": "unclassified"
@@ -1234889,7 +1235199,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 26,
+          "line": 30,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "f_a = M_P\u00b7(m_c/m_t) / (3\u00b7\u03ba\u00b7Im \u03c4).",
           "status": "unclassified"
@@ -1251518,7 +1251828,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 40,
+          "line": 44,
           "path": "analysis/PASS11948_AXIFLAVON_DECAY_CONSTANT.md",
           "raw": "g_a\u03b3\u03b3 = \u03b1/(2\u03c0f_a)\u00b7(E/N \u2212 1.92) \u2248 **1.7\u20132.3\u00b710\u207b\u00b9\u2079 GeV\u207b\u00b9**.",
           "status": "unclassified"
@@ -1674770,6 +1675080,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e4e96b9bf36421072a87c62c26c00222dd457751a56702229fea9d9cb604c19f",
+      "normalized_formula": "theQCDaxionpotentialchi~(75MeV)^4~3e-5GeV^4andthequalitybound~1e-10chi~3e-15GeV^4:toolargeby",
+      "numeric_literals": [
+        "1e-10",
+        "3e-15",
+        "3e-5",
+        "4",
+        "75"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "the QCD axion potential chi ~ (75 MeV)^4 ~ 3e-5 GeV^4 and the quality bound ~1e-10 chi ~ 3e-15 GeV^4: too large by",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "088ee49fcefdecbfe03cff0fbc9d9ffc3f6054f9495509b530740e9e021625ae",
+      "structural_formula": "theQCDaxionpotentialchi~(#MeV)^#~#GeV^#andthequalitybound~#chi~#GeV^#:toolargeby"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8d791d5be731b67fdaedd761318fc1201ccafb13c864171cad30d740ad07f78c",
       "normalized_formula": "theSAME3isthecolornumber,thegenerationnumber,ANDthecodedistance--d=q=n_gen--",
       "numeric_literals": [],
@@ -1676835,6 +1677176,35 @@
       },
       "structural_family_id": "0e6aab36fe00c7cbbb73d9976e6bae17c9e4bbc7800502e9e546cd3420e39eef",
       "structural_formula": "themeasuredq/Phi_3=#/#isaseparate(verygood,#vs0#)postdiction.TheRUNNING"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "462f4c9003bac10b16611957692e77d8e97871e68db76519f58b3a406f9cbda4",
+      "normalized_formula": "theminimaofm_t,andsimilarO(1)valuesatthemaxima--never~1e-10.SoargOmega12isNOTaviableQCDaxion",
+      "numeric_literals": [
+        "1",
+        "1e-10",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "the minima of m_t, and similar O(1) values at the maxima -- never ~1e-10. So arg Omega12 is NOT a viable QCD axion:",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "ac873f7360b337cc794721824333aacfa1da15a993b0c9d84c2c4479f7e543ab",
+      "structural_formula": "theminimaofm_t,andsimilarO(#)valuesatthemaxima--never~#.SoargOmega1#isNOTaviableQCDaxion"
     },
     {
       "file_count": 1,
@@ -1680933,6 +1681303,36 @@
       },
       "structural_family_id": "d9cb03dcefb8a9366fab8cb9ccc4f46aae90818baaad61aad290357ca2bb3361",
       "structural_formula": "thestandard|x,y>computationalbasis.AnSU(#)conjugationisneeded"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c304dd90afaac73f618b3e67a63c2dec100e0aec23551813462b34d9880f373e",
+      "normalized_formula": "thestrong-CPreadingofPass11947andthef_a~5e15GeV,m_a~1neVpredictionofPass11948arewithdrawnasa",
+      "numeric_literals": [
+        "1",
+        "1947",
+        "1948",
+        "5e15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "the strong-CP reading of Pass 11947 and the f_a ~ 5e15 GeV, m_a ~ 1 neV prediction of Pass 11948 are withdrawn as a",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "c1eab25d892e08714e5d2c1acc44d0566d5ad77256501e1767b5775898a1ea9d",
+      "structural_formula": "thestrong-CPreadingofPass1#andthef_a~#GeV,m_a~#neVpredictionofPass1#arewithdrawnasa"
     },
     {
       "file_count": 1,
@@ -1688624,6 +1689024,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e9ae1a7f0affd667f1369fb7ba1dd231867fe5566aa748688a6effe237c91002",
+      "normalized_formula": "theta_bar_at_extrema_not_small=all(abs(e[\"theta_bar\"])>1e-3forfinFs.values()foreinf[\"extrema\"])",
+      "numeric_literals": [
+        "1e-3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 70,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "theta_bar_at_extrema_not_small=all(abs(e[\"theta_bar\"]) > 1e-3 for f in Fs.values() for e in f[\"extrema\"]),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "72fe7484bb3c780cb454ecc76f7891cd66b87a4137fd219aa94ace65792f538f",
+      "structural_formula": "theta_bar_at_extrema_not_small=all(abs(e[\"theta_bar\"])>#forfinFs.values()foreinf[\"extrema\"])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8d28d61d33cf7475cf77767340acac3450ad5568d3496e022c7fe3ba032621d7",
       "normalized_formula": "theta_bound=v*4//(k+4);asserttheta_bound=10",
       "numeric_literals": [
@@ -1693102,6 +1693529,33 @@
       },
       "structural_family_id": "fe52f47afec9ff44e2480e802abb7ef5d932ed765e4d9e30a09ac4681f1e050e",
       "structural_formula": "top_down=_residual_pair_profile(bridged_down_quark_yukawa_8x8())[:#]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "59a186c694af6874e50bd4436aa1c6498973be36c17e256a1c1238cf07c79866",
+      "normalized_formula": "top_loop_potential_GeV4=float(V),ratio_to_quality_bound=float(V/(1e-10*CHI)),extrema=ext)",
+      "numeric_literals": [
+        "1e-10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11949_axiflavon_quality_fails.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 64,
+          "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+          "raw": "top_loop_potential_GeV4=float(V), ratio_to_quality_bound=float(V / (1e-10 * CHI)), extrema=ext)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3039710f0a21a54c302c21a856ced7bb2cec4116b28456750b539b6de317a23a",
+      "structural_formula": "top_loop_potential_GeV4=float(V),ratio_to_quality_bound=float(V/(#*CHI)),extrema=ext)"
     },
     {
       "file_count": 1,
@@ -1748897,6 +1749351,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5624a55714e031669844af8b4de5a03ecaa194d5b09dc6b4466d0639ac937cf7",
+      "normalized_formula": "|QCDaxionpotential,\u03c7\u2248(75MeV)4|3\u00b710\u22125GeV4|",
+      "numeric_literals": [
+        "10",
+        "3",
+        "4",
+        "5",
+        "75"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/PASS11949_AXIFLAVON_QUALITY_FAILS.md",
+          "raw": "| QCD axion potential, \u03c7 \u2248 (75 MeV)\u2074 | 3\u00b710\u207b\u2075 GeV\u2074 |",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "3b937e923c907b05e939ddb19986ae2b87042dd3de03e62055d2c4de1b983d91",
+      "structural_formula": "|QCDaxionpotential,\u03c7\u2248(#MeV)#|#\u00b7#\u2212#GeV4|"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c2575706cb383873edff11adb1f0da2849a6e93567d5347e6f44c9d670295326",
       "normalized_formula": "|Q_8|\\cdot|\\mathrm{Aut}(Q_8)|=8\\cdot24=192=|N|",
       "numeric_literals": [
@@ -1780851,9 +1781336,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-12T21:56:42-04:00",
+  "frozen_at": "2026-10-12T22:02:43-04:00",
   "pass": 398,
-  "repository_head": "6f6b95497a673ec677d84fba8b1ae5930338f352",
+  "repository_head": "ba9dc783a7c3d845ccee6ddc45114d760f1a7193",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1839671,6 +1840156,14 @@
     },
     {
       "exact_formula_ids": [
+        "e9d8e8c2a62bb22df2c6742bd3c825d3a78297beefedc12f5c9c695b13e3546a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "51dc772ac99f183b72dfa95ffa2edbefc5710361a9b69333f2a71424261d861c",
+      "structural_formula": "#.Explicitbreaking.Pass1#showedargdetY_u=#argeps_u+O(|eps|^#)andthatthequarkobservablesmoveonlyby"
+    },
+    {
+      "exact_formula_ids": [
         "bdf1c2029723610370b255244c8b8dda68520504119be4b1888609cdde9d74b5"
       ],
       "exact_member_count": 1,
@@ -1840244,6 +1840737,14 @@
       "exact_member_count": 1,
       "structural_family_id": "32c1f8e8e51e41cf1611fad340144b43aff51988359c31fdff027c4f530e79cf",
       "structural_formula": "#.Observableuniversephotonexponent:LAM\u00b7MU\u00b7(K\u2212#)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "5b688dc3f62321a41670accff05825165fb6f60d586f1f9bf17291adcf6cc4d5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d6e05d16a3131a28663dc757b9269f9c3098ce752402121ca96aefbb386af6c6",
+      "structural_formula": "#.Observation(twofits,notderived).Ateveryextremumofm_t(phi),argdetY_u=+-pi/#or+#pi/#to~#"
     },
     {
       "exact_formula_ids": [
@@ -1841237,6 +1841738,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e403e72ebcedb7c56695213387261f68813c746d8645a8723f65956809aa1e1a",
       "structural_formula": "#.Weinberganglesin2\u03b8_W=#/#"
+    },
+    {
+      "exact_formula_ids": [
+        "99345bbd604dd5854dd791721a8fb54493f1af0288fa39ca5b066aea1e24e6ee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "954fd689ee5ff885e3af9aca13375094edc193253aefe5b32de7a73a1b471974",
+      "structural_formula": "#.Whereitlands.Thetoploop'sextremainphisitattheta-bar={#,#}(fitA)and{#,#}(fitB)for"
     },
     {
       "exact_formula_ids": [
@@ -1893259,6 +1893768,14 @@
     },
     {
       "exact_formula_ids": [
+        "fa36f5ea2e213edf195ff57089ab013910c9c747a607d9271ead346b75536462"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8c913c31559ae539c832b05eb4bbc21eef2fd7f65017a175defc1bf86f0eb685",
+      "structural_formula": "(#/#pi^#)#m_t^#delta~#GeV^#(~#GeV^#evenwithTeV-scalesupersymmetrycuttingofftheUVpart),against"
+    },
+    {
+      "exact_formula_ids": [
         "a8c354e8421952dc9b006d1470c9f7c9c206aca3cf4bad2f11dba9f3a466b565"
       ],
       "exact_member_count": 1,
@@ -1898828,6 +1899345,14 @@
     },
     {
       "exact_formula_ids": [
+        "54c73a38424ad0c75a83b37069ba3dac85598c215dc16064ee46ce8ff15b5002"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5aa19428a5f2c8c6d2dda99f21f4c6c83155a3799b20e2fa6e23d37a87e80b28",
+      "structural_formula": "*TheaxionpredictionofPass1#(f_a\u2248#\u2013#\u00b7#GeV,m_a\u2248#\u2013#neV),asasolutiontostrongCP"
+    },
+    {
+      "exact_formula_ids": [
         "6679c25ca49060360efe545fdc8ee08a60a69e73f726608481d05c69711c123d"
       ],
       "exact_member_count": 1,
@@ -1898993,6 +1899518,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8d8c2aef67851f9a191f4014efbe46cf577dcb8aab5bdb703da88bb3619b2c64",
       "structural_formula": "*Therenormalizableflatset\u03bc=#isthesetofflatconnections,sinceF_{zz\u0304}=[x,x\u2020]"
+    },
+    {
+      "exact_formula_ids": [
+        "ab6748fe1a35a79dc6457317caaee6f7630fc4f2e15a6f61bff0989d1a93faa3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fecd9ed79ed1fcbc9309143256debcfdc66f7c71b92b3a9b5715178bc2b0e5fe",
+      "structural_formula": "*Therephasingstructure(argdetY_u=#\u00b7arg\u03b5+O(|\u03b5|#))"
     },
     {
       "exact_formula_ids": [
@@ -1922102,6 +1922635,14 @@
     },
     {
       "exact_formula_ids": [
+        "e0afea8315500d9ae1e598c4d9f3bfdca487e2bf3fbefa9f86936b1ce5f30f9d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7b17eac02779c770c082a910bbbccf1fb4095d33a513af3d41188b8406cc6da4",
+      "structural_formula": ">^Withdrawnasastrong-CPsolutionbyPass1#.^ThethetaYukawabreakstheFroggatt\u2013NielsenU(#)explicitly"
+    },
+    {
+      "exact_formula_ids": [
         "d463e2d9a2278e4cc7d2bf38211bae6558bdbf0c4ae000c8b90d2f69570e884a"
       ],
       "exact_member_count": 1,
@@ -1927332,6 +1927873,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4c10477143505c8df3aa55c027b4b181d39377d56c1d0b03328e87fe7848d275",
       "structural_formula": "AternaryCSScodehasq+#=muanyonclasses(Z_qgaugetheory)"
+    },
+    {
+      "exact_formula_ids": [
+        "f164f8a59774ec3383e7b4601a8cb19ff4e37209cd1899cdc701866b16e78b45"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "57d6853a4c6cb44b9c8819a524be18d7b9ca2968f2a5019a24d6a7bd5b5ac708",
+      "structural_formula": "Ateveryextremumofm_t(\u03c6),argdetY_u=\u00b1\u03c0/#or\u00b1#\u03c0/#toabout1"
     },
     {
       "exact_formula_ids": [
@@ -2008218,6 +2008767,14 @@
     },
     {
       "exact_formula_ids": [
+        "f6e976172207bbda2adf46b3288d0189bee87f605a75c456d791a5c8b6088f5b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "78f7a9c550329df80175c185266fce025ac2d7c12850b18664b84bfbc6ded41f",
+      "structural_formula": "Yu=P4#.theta(np.array([[tau,e],[e,tau]]))"
+    },
+    {
+      "exact_formula_ids": [
         "6db6f364d98ae43cd1cd807feb31066fa541b9c8f8e5fcdbbc740b3c9d5ebd93"
       ],
       "exact_member_count": 1,
@@ -2045595,6 +2046152,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f115121704b68f82813c12010d5b0e52bc73d0c2902d5b19bddcf8537e608ae9",
       "structural_formula": "^Theprediction.^An^invertedorderingwithm3\u2248#meV^(#\u2013#meV)form1\u2248#meV"
+    },
+    {
+      "exact_formula_ids": [
+        "cf7bdeffe940b4e6086dff3d89b43c9ef6fea69387535199ee9dab6add559701"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "35fbb5eec6f64d032f863ce2ce07422b481cb2e9e8f6821fe341469aeb991b5e",
+      "structural_formula": "^Theresidual.^Pass1#showedthatargdetY_u=#\u00b7arg\u03b5_u+O(|\u03b5|#),andthatquarkobservablesmovebyatmost"
     },
     {
       "exact_formula_ids": [
@@ -2229076,6 +2229641,14 @@
     },
     {
       "exact_formula_ids": [
+        "e4e96b9bf36421072a87c62c26c00222dd457751a56702229fea9d9cb604c19f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "088ee49fcefdecbfe03cff0fbc9d9ffc3f6054f9495509b530740e9e021625ae",
+      "structural_formula": "theQCDaxionpotentialchi~(#MeV)^#~#GeV^#andthequalitybound~#chi~#GeV^#:toolargeby"
+    },
+    {
+      "exact_formula_ids": [
         "8d791d5be731b67fdaedd761318fc1201ccafb13c864171cad30d740ad07f78c"
       ],
       "exact_member_count": 1,
@@ -2229657,6 +2230230,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0e6aab36fe00c7cbbb73d9976e6bae17c9e4bbc7800502e9e546cd3420e39eef",
       "structural_formula": "themeasuredq/Phi_3=#/#isaseparate(verygood,#vs0#)postdiction.TheRUNNING"
+    },
+    {
+      "exact_formula_ids": [
+        "462f4c9003bac10b16611957692e77d8e97871e68db76519f58b3a406f9cbda4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ac873f7360b337cc794721824333aacfa1da15a993b0c9d84c2c4479f7e543ab",
+      "structural_formula": "theminimaofm_t,andsimilarO(#)valuesatthemaxima--never~#.SoargOmega1#isNOTaviableQCDaxion"
     },
     {
       "exact_formula_ids": [
@@ -2230802,6 +2231383,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d9cb03dcefb8a9366fab8cb9ccc4f46aae90818baaad61aad290357ca2bb3361",
       "structural_formula": "thestandard|x,y>computationalbasis.AnSU(#)conjugationisneeded"
+    },
+    {
+      "exact_formula_ids": [
+        "c304dd90afaac73f618b3e67a63c2dec100e0aec23551813462b34d9880f373e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c1eab25d892e08714e5d2c1acc44d0566d5ad77256501e1767b5775898a1ea9d",
+      "structural_formula": "thestrong-CPreadingofPass1#andthef_a~#GeV,m_a~#neVpredictionofPass1#arewithdrawnasa"
     },
     {
       "exact_formula_ids": [
@@ -2232835,6 +2233424,14 @@
     },
     {
       "exact_formula_ids": [
+        "e9ae1a7f0affd667f1369fb7ba1dd231867fe5566aa748688a6effe237c91002"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "72fe7484bb3c780cb454ecc76f7891cd66b87a4137fd219aa94ace65792f538f",
+      "structural_formula": "theta_bar_at_extrema_not_small=all(abs(e[\"theta_bar\"])>#forfinFs.values()foreinf[\"extrema\"])"
+    },
+    {
+      "exact_formula_ids": [
         "8d28d61d33cf7475cf77767340acac3450ad5568d3496e022c7fe3ba032621d7"
       ],
       "exact_member_count": 1,
@@ -2234089,6 +2234686,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fe52f47afec9ff44e2480e802abb7ef5d932ed765e4d9e30a09ac4681f1e050e",
       "structural_formula": "top_down=_residual_pair_profile(bridged_down_quark_yukawa_8x8())[:#]"
+    },
+    {
+      "exact_formula_ids": [
+        "59a186c694af6874e50bd4436aa1c6498973be36c17e256a1c1238cf07c79866"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3039710f0a21a54c302c21a856ced7bb2cec4116b28456750b539b6de317a23a",
+      "structural_formula": "top_loop_potential_GeV4=float(V),ratio_to_quality_bound=float(V/(#*CHI)),extrema=ext)"
     },
     {
       "exact_formula_ids": [
@@ -2248976,6 +2249581,14 @@
     },
     {
       "exact_formula_ids": [
+        "5624a55714e031669844af8b4de5a03ecaa194d5b09dc6b4466d0639ac937cf7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3b937e923c907b05e939ddb19986ae2b87042dd3de03e62055d2c4de1b983d91",
+      "structural_formula": "|QCDaxionpotential,\u03c7\u2248(#MeV)#|#\u00b7#\u2212#GeV4|"
+    },
+    {
+      "exact_formula_ids": [
         "c2575706cb383873edff11adb1f0da2849a6e93567d5347e6f44c9d670295326"
       ],
       "exact_member_count": 1,
@@ -2256744,20 +2257357,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87072803,
-    "exact_formula_families": 60899,
-    "files_scanned": 11935,
-    "formula_occurrences": 66871,
+    "bytes_scanned": 87082003,
+    "exact_formula_families": 60915,
+    "files_scanned": 11937,
+    "formula_occurrences": 66889,
     "status_occurrences": {
       "certified_or_theorem": 4866,
-      "killed_or_retracted": 1594,
-      "open_or_conditional": 2198,
+      "killed_or_retracted": 1604,
+      "open_or_conditional": 2200,
       "preregistered": 32,
-      "retrospective_fit": 5182,
-      "unclassified": 52999
+      "retrospective_fit": 5185,
+      "unclassified": 53002
     },
-    "structural_families": 59278
+    "structural_families": 59294
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "31107a69c3aeda53a0855611c0bf2fd0b41a60fa7ad68254acb59c6e85144f84"
+  "universe_sha256": "c74bf598e8d0ee9ad88c772dc34753a50ef2f1a4c48229e9a129b7e11c05d0bf"
 }
