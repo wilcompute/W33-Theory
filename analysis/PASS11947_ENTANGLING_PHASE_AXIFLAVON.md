@@ -1,5 +1,9 @@
 # Pass 11947: the phase of the up-sector entangling modulus is an anomalous Froggatt–Nielsen rephasing — an axiflavon candidate
 
+> **Withdrawn as a strong-CP solution by Pass 11949.** The theta Yukawa breaks the Froggatt–Nielsen U(1) explicitly
+> at second harmonic (top modulation 2–5·10⁻⁶); the top loop exceeds the axion quality bound by 10¹⁶–10¹⁷ and fixes θ̄ = O(1).
+> The rephasing structure and the f_a formula stand only as statements about the modulus.
+
 Producer: `analysis/w33_pass11947_entangling_phase_axiflavon.py`
 Certificate: `data/w33_pass11947_entangling_phase_axiflavon.json`
 Regression: `tests/test_w33_pass11947.py`

@@ -1,5 +1,9 @@
 # Pass 11948: the axiflavon decay constant is fixed by the up-quark masses — f_a ≈ 4–5·10¹⁵ GeV, m_a ≈ 1.1–1.5 neV
 
+> **Withdrawn as a strong-CP solution by Pass 11949.** The theta Yukawa breaks the Froggatt–Nielsen U(1) explicitly
+> at second harmonic (top modulation 2–5·10⁻⁶); the top loop exceeds the axion quality bound by 10¹⁶–10¹⁷ and fixes θ̄ = O(1).
+> The rephasing structure and the f_a formula stand only as statements about the modulus.
+
 Producer: `analysis/w33_pass11948_axiflavon_decay_constant.py`
 Certificate: `data/w33_pass11948_axiflavon_decay_constant.json`
 Regression: `tests/test_w33_pass11948.py`

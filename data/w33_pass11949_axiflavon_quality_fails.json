@@ -1,0 +1,78 @@
+{
+  "pass_id": 11949,
+  "fits": {
+    "A": {
+      "top_modulation": 5.153342556129843e-06,
+      "harmonic_2": 5.1533560477286575e-06,
+      "harmonic_4": 8.538123888922351e-11,
+      "top_loop_potential_GeV4": 350.78009601261755,
+      "ratio_to_quality_bound": 1.1086383281386432e+17,
+      "extrema": [
+        {
+          "kind": "min",
+          "phi": 0.9948376736367679,
+          "theta_bar": -3.104643502843948,
+          "arg_det_Yu": -2.3659836088302
+        },
+        {
+          "kind": "min",
+          "phi": 4.136430327226561,
+          "theta_bar": 0.03694915074941568,
+          "arg_det_Yu": 0.775609044763164
+        },
+        {
+          "kind": "max",
+          "phi": 2.5656340004316642,
+          "theta_bar": 1.6077817882027208,
+          "arg_det_Yu": 2.3464416822164686
+        },
+        {
+          "kind": "max",
+          "phi": 5.707226654021458,
+          "theta_bar": -1.5338108653811051,
+          "arg_det_Yu": -0.795150971367357
+        }
+      ]
+    },
+    "B": {
+      "top_modulation": 1.961690700980536e-06,
+      "harmonic_2": 1.961703830018427e-06,
+      "harmonic_4": 3.0142669714127173e-12,
+      "top_loop_potential_GeV4": 133.52926667343277,
+      "ratio_to_quality_bound": 4.2201842306665176e+16,
+      "extrema": [
+        {
+          "kind": "min",
+          "phi": 1.9634954084936207,
+          "theta_bar": -1.804958178497924,
+          "arg_det_Yu": -2.3650255895074825
+        },
+        {
+          "kind": "min",
+          "phi": 5.105088062083414,
+          "theta_bar": 1.336634475093328,
+          "arg_det_Yu": 0.7765670640837695
+        },
+        {
+          "kind": "max",
+          "phi": 0.39269908169872414,
+          "theta_bar": -0.2341502803998079,
+          "arg_det_Yu": -0.7942176914093664
+        },
+        {
+          "kind": "max",
+          "phi": 3.5342917352885173,
+          "theta_bar": 2.9074423731781938,
+          "arg_det_Yu": 2.3473749621686353
+        }
+      ]
+    }
+  },
+  "checks": {
+    "explicit_breaking_second_harmonic": true,
+    "quality_violated_by_over_1e13": true,
+    "theta_bar_at_extrema_not_small": true,
+    "arg_det_at_extrema_near_odd_pi_over_4": true
+  },
+  "all_checks_pass": true
+}
