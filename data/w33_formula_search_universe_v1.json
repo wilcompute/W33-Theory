@@ -602205,6 +602205,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e2d26ddf30b95bbac6079ec762c28a30b2ef4838a879e0c2b7f434298df1c950",
+      "normalized_formula": "F=W@(V@(np.diag(ev^(-.5)))@V.T)",
+      "numeric_literals": [
+        "-.5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe52_h27_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 164,
+          "path": "analysis/w33_20261013_toe52_h27_bridge.py",
+          "raw": "F=W@(V@(np.diag(ev**(-.5)))@V.T)",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "0a513a3954e67af3d5cd5db0181f2879d501cb12fa95cddfff07de83990fcf9d",
+      "structural_formula": "F=W@(V@(np.diag(ev^(#)))@V.T)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2e3b776b7d290d69bcc5d118b3a92ba763b12de504936a9e8e8a1b3158ca3982",
       "normalized_formula": "F=\\begin{pmatrix}r\\\\t\\end{pmatrix}m^Tm(r^T,t^T)=\\begin{pmatrix}1/2007/2500\\\\7/250049/10000\\end{pmatrix}",
       "numeric_literals": [
@@ -812434,6 +812461,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "20bc663ffc6308110501552d4ea84dac6b65f185f5d9e677836e8c6b0ca52293",
+      "normalized_formula": "Thusthe40-dimensionalpermutationmodulehasEIGHTindependentH27-invariantorbit-constantvectors.UndertheexistingexactW33spectralprojectorresolution40=1+24+15,theseinvariantssplit",
+      "numeric_literals": [
+        "+15",
+        "+24",
+        "0",
+        "1",
+        "3",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe52_h27_k81_carrier_minimality.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/2026-10-13_toe52_h27_k81_carrier_minimality.md",
+          "raw": "Thus the 40-dimensional permutation module has EIGHT independent H27-invariant orbit-constant vectors. Under the existing exact W33 spectral projector resolution 40=1+24+15, these invariants split",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b0f7f1eac36009c638f3e5495bc341c4553d171e0602c7d8d244976be68f55da",
+      "structural_formula": "Thusthe4#-dimensionalpermutationmodulehasEIGHTindependentH2#-invariantorbit-constantvectors.UndertheexistingexactW3#spectralprojectorresolution4#=###,theseinvariantssplit"
+    },
+    {
+      "file_count": 1,
       "formula_id": "829e89bd159a50f48d2dc2e84b0761c0a15b589e73d600f6d1e152abe830087a",
       "normalized_formula": "Thusthechain-native`Q=Delta_1/4`isgauge-neutralforthisfirstlift",
       "numeric_literals": [
@@ -816900,6 +816959,33 @@
       },
       "structural_family_id": "c3d1094de0c84ae943f5c1f74d4d62087d3bd593df8587f8b3d9aeca9a66eaf4",
       "structural_formula": "U=W(a)V_M(T(x)I(x)I)isdecidedexactly(Pass1#)for"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "07bf601189d1faaff77dc482b9f6840a3e129e520a99f7e71fa3f22aff70cce9",
+      "normalized_formula": "U=Z[:,ev>.5]",
+      "numeric_literals": [
+        ".5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe52_h27_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 75,
+          "path": "analysis/w33_20261013_toe52_h27_bridge.py",
+          "raw": "U=Z[:,ev>.5]",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "417ffdf38e407538c94b2ebeb878c3c2de51aa882e4811971818dd8ad091243b",
+      "structural_formula": "U=Z[:,ev>#]"
     },
     {
       "file_count": 1,
@@ -1080092,6 +1080178,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b4440a29150691f51710b4d48e85421517ca305455da66a1a29474a60a586e91",
+      "normalized_formula": "assertsing[-1]>1e-7,(label,sing[-1])",
+      "numeric_literals": [
+        "-1",
+        "1e-7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe52_h27_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 161,
+          "path": "analysis/w33_20261013_toe52_h27_bridge.py",
+          "raw": "assert sing[-1]>1e-7,(label,sing[-1])",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "7404f4e7c56a08286a6b35d3bad90c8acc15d13b9384e14f39eb50447ae4e197",
+      "structural_formula": "assertsing[#]>#,(label,sing[#])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b813d92092b942f169733ae5114d7de011ad411b1d5c783dfee7c9c8f809a403",
       "normalized_formula": "assertsinger=P599.singer_A5()",
       "numeric_literals": [
@@ -1308213,6 +1308327,33 @@
       },
       "structural_family_id": "18d5fba935d2428d7d5703c48bd1a848b540170844acec0e17c9cced437f961a",
       "structural_formula": "k_candidates=[dim_L2//#]#k=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e768f42eeefb596b206013f4494fa600a8ec913f9f8ec54ef7fceaf979b2a6b0",
+      "normalized_formula": "k_examples=checks,rank_3wavevectors_9moments=rplus,rank_with_three_opposite_wavevectors_18moments=rpair",
+      "numeric_literals": [
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe52_bloch_reciprocity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_20261013_toe52_bloch_reciprocity.py",
+          "raw": "k_examples=checks,rank_3wavevectors_9moments=rplus,rank_with_three_opposite_wavevectors_18moments=rpair,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8a4a847bcf6009f6a57a7460e657b491a30d28aed32ad4ae8a0bcbaaf6a0c4f4",
+      "structural_formula": "k_examples=checks,rank_3wavevectors_9moments=rplus,rank_with_three_opposite_wavevectors_1#moments=rpair"
     },
     {
       "file_count": 1,
@@ -1786764,9 +1786905,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T00:49:57-04:00",
+  "frozen_at": "2026-10-13T01:06:53-04:00",
   "pass": 398,
-  "repository_head": "4a7898e4b2961b19c88fe01b7218c3215c65e928",
+  "repository_head": "701dc69889ca8b1d118ab6c95d3fa6a38fbd6e40",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1948863,6 +1949004,14 @@
     },
     {
       "exact_formula_ids": [
+        "e2d26ddf30b95bbac6079ec762c28a30b2ef4838a879e0c2b7f434298df1c950"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0a513a3954e67af3d5cd5db0181f2879d501cb12fa95cddfff07de83990fcf9d",
+      "structural_formula": "F=W@(V@(np.diag(ev^(#)))@V.T)"
+    },
+    {
+      "exact_formula_ids": [
         "2e3b776b7d290d69bcc5d118b3a92ba763b12de504936a9e8e8a1b3158ca3982"
       ],
       "exact_member_count": 1,
@@ -2005964,6 +2006113,14 @@
     },
     {
       "exact_formula_ids": [
+        "20bc663ffc6308110501552d4ea84dac6b65f185f5d9e677836e8c6b0ca52293"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b0f7f1eac36009c638f3e5495bc341c4553d171e0602c7d8d244976be68f55da",
+      "structural_formula": "Thusthe4#-dimensionalpermutationmodulehasEIGHTindependentH2#-invariantorbit-constantvectors.UndertheexistingexactW3#spectralprojectorresolution4#=###,theseinvariantssplit"
+    },
+    {
+      "exact_formula_ids": [
         "829e89bd159a50f48d2dc2e84b0761c0a15b589e73d600f6d1e152abe830087a"
       ],
       "exact_member_count": 1,
@@ -2007201,6 +2007358,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c3d1094de0c84ae943f5c1f74d4d62087d3bd593df8587f8b3d9aeca9a66eaf4",
       "structural_formula": "U=W(a)V_M(T(x)I(x)I)isdecidedexactly(Pass1#)for"
+    },
+    {
+      "exact_formula_ids": [
+        "07bf601189d1faaff77dc482b9f6840a3e129e520a99f7e71fa3f22aff70cce9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "417ffdf38e407538c94b2ebeb878c3c2de51aa882e4811971818dd8ad091243b",
+      "structural_formula": "U=Z[:,ev>#]"
     },
     {
       "exact_formula_ids": [
@@ -2075422,6 +2075587,14 @@
     },
     {
       "exact_formula_ids": [
+        "b4440a29150691f51710b4d48e85421517ca305455da66a1a29474a60a586e91"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7404f4e7c56a08286a6b35d3bad90c8acc15d13b9384e14f39eb50447ae4e197",
+      "structural_formula": "assertsing[#]>#,(label,sing[#])"
+    },
+    {
+      "exact_formula_ids": [
         "b813d92092b942f169733ae5114d7de011ad411b1d5c783dfee7c9c8f809a403"
       ],
       "exact_member_count": 1,
@@ -2137602,6 +2137775,14 @@
       "exact_member_count": 1,
       "structural_family_id": "18d5fba935d2428d7d5703c48bd1a848b540170844acec0e17c9cced437f961a",
       "structural_formula": "k_candidates=[dim_L2//#]#k=#"
+    },
+    {
+      "exact_formula_ids": [
+        "e768f42eeefb596b206013f4494fa600a8ec913f9f8ec54ef7fceaf979b2a6b0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8a4a847bcf6009f6a57a7460e657b491a30d28aed32ad4ae8a0bcbaaf6a0c4f4",
+      "structural_formula": "k_examples=checks,rank_3wavevectors_9moments=rplus,rank_with_three_opposite_wavevectors_1#moments=rpair"
     },
     {
       "exact_formula_ids": [
@@ -2264313,20 +2264494,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87241979,
-    "exact_formula_families": 61106,
-    "files_scanned": 11952,
-    "formula_occurrences": 67081,
+    "bytes_scanned": 87262375,
+    "exact_formula_families": 61111,
+    "files_scanned": 11955,
+    "formula_occurrences": 67086,
     "status_occurrences": {
       "certified_or_theorem": 4874,
-      "killed_or_retracted": 1618,
+      "killed_or_retracted": 1621,
       "open_or_conditional": 2222,
       "preregistered": 32,
       "retrospective_fit": 5199,
-      "unclassified": 53136
+      "unclassified": 53138
     },
-    "structural_families": 59485
+    "structural_families": 59490
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "2eb2eb01fec32c2c87a323556b9bb7020d318ccf496b3ccf60a55be3a2a53419"
+  "universe_sha256": "96fcd4539e183edd0f2e4f38191611da3d5966150a0a470655c149d29393cf0d"
 }
