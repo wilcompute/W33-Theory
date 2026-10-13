@@ -81349,6 +81349,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "77c8e16f5f7fd49b764885bbb1c8f83a2f82866884e157cea6c80ef2336ce636",
+      "normalized_formula": "\"convergence_caveat\":\"Thedisplayedasymptoticserieshasfiniteradiusfromcoshcomplexzeros;beta=.15approximatestheasymptoticcoefficientbetterthanbeta=.5.Thisisafixedfinitegraphstaticspinlessfermion,notphysicalthermodynamics.\"",
+      "numeric_literals": [
+        ".15",
+        ".5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_highT_winding.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 51,
+          "path": "analysis/w33_20261013_toe59_highT_winding.py",
+          "raw": "\"convergence_caveat\":\"The displayed asymptotic series has finite radius from cosh complex zeros; beta=.15 approximates the asymptotic coefficient better than beta=.5. This is a fixed finite graph static spinless fermion, not physical thermodynamics.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c4d9ced66deb4b34747a255349d9fa50e6ca7336d57720f56789be772c894056",
+      "structural_formula": "\"convergence_caveat\":\"Thedisplayedasymptoticserieshasfiniteradiusfromcoshcomplexzeros;beta=#approximatestheasymptoticcoefficientbetterthanbeta=#.Thisisafixedfinitegraphstaticspinlessfermion,notphysicalthermodynamics.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "5a691e6e72c4bc03552a9850b62863062ea761b93c7e60df7c22b5c801e4f584",
       "normalized_formula": "\"convergestotheexactexpectation--butitscostgrowsasR^(2t)=9^t:eacht-gatesample\"",
       "numeric_literals": [
@@ -96177,6 +96205,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "79e5ed9ce99a543cb093a2c584f429dff51eabc99281f0a21f849d013372bc20",
+      "normalized_formula": "\"exact_theorem\":\"Ona4-toruswithintegerfirstChernfluxesn_ij,thespin-DiracU1ch2indexintegralisQ=n01*n23-n02*n13+n03*n12.Asmooth3Dtime-independentspatialconnectionwithnomixedtemporalfluxn0ihasQ=0.NonzeroQrequiresbothspatialandtemporalfirst-Chernfluxsectors.Theperiodiclinkfieldshereencodebundletransitionfunctionsatboundariesandhavesmalladmissibleprincipalplaquetteangles2pi/9.\"",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_external_4d_flux_gate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 58,
+          "path": "analysis/w33_20261013_toe59_external_4d_flux_gate.py",
+          "raw": "\"exact_theorem\":\"On a 4-torus with integer first Chern fluxes n_ij, the spin-Dirac U1 ch2 index integral is Q=n01*n23-n02*n13+n03*n12. A smooth 3D time-independent spatial connection with no mixed temporal flux n0i has Q=0. Nonzero Q requires both spatial and temporal first-Chern flux sectors. The periodic link fields here encode bundle transition functions at boundaries and have small admissible principal plaquette angles 2pi/9.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b3c9924739a08e4aede7100f3d691562d9b396f351725efd8f80a6f01f0629e5",
+      "structural_formula": "\"exact_theorem\":\"Ona4-toruswithintegerfirstChernfluxesn_ij,thespin-DiracU1ch2indexintegralisQ=n0#*n2#-n0#*n1#+n0#*n1#.Asmooth3Dtime-independentspatialconnectionwithnomixedtemporalfluxn0ihasQ=#.NonzeroQrequiresbothspatialandtemporalfirst-Chernfluxsectors.Theperiodiclinkfieldshereencodebundletransitionfunctionsatboundariesandhavesmalladmissibleprincipalplaquetteangles2pi/#.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "fa1ec804a5466814776d6d7553b9d0c6729df92c326bb48c6ad9aff16a2bd171",
       "normalized_formula": "\"exactly_45_minimum_words\":minimum[\"count\"]=45",
       "numeric_literals": [
@@ -109830,6 +109889,41 @@
       },
       "structural_family_id": "670fa9a49fe8350f8051d6605126c8481af7d16129af992a6c10e101e7aca2cc",
       "structural_formula": "\"higgs_volume\":f\"Csaszar-#volume=#=F5^q=m_H\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "013b29701161998597875c09f3f06321723ee3ec9024687832a86141932080f6",
+      "normalized_formula": "\"high_temperature_free_energy_series\":\"Atmu=0onan80-sitebipartitemodel,F_beta(H)=-beta^-1Trlog[2cosh(betaH/2)].Theexpansionhas-betaTrH2/8+beta3TrH4/192-beta5TrH6/2880+17beta7TrH8/645120+....AlltwistedtracedifferencesfirstappearatH8;henceDeltaF=17beta7DeltaTrH8/645120+O(beta9).\"",
+      "numeric_literals": [
+        "+17",
+        "-1",
+        "0",
+        "17",
+        "192",
+        "2",
+        "2880",
+        "645120",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_highT_winding.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/w33_20261013_toe59_highT_winding.py",
+          "raw": "\"high_temperature_free_energy_series\":\"At mu=0 on an 80-site bipartite model, F_beta(H)=-beta^-1 Tr log[2 cosh(beta H/2)]. The expansion has -beta Tr H\u00b2/8 + beta\u00b3 Tr H4/192 - beta\u2075 Tr H6/2880 + 17 beta7 Tr H8/645120+... . All twisted trace differences first appear at H8; hence DeltaF=17 beta7 DeltaTrH8/645120+O(beta9).\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4ef2148d112345235d816fa4e65501c9899413c9ff7aeab43904023c043ff534",
+      "structural_formula": "\"high_temperature_free_energy_series\":\"Atmu=#onan8#-sitebipartitemodel,F_beta(H)=-beta^#Trlog[#cosh(betaH/#)].Theexpansionhas-betaTrH2/#+beta3TrH4/#-beta5TrH6/##beta7TrH8/#+....AlltwistedtracedifferencesfirstappearatH8;henceDeltaF=#beta7DeltaTrH8/#+O(beta9).\""
     },
     {
       "file_count": 1,
@@ -133012,6 +133106,35 @@
       },
       "structural_family_id": "3fac0cfa5ca48f7775d3e945c4dca217014647f69824dd67d15c34ffa4053e52",
       "structural_formula": "\"name\":\"|V_us|^#=#/v\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b92812d800855c050e54a37885c6f2ee12248284542d9df9d2f828257136e008",
+      "normalized_formula": "\"native_bloch_derivative\":\"D_i(k)=C(k).dagdiag(J[:,i])B(k),Jrationalnativeharmonic-currentderivativefromPass11970.Forphysicalspacinga,usea^-1D_i(ap)onaBlochscalarwithconstantinternal80-vector.Productsaddexternalmomenta.\"",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "1970"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_longwave_leibniz.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/w33_20261013_toe59_longwave_leibniz.py",
+          "raw": "\"native_bloch_derivative\":\"D_i(k)=C(k).dag diag(J[:,i]) B(k), J rational native harmonic-current derivative from Pass11970. For physical spacing a, use a^-1 D_i(ap) on a Bloch scalar with constant internal80-vector. Products add external momenta.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3fcefa0a913412f34ef24882493f7b6b9081db9e67a9e19eb69fb1487d089a71",
+      "structural_formula": "\"native_bloch_derivative\":\"D_i(k)=C(k).dagdiag(J[:,i])B(k),Jrationalnativeharmonic-currentderivativefromPass1#.Forphysicalspacinga,usea^#D_i(ap)onaBlochscalarwithconstantinternal8#-vector.Productsaddexternalmomenta.\""
     },
     {
       "file_count": 1,
@@ -174045,6 +174168,35 @@
       },
       "structural_family_id": "c7ce0c4c82fc3358cce07486168605e7afbe5c28d81f04d7b127fe58d80a90cb",
       "structural_formula": "\"theorem\":\"FortheoriginalPass1#canonicalCPpair,selectedChiequalsthesignoftheweak-basisCPwitness.ThestrongerparallelPass1#branchdynamicallyselectstheunequal(#,#,#)familyalignment;itscanonicalHessefieldhasW=#/(#sqrt3)>#whileitsexactseesawinvariantis-#/#<#,soPass1#againleavesChi=#=sign(J_nu).\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "636633b9f27fe4916814fe175e69b55f11acfa763aa7d4659a8b4fbbe9209186",
+      "normalized_formula": "\"theorem\":\"ForthestatedseparatefreeW33photon/Diracsectors,multiplyingtemporalelectrickinetictermby1/epsilonrescalesthephotonsquaredconespeed2/epsilon,whilethefreelysuppliednativeWilson-Diracvelocityvrescalesfermionconespeedv.Matchingconesv2=2/epsilonleavesacontinuousone-parameterchoice:relative-speedcoincidencealonedoesnotpredictphysicalcorrenormalizedinteraction.TheexistingTOE58staticone-loopspinlessfermiondeterminanthasnotemporalkineticnormalizationandcannotfixepsilonorthe4-spinorv.\"",
+      "numeric_literals": [
+        "2",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_lorentz_velocity_gate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/w33_20261013_toe59_lorentz_velocity_gate.py",
+          "raw": "\"theorem\":\"For the stated separate free W33 photon/Dirac sectors, multiplying temporal electric kinetic term by 1/epsilon rescales the photon squared cone speed 2/epsilon, while the freely supplied native Wilson-Dirac velocity v rescales fermion cone speed v. Matching cones v\u00b2=2/epsilon leaves a continuous one-parameter choice: relative-speed coincidence alone does not predict physical c or renormalized interaction. The existing TOE58 static one-loop spinless fermion determinant has no temporal kinetic normalization and cannot fix epsilon or the 4-spinor v.\",",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "0607f63d7293c31f658a0040f0ec74022262baf4f725635e4ce5efc33d040c6a",
+      "structural_formula": "\"theorem\":\"ForthestatedseparatefreeW3#photon/Diracsectors,multiplyingtemporalelectrickinetictermby1/epsilonrescalesthephotonsquaredconespeed2/epsilon,whilethefreelysuppliednativeWilson-Diracvelocityvrescalesfermionconespeedv.Matchingconesv2=#/epsilonleavesacontinuousone-parameterchoice:relative-speedcoincidencealonedoesnotpredictphysicalcorrenormalizedinteraction.TheexistingTOE5#staticone-loopspinlessfermiondeterminanthasnotemporalkineticnormalizationandcannotfixepsilonorthe4-spinorv.\""
     },
     {
       "file_count": 1,
@@ -218175,6 +218327,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9f4d24333b3ed33927037f59d755b43a5ad7d1691a865b00af4fcbce9e1e5784",
+      "normalized_formula": "#FullinfiniteHilbertH=g2/2m.TGm+sum_i(1-costheta_i)/g2",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_flux_error_bound.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/w33_20261013_toe59_flux_error_bound.py",
+          "raw": "# Full infinite Hilbert H= g\u00b2/2 m.T G m + sum_i(1-cos theta_i)/g\u00b2.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d0a2bbc312e032ac929cba77230885227a02c178cd0815b8f80267b3676f7d7b",
+      "structural_formula": "#FullinfiniteHilbertH=g2/#m.TGm+sum_i(#-costheta_i)/g2"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5eb3e61c5853d1e06c59adc40ec6162541b38638166a4a19f32e099ad3123d81",
       "normalized_formula": "#FulllineWalshbasisv_Y(M)=(-1)^<Y,M>",
       "numeric_literals": [
@@ -233649,6 +233829,33 @@
       },
       "structural_family_id": "b6f7ebe62d497e412e173049945970f105abe0acbd9f6f2be7fa47c0ddcaef3e",
       "structural_formula": "#Pass1#:theaxiflavondecayconstantisfixedbytheup-quarkmasses\u2014f_a\u2248#\u2013#\u00b7#GeV,m_a\u2248#\u2013#neV"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4d30300ddccd44499846dc51cd33a3b8165a7c525112360cf57ac98a60e812e6",
+      "normalized_formula": "#Pass11970freeDiracisH=valphaK+rbetaL",
+      "numeric_literals": [
+        "1970"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_lorentz_velocity_gate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/w33_20261013_toe59_lorentz_velocity_gate.py",
+          "raw": "# Pass11970 free Dirac is H = v alpha K + r beta L.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "ada6fa6c554d23fc343bf67b675ff5da7647e863c965a777c638562a0e51ce29",
+      "structural_formula": "#Pass1#freeDiracisH=valphaK+rbetaL"
     },
     {
       "file_count": 1,
@@ -381306,6 +381513,34 @@
       },
       "structural_family_id": "2b16de00bb57704c553aaae0b0e2ac484dabad3e9f24b76101027136caaece80",
       "structural_formula": "-sin^#(theta_W)=#/#(WeinbergangleatGUTscale)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8c227a16b3210e75607ddd103e9bb5b1445ae6e567c74ea8d97b9f6ca5e5dfe2",
+      "normalized_formula": "-single\u03c0axis:\u0394TrH8=\u22122592(81oddcycles)",
+      "numeric_literals": [
+        "2592",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 108,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "- single \u03c0 axis: \u0394Tr H8=\u22122592 (81 odd cycles)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e24e696278e9193a7f9cfc0f0686544ade7ccd18efcba445396dcf4821555d7a",
+      "structural_formula": "-single\u03c0axis:\u0394TrH8=\u2212#(#oddcycles)"
     },
     {
       "file_count": 1,
@@ -543975,6 +544210,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fc90665576526352611fab5929821fd3e9d1d712fd257ce7c116b39481a51e0e",
+      "normalized_formula": "AnEXTERNAL3^4EuclideanperiodicU1four-torusbenchmarkconstructsintegerfirst-Chernfluxesn_ijinitsindependent2-planes,usingexplicitboundarytransitionfunctions.ComputeprincipalplaquetteanglesF_ij=2pin_ij/9(all<pi),andindependentlyverifythewedgeindexintegral",
+      "numeric_literals": [
+        "2",
+        "4",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "An EXTERNAL 3^4 Euclidean periodic U1 four-torus benchmark constructs integer first-Chern fluxes n_ij in its independent 2-planes, using explicit boundary transition functions. Compute principal plaquette angles F_ij=2pi n_ij/9 (all <pi), and independently verify the wedge index integral",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0f9789665cad1e84c2e8b24b5dd25b6c23c3536107917529e69691648df92fa8",
+      "structural_formula": "AnEXTERNAL3^#EuclideanperiodicU1four-torusbenchmarkconstructsintegerfirst-Chernfluxesn_ijinitsindependent2-planes,usingexplicitboundarytransitionfunctions.ComputeprincipalplaquetteanglesF_ij=#pin_ij/#(all<pi),andindependentlyverifythewedgeindexintegral"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4119f1519ca23f23f208671780332fb3a98eb9c0393de4ea862f466c3b6bb7ae",
       "normalized_formula": "AnalogoustoM_R=0inPillar36(neutrinoseesaw)",
       "numeric_literals": [
@@ -546862,6 +547126,33 @@
       },
       "structural_family_id": "5a3531aefb2a43036c1122ba0f8c2d7cfdb949c9b54ad5dbc68d793d40cd13d6",
       "structural_formula": "AtGUTscale:sin^#(theta_W)=q/(#q+lam)=#/#(SU(#)value)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "16badfd6b83152d82ff7c3dcd562fd60a38f00fd64e87444b2715c2a75d9b369",
+      "normalized_formula": "AtHALFfilling\u03bc=0,abipartitefinitespinlessfermiongrandpotentialis",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 112,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "At HALF filling \u03bc=0, a bipartite finite spinless fermion grand potential is",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7cf85015bf21b663711ee02d5c38c3326810724f30378dbbe06e391ed7e9f633",
+      "structural_formula": "AtHALFfilling\u03bc=#,abipartitefinitespinlessfermiongrandpotentialis"
     },
     {
       "file_count": 1,
@@ -558184,6 +558475,34 @@
       },
       "structural_family_id": "5a1db48c6d2b52fae081a68b4f2461906a7acc0d39bd26224f4d44e448c4b663",
       "structural_formula": "Blackholeentropynormalization=#/mu(spacetime)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e5cc8e1d3c13a69e39eb542126488c9b8f1a9d05afe7eb9af4c6ef93d09f80de",
+      "normalized_formula": "Bnorm_sq=3/(4*g^4)",
+      "numeric_literals": [
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_flux_error_bound.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/w33_20261013_toe59_flux_error_bound.py",
+          "raw": "Bnorm_sq=3/(4*g**4)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "79b4b1d790d32668b590d3cb792e4a6c9c3d73a9d81ed9758c98da0eac50c6a1",
+      "structural_formula": "Bnorm_sq=#/(#*g^#)"
     },
     {
       "file_count": 1,
@@ -607514,6 +607833,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4dbe1ecc0ddcf00aeaf5017c4bb138f5109fc57870669634114065508e8057e1",
+      "normalized_formula": "F_beta(H)=\u2212beta^-1Trlog[2cosh(betaH/2)]",
+      "numeric_literals": [
+        "-1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 114,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "F_beta(H)=\u2212beta^-1 Tr log[2cosh(beta H/2)].",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "390c72793dbb221cc60fa461b3693f33fa192da2a3c72074c01b71d44ab97aae",
+      "structural_formula": "F_beta(H)=\u2212beta^#Trlog[#cosh(betaH/#)]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "36db88ecaed2ba8864db0427dd8e465b05f974802584d49b70c958ed3344c7da",
       "normalized_formula": "F_c(X,Y)=\\chi(c)\\bigl(X^3Y-XY^3\\bigr)",
       "numeric_literals": [
@@ -616645,6 +616992,36 @@
       },
       "structural_family_id": "eda38fad886639137d6c8721206236761fd769aaccf49ac462251e64140a25be",
       "structural_formula": "ForzinZ:ad_z=#(since[z,anything]=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7a833867b8b2677a2f08528d732234d8c413ffd252b7459a16a48bf526b6b494",
+      "normalized_formula": "FourfinitecontrolsyieldQ=[1,0,-1,1],andsitewisegaugetransformationspreserveallplaquetteangles.Thisisthe^secondCherncharacter(1/2c12),nottheU1secondChernCLASS^.Thepurespatialn01=1-onlyexamplehasQ0;nonzero4DQneedstwocomplementarymagnetic/electricflux2-planes",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "Four finite controls yield Q=[1,0,-1,1], and sitewise gauge transformations preserve all plaquette angles. This is the **second Chern character (1/2 c1\u00b2), not the U1 second Chern CLASS**. The pure spatial n01=1-only example has Q0; nonzero 4D Q needs two complementary magnetic/electric flux 2-planes.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "8b968a138fac3b6560d2497178fd04cfe08a2a87e1f81bdd9eec7bad5e2f08a1",
+      "structural_formula": "FourfinitecontrolsyieldQ=[#,#,#,#],andsitewisegaugetransformationspreserveallplaquetteangles.Thisisthe^secondCherncharacter(#/#c1#),nottheU1secondChernCLASS^.Thepurespatialn0#=#-onlyexamplehasQ0;nonzero4DQneedstwocomplementarymagnetic/electricflux2-planes"
     },
     {
       "file_count": 1,
@@ -642380,6 +642757,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9f78403b032c7a8a94cce4a3a72ea109b48c094ff0c55df796a6448c357e314a",
+      "normalized_formula": "Iftheelectromagnetictime/electrickineticnormalizationisindependentlyrescaledepsilon>0,theleadingphotonspeedissqrt(2/epsilon),andmatchingthefermionconerequiresv2=2/epsilon.Thishasa^continuousfamily^ofmatches.Twoexplicitindependentexamplesare(epsilon,v)=(1,sqrt2)and(2,1),withdifferentabsolutepropagationspeeds.TOE58staticspinless-fermionWarddeterminantcontainsnoelectric/timekineticcoefficientandcannotselectepsilonorthisfour-spinorv",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 81,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "If the electromagnetic time/electric kinetic normalization is independently rescaled epsilon>0, the leading photon speed is sqrt(2/epsilon), and matching the fermion cone requires v\u00b2=2/epsilon. This has a **continuous family** of matches. Two explicit independent examples are (epsilon,v)=(1,sqrt2) and (2,1), with different absolute propagation speeds. TOE58 static spinless-fermion Ward determinant contains no electric/time kinetic coefficient and cannot select epsilon or this four-spinor v.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5cb701da4f883f9de80620a2c34519a2d4d342d4774105dba5d68fa3acdc782f",
+      "structural_formula": "Iftheelectromagnetictime/electrickineticnormalizationisindependentlyrescaledepsilon>#,theleadingphotonspeedissqrt(#/epsilon),andmatchingthefermionconerequiresv2=#/epsilon.Thishasa^continuousfamily^ofmatches.Twoexplicitindependentexamplesare(epsilon,v)=(#,sqrt2)and(#,#),withdifferentabsolutepropagationspeeds.TOE5#staticspinless-fermionWarddeterminantcontainsnoelectric/timekineticcoefficientandcannotselectepsilonorthisfour-spinorv"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0ef366ce7562dda8a3bcf6488a7df1ebded3ff56f8e58ab1c4335698d1065ee5",
       "normalized_formula": "Iftheobservableuniverseistier~200fractalSQNA(BT350hypothesis)",
       "numeric_literals": [
@@ -666030,6 +666437,33 @@
       },
       "structural_family_id": "7d57b7773e7c644cabda5fee009d63ac7f72de69d67930c8368c945aa82ce1bb",
       "structural_formula": "Lowerbound:ceil(v/alpha)=ceil(#/#)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "af51ac75c5fca2f3d7efd8fa88f41d18f3e82f9620f47afa94f02bb54b3c3276",
+      "normalized_formula": "Lowestnontrivialclosed-walkorderisn=8;theanalyticlogcosh",
+      "numeric_literals": [
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_highT_winding.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 3,
+          "path": "analysis/w33_20261013_toe59_highT_winding.py",
+          "raw": "Lowest nontrivial closed-walk order is n=8; the analytic logcosh",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ccee93e218f24840acdc11a6e9bd15b2231e7f4e12a23f0ce77ff897c4d843e4",
+      "structural_formula": "Lowestnontrivialclosed-walkorderisn=#;theanalyticlogcosh"
     },
     {
       "file_count": 1,
@@ -808410,6 +808844,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c43a9d2e09fe2b5c25b2b80551040d28b27c4d94bfb376b5f878602db31e347b",
+      "normalized_formula": "TheseriesfixestheSIGNofitshigh-temperaturefree-energypreferencewithoutafitorarandomoptimizer.Atbeta=.1,theactualnormalizedfinitedeterminantFdiff/beta7\u2248\u22120.19103936(about2.8",
+      "numeric_literals": [
+        ".1",
+        ".8",
+        "0.19103936"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 130,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "The series fixes the SIGN of its high-temperature free-energy preference without a fit or a random optimizer. At beta=.1, the actual normalized finite determinant Fdiff/beta7\u2248\u22120.19103936 (about2.8% from the asymptotic coefficient), converging as beta\u21920. Do not extrapolate this asymptotic expansion uncritically to beta4; Lieb flux-phase prior art already studies special bipartite lattices at all temperatures, under geometric conditions not automatically met by W33.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "d33d0e5d55181053eb7a7b78d12c0374af3c63ac5ad3ef15e0bf551082029536",
+      "structural_formula": "TheseriesfixestheSIGNofitshigh-temperaturefree-energypreferencewithoutafitorarandomoptimizer.Atbeta=#,theactualnormalizedfinitedeterminantFdiff/beta7\u2248\u2212#(about2#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b5e392154c6dd54568f5a46b3703bec3ef8b27db7d125b04e19919540a6656a3",
       "normalized_formula": "Thesharpadjacentselected-chamberpaircapforan18-edgecut-minimalleaderis27.ExactDelsarteoptimizationatthatcapgives`(N1,N2,N3,N4)=(27,73,53,0)`,pairoverlap5465,andonly`wt>=320`.ThuspairwiseBonferroni/Delsarteisrigorouslyinsufficientatleader18.Pass5140thensuppliesthemissingcubicinformationandclosestheshell",
       "numeric_literals": [
@@ -823839,6 +824302,34 @@
       },
       "structural_family_id": "79daa66d922c2d9b16bc43b57536102c098a0c84d104bfc43c16dd6c2f6dde8d",
       "structural_formula": "UsingfourgeneratorsofPSp(#,#),writeE=M/JandV=M/Kinexplicitquotient"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7daad3d24b0d2d4ca079dc0b66ae65b793978771ecd15fcc8271dfec212587a6",
+      "normalized_formula": "UsingfrozenTOE58N=3upperenergies,obtain",
+      "numeric_literals": [
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/2026-10-13_toe59_gauge_winding_quantum_physics.md",
+          "raw": "Using frozen TOE58 N=3 upper energies, obtain:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2e17c8df63193b0133aeadb2e3b27e93d23168e9f52b7ae5341f84665dd42930",
+      "structural_formula": "UsingfrozenTOE5#N=#upperenergies,obtain"
     },
     {
       "file_count": 1,
@@ -1080689,6 +1081180,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "93046a76aedbdae4a4528ab1ad185677ce03900ef3fc373c8e8b1aeee6aed85b",
+      "normalized_formula": "assertph[\"squared_continuum_speed_target\"]=2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_lorentz_velocity_gate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_20261013_toe59_lorentz_velocity_gate.py",
+          "raw": "assert ph[\"squared_continuum_speed_target\"]==2.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "619fe9637e5b111a9d0a9292b86a1cdf02c0591e88a5bd31535356f15d5c39bb",
+      "structural_formula": "assertph[\"squared_continuum_speed_target\"]=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "686e3d9dfea99f998627d5baf75707fb7bccf0f5b645cfb719c892b7d0f7cd9e",
       "normalized_formula": "assertphase_distance(np.linalg.matrix_power(T1,3),Z1)<TOL",
       "numeric_literals": [
@@ -1085939,6 +1086457,33 @@
       },
       "structural_family_id": "33ac2f7bd5ebab4d589eaf085e6bc5925943a25db50842061b79d53325483ea7",
       "structural_formula": "assertss['dimension']=#andss['minimum_distance']=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d1edad0f6bfad6a3f0b3662bb172301bd4285db3521e6577e1a971997dc7919c",
+      "normalized_formula": "assertstatic[\"max_two_pure_gauge_rows_or_columns\"]<1e-8",
+      "numeric_literals": [
+        "1e-8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_lorentz_velocity_gate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/w33_20261013_toe59_lorentz_velocity_gate.py",
+          "raw": "assert static[\"max_two_pure_gauge_rows_or_columns\"]<1e-8",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0daef3ae57cdfd6e5f41967dbea269b8530fa574e720b2fd1ac753344f92e5f2",
+      "structural_formula": "assertstatic[\"max_two_pure_gauge_rows_or_columns\"]<#"
     },
     {
       "file_count": 1,
@@ -1374299,6 +1374844,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "579845b38f83e5feb776aea84cd5fec9f36d87e377a43022caeface055a5d3d1",
+      "normalized_formula": "matched=[xforxinrowsifabs(x[\"photon_to_fermion_speed_ratio\"]-1)<1e-12]",
+      "numeric_literals": [
+        "-1",
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_lorentz_velocity_gate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 31,
+          "path": "analysis/w33_20261013_toe59_lorentz_velocity_gate.py",
+          "raw": "matched=[x for x in rows if abs(x[\"photon_to_fermion_speed_ratio\"]-1)<1e-12]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ff1304d547f1a8445ad140d88ef020d3c79a0d424a21113ae74bcfbeb549ff57",
+      "structural_formula": "matched=[xforxinrowsifabs(x[\"photon_to_fermion_speed_ratio\"]#)<#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "857fa13f68a051dcc7bc2157a5ab630d1788246c68eb8c1f957becf3cdaf545e",
       "normalized_formula": "matched_sham_criterion='constantdeltaconfidenceinversion;testanydelta0using|sumr_iQ_i(Y_i-delta0*r_i*Q_i)|<=sqrt(2log(2/alpha)*sumQ_i^2(Y_i-delta0*r_iQ_i)^2).Invertthequadratic,endpointsgiven.'",
       "numeric_literals": [
@@ -1419465,6 +1420038,60 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6ec5dab5f98897ba62d9993127eb6b50d5dd36a9d272123aa65eea40ce5beacf",
+      "normalized_formula": "out={\"status\":\"PASS_TOE59_GIRTH8_HIGH_T_FERMION_FLUX_COEFFICIENT\"",
+      "numeric_literals": [
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_highT_winding.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/w33_20261013_toe59_highT_winding.py",
+          "raw": "out={\"status\":\"PASS_TOE59_GIRTH8_HIGH_T_FERMION_FLUX_COEFFICIENT\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6702b53bcc544810fd68779a29e53d25fe68e9ffb669397b81b5dcc9beba35f3",
+      "structural_formula": "out={\"status\":\"PASS_TOE5#_GIRTH8_HIGH_T_FERMION_FLUX_COEFFICIENT\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9a77ff0a82164fbe9423ce0abc0eac5e2ba6248cda7254f9eaa55275559f0d57",
+      "normalized_formula": "out={\"status\":\"PASS_TOE59_NATIVE_BLOCH_CONTINUUM_LEIBNIZ_SCALING\"",
+      "numeric_literals": [
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_longwave_leibniz.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/w33_20261013_toe59_longwave_leibniz.py",
+          "raw": "out={\"status\":\"PASS_TOE59_NATIVE_BLOCH_CONTINUUM_LEIBNIZ_SCALING\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "46b4979a2f178e41dd751e8f0b773aab8acb94ee05316de614bd3d86c1359be9",
+      "structural_formula": "out={\"status\":\"PASS_TOE5#_NATIVE_BLOCH_CONTINUUM_LEIBNIZ_SCALING\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "7ce2b8a37172d1bb8e5143c731148797d5789214ef42c640e7f0ff51e43b94fa",
       "normalized_formula": "out={\"status\":\"TOE48_INTEGER_LINE_GRAM_RATIONAL_INTERTWINER_AND_BAD_PRIME_AUDIT\"",
       "numeric_literals": [
@@ -1457368,6 +1457995,35 @@
       },
       "structural_family_id": "56bb5f80d66a8d6f479b7835f33700c315a5a942ee2194b4719eead365383476",
       "structural_formula": "prev=json.loads((R/\"data/w3#_2#_toe4#_sic_search.json\").read_text())"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d923732cc4452d3cb56ef50b9da6011928285c79308164b573e67a940f7205a3",
+      "normalized_formula": "prev=json.loads((R/\"data/w33_20261013_toe59_wilson_girth_moments.json\").read_text())",
+      "numeric_literals": [
+        "0261013",
+        "3",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_highT_winding.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_20261013_toe59_highT_winding.py",
+          "raw": "prev=json.loads((R/\"data/w33_20261013_toe59_wilson_girth_moments.json\").read_text())",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2831d96a6193d15f00c5cfbdac223c60172e4cf47ffc2c302c7419c26fbececf",
+      "structural_formula": "prev=json.loads((R/\"data/w3#_2#_toe5#_wilson_girth_moments.json\").read_text())"
     },
     {
       "file_count": 1,
@@ -1636757,6 +1637413,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7a906be0413909ba33991aeec8d81498b38b8d80a7a9c0a3bb7eba1919798125",
+      "normalized_formula": "series=sp.series(-sp.log(2*sp.cosh(x/2)),x,0,10).removeO()",
+      "numeric_literals": [
+        "0",
+        "10",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_highT_winding.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_20261013_toe59_highT_winding.py",
+          "raw": "series=sp.series(-sp.log(2*sp.cosh(x/2)),x,0,10).removeO()",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6a92f0e8d8c14f3f9e0ca619ea7d1ece11cf65626e0ed5e0b85224869bc4a06c",
+      "structural_formula": "series=sp.series(-sp.log(#*sp.cosh(x/#)),x,#,#).removeO()"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5dfae0c4843535df65771c5baee213ebf4c74937f011be0c7d255d5516c40e59",
       "normalized_formula": "session,>200sonone4KBfile.Sotokenisingiswrappedperfilewiththe",
       "numeric_literals": [
@@ -1668081,6 +1668766,35 @@
       },
       "structural_family_id": "deba5265ea24f1550b4b08db2ea1284b110cb76504299039514b6e3d9e5e4e0d",
       "structural_formula": "state|S>=(|#>-|#>)/sqrt2attainsthesingle-qutritmaximummanalog(#/#).Wecompute"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "467c6ff955580e0dfbfd69cbab2fb927afc65d126162b7c4ff67916ce4b20774",
+      "normalized_formula": "static=json.loads((R/\"data/w33_20261013_toe58_fermion_polarization.json\").read_text())",
+      "numeric_literals": [
+        "0261013",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe59_lorentz_velocity_gate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/w33_20261013_toe59_lorentz_velocity_gate.py",
+          "raw": "static=json.loads((R/\"data/w33_20261013_toe58_fermion_polarization.json\").read_text())",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "50ac5cdd13ae5ca103a6de48293e3b2367833b2316fc9ec1cab5f2ebdf36acc1",
+      "structural_formula": "static=json.loads((R/\"data/w3#_2#_toe5#_fermion_polarization.json\").read_text())"
     },
     {
       "file_count": 1,
@@ -1796680,9 +1797394,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T12:48:20-04:00",
+  "frozen_at": "2026-10-13T13:14:24-04:00",
   "pass": 398,
-  "repository_head": "f99b1f42961ff7be7fa2f2165d86bd1c769f1417",
+  "repository_head": "ae1684d7f2fab847f31b301bbc65a3dd15c296b8",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1819468,6 +1820182,14 @@
     },
     {
       "exact_formula_ids": [
+        "77c8e16f5f7fd49b764885bbb1c8f83a2f82866884e157cea6c80ef2336ce636"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c4d9ced66deb4b34747a255349d9fa50e6ca7336d57720f56789be772c894056",
+      "structural_formula": "\"convergence_caveat\":\"Thedisplayedasymptoticserieshasfiniteradiusfromcoshcomplexzeros;beta=#approximatestheasymptoticcoefficientbetterthanbeta=#.Thisisafixedfinitegraphstaticspinlessfermion,notphysicalthermodynamics.\""
+    },
+    {
+      "exact_formula_ids": [
         "5a691e6e72c4bc03552a9850b62863062ea761b93c7e60df7c22b5c801e4f584"
       ],
       "exact_member_count": 1,
@@ -1823628,6 +1824350,14 @@
     },
     {
       "exact_formula_ids": [
+        "79e5ed9ce99a543cb093a2c584f429dff51eabc99281f0a21f849d013372bc20"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b3c9924739a08e4aede7100f3d691562d9b396f351725efd8f80a6f01f0629e5",
+      "structural_formula": "\"exact_theorem\":\"Ona4-toruswithintegerfirstChernfluxesn_ij,thespin-DiracU1ch2indexintegralisQ=n0#*n2#-n0#*n1#+n0#*n1#.Asmooth3Dtime-independentspatialconnectionwithnomixedtemporalfluxn0ihasQ=#.NonzeroQrequiresbothspatialandtemporalfirst-Chernfluxsectors.Theperiodiclinkfieldshereencodebundletransitionfunctionsatboundariesandhavesmalladmissibleprincipalplaquetteangles2pi/#.\""
+    },
+    {
+      "exact_formula_ids": [
         "fa1ec804a5466814776d6d7553b9d0c6729df92c326bb48c6ad9aff16a2bd171"
       ],
       "exact_member_count": 1,
@@ -1827442,6 +1828172,14 @@
       "exact_member_count": 1,
       "structural_family_id": "670fa9a49fe8350f8051d6605126c8481af7d16129af992a6c10e101e7aca2cc",
       "structural_formula": "\"higgs_volume\":f\"Csaszar-#volume=#=F5^q=m_H\""
+    },
+    {
+      "exact_formula_ids": [
+        "013b29701161998597875c09f3f06321723ee3ec9024687832a86141932080f6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4ef2148d112345235d816fa4e65501c9899413c9ff7aeab43904023c043ff534",
+      "structural_formula": "\"high_temperature_free_energy_series\":\"Atmu=#onan8#-sitebipartitemodel,F_beta(H)=-beta^#Trlog[#cosh(betaH/#)].Theexpansionhas-betaTrH2/#+beta3TrH4/#-beta5TrH6/##beta7TrH8/#+....AlltwistedtracedifferencesfirstappearatH8;henceDeltaF=#beta7DeltaTrH8/#+O(beta9).\""
     },
     {
       "exact_formula_ids": [
@@ -1833956,6 +1834694,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3fac0cfa5ca48f7775d3e945c4dca217014647f69824dd67d15c34ffa4053e52",
       "structural_formula": "\"name\":\"|V_us|^#=#/v\""
+    },
+    {
+      "exact_formula_ids": [
+        "b92812d800855c050e54a37885c6f2ee12248284542d9df9d2f828257136e008"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3fcefa0a913412f34ef24882493f7b6b9081db9e67a9e19eb69fb1487d089a71",
+      "structural_formula": "\"native_bloch_derivative\":\"D_i(k)=C(k).dagdiag(J[:,i])B(k),Jrationalnativeharmonic-currentderivativefromPass1#.Forphysicalspacinga,usea^#D_i(ap)onaBlochscalarwithconstantinternal8#-vector.Productsaddexternalmomenta.\""
     },
     {
       "exact_formula_ids": [
@@ -1845478,6 +1846224,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c7ce0c4c82fc3358cce07486168605e7afbe5c28d81f04d7b127fe58d80a90cb",
       "structural_formula": "\"theorem\":\"FortheoriginalPass1#canonicalCPpair,selectedChiequalsthesignoftheweak-basisCPwitness.ThestrongerparallelPass1#branchdynamicallyselectstheunequal(#,#,#)familyalignment;itscanonicalHessefieldhasW=#/(#sqrt3)>#whileitsexactseesawinvariantis-#/#<#,soPass1#againleavesChi=#=sign(J_nu).\""
+    },
+    {
+      "exact_formula_ids": [
+        "636633b9f27fe4916814fe175e69b55f11acfa763aa7d4659a8b4fbbe9209186"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0607f63d7293c31f658a0040f0ec74022262baf4f725635e4ce5efc33d040c6a",
+      "structural_formula": "\"theorem\":\"ForthestatedseparatefreeW3#photon/Diracsectors,multiplyingtemporalelectrickinetictermby1/epsilonrescalesthephotonsquaredconespeed2/epsilon,whilethefreelysuppliednativeWilson-Diracvelocityvrescalesfermionconespeedv.Matchingconesv2=#/epsilonleavesacontinuousone-parameterchoice:relative-speedcoincidencealonedoesnotpredictphysicalcorrenormalizedinteraction.TheexistingTOE5#staticone-loopspinlessfermiondeterminanthasnotemporalkineticnormalizationandcannotfixepsilonorthe4-spinorv.\""
     },
     {
       "exact_formula_ids": [
@@ -1872565,6 +1873319,14 @@
     },
     {
       "exact_formula_ids": [
+        "9f4d24333b3ed33927037f59d755b43a5ad7d1691a865b00af4fcbce9e1e5784"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d0a2bbc312e032ac929cba77230885227a02c178cd0815b8f80267b3676f7d7b",
+      "structural_formula": "#FullinfiniteHilbertH=g2/#m.TGm+sum_i(#-costheta_i)/g2"
+    },
+    {
+      "exact_formula_ids": [
         "5eb3e61c5853d1e06c59adc40ec6162541b38638166a4a19f32e099ad3123d81"
       ],
       "exact_member_count": 1,
@@ -1877116,6 +1877878,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fe7604869ff294de07e4ad326d0f453eafc7e18804e3cb13778d7b405cbb2ed9",
       "structural_formula": "#Pass1#canonicalvacuumray(#,#,#)/sqrt1#->exactmuandj"
+    },
+    {
+      "exact_formula_ids": [
+        "4d30300ddccd44499846dc51cd33a3b8165a7c525112360cf57ac98a60e812e6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ada6fa6c554d23fc343bf67b675ff5da7647e863c965a777c638562a0e51ce29",
+      "structural_formula": "#Pass1#freeDiracisH=valphaK+rbetaL"
     },
     {
       "exact_formula_ids": [
@@ -1922042,6 +1922812,14 @@
     },
     {
       "exact_formula_ids": [
+        "8c227a16b3210e75607ddd103e9bb5b1445ae6e567c74ea8d97b9f6ca5e5dfe2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e24e696278e9193a7f9cfc0f0686544ade7ccd18efcba445396dcf4821555d7a",
+      "structural_formula": "-single\u03c0axis:\u0394TrH8=\u2212#(#oddcycles)"
+    },
+    {
+      "exact_formula_ids": [
         "55b9743f69c762e86ad8220ed485a4a2f6e02d8f8d77b97c345bf3a75c695bf4"
       ],
       "exact_member_count": 1,
@@ -1943027,6 +1943805,14 @@
     },
     {
       "exact_formula_ids": [
+        "fc90665576526352611fab5929821fd3e9d1d712fd257ce7c116b39481a51e0e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0f9789665cad1e84c2e8b24b5dd25b6c23c3536107917529e69691648df92fa8",
+      "structural_formula": "AnEXTERNAL3^#EuclideanperiodicU1four-torusbenchmarkconstructsintegerfirst-Chernfluxesn_ijinitsindependent2-planes,usingexplicitboundarytransitionfunctions.ComputeprincipalplaquetteanglesF_ij=#pin_ij/#(all<pi),andindependentlyverifythewedgeindexintegral"
+    },
+    {
+      "exact_formula_ids": [
         "4119f1519ca23f23f208671780332fb3a98eb9c0393de4ea862f466c3b6bb7ae"
       ],
       "exact_member_count": 1,
@@ -1943809,6 +1944595,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5a3531aefb2a43036c1122ba0f8c2d7cfdb949c9b54ad5dbc68d793d40cd13d6",
       "structural_formula": "AtGUTscale:sin^#(theta_W)=q/(#q+lam)=#/#(SU(#)value)"
+    },
+    {
+      "exact_formula_ids": [
+        "16badfd6b83152d82ff7c3dcd562fd60a38f00fd64e87444b2715c2a75d9b369"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7cf85015bf21b663711ee02d5c38c3326810724f30378dbbe06e391ed7e9f633",
+      "structural_formula": "AtHALFfilling\u03bc=#,abipartitefinitespinlessfermiongrandpotentialis"
     },
     {
       "exact_formula_ids": [
@@ -1946875,6 +1947669,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5a1db48c6d2b52fae081a68b4f2461906a7acc0d39bd26224f4d44e448c4b663",
       "structural_formula": "Blackholeentropynormalization=#/mu(spacetime)"
+    },
+    {
+      "exact_formula_ids": [
+        "e5cc8e1d3c13a69e39eb542126488c9b8f1a9d05afe7eb9af4c6ef93d09f80de"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "79b4b1d790d32668b590d3cb792e4a6c9c3d73a9d81ed9758c98da0eac50c6a1",
+      "structural_formula": "Bnorm_sq=#/(#*g^#)"
     },
     {
       "exact_formula_ids": [
@@ -1960211,6 +1961013,14 @@
     },
     {
       "exact_formula_ids": [
+        "4dbe1ecc0ddcf00aeaf5017c4bb138f5109fc57870669634114065508e8057e1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "390c72793dbb221cc60fa461b3693f33fa192da2a3c72074c01b71d44ab97aae",
+      "structural_formula": "F_beta(H)=\u2212beta^#Trlog[#cosh(betaH/#)]"
+    },
+    {
+      "exact_formula_ids": [
         "36db88ecaed2ba8864db0427dd8e465b05f974802584d49b70c958ed3344c7da"
       ],
       "exact_member_count": 1,
@@ -1962689,6 +1963499,14 @@
       "exact_member_count": 1,
       "structural_family_id": "eda38fad886639137d6c8721206236761fd769aaccf49ac462251e64140a25be",
       "structural_formula": "ForzinZ:ad_z=#(since[z,anything]=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "7a833867b8b2677a2f08528d732234d8c413ffd252b7459a16a48bf526b6b494"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8b968a138fac3b6560d2497178fd04cfe08a2a87e1f81bdd9eec7bad5e2f08a1",
+      "structural_formula": "FourfinitecontrolsyieldQ=[#,#,#,#],andsitewisegaugetransformationspreserveallplaquetteangles.Thisisthe^secondCherncharacter(#/#c1#),nottheU1secondChernCLASS^.Thepurespatialn0#=#-onlyexamplehasQ0;nonzero4DQneedstwocomplementarymagnetic/electricflux2-planes"
     },
     {
       "exact_formula_ids": [
@@ -1969762,6 +1970580,14 @@
     },
     {
       "exact_formula_ids": [
+        "9f78403b032c7a8a94cce4a3a72ea109b48c094ff0c55df796a6448c357e314a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5cb701da4f883f9de80620a2c34519a2d4d342d4774105dba5d68fa3acdc782f",
+      "structural_formula": "Iftheelectromagnetictime/electrickineticnormalizationisindependentlyrescaledepsilon>#,theleadingphotonspeedissqrt(#/epsilon),andmatchingthefermionconerequiresv2=#/epsilon.Thishasa^continuousfamily^ofmatches.Twoexplicitindependentexamplesare(epsilon,v)=(#,sqrt2)and(#,#),withdifferentabsolutepropagationspeeds.TOE5#staticspinless-fermionWarddeterminantcontainsnoelectric/timekineticcoefficientandcannotselectepsilonorthisfour-spinorv"
+    },
+    {
+      "exact_formula_ids": [
         "0ef366ce7562dda8a3bcf6488a7df1ebded3ff56f8e58ab1c4335698d1065ee5"
       ],
       "exact_member_count": 1,
@@ -1976252,6 +1977078,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7d57b7773e7c644cabda5fee009d63ac7f72de69d67930c8368c945aa82ce1bb",
       "structural_formula": "Lowerbound:ceil(v/alpha)=ceil(#/#)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "af51ac75c5fca2f3d7efd8fa88f41d18f3e82f9620f47afa94f02bb54b3c3276"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ccee93e218f24840acdc11a6e9bd15b2231e7f4e12a23f0ce77ff897c4d843e4",
+      "structural_formula": "Lowestnontrivialclosed-walkorderisn=#;theanalyticlogcosh"
     },
     {
       "exact_formula_ids": [
@@ -2014773,6 +2015607,14 @@
     },
     {
       "exact_formula_ids": [
+        "c43a9d2e09fe2b5c25b2b80551040d28b27c4d94bfb376b5f878602db31e347b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d33d0e5d55181053eb7a7b78d12c0374af3c63ac5ad3ef15e0bf551082029536",
+      "structural_formula": "TheseriesfixestheSIGNofitshigh-temperaturefree-energypreferencewithoutafitorarandomoptimizer.Atbeta=#,theactualnormalizedfinitedeterminantFdiff/beta7\u2248\u2212#(about2#"
+    },
+    {
+      "exact_formula_ids": [
         "b5e392154c6dd54568f5a46b3703bec3ef8b27db7d125b04e19919540a6656a3"
       ],
       "exact_member_count": 1,
@@ -2018990,6 +2019832,14 @@
       "exact_member_count": 1,
       "structural_family_id": "79daa66d922c2d9b16bc43b57536102c098a0c84d104bfc43c16dd6c2f6dde8d",
       "structural_formula": "UsingfourgeneratorsofPSp(#,#),writeE=M/JandV=M/Kinexplicitquotient"
+    },
+    {
+      "exact_formula_ids": [
+        "7daad3d24b0d2d4ca079dc0b66ae65b793978771ecd15fcc8271dfec212587a6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2e17c8df63193b0133aeadb2e3b27e93d23168e9f52b7ae5341f84665dd42930",
+      "structural_formula": "UsingfrozenTOE5#N=#upperenergies,obtain"
     },
     {
       "exact_formula_ids": [
@@ -2085493,6 +2086343,14 @@
     },
     {
       "exact_formula_ids": [
+        "93046a76aedbdae4a4528ab1ad185677ce03900ef3fc373c8e8b1aeee6aed85b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "619fe9637e5b111a9d0a9292b86a1cdf02c0591e88a5bd31535356f15d5c39bb",
+      "structural_formula": "assertph[\"squared_continuum_speed_target\"]=#"
+    },
+    {
+      "exact_formula_ids": [
         "686e3d9dfea99f998627d5baf75707fb7bccf0f5b645cfb719c892b7d0f7cd9e"
       ],
       "exact_member_count": 1,
@@ -2086921,6 +2087779,14 @@
       "exact_member_count": 2,
       "structural_family_id": "33ac2f7bd5ebab4d589eaf085e6bc5925943a25db50842061b79d53325483ea7",
       "structural_formula": "assertss['dimension']=#andss['minimum_distance']=#"
+    },
+    {
+      "exact_formula_ids": [
+        "d1edad0f6bfad6a3f0b3662bb172301bd4285db3521e6577e1a971997dc7919c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0daef3ae57cdfd6e5f41967dbea269b8530fa574e720b2fd1ac753344f92e5f2",
+      "structural_formula": "assertstatic[\"max_two_pure_gauge_rows_or_columns\"]<#"
     },
     {
       "exact_formula_ids": [
@@ -2165179,6 +2166045,14 @@
     },
     {
       "exact_formula_ids": [
+        "579845b38f83e5feb776aea84cd5fec9f36d87e377a43022caeface055a5d3d1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ff1304d547f1a8445ad140d88ef020d3c79a0d424a21113ae74bcfbeb549ff57",
+      "structural_formula": "matched=[xforxinrowsifabs(x[\"photon_to_fermion_speed_ratio\"]#)<#]"
+    },
+    {
+      "exact_formula_ids": [
         "857fa13f68a051dcc7bc2157a5ab630d1788246c68eb8c1f957becf3cdaf545e"
       ],
       "exact_member_count": 1,
@@ -2177496,6 +2178370,14 @@
     },
     {
       "exact_formula_ids": [
+        "6ec5dab5f98897ba62d9993127eb6b50d5dd36a9d272123aa65eea40ce5beacf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6702b53bcc544810fd68779a29e53d25fe68e9ffb669397b81b5dcc9beba35f3",
+      "structural_formula": "out={\"status\":\"PASS_TOE5#_GIRTH8_HIGH_T_FERMION_FLUX_COEFFICIENT\""
+    },
+    {
+      "exact_formula_ids": [
         "aa093c3653946154c7e2e89c6281af2bff125beea9a18c3011e28b9f95f20545"
       ],
       "exact_member_count": 1,
@@ -2177509,6 +2178391,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7428cece94a9530d1a499857711e3a9082fb2f4451c20a56a126581ad8da883a",
       "structural_formula": "out={\"status\":\"PASS_TOE5#_HOLONOMY_PARAMETER_PHASE_DIAGRAM_NO_UNIQUE_VACUUM\""
+    },
+    {
+      "exact_formula_ids": [
+        "9a77ff0a82164fbe9423ce0abc0eac5e2ba6248cda7254f9eaa55275559f0d57"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "46b4979a2f178e41dd751e8f0b773aab8acb94ee05316de614bd3d86c1359be9",
+      "structural_formula": "out={\"status\":\"PASS_TOE5#_NATIVE_BLOCH_CONTINUUM_LEIBNIZ_SCALING\""
     },
     {
       "exact_formula_ids": [
@@ -2187467,6 +2188357,14 @@
       "exact_member_count": 1,
       "structural_family_id": "56bb5f80d66a8d6f479b7835f33700c315a5a942ee2194b4719eead365383476",
       "structural_formula": "prev=json.loads((R/\"data/w3#_2#_toe4#_sic_search.json\").read_text())"
+    },
+    {
+      "exact_formula_ids": [
+        "d923732cc4452d3cb56ef50b9da6011928285c79308164b573e67a940f7205a3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2831d96a6193d15f00c5cfbdac223c60172e4cf47ffc2c302c7419c26fbececf",
+      "structural_formula": "prev=json.loads((R/\"data/w3#_2#_toe5#_wilson_girth_moments.json\").read_text())"
     },
     {
       "exact_formula_ids": [
@@ -2234748,6 +2235646,14 @@
     },
     {
       "exact_formula_ids": [
+        "7a906be0413909ba33991aeec8d81498b38b8d80a7a9c0a3bb7eba1919798125"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6a92f0e8d8c14f3f9e0ca619ea7d1ece11cf65626e0ed5e0b85224869bc4a06c",
+      "structural_formula": "series=sp.series(-sp.log(#*sp.cosh(x/#)),x,#,#).removeO()"
+    },
+    {
+      "exact_formula_ids": [
         "5dfae0c4843535df65771c5baee213ebf4c74937f011be0c7d255d5516c40e59"
       ],
       "exact_member_count": 1,
@@ -2243193,6 +2244099,14 @@
       "exact_member_count": 1,
       "structural_family_id": "deba5265ea24f1550b4b08db2ea1284b110cb76504299039514b6e3d9e5e4e0d",
       "structural_formula": "state|S>=(|#>-|#>)/sqrt2attainsthesingle-qutritmaximummanalog(#/#).Wecompute"
+    },
+    {
+      "exact_formula_ids": [
+        "467c6ff955580e0dfbfd69cbab2fb927afc65d126162b7c4ff67916ce4b20774"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "50ac5cdd13ae5ca103a6de48293e3b2367833b2316fc9ec1cab5f2ebdf36acc1",
+      "structural_formula": "static=json.loads((R/\"data/w3#_2#_toe5#_fermion_polarization.json\").read_text())"
     },
     {
       "exact_formula_ids": [
@@ -2276990,20 +2277904,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87622386,
-    "exact_formula_families": 61452,
-    "files_scanned": 12010,
-    "formula_occurrences": 67427,
+    "bytes_scanned": 87657946,
+    "exact_formula_families": 61477,
+    "files_scanned": 12018,
+    "formula_occurrences": 67452,
     "status_occurrences": {
-      "certified_or_theorem": 4909,
+      "certified_or_theorem": 4911,
       "killed_or_retracted": 1638,
       "open_or_conditional": 2244,
       "preregistered": 33,
-      "retrospective_fit": 5220,
-      "unclassified": 53383
+      "retrospective_fit": 5223,
+      "unclassified": 53403
     },
-    "structural_families": 59830
+    "structural_families": 59855
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "3b2d3c99050f3427111da7455361bc7ef995b3f93314cb2b9a4df81914d2d187"
+  "universe_sha256": "8ce22af8d901bd187ea3661245115c4ad2c85e93cf747bca6b7d57412e43d1b3"
 }
