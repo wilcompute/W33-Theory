@@ -1,0 +1,223 @@
+{
+  "status": "PASS_TOE65_INTERACTING_THREE_LOOP_EXTRA_CUTOFF_SWEEPS",
+  "new_runs": [
+    {
+      "depth": 1,
+      "L": 2,
+      "sectors": {
+        "neutral": {
+          "depth": 1,
+          "L": 2,
+          "Fock_configs": 17,
+          "dimension": 2125,
+          "ground": -1.1155996560332795,
+          "gap": 2.2559989746868405,
+          "Fock_boundary_weight": 0.4203830581906385,
+          "electric_flux_boundary_weight": 0.008870758917294665,
+          "eigensolver_residual": 2.26858709711476e-14
+        },
+        "charged": {
+          "depth": 1,
+          "L": 2,
+          "Fock_configs": 17,
+          "dimension": 2125,
+          "ground": -0.8104180794028041,
+          "gap": 1.857106096865572,
+          "Fock_boundary_weight": 0.417923954885997,
+          "electric_flux_boundary_weight": 0.008743051201213386,
+          "eigensolver_residual": 3.573720361793889e-14
+        }
+      },
+      "charge_cost": 0.3051815766304754
+    },
+    {
+      "depth": 2,
+      "L": 3,
+      "sectors": {
+        "neutral": {
+          "depth": 2,
+          "L": 3,
+          "Fock_configs": 113,
+          "dimension": 38759,
+          "ground": -2.262535164588432,
+          "gap": 2.145046624287745,
+          "Fock_boundary_weight": 0.20405042686947447,
+          "electric_flux_boundary_weight": 0.00010401835552831796,
+          "eigensolver_residual": 1.3475648985885982e-13
+        },
+        "charged": {
+          "depth": 2,
+          "L": 3,
+          "Fock_configs": 113,
+          "dimension": 38759,
+          "ground": -1.9394009274747714,
+          "gap": 1.8132767404622516,
+          "Fock_boundary_weight": 0.20067608855104574,
+          "electric_flux_boundary_weight": 8.731552171084742e-05,
+          "eigensolver_residual": 8.4831493506326e-14
+        }
+      },
+      "charge_cost": 0.3231342371136605
+    },
+    {
+      "depth": 3,
+      "L": 2,
+      "sectors": {
+        "neutral": {
+          "depth": 3,
+          "L": 2,
+          "Fock_configs": 417,
+          "dimension": 52125,
+          "ground": -2.776032441093878,
+          "gap": 1.7336950661594646,
+          "Fock_boundary_weight": 0.09035409301020479,
+          "electric_flux_boundary_weight": 0.020034802319725015,
+          "eigensolver_residual": 5.6066032437760534e-14
+        },
+        "charged": {
+          "depth": 3,
+          "L": 2,
+          "Fock_configs": 417,
+          "dimension": 52125,
+          "ground": -2.43650325472061,
+          "gap": 1.6781543624715636,
+          "Fock_boundary_weight": 0.08711483836785325,
+          "electric_flux_boundary_weight": 0.0186040442533254,
+          "eigensolver_residual": 7.032915451115184e-14
+        }
+      },
+      "charge_cost": 0.3395291863732681
+    }
+  ],
+  "baseline_runs_from_TOE62": [
+    {
+      "depth": 1,
+      "L": 1,
+      "charge_cost": 0.3050268070527602,
+      "sectors": {
+        "neutral": {
+          "depth": 1,
+          "L": 1,
+          "Fock_configs": 17,
+          "dimension": 459,
+          "ground": -1.0574065256725682,
+          "gap": 2.343173195833929,
+          "Fock_boundary_weight": 0.41791620118550954,
+          "electric_flux_boundary_weight": 0.3140682388432665,
+          "eigensolver_residual": 5.308014925622251e-15
+        },
+        "charged": {
+          "depth": 1,
+          "L": 1,
+          "Fock_configs": 17,
+          "dimension": 459,
+          "ground": -0.752379718619808,
+          "gap": 1.8860019144722489,
+          "Fock_boundary_weight": 0.4155397952970574,
+          "electric_flux_boundary_weight": 0.3388568928949651,
+          "eigensolver_residual": 9.554681242925785e-15
+        }
+      }
+    },
+    {
+      "depth": 2,
+      "L": 1,
+      "charge_cost": 0.3208115317014819,
+      "sectors": {
+        "neutral": {
+          "depth": 2,
+          "L": 1,
+          "Fock_configs": 113,
+          "dimension": 3051,
+          "ground": -2.178299741280857,
+          "gap": 2.1576340466629738,
+          "Fock_boundary_weight": 0.20043542815387072,
+          "electric_flux_boundary_weight": 0.37459148449084967,
+          "eigensolver_residual": 1.5273376735197044e-14
+        },
+        "charged": {
+          "depth": 2,
+          "L": 1,
+          "Fock_configs": 113,
+          "dimension": 3051,
+          "ground": -1.8574882095793752,
+          "gap": 1.8244569688854004,
+          "Fock_boundary_weight": 0.19719568343597144,
+          "electric_flux_boundary_weight": 0.3980472760618193,
+          "eigensolver_residual": 1.720428284804287e-14
+        }
+      }
+    },
+    {
+      "depth": 2,
+      "L": 2,
+      "charge_cost": 0.32298067885226245,
+      "sectors": {
+        "neutral": {
+          "depth": 2,
+          "L": 2,
+          "Fock_configs": 113,
+          "dimension": 14125,
+          "ground": -2.2613189830035902,
+          "gap": 2.145089005837357,
+          "Fock_boundary_weight": 0.20396289371977705,
+          "electric_flux_boundary_weight": 0.014691769092737164,
+          "eigensolver_residual": 5.061169897629859e-14
+        },
+        "charged": {
+          "depth": 2,
+          "L": 2,
+          "Fock_configs": 113,
+          "dimension": 14125,
+          "ground": -1.9383383041513278,
+          "gap": 1.813194444179136,
+          "Fock_boundary_weight": 0.20059956995873704,
+          "electric_flux_boundary_weight": 0.013876597645467207,
+          "eigensolver_residual": 3.914427890831806e-14
+        }
+      }
+    },
+    {
+      "depth": 3,
+      "L": 1,
+      "charge_cost": 0.33589095768841215,
+      "sectors": {
+        "neutral": {
+          "depth": 3,
+          "L": 1,
+          "Fock_configs": 417,
+          "dimension": 11259,
+          "ground": -2.673164430752027,
+          "gap": 1.732003953495489,
+          "Fock_boundary_weight": 0.0869922294532797,
+          "electric_flux_boundary_weight": 0.4298077335251609,
+          "eigensolver_residual": 2.6267610338248138e-14
+        },
+        "charged": {
+          "depth": 3,
+          "L": 1,
+          "Fock_configs": 417,
+          "dimension": 11259,
+          "ground": -2.3372734730636147,
+          "gap": 1.6823188968361709,
+          "Fock_boundary_weight": 0.083907250135685,
+          "electric_flux_boundary_weight": 0.4508639506816257,
+          "eigensolver_residual": 2.4424210405178014e-14
+        }
+      }
+    }
+  ],
+  "Galerkin_variational_nesting_checks": 12,
+  "native_patch": {
+    "sites": 14,
+    "links": 16,
+    "fermions": 6,
+    "contained_Wilson_rows": 6
+  },
+  "coarse_rigorous_full_patch_lower_bound": -13.0,
+  "full_untruncated_patch_upper_bounds": {
+    "neutral": -2.776032441093878,
+    "charged": -2.43650325472061
+  },
+  "scope": "E(d,L) are variational upper bounds for the full fixed finite native 14-site/16-link patch, not the 80-site W33 system. The -13 lower bound is rigorous but very loose and DOES NOT certify convergence. Charge cost differences of two upper bounds are NOT rigorous bounds on a true charge gap. Independent cutoffs matter."
+}

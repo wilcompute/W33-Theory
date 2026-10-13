@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 """
-BT1643: CSS Code Complex Boundary = Genus-21 Surface
+BT1643 historical claim RETRACTED: CSS boundary is not a genus-21 surface
 
-Theorem: The 2-skeleton of the W(3,3) line complex is a topological surface
-of genus 21, and the CSS code [[240, 160, 4, 3]]_3 built on this complex
-is a topological quantum code — a qutrit analogue of Kitaev's toric code
-(toric code lives on genus-1 surface, W33 code lives on genus-21 surface).
-
-The code distance d=4=mu is the minimum length of a non-contractible cycle
-on the genus-21 surface — the topological girth equals the GQ mu parameter.
+RETRACTED INTERPRETATION (TOE65, 2026-10-13):
+This historical script correctly produces the f-vector (40,240,160,40)
+and chi(two-skeleton)=-40, but it does NOT establish a genus-21 surface
+or a genus-21 toric code. Actual vertex links have FOUR disconnected
+3-cycles, whereas a surface requires one circle. The full tetrahedral
+clique complex has homotopy type of the W33 point-line incidence graph
+(wedge of 81 circles), and its 2-skeleton has F2 Betti [1,81,40].
+See analysis/w33_20261013_toe65_surface_topology_correction.py and the
+matching exact audit certificate. Historical matrix/code arithmetic below
+is retained but its surface-distance and toric-code interpretation is
+withdrawn pending a genuine surface cellulation and code-distance proof.
 
 Perplexity session Aug 18 2026.
 """
@@ -119,20 +123,19 @@ for col, ln in enumerate(all_lines):
 # Verify d2 * d3 = 0
 prod = (d2 @ d3) % 3
 assert np.all(prod == 0), "d2 * d3 != 0!"
-print("d2 ∘ d3 = 0 (mod 3) ✓")
+print("d2 composed with d3 = 0 (mod 3) [checked]")
 
-# Euler characteristic and genus
+# Euler count only: formal genus 21 would require a genuine surface.
 chi_full = v - len(edges) + len(triangles) - len(all_lines)
 chi_2skel = v - len(edges) + len(triangles)
 assert chi_full == -80
 assert chi_2skel == -40
-h_2skel = (2 - chi_2skel) // 2
-assert h_2skel == 21
-print(f"2-skeleton genus = {h_2skel} ✓")
+formal_euler_genus_candidate = (2 - chi_2skel) // 2
+assert formal_euler_genus_candidate == 21
 
-print("\n=== BT1643 THEOREM ===")
-print(f"The 2-skeleton of the W(3,3) line complex is a genus-{h_2skel} surface.")
-print(f"The CSS code [[{len(edges)}, {logical_qutrits}, {mu_par}, {q}]]_{q} is a")
-print(f"topological code on this genus-{h_2skel} surface.")
-print(f"Code distance d = {mu_par} = minimum non-contractible cycle length = mu.")
-print(f"This is the qutrit toric code analog: genus-{h_2skel} vs genus-1 for Kitaev.")
+print("\n=== BT1643 SURFACE INTERPRETATION RETRACTED (TOE65) ===")
+print(f"The arithmetic Euler genus candidate is {formal_euler_genus_candidate},")
+print("but the 2-skeleton is NOT a surface: each point has a disconnected")
+print("vertex link consisting of four separate triangular cycles.")
+print("The genus-21 toric-code and surface-distance interpretations are withdrawn.")
+print("See analysis/w33_20261013_toe65_surface_topology_correction.py.")

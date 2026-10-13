@@ -1,0 +1,81 @@
+{
+  "status": "PASS_TOE65_NATIVE_SPACETIME_GATES_AND_4D_POSITIVE_CONTROL",
+  "native_2complex": {
+    "V": 80,
+    "E": 160,
+    "octagonal_2cells": 1382,
+    "rank_d1_F2": 79,
+    "rank_d2_F2": 78,
+    "betti_F2": [
+      1,
+      3,
+      1304
+    ]
+  },
+  "time_circle_product_betti_F2": [
+    1,
+    4,
+    1307,
+    1304
+  ],
+  "time_circle_product_H4_F2": 0,
+  "two_time_circles_product_betti_F2": [
+    1,
+    5,
+    1311,
+    2611,
+    1304
+  ],
+  "closed_connected_4manifold_H4_over_F2_dim_expected": 1,
+  "added_edge_necessary_condition": {
+    "model": "keep V=80, append e simple edges between original vertices, require all faces embedded octagons and simple local links",
+    "pair_count_requirement": 168,
+    "at_least_added_edges": 19,
+    "rows": [
+      {
+        "added_edges": 0,
+        "max_possible_distinct_vertex_corners": 480,
+        "minimum_corners_from_closed_Euler": 648,
+        "simple_link_capacity_can_meet_Euler": false
+      },
+      {
+        "added_edges": 1,
+        "max_possible_distinct_vertex_corners": 488,
+        "minimum_corners_from_closed_Euler": 656,
+        "simple_link_capacity_can_meet_Euler": false
+      },
+      {
+        "added_edges": 10,
+        "max_possible_distinct_vertex_corners": 605,
+        "minimum_corners_from_closed_Euler": 728,
+        "simple_link_capacity_can_meet_Euler": false
+      },
+      {
+        "added_edges": 18,
+        "max_possible_distinct_vertex_corners": 777,
+        "minimum_corners_from_closed_Euler": 792,
+        "simple_link_capacity_can_meet_Euler": false
+      },
+      {
+        "added_edges": 19,
+        "max_possible_distinct_vertex_corners": 803,
+        "minimum_corners_from_closed_Euler": 800,
+        "simple_link_capacity_can_meet_Euler": true
+      },
+      {
+        "added_edges": 20,
+        "max_possible_distinct_vertex_corners": 830,
+        "minimum_corners_from_closed_Euler": 808,
+        "simple_link_capacity_can_meet_Euler": true
+      }
+    ],
+    "necessary_not_sufficient": true
+  },
+  "non_native_T4_positive_control": {
+    "c1_plane12": 1,
+    "c1_plane34": 1,
+    "half_c1_squared": 1,
+    "is_native_W33_index": false
+  },
+  "scope": "The XxS1 4th homology vanishes; XxT2 has b4=1304, not b4=1, so neither naive product is a connected closed 4-manifold (mod-2 top homology is one-dimensional even without orientability). This is no-go for these particular products, not for refined W33 spacetime. Standard T4 c1 square is a topology control, NOT a computed W33 overlap index or anomaly-free Weyl spectrum."
+}

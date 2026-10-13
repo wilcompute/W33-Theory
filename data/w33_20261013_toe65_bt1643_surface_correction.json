@@ -1,0 +1,47 @@
+{
+  "status": "PASS_TOE65_BT1643_GENUS21_SURFACE_CORRECTION",
+  "native_W33": {
+    "points": 40,
+    "isotropic_lines": 40,
+    "incidences": 160,
+    "collinearity_edges": 240,
+    "triangles": 160,
+    "tetrahedra": 40
+  },
+  "vertex_links": {
+    "distinct_neighbors": 12,
+    "edges": 12,
+    "component_sizes": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "vertices_checked": 40
+  },
+  "boundary_ranks_over_F2": {
+    "d1": 39,
+    "d2": 120,
+    "d3": 40
+  },
+  "two_skeleton_betti_F2": [
+    1,
+    81,
+    40
+  ],
+  "full_tetrahedral_clique_complex_betti_F2": [
+    1,
+    81,
+    0,
+    0
+  ],
+  "Euler_two_skeleton": -40,
+  "Euler_full_complex": -80,
+  "incidence_spine": {
+    "vertices": 80,
+    "edges": 160,
+    "cycle_rank": 81
+  },
+  "correction": "The triangular 2-skeleton is NOT a genus-21 surface. Each vertex link is four disjoint 3-cycles, not a circle. Each of its 40 lines supports a tetrahedron boundary; tetrahedra meet along vertices only. The full tetrahedral complex has the homotopy type of the point-line incidence graph, a wedge of 81 circles. Genus21 follows from an Euler-number coincidence without the manifold condition and must be withdrawn.",
+  "scope": "This corrects the surface interpretation of BT1643, not an assertion that all possible different W33 embeddings or surface maps are impossible."
+}

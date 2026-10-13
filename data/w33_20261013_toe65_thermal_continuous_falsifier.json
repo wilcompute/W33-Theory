@@ -1,0 +1,450 @@
+{
+  "status": "PASS_TOE65_NUMERIC_ALL_BETA_CONTINUOUS_FLUX_FALSIFIER",
+  "native_sites": 80,
+  "native_edges": 160,
+  "phase_dimensions": 3,
+  "boltzmann_beta_cases": [
+    {
+      "beta": "0.25",
+      "Fpi": -231.63081746767816,
+      "Fzero": -231.63080735340162,
+      "pi_minus_zero": -1.0114276534523015e-05,
+      "sobol_points": 256,
+      "smallest_sobol_gap": 1.8818715830093424e-07,
+      "best_sobol_angles": [
+        3.468890098316393,
+        3.2240697395600506,
+        2.795697423905086
+      ],
+      "best_minimizer_gap": 0.0,
+      "optimizations": [
+        {
+          "free_energy_diff_from_pi": 0.0,
+          "angles": [
+            -3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.0114276534523015e-05,
+          "angles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 7.629220505123158e-06,
+          "angles": [
+            -1.5729631249821674,
+            -0.6635123757822985,
+            -0.6527376798415361
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 4.743309574450905e-06,
+          "angles": [
+            0.9198383277584954,
+            1.6806906855029817,
+            2.27181049020922
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.9211283870390616e-06,
+          "angles": [
+            2.8691334888919577,
+            -2.51900815550931,
+            -1.6229887497788091
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 8.471909239915476e-06,
+          "angles": [
+            -0.43056901003610193,
+            1.4189955497403606,
+            0.10354267328795297
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 4.058031009890328e-06,
+          "angles": [
+            -0.8503396014518696,
+            -1.805677327537082,
+            2.859230662868077
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 6.575364466243627e-06,
+          "angles": [
+            1.7619236012016142,
+            0.5617701333295169,
+            -1.237276921778676
+          ],
+          "converged": true
+        }
+      ]
+    },
+    {
+      "beta": "0.5",
+      "Fpi": -129.61557271863407,
+      "Fzero": -129.61474770541238,
+      "pi_minus_zero": -0.0008250132216858219,
+      "sobol_points": 256,
+      "smallest_sobol_gap": 1.5380532005337955e-05,
+      "best_sobol_angles": [
+        3.468890098316393,
+        3.2240697395600506,
+        2.795697423905086
+      ],
+      "best_minimizer_gap": 0.0,
+      "optimizations": [
+        {
+          "free_energy_diff_from_pi": 0.0,
+          "angles": [
+            -3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 0.0008250132216858219,
+          "angles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 3.6295773497840855e-08,
+          "angles": [
+            3.1407959310471787,
+            3.1236371239132374,
+            -3.125409542906132
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 7.96465826624626e-08,
+          "angles": [
+            -3.1309317893987068,
+            -3.130875191096292,
+            -3.1102725727880625
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.3237496432338958e-08,
+          "angles": [
+            3.1310983711406903,
+            3.133584805886139,
+            3.136658856103164
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 4.885833959633601e-09,
+          "angles": [
+            3.1370222876001144,
+            3.1342253845038552,
+            -3.141024002461271
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 4.0918365584730054e-08,
+          "angles": [
+            -3.1372934567955646,
+            -3.1363391478587097,
+            -3.117539430587195
+          ],
+          "converged": false
+        },
+        {
+          "free_energy_diff_from_pi": 1.3940198471118492e-06,
+          "angles": [
+            3.0551796591477975,
+            3.100393422660317,
+            3.0322910483200065
+          ],
+          "converged": false
+        }
+      ]
+    },
+    {
+      "beta": "2.0",
+      "Fpi": -73.63798609537531,
+      "Fzero": -73.3635339290509,
+      "pi_minus_zero": -0.2744521663244086,
+      "sobol_points": 256,
+      "smallest_sobol_gap": 0.004926136720939667,
+      "best_sobol_angles": [
+        3.468890098316393,
+        3.2240697395600506,
+        2.795697423905086
+      ],
+      "best_minimizer_gap": 0.0,
+      "optimizations": [
+        {
+          "free_energy_diff_from_pi": 0.0,
+          "angles": [
+            -3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 0.2744521663244086,
+          "angles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 9.890754881780595e-12,
+          "angles": [
+            -3.141572457911158,
+            -3.14158973283549,
+            -3.141586565159603
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 9.379164112033322e-12,
+          "angles": [
+            3.1415772073403785,
+            -3.1415856974333902,
+            3.141580009237055
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.4722445484949276e-10,
+          "angles": [
+            -3.141520068527294,
+            -3.1415784854647644,
+            3.1415566151642
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 2.941646926046815e-11,
+          "angles": [
+            3.14156031612756,
+            -3.1415822784219882,
+            3.141578022745265
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 7.364064913417678e-11,
+          "angles": [
+            3.1415521650031266,
+            3.1415780360923495,
+            3.1415523621416277
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 3.879563337250147e-11,
+          "angles": [
+            -3.1415868390736055,
+            3.1415822587978663,
+            3.1415513669872013
+          ],
+          "converged": true
+        }
+      ]
+    },
+    {
+      "beta": "8.0",
+      "Fpi": -66.67053266461298,
+      "Fzero": -65.38705577242084,
+      "pi_minus_zero": -1.283476892192141,
+      "sobol_points": 256,
+      "smallest_sobol_gap": 0.014495076122187811,
+      "best_sobol_angles": [
+        3.468890098316393,
+        3.2240697395600506,
+        2.795697423905086
+      ],
+      "best_minimizer_gap": 0.0,
+      "optimizations": [
+        {
+          "free_energy_diff_from_pi": 0.0,
+          "angles": [
+            -3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.283476892192141,
+          "angles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 4.217781679471955e-11,
+          "angles": [
+            3.1415791396286163,
+            -3.1415742732875795,
+            -3.141580315081068
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 2.071942617476452e-11,
+          "angles": [
+            -3.1415816879967995,
+            -3.141578887734358,
+            -3.1415876201601973
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 8.412825991399586e-12,
+          "angles": [
+            3.1415857858589824,
+            3.141591144971107,
+            -3.1415833528820567
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 2.5977442419389263e-11,
+          "angles": [
+            3.1415857754120147,
+            3.141577720303931,
+            3.1415804095766138
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 2.6403768060845323e-11,
+          "angles": [
+            -3.14158251898425,
+            -3.1415780935299935,
+            -3.1415820536534396
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.1510792319313623e-12,
+          "angles": [
+            3.1415894866683525,
+            3.141589788904774,
+            3.141592121804031
+          ],
+          "converged": true
+        }
+      ]
+    },
+    {
+      "beta": "None",
+      "Fpi": -64.58978010190077,
+      "Fzero": -62.78775382679631,
+      "pi_minus_zero": -1.8020262751044598,
+      "sobol_points": 256,
+      "smallest_sobol_gap": 0.014608987467539691,
+      "best_sobol_angles": [
+        3.468890098316393,
+        3.2240697395600506,
+        2.795697423905086
+      ],
+      "best_minimizer_gap": 0.0,
+      "optimizations": [
+        {
+          "free_energy_diff_from_pi": 0.0,
+          "angles": [
+            -3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 2.1316282072803006e-12,
+          "angles": [
+            -3.141587780062416,
+            3.1415895407570584,
+            3.1415923105398527
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 4.405364961712621e-11,
+          "angles": [
+            3.1415835851768694,
+            3.1415760864058795,
+            -3.1415735662199964
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 7.474909580196254e-12,
+          "angles": [
+            3.1415827645271968,
+            -3.14158922526153,
+            3.141589717149417
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 2.8251179173821583e-11,
+          "angles": [
+            -3.1415799857906688,
+            3.141578133169392,
+            3.1415839787631743
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.6626700016786344e-11,
+          "angles": [
+            -3.1415793524611058,
+            -3.1415903202962703,
+            -3.141583561090135
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 5.653078005707357e-11,
+          "angles": [
+            -3.1415898721710125,
+            3.141567903646618,
+            -3.1415750699263985
+          ],
+          "converged": true
+        },
+        {
+          "free_energy_diff_from_pi": 1.0956568985420745e-11,
+          "angles": [
+            3.141581784857104,
+            -3.141586553243158,
+            -3.141588557196698
+          ],
+          "converged": true
+        }
+      ]
+    }
+  ],
+  "conjugation_check_samples": 40,
+  "scope": "Finite numerical grid and local optimizations, not an analytic all-beta global U(1)^3 theorem; no gauge-field dynamics, full W33 interactions, CP breaking or measured physical constants."
+}
