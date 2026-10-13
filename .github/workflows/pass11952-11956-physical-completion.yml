@@ -1,0 +1,40 @@
+name: Pass11952-11956 physical completion
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass11952_11955_threshold_vacuum_loop_leptons.py'
+      - 'analysis/w33_pass11956_local_electric_metric.py'
+      - 'analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py'
+      - 'analysis/w33_20261010_toe38_local_maxwell_2complex.py'
+      - 'analysis/w33_20261010_toe36_incidence_relativistic_walk.py'
+      - 'data/w33_pass11952_11955_threshold_vacuum_loop_leptons.json'
+      - 'data/w33_pass11956_local_electric_metric.json'
+      - 'tests/test_w33_pass11952_11956_physical_completion.py'
+      - '.github/workflows/pass11952-11956-physical-completion.yml'
+  workflow_dispatch:
+jobs:
+  exact-science-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 pytest==8.4.2
+      - name: Frozen science and independent controls
+        run: >-
+          python -m pytest --noconftest --ignore-glob=tests/test_*.py -q
+          tests/test_w33_pass11952_11956_physical_completion.py
+          tests/test_w33_pass11950_11951_strong_cp_completion.py
+      - name: Regenerate four CP and flavour fronts
+        run: python analysis/w33_pass11952_11955_threshold_vacuum_loop_leptons.py
+      - name: Regenerate exact local metric front
+        run: python analysis/w33_pass11956_local_electric_metric.py
+      - name: Independently check regenerated science
+        run: >-
+          python -m pytest --noconftest --ignore-glob=tests/test_*.py -q
+          tests/test_w33_pass11952_11956_physical_completion.py
