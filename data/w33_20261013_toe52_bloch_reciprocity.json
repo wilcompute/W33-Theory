@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "model": "Native real-coefficient W33 magnetic Bloch row operator",
+  "statement": "P(-k)=conjugate(P(k)); for positive REAL diagonal electric weights W, K(-k)=conjugate(K(k)); all trace moments Tr[(W^-1/2 K W^-1/2)^n] and all weight gradients are EVEN in k.",
+  "k_examples": [
+    {
+      "k": [
+        0.83,
+        0.17,
+        0.29
+      ],
+      "P_minus_vs_conjP_plus_error": 0.0,
+      "max_trace_moment_error": 0.0,
+      "max_weight_gradient_error": 0.0
+    },
+    {
+      "k": [
+        0.47,
+        0.53,
+        0.41
+      ],
+      "P_minus_vs_conjP_plus_error": 0.0,
+      "max_trace_moment_error": 0.0,
+      "max_weight_gradient_error": 0.0
+    },
+    {
+      "k": [
+        1.01,
+        0.91,
+        0.83
+      ],
+      "P_minus_vs_conjP_plus_error": 0.0,
+      "max_trace_moment_error": 0.0,
+      "max_weight_gradient_error": 0.0
+    }
+  ],
+  "rank_3wavevectors_9moments": 9,
+  "rank_with_three_opposite_wavevectors_18moments": 9,
+  "practical_conclusion": "Opposite momentum spectral traces may average independent detector noise but add NO new noiseless Jacobian rank. Optimize non-opposite k and observable type; broken reciprocity or phase-sensitive odd-in-k observables require extra physical structures.",
+  "scope": "Finite native P(k) and positive real w; NOT a theorem for magnetic/nonreciprocal media or phase-resolved Bloch eigenvectors."
+}
