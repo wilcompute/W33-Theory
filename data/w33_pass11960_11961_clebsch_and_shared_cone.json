@@ -4,6 +4,8 @@
     "status": "PASS",
     "clebsch_factor": -3,
     "quark_masses_and_CKM_held_fixed": true,
+    "physical_quark_J": 3.080000000001513e-05,
+    "convention": "Common Weyl kernel A_W=conjugate sqrt(K); physical four-component down mass=(m A_W)*. The CKM sign agrees with the supplied comparator.",
     "charged_targets": [
       0.0002786386750962067,
       0.05882238409382445
@@ -31,7 +33,7 @@
             0.028234993422842115
           ],
           "weighted_loss": 444.4827361935622,
-          "J": 0.007128132141525105
+          "J": -0.007128132141525105
         },
         "two_real_offdiagonal_neutrino_roots": [
           {
@@ -53,8 +55,8 @@
               ]
             ],
             "smallest_bare_eigenvalue": 0.29699456711362315,
-            "delta_deg": 79.38483149918176,
-            "J": 0.03258086432000108,
+            "delta_deg": 280.61516850081824,
+            "J": -0.03258086432000108,
             "PMNS_abs_squared": [
               [
                 0.6805488000000007,
@@ -106,8 +108,8 @@
               ]
             ],
             "smallest_bare_eigenvalue": 0.20511014731456795,
-            "delta_deg": 247.42379258314332,
-            "J": -0.030607989853473076,
+            "delta_deg": 112.57620741685666,
+            "J": 0.030607989853473076,
             "PMNS_abs_squared": [
               [
                 0.6805488000000004,
@@ -164,7 +166,7 @@
             0.03580271542158685
           ],
           "weighted_loss": 1137.0568254718178,
-          "J": 0.008255369156669846
+          "J": -0.008255369156669846
         },
         "two_real_offdiagonal_neutrino_roots": [
           {
@@ -186,8 +188,8 @@
               ]
             ],
             "smallest_bare_eigenvalue": 0.2620764697412752,
-            "delta_deg": 302.50821127620475,
-            "J": -0.027954305966078202,
+            "delta_deg": 57.49178872379524,
+            "J": 0.027954305966078202,
             "PMNS_abs_squared": [
               [
                 0.6805488000000011,
@@ -244,7 +246,7 @@
             0.02823499345450931
           ],
           "weighted_loss": 444.48273619355246,
-          "J": 0.0071281321362769955
+          "J": -0.0071281321362769955
         },
         "two_real_offdiagonal_neutrino_roots": [
           {
@@ -266,8 +268,8 @@
               ]
             ],
             "smallest_bare_eigenvalue": 0.29699456711362116,
-            "delta_deg": 79.3848314991819,
-            "J": 0.03258086432000115,
+            "delta_deg": 280.6151685008181,
+            "J": -0.03258086432000115,
             "PMNS_abs_squared": [
               [
                 0.6805487999999985,
@@ -319,8 +321,8 @@
               ]
             ],
             "smallest_bare_eigenvalue": 0.20511014731456917,
-            "delta_deg": 247.42379258314233,
-            "J": -0.030607989853472833,
+            "delta_deg": 112.57620741685767,
+            "J": 0.030607989853472833,
             "PMNS_abs_squared": [
               [
                 0.6805487999999996,

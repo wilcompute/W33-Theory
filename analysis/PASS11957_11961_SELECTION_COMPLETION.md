@@ -226,7 +226,10 @@ With the11951 shared positive kernel A and supplied real quark matrix m,
 take only two diagonal real45 coefficients:
 
 `Y45=diag(c1,c2,0)`, `Y5=m-Y45`,
-`Md=m A`, `Me=A^T(m-4Y45)^T`.
+`Yd_Weyl=m A`, `Me_Weyl=A^T(m-4Y45)^T`, where the common Weyl
+kernel is the **conjugate** of the positive root used in11951's four-component
+inverse. The physical down mass is `(m A)*`; its Hermitian Gram and positive
+CKM J are directly checked against the original comparator.
 
 The quark fit stays exactly fixed. Two fitted real coefficients reproduce
 the repo's two charged-lepton ratios. The finite one22-coefficient scan fails
@@ -242,7 +245,7 @@ comparators with residuals below10^-12. Takagi SVD, physical mass ordering
 and consistent Weyl charged rotations are used.
 
 The CP phase is not fitted. The stored roots give conditional delta values
-about **79.385°,247.424°,302.508°**, with nonzero J. **Multiple branches prevent
+about **280.615°,112.576°,57.492°**, with nonzero J. **Multiple branches prevent
 a unique phase prediction.** This establishes compatibility of a real bare
 neutrino sector with the inherited quark mixing kernel; it is not a
 parameter-free W33 prediction or a selected observed vacuum.
@@ -250,6 +253,11 @@ parameter-free W33 prediction or a selected observed vacuum.
 The45-Higgs input also brings colored partners and proton/gauge constraints;
 these are not solved by a charged-mass fit. See the distinct model of
 [Haba et al.,2402.15124](https://arxiv.org/abs/2402.15124).
+An initial publication `b577dc9a1` used the unconjugated four-component kernel
+inside this common Weyl calculation. All fitted magnitudes survived, but the
+physical quark J had the opposite sign and its quoted lepton phases must be
+conjugated. The corrected producer and direct CKM-sign regression supersede
+that convention; the final exact-SHA receipt identifies the corrected science.
 The earlier Wilson-line band and11946's specified mu–tau-clean exclusion
 remain valid on their original assumptions.
 

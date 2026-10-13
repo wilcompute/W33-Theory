@@ -172,6 +172,16 @@ def test_real_clebsch_repairs_charged_ratios_without_changing_quarks():
         assert np.max(abs(e-A.T@(Y5-3*Y45).T))<1e-12
 
 
+def test_common_weyl_kernel_preserves_physical_ckm_sign():
+    m,A=q.quark_kernel();target,sv=p.masses.ckm_target()
+    physical=(m@A).conj()
+    H=physical@physical.conj().T
+    assert np.max(abs(H-(target*sv**2)@target.conj().T))<1e-14
+    _,U=np.linalg.eigh(H)
+    J=(U[0,0]*U[1,1]*U[0,1].conj()*U[1,0].conj()).imag
+    assert abs(J-p.masses.fits.DATA['J'])<1e-12
+
+
 def test_two_real_neutrino_entries_bypass_the_diagonal_failure():
     _,b=packet();m,A=q.quark_kernel();targets=np.array(b['11960']['neutrino_targets']);found=0
     for fit in b['11960']['two_real_diagonal_45_coefficients_fits']:

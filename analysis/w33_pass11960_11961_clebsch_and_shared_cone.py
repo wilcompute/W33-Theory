@@ -22,7 +22,14 @@ def quark_kernel():
     V, masses=prior.ckm_target();H=(V*masses**2)@V.conj().T
     real,B,mu=prior.barr_realization(H)
     K=np.eye(3)-np.outer(B.conj(),B)/(mu**2+np.vdot(B,B).real)
-    return real,positive_root(K)
+    # The inverse construction used a FOUR-COMPONENT mass m sqrt(K).
+    # W contains Q^T Y d^c, whose physical four-component coefficient
+    # is Y*. Use the conjugate kernel in the common Weyl superpotential
+    # so the physical CKM sign, not only its absolute entries, stays fixed.
+    A=positive_root(K).conj()
+    physical=(real@A).conj()
+    assert np.max(abs(physical@physical.conj().T-H))<1e-14
+    return real,A
 
 
 def charged_ratios(c, real, A):
@@ -78,6 +85,10 @@ def clebsch_certificate():
     t,u=s.symbols('t u'); trace=3*t+u
     assert s.solve(trace,u)==[-3*t]
     real,A=quark_kernel()
+    _,physical_quark_vectors=np.linalg.eigh((real@A).conj()@(real@A).T)
+    physical_quark_J=(physical_quark_vectors[0,0]*physical_quark_vectors[1,1]*
+                      physical_quark_vectors[0,1].conj()*physical_quark_vectors[1,0].conj()).imag
+    assert abs(physical_quark_J-prior.fits.DATA['J'])<1e-12
     leptons=prior.fits.LEPTONS
     target=np.array([leptons['me_mmu']*leptons['mmu_mtau'],leptons['mmu_mtau']])
     def residual(c):return np.log(charged_ratios(c,real,A)[0]/target)
@@ -127,6 +138,8 @@ def clebsch_certificate():
         del f['charged']
     assert any(f['two_real_offdiagonal_neutrino_roots'] for f in fits)
     return {'status':'PASS','clebsch_factor':-3,'quark_masses_and_CKM_held_fixed':True,
+            'physical_quark_J':float(physical_quark_J),
+            'convention':'Common Weyl kernel A_W=conjugate sqrt(K); physical four-component down mass=(m A_W)*. The CKM sign agrees with the supplied comparator.',
             'charged_targets':target.tolist(),'two_real_diagonal_45_coefficients_fits':fits,
             'one_22_coefficient_scan':dict(interval=[-.3,.3],grid_points=6001,best=float(one.x),
                 log_residual_norm=float(one.fun),ratios=charged_ratios([0,one.x],real,A)[0].tolist()),
