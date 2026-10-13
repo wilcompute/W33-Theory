@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "visible_model": "Three vectorlike messenger pairs: one Y-only, one X-only, one Z-only, unit integer charges, same spurionX=M+theta\u00b2F. Supplied gY=.36,gX=gZ=.1, M=1e7GeV; visible unit-hypercharge scalar mass1TeV. The hidden messenger current trace is proportional to I2, permitting exact two-vector mass-basis matching.",
+  "leading_matching": "m_visible\u00b2=4(gY\u00b2/(16pi\u00b2))\u00b2(F/M)\u00b2 for one charge+/-1 Abelian pair (messenger index2). For charge q=(X,Z), m_q\u00b2/m_visible\u00b2=(gH/gY)^4 sum_a[(q O)_a\u00b2 f(MVa\u00b2/M\u00b2)], with O diagonalizing the FULL11958 moment matrix;1201.2179 Eq13.",
+  "F_GeV_squared": 6092348395734.172,
+  "F_over_M_squared": 0.06092348395734172,
+  "gravity_scale_GeV": 1.444525251036595e-06,
+  "charge_order": [
+    "S1",
+    "S2",
+    "T1",
+    "T2",
+    "P",
+    "PhiMinus",
+    "PhiPlus"
+  ],
+  "soft_masses_GeV": [
+    1.2811188346141793e-05,
+    1.2811188346141793e-05,
+    1.281181316351747e-05,
+    1.281181316351747e-05,
+    2.953341897588026e-07,
+    3.5440102771056316e-06,
+    3.5440102771056316e-06
+  ],
+  "hidden_vector_masses_GeV": [
+    499972866827743.44,
+    2.400268724311731e+16
+  ],
+  "delta": [
+    2499728675639524.5,
+    5.761289948909066e+18
+  ],
+  "suppression_f": [
+    2.7566958707897076e-14,
+    1.4648696193803418e-17
+  ],
+  "suppression_formula": "f(delta) from Eq8 with exact dilogarithm Omega, computed at100digits; agrees with2(log(delta)-1)/delta to relative1e-12 at these enormous deltas.",
+  "local_response": "All7 matched soft coefficients included on11966 curve, frozen at selected home. A positive nearby radial curvature and tiny induced scale are supported. Neither this fixed-coefficient expansion nor the massless negative control is a global softly broken vacuum proof.",
+  "predicted_radial_shift_numeric": -9.442316818810358e-10,
+  "massless_Z_only_negative_control": {
+    "coexistence_x": 0.9961805937900616,
+    "critical_unit_Z_soft_GeV": 0.03423480981795458,
+    "explanation": "The threshold0.0342GeV assumes a supplied Z-charge-squared soft pattern with no Higgsed suppression. It is NOT a bound on the actual messenger model."
+  },
+  "technical_sequestering": "No bi-charged messenger in this model: Tr(YX)=Tr(YZ)=Tr(XZ)=0 at messenger1loop. Complete E6 multiplets also have TrY=0; split component thresholds need a separate audit. Gravity/Kahler portals, A terms and tadpoles remain allowed.",
+  "scope": "Leading small-F/M\u00b2 Higgsed two-vector matching for a specified toy messenger model and local restricted-curve response. Supplied scales and couplings. No full softly broken Hessian, D-response off curve, finite-F corrections, A terms, tadpoles, full supergravity vacuum or physical prediction.",
+  "prior": [
+    "11958 protected gauge branch",
+    "11966 canonical light mass and P-only soft response"
+  ],
+  "primary": "https://arxiv.org/abs/1201.2179"
+}

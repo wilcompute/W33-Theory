@@ -1,0 +1,256 @@
+{
+  "status": "PASS",
+  "sites": 80,
+  "links": 160,
+  "spinor_bands": 320,
+  "rational_period_Gram": [
+    [
+      "81/160",
+      "1/160",
+      "1/160"
+    ],
+    [
+      "1/160",
+      "81/160",
+      "-3/160"
+    ],
+    [
+      "1/160",
+      "-3/160",
+      "81/160"
+    ]
+  ],
+  "exact_current_normalization": "J=80 h(h.T h)^-1; B0.T J=0; J.T volts=80 I3",
+  "operator": "H(k)=v sum_i alpha_i tensor [-i C(k).dag diag(J_i) B(k)] + r beta tensor [B(k).dag B(k)]; C has midpoint endpoint weights1/2.",
+  "locality": "Onsite and the same160 native links only, on the infinite80-site Z3 deck cover. J is a fixed coefficient choice computed globally; no nonlocal runtime stencil.",
+  "no_doubling_proof": "L(k) is positive definite off k=0 modulo2pi: its zero would be a covariantly constant scalar, whose three unit deck-loop holonomies force exp(i k_i)=1. Write H=[[rL,S],[S,-rL]], S Hermitian. A zero vector obeys r(psi.dag L psi+chi.dag L chi)=0 by taking real parts of both block equations. Off origin it vanishes; at origin both spinors are constant and S kills them. Thus exactly4 zero modes, all at origin, for every r>0.",
+  "origin_zero_modes": 4,
+  "origin_heavy_gap": 15.559248803028794,
+  "refinement": "For spacing a=1/N, take the periodic native cover with vertices(v,n), n in (Z/N)^3 and edges(a,n)->(b,n+volts_e). H_a=H(a p)/a, continuous time. The four isolated low bands at each fixed physical p approach eigenvalues(-v|p|,-v|p|,v|p|,v|p|); all316 internal bands diverge as1/a. This is a fixed-momentum free spectral limit, not an interacting norm-resolvent theorem.",
+  "derivation": "P H(0) P=0; P dH/dk_i P=v alpha_i since J.T volts/80=I3 and P dL/dk P=0. Analytic finite-matrix perturbation about the isolated four-dimensional kernel gives low effective H=v alpha.p+O(a |p|^2). Compactness away from origin plus the zero-mode proof excludes hidden low species.",
+  "finite_refinement_checks": [
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "spacing": 0.02,
+      "low_scaled": [
+        -0.9999949517343792,
+        -0.99999493617884,
+        0.9999949361821624,
+        0.9999949517373489
+      ],
+      "error": 5.063821159945192e-06
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "spacing": 0.01,
+      "low_scaled": [
+        -0.9999987379847993,
+        -0.9999987340934725,
+        0.999998734094674,
+        0.999998737985105
+      ],
+      "error": 1.2659065274922554e-06
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "spacing": 0.005,
+      "low_scaled": [
+        -0.9999996844929504,
+        -0.9999996835287085,
+        0.9999996835331683,
+        0.9999996844970374
+      ],
+      "error": 3.164712915060264e-07
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "spacing": 0.0025,
+      "low_scaled": [
+        -0.9999999211086774,
+        -0.9999999208902081,
+        0.9999999208980427,
+        0.9999999211174366
+      ],
+      "error": 7.910979193948009e-08
+    },
+    {
+      "direction": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "spacing": 0.02,
+      "low_scaled": [
+        -1.0000113546632103,
+        -1.000010818817886,
+        1.0000108188218335,
+        1.0000113546668048
+      ],
+      "error": 1.135466680479702e-05
+    },
+    {
+      "direction": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "spacing": 0.01,
+      "low_scaled": [
+        -1.000002838707195,
+        -1.000002704744099,
+        1.0000027047427762,
+        1.0000028387066335
+      ],
+      "error": 2.838707195085277e-06
+    },
+    {
+      "direction": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "spacing": 0.005,
+      "low_scaled": [
+        -1.0000007096732486,
+        -1.0000006761947378,
+        1.0000006761945128,
+        1.000000709671724
+      ],
+      "error": 7.096732486111534e-07
+    },
+    {
+      "direction": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "spacing": 0.0025,
+      "low_scaled": [
+        -1.0000001774022638,
+        -1.0000001690608205,
+        1.0000001690650517,
+        1.0000001774090497
+      ],
+      "error": 1.7740904967311621e-07
+    },
+    {
+      "direction": [
+        0.5345224838248488,
+        -0.2672612419124244,
+        0.8017837257372732
+      ],
+      "spacing": 0.02,
+      "low_scaled": [
+        -1.000054445234109,
+        -0.9999625343526685,
+        0.9999625343537794,
+        1.000054445227618
+      ],
+      "error": 5.4445234108913e-05
+    },
+    {
+      "direction": [
+        0.5345224838248488,
+        -0.2672612419124244,
+        0.8017837257372732
+      ],
+      "spacing": 0.01,
+      "low_scaled": [
+        -1.0000250866520348,
+        -0.9999791583297493,
+        0.999979158328533,
+        1.0000250866532052
+      ],
+      "error": 2.5086653205219633e-05
+    },
+    {
+      "direction": [
+        0.5345224838248488,
+        -0.2672612419124244,
+        0.8017837257372732
+      ],
+      "spacing": 0.005,
+      "low_scaled": [
+        -1.0000120110221682,
+        -0.9999890502435876,
+        0.9999890502366132,
+        1.0000120109988466
+      ],
+      "error": 1.2011022168190166e-05
+    },
+    {
+      "direction": [
+        0.5345224838248488,
+        -0.2672612419124244,
+        0.8017837257372732
+      ],
+      "spacing": 0.0025,
+      "low_scaled": [
+        -1.00000587263252,
+        -0.9999943926699139,
+        0.9999943926820676,
+        1.0000058726406946
+      ],
+      "error": 5.872640694626341e-06
+    }
+  ],
+  "off_origin_checks": [
+    {
+      "k": [
+        3.141592653589793,
+        0,
+        0
+      ],
+      "L_min": 0.026882756449017706,
+      "H_min_abs": 2.293410393879123
+    },
+    {
+      "k": [
+        3.141592653589793,
+        3.141592653589793,
+        3.141592653589793
+      ],
+      "L_min": 0.08358400819384215,
+      "H_min_abs": 5.835099385511203
+    },
+    {
+      "k": [
+        0.7,
+        -1.2,
+        2.1
+      ],
+      "L_min": 0.03175989824072828,
+      "H_min_abs": 2.513836592502381
+    }
+  ],
+  "scope": "Native free single Dirac species in3+1 dimensions with supplied continuous time, deck marking, Wilson coefficient and current normalization. Vectorlike. No selected spacetime dimension, chiral Standard Model, interacting4D limit, nonlinear gravity or physical speed prediction. Choosing v=sqrt(2) matches the leading11956 photon cone by hand.",
+  "prior": [
+    "analysis/w33_pass11956_local_electric_metric.py",
+    "data/w33_pass11956_local_electric_metric.json",
+    "analysis/w33_pass11562_11569_canonical_spin_gauge_frontier.py",
+    "analysis/w33_20261010_toe38_local_maxwell_2complex.py"
+  ],
+  "input_sha256_lf": {
+    "analysis/w33_pass11956_local_electric_metric.py": "2507210d0fe1c175ca3b1925500773533ffd0ad7ed2375e8a1bdac865f99569b",
+    "data/w33_pass11956_local_electric_metric.json": "6607b2b979531725b463cdea004331250be103bf2eb1e03c1f6510347ca199cb",
+    "analysis/w33_pass11562_11569_canonical_spin_gauge_frontier.py": "1fe0f542b955ebe999b28e9a20273901d5c8b49a68f7cd570f8bc0653311f7f5",
+    "analysis/w33_20261010_toe38_local_maxwell_2complex.py": "6be80936afff79d71f3d8037bf98abc41146a019f9e5e81c0cd324f49424b813"
+  },
+  "primary": "https://arxiv.org/abs/2306.14180"
+}
