@@ -1,0 +1,90 @@
+{
+  "status": "PASS_TOE56_PHYSICS_FIRST_FIVE_FRONTS_PARAM_IDENTIFIABILITY",
+  "native_free_photon_hessian": "For H_B=beta/g\u00b2 \u03a3[1-cos(gP A)], \u2202\u00b2H_B/\u2202A\u00b2 at A=0=beta P.T P, completely independent of bare g, with all 3 harmonic and 79 pure gauge zero directions at k=0.",
+  "beta_1_compatible_nonzero_spectrum": {
+    "first_3": [
+      99.59226584111039,
+      105.08143496440988,
+      110.92202419276074
+    ],
+    "number_positive": 78
+  },
+  "bare_parameter_grid": {
+    "0.25,0.7": {
+      "analytic_bare_quadratic_Hessian_direction": 357.60144803298925,
+      "finite_diff_relative_error": 3.786255120904148e-07,
+      "quartic_compact_self_interaction_amplitude": -1.0577892359205319
+    },
+    "0.25,1.3": {
+      "analytic_bare_quadratic_Hessian_direction": 664.1169749184087,
+      "finite_diff_relative_error": 3.7862551216377977e-07,
+      "quartic_compact_self_interaction_amplitude": -1.9644657238524168
+    },
+    "0.5,0.7": {
+      "analytic_bare_quadratic_Hessian_direction": 357.60144803298925,
+      "finite_diff_relative_error": 1.5144997757468141e-06,
+      "quartic_compact_self_interaction_amplitude": -4.2311569436821275
+    },
+    "0.5,1.3": {
+      "analytic_bare_quadratic_Hessian_direction": 664.1169749184087,
+      "finite_diff_relative_error": 1.5144997756612214e-06,
+      "quartic_compact_self_interaction_amplitude": -7.857862895409667
+    },
+    "1.0,0.7": {
+      "analytic_bare_quadratic_Hessian_direction": 357.60144803298925,
+      "finite_diff_relative_error": 6.057981875018485e-06,
+      "quartic_compact_self_interaction_amplitude": -16.92462777472851
+    },
+    "1.0,1.3": {
+      "analytic_bare_quadratic_Hessian_direction": 664.1169749184087,
+      "finite_diff_relative_error": 6.0579818751040765e-06,
+      "quartic_compact_self_interaction_amplitude": -31.43145158163867
+    }
+  },
+  "gauge_coupling_not_identified": "All tested positive g values yield exactly the same classical free photon quadratic operator for fixed beta,w, but different compact nonlinear magnetic quartic coefficients proportional to -beta*g\u00b2 and different quantized rotor electric energies proportional to g\u00b2. A predicted alpha requires physical matter-charge normalization and QFT matching; neither is supplied.",
+  "couplings_unfixed_by_geometry": [
+    "g",
+    "beta",
+    "kappa_charged_hopping",
+    "mass_squared",
+    "M_metric",
+    "kappa_weight",
+    "w0"
+  ],
+  "minimum_number_of_external_bare_scalar_parameters": 7,
+  "n_common_physics_gates_met": 1,
+  "required_gates": [
+    {
+      "requirement": "compact local gauge invariance",
+      "met": true,
+      "evidence": "Native Wilson cos(gP A) is periodic under 2pi/g link shifts, PB=0, and covariant charged scalar hopping"
+    },
+    {
+      "requirement": "full gauge+charged-matter quantum Hilbert dynamics",
+      "met": false,
+      "evidence": "One-plaquette truncated electric rotor block only; scalar field/metric momenta remain classical"
+    },
+    {
+      "requirement": "4D chiral anomaly-free SM from W33",
+      "met": false,
+      "evidence": "Native incidence block index=-80 from orbital imbalance; no Weyl spinors or lattice overlap regulator"
+    },
+    {
+      "requirement": "interacting Lorentz-invariant continuum",
+      "met": false,
+      "evidence": "Formal smooth flux suppresses a^4 Wilson quartic and TOE55 free a\u00b2 dispersion, no actual coupled scaling limit"
+    },
+    {
+      "requirement": "Einstein gravity two spin2 polarizations",
+      "met": false,
+      "evidence": "Candidate link-scaling constraints do NOT Poisson commute with native Hamiltonian even on U1 Gauss surface"
+    },
+    {
+      "requirement": "first-principles coupling and scale prediction",
+      "met": false,
+      "evidence": "Vacuum free photon Hessian is exactly independent of g; beta and at least 6 additional bare parameters unspecified"
+    }
+  ],
+  "important_scope": "Front1 compact repairs prior TOE55 classical magnetic term; Front2 finite rotor+chirality diagnostic; Front3 native candidate gravity bracket failure; Front4 formal nonlinear Wilson continuum error; Front5 explicit parameter identifiability and common-action evidence ledger. No physical TOE or renormalized SI observable claimed.",
+  "prior_work": "TOE38 native chain; TOE40 classical Maxwell; TOE51 weighted dynamics; TOE54 fixed Bloch lattice no exact Lorentz; TOE55 charged scalar local U1. New TOE56 correction respects full compact-link periodicity."
+}

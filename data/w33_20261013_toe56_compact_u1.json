@@ -1,0 +1,41 @@
+{
+  "status": "PASS_TOE56_COMPACT_U1_NATIVE_COHOMOLOGY",
+  "native_W33_dimensions": {
+    "sites": 80,
+    "edges": 160,
+    "plaquettes": 1385,
+    "rank_gradient": 79,
+    "rank_plaquette": 78,
+    "first_cohomology": 3
+  },
+  "native_complex_exact_PB_max": 0,
+  "compact_link_2pi_shift": {
+    "shift_link": 0,
+    "quadratic_before": 331.9490568007863,
+    "quadratic_after": 8257.44985270166,
+    "compact_before": 324.8811939821647,
+    "compact_after": 324.8811939821647,
+    "quadratic_breaking": 7925.500795900874,
+    "compact_absolute_difference": 0.0
+  },
+  "harmonic_quadratic_recovery_relative_errors": [
+    0.00021592706107760116,
+    5.3987517484314755e-05,
+    1.3497238931781996e-05
+  ],
+  "native_local_gauge": {
+    "plaquette_energy_difference": 5.684341886080802e-14,
+    "charged_matter_hopping_difference": 0.0,
+    "large_link_shift_hopping_difference": 0.0
+  },
+  "first_cohomology": {
+    "dim": 3,
+    "P_H_residual": 1.1386706753094177e-14,
+    "Bt_H_residual": 3.516606792247223e-14,
+    "compact_magnetic_harmonic_shift_residual": 5.684341886080802e-14,
+    "charged_hopping_harmonic_shift_difference": 0.03167475939017095
+  },
+  "theorem": "Compact link U_e=exp(i g A_e) requires invariance A_e->A_e+2pi n_e/g. The TOE55 quadratic plaquette energy 1/2||P A||\u00b2 violates this, despite local vertex-gauge invariance. Wilson plaquette sum(1-cos(g P A))/g\u00b2 repairs all independent large link-angle shifts because native P has integer entries, and tends to the TOE55 magnetic term quadratically for small angles. At zero Bloch twist the native chain complex has b1=160-rank(P)-rank(B)=3.",
+  "limits": "This is a classical fixed finite compact U1 Hamiltonian improvement, not quantized lattice gauge theory, charge prediction, chiral SM, nonabelian forces, RG, or emergent gravity. Matter response to harmonic holonomies is an Aharonov-Bohm-like finite-model phenomenon.",
+  "prior_art": "Kogut Susskind PRD11 395 (1975) standard compact lattice gauge Hamiltonian; the native W33 exact three harmonic cohomology dimension was already known from TOE38."
+}

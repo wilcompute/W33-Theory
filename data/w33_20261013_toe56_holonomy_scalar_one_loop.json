@@ -1,0 +1,303 @@
+{
+  "status": "PASS_TOE56_BOSONIC_ONE_LOOP_HOLONOMY_NO_SPONTANEOUS_CP",
+  "native_graph": {
+    "vertices": 80,
+    "oriented_edges": 160,
+    "regular_degree": 4,
+    "harmonic_U1_flat_connections": 3
+  },
+  "scalar_parameters": {
+    "g": 0.43,
+    "kappa": 0.7,
+    "positive_mass_squared": 0.8
+  },
+  "one_loop_free_energy": "F_B(A)=log det[m\u00b2 I+\u03ba D_A\u2020 D_A], with oriented D_A e=(z_b-exp(i g A_e)z_a). This is a one complex Gaussian bosonic scalar determinant, NOT the full gauge+fermion effective action.",
+  "exact_global_theorem": "For 4-regular graph, K(A)=(m\u00b2+4\u03ba)I\u2212\u03ba T(A). With positive m\u00b2, \u03ba, the absolutely convergent -log series and closed-walk phase bound Tr T(A)^n<=Tr T(0)^n imply F_B(A)>=F_B(0) for EVERY compact link connection A. Every closed walk contributes cos(phase)<=1; no boson-only Gaussian holonomy can lower the free energy below trivial holonomy.",
+  "convergence_ratio_upper_bound": 0.7777777777777778,
+  "zero_holonomy_free_energy": 95.37116409867465,
+  "sampled_holonomy_cases": [
+    {
+      "t": [
+        0.8,
+        0,
+        0
+      ],
+      "free_energy_minus_zero": 0.00016230579402076728
+    },
+    {
+      "t": [
+        0,
+        0.8,
+        0
+      ],
+      "free_energy_minus_zero": 0.00016256520662238927
+    },
+    {
+      "t": [
+        0,
+        0,
+        0.8
+      ],
+      "free_energy_minus_zero": 0.0001622266059229105
+    },
+    {
+      "t": [
+        0.7,
+        -0.6,
+        0.4
+      ],
+      "free_energy_minus_zero": 0.00025233025134241416
+    },
+    {
+      "t": [
+        -1.515007236001317,
+        -0.08015780268905025,
+        -0.5374065525328123
+      ],
+      "free_energy_minus_zero": 0.000634815934006383
+    },
+    {
+      "t": [
+        0.5413921422476949,
+        0.6620520201517994,
+        -0.08694603262630392
+      ],
+      "free_energy_minus_zero": 0.00018529271378042722
+    },
+    {
+      "t": [
+        -0.9545887776751866,
+        -0.8291343322161446,
+        0.22027160681705318
+      ],
+      "free_energy_minus_zero": 0.000401022109727478
+    },
+    {
+      "t": [
+        -1.4370184756477915,
+        -0.4975014658864834,
+        -0.25013789303289585
+      ],
+      "free_energy_minus_zero": 0.0005803507125534679
+    },
+    {
+      "t": [
+        0.8335746946640926,
+        -0.5558835801377416,
+        -1.6000687663618014
+      ],
+      "free_energy_minus_zero": 0.0008369429105101744
+    },
+    {
+      "t": [
+        0.22259352782524325,
+        -0.010907628254606188,
+        1.8714506623325897
+      ],
+      "free_energy_minus_zero": 0.0008574692524376815
+    },
+    {
+      "t": [
+        1.459433948851501,
+        -0.9078682605758897,
+        -0.15846936092007374
+      ],
+      "free_energy_minus_zero": 0.0007310310955261912
+    },
+    {
+      "t": [
+        1.338677029867225,
+        -0.771270359958979,
+        -0.2645276562471492
+      ],
+      "free_energy_minus_zero": 0.0006073250522717899
+    },
+    {
+      "t": [
+        -0.48455047359971604,
+        -0.07438862748832177,
+        0.5657558227516298
+      ],
+      "free_energy_minus_zero": 0.00014210042446904936
+    },
+    {
+      "t": [
+        0.9335253458710283,
+        0.3019924699527379,
+        -0.027663503052327267
+      ],
+      "free_energy_minus_zero": 0.00024143646680840902
+    },
+    {
+      "t": [
+        0.24158033924453182,
+        0.10521518246291714,
+        -0.04603577326439049
+      ],
+      "free_energy_minus_zero": 1.8282218704257502e-05
+    },
+    {
+      "t": [
+        0.3487234344738549,
+        -1.4069085705018514,
+        -0.8740519609803366
+      ],
+      "free_energy_minus_zero": 0.0006812502996780267
+    },
+    {
+      "t": [
+        -0.3788346081689977,
+        0.3697392859653119,
+        0.6156914169764043
+      ],
+      "free_energy_minus_zero": 0.0001656438237631619
+    },
+    {
+      "t": [
+        0.11934622379023543,
+        0.1733972621750666,
+        -0.9147701976380757
+      ],
+      "free_energy_minus_zero": 0.00022295828870255718
+    },
+    {
+      "t": [
+        -1.524380415799527,
+        -0.4381695307286353,
+        1.348276612366545
+      ],
+      "free_energy_minus_zero": 0.0010211702721250049
+    },
+    {
+      "t": [
+        -0.5454189011802744,
+        0.43651672656584706,
+        0.11456693360388939
+      ],
+      "free_energy_minus_zero": 0.00012727029029235837
+    },
+    {
+      "t": [
+        -0.32171770877098077,
+        0.28669606249799334,
+        0.17006572150940313
+      ],
+      "free_energy_minus_zero": 5.469560029780496e-05
+    },
+    {
+      "t": [
+        0.16000642292879463,
+        0.2151109232113403,
+        1.5669584699459445
+      ],
+      "free_energy_minus_zero": 0.0006203695391775454
+    },
+    {
+      "t": [
+        -3.1231072550647805,
+        -0.9960721363220508,
+        -0.947214667663814
+      ],
+      "free_energy_minus_zero": 0.0024305011657332898
+    },
+    {
+      "t": [
+        -0.8083072944019327,
+        -1.1465075658241402,
+        0.21452978837765496
+      ],
+      "free_energy_minus_zero": 0.0004880989856559381
+    },
+    {
+      "t": [
+        0.43715142746145536,
+        1.6057607630828479,
+        -0.4122839849922558
+      ],
+      "free_energy_minus_zero": 0.0007154097495600809
+    },
+    {
+      "t": [
+        0.02663856562503783,
+        0.333389117541138,
+        -0.37186385032205094
+      ],
+      "free_energy_minus_zero": 6.377562095849498e-05
+    },
+    {
+      "t": [
+        0.3468390418347464,
+        0.6725804627305456,
+        -0.6608236086142154
+      ],
+      "free_energy_minus_zero": 0.0002537637347330701
+    },
+    {
+      "t": [
+        0.13277048507483183,
+        0.3544588285089778,
+        -0.2698860829545848
+      ],
+      "free_energy_minus_zero": 5.5107997809500375e-05
+    },
+    {
+      "t": [
+        1.4018022891830872,
+        -0.5927288158926954,
+        -0.7648867369706
+      ],
+      "free_energy_minus_zero": 0.0007057193393933403
+    },
+    {
+      "t": [
+        -0.012842031003468502,
+        0.3156241316572863,
+        -0.17883042200204208
+      ],
+      "free_energy_minus_zero": 3.3665737205978985e-05
+    },
+    {
+      "t": [
+        1.1824523605953157,
+        -0.5387524451869276,
+        -1.095788937256134
+      ],
+      "free_energy_minus_zero": 0.0006936681240858888
+    },
+    {
+      "t": [
+        1.6429009839231263,
+        0.006280275106672788,
+        0.02746940619217483
+      ],
+      "free_energy_minus_zero": 0.0006642322461090089
+    }
+  ],
+  "minimum_sampled_energy_difference": 1.8282218704257502e-05,
+  "maximum_CP_reversal_deviation": 0.0,
+  "local_harmonic_Hessian": [
+    [
+      0.0005118201885226073,
+      -1.3300254724729004e-07,
+      -4.4561135028844646e-08
+    ],
+    [
+      -1.3300254724729004e-07,
+      0.0005118490422420211,
+      -8.284391444451305e-08
+    ],
+    [
+      -4.4561135028844646e-08,
+      -8.284391444451305e-08,
+      0.0005118114510575349
+    ]
+  ],
+  "local_harmonic_Hessian_eigenvalues": [
+    0.0005116510215661242,
+    0.0005118537796272697,
+    0.0005119758806287698
+  ],
+  "gauge_transform_logdet_residual": 0.0,
+  "negative_conclusion": "A single positive-mass minimally coupled Gaussian complex scalar on the exact W33 4-regular 80-site cover CANNOT spontaneously prefer a nontrivial H1 holonomy over A=0, even though three harmonic U1 modes exist. This rules out a proposed simple boson-only quantum vacuum-selection mechanism; chiral fermions, competing interactions or other dynamical sectors would be needed. Does NOT exclude CP breaking in realistic models.",
+  "prior_art": "Discrete diamagnetic inequality and closed-walk log-determinant expansion are standard spectral-graph/magnetic Schr\u00f6dinger results; applying them to this W33 cover is a model-specific negative control."
+}

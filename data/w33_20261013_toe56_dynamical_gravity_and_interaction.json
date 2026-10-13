@@ -1,0 +1,62 @@
+{
+  "status": "PASS_TOE56_NATIVE_SCALING_CONSTRAINT_FAILURE_AND_COMPACT_INTERACTION",
+  "native_site_incidence_shape": [
+    160,
+    80
+  ],
+  "native_plaq_rows": 1385,
+  "candidate_diffeo_generator": "D_chi=sum_e (B chi)_e w_e p_we, a canonical local multiplicative link-weight scaling.",
+  "candidate_diffeo_poisson": {
+    "D_v_D_u": "0 exactly for all v,u, since D_v linear sums of commuting link densities w_e p_e",
+    "analytic_H_vs_D": -0.10587666096647608,
+    "finite_difference_H_vs_D": -0.10587666130490446,
+    "H_vs_D_on_U1_Gauss_surface": 0.05784991580675347,
+    "verdict": "NOT_FIRST_CLASS_WITH_H; candidate is NOT a constraint symmetry, its bracket with H does not vanish even on the physical U1 Gauss surface, and D has no H_gravity partner."
+  },
+  "compact_B_interaction": {
+    "g": 0.43,
+    "small_amplitude_quadratic_coefficient": 56.258502503298956,
+    "exact_quartic_coefficient": -0.202152320716106,
+    "quartic_finite_difference": [
+      {
+        "A_amplitude": 0.5,
+        "effective_quartic_coefficient": -0.2020404898148911,
+        "relative_error_vs_exact_taylor": 0.0005532011743360887
+      },
+      {
+        "A_amplitude": 0.25,
+        "effective_quartic_coefficient": -0.2021243550403824,
+        "relative_error_vs_exact_taylor": 0.0001383396224418351
+      },
+      {
+        "A_amplitude": 0.125,
+        "effective_quartic_coefficient": -0.2021453287957229,
+        "relative_error_vs_exact_taylor": 3.458738617665416e-05
+      }
+    ],
+    "min_background_cos": 0.9226701956828944,
+    "max_background_hessian_multiplier_shift": 0.07732980431710557,
+    "max_background_hessian_times_gradient_residual": 2.842170943040401e-14
+  },
+  "conditional_a2_flux_scaling": {
+    "hypothesis": "smooth physical field plaquette integral theta=g a\u00b2 F; this is ASSUMED, not derived from W33 cover",
+    "a_values": [
+      1.0,
+      0.5,
+      0.25
+    ],
+    "relative_magnetic_energy_deviation": [
+      0.00752731868286749,
+      0.00047179114896844787,
+      2.949216530878651e-05
+    ],
+    "error_halving_ratios": [
+      0.06267718544217682,
+      0.0625110610346759
+    ],
+    "expected_leading_ratio": 0.0625,
+    "continuum_caveat": "Fixed local finite W33 plaquette action has no growing W33 cell sequence, no renormalized g(a), no interacting quantum Ward identities or actual scattering amplitude."
+  },
+  "gravity_no_go_scope": "Only the natural tested canonical link-rescaling candidate fails. This does not exclude all W33 microscopic geometric constraints or emergent gravity.",
+  "physics_limits": "The Wilson quartic term is a finite-lattice nonlinear interaction and not observed light-by-light scattering; perturbative continuum suppression is conditional on an undemonstrated physical spacing and smooth flux scaling."
+}
