@@ -1,0 +1,28 @@
+{
+  "pass_id": 11946,
+  "data": {
+    "Ue3": 0.148,
+    "theta13_deg": 8.6,
+    "dm_ratio": 0.029561752988047807,
+    "Vcd": 0.221
+  },
+  "e_even_class_theta13_max_deg": 0.5417962464428527,
+  "odd_nu2_branch_chi2": {
+    "A": 86.83919533498326,
+    "B": 45.4755927032351
+  },
+  "direct_scan": {
+    "valid": 7907,
+    "odd_heaviest": 23,
+    "fraction": 0.0029088149740736056,
+    "dm_ratio_min": 0.31242268404898166
+  },
+  "checks": {
+    "branch_b_theta13_bounded_below_one_degree": true,
+    "branch_a_impossible_per_11945": true,
+    "odd_heaviest_is_rare": true,
+    "odd_heaviest_is_quasi_degenerate": true,
+    "needed_breaking_comparable_to_quarks": true
+  },
+  "all_checks_pass": true
+}
