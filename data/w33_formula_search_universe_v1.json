@@ -460293,6 +460293,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0f3c4fa25834518465181172c372e007b117a2df962c4a082e2a1833804e9374",
+      "normalized_formula": "75(1-cosdelta0)+69(1-cosdelta1)+69(1-cosdelta2)>=0",
+      "numeric_literals": [
+        "+69",
+        "0",
+        "1",
+        "75"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "75(1-cos delta0) + 69(1-cos delta1) + 69(1-cos delta2) >= 0,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "18a63155ac086421e1a0385079efe8d241bc8a4dab079d27641ae40a99fd10fe",
+      "structural_formula": "#(#-cosdelta0)#(#-cosdelta1)#(#-cosdelta2)>=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9e0e5690707acc46df04690865fd3ed80a8cf999efc1856774f220a2b3ad1011",
       "normalized_formula": "75=3\\cdot25",
       "numeric_literals": [
@@ -548648,6 +548678,36 @@
       },
       "structural_family_id": "8549f0ac171e23d2fb0f5e76f0bf98089138244090300313473012f024644e21",
       "structural_formula": "Atfixedphasesmu_p/|mu_p|,thisgivesasmoothlocalmappingfromallstrictlypositiveqtoHermitiantrace-onerho,andsincerhoisfullrank,sufficientlysmallqshiftspreservepositivity.ByW3#spectralalgebra,kerN=imageP_{#}is1#-dimensionalandorthogonaltotheall-onesvector.Thusq+epsilonhforanysufficientlysmallhinkerNpreserves^all4#cuspcollisions^(Nh=#)and^globalpurity^(sumh=#)whilevaryingtheunderlyingphysicalrho.Notmerelyakernelinanunconstrainedvectorspace:thelocalphysicalfiberofqhasdimension^#^aroundeverysuchgenericstate"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b680cfd1a9e419626d93af64067296c5119da51148eac9119083fd981fd45701",
+      "normalized_formula": "Atg=.8,magneticbeta=.4,fermionhopping=.7,staggeredmass=.3andexplicitFock-hop-depth/flux-coordinateGalerkincutoffs",
+      "numeric_literals": [
+        ".3",
+        ".4",
+        ".7",
+        ".8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 60,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "At g=.8, magnetic beta=.4, fermion hopping=.7, staggered mass=.3 and explicit Fock-hop-depth/flux-coordinate Galerkin cutoffs:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "693a94698d416cf027649a4b8de61a3ae11c3367535ef6aa3235c48cea8b7897",
+      "structural_formula": "Atg=#,magneticbeta=#,fermionhopping=#,staggeredmass=#andexplicitFock-hop-depth/flux-coordinateGalerkincutoffs"
     },
     {
       "file_count": 1,
@@ -666092,6 +666152,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3e62833401fba47665eb2da83a1a391a46083a8b314309612a36b34136a41884",
+      "normalized_formula": "Letdelta_i=phi_i-pi.Using1-cos(x\u00b1y)<=2[(1-cosx)+(1-cosy)]provesonthe^ENTIREcontinuousflatU1^3torus^",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "Let delta_i=phi_i-pi. Using 1-cos(x\u00b1y) <= 2[(1-cos x)+(1-cos y)] proves on the **ENTIRE continuous flat U1^3 torus**",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3ca23b49559aca348dea50ea547b3235a2ddd3c38fa3750d85f2eaf9f8138737",
+      "structural_formula": "Letdelta_i=phi_i-pi.Using1-cos(x\u00b1y)<=#[(#-cosx)+(#-cosy)]provesonthe^ENTIREcontinuousflatU1^#torus^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c93961bfc9e449f5d06d205ad528676c689f2579348facb025cb282399179fb4",
       "normalized_formula": "Letmeverify:3*246.21965/782=738.66/782=0.9445GeV=944.5MeV.\u2713",
       "numeric_literals": [
@@ -698371,6 +698460,34 @@
       },
       "structural_family_id": "c64192c7e0dd32ceb7b68de47b4ae307a8f620d694d3da11cd792f187dac0cbe",
       "structural_formula": "Namedticks:thefixedperfectgatepofPass1#hasA=#(perfectinthestandardsplit,aproductinanother)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fa3347763544bf99436219d24d14cc79f4c26e3fe03cf4cc58077d986f790c68",
+      "normalized_formula": "Nativethree-componentskewcurrentderivativesobeyexactnonzeroLeibnizdefectoneveryvertexindicatore_v,sincee_v^2=e_vanddiagonalD_vv=0",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 73,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "Native three-component skew current derivatives obey exact nonzero Leibniz defect on every vertex indicator e_v, since e_v^2=e_v and diagonal D_vv=0:",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "05743fa8a4ef1639eef4807ce1cda5767137e7fba65aad792f81f18df6d22ed9",
+      "structural_formula": "Nativethree-componentskewcurrentderivativesobeyexactnonzeroLeibnizdefectoneveryvertexindicatore_v,sincee_v^#=e_vanddiagonalD_vv=#"
     },
     {
       "file_count": 1,
@@ -754852,6 +754969,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5b7c26db03543bf4598b97f3925a975bf29e83f706f4fc73aab4b4b9da3bb8eb",
+      "normalized_formula": "S(phi)=79cos(phi0)+77cos(phi1)+77cos(phi2)",
+      "numeric_literals": [
+        "+77",
+        "79"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "S(phi) = 79 cos(phi0) + 77 cos(phi1) + 77 cos(phi2)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ed307eba5c87908e053ee69307796b593b632a7824fbfc32626868b3e2f44475",
+      "structural_formula": "S(phi)=#cos(phi0)#cos(phi1)#cos(phi2)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "aee221d24cafff3d76d1b9f5de33224413cee1f674399dba8bed9e7b919859ba",
       "normalized_formula": "S(t,K,n)=S(\\mu+1,\\lambda^q,f)=S(5,8,24)",
       "numeric_literals": [
@@ -804862,6 +805007,44 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f71553447abe327fb473f5ca60056a8db023559b659ff0ec5568b30e54d1154f",
+      "normalized_formula": "ThenativeW33LevigraphhasV=80,E=160anddegree4ateachvertex,with1382embeddeddistinctlength8octagonalfaces(threeotherformalcommutatorrowshavezerostaticsignedboundary).Ifeachvertexlinkofaproposedclosedregular3Dcellulationisa^simplegraph^,avertexsupportsatmostC(4,2)=6distinctunorderededge-paircorners,atmost480acrossallvertices.Eachnativeoctagonconsumeseightcorners,soanyselectedregularfacesubsethas^F<=60^.Aclosed3-manifoldretainingV,Ewithatleastone3-cellhasEuler0andC3=F-80>=1,so^F>=81^.Contradictionunderthesimple-vertex-linkhypothesis.AnexplicitGF2-rank78independentnativeoctagonbasisandone81-facesubsetwereconstructed;thatsubsetnecessarilyhasrepeatedlocaledge-paircorners(402repetitionsintheparticularchoice)",
+      "numeric_literals": [
+        "1",
+        "160",
+        "2",
+        "3",
+        "382",
+        "4",
+        "402",
+        "6",
+        "60",
+        "8",
+        "80",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "The native W33 Levi graph has V=80,E=160 and degree4 at each vertex, with 1382 embedded distinct length8 octagonal faces (three other formal commutator rows have zero static signed boundary). If each vertex link of a proposed closed regular 3D cellulation is a **simple graph**, a vertex supports at most C(4,2)=6 distinct unordered edge-pair corners, at most 480 across all vertices. Each native octagon consumes eight corners, so any selected regular face subset has **F<=60**. A closed 3-manifold retaining V,E with at least one 3-cell has Euler 0 and C3=F-80>=1, so **F>=81**. Contradiction under the simple-vertex-link hypothesis. An explicit GF2-rank78 independent native octagon basis and one 81-face subset were constructed; that subset necessarily has repeated local edge-pair corners (402 repetitions in the particular choice).",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "1715deb3a9f4ccbac569395a3a296f7bc7c69371c066af4367afdded13ca6353",
+      "structural_formula": "ThenativeW3#LevigraphhasV=#,E=#anddegree4ateachvertex,with1#embeddeddistinctlength8octagonalfaces(threeotherformalcommutatorrowshavezerostaticsignedboundary).Ifeachvertexlinkofaproposedclosedregular3Dcellulationisa^simplegraph^,avertexsupportsatmostC(#,#)=#distinctunorderededge-paircorners,atmost4#acrossallvertices.Eachnativeoctagonconsumeseightcorners,soanyselectedregularfacesubsethas^F<=#^.Aclosed3-manifoldretainingV,Ewithatleastone3-cellhasEuler0andC3=F-#>=#,so^F>=#^.Contradictionunderthesimple-vertex-linkhypothesis.AnexplicitGF2-rank7#independentnativeoctagonbasisandone8#-facesubsetwereconstructed;thatsubsetnecessarilyhasrepeatedlocaledge-paircorners(#repetitionsintheparticularchoice)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "27ce2c95983a241ce045eb2076925513e7d80edd0be6a08c3c2aa4cce60d8e61",
       "normalized_formula": "ThenaturalHammingrefinements`q=wt/2mod2`descendonboth10-spacesandarebothplustype`O+(10,2)`with528singularclassesincludingzero.Therawincidencemapissymplecticbutnotquadratic.Itsdefectisonelinearfunctionalrepresentedbythepre-existingPass-187fixedclass`im(A_pointmod2)/C`.Onetransvectionalongthatfixedisotropicclassrepairsthequadraticonall1,024classes",
       "numeric_literals": [
@@ -825216,6 +825399,40 @@
       },
       "structural_family_id": "2e17c8df63193b0133aeadb2e3b27e93d23168e9f52b7ae5341f84665dd42930",
       "structural_formula": "UsingfrozenTOE5#N=#upperenergies,obtain"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2098abb5069335ac4da71fe73aff622a7652d98dc404bbfc9f712a5845caec14",
+      "normalized_formula": "UsingnativespatialW33links,12periodictimeslicesandvaryingvertexgaugefunctionstheta_v(t),oneMUSTincludetemporallinksexp(i[theta_v(t+1)-theta_v(t)])aswellasspatiallinksexp(i[V_e\u00b7(pi,pi,pi)+theta_b(t)-theta_a(t)]).Withtheselinksmixedandspatialplaquettesareexactlyflat(numericmax\u22485.34e-16).Omittingtemporallinksgivesanentirely*spurious*apparentelectricfieldofRMS\u22480.203065.FournativePass11977Hermitian320-bandoverlapkernelslicecomparisonsconfirmunitarygaugecovariance\u22641.5e-14",
+      "numeric_literals": [
+        "0.203065",
+        "1",
+        "1.5e-14",
+        "12",
+        "1977",
+        "20",
+        "3",
+        "5.34e-16"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "Using native spatial W33 links, 12 periodic time slices and varying vertex gauge functions theta_v(t), one MUST include temporal links exp(i[theta_v(t+1)-theta_v(t)]) as well as spatial links exp(i[V_e\u00b7(pi,pi,pi)+theta_b(t)-theta_a(t)]). With these links mixed and spatial plaquettes are exactly flat (numeric max \u22485.34e-16). Omitting temporal links gives an entirely *spurious* apparent electric field of RMS\u22480.203065. Four native Pass11977 Hermitian 320-band overlap kernel slice comparisons confirm unitary gauge covariance \u22641.5e-14.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "5f811b776ca3bac0c26e80924b8fb231d7bcc6db9d672d8d5d0733448c4bd8b7",
+      "structural_formula": "UsingnativespatialW3#links,#periodictimeslicesandvaryingvertexgaugefunctionstheta_v(t),oneMUSTincludetemporallinksexp(i[theta_v(t+#)-theta_v(t)])aswellasspatiallinksexp(i[V_e\u00b7(pi,pi,pi)+theta_b(t)-theta_a(t)]).Withtheselinksmixedandspatialplaquettesareexactlyflat(numericmax\u2248#).Omittingtemporallinksgivesanentirely*spurious*apparentelectricfieldofRMS\u2248#.FournativePass1#Hermitian3#-bandoverlapkernelslicecomparisonsconfirmunitarygaugecovariance\u2264#"
     },
     {
       "file_count": 1,
@@ -1744519,6 +1744736,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4c1f8bb792fd524027c2381c6b9a04fac97e7161ef2a4775c48f3fad1dcd3284",
+      "normalized_formula": "withequalityonlyatthree-pimodulo2pi.This^uniquelygloballyminimizestheLEADINGhigh-temperaturebeta7term^.Compactanalytic/C2small-betaperturbationandthree-pistationarysymmetryalsoimplythereexistsan^unspecifiedsufficientlysmallbeta0>0^forwhichpi/pi/piistheuniqueglobalminimizeroftheactualfree-fermionfreeenergyfor0<beta<beta0.Thisis^NOT^anall-betacontinuousU1theorem;TOE61provedall-betaONLYovereightdiscreterealZ2corners.Exactpi-versus-zerobeta7coefficient:^-0.1964781746031746^",
+      "numeric_literals": [
+        "-0.1964781746031746",
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe62_connected_research_recovery_record.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 27,
+          "path": "analysis/2026-10-13_toe62_connected_research_recovery_record.md",
+          "raw": "with equality only at three-pi modulo2pi. This **uniquely globally minimizes the LEADING high-temperature beta7 term**. Compact analytic/C2 small-beta perturbation and three-pi stationary symmetry also imply there exists an **unspecified sufficiently small beta0>0** for which pi/pi/pi is the unique global minimizer of the actual free-fermion free energy for 0<beta<beta0. This is **NOT** an all-beta continuous U1 theorem; TOE61 proved all-beta ONLY over eight discrete real Z2 corners. Exact pi-versus-zero beta7 coefficient: **-0.1964781746031746**.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "bbe2bb2e892535b352ac2b76bd7434090e6c2df857935796fc83b0a16c73a870",
+      "structural_formula": "withequalityonlyatthree-pimodulo2pi.This^uniquelygloballyminimizestheLEADINGhigh-temperaturebeta7term^.Compactanalytic/C2small-betaperturbationandthree-pistationarysymmetryalsoimplythereexistsan^unspecifiedsufficientlysmallbeta0>#^forwhichpi/pi/piistheuniqueglobalminimizeroftheactualfree-fermionfreeenergyfor0<beta<beta0.Thisis^NOT^anall-betacontinuousU1theorem;TOE6#provedall-betaONLYovereightdiscreterealZ2corners.Exactpi-versus-zerobeta7coefficient:^#^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "83c1104732352a4e878950e1f5675b354241d23b1eba315c71b44a1cd41c79ff",
       "normalized_formula": "witheveryconstantapolynomialinq=3alone(27checks,133tests)",
       "numeric_literals": [
@@ -1798637,9 +1798883,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T14:05:24-04:00",
+  "frozen_at": "2026-10-13T14:28:45-04:00",
   "pass": 398,
-  "repository_head": "0b5a634f77048ef7a5a75c7c3d83501dc40e3e17",
+  "repository_head": "467282b91a9f9eb2c3fc205775bdeaa277216749",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1855597,6 +1855843,14 @@
       "exact_member_count": 1,
       "structural_family_id": "bcbc8a9b3f9eda3b6fa2f8cd2cd03e55e20335bcb6f0cb2e25480e3486deeb2c",
       "structural_formula": "#(#-\\sqrt6)>#"
+    },
+    {
+      "exact_formula_ids": [
+        "0f3c4fa25834518465181172c372e007b117a2df962c4a082e2a1833804e9374"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "18a63155ac086421e1a0385079efe8d241bc8a4dab079d27641ae40a99fd10fe",
+      "structural_formula": "#(#-cosdelta0)#(#-cosdelta1)#(#-cosdelta2)>=#"
     },
     {
       "exact_formula_ids": [
@@ -1946249,6 +1946503,14 @@
     },
     {
       "exact_formula_ids": [
+        "b680cfd1a9e419626d93af64067296c5119da51148eac9119083fd981fd45701"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "693a94698d416cf027649a4b8de61a3ae11c3367535ef6aa3235c48cea8b7897",
+      "structural_formula": "Atg=#,magneticbeta=#,fermionhopping=#,staggeredmass=#andexplicitFock-hop-depth/flux-coordinateGalerkincutoffs"
+    },
+    {
+      "exact_formula_ids": [
         "076422eb5c5ef0e299379ee351d8d291372293313b371b7653bd04a820d31670"
       ],
       "exact_member_count": 1,
@@ -1978212,6 +1978474,14 @@
     },
     {
       "exact_formula_ids": [
+        "3e62833401fba47665eb2da83a1a391a46083a8b314309612a36b34136a41884"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3ca23b49559aca348dea50ea547b3235a2ddd3c38fa3750d85f2eaf9f8138737",
+      "structural_formula": "Letdelta_i=phi_i-pi.Using1-cos(x\u00b1y)<=#[(#-cosx)+(#-cosy)]provesonthe^ENTIREcontinuousflatU1^#torus^"
+    },
+    {
+      "exact_formula_ids": [
         "c93961bfc9e449f5d06d205ad528676c689f2579348facb025cb282399179fb4"
       ],
       "exact_member_count": 1,
@@ -1986770,6 +1987040,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c64192c7e0dd32ceb7b68de47b4ae307a8f620d694d3da11cd792f187dac0cbe",
       "structural_formula": "Namedticks:thefixedperfectgatepofPass1#hasA=#(perfectinthestandardsplit,aproductinanother)"
+    },
+    {
+      "exact_formula_ids": [
+        "fa3347763544bf99436219d24d14cc79f4c26e3fe03cf4cc58077d986f790c68"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "05743fa8a4ef1639eef4807ce1cda5767137e7fba65aad792f81f18df6d22ed9",
+      "structural_formula": "Nativethree-componentskewcurrentderivativesobeyexactnonzeroLeibnizdefectoneveryvertexindicatore_v,sincee_v^#=e_vanddiagonalD_vv=#"
     },
     {
       "exact_formula_ids": [
@@ -2002067,6 +2002345,14 @@
     },
     {
       "exact_formula_ids": [
+        "5b7c26db03543bf4598b97f3925a975bf29e83f706f4fc73aab4b4b9da3bb8eb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ed307eba5c87908e053ee69307796b593b632a7824fbfc32626868b3e2f44475",
+      "structural_formula": "S(phi)=#cos(phi0)#cos(phi1)#cos(phi2)"
+    },
+    {
+      "exact_formula_ids": [
         "aee221d24cafff3d76d1b9f5de33224413cee1f674399dba8bed9e7b919859ba"
       ],
       "exact_member_count": 1,
@@ -2015778,6 +2016064,14 @@
     },
     {
       "exact_formula_ids": [
+        "f71553447abe327fb473f5ca60056a8db023559b659ff0ec5568b30e54d1154f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1715deb3a9f4ccbac569395a3a296f7bc7c69371c066af4367afdded13ca6353",
+      "structural_formula": "ThenativeW3#LevigraphhasV=#,E=#anddegree4ateachvertex,with1#embeddeddistinctlength8octagonalfaces(threeotherformalcommutatorrowshavezerostaticsignedboundary).Ifeachvertexlinkofaproposedclosedregular3Dcellulationisa^simplegraph^,avertexsupportsatmostC(#,#)=#distinctunorderededge-paircorners,atmost4#acrossallvertices.Eachnativeoctagonconsumeseightcorners,soanyselectedregularfacesubsethas^F<=#^.Aclosed3-manifoldretainingV,Ewithatleastone3-cellhasEuler0andC3=F-#>=#,so^F>=#^.Contradictionunderthesimple-vertex-linkhypothesis.AnexplicitGF2-rank7#independentnativeoctagonbasisandone8#-facesubsetwereconstructed;thatsubsetnecessarilyhasrepeatedlocaledge-paircorners(#repetitionsintheparticularchoice)"
+    },
+    {
+      "exact_formula_ids": [
         "27ce2c95983a241ce045eb2076925513e7d80edd0be6a08c3c2aa4cce60d8e61"
       ],
       "exact_member_count": 1,
@@ -2021307,6 +2021601,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2e17c8df63193b0133aeadb2e3b27e93d23168e9f52b7ae5341f84665dd42930",
       "structural_formula": "UsingfrozenTOE5#N=#upperenergies,obtain"
+    },
+    {
+      "exact_formula_ids": [
+        "2098abb5069335ac4da71fe73aff622a7652d98dc404bbfc9f712a5845caec14"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5f811b776ca3bac0c26e80924b8fb231d7bcc6db9d672d8d5d0733448c4bd8b7",
+      "structural_formula": "UsingnativespatialW3#links,#periodictimeslicesandvaryingvertexgaugefunctionstheta_v(t),oneMUSTincludetemporallinksexp(i[theta_v(t+#)-theta_v(t)])aswellasspatiallinksexp(i[V_e\u00b7(pi,pi,pi)+theta_b(t)-theta_a(t)]).Withtheselinksmixedandspatialplaquettesareexactlyflat(numericmax\u2248#).Omittingtemporallinksgivesanentirely*spurious*apparentelectricfieldofRMS\u2248#.FournativePass1#Hermitian3#-bandoverlapkernelslicecomparisonsconfirmunitarygaugecovariance\u2264#"
     },
     {
       "exact_formula_ids": [
@@ -2265841,6 +2266143,14 @@
     },
     {
       "exact_formula_ids": [
+        "4c1f8bb792fd524027c2381c6b9a04fac97e7161ef2a4775c48f3fad1dcd3284"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bbe2bb2e892535b352ac2b76bd7434090e6c2df857935796fc83b0a16c73a870",
+      "structural_formula": "withequalityonlyatthree-pimodulo2pi.This^uniquelygloballyminimizestheLEADINGhigh-temperaturebeta7term^.Compactanalytic/C2small-betaperturbationandthree-pistationarysymmetryalsoimplythereexistsan^unspecifiedsufficientlysmallbeta0>#^forwhichpi/pi/piistheuniqueglobalminimizeroftheactualfree-fermionfreeenergyfor0<beta<beta0.Thisis^NOT^anall-betacontinuousU1theorem;TOE6#provedall-betaONLYovereightdiscreterealZ2corners.Exactpi-versus-zerobeta7coefficient:^#^"
+    },
+    {
+      "exact_formula_ids": [
         "83c1104732352a4e878950e1f5675b354241d23b1eba315c71b44a1cd41c79ff"
       ],
       "exact_member_count": 1,
@@ -2279475,20 +2279785,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87723770,
-    "exact_formula_families": 61518,
-    "files_scanned": 12033,
-    "formula_occurrences": 67493,
+    "bytes_scanned": 87733151,
+    "exact_formula_families": 61526,
+    "files_scanned": 12034,
+    "formula_occurrences": 67501,
     "status_occurrences": {
-      "certified_or_theorem": 4927,
+      "certified_or_theorem": 4928,
       "killed_or_retracted": 1645,
-      "open_or_conditional": 2245,
+      "open_or_conditional": 2246,
       "preregistered": 33,
-      "retrospective_fit": 5226,
-      "unclassified": 53417
+      "retrospective_fit": 5228,
+      "unclassified": 53421
     },
-    "structural_families": 59896
+    "structural_families": 59904
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "5bcb4f340fba217dba6b80fbe110111d31ac4dad2e45bc32bb08c0d47dd142c5"
+  "universe_sha256": "9741bf573147bff060096b89b968f1c2140dd7a596b650317f68f9eab34af41c"
 }
