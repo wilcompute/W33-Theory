@@ -1,5 +1,9 @@
 # Pass 11940: the Weber invariant is seesaw-invariant
 
+> **Status after Pass 11945.** With μ–τ-clean neutrinos the odd neutrino must be ν₃ to fit PMNS (charged leptons always
+> have one nearly even state). The near-product, Wilson-free neutrino texture puts the odd state at ν₂, so this
+> relation is **disfavoured within the framework** unless the neutrino sector is itself μ–τ-broken.
+
 Producer: `analysis/w33_pass11940_seesaw_preserves_weber.py`
 Certificate: `data/w33_pass11940_seesaw_preserves_weber.json`
 Regression: `tests/test_w33_pass11940.py`

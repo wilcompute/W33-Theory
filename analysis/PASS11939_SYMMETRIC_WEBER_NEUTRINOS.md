@@ -1,5 +1,9 @@
 # Pass 11939: the symmetric-channel Weber law — normal ordering and m₁m₃/m₂² = m_u m_t/m_c²
 
+> **Status after Pass 11945.** With μ–τ-clean neutrinos the odd neutrino must be ν₃ to fit PMNS (charged leptons always
+> have one nearly even state). The near-product, Wilson-free neutrino texture puts the odd state at ν₂, so this
+> relation is **disfavoured within the framework** unless the neutrino sector is itself μ–τ-broken.
+
 > **Corrected by Pass 11940.** "One home" must mean a shared τ, not a shared Ω: a shared Ω would make all neutrino
 > ratios equal the up ratios, which is excluded. The type-I seesaw with Dirac and Majorana theta nulls at the same τ
 > supplies the needed channel-specific Ω₁₂ and preserves the invariant.
