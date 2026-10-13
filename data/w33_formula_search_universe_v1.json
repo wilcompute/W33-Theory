@@ -17868,6 +17868,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c07189605d8c0daccf48be74abcd3df5e58ad663a5b56eeb8f5477a232cb2dd8",
+      "normalized_formula": "\"116_classes_115_have_nonzero_hom\":num(\"N_CLASSES\")=116andnum(\"N_HOM_NONZERO\")=115",
+      "numeric_literals": [
+        "115",
+        "116",
+        "15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 95,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.py",
+          "raw": "\"116_classes_115_have_nonzero_hom\": num(\"N_CLASSES\") == 116 and num(\"N_HOM_NONZERO\") == 115,",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "59c831d4ceb349accb56bf354bfc6c5d1cbbe9356f4701eb8300af0e562ee168",
+      "structural_formula": "\"#_classes_1#_have_nonzero_hom\":num(\"N_CLASSES\")=#andnum(\"N_HOM_NONZERO\")=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e2b30618cb199502d47465111667f3ebc5f0fcf9b777c71798e3ac10b691e0ca",
       "normalized_formula": "\"12\":\"k=directpast-futuretransport(gaugecodec)\"",
       "numeric_literals": [
@@ -109886,6 +109915,61 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ee63641d2826f69675f271b667e3e14cd17e4d2d01806627326afbaeb6a4bd46",
+      "normalized_formula": "\"hom_full_group_is_zero\":num(\"HOM_FULL\")=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 90,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.py",
+          "raw": "\"hom_full_group_is_zero\": num(\"HOM_FULL\") == 0,",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "8f190a1c7f14551b1226a00e99687d5146989ec309ca3d1daf9589affa8665b6",
+      "structural_formula": "\"hom_full_group_is_zero\":num(\"HOM_FULL\")=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "34450978f6e878e61b449f899128ffe03faacbe80e8af003541d2d1dd5b017f2",
+      "normalized_formula": "\"hom_sylow3_is_40\":num(\"HOM_SYLOW3\")=40",
+      "numeric_literals": [
+        "0",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 93,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.py",
+          "raw": "\"hom_sylow3_is_40\": num(\"HOM_SYLOW3\") == 40,",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "a1a0684dfbcfa7c14bb679bb45ccb8ec4b48b8049885d222bc7f7730218687f7",
+      "structural_formula": "\"hom_sylow3_is_4#\":num(\"HOM_SYLOW3\")=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "049db865a8a1cc71ef6d46e3ac21f7176a768a69ab3f731685dd56a016d0980e",
       "normalized_formula": "\"homopolymer-freeDNAdensitylog2(3)=1.585bit/nt(standardDNA-storagecoding;SNIADNA\"",
       "numeric_literals": [
@@ -140843,6 +140927,37 @@
       },
       "structural_family_id": "216c506f3ff6cd7c32b5afba61ed45f6ad528badf6d7f232cd123187d9cd4155",
       "structural_formula": "\"perfect_matchings_3\":pm_k4=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6426c65d436af10b103674b04fe753f4ad1ca4d6c25f7d728b050d8c665e9235",
+      "normalized_formula": "\"perm_is_1_plus_15_plus_24\":r[\"PERM_DECOMP\"]=\"1+15+24\"andspec[\"matches_1_24_15\"]",
+      "numeric_literals": [
+        "+15",
+        "+24",
+        "1",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 88,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.py",
+          "raw": "\"perm_is_1_plus_15_plus_24\": r[\"PERM_DECOMP\"] == \"1+15+24\" and spec[\"matches_1_24_15\"],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7de52d7c2ac8ad23879a13b526a4ef89d5223c66abbee4736a9359e834e9f9ac",
+      "structural_formula": "\"perm_is_1_plus_1#_plus_2#\":r[\"PERM_DECOMP\"]=\"###\"andspec[\"matches_1_2#_1#\"]"
     },
     {
       "file_count": 1,
@@ -191895,6 +192010,34 @@
       },
       "structural_family_id": "bfb29159e766aaa5df82d1aa6c75784c8327eccb17383e2634a3f91dc945d418",
       "structural_formula": "###\u2014all-qlinearthetaspectrumplusexactfullq=#,#,#,#spectra"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9e0d86bfc83cae243ac57bd6e49f603410c87c1f7c80fb6f86a7fddef91a14ed",
+      "normalized_formula": "##ORBITS(H)=numberofH-orbitsonthe40lines=<ResPERM,1_H>(Burnside).Since",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.g"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.g",
+          "raw": "## ORBITS(H) = number of H-orbits on the 40 lines = <Res PERM, 1_H> (Burnside). Since",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "74e97dc16c940ec59135e93e96215dd1c3c5fb9542e0d3de584bcba10f01a17d",
+      "structural_formula": "##ORBITS(H)=numberofH-orbitsonthe4#lines=<ResPERM,#_H>(Burnside).Since"
     },
     {
       "file_count": 1,
@@ -736705,6 +736848,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "17989d8062acdb3455b714fd9aef48b7f3089dfee9028d6784cd9ac0ab9fe067",
+      "normalized_formula": "Print(\"RESULT_N_HOM_NONZERO\",Number(rows,r->r[2]<>0),\"\\n\")",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.g"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 92,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.g",
+          "raw": "Print(\"RESULT_N_HOM_NONZERO \", Number(rows, r -> r[2] <> 0), \"\\n\");",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c99513f574f049f770dff316db785e5339f5777ffcb5fb24a5a10198e060d6cb",
+      "structural_formula": "Print(\"RESULT_N_HOM_NONZERO\",Number(rows,r->r[#]<>#),\"\\n\")"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e45347d2c939c2bbc3cdb472af5d8b6e2a8d8845dc9cf18e952e8d0ea50f24e4",
       "normalized_formula": "Print(\"Thepaper:V(U)=|TrU|/3,thetrace-ChoiwitnessonC^9.\\n\")",
       "numeric_literals": [
@@ -1228850,6 +1229021,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8c01aa05afbb7c1b39f7bf0a9991f12ad0a8d3489692a79a8db48accdaf69090",
+      "normalized_formula": "f\"cd'{wsl_root}'gap-q-banalysis/w33_pass11962_line_module_steinberg_hom.g</dev/null\"]",
+      "numeric_literals": [
+        "1962",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 55,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.py",
+          "raw": "f\"cd '{wsl_root}' && gap -q -b analysis/w33_pass11962_line_module_steinberg_hom.g < /dev/null\"]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3a9b528c14cc56f2172452766f53c0f7fc73ddc148601ce047eae9df9d5d11c3",
+      "structural_formula": "f\"cd'{wsl_root}'gap-q-banalysis/w3#_pass1#_line_module_steinberg_hom.g</dev/null\"]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a09d93b54f9793d55c510d84e498960734de73c588d9422cf26352e7ef3a180a",
       "normalized_formula": "f\"code[[66,8,3]]_3:distanced=3->corrects1fault/cycle(528uniquesingle-errorsyndromes)\"",
       "numeric_literals": [
@@ -1520216,6 +1520415,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5604c195ec6b4bcafdd3a9246f2c12a3056a80f45160765c4a31a9aa043502ab",
+      "normalized_formula": "print(f\"hom!=0:{r['N_HOM_NONZERO']}/{r['N_CLASSES']}injective:{r['N_EMBED']}(maxorder{r['MAX_ORDER_EMBED']})\")",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11962_line_module_steinberg_hom.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 151,
+          "path": "analysis/w33_pass11962_line_module_steinberg_hom.py",
+          "raw": "print(f\" hom!=0: {r['N_HOM_NONZERO']}/{r['N_CLASSES']} injective: {r['N_EMBED']} (max order {r['MAX_ORDER_EMBED']})\")",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "34cafa99ead68b8aab0e698ffc0cdfa804580fae33d21c8bedc4e52e7003bcaf",
+      "structural_formula": "print(f\"hom!=#:{r['N_HOM_NONZERO']}/{r['N_CLASSES']}injective:{r['N_EMBED']}(maxorder{r['MAX_ORDER_EMBED']})\")"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ce5ee8af1db7ca81552d76f79279030c4ecafe19c9592cd57b824f411b63376d",
       "normalized_formula": "print(f\"horizontemperatureT_dS=1/(2piell)={T_dS:.6f}\")",
       "numeric_literals": [
@@ -1786905,9 +1787131,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T01:06:53-04:00",
+  "frozen_at": "2026-10-13T01:14:43-04:00",
   "pass": 398,
-  "repository_head": "701dc69889ca8b1d118ab6c95d3fa6a38fbd6e40",
+  "repository_head": "18f4e97fa987669d706f6225ea93748137b819e7",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1791490,6 +1791716,14 @@
       "exact_member_count": 1,
       "structural_family_id": "caf5cfce257f6f0593b7ecf3fec19ef7e3027093e390966233e37d10924d586a",
       "structural_formula": "\"#_character\":\"Tactsbytheouteralpha,whichswaps5a<->#b\""
+    },
+    {
+      "exact_formula_ids": [
+        "c07189605d8c0daccf48be74abcd3df5e58ad663a5b56eeb8f5477a232cb2dd8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "59c831d4ceb349accb56bf354bfc6c5d1cbbe9356f4701eb8300af0e562ee168",
+      "structural_formula": "\"#_classes_1#_have_nonzero_hom\":num(\"N_CLASSES\")=#andnum(\"N_HOM_NONZERO\")=#"
     },
     {
       "exact_formula_ids": [
@@ -1817686,6 +1817920,22 @@
     },
     {
       "exact_formula_ids": [
+        "ee63641d2826f69675f271b667e3e14cd17e4d2d01806627326afbaeb6a4bd46"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8f190a1c7f14551b1226a00e99687d5146989ec309ca3d1daf9589affa8665b6",
+      "structural_formula": "\"hom_full_group_is_zero\":num(\"HOM_FULL\")=#"
+    },
+    {
+      "exact_formula_ids": [
+        "34450978f6e878e61b449f899128ffe03faacbe80e8af003541d2d1dd5b017f2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a1a0684dfbcfa7c14bb679bb45ccb8ec4b48b8049885d222bc7f7730218687f7",
+      "structural_formula": "\"hom_sylow3_is_4#\":num(\"HOM_SYLOW3\")=#"
+    },
+    {
+      "exact_formula_ids": [
         "049db865a8a1cc71ef6d46e3ac21f7176a768a69ab3f731685dd56a016d0980e"
       ],
       "exact_member_count": 1,
@@ -1826374,6 +1826624,14 @@
       "exact_member_count": 1,
       "structural_family_id": "216c506f3ff6cd7c32b5afba61ed45f6ad528badf6d7f232cd123187d9cd4155",
       "structural_formula": "\"perfect_matchings_3\":pm_k4=#"
+    },
+    {
+      "exact_formula_ids": [
+        "6426c65d436af10b103674b04fe753f4ad1ca4d6c25f7d728b050d8c665e9235"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7de52d7c2ac8ad23879a13b526a4ef89d5223c66abbee4736a9359e834e9f9ac",
+      "structural_formula": "\"perm_is_1_plus_1#_plus_2#\":r[\"PERM_DECOMP\"]=\"###\"andspec[\"matches_1_2#_1#\"]"
     },
     {
       "exact_formula_ids": [
@@ -1842917,6 +1843175,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7041abc4c9bf3719a66aef2e1a3540306b16b9e9ff5bf21444ec43a9022cc88e",
       "structural_formula": "##N_-=#givingN_-=#areallreproducedfromastandardroot-system"
+    },
+    {
+      "exact_formula_ids": [
+        "9e0d86bfc83cae243ac57bd6e49f603410c87c1f7c80fb6f86a7fddef91a14ed"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "74e97dc16c940ec59135e93e96215dd1c3c5fb9542e0d3de584bcba10f01a17d",
+      "structural_formula": "##ORBITS(H)=numberofH-orbitsonthe4#lines=<ResPERM,#_H>(Burnside).Since"
     },
     {
       "exact_formula_ids": [
@@ -1985452,6 +1985718,14 @@
     },
     {
       "exact_formula_ids": [
+        "17989d8062acdb3455b714fd9aef48b7f3089dfee9028d6784cd9ac0ab9fe067"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c99513f574f049f770dff316db785e5339f5777ffcb5fb24a5a10198e060d6cb",
+      "structural_formula": "Print(\"RESULT_N_HOM_NONZERO\",Number(rows,r->r[#]<>#),\"\\n\")"
+    },
+    {
+      "exact_formula_ids": [
         "e45347d2c939c2bbc3cdb472af5d8b6e2a8d8845dc9cf18e952e8d0ea50f24e4"
       ],
       "exact_member_count": 1,
@@ -2116422,6 +2116696,14 @@
     },
     {
       "exact_formula_ids": [
+        "8c01aa05afbb7c1b39f7bf0a9991f12ad0a8d3489692a79a8db48accdaf69090"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3a9b528c14cc56f2172452766f53c0f7fc73ddc148601ce047eae9df9d5d11c3",
+      "structural_formula": "f\"cd'{wsl_root}'gap-q-banalysis/w3#_pass1#_line_module_steinberg_hom.g</dev/null\"]"
+    },
+    {
+      "exact_formula_ids": [
         "a09d93b54f9793d55c510d84e498960734de73c588d9422cf26352e7ef3a180a"
       ],
       "exact_member_count": 1,
@@ -2195413,6 +2195695,14 @@
     },
     {
       "exact_formula_ids": [
+        "5604c195ec6b4bcafdd3a9246f2c12a3056a80f45160765c4a31a9aa043502ab"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "34cafa99ead68b8aab0e698ffc0cdfa804580fae33d21c8bedc4e52e7003bcaf",
+      "structural_formula": "print(f\"hom!=#:{r['N_HOM_NONZERO']}/{r['N_CLASSES']}injective:{r['N_EMBED']}(maxorder{r['MAX_ORDER_EMBED']})\")"
+    },
+    {
+      "exact_formula_ids": [
         "ce5ee8af1db7ca81552d76f79279030c4ecafe19c9592cd57b824f411b63376d"
       ],
       "exact_member_count": 1,
@@ -2264494,20 +2264784,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87262375,
-    "exact_formula_families": 61111,
-    "files_scanned": 11955,
-    "formula_occurrences": 67086,
+    "bytes_scanned": 87276797,
+    "exact_formula_families": 61119,
+    "files_scanned": 11957,
+    "formula_occurrences": 67094,
     "status_occurrences": {
       "certified_or_theorem": 4874,
-      "killed_or_retracted": 1621,
-      "open_or_conditional": 2222,
+      "killed_or_retracted": 1624,
+      "open_or_conditional": 2223,
       "preregistered": 32,
       "retrospective_fit": 5199,
-      "unclassified": 53138
+      "unclassified": 53142
     },
-    "structural_families": 59490
+    "structural_families": 59498
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "96fcd4539e183edd0f2e4f38191611da3d5966150a0a470655c149d29393cf0d"
+  "universe_sha256": "831c3747189ad39440d48dcb8823695c6a574eeaf9f7f51cdf2a34c153c84637"
 }
