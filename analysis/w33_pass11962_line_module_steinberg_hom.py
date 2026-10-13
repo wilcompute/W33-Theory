@@ -125,6 +125,10 @@ def verify() -> dict:
             "(St_81 restricted to each order-27 subgroup is 3 copies of the regular module)."
         ),
         "prior": ["TOE51 4a7898e4b proposal 4 (this answers its H27 gate)",
+                  "TOE52 701dc6988 (landed 3.5 min earlier) OWNS the elation-group H27=(27,3) orbit-count "
+                  "obstruction (8 orbits vs 3 invariant directions per K81) and the CONSTRUCTIVE minimal "
+                  "three-carrier solution ceil(8/3)=3 with explicit integer intertwiners; this pass only "
+                  "agrees with it on that row and adds the all-subgroup no-go and the Steinberg identification",
                   "Holotrade analysis/w33_steinberg_doublecoset_colour_swap.g (St_81 definition)",
                   "Holotrade analysis/FRAME_BUNDLE_THREE_K81_SLICES_20260926.md (K81 carrier)"],
         "boundary": (

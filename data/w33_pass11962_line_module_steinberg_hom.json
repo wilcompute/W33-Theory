@@ -32,6 +32,7 @@
   },
   "prior": [
     "TOE51 4a7898e4b proposal 4 (this answers its H27 gate)",
+    "TOE52 701dc6988 (landed 3.5 min earlier) OWNS the elation-group H27=(27,3) orbit-count obstruction (8 orbits vs 3 invariant directions per K81) and the CONSTRUCTIVE minimal three-carrier solution ceil(8/3)=3 with explicit integer intertwiners; this pass only agrees with it on that row and adds the all-subgroup no-go and the Steinberg identification",
     "Holotrade analysis/w33_steinberg_doublecoset_colour_swap.g (St_81 definition)",
     "Holotrade analysis/FRAME_BUNDLE_THREE_K81_SLICES_20260926.md (K81 carrier)"
   ],
@@ -62,7 +63,7 @@
     "UNIQUE_ST81": "true"
   },
   "schema": "w33.pass11962-line-module-steinberg-hom.v1",
-  "semantic_sha256": "a3528557929ea5b76178b97d1c755d060154267d52f0e72a82054bf01dc28ab7",
+  "semantic_sha256": "beb6dfbd2d5566f5983d017d7149f19ddaf699d71fe000720373045a73b9b30b",
   "status": "PASS",
   "theorem": "The 40-line module 1+15+24 of PSp(4,3) admits no equivariant map into St_81 for the full group (Schur) but admits nonzero equivariant maps for 115 of 116 subgroup classes; an INJECTIVE (equivalently isometric) equivariant map exists only for 36 subgroup classes of order <= 24.  It fails for every maximal subgroup, the Sylow-3 subgroup SmallGroup(81,7) and all three order-27 subgroups, where the H-orbit count on the 40 lines (4, 6, 8 for order 27; 4 for order 81) exceeds the number of invariant directions in St_81 (3; 1).  This is a character-theoretic no-go for a lossless symmetry-preserving embedding of the line signal into Holotrade's K81 slice."
 }
