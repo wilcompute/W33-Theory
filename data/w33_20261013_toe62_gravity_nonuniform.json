@@ -1,0 +1,58 @@
+{
+  "status": "PASS_TOE62_NONUNIFORM_NATIVE_LEIBNIZ_NO_GO",
+  "native_derivative_shape": [
+    3,
+    80,
+    80
+  ],
+  "D_skew_error": 7.105427357601002e-15,
+  "exact_unscaled_idempotent_column_norm_min": 2.925941697699258,
+  "exact_unscaled_idempotent_column_norm_max": 46.47434435931339,
+  "worst_vertex": 23,
+  "vertex_controls": [
+    {
+      "vertex": 0,
+      "pointwise_Leibniz_residual_RMS": 0.4878445425070795,
+      "stacked_column_norm": 7.557655154672381
+    },
+    {
+      "vertex": 23,
+      "pointwise_Leibniz_residual_RMS": 2.9999060288254893,
+      "stacked_column_norm": 46.47434435931339
+    },
+    {
+      "vertex": 79,
+      "pointwise_Leibniz_residual_RMS": 0.5733194968773926,
+      "stacked_column_norm": 8.881827453848627
+    }
+  ],
+  "spacing_sweep": [
+    {
+      "a": 0.2,
+      "vertex_idempotent_worst_defect_after_1_over_a_scaling": 232.37172179656696,
+      "restricted_low_Bloch_RMS_defect": 0.2933162695309051,
+      "high_over_low_ratio": 792.2224095110524
+    },
+    {
+      "a": 0.1,
+      "vertex_idempotent_worst_defect_after_1_over_a_scaling": 464.7434435931339,
+      "restricted_low_Bloch_RMS_defect": 0.1467979566253579,
+      "high_over_low_ratio": 3165.8713396072844
+    },
+    {
+      "a": 0.05,
+      "vertex_idempotent_worst_defect_after_1_over_a_scaling": 929.4868871862678,
+      "restricted_low_Bloch_RMS_defect": 0.0734164648826882,
+      "high_over_low_ratio": 12660.46912870962
+    },
+    {
+      "a": 0.025,
+      "vertex_idempotent_worst_defect_after_1_over_a_scaling": 1858.9737743725357,
+      "restricted_low_Bloch_RMS_defect": 0.03671041853883828,
+      "high_over_low_ratio": 50638.86080203116
+    }
+  ],
+  "mathematical_theorem": "For pointwise finite vertex function algebra R^80 and ANY linear operator D obeying exact Leibniz, apply to minimal idempotent e_v^2=e_v: D e_v =2e_v\u00b7D e_v. At u!=v this forces D_uv=0 and at u=v forces D_vv=0, hence D=0. For the actual nonzero skew W33 D_i, R_i(e_v,e_v)=D_i e_v exactly. Therefore under physical 1/a scaling, the worst such localized Leibniz defect is ||D e_v||/a, diverging as a\u21920 even while the prior restricted Bloch-sector defect goes like O(a). No full-space uniform continuum derivation follows from restricted bandwise convergence.",
+  "gravity_boundary": "This proves only the failure of the EXACT pointwise product derivation and a particular uniform finite-graph normalization. It does NOT rule out weak/coarse-grained continuum fields, different noncommutative or edge algebra, improved canonical constraints, Einstein gravity, or interacting universal Lorentz restoration. Pass11976 separately computed a concrete gravitational scalar bracket defect.",
+  "field_strength_scope": "No new physical speed-of-light prediction, spin-2 graviton, time-dependent Einstein constraints, renormalized interacting photon/fermion beta function, or SI-scale gravitational constant."
+}

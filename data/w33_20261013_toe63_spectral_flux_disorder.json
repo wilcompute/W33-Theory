@@ -1,0 +1,103 @@
+{
+  "status": "PASS_TOE63_SPECTRAL_DISORDER_SUFFICIENT_BOUND",
+  "winding_octagon_count": 238,
+  "single_axis_counts": [
+    79,
+    77,
+    77
+  ],
+  "cross_axis_counts": [
+    1,
+    1,
+    3
+  ],
+  "cross_incidence_matrix": [
+    [
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      4,
+      3
+    ],
+    [
+      1,
+      3,
+      4
+    ]
+  ],
+  "diagonal_single_matrix": [
+    [
+      79,
+      0,
+      0
+    ],
+    [
+      0,
+      77,
+      0
+    ],
+    [
+      0,
+      0,
+      77
+    ]
+  ],
+  "positive_definiteness_polynomial": "(77-r)*(12*r^2-707*r+6083)",
+  "critical_ratio_exact": "(707-sqrt(207865))/24",
+  "critical_ratio": 10.46157739682904,
+  "old_sufficient_epsilon": 0.140585412966096,
+  "improved_sufficient_epsilon": 0.1456877621581616,
+  "eigenvalue_stress_checks": [
+    {
+      "epsilon": 0.0,
+      "eigenvalues": [
+        69.72508278236457,
+        75.99999999999997,
+        77.27491721763538
+      ],
+      "positive_definite": true
+    },
+    {
+      "epsilon": 0.140585412966096,
+      "eigenvalues": [
+        1.835297760112251,
+        18.810171681985366,
+        20.050284737460565
+      ],
+      "positive_definite": true
+    },
+    {
+      "epsilon": 0.145,
+      "eigenvalues": [
+        0.24620590455726798,
+        17.71634500574216,
+        19.035489936168567
+      ],
+      "positive_definite": true
+    },
+    {
+      "epsilon": 0.14568761647039943,
+      "eigenvalues": [
+        5.211597428456116e-05,
+        17.548667031565426,
+        18.88018636213665
+      ],
+      "positive_definite": true
+    },
+    {
+      "epsilon": 0.14578776215816158,
+      "eigenvalues": [
+        -0.03576864909706168,
+        17.52430584289539,
+        18.85762890017154
+      ],
+      "positive_definite": false
+    }
+  ],
+  "independent_coefficient_random_trials": 600,
+  "theorem": "For any independent positive native W33 link magnitudes in [1-e,1+e], the leading beta^7 flat U(1)^3 fermion free-energy term has unique global minimum (pi,pi,pi) whenever e < (([707-sqrt(207865)]/24)^(1/8)-1)/(([707-sqrt(207865)]/24)^(1/8)+1).",
+  "scope": "Sufficient worst-case mathematical bound only, not optimal tolerance, all-temperature ordering, interacting gauge selection, physical CP or empirical TOE."
+}

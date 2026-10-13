@@ -1,0 +1,30 @@
+{
+  "status": "PASS_TOE62_TIME_LINK_4D_GAUGE_COVARIANCE_GATE",
+  "actual_sites": 80,
+  "actual_links": 160,
+  "native_local_plaquette_rows": 1385,
+  "temporal_slices": 12,
+  "fake_electric_F0e_when_temporal_links_omitted_rms": 0.20306547979906497,
+  "true_mixed_temporal_spatial_plaquette_error_with_temporal_links": 5.335625721290637e-16,
+  "spatial_plaquette_U1_flatness_max": 5.551115123125783e-16,
+  "native_320_band_kernel_slice_covariance": [
+    {
+      "time_slice": 0,
+      "kernel_gauge_covariance_max": 0.0
+    },
+    {
+      "time_slice": 3,
+      "kernel_gauge_covariance_max": 1.422396751169702e-14
+    },
+    {
+      "time_slice": 6,
+      "kernel_gauge_covariance_max": 6.838608742512139e-16
+    },
+    {
+      "time_slice": 9,
+      "kernel_gauge_covariance_max": 1.422396751169702e-14
+    }
+  ],
+  "derivation": "On actual W33 links let U_e(t)=exp(i[V_e\u00b7(\u03c0,\u03c0,\u03c0)+\u03b8_b(t)-\u03b8_a(t)]), U_0(t,v)=exp(i[\u03b8_v(t+1)-\u03b8_v(t)]). Then all space-space and mixed time-space plaquettes equal1 exactly. Omitting U0 creates a spurious temporal electric field even for this pure-gauge time dependence. The preexisting native320 overlap kernel is unitarily gauge-covariant on each tested slice.",
+  "physical_limit": "This is an explicit time-link gauge-completion and null control on a 80-site graph \u00d7 discrete time, NOT a full spatial three-manifold with 4-cells, an index-bearing gauge bundle, a nonzero Weyl index, SM chirality, or interacting quantum dynamics. Native spatial 2-complex \u00d7 S1 still has H4=0."
+}

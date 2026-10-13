@@ -1,0 +1,52 @@
+{
+  "status": "PASS_TOE62_GLOBAL_CONTINUOUS_U1_LEADING_BETA7_MINIMUM",
+  "exact_integer_winding_Fourier_coefficients": {
+    "(-1, -1, 0)": 1,
+    "(-1, 0, -1)": 1,
+    "(-1, 0, 0)": 79,
+    "(0, -1, 0)": 77,
+    "(0, -1, 1)": 3,
+    "(0, 0, -1)": 77
+  },
+  "S_pi_pi_pi": -228.0,
+  "S_zero": 238.0,
+  "rigorous_cosine_distance_lower_coefficients": [
+    75,
+    69,
+    69
+  ],
+  "trace_H8_crosschecks": [
+    {
+      "theta": [
+        3.141592653589793,
+        3.141592653589793,
+        3.141592653589793
+      ],
+      "trace8_delta": -7456.0,
+      "Fourier_predicted_delta": -7456.0
+    },
+    {
+      "theta": [
+        2.4627025659779394,
+        2.1183237249840667,
+        -2.533511662160179
+      ],
+      "trace8_delta": -6433.284700623015,
+      "Fourier_predicted_delta": -6433.284700623043
+    },
+    {
+      "theta": [
+        -1.9926117193208328,
+        -1.5265614152424456,
+        2.8005158122261076
+      ],
+      "trace8_delta": -5453.912012101966,
+      "Fourier_predicted_delta": -5453.9120121020005
+    }
+  ],
+  "leading_deltaF_beta7_pi_vs_zero": -0.1964781746031746,
+  "theorem": "For the native 80-site spinless nearest-neighbor free fermion with flat harmonic U1 parameters phi\u2208(R/2\u03c0Z)^3, the winding-dependent eighth adjacency moment is TrH(phi)^8=const+16 S(phi). Native octagon census gives S=79cos(phi0)+77cos(phi1)+77cos(phi2)+cos(phi0+phi1)+cos(phi0+phi2)+3cos(phi1-phi2). Writing \u03b4=phi-(pi,pi,pi), use 1-cos(x\u00b1y)<=2[(1-cos x)+(1-cos y)] to obtain S(phi)-S(pi,pi,pi)>=75(1-cos\u03b40)+69(1-cos\u03b41)+69(1-cos\u03b42)>=0, equality only at the three-pi corner modulo2\u03c0. Fermion F_beta(phi)=-beta^-1 Tr log[2cosh(beta Hphi/2)] and its first phi-dependent term is +(17 beta^7/40320) S(phi). Thus the leading beta7 term is globally, uniquely minimized on the ENTIRE continuous U1 harmonic torus at three-pi.",
+  "qualifier_small_beta": "The finite-dimensional spectral high-temperature expansion and its first two phi-derivatives converge uniformly for sufficiently small beta. The leading cost has a nondegenerate Hessian at pi and a positive gap outside each neighborhood; pi is a stationary point at every beta by conjugation/periodicity. A standard compactness + C\u00b2-perturbation argument therefore gives existence of an unspecified beta0>0 for which pi is the UNIQUE global minimizer for all 0<beta<beta0. This does NOT determine beta0 or prove all-temperature continuous U1 minimization.",
+  "numeric_random_cosine_lower_bound_min_slack": 0.12487402098355549,
+  "model_boundary": "This is an exact theorem for the high-temperature leading term of ONE supplied static bipartite 80-site hopping Hamiltonian and native 3-holonomy family. It is NOT a theorem for arbitrary U1 gauge connections (with local curvature), finite beta all-temperature continuum flux, interacting fermions, gauge dynamics, physical CKM CP, or measured parameters. TOE61 already owns an all-beta theorem ONLY among eight Z2 corners."
+}

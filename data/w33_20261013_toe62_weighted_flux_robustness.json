@@ -1,0 +1,99 @@
+{
+  "status": "PASS_TOE62_14_PERCENT_HOPPING_ROBUST_HIGH_T_GLOBAL_FLUX",
+  "rigorous_uniform_link_weight_deviation_threshold": 0.140585412966096,
+  "verified_at_eps_0_1": [
+    25.43255435,
+    15.997264689999994,
+    15.997264689999994
+  ],
+  "positive_lower_bound_at_eps_0_13": [
+    15.294945280327537,
+    4.004745165614391,
+    4.004745165614391
+  ],
+  "random_weighted_graph_trace_checks": [
+    {
+      "relative_per_link_error_bound": 0.05,
+      "seeded_trial": 0,
+      "rigorous_lower_coefficients": [
+        46.500392296679664,
+        39.26372965894529,
+        39.26372965894529
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.05,
+      "seeded_trial": 1,
+      "rigorous_lower_coefficients": [
+        46.500392296679664,
+        39.26372965894529,
+        39.26372965894529
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.05,
+      "seeded_trial": 2,
+      "rigorous_lower_coefficients": [
+        46.500392296679664,
+        39.26372965894529,
+        39.26372965894529
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.1,
+      "seeded_trial": 0,
+      "rigorous_lower_coefficients": [
+        25.43255435,
+        15.997264689999994,
+        15.997264689999994
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.1,
+      "seeded_trial": 1,
+      "rigorous_lower_coefficients": [
+        25.43255435,
+        15.997264689999994,
+        15.997264689999994
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.1,
+      "seeded_trial": 2,
+      "rigorous_lower_coefficients": [
+        25.43255435,
+        15.997264689999994,
+        15.997264689999994
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.13,
+      "seeded_trial": 0,
+      "rigorous_lower_coefficients": [
+        15.294945280327537,
+        4.004745165614391,
+        4.004745165614391
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.13,
+      "seeded_trial": 1,
+      "rigorous_lower_coefficients": [
+        15.294945280327537,
+        4.004745165614391,
+        4.004745165614391
+      ]
+    },
+    {
+      "relative_per_link_error_bound": 0.13,
+      "seeded_trial": 2,
+      "rigorous_lower_coefficients": [
+        15.294945280327537,
+        4.004745165614391,
+        4.004745165614391
+      ]
+    }
+  ],
+  "theorem": "Let EVERY native hopping edge amplitude w_e independently lie in [1-epsilon,1+epsilon], with epsilon>=0. For each simple length8 winding cycle, the positive product of 8 edge amplitudes lies in [(1-epsilon)^8,(1+epsilon)^8]. Native winding census gives one-cycle Fourier single-axis counts (79,77,77) and cross-axis incidences (2,4,4). The same inequality 1-cos(x\u00b1y)<=2[(1-cos x)+(1-cos y)] bounds the weighted winding Fourier potential difference S_w(phi)-S_w(pi) below by sum_i [N_i(1-epsilon)^8-2C_i(1+epsilon)^8] (1-cos(phi_i-pi)). All three coefficients strictly positive for epsilon<[(77/8)^(1/8)-1]/[(77/8)^(1/8)+1] \u22480.1405. Therefore the leading beta^7 half-filled fermion holonomy energy still has a UNIQUE GLOBAL continuous U1 minimum at three-pi despite arbitrary nonuniform positive link hopping amplitudes bounded by this epsilon.",
+  "scope": "An analytic WORST-CASE robustness certificate for the beta7 leading term of one finite spinless tight-binding Hamiltonian, not a measured disorder threshold or finite/all-temperature phase robustness, not coupled quantum gauge backreaction, physical CP breaking, RG or observed standard-model couplings."
+}

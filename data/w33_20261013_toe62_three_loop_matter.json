@@ -1,0 +1,182 @@
+{
+  "status": "PASS_TOE62_NATIVE_INTERACTING_THREE_LOOP_MATTER_PATCH",
+  "native_nodes": [
+    0,
+    1,
+    4,
+    7,
+    10,
+    13,
+    14,
+    15,
+    40,
+    41,
+    44,
+    45,
+    62,
+    71
+  ],
+  "native_edge_ids": [
+    0,
+    1,
+    4,
+    5,
+    16,
+    17,
+    28,
+    29,
+    40,
+    41,
+    52,
+    53,
+    56,
+    57,
+    60,
+    61
+  ],
+  "selected_seed_rows": [
+    0,
+    186,
+    164
+  ],
+  "contained_native_wilson_rows": [
+    0,
+    3,
+    5,
+    164,
+    186,
+    778
+  ],
+  "contained_count": 6,
+  "patch_sites": 14,
+  "patch_links": 16,
+  "independent_fluxes": 3,
+  "fermion_count": 6,
+  "initial_background_bitstring": 16128,
+  "parameters": {
+    "g": 0.8,
+    "kappa": 0.7,
+    "magnetic_beta": 0.4,
+    "mass": 0.3
+  },
+  "runs": [
+    {
+      "depth": 1,
+      "L": 1,
+      "charge_cost": 0.3050268070527451,
+      "sectors": {
+        "neutral": {
+          "depth": 1,
+          "L": 1,
+          "Fock_configs": 17,
+          "dimension": 459,
+          "ground": -1.0574065256725633,
+          "gap": 2.343173195833919,
+          "Fock_boundary_weight": 0.41791620118550865,
+          "electric_flux_boundary_weight": 0.314068238843266,
+          "eigensolver_residual": 5.623437581519074e-15
+        },
+        "charged": {
+          "depth": 1,
+          "L": 1,
+          "Fock_configs": 17,
+          "dimension": 459,
+          "ground": -0.7523797186198182,
+          "gap": 1.8860019144722624,
+          "Fock_boundary_weight": 0.4155397952970579,
+          "electric_flux_boundary_weight": 0.3388568928949645,
+          "eigensolver_residual": 6.838416295587703e-15
+        }
+      }
+    },
+    {
+      "depth": 2,
+      "L": 1,
+      "charge_cost": 0.32081153170146903,
+      "sectors": {
+        "neutral": {
+          "depth": 2,
+          "L": 1,
+          "Fock_configs": 113,
+          "dimension": 3051,
+          "ground": -2.1782997412808482,
+          "gap": 2.1576340466629786,
+          "Fock_boundary_weight": 0.2004354281538706,
+          "electric_flux_boundary_weight": 0.3745914844908491,
+          "eigensolver_residual": 1.8411829040505076e-14
+        },
+        "charged": {
+          "depth": 2,
+          "L": 1,
+          "Fock_configs": 113,
+          "dimension": 3051,
+          "ground": -1.8574882095793792,
+          "gap": 1.8244569688854035,
+          "Fock_boundary_weight": 0.19719568343597188,
+          "electric_flux_boundary_weight": 0.39804727606181967,
+          "eigensolver_residual": 1.2161751141273916e-14
+        }
+      }
+    },
+    {
+      "depth": 2,
+      "L": 2,
+      "charge_cost": 0.3229806788522742,
+      "sectors": {
+        "neutral": {
+          "depth": 2,
+          "L": 2,
+          "Fock_configs": 113,
+          "dimension": 14125,
+          "ground": -2.2613189830035987,
+          "gap": 2.145089005837383,
+          "Fock_boundary_weight": 0.2039628937197771,
+          "electric_flux_boundary_weight": 0.01469176909273717,
+          "eigensolver_residual": 4.772135822608088e-14
+        },
+        "charged": {
+          "depth": 2,
+          "L": 2,
+          "Fock_configs": 113,
+          "dimension": 14125,
+          "ground": -1.9383383041513245,
+          "gap": 1.8131944441791028,
+          "Fock_boundary_weight": 0.200599569958737,
+          "electric_flux_boundary_weight": 0.013876597645467196,
+          "eigensolver_residual": 3.4501524107816404e-14
+        }
+      }
+    },
+    {
+      "depth": 3,
+      "L": 1,
+      "charge_cost": 0.33589095768839394,
+      "sectors": {
+        "neutral": {
+          "depth": 3,
+          "L": 1,
+          "Fock_configs": 417,
+          "dimension": 11259,
+          "ground": -2.6731644307520215,
+          "gap": 1.7320039534954823,
+          "Fock_boundary_weight": 0.08699222945327971,
+          "electric_flux_boundary_weight": 0.4298077335251606,
+          "eigensolver_residual": 1.8965635942298397e-14
+        },
+        "charged": {
+          "depth": 3,
+          "L": 1,
+          "Fock_configs": 417,
+          "dimension": 11259,
+          "ground": -2.3372734730636275,
+          "gap": 1.6823188968361742,
+          "Fock_boundary_weight": 0.08390725013568508,
+          "electric_flux_boundary_weight": 0.4508639506816261,
+          "eigensolver_residual": 1.7092865112087903e-14
+        }
+      }
+    }
+  ],
+  "method": "Use all fermion configurations reachable within depth d link hops from the native alternating fermion background, plus all 3 integer chord flux modes in [-L,L]^3. Reconstruct all 16 link electric fluxes through exact spanning-tree Gauss solution for each occupancy. Include all native plaquette Wilson shifts fully supported in this patch, native signed link fermion hops, electric energy, and staggered mass. Diagonalize the explicit Hermitian Galerkin Hamiltonian in neutral and external endpoint-charge sectors.",
+  "limitation": "Interacting selected three-loop finite patch and restricted Fock hop-depth, not full 80-site or all 1382 active plaquette W33 Hamiltonian; simultaneous variational exhaustion of Fock and flux Hilbert is not proved. Boundary weights, residuals, static-charge differences are not physical confinement or a machine-certified spectral interval."
+}
