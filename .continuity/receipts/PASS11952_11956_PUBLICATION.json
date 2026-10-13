@@ -1,0 +1,42 @@
+{
+  "type": "publication_attestation",
+  "science_sha": "23f6b1f46e83a75d02be1b1d618ccf3a9854fbab",
+  "reservation": "aad262fd1",
+  "run_id": 38340874856,
+  "job_id": 115111326631,
+  "conclusion": "success",
+  "run_url": "https://github.com/wilcompute/W33-Theory/actions/runs/38340874856",
+  "hosted_counts_and_seconds": [
+    [
+      "31",
+      "11.94"
+    ],
+    [
+      "19",
+      "10.68"
+    ]
+  ],
+  "local_full_checks": 31,
+  "local_full_seconds": 18.53,
+  "row_vector_clarification_replay": {
+    "checks": 1,
+    "seconds": 9.77
+  },
+  "result_index": {
+    "files": 12046,
+    "distinctive_results": 16666
+  },
+  "hashes_lf": {
+    "analysis/w33_pass11952_11955_threshold_vacuum_loop_leptons.py": "2884f88922bbe761c6b133cdc592771f6aca06b5c89e94f76bafeb8b1f9ae3b5",
+    "analysis/w33_pass11956_local_electric_metric.py": "2507210d0fe1c175ca3b1925500773533ffd0ad7ed2375e8a1bdac865f99569b",
+    "analysis/PASS11952_11956_PHYSICAL_COMPLETION.md": "0c1d8231ad3f511f0cb84e487a976348717d8b4dc006b5ed0ad88ec9e7b91964",
+    "tests/test_w33_pass11952_11956_physical_completion.py": "5f9231ea14082aa251d194db2fb99b9fe95fc98870230ca2147e6ae5d99a7eea",
+    ".github/workflows/pass11952-11956-physical-completion.yml": "41916324838830553d57f22c8fc1fd1574c507901d2a952aa268662564311984",
+    "data/w33_pass11952_11955_threshold_vacuum_loop_leptons.json": "07f70c272bdf5a067cb109973eb24ceca483d3ac610dc902c1252efb10d95f6c",
+    "data/w33_pass11956_local_electric_metric.json": "6607b2b979531725b463cdea004331250be103bf2eb1e03c1f6510347ca199cb",
+    "docs/index.html": "3647ab79bf142bba4e02bda1c1fc67301859355b193eeeeb0893034fe9507dc6",
+    "RESULTS_INDEX.md": "19541ee275e46bd4aa31d7c22e9801c8395013685cfb345652d07988b4aa5c1b"
+  },
+  "scope": "Five research fronts executed; exact local positive kinetic-root leading cone. Full E6 stabilization, total radiative theta, physical scales, finite-k/RG and gravitational closure open. Earlier corpus inventory was machine intake, not full manual semantic review.",
+  "guard": "Lexical Levi+PMNS advisory reviewed and retained; no CSS code assertion and no forced arithmetic. Not described as clean."
+}

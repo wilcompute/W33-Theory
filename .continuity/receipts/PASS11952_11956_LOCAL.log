@@ -1,0 +1,22 @@
+...............................                                          [100%]
+31 passed in 18.53s
+
+Final test row-vector syntax clarification: 1 passed in9.77s.
+Both producers succeeded. YAML and final certificates parsed.
+Six peer files retain original raw hashes; no11949 producer rerun.
+Forced-arithmetic selftest7cases PASS; four-file scan0findings.
+
+========================================================================
+[rediscovery guard] results that already exist elsewhere
+========================================================================
+  analysis/PASS11952_11956_PHYSICAL_COMPLETION.md
+    levi+pmns  ->  W33_FOR_EVERYONE.tex analysis/BT888_color_is_matter_heisenberg.md analysis/PASS11413_11417_PIN_REGGE_VACUUM_NOISE.md (+1)
+
+  These are CANDIDATES, not verdicts -- the same integer recurs
+  legitimately. But Passes 322/323 lost ~19 passes to exactly this,
+  so: open the prior file and READ it (end to end -- Pass 286 shows
+  shallow reads cause retractions) before asserting novelty.
+  Cite the prior art in the file and this warning goes away.
+
+
+Guard advisory reviewed: lexical Levi+PMNS co-occurrence; two named prior reports read in full, no new generic bridge claim. Exact cycle-projector prior expressly credited. Guard is not called clean.
