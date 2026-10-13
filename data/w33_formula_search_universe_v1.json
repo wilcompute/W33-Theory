@@ -543199,6 +543199,42 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b9b517baa8c8a4f0f1dc80de0279eb8573c83262f38a9204705b40c8a6834669",
+      "normalized_formula": "Anindependent300-replicateGaussianreconstructionteststhreeknowndefectivelinks[5,34,113]withperturbations[+0.04,-0.03,+0.05],Euclideannorm~0.0707.EvenwithanORACLEsuppliedwiththecorrectsupport,theRMSlinkperturbationrecoveryerroris0.1099at0.01",
+      "numeric_literals": [
+        "+0.04",
+        "+0.05",
+        "-0.03",
+        ".01",
+        ".1099",
+        "0.0707",
+        "00",
+        "113",
+        "34",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe53_five_fronts_clock_photonic_spectroscopy.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 56,
+          "path": "analysis/2026-10-13_toe53_five_fronts_clock_photonic_spectroscopy.md",
+          "raw": "An independent 300-replicate Gaussian reconstruction tests three known defective links [5,34,113] with perturbations [+0.04,-0.03,+0.05], Euclidean norm ~0.0707. Even with an ORACLE supplied with the correct support, the RMS link perturbation recovery error is 0.1099 at 0.01% assumed relative measurement noise, 1.0549 at 0.10%, and 5.6521 at 0.50%. Analytic linear covariance predictions are 0.1130,1.1300,5.6499 respectively. This demonstrates the currently chosen observables are severely ill-conditioned for practical defect recovery. The measurement-noise model is synthetic; no physical detector/shot statistical law has been established.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "878377f36c06ed730b25918c0c5e3eabe93c5a72996895f72c0e7a2188c0db7e",
+      "structural_formula": "Anindependent3#-replicateGaussianreconstructionteststhreeknowndefectivelinks[#,#,#]withperturbations[#,#,#],Euclideannorm~#.EvenwithanORACLEsuppliedwiththecorrectsupport,theRMSlinkperturbationrecoveryerroris0#at0#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "403f074122200b56f025b78464f5d1203b685bd48857a1d0f7e43791d79bf5a6",
       "normalized_formula": "AnindependentfullRiccicalculationgivestheconnectionterm;directMaxwellcontractiongivesthemixing.AgloballydefinedconnectiononthetrivialtorusbundlerequiresintegralH=0.EliminatinghthereforeusesaweightedmeanmuandgivestheSchurform",
       "numeric_literals": [
@@ -602372,6 +602408,33 @@
       },
       "structural_family_id": "0a513a3954e67af3d5cd5db0181f2879d501cb12fa95cddfff07de83990fcf9d",
       "structural_formula": "F=W@(V@(np.diag(ev^(#)))@V.T)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b5e3c3b9b3b161de85e636b338a77f88ea8220b76113ba93ec2423c97f3ef8c0",
+      "normalized_formula": "F=W@(V@np.diag(ev^-.5)@V.T)",
+      "numeric_literals": [
+        "-.5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe53_optical_15to81.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_20261013_toe53_optical_15to81.py",
+          "raw": "F=W@(V@np.diag(ev**-.5)@V.T)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "abf7581ddcd710ba9278c18336da772b43513d6856de8856bf38bfb7b5f86e8a",
+      "structural_formula": "F=W@(V@np.diag(ev^#)@V.T)"
     },
     {
       "file_count": 1,
@@ -784078,6 +784141,40 @@
       },
       "structural_family_id": "deff72a262206979a75953f5fe97ad877972705d3caec356fc6ad20bfb375551",
       "structural_formula": "TOE4#imposesoppositecontinuousgaussian-centershiftss_L=s,s_R=-s,s_H=#withflux-weightedrelation3s_L+#s_R-#s_H=#.RecomputednormalizedM=#familyandM=#Higgswavefunctionsona1#x1#grid.ForbiddenYukawaoverlapsstaybelow1e-#.ASINGLEfixedHiggsnowgenerallyhasunequalformerlysymmetricoffdiagonalsY[#,#,#]andY[#,#,#](absolutemagnitudesplit)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c4193424c4084c3304a256cf1555954b9631cef18c905e6b76c9e5c7a2bf37e3",
+      "normalized_formula": "TOE51providedsixacousticplustwelvefinite-Blochspectral-momentgradientswithnumericalrank18butsmallestnormalizedsingularvalue~6.97e-6.TOE52establishedexactredundancyofoppositekunderrealreciprocalweights.TOE53enumerates455three-wavevectorchoicesfrom15non-oppositecandidates,keepingthek=0blockandthesixacousticmeasurements.Underexplicitlyassumedrelativemomentnoise(eachmomentgetssigmatimesitsvalue;acousticcoefficientsscaleby.5),all18whitenedgradientsarecomparedbytheirrow-normalizedminimumsingularvalue",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "5",
+        "55",
+        "6.97e-6",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe53_five_fronts_clock_photonic_spectroscopy.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/2026-10-13_toe53_five_fronts_clock_photonic_spectroscopy.md",
+          "raw": "TOE51 provided six acoustic plus twelve finite-Bloch spectral-moment gradients with numerical rank18 but smallest normalized singular value ~6.97e-6. TOE52 established exact redundancy of opposite k under real reciprocal weights. TOE53 enumerates 455 three-wavevector choices from 15 non-opposite candidates, keeping the k=0 block and the six acoustic measurements. Under explicitly assumed relative moment noise (each moment gets sigma times its value; acoustic coefficients scale by .5), all 18 whitened gradients are compared by their row-normalized minimum singular value.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "40171bc774e238971adff99b70e0609f39ae2b9bce6d2d71ed95249770f478cf",
+      "structural_formula": "TOE5#providedsixacousticplustwelvefinite-Blochspectral-momentgradientswithnumericalrank1#butsmallestnormalizedsingularvalue~#.TOE5#establishedexactredundancyofoppositekunderrealreciprocalweights.TOE5#enumerates4#three-wavevectorchoicesfrom1#non-oppositecandidates,keepingthek=#blockandthesixacousticmeasurements.Underexplicitlyassumedrelativemomentnoise(eachmomentgetssigmatimesitsvalue;acousticcoefficientsscaleby.#),all1#whitenedgradientsarecomparedbytheirrow-normalizedminimumsingularvalue"
     },
     {
       "file_count": 1,
@@ -1059428,6 +1059525,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "275ffc37d824233f5caebead1dccccf19dd2319dff8770751524ec41462f544e",
+      "normalized_formula": "assertclock[\"scalar_FI_char_omega_minimum_number_of_81D_K81_slices\"][\"line40\"]=8",
+      "numeric_literals": [
+        "0",
+        "1",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe53_physics_unification_gates.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/w33_20261013_toe53_physics_unification_gates.py",
+          "raw": "assert clock[\"scalar_FI_char_omega_minimum_number_of_81D_K81_slices\"][\"line40\"]==8",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7b3f7c72e836ab99217a3f4a0568088dc2b99eb91f3311d112d4d3f3fe42566e",
+      "structural_formula": "assertclock[\"scalar_FI_char_omega_minimum_number_of_8#D_K8#_slices\"][\"line4#\"]=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0859af99059a5354a7df38cc23b7b1c1bb98743e108cae6c57ec7aa2e79d9abd",
       "normalized_formula": "assertclosure<1e-12andcomplete<1e-12andprimitive<1e-12andorthogonal<1e-12andderiv_error<1e-11andnorm_error<1e-12andstar_error<1e-12andstar_product_error<1e-12andmetric_error<1e-12andmax(jordan)<1e-10",
       "numeric_literals": [
@@ -1072545,6 +1072671,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "dadcea64e1206cbb6747671b4049e725227d51be12147e92a8da68d203134c87",
+      "normalized_formula": "assertmin(ev)>0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe53_optical_15to81.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_20261013_toe53_optical_15to81.py",
+          "raw": "assert min(ev)>0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c916e8070dadec495e6973ebcdb9a622e4658d629996c60599edb466554cd4dd",
+      "structural_formula": "assertmin(ev)>#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "32d7cd74c546568dc7e1d0974c7e454bb9a0f0ef5b0d6174d60780803652672e",
       "normalized_formula": "assertmin(ev[-3:])>1000andmax(abs(ev[:12]))/min(ev[-3:])<2e-6",
       "numeric_literals": [
@@ -1076712,6 +1076865,33 @@
       },
       "structural_family_id": "1f8f7cdb31cd6f2da08d07230279b202d0be312a7f66662f90f3fdabb302a0cf",
       "structural_formula": "assertprev[\"best_purity_variance\"]<#/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a8b225eb4ec8a08796a3081ffc5bbb31c6c7c02776bab02d1898f917d88c5506",
+      "normalized_formula": "assertprev[\"full_native_links\"]=160",
+      "numeric_literals": [
+        "160"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe53_physics_unification_gates.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_20261013_toe53_physics_unification_gates.py",
+          "raw": "assert prev[\"full_native_links\"]==160",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5e77c87ae8c5336c9702018aa29e90167ba167daa8080d0c419aca0fcb5bc345",
+      "structural_formula": "assertprev[\"full_native_links\"]=#"
     },
     {
       "file_count": 1,
@@ -1392862,6 +1393042,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "22d7b27a298751753bea544cdadccefbc25e877d35efe5e1cfa6105d472e82f6",
+      "normalized_formula": "nu=load(\"w33_20261013_toe51_lepton_branch_observables.json\")",
+      "numeric_literals": [
+        "0261013",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe53_physics_unification_gates.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/w33_20261013_toe53_physics_unification_gates.py",
+          "raw": "nu=load(\"w33_20261013_toe51_lepton_branch_observables.json\")",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "eb4c7e0cfdeb267154246f7a916bb534fb842f225371e279cc4d8f95fea3e96b",
+      "structural_formula": "nu=load(\"w3#_2#_toe5#_lepton_branch_observables.json\")"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fb9dba6b749280275c222d6792feb2b7eb38ad8e0b3e80f5215487d8d1a05883",
       "normalized_formula": "nu=next(sforsinp39[\"spectra\"][\"up_MZ\"]ifs[\"ordering\"]=\"NO\")[\"masses_meV\"]",
       "numeric_literals": [
@@ -1449957,6 +1450166,35 @@
       },
       "structural_family_id": "8ce49201cf7c6b59c6c3e899e17a53b807e036850ad7e39f26409b633830a9af",
       "structural_formula": "prev=k5_main();n=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "784115cb44ce58017f03c22a86693250161fd7134c86026f6a16fb8c4b9733ac",
+      "normalized_formula": "prev=load(\"w33_20261013_toe51_dynamic_metric_gauss.json\")",
+      "numeric_literals": [
+        "0261013",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe53_physics_unification_gates.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_20261013_toe53_physics_unification_gates.py",
+          "raw": "prev=load(\"w33_20261013_toe51_dynamic_metric_gauss.json\")",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bc0d0da157397b474f54b2f2061a0ad6c38ee6d541432c5837737264cc3cb26d",
+      "structural_formula": "prev=load(\"w3#_2#_toe5#_dynamic_metric_gauss.json\")"
     },
     {
       "file_count": 1,
@@ -1520428,7 +1520666,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 151,
+          "line": 155,
           "path": "analysis/w33_pass11962_line_module_steinberg_hom.py",
           "raw": "print(f\" hom!=0: {r['N_HOM_NONZERO']}/{r['N_CLASSES']} injective: {r['N_EMBED']} (max order {r['MAX_ORDER_EMBED']})\")",
           "status": "open_or_conditional"
@@ -1690039,6 +1690277,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5555cdbe13720a15ff7638c58fdfe2f470f1647dddceb6f76ff44554ea998fb1",
+      "normalized_formula": "theta=ang+(rng.normal(0,angular)ifrngisnotNoneelse0.)",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe53_optical_15to81.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/w33_20261013_toe53_optical_15to81.py",
+          "raw": "theta=ang+(rng.normal(0,angular) if rng is not None else 0.)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5185b9d74428cb9f24e984aafcef750b876f07410555ccf5744afad7d7974c07",
+      "structural_formula": "theta=ang+(rng.normal(#,angular)ifrngisnotNoneelse0.)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6138d182bda01f4778c3ae9f5912f31851087cb9c4826680cbc7829f44ae5521",
       "normalized_formula": "theta=arccos(-(q-1)/q)=arccos(-2/3)",
       "numeric_literals": [
@@ -1787131,9 +1787396,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T01:14:43-04:00",
+  "frozen_at": "2026-10-13T01:24:19-04:00",
   "pass": 398,
-  "repository_head": "18f4e97fa987669d706f6225ea93748137b819e7",
+  "repository_head": "1ab8195e987adf2b20509beffa4afa15345c3df2",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1933254,6 +1933519,14 @@
     },
     {
       "exact_formula_ids": [
+        "b9b517baa8c8a4f0f1dc80de0279eb8573c83262f38a9204705b40c8a6834669"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "878377f36c06ed730b25918c0c5e3eabe93c5a72996895f72c0e7a2188c0db7e",
+      "structural_formula": "Anindependent3#-replicateGaussianreconstructionteststhreeknowndefectivelinks[#,#,#]withperturbations[#,#,#],Euclideannorm~#.EvenwithanORACLEsuppliedwiththecorrectsupport,theRMSlinkperturbationrecoveryerroris0#at0#"
+    },
+    {
+      "exact_formula_ids": [
         "403f074122200b56f025b78464f5d1203b685bd48857a1d0f7e43791d79bf5a6"
       ],
       "exact_member_count": 1,
@@ -1949275,6 +1949548,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0a513a3954e67af3d5cd5db0181f2879d501cb12fa95cddfff07de83990fcf9d",
       "structural_formula": "F=W@(V@(np.diag(ev^(#)))@V.T)"
+    },
+    {
+      "exact_formula_ids": [
+        "b5e3c3b9b3b161de85e636b338a77f88ea8220b76113ba93ec2423c97f3ef8c0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "abf7581ddcd710ba9278c18336da772b43513d6856de8856bf38bfb7b5f86e8a",
+      "structural_formula": "F=W@(V@np.diag(ev^#)@V.T)"
     },
     {
       "exact_formula_ids": [
@@ -1998643,6 +1998924,14 @@
       "exact_member_count": 1,
       "structural_family_id": "deff72a262206979a75953f5fe97ad877972705d3caec356fc6ad20bfb375551",
       "structural_formula": "TOE4#imposesoppositecontinuousgaussian-centershiftss_L=s,s_R=-s,s_H=#withflux-weightedrelation3s_L+#s_R-#s_H=#.RecomputednormalizedM=#familyandM=#Higgswavefunctionsona1#x1#grid.ForbiddenYukawaoverlapsstaybelow1e-#.ASINGLEfixedHiggsnowgenerallyhasunequalformerlysymmetricoffdiagonalsY[#,#,#]andY[#,#,#](absolutemagnitudesplit)"
+    },
+    {
+      "exact_formula_ids": [
+        "c4193424c4084c3304a256cf1555954b9631cef18c905e6b76c9e5c7a2bf37e3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "40171bc774e238971adff99b70e0609f39ae2b9bce6d2d71ed95249770f478cf",
+      "structural_formula": "TOE5#providedsixacousticplustwelvefinite-Blochspectral-momentgradientswithnumericalrank1#butsmallestnormalizedsingularvalue~#.TOE5#establishedexactredundancyofoppositekunderrealreciprocalweights.TOE5#enumerates4#three-wavevectorchoicesfrom1#non-oppositecandidates,keepingthek=#blockandthesixacousticmeasurements.Underexplicitlyassumedrelativemomentnoise(eachmomentgetssigmatimesitsvalue;acousticcoefficientsscaleby.#),all1#whitenedgradientsarecomparedbytheirrow-normalizedminimumsingularvalue"
     },
     {
       "exact_formula_ids": [
@@ -2070133,6 +2070422,14 @@
     },
     {
       "exact_formula_ids": [
+        "275ffc37d824233f5caebead1dccccf19dd2319dff8770751524ec41462f544e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7b3f7c72e836ab99217a3f4a0568088dc2b99eb91f3311d112d4d3f3fe42566e",
+      "structural_formula": "assertclock[\"scalar_FI_char_omega_minimum_number_of_8#D_K8#_slices\"][\"line4#\"]=#"
+    },
+    {
+      "exact_formula_ids": [
         "0859af99059a5354a7df38cc23b7b1c1bb98743e108cae6c57ec7aa2e79d9abd"
       ],
       "exact_member_count": 1,
@@ -2073655,9 +2073952,10 @@
     },
     {
       "exact_formula_ids": [
-        "bcbcf9723d7905fecc71971363ed396be06298bc99757d7d221a838852d64048"
+        "bcbcf9723d7905fecc71971363ed396be06298bc99757d7d221a838852d64048",
+        "dadcea64e1206cbb6747671b4049e725227d51be12147e92a8da68d203134c87"
       ],
-      "exact_member_count": 1,
+      "exact_member_count": 2,
       "structural_family_id": "c916e8070dadec495e6973ebcdb9a622e4658d629996c60599edb466554cd4dd",
       "structural_formula": "assertmin(ev)>#"
     },
@@ -2074869,6 +2075167,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1f8f7cdb31cd6f2da08d07230279b202d0be312a7f66662f90f3fdabb302a0cf",
       "structural_formula": "assertprev[\"best_purity_variance\"]<#/#"
+    },
+    {
+      "exact_formula_ids": [
+        "a8b225eb4ec8a08796a3081ffc5bbb31c6c7c02776bab02d1898f917d88c5506"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5e77c87ae8c5336c9702018aa29e90167ba167daa8080d0c419aca0fcb5bc345",
+      "structural_formula": "assertprev[\"full_native_links\"]=#"
     },
     {
       "exact_formula_ids": [
@@ -2160557,6 +2160863,14 @@
     },
     {
       "exact_formula_ids": [
+        "22d7b27a298751753bea544cdadccefbc25e877d35efe5e1cfa6105d472e82f6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "eb4c7e0cfdeb267154246f7a916bb534fb842f225371e279cc4d8f95fea3e96b",
+      "structural_formula": "nu=load(\"w3#_2#_toe5#_lepton_branch_observables.json\")"
+    },
+    {
+      "exact_formula_ids": [
         "fb9dba6b749280275c222d6792feb2b7eb38ad8e0b3e80f5215487d8d1a05883"
       ],
       "exact_member_count": 1,
@@ -2175869,6 +2176183,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8ce49201cf7c6b59c6c3e899e17a53b807e036850ad7e39f26409b633830a9af",
       "structural_formula": "prev=k5_main();n=#"
+    },
+    {
+      "exact_formula_ids": [
+        "784115cb44ce58017f03c22a86693250161fd7134c86026f6a16fb8c4b9733ac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bc0d0da157397b474f54b2f2061a0ad6c38ee6d541432c5837737264cc3cb26d",
+      "structural_formula": "prev=load(\"w3#_2#_toe5#_dynamic_metric_gauss.json\")"
     },
     {
       "exact_formula_ids": [
@@ -2239570,6 +2239892,14 @@
     },
     {
       "exact_formula_ids": [
+        "5555cdbe13720a15ff7638c58fdfe2f470f1647dddceb6f76ff44554ea998fb1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5185b9d74428cb9f24e984aafcef750b876f07410555ccf5744afad7d7974c07",
+      "structural_formula": "theta=ang+(rng.normal(#,angular)ifrngisnotNoneelse0.)"
+    },
+    {
+      "exact_formula_ids": [
         "f9b5fe4eb17057a599cb05443a0a36d17651da69595d314956a5a8faa9e21edf"
       ],
       "exact_member_count": 1,
@@ -2264784,20 +2265114,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87276797,
-    "exact_formula_families": 61119,
-    "files_scanned": 11957,
-    "formula_occurrences": 67094,
+    "bytes_scanned": 87310875,
+    "exact_formula_families": 61128,
+    "files_scanned": 11964,
+    "formula_occurrences": 67103,
     "status_occurrences": {
       "certified_or_theorem": 4874,
       "killed_or_retracted": 1624,
       "open_or_conditional": 2223,
       "preregistered": 32,
       "retrospective_fit": 5199,
-      "unclassified": 53142
+      "unclassified": 53151
     },
-    "structural_families": 59498
+    "structural_families": 59506
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "831c3747189ad39440d48dcb8823695c6a574eeaf9f7f51cdf2a34c153c84637"
+  "universe_sha256": "a7b00646b912c8ad67d32a2a2cc48c2985386e3b3804a78a25a2938b0d9ba981"
 }
