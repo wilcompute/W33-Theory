@@ -1,0 +1,68 @@
+{
+  "boundary": "Exact character theory over C for the stated action of PSp(4,3) on the 40 lines. Not a statement about non-equivariant storage, about a different H27 action on the signal space, about quantum-device noise, or about the 216-state carriers.",
+  "checks": {
+    "116_classes_115_have_nonzero_hom": true,
+    "burnside_cross_check_clean": true,
+    "first_failure_at_order_8": true,
+    "gap_pass_line": true,
+    "h27_x_c3_is_not_the_sylow_group": true,
+    "hom_full_group_is_zero": true,
+    "hom_sylow3_is_40": true,
+    "no_maximal_subgroup_embeds": true,
+    "no_order27_subgroup_embeds": true,
+    "only_36_classes_embed_max_order_24": true,
+    "orbit_obstruction_explains_79_of_80": true,
+    "perm_is_1_plus_15_plus_24": true,
+    "st_regular_on_sylow3": true,
+    "sylow3_has_no_injective_map": true,
+    "sylow3_is_smallgroup_81_7": true,
+    "three_order27_classes_each_three_regular": true,
+    "unique_degree_81_irreducible": true,
+    "unique_order81_class_is_sylow": true
+  },
+  "holotrade_carrier_note": "Holotrade's K81 = Reg(H27) (x) Reg(C3) with an EXTERNAL C3.  Both H27 x C3 groups are SmallGroup(81,12) or (81,13), never the unique order-81 subgroup class (81,7) of PSp(4,3); so the full K81 action is not a Steinberg restriction, while its H27 part is (St_81 restricted to each order-27 subgroup is 3 copies of the regular module).",
+  "independent_python_spectrum": {
+    "line_graph_valency": 12,
+    "matches_1_24_15": true,
+    "spectrum": {
+      "-4": 15,
+      "2": 24,
+      "12": 1
+    }
+  },
+  "prior": [
+    "TOE51 4a7898e4b proposal 4 (this answers its H27 gate)",
+    "Holotrade analysis/w33_steinberg_doublecoset_colour_swap.g (St_81 definition)",
+    "Holotrade analysis/FRAME_BUNDLE_THREE_K81_SLICES_20260926.md (K81 carrier)"
+  ],
+  "results": {
+    "BURNSIDE_MISMATCHES": "0",
+    "EMBED_SYLOW3": "false",
+    "H27xC3_IDS": "[ [ 81, 12 ], [ 81, 13 ] ]",
+    "HOM_FULL": "0",
+    "HOM_FULL_ZERO_BUT_ALL_PROPER_NONZERO": "true",
+    "HOM_SYLOW3": "40",
+    "MAXIMAL_ORDERS_AND_EMBED": "[ [ 960, false ], [ 720, false ],  [ 648, false ], [ 648, false ], [ 576, false ] ]",
+    "MAX_ORDER_EMBED": "24",
+    "MIN_ORDER_NOEMBED": "8",
+    "NOEMBED_NEEDING_OTHER_IRREPS": "[ [ 80, [ 80, 49 ] ] ]",
+    "N_CLASSES": "116",
+    "N_EMBED": "36",
+    "N_HOM_NONZERO": "115",
+    "N_NOEMBED": "80",
+    "N_NOEMBED_EXPLAINED_BY_ORBITS": "79",
+    "ORDER27_IDS": "[ [ 27, 5 ], [ 27, 3 ], [ 27, 4 ] ]",
+    "ORDER27_ROWS": "[ [ [ 27, 5 ], 120, false, 6, 3 ],  [ [ 27, 3 ], 120, false, 8, 3 ], [ [ 27, 4 ], 120, false, 4, 3 ] ]",
+    "ORDER81_CLASSES": "1",
+    "PERM_DECOMP": "1+15+24",
+    "ST_ON_ORDER27_IS_THREE_REGULAR": "[ true, true, true ]",
+    "ST_REGULAR_ON_SYLOW3": "true",
+    "SYLOW3_ID": "[ 81, 7 ]",
+    "SYLOW3_ORBITS_ON_40": "4 TRIVIAL_IN_ST 1",
+    "UNIQUE_ST81": "true"
+  },
+  "schema": "w33.pass11962-line-module-steinberg-hom.v1",
+  "semantic_sha256": "a3528557929ea5b76178b97d1c755d060154267d52f0e72a82054bf01dc28ab7",
+  "status": "PASS",
+  "theorem": "The 40-line module 1+15+24 of PSp(4,3) admits no equivariant map into St_81 for the full group (Schur) but admits nonzero equivariant maps for 115 of 116 subgroup classes; an INJECTIVE (equivalently isometric) equivariant map exists only for 36 subgroup classes of order <= 24.  It fails for every maximal subgroup, the Sylow-3 subgroup SmallGroup(81,7) and all three order-27 subgroups, where the H-orbit count on the 40 lines (4, 6, 8 for order 27; 4 for order 81) exceeds the number of invariant directions in St_81 (3; 1).  This is a character-theoretic no-go for a lossless symmetry-preserving embedding of the line signal into Holotrade's K81 slice."
+}
