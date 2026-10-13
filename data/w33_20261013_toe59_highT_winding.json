@@ -1,0 +1,347 @@
+{
+  "status": "PASS_TOE59_GIRTH8_HIGH_T_FERMION_FLUX_COEFFICIENT",
+  "native_P_times_deck_voltages_max": 0,
+  "exact_fermion_free_energy_series_coeff_of_beta7_traceH8": "17/645120",
+  "high_temperature_free_energy_series": "At mu=0 on an 80-site bipartite model, F_beta(H)=-beta^-1 Tr log[2 cosh(beta H/2)]. The expansion has -beta Tr H\u00b2/8 + beta\u00b3 Tr H4/192 - beta\u2075 Tr H6/2880 + 17 beta7 Tr H8/645120+... . All twisted trace differences first appear at H8; hence DeltaF=17 beta7 DeltaTrH8/645120+O(beta9).",
+  "winding_moment_rows": [
+    {
+      "pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "delta_trace_H8": 0,
+      "exact_leading_coefficient": "0",
+      "leading_coefficient_float": 0.0,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": 0.0,
+          "quotient_over_beta_seven": 0.0,
+          "fractional_deviation_from_leading": 0.0
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": 0.0,
+          "quotient_over_beta_seven": 0.0,
+          "fractional_deviation_from_leading": 0.0
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": 0.0,
+          "quotient_over_beta_seven": 0.0,
+          "fractional_deviation_from_leading": 0.0
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": 0.0,
+          "quotient_over_beta_seven": 0.0,
+          "fractional_deviation_from_leading": 0.0
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": 0.0,
+          "quotient_over_beta_seven": 0.0,
+          "fractional_deviation_from_leading": 0.0
+        }
+      ]
+    },
+    {
+      "pi_corner": [
+        0,
+        0,
+        1
+      ],
+      "delta_trace_H8": -2592,
+      "exact_leading_coefficient": "-153/2240",
+      "leading_coefficient_float": -0.06830357142857142,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": -6.640448191319592e-09,
+          "quotient_over_beta_seven": -0.0664044819131959,
+          "fractional_deviation_from_leading": 0.027803663493079608
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": -1.095788206839643e-07,
+          "quotient_over_beta_seven": -0.06413392339985109,
+          "fractional_deviation_from_leading": 0.06104582734858523
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": -7.825370289538114e-07,
+          "quotient_over_beta_seven": -0.061135705387016494,
+          "fractional_deviation_from_leading": 0.10494130675217674
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": -1.1719021131284535e-05,
+          "quotient_over_beta_seven": -0.0535849160095315,
+          "fractional_deviation_from_leading": 0.2154888113637218
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": -0.00028616161549166463,
+          "quotient_over_beta_seven": -0.03662868678293307,
+          "fractional_deviation_from_leading": 0.46373687324333274
+        }
+      ]
+    },
+    {
+      "pi_corner": [
+        0,
+        1,
+        0
+      ],
+      "delta_trace_H8": -2592,
+      "exact_leading_coefficient": "-153/2240",
+      "leading_coefficient_float": -0.06830357142857142,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": -6.640334504481871e-09,
+          "quotient_over_beta_seven": -0.06640334504481868,
+          "fractional_deviation_from_leading": 0.027820307840563035
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": -1.095788206839643e-07,
+          "quotient_over_beta_seven": -0.06413392339985109,
+          "fractional_deviation_from_leading": 0.06104582734858523
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": -7.825370289538114e-07,
+          "quotient_over_beta_seven": -0.061135705387016494,
+          "fractional_deviation_from_leading": 0.10494130675217674
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": -1.1719021131284535e-05,
+          "quotient_over_beta_seven": -0.0535849160095315,
+          "fractional_deviation_from_leading": 0.2154888113637218
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": -0.0002861616154632429,
+          "quotient_over_beta_seven": -0.036628686779295094,
+          "fractional_deviation_from_leading": 0.46373687329659463
+        }
+      ]
+    },
+    {
+      "pi_corner": [
+        0,
+        1,
+        1
+      ],
+      "delta_trace_H8": -4992,
+      "exact_leading_coefficient": "-221/1680",
+      "leading_coefficient_float": -0.13154761904761905,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": -1.278885974898003e-08,
+          "quotient_over_beta_seven": -0.12788859748980025,
+          "fractional_deviation_from_leading": 0.027815186502875972
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": -2.1103971903357888e-07,
+          "quotient_over_beta_seven": -0.12351661653542799,
+          "fractional_deviation_from_leading": 0.06105015484380536
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": -1.5070872905198485e-06,
+          "quotient_over_beta_seven": -0.11774119457186312,
+          "fractional_deviation_from_leading": 0.1049538150193211
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": -2.2568533154299075e-05,
+          "quotient_over_beta_seven": -0.10319402448239177,
+          "fractional_deviation_from_leading": 0.2155386374189223
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": -0.0005509242352275123,
+          "quotient_over_beta_seven": -0.07051830210912158,
+          "fractional_deviation_from_leading": 0.4639332690347319
+        }
+      ]
+    },
+    {
+      "pi_corner": [
+        1,
+        0,
+        0
+      ],
+      "delta_trace_H8": -2592,
+      "exact_leading_coefficient": "-153/2240",
+      "leading_coefficient_float": -0.06830357142857142,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": -6.640334504481871e-09,
+          "quotient_over_beta_seven": -0.06640334504481868,
+          "fractional_deviation_from_leading": 0.027820307840563035
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": -1.095788206839643e-07,
+          "quotient_over_beta_seven": -0.06413392339985109,
+          "fractional_deviation_from_leading": 0.06104582734858523
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": -7.825370289538114e-07,
+          "quotient_over_beta_seven": -0.061135705387016494,
+          "fractional_deviation_from_leading": 0.10494130675217674
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": -1.1719021131284535e-05,
+          "quotient_over_beta_seven": -0.0535849160095315,
+          "fractional_deviation_from_leading": 0.2154888113637218
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": -0.0002861616154632429,
+          "quotient_over_beta_seven": -0.036628686779295094,
+          "fractional_deviation_from_leading": 0.46373687329659463
+        }
+      ]
+    },
+    {
+      "pi_corner": [
+        1,
+        0,
+        1
+      ],
+      "delta_trace_H8": -5120,
+      "exact_leading_coefficient": "-17/126",
+      "leading_coefficient_float": -0.1349206349206349,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": -1.3118210517859552e-08,
+          "quotient_over_beta_seven": -0.13118210517859547,
+          "fractional_deviation_from_leading": 0.02770910279393944
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": -2.1649958625857835e-07,
+          "quotient_over_beta_seven": -0.12671214925056257,
+          "fractional_deviation_from_leading": 0.060839364378183276
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": -1.5463403428839229e-06,
+          "quotient_over_beta_seven": -0.12080783928780643,
+          "fractional_deviation_from_leading": 0.10460072057272875
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": -2.3167102114030058e-05,
+          "quotient_over_beta_seven": -0.10593096531335192,
+          "fractional_deviation_from_leading": 0.21486461003045046
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": -0.0005662762994234072,
+          "quotient_over_beta_seven": -0.07248336632619612,
+          "fractional_deviation_from_leading": 0.4627703436999581
+        }
+      ]
+    },
+    {
+      "pi_corner": [
+        1,
+        1,
+        0
+      ],
+      "delta_trace_H8": -5120,
+      "exact_leading_coefficient": "-17/126",
+      "leading_coefficient_float": -0.1349206349206349,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": -1.3118210517859552e-08,
+          "quotient_over_beta_seven": -0.13118210517859547,
+          "fractional_deviation_from_leading": 0.02770910279393944
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": -2.1649958625857835e-07,
+          "quotient_over_beta_seven": -0.12671214925056257,
+          "fractional_deviation_from_leading": 0.060839364378183276
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": -1.5463403428839229e-06,
+          "quotient_over_beta_seven": -0.12080783928780643,
+          "fractional_deviation_from_leading": 0.10460072057272875
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": -2.3167102114030058e-05,
+          "quotient_over_beta_seven": -0.10593096531335192,
+          "fractional_deviation_from_leading": 0.21486461003045046
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": -0.0005662762993949855,
+          "quotient_over_beta_seven": -0.07248336632255814,
+          "fractional_deviation_from_leading": 0.462770343726922
+        }
+      ]
+    },
+    {
+      "pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "delta_trace_H8": -7456,
+      "exact_leading_coefficient": "-3961/20160",
+      "leading_coefficient_float": -0.1964781746031746,
+      "temperature_checks": [
+        {
+          "beta": 0.1,
+          "free_energy_difference": -1.9103936210740358e-08,
+          "quotient_over_beta_seven": -0.19103936210740352,
+          "fractional_deviation_from_leading": 0.027681509698244115
+        },
+        {
+          "beta": 0.15,
+          "free_energy_difference": -3.153025431856804e-07,
+          "quotient_over_beta_seven": -0.18453921137524967,
+          "fractional_deviation_from_leading": 0.06076483177858281
+        },
+        {
+          "beta": 0.2,
+          "free_energy_difference": -2.252159276849852e-06,
+          "quotient_over_beta_seven": -0.17594994350389465,
+          "fractional_deviation_from_leading": 0.1044809742392032
+        },
+        {
+          "beta": 0.3,
+          "free_energy_difference": -3.37458295405213e-05,
+          "quotient_over_beta_seven": -0.15430191833800325,
+          "fractional_deviation_from_leading": 0.21466127904717355
+        },
+        {
+          "beta": 0.5,
+          "free_energy_difference": -0.0008250132216574002,
+          "quotient_over_beta_seven": -0.10560169237214723,
+          "fractional_deviation_from_leading": 0.46252710976458267
+        }
+      ]
+    }
+  ],
+  "convergence_caveat": "The displayed asymptotic series has finite radius from cosh complex zeros; beta=.15 approximates the asymptotic coefficient better than beta=.5. This is a fixed finite graph static spinless fermion, not physical thermodynamics.",
+  "prior_art": "Trace closed-walk magnetic flux expansions and finite-temperature half-filled flux phases are established techniques; compare Lieb Phys Rev Lett 73,2158 (1994), whose planar hypotheses do not apply automatically to the W33 three-deck graph.",
+  "physical_limit": "This is a parameter-independent coefficient WITHIN a supplied 80-site hopping Hamiltonian, not a fundamental coupling, spacetime vacuum or experimental prediction."
+}

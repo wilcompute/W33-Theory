@@ -1,0 +1,49 @@
+{
+  "status": "PASS_TOE59_EXTERNAL_4D_U1_TOPOLOGICAL_INDEX_PREREQUISITE",
+  "external_torus_length": 3,
+  "sites": 81,
+  "records": [
+    {
+      "flux_pairs": {
+        "(0, 1)": 1,
+        "(2, 3)": 1
+      },
+      "U1_second_Chern_character": 1,
+      "actual_numeric_Q": 1.0,
+      "gauge_curvature_residual": 7.216449660063518e-16,
+      "max_abs_plaquette_angle": 0.6981317007977323
+    },
+    {
+      "flux_pairs": {
+        "(0, 1)": 1
+      },
+      "U1_second_Chern_character": 0,
+      "actual_numeric_Q": 0.0,
+      "gauge_curvature_residual": 6.661338147750939e-16,
+      "max_abs_plaquette_angle": 0.6981317007977323
+    },
+    {
+      "flux_pairs": {
+        "(0, 2)": 1,
+        "(1, 3)": 1
+      },
+      "U1_second_Chern_character": -1,
+      "actual_numeric_Q": -1.0,
+      "gauge_curvature_residual": 6.661338147750939e-16,
+      "max_abs_plaquette_angle": 0.6981317007977323
+    },
+    {
+      "flux_pairs": {
+        "(0, 3)": 1,
+        "(1, 2)": 1
+      },
+      "U1_second_Chern_character": 1,
+      "actual_numeric_Q": 1.0,
+      "gauge_curvature_residual": 7.771561172376098e-16,
+      "max_abs_plaquette_angle": 0.6981317007977323
+    }
+  ],
+  "exact_theorem": "On a 4-torus with integer first Chern fluxes n_ij, the spin-Dirac U1 ch2 index integral is Q=n01*n23-n02*n13+n03*n12. A smooth 3D time-independent spatial connection with no mixed temporal flux n0i has Q=0. Nonzero Q requires both spatial and temporal first-Chern flux sectors. The periodic link fields here encode bundle transition functions at boundaries and have small admissible principal plaquette angles 2pi/9.",
+  "native_boundary": "W33 native 80-site spatial two-complex has only B:C0\u2192C1 and P:C1\u2192C2; no supplied temporal links, 4-cells or C4 cup product. The explicit 4D torus in this script is AN EXTERNAL CONTROL and has not been coupled to W33 320-band overlap. This shows what topological data the existing static index0 test lacks, not a W33 chiral discovery.",
+  "prior_art": "Abelian flux bundles/T4 Dirac index and overlap admissibility are standard; external4D overlap controls already exist in W33 passes11423\u201311427/11582. This is a transparent flux calculation only, not an executed nonzero overlap index."
+}

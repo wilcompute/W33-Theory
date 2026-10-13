@@ -1,0 +1,209 @@
+{
+  "status": "PASS_TOE59_W33_SHORTEST_FLAT_WILSON_WINDING_MOMENT",
+  "native_sites": 80,
+  "native_edges": 160,
+  "tested_corners": [
+    {
+      "pi_corner": [
+        0,
+        0,
+        0
+      ],
+      "shortest_nontrivial_winding_length": null,
+      "first_flux_sensitive_moment": null,
+      "trace_moment_difference": 0,
+      "base_trace": 0,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": 0,
+        "10": 0,
+        "12": 0,
+        "14": 0,
+        "16": 0,
+        "18": 0,
+        "20": 0,
+        "22": 0,
+        "24": 0
+      }
+    },
+    {
+      "pi_corner": [
+        0,
+        0,
+        1
+      ],
+      "shortest_nontrivial_winding_length": 8,
+      "first_flux_sensitive_moment": 8,
+      "trace_moment_difference": -2592,
+      "base_trace": 193280,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": -2592,
+        "10": -90720,
+        "12": -2161728,
+        "14": -44271360,
+        "16": -842285952,
+        "18": -15395453568,
+        "20": -274763508480,
+        "22": -4828336584192,
+        "24": -83927540620800
+      }
+    },
+    {
+      "pi_corner": [
+        0,
+        1,
+        0
+      ],
+      "shortest_nontrivial_winding_length": 8,
+      "first_flux_sensitive_moment": 8,
+      "trace_moment_difference": -2592,
+      "base_trace": 193280,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": -2592,
+        "10": -90720,
+        "12": -2161728,
+        "14": -44271360,
+        "16": -842285952,
+        "18": -15395453568,
+        "20": -274763508480,
+        "22": -4828336584192,
+        "24": -83927540620800
+      }
+    },
+    {
+      "pi_corner": [
+        0,
+        1,
+        1
+      ],
+      "shortest_nontrivial_winding_length": 8,
+      "first_flux_sensitive_moment": 8,
+      "trace_moment_difference": -4992,
+      "base_trace": 193280,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": -4992,
+        "10": -174720,
+        "12": -4156416,
+        "14": -84860160,
+        "16": -1607780352,
+        "18": -29241796608,
+        "20": -519023247360,
+        "22": -9067743657984,
+        "24": -156674405597184
+      }
+    },
+    {
+      "pi_corner": [
+        1,
+        0,
+        0
+      ],
+      "shortest_nontrivial_winding_length": 8,
+      "first_flux_sensitive_moment": 8,
+      "trace_moment_difference": -2592,
+      "base_trace": 193280,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": -2592,
+        "10": -90720,
+        "12": -2161728,
+        "14": -44271360,
+        "16": -842285952,
+        "18": -15395453568,
+        "20": -274763508480,
+        "22": -4828336584192,
+        "24": -83927540620800
+      }
+    },
+    {
+      "pi_corner": [
+        1,
+        0,
+        1
+      ],
+      "shortest_nontrivial_winding_length": 8,
+      "first_flux_sensitive_moment": 8,
+      "trace_moment_difference": -5120,
+      "base_trace": 193280,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": -5120,
+        "10": -178560,
+        "12": -4236288,
+        "14": -86320640,
+        "16": -1633157120,
+        "18": -29673953280,
+        "20": -526324572160,
+        "22": -9190638673920,
+        "24": -158737235836928
+      }
+    },
+    {
+      "pi_corner": [
+        1,
+        1,
+        0
+      ],
+      "shortest_nontrivial_winding_length": 8,
+      "first_flux_sensitive_moment": 8,
+      "trace_moment_difference": -5120,
+      "base_trace": 193280,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": -5120,
+        "10": -178560,
+        "12": -4236288,
+        "14": -86320640,
+        "16": -1633157120,
+        "18": -29673953280,
+        "20": -526324572160,
+        "22": -9190638673920,
+        "24": -158737235836928
+      }
+    },
+    {
+      "pi_corner": [
+        1,
+        1,
+        1
+      ],
+      "shortest_nontrivial_winding_length": 8,
+      "first_flux_sensitive_moment": 8,
+      "trace_moment_difference": -7456,
+      "base_trace": 193280,
+      "delta_at_even_lengths": {
+        "2": 0,
+        "4": 0,
+        "6": 0,
+        "8": -7456,
+        "10": -259680,
+        "12": -6144576,
+        "14": -124734848,
+        "16": -2349042560,
+        "18": -42458080896,
+        "20": -748835700480,
+        "22": -12999426581504,
+        "24": -223177936858624
+      }
+    }
+  ],
+  "proof": "For any Z2 deck twist c, Tr[H(c)^n]-Tr[H(0)^n] sums closed graph walks of length n weighted (-1)^deck-winding-1. The first nonzero order equals the shortest parity-nontrivial closed walk length (all altered walks contribute -2). Independently measure shortest distance from each root in the parity-double cover to its opposite-layer copy.",
+  "limits": "An 80-site static nearest-neighbor spinless model and eight selected Z2 flat connections, not physical 4D QED or a unique vacuum."
+}

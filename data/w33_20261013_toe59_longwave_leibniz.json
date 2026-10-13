@@ -1,0 +1,61 @@
+{
+  "status": "PASS_TOE59_NATIVE_BLOCH_CONTINUUM_LEIBNIZ_SCALING",
+  "native_bloch_derivative": "D_i(k)=C(k).dag diag(J[:,i]) B(k), J rational native harmonic-current derivative from Pass11970. For physical spacing a, use a^-1 D_i(ap) on a Bloch scalar with constant internal80-vector. Products add external momenta.",
+  "plane_wave_momenta": [
+    [
+      0.9,
+      -0.4,
+      0.35
+    ],
+    [
+      -0.35,
+      0.6,
+      0.2
+    ]
+  ],
+  "records": [
+    {
+      "lattice_spacing": 0.2,
+      "physical_Leibniz_rms": 0.2933162695309051,
+      "flat_derivative_real_imag_norms": [
+        4.709589749086359,
+        58.87610609875658
+      ],
+      "Leibniz_max": 2.5160856033077588
+    },
+    {
+      "lattice_spacing": 0.1,
+      "physical_Leibniz_rms": 0.14679795662535794,
+      "flat_derivative_real_imag_norms": [
+        2.3593408631157073,
+        59.064169383448885
+      ],
+      "Leibniz_max": 1.25951050324221
+    },
+    {
+      "lattice_spacing": 0.05,
+      "physical_Leibniz_rms": 0.07341646488268821,
+      "flat_derivative_real_imag_norms": [
+        1.18023927856626,
+        59.111272988027494
+      ],
+      "Leibniz_max": 0.6299388067421461
+    },
+    {
+      "lattice_spacing": 0.025,
+      "physical_Leibniz_rms": 0.036710418538838295,
+      "flat_derivative_real_imag_norms": [
+        0.5901907638704511,
+        59.12305437830304
+      ],
+      "Leibniz_max": 0.3149923506501923
+    }
+  ],
+  "halving_ratios": [
+    0.5004766931617158,
+    0.5001191199823978,
+    0.5000297766651892
+  ],
+  "interpretation": "At finite spacing the full 80-site pointwise product derivative is not a derivation, as Pass11301 and11976 show. For a restricted long-wavelength Bloch plane-wave sector, a^-1[D_i(a(p+q))-D_i(ap)-D_i(aq)]1 may vanish with a; its observed convergence is a restricted consistency check, NOT an interacting dynamical GR constraint-algebra continuum.",
+  "scope": "One-particle low-momentum plane waves with constant internal amplitudes; no nonlinear metric, constraints, Gauss product, quantum interactions, physical Planck length or rigorous uniform operator limit."
+}

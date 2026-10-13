@@ -1,0 +1,88 @@
+{
+  "status": "PASS_TOE59_CERTIFIED_THREE_LOOP_INFINITE_FLUX_BRACKETS",
+  "selected_octagon_Gram": [
+    [
+      8,
+      -4,
+      -4
+    ],
+    [
+      -4,
+      8,
+      4
+    ],
+    [
+      -4,
+      4,
+      8
+    ]
+  ],
+  "minimum_flux_quadratic_eigenvalue": 3.9999999999999973,
+  "bound_derivation": "Block decompose full infinite Z\u00b3 electric rotor Hilbert into finite cube A, exterior C and boundary B. Wilson potential 3/g\u00b2-\u03a3(S_i+S_i\u2020)/(2g\u00b2) is PSD. Exterior C>=c_N=g\u00b2 \u03bbmin(G)(N+1)\u00b2/2. Each one-step exterior site attaches to at most one interior site, so BB\u2020 is diagonal with max boundary occupancy 3/(4g^4)=b\u00b2. For full ground E<=E_A and C>=c_N>E_A, Schur/minimax yields E>=E_A-b\u00b2/(c_N-E_A), while variational E<=E_A. Also H>=0. Hence interval [max(0,E_A-b\u00b2/(c_N-E_A)),E_A] is unconditional within the selected three-loop infinite rotor.",
+  "rigorous_intervals": [
+    {
+      "g": 0.7,
+      "bound_rows": [
+        {
+          "N": 1,
+          "restricted_upper_E0": 3.7238372159263964,
+          "rigorous_lower_E0": 0,
+          "error_width_upper": 3.7238372159263964,
+          "exterior_kinetic_min": 3.919999999999997,
+          "exact_boundary_operator_norm_squared": 3.1236984589754275
+        },
+        {
+          "N": 2,
+          "restricted_upper_E0": 3.6062534177504917,
+          "rigorous_lower_E0": 3.0071260129759216,
+          "error_width_upper": 0.59912740477457,
+          "exterior_kinetic_min": 8.819999999999993,
+          "exact_boundary_operator_norm_squared": 3.1236984589754275
+        },
+        {
+          "N": 3,
+          "restricted_upper_E0": 3.604968742936741,
+          "rigorous_lower_E0": 3.3462780288114065,
+          "error_width_upper": 0.2586907141253345,
+          "exterior_kinetic_min": 15.679999999999987,
+          "exact_boundary_operator_norm_squared": 3.1236984589754275
+        }
+      ],
+      "combined_best_lower_bound": 3.3462780288114065,
+      "best_upper_bound": 3.604968742936741
+    },
+    {
+      "g": 1.1,
+      "bound_rows": [
+        {
+          "N": 1,
+          "restricted_upper_E0": 2.2688050870789653,
+          "rigorous_lower_E0": 2.199685316577355,
+          "error_width_upper": 0.06911977050161022,
+          "exterior_kinetic_min": 9.679999999999994,
+          "exact_boundary_operator_norm_squared": 0.5122600915238029
+        },
+        {
+          "N": 2,
+          "restricted_upper_E0": 2.2684058831463716,
+          "rigorous_lower_E0": 2.2421517447886385,
+          "error_width_upper": 0.026254138357733048,
+          "exterior_kinetic_min": 21.779999999999987,
+          "exact_boundary_operator_norm_squared": 0.5122600915238029
+        },
+        {
+          "N": 3,
+          "restricted_upper_E0": 2.268405795685764,
+          "rigorous_lower_E0": 2.25435263552348,
+          "error_width_upper": 0.014053160162283973,
+          "exterior_kinetic_min": 38.71999999999998,
+          "exact_boundary_operator_norm_squared": 0.5122600915238029
+        }
+      ],
+      "combined_best_lower_bound": 2.25435263552348,
+      "best_upper_bound": 2.268405795685764
+    }
+  ],
+  "limits": "This is a mathematical worst-case operator-norm error bound, usually much looser than observed N\u2192N+1 differences. It excludes 1382 other native plaquettes and all dynamic fermions, so is not a full W33, thermodynamic or interacting-QED certificate.",
+  "prior_art": "Schur complements and variational Ritz energy enclosures are standard. Native W33 loop coupling data were first computed TOE58. Quantum electric truncation bounds are active lattice gauge prior art (e.g. Efficient truncations of lattice gauge theory for quantum simulation, Phys Rev D 2025)."
+}

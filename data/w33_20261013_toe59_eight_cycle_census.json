@@ -1,0 +1,35 @@
+{
+  "status": "PASS_TOE59_EXHAUSTIVE_W33_EIGHT_CYCLE_WINDING_CENSUS",
+  "graph_vertices": 80,
+  "graph_edges": 160,
+  "girth_known": 8,
+  "all_undirected_simple_eight_cycles": 1620,
+  "TOE38_octs_len": 1382,
+  "integral_voltage_winding_counts": {
+    "(-1, 0, -1)": 1,
+    "(-1, 0, 0)": 44,
+    "(0, -1, 0)": 37,
+    "(0, -1, 1)": 1,
+    "(0, 0, -1)": 56,
+    "(0, 0, 0)": 1382,
+    "(0, 0, 1)": 21,
+    "(0, 1, -1)": 2,
+    "(0, 1, 0)": 40,
+    "(1, 0, 0)": 35,
+    "(1, 1, 0)": 1
+  },
+  "mod2_winding_counts": {
+    "(0, 0, 0)": 1382,
+    "(0, 0, 1)": 77,
+    "(0, 1, 0)": 77,
+    "(0, 1, 1)": 3,
+    "(1, 0, 0)": 79,
+    "(1, 0, 1)": 1,
+    "(1, 1, 0)": 1
+  },
+  "zero_integer_winding_cycles": 1382,
+  "nonzero_integer_winding_cycles": 238,
+  "fourier_oriented_trace_check": "For each nonzero pi character c, \u0394TrH8=-32 times number of simple length8 cycles with winding parity dot c odd. Direct exhaustive unrooted simple-cycle enumeration agrees with integer adjacency-moment certificate in all eight cases.",
+  "proof_unique_count": "Every unrooted undirected cycle is counted once by requiring the root be its smallest vertex label, all other vertices >root, and the second vertex index <last vertex index. Traverse labeled oriented edges and integrate signed integer deck voltages.",
+  "ownership": "TOE38 owns the zero winding octagon list and Pass11964 owns topological pi holonomy quotient. This is a new exhaustive native eight-cycle winding census bridging those existing pieces; do not infer any external photon or particle multiplicity merely from coincident integers."
+}
