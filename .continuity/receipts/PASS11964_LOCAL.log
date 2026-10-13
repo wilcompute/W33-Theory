@@ -1,0 +1,7 @@
+....                                                                     [100%]
+4 passed in 73.01s (0:01:13)
+
+Producer replay PASS.32-start numerical survey; failed optimizer flags retained.
+Analytic positive Hessian eigenvalues0.0994539938333791,0.1039174655598365,0.10826475512665179.
+Finite-difference Hessian max error3.7766420724061334e-7.
+Exact gauge-orbit criterion; no certified global vacuum or physical CP claim.

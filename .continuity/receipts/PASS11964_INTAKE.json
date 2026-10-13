@@ -1,0 +1,48 @@
+{
+  "intake_scope": "Reviewed recent science sources by front, not a full semantic reading of every changed corpus path or all expanded numerical arrays. Prior330-commit intake remains machine inventory.",
+  "sources_sha256_lf": {
+    "analysis/w33_20261013_toe50_dual_cusp_spread_decoder.py": "27c9c99a1f5deea3b82a60f821ae77cd191a05b6260f2f7faffdc53e0abd52b8",
+    "analysis/w33_20261013_toe50_inverse_acoustic_spectral_trace.py": "d6c15d29ea5158c4410b6119d7501ec10e305a816feb573c9f38ddbd88b7694a",
+    "analysis/w33_20261013_toe51_covariant_dual_compiler.py": "079c177b0532d80ddb406d578bc5dd8b73312596d84b8924a1bfd99584345b53",
+    "analysis/w33_20261013_toe51_physics_three_fronts.py": "09faa5322dee34ce93e0687e4d4e21b5b3a8227fa1905cc0872fee15f5f4a2d3",
+    "analysis/w33_20261013_toe51_spectral_moment_rank.py": "4ca7a9663f68f55c00fab6479a66cade3909c6234cac38bf9c77cb7a97503600",
+    "analysis/w33_20261013_toe52_bloch_reciprocity.py": "cf5fe6bb9ddff2f71ee03792385fb39ba217bcacd4380a9a07faee148d81f4fe",
+    "analysis/w33_20261013_toe52_h27_bridge.py": "43ff689f9e7d1a8f324235fde055d6d518790eef83b118312972bb8efd5f66b5",
+    "analysis/w33_20261013_toe53_crossrepo_h27_frame_address.py": "2cc070b775e36129fdf373186d3f3578161dbd4fa4a78382fc6b4266970e2f72",
+    "analysis/w33_20261013_toe53_h27_c3_extension.py": "065177e1b84f514aad7f5fd79f5da1b1d2f4972ff79b50466435a5631e554eda",
+    "analysis/w33_20261013_toe53_holotrade_frame_snapshot.py": "ca48d440d67cc856bbdfc512de522c79bf0dec44cbd9df6919a496ae730bd47a",
+    "analysis/w33_20261013_toe53_optical_15to81.py": "6f1cd50efca4d62a1a527144e8b0d11b60bef33856bd51c70b6a843ad61d281c",
+    "analysis/w33_20261013_toe53_physics_unification_gates.py": "79275046a3643ceb8aaba0afe573b4504be97de2f48a8ed208ed9cb520d97dd9",
+    "analysis/w33_20261013_toe53_spectral_noise_design.py": "f837818982fde9ac4df532e4830838c87cc167723cc4bb05ae52088be6b89e50",
+    "analysis/w33_20261013_toe54_lorentz_dispersion.py": "c998cc383e9a0c1d14c0378b84cfc6156974f13e434184fa2cfd792985a5339c",
+    "analysis/w33_20261013_toe55_common_action_audit.py": "fcdc86e42f19c2f37c550ece57ae86899a2740856879fda6ce5ce753ea2b6e54",
+    "analysis/w33_20261013_toe55_free_bloch_scaling.py": "5ef041d485f91723a2f5c3095648a4a6219769cb940268a46a95be51304b5a17",
+    "analysis/w33_20261013_toe55_gravity_chirality.py": "0d74a9071fca571b0bb6b3fbb7924bc9d304f21e4de5cbb0512f695dd8c87b50",
+    "analysis/w33_20261013_toe55_native_matter_gauge.py": "3efb55b09a8481e2d57cc522c29086e35d7cb71a398b219a1d9900fca28317b9",
+    "analysis/w33_20261013_toe56_bosonic_holonomy_vacuum.py": "3821373d93dbb86c0eba7e1e1a6a4b89ac0f06186125880091d41424ff7286a0",
+    "analysis/w33_20261013_toe56_compact_u1.py": "5a97ea1185a16dc18f0d6cf3e5c5eaa1b1a16ccc8507d0ebd38173c1b17cc86d",
+    "analysis/w33_20261013_toe56_coupling_unification.py": "6bc25f9239bc7ec079dae2bbb282a211e040900f9beeeae5a053b44571e3473a",
+    "analysis/w33_20261013_toe56_gravity_interaction.py": "537b0e855614d84f6b7e5fed0997ef70e29276853ebe79bce04182f148a7e25a",
+    "analysis/w33_20261013_toe56_rotor_chirality.py": "a3b9873f2cf361d5eb084eaac4b3b925cb4b0e8d391dcef369ec5bbe44b97110",
+    "analysis/w33_20261013_toe57_coupling_chirality_gate.py": "05194f9589da49fee2e83660bf6e404e0c2688ec9cca74f9f3421195128d10a1",
+    "analysis/w33_20261013_toe57_fermion_holonomy.py": "7f947091cbc904a127df61e2c8b36e1c8ee8da945b1024cdc87c5b4f543924d4",
+    "analysis/w33_20261013_toe57_gravity_potential_no_go.py": "c4122afa6e5e0ef46619e7f9cbe64811d6f4b767910a8ea257dbb3608a4b7e50",
+    "analysis/w33_20261013_toe57_one_loop_competition.py": "4b8e013f8a9398caba40fe22775b242626cd9f76f3e45ed4ffd1d516fea0d416",
+    "analysis/w33_20261013_toe57_two_plaquette_quantum.py": "3f9c7162e3ec761188733bcf57d6528478abac9870b60d96bae42beed08700fc",
+    "analysis/w33_pass11962_line_module_steinberg_hom.py": "3202c205198bc198f9c5feca036dfc339441b43b31c91df08bc55adfa219248b",
+    "analysis/w33_pass11962_line_module_steinberg_hom.g": "cb28db80d4c70758befac632f24db22ff2197acebfbb835cf6a47d3c4cfed2b9",
+    "analysis/w33_pass11963_weber_law_at_neutrino_epsilon.py": "2b1767ae6673e3e895fcacf0285d03b2b2963ccf1fc5d1cb2f5654eb215b5daf"
+  },
+  "connections": [
+    "TOE50-51: common acoustic Gram has154 weight freedoms; higher spectral moments distinguish some, not select geometry.",
+    "TOE52-53 plus11962: elation-H27 carrier multiplicity and external C3 clock action differ from full Steinberg subgroup action; respect distinct scopes.",
+    "TOE54-57: compact Wilson repairs periodicity; finite free dispersion is not exactly Lorentzian; tested rescaling gravity constraints fail; no physical coupling selected.",
+    "11963: finite-epsilon theta neutrino law has free epsilon phase despite approximately1meV scale.",
+    "11964: quotient-level conjugation diagnostic refines TOE57 nonzero holonomy mechanism; stable pi twists are conjugation fixed."
+  ],
+  "prior_paper_refresh": [
+    "papers/forty_points/main.tex",
+    "papers/forty_points/sec11_epilogue.tex",
+    "w33_paper.tex: driver; not every included historical insert reread"
+  ]
+}
