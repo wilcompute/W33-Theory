@@ -1,0 +1,7 @@
+Science SHA: 806cab960d53edf924fc1f7818729759659c0fff
+Local targeted replay: 14 passed in 17.48s.
+Hosted frozen replay: 14 passed in 13.53s.
+Hosted regenerated replay: 12 passed in 1.49s.
+Batch guard exit 1: false code-parameter contradiction at test line75, real_B=s.Matrix([[1,2,1]]). This is a 1x3 matrix negative control, not a [[n,k,d]] assertion; no certified code distance is superseded.
+Advisories: alpha@14 is theta-characteristic variable and cutoff, not optical confidence interval; pmns+witting is contextual scope, not a new PMNS/Witting result. Prior TOE38/39/11947/11949 and Qpsi certificate explicitly credited in report.
+No claim that batch guard returned clean.

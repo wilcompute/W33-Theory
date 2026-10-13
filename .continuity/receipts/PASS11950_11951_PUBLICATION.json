@@ -1,0 +1,24 @@
+{
+  "type": "publication_attestation",
+  "science_commit": "806cab960d53edf924fc1f7818729759659c0fff",
+  "ci_run": 38338223390,
+  "ci_job": 115103079093,
+  "conclusion": "success",
+  "ci_url": "https://github.com/wilcompute/W33-Theory/actions/runs/38338223390",
+  "local_tests": 14,
+  "hosted_frozen_tests": 14,
+  "hosted_regenerated_tests": 12,
+  "intake_commits": 330,
+  "intake_paths": 916,
+  "reading_scope": "Complete byte/AST/JSON intake; focused semantic review of physics/flavour/CP dependencies; full manual corpus audit remains incomplete.",
+  "batch_guard": "exit1; reviewed false code-parameter match on real_B matrix; advisories retained, not clean",
+  "followup_remote_commit": "6a3ab40a2",
+  "hashes": {
+    "analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py": "edd590c157d79b2d8460adeaa3e329aab6999ed824fb3986961ae566692fe857",
+    "analysis/PASS11950_11951_STRONG_CP_COMPLETION.md": "7abf8706dedbf0ba5c59e04dd989ea0556c8985ef757c30fc09f29ac35b2a204",
+    "tests/test_w33_pass11950_11951_strong_cp_completion.py": "ac9b7cbfba1defe4500ecbbd3330614b1daba80be50d952a0cad665a72a2c6ff",
+    "data/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.json": "f8ae5088b82f564919d4665f8d3958416575b643f6034547170d2e948e859c15",
+    "data/w33_pass11950_intervening_material_intake.json": "972455f9f91c20de6c5eac374196986e6ffac269496f4a95b4d46a64f4d3fa13",
+    "RESULTS_INDEX.md": "fd91ba35b534e27cb61618e2a70c4b4ab2a0fc80d66f9f9fc9478af3d0663588"
+  }
+}
