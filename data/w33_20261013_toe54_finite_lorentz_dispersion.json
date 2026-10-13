@@ -1,0 +1,443 @@
+{
+  "status": "PASS_TOE54_FINITE_BLOCH_EXACT_GLOBAL_LORENTZ_OBSTRUCTION",
+  "source": "TOE38 native zero-winding 8-cycle + three commutator 2-complex; Pass11956 positive rational-centered weights",
+  "strict_theorem": "For any finite-cell translation-equivariant Bloch Maxwell operator with finitely many finite-range loops, fixed real positive edge weights and nonzero continuum speed c, NO band of its finite-dimensional positive magnetic matrix H(k)=W^-1/2 P(k)^\u2020P(k)W^-1/2 can equal c\u00b2||k||\u00b2 on ANY open neighborhood of real k. Proof: real-analytic det(H(k)-c\u00b2||k||\u00b2 I) vanishing on a ball implies globally zero, but H(k) is uniformly bounded in real k whereas c\u00b2||k||\u00b2 grows unbounded, contradiction. A local cone can only be leading-order or asymptotic under a separately proved continuum limit.",
+  "boundedness_from_finite_loops": "For every real k, each loop row has L summands of unit complex modulus, so ||P(k)||_F\u00b2 <= sum_loop L\u00b2, hence ||H(k)|| <= sum_loop L\u00b2/min(w).",
+  "rigorous_uniform_operator_norm_bound": 545078.7304950427,
+  "max_three_axis_2pi_Bloch_periodicity_residual": 6.38378239159465e-16,
+  "analyticity_caveat": "H(k) is real analytic in all three real k for fixed W, and the characteristic determinant is real analytic. Branch labeling at degenerate k=0 is irrelevant: the determinant argument applies to the existence of ANY exact quadratic branch for all k in an open ball.",
+  "n_samples": 24,
+  "squared_continuum_speed_target": 2.0,
+  "samples": [
+    {
+      "direction": "axis_x",
+      "radius": 0.02,
+      "light_omega_sq": [
+        0.0007999575290840222,
+        0.0007999617698699557
+      ],
+      "light_phase_velocity_sq": [
+        1.9998938227100553,
+        1.9999044246748892
+      ],
+      "mean_light_phase_velocity_sq": 1.9998991236924724,
+      "fractional_pol_split": 5.301249802218334e-06,
+      "third_gapped_omega_sq": 91.5703743135753,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_x",
+      "radius": 0.04,
+      "light_omega_sq": [
+        0.003199320539419468,
+        0.003199388377527803
+      ],
+      "light_phase_velocity_sq": [
+        1.9995753371371674,
+        1.9996177359548768
+      ],
+      "mean_light_phase_velocity_sq": 1.9995965365460222,
+      "fractional_pol_split": 2.1203686310872208e-05,
+      "third_gapped_omega_sq": 91.57107600836027,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_x",
+      "radius": 0.08,
+      "light_omega_sq": [
+        0.012789133616065144,
+        0.012790217782497122
+      ],
+      "light_phase_velocity_sq": [
+        1.9983021275101787,
+        1.9984715285151753
+      ],
+      "mean_light_phase_velocity_sq": 1.998386828012677,
+      "fractional_pol_split": 8.476887588624835e-05,
+      "third_gapped_omega_sq": 91.57387945704085,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_x",
+      "radius": 0.16,
+      "light_omega_sq": [
+        0.05102645631075329,
+        0.05104372358570477
+      ],
+      "light_phase_velocity_sq": [
+        1.9932209496388003,
+        1.9938954525665924
+      ],
+      "mean_light_phase_velocity_sq": 1.9935582011026964,
+      "fractional_pol_split": 0.000338341226967482,
+      "third_gapped_omega_sq": 91.58504018919515,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_y",
+      "radius": 0.02,
+      "light_omega_sq": [
+        0.0007999583470412995,
+        0.0007999597941685556
+      ],
+      "light_phase_velocity_sq": [
+        1.9998958676032486,
+        1.999899485421389
+      ],
+      "mean_light_phase_velocity_sq": 1.9998976765123189,
+      "fractional_pol_split": 1.8090016218455293e-06,
+      "third_gapped_omega_sq": 91.5702631652336,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_y",
+      "radius": 0.04,
+      "light_omega_sq": [
+        0.003199333626671374,
+        0.003199356774015372
+      ],
+      "light_phase_velocity_sq": [
+        1.9995835166696088,
+        1.9995979837596076
+      ],
+      "mean_light_phase_velocity_sq": 1.9995907502146082,
+      "fractional_pol_split": 7.235025465731624e-06,
+      "third_gapped_omega_sq": 91.57063027827914,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_y",
+      "radius": 0.08,
+      "light_omega_sq": [
+        0.01278934276234993,
+        0.012789712687545876
+      ],
+      "light_phase_velocity_sq": [
+        1.9983348066171764,
+        1.998392607429043
+      ],
+      "mean_light_phase_velocity_sq": 1.9983637070231097,
+      "fractional_pol_split": 2.8924070059629027e-05,
+      "third_gapped_omega_sq": 91.57207837523333,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_y",
+      "radius": 0.16,
+      "light_omega_sq": [
+        0.05102978669472477,
+        0.051035678014388706
+      ],
+      "light_phase_velocity_sq": [
+        1.9933510427626864,
+        1.9935811724370587
+      ],
+      "mean_light_phase_velocity_sq": 1.9934661075998725,
+      "fractional_pol_split": 0.00011544197992387323,
+      "third_gapped_omega_sq": 91.57754794075272,
+      "max_P_gradient": 1.1102230246251565e-16
+    },
+    {
+      "direction": "axis_z",
+      "radius": 0.02,
+      "light_omega_sq": [
+        0.0007999547451102327,
+        0.0007999631097509
+      ],
+      "light_phase_velocity_sq": [
+        1.9998868627755817,
+        1.99990777437725
+      ],
+      "mean_light_phase_velocity_sq": 1.9998973185764157,
+      "fractional_pol_split": 1.0456337669928387e-05,
+      "third_gapped_omega_sq": 91.5702567788322,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_z",
+      "radius": 0.04,
+      "light_omega_sq": [
+        0.003199276014381242,
+        0.003199409809117098
+      ],
+      "light_phase_velocity_sq": [
+        1.9995475089882762,
+        1.999631130698186
+      ],
+      "mean_light_phase_velocity_sq": 1.999589319843231,
+      "fractional_pol_split": 4.181944216251126e-05,
+      "third_gapped_omega_sq": 91.57060451887956,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_z",
+      "radius": 0.08,
+      "light_omega_sq": [
+        0.012788422107771853,
+        0.01279056032035754
+      ],
+      "light_phase_velocity_sq": [
+        1.998190954339352,
+        1.9985250500558656
+      ],
+      "mean_light_phase_velocity_sq": 1.9983580021976088,
+      "fractional_pol_split": 0.00016718511705422496,
+      "third_gapped_omega_sq": 91.57197198555703,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "axis_z",
+      "radius": 0.16,
+      "light_omega_sq": [
+        0.051015129249408965,
+        0.05104918072086486
+      ],
+      "light_phase_velocity_sq": [
+        1.9927784863050375,
+        1.9941086219087836
+      ],
+      "mean_light_phase_velocity_sq": 1.9934435541069107,
+      "fractional_pol_split": 0.0006672552132241496,
+      "third_gapped_omega_sq": 91.57707340541867,
+      "max_P_gradient": 0.0
+    },
+    {
+      "direction": "diagonal_xy",
+      "radius": 0.02,
+      "light_omega_sq": [
+        0.0007999699836209069,
+        0.0007999782036559158
+      ],
+      "light_phase_velocity_sq": [
+        1.9999249590522672,
+        1.9999455091397895
+      ],
+      "mean_light_phase_velocity_sq": 1.9999352340960284,
+      "fractional_pol_split": 1.027537650814157e-05,
+      "third_gapped_omega_sq": 91.57033649900949,
+      "max_P_gradient": 6.039386883487677e-17
+    },
+    {
+      "direction": "diagonal_xy",
+      "radius": 0.04,
+      "light_omega_sq": [
+        0.003199544469354865,
+        0.003199626587259385
+      ],
+      "light_phase_velocity_sq": [
+        1.9997152933467908,
+        1.9997666170371156
+      ],
+      "mean_light_phase_velocity_sq": 1.9997409551919532,
+      "fractional_pol_split": 2.5665169376839833e-05,
+      "third_gapped_omega_sq": 91.57092470821691,
+      "max_P_gradient": 1.1107649934270853e-16
+    },
+    {
+      "direction": "diagonal_xy",
+      "radius": 0.08,
+      "light_omega_sq": [
+        0.012792858090543754,
+        0.012793882621442768
+      ],
+      "light_phase_velocity_sq": [
+        1.9988840766474614,
+        1.9990441596004325
+      ],
+      "mean_light_phase_velocity_sq": 1.998964118123947,
+      "fractional_pol_split": 8.008295472619843e-05,
+      "third_gapped_omega_sq": 91.57327358806597,
+      "max_P_gradient": 1.3877787807814457e-17
+    },
+    {
+      "direction": "diagonal_xy",
+      "radius": 0.16,
+      "light_omega_sq": [
+        0.051086560025522726,
+        0.0511015346933322
+      ],
+      "light_phase_velocity_sq": [
+        1.9955687509969813,
+        1.996153698958289
+      ],
+      "mean_light_phase_velocity_sq": 1.9958612249776353,
+      "fractional_pol_split": 0.0002930804777342093,
+      "third_gapped_omega_sq": 91.5826061367469,
+      "max_P_gradient": 1.1188630228279524e-16
+    },
+    {
+      "direction": "diagonal_xyz",
+      "radius": 0.02,
+      "light_omega_sq": [
+        0.000799973643162104,
+        0.0007999800352316134
+      ],
+      "light_phase_velocity_sq": [
+        1.99993410790526,
+        1.9999500880790333
+      ],
+      "mean_light_phase_velocity_sq": 1.9999420979921467,
+      "fractional_pol_split": 7.99031821439835e-06,
+      "third_gapped_omega_sq": 91.5703757995107,
+      "max_P_gradient": 1.1103585416259206e-16
+    },
+    {
+      "direction": "diagonal_xyz",
+      "radius": 0.04,
+      "light_omega_sq": [
+        0.00319957832879477,
+        0.0031996805820802355
+      ],
+      "light_phase_velocity_sq": [
+        1.999736455496731,
+        1.9998003638001471
+      ],
+      "mean_light_phase_velocity_sq": 1.9997684096484392,
+      "fractional_pol_split": 3.195785227312343e-05,
+      "third_gapped_omega_sq": 91.57108198025686,
+      "max_P_gradient": 1.1107649934270853e-16
+    },
+    {
+      "direction": "diagonal_xyz",
+      "radius": 0.08,
+      "light_omega_sq": [
+        0.012793255630825437,
+        0.012794890440332345
+      ],
+      "light_phase_velocity_sq": [
+        1.9989461923164744,
+        1.9992016313019287
+      ],
+      "mean_light_phase_velocity_sq": 1.9990739118092016,
+      "fractional_pol_split": 0.00012777865988116696,
+      "third_gapped_omega_sq": 91.57390378277731,
+      "max_P_gradient": 1.908334905165996e-17
+    },
+    {
+      "direction": "diagonal_xyz",
+      "radius": 0.16,
+      "light_omega_sq": [
+        0.05109224171631749,
+        0.05111831913323899
+      ],
+      "light_phase_velocity_sq": [
+        1.9957906920436517,
+        1.996809341142148
+      ],
+      "mean_light_phase_velocity_sq": 1.9963000165928997,
+      "fractional_pol_split": 0.0005102685418170616,
+      "third_gapped_omega_sq": 91.58514366797142,
+      "max_P_gradient": 2.1106328295824508e-17
+    },
+    {
+      "direction": "skew",
+      "radius": 0.02,
+      "light_omega_sq": [
+        0.0007999654220603842,
+        0.0007999779393664967
+      ],
+      "light_phase_velocity_sq": [
+        1.9999135551509604,
+        1.9999448484162416
+      ],
+      "mean_light_phase_velocity_sq": 1.999929201783601,
+      "fractional_pol_split": 1.5647186537103534e-05,
+      "third_gapped_omega_sq": 91.57022008824894,
+      "max_P_gradient": 1.1103585416259206e-16
+    },
+    {
+      "direction": "skew",
+      "radius": 0.04,
+      "light_omega_sq": [
+        0.003199465818806862,
+        0.0031996280434213936
+      ],
+      "light_phase_velocity_sq": [
+        1.9996661367542887,
+        1.9997675271383708
+      ],
+      "mean_light_phase_velocity_sq": 1.9997168319463299,
+      "fractional_pol_split": 5.0702370686926626e-05,
+      "third_gapped_omega_sq": 91.5704588764347,
+      "max_P_gradient": 4.920757782428295e-17
+    },
+    {
+      "direction": "skew",
+      "radius": 0.08,
+      "light_omega_sq": [
+        0.012791544446557793,
+        0.012793962351352037
+      ],
+      "light_phase_velocity_sq": [
+        1.998678819774655,
+        1.9990566173987556
+      ],
+      "mean_light_phase_velocity_sq": 1.9988677185867054,
+      "fractional_pol_split": 0.00018900581593651395,
+      "third_gapped_omega_sq": 91.57140735230239,
+      "max_P_gradient": 1.1107649934270853e-16
+    },
+    {
+      "direction": "skew",
+      "radius": 0.16,
+      "light_omega_sq": [
+        0.0510652975870378,
+        0.05110313074134544
+      ],
+      "light_phase_velocity_sq": [
+        1.994738186993664,
+        1.9962160445838062
+      ],
+      "mean_light_phase_velocity_sq": 1.9954771157887352,
+      "fractional_pol_split": 0.0007406036272973918,
+      "third_gapped_omega_sq": 91.5751013257359,
+      "max_P_gradient": 3.172047657519229e-17
+    }
+  ],
+  "directional_finite_k_summary": {
+    "axis_x": {
+      "squared_speed_at_r0p02": 1.9998991236924724,
+      "squared_speed_at_r0p16": 1.9935582011026964,
+      "fractional_shift_r0p16_vs_2": -0.0032208994486517817,
+      "r0p02_to_r0p04_quartic_proxy_slope": -0.2521559553751255,
+      "relative_polarization_split_r0p16": 0.000338341226967482
+    },
+    "axis_y": {
+      "squared_speed_at_r0p02": 1.9998976765123189,
+      "squared_speed_at_r0p16": 1.9934661075998725,
+      "fractional_shift_r0p16_vs_2": -0.003266946200063736,
+      "r0p02_to_r0p04_quartic_proxy_slope": -0.2557719147588955,
+      "relative_polarization_split_r0p16": 0.00011544197992387323
+    },
+    "axis_z": {
+      "squared_speed_at_r0p02": 1.9998973185764157,
+      "squared_speed_at_r0p16": 1.9934435541069107,
+      "fractional_shift_r0p16_vs_2": -0.0032782229465446733,
+      "r0p02_to_r0p04_quartic_proxy_slope": -0.256665610987213,
+      "relative_polarization_split_r0p16": 0.0006672552132241496
+    },
+    "diagonal_xy": {
+      "squared_speed_at_r0p02": 1.9999352340960284,
+      "squared_speed_at_r0p16": 1.9958612249776353,
+      "fractional_shift_r0p16_vs_2": -0.0020693875111823523,
+      "r0p02_to_r0p04_quartic_proxy_slope": -0.1618990867293298,
+      "relative_polarization_split_r0p16": 0.0002930804777342093
+    },
+    "diagonal_xyz": {
+      "squared_speed_at_r0p02": 1.9999420979921467,
+      "squared_speed_at_r0p16": 1.9963000165928997,
+      "fractional_shift_r0p16_vs_2": -0.0018499917035501579,
+      "r0p02_to_r0p04_quartic_proxy_slope": -0.14474028642297299,
+      "relative_polarization_split_r0p16": 0.0005102685418170616
+    },
+    "skew": {
+      "squared_speed_at_r0p02": 1.999929201783601,
+      "squared_speed_at_r0p16": 1.9954771157887352,
+      "fractional_shift_r0p16_vs_2": -0.002261442105632394,
+      "r0p02_to_r0p04_quartic_proxy_slope": -0.17697486439260943,
+      "relative_polarization_split_r0p16": 0.0007406036272973918
+    }
+  },
+  "physics_boundary": "No exact Lorentz invariance at finite lattice spacing for this specified finite-band model; does NOT forbid Lorentz-invariant continuum limits, approximate emergent relativity, nonlocal actions, or interactions restoring symmetry. Does not establish photons or gravity.",
+  "prior_art": "Generic bounded periodic lattice dispersion versus continuum light cone is standard lattice field theory/homogenization. New scoped to the chosen W33 Bloch Maxwell operator and quantified here; no claim of original general no-go theorem."
+}
