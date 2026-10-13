@@ -1,0 +1,41 @@
+{
+  "science_sha": "8b4b4b3bca459c4699fbab6b8ffc211620415b0a",
+  "hosted_run_id": 38415372948,
+  "hosted_job_id": 115358282809,
+  "hosted_conclusion": "success",
+  "hosted_frozen_tests": 10,
+  "hosted_regenerated_tests": 10,
+  "local_expanded_tests": 29,
+  "local_expanded_seconds": 23.44,
+  "artifact_sha256_lf": {
+    "analysis/w33_pass11970_native_wilson_dirac.py": "5909b869f1a189fb60559b1276ff61c669cc63cea3e257b3014a6c840c30c321",
+    "analysis/w33_pass11971_frustrated_family_vacuum.py": "ce56137fb5e031ddf2b8572b9b8c2ccd90fe64a423fcc9c9326c51368db59d38",
+    "analysis/w33_pass11972_native_tetrahedron_link_audit.py": "624b3f141f8ad552d4586a24bd9ea31e9d140df6b0298f10c0792bcf564f52d8",
+    "analysis/w33_pass11973_mediation_transmission.py": "ed1040d1a8276dffac1cbe78199b98584ace7503bff87601f19184b8749e2b83",
+    "analysis/w33_pass11974_coupled_patch_matter.py": "e279a2d327d7bbe771895b96faa937683869946c0830fecfbbe8ad6e5c80d31c",
+    "data/w33_pass11970_native_wilson_dirac.json": "73f7a6d5fd122ed9fd59293c9d4172c8dbd56ca79510a8dfe309602d73fc5279",
+    "data/w33_pass11971_frustrated_family_vacuum.json": "35f6a1909e7092dd3777774ada48ecf0265894a7755581ce6f3841cafd6ddff8",
+    "data/w33_pass11972_native_tetrahedron_link_audit.json": "de8b02589f86bfc8c80b63adbf696038de5b0c9cc7724cefcfd5f84fc62e6721",
+    "data/w33_pass11973_mediation_transmission.json": "b9b7784d732996a8171d6aa466ea2c68064e829ee493a8544eea67a4d6b00a65",
+    "data/w33_pass11974_coupled_patch_matter.json": "851929fae567aae3f20242655167b56ba3028bf70f2c259980c24604100c6c16",
+    "analysis/PASS11970_11974_NATIVE_DYNAMICAL_TARGETS.md": "e02b7fdb31695cee2784bff7e46fd9d4160f2f95e4e59f791e02b573b013da59",
+    "tests/test_w33_pass11970_11974_native_dynamical_targets.py": "89eec0ffbbec8d4587e8c84fc04485866ae008bacfea500e19d901a17e01de7d",
+    ".github/workflows/pass11970-11974-native-dynamical-targets.yml": "112c9bd231705b81edc92fd7104e4c596996af8b0a5e81f4536001c128e9e96b"
+  },
+  "open": [
+    "Realistic derived three-family Majorana/flavour vacuum",
+    "Nonlinear native GR constraints",
+    "Interacting chiral4D continuum",
+    "Full soft and supergravity vacuum",
+    "Full80-site interacting spectral solution"
+  ],
+  "physical_scope": "One free vectorlike native Dirac species on supplied three-deck cover with continuous time. Constructed family CP potential fails unfitted angles. Colour-girth obstruction only for the80-tetrahedron route. Specified leading Higgsed messenger matching and finite two-loop matter patch.",
+  "extra_local_controls_sha256_lf": {
+    ".continuity/receipts/PASS11970_11974_RECHART.json": "26c89e83a8a115ed5ea6dad47e40a42ce4900b76e87ee359415f75c2b0e4429f",
+    ".continuity/receipts/PASS11970_11974_UNIVERSALITY_CONTROL.py": "ff9b60995e8e00da4894e622a4c44d54e5b6425c8eb2e5a1ec00a554412dcaf4",
+    ".continuity/receipts/PASS11970_11974_UNIVERSALITY_CONTROL.json": "afb2953335a1443035da6247de0e7578d5f8391d1c92bd5b02b1b0e512dff914"
+  },
+  "additional_control_conclusion": "The free Dirac mechanism also works on a2-site4-edge unit cell: it is not a W33-specific uniqueness/physical-selection theorem. Vertex rechart covariance passes separately. These extra controls were executed locally, not part of the10-test hosted workflow.",
+  "integrated_peer_catalogue_commit": "35a989786",
+  "results_index_files": 12102
+}

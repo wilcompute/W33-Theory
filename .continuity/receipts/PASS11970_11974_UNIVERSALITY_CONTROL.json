@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "control_graph": "Two vertices joined by4 multiedges with voltages0,e1,e2,e3: infinite cover is a two-sublattice four-neighbour graph, NOT W33.",
+  "spinor_bands": 8,
+  "J": [
+    [
+      -2,
+      -2,
+      -2
+    ],
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      2
+    ]
+  ],
+  "origin_zero_modes": 4,
+  "origin_heavy_gap": 80.0,
+  "refinement": [
+    {
+      "spacing": 0.02,
+      "low_scaled": [
+        -1.002534841563005,
+        -1.0025348415615718,
+        1.002534841561187,
+        1.0025348415622704
+      ],
+      "max_error": 0.002534841563005097
+    },
+    {
+      "spacing": 0.01,
+      "low_scaled": [
+        -1.0006343200691352,
+        -1.0006343200675465,
+        1.0006343200673111,
+        1.0006343200691652
+      ],
+      "max_error": 0.0006343200691651951
+    },
+    {
+      "spacing": 0.005,
+      "low_scaled": [
+        -1.0001586182139313,
+        -1.000158618210699,
+        1.0001586182104971,
+        1.000158618212518
+      ],
+      "max_error": 0.00015861821393126085
+    },
+    {
+      "spacing": 0.0025,
+      "low_scaled": [
+        -1.0000396569383414,
+        -1.0000396569360626,
+        1.0000396569402927,
+        1.0000396569450074
+      ],
+      "max_error": 3.965694500740469e-05
+    }
+  ],
+  "theorem_scope": "The11970 argument extends to a connected finite voltage graph with positive3-period harmonic Gram and three unit holonomy generators; J=n h G^-1 normalizes the projected Dirac symbol. Positive Wilson block excludes other zeros. Generic Wilson technology, not a W33-specific selection theorem.",
+  "consequence": "A single free3+1D Dirac species cannot identify W33 or derive3families/gravity/couplings. This much smaller graph realizes the same infrared free operator. W33-specific predictions require selected interactions/vacuum data or independently constrained irrelevant matching coefficients.",
+  "primary_context": "https://arxiv.org/abs/2306.14180; two-sublattice four-neighbour3D models also occur in https://arxiv.org/abs/cond-mat/0607699 but that is a DIFFERENT Hamiltonian."
+}

@@ -1,0 +1,16 @@
+{
+  "vertex_rechart_rng": 119700,
+  "integer_rechart_range": [
+    -2,
+    2
+  ],
+  "Bloch_k": [
+    0.31,
+    -0.77,
+    1.13
+  ],
+  "K_covariance_max": 8.588748952273048e-15,
+  "L_covariance_max": 8.920195862312093e-16,
+  "identity": "volts_prime=volts+B0 f; B_prime=diag(exp(-i k.f_tail)) B U; C_prime=same left diagonal C U; H_prime=(I4 tensor U).dag H(I4 tensor U)",
+  "scope": "Independent integer vertex/deck rechart covariance, not an intrinsic metric prediction or independence of the supplied3deck marking."
+}

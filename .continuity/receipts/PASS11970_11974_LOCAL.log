@@ -1,0 +1,5 @@
+Science8b4b4b3bca459c4699fbab6b8ffc211620415b0a
+OPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest --noconftest --ignore-glob=tests/test_*.py -o addopts= -q tests/test_w33_pass11970_11974_native_dynamical_targets.py tests/test_w33_pass11965_11969_five_dynamical_fronts.py
+............................. [100%]
+29 passed in23.44s
+All five producers regenerated and report guards checked.
