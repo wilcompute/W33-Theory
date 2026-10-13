@@ -6823,6 +6823,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "323392c2f7e9d80eefa96bffc949180593a72475a6cd760c438adcb717ca89d6",
+      "normalized_formula": "\"\"\"TOE61exactW33determinantdominance->all-temperatureZ2fluxtheorem",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_det_poly.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 1,
+          "path": "analysis/w33_20261013_toe61_det_poly.py",
+          "raw": "\"\"\"TOE61 exact W33 determinant dominance -> all-temperature Z2 flux theorem.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "6f06cbe8afbeef34db6a13dab5bb75937ac0e8bb964275d0ef243d1e9c4a1210",
+      "structural_formula": "\"\"\"TOE6#exactW3#determinantdominance->all-temperatureZ2fluxtheorem"
+    },
+    {
+      "file_count": 1,
       "formula_id": "031db5c1d43a21164f9e1ddca230ba435c6345574b53522ea74676db0c39020d",
       "normalized_formula": "\"\"\"Tangent/cumulanttheoryatt=1forthecompletedsplit-primecyclotomicpacket.\"\"\"",
       "numeric_literals": [
@@ -218583,6 +218611,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "303bc72c81e1ac6cc07954bec5ada1ea906590d1f98a6ea2d5fc1a4659ed46e7",
+      "normalized_formula": "#F\u03b2(H)=-2/\u03b2\u03a3_\u03c3log(2cosh(\u03b2\u03c3/2));cosh(\u03b2\u03c3/2)",
+      "numeric_literals": [
+        "-2",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_det_poly.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 73,
+          "path": "analysis/w33_20261013_toe61_det_poly.py",
+          "raw": "# F\u03b2(H)= -2/\u03b2 \u03a3_\u03c3 log(2cosh(\u03b2\u03c3/2)); cosh(\u03b2\u03c3/2)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6497c1cced54ac80065c0a7fce64b0443c4d9b0f70e93662f3a11379578e3c43",
+      "structural_formula": "#F\u03b2(H)=#/\u03b2\u03a3_\u03c3log(#cosh(\u03b2\u03c3/#));cosh(\u03b2\u03c3/#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "dcdd187d323d996b1df2fbe741aee45d050aed2b7e127f6af2136197309749bc",
       "normalized_formula": "#G(-1)=-1\u2192fermionsector",
       "numeric_literals": [
@@ -290768,6 +290824,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2c959fcd52161e0b83b95a59715a1f9699e7daed8ab347dc583fa4ea1ba85651",
+      "normalized_formula": "'conditional_exact_theorem':\"H_{c,m}=[[mI,-B_c],[-B_c^T,-mI]]haseigenvalues\u00b1sqrt(\u03c3_j(B_c)^2+m2).Foreveryt>=0,det(I+t(K_c+m2I))=(1+m2t)^40det(I+t/(1+m2t)K_c).SinceTOE61provesexactnonnegativecoefficientwisedeterminantdifferencesandthree-pidominateseveryotherZ2corner,thedominancesurvivesANYrealstaggeredmassmandeverybeta>0atchemicalpotential0viacoshWeierstrassproduct.\"",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_staggered_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/w33_20261013_toe61_staggered_flux.py",
+          "raw": "'conditional_exact_theorem':\"H_{c,m}=[[mI,-B_c],[-B_c^T,-mI]] has eigenvalues \u00b1sqrt(\u03c3_j(B_c)^2+m\u00b2). For every t>=0, det(I+t(K_c+m\u00b2 I))=(1+m\u00b2t)^40 det(I+t/(1+m\u00b2t) K_c). Since TOE61 proves exact nonnegative coefficientwise determinant differences and three-pi dominates every other Z2 corner, the dominance survives ANY real staggered mass m and every beta>0 at chemical potential0 via cosh Weierstrass product.\",",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "2b34a7eb0a8803c65ecca35383142d7ce46e99955a95922a7663154f6fd55dca",
+      "structural_formula": "'conditional_exact_theorem':\"H_{c,m}=[[mI,-B_c],[-B_c^T,-mI]]haseigenvalues\u00b1sqrt(\u03c3_j(B_c)^#+m2).Foreveryt>=#,det(I+t(K_c+m2I))=(#+m2t)^#det(I+t/(#+m2t)K_c).SinceTOE6#provesexactnonnegativecoefficientwisedeterminantdifferencesandthree-pidominateseveryotherZ2corner,thedominancesurvivesANYrealstaggeredmassmandeverybeta>#atchemicalpotential0viacoshWeierstrassproduct.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "47e0d31a75b41a01192aa8e71f226c3e0ae4f5bc971643398d3d872be2c62284",
       "normalized_formula": "'conditional_gravity_equation':'Mpl2G_mu_nu=T_mu_nu-(1/4)g_mu_nu<TrT>.Aspacetime-constantshiftT_mu_nu->T_mu_nu-Cg_mu_nucancelsexactly;residualhistory/fluxandtheglobalsigmaconstraintsremaininputs.'",
       "numeric_literals": [
@@ -290793,6 +290879,37 @@
       },
       "structural_family_id": "62feae066cd3c0feb24c73f321b1aad2de2bdb65fd3be9b51b2895eb4f18a2d9",
       "structural_formula": "'conditional_gravity_equation':'Mpl2G_mu_nu=T_mu_nu-(#/#)g_mu_nu<TrT>.Aspacetime-constantshiftT_mu_nu->T_mu_nu-Cg_mu_nucancelsexactly;residualhistory/fluxandtheglobalsigmaconstraintsremaininputs.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0260c65035da45f4085cced7477dd1025d0a9082073f4db0d12f45b43c49d062",
+      "normalized_formula": "'conditional_theorem':\"Foranyselected3-loopelectricfluxE=C.Tm+qwithnonzerofixednativeedgeq,GausschargeB.TE=B.Tqisconstant.Outside|m|_infty>N,use||C.Tm+q||2=(m+G^-1Cq).TG(m+G^-1Cq)+||q||2\u2212(Cq).TG^-1(Cq).ThusC_ext>=g2/2[\u03bbmin(G)max(0,N+1-||G^-1Cq||)2+q_perp2].Comparewithtriangleinequality||C.Tm+q||>=sqrt\u03bbmin(G)(N+1)\u2212||q||.WilsonmagneticpotentialisPSD;finite-to-outsidehopnormsquared3/(4g4);SchurgiveslowerL=E_N\u2212b2/(C_ext\u2212E_N).SubtractneutralandchargedintervalstoencloseE_charged\u2212E_neutral.FiniteblockspreserveexactGauss.\"",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_charge_gap.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 69,
+          "path": "analysis/w33_20261013_toe61_charge_gap.py",
+          "raw": "'conditional_theorem':\"For any selected 3-loop electric flux E=C.Tm+q with nonzero fixed native edge q, Gauss charge B.T E=B.Tq is constant. Outside |m|_infty>N, use ||C.Tm+q||\u00b2=(m+G^-1 Cq).T G(m+G^-1 Cq)+||q||\u00b2\u2212(Cq).T G^-1(Cq). Thus C_ext >=g\u00b2/2[\u03bbmin(G) max(0,N+1-||G^-1Cq||)\u00b2+q_perp\u00b2]. Compare with triangle inequality ||C.Tm+q||>=sqrt \u03bbmin(G)(N+1)\u2212||q||. Wilson magnetic potential is PSD; finite-to-outside hop norm squared 3/(4g\u2074); Schur gives lower L=E_N\u2212b\u00b2/(C_ext\u2212E_N). Subtract neutral and charged intervals to enclose E_charged\u2212E_neutral. Finite blocks preserve exact Gauss.\",",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "1eb12fb3d591d9a5974d915ce0c0e6daf99fbe30965fffa83c6ddceab75935cd",
+      "structural_formula": "'conditional_theorem':\"Foranyselected3-loopelectricfluxE=C.Tm+qwithnonzerofixednativeedgeq,GausschargeB.TE=B.Tqisconstant.Outside|m|_infty>N,use||C.Tm+q||#=(m+G^#Cq).TG(m+G^#Cq)+||q||#\u2212(Cq).TG^#(Cq).ThusC_ext>=g2/#[\u03bbmin(G)max(#,N+#-||G^#Cq||)#+q_perp2].Comparewithtriangleinequality||C.Tm+q||>=sqrt\u03bbmin(G)(N+#)\u2212||q||.WilsonmagneticpotentialisPSD;finite-to-outsidehopnormsquared3/(#g4);SchurgiveslowerL=E_N\u2212b2/(C_ext\u2212E_N).SubtractneutralandchargedintervalstoencloseE_charged\u2212E_neutral.FiniteblockspreserveexactGauss.\""
     },
     {
       "file_count": 1,
@@ -294924,6 +295041,31 @@
       },
       "structural_family_id": "9812b12bc37448e1c2a49f13604df30bb837643288bf12f7dc4fd2e6e1343bec",
       "structural_formula": "'exact_sequence':'#->C_F->F2^#->Im(L|V_P)/Im(L|E)->#'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f35fb6156b40de405c318761fca93cf6066ffe57d4a14a6e686117b7f8946bd6",
+      "normalized_formula": "'exact_symmetry_test':\"ForstaticspatiallinkphasesRQ(k,omega)R=-Q(k,-omega)whereR=igamma4gamma5.Indexsignatureat\u00b1omegaisopposite.Attemporalcorners0and\u03c0,self-pairingforcesexactzeroifgapped.Aconnectedgappedfixed-spatial-phaseomegasweepcannotgenerateanonzeropointwisesignaturewithoutgapclosing.Thisisnotastatementthatalltopologicallynontrivial4Doverlapfieldshavezeroindex.\"",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_overlap_time.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/w33_20261013_toe61_overlap_time.py",
+          "raw": "'exact_symmetry_test':\"For static spatial link phases R Q(k,omega) R=-Q(k,-omega) where R=i gamma4 gamma5. Index signature at \u00b1omega is opposite. At temporal corners0 and\u03c0, self-pairing forces exact zero if gapped. A connected gapped fixed-spatial-phase omega sweep cannot generate a nonzero pointwise signature without gap closing. This is not a statement that all topologically nontrivial 4D overlap fields have zero index.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f35fb6156b40de405c318761fca93cf6066ffe57d4a14a6e686117b7f8946bd6",
+      "structural_formula": "'exact_symmetry_test':\"ForstaticspatiallinkphasesRQ(k,omega)R=-Q(k,-omega)whereR=igamma4gamma5.Indexsignatureat\u00b1omegaisopposite.Attemporalcorners0and\u03c0,self-pairingforcesexactzeroifgapped.Aconnectedgappedfixed-spatial-phaseomegasweepcannotgenerateanonzeropointwisesignaturewithoutgapclosing.Thisisnotastatementthatalltopologicallynontrivial4Doverlapfieldshavezeroindex.\""
     },
     {
       "file_count": 1,
@@ -300646,6 +300788,39 @@
       },
       "structural_family_id": "b97386e6970b5e4c9edf8f5707648614e96a3fa2e5a484e1e75942c7ee31819c",
       "structural_formula": "'internal_index':'m=sum_jn_j3^j,n_jin{#,#,#}'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "67170a37a400e9a2bb9908bc8d418d4f80dee61011c3b145db24a1d60fbf57f0",
+      "normalized_formula": "'interpretation':\"ThethreeformallyaddedTOE38deckcommutator2-cellshaveZEROsignednative160-linkchainatk=0.HencethePass11969fullfinite-graphHamiltonianlists1385plaquetterowsbutonly1382distinctNONTRIVIALflux-shiftoperators;thelastthreerowsareidentitywithzeromagneticexcitationforthestandard(1\u2212cosP\u00b7A)term.InanonzeroBlochrepresentationtheymaycarryadditionalholonomystructure;statick0identitiesmustnotbecountedasinteractingplaquettes.\"",
+      "numeric_literals": [
+        "0",
+        "1",
+        "1969",
+        "382",
+        "385",
+        "60",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_full_gauss_audit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "analysis/w33_20261013_toe61_full_gauss_audit.py",
+          "raw": "'interpretation':\"The three formally added TOE38 deck commutator 2-cells have ZERO signed native 160-link chain at k=0. Hence the Pass11969 full finite-graph Hamiltonian lists 1385 plaquette rows but only 1382 distinct NONTRIVIAL flux-shift operators; the last three rows are identity with zero magnetic excitation for the standard (1\u2212cos P\u00b7A) term. In a nonzero Bloch representation they may carry additional holonomy structure; static k0 identities must not be counted as interacting plaquettes.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ad6811a61c37cfcda3dbe0e969741dbbef895f50d1709cc93e08a77506f8187b",
+      "structural_formula": "'interpretation':\"ThethreeformallyaddedTOE3#deckcommutator2-cellshaveZEROsignednative1#-linkchainatk=#.HencethePass1#fullfinite-graphHamiltonianlists1#plaquetterowsbutonly1#distinctNONTRIVIALflux-shiftoperators;thelastthreerowsareidentitywithzeromagneticexcitationforthestandard(#\u2212cosP\u00b7A)term.InanonzeroBlochrepresentationtheymaycarryadditionalholonomystructure;statick0identitiesmustnotbecountedasinteractingplaquettes.\""
     },
     {
       "file_count": 1,
@@ -307607,6 +307782,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "13bcd8c2e56790e3386bd0be9cf88342f6e375a78456f269ed3bb569e5b3ed9c",
+      "normalized_formula": "'prior':\"MassdeformationviaH2=K+m2andWeierstrassproductiselementarystandard.TheW33-specificcoefficientcertificatesareTOE61.\"}",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_staggered_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_20261013_toe61_staggered_flux.py",
+          "raw": "'prior':\"Mass deformation via H\u00b2=K+m\u00b2 and Weierstrass product is elementary standard. The W33-specific coefficient certificates are TOE61.\"}",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "6d473f071b8985e1e13e085ce3282dc3215ed6bb9ff5a5e268bf37a9f923dd74",
+      "structural_formula": "'prior':\"MassdeformationviaH2=K+m2andWeierstrassproductiselementarystandard.TheW3#-specificcoefficientcertificatesareTOE6#.\"}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8922ab4753bc3c083da09a850b56cfc98e5cb986b531278fcd25d34777eea6bd",
       "normalized_formula": "'prior_art':{'Pass4859':'ownssigmaandtheswitching-cosetconstruction','Pass4867':'ownstheexactcut/full-codeenumerator','Pass4976':'ownsA3span(K^perp)=324'}",
       "numeric_literals": [
@@ -312656,6 +312859,37 @@
       },
       "structural_family_id": "1e5f11f32bb1f9cdc9d2043bb0d43df669c87d84d044f7ff8904d3db962b5f33",
       "structural_formula": "'theexactCSScodeis[#,#,#]withdistance2#'->['[#,#,#]']"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "354675e6112a75985dfc28726ace644ef5055f6c4e7f4e7098c46f87db128bc4",
+      "normalized_formula": "'theorem':\"ForthesuppliedW33statichalf-filledspinlessbipartitehoppingH_candeightZ2flatdeckholonomiesc,theEXACTINTEGERcoefficientsofdet(I+tB_cB_c.T)minusdet(I+tB_0B_0.T)are>=0.Henceforeveryt>=0thedeterminantofeverynontrivialcis>=trivial.TheWeierstrassinfiniteproductcosh(z)=prod_(n>=0)[1+4z2/(pi2(2n+1)2)]convertsthatintotheexactinequalityF_beta(c)<=F_beta(0)forALLbeta>0atchemicalpotentialzero.Everynonzerochasstrictpolynomialinequalityandhencestrictfreeenergyinequality.\"",
+      "numeric_literals": [
+        "+4",
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_det_poly.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 85,
+          "path": "analysis/w33_20261013_toe61_det_poly.py",
+          "raw": "'theorem':\"For the supplied W33 static half-filled spinless bipartite hopping H_c and eight Z2 flat deck holonomies c, the EXACT INTEGER coefficients of det(I+t B_c B_c.T) minus det(I+t B_0 B_0.T) are >=0. Hence for every t>=0 the determinant of every nontrivial c is >= trivial. The Weierstrass infinite product cosh(z)=prod_(n>=0)[1+4z\u00b2/(pi\u00b2(2n+1)\u00b2)] converts that into the exact inequality F_beta(c)<=F_beta(0) for ALL beta>0 at chemical potential zero. Every nonzero c has strict polynomial inequality and hence strict free energy inequality.\",",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "d69b546c660a441020968b6f34fab9496703c9a06595937ffe96eb436044690d",
+      "structural_formula": "'theorem':\"ForthesuppliedW3#statichalf-filledspinlessbipartitehoppingH_candeightZ2flatdeckholonomiesc,theEXACTINTEGERcoefficientsofdet(I+tB_cB_c.T)minusdet(I+tB_0B_0.T)are>=#.Henceforeveryt>=#thedeterminantofeverynontrivialcis>=trivial.TheWeierstrassinfiniteproductcosh(z)=prod_(n>=#)[##z2/(pi2(#n+#)#)]convertsthatintotheexactinequalityF_beta(c)<=F_beta(#)forALLbeta>#atchemicalpotentialzero.Everynonzerochasstrictpolynomialinequalityandhencestrictfreeenergyinequality.\""
     },
     {
       "file_count": 1,
@@ -558006,6 +558240,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d64382ab86277e7e4fddddc9b3624377a6b8935c0e4a987ebe4155c728b9b23c",
+      "normalized_formula": "Becauset/(1+m^2t)>=0,exactP_111>=P_cdominancesurvivesthecommonstaggeredmass,so^F_beta(111,m)<F_beta(c,m)^foreverybeta>0,everyrealm,zerochemicalpotential,andsevenotherc.A20-casenumericalmass/temperaturescancorroboratestheformula.Theproofconcernsaspinlessbipartitelatticewithsuppliedmass;notphysicalDirac/Yukawamassgeneration,genericsite-dependentmassorinteractions",
+      "numeric_literals": [
+        "0",
+        "1",
+        "11",
+        "111",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "Because t/(1+m^2t)>=0, exact P_111>=P_c dominance survives the common staggered mass, so **F_beta(111,m)<F_beta(c,m)** for every beta>0, every real m, zero chemical potential, and seven other c. A 20-case numerical mass/temperature scan corroborates the formula. The proof concerns a spinless bipartite lattice with supplied mass; not physical Dirac/Yukawa mass generation, generic site-dependent mass or interactions.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "aec45fa96a5cf0e19d947e522b1b76af0d28db10d64ea794228f77dcd5ee0bfa",
+      "structural_formula": "Becauset/(#+m^#t)>=#,exactP_1#>=P_cdominancesurvivesthecommonstaggeredmass,so^F_beta(#,m)<F_beta(c,m)^foreverybeta>#,everyrealm,zerochemicalpotential,andsevenotherc.A2#-casenumericalmass/temperaturescancorroboratestheformula.Theproofconcernsaspinlessbipartitelatticewithsuppliedmass;notphysicalDirac/Yukawamassgeneration,genericsite-dependentmassorinteractions"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5afc87db138990edbe5dc6bda04705cf8801f3a1f6591d8c5f2fc31ec7db4508",
       "normalized_formula": "Becausetheseedcontainstheclosedneighbourhoodofitswindmillcentre,everyomittedgraphvertexhascentrecoordinatezeroandexactlyfourselectedwindmillleaves.Theimplementationexhauststhesechoicestogetherwithallsubsetsofthefouroutsidecoordinates,rejectingvectorsthatalreadyviolatethe\\(\\lambda=1\\),\\(\\mu=4\\)common-neighbourboundsinsidethestarcomplement",
       "numeric_literals": [
@@ -608076,6 +608341,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "dc1390e94e33f377255f1f461a8d3cb621d21fa5aeb52009d35577b7d18283ca",
+      "normalized_formula": "F_beta(c)=-(2/beta)SUM_jlog[2cosh(betasigma_j/2)]",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "F_beta(c)=-(2/beta) SUM_j log[2 cosh(beta sigma_j/2)].",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c2e16f35ff6003312e7daf4db5c31106e7ae70c6610b66103fcd77ef17ee78bd",
+      "structural_formula": "F_beta(c)=-(#/beta)SUM_jlog[#cosh(betasigma_j/#)]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "36db88ecaed2ba8864db0427dd8e465b05f974802584d49b70c958ed3344c7da",
       "normalized_formula": "F_c(X,Y)=\\chi(c)\\bigl(X^3Y-XY^3\\bigr)",
       "numeric_literals": [
@@ -610537,6 +610829,34 @@
       },
       "structural_family_id": "0e9912f8d0c0ca9873d46ccc4eaec4d50d585b14785ae61178d660e6dd4547b7",
       "structural_formula": "ForANYHammingcodeHam(r,#):minimumdistanced=q=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4a4fb47340a0683e489b80d197eaa8ac95879130c30a0dec3e4fb500d860c7a2",
+      "normalized_formula": "ForANYrealcommonsublattice-staggeredmassm,H_(c,m)=[[mI,-B_c],[-B_c.T,-mI]]haseigenvalues\u00b1sqrt(sigma_j^2+m^2).Foranyt>=0",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 43,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "For ANY real common sublattice-staggered mass m, H_(c,m)=[[mI,-B_c],[-B_c.T,-mI]] has eigenvalues \u00b1sqrt(sigma_j^2+m^2). For any t>=0,",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "62e5b387602ee4c9d708bdc148177db754f3a64ef3429b47f55c447484afed06",
+      "structural_formula": "ForANYrealcommonsublattice-staggeredmassm,H_(c,m)=[[mI,-B_c],[-B_c.T,-mI]]haseigenvalues\u00b1sqrt(sigma_j^#+m^#).Foranyt>=#"
     },
     {
       "file_count": 1,
@@ -643562,6 +643882,43 @@
       },
       "structural_family_id": "22d99af3e2ad0acfd8bcc0386ecff4650fd7d57adb99e3e981e67d676d916661",
       "structural_formula": "Importantlydet(\u2212I)=#,sothisZ2isindependentoftheclock\u2019scentral\u2212Iparity.Itisanalgebraicescaperoute,butitisanextraparityratherthanaflavourtexture"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "470fb811d101cd0559ab26fd41eb6b2946a74ef418ed4d30a72dcb1f5b54b34f",
+      "normalized_formula": "ImportantrefinementofTOE60:the1385declaredTOE382-cellrowsconsistof^1382embeddedsignedoctagonboundaries^and^threeformalcommutatorrowswithZEROedge-chainboundaryatBlochk=0^.ThosethreeareNOTregularembeddedpolygonfaces.Exactenumerationalsoshowsthe1382actualeight-edgeoctagonsarealldistinctuptoorientedsign.Fortheregular-octagon-only2-skeleton,(V,E,F)=(80,160,1382),rationalBetti=(1,3,1304,0),andEuler=1302",
+      "numeric_literals": [
+        "0",
+        "1",
+        "1302",
+        "1304",
+        "1382",
+        "160",
+        "3",
+        "382",
+        "385",
+        "80",
+        "82"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "Important refinement of TOE60: the 1385 declared TOE38 2-cell rows consist of **1382 embedded signed octagon boundaries** and **three formal commutator rows with ZERO edge-chain boundary at Bloch k=0**. Those three are NOT regular embedded polygon faces. Exact enumeration also shows the 1382 actual eight-edge octagons are all distinct up to oriented sign. For the regular-octagon-only 2-skeleton, (V,E,F)=(80,160,1382), rational Betti=(1,3,1304,0), and Euler=1302.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "f3c67adcd43ef7bc76c61d544623c42e0a9116f8de10fd5ac0500a84ab92db48",
+      "structural_formula": "ImportantrefinementofTOE6#:the1#declaredTOE3#-cellrowsconsistof^#embeddedsignedoctagonboundaries^and^threeformalcommutatorrowswithZEROedge-chainboundaryatBlochk=#^.ThosethreeareNOTregularembeddedpolygonfaces.Exactenumerationalsoshowsthe1#actualeight-edgeoctagonsarealldistinctuptoorientedsign.Fortheregular-octagon-only2-skeleton,(V,E,F)=(#,#,#),rationalBetti=(#,#,#,#),andEuler=#"
     },
     {
       "file_count": 1,
@@ -753261,6 +753618,47 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a7a411b75acefc1b23ec9a6fd5b23fdfac1576d9c74fec50cbd36b9955ccb4ff",
+      "normalized_formula": "ReviewedTOE38nativethree-deckW3380-site/160-link/1385-rowsignedcurl,TOE59windingandhigh-temperatureseventh-orderfree-energycoefficient,TOE60majorizationfailure/Schurfluxbounds,Pass11969fullnativeGauss-constrainedcompiler,andPass11977actual320-bandGinsparg-Wilsonoverlap.Pass11964alreadyidentifiedthespecialthree-pifluxstateandproveditisconjugation-fixed,notobservedspontaneousCP.Priorworkalsoowns1620totaloctagons,1382localzero-windingoctagons,238windingoctagons,andrank(boundary1)=79,rank(boundary2)=78.WedoNOTreattributethese",
+      "numeric_literals": [
+        "0",
+        "1382",
+        "1385",
+        "160",
+        "1964",
+        "1969",
+        "1977",
+        "20",
+        "238",
+        "380",
+        "620",
+        "78",
+        "79",
+        "8",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "Reviewed TOE38 native three-deck W33 80-site/160-link/1385-row signed curl, TOE59 winding and high-temperature seventh-order free-energy coefficient, TOE60 majorization failure/Schur flux bounds, Pass11969 full native Gauss-constrained compiler, and Pass11977 actual 320-band Ginsparg-Wilson overlap. Pass11964 already identified the special three-pi flux state and proved it is conjugation-fixed, not observed spontaneous CP. Prior work also owns 1620 total octagons, 1382 local zero-winding octagons, 238 winding octagons, and rank(boundary1)=79, rank(boundary2)=78. We do NOT reattribute these.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "a7b3c0739a46183979581802c20dac18c5578a581180edc87c5a9e15286bd820",
+      "structural_formula": "ReviewedTOE3#nativethree-deckW3#-site/#-link/#-rowsignedcurl,TOE5#windingandhigh-temperatureseventh-orderfree-energycoefficient,TOE6#majorizationfailure/Schurfluxbounds,Pass1#fullnativeGauss-constrainedcompiler,andPass1#actual3#-bandGinsparg-Wilsonoverlap.Pass1#alreadyidentifiedthespecialthree-pifluxstateandproveditisconjugation-fixed,notobservedspontaneousCP.Priorworkalsoowns1#totaloctagons,#localzero-windingoctagons,#windingoctagons,andrank(boundary1)=#,rank(boundary2)=#.WedoNOTreattributethese"
+    },
+    {
+      "file_count": 1,
       "formula_id": "40983465ea6a8f357aafdf4f2d0f8f9950e5900304d1694c32140cc2572e3c5c",
       "normalized_formula": "ReviewedpriorTOE38,TOE54,TOE58,TOE59andPass11964,Pass11969,Pass11970,Pass11976-11979,aswellastheMay2026Levioctagontheorem.The80-site/160-edgegeometry,1620octagons,splitinto1382zero-windingand238winding,rankboundary1=79,rankboundary2=78,andthreeharmonicholonomydirectionswere^alreadyintherepository^.TOE59alreadyownstheexact8thspectralmomentandleadingbeta^7fermionicthermalcoefficient.TOE60buildsonthese;itdoesnotclaimtheirdiscovery",
       "numeric_literals": [
@@ -799863,6 +800261,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "25bc268b947ebd02b0d3601061767f21ebd21042ce2fa0e2871963f1e0e502b5",
+      "normalized_formula": "TheexactWeierstrassidentitycosh(z)=PRODUCT_(n>=0)[1+4z^2/(pi^2(2n+1)^2)]gives",
+      "numeric_literals": [
+        "+4",
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "The exact Weierstrass identity cosh(z)=PRODUCT_(n>=0)[1+4z^2/(pi^2(2n+1)^2)] gives",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "0bc06e6f84dccf7721c7fd3119492646067967619d561e3464107a2d8c132a6d",
+      "structural_formula": "TheexactWeierstrassidentitycosh(z)=PRODUCT_(n>=#)[##z^#/(pi^#(#n+#)^#)]gives"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c2f93fc78b646d18401d97ffe70d5520a99cbe5d253658da06df89f6162288ac",
       "normalized_formula": "TheexactclassicalW33current-squaresymbolsareJ_e(q,p)=(V_e.q+a)(U_e.p+a),e=1..160anda=1/sqrt20,actingonthephysical78-dimensionalpoint-plus-lineaugmentationforBOTHqandp",
       "numeric_literals": [
@@ -814215,6 +814643,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "158093ba92bc86463b833c0227e64415715d7e87b1d628670464106219338ab4",
+      "normalized_formula": "Thisisamathematicaltheoremofthespecifiedfinitefreemodel,withanindependentlyinspectableexactintegerproofcertificate,notjusttemperaturesampling.AnindependentNewton-identitiescrosscheckreproducesTOE59'seighthtracemomentfromthet^4coefficient:delta_e4(K)=-delta_tr(H^8)/8.Forthree-pi,delta_tr(H^8)=-7456anddelta_e4(K)=932,linkingtheexactfirstholonomy-sensitiveoctagoncounttothedeterminantdominancecertificate.ItisNOTatheoremofglobalminimizationamongallcontinuousU1connections,interaction-inducedCPbreaking,afulldynamicalquantumgaugesystem,observedCKMCP,orphysicalfundamentalconstants.Everyrealpicornerisconjugation-fixed;nophysicalspontaneousCPfollows",
+      "numeric_literals": [
+        "-7456",
+        "4",
+        "8",
+        "9",
+        "932"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "This is a mathematical theorem of the specified finite free model, with an independently inspectable exact integer proof certificate, not just temperature sampling. An independent Newton-identities crosscheck reproduces TOE59's eighth trace moment from the t^4 coefficient: delta_e4(K) = -delta_tr(H^8)/8. For three-pi, delta_tr(H^8)=-7456 and delta_e4(K)=932, linking the exact first holonomy-sensitive octagon count to the determinant dominance certificate. It is NOT a theorem of global minimization among all continuous U1 connections, interaction-induced CP breaking, a full dynamical quantum gauge system, observed CKM CP, or physical fundamental constants. Every real pi corner is conjugation-fixed; no physical spontaneous CP follows.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e81395b9cc9acf8dafa5ab2ba2e80da5ef91fe5a2469f336acc07db02238493f",
+      "structural_formula": "Thisisamathematicaltheoremofthespecifiedfinitefreemodel,withanindependentlyinspectableexactintegerproofcertificate,notjusttemperaturesampling.AnindependentNewton-identitiescrosscheckreproducesTOE5#'seighthtracemomentfromthet^#coefficient:delta_e4(K)=-delta_tr(H^#)/#.Forthree-pi,delta_tr(H^#)=#anddelta_e4(K)=#,linkingtheexactfirstholonomy-sensitiveoctagoncounttothedeterminantdominancecertificate.ItisNOTatheoremofglobalminimizationamongallcontinuousU1connections,interaction-inducedCPbreaking,afulldynamicalquantumgaugesystem,observedCKMCP,orphysicalfundamentalconstants.Everyrealpicornerisconjugation-fixed;nophysicalspontaneousCPfollows"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fdf84b3566d071826fc80601ce947087925ce487135dc7357ba80f7591dd5f9f",
       "normalized_formula": "Thisisanenergy-dependentfiniteresolventflow.Since[A,B]!=0,theself",
       "numeric_literals": [
@@ -823921,6 +824380,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b9572840513e8b687ef1360d3d863db6ed0962215c2c20b8991c7291e9ab3aef",
+      "normalized_formula": "UseactualPass11977Hermitian320-bandnativeWilsonoverlapkernelwithnonzerorandomstaticspatiallinkphasesandgenericspatialBlochmomentum.ForWilsonmassesm0=.5and3atsixEuclideantimefrequenciesomega=0,.3,.85,1.57,2.4,pi,alltwelvematriceshavenonzeroHermitianspectralgaps,zeropointwisesignature,andsatisfyRQ(k,omega)R=-Q(k,-omega)tomachineaccuracy.Thisindependentlyverifiespriortime-reflectionidentityatoff-cornerfrequenciesandchecksforunintendedfinitespectral-flowclaims.ItisNOTanactualDiracindexonatopologicallynontrivial4Dgaugebundle,nonzerochiralWeylspectrum,gaugeanomalycancellation,physicalSMfamiliesorquantumgravity",
+      "numeric_literals": [
+        ".3",
+        ".5",
+        ".85",
+        "0",
+        "1.57",
+        "1977",
+        "2.4",
+        "20"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 93,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "Use actual Pass11977 Hermitian 320-band native Wilson overlap kernel with nonzero random static spatial link phases and generic spatial Bloch momentum. For Wilson masses m0=.5 and3 at six Euclidean time frequencies omega=0,.3,.85,1.57,2.4,pi, all twelve matrices have nonzero Hermitian spectral gaps, zero pointwise signature, and satisfy R Q(k,omega) R=-Q(k,-omega) to machine accuracy. This independently verifies prior time-reflection identity at off-corner frequencies and checks for unintended finite spectral-flow claims. It is NOT an actual Dirac index on a topologically nontrivial 4D gauge bundle, nonzero chiral Weyl spectrum, gauge anomaly cancellation, physical SM families or quantum gravity.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "caaad5ffa5db5f535f7ea39c4078f1154237ed2f7dad19ce6fe982bc64fcad38",
+      "structural_formula": "UseactualPass1#Hermitian3#-bandnativeWilsonoverlapkernelwithnonzerorandomstaticspatiallinkphasesandgenericspatialBlochmomentum.ForWilsonmassesm0=#and3atsixEuclideantimefrequenciesomega=#,#,#,#,#,pi,alltwelvematriceshavenonzeroHermitianspectralgaps,zeropointwisesignature,andsatisfyRQ(k,omega)R=-Q(k,-omega)tomachineaccuracy.Thisindependentlyverifiespriortime-reflectionidentityatoff-cornerfrequenciesandchecksforunintendedfinitespectral-flowclaims.ItisNOTanactualDiracindexonatopologicallynontrivial4Dgaugebundle,nonzerochiralWeylspectrum,gaugeanomalycancellation,physicalSMfamiliesorquantumgravity"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2e52c283bac4bf8e57d00c4e1ef3331c410e01fca733dc9ea00085aa2d38e313",
       "normalized_formula": "Useanindependenthigher-bandobservableatBlochk=0",
       "numeric_literals": [
@@ -824139,6 +824632,36 @@
       },
       "structural_family_id": "508f3c251c62fbe029a720c52644c24d0b1487113958c01b6ac1ac4b2e666f7f",
       "structural_formula": "UsethestandardternaryTillich\u2013Z\u00e9morhypergraph-productconstructiononthenative(V\u2212#)\u00d7Evertex\u2013edgeincidencematrixHoftheW(#,q)Levigraph.With`m=V\u2212#`,`n=E`,constructsparsecommutingCSSchecks"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "eadd1f5fb2491873afa1dec298ed5b3f1affe915f9c4d0dd4c0a3fec63caaf81",
+      "normalized_formula": "UsethreeactualnativeoverlappingoctagonsGramG=[[8,-4,-4],[-4,8,4],[-4,4,8]]andintegerelectricfluxn=C.Tm+qwithqasingleorientednativeedge.GausschargeB.Tn=B.TqisfixedforALLminZ^3.Completethequadraticforminmandapplytheexactfinite/exteriorSchurinequalitywithmagnetichoppingboundarynormsquared3/(4g^4).Thechargedexteriorkineticestimateuses",
+      "numeric_literals": [
+        "-4",
+        "3",
+        "4",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+          "raw": "Use three actual native overlapping octagons Gram G=[[8,-4,-4],[-4,8,4],[-4,4,8]] and integer electric flux n=C.Tm+q with q a single oriented native edge. Gauss charge B.T n=B.Tq is fixed for ALL m in Z^3. Complete the quadratic form in m and apply the exact finite/exterior Schur inequality with magnetic hopping boundary norm squared3/(4g^4). The charged exterior kinetic estimate uses",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "1a7958f23ab429b7379e4201c70f5366ff9046d285e04fe4f7584905c7b33b72",
+      "structural_formula": "UsethreeactualnativeoverlappingoctagonsGramG=[[#,#,#],[#,#,#],[#,#,#]]andintegerelectricfluxn=C.Tm+qwithqasingleorientednativeedge.GausschargeB.Tn=B.TqisfixedforALLminZ^#.Completethequadraticforminmandapplytheexactfinite/exteriorSchurinequalitywithmagnetichoppingboundarynormsquared3/(#g^#).Thechargedexteriorkineticestimateuses"
     },
     {
       "file_count": 1,
@@ -1089831,6 +1090354,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "48af8b757c3fdb326bc806b6be176f5e525bc186b4e14d499ced85b29dc7bfad",
+      "normalized_formula": "assertvalues[-1]<min(values[:-1])-1e-10,(mass,beta,values)",
+      "numeric_literals": [
+        "-1",
+        "-1e-10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_staggered_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 39,
+          "path": "analysis/w33_20261013_toe61_staggered_flux.py",
+          "raw": "assert values[-1]<min(values[:-1])-1e-10,(mass,beta,values)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f33d66faf120321540cc8ddbd00bb353d34f905d8748dc6b9e1bd0b8cd22ae58",
+      "structural_formula": "assertvalues[#]<min(values[:#])#,(mass,beta,values)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "954dc10a36a5209881cd13e2327f30cba185af2d9a9cb100bfd7bd8604f4459e",
       "normalized_formula": "assertvm[\"automorphism_group\"][\"affine_quotient_order\"]=432",
       "numeric_literals": [
@@ -1162560,6 +1163111,33 @@
       },
       "structural_family_id": "81acc17312322e08a8becc328d3bcfe5906748813e08622206bb8a8afa922c51",
       "structural_formula": "cosetthecoefficientphaseisomega^(q1lam^#)withq1=chi(r1,r1)theWallform,nonzero.Matchingthej*lamcross"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4d505b185ddc2f3e2ad977b5891d0d3d43b8d889d76c65600edae0f5ae85336c",
+      "normalized_formula": "coshproofconvertsdeterminantdominanceateveryt>=0intofreeenergy",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_det_poly.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_20261013_toe61_det_poly.py",
+          "raw": "cosh proof converts determinant dominance at every t>=0 into free energy",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "9aab085a1aceb91dad7eefa809c6536f1a5a26559b3d3b3eccc5a7172328d019",
+      "structural_formula": "coshproofconvertsdeterminantdominanceateveryt>=#intofreeenergy"
     },
     {
       "file_count": 1,
@@ -1257978,6 +1258556,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bd7c421788a7a3714144a80adb002e67d36f291416e6a16db59529814a8ae85f",
+      "normalized_formula": "from_wilson=c.plaquette(state,row,+1)",
+      "numeric_literals": [
+        "+1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_full_gauss_audit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 51,
+          "path": "analysis/w33_20261013_toe61_full_gauss_audit.py",
+          "raw": "from_wilson=c.plaquette(state,row,+1)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8d98a13bfc7c251397a671ff75b4b34328dd5fd005e5abc2686615a28e483f4d",
+      "structural_formula": "from_wilson=c.plaquette(state,row,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "eb75d59f91861941cfb6835fb146a8d8edd60d6957bae9a2f56dc8dfec260e2e",
       "normalized_formula": "fromasingleHLIXcadenceprefactor1728=k^3=j(i)",
       "numeric_literals": [
@@ -1327667,6 +1328272,33 @@
       },
       "structural_family_id": "38a30045a15aae61f29dcffc4ccad3fe3e9b777b4981112d840d5e9fba63a269",
       "structural_formula": "leverage='u_e^T*P(#)^(#)*u_e=#/[#*(vx+#/#)]foreveryactualedge.LineartracetermscancelsincesumV_e=#;sum(V_e.w)^#=#.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d6396537a7d6770d1a552d1d58e3a26f34360b17980a205a6818086191b1241f",
+      "normalized_formula": "lhs=int(r['full_difference_from_zero_decimal'][4])",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_det_poly.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 64,
+          "path": "analysis/w33_20261013_toe61_det_poly.py",
+          "raw": "lhs=int(r['full_difference_from_zero_decimal'][4])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0548bca65c6352188e2373566d58de855f061e1e86be7144f771a66936a11fec",
+      "structural_formula": "lhs=int(r['full_difference_from_zero_decimal'][#])"
     },
     {
       "file_count": 1,
@@ -1429413,6 +1430045,60 @@
       },
       "structural_family_id": "1462072a96f043816126b713f074c1cfca808d14978e8155bf5f1239de54470a",
       "structural_formula": "out={'status':'PASS','substrate':'W3#Levithree-deckcurl/gauge2-complex(Round3#)','Hamiltonian':'H=#/#||E||^##/#||P(k)A||^#,withB(k)^dagE=#;A~A+B(k)phi','linear_dispersion_eigenvalue_ratio_double_k':slope,'k_samples':results,'boundary':'Thisisapositivegauge-constrained*linear*Blochmodel,notaquantizedMaxwelltheory.Continuousrotational/Lorentzinvariance,physicalunitsandphoton-mattercouplingareunproved.'}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bf30e8e0033c1e072066c91c3c9ad42398b8017f771e70841dfd172d5ff9c3fd",
+      "normalized_formula": "out={'status':'PASS_TOE61_EXACT_ALL_TEMPERATURE_Z2_FLUX_DOMINANCE'",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_det_poly.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/w33_20261013_toe61_det_poly.py",
+          "raw": "out={'status':'PASS_TOE61_EXACT_ALL_TEMPERATURE_Z2_FLUX_DOMINANCE',",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "7d6b3f8fa80829a5771bf1be2a9470d976d229d64f527d0376305a1fac3ab776",
+      "structural_formula": "out={'status':'PASS_TOE6#_EXACT_ALL_TEMPERATURE_Z2_FLUX_DOMINANCE'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4c103a919fd0f2c9794ecc3eea36793512f01ec57d32109d70ed69caac04efaa",
+      "normalized_formula": "out={'status':'PASS_TOE61_STAGGERED_MASS_ALL_TEMPERATURE_FLUX_THEOREM'",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261013_toe61_staggered_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 43,
+          "path": "analysis/w33_20261013_toe61_staggered_flux.py",
+          "raw": "out={'status':'PASS_TOE61_STAGGERED_MASS_ALL_TEMPERATURE_FLUX_THEOREM',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1caf6a918d531cc721533fdee28441e1053e85c0c9d726083cd1e08679aefc74",
+      "structural_formula": "out={'status':'PASS_TOE6#_STAGGERED_MASS_ALL_TEMPERATURE_FLUX_THEOREM'"
     },
     {
       "file_count": 1,
@@ -1797951,9 +1798637,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T13:35:01-04:00",
+  "frozen_at": "2026-10-13T14:05:24-04:00",
   "pass": 398,
-  "repository_head": "69dccbd6b2640a29303caafb0b8fab638e3ff1b1",
+  "repository_head": "0b5a634f77048ef7a5a75c7c3d83501dc40e3e17",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1799905,6 +1800591,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d4693d6db64efd3c6834d48d7b1d93557ba4f613b3ff21aa900cf1a9d74b4ddd",
       "structural_formula": "\"\"\"TOE4#:normalizedflux3#=#toyWilsondisplacementremoves2foldYukawalock.\"\"\""
+    },
+    {
+      "exact_formula_ids": [
+        "323392c2f7e9d80eefa96bffc949180593a72475a6cd760c438adcb717ca89d6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6f06cbe8afbeef34db6a13dab5bb75937ac0e8bb964275d0ef243d1e9c4a1210",
+      "structural_formula": "\"\"\"TOE6#exactW3#determinantdominance->all-temperatureZ2fluxtheorem"
     },
     {
       "exact_formula_ids": [
@@ -1873948,6 +1874642,14 @@
     },
     {
       "exact_formula_ids": [
+        "303bc72c81e1ac6cc07954bec5ada1ea906590d1f98a6ea2d5fc1a4659ed46e7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6497c1cced54ac80065c0a7fce64b0443c4d9b0f70e93662f3a11379578e3c43",
+      "structural_formula": "#F\u03b2(H)=#/\u03b2\u03a3_\u03c3log(#cosh(\u03b2\u03c3/#));cosh(\u03b2\u03c3/#)"
+    },
+    {
+      "exact_formula_ids": [
         "ad2f86c00a9002bb41c0b0fb1ab609310d32cdee3b78907b899c1687a7862a5f"
       ],
       "exact_member_count": 1,
@@ -1899202,11 +1899904,27 @@
     },
     {
       "exact_formula_ids": [
+        "2c959fcd52161e0b83b95a59715a1f9699e7daed8ab347dc583fa4ea1ba85651"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2b34a7eb0a8803c65ecca35383142d7ce46e99955a95922a7663154f6fd55dca",
+      "structural_formula": "'conditional_exact_theorem':\"H_{c,m}=[[mI,-B_c],[-B_c^T,-mI]]haseigenvalues\u00b1sqrt(\u03c3_j(B_c)^#+m2).Foreveryt>=#,det(I+t(K_c+m2I))=(#+m2t)^#det(I+t/(#+m2t)K_c).SinceTOE6#provesexactnonnegativecoefficientwisedeterminantdifferencesandthree-pidominateseveryotherZ2corner,thedominancesurvivesANYrealstaggeredmassmandeverybeta>#atchemicalpotential0viacoshWeierstrassproduct.\""
+    },
+    {
+      "exact_formula_ids": [
         "47e0d31a75b41a01192aa8e71f226c3e0ae4f5bc971643398d3d872be2c62284"
       ],
       "exact_member_count": 1,
       "structural_family_id": "62feae066cd3c0feb24c73f321b1aad2de2bdb65fd3be9b51b2895eb4f18a2d9",
       "structural_formula": "'conditional_gravity_equation':'Mpl2G_mu_nu=T_mu_nu-(#/#)g_mu_nu<TrT>.Aspacetime-constantshiftT_mu_nu->T_mu_nu-Cg_mu_nucancelsexactly;residualhistory/fluxandtheglobalsigmaconstraintsremaininputs.'"
+    },
+    {
+      "exact_formula_ids": [
+        "0260c65035da45f4085cced7477dd1025d0a9082073f4db0d12f45b43c49d062"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1eb12fb3d591d9a5974d915ce0c0e6daf99fbe30965fffa83c6ddceab75935cd",
+      "structural_formula": "'conditional_theorem':\"Foranyselected3-loopelectricfluxE=C.Tm+qwithnonzerofixednativeedgeq,GausschargeB.TE=B.Tqisconstant.Outside|m|_infty>N,use||C.Tm+q||#=(m+G^#Cq).TG(m+G^#Cq)+||q||#\u2212(Cq).TG^#(Cq).ThusC_ext>=g2/#[\u03bbmin(G)max(#,N+#-||G^#Cq||)#+q_perp2].Comparewithtriangleinequality||C.Tm+q||>=sqrt\u03bbmin(G)(N+#)\u2212||q||.WilsonmagneticpotentialisPSD;finite-to-outsidehopnormsquared3/(#g4);SchurgiveslowerL=E_N\u2212b2/(C_ext\u2212E_N).SubtractneutralandchargedintervalstoencloseE_charged\u2212E_neutral.FiniteblockspreserveexactGauss.\""
     },
     {
       "exact_formula_ids": [
@@ -1900335,6 +1901053,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9812b12bc37448e1c2a49f13604df30bb837643288bf12f7dc4fd2e6e1343bec",
       "structural_formula": "'exact_sequence':'#->C_F->F2^#->Im(L|V_P)/Im(L|E)->#'"
+    },
+    {
+      "exact_formula_ids": [
+        "f35fb6156b40de405c318761fca93cf6066ffe57d4a14a6e686117b7f8946bd6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f35fb6156b40de405c318761fca93cf6066ffe57d4a14a6e686117b7f8946bd6",
+      "structural_formula": "'exact_symmetry_test':\"ForstaticspatiallinkphasesRQ(k,omega)R=-Q(k,-omega)whereR=igamma4gamma5.Indexsignatureat\u00b1omegaisopposite.Attemporalcorners0and\u03c0,self-pairingforcesexactzeroifgapped.Aconnectedgappedfixed-spatial-phaseomegasweepcannotgenerateanonzeropointwisesignaturewithoutgapclosing.Thisisnotastatementthatalltopologicallynontrivial4Doverlapfieldshavezeroindex.\""
     },
     {
       "exact_formula_ids": [
@@ -1901919,6 +1902645,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b97386e6970b5e4c9edf8f5707648614e96a3fa2e5a484e1e75942c7ee31819c",
       "structural_formula": "'internal_index':'m=sum_jn_j3^j,n_jin{#,#,#}'"
+    },
+    {
+      "exact_formula_ids": [
+        "67170a37a400e9a2bb9908bc8d418d4f80dee61011c3b145db24a1d60fbf57f0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ad6811a61c37cfcda3dbe0e969741dbbef895f50d1709cc93e08a77506f8187b",
+      "structural_formula": "'interpretation':\"ThethreeformallyaddedTOE3#deckcommutator2-cellshaveZEROsignednative1#-linkchainatk=#.HencethePass1#fullfinite-graphHamiltonianlists1#plaquetterowsbutonly1#distinctNONTRIVIALflux-shiftoperators;thelastthreerowsareidentitywithzeromagneticexcitationforthestandard(#\u2212cosP\u00b7A)term.InanonzeroBlochrepresentationtheymaycarryadditionalholonomystructure;statick0identitiesmustnotbecountedasinteractingplaquettes.\""
     },
     {
       "exact_formula_ids": [
@@ -1903834,6 +1904568,14 @@
     },
     {
       "exact_formula_ids": [
+        "13bcd8c2e56790e3386bd0be9cf88342f6e375a78456f269ed3bb569e5b3ed9c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6d473f071b8985e1e13e085ce3282dc3215ed6bb9ff5a5e268bf37a9f923dd74",
+      "structural_formula": "'prior':\"MassdeformationviaH2=K+m2andWeierstrassproductiselementarystandard.TheW3#-specificcoefficientcertificatesareTOE6#.\"}"
+    },
+    {
+      "exact_formula_ids": [
         "8922ab4753bc3c083da09a850b56cfc98e5cb986b531278fcd25d34777eea6bd"
       ],
       "exact_member_count": 1,
@@ -1905239,6 +1905981,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1e5f11f32bb1f9cdc9d2043bb0d43df669c87d84d044f7ff8904d3db962b5f33",
       "structural_formula": "'theexactCSScodeis[#,#,#]withdistance2#'->['[#,#,#]']"
+    },
+    {
+      "exact_formula_ids": [
+        "354675e6112a75985dfc28726ace644ef5055f6c4e7f4e7098c46f87db128bc4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d69b546c660a441020968b6f34fab9496703c9a06595937ffe96eb436044690d",
+      "structural_formula": "'theorem':\"ForthesuppliedW3#statichalf-filledspinlessbipartitehoppingH_candeightZ2flatdeckholonomiesc,theEXACTINTEGERcoefficientsofdet(I+tB_cB_c.T)minusdet(I+tB_0B_0.T)are>=#.Henceforeveryt>=#thedeterminantofeverynontrivialcis>=trivial.TheWeierstrassinfiniteproductcosh(z)=prod_(n>=#)[##z2/(pi2(#n+#)#)]convertsthatintotheexactinequalityF_beta(c)<=F_beta(#)forALLbeta>#atchemicalpotentialzero.Everynonzerochasstrictpolynomialinequalityandhencestrictfreeenergyinequality.\""
     },
     {
       "exact_formula_ids": [
@@ -1948093,6 +1948843,14 @@
     },
     {
       "exact_formula_ids": [
+        "d64382ab86277e7e4fddddc9b3624377a6b8935c0e4a987ebe4155c728b9b23c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aec45fa96a5cf0e19d947e522b1b76af0d28db10d64ea794228f77dcd5ee0bfa",
+      "structural_formula": "Becauset/(#+m^#t)>=#,exactP_1#>=P_cdominancesurvivesthecommonstaggeredmass,so^F_beta(#,m)<F_beta(c,m)^foreverybeta>#,everyrealm,zerochemicalpotential,andsevenotherc.A2#-casenumericalmass/temperaturescancorroboratestheformula.Theproofconcernsaspinlessbipartitelatticewithsuppliedmass;notphysicalDirac/Yukawamassgeneration,genericsite-dependentmassorinteractions"
+    },
+    {
+      "exact_formula_ids": [
         "5afc87db138990edbe5dc6bda04705cf8801f3a1f6591d8c5f2fc31ec7db4508"
       ],
       "exact_member_count": 1,
@@ -1961634,6 +1962392,14 @@
     },
     {
       "exact_formula_ids": [
+        "dc1390e94e33f377255f1f461a8d3cb621d21fa5aeb52009d35577b7d18283ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c2e16f35ff6003312e7daf4db5c31106e7ae70c6610b66103fcd77ef17ee78bd",
+      "structural_formula": "F_beta(c)=-(#/beta)SUM_jlog[#cosh(betasigma_j/#)]"
+    },
+    {
+      "exact_formula_ids": [
         "36db88ecaed2ba8864db0427dd8e465b05f974802584d49b70c958ed3344c7da"
       ],
       "exact_member_count": 1,
@@ -1962319,6 +1963085,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0e9912f8d0c0ca9873d46ccc4eaec4d50d585b14785ae61178d660e6dd4547b7",
       "structural_formula": "ForANYHammingcodeHam(r,#):minimumdistanced=q=#"
+    },
+    {
+      "exact_formula_ids": [
+        "4a4fb47340a0683e489b80d197eaa8ac95879130c30a0dec3e4fb500d860c7a2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "62e5b387602ee4c9d708bdc148177db754f3a64ef3429b47f55c447484afed06",
+      "structural_formula": "ForANYrealcommonsublattice-staggeredmassm,H_(c,m)=[[mI,-B_c],[-B_c.T,-mI]]haseigenvalues\u00b1sqrt(sigma_j^#+m^#).Foranyt>=#"
     },
     {
       "exact_formula_ids": [
@@ -1971350,6 +1972124,14 @@
       "exact_member_count": 1,
       "structural_family_id": "22d99af3e2ad0acfd8bcc0386ecff4650fd7d57adb99e3e981e67d676d916661",
       "structural_formula": "Importantlydet(\u2212I)=#,sothisZ2isindependentoftheclock\u2019scentral\u2212Iparity.Itisanalgebraicescaperoute,butitisanextraparityratherthanaflavourtexture"
+    },
+    {
+      "exact_formula_ids": [
+        "470fb811d101cd0559ab26fd41eb6b2946a74ef418ed4d30a72dcb1f5b54b34f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f3c67adcd43ef7bc76c61d544623c42e0a9116f8de10fd5ac0500a84ab92db48",
+      "structural_formula": "ImportantrefinementofTOE6#:the1#declaredTOE3#-cellrowsconsistof^#embeddedsignedoctagonboundaries^and^threeformalcommutatorrowswithZEROedge-chainboundaryatBlochk=#^.ThosethreeareNOTregularembeddedpolygonfaces.Exactenumerationalsoshowsthe1#actualeight-edgeoctagonsarealldistinctuptoorientedsign.Fortheregular-octagon-only2-skeleton,(V,E,F)=(#,#,#),rationalBetti=(#,#,#,#),andEuler=#"
     },
     {
       "exact_formula_ids": [
@@ -2000956,6 +2001738,14 @@
     },
     {
       "exact_formula_ids": [
+        "a7a411b75acefc1b23ec9a6fd5b23fdfac1576d9c74fec50cbd36b9955ccb4ff"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a7b3c0739a46183979581802c20dac18c5578a581180edc87c5a9e15286bd820",
+      "structural_formula": "ReviewedTOE3#nativethree-deckW3#-site/#-link/#-rowsignedcurl,TOE5#windingandhigh-temperatureseventh-orderfree-energycoefficient,TOE6#majorizationfailure/Schurfluxbounds,Pass1#fullnativeGauss-constrainedcompiler,andPass1#actual3#-bandGinsparg-Wilsonoverlap.Pass1#alreadyidentifiedthespecialthree-pifluxstateandproveditisconjugation-fixed,notobservedspontaneousCP.Priorworkalsoowns1#totaloctagons,#localzero-windingoctagons,#windingoctagons,andrank(boundary1)=#,rank(boundary2)=#.WedoNOTreattributethese"
+    },
+    {
+      "exact_formula_ids": [
         "40983465ea6a8f357aafdf4f2d0f8f9950e5900304d1694c32140cc2572e3c5c"
       ],
       "exact_member_count": 1,
@@ -2013740,6 +2014530,14 @@
     },
     {
       "exact_formula_ids": [
+        "25bc268b947ebd02b0d3601061767f21ebd21042ce2fa0e2871963f1e0e502b5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0bc06e6f84dccf7721c7fd3119492646067967619d561e3464107a2d8c132a6d",
+      "structural_formula": "TheexactWeierstrassidentitycosh(z)=PRODUCT_(n>=#)[##z^#/(pi^#(#n+#)^#)]gives"
+    },
+    {
+      "exact_formula_ids": [
         "c2f93fc78b646d18401d97ffe70d5520a99cbe5d253658da06df89f6162288ac"
       ],
       "exact_member_count": 1,
@@ -2017615,6 +2018413,14 @@
     },
     {
       "exact_formula_ids": [
+        "158093ba92bc86463b833c0227e64415715d7e87b1d628670464106219338ab4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e81395b9cc9acf8dafa5ab2ba2e80da5ef91fe5a2469f336acc07db02238493f",
+      "structural_formula": "Thisisamathematicaltheoremofthespecifiedfinitefreemodel,withanindependentlyinspectableexactintegerproofcertificate,notjusttemperaturesampling.AnindependentNewton-identitiescrosscheckreproducesTOE5#'seighthtracemomentfromthet^#coefficient:delta_e4(K)=-delta_tr(H^#)/#.Forthree-pi,delta_tr(H^#)=#anddelta_e4(K)=#,linkingtheexactfirstholonomy-sensitiveoctagoncounttothedeterminantdominancecertificate.ItisNOTatheoremofglobalminimizationamongallcontinuousU1connections,interaction-inducedCPbreaking,afulldynamicalquantumgaugesystem,observedCKMCP,orphysicalfundamentalconstants.Everyrealpicornerisconjugation-fixed;nophysicalspontaneousCPfollows"
+    },
+    {
+      "exact_formula_ids": [
         "fdf84b3566d071826fc80601ce947087925ce487135dc7357ba80f7591dd5f9f"
       ],
       "exact_member_count": 1,
@@ -2020280,6 +2021086,14 @@
     },
     {
       "exact_formula_ids": [
+        "b9572840513e8b687ef1360d3d863db6ed0962215c2c20b8991c7291e9ab3aef"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "caaad5ffa5db5f535f7ea39c4078f1154237ed2f7dad19ce6fe982bc64fcad38",
+      "structural_formula": "UseactualPass1#Hermitian3#-bandnativeWilsonoverlapkernelwithnonzerorandomstaticspatiallinkphasesandgenericspatialBlochmomentum.ForWilsonmassesm0=#and3atsixEuclideantimefrequenciesomega=#,#,#,#,#,pi,alltwelvematriceshavenonzeroHermitianspectralgaps,zeropointwisesignature,andsatisfyRQ(k,omega)R=-Q(k,-omega)tomachineaccuracy.Thisindependentlyverifiespriortime-reflectionidentityatoff-cornerfrequenciesandchecksforunintendedfinitespectral-flowclaims.ItisNOTanactualDiracindexonatopologicallynontrivial4Dgaugebundle,nonzerochiralWeylspectrum,gaugeanomalycancellation,physicalSMfamiliesorquantumgravity"
+    },
+    {
+      "exact_formula_ids": [
         "2e52c283bac4bf8e57d00c4e1ef3331c410e01fca733dc9ea00085aa2d38e313"
       ],
       "exact_member_count": 1,
@@ -2020333,6 +2021147,14 @@
       "exact_member_count": 1,
       "structural_family_id": "508f3c251c62fbe029a720c52644c24d0b1487113958c01b6ac1ac4b2e666f7f",
       "structural_formula": "UsethestandardternaryTillich\u2013Z\u00e9morhypergraph-productconstructiononthenative(V\u2212#)\u00d7Evertex\u2013edgeincidencematrixHoftheW(#,q)Levigraph.With`m=V\u2212#`,`n=E`,constructsparsecommutingCSSchecks"
+    },
+    {
+      "exact_formula_ids": [
+        "eadd1f5fb2491873afa1dec298ed5b3f1affe915f9c4d0dd4c0a3fec63caaf81"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1a7958f23ab429b7379e4201c70f5366ff9046d285e04fe4f7584905c7b33b72",
+      "structural_formula": "UsethreeactualnativeoverlappingoctagonsGramG=[[#,#,#],[#,#,#],[#,#,#]]andintegerelectricfluxn=C.Tm+qwithqasingleorientednativeedge.GausschargeB.Tn=B.TqisfixedforALLminZ^#.Completethequadraticforminmandapplytheexactfinite/exteriorSchurinequalitywithmagnetichoppingboundarynormsquared3/(#g^#).Thechargedexteriorkineticestimateuses"
     },
     {
       "exact_formula_ids": [
@@ -2089291,6 +2090113,14 @@
     },
     {
       "exact_formula_ids": [
+        "48af8b757c3fdb326bc806b6be176f5e525bc186b4e14d499ced85b29dc7bfad"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f33d66faf120321540cc8ddbd00bb353d34f905d8748dc6b9e1bd0b8cd22ae58",
+      "structural_formula": "assertvalues[#]<min(values[:#])#,(mass,beta,values)"
+    },
+    {
+      "exact_formula_ids": [
         "954dc10a36a5209881cd13e2327f30cba185af2d9a9cb100bfd7bd8604f4459e"
       ],
       "exact_member_count": 1,
@@ -2109322,6 +2110152,14 @@
       "exact_member_count": 1,
       "structural_family_id": "81acc17312322e08a8becc328d3bcfe5906748813e08622206bb8a8afa922c51",
       "structural_formula": "cosetthecoefficientphaseisomega^(q1lam^#)withq1=chi(r1,r1)theWallform,nonzero.Matchingthej*lamcross"
+    },
+    {
+      "exact_formula_ids": [
+        "4d505b185ddc2f3e2ad977b5891d0d3d43b8d889d76c65600edae0f5ae85336c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9aab085a1aceb91dad7eefa809c6536f1a5a26559b3d3b3eccc5a7172328d019",
+      "structural_formula": "coshproofconvertsdeterminantdominanceateveryt>=#intofreeenergy"
     },
     {
       "exact_formula_ids": [
@@ -2135335,6 +2136173,14 @@
     },
     {
       "exact_formula_ids": [
+        "bd7c421788a7a3714144a80adb002e67d36f291416e6a16db59529814a8ae85f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8d98a13bfc7c251397a671ff75b4b34328dd5fd005e5abc2686615a28e483f4d",
+      "structural_formula": "from_wilson=c.plaquette(state,row,#)"
+    },
+    {
+      "exact_formula_ids": [
         "eb75d59f91861941cfb6835fb146a8d8edd60d6957bae9a2f56dc8dfec260e2e"
       ],
       "exact_member_count": 1,
@@ -2154117,6 +2154963,14 @@
       "exact_member_count": 1,
       "structural_family_id": "38a30045a15aae61f29dcffc4ccad3fe3e9b777b4981112d840d5e9fba63a269",
       "structural_formula": "leverage='u_e^T*P(#)^(#)*u_e=#/[#*(vx+#/#)]foreveryactualedge.LineartracetermscancelsincesumV_e=#;sum(V_e.w)^#=#.'"
+    },
+    {
+      "exact_formula_ids": [
+        "d6396537a7d6770d1a552d1d58e3a26f34360b17980a205a6818086191b1241f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0548bca65c6352188e2373566d58de855f061e1e86be7144f771a66936a11fec",
+      "structural_formula": "lhs=int(r['full_difference_from_zero_decimal'][#])"
     },
     {
       "exact_formula_ids": [
@@ -2181269,6 +2182123,22 @@
       "exact_member_count": 1,
       "structural_family_id": "1462072a96f043816126b713f074c1cfca808d14978e8155bf5f1239de54470a",
       "structural_formula": "out={'status':'PASS','substrate':'W3#Levithree-deckcurl/gauge2-complex(Round3#)','Hamiltonian':'H=#/#||E||^##/#||P(k)A||^#,withB(k)^dagE=#;A~A+B(k)phi','linear_dispersion_eigenvalue_ratio_double_k':slope,'k_samples':results,'boundary':'Thisisapositivegauge-constrained*linear*Blochmodel,notaquantizedMaxwelltheory.Continuousrotational/Lorentzinvariance,physicalunitsandphoton-mattercouplingareunproved.'}"
+    },
+    {
+      "exact_formula_ids": [
+        "bf30e8e0033c1e072066c91c3c9ad42398b8017f771e70841dfd172d5ff9c3fd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7d6b3f8fa80829a5771bf1be2a9470d976d229d64f527d0376305a1fac3ab776",
+      "structural_formula": "out={'status':'PASS_TOE6#_EXACT_ALL_TEMPERATURE_Z2_FLUX_DOMINANCE'"
+    },
+    {
+      "exact_formula_ids": [
+        "4c103a919fd0f2c9794ecc3eea36793512f01ec57d32109d70ed69caac04efaa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1caf6a918d531cc721533fdee28441e1053e85c0c9d726083cd1e08679aefc74",
+      "structural_formula": "out={'status':'PASS_TOE6#_STAGGERED_MASS_ALL_TEMPERATURE_FLUX_THEOREM'"
     },
     {
       "exact_formula_ids": [
@@ -2278605,20 +2279475,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87686944,
-    "exact_formula_families": 61495,
-    "files_scanned": 12026,
-    "formula_occurrences": 67470,
+    "bytes_scanned": 87723770,
+    "exact_formula_families": 61518,
+    "files_scanned": 12033,
+    "formula_occurrences": 67493,
     "status_occurrences": {
-      "certified_or_theorem": 4915,
+      "certified_or_theorem": 4927,
       "killed_or_retracted": 1645,
-      "open_or_conditional": 2244,
+      "open_or_conditional": 2245,
       "preregistered": 33,
-      "retrospective_fit": 5224,
-      "unclassified": 53409
+      "retrospective_fit": 5226,
+      "unclassified": 53417
     },
-    "structural_families": 59873
+    "structural_families": 59896
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "ea4401ab9385a5cc9f8b89115da22b10c1753dd07969fe409bbaeb4cf8c0e049"
+  "universe_sha256": "5bcb4f340fba217dba6b80fbe110111d31ac4dad2e45bc32bb08c0d47dd142c5"
 }
