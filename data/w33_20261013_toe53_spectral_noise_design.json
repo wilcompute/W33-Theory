@@ -1,0 +1,73 @@
+{
+  "status": "PASS_WHITENED_NONOPPOSITE_BLOCH_SPECTRAL_DESIGN",
+  "positive_weights": 160,
+  "candidate_k_count": 15,
+  "n_three_k_designs_evaluated": 455,
+  "whitened_model": "Each spectral moment T_n receives independent noise \u03c3*T_n; six leading metric entries noise \u03c3*.5. Physical photon/sample variance not derived.",
+  "original_three_nonzero_k": [
+    [
+      0.83,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.91,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.01
+    ]
+  ],
+  "original_row_normalized_smallest_sv": 6.971195315515106e-06,
+  "selected_three_nonzero_k": [
+    [
+      0.83,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.91,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.01
+    ]
+  ],
+  "optimized_row_normalized_smallest_sv": 6.971195315515106e-06,
+  "improvement_factor": 1.0,
+  "original_relative_rank_1e_minus4": 12,
+  "optimized_relative_rank_1e_minus4": 12,
+  "assumed_3known_weight_support": [
+    5,
+    34,
+    113
+  ],
+  "restricted_support_smallest_whitened_sv": 0.0010313270377244168,
+  "oracle_3link_inversion_with_gaussian_measurement_noise": [
+    {
+      "relative_moment_noise_sigma": 0.0001,
+      "oracle_known_3link_L2_error_mean_300": 0.09577376751443531,
+      "oracle_known_3link_L2_error_rms_300": 0.10991142155282202,
+      "expected_oracle_L2_error_rms": 0.11299748504210791
+    },
+    {
+      "relative_moment_noise_sigma": 0.001,
+      "oracle_known_3link_L2_error_mean_300": 0.9270423495709309,
+      "oracle_known_3link_L2_error_rms_300": 1.0548586931939177,
+      "expected_oracle_L2_error_rms": 1.129974850421079
+    },
+    {
+      "relative_moment_noise_sigma": 0.005,
+      "oracle_known_3link_L2_error_mean_300": 4.96242233394285,
+      "oracle_known_3link_L2_error_rms_300": 5.652092669896336,
+      "expected_oracle_L2_error_rms": 5.649874252105395
+    }
+  ],
+  "limitations": "Finite Bloch trace moments, not a calibrated device. The operator gradients are exact finite-model derivatives, but scale-proxy noise is assumed, the 3 defect locations are given to the estimator, and all 160 weights remain underdetermined. Covariance assumes independent equal fractional errors; optimality only within the finite enumerated candidate pool."
+}

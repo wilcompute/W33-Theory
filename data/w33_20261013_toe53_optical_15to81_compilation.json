@@ -1,0 +1,79 @@
+{
+  "status": "PASS_REAL_15_TO_81_TRIANGULAR_LINEAR_OPTICS_QR_COMPILER",
+  "source": "TOE52 integer Reynolds H27 spread15-to-K81 81D polar isometry",
+  "input_dimension": 15,
+  "output_modes": 81,
+  "nontrivial_adjacent_two_mode_Givens_rotations": 1031,
+  "universal_81x81_Clements_or_Reck_2mode_slot_count": 3240,
+  "triangular_partial_QR_slot_upper_bound": 1095,
+  "diagonal_pi_phase_flips": 0,
+  "exact_matrix_reconstruction_max_element_error": 3.8528208401444886e-15,
+  "max_QR_elimination_residual": 8.168812848374785e-15,
+  "simulated_equal_per_Givens_attenuation_scenarios": [
+    {
+      "loss_db_per_2mode_operation": 0,
+      "min_transmission": 0.9999999999999991,
+      "mean_transmission": 1.0,
+      "max_transmission": 1.0000000000000009,
+      "min_mode_conditional_overlap": 0.9999999999999989,
+      "max_orthonormality_error": 9.992007221626409e-16
+    },
+    {
+      "loss_db_per_2mode_operation": 0.005,
+      "min_transmission": 0.935825670318125,
+      "mean_transmission": 0.9480390946130289,
+      "max_transmission": 0.9599640523947304,
+      "min_mode_conditional_overlap": 0.9998321719620189,
+      "max_orthonormality_error": 0.06417432968187486
+    },
+    {
+      "loss_db_per_2mode_operation": 0.01,
+      "min_transmission": 0.8763543218149944,
+      "mean_transmission": 0.8993255528835185,
+      "max_transmission": 0.9219545515975022,
+      "min_mode_conditional_overlap": 0.999329219743118,
+      "max_orthonormality_error": 0.1236456781850056
+    },
+    {
+      "loss_db_per_2mode_operation": 0.02,
+      "min_transmission": 0.7701017366623402,
+      "mean_transmission": 0.8107557574721332,
+      "max_transmission": 0.8515568256144496,
+      "min_mode_conditional_overlap": 0.9972668037769079,
+      "max_orthonormality_error": 0.22989826333765995
+    },
+    {
+      "loss_db_per_2mode_operation": 0.05,
+      "min_transmission": 0.5319350663341027,
+      "mean_transmission": 0.6026846389331677,
+      "max_transmission": 0.6782902486366329,
+      "min_mode_conditional_overlap": 0.9818245174769116,
+      "max_orthonormality_error": 0.4680649336658972
+    }
+  ],
+  "independent_Gaussian_Givens_phase_or_angle_noise": [
+    {
+      "rms_Givens_angle_error_rad": 0,
+      "mean_target_column_overlap_24trials": 1.000000000000002,
+      "sd_target_column_overlap_24trials": 0.0
+    },
+    {
+      "rms_Givens_angle_error_rad": 0.001,
+      "mean_target_column_overlap_24trials": 0.9999530758042168,
+      "sd_target_column_overlap_24trials": 2.119158996154635e-06
+    },
+    {
+      "rms_Givens_angle_error_rad": 0.003,
+      "mean_target_column_overlap_24trials": 0.99957942172581,
+      "sd_target_column_overlap_24trials": 1.829237237546381e-05
+    },
+    {
+      "rms_Givens_angle_error_rad": 0.01,
+      "mean_target_column_overlap_24trials": 0.9953254625873361,
+      "sd_target_column_overlap_24trials": 0.0002524330889423049
+    }
+  ],
+  "specification": "Each elementary real Givens rotation corresponds to a tunable two-mode interference operation. Diagonal signs are \u03c0 phases. To implement on 81 physical modes the network must route modes, calibrate couplers and account for propagation, insertion and detection loss.",
+  "prior_art": "Reck et al PRL73 58 (1994) and Clements et al Optica3 1460 (2016), DOI 10.1364/OPTICA.3.001460; triangular mesh here, not claimed loss-optimal Clements layout.",
+  "physical_scope": "A deterministic 81-mode partial orthogonal isometry with illustrative per-operation loss and Gaussian angle noise. No experimentally specified coupler, photon source, FI-clock implementation, fault-tolerant magic-state injection or fabricated photonic Holonet."
+}
