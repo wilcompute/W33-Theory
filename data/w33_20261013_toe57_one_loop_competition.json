@@ -1,0 +1,110 @@
+{
+  "status": "PASS_TOE57_HARMONIC_ONE_LOOP_FERMION_BOSON_COMPETITION",
+  "finite_model": {
+    "native_sites": 80,
+    "native_links": 160,
+    "H1_dimension": 3,
+    "g": 0.7,
+    "fermion_beta": 4.0,
+    "boson_mass2": 0.8,
+    "boson_kappa": 0.7
+  },
+  "fermion_zero_holonomy_F": -67.98702449745932,
+  "boson_zero_holonomy_F": 95.37116409867465,
+  "fermion_local_holonomy_hessian": [
+    [
+      -0.1794626699705759,
+      0.00046697038822429693,
+      0.00012936867221924328
+    ],
+    [
+      0.00046697038822429693,
+      -0.1795517437827243,
+      0.0002967097385564443
+    ],
+    [
+      0.00012936867221924328,
+      0.0002967097385564443,
+      -0.17943645171385467
+    ]
+  ],
+  "fermion_hessian_eigenvalues": [
+    -0.18001239549353634,
+    -0.17956097373156013,
+    -0.17887749624205843
+  ],
+  "boson_local_holonomy_hessian": [
+    [
+      0.0013547041341155361,
+      -1.6554563941895135e-06,
+      -5.552605486514038e-07
+    ],
+    [
+      -1.6554563941895135e-06,
+      0.0013550638520598566,
+      -1.031051333200139e-06
+    ],
+    [
+      -5.552605486514038e-07,
+      -1.031051333200139e-06,
+      0.0013545951468074688
+    ]
+  ],
+  "boson_hessian_eigenvalues": [
+    0.0013525983953673552,
+    0.0013551225992438068,
+    0.0013566421383716996
+  ],
+  "number_boson_weight_threshold_to_stabilize_trivial_holonomy": 132.69015710790356,
+  "threshold_rule": "For V_eff=F_one_spinless_fermion+N_b*F_one_Gaussian_boson, the local quadratic matrix is H_f+N_b H_b. Given H_b>0, zero holonomy becomes a strict local minimum if N_b is greater than largest eigenvalue of (-H_b^-1/2 H_f H_b^-1/2). This is a mathematical continuous determinant-weight parameter, not a fractional number of physical species.",
+  "sampled_negative_holonomy_direction": [
+    0.5882354236681753,
+    -0.7650680102172666,
+    0.26201149990814365
+  ],
+  "sampled_CP_symmetric_line": [
+    {
+      "t": 0.0,
+      "fermion_F_minus_zero": 0.0,
+      "boson_F_minus_zero": 0.0
+    },
+    {
+      "t": 0.5,
+      "fermion_F_minus_zero": -0.021969371409369387,
+      "boson_F_minus_zero": 0.00016753679096837004
+    },
+    {
+      "t": 1.0,
+      "fermion_F_minus_zero": -0.0820808397327113,
+      "boson_F_minus_zero": 0.000645936371853395
+    },
+    {
+      "t": 2.0,
+      "fermion_F_minus_zero": -0.25956675879425006,
+      "boson_F_minus_zero": 0.0022285037276930098
+    },
+    {
+      "t": 3.0,
+      "fermion_F_minus_zero": -0.4250283127378509,
+      "boson_F_minus_zero": 0.003909016774130691
+    },
+    {
+      "t": 5.0,
+      "fermion_F_minus_zero": -0.5190664909839597,
+      "boson_F_minus_zero": 0.004846080738303726
+    },
+    {
+      "t": 8.0,
+      "fermion_F_minus_zero": -0.3331925712525674,
+      "boson_F_minus_zero": 0.0030357749578797666
+    },
+    {
+      "t": 12.0,
+      "fermion_F_minus_zero": -0.42281151858074395,
+      "boson_F_minus_zero": 0.003919532985477758
+    }
+  ],
+  "exact_magnetic_flatness": "For every H1 vector A=H t, P A=0, so compact magnetic energy is exactly zero and compact magnetic Hessian coincides with that at A=0. Quantum charged-matter determinants alone lift the formerly flat H1 energy directions.",
+  "physics_boundary": "One finite 80-site spinless hopping fermion at finite beta and one positive-mass Gaussian complex boson; no chiral Weyl fermions, gauge dynamics backreaction, charge and beta selected by W33, thermodynamic limit, 4D quantum determinant, dynamical vacuum uniqueness or physical spontaneous CP.",
+  "prior_art": "Magnetic flux-phase/diamagnetic finite lattice matter effects well known; novelty is exact W33 H1 3D determinant stiffness and explicit statistical competition in this specified toy model."
+}

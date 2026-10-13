@@ -1,0 +1,878 @@
+{
+  "status": "PASS_TOE57_SPINLESS_FERMION_HOLONOMY_SURVEY",
+  "native_W33_sites": 80,
+  "native_links": 160,
+  "first_cohomology": 3,
+  "fermion_model": "One spinless complex fermion on the native 80-site graph, nearest-neighbor gauge-covariant Hermitian hopping H_f=-\u03ba \u03a3_ab[e^(igA_ab)|a><b|+h.c.], at inverse temp \u03b2=4, \u03bc=0. F=-\u03b2^-1 \u03a3 log(1+exp(-\u03b2 epsilon_j)).",
+  "parameters": {
+    "g": 0.7,
+    "hopping_kappa": 1.0,
+    "inverse_temperature": 4.0
+  },
+  "survey_count": 85,
+  "zero_holonomy_fermion_free_energy": -67.98702449745932,
+  "sampled_min_fermion_free_energy_shift": -0.8099585488772334,
+  "sampled_minimizer_H1_coordinates": [
+    9.042766427432984,
+    -3.6303515937346447,
+    3.7871407455509107
+  ],
+  "n_fermion_lower_than_zero": 84,
+  "n_boson_lower_than_zero": 0,
+  "max_CP_reversal_energy_error": 0.0,
+  "gauge_conjugation_free_energy_residual": 1.4210854715202004e-14,
+  "local_flatness": "All sampled A are genuine native H1 harmonic cochains with P A=0. Their charged-matter spectrum may vary with global holonomy while the local compact Wilson plaquette energy stays zero.",
+  "important_boundary": "This is a finite 80-site, grand-canonical spinless lattice fermion free energy, NOT an anomaly-free Weyl regulator, self-consistent gauge+fermion vacuum, SM chiral generation count, spontaneous CP selection or experimental physics. Even if nonzero holonomies win at finite temperature, A and -A remain degenerate and selecting one needs dynamical symmetry breaking criteria.",
+  "data": [
+    {
+      "H1_coordinates": [
+        0,
+        0,
+        0
+      ],
+      "fermion_grand_energy_shift": 0.0,
+      "boson_logdet_energy_shift": 0.0,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        1,
+        0,
+        0
+      ],
+      "fermion_grand_energy_shift": -0.08364219799030082,
+      "boson_logdet_energy_shift": 0.0006525824732079855,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        3,
+        0,
+        0
+      ],
+      "fermion_grand_energy_shift": -0.4805399267545596,
+      "boson_logdet_energy_shift": 0.004327677620310055,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0,
+        4,
+        0
+      ],
+      "fermion_grand_energy_shift": -0.6799279691202003,
+      "boson_logdet_energy_shift": 0.006396682876257387,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0,
+        0,
+        -5
+      ],
+      "fermion_grand_energy_shift": -0.633059747978848,
+      "boson_logdet_energy_shift": 0.006032321896014992,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        2.3654320422679405,
+        0.3331578990542745,
+        7.302190440605038
+      ],
+      "fermion_grand_energy_shift": -0.22617242216298905,
+      "boson_logdet_energy_shift": 0.0020781089399974917,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -5.822703235181459,
+        -8.435264809897657,
+        -1.7554126433502386
+      ],
+      "fermion_grand_energy_shift": -0.5042406711052649,
+      "boson_logdet_energy_shift": 0.004695533820196829,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0.02979256014767273,
+        -7.078283292671943,
+        6.177193387550904
+      ],
+      "fermion_grand_energy_shift": -0.10302548319245375,
+      "boson_logdet_energy_shift": 0.0008168770891927579,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -5.108409209716147,
+        3.7708827147618678,
+        2.941848715088149
+      ],
+      "fermion_grand_energy_shift": -0.45384958880133297,
+      "boson_logdet_energy_shift": 0.004236067682782618,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -5.28130782018809,
+        2.3785656951212975,
+        -7.974946971003023
+      ],
+      "fermion_grand_energy_shift": -0.5165625820849584,
+      "boson_logdet_energy_shift": 0.00487286786687946,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -4.27702997416433,
+        -7.008036489441634,
+        9.59442313427068
+      ],
+      "fermion_grand_energy_shift": -0.5850922054730745,
+      "boson_logdet_energy_shift": 0.00567186712001444,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        5.4542028536043325,
+        -4.014731530073011,
+        0.1413080491955796
+      ],
+      "fermion_grand_energy_shift": -0.43710158928827525,
+      "boson_logdet_energy_shift": 0.003824749274599526,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        7.936858282382861,
+        1.1322677812815112,
+        2.427325747858905
+      ],
+      "fermion_grand_energy_shift": -0.054478327620159916,
+      "boson_logdet_energy_shift": 0.00041941103280862535,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -0.8385000149268311,
+        -7.412769286755889,
+        -7.034293055751897
+      ],
+      "fermion_grand_energy_shift": -0.7272608131377325,
+      "boson_logdet_energy_shift": 0.006902555108794672,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        8.89416004110468,
+        0.36510172863748025,
+        8.165534978807198
+      ],
+      "fermion_grand_energy_shift": -0.6242086382677883,
+      "boson_logdet_energy_shift": 0.0058119400566027934,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        8.597350827860666,
+        4.339241044486368,
+        -7.848817985545306
+      ],
+      "fermion_grand_energy_shift": -0.5176588824812001,
+      "boson_logdet_energy_shift": 0.004738193437859195,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -5.436302317764095,
+        -3.6060228415251094,
+        0.3406898774817524
+      ],
+      "fermion_grand_energy_shift": -0.13458850339212347,
+      "boson_logdet_energy_shift": 0.001140078138959666,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        9.44756980730385,
+        -3.6198787319232846,
+        -0.9952631687071367
+      ],
+      "fermion_grand_energy_shift": -0.1797625802788616,
+      "boson_logdet_energy_shift": 0.0016055159704961852,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -8.692095595007439,
+        0.8784798649318546,
+        -7.36411465442888
+      ],
+      "fermion_grand_energy_shift": -0.6029619271133271,
+      "boson_logdet_energy_shift": 0.005562774527035685,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -4.813827200349423,
+        9.059506220065629,
+        -2.3828265735893446
+      ],
+      "fermion_grand_energy_shift": -0.5018475174646682,
+      "boson_logdet_energy_shift": 0.004731854772487054,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        7.8913646445202446,
+        -8.862626349203463,
+        -7.278269497605219
+      ],
+      "fermion_grand_energy_shift": -0.4484458374861191,
+      "boson_logdet_energy_shift": 0.0041592066986595455,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -1.3019847527011805,
+        0.02459547600437162,
+        -9.994490167677647
+      ],
+      "fermion_grand_energy_shift": -0.21947303594659218,
+      "boson_logdet_energy_shift": 0.0018269165425977008,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -1.5877658614534802,
+        -7.463444053999567,
+        2.1339484424792197
+      ],
+      "fermion_grand_energy_shift": -0.5399417339156827,
+      "boson_logdet_energy_shift": 0.005213046919678277,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -3.7293833852453577,
+        6.189338310064311,
+        -9.661695567717228
+      ],
+      "fermion_grand_energy_shift": -0.48813751269520367,
+      "boson_logdet_energy_shift": 0.004476124163460327,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -3.142677735741241,
+        5.013699489064882,
+        1.6909983029549718
+      ],
+      "fermion_grand_energy_shift": -0.37708858466081097,
+      "boson_logdet_energy_shift": 0.003504346730366592,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -5.333224792881895,
+        4.414331731054515,
+        -7.171157844964489
+      ],
+      "fermion_grand_energy_shift": -0.3081632586276015,
+      "boson_logdet_energy_shift": 0.0029565570607843483,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -3.994481992091905,
+        9.19794065240016,
+        -5.493186784724584
+      ],
+      "fermion_grand_energy_shift": -0.7292006414961065,
+      "boson_logdet_energy_shift": 0.0069097831366065066,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        4.206392377457108,
+        9.25051277780597,
+        -8.212005678584868
+      ],
+      "fermion_grand_energy_shift": -0.31747797099467334,
+      "boson_logdet_energy_shift": 0.002750605126053074,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -2.9735066634790623,
+        6.109097007850725,
+        -5.61400796729928
+      ],
+      "fermion_grand_energy_shift": -0.5622254973641674,
+      "boson_logdet_energy_shift": 0.005205409148388185,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        9.39635014806337,
+        7.950720444460522,
+        -7.424164696776021
+      ],
+      "fermion_grand_energy_shift": -0.6109235045278467,
+      "boson_logdet_energy_shift": 0.005863134687587035,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -8.631831363360723,
+        4.819738726013899,
+        4.746626333681451
+      ],
+      "fermion_grand_energy_shift": -0.7542303042772005,
+      "boson_logdet_energy_shift": 0.007197020472162308,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        7.283209073929864,
+        6.44692165197689,
+        -8.371935755184865
+      ],
+      "fermion_grand_energy_shift": -0.5966259474135285,
+      "boson_logdet_energy_shift": 0.005497417569088725,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -1.7203170747325167,
+        -5.360113583003068,
+        4.618054230756172
+      ],
+      "fermion_grand_energy_shift": -0.23176756041277713,
+      "boson_logdet_energy_shift": 0.002054771025456148,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -3.910016867749924,
+        -0.26135366734142096,
+        -6.7666113416670015
+      ],
+      "fermion_grand_energy_shift": -0.43566685252881143,
+      "boson_logdet_energy_shift": 0.004116997552884527,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        9.857553655440768,
+        -3.5894456633491245,
+        1.8675658594805906
+      ],
+      "fermion_grand_energy_shift": -0.632709355469359,
+      "boson_logdet_energy_shift": 0.005836898788288636,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -4.758519503614562,
+        -5.36848099127988,
+        -5.885796728065767
+      ],
+      "fermion_grand_energy_shift": -0.25702518142222175,
+      "boson_logdet_energy_shift": 0.002258090506188637,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -9.018185115571226,
+        3.1156525134934725,
+        2.8420817033812167
+      ],
+      "fermion_grand_energy_shift": -0.33159393093333733,
+      "boson_logdet_energy_shift": 0.0028612897090312117,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0.27622826182778226,
+        -2.256580034820443,
+        2.514177706799142
+      ],
+      "fermion_grand_energy_shift": -0.4659693785251591,
+      "boson_logdet_energy_shift": 0.004386327393049783,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        8.102893271425941,
+        0.8333993536803774,
+        3.498805914442684
+      ],
+      "fermion_grand_energy_shift": -0.05974630183055751,
+      "boson_logdet_energy_shift": 0.00046611693855425074,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -3.0262516086540714,
+        0.17972058414114933,
+        -9.356828664303759
+      ],
+      "fermion_grand_energy_shift": -0.2995523052327371,
+      "boson_logdet_energy_shift": 0.0026311747420777465,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        8.13335417052107,
+        -5.695447239294578,
+        -3.115897600278057
+      ],
+      "fermion_grand_energy_shift": -0.6096020299515175,
+      "boson_logdet_energy_shift": 0.0057125766179240145,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        5.584875642522816,
+        6.281647782082988,
+        -5.406512077935373
+      ],
+      "fermion_grand_energy_shift": -0.686646654508138,
+      "boson_logdet_energy_shift": 0.00653332537652318,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0.865699761210962,
+        -2.9874795051723613,
+        -7.37953381787118
+      ],
+      "fermion_grand_energy_shift": -0.3467701269385941,
+      "boson_logdet_energy_shift": 0.003294192683782171,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -0.5765138042482825,
+        -2.170809259777995,
+        -2.376981362294
+      ],
+      "fermion_grand_energy_shift": -0.4680501641976491,
+      "boson_logdet_energy_shift": 0.004301444804923449,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -9.3025041684506,
+        7.269506079147263,
+        -1.3123374266706982
+      ],
+      "fermion_grand_energy_shift": -0.47985345612114827,
+      "boson_logdet_energy_shift": 0.004471938196459746,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -6.913024441902822,
+        -8.39872737173126,
+        8.076613009798677
+      ],
+      "fermion_grand_energy_shift": -0.36788882250694144,
+      "boson_logdet_energy_shift": 0.0033266388299040273,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -1.8089358264572901,
+        -9.687564655782397,
+        -4.80335814350518
+      ],
+      "fermion_grand_energy_shift": -0.27022138041456856,
+      "boson_logdet_energy_shift": 0.00260462679133866,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -8.626909218461233,
+        -2.8434573766228315,
+        6.455063960696389
+      ],
+      "fermion_grand_energy_shift": -0.37688578435056286,
+      "boson_logdet_energy_shift": 0.0035439721686856274,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -4.855398627055989,
+        -0.7284779479098269,
+        -1.3287310589126822
+      ],
+      "fermion_grand_energy_shift": -0.55080693635513,
+      "boson_logdet_energy_shift": 0.0053221372467930905,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        3.535473432507972,
+        8.386582867453306,
+        6.471946746652787
+      ],
+      "fermion_grand_energy_shift": -0.5189154387283139,
+      "boson_logdet_energy_shift": 0.004946540667873478,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        1.2028554670726912,
+        -7.357633705877021,
+        7.473859914649694
+      ],
+      "fermion_grand_energy_shift": -0.32091637688145624,
+      "boson_logdet_energy_shift": 0.003022205359755503,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -7.115774395241785,
+        1.1663682234977841,
+        3.9653071910934656
+      ],
+      "fermion_grand_energy_shift": -0.3210733431535857,
+      "boson_logdet_energy_shift": 0.002803833187130067,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -4.183143440265513,
+        5.908220092004925,
+        -7.412333796857002
+      ],
+      "fermion_grand_energy_shift": -0.5244822138677989,
+      "boson_logdet_energy_shift": 0.005013864863457229,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -2.1856033415970355,
+        -5.538512866944918,
+        8.379885182836524
+      ],
+      "fermion_grand_energy_shift": -0.3289981551917691,
+      "boson_logdet_energy_shift": 0.003129266873330039,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -3.6366849182152627,
+        -7.334558156868072,
+        5.426999612361607
+      ],
+      "fermion_grand_energy_shift": -0.39461664017105136,
+      "boson_logdet_energy_shift": 0.0035980501684917954,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -7.865214903519369,
+        3.2255366736396986,
+        1.3652727301203775
+      ],
+      "fermion_grand_energy_shift": -0.4197033325913253,
+      "boson_logdet_energy_shift": 0.00384008190415841,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -9.964360544780906,
+        1.439038004048708,
+        1.669382983236293
+      ],
+      "fermion_grand_energy_shift": -0.16077999117902664,
+      "boson_logdet_energy_shift": 0.0013017015390772713,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -0.6266593611194331,
+        -7.028274122430631,
+        9.558948823610635
+      ],
+      "fermion_grand_energy_shift": -0.5412520537083196,
+      "boson_logdet_energy_shift": 0.005086289025086899,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        2.251880104834436,
+        5.566214371627268,
+        -3.833642512858386
+      ],
+      "fermion_grand_energy_shift": -0.2796115683333795,
+      "boson_logdet_energy_shift": 0.0026973993319074907,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0.3869503467954871,
+        3.078460800945331,
+        0.09440498967206779
+      ],
+      "fermion_grand_energy_shift": -0.5037448046324187,
+      "boson_logdet_energy_shift": 0.0045848046818264265,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        1.4941281104858284,
+        -4.344578426091504,
+        1.0861078439849088
+      ],
+      "fermion_grand_energy_shift": -0.7291341360853067,
+      "boson_logdet_energy_shift": 0.006913892972406188,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -0.5872310239612073,
+        2.9467471329465376,
+        -2.47499669465006
+      ],
+      "fermion_grand_energy_shift": -0.5084354170496113,
+      "boson_logdet_energy_shift": 0.004805306134940679,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        1.554533655830351,
+        -6.184540939626364,
+        -4.334268757006221
+      ],
+      "fermion_grand_energy_shift": -0.3224321235707919,
+      "boson_logdet_energy_shift": 0.0028457173726366136,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        8.926424399580817,
+        -4.698117613139859,
+        -9.732048651110771
+      ],
+      "fermion_grand_energy_shift": -0.09238364461170079,
+      "boson_logdet_energy_shift": 0.0007343327331597038,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -5.698511846592192,
+        8.076774855904162,
+        -4.140653383878283
+      ],
+      "fermion_grand_energy_shift": -0.69329128594444,
+      "boson_logdet_energy_shift": 0.006531408820350748,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -9.63196576999396,
+        -4.764431332109811,
+        -9.68683719927248
+      ],
+      "fermion_grand_energy_shift": -0.4216074401756913,
+      "boson_logdet_energy_shift": 0.003905899553600989,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -1.5278017958705021,
+        9.973783717521346,
+        -7.6785136253431325
+      ],
+      "fermion_grand_energy_shift": -0.46401381392630014,
+      "boson_logdet_energy_shift": 0.004215576859721182,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -4.885869001425974,
+        -8.752606446254717,
+        -8.8511449075536
+      ],
+      "fermion_grand_energy_shift": -0.4481181827227516,
+      "boson_logdet_energy_shift": 0.004108919139980571,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        6.900417009789429,
+        8.474112274143263,
+        8.936107649073573
+      ],
+      "fermion_grand_energy_shift": -0.49450837590060814,
+      "boson_logdet_energy_shift": 0.004784345302255133,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        6.654962311713735,
+        2.5060545646062344,
+        4.105572085514517
+      ],
+      "fermion_grand_energy_shift": -0.32618042509446354,
+      "boson_logdet_energy_shift": 0.0029212998734493567,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        1.08814962622667,
+        -7.299227783078126,
+        3.3092643493266785
+      ],
+      "fermion_grand_energy_shift": -0.4392143406551554,
+      "boson_logdet_energy_shift": 0.004171393934527146,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        7.275412591168141,
+        0.33627378729176094,
+        2.2865115889232044
+      ],
+      "fermion_grand_energy_shift": -0.21400039837506313,
+      "boson_logdet_energy_shift": 0.0017705861009744694,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -1.5869466854446337,
+        6.497025136724208,
+        1.6522457745583026
+      ],
+      "fermion_grand_energy_shift": -0.552723254701732,
+      "boson_logdet_energy_shift": 0.005291363065353494,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -5.90954221397884,
+        -7.6243503398085615,
+        3.8483651806860273
+      ],
+      "fermion_grand_energy_shift": -0.5320979417075193,
+      "boson_logdet_energy_shift": 0.0050865943796623014,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -2.155296867038712,
+        1.7084304758479085,
+        3.941965056519807
+      ],
+      "fermion_grand_energy_shift": -0.33841869465257446,
+      "boson_logdet_energy_shift": 0.002941505473629036,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -1.6948959894092894,
+        -7.2729162786846775,
+        -3.413836631682619
+      ],
+      "fermion_grand_energy_shift": -0.09572643844850859,
+      "boson_logdet_energy_shift": 0.0007842689870471986,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        9.042766427432984,
+        -3.6303515937346447,
+        3.7871407455509107
+      ],
+      "fermion_grand_energy_shift": -0.8099585488772334,
+      "boson_logdet_energy_shift": 0.0078454207209262,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -8.347627755243671,
+        2.112474803601362,
+        -3.044503445260771
+      ],
+      "fermion_grand_energy_shift": -0.5959688297847237,
+      "boson_logdet_energy_shift": 0.005480631676661574,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0.8359492476188652,
+        5.023372599901734,
+        -6.19063246638402
+      ],
+      "fermion_grand_energy_shift": -0.20891548134029847,
+      "boson_logdet_energy_shift": 0.001723019359957334,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0.0624886960950235,
+        2.725769670027036,
+        6.482240296540073
+      ],
+      "fermion_grand_energy_shift": -0.30406436490827105,
+      "boson_logdet_energy_shift": 0.0029548764285891593,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -9.75268472571382,
+        -2.225426769189884,
+        9.299258636311876
+      ],
+      "fermion_grand_energy_shift": -0.5781504212172308,
+      "boson_logdet_energy_shift": 0.005254765727045196,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        0.9365472299075073,
+        1.498679567509022,
+        -7.173665238268074
+      ],
+      "fermion_grand_energy_shift": -0.6139535348018228,
+      "boson_logdet_energy_shift": 0.0057647117081671695,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        -4.698475431922566,
+        -6.538037809000022,
+        -3.5928832968892754
+      ],
+      "fermion_grand_energy_shift": -0.38885846055885054,
+      "boson_logdet_energy_shift": 0.003523275534874415,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        8.77940370290359,
+        0.9935965516330683,
+        -6.222132525522699
+      ],
+      "fermion_grand_energy_shift": -0.22122557056809455,
+      "boson_logdet_energy_shift": 0.00200599010126723,
+      "CP_conjugation_residual": 0.0
+    },
+    {
+      "H1_coordinates": [
+        1.120901395984987,
+        -1.8166706470205156,
+        2.0218414786372314
+      ],
+      "fermion_grand_energy_shift": -0.3313855296730992,
+      "boson_logdet_energy_shift": 0.003138631627905397,
+      "CP_conjugation_residual": 0.0
+    }
+  ]
+}

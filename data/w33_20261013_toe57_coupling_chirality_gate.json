@@ -1,0 +1,98 @@
+{
+  "status": "PASS_TOE57_ROTOR_PARAMETER_SCALE_DEGENERACY_CHIRALITY_GATE",
+  "two_native_plaquette_rows": [
+    0,
+    186
+  ],
+  "flux_truncation_range": 4,
+  "exact_spectral_scaling": "For fixed electric weights (here 1), no matter and native 2-plaquette flux basis, H(g,beta)=g\u00b2 D/2+(beta/g\u00b2) M = g\u00b2[D/2+(beta/g^4)M]. Along beta/g^4=lambda, all eigenvalue ratios and normalized eigenvectors are identical for all positive g; absolute energies scale as g\u00b2. Without an independently determined magnetic beta and physical energy normalization, quantum flux spectral ratios do not identify g or alpha.",
+  "coupling_groups": [
+    {
+      "g": 0.5,
+      "beta": 1.0,
+      "lambda_beta_over_g_fourth": 16.0,
+      "lowest_5_scaled_eigenvalues": [
+        10.438782650034279,
+        17.691815675800825,
+        22.980479797276985,
+        24.500881477730587,
+        28.93814569522325
+      ],
+      "first_5_gaps_over_first_gap": [
+        0.0,
+        1.0,
+        1.7291658679462887,
+        1.938788749167475,
+        2.5505692555748207
+      ],
+      "ground_energy_unscaled": 2.6096956625085697
+    },
+    {
+      "g": 1.0,
+      "beta": 16.0,
+      "lambda_beta_over_g_fourth": 16.0,
+      "lowest_5_scaled_eigenvalues": [
+        10.438782650034279,
+        17.691815675800825,
+        22.980479797276985,
+        24.500881477730587,
+        28.93814569522325
+      ],
+      "first_5_gaps_over_first_gap": [
+        0.0,
+        1.0,
+        1.7291658679462887,
+        1.938788749167475,
+        2.5505692555748207
+      ],
+      "ground_energy_unscaled": 10.438782650034279
+    },
+    {
+      "g": 1.5,
+      "beta": 81.0,
+      "lambda_beta_over_g_fourth": 16.0,
+      "lowest_5_scaled_eigenvalues": [
+        10.438782650034408,
+        17.691815675801056,
+        22.98047979727697,
+        24.500881477730648,
+        28.93814569522307
+      ],
+      "first_5_gaps_over_first_gap": [
+        0.0,
+        1.0,
+        1.729165867946245,
+        1.9387887491674385,
+        2.5505692555747426
+      ],
+      "ground_energy_unscaled": 23.48726096257742
+    }
+  ],
+  "near_exact_max_norm_identity": 0.0,
+  "native_site_fermion": {
+    "native_vertices": 80,
+    "bipartition_sizes": [
+      40,
+      40
+    ],
+    "gamma_H_anticommutator_norm": 0.0,
+    "positive_minus_negative_basis_index": 0,
+    "spectrum_chiral_pairing_max_residual": 5.329070518200751e-15,
+    "result": "A balanced 40+40 80-site spinless fermion has bipartite chiral grading with zero sublattice index. TOE36 80+160 incidence Dirac has index -80 from orbital imbalance. Neither is a physical Weyl-family count or a 3+1D regulator."
+  },
+  "five_physics_front_evidence": {
+    "two_plaquette_quantum": "EXECUTED GAUSS-preserving interacting 2-plaquette flux quantum model, truncated not full QED",
+    "fermionic_chirality": "EXECUTED 80-site spinless one-loop fermion holonomy and balanced chiral grading, no physical Weyl SM",
+    "native_gravity": "EXECUTED exact Gauss-sector no-go for any U(w) repair to tested link scaling D, not complete GR",
+    "interacting_continuum": "EXECUTED fermion/boson one-loop holonomy Hessian competition at fixed lattice and classical flat magnetic dynamics; no interacting continuum or RG",
+    "coupling_and_common_action": "EXECUTED beta/g^4 spectral degeneracy, no physical alpha or scale determined"
+  },
+  "required_missing_physics": [
+    "full gauge+fermion quantum Hilbert space and controlled flux truncation convergence",
+    "true 4D chiral Weyl regulator with anomalies and SM charge selection",
+    "nonlinear native gravitational hypersurface-deformation algebra with spin2",
+    "interacting Lorentz continuum with UV/RG control and SI calibration",
+    "g,beta,physical length and all masses fixed by a common vacuum without input fits and out-of-sample prediction"
+  ],
+  "scope": "An exact parameter identifiability obstruction under limited tested observables. Does NOT imply all physical measurements leave g unidentified: charged matter, external normalization and nonlinear observables can constrain it, though prediction requires additional dynamics."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS_TOE57_LINK_RESCALING_UW_ONLY_REPAIR_NO_GO",
+  "native_edges": 160,
+  "native_vertices": 80,
+  "chosen_closed_native_flux": "boundary vector c of one native 8-edge octagon with B.T c=0",
+  "chosen_vertex": 44,
+  "test_chi_chosen_by": "maximize |(B.T (c_e\u00b2/w_e))_v| among native vertices",
+  "nonzero_no_go_coefficient_C": -1.2244504801506082,
+  "Gauss_E_scales": [
+    0,
+    1,
+    2
+  ],
+  "native_H_vs_D_for_three_electric_scales": [
+    -0.6661369334883809,
+    -1.8905874136389889,
+    -5.563938854090813
+  ],
+  "zero_one_bracket_difference": -1.224450480150608,
+  "zero_two_bracket_difference": -4.897801920602432,
+  "theorem": "For fixed positive nonuniform weights w, native incidence B, and D_chi=\u03a3_e(B\u03c7)_e w_e p_we, the bracket of H_E+w+U(w) with D_chi on Gauss-compatible E=t c has a t\u00b2 term C=-1/2 \u03a3_e(B\u03c7)_e c_e\u00b2/w_e. Every potential U(w) independent of E shifts the bracket by a t-independent amount. If C!=0, no such U can enforce {H,D_chi}=0 on all Gauss-compatible E. Native c from a closed 8-cycle and an explicitly constructed \u03c7 give C!=0.",
+  "scope": "Conditional exact no-go for this local rescaling D and correction potentials U(w) independent of E. It does not exclude modified D involving E/A, nontrivial gravitational canonical pairs, nonlocal corrections, special constrained weights, or Einstein gravity emerging in other limits.",
+  "prior_art": "Canonical Dirac first-class constraint requirement standard. TOE56 previously exhibited nonzero bracket at one state; this pass strengthens to an entire family and arbitrary potential U(w)."
+}
