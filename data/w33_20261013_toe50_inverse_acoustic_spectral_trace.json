@@ -1,0 +1,59 @@
+{
+  "status": "PASS_NATIVE_MAXWELL_HIDDEN_WEIGHTS_HAVE_GAPPED_SPECTRAL_FINGERPRINT",
+  "model": "TOE38 plaquette+commutator magnetic matrix P at k=0, 160 positive electric link weights W",
+  "leading_kinetic_G_target": "I3/2 six symmetric entries",
+  "initial_max_G_error": 8.387734951043058e-14,
+  "Jacobian_rank": 6,
+  "positive_weight_count": 160,
+  "fixed_leading_G_level_set_dimension": 154,
+  "observable": "T(w)=Tr(W^-1 P(0)^dag P(0))=\u03a3_e (P^dag P)_ee/w_e, equal sum of all nonzero generalized magnetic band eigenvalues at k=0",
+  "exact_derivative_formula": "dT/dw_e= -(P^dag P)_ee /w_e\u00b2; dG_ij/dw_e=h_ei h_ej where h is W-harmonic representative",
+  "kernel_slope_dTdt": 1135.8275523756647,
+  "relative_kernel_slope": 0.10003249037367462,
+  "tangent_norm_J": 5.3478918268787624e-17,
+  "local_Gram_exact_relevel": "Keep 154 directions fixed except a chosen tangent and correct six free weights through nonlinear root to G=I/2 for every t",
+  "positive_equal_G_samples": [
+    {
+      "t": -0.03,
+      "min_weight": 0.1749548956339942,
+      "acoustic_G_inf_err": 2.220446049250313e-16,
+      "gapped_spectral_trace": 11321.091412315862,
+      "fractional_trace_change": -0.00294990612499213,
+      "leading_tangent_prediction": -0.0030009747112102387
+    },
+    {
+      "t": -0.015,
+      "min_weight": 0.17250096093041295,
+      "acoustic_G_inf_err": 1.1102230246251565e-16,
+      "gapped_spectral_trace": 11337.696443466706,
+      "fractional_trace_change": -0.0014874987240823812,
+      "leading_tangent_prediction": -0.0015004873556051194
+    },
+    {
+      "t": 0.0,
+      "min_weight": 0.170015806553,
+      "acoustic_G_inf_err": 8.387734951043058e-14,
+      "gapped_spectral_trace": 11354.586376213807,
+      "fractional_trace_change": 0.0,
+      "leading_tangent_prediction": 0.0
+    },
+    {
+      "t": 0.015,
+      "min_weight": 0.16749860334810268,
+      "acoustic_G_inf_err": 2.6020852139652106e-18,
+      "gapped_spectral_trace": 11371.776609455503,
+      "fractional_trace_change": 0.001513946230371488,
+      "leading_tangent_prediction": 0.0015004873556051194
+    },
+    {
+      "t": 0.03,
+      "min_weight": 0.1649484864278946,
+      "acoustic_G_inf_err": 1.1102230246251565e-16,
+      "gapped_spectral_trace": 11389.283834482976,
+      "fractional_trace_change": 0.003055809971365786,
+      "leading_tangent_prediction": 0.0030009747112102387
+    }
+  ],
+  "conclusion": "The 154 free electric-link directions are invisible to the leading twofold acoustic cone but NOT invisible to the total massive-band spectral trace. A finite-frequency/band-spectrum measurement can distinguish at least one independent microscopic direction while preserving exactly the same leading cone. Hence a single speed-of-light cone does not identify unique microgeometry.",
+  "scope": "Fixed choice of 160-edge marked finite Maxwell complex and fixed magnetic incidence matrix. This is a numerical local derivative + nonlinear correction certificate, not a globally rigid inverse spectral theorem, not selection of the 154 modes, and not a dynamical metric or gravity."
+}
