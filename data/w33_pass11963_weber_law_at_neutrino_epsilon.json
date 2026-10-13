@@ -1,0 +1,91 @@
+{
+  "answer": "The relation m1 m3/m2^2 = |f|^16/4 does NOT hold exactly at that eps: its true value ranges over 0.463-0.669 (leading order: 0.538).  The headline m1 ~ 1 meV scale and Sigma ~ 59.4-59.8 meV survive, but the phase of eps is a genuine free parameter that moves m1 by up to x1.45 at fixed tau, so the spectrum is not parameter-free and the quoted 0.67-0.97 meV band (attributed to the quark-mass error alone) understates the uncertainty.",
+  "bands_fixed_R_MZ": {
+    "eps": [
+      0.22009561444752854,
+      0.28678759711780816
+    ],
+    "m1_meV": [
+      0.6897352778065782,
+      1.0033387271351135
+    ],
+    "ratio": [
+      0.46287894682736935,
+      0.6686540885252489
+    ],
+    "sigma_meV": [
+      59.445873529751914,
+      59.79544079733555
+    ]
+  },
+  "bands_with_R_range": {
+    "m1_meV": [
+      0.5838652860526153,
+      1.2673867589938468
+    ],
+    "sigma_meV": [
+      59.33085306991129,
+      60.09997050592688
+    ]
+  },
+  "checks": {
+    "all_points_in_siegel_space": true,
+    "found_solutions_on_level_curve": true,
+    "headline_m1_scale_confirmed": true,
+    "independent_law_reproduced_at_small_eps": true,
+    "leading_order_ratio_not_exact_at_required_eps": true,
+    "level_curve_absent_for_abs_re_tau_below_half": true,
+    "phase_of_eps_moves_m1_at_fixed_tau": true,
+    "sigma_matches_11939_to_1meV": true,
+    "splitting_reproduced_exactly": true
+  },
+  "claim_in_11939": {
+    "m1_meV_band": [
+      0.67,
+      0.97
+    ],
+    "sigma_eV": 0.059571791206152705
+  },
+  "independent_law_check": {
+    "max_rel_err_at_eps_1e-4": 3.892290756368766e-08
+  },
+  "inputs": {
+    "R_up_MZ": 0.5383969823100936,
+    "R_up_range": [
+      0.45,
+      0.65
+    ],
+    "dm21_eV2": 7.42e-05,
+    "dm31_eV2": 0.002511,
+    "note": "declared central values as in 11939; leading-order texture; no seesaw or running"
+  },
+  "n_solutions": {
+    "R_MZ": 36,
+    "R_high": 10,
+    "R_low": 10
+  },
+  "phase_spread_of_m1_at_fixed_tau": 1.454672190069534,
+  "prior": [
+    "Pass 11939 and 11940 (this audits their relation)",
+    "Pass 11945: this relation is already disfavoured within the framework unless the neutrino sector is mu-tau broken"
+  ],
+  "question": "Does the leading-order Weber relation of Pass 11939 survive at the eps the neutrino splitting needs?",
+  "re_tau_note": "The level curve |f|^16/4 = R_up exists only for |Re tau| >~ 0.6; for |Re tau| <= 0.5 the ratio is bounded below by 1.0 > R_up.",
+  "re_tau_values_reached": [
+    -1.0,
+    -0.75,
+    0.75,
+    1.0
+  ],
+  "schema": "w33.pass11963-weber-law-at-neutrino-epsilon.v1",
+  "scope": "Leading-order texture with the declared inputs.  Says nothing about PMNS angles, Majorana phases, seesaw distortion, running, or whether the home is the physical vacuum.",
+  "semantic_sha256": "6301abdf015c494a3994cb78b42e48f87f1ba554b494f49e85788285ba02d200",
+  "status": "PASS",
+  "weber_ratio_minimum_over_im_tau": {
+    "-0.25": 3.205750887054911,
+    "-0.5": 1.0000000000000004,
+    "0.0": 3.999999999999986,
+    "0.25": 3.205750887054911,
+    "0.5": 1.0000000000000004
+  }
+}
