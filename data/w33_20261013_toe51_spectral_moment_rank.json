@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "front": "higher_Bloch_spectral_moment_inverse_rank",
+  "model": "Fixed TOE38 160-link Maxwell graph at TOE50 positive isotropic weight center.",
+  "acoustic_rank": 6,
+  "spectral_moment_count": 12,
+  "n_observables": 18,
+  "joint_local_gradient_rank_1e_minus8": 18,
+  "singular_values_normalized_rows": [
+    3.623972127525023,
+    1.1263053035944701,
+    1.0004171156015458,
+    0.9652882201629873,
+    0.9297929006647834,
+    0.667127534442813,
+    0.49646387245333357,
+    0.33096602105355133,
+    0.007339801086788447,
+    0.0015537357147979065,
+    0.0009060346235590196,
+    0.0007757396368156289,
+    0.0001727938777823508,
+    0.00010919537553162943,
+    8.794659747176376e-05,
+    2.629799150824262e-05,
+    7.712850867671015e-06,
+    6.971207045589895e-06
+  ],
+  "rank_by_relative_SVD_tolerance": {
+    "0.001": 9,
+    "0.0001": 12,
+    "1e-05": 15,
+    "1e-06": 18,
+    "1e-08": 18
+  },
+  "normalized_observable_condition_number": 519848.5863101154,
+  "moment_data": [
+    {
+      "k": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "moment_order": 1,
+      "trace": 11354.586376213807,
+      "gradient_norm": 2413.539636923696
+    },
+    {
+      "k": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "moment_order": 2,
+      "trace": 1739379.217536487,
+      "gradient_norm": 1528525.662088803
+    },
+    {
+      "k": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "moment_order": 3,
+      "trace": 291678235.3336309,
+      "gradient_norm": 778358245.89505
+    },
+    {
+      "k": [
+        0.83,
+        0.0,
+        0.0
+      ],
+      "moment_order": 1,
+      "trace": 11364.492890291413,
+      "gradient_norm": 2413.7631574080565
+    },
+    {
+      "k": [
+        0.83,
+        0.0,
+        0.0
+      ],
+      "moment_order": 2,
+      "trace": 1741411.7776082887,
+      "gradient_norm": 1528576.341003024
+    },
+    {
+      "k": [
+        0.83,
+        0.0,
+        0.0
+      ],
+      "moment_order": 3,
+      "trace": 292112999.0824685,
+      "gradient_norm": 778441928.4978446
+    },
+    {
+      "k": [
+        0.0,
+        0.91,
+        0.0
+      ],
+      "moment_order": 1,
+      "trace": 11366.711605397239,
+      "gradient_norm": 2413.829775952759
+    },
+    {
+      "k": [
+        0.0,
+        0.91,
+        0.0
+      ],
+      "moment_order": 2,
+      "trace": 1741878.0745276622,
+      "gradient_norm": 1528588.5397005214
+    },
+    {
+      "k": [
+        0.0,
+        0.91,
+        0.0
+      ],
+      "moment_order": 3,
+      "trace": 292202029.8128569,
+      "gradient_norm": 778414555.9924386
+    },
+    {
+      "k": [
+        0.0,
+        0.0,
+        1.01
+      ],
+      "moment_order": 1,
+      "trace": 11369.383952196556,
+      "gradient_norm": 2413.9021948413424
+    },
+    {
+      "k": [
+        0.0,
+        0.0,
+        1.01
+      ],
+      "moment_order": 2,
+      "trace": 1742461.4783280822,
+      "gradient_norm": 1528604.7552847406
+    },
+    {
+      "k": [
+        0.0,
+        0.0,
+        1.01
+      ],
+      "moment_order": 3,
+      "trace": 292328393.4822967,
+      "gradient_norm": 778426363.4052325
+    }
+  ],
+  "derivative_n": "d Tr[(W^-1/2 K(k) W^-1/2)^n] / dw_e = -n [M(k)^n]_ee / w_e",
+  "finite_difference_checks": [
+    {
+      "moment": 1,
+      "edge": 5,
+      "analytic": -77.66915588363169,
+      "finite_difference": -77.66915668071306,
+      "relative_error": 1.0262521341043635e-08
+    },
+    {
+      "moment": 1,
+      "edge": 34,
+      "analytic": -77.14127275310193,
+      "finite_difference": -77.14127355939127,
+      "relative_error": 1.0452113466192099e-08
+    },
+    {
+      "moment": 1,
+      "edge": 113,
+      "analytic": -77.96993930636859,
+      "finite_difference": -77.96994008458569,
+      "relative_error": 9.980988911544295e-09
+    },
+    {
+      "moment": 2,
+      "edge": 5,
+      "analytic": -23483.968161880126,
+      "finite_difference": -23483.968522632495,
+      "relative_error": 1.536164442448322e-08
+    },
+    {
+      "moment": 2,
+      "edge": 34,
+      "analytic": -22804.682089851085,
+      "finite_difference": -22804.682449204847,
+      "relative_error": 1.5757893960650374e-08
+    },
+    {
+      "moment": 2,
+      "edge": 113,
+      "analytic": -23978.07310145131,
+      "finite_difference": -23978.073463076726,
+      "relative_error": 1.508150437446552e-08
+    },
+    {
+      "moment": 3,
+      "edge": 5,
+      "analytic": -5363927.995768866,
+      "finite_difference": -5363928.110599518,
+      "relative_error": 2.1407940662592697e-08
+    },
+    {
+      "moment": 3,
+      "edge": 34,
+      "analytic": -5095171.61014236,
+      "finite_difference": -5095171.721875668,
+      "relative_error": 2.192925296337819e-08
+    },
+    {
+      "moment": 3,
+      "edge": 113,
+      "analytic": -5546006.653738831,
+      "finite_difference": -5546006.770133972,
+      "relative_error": 2.0987198224797996e-08
+    }
+  ],
+  "max_relative_check_error": 2.192925296337819e-08,
+  "nullity_after_local_linear_probes": 142,
+  "qualification": "Ranks are floating-point local Jacobian counts at selected isotropic root, not exact full-rank theorem nor actual independent noisy spectroscopy. Bloch momentum directions, magnetic tensor and all 160 w are supplied. Further gauge equivalence and measurement costs remain open."
+}

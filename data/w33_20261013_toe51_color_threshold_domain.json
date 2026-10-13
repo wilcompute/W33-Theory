@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "front": "strong_CP_color_threshold_decoupling",
+  "holomorphic_identity": "Lambda3^(9-n)=m0*Lambda5^(12-n)/(v0^4 z^3)",
+  "benchmark": {
+    "v0": 100.0,
+    "m0": 50.0,
+    "Lambda5": 1.0,
+    "light_spectators": 0,
+    "min_heavy_over_strong_equals_1_at_abs_z": 0.015874010519681996
+  },
+  "beta_coefficients": {
+    "0": [
+      12,
+      10,
+      8,
+      9
+    ],
+    "3": [
+      9,
+      7,
+      5,
+      6
+    ],
+    "6": [
+      6,
+      4,
+      2,
+      3
+    ]
+  },
+  "trials": [
+    {
+      "z": 0.5,
+      "ir_scale": 0.2513210629792362,
+      "min_heavy_threshold": 25.0,
+      "heavy_over_strong": 99.47435246231419,
+      "controlled_threshold": true
+    },
+    {
+      "z": 0.1,
+      "ir_scale": 0.4297529725877131,
+      "min_heavy_threshold": 5.0,
+      "heavy_over_strong": 11.634590843881815,
+      "controlled_threshold": true
+    },
+    {
+      "z": 0.03,
+      "ir_scale": 0.6419656704005429,
+      "min_heavy_threshold": 1.5,
+      "heavy_over_strong": 2.336573541485641,
+      "controlled_threshold": true
+    },
+    {
+      "z": 0.015874010519681996,
+      "ir_scale": 0.7937005259840997,
+      "min_heavy_threshold": 0.7937005259840998,
+      "heavy_over_strong": 1.0000000000000002,
+      "controlled_threshold": true
+    },
+    {
+      "z": 0.01,
+      "ir_scale": 0.9258747122872903,
+      "min_heavy_threshold": 0.5,
+      "heavy_over_strong": 0.5400298694461532,
+      "controlled_threshold": false
+    },
+    {
+      "z": 0.001,
+      "ir_scale": 1.9947365987750278,
+      "min_heavy_threshold": 0.05,
+      "heavy_over_strong": 0.025065966118386313,
+      "controlled_threshold": false
+    }
+  ],
+  "universal_nonuniform_limit": "As |z|->0, Lambda3 scales |z|^-1/3 while all m,v thresholds scale |z|; threshold/strong ratio tends zero as |z|^(4/3). The pole formal series cannot be extrapolated to the separating divisor using the same weakly coupled SU3 EFT.",
+  "status_of_local_pole": "Pass11957 local holomorphic pole is valid at scales with heavy thresholds above strong dynamics; this independently checks its restricted domain, not its global theta phase or modular completion.",
+  "quality": "Does not solve strong CP, predict the vectorlike spectrum, or bound full loop theta."
+}

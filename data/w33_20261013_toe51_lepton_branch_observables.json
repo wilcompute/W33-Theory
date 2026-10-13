@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "front": "leptonic_CP_branch_predictions",
+  "supplied_absolute_scale": "Delta m31 squared =0.0025 eV\u00b2 as illustrative comparator; not a derived W33 prediction",
+  "n_branches": 5,
+  "branches": [
+    {
+      "clebsch": [
+        0.018965689693135335,
+        -0.026200697082817467
+      ],
+      "delta_deg": 280.61516850081824,
+      "m_ee_eV": 0.0029685531934142825,
+      "total_masses_eV": 0.06870899550263004,
+      "lightest_mass_eV": 0.007073813681976865,
+      "mass_ratios": [
+        0.14008131792217438,
+        0.2205491815267997,
+        1.0
+      ],
+      "conservative_Majorana_free_interval_eV": [
+        0.0003824541947640703,
+        0.009245696630621815
+      ],
+      "within_free_phase_envelope": true
+    },
+    {
+      "clebsch": [
+        0.018965689693135335,
+        -0.026200697082817467
+      ],
+      "delta_deg": 112.57620741685666,
+      "m_ee_eV": 0.0021836112514685094,
+      "total_masses_eV": 0.06092742794844123,
+      "lightest_mass_eV": 0.002043872060061647,
+      "mass_ratios": [
+        0.04084333155147479,
+        0.17668842540288143,
+        1.0
+      ],
+      "conservative_Majorana_free_interval_eV": [
+        0.00012635374432838718,
+        0.005130117097188487
+      ],
+      "within_free_phase_envelope": true
+    },
+    {
+      "clebsch": [
+        -0.18801632910792332,
+        0.01044918873749332
+      ],
+      "delta_deg": 57.49178872379524,
+      "m_ee_eV": 0.003049302586632927,
+      "total_masses_eV": 0.06310015272535974,
+      "lightest_mass_eV": 0.003631163264677143,
+      "mass_ratios": [
+        0.0724325069416549,
+        0.186255664631231,
+        1.0
+      ],
+      "conservative_Majorana_free_interval_eV": [
+        0.0,
+        0.006359633521047641
+      ],
+      "within_free_phase_envelope": true
+    },
+    {
+      "clebsch": [
+        0.010406908676221377,
+        -0.0262006970828176
+      ],
+      "delta_deg": 280.6151685008181,
+      "m_ee_eV": 0.002968553193414283,
+      "total_masses_eV": 0.06870899550263004,
+      "lightest_mass_eV": 0.007073813681976855,
+      "mass_ratios": [
+        0.14008131792217418,
+        0.2205491815267999,
+        1.0
+      ],
+      "conservative_Majorana_free_interval_eV": [
+        0.0003824541947640304,
+        0.00924569663062181
+      ],
+      "within_free_phase_envelope": true
+    },
+    {
+      "clebsch": [
+        0.010406908676221377,
+        -0.0262006970828176
+      ],
+      "delta_deg": 112.57620741685767,
+      "m_ee_eV": 0.0021836112514685077,
+      "total_masses_eV": 0.060927427948441276,
+      "lightest_mass_eV": 0.0020438720600616965,
+      "mass_ratios": [
+        0.040843331551475785,
+        0.17668842540288138,
+        1.0
+      ],
+      "conservative_Majorana_free_interval_eV": [
+        0.00012635374432835682,
+        0.005130117097188518
+      ],
+      "within_free_phase_envelope": true
+    }
+  ],
+  "observed_issue": "All fitted branches reproduce four supplied PMNS angle/splitting ratios but give different Dirac delta. They additionally predict distinct m_bb at imposed \u0394m31, conditional on their specific fitted real Majorana matrices and charged basis; none of the texture coefficients or absolute scale is dynamically selected.",
+  "limits": "m_bb depends on charged-lepton Takagi convention and Majorana phases. A lepton-number-violating amplitude prediction requires the full Majorana phase convention, RG, nuclear matrix elements and a stable vacuum. Values are model-input consequences, not phenomenological evidence."
+}

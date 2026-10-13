@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "front": "native_dynamical_link_metric_constraint_gate",
+  "full_native_links": 160,
+  "gauss_initial_inf_error": 1.3322676295501878e-15,
+  "gauss_time_derivative_inf_error": 2.2737367544323206e-13,
+  "magnetic_gauge_identity_inf_error": 0.0,
+  "canonical_extension": "H=\u03a3 E_e\u00b2/(2w_e)+||P A||\u00b2/2+\u03a3 p_w,e\u00b2/(2M)+k(w_e-w0)\u00b2/2, with w_e>0. Gauss B^T E=0 and P B=0 are unchanged and first class.",
+  "canonical_equations": "dot w=p_w/M; dot p_w=E\u00b2/(2w\u00b2)-k(w-w0); dot A=E/w; dot E=-P^T P A",
+  "test_single_link_equilibria": [
+    {
+      "E_squared": 0.0,
+      "equilibrium_weight": 1.0,
+      "scalar_omega2": 1.5,
+      "physical_positive_mass": true
+    },
+    {
+      "E_squared": 1.0,
+      "equilibrium_weight": 1.1304260729058437,
+      "scalar_omega2": 1.846133398809284,
+      "physical_positive_mass": true
+    },
+    {
+      "E_squared": 4.0,
+      "equilibrium_weight": 1.3602864867976254,
+      "scalar_omega2": 2.2945822228502957,
+      "physical_positive_mass": true
+    },
+    {
+      "E_squared": 16.0,
+      "equilibrium_weight": 1.8120949719908501,
+      "scalar_omega2": 2.8444576325358275,
+      "physical_positive_mass": true
+    }
+  ],
+  "gravity_gate": "Adding canonical metric scalars avoids pi_w=0 and its E=0 secondary but introduces 160 physical scalar oscillators; it supplies zero Hamiltonian/diffeomorphism constraints and cannot be identified as general relativity. A genuine spatial metric requires additional first-class constraints, closure and continuum diffeomorphism symmetry.",
+  "prior_art": "Bonzom Dittrich 2013 arxiv:1304.5983 derives discrete Dirac hypersurface algebra in restricted gravity sectors; not implied by a gauge-invariant W33 Maxwell-scalar extension."
+}

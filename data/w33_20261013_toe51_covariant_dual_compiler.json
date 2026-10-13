@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "front": "Sp4_covariant_dual_C40_decoder",
+  "exact_projector_decomposition": "I40=P0+P24+P15 ranks 1,24,15; P0=J/40 P24=3/4(G-8P0) P15=(BBt-90P0)/18",
+  "n_checked_Sp4_generator_actions": 7,
+  "projector_commutator_errors": {
+    "S": 1.2212453270876722e-15,
+    "T1": 1.3322676295501878e-15,
+    "T2": 8.881784197001252e-16,
+    "Toff": 8.881784197001252e-16,
+    "U": 9.992007221626409e-16,
+    "Sw": 1.2212453270876722e-15,
+    "N": 8.881784197001252e-16
+  },
+  "n_random_covariance_checks": 80,
+  "max_covariance_error": 5.329070518200751e-15,
+  "max_signal_reconstruction_error": 5.440092820663267e-15,
+  "gaussian_sigma": 0.001,
+  "simulated_mean_squared_l2_noise": 2.354832674571044e-05,
+  "analytic_mean_squared_l2_noise": 2.361111111111111e-05,
+  "noise_formula": "E||delta y||\u00b2=\u03c3\u00b2[(3/4)\u00b2*40+Tr(BBt)/18\u00b2] when all 76 channel noises independent, equal \u03c3, and global sum known perfectly; no physical detector calibration is assumed",
+  "linear_storage_dimension_K81": 81,
+  "real_line_signal_dimension": 40,
+  "physical_K81_intertwiner_status": "NOT CONSTRUCTED: embedding y->(y,0_41) is an isometric 81-coordinate storage map but Holotrade only supplies K81 regular H27xC3 action; no matching Sp4(3) action or compatible intertwiner on those K81 rails was specified. A dimension inequality 40<=81 is not an equivariance proof.",
+  "model_scope": "Seven symplectic generators checked, finite real W33 line module, exact integer incidence and complex projective cusp geometry, not a compiled experiment."
+}
