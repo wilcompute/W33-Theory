@@ -202602,7 +202602,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 151,
+          "line": 164,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "# A divergence-free pi22=cos x has Dg=0 but nonconstant trace;",
           "status": "unclassified"
@@ -263150,7 +263150,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 30,
+          "line": 37,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "# m_d=Y5+Y45 stays fixed, whereas m_e^T=Y5-3Y45=m_d-4Y45.",
           "status": "killed_or_retracted"
@@ -308833,7 +308833,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 174,
+          "line": 187,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "'shared_foliation_requirement':'a b=alpha beta=2 for11956 leading Maxwell units; a and c remain free',",
           "status": "unclassified"
@@ -539902,7 +539902,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 269,
+          "line": 277,
           "path": "analysis/PASS11957_11961_SELECTION_COMPLETION.md",
           "raw": "A divergence-free pi22=cosx has nonconstant trace and a nonzero obstruction",
           "status": "open_or_conditional"
@@ -544654,7 +544654,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 282,
+          "line": 290,
           "path": "analysis/PASS11957_11961_SELECTION_COMPLETION.md",
           "raw": "A supplied selector `V=sum_six(G-I/2)\u00b2` has Hessian `2J^T J`, rank6 and154",
           "status": "unclassified"
@@ -548182,7 +548182,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 155,
+          "line": 168,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "Ay=s.sin(x);Ey=s.sin(2*x)",
           "status": "unclassified"
@@ -642933,7 +642933,7 @@
         },
         {
           "category": "relation_line",
-          "line": 54,
+          "line": 61,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "J=(mixing[0,0]*mixing[1,1]*mixing[0,1].conj()*mixing[1,0].conj()).imag",
           "status": "unclassified"
@@ -689319,7 +689319,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 142,
+          "line": 155,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "N=s.Integer(1);M=s.cos(x);v=N*s.diff(M,x)-M*s.diff(N,x)",
           "status": "open_or_conditional"
@@ -787218,7 +787218,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 261,
+          "line": 269,
           "path": "analysis/PASS11957_11961_SELECTION_COMPLETION.md",
           "raw": "The11956 cone has alpha=2,beta=1 in its supplied units.",
           "status": "open_or_conditional"
@@ -1053730,6 +1053730,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ebba235a03733f7e1aa56383d5fbef026c6eba91a05b8b8a8c560060464de6e5",
+      "normalized_formula": "assertabs(physical_quark_J-prior.fits.DATA['J'])<1e-12",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 91,
+          "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
+          "raw": "assert abs(physical_quark_J-prior.fits.DATA['J'])<1e-12",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b4c634939d532f51bdc78e88bbadd3ce0e948ae066325b5add7230fe67494d54",
+      "structural_formula": "assertabs(physical_quark_J-prior.fits.DATA['J'])<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a8cdcdb5c8afd8993e5888c68e624a2549d3e8183003f0543774546d1846a4d0",
       "normalized_formula": "assertabs(pred-pdg_inv_alpha)<0.04",
       "numeric_literals": [
@@ -1054157,7 +1054184,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 69,
+          "line": 76,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "assert abs(sind*sind+cosd*cosd-1)<1e-9",
           "status": "unclassified"
@@ -1078185,7 +1078212,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 159,
+          "line": 172,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "assert s.simplify(direct-alpha*beta*Dm)==0 and Dm!=0",
           "status": "unclassified"
@@ -1078215,7 +1078242,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 160,
+          "line": 173,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "assert s.simplify(direct.subs({alpha:2,beta:1})-2*Dm)==0",
           "status": "unclassified"
@@ -1149638,7 +1149665,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 271,
+          "line": 279,
           "path": "analysis/PASS11957_11961_SELECTION_COMPLETION.md",
           "raw": "cone then requires **ab=alpha beta=2**. The separate a and cosmological",
           "status": "unclassified"
@@ -1154985,7 +1155012,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 68,
+          "line": 75,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "cosd=(q[1,0]-s12*(1-s23)-(1-s12)*s23*s13)/(2*np.sqrt(s12*(1-s12)*s23*(1-s23)*s13))",
           "status": "unclassified"
@@ -1182017,7 +1182044,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 71,
+          "line": 78,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "delta_deg=float(np.degrees(np.arctan2(sind,cosd))%360),J=float(J),",
           "status": "unclassified"
@@ -1237161,7 +1237188,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 108,
+          "line": 119,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "f['neutrino_probe']=dict(log_bare_ratios=best[1].x.tolist(),observables=obs.tolist(),",
           "status": "retrospective_fit"
@@ -1246231,7 +1246258,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 193,
+          "line": 206,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "for f in d['11960']['two_real_diagonal_45_coefficients_fits']:print(f['coefficients'],f['neutrino_probe'],flush=True)",
           "status": "unclassified"
@@ -1262199,7 +1262226,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 260,
+          "line": 268,
           "path": "analysis/PASS11957_11961_SELECTION_COMPLETION.md",
           "raw": "gives `{H[N],H[M]}=alpha beta D[q^-1(NdM-MdN)]`.",
           "status": "open_or_conditional"
@@ -1395120,7 +1395147,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 107,
+          "line": 118,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "obs,J=neutrino_observables(best[1].x,f['charged'],A)",
           "status": "retrospective_fit"
@@ -1442496,6 +1442523,34 @@
       },
       "structural_family_id": "9fd2affd4bcd63d018ff6c940005fbb6073251338be325d3f9c8ee051805d172",
       "structural_formula": "physical_partition='#+Nauxrealphysicalscalars;#massivevectors;#masslessvectors;#SMWeyls;#exoticDiracfermions;#additionalsingletMajoranas;#right-handed-neutrinoMajoranas;#spectatorMajoranas.Addedfieldsover1#:two1#-tripletmediators1#real,global-family2#spectatorscalar5#real,realSpin1#-adjoint4#,andNaux.Naux=#onlyintheconservativemanifestparent.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9ec1e7ee8e6d4218f2c6b87f81a7a7debd858ca5cfe4e5cd1066f69db0b066d2",
+      "normalized_formula": "physical_quark_J=(physical_quark_vectors[0,0]*physical_quark_vectors[1,1]*",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 89,
+          "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
+          "raw": "physical_quark_J=(physical_quark_vectors[0,0]*physical_quark_vectors[1,1]*",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c6a2e55482d89f09708b7650cb8792202512adabecef911115f3a011229919cb",
+      "structural_formula": "physical_quark_J=(physical_quark_vectors[#,#]*physical_quark_vectors[#,#]*"
     },
     {
       "file_count": 1,
@@ -1607196,7 +1607251,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 169,
+          "line": 182,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "return {'status':'PASS','ADM_ansatz':'Hg=a/sqrt(q)(pi_ij pi^ij-lambda pi^2)-b sqrt(q) R+c sqrt(q)',",
           "status": "unclassified"
@@ -1624269,7 +1624324,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 105,
+          "line": 116,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "seed,bounds=(-12,12),max_nfev=600,xtol=1e-10,ftol=1e-10,gtol=1e-10)",
           "status": "unclassified"
@@ -1624300,7 +1624355,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 117,
+          "line": 128,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "seed,bounds=([-16,-16,-7,-7],[16,16,7,7]),max_nfev=1800,",
           "status": "unclassified"
@@ -1640478,7 +1640533,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 67,
+          "line": 74,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "sind=J/(np.sqrt(s12*(1-s12)*s23*(1-s23)*s13)*(1-s13))",
           "status": "unclassified"
@@ -1654936,7 +1654991,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 51,
+          "line": 58,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "squares=abs(mixing)**2",
           "status": "unclassified"
@@ -1699998,7 +1700053,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 146,
+          "line": 159,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "trace=s.cos(x);pi11=s.cos(x)",
           "status": "open_or_conditional"
@@ -1724568,7 +1724623,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 49,
+          "line": 56,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "vn=singular[order]**2;un=vh.conj().T[:,order]",
           "status": "unclassified"
@@ -1741501,7 +1741556,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 104,
+          "line": 115,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "z=least_squares(lambda x:(neutrino_observables(x,f['charged'],A)[0]-targets)/errors,",
           "status": "retrospective_fit"
@@ -1741528,7 +1741583,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 116,
+          "line": 127,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "z=least_squares(lambda x:(neutrino_observables(x,f['charged'],A,True)[0]-targets)/errors,",
           "status": "retrospective_fit"
@@ -1741556,7 +1741611,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 86,
+          "line": 97,
           "path": "analysis/w33_pass11960_11961_clebsch_and_shared_cone.py",
           "raw": "z=least_squares(residual,seed,xtol=1e-13,gtol=1e-13,ftol=1e-13,max_nfev=1000)",
           "status": "unclassified"
@@ -1785691,9 +1785746,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-12T23:49:46-04:00",
+  "frozen_at": "2026-10-12T23:54:33-04:00",
   "pass": 398,
-  "repository_head": "b577dc9a1db90b00e1a526f966f7a8e5a79312ab",
+  "repository_head": "3429a5eb9d919fc22b2c738de811d946b36a5ac3",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2067091,6 +2067146,14 @@
     },
     {
       "exact_formula_ids": [
+        "ebba235a03733f7e1aa56383d5fbef026c6eba91a05b8b8a8c560060464de6e5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b4c634939d532f51bdc78e88bbadd3ce0e948ae066325b5add7230fe67494d54",
+      "structural_formula": "assertabs(physical_quark_J-prior.fits.DATA['J'])<#"
+    },
+    {
+      "exact_formula_ids": [
         "a8cdcdb5c8afd8993e5888c68e624a2549d3e8183003f0543774546d1846a4d0"
       ],
       "exact_member_count": 1,
@@ -2172380,6 +2172443,14 @@
     },
     {
       "exact_formula_ids": [
+        "9ec1e7ee8e6d4218f2c6b87f81a7a7debd858ca5cfe4e5cd1066f69db0b066d2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c6a2e55482d89f09708b7650cb8792202512adabecef911115f3a011229919cb",
+      "structural_formula": "physical_quark_J=(physical_quark_vectors[#,#]*physical_quark_vectors[#,#]*"
+    },
+    {
+      "exact_formula_ids": [
         "13153312389b550bb9ab142b726107bd8c492d1a5310ca270e6b6ae3f5a1711e"
       ],
       "exact_member_count": 1,
@@ -2262944,20 +2263015,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87196838,
-    "exact_formula_families": 61069,
+    "bytes_scanned": 87198392,
+    "exact_formula_families": 61071,
     "files_scanned": 11945,
-    "formula_occurrences": 67044,
+    "formula_occurrences": 67046,
     "status_occurrences": {
       "certified_or_theorem": 4871,
       "killed_or_retracted": 1609,
       "open_or_conditional": 2215,
       "preregistered": 32,
       "retrospective_fit": 5195,
-      "unclassified": 53122
+      "unclassified": 53124
     },
-    "structural_families": 59448
+    "structural_families": 59450
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "6835911f1b6825075e7b39863f93de3856d0d8a58bc933b82f83a25d2d5ba25b"
+  "universe_sha256": "2e51136bba13d2dc7c705c16f7dbd490a7d4f9e1e1086ac2880e9d7af7a8e94e"
 }
