@@ -1,0 +1,147 @@
+{
+  "pass_id": 11947,
+  "arg_det_scaling": [
+    {
+      "eps": 0.001,
+      "max_dev_from_3phi": 1.2513639973121826e-06
+    },
+    {
+      "eps": 0.003,
+      "max_dev_from_3phi": 1.1258697234950432e-05
+    },
+    {
+      "eps": 0.01,
+      "max_dev_from_3phi": 0.00012510177505919984
+    },
+    {
+      "eps": 0.03,
+      "max_dev_from_3phi": 0.001126349467536869
+    }
+  ],
+  "deviation_slope_in_eps": 2.0000320706462715,
+  "fits": {
+    "A": {
+      "theta_bar": 0.1940758918314223,
+      "base": {
+        "mc_mt": 0.003686496388258759,
+        "mu_mc": 0.00198301605630401,
+        "ms_mb": 0.01852938259537798,
+        "md_ms": 0.05038823952676411,
+        "Vus": 0.22580734040738115,
+        "Vcb": 0.04121145775197892,
+        "Vub": 0.0038301057649646943,
+        "J": 3.0714076173620625e-05
+      },
+      "rotations": [
+        {
+          "sector": "u",
+          "phi": 0.3,
+          "theta_bar_shift": 0.8999909980075262,
+          "max_rel_change": 0.0008731255801555093,
+          "Vus_rel_change": 5.098228417210748e-07
+        },
+        {
+          "sector": "u",
+          "phi": 1.0,
+          "theta_bar_shift": 2.9999526488493373,
+          "max_rel_change": 0.0012344765967879923,
+          "Vus_rel_change": 1.8545846129924826e-06
+        },
+        {
+          "sector": "u",
+          "phi": 2.0,
+          "theta_bar_shift": -0.2832279034526497,
+          "max_rel_change": 0.002785234080639909,
+          "Vus_rel_change": 1.0360432144418397e-06
+        },
+        {
+          "sector": "d",
+          "phi": 0.3,
+          "theta_bar_shift": 0.9420436370804941,
+          "max_rel_change": 0.0898421743079737,
+          "Vus_rel_change": 0.05286854525284235
+        },
+        {
+          "sector": "d",
+          "phi": 1.0,
+          "theta_bar_shift": 2.9237387895087155,
+          "max_rel_change": 0.1523697233300163,
+          "Vus_rel_change": 0.027644901026522284
+        },
+        {
+          "sector": "d",
+          "phi": 2.0,
+          "theta_bar_shift": -0.5766046798618767,
+          "max_rel_change": 0.30313333865713554,
+          "Vus_rel_change": 0.25644026802394837
+        }
+      ]
+    },
+    "B": {
+      "theta_bar": -1.4122769260878112,
+      "base": {
+        "mc_mt": 0.003686482118586512,
+        "mu_mc": 0.0019829577251328414,
+        "ms_mb": 0.018529332489286468,
+        "md_ms": 0.050388556662332655,
+        "Vus": 0.22582963080768131,
+        "Vcb": 0.04121449655871221,
+        "Vub": 0.0038303863988469735,
+        "J": 3.071176969542903e-05
+      },
+      "rotations": [
+        {
+          "sector": "u",
+          "phi": 0.3,
+          "theta_bar_shift": 0.9000220786759714,
+          "max_rel_change": 0.0005405973755641114,
+          "Vus_rel_change": 3.124708006785326e-07
+        },
+        {
+          "sector": "u",
+          "phi": 1.0,
+          "theta_bar_shift": 3.000062353181277,
+          "max_rel_change": 0.0007738500462224351,
+          "Vus_rel_change": 1.144419765286564e-06
+        },
+        {
+          "sector": "u",
+          "phi": 2.0,
+          "theta_bar_shift": -0.2831703203426219,
+          "max_rel_change": 0.0017098809806761484,
+          "Vus_rel_change": 6.477976719487799e-07
+        },
+        {
+          "sector": "d",
+          "phi": 0.3,
+          "theta_bar_shift": 0.9635384522962678,
+          "max_rel_change": 0.08926485275233764,
+          "Vus_rel_change": 0.05122429678397522
+        },
+        {
+          "sector": "d",
+          "phi": 1.0,
+          "theta_bar_shift": -3.0733180483973124,
+          "max_rel_change": 0.13851901963860336,
+          "Vus_rel_change": 0.03577493464864534
+        },
+        {
+          "sector": "d",
+          "phi": 2.0,
+          "theta_bar_shift": -0.1943081637510531,
+          "max_rel_change": 0.30561469581754497,
+          "Vus_rel_change": 0.276228020472415
+        }
+      ]
+    }
+  },
+  "checks": {
+    "arg_det_is_3_arg_eps": true,
+    "correction_is_order_eps_squared": true,
+    "up_phase_shifts_theta_bar_by_3phi": true,
+    "up_phase_leaves_quark_observables": true,
+    "down_phase_is_physical": true,
+    "fitted_vacua_have_order_one_theta_bar": true
+  },
+  "all_checks_pass": true
+}
