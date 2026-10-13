@@ -352080,6 +352080,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fe89fd21321613d6270ba3e904e5e0618d6f66119503098900d78bdad7f9a161",
+      "normalized_formula": "*TheleptoncouplingisY_e=Y_dTinSU(5)",
+      "numeric_literals": [
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
+          "raw": "* The lepton coupling is Y_e = Y_d\u1d40 in SU(5).",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "82287549afe1d7a10307e4ecf27263b376602d1cabc208f88ec8c5013cb26806",
+      "structural_formula": "*TheleptoncouplingisY_e=Y_dTinSU(#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b2d6bb25137df673e4a17f8f0abfbc651a2d3faf02d215c23064cd864d720be4",
       "normalized_formula": "*Thelight-doubletsectorgives[0,1,1]withm_c=m_uandm_\u03bc=m_e(Passes11102,11127)",
       "numeric_literals": [
@@ -354527,6 +354554,33 @@
       },
       "structural_family_id": "0895cc660555fbbe4a33ae58937b3b858943d9a4094870a62a53c2232e77c8ce",
       "structural_formula": "*^SMwithahardcutoff\u039b:^V=\u2212(#/#\u03c0#)\u03a3_c[#\u039b#m_c2+m_c4(ln(m_c2/\u039b#)\u2212#\u2044#)]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4498b67a369b78abc4374380dac4ec6fee40bed2434952fdb754e4295510e910",
+      "normalized_formula": "*^Scale.^ThecomparisonusesM_Zratios.y_b/y_\u03c4\u22481.2isastatementabouttheYukawamatricesandneedsrunning",
+      "numeric_literals": [
+        "1.2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
+          "raw": "* **Scale.** The comparison uses M_Z ratios. y_b/y_\u03c4 \u2248 1.2 is a statement about the Yukawa matrices and needs running",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2d73bab3e2af60c394791f90bfe7bbaaba5d815f03e7fcd95b5206727f51a163",
+      "structural_formula": "*^Scale.^ThecomparisonusesM_Zratios.y_b/y_\u03c4\u2248#isastatementabouttheYukawamatricesandneedsrunning"
     },
     {
       "file_count": 1,
@@ -407227,6 +407281,35 @@
       },
       "structural_family_id": "7965b4ee9c91b6e85b4e107d57dd5514cadd9a4a45028e1c657704fa78127115",
       "structural_formula": "#.Koideratio(exact):(Q-#)/Q=#/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e757b6e3859d306ee0f1a4ae83c567e769f3514a59fc2458e59c46481a686c2a",
+      "normalized_formula": "2.Leptonratiosatthebestfits,nonewparameter(dataatM_Z:m_mu/m_tau=0.0588,m_e/m_mu=0.00474)",
+      "numeric_literals": [
+        "0.00474",
+        "0.0588",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "2. Lepton ratios at the best fits, no new parameter (data at M_Z: m_mu/m_tau = 0.0588, m_e/m_mu = 0.00474):",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "cbb9fa1f3db5ccc8928dc444edcf3789f52abde564af0745af20fa5c9c90d530",
+      "structural_formula": "#.Leptonratiosatthebestfits,nonewparameter(dataatM_Z:m_mu/m_tau=#,m_e/m_mu=#)"
     },
     {
       "file_count": 1,
@@ -652365,6 +652448,35 @@
       "structural_formula": "LEPTONCASCADE:m_mu/m_e=mu^#*Phi_3=#"
     },
     {
+      "file_count": 1,
+      "formula_id": "d130315063ff7405178e142c0471a6ef0b08e8c7caf6a7a25556c1bf60008394",
+      "normalized_formula": "LEPTONS=dict(mmu_mtau=102.718/1746.24,me_mmu=0.48657/102.718)",
+      "numeric_literals": [
+        "0.48657",
+        "102.718",
+        "1746.24"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "LEPTONS = dict(mmu_mtau=102.718 / 1746.24, me_mmu=0.48657 / 102.718)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2419c83bd7f96da14418a20b0e941a35ebdcacbe2785e2b56a5d3ee441cb7e3e",
+      "structural_formula": "LEPTONS=dict(mmu_mtau=#/#,me_mmu=#/#)"
+    },
+    {
       "file_count": 3,
       "formula_id": "f152ce87116bc795fda0b0497d1f373f7e012615aa3afc36095e23ffec5895b3",
       "normalized_formula": "LEPTONS={\"e\":0.51099895000,\"mu\":105.6583755,\"tau\":1776.86}",
@@ -698965,6 +699077,34 @@
       },
       "structural_family_id": "e18203f026de9b9cc5788ceb40217818fd65713ffa84b2bdd99804ed946bacc7",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_ckm_needs_parity_breaking.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0f3475d70db5424c6d6bc2eb7503f7ccf93fa6159f5e97753f78ce627396a519",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass11942_hypercharge_wilson_leptons.json\"",
+      "numeric_literals": [
+        "1942",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass11942_hypercharge_wilson_leptons.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0310e7c4c56dca774815490031e229a294ca553890beeb1b14312db72227e550",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_hypercharge_wilson_leptons.json\""
     },
     {
       "file_count": 1,
@@ -985335,6 +985475,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "34d19bac20fca91b1d750036e1e66ee2edb0c229cdec96be303ecaee5b478d4c",
+      "normalized_formula": "^2.Leptonratiosatthebestfits,withnoleptonparameter.^DataatM_Z:m_\u03bc/m_\u03c4=0.0588,m_e/m_\u03bc=0.00474",
+      "numeric_literals": [
+        "0.00474",
+        "0.0588",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
+          "raw": "**2. Lepton ratios at the best fits, with no lepton parameter.** Data at M_Z: m_\u03bc/m_\u03c4 = 0.0588, m_e/m_\u03bc = 0.00474.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "05298de69dfd06ddeaaa16e7ab075ece394273315f85dd4c327846f8f7dbd2e4",
+      "structural_formula": "^#.Leptonratiosatthebestfits,withnoleptonparameter.^DataatM_Z:m_\u03bc/m_\u03c4=#,m_e/m_\u03bc=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fca2922323f9bf7e8ac161752de0769569e5c420401b7d170714414b1efd112e",
       "normalized_formula": "^20blocksofsize3^,eachusingexactly^q2\u22121=3^distinctlines\u2014thesame",
       "numeric_literals": [
@@ -990540,6 +990709,33 @@
       },
       "structural_family_id": "498dd4ec7244e258ca06487394e508009a6ebd29bda9e0362bc93cac19e58f73",
       "structural_formula": "^Whyitfails.^Pass1#'s\"orthogonal=commuting\"refersto^Pauli^commutation.AllCartan(Witting)vevs"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "20c553e3d6a21b3706fdccea16964090e0a8fe4959e4601e006a78c8e86228ad",
+      "normalized_formula": "^WhyminimalSU(5)failshere.^Theta-nullYukawaswithY_e=Y_dTfailforleptonsexactlyasminimalSU(5)does",
+      "numeric_literals": [
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 63,
+          "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
+          "raw": "**Why minimal SU(5) fails here.** Theta-null Yukawas with Y_e = Y_d\u1d40 fail for leptons exactly as minimal SU(5) does,",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "1b8c5a53af4c474dcf99d89c5cf12d8381d9bde9b3217f50400331432c061da5",
+      "structural_formula": "^WhyminimalSU(#)failshere.^Theta-nullYukawaswithY_e=Y_dTfailforleptonsexactlyasminimalSU(#)does"
     },
     {
       "file_count": 1,
@@ -1031344,6 +1031540,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2732332c266c0356fc9bde88bc57b96ff08b74253001e143f924353a66d74f67",
+      "normalized_formula": "andabs(F[\"A\"][\"leptons\"][\"6\"][\"me_mmu\"]/LEPTONS[\"me_mmu\"]-1)<0.15",
+      "numeric_literals": [
+        "-1",
+        "0.15",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 109,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "and abs(F[\"A\"][\"leptons\"][\"6\"][\"me_mmu\"] / LEPTONS[\"me_mmu\"] - 1) < 0.15,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0b76fb177743f38540705a7ac3ec98a7a600ffc8ae0f73293519d7e9d37abb1c",
+      "structural_formula": "andabs(F[\"A\"][\"leptons\"][\"#\"][\"me_mmu\"]/LEPTONS[\"me_mmu\"]#)<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "102418bdf18ea0f308b323e01fc2d2bfb2bb31bf79953b71f0fd6bf0c83a2396",
       "normalized_formula": "andabs(chiral[\"unit_cos\"]^2+chiral[\"unit_sin\"]^2-1.0)<1e-12",
       "numeric_literals": [
@@ -1033890,6 +1034115,35 @@
       },
       "structural_family_id": "4b77a367ddb026af2a749b5bc46e7652eb88a0a85c89cbde1cf91a564f00facf",
       "structural_formula": "andf[\"G_min_torus_distance_to_C1#\"]<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "16bd8a26d2b6206668d701764a3448638e8e21aaa2da5e3342f7a3bf1c5c3612",
+      "normalized_formula": "andf[\"leptons\"][\"1(minimalSU(5):Y_e=Y_d^T)\"][\"me_mmu\"]>8*LEPTONS[\"me_mmu\"]forfinF.values())",
+      "numeric_literals": [
+        "1",
+        "5",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 105,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "and f[\"leptons\"][\"1 (minimal SU(5): Y_e = Y_d^T)\"][\"me_mmu\"] > 8 * LEPTONS[\"me_mmu\"] for f in F.values()),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "87e80cd2848b345b47628d9b00766682e9d4f259fd75ad30768844b136918176",
+      "structural_formula": "andf[\"leptons\"][\"#(minimalSU(#):Y_e=Y_d^T)\"][\"me_mmu\"]>#*LEPTONS[\"me_mmu\"]forfinF.values())"
     },
     {
       "file_count": 1,
@@ -1137030,6 +1137284,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1772ccfeec7cc6d77c5f7f10327095ded16fbcf56221c203c7c1776e6ac72799",
+      "normalized_formula": "classesfoundbymultistart;othersmayexist),thecomparisonusesM_Z-scaleratios,y_b/y_tau~1.2isaGUT-scale",
+      "numeric_literals": [
+        "1.2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "classes found by multistart; others may exist), the comparison uses M_Z-scale ratios, y_b/y_tau ~ 1.2 is a GUT-scale",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e87c0a0b06bb9715a83dfe26c6512bcbff1071a5bd1fe2ebe2aebd59355752a2",
+      "structural_formula": "classesfoundbymultistart;othersmayexist),thecomparisonusesM_Z-scaleratios,y_b/y_tau~#isaGUT-scale"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5a1e5909a118a699a20f07ea71be0a2448b2c4d1cf48cc3b257317a7ca5829ad",
       "normalized_formula": "classical_distance=18#exacttheoremofPass4799,recheckedbyitsworkflowlane",
       "numeric_literals": [
@@ -1152998,6 +1153279,35 @@
       },
       "structural_family_id": "a77c793210a23a51abfa035cf14d67b227787a7f1ff9be6fab75d711bc6b1c5d",
       "structural_formula": "coupled_scale='Onthisbranch(#/#)sumTr(Phi_a^#)=-m^#,soF_ZsetsPQ=m^#.Thebalancing-pairscaleistiedtotheHiggsmassinput,ratherthananindependentmuinput.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "892c0dc436d397625878ba9cb6590c27e87dc662a125dfb2f85a0cbaa17f631e",
+      "normalized_formula": "coupling(Y_e=Y_d^TinSU(5))liveon(10factor,5barfactor).Pass11941:mixingneedsP-oddWilsonlines",
+      "numeric_literals": [
+        "10",
+        "1941",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "coupling (Y_e = Y_d^T in SU(5)) live on (10 factor, 5bar factor). Pass 11941: mixing needs P-odd Wilson lines.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "971d8500418f36a86950aa93c1acc6b688336d901bebe707a9a5ae4a24aa1842",
+      "structural_formula": "coupling(Y_e=Y_d^TinSU(#))liveon(#factor,#barfactor).Pass1#:mixingneedsP-oddWilsonlines"
     },
     {
       "file_count": 1,
@@ -1172358,16 +1172668,17 @@
       "structural_formula": "defthermal_entropy(beta:float=#)->float"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "03d4ef2f6a13d61637aef22fd3a28843c396c736a4d99c205bee4b43c9f97fd3",
       "normalized_formula": "deftheta(Om,z=(0,0))",
       "numeric_literals": [
         "0"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
-        "analysis/w33_pass11941_ckm_needs_parity_breaking.py"
+        "analysis/w33_pass11941_ckm_needs_parity_breaking.py",
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
       ],
       "source_locations": [
         {
@@ -1172376,10 +1172687,18 @@
           "path": "analysis/w33_pass11941_ckm_needs_parity_breaking.py",
           "raw": "def theta(Om, z=(0, 0)):",
           "status": "retrospective_fit"
+        },
+        {
+          "category": "relation_line",
+          "line": 61,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "def theta(Om, z=(0, 0)):",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "retrospective_fit": 1
+        "retrospective_fit": 1,
+        "unclassified": 1
       },
       "structural_family_id": "772723009abf7b13ad9dad470b3c765b97df62765aa35e675a4b112757f4de54",
       "structural_formula": "deftheta(Om,z=(#,#))"
@@ -1284278,6 +1284597,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5edf9940f6892101c2bc948b63715a77d3a78d04e508db171660c98359cd8352",
+      "normalized_formula": "inside=lambdab,key:b[key][0]<LEPTONS[key]<b[key][2]",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 100,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "inside = lambda b, key: b[key][0] < LEPTONS[key] < b[key][2]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b44b566976d79c9cd2edb6cb39031ec2f9dfabdcfd8b1e751ffe171cd7dbcbcc",
+      "structural_formula": "inside=lambdab,key:b[key][#]<LEPTONS[key]<b[key][#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f1434f1c7884e37f23c1d12fad0e9eadfc99c099c2c050f227060acdbb307566",
       "normalized_formula": "inst=1e11#SMHiggsinstabilityscale",
       "numeric_literals": [
@@ -1312008,6 +1312355,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6f4f6a39c1a58bc4ea4f9ed9f33cce31c36b75d6860fa07070ac8889b04d4e9e",
+      "normalized_formula": "leptons[rule]=dict(mmu_mtau=float(se[1]/se[0]),me_mmu=float(se[2]/se[1]),yb_ytau=float(sd[0]/se[0]))",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 90,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "leptons[rule] = dict(mmu_mtau=float(se[1] / se[0]), me_mmu=float(se[2] / se[1]), yb_ytau=float(sd[0] / se[0]))",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "ecbb45ae9ac9a1117499c4af8dbb48b60367e71a48f63332f36fb0f063d054d4",
+      "structural_formula": "leptons[rule]=dict(mmu_mtau=float(se[#]/se[#]),me_mmu=float(se[#]/se[#]),yb_ytau=float(sd[#]/se[#]))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b7d6729e9dc8a34c9afa58fd0d69f93ddd11b723afd9cd8068a91635ea2e43bc",
       "normalized_formula": "letm_bbetheunitBlochvectoroftheimageofMUBb.Then,withrho=|u|^2andrtheBlochvectorofu",
       "numeric_literals": [
@@ -1332505,6 +1332881,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3f21bbbf0299066f925017204b0d3d30c9f0c93aa74d562e80421c861fff24b2",
+      "normalized_formula": "m_\\mu/m_\\tau=0.053",
+      "numeric_literals": [
+        "0.053"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 577,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "m_\\mu/m_\\tau=0.053",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "29cb78cb306385c5c05846cc368776005794302f4fca1e2290b7f1e39e1e5c3d",
+      "structural_formula": "m_\\mu/m_\\tau=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "909e0ca5e176733fb1dfcc5c76c2b00146d7740153432c4bc04d61d3aff7fea9",
       "normalized_formula": "m_\\mu/m_e=(\\Phi_3\\Phi_6)^2/v",
       "numeric_literals": [
@@ -1337463,6 +1337866,33 @@
       },
       "structural_family_id": "284e70e353c35b1cb2af0ef8d36787b2d5542250a1161a9c4c80c6c4a2ab756a",
       "structural_formula": "m_e/M_Pl~#(PDGvalues)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9c3f5efdfbdccbfc054370d5c36356dd983fccc8e09a7c84215ea8dbc8db08b8",
+      "normalized_formula": "m_e/m_\\mu=0.0052",
+      "numeric_literals": [
+        "0.0052"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 577,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "m_e/m_\\mu=0.0052",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "c8eda45284b386675a684958f51547de57437f4dc90390bac42b3590ac9a028f",
+      "structural_formula": "m_e/m_\\mu=#"
     },
     {
       "file_count": 1,
@@ -1364167,6 +1364597,36 @@
       },
       "structural_family_id": "afe7afd09cc270fe0b1d230069a229eb7ee0a45f5549bae977a07c42a9445a4e",
       "structural_formula": "minimal_real_commutant=\"End_R(R^#)commutingwithorder-#rotation=R[I,J];symmetricpart=RI;norank-onerealsymmetricgradingprojector\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "48f55548f0c3dbbe9caf967c8f900edc6b2b645a1b53d72d99e0418823a24795",
+      "normalized_formula": "minimal_su5_fails_by_3_and_10=all(f[\"leptons\"][\"1(minimalSU(5):Y_e=Y_d^T)\"][\"mmu_mtau\"]<LEPTONS[\"mmu_mtau\"]/2.5",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2.5",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 104,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "minimal_su5_fails_by_3_and_10=all(f[\"leptons\"][\"1 (minimal SU(5): Y_e = Y_d^T)\"][\"mmu_mtau\"] < LEPTONS[\"mmu_mtau\"] / 2.5",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1fb50f203131c006680f9e0e471b27c0bb5d46a26f1ee7731c21b68697c91751",
+      "structural_formula": "minimal_su5_fails_by_3_and_1#=all(f[\"leptons\"][\"#(minimalSU(#):Y_e=Y_d^T)\"][\"mmu_mtau\"]<LEPTONS[\"mmu_mtau\"]/#"
     },
     {
       "file_count": 1,
@@ -1567452,6 +1567912,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "799abfccfb425607481704fcf4e5822715fabcf5135dd138bddfd06386e8e063",
+      "normalized_formula": "quark_fits_within_half_percent=all(f[\"max_rel_dev\"]<5e-3forfinF.values())",
+      "numeric_literals": [
+        "5e-3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "quark_fits_within_half_percent=all(f[\"max_rel_dev\"] < 5e-3 for f in F.values()),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6ddfb56cd0cd0675e89b1db7f6903b4151b7c8f0719da43e2ecdd627652d2cb9",
+      "structural_formula": "quark_fits_within_half_percent=all(f[\"max_rel_dev\"]<#forfinF.values())"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5942cfa96bfde0a955f1c2212e21a82b0d150b9899e32f35e4dd4f8a9de10440",
       "normalized_formula": "quark_flavors=chk(\"quark_flavors\",2*Q,2*Q=6)",
       "numeric_literals": [
@@ -1567613,6 +1568100,35 @@
       },
       "structural_family_id": "4d70a8388e9841d4c7d590a3cc5b5fb125751fc9cc73cb9eb541b57d17594018",
       "structural_formula": "quark_unit=(quark_axis[#]/math.sqrt(axis_norm_sq),quark_axis[#]/math.sqrt(axis_norm_sq))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "68152fb2c928f726bcc46e8f56f6d9da2625dae3807d6efbbc43030ae30ab1c4",
+      "normalized_formula": "quarks=dict(mc_mt=su[1]/su[0],mu_mc=su[2]/su[1],ms_mb=sd[1]/sd[0],md_ms=sd[2]/sd[1],Vus=abs(V[0,1])",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 85,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "quarks = dict(mc_mt=su[1] / su[0], mu_mc=su[2] / su[1], ms_mb=sd[1] / sd[0], md_ms=sd[2] / sd[1], Vus=abs(V[0, 1]),",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "1db4987d854127b6780ca2d01e133109991c93bddc564bda48bf297435a0d5c4",
+      "structural_formula": "quarks=dict(mc_mt=su[#]/su[#],mu_mc=su[#]/su[#],ms_mb=sd[#]/sd[#],md_ms=sd[#]/sd[#],Vus=abs(V[#,#])"
     },
     {
       "file_count": 1,
@@ -1579174,6 +1579690,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0a61b5daf152baade831d49567c8f9d646e865a0d9be53a61bc2c5b730c92289",
+      "normalized_formula": "realisationwiththechargerulez_e=6\u00b7z_dtiedtotheCKMfit",
+      "numeric_literals": [
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 82,
+          "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
+          "raw": "realisation with the charge rule z_e = 6\u00b7z_d tied to the CKM fit.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "a8de8d5f0c01c37cd787a1b77079c3f38119122c9e0440897e519aecfe090e62",
+      "structural_formula": "realisationwiththechargerulez_e=#\u00b7z_dtiedtotheCKMfit"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5805b4e3f6d051bde894b29715ba7744a4a719f182334b52dd0ed8d35ac5650d",
       "normalized_formula": "realisingit.Atq=3theroomexistsfor10andthequadranglesuppliesonly7",
       "numeric_literals": [
@@ -1584329,6 +1584872,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1d6b0ab9d6a7ea284abfe43ca7eb0f8b1f106f727b063a93953081543b1d88bb",
+      "normalized_formula": "res=dict(pass_id=11942,data_quarks=DATA,data_leptons=LEPTONS,posterior_frozen=POSTERIOR,fits={})",
+      "numeric_literals": [
+        "11942"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 95,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "res = dict(pass_id=11942, data_quarks=DATA, data_leptons=LEPTONS, posterior_frozen=POSTERIOR, fits={})",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "f08480697f20c7fe55db49fb060a52ac76019252cba283cda21304c0d2aeece0",
+      "structural_formula": "res=dict(pass_id=#,data_quarks=DATA,data_leptons=LEPTONS,posterior_frozen=POSTERIOR,fits={})"
+    },
+    {
+      "file_count": 1,
       "formula_id": "94c6e16ebcedd71c9ab8a8c73beb8c62a718f588aabfe768608341f16c441d53",
       "normalized_formula": "res=dict(pass_id=[11132,11133],n_models=len(d),conjugation_bijection=bijection,bottom_eps3_without_T=bottom3",
       "numeric_literals": [
@@ -1585355,6 +1585925,33 @@
       },
       "structural_family_id": "b0d310890f7d808076a3ccac315a168d182ab6b1e61ec7f6daaecd21b77d7206",
       "structural_formula": "res[\"fermion_loops_select_theta1#_0\"]=all(r[\"selects\"]=\"theta1#=#\"forrinrbifr[\"statistics\"]=\"fermion\")"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fab3b8459e18e3cd471a57a4d7be9e668561d38ae48151423d4395666c02f91a",
+      "normalized_formula": "res[\"fits\"][k]=dict(quarks=q,max_rel_dev=max(abs(q[i]/DATA[i]-1)foriinDATA),leptons=lep,^geo)",
+      "numeric_literals": [
+        "-1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 98,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "res[\"fits\"][k] = dict(quarks=q, max_rel_dev=max(abs(q[i] / DATA[i] - 1) for i in DATA), leptons=lep, **geo)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dccb88a1dacd7a8ccb788d3b1f2b1e68646be79f74ef434a1d99d0a41ee54e33",
+      "structural_formula": "res[\"fits\"][k]=dict(quarks=q,max_rel_dev=max(abs(q[i]/DATA[i]#)foriinDATA),leptons=lep,^geo)"
     },
     {
       "file_count": 1,
@@ -1605276,6 +1605873,152 @@
     },
     {
       "file_count": 1,
+      "formula_id": "db89a5fc4fb5ed172dfc711377e39cc33ac746e608083e5f8546d36f34e9c314",
+      "normalized_formula": "rule0_fails=all(f[\"leptons\"][\"0\"][\"mmu_mtau\"]<0.25*LEPTONS[\"mmu_mtau\"]orf[\"leptons\"][\"0\"][\"mmu_mtau\"]>3*LEPTONS[\"mmu_mtau\"]forfinF.values())",
+      "numeric_literals": [
+        "0",
+        "0.25",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 106,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "rule0_fails=all(f[\"leptons\"][\"0\"][\"mmu_mtau\"] < 0.25 * LEPTONS[\"mmu_mtau\"] or f[\"leptons\"][\"0\"][\"mmu_mtau\"] > 3 * LEPTONS[\"mmu_mtau\"] for f in F.values()),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "552780293376b5e57ead9cd8617cde4071ccce2456fa05d9995c8196489b4e02",
+      "structural_formula": "rule0_fails=all(f[\"leptons\"][\"#\"][\"mmu_mtau\"]<#*LEPTONS[\"mmu_mtau\"]orf[\"leptons\"][\"#\"][\"mmu_mtau\"]>#*LEPTONS[\"mmu_mtau\"]forfinF.values())"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "799e45a10c435be86605b6253239a65d41c709aa15d15fec6de3e04734be00e1",
+      "normalized_formula": "rule1(minimalSU(5),Y_e=Y_d^TwiththesameWilsonline):(0.0185,0.050)=(m_s/m_b,m_d/m_s)--offby3and10",
+      "numeric_literals": [
+        "0",
+        "0.0185",
+        "0.050",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "rule 1 (minimal SU(5), Y_e = Y_d^T with the same Wilson line): (0.0185, 0.050) = (m_s/m_b, m_d/m_s) -- off by 3 and 10.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7956d2675bfa3af43ed70092aa0fee1a8ca79e7c55eb7639d599151a9c9ffbcb",
+      "structural_formula": "rule1(minimalSU(#),Y_e=Y_d^TwiththesameWilsonline):(#,#)=(m_s/m_b,m_d/m_s)--offby3and1#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8884f2705c22f73885570b37c81e817a130f22801762557658b77c5b72479286",
+      "normalized_formula": "rule6_best_fit_A_within_15pct=abs(F[\"A\"][\"leptons\"][\"6\"][\"mmu_mtau\"]/LEPTONS[\"mmu_mtau\"]-1)<0.15",
+      "numeric_literals": [
+        "-1",
+        "0.15",
+        "5",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 108,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "rule6_best_fit_A_within_15pct=abs(F[\"A\"][\"leptons\"][\"6\"][\"mmu_mtau\"] / LEPTONS[\"mmu_mtau\"] - 1) < 0.15",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8e9d5c88570fb9830add36e03bd6f1d7abd1e1803a18e6a58384c4d3e8abb43f",
+      "structural_formula": "rule6_best_fit_A_within_1#pct=abs(F[\"A\"][\"leptons\"][\"#\"][\"mmu_mtau\"]/LEPTONS[\"mmu_mtau\"]#)<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "79396725dc4d8b5d8b234becdbc3f272b5dac46899131c94b8c4a608e3063af3",
+      "normalized_formula": "rule6_best_fit_B_within_factor_1p5=all(abs(np.log(F[\"B\"][\"leptons\"][\"6\"][k]/LEPTONS[k]))<np.log(1.5)forkinLEPTONS)",
+      "numeric_literals": [
+        "1.5",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 110,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "rule6_best_fit_B_within_factor_1p5=all(abs(np.log(F[\"B\"][\"leptons\"][\"6\"][k] / LEPTONS[k])) < np.log(1.5) for k in LEPTONS),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9b582328a0bf2daff71145310d7ba9bdaa0f2696f5e6eaaa3391e7a34d495db1",
+      "structural_formula": "rule6_best_fit_B_within_factor_1p5=all(abs(np.log(F[\"B\"][\"leptons\"][\"#\"][k]/LEPTONS[k]))<np.log(#)forkinLEPTONS)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a8169d1c1eb7c70c85a684af5c819efa89812193cb479969ddc4580f5e772a9f",
+      "normalized_formula": "rule6_yb_ytau_order_one=all(1.0<f[\"leptons\"][\"6\"][\"yb_ytau\"]<1.4forfinF.values())",
+      "numeric_literals": [
+        "1.0",
+        "1.4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 111,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "rule6_yb_ytau_order_one=all(1.0 < f[\"leptons\"][\"6\"][\"yb_ytau\"] < 1.4 for f in F.values()),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cdd74f1799fa78f984c95748f1e9fa688bbffa15b2d1840c6765e1be5f37b77d",
+      "structural_formula": "rule6_yb_ytau_order_one=all(#<f[\"leptons\"][\"#\"][\"yb_ytau\"]<#forfinF.values())"
+    },
+    {
+      "file_count": 1,
       "formula_id": "769a623f9b9742c9e31e2390cf3128ecf7da9ba7db001abdbde2a4f070892aa4",
       "normalized_formula": "rule='Onlygauge-neutral+correctedR/nonR+sumoftwistk=0mod6+necessaryinvarianttensorsymmetry,notspace-groupproduct,fulloscillator/gamma/instantoncorrelator.Identicalchiralsuperfieldscommute;epsilonPhiPhi=0.Nosurvivingamplitudeisclaimednonzero.'",
       "numeric_literals": [
@@ -1605327,6 +1606070,35 @@
       },
       "structural_family_id": "2384ffea9c3726c6eefe114566aa9e3b858bddcb411f4da35e31840a508c4244",
       "structural_formula": "rule=rule_from_row(M[#])"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2c6e9cc8afa39b585910f5eb6860cef9aea8cf27b6360132c2c271adfd07b70e",
+      "normalized_formula": "rule_minus_three_halves_off=all(abs(np.log(f[\"leptons\"][\"-3/2\"][\"me_mmu\"]/LEPTONS[\"me_mmu\"]))>np.log(2.5)forfinF.values())",
+      "numeric_literals": [
+        "-3",
+        "2",
+        "2.5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 107,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "rule_minus_three_halves_off=all(abs(np.log(f[\"leptons\"][\"-3/2\"][\"me_mmu\"] / LEPTONS[\"me_mmu\"])) > np.log(2.5) for f in F.values()),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "006eb27b2cb8ac5f6c644cfdefae2a4dc8f2e3920de78751b1695bb0c3c30cb9",
+      "structural_formula": "rule_minus_three_halves_off=all(abs(np.log(f[\"leptons\"][\"#/#\"][\"me_mmu\"]/LEPTONS[\"me_mmu\"]))>np.log(#)forfinF.values())"
     },
     {
       "file_count": 1,
@@ -1641509,6 +1642281,33 @@
       },
       "structural_family_id": "687e16840fad8fd8c214b738eb19916db7ecf22da033c19ae28de961678f4997",
       "structural_formula": "sources=json.load(open(ROOT/'data/w3#_2#_two_even_singlets_exact_2#.json'))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "48b04b5468cb78537612cb0a8254c3e269906307467a49ed7b34754e9680b50d",
+      "normalized_formula": "soz_e=6z_d.Theupcouplinghasno5barfactorandstaysWilson-free,as",
+      "numeric_literals": [
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11942_hypercharge_wilson_leptons.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass11942_hypercharge_wilson_leptons.py",
+          "raw": "so z_e = 6 z_d. The up coupling has no 5bar factor and stays Wilson-free, as",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "371636df223364f18c046b4c1329b5e4d270e3ced080f02e76c94708e039cd7d",
+      "structural_formula": "soz_e=#z_d.Theupcouplinghasno5barfactorandstaysWilson-free,as"
     },
     {
       "file_count": 1,
@@ -1731965,6 +1732764,41 @@
       "structural_formula": "z_dbl_0=(-sum_ml2+sum_ml^#)//#"
     },
     {
+      "file_count": 2,
+      "formula_id": "b93b83c9fc799aa303d8755894e9506298a823d8cd43fb48f37ca14b263be867",
+      "normalized_formula": "z_e=6z_d",
+      "numeric_literals": [
+        "6"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex",
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 577,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "z_e=6z_d",
+          "status": "retrospective_fit"
+        },
+        {
+          "category": "inline_math",
+          "line": 1561,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "z_e=6z_d",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 2
+      },
+      "structural_family_id": "668e6a121fb551a616b8b498a7548ed0a2999d65f6f8afab0ba0a3e0dce5b09e",
+      "structural_formula": "z_e=#z_d"
+    },
+    {
       "file_count": 1,
       "formula_id": "94a5bc2103362910201ae723af7b86d15bba888568b0edb9303076b5a2eff5fc",
       "normalized_formula": "z_gauge=eig_r-lam#0",
@@ -1775259,9 +1776093,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-12T14:47:00-04:00",
+  "frozen_at": "2026-10-12T20:13:02-04:00",
   "pass": 398,
-  "repository_head": "679a88449e5af86e5dc7729fe56b6a9584657079",
+  "repository_head": "a8c55b32bbfabdae53ec849e5cb67ab3b8740314",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1834407,6 +1835241,14 @@
     },
     {
       "exact_formula_ids": [
+        "e757b6e3859d306ee0f1a4ae83c567e769f3514a59fc2458e59c46481a686c2a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cbb9fa1f3db5ccc8928dc444edcf3789f52abde564af0745af20fa5c9c90d530",
+      "structural_formula": "#.Leptonratiosatthebestfits,nonewparameter(dataatM_Z:m_mu/m_tau=#,m_e/m_mu=#)"
+    },
+    {
+      "exact_formula_ids": [
         "8250374ae204a81c5df8b19918e483139a72ddbe73b4ccdd3cbc145d55aacff4"
       ],
       "exact_member_count": 1,
@@ -1893147,6 +1893989,14 @@
     },
     {
       "exact_formula_ids": [
+        "fe89fd21321613d6270ba3e904e5e0618d6f66119503098900d78bdad7f9a161"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "82287549afe1d7a10307e4ecf27263b376602d1cabc208f88ec8c5013cb26806",
+      "structural_formula": "*TheleptoncouplingisY_e=Y_dTinSU(#)"
+    },
+    {
+      "exact_formula_ids": [
         "b2d6bb25137df673e4a17f8f0abfbc651a2d3faf02d215c23064cd864d720be4"
       ],
       "exact_member_count": 1,
@@ -1893824,6 +1894674,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0895cc660555fbbe4a33ae58937b3b858943d9a4094870a62a53c2232e77c8ce",
       "structural_formula": "*^SMwithahardcutoff\u039b:^V=\u2212(#/#\u03c0#)\u03a3_c[#\u039b#m_c2+m_c4(ln(m_c2/\u039b#)\u2212#\u2044#)]"
+    },
+    {
+      "exact_formula_ids": [
+        "4498b67a369b78abc4374380dac4ec6fee40bed2434952fdb754e4295510e910"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2d73bab3e2af60c394791f90bfe7bbaaba5d815f03e7fcd95b5206727f51a163",
+      "structural_formula": "*^Scale.^ThecomparisonusesM_Zratios.y_b/y_\u03c4\u2248#isastatementabouttheYukawamatricesandneedsrunning"
     },
     {
       "exact_formula_ids": [
@@ -1951073,6 +1951931,14 @@
     },
     {
       "exact_formula_ids": [
+        "d130315063ff7405178e142c0471a6ef0b08e8c7caf6a7a25556c1bf60008394"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2419c83bd7f96da14418a20b0e941a35ebdcacbe2785e2b56a5d3ee441cb7e3e",
+      "structural_formula": "LEPTONS=dict(mmu_mtau=#/#,me_mmu=#/#)"
+    },
+    {
+      "exact_formula_ids": [
         "f152ce87116bc795fda0b0497d1f373f7e012615aa3afc36095e23ffec5895b3"
       ],
       "exact_member_count": 1,
@@ -1963407,6 +1964273,14 @@
       "exact_member_count": 1,
       "structural_family_id": "598916e25af0f34a42fa83e2623683c44923549d74649f9de68974a00456cce3",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_higher_order_quark_hierarchy.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "0f3475d70db5424c6d6bc2eb7503f7ccf93fa6159f5e97753f78ce627396a519"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0310e7c4c56dca774815490031e229a294ca553890beeb1b14312db72227e550",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_hypercharge_wilson_leptons.json\""
     },
     {
       "exact_formula_ids": [
@@ -2038069,6 +2038943,14 @@
     },
     {
       "exact_formula_ids": [
+        "34d19bac20fca91b1d750036e1e66ee2edb0c229cdec96be303ecaee5b478d4c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "05298de69dfd06ddeaaa16e7ab075ece394273315f85dd4c327846f8f7dbd2e4",
+      "structural_formula": "^#.Leptonratiosatthebestfits,withnoleptonparameter.^DataatM_Z:m_\u03bc/m_\u03c4=#,m_e/m_\u03bc=#"
+    },
+    {
+      "exact_formula_ids": [
         "f778cc24127ff1c9810c9c3e54300ad1de9088764b64f685ad325b9d43b39fd4"
       ],
       "exact_member_count": 1,
@@ -2039530,6 +2040412,14 @@
       "exact_member_count": 1,
       "structural_family_id": "498dd4ec7244e258ca06487394e508009a6ebd29bda9e0362bc93cac19e58f73",
       "structural_formula": "^Whyitfails.^Pass1#'s\"orthogonal=commuting\"refersto^Pauli^commutation.AllCartan(Witting)vevs"
+    },
+    {
+      "exact_formula_ids": [
+        "20c553e3d6a21b3706fdccea16964090e0a8fe4959e4601e006a78c8e86228ad"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1b8c5a53af4c474dcf99d89c5cf12d8381d9bde9b3217f50400331432c061da5",
+      "structural_formula": "^WhyminimalSU(#)failshere.^Theta-nullYukawaswithY_e=Y_dTfailforleptonsexactlyasminimalSU(#)does"
     },
     {
       "exact_formula_ids": [
@@ -2050513,6 +2051403,14 @@
     },
     {
       "exact_formula_ids": [
+        "2732332c266c0356fc9bde88bc57b96ff08b74253001e143f924353a66d74f67"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0b76fb177743f38540705a7ac3ec98a7a600ffc8ae0f73293519d7e9d37abb1c",
+      "structural_formula": "andabs(F[\"A\"][\"leptons\"][\"#\"][\"me_mmu\"]/LEPTONS[\"me_mmu\"]#)<#"
+    },
+    {
+      "exact_formula_ids": [
         "102418bdf18ea0f308b323e01fc2d2bfb2bb31bf79953b71f0fd6bf0c83a2396"
       ],
       "exact_member_count": 1,
@@ -2051208,6 +2052106,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4b77a367ddb026af2a749b5bc46e7652eb88a0a85c89cbde1cf91a564f00facf",
       "structural_formula": "andf[\"G_min_torus_distance_to_C1#\"]<#"
+    },
+    {
+      "exact_formula_ids": [
+        "16bd8a26d2b6206668d701764a3448638e8e21aaa2da5e3342f7a3bf1c5c3612"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "87e80cd2848b345b47628d9b00766682e9d4f259fd75ad30768844b136918176",
+      "structural_formula": "andf[\"leptons\"][\"#(minimalSU(#):Y_e=Y_d^T)\"][\"me_mmu\"]>#*LEPTONS[\"me_mmu\"]forfinF.values())"
     },
     {
       "exact_formula_ids": [
@@ -2079548,6 +2080454,14 @@
     },
     {
       "exact_formula_ids": [
+        "1772ccfeec7cc6d77c5f7f10327095ded16fbcf56221c203c7c1776e6ac72799"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e87c0a0b06bb9715a83dfe26c6512bcbff1071a5bd1fe2ebe2aebd59355752a2",
+      "structural_formula": "classesfoundbymultistart;othersmayexist),thecomparisonusesM_Z-scaleratios,y_b/y_tau~#isaGUT-scale"
+    },
+    {
+      "exact_formula_ids": [
         "5a1e5909a118a699a20f07ea71be0a2448b2c4d1cf48cc3b257317a7ca5829ad"
       ],
       "exact_member_count": 1,
@@ -2084029,6 +2084943,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a77c793210a23a51abfa035cf14d67b227787a7f1ff9be6fab75d711bc6b1c5d",
       "structural_formula": "coupled_scale='Onthisbranch(#/#)sumTr(Phi_a^#)=-m^#,soF_ZsetsPQ=m^#.Thebalancing-pairscaleistiedtotheHiggsmassinput,ratherthananindependentmuinput.'"
+    },
+    {
+      "exact_formula_ids": [
+        "892c0dc436d397625878ba9cb6590c27e87dc662a125dfb2f85a0cbaa17f631e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "971d8500418f36a86950aa93c1acc6b688336d901bebe707a9a5ae4a24aa1842",
+      "structural_formula": "coupling(Y_e=Y_d^TinSU(#))liveon(#factor,#barfactor).Pass1#:mixingneedsP-oddWilsonlines"
     },
     {
       "exact_formula_ids": [
@@ -2119884,6 +2120806,14 @@
     },
     {
       "exact_formula_ids": [
+        "5edf9940f6892101c2bc948b63715a77d3a78d04e508db171660c98359cd8352"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b44b566976d79c9cd2edb6cb39031ec2f9dfabdcfd8b1e751ffe171cd7dbcbcc",
+      "structural_formula": "inside=lambdab,key:b[key][#]<LEPTONS[key]<b[key][#]"
+    },
+    {
+      "exact_formula_ids": [
         "f1434f1c7884e37f23c1d12fad0e9eadfc99c099c2c050f227060acdbb307566"
       ],
       "exact_member_count": 1,
@@ -2127130,6 +2128060,14 @@
     },
     {
       "exact_formula_ids": [
+        "6f4f6a39c1a58bc4ea4f9ed9f33cce31c36b75d6860fa07070ac8889b04d4e9e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ecbb45ae9ac9a1117499c4af8dbb48b60367e71a48f63332f36fb0f063d054d4",
+      "structural_formula": "leptons[rule]=dict(mmu_mtau=float(se[#]/se[#]),me_mmu=float(se[#]/se[#]),yb_ytau=float(sd[#]/se[#]))"
+    },
+    {
+      "exact_formula_ids": [
         "b7d6729e9dc8a34c9afa58fd0d69f93ddd11b723afd9cd8068a91635ea2e43bc"
       ],
       "exact_member_count": 1,
@@ -2132430,6 +2133368,14 @@
     },
     {
       "exact_formula_ids": [
+        "3f21bbbf0299066f925017204b0d3d30c9f0c93aa74d562e80421c861fff24b2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "29cb78cb306385c5c05846cc368776005794302f4fca1e2290b7f1e39e1e5c3d",
+      "structural_formula": "m_\\mu/m_\\tau=#"
+    },
+    {
+      "exact_formula_ids": [
         "909e0ca5e176733fb1dfcc5c76c2b00146d7740153432c4bc04d61d3aff7fea9"
       ],
       "exact_member_count": 1,
@@ -2133758,6 +2134704,14 @@
       "exact_member_count": 1,
       "structural_family_id": "284e70e353c35b1cb2af0ef8d36787b2d5542250a1161a9c4c80c6c4a2ab756a",
       "structural_formula": "m_e/M_Pl~#(PDGvalues)"
+    },
+    {
+      "exact_formula_ids": [
+        "9c3f5efdfbdccbfc054370d5c36356dd983fccc8e09a7c84215ea8dbc8db08b8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c8eda45284b386675a684958f51547de57437f4dc90390bac42b3590ac9a028f",
+      "structural_formula": "m_e/m_\\mu=#"
     },
     {
       "exact_formula_ids": [
@@ -2141002,6 +2141956,14 @@
       "exact_member_count": 1,
       "structural_family_id": "afe7afd09cc270fe0b1d230069a229eb7ee0a45f5549bae977a07c42a9445a4e",
       "structural_formula": "minimal_real_commutant=\"End_R(R^#)commutingwithorder-#rotation=R[I,J];symmetricpart=RI;norank-onerealsymmetricgradingprojector\""
+    },
+    {
+      "exact_formula_ids": [
+        "48f55548f0c3dbbe9caf967c8f900edc6b2b645a1b53d72d99e0418823a24795"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1fb50f203131c006680f9e0e471b27c0bb5d46a26f1ee7731c21b68697c91751",
+      "structural_formula": "minimal_su5_fails_by_3_and_1#=all(f[\"leptons\"][\"#(minimalSU(#):Y_e=Y_d^T)\"][\"mmu_mtau\"]<LEPTONS[\"mmu_mtau\"]/#"
     },
     {
       "exact_formula_ids": [
@@ -2194688,6 +2195650,14 @@
     },
     {
       "exact_formula_ids": [
+        "799abfccfb425607481704fcf4e5822715fabcf5135dd138bddfd06386e8e063"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6ddfb56cd0cd0675e89b1db7f6903b4151b7c8f0719da43e2ecdd627652d2cb9",
+      "structural_formula": "quark_fits_within_half_percent=all(f[\"max_rel_dev\"]<#forfinF.values())"
+    },
+    {
+      "exact_formula_ids": [
         "5942cfa96bfde0a955f1c2212e21a82b0d150b9899e32f35e4dd4f8a9de10440"
       ],
       "exact_member_count": 1,
@@ -2194733,6 +2195703,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4d70a8388e9841d4c7d590a3cc5b5fb125751fc9cc73cb9eb541b57d17594018",
       "structural_formula": "quark_unit=(quark_axis[#]/math.sqrt(axis_norm_sq),quark_axis[#]/math.sqrt(axis_norm_sq))"
+    },
+    {
+      "exact_formula_ids": [
+        "68152fb2c928f726bcc46e8f56f6d9da2625dae3807d6efbbc43030ae30ab1c4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1db4987d854127b6780ca2d01e133109991c93bddc564bda48bf297435a0d5c4",
+      "structural_formula": "quarks=dict(mc_mt=su[#]/su[#],mu_mc=su[#]/su[#],ms_mb=sd[#]/sd[#],md_ms=sd[#]/sd[#],Vus=abs(V[#,#])"
     },
     {
       "exact_formula_ids": [
@@ -2197622,6 +2198600,14 @@
     },
     {
       "exact_formula_ids": [
+        "0a61b5daf152baade831d49567c8f9d646e865a0d9be53a61bc2c5b730c92289"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a8de8d5f0c01c37cd787a1b77079c3f38119122c9e0440897e519aecfe090e62",
+      "structural_formula": "realisationwiththechargerulez_e=#\u00b7z_dtiedtotheCKMfit"
+    },
+    {
+      "exact_formula_ids": [
         "5805b4e3f6d051bde894b29715ba7744a4a719f182334b52dd0ed8d35ac5650d"
       ],
       "exact_member_count": 1,
@@ -2198918,6 +2199904,14 @@
     },
     {
       "exact_formula_ids": [
+        "1d6b0ab9d6a7ea284abfe43ca7eb0f8b1f106f727b063a93953081543b1d88bb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f08480697f20c7fe55db49fb060a52ac76019252cba283cda21304c0d2aeece0",
+      "structural_formula": "res=dict(pass_id=#,data_quarks=DATA,data_leptons=LEPTONS,posterior_frozen=POSTERIOR,fits={})"
+    },
+    {
+      "exact_formula_ids": [
         "67798032042674e3369f5efc2b20cfbed84eb1276cf8d787ba0968faacf705a9"
       ],
       "exact_member_count": 1,
@@ -2199371,6 +2200365,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b0d310890f7d808076a3ccac315a168d182ab6b1e61ec7f6daaecd21b77d7206",
       "structural_formula": "res[\"fermion_loops_select_theta1#_0\"]=all(r[\"selects\"]=\"theta1#=#\"forrinrbifr[\"statistics\"]=\"fermion\")"
+    },
+    {
+      "exact_formula_ids": [
+        "fab3b8459e18e3cd471a57a4d7be9e668561d38ae48151423d4395666c02f91a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dccb88a1dacd7a8ccb788d3b1f2b1e68646be79f74ef434a1d99d0a41ee54e33",
+      "structural_formula": "res[\"fits\"][k]=dict(quarks=q,max_rel_dev=max(abs(q[i]/DATA[i]#)foriinDATA),leptons=lep,^geo)"
     },
     {
       "exact_formula_ids": [
@@ -2204752,6 +2205754,46 @@
     },
     {
       "exact_formula_ids": [
+        "db89a5fc4fb5ed172dfc711377e39cc33ac746e608083e5f8546d36f34e9c314"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "552780293376b5e57ead9cd8617cde4071ccce2456fa05d9995c8196489b4e02",
+      "structural_formula": "rule0_fails=all(f[\"leptons\"][\"#\"][\"mmu_mtau\"]<#*LEPTONS[\"mmu_mtau\"]orf[\"leptons\"][\"#\"][\"mmu_mtau\"]>#*LEPTONS[\"mmu_mtau\"]forfinF.values())"
+    },
+    {
+      "exact_formula_ids": [
+        "799e45a10c435be86605b6253239a65d41c709aa15d15fec6de3e04734be00e1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7956d2675bfa3af43ed70092aa0fee1a8ca79e7c55eb7639d599151a9c9ffbcb",
+      "structural_formula": "rule1(minimalSU(#),Y_e=Y_d^TwiththesameWilsonline):(#,#)=(m_s/m_b,m_d/m_s)--offby3and1#"
+    },
+    {
+      "exact_formula_ids": [
+        "8884f2705c22f73885570b37c81e817a130f22801762557658b77c5b72479286"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8e9d5c88570fb9830add36e03bd6f1d7abd1e1803a18e6a58384c4d3e8abb43f",
+      "structural_formula": "rule6_best_fit_A_within_1#pct=abs(F[\"A\"][\"leptons\"][\"#\"][\"mmu_mtau\"]/LEPTONS[\"mmu_mtau\"]#)<#"
+    },
+    {
+      "exact_formula_ids": [
+        "79396725dc4d8b5d8b234becdbc3f272b5dac46899131c94b8c4a608e3063af3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b582328a0bf2daff71145310d7ba9bdaa0f2696f5e6eaaa3391e7a34d495db1",
+      "structural_formula": "rule6_best_fit_B_within_factor_1p5=all(abs(np.log(F[\"B\"][\"leptons\"][\"#\"][k]/LEPTONS[k]))<np.log(#)forkinLEPTONS)"
+    },
+    {
+      "exact_formula_ids": [
+        "a8169d1c1eb7c70c85a684af5c819efa89812193cb479969ddc4580f5e772a9f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cdd74f1799fa78f984c95748f1e9fa688bbffa15b2d1840c6765e1be5f37b77d",
+      "structural_formula": "rule6_yb_ytau_order_one=all(#<f[\"leptons\"][\"#\"][\"yb_ytau\"]<#forfinF.values())"
+    },
+    {
+      "exact_formula_ids": [
         "769a623f9b9742c9e31e2390cf3128ecf7da9ba7db001abdbde2a4f070892aa4"
       ],
       "exact_member_count": 1,
@@ -2204765,6 +2205807,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2384ffea9c3726c6eefe114566aa9e3b858bddcb411f4da35e31840a508c4244",
       "structural_formula": "rule=rule_from_row(M[#])"
+    },
+    {
+      "exact_formula_ids": [
+        "2c6e9cc8afa39b585910f5eb6860cef9aea8cf27b6360132c2c271adfd07b70e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "006eb27b2cb8ac5f6c644cfdefae2a4dc8f2e3920de78751b1695bb0c3c30cb9",
+      "structural_formula": "rule_minus_three_halves_off=all(abs(np.log(f[\"leptons\"][\"#/#\"][\"me_mmu\"]/LEPTONS[\"me_mmu\"]))>np.log(#)forfinF.values())"
     },
     {
       "exact_formula_ids": [
@@ -2214432,6 +2215482,14 @@
       "exact_member_count": 1,
       "structural_family_id": "687e16840fad8fd8c214b738eb19916db7ecf22da033c19ae28de961678f4997",
       "structural_formula": "sources=json.load(open(ROOT/'data/w3#_2#_two_even_singlets_exact_2#.json'))"
+    },
+    {
+      "exact_formula_ids": [
+        "48b04b5468cb78537612cb0a8254c3e269906307467a49ed7b34754e9680b50d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "371636df223364f18c046b4c1329b5e4d270e3ced080f02e76c94708e039cd7d",
+      "structural_formula": "soz_e=#z_d.Theupcouplinghasno5barfactorandstaysWilson-free,as"
     },
     {
       "exact_formula_ids": [
@@ -2238828,6 +2239886,14 @@
     },
     {
       "exact_formula_ids": [
+        "b93b83c9fc799aa303d8755894e9506298a823d8cd43fb48f37ca14b263be867"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "668e6a121fb551a616b8b498a7548ed0a2999d65f6f8afab0ba0a3e0dce5b09e",
+      "structural_formula": "z_e=#z_d"
+    },
+    {
+      "exact_formula_ids": [
         "94a5bc2103362910201ae723af7b86d15bba888568b0edb9303076b5a2eff5fc"
       ],
       "exact_member_count": 1,
@@ -2249629,20 +2250695,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 86994598,
-    "exact_formula_families": 60706,
-    "files_scanned": 11921,
-    "formula_occurrences": 66671,
+    "bytes_scanned": 87008477,
+    "exact_formula_families": 60735,
+    "files_scanned": 11923,
+    "formula_occurrences": 66702,
     "status_occurrences": {
       "certified_or_theorem": 4862,
-      "killed_or_retracted": 1584,
-      "open_or_conditional": 2163,
+      "killed_or_retracted": 1587,
+      "open_or_conditional": 2164,
       "preregistered": 32,
-      "retrospective_fit": 5157,
-      "unclassified": 52873
+      "retrospective_fit": 5166,
+      "unclassified": 52891
     },
-    "structural_families": 59088
+    "structural_families": 59117
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "538a5eadee072b2150dd2a825e9da039a9956ba51e46769485a455654f6f4e76"
+  "universe_sha256": "e917353c3f8cd7bca49ad4766f56aede334902baafa5f7d29e43551590b5ee09"
 }
