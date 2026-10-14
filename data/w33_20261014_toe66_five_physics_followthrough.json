@@ -1,0 +1,277 @@
+{
+  "status": "PASS_TOE66_FIVE_FRONTS",
+  "front1": {
+    "status": "CERTIFIED",
+    "high_edge_indices": [
+      30,
+      31,
+      49,
+      51,
+      59,
+      62,
+      63,
+      82,
+      83,
+      93,
+      95,
+      118,
+      119,
+      138,
+      139,
+      142,
+      143
+    ],
+    "phase_ray": [
+      0,
+      -1,
+      1
+    ],
+    "ray_polynomial_coefficients": [
+      0,
+      0,
+      72,
+      46,
+      34,
+      0,
+      0,
+      0,
+      -12
+    ],
+    "polynomial_root_numeric": 0.24461518037119193,
+    "new_counterexample_epsilon": "244616/1000000",
+    "exact_negative_integer": "-592200479596647810296792372727074788466491392",
+    "preceding_exact_positive_integer": "130322122680949828958032767333718531518750000",
+    "TOE64_proven_lower": 0.14875640159021247,
+    "scope": "Native 160-edge product leading beta^7 Hessian counterexample, not a global minimax threshold."
+  },
+  "front2": {
+    "status": "EXACT_STATIONARITY_NUMERICAL_CROSSOVER",
+    "stationarity_proof": "H(-phi)=conjugate(H(phi)) for real edge weights. Since -pi=pi modulo 2pi, every differentiable spectral free energy is stationary at three-pi for all beta, but need not minimize.",
+    "weighted_deviation": 0.3,
+    "direction": [
+      0,
+      -0.7071067811865476,
+      0.7071067811865476
+    ],
+    "step": 0.05,
+    "curvature_cases": [
+      {
+        "beta": 0.4,
+        "directional_second_difference": -0.000009220480023941489
+      },
+      {
+        "beta": 0.8,
+        "directional_second_difference": -0.00035941178566645243
+      },
+      {
+        "beta": 1,
+        "directional_second_difference": -0.0008204445407500315
+      },
+      {
+        "beta": 1.5,
+        "directional_second_difference": -0.001657086477280245
+      },
+      {
+        "beta": 2,
+        "directional_second_difference": 0.00014934179262127142
+      },
+      {
+        "beta": 2.5,
+        "directional_second_difference": 0.005068976258826296
+      },
+      {
+        "beta": 4,
+        "directional_second_difference": 0.026905530097565127
+      },
+      {
+        "beta": 8,
+        "directional_second_difference": 0.056359845319775545
+      },
+      {
+        "beta": "infinity",
+        "directional_second_difference": 0.060951252049790114
+      }
+    ],
+    "numerical_crossover_beta": 1.978116429659798,
+    "half_step_curvature_at_crossing": -0.000005458878149511292,
+    "small_beta_nonuniform_counterexample": "The exact negative eighth moment phase Hessian gives nonminimality at sufficiently small positive beta by analytic log-cosh series.",
+    "scope": "One-dimensional directional curvature scan, not a certified critical temperature or thermodynamic transition; no global all-beta U1 selection theorem."
+  },
+  "front3": {
+    "status": "CERTIFIED_RIBBON_DOUBLE",
+    "original_vertices": 80,
+    "original_edges": 160,
+    "rotation": "cyclic order of incident Levi edges by sorted edge index",
+    "ribbon_boundary_lengths": [
+      12,
+      14,
+      106,
+      188
+    ],
+    "ribbon_genus": 39,
+    "ribbon_boundary_components": 4,
+    "doubled_closed_genus": 81,
+    "doubled_surface_euler": -160,
+    "scope": "Constructed genuine orientable closed surface; rotation/doubling noncanonical. Not original clique two-skeleton or a derived physical spacetime."
+  },
+  "front4": {
+    "status": "CERTIFIED_CONTINUUM_INDEX_ON_DERIVED_MANIFOLD",
+    "M4": "Double(W33 Levi ribbon) times T2",
+    "betti": [
+      1,
+      164,
+      326,
+      164,
+      1
+    ],
+    "intersection_signature": [
+      163,
+      163
+    ],
+    "hyperbolic_planes": 163,
+    "spin": true,
+    "selected_c1_square": 2,
+    "twisted_spin_Dirac_index": 1,
+    "index_formula": "ind D_L = integral (c1(L)^2/2 - p1/24) = 1 for signature zero",
+    "scope": "True continuum index on noncanonical W33-derived closed spin 4-manifold with added T2 and chosen U1 line bundle; not a native overlap lattice index, Standard Model Weyl spectrum or unique TOE geometry."
+  },
+  "front5": {
+    "status": "RIGOROUS_BUT_LOOSE_SPECTRAL_DISTANCE_BOUND",
+    "Fock_operator_prefactor": 11.2,
+    "flux_operator_prefactor": 3.75,
+    "derived_bound": "||QH psi|| <= 16*kappa*sqrt(P_Fock shell)+6*(beta/g^2)*sqrt(P_flux shell), plus numerical eigensolver residual. Simple octagon chord changes <=1. Distance from Ritz energy to SOME full patch spectral point is at most this norm; not ground-state error.",
+    "d2_L2_to_L3_neutral_shift": -0.0012161815848417135,
+    "d3_L1_to_L2_neutral_shift": -0.10286801034185133,
+    "full_patch_ground_lower_from_TOE65": -13,
+    "cases": [
+      {
+        "depth": 1,
+        "L": 1,
+        "sector": "neutral",
+        "Ritz_energy": -1.0574065256725682,
+        "boundary_spectral_residual_upper": 9.34196829218109,
+        "Fock_boundary_probability": 0.41791620118550954,
+        "flux_boundary_probability": 0.3140682388432665
+      },
+      {
+        "depth": 1,
+        "L": 1,
+        "sector": "charged",
+        "Ritz_energy": -0.752379718619808,
+        "boundary_spectral_residual_upper": 9.402714233361799,
+        "Fock_boundary_probability": 0.4155397952970574,
+        "flux_boundary_probability": 0.3388568928949651
+      },
+      {
+        "depth": 1,
+        "L": 2,
+        "sector": "neutral",
+        "Ritz_energy": -1.1155996560332795,
+        "boundary_spectral_residual_upper": 7.614931477872312,
+        "Fock_boundary_probability": 0.4203830581906385,
+        "flux_boundary_probability": 0.008870758917294665
+      },
+      {
+        "depth": 1,
+        "L": 2,
+        "sector": "charged",
+        "Ritz_energy": -0.8104180794028041,
+        "boundary_spectral_residual_upper": 7.5911093456181815,
+        "Fock_boundary_probability": 0.417923954885997,
+        "flux_boundary_probability": 0.008743051201213386
+      },
+      {
+        "depth": 2,
+        "L": 1,
+        "sector": "neutral",
+        "Ritz_energy": -2.178299741280857,
+        "boundary_spectral_residual_upper": 7.309387202914643,
+        "Fock_boundary_probability": 0.20043542815387072,
+        "flux_boundary_probability": 0.37459148449084967
+      },
+      {
+        "depth": 2,
+        "L": 1,
+        "sector": "charged",
+        "Ritz_energy": -1.8574882095793752,
+        "boundary_spectral_residual_upper": 7.339464755248651,
+        "Fock_boundary_probability": 0.19719568343597144,
+        "flux_boundary_probability": 0.3980472760618193
+      },
+      {
+        "depth": 2,
+        "L": 2,
+        "sector": "neutral",
+        "Ritz_energy": -2.2613189830035902,
+        "boundary_spectral_residual_upper": 5.512708169373137,
+        "Fock_boundary_probability": 0.20396289371977705,
+        "flux_boundary_probability": 0.014691769092737164
+      },
+      {
+        "depth": 2,
+        "L": 2,
+        "sector": "charged",
+        "Ritz_energy": -1.9383383041513278,
+        "boundary_spectral_residual_upper": 5.4580405971097985,
+        "Fock_boundary_probability": 0.20059956995873704,
+        "flux_boundary_probability": 0.013876597645467207
+      },
+      {
+        "depth": 2,
+        "L": 3,
+        "sector": "neutral",
+        "Ritz_energy": -2.262535164588432,
+        "boundary_spectral_residual_upper": 5.097503431609826,
+        "Fock_boundary_probability": 0.20405042686947447,
+        "flux_boundary_probability": 0.00010401835552831796
+      },
+      {
+        "depth": 2,
+        "L": 3,
+        "sector": "charged",
+        "Ritz_energy": -1.9394009274747714,
+        "boundary_spectral_residual_upper": 5.05229213532495,
+        "Fock_boundary_probability": 0.20067608855104574,
+        "flux_boundary_probability": 0.00008731552171084742
+      },
+      {
+        "depth": 3,
+        "L": 1,
+        "sector": "neutral",
+        "Ritz_energy": -2.673164430752027,
+        "boundary_spectral_residual_upper": 5.761867484819079,
+        "Fock_boundary_probability": 0.0869922294532797,
+        "flux_boundary_probability": 0.4298077335251609
+      },
+      {
+        "depth": 3,
+        "L": 1,
+        "sector": "charged",
+        "Ritz_energy": -2.3372734730636147,
+        "boundary_spectral_residual_upper": 5.7622659308642294,
+        "Fock_boundary_probability": 0.083907250135685,
+        "flux_boundary_probability": 0.4508639506816257
+      },
+      {
+        "depth": 3,
+        "L": 2,
+        "sector": "neutral",
+        "Ritz_energy": -2.776032441093878,
+        "boundary_spectral_residual_upper": 3.897394550931185,
+        "Fock_boundary_probability": 0.09035409301020479,
+        "flux_boundary_probability": 0.020034802319725015
+      },
+      {
+        "depth": 3,
+        "L": 2,
+        "sector": "charged",
+        "Ritz_energy": -2.43650325472061,
+        "boundary_spectral_residual_upper": 3.817192378082494,
+        "Fock_boundary_probability": 0.08711483836785325,
+        "flux_boundary_probability": 0.0186040442533254
+      }
+    ],
+    "scope": "Reanalysis of published TOE62/TOE65 native 14-site interacting patch data, no new eigensolves; bounds too loose for convergence or rigorous charge gap. Not full 80-site theory."
+  },
+  "physics_scope": "Mathematical and finite-model results. Physical TOE, emergent Lorentz gravity, unique spacetime selection, overlap lattice index and anomaly-free SM remain open."
+}
