@@ -68,3 +68,11 @@ def test_complete_432_heisenberg_generator_gauges_against_frozen_cubic_address()
     labels=c["example_original_H27_address_to_octagon_bijection"]
     if labels is not None:
         assert sorted(labels)==list(range(27))
+
+def test_actual_native_216_orbits_on_270_marked_prime_tritangent_walks():
+    c=certificate()
+    sizes=c["native_216_orbits_on_270_based_oriented_triangle_cubics"]
+    assert sum(sizes)==270
+    assert all(216%v==0 for v in sizes)
+    assert c["native_270_directed_triangle_instruction_bijection"]
+    assert c["native_GQ24_line_count"]==45
