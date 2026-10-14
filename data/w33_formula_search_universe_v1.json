@@ -465079,6 +465079,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f679fcd597b57d880ede223ba2effc99faa6b22b7b90e28c8b734bc24a4f0514",
+      "normalized_formula": "81+81-27=135",
+      "numeric_literals": [
+        "+81",
+        "-27",
+        "135",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 55,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "81+81-27=135",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c3f93cd718a26c0cfbaf812f6abf25816824bf9cce1cd1ce4c200dcc90198e62",
+      "structural_formula": "###=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "73ce4535dd6f639b2950601148687b6a7ed36299af1708a188bb4f61cdaee294",
       "normalized_formula": "81/240=27/80",
       "numeric_literals": [
@@ -598599,6 +598629,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "119aadf77fe5c846055180fb8add9d3b505db6f76a94c483f7265c1f9d2ecf66",
+      "normalized_formula": "E_0=-\\|M\\|_*=-(4+24\\sqrt6)",
+      "numeric_literals": [
+        "+24",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 14,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "E_0=-\\|M\\|_* =-(4+24\\sqrt6).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c690b57c6370b67662568b67ab5d53be9d91929b4a8cf5cee2c9f58d66c88fb5",
+      "structural_formula": "E_0=-\\|M\\|_*=-(##\\sqrt6)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "68a9ce801a92e6f1b480da1fcf062a471f90d0bfd8316623a7ba9e81afcc0b33",
       "normalized_formula": "E_0=J/40",
       "numeric_literals": [
@@ -601271,6 +601329,41 @@
       },
       "structural_family_id": "e75b4704e82980009ae2b641e2b0fec7b8101925e94effa9561a823a081d96f7",
       "structural_formula": "E_{#}-E_{\\pi,\\pi}=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cca437f7a54a098a23b1ed8e1f805124ccce26b9b00474585bc9b9a866b353c3",
+      "normalized_formula": "E_{120}-E_{\\pi,\\pi}=\\begin{cases}-0.0206931704210,t=0,\\\\-0.0154690506454,t=1/4,\\\\-0.0063616117564,t=1/2,\\\\+0.0182225316338,t=1.\\end{cases}",
+      "numeric_literals": [
+        "+0.0182225316338",
+        "-0.0063616117564",
+        "-0.0154690506454",
+        "-0.0206931704210",
+        "0",
+        "1",
+        "120",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 26,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "E_{120}-E_{\\pi,\\pi}= \\begin{cases} -0.0206931704210,&t=0,\\\\ -0.0154690506454,&t=1/4,\\\\ -0.0063616117564,&t=1/2,\\\\ +0.0182225316338,&t=1. \\end{cases}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1f0438441f69d8e37c62b384b3d4a69aec5df86f396ad07cb7ff3aedacc9a79e",
+      "structural_formula": "E_{#}-E_{\\pi,\\pi}=\\begin{cases}#,t=#,\\\\#,t=#/#,\\\\#,t=#/#,\\\\#,t=#.\\end{cases}"
     },
     {
       "file_count": 1,
@@ -604443,6 +604536,40 @@
       },
       "structural_family_id": "05e4a2631d85bcca0eb56be662e97108bdcff7616e72558cfde689ab461551f9",
       "structural_formula": "EveryMBQCoutcomePROJECTIVELYcollapsesontov=#observables"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d59108d29ec52c14bc825c0ae6770953b5ea2f18e34314fdfaabe411e3bada84",
+      "normalized_formula": "EveryW33Levi^flagedge^belongsto81undirectedprimitiveoctagons.Thetwoparticularthetachordsoccurtogetherin^27^octagons,sotheirunioncomprises\\(81+81-27=135\\)holonomy-sensitiveoctagons.Thenumber27suggested,butdidnotprove,aconnectiontotheexistingregular/Payneandtrinification\\(H_{27}\\)program",
+      "numeric_literals": [
+        "+81",
+        "-27",
+        "1",
+        "135",
+        "27",
+        "3",
+        "7",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 55,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "Every W33 Levi **flag edge** belongs to 81 undirected primitive octagons. The two particular theta chords occur together in **27** octagons, so their union comprises \\(81+81-27=135\\) holonomy-sensitive octagons. The number 27 suggested, but did not prove, a connection to the existing regular/Payne and trinification \\(H_{27}\\) program.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "499b39406a042a3d29ee321e04dcf8a93c8084e62d1bd0b0d5d67cc9d1a218eb",
+      "structural_formula": "EveryW3#Levi^flagedge^belongsto8#undirectedprimitiveoctagons.Thetwoparticularthetachordsoccurtogetherin^#^octagons,sotheirunioncomprises\\(###=#\\)holonomy-sensitiveoctagons.Thenumber2#suggested,butdidnotprove,aconnectiontotheexistingregular/Payneandtrinification\\(H_{#}\\)program"
     },
     {
       "file_count": 1,
@@ -744610,6 +744737,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6eea7212f2b864bfc429c3cd87bcc87e2fd75cc1a87324ee169de873e3d9f177",
+      "normalized_formula": "Preserveunitweightonthe12nativethetaedges,multiplyall^other148nativeW33Leviedgehoppings^byacommonexterioramplitude\\(t\\).At\\(t=0\\),theremaining69verticesareisolated,reproducingtheexacttheta120\u00b0theorem.At\\(t=1\\),theentireW33Levigraphisrestored,withtwoselectedthetachordscarryingmagneticphases.Athalffilling,theverified80\u00d780directspectralcalculationsgive",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "20",
+        "3",
+        "48",
+        "80",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "Preserve unit weight on the 12 native theta edges, multiply all **other 148 native W33 Levi edge hoppings** by a common exterior amplitude \\(t\\). At \\(t=0\\), the remaining 69 vertices are isolated, reproducing the exact theta 120\u00b0 theorem. At \\(t=1\\), the entire W33 Levi graph is restored, with two selected theta chords carrying magnetic phases. At half filling, the verified 80\u00d780 direct spectral calculations give",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "dd90afc91460f67e201e110d36b4887e4df2b1ef0f7ba66c64c13bc7a89cecbc",
+      "structural_formula": "Preserveunitweightonthe1#nativethetaedges,multiplyall^other1#nativeW3#Leviedgehoppings^byacommonexterioramplitude\\(t\\).At\\(t=#\\),theremaining6#verticesareisolated,reproducingtheexacttheta1#\u00b0theorem.At\\(t=#\\),theentireW3#Levigraphisrestored,withtwoselectedthetachordscarryingmagneticphases.Athalffilling,theverified8#\u00d7#directspectralcalculationsgive"
+    },
+    {
+      "file_count": 1,
       "formula_id": "204b720ff4d4d7adac7ee68fdb1912413faa189cae546a7b2219990601123f3d",
       "normalized_formula": "PreviousRound14pairedactive/shamprotocoltestedwhetheranoptical-patheffectexistsataspecifiedalpha.Thispassinvertsthepairedrandomizationtestintoa^finite-sample(1-alpha)two-sidedconfidenceinterval^forthecausaleffectonthe*clippeddetectoroutput*.DefinetwoclippedpotentialoutcomesY_{j1}(a),Y_{j2}(a),a=0,1,ineachrandomizedpair,independentoftheindependentbinarypathassignmentz_j.Thetriplepump/gate/routesignr_jisrandomizedindependentlyofz_jandheldfixedwithinpair.LetX=sum_jz_j*r_j*(Y_j1(observed)-Y_j2(observed)).Thetargetfinite-pairsignedcausalcontrastis",
       "numeric_literals": [
@@ -805872,6 +806033,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4c80199e03286a706f125083f7603730f0596f02e195c49d52742f06e0af9842",
+      "normalized_formula": "TheexplicitPGSp(4,3)stabilizeraudit\\`analysis/w33_20261014_toe77_twentyseven_octagons.py\\`showsthatthe^unorderedtwo-chordflag-pairorbit^hassize^240^.Since\\(|PGSp(4,3)|=51840\\),thepairstabilizerhasorder^216^.Itacts^transitivelyandfaithfully^onthose27sharedoctagons,withpointstabilizeroforder^8^",
+      "numeric_literals": [
+        "0261014",
+        "216",
+        "240",
+        "3",
+        "4",
+        "51840",
+        "7",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 57,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "The explicit PGSp(4,3) stabilizer audit \\`analysis/w33_20261014_toe77_twentyseven_octagons.py\\` shows that the **unordered two-chord flag-pair orbit** has size **240**. Since \\(|PGSp(4,3)|=51840\\), the pair stabilizer has order **216**. It acts **transitively and faithfully** on those 27 shared octagons, with point stabilizer of order **8**.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "15f04d3b72086d570d31f58e5490dbcefc763a8f8c9673cdcc2bd6b609001e1f",
+      "structural_formula": "TheexplicitPGSp(#,#)stabilizeraudit\\`analysis/w3#_2#_toe7#_twentyseven_octagons.py\\`showsthatthe^unorderedtwo-chordflag-pairorbit^hassize^#^.Since\\(|PGSp(#,#)|=#\\),thepairstabilizerhasorder^#^.Itacts^transitivelyandfaithfully^onthose2#sharedoctagons,withpointstabilizeroforder^#^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f624e94be3e97bce40cc0640318384613935ee990732fa5fd3181bad17c9428c",
       "normalized_formula": "Theexplicitsemidirectaction`H27:GL(2,3)`hasorder`27*48=1296`.Independentgraph-automorphismenumerationalsogivesexactly1296automorphisms.Thevertexstabilizeroforder48istransitiveoneverydistancesphere,sothegraphisdistance-transitive",
       "numeric_literals": [
@@ -811072,6 +811267,37 @@
       },
       "structural_family_id": "032f3f9ecbdc80d0b3a42e50b3c08acd204d8112f87b0527ebd64f31e09cebe3",
       "structural_formula": "TheoriginalexampleisthereforeNOTaviableCabibbo/mixingfit.AdifferentdiscreteHiggsassignmentku=#,kd=#,kh=#makes*actual*|Vus|=#,but|Vcb|=#,|Vub|=#,stillwrong"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "26023cf3449d450b1217846a191822e1363ef11837d4ca43613640fadd681229",
+      "normalized_formula": "Theoriginalisolated11-site\\(\\Theta(4,4,4)\\)graphhasarigorouslyderivedfreefive-fermiongroundoptimumat\\(s=|1+e^{i\\phi_1}+e^{i\\phi_2}|=0\\),preciselythetwoconjugate120\u00b0phasepairs.Itsunitary-twistedIharadeterminantdependsonthe^same^\\(s\\).Sincethisistrueof^every^uniformequal-armthetagraph,itisnotW33-specificwithoutinformationfromits80-vertexembedding",
+      "numeric_literals": [
+        "0",
+        "1",
+        "20",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "The original isolated 11-site \\(\\Theta(4,4,4)\\) graph has a rigorously derived free five-fermion ground optimum at \\(s=|1+e^{i\\phi_1}+e^{i\\phi_2}|=0\\), precisely the two conjugate 120\u00b0 phase pairs. Its unitary-twisted Ihara determinant depends on the **same** \\(s\\). Since this is true of **every** uniform equal-arm theta graph, it is not W33-specific without information from its 80-vertex embedding.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "11e1382e65482884dc73ecca71ac969f87da1402cf03c9f8de1c7c4a37dac8c6",
+      "structural_formula": "Theoriginalisolated1#-site\\(\\Theta(#,#,#)\\)graphhasarigorouslyderivedfreefive-fermiongroundoptimumat\\(s=|#+e^{i\\phi_1}+e^{i\\phi_2}|=#\\),preciselythetwoconjugate1#\u00b0phasepairs.Itsunitary-twistedIharadeterminantdependsonthe^same^\\(s\\).Sincethisistrueof^every^uniformequal-armthetagraph,itisnotW3#-specificwithoutinformationfromits8#-vertexembedding"
     },
     {
       "file_count": 1,
@@ -907429,6 +907655,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0fc4db113cfbf4bff99690aff34ab61e15442b4cdcbe2cf2ddb912c9453d3ede",
+      "normalized_formula": "\\boxed{\\mathrm{tr}[H_{\\phi,t}^8]-\\mathrm{tr}[H_{0,t}^8]=16\\sum_{C\\in\\mathrm{Octagons}(W33)}t^{d_C}\\bigl(\\cos(w_C\\cdot\\phi)-1\\bigr).}",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "16",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 44,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "\\boxed{\\mathrm{tr}[H_{\\phi,t}^8]-\\mathrm{tr}[H_{0,t}^8] =16\\sum_{C\\in\\mathrm{Octagons}(W33)} t^{d_C}\\bigl(\\cos(w_C\\cdot\\phi)-1\\bigr).}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "627e723502a55bd7881f1e3fabc33a5373e6d6f818905c31930b3f83a85479f6",
+      "structural_formula": "\\boxed{\\mathrm{tr}[H_{\\phi,t}^#]-\\mathrm{tr}[H_{#,t}^#]=#\\sum_{C\\in\\mathrm{Octagons}(W3#)}t^{d_C}\\bigl(\\cos(w_C\\cdot\\phi)#\\bigr).}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "eb95d8d2dfebe8ca65a1bf58e0dc26a745e7634f571e4e423827fc8b9dd275e2",
       "normalized_formula": "\\boxed{\\max_{\\lambda\\nek}|\\lambda|=q+1\\le2\\sqrt{k-1}.}",
       "numeric_literals": [
@@ -919313,6 +919570,34 @@
       },
       "structural_family_id": "56e7a108028c3096bb90dc9aa49d72aa15d342dc3abddd18dc84aa1827dfb104",
       "structural_formula": "\\delta(c)=(c_2-c_0-c_1,c_3#c_0-c_1)\\in\\mathbbF_3^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f01addf5c0ff3b4e7d96e8c743d75c6fbec9dc8bc9724fad8581aae73ee4e10c",
+      "normalized_formula": "\\delta/\\pi=1/3",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 35,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "\\delta/\\pi=1/3",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "11c7f45b88cef3b3ee2ffdde5ffd27567e51bb59b96a6cfd2faa0abce4a0917a",
+      "structural_formula": "\\delta/\\pi=#/#"
     },
     {
       "file_count": 1,
@@ -1640631,6 +1640916,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6aac0988cf1f769f7c101c5d380ab704b0c1d9aeff9fab5215e73bc557ba06cc",
+      "normalized_formula": "s=|1+e^{i\\phi_1}+e^{i\\phi_2}|=0",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 9,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "s=|1+e^{i\\phi_1}+e^{i\\phi_2}|=0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "62c78d467365873934293d6a8d7295008c30562c17e8777631ce69498eed609c",
+      "structural_formula": "s=|#+e^{i\\phi_1}+e^{i\\phi_2}|=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "dc41a8f36a26246bea8b6519a0b25508ba050a708497de4683db392f8bead41a",
       "normalized_formula": "s=|1+e^{i\\phi_1}+e^{i\\phi_2}|\\in[0,3]",
       "numeric_literals": [
@@ -1692349,18 +1692662,19 @@
       "structural_formula": "t=#/#"
     },
     {
-      "file_count": 6,
+      "file_count": 7,
       "formula_id": "0eb4f782edc96275159ad33517d8684dbe6f5ba45dd439eddc97578878d396b1",
       "normalized_formula": "t=0",
       "numeric_literals": [
         "0"
       ],
-      "occurrence_count": 9,
+      "occurrence_count": 11,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "W36_PAPER.tex",
         "analysis/2026-10-14_toe77_embed_11_into_80.md",
         "analysis/2026-10-14_toe77_nuclear_norm_w33_embedding.md",
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
         "analysis/PASS6533_6540_doily_quadratic_evaluation_code.md",
         "holonet_practical_implications.tex",
         "photonic_holonet_body.tex"
@@ -1692410,6 +1692724,20 @@
         },
         {
           "category": "tex_paren",
+          "line": 25,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "t=0",
+          "status": "certified_or_theorem"
+        },
+        {
+          "category": "tex_paren",
+          "line": 35,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "t=0",
+          "status": "unclassified"
+        },
+        {
+          "category": "tex_paren",
           "line": 34,
           "path": "analysis/PASS6533_6540_doily_quadratic_evaluation_code.md",
           "raw": "t=0",
@@ -1692431,8 +1692759,8 @@
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1,
-        "unclassified": 8
+        "certified_or_theorem": 2,
+        "unclassified": 9
       },
       "structural_family_id": "78b9dcc91db77ea1fa65f2858c58c7416516983b62a3610ccc29a2e68b9afc76",
       "structural_formula": "t=#"
@@ -1692591,19 +1692919,20 @@
       "structural_formula": "t=#"
     },
     {
-      "file_count": 5,
+      "file_count": 6,
       "formula_id": "35d8a879e1c1cb606c64894ddc5bb7be92f1eb619a4921b6702c06424c04e40e",
       "normalized_formula": "t=1",
       "numeric_literals": [
         "1"
       ],
-      "occurrence_count": 10,
+      "occurrence_count": 12,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "W33_FOR_EVERYONE.tex",
         "analysis/2026-10-14_toe68_five_physics_fronts.md",
         "analysis/2026-10-14_toe77_embed_11_into_80.md",
         "analysis/2026-10-14_toe77_nuclear_norm_w33_embedding.md",
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
         "w33_paper_body.tex"
       ],
       "source_locations": [
@@ -1692657,6 +1692986,20 @@
           "status": "certified_or_theorem"
         },
         {
+          "category": "tex_paren",
+          "line": 25,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "t=1",
+          "status": "certified_or_theorem"
+        },
+        {
+          "category": "tex_paren",
+          "line": 35,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "t=1",
+          "status": "unclassified"
+        },
+        {
           "category": "inline_math",
           "line": 2506,
           "path": "w33_paper_body.tex",
@@ -1692679,8 +1693022,8 @@
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1,
-        "unclassified": 9
+        "certified_or_theorem": 2,
+        "unclassified": 10
       },
       "structural_family_id": "78b9dcc91db77ea1fa65f2858c58c7416516983b62a3610ccc29a2e68b9afc76",
       "structural_formula": "t=#"
@@ -1728597,6 +1728940,33 @@
       },
       "structural_family_id": "d48494663a3974ea73c651c0377217882fe94c7a3239791aaad3f2e1dc4cc4b9",
       "structural_formula": "types={diagram_type([iforiinrange(#)ifs[i]=#])forsinrec(#,m,[])ifreduce(gcd,s)=#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ba896652ceade80e0e4e3b9c1d6d8083fea6c1d3f18c9a99676db8e6ba0ad5c2",
+      "normalized_formula": "t\u22480.9999909",
+      "numeric_literals": [
+        "0.9999909"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 35,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "t\\approx0.9999909",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dbc60cd179069f166f19973014c7394e4029695b83f7f07c305804b4df2dee5a",
+      "structural_formula": "t\u2248#"
     },
     {
       "file_count": 1,
@@ -1778466,6 +1778836,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c610e713e406d60f50f51d93698d8181c1577cfbea11519b4af3704d9cb08f6b",
+      "normalized_formula": "|PGSp(4,3)|=51840",
+      "numeric_literals": [
+        "3",
+        "4",
+        "51840"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 57,
+          "path": "analysis/2026-10-14_toe77_symmetry_and_embedding_breakthrough.md",
+          "raw": "|PGSp(4,3)|=51840",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9f1093fe46f45eaa8df9172f13b2e7c81efbf6787b40564c29fdcba18e09781d",
+      "structural_formula": "|PGSp(#,#)|=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d10301a520c9f4a4e5942b9a6789f8474486fc0f98fe34577de3a8dece273f83",
       "normalized_formula": "|PGSp(4,q)|=q^4(q^2-1)(q^4-1)",
       "numeric_literals": [
@@ -1810957,9 +1811356,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T17:59:02-04:00",
+  "frozen_at": "2026-10-14T18:14:14-04:00",
   "pass": 398,
-  "repository_head": "dabc3b47f89f93d95f5826c3da6be5d31c64bc19",
+  "repository_head": "6ae3ad60670cfa20579b917e7e92eb3af05f812c",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1865599,9 +1865998,10 @@
         "8a4ae3fcacb2515c1915e9067b60f809e9784973d4ec724fbea5679dbc700724",
         "915a602dd819ce2dcfd85e6ee4dfc9b272c9b0a401c68f0ce1d6b96e05504d0a",
         "2e07a52338cd07f8c1da97ffcc7ec6276339fe057526dc00b87a49066fb2026f",
+        "f679fcd597b57d880ede223ba2effc99faa6b22b7b90e28c8b734bc24a4f0514",
         "d9cf5b83e75f18f21112aebacdfb34912841cb7701a27b2b04089ada55111df4"
       ],
-      "exact_member_count": 29,
+      "exact_member_count": 30,
       "structural_family_id": "c3f93cd718a26c0cfbaf812f6abf25816824bf9cce1cd1ce4c200dcc90198e62",
       "structural_formula": "###=#"
     },
@@ -1972034,6 +1972434,14 @@
     },
     {
       "exact_formula_ids": [
+        "119aadf77fe5c846055180fb8add9d3b505db6f76a94c483f7265c1f9d2ecf66"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c690b57c6370b67662568b67ab5d53be9d91929b4a8cf5cee2c9f58d66c88fb5",
+      "structural_formula": "E_0=-\\|M\\|_*=-(##\\sqrt6)"
+    },
+    {
+      "exact_formula_ids": [
         "68a9ce801a92e6f1b480da1fcf062a471f90d0bfd8316623a7ba9e81afcc0b33"
       ],
       "exact_member_count": 1,
@@ -1972768,6 +1973176,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e75b4704e82980009ae2b641e2b0fec7b8101925e94effa9561a823a081d96f7",
       "structural_formula": "E_{#}-E_{\\pi,\\pi}=#"
+    },
+    {
+      "exact_formula_ids": [
+        "cca437f7a54a098a23b1ed8e1f805124ccce26b9b00474585bc9b9a866b353c3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1f0438441f69d8e37c62b384b3d4a69aec5df86f396ad07cb7ff3aedacc9a79e",
+      "structural_formula": "E_{#}-E_{\\pi,\\pi}=\\begin{cases}#,t=#,\\\\#,t=#/#,\\\\#,t=#/#,\\\\#,t=#.\\end{cases}"
     },
     {
       "exact_formula_ids": [
@@ -1973640,6 +1974056,14 @@
       "exact_member_count": 1,
       "structural_family_id": "05e4a2631d85bcca0eb56be662e97108bdcff7616e72558cfde689ab461551f9",
       "structural_formula": "EveryMBQCoutcomePROJECTIVELYcollapsesontov=#observables"
+    },
+    {
+      "exact_formula_ids": [
+        "d59108d29ec52c14bc825c0ae6770953b5ea2f18e34314fdfaabe411e3bada84"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "499b39406a042a3d29ee321e04dcf8a93c8084e62d1bd0b0d5d67cc9d1a218eb",
+      "structural_formula": "EveryW3#Levi^flagedge^belongsto8#undirectedprimitiveoctagons.Thetwoparticularthetachordsoccurtogetherin^#^octagons,sotheirunioncomprises\\(###=#\\)holonomy-sensitiveoctagons.Thenumber2#suggested,butdidnotprove,aconnectiontotheexistingregular/Payneandtrinification\\(H_{#}\\)program"
     },
     {
       "exact_formula_ids": [
@@ -2011568,6 +2011992,14 @@
     },
     {
       "exact_formula_ids": [
+        "6eea7212f2b864bfc429c3cd87bcc87e2fd75cc1a87324ee169de873e3d9f177"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dd90afc91460f67e201e110d36b4887e4df2b1ef0f7ba66c64c13bc7a89cecbc",
+      "structural_formula": "Preserveunitweightonthe1#nativethetaedges,multiplyall^other1#nativeW3#Leviedgehoppings^byacommonexterioramplitude\\(t\\).At\\(t=#\\),theremaining6#verticesareisolated,reproducingtheexacttheta1#\u00b0theorem.At\\(t=#\\),theentireW3#Levigraphisrestored,withtwoselectedthetachordscarryingmagneticphases.Athalffilling,theverified8#\u00d7#directspectralcalculationsgive"
+    },
+    {
+      "exact_formula_ids": [
         "204b720ff4d4d7adac7ee68fdb1912413faa189cae546a7b2219990601123f3d"
       ],
       "exact_member_count": 1,
@@ -2028266,6 +2028698,14 @@
     },
     {
       "exact_formula_ids": [
+        "4c80199e03286a706f125083f7603730f0596f02e195c49d52742f06e0af9842"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "15f04d3b72086d570d31f58e5490dbcefc763a8f8c9673cdcc2bd6b609001e1f",
+      "structural_formula": "TheexplicitPGSp(#,#)stabilizeraudit\\`analysis/w3#_2#_toe7#_twentyseven_octagons.py\\`showsthatthe^unorderedtwo-chordflag-pairorbit^hassize^#^.Since\\(|PGSp(#,#)|=#\\),thepairstabilizerhasorder^#^.Itacts^transitivelyandfaithfully^onthose2#sharedoctagons,withpointstabilizeroforder^#^"
+    },
+    {
+      "exact_formula_ids": [
         "f624e94be3e97bce40cc0640318384613935ee990732fa5fd3181bad17c9428c"
       ],
       "exact_member_count": 1,
@@ -2029663,6 +2030103,14 @@
       "exact_member_count": 1,
       "structural_family_id": "032f3f9ecbdc80d0b3a42e50b3c08acd204d8112f87b0527ebd64f31e09cebe3",
       "structural_formula": "TheoriginalexampleisthereforeNOTaviableCabibbo/mixingfit.AdifferentdiscreteHiggsassignmentku=#,kd=#,kh=#makes*actual*|Vus|=#,but|Vcb|=#,|Vub|=#,stillwrong"
+    },
+    {
+      "exact_formula_ids": [
+        "26023cf3449d450b1217846a191822e1363ef11837d4ca43613640fadd681229"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "11e1382e65482884dc73ecca71ac969f87da1402cf03c9f8de1c7c4a37dac8c6",
+      "structural_formula": "Theoriginalisolated1#-site\\(\\Theta(#,#,#)\\)graphhasarigorouslyderivedfreefive-fermiongroundoptimumat\\(s=|#+e^{i\\phi_1}+e^{i\\phi_2}|=#\\),preciselythetwoconjugate1#\u00b0phasepairs.Itsunitary-twistedIharadeterminantdependsonthe^same^\\(s\\).Sincethisistrueof^every^uniformequal-armthetagraph,itisnotW3#-specificwithoutinformationfromits8#-vertexembedding"
     },
     {
       "exact_formula_ids": [
@@ -2054576,6 +2055024,14 @@
     },
     {
       "exact_formula_ids": [
+        "0fc4db113cfbf4bff99690aff34ab61e15442b4cdcbe2cf2ddb912c9453d3ede"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "627e723502a55bd7881f1e3fabc33a5373e6d6f818905c31930b3f83a85479f6",
+      "structural_formula": "\\boxed{\\mathrm{tr}[H_{\\phi,t}^#]-\\mathrm{tr}[H_{#,t}^#]=#\\sum_{C\\in\\mathrm{Octagons}(W3#)}t^{d_C}\\bigl(\\cos(w_C\\cdot\\phi)#\\bigr).}"
+    },
+    {
+      "exact_formula_ids": [
         "eb95d8d2dfebe8ca65a1bf58e0dc26a745e7634f571e4e423827fc8b9dd275e2"
       ],
       "exact_member_count": 1,
@@ -2057707,6 +2058163,14 @@
       "exact_member_count": 1,
       "structural_family_id": "56e7a108028c3096bb90dc9aa49d72aa15d342dc3abddd18dc84aa1827dfb104",
       "structural_formula": "\\delta(c)=(c_2-c_0-c_1,c_3#c_0-c_1)\\in\\mathbbF_3^#"
+    },
+    {
+      "exact_formula_ids": [
+        "f01addf5c0ff3b4e7d96e8c743d75c6fbec9dc8bc9724fad8581aae73ee4e10c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "11c7f45b88cef3b3ee2ffdde5ffd27567e51bb59b96a6cfd2faa0abce4a0917a",
+      "structural_formula": "\\delta/\\pi=#/#"
     },
     {
       "exact_formula_ids": [
@@ -2249788,6 +2250252,14 @@
     },
     {
       "exact_formula_ids": [
+        "6aac0988cf1f769f7c101c5d380ab704b0c1d9aeff9fab5215e73bc557ba06cc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "62c78d467365873934293d6a8d7295008c30562c17e8777631ce69498eed609c",
+      "structural_formula": "s=|#+e^{i\\phi_1}+e^{i\\phi_2}|=#"
+    },
+    {
+      "exact_formula_ids": [
         "dc41a8f36a26246bea8b6519a0b25508ba050a708497de4683db392f8bead41a"
       ],
       "exact_member_count": 1,
@@ -2273751,11 +2274223,12 @@
     },
     {
       "exact_formula_ids": [
+        "ba896652ceade80e0e4e3b9c1d6d8083fea6c1d3f18c9a99676db8e6ba0ad5c2",
         "38ea29cb0756f7797e14884dc0c5a33debc11f0249fef0b67d9ad7048bbb9f0e",
         "bec67ffac294e25c1b2f61448c3d8dc333b796e1768128b519e27ea508223b9b",
         "0d4f8bb9b5f263169c2cd746a6e9fb128c3e91763fd0e859a4a714b4c954ba1a"
       ],
-      "exact_member_count": 3,
+      "exact_member_count": 4,
       "structural_family_id": "dbc60cd179069f166f19973014c7394e4029695b83f7f07c305804b4df2dee5a",
       "structural_formula": "t\u2248#"
     },
@@ -2286979,6 +2287452,14 @@
     },
     {
       "exact_formula_ids": [
+        "c610e713e406d60f50f51d93698d8181c1577cfbea11519b4af3704d9cb08f6b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9f1093fe46f45eaa8df9172f13b2e7c81efbf6787b40564c29fdcba18e09781d",
+      "structural_formula": "|PGSp(#,#)|=#"
+    },
+    {
+      "exact_formula_ids": [
         "d10301a520c9f4a4e5942b9a6789f8474486fc0f98fe34577de3a8dece273f83"
       ],
       "exact_member_count": 1,
@@ -2294870,20 +2295351,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88245604,
-    "exact_formula_families": 61926,
-    "files_scanned": 12111,
-    "formula_occurrences": 67929,
+    "bytes_scanned": 88271128,
+    "exact_formula_families": 61938,
+    "files_scanned": 12114,
+    "formula_occurrences": 67945,
     "status_occurrences": {
-      "certified_or_theorem": 5025,
+      "certified_or_theorem": 5030,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2266,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53708
+      "unclassified": 53719
     },
-    "structural_families": 60277
+    "structural_families": 60287
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "d1cf9f36d5e6b6b6631db3a6203d8d391dc5ef09ebb63ed2d7a8fcce8cfe52fc"
+  "universe_sha256": "2657ce2ea182480dc180d6ec77a397c3516bcb9b9860c18fd8d84235738acd35"
 }
