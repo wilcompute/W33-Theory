@@ -21,7 +21,7 @@ def test_unique_restricted_17_bit_subcube_global_minimum():
     assert s["corners_checked"]==131072
     assert s["unique_global_minimum_at_all_17_high"]
     assert s["number_of_negative_corners"]==1
-    assert "NOT" in s["scope"] or "not" in s["scope"]
+    assert "only when" in s["scope"] and "143" in s["scope"]
 
 def test_full_PGSp_orbit_no_stabilizer_and_complementary_obstruction():
     c=geometry()
