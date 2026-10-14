@@ -53,3 +53,16 @@ def test_interacting_native_U1_two_loop_rephasing_and_finite_temperature():
     assert c["gauge_rephasing_spectrum_invariance"]
     assert c["time_reversal_spectrum_invariance"]
     assert all(row["min_grid_holonomy"]["ritz_residual"]<1e-7 for row in c["V_scans"])
+
+from w33_20261014_toe74_theta_friendship import certificate as theta_friendship
+
+def test_exact_theta_arm_symmetry_corrects_Z2_switching_and_nine_matching_friendship():
+    c=theta_friendship()
+    assert c["theta"]["status"]=="PASS_TOE74_THETA_TRIPLE_Z2_ISOSPECTRALITY"
+    assert len(c["theta"]["S3_arm_permutation_automorphisms"])==6
+    assert c["theta"]["all_three_nontrivial_Z2_corners_unitarily_equivalent"]
+    assert c["quantum"]["status"]=="PASS_TOE74_NINE_MATCHING_FRIENDSHIP_GRAPH"
+    assert c["quantum"]["seed_graph_edges"]==9
+    assert c["quantum"]["seed_graph_triangles"]==3
+    assert c["quantum"]["exact_edges_in_deliberately_compressed_graph"]==466560
+    assert c["quantum"]["adjacency_eigenvalue_multiplicities"]=={"3":51840,"-2":51840,"1":103680,"-1":155520}
