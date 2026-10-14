@@ -309,6 +309,20 @@ def certificate():
         res["original_5_coset_directions_abstract_H27_generator_pairs_tested"]=tested
         res["original_address_H27_to_native_octagon_equivariant_gauge_count"]=len(gauges)
         res["example_original_H27_address_to_octagon_bijection"]=(gauges[0] if gauges else None)
+        ordered={tuple(w) for L in tri for w in itertools.permutations(L)}
+        assert len(ordered)==270
+        leftovers=set(ordered)
+        oriented_orbit_sizes=[]
+        while leftovers:
+            w=min(leftovers)
+            orb={tuple(g[v] for v in w) for g in full}
+            assert orb<=leftovers
+            leftovers-=orb
+            oriented_orbit_sizes.append(len(orb))
+        oriented_orbit_sizes.sort()
+        assert oriented_orbit_sizes==[54,108,108]
+        res["native_216_orbits_on_270_based_oriented_triangle_cubics"]=oriented_orbit_sizes
+        res["native_270_directed_triangle_instruction_bijection"]=True
         res["native_GQ24_line_count"]=len(tri)
         res["native_GQ24_each_point_lines"]=5
         res["native_GQ24_exact_right_cosets_of_five_H27_C3_directions"]=True
@@ -354,6 +368,7 @@ if __name__=="__main__":
         json.dumps(c,indent=2)+"\n")
     print(c["status"],"order",c["induced_faithful_permutation_group_order"])
     print("ORBITALS",c.get("unordered_pair_orbit_valencies"),"SRG",c.get("native_216_invariant_cubic_surface_intersection_srg_count"),"CENTER_INVERSION",c.get("dihedral_reflections_inverting_Heisenberg_center"))
+    print("GEOMETRIES",c.get("original_H27_432_aut_basis_distinct_cubic_direction_geometries"),"GAUGES",c.get("original_address_H27_to_native_octagon_equivariant_gauge_count"),"INSTRUCTION_ORBITS",c.get("native_216_orbits_on_270_based_oriented_triangle_cubics"))
     print("D8",c.get("order8_complement_is_dihedral_D8"),"semidirect",c.get("pair_stabilizer_is_semidirect_H27_by_D8"),"orders",c.get("order8_complement_element_orders"),"orbits",c.get("D8_orbit_sizes_on_eight_nonzero_H27_mod_center_classes"))
     print("Q8",c.get("order8_complement_is_quaternion_Q8"), "semidirect",c.get("pair_stabilizer_is_semidirect_H27_by_Q8"), "center",c.get("full_216_group_center_order"),"phase_orbit",c.get("order8_orbit_size_on_eight_nonzero_H27_mod_center_classes"))
     print("H27",c.get("selected_Sylow27_is_extraspecial_Heisenberg_H27"),
