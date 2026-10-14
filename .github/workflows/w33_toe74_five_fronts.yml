@@ -1,0 +1,40 @@
+name: TOE74 five scientific validation fronts
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe74_*.py'
+      - 'tests/test_w33_20261014_toe74_*.py'
+      - '.github/workflows/w33_toe74_five_fronts.yml'
+  workflow_dispatch:
+jobs:
+  toe74-structural-and-numerical-reproduction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Reproduce exact rational, gauge, group, Dirac and interacting checks
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe74_five_fronts.py
+      - name: Regenerate four research certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: |
+          python analysis/w33_20261014_toe74_exact_gates.py
+          python analysis/w33_20261014_toe74_unconditional_gauge_bound.py
+          python analysis/w33_20261014_toe74_quantum_neighbors.py
+          python analysis/w33_20261014_toe74_u1_manybody_finite_t.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe74-five-front-certificates
+          path: data/w33_20261014_toe74_*.json
+          retention-days: 60
