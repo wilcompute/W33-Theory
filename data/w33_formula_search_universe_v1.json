@@ -452009,6 +452009,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1e550ef47df36e22fb869e924ee03dfa84737ef50c3b5272891b9e3782f214dd",
+      "normalized_formula": "51,840/240=216",
+      "numeric_literals": [
+        "216",
+        "240",
+        "51",
+        "840"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 7,
+          "path": "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md",
+          "raw": "51,840/240=216",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "be4c451ff62ba169061e6b8caa477845002dd18c047605ecaa7e02206817e2f4",
+      "structural_formula": "#,#/#=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cdd25c5f7a326976f79bf80dd204324ecb1902e3382643690b8be1460e1fc9e4",
       "normalized_formula": "511=(\\mu+1)^2+q^q(\\mu+1)+\\Phi_3q^q=2^9-1=2^{\\Phi_6+2}-1=M_9\\text{(Mersenne)}",
       "numeric_literals": [
@@ -793234,6 +793264,45 @@
     },
     {
       "file_count": 1,
+      "formula_id": "62c2f403db3a24e650821ad0fb5e7227c594440967a43eeda3fc44eb86e8cbf2",
+      "normalized_formula": "TOE77restoredthe11-sitethree-armthetagraphtothefull80-vertexW33Levigraph,showingnumericallythatexternalcouplingreversesitsisolatedfree-fermion120\u00b0fluxpreference.Thetheta'stwonativeW33chordedgeslietogetherin^27ofthe1,620primitiveoctagons^.TheW33symplectic\\(PGSp(4,3)\\)orbitofthis*unorderedpairofflag-edges*hassize240,soitsstabilizerhasorder\\(51,840/240=216\\).ExactSchreierorbitenumerationshowsthestabilizerisfaithfulandtransitiveonall27sharedoctagons",
+      "numeric_literals": [
+        "0",
+        "1",
+        "20",
+        "216",
+        "240",
+        "27",
+        "3",
+        "4",
+        "40",
+        "51",
+        "620",
+        "7",
+        "840"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md",
+          "raw": "TOE77 restored the 11-site three-arm theta graph to the full 80-vertex W33 Levi graph, showing numerically that external coupling reverses its isolated free-fermion 120\u00b0 flux preference. The theta's two native W33 chord edges lie together in **27 of the 1,620 primitive octagons**. The W33 symplectic \\(PGSp(4,3)\\) orbit of this *unordered pair of flag-edges* has size 240, so its stabilizer has order \\(51,840/240=216\\). Exact Schreier orbit enumeration shows the stabilizer is faithful and transitive on all 27 shared octagons.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "1677421aac0374b087d1cf99276e33d465b89aaf31aff86d5ee48c5cc982e5db",
+      "structural_formula": "TOE7#restoredthe1#-sitethree-armthetagraphtothefull8#-vertexW3#Levigraph,showingnumericallythatexternalcouplingreversesitsisolatedfree-fermion1#\u00b0fluxpreference.Thetheta'stwonativeW3#chordedgeslietogetherin^#ofthe1,#primitiveoctagons^.TheW3#symplectic\\(PGSp(#,#)\\)orbitofthis*unorderedpairofflag-edges*hassize2#,soitsstabilizerhasorder\\(#,#/#=#\\).ExactSchreierorbitenumerationshowsthestabilizerisfaithfulandtransitiveonall2#sharedoctagons"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bf0ace15ca5b4b240a7c5cde1b075558f01c1b1bb49f0d2edf295ecb5f813e70",
       "normalized_formula": "TOPOLOGICALCODESP(K_4,phi^2)=-1fermionsign",
       "numeric_literals": [
@@ -808379,6 +808448,39 @@
       },
       "structural_family_id": "15d92d938d065ebec21f74e8789342bc31ee002a095142cb51e01b63a19b014b",
       "structural_formula": "TheindependentlyexecutedPass5#\u2013#packetremainsauthoritativefortheq5leader/footprintfront.Pass5#provesthefirstdegree-classaggregationoffullcut-cosetconstraintsisredundantatleader3#.Pass5#showsaP-heavyweight-#exoticwouldforcenonzerofootprintweightatmost2#.Pass5#narrowstheprimalfootprintcodeto`[#,#,d<=#]`witha6#-dimensionalhullandstrictmod-#weightclasses,butd=#isstillopen.Pass5#provesthedualfootprintcode`[#,#,#]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "75f86998f5030309c360c37d65724fc8395adc1b29508f7c492d9b81b823a9b0",
+      "normalized_formula": "Theindependentsourcereconstructionusesthenondegeneratesix-bitquadraticform\\(Q_6(a,c,d,e,f,g)=ac+de+f+fg+g\\pmod2\\)alreadyusedintherepository'sown\\(E_6\\)cubic-surfacecarrier(\\`analysis/w33_pass4992_4999_common.py\\`):27nonzerosingularformsyield27triple-incidencelabelsonthe45symmetrictriples.Fromthemconstructa^separate^27-vertex,degree-10graph.Thetestverifiesaconcretegraphisomorphismfromthe^native27W33octagons^tothose27cubic-surfacelinesandtransports",
+      "numeric_literals": [
+        "10",
+        "27",
+        "3",
+        "5",
+        "7",
+        "992",
+        "999"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 27,
+          "path": "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md",
+          "raw": "The independent source reconstruction uses the nondegenerate six-bit quadratic form \\(Q_6(a,c,d,e,f,g)=ac+de+f+fg+g\\pmod2\\) already used in the repository's own \\(E_6\\) cubic-surface carrier (\\`analysis/w33_pass4992_4999_common.py\\`): 27 nonzero singular forms yield 27 triple-incidence labels on the 45 symmetric triples. From them construct a **separate** 27-vertex, degree-10 graph. The test verifies a concrete graph isomorphism from the **native 27 W33 octagons** to those 27 cubic-surface lines and transports:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e1cbe7e5e32ddf793b543e81891821a76b0fd9aeac6e9c8a272d14b0f858026a",
+      "structural_formula": "Theindependentsourcereconstructionusesthenondegeneratesix-bitquadraticform\\(Q_6(a,c,d,e,f,g)=ac+de+f+fg+g\\pmod2\\)alreadyusedintherepository'sown\\(E_6\\)cubic-surfacecarrier(\\`analysis/w3#_pass4#_4#_common.py\\`):#nonzerosingularformsyield2#triple-incidencelabelsonthe4#symmetrictriples.Fromthemconstructa^separate^#-vertex,degree-#graph.Thetestverifiesaconcretegraphisomorphismfromthe^native2#W3#octagons^tothose2#cubic-surfacelinesandtransports"
     },
     {
       "file_count": 1,
@@ -964796,6 +964898,34 @@
       "structural_formula": "\\omega=e^{#\\pii/#}"
     },
     {
+      "file_count": 1,
+      "formula_id": "36dde7b0bf032e5845aa1c8b8573f9ed591bc8d66ce75567f952bc63df68cc7d",
+      "normalized_formula": "\\omega=e^{2\\pii/3}\\neq\\omega^2",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 38,
+          "path": "analysis/2026-10-14_toe78_octagon_cubic_e6_bridge.md",
+          "raw": "\\omega=e^{2\\pi i/3}\\neq\\omega^2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "708ab25f484e4b1eefe35a92a299533030f44365bc33da79644e40ade724c6e4",
+      "structural_formula": "\\omega=e^{#\\pii/#}\\neq\\omega^#"
+    },
+    {
       "file_count": 2,
       "formula_id": "5da228cfec5f89e757a574a40b7b69fb71c346323de83760b5f31b6846aebfaf",
       "normalized_formula": "\\omega=q+1=4",
@@ -1081277,6 +1081407,34 @@
       },
       "structural_family_id": "0c92c3f2132de0b0aa1c3ea11358833052df64e001fd2e87aec7b44450a50d9a",
       "structural_formula": "assertlen(E6gauge)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6daccbcbba052ebf97db1346c5dccb747545afa38e27d900e0aeb3988027a76e",
+      "normalized_formula": "assertlen(Edges)=135andwitness[\"triangle_tritangent_count\"]=45",
+      "numeric_literals": [
+        "135",
+        "45"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe78_octagon_cubic_surface.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/w33_20261014_toe78_octagon_cubic_surface.py",
+          "raw": "assert len(Edges)==135 and witness[\"triangle_tritangent_count\"]==45",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "466544e607212101f542d706e040d2512f2dbd6f78eb7c2516b53ad23795bb2f",
+      "structural_formula": "assertlen(Edges)=#andwitness[\"triangle_tritangent_count\"]=#"
     },
     {
       "file_count": 1,
@@ -1664730,6 +1664888,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "63bfe29f797ee5cd64e44745fdaa15171d055e544c1887d08b7eacded20fa300",
+      "normalized_formula": "sing=[vforvinvecifQ6(v)=0]",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe78_octagon_cubic_surface.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/w33_20261014_toe78_octagon_cubic_surface.py",
+          "raw": "sing=[v for v in vec if Q6(v)==0]",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "4814f18157bbcaa6fd93bf2511c7dcb6497af8940f4d8a44f15fcd6c2cfce9c7",
+      "structural_formula": "sing=[vforvinvecifQ6(v)=#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "78640fb2d392df6e795eec5c194545a7fe7a28e5933cc59f99b10a995ab530b2",
       "normalized_formula": "sing=[vforvinvecifQ6(v)=0];nons=[vforvinvecifQ6(v)=1]",
       "numeric_literals": [
@@ -1811356,9 +1811541,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T18:14:14-04:00",
+  "frozen_at": "2026-10-14T18:20:34-04:00",
   "pass": 398,
-  "repository_head": "6ae3ad60670cfa20579b917e7e92eb3af05f812c",
+  "repository_head": "7e7051475512e90ba9a2b0784d6e71dc2d52dfe8",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1869431,6 +1869616,14 @@
       "exact_member_count": 1,
       "structural_family_id": "da8932201cfe3d4b5d83c425ecea81fddc70b0d8ddbbec8fe168d037bdc30823",
       "structural_formula": "#,#,#aredistinct.Hencec_U(p)=phase*sum_jtau_jc_{V_M}(p-a-jz1)and,ifz1isnotinR_M,m_U"
+    },
+    {
+      "exact_formula_ids": [
+        "1e550ef47df36e22fb869e924ee03dfa84737ef50c3b5272891b9e3782f214dd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "be4c451ff62ba169061e6b8caa477845002dd18c047605ecaa7e02206817e2f4",
+      "structural_formula": "#,#/#=#"
     },
     {
       "exact_formula_ids": [
@@ -2025232,6 +2025425,14 @@
     },
     {
       "exact_formula_ids": [
+        "62c2f403db3a24e650821ad0fb5e7227c594440967a43eeda3fc44eb86e8cbf2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1677421aac0374b087d1cf99276e33d465b89aaf31aff86d5ee48c5cc982e5db",
+      "structural_formula": "TOE7#restoredthe1#-sitethree-armthetagraphtothefull8#-vertexW3#Levigraph,showingnumericallythatexternalcouplingreversesitsisolatedfree-fermion1#\u00b0fluxpreference.Thetheta'stwonativeW3#chordedgeslietogetherin^#ofthe1,#primitiveoctagons^.TheW3#symplectic\\(PGSp(#,#)\\)orbitofthis*unorderedpairofflag-edges*hassize2#,soitsstabilizerhasorder\\(#,#/#=#\\).ExactSchreierorbitenumerationshowsthestabilizerisfaithfulandtransitiveonall2#sharedoctagons"
+    },
+    {
+      "exact_formula_ids": [
         "bf0ace15ca5b4b240a7c5cde1b075558f01c1b1bb49f0d2edf295ecb5f813e70"
       ],
       "exact_member_count": 1,
@@ -2029327,6 +2029528,14 @@
       "exact_member_count": 1,
       "structural_family_id": "15d92d938d065ebec21f74e8789342bc31ee002a095142cb51e01b63a19b014b",
       "structural_formula": "TheindependentlyexecutedPass5#\u2013#packetremainsauthoritativefortheq5leader/footprintfront.Pass5#provesthefirstdegree-classaggregationoffullcut-cosetconstraintsisredundantatleader3#.Pass5#showsaP-heavyweight-#exoticwouldforcenonzerofootprintweightatmost2#.Pass5#narrowstheprimalfootprintcodeto`[#,#,d<=#]`witha6#-dimensionalhullandstrictmod-#weightclasses,butd=#isstillopen.Pass5#provesthedualfootprintcode`[#,#,#]"
+    },
+    {
+      "exact_formula_ids": [
+        "75f86998f5030309c360c37d65724fc8395adc1b29508f7c492d9b81b823a9b0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e1cbe7e5e32ddf793b543e81891821a76b0fd9aeac6e9c8a272d14b0f858026a",
+      "structural_formula": "Theindependentsourcereconstructionusesthenondegeneratesix-bitquadraticform\\(Q_6(a,c,d,e,f,g)=ac+de+f+fg+g\\pmod2\\)alreadyusedintherepository'sown\\(E_6\\)cubic-surfacecarrier(\\`analysis/w3#_pass4#_4#_common.py\\`):#nonzerosingularformsyield2#triple-incidencelabelsonthe4#symmetrictriples.Fromthemconstructa^separate^#-vertex,degree-#graph.Thetestverifiesaconcretegraphisomorphismfromthe^native2#W3#octagons^tothose2#cubic-surfacelinesandtransports"
     },
     {
       "exact_formula_ids": [
@@ -2069369,6 +2069578,14 @@
     },
     {
       "exact_formula_ids": [
+        "36dde7b0bf032e5845aa1c8b8573f9ed591bc8d66ce75567f952bc63df68cc7d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "708ab25f484e4b1eefe35a92a299533030f44365bc33da79644e40ade724c6e4",
+      "structural_formula": "\\omega=e^{#\\pii/#}\\neq\\omega^#"
+    },
+    {
+      "exact_formula_ids": [
         "5da228cfec5f89e757a574a40b7b69fb71c346323de83760b5f31b6846aebfaf"
       ],
       "exact_member_count": 1,
@@ -2100064,6 +2100281,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0c92c3f2132de0b0aa1c3ea11358833052df64e001fd2e87aec7b44450a50d9a",
       "structural_formula": "assertlen(E6gauge)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "6daccbcbba052ebf97db1346c5dccb747545afa38e27d900e0aeb3988027a76e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "466544e607212101f542d706e040d2512f2dbd6f78eb7c2516b53ad23795bb2f",
+      "structural_formula": "assertlen(Edges)=#andwitness[\"triangle_tritangent_count\"]=#"
     },
     {
       "exact_formula_ids": [
@@ -2256755,6 +2256980,14 @@
     },
     {
       "exact_formula_ids": [
+        "63bfe29f797ee5cd64e44745fdaa15171d055e544c1887d08b7eacded20fa300"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4814f18157bbcaa6fd93bf2511c7dcb6497af8940f4d8a44f15fcd6c2cfce9c7",
+      "structural_formula": "sing=[vforvinvecifQ6(v)=#]"
+    },
+    {
+      "exact_formula_ids": [
         "78640fb2d392df6e795eec5c194545a7fe7a28e5933cc59f99b10a995ab530b2"
       ],
       "exact_member_count": 1,
@@ -2295351,20 +2295584,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88271128,
-    "exact_formula_families": 61938,
-    "files_scanned": 12114,
-    "formula_occurrences": 67945,
+    "bytes_scanned": 88288663,
+    "exact_formula_families": 61944,
+    "files_scanned": 12116,
+    "formula_occurrences": 67951,
     "status_occurrences": {
-      "certified_or_theorem": 5030,
+      "certified_or_theorem": 5032,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2266,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53719
+      "unclassified": 53723
     },
-    "structural_families": 60287
+    "structural_families": 60293
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "2657ce2ea182480dc180d6ec77a397c3516bcb9b9860c18fd8d84235738acd35"
+  "universe_sha256": "a0ef7ab382f352abb19e47dc484f3fd53c681f8030fadaec16957b83203723b4"
 }
