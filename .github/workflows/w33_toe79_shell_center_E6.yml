@@ -1,0 +1,36 @@
+name: TOE79 canonical W33 27 opposite shell plus 9 Heisenberg fibers
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe79_shell_plus_center_E6.py'
+      - 'tests/test_w33_20261014_toe79_shell_plus_center_E6.py'
+      - '.github/workflows/w33_toe79_shell_center_E6.yml'
+  workflow_dispatch:
+jobs:
+  native-shell-to-cubic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Verify W33 shell degree-8 plus nine H27 center triples equals cubic 27 lines
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe79_shell_plus_center_E6.py
+      - name: Freeze cubic shell-completion and stabilizer certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe79_shell_plus_center_E6.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe79-canonical-W33-shell-plus-center-E6
+          path: data/w33_20261014_toe79_shell_plus_center_E6.json
+          retention-days: 60
