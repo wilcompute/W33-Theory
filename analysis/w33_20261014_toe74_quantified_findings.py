@@ -27,11 +27,14 @@ def certificate():
         paired=[c["phase_pi_units"] for c in corners_sorted
                 if abs(c["ground"]-baseline)<1e-9]
         best=data["min_grid_holonomy"]
+        grid_energy=best["energy"]
+        near_grid=[r["phase_pi_units"] for r in data["grid_5x5"]
+                   if abs(r["energy"]-grid_energy)<1e-8]
         gain=baseline-best["energy"]
         assert gain>=-1e-7
         thermal=[]
         for beta in F["finite_temperature_inverse_beta"]:
-            key=str(beta)
+            key=str(float(beta))
             ordered=sorted(corners,key=lambda c:c["canonical_log_partition_free_energy"][key])
             thermal.append({"beta":beta,
                 "winning_Z2_corners":[c["phase_pi_units"] for c in ordered if
@@ -41,6 +44,8 @@ def certificate():
                                     min(c["canonical_log_partition_free_energy"][key] for c in corners)})
         mat.append({"V":V,"sampled_U1_minimum_phase_pi_units":best["phase_pi_units"],
             "sampled_U1_minimum_energy":best["energy"],
+            "numerically_tied_sampled_grid_phases_tolerance_1e-8":near_grid,
+            "number_of_near_tied_grid_points":len(near_grid),
             "ground_Z2_best_energy":baseline,
             "sampled_U1_below_all_Z2_corners_by":gain,
             "all_Z2_ground_energy_corners_at_1e-9_tolerance":paired,
@@ -62,6 +67,6 @@ if __name__=="__main__":
                  "links":[r["links_to_other_six_seeds"] for r in o["seven_seed_actual_flip_degree"]],
                  "new_representatives":o["outside_seven_exact_representatives"]}))
     for r in o["eleven_site_static_U1_finite_manybody"]:
-        print("U1-V",r["V"],"sampled",r["sampled_U1_minimum_phase_pi_units"],"advantage",r["sampled_U1_below_all_Z2_corners_by"],
+        print("U1-V",r["V"],"sampled",r["sampled_U1_minimum_phase_pi_units"],"near_ties",r["numerically_tied_sampled_grid_phases_tolerance_1e-8"],"advantage",r["sampled_U1_below_all_Z2_corners_by"],
               "tied_Z2",r["all_Z2_ground_energy_corners_at_1e-9_tolerance"],
               "thermal",[e["winning_Z2_corners"] for e in r["finite_beta_Z2_preferences"]])
