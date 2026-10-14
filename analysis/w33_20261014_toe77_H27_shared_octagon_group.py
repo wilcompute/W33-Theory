@@ -278,6 +278,7 @@ def certificate():
         assert len(standard_lines)==45
         noncentral=sorted(h for h in H if h not in central)
         gauges=[]
+        variants=set()
         tested=0
         for xx in noncentral:
             xp=(I,xx,compose(xx,xx))
@@ -297,9 +298,14 @@ def certificate():
                 index={v:normal[v][0] for v in tuples}
                 transformed={frozenset(index[h] for h in L)
                              for L in standard_lines}
+                variants.add(frozenset(transformed))
                 if transformed==tri:
                     gauges.append([index[v] for v in tuples])
         assert tested==432
+        assert len(variants)==9
+        assert len(gauges)==48
+        res["original_H27_432_aut_basis_distinct_cubic_direction_geometries"]=len(variants)
+        res["original_H27_cubic_line_geometry_aut_stabilizer_order"]=len(gauges)
         res["original_5_coset_directions_abstract_H27_generator_pairs_tested"]=tested
         res["original_address_H27_to_native_octagon_equivariant_gauge_count"]=len(gauges)
         res["example_original_H27_address_to_octagon_bijection"]=(gauges[0] if gauges else None)

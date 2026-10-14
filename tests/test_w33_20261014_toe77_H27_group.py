@@ -76,3 +76,9 @@ def test_actual_native_216_orbits_on_270_marked_prime_tritangent_walks():
     assert all(216%v==0 for v in sizes)
     assert c["native_270_directed_triangle_instruction_bijection"]
     assert c["native_GQ24_line_count"]==45
+
+def test_nine_distinct_cubic_coset_geometries_under_all_432_H27_basis_automorphisms():
+    c=certificate()
+    assert c["original_H27_432_aut_basis_distinct_cubic_direction_geometries"]==9
+    assert c["original_H27_cubic_line_geometry_aut_stabilizer_order"]==48
+    assert c["original_address_H27_to_native_octagon_equivariant_gauge_count"]==48
