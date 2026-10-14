@@ -86775,6 +86775,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7fc529a569779a0490fe7a6564c4b1f02f5ecd93741397c84459a70833a795b9",
+      "normalized_formula": "\"derived_bound\":\"||QHpsi||<=16*kappa*sqrt(P_Fockshell)+6*(beta/g^2)*sqrt(P_fluxshell),plusnumericaleigensolverresidual.Simpleoctagonchordchanges<=1.DistancefromRitzenergytoSOMEfullpatchspectralpointisatmostthisnorm;notground-stateerror.\"",
+      "numeric_literals": [
+        "+6",
+        "1",
+        "16",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe66_five_physics_followthrough.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 152,
+          "path": "analysis/w33_20261014_toe66_five_physics_followthrough.py",
+          "raw": "\"derived_bound\":\"||QH psi|| <= 16*kappa*sqrt(P_Fock shell)+6*(beta/g^2)*sqrt(P_flux shell), plus numerical eigensolver residual. Simple octagon chord changes <=1. Distance from Ritz energy to SOME full patch spectral point is at most this norm; not ground-state error.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "105b54001ab15ff8216aea3e2c76029262ac789b690fddc3c53cc20c46800a8f",
+      "structural_formula": "\"derived_bound\":\"||QHpsi||<=#*kappa*sqrt(P_Fockshell)#*(beta/g^#)*sqrt(P_fluxshell),plusnumericaleigensolverresidual.Simpleoctagonchordchanges<=#.DistancefromRitzenergytoSOMEfullpatchspectralpointisatmostthisnorm;notground-stateerror.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "fb76bd346ed11061491fb82496d931f3c79cb805f845c1ab3ab3d248f2f2919a",
       "normalized_formula": "\"descendants\":(A_CKM,PMNS_theta13)=(Fraction(81,100),Fraction(9,400))",
       "numeric_literals": [
@@ -166018,6 +166048,31 @@
       },
       "structural_family_id": "d8f212f7bf433d9f11d6c6176214febaa2b58ece97c956809ed770303d5c17ed",
       "structural_formula": "\"statement:#|e_2iffv_lambda(e_2)>=#,and2#|e_3iff\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e128450ed042fda16f12cbb5f3a0ed301a0e875b8577db10c78cce1238e20886",
+      "normalized_formula": "\"stationarity_proof\":\"H(-phi)=conjugate(H(phi))forrealedgeweights.Since-pi=pimodulo2pi,everydifferentiablespectralfreeenergyisstationaryatthree-piforallbeta,butneednotminimize.\"",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe66_five_physics_followthrough.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 69,
+          "path": "analysis/w33_20261014_toe66_five_physics_followthrough.py",
+          "raw": "\"stationarity_proof\":\"H(-phi)=conjugate(H(phi)) for real edge weights. Since -pi=pi modulo 2pi, every differentiable spectral free energy is stationary at three-pi for all beta, but need not minimize.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e128450ed042fda16f12cbb5f3a0ed301a0e875b8577db10c78cce1238e20886",
+      "structural_formula": "\"stationarity_proof\":\"H(-phi)=conjugate(H(phi))forrealedgeweights.Since-pi=pimodulo2pi,everydifferentiablespectralfreeenergyisstationaryatthree-piforallbeta,butneednotminimize.\""
     },
     {
       "file_count": 1,
@@ -572543,6 +572598,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3e4f89c3b5cf1592e062d78d2ba02ef31b7aa221a905c3a664e023ac8dd488d7",
+      "normalized_formula": "Choosealinebundle`L`with`c1(L)=u+v`,where`u`and`v`aretheintegralgeneratorsof`H^2(Sigma_81)`and`H^2(T2)`.Then`intc1(L)^2=2`.Orientablesurfaces(andtheirproducts)admitspinstructures,and`signature(M4)=0`.TheAtiyah-Singerindextheoremsuppliesthe^nonzero^mathematicalcontinuumindex",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe66_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/2026-10-14_toe66_five_fronts.md",
+          "raw": "Choose a line bundle `L` with `c1(L)=u+v`, where `u` and `v` are the integral generators of `H^2(Sigma_81)` and `H^2(T2)`. Then `int c1(L)^2=2`. Orientable surfaces (and their products) admit spin structures, and `signature(M4)=0`. The Atiyah-Singer index theorem supplies the **nonzero** mathematical continuum index",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e0bcd0a75fd73cba56bd34ba0b95f889a3cbf8b844d5720826e3849893f29c47",
+      "structural_formula": "Choosealinebundle`L`with`c1(L)=u+v`,where`u`and`v`aretheintegralgeneratorsof`H^#(Sigma_8#)`and`H^#(T2)`.Then`intc1(L)^#=#`.Orientablesurfaces(andtheirproducts)admitspinstructures,and`signature(M4)=#`.TheAtiyah-Singerindextheoremsuppliesthe^nonzero^mathematicalcontinuumindex"
+    },
+    {
+      "file_count": 1,
       "formula_id": "95d6a8c9d8d31a1dd302b1acc0097366a4b306bd5992e741a6a33f9ba7736a95",
       "normalized_formula": "Chooseeachofthethreefundamentalwindingloopsatacommonbasepointandaddtheclosedcommutatorwalks`[w_x,w_y]`,`[w_x,w_z]`,`[w_y,w_z]`as^threefinite-rangeplaquetteterms^oflengths^32,40,40^.Theircellularboundariesvanishatzeromomentumbuthavenontrivialtwistdependenceawayfromzero.ThetotalFourierplaquetteoperator`P(k):C^160\u2192C^1385`obeystheexactdiscretegaugeidentity`P(k)B(k)=0`(testedtomachineprecisioninsixindependentmomentumpoints).ThereisNOall-to-all160\u00d7160projectorinsertedintheaction",
       "numeric_literals": [
@@ -614096,6 +614180,33 @@
       },
       "structural_family_id": "97daa83b4ed5890205120bf6918406de35dbe951c021a16a3b7741839377af78",
       "structural_formula": "Foranyofthe4#possibleprojectiveW3#Wilsonpoints,theunlabelledincidencepatternisalways4compatiblecontextsand3#nonincidentcontexts.Across4#recordsthereare4#*#=^#,#model/Pauli-labelpairs^thatallhaveexactlythatsamefingerprint:zerodiscriminativeinformationfromthecountalone.Itwouldbescientificmisconducttoinventtheabsentphysicalholonomies.Obtaintheoriginalraworbifoldergaugeshifts/embeddingsandexactstate/Yukawaselectionoperatorsbeforemakingphysicalmodel-by-modelclaims.Thisisaninput-availabilityno-go,NOTastatementthatrawdatacouldneverberecovered"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "73fa9f75af3b949409324e0aad4965d25cb6477b3bff08d89bbe8148e0b47687",
+      "normalized_formula": "Foranyreallinkweights,thenative80x80hoppingHamiltonianobeys`H(-theta)=conjugate(H(theta))`.Henceitsspectralfreeenergyisevenunder`theta->-theta`.Attheta=(pi,pi,pi),inversionfixesthepointmodulo2pi.Thereforethree-piisstationarywheneverthefreeenergyisdifferentiable,at*allpositivebeta*andatzerotemperatureifdifferentiable.Thisexactsymmetrystatementdoes^not^proveminimality",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe66_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/2026-10-14_toe66_five_fronts.md",
+          "raw": "For any real link weights, the native 80x80 hopping Hamiltonian obeys `H(-theta) = conjugate(H(theta))`. Hence its spectral free energy is even under `theta -> -theta`. At theta=(pi,pi,pi), inversion fixes the point modulo 2pi. Therefore three-pi is stationary whenever the free energy is differentiable, at *all positive beta* and at zero temperature if differentiable. This exact symmetry statement does **not** prove minimality.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "3398ed009db7d508eb4a960cb83db75529a2286c60c3e4fbb1091779f1bd8c37",
+      "structural_formula": "Foranyreallinkweights,thenative8#x8#hoppingHamiltonianobeys`H(-theta)=conjugate(H(theta))`.Henceitsspectralfreeenergyisevenunder`theta->-theta`.Attheta=(pi,pi,pi),inversionfixesthepointmodulo2pi.Thereforethree-piisstationarywheneverthefreeenergyisdifferentiable,at*allpositivebeta*andatzerotemperatureifdifferentiable.Thisexactsymmetrystatementdoes^not^proveminimality"
     },
     {
       "file_count": 1,
@@ -803368,6 +803479,45 @@
       },
       "structural_family_id": "a7d38d73a36f1e325c362c69feca7b08fd76ad3a24a8d1d57b07ab194ea349cd",
       "structural_formula": "Thefullall-qnonlinearthetagapwasnotduplicatedbecausePass5#\u2013#wasalreadycollision-reservedforcentered/thetaspectralwork.Atthispacket\u2019sreleasepointnononlinear-gaptheoremfromthatreservedpackethadlanded;theexactopentargetremains`sum_i||P_if||^#<=#||f||^#`onthemean-zerononlinearsector"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8d9a1315abe750f46287a9e946938aa84442cbcd0c73f6a75fa55dd108cd95f2",
+      "normalized_formula": "Thefullnative80x80eigenspectrumwasdiagonalizedserver-sideforbeta`0.4,0.8,1,1.5,2,2.5,4,8,infinity`.Usingcentraldifference`h=.05`along`(0,-1,1)/sqrt2`,thedirectionalcurvatureisnegativeatbeta=.8andpositiveatbeta=2.5.Thezeroofthis*finite-differencediagnostic*isapproximatelybeta=1.9781;athalvedstepitscurvatureisnotexactlyzero,sothisis^not^anexactcriticalbeta.Thisisaninformativefinite-systemtemperature-dependentlocal-stabilityreversal,notathermodynamicphasetransition,spontaneousCPorder,orall-betatheorem",
+      "numeric_literals": [
+        "-1",
+        ".05",
+        ".8",
+        "0",
+        "0.4",
+        "0.8",
+        "1",
+        "1.5",
+        "1.9781",
+        "2",
+        "2.5",
+        "4",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe66_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/2026-10-14_toe66_five_fronts.md",
+          "raw": "The full native 80x80 eigenspectrum was diagonalized server-side for beta `0.4,0.8,1,1.5,2,2.5,4,8,infinity`. Using central difference `h=.05` along `(0,-1,1)/sqrt2`, the directional curvature is negative at beta=.8 and positive at beta=2.5. The zero of this *finite-difference diagnostic* is approximately beta=1.9781; at halved step its curvature is not exactly zero, so this is **not** an exact critical beta. This is an informative finite-system temperature-dependent local-stability reversal, not a thermodynamic phase transition, spontaneous CP order, or all-beta theorem.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "af60c6a8ce523f598dde51fe315378aa5a440966ee279b672bf10bf98981e2e5",
+      "structural_formula": "Thefullnative8#x8#eigenspectrumwasdiagonalizedserver-sideforbeta`#,#,#,#,#,#,#,#,infinity`.Usingcentraldifference`h=#`along`(#,#,#)/sqrt2`,thedirectionalcurvatureisnegativeatbeta=#andpositiveatbeta=#.Thezeroofthis*finite-differencediagnostic*isapproximatelybeta=#;athalvedstepitscurvatureisnotexactlyzero,sothisis^not^anexactcriticalbeta.Thisisaninformativefinite-systemtemperature-dependentlocal-stabilityreversal,notathermodynamicphasetransition,spontaneousCPorder,orall-betatheorem"
     },
     {
       "file_count": 1,
@@ -1054808,6 +1054958,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "16cf9b4f19a10453027addb1c07c9886c077e3a5b0f64081e932b983967245a8",
+      "normalized_formula": "assert(p[\"sites\"],p[\"links\"],p[\"fermions\"],p[\"contained_Wilson_rows\"])=(14,16,6,6)",
+      "numeric_literals": [
+        "14",
+        "16",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe66_five_physics_followthrough.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 134,
+          "path": "analysis/w33_20261014_toe66_five_physics_followthrough.py",
+          "raw": "assert (p[\"sites\"],p[\"links\"],p[\"fermions\"],p[\"contained_Wilson_rows\"])==(14,16,6,6)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ff5ac1416313dfec2db6745dc98ff874dfea08dfbcc956f90265f7207e72dbd2",
+      "structural_formula": "assert(p[\"sites\"],p[\"links\"],p[\"fermions\"],p[\"contained_Wilson_rows\"])=(#,#,#,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "34c6153a28d1c33ae872efa59dac04be817ac84806eedfd9ea392aa5e5ec85ea",
       "normalized_formula": "assert(positive_bosonic_weight+fermion_toy_weight)*(shape_g-shape_w)<0",
       "numeric_literals": [
@@ -1168914,6 +1169093,34 @@
       },
       "structural_family_id": "47ae53dc5d045fd1866bbee9905c5a79f41e19bf98dbf01fb3f1926da8be6bdd",
       "structural_formula": "crossed_commutant_dim=#*#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f61978fe38e7ec89e18a6f549cc72ce97c47e2bc84ea218bbbcf852bdf9c1440",
+      "normalized_formula": "crossing=float(brentq(curve,1.5,2.5))",
+      "numeric_literals": [
+        "1.5",
+        "2.5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe66_five_physics_followthrough.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/w33_20261014_toe66_five_physics_followthrough.py",
+          "raw": "crossing=float(brentq(curve,1.5,2.5))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b121d16f2058722744b2c1ab5c1cbd288a99a321b14dc31aeede6c70564ee8a2",
+      "structural_formula": "crossing=float(brentq(curve,#,#))"
     },
     {
       "file_count": 1,
@@ -1452084,6 +1452291,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f6e8c79fe55956cf60bcae044046d1d698dd806f6d35c601d57b2e5a219889b3",
+      "normalized_formula": "ph=amplitudes*np.exp(1j*(V@np.asarray(theta)))",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe66_five_physics_followthrough.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/w33_20261014_toe66_five_physics_followthrough.py",
+          "raw": "ph=amplitudes*np.exp(1j*(V@np.asarray(theta)))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5b79e008ddb4e20c21fedd14e76566e829094059c6ed462975163ba8f5942346",
+      "structural_formula": "ph=amplitudes*np.exp(#j*(V@np.asarray(theta)))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "255c45d546ba06f652561614ad5ac5378980250933d46f5df66a1b2f93a686e7",
       "normalized_formula": "ph=json.loads((ROOT/\"data/w33_pass11890_11892_vacuum_phase_diagram.json\").read_text())",
       "numeric_literals": [
@@ -1627139,6 +1627373,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9e520bdadc4b09818df7cf464ae30b96b5a70a6114a590d2e29829adf7debf66",
+      "normalized_formula": "rows=old[\"new_runs\"]+old[\"baseline_runs_from_TOE62\"]",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe66_five_physics_followthrough.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 135,
+          "path": "analysis/w33_20261014_toe66_five_physics_followthrough.py",
+          "raw": "rows=old[\"new_runs\"]+old[\"baseline_runs_from_TOE62\"]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "183d789f9173ddbb39a92ca44cba3197615378f03e70f9cfa78b66b40c5cd26d",
+      "structural_formula": "rows=old[\"new_runs\"]+old[\"baseline_runs_from_TOE6#\"]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fa4dd1446a944bdd3fb65132f9c71272a0258db6d69ca9562e2d17eb2dfe80c9",
       "normalized_formula": "rows=rows_from_cols(M,64);eq+=[rows[i]^(1<<i)foriinrange(64)]",
       "numeric_literals": [
@@ -1800811,9 +1801072,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-13T16:54:19-04:00",
+  "frozen_at": "2026-10-14T10:30:27-04:00",
   "pass": 398,
-  "repository_head": "d183f38e20a88ed6e55ae67353cb4054fad9fa4d",
+  "repository_head": "1a960fcdb1d1a86d2d915c24e86a378f5cc87cdf",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1825127,6 +1825388,14 @@
     },
     {
       "exact_formula_ids": [
+        "7fc529a569779a0490fe7a6564c4b1f02f5ecd93741397c84459a70833a795b9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "105b54001ab15ff8216aea3e2c76029262ac789b690fddc3c53cc20c46800a8f",
+      "structural_formula": "\"derived_bound\":\"||QHpsi||<=#*kappa*sqrt(P_Fockshell)#*(beta/g^#)*sqrt(P_fluxshell),plusnumericaleigensolverresidual.Simpleoctagonchordchanges<=#.DistancefromRitzenergytoSOMEfullpatchspectralpointisatmostthisnorm;notground-stateerror.\""
+    },
+    {
+      "exact_formula_ids": [
         "fb76bd346ed11061491fb82496d931f3c79cb805f845c1ab3ab3d248f2f2919a"
       ],
       "exact_member_count": 1,
@@ -1847345,6 +1847614,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d8f212f7bf433d9f11d6c6176214febaa2b58ece97c956809ed770303d5c17ed",
       "structural_formula": "\"statement:#|e_2iffv_lambda(e_2)>=#,and2#|e_3iff\""
+    },
+    {
+      "exact_formula_ids": [
+        "e128450ed042fda16f12cbb5f3a0ed301a0e875b8577db10c78cce1238e20886"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e128450ed042fda16f12cbb5f3a0ed301a0e875b8577db10c78cce1238e20886",
+      "structural_formula": "\"stationarity_proof\":\"H(-phi)=conjugate(H(phi))forrealedgeweights.Since-pi=pimodulo2pi,everydifferentiablespectralfreeenergyisstationaryatthree-piforallbeta,butneednotminimize.\""
     },
     {
       "exact_formula_ids": [
@@ -1954900,6 +1955177,14 @@
     },
     {
       "exact_formula_ids": [
+        "3e4f89c3b5cf1592e062d78d2ba02ef31b7aa221a905c3a664e023ac8dd488d7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e0bcd0a75fd73cba56bd34ba0b95f889a3cbf8b844d5720826e3849893f29c47",
+      "structural_formula": "Choosealinebundle`L`with`c1(L)=u+v`,where`u`and`v`aretheintegralgeneratorsof`H^#(Sigma_8#)`and`H^#(T2)`.Then`intc1(L)^#=#`.Orientablesurfaces(andtheirproducts)admitspinstructures,and`signature(M4)=#`.TheAtiyah-Singerindextheoremsuppliesthe^nonzero^mathematicalcontinuumindex"
+    },
+    {
+      "exact_formula_ids": [
         "95d6a8c9d8d31a1dd302b1acc0097366a4b306bd5992e741a6a33f9ba7736a95"
       ],
       "exact_member_count": 1,
@@ -1966131,6 +1966416,14 @@
       "exact_member_count": 1,
       "structural_family_id": "97daa83b4ed5890205120bf6918406de35dbe951c021a16a3b7741839377af78",
       "structural_formula": "Foranyofthe4#possibleprojectiveW3#Wilsonpoints,theunlabelledincidencepatternisalways4compatiblecontextsand3#nonincidentcontexts.Across4#recordsthereare4#*#=^#,#model/Pauli-labelpairs^thatallhaveexactlythatsamefingerprint:zerodiscriminativeinformationfromthecountalone.Itwouldbescientificmisconducttoinventtheabsentphysicalholonomies.Obtaintheoriginalraworbifoldergaugeshifts/embeddingsandexactstate/Yukawaselectionoperatorsbeforemakingphysicalmodel-by-modelclaims.Thisisaninput-availabilityno-go,NOTastatementthatrawdatacouldneverberecovered"
+    },
+    {
+      "exact_formula_ids": [
+        "73fa9f75af3b949409324e0aad4965d25cb6477b3bff08d89bbe8148e0b47687"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3398ed009db7d508eb4a960cb83db75529a2286c60c3e4fbb1091779f1bd8c37",
+      "structural_formula": "Foranyreallinkweights,thenative8#x8#hoppingHamiltonianobeys`H(-theta)=conjugate(H(theta))`.Henceitsspectralfreeenergyisevenunder`theta->-theta`.Attheta=(pi,pi,pi),inversionfixesthepointmodulo2pi.Thereforethree-piisstationarywheneverthefreeenergyisdifferentiable,at*allpositivebeta*andatzerotemperatureifdifferentiable.Thisexactsymmetrystatementdoes^not^proveminimality"
     },
     {
       "exact_formula_ids": [
@@ -2017525,6 +2017818,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a7d38d73a36f1e325c362c69feca7b08fd76ad3a24a8d1d57b07ab194ea349cd",
       "structural_formula": "Thefullall-qnonlinearthetagapwasnotduplicatedbecausePass5#\u2013#wasalreadycollision-reservedforcentered/thetaspectralwork.Atthispacket\u2019sreleasepointnononlinear-gaptheoremfromthatreservedpackethadlanded;theexactopentargetremains`sum_i||P_if||^#<=#||f||^#`onthemean-zerononlinearsector"
+    },
+    {
+      "exact_formula_ids": [
+        "8d9a1315abe750f46287a9e946938aa84442cbcd0c73f6a75fa55dd108cd95f2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "af60c6a8ce523f598dde51fe315378aa5a440966ee279b672bf10bf98981e2e5",
+      "structural_formula": "Thefullnative8#x8#eigenspectrumwasdiagonalizedserver-sideforbeta`#,#,#,#,#,#,#,#,infinity`.Usingcentraldifference`h=#`along`(#,#,#)/sqrt2`,thedirectionalcurvatureisnegativeatbeta=#andpositiveatbeta=#.Thezeroofthis*finite-differencediagnostic*isapproximatelybeta=#;athalvedstepitscurvatureisnotexactlyzero,sothisis^not^anexactcriticalbeta.Thisisaninformativefinite-systemtemperature-dependentlocal-stabilityreversal,notathermodynamicphasetransition,spontaneousCPorder,orall-betatheorem"
     },
     {
       "exact_formula_ids": [
@@ -2082387,6 +2082688,14 @@
     },
     {
       "exact_formula_ids": [
+        "16cf9b4f19a10453027addb1c07c9886c077e3a5b0f64081e932b983967245a8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ff5ac1416313dfec2db6745dc98ff874dfea08dfbcc956f90265f7207e72dbd2",
+      "structural_formula": "assert(p[\"sites\"],p[\"links\"],p[\"fermions\"],p[\"contained_Wilson_rows\"])=(#,#,#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "34c6153a28d1c33ae872efa59dac04be817ac84806eedfd9ea392aa5e5ec85ea"
       ],
       "exact_member_count": 1,
@@ -2113881,6 +2114190,14 @@
       "exact_member_count": 1,
       "structural_family_id": "47ae53dc5d045fd1866bbee9905c5a79f41e19bf98dbf01fb3f1926da8be6bdd",
       "structural_formula": "crossed_commutant_dim=#*#"
+    },
+    {
+      "exact_formula_ids": [
+        "f61978fe38e7ec89e18a6f549cc72ce97c47e2bc84ea218bbbcf852bdf9c1440"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b121d16f2058722744b2c1ab5c1cbd288a99a321b14dc31aeede6c70564ee8a2",
+      "structural_formula": "crossing=float(brentq(curve,#,#))"
     },
     {
       "exact_formula_ids": [
@@ -2190117,6 +2190434,14 @@
     },
     {
       "exact_formula_ids": [
+        "f6e8c79fe55956cf60bcae044046d1d698dd806f6d35c601d57b2e5a219889b3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5b79e008ddb4e20c21fedd14e76566e829094059c6ed462975163ba8f5942346",
+      "structural_formula": "ph=amplitudes*np.exp(#j*(V@np.asarray(theta)))"
+    },
+    {
+      "exact_formula_ids": [
         "255c45d546ba06f652561614ad5ac5378980250933d46f5df66a1b2f93a686e7"
       ],
       "exact_member_count": 1,
@@ -2236322,6 +2236647,14 @@
     },
     {
       "exact_formula_ids": [
+        "9e520bdadc4b09818df7cf464ae30b96b5a70a6114a590d2e29829adf7debf66"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "183d789f9173ddbb39a92ca44cba3197615378f03e70f9cfa78b66b40c5cd26d",
+      "structural_formula": "rows=old[\"new_runs\"]+old[\"baseline_runs_from_TOE6#\"]"
+    },
+    {
+      "exact_formula_ids": [
         "fa4dd1446a944bdd3fb65132f9c71272a0258db6d69ca9562e2d17eb2dfe80c9"
       ],
       "exact_member_count": 1,
@@ -2282233,20 +2282566,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 87838824,
-    "exact_formula_families": 61591,
-    "files_scanned": 12055,
-    "formula_occurrences": 67567,
+    "bytes_scanned": 87858188,
+    "exact_formula_families": 61600,
+    "files_scanned": 12057,
+    "formula_occurrences": 67576,
     "status_occurrences": {
-      "certified_or_theorem": 4950,
+      "certified_or_theorem": 4953,
       "killed_or_retracted": 1646,
       "open_or_conditional": 2249,
       "preregistered": 33,
       "retrospective_fit": 5231,
-      "unclassified": 53458
+      "unclassified": 53464
     },
-    "structural_families": 59969
+    "structural_families": 59978
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "b46742ab2f2946db51283bc6fdbbc4f1cc5e55500c2094a0287d70f9982e53d2"
+  "universe_sha256": "6353350b4f29f38a7706b05954479a4db80f7b783dfab081b10f5a1a02f11155"
 }
