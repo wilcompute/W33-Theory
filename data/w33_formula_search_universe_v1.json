@@ -96238,6 +96238,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "afc8aec99b2693fd5ca130d3d4711a46320beb9d92c70c969b34dc1c6018ebf1",
+      "normalized_formula": "\"exact_graph_completion\":\"E6_cubic_intersection_adjacency=induced_W33_opposite27_shell_adjacency+ninedisjointC3center-fibertriangles;nomixedtriangles;108+27=135edgesand36+9=45tritangents.\"",
+      "numeric_literals": [
+        "+27",
+        "+9",
+        "108",
+        "135",
+        "3",
+        "45",
+        "6",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe79_shell_plus_center_E6.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 109,
+          "path": "analysis/w33_20261014_toe79_shell_plus_center_E6.py",
+          "raw": "\"exact_graph_completion\":\"E6_cubic_intersection_adjacency = induced_W33_opposite27_shell_adjacency + nine disjoint C3 center-fiber triangles; no mixed triangles; 108+27=135 edges and 36+9=45 tritangents.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ec6ae58b647d843bf2ac5f03225fb0beb674bc9e03b56d36cb45f5509fc01a1c",
+      "structural_formula": "\"exact_graph_completion\":\"E6_cubic_intersection_adjacency=induced_W3#_opposite2#_shell_adjacency+ninedisjointC3center-fibertriangles;nomixedtriangles;##=#edgesand3##=#tritangents.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "e5250988959acc747bb0637a35e06edb70221e226fa58bc98c8d1e0631b9c1be",
       "normalized_formula": "\"exact_identity\":\"sum_rPr(outcome=r)^2=(1+Tr(rho^2))/48\"",
       "numeric_literals": [
@@ -273954,6 +273988,34 @@
       },
       "structural_family_id": "1b0f29ec12e60354f88b170f6aa4447db9795d32d689c62ace30093a9195697d",
       "structural_formula": "#sum_im_i^#*lambda_i(C_j)*lambda_i(C_k)=|S5|*delta_{jk}/p_j"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b5254016b522dcb779fe54e67ca57a7625f3b216556ca756bf298cb4e83accec",
+      "normalized_formula": "#sum_iw_i=0,sum_i|w_i><w_i|=6Ionimage(P)",
+      "numeric_literals": [
+        "0",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe80_native_octagon_e6_roots.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 207,
+          "path": "analysis/w33_20261014_toe80_native_octagon_e6_roots.py",
+          "raw": "# sum_i w_i = 0, sum_i |w_i><w_i| = 6 I on image(P).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d61893b4dc7bdff753e8fcbb50c57043e16a6ffc12d627b632b7d0e1e7fd43d9",
+      "structural_formula": "#sum_iw_i=#,sum_i|w_i><w_i|=#Ionimage(P)"
     },
     {
       "file_count": 1,
@@ -473526,6 +473588,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3bdbe3114b3dcb63d4c1616e8dc0fd50fb186452605dd6edfb5829c92d183678",
+      "normalized_formula": "<alpha_ij,alpha_kl>=r_ij\u00b7r_kl/54",
+      "numeric_literals": [
+        "54"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 35,
+          "path": "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md",
+          "raw": "<alpha_ij,alpha_kl> = r_ij \u00b7 r_kl / 54.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3d55549504ec00c8d317c10a3d57800f4833ea15136d392f91d7b908e0b8cf5f",
+      "structural_formula": "<alpha_ij,alpha_kl>=r_ij\u00b7r_kl/#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2f51f816cf1b91038889e846fcea6cc2cce50af549ae54b7229f333925962649",
       "normalized_formula": "<articleclass=\"cardtheorem\"><divclass=\"eyebrow\">BiplaneandD5</div><divclass=\"metric\">2-(16,6,2)\u00b7|Aut|=1920</div><p>Closedneighborhoodsformasymmetricbiplane.ThecomplementarydemicubeandClebschoppositionrelationrealizethetwodistancesamongsixteenD5half-spinweights.</p></article>",
       "numeric_literals": [
@@ -604696,6 +604785,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3a38bf2e2f0cb41e35512240779f684352017c491fcb69da3204a4fe24530b8f",
+      "normalized_formula": "EveryWeylreflections_alpha(beta)=beta\u2212<beta,alpha>alphaischeckedusingintegerarithmeticagainstthesetof72roots.Adeterministicgenericpositivechambercontains36roots.Exactlysixcannotbedecomposedintosumsofpositiveroots;their^explicitsix-by-sixCartanmatrix^hasdiagonalentries2,off-diagonalentries0or-1,determinant^three^,andaconnectedthree-armDynkindiagramwitharmlengths1,2,2.Thischaracterizes^typeE6^,ratherthanA6orD6",
+      "numeric_literals": [
+        "1",
+        "2",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 43,
+          "path": "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md",
+          "raw": "Every Weyl reflection s_alpha(beta) = beta \u2212 <beta,alpha>alpha is checked using integer arithmetic against the set of 72 roots. A deterministic generic positive chamber contains 36 roots. Exactly six cannot be decomposed into sums of positive roots; their **explicit six-by-six Cartan matrix** has diagonal entries 2, off-diagonal entries 0 or -1, determinant **three**, and a connected three-arm Dynkin diagram with arm lengths 1,2,2. This characterizes **type E6**, rather than A6 or D6.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d9d3e83d2b1bbdfc3ffc67f964a58e6daca2f1e8b629477ed311eea6e2c95f28",
+      "structural_formula": "EveryWeylreflections_alpha(beta)=beta\u2212<beta,alpha>alphaischeckedusingintegerarithmeticagainstthesetof7#roots.Adeterministicgenericpositivechambercontains3#roots.Exactlysixcannotbedecomposedintosumsofpositiveroots;their^explicitsix-by-sixCartanmatrix^hasdiagonalentries2,off-diagonalentries0or-#,determinant^three^,andaconnectedthree-armDynkindiagramwitharmlengths1,#,#.Thischaracterizes^typeE6^,ratherthanA6orD6"
+    },
+    {
+      "file_count": 1,
       "formula_id": "30ccad27e09e3a5e8b017c844db1176492026fc6b790b19b62f20c290f229d63",
       "normalized_formula": "Everyassociatorcoordinateisahomogeneousquadraticpolynomialin\\((\\alpha,\\beta)\\).Aftersetting\\(t=\\alpha/\\beta\\),542nonzeroassociatorpolynomialsareobtainedover",
       "numeric_literals": [
@@ -617162,6 +617280,33 @@
       },
       "structural_family_id": "f24770480043ae585e2d02ad1fdbe5c52cb2140317bfc2cfa4624246c1e410e4",
       "structural_formula": "Foreachof\\(\\binom{#}{#}=#\\)choicesofTWOindependentlyvariednativeedges,buildtheexactthree-by-threeHessianoftheleadinghigh-temperatureW3#flat-holonomypotentialasaninteger^multiaffine^functionoftheirhoppingweights.Checkall\\(#\\binom{#}{#}=#\\)cornerswitheachweightin\\(\\{#,#\\}\\),allotherweights1.Sylvester's3-by-#criterionisperformedwith^integerprincipalminors^,notfloatingeigenvaluetolerances.SinceeachinteriorHessianisaconvexcombinationofthefourendpointHessians,all-positivecornersimplystrictpositivityfortheentiretwo-edge\\([#,#]^#\\)box.CoupledwithTOE6#'sexactsigned-squareidentity(mixedFouriercyclecoefficientsremainnonnegativeundernonnegativeedgeweights),thisimpliesthe^uniqueglobal3\u03c0leading-potentialminimumforthatrestrictedtwo-edgedisorderclass^\u2014ifall5#,#testedcornerHessianspass.Ifanyfails,theproduceremitsexplicitcounterexampleedgeindicesanden"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e9647550da21167295e706073c03c022371bfc172184e0e10af7365f78ac5f9a",
+      "normalized_formula": "Foreachofthe216unorderednonadjacentoctagonpairs(i,j),thedifferencealpha_ij=w_i\u2212w_jhassquaredlength^two^.Adjacentpairdifferenceshavesquaredlengthfourandarenotused.Storerootsexactly,withoutsquareroots,bytheintegernumeratorr_ij=Qe_i\u2212Qe_j.Theexactrootdotproductis",
+      "numeric_literals": [
+        "16"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md",
+          "raw": "For each of the 216 unordered nonadjacent octagon pairs (i,j), the difference alpha_ij = w_i \u2212 w_j has squared length **two**. Adjacent pair differences have squared length four and are not used. Store roots exactly, without square roots, by the integer numerator r_ij = Qe_i \u2212 Qe_j. The exact root dot product is",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "003441268944c3d78e6b7ed9b48c7c059344b751fc738977166d6423eee0e5ec",
+      "structural_formula": "Foreachofthe2#unorderednonadjacentoctagonpairs(i,j),thedifferencealpha_ij=w_i\u2212w_jhassquaredlength^two^.Adjacentpairdifferenceshavesquaredlengthfourandarenotused.Storerootsexactly,withoutsquareroots,bytheintegernumeratorr_ij=Qe_i\u2212Qe_j.Theexactrootdotproductis"
     },
     {
       "file_count": 1,
@@ -722467,6 +722612,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2a4a51d498e95d5152c63b3eb7190298f0588260e8d39ce1dc75740559f76e3c",
+      "normalized_formula": "Onthe27octagonaddresses,thenormalH27centerZactsasapermutationoforderthree.ExactintegeridentitiesverifyQZ=ZQ,Q(I+Z+Z2)=0,andtr(P6Z)=-3.Thusthe*realsix-dimensionalE6reflectionsector*contains^nocenter-fixedstate^.Itscomplexificationisadirectsumofathree-dimensionalomega-centereigenspaceandathree-dimensionalconjugate-omegaeigenspace.Thosearecomplex-conjugatesectors;thecenter-invertingelementsinD8exchangethem.TheycannotberealizedbyunitaryconjugationwithinasinglescalaromegaIquantumrepresentationwithoutaddingcomplexconjugationoraconjugatesector",
+      "numeric_literals": [
+        "-3",
+        "0",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 57,
+          "path": "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md",
+          "raw": "On the 27 octagon addresses, the normal H27 center Z acts as a permutation of order three. Exact integer identities verify QZ=ZQ, Q(I+Z+Z\u00b2)=0, and tr(P6 Z)=-3. Thus the *real six-dimensional E6 reflection sector* contains **no center-fixed state**. Its complexification is a direct sum of a three-dimensional omega-center eigenspace and a three-dimensional conjugate-omega eigenspace. Those are complex-conjugate sectors; the center-inverting elements in D8 exchange them. They cannot be realized by unitary conjugation within a single scalar omega I quantum representation without adding complex conjugation or a conjugate sector.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e55a149a9253f117165eb4bb5af33a83156cd82c53b593c37d5ba99b9d409d47",
+      "structural_formula": "Onthe2#octagonaddresses,thenormalH2#centerZactsasapermutationoforderthree.ExactintegeridentitiesverifyQZ=ZQ,Q(I+Z+Z2)=#,andtr(P6Z)=#.Thusthe*realsix-dimensionalE6reflectionsector*contains^nocenter-fixedstate^.Itscomplexificationisadirectsumofathree-dimensionalomega-centereigenspaceandathree-dimensionalconjugate-omegaeigenspace.Thosearecomplex-conjugatesectors;thecenter-invertingelementsinD8exchangethem.TheycannotberealizedbyunitaryconjugationwithinasinglescalaromegaIquantumrepresentationwithoutaddingcomplexconjugationoraconjugatesector"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9535697c6bd10c9fb4523ea47bbef8ca6fa7d658a50980843837f9725e8a0349",
       "normalized_formula": "Onthe40x40quotient,thecomplementarynon-splittingmatrix`Z=1-B`hasrowandcolumnweight4.ItsrowgraphisthestandardW33pointgraph;itscolumngraphisthenonisomorphicQ(4,3)linegraph.Theownerproducernowverifies`ZZ^T=4I+A_W`,`Z^TZ=4I+A_Q`,rationalrank25,andthecharacteristic-threeseparator`11`versus`15",
       "numeric_literals": [
@@ -806077,6 +806251,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "65195f0ce76e082d90992fbf18c4427825f3bb35b5ce1aa4d936c6a2a576f9d0",
+      "normalized_formula": "Theexecutablesourcereconstructsallnecessaryincidencefromtheexisting,CI-verifiedW3327-octagongroupcertificate.ItthenchecksQ2=18Q,thecompleterootcensus,exactreflectionclosureandCartanmatrix,all51,840Weylpermutations,andtheH27-centerconjugate-sectorsplit.CIrunsthetestandregeneratesamachine-readablecertificate",
+      "numeric_literals": [
+        "1",
+        "18",
+        "327",
+        "7",
+        "840"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md",
+          "raw": "The executable source reconstructs all necessary incidence from the existing, CI-verified W33 27-octagon group certificate. It then checks Q\u00b2=18Q, the complete root census, exact reflection closure and Cartan matrix, all 51,840 Weyl permutations, and the H27-center conjugate-sector split. CI runs the test and regenerates a machine-readable certificate.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "90599cc2f9d30a76047b3778b0d1873c6a912731f668f8df3c9cede207210625",
+      "structural_formula": "Theexecutablesourcereconstructsallnecessaryincidencefromtheexisting,CI-verifiedW3#-octagongroupcertificate.ItthenchecksQ2=#Q,thecompleterootcensus,exactreflectionclosureandCartanmatrix,all5#,#Weylpermutations,andtheH2#-centerconjugate-sectorsplit.CIrunsthetestandregeneratesamachine-readablecertificate"
+    },
+    {
+      "file_count": 1,
       "formula_id": "586e2132ad6f5cf17d364b7d9f95d4892b82e3e1349ca54ff277d686b4969a54",
       "normalized_formula": "Theexhaustivelistacross^alltotalpolynomialdegrees^contains^exactly11candidatemonomials^,withdegrees^2:5,3:2,4:2,5:2^,and^zeroatdegree>5^.All11havethenecessarypoint-groupsectorsumzero.Thisis^muchstrongerthananarbitrarydegree-9cutoff^,butstillonlythenine-U1gauge-invariance+twist-sectorfilter.FullZ6-IIfixed-pointspace-group/gamma/H-momentum/discreteR/oscillatorrules,superpotentialcoefficientsandphasecancellationsremainunresolved.Type-AtermsareexcludedtoallordersbythecommonnegativeanomalouschargeofallsixVEVsinglets",
       "numeric_literals": [
@@ -822961,6 +823166,33 @@
       },
       "structural_family_id": "cd63bea368972d120371e81fd858387b18e5da74901f445445caa398e5f6dc58",
       "structural_formula": "ThusP1#=D2/#isarationalrank1#projector;Chi=D/(#sqrt5)isarealsymmetricinvolutiononitsimageandP_plus/minus=(P1#+/-Chi)/#arerealrank9projectors.Theactualorder-fourouterautomorphismsendsDto-DwhilepreservingS;C5preservesD.Anyrealsymmetricsector-preservingmass/kineticpairwiththatexchangesymmetryhasequalgeneralizedspectraonthetwosectors.Splittingthemrequiressymmetrybreakingormixing"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "271c24bc52be21f13a6b127905384cced3177e6721f6f8a206df6ad9b8abdb7a",
+      "normalized_formula": "ThusP6isan^exactrationalrank-sixorthogonalprojector^,namelythelambda=-5adjacencyeigenspace.Itneedsnoeigensolver,root-coordinatechoice,floating-pointrankthreshold,oridentificationofanE6representationasaninput",
+      "numeric_literals": [
+        "-5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/2026-10-14_toe80_native_octagon_e6_weyl_root_system.md",
+          "raw": "Thus P6 is an **exact rational rank-six orthogonal projector**, namely the lambda=-5 adjacency eigenspace. It needs no eigensolver, root-coordinate choice, floating-point rank threshold, or identification of an E6 representation as an input.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "91082ed345dac5280efe774a7ad2e55a11cc9cdd50a5abf0ae8e965305ca336e",
+      "structural_formula": "ThusP6isan^exactrationalrank-sixorthogonalprojector^,namelythelambda=#adjacencyeigenspace.Itneedsnoeigensolver,root-coordinatechoice,floating-pointrankthreshold,oridentificationofanE6representationasaninput"
     },
     {
       "file_count": 1,
@@ -1617341,7 +1617573,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 317,
+          "line": 331,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"native_216_tritangent_orbit_sizes\"]=line_sizes",
           "status": "unclassified"
@@ -1617369,7 +1617601,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 314,
+          "line": 328,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"native_GQ24_exact_right_cosets_of_five_H27_C3_directions\"]=True",
           "status": "unclassified"
@@ -1617396,7 +1617628,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 315,
+          "line": 329,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"native_GQ24_tritangent_lines\"]=[sorted(L) for L in sorted(tri,key=lambda t:sorted(t))]",
           "status": "unclassified"
@@ -1728010,6 +1728242,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "285e5b9ef61dc7f19bc5b96b12cd9b3be525ebabbdcf36f909e67c0e80cf172c",
+      "normalized_formula": "trit=g[\"native_GQ24_tritangent_lines\"]",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe80_native_octagon_e6_roots.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 48,
+          "path": "analysis/w33_20261014_toe80_native_octagon_e6_roots.py",
+          "raw": "trit=g[\"native_GQ24_tritangent_lines\"]",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "7c8a4b24b0c924b92c810c212902e5a1919f074156c28a45f7c3ebd22c1afa71",
+      "structural_formula": "trit=g[\"native_GQ2#_tritangent_lines\"]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ca3df8bc5f9b66facaa90ee3ebb69f926d9f92fda358a6970788a214f7fd0bc0",
       "normalized_formula": "tritangent=45",
       "numeric_literals": [
@@ -1812196,9 +1812455,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T18:37:10-04:00",
+  "frozen_at": "2026-10-14T19:26:56-04:00",
   "pass": 398,
-  "repository_head": "619653082f6bc8d2a824ce42f249908a3d7a471d",
+  "repository_head": "a9beb4ed60a27db4f07af7c5589a7d055f0bdd12",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1839157,6 +1839416,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c16134b4e4a166cdac3dd50e1a6ad97bcd4c4f2389792e28b8fea364fbb60a0d",
       "structural_formula": "\"exact_global_theorem\":\"For4-regulargraph,K(A)=(m2#\u03ba)I\u2212\u03baT(A).Withpositivem2,\u03ba,theabsolutelyconvergent-logseriesandclosed-walkphaseboundTrT(A)^n<=TrT(#)^nimplyF_B(A)>=F_B(#)forEVERYcompactlinkconnectionA.Everyclosedwalkcontributescos(phase)<=#;noboson-onlyGaussianholonomycanlowerthefreeenergybelowtrivialholonomy.\""
+    },
+    {
+      "exact_formula_ids": [
+        "afc8aec99b2693fd5ca130d3d4711a46320beb9d92c70c969b34dc1c6018ebf1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ec6ae58b647d843bf2ac5f03225fb0beb674bc9e03b56d36cb45f5509fc01a1c",
+      "structural_formula": "\"exact_graph_completion\":\"E6_cubic_intersection_adjacency=induced_W3#_opposite2#_shell_adjacency+ninedisjointC3center-fibertriangles;nomixedtriangles;##=#edgesand3##=#tritangents.\""
     },
     {
       "exact_formula_ids": [
@@ -1908240,6 +1908507,14 @@
     },
     {
       "exact_formula_ids": [
+        "b5254016b522dcb779fe54e67ca57a7625f3b216556ca756bf298cb4e83accec"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d61893b4dc7bdff753e8fcbb50c57043e16a6ffc12d627b632b7d0e1e7fd43d9",
+      "structural_formula": "#sum_iw_i=#,sum_i|w_i><w_i|=#Ionimage(P)"
+    },
+    {
+      "exact_formula_ids": [
         "e1cdbbb6ab9a1dd5975ef4ad5382d70ecfdb0225f85fdb1c1258acf8470872da"
       ],
       "exact_member_count": 1,
@@ -1939536,6 +1939811,14 @@
       "exact_member_count": 1,
       "structural_family_id": "643d04b98866ad6f7cbfd3044a0587f89b8fe5de16aaad14e76f5be6c6a9c074",
       "structural_formula": "<alpha,beta>=#`,therepairedwitnesscertifiesovertheintegers"
+    },
+    {
+      "exact_formula_ids": [
+        "3bdbe3114b3dcb63d4c1616e8dc0fd50fb186452605dd6edfb5829c92d183678"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3d55549504ec00c8d317c10a3d57800f4833ea15136d392f91d7b908e0b8cf5f",
+      "structural_formula": "<alpha_ij,alpha_kl>=r_ij\u00b7r_kl/#"
     },
     {
       "exact_formula_ids": [
@@ -1974932,6 +1975215,14 @@
     },
     {
       "exact_formula_ids": [
+        "3a38bf2e2f0cb41e35512240779f684352017c491fcb69da3204a4fe24530b8f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d9d3e83d2b1bbdfc3ffc67f964a58e6daca2f1e8b629477ed311eea6e2c95f28",
+      "structural_formula": "EveryWeylreflections_alpha(beta)=beta\u2212<beta,alpha>alphaischeckedusingintegerarithmeticagainstthesetof7#roots.Adeterministicgenericpositivechambercontains3#roots.Exactlysixcannotbedecomposedintosumsofpositiveroots;their^explicitsix-by-sixCartanmatrix^hasdiagonalentries2,off-diagonalentries0or-#,determinant^three^,andaconnectedthree-armDynkindiagramwitharmlengths1,#,#.Thischaracterizes^typeE6^,ratherthanA6orD6"
+    },
+    {
+      "exact_formula_ids": [
         "30ccad27e09e3a5e8b017c844db1176492026fc6b790b19b62f20c290f229d63"
       ],
       "exact_member_count": 1,
@@ -1978300,6 +1978591,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a8ca707b45e43ab8d91ab15e27a7974463ef1a9118eae17bc5260f44b9233c23",
       "structural_formula": "Foreachofthe2#possibleinputports\\(j\\)andeachprescribedcoherentshift\\(\\delta\\in\\{#,#,#,#,#\\}\\)rad,simulatethetwo2#\u00d7#reciprocal-unitarytransportmodelsatdepths3#/#/#.Compute\\(B_{j,\\delta}=\\sum_{i=#}^{#}\\sqrt{p_i^{(A)}p_i^{(B)}}\\),the^Bhattacharyyaaffinity^.Withfixedknowninputandlabeleddetections,andequalpriors,themaximum-likelihoodbinaryclassificationerrorsatisfies\\(\\Pr(\\mathrm{error}\\midn\\text{detections})\\leB^n/#\\).Selecta^singleinput\\(j\\)^minimizingthemaximum\\(B_{j,\\delta}\\)overthewholetestedcoherentdriftgrid,thenselect\\(n=\\lceil\\log(#)/\\logB\\rceil\\)successfuldetectionstoguarantee\\(\\Pr(\\mathrm{classification\\error})\\le0#\\),conditionalonthisidealcalibrationmodel.Finallyinvertthe^exactbinomialtail^\\(P(\\mathrm{Binomial}(N,#^{\\rmlayers})\\gen)\\ge0#\\)forminimumlaunches\\(N\\).Viaunionboundthecombinedprobabilityofinsufficientdetectionsormodel-conditi"
+    },
+    {
+      "exact_formula_ids": [
+        "e9647550da21167295e706073c03c022371bfc172184e0e10af7365f78ac5f9a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "003441268944c3d78e6b7ed9b48c7c059344b751fc738977166d6423eee0e5ec",
+      "structural_formula": "Foreachofthe2#unorderednonadjacentoctagonpairs(i,j),thedifferencealpha_ij=w_i\u2212w_jhassquaredlength^two^.Adjacentpairdifferenceshavesquaredlengthfourandarenotused.Storerootsexactly,withoutsquareroots,bytheintegernumeratorr_ij=Qe_i\u2212Qe_j.Theexactrootdotproductis"
     },
     {
       "exact_formula_ids": [
@@ -2006983,6 +2007282,14 @@
     },
     {
       "exact_formula_ids": [
+        "2a4a51d498e95d5152c63b3eb7190298f0588260e8d39ce1dc75740559f76e3c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e55a149a9253f117165eb4bb5af33a83156cd82c53b593c37d5ba99b9d409d47",
+      "structural_formula": "Onthe2#octagonaddresses,thenormalH2#centerZactsasapermutationoforderthree.ExactintegeridentitiesverifyQZ=ZQ,Q(I+Z+Z2)=#,andtr(P6Z)=#.Thusthe*realsix-dimensionalE6reflectionsector*contains^nocenter-fixedstate^.Itscomplexificationisadirectsumofathree-dimensionalomega-centereigenspaceandathree-dimensionalconjugate-omegaeigenspace.Thosearecomplex-conjugatesectors;thecenter-invertingelementsinD8exchangethem.TheycannotberealizedbyunitaryconjugationwithinasinglescalaromegaIquantumrepresentationwithoutaddingcomplexconjugationoraconjugatesector"
+    },
+    {
+      "exact_formula_ids": [
         "dd027b7b6aed73f6509685816bba48240755fbe176223b5e7e448db6ae982b1c"
       ],
       "exact_member_count": 1,
@@ -2029539,6 +2029846,14 @@
     },
     {
       "exact_formula_ids": [
+        "65195f0ce76e082d90992fbf18c4427825f3bb35b5ce1aa4d936c6a2a576f9d0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "90599cc2f9d30a76047b3778b0d1873c6a912731f668f8df3c9cede207210625",
+      "structural_formula": "Theexecutablesourcereconstructsallnecessaryincidencefromtheexisting,CI-verifiedW3#-octagongroupcertificate.ItthenchecksQ2=#Q,thecompleterootcensus,exactreflectionclosureandCartanmatrix,all5#,#Weylpermutations,andtheH2#-centerconjugate-sectorsplit.CIrunsthetestandregeneratesamachine-readablecertificate"
+    },
+    {
+      "exact_formula_ids": [
         "586e2132ad6f5cf17d364b7d9f95d4892b82e3e1349ca54ff277d686b4969a54"
       ],
       "exact_member_count": 1,
@@ -2034091,6 +2034406,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cd63bea368972d120371e81fd858387b18e5da74901f445445caa398e5f6dc58",
       "structural_formula": "ThusP1#=D2/#isarationalrank1#projector;Chi=D/(#sqrt5)isarealsymmetricinvolutiononitsimageandP_plus/minus=(P1#+/-Chi)/#arerealrank9projectors.Theactualorder-fourouterautomorphismsendsDto-DwhilepreservingS;C5preservesD.Anyrealsymmetricsector-preservingmass/kineticpairwiththatexchangesymmetryhasequalgeneralizedspectraonthetwosectors.Splittingthemrequiressymmetrybreakingormixing"
+    },
+    {
+      "exact_formula_ids": [
+        "271c24bc52be21f13a6b127905384cced3177e6721f6f8a206df6ad9b8abdb7a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "91082ed345dac5280efe774a7ad2e55a11cc9cdd50a5abf0ae8e965305ca336e",
+      "structural_formula": "ThusP6isan^exactrationalrank-sixorthogonalprojector^,namelythelambda=#adjacencyeigenspace.Itneedsnoeigensolver,root-coordinatechoice,floating-pointrankthreshold,oridentificationofanE6representationasaninput"
     },
     {
       "exact_formula_ids": [
@@ -2274784,6 +2275107,14 @@
     },
     {
       "exact_formula_ids": [
+        "285e5b9ef61dc7f19bc5b96b12cd9b3be525ebabbdcf36f909e67c0e80cf172c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7c8a4b24b0c924b92c810c212902e5a1919f074156c28a45f7c3ebd22c1afa71",
+      "structural_formula": "trit=g[\"native_GQ2#_tritangent_lines\"]"
+    },
+    {
+      "exact_formula_ids": [
         "ca3df8bc5f9b66facaa90ee3ebb69f926d9f92fda358a6970788a214f7fd0bc0"
       ],
       "exact_member_count": 1,
@@ -2296416,20 +2296747,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88333621,
-    "exact_formula_families": 61967,
-    "files_scanned": 12122,
-    "formula_occurrences": 67974,
+    "bytes_scanned": 88361732,
+    "exact_formula_families": 61976,
+    "files_scanned": 12125,
+    "formula_occurrences": 67983,
     "status_occurrences": {
-      "certified_or_theorem": 5037,
+      "certified_or_theorem": 5040,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2266,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53741
+      "unclassified": 53747
     },
-    "structural_families": 60315
+    "structural_families": 60324
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "81b9a978bfe1ef69e62d9b9691c5e658fb6c7d103d18c2c6f6b2aa906f9d5df5"
+  "universe_sha256": "6c6ce9ed78e6da81c77b879f74d55b72ff2bcbcc22e7c725c7b271ba930bdce0"
 }
