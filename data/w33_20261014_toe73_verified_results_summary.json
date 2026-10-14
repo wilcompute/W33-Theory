@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-14",
+  "ci_run_url": "https://github.com/wilcompute/W33-Theory/actions/runs/38629784735",
+  "ci_tests": "5 passed in 13.01s",
+  "ci_artifact_id": 11925037940,
+  "status": "VERIFIED_SOURCE_REGENERATION_FINITE_MODEL",
+  "global_exact": {
+    "witness_epsilon_lower": "24461518/100000000",
+    "witness_epsilon_upper": "24461519/100000000",
+    "exact_group_six_inter_orbit_matchings": 311040,
+    "exact_star_components": 51840,
+    "product_W33_surface_cell_counts": [
+      1,
+      324,
+      26246,
+      324,
+      1
+    ],
+    "inherited_graph_flux_spin_Dirac_index": 0
+  },
+  "native_exact_diagonalization": {
+    "sites": 11,
+    "links": 12,
+    "fermions": 5,
+    "Fock_dim": 462,
+    "independent_local_chords": 2,
+    "runs": [
+      {
+        "V": 0,
+        "lowest_energy_twists": [
+          1,
+          1
+        ],
+        "ground_energy_spread": 0.4156003044900505
+      },
+      {
+        "V": 0.2,
+        "lowest_energy_twists": [
+          0,
+          1
+        ],
+        "ground_energy_spread": 0.39937455024460267
+      },
+      {
+        "V": 1,
+        "lowest_energy_twists": [
+          1,
+          1
+        ],
+        "ground_energy_spread": 0.3071216455271113
+      },
+      {
+        "V": 4,
+        "lowest_energy_twists": [
+          0,
+          1
+        ],
+        "ground_energy_spread": 0.014135563871016998
+      }
+    ],
+    "caveat": "Exact many-body sector matrix (numerical eigensolver), static local Z2, not whole W33 U1^3 nor dynamical gauge."
+  },
+  "native_dynamical_Gauss_dipole": {
+    "parameters": {
+      "g": 0.8,
+      "kappa": 0.7,
+      "beta": 0.4,
+      "mass": 0
+    },
+    "Gauss_background_unit_transfer": true,
+    "five_fermions": true,
+    "finite_ground_energy_source_differences": [
+      {
+        "L": 1,
+        "delta_E": 0.18082624543649395
+      },
+      {
+        "L": 2,
+        "delta_E": 0.17376606610476086
+      }
+    ],
+    "caveat": "Finite source response, not confinement or rigorously controlled infinity."
+  },
+  "qualification": "No physical TOE or general 160-link threshold proven; source-generated full certificates are available in GitHub Actions ZIP artifact."
+}
