@@ -1,0 +1,40 @@
+name: TOE75 five-front structural and interacting reproduction
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe75_*.py'
+      - 'tests/test_w33_20261014_toe75_*.py'
+      - '.github/workflows/w33_toe75_five_fronts.yml'
+  workflow_dispatch:
+jobs:
+  toe75-structural-and-continuous:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install scientific runtime
+        run: python -m pip install numpy scipy pytest
+      - name: Test all five research fronts
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe75_five_fronts.py
+      - name: Regenerate scientific certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: |
+          python analysis/w33_20261014_toe75_structural.py
+          python analysis/w33_20261014_toe75_continuous_interacting.py
+      - name: Publish reproducibility artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: toe75-structural-and-continuous-certificates
+          path: data/w33_20261014_toe75_*.json
+          retention-days: 60
