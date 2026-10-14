@@ -205,6 +205,7 @@ def certificate():
                 matching.append({
                     "selected_pair_orbit_indices":[j for j,v in enumerate(flags) if v],
                     "triangle_tritangent_count":triangles,
+                    "graph_edges":[[u,v] for u in range(27) for v in sorted(adj[u]) if u<v],
                     "srg_parameters":[27,10,1,5]
                 })
         assert sum(len(o) for o in pair_orbits)==351

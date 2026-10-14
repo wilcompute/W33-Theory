@@ -1,0 +1,37 @@
+name: TOE78 native 27 W33 octagons and E6 cubic-surface bridge
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe77_H27_shared_octagon_group.py'
+      - 'analysis/w33_20261014_toe78_octagon_cubic_surface.py'
+      - 'tests/test_w33_20261014_toe78_octagon_cubic_surface.py'
+      - '.github/workflows/w33_toe78_cubic_bridge.yml'
+  workflow_dispatch:
+jobs:
+  native-octagon-cubic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy networkx pytest
+      - name: Independently test the native 216 orbital graph vs E6 cubic surface
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe78_octagon_cubic_surface.py
+      - name: Regenerate the full 27 octagon line-isomorphism certificate
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe78_octagon_cubic_surface.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe78-native-e6-cubic-incidence-proof
+          path: data/w33_20261014_toe78_octagon_cubic_surface.json
+          retention-days: 60
