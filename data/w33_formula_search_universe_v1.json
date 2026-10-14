@@ -576743,6 +576743,45 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fff868dd694ab2dadbe04621335b441a19ff8760ef2b0379bd66a722cff89c65",
+      "normalized_formula": "ConstructtheactualsparsecellularcomplexontheCartesianproductoftwonativeW33Levigraphs,with6,400vertices,25,600directedproductedgesand25,600squares.Buildtheintegercochaindifferentialsd0=[BtensorIv;IvtensorB]andd1=[-IetensorB,BtensorIe],directlyassertd1*d0=0,andderiveintegerBettinumbers(1,162,6561),Euler/Kahler-Diracindex6400,andcochaindifferentialranks(6399,19039).Thisisexplicitlya2Dsquarecomplex,^not^theclosed4Dproductofgenus-81handlebody-boundarysurfaces.ThelatterhasEuler/deRhamindex25600and*untwistedspin-Diracindex0*.Thedistinctionpreventsaspuriousclaimofphysicalchirality.No4Doverlapspinorstencilorgauge-anomalyproofisderived",
+      "numeric_literals": [
+        "0",
+        "1",
+        "162",
+        "19039",
+        "25",
+        "3",
+        "400",
+        "5",
+        "5600",
+        "600",
+        "6399",
+        "6561",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "Construct the actual sparse cellular complex on the Cartesian product of two native W33 Levi graphs, with 6,400 vertices, 25,600 directed product edges and 25,600 squares. Build the integer cochain differentials d0=[B tensor Iv; Iv tensor B] and d1=[-Ie tensor B, B tensor Ie], directly assert d1*d0=0, and derive integer Betti numbers (1,162,6561), Euler/Kahler-Dirac index 6400, and cochain differential ranks (6399,19039). This is explicitly a 2D square complex, **not** the closed 4D product of genus-81 handlebody-boundary surfaces. The latter has Euler/de Rham index 25600 and *untwisted spin-Dirac index 0*. The distinction prevents a spurious claim of physical chirality. No 4D overlap spinor stencil or gauge-anomaly proof is derived.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1773e171893f4dd7cc360245772b3d497cd57986bf2568ce93a85841ee310678",
+      "structural_formula": "ConstructtheactualsparsecellularcomplexontheCartesianproductoftwonativeW3#Levigraphs,with6,#vertices,#,#directedproductedgesand2#,#squares.Buildtheintegercochaindifferentialsd0=[BtensorIv;IvtensorB]andd1=[-IetensorB,BtensorIe],directlyassertd1*d0=#,andderiveintegerBettinumbers(#,#,#),Euler/Kahler-Diracindex6#,andcochaindifferentialranks(#,#).Thisisexplicitlya2Dsquarecomplex,^not^theclosed4Dproductofgenus-#handlebody-boundarysurfaces.ThelatterhasEuler/deRhamindex2#and*untwistedspin-Diracindex0*.Thedistinctionpreventsaspuriousclaimofphysicalchirality.No4Doverlapspinorstencilorgauge-anomalyproofisderived"
+    },
+    {
+      "file_count": 1,
       "formula_id": "04ab4dddf25a7dd4f4b5cf08ceb8df0cf81a3cfd86681c5163ebc90d7dbb0a68",
       "normalized_formula": "Constructtheexact40\u00d740point\u2013lineincidencematrixFfortheLevigraphW(3,3).Everyrowandcolumnhasdegree4.Singularvalues:4(1),\u221a6(24),0(15);realrank25.Bothchiralsublatticesectorshave15nullvectors,andtherefore^indexdimkerF\u2212dimkerF\u2020=15\u221215=0^.Independentfinite-fieldrankoverF3anddirect80\u00d7160gradientrankcross-check",
       "numeric_literals": [
@@ -647169,6 +647208,49 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2de9e726b9da9b353d97056574bbdaf77b098b12b2a5add65c8e7305b4675cd9",
+      "normalized_formula": "IndependentlychecktheTOE64exactsigned-squaresufficientconditionfor*everyindependenthoppingassignmentonall160links*atepsilon=1/7.Writingr=((1+epsilon)/(1-epsilon))^8=(4/3)^8,thesymmetricSylvestertermsare79-2rand(79-2r)(77-r)-2r^2,andtheantisymmetricterm77-7r;allarestrictlypositive.ThefullTOE64theoremgivesthestrongersufficientboundepsilon<=(11^(1/8)-1)/(11^(1/8)+1)\u22480.1487564016.Thusthetrueuniversaldisorder-toleranceboundaryforthe*leadinghigh-temperaturefree-fermionholonomypotential*isboundedbelowbytheTOE64algebraicnumberandabovebythenative17-edgenegativeHessianwitnessjustabove0.24461518.Thisisnotanexactglobal160-dimensionalminimaxdetermination",
+      "numeric_literals": [
+        "+1",
+        "-1",
+        "-2",
+        "-7",
+        ".24461518",
+        "0.1487564016",
+        "1",
+        "11",
+        "2",
+        "3",
+        "4",
+        "60",
+        "7",
+        "77",
+        "79",
+        "8",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "Independently check the TOE64 exact signed-square sufficient condition for *every independent hopping assignment on all 160 links* at epsilon=1/7. Writing r=((1+epsilon)/(1-epsilon))^8=(4/3)^8, the symmetric Sylvester terms are 79-2r and (79-2r)(77-r)-2r^2, and the antisymmetric term 77-7r; all are strictly positive. The full TOE64 theorem gives the stronger sufficient bound epsilon <= (11^(1/8)-1)/(11^(1/8)+1) \u2248 0.1487564016. Thus the true universal disorder-tolerance boundary for the *leading high-temperature free-fermion holonomy potential* is bounded below by the TOE64 algebraic number and above by the native 17-edge negative Hessian witness just above 0.24461518. This is not an exact global 160-dimensional minimax determination.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "09120bc1f4afe1d67ecf6b344d9db805fb12e3050d248459a91ec22058d78ed9",
+      "structural_formula": "IndependentlychecktheTOE6#exactsigned-squaresufficientconditionfor*everyindependenthoppingassignmentonall1#links*atepsilon=#/#.Writingr=((#+epsilon)/(#-epsilon))^#=(#/#)^#,thesymmetricSylvestertermsare7##rand(##r)(#-r)#r^#,andtheantisymmetricterm7##r;allarestrictlypositive.ThefullTOE6#theoremgivesthestrongersufficientboundepsilon<=(#^(#/#)#)/(#^(#/#)#)\u2248#.Thusthetrueuniversaldisorder-toleranceboundaryforthe*leadinghigh-temperaturefree-fermionholonomypotential*isboundedbelowbytheTOE6#algebraicnumberandabovebythenative1#-edgenegativeHessianwitnessjustabove0#.Thisisnotanexactglobal1#-dimensionalminimaxdetermination"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f794a93c244aad1081d848aeeb0bff0223f80521dddfc77803acf77a8d8bd0a9",
       "normalized_formula": "IndependentlyreconstructthegraphonV=80\u00d717=^1360^verticesandE=160\u00d717=^2720^edges,verify4-regularity,all-vertexBFSconnectivity,nozerosignedholonomyforANYofthe1620originaleight-cycles,andanexplicitsimple^ten-cyclewitness^,henceliftgirthexactly10.Applyingthestandardfull-row-rankternaryHGPtographincidencecheck(1359)x(2720)givesthequantumcode",
       "numeric_literals": [
@@ -701177,6 +701259,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "821fa7c8ff01710bc4469af645159136e85ab08f165891b345e252c44c37e912",
+      "normalized_formula": "Nativegraphis11-siteW33Theta(4,4,4),N=5fermions,12hoppings",
+      "numeric_literals": [
+        "1",
+        "12",
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_continuous_interacting.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_20261014_toe75_continuous_interacting.py",
+          "raw": "Native graph is 11-site W33 Theta(4,4,4), N=5 fermions, 12 hoppings.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ee3ae8c3c9ff4589d292a6e74576575011ea52fef6e06cd691bf0bf98543b4d1",
+      "structural_formula": "Nativegraphis1#-siteW3#Theta(#,#,#),N=#fermions,#hoppings"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fa3347763544bf99436219d24d14cc79f4c26e3fe03cf4cc58077d986f790c68",
       "normalized_formula": "Nativethree-componentskewcurrentderivativesobeyexactnonzeroLeibnizdefectoneveryvertexindicatore_v,sincee_v^2=e_vanddiagonalD_vv=0",
       "numeric_literals": [
@@ -721168,6 +721281,38 @@
       },
       "structural_family_id": "f4554cffc32c8ca517d2bcf864965b658882bd3c45eca8b76f5058534b4c8412",
       "structural_formula": "Onthefull2#-modeone-particlespaceW=direct_sum_bW_b,dimW_b=#,ordinary"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4ab3d9e23163e8990b0c0109722e128e0e3b6ae29abc9546f3ddf751d764147f",
+      "normalized_formula": "Onthenative11-site,12-link,five-fermion,two-electric-coordinatepatch,enumerateeveryoneofthe22,638finiteelectric-cutoffbasisstatesandcomputeexactrationaldiagonalmatrixelements.Selecttwolow-diagonalbasisstateswithzero*exact*directhopping/Wilsonmatrixelement.TheCourant-Fischermin-maxtheoremthengivesarigorousupperboundontheorderedsecondeigenvalueofthefullunbounded-electric-fluxHamiltonian:E1<=max(Hii,Hjj).RetainTOE74'srigorouscoarseE0bracket.AlowerE1enclosureandhenceapositiveE1-E0gapremainopen;theprior0.9229conditionalestimateisnotpromotedtoatheorem",
+      "numeric_literals": [
+        ".9229",
+        "1",
+        "12",
+        "2",
+        "4",
+        "638"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "On the native 11-site, 12-link, five-fermion, two-electric-coordinate patch, enumerate every one of the 22,638 finite electric-cutoff basis states and compute exact rational diagonal matrix elements. Select two low-diagonal basis states with zero *exact* direct hopping/Wilson matrix element. The Courant-Fischer min-max theorem then gives a rigorous upper bound on the ordered second eigenvalue of the full unbounded-electric-flux Hamiltonian: E1 <= max(Hii,Hjj). Retain TOE74's rigorous coarse E0 bracket. A lower E1 enclosure and hence a positive E1-E0 gap remain open; the prior 0.9229 conditional estimate is not promoted to a theorem.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "6d1d6112070bd0ad3e63709516df5c6ca4cd57cbdb439ad03aeb8a3b940a6024",
+      "structural_formula": "Onthenative1#-site,#-link,five-fermion,two-electric-coordinatepatch,enumerateeveryoneofthe2#,#finiteelectric-cutoffbasisstatesandcomputeexactrationaldiagonalmatrixelements.Selecttwolow-diagonalbasisstateswithzero*exact*directhopping/Wilsonmatrixelement.TheCourant-Fischermin-maxtheoremthengivesarigorousupperboundontheorderedsecondeigenvalueofthefullunbounded-electric-fluxHamiltonian:E1<=max(Hii,Hjj).RetainTOE7#'srigorouscoarseE0bracket.AlowerE1enclosureandhenceapositiveE1-E0gapremainopen;theprior0#conditionalestimateisnotpromotedtoatheorem"
     },
     {
       "file_count": 1,
@@ -755776,6 +755921,41 @@
       },
       "structural_family_id": "88e859641cc0f3976db47cd3f7ba82b24cca8d42894c2bef9d7dbbc3672b4d09",
       "structural_formula": "ReconstructtheactualTOE3#plaquette+commutatoroperatorwithitsselectedW3#deckmarkingand1#positivePass1#kineticweights.Atsixwavevectordirectionsx,y,z,(#,#,#),(#,#,#),(#,#,#)andfourradii.#,#,#,#,diagonalizetheHermitian1#x1#matrixH(k).Thegaugezeromodesareexcludedandthetwosmalleststrictlypositiveeigenvaluesretained.Thethirdpositivemoderemainsgappedatomega2about9#,andtheexactlocalgaugeclosureP(k)B(k)=#isnumericallyverified"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4bdda6ba4c57a363a1d1aa8e4b0c20ae9a34445c24a7111c5debfd7fb2229dee",
+      "normalized_formula": "Reconstructthenative160-edgegraphand159octagonsactiveintheantisymmetricholonomyHessiandirectionq=(0,-1,1).Verifyusingarbitrary-precisionintegerarithmeticthatthe17-high-edgewitnesshasstrictlypositiveRayleighnumeratoratepsilon=24461518/100000000andstrictlynegativenumeratorat24461519/100000000",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "1",
+        "100000000",
+        "24461518",
+        "4461519",
+        "59",
+        "60",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "Reconstruct the native 160-edge graph and 159 octagons active in the antisymmetric holonomy Hessian direction q=(0,-1,1). Verify using arbitrary-precision integer arithmetic that the 17-high-edge witness has strictly positive Rayleigh numerator at epsilon=24461518/100000000 and strictly negative numerator at 24461519/100000000.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7374f3cff3464d419ed9df246e42ea78322f23e0d041aca63e62e4045d533449",
+      "structural_formula": "Reconstructthenative1#-edgegraphand1#octagonsactiveintheantisymmetricholonomyHessiandirectionq=(#,#,#).Verifyusingarbitrary-precisionintegerarithmeticthatthe1#-high-edgewitnesshasstrictlypositiveRayleighnumeratoratepsilon=#/#andstrictlynegativenumeratorat2#/#"
     },
     {
       "file_count": 1,
@@ -803961,6 +804141,41 @@
       },
       "structural_family_id": "7992a1de87108816e461b6a1d51081b96dc8a21015dd36c9f2756e482b403547",
       "structural_formula": "Theexactintegertraceis9#;alphahasapositiverationalenclosure.Numerically`alpha\u2248#`,`Ric_uu\u2248#`inthesuppliedvariationalunits.Thetidaleigenvaluesare`#alpha`#timesand`#alpha`#times.Theserecover1#'scenterednormalfrequenciesasnull-geodesictidaldata;theyarenotparticle-masspredictions"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5baed7eca7e38c40d2fd557cc55df39cb53323f7110e1d976a5336eec0c33257",
+      "normalized_formula": "Theexactnative11-sitethetagraphhas462canonicalfive-particleFockstates.ItsthreenonzeroZ2fluxsectorsareexactlyisospectralbyS3armpermutations,correctingTOE73'sapparentflux-cornerswitching.OptimizetheinteractingU1^2phasenumericallyalongthefullpi-boundarysegmentandfromfourlocalstartsinthecontinuous2DphasechartatV=0,.2,1,4,independentlyevaluateeigenvectorresiduals,andcomparewithexactZ2controls.Computeall462eigenvaluesattheoptimizedboundaryphaseandaZ2phase,yieldingfullcanonicalfinite-temperaturefree-energydifferencesatinversebeta0.5,1,2,8.Sampled-gridandmultistartminimaarenotrigorousglobalcontinuousminima,athermodynamicphase,orphysicalCPviolation",
+      "numeric_literals": [
+        ".2",
+        ".5",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "62",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "The exact native 11-site theta graph has 462 canonical five-particle Fock states. Its three nonzero Z2 flux sectors are exactly isospectral by S3 arm permutations, correcting TOE73's apparent flux-corner switching. Optimize the interacting U1^2 phase numerically along the full pi-boundary segment and from four local starts in the continuous 2D phase chart at V=0,.2,1,4, independently evaluate eigenvector residuals, and compare with exact Z2 controls. Compute all 462 eigenvalues at the optimized boundary phase and a Z2 phase, yielding full canonical finite-temperature free-energy differences at inverse beta 0.5,1,2,8. Sampled-grid and multistart minima are not rigorous global continuous minima, a thermodynamic phase, or physical CP violation.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7881ef59e254a3f1d10e431474510820e6fbb17c3e3aee23ddc7d37d9b9db5de",
+      "structural_formula": "Theexactnative1#-sitethetagraphhas4#canonicalfive-particleFockstates.ItsthreenonzeroZ2fluxsectorsareexactlyisospectralbyS3armpermutations,correctingTOE7#'sapparentflux-cornerswitching.OptimizetheinteractingU1^#phasenumericallyalongthefullpi-boundarysegmentandfromfourlocalstartsinthecontinuous2DphasechartatV=#,#,#,#,independentlyevaluateeigenvectorresiduals,andcomparewithexactZ2controls.Computeall4#eigenvaluesattheoptimizedboundaryphaseandaZ2phase,yieldingfullcanonicalfinite-temperaturefree-energydifferencesatinversebeta0#,#,#,#.Sampled-gridandmultistartminimaarenotrigorousglobalcontinuousminima,athermodynamicphase,orphysicalCPviolation"
     },
     {
       "file_count": 1,
@@ -1806692,9 +1806907,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T16:42:05-04:00",
+  "frozen_at": "2026-10-14T16:52:04-04:00",
   "pass": 398,
-  "repository_head": "f45f55397ba00795a436ba6e582a05b86830b085",
+  "repository_head": "9b10cf7f00fefd227a29df772474b0ee6e2432ac",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1961928,6 +1962143,14 @@
     },
     {
       "exact_formula_ids": [
+        "fff868dd694ab2dadbe04621335b441a19ff8760ef2b0379bd66a722cff89c65"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1773e171893f4dd7cc360245772b3d497cd57986bf2568ce93a85841ee310678",
+      "structural_formula": "ConstructtheactualsparsecellularcomplexontheCartesianproductoftwonativeW3#Levigraphs,with6,#vertices,#,#directedproductedgesand2#,#squares.Buildtheintegercochaindifferentialsd0=[BtensorIv;IvtensorB]andd1=[-IetensorB,BtensorIe],directlyassertd1*d0=#,andderiveintegerBettinumbers(#,#,#),Euler/Kahler-Diracindex6#,andcochaindifferentialranks(#,#).Thisisexplicitlya2Dsquarecomplex,^not^theclosed4Dproductofgenus-#handlebody-boundarysurfaces.ThelatterhasEuler/deRhamindex2#and*untwistedspin-Diracindex0*.Thedistinctionpreventsaspuriousclaimofphysicalchirality.No4Doverlapspinorstencilorgauge-anomalyproofisderived"
+    },
+    {
+      "exact_formula_ids": [
         "04ab4dddf25a7dd4f4b5cf08ceb8df0cf81a3cfd86681c5163ebc90d7dbb0a68"
       ],
       "exact_member_count": 1,
@@ -1981049,6 +1981272,14 @@
     },
     {
       "exact_formula_ids": [
+        "2de9e726b9da9b353d97056574bbdaf77b098b12b2a5add65c8e7305b4675cd9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "09120bc1f4afe1d67ecf6b344d9db805fb12e3050d248459a91ec22058d78ed9",
+      "structural_formula": "IndependentlychecktheTOE6#exactsigned-squaresufficientconditionfor*everyindependenthoppingassignmentonall1#links*atepsilon=#/#.Writingr=((#+epsilon)/(#-epsilon))^#=(#/#)^#,thesymmetricSylvestertermsare7##rand(##r)(#-r)#r^#,andtheantisymmetricterm7##r;allarestrictlypositive.ThefullTOE6#theoremgivesthestrongersufficientboundepsilon<=(#^(#/#)#)/(#^(#/#)#)\u2248#.Thusthetrueuniversaldisorder-toleranceboundaryforthe*leadinghigh-temperaturefree-fermionholonomypotential*isboundedbelowbytheTOE6#algebraicnumberandabovebythenative1#-edgenegativeHessianwitnessjustabove0#.Thisisnotanexactglobal1#-dimensionalminimaxdetermination"
+    },
+    {
+      "exact_formula_ids": [
         "f794a93c244aad1081d848aeeb0bff0223f80521dddfc77803acf77a8d8bd0a9"
       ],
       "exact_member_count": 1,
@@ -1995552,6 +1995783,14 @@
     },
     {
       "exact_formula_ids": [
+        "821fa7c8ff01710bc4469af645159136e85ab08f165891b345e252c44c37e912"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ee3ae8c3c9ff4589d292a6e74576575011ea52fef6e06cd691bf0bf98543b4d1",
+      "structural_formula": "Nativegraphis1#-siteW3#Theta(#,#,#),N=#fermions,#hoppings"
+    },
+    {
+      "exact_formula_ids": [
         "fa3347763544bf99436219d24d14cc79f4c26e3fe03cf4cc58077d986f790c68"
       ],
       "exact_member_count": 1,
@@ -2001182,6 +2001421,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f4554cffc32c8ca517d2bcf864965b658882bd3c45eca8b76f5058534b4c8412",
       "structural_formula": "Onthefull2#-modeone-particlespaceW=direct_sum_bW_b,dimW_b=#,ordinary"
+    },
+    {
+      "exact_formula_ids": [
+        "4ab3d9e23163e8990b0c0109722e128e0e3b6ae29abc9546f3ddf751d764147f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6d1d6112070bd0ad3e63709516df5c6ca4cd57cbdb439ad03aeb8a3b940a6024",
+      "structural_formula": "Onthenative1#-site,#-link,five-fermion,two-electric-coordinatepatch,enumerateeveryoneofthe2#,#finiteelectric-cutoffbasisstatesandcomputeexactrationaldiagonalmatrixelements.Selecttwolow-diagonalbasisstateswithzero*exact*directhopping/Wilsonmatrixelement.TheCourant-Fischermin-maxtheoremthengivesarigorousupperboundontheorderedsecondeigenvalueofthefullunbounded-electric-fluxHamiltonian:E1<=max(Hii,Hjj).RetainTOE7#'srigorouscoarseE0bracket.AlowerE1enclosureandhenceapositiveE1-E0gapremainopen;theprior0#conditionalestimateisnotpromotedtoatheorem"
     },
     {
       "exact_formula_ids": [
@@ -2010330,6 +2010577,14 @@
       "exact_member_count": 1,
       "structural_family_id": "88e859641cc0f3976db47cd3f7ba82b24cca8d42894c2bef9d7dbbc3672b4d09",
       "structural_formula": "ReconstructtheactualTOE3#plaquette+commutatoroperatorwithitsselectedW3#deckmarkingand1#positivePass1#kineticweights.Atsixwavevectordirectionsx,y,z,(#,#,#),(#,#,#),(#,#,#)andfourradii.#,#,#,#,diagonalizetheHermitian1#x1#matrixH(k).Thegaugezeromodesareexcludedandthetwosmalleststrictlypositiveeigenvaluesretained.Thethirdpositivemoderemainsgappedatomega2about9#,andtheexactlocalgaugeclosureP(k)B(k)=#isnumericallyverified"
+    },
+    {
+      "exact_formula_ids": [
+        "4bdda6ba4c57a363a1d1aa8e4b0c20ae9a34445c24a7111c5debfd7fb2229dee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7374f3cff3464d419ed9df246e42ea78322f23e0d041aca63e62e4045d533449",
+      "structural_formula": "Reconstructthenative1#-edgegraphand1#octagonsactiveintheantisymmetricholonomyHessiandirectionq=(#,#,#).Verifyusingarbitrary-precisionintegerarithmeticthatthe1#-high-edgewitnesshasstrictlypositiveRayleighnumeratoratepsilon=#/#andstrictlynegativenumeratorat2#/#"
     },
     {
       "exact_formula_ids": [
@@ -2023530,6 +2023785,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7992a1de87108816e461b6a1d51081b96dc8a21015dd36c9f2756e482b403547",
       "structural_formula": "Theexactintegertraceis9#;alphahasapositiverationalenclosure.Numerically`alpha\u2248#`,`Ric_uu\u2248#`inthesuppliedvariationalunits.Thetidaleigenvaluesare`#alpha`#timesand`#alpha`#times.Theserecover1#'scenterednormalfrequenciesasnull-geodesictidaldata;theyarenotparticle-masspredictions"
+    },
+    {
+      "exact_formula_ids": [
+        "5baed7eca7e38c40d2fd557cc55df39cb53323f7110e1d976a5336eec0c33257"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7881ef59e254a3f1d10e431474510820e6fbb17c3e3aee23ddc7d37d9b9db5de",
+      "structural_formula": "Theexactnative1#-sitethetagraphhas4#canonicalfive-particleFockstates.ItsthreenonzeroZ2fluxsectorsareexactlyisospectralbyS3armpermutations,correctingTOE7#'sapparentflux-cornerswitching.OptimizetheinteractingU1^#phasenumericallyalongthefullpi-boundarysegmentandfromfourlocalstartsinthecontinuous2DphasechartatV=#,#,#,#,independentlyevaluateeigenvectorresiduals,andcomparewithexactZ2controls.Computeall4#eigenvaluesattheoptimizedboundaryphaseandaZ2phase,yieldingfullcanonicalfinite-temperaturefree-energydifferencesatinversebeta0#,#,#,#.Sampled-gridandmultistartminimaarenotrigorousglobalcontinuousminima,athermodynamicphase,orphysicalCPviolation"
     },
     {
       "exact_formula_ids": [
@@ -2289586,20 +2289849,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88114273,
-    "exact_formula_families": 61789,
-    "files_scanned": 12094,
-    "formula_occurrences": 67769,
+    "bytes_scanned": 88136837,
+    "exact_formula_families": 61795,
+    "files_scanned": 12097,
+    "formula_occurrences": 67775,
     "status_occurrences": {
-      "certified_or_theorem": 4989,
+      "certified_or_theorem": 4990,
       "killed_or_retracted": 1651,
-      "open_or_conditional": 2264,
+      "open_or_conditional": 2265,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53597
+      "unclassified": 53601
     },
-    "structural_families": 60151
+    "structural_families": 60157
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "219ba514d445bf73469ab6efbd73ca5f708958b43e3a1478d7e7da71b8fbcc4b"
+  "universe_sha256": "d4d5c7c98732de546e33a5e9b968fd9018df96510f4aa706d72e409c04085ffe"
 }
