@@ -16,3 +16,15 @@ def test_actual_H27_classification_not_numerical_coincidence():
         assert c["selected_Sylow27_center_order"]==3
         assert c["selected_Sylow27_regular_on_27_octagons"]
         assert c["selected_Sylow27_element_order_histogram"]=={1:1,3:26}
+
+def test_normal_H27_and_actual_order_eight_complement_not_just_216_count():
+    c=certificate()
+    assert c["selected_Sylow27_normal_in_pair_stabilizer"]
+    assert c["selected_Sylow27_is_extraspecial_Heisenberg_H27"]
+    assert c["explicit_order8_complement_found"]
+    assert sum(c["order8_complement_element_orders"].values())==8
+    assert c["pair_stabilizer_order_in_PGSp"]==27*8
+    if c["pair_stabilizer_is_semidirect_H27_by_Q8"]:
+        assert c["order8_complement_is_quaternion_Q8"]
+        assert c["H27_center_fixed_pointwise_under_order8"]
+        assert c["order8_orbit_size_on_eight_nonzero_H27_mod_center_classes"]==8

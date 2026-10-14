@@ -120,12 +120,57 @@ def certificate():
              "For fixed shared octagon C0, H27 -> shared cycles via h|->h(C0) "
              "is a bijection" if extraspecial and regular else "Not established")
         })
+    if H is not None:
+        # Schur-Zassenhaus is not assumed: exhibit an actual Sylow-2
+        # complement of order 8 in the explicit 216-element group.
+        two=[g for g in full if order_of(g,I) in (2,4,8)]
+        Q=None
+        for a in two:
+            if Q:break
+            for b in two:
+                guess=subgroup((a,b),I,limit=8)
+                if guess is not None and len(guess)==8:
+                    Q=guess
+                    break
+        assert Q is not None
+        qhist=collections.Counter(order_of(q,I) for q in Q)
+        assert not (Q& H-{I})
+        assert len(H)*len(Q)==len(full)==216
+        quaternion=(qhist.get(1,0)==1 and qhist.get(2,0)==1 and
+                    qhist.get(4,0)==6)
+        # The center Z(H) has order 3 for extraspecial H27.
+        central=set(x for x in H if all(compose(x,y)==compose(y,x) for y in H))
+        assert len(central)==3
+        classes={frozenset(compose(x,z) for z in central) for x in H}
+        assert len(classes)==9
+        trivial=frozenset(central)
+        nontriv=next(x for x in classes if x!=trivial)
+        phase_orbit={frozenset(compose(compose(q,x),inverse(q))
+                               for x in nontriv) for q in Q}
+        assert phase_orbit<=classes
+        central_fixed=all(compose(compose(q,z),inverse(q))==z
+                          for q in Q for z in central)
+        full_center=[g for g in full
+                       if all(compose(g,h)==compose(h,g) for h in full)]
+        res.update({
+          "explicit_order8_complement_found":True,
+          "order8_complement_element_orders":dict(sorted(qhist.items())),
+          "order8_complement_is_quaternion_Q8":quaternion,
+          "pair_stabilizer_is_semidirect_H27_by_Q8":
+              bool(normal and extraspecial and quaternion),
+          "H27_center_fixed_pointwise_under_order8":central_fixed,
+          "order8_orbit_size_on_eight_nonzero_H27_mod_center_classes":
+              len(phase_orbit),
+          "full_216_group_center_order":len(full_center),
+          "comparison_warning":"Even if G is H27 semidirect Q8 of order216, it must NOT be identified with the ordinary projective single-qutrit Clifford group ASp(2,3) solely by its order 216. Compare group center and natural 9-point/27-point actions before any Clifford claim."
+        })
     return res
 if __name__=="__main__":
     c=certificate()
     (ROOT/"data/w33_20261014_toe77_H27_shared_octagon_group.json").write_text(
         json.dumps(c,indent=2)+"\n")
     print(c["status"],"order",c["induced_faithful_permutation_group_order"])
+    print("Q8",c.get("order8_complement_is_quaternion_Q8"), "semidirect",c.get("pair_stabilizer_is_semidirect_H27_by_Q8"), "center",c.get("full_216_group_center_order"),"phase_orbit",c.get("order8_orbit_size_on_eight_nonzero_H27_mod_center_classes"))
     print("H27",c.get("selected_Sylow27_is_extraspecial_Heisenberg_H27"),
           "center",c.get("selected_Sylow27_center_order"),
           "regular",c.get("selected_Sylow27_regular_on_27_octagons"),
