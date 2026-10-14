@@ -49,7 +49,13 @@ def certificate():
     assert native["pair_stabilizer_is_semidirect_H27_by_D8"]
     assert native["native_216_invariant_cubic_surface_intersection_srg_count"]==1
     witness=native["native_216_invariant_cubic_surface_intersection_srg_candidates"][0]
-    Edges={tuple(sorted(e)) for e in witness["graph_edges"]}
+    # Derive adjacency independently from the 45 certified native
+    # tritangent triples, rather than relying on a duplicated orbital
+    # edge list that can be omitted in parallel proof passes.
+    native_lines=native["native_GQ24_tritangent_lines"]
+    assert len(native_lines)==45 and all(len(L)==3 for L in native_lines)
+    Edges={tuple(sorted(e)) for L in native_lines
+           for e in itertools.combinations(L,2)}
     assert len(Edges)==135 and witness["triangle_tritangent_count"]==45
     G=nx.Graph();G.add_nodes_from(range(27));G.add_edges_from(Edges)
     assert set(dict(G.degree()).values())=={10}
