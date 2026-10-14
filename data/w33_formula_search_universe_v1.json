@@ -106496,6 +106496,66 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e33541e44a7bc07601234f70231c0ea2329cdf99a8ed1d7b2a3a6adb49c1c326",
+      "normalized_formula": "\"global_minimum_condition\":\"s=0\"",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_exact_120_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 88,
+          "path": "analysis/w33_20261014_toe75_exact_120_flux.py",
+          "raw": "\"global_minimum_condition\":\"s=0\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5151df298f009bbf6c3ae12be8c1735b8ddea808b7ee687651059cb589b398a2",
+      "structural_formula": "\"global_minimum_condition\":\"s=#\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b44a0fdf85a5c0f593e3b05b5378b174312f5ace92ab03135f898725c7e385e1",
+      "normalized_formula": "\"global_proof\":\"Gramfactorizationhasonefixedeigenvalue2andfourroots(5\u00b1sqrt(13\u00b14s))/2.Theirfivepositivesingularvaluessumtosqrt(2)+g(3+s)+g(3-s),g(t)=sqrt(5+2sqrt(t)).g'decreasesstrictly,soJensenimpliesstrictmaximumats=0.Sumofthreeunitvectorsvanishesiffphasesform{0,2\u03c0/3,4\u03c0/3}.ThecanonicalN=5energyisthenegativesumofpositivesingle-particleenergies.Oppositephasepairsarerelatedbygraph-armpermutation,sonostandaloneCPviolation.\"",
+      "numeric_literals": [
+        "+2",
+        "0",
+        "13",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_exact_120_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 95,
+          "path": "analysis/w33_20261014_toe75_exact_120_flux.py",
+          "raw": "\"global_proof\":\"Gram factorization has one fixed eigenvalue 2 and four roots (5\u00b1sqrt(13\u00b14s))/2. Their five positive singular values sum to sqrt(2)+g(3+s)+g(3-s), g(t)=sqrt(5+2sqrt(t)). g' decreases strictly, so Jensen implies strict maximum at s=0. Sum of three unit vectors vanishes iff phases form {0,2\u03c0/3,4\u03c0/3}. The canonical N=5 energy is the negative sum of positive single-particle energies. Opposite phase pairs are related by graph-arm permutation, so no standalone CP violation.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2e779cad2d253d1c7035fb22bd530f26bce2aebc3adb9add23d0a532151d0c7f",
+      "structural_formula": "\"global_proof\":\"Gramfactorizationhasonefixedeigenvalue2andfourroots(#\u00b1sqrt(#\u00b1#s))/#.Theirfivepositivesingularvaluessumtosqrt(#)+g(#+s)+g(#-s),g(t)=sqrt(##sqrt(t)).g'decreasesstrictly,soJensenimpliesstrictmaximumats=#.Sumofthreeunitvectorsvanishesiffphasesform{#,#\u03c0/#,#\u03c0/#}.ThecanonicalN=#energyisthenegativesumofpositivesingle-particleenergies.Oppositephasepairsarerelatedbygraph-armpermutation,sonostandaloneCPviolation.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "e398bae5f993ea9caab337fff90c38ce9b1516c234041a77b81da2ce5e32ba24",
       "normalized_formula": "\"global_rank\":int(np.sum(global_singular_values>1e-8))",
       "numeric_literals": [
@@ -196835,6 +196895,37 @@
       },
       "structural_family_id": "ded2df3cca0b9878a67fabfe3c9703175a5d17c3689a4245bcdf56d97541ddf1",
       "structural_formula": "##/#=#.Experimental:#atM_Z"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "910367919b448f39ab438ba5f192c25340d5dbcd5a51d661a8a0e313fb4e4c50",
+      "normalized_formula": "#1/[2sqrt(t)sqrt(5+2sqrt(t))],strictlydecreasingont>0",
+      "numeric_literals": [
+        "+2",
+        "0",
+        "1",
+        "2",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_exact_120_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 77,
+          "path": "analysis/w33_20261014_toe75_exact_120_flux.py",
+          "raw": "# 1/[2 sqrt(t) sqrt(5+2sqrt(t))], strictly decreasing on t>0.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6a3d30a1c365ace91d85b4c66f4ffa903a8422a5961349e01b6fcbc7a0579d0e",
+      "structural_formula": "##/[#sqrt(t)sqrt(##sqrt(t))],strictlydecreasingont>#"
     },
     {
       "file_count": 1,
@@ -572684,6 +572775,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "22bfa556e322c8ca43b8952eae3283f446ec61227252670ff8f8c1dcbe4cca7d",
+      "normalized_formula": "CanonicalfreefermionN=5E0=-sqrt(2)-sqrt(5+2sqrt(3+s))",
+      "numeric_literals": [
+        "+2",
+        "2",
+        "3",
+        "5",
+        "5E0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_exact_120_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_20261014_toe75_exact_120_flux.py",
+          "raw": "Canonical free fermion N=5 E0 = -sqrt(2) - sqrt(5+2 sqrt(3+s))",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "dfe202fa2f8038fded51a40bf16a04e787d0aa66d7fa58fd28aa9a53d26caea0",
+      "structural_formula": "CanonicalfreefermionN=#=-sqrt(#)-sqrt(##sqrt(#+s))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "32600fc29488aaeca87fe6c71f885ca485d2b72bdf0175e60b6cd9a102bd964b",
       "normalized_formula": "CanonicalsupergravitygivesnonzeromultipliertadpolesevenwhentheSUSYhomehas`W=F=D=0`.Theirleadingsourceis`mg(sumzdW\u22123W)`;theactuallinearresponsegivesaneutral-Uexpectationoforder1010GeV.Stoppingatthatresponsewouldleavethebackreactionuntested.Theproducerthereforealsosolvesthe^fullcanonical-Ksupergravityscalarpotential^withfinite`MPlanck`,suppliedrealW0,matchedmassesanda^pinnedneutralhiddenFsource^.Theconstantistunedattheoriginonly.Nohidden-sectorstabilizationisclaimed",
       "numeric_literals": [
@@ -597654,6 +597776,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7c147a08ea030375e9f3e333da9a23e1177b5a5c3dc22334b320a8f8704a007b",
+      "normalized_formula": "E_0(s)=-\\sqrt2-\\sqrt{5+2\\sqrt{3+s}}-\\sqrt{5+2\\sqrt{3-s}}",
+      "numeric_literals": [
+        "+2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 74,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "E_0(s)=-\\sqrt2-\\sqrt{5+2\\sqrt{3+s}}- \\sqrt{5+2\\sqrt{3-s}}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "44c20df9d3ea221cea580161432a567c20775bafbe2f87502fe1018e43dafd1d",
+      "structural_formula": "E_0(s)=-\\sqrt2-\\sqrt{##\\sqrt{#+s}}-\\sqrt{##\\sqrt{#-s}}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e62e27e2960ddca9eb1c82cbaae12b18de4ccbda0aee41fd6782f8be71638b0b",
       "normalized_formula": "E_0=(1/40)J(vacuum,dim1)",
       "numeric_literals": [
@@ -597725,6 +597876,33 @@
           "line": 126,
           "path": "analysis/2026-10-08_BC600_apartment60_modularS_five_frontiers.md",
           "raw": "E_0=-60",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5d6db03f511833a41c68796358bbdf74c2d389535f5b839e242e78ecdfa0696f",
+      "structural_formula": "E_0=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a25a69e4097821a8561515efab783113085a876ae69e9e641201415e2415a1da",
+      "normalized_formula": "E_0=-7.232839384725914",
+      "numeric_literals": [
+        "-7.232839384725914"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 84,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "E_0=-7.232839384725914,",
           "status": "unclassified"
         }
       ],
@@ -615121,6 +615299,39 @@
       },
       "structural_family_id": "dc2bc272ca13846b6cbdf150422bfbe821f8e992c313ee2c1fc4fe604c11ad7e",
       "structural_formula": "Forall`choose(#,#)=#`distinctextensions,screen9up-typeYukawasand7#coloredvectorlikemasscouplings,usingtheoriginal^fiveFIpositivitydirectionsplusthreeunrestrictedrealoriginal-supportchargedirections^andtwonewrealnonnegativesingletpowers"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "06d74398bb1087e02b4832b379235401ba0937c2a0d7eea7b7609be1879a5626",
+      "normalized_formula": "ForallfourV,thesampledpointwiseZ2-minus-optimizedfree-energydifferenceswerealsopositiveatbeta=0.5,1and8(thoughsomeatsmallbetaareonlyorder10^-5).^Pointwisepositivedifferencesdonotproveagloballypreferredfinite-temperatureflux^.Thenewfullynumericallyevaluatedphasepointsclusteraround(2pi/3,4pi/3)anditsphase-swappedpartner.Anyconclusionaboutspontaneoustime-reversal/CPbreakingordynamical-gaugevacuumremainsunwarranted",
+      "numeric_literals": [
+        "-5",
+        "0",
+        "0.5",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "For all four V, the sampled pointwise Z2-minus-optimized free-energy differences were also positive at beta=0.5, 1 and 8 (though some at small beta are only order 10^-5). **Pointwise positive differences do not prove a globally preferred finite-temperature flux**. The new fully numerically evaluated phase points cluster around (2pi/3,4pi/3) and its phase-swapped partner. Any conclusion about spontaneous time-reversal/CP breaking or dynamical-gauge vacuum remains unwarranted.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "01b60d5839ea0aabf9601cc20e1bae3b04c271c6734f4ebfcfb12db81d4299bf",
+      "structural_formula": "ForallfourV,thesampledpointwiseZ2-minus-optimizedfree-energydifferenceswerealsopositiveatbeta=#,#and8(thoughsomeatsmallbetaareonlyorder1#^#).^Pointwisepositivedifferencesdonotproveagloballypreferredfinite-temperatureflux^.Thenewfullynumericallyevaluatedphasepointsclusteraround(#pi/#,#pi/#)anditsphase-swappedpartner.Anyconclusionaboutspontaneoustime-reversal/CPbreakingordynamical-gaugevacuumremainsunwarranted"
     },
     {
       "file_count": 1,
@@ -774626,6 +774837,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "36690c5534459d6f55516d7f99265ef2ff65d049811079ef547ce0c48ad63c23",
+      "normalized_formula": "Since\\(g(t)=\\sqrt{5+2\\sqrtt}\\)isstrictlyconcave,\\(g(3+s)+g(3-s)\\)ismaximized^uniquely^at\\(s=0\\).Thelatterforcesthethreearmphasorstobethecuberootsofunity.Thus,modulo\\(2\\pi\\),the^onlyglobalfree-fermionfluxminimizingpairs^are",
+      "numeric_literals": [
+        "+2",
+        "0",
+        "2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "Since \\(g(t)=\\sqrt{5+2\\sqrt t}\\) is strictly concave, \\(g(3+s)+g(3-s)\\) is maximized **uniquely** at \\(s=0\\). The latter forces the three arm phasors to be the cube roots of unity. Thus, modulo \\(2\\pi\\), the **only global free-fermion flux minimizing pairs** are",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a2fa62a67040a69e281812df3376c746015e9f88c716281385a6e687f3f8f764",
+      "structural_formula": "Since\\(g(t)=\\sqrt{##\\sqrtt}\\)isstrictlyconcave,\\(g(#+s)+g(#-s)\\)ismaximized^uniquely^at\\(s=#\\).Thelatterforcesthethreearmphasorstobethecuberootsofunity.Thus,modulo\\(#\\pi\\),the^onlyglobalfree-fermionfluxminimizingpairs^are"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e28bd304e62726dcb62b05f13b1ad36bdfe555c806f2cbd0fe2bf7668445aa59",
       "normalized_formula": "Since`15=1+14`isthereductionoftherationalirreducible,one`14`is",
       "numeric_literals": [
@@ -800693,6 +800935,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "17db34d84548f38c379dfa429d1feb02c7a77924bcaf77209b0adca03c06d099",
+      "normalized_formula": "Theactuallocal2DcellularsquarecomplexontwonativeLevigraphshas(6400,25600,25600)cellcounts,verifies\\(d_1d_0=0\\)exactly,andhasKunnethBetti(1,162,6561)andEuler\u2013Kahler-Diracindex6400.Itis*not*afour-dimensionalspinlattice.ThedistinctclosedW33-squaredsurfaceproducthasEulerindex25600anduntwisted^spin-Diracindexzero^.Thisremainsanunsolved4Dchiral-fermionconstruction,andnofalsechiralityisinferred",
+      "numeric_literals": [
+        "0",
+        "1",
+        "162",
+        "25600",
+        "3",
+        "400",
+        "5600",
+        "6400",
+        "6561"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 112,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "The actual local 2D cellular square complex on two native Levi graphs has (6400,25600,25600) cell counts, verifies \\(d_1d_0=0\\) exactly, and has Kunneth Betti (1,162,6561) and Euler\u2013Kahler-Dirac index 6400. It is *not* a four-dimensional spin lattice. The distinct closed W33-squared surface product has Euler index 25600 and untwisted **spin-Dirac index zero**. This remains an unsolved 4D chiral-fermion construction, and no false chirality is inferred.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "caabeb4d879d784ce5d6eaa98e35145eb6372439be001d134f40b7b09206fbb1",
+      "structural_formula": "Theactuallocal2DcellularsquarecomplexontwonativeLevigraphshas(#,#,#)cellcounts,verifies\\(d_1d_0=#\\)exactly,andhasKunnethBetti(#,#,#)andEuler\u2013Kahler-Diracindex6#.Itis*not*afour-dimensionalspinlattice.ThedistinctclosedW3#-squaredsurfaceproducthasEulerindex2#anduntwisted^spin-Diracindexzero^.Thisremainsanunsolved4Dchiral-fermionconstruction,andnofalsechiralityisinferred"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a0a0013e028312309c8a9da449de85441e717a8cbbdb822a66807422826651c9",
       "normalized_formula": "Theactualpreviousprimitive-fluxpotentialhasexponent\\(k=(2,4,4,4,4,4,4,4)\\),soitsunit-radiusgradientisexactly\\((-2,-4,-4,-4,-4,-4,-4,-4)\\)forunitpositivecoefficient.Everycoordinatewantstoroll;nostationaryvacuumexistswithinthatsingle-positive-fluxterm.Moregenerallyallpositiveexponentialtermswhoseexponentvectorslieinacommonstricthalf-spacecannotstabilizeallradii.Theearliermathematicalnine-balanced-termtoyhasHessianeigenvalues\\(1^{\\times7},9\\)andpositivevacuumenergy9;noallowedstring/E8fluxoriginor4Dcosmologicalconstantcancellationhasbeensupplied",
       "numeric_literals": [
@@ -815043,6 +815320,35 @@
       },
       "structural_family_id": "f1b8e2515ae66244ae320578462faa37c4f2b0e3bc41a367cae35a0e43362704",
       "structural_formula": "Thesynchronousstateislocallyasymptoticallystablemoduloglobalphaseexactlywhen`Kcos\u03b1>#`.Therelaxation-timeratiois"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3d63df6655d02cfe7bb87c556729e338d315f582f6bb7395ed5e841512f9aa69",
+      "normalized_formula": "Theta(4,4,4)120\u00b0theorem.PrintorbitclassificationsandV>0",
+      "numeric_literals": [
+        "0",
+        "120",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_summary.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_20261014_toe75_summary.py",
+          "raw": "Theta(4,4,4) 120\u00b0 theorem. Print orbit classifications and V>0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "640fa83f9052264828177313f5444c9525e79ae9572f164e1598bcc5770ad270",
+      "structural_formula": "Theta(#,#,#)#\u00b0theorem.PrintorbitclassificationsandV>#"
     },
     {
       "file_count": 1,
@@ -829534,6 +829840,38 @@
       },
       "structural_family_id": "09c1a8c7975a3223afe16ce0e7ac60a47de666886b1e75ef3c7754c2794f4725",
       "structural_formula": "UsingonlytheLevi-incidence-derived1#-dimensionalactionmatrices,solveforequivariantalternatingproducts`Lambda^#Q1#->Q1#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b1940c53ccef173cb3dbd84d9c9bf83a3819a57cd84e2de9b6463d3a14c263c0",
+      "normalized_formula": "Usingthe*full462-dimensionalcanonicalN=5many-bodymatrix*atallcontinuousfluxchoices,four-starttwo-dimensionalnumericallocalminimizationselectspointsclosetotheexactfree120-degreepatternforV=.2,1,4.Separatecomplete462-levelfinite-temperaturetracesshowpositivefree-energydifferencesrelativetonontrivialZ2flux,atselectedbetavalues.Thefollowingare^numericalfinite-modelcomparisons^,notaglobalcontinuousinteractingtheorem",
+      "numeric_literals": [
+        ".2",
+        "1",
+        "20",
+        "4",
+        "5",
+        "62"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 93,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "Using the *full 462-dimensional canonical N=5 many-body matrix* at all continuous flux choices, four-start two-dimensional numerical local minimization selects points close to the exact free 120-degree pattern for V=.2,1,4. Separate complete 462-level finite-temperature traces show positive free-energy differences relative to nontrivial Z2 flux, at selected beta values. The following are **numerical finite-model comparisons**, not a global continuous interacting theorem.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "bfd7d0a3eca06da75957dd60a9a35d27bfc5868b1b259fc58e11f6aa82fe28d4",
+      "structural_formula": "Usingthe*full4#-dimensionalcanonicalN=#many-bodymatrix*atallcontinuousfluxchoices,four-starttwo-dimensionalnumericallocalminimizationselectspointsclosetotheexactfree1#-degreepatternforV=#,#,#.Separatecomplete4#-levelfinite-temperaturetracesshowpositivefree-energydifferencesrelativetonontrivialZ2flux,atselectedbetavalues.Thefollowingare^numericalfinite-modelcomparisons^,notaglobalcontinuousinteractingtheorem"
     },
     {
       "file_count": 1,
@@ -890471,6 +890809,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "43888d875916dc6f5e32bb2e5889e711c6ea25bfbe78815662c4568a474217b0",
+      "normalized_formula": "\\boxed{(\\phi_1,\\phi_2)=(2\\pi/3,4\\pi/3)\\\\\\text{or}\\\\(4\\pi/3,2\\pi/3)}",
+      "numeric_literals": [
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 79,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "\\boxed{(\\phi_1,\\phi_2)=(2\\pi/3,4\\pi/3) \\ \\ \\text{or}\\ \\ (4\\pi/3,2\\pi/3)}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d5a5ed6f2c3aebba956d265725f648762aa22c00f1f06e266a79649bb5d8ed33",
+      "structural_formula": "\\boxed{(\\phi_1,\\phi_2)=(#\\pi/#,#\\pi/#)\\\\\\text{or}\\\\(#\\pi/#,#\\pi/#)}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a8493bf0700110426430e627fbb69dfb6ebbe295f0a0252042f93cecb08982a8",
       "normalized_formula": "\\boxed{(\\widehatC-1/24)(\\widehatC+1/2)(\\widehatC+1/6)=0.}",
       "numeric_literals": [
@@ -896413,6 +896780,35 @@
       },
       "structural_family_id": "18ba1b64e3238c99afe27c75a50367f829b4d5ed201db96e34ab0eda6c055c3c",
       "structural_formula": "\\boxed{E_1+E_3\\text{isa}#=#\\cdot|W(G_2)|\\text{conjugate-rootchannel.}}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c7f33b58be529b5c24dabcb9a2956706d9c44c3e359b44c8b7507028ba2e136d",
+      "normalized_formula": "\\boxed{E_1\\le387/200=1.935}",
+      "numeric_literals": [
+        "1.935",
+        "200",
+        "87"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 107,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "\\boxed{E_1\\le387/200=1.935}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f5ede7cb55351139e1f8a64b3638e5b3f9dd76a6a94d436c8d2540abf2338c7f",
+      "structural_formula": "\\boxed{E_1\\le3#/#=#}"
     },
     {
       "file_count": 1,
@@ -907966,6 +908362,38 @@
       },
       "structural_family_id": "76a514efaf467f8433fa8cb8744c8ebde5693b3f0bf4a8077182844a9634b3b2",
       "structural_formula": "\\boxed{\\text{ambientquadraticcode}\\quad+\\quad\\text{selectablesymplecticpolarity}\\quad=\\quad\\text{reconfigurableW3#routingoverlay}.}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f8e518c928bc334d96ab1af260403cc71ee58195ad54d6132bf87a68d4df6f55",
+      "normalized_formula": "\\boxed{\\text{atleast27pairwisedistinctPGSp(4,3)orbits}},\\qquad\\boxed{\\text{atleast}27\\cdot51840=1399680\\text{distinctexactcovers}}",
+      "numeric_literals": [
+        "1399680",
+        "1840",
+        "27",
+        "3",
+        "4",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 54,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "\\boxed{\\text{at least 27 pairwise distinct PGSp(4,3) orbits}}, \\qquad \\boxed{\\text{at least }27\\cdot51840=1{,}399{,}680\\text{ distinct exact covers}}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "19234a8ffa124aab5d4aef03e1558f501422c88e6e3c00b48a72f6370ad15626",
+      "structural_formula": "\\boxed{\\text{atleast2#pairwisedistinctPGSp(#,#)orbits}},\\qquad\\boxed{\\text{atleast}#\\cdot5#=#\\text{distinctexactcovers}}"
     },
     {
       "file_count": 1,
@@ -919883,6 +920311,35 @@
       },
       "structural_family_id": "2eb4fce7a6f3744fc1caf8aa6a67a0746f5376d7685540f47cf93b35a8e109aa",
       "structural_formula": "\\det(\\Lambda_C)=#^{##\\cdot2#}=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "275be8a65a9eb966eb1de17180010f620c9378e182f8e169bf65612071aa8324",
+      "normalized_formula": "\\det(\\lambdaI-TT^\\dagger)=(\\lambda-2)\\big[(\\lambda^2-5\\lambda+3)^2-s^2\\big]",
+      "numeric_literals": [
+        "-5",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 69,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "\\det(\\lambda I-TT^\\dagger)= (\\lambda-2)\\big[(\\lambda^2-5\\lambda+3)^2-s^2\\big].",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "85c5468cdd601642a025b854213c2c927505dac0c6911855babb69a8e606caa7",
+      "structural_formula": "\\det(\\lambdaI-TT^\\dagger)=(\\lambda-#)\\big[(\\lambda^##\\lambda+#)^#-s^#\\big]"
     },
     {
       "file_count": 1,
@@ -1066407,6 +1066864,62 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7df61e91e9fa8e968b275c2a7d7fb312565a5070b0a6d2dd6caccb3db6a4571d",
+      "normalized_formula": "assertabs(trials[3][\"arm_sum_modulus\"])<1e-14",
+      "numeric_literals": [
+        "1e-14",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_exact_120_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/w33_20261014_toe75_exact_120_flux.py",
+          "raw": "assert abs(trials[3][\"arm_sum_modulus\"])<1e-14",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e10953c90addc6f86492e383fe9441dbf2e884efde5224c0a678c57b4b061325",
+      "structural_formula": "assertabs(trials[#][\"arm_sum_modulus\"])<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "422f66cd8d70c3e09b953163a89339ffbc12f7e7295f47fe1143e167cfc55dda",
+      "normalized_formula": "assertabs(trials[4][\"arm_sum_modulus\"])<1e-14",
+      "numeric_literals": [
+        "1e-14",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe75_exact_120_flux.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 79,
+          "path": "analysis/w33_20261014_toe75_exact_120_flux.py",
+          "raw": "assert abs(trials[4][\"arm_sum_modulus\"])<1e-14",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e10953c90addc6f86492e383fe9441dbf2e884efde5224c0a678c57b4b061325",
+      "structural_formula": "assertabs(trials[#][\"arm_sum_modulus\"])<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d2116b29ab894f2655e1bfa44715c89a3d69ddbdea4d7444c6b54ff6e5198826",
       "normalized_formula": "assertabs(x[\"pass4119_transport_quantum_speed_limit\"][\"principal_log_operator_norm\"]-2*math.pi/3)<1e-12",
       "numeric_literals": [
@@ -1180298,6 +1180811,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "89d437d84ea79816ccac0c2b5f2d3a9bd969f106f2dcdcb14238a9558301db09",
+      "normalized_formula": "d_1d_0=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 112,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "d_1d_0=0",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "4ccd3c38c6855480b8b66cd5eb2a733e5deaf5fa423b707f7e9a65e607447001",
+      "structural_formula": "d_1d_0=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4fcc3cd88bd80c21558e03b563c4c719f40c4988bea46c5c069d8c45ddb82f31",
       "normalized_formula": "d_6=d_7=18",
       "numeric_literals": [
@@ -1267199,6 +1267739,34 @@
       },
       "structural_family_id": "92ac640a631b523e7682961b44efbe198bc4e246c6a0a9ec8c0ab05f581d37b1",
       "structural_formula": "g(L)=L^#g_0"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "779cfe54dd3e56aca8d75ddc781105664c2b1b2c5fd65246d967b94ca033f69c",
+      "normalized_formula": "g(t)=\\sqrt{5+2\\sqrtt}",
+      "numeric_literals": [
+        "+2",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 78,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "g(t)=\\sqrt{5+2\\sqrt t}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7e2e872ab74012807ac24b364cf37a0d49a6f57f52868acae897ec2fe75486cf",
+      "structural_formula": "g(t)=\\sqrt{##\\sqrtt}"
     },
     {
       "file_count": 1,
@@ -1635805,6 +1636373,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b10f271a7654500776598db2b7e193f2240a5449c3eb1c87a43a7de6a1e15fd2",
+      "normalized_formula": "s=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 78,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "s=0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "290c681dc72898a5e3aa0e52a8b30628a5613bff15feebf616b646398ecf98d0",
+      "structural_formula": "s=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "882a9d54919c9e15177db1bccde43ec8ef74889504bacc40c490700a9ce9ef99",
       "normalized_formula": "s=0,1",
       "numeric_literals": [
@@ -1637077,6 +1637672,35 @@
       },
       "structural_family_id": "b099e40b58d0baae7358eac8d1e46b7e89a8d5d24ccabfab2567f9ebc6b0c683",
       "structural_formula": "s={-}(q{+}#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "dc41a8f36a26246bea8b6519a0b25508ba050a708497de4683db392f8bead41a",
+      "normalized_formula": "s=|1+e^{i\\phi_1}+e^{i\\phi_2}|\\in[0,3]",
+      "numeric_literals": [
+        "0",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe75_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 65,
+          "path": "analysis/2026-10-14_toe75_five_fronts.md",
+          "raw": "s=|1+e^{i\\phi_1}+e^{i\\phi_2}|\\in[0,3].",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "da8e15add42e934e3e47fc0521f28589f4ad8ab9b04a87998cfb9e5701cb12ee",
+      "structural_formula": "s=|#+e^{i\\phi_1}+e^{i\\phi_2}|\\in[#,#]"
     },
     {
       "file_count": 1,
@@ -1806907,9 +1807531,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T16:52:04-04:00",
+  "frozen_at": "2026-10-14T17:08:46-04:00",
   "pass": 398,
-  "repository_head": "9b10cf7f00fefd227a29df772474b0ee6e2432ac",
+  "repository_head": "5ba7ea27f9f83eaeba4545627e811a836ea7f162",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1836752,6 +1837376,22 @@
     },
     {
       "exact_formula_ids": [
+        "e33541e44a7bc07601234f70231c0ea2329cdf99a8ed1d7b2a3a6adb49c1c326"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5151df298f009bbf6c3ae12be8c1735b8ddea808b7ee687651059cb589b398a2",
+      "structural_formula": "\"global_minimum_condition\":\"s=#\""
+    },
+    {
+      "exact_formula_ids": [
+        "b44a0fdf85a5c0f593e3b05b5378b174312f5ace92ab03135f898725c7e385e1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2e779cad2d253d1c7035fb22bd530f26bce2aebc3adb9add23d0a532151d0c7f",
+      "structural_formula": "\"global_proof\":\"Gramfactorizationhasonefixedeigenvalue2andfourroots(#\u00b1sqrt(#\u00b1#s))/#.Theirfivepositivesingularvaluessumtosqrt(#)+g(#+s)+g(#-s),g(t)=sqrt(##sqrt(t)).g'decreasesstrictly,soJensenimpliesstrictmaximumats=#.Sumofthreeunitvectorsvanishesiffphasesform{#,#\u03c0/#,#\u03c0/#}.ThecanonicalN=#energyisthenegativesumofpositivesingle-particleenergies.Oppositephasepairsarerelatedbygraph-armpermutation,sonostandaloneCPviolation.\""
+    },
+    {
+      "exact_formula_ids": [
         "e398bae5f993ea9caab337fff90c38ce9b1516c234041a77b81da2ce5e32ba24"
       ],
       "exact_member_count": 1,
@@ -1862476,6 +1863116,14 @@
       "exact_member_count": 1,
       "structural_family_id": "209d60839c1744ed75623f7b94242f9f5e5f0d924d189e73653158f7991ba964",
       "structural_formula": "##/N=#/#"
+    },
+    {
+      "exact_formula_ids": [
+        "910367919b448f39ab438ba5f192c25340d5dbcd5a51d661a8a0e313fb4e4c50"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6a3d30a1c365ace91d85b4c66f4ffa903a8422a5961349e01b6fcbc7a0579d0e",
+      "structural_formula": "##/[#sqrt(t)sqrt(##sqrt(t))],strictlydecreasingont>#"
     },
     {
       "exact_formula_ids": [
@@ -1961015,6 +1961663,14 @@
     },
     {
       "exact_formula_ids": [
+        "22bfa556e322c8ca43b8952eae3283f446ec61227252670ff8f8c1dcbe4cca7d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dfe202fa2f8038fded51a40bf16a04e787d0aa66d7fa58fd28aa9a53d26caea0",
+      "structural_formula": "CanonicalfreefermionN=#=-sqrt(#)-sqrt(##sqrt(#+s))"
+    },
+    {
+      "exact_formula_ids": [
         "32600fc29488aaeca87fe6c71f885ca485d2b72bdf0175e60b6cd9a102bd964b"
       ],
       "exact_member_count": 1,
@@ -1967749,9 +1968405,18 @@
     },
     {
       "exact_formula_ids": [
-        "46746c6bc5a3973023f2323a7d386ec1dfde2435664ee228240d50f6ab398fe5"
+        "7c147a08ea030375e9f3e333da9a23e1177b5a5c3dc22334b320a8f8704a007b"
       ],
       "exact_member_count": 1,
+      "structural_family_id": "44c20df9d3ea221cea580161432a567c20775bafbe2f87502fe1018e43dafd1d",
+      "structural_formula": "E_0(s)=-\\sqrt2-\\sqrt{##\\sqrt{#+s}}-\\sqrt{##\\sqrt{#-s}}"
+    },
+    {
+      "exact_formula_ids": [
+        "46746c6bc5a3973023f2323a7d386ec1dfde2435664ee228240d50f6ab398fe5",
+        "a25a69e4097821a8561515efab783113085a876ae69e9e641201415e2415a1da"
+      ],
+      "exact_member_count": 2,
       "structural_family_id": "5d6db03f511833a41c68796358bbdf74c2d389535f5b839e242e78ecdfa0696f",
       "structural_formula": "E_0=#"
     },
@@ -1972494,6 +1973159,14 @@
       "exact_member_count": 1,
       "structural_family_id": "dc2bc272ca13846b6cbdf150422bfbe821f8e992c313ee2c1fc4fe604c11ad7e",
       "structural_formula": "Forall`choose(#,#)=#`distinctextensions,screen9up-typeYukawasand7#coloredvectorlikemasscouplings,usingtheoriginal^fiveFIpositivitydirectionsplusthreeunrestrictedrealoriginal-supportchargedirections^andtwonewrealnonnegativesingletpowers"
+    },
+    {
+      "exact_formula_ids": [
+        "06d74398bb1087e02b4832b379235401ba0937c2a0d7eea7b7609be1879a5626"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "01b60d5839ea0aabf9601cc20e1bae3b04c271c6734f4ebfcfb12db81d4299bf",
+      "structural_formula": "ForallfourV,thesampledpointwiseZ2-minus-optimizedfree-energydifferenceswerealsopositiveatbeta=#,#and8(thoughsomeatsmallbetaareonlyorder1#^#).^Pointwisepositivedifferencesdonotproveagloballypreferredfinite-temperatureflux^.Thenewfullynumericallyevaluatedphasepointsclusteraround(#pi/#,#pi/#)anditsphase-swappedpartner.Anyconclusionaboutspontaneoustime-reversal/CPbreakingordynamical-gaugevacuumremainsunwarranted"
     },
     {
       "exact_formula_ids": [
@@ -2015671,6 +2016344,14 @@
     },
     {
       "exact_formula_ids": [
+        "36690c5534459d6f55516d7f99265ef2ff65d049811079ef547ce0c48ad63c23"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a2fa62a67040a69e281812df3376c746015e9f88c716281385a6e687f3f8f764",
+      "structural_formula": "Since\\(g(t)=\\sqrt{##\\sqrtt}\\)isstrictlyconcave,\\(g(#+s)+g(#-s)\\)ismaximized^uniquely^at\\(s=#\\).Thelatterforcesthethreearmphasorstobethecuberootsofunity.Thus,modulo\\(#\\pi\\),the^onlyglobalfree-fermionfluxminimizingpairs^are"
+    },
+    {
+      "exact_formula_ids": [
         "e28bd304e62726dcb62b05f13b1ad36bdfe555c806f2cbd0fe2bf7668445aa59"
       ],
       "exact_member_count": 1,
@@ -2022868,6 +2023549,14 @@
     },
     {
       "exact_formula_ids": [
+        "17db34d84548f38c379dfa429d1feb02c7a77924bcaf77209b0adca03c06d099"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "caabeb4d879d784ce5d6eaa98e35145eb6372439be001d134f40b7b09206fbb1",
+      "structural_formula": "Theactuallocal2DcellularsquarecomplexontwonativeLevigraphshas(#,#,#)cellcounts,verifies\\(d_1d_0=#\\)exactly,andhasKunnethBetti(#,#,#)andEuler\u2013Kahler-Diracindex6#.Itis*not*afour-dimensionalspinlattice.ThedistinctclosedW3#-squaredsurfaceproducthasEulerindex2#anduntwisted^spin-Diracindexzero^.Thisremainsanunsolved4Dchiral-fermionconstruction,andnofalsechiralityisinferred"
+    },
+    {
+      "exact_formula_ids": [
         "a0a0013e028312309c8a9da449de85441e717a8cbbdb822a66807422826651c9"
       ],
       "exact_member_count": 1,
@@ -2026721,6 +2027410,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f1b8e2515ae66244ae320578462faa37c4f2b0e3bc41a367cae35a0e43362704",
       "structural_formula": "Thesynchronousstateislocallyasymptoticallystablemoduloglobalphaseexactlywhen`Kcos\u03b1>#`.Therelaxation-timeratiois"
+    },
+    {
+      "exact_formula_ids": [
+        "3d63df6655d02cfe7bb87c556729e338d315f582f6bb7395ed5e841512f9aa69"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "640fa83f9052264828177313f5444c9525e79ae9572f164e1598bcc5770ad270",
+      "structural_formula": "Theta(#,#,#)#\u00b0theorem.PrintorbitclassificationsandV>#"
     },
     {
       "exact_formula_ids": [
@@ -2030669,6 +2031366,14 @@
       "exact_member_count": 1,
       "structural_family_id": "09c1a8c7975a3223afe16ce0e7ac60a47de666886b1e75ef3c7754c2794f4725",
       "structural_formula": "UsingonlytheLevi-incidence-derived1#-dimensionalactionmatrices,solveforequivariantalternatingproducts`Lambda^#Q1#->Q1#"
+    },
+    {
+      "exact_formula_ids": [
+        "b1940c53ccef173cb3dbd84d9c9bf83a3819a57cd84e2de9b6463d3a14c263c0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bfd7d0a3eca06da75957dd60a9a35d27bfc5868b1b259fc58e11f6aa82fe28d4",
+      "structural_formula": "Usingthe*full4#-dimensionalcanonicalN=#many-bodymatrix*atallcontinuousfluxchoices,four-starttwo-dimensionalnumericallocalminimizationselectspointsclosetotheexactfree1#-degreepatternforV=#,#,#.Separatecomplete4#-levelfinite-temperaturetracesshowpositivefree-energydifferencesrelativetonontrivialZ2flux,atselectedbetavalues.Thefollowingare^numericalfinite-modelcomparisons^,notaglobalcontinuousinteractingtheorem"
     },
     {
       "exact_formula_ids": [
@@ -2047304,6 +2048009,14 @@
     },
     {
       "exact_formula_ids": [
+        "43888d875916dc6f5e32bb2e5889e711c6ea25bfbe78815662c4568a474217b0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d5a5ed6f2c3aebba956d265725f648762aa22c00f1f06e266a79649bb5d8ed33",
+      "structural_formula": "\\boxed{(\\phi_1,\\phi_2)=(#\\pi/#,#\\pi/#)\\\\\\text{or}\\\\(#\\pi/#,#\\pi/#)}"
+    },
+    {
+      "exact_formula_ids": [
         "a8493bf0700110426430e627fbb69dfb6ebbe295f0a0252042f93cecb08982a8"
       ],
       "exact_member_count": 1,
@@ -2047622,6 +2048335,14 @@
       "exact_member_count": 1,
       "structural_family_id": "18ba1b64e3238c99afe27c75a50367f829b4d5ed201db96e34ab0eda6c055c3c",
       "structural_formula": "\\boxed{E_1+E_3\\text{isa}#=#\\cdot|W(G_2)|\\text{conjugate-rootchannel.}}"
+    },
+    {
+      "exact_formula_ids": [
+        "c7f33b58be529b5c24dabcb9a2956706d9c44c3e359b44c8b7507028ba2e136d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f5ede7cb55351139e1f8a64b3638e5b3f9dd76a6a94d436c8d2540abf2338c7f",
+      "structural_formula": "\\boxed{E_1\\le3#/#=#}"
     },
     {
       "exact_formula_ids": [
@@ -2050726,6 +2051447,14 @@
       "exact_member_count": 1,
       "structural_family_id": "76a514efaf467f8433fa8cb8744c8ebde5693b3f0bf4a8077182844a9634b3b2",
       "structural_formula": "\\boxed{\\text{ambientquadraticcode}\\quad+\\quad\\text{selectablesymplecticpolarity}\\quad=\\quad\\text{reconfigurableW3#routingoverlay}.}"
+    },
+    {
+      "exact_formula_ids": [
+        "f8e518c928bc334d96ab1af260403cc71ee58195ad54d6132bf87a68d4df6f55"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "19234a8ffa124aab5d4aef03e1558f501422c88e6e3c00b48a72f6370ad15626",
+      "structural_formula": "\\boxed{\\text{atleast2#pairwisedistinctPGSp(#,#)orbits}},\\qquad\\boxed{\\text{atleast}#\\cdot5#=#\\text{distinctexactcovers}}"
     },
     {
       "exact_formula_ids": [
@@ -2053840,6 +2054569,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2eb4fce7a6f3744fc1caf8aa6a67a0746f5376d7685540f47cf93b35a8e109aa",
       "structural_formula": "\\det(\\Lambda_C)=#^{##\\cdot2#}=#"
+    },
+    {
+      "exact_formula_ids": [
+        "275be8a65a9eb966eb1de17180010f620c9378e182f8e169bf65612071aa8324"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "85c5468cdd601642a025b854213c2c927505dac0c6911855babb69a8e606caa7",
+      "structural_formula": "\\det(\\lambdaI-TT^\\dagger)=(\\lambda-#)\\big[(\\lambda^##\\lambda+#)^#-s^#\\big]"
     },
     {
       "exact_formula_ids": [
@@ -2091604,6 +2092341,15 @@
     },
     {
       "exact_formula_ids": [
+        "7df61e91e9fa8e968b275c2a7d7fb312565a5070b0a6d2dd6caccb3db6a4571d",
+        "422f66cd8d70c3e09b953163a89339ffbc12f7e7295f47fe1143e167cfc55dda"
+      ],
+      "exact_member_count": 2,
+      "structural_family_id": "e10953c90addc6f86492e383fe9441dbf2e884efde5224c0a678c57b4b061325",
+      "structural_formula": "assertabs(trials[#][\"arm_sum_modulus\"])<#"
+    },
+    {
+      "exact_formula_ids": [
         "27c0fd5687f884d1d81684187b616488d72aa96952c4418dd1b69d34f84d6904"
       ],
       "exact_member_count": 1,
@@ -2122807,6 +2123553,14 @@
     },
     {
       "exact_formula_ids": [
+        "89d437d84ea79816ccac0c2b5f2d3a9bd969f106f2dcdcb14238a9558301db09"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4ccd3c38c6855480b8b66cd5eb2a733e5deaf5fa423b707f7e9a65e607447001",
+      "structural_formula": "d_1d_0=#"
+    },
+    {
+      "exact_formula_ids": [
         "4fcc3cd88bd80c21558e03b563c4c719f40c4988bea46c5c069d8c45ddb82f31"
       ],
       "exact_member_count": 1,
@@ -2146660,6 +2147414,14 @@
       "exact_member_count": 1,
       "structural_family_id": "92ac640a631b523e7682961b44efbe198bc4e246c6a0a9ec8c0ab05f581d37b1",
       "structural_formula": "g(L)=L^#g_0"
+    },
+    {
+      "exact_formula_ids": [
+        "779cfe54dd3e56aca8d75ddc781105664c2b1b2c5fd65246d967b94ca033f69c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7e2e872ab74012807ac24b364cf37a0d49a6f57f52868acae897ec2fe75486cf",
+      "structural_formula": "g(t)=\\sqrt{##\\sqrtt}"
     },
     {
       "exact_formula_ids": [
@@ -2244485,12 +2245247,13 @@
       "exact_formula_ids": [
         "23d6f9b37783d50d251dee8726fbde989cee1806ff043ac2a0814a72e3b96441",
         "ee920a788f0e3a12d234ddf4d2b13ed28b837a1c419778541ffe4112604eab0d",
+        "b10f271a7654500776598db2b7e193f2240a5449c3eb1c87a43a7de6a1e15fd2",
         "f1c25984f5cc191d37443ae0c5898e7f725aa7707977638afffa831992476415",
         "6eb0a8e9ea060b2e3e2e34017ce9ee344b95eae4f0db2bf50e777f1676cb3203",
         "e067dad14d8022341d35d6b488bfb855d85ec68661b192bea68fa421a2901523",
         "95f77116bac4f1b994619cafba954fcf1584984262ca3ca6b457ced2d40f6cd8"
       ],
-      "exact_member_count": 6,
+      "exact_member_count": 7,
       "structural_family_id": "290c681dc72898a5e3aa0e52a8b30628a5613bff15feebf616b646398ecf98d0",
       "structural_formula": "s=#"
     },
@@ -2244856,6 +2245619,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b099e40b58d0baae7358eac8d1e46b7e89a8d5d24ccabfab2567f9ebc6b0c683",
       "structural_formula": "s={-}(q{+}#)"
+    },
+    {
+      "exact_formula_ids": [
+        "dc41a8f36a26246bea8b6519a0b25508ba050a708497de4683db392f8bead41a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "da8e15add42e934e3e47fc0521f28589f4ad8ab9b04a87998cfb9e5701cb12ee",
+      "structural_formula": "s=|#+e^{i\\phi_1}+e^{i\\phi_2}|\\in[#,#]"
     },
     {
       "exact_formula_ids": [
@@ -2289849,20 +2290620,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88136837,
-    "exact_formula_families": 61795,
-    "files_scanned": 12097,
-    "formula_occurrences": 67775,
+    "bytes_scanned": 88157263,
+    "exact_formula_families": 61816,
+    "files_scanned": 12100,
+    "formula_occurrences": 67796,
     "status_occurrences": {
-      "certified_or_theorem": 4990,
-      "killed_or_retracted": 1651,
+      "certified_or_theorem": 4993,
+      "killed_or_retracted": 1653,
       "open_or_conditional": 2265,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53601
+      "unclassified": 53617
     },
-    "structural_families": 60157
+    "structural_families": 60175
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "d4d5c7c98732de546e33a5e9b968fd9018df96510f4aa706d72e409c04085ffe"
+  "universe_sha256": "f375bcdddcac75fb19aec7a3e28964295d70685fe012d4a3b0043135f163a5ef"
 }
