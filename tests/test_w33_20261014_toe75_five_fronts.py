@@ -48,6 +48,7 @@ def test_continuous_interacting_static_U1_local_minima_and_finite_temp():
     assert c["full_fixed_N_manybody_dimension"]==462
     assert len(c["interaction_scans"])==4
     assert c["theta_graph_three_nontrivial_Z2_sectors_exactly_isospectral"]
+    assert all(len(r["beta_resolved_2D_local_best_minus_Z2_free_energy_advantage"])==4 for r in c["interaction_scans"])
     for r in c["interaction_scans"]:
         assert len(r["two_dimensional_multistart_runs"])==4
         assert len(r["beta_resolved_boundary_optimized_minus_Z2_free_energy_advantage"])==4
@@ -63,3 +64,13 @@ def test_exact_native_theta_all_torus_free_120_degree_global_minimum():
     assert len(c["eight_direct_manybody_spectral_cross_checks"])==8
     assert 0.02069<c["global_120_advantage_below_best_Z2"]<0.02070
     assert "ONLY" in c["scope"]
+
+from w33_20261014_toe75_cover_orbit_expansion import certificate as expanded_orbits
+
+def test_all_twenty_extra_ground_cover_candidates_full_group_orbits():
+    c=expanded_orbits()
+    assert c["status"]=="PASS_TOE75_COMPLETE_ORBIT_CLASSIFICATION_OF_20_NEW_NEIGHBORS"
+    assert c["number_of_new_candidates"]==20
+    assert c["unclassified_candidates_from_initial_20"]==0
+    assert c["proved_total_distinct_cover_orbits_at_least"]>=8
+    assert c["proved_total_distinct_20_cycle_cover_states_at_least"]>=414720

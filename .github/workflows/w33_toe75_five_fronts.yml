@@ -33,6 +33,7 @@ jobs:
           python analysis/w33_20261014_toe75_structural.py
           python analysis/w33_20261014_toe75_continuous_interacting.py
           python analysis/w33_20261014_toe75_exact_120_flux.py
+          python analysis/w33_20261014_toe75_cover_orbit_expansion.py
       - name: Produce audited cross-front numerical/theorem summary
         run: python analysis/w33_20261014_toe75_summary.py
       - name: Publish reproducibility artifacts

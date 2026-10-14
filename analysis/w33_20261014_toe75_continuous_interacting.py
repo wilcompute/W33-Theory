@@ -58,6 +58,7 @@ def certificate():
         # 1D-optimized flux and a symmetry-equivalent Z2 control.
         spectra={}
         for name,angles in (("continuum_boundary_min",best1),
+                            ("local_2D_best",np.asarray(best["phase_pi_units"])*np.pi),
                             ("nontrivial_Z2",(np.pi,0))):
             full=np.linalg.eigvalsh(H_phi(p,phases_for_chords(p,angles),V).toarray())
             spectra[name]={str(beta):float(-logsumexp(-beta*full)/beta)
@@ -65,6 +66,9 @@ def certificate():
         thermal={str(beta):spectra["nontrivial_Z2"][str(beta)]-
                  spectra["continuum_boundary_min"][str(beta)]
                  for beta in (.5,1.,2.,8.)}
+        thermal_local={str(beta):spectra["nontrivial_Z2"][str(beta)]-
+                       spectra["local_2D_best"][str(beta)]
+                       for beta in (.5,1.,2.,8.)}
         if V==0.:
             assert abs(baseline-one.fun)<1e-8
         else:
@@ -81,6 +85,7 @@ def certificate():
           "best_local_advantage_over_Z2":float(baseline-best["energy"]),
           "finite_inverse_temperature_beta":[.5,1.,2.,8.],
           "beta_resolved_boundary_optimized_minus_Z2_free_energy_advantage":thermal,
+          "beta_resolved_2D_local_best_minus_Z2_free_energy_advantage":thermal_local,
           "eigensolver_matrix_evaluation_count":calls[0]})
     return {"status":"PASS_TOE75_CONTINUOUS_INTERACTING_U1_FINITE_T_CONTROLS",
        "native_sites_edges_fermions":[11,12,5],

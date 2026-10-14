@@ -16,6 +16,8 @@ def main():
     u=read("continuous_interacting")
     t=read("exact_120_flux")
     q=g["quantum_geometry"]
+    all_orbits=read("all_new_neighbor_orbits")
+    assert all_orbits["number_of_new_candidates"]==20
     assert q["candidate_neighbors_outside_all_seven_orbits"]>=1
     assert q["new_orbit_information"]["one_additional_orbit_size"]>0
     assert len(u["interaction_scans"])==4
@@ -29,11 +31,17 @@ def main():
           "2d_local_advantage_below_Z2":z["best_local_advantage_over_Z2"],
           "1d_boundary_phase_pi_units":z["one_dimensional_continuous_optimizer_phase_pi_units"],
           "1d_boundary_advantage":z["boundary_optimized_advantage_over_Z2"],
-          "finite_beta_boundary_advantages":z["beta_resolved_boundary_optimized_minus_Z2_free_energy_advantage"]})
+          "finite_beta_boundary_advantages":z["beta_resolved_boundary_optimized_minus_Z2_free_energy_advantage"],
+          "finite_beta_local_2D_advantages":z["beta_resolved_2D_local_best_minus_Z2_free_energy_advantage"]})
     summary={
       "status":"PASS_TOE75_VERIFIED_QUANTUM_AND_CHIRAL_120_DISCOVERY",
       "additional_cover_neighbors_outside_seven_previous_orbits":q["candidate_neighbors_outside_all_seven_orbits"],
       "fully_enumerated_one_new_orbit":q["new_orbit_information"],
+      "all_twenty_neighbor_orbit_classification":{
+        "extra_orbits":all_orbits["new_distinct_candidate_orbits"],
+        "proved_total_orbits":all_orbits["proved_total_distinct_cover_orbits_at_least"],
+        "proved_total_cover_states":all_orbits["proved_total_distinct_20_cycle_cover_states_at_least"],
+        "all_extra_orbit_details":all_orbits["new_orbits"]},
       "other_20_neighbors_still_unclassified":q["not_yet_classified_candidate_remainder"],
       "complete_PGSp_orbits_previously_known":7,
       "native_theta_V0_exact_global_chiral_120":{
@@ -45,12 +53,14 @@ def main():
     (ROOT/"data/w33_20261014_toe75_verified_summary.json").write_text(
       json.dumps(summary,indent=2)+"\n")
     print(summary["status"])
+    print("ALL_ORBITS",json.dumps(summary["all_twenty_neighbor_orbit_classification"]))
     print("QUANTUM",json.dumps(summary["fully_enumerated_one_new_orbit"]),
           "unclassified_remainder",summary["other_20_neighbors_still_unclassified"])
     print("FREE120",summary["native_theta_V0_exact_global_chiral_120"])
     for row in rows:
         print("MATTER",row["V"],"local",row["2d_local_phase_pi_units"],
               "gain",row["2d_local_advantage_below_Z2"],
-              "thermal_boundary_advantages",row["finite_beta_boundary_advantages"])
+              "thermal_boundary_advantages",row["finite_beta_boundary_advantages"],
+              "thermal_2D_advantages",row["finite_beta_local_2D_advantages"])
 
 if __name__=="__main__":main()
