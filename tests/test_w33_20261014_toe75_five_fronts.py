@@ -52,3 +52,14 @@ def test_continuous_interacting_static_U1_local_minima_and_finite_temp():
         assert len(r["two_dimensional_multistart_runs"])==4
         assert len(r["beta_resolved_boundary_optimized_minus_Z2_free_energy_advantage"])==4
         assert r["best_local_two_dimensional_energy"]<=r["one_dimensional_continuous_min_energy"]+1e-7
+
+from w33_20261014_toe75_exact_120_flux import certificate as theta120
+
+def test_exact_native_theta_all_torus_free_120_degree_global_minimum():
+    c=theta120()
+    assert c["status"]=="PASS_TOE75_EXACT_GLOBAL_120_DEGREE_FLUX"
+    assert c["single_particle_bipartition"]==[5,6]
+    assert c["global_minimum_phase_pairs_pi_units"]==[[2/3,4/3],[4/3,2/3]]
+    assert len(c["eight_direct_manybody_spectral_cross_checks"])==8
+    assert 0.02069<c["global_120_advantage_below_best_Z2"]<0.02070
+    assert "ONLY" in c["scope"]
