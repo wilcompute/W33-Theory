@@ -1,0 +1,36 @@
+name: TOE78 W33 all-wedge opposite vertex H27 bridge
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe78_wedge_opposites.py'
+      - 'tests/test_w33_20261014_toe78_wedge_opposites.py'
+      - '.github/workflows/w33_toe78_wedge_opposites.yml'
+  workflow_dispatch:
+jobs:
+  prove-native-27-opposite-bijection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Check all 480 flag wedges and 12960 midpoint incidence relations
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe78_wedge_opposites.py
+      - name: Freeze canonical octagon-to-opposite-vertex map
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe78_wedge_opposites.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe78-wedge-opposite-vertex-certificate
+          path: data/w33_20261014_toe78_wedge_27_opposites.json
+          retention-days: 60
