@@ -1,0 +1,214 @@
+{
+  "status": "PASS_TOE68_FIVE_INDEPENDENT_FRONTIERS",
+  "date": "2026-10-14",
+  "methods": "Exact combinatorial/integer arguments and independently executed server-side numerical implementations; sources in this commit regenerate the findings. No CI result is claimed by this certificate.",
+  "disorder": {
+    "epsilon": "245/1000",
+    "high_edge_indices": [
+      30,
+      31,
+      49,
+      51,
+      59,
+      62,
+      63,
+      82,
+      83,
+      93,
+      95,
+      118,
+      119,
+      138,
+      139,
+      142,
+      143
+    ],
+    "phase_direction": [
+      0,
+      -1,
+      1
+    ],
+    "polynomial_coefficients": [
+      0,
+      0,
+      72,
+      46,
+      34,
+      0,
+      0,
+      0,
+      -12
+    ],
+    "exact_integer_rayleigh_numerator": "-278181245315125293750000",
+    "exact_smallest_single_flip_increase": "52315612734624060937500",
+    "all_160_single_flip_changes_strictly_positive": true,
+    "scope": "Fixed-direction rational native edge-product 160-bit local optimum only; global minimax open."
+  },
+  "gauge_octagon": {
+    "native_vertices": [
+      0,
+      40,
+      4,
+      44,
+      1,
+      45,
+      13,
+      41
+    ],
+    "edge_ids": [
+      0,
+      16,
+      17,
+      4,
+      5,
+      53,
+      52,
+      1
+    ],
+    "parameters": {
+      "g": 0.9,
+      "kappa": 0.6,
+      "eta": 0.25
+    },
+    "Gauss_constraints": "n[(j-1)%8]-n[j]+occupancy[j]-background[j]=0 exact for all represented configurations",
+    "runs": [
+      {
+        "L": 1,
+        "dimension": 210,
+        "energy": -2.133753999733007,
+        "gap": 0.6709906129823491,
+        "flux_boundary_probability": 0.16009463856915468
+      },
+      {
+        "L": 2,
+        "dimension": 350,
+        "energy": -2.1345423000162325,
+        "gap": 0.6705681103459831,
+        "flux_boundary_probability": 0.0001498664583313032
+      },
+      {
+        "L": 3,
+        "dimension": 490,
+        "energy": -2.1345424782977696,
+        "gap": 0.6705679753285487,
+        "flux_boundary_probability": 1.1336978341195875e-8
+      }
+    ],
+    "no_magnetic_L2_energy": -2.380928893184873,
+    "scope": "Dynamical gauge fermion octagon Galerkin experiment, numerical, no rigorous L=infinity error."
+  },
+  "geometry": {
+    "vertices": 80,
+    "degree": 4,
+    "pairings_per_vertex": 3,
+    "exact_symplectic_equivariance_checks": 400,
+    "no_individual_full_PSp_invariant_pairing": true,
+    "canonical_three_element_fiber_equivariant": true,
+    "scope": "Equivariant family of local geometry only, not a physical spacetime."
+  },
+  "overlap_positive_control": {
+    "periodic_lattice": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "Wilson_kernel_dimension": 324,
+    "Wilson_mass": 1,
+    "two_plane_fluxes": [
+      {
+        "m": 0,
+        "n": 0,
+        "index": 0,
+        "gap": 0.9999999999999867
+      },
+      {
+        "m": 1,
+        "n": 0,
+        "index": 0,
+        "gap": 0.6384828637092208
+      },
+      {
+        "m": 0,
+        "n": 1,
+        "index": 0,
+        "gap": 0.6384828637092264
+      },
+      {
+        "m": 1,
+        "n": 1,
+        "index": 1,
+        "gap": 0.34550978108790115
+      },
+      {
+        "m": 1,
+        "n": -1,
+        "index": -1,
+        "gap": 0.34550978108789693
+      }
+    ],
+    "known_five_chiral_charge_example": [
+      1,
+      5,
+      -7,
+      -8,
+      9
+    ],
+    "sum_charge": 0,
+    "sum_cubed_charge": 0,
+    "scope": "Non-native T4 spectral signature positive control, not W33 index or anomaly-free W33 chirality."
+  },
+  "zero_modes": {
+    "canonical_perfect_matching_edge_indices": [
+      0,
+      4,
+      8,
+      13,
+      19,
+      21,
+      25,
+      29,
+      33,
+      39,
+      43,
+      45,
+      51,
+      52,
+      59,
+      63,
+      64,
+      68,
+      73,
+      78,
+      81,
+      85,
+      89,
+      93,
+      96,
+      101,
+      104,
+      108,
+      114,
+      118,
+      123,
+      124,
+      131,
+      134,
+      136,
+      140,
+      144,
+      151,
+      155,
+      159
+    ],
+    "determinant_polynomial_top_coefficient": 1,
+    "smallest_singular_values_at_pi": {
+      "1.0": 1.5459924374050486e-17,
+      "1.0001": 4.6614759154766e-7,
+      "1.001": 0.000005029872772909196,
+      "1.01": 0.00008735702458182149
+    },
+    "theorem": "Perfect-matching rescaling determinant polynomial is degree 40 with top coefficient +1; arbitrarily small generic positive matching perturbations produce B full rank at fixed pi.",
+    "scope": "Finite free one-particle gap not an interacting physical mass gap."
+  }
+}
