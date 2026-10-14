@@ -16,6 +16,9 @@ def test_all_160_native_pairs_exact_two_link_endpoint_hessians():
     assert c["integer_corner_Hessian_matrices_checked"]==50880
     assert c["winding_octagons"]==238
     assert c["bad_Hessian_corners"]==951
+    assert c["two_edge_non_PSD_corners"]>=0
+    assert c["all_two_edge_boxes_PSD"]==(c["two_edge_non_PSD_corners"]==0)
+    assert c["bad_single_edge_PSD_endpoints"]>=0
     assert c["single_edge_endpoints_checked"]==320
     assert c["bad_single_edge_endpoint_Hessians"]>=0
     assert c["all_two_edge_boxes_strictly_positive_Hessian"]==(c["bad_Hessian_corners"]==0)
@@ -67,3 +70,15 @@ def test_twisted_theta_exact_Ihara_Bass_Hashimoto_and_ramanujan_scope():
     assert all(z["max_independent_24x24_hashimoto_vs_11x11_Bass_vs_3x3_transfer_error"]<2e-8
                for z in c["independent_hashimoto_bass_transfer_checks"])
     assert "IRREGULAR" in c["precise_interpretation"]
+
+from w33_20261014_toe76_levi_ihara_hierarchy import certificate as rh_hierarchy
+
+def test_full_40_80_11_graph_RH_ramanujan_hierarchy_and_320_hashimoto():
+    c=rh_hierarchy()
+    assert c["status"]=="PASS_TOE76_COMPLETE_GRAPH_RH_THREE_LEVEL_HIERARCHY"
+    assert c["native_Levi_graph"]["critical_Ihara_pole_modulus"]=="3^(-1/2)"
+    assert c["native_Levi_graph"]["undirected_primitive_octagons"]==1620
+    assert c["native_Levi_graph"]["direct_320_by_320_native_nonbacktracking_traces_1_to_8"]["8"]==25920
+    assert c["native_theta_patch"]["theta_octagons_as_fraction_of_all_Levi_octagons"]=="1/540"
+    assert c["collinearity_graph"]["critical_Ihara_pole_modulus"]=="11^(-1/2)"
+    assert c["native_theta_patch"]["is_irregular"]

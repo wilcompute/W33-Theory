@@ -24,7 +24,7 @@ jobs:
           OMP_NUM_THREADS: '1'
           PYTHONHASHSEED: '0'
         run: python -m pytest -q tests/test_w33_20261014_toe76_six_fronts.py
-      - name: Regenerate three independent research certificates
+      - name: Regenerate four independent research certificates
         env:
           OPENBLAS_NUM_THREADS: '1'
           OMP_NUM_THREADS: '1'
@@ -33,6 +33,7 @@ jobs:
           python analysis/w33_20261014_toe76_theta_twisted_ihara.py
           python analysis/w33_20261014_toe76_four_fronts.py
           python analysis/w33_20261014_toe76_flux_currents.py
+          python analysis/w33_20261014_toe76_levi_ihara_hierarchy.py
       - name: Verify quantitative claims and freeze concise evidence
         run: python analysis/w33_20261014_toe76_summary.py
       - name: Upload exact and numerical evidence

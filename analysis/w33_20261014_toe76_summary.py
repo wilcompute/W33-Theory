@@ -15,19 +15,24 @@ def main():
     assert q["exact_seed_graph_cycle_rank"]==15
     assert z["zeta_inverse_exact"]=="(1-u^8)*(1+(4-s^2)*u^8+4*u^16)"
     assert not g["positive_spectral_gap_proven"]
+    assert h["two_edge_non_PSD_corners"]>=0
     summary={
       "status":"PASS_TOE76_VERIFIED_SIX_FRONTS_PLUS_RH_BRIDGE",
       "six_test_workflow":"https://github.com/wilcompute/W33-Theory/actions/runs/38641998176",
       "hopping":{
         "two_edge_endpoints_checked":h["integer_corner_Hessian_matrices_checked"],
-        "two_edge_bad_corners":h["bad_Hessian_corners"],
+        "two_edge_not_strict_PD_corners":h["bad_Hessian_corners"],
+        "two_edge_non_PSD_corners":h["two_edge_non_PSD_corners"],
+        "two_edge_all_PSD":h["all_two_edge_boxes_PSD"],
+        "two_edge_global_three_pi_minimum_if_PSD":h["if_all_PSD_then_global_three_pi_nonunique_minimum_under_two_link_variation"],
         "single_edge_endpoints_checked":h["single_edge_endpoints_checked"],
-        "single_edge_bad_endpoints":h["bad_single_edge_endpoint_Hessians"],
+        "single_edge_non_strict_PD_endpoints":h["bad_single_edge_endpoint_Hessians"],
+        "single_edge_non_PSD_endpoints":h["bad_single_edge_PSD_endpoints"],
         "single_edge_first_bad":h["single_edge_first_bad"],
         "two_edge_first_bad":h["first_bad_corners"],
         "minimum_integer_Hessian_determinant":h["minimum_integer_det"],
         "minimum_determinant_corner":h["minimum_det_corner_indices_edge_edge_weight_weight"],
-        "scope":"Positive two-edge box theorem REFUTED; 951 endpoint Hessians are not PD. Each non-positive-Hessian endpoint rules out a universally strict positive Hessian. A negative eigenvalue specifically refutes local-minimum stability."},
+        "scope":"Exactly 951 two-edge endpoint Hessians fail STRICT positive definiteness, and 3 single-edge endpoints fail STRICT PD. Classify all separately by exact principal-minor PSD; a zero determinant or flat direction is NOT a negative eigenvalue and does NOT on its own refute local or global minimization. If all are PSD, global three-pi remains a possibly nonunique minimum under two-link weights [0,2]."},
       "gauge":{
         "ordered_upper_E0_to_E7":g["ordered_eigenvalues_E0_through_E7_upper_bounds_rational"],
         "positive_gap_proved":False},

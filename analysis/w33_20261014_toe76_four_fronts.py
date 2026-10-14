@@ -20,6 +20,14 @@ def determinants_positive(M):
     assert b==d and c==g and f==h
     return a>0 and a*e-b*b>0 and (a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g))>0
 
+def positive_semidefinite_exact(M):
+    """All seven principal minors (1x1, 2x2, and 3x3) are >= 0."""
+    a,b,c=map(int,M[0]);d,e,f=map(int,M[1]);g,h,i=map(int,M[2])
+    assert (b,c,f)==(d,g,h)
+    minors=[a,e,i,a*e-b*b,a*i-c*c,e*i-f*f,
+       a*(e*i-f*h)-b*(d*i-f*g)+c*(d*h-e*g)]
+    return all(x>=0 for x in minors)
+
 def two_edge_robustness():
     edges,adj,cycles=octagons()
     N=len(edges); assert N==160
@@ -44,11 +52,15 @@ def two_edge_robustness():
     # One-edge control: every independent link is checked at both ends
     # of [0,2] with EXACT integer Sylvester tests.
     single_bad=[]
+    single_non_psd=[]
     for e in range(N):
         for delta in (-1,1):
-            if not determinants_positive(H0+delta*S[e]):
+            Hsingle=H0+delta*S[e]
+            if not determinants_positive(Hsingle):
                 single_bad.append([int(e),int(delta+1)])
-    n=0;minimum_det=10**30;min_corner=None;fails=[]
+            if not positive_semidefinite_exact(Hsingle):
+                single_non_psd.append([int(e),int(delta+1)])
+    n=0;minimum_det=10**30;min_corner=None;fails=[];not_psd=[]
     # Allow ANY pair of edges to vary independently in [0,2].
     # H is multi-affine in the two independent weights; consequently it
     # is a convex combination of its four 0/2 endpoints.
@@ -65,12 +77,15 @@ def two_edge_robustness():
                 if det<minimum_det:minimum_det=det;min_corner=[e,f,x+1,y+1]
                 if not determinants_positive(H):
                     fails.append([e,f,x+1,y+1])
+                if not positive_semidefinite_exact(H):
+                    not_psd.append([e,f,x+1,y+1])
     # The signed-square identity of TOE64 gives global unique 3pi
     # if H ≻ 0 and weighted mixed-winding Fourier coefficients ≥0.
     # The latter holds for positive edge products; zero-weight edges
     # can only remove terms, not make the coefficients negative.
     # Thus if every corner PSD then the entire two-link box has H≻0.
     passed=len(fails)==0
+    semidefinite_all=len(not_psd)==0
     return {
       "status":"PASS_TOE76_EXACT_TWO_EDGE_CORNER_CENSUS",
       "native_links":N,"winding_octagons":numw,
@@ -80,15 +95,21 @@ def two_edge_robustness():
       "minimum_integer_det":minimum_det,
       "minimum_det_corner_indices_edge_edge_weight_weight":min_corner,
       "single_edge_endpoints_checked":2*N,
+      "bad_single_edge_PSD_endpoints":len(single_non_psd),
+      "single_edge_PSD_failure_witnesses":single_non_psd[:5],
       "bad_single_edge_endpoint_Hessians":len(single_bad),
       "single_edge_first_bad":single_bad[:10],
       "if_no_single_bad_then_all_single_edge_weights_0_to_2_strictly_stable":len(single_bad)==0,
       "bad_Hessian_corners":len(fails),
+      "two_edge_non_PSD_corners":len(not_psd),
+      "two_edge_non_PSD_first_witnesses":not_psd[:5],
+      "all_two_edge_boxes_PSD":semidefinite_all,
+      "if_all_PSD_then_global_three_pi_nonunique_minimum_under_two_link_variation":semidefinite_all,
       "first_bad_corners":fails[:5],
       "all_two_edge_boxes_strictly_positive_Hessian":passed,
       "if_pass_then_global_3pi_under_two_link_weight_variation":
         passed,
-      "proof_scope":"The native 3x3 leading-beta^7 holonomy Hessian is multi-affine in any pair of independent edge weights; endpoint Hessian matrices at w=0 or 2 are exact integers. Sylvester positivity of all 4*C(160,2) corners gives strict Hessian positivity for any TWO edge weights in [0,2] with all others exactly 1. TOE64 signed-square identity with nonnegative mixed Fourier coefficients then gives the unique GLOBAL 3pi minimum for that restricted disorder class. Does NOT imply uniform 160-link disorder tolerance beyond prior bound."}
+      "proof_scope":"The native leading-beta^7 Hessian is multiaffine in any two edge weights; endpoint integer Hessians at w=0 or 2 are independently classified as PD, singular-PSD, or non-PSD using all exact principal minors. If ALL corners are PSD then convex interpolation makes every interior two-link Hessian PSD. TOE64's exact signed-square decomposition with nonnegative mixed Fourier coefficients yields a GLOBAL 3pi potential minimum (possibly nonunique at singular endpoints). Loss of strict PD alone NEVER proves an instability or lower competing potential. The full 160-link disorder threshold remains open."}
 
 def multiple_eigenlevel_bounds():
     p=patch(); L=3
