@@ -1,0 +1,38 @@
+name: TOE80 exact native W33 octagon 72 E6 Weyl roots
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe80_native_octagon_e6_roots.py'
+      - 'tests/test_w33_20261014_toe80_native_octagon_e6_roots.py'
+      - '.github/workflows/w33_toe80_native_e6_roots.yml'
+  workflow_dispatch:
+jobs:
+  native-exact-e6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact finite mathematics runtime
+        run: python -m pip install numpy scipy networkx pytest
+      - name: Test 72 Weyl roots, exact Cartan, reflection closure, and H27 center split
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe80_native_octagon_e6_roots.py
+      - name: Regenerate rational root-system and central-character certificate
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe80_native_octagon_e6_roots.py
+      - name: Upload E6 integer root-system evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: toe80-native-octagon-exact-e6-72-roots
+          path: data/w33_20261014_toe80_native_octagon_e6_roots.json
+          retention-days: 60
