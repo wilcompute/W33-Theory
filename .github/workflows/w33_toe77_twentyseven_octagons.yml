@@ -1,0 +1,36 @@
+name: TOE77 twenty-seven shared W33 octagons and group stabilizer
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe77_twentyseven_octagons.py'
+      - 'tests/test_w33_20261014_toe77_twentyseven_octagons.py'
+      - '.github/workflows/w33_toe77_twentyseven_octagons.yml'
+  workflow_dispatch:
+jobs:
+  native-symplectic-pair-orbit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Check 27 shared octagons and PGSp pair stabilizer
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe77_twentyseven_octagons.py
+      - name: Freeze reproducible orbit-action certificate
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe77_twentyseven_octagons.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe77-shared-octagon-pair-stabilizer-certificate
+          path: data/w33_20261014_toe77_twentyseven_octagon_orbits.json
+          retention-days: 60
