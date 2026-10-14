@@ -1,0 +1,42 @@
+name: TOE72 five-front exact and finite-model reproduction
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe72_*.py'
+      - 'tests/test_w33_20261014_toe72_*.py'
+      - '.github/workflows/w33_toe72_five_fronts.yml'
+  workflow_dispatch:
+jobs:
+  toe72-regressions-and-certificates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install scientific runtime
+        run: python -m pip install numpy scipy sympy pytest
+      - name: Run five source-regenerating tests
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe72_five_fronts.py
+      - name: Regenerate five frozen science certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: |
+          python analysis/w33_20261014_toe72_hessian_multiray.py
+          python analysis/w33_20261014_toe72_gauge_gram_bound.py
+          python analysis/w33_20261014_toe72_cover_orbit_escape.py
+          python analysis/w33_20261014_toe72_w33_squared_index.py
+          python analysis/w33_20261014_toe72_exact_interacting_octagon.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe72-five-front-science-certificates
+          path: data/w33_20261014_toe72_*.json
+          retention-days: 60
