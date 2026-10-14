@@ -1,0 +1,36 @@
+name: TOE79 canonical W33 antipodal 27 octagon torsor
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe79_canonical_antipode_octagon.py'
+      - 'tests/test_w33_20261014_toe79_canonical_antipode_octagon.py'
+      - '.github/workflows/w33_toe79_antipode_octagon.yml'
+  workflow_dispatch:
+jobs:
+  symplectic-octagon-bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Verify all 6480 W33 point-pair-antipode octagon states
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe79_canonical_antipode_octagon.py
+      - name: Freeze equivariant 27 antipode addresses
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe79_canonical_antipode_octagon.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe79-canonical-octagon-opposite-point-bundle
+          path: data/w33_20261014_toe79_canonical_antipode_octagon.json
+          retention-days: 60
