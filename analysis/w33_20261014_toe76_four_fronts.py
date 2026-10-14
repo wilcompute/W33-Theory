@@ -41,6 +41,13 @@ def two_edge_robustness():
             else:C[key]+=M
     assert numw==238
     assert determinants_positive(H0)
+    # One-edge control: every independent link is checked at both ends
+    # of [0,2] with EXACT integer Sylvester tests.
+    single_bad=[]
+    for e in range(N):
+        for delta in (-1,1):
+            if not determinants_positive(H0+delta*S[e]):
+                single_bad.append([int(e),int(delta+1)])
     n=0;minimum_det=10**30;min_corner=None;fails=[]
     # Allow ANY pair of edges to vary independently in [0,2].
     # H is multi-affine in the two independent weights; consequently it
@@ -72,6 +79,10 @@ def two_edge_robustness():
       "uniform_Hessian":H0.tolist(),
       "minimum_integer_det":minimum_det,
       "minimum_det_corner_indices_edge_edge_weight_weight":min_corner,
+      "single_edge_endpoints_checked":2*N,
+      "bad_single_edge_endpoint_Hessians":len(single_bad),
+      "single_edge_first_bad":single_bad[:10],
+      "if_no_single_bad_then_all_single_edge_weights_0_to_2_strictly_stable":len(single_bad)==0,
       "bad_Hessian_corners":len(fails),
       "first_bad_corners":fails[:5],
       "all_two_edge_boxes_strictly_positive_Hessian":passed,

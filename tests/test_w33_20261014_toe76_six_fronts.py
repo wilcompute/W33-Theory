@@ -15,7 +15,9 @@ def test_all_160_native_pairs_exact_two_link_endpoint_hessians():
     assert c["unordered_edge_pairs"]==12720
     assert c["integer_corner_Hessian_matrices_checked"]==50880
     assert c["winding_octagons"]==238
-    assert c["bad_Hessian_corners"]>=0
+    assert c["bad_Hessian_corners"]==951
+    assert c["single_edge_endpoints_checked"]==320
+    assert c["bad_single_edge_endpoint_Hessians"]>=0
     assert c["all_two_edge_boxes_strictly_positive_Hessian"]==(c["bad_Hessian_corners"]==0)
 
 def test_eight_unconditionally_ordered_electric_rotor_variational_uppers():

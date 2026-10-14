@@ -33,6 +33,8 @@ jobs:
           python analysis/w33_20261014_toe76_theta_twisted_ihara.py
           python analysis/w33_20261014_toe76_four_fronts.py
           python analysis/w33_20261014_toe76_flux_currents.py
+      - name: Verify quantitative claims and freeze concise evidence
+        run: python analysis/w33_20261014_toe76_summary.py
       - name: Upload exact and numerical evidence
         uses: actions/upload-artifact@v4
         with:
