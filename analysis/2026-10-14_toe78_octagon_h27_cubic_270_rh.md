@@ -44,3 +44,23 @@ Tests and GitHub Actions workflows are included for each. The cubic-Ihara run pa
 5. Certify a low-energy spectral gap for the interacting compact-U1 gauge sector and test whether embedding-sensitive 120° versus pi flux competition survives dynamical gauge fields.
 
 The Theory of Everything remains unresolved.
+
+## Follow-up: independently completed GitHub Actions verification
+
+All three primary research tracks completed successfully:
+
+- Native octagon H27/GQ/cubic address: https://github.com/wilcompute/W33-Theory/actions/runs/38647657091 — **7/7 tests**, with exhaustive 432 H27 normal-form basis searches. The printed certificate reports **48 actual equivariant gauges** from the newly constructed octagon cubic geometry to the previously frozen regular/Payne five-direction address geometry. This is a genuine 27-point torsor-and-45-line identification, but gauge *nonuniqueness* remains explicit.
+- Cubic 27 Ramanujan / 270 marked nonbacktracking primes: https://github.com/wilcompute/W33-Theory/actions/runs/38647521435 — **1/1 test**, regenerating the exact strongly regular/Ihara certificate and the 270-to-270 based-oriented-cycle/externally-labelled-triangle correspondence.
+- All native Levi 2-arcs and canonical 27 opposite-vertex bijection: https://github.com/wilcompute/W33-Theory/actions/runs/38647970837 — **1/1 test**, explicitly locating the native theta pair at **W33 point vertex 1**, not at an arbitrary or unspecified center. All **480 wedges**, including 240 centered at points and 240 centered at lines, possess 27 distinct antipodal cycles and the expected 12960 incidences.
+
+The group producer also reports the new 216-action orbit decomposition on the **270 oriented/marked cubic phase supports as 54+108+108**, versus **27+27+216** under the previously frozen (different) 648-Clifford action. The tritangent orbit decomposition is **9+18+18**, while the native D8 orbit partition on five H27 directions is **1+2+2**. Four dihedral elements invert the Heisenberg center, preventing an identification of the whole order-216 group with ordinary complex-linear qutrit Clifford operations on a fixed central character.
+
+**Additional nine-geometry theorem:** the automorphism group of the exponent-three extraspecial H27 has order 432, represented by the 432 ordered noncommuting generator pairs. Exactly 48 of those basis gauges preserve the selected five cyclic cubic directions, giving **432/48=9 equivalent H27 direction-system realizations** under the automorphism action. A separate exact source assertion enumerating all nine realizations has been committed; its latest dedicated CI should be checked before describing *that additional implementation* as successfully executed.
+
+### A geometrical 240-chart atlas worth studying
+
+At each of the 40 point-side W33 Levi vertices, the four incident flags admit exactly six unordered wedges. Therefore there are **240 point-centered wedge address charts**, each in natural bijection with its center's 27 opposite points. Dually there are 240 line-centered charts. At one fixed point, all six charts address the same 27 opposite points, but each uses a different selected pair of first paths; their transition maps are a concrete native gauge-comparison problem. The point stabilizer has order 1296 and each wedge stabilizer order 216 (index six), mirroring the six wedge choices.
+
+This is an exact finite incidence atlas, **not** an automatic W(E6)-equivariant identification with 240 E8 roots. The repository has independently documented that transitive W33 240-element carriers and E8's Weyl-E6 root-orbit decomposition can obstruct such a bijection.
+
+The next research frontier is to compute every one of the six wedge-to-wedge address transformations at a center explicitly, determine their action on the 45 cubic lines and 270 phase supports, and compare with the abstract normalizer structure of H27.

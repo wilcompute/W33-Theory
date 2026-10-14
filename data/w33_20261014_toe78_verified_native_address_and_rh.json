@@ -1,0 +1,88 @@
+{
+  "schema": "w33.toe78.native_octagon_cubic_address_graph_rh.v1",
+  "date": "2026-10-14",
+  "status": "THREE_INDEPENDENT_GITHUB_ACTIONS_REPRODUCTIONS_SUCCEEDED",
+  "proof_scope": "finite W33 graph/group/spectral combinatorics; no classical RH, empirical particle-spectrum or full physical TOE claim",
+  "group": {
+    "full_pair_stabilizer_order": 216,
+    "structure": "H27 semidirect D8",
+    "regular_nonabelian_Heisenberg_order": 27,
+    "orbits_on_unordered_octagon_pairs_degrees": [
+      2,
+      4,
+      4,
+      8,
+      8
+    ],
+    "uniquely_invariant_SRG": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "five_H27_right_coset_directions": true,
+    "point_line_incidence": [
+      27,
+      45,
+      3,
+      5
+    ],
+    "tritangent_orbits_under_native_216": [
+      9,
+      18,
+      18
+    ],
+    "dihedral_center_inverters": 4,
+    "exhaustive_H27_normal_form_generator_pairs": 432,
+    "genuinely_equivariant_address_gauges_to_frozen_cubic_directions": 48,
+    "H27_cubic_geometries_by_orbit_stabilizer": 9,
+    "native_216_orbits_on_270_marked_tritangent_primes": [
+      54,
+      108,
+      108
+    ],
+    "existing_Clifford_648_orbits_on_270_instructions": [
+      27,
+      27,
+      216
+    ],
+    "verified_workflow": "https://github.com/wilcompute/W33-Theory/actions/runs/38647657091"
+  },
+  "opposite": {
+    "native_W33_point_center_of_theta_two_chords": 1,
+    "incidence_wedges": 480,
+    "point_centered_wedges": 240,
+    "line_centered_wedges": 240,
+    "octagons_per_wedge": 27,
+    "opposite_vertices_per_wedge": 27,
+    "total_wedge_octagon_incidences": 12960,
+    "geometry": "midpoint after four steps along each shared primitive octagon is its uniquely addressed opposite vertex",
+    "verified_workflow": "https://github.com/wilcompute/W33-Theory/actions/runs/38647970837"
+  },
+  "cubic_ihara": {
+    "node_edge_degree": [
+      27,
+      135,
+      10
+    ],
+    "eigenvalue_multiplicities": {
+      "1": 20,
+      "10": 1,
+      "-5": 6
+    },
+    "ramanujan": true,
+    "graph_RH_nontrivial_pole_modulus": "1/3",
+    "factorization": "(1-u²)^108*(1-u)*(1-9u)*(1-u+9u²)^20*(1+5u+9u²)^6",
+    "primitive_undirected_triangles": 45,
+    "marked_oriented_primitive_triangles": 270,
+    "phase_labelled_cubic_support_bijection": "(v0,v1,v2) -> {(v0,0),(v1,1),(v2,2)}",
+    "verified_workflow": "https://github.com/wilcompute/W33-Theory/actions/runs/38647521435"
+  },
+  "remaining_boundaries": [
+    "No canonical E6 root-to-octagon operator map",
+    "Native 216 action differs from prior Clifford648",
+    "No chiral Dirac physical model",
+    "No dynamical gauge vacuum",
+    "No classical Riemann hypothesis proof"
+  ]
+}
