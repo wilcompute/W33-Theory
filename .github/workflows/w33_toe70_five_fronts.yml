@@ -1,0 +1,38 @@
+name: TOE70 five physics fronts reproduction
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe70_*.py'
+      - 'tests/test_w33_20261014_toe70_*.py'
+      - '.github/workflows/w33_toe70_five_fronts.yml'
+  workflow_dispatch:
+jobs:
+  theorem-and-physics-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install scientific runtime
+        run: python -m pip install numpy scipy sympy pytest
+      - name: Run exact disorder, group topology, numerical gauge and mean-field regression
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python -m pytest -q tests/test_w33_20261014_toe70_five_fronts.py
+      - name: Produce reproducible TOE70 research certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          python analysis/w33_20261014_toe70_disorder_certified_subcube.py
+          python analysis/w33_20261014_toe70_symmetry_topology.py
+          python analysis/w33_20261014_toe70_interacting_mass.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe70-five-front-certificates
+          path: data/w33_20261014_toe70_*.json
+          retention-days: 30

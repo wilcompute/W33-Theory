@@ -1,0 +1,164 @@
+{
+  "schema": "w33.toe70.five_frontiers.v1",
+  "date": "2026-10-14",
+  "predecessor": "f24202a3c1e7df2ea152348385aeb20e98f8c262",
+  "scope": "Exact finite W33 claims, numerical finite gauge-matter and explicitly restricted Hartree; NOT a physical TOE",
+  "disorder": {
+    "epsilon": "245/1000",
+    "denominator": "1000^8",
+    "phase_ray": [
+      0,
+      -1,
+      1
+    ],
+    "active_cycle_count": 159,
+    "base_integer": "-278181245315125293750000",
+    "radius3": {
+      "enumerated": 669920,
+      "minimum_positive_delta_integer": "303334787318187810937500",
+      "minimizing_flips": [
+        37,
+        56,
+        57
+      ]
+    },
+    "fixed_17link_subcube": {
+      "corners": 131072,
+      "negative_corners": 1,
+      "unique_global_minimum_mask": "all high"
+    },
+    "disclaimer": "No global optimum over 160 edges and arbitrary q."
+  },
+  "gauge": {
+    "native_patch": [
+      11,
+      12,
+      5
+    ],
+    "magnetic_cycle_count": 3,
+    "independent_electric_coordinates": 2,
+    "runs": [
+      {
+        "L": 1,
+        "dimension": 4158,
+        "E0": -3.1604716194695595,
+        "gap": 1.0718827363509695,
+        "cov": -0.036148250444943034,
+        "boundary": 0.25807084696366484
+      },
+      {
+        "L": 2,
+        "dimension": 11550,
+        "E0": -3.189618205025821,
+        "gap": 1.0643235158048157,
+        "cov": -0.047903659244927184,
+        "boundary": 0.005729090888166211
+      },
+      {
+        "L": 3,
+        "dimension": 22638,
+        "E0": -3.1898474481159673,
+        "gap": 1.0643124872613563,
+        "cov": -0.04812193241306593,
+        "boundary": 0.00001994701646698547,
+        "residual": 3.3982145956603357e-14
+      }
+    ],
+    "scope": "Numerical finite Galerkin data, not certified untruncated."
+  },
+  "pairing": {
+    "cover_id_count": 20,
+    "inner_orbit": 25920,
+    "full_orbit": 51840,
+    "stabilizer_full": 1,
+    "outer_coset_disjoint": true,
+    "pairwise_complement_candidate_count": 73,
+    "excluded_edge_id": 45,
+    "scope": "Complement no-go only for this full-group cover orbit."
+  },
+  "topology": {
+    "CW_native_V_E_F": [
+      80,
+      160,
+      20
+    ],
+    "homology_integer_betti": [
+      1,
+      61,
+      0
+    ],
+    "product_T2": [
+      1,
+      63,
+      123,
+      61,
+      0
+    ],
+    "selected_face_deck_windings": [
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "rank_killed_flat_holonomies": 3,
+    "scope": "No 4D manifold or native overlap-index construction."
+  },
+  "mass": {
+    "model": "nearest-neighbor spinless density repulsion; uniform sublattice Hartree restriction",
+    "zero_singulars": 12,
+    "small_V_mass_over_V": 0.6,
+    "samples": [
+      [
+        0.01,
+        0.006041948646661741,
+        0.012083897293323482
+      ],
+      [
+        0.05,
+        0.031078613422912717,
+        0.06215722684582543
+      ],
+      [
+        0.1,
+        0.06447131797182282,
+        0.12894263594364563
+      ],
+      [
+        0.2,
+        0.1392369953803312,
+        0.2784739907606624
+      ],
+      [
+        0.4,
+        0.32899177650449973,
+        0.6579835530089995
+      ],
+      [
+        0.8,
+        0.9222197215516409,
+        1.8444394431032818
+      ],
+      [
+        1.6,
+        2.652494473227001,
+        5.304988946454002
+      ]
+    ],
+    "density_inhomogeneity_at_V02": {
+      "points_std": 0.037195352897195506,
+      "lines_std": 0.03655167868884794
+    },
+    "scope": "Uniform mean-field ansatz is NOT unrestricted sitewise Hartree-Fock stationary; no physical mass-gap theorem."
+  }
+}
