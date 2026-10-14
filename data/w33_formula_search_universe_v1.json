@@ -390901,6 +390901,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b2bca2ca8ab2afd59e9935cbe90355ed907a4268c048bfb3f15fcc04b13462f0",
+      "normalized_formula": "1.Completethe^canonicaloctagon->opposite-point->regularPayneH27->cubic27->E8phase-labelledtriple^transport,includingstabilizerorbitsandallexplicitgaugefreedoms",
+      "numeric_literals": [
+        "1",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md",
+          "raw": "1. Complete the **canonical octagon -> opposite-point -> regular Payne H27 -> cubic 27 -> E8 phase-labelled triple** transport, including stabilizer orbits and all explicit gauge freedoms.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "00938298d252021d698ca23b84dc876318843c9448a835335eef4d9b3d4fb82e",
+      "structural_formula": "#.Completethe^canonicaloctagon->opposite-point->regularPayneH2#->cubic2#->E8phase-labelledtriple^transport,includingstabilizerorbitsandallexplicitgaugefreedoms"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0deb6942e24c735cb1b4a7834ea3d3e564d817b8e7bf5fc3a55202ee959edf60",
       "normalized_formula": "1.Convertalpha_unified(M_GUT)->alpha_s^{nf=6}(M_GUT)viak3",
       "numeric_literals": [
@@ -592129,6 +592157,42 @@
       },
       "structural_family_id": "28405bc7e25715d1f86f8bc4b61fcfb32861df15026e67d5cfc65dc835bf634f",
       "structural_formula": "DonotclaimthattheoriginalBT1#labelsalreadyrealizeaglobal`q->-q`law.TheglobalD5lawistrueonlyaftertheBT1#rephasinggaugeischosen"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9f6707ad08de0b82f4818e2ef2b4fb0005f7bcf2e55ed299fb254ac3e5cbd85f",
+      "normalized_formula": "Double-countinggives480*27=1620*8=12960wedge\u2013octagonincidences.Anindependentfinite-fieldF3^4symplecticreconstruction(40points,40isotropiclines)verifiedall480wedgesand27disjointshortest-pathpairs.Thenative-repositorycensusproducerindependentlychecksthefulllistof1620octagonsandfreezesthemapfortheactual11-sitethetachords.ThesecalculationsexplaintheoriginofanH27addresscarrieronlocaloctagonsandprovidethemissingcanonicalpathtotheknownregular/Payneaction.Thecubic/E6coordinategaugemuststillbetestedseparately,andthetrinificationoperatorH27(whosecenterisscalar)remainsadifferentrepresentation",
+      "numeric_literals": [
+        "1",
+        "12960",
+        "1620",
+        "27",
+        "4",
+        "40",
+        "620",
+        "7",
+        "8",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md",
+          "raw": "Double-counting gives 480*27=1620*8=12960 wedge\u2013octagon incidences. An independent finite-field F3^4 symplectic reconstruction (40 points, 40 isotropic lines) verified all 480 wedges and 27 disjoint shortest-path pairs. The native-repository census producer independently checks the full list of 1620 octagons and freezes the map for the actual 11-site theta chords. These calculations explain the origin of an H27 address carrier on local octagons and provide the missing canonical path to the known regular/Payne action. The cubic/E6 coordinate gauge must still be tested separately, and the trinification operator H27 (whose center is scalar) remains a different representation.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d8bd58f6e96ffb93e4c1e72893f389ecac85b9cf6526235fe2ffe05fc82b8067",
+      "structural_formula": "Double-countinggives4#*#=#*#=#wedge\u2013octagonincidences.Anindependentfinite-fieldF3^#symplecticreconstruction(#points,#isotropiclines)verifiedall4#wedgesand2#disjointshortest-pathpairs.Thenative-repositorycensusproducerindependentlychecksthefulllistof1#octagonsandfreezesthemapfortheactual1#-sitethetachords.ThesecalculationsexplaintheoriginofanH2#addresscarrieronlocaloctagonsandprovidethemissingcanonicalpathtotheknownregular/Payneaction.Thecubic/E6coordinategaugemuststillbetestedseparately,andthetrinificationoperatorH2#(whosecenterisscalar)remainsadifferentrepresentation"
     },
     {
       "file_count": 1,
@@ -797694,6 +797758,40 @@
       },
       "structural_family_id": "57130318cc068b7d92d3194bc07dfd4fd5d5395b2026941336b59116f545d9a7",
       "structural_formula": "The2#=m_rstructurethatappearsthroughoutmonstrousmoonshine"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cd482dfb39dd272d271273b0e5fbd0b56829b5764bd87ae9998f59cbb2ebcbf1",
+      "normalized_formula": "The27/45geometryofGQ(2,4)andassociatedHeisenbergandcubic-surfacesubgroupsareestablishedmathematics.SeeDolgachev(2010),https://dept.math.lsa.umich.edu/~idolga/asia10.pdf,andSanigaetal.,https://arxiv.org/abs/0903.0715.ThepotentiallydistinctiveresultistheexplicitnativeW33octagon-wedgerealizationanditscorrespondencetopreviouslyconstructedsourcefiles,notaclaimtohavediscoveredGQ(2,4)itself",
+      "numeric_literals": [
+        "0",
+        "0903.0715",
+        "2",
+        "2010",
+        "3",
+        "4",
+        "45",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 29,
+          "path": "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md",
+          "raw": "The 27/45 geometry of GQ(2,4) and associated Heisenberg and cubic-surface subgroups are established mathematics. See Dolgachev (2010), https://dept.math.lsa.umich.edu/~idolga/asia10.pdf, and Saniga et al., https://arxiv.org/abs/0903.0715. The potentially distinctive result is the explicit native W33 octagon-wedge realization and its correspondence to previously constructed source files, not a claim to have discovered GQ(2,4) itself.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c6e5b9f88d126e221052b3dbf3d33619cde0153f5566d0ac6ee1a19936be0f36",
+      "structural_formula": "The2#/#geometryofGQ(#,#)andassociatedHeisenbergandcubic-surfacesubgroupsareestablishedmathematics.SeeDolgachev(#),https://dept.math.lsa.umich.edu/~idolga/asia1#.pdf,andSanigaetal.,https://arxiv.org/abs/#.ThepotentiallydistinctiveresultistheexplicitnativeW3#octagon-wedgerealizationanditscorrespondencetopreviouslyconstructedsourcefiles,notaclaimtohavediscoveredGQ(#,#)itself"
     },
     {
       "file_count": 1,
@@ -1081424,7 +1081522,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 53,
+          "line": 59,
           "path": "analysis/w33_20261014_toe78_octagon_cubic_surface.py",
           "raw": "assert len(Edges)==135 and witness[\"triangle_tritangent_count\"]==45",
           "status": "unclassified"
@@ -1085167,6 +1085265,33 @@
       },
       "structural_family_id": "3e2d522c9918ef2c53e9270d43ac4c0558962b6be737e3b5c21a1d8dbc3181bc",
       "structural_formula": "assertlen(singular_v)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "077d5846ed7c51eca7ea7231f7c5268bd598fa66e50b029a6b4a6aa26099b269",
+      "normalized_formula": "assertlen(standard_lines)=45",
+      "numeric_literals": [
+        "45"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 278,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "assert len(standard_lines)==45",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9b8a9e9994e71a4523fe8ecc640bad1373e81519ba4d61170d5efc8bb55ef655",
+      "structural_formula": "assertlen(standard_lines)=#"
     },
     {
       "file_count": 1,
@@ -1340692,6 +1340817,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "47e34b744deadf4da6f4d714843c5d7b15407dd2e28ae39d858490e7d77e4058",
+      "normalized_formula": "lines={frozenset(t)fortinprior[\"native_GQ24_tritangent_lines\"]}",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe78_cubic_270_ihara.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/w33_20261014_toe78_cubic_270_ihara.py",
+          "raw": "lines={frozenset(t) for t in prior[\"native_GQ24_tritangent_lines\"]}",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "76efe31899d1ac5545200c27c7b44e8858500f2b25869bb71a3f8c3e8f4e22c4",
+      "structural_formula": "lines={frozenset(t)fortinprior[\"native_GQ2#_tritangent_lines\"]}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f28bf29b11c4794ac8d7316346d611eebf899d452035f0314a3af4b0d0231769",
       "normalized_formula": "lines={tuple(sorted((norm_idx[a],norm_idx[b],norm_idx[add(a,b)])))fora,bincombinations(nz,2)ifadd(a,b)!=(0,0,0)}",
       "numeric_literals": [
@@ -1405077,6 +1405229,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c6d80f23e28d95a36c1caa4deb67f20d1add2879d4135cbe7697ebf54bdd071d",
+      "normalized_formula": "native_cosets={frozenset(compose(g,d)[0]fordinD)",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 244,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "native_cosets={frozenset(compose(g,d)[0] for d in D)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f96c766e8b27afb99564a23575cabea0c26caa690c81d67c50a7a644e668baa2",
+      "structural_formula": "native_cosets={frozenset(compose(g,d)[#]fordinD)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9a595d194aca140c25a2620fee2c24cc9c19df25c25bb879f5aba7f8c69295ea",
       "normalized_formula": "native_graph_girth=8,two_boson_fock_dimension=36",
       "numeric_literals": [
@@ -1405102,6 +1405281,33 @@
       },
       "structural_family_id": "8c8d7f9bd0342a3617bf42e7e2674999f0a0ccc49ca761cc30d83fe266fd557a",
       "structural_formula": "native_graph_girth=#,two_boson_fock_dimension=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c669c17833d6688ddfb137ff24c23232c897dfbf6acdae694fb5acdce0a4499c",
+      "normalized_formula": "native_lines=native[\"native_GQ24_tritangent_lines\"]",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe78_octagon_cubic_surface.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 55,
+          "path": "analysis/w33_20261014_toe78_octagon_cubic_surface.py",
+          "raw": "native_lines=native[\"native_GQ24_tritangent_lines\"]",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e9aaab5b0a940485365f2c8b954a63d292ea6fc93d34e6f92cd1ed7c07e5aa31",
+      "structural_formula": "native_lines=native[\"native_GQ2#_tritangent_lines\"]"
     },
     {
       "file_count": 1,
@@ -1616532,6 +1616738,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f4e8d0c35358e89180658e430631efb443fff4d94630b4f9c9bb0bde58945002",
+      "normalized_formula": "res[\"example_original_H27_address_to_octagon_bijection\"]=(gauges[0]ifgaugeselseNone)",
+      "numeric_literals": [
+        "0",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 305,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "res[\"example_original_H27_address_to_octagon_bijection\"]=(gauges[0] if gauges else None)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c5e389e1ef3ace14344cf6f780a74713fa8775cd16ccb485b7bcc6f40053b0eb",
+      "structural_formula": "res[\"example_original_H2#_address_to_octagon_bijection\"]=(gauges[#]ifgaugeselseNone)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f67b50254a84457bcc1f4717caab19372c79fa2f8480614d156663be5b561443",
       "normalized_formula": "res[\"fermion_loops_select_theta13_0\"]=all(r[\"selects\"]=\"theta13=0\"forrinrbifr[\"statistics\"]=\"fermion\")",
       "numeric_literals": [
@@ -1616917,6 +1617151,142 @@
       },
       "structural_family_id": "787c3b616754e1dc69e3c2c2f963a98e9e9bec3c814652ad80de9f4cfb572842",
       "structural_formula": "res[\"n4_unreached_classes\"]=dict(count=len(slow),coverage=coverage_from_reps(slow,#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3fcb1321ecfc9ffcbb4f3af89c2473d4c8bc67017b91585c7f8a966515c1b01e",
+      "normalized_formula": "res[\"native_216_tritangent_orbit_sizes\"]=line_sizes",
+      "numeric_literals": [
+        "16"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 311,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "res[\"native_216_tritangent_orbit_sizes\"]=line_sizes",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "458fc6cde193fc00e5fc8e934a4346a3f314a575675d68bd5ec38d6e3602eb82",
+      "structural_formula": "res[\"native_2#_tritangent_orbit_sizes\"]=line_sizes"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c06e2fae9f85fc2fcbcabab4dcfc9f6ab8cc0df0fef750dfc1029a121dba5f62",
+      "normalized_formula": "res[\"native_GQ24_exact_right_cosets_of_five_H27_C3_directions\"]=True",
+      "numeric_literals": [
+        "4",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 308,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "res[\"native_GQ24_exact_right_cosets_of_five_H27_C3_directions\"]=True",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "92ba341a54ee3dd6ef4fb7d97ae90c623e671d61ff7d6c13ebb603f58d82347b",
+      "structural_formula": "res[\"native_GQ2#_exact_right_cosets_of_five_H2#_C3_directions\"]=True"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fe9bd614c03f89792dfa5c57881ebf5803dbab64af0ee66f11674d8c55763221",
+      "normalized_formula": "res[\"native_GQ24_tritangent_lines\"]=[sorted(L)forLinsorted(tri,key=lambdat:sorted(t))]",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 309,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "res[\"native_GQ24_tritangent_lines\"]=[sorted(L) for L in sorted(tri,key=lambda t:sorted(t))]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "59fbc0cb20048752eba47a0359b4b2ead907187d89790bef3731f358782c6d36",
+      "structural_formula": "res[\"native_GQ2#_tritangent_lines\"]=[sorted(L)forLinsorted(tri,key=lambdat:sorted(t))]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "462db504a2cb21af48b6056be5b13b9ec12a041e5ce4d899e5ea234318875f2a",
+      "normalized_formula": "res[\"original_5_coset_directions_abstract_H27_generator_pairs_tested\"]=tested",
+      "numeric_literals": [
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 303,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "res[\"original_5_coset_directions_abstract_H27_generator_pairs_tested\"]=tested",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "aab758ef6efc2864653ee67ff4c0ebbe71a406533839311b167ba34de369b1ac",
+      "structural_formula": "res[\"original_5_coset_directions_abstract_H2#_generator_pairs_tested\"]=tested"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1e04c42f94d23d5abeac7b4a77344b6711f75c820d75141d50ed401348a796ca",
+      "normalized_formula": "res[\"original_address_H27_to_native_octagon_equivariant_gauge_count\"]=len(gauges)",
+      "numeric_literals": [
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 304,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "res[\"original_address_H27_to_native_octagon_equivariant_gauge_count\"]=len(gauges)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5a1e54006d7e58830b7da77037212dc34875c233c8dc2f57932bfbe86637658c",
+      "structural_formula": "res[\"original_address_H2#_to_native_octagon_equivariant_gauge_count\"]=len(gauges)"
     },
     {
       "file_count": 2,
@@ -1680972,6 +1681342,34 @@
       },
       "structural_family_id": "4137250d8a7772a43dd92ad7fa44be7331fe2b33232421df85041a2cda36ed4d",
       "structural_formula": "standard_basis[#*node:#*node+#,#*node]=standard_1"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9ef013906c606a134836a05df98f1822b3c972f44aaea8e947ced0500b379354",
+      "normalized_formula": "standard_directions=((0,0,1),(0,1,1),(1,0,1)",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 272,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "standard_directions=((0,0,1),(0,1,1),(1,0,1),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c2cbc811340ed9361f6b28e893ecbb9494bbc34e14fe9642b64bcea223d11d73",
+      "structural_formula": "standard_directions=((#,#,#),(#,#,#),(#,#,#)"
     },
     {
       "file_count": 1,
@@ -1811541,9 +1811939,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T18:20:34-04:00",
+  "frozen_at": "2026-10-14T18:32:55-04:00",
   "pass": 398,
-  "repository_head": "7e7051475512e90ba9a2b0784d6e71dc2d52dfe8",
+  "repository_head": "28e082c9fbba53c4e713831e78a99c195d2cf236",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1870960,6 +1871358,14 @@
       "exact_member_count": 1,
       "structural_family_id": "70430fc9d0bfd81e7752af574aea92de764b4157e313bfa52288ff2f5f1e84ce",
       "structural_formula": "#.Comparetothedeclaredideal\\(U\\)usingconditionaloverlap\\(F_{HS}=|Tr(U^\\daggerM)|^#/[#Tr(M^\\daggerM)]\\)"
+    },
+    {
+      "exact_formula_ids": [
+        "b2bca2ca8ab2afd59e9935cbe90355ed907a4268c048bfb3f15fcc04b13462f0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "00938298d252021d698ca23b84dc876318843c9448a835335eef4d9b3d4fb82e",
+      "structural_formula": "#.Completethe^canonicaloctagon->opposite-point->regularPayneH2#->cubic2#->E8phase-labelledtriple^transport,includingstabilizerorbitsandallexplicitgaugefreedoms"
     },
     {
       "exact_formula_ids": [
@@ -1971051,6 +1971457,14 @@
     },
     {
       "exact_formula_ids": [
+        "9f6707ad08de0b82f4818e2ef2b4fb0005f7bcf2e55ed299fb254ac3e5cbd85f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d8bd58f6e96ffb93e4c1e72893f389ecac85b9cf6526235fe2ffe05fc82b8067",
+      "structural_formula": "Double-countinggives4#*#=#*#=#wedge\u2013octagonincidences.Anindependentfinite-fieldF3^#symplecticreconstruction(#points,#isotropiclines)verifiedall4#wedgesand2#disjointshortest-pathpairs.Thenative-repositorycensusproducerindependentlychecksthefulllistof1#octagonsandfreezesthemapfortheactual1#-sitethetachords.ThesecalculationsexplaintheoriginofanH2#addresscarrieronlocaloctagonsandprovidethemissingcanonicalpathtotheknownregular/Payneaction.Thecubic/E6coordinategaugemuststillbetestedseparately,andthetrinificationoperatorH2#(whosecenterisscalar)remainsadifferentrepresentation"
+    },
+    {
+      "exact_formula_ids": [
         "b44bcf0769953bc2a1467e463cd831efa0de0dafd779760cf864e08a89c70e70"
       ],
       "exact_member_count": 1,
@@ -2026608,6 +2027022,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a3c0a92e835736935e3ff7aa0e279cb5fe5bf4d6ea04c2d9df0e5c6788a81ee9",
       "structural_formula": "The2#-apartmentcellcomplexhas^torsion-free\\(H^#(X;\\mathbfZ)=\\mathbfZ^#\\)^.Sincethe\\(F_{#}\\)actionisinducedby^genuineintegralcellularautomorphisms^,ityieldsarepresentation\\(F_{#}\\toGL_2(\\mathbfZ)\\).TheSylow5subgroupactstriviallyherebecause\\(GL_2(\\mathbfZ)\\)hasnoelementoforder5"
+    },
+    {
+      "exact_formula_ids": [
+        "cd482dfb39dd272d271273b0e5fbd0b56829b5764bd87ae9998f59cbb2ebcbf1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c6e5b9f88d126e221052b3dbf3d33619cde0153f5566d0ac6ee1a19936be0f36",
+      "structural_formula": "The2#/#geometryofGQ(#,#)andassociatedHeisenbergandcubic-surfacesubgroupsareestablishedmathematics.SeeDolgachev(#),https://dept.math.lsa.umich.edu/~idolga/asia1#.pdf,andSanigaetal.,https://arxiv.org/abs/#.ThepotentiallydistinctiveresultistheexplicitnativeW3#octagon-wedgerealizationanditscorrespondencetopreviouslyconstructedsourcefiles,notaclaimtohavediscoveredGQ(#,#)itself"
     },
     {
       "exact_formula_ids": [
@@ -2101257,6 +2101679,14 @@
     },
     {
       "exact_formula_ids": [
+        "077d5846ed7c51eca7ea7231f7c5268bd598fa66e50b029a6b4a6aa26099b269"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b8a9e9994e71a4523fe8ecc640bad1373e81519ba4d61170d5efc8bb55ef655",
+      "structural_formula": "assertlen(standard_lines)=#"
+    },
+    {
+      "exact_formula_ids": [
         "95809310c9f7384104e67c7eac4c686ebb8c60484150adbad2f5eda36b7de932"
       ],
       "exact_member_count": 1,
@@ -2171025,6 +2171455,14 @@
     },
     {
       "exact_formula_ids": [
+        "47e34b744deadf4da6f4d714843c5d7b15407dd2e28ae39d858490e7d77e4058"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "76efe31899d1ac5545200c27c7b44e8858500f2b25869bb71a3f8c3e8f4e22c4",
+      "structural_formula": "lines={frozenset(t)fortinprior[\"native_GQ2#_tritangent_lines\"]}"
+    },
+    {
+      "exact_formula_ids": [
         "f28bf29b11c4794ac8d7316346d611eebf899d452035f0314a3af4b0d0231769"
       ],
       "exact_member_count": 1,
@@ -2188039,11 +2188477,27 @@
     },
     {
       "exact_formula_ids": [
+        "c6d80f23e28d95a36c1caa4deb67f20d1add2879d4135cbe7697ebf54bdd071d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f96c766e8b27afb99564a23575cabea0c26caa690c81d67c50a7a644e668baa2",
+      "structural_formula": "native_cosets={frozenset(compose(g,d)[#]fordinD)"
+    },
+    {
+      "exact_formula_ids": [
         "9a595d194aca140c25a2620fee2c24cc9c19df25c25bb879f5aba7f8c69295ea"
       ],
       "exact_member_count": 1,
       "structural_family_id": "8c8d7f9bd0342a3617bf42e7e2674999f0a0ccc49ca761cc30d83fe266fd557a",
       "structural_formula": "native_graph_girth=#,two_boson_fock_dimension=#"
+    },
+    {
+      "exact_formula_ids": [
+        "c669c17833d6688ddfb137ff24c23232c897dfbf6acdae694fb5acdce0a4499c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e9aaab5b0a940485365f2c8b954a63d292ea6fc93d34e6f92cd1ed7c07e5aa31",
+      "structural_formula": "native_lines=native[\"native_GQ2#_tritangent_lines\"]"
     },
     {
       "exact_formula_ids": [
@@ -2243998,6 +2244452,14 @@
     },
     {
       "exact_formula_ids": [
+        "f4e8d0c35358e89180658e430631efb443fff4d94630b4f9c9bb0bde58945002"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c5e389e1ef3ace14344cf6f780a74713fa8775cd16ccb485b7bcc6f40053b0eb",
+      "structural_formula": "res[\"example_original_H2#_address_to_octagon_bijection\"]=(gauges[#]ifgaugeselseNone)"
+    },
+    {
+      "exact_formula_ids": [
         "f67b50254a84457bcc1f4717caab19372c79fa2f8480614d156663be5b561443"
       ],
       "exact_member_count": 1,
@@ -2244107,6 +2244569,46 @@
       "exact_member_count": 1,
       "structural_family_id": "787c3b616754e1dc69e3c2c2f963a98e9e9bec3c814652ad80de9f4cfb572842",
       "structural_formula": "res[\"n4_unreached_classes\"]=dict(count=len(slow),coverage=coverage_from_reps(slow,#))"
+    },
+    {
+      "exact_formula_ids": [
+        "3fcb1321ecfc9ffcbb4f3af89c2473d4c8bc67017b91585c7f8a966515c1b01e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "458fc6cde193fc00e5fc8e934a4346a3f314a575675d68bd5ec38d6e3602eb82",
+      "structural_formula": "res[\"native_2#_tritangent_orbit_sizes\"]=line_sizes"
+    },
+    {
+      "exact_formula_ids": [
+        "c06e2fae9f85fc2fcbcabab4dcfc9f6ab8cc0df0fef750dfc1029a121dba5f62"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "92ba341a54ee3dd6ef4fb7d97ae90c623e671d61ff7d6c13ebb603f58d82347b",
+      "structural_formula": "res[\"native_GQ2#_exact_right_cosets_of_five_H2#_C3_directions\"]=True"
+    },
+    {
+      "exact_formula_ids": [
+        "fe9bd614c03f89792dfa5c57881ebf5803dbab64af0ee66f11674d8c55763221"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "59fbc0cb20048752eba47a0359b4b2ead907187d89790bef3731f358782c6d36",
+      "structural_formula": "res[\"native_GQ2#_tritangent_lines\"]=[sorted(L)forLinsorted(tri,key=lambdat:sorted(t))]"
+    },
+    {
+      "exact_formula_ids": [
+        "462db504a2cb21af48b6056be5b13b9ec12a041e5ce4d899e5ea234318875f2a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aab758ef6efc2864653ee67ff4c0ebbe71a406533839311b167ba34de369b1ac",
+      "structural_formula": "res[\"original_5_coset_directions_abstract_H2#_generator_pairs_tested\"]=tested"
+    },
+    {
+      "exact_formula_ids": [
+        "1e04c42f94d23d5abeac7b4a77344b6711f75c820d75141d50ed401348a796ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5a1e54006d7e58830b7da77037212dc34875c233c8dc2f57932bfbe86637658c",
+      "structural_formula": "res[\"original_address_H2#_to_native_octagon_equivariant_gauge_count\"]=len(gauges)"
     },
     {
       "exact_formula_ids": [
@@ -2261315,6 +2261817,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4137250d8a7772a43dd92ad7fa44be7331fe2b33232421df85041a2cda36ed4d",
       "structural_formula": "standard_basis[#*node:#*node+#,#*node]=standard_1"
+    },
+    {
+      "exact_formula_ids": [
+        "9ef013906c606a134836a05df98f1822b3c972f44aaea8e947ced0500b379354"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c2cbc811340ed9361f6b28e893ecbb9494bbc34e14fe9642b64bcea223d11d73",
+      "structural_formula": "standard_directions=((#,#,#),(#,#,#),(#,#,#)"
     },
     {
       "exact_formula_ids": [
@@ -2295584,20 +2296094,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88288663,
-    "exact_formula_families": 61944,
-    "files_scanned": 12116,
-    "formula_occurrences": 67951,
+    "bytes_scanned": 88316343,
+    "exact_formula_families": 61958,
+    "files_scanned": 12120,
+    "formula_occurrences": 67965,
     "status_occurrences": {
-      "certified_or_theorem": 5032,
+      "certified_or_theorem": 5034,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2266,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53723
+      "unclassified": 53735
     },
-    "structural_families": 60293
+    "structural_families": 60307
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "a0ef7ab382f352abb19e47dc484f3fd53c681f8030fadaec16957b83203723b4"
+  "universe_sha256": "f3efff2f70a0b971496cf34692d3a4289438fe23f1fa21fedb0eab27432375ad"
 }
