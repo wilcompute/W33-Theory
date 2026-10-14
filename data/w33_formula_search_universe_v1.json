@@ -112571,6 +112571,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0882b0893ff534f66ab85b39ba59f5c23102f6e22fd79a40d426eb14c8265bbd",
+      "normalized_formula": "\"if_no_single_bad_then_all_single_edge_weights_0_to_2_strictly_stable\":len(single_bad)=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe76_four_fronts.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/w33_20261014_toe76_four_fronts.py",
+          "raw": "\"if_no_single_bad_then_all_single_edge_weights_0_to_2_strictly_stable\":len(single_bad)==0,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "57b9a2d5b78ec2723be984e395134e9bd454c58e757ea01112e73f0836092c81",
+      "structural_formula": "\"if_no_single_bad_then_all_single_edge_weights_0_to_2_strictly_stable\":len(single_bad)=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ede7b01fa282d7224711c5d3975e698b7f434c5848aa187996b1bee53d2f1475",
       "normalized_formula": "\"ih_minimum_is_always_1_over_mu\":ih_minima={\"1/mu\"}",
       "numeric_literals": [
@@ -146360,6 +146387,36 @@
       },
       "structural_family_id": "98834074fc0821aa272dd9b21f28835ed68567f84562de9ae4f72ef1d2772947",
       "structural_formula": "\"proof_of_existence\":\"Foranysufficientlysmallstrictlypositiveq,rho=(I+sum_psqrt(q_p/#)*(W_p+W_p^dag))/#hasexactlyPaulipowersq.ItisrigorouslypositivesinceeachW_pisunitaryand||summu_p(W_p+W_pdag)||<=#summu_p<#;thenumericminimumeigenvalueindependentlycorroboratesthis.Takingqplus/qminus=t1+/-epsilon*hwithhinkerNgeneratesphysicaldensitymatricesofequalpurityandidenticalall-contextcollisionobservablesbutdifferentP_minusq.\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ba8eff42bacf2cd14dae5096de1b172503082c6b8ab473ad3dab533d222a4df8",
+      "normalized_formula": "\"proof_scope\":\"Thenativeleading-beta^7Hessianismultiaffineinanytwoedgeweights;endpointintegerHessiansatw=0or2areindependentlyclassifiedasPD,singular-PSD,ornon-PSDusingallexactprincipalminors.IfALLcornersarePSDthenconvexinterpolationmakeseveryinteriortwo-linkHessianPSD.TOE64'sexactsigned-squaredecompositionwithnonnegativemixedFouriercoefficientsyieldsaGLOBAL3pipotentialminimum(possiblynonuniqueatsingularendpoints).LossofstrictPDaloneNEVERprovesaninstabilityorlowercompetingpotential.Thefull160-linkdisorderthresholdremainsopen.\"}",
+      "numeric_literals": [
+        "0",
+        "4",
+        "60",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe76_four_fronts.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 112,
+          "path": "analysis/w33_20261014_toe76_four_fronts.py",
+          "raw": "\"proof_scope\":\"The native leading-beta^7 Hessian is multiaffine in any two edge weights; endpoint integer Hessians at w=0 or 2 are independently classified as PD, singular-PSD, or non-PSD using all exact principal minors. If ALL corners are PSD then convex interpolation makes every interior two-link Hessian PSD. TOE64's exact signed-square decomposition with nonnegative mixed Fourier coefficients yields a GLOBAL 3pi potential minimum (possibly nonunique at singular endpoints). Loss of strict PD alone NEVER proves an instability or lower competing potential. The full 160-link disorder threshold remains open.\"}",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "c57f23bf48bae6a026f06fbbf1ceab18903464f21881e6c334b6c4b5fc6da031",
+      "structural_formula": "\"proof_scope\":\"Thenativeleading-beta^#Hessianismultiaffineinanytwoedgeweights;endpointintegerHessiansatw=#or2areindependentlyclassifiedasPD,singular-PSD,ornon-PSDusingallexactprincipalminors.IfALLcornersarePSDthenconvexinterpolationmakeseveryinteriortwo-linkHessianPSD.TOE6#'sexactsigned-squaredecompositionwithnonnegativemixedFouriercoefficientsyieldsaGLOBAL3pipotentialminimum(possiblynonuniqueatsingularendpoints).LossofstrictPDaloneNEVERprovesaninstabilityorlowercompetingpotential.Thefull1#-linkdisorderthresholdremainsopen.\"}"
     },
     {
       "file_count": 1,
@@ -200011,7 +200068,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 188,
+          "line": 220,
           "path": "analysis/w33_20261014_toe76_four_fronts.py",
           "raw": "# 4D oriented cup = -J\u2297J: <alpha gamma, beta delta>=-1.",
           "status": "unclassified"
@@ -263786,7 +263843,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 187,
+          "line": 219,
           "path": "analysis/w33_20261014_toe76_four_fronts.py",
           "raw": "# intersection +1. Mixed c1 = a alpha\u2227gamma + b beta\u2227delta.",
           "status": "unclassified"
@@ -342811,6 +342868,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f4e6eb935e659a319bbeb6b2d12aacbd722f6033079bd2469cdc9689e3fa0ca3",
+      "normalized_formula": "(\\phi_1,\\phi_2)=(2\\pi/3,4\\pi/3)",
+      "numeric_literals": [
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 103,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "(\\phi_1,\\phi_2)=(2\\pi/3,4\\pi/3)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8be085fbee4a282763794752ce11875b45ca98ceb1271371de0cbf8aff45f18b",
+      "structural_formula": "(\\phi_1,\\phi_2)=(#\\pi/#,#\\pi/#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3d3a52e6815c9cf21b43a1017716399b52abeca5c5ee958ce2865f7b7f51b9bf",
       "normalized_formula": "(\\sum_b\\Pi_b)^2=3\\sum_b\\Pi_b^2",
       "numeric_literals": [
@@ -410845,6 +410931,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6a72b804f5a161f8338579b83dd74edabfa1ea25893072f6b62380a8c958b573",
+      "normalized_formula": "1\\len<8",
+      "numeric_literals": [
+        "1",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 39,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "1\\le n<8",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "59f915a23f0d51609f0bf783f32873b81e1195f9de4207491658575995dd4f0a",
+      "structural_formula": "#\\len<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5c333a1afdada4a43eb27db883a1e8b6619127587d1315e6763afc114a7e7458",
       "normalized_formula": "1\\times2\\times4\\times8=64=2^{q!}=\\mu^q",
       "numeric_literals": [
@@ -434178,6 +434292,36 @@
       },
       "structural_family_id": "bc450f05fef57ee31840448cb2cae4893eed7a0a64860c21fc1d19f0033c5713",
       "structural_formula": "#/#\u2248#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bd575641c2fcae7be130f70f08acc01b96a187d1d95dff054da6742595e0ab2a",
+      "normalized_formula": "3/1620=1/540",
+      "numeric_literals": [
+        "1",
+        "1620",
+        "3",
+        "540"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 109,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "3/1620=1/540",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7d51c3785424f4a9efdd76ebb7c9ae25b09c12ea0a65c40a3506974b34824d7a",
+      "structural_formula": "#/#=#/#"
     },
     {
       "file_count": 1,
@@ -597977,7 +598121,7 @@
       "structural_formula": "E^#=p^#+m^#,\\qquad|v_g|\\le1"
     },
     {
-      "file_count": 2,
+      "file_count": 3,
       "formula_id": "7c147a08ea030375e9f3e333da9a23e1177b5a5c3dc22334b320a8f8704a007b",
       "normalized_formula": "E_0(s)=-\\sqrt2-\\sqrt{5+2\\sqrt{3+s}}-\\sqrt{5+2\\sqrt{3-s}}",
       "numeric_literals": [
@@ -597985,11 +598129,12 @@
         "3",
         "5"
       ],
-      "occurrence_count": 2,
+      "occurrence_count": 3,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "analysis/2026-10-14_toe75_five_fronts.md",
-        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
       ],
       "source_locations": [
         {
@@ -598005,10 +598150,17 @@
           "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
           "raw": "E_0(s)=-\\sqrt2-\\sqrt{5+2\\sqrt{3+s}} -\\sqrt{5+2\\sqrt{3-s}}.",
           "status": "unclassified"
+        },
+        {
+          "category": "tex_display",
+          "line": 98,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "E_0(s)=-\\sqrt2-\\sqrt{5+2\\sqrt{3+s}}- \\sqrt{5+2\\sqrt{3-s}}",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "unclassified": 2
+        "unclassified": 3
       },
       "structural_family_id": "44c20df9d3ea221cea580161432a567c20775bafbe2f87502fe1018e43dafd1d",
       "structural_formula": "E_0(s)=-\\sqrt2-\\sqrt{##\\sqrt{#+s}}-\\sqrt{##\\sqrt{#-s}}"
@@ -721550,6 +721702,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "dd027b7b6aed73f6509685816bba48240755fbe176223b5e7e448db6ae982b1c",
+      "normalized_formula": "Onthe462-state11-sitethetamodel,finite-differenceground-energycurrentgradientsvanishnumericallyatthe120\u00b0fluxbythearmsymmetry.Bothground-stateandbeta=2Helmholtzfree-energyHessianshave^positivenumericeigenvalues^atV=0,.2,1,4",
+      "numeric_literals": [
+        ".2",
+        "0",
+        "1",
+        "2",
+        "20",
+        "4",
+        "62"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 174,
+          "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "On the 462-state 11-site theta model, finite-difference ground-energy current gradients vanish numerically at the 120\u00b0 flux by the arm symmetry. Both ground-state and beta=2 Helmholtz free-energy Hessians have **positive numeric eigenvalues** at V=0,.2,1,4:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d10deab0b7a61c68dd49bcf4e75467f793c2665f92db9984c20e5e90fd8662bb",
+      "structural_formula": "Onthe4#-state1#-sitethetamodel,finite-differenceground-energycurrentgradientsvanishnumericallyatthe1#\u00b0fluxbythearmsymmetry.Bothground-stateandbeta=#Helmholtzfree-energyHessianshave^positivenumericeigenvalues^atV=#,#,#,#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cd2e0ce372655399eb2b34cb23c23b3929bdfcd2bc481f10a217bb9605de6d68",
       "normalized_formula": "OntheD-flatCartanslice\\([x^\\dagger,x]=0\\).InvarianceoftheHermitian/Killingformidentifiestheadjoints,and",
       "numeric_literals": [
@@ -800983,6 +801168,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "508e4f36fd477ddb8fef5908673557334d98bc2008c1442765be24fb9ab10aa2",
+      "normalized_formula": "The^exact^320\u00d7320nativeHashimotowalkcountgives\\(\\mathrm{tr}B^n=0\\)for\\(1\\len\\le7\\),and\\(\\mathrm{tr}B^8=25920=16\\times1620\\):theLevigraphhas1620primitiveunorientedoctagons.Thetheta'sthreeoctagonsconstituteexactly\\(1/540\\)ofthiscensus,butthiscombinatorialratioimpliesnophysical540-foldsector",
+      "numeric_literals": [
+        "0",
+        "1",
+        "16",
+        "25920",
+        "320",
+        "40",
+        "540",
+        "620",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 191,
+          "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "The **exact** 320\u00d7320 native Hashimoto walk count gives \\(\\mathrm{tr}B^n=0\\) for \\(1\\le n\\le7\\), and \\(\\mathrm{tr}B^8=25{,}920=16\\times1620\\): the Levi graph has 1620 primitive unoriented octagons. The theta's three octagons constitute exactly \\(1/540\\) of this census, but this combinatorial ratio implies no physical 540-fold sector.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "eabf0eafecf5ae2af62fc7ae7b8d296e34ae85868ebc8c9b60200b3058f51edb",
+      "structural_formula": "The^exact^#\u00d7#nativeHashimotowalkcountgives\\(\\mathrm{tr}B^n=#\\)for\\(#\\len\\le7\\),and\\(\\mathrm{tr}B^#=#=#\\times1#\\):theLevigraphhas1#primitiveunorientedoctagons.Thetheta'sthreeoctagonsconstituteexactly\\(#/#\\)ofthiscensus,butthiscombinatorialratioimpliesnophysical5#-foldsector"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fce26620a9b6087aba250a74eb79554dc9aacc208e9f4595387749f74e82490c",
       "normalized_formula": "The^masshierarchy^ofSMfermionsincreaseswithgenerationnumber,matchingthefractaldistancescalingd=3^t.Thetopquarkmass(~173GeV)appearsattier-3scale;theupquarkmass(~2MeV)appearsattier-1scale",
       "numeric_literals": [
@@ -817514,6 +817734,36 @@
       },
       "structural_family_id": "700c578513bcc5e85484c751b00c7adf39d8368fa73ba32e928fd6abbb567d30",
       "structural_formula": "Thethreepairwisecrossingscoincidetowithin~#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c008f4c9f1ed3a0816157cba7c5a03f8254f21a6913b5996ee2a1e50077b3b52",
+      "normalized_formula": "Thethreethetaoctagonsareonly\\(3/1620=1/540\\)",
+      "numeric_literals": [
+        "1",
+        "1620",
+        "3",
+        "540"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 109,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "The three theta octagons are only \\(3/1620=1/540\\)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bd119b5332a01390ec58586d193e4782e7babe0bd9842feb86051be012afba9b",
+      "structural_formula": "Thethreethetaoctagonsareonly\\(#/#=#/#\\)"
     },
     {
       "file_count": 1,
@@ -858577,6 +858827,73 @@
     },
     {
       "file_count": 1,
+      "formula_id": "54388a0353b9ca64b11ce1ed2f332e08f2c308ea8401d8f563688bbef55c1232",
+      "normalized_formula": "Z_{\\Theta,0}(u)^{-1}=(1-u^8)^2(1-4u^8)",
+      "numeric_literals": [
+        "-1",
+        "-4",
+        "0",
+        "1",
+        "2",
+        "8"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 77,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "Z_{\\Theta,0}(u)^{-1}=(1-u^8)^2(1-4u^8).",
+          "status": "unclassified"
+        },
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "Z_{\\Theta,0}(u)^{-1}=(1-u^8)^2(1-4u^8).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 2
+      },
+      "structural_family_id": "e436e6601b3eaf3c5dd0dbe1431d6dbcd98ba8a6f71275bd0c44d7feee866010",
+      "structural_formula": "Z_{\\Theta,#}(u)^{#}=(#-u^#)^#(##u^#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "401d8d138e9dfe447b2f8fd18788dd866e2dd2f50c075daa6ba4a53589b1f2d7",
+      "normalized_formula": "Z_{\\Theta,120^\\circ}(u)^{-1}=",
+      "numeric_literals": [
+        "-1",
+        "120"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 83,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "Z_{\\Theta,120^\\circ}(u)^{-1}=",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "94d4b1920b663f7c93c6366ebbafc030b1f44588a2e3df44b05d60a59464ce30",
+      "structural_formula": "Z_{\\Theta,#^\\circ}(u)^{#}="
+    },
+    {
+      "file_count": 1,
       "formula_id": "54afa26a7f6638d1fbf903c0a9133ef61325befab35bc2c406cf0bcd436421f6",
       "normalized_formula": "Z_{\\rmscalar}(W_{3,3})=({\\det}'L)^{-1/2}=(\\Phi_4^f\\cdot(\\lambda^\\mu)^g)^{-1/2}=(10^{24}\\cdot16^{15})^{-1/2}",
       "numeric_literals": [
@@ -894306,6 +894623,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ca91bf09d04dca29d4fd7ca72869f5bf78c1e530c6d77beb1001547cb0c4cb10",
+      "normalized_formula": "\\boxed{41\\cdot51840=2125440}",
+      "numeric_literals": [
+        "1840",
+        "2125440",
+        "41"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 159,
+          "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "\\boxed{41\\cdot51840=2{,}125{,}440}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3469a132a3eccd520f035673ca8a9fd087f3061d9512cb87029fa9f1096f82a6",
+      "structural_formula": "\\boxed{#\\cdot5#=#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cb0175826745bcb90ebb62fa3c5949e1651b90b6603dd4349b7ba05bdd0aa014",
       "normalized_formula": "\\boxed{42+24=66,\\qquad96-24=72.}",
       "numeric_literals": [
@@ -901447,6 +901793,43 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5f8dcb520554cc60ef53c334b3eec68b56c03995b5efaf9727f1827a4e15f53f",
+      "normalized_formula": "\\boxed{Z_{80}(u)^{-1}=(1-u^2)^{81}(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}.}",
+      "numeric_literals": [
+        "+3",
+        "+9",
+        "-1",
+        "-9",
+        "1",
+        "2",
+        "24",
+        "30",
+        "4",
+        "80",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 32,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\boxed{ Z_{80}(u)^{-1} =(1-u^2)^{81}(1-9u^2) (1+9u^4)^{24}(1+3u^2)^{30}.}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c9ecee986d2a1b71c51ce6cf5044ae8ca51892bce61cb2147133887b247fdf9c",
+      "structural_formula": "\\boxed{Z_{#}(u)^{#}=(#-u^#)^{#}(##u^#)(##u^#)^{#}(##u^#)^{#}.}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "16dd40685d9d3f9c257697a30c2228895f825edf26f5079bd96453820d52ff97",
       "normalized_formula": "\\boxed{Z_{\\Theta,0}(u)^{-1}=(1-u^8)^2(1-4u^8)}",
       "numeric_literals": [
@@ -901513,6 +901896,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7bf35de36ab943dd4975600275a21bb68f6f0b3cf3c6bb3e1fa060437bec0672",
+      "normalized_formula": "\\boxed{Z_{\\Theta,120^\\circ}(u)^{-1}=(1-u^8)(1+2u^8)^2.}",
+      "numeric_literals": [
+        "+2",
+        "-1",
+        "1",
+        "120",
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 81,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\boxed{ Z_{\\Theta,120^\\circ}(u)^{-1}= (1-u^8)(1+2u^8)^2.}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7d703f3b23e680cae8bf80b6b02b55c455d2fe79cdec7f92364e0087ba5ac226",
+      "structural_formula": "\\boxed{Z_{\\Theta,#^\\circ}(u)^{#}=(#-u^#)(##u^#)^#.}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6c57b2e80e22ca7201de667c75c7d0dda224518999470c664133ddb4c2b8a00c",
       "normalized_formula": "\\boxed{Z_{\\Theta,120^\\circ}(u)^{-1}=(1-u^8)(1+2u^8)^2}",
       "numeric_literals": [
@@ -901542,6 +901957,42 @@
       },
       "structural_family_id": "db45486b26deff9ee3487d1589eba382d482dd22e367ed4cae673db6e0add862",
       "structural_formula": "\\boxed{Z_{\\Theta,#^\\circ}(u)^{#}=(#-u^#)(##u^#)^#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b0bc54a67ef9165d5451c4f90616f87ed9e49d668f3ff99b72e117d70c57cc7d",
+      "normalized_formula": "\\boxed{Z_{\\mathrm{Levi}}(u)^{-1}=(1-u^2)^{81}(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}.}",
+      "numeric_literals": [
+        "+3",
+        "+9",
+        "-1",
+        "-9",
+        "1",
+        "2",
+        "24",
+        "30",
+        "4",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 188,
+          "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "\\boxed{Z_{\\mathrm{Levi}}(u)^{-1}=(1-u^2)^{81}(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}.}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0baa818c25cb9cef918ac27823686e173e199cadbe977d1e5229f66f8e56b665",
+      "structural_formula": "\\boxed{Z_{\\mathrm{Levi}}(u)^{#}=(#-u^#)^{#}(##u^#)(##u^#)^{#}(##u^#)^{#}.}"
     },
     {
       "file_count": 1,
@@ -920696,6 +921147,66 @@
       },
       "structural_family_id": "011fa3bc83a1df56ada342fbe012d9e1bc3a8604b4822b51b94d41e2def6fe52",
       "structural_formula": "\\det(I-uB)=(#-u^#)^{E-V}\\det\\bigl(I-uA+(k-#)u^#I\\bigr)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4485ec1a53af449907017bbab3229ba26bbfd6eb7e3121d5533e8a8ea42a98d8",
+      "normalized_formula": "\\det(I-uB_\\phi)=(1-u^2)^{12-11}\\det\\bigl(I-uA_\\phi+u^2(D-I)\\bigr)",
+      "numeric_literals": [
+        "-11",
+        "1",
+        "12",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 68,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\det(I-uB_\\phi) =(1-u^2)^{12-11} \\det\\bigl(I-uA_\\phi+u^2(D-I)\\bigr).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b6ff268d9b6117e08b2bf3e67a648068b90fdbcd517aad689cdcfb4aadd81216",
+      "structural_formula": "\\det(I-uB_\\phi)=(#-u^#)^{##}\\det\\bigl(I-uA_\\phi+u^#(D-I)\\bigr)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f58ba92b9e5ba114cdc93669875c4f94a5679f58525945171f212d3b6fd6d200",
+      "normalized_formula": "\\det(I-xKZ^{-1}KZ)=(1-x)\\bigl[1+(4-s^2)x+4x^2\\bigr]",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 62,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\det(I-xKZ^{-1}KZ) =(1-x)\\bigl[1+(4-s^2)x+4x^2\\bigr].",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "454fbcc507caca2b9bca842cb564788c8c6067998ea180df106b4f2ec5c98b40",
+      "structural_formula": "\\det(I-xKZ^{#}KZ)=(#-x)\\bigl[#+(#-s^#)x+#x^#\\bigr]"
     },
     {
       "file_count": 1,
@@ -948104,6 +948615,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "69acb8b76399f7a0175430069deeecc01f0fafb0cc53db8131a46474e6f14b39",
+      "normalized_formula": "\\lvertu\\rvert=2^{-1/8}",
+      "numeric_literals": [
+        "-1",
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 88,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\lvert u\\rvert=2^{-1/8}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e868dae55f6722a95f696599b80714b17ba50f45d394f515d76cdf96b97642dd",
+      "structural_formula": "\\lvertu\\rvert=#^{#/#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3a2996944938d13033c981becc17aaaed3eb775fd638aa3cbb718c7fe86d2a40",
       "normalized_formula": "\\mH=\\sqrt{2\\lH}\\vEW=\\sqrt{\\frac{7}{27}}\\times246.22\\\\mathrm{GeV}",
       "numeric_literals": [
@@ -958050,6 +958590,63 @@
       },
       "structural_family_id": "26b6ec0fd4107dfdb0f1e9c22e4514376c680bc2161317d59cf99a79a0de78b3",
       "structural_formula": "\\mathrm{tr}(g^#)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "28c8067287595588285ae208fa9a43e4b853a72b36445fc5d749e3261a32bf1b",
+      "normalized_formula": "\\mathrm{tr}B^8=25920=16\\times1620",
+      "numeric_literals": [
+        "16",
+        "25920",
+        "620",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 191,
+          "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "\\mathrm{tr}B^8=25{,}920=16\\times1620",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "645aed426754aaaf6c1af1bbec5aba9a6520096f311795e9240fc41e670d8d60",
+      "structural_formula": "\\mathrm{tr}B^#=#=#\\times1#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e4b51e3c8e4ea6d8935905a60f3d2afead9d45b6bd3784d1f2a8e1459e71fe15",
+      "normalized_formula": "\\mathrm{tr}B^n=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 191,
+          "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "\\mathrm{tr}B^n=0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "95deb37c756c46ede7e898f4224936571e06ebd8452e8abdbdd412f26a406fc8",
+      "structural_formula": "\\mathrm{tr}B^n=#"
     },
     {
       "file_count": 1,
@@ -969409,6 +970006,95 @@
       },
       "structural_family_id": "6ca72be7e360cd8013129d01aafb6b9142a665d58efa69ac0ec1f26e4f5b0ed3",
       "structural_formula": "\\operatorname{spec}G=(#/#)^#+(#/#)^{#}+(#/#)^{#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "73bb76811bfc76c8e21ffae43f776e77e0bd61cd908f02547206600e0a966894",
+      "normalized_formula": "\\operatorname{tr}(B_\\phi^8)=8(s^2-3)=-24",
+      "numeric_literals": [
+        "-24",
+        "-3",
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 105,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\operatorname{tr}(B_\\phi^8)=8(s^2-3)=-24",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8355298160125ef79326b08f703946be6fe59a71c879b7174756e16e24cf7fd5",
+      "structural_formula": "\\operatorname{tr}(B_\\phi^#)=#(s^##)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a8768dc0fb0f9bb8f60114d933cc368ebfcd79145420da0fb3e7a530a70f3037",
+      "normalized_formula": "\\operatorname{tr}(B_{80}^8)=25920=16\\cdot1620",
+      "numeric_literals": [
+        "16",
+        "25920",
+        "620",
+        "8",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 40,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\operatorname{tr}(B_{80}^8)=25920=16\\cdot1620",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "77cfe8827df10b99e8bd1437c5106eee0513ff7768d49736c9341765c6e810e2",
+      "structural_formula": "\\operatorname{tr}(B_{#}^#)=#=#\\cdot1#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8719a27c6ea330df976cd25c1baa624077de0e3012baef704ad52d5f6a54f8b1",
+      "normalized_formula": "\\operatorname{tr}(B_{80}^n)=0",
+      "numeric_literals": [
+        "0",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 39,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "\\operatorname{tr}(B_{80}^n)=0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b71a5f554cbcf5d5f68f92011d7d31e58584991807e4722493276393ce36ca1c",
+      "structural_formula": "\\operatorname{tr}(B_{#}^n)=#"
     },
     {
       "file_count": 1,
@@ -1261249,6 +1261935,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2563491ebcf6e8de291ff89947df5b837a8cdaa6fb2e83e900d3ef0e12db39b8",
+      "normalized_formula": "for\\(c_1=a(\\alpha\\wedge\\gamma)+b(\\beta\\wedge\\delta)\\).Forty-nineinteger\\((a,b)\\)combinationswerechecked.Anonzeroindexfrom^externallychosen^curvatureisnotaphysicalW33-derivedchiralspectrumorananomaly-freetheory",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 170,
+          "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "for \\(c_1=a(\\alpha\\wedge\\gamma)+b(\\beta\\wedge\\delta)\\). Forty-nine integer \\((a,b)\\) combinations were checked. A nonzero index from **externally chosen** curvature is not a physical W33-derived chiral spectrum or an anomaly-free theory.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "288c1e6970829b1a424abab887b92fc11e7a7334e05c0f0f653623198fa52020",
+      "structural_formula": "for\\(c_1=a(\\alpha\\wedge\\gamma)+b(\\beta\\wedge\\delta)\\).Forty-nineinteger\\((a,b)\\)combinationswerechecked.Anonzeroindexfrom^externallychosen^curvatureisnotaphysicalW3#-derivedchiralspectrumorananomaly-freetheory"
+    },
+    {
+      "file_count": 1,
       "formula_id": "65580adf6f8ef3ce2cf2ac5ea16449e1aeed1e8e6fe825c272b8c26cd291f68d",
       "normalized_formula": "for^everyrealt>0^and^everyothercontinuousU(1)^3phase^.ThepositiveWeierstrassfactorsforcoshconvertthisdeterminantorderingdirectlytostrict^all-temperature^free-fermionordering",
       "numeric_literals": [
@@ -1297736,7 +1298449,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 58,
+          "line": 77,
           "path": "analysis/w33_20261014_toe76_four_fronts.py",
           "raw": "if det<minimum_det:minimum_det=det;min_corner=[e,f,x+1,y+1]",
           "status": "unclassified"
@@ -1299420,7 +1300133,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 108,
+          "line": 140,
           "path": "analysis/w33_20261014_toe76_four_fronts.py",
           "raw": "if i in chord:delta[chord[i]]=-(1 if v_occ else -1)",
           "status": "killed_or_retracted"
@@ -1396766,8 +1397479,8 @@
     },
     {
       "file_count": 1,
-      "formula_id": "4e79d7e2c67e9c5338a7674ae1df0150c993a446e888f4d675c1e6dd99c7a0f0",
-      "normalized_formula": "n=0;minimum_det=10^30;min_corner=None;fails=[]",
+      "formula_id": "c0eb9b57b379c81e5177ffcb2dd49ca425c55e7bd802e2c6f3942e4ba39c0cb0",
+      "normalized_formula": "n=0;minimum_det=10^30;min_corner=None;fails=[];not_psd=[]",
       "numeric_literals": [
         "0",
         "10",
@@ -1396781,17 +1397494,17 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 44,
+          "line": 63,
           "path": "analysis/w33_20261014_toe76_four_fronts.py",
-          "raw": "n=0;minimum_det=10**30;min_corner=None;fails=[]",
+          "raw": "n=0;minimum_det=10**30;min_corner=None;fails=[];not_psd=[]",
           "status": "unclassified"
         }
       ],
       "status_profile": {
         "unclassified": 1
       },
-      "structural_family_id": "1eb54588d3423d39a7b094bf8b6396fefce89284fe9dd48d417e02e993e30bd5",
-      "structural_formula": "n=#;minimum_det=#^#;min_corner=None;fails=[]"
+      "structural_family_id": "acec07b07041d77d84d5007ea5802b7d9b644e4e9c48efa1c39e32413c0f8b23",
+      "structural_formula": "n=#;minimum_det=#^#;min_corner=None;fails=[];not_psd=[]"
     },
     {
       "file_count": 1,
@@ -1637287,17 +1638000,18 @@
       "structural_formula": "s=-\\mu=#"
     },
     {
-      "file_count": 2,
+      "file_count": 3,
       "formula_id": "b10f271a7654500776598db2b7e193f2240a5449c3eb1c87a43a7de6a1e15fd2",
       "normalized_formula": "s=0",
       "numeric_literals": [
         "0"
       ],
-      "occurrence_count": 3,
+      "occurrence_count": 5,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "analysis/2026-10-14_toe75_five_fronts.md",
-        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
       ],
       "source_locations": [
         {
@@ -1637320,11 +1638034,25 @@
           "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
           "raw": "s=0",
           "status": "certified_or_theorem"
+        },
+        {
+          "category": "tex_paren",
+          "line": 80,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "s=0",
+          "status": "unclassified"
+        },
+        {
+          "category": "tex_paren",
+          "line": 102,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "s=0",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
         "certified_or_theorem": 1,
-        "unclassified": 2
+        "unclassified": 4
       },
       "structural_family_id": "290c681dc72898a5e3aa0e52a8b30628a5613bff15feebf616b646398ecf98d0",
       "structural_formula": "s=#"
@@ -1637535,17 +1638263,18 @@
       "structural_formula": "s=#thesamechangecostsnothing--{a2:#"
     },
     {
-      "file_count": 2,
+      "file_count": 3,
       "formula_id": "e067dad14d8022341d35d6b488bfb855d85ec68661b192bea68fa421a2901523",
       "normalized_formula": "s=3",
       "numeric_literals": [
         "3"
       ],
-      "occurrence_count": 2,
+      "occurrence_count": 3,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
-        "manuscripts/tex/part_casey_w33_weil_elliptic_bridge.tex"
+        "manuscripts/tex/part_casey_w33_weil_elliptic_bridge.tex",
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
       ],
       "source_locations": [
         {
@@ -1637561,11 +1638290,18 @@
           "path": "manuscripts/tex/part_casey_w33_weil_elliptic_bridge.tex",
           "raw": "s=3",
           "status": "unclassified"
+        },
+        {
+          "category": "tex_paren",
+          "line": 76,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "s=3",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
         "certified_or_theorem": 1,
-        "unclassified": 1
+        "unclassified": 2
       },
       "structural_family_id": "290c681dc72898a5e3aa0e52a8b30628a5613bff15feebf616b646398ecf98d0",
       "structural_formula": "s=#"
@@ -1691926,16 +1692662,17 @@
       "structural_formula": "t=tr(VU^*V^dagU)liesinQ(zeta)(thesqrt3powerspairupintorationalpowersof3,sincesqrt3isreal),and"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "2e7a4822b63373a743a0d8f9c175fd2f87defceae6eadee68a5240489ec60be7",
       "normalized_formula": "t=u^4",
       "numeric_literals": [
         "4"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
-        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md"
+        "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+        "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex"
       ],
       "source_locations": [
         {
@@ -1691944,10 +1692681,18 @@
           "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
           "raw": "t=u^4",
           "status": "certified_or_theorem"
+        },
+        {
+          "category": "tex_paren",
+          "line": 90,
+          "path": "manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex",
+          "raw": "t=u^4",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1
+        "certified_or_theorem": 1,
+        "unclassified": 1
       },
       "structural_family_id": "9bab02f570274b829cbb383b5dca1027f771f642f77fbad841568f77c9f90d18",
       "structural_formula": "t=u^#"
@@ -1740903,7 +1741648,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 105,
+          "line": 137,
           "path": "analysis/w33_20261014_toe76_four_fronts.py",
           "raw": "v_occ=(oa>>v)&1;w_occ=(oa>>w)&1",
           "status": "killed_or_retracted"
@@ -1808639,9 +1809384,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T17:39:57-04:00",
+  "frozen_at": "2026-10-14T17:51:08-04:00",
   "pass": 398,
-  "repository_head": "8301121f7459c2020d903efd687704cd9c57bd19",
+  "repository_head": "5813e8b877f112d0135a7db85cd1504afbdce27b",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1840180,6 +1840925,14 @@
     },
     {
       "exact_formula_ids": [
+        "0882b0893ff534f66ab85b39ba59f5c23102f6e22fd79a40d426eb14c8265bbd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "57b9a2d5b78ec2723be984e395134e9bd454c58e757ea01112e73f0836092c81",
+      "structural_formula": "\"if_no_single_bad_then_all_single_edge_weights_0_to_2_strictly_stable\":len(single_bad)=#"
+    },
+    {
+      "exact_formula_ids": [
         "ede7b01fa282d7224711c5d3975e698b7f434c5848aa187996b1bee53d2f1475"
       ],
       "exact_member_count": 1,
@@ -1849652,6 +1850405,14 @@
       "exact_member_count": 1,
       "structural_family_id": "98834074fc0821aa272dd9b21f28835ed68567f84562de9ae4f72ef1d2772947",
       "structural_formula": "\"proof_of_existence\":\"Foranysufficientlysmallstrictlypositiveq,rho=(I+sum_psqrt(q_p/#)*(W_p+W_p^dag))/#hasexactlyPaulipowersq.ItisrigorouslypositivesinceeachW_pisunitaryand||summu_p(W_p+W_pdag)||<=#summu_p<#;thenumericminimumeigenvalueindependentlycorroboratesthis.Takingqplus/qminus=t1+/-epsilon*hwithhinkerNgeneratesphysicaldensitymatricesofequalpurityandidenticalall-contextcollisionobservablesbutdifferentP_minusq.\""
+    },
+    {
+      "exact_formula_ids": [
+        "ba8eff42bacf2cd14dae5096de1b172503082c6b8ab473ad3dab533d222a4df8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c57f23bf48bae6a026f06fbbf1ceab18903464f21881e6c334b6c4b5fc6da031",
+      "structural_formula": "\"proof_scope\":\"Thenativeleading-beta^#Hessianismultiaffineinanytwoedgeweights;endpointintegerHessiansatw=#or2areindependentlyclassifiedasPD,singular-PSD,ornon-PSDusingallexactprincipalminors.IfALLcornersarePSDthenconvexinterpolationmakeseveryinteriortwo-linkHessianPSD.TOE6#'sexactsigned-squaredecompositionwithnonnegativemixedFouriercoefficientsyieldsaGLOBAL3pipotentialminimum(possiblynonuniqueatsingularendpoints).LossofstrictPDaloneNEVERprovesaninstabilityorlowercompetingpotential.Thefull1#-linkdisorderthresholdremainsopen.\"}"
     },
     {
       "exact_formula_ids": [
@@ -1871421,6 +1872182,7 @@
     },
     {
       "exact_formula_ids": [
+        "bd575641c2fcae7be130f70f08acc01b96a187d1d95dff054da6742595e0ab2a",
         "c5966175f01f27ec8f663cb23fba991f646fd9f10864e5a034c0b3b942c36738",
         "ce40c270941dfda2cf552e6432ea834e5e09480f485097fc753d71abaebc4e9b",
         "e0cf6f3e5e56df35aa536050c1496795d39410f1caa9f2664c04e4ece1aae18f",
@@ -1871431,7 +1872193,7 @@
         "73ce4535dd6f639b2950601148687b6a7ed36299af1708a188bb4f61cdaee294",
         "101f3ad652f198167e01b265d1bbbae7dfb062e835d6eae62fd35d2ae1f3e562"
       ],
-      "exact_member_count": 9,
+      "exact_member_count": 10,
       "structural_family_id": "7d51c3785424f4a9efdd76ebb7c9ae25b09c12ea0a65c40a3506974b34824d7a",
       "structural_formula": "#/#=#/#"
     },
@@ -1897118,6 +1897880,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f5455b19499daa0996b417c4b790aaac91fad3c13e5b6dfcfec986f65e327cb2",
       "structural_formula": "#\\len,\\quad0\\let\\len-q!,\\quad(n-q)(n-q-#)\u2261#t\\pmod{k}"
+    },
+    {
+      "exact_formula_ids": [
+        "6a72b804f5a161f8338579b83dd74edabfa1ea25893072f6b62380a8c958b573"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "59f915a23f0d51609f0bf783f32873b81e1195f9de4207491658575995dd4f0a",
+      "structural_formula": "#\\len<#"
     },
     {
       "exact_formula_ids": [
@@ -1924173,6 +1924943,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c47d7efbeb83dbe73359af42059159d2ee11301ba226237eb39ef43679b5a9c3",
       "structural_formula": "(\\phi_0,\\phi_6,\\phi_{#})=(#,\\pi,#)"
+    },
+    {
+      "exact_formula_ids": [
+        "f4e6eb935e659a319bbeb6b2d12aacbd722f6033079bd2469cdc9689e3fa0ca3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8be085fbee4a282763794752ce11875b45ca98ceb1271371de0cbf8aff45f18b",
+      "structural_formula": "(\\phi_1,\\phi_2)=(#\\pi/#,#\\pi/#)"
     },
     {
       "exact_formula_ids": [
@@ -2003198,6 +2003976,14 @@
     },
     {
       "exact_formula_ids": [
+        "dd027b7b6aed73f6509685816bba48240755fbe176223b5e7e448db6ae982b1c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d10deab0b7a61c68dd49bcf4e75467f793c2665f92db9984c20e5e90fd8662bb",
+      "structural_formula": "Onthe4#-state1#-sitethetamodel,finite-differenceground-energycurrentgradientsvanishnumericallyatthe1#\u00b0fluxbythearmsymmetry.Bothground-stateandbeta=#Helmholtzfree-energyHessianshave^positivenumericeigenvalues^atV=#,#,#,#"
+    },
+    {
+      "exact_formula_ids": [
         "9535697c6bd10c9fb4523ea47bbef8ca6fa7d658a50980843837f9725e8a0349"
       ],
       "exact_member_count": 1,
@@ -2024658,6 +2025444,14 @@
     },
     {
       "exact_formula_ids": [
+        "508e4f36fd477ddb8fef5908673557334d98bc2008c1442765be24fb9ab10aa2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "eabf0eafecf5ae2af62fc7ae7b8d296e34ae85868ebc8c9b60200b3058f51edb",
+      "structural_formula": "The^exact^#\u00d7#nativeHashimotowalkcountgives\\(\\mathrm{tr}B^n=#\\)for\\(#\\len\\le7\\),and\\(\\mathrm{tr}B^#=#=#\\times1#\\):theLevigraphhas1#primitiveunorientedoctagons.Thetheta'sthreeoctagonsconstituteexactly\\(#/#\\)ofthiscensus,butthiscombinatorialratioimpliesnophysical5#-foldsector"
+    },
+    {
+      "exact_formula_ids": [
         "fce26620a9b6087aba250a74eb79554dc9aacc208e9f4595387749f74e82490c"
       ],
       "exact_member_count": 1,
@@ -2029082,6 +2029876,14 @@
       "exact_member_count": 1,
       "structural_family_id": "700c578513bcc5e85484c751b00c7adf39d8368fa73ba32e928fd6abbb567d30",
       "structural_formula": "Thethreepairwisecrossingscoincidetowithin~#"
+    },
+    {
+      "exact_formula_ids": [
+        "c008f4c9f1ed3a0816157cba7c5a03f8254f21a6913b5996ee2a1e50077b3b52"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bd119b5332a01390ec58586d193e4782e7babe0bd9842feb86051be012afba9b",
+      "structural_formula": "Thethreethetaoctagonsareonly\\(#/#=#/#\\)"
     },
     {
       "exact_formula_ids": [
@@ -2040134,6 +2040936,22 @@
     },
     {
       "exact_formula_ids": [
+        "401d8d138e9dfe447b2f8fd18788dd866e2dd2f50c075daa6ba4a53589b1f2d7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "94d4b1920b663f7c93c6366ebbafc030b1f44588a2e3df44b05d60a59464ce30",
+      "structural_formula": "Z_{\\Theta,#^\\circ}(u)^{#}="
+    },
+    {
+      "exact_formula_ids": [
+        "54388a0353b9ca64b11ce1ed2f332e08f2c308ea8401d8f563688bbef55c1232"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e436e6601b3eaf3c5dd0dbe1431d6dbcd98ba8a6f71275bd0c44d7feee866010",
+      "structural_formula": "Z_{\\Theta,#}(u)^{#}=(#-u^#)^#(##u^#)"
+    },
+    {
+      "exact_formula_ids": [
         "54afa26a7f6638d1fbf903c0a9133ef61325befab35bc2c406cf0bcd436421f6"
       ],
       "exact_member_count": 1,
@@ -2048956,6 +2049774,14 @@
     },
     {
       "exact_formula_ids": [
+        "ca91bf09d04dca29d4fd7ca72869f5bf78c1e530c6d77beb1001547cb0c4cb10"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3469a132a3eccd520f035673ca8a9fd087f3061d9512cb87029fa9f1096f82a6",
+      "structural_formula": "\\boxed{#\\cdot5#=#}"
+    },
+    {
+      "exact_formula_ids": [
         "7455ff1fbc0184d60990aca6331bfe1d2b8df894e1a2a1953b1856d23e731594"
       ],
       "exact_member_count": 1,
@@ -2050696,6 +2051522,22 @@
     },
     {
       "exact_formula_ids": [
+        "5f8dcb520554cc60ef53c334b3eec68b56c03995b5efaf9727f1827a4e15f53f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c9ecee986d2a1b71c51ce6cf5044ae8ca51892bce61cb2147133887b247fdf9c",
+      "structural_formula": "\\boxed{Z_{#}(u)^{#}=(#-u^#)^{#}(##u^#)(##u^#)^{#}(##u^#)^{#}.}"
+    },
+    {
+      "exact_formula_ids": [
+        "7bf35de36ab943dd4975600275a21bb68f6f0b3cf3c6bb3e1fa060437bec0672"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7d703f3b23e680cae8bf80b6b02b55c455d2fe79cdec7f92364e0087ba5ac226",
+      "structural_formula": "\\boxed{Z_{\\Theta,#^\\circ}(u)^{#}=(#-u^#)(##u^#)^#.}"
+    },
+    {
+      "exact_formula_ids": [
         "6c57b2e80e22ca7201de667c75c7d0dda224518999470c664133ddb4c2b8a00c"
       ],
       "exact_member_count": 1,
@@ -2050717,6 +2051559,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8a6e366ad4ecb31ec91af97d90d91f7583e6bc7b32a728e4a01e8b9843b56339",
       "structural_formula": "\\boxed{Z_{\\Theta,#}(u)^{#}=(#-u^#)^#(##u^#)}\\quad\\text{and}\\quad\\boxed{Z_{\\Theta,#^\\circ}(u)^{#}=(#-u^#)(##u^#)^#}"
+    },
+    {
+      "exact_formula_ids": [
+        "b0bc54a67ef9165d5451c4f90616f87ed9e49d668f3ff99b72e117d70c57cc7d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0baa818c25cb9cef918ac27823686e173e199cadbe977d1e5229f66f8e56b665",
+      "structural_formula": "\\boxed{Z_{\\mathrm{Levi}}(u)^{#}=(#-u^#)^{#}(##u^#)(##u^#)^{#}(##u^#)^{#}.}"
     },
     {
       "exact_formula_ids": [
@@ -2055751,6 +2056601,22 @@
       "exact_member_count": 1,
       "structural_family_id": "011fa3bc83a1df56ada342fbe012d9e1bc3a8604b4822b51b94d41e2def6fe52",
       "structural_formula": "\\det(I-uB)=(#-u^#)^{E-V}\\det\\bigl(I-uA+(k-#)u^#I\\bigr)"
+    },
+    {
+      "exact_formula_ids": [
+        "4485ec1a53af449907017bbab3229ba26bbfd6eb7e3121d5533e8a8ea42a98d8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b6ff268d9b6117e08b2bf3e67a648068b90fdbcd517aad689cdcfb4aadd81216",
+      "structural_formula": "\\det(I-uB_\\phi)=(#-u^#)^{##}\\det\\bigl(I-uA_\\phi+u^#(D-I)\\bigr)"
+    },
+    {
+      "exact_formula_ids": [
+        "f58ba92b9e5ba114cdc93669875c4f94a5679f58525945171f212d3b6fd6d200"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "454fbcc507caca2b9bca842cb564788c8c6067998ea180df106b4f2ec5c98b40",
+      "structural_formula": "\\det(I-xKZ^{#}KZ)=(#-x)\\bigl[#+(#-s^#)x+#x^#\\bigr]"
     },
     {
       "exact_formula_ids": [
@@ -2062591,6 +2063457,14 @@
     },
     {
       "exact_formula_ids": [
+        "69acb8b76399f7a0175430069deeecc01f0fafb0cc53db8131a46474e6f14b39"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e868dae55f6722a95f696599b80714b17ba50f45d394f515d76cdf96b97642dd",
+      "structural_formula": "\\lvertu\\rvert=#^{#/#}"
+    },
+    {
+      "exact_formula_ids": [
         "3a2996944938d13033c981becc17aaaed3eb775fd638aa3cbb718c7fe86d2a40"
       ],
       "exact_member_count": 1,
@@ -2065142,6 +2066016,22 @@
       "exact_member_count": 1,
       "structural_family_id": "26b6ec0fd4107dfdb0f1e9c22e4514376c680bc2161317d59cf99a79a0de78b3",
       "structural_formula": "\\mathrm{tr}(g^#)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "28c8067287595588285ae208fa9a43e4b853a72b36445fc5d749e3261a32bf1b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "645aed426754aaaf6c1af1bbec5aba9a6520096f311795e9240fc41e670d8d60",
+      "structural_formula": "\\mathrm{tr}B^#=#=#\\times1#"
+    },
+    {
+      "exact_formula_ids": [
+        "e4b51e3c8e4ea6d8935905a60f3d2afead9d45b6bd3784d1f2a8e1459e71fe15"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "95deb37c756c46ede7e898f4224936571e06ebd8452e8abdbdd412f26a406fc8",
+      "structural_formula": "\\mathrm{tr}B^n=#"
     },
     {
       "exact_formula_ids": [
@@ -2067913,6 +2068803,30 @@
       "exact_member_count": 1,
       "structural_family_id": "6ca72be7e360cd8013129d01aafb6b9142a665d58efa69ac0ec1f26e4f5b0ed3",
       "structural_formula": "\\operatorname{spec}G=(#/#)^#+(#/#)^{#}+(#/#)^{#}"
+    },
+    {
+      "exact_formula_ids": [
+        "73bb76811bfc76c8e21ffae43f776e77e0bd61cd908f02547206600e0a966894"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8355298160125ef79326b08f703946be6fe59a71c879b7174756e16e24cf7fd5",
+      "structural_formula": "\\operatorname{tr}(B_\\phi^#)=#(s^##)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "a8768dc0fb0f9bb8f60114d933cc368ebfcd79145420da0fb3e7a530a70f3037"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "77cfe8827df10b99e8bd1437c5106eee0513ff7768d49736c9341765c6e810e2",
+      "structural_formula": "\\operatorname{tr}(B_{#}^#)=#=#\\cdot1#"
+    },
+    {
+      "exact_formula_ids": [
+        "8719a27c6ea330df976cd25c1baa624077de0e3012baef704ad52d5f6a54f8b1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b71a5f554cbcf5d5f68f92011d7d31e58584991807e4722493276393ce36ca1c",
+      "structural_formula": "\\operatorname{tr}(B_{#}^n)=#"
     },
     {
       "exact_formula_ids": [
@@ -2146706,6 +2147620,14 @@
     },
     {
       "exact_formula_ids": [
+        "2563491ebcf6e8de291ff89947df5b837a8cdaa6fb2e83e900d3ef0e12db39b8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "288c1e6970829b1a424abab887b92fc11e7a7334e05c0f0f653623198fa52020",
+      "structural_formula": "for\\(c_1=a(\\alpha\\wedge\\gamma)+b(\\beta\\wedge\\delta)\\).Forty-nineinteger\\((a,b)\\)combinationswerechecked.Anonzeroindexfrom^externallychosen^curvatureisnotaphysicalW3#-derivedchiralspectrumorananomaly-freetheory"
+    },
+    {
+      "exact_formula_ids": [
         "65580adf6f8ef3ce2cf2ac5ea16449e1aeed1e8e6fe825c272b8c26cd291f68d"
       ],
       "exact_member_count": 1,
@@ -2183220,11 +2184142,11 @@
     },
     {
       "exact_formula_ids": [
-        "4e79d7e2c67e9c5338a7674ae1df0150c993a446e888f4d675c1e6dd99c7a0f0"
+        "c0eb9b57b379c81e5177ffcb2dd49ca425c55e7bd802e2c6f3942e4ba39c0cb0"
       ],
       "exact_member_count": 1,
-      "structural_family_id": "1eb54588d3423d39a7b094bf8b6396fefce89284fe9dd48d417e02e993e30bd5",
-      "structural_formula": "n=#;minimum_det=#^#;min_corner=None;fails=[]"
+      "structural_family_id": "acec07b07041d77d84d5007ea5802b7d9b644e4e9c48efa1c39e32413c0f8b23",
+      "structural_formula": "n=#;minimum_det=#^#;min_corner=None;fails=[];not_psd=[]"
     },
     {
       "exact_formula_ids": [
@@ -2291980,20 +2292902,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88194455,
-    "exact_formula_families": 61851,
-    "files_scanned": 12104,
-    "formula_occurrences": 67839,
+    "bytes_scanned": 88216990,
+    "exact_formula_families": 61874,
+    "files_scanned": 12107,
+    "formula_occurrences": 67868,
     "status_occurrences": {
       "certified_or_theorem": 5012,
       "killed_or_retracted": 1655,
-      "open_or_conditional": 2265,
+      "open_or_conditional": 2266,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53639
+      "unclassified": 53667
     },
-    "structural_families": 60206
+    "structural_families": 60228
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "72be615b99366e6f88ec8c970f2eeba546aac29c0ede0c2ad54241fc6096710c"
+  "universe_sha256": "0f1e1f0b636f2c3fdcff7410bacfeadf1cec5f494eeb29253fd77c6ef2b66111"
 }
