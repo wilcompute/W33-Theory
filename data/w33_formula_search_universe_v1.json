@@ -806434,6 +806434,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "32516117c92a17ab94df3bcb1d0e2188d8f0513641fac3d8639c440272f5983b",
+      "normalized_formula": "Theexpectedscopeis^8\u00d781=648sector-memberships^,wherethesameunderlyingE8rootsrecurindifferentchoicesofA2embedding;648isnotacountof648distinctE8rootsorphysicalstates",
+      "numeric_literals": [
+        "48",
+        "648",
+        "8",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe80_native_octagon_to_e8_e6_a2_dictionary.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/2026-10-14_toe80_native_octagon_to_e8_e6_a2_dictionary.md",
+          "raw": "The expected scope is **8 \u00d7 81 = 648 sector-memberships**, where the same underlying E8 roots recur in different choices of A2 embedding; 648 is not a count of 648 distinct E8 roots or physical states.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1238d5516613b3f106755235e824abf1b6942557e26e8acdad58765c358d0941",
+      "structural_formula": "Theexpectedscopeis^#\u00d7#=#sector-memberships^,wherethesameunderlyingE8rootsrecurindifferentchoicesofA2embedding;#isnotacountof6#distinctE8rootsorphysicalstates"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4c80199e03286a706f125083f7603730f0596f02e195c49d52742f06e0af9842",
       "normalized_formula": "TheexplicitPGSp(4,3)stabilizeraudit\\`analysis/w33_20261014_toe77_twentyseven_octagons.py\\`showsthatthe^unorderedtwo-chordflag-pairorbit^hassize^240^.Since\\(|PGSp(4,3)|=51840\\),thepairstabilizerhasorder^216^.Itacts^transitivelyandfaithfully^onthose27sharedoctagons,withpointstabilizeroforder^8^",
       "numeric_literals": [
@@ -1812455,9 +1812485,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T19:26:56-04:00",
+  "frozen_at": "2026-10-14T19:32:27-04:00",
   "pass": 398,
-  "repository_head": "a9beb4ed60a27db4f07af7c5589a7d055f0bdd12",
+  "repository_head": "7ab245e6f3a401e78144d48e59d37d6bb83bc884",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2029891,6 +2029921,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d33025ab81a0153e981b4985782792b5e593bebf8b428fba9c26f7e29db5ea63",
       "structural_formula": "Theexpansionisthencontrolledbyx=M_F^#/Lambda^#"
+    },
+    {
+      "exact_formula_ids": [
+        "32516117c92a17ab94df3bcb1d0e2188d8f0513641fac3d8639c440272f5983b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1238d5516613b3f106755235e824abf1b6942557e26e8acdad58765c358d0941",
+      "structural_formula": "Theexpectedscopeis^#\u00d7#=#sector-memberships^,wherethesameunderlyingE8rootsrecurindifferentchoicesofA2embedding;#isnotacountof6#distinctE8rootsorphysicalstates"
     },
     {
       "exact_formula_ids": [
@@ -2296747,20 +2296785,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88361732,
-    "exact_formula_families": 61976,
-    "files_scanned": 12125,
-    "formula_occurrences": 67983,
+    "bytes_scanned": 88373928,
+    "exact_formula_families": 61977,
+    "files_scanned": 12127,
+    "formula_occurrences": 67984,
     "status_occurrences": {
       "certified_or_theorem": 5040,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2266,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53747
+      "unclassified": 53748
     },
-    "structural_families": 60324
+    "structural_families": 60325
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "6c6ce9ed78e6da81c77b879f74d55b72ff2bcbcc22e7c725c7b271ba930bdce0"
+  "universe_sha256": "654f7694a7986ca00e80acf44371a731c8856b5474653ba5cd7f8be12ddc2d45"
 }
