@@ -1,0 +1,117 @@
+{
+  "status": "TOE75_VERIFIED_SEVEN_TESTS_FULL_ORBIT_AND_120_FLUX",
+  "ci_run": "https://github.com/wilcompute/W33-Theory/actions/runs/38637198595",
+  "source_commit": "3fb7a3c4ea21fdc87bbc020f8691769e65540867",
+  "regression_count": 7,
+  "regression_runtime_seconds": 77.06,
+  "full_orbit_census": {
+    "proved_orbits_at_least": 27,
+    "proved_exact_cover_configs_at_least": 1399680,
+    "each_orbit_size": 51840,
+    "all_20_new_neighbors_on_20_distinct_orbits": true
+  },
+  "analytical_11_site_free_global": {
+    "canonical_five_fermions": true,
+    "phase_min_pi_units": [
+      [
+        0.6666666666666666,
+        1.3333333333333333
+      ],
+      [
+        1.3333333333333333,
+        0.6666666666666666
+      ]
+    ],
+    "energy": -7.232839384725914,
+    "advantage_vs_nontrivial_Z2": 0.020693170421004936,
+    "proof": "Bipartite 5x6 singular-value polynomial and strict concavity of sqrt(5+2sqrt(t))"
+  },
+  "interacting_local_flux_and_thermal": [
+    {
+      "V": 0,
+      "phase_pi_units": [
+        0.666668531642358,
+        1.333334402309818
+      ],
+      "gain_vs_Z2": 0.02069317042050489,
+      "boundary_beta_free_energy_advantages": {
+        "0.5": 0,
+        "1.0": -3.552713678800501e-15,
+        "2.0": -7.105427357601002e-15,
+        "8.0": -1.1546319456101628e-14
+      },
+      "optimized_120_beta_free_energy_advantages": {
+        "0.5": 0.000006441586670291599,
+        "1.0": 0.00036693773888352155,
+        "2.0": 0.005302692559235211,
+        "8.0": 0.020338116062121436
+      }
+    },
+    {
+      "V": 0.2,
+      "phase_pi_units": [
+        1.3333287143588255,
+        0.6666653845742262
+      ],
+      "gain_vs_Z2": 0.021332235827107304,
+      "boundary_beta_free_energy_advantages": {
+        "0.5": 2.1316282072803006e-13,
+        "1.0": 2.9983251437215586e-9,
+        "2.0": 0.000003079987977550047,
+        "8.0": 0.00029556621130133465
+      },
+      "optimized_120_beta_free_energy_advantages": {
+        "0.5": 0.000007107288288565883,
+        "1.0": 0.00041368129693886146,
+        "2.0": 0.0057652592968100436,
+        "8.0": 0.021016322951847854
+      }
+    },
+    {
+      "V": 1,
+      "phase_pi_units": [
+        1.33333621737061,
+        0.6666686188466273
+      ],
+      "gain_vs_Z2": 0.021293971727287087,
+      "boundary_beta_free_energy_advantages": {
+        "0.5": 1.2878587085651816e-12,
+        "1.0": 1.6451563666919355e-8,
+        "2.0": 0.000012901588650748863,
+        "8.0": 0.0007590925998002263
+      },
+      "optimized_120_beta_free_energy_advantages": {
+        "0.5": 0.0000098371851322554,
+        "1.0": 0.0005768567541668546,
+        "2.0": 0.00695968059628882,
+        "8.0": 0.021152118986508484
+      }
+    },
+    {
+      "V": 4,
+      "phase_pi_units": [
+        0.6665741734340914,
+        1.3332734687021033
+      ],
+      "gain_vs_Z2": 0.0017421095881093862,
+      "boundary_beta_free_energy_advantages": {
+        "0.5": 4.828137889489881e-12,
+        "1.0": 1.697212148599192e-8,
+        "2.0": 0.0000013281024529021579,
+        "8.0": 0.000004065096989691597
+      },
+      "optimized_120_beta_free_energy_advantages": {
+        "0.5": 0.00001560800711430943,
+        "1.0": 0.00042671533805460626,
+        "2.0": 0.0014814840169279364,
+        "8.0": 0.001742109342158571
+      }
+    }
+  ],
+  "exact_gauge_second_eigenvalue_upper": "387/200",
+  "rigorous_perturbation_disorder_bracket": [
+    "(11^(1/8)-1)/(11^(1/8)+1)",
+    "24461519/100000000"
+  ],
+  "caveat": "Finite theta graph only. Interacting minima are numerical multistart local minima; canonical free-energy differences compare two backgrounds at selected betas, not globally optimized finite temperature. Additional 20 orbit classification does not exhaust all W33 exact-cover configurations. No complete physical TOE."
+}

@@ -1,0 +1,612 @@
+{
+  "status": "PASS_TOE75_20_COMPLETE_PGSp_ORBITS_FROM_GITHUB_ACTIONS",
+  "ci_run": "https://github.com/wilcompute/W33-Theory/actions/runs/38637198595",
+  "group": "PGSp(4,3)",
+  "old_orbits": 7,
+  "extra_orbits": 20,
+  "proved_total_orbits": 27,
+  "proved_total_cover_states": 1399680,
+  "all_extra_orbit_details": [
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        94,
+        176,
+        287,
+        353,
+        439,
+        515,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1346,
+        1481,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        0
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        351,
+        428,
+        514,
+        543,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1481,
+        1532,
+        1554
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        1
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        352,
+        446,
+        514,
+        543,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1481,
+        1532,
+        1554
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        2
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        427,
+        513,
+        610,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1481,
+        1532,
+        1554
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        3
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        427,
+        514,
+        543,
+        620,
+        758,
+        793,
+        858,
+        935,
+        986,
+        1092,
+        1167,
+        1323,
+        1481,
+        1532,
+        1554
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        4
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        427,
+        514,
+        543,
+        620,
+        758,
+        793,
+        865,
+        935,
+        986,
+        1092,
+        1144,
+        1323,
+        1481,
+        1532,
+        1554
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        5
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        427,
+        515,
+        542,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1481,
+        1532,
+        1554
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        6
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        433,
+        513,
+        610,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1481,
+        1532,
+        1543
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        7
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        433,
+        514,
+        543,
+        620,
+        758,
+        793,
+        858,
+        935,
+        986,
+        1092,
+        1167,
+        1323,
+        1481,
+        1532,
+        1543
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        8
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        433,
+        514,
+        543,
+        620,
+        758,
+        793,
+        865,
+        935,
+        986,
+        1092,
+        1144,
+        1323,
+        1481,
+        1532,
+        1543
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        9
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        433,
+        515,
+        542,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1481,
+        1532,
+        1543
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        10
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        437,
+        514,
+        543,
+        620,
+        758,
+        793,
+        865,
+        935,
+        986,
+        1092,
+        1323,
+        1481,
+        1532,
+        1542,
+        1581
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        11
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        439,
+        513,
+        610,
+        620,
+        758,
+        793,
+        858,
+        935,
+        986,
+        1092,
+        1167,
+        1323,
+        1481,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        12
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        439,
+        513,
+        610,
+        620,
+        758,
+        793,
+        865,
+        935,
+        986,
+        1092,
+        1144,
+        1323,
+        1481,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        13
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        439,
+        514,
+        543,
+        620,
+        758,
+        793,
+        858,
+        935,
+        986,
+        1092,
+        1166,
+        1323,
+        1489,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        14
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        439,
+        514,
+        543,
+        620,
+        758,
+        793,
+        858,
+        935,
+        986,
+        1092,
+        1170,
+        1323,
+        1482,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        15
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        439,
+        515,
+        542,
+        620,
+        758,
+        793,
+        858,
+        935,
+        986,
+        1092,
+        1167,
+        1323,
+        1481,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        16
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        439,
+        515,
+        542,
+        620,
+        758,
+        793,
+        865,
+        935,
+        986,
+        1092,
+        1144,
+        1323,
+        1481,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        17
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        103,
+        176,
+        287,
+        353,
+        442,
+        514,
+        543,
+        620,
+        758,
+        793,
+        865,
+        935,
+        986,
+        1092,
+        1142,
+        1323,
+        1481,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        18
+      ]
+    },
+    {
+      "seed_cover_cycle_ids": [
+        65,
+        121,
+        176,
+        287,
+        353,
+        439,
+        515,
+        540,
+        620,
+        758,
+        793,
+        880,
+        935,
+        986,
+        1092,
+        1143,
+        1323,
+        1481,
+        1532,
+        1542
+      ],
+      "orbit_size": 51840,
+      "stabilizer_order_in_PGSp": 1,
+      "number_of_20_new_neighbor_candidates_in_this_orbit": 1,
+      "new_neighbor_indices_in_original_20_list": [
+        19
+      ]
+    }
+  ],
+  "interpretation": "Twenty additional complete regular PGSp orbits, one per new neighbor representative; all distinct from seven prior orbits. These are not all possible 20-octagon covers."
+}

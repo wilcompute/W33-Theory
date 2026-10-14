@@ -39,3 +39,78 @@ The separate GitHub Actions workflow executes the independent source-generating 
 5. Interval-certified full-continuous interacting-flux minima with current susceptibilities and dynamical Gauss law, compared with independent graph controls.
 
 This is finite mathematical/physics modeling progress; the physical Theory of Everything remains unresolved.
+
+
+## Independently verified GitHub Actions results — 14 October 2026
+
+**Successful run:** https://github.com/wilcompute/W33-Theory/actions/runs/38637198595. **Seven tests passed in 77.06 seconds**, then all five source-regenerating producers and the audited evidence summary completed, with a downloadable JSON certificate ZIP. Verified sources were in commit 3fb7a3c4ea21fdc87bbc020f8691769e65540867.
+
+### New exact quantum combinatorial result — 27 regular symmetry orbits
+
+The former TOE72 baseline contained seven disjoint full PGSp(4,3) orbits of 20-octagon edge covers, each with 51,840 elements. TOE74 discovered 20 additional two-local-pairing-flip neighbors of the seven *representative covers*, explicitly declining to label them 20 new orbits. TOE75 first verified that **every one of the 20 neighbors lies outside the whole seven previous orbits**, rather than merely differing from the original seven representatives.
+
+The new independent exhaustive group audit enumerates the entire full PGSp orbit of *each* of those 20 neighbors. **Each new orbit is a different regular 51,840-member orbit, with trivial stabilizer.** Consequently:
+
+\[
+\boxed{\text{at least 27 pairwise distinct PGSp(4,3) orbits}},
+\qquad
+\boxed{\text{at least }27\cdot51840=1{,}399{,}680\text{ distinct exact covers}}.
+\]
+
+The exhaustive group search checks membership and orbit size, not an arbitrary canonical-label heuristic. All 20 candidate neighbor identifiers are classified; **it does not follow** that all possible ground covers or all further-distance orbit classes are now known. The prior nine-matching friendship graph F3 remains a *deliberately restricted* transition model, not the complete physical quantum-cover adjacency. The full 20-seed orbit data are now frozen in data/w33_20261014_toe75_full_orbit_census.json, in addition to the regenerated CI certificate.
+
+### New exact native-theta free-fermion theorem — global 120-degree phases
+
+The native overlapping-octagon subgraph is a three-arm, equal-length Theta(4,4,4) graph. Its 11-site bipartition has 5 and 6 vertices, with 5 fermions at the canonical particle number. Choose path-phase differences \(\phi_1,\phi_2\), and define
+\[
+s=|1+e^{i\phi_1}+e^{i\phi_2}|\in[0,3].
+\]
+An exact 5-by-5 Gram factorization of its uniform free hopping matrix yields
+\[
+\det(\lambda I-TT^\dagger)=
+(\lambda-2)\big[(\lambda^2-5\lambda+3)^2-s^2\big].
+\]
+The *exact* five-fermion ground energy is
+\[
+E_0(s)=-\sqrt2-\sqrt{5+2\sqrt{3+s}}-
+                   \sqrt{5+2\sqrt{3-s}}.
+\]
+Since \(g(t)=\sqrt{5+2\sqrt t}\) is strictly concave, \(g(3+s)+g(3-s)\) is maximized **uniquely** at \(s=0\). The latter forces the three arm phasors to be the cube roots of unity. Thus, modulo \(2\pi\), the **only global free-fermion flux minimizing pairs** are
+\[
+\boxed{(\phi_1,\phi_2)=(2\pi/3,4\pi/3)
+\ \ \text{or}\ \ (4\pi/3,2\pi/3)}.
+\]
+They are symmetry and time-reversal partners on the equal-arm graph. The exact free ground energy is
+\[
+E_0=-7.232839384725914,
+\]
+and it lies **0.020693170421004936** below the three exactly degenerate nonzero Z2 corners (which previously appeared to be favored because the old phase grid did not cover both sides of \(\pi\)). The derivation is analytically complete for this **11-site free theta subgraph**, and CI independently checked the analytical eigenvalue polynomial and 462-state many-body energies at eight phase points.
+
+This is an instance of quantum interference on a highly symmetric three-arm graph and is **not** known to be uniquely W33-specific. It neither disproves Lieb's 1994 flux-phase theorem (its hypotheses differ), nor overrides TOE67's full 80-site free W33 analysis. Prior-art context: Elliott Lieb, Phys. Rev. Lett. 73, 2158 (1994), DOI 10.1103/PhysRevLett.73.2158; Goller and Porta, J. Stat. Phys. 193, 60 (2026), DOI 10.1007/s10955-026-03617-y; interacting frustrated fermion networks, arXiv:1110.2224.
+
+### Numerical interacting and finite-temperature follow-up
+
+Using the *full 462-dimensional canonical N=5 many-body matrix* at all continuous flux choices, four-start two-dimensional numerical local minimization selects points close to the exact free 120-degree pattern for V=.2,1,4. Separate complete 462-level finite-temperature traces show positive free-energy differences relative to nontrivial Z2 flux, at selected beta values. The following are **numerical finite-model comparisons**, not a global continuous interacting theorem.
+
+| repulsion V | 2D locally optimized ground energy below best nontrivial Z2 | Z2 minus optimized-background canonical free energy at beta=2 |
+|---:|---:|---:|
+| 0 | 0.02069317042 | 0.00530269256 |
+| 0.2 | 0.02133223583 | 0.00576525930 |
+| 1 | 0.02129397173 | 0.00695968060 |
+| 4 | 0.00174210959 | 0.00148148402 |
+
+For all four V, the sampled pointwise Z2-minus-optimized free-energy differences were also positive at beta=0.5, 1 and 8 (though some at small beta are only order 10^-5). **Pointwise positive differences do not prove a globally preferred finite-temperature flux**. The new fully numerically evaluated phase points cluster around (2pi/3,4pi/3) and its phase-swapped partner. Any conclusion about spontaneous time-reversal/CP breaking or dynamical-gauge vacuum remains unwarranted.
+
+### Rigorous gauge spectral and geometry controls
+
+The exact rational 22,638-dimensional P-block basis calculation gives an **unconditional ordered second-eigenvalue upper bound** for the full unbounded two-loop rotor of
+\[
+\boxed{E_1\le387/200=1.935}.
+\]
+The earlier coarse rigorous \(E_0\in[-9.983,-0.001]\) remains valid. **No nonzero full spectral-gap lower bound** is established by these two inequalities.
+
+The actual local 2D cellular square complex on two native Levi graphs has (6400,25600,25600) cell counts, verifies \(d_1d_0=0\) exactly, and has Kunneth Betti (1,162,6561) and Euler–Kahler-Dirac index 6400. It is *not* a four-dimensional spin lattice. The distinct closed W33-squared surface product has Euler index 25600 and untwisted **spin-Dirac index zero**. This remains an unsolved 4D chiral-fermion construction, and no false chirality is inferred.
+
+## What the expanded pass did not solve
+
+An exact all-edge disorder minimax threshold; a rigorous positive full unbounded-rotor gap; a complete quantum pairing Hamiltonian ground state or proof these 27 cover orbits exhaust the full cover set; a native admissible 4D spin/overlap Dirac construction; or a dynamically interacting, experimentally confirmed 80-site W33 quantum field theory. The newly demonstrated 120-degree phase theorem is *specific to the 11-site native subgraph*, not a general Theory of Everything.
