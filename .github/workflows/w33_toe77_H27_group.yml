@@ -1,0 +1,36 @@
+name: TOE77 native 27-octagon H27 group classification
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe77_H27_shared_octagon_group.py'
+      - 'tests/test_w33_20261014_toe77_H27_group.py'
+      - '.github/workflows/w33_toe77_H27_group.yml'
+  workflow_dispatch:
+jobs:
+  native-H27-subgroup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Verify stabilizer multiplication, Sylow group and transitive action
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe77_H27_group.py
+      - name: Freeze exact H27 group certificate
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe77_H27_shared_octagon_group.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe77-native-H27-group-certificate
+          path: data/w33_20261014_toe77_H27_shared_octagon_group.json
+          retention-days: 60
