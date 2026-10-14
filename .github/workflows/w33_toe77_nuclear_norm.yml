@@ -1,0 +1,36 @@
+name: TOE77 W33 incidence nuclear-norm magnetic flux crossover
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe77_nuclear_norm_transition.py'
+      - 'tests/test_w33_20261014_toe77_nuclear_norm.py'
+      - '.github/workflows/w33_toe77_nuclear_norm.yml'
+  workflow_dispatch:
+jobs:
+  toe77-nuclear-norm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Check analytic W33 Ramanujan nuclear norm and exterior flux crossover
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe77_nuclear_norm.py
+      - name: Print and freeze flux-crossing and stiffness evidence
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe77_nuclear_norm_transition.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe77-nuclear-norm-crossover-certificate
+          path: data/w33_20261014_toe77_nuclear_norm_transition.json
+          retention-days: 60
