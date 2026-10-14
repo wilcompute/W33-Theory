@@ -833982,6 +833982,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "138b0758944b055bd39777a92715213feebff530281f398682d2308bf915f180",
+      "normalized_formula": "V>0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe74_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 129,
+          "path": "analysis/2026-10-14_toe74_five_fronts.md",
+          "raw": "V>0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "a89a3058d597c891de16142b514302400ca9b1bdd71461720463bff18ab9431f",
+      "structural_formula": "V>#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7080247fb956698b2908544013c399038ef868310b0023a3f795fc87e79f4409",
       "normalized_formula": "VACUUM:cosmologicalconstantlog10=-vq=-120(=4beat),eta_B~6e-10",
       "numeric_literals": [
@@ -926908,18 +926935,26 @@
       "structural_formula": "\\epsilon=#"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "2d7cbb05cd3dca2196e5fdcd81cc5398607e535d1c2f562223a13184cb008f7b",
       "normalized_formula": "\\epsilon=0",
       "numeric_literals": [
         "0"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "analysis/2026-10-14_toe74_five_fronts.md",
         "analysis/BT4065_BT4072_explicit_qsp_dirac_magic_gauge.md"
       ],
       "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 112,
+          "path": "analysis/2026-10-14_toe74_five_fronts.md",
+          "raw": "\\epsilon=0",
+          "status": "certified_or_theorem"
+        },
         {
           "category": "tex_paren",
           "line": 191,
@@ -926929,6 +926964,7 @@
         }
       ],
       "status_profile": {
+        "certified_or_theorem": 1,
         "unclassified": 1
       },
       "structural_family_id": "47ee21754232ff1f17c7023c1fa8685ccb4ef6192c316f87e70f8561231504d7",
@@ -927239,6 +927275,35 @@
       },
       "structural_family_id": "ca62d2453384e3c26372d2c6c6001f61de9e2e90b8b16a87171e07ebd594f31e",
       "structural_formula": "\\epsilon_{\\rmspec}(h)=h^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5d47e9eed167bccc9493181a312002b1123ee4cfe3e1007ed8d224beb6c431ed",
+      "normalized_formula": "\\epsilon_{\\rmupper}=24461519/10^8",
+      "numeric_literals": [
+        "10",
+        "24461519",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe74_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 112,
+          "path": "analysis/2026-10-14_toe74_five_fronts.md",
+          "raw": "\\epsilon_{\\rm upper}=24461519/10^8",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e0fcb67ac6a7f55feb871a69a456bb90692230dcb867ffb9e6ff8bb8eb654020",
+      "structural_formula": "\\epsilon_{\\rmupper}=#/#^#"
     },
     {
       "file_count": 1,
@@ -1002785,6 +1002850,35 @@
       },
       "structural_family_id": "64bc720064b3967a25d7b778d7fff0a9fbecbbb196989950103e3b7d72dec594",
       "structural_formula": "^Importantno-go:^`A2P!=PQ`.Thereforetheuniform4#-sectorspaceis^NOTanexactinvariantsubspace^ofA2andthe4#\u00d7#matrixisa^compression^,nottheexactreducedHamiltonian.Inparticular,anaveraged9/#hoppingisnotaper-framemicroscopicmatrixelement.A2couplesnotjustdistincttritangentsectorsbutalsosector-internalexcitedmodes"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fe7db37a208b1c0ecfc515308cf12ac0c5ec879c1ced3c113f2dbcdf66dec8bc",
+      "normalized_formula": "^Interpretation:^weakinteraction-sensitivepreferenceforcertainnon-\\(Z_2\\)backgroundsinthesampledfinitegrid,*not*aprovenglobalminimumoverthecontinuoustorus,norspontaneoussymmetrybreaking,noranall-80-siteW33prediction.Inthenoninteractingthetagraph,theequal-armsingle-particleSchurcomplementdependsonlyonthemodulusofthesumofthreearmphases,\\(|e^{i\\alpha_1}+e^{i\\alpha_2}+e^{i\\alpha_3}|\\).Whentwoarmphasesdifferby\\(\\pi\\),thosecontributionscancel,andthatmodulusequalsoneindependentofthethirdphase;thisalgebraicallyexplainstheobservedfree-fermionflatone-dimensionalminima.Nearest-neighborinteractionsarenotinvariantunderthearm-*mixing*one-particletransformation,allowingthenumericaldegeneracytoliftfor\\(V>0\\)",
+      "numeric_literals": [
+        "0",
+        "3",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe74_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 129,
+          "path": "analysis/2026-10-14_toe74_five_fronts.md",
+          "raw": "**Interpretation:** weak interaction-sensitive preference for certain non-\\(Z_2\\) backgrounds in the sampled finite grid, *not* a proven global minimum over the continuous torus, nor spontaneous symmetry breaking, nor an all-80-site W33 prediction. In the noninteracting theta graph, the equal-arm single-particle Schur complement depends only on the modulus of the sum of three arm phases, \\(|e^{i\\alpha_1}+e^{i\\alpha_2}+e^{i\\alpha_3}|\\). When two arm phases differ by \\(\\pi\\), those contributions cancel, and that modulus equals one independent of the third phase; this algebraically explains the observed free-fermion flat one-dimensional minima. Nearest-neighbor interactions are not invariant under the arm-*mixing* one-particle transformation, allowing the numerical degeneracy to lift for \\(V>0\\).",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "1909608c1ea730deb7f2c1e358a08b4840862f82cda3b385e9aae8e5a245af89",
+      "structural_formula": "^Interpretation:^weakinteraction-sensitivepreferenceforcertainnon-\\(Z_2\\)backgroundsinthesampledfinitegrid,*not*aprovenglobalminimumoverthecontinuoustorus,norspontaneoussymmetrybreaking,noranall-#-siteW3#prediction.Inthenoninteractingthetagraph,theequal-armsingle-particleSchurcomplementdependsonlyonthemodulusofthesumofthreearmphases,\\(|e^{i\\alpha_1}+e^{i\\alpha_2}+e^{i\\alpha_3}|\\).Whentwoarmphasesdifferby\\(\\pi\\),thosecontributionscancel,andthatmodulusequalsoneindependentofthethirdphase;thisalgebraicallyexplainstheobservedfree-fermionflatone-dimensionalminima.Nearest-neighborinteractionsarenotinvariantunderthearm-*mixing*one-particletransformation,allowingthenumericaldegeneracytoliftfor\\(V>#\\)"
     },
     {
       "file_count": 1,
@@ -1806598,9 +1806692,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T16:28:53-04:00",
+  "frozen_at": "2026-10-14T16:42:05-04:00",
   "pass": 398,
-  "repository_head": "8576bdd540acd3b20602c0d96109fce46f22283b",
+  "repository_head": "f45f55397ba00795a436ba6e582a05b86830b085",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2031497,6 +2031591,14 @@
     },
     {
       "exact_formula_ids": [
+        "138b0758944b055bd39777a92715213feebff530281f398682d2308bf915f180"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a89a3058d597c891de16142b514302400ca9b1bdd71461720463bff18ab9431f",
+      "structural_formula": "V>#"
+    },
+    {
+      "exact_formula_ids": [
         "7080247fb956698b2908544013c399038ef868310b0023a3f795fc87e79f4409"
       ],
       "exact_member_count": 1,
@@ -2055466,6 +2055568,14 @@
     },
     {
       "exact_formula_ids": [
+        "5d47e9eed167bccc9493181a312002b1123ee4cfe3e1007ed8d224beb6c431ed"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e0fcb67ac6a7f55feb871a69a456bb90692230dcb867ffb9e6ff8bb8eb654020",
+      "structural_formula": "\\epsilon_{\\rmupper}=#/#^#"
+    },
+    {
+      "exact_formula_ids": [
         "9da431a7dfcd54bea03b913a4cac1448cf4bd331673ecd4ba0e6210cc1148d16"
       ],
       "exact_member_count": 1,
@@ -2074071,6 +2074181,14 @@
       "exact_member_count": 1,
       "structural_family_id": "64bc720064b3967a25d7b778d7fff0a9fbecbbb196989950103e3b7d72dec594",
       "structural_formula": "^Importantno-go:^`A2P!=PQ`.Thereforetheuniform4#-sectorspaceis^NOTanexactinvariantsubspace^ofA2andthe4#\u00d7#matrixisa^compression^,nottheexactreducedHamiltonian.Inparticular,anaveraged9/#hoppingisnotaper-framemicroscopicmatrixelement.A2couplesnotjustdistincttritangentsectorsbutalsosector-internalexcitedmodes"
+    },
+    {
+      "exact_formula_ids": [
+        "fe7db37a208b1c0ecfc515308cf12ac0c5ec879c1ced3c113f2dbcdf66dec8bc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1909608c1ea730deb7f2c1e358a08b4840862f82cda3b385e9aae8e5a245af89",
+      "structural_formula": "^Interpretation:^weakinteraction-sensitivepreferenceforcertainnon-\\(Z_2\\)backgroundsinthesampledfinitegrid,*not*aprovenglobalminimumoverthecontinuoustorus,norspontaneoussymmetrybreaking,noranall-#-siteW3#prediction.Inthenoninteractingthetagraph,theequal-armsingle-particleSchurcomplementdependsonlyonthemodulusofthesumofthreearmphases,\\(|e^{i\\alpha_1}+e^{i\\alpha_2}+e^{i\\alpha_3}|\\).Whentwoarmphasesdifferby\\(\\pi\\),thosecontributionscancel,andthatmodulusequalsoneindependentofthethirdphase;thisalgebraicallyexplainstheobservedfree-fermionflatone-dimensionalminima.Nearest-neighborinteractionsarenotinvariantunderthearm-*mixing*one-particletransformation,allowingthenumericaldegeneracytoliftfor\\(V>#\\)"
     },
     {
       "exact_formula_ids": [
@@ -2289468,20 +2289586,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88096681,
-    "exact_formula_families": 61786,
-    "files_scanned": 12092,
-    "formula_occurrences": 67765,
+    "bytes_scanned": 88114273,
+    "exact_formula_families": 61789,
+    "files_scanned": 12094,
+    "formula_occurrences": 67769,
     "status_occurrences": {
-      "certified_or_theorem": 4985,
+      "certified_or_theorem": 4989,
       "killed_or_retracted": 1651,
       "open_or_conditional": 2264,
       "preregistered": 33,
       "retrospective_fit": 5235,
       "unclassified": 53597
     },
-    "structural_families": 60148
+    "structural_families": 60151
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "0b9ed72e3c0c0c5115ca34446e8014dab77667dda6124b59847120c36a9dcaed"
+  "universe_sha256": "219ba514d445bf73469ab6efbd73ca5f708958b43e3a1478d7e7da71b8fbcc4b"
 }
