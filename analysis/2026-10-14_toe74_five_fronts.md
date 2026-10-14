@@ -103,3 +103,50 @@ Dedicated \`tests/test_w33_20261014_toe74_five_fronts.py\` covers the five front
 5. Trace **continuous and finite-temperature interaction-dependent flux transitions** on larger native patches, match against graph controls, and identify a genuinely W33-specific falsifiable physical quantity.
 
 **Scientific status:** finite mathematical and model-physics advances; no complete experimentally established Theory of Everything.
+
+
+## Verified outcomes, symmetry corrections, and reproducible evidence
+
+**Verification:** [TOE74 Actions run 38633744989](https://github.com/wilcompute/W33-Theory/actions/runs/38633744989) completed successfully on 14 October 2026, **6/6 tests passed in 33.31 s**. The producers independently regenerated all exact, operator, quantum-cover, static-U1 and combined \(\Theta/F_3\) certificates. Full result ZIP artifact: \`toe74-five-front-certificates\` (GitHub artifact ID 11927821790).
+
+The source-regenerated **exact rational Bernstein signs** were all positive on 64 subintervals for the 17-high/143-low witness's symmetric Hessian sector from \(\epsilon=0\) through \(\epsilon_{\rm upper}=24461519/10^8\). Its antisymmetric exact eigenaxis changes sign once within \(24461518/10^8<\epsilon_*<24461519/10^8\). **Therefore this is the *first* Hessian loss of PSD for that one witness family**, not necessarily for any other native 160-link assignment. The exact P/Q Schur computation supplied the **unconditional** (coarse) native unbounded-rotor ground energy bracket **\([-9.983,-0.001]\)**, without assigning an ordered Ritz eigenvalue. **No unbounded spectral gap has been proved.**
+
+### New exact theorem: the three nontrivial \(\mathbb Z_2\) sectors are equivalent
+
+The TOE73 11-site/12-link native subgraph is a \(\Theta(4,4,4)\): precisely **three internally vertex-disjoint paths of length four** between two degree-three hubs. The six permutations of the three arms preserve vertices, edges, bipartition, nearest-neighbor density repulsion, and canonical particle number. Each of the three nontrivial \(\mathbb Z_2^2\) flux-corner assignments produces exactly **two \(\pi\)-flux octagons and one trivial-flux octagon**, with the zero-flux octagon different for each assignment. Arm permutations transitively permute those three classes. They are therefore **unitarily isospectral at every interaction \(V\)** and have exactly equal canonical finite-temperature partition functions. The Python producer checks all six arm automorphisms and all four sector parities.
+
+**This corrects TOE73:** reported changes of which of \((\pi,0),(0,\pi),(\pi,\pi)\) was labeled the *winner* were only floating numerical tie-breaking within an exactly degenerate orbit; they did **not** establish an interaction-driven transition between distinct \(Z_2\) ground-flux sectors.
+
+The \(5\times5\) *continuous* phase grid shows a different effect. With full 462-dimensional, fixed-five-fermion interacting Hamiltonians and phase coordinates in units of \(\pi\):
+
+| \(V\) | 5×5 U(1) phase-grid best-orbit (within numerical tolerance) | improvement below all three degenerate nontrivial Z2 corners |
+|---:|:---|---:|
+| 0 | nine tied points on \(\phi_1=\pi\) or \(\phi_2=\pi\) | ~2.4×10^-14 (numerical zero) |
+| 0.2 | (1,1/2) and (1/2,1) | 0.0003193686 |
+| 1 | (1,1/2) and (1/2,1) | 0.0007909717 |
+| 4 | (1,1/2) and (1/2,1) | 0.0000040651 |
+
+**Interpretation:** weak interaction-sensitive preference for certain non-\(Z_2\) backgrounds in the sampled finite grid, *not* a proven global minimum over the continuous torus, nor spontaneous symmetry breaking, nor an all-80-site W33 prediction. In the noninteracting theta graph, the equal-arm single-particle Schur complement depends only on the modulus of the sum of three arm phases, \(|e^{i\alpha_1}+e^{i\alpha_2}+e^{i\alpha_3}|\). When two arm phases differ by \(\pi\), those contributions cancel, and that modulus equals one independent of the third phase; this algebraically explains the observed free-fermion flat one-dimensional minima. Nearest-neighbor interactions are not invariant under the arm-*mixing* one-particle transformation, allowing the numerical degeneracy to lift for \(V>0\).
+
+### New exact combinatorial quantum-cover compression: \(51,840\) friendship graphs \(F_3\)
+
+A full two-flip census around each of the **seven known \(PGSp(4,3)\) orbit representatives** (7×12640=88480 trials) gives exact 20-loop outgoing degrees \((6,6,8,8,8,8,6)\). Of the 7 representative covers, besides the six original center-leaf edges, the exact target-target links are **(1,2), (3,4), (5,6)**. Thus the seven-representative graph is the **friendship graph \(F_3\)**: three triangles meeting at one central vertex; nine edges, cycle rank three.
+
+Because every one of these **seven specific group orbits is regular** (trivial stabilizer), the *nine selected* group-equivariant matching types each transport to 51,840 distinct edges. The **deliberately compressed** quantum adjacency contains 466,560 edges and decomposes into 51,840 disjoint \(F_3\)'s, with exact adjacency eigenvalues per component
+\[
+ 3,\quad -2,\quad 1,\quad1,\quad -1,\quad-1,\quad-1.
+\]
+This strictly enlarges the previous six-matching star compression and introduces three configuration-space cycles. **It is not the entire induced seven-orbit quantum graph**, since additional possible target-target and outward links are not classified. The coincidence of three independent configuration-space cycles with the three *selected* native W33 holonomy directions is a question to test, not a derived identification.
+
+## Source files and certificate paths
+
+* \`analysis/w33_20261014_toe74_exact_gates.py\` — 17-link exact Hessian/Sylvester and Euler–spin index separation
+* \`analysis/w33_20261014_toe74_unconditional_gauge_bound.py\` — exact-rational unbounded-rotor ground-energy bound
+* \`analysis/w33_20261014_toe74_quantum_neighbors.py\` — 7×12,640 complete two-flip seed census
+* \`analysis/w33_20261014_toe74_u1_manybody_finite_t.py\` — continuous finite-grid U1 and fully traced canonical corner free energies
+* \`analysis/w33_20261014_toe74_quantified_findings.py\` — tied minimum and quantitative tolerance controls
+* \`analysis/w33_20261014_toe74_theta_friendship.py\` — exact arm-\(S_3\) flux-corner theorem and nine matching \(F_3\) certificate
+* \`tests/test_w33_20261014_toe74_five_fronts.py\` — six independently passing regression gates
+* \`.github/workflows/w33_toe74_five_fronts.yml\` — reproducible CI and uploaded JSON certificates
+
+**Limits unchanged:** there is no mathematically verified all-160-edge minimax; no rigorously enclosed *ordered* finite 22,638-dimensional eigenvalue pair; no all-state quantum pairing ground solution; no native admissible 4D overlap-spin lattice index; and no parameter-independent experimental derivation of the physical Standard Model.

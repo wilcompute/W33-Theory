@@ -1,0 +1,107 @@
+{
+  "status": "TOE74_VERIFIED_SIX_FRONT_GATES_AND_CORRECTIONS",
+  "date": "2026-10-14",
+  "ci": {
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/38633744989",
+    "passed": 6,
+    "seconds": 33.31,
+    "artifact_id": 11927821790,
+    "artifact_name": "toe74-five-front-certificates"
+  },
+  "disorder": {
+    "exact_17_edge_first_hessian_crossing_epsilon_bracket": [
+      "24461518/100000000",
+      "24461519/100000000"
+    ],
+    "whole_symmetric_sector_positive_on_interval": true,
+    "all_160_edge_global_minimax_certified": false
+  },
+  "gauge": {
+    "unbounded_two_loop_ground_energy_exact_rational_interval_display": [
+      -9.983,
+      -0.001
+    ],
+    "gap_certified": false
+  },
+  "quantum": {
+    "seven_seed_outdegrees": [
+      6,
+      6,
+      8,
+      8,
+      8,
+      8,
+      6
+    ],
+    "seven_seed_friendship_graph": true,
+    "leaf_leaf_edges": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "nine_matching_edges": 466560,
+    "compressed_friendship_components": 51840,
+    "spectrum_per_F3": [
+      -2,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      3
+    ],
+    "full_quantum_graph_classified": false
+  },
+  "spin": {
+    "native_graph_euler_dirac_index": -80,
+    "W33_squared_4D_deRham_index": 25600,
+    "W33_squared_untwisted_spin_Dirac_index": 0,
+    "native_4d_overlap_index_constructed": false
+  },
+  "matter": {
+    "patch": "11-site 12-link native W33 Theta(4,4,4)",
+    "arm_symmetry": "S3",
+    "all_three_nonzero_Z2_flux_classes_exactly_isospectral": true,
+    "TOE73_switching_claim_corrected": "prior alternating winner was numerical tie-breaking",
+    "sampled_U1_energy_advantage_below_best_Z2": [
+      {
+        "V": 0,
+        "delta_E": 0
+      },
+      {
+        "V": 0.2,
+        "delta_E": 0.0003193685647691069
+      },
+      {
+        "V": 1,
+        "delta_E": 0.0007909717014396023
+      },
+      {
+        "V": 4,
+        "delta_E": 0.000004065102302774903
+      }
+    ],
+    "positive_V_tied_grid_best_pi_units": [
+      [
+        1,
+        0.5
+      ],
+      [
+        0.5,
+        1
+      ]
+    ],
+    "U1_grid_global_minimum_proven": false,
+    "spontaneous_time_reversal_breaking_proven": false
+  },
+  "scientific_boundary": "Exact graph finite theorems, verified numerical finite many-body results; no physical Theory of Everything or empirically validated predictions."
+}
