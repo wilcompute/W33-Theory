@@ -401514,6 +401514,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "28e47a940580eb1671c6b8c395b0e4be0f2fe4540aa660d49d0531ab8e0544ab",
+      "normalized_formula": "1296=27\\cdot48",
+      "numeric_literals": [
+        "1296",
+        "27",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe79_canonical_opposite_octagon_torsor.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 54,
+          "path": "analysis/2026-10-14_toe79_canonical_opposite_octagon_torsor.md",
+          "raw": "1296=27\\cdot48",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "2a2a7a616f21f79a8dfa7a8854a76aea4523b7dc4eb4b3b96edceab9cf387c53",
+      "structural_formula": "#=#\\cdot4#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "76825eabc015af22d6247ac0166a79c50dd58e8090db4c71250c7108e8c2a93a",
       "normalized_formula": "1296=6^4",
       "numeric_literals": [
@@ -811290,6 +811319,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cf6d1f2d70de01b67723a21c0406184ede30ab66f80c12f5eacaaaf12f3886b9",
+      "normalized_formula": "Theorder-216stabilizerisexactlythe\\(H_{27}\\rtimesD_8\\)subgroupidentifiedbytheprecedingnativegroup-lawcertificate;its\\(H_{27}\\)actsregularlyonthenoncollinearopposite-pointshell.The^pointstabilizer^hasorder\\(1296=27\\cdot48\\),naturallymatchingtheproject'sH27affinenormalizer,andits^pairstabilizer^hasindexsix,reflectingthesixunorderedchoicesoftwooffourincidentisotropiclines.TheD8complementisthe2-setstabilizersubgroup,notaQ8Cliffordcomplement",
+      "numeric_literals": [
+        "1296",
+        "216",
+        "27",
+        "7",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe79_canonical_opposite_octagon_torsor.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/2026-10-14_toe79_canonical_opposite_octagon_torsor.md",
+          "raw": "The order-216 stabilizer is exactly the \\(H_{27}\\rtimes D_8\\) subgroup identified by the preceding native group-law certificate; its \\(H_{27}\\) acts regularly on the noncollinear opposite-point shell. The **point stabilizer** has order \\(1296=27\\cdot48\\), naturally matching the project's H27 affine normalizer, and its **pair stabilizer** has index six, reflecting the six unordered choices of two of four incident isotropic lines. The D8 complement is the 2-set stabilizer subgroup, not a Q8 Clifford complement.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "4a1956c357f195ee170628bb22b22bfe2b059825deed5382df55e7c0b5059e64",
+      "structural_formula": "Theorder-#stabilizerisexactlythe\\(H_{#}\\rtimesD_8\\)subgroupidentifiedbytheprecedingnativegroup-lawcertificate;its\\(H_{#}\\)actsregularlyonthenoncollinearopposite-pointshell.The^pointstabilizer^hasorder\\(#=#\\cdot4#\\),naturallymatchingtheproject'sH2#affinenormalizer,andits^pairstabilizer^hasindexsix,reflectingthesixunorderedchoicesoftwooffourincidentisotropiclines.TheD8complementisthe2-setstabilizersubgroup,notaQ8Cliffordcomplement"
+    },
+    {
+      "file_count": 1,
       "formula_id": "62601d0b5e0eb62dce1c3c4f31eea7acb977c273ff1d16f65c0ea805be196ea3",
       "normalized_formula": "TheordinaryHesse36isthetransitivecosetactionG/H18.Thesafecarriersplitsintothree12-orbitswithcommonstabilizerH54,withH18normalinH54andH54/H18=C3.Thequotientgeneratorisliterallytheaddresscenterz=(0,0,1)",
       "numeric_literals": [
@@ -1004878,6 +1004938,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8a808abb7a272c4b79ed128b2f1b64b08e769243e3912d2140d7f5bf02fd93cd",
+      "normalized_formula": "^Additionalnine-geometrytheorem:^theautomorphismgroupoftheexponent-threeextraspecialH27hasorder432,representedbythe432orderednoncommutinggeneratorpairs.Exactly48ofthosebasisgaugespreservetheselectedfivecycliccubicdirections,giving^432/48=9equivalentH27direction-systemrealizations^undertheautomorphismaction.Aseparateexactsourceassertionenumeratingallninerealizationshasbeencommitted;itslatestdedicatedCIshouldbecheckedbeforedescribing*thatadditionalimplementation*assuccessfullyexecuted",
+      "numeric_literals": [
+        "32",
+        "432",
+        "48",
+        "7",
+        "8",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 58,
+          "path": "analysis/2026-10-14_toe78_octagon_h27_cubic_270_rh.md",
+          "raw": "**Additional nine-geometry theorem:** the automorphism group of the exponent-three extraspecial H27 has order 432, represented by the 432 ordered noncommuting generator pairs. Exactly 48 of those basis gauges preserve the selected five cyclic cubic directions, giving **432/48=9 equivalent H27 direction-system realizations** under the automorphism action. A separate exact source assertion enumerating all nine realizations has been committed; its latest dedicated CI should be checked before describing *that additional implementation* as successfully executed.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "a9373f19b7120e83ba62503603b21893db7c47c1e193f39ab02be3c0708b0929",
+      "structural_formula": "^Additionalnine-geometrytheorem:^theautomorphismgroupoftheexponent-threeextraspecialH2#hasorder4#,representedbythe4#orderednoncommutinggeneratorpairs.Exactly4#ofthosebasisgaugespreservetheselectedfivecycliccubicdirections,giving^#/#=#equivalentH2#direction-systemrealizations^undertheautomorphismaction.Aseparateexactsourceassertionenumeratingallninerealizationshasbeencommitted;itslatestdedicatedCIshouldbecheckedbeforedescribing*thatadditionalimplementation*assuccessfullyexecuted"
+    },
+    {
+      "file_count": 1,
       "formula_id": "69279d8520d86aea912acd571633c2ac7fe3d6108176b3468643d27966dc580e",
       "normalized_formula": "^Afullsingleextractionroundhas640+316=956two-qutritSUMs^,159ancillapreparationsand159ancillameasurements.AsingleancillaphaseerrorduringWilsonextractioncanpropagatetosevendataZerrors;oneancillaXerrorduringaGaussextractioncanpropagatetothreedataXerrors.This*hookmechanism*defeatsanyclaimthatcodedistance8aloneguaranteessuppressionofsinglecircuitfaults",
       "numeric_literals": [
@@ -1077153,6 +1077245,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "03cd6d882e80a3ee4b78319c02e69f9b6e163111a6abf58e2b511c627b8b04f5",
+      "normalized_formula": "asserted[theta_pair[0]][0]=theta_p=ed[theta_pair[1]][0]",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe79_canonical_antipode_octagon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 91,
+          "path": "analysis/w33_20261014_toe79_canonical_antipode_octagon.py",
+          "raw": "assert ed[theta_pair[0]][0]==theta_p==ed[theta_pair[1]][0]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5d19c691f6f19688ab54492b04419aef2727cd108ad4ddd2ddd73ff9e023c605",
+      "structural_formula": "asserted[theta_pair[#]][#]=theta_p=ed[theta_pair[#]][#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ef11e0c338b709f969fc7992d184251b2f9aded5ce5e99b7ebd9917097fd6045",
       "normalized_formula": "assertedges=240#E8kissing",
       "numeric_literals": [
@@ -1082797,6 +1082917,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6dbd0e97363f1233d91fdc034a2dd4c700269c64fc4d1fee6f7e70bf41b8f8ee",
+      "normalized_formula": "assertlen(cycles_at_pair[(theta_p,*theta_pair)])=27",
+      "numeric_literals": [
+        "27"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe79_canonical_antipode_octagon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 92,
+          "path": "analysis/w33_20261014_toe79_canonical_antipode_octagon.py",
+          "raw": "assert len(cycles_at_pair[(theta_p,*theta_pair)])==27",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7b649ec0b399bab036c3be508c34253b291fcdbd3064e3d10609d3181aacf182",
+      "structural_formula": "assertlen(cycles_at_pair[(theta_p,*theta_pair)])=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2d953371a233e5fd7cc6dbecdf35ae51963f2656b0cb1293d595c74aa086c0ab",
       "normalized_formula": "assertlen(d['candidate_results'])=14andall(r['zero_pairs']andr['minimum_pair_count']=0forrind['candidate_results']);assertd['exact_fiber_reconstruction']['unique_signature_fibers']=43;assertall(d['checks'].values())",
       "numeric_literals": [
@@ -1083293,6 +1083440,33 @@
       },
       "structural_family_id": "e27772b8d4ece1374921fa2b10dbb92c373bdec3a7e5007342af0a1032027304",
       "structural_formula": "assertlen(gauge_overlap)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ecf336ffc301191989d2d1393637f2d2cf66d526f71e23daca94b960f73dd077",
+      "normalized_formula": "assertlen(gauges)=48",
+      "numeric_literals": [
+        "48"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 306,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "assert len(gauges)==48",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "42f5e1e894ce87ff0d821b3aff46ce6d456944d6b765172a3a77378c6336d6c5",
+      "structural_formula": "assertlen(gauges)=#"
     },
     {
       "file_count": 1,
@@ -1616752,7 +1616926,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 305,
+          "line": 311,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"example_original_H27_address_to_octagon_bijection\"]=(gauges[0] if gauges else None)",
           "status": "unclassified"
@@ -1617167,7 +1617341,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 311,
+          "line": 317,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"native_216_tritangent_orbit_sizes\"]=line_sizes",
           "status": "unclassified"
@@ -1617195,7 +1617369,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 308,
+          "line": 314,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"native_GQ24_exact_right_cosets_of_five_H27_C3_directions\"]=True",
           "status": "unclassified"
@@ -1617222,7 +1617396,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 309,
+          "line": 315,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"native_GQ24_tritangent_lines\"]=[sorted(L) for L in sorted(tri,key=lambda t:sorted(t))]",
           "status": "unclassified"
@@ -1617249,7 +1617423,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 303,
+          "line": 309,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"original_5_coset_directions_abstract_H27_generator_pairs_tested\"]=tested",
           "status": "unclassified"
@@ -1617260,6 +1617434,33 @@
       },
       "structural_family_id": "aab758ef6efc2864653ee67ff4c0ebbe71a406533839311b167ba34de369b1ac",
       "structural_formula": "res[\"original_5_coset_directions_abstract_H2#_generator_pairs_tested\"]=tested"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ebf174b8cfc47fd1b5d972ad58aa99d58d2586589661be4de53d57557866f5bd",
+      "normalized_formula": "res[\"original_H27_cubic_line_geometry_aut_stabilizer_order\"]=len(gauges)",
+      "numeric_literals": [
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 308,
+          "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
+          "raw": "res[\"original_H27_cubic_line_geometry_aut_stabilizer_order\"]=len(gauges)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "18ad829712268d8f47d44621c17fc9bc7f4a1defd7600021b46fec0a8f491004",
+      "structural_formula": "res[\"original_H2#_cubic_line_geometry_aut_stabilizer_order\"]=len(gauges)"
     },
     {
       "file_count": 1,
@@ -1617276,7 +1617477,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 304,
+          "line": 310,
           "path": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py",
           "raw": "res[\"original_address_H27_to_native_octagon_equivariant_gauge_count\"]=len(gauges)",
           "status": "unclassified"
@@ -1719426,6 +1719627,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "35677e85dbf0f70d1c9600dcee82622db90752aefb0c2dc93d7b03a0e5efd5ba",
+      "normalized_formula": "theta_map=[{\"opposite_W33_point\":q,\"native_octagon_index\":ci}",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe79_canonical_antipode_octagon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 93,
+          "path": "analysis/w33_20261014_toe79_canonical_antipode_octagon.py",
+          "raw": "theta_map=[{\"opposite_W33_point\":q,\"native_octagon_index\":ci}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b8c910cfc52c65d462049efe26fe43bbb0e7ce6253cefadb2bb730094b4f050c",
+      "structural_formula": "theta_map=[{\"opposite_W3#_point\":q,\"native_octagon_index\":ci}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0bd7f51de97f80fdda8dbe986e8cdc1fba70e184065930ab7ae3d431fa053975",
       "normalized_formula": "theta_min=min(phase_angle(2),phase_angle(-4))",
       "numeric_literals": [
@@ -1719508,6 +1719736,35 @@
       },
       "structural_family_id": "7807e86692989974a72d82bb6d52a2782fcbbe71899289adb4b807f9d7c6ec0c",
       "structural_formula": "theta_nets=M_LAM//Q##//#=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c3fd71bd6b24c41c1bb4b4d217c641853c3fcc87b45d9dd8c3759974e296c105",
+      "normalized_formula": "theta_p=1;theta_pair=(5,6)",
+      "numeric_literals": [
+        "1",
+        "5",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261014_toe79_canonical_antipode_octagon.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 89,
+          "path": "analysis/w33_20261014_toe79_canonical_antipode_octagon.py",
+          "raw": "theta_p=1;theta_pair=(5,6)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5e04f2172f2b45cd1e1bfc6a4f55d2e058bba857d6024eda016f02f78404e3f5",
+      "structural_formula": "theta_p=#;theta_pair=(#,#)"
     },
     {
       "file_count": 1,
@@ -1811939,9 +1812196,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T18:32:55-04:00",
+  "frozen_at": "2026-10-14T18:37:10-04:00",
   "pass": 398,
-  "repository_head": "28e082c9fbba53c4e713831e78a99c195d2cf236",
+  "repository_head": "619653082f6bc8d2a824ce42f249908a3d7a471d",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1877680,6 +1877937,7 @@
     },
     {
       "exact_formula_ids": [
+        "28e47a940580eb1671c6b8c395b0e4be0f2fe4540aa660d49d0531ab8e0544ab",
         "0fe07bdf9362cf56eb661dd43c18f5abec81537fc3e0506d4ce5cc1a674f397f",
         "6ed9d1ae6d805d1e80d0491c648bfa07b1a082c5513f37362849b5f82520c1df",
         "9e372da1fb90cca5664f9d72aab35393d06bc5be9102f08ec8f946394fddd17d",
@@ -1877687,7 +1877945,7 @@
         "278f03bda4c70457aaa95ba89b0ce5368b70ecfb61ea527dd7d163ee6f297a41",
         "6071484c7811a605abfca27f23c5fd99c43f4f0316e58cfc599a10d14732ec30"
       ],
-      "exact_member_count": 6,
+      "exact_member_count": 7,
       "structural_family_id": "2a2a7a616f21f79a8dfa7a8854a76aea4523b7dc4eb4b3b96edceab9cf387c53",
       "structural_formula": "#=#\\cdot4#"
     },
@@ -2030689,6 +2030947,14 @@
     },
     {
       "exact_formula_ids": [
+        "cf6d1f2d70de01b67723a21c0406184ede30ab66f80c12f5eacaaaf12f3886b9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4a1956c357f195ee170628bb22b22bfe2b059825deed5382df55e7c0b5059e64",
+      "structural_formula": "Theorder-#stabilizerisexactlythe\\(H_{#}\\rtimesD_8\\)subgroupidentifiedbytheprecedingnativegroup-lawcertificate;its\\(H_{#}\\)actsregularlyonthenoncollinearopposite-pointshell.The^pointstabilizer^hasorder\\(#=#\\cdot4#\\),naturallymatchingtheproject'sH2#affinenormalizer,andits^pairstabilizer^hasindexsix,reflectingthesixunorderedchoicesoftwooffourincidentisotropiclines.TheD8complementisthe2-setstabilizersubgroup,notaQ8Cliffordcomplement"
+    },
+    {
+      "exact_formula_ids": [
         "62601d0b5e0eb62dce1c3c4f31eea7acb977c273ff1d16f65c0ea805be196ea3"
       ],
       "exact_member_count": 1,
@@ -2079893,6 +2080159,14 @@
     },
     {
       "exact_formula_ids": [
+        "8a808abb7a272c4b79ed128b2f1b64b08e769243e3912d2140d7f5bf02fd93cd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a9373f19b7120e83ba62503603b21893db7c47c1e193f39ab02be3c0708b0929",
+      "structural_formula": "^Additionalnine-geometrytheorem:^theautomorphismgroupoftheexponent-threeextraspecialH2#hasorder4#,representedbythe4#orderednoncommutinggeneratorpairs.Exactly4#ofthosebasisgaugespreservetheselectedfivecycliccubicdirections,giving^#/#=#equivalentH2#direction-systemrealizations^undertheautomorphismaction.Aseparateexactsourceassertionenumeratingallninerealizationshasbeencommitted;itslatestdedicatedCIshouldbecheckedbeforedescribing*thatadditionalimplementation*assuccessfullyexecuted"
+    },
+    {
+      "exact_formula_ids": [
         "69279d8520d86aea912acd571633c2ac7fe3d6108176b3468643d27966dc580e"
       ],
       "exact_member_count": 1,
@@ -2099529,6 +2099803,14 @@
     },
     {
       "exact_formula_ids": [
+        "03cd6d882e80a3ee4b78319c02e69f9b6e163111a6abf58e2b511c627b8b04f5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5d19c691f6f19688ab54492b04419aef2727cd108ad4ddd2ddd73ff9e023c605",
+      "structural_formula": "asserted[theta_pair[#]][#]=theta_p=ed[theta_pair[#]][#]"
+    },
+    {
+      "exact_formula_ids": [
         "ef11e0c338b709f969fc7992d184251b2f9aded5ce5e99b7ebd9917097fd6045"
       ],
       "exact_member_count": 1,
@@ -2101010,6 +2101292,14 @@
     },
     {
       "exact_formula_ids": [
+        "6dbd0e97363f1233d91fdc034a2dd4c700269c64fc4d1fee6f7e70bf41b8f8ee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7b649ec0b399bab036c3be508c34253b291fcdbd3064e3d10609d3181aacf182",
+      "structural_formula": "assertlen(cycles_at_pair[(theta_p,*theta_pair)])=#"
+    },
+    {
+      "exact_formula_ids": [
         "2d953371a233e5fd7cc6dbecdf35ae51963f2656b0cb1293d595c74aa086c0ab"
       ],
       "exact_member_count": 1,
@@ -2101144,6 +2101434,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e27772b8d4ece1374921fa2b10dbb92c373bdec3a7e5007342af0a1032027304",
       "structural_formula": "assertlen(gauge_overlap)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "ecf336ffc301191989d2d1393637f2d2cf66d526f71e23daca94b960f73dd077"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "42f5e1e894ce87ff0d821b3aff46ce6d456944d6b765172a3a77378c6336d6c5",
+      "structural_formula": "assertlen(gauges)=#"
     },
     {
       "exact_formula_ids": [
@@ -2244604,6 +2244902,14 @@
     },
     {
       "exact_formula_ids": [
+        "ebf174b8cfc47fd1b5d972ad58aa99d58d2586589661be4de53d57557866f5bd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "18ad829712268d8f47d44621c17fc9bc7f4a1defd7600021b46fec0a8f491004",
+      "structural_formula": "res[\"original_H2#_cubic_line_geometry_aut_stabilizer_order\"]=len(gauges)"
+    },
+    {
+      "exact_formula_ids": [
         "1e04c42f94d23d5abeac7b4a77344b6711f75c820d75141d50ed401348a796ca"
       ],
       "exact_member_count": 1,
@@ -2272125,6 +2272431,14 @@
     },
     {
       "exact_formula_ids": [
+        "35677e85dbf0f70d1c9600dcee82622db90752aefb0c2dc93d7b03a0e5efd5ba"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b8c910cfc52c65d462049efe26fe43bbb0e7ce6253cefadb2bb730094b4f050c",
+      "structural_formula": "theta_map=[{\"opposite_W3#_point\":q,\"native_octagon_index\":ci}"
+    },
+    {
+      "exact_formula_ids": [
         "0bd7f51de97f80fdda8dbe986e8cdc1fba70e184065930ab7ae3d431fa053975"
       ],
       "exact_member_count": 1,
@@ -2272146,6 +2272460,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7807e86692989974a72d82bb6d52a2782fcbbe71899289adb4b807f9d7c6ec0c",
       "structural_formula": "theta_nets=M_LAM//Q##//#=#"
+    },
+    {
+      "exact_formula_ids": [
+        "c3fd71bd6b24c41c1bb4b4d217c641853c3fcc87b45d9dd8c3759974e296c105"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5e04f2172f2b45cd1e1bfc6a4f55d2e058bba857d6024eda016f02f78404e3f5",
+      "structural_formula": "theta_p=#;theta_pair=(#,#)"
     },
     {
       "exact_formula_ids": [
@@ -2296094,20 +2296416,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88316343,
-    "exact_formula_families": 61958,
-    "files_scanned": 12120,
-    "formula_occurrences": 67965,
+    "bytes_scanned": 88333621,
+    "exact_formula_families": 61967,
+    "files_scanned": 12122,
+    "formula_occurrences": 67974,
     "status_occurrences": {
-      "certified_or_theorem": 5034,
+      "certified_or_theorem": 5037,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2266,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53735
+      "unclassified": 53741
     },
-    "structural_families": 60307
+    "structural_families": 60315
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "f3efff2f70a0b971496cf34692d3a4289438fe23f1fa21fedb0eab27432375ad"
+  "universe_sha256": "81b9a978bfe1ef69e62d9b9691c5e658fb6c7d103d18c2c6f6b2aa906f9d5df5"
 }
