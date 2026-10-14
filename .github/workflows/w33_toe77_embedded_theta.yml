@@ -1,0 +1,36 @@
+name: TOE77 W33-embedded theta magnetic response
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe77_*.py'
+      - 'tests/test_w33_20261014_toe77_*.py'
+      - '.github/workflows/w33_toe77_embedded_theta.yml'
+  workflow_dispatch:
+jobs:
+  toe77-native-80-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Test exact 26-zero-mode rank bound and native octagon Fourier identity
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe77_embedded_theta.py
+      - name: Reproduce complete embedding and flux certificate
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe77_embedded_theta_exterior_flux.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe77-embedded-theta-certificates
+          path: data/w33_20261014_toe77_*.json
+          retention-days: 60
