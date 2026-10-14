@@ -39,3 +39,13 @@ def test_order_eight_action_identifies_dihedral_or_other_explicit_structure():
         assert c["order8_complement_element_orders"]=={1:1,2:5,4:2}
         assert c["pair_stabilizer_is_semidirect_H27_by_D8"]
         assert c["D8_orbit_sizes_on_eight_nonzero_H27_mod_center_classes"]==[4,4]
+
+def test_pair_orbital_stabilizer_center_inversion_and_E6_incidence():
+    c=certificate()
+    assert sum(c["unordered_pair_orbit_lengths"])==351
+    assert sum(c["unordered_pair_orbit_valencies"])==26
+    assert c["native_216_invariant_cubic_surface_intersection_srg_count"]>=0
+    assert c["dihedral_reflections_inverting_Heisenberg_center"]==4
+    assert c["dihedral_elements_preserving_Heisenberg_center"]==4
+    for v in c["native_216_invariant_cubic_surface_intersection_srg_candidates"]:
+        assert v["triangle_tritangent_count"]==45

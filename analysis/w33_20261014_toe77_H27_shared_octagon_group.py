@@ -163,6 +163,73 @@ def certificate():
                           for q in Q for z in central)
         full_center=[g for g in full
                        if all(compose(g,h)==compose(h,g) for h in full)]
+        # Exact action on unordered pairs of the 27 shared octagons.
+        # This tests whether the native 216-group can preserve the
+        # cubic-surface GQ(2,4) adjacency with degree 10, rather than
+        # simply sharing its 27 point count.
+        all_pairs=set(itertools.combinations(range(27),2))
+        pair_orbits=[]
+        while all_pairs:
+            pair=min(all_pairs)
+            orb={tuple(sorted((g[pair[0]],g[pair[1]]))) for g in full}
+            assert orb<=all_pairs
+            all_pairs-=orb
+            assert 2*len(orb)%27==0
+            pair_orbits.append(orb)
+        pair_orbits.sort(key=lambda orb:(len(orb),min(orb)))
+        degrees=[2*len(orb)//27 for orb in pair_orbits]
+        assert sum(degrees)==26
+        matching=[]
+        # SRG(27,10,1,5) is the cubic-surface intersection graph.
+        # Invariant graphs are unions of entire unordered pair orbitals.
+        for flags in itertools.product((0,1),repeat=len(pair_orbits)):
+            if sum(d for d,choose in zip(degrees,flags) if choose)!=10:
+                continue
+            adj=[set() for _ in range(27)]
+            for orb,include in zip(pair_orbits,flags):
+                if include:
+                    for u,v in orb:
+                        adj[u].add(v);adj[v].add(u)
+            assert all(len(x)==10 for x in adj)
+            common_adj=set()
+            common_non=set()
+            tri=0
+            for u in range(27):
+                for v in range(u+1,27):
+                    x=len(adj[u]&adj[v])
+                    (common_adj if v in adj[u] else common_non).add(x)
+                    if v in adj[u]:tri+=x
+            if common_adj=={1} and common_non=={5}:
+                triangles=tri//3
+                assert triangles==45
+                matching.append({
+                    "selected_pair_orbit_indices":[j for j,v in enumerate(flags) if v],
+                    "triangle_tritangent_count":triangles,
+                    "srg_parameters":[27,10,1,5]
+                })
+        assert sum(len(o) for o in pair_orbits)==351
+        z_nontrivial=[z for z in central if z!=I]
+        assert len(z_nontrivial)==2
+        inverted=0
+        for q in Q:
+            cz=compose(compose(q,z_nontrivial[0]),inverse(q))
+            assert cz in central
+            if cz!=z_nontrivial[0]:
+                assert cz==z_nontrivial[1]
+                inverted+=1
+        res.update({
+          "unordered_pair_orbit_lengths":[len(x) for x in pair_orbits],
+          "unordered_pair_orbit_valencies":degrees,
+          "invariant_degree10_graph_candidate_subsets_tested":
+            sum(1 for flags in itertools.product((0,1),repeat=len(degrees))
+                if sum(d for d,v in zip(degrees,flags) if v)==10),
+          "native_216_invariant_cubic_surface_intersection_srg_candidates":matching,
+          "native_216_invariant_cubic_surface_intersection_srg_count":len(matching),
+          "dihedral_reflections_inverting_Heisenberg_center":inverted,
+          "dihedral_elements_preserving_Heisenberg_center":8-inverted,
+          "projective_Clifford_warning":
+            "The normal H27 subgroup and D8 quotient distinguish this 216-group from the ordinary projective one-qutrit Clifford F3^2 semidirect SL2(3). An anti-symplectic operation inverts the scalar Heisenberg center and cannot act by unitary conjugation on a fixed nontrivial central character."
+        })
         res.update({
           "explicit_order8_complement_found":True,
           "order8_complement_element_orders":dict(sorted(qhist.items())),
@@ -184,6 +251,7 @@ if __name__=="__main__":
     (ROOT/"data/w33_20261014_toe77_H27_shared_octagon_group.json").write_text(
         json.dumps(c,indent=2)+"\n")
     print(c["status"],"order",c["induced_faithful_permutation_group_order"])
+    print("ORBITALS",c.get("unordered_pair_orbit_valencies"),"SRG",c.get("native_216_invariant_cubic_surface_intersection_srg_count"),"CENTER_INVERSION",c.get("dihedral_reflections_inverting_Heisenberg_center"))
     print("D8",c.get("order8_complement_is_dihedral_D8"),"semidirect",c.get("pair_stabilizer_is_semidirect_H27_by_D8"),"orders",c.get("order8_complement_element_orders"),"orbits",c.get("D8_orbit_sizes_on_eight_nonzero_H27_mod_center_classes"))
     print("Q8",c.get("order8_complement_is_quaternion_Q8"), "semidirect",c.get("pair_stabilizer_is_semidirect_H27_by_Q8"), "center",c.get("full_216_group_center_order"),"phase_orbit",c.get("order8_orbit_size_on_eight_nonzero_H27_mod_center_classes"))
     print("H27",c.get("selected_Sylow27_is_extraspecial_Heisenberg_H27"),
