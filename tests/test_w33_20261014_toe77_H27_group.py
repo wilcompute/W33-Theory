@@ -49,3 +49,14 @@ def test_pair_orbital_stabilizer_center_inversion_and_E6_incidence():
     assert c["dihedral_elements_preserving_Heisenberg_center"]==4
     for v in c["native_216_invariant_cubic_surface_intersection_srg_candidates"]:
         assert v["triangle_tritangent_count"]==45
+
+def test_native_gq24_45_tritangents_are_actual_heisenberg_cosets():
+    c=certificate()
+    assert c["native_GQ24_line_count"]==45
+    assert c["native_GQ24_each_point_lines"]==5
+    assert c["native_GQ24_exact_right_cosets_of_five_H27_C3_directions"]
+    assert sorted(c["native_216_tritangent_orbit_sizes"])==[9,18,18]
+    assert sum(c["native_D8_direction_orbit_sizes"])==5
+    assert c["center_preserving_order4_subgroup_size"]==4
+    assert c["center_inverting_order8_coset_size"]==4
+    assert len(c["native_GQ24_tritangent_lines"])==45

@@ -205,7 +205,6 @@ def certificate():
                 matching.append({
                     "selected_pair_orbit_indices":[j for j,v in enumerate(flags) if v],
                     "triangle_tritangent_count":triangles,
-                    "graph_edges":[[u,v] for u in range(27) for v in sorted(adj[u]) if u<v],
                     "srg_parameters":[27,10,1,5]
                 })
         assert sum(len(o) for o in pair_orbits)==351
@@ -218,6 +217,57 @@ def certificate():
             if cz!=z_nontrivial[0]:
                 assert cz==z_nontrivial[1]
                 inverted+=1
+        # TOE78: native 27-octagon GQ(2,4) line geometry.
+        assert len(matching)==1
+        idx=matching[0]["selected_pair_orbit_indices"]
+        graph=[set() for _ in range(27)]
+        for j in idx:
+            for a,b in pair_orbits[j]:
+                graph[a].add(b);graph[b].add(a)
+        tri={frozenset((a,b,c)) for a in range(27)
+             for b in graph[a] if b>a
+             for c in graph[a]&graph[b] if c>b}
+        assert len(tri)==45
+        assert all(sum(x in L for L in tri)==5 for x in range(27))
+        assert all(sum(v in graph[x] for v in L)==1
+                   for x in range(27) for L in tri if x not in L)
+        # Native H27 right cosets, independent of cubic-frame labels.
+        through=[L for L in tri if 0 in L]
+        directions=set()
+        for L in through:
+            subdirs={frozenset((I,h,compose(h,h))) for h in H
+                     if h!=I and order_of(h,I)==3
+                     and frozenset((I[0],h[0],compose(h,h)[0]))==L}
+            assert len(subdirs)==1
+            directions.update(subdirs)
+        assert len(directions)==5
+        native_cosets={frozenset(compose(g,d)[0] for d in D)
+                       for D in directions for g in H}
+        assert native_cosets==tri
+        Q0={g for g in full if g[0]==0}
+        assert len(Q0)==8
+        unseen=set(through);dorbits=[]
+        while unseen:
+            L=next(iter(unseen))
+            orb={frozenset(q[x] for x in L) for q in Q0}
+            assert orb<=unseen
+            unseen-=orb;dorbits.append(orb)
+        direction_sizes=sorted(map(len,dorbits))
+        line_sizes=sorted(len({frozenset(h[x] for x in L)
+                               for h in H for L in orb}) for orb in dorbits)
+        assert line_sizes==[9,18,18]
+        z=next(h for h in central if h!=I)
+        preserving=[q for q in Q0
+                    if compose(compose(q,z),inverse(q))==z]
+        assert len(preserving)==4
+        res["native_GQ24_line_count"]=len(tri)
+        res["native_GQ24_each_point_lines"]=5
+        res["native_GQ24_exact_right_cosets_of_five_H27_C3_directions"]=True
+        res["native_GQ24_tritangent_lines"]=[sorted(L) for L in sorted(tri,key=lambda t:sorted(t))]
+        res["native_D8_direction_orbit_sizes"]=direction_sizes
+        res["native_216_tritangent_orbit_sizes"]=line_sizes
+        res["center_preserving_order4_subgroup_size"]=len(preserving)
+        res["center_inverting_order8_coset_size"]=len(Q0)-len(preserving)
         res.update({
           "unordered_pair_orbit_lengths":[len(x) for x in pair_orbits],
           "unordered_pair_orbit_valencies":degrees,
