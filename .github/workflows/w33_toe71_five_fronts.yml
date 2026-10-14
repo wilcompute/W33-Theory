@@ -1,0 +1,42 @@
+name: TOE71 five-front source regeneration
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe71_*.py'
+      - 'tests/test_w33_20261014_toe71_*.py'
+      - '.github/workflows/w33_toe71_five_fronts.yml'
+  workflow_dispatch:
+jobs:
+  toe71-five-science-fronts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install scientific dependencies
+        run: python -m pip install numpy scipy sympy pytest
+      - name: Test all five independent W33 frontiers
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe71_five_fronts.py
+      - name: Regenerate mathematical and numerical certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: |
+          python analysis/w33_20261014_toe71_global_disorder_milp.py
+          python analysis/w33_20261014_toe71_two_loop_gap_bound.py
+          python analysis/w33_20261014_toe71_quantum_pairing.py
+          python analysis/w33_20261014_toe71_4d_holonomy_and_index.py
+          python analysis/w33_20261014_toe71_sitewise_hartree_fock.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe71-five-fronts-certificates
+          path: data/w33_20261014_toe71_*.json
+          retention-days: 60
