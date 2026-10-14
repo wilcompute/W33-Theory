@@ -15,4 +15,4 @@ def test_actual_H27_classification_not_numerical_coincidence():
     if c["selected_Sylow27_is_extraspecial_Heisenberg_H27"]:
         assert c["selected_Sylow27_center_order"]==3
         assert c["selected_Sylow27_regular_on_27_octagons"]
-        assert c["selected_Sylow27_element_order_histogram"]=={"1":1,"3":26}
+        assert c["selected_Sylow27_element_order_histogram"]=={1:1,3:26}
