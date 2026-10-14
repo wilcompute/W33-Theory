@@ -1,0 +1,73 @@
+{
+  "status": "TOE77_VERIFIED_W33_EMBEDDING_AND_H27_D8",
+  "date": "2026-10-14",
+  "sources": {
+    "embedding": "analysis/w33_20261014_toe77_embedded_theta_exterior_flux.py",
+    "nuclear_norm": "analysis/w33_20261014_toe77_nuclear_norm_transition.py",
+    "pair_stabilizer": "analysis/w33_20261014_toe77_twentyseven_octagons.py",
+    "Heisenberg_structure": "analysis/w33_20261014_toe77_H27_shared_octagon_group.py"
+  },
+  "verified_runs": {
+    "80_site_embedded_flux": "https://github.com/wilcompute/W33-Theory/actions/runs/38643924681",
+    "nuclear_norm_transition": "https://github.com/wilcompute/W33-Theory/actions/runs/38644376858",
+    "shared_octagon_pair_orbit": "https://github.com/wilcompute/W33-Theory/actions/runs/38644784984",
+    "H27_regular_normal": "https://github.com/wilcompute/W33-Theory/actions/runs/38645251396",
+    "H27_semidirect_D8": "https://github.com/wilcompute/W33-Theory/actions/runs/38645794430"
+  },
+  "mathematical": {
+    "W33_Levi_vertices_edges": [
+      80,
+      160
+    ],
+    "native_theta_vertices_edges": [
+      11,
+      12
+    ],
+    "other_native_vertices_edges": [
+      69,
+      148
+    ],
+    "full_incidence_singular_multiplicities": {
+      "4": 1,
+      "sqrt6": 24,
+      "zero": 15
+    },
+    "untwisted_N40_ground_exact": "-(4+24sqrt(6))",
+    "any_two_local_phase_chords_exact_zero_mode_lower_bound": 26,
+    "native_primitive_octagons": 1620,
+    "per_flag_octagons": 81,
+    "two_chords_common_octagons": 27,
+    "two_chords_union_octagons": 135,
+    "two_chord_pair_orbit_in_PGSp": 240,
+    "pair_stabilizer_order": 216,
+    "pair_stabilizer_structure": "H27 semidirect D8",
+    "H27_order": 27,
+    "H27_exponent": 3,
+    "H27_center_order": 3,
+    "H27_is_normal_in_216": true,
+    "H27_regular_on_27_octagons": true,
+    "D8_element_order_histogram": {
+      "1": 1,
+      "2": 5,
+      "4": 2
+    },
+    "D8_orbits_on_nonzero_H27_mod_center": [
+      4,
+      4
+    ],
+    "full_216_center_order": 1,
+    "twisted_Ihara_theta": "(1-u^8)*(1+(4-s^2)*u^8+4*u^16)",
+    "tr_H8_phase_response": "16 sum_C t^d_C (cos(w_C.phi)-1)",
+    "H27_to_E6_representation_intertwiner_proved": false
+  },
+  "numerical_finite_model": {
+    "fixed_phase_E120_minus_E_pi_at_t0": -0.020693170421011153,
+    "fixed_phase_E120_minus_E_pi_at_t1": 0.018222531633831807,
+    "fixed_120_pi_crossing_environment_amplitude": 0.6393317237943322,
+    "continuous_symmetry_line_optimum_delta_over_pi_t0": 0.3333333442192412,
+    "continuous_symmetry_line_optimum_delta_over_pi_t1": 0.00023298926826609495,
+    "globally_certified_minimum_for_full_80_site": false,
+    "gauge_field_dynamical": false
+  },
+  "interpretive_boundary": "The normal extra-special H27 and D8 complement are proven finite permutation groups, and 80-site magnetic response is a finite static free-fermion calculation. Neither identifies Standard Model chirality, proves the classical RH, or validates a physical Theory of Everything."
+}
