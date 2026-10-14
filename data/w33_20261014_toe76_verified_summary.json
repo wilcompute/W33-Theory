@@ -1,0 +1,166 @@
+{
+  "status": "PASS_TOE76_VERIFIED_SEVEN_REGRESSIONS_ALL_SIX_FRONTS",
+  "date": "2026-10-14",
+  "ci": {
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/38642922578",
+    "regressions_passed": 7,
+    "test_runtime_seconds": 19.54,
+    "artifact_id": 11931507011,
+    "name": "toe76-six-front-certificates"
+  },
+  "hopping": {
+    "native_links": 160,
+    "independent_two_edge_choices": 12720,
+    "exact_weight_zero_or_two_corner_Hessians": 50880,
+    "strict_positive_definite": 49929,
+    "singular_positive_semidefinite": 951,
+    "non_positive_semidefinite": 0,
+    "singleton_endpoints": 320,
+    "singleton_singular": 3,
+    "singleton_non_positive_semidefinite": 0,
+    "three_singleton_weight_zero_edge_IDs": [
+      59,
+      93,
+      139
+    ],
+    "first_two_link_flat_cases": [
+      [
+        0,
+        59,
+        0,
+        0
+      ],
+      [
+        0,
+        59,
+        2,
+        0
+      ],
+      [
+        0,
+        93,
+        0,
+        0
+      ],
+      [
+        0,
+        93,
+        2,
+        0
+      ],
+      [
+        0,
+        139,
+        0,
+        0
+      ]
+    ],
+    "theorem": "At any two native links, all hopping amplitudes within [0,2] and remaining 158 links at 1, three-pi is a (not necessarily unique) global minimum of the leading beta^7 potential; follows from integer PSD endpoints, two-variable multiaffinity and the TOE64 signed-square potential identity.",
+    "all_160_link_global_disorder_threshold_solved": false
+  },
+  "gauge": {
+    "native_sites": 11,
+    "links": 12,
+    "mobile_fermions": 5,
+    "finite_block_dimension": 22638,
+    "full_graded_electric_rotor": true,
+    "certified_ordered_level_uppers": [
+      "3/8",
+      "387/200",
+      "387/200",
+      "387/200",
+      "387/200",
+      "387/200",
+      "387/200",
+      "387/200"
+    ],
+    "exact_Q_lower": "2833/200",
+    "certified_positive_mass_gap": false
+  },
+  "quantum": {
+    "certified_distinct_regular_PGSp_orbits": 27,
+    "states_per_orbit": 51840,
+    "distinct_state_lower_bound": 1399680,
+    "chosen_representative_graph_vertices": 27,
+    "edges": 41,
+    "triangles": 3,
+    "cycle_rank": 15,
+    "equivariant_matching_edges": 2125440,
+    "connected_regular_component_count": 51840,
+    "component_size": 27,
+    "full_induced_ground_cover_hamiltonian_solved": false
+  },
+  "spin": {
+    "chosen_topological_model": "Sigma81 times Sigma81",
+    "mixed_dual_curvature_index": "index(D_L^+)=-a*b",
+    "graph_inherited_only_zero_index": true,
+    "physical_local_4d_spin_overlap_operator_constructed": false
+  },
+  "interacting": {
+    "finite_Fock_dim": 462,
+    "temperatures": "beta=2 thermal stiffness",
+    "values": [
+      {
+        "V": 0,
+        "ground_hessian_min": 0.019921572687782836,
+        "thermal_hessian_min": 0.005277352258895932
+      },
+      {
+        "V": 0.2,
+        "ground_hessian_min": 0.020333279504569597,
+        "thermal_hessian_min": 0.005733360132332941
+      },
+      {
+        "V": 1,
+        "ground_hessian_min": 0.020044093594783038,
+        "thermal_hessian_min": 0.006907731769306074
+      },
+      {
+        "V": 4,
+        "ground_hessian_min": 0.0017363749944036364,
+        "thermal_hessian_min": 0.001478815440473487
+      }
+    ],
+    "interacting_global_torus_minimum_proved": false
+  },
+  "RH": {
+    "collinearity": {
+      "vertices": 40,
+      "k": 12,
+      "nontrivial_pole_radius": "11^(-1/2)",
+      "ramanujan": true
+    },
+    "Levi": {
+      "vertices": 80,
+      "k": 4,
+      "nontrivial_pole_radius": "3^(-1/2)",
+      "ramanujan": true,
+      "spectrum": {
+        "0": 30,
+        "4": 1,
+        "-4": 1,
+        "sqrt6": 24,
+        "-sqrt6": 24
+      },
+      "trace_nonbacktracking_power8": 25920,
+      "primitive_undirected_octagons": 1620
+    },
+    "theta": {
+      "vertices": 11,
+      "edges": 12,
+      "irregular": true,
+      "cycle_rank": 2,
+      "primitive_octagons": 3,
+      "octagon_fraction_of_Levi": "1/540",
+      "phasor_s": "|1+exp(i phi1)+exp(i phi2)|",
+      "twisted_Ihara_inverse": "(1-u^8)*(1+(4-s^2)*u^8+4*u^16)",
+      "phase_120_inverse": "(1-u^8)*(1+2*u^8)^2",
+      "twisted_tempered_condition": "s^2<=8",
+      "nontrivial_pole_radius_at_120": "2^(-1/8)",
+      "exact_V0_five_fermion_global_flux_at_s0": true,
+      "control": "Same result for any uniform theta(4,4,4), not W33 specific."
+    },
+    "classical_Riemann_hypothesis_proven": false
+  },
+  "physical_Theory_of_Everything_proven": false
+}

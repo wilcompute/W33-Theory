@@ -118,3 +118,83 @@ Independent six-test GitHub Actions workflow: \`.github/workflows/w33_toe76_six_
 5. Build a **holonomy-sensitive Ihara–fermion physical test**: design interferometric phase/length imperfections that separate the exact 120° generic-theta prediction from W33-specific surrounding edges, and verify robustness plus nonbacktracking geodesic cancellations.
 
 **Physical Theory of Everything and the classical Riemann hypothesis both remain open.**
+
+
+## Verified results and exact two-edge stability correction
+
+**Final checks:** [GitHub Actions run 38642922578](https://github.com/wilcompute/W33-Theory/actions/runs/38642922578), **7/7 passed in 19.54 seconds**. Four source-generating certificate scripts plus the independent summary completed successfully; artifact \`toe76-six-front-certificates\`. The previously published six-test run [38642389278](https://github.com/wilcompute/W33-Theory/actions/runs/38642389278) also passed, but the present run adds the independent 80-site Levi Ramanujan and sparse nonbacktracking audit.
+
+### 1. Exact result: all two-edge perturbation Hessians are positive **semidefinite**
+
+The initial 50,880-corner Sylvester census reported 951 Hessians that were **not strictly positive definite**. **That does not imply any negative curvature**. An additional independent exact test of **all seven principal minors** of every 3×3 Hessian matrix (three one-by-one, three two-by-two, and the full determinant) showed:
+
+| Classification | Exact count |
+|---|---:|
+| Native edge pairs | 12,720 |
+| Two-edge endpoints with each hopping weight 0 or 2 | **50,880** |
+| Endpoints strictly positive definite | **49,929** |
+| Endpoints positive semidefinite but singular | **951** |
+| Endpoints with a negative Hessian eigenvalue | **0** |
+| Single-edge endpoints examined | 320 |
+| Single-edge singular endpoints | 3 (edge IDs 59, 93 and 139, each at hopping weight 0) |
+| Single-edge non-PSD endpoints | **0** |
+
+The minimum exact full determinant was **zero**, first attained at original native edge indices (0,59), with both varied weights zero. Its singularity reflects a flat quadratic direction, **not an instability**.
+
+**Theorem (restricted two-link box):** Fix the other 158 native W33 link hopping magnitudes to 1, and allow **any two** remaining hopping magnitudes to vary independently in \([0,2]\). The leading \(\beta^7\) flat-holonomy W33 potential retains three-\(\pi\) as **a global minimum**. Proof: the full Hessian in these two positive link weights is multiaffine, so its matrix at any point of the square is a convex combination of its four endpoint Hessians. The exact 50,880 endpoint principal-minor audit shows all are PSD. TOE64's exact trigonometric signed-square identity expresses the entire potential difference as a quadratic sine term with this Hessian plus nonnegative quartic remainders, because all weighted mixed Fourier coefficients remain nonnegative for nonnegative edge weights. Therefore the potential difference is everywhere nonnegative. **Uniqueness need not hold at singular endpoints.** This is a **strong new sparse-disorder theorem**, not a proof of the unknown all-160-edge sharp threshold.
+
+**Correction to provisional work-in-progress narration:** Earlier "951 failures" meant failure of *strict* positivity; they did **not** demonstrate that two-link disorder destabilizes the \(\pi\) flux. They instead led to the stronger global-semidefinite stability result above. The original TOE65 **17-link** native negative-curvature adversary remains valid because it changes many links at once.
+
+### 2. Eight ordered full-rotor variational bounds
+
+The actual 22,638-state \(L=3\) Gauss block contains eight pairwise off-diagonal-uncoupled exact Fock-flux states, yielding the unconditional Courant–Fischer inequalities
+\[
+\boxed{E_0\le3/8,\qquad E_j\le387/200=1.935\quad (1\le j\le7)}
+\]
+for the **ordered full unbounded** native two-loop electric-rotor eigenvalues. There are therefore **at least eight eigenvalues below the exact Q-complement lower barrier** \(14.165\), but the result supplies no positive \(E_1-E_0\) lower bound. These upper bounds do not supersede the much stronger variational E0 upper bound from TOE74; they add low-state counting without assigning numerical eigenvalue order.
+
+### 3. Selected exact 27-orbit transition adjacency
+
+The chosen twenty-octagon representative graph contains **27 vertices**, **41 directly witnessed two-vertex pairing-flip edges**, **three triangles**, and cycle rank **15**. Every vertex is connected by the selected edges. Since all 27 \(PGSp(4,3)\) orbit stabilizers have order 1, the chosen 41 equivariant edge types transport to
+\[
+\boxed{41\cdot51840=2{,}125{,}440}
+\]
+distinct transitions in the **selected 1,399,680-cover** compression, decomposing into **51,840 connected components of 27 states each**, when only these 41 chosen matching types are retained. **This is not the full induced pairing Hamiltonian**; additional transitions may join or alter those components.
+
+### 4. Spin-index constraints
+
+The W33-derived but noncanonically thickened closed four-manifold \(\Sigma_{81}\times\Sigma_{81}\) has zero untwisted spin index and zero twisted index for graph-inherited mixed Lagrangian flux. Choosing an independent dual mixed curvature class gives the exact finite-subsystem formula
+\[
+\operatorname{ind}D_L^+=-ab
+\]
+for \(c_1=a(\alpha\wedge\gamma)+b(\beta\wedge\delta)\). Forty-nine integer \((a,b)\) combinations were checked. A nonzero index from **externally chosen** curvature is not a physical W33-derived chiral spectrum or an anomaly-free theory.
+
+### 5. Interacting persistent-current and finite-temperature flux stiffness
+
+On the 462-state 11-site theta model, finite-difference ground-energy current gradients vanish numerically at the 120° flux by the arm symmetry. Both ground-state and beta=2 Helmholtz free-energy Hessians have **positive numeric eigenvalues** at V=0,.2,1,4:
+
+| V | ground Hessian smallest eigenvalue | beta=2 thermal Hessian smallest eigenvalue |
+|---:|---:|---:|
+| 0 | 0.01992157 | 0.00527735 |
+| 0.2 | 0.02033328 | 0.00573336 |
+| 1 | 0.02004409 | 0.00690773 |
+| 4 | 0.00173637 | 0.00147882 |
+
+For V=0 the Hessian also agrees with the exact concavity-derived tensor \(-g''(3)\begin{psmallmatrix}2&-1\\-1&2\end{psmallmatrix}\). The V>0 results establish numerical local stiffness at the evaluated phases, **not a globally certified interacting flux preference**.
+
+### 6. Verified three-level Ihara / Ramanujan hierarchy
+
+The new [Levi hierarchy producer](https://github.com/wilcompute/W33-Theory/blob/master/analysis/w33_20261014_toe76_levi_ihara_hierarchy.py) independently computed the 80-vertex **4-regular** Levi graph's actual eigenvalues \(\pm4,\pm\sqrt6,0\) with multiplicities \(1,24,30\), proving a second regular Ramanujan-graph condition \(\sqrt6<2\sqrt3\). Its full factorization is
+\[
+\boxed{Z_{\mathrm{Levi}}(u)^{-1}=(1-u^2)^{81}(1-9u^2)(1+9u^4)^{24}(1+3u^2)^{30}.}
+\]
+The **exact** 320×320 native Hashimoto walk count gives \(\mathrm{tr}B^n=0\) for \(1\le n\le7\), and \(\mathrm{tr}B^8=25{,}920=16\times1620\): the Levi graph has 1620 primitive unoriented octagons. The theta's three octagons constitute exactly \(1/540\) of this census, but this combinatorial ratio implies no physical 540-fold sector.
+
+The hierarchy of **different objects** is now explicit:
+- Collinearity graph (40, 12-regular), graph-RH nontrivial pole circle \(11^{-1/2}\).
+- Levi graph (80, 4-regular), graph-RH nontrivial pole circle \(3^{-1/2}\).
+- Theta patch (11, irregular), **twisted** three-parallel-edge transfer, with selected nontrivial pole circle \(2^{-1/8}\) for \(s^2\le8\).
+
+These are linked by W33 incidence/subgraph structure, not interchangeable critical circles. The classical Riemann hypothesis is **not** proved, and the generic equal-arm theta result cannot yet distinguish a uniquely W33 realization. A ready-to-include source proof is in \`manuscripts/tex/toe76_theta_twisted_ihara_bridge.tex\`.
+
+**Independent literature:** Rangarajan, *A Combinatorial Proof of Ihara–Bass's Formula*, DOI 10.4230/LIPIcs.FSTTCS.2017.46; the unitary-representation graph-zeta literature, DOI 10.1016/j.disc.2009.09.009.

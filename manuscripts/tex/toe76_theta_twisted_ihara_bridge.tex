@@ -1,0 +1,117 @@
+% TOE76 — proven finite-graph bridge; append via \input if desired.
+% Requires amsmath, amssymb or standard mathematical theorem packages in host manuscript.
+\section*{The native eleven-site theta graph, twisted Ihara zeta,
+  and the two regular W(3,3) graph-RH scales}
+\noindent\textbf{Scope.}
+The collinearity graph, the Levi incidence graph, and the eleven-site
+theta subgraph are three distinct graphs.  Only the first two are
+regular Ramanujan graphs.  None of these theorems implies the classical
+Riemann hypothesis.
+
+\paragraph{The two regular parents.}
+The collinearity graph is the strongly regular graph
+\(\operatorname{srg}(40,12,2,4)\), with adjacency spectrum
+\(12^1,2^{24},(-4)^{15}\).  Its Ihara inverse is
+\[
+Z_{40}(u)^{-1}
+=(1-u^2)^{200}(1-u)(1-11u)
+ (1-2u+11u^2)^{24}(1+4u+11u^2)^{15}.
+\]
+The nonprincipal poles have modulus \(11^{-1/2}\), so this
+12-regular graph is Ramanujan and satisfies graph RH.
+
+The Levi point--line incidence graph has 80 vertices, 160 edges,
+regular degree four, and adjacency spectrum
+\[
+4^1,(-4)^1,(\sqrt6)^{24},(-\sqrt6)^{24},0^{30}.
+\]
+In particular \(\sqrt6<2\sqrt3\), giving a second regular
+Ramanujan and graph-RH theorem, now with critical circle
+\(\lvert u\rvert=3^{-1/2}\).
+Its exact inverse Ihara function is
+\[
+\boxed{
+Z_{80}(u)^{-1}
+=(1-u^2)^{81}(1-9u^2)
+ (1+9u^4)^{24}(1+3u^2)^{30}.}
+\]
+Direct sparse integer calculation on the 320 oriented Levi edges gives
+\(\operatorname{tr}(B_{80}^n)=0\) for \(1\le n<8\) and
+\(\operatorname{tr}(B_{80}^8)=25920=16\cdot1620\), i.e.\
+1620 undirected primitive octagons.
+
+\paragraph{The theta subgraph and its magnetic twist.}
+The native \(\Theta(4,4,4)\) patch is formed by subdividing each
+edge of a three-parallel-edge dipole into four edges.  It has eleven
+vertices, twelve edges, three primitive octagons, two degree-three
+hubs and nine degree-two vertices.  It is therefore \emph{irregular}.
+Fix unitary arm phases \(1,z_1,z_2\), with
+\(z_j=e^{i\phi_j}\), and define
+\(s=\lvert1+z_1+z_2\rvert\).
+The twisted 24-by-24 nonbacktracking Hashimoto matrix \(B_\phi\)
+has the exact determinant
+\[
+\boxed{
+\det(I-uB_\phi)=
+ (1-u^8)\bigl[1+(4-s^2)u^8+4u^{16}\bigr].}
+\]
+Indeed, contracting the four-edge arms turns the transition operator
+into the dipole's \(6\times6\) directed-edge transfer.  With
+\(K=J_3-I_3\), \(Z=\operatorname{diag}(1,z_1,z_2)\),
+and \(x=u^8\), its determinant is
+\[
+\det(I-xKZ^{-1}KZ)
+=(1-x)\bigl[1+(4-s^2)x+4x^2\bigr].
+\]
+The same identity follows independently from the \emph{irregular}
+Bass formula
+\[
+\det(I-uB_\phi)
+=(1-u^2)^{12-11}
+  \det\bigl(I-uA_\phi+u^2(D-I)\bigr).
+\]
+It is directly checked on all eleven vertices and 24 directed edges
+in \texttt{analysis/w33\_20261014\_toe76\_theta\_twisted\_ihara.py}.
+
+For zero twist \(s=3\),
+\[
+Z_{\Theta,0}(u)^{-1}=(1-u^8)^2(1-4u^8).
+\]
+For cube-root (120-degree) arm phases \(s=0\),
+\[
+\boxed{
+Z_{\Theta,120^\circ}(u)^{-1}=
+(1-u^8)(1+2u^8)^2.}
+\]
+The twisted nontrivial quadratic factor is tempered when
+\(s\le 2\sqrt2\), in which case its roots have
+\(\lvert u\rvert=2^{-1/8}\); this is the regular
+three-edge dipole's twisted \(2\sqrt2\) bound after
+the substitution \(t=u^4\).  It is \emph{not}
+the main W33 circle \(11^{-1/2}\), nor the Levi circle
+\(3^{-1/2}\), and the irregular theta graph is
+\emph{not} being claimed to satisfy the ordinary
+regular-graph Ramanujan definition.
+
+\paragraph{Fermion--geodesic coincidence and controls.}
+The theta graph's exact noninteracting five-fermion energy
+\[
+E_0(s)=-\sqrt2-\sqrt{5+2\sqrt{3+s}}-
+                 \sqrt{5+2\sqrt{3-s}}
+\]
+is minimized globally when \(s=0\), at
+\((\phi_1,\phi_2)=(2\pi/3,4\pi/3)\) and its transpose.
+The same phase choice sets
+\(\operatorname{tr}(B_\phi^8)=8(s^2-3)=-24\),
+whereas the untwisted trace is \(+48\).
+Thus a common holonomy invariant controls an exact
+fermion optimum and a twisted Ihara-geodesic cancellation.
+The three theta octagons are only \(3/1620=1/540\)
+of the Levi primitive octagons; this ratio alone
+does not select a physical \(540\)-component model.
+
+This result holds for \emph{any} equal-arm
+\(\Theta(4,4,4)\), not uniquely for a W33 subgraph.
+Additional W33-embedding-sensitive operators or measurements,
+as well as a justified dynamical gauge sector,
+are needed before claiming new fundamental physics.
