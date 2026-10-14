@@ -1,0 +1,55 @@
+{
+  "status": "PASS_TOE67_FULL_SYMMETRY_RIBBON_NO_GO",
+  "fixed_native_point": 0,
+  "transvection_center_native_point": 4,
+  "four_incident_isotropic_line_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "line_action_on_four_incident_lines": [
+    0,
+    2,
+    3,
+    1
+  ],
+  "local_stabilizer_element_order": 3,
+  "cyclic_order_automorphism_group_orders": [
+    1,
+    2,
+    4
+  ],
+  "full_PSp_invariant_ribbon_rotation_exists": false,
+  "rotation_independent_doubled_genus": 81,
+  "illustrative_consistent_boundary_counts": [
+    {
+      "boundary_components": 2,
+      "ribbon_genus": 40,
+      "doubled_genus": 81
+    },
+    {
+      "boundary_components": 4,
+      "ribbon_genus": 39,
+      "doubled_genus": 81
+    },
+    {
+      "boundary_components": 6,
+      "ribbon_genus": 38,
+      "doubled_genus": 81
+    },
+    {
+      "boundary_components": 8,
+      "ribbon_genus": 37,
+      "doubled_genus": 81
+    },
+    {
+      "boundary_components": 10,
+      "ribbon_genus": 36,
+      "doubled_genus": 81
+    }
+  ],
+  "general_graph_theorem": "Any connected graph has double of an orientable ribbon thickening of genus E-V+1, independent of cyclic vertex orders.",
+  "obstruction": "Native point 4's symplectic transvection fixes native point 0 and induces an order-three 3-cycle on four incident isotropic lines. Such a permutation preserves no four-slot cyclic order, including up to reversal; no full PSp(4,3)-invariant orientable ribbon rotation exists.",
+  "scope": "No-go only for full-group invariant ribbon rotations; subgroup choices, symmetry breaking, other cell complexes and dynamical spacetime proposals remain open."
+}

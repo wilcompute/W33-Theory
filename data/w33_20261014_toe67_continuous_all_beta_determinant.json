@@ -1,0 +1,558 @@
+{
+  "status": "PASS_TOE67_EXACT_CONTINUOUS_ALL_BETA_FLUX_THEOREM",
+  "W33_vertices": 80,
+  "W33_Levi_edges": 160,
+  "phase_chord_indices": [
+    59,
+    93,
+    139
+  ],
+  "exact_quarter_phase_samples": 64,
+  "full_characteristic_polynomial_factor": "x^12 (x-6)^18 Q_10(x;theta)",
+  "flat_zero_singular_values_at_least": 12,
+  "flat_sqrt6_singular_values_at_least": 18,
+  "active_polynomial_degree": 10,
+  "fourier_laurent_support": "(-1,0,+1)^3; exact from minor multilinearity",
+  "coefficients_e0_through_e10_at_pi": [
+    1,
+    52,
+    1116,
+    12960,
+    89492,
+    380192,
+    994976,
+    1561792,
+    1386816,
+    627456,
+    109824
+  ],
+  "margin_table": [
+    {
+      "degree": 4,
+      "positive_single_axis": [
+        158,
+        154,
+        154
+      ],
+      "negative_cross_mode_cost": [
+        8,
+        16,
+        16
+      ],
+      "strict_coordinate_margin": [
+        150,
+        138,
+        138
+      ],
+      "negative_cross_modes": {
+        "(0, 1, -1)": -6,
+        "(1, 0, 1)": -2,
+        "(1, 1, 0)": -2
+      }
+    },
+    {
+      "degree": 5,
+      "positive_single_axis": [
+        3824,
+        3712,
+        3712
+      ],
+      "negative_cross_mode_cost": [
+        160,
+        368,
+        368
+      ],
+      "strict_coordinate_margin": [
+        3664,
+        3344,
+        3344
+      ],
+      "negative_cross_modes": {
+        "(0, 1, -1)": -144,
+        "(1, 0, 1)": -40,
+        "(1, 1, 0)": -40
+      }
+    },
+    {
+      "degree": 6,
+      "positive_single_axis": [
+        34392,
+        33256,
+        33256
+      ],
+      "negative_cross_mode_cost": [
+        1456,
+        3592,
+        3592
+      ],
+      "strict_coordinate_margin": [
+        32936,
+        29664,
+        29664
+      ],
+      "negative_cross_modes": {
+        "(0, 1, -1)": -1360,
+        "(0, 1, 1)": -72,
+        "(1, 0, 1)": -364,
+        "(1, 1, 0)": -364
+      }
+    },
+    {
+      "degree": 7,
+      "positive_single_axis": [
+        139320,
+        134168,
+        134168
+      ],
+      "negative_cross_mode_cost": [
+        4232,
+        13112,
+        13112
+      ],
+      "strict_coordinate_margin": [
+        135088,
+        121056,
+        121056
+      ],
+      "negative_cross_modes": {
+        "(0, 1, -1)": -5312,
+        "(0, 1, 1)": -168,
+        "(1, 0, 1)": -1040,
+        "(1, 1, 0)": -1040,
+        "(1, 1, 1)": -24
+      }
+    },
+    {
+      "degree": 8,
+      "positive_single_axis": [
+        237984,
+        228000,
+        228000
+      ],
+      "negative_cross_mode_cost": [
+        2016,
+        6432,
+        6432
+      ],
+      "strict_coordinate_margin": [
+        235968,
+        221568,
+        221568
+      ],
+      "negative_cross_modes": {
+        "(0, 1, -1)": -2208,
+        "(1, -1, 1)": -240,
+        "(1, 1, -1)": -240,
+        "(1, 1, 1)": -192
+      }
+    },
+    {
+      "degree": 9,
+      "positive_single_axis": [
+        110112,
+        104352,
+        104352
+      ],
+      "negative_cross_mode_cost": [
+        15264,
+        15264,
+        15264
+      ],
+      "strict_coordinate_margin": [
+        94848,
+        89088,
+        89088
+      ],
+      "negative_cross_modes": {
+        "(1, -1, -1)": -336,
+        "(1, -1, 1)": -1776,
+        "(1, 1, -1)": -1776,
+        "(1, 1, 1)": -1200
+      }
+    },
+    {
+      "degree": 10,
+      "positive_single_axis": [
+        13728,
+        13728,
+        13728
+      ],
+      "negative_cross_mode_cost": [
+        0,
+        0,
+        0
+      ],
+      "strict_coordinate_margin": [
+        13728,
+        13728,
+        13728
+      ],
+      "negative_cross_modes": {}
+    }
+  ],
+  "fourier_coefficients": {
+    "(-1, -1, -1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      12,
+      96,
+      600,
+      -1716
+    ],
+    "(-1, -1, 0)": [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -20,
+      -182,
+      -520,
+      2712,
+      12912,
+      3432
+    ],
+    "(-1, -1, 1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -4,
+      120,
+      888,
+      -1716
+    ],
+    "(-1, 0, -1)": [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -20,
+      -182,
+      -520,
+      2712,
+      12912,
+      3432
+    ],
+    "(-1, 0, 0)": [
+      0,
+      0,
+      0,
+      0,
+      -79,
+      -1912,
+      -17196,
+      -69660,
+      -118992,
+      -55056,
+      -6864
+    ],
+    "(-1, 0, 1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      34,
+      356,
+      4152,
+      13344,
+      3432
+    ],
+    "(-1, 1, -1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -4,
+      120,
+      888,
+      -1716
+    ],
+    "(-1, 1, 0)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      34,
+      356,
+      4152,
+      13344,
+      3432
+    ],
+    "(-1, 1, 1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -48,
+      168,
+      -1716
+    ],
+    "(0, -1, -1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -36,
+      -84,
+      2976,
+      12192,
+      3432
+    ],
+    "(0, -1, 0)": [
+      0,
+      0,
+      0,
+      0,
+      -77,
+      -1856,
+      -16628,
+      -67084,
+      -114000,
+      -52176,
+      -6864
+    ],
+    "(0, -1, 1)": [
+      0,
+      0,
+      0,
+      0,
+      -3,
+      -72,
+      -680,
+      -2656,
+      -1104,
+      11184,
+      3432
+    ],
+    "(0, 0, -1)": [
+      0,
+      0,
+      0,
+      0,
+      -77,
+      -1856,
+      -16628,
+      -67084,
+      -114000,
+      -52176,
+      -6864
+    ],
+    "(0, 0, 0)": [
+      1,
+      52,
+      1116,
+      12960,
+      89036,
+      369152,
+      896088,
+      1160280,
+      662208,
+      161952,
+      13728
+    ],
+    "(0, 0, 1)": [
+      0,
+      0,
+      0,
+      0,
+      -77,
+      -1856,
+      -16628,
+      -67084,
+      -114000,
+      -52176,
+      -6864
+    ],
+    "(0, 1, -1)": [
+      0,
+      0,
+      0,
+      0,
+      -3,
+      -72,
+      -680,
+      -2656,
+      -1104,
+      11184,
+      3432
+    ],
+    "(0, 1, 0)": [
+      0,
+      0,
+      0,
+      0,
+      -77,
+      -1856,
+      -16628,
+      -67084,
+      -114000,
+      -52176,
+      -6864
+    ],
+    "(0, 1, 1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -36,
+      -84,
+      2976,
+      12192,
+      3432
+    ],
+    "(1, -1, -1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -48,
+      168,
+      -1716
+    ],
+    "(1, -1, 0)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      34,
+      356,
+      4152,
+      13344,
+      3432
+    ],
+    "(1, -1, 1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -4,
+      120,
+      888,
+      -1716
+    ],
+    "(1, 0, -1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      34,
+      356,
+      4152,
+      13344,
+      3432
+    ],
+    "(1, 0, 0)": [
+      0,
+      0,
+      0,
+      0,
+      -79,
+      -1912,
+      -17196,
+      -69660,
+      -118992,
+      -55056,
+      -6864
+    ],
+    "(1, 0, 1)": [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -20,
+      -182,
+      -520,
+      2712,
+      12912,
+      3432
+    ],
+    "(1, 1, -1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -2,
+      -4,
+      120,
+      888,
+      -1716
+    ],
+    "(1, 1, 0)": [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -20,
+      -182,
+      -520,
+      2712,
+      12912,
+      3432
+    ],
+    "(1, 1, 1)": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      12,
+      96,
+      600,
+      -1716
+    ]
+  },
+  "quarter_sample_sha256": "2c5611b3f84d1ce2ca2c8359149e113125ca8349369209a79af72b7d3011547b",
+  "flatband_entropy_obstruction": {
+    "minimum_zero_one_particle_states_for_any_flat_phase": 24,
+    "exact_zero_one_particle_states_at_three_pi": 24,
+    "exact_zero_one_particle_states_at_trivial_phase": 30,
+    "canonical_N40_many_body_zero_shell_degeneracy_lower": 2704156,
+    "canonical_N40_many_body_zero_shell_degeneracy_at_zero_phase": 155117520,
+    "grand_canonical_zero_mode_entropy_lower_at_mu0": "24*k_B*ln(2)",
+    "implication": "Massless static uniform three-deck hopping has no unique gapped half-filled many-body vacuum despite unique flux free-energy minimizer."
+  },
+  "theorem": "det(I+t B_pi B_pi*) > det(I+t B_theta B_theta*) for every t>0 and theta != pi modulo 2pi, by exact coefficientwise nonnegative differences and strict degree-four margin. Via cosh's Weierstrass product, pi uniquely minimizes free energy at every beta>0 for this noninteracting half-filled uniform three-deck model, including arbitrary common real sublattice-staggered mass.",
+  "scope": "Finite static free spinless W33, uniform links, three selected flat U(1) coordinates; not interacting matter, arbitrary link disorder, dynamical gauge fields, Lorentz gravity, CP violation or physical TOE."
+}
