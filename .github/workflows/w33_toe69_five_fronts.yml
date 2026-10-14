@@ -1,0 +1,25 @@
+name: TOE69 exact-cover and gauge research regression
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe69_*.py'
+      - 'tests/test_w33_20261014_toe69_*.py'
+      - '.github/workflows/w33_toe69_five_fronts.yml'
+  workflow_dispatch:
+jobs:
+  reproduce-toe69:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install numpy scipy pytest sympy
+      - name: Verify native geometry, disorder, gauge and overlap gates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python -m pytest -q tests/test_w33_20261014_toe69_five_fronts.py

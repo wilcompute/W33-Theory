@@ -1,0 +1,356 @@
+{
+  "status": "PASS_TOE69_FIVE_INDEPENDENT_FRONTS",
+  "disorder": {
+    "status": "PASS_EXACT_TWO_EDGE_CORNER_LOCALITY",
+    "native_winding_octagons": 238,
+    "tested_pair_flips": 12720,
+    "high_edge_indices": [
+      30,
+      31,
+      49,
+      51,
+      59,
+      62,
+      63,
+      82,
+      83,
+      93,
+      95,
+      118,
+      119,
+      138,
+      139,
+      142,
+      143
+    ],
+    "epsilon_fraction": "245/1000",
+    "phase_direction": [
+      0,
+      -1,
+      1
+    ],
+    "negative_baseline_integer": "-278181245315125293750000",
+    "smallest_positive_one_flip_integer": "52315612734624060937500",
+    "smallest_positive_two_flip_integer": "337991711991203123437500",
+    "min_two_flip_pair": [
+      37,
+      56
+    ],
+    "scope": "Only fixed-direction Hamming distance <=2 local optimality, not global 160-edge minimax or all-beta flux."
+  },
+  "pairing_geometry": {
+    "status": "PASS_EXACT_TWENTY_NATIVE_OCTAGON_COVER",
+    "all_native_simple_octagons": 1620,
+    "selection_indices": [
+      65,
+      103,
+      176,
+      287,
+      353,
+      439,
+      514,
+      543,
+      620,
+      758,
+      793,
+      880,
+      935,
+      986,
+      1092,
+      1143,
+      1323,
+      1481,
+      1532,
+      1542
+    ],
+    "twenty_octagon_edge_lists": [
+      [
+        0,
+        24,
+        26,
+        69,
+        71,
+        98,
+        96,
+        2
+      ],
+      [
+        1,
+        56,
+        57,
+        154,
+        152,
+        127,
+        124,
+        3
+      ],
+      [
+        4,
+        17,
+        18,
+        48,
+        51,
+        103,
+        100,
+        6
+      ],
+      [
+        5,
+        76,
+        79,
+        47,
+        46,
+        151,
+        148,
+        7
+      ],
+      [
+        8,
+        32,
+        34,
+        114,
+        115,
+        143,
+        140,
+        11
+      ],
+      [
+        9,
+        84,
+        87,
+        111,
+        108,
+        91,
+        90,
+        10
+      ],
+      [
+        12,
+        44,
+        45,
+        62,
+        61,
+        147,
+        144,
+        15
+      ],
+      [
+        13,
+        55,
+        52,
+        60,
+        63,
+        119,
+        116,
+        14
+      ],
+      [
+        16,
+        20,
+        22,
+        121,
+        122,
+        38,
+        36,
+        19
+      ],
+      [
+        21,
+        157,
+        159,
+        97,
+        99,
+        155,
+        153,
+        23
+      ],
+      [
+        25,
+        65,
+        67,
+        50,
+        49,
+        139,
+        137,
+        27
+      ],
+      [
+        28,
+        40,
+        43,
+        133,
+        134,
+        107,
+        106,
+        29
+      ],
+      [
+        30,
+        118,
+        117,
+        77,
+        78,
+        94,
+        93,
+        31
+      ],
+      [
+        33,
+        58,
+        59,
+        102,
+        101,
+        145,
+        146,
+        35
+      ],
+      [
+        37,
+        158,
+        156,
+        126,
+        125,
+        136,
+        138,
+        39
+      ],
+      [
+        41,
+        123,
+        120,
+        104,
+        105,
+        73,
+        75,
+        42
+      ],
+      [
+        53,
+        64,
+        66,
+        131,
+        129,
+        70,
+        68,
+        54
+      ],
+      [
+        72,
+        80,
+        83,
+        135,
+        132,
+        128,
+        130,
+        74
+      ],
+      [
+        81,
+        149,
+        150,
+        110,
+        109,
+        141,
+        142,
+        82
+      ],
+      [
+        85,
+        113,
+        112,
+        89,
+        88,
+        92,
+        95,
+        86
+      ]
+    ],
+    "every_edge_covered_once": true,
+    "every_vertex_meets_two_octagons": true,
+    "twenty_cycle_intersection_multigraph_degree": 8,
+    "intersection_edge_pair_multiplicity_counts": {
+      "1": 74,
+      "2": 3
+    },
+    "three_selected_nontrivial_windings": [
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "proof": "Any local pairing partitions 160 edges into edge-disjoint closed nonbacktracking paths; native graph girth eight implies <=20 paths. This explicit 20-octagon cover saturates the bound. The invariant classical -J times number-of-loops Hamiltonian has ground energy -20J for J>0.",
+    "scope": "Construction depends on selected cover and spanning-tree chords. No canonical spacetime, Einstein dynamics, or chirality follows."
+  },
+  "gauge": {
+    "status": "PASS_SCHUR_BLOCK_INEQUALITY_NUMERIC_INPUT",
+    "bounds": [
+      {
+        "L": 2,
+        "numerical_E_cutoff": -2.1345423000162325,
+        "Q_diagonal_min": 11.59,
+        "complement_Q_lower_by_Gershgorin": 6.54,
+        "interface_operator_norm_bound": 0.725,
+        "lower_if_exact_cutoff_ground": -2.1947188220893583,
+        "upper_if_exact_cutoff_ground": -2.1345423000162325,
+        "conditional_interval_width": 0.06017652207312585
+      },
+      {
+        "L": 3,
+        "numerical_E_cutoff": -2.1345424782977696,
+        "Q_diagonal_min": 26.17,
+        "complement_Q_lower_by_Gershgorin": 21.12,
+        "interface_operator_norm_bound": 0.725,
+        "lower_if_exact_cutoff_ground": -2.1571236617651834,
+        "upper_if_exact_cutoff_ground": -2.1345424782977696,
+        "conditional_interval_width": 0.02258118346741389
+      }
+    ],
+    "algebraic_proof": "For fixed four-fermion occupation, n_j=m+cumulative(occ-bg). Convexity and exact finite occupation census bound every |m|>=L+1 electric diagonal. Complement hopping has row sum <=8*kappa+eta. Interface has row/column sum <=kappa+eta/2. Apply 2x2 min-max eigenvalue formula with exact cutoff ground energy.",
+    "limitation": "Displayed decimal intervals use previously reported numerical Ritz values, not certified enclosures of exact PHP ground energies. They are conditional bounds, NOT machine-rigorous energy intervals until those enclosures are supplied."
+  },
+  "chirality": {
+    "status": "PASS_EXACT_CHARGE_NINE_LATTICE_ALIAS",
+    "TOE68_N": 3,
+    "TOE68_unit_flux_plaquette_norm": 0.6840402866513374,
+    "illustrative_sufficient_generic_norm_cutoff": "1/30",
+    "first_N_satisfying_that_cutoff": 14,
+    "representative_U1_charge_angle_bound": "max_abs_charge * 2*pi/N^2 < 2/5",
+    "first_N_for_five_charge_bound": 12,
+    "charge9_links_exactly_trivial_in_TOE68_background": true,
+    "charge9_overlap_index_on_coarse_3pow4_background": 0,
+    "continuum_twist_Chern_product_at_charge9": 81,
+    "scope": "Distinct sufficient locality/admissibility criteria apply to different groups. This is an explicit q9 aliasing failure of the prior five-charge coarse control, not a native W33 index."
+  },
+  "zero_modes": {
+    "status": "PASS_EXACT_FREE_MASS_ZERO_MODE_LIFTING",
+    "rank_at_3pi": 28,
+    "massless_zero_single_particle_modes": 24,
+    "trial_mass_gaps": [
+      {
+        "chosen_mass": 0.05,
+        "computed_canonical_fock_gap": 0.09999999999998885
+      },
+      {
+        "chosen_mass": 0.2,
+        "computed_canonical_fock_gap": 0.399999999999993
+      },
+      {
+        "chosen_mass": 1,
+        "computed_canonical_fock_gap": 1.9999999999999947
+      }
+    ],
+    "theorem": "H_m=[[mI,B],[B*, -mI]] has spectrum ±sqrt(sigma(B)^2+m^2), so for any m !=0 unique half-filled free Fock ground with gap at least 2|m|; exactly 2|m| at three pi. For uniform B, TOE67 all-beta three-pi flux selection survives common staggered mass.",
+    "limitation": "Imposed mass, not spontaneous interacting mass generation or parameter-free prediction."
+  }
+}

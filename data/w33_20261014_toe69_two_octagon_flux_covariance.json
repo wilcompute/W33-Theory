@@ -1,0 +1,107 @@
+{
+  "status": "PASS_TOE69_TWO_OVERLAPPING_NATIVE_OCTAGONS",
+  "original_cycle_indices": [
+    0,
+    1
+  ],
+  "native_edge_ids": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    16,
+    17,
+    52,
+    53,
+    88,
+    89
+  ],
+  "native_vertex_ids": [
+    0,
+    1,
+    4,
+    13,
+    22,
+    40,
+    41,
+    42,
+    44,
+    45,
+    46
+  ],
+  "n_vertices": 11,
+  "n_edges": 12,
+  "n_fermions": 5,
+  "fixed_number_fock_states": 462,
+  "independent_electric_coordinates": 2,
+  "native_supported_plaquettes": 3,
+  "chord_cycle_shifts": [
+    [
+      -1,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "Hamiltonian_parameters": {
+    "g": 0.8,
+    "kappa": 0.7,
+    "beta": 0.4,
+    "mass": 0.3
+  },
+  "runs": [
+    {
+      "L": 1,
+      "dimension": 4158,
+      "ground": -3.16047161946957,
+      "first_gap": 1.0718827363509749,
+      "flux_means": [
+        -0.08206382122275957,
+        -0.08206382122275975
+      ],
+      "flux_covariance": [
+        [
+          0.14013468020851377,
+          -0.03614825044494314
+        ],
+        [
+          -0.03614825044494313,
+          0.14013468020851386
+        ]
+      ],
+      "flux_boundary_probability": 0.25807084696366595,
+      "numerical_ritz_residual": 9.883456657880249e-15
+    },
+    {
+      "L": 2,
+      "dimension": 11550,
+      "ground": -3.1896182050258153,
+      "first_gap": 1.0643235158047983,
+      "flux_means": [
+        -0.09156101240744129,
+        -0.09156101240744119
+      ],
+      "flux_covariance": [
+        [
+          0.1623470332791682,
+          -0.047903659244927135
+        ],
+        [
+          -0.047903659244927135,
+          0.16234703327916816
+        ]
+      ],
+      "flux_boundary_probability": 0.005729090888166206,
+      "numerical_ritz_residual": 1.919045585838404e-14
+    }
+  ],
+  "scope": "Native 11-site finite two-loop Gauss exactly reconstructed; eigsh values numerically computed and flux covariance negative at both cutoffs. Earlier Pass11974 already established two-loop physics; covariance is a new observable, not a certified L->infinity or continuum result."
+}
