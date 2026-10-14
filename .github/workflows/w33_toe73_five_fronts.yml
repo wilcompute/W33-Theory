@@ -1,0 +1,39 @@
+name: TOE73 five-front mathematical and numerical reproduction
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe73_*.py'
+      - 'tests/test_w33_20261014_toe73_*.py'
+      - '.github/workflows/w33_toe73_five_fronts.yml'
+  workflow_dispatch:
+jobs:
+  toe73-exact-and-physics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy pytest
+      - name: Run five source-regenerating W33 test gates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe73_five_fronts.py
+      - name: Independently publish three regenerated JSON certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: |
+          python analysis/w33_20261014_toe73_exact_fronts.py
+          python analysis/w33_20261014_toe73_gauge_static_dipole.py
+          python analysis/w33_20261014_toe73_eleven_site_ed.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe73-five-front-certificates
+          path: data/w33_20261014_toe73_*.json
+          retention-days: 60
