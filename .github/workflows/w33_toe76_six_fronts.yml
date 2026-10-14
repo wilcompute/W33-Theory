@@ -1,0 +1,41 @@
+name: TOE76 six fronts incl twisted Ihara and graph RH
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe76_*.py'
+      - 'tests/test_w33_20261014_toe76_*.py'
+      - '.github/workflows/w33_toe76_six_fronts.yml'
+  workflow_dispatch:
+jobs:
+  toe76-six-front-reproduction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install runtime
+        run: python -m pip install numpy scipy pytest
+      - name: Independently test six W33/Ramanujan research fronts
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe76_six_fronts.py
+      - name: Regenerate three independent research certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: |
+          python analysis/w33_20261014_toe76_theta_twisted_ihara.py
+          python analysis/w33_20261014_toe76_four_fronts.py
+          python analysis/w33_20261014_toe76_flux_currents.py
+      - name: Upload exact and numerical evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: toe76-six-front-certificates
+          path: data/w33_20261014_toe76_*.json
+          retention-days: 60
