@@ -1,0 +1,36 @@
+name: TOE78 native cubic octagon 270 primes and Ihara graph RH
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe78_cubic_270_ihara.py'
+      - 'tests/test_w33_20261014_toe78_cubic_270_ihara.py'
+      - '.github/workflows/w33_toe78_cubic_270_ihara.yml'
+  workflow_dispatch:
+jobs:
+  verified-270-gq24-primes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - name: Validate exact 27-node cubic graph and Ihara 270
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe78_cubic_270_ihara.py
+      - name: Regenerate cubic Ihara and E8-triple certificate
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe78_cubic_270_ihara.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe78-cubic-270-ihara-certificate
+          path: data/w33_20261014_toe78_cubic_270_ihara.json
+          retention-days: 60
