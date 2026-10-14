@@ -28,3 +28,14 @@ def test_normal_H27_and_actual_order_eight_complement_not_just_216_count():
         assert c["order8_complement_is_quaternion_Q8"]
         assert c["H27_center_fixed_pointwise_under_order8"]
         assert c["order8_orbit_size_on_eight_nonzero_H27_mod_center_classes"]==8
+
+def test_order_eight_action_identifies_dihedral_or_other_explicit_structure():
+    c=certificate()
+    assert sum(c["D8_orbit_sizes_on_eight_nonzero_H27_mod_center_classes"])==8
+    assert not c["order8_complement_is_quaternion_Q8"]
+    assert not c["H27_center_fixed_pointwise_under_order8"]
+    assert c["full_216_group_center_order"]==1
+    if c["order8_complement_is_dihedral_D8"]:
+        assert c["order8_complement_element_orders"]=={1:1,2:5,4:2}
+        assert c["pair_stabilizer_is_semidirect_H27_by_D8"]
+        assert c["D8_orbit_sizes_on_eight_nonzero_H27_mod_center_classes"]==[4,4]

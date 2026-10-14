@@ -136,6 +136,8 @@ def certificate():
         qhist=collections.Counter(order_of(q,I) for q in Q)
         assert not (Q& H-{I})
         assert len(H)*len(Q)==len(full)==216
+        dihedral=(qhist.get(1,0)==1 and qhist.get(2,0)==5 and
+                  qhist.get(4,0)==2)
         quaternion=(qhist.get(1,0)==1 and qhist.get(2,0)==1 and
                     qhist.get(4,0)==6)
         # The center Z(H) has order 3 for extraspecial H27.
@@ -148,6 +150,15 @@ def certificate():
         phase_orbit={frozenset(compose(compose(q,x),inverse(q))
                                for x in nontriv) for q in Q}
         assert phase_orbit<=classes
+        phase_remaining=classes-{trivial}
+        phase_orbit_sizes=[]
+        while phase_remaining:
+            seedclass=next(iter(phase_remaining))
+            orb={frozenset(compose(compose(q,x),inverse(q))
+                           for x in seedclass) for q in Q}
+            assert orb<=phase_remaining
+            phase_remaining-=orb
+            phase_orbit_sizes.append(len(orb))
         central_fixed=all(compose(compose(q,z),inverse(q))==z
                           for q in Q for z in central)
         full_center=[g for g in full
@@ -156,9 +167,12 @@ def certificate():
           "explicit_order8_complement_found":True,
           "order8_complement_element_orders":dict(sorted(qhist.items())),
           "order8_complement_is_quaternion_Q8":quaternion,
+          "order8_complement_is_dihedral_D8":dihedral,
+          "pair_stabilizer_is_semidirect_H27_by_D8":bool(normal and extraspecial and dihedral),
           "pair_stabilizer_is_semidirect_H27_by_Q8":
               bool(normal and extraspecial and quaternion),
           "H27_center_fixed_pointwise_under_order8":central_fixed,
+          "D8_orbit_sizes_on_eight_nonzero_H27_mod_center_classes":sorted(phase_orbit_sizes),
           "order8_orbit_size_on_eight_nonzero_H27_mod_center_classes":
               len(phase_orbit),
           "full_216_group_center_order":len(full_center),
@@ -170,6 +184,7 @@ if __name__=="__main__":
     (ROOT/"data/w33_20261014_toe77_H27_shared_octagon_group.json").write_text(
         json.dumps(c,indent=2)+"\n")
     print(c["status"],"order",c["induced_faithful_permutation_group_order"])
+    print("D8",c.get("order8_complement_is_dihedral_D8"),"semidirect",c.get("pair_stabilizer_is_semidirect_H27_by_D8"),"orders",c.get("order8_complement_element_orders"),"orbits",c.get("D8_orbit_sizes_on_eight_nonzero_H27_mod_center_classes"))
     print("Q8",c.get("order8_complement_is_quaternion_Q8"), "semidirect",c.get("pair_stabilizer_is_semidirect_H27_by_Q8"), "center",c.get("full_216_group_center_order"),"phase_orbit",c.get("order8_orbit_size_on_eight_nonzero_H27_mod_center_classes"))
     print("H27",c.get("selected_Sylow27_is_extraspecial_Heisenberg_H27"),
           "center",c.get("selected_Sylow27_center_order"),
