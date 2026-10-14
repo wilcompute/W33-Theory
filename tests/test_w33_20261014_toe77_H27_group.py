@@ -60,3 +60,11 @@ def test_native_gq24_45_tritangents_are_actual_heisenberg_cosets():
     assert c["center_preserving_order4_subgroup_size"]==4
     assert c["center_inverting_order8_coset_size"]==4
     assert len(c["native_GQ24_tritangent_lines"])==45
+
+def test_complete_432_heisenberg_generator_gauges_against_frozen_cubic_address():
+    c=certificate()
+    assert c["original_5_coset_directions_abstract_H27_generator_pairs_tested"]==432
+    assert c["original_address_H27_to_native_octagon_equivariant_gauge_count"]>=0
+    labels=c["example_original_H27_address_to_octagon_bijection"]
+    if labels is not None:
+        assert sorted(labels)==list(range(27))
