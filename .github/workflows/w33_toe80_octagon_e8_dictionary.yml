@@ -1,0 +1,38 @@
+name: TOE80 exact native octagon to E8 E6 A2 matter dictionaries
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261014_toe80_octagon_e8_a2_dictionary.py'
+      - 'tests/test_w33_20261014_toe80_octagon_e8_a2_dictionary.py'
+      - '.github/workflows/w33_toe80_octagon_e8_dictionary.yml'
+  workflow_dispatch:
+jobs:
+  cross-verified-e8-e6-a2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact rational math runtime
+        run: python -m pip install numpy scipy networkx pytest
+      - name: Crosscheck eight 81-root sectors against native octagon Gram and all 72 E6 roots
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261014_toe80_octagon_e8_a2_dictionary.py
+      - name: Rebuild all E8 matter and native octagon matching certificates
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe80_octagon_e8_a2_dictionary.py
+      - name: Publish exact eight-dictionary certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: toe80-eight-native-octagon-e8-e6-a2-dictionaries
+          path: data/w33_20261014_toe80_octagon_e8_a2_dictionaries.json
+          retention-days: 60
