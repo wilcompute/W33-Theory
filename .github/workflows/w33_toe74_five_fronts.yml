@@ -33,6 +33,12 @@ jobs:
           python analysis/w33_20261014_toe74_unconditional_gauge_bound.py
           python analysis/w33_20261014_toe74_quantum_neighbors.py
           python analysis/w33_20261014_toe74_u1_manybody_finite_t.py
+      - name: Verify and print quantitative cross-front findings
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261014_toe74_quantified_findings.py
       - uses: actions/upload-artifact@v4
         with:
           name: toe74-five-front-certificates
