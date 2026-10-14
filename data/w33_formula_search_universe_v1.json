@@ -809736,6 +809736,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f879b6e658aaba0d4a0433b6f25377eeb441f2f50be780662aa944e0cb22ebb1",
+      "normalized_formula": "Thepreferredcorner^changeswithrepulsion^inthisfiniteinteractingpatch;thefour-cornerenergyspreadbecomesabout29.4timessmallerbyV=4thanV=0.ThisisnotastatementaboutTOE67'sthreeselectedchordsoraboutcontinuousflatU(1)^3atalltemperatures",
+      "numeric_literals": [
+        "0",
+        "1",
+        "3",
+        "4",
+        "7",
+        "9.4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe73_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 127,
+          "path": "analysis/2026-10-14_toe73_five_fronts.md",
+          "raw": "The preferred corner **changes with repulsion** in this finite interacting patch; the four-corner energy spread becomes about 29.4 times smaller by V=4 than V=0. This is not a statement about TOE67's three selected chords or about continuous flat U(1)^3 at all temperatures.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "22bbdae74114da901432a083911e70d1815e65cb16291f1c1a227d6a44a2bd80",
+      "structural_formula": "Thepreferredcorner^changeswithrepulsion^inthisfiniteinteractingpatch;thefour-cornerenergyspreadbecomesabout2#timessmallerbyV=#thanV=#.ThisisnotastatementaboutTOE6#'sthreeselectedchordsoraboutcontinuousflatU(#)^#atalltemperatures"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8a57cd804372ab862c393d9237e106544a42182d7c12713735def49017b23306",
       "normalized_formula": "ThepreviousOct8workalreadyprovedbyBertinithata^generic^memberofthe21-dimensionalinvarianttetraquadriclinearsystemissmoothandavoidsall48nonidentityKlein-fourfixedpoints.Thatexistencetheoremremainsintact.Butneithertheselected\\((a,b)=(2,3)\\)three-termpencilnorafull21-orbit^explicitintegerpolynomial^hasacompletegeometriccharacteristic-zerosmoothnesscertificate,noraphysicalCYmetric,FI/anomaly/vacuum/Yukawasolution",
       "numeric_literals": [
@@ -1002212,6 +1002244,39 @@
       },
       "structural_family_id": "dd44a0e384a1d58157a7d2e4bfc2cf20df082f1968e195105576510e157bffb9",
       "structural_formula": "^Flatness.^AKempf\u2013Nessflowtoaminimalvectorreaches|\u03bc|\u2248#\u2212#.TheCartanthroughitliesin\u03bc\u2212#(#)toabout"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d2d82008948ef5cff50017a62289c7602a9d2fa6e0a13157ce7ccf784d7c94b7",
+      "normalized_formula": "^Gauss-backgroundunit-charge-transferresponse:^atg=.8,kappa=.7,magneticbeta=.4andzerostaggeredmass,themodifiedstaticchargebackgroundminusnativebackgroundgroundenergyis^+0.18082624543649395^atelectriccutoffL=1and^+0.17376606610476086^atL=2.Thisisanexplicitlyspecified*static-source*finite-patchresponse,notaconfinementlaw",
+      "numeric_literals": [
+        "+0.17376606610476086",
+        "+0.18082624543649395",
+        ".4",
+        ".7",
+        ".8",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-14_toe73_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 129,
+          "path": "analysis/2026-10-14_toe73_five_fronts.md",
+          "raw": "**Gauss-background unit-charge-transfer response:** at g=.8, kappa=.7, magnetic beta=.4 and zero staggered mass, the modified static charge background minus native background ground energy is **+0.18082624543649395** at electric cutoff L=1 and **+0.17376606610476086** at L=2. This is an explicitly specified *static-source* finite-patch response, not a confinement law.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "88f9f3a35a57fbb0204239e9f8e977fb9b54f566b694e955322d1cd2b5d60657",
+      "structural_formula": "^Gauss-backgroundunit-charge-transferresponse:^atg=#,kappa=#,magneticbeta=#andzerostaggeredmass,themodifiedstaticchargebackgroundminusnativebackgroundgroundenergyis^#^atelectriccutoffL=#and^#^atL=#.Thisisanexplicitlyspecified*static-source*finite-patchresponse,notaconfinementlaw"
     },
     {
       "file_count": 1,
@@ -1805832,9 +1805897,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T16:09:35-04:00",
+  "frozen_at": "2026-10-14T16:12:42-04:00",
   "pass": 398,
-  "repository_head": "8bd887e6766854a23d070bf27ce028ce842912d8",
+  "repository_head": "795c6235532bd0cadd73e23c685f706f8f06ece8",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2024232,6 +2024297,14 @@
     },
     {
       "exact_formula_ids": [
+        "f879b6e658aaba0d4a0433b6f25377eeb441f2f50be780662aa944e0cb22ebb1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "22bbdae74114da901432a083911e70d1815e65cb16291f1c1a227d6a44a2bd80",
+      "structural_formula": "Thepreferredcorner^changeswithrepulsion^inthisfiniteinteractingpatch;thefour-cornerenergyspreadbecomesabout2#timessmallerbyV=#thanV=#.ThisisnotastatementaboutTOE6#'sthreeselectedchordsoraboutcontinuousflatU(#)^#atalltemperatures"
+    },
+    {
+      "exact_formula_ids": [
         "8a57cd804372ab862c393d9237e106544a42182d7c12713735def49017b23306"
       ],
       "exact_member_count": 1,
@@ -2073174,6 +2073247,14 @@
       "exact_member_count": 1,
       "structural_family_id": "dd44a0e384a1d58157a7d2e4bfc2cf20df082f1968e195105576510e157bffb9",
       "structural_formula": "^Flatness.^AKempf\u2013Nessflowtoaminimalvectorreaches|\u03bc|\u2248#\u2212#.TheCartanthroughitliesin\u03bc\u2212#(#)toabout"
+    },
+    {
+      "exact_formula_ids": [
+        "d2d82008948ef5cff50017a62289c7602a9d2fa6e0a13157ce7ccf784d7c94b7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "88f9f3a35a57fbb0204239e9f8e977fb9b54f566b694e955322d1cd2b5d60657",
+      "structural_formula": "^Gauss-backgroundunit-charge-transferresponse:^atg=#,kappa=#,magneticbeta=#andzerostaggeredmass,themodifiedstaticchargebackgroundminusnativebackgroundgroundenergyis^#^atelectriccutoffL=#and^#^atL=#.Thisisanexplicitlyspecified*static-source*finite-patchresponse,notaconfinementlaw"
     },
     {
       "exact_formula_ids": [
@@ -2288529,20 +2288610,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88062144,
-    "exact_formula_families": 61760,
+    "bytes_scanned": 88063880,
+    "exact_formula_families": 61762,
     "files_scanned": 12087,
-    "formula_occurrences": 67739,
+    "formula_occurrences": 67741,
     "status_occurrences": {
       "certified_or_theorem": 4983,
       "killed_or_retracted": 1649,
       "open_or_conditional": 2264,
       "preregistered": 33,
       "retrospective_fit": 5234,
-      "unclassified": 53576
+      "unclassified": 53578
     },
-    "structural_families": 60127
+    "structural_families": 60129
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "15902ab195665914792bca6454d9588d8c643fb179ae06c08ea7b3509ddfd43a"
+  "universe_sha256": "0b30d012098db6567a21cb669295e7be40fe5912f2b12a2e436e16fdb31132ce"
 }
