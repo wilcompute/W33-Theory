@@ -23,7 +23,7 @@ def test_seven_orbit_six_bijections_and_exact_truncated_star_bands():
     assert c["adjacency_star_multiplicities"]==[51840,259200,51840]
     assert c["inter_orbit_truncated_star_components"]==51840
     assert "compression" not in c["status"].lower()
-    assert "truncated" in c["scope"]
+    assert "compressed" in c["scope"]
 
 def test_explicit_W33_squared_CW_cells_index_and_spin_ambiguity():
     c=w33_squared_cw()
