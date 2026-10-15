@@ -1,0 +1,42 @@
+{
+  "status": "PASS_TOE82_NATIVE_H27_H1_CHARACTER",
+  "source": "TOE77 five native-compatible H27 right-coset directions",
+  "complex": {
+    "vertices": 27,
+    "edges": 135,
+    "faces": 45,
+    "boundary_ranks_F2": [
+      26,
+      45
+    ],
+    "H1_dimension": 64
+  },
+  "H27_character_values": {
+    "identity": 64,
+    "two_nonidentity_central_elements": -8,
+    "twenty_four_noncentral_elements": -2
+  },
+  "character_value_histogram": {
+    "64": 1,
+    "-8": 2,
+    "-2": 24
+  },
+  "linear_character_multiplicities": {
+    "0,0": 0,
+    "0,1": 2,
+    "0,2": 2,
+    "1,0": 2,
+    "1,1": 2,
+    "1,2": 2,
+    "2,0": 2,
+    "2,1": 2,
+    "2,2": 2
+  },
+  "schrodinger_3d_irrep_multiplicities": {
+    "central_character_omega": 8,
+    "central_character_omega_squared": 8
+  },
+  "H27_invariant_H1_dimension_characteristic_zero": 0,
+  "representation_identity": "H1_C = 2 sum_(chi nontrivial linear) chi + 8 V_omega + 8 V_omega^2",
+  "limitation": "Characteristic 3 is modular; zero complex invariants do not imply zero F3 invariants. This is finite-complex representation theory, not a physical TOE."
+}
