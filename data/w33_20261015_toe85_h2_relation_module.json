@@ -1,0 +1,578 @@
+{
+  "F2": {
+    "H27_fixed_dimension": 2,
+    "boundary_rank": 83,
+    "center_generator_rank": 6,
+    "dimension": 16,
+    "elements": [
+      {
+        "h": [
+          0,
+          0,
+          0
+        ],
+        "rank_g_minus_identity": 0
+      },
+      {
+        "h": [
+          0,
+          0,
+          1
+        ],
+        "rank_g_minus_identity": 6
+      },
+      {
+        "h": [
+          0,
+          0,
+          2
+        ],
+        "rank_g_minus_identity": 6
+      },
+      {
+        "h": [
+          0,
+          1,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          0,
+          1,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          0,
+          1,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          0,
+          2,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          0,
+          2,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          0,
+          2,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          0,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          0,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          0,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          1,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          1,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          1,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          2,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          2,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          2,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          0,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          0,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          0,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          1,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          1,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          1,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          2,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          2,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          2,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      }
+    ],
+    "generators": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "rank_g_minus_identity_distribution": {
+      "0": 1,
+      "10": 24,
+      "6": 2
+    },
+    "semisimple_decomposition": {
+      "center_invariant_dimension": 10,
+      "faithful_irreducible_dimension": 6,
+      "faithful_nonzero_cyclic_vectors_verified": 63,
+      "four_nontrivial_F3xF3_character_pairs": {
+        "0,1": 2,
+        "1,0": 2,
+        "1,1": 2,
+        "1,2": 2
+      },
+      "order9_subgroup_fixed_dimensions": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "trivial_dimension": 2
+    }
+  },
+  "F3": {
+    "F3_trivial_head_dimension": 3,
+    "H27_fixed_dimension": 2,
+    "H2_rank8_polarization": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        2
+      ]
+    ],
+    "Loewy_layer_dimensions": [
+      3,
+      3,
+      4,
+      2,
+      2,
+      1,
+      1
+    ],
+    "augmentation_radical_filtration_dimensions": [
+      16,
+      13,
+      10,
+      6,
+      4,
+      2,
+      1,
+      0
+    ],
+    "boundary_rank": 83,
+    "center_generator_rank": 6,
+    "dimension": 16,
+    "elements": [
+      {
+        "h": [
+          0,
+          0,
+          0
+        ],
+        "rank_g_minus_identity": 0
+      },
+      {
+        "h": [
+          0,
+          0,
+          1
+        ],
+        "rank_g_minus_identity": 6
+      },
+      {
+        "h": [
+          0,
+          0,
+          2
+        ],
+        "rank_g_minus_identity": 6
+      },
+      {
+        "h": [
+          0,
+          1,
+          0
+        ],
+        "rank_g_minus_identity": 8
+      },
+      {
+        "h": [
+          0,
+          1,
+          1
+        ],
+        "rank_g_minus_identity": 8
+      },
+      {
+        "h": [
+          0,
+          1,
+          2
+        ],
+        "rank_g_minus_identity": 8
+      },
+      {
+        "h": [
+          0,
+          2,
+          0
+        ],
+        "rank_g_minus_identity": 8
+      },
+      {
+        "h": [
+          0,
+          2,
+          1
+        ],
+        "rank_g_minus_identity": 8
+      },
+      {
+        "h": [
+          0,
+          2,
+          2
+        ],
+        "rank_g_minus_identity": 8
+      },
+      {
+        "h": [
+          1,
+          0,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          0,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          0,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          1,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          1,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          1,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          2,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          2,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          1,
+          2,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          0,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          0,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          0,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          1,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          1,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          1,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          2,
+          0
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          2,
+          1
+        ],
+        "rank_g_minus_identity": 10
+      },
+      {
+        "h": [
+          2,
+          2,
+          2
+        ],
+        "rank_g_minus_identity": 10
+      }
+    ],
+    "generators": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "rank_g_minus_identity_distribution": {
+      "0": 1,
+      "10": 18,
+      "6": 2,
+      "8": 6
+    },
+    "same_polarization_as_TOE84_H1": true
+  },
+  "chain_dimensions": {
+    "C1": 135,
+    "C2": 99,
+    "H2": 16
+  },
+  "source": "TOE83 selected two H27 square-face orbits",
+  "verified_signed_face_automorphisms": 27
+}
