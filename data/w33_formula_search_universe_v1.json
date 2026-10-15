@@ -343620,6 +343620,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d4fdedbc2719a4eafcfb2cf533e9af54fb60cb719ee3e6425154c9c5d88adcb3",
+      "normalized_formula": "(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)`modulo3;the45trianglesand135edgesfollowfromTOE83'sfivecosetdirections.Expandthefrozen2selectedsquare-orbitrepresentativesto54squares.Chooseadeterministicorientationforeverytriangleandsquare",
+      "numeric_literals": [
+        "3",
+        "35",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-15_toe85_h2_relation_module.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/2026-10-15_toe85_h2_relation_module.md",
+          "raw": "`(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)` modulo 3; the 45 triangles and 135 edges follow from TOE83's five coset directions. Expand the frozen 2 selected square-orbit representatives to 54 squares. Choose a deterministic orientation for every triangle and square.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5315c8e39aea667850761dd991c11a7c70a1e9f63b40bffab692b5fdd4bc43d6",
+      "structural_formula": "(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)`modulo3;the4#trianglesand1#edgesfollowfromTOE8#'sfivecosetdirections.Expandthefrozen2selectedsquare-orbitrepresentativesto5#squares.Chooseadeterministicorientationforeverytriangleandsquare"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c517a6573322c1f081c7bb2e6ebe137129791345b1a08eb8432918905a1d3122",
       "normalized_formula": "(a,b,z)^{-1}=(-a,-b,-z)",
       "numeric_literals": [
@@ -641796,6 +641826,35 @@
       },
       "structural_family_id": "9400d3e539ed4b864205afc56b4e682cab4b1a6cd667c6a6b94fc0e9e9f37c87",
       "structural_formula": "Here`Pi_cycle=I-divergence^T(divergence*divergence^T)^+divergence`istheorthogonalharmonic1-chainprojector.Exacttopologyandnumericaleigenvaluechecksestablishthis8#x8#effectivediffusionquadraticformispositivedefinite;thecomputedeigenvaluebandis`[#,#]`.Anondegenerateperiodicgraphlocalcentral-limittheoremthengivesreturnheat-kerneldecay`t^(#/#)`,sothenaturallarge-scalespectraldimension^#^,not3,forthisspecificcanonicalgraphcover.Thetree-basedcoordinatematrixisnotcanonical,butitsrankandpositivedefinitenessareindependentofthebasischoice"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8a3c703687f0e47e44d3b1e60ab6fd9d7515ca732d0bbf68e7f77f6675cb1d53",
+      "normalized_formula": "HereeachV_iisadistinct2-dimensionalnontrivialsimplemoduleinflatedfrom`H27/Z~=F3^2`,correspondingtoonemaximalabelian/Paulidirection,whileW_6isa^faithfulirreducible^binaryHeisenbergmodulewithnontrivialcentralaction.Thisfaithfulsummandisthefield-restricted3-dimensionalSchr\u00f6dinger-typerepresentationoverF4;thatrepresentation-theoreticdescriptionfollowsfromthecharacteristic-2irreducibleclassification,whereastheprojectorranksand63-vectortestaredirectfinitecomputations",
+      "numeric_literals": [
+        "2",
+        "3",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-15_toe85_h2_relation_module.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/2026-10-15_toe85_h2_relation_module.md",
+          "raw": "Here each V_i is a distinct 2-dimensional nontrivial simple module inflated from `H27/Z ~= F3^2`, corresponding to one maximal abelian/Pauli direction, while W_6 is a **faithful irreducible** binary Heisenberg module with nontrivial central action. This faithful summand is the field-restricted 3-dimensional Schr\u00f6dinger-type representation over F4; that representation-theoretic description follows from the characteristic-2 irreducible classification, whereas the projector ranks and 63-vector test are direct finite computations.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d47485e9c810135fef5e7aac363d212747e0aeb6f0c543745fcbde1c788a5cf3",
+      "structural_formula": "HereeachV_iisadistinct2-dimensionalnontrivialsimplemoduleinflatedfrom`H2#/Z~=F3^#`,correspondingtoonemaximalabelian/Paulidirection,whileW_6isa^faithfulirreducible^binaryHeisenbergmodulewithnontrivialcentralaction.Thisfaithfulsummandisthefield-restricted3-dimensionalSchr\u00f6dinger-typerepresentationoverF4;thatrepresentation-theoreticdescriptionfollowsfromthecharacteristic-#irreducibleclassification,whereastheprojectorranksand6#-vectortestaredirectfinitecomputations"
     },
     {
       "file_count": 1,
@@ -1085342,6 +1085401,34 @@
       },
       "structural_family_id": "a7a42a2e1282e48ea136ac5ac8f8986e8c4606195aeddf93151fd1061babe8d1",
       "structural_formula": "assertlen(q_by_T)=#andset(q_by_T)=tritangents"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1ba7861a06ec985f31c503849eb5d811182cca31b4b259813bf24c2d21fe987a",
+      "normalized_formula": "assertlen(rank_and_basis([vforMintwo_dim_isotypicforvinM],2))=8",
+      "numeric_literals": [
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261015_toe85_h2_relation_module.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 234,
+          "path": "analysis/w33_20261015_toe85_h2_relation_module.py",
+          "raw": "assert len(rank_and_basis([v for M in two_dim_isotypic for v in M],2)) == 8",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "c655523781d2cb92f78f86d7d3f5a1ad0a995c8090fa8c8cdbf64d3455e8cec2",
+      "structural_formula": "assertlen(rank_and_basis([vforMintwo_dim_isotypicforvinM],#))=#"
     },
     {
       "file_count": 1,
@@ -1814770,9 +1814857,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-15T13:59:41-04:00",
+  "frozen_at": "2026-10-15T14:17:19-04:00",
   "pass": 398,
-  "repository_head": "055155fe4bd6346f95dc451ea86ec0bfe11bb634",
+  "repository_head": "0dc603c51ea0517dd3e62a8cb144620a7d5fc4d8",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1930551,6 +1930638,14 @@
     },
     {
       "exact_formula_ids": [
+        "d4fdedbc2719a4eafcfb2cf533e9af54fb60cb719ee3e6425154c9c5d88adcb3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5315c8e39aea667850761dd991c11a7c70a1e9f63b40bffab692b5fdd4bc43d6",
+      "structural_formula": "(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)`modulo3;the4#trianglesand1#edgesfollowfromTOE8#'sfivecosetdirections.Expandthefrozen2selectedsquare-orbitrepresentativesto5#squares.Chooseadeterministicorientationforeverytriangleandsquare"
+    },
+    {
+      "exact_formula_ids": [
         "c517a6573322c1f081c7bb2e6ebe137129791345b1a08eb8432918905a1d3122"
       ],
       "exact_member_count": 1,
@@ -1987592,6 +1987687,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9400d3e539ed4b864205afc56b4e682cab4b1a6cd667c6a6b94fc0e9e9f37c87",
       "structural_formula": "Here`Pi_cycle=I-divergence^T(divergence*divergence^T)^+divergence`istheorthogonalharmonic1-chainprojector.Exacttopologyandnumericaleigenvaluechecksestablishthis8#x8#effectivediffusionquadraticformispositivedefinite;thecomputedeigenvaluebandis`[#,#]`.Anondegenerateperiodicgraphlocalcentral-limittheoremthengivesreturnheat-kerneldecay`t^(#/#)`,sothenaturallarge-scalespectraldimension^#^,not3,forthisspecificcanonicalgraphcover.Thetree-basedcoordinatematrixisnotcanonical,butitsrankandpositivedefinitenessareindependentofthebasischoice"
+    },
+    {
+      "exact_formula_ids": [
+        "8a3c703687f0e47e44d3b1e60ab6fd9d7515ca732d0bbf68e7f77f6675cb1d53"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d47485e9c810135fef5e7aac363d212747e0aeb6f0c543745fcbde1c788a5cf3",
+      "structural_formula": "HereeachV_iisadistinct2-dimensionalnontrivialsimplemoduleinflatedfrom`H2#/Z~=F3^#`,correspondingtoonemaximalabelian/Paulidirection,whileW_6isa^faithfulirreducible^binaryHeisenbergmodulewithnontrivialcentralaction.Thisfaithfulsummandisthefield-restricted3-dimensionalSchr\u00f6dinger-typerepresentationoverF4;thatrepresentation-theoreticdescriptionfollowsfromthecharacteristic-#irreducibleclassification,whereastheprojectorranksand6#-vectortestaredirectfinitecomputations"
     },
     {
       "exact_formula_ids": [
@@ -2104522,6 +2104625,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a7a42a2e1282e48ea136ac5ac8f8986e8c4606195aeddf93151fd1061babe8d1",
       "structural_formula": "assertlen(q_by_T)=#andset(q_by_T)=tritangents"
+    },
+    {
+      "exact_formula_ids": [
+        "1ba7861a06ec985f31c503849eb5d811182cca31b4b259813bf24c2d21fe987a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c655523781d2cb92f78f86d7d3f5a1ad0a995c8090fa8c8cdbf64d3455e8cec2",
+      "structural_formula": "assertlen(rank_and_basis([vforMintwo_dim_isotypicforvinM],#))=#"
     },
     {
       "exact_formula_ids": [
@@ -2299703,20 +2299814,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88530261,
-    "exact_formula_families": 62057,
-    "files_scanned": 12146,
-    "formula_occurrences": 68065,
+    "bytes_scanned": 88549727,
+    "exact_formula_families": 62060,
+    "files_scanned": 12148,
+    "formula_occurrences": 68068,
     "status_occurrences": {
-      "certified_or_theorem": 5046,
+      "certified_or_theorem": 5047,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2269,
       "preregistered": 33,
       "retrospective_fit": 5236,
-      "unclassified": 53819
+      "unclassified": 53821
     },
-    "structural_families": 60404
+    "structural_families": 60407
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "a27ca3b9c30b7b469d07387381c4a75b6a8fec25d470ed6e78486b8020b58e90"
+  "universe_sha256": "b770857cc5e0cdf9c7f1d4a362a36bec02c7a4d769f91a0dcbf38861dda316b3"
 }
