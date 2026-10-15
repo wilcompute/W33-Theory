@@ -1,0 +1,838 @@
+{
+  "snapshot": "b7bd0f749",
+  "file_count": 76,
+  "reports_read_in_entirety": [
+    "analysis/2026-10-15_toe86_all_five_fronts.md",
+    "analysis/2026-10-15_toe87_five_followups.md",
+    "analysis/2026-10-15_toe88_five_followups.md",
+    "analysis/2026-10-15_toe89_five_followups.md",
+    "analysis/2026-10-15_toe90_vlasov_witting_research.md",
+    "analysis/2026-10-15_toe91_witting_five.md",
+    "analysis/2026-10-15_toe92_witting_five.md"
+  ],
+  "manual_review_boundary": "Complete changed-file inventory and all7reports; selected relevant fullproducers andcertificatevalues. Not a manualread ofall34091 addedlines. JSON files were fullyparsed forstructuralintegrity, not allnumericroutingentries rederived.",
+  "files": [
+    {
+      "path": ".github/workflows/w33_toe86_all_five_fronts.yml",
+      "bytes": 1278,
+      "lines": 27,
+      "sha256_lf": "6d6a7023d2c120e8a225fe37fa517abe3d46ebc218af75791ec15dd2222f855e"
+    },
+    {
+      "path": ".github/workflows/w33_toe87_five_followups.yml",
+      "bytes": 1212,
+      "lines": 26,
+      "sha256_lf": "976bdf4108a929eb2c2daa864e5eee6d2584a583c0d381eaa273d096baa31b32"
+    },
+    {
+      "path": ".github/workflows/w33_toe88_all_five.yml",
+      "bytes": 1159,
+      "lines": 26,
+      "sha256_lf": "99ed2f2fc923c5fd3c003dd2ea6ab2dd06efac4e5d9d86332b37063506a89ace"
+    },
+    {
+      "path": ".github/workflows/w33_toe89_all_five.yml",
+      "bytes": 1302,
+      "lines": 27,
+      "sha256_lf": "c9f9b8f4ab69f6d4c394fa0108017892391498e91b45f62666dd129f59aac383"
+    },
+    {
+      "path": ".github/workflows/w33_toe90_vlasov_ququart_design.yml",
+      "bytes": 1039,
+      "lines": 24,
+      "sha256_lf": "13ecb5008d75d567f02cb90a1a2b29b37a5e966e9bc138f75263c2e2e2d0643f"
+    },
+    {
+      "path": ".github/workflows/w33_toe91_witting_five.yml",
+      "bytes": 1122,
+      "lines": 25,
+      "sha256_lf": "f4d16d6f75a77b874322b6e8cf15b3c444bdf11b06004d1ff9f3bdcd3967d067"
+    },
+    {
+      "path": ".github/workflows/w33_toe92_witting_five.yml",
+      "bytes": 1225,
+      "lines": 26,
+      "sha256_lf": "2ca3908bedded7a7a8945d53a845c49902bb88e0607166264a8a862be04272dd"
+    },
+    {
+      "path": "analysis/2026-10-15_toe86_all_five_fronts.md",
+      "bytes": 9142,
+      "lines": 102,
+      "sha256_lf": "a9374bf12c2c56dbd4eed2c74c77b5d61164582bc01152b884a4c1abe29a0659"
+    },
+    {
+      "path": "analysis/2026-10-15_toe87_five_followups.md",
+      "bytes": 12318,
+      "lines": 165,
+      "sha256_lf": "9c09385e0cb72707443e46980feb737d51ced13387325b8727bdb73188556821"
+    },
+    {
+      "path": "analysis/2026-10-15_toe88_five_followups.md",
+      "bytes": 11104,
+      "lines": 108,
+      "sha256_lf": "9d8322fe71229bfcd078561630864a40f7a268e853f6abd600ae2150a74dde0f"
+    },
+    {
+      "path": "analysis/2026-10-15_toe89_five_followups.md",
+      "bytes": 11127,
+      "lines": 106,
+      "sha256_lf": "d337a03865a354adfe7db88ba16a5527d941eac979a0435c2e61097cc9e5e214"
+    },
+    {
+      "path": "analysis/2026-10-15_toe90_vlasov_witting_research.md",
+      "bytes": 9327,
+      "lines": 136,
+      "sha256_lf": "d56b83bf0690a0b658a84259606e912d6b5be22ed946c39f13c24d4baec11738"
+    },
+    {
+      "path": "analysis/2026-10-15_toe91_witting_five.md",
+      "bytes": 10858,
+      "lines": 132,
+      "sha256_lf": "3a0cfcb457a774eb844f3729934b78908566900d8fa02fb5df58c86df2d45978"
+    },
+    {
+      "path": "analysis/2026-10-15_toe92_witting_five.md",
+      "bytes": 12724,
+      "lines": 135,
+      "sha256_lf": "d58cdbe21febfe66cd192f6c3199f9f6390efdb9159a693688195aeed33756cb"
+    },
+    {
+      "path": "analysis/w33_20261015_toe86_geometry_integral_routing.py",
+      "bytes": 10388,
+      "lines": 246,
+      "sha256_lf": "6bbc956e23cf2844edd795befb46940f73e4493bcf655292c76a0c5a18eb1a41"
+    },
+    {
+      "path": "analysis/w33_20261015_toe86_hom_intertwiners.py",
+      "bytes": 8151,
+      "lines": 220,
+      "sha256_lf": "cdd89222da4e53b746036c02ca624829cafd7ec1d48569bcc0d6c1daa354b68d"
+    },
+    {
+      "path": "analysis/w33_20261015_toe86_pair_integral.py",
+      "bytes": 2930,
+      "lines": 61,
+      "sha256_lf": "ea7040420353096887da058f0e4d4620554d5387b02d29afaadb9ff46898c67c"
+    },
+    {
+      "path": "analysis/w33_20261015_toe86_pair_polarization.py",
+      "bytes": 5381,
+      "lines": 111,
+      "sha256_lf": "2b113cdb874181768a44b8105baf18205bdb72c659115d7c367168787681df6b"
+    },
+    {
+      "path": "analysis/w33_20261015_toe86_qutrit_temporal_null.py",
+      "bytes": 5018,
+      "lines": 115,
+      "sha256_lf": "a4eafae0a0eed3c6982190d5197fec4d7bc13fb1330716cca89ec605de77af89"
+    },
+    {
+      "path": "analysis/w33_20261015_toe87_adversarial_temporal.py",
+      "bytes": 5749,
+      "lines": 132,
+      "sha256_lf": "2769e967a030ce4a5802513407fce60a05159803788a1b6db8fff0960df8782e"
+    },
+    {
+      "path": "analysis/w33_20261015_toe87_euler_stable_module.py",
+      "bytes": 4314,
+      "lines": 89,
+      "sha256_lf": "5e7965dc5a25062a9a44f8aa92fdce9b90b9b443d1deac1fde0fcbf785d0d417"
+    },
+    {
+      "path": "analysis/w33_20261015_toe87_fault_aware_routing.py",
+      "bytes": 6165,
+      "lines": 136,
+      "sha256_lf": "785294f34c2b1c36aca3e6922d48105595a73c1f141e0f5767adad85d2d1cb08"
+    },
+    {
+      "path": "analysis/w33_20261015_toe87_modular_bockstein_triples.py",
+      "bytes": 11922,
+      "lines": 284,
+      "sha256_lf": "2430fe10259f68bdc0315c4b25cdadf79664684a90a6f1bf0e21b85d9ed063f0"
+    },
+    {
+      "path": "analysis/w33_20261015_toe88_adaptive_mub.py",
+      "bytes": 5483,
+      "lines": 105,
+      "sha256_lf": "caf5beedae35976d495d7a035c3376adb99b02420264ea09249ac40d812e175b"
+    },
+    {
+      "path": "analysis/w33_20261015_toe88_ancilla_syndrome.py",
+      "bytes": 7154,
+      "lines": 165,
+      "sha256_lf": "6633c899b77cea0c83add9006f334145f69b44343bca7d94919c527647aa5203"
+    },
+    {
+      "path": "analysis/w33_20261015_toe88_parity_membranes.py",
+      "bytes": 4112,
+      "lines": 85,
+      "sha256_lf": "9de3869ce3cb3a8caecc3c0d758ca6892977992811fb82d671ce3a64609b4f4f"
+    },
+    {
+      "path": "analysis/w33_20261015_toe88_tate_albert_bridge.py",
+      "bytes": 5485,
+      "lines": 125,
+      "sha256_lf": "726388dc4f3f4fa110c9a4276c2c6310e61c315923b59ade38f53269bd2c5495"
+    },
+    {
+      "path": "analysis/w33_20261015_toe89_albert_product_obstruction.py",
+      "bytes": 4082,
+      "lines": 86,
+      "sha256_lf": "94168fd19447c718dc84fc142db871b9b528c39da2d9b4e5581825c49814c239"
+    },
+    {
+      "path": "analysis/w33_20261015_toe89_complementary_css.py",
+      "bytes": 8294,
+      "lines": 179,
+      "sha256_lf": "13378e288058865f57cde3434d6af4a176b208a2a4b95977ec6a58506e8fb50e"
+    },
+    {
+      "path": "analysis/w33_20261015_toe89_cyclic_tate_chain.py",
+      "bytes": 4631,
+      "lines": 86,
+      "sha256_lf": "36926b973e8d2dd243052f3afb5ff75a9463cda9cab60272244fbe6b4876fff1"
+    },
+    {
+      "path": "analysis/w33_20261015_toe89_heralded_mub.py",
+      "bytes": 4640,
+      "lines": 83,
+      "sha256_lf": "000cbd7b416e237e59096a36d70ce75e2e52d87abe44d0735ab3105b81873015"
+    },
+    {
+      "path": "analysis/w33_20261015_toe89_parity_symmetry.py",
+      "bytes": 3998,
+      "lines": 80,
+      "sha256_lf": "15ce9baf4c451584fb18e5e9e16a5b6a47f1f7f33ecf98a7e990ebfc6953a039"
+    },
+    {
+      "path": "analysis/w33_20261015_toe90_vlasov_ququart_design.py",
+      "bytes": 7661,
+      "lines": 141,
+      "sha256_lf": "e7322b0c97ba509f21c6fe9da307845c33a3c7b6aa3f17dc7c96cfcd501efe96"
+    },
+    {
+      "path": "analysis/w33_20261015_toe90_witting_shot_certification.py",
+      "bytes": 3324,
+      "lines": 62,
+      "sha256_lf": "aa5ae607c54a7696a3a487c58da65dca54ca3b21d8b69b2eae961dda3a64f46c"
+    },
+    {
+      "path": "analysis/w33_20261015_toe91_finitekey_analyzer_carrier.py",
+      "bytes": 9512,
+      "lines": 191,
+      "sha256_lf": "d4dd9929380a68320036dc46ffa70e7fecfcda150253291897016f44cba4bfba"
+    },
+    {
+      "path": "analysis/w33_20261015_toe91_symplectic_phase_audit.py",
+      "bytes": 2254,
+      "lines": 52,
+      "sha256_lf": "5bc3417a7708bf6bc1456b66227094c5c9b1c081a706abc752f9e4c6e73d9951"
+    },
+    {
+      "path": "analysis/w33_20261015_toe91_symplectic_unitary_lift.py",
+      "bytes": 3219,
+      "lines": 67,
+      "sha256_lf": "eecde8c62fe09b88dba10cc0302fe0bba31e35e0e551afe722dc134f8d135d34"
+    },
+    {
+      "path": "analysis/w33_20261015_toe92_full_symplectic_4mode.py",
+      "bytes": 3993,
+      "lines": 94,
+      "sha256_lf": "d5f8484e645bdf5c659b0a2e886aff0353feacfbef9e6eb310aeb63ff9b65820"
+    },
+    {
+      "path": "analysis/w33_20261015_toe92_herald_h27_nogo.py",
+      "bytes": 5266,
+      "lines": 83,
+      "sha256_lf": "5c8c187d6de06d5995b000bd831c9df7afeef098893d054ea85c7fb440d39479"
+    },
+    {
+      "path": "analysis/w33_20261015_toe92_iid_cq_privacy.py",
+      "bytes": 4120,
+      "lines": 68,
+      "sha256_lf": "acd1618ce6a439dee5454789aa59d642690276bdae6b53c58b85dae2793a30d6"
+    },
+    {
+      "path": "analysis/w33_20261015_toe92_optical_givens_mesh.py",
+      "bytes": 4469,
+      "lines": 85,
+      "sha256_lf": "7054d9aa9307b1c5bc8c2cd81a9d9e5172948069d10ff6518d7bdf5a5f1a1507"
+    },
+    {
+      "path": "data/w33_20261015_toe86_geometry_integral_routing.json",
+      "bytes": 171873,
+      "lines": 10419,
+      "sha256_lf": "2f020574ba5f5e12f4bb1b5c6f574c51a637da89ba6163a2c989d77d1c1160c0",
+      "json_parsed": true,
+      "root_keys": [
+        "encoded_clifford_permutation_compiler",
+        "integral_smith",
+        "orbit_pair_census",
+        "provenance"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe86_hom_intertwiners.json",
+      "bytes": 1500,
+      "lines": 72,
+      "sha256_lf": "ef1d5478126d9cc8658b9c6365ab4ce0f990cff3c04ce8a33275cfdf5832e04c",
+      "json_parsed": true,
+      "root_keys": [
+        "chain_boundary_restriction_on_H2",
+        "constraint_rows",
+        "equivariance_generators",
+        "face_relation_H2_dimension",
+        "field",
+        "hom_H2_to_H1",
+        "logical_H1_dimension",
+        "physical_temporal_interpretation",
+        "source_boundary_rank"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe86_pair_integral.json",
+      "bytes": 4877,
+      "lines": 286,
+      "sha256_lf": "f5804d76292aa19cf354958cccca7a2fc25aed7dad795317060e2b79edfd0025",
+      "json_parsed": true,
+      "root_keys": [
+        "class_count",
+        "classes",
+        "pairs_classified",
+        "torsion_free_pair_count",
+        "torsion_pattern_pair_counts"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe86_pair_polarization.json",
+      "bytes": 17928,
+      "lines": 862,
+      "sha256_lf": "7b72d2b03ffaa579c44e2fe3877c9f6e797c337019666e448750296a70d65fc2",
+      "json_parsed": true,
+      "root_keys": [
+        "checked_full_normalizer_classes",
+        "class_representative_signatures",
+        "directions",
+        "matching_H1_H2_min_direction_pairs",
+        "pairs_covered_by_equivariance",
+        "rank_F3_pair_count_by_equivalence"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe86_qutrit_temporal_null.json",
+      "bytes": 2663,
+      "lines": 96,
+      "sha256_lf": "3f41e0e25d367d11f94a217ebc10849c6d10757d1af44d51da1ca5e64c926f07",
+      "json_parsed": true,
+      "root_keys": [
+        "Choi_PPT_NPT_witness",
+        "alternative",
+        "limitations",
+        "null",
+        "null_and_alternative_classical_transition_tests",
+        "pre_registered_binomial_design",
+        "selected_H27_clock_subgroup",
+        "settings",
+        "system"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe87_adversarial_temporal.json",
+      "bytes": 1674,
+      "lines": 36,
+      "sha256_lf": "0c99e7ff2d6bca153c19359b5c3be0acf552335d5d72766cecc486b3ca174643",
+      "json_parsed": true,
+      "root_keys": [
+        "accepted_shots",
+        "calibrated_detected_shot_EB_upper_bound",
+        "calibrated_detected_shot_alternative_expectation",
+        "critical_observation",
+        "entanglement_breaking_mean_fidelity_upper_bound",
+        "exact_alternative_power",
+        "exact_max_null_false_positive_probability",
+        "expected_raw_attempts_for_accepted_shots",
+        "explicit_adversarial_single_probe_EB_success",
+        "four_MUB_two_design_states",
+        "ideal_channel_coherence_visibility",
+        "independent_heralded_erasure_rate",
+        "multiple_probe_mean_fidelities",
+        "random_leakage_rate",
+        "random_uniform_MUB_settings_per_shot",
+        "readout_sym_wrong_class_rate",
+        "reject_EB_at_success_count_at_least",
+        "robustness_boundaries",
+        "single_probe_clock_dephasing_EB_success",
+        "two_design_residual_max_abs"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe87_euler_stable_module.json",
+      "bytes": 1424,
+      "lines": 58,
+      "sha256_lf": "26248f861dbfbac6f14a720d5bb99c64504b1254d42ee8cf6fa3a04c10fb1f87",
+      "json_parsed": true,
+      "root_keys": [
+        "added_square_H27_orbit_sizes",
+        "edge_H27_orbit_sizes",
+        "equivalence_classes_checked",
+        "field",
+        "limitation",
+        "pairs_covered",
+        "regular_27_simple_multiplicities",
+        "representation_ring_Euler_identity",
+        "scope",
+        "stabilized_binary_module_isomorphism",
+        "triangle_45_simple_multiplicities",
+        "triangle_H27_orbit_sizes",
+        "vertex_H27_orbit_sizes",
+        "virtual_H1_minus_H2_simple_multiplicities"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe87_fault_aware_routing.json",
+      "bytes": 6367,
+      "lines": 164,
+      "sha256_lf": "f0cdb93b371f8a552da626cc7401e76eefe15fcacda4b90bea59f8ec7bc9b6f4",
+      "json_parsed": true,
+      "root_keys": [
+        "ambiguous_single_site_syndrome_patterns",
+        "boundaries",
+        "cases",
+        "conditional_correlated_two_qudit_fault",
+        "p_local_inversion_pauli_X",
+        "p_readout_digit_shift",
+        "p_swap_pauli_X",
+        "seed",
+        "shots_per_case",
+        "single_site_syndrome_patterns",
+        "status"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe87_modular_bockstein_triples.json",
+      "bytes": 30867,
+      "lines": 1398,
+      "sha256_lf": "1f2204607bc2602ab9bd15c7d48035c7c18eb9abd29dc2f101c7c6e0c8b08655",
+      "json_parsed": true,
+      "root_keys": [
+        "interpretation",
+        "modular_pair_classification",
+        "status",
+        "three_orbit_stress"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe88_adaptive_mub.json",
+      "bytes": 2547,
+      "lines": 50,
+      "sha256_lf": "fc09fefbecdec5e8680efe60ab80dd2d17091c44aeee200286fa374600f7c572",
+      "json_parsed": true,
+      "root_keys": [
+        "POVM_effect_expectation_calibration_bound",
+        "accepted_shots",
+        "adaptive_EB_conditional_per_round_survival_bound",
+        "adaptive_nonIID_binomial_tail_valid_if_conditional_success_bound",
+        "alternative_power_under_ideal_conditional_independence",
+        "calibrated_postnoise_EB_bound",
+        "calibrated_postnoise_alternative_lower_mean",
+        "coherent_v025_ideal_return_mean",
+        "conservative_true_EB_survival_bound",
+        "conservative_true_coherent_return_mean",
+        "exact_max_EB_tail_alpha",
+        "input_state_trace_distance_calibration_bound",
+        "limits",
+        "loophole",
+        "proof_note",
+        "quantum_design",
+        "readout_confusion_rate",
+        "reject_at_successes_at_least",
+        "secret_setting_past_adaptive_null_simulation",
+        "state_dependent_heralding_attacks",
+        "uniform_replacement_leak_rate"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe88_ancilla_syndrome.json",
+      "bytes": 2770,
+      "lines": 82,
+      "sha256_lf": "61feb3785b75a99ef6c9ad1f15001b4827dbcf2a2fe9616b32eb7915eee956f4",
+      "json_parsed": true,
+      "root_keys": [
+        "SUM_gates_per_round",
+        "ancilla_Z_hook_propagation_witness",
+        "ancilla_qutrits_per_round",
+        "configurations",
+        "conflict_free_parallel_layers_per_round",
+        "edge_data_qutrits",
+        "face_Z_stabilizer_count",
+        "face_weight_distribution",
+        "limitations",
+        "status"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe88_parity_membranes.json",
+      "bytes": 14724,
+      "lines": 839,
+      "sha256_lf": "b38a9c202c4af155d16461ab8a12060d465949d85a9df2ff0f7a883c9c6b0f5c",
+      "json_parsed": true,
+      "root_keys": [
+        "Bockstein_definition",
+        "method",
+        "negative_local_overlap_result",
+        "representatives"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe88_tate_albert_bridge.json",
+      "bytes": 54128,
+      "lines": 2730,
+      "sha256_lf": "7acf660242114ad9dc9fe3f7f9e6b3890e32a768ff051c950718a6ceafa2550d",
+      "json_parsed": true,
+      "root_keys": [
+        "F3_aug_center_Jordan",
+        "F3_aug_radical_filtration",
+        "F3_equivariant_isomorphism_to_regular_augmentation",
+        "F3_selected_H1_center_Jordan",
+        "F3_selected_H1_radical_filtration",
+        "F4_E6_scope",
+        "augmentation_module_dimension",
+        "binary_aug_equivariant_isomorphism_to_selected_H1",
+        "interpretation",
+        "ternary_H1_H2_Jordan_Tate_all_13_classes"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe89_albert_product_obstruction.json",
+      "bytes": 1987,
+      "lines": 107,
+      "sha256_lf": "761bdaa06d8e28163fe29c628de0143fb0bd75fead17eb2c29d2a99eeaa3d440",
+      "json_parsed": true,
+      "root_keys": [
+        "26D_binary_aug_H27_isomorphism_rank",
+        "27D_orthogonal_primitive_idempotent_count",
+        "Albert_degree_rank_comparison",
+        "GF4_definition",
+        "Jordan_identity_test",
+        "binary_only_test_false_negative_demonstrated",
+        "canonical_27D_permutation_algebra",
+        "defect_support",
+        "explicit_counterexample_x",
+        "explicit_counterexample_y",
+        "explicit_nonzero_Jordan_defect",
+        "natural_26D_binary_product",
+        "non_Jordan_under_scalar_extension_GF4",
+        "product_H27_equivariant_over_GF4",
+        "scope"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe89_complementary_css.json",
+      "bytes": 2112,
+      "lines": 58,
+      "sha256_lf": "2090e3ae9180572a7c0b7724c102dee24cf957051653dee2a7c561c3ca404640",
+      "json_parsed": true,
+      "root_keys": [
+        "X_SUM_gates_per_round",
+        "X_conflict_free_layers",
+        "X_vertex_checks",
+        "Z_SUM_gates_per_round",
+        "Z_conflict_free_layers",
+        "Z_face_checks",
+        "data_qutrits",
+        "flag_prepost_SUM_gates_per_round",
+        "flag_qudits_per_round_when_enabled",
+        "limits",
+        "rates",
+        "round_count",
+        "runs",
+        "shots_per_case",
+        "status"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe89_cyclic_tate_chain.json",
+      "bytes": 13413,
+      "lines": 472,
+      "sha256_lf": "01920e16d80d64a126670b159eede33438951a2f14e8cb7b4428607a621df954",
+      "json_parsed": true,
+      "root_keys": [
+        "C0_C3_free_module_count",
+        "C1_C3_free_module_count",
+        "C2_C3_Tate_dimension_in_each_degree",
+        "C2_C3_fixed_triangle_faces",
+        "C2_C3_free_3D_modules",
+        "all_13_two_orbit_classes",
+        "chain_level_restriction_theorem",
+        "counterexample_flat_H1_direction_rank",
+        "counterexample_nonflat_H2_direction_rank",
+        "mathematical_conclusion",
+        "open_theorem",
+        "three_orbit_extension"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe89_heralded_mub.json",
+      "bytes": 1931,
+      "lines": 29,
+      "sha256_lf": "be135b3fd041de071d5b67267ea569d2d1528bc887d9779453697504d74e473a",
+      "json_parsed": true,
+      "root_keys": [
+        "EB_postnoise_upper_bound",
+        "accepted_probabilities_range",
+        "accepted_shots",
+        "alternative_power_under_iid",
+        "calibrated_measurement_effect_expectation_error",
+        "calibrated_prep_trace_distance",
+        "coherent_v025_conservative_postnoise_survival",
+        "derivation",
+        "explicit_stochastic_instrument_samples",
+        "heralding_independent_of_setting_not_required",
+        "mathematical_claim",
+        "max_2design_identity_residual",
+        "max_sampled_EB_conditional_survival",
+        "null_one_sided_tail",
+        "reject_at_least",
+        "security_limit",
+        "setting_side_channel_and_postselection_spoof",
+        "sym_readout_error",
+        "uniform_leakage_replacement"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe89_parity_symmetry.json",
+      "bytes": 4273,
+      "lines": 247,
+      "sha256_lf": "e3caedf5f182d4517ce688a96417d6fb4f1a10dd9d6bd7344a575acf659cb679",
+      "json_parsed": true,
+      "root_keys": [
+        "conclusion",
+        "limit",
+        "representatives",
+        "source"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe90_vlasov_ququart_design.json",
+      "bytes": 3327,
+      "lines": 99,
+      "sha256_lf": "be33b6e6d673a1448177ec0575d8fde5b53a048b96b4ea956fa8e876e7db9c59",
+      "json_parsed": true,
+      "root_keys": [
+        "contextuality_note",
+        "entanglement_witness",
+        "hardware_note",
+        "intercept_resend",
+        "isotropic_noise",
+        "orthogonality_SRG",
+        "reference",
+        "repo_prior_art",
+        "squared_inner_product_offdiagonal_histogram",
+        "two_design"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe90_witting_shot_certification.json",
+      "bytes": 1176,
+      "lines": 18,
+      "sha256_lf": "48c181c8ac94c86b367fb8eff409ce3f55e5f72111a348110f23ff4890058732",
+      "json_parsed": true,
+      "root_keys": [
+        "calibrated_isotropic_reported_match",
+        "calibrated_separable_reported_match_upper_bound",
+        "coherent_isotropic_true_match",
+        "device_model",
+        "exact_iid_binomial_false_positive_probability",
+        "exact_iid_binomial_model_detection_power",
+        "isotropic_visibility_model",
+        "limitations",
+        "n_independent_accepted_pairs",
+        "per_side_readout_error",
+        "reject_separability_at_reported_match_count_at_least",
+        "separable_true_match_bound",
+        "source",
+        "true_agreement_to_reported_agreement",
+        "true_disagreement_to_reported_agreement",
+        "uniform_secret_Witting_basis_per_pair"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe91_finitekey_analyzer_carrier.json",
+      "bytes": 5414,
+      "lines": 123,
+      "sha256_lf": "219aa3d694569a769732f86c669e2d0d6b3762cd6afc1962dd8d5557f983f109",
+      "json_parsed": true,
+      "root_keys": [
+        "analyzer_calibration",
+        "detector_to_W33_carrier",
+        "finite_key",
+        "product_state_postselection_attack",
+        "source"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe91_symplectic_phase_audit.json",
+      "bytes": 1549,
+      "lines": 58,
+      "sha256_lf": "e7d9dc6be047a464dde3b2da795ff234c5a5fc5b1cfdd89201fa2150bb533a85",
+      "json_parsed": true,
+      "root_keys": [
+        "interpretation",
+        "reference_mapping",
+        "tests"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe91_symplectic_unitary_lift.json",
+      "bytes": 7164,
+      "lines": 431,
+      "sha256_lf": "695b53270387486e56a3aad590ade22952fabca77dfdf846a64eb39e0ab223a1",
+      "json_parsed": true,
+      "root_keys": [
+        "basis_mapping_source",
+        "physics_limit",
+        "status",
+        "tested_generators"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe92_full_symplectic_4mode.json",
+      "bytes": 1345,
+      "lines": 62,
+      "sha256_lf": "e33c861edbe2717d2bf0ec2bb8a7bd56e1a049efacbd1a0d0d54a0b6b8eacab0",
+      "json_parsed": true,
+      "root_keys": [
+        "all_Cayley_edges_verified",
+        "explicit_scalar_projective_cocycle_relation",
+        "four_plane_local_generators_projective_subgroup_order",
+        "full_projective_group_order",
+        "generator_orders_in_projective_permutation_group",
+        "generator_vectors_F3",
+        "group",
+        "maximum_projective_unitary_closure_residual",
+        "scope"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe92_herald_h27_nogo.json",
+      "bytes": 2632,
+      "lines": 43,
+      "sha256_lf": "4bbba608c20c6698a7f4143fe9bbd3f2cfab2098f3e4fefbd3020a0fc75c9db7",
+      "json_parsed": true,
+      "root_keys": [
+        "basis_match_probabilities",
+        "constructive_basis_efficiency_attack_conditional_match",
+        "equivariant_total_set_map_no_go",
+        "no_go_scope",
+        "quantum_state",
+        "setting_efficiency_max",
+        "setting_efficiency_min",
+        "setting_efficiency_ratio_universal_separable_upper_bound",
+        "unconditioned_uniform_basis_match",
+        "uniform_per_basis_acceptance_outcome_attack"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe92_iid_cq_privacy.json",
+      "bytes": 4855,
+      "lines": 93,
+      "sha256_lf": "57a4ed35f282064e6270bde5cfb97c0b6686115dbabbc81274369eaf0f25a27b",
+      "json_parsed": true,
+      "root_keys": [
+        "N",
+        "correction_boundary",
+        "mathematics_reference",
+        "model",
+        "privacy_amplification_guarantee",
+        "renyi2_formula",
+        "rows",
+        "secrecy_only_bit_rule",
+        "target_quantum_secrecy_trace_distance_bound"
+      ]
+    },
+    {
+      "path": "data/w33_20261015_toe92_optical_givens_mesh.json",
+      "bytes": 129966,
+      "lines": 6468,
+      "sha256_lf": "1fd68fbc32e2e5c45923b581bc9bd4a8d5979d1c22fa76222d6e69310b6e5af7",
+      "json_parsed": true,
+      "root_keys": [
+        "Givens_coupler_counts",
+        "basis_count",
+        "circuits",
+        "max_unitary_reconstruction_residual",
+        "maximum_per_path_coupler_depth",
+        "maximum_two_mode_couplers_per_setting",
+        "meaning",
+        "per_side_loss_assumptions",
+        "pessimistic_pair_coincidence_survival_ignoring_source_and_switch",
+        "pessimistic_single_photon_survival_assuming_max_depth_each_side",
+        "rays_each",
+        "shared_reconfigurable_mesh_upper_bound_couplers",
+        "technical_limit",
+        "total_preparation_bases"
+      ]
+    },
+    {
+      "path": "data/w33_formula_search_universe_v1.json",
+      "bytes": 94750981,
+      "lines": 2303494,
+      "sha256_lf": "02f292600bc3c09a363bd49c8b386c1ec7f07ade152c5f2999a889441e48dab0",
+      "json_parsed": true,
+      "root_keys": [
+        "exact_families",
+        "frozen_at",
+        "pass",
+        "repository_head",
+        "scanner_policy",
+        "schema",
+        "structural_families",
+        "summary",
+        "title",
+        "universe_sha256"
+      ]
+    },
+    {
+      "path": "tests/test_w33_20261015_toe86_all_five_fronts.py",
+      "bytes": 4354,
+      "lines": 99,
+      "sha256_lf": "a8f60d347418d336dac32812140a159a5d99426b9e63a8a77bedb0b87efeafb7"
+    },
+    {
+      "path": "tests/test_w33_20261015_toe87_all_five.py",
+      "bytes": 6384,
+      "lines": 139,
+      "sha256_lf": "67e80b7e6c953a2aa41f5ae7ed4ebaedd534cde2e91941d1f1812e4caebbbd41"
+    },
+    {
+      "path": "tests/test_w33_20261015_toe88_all_five.py",
+      "bytes": 4578,
+      "lines": 102,
+      "sha256_lf": "b8f7fb3f4a75576cdb359dc47d043934dd4fb57668bac6dd4fad872d1524cb42"
+    },
+    {
+      "path": "tests/test_w33_20261015_toe89_all_five.py",
+      "bytes": 5439,
+      "lines": 119,
+      "sha256_lf": "0efb8db35ca6ec50a1162f109a5d4f4c5edb1cb680cf2927fba3665ee592d8cb"
+    },
+    {
+      "path": "tests/test_w33_20261015_toe90_vlasov_ququart_design.py",
+      "bytes": 3001,
+      "lines": 71,
+      "sha256_lf": "d9dedc8a6d963699c7a9feea482af57c5ac8536e6e9e7562c0267c857127f01c"
+    },
+    {
+      "path": "tests/test_w33_20261015_toe91_witting_five.py",
+      "bytes": 3784,
+      "lines": 89,
+      "sha256_lf": "b77e69dc5f654992a23fcec81898d9f4ec6ea4e1f161018fc026fe523d754e1d"
+    },
+    {
+      "path": "tests/test_w33_20261015_toe92_witting_five.py",
+      "bytes": 4631,
+      "lines": 99,
+      "sha256_lf": "92d37b9d460570f8350af08a9df61aa018ba50f11d6443149876f447d95661b9"
+    }
+  ]
+}

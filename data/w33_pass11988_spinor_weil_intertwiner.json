@@ -1,0 +1,658 @@
+{
+  "status": "PASS",
+  "common_center_point": 0,
+  "center_label": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "stabilizing_transvections_checked": 13,
+  "atlas_fiber_basis": [
+    [
+      4,
+      -2,
+      -2,
+      1,
+      -2,
+      1
+    ],
+    [
+      -2,
+      4,
+      1,
+      -2,
+      1,
+      -2
+    ],
+    [
+      -2,
+      -2,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      -2,
+      1,
+      4,
+      -2,
+      1,
+      -2
+    ],
+    [
+      1,
+      -2,
+      -2,
+      4,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      -2,
+      -2,
+      -2,
+      1
+    ],
+    [
+      -2,
+      1,
+      -2,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      -2
+    ],
+    [
+      1,
+      -2,
+      1,
+      -2,
+      -2,
+      1
+    ],
+    [
+      -2,
+      1,
+      1,
+      1,
+      4,
+      -2
+    ],
+    [
+      1,
+      -2,
+      -2,
+      1,
+      -2,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      -2,
+      -2,
+      -2
+    ],
+    [
+      -2,
+      1,
+      1,
+      -2,
+      -2,
+      1
+    ],
+    [
+      1,
+      1,
+      -2,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -2,
+      1,
+      1,
+      1,
+      -2
+    ],
+    [
+      -2,
+      1,
+      1,
+      1,
+      1,
+      -2
+    ],
+    [
+      1,
+      -2,
+      -2,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      -2,
+      -2,
+      1
+    ],
+    [
+      -2,
+      1,
+      1,
+      -2,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      -2,
+      1,
+      1,
+      -2
+    ],
+    [
+      1,
+      -2,
+      1,
+      1,
+      -2,
+      1
+    ],
+    [
+      -2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -2,
+      -2,
+      1,
+      -2,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      -2,
+      1,
+      -2
+    ],
+    [
+      -2,
+      1,
+      1,
+      -2,
+      1,
+      -2
+    ],
+    [
+      1,
+      1,
+      -2,
+      1,
+      -2,
+      1
+    ],
+    [
+      1,
+      -2,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "exact_trace_obstruction": {
+    "direction": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "atlas_vector_trace": 3,
+    "odd_Weil_exterior_square_trace": -3,
+    "atlas_characteristic_polynomial": "(x - 1)**4*(x**2 + x + 1)",
+    "Weil_exterior_square_characteristic_polynomial": "(x**2 + x + 1)**3"
+  },
+  "exact_Q_omega_canonical_Pauli_conjugations_checked": 52,
+  "common_label_equivariance_max": 5.551258195061062e-16,
+  "Hom_dimension_over_Q_omega": 0,
+  "Hom_modular_full_rank_certificates": {
+    "1009": {
+      "omega_residue": 374,
+      "progress": [
+        18,
+        32,
+        36
+      ]
+    },
+    "1021": {
+      "omega_residue": 368,
+      "progress": [
+        18,
+        32,
+        36
+      ]
+    }
+  },
+  "exact_projective_tangent_repair": {
+    "Hom_dimension_over_Q": 2,
+    "intertwiner_integer_matrix": [
+      [
+        1,
+        -1,
+        -1,
+        -1,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0,
+        -1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        -2,
+        0,
+        0
+      ]
+    ],
+    "determinant": 9,
+    "map": "The atlas6 is exactly the scalar restriction of the projective tangent3 Hom(ray,ray_perp) at the odd-Weil Witting ray e1, for all13 labelled stabilizing transvections. Divide the transverse3 gate by its ray eigenphase BEFORE realifying.",
+    "tangent_Q_omega_coordinates": [
+      0,
+      2,
+      3
+    ],
+    "complex_structure_numerator_Q": [
+      [
+        "-1",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-2",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "2"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-2",
+        "1"
+      ]
+    ],
+    "complex_structure": "J=Jnumerator/sqrt3; J^2=-I and J.T G+GJ=0, with G the actual atlas source-fiber Gram.",
+    "finite_stabilizer_preserves_J": true,
+    "polar_holonomy_commutator_controls": [
+      {
+        "loop": "H0",
+        "exact_metric_Frobenius_commutator_squared": "8"
+      },
+      {
+        "loop": "H1",
+        "exact_metric_Frobenius_commutator_squared": "8"
+      },
+      {
+        "loop": "H2",
+        "exact_metric_Frobenius_commutator_squared": "8"
+      },
+      {
+        "loop": "H0 H1",
+        "exact_metric_Frobenius_commutator_squared": "9"
+      }
+    ],
+    "global_boundary": "The11983 polar connection does not preserve thisJ, even on the displayed orientation-even loop. FullSO6 holonomy admits no parallel orthogonal complexstructure. A U3/family3-preserving connection or dynamical reduction is additional structure. This tangent intertwiner does NOT retract the different wedge2/spinor no-intertwiner above.",
+    "prior": "analysis/PASS11664_11671_KERNEL_DYNAMICS.md already identifies odd transverse3 with the even mass-kernel3 on the Witting stabilizer. New here is the explicit integral map to11983 actual atlas6 and the holonomy/complex-structure compatibility test."
+  },
+  "conclusion": "No nonzero intertwiner between the specified six-dimensional atlas stabilizer action and wedge2 of the odd Weil action with the SAME Pauli-label action. Therefore no invertible equivariant identification of the associated spinor and odd-Weil carriers follows. In fact the vector eigenvalue multiplicities4+1+1 versus3+3 also exclude a scalar projective identification for the displayed element.",
+  "odd_encoding_real": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.7071067811865475,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.7071067811865475,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.7071067811865475,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.7071067811865475
+    ],
+    [
+      0.0,
+      -0.7071067811865475,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      -0.7071067811865475
+    ],
+    [
+      0.0,
+      0.0,
+      -0.7071067811865475,
+      0.0
+    ]
+  ],
+  "even_auxiliary_encoding_real": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.7071067811865475,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.7071067811865475,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.7071067811865475
+    ],
+    [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.7071067811865475
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.0
+    ]
+  ],
+  "available_repair": "Declare the prior odd-Weil C4 as an encoding of the atlas gate matrices. This is a choice of Hilbert-space coordinates, not an intertwiner of their original finite symmetry actions.11990 gives explicit paths using four of the five even levels as auxiliaries.",
+  "actions": [
+    {
+      "direction": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "atlas_trace": "-3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    },
+    {
+      "direction": [
+        1,
+        2,
+        0,
+        2
+      ],
+      "atlas_trace": "3",
+      "Weil_wedge_trace": "-3"
+    }
+  ],
+  "scope": "A labelled representation obstruction and explicit two-qutrit encoding. Different group homomorphisms, outer twists or additional symmetry breaking are not excluded.",
+  "prior": [
+    "11983 native atlas six-spaces",
+    "11987 spinor gate library",
+    "analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md owns the odd-Weil basis and Witting/Pauli labelled projectors",
+    "analysis/PASS11664_11671_KERNEL_DYNAMICS.md owns the transverse3/masskernel3 equality",
+    "analysis/2026-10-10_toe45_cusp_tomography_parallel_research_audit.md owns other labelledPauli incidence maps",
+    "W33_FOR_EVERYONE.tex historical Wittinggeometry, not an atlas-spinor identification"
+  ]
+}

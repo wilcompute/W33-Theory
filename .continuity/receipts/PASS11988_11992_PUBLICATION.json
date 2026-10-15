@@ -1,0 +1,50 @@
+{
+  "schema": "w33.pass11988-11992.publication.v1",
+  "reservation": "94857ee9e3d37075b917df05eb7c4dbb749a5f01",
+  "science_commit": null,
+  "local_validation": {
+    "combined_new_and_TOE85_to_TOE92": "99 passed in87.35s",
+    "final_regenerated_new_tests": "18 passed in26.86s",
+    "all_five_producers": "PASS",
+    "guard": "quiet after cited prior-art triage"
+  },
+  "science_sha256_lf": {
+    "analysis/w33_pass11988_spinor_weil_intertwiner.py": "a3972fb5bbfaeb4401a11f44a918966eff8746edc3bbaebbfec8247e1e1c76df",
+    "analysis/w33_pass11989_joint_source_barr.py": "2fdf7d19efc5cc7372c2bbc1f21af12619d6caf9f334a2a4248f65598ab2c916",
+    "analysis/w33_pass11990_odd_even_holonomic_controls.py": "def64957b48168cf7d9c990aa41dbebb32916452d7bad47a0e881015b9c91757",
+    "analysis/w33_pass11991_native_four_period_cover.py": "9acd7276709cb6677054cc3523632149316a2387bb3b82679a2e98e446325296",
+    "analysis/w33_pass11992_nonlinear_einstein_benchmark.py": "5bbb0628673fec764b525e42280547ee9f34c0bf8b01ffc3e5ff8f113309aec0",
+    "data/w33_pass11988_spinor_weil_intertwiner.json": "24d8e753ca26f1ce04f7d1ad3ab91a653671a163e034bd4f27fc90230a3cc11b",
+    "data/w33_pass11989_joint_source_barr.json": "bdc3e45920085ea7fbdd9e32fe84d45bbd19636cad21df5741ed3019e5fe8467",
+    "data/w33_pass11990_odd_even_holonomic_controls.json": "75b85c6ca44eddfa79e826666af7d7c89dd49d261920ab3dea701ae400222781",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "data/w33_pass11992_nonlinear_einstein_benchmark.json": "c6ea6a882571647d0994fe08c852a974714ddd19bc446731d2dd13b197bfa753",
+    "analysis/PASS11988_11992_TANGENT_CLOCK_AND_PHYSICAL_INTERFACES.md": "ca5a57e43c5d9184e017ed09d8917b48c472f9c2ee93f3d4cd25d3d9943a4236",
+    "tests/test_w33_pass11988_11992_physical_interfaces.py": "b3e98d6aab998c9559c5dbd7dcfb2ef097e9720e1697ff9c4afe452ef03a6c46",
+    ".github/workflows/pass11988-11992-interfaces.yml": "1516b027cd2e67ca1d28c5a503de66799c21aaae508daf0d8cf62d0500188c20"
+  },
+  "prior_input_sha256_lf": {
+    "data/w33_pass11983_atlas_projector_descent.json": "07f757825e5fc19eb6f50a72ef4c7959cc6e91ccaf97970e1e1443b911bb59e4",
+    "data/w33_pass11987_atlas_spin_gate_alphabet.json": "79f730682bdbbc0fd05e6d2009278781a35ff635ff5efba5f7177d8d4782b2cd",
+    "data/w33_pass11981_cubic_mediator_cp.json": "cfeff040a9aa4162931fd9866568bea774cf1242f22d2427958338adf4bce81b",
+    "data/w33_pass11975_mediator_flavour_matching.json": "3502ce8da2ef7fa19339514a05bddfe9a24d6de84bbc390185b0eb382049ad2f",
+    "data/w33_20261015_toe83_h27_square_css_surgery.json": "dd856b53c978dd8d1d6b21a88af5e6849bc86724780b49f243c131f94404b7be",
+    "data/w33_20261015_toe84_h27_logical_clifford.json": "4f850d966a5bca6ec6502bc4a00fd64aa4a8f31f4196e6af170e81549195e5a4",
+    "data/w33_20261015_toe85_h2_relation_module.json": "1718ccfd59c077d263fb2f91afa4095991332ee182e0a263db978324c6f98965",
+    "analysis/w33_20261015_toe85_h2_relation_module.py": "0db67ab423b1f88ecb252bbe4235cadb85e6bf191a0a37550e87988219e767b9",
+    "analysis/w33_20261015_toe92_optical_givens_mesh.py": "7054d9aa9307b1c5bc8c2cd81a9d9e5172948069d10ff6518d7bdf5a5f1a1507",
+    "analysis/w33_20261015_toe90_vlasov_ququart_design.py": "e7322b0c97ba509f21c6fe9da307845c33a3c7b6aa3f17dc7c96cfcd501efe96",
+    "tools/bt1408_witting_contextual_communication_bridge.py": "d84f53328bdbe043a7ce86a5be3a02de84e6f43f4e340449cb24aa765c482aa8",
+    "analysis/w33_pass11942_hypercharge_wilson_leptons.py": "5c1c6e351e20204ad2ac76b5945d610218101d1d620e117b27b130224df1cfd4",
+    "analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py": "edd590c157d79b2d8460adeaa3e329aab6999ed824fb3986961ae566692fe857"
+  },
+  "control_sha256_lf": {
+    ".continuity/receipts/PASS11988_11992_TESTS.log": "6bed72ee676ad871a603d16fef6a28e1bb010bd22f107a93d2261e92e71ae1bc",
+    ".continuity/receipts/PASS11988_11992_FINAL_TESTS.log": "a20e8865ca6f96a1130fbe70466addd330009e6f337a717faafe0de994ea4744",
+    ".continuity/receipts/PASS11988_11992_PRODUCERS.log": "05fce0eb2e99922de7b339570b6bcbdc3d3cd88c613dc8c820b333f32ad47d08",
+    ".continuity/receipts/PASS11988_11992_GUARD.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".continuity/receipts/PASS11988_11992_PARALLEL_INTAKE.json": "48b4e73bd089d22f91b41265b8dd82a0fc6564e7f68f9d2acc57a76acd021f82"
+  },
+  "hosted": null,
+  "scope": "Exact atlas/projective tangent map and Lorentz-compatible subgroup example; numerical local45field scalar EFT minima/fitted treeBarr, supplied9level/4rail controls, selectednativeEuclidean4cover/freeGW andimportedGowdyGR benchmark. No completedTOE, UVcompletion, physicalparameterprediction, globalchiralmeasure/nativeGR orhardwareclaim."
+}
