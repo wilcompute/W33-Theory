@@ -9,5 +9,43 @@
     "data/w33_pass11980_heisenberg_fixed_holonomies.json": "b978c29d8553ba5fc45f00e67af54555c3a04b162bc7e086b3ca8452609987d1",
     ".continuity/receipts/PASS11980_INTAKE.json": "86fc779f3444579511d24199ad5f94b3d9c8912af698d5d4278a07507e73c654"
   },
-  "hosted_status": "pending after science publication"
+  "hosted_status": "SUCCESS",
+  "science_commit": "085df50e5b64abafadbf6620eb8d76d1572354b3",
+  "hosted_run": 38772708756,
+  "hosted_job": 116552387634,
+  "hosted_test_receipt_lines": [
+    "verify\tIntegral, modular, gauge, spectral and second-basis tests\t2026-10-15T16:53:51.9458542Z 7 passed in 8.14s"
+  ],
+  "hosted_exact_artifact_replay_fields": [
+    "coinvariant_smith_diagonal",
+    "finite_field_dimensions",
+    "F3_radical_dimensions",
+    "F3_center_nilpotent_power_ranks",
+    "H27_generator_integral_H1_actions",
+    "prior_cubic_building_chain_equivalence"
+  ],
+  "hosted_artifact": {
+    "id": 11992655951,
+    "name": "pass11980-fixed-holonomies",
+    "bytes": 26791
+  },
+  "hosted_log_lf_sha256": "f757720d19c1c3d78559f2c2c283964f153ac24488b76ebeeb4ca183add51f20",
+  "local_log_lf_sha256": "0b3eadedc69e9af51ad65494a6e7a0ecf3610aec3cf6f95a8dbbdb229187a7dd",
+  "reviewed_and_integrated_peer_catalogue_commit": "9899c209d",
+  "extra_local_controls": {
+    "scope": "Additional local controls, not included in hosted7tests",
+    "lf_sha256": {
+      ".continuity/receipts/PASS11980_CONJUGATION_AUDIT.py": "e2dc99c8eeb3120b2f5e8fcbdfb8a81779bd6d8dc97bedac7cc5fafb7e2bf061",
+      ".continuity/receipts/PASS11980_CONJUGATION_AUDIT.json": "4044a5dbabfe75d580f847cd94da7cd64faa404de5ded484c0c63ad68d688b83",
+      ".continuity/receipts/PASS11980_EXTRA_CONTROLS.md": "6f2e8d102024db7de2553b4ecfd4c84bdf3bb21e1730f067f183eed5b65d5fa9"
+    },
+    "result": "One of48 face-preserving H27 automorphisms conjugates selectedstableN18 order9connection up to exactgauge; physicalCP notderived."
+  },
+  "result_index": {
+    "files": 12238,
+    "distinctive_results": 16869,
+    "unique_results": 7378,
+    "lf_sha256": "39e1a7b39e0f6a79ef4175c45da9307959b15046de25e4991778e671c9040302",
+    "freshness": "Full rebuild completed after all science source/report changes; extra controls are under receipts outside the index corpus."
+  }
 }

@@ -1,0 +1,862 @@
+verify	Set up job	﻿2026-10-15T16:53:17.9099175Z Current runner version: '2.337.0'
+verify	Set up job	2026-10-15T16:53:17.9128298Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-10-15T16:53:17.9129254Z Hosted Compute Agent
+verify	Set up job	2026-10-15T16:53:17.9129965Z Version: 20261012.601
+verify	Set up job	2026-10-15T16:53:17.9130703Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+verify	Set up job	2026-10-15T16:53:17.9131518Z Build Date: 2026-10-12T17:48:21Z
+verify	Set up job	2026-10-15T16:53:17.9132242Z Worker ID: {0a4a4544-acce-424a-96fb-b836becf0b12}
+verify	Set up job	2026-10-15T16:53:17.9132971Z Region: eastus2
+verify	Set up job	2026-10-15T16:53:17.9133607Z Cloud: Azure
+verify	Set up job	2026-10-15T16:53:17.9134175Z ##[endgroup]
+verify	Set up job	2026-10-15T16:53:17.9135790Z ##[group]Operating System
+verify	Set up job	2026-10-15T16:53:17.9136519Z Ubuntu
+verify	Set up job	2026-10-15T16:53:17.9137257Z 24.04.5
+verify	Set up job	2026-10-15T16:53:17.9137871Z LTS
+verify	Set up job	2026-10-15T16:53:17.9138430Z ##[endgroup]
+verify	Set up job	2026-10-15T16:53:17.9138993Z ##[group]Runner Image
+verify	Set up job	2026-10-15T16:53:17.9139673Z Image: ubuntu-24.04
+verify	Set up job	2026-10-15T16:53:17.9140244Z Version: 20261012.334.1
+verify	Set up job	2026-10-15T16:53:17.9141419Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+verify	Set up job	2026-10-15T16:53:17.9143182Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+verify	Set up job	2026-10-15T16:53:17.9144261Z ##[endgroup]
+verify	Set up job	2026-10-15T16:53:17.9145983Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-10-15T16:53:17.9148764Z Contents: read
+verify	Set up job	2026-10-15T16:53:17.9149403Z Metadata: read
+verify	Set up job	2026-10-15T16:53:17.9150111Z Packages: read
+verify	Set up job	2026-10-15T16:53:17.9150686Z ##[endgroup]
+verify	Set up job	2026-10-15T16:53:17.9153256Z Secret source: Actions
+verify	Set up job	2026-10-15T16:53:17.9154337Z Cache mode: write
+verify	Set up job	2026-10-15T16:53:17.9156023Z Prepare workflow directory
+verify	Set up job	2026-10-15T16:53:17.9657859Z Prepare all required actions
+verify	Set up job	2026-10-15T16:53:17.9733664Z Getting action download info
+verify	Set up job	2026-10-15T16:53:18.1964192Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	Set up job	2026-10-15T16:53:18.2867546Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+verify	Set up job	2026-10-15T16:53:18.3648622Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify	Set up job	2026-10-15T16:53:18.5913633Z Complete job name: verify
+verify	Run actions/checkout@v4	﻿2026-10-15T16:53:18.6709045Z ##[group]Run actions/checkout@v4
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6710019Z with:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6710482Z   repository: wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6714711Z   token: ***
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6715145Z   ssh-strict: true
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6715596Z   ssh-user: git
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6716066Z   persist-credentials: true
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6716542Z   clean: true
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6716988Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6717704Z   fetch-depth: 1
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6718129Z   fetch-tags: false
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6718567Z   show-progress: true
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6719000Z   lfs: false
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6719402Z   submodules: false
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6719855Z   set-safe-directory: true
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6720358Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.6721182Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7778239Z Syncing repository: wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7780327Z ##[group]Getting Git version info
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7781160Z Working directory is '/home/runner/work/W33-Theory/W33-Theory'
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7783087Z [command]/usr/bin/git version
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7888660Z git version 2.55.0
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7909866Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7932685Z Temporarily overriding HOME='/home/runner/work/_temp/24eaf255-f493-41b2-a03e-8487d26193e6' before making global git config changes
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7935090Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.7940372Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8005686Z Deleting the contents of '/home/runner/work/W33-Theory/W33-Theory'
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8015567Z ##[group]Initializing the repository
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8017868Z [command]/usr/bin/git init /home/runner/work/W33-Theory/W33-Theory
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8139823Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8142133Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8143859Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8145246Z hint: call:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8146307Z hint:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8147466Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8148552Z hint:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8149527Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8151117Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8152426Z hint:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8153218Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8154306Z hint:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8155811Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8157858Z Initialized empty Git repository in /home/runner/work/W33-Theory/W33-Theory/.git/
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8160810Z [command]/usr/bin/git remote add origin https://github.com/wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8212433Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8214018Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8217672Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8269165Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8270001Z ##[group]Setting up auth
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8271771Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8302828Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8681152Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8724044Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.8968675Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.9010118Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.9269736Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.9316902Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.9318904Z ##[group]Fetching the repository
+verify	Run actions/checkout@v4	2026-10-15T16:53:18.9330718Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +085df50e5b64abafadbf6620eb8d76d1572354b3:refs/remotes/origin/master
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6811973Z From https://github.com/wilcompute/W33-Theory
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6813331Z  * [new ref]           085df50e5b64abafadbf6620eb8d76d1572354b3 -> origin/master
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6816047Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6817509Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6819445Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6825905Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6881104Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6915121Z ##[group]Checking out the ref
+verify	Run actions/checkout@v4	2026-10-15T16:53:28.6919707Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+verify	Run actions/checkout@v4	2026-10-15T16:53:29.7431390Z Updating files:  30% (10675/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:29.7689148Z Updating files:  31% (10979/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:29.7951510Z Updating files:  32% (11333/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:29.8205765Z Updating files:  33% (11687/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:29.8518938Z Updating files:  34% (12042/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:29.9596568Z Updating files:  35% (12396/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.0222110Z Updating files:  36% (12750/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.0705130Z Updating files:  37% (13104/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.0920294Z Updating files:  38% (13458/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.1243771Z Updating files:  39% (13812/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.2614676Z Updating files:  40% (14166/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.3454250Z Updating files:  41% (14521/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.3704409Z Updating files:  42% (14875/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.3888351Z Updating files:  43% (15229/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.4089699Z Updating files:  44% (15583/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.4312687Z Updating files:  45% (15937/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.4490850Z Updating files:  46% (16291/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.4647935Z Updating files:  47% (16646/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.4880238Z Updating files:  48% (17000/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.5081894Z Updating files:  49% (17354/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.5296321Z Updating files:  50% (17708/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.5478660Z Updating files:  51% (18062/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.5798518Z Updating files:  52% (18416/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.6001852Z Updating files:  53% (18770/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.6201737Z Updating files:  54% (19125/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.6421003Z Updating files:  55% (19479/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.8781910Z Updating files:  56% (19833/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.8951216Z Updating files:  56% (19905/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:30.9361812Z Updating files:  57% (20187/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.1160355Z Updating files:  58% (20541/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.1902065Z Updating files:  59% (20895/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.2093553Z Updating files:  60% (21249/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.2302211Z Updating files:  61% (21604/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.2470330Z Updating files:  62% (21958/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.2708415Z Updating files:  63% (22312/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.2978215Z Updating files:  64% (22666/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.3264029Z Updating files:  65% (23020/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.3689030Z Updating files:  66% (23374/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.3983005Z Updating files:  67% (23729/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.4287923Z Updating files:  68% (24083/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.4545972Z Updating files:  69% (24437/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.6815004Z Updating files:  70% (24791/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.7133977Z Updating files:  71% (25145/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.7213758Z Updating files:  72% (25499/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.7340554Z Updating files:  72% (25647/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.7541212Z Updating files:  73% (25853/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.7716540Z Updating files:  74% (26208/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.7883544Z Updating files:  75% (26562/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.8066302Z Updating files:  76% (26916/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.8546606Z Updating files:  77% (27270/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.8888564Z Updating files:  78% (27624/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.9071741Z Updating files:  79% (27978/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.9277682Z Updating files:  80% (28332/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.9687368Z Updating files:  81% (28687/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:31.9970551Z Updating files:  82% (29041/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.0141988Z Updating files:  83% (29395/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.0337279Z Updating files:  84% (29749/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.0579583Z Updating files:  85% (30103/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.0815647Z Updating files:  86% (30457/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.1026483Z Updating files:  87% (30812/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.1255658Z Updating files:  88% (31166/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.1442388Z Updating files:  89% (31520/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.1615555Z Updating files:  90% (31874/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.1775093Z Updating files:  91% (32228/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.1958032Z Updating files:  92% (32582/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.2142478Z Updating files:  93% (32936/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.2392338Z Updating files:  94% (33291/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.2602871Z Updating files:  95% (33645/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.2826293Z Updating files:  96% (33999/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.3025692Z Updating files:  97% (34353/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.3302570Z Updating files:  98% (34707/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.3867431Z Updating files:  99% (35061/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.3868429Z Updating files: 100% (35415/35415)
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.3869456Z Updating files: 100% (35415/35415), done.
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.5001304Z Reset branch 'master'
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.5017969Z branch 'master' set up to track 'origin/master'.
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.5940514Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.5988408Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v4	2026-10-15T16:53:32.6016790Z 085df50e5b64abafadbf6620eb8d76d1572354b3
+verify	Run actions/setup-python@v5	﻿2026-10-15T16:53:32.6369452Z ##[group]Run actions/setup-python@v5
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6369771Z with:
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6369980Z   python-version: 3.11
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6370217Z   check-latest: false
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6372641Z   token: ***
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6372856Z   update-environment: true
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6373101Z   allow-prereleases: false
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6373335Z   freethreaded: false
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.6373543Z ##[endgroup]
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.7690339Z ##[group]Installed versions
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.7783333Z (node:2354) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.7784455Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.7785264Z Successfully set up CPython (3.11.17)
+verify	Run actions/setup-python@v5	2026-10-15T16:53:32.7786292Z ##[endgroup]
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	﻿2026-10-15T16:53:32.7964273Z ##[group]Run python -m pip install numpy sympy==1.14.0 pytest
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.7964819Z [36;1mpython -m pip install numpy sympy==1.14.0 pytest[0m
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8256807Z shell: /usr/bin/bash -e {0}
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8257530Z env:
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8257974Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8258707Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8259396Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8259975Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8260542Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8261106Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:32.8261600Z ##[endgroup]
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:33.9540652Z Collecting numpy
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.0143514Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.0405110Z Collecting sympy==1.14.0
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.0484208Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.0963743Z Collecting pytest
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.1052422Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.1300798Z Collecting mpmath<1.4,>=1.1.0 (from sympy==1.14.0)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.1377303Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.1590656Z Collecting iniconfig>=1.0.1 (from pytest)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.1681546Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.1929351Z Collecting packaging>=22 (from pytest)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.2027002Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.2256585Z Collecting pluggy<2,>=1.5 (from pytest)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.2339283Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.2606558Z Collecting pygments>=2.7.2 (from pytest)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.2800132Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.2923215Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.3620767Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 117.1 MB/s  0:00:00
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.3704780Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.3755509Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 95.7 MB/s  0:00:00
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.3853195Z Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.4357461Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 347.8 MB/s  0:00:00
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.4436964Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.4549319Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.4645485Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.4749361Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.4851380Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.4926317Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 212.1 MB/s  0:00:00
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:34.5979677Z Installing collected packages: mpmath, sympy, pygments, pluggy, packaging, numpy, iniconfig, pytest
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:43.2878705Z 
+verify	Run python -m pip install numpy sympy==1.14.0 pytest	2026-10-15T16:53:43.2894946Z Successfully installed iniconfig-2.3.1 mpmath-1.3.0 numpy-2.4.6 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-9.1.1 sympy-1.14.0
+verify	Integral, modular, gauge, spectral and second-basis tests	﻿2026-10-15T16:53:43.3600449Z ##[group]Run OPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass11980_heisenberg_fixed_holonomies.py tests/test_w33_20261015_toe82_native_H27_h1_character.py
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3602181Z [36;1mOPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass11980_heisenberg_fixed_holonomies.py tests/test_w33_20261015_toe82_native_H27_h1_character.py[0m
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3669825Z shell: /usr/bin/bash -e {0}
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3670129Z env:
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3670447Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3670980Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3671509Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3671983Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3672461Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3672975Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:43.3673371Z ##[endgroup]
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:51.9457768Z .......                                                                  [100%]
+verify	Integral, modular, gauge, spectral and second-basis tests	2026-10-15T16:53:51.9458542Z 7 passed in 8.14s
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	﻿2026-10-15T16:53:52.0404796Z ##[group]Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0405499Z [36;1mOPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py[0m
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0470997Z shell: /usr/bin/bash -e {0}
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0471260Z env:
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0471531Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0471982Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0472429Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0472819Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0473205Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0473596Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:52.0473923Z ##[endgroup]
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5763354Z {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5764145Z   "status": "PASS_11980_INTEGRAL_HEISENBERG_HOLONOMY_AUDIT",
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5768320Z   "prior_owners": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5769049Z     "TOE81 native tritangent topology",
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5769616Z     "TOE82 H27 complex character",
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5770246Z     "Pass11560 distinct translation coinvariant-chain torsion"
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5770889Z   ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5771270Z   "basis_root": 0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5771743Z   "integral_H1_rank": 64,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5772320Z   "prior_cubic_building_chain_equivalence": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5773385Z     "target": "prior cubic 27-line/45-tritangent Levi building H1, not the W33 81D building",
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5774465Z     "target_cell_counts": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5775031Z       72,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5775428Z       135
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5775817Z     ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5776236Z     "H1_transport_determinant": 1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5776884Z     "integral_H27_equivariance_checked": true,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5778224Z     "prior_source": "analysis/w33_20260901_building_chain_injections.py"
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5778841Z   },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5779170Z   "coinvariant_smith_diagonal": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5779591Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5779888Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5780170Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5780452Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5780854Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5781134Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5781415Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5781587Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5781751Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5781916Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5782080Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5782245Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5782414Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5782588Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5782753Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5782919Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5783083Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5783245Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5783406Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5783570Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5783787Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5783950Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5784112Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5784282Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5784450Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5784614Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5784788Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5785308Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5785522Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5785684Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5785845Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5786008Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5786172Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5786372Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5786535Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5786698Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5786862Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5787347Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5787559Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5787732Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5787916Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5788082Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5788244Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5788409Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5788570Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5788766Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5789002Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5789163Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5789329Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5789494Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5789653Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5789811Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5789980Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5790144Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5790551Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5790713Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5790876Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5791035Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5791198Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5791361Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5791807Z     1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5792104Z     3,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5792396Z     9,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5792707Z     9
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5793005Z   ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5793379Z   "coinvariant_torsion_invariant_factors": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5793890Z     3,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5794106Z     9,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5794283Z     9
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5794450Z   ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5794644Z   "coinvariant_free_rank": 0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5794932Z   "symmetry_fixed_U1_flat_gauge_class_count": 243,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5795240Z   "finite_field_dimensions": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5795475Z     "2": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5795673Z       "homology_invariants": 0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5795924Z       "homology_coinvariants": 0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5796171Z     },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5796343Z     "3": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5796538Z       "homology_invariants": 4,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5796796Z       "homology_coinvariants": 3
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5797332Z     },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5797556Z     "5": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5797748Z       "homology_invariants": 0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5797994Z       "homology_coinvariants": 0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5798226Z     },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5798396Z     "7": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5798584Z       "homology_invariants": 0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5798820Z       "homology_coinvariants": 0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5799044Z     }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5799214Z   },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5799401Z   "F3_radical_dimensions": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5799629Z     64,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5799798Z     61,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5799963Z     55,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5800126Z     43,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5800291Z     32,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5800455Z     19,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5800617Z     10,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5800990Z     3,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5801157Z     0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5801321Z   ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5801512Z   "F3_radical_layer_dimensions": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5801750Z     3,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5801921Z     6,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5802087Z     12,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5802252Z     11,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5802415Z     13,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5802582Z     9,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5802745Z     7,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5802913Z     3
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5803081Z   ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5803272Z   "F3_center_nilpotent_power_ranks": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5803531Z     40,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5803698Z     16,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5803864Z     0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5804027Z   ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5804810Z   "scope": "Fixed gauge-equivalence classes in Hom(H1,U1), not invariant link representatives, vacuum energetics, selected masses, gravity, or a physical TOE. H1 coinvariants are not homology of coinvariant chains."
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5805639Z }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5805805Z {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5805970Z   "1": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5806273Z     "minimum_free_energy_at_zero_temperature": -10.000000000000002,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5806625Z     "minimizer_count": 1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5806866Z     "minimizer_holonomy_orders": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5807426Z       1
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5807609Z     ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5807821Z     "trivial_sector_energy": -10.000000000000002,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5808125Z     "continuous_flat_torus_audit": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5808386Z       "selected_coefficients": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5808617Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5808793Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5808966Z         0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5809141Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5809329Z       "fermi_gap": 8.99999999999999,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5809581Z       "max_gradient": 0.0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5809846Z       "full_64_flat_direction_hessian_eigenvalues": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5810145Z         0.002113202686991104,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5810371Z         0.0031755265393847757,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5810595Z         0.0038199883480169138,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5810826Z         0.004420916373158128,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5811207Z         0.011669912275290873,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5811421Z         0.012603693513678548,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5811637Z         0.013219883498691288,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5811845Z         0.014305205203773402,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5812058Z         0.015176793911866538,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5812271Z         0.015778260655826423,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5812486Z         0.01639651873839513,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5812701Z         0.018120660343882086,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5812921Z         0.01869779873558326,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5813132Z         0.02294161701320166,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5813343Z         0.02603990958083369,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5813556Z         0.028132310336367275,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5813772Z         0.030964557705427075,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5813991Z         0.03348022384804662,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5814203Z         0.03811064027668956,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5814416Z         0.04366061986627535,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5814635Z         0.049268645941187295,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5814850Z         0.05630010681905243,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5815070Z         0.057924084462263145,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5815290Z         0.07407407407407392,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5815502Z         0.07407407407407395,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5815711Z         0.07407407407407399,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5815922Z         0.07407407407407399,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5816131Z         0.07407407407407414,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5816344Z         0.07559051587897696,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5816559Z         0.08117663597699831,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5816772Z         0.08675732378871061,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5816982Z         0.09023955183922552,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5817497Z         0.09482290416674682,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5817710Z         0.10490600913278851,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5817927Z         0.11483997852985071,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5818131Z         0.11591982514697423,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5818336Z         0.12118795858100297,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5818550Z         0.12519763771830564,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5818921Z         0.1316139516689028,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5819149Z         0.1358140142013523,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5819356Z         0.13971159243092057,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5819561Z         0.14105833385661393,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5819767Z         0.14377854894428108,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5819971Z         0.14953255911708482,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5820175Z         0.15350684495839526,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5820382Z         0.15795702777447732,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5820590Z         0.1621699904093796,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5820793Z         0.16584789471580041,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5820999Z         0.17372097149911833,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5821210Z         0.18174168265073556,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5821425Z         0.18843077550881107,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5821630Z         0.19755060972899968,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5821835Z         0.19914744679252216,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5822045Z         0.20600254100839835,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5822252Z         0.21053106769251312,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5822469Z         0.21531391788093066,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5822679Z         0.2160717170770903,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5822890Z         0.2222222222222218,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5823098Z         0.2222222222222218,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5823307Z         0.22222222222222188,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5823524Z         0.222222222222222,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5823730Z         0.22222222222222207,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5823934Z         0.22222222222222207,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5824141Z         0.22222222222222218
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5824344Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5824536Z       "negative_curvature_count": 0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5824830Z       "independent_extreme_axis_curvature_checks": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5825112Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5825303Z           "analytic": 0.0021132026869911404,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5825587Z           "finite_difference": 0.0021132002814283624
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5844957Z         },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5845285Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5845610Z           "analytic": 0.2222222222222221,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5846091Z           "finite_difference": 0.22222220863454822
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5846596Z         }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5846779Z       ]
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5846957Z     }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5847523Z   },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5847758Z   "9": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5848046Z     "minimum_free_energy_at_zero_temperature": -37.14561429843575,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5848415Z     "minimizer_count": 24,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5848665Z     "minimizer_holonomy_orders": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5848908Z       9
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5849075Z     ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5849294Z     "trivial_sector_energy": -18.000000000000007,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5849590Z     "continuous_flat_torus_audit": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5849858Z       "selected_coefficients": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5850090Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5850266Z         1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5850438Z         0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5850605Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5850796Z       "fermi_gap": 3.357312878786203,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5851062Z       "max_gradient": 5.967448757360216e-16,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5851391Z       "full_64_flat_direction_hessian_eigenvalues": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5851708Z         -0.09934586841201277,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5851940Z         -0.08050954816676824,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5852174Z         -0.0642541096217049,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5852399Z         -0.05198479811028712,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5852622Z         -0.04443785170861363,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5852841Z         -0.01995319805425208,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5853058Z         -0.012261932287337561,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5853283Z         -0.0061790074903682836,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5853507Z         0.0035281005459733435,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5853720Z         0.004964018894113851,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5853933Z         0.006542297717438508,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5854153Z         0.01460264368470426,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5854363Z         0.01633498529937235,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5854574Z         0.017270428183843417,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5854788Z         0.01896838649383996,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5855159Z         0.01979781563175678,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5855367Z         0.020447947103333385,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5855585Z         0.026500034078754644,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5855797Z         0.02789294298283533,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5856006Z         0.03149671621580304,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5856217Z         0.03690626269710735,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5856430Z         0.03892466182513925,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5856646Z         0.04438099377839509,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5856855Z         0.04683009365794611,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5857349Z         0.049699023827702714,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5857586Z         0.062464473691138514,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5857809Z         0.06413905510820163,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5858017Z         0.07078451080373226,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5858226Z         0.07327996081789058,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5858427Z         0.08423100415183561,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5858634Z         0.09356269210182913,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5858839Z         0.10144652964591273,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5859051Z         0.10496051145647002,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5859264Z         0.10799155839491906,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5859474Z         0.12176613353201252,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5859687Z         0.12623639531655473,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5859897Z         0.12923908541901302,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5860106Z         0.13648603113237423,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5860313Z         0.15623243890356173,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5860518Z         0.16850018069414388,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5860734Z         0.1757716928371708,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5860951Z         0.19278987262320105,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5861162Z         0.20338089024388192,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5861380Z         0.21842259405347816,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5861590Z         0.23012685196109128,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5861804Z         0.23468413599021462,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5862016Z         0.2565889296973281,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5862225Z         0.2713232823562858,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5862432Z         0.28444578202428883,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5862638Z         0.2871805291849886,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5862847Z         0.29020146426015636,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5863063Z         0.30743112791602684,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5863417Z         0.35058227710219514,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5863625Z         0.3524645652546237,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5863837Z         0.3866844220611739,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5864039Z         0.39789823737083463,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5864242Z         0.4063875955220794,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5864481Z         0.42240875505153325,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5864695Z         0.45111180432304987,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5864904Z         0.45552945727136057,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5865111Z         0.49452783035005055,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5865324Z         0.5026149913362428,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5865535Z         0.5227450662925319,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5865754Z         0.5959773055633169
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5865960Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5866158Z       "negative_curvature_count": 8,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5866463Z       "independent_extreme_axis_curvature_checks": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5866754Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5866952Z           "analytic": -0.09934586841201277,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5867571Z           "finite_difference": -0.09934586842064164
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5867856Z         },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5868029Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5868212Z           "analytic": 0.5959773055633171,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5868494Z           "finite_difference": 0.5959772693131526
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5868759Z         }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5868927Z       ]
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5869097Z     }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5869262Z   },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5869426Z   "13": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5869684Z     "minimum_free_energy_at_zero_temperature": -39.124611797498126,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5870032Z     "minimizer_count": 8,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5870273Z     "minimizer_holonomy_orders": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5870511Z       3
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5870676Z     ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5870881Z     "trivial_sector_energy": -22.000000000000007,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5871178Z     "continuous_flat_torus_audit": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5871443Z       "selected_coefficients": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5871828Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5871998Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5872173Z         3
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5872338Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5872521Z       "fermi_gap": 2.9999999999999973,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5872787Z       "max_gradient": 7.216449660063518e-16,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5873091Z       "full_64_flat_direction_hessian_eigenvalues": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5873387Z         -0.14770380200961222,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5873612Z         -0.11998031075471424,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5873836Z         -0.1145032882998576,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5874050Z         -0.07887078960232745,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5874265Z         -0.05304463314945992,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5874484Z         -0.03858939211667753,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5874701Z         -0.017530559277797394,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5874921Z         -0.014988643968531336,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5875137Z         -0.01113481552310506,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5875353Z         -0.008132281606666247,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5875572Z         -0.005981134501188722,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5875799Z         -0.0011357441615326503,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5876026Z         0.0001602148792738882,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5876255Z         0.00019575019530037552,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5876472Z         0.00040571457094133826,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5876686Z         0.0005427550715815136,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5876899Z         0.0006569824973562496,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5877388Z         0.0008923817988563474,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5877617Z         0.011639743277951599,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5877827Z         0.017235481690240095,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5878038Z         0.01929548978441766,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5878246Z         0.02908873467930387,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5878451Z         0.03000810939852807,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5878665Z         0.03280913091820187,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5878871Z         0.03536086640818966,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5879072Z         0.042474177494975666,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5879282Z         0.04429515360451683,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5879487Z         0.05080342850595935,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5879702Z         0.0554876959381967,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5879912Z         0.06294629334092475,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5880257Z         0.07229947317735665,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5880464Z         0.08060734690148649,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5880672Z         0.09115221903468455,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5880881Z         0.10455255697181753,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5881093Z         0.11315467210994393,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5881296Z         0.1152973243259389,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5881500Z         0.1445131399462167,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5881708Z         0.15882142911422048,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5881915Z         0.16030381389152906,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5882127Z         0.1691235778380531,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5882332Z         0.1817470487643882,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5882537Z         0.1938292597889304,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5882741Z         0.20036718217406893,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5882951Z         0.22204749008928198,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5883160Z         0.23997689022144147,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5883370Z         0.24504648407305893,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5883586Z         0.26391829747893725,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5883798Z         0.2832938913783514,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5884005Z         0.29672551434253935,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5884213Z         0.30199524911429754,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5884417Z         0.30822095599474697,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5884621Z         0.32191561624177073,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5884829Z         0.33139917255104073,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5885034Z         0.3564370833368317,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5885240Z         0.37308312555952156,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5885452Z         0.38796530841077165,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5885654Z         0.3942610763428409,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5885860Z         0.41090684671267225,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5886068Z         0.42904824437252254,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5886277Z         0.44305945000956837,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5886483Z         0.48414011049762234,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5886692Z         0.5128646140348883,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5886904Z         0.540880325811246,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5887384Z         0.605589009698767
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5887784Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5887983Z       "negative_curvature_count": 12,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5888297Z       "independent_extreme_axis_curvature_checks": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5888582Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5888768Z           "analytic": -0.1477038020096122,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5889047Z           "finite_difference": -0.14770380118989124
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5889312Z         },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5889482Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5889661Z           "analytic": 0.6055890096987666,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5889931Z           "finite_difference": 0.6055890224843097
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5890187Z         }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5890356Z       ]
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5890523Z     }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5890694Z   },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5890858Z   "14": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5891116Z     "minimum_free_energy_at_zero_temperature": -37.44232255188773,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5891458Z     "minimizer_count": 48,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5891695Z     "minimizer_holonomy_orders": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5891934Z       9
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5892100Z     ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5892301Z     "trivial_sector_energy": -23.000000000000007,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5892584Z     "continuous_flat_torus_audit": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5892849Z       "selected_coefficients": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5893078Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5893261Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5893430Z         4
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5893593Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5893777Z       "fermi_gap": 2.220446049250313e-16,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5894194Z       "scope": "Degenerate Fermi level: no differentiable zero-temperature Hessian asserted."
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5894621Z     }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5894786Z   },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5894948Z   "18": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5895200Z     "minimum_free_energy_at_zero_temperature": -33.3476552576382,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5895533Z     "minimizer_count": 48,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5895766Z     "minimizer_holonomy_orders": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5896008Z       9
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5896179Z     ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5896384Z     "trivial_sector_energy": -27.000000000000007,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5896851Z     "continuous_flat_torus_audit": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5897399Z       "selected_coefficients": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5897643Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5897810Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5898003Z         2
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5898168Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5898348Z       "fermi_gap": 2.7742482693245325,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5898610Z       "max_gradient": 1.0269562977782698e-15,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5898918Z       "full_64_flat_direction_hessian_eigenvalues": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5899206Z         0.0005234725884391497,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5899421Z         0.0012747269804927951,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5899636Z         0.0021739058658250842,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5899849Z         0.0031499083491149382,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5900068Z         0.0036244236791847188,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5900283Z         0.004082692926120238,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5900497Z         0.006134822853883848,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5900716Z         0.006845318886931068,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5900932Z         0.010854511625667267,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5901150Z         0.01274233010913052,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5901361Z         0.013209453038147663,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5901578Z         0.015451344392853457,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5901789Z         0.017599055105534105,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5902004Z         0.01864123094992791,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5902217Z         0.020271482432335067,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5902429Z         0.024633203299561895,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5902646Z         0.027236782408133133,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5902856Z         0.031675607812491166,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5903068Z         0.03508132822470862,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5903275Z         0.03884632568358971,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5903485Z         0.04572863465096276,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5903689Z         0.04860899863432511,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5903899Z         0.0523391630409482,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5904113Z         0.057238971697468555,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5904318Z         0.061065357392006754,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5904804Z         0.06218863530927459,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5905013Z         0.07105785073526694,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5905214Z         0.08271341853071003,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5905416Z         0.08622547354029905,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5905619Z         0.09146278140915028,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5905822Z         0.0994537598682446,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5906028Z         0.10393562532829177,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5906235Z         0.11019722740948378,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5906448Z         0.11456619629573297,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5906655Z         0.12080144002837752,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5906858Z         0.12695594186291373,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5907248Z         0.12981352706184615,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5907458Z         0.13911651315048235,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5907664Z         0.14911253661411844,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5907868Z         0.15200349911924793,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5908074Z         0.1560806494805458,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5908283Z         0.16981316354842596,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5908495Z         0.17580524940619782,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5908700Z         0.17746964796951373,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5908921Z         0.1979506576518948,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5909127Z         0.20547665810267154,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5909333Z         0.20736836086472918,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5909541Z         0.21619925150614389,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5909753Z         0.23099378793262973,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5909960Z         0.24074102413773965,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5910169Z         0.24628730197435417,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5910376Z         0.2516417945970535,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5910581Z         0.2677449514950915,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5910784Z         0.2878072504218928,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5910994Z         0.2969904588131847,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5911205Z         0.31946598977761925,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5911413Z         0.32218752362055636,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5911622Z         0.3433533041733679,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5911831Z         0.36534065374294467,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5912042Z         0.38859038935169254,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5912261Z         0.40431375842607287,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5912468Z         0.4141324352619934,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5912982Z         0.4331331246466005,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5913190Z         0.46236402837460927
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5913394Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5913592Z       "negative_curvature_count": 0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5913883Z       "independent_extreme_axis_curvature_checks": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5914162Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5914351Z           "analytic": 0.0005234725884391736,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5914631Z           "finite_difference": 0.000523471044289181
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5914893Z         },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5915062Z         {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5915240Z           "analytic": 0.46236402837460905,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5915512Z           "finite_difference": 0.46236402795329923
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5915770Z         }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5915938Z       ]
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5916109Z     }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5916276Z   },
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5916442Z   "26": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5916707Z     "minimum_free_energy_at_zero_temperature": -5.000000000000011,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5917208Z     "minimizer_count": 19,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5917453Z     "minimizer_holonomy_orders": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5917684Z       1,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5917850Z       3
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5918017Z     ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5918220Z     "trivial_sector_energy": -5.000000000000009,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5918516Z     "continuous_flat_torus_audit": {
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5918778Z       "selected_coefficients": [
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5919015Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5919183Z         0,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5919351Z         0
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5919517Z       ],
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5919706Z       "fermi_gap": 3.552713678800501e-15,
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5920125Z       "scope": "Degenerate Fermi level: no differentiable zero-temperature Hessian asserted."
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5920538Z     }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5920706Z   }
+verify	Run OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py	2026-10-15T16:53:55.5920878Z }
+verify	Run actions/upload-artifact@v4	﻿2026-10-15T16:53:55.6551463Z ##[group]Run actions/upload-artifact@v4
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6551977Z with:
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6552195Z   name: pass11980-fixed-holonomies
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6552516Z   path: data/w33_pass11980_heisenberg_fixed_holonomies.json
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6552857Z   if-no-files-found: warn
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6553090Z   compression-level: 6
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6553303Z   overwrite: false
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6553515Z   include-hidden-files: false
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6553745Z env:
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6553998Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6554423Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6554867Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6555261Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6555655Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6556043Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.6556401Z ##[endgroup]
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.8262976Z (node:2400) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.8264188Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.8315213Z With the provided path, there will be 1 file uploaded
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.8321992Z Artifact name is valid!
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:55.8323053Z Root directory input is valid!
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.0453603Z Beginning upload of artifact content to blob storage
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.0730719Z (node:2400) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.1205658Z Uploaded bytes 26791
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.1355898Z Finished uploading artifact content to blob storage!
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.1357421Z SHA256 digest of uploaded artifact zip is cde6335f40e0470dd4fc92d6b78891455098cc80c30d473d1bb26c6689bfde97
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.1359484Z Finalizing artifact upload
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.5483661Z Artifact pass11980-fixed-holonomies.zip successfully finalized. Artifact ID 11992655951
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.5486033Z Artifact pass11980-fixed-holonomies has been successfully uploaded! Final size is 26791 bytes. Artifact ID is 11992655951
+verify	Run actions/upload-artifact@v4	2026-10-15T16:53:56.5493404Z Artifact download URL: https://github.com/wilcompute/W33-Theory/actions/runs/38772708756/artifacts/11992655951
+verify	Post Run actions/setup-python@v5	﻿2026-10-15T16:53:56.5678448Z Post job cleanup.
+verify	Post Run actions/setup-python@v5	2026-10-15T16:53:56.6906101Z (node:2412) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Post Run actions/setup-python@v5	2026-10-15T16:53:56.6907743Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Post Run actions/checkout@v4	﻿2026-10-15T16:53:56.7098402Z Post job cleanup.
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8026973Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8071830Z git version 2.55.0
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8114361Z Temporarily overriding HOME='/home/runner/work/_temp/a39e538a-a92a-4fc3-affd-ad4ad8b1d8a6' before making global git config changes
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8115835Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8120258Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/W33-Theory/W33-Theory
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8165005Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8204464Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8510362Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8540280Z http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8552753Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.8610808Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.9010785Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v4	2026-10-15T16:53:56.9077984Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-10-15T16:53:56.9580445Z Cleaning up orphan processes
+verify	Complete job	2026-10-15T16:53:56.9992812Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
