@@ -384737,11 +384737,11 @@
     },
     {
       "file_count": 1,
-      "formula_id": "0abc7716b9797edc481e8a1a619aa2981d6b072f8d2af8c5554827a3b30a5410",
-      "normalized_formula": "-tau=-0.9999999990435755;thelargestsingletdisplacementfrom11978is3.60e-20",
+      "formula_id": "58a8d2ae13a169ebc7ded1b45009be8ccfb4cb0be19a07d6323f7b2d0e53dd32",
+      "normalized_formula": "-tau=-0.9999999995217878;thelargestsingletdisplacementfrom11978is1.80e-20",
       "numeric_literals": [
-        "-0.9999999990435755",
-        ".60",
+        "-0.9999999995217878",
+        ".80",
         "1978",
         "20"
       ],
@@ -384753,17 +384753,17 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 97,
+          "line": 121,
           "path": "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md",
-          "raw": "- tau=-0.9999999990435755; the largest singlet displacement from11978 is3.60e-20.",
+          "raw": "- tau=-0.9999999995217878; the largest singlet displacement from11978 is1.80e-20.",
           "status": "unclassified"
         }
       ],
       "status_profile": {
         "unclassified": 1
       },
-      "structural_family_id": "c0e1058be10b713265a58ff7eb6234ef444fd72d32abdda170c906784d74fe1d",
-      "structural_formula": "-tau=#;thelargestsingletdisplacementfrom1#is3#e-#"
+      "structural_family_id": "9a54ed59b0c4938afe143a41b1f81c10f31eab2adf86b75b53d6bcbf68e23c42",
+      "structural_formula": "-tau=#;thelargestsingletdisplacementfrom1#is1#e-#"
     },
     {
       "file_count": 1,
@@ -656709,7 +656709,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 171,
+          "line": 195,
           "path": "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md",
           "raw": "K=(R-JRJ)/2 is nonsingular. Its polar factor gives an explicit closest U3",
           "status": "unclassified"
@@ -855762,36 +855762,6 @@
       },
       "structural_family_id": "62bc89153e913f904672b44c72b1eb535ec56b00e234d434dc39a7a9d499af79",
       "structural_formula": "X=(P+L-#I)\\Pi_{#}"
-    },
-    {
-      "file_count": 1,
-      "formula_id": "61ea8254e07c708ff00d14347a143bb70e20bf42c6a4a29bf57c802a3fc8ce94",
-      "normalized_formula": "X=-1,Z=0.Set`tau=Im(S1conj(S2))/rho`,rho=1/32.ItisgaugeinvariantandCP",
-      "numeric_literals": [
-        "-1",
-        "0",
-        "1",
-        "32"
-      ],
-      "occurrence_count": 1,
-      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
-      "source_files": [
-        "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md"
-      ],
-      "source_locations": [
-        {
-          "category": "relation_line",
-          "line": 89,
-          "path": "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md",
-          "raw": "X=-1,Z=0. Set `tau=Im(S1 conj(S2))/rho`, rho=1/32. It is gauge invariant and CP",
-          "status": "unclassified"
-        }
-      ],
-      "status_profile": {
-        "unclassified": 1
-      },
-      "structural_family_id": "6c0ee96b8a1a3b7975636216094181b11ae9129ad9c4e43cf31de63a6862b778",
-      "structural_formula": "X=#,Z=#.Set`tau=Im(S1conj(S2))/rho`,rho=#/#.ItisgaugeinvariantandCP"
     },
     {
       "file_count": 1,
@@ -1117940,6 +1117910,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e2de697caa39ae96473674b7ad449d81af8d6287916e14e29a9424aa3ae99db0",
+      "normalized_formula": "bounded_completion='Forthesaturatedsource|tau|<2,allnegativeeliminatedtermsareboundedbypolynomialsofflavournormofdegreeatmost6(plusbounded-sourcequadratic/mixedcubicterms),uniformlyinsingletamplitudes.Positivenorm^8stabilizersdominate.Positivesoftmassesinthefullsingletmodelandpositivemediatorsquaresgivecompactsublevelsetsandanattainedglobalminimum.ThedisplayedlocalCPbranchisNOTcertifiedasthatglobalminimum.'",
+      "numeric_literals": [
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11996_joint_singlet_flavour.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 142,
+          "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
+          "raw": "bounded_completion='For the saturatedsource |tau|<2, all negative eliminated terms are bounded by polynomials of flavour norm of degree atmost6 (plus bounded-source quadratic/mixedcubic terms), uniformly in singlet amplitudes. Positive norm^8 stabilizers dominate. Positive soft masses in the full singlet model and positive mediator squares give compact sublevelsets and an attained global minimum. The displayed local CP branch is NOT certified as that global minimum.',",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "5a3e60d5308751f3ec710790691f436bb5cca80828eec706eed022d6a748b62b",
+      "structural_formula": "bounded_completion='Forthesaturatedsource|tau|<#,allnegativeeliminatedtermsareboundedbypolynomialsofflavournormofdegreeatmost6(plusbounded-sourcequadratic/mixedcubicterms),uniformlyinsingletamplitudes.Positivenorm^#stabilizersdominate.Positivesoftmassesinthefullsingletmodelandpositivemediatorsquaresgivecompactsublevelsetsandanattainedglobalminimum.ThedisplayedlocalCPbranchisNOTcertifiedasthatglobalminimum.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "79eb95b9553359565e25f07d12320c3b583f5da95639ef184b24255c348ea1ce",
       "normalized_formula": "boundedscan<code>n=1..6</code>,thebestrepresentativeimprovesthescale-invariantfull-screenquark",
       "numeric_literals": [
@@ -1170016,13 +1170014,16 @@
     },
     {
       "file_count": 1,
-      "formula_id": "f636a1389978db630bab33e86a7b9f3f1ade483a7471e715a4dc2674fd55c6e8",
-      "normalized_formula": "composite_source='tau=Im(S1conj(S2))/rho,rho=1/32.BothSihaveX=-1,Z=0,sotauisgaugeinvariantandCPodd.Noindependenttaudoublewellremains.'",
+      "formula_id": "8aeef1e1f11e576de1f8157e58624559f78ba0e387d145ee01a4f67da45f9a2a",
+      "normalized_formula": "composite_source='tau=4Im(S1conj(S2))/(|S1|2+|S2|2+2rho),rho=1/32.BothSihaveX=-1,Z=0,sotauisgaugeinvariantandCPodd.Itisgloballysmoothwith|tau|<2andequals-1attheoriginalsupersymmetrichome.Noindependenttaudoublewellremains.'",
       "numeric_literals": [
+        "+2",
         "-1",
         "0",
         "1",
-        "32"
+        "2",
+        "32",
+        "4"
       ],
       "occurrence_count": 1,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
@@ -1170034,15 +1170035,15 @@
           "category": "relation_line",
           "line": 140,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
-          "raw": "composite_source='tau=Im(S1 conj(S2))/rho, rho=1/32. Both Si have X=-1,Z=0, so tau is gauge invariant and CP odd. No independent tau double well remains.',",
+          "raw": "composite_source='tau=4 Im(S1 conj(S2))/(|S1|\u00b2+|S2|\u00b2+2rho), rho=1/32. Both Si have X=-1,Z=0, so tau is gauge invariant and CP odd. It is globally smooth with |tau|<2 and equals-1 at the original supersymmetric home. No independent tau double well remains.',",
           "status": "unclassified"
         }
       ],
       "status_profile": {
         "unclassified": 1
       },
-      "structural_family_id": "2cd5fedd7944a7f44f37b38ffc09ed88f16e3be437dd0523baeea78f58e9da89",
-      "structural_formula": "composite_source='tau=Im(S1conj(S2))/rho,rho=#/#.BothSihaveX=#,Z=#,sotauisgaugeinvariantandCPodd.Noindependenttaudoublewellremains.'"
+      "structural_family_id": "1cfc9297338ed7f4b860e884670b3f2559fab4b88f1d0c2da96cbb0752406419",
+      "structural_formula": "composite_source='tau=#Im(S1conj(S2))/(|S1|#+|S2|##rho),rho=#/#.BothSihaveX=#,Z=#,sotauisgaugeinvariantandCPodd.Itisgloballysmoothwith|tau|<#andequals-#attheoriginalsupersymmetrichome.Noindependenttaudoublewellremains.'"
     },
     {
       "file_count": 1,
@@ -1171303,7 +1171304,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 148,
+          "line": 150,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "congruence_Hessian_eigenvalues=[mp.nstr(a,25) for a in ev],positive_multiplier_modes=10,positive_spectator_modes=4,",
           "status": "unclassified"
@@ -1187580,7 +1187581,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 159,
+          "line": 161,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "d=payload();(ROOT/'data/w33_pass11996_joint_singlet_flavour.json').write_text(json.dumps(d,indent=2)+'\\n');print(d['status'],d['source_value'],d['positive_core_and_flavour_modes'])",
           "status": "unclassified"
@@ -1344068,6 +1344069,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d1bf114661b8491e71d8a1008465c988b283c9edaa6da90c3c94dd0072119933",
+      "normalized_formula": "legacy_linear_source_runaway=dict(source='tau_lin=Im(S1conj(S2))/rho',path='S1=T1=R,S2=iR,T2=-iR,P=0,PhiMinus=PhiPlus=1;h=f=0,t=(R^(2/3),0,0).',leading_power='R^(16/3)',leading_coefficient=str(eps*(mp.mpf('.01')-1024*mp.mpf(str(prior['mu']))^2)),proof='SingletF/DgrowthisO(R4),whileeliminateddeterminantsourceandpositiveflavourstabilizergiveeps(.01-1024mu2)R^(16/3)<0.Theearlierlinear-compositemodelhasalocalminimumbutisgloballyunbounded.')",
+      "numeric_literals": [
+        "-1024",
+        ".01",
+        "0",
+        "1",
+        "16",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11996_joint_singlet_flavour.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 141,
+          "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
+          "raw": "legacy_linear_source_runaway=dict(source='tau_lin=Im(S1 conj(S2))/rho',path='S1=T1=R,S2=iR,T2=-iR,P=0,PhiMinus=PhiPlus=1; h=f=0,t=(R^(2/3),0,0).',leading_power='R^(16/3)',leading_coefficient=str(eps*(mp.mpf('.01')-1024*mp.mpf(str(prior['mu']))**2)),proof='Singlet F/D growth isO(R4), while eliminated determinant source and positive flavour stabilizer give eps(.01-1024mu\u00b2)R^(16/3)<0. The earlier linear-composite model has a local minimum but is globally unbounded.'),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "eb17bd3ce134a0cd4a9ff2f7d87779d8084850b07d8fdb00900aaf2dc949be40",
+      "structural_formula": "legacy_linear_source_runaway=dict(source='tau_lin=Im(S1conj(S2))/rho',path='S1=T1=R,S2=iR,T2=-iR,P=#,PhiMinus=PhiPlus=#;h=f=#,t=(R^(#/#),#,#).',leading_power='R^(#/#)',leading_coefficient=str(eps*(mp.mpf('#')#*mp.mpf(str(prior['mu']))^#)),proof='SingletF/DgrowthisO(R4),whileeliminateddeterminantsourceandpositiveflavourstabilizergiveeps(##mu2)R^(#/#)<#.Theearlierlinear-compositemodelhasalocalminimumbutisgloballyunbounded.')"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6c4ae06bc31ad26668520e7ca9a3f3c416e9e72e5cf02847f35b0741a6a5ecf0",
       "normalized_formula": "legacyhardware).Quantumadvantageknob:tmagicgates->classicalcost9^t;t=0is",
       "numeric_literals": [
@@ -1395749,7 +1395783,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 144,
+          "line": 146,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "maximum_singlet_displacement_from_frozen11978=mp.nstr(max(abs(root[i]-mp.mpf(old['selected_real_coordinates'][i])) for i in range(7)),20),",
           "status": "unclassified"
@@ -1397518,7 +1397552,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 150,
+          "line": 152,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "mediator_stability='The13complex flavour mediators have positive heavy Hessian; completing squares makes full72D Hessian congruent to solved46D Hessian plus26positive modes. Singlet multiplier/spectator blocks remain positive and stationary0.',",
           "status": "unclassified"
@@ -1401057,7 +1401091,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 146,
+          "line": 148,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "mixed_Hessian_congruence_scaling='S=diag(I14,sqrt(eps) I18); check S^-1 H S^-1, which has exactly the same inertia as H. Its eigenvalues are NOT physical particle masses.',",
           "status": "unclassified"
@@ -1415686,7 +1415720,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 122,
+          "line": 146,
           "path": "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md",
           "raw": "non-SUSY slice, kappa=.1 gives theta_one_loop=-1.5463556e-4. Zero portal gives",
           "status": "open_or_conditional"
@@ -1472016,7 +1472050,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 154,
+          "line": 156,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "physics_boundary='A numerical local joint72-real-scalar witness, not full E6/orbifold vacuum, a global minimum, observed Yukawa predictions, a protected zero block, or radiative strong CP. The arbitrary vf/Lambda hierarchy controls portal backreaction and is not generated.',",
           "status": "retrospective_fit"
@@ -1475363,7 +1475397,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 147,
+          "line": 149,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "positive_core_and_flavour_modes=30,gauge_zero_modes=2,minimum_positive_congruence_Hessian_eigenvalue=mp.nstr(min(positive),20),",
           "status": "unclassified"
@@ -1475799,14 +1475833,14 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 141,
+          "line": 143,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "potential='V=Lambda^4 V11978_soft_singlet + vf^4 V11981_flavour(x,tau(S)); supplied scale matching and frozen coefficients.',",
-          "status": "unclassified"
+          "status": "certified_or_theorem"
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "certified_or_theorem": 1
       },
       "structural_family_id": "f35957b9213fa52005dbcdbb24f655cf78090a8610b30a01694d64a8b1abbe2f",
       "structural_formula": "potential='V=Lambda^#V1#_soft_singlet+vf^#V1#_flavour(x,tau(S));suppliedscalematchingandfrozencoefficients.'"
@@ -1580242,7 +1580276,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 155,
+          "line": 157,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "prior=['11978 actual softly-broken singlet vacuum and positive multiplier/spectator blocks','11981 pinned-source flavour potential','11989 independent-source model and fitted Barr map','11953 gauge-invariant CP-odd singlet and allowed leakage operator','11965 singlet-to-Barr CP transmission'],",
           "status": "retrospective_fit"
@@ -1677212,14 +1677246,14 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 142,
+          "line": 144,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "singlet_chart_coordinates=[mp.nstr(a,80) for a in root[:7]],triplet_coordinates=list(map(float,x)),triplet_coordinates_decimal=[mp.nstr(a,80) for a in x],",
-          "status": "unclassified"
+          "status": "certified_or_theorem"
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "certified_or_theorem": 1
       },
       "structural_family_id": "818bd3712d5fef2e734bd36b1b1dacd18133f50bf99ad5e4396685e153a3b266",
       "structural_formula": "singlet_chart_coordinates=[mp.nstr(a,#)forainroot[:#]],triplet_coordinates=list(map(float,x)),triplet_coordinates_decimal=[mp.nstr(a,#)forainx]"
@@ -1683649,7 +1683683,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 153,
+          "line": 155,
           "path": "analysis/w33_pass11996_joint_singlet_flavour.py",
           "raw": "source_boundary='This uses the actual11978 soft-mass-only singlet model, NOT its separate canonical pinned-hidden SUGRA root. The new portal is a gauge-invariant nonholomorphic scalar EFT interaction, not a supplied supersymmetric superpotential completion.',",
           "status": "retrospective_fit"
@@ -1766299,7 +1766333,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 94,
+          "line": 110,
           "path": "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md",
           "raw": "with SUPPLIED Lambda=10^16GeV,vf=10^3GeV. There is no independent tau double well.",
           "status": "unclassified"
@@ -1805316,7 +1805350,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 144,
+          "line": 168,
           "path": "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md",
           "raw": "`||Q(a)-Q0||<=sum_e (1+sum_i|J_ei|/2)|q a_e|`.",
           "status": "certified_or_theorem"
@@ -1821668,9 +1821702,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-15T18:57:36-04:00",
+  "frozen_at": "2026-10-15T19:05:43-04:00",
   "pass": 398,
-  "repository_head": "f970f2b9ed7d20f5172c8ea5251e795c2411aee5",
+  "repository_head": "0af0fe781f9182d47a9cded0ccecc9ab9de59d4b",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1948037,11 +1948071,11 @@
     },
     {
       "exact_formula_ids": [
-        "0abc7716b9797edc481e8a1a619aa2981d6b072f8d2af8c5554827a3b30a5410"
+        "58a8d2ae13a169ebc7ded1b45009be8ccfb4cb0be19a07d6323f7b2d0e53dd32"
       ],
       "exact_member_count": 1,
-      "structural_family_id": "c0e1058be10b713265a58ff7eb6234ef444fd72d32abdda170c906784d74fe1d",
-      "structural_formula": "-tau=#;thelargestsingletdisplacementfrom1#is3#e-#"
+      "structural_family_id": "9a54ed59b0c4938afe143a41b1f81c10f31eab2adf86b75b53d6bcbf68e23c42",
+      "structural_formula": "-tau=#;thelargestsingletdisplacementfrom1#is1#e-#"
     },
     {
       "exact_formula_ids": [
@@ -2052381,14 +2052415,6 @@
     },
     {
       "exact_formula_ids": [
-        "61ea8254e07c708ff00d14347a143bb70e20bf42c6a4a29bf57c802a3fc8ce94"
-      ],
-      "exact_member_count": 1,
-      "structural_family_id": "6c0ee96b8a1a3b7975636216094181b11ae9129ad9c4e43cf31de63a6862b778",
-      "structural_formula": "X=#,Z=#.Set`tau=Im(S1conj(S2))/rho`,rho=#/#.ItisgaugeinvariantandCP"
-    },
-    {
-      "exact_formula_ids": [
         "9c5f3c4ed590e6a8d293d58378ff10a1f2ae33179dc33f3d6649c1f01be667b0"
       ],
       "exact_member_count": 1,
@@ -2120330,6 +2120356,14 @@
     },
     {
       "exact_formula_ids": [
+        "e2de697caa39ae96473674b7ad449d81af8d6287916e14e29a9424aa3ae99db0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5a3e60d5308751f3ec710790691f436bb5cca80828eec706eed022d6a748b62b",
+      "structural_formula": "bounded_completion='Forthesaturatedsource|tau|<#,allnegativeeliminatedtermsareboundedbypolynomialsofflavournormofdegreeatmost6(plusbounded-sourcequadratic/mixedcubicterms),uniformlyinsingletamplitudes.Positivenorm^#stabilizersdominate.Positivesoftmassesinthefullsingletmodelandpositivemediatorsquaresgivecompactsublevelsetsandanattainedglobalminimum.ThedisplayedlocalCPbranchisNOTcertifiedasthatglobalminimum.'"
+    },
+    {
+      "exact_formula_ids": [
         "79eb95b9553359565e25f07d12320c3b583f5da95639ef184b24255c348ea1ce"
       ],
       "exact_member_count": 1,
@@ -2134774,11 +2134808,11 @@
     },
     {
       "exact_formula_ids": [
-        "f636a1389978db630bab33e86a7b9f3f1ade483a7471e715a4dc2674fd55c6e8"
+        "8aeef1e1f11e576de1f8157e58624559f78ba0e387d145ee01a4f67da45f9a2a"
       ],
       "exact_member_count": 1,
-      "structural_family_id": "2cd5fedd7944a7f44f37b38ffc09ed88f16e3be437dd0523baeea78f58e9da89",
-      "structural_formula": "composite_source='tau=Im(S1conj(S2))/rho,rho=#/#.BothSihaveX=#,Z=#,sotauisgaugeinvariantandCPodd.Noindependenttaudoublewellremains.'"
+      "structural_family_id": "1cfc9297338ed7f4b860e884670b3f2559fab4b88f1d0c2da96cbb0752406419",
+      "structural_formula": "composite_source='tau=#Im(S1conj(S2))/(|S1|#+|S2|##rho),rho=#/#.BothSihaveX=#,Z=#,sotauisgaugeinvariantandCPodd.Itisgloballysmoothwith|tau|<#andequals-#attheoriginalsupersymmetrichome.Noindependenttaudoublewellremains.'"
     },
     {
       "exact_formula_ids": [
@@ -2182066,6 +2182100,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7f7eea6032774dc055effe6974f30a804d367b45b9e52df5d8ad80bcf16d7221",
       "structural_formula": "leftaresidualof+#versusPDG(CODATA2#)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "d1bf114661b8491e71d8a1008465c988b283c9edaa6da90c3c94dd0072119933"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "eb17bd3ce134a0cd4a9ff2f7d87779d8084850b07d8fdb00900aaf2dc949be40",
+      "structural_formula": "legacy_linear_source_runaway=dict(source='tau_lin=Im(S1conj(S2))/rho',path='S1=T1=R,S2=iR,T2=-iR,P=#,PhiMinus=PhiPlus=#;h=f=#,t=(R^(#/#),#,#).',leading_power='R^(#/#)',leading_coefficient=str(eps*(mp.mpf('#')#*mp.mpf(str(prior['mu']))^#)),proof='SingletF/DgrowthisO(R4),whileeliminateddeterminantsourceandpositiveflavourstabilizergiveeps(##mu2)R^(#/#)<#.Theearlierlinear-compositemodelhasalocalminimumbutisgloballyunbounded.')"
     },
     {
       "exact_formula_ids": [
@@ -2308494,20 +2308536,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88906950,
-    "exact_formula_families": 62298,
+    "bytes_scanned": 88910329,
+    "exact_formula_families": 62299,
     "files_scanned": 12196,
-    "formula_occurrences": 68312,
+    "formula_occurrences": 68313,
     "status_occurrences": {
-      "certified_or_theorem": 5063,
+      "certified_or_theorem": 5066,
       "killed_or_retracted": 1677,
       "open_or_conditional": 2286,
       "preregistered": 33,
       "retrospective_fit": 5253,
-      "unclassified": 54000
+      "unclassified": 53998
     },
-    "structural_families": 60640
+    "structural_families": 60641
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "361a17f238a5c9a21d1f440e530a114edf7b181c8f7b91f75493ac07819899c3"
+  "universe_sha256": "a5ff0c78c295de96962a543ad6243be3d6a31ae2cc00c8f742e1c6e50b946e9d"
 }
