@@ -67,9 +67,13 @@ solutions are numerical examples. They reproduce the full offdiagonal Q-dependen
 Gowdy metric after the stated Euclidean-clock conversion. An independent weighted
 Bloch-band refinement checks the acoustic response, beyond fitting a matrix.
 
-For a full metric chart including shift, define E=(R^-1 G(W) R^-T)^-1 and fixed
-clock e=(1,0,0,0), then g=E-2 Eee^T E/(e^T E e). This is an involution between
-positive E and Lorentz g with e timelike. Consequently a SUPPLIED continuum
+Use the actual first11994 clock u, a covector for the acoustic principal
+symbol. Align an orthonormal frame R R^T=G0 so R^T u/sqrt2=e0. Set
+A=R^-1 G(W) R^-T and g=[A-2 A e0 e0^T A/(e0^T A e0)]^-1.
+The baseline native Lorentz symbol is exactly twice11994's normalized eta;
+the clock and metric constructions therefore use the same actual direction.
+Reflection is involutive on inversemetrics and retains all ten components,
+including shift. Consequently a SUPPLIED continuum
 Einstein–Hilbert action S_EH[g(W)] is locally a field redefinition of GR on ten
 weight fields. It inherits standard constraints/two propagating modes only
 because the Einstein action and continuum derivatives were input. Generic

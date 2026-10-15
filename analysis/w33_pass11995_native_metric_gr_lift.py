@@ -56,7 +56,17 @@ def payload():
     analytic=np.array(derivative,float)@dw
     fd_error=float(max(abs(pack(fd)-analytic)));assert fd_error<1e-8
     # Baseline orthonormal drawing. G is the inverse/acoustic metric here.
-    R=np.linalg.cholesky(np.array(G,float));rows=[]
+    R=np.linalg.cholesky(np.array(G,float))
+    clock=json.loads((ROOT/'data/w33_pass11994_native_clock_order.json').read_text())['vacua'][0]
+    u=np.array(list(map(float,clock['clock_primitive'])))
+    direction=R.T@u/np.sqrt(u@np.array(G,float)@u);e=np.eye(4)[:,0]
+    difference=e-direction
+    O=np.eye(4) if np.linalg.norm(difference)<1e-12 else np.eye(4)-2*np.outer(difference,difference)/np.dot(difference,difference)
+    R=R@O
+    assert np.max(abs(R.T@u/np.sqrt(2)-e))<1e-12
+    baseline_K=np.array(G,float)-np.outer(np.array(G,float)@u,np.array(G,float)@u)
+    assert np.max(abs(baseline_K-2*np.array(s.Matrix(clock['metric_Q']),float)))<1e-12
+    rows=[]
     for t,P,Q,lam in [(1,0,0,0),(1.001,.002,.003,.001),(.999,-.002,-.003,-.001),(1.004,.001,-.002,.002)]:
         a=np.exp(lam/2)/np.sqrt(t)
         lorentz=np.zeros((4,4));lorentz[0,0]=-a;lorentz[1,1]=a
@@ -64,7 +74,8 @@ def payload():
         euclidean=lorentz.copy();euclidean[0,0]*=-1
         target=R@np.linalg.inv(euclidean)@R.T
         w,history=lift(target,b,v,selected);metric,_=homogenize(w,b,v)
-        restored=np.linalg.inv(np.linalg.solve(R,metric)@np.linalg.inv(R.T));restored[0,0]*=-1
+        A=np.linalg.solve(R,metric)@np.linalg.inv(R.T)
+        K=A-2*np.outer(A@e,A@e)/(e@A@e);restored=np.linalg.inv(K)
         error=float(np.max(abs(restored-lorentz)));assert error<1e-11
         rows.append(dict(t=t,P=P,Q=Q,lambda_value=lam,selected_weights=w[selected].tolist(),minimum_weight=float(min(w)),Newton_residual_history=history,Lorentz_metric_error=error))
     return dict(status='PASS',native_edges=135,metric_components=10,
@@ -73,7 +84,8 @@ def payload():
         exact_jacobian_Q=[[str(x) for x in row] for row in derivative[:,selected].tolist()],
         implicit_function_theorem='Nonzero rational10x10 Jacobian proves an open neighborhood of the baseline metric is realized by positive native weights, fixing the other125weights. This local existence statement is exact; displayed finite Newton lifts are numerical witnesses.',
         derivative_finite_difference_error=fd_error,Gowdy_metric_lifts=rows,
-        conditional_GR_action='Define E=(R^-1 G(w) R^-T)^-1 and fixed e=(1,0,0,0). Set g=E-2 E e e^T E/(e^T E e). This map is involutive between positive E and Lorentz g with e timelike, so all10components remain. On this10weight chart, S[w]=S_EH[g(w)] is an invertible field redefinition of supplied continuum Einstein gravity, with lapse/shift constraints and2 propagating modes inherited. No claim that a sum of native graph terms generates this action. The inverse map is cellwise, while continuum derivatives/limit are extra inputs.',
+        clock_primitive_coordinates=u.tolist(),clock_aligned_frame_R=R.tolist(),baseline_clock_symbol_equals_twice11994_eta=True,
+        conditional_GR_action='Align R R^T=G0 so R^T u/sqrt2=e0 for actual11994clock u, which is a clock covector in the acoustic symbol. Define A=R^-1 G(w) R^-T and g=[A-2 A e0 e0^T A/(e0^T A e0)]^-1. The reflection is involutive between positive inversemetrics and Lorentz inversemetrics with e0 timelike, so all10components remain. On this10weight chart, S[w]=S_EH[g(w)] is an invertible field redefinition of supplied continuum Einstein gravity, with lapse/shift constraints and2 propagating modes inherited. No claim that a sum of native graph terms generates this action. The inverse map is cellwise, while continuum derivatives/limit are extra inputs.',
         redundant_edge_weight_kernel_dimension=125,
         gravity_boundary='Kinematic ability to encode all10 metric components and the offdiagonal nonlinear Gowdy metric, not W33-derived Einstein equations, refoliation symmetry or Newton/Lambda selection. Adding generic kinetic terms for135weights would introduce extra modes, not2gravitons.',
         prior=['11956 exact 3D weighted Gauss-reduced metric matching and contraction proof','11991 actual4period cover and acousticG','11992 imported full nonlinear Gowdy Einstein benchmark','11976 finite pointwise constraint failure'],

@@ -178,3 +178,12 @@ def test_actual_complex_charge_commutes_with_reduced_but_not_native_gates():
         assert np.linalg.norm(Q@V-V@Q)<1e-10
         raw.append(np.linalg.norm(Q@N-N@Q))
     assert max(raw)>1
+
+
+def test_metric_clock_is_the_actual_ordered_native_direction():
+    d=read('11995_native_metric_gr_lift');G=np.array(s.Matrix(read('11991_native_four_period_cover')['exact_acoustic_metric']),float)
+    row=read('11994_native_clock_order')['vacua'][0];u=np.array(list(map(float,row['clock_primitive'])));R=np.array(d['clock_aligned_frame_R']);e=np.eye(4)[:,0]
+    assert np.max(abs(R@R.T-G))<1e-12
+    assert np.max(abs(R.T@u/np.sqrt(2)-e))<1e-12
+    K=G-2*np.outer(G@u,G@u)/(u@G@u)
+    assert np.max(abs(K-2*np.array(s.Matrix(row['metric_Q']),float)))<1e-12
