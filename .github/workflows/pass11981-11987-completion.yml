@@ -1,0 +1,40 @@
+name: Pass11981-11987 seven completion fronts
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1198[1-7]_*.py'
+      - 'tests/test_w33_pass11981_11987_completion.py'
+      - '.github/workflows/pass11981-11987-completion.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy==1.14.0 pytest
+      - name: Frozen witnesses and prior regressions
+        run: python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass11981_11987_completion.py tests/test_w33_pass11980_heisenberg_fixed_holonomies.py tests/test_w33_20261015_toe82_native_H27_h1_character.py
+      - name: Regenerate all seven producers
+        run: |
+          python analysis/w33_pass11981_cubic_mediator_cp.py
+          python analysis/w33_pass11982_quantum_gauss_holonomies.py
+          python analysis/w33_pass11983_atlas_projector_descent.py
+          python analysis/w33_pass11984_native_fiber_overlap.py
+          python analysis/w33_pass11985_nonlinear_metric_clock.py
+          python analysis/w33_pass11986_logical_modular_descent.py
+          python analysis/w33_pass11987_atlas_spin_gate_alphabet.py
+      - name: Check regenerated results
+        run: python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass11981_11987_completion.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass11981-11987-completion
+          path: |
+            data/w33_pass1198[1-7]_*.json

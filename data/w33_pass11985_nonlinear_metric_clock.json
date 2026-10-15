@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "native_interpretation": "q=q_v-q_w, p=(p_v-p_w)/2 on a chosen native Levi edge; a>0 is an added metric coefficient with canonical momentum pi.",
+  "h1": "a*p**2/2",
+  "bare_h2": "pi**2/2 + (a - 1)**4/4 + (a - 1)**2/2 + q**2/(2*a) + q**4/(4*a**3)",
+  "bare_clock_bracket": "p**2*pi/2 - p*q - p*q**3/a**2",
+  "dressed_h2": "a**4/4 - a**3 + 2*a**2 + a*p**4*t**4/4 + a*p**2*t**2/2 - 2*a + p**4*t**2/8 - p**3*q*t**3 + p**2*pi*t/2 - p*q*t + pi**2/2 + 3/4 + 3*p**2*q**2*t**2/(2*a) + q**2/(2*a) - p*q**3*t/a**2 + q**4/(4*a**3)",
+  "exact_dressed_clock_bracket": "0",
+  "constraint_count": 2,
+  "extended_real_phase_dimension": 8,
+  "physical_real_phase_dimension": 4,
+  "original_physical_pairs": [
+    "q,p",
+    "a,pi"
+  ],
+  "input_metric_is_dynamical": true,
+  "quartic_metric_potential": true,
+  "quartic_matter_interaction": true,
+  "analytic_flow": "q(t)=q0+a*p0*t; p(t)=p0; a(t)=a0; pi(t)=pi0-p0^2*t/2",
+  "exact_native_lapse_obstruction_not_retracted": "11976 tests a different pointwise hypersurface bracket; no metric-only potential repair is claimed here.",
+  "prior": [
+    "analysis/w33_pass11306_relational_graph_clock_constraints.py owns quadratic80clock dressing and Maurer-Cartan method",
+    "11976 native scalar metric lapse failure"
+  ],
+  "scope": "Exact nonlinear canonical metric-clock prototype. Clock constraints are Abelian and retain the original two physical pairs; this is NOT nonlinear GR, a derived spacetime metric, or the gravitational hypersurface-deformation algebra.",
+  "primary": "https://arxiv.org/abs/1011.2463"
+}

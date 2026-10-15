@@ -1,0 +1,39 @@
+{
+  "reservation": "daf6e39c875bf7c647620acfaf9a374f67b4c1ae",
+  "spin_reservation": "d2797b590567d462ef2d8338752d64e2d74ace9b",
+  "science_lf_sha256": {
+    "analysis/w33_pass11981_cubic_mediator_cp.py": "937a0a4f3036236cda50899efa248c3223cf097468adce74034c93f959f135dd",
+    "analysis/w33_pass11982_quantum_gauss_holonomies.py": "e8818e33ae17cb129f58ca6d696a363755d0cf533fcfe6d1e6b6d0830453e46a",
+    "analysis/w33_pass11983_atlas_projector_descent.py": "66fc26267bad2acb62685469215dc36c71c5aa1f0a8458fb0d1604342108b74f",
+    "analysis/w33_pass11984_native_fiber_overlap.py": "e7c4118b40f55a11327af475c80ec6dd67d2f62723f1193edb36eb8c89cb4e9c",
+    "analysis/w33_pass11985_nonlinear_metric_clock.py": "400d0978d643a8b7f3d76997f2d30f2142eb2f1d692fdb4f87125851654e806f",
+    "analysis/w33_pass11986_logical_modular_descent.py": "906dbe3446056537721a730a8287f8aa1e0230600ba0d808b216e0a12515a9df",
+    "analysis/w33_pass11987_atlas_spin_gate_alphabet.py": "19980736c374a8e056a5b8d061ea86c4c03bf0728526f29e2a234843ade75c4b",
+    "analysis/PASS11981_11987_SEVEN_COMPLETION_FRONTS.md": "29618859999434a25ea03ba88c9eac66e9d892b25b0c7aebbcafa222eaf3be50",
+    "tests/test_w33_pass11981_11987_completion.py": "dda0ffe154e2e38eeee611e6594b1b763e2400604a7638383ca88d5f88212d0f",
+    ".github/workflows/pass11981-11987-completion.yml": "ec4f02e5435c9e9c73ad13cdccfa6510faed28791b8c019d27167cfde9483cab",
+    "data/w33_pass11981_cubic_mediator_cp.json": "cfeff040a9aa4162931fd9866568bea774cf1242f22d2427958338adf4bce81b",
+    "data/w33_pass11982_quantum_gauss_holonomies.json": "847e44ebd21c8832122a57b93a8091970ec9224cd04391e907b6bcb5d3f59a16",
+    "data/w33_pass11983_atlas_projector_descent.json": "07f757825e5fc19eb6f50a72ef4c7959cc6e91ccaf97970e1e1443b911bb59e4",
+    "data/w33_pass11984_native_fiber_overlap.json": "0f1f43f793fd8d9f34c4be65d668cf69edd267a14bf092c2fddcac346a598306",
+    "data/w33_pass11985_nonlinear_metric_clock.json": "9d1d947448d1dbc72d3c6031f89adfd94bfc23c7fd5dc34b0995fe6d51ba59b8",
+    "data/w33_pass11986_logical_modular_descent.json": "8d8cfadfcbf2c7b8e12f49eab641d193cc058a927ba4b0dbb1a027b6b4c567aa",
+    "data/w33_pass11987_atlas_spin_gate_alphabet.json": "79f730682bdbbc0fd05e6d2009278781a35ff635ff5efba5f7177d8d4782b2cd"
+  },
+  "prior_input_lf_sha256": {
+    "data/w33_pass11975_mediator_flavour_matching.json": "3502ce8da2ef7fa19339514a05bddfe9a24d6de84bbc390185b0eb382049ad2f",
+    "analysis/w33_pass11975_mediator_flavour_matching.py": "2c298e88468212ca5bf92cabd63bb484083c6d581ee9f088918ce9c374aeb122",
+    "data/w33_pass11980_heisenberg_fixed_holonomies.json": "b978c29d8553ba5fc45f00e67af54555c3a04b162bc7e086b3ca8452609987d1",
+    "analysis/w33_pass11980_heisenberg_fixed_holonomies.py": "299723baba52075b3381eb2ad56c61c19842dd9120f37e0c0dbf1db55fedcebd",
+    "data/w33_20261015_toe83_h27_square_css_surgery.json": "dd856b53c978dd8d1d6b21a88af5e6849bc86724780b49f243c131f94404b7be",
+    "analysis/w33_20261015_toe84_h27_logical_clifford.py": "71833810990ad5d3c52d76e087d7d14d60b47dc1f7dbbf7bbd3d16d11d1fe3d8",
+    "analysis/w33_20261015_toe82_native_H27_h1_character.py": "e3f5f39646561bcc6a3a574dce1e3b9c98ea77e81f5587aa88a87a2117df667d",
+    "analysis/w33_pass1081_1086_core.py": "c1d7af45b964fb5131a04581ac1e42e163d733b6ea3d2f022531dd49e88eae7f",
+    "analysis/w33_20261014_toe68_overlap_control.py": "21fd918d14784e06972baad15b1e887933ea3da247fd6b48e254bd33797af0dd",
+    "analysis/w33_pass11306_relational_graph_clock_constraints.py": "103253a35b3b6295d361ea6030d1ea55525f9ff8df6068091acc101493af4d65"
+  },
+  "local_combined_tests": "...................                                                      [100%]\n19 passed in 23.24s\n",
+  "final_local_new_tests": "............                                                             [100%]\n12 passed in 13.88s\n",
+  "hosted_status": "pending after science publication",
+  "scope": "Exact O6 compact polar holonomy/SU4 spin-gate density and finite-model CP-breaking numerical UV vacua; no complete physicalTOE claim."
+}

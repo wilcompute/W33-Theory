@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "full_hybrid_spinor_dimension": 25920,
+  "actual_local_kernel": "Q_total=I80 tensor Q_T4 + L_W33_Levi tensor gamma5. Optical Laplacian mass coefficient1. Equivalently DW_total=I tensor DW_T4+L tensor I.",
+  "locality": "Nearest-neighbor T4 spacetime edges plus actual160 native internal Levi links, onsite otherwise. This is a hybrid product with an externally supplied4D base.",
+  "native_optical_sectors": [
+    {
+      "native_L_eigenvalue": 0.0,
+      "multiplicity": 1,
+      "index_per_sector": 1,
+      "gap": 0.3455097810878967
+    },
+    {
+      "native_L_eigenvalue": 1.5505102572168221,
+      "multiplicity": 24,
+      "index_per_sector": 0,
+      "gap": 1.1942476738629677
+    },
+    {
+      "native_L_eigenvalue": 4.0,
+      "multiplicity": 30,
+      "index_per_sector": 0,
+      "gap": 3.640970426627881
+    },
+    {
+      "native_L_eigenvalue": 6.449489742783178,
+      "multiplicity": 24,
+      "index_per_sector": 0,
+      "gap": 6.0895709635980735
+    },
+    {
+      "native_L_eigenvalue": 8.0,
+      "multiplicity": 1,
+      "index_per_sector": 0,
+      "gap": 7.639775160757232
+    }
+  ],
+  "total_charge1_overlap_index": 1,
+  "local_spectral_tensor_action_error": 6.257719659362428e-14,
+  "exact_optical_gap_bound": "For lambda>0, Re DW_total >= lambda-m0 >0 since lambda_min_positive=4-sqrt6>1=m0. Thus optical blocks stay gapped through kinetic-to-zero homotopy and have zero index.",
+  "primitive_E6_root_charge_histogram": {
+    "-1": 6,
+    "0": 15,
+    "1": 6
+  },
+  "mixed_gravity_anomaly": 0,
+  "cubic_U1_anomaly": 0,
+  "charge_minus1_index": 1,
+  "charged_index_multiplicities": {
+    "q=-1": 6,
+    "q=+1": 6
+  },
+  "explicit_chiral_SU5_extension": {
+    "representation": "Standard chiral SU5 10 + conjugate5; an explicit additional matter choice, not selected by W33.",
+    "generators": 24,
+    "all_ordered_cubic_anomaly_entries_checked": 13824,
+    "max_Tr_Ta_anticommutator_Tb_Tc": 5.551115123125783e-16,
+    "selected_Cartan_charge_histogram": {
+      "-1": 4,
+      "0": 7,
+      "1": 4
+    },
+    "selected_background_total_Weyl_overlap_index": 8,
+    "chiral_boundary": "The fullSU5 representation is chiral and perturbatively anomalyfree; its selectedU1 restriction is vectorlike. GW Weyl projectors are defined by the kernel. A global non-Abelian Weyl measure, interacting gauge dynamics, vacuum selection and threefamilies are not built."
+  },
+  "scope": "Nonzero hybrid probe index and selectedU1 anomaly cancellation, with native optical decoupling. The chargedU1 content is vectorlike, not chiralSM. No fullE6 anomaly-free lattice measure or threefamilies. CoarseT4 plaquettes violate a standard sufficient overlap-locality bound; no uniform locality theorem or native4D continuum is inferred.",
+  "prior": [
+    "TOE68 conventionalT4 indexpositivecontrol",
+    "TOE69 largecharge aliasing correction",
+    "11970/11977 different nativecover Dirac/overlap kernel",
+    "TOE80 E6 minuscule weights"
+  ],
+  "primary": "https://arxiv.org/abs/hep-lat/9801031"
+}
