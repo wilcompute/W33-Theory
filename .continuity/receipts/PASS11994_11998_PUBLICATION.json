@@ -1,6 +1,6 @@
 {
   "reservation": "4cb9f43450b9b919762b1cd3f11f9e0d23337fc6",
-  "science_commit": null,
+  "science_commit": "0af0fe781f9182d47a9cded0ccecc9ab9de59d4b",
   "science_sha256_lf": {
     "analysis/w33_pass11994_native_clock_order.py": "ecd1f83eda048ef4af776c2f5f2c59470a7841afe0a86ca0271c0d4002bcd83c",
     "analysis/w33_pass11995_native_metric_gr_lift.py": "99eaf3063e7b1e95a994e6a0c644e6b2ebedaa3a1898b16814d2f30478e2af32",
@@ -42,7 +42,53 @@
     "11998_complex_reduction_tradeoff": "PASS"
   },
   "guard": "No source rediscovery warnings; prior general methods and specific corpus constructions explicitly cited.",
-  "hosted": null,
+  "hosted": {
+    "run_id": 38821467732,
+    "job_id": 116718780445,
+    "science_commit": "0af0fe781f9182d47a9cded0ccecc9ab9de59d4b",
+    "conclusion": "success",
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/38821467732",
+    "frozen_tests": "16 passed in3.09s",
+    "producers_PASS": 5,
+    "regenerated_tests": "16 passed in2.70s",
+    "artifact_id": 12012846782,
+    "artifact_size_bytes": 77409,
+    "artifact_zip_sha256": "d3d717e44b758e65cf280562fbe7f181fd91fd81816a2edd15c80ce2e5ed3ec7",
+    "selected_exact_certificate_fields_equal": {
+      "11994_native_clock_order": [
+        "native_moment_polynomials",
+        "exact_anisotropy_identity",
+        "global_vacuum_count",
+        "vacua"
+      ],
+      "11995_native_metric_gr_lift": [
+        "exact_metric_jacobian_rank",
+        "selected_edge_indices",
+        "selected_jacobian_determinant",
+        "exact_jacobian_Q",
+        "clock_primitive_coordinates",
+        "baseline_clock_symbol_equals_twice11994_eta"
+      ],
+      "11996_joint_singlet_flavour": [
+        "singlet_chart_coordinates",
+        "triplet_coordinates_decimal",
+        "scaled_core_flavour_Hessian_decimal",
+        "source_value",
+        "legacy_linear_source_runaway",
+        "bounded_completion"
+      ],
+      "11997_native_chiral_tube": [
+        "rational_gap_certificate",
+        "exact_charge_anomaly_moments"
+      ],
+      "11998_complex_reduction_tradeoff": [
+        "centralizer_basis_Q",
+        "exact_so6_dimension",
+        "exact_J_centralizer_dimension",
+        "exact_J_anticommuting_dimension"
+      ]
+    }
+  },
   "scope": "Five research investigations executed. Supplied sign/action/scale/portal/metric choices remain explicit; no fullTOE/nativeGR/localglobalchiralmeasure/fullE6/radiativeCPsolution.",
   "initial_science_commit": "f970f2b9ed7d20f5172c8ea5251e795c2411aee5",
   "initial_science_sha256_lf": {
@@ -119,5 +165,11 @@
     "conclusion": "success",
     "scope": "Clock alignment before bounded-source completion; does not attest final bounded model."
   },
-  "bounded_source_repair": "Original unsaturated composite has explicitnegativeR^(16/3)runaway despite localstability. Final smoothCPodd/gaugeinvariant saturatedsource obeys|tau|<2, makes flavour lowerbound uniformin singlet amplitudes, and fullpositive-soft-mass/mediator completioncoercive.100digitlocalroot positive; globalminimum exists but displayedCPbranch not certifiedglobal."
+  "bounded_source_repair": "Original unsaturated composite has explicitnegativeR^(16/3)runaway despite localstability. Final smoothCPodd/gaugeinvariant saturatedsource obeys|tau|<2, makes flavour lowerbound uniformin singlet amplitudes, and fullpositive-soft-mass/mediator completioncoercive.100digitlocalroot positive; globalminimum exists but displayedCPbranch not certifiedglobal.",
+  "results_index": {
+    "files": 12301,
+    "distinctive_results": 16922,
+    "unique_results": 7407,
+    "sha256_lf": "e02e8299027c45fc78bff46c73a073dfb88fba6b22098cfc03ec1281aaf911e0"
+  }
 }
