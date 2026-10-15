@@ -1,0 +1,13 @@
+{
+  "reservation": "3f37205ad61e5990903f09cebf780935da357c59",
+  "local_test_output": ".......                                                                  [100%]\n7 passed in 29.78s\n",
+  "lf_sha256": {
+    "analysis/w33_pass11980_heisenberg_fixed_holonomies.py": "299723baba52075b3381eb2ad56c61c19842dd9120f37e0c0dbf1db55fedcebd",
+    "analysis/PASS11980_DISCRETE_HEISENBERG_HOLONOMIES.md": "633863e3e9e6c40fe5a348e450cfe28325193d7d7a2b376b65c8d02400ad0416",
+    "tests/test_w33_pass11980_heisenberg_fixed_holonomies.py": "b44969f9c84577eac6d64375967e4fa4a317b5b44904feba5d6b630ffc485b34",
+    ".github/workflows/pass11980-fixed-holonomies.yml": "ab274097128624c6e4dc344dfde1d3a67a2cf6166d67db31a1619c8435e77b15",
+    "data/w33_pass11980_heisenberg_fixed_holonomies.json": "b978c29d8553ba5fc45f00e67af54555c3a04b162bc7e086b3ca8452609987d1",
+    ".continuity/receipts/PASS11980_INTAKE.json": "86fc779f3444579511d24199ad5f94b3d9c8912af698d5d4278a07507e73c654"
+  },
+  "hosted_status": "pending after science publication"
+}

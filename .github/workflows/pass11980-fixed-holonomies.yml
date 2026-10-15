@@ -1,0 +1,25 @@
+name: Pass11980 integral Heisenberg fixed holonomies
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass11980_heisenberg_fixed_holonomies.py'
+      - 'tests/test_w33_pass11980_heisenberg_fixed_holonomies.py'
+      - '.github/workflows/pass11980-fixed-holonomies.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy sympy==1.14.0 pytest
+      - name: Integral, modular, gauge, spectral and second-basis tests
+        run: OPENBLAS_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass11980_heisenberg_fixed_holonomies.py tests/test_w33_20261015_toe82_native_H27_h1_character.py
+      - run: OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass11980-fixed-holonomies
+          path: data/w33_pass11980_heisenberg_fixed_holonomies.json
