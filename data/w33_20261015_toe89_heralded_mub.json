@@ -1,0 +1,29 @@
+{
+  "EB_postnoise_upper_bound": 0.5089680000000001,
+  "accepted_probabilities_range": [
+    0.004226384060456481,
+    0.32762969448259155
+  ],
+  "accepted_shots": 1200,
+  "alternative_power_under_iid": 0.9932423412730284,
+  "calibrated_measurement_effect_expectation_error": 0.01,
+  "calibrated_prep_trace_distance": 0.01,
+  "coherent_v025_conservative_postnoise_survival": 0.5889445,
+  "derivation": "For rank-1 instrument E(rho)=Tr(M rho) sigma, design moment yields F_acc=(Tr M + Tr M sigma)/(4 Tr M) <= 1/2; positive linear sums preserve bound. This is not device-independent.",
+  "explicit_stochastic_instrument_samples": 96,
+  "heralding_independent_of_setting_not_required": "Acceptance may correlate with the prepared quantum state through the measurement outcome as long as the same CP map acts without basis-label side information and the full secret-uniform 2-design is used in the denominator.",
+  "mathematical_claim": "For a uniform projective qutrit 2-design and any secret-setting-independent trace-decreasing entanglement-breaking CP map E, P(return | heralded accepted) <= 2/(3+1)=1/2. Arbitrary outcome-dependent heralding is allowed.",
+  "max_2design_identity_residual": 2.220446049250313e-16,
+  "max_sampled_EB_conditional_survival": 0.4771723584946538,
+  "null_one_sided_tail": 0.0009467410865383816,
+  "reject_at_least": 665,
+  "security_limit": "Adversary could know basis label, selected outcome, calibration secrets, or manipulate trusted measurement/prepare devices. Basis-label leakage and nonuniform selection can invalidate universal bound. No physical device is tested.",
+  "setting_side_channel_and_postselection_spoof": {
+    "acceptance_other_basis": 0.1,
+    "accepted_state_mean_fidelity": 0.8461538461538461,
+    "setting_dependency_max_minus_min": 0.9,
+    "total_accepted_fraction": 0.325
+  },
+  "sym_readout_error": 0.02,
+  "uniform_leakage_replacement": 0.03
+}

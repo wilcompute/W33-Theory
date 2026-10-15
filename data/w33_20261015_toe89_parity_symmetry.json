@@ -1,0 +1,247 @@
+{
+  "conclusion": "The 2-torsion Bockstein image carries a faithful two-dimensional F2[H27/A] irreducible C3 module; its order-nine kernel A gives a canonical Pauli-direction label for the two Z/6 torsion families.",
+  "limit": "Does not exhibit a canonical minimal geometric 24-face support or extend the order-1296 normalizer to full W(E6).",
+  "representatives": [
+    {
+      "H27_action": "zero",
+      "kernel_order": 27,
+      "pair": [
+        0,
+        10
+      ],
+      "torsion_module_dimension": 0
+    },
+    {
+      "H27_action": "zero",
+      "kernel_order": 27,
+      "pair": [
+        1,
+        2
+      ],
+      "torsion_module_dimension": 0
+    },
+    {
+      "binary_nontrivial_simple_dim": 2,
+      "generator_action_matrices": [
+        {
+          "M": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "M": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "M": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "kernel_H27_addresses": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "kernel_order": 9,
+      "kernel_projective_Pauli_direction_index": 0,
+      "pair": [
+        1,
+        31
+      ],
+      "quotient_image_is_C3": true,
+      "torsion_module_dimension": 2
+    },
+    {
+      "binary_nontrivial_simple_dim": 2,
+      "generator_action_matrices": [
+        {
+          "M": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "M": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "M": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "kernel_H27_addresses": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ]
+      ],
+      "kernel_order": 9,
+      "kernel_projective_Pauli_direction_index": 3,
+      "pair": [
+        1,
+        36
+      ],
+      "quotient_image_is_C3": true,
+      "torsion_module_dimension": 2
+    }
+  ],
+  "source": "Integer 24-face membrane Bockstein images on native cubic-surface oriented chains; 729 H27 representation equations checked."
+}

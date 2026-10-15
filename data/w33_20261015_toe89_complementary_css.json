@@ -1,0 +1,58 @@
+{
+  "X_SUM_gates_per_round": 270,
+  "X_conflict_free_layers": 10,
+  "X_vertex_checks": 27,
+  "Z_SUM_gates_per_round": 351,
+  "Z_conflict_free_layers": 6,
+  "Z_face_checks": 99,
+  "data_qutrits": 135,
+  "flag_prepost_SUM_gates_per_round": 252,
+  "flag_qudits_per_round_when_enabled": 126,
+  "limits": "Flag pre/post couplings are ideal noiseless, pre interaction acts trivially in the fresh Pauli frame. No actual flag-aware decoder implemented; viterbi per check is NOT a full spacetime decoder. No X/Z parity measurement gadget calibration, no logical failure or threshold.",
+  "rates": {
+    "X_ancilla_X_hook": 0.00065,
+    "Z_ancilla_Z_hook": 0.00065,
+    "data_X": 0.00025,
+    "data_Z": 0.00025,
+    "digit_readout": 0.0015,
+    "idle_X": 0.0001,
+    "idle_Z": 0.0001
+  },
+  "round_count": 3,
+  "runs": [
+    {
+      "flag_ancillas_enabled": false,
+      "means": {
+        "any_flag_detected": 0.0,
+        "any_hook_injected": 0.7361111111111112,
+        "final_true_X_syndrome_nonzero": 0.5,
+        "final_true_Z_syndrome_nonzero": 0.5625,
+        "hook_faults_count": 1.2986111111111112,
+        "nonzero_data_X": 0.5625,
+        "nonzero_data_Z": 0.5,
+        "nonzero_flag_qudits_count": 0.0,
+        "raw_zero_physical_residual": 0.3333333333333333,
+        "temporal_filtered_zero_physical_residual": 0.22916666666666666
+      },
+      "shots": 144
+    },
+    {
+      "flag_ancillas_enabled": true,
+      "means": {
+        "any_flag_detected": 0.7361111111111112,
+        "any_hook_injected": 0.7361111111111112,
+        "final_true_X_syndrome_nonzero": 0.5,
+        "final_true_Z_syndrome_nonzero": 0.5625,
+        "hook_faults_count": 1.2986111111111112,
+        "nonzero_data_X": 0.5625,
+        "nonzero_data_Z": 0.5,
+        "nonzero_flag_qudits_count": 1.2986111111111112,
+        "raw_zero_physical_residual": 0.3333333333333333,
+        "temporal_filtered_zero_physical_residual": 0.22916666666666666
+      },
+      "shots": 144
+    }
+  ],
+  "shots_per_case": 144,
+  "status": "STOCHASTIC_TOY_CSS_CIRCUIT_AND_EXACT_COMMUTATION"
+}

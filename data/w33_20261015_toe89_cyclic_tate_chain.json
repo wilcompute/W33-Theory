@@ -1,0 +1,472 @@
+{
+  "C0_C3_free_module_count": 9,
+  "C1_C3_free_module_count": 45,
+  "C2_C3_Tate_dimension_in_each_degree": 3,
+  "C2_C3_fixed_triangle_faces": 3,
+  "C2_C3_free_3D_modules": 32,
+  "all_13_two_orbit_classes": [
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 24,
+      "pair": [
+        0,
+        10
+      ],
+      "selected_Pauli_direction_index": 1
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 12,
+      "pair": [
+        0,
+        37
+      ],
+      "selected_Pauli_direction_index": 1
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 48,
+      "pair": [
+        1,
+        2
+      ],
+      "selected_Pauli_direction_index": 1
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 48,
+      "pair": [
+        1,
+        5
+      ],
+      "selected_Pauli_direction_index": 3
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 24,
+      "pair": [
+        1,
+        7
+      ],
+      "selected_Pauli_direction_index": 1
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 24,
+      "pair": [
+        1,
+        10
+      ],
+      "selected_Pauli_direction_index": 3
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 24,
+      "pair": [
+        1,
+        11
+      ],
+      "selected_Pauli_direction_index": 1
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 48,
+      "pair": [
+        1,
+        14
+      ],
+      "selected_Pauli_direction_index": 3
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 48,
+      "pair": [
+        1,
+        28
+      ],
+      "selected_Pauli_direction_index": 3
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 48,
+      "pair": [
+        1,
+        30
+      ],
+      "selected_Pauli_direction_index": 0
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 48,
+      "pair": [
+        1,
+        31
+      ],
+      "selected_Pauli_direction_index": 0
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 48,
+      "pair": [
+        1,
+        35
+      ],
+      "selected_Pauli_direction_index": 0
+    },
+    {
+      "all_four_C3_face_decompositions": [
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        },
+        {
+          "F3_Tate_dimension_H0_Hminus1": 3,
+          "fixed_oriented_triangle_faces": 3,
+          "free_C3_orbits": 32,
+          "signed_3cycle_product": 1
+        }
+      ],
+      "class_size": 24,
+      "pair": [
+        1,
+        36
+      ],
+      "selected_Pauli_direction_index": 3
+    }
+  ],
+  "chain_level_restriction_theorem": "For any two complete regular H27 square orbits, over F3 and any noncentral order-three g, C2 restricted to <g> is three trivial 1D modules + thirty-two free 3D regular C3 modules.",
+  "counterexample_flat_H1_direction_rank": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "counterexample_nonflat_H2_direction_rank": [
+    13,
+    12,
+    13,
+    13
+  ],
+  "mathematical_conclusion": "Local C3 face-cell isotropy and Tate(C2) dimension alone cannot prove a uniquely shared H1/H2 selector: one extra free square orbit retains three fixed triangle faces but destroys uniqueness of H1. The extension maps in the equivariant chain exact sequences matter.",
+  "open_theorem": "Prove the 468-pair ternary coincidence conceptually from the connecting morphisms of the Tate long exact sequences. This is not accomplished here.",
+  "three_orbit_extension": {
+    "F3_Tate_dimension_H0_Hminus1": 3,
+    "fixed_oriented_triangle_faces": 3,
+    "free_C3_orbits": 41,
+    "signed_3cycle_product": 1
+  }
+}

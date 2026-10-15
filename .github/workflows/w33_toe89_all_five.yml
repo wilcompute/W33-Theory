@@ -1,0 +1,27 @@
+name: TOE89 five independent H27 topology and quantum-memory certificates
+on:
+  push:
+    paths:
+      - 'analysis/w33_20261015_toe89_*.py'
+      - 'analysis/2026-10-15_toe89_five_followups.md'
+      - 'data/w33_20261015_toe89_*.json'
+      - 'tests/test_w33_20261015_toe89_all_five.py'
+      - '.github/workflows/w33_toe89_all_five.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  exact-and-synthetic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pytest numpy sympy scipy
+      - run: python -m pytest -q tests/test_w33_20261015_toe89_all_five.py
+      - run: python -m analysis.w33_20261015_toe89_cyclic_tate_chain
+      - run: python -m analysis.w33_20261015_toe89_parity_symmetry
+      - run: python -m analysis.w33_20261015_toe89_complementary_css
+      - run: python -m analysis.w33_20261015_toe89_heralded_mub
+      - run: python -m analysis.w33_20261015_toe89_albert_product_obstruction
+      - run: git diff --exit-code -- data/w33_20261015_toe89_cyclic_tate_chain.json data/w33_20261015_toe89_parity_symmetry.json data/w33_20261015_toe89_complementary_css.json data/w33_20261015_toe89_albert_product_obstruction.json
