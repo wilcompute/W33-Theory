@@ -1,0 +1,99 @@
+{
+  "contextuality_note": "The repository's KS one-mark 36/40 satisfiability optimum and contextual fraction 1 are distinct from this 2/5 separability witness.",
+  "entanglement_witness": {
+    "basis_avg_joint_match_operator": "C=(I_16+4*|Phi4><Phi4|)/5",
+    "cryptographic_limit": "Entanglement certification is necessary, not sufficient, for composable QKD security.",
+    "eigenvalue_multiplicities": {
+      "1": 1,
+      "1/5": 15
+    },
+    "max_matrix_residual_rounded_14dp": 0.0,
+    "maximally_entangled_matching": "1",
+    "separable_joint_matching_upper_bound": "2/5",
+    "separable_max_Fphi": "1/4",
+    "trust_assumption": "Full characterized four-dimensional measurements with conjugate Bob basis; not device independent"
+  },
+  "hardware_note": "Measurement settings correspond to the already compiled 40 BT1411 sparse ququart analyzers; gate loss and SPAM not calibrated.",
+  "intercept_resend": {
+    "40x40_context_pairs_by_intersection": {
+      "0": 1080,
+      "1": 480,
+      "4": 40
+    },
+    "matched_probability_by_intersection": {
+      "0": "1/3",
+      "1": "1/2",
+      "4": "1"
+    },
+    "security_limit": "Selected attack only; not a worst-case eavesdropper bound.",
+    "uniform_random_eve_basis_error_probability": "3/5",
+    "uniform_random_eve_basis_matched_probability": "2/5"
+  },
+  "isotropic_noise": {
+    "cases": [
+      {
+        "certifies_entanglement": false,
+        "matched_probability": "1/4",
+        "singlet_fraction": "1/16",
+        "visibility": "0"
+      },
+      {
+        "certifies_entanglement": false,
+        "matched_probability": "13/40",
+        "singlet_fraction": "5/32",
+        "visibility": "1/10"
+      },
+      {
+        "certifies_entanglement": false,
+        "matched_probability": "2/5",
+        "singlet_fraction": "1/4",
+        "visibility": "1/5"
+      },
+      {
+        "certifies_entanglement": true,
+        "matched_probability": "7/16",
+        "singlet_fraction": "19/64",
+        "visibility": "1/4"
+      },
+      {
+        "certifies_entanglement": true,
+        "matched_probability": "5/8",
+        "singlet_fraction": "17/32",
+        "visibility": "1/2"
+      },
+      {
+        "certifies_entanglement": true,
+        "matched_probability": "1",
+        "singlet_fraction": "1",
+        "visibility": "1"
+      }
+    ],
+    "matching_probability": "(1+3v)/4",
+    "rho_v": "v|Phi4><Phi4|+(1-v)I_16/16",
+    "strict_detection_visibility_threshold": "1/5"
+  },
+  "orthogonality_SRG": {
+    "bases": 40,
+    "bases_per_ray": 4,
+    "edges": 240,
+    "k": 12,
+    "lambda": 2,
+    "mu": 4,
+    "nonorthogonal_pairs": 540,
+    "v": 40
+  },
+  "reference": "A. Yu. Vlasov, Scheme of quantum communications based on Witting polytope, arXiv:2503.18431",
+  "repo_prior_art": "tools/bt1408_witting_contextual_communication_bridge.py and BT1409-BT1411 already identify Witting=W33, 13/40 and sparse 40 analyzers. They are NOT TOE90 discoveries.",
+  "squared_inner_product_offdiagonal_histogram": {
+    "0": 480,
+    "1/3": 1080
+  },
+  "two_design": {
+    "Welch_bound": "1/10",
+    "dimension": 4,
+    "frame_potential_2": "1/10",
+    "max_matrix_residual_rounded_14dp": 0.0,
+    "rays": 40,
+    "second_moment": "(I_16+SWAP_4x4)/20"
+  }
+}

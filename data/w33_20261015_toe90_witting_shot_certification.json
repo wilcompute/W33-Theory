@@ -1,0 +1,18 @@
+{
+  "calibrated_isotropic_reported_match": "12829/30000",
+  "calibrated_separable_reported_match_upper_bound": "3676/9375",
+  "coherent_isotropic_true_match": "7/16",
+  "device_model": "two trusted ideal ququart measurements with independent known symmetric four-outcome classical readout confusion",
+  "exact_iid_binomial_false_positive_probability": 0.000961720054,
+  "exact_iid_binomial_model_detection_power": 0.999707050783,
+  "isotropic_visibility_model": "1/4",
+  "limitations": "Hypothetical IID detector-calibration model, no basis-dependent loss, no source drift, no SPAM deviations beyond declared confusion, no device independence, no finite-key QKD security or privacy amplification theorem.",
+  "n_independent_accepted_pairs": 8192,
+  "per_side_readout_error": "1/50",
+  "reject_separability_at_reported_match_count_at_least": 3350,
+  "separable_true_match_bound": "2/5",
+  "source": "Witting 40 projective rays and 40 contexts (Vlasov arXiv:2503.18431) plus TOE90 2-design proof.",
+  "true_agreement_to_reported_agreement": "1801/1875",
+  "true_disagreement_to_reported_agreement": "74/5625",
+  "uniform_secret_Witting_basis_per_pair": true
+}
