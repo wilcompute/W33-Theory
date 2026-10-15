@@ -1,0 +1,36 @@
+name: TOE81 native W33 E6 tritangent CSS and homology
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261015_toe81_native_tritangent_css.py'
+      - 'tests/test_w33_20261015_toe81_native_tritangent_css.py'
+      - '.github/workflows/w33_toe81_native_tritangent_css.yml'
+  workflow_dispatch:
+jobs:
+  css:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy networkx pytest
+      - name: Verify binary and ternary native E6 CSS chain complex
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python -m pytest -q tests/test_w33_20261015_toe81_native_tritangent_css.py
+      - name: Regenerate all 64 loop generators and 1080 four-cycles
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PYTHONHASHSEED: '0'
+        run: python analysis/w33_20261015_toe81_native_tritangent_css.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe81-native-tritangent-qubit-qutrit-css
+          path: data/w33_20261015_toe81_native_tritangent_css.json
+          retention-days: 60
