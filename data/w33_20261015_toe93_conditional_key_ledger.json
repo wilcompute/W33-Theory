@@ -1,0 +1,91 @@
+{
+  "MUB_entropy_bound": "Hmin(Z_A^N|E) >= N[2-2log2(sqrt(1-Q)+sqrt(3Q))] assuming compatible trusted virtual X-basis error rate Q.",
+  "audit": [
+    {
+      "accept_flag_bits": 1,
+      "correctness_verification_collision_upper": 1.52587890625e-05,
+      "illustrative_conditional_key_length_bits": 13,
+      "one_shot_MUB_uncertainty_lower_per_raw_ququart": 1.206626512096,
+      "privacy_amplification_penalty": 37.863137139,
+      "public_hamming_syndrome_bits": 168,
+      "public_transcript_leak_upper": 185,
+      "ququart_error_rate": 0.0375,
+      "verification_tag_bits": 16,
+      "visibility": 0.95,
+      "whole_block_conditional_min_entropy_lower": 236.498796371
+    },
+    {
+      "accept_flag_bits": 1,
+      "correctness_verification_collision_upper": 1.52587890625e-05,
+      "illustrative_conditional_key_length_bits": 63,
+      "one_shot_MUB_uncertainty_lower_per_raw_ququart": 1.462882817876,
+      "privacy_amplification_penalty": 37.863137139,
+      "public_hamming_syndrome_bits": 168,
+      "public_transcript_leak_upper": 185,
+      "ququart_error_rate": 0.015,
+      "verification_tag_bits": 16,
+      "visibility": 0.98,
+      "whole_block_conditional_min_entropy_lower": 286.725032304
+    },
+    {
+      "accept_flag_bits": 1,
+      "correctness_verification_collision_upper": 1.52587890625e-05,
+      "illustrative_conditional_key_length_bits": 91,
+      "one_shot_MUB_uncertainty_lower_per_raw_ququart": 1.606174298466,
+      "privacy_amplification_penalty": 37.863137139,
+      "public_hamming_syndrome_bits": 168,
+      "public_transcript_leak_upper": 185,
+      "ququart_error_rate": 0.0075,
+      "verification_tag_bits": 16,
+      "visibility": 0.99,
+      "whole_block_conditional_min_entropy_lower": 314.810162499
+    },
+    {
+      "accept_flag_bits": 1,
+      "correctness_verification_collision_upper": 1.52587890625e-05,
+      "illustrative_conditional_key_length_bits": 113,
+      "one_shot_MUB_uncertainty_lower_per_raw_ququart": 1.714025062686,
+      "privacy_amplification_penalty": 37.863137139,
+      "public_hamming_syndrome_bits": 168,
+      "public_transcript_leak_upper": 185,
+      "ququart_error_rate": 0.00375,
+      "verification_tag_bits": 16,
+      "visibility": 0.995,
+      "whole_block_conditional_min_entropy_lower": 335.948912286
+    },
+    {
+      "accept_flag_bits": 1,
+      "correctness_verification_collision_upper": 1.52587890625e-05,
+      "illustrative_conditional_key_length_bits": 143,
+      "one_shot_MUB_uncertainty_lower_per_raw_ququart": 1.867314263451,
+      "privacy_amplification_penalty": 37.863137139,
+      "public_hamming_syndrome_bits": 168,
+      "public_transcript_leak_upper": 185,
+      "ququart_error_rate": 0.00075,
+      "verification_tag_bits": 16,
+      "visibility": 0.999,
+      "whole_block_conditional_min_entropy_lower": 365.993595636
+    },
+    {
+      "accept_flag_bits": 1,
+      "correctness_verification_collision_upper": 1.52587890625e-05,
+      "illustrative_conditional_key_length_bits": 169,
+      "one_shot_MUB_uncertainty_lower_per_raw_ququart": 2.0,
+      "privacy_amplification_penalty": 37.863137139,
+      "public_hamming_syndrome_bits": 168,
+      "public_transcript_leak_upper": 185,
+      "ququart_error_rate": 0.0,
+      "verification_tag_bits": 16,
+      "visibility": 1.0,
+      "whole_block_conditional_min_entropy_lower": 392.0
+    }
+  ],
+  "block_length": 196,
+  "critical_limit": "This is conditional bookkeeping, NOT general composable finite-key security: no finite-sample state estimation, no coherent-attack reduction, no constructed authenticated transcript, and no physically demonstrated correction success.",
+  "leftover_hashing_bound": "Under a sound min-entropy lower bound after public transcript, 2-universal hashing with ell <= floor(Hmin - transcript - 2log2(1/(2 eps))) has privacy distance <= eps. Key correctness has additional verification failure bound.",
+  "privacy_epsilon_used": 1e-06,
+  "public_bit_budget": "3 syndrome bits per 7-bit block per bit plane, 16 verification bits, 1 pass/abort announcement; independent public random seeds are included in protocol authentication, not subtracted from entropy.",
+  "reconciliation_plan": "Apply separate Hamming(7,4) syndrome decoders to each of the two raw-outcome binary planes. A 7-bit block with at most one bit error is corrected exactly. Multi-error patterns can miscorrect; separate universal-2 equality verification must catch discrepancies except with probability 2^-16.",
+  "security_premises": "Exact trusted IID isotropic state with virtual conjugate MUB statistics known, uniform secret basis choices, authenticated discussion, and 2-universal public seeded verification/extraction.",
+  "single_error_Hamming_decoder_cases_verified": 896
+}

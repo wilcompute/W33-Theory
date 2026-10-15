@@ -1,0 +1,316 @@
+{
+  "Schlaefli_edges": 135,
+  "W33_edge_partition": {
+    "affine_affine": 108,
+    "affine_polar": 108,
+    "polar_polar": 24
+  },
+  "W33_projective_space": "PG(3,3) with alternating symplectic form omega(x,y)=x0*y2-x2*y0+x1*y3-x3*y1",
+  "affine_points_not_perpendicular_to_polar_point": 27,
+  "affine_ray_to_native_address": [
+    {
+      "H27_address": [
+        0,
+        0,
+        0
+      ],
+      "symplectic_point_index": 1,
+      "witting_ray_index": 1
+    },
+    {
+      "H27_address": [
+        2,
+        0,
+        0
+      ],
+      "symplectic_point_index": 2,
+      "witting_ray_index": 2
+    },
+    {
+      "H27_address": [
+        1,
+        0,
+        0
+      ],
+      "symplectic_point_index": 3,
+      "witting_ray_index": 3
+    },
+    {
+      "H27_address": [
+        0,
+        1,
+        0
+      ],
+      "symplectic_point_index": 7,
+      "witting_ray_index": 22
+    },
+    {
+      "H27_address": [
+        2,
+        1,
+        2
+      ],
+      "symplectic_point_index": 8,
+      "witting_ray_index": 20
+    },
+    {
+      "H27_address": [
+        1,
+        1,
+        1
+      ],
+      "symplectic_point_index": 9,
+      "witting_ray_index": 9
+    },
+    {
+      "H27_address": [
+        0,
+        2,
+        0
+      ],
+      "symplectic_point_index": 10,
+      "witting_ray_index": 36
+    },
+    {
+      "H27_address": [
+        1,
+        2,
+        2
+      ],
+      "symplectic_point_index": 11,
+      "witting_ray_index": 26
+    },
+    {
+      "H27_address": [
+        2,
+        2,
+        1
+      ],
+      "symplectic_point_index": 12,
+      "witting_ray_index": 18
+    },
+    {
+      "H27_address": [
+        0,
+        0,
+        2
+      ],
+      "symplectic_point_index": 16,
+      "witting_ray_index": 21
+    },
+    {
+      "H27_address": [
+        2,
+        0,
+        2
+      ],
+      "symplectic_point_index": 17,
+      "witting_ray_index": 12
+    },
+    {
+      "H27_address": [
+        1,
+        0,
+        2
+      ],
+      "symplectic_point_index": 18,
+      "witting_ray_index": 37
+    },
+    {
+      "H27_address": [
+        0,
+        0,
+        1
+      ],
+      "symplectic_point_index": 19,
+      "witting_ray_index": 28
+    },
+    {
+      "H27_address": [
+        1,
+        0,
+        1
+      ],
+      "symplectic_point_index": 20,
+      "witting_ray_index": 16
+    },
+    {
+      "H27_address": [
+        2,
+        0,
+        1
+      ],
+      "symplectic_point_index": 21,
+      "witting_ray_index": 5
+    },
+    {
+      "H27_address": [
+        0,
+        1,
+        2
+      ],
+      "symplectic_point_index": 25,
+      "witting_ray_index": 7
+    },
+    {
+      "H27_address": [
+        2,
+        1,
+        1
+      ],
+      "symplectic_point_index": 26,
+      "witting_ray_index": 35
+    },
+    {
+      "H27_address": [
+        1,
+        1,
+        0
+      ],
+      "symplectic_point_index": 27,
+      "witting_ray_index": 27
+    },
+    {
+      "H27_address": [
+        0,
+        2,
+        1
+      ],
+      "symplectic_point_index": 28,
+      "witting_ray_index": 17
+    },
+    {
+      "H27_address": [
+        1,
+        2,
+        0
+      ],
+      "symplectic_point_index": 29,
+      "witting_ray_index": 8
+    },
+    {
+      "H27_address": [
+        2,
+        2,
+        2
+      ],
+      "symplectic_point_index": 30,
+      "witting_ray_index": 34
+    },
+    {
+      "H27_address": [
+        0,
+        2,
+        2
+      ],
+      "symplectic_point_index": 34,
+      "witting_ray_index": 39
+    },
+    {
+      "H27_address": [
+        2,
+        2,
+        0
+      ],
+      "symplectic_point_index": 35,
+      "witting_ray_index": 29
+    },
+    {
+      "H27_address": [
+        1,
+        2,
+        1
+      ],
+      "symplectic_point_index": 36,
+      "witting_ray_index": 19
+    },
+    {
+      "H27_address": [
+        0,
+        1,
+        1
+      ],
+      "symplectic_point_index": 37,
+      "witting_ray_index": 6
+    },
+    {
+      "H27_address": [
+        1,
+        1,
+        2
+      ],
+      "symplectic_point_index": 38,
+      "witting_ray_index": 32
+    },
+    {
+      "H27_address": [
+        2,
+        1,
+        0
+      ],
+      "symplectic_point_index": 39,
+      "witting_ray_index": 24
+    }
+  ],
+  "chain_map": "For affine directed W33 event i->j, map H27 addresses x,y and the relative generator delta=x^-1*y to a preselected H27-transported one- or two-edge Schlaefli path. Over F3, d1_S F1 = F0 d1_W on all 108 affine edges, with signed reversal and 27 group equivariances checked.",
+  "chosen_polar_point_F3": [
+    1,
+    0,
+    0,
+    0
+  ],
+  "directed_detector_substitution_admitted_affine_edges": 216,
+  "directed_detector_substitution_erasure_outside_affine_edges": 264,
+  "eight_relative_affine_graph_generators": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      2
+    ],
+    [
+      2,
+      2,
+      1
+    ]
+  ],
+  "native_cubic_H27_isomorphism": "(a,b,c) -> (a,b,2(c-ab)) mod 3, checked for all 729 multiplication pairs",
+  "native_path_length_census_per_relative_generator": {
+    "1": 2,
+    "2": 6
+  },
+  "out_of_sector_handling": "132/240 unoriented events are typed erasures, not assigned an H27 edge. A total deterministic H27-equivariant map of all 480 remains obstructed.",
+  "polar_hyperplane_points_perpendicular_to_polar_point": 13,
+  "quantum_limit": "This is an exact partial linear GRAPH CHAIN MAP of vertex/edge modules, not an equivariant 2-cell/CSS stabilizer map, physical ququart-to-qutrit CPTP channel or protected logical operation.",
+  "symplectic_Heisenberg_parabolic_subgroup_order": 27,
+  "symplectic_group_parameter_law": "(a,b,c)(A,B,C)=(a+A,b+B,c+C+aB-bA) mod 3"
+}

@@ -1,0 +1,65 @@
+{
+  "caveats": "This identifies an order-two obstruction and is consistent with the Sp(4,3) double cover, but does not construct an exact character table of the full unitary extension or uniquely choose global phases. Finite numerical matrices are checked with 1e-8 tolerances.",
+  "gauge_invariant_nontrivial_multiplier_witness": {
+    "commutator_max_numerical_residual_rounded": 0.0,
+    "commutator_phase_rounded": [
+      -1.0,
+      0.0
+    ],
+    "projective_order_two_permutation_A_word": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      4
+    ],
+    "projective_order_two_permutation_B_word": [
+      0,
+      1,
+      2,
+      0,
+      4,
+      1
+    ],
+    "projective_permutations_commute": true,
+    "ququart_U4_lifts_anticommute": true,
+    "scalar_commutator": "-1",
+    "word_generator_vectors_F3": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "projective_40_ray_permutation_order": 25920,
+  "projective_group": "PSp(4,3)",
+  "projective_involutions_count": 315,
+  "result": "An honest linear representation of the 25920-element projective permutation group using these four-mode ray operators cannot exist: commuting projective group elements lift to anticommuting unitaries. The gauge-invariant -1 commutator detects a nontrivial order-two central obstruction."
+}

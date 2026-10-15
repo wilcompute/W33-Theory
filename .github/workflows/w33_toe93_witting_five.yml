@@ -1,0 +1,27 @@
+name: TOE93 central double-cover, conditional QKD and affine H27 chain
+on:
+  push:
+    paths:
+      - 'analysis/w33_20261015_toe93_*.py'
+      - 'analysis/2026-10-15_toe93_witting_five.md'
+      - 'data/w33_20261015_toe93_*.json'
+      - 'tests/test_w33_20261015_toe93_witting_five.py'
+      - '.github/workflows/w33_toe93_witting_five.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  exact-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy pytest
+      - run: python -m pytest -q tests/test_w33_20261015_toe93_witting_five.py
+      - run: python -m analysis.w33_20261015_toe93_central_extension
+      - run: python -m analysis.w33_20261015_toe93_conditional_key_ledger
+      - run: python -m analysis.w33_20261015_toe93_mzi_bill
+      - run: python -m analysis.w33_20261015_toe93_event_ready_herald
+      - run: python -m analysis.w33_20261015_toe93_affine_H27_chain
+      - run: git diff --exit-code -- data/w33_20261015_toe93_central_extension.json data/w33_20261015_toe93_conditional_key_ledger.json data/w33_20261015_toe93_mzi_bill.json data/w33_20261015_toe93_event_ready_herald.json data/w33_20261015_toe93_affine_H27_chain.json
