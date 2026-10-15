@@ -1,0 +1,159 @@
+{
+  "first_failing_face": {
+    "cokernel_residual_edges": [
+      75,
+      78,
+      79,
+      80,
+      87,
+      91,
+      95,
+      96,
+      97,
+      103,
+      114,
+      115
+    ],
+    "face_type": "triangles",
+    "image_chain_edges": [
+      {
+        "edge_H27_addresses": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "value_mod3": 2
+      },
+      {
+        "edge_H27_addresses": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ],
+        "value_mod3": 1
+      },
+      {
+        "edge_H27_addresses": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "value_mod3": 2
+      },
+      {
+        "edge_H27_addresses": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "value_mod3": 2
+      },
+      {
+        "edge_H27_addresses": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "value_mod3": 2
+      },
+      {
+        "edge_H27_addresses": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ]
+        ],
+        "value_mod3": 2
+      }
+    ],
+    "source_H27_addresses": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "source_point_indices": [
+      1,
+      2,
+      3,
+      1
+    ]
+  },
+  "inference": "For this fixed TOE93 F1 chain map and selected TOE83 CSS 2-complex, every source 2-cell with nonzero target H1 class obstructs extending to a chain map F2. This is NOT an obstruction to alternative F1 maps, modified target face sets, or physical encodings.",
+  "selected_schlaefli_square_orbits": [
+    0,
+    10
+  ],
+  "source_affine_edge_count": 108,
+  "source_affine_vertex_count": 27,
+  "source_face_census": {
+    "chordless_squares": {
+      "bounds_mod3": 0,
+      "count": 324,
+      "nonbounding_mod3": 324
+    },
+    "triangles": {
+      "bounds_mod3": 18,
+      "count": 36,
+      "nonbounding_mod3": 18
+    }
+  },
+  "target_face_image_rank_over_F3": 83
+}

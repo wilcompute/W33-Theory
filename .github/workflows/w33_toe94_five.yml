@@ -1,0 +1,27 @@
+name: TOE94 exact Witting lift, CSS face obstruction and guarded optical protocol
+on:
+  push:
+    paths:
+      - 'analysis/w33_20261015_toe94_*.py'
+      - 'analysis/2026-10-15_toe94_five.md'
+      - 'data/w33_20261015_toe94_*.json'
+      - 'tests/test_w33_20261015_toe94_five.py'
+      - '.github/workflows/w33_toe94_five.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  exact-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy pytest
+      - run: python -m pytest -q tests/test_w33_20261015_toe94_five.py
+      - run: python -m analysis.w33_20261015_toe94_exact_central
+      - run: python -m analysis.w33_20261015_toe94_face_obstruction
+      - run: python -m analysis.w33_20261015_toe94_qkd_finite_iid
+      - run: python -m analysis.w33_20261015_toe94_mzi_drift
+      - run: python -m analysis.w33_20261015_toe94_polar_guard
+      - run: git diff --exit-code -- data/w33_20261015_toe94_exact_central.json data/w33_20261015_toe94_face_obstruction.json data/w33_20261015_toe94_qkd_finite_iid.json data/w33_20261015_toe94_mzi_drift.json data/w33_20261015_toe94_polar_guard.json

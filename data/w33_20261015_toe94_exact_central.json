@@ -1,0 +1,26 @@
+{
+  "central_cover_caveat": "Exact projective multiplier obstruction on two commuting elements. This certifies nontrivial central extension, but not the full presentation/group order of the generated unitary extension or uniqueness of Sp(4,3) as a lift.",
+  "coefficient_field": "Q(sqrt(3),i)=Q(zeta_12)",
+  "exact_lifted_commutator": "-I4",
+  "exact_matrix_product_XY_plus_YX": "zero 4x4 over Q(zeta12)",
+  "linearization_impossible_on_projective_25920_group": true,
+  "max_rational_reconstruction_residual": 0.0,
+  "number_of_generators": 5,
+  "permutation_commutator": "identity",
+  "word_A": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    4
+  ],
+  "word_B": [
+    0,
+    1,
+    2,
+    0,
+    4,
+    1
+  ]
+}

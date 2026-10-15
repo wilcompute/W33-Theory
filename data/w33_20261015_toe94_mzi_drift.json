@@ -1,0 +1,63 @@
+{
+  "drift_recipe": "For setting b, Givens step j and arm s, internal half-phase shifted by +/- delta*[1+((b+2j+s)%3)]/3. The model is deterministic not randomized calibration.",
+  "rigorous_trusted_calibration_inequality": "Tr rho_sep C_delta <= 2/5 + ||C_delta-C_ideal||op, valid for all separable two-ququart states and fully trusted calibrated POVM. Under arbitrary click contamination <=b, upper is (1-b)*(2/5+norm)+b.",
+  "rows": [
+    {
+      "adversarial_click_contamination_separable_upper": 0.4006,
+      "max_joint_operator_spectral_deviation": 0.0,
+      "phase_drift_max_radians": 0.0,
+      "synthetic_isotropic_visibility": 0.95,
+      "synthetic_raw_match_probability": 0.9625,
+      "synthetic_uniform_noise_click_match": 0.9617875,
+      "trusted_no_background_separable_upper": 0.4,
+      "unmodeled_adversarial_click_fraction_upper": 0.001,
+      "violation_after_calibrated_adversarial_click_bound": true
+    },
+    {
+      "adversarial_click_contamination_separable_upper": 0.401204723506,
+      "max_joint_operator_spectral_deviation": 0.000605328834,
+      "phase_drift_max_radians": 0.001,
+      "synthetic_isotropic_visibility": 0.95,
+      "synthetic_raw_match_probability": 0.962495728811,
+      "synthetic_uniform_noise_click_match": 0.961783233083,
+      "trusted_no_background_separable_upper": 0.400605328834,
+      "unmodeled_adversarial_click_fraction_upper": 0.001,
+      "violation_after_calibrated_adversarial_click_bound": true
+    },
+    {
+      "adversarial_click_contamination_separable_upper": 0.401813036543,
+      "max_joint_operator_spectral_deviation": 0.001214250794,
+      "phase_drift_max_radians": 0.002,
+      "synthetic_isotropic_visibility": 0.95,
+      "synthetic_raw_match_probability": 0.962482915687,
+      "synthetic_uniform_noise_click_match": 0.961770432771,
+      "trusted_no_background_separable_upper": 0.401214250794,
+      "unmodeled_adversarial_click_fraction_upper": 0.001,
+      "violation_after_calibrated_adversarial_click_bound": true
+    },
+    {
+      "adversarial_click_contamination_separable_upper": 0.403659740532,
+      "max_joint_operator_spectral_deviation": 0.003062803335,
+      "phase_drift_max_radians": 0.005,
+      "synthetic_isotropic_visibility": 0.95,
+      "synthetic_raw_match_probability": 0.962393234348,
+      "synthetic_uniform_noise_click_match": 0.961680841113,
+      "trusted_no_background_separable_upper": 0.403062803335,
+      "unmodeled_adversarial_click_fraction_upper": 0.001,
+      "violation_after_calibrated_adversarial_click_bound": true
+    },
+    {
+      "adversarial_click_contamination_separable_upper": 0.406811479089,
+      "max_joint_operator_spectral_deviation": 0.006217696786,
+      "phase_drift_max_radians": 0.01,
+      "synthetic_isotropic_visibility": 0.95,
+      "synthetic_raw_match_probability": 0.962073053151,
+      "synthetic_uniform_noise_click_match": 0.961360980097,
+      "trusted_no_background_separable_upper": 0.406217696786,
+      "unmodeled_adversarial_click_fraction_upper": 0.001,
+      "violation_after_calibrated_adversarial_click_bound": true
+    }
+  ],
+  "sampling_protocol": "Uniform random setting among 40, no basis/outcome-dependent postselection. Measure all precommitted heralds and include losses as failure when evaluating event-ready witness.",
+  "scope": "All 40 four-mode MZI basis analyzers with bounded synthetic per-coupler phase drifts on two arms; calibrated 16x16 POVM operator inequality. No measurement of real devices or detector side-channel characterization."
+}

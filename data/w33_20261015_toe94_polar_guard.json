@@ -1,0 +1,59 @@
+{
+  "H27_fixed_polar_hub": 13,
+  "all_polar_tetrad_setting_fraction": 0.1,
+  "directed_detector_event_types": {
+    "affine->affine": 216,
+    "affine->polar": 108,
+    "polar->affine": 108,
+    "polar->polar": 48
+  },
+  "directed_event_admission_fraction": 0.45,
+  "four_polar_zero_affine_bases": 4,
+  "guard_algorithm": "Given trusted tetrad and source/destination ray slots, mark affine->affine as graph-chain transferable and all other substitutions as typed erasures; do not pretend the erased 264 events yield physical H27 CSS syndromes.",
+  "interpretation": "Finite-geometric sector guard only. Conditional acceptance is basis/outcome dependent, so cannot be substituted into unqualified QKD security or a postselected entanglement witness.",
+  "maximally_mixed_single_ray_affine_probability": 0.675,
+  "maximally_mixed_single_ray_polar_erasure_probability": 0.325,
+  "one_polar_three_affine_bases": 36,
+  "polar_H27_orbit_sizes": [
+    1,
+    3,
+    3,
+    3,
+    3
+  ],
+  "polar_H27_orbits_symplectic_indices": [
+    [
+      13
+    ],
+    [
+      0,
+      14,
+      15
+    ],
+    [
+      4,
+      22,
+      31
+    ],
+    [
+      5,
+      23,
+      33
+    ],
+    [
+      6,
+      24,
+      32
+    ]
+  ],
+  "space_decomposition": {
+    "affine": 27,
+    "polar_guard": 13
+  },
+  "tetrad_count_by_polar_membership": {
+    "1": 36,
+    "4": 4
+  },
+  "typed_accepted_affine_affine_events": 216,
+  "typed_erasure_detector_events": 264
+}
