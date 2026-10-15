@@ -1,0 +1,20 @@
+{
+  "reservation": "b49bfed2d867b7997fa82490d22bc9bb151278cf",
+  "science_commit": null,
+  "science_sha256_lf": {
+    "analysis/w33_pass11993_majorana_scalability_repair.py": "3e090347c0870bd7a6dd97cb0e9081ef3ee01ff4725a93965c8720f26c877da2",
+    "data/w33_pass11993_majorana_scalability_repair.json": "cfda4436f3f05184693426db9b990e79ba7ccad8380d2518b9ea165f62560776",
+    "tests/test_w33_pass11993_majorana_scalability_repair.py": "3f9ef7ac66f6afe96911bad3d57ba1a4a3c0e0383d14128d0d36e8f8459dbb4b",
+    "analysis/PASS11993_NATIVE_MAJORANA_SCALABILITY_REPAIR.md": "c68ddf93a170ead83498f873577b6e44cc552f788476376d3458471b1dc2c561",
+    ".github/workflows/pass11993-majorana-repair.yml": "4861032f6b5f8c304a0f445b5e8978dbcf6cc74f54fd2cd66691b9a452805c3c"
+  },
+  "prior_input_sha256_lf": {
+    "analysis/w33_pass11987_atlas_spin_gate_alphabet.py": "19980736c374a8e056a5b8d061ea86c4c03bf0728526f29e2a234843ade75c4b",
+    "data/w33_pass11987_atlas_spin_gate_alphabet.json": "79f730682bdbbc0fd05e6d2009278781a35ff635ff5efba5f7177d8d4782b2cd",
+    "data/w33_pass11988_spinor_weil_intertwiner.json": "24d8e753ca26f1ce04f7d1ad3ab91a653671a163e034bd4f27fc90230a3cc11b"
+  },
+  "local_tests": "7 passed in8.89s",
+  "guard": "Initial deficit@10 lexical warnings retained. Allfour displayed priorcandidates were read and nowcited; mathematicalresource notions differ.",
+  "hosted": null,
+  "scope": "KnownFLOdimension/universality methods applied toactualnativeSpin6gates. Additionalquartic physicalinteraction andMajorana carrier are supplied."
+}

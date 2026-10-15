@@ -1,0 +1,13 @@
+
+========================================================================
+[rediscovery guard] results that already exist elsewhere
+========================================================================
+  analysis/PASS11993_NATIVE_MAJORANA_SCALABILITY_REPAIR.md
+    deficit@10  ->  analysis/w33_clock_magic_renewal.py
+
+  These are CANDIDATES, not verdicts -- the same integer recurs
+  legitimately. But Passes 322/323 lost ~19 passes to exactly this,
+  so: open the prior file and READ it (end to end -- Pass 286 shows
+  shallow reads cause retractions) before asserting novelty.
+  Cite the prior art in the file and this warning goes away.
+

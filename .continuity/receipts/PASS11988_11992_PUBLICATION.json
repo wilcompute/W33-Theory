@@ -1,7 +1,7 @@
 {
   "schema": "w33.pass11988-11992.publication.v1",
   "reservation": "94857ee9e3d37075b917df05eb7c4dbb749a5f01",
-  "science_commit": null,
+  "science_commit": "dd9035ba15a739b7edba4c9104c5cb6d24c8c25d",
   "local_validation": {
     "combined_new_and_TOE85_to_TOE92": "99 passed in87.35s",
     "final_regenerated_new_tests": "18 passed in26.86s",
@@ -45,6 +45,17 @@
     ".continuity/receipts/PASS11988_11992_GUARD.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     ".continuity/receipts/PASS11988_11992_PARALLEL_INTAKE.json": "48b4e73bd089d22f91b41265b8dd82a0fc6564e7f68f9d2acc57a76acd021f82"
   },
-  "hosted": null,
+  "hosted": {
+    "run": 38815899847,
+    "job": 116700358108,
+    "conclusion": "success",
+    "frozen_tests": "22 passed in16.56s",
+    "all_five_producers": "PASS",
+    "regenerated_tests": "18 passed in15.29s",
+    "artifact_id": 12010228762,
+    "artifact_size_bytes": 49802,
+    "downloaded_exact_tangent_and_deck_certificates_match": true,
+    "downloaded_max_CP_J_absolute_difference": 1.4301421439461004e-08
+  },
   "scope": "Exact atlas/projective tangent map and Lorentz-compatible subgroup example; numerical local45field scalar EFT minima/fitted treeBarr, supplied9level/4rail controls, selectednativeEuclidean4cover/freeGW andimportedGowdyGR benchmark. No completedTOE, UVcompletion, physicalparameterprediction, globalchiralmeasure/nativeGR orhardwareclaim."
 }
