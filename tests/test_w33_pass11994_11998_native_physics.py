@@ -80,7 +80,7 @@ def test_joint_vacuum_decimal_root_and_independent_flavour_gradient():
     _,gradient=determinant_energy_gradient(x,*args_of(r),tau=tau)
     assert max(abs(gradient))<1e-10
     with mp.workdps(95):
-        u=list(map(mp.mpf,d['singlet_chart_coordinates']));value=-u[0]*u[1]/(mp.mpf(1)/32)
+        u=list(map(mp.mpf,d['singlet_chart_coordinates']));value=-4*u[0]*u[1]/(u[0]**2+u[1]**2+mp.mpf(1)/16)
         assert abs(value-mp.mpf(d['source_value']))<mp.mpf('1e-48')
     assert d['total_scalar_real_fields_with_mediators']==72 and d['total_positive_physical_light_modes']==44
 
@@ -187,3 +187,12 @@ def test_metric_clock_is_the_actual_ordered_native_direction():
     assert np.max(abs(R.T@u/np.sqrt(2)-e))<1e-12
     K=G-2*np.outer(G@u,G@u)/(u@G@u)
     assert np.max(abs(K-2*np.array(s.Matrix(row['metric_Q']),float)))<1e-12
+
+
+def test_saturated_composite_is_bounded_and_legacy_source_runs_away():
+    d=read('11996_joint_singlet_flavour');assert mp.mpf(d['legacy_linear_source_runaway']['leading_coefficient'])<0
+    setup=flavour.setup();rho=setup[3];tau=setup[10]
+    for scale in ['1e-30','1','1e30']:
+        R=mp.mpf(scale);z=[R,mp.j*R,0,0,0,1,1];value=tau(z)
+        assert -2<value<0 and tau([mp.conj(v) for v in z])==-value
+    assert abs(tau([mp.sqrt(rho),mp.j*mp.sqrt(rho),0,0,0,1,1])+1)<mp.mpf('1e-90')

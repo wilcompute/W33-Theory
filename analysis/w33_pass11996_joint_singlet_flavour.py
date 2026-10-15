@@ -43,7 +43,7 @@ def setup():
         source=g*cross+mp.j*mu*tau*t.conjugate()
         value-=sum(abs(v)**2 for v in source)
         return value+sum(10*(n-1)**2+mp.mpf('.01')*n**4 for n in norms)
-    def tau(z):return mp.im(z[0]*mp.conj(z[1]))/rho
+    def tau(z):return 4*mp.im(z[0]*mp.conj(z[1]))/(abs(z[0])**2+abs(z[1])**2+2*rho)
     def V(*a):return potential_core(home(a[:7]),soft,mp.mpf('.1'),f0)+eps*flavour(a[7:],tau(home(a[:7])))
     def equations(*a):
         # Row scaling removes the tiny flavour energy scale from Newton's
@@ -137,7 +137,9 @@ def payload():
     yy=np.array(list(map(float,x)));weak=weak_cp(yy);assert abs(weak)>1e-5
     match=barr_matching(np.r_[yy,float(tauvalue)])
     return dict(status='PASS',precision_digits=100,singlet_cutoff_GeV=str(Lambda),supplied_flavour_scale_GeV=str(vf),flavour_energy_ratio=str(eps),
-        composite_source='tau=Im(S1 conj(S2))/rho, rho=1/32. Both Si have X=-1,Z=0, so tau is gauge invariant and CP odd. No independent tau double well remains.',
+        composite_source='tau=4 Im(S1 conj(S2))/(|S1|²+|S2|²+2rho), rho=1/32. Both Si have X=-1,Z=0, so tau is gauge invariant and CP odd. It is globally smooth with |tau|<2 and equals-1 at the original supersymmetric home. No independent tau double well remains.',
+        legacy_linear_source_runaway=dict(source='tau_lin=Im(S1 conj(S2))/rho',path='S1=T1=R,S2=iR,T2=-iR,P=0,PhiMinus=PhiPlus=1; h=f=0,t=(R^(2/3),0,0).',leading_power='R^(16/3)',leading_coefficient=str(eps*(mp.mpf('.01')-1024*mp.mpf(str(prior['mu']))**2)),proof='Singlet F/D growth isO(R4), while eliminated determinant source and positive flavour stabilizer give eps(.01-1024mu²)R^(16/3)<0. The earlier linear-composite model has a local minimum but is globally unbounded.'),
+        bounded_completion='For the saturatedsource |tau|<2, all negative eliminated terms are bounded by polynomials of flavour norm of degree atmost6 (plus bounded-source quadratic/mixedcubic terms), uniformly in singlet amplitudes. Positive norm^8 stabilizers dominate. Positive soft masses in the full singlet model and positive mediator squares give compact sublevelsets and an attained global minimum. The displayed local CP branch is NOT certified as that global minimum.',
         potential='V=Lambda^4 V11978_soft_singlet + vf^4 V11981_flavour(x,tau(S)); supplied scale matching and frozen coefficients.',
         singlet_chart_coordinates=[mp.nstr(a,80) for a in root[:7]],triplet_coordinates=list(map(float,x)),triplet_coordinates_decimal=[mp.nstr(a,80) for a in x],
         scaled_core_flavour_Hessian_decimal=[[mp.nstr(Hess[i,j],75) for j in range(32)] for i in range(32)],source_value=mp.nstr(tauvalue,50),

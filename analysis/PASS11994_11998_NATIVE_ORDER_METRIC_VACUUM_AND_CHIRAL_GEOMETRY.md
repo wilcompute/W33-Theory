@@ -90,17 +90,37 @@ find additional coupled modes in general Einstein-aether theories.
 ##11996: replace the standalone CP source by an actual singlet composite
 
 The actual11978 soft-singlet model contains S1,S2 with identical charges
-X=-1,Z=0. Set `tau=Im(S1 conj(S2))/rho`, rho=1/32. It is gauge invariant and CP
-odd. Couple its complete soft singlet potential to11981's three triplets via
+X=-1,Z=0. The first trial used tau_linear=Im(S1 conj(S2))/rho, rho=1/32.
+Its local root remains valid, but a further large-field audit found a runaway:
+S1=T1=R,S2=iR,T2=-iR,P=0,PhiMinus=PhiPlus=1,h=f=0,t=R^(2/3)e1.
+The singlet F/D potential grows only as R^4, whereas the eliminated source and
+flavour stabilizer contribute eps(.01-1024mu²)R^(16/3), with negative coefficient.
+This prevents any global-minimum claim for that original unsaturated model.
+
+The final model uses the explicitly changed bounded composite
+
+`tau=4 Im(S1 conj(S2))/(|S1|²+|S2|²+2rho)`.
+
+It is gauge invariant, CP odd, smooth everywhere, bounded by2, and equals-1 at
+the original supersymmetric home. Couple the complete soft singlet potential
+to11981's three triplets via
 
 `V=Lambda^4 V11978 + vf^4 V11981(x,tau(S))`,
 
 with SUPPLIED Lambda=10^16GeV,vf=10^3GeV. There is no independent tau double well.
+The bounded source makes the negative flavour terms uniformly no worse than
+degree six in the triplets; positive degree-eight terms dominate independently
+of singlet amplitudes. The full singlet sector has strictly positive soft masses,
+and Gaussian flavour mediators complete positive squares. Thus the final declared
+model is coercive and has an attained global minimum, although the displayed CP
+branch is only verified numerically as a LOCAL minimum. This rational scalar
+portal is a supplied nonpolynomial EFT completion, not a renormalizable UV model.
+
 A100-digit Newton solve retains all singlet/flavour backreaction. At the root:
 
-- tau=-0.9999999990435755; the largest singlet displacement from11978 is3.60e-20.
+- tau=-0.9999999995217878; the largest singlet displacement from11978 is1.80e-20.
 - All32 core/flavour gradients, scaled by their respective energy factors,
-  are below2.4e-100. The80-digit root and75-digit full32x32 Hessian are stored.
+  are below1.7e-100. The80-digit root and75-digit full32x32 Hessian are stored.
 - A positive congruence rescaling gives30 positive modes and exactly2 gauge
   zeros; its smallest positive eigenvalue is6.74e-33. These rescaled eigenvalues
   are NOT physical masses.

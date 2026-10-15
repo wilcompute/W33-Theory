@@ -4,16 +4,16 @@
   "science_sha256_lf": {
     "analysis/w33_pass11994_native_clock_order.py": "ecd1f83eda048ef4af776c2f5f2c59470a7841afe0a86ca0271c0d4002bcd83c",
     "analysis/w33_pass11995_native_metric_gr_lift.py": "99eaf3063e7b1e95a994e6a0c644e6b2ebedaa3a1898b16814d2f30478e2af32",
-    "analysis/w33_pass11996_joint_singlet_flavour.py": "4889ab3f93dd79ae916ff6ef75287ce5ef4cc71e87513377a22c292bdcec2d11",
+    "analysis/w33_pass11996_joint_singlet_flavour.py": "469b4ddae32668a085176cdbd32842921c05260a2c77b43033a2da22ee4bfe52",
     "analysis/w33_pass11997_native_chiral_tube.py": "b5dd80bc27268a904732b4193c6fa5dd330838828abf4216296d0dd0a75f0b3f",
     "analysis/w33_pass11998_complex_reduction_tradeoff.py": "cf9e244d36caceb331da0359400f00a02f37aaa5872407a78b8c176f29f0f7d4",
     "data/w33_pass11994_native_clock_order.json": "d9b05961c0b1d9dfe90689f40c68a757bf6ea869d6837676bd65b781e556c85e",
     "data/w33_pass11995_native_metric_gr_lift.json": "2bab7325db9fbe7d698c084c00289a826c33f61c5778c44825f7821c05665e42",
-    "data/w33_pass11996_joint_singlet_flavour.json": "502244caee5d9b04735384c76ec8cf076c5063275f2da0be59fde6d836065853",
+    "data/w33_pass11996_joint_singlet_flavour.json": "340a45e94175be2b028b3904d037137a12412a1139da436ceac625111c4c53be",
     "data/w33_pass11997_native_chiral_tube.json": "2d356bd4aee45a19b1f75bb445010fe403f7fe3b978bfb6b5e977c32cb6da1aa",
     "data/w33_pass11998_complex_reduction_tradeoff.json": "b5fc9a239c4432c9084e80689a037e6dca915b82b8c41c0d70cce4794671e4d8",
-    "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md": "521274c1e53e537c3c073a9b16321619ae2c5b91abd74c7ab22d55d4252c1dc8",
-    "tests/test_w33_pass11994_11998_native_physics.py": "2ba1ffa57157063f0bcd5dd058f70bd42995dc695cddb5afcd13fa4583a74733",
+    "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md": "b257241ff3c73859499fd43f86716a6c999ae7fe22080cf478ec981082d605f7",
+    "tests/test_w33_pass11994_11998_native_physics.py": "cbf8f661e5083f27658e039ad6ff5fc4f5fbbf98901713b950d3023dbf3123e9",
     ".github/workflows/pass11994-11998-native-physics.yml": "d4323190b12ccee1cad14e4f163ba16cfc75837c6d4f6c6f9e345ca03ffdf0fa",
     "docs/index.html": "ef46d79be8ec123a1490a0c692419d9d86c73f7e18e4b9a357dc3e1e14504236"
   },
@@ -33,7 +33,7 @@
     "analysis/w33_pass11952_11955_threshold_vacuum_loop_leptons.py": "2884f88922bbe761c6b133cdc592771f6aca06b5c89e94f76bafeb8b1f9ae3b5",
     "analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py": "edd590c157d79b2d8460adeaa3e329aab6999ed824fb3986961ae566692fe857"
   },
-  "local_combined_tests": "39 passed in27.78s including18priorphysicalinterfaces and7priorMajorana controls plus14newtests",
+  "local_combined_tests": "41 passed in31.30s including16new,18priorinterfaces and7Majorana tests",
   "local_producers": {
     "11994_native_clock_order": "PASS",
     "11995_native_metric_gr_lift": "PASS",
@@ -95,5 +95,29 @@
     },
     "scope": "Before follow-up clock alignment, which requires its own replay."
   },
-  "clock_interface_followup": "Align the full metric chart to the actual11994 clock covector; baseline principal symbol equals2eta. Re-generated metric producer PASS and15focusedtestsPASS11.81s after previous39integrationPASS27.78s."
+  "clock_interface_followup": "Align the full metric chart to the actual11994 clock covector; baseline principal symbol equals2eta. Re-generated metric producer PASS and15focusedtestsPASS11.81s after previous39integrationPASS27.78s.",
+  "pre_bounded_science_commit": "404af093f7f0f61e7bc3909e082ce89379ff01dd",
+  "pre_bounded_science_sha256_lf": {
+    "analysis/w33_pass11994_native_clock_order.py": "ecd1f83eda048ef4af776c2f5f2c59470a7841afe0a86ca0271c0d4002bcd83c",
+    "analysis/w33_pass11995_native_metric_gr_lift.py": "99eaf3063e7b1e95a994e6a0c644e6b2ebedaa3a1898b16814d2f30478e2af32",
+    "analysis/w33_pass11996_joint_singlet_flavour.py": "4889ab3f93dd79ae916ff6ef75287ce5ef4cc71e87513377a22c292bdcec2d11",
+    "analysis/w33_pass11997_native_chiral_tube.py": "b5dd80bc27268a904732b4193c6fa5dd330838828abf4216296d0dd0a75f0b3f",
+    "analysis/w33_pass11998_complex_reduction_tradeoff.py": "cf9e244d36caceb331da0359400f00a02f37aaa5872407a78b8c176f29f0f7d4",
+    "data/w33_pass11994_native_clock_order.json": "d9b05961c0b1d9dfe90689f40c68a757bf6ea869d6837676bd65b781e556c85e",
+    "data/w33_pass11995_native_metric_gr_lift.json": "2bab7325db9fbe7d698c084c00289a826c33f61c5778c44825f7821c05665e42",
+    "data/w33_pass11996_joint_singlet_flavour.json": "502244caee5d9b04735384c76ec8cf076c5063275f2da0be59fde6d836065853",
+    "data/w33_pass11997_native_chiral_tube.json": "2d356bd4aee45a19b1f75bb445010fe403f7fe3b978bfb6b5e977c32cb6da1aa",
+    "data/w33_pass11998_complex_reduction_tradeoff.json": "b5fc9a239c4432c9084e80689a037e6dca915b82b8c41c0d70cce4794671e4d8",
+    "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md": "521274c1e53e537c3c073a9b16321619ae2c5b91abd74c7ab22d55d4252c1dc8",
+    "tests/test_w33_pass11994_11998_native_physics.py": "2ba1ffa57157063f0bcd5dd058f70bd42995dc695cddb5afcd13fa4583a74733",
+    ".github/workflows/pass11994-11998-native-physics.yml": "d4323190b12ccee1cad14e4f163ba16cfc75837c6d4f6c6f9e345ca03ffdf0fa",
+    "docs/index.html": "ef46d79be8ec123a1490a0c692419d9d86c73f7e18e4b9a357dc3e1e14504236"
+  },
+  "pre_bounded_hosted": {
+    "run_id": 38820881130,
+    "science_commit": "404af093f7f0f61e7bc3909e082ce89379ff01dd",
+    "conclusion": "success",
+    "scope": "Clock alignment before bounded-source completion; does not attest final bounded model."
+  },
+  "bounded_source_repair": "Original unsaturated composite has explicitnegativeR^(16/3)runaway despite localstability. Final smoothCPodd/gaugeinvariant saturatedsource obeys|tau|<2, makes flavour lowerbound uniformin singlet amplitudes, and fullpositive-soft-mass/mediator completioncoercive.100digitlocalroot positive; globalminimum exists but displayedCPbranch not certifiedglobal."
 }
