@@ -1,0 +1,58 @@
+{
+  "interpretation": "Preserving the W33 orthogonality graph is weaker than a physical ququart unitary lift. Bargmann triple phases give a necessary projective-unitary invariant. This test does not classify the full 25920 action.",
+  "reference_mapping": "docs/witting_graph_isomorphism.md",
+  "tests": [
+    {
+      "F3_transvection_v": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "antiunitary_Bargmann_max_error": 0.38490017946,
+      "antiunitary_possible": false,
+      "nonorthogonal_triples": 3240,
+      "unitary_Bargmann_max_error": 0.0,
+      "unitary_possible": true
+    },
+    {
+      "F3_transvection_v": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "antiunitary_Bargmann_max_error": 0.38490017946,
+      "antiunitary_possible": false,
+      "nonorthogonal_triples": 3240,
+      "unitary_Bargmann_max_error": 0.0,
+      "unitary_possible": true
+    },
+    {
+      "F3_transvection_v": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "antiunitary_Bargmann_max_error": 0.38490017946,
+      "antiunitary_possible": false,
+      "nonorthogonal_triples": 3240,
+      "unitary_Bargmann_max_error": 0.0,
+      "unitary_possible": true
+    },
+    {
+      "F3_transvection_v": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "antiunitary_Bargmann_max_error": 0.38490017946,
+      "antiunitary_possible": false,
+      "nonorthogonal_triples": 3240,
+      "unitary_Bargmann_max_error": 0.0,
+      "unitary_possible": true
+    }
+  ]
+}

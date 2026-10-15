@@ -1,0 +1,123 @@
+{
+  "analyzer_calibration": {
+    "bound_proof": "For uniform basis sampling and trusted projector calibration, |Tr rho(Cpert-C)|<=||Cpert-C||_op. If basis efficiency lies in [eta_min,eta_max] independent of the outcome, the postselected average is <=eta_max/eta_min times the calibrated uniform upper bound.",
+    "conservative_separable_ceiling_with_setting_efficiency_band": 0.421097360886,
+    "ideal_separable_ceiling": 0.4,
+    "max_basis_unitarity_residual": 0.0,
+    "perturbed_vs_ideal_joint_match_operator_spectral_error": 0.003909713503,
+    "postcalibration_separable_ceiling_no_loss": 0.403909713503,
+    "scope": "Declared synthetic 4-mode perturbations and efficiency band only; not measured error or physical engineering loss budgets.",
+    "setting_efficiency_max": 0.98,
+    "setting_efficiency_min": 0.94,
+    "settings": 40,
+    "simulated_max_rail_rotation_radians": 0.01,
+    "single_party_ray_detector_slots_per_setting": 4,
+    "two_party_measurement_outcomes_per_setting": 16
+  },
+  "detector_to_W33_carrier": {
+    "F3_cycle_kernel_dimension": 201,
+    "F3_incidence_rank": 39,
+    "F3_vertex_boundary_matrix_shape": [
+      40,
+      240
+    ],
+    "directed_outcome_substitution_events": 480,
+    "mapping": "Each (basis, source slot, wrong destination slot) maps bijectively to one oriented 40-ray W33 graph edge. Every orthogonal ray pair belongs to one tetrad.",
+    "physical_interface_limit": "A detector slot substitution is a classical event edge in W33, not a physical two-qutrit Pauli operator. The selected H27-CSS code has a distinct 27-vertex/135-edge Schlaefli chain complex; no equivariant chain map, qutrit encoder, or fault-tolerant recovery is established.",
+    "turn_counts_for_every_oriented_edge": {
+      "open_turns": 9,
+      "total_nonbacktracking": 11,
+      "triangle_turns": 2
+    },
+    "unoriented_W33_orthogonality_edges": 240
+  },
+  "finite_key": {
+    "cases": [
+      {
+        "Phi_fidelity": 0.0625,
+        "asymptotic_one_way_hashing_rate_bits_per_pair": -2.0,
+        "matching_probability": 0.25,
+        "positive_hashing_lower_bound": false,
+        "visibility": 0
+      },
+      {
+        "Phi_fidelity": 0.25,
+        "asymptotic_one_way_hashing_rate_bits_per_pair": -1.741446071166,
+        "matching_probability": 0.4,
+        "positive_hashing_lower_bound": false,
+        "visibility": 0.2
+      },
+      {
+        "Phi_fidelity": 0.296875,
+        "asymptotic_one_way_hashing_rate_bits_per_pair": -1.624469761127,
+        "matching_probability": 0.4375,
+        "positive_hashing_lower_bound": false,
+        "visibility": 0.25
+      },
+      {
+        "Phi_fidelity": 0.53125,
+        "asymptotic_one_way_hashing_rate_bits_per_pair": -0.828535365586,
+        "matching_probability": 0.625,
+        "positive_hashing_lower_bound": false,
+        "visibility": 0.5
+      },
+      {
+        "Phi_fidelity": 0.71875,
+        "asymptotic_one_way_hashing_rate_bits_per_pair": 0.044038582557,
+        "matching_probability": 0.7749999999999999,
+        "positive_hashing_lower_bound": true,
+        "visibility": 0.7
+      },
+      {
+        "Phi_fidelity": 0.8125,
+        "asymptotic_one_way_hashing_rate_bits_per_pair": 0.571245753198,
+        "matching_probability": 0.8500000000000001,
+        "positive_hashing_lower_bound": true,
+        "visibility": 0.8
+      },
+      {
+        "Phi_fidelity": 1.0,
+        "asymptotic_one_way_hashing_rate_bits_per_pair": 2.0,
+        "matching_probability": 1.0,
+        "positive_hashing_lower_bound": true,
+        "visibility": 1
+      }
+    ],
+    "confidence_parameter": 0.001,
+    "finite_key_warning": "No composable finite-key entropy bound follows solely from the Witting matching witness; parameter estimation and smooth min-entropy vs coherent attacks remain unproved.",
+    "iid_pairs": 8192,
+    "isotropic_spectrum": "lambda_Phi=(1+15v)/16; 15 other eigenvalues=(1-v)/16",
+    "one_sided_Hoeffding_matching_deviation": 0.020533288163,
+    "one_way_hashing_rate": "R_hash= max(0, 2 - S(rho_v)) bits per two-ququart copy under trusted isotropic-state and asymptotic one-way hashing assumptions",
+    "positive_hashing_threshold_visibility": 0.691019401041
+  },
+  "product_state_postselection_attack": {
+    "basis_dependent_postselection": [
+      {
+        "acceptance_elsewhere": 1,
+        "accepted_fraction": 1.0,
+        "conditioned_product_state_matching": 0.4
+      },
+      {
+        "acceptance_elsewhere": 0.1,
+        "accepted_fraction": 0.19,
+        "conditioned_product_state_matching": 0.684210526316
+      },
+      {
+        "acceptance_elsewhere": 0,
+        "accepted_fraction": 0.1,
+        "conditioned_product_state_matching": 1.0
+      }
+    ],
+    "four_matching_bases": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "loophole": "If a detector or public basis announcement allows setting-dependent acceptance and calibration does not constrain it, a separable product state achieves 100% matches on 10% accepted bases. This invalidates an unqualified 40% postselected test.",
+    "source": "Separable state rho = |ray0><ray0|_A tensor |conj(ray0)><conj(ray0)|_B; four of forty Witting bases contain ray0.",
+    "uniform_40_basis_matching": 0.4
+  },
+  "source": "TOE90 Vlasov/Witting 40 rays and 40 contexts, plus prior W33 carrier"
+}
