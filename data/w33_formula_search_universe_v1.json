@@ -382795,6 +382795,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5c26c69c292ceb071fc6a03425b64de7375415fb723df4686bc7b14f4b946efa",
+      "normalized_formula": "-g^2(nA+nB)^2/(2M^2)`:sincen^2=n,itincludesacrossdensityinteraction",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11993_NATIVE_MAJORANA_SCALABILITY_REPAIR.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 98,
+          "path": "analysis/PASS11993_NATIVE_MAJORANA_SCALABILITY_REPAIR.md",
+          "raw": "`-g^2(nA+nB)^2/(2M^2)`: since n^2=n, it includes a cross density interaction",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d2e550283fd9ab3b755b22b68e7b4e9180929719c3a665b7b4a2630bd9527664",
+      "structural_formula": "-g^#(nA+nB)^#/(#M^#)`:sincen^#=n,itincludesacrossdensityinteraction"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7f0fd988be16ce7f33f28694b9984dbfc13cb9b15d39c12687572e81d5ac2fb2",
       "normalized_formula": "-gaugegroup1\u22953\u22958=SU(3)\u00d7SU(2)\u00d7U(1)=C(R)-module(BT876)",
       "numeric_literals": [
@@ -1125716,6 +1125743,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0e3dedb04b8ec29d9d04dbb421fadb733af89ff1fd839c0aa15c97d09c5dc33d",
+      "normalized_formula": "carrier='The11987gamma6matricesaresixMajoranasofthreefermionicmodes.ItsselectedpositivechiralityC4isODDfermionparity,notthefull8DFockspaceandnotphysicalspacetimespinbydimension.'",
+      "numeric_literals": [
+        "1987"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11993_majorana_scalability_repair.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/w33_pass11993_majorana_scalability_repair.py",
+          "raw": "carrier='The11987 gamma6 matrices are sixMajoranas ofthree fermionicmodes. Its selectedpositivechirality C4 is ODD fermionparity, not the full8DFockspace andnot physicalspacetime spin by dimension.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dd2d12b4ab191fd36df0fca6bf6ff4771fe1af87d9458eed1996ada098975bc5",
+      "structural_formula": "carrier='The1#gamma6matricesaresixMajoranasofthreefermionicmodes.ItsselectedpositivechiralityC4isODDfermionparity,notthefull8DFockspaceandnotphysicalspacetimespinbydimension.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "411ba33e4406ba4817afc985d9ec1204b8e55073781ee8261ac9d01b925c9484",
       "normalized_formula": "carrier=later[\"passes\"][\"3715_minimum_erasure_correcting_carrier\"]",
       "numeric_literals": [
@@ -1470645,6 +1470699,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "029486fad18a0990b089cecf06395255874ccef9994798031b15444bc40a3465",
+      "normalized_formula": "physics_connection='11988localJcanbereadasaMajoranaparticle/holepolarization;itsnonparalleltransportcanactasBogoliubovmixinginthisdeclaredFockmodel.SuchmixingneednotbeafailureofquantumcomplexHilbertspace.Achargedfamily3interpretationstillneedscharge/gauge/complexstructurecompatibility;noparticlesorvacuumactionarederived.'",
+      "numeric_literals": [
+        "11988"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11993_majorana_scalability_repair.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 110,
+          "path": "analysis/w33_pass11993_majorana_scalability_repair.py",
+          "raw": "physics_connection='11988 localJ can be read as a Majorana particle/hole polarization; its nonparalleltransport can actasBogoliubov mixing inthisdeclaredFockmodel. Such mixingneednotbe a failureofquantumcomplexHilbertspace. A chargedfamily3 interpretation still needscharge/gauge/complexstructure compatibility; no particlesorvacuumactionarederived.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "34320aee50efad32e372e55249801137b7679a4ad3c5c70be509a62c0b337035",
+      "structural_formula": "physics_connection='#localJcanbereadasaMajoranaparticle/holepolarization;itsnonparalleltransportcanactasBogoliubovmixinginthisdeclaredFockmodel.SuchmixingneednotbeafailureofquantumcomplexHilbertspace.Achargedfamily3interpretationstillneedscharge/gauge/complexstructurecompatibility;noparticlesorvacuumactionarederived.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c588014590f3e5aa988c42d3a8fc959d67a3f608e7052f802db11b4279a1112a",
       "normalized_formula": "physics_scope='Aspecifiedfinitequantumhoppinggraphonselectorminima,NOTactualW33spacetime,GR,quantumgravity,continuum,photonpropagation,orphysicallyderivedtunneling.Uniqueuniformgrounddoesnotmeananyparticulartriplespontaneouslyselectedatfinitevolume.')",
       "numeric_literals": [
@@ -1474141,6 +1474222,35 @@
       },
       "structural_family_id": "650a5d3e3dd0d01667ddd1913ac185b31e85eac05e28544ae95430df07468769",
       "structural_formula": "positivity_proof='d=(m/t)*(##*f^#*t^#).Sincef=#b/(#mt+b),b=#/#,|ft|<#b/(#m)andm>#/#,thebracketispositive.Sum(Vq+a)^#=#a^#+q^T*(#Pw-Adj)*q.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "54cffcd6448ac5c942206a37d826f3b7d0390458e203a45725448ab3f451cfb5",
+      "normalized_formula": "possible_mediator='AsuppliedheavyrealbosonxwithV=M2x2/2+gx(nA+nB)eliminatesto-g2(nA+nB)2/(2M2).Sincen2=n,thiscontains-g2nAnB/M2pluslocalshifts;nAnB=(Q+2nA+2nB-1)/4.Thisisalowenergymatchingpossibility,notaderivednativemediatorordynamicalbusimplementation.'",
+      "numeric_literals": [
+        "1",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11993_majorana_scalability_repair.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 109,
+          "path": "analysis/w33_pass11993_majorana_scalability_repair.py",
+          "raw": "possible_mediator='A supplied heavyreal boson x with V=M\u00b2x\u00b2/2+g x(nA+nB) eliminates to -g\u00b2(nA+nB)\u00b2/(2M\u00b2). Since n\u00b2=n, this contains -g\u00b2 nA nB/M\u00b2 pluslocalshifts; nA nB=(Q+2nA+2nB-1)/4. This is a lowenergy matching possibility, not a derivednative mediator or dynamicalbus implementation.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d98e5f702cc19aaa7c321b078fb99499af1382a4fcc10ccd918225644ef7ecea",
+      "structural_formula": "possible_mediator='AsuppliedheavyrealbosonxwithV=M2x2/#+gx(nA+nB)eliminatesto-g2(nA+nB)#/(#M2).Sincen2=n,thiscontains-g2nAnB/M2pluslocalshifts;nAnB=(Q+#nA+#nB-#)/#.Thisisalowenergymatchingpossibility,notaderivednativemediatorordynamicalbusimplementation.'"
     },
     {
       "file_count": 1,
@@ -1578733,6 +1578843,36 @@
       },
       "structural_family_id": "5bdb1f2c6a722c5de66ca58685f9d5b91a71a16254d4f3298b36a5ba4033306d",
       "structural_formula": "prior=['#nativeatlassix-spaces','#spinorgatelibrary','analysis/PASS1#_ODD_WEIL_NORMAL_MAP.mdownstheodd-WeilbasisandWitting/Paulilabelledprojectors','analysis/PASS1#_1#_KERNEL_DYNAMICS.mdownsthetransverse3/masskernel3equality','analysis/###_toe4#_cusp_tomography_parallel_research_audit.mdownsotherlabelledPauliincidencemaps','W3#_FOR_EVERYONE.texhistoricalWittinggeometry,notanatlas-spinoridentification'])"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f11589d2526fdf47cbac53bca217ccb947bf2ea1bfac51cbeb8bcf1ade6b235b",
+      "normalized_formula": "prior=['11987actualSpin6gatealphabet','11988projectivetangentJandnonparallelholonomy','11990alternative9level/4railsuppliedcontrols','priorHolonetmagic/nonClifforduniversalityisnotsuperseded']",
+      "numeric_literals": [
+        "11987",
+        "11988",
+        "11990",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11993_majorana_scalability_repair.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 112,
+          "path": "analysis/w33_pass11993_majorana_scalability_repair.py",
+          "raw": "prior=['11987 actualSpin6 gatealphabet','11988 projectivetangentJ andnonparallelholonomy','11990 alternative9level/4rail suppliedcontrols','priorHolonetmagic/nonClifforduniversality is notsuperseded'],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d540aca2519dd112362fd16e34abe2d86a224d62aa1a3b4b5cdbb79d6ed3dde9",
+      "structural_formula": "prior=['#actualSpin6gatealphabet','#projectivetangentJandnonparallelholonomy','#alternative9level/#railsuppliedcontrols','priorHolonetmagic/nonClifforduniversalityisnotsuperseded']"
     },
     {
       "file_count": 1,
@@ -1819539,9 +1819679,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-15T18:15:37-04:00",
+  "frozen_at": "2026-10-15T18:27:00-04:00",
   "pass": 398,
-  "repository_head": "dd9035ba15a739b7edba4c9104c5cb6d24c8c25d",
+  "repository_head": "e2003d223ca34b5c95c247a00beed5520bc50406",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1945361,6 +1945501,14 @@
       "exact_member_count": 1,
       "structural_family_id": "dd3dd34c2d82398e9527cb776fc6b1bcbd476dde2631ba3687256394109c671d",
       "structural_formula": "-function:\\[L_3(s,\\pi)=(##^{-s})^{#}.\\]\\textbf{Physicsbridge.}Intheproposedcontinuumreading,thetree-levelscatteringamplitudefortwo"
+    },
+    {
+      "exact_formula_ids": [
+        "5c26c69c292ceb071fc6a03425b64de7375415fb723df4686bc7b14f4b946efa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d2e550283fd9ab3b755b22b68e7b4e9180929719c3a665b7b4a2630bd9527664",
+      "structural_formula": "-g^#(nA+nB)^#/(#M^#)`:sincen^#=n,itincludesacrossdensityinteraction"
     },
     {
       "exact_formula_ids": [
@@ -2120204,6 +2120352,14 @@
     },
     {
       "exact_formula_ids": [
+        "0e3dedb04b8ec29d9d04dbb421fadb733af89ff1fd839c0aa15c97d09c5dc33d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dd2d12b4ab191fd36df0fca6bf6ff4771fe1af87d9458eed1996ada098975bc5",
+      "structural_formula": "carrier='The1#gamma6matricesaresixMajoranasofthreefermionicmodes.ItsselectedpositivechiralityC4isODDfermionparity,notthefull8DFockspaceandnotphysicalspacetimespinbydimension.'"
+    },
+    {
+      "exact_formula_ids": [
         "411ba33e4406ba4817afc985d9ec1204b8e55073781ee8261ac9d01b925c9484"
       ],
       "exact_member_count": 1,
@@ -2213702,6 +2213858,14 @@
     },
     {
       "exact_formula_ids": [
+        "029486fad18a0990b089cecf06395255874ccef9994798031b15444bc40a3465"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "34320aee50efad32e372e55249801137b7679a4ad3c5c70be509a62c0b337035",
+      "structural_formula": "physics_connection='#localJcanbereadasaMajoranaparticle/holepolarization;itsnonparalleltransportcanactasBogoliubovmixinginthisdeclaredFockmodel.SuchmixingneednotbeafailureofquantumcomplexHilbertspace.Achargedfamily3interpretationstillneedscharge/gauge/complexstructurecompatibility;noparticlesorvacuumactionarederived.'"
+    },
+    {
+      "exact_formula_ids": [
         "c588014590f3e5aa988c42d3a8fc959d67a3f608e7052f802db11b4279a1112a"
       ],
       "exact_member_count": 1,
@@ -2214662,6 +2214826,14 @@
       "exact_member_count": 1,
       "structural_family_id": "650a5d3e3dd0d01667ddd1913ac185b31e85eac05e28544ae95430df07468769",
       "structural_formula": "positivity_proof='d=(m/t)*(##*f^#*t^#).Sincef=#b/(#mt+b),b=#/#,|ft|<#b/(#m)andm>#/#,thebracketispositive.Sum(Vq+a)^#=#a^#+q^T*(#Pw-Adj)*q.'"
+    },
+    {
+      "exact_formula_ids": [
+        "54cffcd6448ac5c942206a37d826f3b7d0390458e203a45725448ab3f451cfb5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d98e5f702cc19aaa7c321b078fb99499af1382a4fcc10ccd918225644ef7ecea",
+      "structural_formula": "possible_mediator='AsuppliedheavyrealbosonxwithV=M2x2/#+gx(nA+nB)eliminatesto-g2(nA+nB)#/(#M2).Sincen2=n,thiscontains-g2nAnB/M2pluslocalshifts;nAnB=(Q+#nA+#nB-#)/#.Thisisalowenergymatchingpossibility,notaderivednativemediatorordynamicalbusimplementation.'"
     },
     {
       "exact_formula_ids": [
@@ -2243911,6 +2244083,14 @@
       "exact_member_count": 1,
       "structural_family_id": "89ae6c7f539a2e5ac87163407d536fde9eae29d6ad60dddfe0acd4688a585c93",
       "structural_formula": "prior='analysis/w3#_pass1#_quantized_current_vacuum.py'"
+    },
+    {
+      "exact_formula_ids": [
+        "f11589d2526fdf47cbac53bca217ccb947bf2ea1bfac51cbeb8bcf1ade6b235b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d540aca2519dd112362fd16e34abe2d86a224d62aa1a3b4b5cdbb79d6ed3dde9",
+      "structural_formula": "prior=['#actualSpin6gatealphabet','#projectivetangentJandnonparallelholonomy','#alternative9level/#railsuppliedcontrols','priorHolonetmagic/nonClifforduniversalityisnotsuperseded']"
     },
     {
       "exact_formula_ids": [
@@ -2305765,20 +2305945,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88842992,
-    "exact_formula_families": 62223,
-    "files_scanned": 12188,
-    "formula_occurrences": 68236,
+    "bytes_scanned": 88857792,
+    "exact_formula_families": 62228,
+    "files_scanned": 12190,
+    "formula_occurrences": 68241,
     "status_occurrences": {
       "certified_or_theorem": 5057,
       "killed_or_retracted": 1668,
       "open_or_conditional": 2279,
       "preregistered": 33,
       "retrospective_fit": 5250,
-      "unclassified": 53949
+      "unclassified": 53954
     },
-    "structural_families": 60565
+    "structural_families": 60570
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "d11bdbdc7ff5b64e3321f27b2244c3d3774b82068547ed2b8ca2c6a5da1f5d74"
+  "universe_sha256": "b3cd5b0c828d719c11c8e818d9b327d385d972ed7da88eb7582f1e649c2bcd57"
 }
