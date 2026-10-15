@@ -55416,6 +55416,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a4b61feda0341c136e7ece2daacf6b0209684723951a97d8146008fcdff2d6f5",
+      "normalized_formula": "\"ThesameintegralcellularboundarymapsreducetoF_qforanyprimepowerq.Everytrianglehasanedgeappearinginnootherface,sorank(d2)=45overeveryfield.Aspanning-treeminorgivesrank(d1)=26overeveryfield.Allshort-distanceproofsarecharacteristic-independent.\"",
+      "numeric_literals": [
+        "26",
+        "45"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261015_toe81_native_tritangent_css.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 200,
+          "path": "analysis/w33_20261015_toe81_native_tritangent_css.py",
+          "raw": "\"The same integral cellular boundary maps reduce to F_q for any prime power q. Every triangle has an edge appearing in no other face, so rank(d2)=45 over every field. A spanning-tree minor gives rank(d1)=26 over every field. All short-distance proofs are characteristic-independent.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5146b795f4b21b894e2f83c4af2fba36f6a1615941038a4f5c5525934739d655",
+      "structural_formula": "\"ThesameintegralcellularboundarymapsreducetoF_qforanyprimepowerq.Everytrianglehasanedgeappearinginnootherface,sorank(d2)=#overeveryfield.Aspanning-treeminorgivesrank(d1)=#overeveryfield.Allshort-distanceproofsarecharacteristic-independent.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "10ff25366d5b2b74b4eedc1fa1cc81c4a21b2ae1072d20748d90c3d9c381197f",
       "normalized_formula": "\"Theseesaw's72e-foldsistheSAMEdepthinnaturallog(72/ln10=31.3decades~\"",
       "numeric_literals": [
@@ -614011,6 +614039,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d03aec88606fc24e067c5091bd03e1ec224ff1b1a0cf3c25f98a1d70a5aa6cf3",
+      "normalized_formula": "FlatU(1)connectionsonthisfinitecomplexmodulogaugeformthe64-torus(U(1))^64.FlatnonabelianGconnectionsareclassifiedbythecharactervarietyHom(F_64,G)/G=G^64/G.Theseareexactmathematicalmoduli,notadynamical4Dgaugefield",
+      "numeric_literals": [
+        "1",
+        "4",
+        "64"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-15_toe81_native_e6_tritangent_css_and_homology.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/2026-10-15_toe81_native_e6_tritangent_css_and_homology.md",
+          "raw": "Flat U(1) connections on this finite complex modulo gauge form the 64-torus (U(1))^64. Flat nonabelian G connections are classified by the character variety Hom(F_64,G)/G = G^64/G. These are exact mathematical moduli, not a dynamical 4D gauge field.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "facce88514e17340b7c41973c614eab04a6fbea77918e4a4f37964a28b6ba93f",
+      "structural_formula": "FlatU(#)connectionsonthisfinitecomplexmodulogaugeformthe6#-torus(U(#))^#.FlatnonabelianGconnectionsareclassifiedbythecharactervarietyHom(F_6#,G)/G=G^#/G.Theseareexactmathematicalmoduli,notadynamical4Dgaugefield"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c37d7ffdecf4ee4011834927a96265969e73535f4745f7870309c28eae8f28ab",
       "normalized_formula": "Fn0=gram_schmidt([fk(td,0),fk(td,1),fk(td,2)])",
       "numeric_literals": [
@@ -619477,6 +619534,37 @@
       },
       "structural_family_id": "3d13c7a22266ed8c3c847bf8cf492ae842a06c22d0d64b6b5da70b58972833e2",
       "structural_formula": "Forq!=#,alpha=Phi_4(q)(Hoffmanboundistight)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "71cc6c3fe1875e8382972fd526874c9974663f5985f18e7419829ae39b805ca3",
+      "normalized_formula": "Forq=2,thelogicalHilbertspacedimensionis2^64;forq=3itis3^64.Therate64/135ismoderatebuttheoveralldistanceisonlyTWO.Thecodeisnotapracticalfault-toleranttopologicalquantummemorywithoutsignificantadditionalconstruction",
+      "numeric_literals": [
+        "135",
+        "2",
+        "3",
+        "4",
+        "64"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-15_toe81_native_e6_tritangent_css_and_homology.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/2026-10-15_toe81_native_e6_tritangent_css_and_homology.md",
+          "raw": "For q=2, the logical Hilbert space dimension is 2^64; for q=3 it is 3^64. The rate 64/135 is moderate but the overall distance is only TWO. The code is not a practical fault-tolerant topological quantum memory without significant additional construction.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "037bb80723556968812fe06fa1fc6c169647891a291d8ca0a630788365ccb592",
+      "structural_formula": "Forq=#,thelogicalHilbertspacedimensionis2^#;forq=#itis3^#.Therate6#/#ismoderatebuttheoveralldistanceisonlyTWO.Thecodeisnotapracticalfault-toleranttopologicalquantummemorywithoutsignificantadditionalconstruction"
     },
     {
       "file_count": 1,
@@ -1812485,9 +1812573,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-14T19:32:27-04:00",
+  "frozen_at": "2026-10-15T09:58:27-04:00",
   "pass": 398,
-  "repository_head": "7ab245e6f3a401e78144d48e59d37d6bb83bc884",
+  "repository_head": "287daca4b853e6b03ab339504f4f6e7acd0903e9",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1827990,6 +1828078,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fdcb3ddb2845ee3da022e7792b814b03c7e4addffc6869840782012e402d01a8",
       "structural_formula": "\"ThereforeC-iscontainedinC+^perp.Pass5#givesdimC+=(q+#)^#/#;multiplyingbyonefixedopposite-cosetprojectivityisacoordinatepermutation,sodimC-isthesame.Equalhalf-dimensionsforceequality.\""
+    },
+    {
+      "exact_formula_ids": [
+        "a4b61feda0341c136e7ece2daacf6b0209684723951a97d8146008fcdff2d6f5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5146b795f4b21b894e2f83c4af2fba36f6a1615941038a4f5c5525934739d655",
+      "structural_formula": "\"ThesameintegralcellularboundarymapsreducetoF_qforanyprimepowerq.Everytrianglehasanedgeappearinginnootherface,sorank(d2)=#overeveryfield.Aspanning-treeminorgivesrank(d1)=#overeveryfield.Allshort-distanceproofsarecharacteristic-independent.\""
     },
     {
       "exact_formula_ids": [
@@ -1977736,6 +1977832,14 @@
     },
     {
       "exact_formula_ids": [
+        "d03aec88606fc24e067c5091bd03e1ec224ff1b1a0cf3c25f98a1d70a5aa6cf3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "facce88514e17340b7c41973c614eab04a6fbea77918e4a4f37964a28b6ba93f",
+      "structural_formula": "FlatU(#)connectionsonthisfinitecomplexmodulogaugeformthe6#-torus(U(#))^#.FlatnonabelianGconnectionsareclassifiedbythecharactervarietyHom(F_6#,G)/G=G^#/G.Theseareexactmathematicalmoduli,notadynamical4Dgaugefield"
+    },
+    {
+      "exact_formula_ids": [
         "c37d7ffdecf4ee4011834927a96265969e73535f4745f7870309c28eae8f28ab"
       ],
       "exact_member_count": 1,
@@ -1979198,6 +1979302,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d6a91c90d7807ab5d34e497e4abaede2b8a87c16a4bae3b43cbc3e1925f700e4",
       "structural_formula": "Forq=#,p=#with3#\u2261#mod8(so2isaQRmod3#).Iford2(#)=(#\u2212#)/#=#,thiswouldgiveasecondW(#,q)spacewithavalidalpha-code.Thiswouldcorrespondto"
+    },
+    {
+      "exact_formula_ids": [
+        "71cc6c3fe1875e8382972fd526874c9974663f5985f18e7419829ae39b805ca3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "037bb80723556968812fe06fa1fc6c169647891a291d8ca0a630788365ccb592",
+      "structural_formula": "Forq=#,thelogicalHilbertspacedimensionis2^#;forq=#itis3^#.Therate6#/#ismoderatebuttheoveralldistanceisonlyTWO.Thecodeisnotapracticalfault-toleranttopologicalquantummemorywithoutsignificantadditionalconstruction"
     },
     {
       "exact_formula_ids": [
@@ -2296785,20 +2296897,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88373928,
-    "exact_formula_families": 61977,
-    "files_scanned": 12127,
-    "formula_occurrences": 67984,
+    "bytes_scanned": 88388421,
+    "exact_formula_families": 61980,
+    "files_scanned": 12129,
+    "formula_occurrences": 67987,
     "status_occurrences": {
       "certified_or_theorem": 5040,
       "killed_or_retracted": 1662,
-      "open_or_conditional": 2266,
+      "open_or_conditional": 2267,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53748
+      "unclassified": 53750
     },
-    "structural_families": 60325
+    "structural_families": 60328
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "654f7694a7986ca00e80acf44371a731c8856b5474653ba5cd7f8be12ddc2d45"
+  "universe_sha256": "eb318f3a9676c21a6a556b30ea2bd250369ff395cdb773c0d23402af61072e9e"
 }
