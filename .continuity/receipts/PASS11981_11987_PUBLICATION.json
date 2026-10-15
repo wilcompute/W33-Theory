@@ -34,6 +34,53 @@
   },
   "local_combined_tests": "...................                                                      [100%]\n19 passed in 23.24s\n",
   "final_local_new_tests": "............                                                             [100%]\n12 passed in 13.88s\n",
-  "hosted_status": "pending after science publication",
-  "scope": "Exact O6 compact polar holonomy/SU4 spin-gate density and finite-model CP-breaking numerical UV vacua; no complete physicalTOE claim."
+  "hosted_status": "success",
+  "scope": "Exact O6 compact polar holonomy/SU4 spin-gate density and finite-model CP-breaking numerical UV vacua; no complete physicalTOE claim.",
+  "science_commit": "055155fe4bd6346f95dc451ea86ec0bfe11bb634",
+  "hosted_run": 38781940364,
+  "hosted_job": 116584126255,
+  "exact_replay_fields": {
+    "w33_pass11983_atlas_projector_descent.json": [
+      "exact_integer_witness",
+      "overlap_mismatch_histogram",
+      "canonical_projection_transport_histogram",
+      "compact_holonomy_closure"
+    ],
+    "w33_pass11985_nonlinear_metric_clock.json": [
+      "bare_clock_bracket",
+      "dressed_h2",
+      "exact_dressed_clock_bracket",
+      "physical_real_phase_dimension"
+    ],
+    "w33_pass11986_logical_modular_descent.json": [
+      "F3_radical_dimensions",
+      "integral_H1_coinvariant_factors",
+      "generator_logical_matrices",
+      "surviving_coefficients",
+      "surviving_original_N18_minimizers"
+    ]
+  },
+  "CP_absoluteJ_max_hosted_local_difference": 2.84015654397618e-09,
+  "hosted_test_lines": [
+    "verify\tFrozen witnesses and prior regressions\t2026-10-15T18:00:42.0760334Z 19 passed in 10.87s",
+    "verify\tCheck regenerated results\t2026-10-15T18:01:02.6661365Z 12 passed in 5.43s"
+  ],
+  "hosted_log_lf_sha256": "05e72eed0831dc02f1389b2b5ef417de4cf59af2a38e475aaa5e62fb740bf3e5",
+  "spin_gate_max_hosted_local_entry_difference": 8.382183835919932e-15,
+  "hosted_artifact": {
+    "expired": false,
+    "id": 11995663300,
+    "name": "pass11981-11987-completion",
+    "size_in_bytes": 38988
+  },
+  "result_index": {
+    "generation_output": "wrote RESULTS_INDEX.md\n  files indexed : 12251\n  distinctive   : 16880\n  unique (1 file): 7380\n  probe [[40,10,4]]  -> 41 files\n  probe [40,15,8]    -> 60 files\n  probe 51840        -> 1151 files  (non-distinctive: >25 files)\n  probe 8353         -> 11 files\n  probe 25920        -> 911 files  (non-distinctive: >25 files)\n  probe 196883       -> 140 files  (non-distinctive: >25 files)\n",
+    "lf_sha256": "3f3512e08ba7953f16d3e9a24e838908a3cd423997001e94de7820c36b1d0b05",
+    "freshness": "Full regeneration after final science source/report changes"
+  },
+  "integrated_peer_catalogue": "5d2d8432f",
+  "late_paper_crosscheck": {
+    "valid_prior": "Spin6=SU4 already appears in manuscripts/tex/part21_lock_table.tex; this general isomorphism is not new.",
+    "not_inputs": "No triality premise, stale multiplicity table or dimension-only physical inference from older formula bridges is used in the new explicit polar connection proof."
+  }
 }
