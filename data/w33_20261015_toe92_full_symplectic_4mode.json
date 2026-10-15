@@ -1,0 +1,62 @@
+{
+  "all_Cayley_edges_verified": 129600,
+  "explicit_scalar_projective_cocycle_relation": {
+    "last_generator": 3,
+    "left_word_generators": [
+      3,
+      1
+    ],
+    "projective_loop_identity": true,
+    "same_projective_permutation_target_word": [
+      1,
+      3,
+      1
+    ],
+    "scalar_phase_imag": 0.8660254038,
+    "scalar_phase_real": -0.5
+  },
+  "four_plane_local_generators_projective_subgroup_order": 288,
+  "full_projective_group_order": 25920,
+  "generator_orders_in_projective_permutation_group": {
+    "0": 3,
+    "1": 3,
+    "2": 3,
+    "3": 3,
+    "4": 3
+  },
+  "generator_vectors_F3": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "group": "PSp(4,3) via five explicitly mapped F3 symplectic transvections",
+  "maximum_projective_unitary_closure_residual": 0.0,
+  "scope": "All 25920 projective ray permutations close with four-mode U(4) unitary lifts, numerically checked over all Cayley edges. Phases constitute a projective representation; no canonical globally linear PSp action, physical gate calibration, or ququart-to-CSS encoding is proven."
+}

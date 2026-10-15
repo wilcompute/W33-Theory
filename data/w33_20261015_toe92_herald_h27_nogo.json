@@ -1,0 +1,43 @@
+{
+  "basis_match_probabilities": {
+    "p=1/3_contexts": 36,
+    "p=1_contexts": 4
+  },
+  "constructive_basis_efficiency_attack_conditional_match": "95/236",
+  "equivariant_total_set_map_no_go": {
+    "formal_proof": "If y=f(x) and f is H27-equivariant, then Stab(x) subset Stab(y). A free target implies Stab(x)=1; every domain orbit has 27 elements. Since 40 and 480 are not divisible by 27, no such total equivariant deterministic set map exists, for ANY H27 action on either source.",
+    "group": "H27 acts regularly on 27 Schlaefli vertices, so freely on ordered edges and, because |H27| odd, freely on unoriented edges.",
+    "minimum_discarded_directed_events_for_free_subset_at_cardinality_level": 21,
+    "minimum_discarded_points_for_free_subset_at_cardinality_level": 13,
+    "source_cardinalities": [
+      40,
+      480
+    ],
+    "source_mod_27": [
+      13,
+      21
+    ],
+    "target_cardinalities": {
+      "H27_regular_cubic_addresses": 27,
+      "Schlaefli_directed_edges": 270,
+      "Schlaefli_unoriented_edges": 135
+    },
+    "what_is_not_ruled_out": "Partial/symmetry-breaking maps, coarse-graining, linear equivariant maps between chain modules, stochastic channels, embedding after adding ancillas or changing group action, or genuinely engineered physical interfaces."
+  },
+  "no_go_scope": "Mathematical cardinality obstruction and synthetic malicious herald model. Not an experimental detector attack or universal no-go for quantum CSS conversions.",
+  "quantum_state": "|Witting_ray_0><Witting_ray_0| on Alice tensor conjugate ray_0 pure projector on Bob (separable)",
+  "setting_efficiency_max": "49/50",
+  "setting_efficiency_min": "47/50",
+  "setting_efficiency_ratio_universal_separable_upper_bound": "98/235",
+  "unconditioned_uniform_basis_match": "2/5",
+  "uniform_per_basis_acceptance_outcome_attack": {
+    "accept_probability_if_match_in_four_perfect_bases": "1/3",
+    "accept_probability_if_match_in_other_36_bases": "1",
+    "accept_probability_if_mismatch": "0",
+    "accepted_fraction_each_of_40_bases": "1/3",
+    "accepted_fraction_globally": "1/3",
+    "adversary_capability": "A malicious joint coincidence/postselection unit compares Alice and Bob outcomes AFTER measurements and then flags acceptance, while maintaining identical 1/3 overall acceptance on every setting.",
+    "conditioned_match": "1",
+    "security_conclusion": "PER-BASIS acceptance-rate equality is not sufficient by itself. Herald flag must be generated independently of both secret measurement outcomes (or constrain the full outcome-dependent instrument)."
+  }
+}

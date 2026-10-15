@@ -1,0 +1,26 @@
+name: TOE92 Witting full symmetry and quantum communication audits
+on:
+  push:
+    paths:
+      - 'analysis/w33_20261015_toe92_*.py'
+      - 'analysis/2026-10-15_toe92_witting_five.md'
+      - 'data/w33_20261015_toe92_*.json'
+      - 'tests/test_w33_20261015_toe92_witting_five.py'
+      - '.github/workflows/w33_toe92_witting_five.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  exact-and-reproducible:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy pytest
+      - run: python -m pytest -q tests/test_w33_20261015_toe92_witting_five.py
+      - run: python -m analysis.w33_20261015_toe92_full_symplectic_4mode
+      - run: python -m analysis.w33_20261015_toe92_iid_cq_privacy
+      - run: python -m analysis.w33_20261015_toe92_optical_givens_mesh
+      - run: python -m analysis.w33_20261015_toe92_herald_h27_nogo
+      - run: git diff --exit-code -- data/w33_20261015_toe92_full_symplectic_4mode.json data/w33_20261015_toe92_iid_cq_privacy.json data/w33_20261015_toe92_optical_givens_mesh.json data/w33_20261015_toe92_herald_h27_nogo.json
