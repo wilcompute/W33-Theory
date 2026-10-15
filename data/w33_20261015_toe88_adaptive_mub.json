@@ -1,0 +1,50 @@
+{
+  "POVM_effect_expectation_calibration_bound": 0.01,
+  "accepted_shots": 1200,
+  "adaptive_EB_conditional_per_round_survival_bound": 0.5,
+  "adaptive_nonIID_binomial_tail_valid_if_conditional_success_bound": true,
+  "alternative_power_under_ideal_conditional_independence": 0.9932423412730284,
+  "calibrated_postnoise_EB_bound": 0.5089680000000001,
+  "calibrated_postnoise_alternative_lower_mean": 0.5889445,
+  "coherent_v025_ideal_return_mean": 0.625,
+  "conservative_true_EB_survival_bound": 0.52,
+  "conservative_true_coherent_return_mean": 0.605,
+  "exact_max_EB_tail_alpha": 0.0009467410865383816,
+  "input_state_trace_distance_calibration_bound": 0.01,
+  "limits": "Analytical error envelopes and toy adaptive simulation, not a hardware calibration or device-independent optical observation.",
+  "loophole": "Basis metadata leakage combined with setting-dependent acceptance can drive postselected fidelity to 1 for an entanglement-breaking process. Measure per-setting survival rates, keep inputs secret, and bound loss to apply the witness.",
+  "proof_note": "For conditional success probability q_t <= p0, couple each Bernoulli trial to U_t < q_t using fresh iid uniforms: its success count is stochastically bounded by iid Binomial(n,p0), even with adaptive classical history.",
+  "quantum_design": "Four qutrit mutually unbiased bases, 12 independently secret randomized input states",
+  "readout_confusion_rate": 0.02,
+  "reject_at_successes_at_least": 665,
+  "secret_setting_past_adaptive_null_simulation": {
+    "count_ge_calibrated_threshold": "Do not compare raw 0.5 strategy to p0 calibrated threshold as a p-value; use exact supermartingale binomial bound.",
+    "max": 646,
+    "mean": 598.0625,
+    "min": 555,
+    "shots_per_trial": 1200,
+    "strategy": "adaptive past-only basis choice, no access to next secret setting",
+    "trials": 96
+  },
+  "state_dependent_heralding_attacks": [
+    {
+      "acceptance_other_basis": 1,
+      "accepted_state_mean_fidelity": 0.5,
+      "setting_dependency_max_minus_min": 0,
+      "total_accepted_fraction": 1.0
+    },
+    {
+      "acceptance_other_basis": 0.1,
+      "accepted_state_mean_fidelity": 0.8461538461538461,
+      "setting_dependency_max_minus_min": 0.9,
+      "total_accepted_fraction": 0.325
+    },
+    {
+      "acceptance_other_basis": 0,
+      "accepted_state_mean_fidelity": 1.0,
+      "setting_dependency_max_minus_min": 1,
+      "total_accepted_fraction": 0.25
+    }
+  ],
+  "uniform_replacement_leak_rate": 0.03
+}

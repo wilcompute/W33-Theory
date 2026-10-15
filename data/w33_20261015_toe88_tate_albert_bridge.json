@@ -1,0 +1,2730 @@
+{
+  "F3_aug_center_Jordan": {
+    "Jordan_1_2_3_block_counts": [
+      0,
+      1,
+      8
+    ],
+    "cyclic_Tate_H0_Hminus1_dimension": 1,
+    "rank_g_minus_identity": 17,
+    "rank_square": 8
+  },
+  "F3_aug_radical_filtration": [
+    26,
+    24,
+    20,
+    16,
+    11,
+    7,
+    3,
+    1,
+    0
+  ],
+  "F3_equivariant_isomorphism_to_regular_augmentation": "OBSTRUCTED_BY_CENTRAL_JORDAN_RANK",
+  "F3_selected_H1_center_Jordan": {
+    "Jordan_1_2_3_block_counts": [
+      1,
+      2,
+      7
+    ],
+    "cyclic_Tate_H0_Hminus1_dimension": 3,
+    "rank_g_minus_identity": 16,
+    "rank_square": 7
+  },
+  "F3_selected_H1_radical_filtration": [
+    26,
+    24,
+    21,
+    15,
+    11,
+    6,
+    3,
+    1,
+    0
+  ],
+  "F4_E6_scope": "Albert J27=traceless J26 plus scalar identity under F4, in suitable characteristic; no F4-equivariant map, integral Albert product, or physical E6 identification is constructed.",
+  "augmentation_module_dimension": 26,
+  "binary_aug_equivariant_isomorphism_to_selected_H1": {
+    "cyclic_vector": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "explicit_aug_to_H1_basis_images": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "generator_search_trial": 2,
+    "rank": 26
+  },
+  "interpretation": "The 26D binary H1 is explicitly an H27-module isomorphic to the regular augmentation. In characteristic 3 the same candidate fails the central Jordan invariant; 26D dimension matching does not establish an F4/Albert embedding.",
+  "ternary_H1_H2_Jordan_Tate_all_13_classes": [
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              8
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 17,
+            "rank_square": 8
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              5
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 10,
+            "rank_square": 5
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              7
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 16,
+            "rank_square": 7
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              3,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 5,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              8
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 17,
+            "rank_square": 8
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              5
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 10,
+            "rank_square": 5
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              8
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 17,
+            "rank_square": 8
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              5
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 10,
+            "rank_square": 5
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              7
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 16,
+            "rank_square": 7
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              7,
+              0,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 7,
+            "rank_g_minus_identity": 6,
+            "rank_square": 3
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        0,
+        10
+      ],
+      "size": 24,
+      "torsion": []
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              8
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 17,
+            "rank_square": 8
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              5
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 10,
+            "rank_square": 5
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              7
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 16,
+            "rank_square": 7
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              3,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 5,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              8
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 17,
+            "rank_square": 8
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              5
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 10,
+            "rank_square": 5
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              8
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 17,
+            "rank_square": 8
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              5
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 10,
+            "rank_square": 5
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              7
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 16,
+            "rank_square": 7
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              7,
+              0,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 7,
+            "rank_g_minus_identity": 6,
+            "rank_square": 3
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        0,
+        37
+      ],
+      "size": 12,
+      "torsion": []
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        2
+      ],
+      "size": 48,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        5
+      ],
+      "size": 48,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        7
+      ],
+      "size": 24,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        10
+      ],
+      "size": 24,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        11
+      ],
+      "size": 24,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        14
+      ],
+      "size": 48,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        28
+      ],
+      "size": 48,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        30
+      ],
+      "size": 48,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        31
+      ],
+      "size": 48,
+      "torsion": [
+        6,
+        6
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        35
+      ],
+      "size": 48,
+      "torsion": [
+        3,
+        3
+      ]
+    },
+    {
+      "cyclic_Jordan_Tate": [
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              0,
+              1,
+              4
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 9,
+            "rank_square": 4
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              0,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 1,
+            "rank_g_minus_identity": 2,
+            "rank_square": 1
+          },
+          "g": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              2,
+              3
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 8,
+            "rank_square": 3
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H1": {
+            "Jordan_1_2_3_block_counts": [
+              1,
+              5,
+              1
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 6,
+            "rank_g_minus_identity": 7,
+            "rank_square": 1
+          },
+          "H2": {
+            "Jordan_1_2_3_block_counts": [
+              2,
+              1,
+              0
+            ],
+            "cyclic_Tate_H0_Hminus1_dimension": 3,
+            "rank_g_minus_identity": 1,
+            "rank_square": 0
+          },
+          "g": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "pair": [
+        1,
+        36
+      ],
+      "size": 24,
+      "torsion": [
+        6,
+        6
+      ]
+    }
+  ]
+}

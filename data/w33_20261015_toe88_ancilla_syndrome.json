@@ -1,0 +1,82 @@
+{
+  "SUM_gates_per_round": 351,
+  "ancilla_Z_hook_propagation_witness": {
+    "earlier_gate": [
+      0,
+      0,
+      1
+    ],
+    "injected_ancilla_Z": 1,
+    "later_gate": [
+      0,
+      1,
+      2
+    ],
+    "resulting_data_Z": 1,
+    "unmeasured_by_Z_type_checks": true
+  },
+  "ancilla_qutrits_per_round": 99,
+  "configurations": [
+    {
+      "observed_means": {
+        "ancilla_X_faults_count": 0.1375,
+        "ancilla_Z_faults_count": 0.1875,
+        "complete_data_Pauli_error_free": 0.69375,
+        "correlated_faults_count": 0.025,
+        "data_X_faults_count": 0.215625,
+        "final_true_X_syndrome_nonzero": 0.2125,
+        "majority_X_physical_residual_zero_after_decoder": 0.85,
+        "majority_readout_mismatch": 0.146875,
+        "raw_X_physical_residual_zero_after_decoder": 0.865625,
+        "raw_final_readout_mismatch": 0.2625,
+        "readout_digit_faults_count": 0.496875,
+        "true_X_nonzero": 0.2125,
+        "true_Z_nonzero": 0.125
+      },
+      "rates": {
+        "ancilla_X_after_SUM": 0.00012,
+        "ancilla_Z_after_SUM": 0.00018,
+        "correlated_XZ_given_ancilla_Z": 0.12,
+        "data_X_after_SUM": 0.00025,
+        "readout_digit_fault": 0.0015
+      },
+      "rounds": 3,
+      "scenario": "noise_baseline",
+      "shots": 320
+    },
+    {
+      "observed_means": {
+        "ancilla_X_faults_count": 0.109375,
+        "complete_data_Pauli_error_free": 0.759375,
+        "data_X_faults_count": 0.271875,
+        "final_true_X_syndrome_nonzero": 0.240625,
+        "majority_X_physical_residual_zero_after_decoder": 0.8375,
+        "majority_readout_mismatch": 0.159375,
+        "raw_X_physical_residual_zero_after_decoder": 0.871875,
+        "raw_final_readout_mismatch": 0.2375,
+        "readout_digit_faults_count": 0.43125,
+        "true_X_nonzero": 0.240625,
+        "true_Z_nonzero": 0.0
+      },
+      "rates": {
+        "ancilla_X_after_SUM": 0.00012,
+        "ancilla_Z_after_SUM": 0,
+        "correlated_XZ_given_ancilla_Z": 0.12,
+        "data_X_after_SUM": 0.00025,
+        "readout_digit_fault": 0.0015
+      },
+      "rounds": 3,
+      "scenario": "no_hook_Z",
+      "shots": 320
+    }
+  ],
+  "conflict_free_parallel_layers_per_round": 6,
+  "edge_data_qutrits": 135,
+  "face_Z_stabilizer_count": 99,
+  "face_weight_distribution": {
+    "3": 45,
+    "4": 54
+  },
+  "limitations": "Only Z checks and Pauli-frame propagation, no X stabilizers or physical photonic gates. Ancilla Z hook makes data Z errors invisible to this Z-syndrome, so the circuit is NOT fault tolerant. Decoder is single-site only; no threshold, no logical success claim.",
+  "status": "STOCHASTIC_TOY_CIRCUIT_PLUS_EXACT_CLIFFORD_HOOK_PROPAGATION"
+}
