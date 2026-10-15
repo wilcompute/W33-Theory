@@ -793715,6 +793715,47 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3c93368da19c3b8077caef5d4cc513442a100b8813c20ecb7ba03395a7d0fdd8",
+      "normalized_formula": "TOE81builtthe27-vertex,135-edge,45-trianglenativeSchl\u00e4fligraphcomplexfromfiveright-cosetdirectionsoftheorder-27Heisenberggroup,withCSSparameters`[[135,64,dX=2,dZ=4]]`overbothF2andF3.TOE82computedits64-dimensionalH1characteras16+24+24,withnocharacteristic-zeroH27-fixedvector.Thenewresultis*not*theexistingLevi-graph[[160,1,3]]ternarycode,theseparate[[60,2,6]]binarycode,orapre-existingH27modular-holonomyresult.Pass11980,mergedconcurrentlyon15October,studiesintegralH27fixedholonomiesandcharacteristic-threehomology;itsobjectsandinvariantsaredistinctfromthe54newsquare-facestabilizersconstructedhere",
+      "numeric_literals": [
+        "+24",
+        "1",
+        "135",
+        "160",
+        "1980",
+        "2",
+        "27",
+        "3",
+        "4",
+        "45",
+        "5",
+        "6",
+        "60",
+        "64",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-15_toe83_h27_square_css_surgery.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/2026-10-15_toe83_h27_square_css_surgery.md",
+          "raw": "TOE81 built the 27-vertex, 135-edge, 45-triangle native Schl\u00e4fli graph complex from five right-coset directions of the order-27 Heisenberg group, with CSS parameters `[[135,64,dX=2,dZ=4]]` over both F2 and F3. TOE82 computed its 64-dimensional H1 character as 16+24+24, with no characteristic-zero H27-fixed vector. The new result is *not* the existing Levi-graph [[160,1,3]] ternary code, the separate [[60,2,6]] binary code, or a pre-existing H27 modular-holonomy result. Pass11980, merged concurrently on 15 October, studies integral H27 fixed holonomies and characteristic-three homology; its objects and invariants are distinct from the 54 new square-face stabilizers constructed here.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "81cd333bb9e8d3fd550a77a44f991bd4c53b8ad0ff20f2e3000a9cb68d37805e",
+      "structural_formula": "TOE8#builtthe2#-vertex,#-edge,#-trianglenativeSchl\u00e4fligraphcomplexfromfiveright-cosetdirectionsoftheorder-#Heisenberggroup,withCSSparameters`[[#,#,dX=#,dZ=#]]`overbothF2andF3.TOE8#computedits6#-dimensionalH1characteras1###,withnocharacteristic-zeroH2#-fixedvector.Thenewresultis*not*theexistingLevi-graph[[#,#,#]]ternarycode,theseparate[[#,#,#]]binarycode,orapre-existingH2#modular-holonomyresult.Pass1#,mergedconcurrentlyon1#October,studiesintegralH2#fixedholonomiesandcharacteristic-threehomology;itsobjectsandinvariantsaredistinctfromthe5#newsquare-facestabilizersconstructedhere"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bf0ace15ca5b4b240a7c5cde1b075558f01c1b1bb49f0d2edf295ecb5f813e70",
       "normalized_formula": "TOPOLOGICALCODESP(K_4,phi^2)=-1fermionsign",
       "numeric_literals": [
@@ -1433512,6 +1433553,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "af9d332f4d187245d31f15335b86433a760c1e439274da05a18dd03b2fb8f9eb",
+      "normalized_formula": "out={'binary':{'X_distance':6,'Z_distance':4,'n':135,'k':135-26-rank(selected),'X_weight6_witness':[list(edges[i])foriinrange(135)if(x6>>i)1]},'ternary':{'rank_faces':r3,'k':135-26-r3,'X_weight2_candidates':w2,'X_weight3_candidates':w3,'X_weight4_candidate':bool(w4)},'selected_orbits':list(inds)}",
+      "numeric_literals": [
+        "-26",
+        "1",
+        "135",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261015_toe83_h27_square_css_surgery.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 220,
+          "path": "analysis/w33_20261015_toe83_h27_square_css_surgery.py",
+          "raw": "out={'binary':{'X_distance':6,'Z_distance':4,'n':135,'k':135-26-rank(selected),'X_weight6_witness':[list(edges[i]) for i in range(135) if (x6>>i)&1]},'ternary':{'rank_faces':r3,'k':135-26-r3,'X_weight2_candidates':w2,'X_weight3_candidates':w3,'X_weight4_candidate':bool(w4)},'selected_orbits':list(inds)}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "34e416bc3b607e8770b14fd6feb3622a5fb241d98442f384c5bb946f320d7311",
+      "structural_formula": "out={'binary':{'X_distance':#,'Z_distance':#,'n':#,'k':##-rank(selected),'X_weight6_witness':[list(edges[i])foriinrange(#)if(x6>>i)#]},'ternary':{'rank_faces':r3,'k':##-r3,'X_weight2_candidates':w2,'X_weight3_candidates':w3,'X_weight4_candidate':bool(w4)},'selected_orbits':list(inds)}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "34750fc54b54a130a15fe78e795471ea17d77cc7f5ec7a8d8a12b16497be29ac",
       "normalized_formula": "out={'bt':1155,'points':n,'edges':int(A.sum()//2),'negative_rank':int(np.linalg.matrix_rank(Pm,tol=1e-8)),'raw_rank':int(np.linalg.matrix_rank(F,tol=1e-8)),'projected_rank':int(np.linalg.matrix_rank(PF,tol=1e-8)),'choice':choice,'status':'projectedfeaturesspannegativesector;equivariancestillopen'}",
       "numeric_literals": [
@@ -1441843,6 +1441915,43 @@
       },
       "structural_family_id": "051cadd7e1ae601e8895d303f9c18f715a0334b12d2e2fd18554a05fd3d705f1",
       "structural_formula": "out={'status':'COMPLETE_EXACT_WITNESS','length':#,'minimum_distance':#,'selected_feature_indices':sel,'selected_features':[{'a':list(F[i][#]),'b':F[i][#]}foriinsel],'pair_distance_histogram':{str(k):vfork,vinsorted(hist.items())},'construction':'binaryfull-three-offsetimageoftheternary[#,#,#]_3single-parity-checkcode'};(DATA/'PART_BT2#_N1#_WITNESS_results.json').write_text(json.dumps(out,indent=#,sort_keys=True)+'\\n');print(out)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3dfdfb63144a9afa4158cf5640a25af55a7999684366164e71889eca945ef5c6",
+      "normalized_formula": "out={'status':'COMPUTED','native_27_vertices':27,'native_135_edges':135,'native_45_faces':45,'square_count':len(squares),'H27_orbit_sizes':dict(Counter(len(o)foroinorbits)),'orbit_stats':stats,'fewest_orbit_solution_count':len(solutions),'selected_orbits':list(inds),'added_square_count':sum(len(orbits[i])foriininds),'rank_faces':r,'logical_qubits':135-26-r,'all_135_weight2_X_supports_eliminated':True,'binary_X_distance_lower_bound':4,'weight4_X_logical_witness_edges':[edges[i]foriinrange(135)ifx4and(x4>>i)1]ifx4elseNone,'weight4_Z_logical_witness_edges':[edges[i]foriinrange(135)ifz4and(z4>>i)1]ifz4elseNone,'candidate_solutions':[{'orbit_count':k,'face_rank':rankv,'orbits':list(ii)}fork,rankv,iiinsolutions[:25]],'orbit_representatives':[[list(edges[i])foriinorb[0]]fororbinorbits]}",
+      "numeric_literals": [
+        "-26",
+        "0",
+        "1",
+        "135",
+        "25",
+        "27",
+        "35",
+        "4",
+        "45",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261015_toe83_h27_square_css_surgery.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 120,
+          "path": "analysis/w33_20261015_toe83_h27_square_css_surgery.py",
+          "raw": "out={'status':'COMPUTED','native_27_vertices':27,'native_135_edges':135,'native_45_faces':45,'square_count':len(squares),'H27_orbit_sizes':dict(Counter(len(o) for o in orbits)),'orbit_stats':stats,'fewest_orbit_solution_count':len(solutions),'selected_orbits':list(inds),'added_square_count':sum(len(orbits[i]) for i in inds),'rank_faces':r,'logical_qubits':135-26-r,'all_135_weight2_X_supports_eliminated':True,'binary_X_distance_lower_bound':4,'weight4_X_logical_witness_edges':[edges[i] for i in range(135) if x4 and (x4>>i)&1] if x4 else None,'weight4_Z_logical_witness_edges':[edges[i] for i in range(135) if z4 and (z4>>i)&1] if z4 else None,'candidate_solutions':[{'orbit_count':k,'face_rank':rankv,'orbits':list(ii)} for k,rankv,ii in solutions[:25]],'orbit_representatives':[[list(edges[i]) for i in orb[0]] for orb in orbits]}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "632f3bbd53ffdd7d7b443fc0a8e0addab00e6b16a173ad05d6579fd0149894d3",
+      "structural_formula": "out={'status':'COMPUTED','native_2#_vertices':#,'native_1#_edges':#,'native_4#_faces':#,'square_count':len(squares),'H2#_orbit_sizes':dict(Counter(len(o)foroinorbits)),'orbit_stats':stats,'fewest_orbit_solution_count':len(solutions),'selected_orbits':list(inds),'added_square_count':sum(len(orbits[i])foriininds),'rank_faces':r,'logical_qubits':##-r,'all_1#_weight2_X_supports_eliminated':True,'binary_X_distance_lower_bound':#,'weight4_X_logical_witness_edges':[edges[i]foriinrange(#)ifx4and(x4>>i)#]ifx4elseNone,'weight4_Z_logical_witness_edges':[edges[i]foriinrange(#)ifz4and(z4>>i)#]ifz4elseNone,'candidate_solutions':[{'orbit_count':k,'face_rank':rankv,'orbits':list(ii)}fork,rankv,iiinsolutions[:#]],'orbit_representatives':[[list(edges[i])foriinorb[#]]fororbinorbits]}"
     },
     {
       "file_count": 1,
@@ -1665161,6 +1665270,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5b5f086cac7a078c9aad53de294400ba765432aa6aa40cc607617d96813d6277",
+      "normalized_formula": "since=\"2026-10-0800:00:00\"",
+      "numeric_literals": [
+        "-0800",
+        "-10",
+        "00",
+        "2026"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261015_toe83_week_pdf_audit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 31,
+          "path": "analysis/w33_20261015_toe83_week_pdf_audit.py",
+          "raw": "since=\"2026-10-08 00:00:00\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "989542c0dea62f0ac7d0775b855077246d940dbccb5c0d72c6d910cbf4fcb763",
+      "structural_formula": "since=\"###:#:#\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "a3e15b715b662d95c6d510d9f2480f69fb73e11f1652284477983860fb9fb4a1",
       "normalized_formula": "sinceF=2E/3).EVERYcountisasubstrateinteger:12vertices=valencyk=q(q+1)(the",
       "numeric_literals": [
@@ -1723010,6 +1723149,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c89edf0d8d5b046c8781df5c58854753ede920634ff93d19dfd38b24351b4210",
+      "normalized_formula": "tokens=(\"W(3,3)\",\"qutrit\",\"self-entanglement\",\"Heisenberg\",\"CSS\"",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261015_toe83_week_pdf_audit.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/w33_20261015_toe83_week_pdf_audit.py",
+          "raw": "tokens=(\"W(3,3)\",\"qutrit\",\"self-entanglement\",\"Heisenberg\",\"CSS\",",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "bf6e2cc49f9134a429bb63112428aeb5e4485ca3a533f9c5b22e4ba71d40453e",
+      "structural_formula": "tokens=(\"W(#,#)\",\"qutrit\",\"self-entanglement\",\"Heisenberg\",\"CSS\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "193afc0ce20494f5825b5e45d03d69a5c0aae08f6a1f415cd837fe53929a7f46",
       "normalized_formula": "tol_ev=1e-6",
       "numeric_literals": [
@@ -1735607,6 +1735773,31 @@
       },
       "structural_family_id": "a631aea868503fa81e86bbbc815003335459f95291be7530044c9d2cd4a0dd07",
       "structural_formula": "usingtheicosiandecompositionE8=#\u00d7#-cell"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3eae477a2c6544afdbc27e70e069a218d3f785eae2e19827d46307ece528b2e4",
+      "normalized_formula": "usingthenativemultiplication`(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)`mod3",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-15_toe83_h27_square_css_surgery.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/2026-10-15_toe83_h27_square_css_surgery.md",
+          "raw": "using the native multiplication `(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)` mod 3.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3eae477a2c6544afdbc27e70e069a218d3f785eae2e19827d46307ece528b2e4",
+      "structural_formula": "usingthenativemultiplication`(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)`mod3"
     },
     {
       "file_count": 1,
@@ -1812685,9 +1812876,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-15T12:53:01-04:00",
+  "frozen_at": "2026-10-15T13:01:12-04:00",
   "pass": 398,
-  "repository_head": "085df50e5b64abafadbf6620eb8d76d1572354b3",
+  "repository_head": "8f069e9ca3ef0215f50bf38b714a08387ffcf673",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2026682,6 +2026873,14 @@
     },
     {
       "exact_formula_ids": [
+        "3c93368da19c3b8077caef5d4cc513442a100b8813c20ecb7ba03395a7d0fdd8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "81cd333bb9e8d3fd550a77a44f991bd4c53b8ad0ff20f2e3000a9cb68d37805e",
+      "structural_formula": "TOE8#builtthe2#-vertex,#-edge,#-trianglenativeSchl\u00e4fligraphcomplexfromfiveright-cosetdirectionsoftheorder-#Heisenberggroup,withCSSparameters`[[#,#,dX=#,dZ=#]]`overbothF2andF3.TOE8#computedits6#-dimensionalH1characteras1###,withnocharacteristic-zeroH2#-fixedvector.Thenewresultis*not*theexistingLevi-graph[[#,#,#]]ternarycode,theseparate[[#,#,#]]binarycode,orapre-existingH2#modular-holonomyresult.Pass1#,mergedconcurrentlyon1#October,studiesintegralH2#fixedholonomiesandcharacteristic-threehomology;itsobjectsandinvariantsaredistinctfromthe5#newsquare-facestabilizersconstructedhere"
+    },
+    {
+      "exact_formula_ids": [
         "bf0ace15ca5b4b240a7c5cde1b075558f01c1b1bb49f0d2edf295ecb5f813e70"
       ],
       "exact_member_count": 1,
@@ -2197129,6 +2197328,14 @@
     },
     {
       "exact_formula_ids": [
+        "af9d332f4d187245d31f15335b86433a760c1e439274da05a18dd03b2fb8f9eb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "34e416bc3b607e8770b14fd6feb3622a5fb241d98442f384c5bb946f320d7311",
+      "structural_formula": "out={'binary':{'X_distance':#,'Z_distance':#,'n':#,'k':##-rank(selected),'X_weight6_witness':[list(edges[i])foriinrange(#)if(x6>>i)#]},'ternary':{'rank_faces':r3,'k':##-r3,'X_weight2_candidates':w2,'X_weight3_candidates':w3,'X_weight4_candidate':bool(w4)},'selected_orbits':list(inds)}"
+    },
+    {
+      "exact_formula_ids": [
         "34750fc54b54a130a15fe78e795471ea17d77cc7f5ec7a8d8a12b16497be29ac"
       ],
       "exact_member_count": 1,
@@ -2199159,6 +2199366,14 @@
       "exact_member_count": 1,
       "structural_family_id": "051cadd7e1ae601e8895d303f9c18f715a0334b12d2e2fd18554a05fd3d705f1",
       "structural_formula": "out={'status':'COMPLETE_EXACT_WITNESS','length':#,'minimum_distance':#,'selected_feature_indices':sel,'selected_features':[{'a':list(F[i][#]),'b':F[i][#]}foriinsel],'pair_distance_histogram':{str(k):vfork,vinsorted(hist.items())},'construction':'binaryfull-three-offsetimageoftheternary[#,#,#]_3single-parity-checkcode'};(DATA/'PART_BT2#_N1#_WITNESS_results.json').write_text(json.dumps(out,indent=#,sort_keys=True)+'\\n');print(out)"
+    },
+    {
+      "exact_formula_ids": [
+        "3dfdfb63144a9afa4158cf5640a25af55a7999684366164e71889eca945ef5c6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "632f3bbd53ffdd7d7b443fc0a8e0addab00e6b16a173ad05d6579fd0149894d3",
+      "structural_formula": "out={'status':'COMPUTED','native_2#_vertices':#,'native_1#_edges':#,'native_4#_faces':#,'square_count':len(squares),'H2#_orbit_sizes':dict(Counter(len(o)foroinorbits)),'orbit_stats':stats,'fewest_orbit_solution_count':len(solutions),'selected_orbits':list(inds),'added_square_count':sum(len(orbits[i])foriininds),'rank_faces':r,'logical_qubits':##-r,'all_1#_weight2_X_supports_eliminated':True,'binary_X_distance_lower_bound':#,'weight4_X_logical_witness_edges':[edges[i]foriinrange(#)ifx4and(x4>>i)#]ifx4elseNone,'weight4_Z_logical_witness_edges':[edges[i]foriinrange(#)ifz4and(z4>>i)#]ifz4elseNone,'candidate_solutions':[{'orbit_count':k,'face_rank':rankv,'orbits':list(ii)}fork,rankv,iiinsolutions[:#]],'orbit_representatives':[[list(edges[i])foriinorb[#]]fororbinorbits]}"
     },
     {
       "exact_formula_ids": [
@@ -2258197,6 +2258412,14 @@
     },
     {
       "exact_formula_ids": [
+        "5b5f086cac7a078c9aad53de294400ba765432aa6aa40cc607617d96813d6277"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "989542c0dea62f0ac7d0775b855077246d940dbccb5c0d72c6d910cbf4fcb763",
+      "structural_formula": "since=\"###:#:#\""
+    },
+    {
+      "exact_formula_ids": [
         "a3e15b715b662d95c6d510d9f2480f69fb73e11f1652284477983860fb9fb4a1"
       ],
       "exact_member_count": 1,
@@ -2273865,6 +2274088,14 @@
     },
     {
       "exact_formula_ids": [
+        "c89edf0d8d5b046c8781df5c58854753ede920634ff93d19dfd38b24351b4210"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bf6e2cc49f9134a429bb63112428aeb5e4485ca3a533f9c5b22e4ba71d40453e",
+      "structural_formula": "tokens=(\"W(#,#)\",\"qutrit\",\"self-entanglement\",\"Heisenberg\",\"CSS\""
+    },
+    {
+      "exact_formula_ids": [
         "193afc0ce20494f5825b5e45d03d69a5c0aae08f6a1f415cd837fe53929a7f46"
       ],
       "exact_member_count": 1,
@@ -2277324,6 +2277555,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a631aea868503fa81e86bbbc815003335459f95291be7530044c9d2cd4a0dd07",
       "structural_formula": "usingtheicosiandecompositionE8=#\u00d7#-cell"
+    },
+    {
+      "exact_formula_ids": [
+        "3eae477a2c6544afdbc27e70e069a218d3f785eae2e19827d46307ece528b2e4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3eae477a2c6544afdbc27e70e069a218d3f785eae2e19827d46307ece528b2e4",
+      "structural_formula": "usingthenativemultiplication`(a,b,c)(A,B,C)=(a+A,b+B,c+C-bA)`mod3"
     },
     {
       "exact_formula_ids": [
@@ -2297041,20 +2297280,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88424862,
-    "exact_formula_families": 61984,
-    "files_scanned": 12133,
-    "formula_occurrences": 67991,
+    "bytes_scanned": 88448266,
+    "exact_formula_families": 61990,
+    "files_scanned": 12136,
+    "formula_occurrences": 67997,
     "status_occurrences": {
       "certified_or_theorem": 5042,
       "killed_or_retracted": 1662,
-      "open_or_conditional": 2268,
+      "open_or_conditional": 2269,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53751
+      "unclassified": 53756
     },
-    "structural_families": 60332
+    "structural_families": 60338
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "0591a56a0ca591853e42fc8d04090fb1086afdd5dc1ab882261f6081dcf8c033"
+  "universe_sha256": "e8a0c096700462ab253282abd10234770b50b70650c2a7a8ed9f4779b7f4bc48"
 }
