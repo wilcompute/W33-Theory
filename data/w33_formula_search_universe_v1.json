@@ -707301,6 +707301,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3fe73c00f67487499203f624581a9fd8934d0efa79d66eb2c28e9a9f5563b657",
+      "normalized_formula": "OPENBLAS_NUM_THREADS=1pythonanalysis/w33_pass11980_heisenberg_fixed_holonomies.py",
+      "numeric_literals": [
+        "1",
+        "1980",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11980_DISCRETE_HEISENBERG_HOLONOMIES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 148,
+          "path": "analysis/PASS11980_DISCRETE_HEISENBERG_HOLONOMIES.md",
+          "raw": "OPENBLAS_NUM_THREADS=1 python analysis/w33_pass11980_heisenberg_fixed_holonomies.py",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "764e8334889eb2403dffdbcbdd4a7f40cd21efa1bf3c3074b2c49d4ce1f2e4ae",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#pythonanalysis/w3#_pass1#_heisenberg_fixed_holonomies.py"
+    },
+    {
+      "file_count": 1,
       "formula_id": "06fe044e57af2b602158122b48561184b8ea3530288cb6408f5e72f18b4280d7",
       "normalized_formula": "OPENBLAS_NUM_THREADS=1pythontests/test_w33_three_copy_output_rank_audit.py",
       "numeric_literals": [
@@ -1570346,6 +1570375,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "732a57eb57f5c73eb26c487a1ebc9ef95dc0fbecb9174663dd6ba45c324b4466",
+      "normalized_formula": "print(json.dumps(c[\"explicit_holonomies_and_matter_probe\"][\"uniform_hopping_finite_free_fermion_fillings\"],indent=2))",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass11980_heisenberg_fixed_holonomies.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 348,
+          "path": "analysis/w33_pass11980_heisenberg_fixed_holonomies.py",
+          "raw": "print(json.dumps(c[\"explicit_holonomies_and_matter_probe\"][\"uniform_hopping_finite_free_fermion_fillings\"], indent=2))",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "d463e8fe7baeb39e8661453e35ed79a5024a11dcb2b5372b0075e9dee307e34a",
+      "structural_formula": "print(json.dumps(c[\"explicit_holonomies_and_matter_probe\"][\"uniform_hopping_finite_free_fermion_fillings\"],indent=#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ede73b904ac4f9ea1fa93b38a46aa2b010a3d01454039653cfdbecfef9a917c5",
       "normalized_formula": "print(json.dumps(r,indent=2),flush=True);print(\"BINARY_DISTANCE_EXHAUSTIVE_PASS\",flush=True)",
       "numeric_literals": [
@@ -1812629,9 +1812685,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-15T11:09:24-04:00",
+  "frozen_at": "2026-10-15T12:53:01-04:00",
   "pass": 398,
-  "repository_head": "120250a5766542b9519039f3bc0f7cbf8965031f",
+  "repository_head": "085df50e5b64abafadbf6620eb8d76d1572354b3",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2003116,6 +2003172,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5b9f37a5e3b06fd6935c0ae1ddf13984e27da4145b0f1c83bc33005f93dafa02",
       "structural_formula": "OPENBLAS_NUM_THREADS=#pythonanalysis/w3#_pass1#_1#_validated_dynamics.py"
+    },
+    {
+      "exact_formula_ids": [
+        "3fe73c00f67487499203f624581a9fd8934d0efa79d66eb2c28e9a9f5563b657"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "764e8334889eb2403dffdbcbdd4a7f40cd21efa1bf3c3074b2c49d4ce1f2e4ae",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#pythonanalysis/w3#_pass1#_heisenberg_fixed_holonomies.py"
     },
     {
       "exact_formula_ids": [
@@ -2234743,6 +2234807,14 @@
     },
     {
       "exact_formula_ids": [
+        "732a57eb57f5c73eb26c487a1ebc9ef95dc0fbecb9174663dd6ba45c324b4466"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d463e8fe7baeb39e8661453e35ed79a5024a11dcb2b5372b0075e9dee307e34a",
+      "structural_formula": "print(json.dumps(c[\"explicit_holonomies_and_matter_probe\"][\"uniform_hopping_finite_free_fermion_fillings\"],indent=#))"
+    },
+    {
+      "exact_formula_ids": [
         "ede73b904ac4f9ea1fa93b38a46aa2b010a3d01454039653cfdbecfef9a917c5"
       ],
       "exact_member_count": 1,
@@ -2296969,20 +2297041,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88399330,
-    "exact_formula_families": 61982,
-    "files_scanned": 12131,
-    "formula_occurrences": 67989,
+    "bytes_scanned": 88424862,
+    "exact_formula_families": 61984,
+    "files_scanned": 12133,
+    "formula_occurrences": 67991,
     "status_occurrences": {
-      "certified_or_theorem": 5041,
+      "certified_or_theorem": 5042,
       "killed_or_retracted": 1662,
-      "open_or_conditional": 2267,
+      "open_or_conditional": 2268,
       "preregistered": 33,
       "retrospective_fit": 5235,
       "unclassified": 53751
     },
-    "structural_families": 60330
+    "structural_families": 60332
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "598974abadc9860b5e3f659e1913d966ce1314a369f6d143874da2a0e6bc1f39"
+  "universe_sha256": "0591a56a0ca591853e42fc8d04090fb1086afdd5dc1ab882261f6081dcf8c033"
 }
