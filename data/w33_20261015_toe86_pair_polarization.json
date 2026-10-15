@@ -1,0 +1,862 @@
+{
+  "checked_full_normalizer_classes": 13,
+  "class_representative_signatures": [
+    {
+      "H1_dimension_F3": 26,
+      "H2_dimension_F3": 16,
+      "center_signature": {
+        "H1_rank_g_minus_I": 16,
+        "H2_rank_g_minus_I": 6,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 24,
+      "face_rank_F2": 83,
+      "face_rank_F3": 83,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        1
+      ],
+      "minimum_H2_direction_indices": [
+        1
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 17,
+          "H2_rank_g_minus_I": 10,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 16,
+          "H2_rank_g_minus_I": 8,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 17,
+          "H2_rank_g_minus_I": 10,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 17,
+          "H2_rank_g_minus_I": 10,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        0,
+        10
+      ]
+    },
+    {
+      "H1_dimension_F3": 26,
+      "H2_dimension_F3": 16,
+      "center_signature": {
+        "H1_rank_g_minus_I": 16,
+        "H2_rank_g_minus_I": 6,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 12,
+      "face_rank_F2": 83,
+      "face_rank_F3": 83,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        1
+      ],
+      "minimum_H2_direction_indices": [
+        1
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 17,
+          "H2_rank_g_minus_I": 10,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 16,
+          "H2_rank_g_minus_I": 8,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 17,
+          "H2_rank_g_minus_I": 10,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 17,
+          "H2_rank_g_minus_I": 10,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        0,
+        37
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 48,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        1
+      ],
+      "minimum_H2_direction_indices": [
+        1
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        2
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 48,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        3
+      ],
+      "minimum_H2_direction_indices": [
+        3
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        5
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 24,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        1
+      ],
+      "minimum_H2_direction_indices": [
+        1
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        7
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 24,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        3
+      ],
+      "minimum_H2_direction_indices": [
+        3
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        10
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 24,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        1
+      ],
+      "minimum_H2_direction_indices": [
+        1
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        11
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 48,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        3
+      ],
+      "minimum_H2_direction_indices": [
+        3
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        14
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 48,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        3
+      ],
+      "minimum_H2_direction_indices": [
+        3
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        28
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 48,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        0
+      ],
+      "minimum_H2_direction_indices": [
+        0
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        30
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 48,
+      "face_rank_F2": 95,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        0
+      ],
+      "minimum_H2_direction_indices": [
+        0
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        31
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 48,
+      "face_rank_F2": 97,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        0
+      ],
+      "minimum_H2_direction_indices": [
+        0
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        35
+      ]
+    },
+    {
+      "H1_dimension_F3": 14,
+      "H2_dimension_F3": 4,
+      "center_signature": {
+        "H1_rank_g_minus_I": 7,
+        "H2_rank_g_minus_I": 1,
+        "group_element": [
+          0,
+          0,
+          1
+        ]
+      },
+      "class_size": 24,
+      "face_rank_F2": 95,
+      "face_rank_F3": 95,
+      "identical_min_direction_sets": true,
+      "minimum_H1_direction_indices": [
+        3
+      ],
+      "minimum_H2_direction_indices": [
+        3
+      ],
+      "noncentral_direction_signatures": [
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 9,
+          "H2_rank_g_minus_I": 2,
+          "group_element": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "H1_rank_g_minus_I": 8,
+          "H2_rank_g_minus_I": 1,
+          "group_element": [
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "representative": [
+        1,
+        36
+      ]
+    }
+  ],
+  "directions": [
+    "(1,0)",
+    "(0,1)",
+    "(1,1)",
+    "(1,2)"
+  ],
+  "matching_H1_H2_min_direction_pairs": 468,
+  "pairs_covered_by_equivariance": 468,
+  "rank_F3_pair_count_by_equivalence": {
+    "83": 36,
+    "95": 432
+  }
+}

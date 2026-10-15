@@ -1,0 +1,286 @@
+{
+  "class_count": 13,
+  "classes": [
+    {
+      "H1_Z_torsion": [],
+      "H1_free_rank_Z": 26,
+      "H2_free_rank_Z": 16,
+      "class_size": 24,
+      "nonunit_smith_factors": [],
+      "ranks_F2_F3": [
+        83,
+        83
+      ],
+      "rational_rank": 83,
+      "representative": [
+        0,
+        10
+      ]
+    },
+    {
+      "H1_Z_torsion": [],
+      "H1_free_rank_Z": 26,
+      "H2_free_rank_Z": 16,
+      "class_size": 12,
+      "nonunit_smith_factors": [],
+      "ranks_F2_F3": [
+        83,
+        83
+      ],
+      "rational_rank": 83,
+      "representative": [
+        0,
+        37
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 48,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        2
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 48,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        5
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 24,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        7
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 24,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        10
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 24,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        11
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 48,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        14
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 48,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        28
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 48,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        30
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        6,
+        6
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 48,
+      "nonunit_smith_factors": [
+        6,
+        6
+      ],
+      "ranks_F2_F3": [
+        95,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        31
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        3,
+        3
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 48,
+      "nonunit_smith_factors": [
+        3,
+        3
+      ],
+      "ranks_F2_F3": [
+        97,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        35
+      ]
+    },
+    {
+      "H1_Z_torsion": [
+        6,
+        6
+      ],
+      "H1_free_rank_Z": 12,
+      "H2_free_rank_Z": 2,
+      "class_size": 24,
+      "nonunit_smith_factors": [
+        6,
+        6
+      ],
+      "ranks_F2_F3": [
+        95,
+        95
+      ],
+      "rational_rank": 97,
+      "representative": [
+        1,
+        36
+      ]
+    }
+  ],
+  "pairs_classified": 468,
+  "torsion_free_pair_count": 36,
+  "torsion_pattern_pair_counts": {
+    "[3, 3]": 360,
+    "[6, 6]": 72,
+    "[]": 36
+  }
+}

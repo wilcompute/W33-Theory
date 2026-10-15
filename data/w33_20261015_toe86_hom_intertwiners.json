@@ -1,0 +1,72 @@
+{
+  "chain_boundary_restriction_on_H2": "d2 restricted to H2 equals zero, hence no nonzero canonical map arises from d2.",
+  "constraint_rows": 832,
+  "equivariance_generators": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "face_relation_H2_dimension": 16,
+  "field": "F3",
+  "hom_H2_to_H1": {
+    "example_intertwiner_support": [
+      {
+        "H1_basis_index": 0,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 1,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 2,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 5,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 6,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 7,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 10,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 11,
+        "H2_basis_index": 5,
+        "coeff": 1
+      },
+      {
+        "H1_basis_index": 12,
+        "H2_basis_index": 5,
+        "coeff": 1
+      }
+    ],
+    "nullity": 20,
+    "rank": 396
+  },
+  "logical_H1_dimension": 26,
+  "physical_temporal_interpretation": "An algebraic homomorphism cannot establish clock dynamics.",
+  "source_boundary_rank": 83
+}

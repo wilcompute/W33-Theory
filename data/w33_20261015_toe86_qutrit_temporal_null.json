@@ -1,0 +1,96 @@
+{
+  "Choi_PPT_NPT_witness": "normalized Choi partial-transpose negativity; zero for null, positive for this coherent alternative",
+  "alternative": "coherent identity memory mixed with clock-basis dephasing with visibility v",
+  "limitations": "Synthetic ideal CPTP channels and trusted preparations/measurements only. Does not establish device implementation, non-Markovianity, indefinite causal order, or an arrow of time.",
+  "null": "entanglement-breaking measurement-and-repreparation in the selected clock eigenbasis",
+  "null_and_alternative_classical_transition_tests": "identical on each of the three clock eigenbasis inputs",
+  "pre_registered_binomial_design": {
+    "alternative_success_probability": 0.5000000000000006,
+    "electronics_sham_expected_probability": 0.3333333333333333,
+    "exact_alternative_detection_power": 0.9897152744791732,
+    "exact_null_tail_probability": 0.0008211891321355085,
+    "false_positive_target": 0.001,
+    "n_shots": 256,
+    "null_success_probability": 0.3333333333333333,
+    "success_threshold_inclusive": 110
+  },
+  "selected_H27_clock_subgroup": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      2,
+      2
+    ]
+  ],
+  "settings": [
+    {
+      "clock_basis_states_all_preserved": true,
+      "clock_superposition_revival_probability": 0.3333333333333338,
+      "normalized_Choi_partial_transpose_negativity": 0.0,
+      "partial_transpose_negative_eigenvalues": [],
+      "visibility": 0
+    },
+    {
+      "clock_basis_states_all_preserved": true,
+      "clock_superposition_revival_probability": 0.5000000000000006,
+      "normalized_Choi_partial_transpose_negativity": 0.2500000000000002,
+      "partial_transpose_negative_eigenvalues": [
+        -0.08333333333333344,
+        -0.0833333333333334,
+        -0.08333333333333337
+      ],
+      "visibility": 0.25
+    },
+    {
+      "clock_basis_states_all_preserved": true,
+      "clock_superposition_revival_probability": 1.0000000000000009,
+      "normalized_Choi_partial_transpose_negativity": 1.0000000000000002,
+      "partial_transpose_negative_eigenvalues": [
+        -0.3333333333333334,
+        -0.3333333333333334,
+        -0.3333333333333334
+      ],
+      "visibility": 1
+    }
+  ],
+  "system": "single qutrit transferred between preparation and measurement"
+}

@@ -1,0 +1,27 @@
+name: TOE86 five independent H27 advances
+on:
+  push:
+    paths:
+      - 'analysis/w33_20261015_toe86_*.py'
+      - 'analysis/2026-10-15_toe86_all_five_fronts.md'
+      - 'data/w33_20261015_toe86_*.json'
+      - 'tests/test_w33_20261015_toe86_all_five_fronts.py'
+      - '.github/workflows/w33_toe86_all_five_fronts.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pytest numpy sympy scipy
+      - run: python -m pytest -q tests/test_w33_20261015_toe86_all_five_fronts.py
+      - run: python -m analysis.w33_20261015_toe86_geometry_integral_routing
+      - run: python -m analysis.w33_20261015_toe86_hom_intertwiners
+      - run: python -m analysis.w33_20261015_toe86_pair_polarization
+      - run: python -m analysis.w33_20261015_toe86_pair_integral
+      - run: python -m analysis.w33_20261015_toe86_qutrit_temporal_null
+      - run: git diff --exit-code -- data/w33_20261015_toe86_geometry_integral_routing.json data/w33_20261015_toe86_hom_intertwiners.json data/w33_20261015_toe86_pair_polarization.json data/w33_20261015_toe86_pair_integral.json
