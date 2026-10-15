@@ -1,0 +1,58 @@
+{
+  "added_square_H27_orbit_sizes": [
+    27,
+    27
+  ],
+  "edge_H27_orbit_sizes": [
+    27,
+    27,
+    27,
+    27,
+    27
+  ],
+  "equivalence_classes_checked": 13,
+  "field": "F2",
+  "limitation": "This stable binary isomorphism does not imply a unique H1/H2 F3 rank-minimizer or a physical clock.",
+  "pairs_covered": 468,
+  "regular_27_simple_multiplicities": {
+    "faithful_6D_simple_multiplicity": 3,
+    "four_2D_simple_multiplicities": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "trivial_multiplicity": 1
+  },
+  "representation_ring_Euler_identity": "[H1]-[H2]=[H0]-[C0]+[C1]-[C2]=[1]+2[Reg(H27)]-[Triangles_45]",
+  "scope": "H27-invariant complexes with 45 native triangles plus ANY two free H27 orbits of square faces, with the 27-vertex and 135-edge native chain action; arbitrary extra square orbits change the Euler term.",
+  "stabilized_binary_module_isomorphism": "H1(F2) + 2 trivial modules ~= H2(F2) + 2 faithful 6D simple modules",
+  "triangle_45_simple_multiplicities": {
+    "faithful_6D_simple_multiplicity": 4,
+    "four_2D_simple_multiplicities": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "trivial_multiplicity": 5
+  },
+  "triangle_H27_orbit_sizes": [
+    9,
+    9,
+    9,
+    9,
+    9
+  ],
+  "vertex_H27_orbit_sizes": [
+    27
+  ],
+  "virtual_H1_minus_H2_simple_multiplicities": [
+    -2,
+    0,
+    0,
+    0,
+    0,
+    2
+  ]
+}

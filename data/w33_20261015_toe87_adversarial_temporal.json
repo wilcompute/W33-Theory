@@ -1,0 +1,36 @@
+{
+  "accepted_shots": 1200,
+  "calibrated_detected_shot_EB_upper_bound": 0.49015,
+  "calibrated_detected_shot_alternative_expectation": 0.6077625000000001,
+  "critical_observation": "A rotated-basis entanglement-breaking channel defeats TOE86's one-probe return test with success 1, while all EB channels obey the four-MUB mean fidelity <= 1/2 under stated assumptions.",
+  "entanglement_breaking_mean_fidelity_upper_bound": 0.5,
+  "exact_alternative_power": 0.9999998200492886,
+  "exact_max_null_false_positive_probability": 0.0008533555046469568,
+  "expected_raw_attempts_for_accepted_shots": 1304.3478260869565,
+  "explicit_adversarial_single_probe_EB_success": 1.0,
+  "four_MUB_two_design_states": 12,
+  "ideal_channel_coherence_visibility": 0.25,
+  "independent_heralded_erasure_rate": 0.08,
+  "multiple_probe_mean_fidelities": {
+    "clock_EB": 0.5000000000000003,
+    "coherent_v025": 0.6250000000000003,
+    "rotated_EB": 0.5000000000000001
+  },
+  "random_leakage_rate": 0.03,
+  "random_uniform_MUB_settings_per_shot": true,
+  "readout_sym_wrong_class_rate": 0.02,
+  "reject_EB_at_success_count_at_least": 643,
+  "robustness_boundaries": {
+    "independently_calibrated_readout_confusion": true,
+    "no_adversarial_correlated_SPAM": true,
+    "no_device_independence": true,
+    "no_non_markovianity_claim": true,
+    "no_time_arrow_claim": true,
+    "state_independent_erasure": true,
+    "stationary_iid": true,
+    "trusted_state_matched_measurements": true,
+    "trusted_state_preparations": true
+  },
+  "single_probe_clock_dephasing_EB_success": 0.33333333333333354,
+  "two_design_residual_max_abs": 4.165795814242767e-17
+}

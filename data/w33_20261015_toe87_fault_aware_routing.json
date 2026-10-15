@@ -1,0 +1,164 @@
+{
+  "ambiguous_single_site_syndrome_patterns": 0,
+  "boundaries": "Stochastic chosen errors and fixed layouts, no native gate noise data, no repeated stabilizer measurement cycles, no quantum threshold or full decoder, zero physical residual stricter than logical success.",
+  "cases": [
+    {
+      "H27_generator": [
+        1,
+        0,
+        0
+      ],
+      "SWAP_count": 90,
+      "analytic_expected_faulty_SWAPS": 0.018000000000000002,
+      "analytic_prob_zero_gate_fault": 0.9716079685809923,
+      "inversion_count": 54,
+      "metrics": {
+        "any_gate_fault_per_shot_mean": 0.026041666666666668,
+        "correlated_faults_per_shot_mean": 0.0,
+        "error_with_zero_true_syndrome_per_shot_mean": 0.0,
+        "faulty_inversions_per_shot_mean": 0.005208333333333333,
+        "faulty_swaps_per_shot_mean": 0.020833333333333332,
+        "measured_syndrome_nonzero_per_shot_mean": 0.08854166666666667,
+        "readout_faults_per_shot_mean": 0.06770833333333333,
+        "true_X_error_per_shot_mean": 0.026041666666666668,
+        "true_syndrome_detected_per_shot_mean": 0.026041666666666668,
+        "zero_physical_error_after_one_site_decoder_per_shot_mean": 0.9947916666666666
+      },
+      "model": "all_to_all",
+      "shots": 192
+    },
+    {
+      "H27_generator": [
+        1,
+        0,
+        0
+      ],
+      "SWAP_count": 4740,
+      "analytic_expected_faulty_SWAPS": 0.9480000000000001,
+      "analytic_prob_zero_gate_fault": 0.38331587424200636,
+      "inversion_count": 54,
+      "metrics": {
+        "any_gate_fault_per_shot_mean": 0.625,
+        "correlated_faults_per_shot_mean": 0.09375,
+        "error_with_zero_true_syndrome_per_shot_mean": 0.0,
+        "faulty_inversions_per_shot_mean": 0.0,
+        "faulty_swaps_per_shot_mean": 1.046875,
+        "measured_syndrome_nonzero_per_shot_mean": 0.671875,
+        "readout_faults_per_shot_mean": 0.125,
+        "true_X_error_per_shot_mean": 0.625,
+        "true_syndrome_detected_per_shot_mean": 0.625,
+        "zero_physical_error_after_one_site_decoder_per_shot_mean": 0.6510416666666666
+      },
+      "model": "linear_nearest_neighbor",
+      "shots": 192
+    },
+    {
+      "H27_generator": [
+        0,
+        1,
+        0
+      ],
+      "SWAP_count": 90,
+      "analytic_expected_faulty_SWAPS": 0.018000000000000002,
+      "analytic_prob_zero_gate_fault": 0.9762833663625626,
+      "inversion_count": 30,
+      "metrics": {
+        "any_gate_fault_per_shot_mean": 0.015625,
+        "correlated_faults_per_shot_mean": 0.0,
+        "error_with_zero_true_syndrome_per_shot_mean": 0.0,
+        "faulty_inversions_per_shot_mean": 0.0,
+        "faulty_swaps_per_shot_mean": 0.015625,
+        "measured_syndrome_nonzero_per_shot_mean": 0.11979166666666667,
+        "readout_faults_per_shot_mean": 0.109375,
+        "true_X_error_per_shot_mean": 0.015625,
+        "true_syndrome_detected_per_shot_mean": 0.015625,
+        "zero_physical_error_after_one_site_decoder_per_shot_mean": 0.9947916666666666
+      },
+      "model": "all_to_all",
+      "shots": 192
+    },
+    {
+      "H27_generator": [
+        0,
+        1,
+        0
+      ],
+      "SWAP_count": 1828,
+      "analytic_expected_faulty_SWAPS": 0.36560000000000004,
+      "analytic_prob_zero_gate_fault": 0.689604409783555,
+      "inversion_count": 30,
+      "metrics": {
+        "any_gate_fault_per_shot_mean": 0.3072916666666667,
+        "correlated_faults_per_shot_mean": 0.046875,
+        "error_with_zero_true_syndrome_per_shot_mean": 0.0,
+        "faulty_inversions_per_shot_mean": 0.0,
+        "faulty_swaps_per_shot_mean": 0.3489583333333333,
+        "measured_syndrome_nonzero_per_shot_mean": 0.40625,
+        "readout_faults_per_shot_mean": 0.11458333333333333,
+        "true_X_error_per_shot_mean": 0.3072916666666667,
+        "true_syndrome_detected_per_shot_mean": 0.3072916666666667,
+        "zero_physical_error_after_one_site_decoder_per_shot_mean": 0.90625
+      },
+      "model": "linear_nearest_neighbor",
+      "shots": 192
+    },
+    {
+      "H27_generator": [
+        0,
+        0,
+        1
+      ],
+      "SWAP_count": 90,
+      "analytic_expected_faulty_SWAPS": 0.018000000000000002,
+      "analytic_prob_zero_gate_fault": 0.9786294952910063,
+      "inversion_count": 18,
+      "metrics": {
+        "any_gate_fault_per_shot_mean": 0.026041666666666668,
+        "correlated_faults_per_shot_mean": 0.0,
+        "error_with_zero_true_syndrome_per_shot_mean": 0.0,
+        "faulty_inversions_per_shot_mean": 0.005208333333333333,
+        "faulty_swaps_per_shot_mean": 0.020833333333333332,
+        "measured_syndrome_nonzero_per_shot_mean": 0.14583333333333334,
+        "readout_faults_per_shot_mean": 0.11979166666666667,
+        "true_X_error_per_shot_mean": 0.026041666666666668,
+        "true_syndrome_detected_per_shot_mean": 0.026041666666666668,
+        "zero_physical_error_after_one_site_decoder_per_shot_mean": 1.0
+      },
+      "model": "all_to_all",
+      "shots": 192
+    },
+    {
+      "H27_generator": [
+        0,
+        0,
+        1
+      ],
+      "SWAP_count": 498,
+      "analytic_expected_faulty_SWAPS": 0.09960000000000001,
+      "analytic_prob_zero_gate_fault": 0.9019372568463824,
+      "inversion_count": 18,
+      "metrics": {
+        "any_gate_fault_per_shot_mean": 0.11458333333333333,
+        "correlated_faults_per_shot_mean": 0.015625,
+        "error_with_zero_true_syndrome_per_shot_mean": 0.0,
+        "faulty_inversions_per_shot_mean": 0.010416666666666666,
+        "faulty_swaps_per_shot_mean": 0.11458333333333333,
+        "measured_syndrome_nonzero_per_shot_mean": 0.203125,
+        "readout_faults_per_shot_mean": 0.10416666666666667,
+        "true_X_error_per_shot_mean": 0.11458333333333333,
+        "true_syndrome_detected_per_shot_mean": 0.11458333333333333,
+        "zero_physical_error_after_one_site_decoder_per_shot_mean": 0.96875
+      },
+      "model": "linear_nearest_neighbor",
+      "shots": 192
+    }
+  ],
+  "conditional_correlated_two_qudit_fault": 0.1,
+  "p_local_inversion_pauli_X": 0.0002,
+  "p_readout_digit_shift": 0.001,
+  "p_swap_pauli_X": 0.0002,
+  "seed": 871527,
+  "shots_per_case": 192,
+  "single_site_syndrome_patterns": 270,
+  "status": "SIMULATED_AND_SOME_ANALYTIC"
+}

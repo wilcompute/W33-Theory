@@ -1,0 +1,1398 @@
+{
+  "interpretation": "Exact class representatives and deterministic three-orbit probes. No general cohomological polarization theorem established.",
+  "modular_pair_classification": {
+    "all_468_pairs_represented": 468,
+    "classes": [
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 26,
+          "H2_Fp_dimension": 16,
+          "bockstein_image_dimension": 0,
+          "free_relations": 16
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 26,
+          "H2_Fp_dimension": 16,
+          "bockstein_image_dimension": 0,
+          "free_relations": 16
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 3,
+            "four_2D_simple_multiplicities": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 16,
+          "F3_four_direction_ranks": [
+            17,
+            16,
+            17,
+            17
+          ],
+          "F3_radical_filtration": [
+            26,
+            24,
+            21,
+            15,
+            11,
+            6,
+            3,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 1,
+            "four_2D_simple_multiplicities": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 6,
+          "F3_four_direction_ranks": [
+            10,
+            8,
+            10,
+            10
+          ],
+          "F3_radical_filtration": [
+            16,
+            13,
+            10,
+            6,
+            4,
+            2,
+            1,
+            0
+          ]
+        },
+        "equivalence_class_size": 24,
+        "integral_torsion": [],
+        "orbit_pair": [
+          0,
+          10
+        ],
+        "overlap_edge_histogram": [
+          675,
+          54,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 1
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 26,
+          "H2_Fp_dimension": 16,
+          "bockstein_image_dimension": 0,
+          "free_relations": 16
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 26,
+          "H2_Fp_dimension": 16,
+          "bockstein_image_dimension": 0,
+          "free_relations": 16
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 3,
+            "four_2D_simple_multiplicities": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 16,
+          "F3_four_direction_ranks": [
+            17,
+            16,
+            17,
+            17
+          ],
+          "F3_radical_filtration": [
+            26,
+            24,
+            21,
+            15,
+            11,
+            6,
+            3,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 1,
+            "four_2D_simple_multiplicities": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 6,
+          "F3_four_direction_ranks": [
+            10,
+            8,
+            10,
+            10
+          ],
+          "F3_radical_filtration": [
+            16,
+            13,
+            10,
+            6,
+            4,
+            2,
+            1,
+            0
+          ]
+        },
+        "equivalence_class_size": 12,
+        "integral_torsion": [],
+        "orbit_pair": [
+          0,
+          37
+        ],
+        "overlap_edge_histogram": [
+          729,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 1
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            8,
+            9,
+            9
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            1,
+            2,
+            2
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 48,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          2
+        ],
+        "overlap_edge_histogram": [
+          675,
+          27,
+          27,
+          0,
+          0
+        ],
+        "selected_polarization_index": 1
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            9,
+            9,
+            8
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 48,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          5
+        ],
+        "overlap_edge_histogram": [
+          648,
+          81,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 3
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            8,
+            9,
+            9
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            1,
+            2,
+            2
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 24,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          7
+        ],
+        "overlap_edge_histogram": [
+          648,
+          81,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 1
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            9,
+            9,
+            8
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 24,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          10
+        ],
+        "overlap_edge_histogram": [
+          648,
+          81,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 3
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            8,
+            9,
+            9
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            1,
+            2,
+            2
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 24,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          11
+        ],
+        "overlap_edge_histogram": [
+          648,
+          81,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 1
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            9,
+            9,
+            8
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 48,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          14
+        ],
+        "overlap_edge_histogram": [
+          648,
+          81,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 3
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            9,
+            9,
+            8
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 48,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          28
+        ],
+        "overlap_edge_histogram": [
+          648,
+          81,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 3
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            8,
+            9,
+            9,
+            9
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 48,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          30
+        ],
+        "overlap_edge_histogram": [
+          675,
+          27,
+          27,
+          0,
+          0
+        ],
+        "selected_polarization_index": 0
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            8,
+            9,
+            9,
+            9
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              1,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 48,
+        "integral_torsion": [
+          6,
+          6
+        ],
+        "orbit_pair": [
+          1,
+          31
+        ],
+        "overlap_edge_histogram": [
+          675,
+          54,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 0
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 12,
+          "H2_Fp_dimension": 2,
+          "bockstein_image_dimension": 0,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            8,
+            9,
+            9,
+            9
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 48,
+        "integral_torsion": [
+          3,
+          3
+        ],
+        "orbit_pair": [
+          1,
+          35
+        ],
+        "overlap_edge_histogram": [
+          675,
+          27,
+          27,
+          0,
+          0
+        ],
+        "selected_polarization_index": 0
+      },
+      {
+        "Bockstein_F2": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "Bockstein_F3": {
+          "H1_Fp_dimension": 14,
+          "H2_Fp_dimension": 4,
+          "bockstein_image_dimension": 2,
+          "free_relations": 2
+        },
+        "H1": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 2,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "trivial_multiplicity": 0
+          },
+          "F3_center_rank": 7,
+          "F3_four_direction_ranks": [
+            9,
+            9,
+            9,
+            8
+          ],
+          "F3_radical_filtration": [
+            14,
+            13,
+            11,
+            7,
+            4,
+            1,
+            0
+          ]
+        },
+        "H2": {
+          "F2_semisimple": {
+            "faithful_6D_simple_multiplicity": 0,
+            "four_2D_simple_multiplicities": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "trivial_multiplicity": 2
+          },
+          "F3_center_rank": 1,
+          "F3_four_direction_ranks": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "F3_radical_filtration": [
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        "equivalence_class_size": 24,
+        "integral_torsion": [
+          6,
+          6
+        ],
+        "orbit_pair": [
+          1,
+          36
+        ],
+        "overlap_edge_histogram": [
+          675,
+          54,
+          0,
+          0,
+          0
+        ],
+        "selected_polarization_index": 3
+      }
+    ],
+    "overlap_signature_count": 4,
+    "overlap_signatures_ambiguous_for_torsion": {
+      "[675, 54, 0, 0, 0]": [
+        "[6, 6]",
+        "[]"
+      ]
+    },
+    "shared_unique_H1_H2_polarization_class_count": 13
+  },
+  "status": "EXACT_MATH",
+  "three_orbit_stress": {
+    "cases": [
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          1
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          2
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          3
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          4
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          5
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          6
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          7
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          8,
+          8,
+          9,
+          9
+        ],
+        "H2_dimension_F3": 31,
+        "H2_four_direction_ranks": [
+          18,
+          18,
+          20,
+          20
+        ],
+        "face_rank_F3": 95,
+        "logical_H1_dimension_F3": 14,
+        "matching_minimizer_sets": true,
+        "orbit_triple": [
+          0,
+          10,
+          8
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          9
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          11
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "H2_dimension_F3": 21,
+        "H2_four_direction_ranks": [
+          13,
+          12,
+          13,
+          13
+        ],
+        "face_rank_F3": 105,
+        "logical_H1_dimension_F3": 4,
+        "matching_minimizer_sets": false,
+        "orbit_triple": [
+          0,
+          10,
+          12
+        ]
+      },
+      {
+        "H1_four_direction_ranks": [
+          9,
+          8,
+          8,
+          9
+        ],
+        "H2_dimension_F3": 31,
+        "H2_four_direction_ranks": [
+          20,
+          18,
+          18,
+          20
+        ],
+        "face_rank_F3": 95,
+        "logical_H1_dimension_F3": 14,
+        "matching_minimizer_sets": true,
+        "orbit_triple": [
+          0,
+          10,
+          13
+        ]
+      }
+    ],
+    "counterexample_found": true,
+    "sample_is_exhaustive": false,
+    "three_orbit_cases_checked": 12
+  }
+}
