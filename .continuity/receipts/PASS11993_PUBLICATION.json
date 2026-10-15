@@ -1,6 +1,6 @@
 {
   "reservation": "b49bfed2d867b7997fa82490d22bc9bb151278cf",
-  "science_commit": null,
+  "science_commit": "e2003d223ca34b5c95c247a00beed5520bc50406",
   "science_sha256_lf": {
     "analysis/w33_pass11993_majorana_scalability_repair.py": "3e090347c0870bd7a6dd97cb0e9081ef3ee01ff4725a93965c8720f26c877da2",
     "data/w33_pass11993_majorana_scalability_repair.json": "cfda4436f3f05184693426db9b990e79ba7ccad8380d2518b9ea165f62560776",
@@ -15,6 +15,32 @@
   },
   "local_tests": "7 passed in8.89s",
   "guard": "Initial deficit@10 lexical warnings retained. Allfour displayed priorcandidates were read and nowcited; mathematicalresource notions differ.",
-  "hosted": null,
-  "scope": "KnownFLOdimension/universality methods applied toactualnativeSpin6gates. Additionalquartic physicalinteraction andMajorana carrier are supplied."
+  "hosted": {
+    "run_id": 38817195046,
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/38817195046",
+    "conclusion": "success",
+    "frozen_tests": "7 passed in 0.55s",
+    "producer": "PASS",
+    "regenerated_tests": "7 passed in 0.50s",
+    "artifact_id": 12011073338,
+    "artifact_zip_sha256": "8b12ff84c123d14af6f90e3c356ee380829566dce41d84cde14d0fac81e792cb",
+    "exact_fields_equal": [
+      "bilinear_restricted_Gram",
+      "exact_dimension_induction",
+      "unitary_no_go",
+      "two_blocks",
+      "exact_added_operator",
+      "exact_Pauli_Lie_seed_count",
+      "exact_Pauli_Lie_closure",
+      "exact_SU16_Lie_dimension"
+    ],
+    "noncanonical_control_note": "Schur eigenbasis and logarithm branch can change Hamiltonian coefficients across LAPACK implementations. Both frozen and regenerated coefficients independently exponentiate to the same five native gates with error below 1e-10. Raw JSON equality is neither asserted nor required."
+  },
+  "scope": "KnownFLOdimension/universality methods applied toactualnativeSpin6gates. Additionalquartic physicalinteraction andMajorana carrier are supplied.",
+  "results_index": {
+    "files": 12295,
+    "distinctive_results": 16911,
+    "unique_results": 7402,
+    "sha256_lf": "960402527ebb29da4166167509f137178cefc9018e33f2e10a2f61c1f3f82ccb"
+  }
 }
