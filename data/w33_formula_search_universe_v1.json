@@ -154181,6 +154181,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a7d92e1d12caaf7ea01e332ec7e85727fe6a95f61944849ae1d9ee77a9b68f40",
+      "normalized_formula": "\"representation_identity\":\"H1_C=2sum_(chinontriviallinear)chi+8V_omega+8V_omega^2\"",
+      "numeric_literals": [
+        "2",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261015_toe82_native_H27_h1_character.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 136,
+          "path": "analysis/w33_20261015_toe82_native_H27_h1_character.py",
+          "raw": "\"representation_identity\": \"H1_C = 2 sum_(chi nontrivial linear) chi + 8 V_omega + 8 V_omega^2\",",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "3ff152628955e803ad3b1b62ed03f7c6f74c6005ff7f5ae2086954b80507fd99",
+      "structural_formula": "\"representation_identity\":\"H1_C=#sum_(chinontriviallinear)chi+#V_omega+#V_omega^#\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "c81701c2dac947d4ea0ee49281041e0673e0e9069cef6af005dac79281d35502",
       "normalized_formula": "\"representative_pair_sum_contrast_rank_is_8\":representative[\"contrast_modes\"][\"pair_sum\"][\"rank\"]=8",
       "numeric_literals": [
@@ -1126353,6 +1126381,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "85311813ee6b2ecd6b1b101e58fa78da3d705aba940cefb60f606c4698718379",
+      "normalized_formula": "charactersof`H27/Z(H27)=C3^2`.Let`V_omega`and",
+      "numeric_literals": [
+        "2",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-15_toe82_native_H27_h1_character_decomposition.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/2026-10-15_toe82_native_H27_h1_character_decomposition.md",
+          "raw": "characters of `H27/Z(H27) = C3^2`. Let `V_omega` and",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "24ecaeb7c64e0d5aa7f1dca613a4eae58628dfe678c686a961a264d1fb1e85f9",
+      "structural_formula": "charactersof`H2#/Z(H2#)=C3^#`.Let`V_omega`and"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a49ca018ebf9038801bcbc9e2710c6ffde455d8bd2f24f92eab94c61da3a2e51",
       "normalized_formula": "charge_family={k:str(v)fork,vincharges.items()},native_gauge_H27_commutator_residual=float(maxcomm)",
       "numeric_literals": [
@@ -1812573,9 +1812629,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-15T09:58:27-04:00",
+  "frozen_at": "2026-10-15T11:09:24-04:00",
   "pass": 398,
-  "repository_head": "287daca4b853e6b03ab339504f4f6e7acd0903e9",
+  "repository_head": "120250a5766542b9519039f3bc0f7cbf8965031f",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1855779,6 +1855835,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2efa12a6c992d8ba612ab7ba6ea5275f3c17b5325cfcd2a0aee8e26da24cc3e2",
       "structural_formula": "\"representation_home\":\"V_profile=C^#tensorStd(S3),the9*#sectorofC[#]\""
+    },
+    {
+      "exact_formula_ids": [
+        "a7d92e1d12caaf7ea01e332ec7e85727fe6a95f61944849ae1d9ee77a9b68f40"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3ff152628955e803ad3b1b62ed03f7c6f74c6005ff7f5ae2086954b80507fd99",
+      "structural_formula": "\"representation_identity\":\"H1_C=#sum_(chinontriviallinear)chi+#V_omega+#V_omega^#\""
     },
     {
       "exact_formula_ids": [
@@ -2113435,6 +2113499,14 @@
     },
     {
       "exact_formula_ids": [
+        "85311813ee6b2ecd6b1b101e58fa78da3d705aba940cefb60f606c4698718379"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "24ecaeb7c64e0d5aa7f1dca613a4eae58628dfe678c686a961a264d1fb1e85f9",
+      "structural_formula": "charactersof`H2#/Z(H2#)=C3^#`.Let`V_omega`and"
+    },
+    {
+      "exact_formula_ids": [
         "a49ca018ebf9038801bcbc9e2710c6ffde455d8bd2f24f92eab94c61da3a2e51"
       ],
       "exact_member_count": 1,
@@ -2296897,20 +2296969,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88388421,
-    "exact_formula_families": 61980,
-    "files_scanned": 12129,
-    "formula_occurrences": 67987,
+    "bytes_scanned": 88399330,
+    "exact_formula_families": 61982,
+    "files_scanned": 12131,
+    "formula_occurrences": 67989,
     "status_occurrences": {
-      "certified_or_theorem": 5040,
+      "certified_or_theorem": 5041,
       "killed_or_retracted": 1662,
       "open_or_conditional": 2267,
       "preregistered": 33,
       "retrospective_fit": 5235,
-      "unclassified": 53750
+      "unclassified": 53751
     },
-    "structural_families": 60328
+    "structural_families": 60330
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "eb318f3a9676c21a6a556b30ea2bd250369ff395cdb773c0d23402af61072e9e"
+  "universe_sha256": "598974abadc9860b5e3f659e1913d966ce1314a369f6d143874da2a0e6bc1f39"
 }
