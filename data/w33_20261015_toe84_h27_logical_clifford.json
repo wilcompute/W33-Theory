@@ -1,0 +1,319 @@
+{
+  "H27_order": 27,
+  "H2_dimension": 16,
+  "all_elements": [
+    {
+      "h": [
+        0,
+        0,
+        0
+      ],
+      "rank_g_minus_identity_F2": 0,
+      "rank_g_minus_identity_F3": 0
+    },
+    {
+      "h": [
+        0,
+        0,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        0,
+        0,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        0,
+        1,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        0,
+        1,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        0,
+        1,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        0,
+        2,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        0,
+        2,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        0,
+        2,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 16
+    },
+    {
+      "h": [
+        1,
+        0,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        0,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        0,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        1,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        1,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        1,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        2,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        2,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        1,
+        2,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        0,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        0,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        0,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        1,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        1,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        1,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        2,
+        0
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        2,
+        1
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    },
+    {
+      "h": [
+        2,
+        2,
+        2
+      ],
+      "rank_g_minus_identity_F2": 18,
+      "rank_g_minus_identity_F3": 17
+    }
+  ],
+  "code": "[[135,26,6,4]]_2 and [[135,26,6,4]]_3",
+  "logical_action_kernel_F2": [
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "logical_action_kernel_F3": [
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "maximal_abelian_polarization_count": 4,
+  "modular_clock_boundary": "The code singles out a maximal commuting H27 subgroup by rank over F3; this is a finite Pauli/MUB polarization, not a physical time direction.",
+  "physical_monomial_chain_automorphisms_verified": 27,
+  "rank_distribution": {
+    "0,0": 1,
+    "18,16": 8,
+    "18,17": 18
+  },
+  "ternary_rank16_polarization": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      2,
+      2
+    ]
+  ]
+}
