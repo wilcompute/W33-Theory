@@ -1,0 +1,2499 @@
+{
+  "status": "PAGE_AND_COMMIT_COMPLETENESS_AUDIT",
+  "date": "2026-10-15",
+  "pdf": {
+    "path": "papers/forty_points/main.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "characters": 781,
+        "sha256": "a48a7cf2397ed150caebcbbf27ea5f131b3138da3e29eb41cf197035d03ae9e8",
+        "lead": [
+          "one point   4 lines   12 neighbours   27 far points",
+          "Forty Points"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 2,
+        "characters": 4026,
+        "sha256": "893a1472144e329501bd07e9628b40d8e7f9e30af28ac66e35ef72009e608618",
+        "lead": [
+          "Abstract",
+          "For everyone. Take the smallest quantum system that has three settings instead of two — a"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "Heisenberg": 1,
+          "Lorentz": 2,
+          "proton": 1,
+          "open": 1
+        }
+      },
+      {
+        "page": 3,
+        "characters": 1311,
+        "sha256": "ca57b1279be0db7343624e638105d90a7de5461aa8c87e9361924ffdf750dd60",
+        "lead": [
+          "|   3",
+          "𝑅-symmetries appear to reopen parity in one model, but only through an 𝑅-rule that is in-"
+        ],
+        "topics": {
+          "Lorentz": 1,
+          "open": 1
+        }
+      },
+      {
+        "page": 4,
+        "characters": 3256,
+        "sha256": "66872c1c15421930f097b3c791a94ac7a55257bba62f61151bb1976bf118ea87",
+        "lead": [
+          "4   |   Forty Points",
+          "Contents"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "self-entanglement": 1
+        }
+      },
+      {
+        "page": 5,
+        "characters": 3547,
+        "sha256": "f8063404b3ff9e32c0cd74c193c43bbdcb7bfae58aafdb36efa2dfe32a48183c",
+        "lead": [
+          "Contents |    5",
+          "4.7   Four clocks: the Hesse striations and the tetracode . . . . . . . . . . . . . . . .          31"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Heisenberg": 1,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 6,
+        "characters": 2288,
+        "sha256": "cd9b6025e870998b5e603793b4e0eb4764342b003d67c6981dc99dac6c0c90a9",
+        "lead": [
+          "6   |   Forty Points",
+          "9.1    What the finite geometry itself contains . . . . . . . . . . . . . . . . . . . . . .      80"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "open": 1
+        }
+      },
+      {
+        "page": 7,
+        "characters": 2307,
+        "sha256": "d318a8af6d35e128f92c20d5bcf6cd2b1ede1dfebbf3b7afa8c979d160333156",
+        "lead": [
+          "How to read this paper   |   7",
+          "How to read this paper"
+        ],
+        "topics": {
+          "open": 2
+        }
+      },
+      {
+        "page": 8,
+        "characters": 3357,
+        "sha256": "06057249db584b396b33e44cf7d81002726f79aea1d55199141a10e123c30272",
+        "lead": [
+          "8   |   Forty Points",
+          "one qutrit ℂ3                       𝐸8 : 248 dimensions"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 9,
+        "characters": 2761,
+        "sha256": "79fca557ffbce17dda8f738dc83c6260256d259b7888f97e61826e1936e34cbc",
+        "lead": [
+          "Prologue: a shape made of measurements |   9",
+          "In plain words"
+        ],
+        "topics": {
+          "qutrit": 8,
+          "Heisenberg": 2
+        }
+      },
+      {
+        "page": 10,
+        "characters": 2927,
+        "sha256": "567ce51910577df902e85244f22bde3c9dd8bd3f3bbb8124ee198e939d86302e",
+        "lead": [
+          "10   | Forty Points",
+          "1.4 The forty in one breath"
+        ],
+        "topics": {
+          "qutrit": 4,
+          "Heisenberg": 1,
+          "Lorentz": 1,
+          "open": 1
+        }
+      },
+      {
+        "page": 11,
+        "characters": 2718,
+        "sha256": "b052471c449ea0ec205b1f89ae7d433c54d0fd0a1d49590662f1cff21ff9d1c9",
+        "lead": [
+          "The object: the symplectic quadrangle 𝑊(3, 3)   |   11",
+          "2 The object: the symplectic quadrangle 𝑊(3, 3)"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 12,
+        "characters": 2332,
+        "sha256": "6c926fdf1e3ad157aaee127e624649b1cbfb69419aa857864e16a0c38083fddc",
+        "lead": [
+          "12    | Forty Points",
+          "𝐿"
+        ],
+        "topics": {
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 13,
+        "characters": 736,
+        "sha256": "c33616397852db04a8f279b027023b4343a01edbea6a8f4ee1de94f7c2e137e2",
+        "lead": [
+          "The object: the symplectic quadrangle 𝑊(3, 3)     |   13",
+          "𝑊(3, 3): 40 points, all 240 edges"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 14,
+        "characters": 2807,
+        "sha256": "3cdc4787c6c92d3f06f051631e1b6ec9252f37e934c23b463009c000e03012dc",
+        "lead": [
+          "14   | Forty Points",
+          "• A line is a maximal set of mutually compatible measurements: an abelian group of"
+        ],
+        "topics": {
+          "qutrit": 4
+        }
+      },
+      {
+        "page": 15,
+        "characters": 2667,
+        "sha256": "646570d9b022deae8e565cdb88ecea241e78fa60ae6d6c7f82cf307b1379c8ab",
+        "lead": [
+          "One qutrit, acting on itself   |   15",
+          "2.6 Why three?"
+        ],
+        "topics": {
+          "qutrit": 6,
+          "self-entanglement": 1
+        }
+      },
+      {
+        "page": 16,
+        "characters": 2771,
+        "sha256": "3cacb4ffe1828dca7ed450224f602da1eed6c06a6ddac3e49b09e2db27b1d354",
+        "lead": [
+          "16    | Forty Points",
+          "different shape. The “two qutrits” of Section 2 can be read as the before-and-after of"
+        ],
+        "topics": {
+          "qutrit": 6
+        }
+      },
+      {
+        "page": 17,
+        "characters": 2901,
+        "sha256": "e1a47e9f11d860bc56c7f4d655f56dfaa46879daec102aa6f8d3380d23e9cb91",
+        "lead": [
+          "One qutrit, acting on itself   |   17",
+          "channel diagonal. w33_20260924_liouville_swap_cp_outer_bridge.py"
+        ],
+        "topics": {
+          "qutrit": 6,
+          "self-entanglement": 1
+        }
+      },
+      {
+        "page": 18,
+        "characters": 2768,
+        "sha256": "220d68d5f08dff1fc03b57e6f14118c7c3f2536be5ef2438e58167d6f7943e21",
+        "lead": [
+          "18    | Forty Points",
+          "records “0, 1 or 2” would pass that test too. The decisive witness entangles 𝑆 with a reference"
+        ],
+        "topics": {
+          "qutrit": 4
+        }
+      },
+      {
+        "page": 19,
+        "characters": 3562,
+        "sha256": "4ecb7902e45238fe8f2862436baf45a1a4bbaad28a7e46ab0a4f71c73988642a",
+        "lead": [
+          "One qutrit, acting on itself   |   19",
+          "3.7 Space and time on the same forty points"
+        ],
+        "topics": {
+          "qutrit": 14
+        }
+      },
+      {
+        "page": 20,
+        "characters": 3405,
+        "sha256": "ef3b9c5a38bedbefed6da745969246ae4eeeacec14dad01da0df0e72ed1443bb",
+        "lead": [
+          "20    | Forty Points",
+          "function of stabilizer states is non-negative, Gross [50], and its phase space is the point"
+        ],
+        "topics": {
+          "qutrit": 6
+        }
+      },
+      {
+        "page": 21,
+        "characters": 3908,
+        "sha256": "a46682186b984f0813090f7bb984f80dcceaebf2b2464972f0d097e3aca9b356",
+        "lead": [
+          "One qutrit, acting on itself   |   21",
+          "and the tetracode gate 𝐾⊗𝐼, 𝐾 = ( 11 −1"
+        ],
+        "topics": {
+          "qutrit": 12
+        }
+      },
+      {
+        "page": 22,
+        "characters": 4155,
+        "sha256": "d40529fc45bd5b1c57d201e7bc61f34a51fb35955d8beb6b80be71c322c31883",
+        "lead": [
+          "22   | Forty Points",
+          "The simplest is 𝐾 = 𝑃2 + 𝑖1, a cyclic shift plus 𝑖 times the all-ones matrix, unitary because"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 14,
+          "open": 1
+        }
+      },
+      {
+        "page": 23,
+        "characters": 4317,
+        "sha256": "fa6861f80a88b0487721e99b9a87f9ae513d776783482208b206f8efa4361b28",
+        "lead": [
+          "One qutrit, acting on itself   |   23",
+          "the exact count of 𝔽9 -linear ones is 2 642 411 520, which realise only two of the five orienta-"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 18,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 24,
+        "characters": 4144,
+        "sha256": "2c77dd8a22fa23d6fa11ffae6331763de7383596e2b5fd09237c8a114cc449a9",
+        "lead": [
+          "24   | Forty Points",
+          "mod 3: every six parties split 3|3 or not at all. For any three parties these splits assemble into"
+        ],
+        "topics": {
+          "qutrit": 11,
+          "open": 1
+        }
+      },
+      {
+        "page": 25,
+        "characters": 3467,
+        "sha256": "568b8694724f93facd165d656c4a3f31957073a3d26426d65fd6dd1ec6ca696f",
+        "lead": [
+          "Time: a finite light cone and four clocks |   25",
+          "metry, with the cycle’s local twist of order 1, 2 or 4, is 𝔽9 -linear. Of the 1600 codes invariant"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 26,
+        "characters": 2805,
+        "sha256": "df4eb902351471d30954014fa5ff9527d6f2d79459e4267fcacd96e7d5e50d1c",
+        "lead": [
+          "26     | Forty Points",
+          "4.1 Choosing a “now”"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 27,
+        "characters": 2817,
+        "sha256": "ffdcd44b4646247c3f3f85b62b270bb2553a06b128591b81bfc4c10bf24900fa",
+        "lead": [
+          "Time: a finite light cone and four clocks |      27",
+          "— the Minkowski form of a space-time with one time and two space dimensions. Two events"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 28,
+        "characters": 2847,
+        "sha256": "d72c41be3b1cbd059ac441ef66a92738bf9c754c82ae20852251f046aa5a0a29",
+        "lead": [
+          "28     | Forty Points",
+          "Proposition 4.2 (the common mode)                                        THEOREM          COMPUTATION"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 29,
+        "characters": 3047,
+        "sha256": "b50d2acf9ab908dc56ab62a5b68f7217ce0e35bb9e8eec611b07d670282f686a",
+        "lead": [
+          "Time: a finite light cone and four clocks |    29",
+          "Theorem 4.3 (spectral clock)                                                                 COMPUTATION"
+        ],
+        "topics": {
+          "qutrit": 4
+        }
+      },
+      {
+        "page": 30,
+        "characters": 3194,
+        "sha256": "d0ba84a7bfde7a728d7ac015d2a898616d67fe68d107f0f09f397807ba233d99",
+        "lead": [
+          "30    | Forty Points",
+          "shell 0: 1"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Steinberg": 1
+        }
+      },
+      {
+        "page": 31,
+        "characters": 2970,
+        "sha256": "71f522c0de8d3067f50619a21e457d3aebda855024bccc758758e726a968b327",
+        "lead": [
+          "Time: a finite light cone and four clocks |   31",
+          "present, the Weil phases occur with census 113 , 𝑖4 , (−1)6 , (−𝑖)4 . Complex conjugation"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 32,
+        "characters": 3265,
+        "sha256": "c5c973f5ba6383e69e9b2fa494208fe3369985952332b693e7228b0188090f50",
+        "lead": [
+          "32   | Forty Points",
+          "(𝑎, 𝑏)    (1, 0)   (0, 1)   (1, 1)   (2, 1)"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 33,
+        "characters": 2440,
+        "sha256": "31c9925812fa916afef503cebaebe80b55aa56d89ac61a3d1710cd5ac212a1be",
+        "lead": [
+          "Time: a finite light cone and four clocks |   33",
+          "In plain words"
+        ],
+        "topics": {
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 34,
+        "characters": 3758,
+        "sha256": "c7b3a6a59e41a54a2f244e9c208bdb50f800cc83cc8100b4e5dc77e358c2926e",
+        "lead": [
+          "34    | Forty Points",
+          "Theorem 4.7 (the price of an arrow)                                              THEOREM"
+        ],
+        "topics": {
+          "qutrit": 8,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 35,
+        "characters": 4447,
+        "sha256": "e9405f41e76117ab233b0236009b73ec6441260b85c48122b2985eb409a9dfc4",
+        "lead": [
+          "Time: a finite light cone and four clocks |   35",
+          "two-trit arrow needs an interaction that breaks translation invariance. COMPUTATION (w33_"
+        ],
+        "topics": {
+          "qutrit": 9,
+          "Lorentz": 2
+        }
+      },
+      {
+        "page": 36,
+        "characters": 4061,
+        "sha256": "92f768114f0b5e4619f2776e3e229de06b9c9e01be86a72f44e7175e4a56e6f8",
+        "lead": [
+          "36   | Forty Points",
+          "splits); the perfect interacting tick costs at least 2 trits in every split, and the 𝔽9 gate 3. An"
+        ],
+        "topics": {
+          "qutrit": 12
+        }
+      },
+      {
+        "page": 37,
+        "characters": 4662,
+        "sha256": "65d91f5f56688ea194d8d63cf886cbca8b7f4989a84e48bf25bd5771cf03f7cc",
+        "lead": [
+          "Time: a finite light cone and four clocks |   37",
+          "lations between splits circulate with current spectra ±24√3 𝑖, ±36√3 𝑖 and ±72√3 𝑖, ±324√3 𝑖."
+        ],
+        "topics": {
+          "qutrit": 15
+        }
+      },
+      {
+        "page": 38,
+        "characters": 4423,
+        "sha256": "9484428d0bd2eb79598d426b41c3ce80b2de777b91de46c8c5a6d859feda5bab",
+        "lead": [
+          "38   | Forty Points",
+          "an aﬀine law: on two qutrits 𝐶(𝑇 ⊗ 1) breaks the arrow exactly when the Pauli frame of 𝐶"
+        ],
+        "topics": {
+          "qutrit": 10
+        }
+      },
+      {
+        "page": 39,
+        "characters": 4423,
+        "sha256": "e9be1b482f1488282afb334a7bfd9e0578ea4ced3f1258e3d4a0c125ecc06909",
+        "lead": [
+          "Time: a finite light cone and four clocks |   39",
+          "also spectral: reversible magic Floquet ticks show orthogonal-class level statistics and violat-"
+        ],
+        "topics": {
+          "qutrit": 12
+        }
+      },
+      {
+        "page": 40,
+        "characters": 4559,
+        "sha256": "fc5bcd3ffbb355ec4a0c0cc6fc5f7ac717fd58c4b3c281d401d2685cfad26c6b",
+        "lead": [
+          "40   | Forty Points",
+          "has flavour Jarlskog 𝐽CKM , which is even under 𝑈 ↦ 𝑈 𝑇 and therefore blind to the arrow; at"
+        ],
+        "topics": {
+          "qutrit": 9
+        }
+      },
+      {
+        "page": 41,
+        "characters": 4620,
+        "sha256": "7c8d0ad5f1ba5fd2e49e34395f925b4ccab51e73f748a68621589e10f903a9a9",
+        "lead": [
+          "Time: a finite light cone and four clocks |   41",
+          "be pushed through; this explains the powers 23𝑘 in the denominators and yields the exact"
+        ],
+        "topics": {
+          "qutrit": 12,
+          "open": 1
+        }
+      },
+      {
+        "page": 42,
+        "characters": 4337,
+        "sha256": "85ee60c48c94c9c87520bc2a01638bc210845513e432e7685792df7cba66fde6",
+        "lead": [
+          "42   | Forty Points",
+          "proved by a quasi-polynomial bound; asymptotically half of all state invariants are time-"
+        ],
+        "topics": {
+          "qutrit": 11
+        }
+      },
+      {
+        "page": 43,
+        "characters": 4337,
+        "sha256": "5792ca92b8f410672d3e2b0426a72556e81b9745833fcc45d373802e3575cd5b",
+        "lead": [
+          "Time: a finite light cone and four clocks |   43",
+          "every class at two and three qutrits. The cubed-phase test is not exact on 𝑃𝑈(3): search-"
+        ],
+        "topics": {
+          "qutrit": 10,
+          "Heisenberg": 1
+        }
+      },
+      {
+        "page": 44,
+        "characters": 4228,
+        "sha256": "6f3bfbfc3aa0dd389d2bd7f6b5ffb313fd06e073c00e6b01e7a720d31179d02b",
+        "lead": [
+          "44   | Forty Points",
+          "its 𝑗-invariant, and sign 𝑊 = sign Im 𝑗(𝐸𝜓 ) (a ramification argument), with |𝑗| and |𝑗 − 1728|"
+        ],
+        "topics": {
+          "qutrit": 11,
+          "Heisenberg": 1,
+          "open": 1
+        }
+      },
+      {
+        "page": 45,
+        "characters": 4156,
+        "sha256": "0dca635d70a811acc41f766be38bedc2a5c3931276ae2c1255f4f90db116f898",
+        "lead": [
+          "Time: a finite light cone and four clocks |   45",
+          "∑𝐹 | det𝐹 𝜓|2 = (𝑀3 − 2)/6 ≤ 1/9 — a monogamy rule allowing at most three of five factori-"
+        ],
+        "topics": {
+          "qutrit": 15,
+          "Heisenberg": 1
+        }
+      },
+      {
+        "page": 46,
+        "characters": 4243,
+        "sha256": "1dbfdb2fce092a0123ab9a68929d5c8a7899d009366dfe51a9b76433ad628766",
+        "lead": [
+          "46   | Forty Points",
+          "line, a point on it and a sign of the 𝐶 × 𝑇-odd order parameter, spontaneously. Symme-"
+        ],
+        "topics": {
+          "W(3,3)": 3,
+          "qutrit": 8
+        }
+      },
+      {
+        "page": 47,
+        "characters": 4182,
+        "sha256": "e7077582e74d915516b971edcac8dafc1085dcb944884ca7fc1bb9beddf4e08a",
+        "lead": [
+          "Time: a finite light cone and four clocks |   47",
+          "split by planes. These are readings of actual spectra; they do not supply flatness, masses"
+        ],
+        "topics": {
+          "W(3,3)": 4,
+          "qutrit": 4
+        }
+      },
+      {
+        "page": 48,
+        "characters": 3402,
+        "sha256": "3bcda86758f969b5d74437c0cb1eac0e66d0649b95d36fa1da4dee883050bebe",
+        "lead": [
+          "48    | Forty Points",
+          "the hierarchy (𝑚𝑐 /𝑚𝑡 ≈ 0.002, 𝑚𝑠 /𝑚𝑏 ≈ 0.016, 𝑚𝑏 /𝑚𝑡 ≈ 0.02) but invert 𝑉𝑢𝑠 and 𝑉𝑐𝑏 . Every"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 12
+        }
+      },
+      {
+        "page": 49,
+        "characters": 3681,
+        "sha256": "2dc58c617932b38f450839621eff08043a2e3e004c2c96cb4ce4447aaff2e469",
+        "lead": [
+          "Time: a finite light cone and four clocks |   49",
+          "For qubits the diagonalisation step fails. In characteristic two, 𝑞(𝑥) = 𝜔(𝑥, 𝑆𝑥) can vanish"
+        ],
+        "topics": {
+          "qutrit": 4
+        }
+      },
+      {
+        "page": 50,
+        "characters": 4090,
+        "sha256": "9bc569e747a30ce91c7b0dcf210cd931cc72d916886f1fd7c89e0a2c9ed51629",
+        "lead": [
+          "50   | Forty Points",
+          "𝐴 = 3, belongs to the 𝔽9 gate, which cycles the qutrits where it acts locally. The perfect"
+        ],
+        "topics": {
+          "qutrit": 4,
+          "Lorentz": 3
+        }
+      },
+      {
+        "page": 51,
+        "characters": 4068,
+        "sha256": "bf3e4ace7359a740448ec9c75977923bd69cb2f361d67b9280a42b6180ae6fef",
+        "lead": [
+          "Time: a finite light cone and four clocks |   51",
+          "is reached only through boson–fermion pairs (Rac⊗Di)2 . The massive little group never"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Lorentz": 13
+        }
+      },
+      {
+        "page": 52,
+        "characters": 3477,
+        "sha256": "47e88875721a30eef1fff043f46ad435c545856d29fdd7ae8574be579b3ce2bd",
+        "lead": [
+          "52    | Forty Points",
+          "pairing complex 𝐸8 eigenspaces with complex geometric sectors.)"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Lorentz": 6
+        }
+      },
+      {
+        "page": 53,
+        "characters": 2507,
+        "sha256": "d62f00c76289a3492ea35b97a0e37b8011e865e7e7691804e72b18a499cb0662",
+        "lead": [
+          "𝐸8 from nine histories | 53",
+          "Where this stops"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "open": 1
+        }
+      },
+      {
+        "page": 54,
+        "characters": 3681,
+        "sha256": "68975c6e1c343f28c2292452526b1f54b266b8f2f3b5d42143bc5234a19d2ca5",
+        "lead": [
+          "54    | Forty Points",
+          "5.2 Hesse lines are copies of 𝐴2"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 55,
+        "characters": 2955,
+        "sha256": "75d91cad3c913764b03eef957f0eacc498a4916b81bfa30b3822074063b818f6",
+        "lead": [
+          "𝐸8 from nine histories | 55",
+          "5.4 A trap: 240 = 240"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 56,
+        "characters": 2663,
+        "sha256": "efee435309cea4a1fa66764e23bcf70470b95d04cd1c9cb1d0a8d8d9488371f8",
+        "lead": [
+          "56    | Forty Points",
+          "photonic Holonet papers call this operator–operand duality.             COMPUTATION   (bt817_"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 57,
+        "characters": 3951,
+        "sha256": "a9a655fa8942613a1b2c7f29514d37ace09ecd49523f67acca81e246156ce50b",
+        "lead": [
+          "𝐸8 from nine histories | 57",
+          "where 𝐶3 𝑁9 is, up to −27, the product of the twelve stabilizer-state mirrors and 𝑆9 is"
+        ],
+        "topics": {
+          "qutrit": 3
+        }
+      },
+      {
+        "page": 58,
+        "characters": 3914,
+        "sha256": "7b15e818331475dc4199973a67426ff4e7a6448bcc41ed57cbaab3706a9290d8",
+        "lead": [
+          "58   | Forty Points",
+          "potential can choose the CP/time orientation.     COMPUTATION    (w33_20261001_balanced_g26_"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 59,
+        "characters": 3771,
+        "sha256": "9d31576bf460f4e7326d4e548fdd0f3eb050200b62e39da13d20f8f0c94dab45",
+        "lead": [
+          "𝐸8 from nine histories | 59",
+          "masses to one third of the cubic squared masses. The moment potential supplies matching"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 60,
+        "characters": 3976,
+        "sha256": "28e97e0d904878fbdc690fa2c61793a95d0f0331843bef36ac4cdc6e7db01613",
+        "lead": [
+          "60   | Forty Points",
+          "cal slice Kähler metric. Full eleven-modulus stability, quantum Kähler corrections, the AMS-"
+        ],
+        "topics": {
+          "open": 2
+        }
+      },
+      {
+        "page": 61,
+        "characters": 4031,
+        "sha256": "3119913d50b240527b63aa8825a09c16cc2977797725e428a94da374998fd80f",
+        "lead": [
+          "𝐸8 from nine histories | 61",
+          "sible W33-derived spacetime constructions. COMPUTATION (w33_ pass11275_ polynomial_"
+        ],
+        "topics": {
+          "Lorentz": 1,
+          "open": 5
+        }
+      },
+      {
+        "page": 62,
+        "characters": 4158,
+        "sha256": "fd0b795ccb23ecd5b5d2d52613f848e31048d1abf0ecf90fe79209c08d1a32ff",
+        "lead": [
+          "62   | Forty Points",
+          "teen leading complex massive poles plus eight Goldstones in a declared spacelike scheme,"
+        ],
+        "topics": {
+          "open": 7
+        }
+      },
+      {
+        "page": 63,
+        "characters": 4226,
+        "sha256": "4ad61eee0115eb49a6ac2efd99f1ea3ecbaab051751aa69e88165ee965717bfc",
+        "lead": [
+          "𝐸8 from nine histories | 63",
+          "stein metric: Einstein plus 𝜒 = 0 would force a flat finite torus cover, whose 𝑏1 is at most four."
+        ],
+        "topics": {
+          "Lorentz": 1,
+          "open": 6
+        }
+      },
+      {
+        "page": 64,
+        "characters": 3861,
+        "sha256": "796baed58466f82c7fa9e46d53a9ac33420e013278ba20635e0da37ccb544990",
+        "lead": [
+          "64   | Forty Points",
+          "numerical constructions)"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "open": 2
+        }
+      },
+      {
+        "page": 65,
+        "characters": 2474,
+        "sha256": "0186eabbc9531b5bf124e080a4b73cad71e9b7d9b991ff2077ea5a236e7a2dff",
+        "lead": [
+          "𝐸8 from nine histories | 65",
+          "lies wholly in the kernel. This is a character identity, not a boson–fermion supertrace or a"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 66,
+        "characters": 2649,
+        "sha256": "24d1496164e180bf43ed889ae7c44dc4922cc012b56d648a2c26826441c88d51",
+        "lead": [
+          "66     | Forty Points",
+          "Figure 14. The 240 roots of 𝐸8 projected to the Coxeter plane of a Coxeter element 𝑐 (order 30),"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 67,
+        "characters": 2781,
+        "sha256": "b66bf87c80729ac79ef51d62a523ef996a72a5051fa48ff084847f9732adea9d",
+        "lead": [
+          "The Freudenthal 56 and a 57-dimensional light cone   |   67",
+          "What it means physically: cubic time"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 68,
+        "characters": 2822,
+        "sha256": "ac8f3dd0b515a88d88d0a85c0c678efd3328fc349dca3242f6903734047647af",
+        "lead": [
+          "68    | Forty Points",
+          "𝑎7 =     −3        −2    −1       0         1    2       3"
+        ],
+        "topics": {
+          "Heisenberg": 2
+        }
+      },
+      {
+        "page": 69,
+        "characters": 2515,
+        "sha256": "e7bc3d5509620c73a7492399ef6527bb5fd372edb02e99ae041c62e0999edbc3",
+        "lead": [
+          "The Freudenthal 56 and a 57-dimensional light cone   |     69",
+          "(𝑋 # )# = 𝑁(𝑋) 𝑋 and 𝑋⋅𝑋 # = 3𝑁(𝑋), so 𝑁 is the norm of a cubic Jordan algebra (a split"
+        ],
+        "topics": {
+          "Heisenberg": 2
+        }
+      },
+      {
+        "page": 70,
+        "characters": 3271,
+        "sha256": "0d49a2acee10ac446acd6ff81d370939508cfd9af2e534d3d9ba70f221cab064",
+        "lead": [
+          "70    | Forty Points",
+          "(iv) the Weyl reflection 𝑤 exchanging 𝑒𝜃 and −𝑒−𝜃 acts as an inversion 𝜄, and"
+        ],
+        "topics": {
+          "Heisenberg": 2,
+          "Lorentz": 2
+        }
+      },
+      {
+        "page": 71,
+        "characters": 2479,
+        "sha256": "9682bf0f2bd236ec9560c4e11e3acdf83c3f21dd7b889247217a0f7f2e9ff73d",
+        "lead": [
+          "Real forms: where time’s signature comes from |        71",
+          "Nothing here supplies a black hole, a charge lattice of a physical theory, or dynamics."
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 72,
+        "characters": 2869,
+        "sha256": "bd14d8331ca150284f678fa680c01cc189eb53de2a6c5569e074200258a9a70d",
+        "lead": [
+          "72    | Forty Points",
+          "7.3 The three tick lines are a Klein four-group"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 73,
+        "characters": 2766,
+        "sha256": "f9cf4e4b194915ab55d3af1be1ed69f43e57565e9cd82aa9b7464dca40be9f42",
+        "lead": [
+          "Real forms: where time’s signature comes from |   73",
+          "form of the repository lands on the first; the Hesse clock lands on the second. The"
+        ],
+        "topics": {
+          "Lorentz": 3
+        }
+      },
+      {
+        "page": 74,
+        "characters": 2337,
+        "sha256": "7faf2fb07afb4f5818a9f7e39977f9a121f18566128eeea7ad2e6eb1b505dc9b",
+        "lead": [
+          "74    | Forty Points",
+          "one time"
+        ],
+        "topics": {
+          "Lorentz": 2
+        }
+      },
+      {
+        "page": 75,
+        "characters": 2660,
+        "sha256": "ac01782a09c6c4c57990d2c98db9fc148069a0229859f0b6c31af3a8523933e6",
+        "lead": [
+          "The Albert algebra: ten dimensions, a spinor, and matter parity   |   75",
+          "8.1 Anatomy of a 3 × 3 octonionic matrix"
+        ],
+        "topics": {
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 76,
+        "characters": 3281,
+        "sha256": "331d0c6f17883126e448f6cae2ece86704f0f00bd15f6227493cf1e97aa10a3a",
+        "lead": [
+          "76    | Forty Points",
+          "ordinary space-time       superstring space-time      exceptional space-time"
+        ],
+        "topics": {
+          "Lorentz": 4
+        }
+      },
+      {
+        "page": 77,
+        "characters": 2916,
+        "sha256": "17f91fb8c0335bae90c1b8dd27b628d10e085be66f9539c2d6070dc4782f31f0",
+        "lead": [
+          "The Albert algebra: ten dimensions, a spinor, and matter parity    |   77",
+          "8.4 Matter parity is a rotation by 2𝜋"
+        ],
+        "topics": {
+          "Lorentz": 2,
+          "proton": 1
+        }
+      },
+      {
+        "page": 78,
+        "characters": 2571,
+        "sha256": "db00e34bbb3a924f0fcffd18e371a5bdb838534374b7f5130fc94c39745601a1",
+        "lead": [
+          "78    | Forty Points",
+          "cite their results (certificates named) rather than re-derive them."
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Lorentz": 2,
+          "proton": 1
+        }
+      },
+      {
+        "page": 79,
+        "characters": 3003,
+        "sha256": "e1bba39902579ce3d710938cde4080d831ee3710a2dd2dcb73cb7b08ca336e06",
+        "lead": [
+          "The Standard Model on forty points   |   79",
+          "Sections 2–8 established exact structure. This section asks the question the programme ex-"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Lorentz": 1,
+          "proton": 2,
+          "open": 3
+        }
+      },
+      {
+        "page": 80,
+        "characters": 2892,
+        "sha256": "b157976a630db6f9d49c5ac8144527a369b6763cf2328537b3ee9d1c696355a6",
+        "lead": [
+          "80    | Forty Points",
+          "9.1 What the finite geometry itself contains"
+        ],
+        "topics": {
+          "Steinberg": 3
+        }
+      },
+      {
+        "page": 81,
+        "characters": 3007,
+        "sha256": "40e7e87f88bcfe9c03704947fd5185728ef7249720d25baa1f9d9f31ad8042cc",
+        "lead": [
+          "The Standard Model on forty points   |   81",
+          "Proof. The Steinberg character vanishes on every element whose order is divisible by the"
+        ],
+        "topics": {
+          "qutrit": 5,
+          "Steinberg": 3
+        }
+      },
+      {
+        "page": 82,
+        "characters": 3396,
+        "sha256": "fd4c454cd6f8fb9d182d89f85f44e8a64fd913c59d240c4b902ce4363a6f8bd5",
+        "lead": [
+          "82    | Forty Points",
+          "𝐸8 × 𝐸8 heterotic string             order 3: 𝑇 6 /ℤ3    even order"
+        ],
+        "topics": {
+          "qutrit": 3,
+          "proton": 1,
+          "open": 1
+        }
+      },
+      {
+        "page": 83,
+        "characters": 3309,
+        "sha256": "5b932bcf4f6890bdad2ed8cfe05a252de36905b7e993b2d3ac540e9dc8817c5d",
+        "lead": [
+          "The Standard Model on forty points   |   83",
+          "What it means physically"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "proton": 2,
+          "open": 2
+        }
+      },
+      {
+        "page": 84,
+        "characters": 3526,
+        "sha256": "d47bdd9412b3f0e8b4ea78465a7d2fd227b806398872e786d8d6b33a634a091b",
+        "lead": [
+          "84    | Forty Points",
+          "ℤ6 orbifolds"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 85,
+        "characters": 3326,
+        "sha256": "7d0cfe46fd2a0fc7667df4c47cda736584ba23a3bd1025206f6c6c5b3bb415f7",
+        "lead": [
+          "The Standard Model on forty points   |   85",
+          "them, exactly, in 125 of the 128 models with 𝐷-flat directions, and exactly verified sampled"
+        ],
+        "topics": {
+          "proton": 1
+        }
+      },
+      {
+        "page": 86,
+        "characters": 3260,
+        "sha256": "e47354789876896f89be7dcdfc4d0dff2337f5f7e74a4a7b5a3ba8dd3637425d",
+        "lead": [
+          "86    | Forty Points",
+          "Theorem 9.6 (no matter parity survives the FI term)                                                       COMPUTATION"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 87,
+        "characters": 3159,
+        "sha256": "c9705ef8314e5734c1d962c453ce8aa3a018455aba9df36624426e57dbc57ceb",
+        "lead": [
+          "The Standard Model on forty points       |   87",
+          "𝐵−𝐿 = +1 fields. Because 𝐷-flatness makes the 𝑓 -charge-weighted sum of condensates equal"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 88,
+        "characters": 3499,
+        "sha256": "dcc35ba15c0fc554673519a06332dad715102c7f56cc595cfd3284caaf18c3f5",
+        "lead": [
+          "88   | Forty Points",
+          "The other discrete guardian is excluded too. Matter parity is not the only discrete symme-"
+        ],
+        "topics": {
+          "proton": 2,
+          "open": 1
+        }
+      },
+      {
+        "page": 89,
+        "characters": 3006,
+        "sha256": "d4dad90a0814f20249588efff24b1fb7a5d924503ab86776d8b3cc25d5238a72",
+        "lead": [
+          "The Standard Model on forty points             |   89",
+          "⟨𝑛⟩ ≠ 0"
+        ],
+        "topics": {
+          "proton": 2
+        }
+      },
+      {
+        "page": 90,
+        "characters": 4020,
+        "sha256": "ff09ca92194b62bd7a7380c4f1acdbc14292a633a7598a02aaad814672c30304",
+        "lead": [
+          "90   | Forty Points",
+          "The last door: a parity made of rotations — and why it closes. The discrete groups tested"
+        ],
+        "topics": {
+          "proton": 2,
+          "open": 1
+        }
+      },
+      {
+        "page": 91,
+        "characters": 4120,
+        "sha256": "9632071e66269c6d194698eaf688fadee51e3811453f2190134ace4f2d65ac88",
+        "lead": [
+          "The Standard Model on forty points   |   91",
+          "unbroken (the pattern is common, not a law: P11086 finds ℤ12 -I vacua where it fails in each"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 92,
+        "characters": 3566,
+        "sha256": "69de4e14039b9b005c5eafb8f1c807edb348420efb10bae9b51c8b4d35b7f5bd",
+        "lead": [
+          "92   | Forty Points",
+          "linear function of the fixed point’s labels. The 516 fixed points where it is nonzero carry"
+        ],
+        "topics": {
+          "proton": 1
+        }
+      },
+      {
+        "page": 93,
+        "characters": 3571,
+        "sha256": "bbf3f0a30b3df9071ccf58c795c504013c399abae1b2c250674b35bc134de7b1",
+        "lead": [
+          "The Standard Model on forty points   |   93",
+          "39] the (−1)𝐹 twist is a freely acting ℤ2 of its own, with its own gauge shift 𝑉0 ."
+        ],
+        "topics": {
+          "proton": 1
+        }
+      },
+      {
+        "page": 94,
+        "characters": 4076,
+        "sha256": "27d81d007f8429945c1edb85a892fee5af95f7737a998eb79c0e603669176de7",
+        "lead": [
+          "94   | Forty Points",
+          "but charm and up are degenerate at tree level. All of them meet the universal vacuum-energy"
+        ],
+        "topics": {
+          "qutrit": 3,
+          "Heisenberg": 2
+        }
+      },
+      {
+        "page": 95,
+        "characters": 4042,
+        "sha256": "92b60766a8c0fd263fe47c9cfe82a6930f5764272fbcd45b3ab88be0e8efe436",
+        "lead": [
+          "The Standard Model on forty points   |   95",
+          "the 𝑂(16) × 𝑂(16) string on small tori [18] is where these vacua roll.         COMPUTATION      (w33_"
+        ],
+        "topics": {
+          "qutrit": 4,
+          "open": 2
+        }
+      },
+      {
+        "page": 96,
+        "characters": 4061,
+        "sha256": "1e6b8c86d59b5f09d4b98b9b7ca067c219eb324e7a814208230be435c3dd025c",
+        "lead": [
+          "96   | Forty Points",
+          "the neutral torus down faster. The first instability these vacua meet is therefore Standard-"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "open": 4
+        }
+      },
+      {
+        "page": 97,
+        "characters": 4033,
+        "sha256": "ee80f17366f1b3f5539107ba40c1f981397464211744727a91a5aff4ad49fa80",
+        "lead": [
+          "The Standard Model on forty points   |   97",
+          "light doublets have tree-level lepton and down Yukawas (see below), so this is not a new"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 98,
+        "characters": 3520,
+        "sha256": "86d4a93f0909c3a0d210b78f12b766c9c07de8a814213bb1abbd6cdd4f404592",
+        "lead": [
+          "98    | Forty Points",
+          "exact symmetries of the partition function, 𝑆 and Γ0 (3) are broken, and the Fricke map is"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 99,
+        "characters": 3226,
+        "sha256": "13dc834a779426e31b17238d1b52f400439dcaf035ae147c7b1bce84f530c5b5",
+        "lead": [
+          "The Standard Model on forty points   |   99",
+          "In plain words"
+        ],
+        "topics": {
+          "qutrit": 3,
+          "Heisenberg": 1
+        }
+      },
+      {
+        "page": 100,
+        "characters": 3587,
+        "sha256": "2d074d6c876361880bdece9d59a6fc65648a026bc84cc7de2a61bc02c896799f",
+        "lead": [
+          "100 |   Forty Points",
+          "What it means physically: a finite CPT theorem"
+        ],
+        "topics": {
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 101,
+        "characters": 3376,
+        "sha256": "f056b225492cdf4f34d46512cfd20e5fb897570f97aecf3534334d6d10c1558f",
+        "lead": [
+          "The Standard Model on forty points   |   101",
+          "These last columns sit 2–3𝜎 from the fit. The symmetry hosts the classic flavour groups and"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 102,
+        "characters": 3249,
+        "sha256": "ea1a3c3e3375533464085f713c201aa3ad0490b592e95a2a78301299a1f3e08c",
+        "lead": [
+          "102 |   Forty Points",
+          "An area law. Perfect tensors are the building blocks of holographic codes, in which the"
+        ],
+        "topics": {
+          "qutrit": 6,
+          "open": 1
+        }
+      },
+      {
+        "page": 103,
+        "characters": 4148,
+        "sha256": "d555f36efae6938c4d70dc6c5164cc1ffa0bcf3edcfcd4a20edbb518b475f8b2",
+        "lead": [
+          "The Standard Model on forty points   |   103",
+          "generalised CP of the modulus. Three consequences are exact."
+        ],
+        "topics": {
+          "qutrit": 4,
+          "Heisenberg": 1
+        }
+      },
+      {
+        "page": 104,
+        "characters": 4340,
+        "sha256": "2a241ef51b468e34c4b730cd341e0838e7fe2d8ec5081092c2d75364feaaaba8",
+        "lead": [
+          "104 |   Forty Points",
+          "low spectral moments are even more rigid than the original loop argument needed. On the"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 105,
+        "characters": 4518,
+        "sha256": "fc0c430c61aa671f8757d6f774bb74cf0c6905abbaac42a3e739057a3d9b8728",
+        "lead": [
+          "The Standard Model on forty points   |   105",
+          "ries colour sextets and octets and no lepton doublet: the right gauge group with the wrong"
+        ],
+        "topics": {
+          "qutrit": 6,
+          "Heisenberg": 1
+        }
+      },
+      {
+        "page": 106,
+        "characters": 4352,
+        "sha256": "cc5729bf7aa7d8d06270e1ab4b7b59a0026dc6dbc3154058edb878f2bed6a122",
+        "lead": [
+          "106 |   Forty Points",
+          "this means the following. When left- and right-handed families share a Wilson-line class,"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 107,
+        "characters": 3781,
+        "sha256": "97f9cf6083b42ff6e52d14f1ca7144b880235d197348d3f89d94284352a2c423",
+        "lead": [
+          "The Standard Model on forty points   |   107",
+          "Pass 11899 and the magnetized Wilson-line zeros. The hierarchy comes instead from the"
+        ],
+        "topics": {
+          "Heisenberg": 1
+        }
+      },
+      {
+        "page": 108,
+        "characters": 3974,
+        "sha256": "e39609f45514a93f24f73b1778555d69021745f3d3175acf869b425ed8e0c211",
+        "lead": [
+          "108 |   Forty Points",
+          "through a Kähler modulus at tree level. The shifts and Wilson lines of all 600 are now frozen"
+        ],
+        "topics": {
+          "qutrit": 3,
+          "falsif": 1
+        }
+      },
+      {
+        "page": 109,
+        "characters": 4025,
+        "sha256": "804574529243650fc00fb6c6ccf41b6eee7afb337935e2af478f1407079a0ad9",
+        "lead": [
+          "The Standard Model on forty points   |   109",
+          "tively."
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 110,
+        "characters": 4024,
+        "sha256": "f1e730df82853f0f1dcac3ecd8570699408577b904a74e2c4ea30956791049a0",
+        "lead": [
+          "110 |   Forty Points",
+          "whose generic member is simple. The Galois involution of ℤ[𝑁1 ], realised by the lattice"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 12
+        }
+      },
+      {
+        "page": 111,
+        "characters": 4248,
+        "sha256": "9bfb831147d87f6e3cfad6d2c898690761e2d7fee4fe0eb1cd89a081be36156b",
+        "lead": [
+          "The Standard Model on forty points   |   111",
+          "The heterotic charm–up lock of the local-10 census is the same theorem. There the family"
+        ],
+        "topics": {
+          "W(3,3)": 2,
+          "qutrit": 11
+        }
+      },
+      {
+        "page": 112,
+        "characters": 4049,
+        "sha256": "71bf786cf027410accbb2705e22dfe762a4ab19d9f91412779680c1643b3ce77",
+        "lead": [
+          "112 |   Forty Points",
+          "on the sphere in bidegrees (1, 1) and (2, 2) and first become anisotropic at (3, 3) (one in-"
+        ],
+        "topics": {
+          "W(3,3)": 3,
+          "qutrit": 5,
+          "open": 1
+        }
+      },
+      {
+        "page": 113,
+        "characters": 4140,
+        "sha256": "8ad98506b5afdceab3a2cd3b92914757673ce0016a2c016c75064b3a16d426ab",
+        "lead": [
+          "The Standard Model on forty points   |   113",
+          "The degenerate charge-0 pair can be separated by a second symmetry: 𝜌 is unipotent on the"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 2,
+          "falsif": 1
+        }
+      },
+      {
+        "page": 114,
+        "characters": 4280,
+        "sha256": "2c2fe09bdcb0a235231aa42124bca04701ba84086525bd989b6233ed9bd7f088",
+        "lead": [
+          "114 |   Forty Points",
+          "direction. The essential scaling 𝑡 ∝ 𝑒−𝜅/32𝑟 is therefore the top/charm hierarchy param-"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 115,
+        "characters": 4448,
+        "sha256": "215d35c43e3cb40bf938d781018d8b9216a005bbeb65a15d34390f61fc5acd82",
+        "lead": [
+          "The Standard Model on forty points    |   115",
+          "leptons follow. Put a hypercharge Wilson line on the 5̄ factor only. By charge conserva-"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 116,
+        "characters": 3085,
+        "sha256": "8a2a486336ed4e0388e4a96a8eb48744fcd5dbd1e5c26106ccb437f5b58f8a10",
+        "lead": [
+          "116 |   Forty Points",
+          "flavon). Its decay constant and quality remain open. w33_pass11947_entangling_phase_"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "open": 2
+        }
+      },
+      {
+        "page": 117,
+        "characters": 3650,
+        "sha256": "9863e8c0bd1e3ed9b5c7149bf0d0da94653be4316356d9164589bad515e6d7cb",
+        "lead": [
+          "The machine: a computer read off the geometry                    |   117",
+          "The same forty points that carry 𝐸8 and a light cone also describe, with no design choices,"
+        ],
+        "topics": {
+          "qutrit": 6,
+          "Steinberg": 2
+        }
+      },
+      {
+        "page": 118,
+        "characters": 2640,
+        "sha256": "c261b99520c053e17ab55596e5b09d3099f0e1adead231ec109883cfdb96945b",
+        "lead": [
+          "118 |   Forty Points",
+          "10.2 The instruction set"
+        ],
+        "topics": {
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 119,
+        "characters": 3280,
+        "sha256": "9e19a5140ad20665fc9c90fd6a780c5211517c7be5355540fbd64b2271322f5e",
+        "lead": [
+          "The machine: a computer read off the geometry                      |   119",
+          "Theorem 10.2 (magic is everything except one line)                                                   COMPUTATION"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "CSS": 1,
+          "Steinberg": 3
+        }
+      },
+      {
+        "page": 120,
+        "characters": 2983,
+        "sha256": "febc9ee32b463cb1953af469af5074840fc7cab998fc998d34c55f9c485977b5",
+        "lead": [
+          "120 |   Forty Points",
+          "𝑊(3, 3)"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Steinberg": 1,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 121,
+        "characters": 3643,
+        "sha256": "9e68ca3126f650fc8fdf7797862bd642414321637cabe3f4461783c90df53e8a",
+        "lead": [
+          "Epilogue: what a theory of everything still needs      |   121",
+          "On top of that chain a heterotic string construction produces three-family Standard Models,"
+        ],
+        "topics": {
+          "qutrit": 3,
+          "proton": 1,
+          "open": 2
+        }
+      },
+      {
+        "page": 122,
+        "characters": 3801,
+        "sha256": "242a3f765a2bbca42af8097a1acde68234006baffb2bec95e7b02d77a30d9634",
+        "lead": [
+          "122 |    Forty Points",
+          "but carry six massless charge- 31 states; its 54 parity vacua with the hidden 𝑆𝑈(4) con-"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Lorentz": 1,
+          "proton": 1
+        }
+      },
+      {
+        "page": 123,
+        "characters": 3311,
+        "sha256": "2ad03b8890eee51624a4f07d308de13c81119d50c44117e2b2b919d6685c9644",
+        "lead": [
+          "Epilogue: what a theory of everything still needs   |   123",
+          "circuit whose finite evolution realises one of these transported weighted factors, with an"
+        ],
+        "topics": {
+          "qutrit": 4,
+          "open": 1
+        }
+      },
+      {
+        "page": 124,
+        "characters": 2712,
+        "sha256": "873ae765e4e59054d16c4398d09870865ff2e201aa097d06729bd4ad841cbd02",
+        "lead": [
+          "124 |   Forty Points",
+          "The forty points do not yet give a theory of everything. They give something rarer:"
+        ],
+        "topics": {
+          "qutrit": 3,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 125,
+        "characters": 3265,
+        "sha256": "408e4fe99601cad451f060f9c6c52985971fc0fe473740cfd8338c86bec0b85c",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   125",
+          "Claim                                      Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 3
+        }
+      },
+      {
+        "page": 126,
+        "characters": 3030,
+        "sha256": "4e6c6e9b12a2a52f6e000e34017bc453da8202bee05d6a28b8465ca5def0ca1b",
+        "lead": [
+          "126 |    Forty Points",
+          "Claim                                          Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 10,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 127,
+        "characters": 3251,
+        "sha256": "dde704e07569f3838a3551bb0140539bd0f4ba76a9544a6a9bf58c4bee69d295",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   127",
+          "Claim                                        Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 11
+        }
+      },
+      {
+        "page": 128,
+        "characters": 2573,
+        "sha256": "af1d9c7b024a1f33fe5f357d0626f96b59c882ff21fcadbaa2663eeb504c154a",
+        "lead": [
+          "128 |    Forty Points",
+          "Claim                                       Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 5
+        }
+      },
+      {
+        "page": 129,
+        "characters": 3036,
+        "sha256": "4917ef9e7254062471832bb4f76f9a967af4f6cd97c415348f8dc177a7fd4b4d",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   129",
+          "Claim                                       Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 1,
+          "Steinberg": 1
+        }
+      },
+      {
+        "page": 130,
+        "characters": 2902,
+        "sha256": "b74bd3c5047f5d79312a9bcfa2399cbec86d22d79c6f4a82e29d545d96602f4a",
+        "lead": [
+          "130 |   Forty Points",
+          "Claim                                       Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 8
+        }
+      },
+      {
+        "page": 131,
+        "characters": 2972,
+        "sha256": "65a18adc462bb91354e0e5fbb557dbee01e538e027805d2b07e01115c340684c",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   131",
+          "Claim                                       Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 132,
+        "characters": 2636,
+        "sha256": "8b8b1994f4539ea5c43ad02bd7426afc7f94a82661027a6c7aeaee4b094ee97f",
+        "lead": [
+          "132 |   Forty Points",
+          "Claim                                      Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 5,
+          "open": 2
+        }
+      },
+      {
+        "page": 133,
+        "characters": 3080,
+        "sha256": "45fba4031a1a0d559e214d9325f7d82781c798e5a4226f60a137d698957b0ff9",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   133",
+          "Claim                                     Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 6
+        }
+      },
+      {
+        "page": 134,
+        "characters": 2817,
+        "sha256": "5e6a0356b1001f49b7de50565ded3a2d6a8ba21664e85d046eea26c7da847444",
+        "lead": [
+          "134 |    Forty Points",
+          "Claim                                           Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 7
+        }
+      },
+      {
+        "page": 135,
+        "characters": 3361,
+        "sha256": "829fe5894cf63c383d68c2808a5472c9bc572f8901d1f7276029dc3b1508caa8",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   135",
+          "Claim                                                Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 4
+        }
+      },
+      {
+        "page": 136,
+        "characters": 2703,
+        "sha256": "e5609fe9279e9418008a6048977c64408734f96f80f917ecfd7e4c27482625fb",
+        "lead": [
+          "136 |   Forty Points",
+          "Claim                                      Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 7,
+          "open": 2
+        }
+      },
+      {
+        "page": 137,
+        "characters": 3483,
+        "sha256": "c802dc97756e199d3f68fe6bdc448b22a036a6def2c84383cc206cbcf78beef4",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   137",
+          "Claim                                       Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 6
+        }
+      },
+      {
+        "page": 138,
+        "characters": 3216,
+        "sha256": "3408de7ed02d9c916aa313c3fa571b76d88c625aac1f733fbd09abf174690ef5",
+        "lead": [
+          "138 |    Forty Points",
+          "Claim                                          Badge                   Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 139,
+        "characters": 3576,
+        "sha256": "b127cd48fe0f783f6871feaf82eaaf9570d70c04e811eef5b0755de9e9839cf5",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   139",
+          "Claim                                          Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 7,
+          "Heisenberg": 1
+        }
+      },
+      {
+        "page": 140,
+        "characters": 2960,
+        "sha256": "acfd03ac9840b7fe2b260dd2a80b7664cbe4fba680a7954e60be33a5e17e9339",
+        "lead": [
+          "140 |   Forty Points",
+          "Claim                                     Badge                   Witness"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 141,
+        "characters": 2873,
+        "sha256": "416d589aa7b271227626c40315471d6ef055e0d0d28cfa6d8357de59a90ab101",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   141",
+          "Claim                                       Badge                          Witness"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 2,
+          "Lorentz": 2
+        }
+      },
+      {
+        "page": 142,
+        "characters": 3228,
+        "sha256": "ddf9650867abc7d0573c5010cb0d46c725496ae95c74305ff2746e4d43ce6548",
+        "lead": [
+          "142 |    Forty Points",
+          "Claim                                          Badge                   Witness"
+        ],
+        "topics": {
+          "Lorentz": 6
+        }
+      },
+      {
+        "page": 143,
+        "characters": 3161,
+        "sha256": "2a931abacbc3c853f28243088e68d1cf4dbbcd9a40a80dcf1fbb1b63d5e75ace",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   143",
+          "Claim                                      Badge                          Witness"
+        ],
+        "topics": {
+          "Lorentz": 6
+        }
+      },
+      {
+        "page": 144,
+        "characters": 2544,
+        "sha256": "3017be267024f55e8e82a209c4046402344ba4fd1a5f4dcaea63b13a999fe74a",
+        "lead": [
+          "144 |   Forty Points",
+          "Claim                                       Badge                   Witness"
+        ],
+        "topics": {
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 145,
+        "characters": 2762,
+        "sha256": "5c77eb529ac0ac623391036023ea1cb48b9d2be20f2e6beca07e7a935a84b2c9",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   145",
+          "Claim                                       Badge                          Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 146,
+        "characters": 2764,
+        "sha256": "1707c6c76f68b04328ff3817382572fb09d2345fb981d1c4ee1bc15b6ba942a0",
+        "lead": [
+          "146 |    Forty Points",
+          "Claim                                      Badge                   Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 147,
+        "characters": 4339,
+        "sha256": "019dc59e631033bcb64f709812fde5425602f9b8174d8a8b621db1926076823d",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   147",
+          "Claim                                     Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 148,
+        "characters": 2706,
+        "sha256": "6a8e9d770796523adf0b51be1eecbf44d589c060842738bd66d485c72534403d",
+        "lead": [
+          "148 |    Forty Points",
+          "Claim                                       Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 3
+        }
+      },
+      {
+        "page": 149,
+        "characters": 2946,
+        "sha256": "2764c28c63a19a35bc5f8c72e1b6e22dfbd0da7dc2807692fccafccc26c05e6d",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   149",
+          "Claim                                      Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "Heisenberg": 1,
+          "Lorentz": 1
+        }
+      },
+      {
+        "page": 150,
+        "characters": 3197,
+        "sha256": "af0dbf573b6cf8c4f59e5ba7f8e8c34d55fb70b01bcffb7672d724fa0ca717a3",
+        "lead": [
+          "150 |   Forty Points",
+          "Claim                                     Badge                   Witness"
+        ],
+        "topics": {
+          "qutrit": 2,
+          "Steinberg": 1,
+          "open": 1
+        }
+      },
+      {
+        "page": 151,
+        "characters": 2907,
+        "sha256": "d6fdf626a0ff946c8cf444f56b3520d2bd179cd51b3f6af2f9ad478bea89584d",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   151",
+          "Claim                                     Badge                          Witness"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 152,
+        "characters": 2210,
+        "sha256": "0945f8a3e8ad27de68e89d1d8faf2af9ac757bef66c71804f411b24a42bba0ac",
+        "lead": [
+          "152 |   Forty Points",
+          "Claim                                   Badge                   Witness"
+        ],
+        "topics": {
+          "W(3,3)": 1
+        }
+      },
+      {
+        "page": 153,
+        "characters": 2893,
+        "sha256": "e58d2f7f597f1f80c3e2186f0819f0834af67a2861d528fe91cfc62517dfbceb",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   153",
+          "Claim                                       Badge                          Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 154,
+        "characters": 2227,
+        "sha256": "4df27df33d91968f13d8181e5e096d8eb8fc197c3a37b19e56865154183ab77f",
+        "lead": [
+          "154 |   Forty Points",
+          "Claim                                       Badge         Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 155,
+        "characters": 2573,
+        "sha256": "9f1e8665d79ec355e36f92873ac742e1e6df5e4eed9b0c04257ab3c13c4a6d57",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   155",
+          "Claim                                         Badge                           Witness"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 156,
+        "characters": 1834,
+        "sha256": "3c39de46c7ffac46878457a84c57ddd6d2a12304aa4cedbf72fe2ecfe17ca59b",
+        "lead": [
+          "156 |   Forty Points",
+          "Claim                                     Badge         Witness"
+        ],
+        "topics": {
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 157,
+        "characters": 2377,
+        "sha256": "f9f9f058f406ee171a46343ea37e7e6372f2910cb3badc1a7c2c53e25591ef3c",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   157",
+          "Claim                                      Badge                           Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 158,
+        "characters": 3152,
+        "sha256": "9ae2f4130414bbaf59adabb21634dacccd3147b224f7eba31b9e60227ade9b6c",
+        "lead": [
+          "158 |     Forty Points",
+          "Claim                                               Badge         Witness"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 159,
+        "characters": 3272,
+        "sha256": "095e7054efa69778449fe7a7e413cf741551072ca7a58329b179ca9c4d8371bb",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   159",
+          "Claim                                      Badge                          Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 160,
+        "characters": 2351,
+        "sha256": "07d0bb5794ea86422b625800a6416c53d396165050b6c48da36802f8dc0e3674",
+        "lead": [
+          "160 |   Forty Points",
+          "Claim                                     Badge         Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 161,
+        "characters": 3114,
+        "sha256": "bab80b8a5efe4b7f3118146b147a81b2ce1c74f031a462cab778b31107f2f82a",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   161",
+          "Claim                                     Badge                          Witness"
+        ],
+        "topics": {
+          "open": 2
+        }
+      },
+      {
+        "page": 162,
+        "characters": 2969,
+        "sha256": "decdfb1ef80f25d76aacde3edcbb0a8f0c8a7bc7551a09583e6b123d062c06e7",
+        "lead": [
+          "162 |   Forty Points",
+          "Claim                                      Badge         Witness"
+        ],
+        "topics": {
+          "Lorentz": 1,
+          "open": 5
+        }
+      },
+      {
+        "page": 163,
+        "characters": 3933,
+        "sha256": "04cc170b9dab20a38faea22897045a746b819159c87ae6f30cd822e8b4d6dbf3",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   163",
+          "Claim                                     Badge                          Witness"
+        ],
+        "topics": {
+          "open": 7
+        }
+      },
+      {
+        "page": 164,
+        "characters": 3532,
+        "sha256": "1fd68dd98d96bb1a3953d1fb3a51b85fc89257a75c0a6f5b40a7a9bb5da79e26",
+        "lead": [
+          "164 |   Forty Points",
+          "Claim                                      Badge         Witness"
+        ],
+        "topics": {
+          "open": 2
+        }
+      },
+      {
+        "page": 165,
+        "characters": 4074,
+        "sha256": "e680aa9e836f1d43f94a7a3bb8508a08ddd76eae78624e16d3738aa721bd7584",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   165",
+          "Claim                                   Badge                          Witness"
+        ],
+        "topics": {
+          "Steinberg": 2
+        }
+      },
+      {
+        "page": 166,
+        "characters": 3424,
+        "sha256": "ce3e0b8621cf3a0c05c78fe12b4da6be4b440cde9671153dec7762f5d24994e8",
+        "lead": [
+          "166 |   Forty Points",
+          "Claim                                     Badge         Witness"
+        ],
+        "topics": {
+          "qutrit": 5
+        }
+      },
+      {
+        "page": 167,
+        "characters": 3580,
+        "sha256": "062c2f8ce1e6f9712bbe27e635df75d2d7ec3d5a7fd8a241cbcb2ccefcdd65ec",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   167",
+          "Claim                                     Badge                          Witness"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 168,
+        "characters": 2676,
+        "sha256": "dd704da3a35ef938bc413af1245e34e0d60b61ed572b937e171226a8d05a35af",
+        "lead": [
+          "168 |    Forty Points",
+          "Claim                                       Badge         Witness"
+        ],
+        "topics": {
+          "qutrit": 4
+        }
+      },
+      {
+        "page": 169,
+        "characters": 2909,
+        "sha256": "801d9f4f303695c18b17a644d00577a4fecf65d12f91ce5d78f45e9b5f5034df",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   169",
+          "Claim                                          Badge                          Witness"
+        ],
+        "topics": {
+          "Heisenberg": 1,
+          "falsif": 1
+        }
+      },
+      {
+        "page": 170,
+        "characters": 2367,
+        "sha256": "663039b190dc1d35e52ca9bb10e1938365095996b8203188ae282a079b865f96",
+        "lead": [
+          "170 |   Forty Points",
+          "Claim                                        Badge         Witness"
+        ],
+        "topics": {
+          "qutrit": 1
+        }
+      },
+      {
+        "page": 171,
+        "characters": 2599,
+        "sha256": "43a2dd1293e20a29fc4f136df0b85fe851341e11b745c697d870875c805c3b57",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   171",
+          "Claim                                      Badge                           Witness"
+        ],
+        "topics": {
+          "qutrit": 6
+        }
+      },
+      {
+        "page": 172,
+        "characters": 2255,
+        "sha256": "a6d1f1abc0b8b60c267fa7287d5825d0c68330d90be6f4ab64d8147e3a99e113",
+        "lead": [
+          "172 |   Forty Points",
+          "Claim                                       Badge                  Witness"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 3
+        }
+      },
+      {
+        "page": 173,
+        "characters": 2645,
+        "sha256": "9fb4efc3a7fb6b14ba3837d330430d4ef853f2cd75c404a752de45dfc81ae774",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   173",
+          "Claim                                        Badge                           Witness"
+        ],
+        "topics": {
+          "W(3,3)": 1,
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 174,
+        "characters": 2581,
+        "sha256": "6d6d56abeded3132ff696a9b4b313d820c871636b3169e643019966dee193c0a",
+        "lead": [
+          "174 |   Forty Points",
+          "Claim                                       Badge         Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 175,
+        "characters": 2507,
+        "sha256": "9009025a56567bd5a73f38662d29e9373efd3e0a3510e49ea1f48b242a39e9f8",
+        "lead": [
+          "The ledger: every claim, its status, its witness   |   175",
+          "Claim                                           Badge                           Witness"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 176,
+        "characters": 2228,
+        "sha256": "bf66222e6393c4609f38ba455eb278d70c412d1e9fb722112ea4f48dedc752f8",
+        "lead": [
+          "176 |   Forty Points",
+          "Claim                                       Badge            Witness"
+        ],
+        "topics": {
+          "open": 1
+        }
+      },
+      {
+        "page": 177,
+        "characters": 2753,
+        "sha256": "192804fcb6770f74a9bfbf7e1d997d76f272a6821ed3472b1d9854a96b5c25a8",
+        "lead": [
+          "Glossary   |   177",
+          "Bridge A true mathematical statement together with a proposed physical reading."
+        ],
+        "topics": {
+          "qutrit": 4,
+          "Heisenberg": 1,
+          "CSS": 1,
+          "proton": 1
+        }
+      },
+      {
+        "page": 178,
+        "characters": 2480,
+        "sha256": "e4f45331ba08e118a86e3e21208a49ec116dce94e8ca1b8a816c1ba07e514d3c",
+        "lead": [
+          "178 |   Forty Points",
+          "Root An eigen-direction of the maximal commuting part of a Lie algebra."
+        ],
+        "topics": {
+          "Steinberg": 1
+        }
+      },
+      {
+        "page": 179,
+        "characters": 3049,
+        "sha256": "1199d7360ecdef1322cd48a83e1befbf55cba5d9084b5f7dbe208e2def55595c",
+        "lead": [
+          "References   |   179",
+          "[11] M. J. Duff and S. Ferrara, 𝐸7 and the tripartite entanglement of seven qubits, Phys. Rev. D 76"
+        ],
+        "topics": {
+          "Steinberg": 1
+        }
+      },
+      {
+        "page": 180,
+        "characters": 2981,
+        "sha256": "98ef0403f2f554e268ef760e5de11a3986dc43ecb7963e35f023ace8d66e83c8",
+        "lead": [
+          "180 |   Forty Points",
+          "[31] J. Lauer, J. Mas and H. P. Nilles, Twisted sector representations of discrete background sym-"
+        ],
+        "topics": {}
+      },
+      {
+        "page": 181,
+        "characters": 2958,
+        "sha256": "99752e7a4f9cc6c200f3cf05481f5e40723286459c5e974da2efdbff4452f117",
+        "lead": [
+          "References    |   181",
+          "[50] D. Gross, Hudson’s theorem for finite-dimensional quantum systems, J. Math. Phys. 47 (2006)"
+        ],
+        "topics": {
+          "qutrit": 2
+        }
+      },
+      {
+        "page": 182,
+        "characters": 610,
+        "sha256": "e8e01a3fe255500e2028d9834e019d97f81e6c75870592b7d8c333f33e2021f6",
+        "lead": [
+          "182 |   Forty Points",
+          "[70] G. E. Wall, On the conjugacy classes in the unitary, symplectic and orthogonal groups, J. Austral."
+        ],
+        "topics": {}
+      }
+    ],
+    "characters": 592688,
+    "sha256": "9e7297ee0b08aaf4b66da28fde557493297b70f67d203fbbb5262dc4a85a623e",
+    "all_pages_nonempty": true,
+    "topic_page_counts": {
+      "W(3,3)": 15,
+      "qutrit": 113,
+      "self-entanglement": 3,
+      "Heisenberg": 19,
+      "CSS": 2,
+      "Steinberg": 11,
+      "E_8": 0,
+      "E_6": 0,
+      "Lorentz": 32,
+      "falsif": 3,
+      "proton": 15,
+      "open": 45
+    }
+  },
+  "git": {
+    "since": "2026-10-08 00:00:00",
+    "commits": 637,
+    "by_day": {
+      "2026-10-08": 89,
+      "2026-10-09": 131,
+      "2026-10-10": 129,
+      "2026-10-11": 76,
+      "2026-10-12": 54,
+      "2026-10-13": 75,
+      "2026-10-14": 72,
+      "2026-10-15": 11
+    },
+    "changed_file_occurrences": 2463,
+    "changed_extension_counts": {
+      ".py": 940,
+      ".json": 858,
+      ".md": 303,
+      ".tex": 149,
+      ".pdf": 70,
+      ".yml": 51,
+      ".log": 33,
+      ".html": 20,
+      ".lean": 16,
+      ".txt": 15,
+      ".gz": 4,
+      ".cpp": 3,
+      ".g": 1
+    },
+    "risk_subjects": [
+      {
+        "sha": "dabc3b47f89f",
+        "subject": "TOE77: W33 Ramanujan incidence nuclear norm, phase-rank no-go, and exterior-driven 120-to-pi flux crossover"
+      },
+      {
+        "sha": "f45f55397ba0",
+        "subject": "TOE74: publish verified theta symmetry correction, friendship-group quantum matching theorem, and 6-test ledger"
+      },
+      {
+        "sha": "b53819c4dcca",
+        "subject": "TOE72: exact native seven cover orbits, stronger two-loop gauge bounds, full Hessian directions, W33 squared chirality no-go, ED vs HF"
+      },
+      {
+        "sha": "ec8ba22dd00d",
+        "subject": "TOE70: five fronts—exact 17-bit disorder, 51840 cover orbit, L3 gauge covariance, holonomy topology no-go, restricted CDW mass"
+      },
+      {
+        "sha": "3d0d84491e29",
+        "subject": "TOE67: prove all-beta continuous W33 flux theorem; symplectic ribbon no-go and flatband degeneracy"
+      },
+      {
+        "sha": "d183f38e20a8",
+        "subject": "TOE65: five physics tests, exact edge disorder falsifier, and genus retraction"
+      },
+      {
+        "sha": "0b5a634f7704",
+        "subject": "TOE61: all-temperature W33 flux theorem, 3-cell no-go, native Gauss audit"
+      },
+      {
+        "sha": "d081ec7b0830",
+        "subject": "TOE57: two-plaquette quantum gauge, fermion holonomy flux and gravity no-go"
+      },
+      {
+        "sha": "23058890fa2d",
+        "subject": "TOE56: compact W33 gauge completion, chiral and gravity gates, holonomy vacuum no-go"
+      },
+      {
+        "sha": "2eabdc92fdcd",
+        "subject": "Retract 'hypervisor suspension is rung 9': the 36-spread base is not a 36-point region (36 != 40 line complements; stabilisers 720 != 648)"
+      },
+      {
+        "sha": "ba9dc783a7c3",
+        "subject": "Pass 11949: the axiflavon fails the quality test -- correction to 11947/11948. The even theta vectors f_0, f_2 are not orthogonal, so the holomorphic eps^2 term breaks the Froggatt-Nielsen U(1) explicitly: over a turn of arg Omega12 the top Yukawa is modulated as a pure cos 2phi with relative amplitude 5.2e-6 (fit A) / 2.0e-6 (fit B). Through the top Coleman-Weinberg term this gives ~1e2 GeV^4 (~1 GeV^4 with TeV SUSY) against a quality bound ~3e-15 GeV^4 -- too large by 1e16-1e17 -- and the top-loop extrema sit at theta-bar = O(1) (A: -3.11, 0.04; B: -1.80, 1.34 at the m_t minima). arg Omega12 is not the QCD axion: the 11947 strong-CP reading and the 11948 f_a/m_a prediction are withdrawn as a solution (rephasing structure and f_a formula stand as statements about the modulus); strong CP is open again. Observation: arg det Y_u = +-pi/4, +-3pi/4 (1%) at every m_t extremum. Correction banners on 11947/11948, Forty Points sentence and ledger row (Claude track)"
+      },
+      {
+        "sha": "ba0ad28649b9",
+        "subject": "Pass 11949 reserved: the axiflavon fails the quality test -- the theta Yukawa breaks the Froggatt-Nielsen U(1) explicitly at second harmonic, and the top loop fixes arg Omega12 at theta-bar = O(1); correction to 11947/11948 (Claude track)"
+      },
+      {
+        "sha": "aadf6957a279",
+        "subject": "Pass 11943: the minimal theta-null SU(5) picture gets the PMNS matrix wrong, and a correction to 11942. With L on the 5bar factor, Y_e = Y_d^T (z_e = 6 z_d) and the Dirac coupling Wilson-free (charge rule: -Y_N a = 0), the near-product seesaw neutrino basis is the parity-clean Gram-Schmidt basis at tau_d -- the tri-bimaximal vectors (2e-4 at fit B) -- but the theta parity puts the mu-tau-odd vector at the MIDDLE mass, and the hypercharge-Wilson charged-lepton basis is nearly democratic. PMNS = (45,83,1) or (88,4,45) deg at the best fits and across the quark posterior, against (33,49,9); no neutrino Wilson rule in {1,2,3,-3/2,-3,6} rescues it. The doublet bases must sit at different level-3 points (residual-symmetry misalignment, cf. 11225/11243). Correction: a fifth chain (B, seed 7) excludes the lepton data, so 11942's 'centre of every band' is withdrawn; over the quark-acceptable region the lepton ratios span 0.029-0.081 and 0.002-0.017 (contains the data, excludes minimal SU(5)) -- a band, not a sharp prediction. Forty Points paragraph corrected and extended, ledger row (Claude track)"
+      },
+      {
+        "sha": "a8c55b32bbfa",
+        "subject": "Pass 11942: a hypercharge Wilson line on the 5bar factor fixes the charged-lepton ratios from the quark fit. With the Wilson line only on the 5bar factor (none on the 10 curve), hypercharge conservation makes the Wilson argument of a coupling minus the hypercharge of its 10 field: z_d = -Y_Q a, z_e = -Y_ec a, so z_e = 6 z_d; the up coupling has no 5bar factor and stays parity-clean (Weber law and neutrinos intact). The quark fit (10 parameters, all 8 observables within 0.4%) then predicts, with no lepton parameter, m_mu/m_tau = 0.053 and m_e/m_mu = 0.0052 at the best fit (data 0.059, 0.0047), and over a quark-data MCMC posterior (4 chains) bands 0.036-0.081 and 0.002-0.012 containing both; minimal SU(5) (Y_e = Y_d^T) misses by 3 and 10, the other charge rules (0, -3/2) fail. Georgi-Jarlskog quality without a 45-Higgs; y_b/y_tau ~ 1.2. Scope: 3 rules tried, local posterior, M_Z-scale ratios; hypercharge-flux lepton/down splitting known qualitatively in F-theory (cited). Forty Points sentence and ledger row (Claude track)"
+      },
+      {
+        "sha": "f9847c9bfd2b",
+        "subject": "Pass 11940: the Weber invariant is seesaw-invariant. Correction to 11939: a shared Omega would make Y_nu proportional to Y_u (m2/m3 = m_c/m_t, off by 48), so the relation needs a shared tau with channel-specific Omega12. The type-I seesaw m_nu = Y_D M^-1 Y_D with Dirac and Majorana theta nulls at the same tau composes the heat-equation coefficients: R_nu = R(tau) to O(eps_M) (<= 2.6e-4 for eps_M <= 1e-2) and eps_nu = eps_D^2/eps_M (1e-4). With Y_D = Y_u the right-handed masses are (1.9e6, 4.4e10, 5.7e14) GeV and obey the same invariant; this is the SO(10)-inspired pattern, and m1 = 0.80 meV lies just below its N2-leptogenesis window (1-5 meV, arXiv:1012.2343) -- recorded as a tension. Forty Points sentence and ledger row (Claude track)"
+      },
+      {
+        "sha": "ac431b614a45",
+        "subject": "Pass 11934: the radiative + residual-Z3 principle, applied uniformly, fails in the charged sectors. At the Eisenstein point: up (H_u 2A2) top space 3-dim, symmetric directions give (1,1,0) = top = charm; down/charged lepton (H_d 4.1) top space 1-dim, charge 2, (1,1,0) at w and (1, 1 - O(eps^2), 0) nearby = m_b = m_s, m_tau = m_mu; Weinberg (1,1,0) = inverted ordering. Three charged sectors contradict the data, so the 11933 inverted-ordering reading is sector-specific, not a universal rule; caveat added to the 11933 note. Forty Points sentence and ledger row (Claude track)"
+      },
+      {
+        "sha": "ede836def408",
+        "subject": "Pass 11928: the Eisenstein point of the flavour torus -- residual Z3 generation charges, a W(3,3) line of fixed points, and polynomial (non-Gaussian) hierarchies. At Omega = w.1 the rotation z -> w z is a lattice automorphism, every symmetric flux is invariant, and it acts unitarily (1e-15) on all zero modes: the 10 and 5bar generations carry charges (0,0,2) (the charge-2 one an unbiased, stabiliser-type vector), H_u 3/5/4 and H_d 5/5/6. The 9 orbifold fixed points form A[1-w] = {(x,-x)}, a totally isotropic plane = a LINE of W(3,3), split 3+3 across the flux factorisation K10 + K5; charges localise there (value vectors are R^T-eigenvectors to 2e-15: 3 points of charge 0, 6 of charge 2), so blow-up Kahler corrections commute with the residual Z3 (2e-15) and act inside the degenerate charge-0 block (traceless rank 3); only K10 / K5 among all 130 planes give scalar point sums. Near the point (Omega = w + eps(a + bJ)) the up spectrum scales polynomially: Higgs charge 0 -> m_u/m_c ~ eps^2 (slope 1.99), charge 1 -> m_c/m_t ~ eps (1.00), charge 2 -> m_u/m_c ~ eps^2 (2.01): one hierarchical ratio per Higgs charge, because the two charge-0 generations are degenerate under the residual Z3. A draft reading of a 'vanishing' charge-2 mode was withdrawn (fixed-point value matrix has full rank). Forty Points paragraph and ledger row (Claude track)"
+      },
+      {
+        "sha": "053fd1e0482c",
+        "subject": "Pass 11923: the heterotic local-10 charm-up lock (11903/11908) and the magnetized up lemma (11918) are one theorem, and it survives every Delta(54)-symmetric Higgs vacuum. In both realisations the family index of Q and u^c is a qutrit (fixed points of the Wilson-line-free torus / the 10's magnetic-translation qutrit), the Z3 rule allows Q_a u_b H_k iff a+b = k, and theta evenness equates the off-diagonal values, so Y_u(h)_ab = h_{a+b} g_{a-b} with g+ = g- for a Higgs qutrit state h; 11903's lock is h = Z-eigenstate. (1) All 12 qutrit stabiliser states lock a degenerate pair (1.4e-15 over 200 random even g); the converse fails (54/60 degenerate solutions non-stabiliser, Pauli expectation down to 0.51); Haar h unlocks. (2) Over 300 random couplings the global minimum of the general degree-(2,2) Delta(27)/Delta(54) potential of the Higgs triplet is always a stabiliser state (infidelity <= 6e-11; snapped: same V, gap 2e-16; the classical 3HDM result of Ivanov-Nishi), so the lock survives the full Higgs triplet: unlocking needs a Delta(54)-breaking Higgs potential. (3) Near a stabiliser state the splitting grows like sqrt of the Higgs's stabiliser Renyi magic (log-slope 0.517): a split charm and up need a magic Higgs. Forty Points paragraph and ledger row (Claude track)"
+      },
+      {
+        "sha": "58b1fbd1036e",
+        "subject": "Prove G32-invariant Witting displacement firewall"
+      },
+      {
+        "sha": "4d02ff62c1e5",
+        "subject": "Pass 11921: the flux factorises W(3,3) into two flavour qutrits, and the radiatively preferred up Higgs is a flavour qutrit -- but it does not rescue quark flavour. (1) For every det-3 dual pair, K(L10) = l5 x l5 and K(L5) = l10 x l10 are orthogonal nondegenerate hyperbolic planes spanning A[3] = F3^4 (the W(3,3) space): a two-qutrit tensor factorisation chosen by the flux; 10 = qutrit 1, 5bar = qutrit 2, H_u carries exactly qutrit 1, H_d neutral (gcd(m,3) = 1). (2) The qutrit-1 translations permute the three Z3 classes of up Higgs modes, so the top-Yukawa Gram space is exactly 3-dim (4e-15) for every modulus and Wilson line, and there Y_u(h)_ab = h_{a+b} g_{a-b} (1e-13); the down radiative Higgs is unique. (3) Correction to 11918: its 'V_cb = 0 exactly' was a 1e-5 threshold over-read; the small values are Gaussian suppression (4550 below the 1e-12 floor, 6483 in 1e-12..1e-5, 1679 above; a re-run sample gives 6.1e-6 at theta truncation 4 and 7); aligned V_cb scales like m_s/m_b with prefactor ~4e-7 (data ~2). (4) Frozen scans: Haar h (237 moduli, 50244 rows) never gives realistic up masses; fitting h per modulus to m_u/m_c, m_c/m_t, V_us, V_cb, V_ub (87 moduli) gives best log-rms 1.54 / 1.45 -- the charm mass is floored by |g+-/g0| (corr 0.87, 0.97) and a small |g+-/g0| kills the mixing. Forty Points paragraph and ledger row (Claude track)"
+      },
+      {
+        "sha": "7b210237ef89",
+        "subject": "Pass 11921 reserved: the flux factorises W(3,3) = A[3] into two flavour qutrits (K(L10) + K(L5), H_u carries qutrit 1, H_d neutral); the radiatively preferred up Higgs is a flavour qutrit (top-Yukawa space exactly 3-dim, Y_ab = h_{a+b} g_{a-b}); correction to 11918 (V_cb 'zeros' are Gaussian suppression, aligned mixing ~ 4e-7 m_s/m_b) (Claude track)"
+      },
+      {
+        "sha": "238185601918",
+        "subject": "Pass 11917: proof of the dual-pair singularity -- the down Yukawa is a level-3 theta two-qutrit state in a tensor frame fixed by the flux mod 3. (1) Exact formula: since N1 m^-1 N2 = (3/m) 1, Y^c_ab = sum_{N2 k = a+b-c mod m} exp(i pi (3/m) u Omega u), u = k + (N2 a - N1 b)/3; matches the 4D overlaps to 1e-9. (2) gcd(m,3) = 1 for every det-3 form, so a,b enter only via N2 a - N1 b mod 3; the dual fluxes are rank one mod 3 with orthogonal images, and x^2+y^2 is anisotropic over F3, so the frame is the axes or the diagonals. (3) Theorem: on a frame-factorised torus rank Y <= 1 (axes) or <= 2 (diagonals, the 2-isogeny E+ x E- adds one Schmidt rank), every Higgs mode and Wilson line -- Pass 11872's product criterion with a flux-chosen frame. (4) The zero is forced for all compatible moduli exactly for A2 and x^2+3y^2 (eigenframe = mod-3 frame); the four irrational-eigenframe pairs lift at tree level, linearly in the misalignment (log-slope 0.975). Correction to 11916: the three axis pairs have rank 1, not 2. Forty Points paragraph and ledger row (Claude track)"
+      },
+      {
+        "sha": "e2b67c370fe1",
+        "subject": "Passes 11913-11914: flux vacua near the hierarchy point, and the Higgs as the flavour lever. 11913: exact exterior algebra over the 20 integral 3-forms of T4 x T2 (calibrated: primitive (2,1) gives N = +4, W = 0); at rational points near the hierarchy point primitive ISD fluxes (W = dW = d_phi W = 0, J^F = J^H = 0 with h = (Im T)^-1) exist with tadpoles N = 8 / 16 / 48 / 68, but these leave the Siegel block (Omega, tau3, phi) flat (block mass-matrix rank 0); fixing all ten moduli needs N ~ 600 (4,1,4) to 5e5 near the point (search upper bounds) -- not stabilisable within the T6/Z2 budget; a draft without primitivity (N = 2-12) was not ISD and discarded. 11914: (1) with Q's families a Pauli eigenspace, the Gaussian invariant is universal over all 2214 full-rank right-handed W(3,3)-eigenspace x Higgs-class configurations (10^-7.6555): a shared Q cannot give the observed up/down ratio with localised Higgs; (2) TOE48's spread Higgs phase gives near-degenerate down quarks and anarchic mixing (mass-ordered |V| medians 0.58 ~ 1/sqrt3); (3) the exact magnetic-translation Z3 forbids radiative cross-class Higgs admixture (Tr Y_k Y_k'^dag = 1e-15 across classes): realistic quark mixing needs weak explicit breaking. Corrections from the parallel TOE49 acknowledged: Pass 11910's Cabibbo statistic was not the mass-ordered V_us and used two taus; Pass 11909's Q-band is scheme-dependent. Forty Points paragraphs and ledger rows (Claude track)"
+      },
+      {
+        "sha": "cc1dd1c1e406",
+        "subject": "Pass 11908: the split-10 scan beyond A8 -- the local-10 lock holds in every Z3 shift class (0/600). Three further Z3 shift classes of the SO(16)xSO(16) string (E6xSU3 x E8 standard embedding, E6xSU3 x E6xSU3, E7xU1 x SO14xU1): admissible Witten shifts enumerated (894240 / 804006 / 1020852), one per 4D gauge group (9 bases, 3 do not load), 20000 random Wilson-line draws each -> 109 inequivalent SM-like tachyon-free models, dumped with the byte-verified pipeline of Pass 11903. All 73 twisted-family models carry a complete local 10; all 36 untwisted-family models have the antisymmetric E8 cubic (top = charm); up escape 0/109 (down 9/109). Combined with Pass 11903: 0/600 models in four shift classes can split charm from up through any Kahler modulus at tree level. Provenance (answers TOE48's input-availability no-go): shifts and Wilson lines of all 600 models frozen in data/w33_pass11908_model_definitions.json with source SHA-256. Forty Points paragraph and ledger row (Claude track)"
+      },
+      {
+        "sha": "3ecbe772c940",
+        "subject": "Pass 11906: magnetized normalisation audit by direct overlap integrals -- the level-3 texture of Passes 11904-11905 is exact. Normalised flux-(3,3,6) zero modes on T2 with Wilson lines, Yukawas as grid overlap integrals (no theta-product formula assumed): TOE46's equal-background lowest overlap 0.0031126747 reproduced, selection k = i + j mod 3; for a localised Higgs the normalised masses equal |theta[c/3,0](3 zeta, 6 tau)| up to permutation (random tau, zeta; 6e-16) with zeta the relative Wilson line -- the dictionary z = 3 zeta, Omega = 6 tau. Hence in true normalisation: the theta-zero law (Re zeta = 1/6: one mass 0, other two equal), the symmetric-point degeneracy (Im zeta/Im tau = 0, 1/3, 2/3; none at 1/6, 1/2, 5/6), the Gaussian invariant m1 m2/m0^2 = e^{-(4 pi/3) Im tau} (0.3%), and the observed-order up ratios at Im tau = 4.209, nu = 0.1206 = exactly the Pass 11904 point found independently. Drafting note: an intermediate claim (Re zeta only a phase; masses never vanish) came from scanning only Re zeta = 0, nu in [0,1) and was refuted by the direct test before commit. Forty Points paragraph and ledger row (Claude track)"
+      },
+      {
+        "sha": "ef2a67273364",
+        "subject": "TOE48: Naimark44, robust SPAM no-go, flux Higgs and rational cusp bridge"
+      },
+      {
+        "sha": "0e60c4f46401",
+        "subject": "Passes 11887-11889: the one-loop vacuum is a W(3,3) point -- E6 x SU(3)_family with the Higgs in the family Cartan. Inside e8 = sl9 + L3 + L6 the Witting-ray vev has centraliser of dimension 80, grades (24, 28, 28): derived algebra 78-dim acting irreducibly on a 27 (e6), centre 2 -- z = e6 + u(1)^2, grade-0 part SU(3)^3 (generic Cartan vev: an 8-dim Cartan subalgebra, grades (0,4,4)). 248 = 80 + six 27 weight spaces + six singlets; three 27 weights sum to zero (a family 3), the others are their negatives, singlets are the A2 roots: (27,3)+(27bar,3bar)+(1,8) with SU(3)_family broken to U(1)^2. For every one of the 40 rays exactly one W(3,3) point has a Pauli fixing all of z, with fixed algebra E6 + A2 (86): bijection 40 <-> 40. Correction credited to TOE44 (b143f9524): a lone degree-12 phase is removable by rephasing; the invariant CP phase is arg(k12^3/k18^2) or spontaneous. E6 enhancement beyond SU(3)^3 needs a higher-dimensional completion (stated as hypothesis). Forty Points paragraph and ledger rows (Claude track)"
+      },
+      {
+        "sha": "b143f9524b92",
+        "subject": "TOE44: product SIC bound, calibrated MUB, injected E6 CCZ, channel and E8 CP firewalls"
+      },
+      {
+        "sha": "0b8c5c2e2d68",
+        "subject": "Passes 11874-11878: cross-track note -- cite TOE Round38 (a50a847) for the theta determinant law and the Schmidt framing firewall; 11878 is the frame-free CP-odd modular observable its hypothesis 2 asks for (Claude track)"
+      },
+      {
+        "sha": "a50a847731c7",
+        "subject": "TOE Round38: local W33 Maxwell two-cone gauge complex and genus-two modular frame firewalls"
+      },
+      {
+        "sha": "114352d84fbb",
+        "subject": "TOE Round36: domain-wall chirality, spinor triality, deck vacuum no-go, local wave and QED alpha gate"
+      },
+      {
+        "sha": "77015561d493",
+        "subject": "Passes 11854-11858: no exact family SU(3) can commute with GUT and finite Lorentz in E8; chirality firewall (Lorentz-commuting projections leave spinorial matter vector-like, a Lorentz-breaking phase keeps one 16); boundary bootstrap channels 1,15,20,24,60 fix all bulk couplings; spinorial Lorentz x central Z3 commutes with su(3)+so(5)+u(1); Lean A5 lattice mod 3 (Claude track)"
+      },
+      {
+        "sha": "d702cd27ffc9",
+        "subject": "Passes 11854-11858 reserved: centraliser no-go for a family SU(3) commuting with GUT and finite Lorentz in E8; chirality firewall for Lorentz-commuting projections; boundary s-channel decomposition of the four-point function (bootstrap channels); one finite group: spinorial Lorentz with the central Z3 translation; Lean A5-lattice-mod-3 module facts (Claude track)"
+      },
+      {
+        "sha": "a24c8c1861fe",
+        "subject": "TOE Round35: exact SL2(9)-E8 SO11 centralizer, chirality firewall, deck dimension and CODATA alpha test"
+      },
+      {
+        "sha": "782bfe0e129d",
+        "subject": "TOE Round33: joint qutrit time decoder, A6 translation-hypercharge firewall, Bloch spectrum and cover constraints"
+      },
+      {
+        "sha": "12c3c1ce8dc1",
+        "subject": "TOE Round32: temporal qutrit decoding, cyclic-cover search, E8 commutant no-go, causal growth and C8 platform screen"
+      },
+      {
+        "sha": "ed5b0b86d5a6",
+        "subject": "TOE Round29: cat hook firewall, growing-distance covers, E7 obstructions and finite-AdS chronology"
+      },
+      {
+        "sha": "d44af7757c71",
+        "subject": "TOE Round17 correction: restore cyclic factor in U-linear trace certificate"
+      },
+      {
+        "sha": "e77fbefdd760",
+        "subject": "TOE Round17: exact flux-reversal and bipartite interaction spectral no-gos"
+      },
+      {
+        "sha": "401b57f8fcfe",
+        "subject": "TOE five fronts: 86400 optimal isotropic selectors and five PSp orbits, F-term screens, quantum bounds, optical causal no-go"
+      },
+      {
+        "sha": "705b34d1b0de",
+        "subject": "TOE five fronts: critical coercivity ceiling, SU4 baryon no-go, 235-mode minmax, optical calibration, exact flatband transition"
+      },
+      {
+        "sha": "d85f85a0c184",
+        "subject": "TOE five fronts: subelliptic exponent no-go, exact SU4 masks, 55 eigenvalue upper bound, robust optics, shared flatband"
+      },
+      {
+        "sha": "1dccbd5bb2c5",
+        "subject": "TOE five fronts: nonelliptic packet obstruction, parity SU4 Dflat, He6 Wick, sham CI and Potts firewall"
+      },
+      {
+        "sha": "d9df5bc6f8bd",
+        "subject": "TOE: exact current Gram no-go, heterotic catalog audit, quantum curvature noise, factorial optics, integral 3D quotient"
+      },
+      {
+        "sha": "a1f780d3892e",
+        "subject": "Clarify Pass10960 all-label parity no-go scope after benchmark counterexample"
+      },
+      {
+        "sha": "338ddb721ffc",
+        "subject": "research: integrate five executed physics frontiers and precise scope firewalls"
+      },
+      {
+        "sha": "790d8f36ec41",
+        "subject": "causality: exact Levi incidence shell profile and finite-dimension no-go"
+      },
+      {
+        "sha": "0f63597554b6",
+        "subject": "heterotic vacuum: scope exact W33 no-go against published R-parity benchmarks"
+      },
+      {
+        "sha": "25e5db881711",
+        "subject": "correction: contextualize bare-K obstruction by exact dressed antiunitary"
+      },
+      {
+        "sha": "f84dabbdc7d5",
+        "subject": "Pass 11766: compact-real E8 and Spin10 selector firewall with doubled-real repair"
+      }
+    ],
+    "first_sha": "9899c209dd15644913c2e93eace9fef9ec368da4",
+    "last_sha": "e072846168fcf6d249ee87b41a92be57b8d429f0",
+    "full_metadata_paths_scanned": true,
+    "manual_line_by_line_diff_verification": false
+  },
+  "limitation": "PDF full text/page digest and every commit metadata/path indexed; this is not peer review of every equation, line of code, or physics claim."
+}

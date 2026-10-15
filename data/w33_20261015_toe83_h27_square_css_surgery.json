@@ -1,0 +1,1347 @@
+{
+  "binary": {
+    "X_distance": 6,
+    "X_weight6_witness": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ]
+    ],
+    "Z_distance": 4,
+    "k": 26,
+    "n": 135
+  },
+  "orbit_metadata": {
+    "H27_orbit_sizes": {
+      "27": 40
+    },
+    "added_square_count": 54,
+    "all_135_weight2_X_supports_eliminated": true,
+    "binary_X_distance_lower_bound": 4,
+    "candidate_solutions": [
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          10
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          14
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          18
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          20
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          23
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          26
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          37
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          38
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          0,
+          39
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          1,
+          13
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          2,
+          17
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          3,
+          8
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          4,
+          13
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          5,
+          8
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          6,
+          17
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          7,
+          17
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          8,
+          11
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          8,
+          16
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          8,
+          24
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          8,
+          25
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          8,
+          30
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          8,
+          31
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          8,
+          35
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          9,
+          13
+        ]
+      },
+      {
+        "face_rank": 83,
+        "orbit_count": 2,
+        "orbits": [
+          12,
+          17
+        ]
+      }
+    ],
+    "fewest_orbit_solution_count": 468,
+    "logical_qubits": 26,
+    "native_135_edges": 135,
+    "native_27_vertices": 27,
+    "native_45_faces": 45,
+    "orbit_representatives": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          4,
+          11
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          4,
+          13
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          4,
+          15
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          8,
+          18
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          8,
+          21
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          8,
+          24
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          10,
+          15
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          10,
+          24
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          12
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          12,
+          21
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          17
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          13,
+          17
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          20
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          13,
+          20
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          20,
+          21
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          23
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          11,
+          23
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          23,
+          24
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          15,
+          26
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          18,
+          26
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          10,
+          15
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          10,
+          22
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          12,
+          19
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          13,
+          17
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          4,
+          25
+        ],
+        [
+          17,
+          25
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          13,
+          20
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          11,
+          23
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          15,
+          26
+        ]
+      ],
+      [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          3,
+          12
+        ]
+      ],
+      [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          12
+        ]
+      ],
+      [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          3,
+          17
+        ]
+      ]
+    ],
+    "orbit_stats": [
+      {
+        "face_rank_gain": 12,
+        "orbit": 0,
+        "pair_hits": 54,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 1,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 2,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 3,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 4,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 5,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 6,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 7,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 12,
+        "orbit": 8,
+        "pair_hits": 54,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 9,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 10,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 11,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 12,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 12,
+        "orbit": 13,
+        "pair_hits": 54,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 14,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 15,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 16,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 12,
+        "orbit": 17,
+        "pair_hits": 54,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 18,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 19,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 20,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 21,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 22,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 23,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 24,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 25,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 26,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 27,
+        "pair_hits": 108,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 28,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 29,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 30,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 31,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 32,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 33,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 34,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 35,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 36,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 37,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 38,
+        "pair_hits": 81,
+        "size": 27
+      },
+      {
+        "face_rank_gain": 26,
+        "orbit": 39,
+        "pair_hits": 81,
+        "size": 27
+      }
+    ],
+    "rank_distribution_covering_two_orbit_pairs": {
+      "83": 36,
+      "95": 72,
+      "97": 360
+    },
+    "rank_faces": 83,
+    "second_homology_dimension": 16,
+    "selected_orbit_representatives": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          10,
+          24
+        ]
+      ]
+    ],
+    "selected_orbits": [
+      0,
+      10
+    ],
+    "square_count": 1080,
+    "status": "COMPUTED",
+    "weight4_X_logical_witness_edges": null,
+    "weight4_Z_logical_witness_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        4,
+        11
+      ]
+    ]
+  },
+  "selected_orbits": [
+    0,
+    10
+  ],
+  "ternary": {
+    "X_distance": 6,
+    "X_weight2_candidates": 0,
+    "X_weight3_candidates": 0,
+    "X_weight4_candidate": false,
+    "X_weight5_candidate": false,
+    "X_weight6_witness": [
+      [
+        0,
+        4,
+        1
+      ],
+      [
+        0,
+        8,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        7,
+        1
+      ]
+    ],
+    "Z_distance": 4,
+    "Z_weight4_witness": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        4,
+        11
+      ]
+    ],
+    "k": 26,
+    "rank_faces": 83
+  }
+}
