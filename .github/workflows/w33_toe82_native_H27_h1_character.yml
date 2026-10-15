@@ -1,0 +1,28 @@
+name: TOE82 native H27 homology character
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261015_toe82_native_H27_h1_character.py'
+      - 'tests/test_w33_20261015_toe82_native_H27_h1_character.py'
+      - '.github/workflows/w33_toe82_native_H27_h1_character.yml'
+  workflow_dispatch:
+jobs:
+  character:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pytest
+      - name: Verify all 27 H27 character values and exact Fourier multiplicities
+        run: python -m pytest -q tests/test_w33_20261015_toe82_native_H27_h1_character.py
+      - name: Regenerate certificate
+        run: python analysis/w33_20261015_toe82_native_H27_h1_character.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe82-native-h27-h1-character
+          path: data/w33_20261015_toe82_native_H27_h1_character.json
+          retention-days: 60
