@@ -1,0 +1,47 @@
+{
+  "reservation": "4cb9f43450b9b919762b1cd3f11f9e0d23337fc6",
+  "science_commit": null,
+  "science_sha256_lf": {
+    "analysis/w33_pass11994_native_clock_order.py": "ecd1f83eda048ef4af776c2f5f2c59470a7841afe0a86ca0271c0d4002bcd83c",
+    "analysis/w33_pass11995_native_metric_gr_lift.py": "503ae631dea4e0f7b8b7cb5591c46faa87e8ba929fef64adbdef474c842760be",
+    "analysis/w33_pass11996_joint_singlet_flavour.py": "4889ab3f93dd79ae916ff6ef75287ce5ef4cc71e87513377a22c292bdcec2d11",
+    "analysis/w33_pass11997_native_chiral_tube.py": "b5dd80bc27268a904732b4193c6fa5dd330838828abf4216296d0dd0a75f0b3f",
+    "analysis/w33_pass11998_complex_reduction_tradeoff.py": "cf9e244d36caceb331da0359400f00a02f37aaa5872407a78b8c176f29f0f7d4",
+    "data/w33_pass11994_native_clock_order.json": "d9b05961c0b1d9dfe90689f40c68a757bf6ea869d6837676bd65b781e556c85e",
+    "data/w33_pass11995_native_metric_gr_lift.json": "3166b97e2c95ef00aa2b759a76a65e7d7f6339af0b5f3ec7377f5338f9f35272",
+    "data/w33_pass11996_joint_singlet_flavour.json": "502244caee5d9b04735384c76ec8cf076c5063275f2da0be59fde6d836065853",
+    "data/w33_pass11997_native_chiral_tube.json": "2d356bd4aee45a19b1f75bb445010fe403f7fe3b978bfb6b5e977c32cb6da1aa",
+    "data/w33_pass11998_complex_reduction_tradeoff.json": "b5fc9a239c4432c9084e80689a037e6dca915b82b8c41c0d70cce4794671e4d8",
+    "analysis/PASS11994_11998_NATIVE_ORDER_METRIC_VACUUM_AND_CHIRAL_GEOMETRY.md": "b020a9e1b29210947afb2467254884e0f4f9212aad291d2dc8e98479c33aa12c",
+    "tests/test_w33_pass11994_11998_native_physics.py": "7fd8c98418b48c3eb0851901125d06acc3912cab1d6f2fc62b1375de5ed3596a",
+    ".github/workflows/pass11994-11998-native-physics.yml": "d4323190b12ccee1cad14e4f163ba16cfc75837c6d4f6c6f9e345ca03ffdf0fa",
+    "docs/index.html": "ef46d79be8ec123a1490a0c692419d9d86c73f7e18e4b9a357dc3e1e14504236"
+  },
+  "prior_input_sha256_lf": {
+    "analysis/w33_pass11978_full_singlet_soft_vacuum.py": "ce798dfec5aef87d2fafa98e46e11416ef3782d07d5aee9575437932c4b15698",
+    "data/w33_pass11978_full_singlet_soft_vacuum.json": "4cc63ac4dcbb3b1e74d98d071c259225e320439a2f5992b25d749668229a7545",
+    "data/w33_pass11973_mediation_transmission.json": "b9b7784d732996a8171d6aa466ea2c68064e829ee493a8544eea67a4d6b00a65",
+    "analysis/w33_pass11981_cubic_mediator_cp.py": "937a0a4f3036236cda50899efa248c3223cf097468adce74034c93f959f135dd",
+    "data/w33_pass11981_cubic_mediator_cp.json": "cfeff040a9aa4162931fd9866568bea774cf1242f22d2427958338adf4bce81b",
+    "analysis/w33_pass11989_joint_source_barr.py": "2fdf7d19efc5cc7372c2bbc1f21af12619d6caf9f334a2a4248f65598ab2c916",
+    "analysis/w33_pass11991_native_four_period_cover.py": "9acd7276709cb6677054cc3523632149316a2387bb3b82679a2e98e446325296",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "data/w33_pass11988_spinor_weil_intertwiner.json": "24d8e753ca26f1ce04f7d1ad3ab91a653671a163e034bd4f27fc90230a3cc11b",
+    "analysis/w33_pass11987_atlas_spin_gate_alphabet.py": "19980736c374a8e056a5b8d061ea86c4c03bf0728526f29e2a234843ade75c4b",
+    "data/w33_pass11987_atlas_spin_gate_alphabet.json": "79f730682bdbbc0fd05e6d2009278781a35ff635ff5efba5f7177d8d4782b2cd",
+    "data/w33_pass11983_atlas_projector_descent.json": "07f757825e5fc19eb6f50a72ef4c7959cc6e91ccaf97970e1e1443b911bb59e4",
+    "analysis/w33_pass11952_11955_threshold_vacuum_loop_leptons.py": "2884f88922bbe761c6b133cdc592771f6aca06b5c89e94f76bafeb8b1f9ae3b5",
+    "analysis/w33_pass11950_11951_strong_cp_divisor_and_vectorlike.py": "edd590c157d79b2d8460adeaa3e329aab6999ed824fb3986961ae566692fe857"
+  },
+  "local_combined_tests": "39 passed in27.78s including18priorphysicalinterfaces and7priorMajorana controls plus14newtests",
+  "local_producers": {
+    "11994_native_clock_order": "PASS",
+    "11995_native_metric_gr_lift": "PASS",
+    "11996_joint_singlet_flavour": "PASS",
+    "11997_native_chiral_tube": "PASS",
+    "11998_complex_reduction_tradeoff": "PASS"
+  },
+  "guard": "No source rediscovery warnings; prior general methods and specific corpus constructions explicitly cited.",
+  "hosted": null,
+  "scope": "Five research investigations executed. Supplied sign/action/scale/portal/metric choices remain explicit; no fullTOE/nativeGR/localglobalchiralmeasure/fullE6/radiativeCPsolution."
+}

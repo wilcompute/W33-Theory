@@ -1,0 +1,545 @@
+{
+  "status": "PASS",
+  "native_moment_polynomials": {
+    "2": "54*(x**2 + x*y + y**2)",
+    "4": "54*(x**2 + x*y + y**2)**2",
+    "6": "27*(2*x**6 + 6*x**5*y + 15*x**4*y**2 + 20*x**3*y**3 + 15*x**2*y**4 + 6*x*y**5 + 2*y**6)"
+  },
+  "exact_anisotropy_identity": "I6-I2^3/2916 = 81 x^2 y^2 (x+y)^2",
+  "clock_action_potential": "t**4 - 2*t**3*z + 3*t**2*z**2 + t**2 - 2*t*z**3 - t*z + x**4*y**2 + x**4 + 2*x**3*y**3 + 2*x**3*y + x**2*y**4 + 3*x**2*y**2 - 2*x**2 + 2*x*y**3 - 2*x*y + y**4 - 2*y**2 + z**4 + z**2 + 1",
+  "definition": "a=(x,y,z,t)=L^-T u. rA=x\u00b2+xy+y\u00b2, rB=z\u00b2-zt+t\u00b2; V=(rA-1)\u00b2+rB+rB\u00b2+x\u00b2y\u00b2(x+y)\u00b2.",
+  "exact_global_minimum": 0,
+  "global_vacuum_count": 6,
+  "global_minimum_proof": "Every term is nonnegative. Zero requires rA=1,rB=0,xy(x+y)=0, giving precisely the six displayed points. All four real Hessian modes are positive at each.",
+  "vacua": [
+    {
+      "clock_primitive": [
+        "3",
+        "0",
+        "2",
+        "1"
+      ],
+      "metric_Q": [
+        [
+          "-1/27",
+          "-1/54",
+          "-1/9",
+          "0"
+        ],
+        [
+          "-1/54",
+          "7/54",
+          "0",
+          "-1/9"
+        ],
+        [
+          "-1/9",
+          "0",
+          "2/9",
+          "-1/9"
+        ],
+        [
+          "0",
+          "-1/9",
+          "-1/9",
+          "2/9"
+        ]
+      ],
+      "Hessian_eigenvalues": {
+        "6 - 2*sqrt(5)": 1,
+        "2*sqrt(5) + 6": 1,
+        "3": 1,
+        "1": 1
+      },
+      "stabilizer": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "clock_primitive": [
+        "-3",
+        "0",
+        "-2",
+        "-1"
+      ],
+      "metric_Q": [
+        [
+          "-1/27",
+          "-1/54",
+          "-1/9",
+          "0"
+        ],
+        [
+          "-1/54",
+          "7/54",
+          "0",
+          "-1/9"
+        ],
+        [
+          "-1/9",
+          "0",
+          "2/9",
+          "-1/9"
+        ],
+        [
+          "0",
+          "-1/9",
+          "-1/9",
+          "2/9"
+        ]
+      ],
+      "Hessian_eigenvalues": {
+        "6 - 2*sqrt(5)": 1,
+        "2*sqrt(5) + 6": 1,
+        "3": 1,
+        "1": 1
+      },
+      "stabilizer": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "clock_primitive": [
+        "0",
+        "3",
+        "1",
+        "2"
+      ],
+      "metric_Q": [
+        [
+          "7/54",
+          "-1/54",
+          "-1/9",
+          "0"
+        ],
+        [
+          "-1/54",
+          "-1/27",
+          "0",
+          "-1/9"
+        ],
+        [
+          "-1/9",
+          "0",
+          "2/9",
+          "-1/9"
+        ],
+        [
+          "0",
+          "-1/9",
+          "-1/9",
+          "2/9"
+        ]
+      ],
+      "Hessian_eigenvalues": {
+        "6 - 2*sqrt(5)": 1,
+        "2*sqrt(5) + 6": 1,
+        "3": 1,
+        "1": 1
+      },
+      "stabilizer": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "clock_primitive": [
+        "0",
+        "-3",
+        "-1",
+        "-2"
+      ],
+      "metric_Q": [
+        [
+          "7/54",
+          "-1/54",
+          "-1/9",
+          "0"
+        ],
+        [
+          "-1/54",
+          "-1/27",
+          "0",
+          "-1/9"
+        ],
+        [
+          "-1/9",
+          "0",
+          "2/9",
+          "-1/9"
+        ],
+        [
+          "0",
+          "-1/9",
+          "-1/9",
+          "2/9"
+        ]
+      ],
+      "Hessian_eigenvalues": {
+        "6 - 2*sqrt(5)": 1,
+        "2*sqrt(5) + 6": 1,
+        "3": 1,
+        "1": 1
+      },
+      "stabilizer": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "clock_primitive": [
+        "3",
+        "-3",
+        "1",
+        "-1"
+      ],
+      "metric_Q": [
+        [
+          "7/54",
+          "4/27",
+          "-1/9",
+          "0"
+        ],
+        [
+          "4/27",
+          "7/54",
+          "0",
+          "-1/9"
+        ],
+        [
+          "-1/9",
+          "0",
+          "2/9",
+          "-1/9"
+        ],
+        [
+          "0",
+          "-1/9",
+          "-1/9",
+          "2/9"
+        ]
+      ],
+      "Hessian_eigenvalues": {
+        "4": 2,
+        "3": 1,
+        "1": 1
+      },
+      "stabilizer": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "clock_primitive": [
+        "-3",
+        "3",
+        "-1",
+        "1"
+      ],
+      "metric_Q": [
+        [
+          "7/54",
+          "4/27",
+          "-1/9",
+          "0"
+        ],
+        [
+          "4/27",
+          "7/54",
+          "0",
+          "-1/9"
+        ],
+        [
+          "-1/9",
+          "0",
+          "2/9",
+          "-1/9"
+        ],
+        [
+          "0",
+          "-1/9",
+          "-1/9",
+          "2/9"
+        ]
+      ],
+      "Hessian_eigenvalues": {
+        "4": 2,
+        "3": 1,
+        "1": 1
+      },
+      "stabilizer": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    }
+  ],
+  "orbit_structure": "Two H27 orbits of three clock vectors, exchanged by time reversal u->-u. All have exact residual subgroup A={(0,b,c)}; metric forgets time orientation.",
+  "kinetic_signature_family": "K_alpha=G-alpha Gu u^T G/(u^T G u); det K_alpha/det G=1-alpha. Positive for alpha<1, singular at1, Lorentz for alpha>1. Choosing alpha=2 is an ADDITIONAL kinetic input, not a prediction of V.",
+  "scope": "A global clock-order theorem for a declared H27-invariant native-moment potential on the selected rank4 quotient. Character mass ordering, quotient, kinetic sign/coupling and physical action are supplied; no dynamical derivation of GR or signature.",
+  "prior": [
+    "11991 primitive native cover and subgroup/Lorentz permission",
+    "11985 supplied clock kinetic constraints",
+    "11956 weighted harmonic metric matching",
+    "11988 complex-structure compatibility obstruction"
+  ]
+}

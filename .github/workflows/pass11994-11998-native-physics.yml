@@ -1,0 +1,37 @@
+name: Pass11994-11998 native physics constructions
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass1199[4-8]_*.py'
+      - 'tests/test_w33_pass11994_11998_native_physics.py'
+      - '.github/workflows/pass11994-11998-native-physics.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy==1.14.0 mpmath==1.3.0 pytest
+      - name: Verify frozen certificates
+        run: python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass11994_11998_native_physics.py
+      - name: Regenerate five producers
+        run: |
+          python analysis/w33_pass11994_native_clock_order.py
+          python analysis/w33_pass11995_native_metric_gr_lift.py
+          python analysis/w33_pass11996_joint_singlet_flavour.py
+          python analysis/w33_pass11997_native_chiral_tube.py
+          python analysis/w33_pass11998_complex_reduction_tradeoff.py
+      - name: Verify regenerated certificates
+        run: python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass11994_11998_native_physics.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass11994-11998-native-physics
+          path: data/w33_pass1199[4-8]_*.json

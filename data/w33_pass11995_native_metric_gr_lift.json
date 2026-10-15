@@ -1,0 +1,264 @@
+{
+  "status": "PASS",
+  "native_edges": 135,
+  "metric_components": 10,
+  "exact_metric_jacobian_rank": 10,
+  "selected_edge_indices": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    29,
+    32
+  ],
+  "selected_jacobian_determinant": "128/717897987691852588770249",
+  "envelope_derivative": "dG_ij/dw_e = h_ei h_ej/27, with h=V-b(b^T W b)^-1 b^T W V; the corrector is recomputed at EVERY weight change.",
+  "exact_jacobian_Q": [
+    [
+      "4/2187",
+      "16/2187",
+      "1/243",
+      "16/2187",
+      "4/2187",
+      "1/243",
+      "16/2187",
+      "4/2187",
+      "4/2187",
+      "16/2187"
+    ],
+    [
+      "-4/2187",
+      "8/2187",
+      "1/243",
+      "-4/2187",
+      "8/2187",
+      "0",
+      "8/2187",
+      "-4/2187",
+      "8/2187",
+      "8/2187"
+    ],
+    [
+      "-4/729",
+      "-8/729",
+      "0",
+      "-4/729",
+      "-2/729",
+      "0",
+      "-4/729",
+      "-2/729",
+      "0",
+      "0"
+    ],
+    [
+      "4/729",
+      "0",
+      "0",
+      "4/729",
+      "0",
+      "0",
+      "4/729",
+      "0",
+      "-4/729",
+      "-4/729"
+    ],
+    [
+      "4/2187",
+      "4/2187",
+      "1/243",
+      "1/2187",
+      "16/2187",
+      "0",
+      "4/2187",
+      "4/2187",
+      "16/2187",
+      "4/2187"
+    ],
+    [
+      "4/729",
+      "-4/729",
+      "0",
+      "1/729",
+      "-4/729",
+      "0",
+      "-2/729",
+      "2/729",
+      "0",
+      "0"
+    ],
+    [
+      "-4/729",
+      "0",
+      "0",
+      "-1/729",
+      "0",
+      "0",
+      "2/729",
+      "0",
+      "-8/729",
+      "-2/729"
+    ],
+    [
+      "4/243",
+      "4/243",
+      "0",
+      "1/243",
+      "1/243",
+      "0",
+      "1/243",
+      "1/243",
+      "0",
+      "0"
+    ],
+    [
+      "-4/243",
+      "0",
+      "0",
+      "-1/243",
+      "0",
+      "0",
+      "-1/243",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "4/243",
+      "0",
+      "0",
+      "1/243",
+      "0",
+      "0",
+      "1/243",
+      "0",
+      "4/243",
+      "1/243"
+    ]
+  ],
+  "implicit_function_theorem": "Nonzero rational10x10 Jacobian proves an open neighborhood of the baseline metric is realized by positive native weights, fixing the other125weights. This local existence statement is exact; displayed finite Newton lifts are numerical witnesses.",
+  "derivative_finite_difference_error": 1.2330234056001643e-11,
+  "Gowdy_metric_lifts": [
+    {
+      "t": 1,
+      "P": 0,
+      "Q": 0,
+      "lambda_value": 0,
+      "selected_weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "minimum_weight": 1.0,
+      "Newton_residual_history": [
+        2.220446049250313e-16
+      ],
+      "Lorentz_metric_error": 1.5543122344752192e-15
+    },
+    {
+      "t": 1.001,
+      "P": 0.002,
+      "Q": 0.003,
+      "lambda_value": 0.001,
+      "selected_weights": [
+        0.9761915383161414,
+        0.9217934947828483,
+        0.8764819092995993,
+        1.083560060850792,
+        1.0441633163615383,
+        0.7307970844969326,
+        1.0943119294786745,
+        1.0150442007298062,
+        0.9845833114627681,
+        1.160781141065966
+      ],
+      "minimum_weight": 0.7307970844969326,
+      "Newton_residual_history": [
+        0.0007963103661212667,
+        0.0003061864104523804,
+        9.176045540626454e-07,
+        3.97371024973836e-12,
+        1.6653345369377348e-16
+      ],
+      "Lorentz_metric_error": 1.1102230246251565e-15
+    },
+    {
+      "t": 0.999,
+      "P": -0.002,
+      "Q": -0.003,
+      "lambda_value": -0.001,
+      "selected_weights": [
+        1.0175169128763524,
+        1.0879020446234695,
+        1.1442323732000201,
+        0.9508477802404274,
+        0.9544924972595253,
+        1.255176409008411,
+        0.9156458112598731,
+        0.9724730262733001,
+        1.0083389510443912,
+        0.8698746901786114
+      ],
+      "minimum_weight": 0.8698746901786114,
+      "Newton_residual_history": [
+        0.0008036881523995065,
+        0.00028913581259149,
+        7.674184605566126e-07,
+        3.1100122477312198e-12,
+        4.440892098500626e-16
+      ],
+      "Lorentz_metric_error": 1.1611511853531061e-15
+    },
+    {
+      "t": 1.004,
+      "P": 0.001,
+      "Q": -0.002,
+      "lambda_value": 0.002,
+      "selected_weights": [
+        0.8989702792783874,
+        1.0015560299826007,
+        1.1899468083040114,
+        1.3572771516575457,
+        1.0285470111064798,
+        0.5677455810214307,
+        0.8273451229676296,
+        0.9357743351783896,
+        0.9690232922754158,
+        1.086695902040907
+      ],
+      "minimum_weight": 0.5677455810214307,
+      "Newton_residual_history": [
+        0.0012125597372055208,
+        0.0003068422362917933,
+        1.5002757009496825e-06,
+        1.6534495994591225e-11,
+        2.220446049250313e-16
+      ],
+      "Lorentz_metric_error": 1.9984014443252818e-15
+    }
+  ],
+  "conditional_GR_action": "Define E=(R^-1 G(w) R^-T)^-1 and fixed e=(1,0,0,0). Set g=E-2 E e e^T E/(e^T E e). This map is involutive between positive E and Lorentz g with e timelike, so all10components remain. On this10weight chart, S[w]=S_EH[g(w)] is an invertible field redefinition of supplied continuum Einstein gravity, with lapse/shift constraints and2 propagating modes inherited. No claim that a sum of native graph terms generates this action. The inverse map is cellwise, while continuum derivatives/limit are extra inputs.",
+  "redundant_edge_weight_kernel_dimension": 125,
+  "gravity_boundary": "Kinematic ability to encode all10 metric components and the offdiagonal nonlinear Gowdy metric, not W33-derived Einstein equations, refoliation symmetry or Newton/Lambda selection. Adding generic kinetic terms for135weights would introduce extra modes, not2gravitons.",
+  "prior": [
+    "11956 exact 3D weighted Gauss-reduced metric matching and contraction proof",
+    "11991 actual4period cover and acousticG",
+    "11992 imported full nonlinear Gowdy Einstein benchmark",
+    "11976 finite pointwise constraint failure"
+  ],
+  "primary": [
+    "https://doi.org/10.1090/S0002-9947-00-02632-5",
+    "https://arxiv.org/abs/gr-qc/9710102",
+    "https://arxiv.org/abs/gr-qc/0402005"
+  ]
+}
