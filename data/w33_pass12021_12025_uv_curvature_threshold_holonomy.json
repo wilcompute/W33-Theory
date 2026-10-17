@@ -1,0 +1,344 @@
+{
+  "status": "PASS",
+  "pass12021": {
+    "status": "PASS",
+    "quark_coefficient": -2.7957811552202024e-05,
+    "gluino_coefficient": 1.2014416567883546e-05,
+    "total_mixed_coefficient": -1.594339498431848e-05,
+    "finite_difference_controls": [
+      {
+        "h": 0.04,
+        "mixed_coefficient": -1.594856249795979e-05,
+        "error": -5.167513641313808e-09
+      },
+      {
+        "h": 0.02,
+        "mixed_coefficient": -1.594468649175432e-05,
+        "error": -1.2915074358425973e-09
+      },
+      {
+        "h": 0.01,
+        "mixed_coefficient": -1.5943717836571322e-05,
+        "error": -3.228522528445375e-10
+      },
+      {
+        "h": 0.005,
+        "mixed_coefficient": -1.5943475955853966e-05,
+        "error": -8.097153548820726e-11
+      }
+    ],
+    "linked_spurion_imaginary_pair_max": 1.4310911763293969e-16,
+    "exact_resolvent": "For Delta_i(z)=(z-l_i)(z-r_i)-ell_i^2 and E=deltaLL,F=deltaRR Hermitian, Im[coeff_eps_eta (z-S)^-1_LRii]=sum_j ell_j Im(Eij Fji)/(Delta_i Delta_j). Single-sided terms vanish by12018.",
+    "exact_loop_kernel": "Im coeff_eps_eta B0(x,S)_LRii=-sum_j ell_j Im(Eij Fji) integral_0^infty dq q/[(q+x)Delta_i(-q)Delta_j(-q)]. Positive massive baseline assumed. This is a convergent mass-insertion kernel, not a finite-difference estimate.",
+    "radiative_reading": "If the leading right spurion is F=Mdag E M in the real mass basis, every Im(Eij Fji)=0. Thus merely seeing both sides generated does not imply this leading mixed CP channel survives. Independent spurions or higher insertions/LR channels are required.",
+    "scope": "Exact second mixed coefficient in specified colored one-loop channels. No complete MSSM soft RG, LR/neutral/Higgs portals, UV threshold or total strong-CP bound; standard mass-insertion mechanism cited to2002.04204/9303296."
+  },
+  "pass12022": {
+    "status": "PASS",
+    "real_fields": 36,
+    "constraint_rank": 28,
+    "positive_normal_modes": 28,
+    "symmetry_zero_modes": 8,
+    "normal_Hessian_eigenvalues": [
+      394.87561103127007,
+      202.02621449899706,
+      202.00000373552547,
+      130.86479154761702,
+      130.00183866871672,
+      130.00007531567573,
+      89.14286849670638,
+      74.09261032114273,
+      74.0000137218552,
+      64.68103556347542,
+      52.00069215503677,
+      51.9967113072976,
+      34.2707558190013,
+      34.000000081944144,
+      23.578814696677146,
+      20.00000048659338,
+      17.373658571153896,
+      12.296552854532678,
+      0.4895385782421973,
+      0.32969841757199875,
+      0.12341212592395562,
+      0.045398752876612346,
+      0.02334023460558831,
+      0.001875613565865528,
+      0.0011904381130292685,
+      3.5719070508475196e-06,
+      2.766206699410653e-07,
+      3.6775399102148125e-09
+    ],
+    "relaxed_light_Hessian_eigenvalues": [
+      -1.881269355145468e-14,
+      -1.4109989985549153e-14,
+      -1.2317215744891114e-14,
+      -9.549277928086064e-16,
+      5.127314509457132e-16,
+      3.757446862318759e-15,
+      1.4271443519312893e-14,
+      3.0056779008377406e-14,
+      1.0658469094901108e-07,
+      8.237442262780974e-06,
+      0.00014643331255951233,
+      0.025744038440705237,
+      0.044242826662981044,
+      1.1906809073470412,
+      1.8266672081766064,
+      3.2678542070169954,
+      5.485909649594832,
+      6.391665240899195
+    ],
+    "heavy_Hessian_min": 1.9999999999999958,
+    "unitary_moduli_reconstruction_error": 6.277230043734889e-13,
+    "CP_partner_J": [
+      3.493513316700014e-05,
+      -3.493513316700014e-05
+    ],
+    "potential": "V/f^4=sum_r w_r^2 (Itilde_r(A,B,X,Y)-c_r)^2+||X-A^2||F^2+||Y-B^2||F^2. All four fields are dimensionless Hermitian3 matrices; physical canonically dimension-one fields are f times them. Itilde uses TrA,TrX,TrAX and B,Y analogues; projectors replace A^2 byX and B^2 byY. Every residual has degree<=2, so parent is renormalizable degree<=4.",
+    "global_vacuum_proof": "Nonnegative terms force X=A^2,Y=B^2 and the ten12017 invariant targets. Three power traces fix each simple spectrum by Newton identities. Four overlaps fix the whole3x3 bistochastic matrix. Orthogonality of the first two unitary rows is a triangle with nonzero area |J|/2, hence has exactly two orientations up to row/column phases. The third row is then fixed up to phase. Thus exactly two simultaneous-U3 vacuum orbits, exchanged by CP, for the displayed nonzero-J target. Radial trace2 bounds the zero set. No additional zero-energy orbits are missed.",
+    "relaxation": "Finite auxiliary masses preserve the exact zero set but do NOT reproduce the entire old off-shell degree8 potential. The correctly relaxed light Hessian is its Schur complement, not the frozen-auxiliary Hessian; both are explicitly stored.",
+    "scope": "A supplied renormalizable bosonic parent and a global classical vacuum classification, not a derivation of target coefficients c_r,w_r,f from W33, theta-modulus stabilization, physical matter couplings or radiative naturalness. GlobalSU3 gives8 Goldstones; gauging/fermion anomalies require separate completion.",
+    "prior": [
+      "11665 positive auxiliary-chain parent and relaxed-Hessian warning",
+      "12017 observed-orientation invariant target",
+      "11967 single mixed trace alignment obstruction",
+      "0909.0116 standard3x3 unistochastic triangle"
+    ]
+  },
+  "pass12023": {
+    "status": "PASS",
+    "continuum_rayleigh": 5.463513762169305,
+    "continuum_integrated_R_per_coordinate_volume": 0.023360832323273458,
+    "refinement": [
+      {
+        "N": 16,
+        "energy": 0.2175314813962992,
+        "mass": 0.03993781667377739,
+        "rayleigh": 5.4467544676553965,
+        "curvature_functional": 0.023262583388381046,
+        "rayleigh_error": -0.016759294513908785,
+        "curvature_error": -9.824893489241218e-05
+      },
+      {
+        "N": 32,
+        "energy": 0.21803317757325844,
+        "mass": 0.03993781667358099,
+        "rayleigh": 5.459316400675657,
+        "curvature_functional": 0.023336210371833938,
+        "rayleigh_error": -0.004197361493647911,
+        "curvature_error": -2.4621951439519896e-05
+      },
+      {
+        "N": 64,
+        "energy": 0.21815888381084,
+        "mass": 0.03993781667358099,
+        "rayleigh": 5.462463949741972,
+        "curvature_functional": 0.023354673094534074,
+        "rayleigh_error": -0.0010498124273334852,
+        "curvature_error": -6.15922873938371e-06
+      },
+      {
+        "N": 128,
+        "energy": 0.2181903280441526,
+        "mass": 0.03993781667358099,
+        "rayleigh": 5.46325127954444,
+        "curvature_functional": 0.02335929228215025,
+        "rayleigh_error": -0.000262482624865612,
+        "curvature_error": -1.5400411232067979e-06
+      },
+      {
+        "N": 256,
+        "energy": 0.21819819020767686,
+        "mass": 0.03993781667358099,
+        "rayleigh": 5.463448139667979,
+        "curvature_functional": 0.02336044729836941,
+        "rayleigh_error": -6.56225013262457e-05,
+        "curvature_error": -3.8502490404962453e-07
+      }
+    ],
+    "cell_relabelling_error": 2.6645352591003757e-15,
+    "fixed_capacity_rayleigh": 5.664760707314687,
+    "construction": "Use harmonic vertex positions x=a(n+chi_i), h_e=v_e+chi_j-chi_i. Supply edge conductance exp(2sigma(bond midpoint)) and vertex capacity M0 exp(4sigma(x)); all135native edges retained. H(x)=exp(2sigma)H0, M(x)=exp(4sigma)M0, g(x)=exp(2sigma)g0.",
+    "recovery_proof": "For smooth periodic fields on4D, centered bond difference is a h_e.grad f+O(a^3). Riemann sums give native energy -> integral exp(2sigma) gradf.H0.gradf and mass -> integral M0 exp(4sigma)|f|^2. Harmonicity minimizes the frozen cell energy. The displayed one-coordinate periodic recovery sequence has O(a^2) energy error. This is a genuine inhomogeneous native consistency/recovery calculation, not a proved full spectral/heat-trace convergence theorem.",
+    "curvature_identity": "In4D, R[g]=exp(-2sigma)(-6 Delta_g0 sigma-6|grad sigma|g0^2). Periodic integration yields integral sqrt(g)R=6 integral exp(2sigma) grad sigma.H0.grad sigma. The native6E[sigma] converges to this conformal curvature functional.",
+    "Einstein_boundary": "Choosing this particular conductance-gradient functional is extra dynamics. Euclidean Einstein action -integral sqrt(g)R/(16piG) is NEGATIVE along the conformal mode; positive native6E is not automatically the Einstein sign. No quantum determinant derivation, general10metric action, constraint closure, Lorentz signature, Newton/Lambda or selected spacinga follows.",
+    "prior": [
+      "11995 harmonic10weight chart",
+      "12009 required capacity and fixed-capacity counterexample",
+      "12019 constant native dispersion",
+      "11601 heat/metric density audit"
+    ]
+  },
+  "pass12024": {
+    "status": "PASS",
+    "charged_parameters": [
+      -0.10622740839975005,
+      -5.273670380805942,
+      -0.2970894096517852,
+      0.09981283193449943,
+      0.047304516697719255,
+      11.311933268217096,
+      7.5998672172559365,
+      -2.134212736256183,
+      -7.4594211092695595,
+      -11.772460308016756,
+      12.707248708341723
+    ],
+    "charged_max_log_residual": 3.358658174097031e-12,
+    "neutrino_parameters": [
+      0.0028035410901820846,
+      -0.45641157790330095,
+      0.7446914443771556,
+      -0.709855422188644,
+      0.05441203781211141
+    ],
+    "neutrino_observables": [
+      0.3040000000017937,
+      0.5729999999936434,
+      0.02218999999992191,
+      0.02954998008768903
+    ],
+    "neutrino_max_log_residual": 1.109345948441856e-11,
+    "threshold_refits": [
+      {
+        "mu_GeV": -1000.0,
+        "leading_SQCD_delta": -0.03570828986501888,
+        "scale_GeV": 719999476.7870967,
+        "max_log_residual": 1.359204618142113e-12,
+        "parameters": [
+          -0.09993452040066297,
+          -5.2899247066890815,
+          -0.27200112136596977,
+          0.10113299757630233,
+          0.050308658085639744,
+          11.278735199527786,
+          7.338257320942085,
+          -2.211812520878493,
+          -7.886771074005545,
+          -11.920388683312021,
+          15.881842120365585
+        ]
+      },
+      {
+        "mu_GeV": 0.0,
+        "leading_SQCD_delta": 0.0,
+        "scale_GeV": 138321793.52879703,
+        "max_log_residual": 1.1902256957725621e-11,
+        "parameters": [
+          -0.10313316187251484,
+          -5.281686446668213,
+          -0.2861766568380655,
+          0.10036125311675127,
+          0.048693894679277754,
+          11.295290598424943,
+          7.474123257340559,
+          -2.173400809317587,
+          -7.644723648851348,
+          -11.850892318880101,
+          14.232174442849503
+        ]
+      },
+      {
+        "mu_GeV": 1000.0,
+        "leading_SQCD_delta": 0.03570828986501888,
+        "scale_GeV": 30103970.498366106,
+        "max_log_residual": 2.4321317812384523e-12,
+        "parameters": [
+          -0.10622740840020342,
+          -5.273670380806903,
+          -0.2970894096549392,
+          0.09981283193429345,
+          0.04730451669754996,
+          11.311933268247515,
+          7.599867217253245,
+          -2.13421273622724,
+          -7.45942110918893,
+          -11.772460308125593,
+          12.707248708340495
+        ]
+      }
+    ],
+    "inventory": "SM below Ms=2TeV; MSSM above. Supplied DR-like soft benchmark: allQ2.5TeV, alluR2.4TeV, alldR2.2TeV, allL/eR2TeV, M1=1.5TeV,M2=1.6TeV,M3=2TeV, mu=1TeV, heavyHiggs2TeV, tanbeta10, A=0 at matching. These are running input masses, not a solved SUSY/EW vacuum or measured pole spectrum.",
+    "matching": "At Ms: Yu_MSSM=Yu_SM/sinbeta, Yd_MSSM=Yd_SM/[cosbeta(1+Delta_g)], Ye_MSSM=Ye_SM/cosbeta; Delta_g=2alpha_s/(3pi)M3 mu tanbeta I(mQ2,mdR2,M32). I(a,b,c)=integral_0^infty q dq/[(q+a)(q+b)(q+c)]. Included leading tanbeta-enhancedSQCD term is calculated from this spectrum, not an arbitrarydelta.",
+    "neutrino": "One-loop C5 shape in charged eigenbasis: q_i=+y_i^2/(16pi2) aboveMs and -3y_i^2/(32pi2) belowMs. Universal factor and sinbeta^2 matching absorbed into suppliedDelta31. Four oscillation comparisons rematched; five real shapes remain underdetermined.",
+    "scope": "Fifteen fitted comparisons in a declared piecewise one-loop SM/MSSM benchmark with a calculated dominant finite SQCD correction. Omitted finite EW/Higgs/top/lepton and scheme conversion terms, higher loops and full nonuniversal thresholds prevent calling this complete precision MSSM matching. mu=0 row is an algebraic zero-threshold control, not a physical heavy-Higgsino benchmark. Full softRG, Higgs potential, messenger-to-low spectrum, UV unification and vacuum/scale selection remain open.",
+    "prior": [
+      "12011 SM branch",
+      "12016 arbitrary threshold sensitivity and C5 shape",
+      "hep-ph/9709356 MSSM beta functions",
+      "1411.7035 complete thresholds and limitations of dominant approximation"
+    ]
+  },
+  "pass12025": {
+    "status": "PASS",
+    "closed_native_loop": [
+      [
+        -0.12,
+        -0.1
+      ],
+      [
+        0.12,
+        -0.1
+      ],
+      [
+        0.12,
+        0.1
+      ],
+      [
+        -0.12,
+        0.1
+      ],
+      [
+        -0.12,
+        -0.1
+      ]
+    ],
+    "connection_integral": 0.00011400923022118412,
+    "transport": [
+      {
+        "segments_per_side": 8,
+        "phase": 0.00011396447682036722,
+        "unitarity_error": 8.995819826956791e-14,
+        "projector_intertwining_error": 5.768656599029717e-14,
+        "sampled_min_kernel_gap": 0.69356892449649,
+        "sampled_min_reference_overlap": 0.24119114016208404,
+        "phase_error": -4.475340081690009e-08
+      },
+      {
+        "segments_per_side": 16,
+        "phase": 0.0001139980887157608,
+        "unitarity_error": 1.3010788031227072e-13,
+        "projector_intertwining_error": 8.583207610805992e-14,
+        "sampled_min_kernel_gap": 0.69356892449649,
+        "sampled_min_reference_overlap": 0.24119114016208404,
+        "phase_error": -1.1141505423315607e-08
+      },
+      {
+        "segments_per_side": 32,
+        "phase": 0.0001140064477805123,
+        "unitarity_error": 2.2491953085026386e-13,
+        "projector_intertwining_error": 1.8237802321737728e-13,
+        "sampled_min_kernel_gap": 0.69356892449649,
+        "sampled_min_reference_overlap": 0.24119114016208404,
+        "phase_error": -2.782440671814904e-09
+      }
+    ],
+    "reverse_phase": -0.00011399808871476678,
+    "frame_gauge_equivariance_error": 1.1824071363295916e-14,
+    "reference_representation_determinant_real_imag": [
+      0.9999999999999951,
+      1.3964523981613238e-16
+    ],
+    "current": "L_eta=(i/2)Tr[(E dag P E)^-1 E dag [P,delta_eta P] E]. deltaP uses the exact spectral Frechet divided difference of the sign/projector, with deltaWilson built by actual ordered native-word derivatives and wedge2 product differentiation. This implements the local current, not only its curvature.",
+    "loop_identity": "For the displayed closed native-edge rectangle, exp(i integral L) agrees under refinement with det(1-P0+P0 Q_Kato). Q_Kato is approximated independently by products of full60D polar direct rotations between successive projectors. Loop reversal inverts the phase.",
+    "equivariance": "On this one-cell simultaneous-root-conjugation domain, F(Ug)=R(g)F(U)R_E(g)dag and detR_E(g)=1. This is finite-patch equivariance, not an allvolume locality proof or a complete gauge Ward identity.",
+    "native_pullback": "For any admissible coarse current Lc, Phi*Lc acts on native links by the full ordered-word differential. Bounded words preserve finite support up to their bounded graph paths; the tree/Kato terms of12002 are still required for the enlarged native regulator.",
+    "scope": "Actual finite-patch current and closed-loop reconstruction check. The loop is contractible and remains inside one reference-frame patch. No assertion about noncontractible loops, all topological components, uniform volume/admissibility/locality bounds or implemented Craig refinement series. Thus a global native chiral measure remains open.",
+    "prior": [
+      "12020 local curvature and native differential",
+      "12002 bounded tree/heavy-sector determinant lines",
+      "2610.09093v1 equations51-54 andAppendixE finite-truncation caveat"
+    ]
+  }
+}
