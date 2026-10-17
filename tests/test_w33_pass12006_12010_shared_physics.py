@@ -136,3 +136,14 @@ def test_SM_inventory_anomaly_cancellation_and_missing_lepton_control():
     assert 2-1-1==2*1-4+2==3*1-3==0
     assert 3*sum(d for d,q in charges)==48 and (3*(3+1))%2==0
     assert sum(d*q for d,q in charges if (d,q)!=(2,-3))!=0
+
+
+def test_densitized_GL4_action_and_natural_scale_gate():
+    H=np.array([[2,.2,.1,0],[.2,3,.3,.1],[.1,.3,2,.2],[0,.1,.2,4]])
+    T=np.array([[2,1,0,0],[0,1,1,0],[0,0,1,1],[0,0,0,1.]])
+    Ti=np.linalg.inv(T);jac=abs(np.linalg.det(T));M,G=density.geometric(H)
+    Mp,Gp=density.geometric(jac*Ti@H@Ti.T)
+    assert abs(Mp-jac*M)<1e-11 and np.max(abs(Gp-Ti@G@Ti.T))<1e-12
+    for scale in [.3,2.,5.]:
+        Ms,Gs=density.geometric(scale*H)
+        assert abs(Ms-scale**2*M)<1e-10 and np.max(abs(Gs-G/scale))<1e-12

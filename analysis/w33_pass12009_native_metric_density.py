@@ -26,6 +26,12 @@ def payload():
     # Exact4D densitization inverse including all ten non-diagonal entries.
     H=s.Matrix([[2,s.Rational(1,5),0,s.Rational(1,7)],[s.Rational(1,5),3,s.Rational(1,8),0],[0,s.Rational(1,8),4,s.Rational(1,9)],[s.Rational(1,7),0,s.Rational(1,9),5]])
     cap=s.sqrt(H.det());G=H/cap;assert s.simplify(G.det()*cap**2)==1
+    # Densitizedtensor action undera realcoordinatechange x=T xprime.
+    # detT factor isessential: H isadensity, notjustaninversetensor.
+    change=s.Matrix([[2,1,0,0],[0,1,1,0],[0,0,1,1],[0,0,0,1]])
+    jac=abs(change.det());transformed=jac*change.inv()*H*change.T.inv();capprime=s.sqrt(transformed.det())
+    assert s.simplify(capprime-jac*cap)==0
+    assert (transformed/capprime-change.inv()*G*change.T.inv()).applyfunc(s.simplify)==s.zeros(4)
     # Nativefixedmass versus covariantcapacity: conformal exact operator.
     x=s.symbols('x',real=True);sigma=s.Function('sigma')(x);f=s.Function('f')(x);mu=s.exp(-4*sigma);half=s.sqrt(mu)
     fixed=-s.diff(s.exp(2*sigma)*s.diff(half*f,x),x)/half
@@ -35,7 +41,7 @@ def payload():
     # On the periodic conformal test, integrateda2_fixed=-3I but R/6=+I.
     eps=.12;I=float((2*np.pi)**3*np.pi*eps*iv(1,2*eps));assert I>0
     return dict(status='PASS',native_cell_sites=27,conductance_edges=135,native_capacity_lifts=rows,
-        d4_capacity='M=sqrt(det H)',d4_inverse_metric='G=H/sqrt(det H)',exact_general_d='For d!=2: M=(det H)^(1/(d-2)), G=H/M, sqrt(det g)=M; H=sqrt(g)g^-1. d=2 requiresdetH=1 and leavesa conformalscaleundetermined.',
+        coordinate_group_action='GL(4,R) acts onconductancedensities byHprime=|detT| T^-1 H T^-T, Mprime=|detT|M andGprime=T^-1 G T^-T forx=T xprime. NativeGL(4,Z)unimodularmarkingchanges preserveM. Thesearecoordinate/markingactions, not newphysicalglobalsymmetries oradditionalgraphautomorphisms.',natural_units_gate='Graphweights,decklabels anddisplayedmetric ratiosaredimensionless. Withphysicalcellspacinga, Laplacianeigenvalues andscalarcurvature scaleasa^-2. Settinghbar=c=1 isaconvention; cutoffa^-1,Newtoncoupling/cosmologicalconstant andconversionofclockticktophysicaltime remaininputs. No dimensionalconstantispredictedbycounts. UnderH->lambdaH in4D, M->lambda²M andG->lambda^-1G, so theunfixedoverallscale isexplicit.',d4_capacity='M=sqrt(det H)',d4_inverse_metric='G=H/sqrt(det H)',exact_general_d='For d!=2: M=(det H)^(1/(d-2)), G=H/M, sqrt(det g)=M; H=sqrt(g)g^-1. d=2 requiresdetH=1 and leavesa conformalscaleundetermined.',
         native_action='Euclidean4DscalarDirichletaction=1/2 sum_edges w_e|delta_e phi|²; innerproduct=sum_vertices M(w)|phi|² with27sitespercell. Generalizedoperator M^-1L haslongwavelengthsymbolG=H/M andmeasureM. Noextra continuoustime isadded; Lorentzinterpretation andsmoothlimit remaininputs.',
         density_repair='Unitnativecapacities andvariableH give a weightedmetricoperator, not automatically pureLaplaceBeltrami. A halfdensitymap to sqrt(g)dx creates scalarV. Capacities M=sqrt(detH) complete thegeometricDirichletform in4D.',
         conformal_fixed_capacity={'H':'exp(2sigma) I4','metric':'g=exp(-2sigma)I4','geometric_measure':'exp(-4sigma)dx','extra_scalar_V':'2 exp(2sigma) sigma_xx','scalar_curvature':'6exp(2sigma)(sigma_xx-sigma_x²)','integrated_R_over6':I,'integrated_a2_fixed_unit_capacity':-3*I,'integrated_extra_V':4*I,'epsilon':eps},

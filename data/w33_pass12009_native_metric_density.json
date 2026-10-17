@@ -68,6 +68,8 @@
       "local_metric_error": 4.440892098500626e-16
     }
   ],
+  "coordinate_group_action": "GL(4,R) acts onconductancedensities byHprime=|detT| T^-1 H T^-T, Mprime=|detT|M andGprime=T^-1 G T^-T forx=T xprime. NativeGL(4,Z)unimodularmarkingchanges preserveM. Thesearecoordinate/markingactions, not newphysicalglobalsymmetries oradditionalgraphautomorphisms.",
+  "natural_units_gate": "Graphweights,decklabels anddisplayedmetric ratiosaredimensionless. Withphysicalcellspacinga, Laplacianeigenvalues andscalarcurvature scaleasa^-2. Settinghbar=c=1 isaconvention; cutoffa^-1,Newtoncoupling/cosmologicalconstant andconversionofclockticktophysicaltime remaininputs. No dimensionalconstantispredictedbycounts. UnderH->lambdaH in4D, M->lambda\u00b2M andG->lambda^-1G, so theunfixedoverallscale isexplicit.",
   "d4_capacity": "M=sqrt(det H)",
   "d4_inverse_metric": "G=H/sqrt(det H)",
   "exact_general_d": "For d!=2: M=(det H)^(1/(d-2)), G=H/M, sqrt(det g)=M; H=sqrt(g)g^-1. d=2 requiresdetH=1 and leavesa conformalscaleundetermined.",

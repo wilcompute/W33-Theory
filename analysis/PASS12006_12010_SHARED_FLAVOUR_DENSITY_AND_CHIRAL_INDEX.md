@@ -134,6 +134,12 @@ Thus a curvature interpretation can even get the sign wrong if capacity/measure 
 
 With a supplied smooth covariant continuum limit, the repaired Laplace–Beltrami heat coefficient has the usual R/6 term. A quantum determinant or spectral action also generates a cosmological term and higher-curvature terms. Neither its continuum limit, regulator moments, Einstein coefficient, Lorentz sign nor cancellation of other terms has been derived. Conditional EH through this invertible chart inherits the old continuum ADM algebra; the finite pointwise11976 bracket obstruction is unchanged. This repairs a prerequisite for a gravity derivation, not the derivation itself.
 
+### Units and the actual coordinate-group action
+
+For a real coordinate change `x=T xprime`, the conductance **density** transforms as `Hprime=|detT| T^-1 H T^-T`. The capacity then transforms as `Mprime=|detT|M`, and `Gprime=T^-1 G T^-T`. Exact rational matrix checks and a non-unimodular control verify this GL(4,R) action. The native GL(4,Z) subgroup redescribes integral deck markings and preserves M; it is not automatically an isometry of the graph or a new physical global symmetry. Omitting the determinant factor would conflate an inverse tensor with a density.
+
+Native weights and labels are dimensionless. Introducing physical spacing a gives eigenvalues and curvature dimensions a^-2. In four dimensions `H->lambda H` gives `M->lambda² M` and `G->lambda^-1 G`, exposing the unfixed scale. Setting hbar=c=1 fixes units; it does not determine a, Newton's constant, the cosmological constant or the physical duration of a clock tick. A predicted physical constant requires an invariant dimensionless combination and a derived scale-setting mechanism.
+
 ##12010 — Non-Abelian transport on literal native edges and a nonzero native-path index
 
 The clock-adapted periods are `T0=e4`, `T1=e1−3e4`, `T2=e2`, `T3=e3−2e4`. Assign a primitive e1 pivot the ordered product `U1(x) U0(x+e1) U0(x+e1+e0) U0(x+e1+2e0)`, and analogously dress e3 with two clock factors. e2 and e4 receive U2 and U0. Tree edges are identity. The compiled native period words cancel the clock tails in reverse order, yielding **any prescribed coarse SU3 links**, including noncommuting ones. No Abelian rearrangement of factors is used.
