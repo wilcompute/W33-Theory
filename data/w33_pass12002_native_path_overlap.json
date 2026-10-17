@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "native_cells_tested": 4,
+  "native_vertices_tested": 108,
+  "Dirac_dimension_tested": 432,
+  "cell_tree_edge_count": 26,
+  "primitive_period_words": "12000 nativefourperiodloops in actualclockalignedunimodularbasis",
+  "maximum_native_hopping_range": 23,
+  "optical_coefficient": 2916,
+  "tree_maximum_degree": 10,
+  "exact_tree_gap_lower": "1/729",
+  "exact_optical_mass_gap_lower": 3,
+  "exact_free_acoustic_Wilson_gap_lower": 1,
+  "exact_free_Wilson_norm_upper": 7,
+  "exact_free_identity": "Q4(k)^2=[1+2 sum_(mu<nu) r_mu r_nu]I4, r_mu=1-cos(k_mu) in[0,2]. Valid for ALL momenta and ALL periodic volumes.",
+  "full_operator_norm_upper": 58327,
+  "native_link_phase_perturbation_coefficient": 58504,
+  "uniform_native_weak_phase_radius_charge1": 4.273212088062355e-06,
+  "uniform_native_weak_phase_radius_maxcharge6": 7.122020146770592e-07,
+  "uniform_weak_field_gap_lower": ".75",
+  "native_tensor_factorization_error": 3.637978807094064e-12,
+  "heavy_endpoint_projector_error": 6.255348777176713e-16,
+  "heavy_frame_gauge_covariance_error": 1.665590122177129e-15,
+  "numerical_heavy_homotopy_gap": 293.57582008850653,
+  "exact_native_operator": "DW_path=DW4(T_mu_native_paths)+kappa L_zero_voltage_cell_tree. Treeparalleltransportwithin each27cell conjugates this EXACTLY to DW4(U_mu_rootloops) tensor I27 +kappa Ispin,cell tensor Ltree. Every term is boundedrange inoriginalnativecover.",
+  "heavy_measure": "Everypositive Ltree eigenmode has ReDW>=kappalambda-1>=3 forallU1links. HomotopeDW(t)=(kappalambda-1)I+t DW_mass0. Its startprojector isONSITE gamma5, commutingwith everygaugeaction. Kato transport gives a globallysmooth gaugecovariant heavyframe; unlike a freehoppingreference, no spatiallynonlocalgaugefix is needed.",
+  "locality": "NativehoprangeR, normM anduniformgap give sign-projector polynomialtails withr=1-g\u00b2/M\u00b2<1, hencevolumeindependent exponentialdecay. The heavyKato generator and finite-homotopy transport retain quasilocality. Bounds are conservative andmaygive averylonglocalitylength.",
+  "conditional_Abelian_measure": "The soleacousticblock is exactly a standardcoarse4D Wilson/overlap operator. With suppliedanomalyfreeintegercharges and ALLrequiredadmissibility/locality/globalsector hypotheses ofLuscher, itsknownAbelianmeasure theorem plus explicittrivialheavyblocks pullsback throughboundednativepaths/celltree. This is an existence reduction, not an implementednumericalLuscher acousticcurrent. NonAbelianSMmeasure remainsopen.",
+  "regulator_change": "Thisis a newpath/tree regulator, NOT a proof ofallmomentumgap/locality for11991 originalnearestedge currentkernel. It selects a tree andfourcycles, breaks canonicity anduseslargeopticalcoupling; the oldboundary ispreserved.",
+  "prior": [
+    "11991 selectednative4periodquotient",
+    "12000 explicitnativecyclecompiler",
+    "11519 standardWilsonuniformgap andrelativeprojectorcurrent/locality",
+    "11984 distinctsuppliedT4hybridopticaldecoupling",
+    "11997 nonlocalglobaltreeframe andfinitecellgap"
+  ],
+  "primary": [
+    "https://arxiv.org/abs/hep-lat/9808010",
+    "https://arxiv.org/abs/hep-lat/9811032"
+  ]
+}

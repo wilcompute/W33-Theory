@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "up_height": 0.8744698731421595,
+  "up_imaginary_entangler": 0.005520606513514881,
+  "down_height": 0.4315140195185126,
+  "down_imaginary_entangler": 0.08087153936666885,
+  "down_imaginary_Wilson_argument": 0.0677453432123109,
+  "fitted_B_over_mu": [
+    [
+      6.942570225348479,
+      0.0
+    ],
+    [
+      6.847783916520845,
+      -8.247969957747468
+    ],
+    [
+      -0.44792758573762237,
+      -13.009011874237432
+    ]
+  ],
+  "real_bare_up": [
+    [
+      -0.7807001771289844,
+      0.29257521045545964,
+      -0.2925752104554595
+    ],
+    [
+      -0.29257521045545964,
+      0.10780779782561004,
+      -0.11149254637537742
+    ],
+    [
+      0.2925752104554595,
+      -0.1114925463753774,
+      0.10780779782560992
+    ]
+  ],
+  "real_bare_down": [
+    [
+      0.5530012516271147,
+      0.4150782424429361,
+      0.5436007697493586
+    ],
+    [
+      0.21571497674532733,
+      0.17461061643463285,
+      0.24056318283207162
+    ],
+    [
+      -0.20142558924486367,
+      -0.1452256772465804,
+      -0.17275023196698744
+    ]
+  ],
+  "matched_quark_observables": {
+    "mc_mt": 0.0036847735647212707,
+    "mu_mc": 0.001983870967740563,
+    "ms_mb": 0.018531468531454265,
+    "md_ms": 0.050377358490717575,
+    "Vus": 0.22499999999883638,
+    "Vcb": 0.0411000000000841,
+    "Vub": 0.003820000000013509,
+    "J": 3.0800000000011374e-05
+  },
+  "supplied_quark_comparators": {
+    "mc_mt": 0.0036847735647212647,
+    "mu_mc": 0.0019838709677419356,
+    "ms_mb": 0.01853146853146853,
+    "md_ms": 0.05037735849056604,
+    "Vus": 0.225,
+    "Vcb": 0.0411,
+    "Vub": 0.00382,
+    "J": 3.08e-05
+  },
+  "bare_no_B_observables": {
+    "mc_mt": 0.0036847735647212707,
+    "mu_mc": 0.001983870967740563,
+    "ms_mb": 0.02711105083810874,
+    "md_ms": 0.11341925514233761,
+    "Vus": 0.04962438778693143,
+    "Vcb": 0.04586477417701144,
+    "Vub": 0.00589022895770785,
+    "J": 0.0
+  },
+  "CP_partner_J": -3.0800000000011374e-05,
+  "real_B_J": 0.0,
+  "max_relative_comparator_error": 5.171640893308904e-12,
+  "rank_one_defect_eigenvalues": [
+    -1.0302660239641323e-12,
+    -1.769544156035458e-15,
+    0.9970019978391036
+  ],
+  "right_metric_eigenvalues": [
+    0.0029980021608192187,
+    0.9999999999999994,
+    1.0
+  ],
+  "finite_heavy_scale_controls": [
+    {
+      "mu": 10.0,
+      "light_singular_values": [
+        0.6411328723641297,
+        0.01188123801260673,
+        0.0005985453977475664
+      ],
+      "max_relative_spectrum_error": 8.80415346504737e-06,
+      "left_mixing_nonunitarity": 1.765235550425988e-05,
+      "determinant_real": 0.0008327117618169381,
+      "determinant_imag": -6.471470395917408e-18
+    },
+    {
+      "mu": 100.0,
+      "light_singular_values": [
+        0.6411384605989533,
+        0.01188123825053381,
+        0.0005985453987617902
+      ],
+      "max_relative_spectrum_error": 8.804193074585243e-08,
+      "left_mixing_nonunitarity": 1.7652234337974162e-07,
+      "determinant_real": 0.008327117618169297,
+      "determinant_imag": 6.332796030290541e-17
+    },
+    {
+      "mu": 1000.0,
+      "light_singular_values": [
+        0.6411385164821302,
+        0.011881238252885076,
+        0.0005985453988224907
+      ],
+      "max_relative_spectrum_error": 8.795228989555426e-10,
+      "left_mixing_nonunitarity": 1.7652224720532137e-09,
+      "determinant_real": 0.0832711761816929,
+      "determinant_imag": -1.4006110928306807e-15
+    }
+  ],
+  "theta_cutoff_12_20_errors": [
+    0.0,
+    0.0
+  ],
+  "exact_tree_mass_identity": "det[[m,0],[B,mu]]=mu det(m)>0; real positive-det up matrix. In an independently supplied CP-adapted UV theta3=0 branch, mass-sector tree theta is0.",
+  "phase_convention": "Holomorphic left-SVD comparator convention of11942, Jpositive. Conjugating the entire physical mass convention flips J; conjugate B restores positiveJ in the Weyl convention. Common left thetaCP phase diag(exp(i*pi*a\u00b2/3)) is removed from both sectors. Anomalous rephasings must also transform theta3; this is not a proof the UV gauge angle iszero in the original theta coordinates.",
+  "criterion": "For FIXED invertible real barem and desired positiveH, one Barr row exists iff C=I-m^-1 H m^-T is positive semidefinite, rank<=1, and lambda_max(C)<1. If C=c cdag, Bdag/mu=c/sqrt(1-cdag c). Forr rows replace rank<=1 by rank<=r. This is standardSchur matching, applied here to a constrained thetafamily.",
+  "fit_scope": "Eight supplied quark comparators are fitted, not predicted. Up2parameters solve its2ratios; down3theta parameters and5realBarr parameters fit6downobservables. Overallup/down Yukawa scales supplied. No global uniqueness or naturalness.",
+  "physics_boundary": "Compatibility of bareCP-real theta family plus one complexvectorlike row at the heavy-decoupling limit, with finite-scalecontrols. Doesnot preserve11942 old lepton predictions automatically: commonSU5 mixingmustbe reapplied. No modulus/flavon vacuum selection, H27 alignment, E6-toSM completion, upperblock protection, RG running or radiative theta protection. Barefit failure alone isnot an exclusion oftheextendedmodel.",
+  "prior": [
+    "11942 theta homes andsuppliedcomparators",
+    "11951 generalBarrinverse andSchurmatching; herebaremrestrictedtothetafamily",
+    "11955 commonSU5down/leptonmatching",
+    "11989 fitsfreebarem toactualCPvacuum; heretheta m retained",
+    "12004 Claude bareCPthetafit exploratorycontext, not a certifiedgeneralno-go",
+    "12001 radialthreshold protectionboundary"
+  ],
+  "primary": [
+    "https://arxiv.org/abs/2103.04798",
+    "https://doi.org/10.1140/epjc/s10052-018-6388-6"
+  ]
+}

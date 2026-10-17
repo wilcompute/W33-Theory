@@ -1,0 +1,357 @@
+{
+  "status": "PASS",
+  "cubic_monomial_exponents": [
+    [
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ]
+  ],
+  "multinomial_normalizations": [
+    1,
+    3,
+    3,
+    1,
+    3,
+    6,
+    3,
+    3,
+    3,
+    1
+  ],
+  "symmetric_square_dimension": 55,
+  "sextic_image_rank": 28,
+  "kernel_irrep": "SU3(2,2), dimension27",
+  "H27_invariant_mass_space_in_kernel_dimension": 3,
+  "explicit_integer_mass_N": [
+    [
+      0,
+      0,
+      0,
+      6,
+      0,
+      6,
+      0,
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      0,
+      -6,
+      0,
+      -6,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -6,
+      0,
+      0,
+      0,
+      0,
+      -6,
+      1,
+      0,
+      0
+    ],
+    [
+      6,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      -6,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -6,
+      0,
+      0
+    ],
+    [
+      6,
+      0,
+      0,
+      6,
+      0,
+      -6,
+      0,
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      0,
+      -6,
+      0,
+      1,
+      0,
+      0,
+      0,
+      -6,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      -6,
+      0,
+      0,
+      0,
+      -6,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      -6,
+      -6,
+      0,
+      0
+    ],
+    [
+      6,
+      0,
+      0,
+      6,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "exact_determinant_N": "1882576080",
+  "physical_mass_normalization": "M=diag(mult)^-1/2 N diag(mult)^-1/2 in orthonormal Sym\u00b33 coordinates",
+  "physical_mass_matrix": [
+    [
+      "0",
+      "0",
+      "0",
+      "6",
+      "0",
+      "sqrt(6)",
+      "0",
+      "0",
+      "0",
+      "6"
+    ],
+    [
+      "0",
+      "0",
+      "-2",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "1/3",
+      "0"
+    ],
+    [
+      "0",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-2",
+      "1/3",
+      "0",
+      "0"
+    ],
+    [
+      "6",
+      "0",
+      "0",
+      "0",
+      "0",
+      "sqrt(6)",
+      "0",
+      "0",
+      "0",
+      "6"
+    ],
+    [
+      "0",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/3",
+      "-2",
+      "0",
+      "0"
+    ],
+    [
+      "sqrt(6)",
+      "0",
+      "0",
+      "sqrt(6)",
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "sqrt(6)"
+    ],
+    [
+      "0",
+      "0",
+      "-2",
+      "0",
+      "1/3",
+      "0",
+      "0",
+      "0",
+      "-2",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1/3",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "-2",
+      "0"
+    ],
+    [
+      "0",
+      "1/3",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-2",
+      "-2",
+      "0",
+      "0"
+    ],
+    [
+      "6",
+      "0",
+      "0",
+      "6",
+      "0",
+      "sqrt(6)",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "physical_mass_singular_values": [
+    13.262087348130011,
+    6.000000000000001,
+    5.999999999999999,
+    3.6666666666666665,
+    3.666666666666666,
+    2.3333333333333335,
+    2.3333333333333335,
+    2.333333333333333,
+    2.333333333333332,
+    2.262087348130011
+  ],
+  "exact_mass_rank": 10,
+  "exact_continuous_SU3_breaking_rank": 8,
+  "retained_finite_subgroup": "Standard actual family X,Z Heisenberg image H27 is preserved, including its center. Full finite stabilizer not identified.",
+  "renormalizable_operator": "y chi_bar10^T Phi_27 chi_bar10/2; Phi27 is the kernel component ofSym\u00b210. It is an E6 singlet and center-trivial, hence legal for(E6xSU3)/Z3. No E6-charged mirror added.",
+  "anomaly": "Prior(27,3)+(1,bar10) has27-27=0 continuousfamilySU3 cubic anomaly. The newscalar27 doesnotchange it; spectator massdoesnotpermitdroppingthresholdWessZumino terms.",
+  "nonsupersymmetric_running": {
+    "prior_no_mass_scalar": "-15/2",
+    "new_one_complex27": "-33/2",
+    "prior_one_complex28": "-57/2",
+    "T27": 27,
+    "real_scalar_components_new": 54,
+    "real_scalar_components_prior28": 56
+  },
+  "optional_SUSY_vacuum": "Separate N=1 extension: independent Phi27 and dualPhiBar27, singlet X, W=X(PhiBar.Phi-v\u00b2)+y chi chi Phi/2. Set chi=0,X=0,Phi=M,PhiBar=M*,v\u00b2=||M||\u00b2. AllF=0 and pairD=0 exactly. SU3Lie stabilizer0. This is a global zero-energy SUSY branch, not its selection or a soft/hidden/E6 completion.",
+  "optional_SUSY_mass_sector_flat_complex_moduli": 45,
+  "U3_boundary": "Only theSU3 subgroup is gauged. IdentifyingthecentralU1 oftheatlasU3 asgauged addsSU3\u00b2U1,U1\u00b3 andgravityU1 constraints notcancelledbythisinventory.",
+  "physics_boundary": "A specified orientation and massYukawa, not a fullstableE6-toSM flavourvacuum. The optionalSUSYpair changesinventory/running and leaves45complexmass-sectorflatmoduli, excluding the original massless matter directions. No spectator massscale, observedYukawas, discrete/global anomalycompletion or RGUVsolution.",
+  "prior": [
+    "analysis/w33_20261001_chiral_decuplet_and_condensate_bridge.py anomalyowner",
+    "11613 anomaly spectator minimality",
+    "11271 Sym\u00b2bar10 symmetricmass rule and elementary28 channel",
+    "11276 sextetcomposite mass and WZ boundary",
+    "11602_11606 spectator_residual_symmetry H27-preserving28 andrunning cost",
+    "11998 actualU3 reduction andchargedfamilyinterpretation boundary"
+  ],
+  "primary": [
+    "https://doi.org/10.1103/PhysRevD.110.045026"
+  ]
+}

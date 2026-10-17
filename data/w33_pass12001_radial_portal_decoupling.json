@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "radial_scan": [
+    {
+      "radial_mass_over_supplied_flavour_scale": 0.0,
+      "theta": -0.0001546355612391545,
+      "CP_partner_theta": 0.0001546355612391545,
+      "minimum_scalar_mass_squared": 0.4244856439358845
+    },
+    {
+      "radial_mass_over_supplied_flavour_scale": 1.0,
+      "theta": -0.00015360321906318912,
+      "CP_partner_theta": 0.00015360321906318912,
+      "minimum_scalar_mass_squared": 0.42448567385397584
+    },
+    {
+      "radial_mass_over_supplied_flavour_scale": 10.0,
+      "theta": -9.613487052459605e-05,
+      "CP_partner_theta": 9.613487052459605e-05,
+      "minimum_scalar_mass_squared": 0.42448702857907494
+    },
+    {
+      "radial_mass_over_supplied_flavour_scale": 100.0,
+      "theta": -3.879005867950888e-06,
+      "CP_partner_theta": 3.879005867950888e-06,
+      "minimum_scalar_mass_squared": 0.42448817440334435
+    },
+    {
+      "radial_mass_over_supplied_flavour_scale": 1000.0,
+      "theta": -4.4334935061119286e-08,
+      "CP_partner_theta": 4.4334935061119286e-08,
+      "minimum_scalar_mass_squared": 0.4244881955137298
+    },
+    {
+      "radial_mass_over_supplied_flavour_scale": 10000.0,
+      "theta": -4.453297457426603e-10,
+      "CP_partner_theta": 4.453297457426603e-10,
+      "minimum_scalar_mass_squared": 0.42448819220704276
+    }
+  ],
+  "strict_fixed_norm_theta": -2.154038666185576e-16,
+  "exact_decoupling_argument": "On |h|\u00b2=n0, the supplied radial Higgsportal is constant in all angular fields. Scalar eigenstates no longer mix YH with lower-row flavour vertices. For arbitrary real loop spectral F=Fdag, Tr(M^-1 YH F Mdag YH)=Tr(F11 mT m) is real. Every pure-flavour correction changes only B and has zero determinant trace. Therefore this specified one-loop neutral-scalar theta vanishes exactly in the strict constraint EFT.",
+  "supplied_positive_radial_stiffness": "DeltaV=MR\u00b2 (|h|\u00b2-n0)\u00b2/(8n0); adds MR\u00b2 rrT to Hessian, preserves theactualroot and improves stability.",
+  "internal_symmetry_gate": "For every unitarylinear internalrepresentation h->Uh, hdagh is invariant; HdagH hdagh cannot be forbidden by such a symmetry. The repair changes the field manifold/UV dynamics, not an internalcharge assignment.",
+  "physical_limit": "The largeMR/vf hierarchy is supplied. As an elementaryquartic this would become nonperturbative; a nonlinear sigma/composite UV completion and matching of allowed nonradial/higherdimensionportals are required. This is not technicallynatural fullstrongCP protection.",
+  "scope": "Actual11996 neutral-scalar19D threshold channel and its fixed-norm limit, not all72scalar/gauge/gluino/tadpole/twoloop corrections, a fullE6 vacuum or measuredparameterprediction.",
+  "prior": [
+    "11996 actualboundedjointvacuum,realC andportal threshold",
+    "11954 B0 neutral-scalar matching",
+    "11298/11303/11313 earlier portal andUVbarriers"
+  ],
+  "primary": [
+    "https://arxiv.org/abs/2105.09122"
+  ]
+}
