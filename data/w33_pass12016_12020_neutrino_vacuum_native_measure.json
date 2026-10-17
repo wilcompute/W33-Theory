@@ -1,0 +1,282 @@
+{
+  "status": "PASS",
+  "pass12016": {
+    "status": "PASS",
+    "neutrino_parameters": [
+      0.17949509395694016,
+      -0.4295888152402716,
+      0.9583199350202315,
+      -1.0661365699775118,
+      -0.37716229548993896
+    ],
+    "oscillation_targets": [
+      0.304,
+      0.573,
+      0.02219,
+      0.029549980087614496
+    ],
+    "matched": [
+      0.3040000000000702,
+      0.5729999999992619,
+      0.02218999999999165,
+      0.02954998008762123
+    ],
+    "details": {
+      "J": -0.008566645504405456,
+      "masses_eV": [
+        0.003680450884862114,
+        0.009367268476770548,
+        0.05024485763454686
+      ],
+      "PMNS_abs_squared": [
+        [
+          0.6805557599999376,
+          0.2972542400000712,
+          0.02218999999999165
+        ],
+        [
+          0.20413995233432988,
+          0.235574917666387,
+          0.560285129999283
+        ],
+        [
+          0.1153042876657329,
+          0.46717084233354184,
+          0.4175248700007253
+        ]
+      ]
+    },
+    "two_loop_minus_one_loop": [
+      4.399039688074424e-09,
+      5.584690143667359e-08,
+      -2.625598696792686e-11,
+      -1.5684608750676787e-09
+    ],
+    "threshold_refits": [
+      {
+        "universal_down_threshold": -0.01,
+        "scale_GeV": 5884134.773611771,
+        "parameters": [
+          -0.1208542050050236,
+          -5.23515143263499,
+          -0.11947562825911709,
+          0.11393975596744411,
+          0.045761345594730836,
+          11.600526637422385,
+          8.278339120534614,
+          -2.675437381425582,
+          -10.043872790086162,
+          -6.785041954224511,
+          11.074851342617782
+        ],
+        "max_log_residual": 5.9072746694080846e-12
+      },
+      {
+        "universal_down_threshold": 0.01,
+        "scale_GeV": 3026674.8759986595,
+        "parameters": [
+          -0.12141839297389598,
+          -5.233644907658275,
+          -0.145220548246858,
+          0.11207252623028831,
+          0.04496151260569801,
+          11.560297622300773,
+          8.318810911657287,
+          -2.5667776880535373,
+          -9.745048748099562,
+          -7.238424191037037,
+          10.410056251316108
+        ],
+        "max_log_residual": 3.3110490188789365e-12
+      }
+    ],
+    "shape_RGE": "C5 universal scalar factor removed. In charged eigenbasis P_i=y_i^2/(16pi2), q_i=-3P_i/2-[57gprime2/16-33g2^2/16-5T/4]P_i/(16pi2)+19P_i^2/4. Entrywise dCij/dlnmu=(qi+qj+2PiPj)Cij. Exact two-loop flavour-dependent C5 terms from2411.08011 eq24, evaluated on ONE-LOOP SM background.",
+    "scope": "Fifteen fitted comparisons on common12011 branch:11 charged/quark plus4 neutrino. Five real Majorana shapes fit4 constraints, so masses/J are witness values, not predictions. Universal C5 running absorbed into supplied Delta31 normalization. This is NOT a complete two-loop SM+BSM matching fit. Threshold deltas are supplied matching deformations, not computed heavy-particle threshold coefficients.",
+    "prior": [
+      "12007 real Majorana construction",
+      "12011 shared running branch",
+      "2411.08011 equations20-24"
+    ]
+  },
+  "pass12017": {
+    "status": "PASS",
+    "target_invariants": [
+      7.0,
+      21.0,
+      73.0,
+      10.999999999999996,
+      58.99999999999995,
+      370.9999999999995,
+      0.9493436780092799,
+      0.05063977244845157,
+      0.05050890017606374,
+      0.9475749932882077
+    ],
+    "weights": [
+      0.5773502691896258,
+      0.1091089451179962,
+      0.02017425108896008,
+      0.5773502691896258,
+      0.06509445549041196,
+      0.006689449592321655,
+      0.6861277014318803,
+      0.984961649029447,
+      0.6667853707544956,
+      1.564065239722423
+    ],
+    "normal_Hessian_eigenvalues": [
+      6.6415551604637635,
+      5.5158265537738504,
+      3.9874070772992107,
+      2.3703869393727452,
+      1.4112540225674401,
+      0.04552797832802106,
+      0.027887242652519743,
+      0.0001466654171249225,
+      8.253162137207683e-06,
+      1.0696318664003423e-07
+    ],
+    "positive_normal_modes": 10,
+    "symmetry_zero_modes": 8,
+    "orbit_annihilation_error": 2.2009714868783023e-16,
+    "potential": "V=mu0^4 sum_r w_r^2 (I_r(A,B)-c_r)^2; I=TrA^k,TrB^k k1..3 andTr(Pi(A)Qj(B)) i,j0,1 with Lagrange spectral polynomials degree2. CP-even, simultaneousU3 invariant, positive degree8 polynomial. c_r andw_r are supplied.",
+    "scope": "Explicit stable local orientation-flavon vacuum with observed CKM orbit and its conjugate at engineered target invariants. Auxiliary Hermitian spectra(1,2,4),(1,3,7) are supplied, not physical masses. Full18-field Hessian has10 positive normal directions and8 symmetry tangents. This does not dynamically derive coefficients, choose CP sign, stabilize theta moduli or construct a renormalizable UV potential. Prior11967 mixed-trace alignment obstruction is evaded by multiple higher-degree invariants, not contradicted.",
+    "prior": [
+      "11967 spectral-potential/alignment obstruction",
+      "11321/11326 explicit CP-breaking flavour potentials",
+      "12012 generic stabilizer"
+    ]
+  },
+  "pass12018": {
+    "gauge_mediation": {
+      "status": "PASS",
+      "messenger_GeV": 1000000.0,
+      "F_over_M_GeV": 200000.0,
+      "F_over_M2": 0.2,
+      "gluino_and_EW_gaugino_GeV": [
+        300.7241913966186,
+        464.45190642665835,
+        844.8310969360588
+      ],
+      "Q_soft_mass_GeV": 1493.2827643546166,
+      "dc_soft_mass_GeV": 1383.9666029831226,
+      "leading_log_Ad_GeV": -279.406346735089,
+      "colored_threshold": {
+        "quark": 2.5428718104705123e-12,
+        "gluino": 1.302438357791413e-20,
+        "sum": 2.542871823494896e-12,
+        "minimum_soft_eigenvalue": 1915363.5581787233
+      },
+      "cross_spurion_finite_difference_noise": 3.963990733424054e-08,
+      "one_sided_exact_result": "The single LL Hermitian perturbation with RR/LR diagonal in mass basis has zero colored phase exactly; finite-difference derivative is cancellation noise, not a physical susceptibility.",
+      "messenger_superpotential": "W=X Phi Phibar withPhi+Phibar=5+bar5, X=M+theta2 F real, no direct matter/CP-sector couplings. Canonical light fields and CP/heavy thresholds integrated out ABOVE messenger.",
+      "scope": "Gauge-invariant post-heavy minimal gauge-mediation boundary, A=0 at messenger and gauge-only leading-log real Ad. Two-loop scalar/one-loop gaugino leading small-x formulas; finite x=.2 corrections, messenger stability/global SUSY vacuum, Yukawa running, neutralportal and fullradiative theta uncomputed. SUSYbenchmark is NOT silently spliced into priorSM-only runningfit; SM-MSSM thresholds and allphysicalcouplings require rematching.",
+      "prior": [
+        "11965/11973 mediation framework",
+        "11978 actual soft phase shielding",
+        "12013 spectral safe class",
+        "hep-ph/9801271 standard gauge mediation"
+      ]
+    },
+    "one_sided_alignment": {
+      "status": "PASS",
+      "one_sided": {
+        "quark": -2.2583443888348695e-18,
+        "gluino": 8.553396059980529e-19,
+        "sum": -1.4030047828368164e-18,
+        "minimum_soft_eigenvalue": 4.5330702271858705
+      },
+      "both_sides": {
+        "quark": -2.1111509797138077e-06,
+        "gluino": 5.078253831001559e-07,
+        "sum": -1.6033255966136517e-06,
+        "minimum_soft_eigenvalue": 4.5333093161512314
+      },
+      "CP_partner": {
+        "quark": 2.1111509797138077e-06,
+        "gluino": -5.078253831001559e-07,
+        "sum": 1.6033255966136517e-06,
+        "minimum_soft_eigenvalue": 4.5333093161512314
+      },
+      "proof": "In mass SVD basis, RR=diag(r), LR=diag(ell) real, LL arbitrary Hermitian. For realz outside spectrum, resolventLR=[z-LL-ell(z-RR)^-1ell]^-1 ell(z-RR)^-1 has REAL diagonal entries. Its spectral residues on each degenerate eigenspace are real. Thus every real spectral loop function has real LRii. Both ImTr(M^-1deltaM) and each species-weighted gluino phase vanish. SwappingL/R gives the partner theorem.",
+      "scope": "Specified colored one-loop self-energy phases only. A leading top-Yukawa LL insertion alone cannot defeat this safe class; simultaneous opposite-side or LR misalignment, neutral portals and higher loops still need calculation. Mass-basis covariance does not assert a new UVgauge/flavour symmetry.",
+      "prior": [
+        "12008 universal alignment",
+        "12013 spectral-function sufficient class"
+      ]
+    }
+  },
+  "pass12019": {
+    "status": "PASS",
+    "native_capacity": "2/27",
+    "exact_quadratic": "5*p0**2 + 5*p0*p1 - 6*p0*p2 + 5*p1**2 - 6*p1*p3 + 6*p2**2 - 6*p2*p3 + 6*p3**2",
+    "exact_quartic": "-(27*p0**4 + 54*p0**3*p1 - 76*p0**3*p2 + 81*p0**2*p1**2 - 76*p0**2*p1*p2 - 76*p0**2*p1*p3 + 142*p0**2*p2**2 - 76*p0**2*p2*p3 + 76*p0**2*p3**2 + 54*p0*p1**3 - 76*p0*p1**2*p2 - 76*p0*p1**2*p3 + 76*p0*p1*p2**2 + 56*p0*p1*p2*p3 + 76*p0*p1*p3**2 - 132*p0*p2**3 + 132*p0*p2**2*p3 - 132*p0*p2*p3**2 + 27*p1**4 - 76*p1**3*p3 + 76*p1**2*p2**2 - 76*p1**2*p2*p3 + 142*p1**2*p3**2 - 132*p1*p2**2*p3 + 132*p1*p2*p3**2 - 132*p1*p3**3 + 66*p2**4 - 132*p2**3*p3 + 198*p2**2*p3**2 - 132*p2*p3**3 + 66*p3**4)/324",
+    "quartic_monomials": 31,
+    "direction_quartic": "-119603/3240000",
+    "refinement": [
+      {
+        "a": 0.16,
+        "physical_eigenvalue": 3.0490550086481605,
+        "quadratic_error": -0.0009449913518393416,
+        "quartic_estimate": -0.03691372468122428
+      },
+      {
+        "a": 0.08,
+        "physical_eigenvalue": 3.0497637484261375,
+        "quadratic_error": -0.00023625157386231166,
+        "quartic_estimate": -0.0369143084159862
+      },
+      {
+        "a": 0.04,
+        "physical_eigenvalue": 3.0499409368545116,
+        "quadratic_error": -5.9063145488202906e-05,
+        "quartic_estimate": -0.036914465930126816
+      },
+      {
+        "a": 0.02,
+        "physical_eigenvalue": 3.049985233971597,
+        "quadratic_error": -1.4766028402668496e-05,
+        "quartic_estimate": -0.03691507100667124
+      }
+    ],
+    "derivation": "Expand actual135-edge27siteBloch operator B(k)dagB(k)/M to fourthorder. Solve mean-zero eigenvector correctors with (L0+11T/27)^-1. Fredholm solvability gives everylambda_n exactly;lambda1=lambda3=0. Physicallambda(a p)/a2=q2(p)+a2 q4(p)+O(a4).",
+    "scope": "Exact flat native acoustic effective operator and explicit anisotropic higherderivative lattice correction. q4 is not proportionalq2^2. This establishes a flatlongwavelength/principalmetric refinement test, not curved homogenization, spinconnection, renormalizedEH/Newton/Lambda, Lorentzsignature or nonlinearconstraintclosure. Spacinga remains supplied in hbar=c=1 units.",
+    "prior": [
+      "11991 native4periodcover",
+      "11995 harmonicmetric",
+      "12009 capacitycompletion",
+      "12014 conditional scalarheat tower"
+    ]
+  },
+  "pass12020": {
+    "status": "PASS",
+    "minimum_reference_overlap": 0.28625385993031655,
+    "internal_operator_intertwining_error": 1.1639217064350311e-14,
+    "period_word_lengths": [
+      5,
+      19,
+      4,
+      14
+    ],
+    "native_varied_edges": [
+      0,
+      5
+    ],
+    "projector_rank": 30,
+    "Wilson_kernel_gap": 0.7340694814404112,
+    "projector_Berry_curvature": 0.0020370953432209127,
+    "frame_connection_curvature": 0.0020370951781838315,
+    "native_path_derivative_error": 1.5791066579692286e-08,
+    "local_measure": "On the displayed one-cell, topologically trivial patch F=P E(E dag P E)^-1/2 gives an explicit determinant-line frame and L=iTr(Fdag dF). The nonzero curvature iTrP[dP,dP] is not erased by10+bar5 anomaly cancellation.",
+    "conditional_native_current": "If a coarse global current Lc exists on admissible Phi(U), native determinant line is its pullback tensor26 Kato-trivial optical determinant lines. Lnative=Phi*Lc+Lheavy+iTr[(Pfactor-Pplus)T dTdag], with bounded cell-tree unitaryT. Nativepath derivative is the ordered product-rule sum including inverse edges. This names a conditional local interface; it doesnot implementthecoarseglobalcurrent.",
+    "internal_carrier": "Prior12015 K3 embeds an internalfamily matrixS as K3 S K3dag in the72D internaloverlap space. It intertwines the computed H27 action. Tensoring three identical SM copies multiplies localmeasurecurvature by3 but doesnotselectflux3 orderive the4Dfamilyinventory.",
+    "scope": "Concrete finite localframe and native-word differential, not a globally gaugeinvariant/allvolume localmeasure. Coarseglobalcurrent, admissibilitydomain, refinement estimates, globalholonomies and nativefamily/fluxembedding remainopen. Craig2610.09093v1 is an externalcandidate requiring these hypotheses, not independentlycertifiedhere.",
+    "prior": [
+      "12000 nativewords",
+      "12002 heavyKatoandboundedtreefactorization",
+      "12010 nonAbeliannativepaths",
+      "12015 internalH27andSMrestriction",
+      "2610.09093 sections4,9,10"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "initial_seed_source": "Pass12007 NEUTRINO_FIT",
+  "stages": [
+    {
+      "two_loop_flavour_terms": false,
+      "seed": [
+        -0.20255586369293455,
+        -0.8307011736471974,
+        0.6056483156983711,
+        -0.4519628526592277,
+        -0.3915948554934204
+      ],
+      "parameters": [
+        0.17949512422233785,
+        -0.4295887411505028,
+        0.9583199709907315,
+        -1.0661366026070511,
+        -0.3771623078276001
+      ],
+      "residual": [
+        4.818367926873063e-14,
+        -2.6567636979283525e-13,
+        -7.73825448163764e-14,
+        4.818367926873063e-14
+      ],
+      "function_evaluations": 46
+    },
+    {
+      "two_loop_flavour_terms": true,
+      "seed": [
+        0.17949512422233785,
+        -0.4295887411505028,
+        0.9583199709907315,
+        -1.0661366026070511,
+        -0.3771623078276001
+      ],
+      "parameters": [
+        0.17949510512836647,
+        -0.4295888143437673,
+        0.95831995485312,
+        -1.0661365797948055,
+        -0.3771623310005085
+      ],
+      "residual": [
+        1.0835776720340941e-13,
+        -6.01962923951941e-13,
+        -1.7397194795877715e-13,
+        1.0658141036400935e-13
+      ],
+      "function_evaluations": 35
+    }
+  ],
+  "scope": "Local search on a one-dimensional fit fibre; coordinates need not equal frozen witness. No uniqueness or global optimum claim; same one-loop SM background as12011."
+}
