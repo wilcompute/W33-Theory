@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "date": "2026-10-17",
+  "science_commit": "983e6354c5f05bcc5b1ce5cf5666d608718df119",
+  "hosted_run": 39056922853,
+  "hosted_url": "https://github.com/wilcompute/W33-Theory/actions/runs/39056922853",
+  "hosted_conclusion": "success",
+  "hosted_jobs": [
+    {
+      "id": 117466675811,
+      "conclusion": "success"
+    }
+  ],
+  "hosted_frozen_tests": 27,
+  "hosted_regenerated_tests": 11,
+  "hosted_log_sha256": "d859fefecaefa2a6780d7131d4d3a171e591a444fc23ddb90d991fd90959203c",
+  "local_validation": {
+    "tests": 27,
+    "log_sha256": "504794d004e121f102b2c0979910363b1d2680094f618f37929ebcba674747d8"
+  },
+  "artifact_sha256": "5949bedc79fc45c2de4285537d30f87a985fc8274e1e0c6e4df6571db20f1a15",
+  "artifact_comparison": {
+    "status": "PASS",
+    "leaf_counts": {
+      "exact_leaves": 81,
+      "floats": 254,
+      "finite_difference_Jacobian_floats": 11
+    },
+    "relative_tolerance": 1e-07,
+    "absolute_tolerance": 1e-11,
+    "finite_difference_Jacobian_relative_tolerance": 0.0001,
+    "basis_dependent_fields_compared_by_intertwiner": [
+      "/pass12015/X_real",
+      "/pass12015/X_imag",
+      "/pass12015/Y_real",
+      "/pass12015/Y_imag"
+    ],
+    "unitary_intertwiner_real": [
+      [
+        0.9999999999999993,
+        5.551115123125783e-16,
+        1.3877787807814457e-16
+      ],
+      [
+        5.551115123125783e-16,
+        1.0000000000000013,
+        -1.2212453270876722e-15
+      ],
+      [
+        1.3877787807814457e-16,
+        -1.2212453270876722e-15,
+        1.0000000000000027
+      ]
+    ],
+    "unitary_intertwiner_imag": [
+      [
+        0.0,
+        -6.661338147750939e-16,
+        6.314393452555578e-16
+      ],
+      [
+        6.661338147750939e-16,
+        0.0,
+        1.6653345369377348e-16
+      ],
+      [
+        -6.314393452555578e-16,
+        -1.6653345369377348e-16,
+        0.0
+      ]
+    ],
+    "intertwiner_errors": {
+      "unitarity": 7.667198319106493e-15,
+      "X_intertwining": 5.845411765856527e-15,
+      "Y_intertwining": 6.827039447604159e-15
+    }
+  },
+  "science_files": {
+    ".github/workflows/pass12011-12015-scale-flavour.yml": {
+      "worktree_sha256": "f4e7b7d53974f9adcf47b454d60665223f65e2d4e2db6453231c83aa21ec064a",
+      "LF_sha256": "f4e7b7d53974f9adcf47b454d60665223f65e2d4e2db6453231c83aa21ec064a",
+      "verified_science_blob": "79b53d55a1ff6b28df57bce361db0cdb413d2867"
+    },
+    "analysis/PASS12011_12015_SCALE_FLAVOUR_AND_INTERNAL_INDEX.md": {
+      "worktree_sha256": "18670ca939a8ddd7fee12b03adda7e4dbd0a5a13d74fc9cea26803a3001b2067",
+      "LF_sha256": "18670ca939a8ddd7fee12b03adda7e4dbd0a5a13d74fc9cea26803a3001b2067",
+      "verified_science_blob": "47c750d181ba45a74cf7b5c45732ec0f6d9fe86b"
+    },
+    "analysis/w33_pass12011_12015_scale_flavour_internal_index.py": {
+      "worktree_sha256": "983f675976202282d15d623816319847f4b01e576888c3b0481190505aaa570a",
+      "LF_sha256": "983f675976202282d15d623816319847f4b01e576888c3b0481190505aaa570a",
+      "verified_science_blob": "91927e9aa89cc27825671fdc05172fc3a5b3413b"
+    },
+    "analysis/w33_pass12011_common_scale_search.py": {
+      "worktree_sha256": "a02e9365c13ca1bed2789cc7fcf0167776d2873dc0ad2d27a06696e2a5492813",
+      "LF_sha256": "a02e9365c13ca1bed2789cc7fcf0167776d2873dc0ad2d27a06696e2a5492813",
+      "verified_science_blob": "e5228a6d747bf28b11da036d3b23db48a982a7f1"
+    },
+    "data/w33_pass12011_12015_scale_flavour_internal_index.json": {
+      "worktree_sha256": "5949bedc79fc45c2de4285537d30f87a985fc8274e1e0c6e4df6571db20f1a15",
+      "LF_sha256": "5949bedc79fc45c2de4285537d30f87a985fc8274e1e0c6e4df6571db20f1a15",
+      "verified_science_blob": "a0e6404bbc9f8028cb108703a6327e4e19768bf8"
+    },
+    "data/w33_pass12011_common_scale_search_record.json": {
+      "worktree_sha256": "04e7ba876e3f7e229aeaef02f450e9ef7e264af4ac427a4859cc2cca5a8cb886",
+      "LF_sha256": "04e7ba876e3f7e229aeaef02f450e9ef7e264af4ac427a4859cc2cca5a8cb886",
+      "verified_science_blob": "a901541c665c9e623d67a5f4d4bfa7c8311afb45"
+    },
+    "docs/index.html": {
+      "worktree_sha256": "541a65a322c35e333604d6b201db06732ef05f48cc0e17fd113beff251218539",
+      "LF_sha256": "a986b0228a5b3722d6e8198cab0299a725b06a33515475018dd710d1a93d0f84",
+      "verified_science_blob": "688b5a99ea62372f7cc82822f8c8f62489ed7fd7"
+    },
+    "tests/test_w33_pass12011_12015_scale_flavour_internal_index.py": {
+      "worktree_sha256": "ed4f3aaaad861f6e0e95f2ae1e326d1de9dfd67d2e513b6ca22216f64398ac7e",
+      "LF_sha256": "ed4f3aaaad861f6e0e95f2ae1e326d1de9dfd67d2e513b6ca22216f64398ac7e",
+      "verified_science_blob": "9b41dc2223050986d326ce732328f10f58695723"
+    }
+  },
+  "portable_search_max_log_residual": 6.324876499713321e-12,
+  "results_index": {
+    "files": 12339,
+    "distinctive": 16965,
+    "unique": 7430
+  },
+  "scope": "Conditional research constructions: scale/texture parameters fitted; neutrino rematching, dynamical flavour/flux selection, gauge-invariant UV alignment, native gravity and native chiral measure remain open. External2610.09093v1 proof is not independently certified here."
+}
