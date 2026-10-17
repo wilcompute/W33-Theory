@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "date": "2026-10-17",
+  "initial_science_commit": "2f00725d9fd03caecfa2deac5a6f0662a4bff7e6",
+  "final_science_commit": "6fb287858aa9e28bc3b24b85d35d81322326fa08",
+  "hosted": {
+    "run_id": 39054887466,
+    "job_id": 117460729166,
+    "url": "https://github.com/wilcompute/W33-Theory/actions/runs/39054887466",
+    "conclusion": "success",
+    "frozen_tests": 16,
+    "regenerated_producers": 5,
+    "regenerated_tests": 16
+  },
+  "local": {
+    "integration_tests_before_units_extension": 31,
+    "additional_exact_group_and_units_regression": "PASS"
+  },
+  "artifact_comparison": {
+    "w33_pass12007_shared_theta_leptons.json": {
+      "status": "PASS",
+      "leaf_counts": {
+        "float": 122,
+        "exact_leaf": 12,
+        "finite_difference_float": 14
+      },
+      "hosted_sha256": "044a616561c9cef8ee9217764406e5c26e8199d10cfac3e20895dea90a60a5bf"
+    },
+    "w33_pass12010_nonabelian_native_index.json": {
+      "status": "PASS",
+      "leaf_counts": {
+        "float": 5,
+        "exact_leaf": 35,
+        "finite_difference_float": 0
+      },
+      "hosted_sha256": "c78845423f58d1d9678bf22c4043080c89cafd1ea6e0f3da0757d94e9c6cae41"
+    },
+    "w33_pass12008_colored_soft_thresholds.json": {
+      "status": "PASS",
+      "leaf_counts": {
+        "float": 68,
+        "exact_leaf": 11,
+        "finite_difference_float": 0
+      },
+      "hosted_sha256": "ed15cb05355e5e68abf3934ea51628fb43f21c57dcc12cc9684e72be0828a931"
+    },
+    "w33_pass12006_vacuum_source_identifiability.json": {
+      "status": "PASS",
+      "leaf_counts": {
+        "float": 24,
+        "exact_leaf": 15,
+        "finite_difference_float": 2
+      },
+      "hosted_sha256": "3f4c5705fb0ddd00f43f1a48edbe1685735fc410a5dff695fb0a24892031e660"
+    },
+    "w33_pass12009_native_metric_density.json": {
+      "status": "PASS",
+      "leaf_counts": {
+        "float": 52,
+        "exact_leaf": 21,
+        "finite_difference_float": 0
+      },
+      "hosted_sha256": "28f4af86c75b762a11457e8de51ad8afeb55e096242e5a55ac4cc2d210be341d"
+    }
+  },
+  "comparison_policy": {
+    "float_relative_tolerance": 1e-07,
+    "float_absolute_tolerance": 1e-10,
+    "finite_difference_jacobian_relative_tolerance": 1e-05,
+    "strings_integers_shapes": "exact"
+  },
+  "science_files": {
+    "analysis/w33_pass12006_vacuum_source_identifiability.py": {
+      "worktree_sha256": "064d47bcfd00ab2e0785d4c1de9a97e2f7343ffe90a6754831cad3f0705d5688",
+      "lf_sha256": "064d47bcfd00ab2e0785d4c1de9a97e2f7343ffe90a6754831cad3f0705d5688",
+      "verified_science_commit_blob": "609b6021073ec25dadd0f09ca8cba49271f881bb"
+    },
+    "analysis/w33_pass12007_shared_theta_leptons.py": {
+      "worktree_sha256": "00f34acf5fee42868472cf354338627c0bac39627181729f2b8fcf509b215390",
+      "lf_sha256": "00f34acf5fee42868472cf354338627c0bac39627181729f2b8fcf509b215390",
+      "verified_science_commit_blob": "3f0741598ea65df1cdf1092e35608c8b9797400a"
+    },
+    "analysis/w33_pass12008_colored_soft_thresholds.py": {
+      "worktree_sha256": "22f175b8e70570c0c1833cd147418c09e57e8f0737eabb6349940b5c3e7bcc14",
+      "lf_sha256": "22f175b8e70570c0c1833cd147418c09e57e8f0737eabb6349940b5c3e7bcc14",
+      "verified_science_commit_blob": "2ac7e26aff93b2cb1c4c6d71d8058ff3022d49de"
+    },
+    "analysis/w33_pass12009_native_metric_density.py": {
+      "worktree_sha256": "9f69ae1395be906bae442997115f575968f7b1199b7bc9b96f131db47bacb116",
+      "lf_sha256": "9f69ae1395be906bae442997115f575968f7b1199b7bc9b96f131db47bacb116",
+      "verified_science_commit_blob": "2d96e1027d5f229f5f0650d07adb06a8453f3181"
+    },
+    "analysis/w33_pass12010_nonabelian_native_index.py": {
+      "worktree_sha256": "40eeba97d6ea14d0d714b676fa74fdc18d365ad5331b2f25a7cd6e60068459d5",
+      "lf_sha256": "40eeba97d6ea14d0d714b676fa74fdc18d365ad5331b2f25a7cd6e60068459d5",
+      "verified_science_commit_blob": "c81c2d0bdcb77360962d238a8142a71adb3faed9"
+    },
+    "analysis/w33_pass12007_joint_flavour_search.py": {
+      "worktree_sha256": "1a9c8b800f6223ff9bc91d25e84db9d26ae07961fbd42c596ab67e151d19747f",
+      "lf_sha256": "1a9c8b800f6223ff9bc91d25e84db9d26ae07961fbd42c596ab67e151d19747f",
+      "verified_science_commit_blob": "58406b15c406e6b899d9be461b02d5bb492120f1"
+    },
+    "analysis/w33_pass12007_real_majorana_search.py": {
+      "worktree_sha256": "6f361a8202020640feb1b8fc472afc43fef194bc3bbebd542a21800b8e524e52",
+      "lf_sha256": "6f361a8202020640feb1b8fc472afc43fef194bc3bbebd542a21800b8e524e52",
+      "verified_science_commit_blob": "060589e7ad71459b065dabc6719d9286096c3a0c"
+    },
+    "analysis/PASS12006_12010_SHARED_FLAVOUR_DENSITY_AND_CHIRAL_INDEX.md": {
+      "worktree_sha256": "26638da962b212da4e5299ad8fcfaeac4dbc8c170e3cddb29138661ad57f6818",
+      "lf_sha256": "26638da962b212da4e5299ad8fcfaeac4dbc8c170e3cddb29138661ad57f6818",
+      "verified_science_commit_blob": "c4250e679cd88712cd217c7b7d079d2966640385"
+    },
+    "tests/test_w33_pass12006_12010_shared_physics.py": {
+      "worktree_sha256": "c4e2caddcb35c1026340299a7f63a5b860e667560bda5495285c3b621d6cf864",
+      "lf_sha256": "c4e2caddcb35c1026340299a7f63a5b860e667560bda5495285c3b621d6cf864",
+      "verified_science_commit_blob": "f89ffcb716f2f675cad1358ff7bd7c412b25f730"
+    },
+    ".github/workflows/pass12006-12010-shared-physics.yml": {
+      "worktree_sha256": "296979bfa7b626860d6acf05dcc6acc54b2026284a8ad765bc7fb47fc9b1145d",
+      "lf_sha256": "296979bfa7b626860d6acf05dcc6acc54b2026284a8ad765bc7fb47fc9b1145d",
+      "verified_science_commit_blob": "4acbdcc9b1cccf661d4d69b04a2175a17ff6151b"
+    },
+    "docs/index.html": {
+      "worktree_sha256": "acc85dc9768804545563e864fa5d4c922fc0781bf72ff892fa1d28d1e7bb48c4",
+      "lf_sha256": "6758b3dd55aa5842951fcd8cb53730877b4572964ccf48e87594ca093aaafde0",
+      "verified_science_commit_blob": "9f2eb664c03ef552eb54fdc25b00edc9cb825046"
+    },
+    "data/w33_pass12006_vacuum_source_identifiability.json": {
+      "worktree_sha256": "76f72403eb79bc399d1efec9c72ab2637298371e398e9d482128e84520d38290",
+      "lf_sha256": "76f72403eb79bc399d1efec9c72ab2637298371e398e9d482128e84520d38290",
+      "verified_science_commit_blob": "40cbccb50e5a30160e2f3568deeb4446dda815a7"
+    },
+    "data/w33_pass12007_shared_theta_leptons.json": {
+      "worktree_sha256": "80ddacaac9afd6d950dfd4effa9e56b358d14deaa6a6633a3e25685cd4839d3d",
+      "lf_sha256": "80ddacaac9afd6d950dfd4effa9e56b358d14deaa6a6633a3e25685cd4839d3d",
+      "verified_science_commit_blob": "fab333e6ed52432bfebcb39ea7c7a521f6ce5971"
+    },
+    "data/w33_pass12008_colored_soft_thresholds.json": {
+      "worktree_sha256": "35ba6d3c89f9a9068e22d8400cc38890aa15838de92f7e971d952902d58a1c0f",
+      "lf_sha256": "35ba6d3c89f9a9068e22d8400cc38890aa15838de92f7e971d952902d58a1c0f",
+      "verified_science_commit_blob": "148f0e4c3a7f4b0e46ab31deed245e86c910aa8f"
+    },
+    "data/w33_pass12009_native_metric_density.json": {
+      "worktree_sha256": "922a9b4519fc6a979dedf1f933761f10d6c964e2670de155459a26b6ee499c3a",
+      "lf_sha256": "922a9b4519fc6a979dedf1f933761f10d6c964e2670de155459a26b6ee499c3a",
+      "verified_science_commit_blob": "2e305e97f3b53ee333fbb49966cb50936238a334"
+    },
+    "data/w33_pass12010_nonabelian_native_index.json": {
+      "worktree_sha256": "91083559e9a3e481817457af4ba0fa52c70e9a21a945dec3ab00252c6e24b1ad",
+      "lf_sha256": "91083559e9a3e481817457af4ba0fa52c70e9a21a945dec3ab00252c6e24b1ad",
+      "verified_science_commit_blob": "5b035414f4e8968641bfd6985df1741db9cdfc3f"
+    },
+    "data/w33_pass12007_joint_search_record.json": {
+      "worktree_sha256": "5be4a6b65774ce70bf88af3465568d242d0f36c8e4cfe4967cb5699e394cf221",
+      "lf_sha256": "5be4a6b65774ce70bf88af3465568d242d0f36c8e4cfe4967cb5699e394cf221",
+      "verified_science_commit_blob": "ddc50bb5955a32bde24b76c1147986423deb46a5"
+    },
+    "data/w33_pass12007_neutrino_search_record.json": {
+      "worktree_sha256": "b65429f8839e5d966507e73d3371917e5922adde25c97e862c5821555f54ae30",
+      "lf_sha256": "b65429f8839e5d966507e73d3371917e5922adde25c97e862c5821555f54ae30",
+      "verified_science_commit_blob": "afdad007ed2fd74f8df983c6eff4984a052f0fbc"
+    }
+  },
+  "results_index": {
+    "files": 12336,
+    "distinctive_results": 16960,
+    "unique_results": 7431
+  },
+  "boundaries": [
+    "Fourteen dimensionless flavour comparators fitted, not parameter-free predictions.",
+    "Held-out absolute b/tau fails at the supplied common comparison scale.",
+    "Theta moduli, real C, soft alignment and three families remain supplied.",
+    "Capacity-completed density is not a derived nonlinear gravity action.",
+    "Native SU3 index witness is not a globally constructed non-Abelian Weyl measure.",
+    "GL4 coordinate density action is not a new physical symmetry; natural units do not fix a physical scale."
+  ]
+}
