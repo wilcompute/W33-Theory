@@ -1,0 +1,428 @@
+{
+  "status": "PASS",
+  "pass12034": {
+    "status": "PASS",
+    "normalization": "one fixed common baseline singular norm",
+    "common_soft_mass_squared": 1.0,
+    "projected_gradients": [
+      {
+        "Q": 0.5,
+        "projected_gradient": [
+          -0.0030075890070496787,
+          -0.019263670976438864,
+          0.015274622889627876,
+          -0.01884407138753212,
+          -0.003128189953045024,
+          -0.002604679941966673
+        ],
+        "norm": 0.03138658426756542
+      },
+      {
+        "Q": 1.0,
+        "projected_gradient": [
+          -0.0005556556025008234,
+          -0.0035664195751424705,
+          0.0028161399686593524,
+          -0.0034474223014531956,
+          -0.0005773070455333607,
+          -0.0005004017427769996
+        ],
+        "norm": 0.005781621910085803
+      },
+      {
+        "Q": 2.0,
+        "projected_gradient": [
+          0.001896277802820216,
+          0.012130831823678493,
+          -0.009642342952668274,
+          0.011949226781087416,
+          0.0019735758635485473,
+          0.001603876455400118
+        ],
+        "norm": 0.019823702224759533
+      }
+    ],
+    "best_single_counterterm_shift": 0.15650770974950726,
+    "unremovable_force_norm": 4.455344617630083e-05,
+    "projected_logQ_gradient_derivative": [
+      0.003537392163196739,
+      0.02264634675039736,
+      -0.017973791526161183,
+      0.022212669281468506,
+      0.0036801461232044692,
+      0.0030358317221675507
+    ],
+    "scale_identity_error": 2.3988669825462182e-12,
+    "exact_identity": "dV1/dlogQ=-(1/(8pi2)) sum_n Nc [(z_n+s)^2-z_n^2]. With common soft s this is constant plus -(s/(4pi2))sum Nc Tr(YdagY). A running local counterterm cancels it.",
+    "conclusion": "The declared complete scalar/fermion toy supermultiplets lift the six-direction fibre, but the fitted point is not stationary and the force depends on an unspecified allowed counterterm. Fermion-only CW cannot select this vacuum. Exact SUSY s=0 cancels identically.",
+    "single_counterterm_test": "Orthogonally project the six-component force off its logQ-running direction. The nonzero remainder cannot be removed by the one common TrYdagY counterterm alone. This is specific to the toy common-soft spectrum; independent invariant counterterms can change it.",
+    "scope": "Not full MSSM/UV field-dependent spectrum, no supplied kinetic metric or native counterterm boundary condition; no selected theta vacuum.",
+    "prior": [
+      "12026 actual six-dimensional theta fibre",
+      "11909 up-sector CW",
+      "11935 soft-supertrace angular selector; different map",
+      "9709356 section7.3"
+    ]
+  },
+  "pass12035": {
+    "status": "PASS",
+    "real_gaugino_inputs_GeV": [
+      1500.0,
+      1600.0,
+      2000.0
+    ],
+    "A_zero_coupled_running": [
+      {
+        "log_interval": -0.02,
+        "misalignment_GeV": [
+          3.3144204417007227e-06,
+          1.420190004920499e-05,
+          1.50435619074867e-07
+        ],
+        "offdiagonal_mass_basis_GeV": [
+          3.1297660274880454e-07,
+          1.2797383883479912e-05,
+          1.599861242046624e-16
+        ],
+        "misalignment_over_log_squared": [
+          0.008286051104251806,
+          0.03550475012301247,
+          0.0003760890476871675
+        ]
+      },
+      {
+        "log_interval": -0.01,
+        "misalignment_GeV": [
+          8.282612624720268e-07,
+          3.549319255386944e-06,
+          3.760659369660487e-08
+        ],
+        "offdiagonal_mass_basis_GeV": [
+          7.818566179981422e-08,
+          3.198323266842236e-06,
+          1.0169869575650572e-16
+        ],
+        "misalignment_over_log_squared": [
+          0.008282612624720269,
+          0.035493192553869436,
+          0.0003760659369660487
+        ]
+      },
+      {
+        "log_interval": -0.005,
+        "misalignment_GeV": [
+          2.070223630085946e-07,
+          8.871854423598231e-07,
+          9.401359481537793e-09
+        ],
+        "offdiagonal_mass_basis_GeV": [
+          1.9539110932257838e-08,
+          7.99453064370889e-07,
+          6.62752244786321e-17
+        ],
+        "misalignment_over_log_squared": [
+          0.008280894520343784,
+          0.03548741769439292,
+          0.0003760543792615117
+        ]
+      },
+      {
+        "log_interval": -2.302585092994046,
+        "misalignment_GeV": [
+          0.048522013254737505,
+          0.20352419753169942,
+          0.0020210821977941816
+        ],
+        "offdiagonal_mass_basis_GeV": [
+          0.004958430279673723,
+          0.18312651514343373,
+          2.4945539753652496e-14
+        ],
+        "misalignment_over_log_squared": [
+          0.009151819262396063,
+          0.03838704427938074,
+          0.00038119974312592287
+        ]
+      }
+    ],
+    "analytic_log_squared_misalignment_GeV": [
+      0.008279177111844638,
+      0.03548164493881097,
+      0.00037604282016964264
+    ],
+    "analytic_log_squared_offdiagonal_GeV": [
+      0.0007812724209694218,
+      0.03197301430333539,
+      1.6711408404703127e-18
+    ],
+    "exact_matrix_law": "For R_u=Tu Yu^-1 and initial T=0: nonscalar R_u(t)=t2[3 c_u Hu+c_d Hd]/(16pi2)^2+O(t3), where c_u,d are the real gaugino sources in betaT. Down exchanges u,d; lepton has3 c_e He. Scalar terms are projected out.",
+    "nonzero_universal_A_GeV": 300.0,
+    "first_derivative_alignment_residual_GeV": [
+      0.02911472414726456,
+      0.12477047826888205,
+      0.007033647614263323
+    ],
+    "bino_commutator": {
+      "formula": "Ru-Ru_dag=-(16/15)g1^2 M1 t^3 [Hu,Hd]/(16pi2)^3+O(t4), for initial T=0 and real gauginos; hypercharge is SU5 normalized.",
+      "proof": "Subtract the adjoint of betaRu:16pi2 d(Ru-Ru_dag)/dt=4[Hu,Ru]+2[Hd,Ru]+2[Rd,Hd] when Ru,Rd are Hermitian to lower order. Substitute their ordert2 terms:4(c_d-c_u)t2[Hu,Hd]/(16pi2)^2. Since c_u-c_d=(4/5)g1^2 M1, integrate once.",
+      "controls": [
+        {
+          "bino_mass": 0.8,
+          "analytic_coefficient_norm": 3.595719318372041e-08,
+          "samples": [
+            {
+              "log_interval": -0.5,
+              "antiHermitian_over_log_cubed_norm": 3.3650992816770484e-08,
+              "analytic_error": 2.3146243081609847e-09
+            },
+            {
+              "log_interval": -0.25,
+              "antiHermitian_over_log_cubed_norm": 3.477755901879631e-08,
+              "analytic_error": 1.183956563189733e-09
+            },
+            {
+              "log_interval": -0.125,
+              "antiHermitian_over_log_cubed_norm": 3.5360334505282285e-08,
+              "analytic_error": 5.990483090691573e-10
+            }
+          ]
+        },
+        {
+          "bino_mass": 0.0,
+          "analytic_coefficient_norm": 0.0,
+          "samples": [
+            {
+              "log_interval": -0.5,
+              "antiHermitian_over_log_cubed_norm": 5.581198326336506e-10,
+              "analytic_error": 5.581198326336506e-10
+            },
+            {
+              "log_interval": -0.25,
+              "antiHermitian_over_log_cubed_norm": 2.86274753321515e-10,
+              "analytic_error": 2.86274753321515e-10
+            },
+            {
+              "log_interval": -0.125,
+              "antiHermitian_over_log_cubed_norm": 1.4517204928820742e-10,
+              "analytic_error": 1.4517204928820742e-10
+            }
+          ]
+        }
+      ],
+      "scope": "First anti-Hermitian trilinear word in this subsystem, not its first scalar strongCP invariant: Tr[Hu,Hd]=0. M1=0 removes this cubic coefficient, not all higher-order CP terms. Toy nondegenerate Yukawas isolate the coefficient without inverse-hierarchy roundoff."
+    },
+    "formula": "For T_u=a Yu, T_d=a Yd: 16pi2(betaTu-a betaYu)=[6a Hu+2a Hd+(6a TrHu+gaugino source)I]Yu. In the up mass basis 2a Hd Yu has offdiagonal entries. For A=0 first derivative is scalar-aligned; nonalignment begins at log^2 in the coupled flow.",
+    "scope": "Full three-family one-loop Yukawa, gauge, real gaugino and trilinear subsystem. The2TeV-to200GeV interval is a formal full-MSSM vector-field test, not decoupled EFT evolution or a messenger-to-observation spectrum. Scalar soft masses, Higgs soft running, mu/B and physical LR loop recomputation are not integrated. Thus this is an explicit failure of generic scalar LR alignment, not a total strongCP prediction or complete soft RG solution.",
+    "prior": [
+      "12027 exact linked theorem requires LR=aM",
+      "12018 one-sided protection",
+      "Martin-Vaughn hep-ph/9311340",
+      "9709356 equations6.5.33-35"
+    ]
+  },
+  "pass12036": {
+    "status": "PASS",
+    "running_Z_mass_GeV": 90.12569642334093,
+    "Higgs_soft_inputs_GeV2": {
+      "mHu2": -964376.9379921951,
+      "mHd2": 2964376.9379921956,
+      "Bmu": 396039.6039603961
+    },
+    "neutralino_tree_masses_GeV": [
+      991.6373602396403,
+      1001.2656754246443,
+      1502.4999816704321,
+      1607.1283335145713
+    ],
+    "chargino_tree_masses_GeV": [
+      994.8970001626541,
+      1606.9891587538507
+    ],
+    "CP_even_tree_masses_GeV": [
+      88.33750538508008,
+      2000.079779983322
+    ],
+    "lambda_tree": 0.0643647755736897,
+    "leading_stop_delta_lambda": 0.05174557608901981,
+    "leading_log_Higgs_mass_GeV": 118.65165355295746,
+    "declared_g_DR_for_isolated_scheme_map": [
+      0.4696204277402875,
+      0.6353008122880811,
+      1.0269673032435045
+    ],
+    "g_MS_from_DR": [
+      0.4696204277402875,
+      0.6347595631109544,
+      1.0235378875862695
+    ],
+    "Higgs_scalar_Yukawa_MS_over_DR_minus_one": [
+      0.007934875137321929,
+      0.007795214431844065,
+      -0.0006442153971364722
+    ],
+    "stationary_residuals_GeV2": [
+      5.638867150992155e-11,
+      1.0368239600211382e-10
+    ],
+    "scope": "Tree EW closure and standard leading stop effective-potential logarithm/mixing check for supplied spectrum; leading-log mass is not a pole-mass prediction. Isolated scheme maps treat the inherited coupling numbers as declared DR inputs: gauge MS=DR[1-C_A g2/(96pi2)] and Higgs-scalar Yukawa MS/DR=1+sum g_a2(C_Q+C_R-2C_H)/(32pi2). They are not a heavy-particle decoupling match and are not applied to the12028 fit. No complete complete neutralino/chargino/Higgs/lepton self energies or two-loop Higgs calculation. Existing12028 fit is NOT silently replaced.",
+    "prior": [
+      "12024 supplied soft benchmark",
+      "12028 exact declared p0SQCD",
+      "9709356 sections8.1-8.2",
+      "hep-ph/9308222 scheme conversion"
+    ]
+  },
+  "pass12037": {
+    "status": "PASS",
+    "native_TT_metric_lifts": [
+      {
+        "h": -0.002,
+        "min_weight": 0.8071494795927943,
+        "metric_error": 4.131748416455502e-16,
+        "relative_capacity": 1.0000000000000007
+      },
+      {
+        "h": 0,
+        "min_weight": 1.0,
+        "metric_error": 3.929538682871231e-16,
+        "relative_capacity": 0.9999999999999991
+      },
+      {
+        "h": 0.002,
+        "min_weight": 0.8766650583290034,
+        "metric_error": 4.1739045200988736e-16,
+        "relative_capacity": 0.9999999999999994
+      }
+    ],
+    "exact_metric_rank": 10,
+    "redundant_linear_edge_directions": 125,
+    "normalized_TT_heat_hessian": "(4pi t)^2 K_doubleprime/Vol = 1/2 [int_0^1 exp(-x u(1-u))du -1], x=t q^2; metric diag(1,exp(h cos qx0),exp(-h cos qx0),1), sqrtg=1.",
+    "series_coefficients": [
+      "-1/12",
+      "1/120",
+      "-1/1680",
+      "1/30240",
+      "-1/665280"
+    ],
+    "samples": [
+      {
+        "x": 0.01,
+        "normalized_heat_hessian": -0.0008325005949075259,
+        "leading": -0.0008333333333333334
+      },
+      {
+        "x": 0.05,
+        "normalized_heat_hessian": -0.004145907531884152,
+        "leading": -0.004166666666666667
+      },
+      {
+        "x": 0.1,
+        "normalized_heat_hessian": -0.0082505919461906,
+        "leading": -0.008333333333333333
+      },
+      {
+        "x": 0.5,
+        "normalized_heat_hessian": -0.0396557173805151,
+        "leading": -0.041666666666666664
+      },
+      {
+        "x": 1.0,
+        "normalized_heat_hessian": -0.07556361649797771,
+        "leading": -0.08333333333333333
+      }
+    ],
+    "independent_continuum_spectral_check": [
+      {
+        "amplitude": 0.004,
+        "finite_difference": -0.07556356335786107,
+        "analytic": -0.07556361649797771,
+        "error": 5.3140116640371104e-08
+      },
+      {
+        "amplitude": 0.002,
+        "finite_difference": -0.07556360354099567,
+        "analytic": -0.07556361649797771,
+        "error": 1.2956982042844345e-08
+      },
+      {
+        "amplitude": 0.001,
+        "finite_difference": -0.07556361703020542,
+        "analytic": -0.07556361649797771,
+        "error": -5.32227706351307e-10
+      }
+    ],
+    "derivation": "A1=cos(qx0)(p1^2-p2^2); A2=cos^2(qx0)(p1^2+p2^2). Gaussian averages <p1^2+p2^2>=1/t and <(p1^2-p2^2)^2>=1/t2 give seagull -1/2 and Duhamel +1/2 int exp(-x u(1-u)).",
+    "Einstein_Hilbert_comparison": "Heat a2: K_doubleprime=(4pi t)^-2(t/6) (int sqrtg R)_doubleprime. Thus EH Hessian/Vol=-q2/2, since leading heat=-t q2/12. This sign and ratio are the standard Euclidean tensor result; induced action sign also depends on proper-time prefactor and matter species.",
+    "scope": "New explicit native lifts for the TT family and independent continuum scalar form factor, not a native TT heat convergence theorem. Native27-band tensor replay, Lorentzian unitarity, constraint algebra, nonlinear dynamics, G and Lambda remain open. Rank10/125 already belongs to11995.",
+    "prior": [
+      "11995 full metric chart",
+      "12029 conformal heat only",
+      "12009 density",
+      "0811.1063 standard covariant heat perturbation"
+    ]
+  },
+  "pass12038": {
+    "status": "PASS",
+    "anchors": [
+      [
+        -0.3,
+        -0.2
+      ],
+      [
+        0.25,
+        0.2
+      ],
+      [
+        0.05,
+        -0.15
+      ]
+    ],
+    "overlap_checks": [
+      {
+        "coordinates": [
+          -0.12,
+          -0.1
+        ],
+        "kernel_gap": 0.7573676103359502,
+        "reference_overlap_min": 0.7255793271863492,
+        "frame_cocycle_error": 1.4615346548085925e-14,
+        "transition_unitarity_error": 2.2735295826439258e-14,
+        "connection_transition_identity_error": 4.6683980032408146e-11,
+        "transition_determinant_phase": -0.0020465227373710694
+      },
+      {
+        "coordinates": [
+          0.12,
+          0.1
+        ],
+        "kernel_gap": 0.6955021613859049,
+        "reference_overlap_min": 0.6614066239468415,
+        "frame_cocycle_error": 1.3149831179139406e-14,
+        "transition_unitarity_error": 2.2225512172262547e-14,
+        "connection_transition_identity_error": 3.618706723163001e-11,
+        "transition_determinant_phase": -0.0019805796602796136
+      },
+      {
+        "coordinates": [
+          0.03,
+          -0.02
+        ],
+        "kernel_gap": 0.7249497744144233,
+        "reference_overlap_min": 0.7747900905024393,
+        "frame_cocycle_error": 1.3174521856416218e-14,
+        "transition_unitarity_error": 2.3058456108530283e-14,
+        "connection_transition_identity_error": 6.0856142174159356e-12,
+        "transition_determinant_phase": -0.0018894714510133321
+      }
+    ],
+    "exact_law": "F_beta=F_alpha T_ab, T_ab=F_alpha_dag F_beta; T_ab T_bc=T_ac. L_beta-L_alpha=-d arg det T_ab for L=iTr(Fdag dF). This constructs actual transitions of the native non-Abelian SU5 10+bar5 projector, not only a Chern number.",
+    "uniform_overlap_locality_obstruction": "Reference E is a30-column finite-cell frame. Its min eigenvalue E dag P E is checked only at these points. Its inverse square root has no volume-uniform locality bound. Even exact atlas cocycles define a determinant line, not a global trivialization; global holonomies and a local reconstruction current still must be supplied.",
+    "scope": "Three intersecting finite patches for actual native-word non-Abelian backgrounds. No all-configuration covering, noncontractible global gluing or uniform-volume locality theorem.",
+    "prior": [
+      "12025 one-patch current",
+      "12030 Abelian torus Chern test",
+      "Luscher hep-lat/9904009",
+      "2610.09093v1 global reconstruction obligations"
+    ]
+  }
+}
