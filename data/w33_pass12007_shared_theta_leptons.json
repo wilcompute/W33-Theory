@@ -1,0 +1,240 @@
+{
+  "status": "PASS",
+  "neutrino_observables": [
+    0.3039999999999985,
+    0.5730000000000002,
+    0.022189999999999318,
+    0.029549980087614537
+  ],
+  "neutrino_fit_parameters": [
+    -0.20255586369293455,
+    -0.8307011736471974,
+    0.6056483156983711,
+    -0.4519628526592277,
+    -0.3915948554934204
+  ],
+  "neutrino": {
+    "real_bare_Majorana": [
+      [
+        0.6669022954457456,
+        0.49459716184342545,
+        -0.3690913330224481
+      ],
+      [
+        0.49459716184342545,
+        0.556682408399687,
+        -0.4443655110360563
+      ],
+      [
+        -0.3690913330224481,
+        -0.4443655110360563,
+        1.3576169510327796
+      ]
+    ],
+    "PMNS_abs_squared": [
+      [
+        0.6805557600000013,
+        0.2972542399999987,
+        0.022189999999999318
+      ],
+      [
+        0.20563576680619244,
+        0.23407910319380637,
+        0.5602851300000006
+      ],
+      [
+        0.11380847319380552,
+        0.46866665680619385,
+        0.41752486999999977
+      ]
+    ],
+    "J": 0.005101688079498158,
+    "delta_deg": 8.855255730793335,
+    "masses_eV": [
+      0.0029469273399324297,
+      0.009104085936920924,
+      0.0501964578505978
+    ]
+  },
+  "neutrino_CP_partner": {
+    "real_bare_Majorana": [
+      [
+        0.6669022954457456,
+        0.49459716184342545,
+        -0.3690913330224481
+      ],
+      [
+        0.49459716184342545,
+        0.556682408399687,
+        -0.4443655110360563
+      ],
+      [
+        -0.3690913330224481,
+        -0.4443655110360563,
+        1.3576169510327796
+      ]
+    ],
+    "PMNS_abs_squared": [
+      [
+        0.6805557600000013,
+        0.2972542399999987,
+        0.022189999999999318
+      ],
+      [
+        0.20563576680619244,
+        0.23407910319380637,
+        0.5602851300000006
+      ],
+      [
+        0.11380847319380552,
+        0.46866665680619385,
+        0.41752486999999977
+      ]
+    ],
+    "J": -0.005101688079498158,
+    "delta_deg": 351.1447442692067,
+    "masses_eV": [
+      0.0029469273399324297,
+      0.009104085936920924,
+      0.0501964578505978
+    ]
+  },
+  "neutrino_boundary": "RealpositiveMajorana5shapeparameters fit4oscillationcomparators withsamecomplexA. No newCPphase; neutrino1localparameterfree, so displayedmassscale/delta areconditionalwitnessvalues notpredictions. Fourparameterzero23texture search stalled atlogresidual0.13845, not a globalno-go.",
+  "fitted_down_parameters": [
+    -0.3497011260666278,
+    0.09754766874005429,
+    0.04188033188719437,
+    11.279482901951425,
+    8.059823963649515,
+    -1.904101410788516,
+    -6.844437562070213,
+    -11.79584423547314
+  ],
+  "up_height": 0.8744698731421595,
+  "up_entangler": 0.005520606513514881,
+  "quark_comparators_matched": {
+    "mc_mt": 0.0036847735647212707,
+    "mu_mc": 0.001983870967740563,
+    "ms_mb": 0.018531468531468594,
+    "md_ms": 0.050377358490567604,
+    "Vus": 0.22499999999999612,
+    "Vcb": 0.04109999999999998,
+    "Vub": 0.0038200000000001176,
+    "J": 3.0800000000037395e-05
+  },
+  "charged_lepton_ratios": {
+    "mmu_mtau": 0.0588223840938243,
+    "me_mmu": 0.004736949706964651
+  },
+  "shared_A_real": [
+    [
+      0.6838039974492928,
+      -0.22593980067361674,
+      0.19186906134323684
+    ],
+    [
+      -0.22593980067361674,
+      0.8295426321678663,
+      0.08128028530858515
+    ],
+    [
+      0.19186906134323684,
+      0.08128028530858515,
+      0.5377642388738417
+    ]
+  ],
+  "shared_A_imag": [
+    [
+      0.0,
+      0.05337738084059942,
+      0.3306710800831242
+    ],
+    [
+      -0.05337738084059942,
+      0.0,
+      0.2686726751636693
+    ],
+    [
+      -0.3306710800831242,
+      -0.2686726751636693,
+      0.0
+    ]
+  ],
+  "real_bare_down": [
+    [
+      0.6899321130729357,
+      0.3133046463287535,
+      0.44873503132258985
+    ],
+    [
+      0.25916397784710604,
+      0.10861773464002279,
+      0.20714943647741185
+    ],
+    [
+      -0.25822149514517667,
+      -0.1324069109424974,
+      -0.13559553922722967
+    ]
+  ],
+  "real_bare_charged_transpose": [
+    [
+      0.3430326204664036,
+      0.3959721721116801,
+      0.6942171887917853
+    ],
+    [
+      0.14440474232291015,
+      0.22526743372063326,
+      0.32953599261244804
+    ],
+    [
+      -0.11769328451003867,
+      -0.09022912652094302,
+      -0.19972824750822937
+    ]
+  ],
+  "all_eight_down_plus_charged_residual": [
+    3.330669073875464e-15,
+    3.10862446895039e-14,
+    -1.7319479184152593e-14,
+    -5.551115123125785e-16,
+    3.086420008457888e-14,
+    1.2140072215452541e-12,
+    -2.4424906541753475e-15,
+    -1.0214051826551492e-14
+  ],
+  "local_joint_Jacobian_singular_values": [
+    72.54234019083607,
+    34.94658483187886,
+    1.4530603064200553,
+    0.08687534045568218,
+    0.07233823631383213,
+    0.05821909520341539,
+    0.01777999325313473,
+    0.006208456145492939
+  ],
+  "quark_only_Jacobian_singular_values": [
+    72.26462657305812,
+    32.487041531162376,
+    1.0846266450689266,
+    0.07355556544265929,
+    0.05325891870197397,
+    0.019191542046616463
+  ],
+  "local_fit_fibre": "Quark-only6x8 Jacobian hasrank6:two localfree directions. Adding2chargedratios gives8x8rank8 inthismarkedparameterization; implicitfunctiontheorem gives locallyisolated fits, not a scalarvacuum or globaluniqueness.",
+  "common_matching": "K=I-bdag b/(1+|b|\u00b2),A=sqrt(K);Md=md A and chargedWeylMe=A^T me_bare, me_bare=[Theta(Omega_d,z_e=6z_d) in sameCPbasis]^T. No separate chargedlepton fitparameters.",
+  "supplied_scales": "Allquark andchargedlepton ratios compared at prior11942suppliedMZvalues. Overallup/downcouplings arefree. The absolute b/tau relation requires RG/threshold matching; it is not inferred from separatelynormalized fields.",
+  "direct_yb_over_ytau_same_normalization": 1.002134339459618,
+  "heldout_MZ_b_over_tau": 1.6378046545721092,
+  "heldout_b_tau_fractional_error": -0.3881234024692436,
+  "heldout_boundary": "AtthesameMZcomparison scale theunifiednormalizationgivesb/tau about1.002 vs1.638:FAIL. Fourteenratio/mixingcomparatorsdonotinclude thisadditionalabsoluteintersectorratio. RG and/or threshold/gaugeembeddingchanges mustbe explicitlycomputed, not assumed.",
+  "field_convention": "Holomorphic11942 convention for signedquarkJ. ConjugationflipsJ; physicalWeyl convention requires consistentconjugationofallcharged/neutrino matrices.",
+  "scope": "Numericaljointcompatibility, not predictedmasses,globalfitcensus,fieldvacuum,RGunification or strongCPprotection. Actualmodulistabilization remainsopen. The classallows8downparameters tofit8down/chargedobservables.",
+  "prior": [
+    "11942 gaugeinvariantcharge6 andbarethetafit",
+    "11955 commonSU5heavy5barmatching",
+    "11960 realMajorana4parametertexture",
+    "12005 CP-realtheta plusBarrquarkwitness"
+  ]
+}

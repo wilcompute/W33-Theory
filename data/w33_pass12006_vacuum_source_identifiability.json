@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "actual_source_h_real": [
+    -0.025080869969655757,
+    0.013875248558254,
+    0.49779406763536316
+  ],
+  "actual_source_h_imag": [
+    -0.02579271335997713,
+    -0.13329886404919158,
+    0.936798157327174
+  ],
+  "fitted_real_C": [
+    [
+      -18.393576080419248,
+      130.688214526238,
+      18.08945734245184
+    ],
+    [
+      -14.700270073544885,
+      105.1196071384055,
+      12.520373642921992
+    ],
+    [
+      1.5155690921138838,
+      -6.600889238267869,
+      -13.489186047859976
+    ]
+  ],
+  "matched_B_real": [
+    11.279482901951425,
+    8.059823963649515,
+    -6.844437562070213
+  ],
+  "matched_B_imag": [
+    0.0,
+    -1.904101410788516,
+    -11.79584423547314
+  ],
+  "source_rank2_singular_values": [
+    1.0672417270351993,
+    0.07510153926343212
+  ],
+  "CP_source": "Existingbounded11996source anditsCPconjugate mapthroughrealC to12007mixingrow andconjugate. Thisretains theta-restrictedrealbareYukawas, unlike11989free-m inversefit.",
+  "supplied_auxiliary_action": "Vextra=Mbeta\u00b2|beta-C h|\u00b2 withbeta3complexSMsinglets, transformationtypecompatiblewithdeclaredh/Cspurions. Classicalelimination beta=C h changes nooldvacuum. It is a specifiedaddedEFTsector, not an E6/familysymmetry-derivedcoupling.",
+  "exact_stability": "Block Hessian [[H+J^T KJ,-J^TK],[-KJ,K]] iscongruent todiag(H,K) bydelta_beta=Jdelta_q+delta_eta. Kpositiveadds6positivemodes andpreservesoldgaugezeros. Applies atfiniteoriginalenergy scale too; the storednumericcheck usescongruence-normalizedfields.",
+  "normalized_Hessian_congruence_error": 1.8633539156098777e-11,
+  "auxiliary_positive_modes": 6,
+  "old_core_positive_modes": 30,
+  "old_gauge_zero_modes": 2,
+  "quark_only_parameter_fibre_dimension": 2,
+  "charged_observable_lift_on_fibre_eigenvalues": [
+    0.00020060576285628928,
+    0.0030105009610064412
+  ],
+  "selection_gate": "Evenanisolatedjointdatafit isNOT aselectedfieldvacuum. Thetwoquarkfit directions aregenuine localidentifiability freedom, liftedby2chargedcomparators. A sumofsquareddataresiduals couldselectthispoint byconstruction but isnot aUVdynamicalprinciple. No suchpotential isclaimedderived.",
+  "obstruction_to_unique_invariant_B_vacuum": "A singlefundamentalcomplextriplet withonlySU3-invariantpotential depends onlyonBdagB; SU3 istransitiveonitsfixednormsphere. Relativeorientation andphysicalCP requiretheactualh/f/t tensors or otherchargedspurions. FreezingCdoesnotderiveitsalignment.",
+  "prior": [
+    "11989 realCvacuumtransmission tofree-m Barrtarget",
+    "11996 bounded72fieldCPsource/stability",
+    "11971 suppliedtargetpotentialprior",
+    "12007 jointtheta/chargedfit"
+  ],
+  "scope": "Concrete transmission andaddedpositiveauxiliarysector, not acompleteE6vacuum orselectedtheta/couplingvalues. The fittedC,moduli,scales andspurionpattern remaininputs."
+}

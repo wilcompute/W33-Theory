@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "safe_nonzero_upper_block": [
+    {
+      "r": 0.0,
+      "determinant_real": 0.0002007582467068012,
+      "determinant_imag": 3.566182846036291e-19,
+      "upper_block_norm": 0.0
+    },
+    {
+      "r": 0.0005,
+      "determinant_real": 0.00016243336031149933,
+      "determinant_imag": 5.68062358242941e-19,
+      "upper_block_norm": 0.005302873520940083
+    },
+    {
+      "r": 0.001,
+      "determinant_real": 0.0001241084739161975,
+      "determinant_imag": 1.0334106396963982e-19,
+      "upper_block_norm": 0.010605747041880166
+    }
+  ],
+  "safe_leak_identity": "c=r m Bdag withrealr gives det[[m,c],[B,mu]]=det(m)(mu-r|B|\u00b2),realpositiveifmu>r|B|\u00b2. Thisalignmentisnotprotected/derived here, wouldrequirejointrefit, andmustnotbeconfusedwithgenericallowedleak. PositiveHermitianfieldnormalizationphaseinvariance isprior11950.",
+  "aligned": {
+    "epsilon": 0.0,
+    "minimum_squark_mass_squared": 3.9955714559073905,
+    "theta_quark": 1.856970790057636e-14,
+    "theta_gluino": 1.6255947170065683e-16,
+    "theta_colored_sum": 1.8732267372277015e-14,
+    "delta_gluino_real": -0.0029318297054915887,
+    "delta_gluino_imag": -3.7930543396819924e-17,
+    "max_quark_correction": 0.00039944818484938737
+  },
+  "real_A_nonuniversality_scan": [
+    {
+      "epsilon": 0.01,
+      "minimum_squark_mass_squared": 3.99555873770195,
+      "theta_quark": 1.7098367356574527e-09,
+      "theta_gluino": 6.265074127680234e-11,
+      "theta_colored_sum": 1.772487476934255e-09,
+      "delta_gluino_real": -0.0029887356061148954,
+      "delta_gluino_imag": -1.4618506297920543e-11,
+      "max_quark_correction": 0.0003885234789305752
+    },
+    {
+      "epsilon": 0.001,
+      "minimum_squark_mass_squared": 3.995570424885315,
+      "theta_quark": 1.714431081570821e-11,
+      "theta_gluino": 6.116144630042965e-13,
+      "theta_colored_sum": 1.7755925278712506e-11,
+      "delta_gluino_real": -0.002937520204938181,
+      "delta_gluino_imag": -1.4271004136766918e-13,
+      "max_quark_correction": 0.00039835562121792625
+    },
+    {
+      "epsilon": 0.0001,
+      "minimum_squark_mass_squared": 3.995571355189438,
+      "theta_quark": 1.7216370159944708e-13,
+      "theta_gluino": 5.7321512243652624e-15,
+      "theta_colored_sum": 1.7789585282381233e-13,
+      "delta_gluino_real": -0.002932398754528266,
+      "delta_gluino_imag": -1.3375019523518945e-15,
+      "max_quark_correction": 0.00039933892755834584
+    },
+    {
+      "epsilon": 1e-05,
+      "minimum_squark_mass_squared": 3.9955714458593437,
+      "theta_quark": 1.5622270956228206e-15,
+      "theta_gluino": 8.805891861623149e-16,
+      "theta_colored_sum": 2.4428162817851354e-15,
+      "delta_gluino_real": -0.002931886610391587,
+      "delta_gluino_imag": -2.0547081010454013e-16,
+      "max_quark_correction": 0.000399437259110957
+    }
+  ],
+  "CP_partner": {
+    "epsilon": 0.001,
+    "minimum_squark_mass_squared": 3.995570424885315,
+    "theta_quark": -1.714431081570821e-11,
+    "theta_gluino": -6.116144630042965e-13,
+    "theta_colored_sum": -1.7755925278712506e-11,
+    "delta_gluino_real": -0.002937520204938181,
+    "delta_gluino_imag": 1.4271004136766918e-13,
+    "max_quark_correction": 0.00039835562121792625
+  },
+  "common_scale3": {
+    "epsilon": 0.003,
+    "minimum_squark_mass_squared": 35.96013382396792,
+    "theta_quark": 1.7153210052172057e-11,
+    "theta_gluino": 6.119439803294123e-13,
+    "theta_colored_sum": 1.776515403250147e-11,
+    "delta_gluino_real": -0.008812560614902331,
+    "delta_gluino_imag": -4.2836078623058856e-13,
+    "max_quark_correction": 0.0011950668636538987
+  },
+  "exact_alignment_proof": "IfM=U diag(s)Vdag, rotate squarks bydiag(U,V). UniversalLL/RRsoft masses andLR=aM become four REAL2x2blocks [[s\u00b2+msoft\u00b2,a s],[a s,s\u00b2+msoft\u00b2]]. Real loop spectral functions give deltaM=U diag(real)Vdag, soImTr(M^-1deltaM)=0. Quarkbasisgluinomass loop mixingproducts arereal, soImdeltaMg=0. No expansioninB/mu ormassinsertions isused.",
+  "declared_matching": "Zeroexternalmomentum finiteB0 MSbar coloredbenchmark:deltaM=(2alpha_s/3pi)mg[B0(mg\u00b2,Sq)]LR;deltaMg=(alpha_s/2pi)sum_i,a s_i ZL_ia ZR_ia* B0(s_i\u00b2,lambda_a). theta_colored=ImTr(M^-1deltaM)-3Im(deltaMg/mg). Scalar tadpoles, EW/Higgs/neutral-scalar andhigherloop terms excluded.",
+  "supplied_soft_structure": "M includesall4quarks andheavycomplexBarrrow. SqLL=M Mdag+4I, SqRR=MdagM+4I, SqLR=.3M. A mismatch isepsilon*realpatternHadamardM; realcouplings neednotbeuniversal.",
+  "boundary": "SeparateSUSYcoloredsoftbenchmark, not aunifiedSUSYcompletionof11996nonSUSYscalarpotential. Alignedcoloredone-loopchannel vanishes, NOT totalradiativestrongCP. Gauge/softmediation must enforcealignment, running/messenger/Bsectorcorrections mustbe matched, and12001neutralportal persists. Raisingallmassscales doesnotremove dimensionlessmisalignment.",
+  "prior": [
+    "11954/11996 neutral-scalar loops doNOTinclude thiscoloredchannel",
+    "11973/11978 mediationwithoutcoloredthresholdmatrices",
+    "12005/12007 constrainedthetaBarrmatrices"
+  ],
+  "primary": [
+    "https://arxiv.org/abs/2002.04204",
+    "https://arxiv.org/abs/hep-ph/9709356"
+  ]
+}

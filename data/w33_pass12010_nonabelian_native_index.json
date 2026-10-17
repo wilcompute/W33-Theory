@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "native_noncommuting_cells": 2,
+  "native_color_sites": 162,
+  "noncommuting_root_loop_commutator_norm": 0.4855085733033287,
+  "native_gauge_covariance_error": 1.7282752880425744e-15,
+  "desired_root_link_realization_error": 3.734130795427979e-16,
+  "exact_native_map": "Primitivepivotedgee1 realizes U1(x)*U0(x+e1)*U0(x+e1+e0)*U0(x+e1+2e0),e3 realizesU3(x)*U0(x+e3)*U0(x+e3+e0),e2=U2,e4=U0. OthercelltreeedgesI. Actual12000words cancelclocktails exactly inNONCOMMUTATIVEorder; arbitrarylocalSU3gauge transformations dressallnativeedges.",
+  "forward_flux": {
+    "geometric_ch2": 1,
+    "color_indices": [
+      -1,
+      0,
+      0
+    ],
+    "total_overlap_index": -1,
+    "minimum_color_kernel_gap": 0.3455097810878994
+  },
+  "reverse_flux": {
+    "geometric_ch2": -1,
+    "color_indices": [
+      1,
+      0,
+      0
+    ],
+    "total_overlap_index": 1,
+    "minimum_color_kernel_gap": 0.34550978108789426
+  },
+  "flux_lattice": [
+    3,
+    3,
+    3,
+    3
+  ],
+  "native_index_transfer": "Boundedcelltreeconjugation factorspathregulatorintocoarseWilson plus26opticalshifts. Everyopticalshift>=4 hasReD>=3 forallunitarylinks; deformationtothemassiveonsitekernel keepsitsindex0. Nativeoverlapindex equalsthesingleacousticSU3index, signsetbyactualgamma5orientation. Thisisanalgebraicfactorization, not densefullSU3native26244dim diagonalization.",
+  "supplied_SM_left_Weyl_inventory": "Q(3,2)_1,uc(bar3,1)_-4,dc(bar3,1)_2,L(1,2)_-3,ec(1,1)_6,nuc(1,1)_0; chargesare6Y. Threecopies supply48internalleftWeylcomponents, ratherthan inferringfamiliesfromdoublers.",
+  "anomaly_checks": {
+    "SU3_cubic": 0,
+    "SU3_squared_6Y": 0,
+    "SU2_squared_6Y": 0,
+    "U1_cubic": 0,
+    "mixed_gravity": 0,
+    "SU2_doublets_per_generation": 4,
+    "SU2_Witten_mod2_three_generations": 0
+  },
+  "chiral_projector": "For gappedgamma5WilsonQ, Dov=I+gamma5 signQ satisfiesGW; gammahat5=-signQ, Phatminus=(I+signQ)/2. Localityrequiresauniformgap/admissibilitycondition. Actualnonzeroindexbackgroundsupplied.",
+  "boundary": "NonAbeliannativepathcarriersandnonzeroindex, withchosencells/tree/clockandexternalSU3bundle; not aselected4Dcontinuum, derivedthreefamilies, fullnonAbelianWeylmeasure, nonperturbativeSMconstruction orE6vacuum. Anomalycancellation isnecessary anddoesnotconstructtheglobalfermionmeasure.",
+  "prior": [
+    "12002 Abelianpath/treefactorization andopticalgap",
+    "12000 actualintegralnativepaths",
+    "TOE68 externalU1overlapindexpositivecontrol",
+    "11588 external/internaltensorindex doesnotderivefamilies"
+  ],
+  "primary": [
+    "https://arxiv.org/abs/hep-lat/9806013",
+    "https://arxiv.org/abs/hep-lat/9808010"
+  ]
+}

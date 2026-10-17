@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "native_cell_sites": 27,
+  "conductance_edges": 135,
+  "native_capacity_lifts": [
+    {
+      "phase": 0.0,
+      "sigma": 0.0002,
+      "minimum_weight": 0.9999896837697978,
+      "native_vertex_capacity": 0.07413335704335929,
+      "geometric_volume_density": 0.07413335704335926,
+      "local_metric_error": 1.6653345369377348e-16
+    },
+    {
+      "phase": 0.7853981633974483,
+      "sigma": 0.0001414213562373095,
+      "minimum_weight": 0.9999948343106458,
+      "native_vertex_capacity": 0.07411598855223132,
+      "geometric_volume_density": 0.07411598855223132,
+      "local_metric_error": 4.440892098500626e-16
+    },
+    {
+      "phase": 1.5707963267948966,
+      "sigma": 1.2246467991473533e-20,
+      "minimum_weight": 1.0,
+      "native_vertex_capacity": 0.07407407407407401,
+      "geometric_volume_density": 0.074074074074074,
+      "local_metric_error": 1.6653345369377348e-16
+    },
+    {
+      "phase": 2.356194490192345,
+      "sigma": -0.0001414213562373095,
+      "minimum_weight": 0.9923759749107021,
+      "native_vertex_capacity": 0.07403218329962116,
+      "geometric_volume_density": 0.07403218329962116,
+      "local_metric_error": 2.7755575615628914e-16
+    },
+    {
+      "phase": 3.141592653589793,
+      "sigma": -0.0002,
+      "minimum_weight": 0.9892254431759795,
+      "native_vertex_capacity": 0.07401483851219877,
+      "geometric_volume_density": 0.07401483851219874,
+      "local_metric_error": 1.6653345369377348e-16
+    },
+    {
+      "phase": 3.9269908169872414,
+      "sigma": -0.00014142135623730954,
+      "minimum_weight": 0.9923759749107021,
+      "native_vertex_capacity": 0.07403218329962116,
+      "geometric_volume_density": 0.07403218329962116,
+      "local_metric_error": 2.7755575615628914e-16
+    },
+    {
+      "phase": 4.71238898038469,
+      "sigma": -3.67394039744206e-20,
+      "minimum_weight": 1.0,
+      "native_vertex_capacity": 0.07407407407407401,
+      "geometric_volume_density": 0.074074074074074,
+      "local_metric_error": 1.6653345369377348e-16
+    },
+    {
+      "phase": 5.497787143782138,
+      "sigma": 0.00014142135623730948,
+      "minimum_weight": 0.9999948343106458,
+      "native_vertex_capacity": 0.07411598855223132,
+      "geometric_volume_density": 0.07411598855223132,
+      "local_metric_error": 4.440892098500626e-16
+    }
+  ],
+  "d4_capacity": "M=sqrt(det H)",
+  "d4_inverse_metric": "G=H/sqrt(det H)",
+  "exact_general_d": "For d!=2: M=(det H)^(1/(d-2)), G=H/M, sqrt(det g)=M; H=sqrt(g)g^-1. d=2 requiresdetH=1 and leavesa conformalscaleundetermined.",
+  "native_action": "Euclidean4DscalarDirichletaction=1/2 sum_edges w_e|delta_e phi|\u00b2; innerproduct=sum_vertices M(w)|phi|\u00b2 with27sitespercell. Generalizedoperator M^-1L haslongwavelengthsymbolG=H/M andmeasureM. Noextra continuoustime isadded; Lorentzinterpretation andsmoothlimit remaininputs.",
+  "density_repair": "Unitnativecapacities andvariableH give a weightedmetricoperator, not automatically pureLaplaceBeltrami. A halfdensitymap to sqrt(g)dx creates scalarV. Capacities M=sqrt(detH) complete thegeometricDirichletform in4D.",
+  "conformal_fixed_capacity": {
+    "H": "exp(2sigma) I4",
+    "metric": "g=exp(-2sigma)I4",
+    "geometric_measure": "exp(-4sigma)dx",
+    "extra_scalar_V": "2 exp(2sigma) sigma_xx",
+    "scalar_curvature": "6exp(2sigma)(sigma_xx-sigma_x\u00b2)",
+    "integrated_R_over6": 11.302516424433048,
+    "integrated_a2_fixed_unit_capacity": -33.90754927329914,
+    "integrated_extra_V": 45.21006569773219,
+    "epsilon": 0.12
+  },
+  "conditional_induced_action": "If thisslowfield4Dcovariantcontinuum exists, scalarheatcoefficienta2=(4pi)^-2 integral sqrt(g)R/6 forcapacity-completedLaplaceBeltrami. A quantum/spectralaction then also hasa0cosmological andhighercurvatureterms. Heatkernelcoefficient isstandard, not a nativeEinsteinaction derivation.",
+  "constraint_boundary": "A suppliedEHpiece throughthisinvertible10metricchart inheritscontinuumADMclosure as11999. No graphdeterminantlimit, Lorentzsignature, lapse/refoliation invariance, Newton/Lambda or higherderivativeghostcontrol selected. Fixedcellcount isabackgrounddensity until suppliedcapacitycompletion.",
+  "prior": [
+    "11601 metric/density/half-density heatkernel audit andnonconformalnegativecontrol",
+    "11995 actual10edgechart",
+    "11999 canonicalADMpulledbackfromsuppliedEH"
+  ],
+  "primary": [
+    "https://arxiv.org/abs/hep-th/0306138"
+  ]
+}
