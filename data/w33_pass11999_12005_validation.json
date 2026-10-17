@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-17",
+  "science_commit": "9f20579ad02cc1b61f2902f2abfd98def65155f3",
+  "hosted_run": 39051867041,
+  "hosted_job": 117451920851,
+  "hosted_url": "https://github.com/wilcompute/W33-Theory/actions/runs/39051867041",
+  "hosted_conclusion": "success",
+  "local_frozen_integration_tests": 32,
+  "local_regenerated_tests": 16,
+  "hosted_frozen_tests": 16,
+  "hosted_regenerated_tests": 16,
+  "all_six_producers_regenerated": "PASS",
+  "search_replay_residual_norm": 7.396532732074261e-12,
+  "hosted_log_sha256": "a24e3e62d4fca8977ad11d02da0821038f56285335da2d5bb60f603fe1a56a1c",
+  "hosted_artifact_agreement": {
+    "w33_pass11999_native_adm_weights": {
+      "exact_keys_equal": [
+        "exact_selected_edge_ADM_jacobian",
+        "exact_primary_null_directions_Q",
+        "edge_velocity_Hessian_inertia"
+      ],
+      "all_fields_agree": true,
+      "numeric_tolerance": {
+        "relative": 1e-07,
+        "absolute": 1e-10
+      }
+    },
+    "w33_pass12000_native_unitary_clock": {
+      "exact_keys_equal": [
+        "unimodular_period_matrix",
+        "native_period_closed_paths",
+        "exact_principal_determinant"
+      ],
+      "all_fields_agree": true,
+      "numeric_tolerance": {
+        "relative": 1e-07,
+        "absolute": 1e-10
+      }
+    },
+    "w33_pass12001_radial_portal_decoupling": {
+      "exact_keys_equal": [
+        "exact_decoupling_argument",
+        "internal_symmetry_gate"
+      ],
+      "all_fields_agree": true,
+      "numeric_tolerance": {
+        "relative": 1e-07,
+        "absolute": 1e-10
+      }
+    },
+    "w33_pass12002_native_path_overlap": {
+      "exact_keys_equal": [
+        "exact_free_identity",
+        "maximum_native_hopping_range",
+        "optical_coefficient"
+      ],
+      "all_fields_agree": true,
+      "numeric_tolerance": {
+        "relative": 1e-07,
+        "absolute": 1e-10
+      }
+    },
+    "w33_pass12003_h27_decuplet_mass27": {
+      "exact_keys_equal": [
+        "explicit_integer_mass_N",
+        "exact_determinant_N",
+        "exact_mass_rank",
+        "exact_continuous_SU3_breaking_rank"
+      ],
+      "all_fields_agree": true,
+      "numeric_tolerance": {
+        "relative": 1e-07,
+        "absolute": 1e-10
+      }
+    },
+    "w33_pass12005_cp_real_theta_barr": {
+      "exact_keys_equal": [
+        "up_height",
+        "up_imaginary_entangler",
+        "down_height",
+        "fitted_B_over_mu"
+      ],
+      "all_fields_agree": true,
+      "numeric_tolerance": {
+        "relative": 1e-07,
+        "absolute": 1e-10
+      }
+    }
+  },
+  "input_context": {
+    "ChatReview_sha256": "041ad5dfbc735556fbff66043db8ef80433bbb21ce35440e148d90f1fb862499",
+    "paper_pdf_sha256": "9e7297ee0b08aaf4b66da28fde557493297b70f67d203fbbb5262dc4a85a623e",
+    "paper_pages_extracted": 182,
+    "archived_python_scripts_AST_parsed": 51,
+    "manual_reading_scope": "Selected new scripts, reports and paper flavour/open-boundary sections; not a claim of end-to-end manual reading of every page and script."
+  },
+  "physics_scope": "Constrained theta/Barr compatibility witness and conditional native constructions. UV theta branch, vacuum selection, lepton matching, radiative protection, continuum/action selection remain open.",
+  "science_file_worktree_sha256": {
+    "analysis/w33_pass11999_native_adm_weights.py": "551e695e39319e477c77c778c25ada260dc9405cf908e12e2e27664616138c19",
+    "analysis/w33_pass12000_native_unitary_clock.py": "a413e4d2c614316aa5ca196d6782d7a59da053cbe51c4bf1a00dd83f2b353251",
+    "analysis/w33_pass12001_radial_portal_decoupling.py": "a4d6cf95e0d4f88660d56233f1ae529c81aad37b23d8bd7bfd98f6943d1a796b",
+    "analysis/w33_pass12002_native_path_overlap.py": "4181ee655564664a52bbd56e4450e09c62631287f3ad885aeee8509184049e8a",
+    "analysis/w33_pass12003_h27_decuplet_mass27.py": "ed9f8c4f07144832c2838378b8c0d69de51f56e37862656bb508818e8127d63b",
+    "analysis/w33_pass12005_cp_real_theta_barr.py": "5673d9c4d9937c2ea80f1ca5353aacbc8ab63550e94a74a3d35b8314c602b7af",
+    "analysis/w33_pass12005_cp_real_theta_barr_search.py": "4df440950a0ee3c324084cfaf7e548de09eef1d59362b74129c5c2aa42b32c46",
+    "analysis/PASS11999_12003_NATIVE_CANONICAL_CLOCK_PORTAL_MEASURE_AND_FAMILY.md": "e3900cd80074457978e9e2f01e46105d40168543749da71ee0d04be39c950662",
+    "analysis/PASS12005_CP_REAL_THETA_WITH_VECTORLIKE_MATCHING.md": "95bb08e4b34fccd47ef62a4cd16431282cf718f19815168b187518b850492a76",
+    "tests/test_w33_pass11999_12003_native_completion.py": "937baed494e511d31512a92f1975deb416bae830086516b60df9c167db6995e1",
+    "tests/test_w33_pass12005_cp_real_theta_barr.py": "70cd27f0b0fd4f151c015ebb10cfaa0ad756959f5e68afda9594908f2eeb5421",
+    ".github/workflows/pass11999-12003-native-completion.yml": "efa314cb3a7586a9b9abbbea3d8f7789aff774a2884693d56e95ae4e2b2d7462",
+    "docs/index.html": "161c26f26d4630dd67d3fb87b6e6c9cbba8dff4ec6226abb8c28c85d6efe6e4e",
+    "data/w33_pass11999_native_adm_weights.json": "9dd78baf8e94179a22af5305950874a06956f6c3384294430c90494929691c7e",
+    "data/w33_pass12000_native_unitary_clock.json": "9de83baedef991fd7758b8a20841baee6f8b3c51ca42f119ef5321685db88087",
+    "data/w33_pass12001_radial_portal_decoupling.json": "c94b1d991a018625715a7db171f9b624b31ec34898a3861f6b351d113c97dfd9",
+    "data/w33_pass12002_native_path_overlap.json": "d0054301b73c97600a8f34e5b01e1aeb2a6a4fea856fa1b26b78ac708195bf99",
+    "data/w33_pass12003_h27_decuplet_mass27.json": "b6477f4ec9541aef04587c28b80f994d8530d116529ece4357ba57a1c85b72ec",
+    "data/w33_pass12005_cp_real_theta_barr.json": "18b1359662eeddde3aff73a5b824faaaa1cf8e69b0bb398f0d1bc885f4a8ef19",
+    "data/w33_pass12005_cp_real_theta_barr_search_record.json": "6d30ca43e1009625a804649e2ba2bb42057c94706de8a4789f98bae97ea4e1cc"
+  },
+  "science_file_LF_sha256": {
+    "analysis/w33_pass11999_native_adm_weights.py": "551e695e39319e477c77c778c25ada260dc9405cf908e12e2e27664616138c19",
+    "analysis/w33_pass12000_native_unitary_clock.py": "a413e4d2c614316aa5ca196d6782d7a59da053cbe51c4bf1a00dd83f2b353251",
+    "analysis/w33_pass12001_radial_portal_decoupling.py": "a4d6cf95e0d4f88660d56233f1ae529c81aad37b23d8bd7bfd98f6943d1a796b",
+    "analysis/w33_pass12002_native_path_overlap.py": "4181ee655564664a52bbd56e4450e09c62631287f3ad885aeee8509184049e8a",
+    "analysis/w33_pass12003_h27_decuplet_mass27.py": "ed9f8c4f07144832c2838378b8c0d69de51f56e37862656bb508818e8127d63b",
+    "analysis/w33_pass12005_cp_real_theta_barr.py": "5673d9c4d9937c2ea80f1ca5353aacbc8ab63550e94a74a3d35b8314c602b7af",
+    "analysis/w33_pass12005_cp_real_theta_barr_search.py": "4df440950a0ee3c324084cfaf7e548de09eef1d59362b74129c5c2aa42b32c46",
+    "analysis/PASS11999_12003_NATIVE_CANONICAL_CLOCK_PORTAL_MEASURE_AND_FAMILY.md": "e3900cd80074457978e9e2f01e46105d40168543749da71ee0d04be39c950662",
+    "analysis/PASS12005_CP_REAL_THETA_WITH_VECTORLIKE_MATCHING.md": "95bb08e4b34fccd47ef62a4cd16431282cf718f19815168b187518b850492a76",
+    "tests/test_w33_pass11999_12003_native_completion.py": "937baed494e511d31512a92f1975deb416bae830086516b60df9c167db6995e1",
+    "tests/test_w33_pass12005_cp_real_theta_barr.py": "70cd27f0b0fd4f151c015ebb10cfaa0ad756959f5e68afda9594908f2eeb5421",
+    ".github/workflows/pass11999-12003-native-completion.yml": "efa314cb3a7586a9b9abbbea3d8f7789aff774a2884693d56e95ae4e2b2d7462",
+    "docs/index.html": "c25e149777c9baa1265a5fa9de44a23e9008685b960920672dbacba26f49aa35",
+    "data/w33_pass11999_native_adm_weights.json": "9dd78baf8e94179a22af5305950874a06956f6c3384294430c90494929691c7e",
+    "data/w33_pass12000_native_unitary_clock.json": "9de83baedef991fd7758b8a20841baee6f8b3c51ca42f119ef5321685db88087",
+    "data/w33_pass12001_radial_portal_decoupling.json": "c94b1d991a018625715a7db171f9b624b31ec34898a3861f6b351d113c97dfd9",
+    "data/w33_pass12002_native_path_overlap.json": "d0054301b73c97600a8f34e5b01e1aeb2a6a4fea856fa1b26b78ac708195bf99",
+    "data/w33_pass12003_h27_decuplet_mass27.json": "b6477f4ec9541aef04587c28b80f994d8530d116529ece4357ba57a1c85b72ec",
+    "data/w33_pass12005_cp_real_theta_barr.json": "18b1359662eeddde3aff73a5b824faaaa1cf8e69b0bb398f0d1bc885f4a8ef19",
+    "data/w33_pass12005_cp_real_theta_barr_search_record.json": "6d30ca43e1009625a804649e2ba2bb42057c94706de8a4789f98bae97ea4e1cc"
+  },
+  "github_tree_verified_blob_sha1": {
+    "analysis/w33_pass11999_native_adm_weights.py": "db70bc1dd210f6cbd173b3d109c2301b94953ee8",
+    "analysis/w33_pass12000_native_unitary_clock.py": "f629e02fba37ad571eb95341b1bd3b6706542131",
+    "analysis/w33_pass12001_radial_portal_decoupling.py": "4b6e1577ab176a5c98b8d3e1d8498030691dfc89",
+    "analysis/w33_pass12002_native_path_overlap.py": "55b04eb645175aa02211474755281303966a3a66",
+    "analysis/w33_pass12003_h27_decuplet_mass27.py": "d6534d9875caf53c87211db2a6258c5bdb2ef4a9",
+    "analysis/w33_pass12005_cp_real_theta_barr.py": "2b19c4b960e1675bdc81edba37b62e6bfeb20252",
+    "analysis/w33_pass12005_cp_real_theta_barr_search.py": "02d7049abb9cf07944985ab35643e95c863ded58",
+    "analysis/PASS11999_12003_NATIVE_CANONICAL_CLOCK_PORTAL_MEASURE_AND_FAMILY.md": "40465acaa6945b3da8698bddca8040560ea65ecf",
+    "analysis/PASS12005_CP_REAL_THETA_WITH_VECTORLIKE_MATCHING.md": "f3272817736a8e24f1533ef1b6cc367d5cbba505",
+    "tests/test_w33_pass11999_12003_native_completion.py": "17a5cd913912f7bf3d034f9160d89ffe499a1ab3",
+    "tests/test_w33_pass12005_cp_real_theta_barr.py": "807108db0d76beb14c3e266f3404c6244a80014f",
+    ".github/workflows/pass11999-12003-native-completion.yml": "0aacf3da5d3aaacbedc007b0c9c30e29714c78a1",
+    "docs/index.html": "ef78126d74c806900bb6afa248ff7fe01f2776c5",
+    "data/w33_pass11999_native_adm_weights.json": "e522b66fa957521070836c3aad317c1e7b23fa14",
+    "data/w33_pass12000_native_unitary_clock.json": "645a9f7176c13f1446e5b4adc950a73b651cb1a2",
+    "data/w33_pass12001_radial_portal_decoupling.json": "9cdc506cfe6754afd346ba81724600539a0bd22b",
+    "data/w33_pass12002_native_path_overlap.json": "b3450f58e4ff12abbc612b301a369144813637bd",
+    "data/w33_pass12003_h27_decuplet_mass27.json": "1be87a558b30ef39bdc1b55e50169e81f5c73635",
+    "data/w33_pass12005_cp_real_theta_barr.json": "155cf6c97834496981335a91fea2ac50a79dd03f",
+    "data/w33_pass12005_cp_real_theta_barr_search_record.json": "ba0c8a581b5bf39a63159e9b0f3321cb57eb455e"
+  },
+  "hash_scope": "All20sciencefiles verified against the exact GitHub commit tree with LF normalization; raw worktree SHA256 also retained."
+}
