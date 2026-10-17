@@ -235668,11 +235668,11 @@
           "line": 1,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "# Pass 11939: the symmetric-channel Weber law \u2014 normal ordering and m\u2081m\u2083/m\u2082\u00b2 = m_u m_t/m_c\u00b2",
-          "status": "retrospective_fit"
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "retrospective_fit": 1
+        "unclassified": 1
       },
       "structural_family_id": "e043fe4cf5e0836b78412ce8a0b257dfa5f6641fe8258c984775d51563745c0b",
       "structural_formula": "#Pass1#:thesymmetric-channelWeberlaw\u2014normalorderingandm1m3/m2#=m_um_t/m_c2"
@@ -342951,7 +342951,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 7,
+          "line": 17,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "(V_us = 0 from the localised-Higgs selection rule) and Pass 11905 (the one-qutrit reflection c \u2192 \u2212c).",
           "status": "certified_or_theorem"
@@ -354629,7 +354629,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 50,
+          "line": 57,
           "path": "analysis/PASS11944_MU_TAU_PARITY_IDENTITIES.md",
           "raw": "* But \u03bd\u2083 odd needs the odd theta coefficient to dominate, i.e. |\u03a9\u2081\u2082| = O(1). The neutrinos then sit outside the",
           "status": "unclassified"
@@ -354863,7 +354863,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 36,
+          "line": 43,
           "path": "analysis/PASS11944_MU_TAU_PARITY_IDENTITIES.md",
           "raw": "* Data (NuFIT-like central values, \u03b4 = 212\u00b0): (0.548, 0.605, 0.578). Every charged lepton is about one-third odd, close",
           "status": "retrospective_fit"
@@ -355658,7 +355658,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 49,
+          "line": 56,
           "path": "analysis/PASS11944_MU_TAU_PARITY_IDENTITIES.md",
           "raw": "* It needs only \u2016P_odd e\u2016 \u2265 |U_e3| = 0.148. That is comparable to the quark sector (\u2016P_odd d\u2016 = |V_cd| = 0.221).",
           "status": "unclassified"
@@ -355687,7 +355687,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 46,
+          "line": 53,
           "path": "analysis/PASS11944_MU_TAU_PARITY_IDENTITIES.md",
           "raw": "* It needs \u2016P_odd \u2113\u2016 \u2248 0.55\u20130.60 for **all three** charged leptons: O(1) breaking, far more than in the quark sector.",
           "status": "retrospective_fit"
@@ -357904,7 +357904,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 97,
+          "line": 108,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "* The data comparison uses M_Z running masses. The \u00b120% m_u uncertainty and the running to high scales (\u2248 0.64 at",
           "status": "certified_or_theorem"
@@ -358017,7 +358017,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 17,
+          "line": 23,
           "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
           "raw": "* The lepton coupling is Y_e = Y_d\u1d40 in SU(5).",
           "status": "open_or_conditional"
@@ -358196,7 +358196,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 115,
+          "line": 120,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "* The old physics track's \u03a3m_\u03bd \u2248 0.101 eV (CCXLIX, \u03bc_eff\u00b2 = 1/4) coincides numerically with the Pass 11933 IO sum.",
           "status": "unclassified"
@@ -359634,7 +359634,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 89,
+          "line": 100,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "* **Consequence.** A single-scale E8 cusp cannot give the up spectrum. The vacuum must sit at t = O(1), with a generic",
           "status": "certified_or_theorem"
@@ -359780,7 +359780,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 28,
+          "line": 33,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "* **Double-beta decay.** The full KamLAND-Zen dataset gives m_\u03b2\u03b2 < 28\u2013122 meV (PRL 135, 262501 (2025)).",
           "status": "unclassified"
@@ -360290,7 +360290,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 53,
+          "line": 61,
           "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
           "raw": "* **N\u2081 fails.** M\u2081 is far below the Davidson\u2013Ibarra bound (~10\u2079 GeV), so N\u2081 thermal leptogenesis fails.",
           "status": "unclassified"
@@ -360405,7 +360405,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 68,
+          "line": 73,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "* **Ordering:** normal. The inverted branch has \u03a3 = 0.135\u20130.171 eV, excluded in \u039bCDM.",
           "status": "unclassified"
@@ -360583,7 +360583,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 32,
+          "line": 40,
           "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
           "raw": "* **R_\u03bd = m\u2081m\u2083/m\u2082\u00b2 = R(\u03c4) = |\ud835\udd23(\u03c4)|\u00b9\u2076/4**, the same Weber invariant. Measured: relative error \u2264 2.6\u00b710\u207b\u2074 for",
           "status": "retrospective_fit"
@@ -360694,7 +360694,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 82,
+          "line": 88,
           "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
           "raw": "* **Scale.** The comparison uses M_Z ratios. y_b/y_\u03c4 \u2248 1.2 is a statement about the Yukawa matrices and needs running",
           "status": "unclassified"
@@ -360778,7 +360778,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 17,
+          "line": 28,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "* **Setting.** Let u be a tangent direction orthogonal to the stabiliser state e\u2081 = (1,0,0). This covers the strange",
           "status": "unclassified"
@@ -360837,7 +360837,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 28,
+          "line": 39,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "* **Spectrum.** Off the line by \u03b8 = arcsin|u\u2081|, near a Witting ray, the spectrum is (1, A\u03b8t, B\u03b8\u00b2t):",
           "status": "retrospective_fit"
@@ -360868,7 +360868,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 69,
+          "line": 74,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "* **Spectrum:** m\u2081 = 0.80 meV (0.67\u20130.97), m\u2082 = 8.65 meV, m\u2083 = 50.1 meV.",
           "status": "unclassified"
@@ -361216,7 +361216,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 73,
+          "line": 78,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "* **The home itself is non-CM.** |\ud835\udd23(\u03c4)|\u2078 = 1.47, at \u03c4 = 1 + 0.874i, checked by the full theta Yukawa (relative error",
           "status": "unclassified"
@@ -361624,7 +361624,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 75,
+          "line": 86,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "* **What the floor implies.** With m_c/m_t = 3.6\u00b710\u207b\u00b3, the data need t \u2273 1.5, well outside the cusp regime where",
           "status": "unclassified"
@@ -361653,7 +361653,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 57,
+          "line": 65,
           "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
           "raw": "* **Where we land.** Our m\u2081 = 0.80 meV (0.67\u20130.97) sits **just below** the lower non-SUSY window.",
           "status": "unclassified"
@@ -363990,7 +363990,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 74,
+          "line": 85,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "* result: **min_u R\u00b7t = 0.7999**, so m_u m_t/m_c\u00b2 \u2273 0.8/t near any Witting ray.",
           "status": "unclassified"
@@ -529850,6 +529850,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f5a75a7f17af4f511bbc54c6b9b974c232afb59767c45d1cf1db175265aeff39",
+      "normalized_formula": ">(Scratchcheck,2026-10-17;driver`analysis/search_drivers_11936_11949/conic/seesaw.py`family.)",
+      "numeric_literals": [
+        "-10",
+        "-17",
+        "1936",
+        "1949",
+        "2026"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
+          "raw": "> (Scratch check, 2026-10-17; driver `analysis/search_drivers_11936_11949/conic/seesaw.py` family.)",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "2c76d6e250279dd7bc0860b2891794e847705876bc17c501175e0220f313e9d1",
+      "structural_formula": ">(Scratchcheck,###;driver`analysis/search_drivers_1#_1#/conic/seesaw.py`family.)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c3ac69e3908cac26f948dad5782b12b7a51be804c874230fb1dff6a15800220d",
       "normalized_formula": ">*\"Moreover^thetransitiveW33-codeactionandthestandard`E6\u00d7A2<E8`branching",
       "numeric_literals": [
@@ -529930,6 +529961,66 @@
       },
       "structural_family_id": "d7c93b7dc213007a3ffdf917e98a70017e4ef3a85864ad9739027dce2f05fb88",
       "structural_formula": ">*\"the^degree-#^`E6`Cartancubiconthematter`#=#\u2297#\u2297#`,the`\u03b5`-cubic"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cfa81a1b4bde00720a1d75f1b7096149985d12fae2dfd433edb52cc5a6c68d63",
+      "normalized_formula": ">*0.77\u20130.87meVat5\u00b710\u22122,overDiracandMajoranaphases",
+      "numeric_literals": [
+        "0.77",
+        "0.87",
+        "10",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
+          "raw": "> * 0.77\u20130.87 meV at 5\u00b710\u207b\u00b2, over Dirac and Majorana phases.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "76b7bc22241e331bfa36f2c357161bd6c88ab3a78be987247bce396cb125cfa0",
+      "structural_formula": ">*#\u2013#meVat5\u00b7#\u2212#,overDiracandMajoranaphases"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "02b624b800fa7beb14804ed9a005736d8f2dbf2f388e08b4513485c21c4e1357",
+      "normalized_formula": ">*0.78\u20130.84meVat3\u00b710\u22122",
+      "numeric_literals": [
+        "0.78",
+        "0.84",
+        "10",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
+          "raw": "> * 0.78\u20130.84 meV at 3\u00b710\u207b\u00b2;",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "b30dca672203c047c15a3f7d0297f6ce139af8c7b542e971beffa476aa5332f1",
+      "structural_formula": ">*#\u2013#meVat3\u00b7#\u2212#"
     },
     {
       "file_count": 1,
@@ -530076,6 +530167,65 @@
       },
       "structural_family_id": "3c6321508bd54e1a95f9e2bcd8f0a911a943b84e3848a6f2b76879a669a0cfc7",
       "structural_formula": ">*W(#,#)istheuniquegeometricobjectsimultaneouslysatisfying:PSp(#,#)symmetry(order2#),SRG(#,#,#,#)collinearity(alpha=#),LeviD4=#withhomologysplit8#=#,Narainc=#CFTatE8/T8\u00d7K3(\u03c1=#),Sp(#,#)\u2282O8+(#)\u2229O2#+(#),andD4trialityS3=sp2#permutationS3=rank-#terminalS3.*"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "205f67fb81f0768666ea89feb0883081f4d84ba43a33644caaa017152d12fe51",
+      "normalized_formula": ">*^CPorientation.^ThefitsreportJfromV=(U_u\u2020U_d)ontheholomorphicthetamatrices:J=+3.07\u00b710\u22125.Under",
+      "numeric_literals": [
+        "+3.07",
+        "10",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
+          "raw": "> * **CP orientation.** The fits report J from V = (U_u\u2020U_d) on the holomorphic theta matrices: J = +3.07\u00b710\u207b\u2075. Under",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "0f17c3a444b43e35df71c09d0aa6c352352f871198967ace9341f837d722498e",
+      "structural_formula": ">*^CPorientation.^ThefitsreportJfromV=(U_u\u2020U_d)ontheholomorphicthetamatrices:J=#\u00b7#\u2212#.Under"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6b955a16fb9b9efdf85ff97221bb405dc3b6c0e17a80c3bb51676b5a6bce9862",
+      "normalized_formula": ">*m1=0.80\u00b10.01meVfor\u03b5_M\u226410\u22122",
+      "numeric_literals": [
+        "0.01",
+        "0.80",
+        "10",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
+          "raw": "> * m\u2081 = 0.80 \u00b1 0.01 meV for \u03b5_M \u2264 10\u207b\u00b2;",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "f4ce20a6015be5a6f1c9da88b5a71a5b8c9fd5f86e4a617554c679263bb913cb",
+      "structural_formula": ">*m1=#\u00b1#meVfor\u03b5_M\u2264#\u2212#"
     },
     {
       "file_count": 1,
@@ -530934,6 +531084,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "56c44a6ded991d9913d52cd73a6a87a27ab30d2ad05029337765874b318849ec",
+      "normalized_formula": ">Them1bandis0.69\u20131.00meVatfixedR_upand0.58\u20131.27meVoverR_up\u2208[0.45,0.65].Theheadlinem1\u22481meV",
+      "numeric_literals": [
+        ".58",
+        ".69",
+        "0.45",
+        "0.65",
+        "1",
+        "1.00",
+        "1.27"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
+          "raw": "> The m\u2081 band is 0.69\u20131.00 meV at fixed R_up and 0.58\u20131.27 meV over R_up \u2208 [0.45, 0.65]. The headline m\u2081 \u2248 1 meV",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "3549530c889ca78fd4f39275f949b5362c7419d6c72b7c2f79e6b8cf5aa6c912",
+      "structural_formula": ">Them1bandis0#\u2013#meVatfixedR_upand0#\u2013#meVoverR_up\u2208[#,#].Theheadlinem1\u2248#meV"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8272556025072336aa19007591cb51327864d8b785955a8955ecb400f687bb4a",
       "normalized_formula": ">Thepointcarrierof`W(3,3)`decomposescanonicallyintotheconstant",
       "numeric_literals": [
@@ -531250,7 +531433,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 7,
+          "line": 12,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "> **Corrected by Pass 11940.** \"One home\" must mean a shared \u03c4, not a shared \u03a9: a shared \u03a9 would make all neutrino",
           "status": "certified_or_theorem"
@@ -531261,6 +531444,35 @@
       },
       "structural_family_id": "d076007c72f5c2d8098cfaa447e5760042fa308b831b1989e771eb980b11e59e",
       "structural_formula": ">^CorrectedbyPass1#.^\"Onehome\"mustmeanashared\u03c4,notashared\u03a9:ashared\u03a9wouldmakeallneutrino"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d81358bfe7870cec09b577ac75a7ac0147aeed8510020526198ffce12a238899",
+      "normalized_formula": ">^CorrectedbyPass11963.^Inthedirect-Weinbergreadingtheneutrinosplittingneeds|\u03b5|=0.22\u20130.29.Therethe",
+      "numeric_literals": [
+        "0.22",
+        "0.29",
+        "1963"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 3,
+          "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
+          "raw": "> **Corrected by Pass 11963.** In the direct-Weinberg reading the neutrino splitting needs |\u03b5| = 0.22\u20130.29. There the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "387ec9224366d01807d1bb9f20edf2ffc7a01ee1bc61f1f3be229811c397c3f2",
+      "structural_formula": ">^CorrectedbyPass1#.^Inthedirect-Weinbergreadingtheneutrinosplittingneeds|\u03b5|=#\u2013#.Therethe"
     },
     {
       "file_count": 1,
@@ -531588,6 +531800,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fd262a2c7e5d6df8dbc2565951529e10242518f349d1f779a1a8c02588cfc2b2",
+      "normalized_formula": ">^Residualparameter(addedaftertheintake).^Intheseesawversionthe\u03b5-phasefreedomfoundbyPass11963",
+      "numeric_literals": [
+        "1963"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 3,
+          "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
+          "raw": "> **Residual parameter (added after the intake).** In the seesaw version the \u03b5-phase freedom found by Pass 11963",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f4160725b6c47ebeff6683b9b6b443cc9a784d6ebf5ae79eb410d36803e58757",
+      "structural_formula": ">^Residualparameter(addedaftertheintake).^Intheseesawversionthe\u03b5-phasefreedomfoundbyPass1#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "40e4c428f0b2b2d804e5a6131393d1c84ec72978cd49ec61977178bcd2bbcbf9",
       "normalized_formula": ">^SM-shapedbreakingbycommutingqutritclocksistrinificationbreaking,SU(3)_C\u00d7SU(3)_L\u2192SU(3)_C\u00d7SU(2)_L,onasingleW(3,3)line.^Thechiralityvacuumlivesonthesameline,andtheclocksfixit",
       "numeric_literals": [
@@ -531631,14 +531870,14 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 3,
+          "line": 8,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "> **Status after Pass 11945.** With \u03bc\u2013\u03c4-clean neutrinos the odd neutrino must be \u03bd\u2083 to fit PMNS (charged leptons always",
           "status": "retrospective_fit"
         },
         {
           "category": "relation_line",
-          "line": 3,
+          "line": 11,
           "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
           "raw": "> **Status after Pass 11945.** With \u03bc\u2013\u03c4-clean neutrinos the odd neutrino must be \u03bd\u2083 to fit PMNS (charged leptons always",
           "status": "certified_or_theorem"
@@ -531971,7 +532210,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 3,
+          "line": 12,
           "path": "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
           "raw": "> **Withdrawn as a strong-CP solution by Pass 11949.** The theta Yukawa breaks the Froggatt\u2013Nielsen U(1) explicitly",
           "status": "killed_or_retracted"
@@ -532478,7 +532717,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 4,
+          "line": 10,
           "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
           "raw": "> chain's band\" is withdrawn. Over the quark-acceptable region the rule gives m_\u03bc/m_\u03c4 \u2248 0.029\u20130.081 and",
           "status": "killed_or_retracted"
@@ -532869,6 +533108,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1cc7ad0b8730e7016751f3f84d8c162d88e789c20138e3bdb23ce270e5dcd305",
+      "normalized_formula": ">forevery\u03a9)isownedby^TOE39^(Codex,2026-10-10,`analysis/2026-10-10_toe39_theta_parity_fifth_order.md`).This",
+      "numeric_literals": [
+        "-10",
+        "2026",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
+          "raw": "> for every \u03a9) is owned by **TOE39** (Codex, 2026-10-10, `analysis/2026-10-10_toe39_theta_parity_fifth_order.md`). This",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "19fdfbf9fbd7f83fe20290fa3837da62f623dd87057985aa7b3f9ace561ed554",
+      "structural_formula": ">forevery\u03a9)isownedby^TOE3#^(Codex,###,`analysis/###_toe3#_theta_parity_fifth_order.md`).This"
+    },
+    {
+      "file_count": 1,
       "formula_id": "745974d7fd6cc9fb8a6175111058f30cf5e6b490a885810ec480b99bc38908cd",
       "normalized_formula": ">gaugesector`15\u229524`isreachablesymmetricallyandunreachable",
       "numeric_literals": [
@@ -533186,7 +533454,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 5,
+          "line": 11,
           "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
           "raw": "> m_e/m_\u03bc \u2248 0.002\u20130.017: this contains the data and excludes minimal SU(5), but it is a band, not a sharp prediction.",
           "status": "killed_or_retracted"
@@ -533360,6 +533628,61 @@
       },
       "structural_family_id": "ae8177d7784a9e4031156c29f2e9c44be6dcba615248bf9cef5d6d193a8d9767",
       "structural_formula": ">order-#stabiliserofoneframe.^Thehandednessisalocalobservable,nota"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a7fc7eb9ae2f6fb67a5b18a46dee75e4aca10f25fc67224ad306f797b9ca3301",
+      "normalized_formula": ">passownsonlythewinding/rephasingreadinginthe11942fits,anditsaxionreadingiswithdrawnbyPass11949",
+      "numeric_literals": [
+        "1942",
+        "1949"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
+          "raw": "> pass owns only the winding/rephasing reading in the 11942 fits, and its axion reading is withdrawn by Pass 11949.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "a5996c177566ffcba469d6ab648357664a57c4d476ad62a6b00e4cffaea74a50",
+      "structural_formula": ">passownsonlythewinding/rephasingreadinginthe1#fits,anditsaxionreadingiswithdrawnbyPass1#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bff06ab4482bf1ae49466a27fbaaadb1b0fa8b4afc0680191544f275d334b97d",
+      "normalized_formula": ">passre-deriveditwithoutcitation.ThispassownsonlytheCKMconsequences(isolatedgeneration;V_us=V_cb=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
+          "raw": "> pass re-derived it without citation. This pass owns only the CKM consequences (isolated generation; V_us = V_cb = 0",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "9b80506afe7f892e02c3ed94a8a33e34f6c669f1999f1222bfcbff0dcb795e77",
+      "structural_formula": ">passre-deriveditwithoutcitation.ThispassownsonlytheCKMconsequences(isolatedgeneration;V_us=V_cb=#"
     },
     {
       "file_count": 1,
@@ -533584,6 +533907,33 @@
       },
       "structural_family_id": "d1e31bdf09ea44bb27b49283f8a70d7bacd5ec22bb770a0d556671d9a1972628",
       "structural_formula": ">terminatingreciprocals,togetherwith`#`itself.^Thethreemissingdigits"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c959d633e9ef9166d5875e82bc0d95c3ddb8eae61f9a50469553d7abefa6597d",
+      "normalized_formula": ">theCodexWeylconvention,wherethephysicalmassmatrixisY*(commit3429a5eb9),thesamefitsgive",
+      "numeric_literals": [
+        "429"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
+          "raw": "> the Codex Weyl convention, where the physical mass matrix is Y* (commit 3429a5eb9), the same fits give",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "6df501eaa066d5777aa0a292e866d1be8af4cd761a38d6703a2bd8c85e8705ce",
+      "structural_formula": ">theCodexWeylconvention,wherethephysicalmassmatrixisY*(commit3#a5eb9),thesamefitsgive"
     },
     {
       "file_count": 1,
@@ -695676,7 +696026,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 31,
+          "line": 40,
           "path": "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
           "raw": "Measured: the deviation from 3\u03c6 scales as |\u03b5|^2.00 (1.3\u00b710\u207b\u2076 at \u03b5 = 10\u207b\u00b3, 1.1\u00b710\u207b\u00b3 at 3\u00b710\u207b\u00b2).",
           "status": "retrospective_fit"
@@ -739558,7 +739908,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 11,
+          "line": 22,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "Pass 11936 left m_u/m_c = b/a fixed by the direction (0.80 on the E8-selected orbit). Pass 11937 asked whether some",
           "status": "certified_or_theorem"
@@ -739588,7 +739938,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 76,
+          "line": 87,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "Pass 11936 matched m_c/m_t (t \u2248 7.8\u00b710\u207b\u00b3).",
           "status": "unclassified"
@@ -822696,7 +823046,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 18,
+          "line": 26,
           "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
           "raw": "The whole spectra would then coincide: m\u2082/m\u2083 = m_c/m_t = 3.6\u00b710\u207b\u00b3, against the measured 0.173, a factor of 48.",
           "status": "retrospective_fit"
@@ -1007565,7 +1007915,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 40,
+          "line": 46,
           "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
           "raw": "**2. Lepton ratios at the best fits, with no lepton parameter.** Data at M_Z: m_\u03bc/m_\u03c4 = 0.0588, m_e/m_\u03bc = 0.00474.",
           "status": "retrospective_fit"
@@ -1007804,7 +1008154,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 62,
+          "line": 73,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "**4. Confrontation with the data.** At M_Z, m_u m_t/m_c\u00b2 = 0.54 (m_u = 1.23 MeV, m_c = 0.620 GeV, m_t = 168.3 GeV;",
           "status": "unclassified"
@@ -1008463,7 +1008813,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 14,
+          "line": 24,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "**Block structure.** Reshaped as a 3\u00d73 Yukawa, this says Y = P Y P, with P: c \u2192 \u2212c. So Y is block-diagonal: a P-even",
           "status": "certified_or_theorem"
@@ -1009276,7 +1009626,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 62,
+          "line": 72,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "**Effect of the Wilson lines.** Without them, the fitted down coupling would give R_d = 19.5 and m_s/m_b = 0.0096. The",
           "status": "unclassified"
@@ -1009916,7 +1010266,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 21,
+          "line": 26,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "**Its consequence.** That spectrum implies \u03a3m_\u03bd = 0.1006 eV (0.100\u20130.103).",
           "status": "unclassified"
@@ -1010097,7 +1010447,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 57,
+          "line": 67,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "**Mechanism.** There the level-3 Gaussian factor e^{\u2212\u03c0\u00b7Im/3} \u2248 0.02 \u2248 m_s/m_b. The up hierarchy is **entangling**",
           "status": "retrospective_fit"
@@ -1010209,7 +1010559,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 22,
+          "line": 32,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "**Near-product homes.** There the P-odd state is the *middle* generation, f\u2081 = (0,x,\u2212x) (Pass 11938). Hence **V_us = V_cb = 0",
           "status": "retrospective_fit"
@@ -1010776,7 +1011126,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 60,
+          "line": 70,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "**Preferred, not forced.** Forcing Im \u03c4_d \u2265 0.15 gives best cost 3.6\u00b710\u207b\u00b3 (V_us = 0.21).",
           "status": "unclassified"
@@ -1011045,7 +1011395,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 27,
+          "line": 37,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "**Relation to earlier passes.** Pass 11910 got V_us = 0 from a selection rule (localised Higgs). This is a different",
           "status": "retrospective_fit"
@@ -1013024,7 +1013374,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 14,
+          "line": 22,
           "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
           "raw": "**What 11939 cannot mean.** Its relation m\u2081m\u2083/m\u2082\u00b2 = m_u m_t/m_c\u00b2 was phrased as \"one swap-symmetric home\". A shared",
           "status": "certified_or_theorem"
@@ -1013392,7 +1013742,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 67,
+          "line": 73,
           "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
           "raw": "**Why minimal SU(5) fails here.** Theta-null Yukawas with Y_e = Y_d\u1d40 fail for leptons exactly as minimal SU(5) does,",
           "status": "retrospective_fit"
@@ -1013653,7 +1014003,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 66,
+          "line": 71,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "**m\u2081 m\u2083 / m\u2082\u00b2 = m_u m_t / m_c\u00b2** = 0.54 at M_Z (0.45\u20130.65 from the m_u error and the running).",
           "status": "unclassified"
@@ -1013681,7 +1014031,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 42,
+          "line": 47,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "**m_light \u00b7 m_heavy / m_mid\u00b2 = |\ud835\udd23(\u03c4)|\u00b9\u2076 / 4**",
           "status": "unclassified"
@@ -1013711,7 +1014061,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 42,
+          "line": 53,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "**m_u m_t / m_c\u00b2 = s\u2081s\u2083/s\u2082\u00b2 = |\ud835\udd23(\u03c4\u2081) \ud835\udd23(\u03c4\u2082)|\u2078 / 4**,",
           "status": "unclassified"
@@ -1033741,7 +1034091,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 55,
+          "line": 63,
           "path": "analysis/PASS11940_SEESAW_PRESERVES_WEBER.md",
           "raw": "allows, for normal ordering, m\u2081 \u2248 1\u20135 meV or 30\u2013100 meV. The supersymmetric version (arXiv:1512.06739) allows",
           "status": "unclassified"
@@ -1243752,7 +1244102,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 23,
+          "line": 33,
           "path": "analysis/PASS11941_CKM_NEEDS_PARITY_BREAKING.md",
           "raw": "exactly**, and only V_ub = O(\u03b5\u00b2) survives (measured: 3\u00b710\u207b\u00b9\u2074, 3\u00b710\u207b\u00b9\u2077 and 3\u00b710\u207b\u2075).",
           "status": "retrospective_fit"
@@ -1387860,7 +1388210,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 86,
+          "line": 97,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "m_u m_t/m_c\u00b2 by a factor \u2265 1.8 (CM) and \u2248 190 (cusp at t \u2248 8\u00b710\u207b\u00b3, where R \u2265 103).",
           "status": "retrospective_fit"
@@ -1413480,7 +1413830,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 51,
+          "line": 58,
           "path": "analysis/PASS11944_MU_TAU_PARITY_IDENTITIES.md",
           "raw": "near-product regime, and the Weber neutrino relation (\u03a3 = 0.0596 eV) is lost.",
           "status": "unclassified"
@@ -1619456,7 +1619806,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 86,
+          "line": 92,
           "path": "analysis/PASS11942_HYPERCHARGE_WILSON_LEPTONS.md",
           "raw": "realisation with the charge rule z_e = 6\u00b7z_d tied to the CKM fit.",
           "status": "retrospective_fit"
@@ -1660349,7 +1660699,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 87,
+          "line": 92,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "sensitivity ~0.02 eV separates 0.06 from 0.10), and m_\u03b2\u03b2 (next-generation searches reaching ~10 meV probe the IO",
           "status": "unclassified"
@@ -1768464,7 +1768814,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 19,
+          "line": 24,
           "path": "analysis/PASS11939_SYMMETRIC_WEBER_NEUTRINOS.md",
           "raw": "with m\u2083 \u2248 1.3 meV.",
           "status": "unclassified"
@@ -1788022,7 +1788372,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 68,
+          "line": 79,
           "path": "analysis/PASS11938_WEBER_UP_TEXTURE.md",
           "raw": "| E8 cusp regime, small t (where the soft supertrace puts the vacuum) | \u2248 0.89/t along the e\u2081-perturbed strange direction | **excluded** |",
           "status": "retrospective_fit"
@@ -1822785,9 +1823135,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-17T10:54:55-04:00",
+  "frozen_at": "2026-10-17T11:16:13-04:00",
   "pass": 398,
-  "repository_head": "ab354337124c621604ff64d2551ba964af496ccb",
+  "repository_head": "d4e2433d7f39a634b00d7bcb53b6a5eb6f0ca47f",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1965451,6 +1965801,14 @@
     },
     {
       "exact_formula_ids": [
+        "f5a75a7f17af4f511bbc54c6b9b974c232afb59767c45d1cf1db175265aeff39"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2c76d6e250279dd7bc0860b2891794e847705876bc17c501175e0220f313e9d1",
+      "structural_formula": ">(Scratchcheck,###;driver`analysis/search_drivers_1#_1#/conic/seesaw.py`family.)"
+    },
+    {
+      "exact_formula_ids": [
         "c3ac69e3908cac26f948dad5782b12b7a51be804c874230fb1dff6a15800220d"
       ],
       "exact_member_count": 1,
@@ -1965472,6 +1965830,22 @@
       "exact_member_count": 1,
       "structural_family_id": "d7c93b7dc213007a3ffdf917e98a70017e4ef3a85864ad9739027dce2f05fb88",
       "structural_formula": ">*\"the^degree-#^`E6`Cartancubiconthematter`#=#\u2297#\u2297#`,the`\u03b5`-cubic"
+    },
+    {
+      "exact_formula_ids": [
+        "02b624b800fa7beb14804ed9a005736d8f2dbf2f388e08b4513485c21c4e1357"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b30dca672203c047c15a3f7d0297f6ce139af8c7b542e971beffa476aa5332f1",
+      "structural_formula": ">*#\u2013#meVat3\u00b7#\u2212#"
+    },
+    {
+      "exact_formula_ids": [
+        "cfa81a1b4bde00720a1d75f1b7096149985d12fae2dfd433edb52cc5a6c68d63"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "76b7bc22241e331bfa36f2c357161bd6c88ab3a78be987247bce396cb125cfa0",
+      "structural_formula": ">*#\u2013#meVat5\u00b7#\u2212#,overDiracandMajoranaphases"
     },
     {
       "exact_formula_ids": [
@@ -1965512,6 +1965886,22 @@
       "exact_member_count": 1,
       "structural_family_id": "3c6321508bd54e1a95f9e2bcd8f0a911a943b84e3848a6f2b76879a669a0cfc7",
       "structural_formula": ">*W(#,#)istheuniquegeometricobjectsimultaneouslysatisfying:PSp(#,#)symmetry(order2#),SRG(#,#,#,#)collinearity(alpha=#),LeviD4=#withhomologysplit8#=#,Narainc=#CFTatE8/T8\u00d7K3(\u03c1=#),Sp(#,#)\u2282O8+(#)\u2229O2#+(#),andD4trialityS3=sp2#permutationS3=rank-#terminalS3.*"
+    },
+    {
+      "exact_formula_ids": [
+        "205f67fb81f0768666ea89feb0883081f4d84ba43a33644caaa017152d12fe51"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0f17c3a444b43e35df71c09d0aa6c352352f871198967ace9341f837d722498e",
+      "structural_formula": ">*^CPorientation.^ThefitsreportJfromV=(U_u\u2020U_d)ontheholomorphicthetamatrices:J=#\u00b7#\u2212#.Under"
+    },
+    {
+      "exact_formula_ids": [
+        "6b955a16fb9b9efdf85ff97221bb405dc3b6c0e17a80c3bb51676b5a6bce9862"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f4ce20a6015be5a6f1c9da88b5a71a5b8c9fd5f86e4a617554c679263bb913cb",
+      "structural_formula": ">*m1=#\u00b1#meVfor\u03b5_M\u2264#\u2212#"
     },
     {
       "exact_formula_ids": [
@@ -1965619,6 +1966009,14 @@
     },
     {
       "exact_formula_ids": [
+        "56c44a6ded991d9913d52cd73a6a87a27ab30d2ad05029337765874b318849ec"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3549530c889ca78fd4f39275f949b5362c7419d6c72b7c2f79e6b8cf5aa6c912",
+      "structural_formula": ">Them1bandis0#\u2013#meVatfixedR_upand0#\u2013#meVoverR_up\u2208[#,#].Theheadlinem1\u2248#meV"
+    },
+    {
+      "exact_formula_ids": [
         "8272556025072336aa19007591cb51327864d8b785955a8955ecb400f687bb4a"
       ],
       "exact_member_count": 1,
@@ -1965715,6 +1966113,14 @@
     },
     {
       "exact_formula_ids": [
+        "d81358bfe7870cec09b577ac75a7ac0147aeed8510020526198ffce12a238899"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "387ec9224366d01807d1bb9f20edf2ffc7a01ee1bc61f1f3be229811c397c3f2",
+      "structural_formula": ">^CorrectedbyPass1#.^Inthedirect-Weinbergreadingtheneutrinosplittingneeds|\u03b5|=#\u2013#.Therethe"
+    },
+    {
+      "exact_formula_ids": [
         "e676a043c151af7a2399e87ddec331e0aa5385fa55e081865699d9eef9d2c94c"
       ],
       "exact_member_count": 1,
@@ -1965800,6 +1966206,14 @@
       "exact_member_count": 1,
       "structural_family_id": "878ce5c179f13ea9b86e997a7cb649ef99afa7f7d18b1cef40e5e4d1f52aed92",
       "structural_formula": ">^Reading.^Inthisclassthebottomandtaumassesmustcomefromhidden-sectorcomposites(confininghiddenSU(#)/SU(#)/SU(#))throughoperatorsofveryhighdegree.Withstring-scale-suppressedcondensates,m_b/m_tandm_\u03c4/m_taresuppressedfarbelowtheirobservedvalues(\u2248#/#and1/#).Togetherwithm_t=m_c,thisisasharpphenomenologicalverdictonthewholeclassinperturbativesuperpotentialterms"
+    },
+    {
+      "exact_formula_ids": [
+        "fd262a2c7e5d6df8dbc2565951529e10242518f349d1f779a1a8c02588cfc2b2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f4160725b6c47ebeff6683b9b6b443cc9a784d6ebf5ae79eb410d36803e58757",
+      "structural_formula": ">^Residualparameter(addedaftertheintake).^Intheseesawversionthe\u03b5-phasefreedomfoundbyPass1#"
     },
     {
       "exact_formula_ids": [
@@ -1966163,6 +1966577,14 @@
     },
     {
       "exact_formula_ids": [
+        "1cc7ad0b8730e7016751f3f84d8c162d88e789c20138e3bdb23ce270e5dcd305"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "19fdfbf9fbd7f83fe20290fa3837da62f623dd87057985aa7b3f9ace561ed554",
+      "structural_formula": ">forevery\u03a9)isownedby^TOE3#^(Codex,###,`analysis/###_toe3#_theta_parity_fifth_order.md`).This"
+    },
+    {
+      "exact_formula_ids": [
         "745974d7fd6cc9fb8a6175111058f30cf5e6b490a885810ec480b99bc38908cd"
       ],
       "exact_member_count": 1,
@@ -1966307,6 +1966729,22 @@
     },
     {
       "exact_formula_ids": [
+        "a7fc7eb9ae2f6fb67a5b18a46dee75e4aca10f25fc67224ad306f797b9ca3301"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a5996c177566ffcba469d6ab648357664a57c4d476ad62a6b00e4cffaea74a50",
+      "structural_formula": ">passownsonlythewinding/rephasingreadinginthe1#fits,anditsaxionreadingiswithdrawnbyPass1#"
+    },
+    {
+      "exact_formula_ids": [
+        "bff06ab4482bf1ae49466a27fbaaadb1b0fa8b4afc0680191544f275d334b97d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b80506afe7f892e02c3ed94a8a33e34f6c669f1999f1222bfcbff0dcb795e77",
+      "structural_formula": ">passre-deriveditwithoutcitation.ThispassownsonlytheCKMconsequences(isolatedgeneration;V_us=V_cb=#"
+    },
+    {
+      "exact_formula_ids": [
         "dbe8e9c39253c34d45d9204484808ef94600441d18e0830f8815f3242c1c8f93"
       ],
       "exact_member_count": 1,
@@ -1966368,6 +1966806,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d1e31bdf09ea44bb27b49283f8a70d7bacd5ec22bb770a0d556671d9a1972628",
       "structural_formula": ">terminatingreciprocals,togetherwith`#`itself.^Thethreemissingdigits"
+    },
+    {
+      "exact_formula_ids": [
+        "c959d633e9ef9166d5875e82bc0d95c3ddb8eae61f9a50469553d7abefa6597d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6df501eaa066d5777aa0a292e866d1be8af4cd761a38d6703a2bd8c85e8705ce",
+      "structural_formula": ">theCodexWeylconvention,wherethephysicalmassmatrixisY*(commit3#a5eb9),thesamefitsgive"
     },
     {
       "exact_formula_ids": [
@@ -2309916,20 +2310362,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 88988842,
-    "exact_formula_families": 62337,
+    "bytes_scanned": 88993027,
+    "exact_formula_families": 62349,
     "files_scanned": 12208,
-    "formula_occurrences": 68351,
+    "formula_occurrences": 68363,
     "status_occurrences": {
-      "certified_or_theorem": 5073,
-      "killed_or_retracted": 1684,
+      "certified_or_theorem": 5074,
+      "killed_or_retracted": 1685,
       "open_or_conditional": 2291,
       "preregistered": 35,
-      "retrospective_fit": 5255,
-      "unclassified": 54013
+      "retrospective_fit": 5262,
+      "unclassified": 54016
     },
-    "structural_families": 60678
+    "structural_families": 60690
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "ffbbc925b29587818dfdffd8cf6f9530a5dc37bf8564dafe87e569a4a363db5f"
+  "universe_sha256": "e6919eb689e8c60c1daf07ee84f96568c40cf216948e59207af8ebae26c2a013"
 }
