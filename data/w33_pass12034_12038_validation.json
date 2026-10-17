@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "science_commit": "584e022cda3fa6bb606b0a19fd772de86903d684",
+  "hosted_run": 39080456008,
+  "hosted_job": 117536159863,
+  "hosted_url": "https://github.com/wilcompute/W33-Theory/actions/runs/39080456008",
+  "hosted_frozen_tests": 33,
+  "hosted_frozen_seconds": 13.69,
+  "hosted_regenerated_tests": 17,
+  "hosted_regenerated_seconds": 1.64,
+  "comparison": {
+    "exact_leaves": 53,
+    "numeric_leaves": 157,
+    "diagnostic_numeric_leaves": 22,
+    "covector_norms": 4
+  },
+  "numeric_relative_tolerance": 2e-06,
+  "numeric_absolute_tolerance": 1e-09,
+  "comparison_scope": "All exact leaves and ordinary numeric leaves compared. SVD-null-basis covectors compared through their invariant norms, not arbitrary components. Numerical error diagnostics must be finite and passed the17 independent hosted tests; their roundoff values are not required equal. This is not a precision physical-data fit.",
+  "source_sha256": {
+    "analysis/w33_pass12034_12038_joint_mechanisms.py": "eb7a3607f147b1099413f8a0ffbe60a460a6322dacc905f3e8d7c1c41fd4491e",
+    "analysis/PASS12034_12038_JOINT_MECHANISM_TESTS.md": "f91707a48987fc64ef4054ee250fd7bee8013a37f01305cf25126b7f2275d7ed",
+    "tests/test_w33_pass12034_12038_joint_mechanisms.py": "50684ddbb71898b810b6dc5ec816c518f21c947a145c3c332d6b52c49c15ed65",
+    ".github/workflows/pass12034-12038-joint-mechanisms.yml": "7e69d1695dddb5533122aabb8c336012f5b124cc2be7eac7a01c22ae6499a39c",
+    "docs/index.html": "ad288999ea1a7e597063156d6029ff87d625985bed5f40384261cf3c8556c78e"
+  },
+  "local_certificate_sha256": "795eeb451d68d1368ec53d0e3a3a456c759cf028afd2f812e054fa05f83f81c2",
+  "hosted_certificate_sha256": "795eeb451d68d1368ec53d0e3a3a456c759cf028afd2f812e054fa05f83f81c2",
+  "byte_identical": true,
+  "result_index": {
+    "files": 12351,
+    "distinctive": 17003,
+    "unique": 7437,
+    "sha256": "2d2641b7653a12c44de8b0e44c3508c007368dbdbe02ad8a886b8a596667f367"
+  },
+  "validation_utility_sha256": "c1249c2fe50ad24ef9a9e4419c4797379312d1833dfe5be9b1807a5dd032e802"
+}
