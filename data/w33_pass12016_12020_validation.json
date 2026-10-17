@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "date": "2026-10-17",
+  "science_commit": "e808cb8dde1760b5bf119a4213f40967d4ec28ae",
+  "hosted_run": 39075291756,
+  "hosted_url": "https://github.com/wilcompute/W33-Theory/actions/runs/39075291756",
+  "hosted_conclusion": "success",
+  "hosted_frozen_tests": 26,
+  "hosted_regenerated_tests": 15,
+  "hosted_log_sha256": "7276b8a26c4bf97fdba401f3864ada6aff53a7b0202f9f8981956b5b74ec2c06",
+  "local_tests": 26,
+  "local_log_sha256": "f1c668656613a3cee2d393dbc33a525562bcb97fc8e606d9c3c967aa598be95d",
+  "artifact_sha256": "1b4d8dc726b91f22dde340299d5a063b88548e015af0faa0d0d31e905477540f",
+  "artifact_comparison": {
+    "status": "PASS",
+    "counts": {
+      "exact": 57,
+      "floats": 114
+    },
+    "relative_tolerance": 1e-07,
+    "absolute_tolerance": 1e-10,
+    "threshold_relative_tolerance": 1e-05,
+    "threshold_absolute_tolerance": 1e-08,
+    "threshold_residual_checks": [
+      {
+        "source": "local",
+        "delta": -0.01,
+        "max_log_residual": 5.9072746694080846e-12
+      },
+      {
+        "source": "local",
+        "delta": 0.01,
+        "max_log_residual": 3.3110490188789365e-12
+      },
+      {
+        "source": "hosted",
+        "delta": -0.01,
+        "max_log_residual": 5.9072746694080846e-12
+      },
+      {
+        "source": "hosted",
+        "delta": 0.01,
+        "max_log_residual": 3.3110490188789365e-12
+      }
+    ],
+    "independently_treated_diagnostics": {
+      "/pass12016/threshold_refits/0/parameters": {
+        "method": "independent threshold residual check",
+        "local": [
+          -0.1208542050050236,
+          -5.23515143263499,
+          -0.11947562825911709,
+          0.11393975596744411,
+          0.045761345594730836,
+          11.600526637422385,
+          8.278339120534614,
+          -2.675437381425582,
+          -10.043872790086162,
+          -6.785041954224511,
+          11.074851342617782
+        ],
+        "hosted": [
+          -0.1208542050050236,
+          -5.23515143263499,
+          -0.11947562825911709,
+          0.11393975596744411,
+          0.045761345594730836,
+          11.600526637422385,
+          8.278339120534614,
+          -2.675437381425582,
+          -10.043872790086162,
+          -6.785041954224511,
+          11.074851342617782
+        ]
+      },
+      "/pass12016/threshold_refits/1/parameters": {
+        "method": "independent threshold residual check",
+        "local": [
+          -0.12141839297389598,
+          -5.233644907658275,
+          -0.145220548246858,
+          0.11207252623028831,
+          0.04496151260569801,
+          11.560297622300773,
+          8.318810911657287,
+          -2.5667776880535373,
+          -9.745048748099562,
+          -7.238424191037037,
+          10.410056251316108
+        ],
+        "hosted": [
+          -0.12141839297389598,
+          -5.233644907658275,
+          -0.145220548246858,
+          0.11207252623028831,
+          0.04496151260569801,
+          11.560297622300773,
+          8.318810911657287,
+          -2.5667776880535373,
+          -9.745048748099562,
+          -7.238424191037037,
+          10.410056251316108
+        ]
+      },
+      "/pass12018/gauge_mediation/cross_spurion_finite_difference_noise": {
+        "local": 3.963990733424054e-08,
+        "hosted": 3.963990733424054e-08,
+        "interpretation": "finite difference cancellation noise, not a physical derivative"
+      }
+    }
+  },
+  "science_files": {
+    ".github/workflows/pass12016-12020-neutrino-native.yml": {
+      "worktree_sha256": "c754b1099ca9748749e3b4f8e344a9fdef50bef459c5b2a9d0105323ea54956b",
+      "LF_sha256": "c754b1099ca9748749e3b4f8e344a9fdef50bef459c5b2a9d0105323ea54956b",
+      "verified_science_blob": "6311a4405fa6ed346ce1cfea29e4c790d061a734"
+    },
+    "analysis/PASS12016_12020_NEUTRINO_VACUUM_NATIVE_MEASURE.md": {
+      "worktree_sha256": "2c4f1895d10791ee870fe73d1ac18d13e8eec8e0c0196e74f80edce28c7e064f",
+      "LF_sha256": "2c4f1895d10791ee870fe73d1ac18d13e8eec8e0c0196e74f80edce28c7e064f",
+      "verified_science_blob": "3675b63a7ae80f245496a96642fa977fd44a71da"
+    },
+    "analysis/w33_pass12016_12020_neutrino_vacuum_native_measure.py": {
+      "worktree_sha256": "08f26efd236a404c9fed4b36b411fa348284e4ef61c5c8d9fbc4f3d4ee619cf9",
+      "LF_sha256": "08f26efd236a404c9fed4b36b411fa348284e4ef61c5c8d9fbc4f3d4ee619cf9",
+      "verified_science_blob": "39892c59b0a04c2f3c07a0ff3ccd70557616f24d"
+    },
+    "analysis/w33_pass12016_neutrino_search.py": {
+      "worktree_sha256": "d20c7a091cd07ea72a0d21ba6f9493c79394958003844b90a68e5184006c48f6",
+      "LF_sha256": "d20c7a091cd07ea72a0d21ba6f9493c79394958003844b90a68e5184006c48f6",
+      "verified_science_blob": "f2bb17fb5906de51c527fe2eb00b0fa962243deb"
+    },
+    "data/w33_pass12016_12020_neutrino_vacuum_native_measure.json": {
+      "worktree_sha256": "1b4d8dc726b91f22dde340299d5a063b88548e015af0faa0d0d31e905477540f",
+      "LF_sha256": "1b4d8dc726b91f22dde340299d5a063b88548e015af0faa0d0d31e905477540f",
+      "verified_science_blob": "0cd2bf46f19fc0e043758ec942aab6685ec58e78"
+    },
+    "data/w33_pass12016_neutrino_search_record.json": {
+      "worktree_sha256": "06025afec9250157c0a217efe18f9176e55dfc3b7116a47038b3ee6255a4ef61",
+      "LF_sha256": "06025afec9250157c0a217efe18f9176e55dfc3b7116a47038b3ee6255a4ef61",
+      "verified_science_blob": "421133befcd2c2f218159db1019ada342c6e0085"
+    },
+    "docs/index.html": {
+      "worktree_sha256": "fba5dee2bd57670b0ef78d09b0bf0c60c3f3d557bf8f069a1c455bf2d9f98c0a",
+      "LF_sha256": "f6826e184c98433330e654f862935acdfd8b1c6255de9c4a3ad1e3259d6be407",
+      "verified_science_blob": "27b40981cc2edf614441fda8fee0e70e15c9f66b"
+    },
+    "tests/test_w33_pass12016_12020_neutrino_vacuum_native_measure.py": {
+      "worktree_sha256": "4f425f29165c972dd2319ad55aee6341ee9604dd95997308092448d173aa982d",
+      "LF_sha256": "4f425f29165c972dd2319ad55aee6341ee9604dd95997308092448d173aa982d",
+      "verified_science_blob": "bc199ed850ce0179fb1272e9453ed71ac11cf306"
+    }
+  },
+  "portable_search_max_log_residual": 6.01962923951941e-13,
+  "results_index": {
+    "files": 12342,
+    "distinctive": 16971,
+    "unique": 7430
+  },
+  "scope": "Conditional constructions and exact finite-operator statements. Fitted parameters and engineered potential coefficients are not predictions. Full SM/BSM threshold rematch, selected moduli/flux, complete radiative protection, curved native GR and global native measure remain open."
+}
