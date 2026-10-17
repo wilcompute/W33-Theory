@@ -19,7 +19,7 @@ from analysis.w33_20261015_toe93_affine_H27_chain import graph,inv
 ROOT=Path(__file__).resolve().parents[1]
 tri,edges,ei,perms,orbits=native()
 points,addresses,internal,_,_,_=graph()
-source_edges=sorted(tuple(sorted((IDX[address[u]],IDX[address[v]]))) for u,v in internal)
+source_edges=sorted(tuple(sorted((IDX[addresses[u]],IDX[addresses[v]]))) for u,v in internal)
 assert len(source_edges)==len(set(source_edges))==108
 source_adj=[set() for _ in H]
 for u,v in source_edges:source_adj[u].add(v);source_adj[v].add(u)
