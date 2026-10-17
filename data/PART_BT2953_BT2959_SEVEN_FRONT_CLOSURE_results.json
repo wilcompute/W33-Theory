@@ -1,0 +1,106 @@
+{
+  "schema": "w33.pass2953_2959.seven_front_closure.v1",
+  "status": "LOCAL_EXACT_REMOTE_RTL_PNR_AND_PDF_PENDING",
+  "boundaries": {
+    "2953": "Full ASp(4,3) conjugacy classes, computed by explicit generator conjugation.",
+    "2954": "Frame-conditioned pair discrimination. Uniform unknown middle-class ensembles are identical.",
+    "2955": "Finite horizon four, known initial support, stated synthetic independent channel and action costs.",
+    "2956": "Complete for CSS [[6,2]] stabilizer projectors and all syndromes, not all general isotropic projectors.",
+    "2957": "Source-complete hardware comparison; observed synthesis and place-and-route remain pending.",
+    "2958": "Exact finite Fourier census, not an asserted Hodge-module equivalence.",
+    "2959": "Reversible classical metadata map, not a physical antiunitary operation on an unknown state."
+  },
+  "pass2953": {
+    "group_order": 4199040,
+    "directed_diameter": 19,
+    "shell_size": 188,
+    "conjugacy_classes_intersecting_shell": 12,
+    "sum_full_class_sizes": 2730348,
+    "classes": [
+      {"id":0,"full_size":77760,"centralizer":54,"shell":2,"affine_order":6,"fixed_frames":0,"trace_mod3":0,"charpoly_mod3":[1,0,1,0,1],"inverse_shell_class":null},
+      {"id":1,"full_size":524880,"centralizer":8,"shell":22,"affine_order":8,"fixed_frames":1,"trace_mod3":0,"charpoly_mod3":[1,0,0,0,1],"inverse_shell_class":1},
+      {"id":2,"full_size":116640,"centralizer":36,"shell":6,"affine_order":12,"fixed_frames":0,"trace_mod3":2,"charpoly_mod3":[1,1,2,1,1],"inverse_shell_class":4},
+      {"id":3,"full_size":419904,"centralizer":10,"shell":6,"affine_order":5,"fixed_frames":1,"trace_mod3":2,"charpoly_mod3":[1,1,1,1,1],"inverse_shell_class":3},
+      {"id":4,"full_size":116640,"centralizer":36,"shell":4,"affine_order":12,"fixed_frames":0,"trace_mod3":2,"charpoly_mod3":[1,1,2,1,1],"inverse_shell_class":2},
+      {"id":5,"full_size":419904,"centralizer":10,"shell":6,"affine_order":10,"fixed_frames":1,"trace_mod3":1,"charpoly_mod3":[1,2,1,2,1],"inverse_shell_class":5},
+      {"id":6,"full_size":174960,"centralizer":24,"shell":6,"affine_order":12,"fixed_frames":1,"trace_mod3":1,"charpoly_mod3":[1,2,2,2,1],"inverse_shell_class":7},
+      {"id":7,"full_size":174960,"centralizer":24,"shell":4,"affine_order":12,"fixed_frames":1,"trace_mod3":1,"charpoly_mod3":[1,2,2,2,1],"inverse_shell_class":6},
+      {"id":8,"full_size":77760,"centralizer":54,"shell":2,"affine_order":9,"fixed_frames":3,"trace_mod3":1,"charpoly_mod3":[1,2,0,2,1],"inverse_shell_class":null},
+      {"id":9,"full_size":233280,"centralizer":18,"shell":8,"affine_order":18,"fixed_frames":1,"trace_mod3":2,"charpoly_mod3":[1,1,0,1,1],"inverse_shell_class":null},
+      {"id":10,"full_size":349920,"centralizer":12,"shell":12,"affine_order":12,"fixed_frames":1,"trace_mod3":0,"charpoly_mod3":[1,0,2,0,1],"inverse_shell_class":10},
+      {"id":11,"full_size":43740,"centralizer":96,"shell":110,"affine_order":4,"fixed_frames":1,"trace_mod3":1,"charpoly_mod3":[1,2,2,2,1],"inverse_shell_class":11}
+    ],
+    "headline": "The 188 hardest elements meet 12 full ASp(4,3) conjugacy classes; the prior 25 algebraic profiles strictly over-refined conjugacy."
+  },
+  "pass2954": {
+    "middle_class_sizes": [12,12],
+    "uniform_ensemble_density": "I_4/4 for both classes",
+    "uniform_ensemble_trace_distance": 0.0,
+    "class_blind_single_copy_discrimination": "impossible",
+    "conjugate_pair_overlap_squared": "1/3",
+    "single_fixed_pauli_cover_exists": false,
+    "minimum_local_y_probe_set": ["YI","IY"],
+    "single_shot_success": "(1+1/sqrt(3))/2",
+    "single_shot_success_decimal": 0.7886751345948129,
+    "majority_success": {"3":0.8849001795,"5":0.9330127019,"7":0.9597418810,"9":0.9753339022},
+    "physical_circuit": "Select qubit, apply S-dagger then H, then Z-readout; no entangler.",
+    "pair_lookup": [
+      [1,2,"IY",-1],[3,6,"IY",1],[8,4,"YI",-1],[10,11,"IY",1],
+      [12,15,"IY",-1],[17,13,"YI",1],[19,20,"YI",-1],[21,24,"IY",-1],
+      [26,22,"IY",1],[28,29,"YI",1],[30,33,"IY",1],[35,31,"IY",-1]
+    ]
+  },
+  "pass2955": {
+    "model": "Initial support known exactly; horizon four; coordinate-asymmetric independent support-bit channel; Fp,Zp cost one and both CX operations cost two.",
+    "channel": {"p01":[0.002,0.006,0.002,0.006],"p10":[0.02,0.05,0.02,0.05]},
+    "benchmark_noise_free_tree": {"aggregate_error":0.058694797923555815,"aggregate_action_cost":4.96316049382716},
+    "bayes_pareto": {
+      "lambda20":{"aggregate_error":0.028539627797773807,"aggregate_action_cost":4.480130554347484},
+      "lambda50":{"aggregate_error":0.021028532172259577,"aggregate_action_cost":4.671788732473971},
+      "lambda100":{"aggregate_error":0.016889211063212103,"aggregate_action_cost":4.926673190218672},
+      "lambda200":{"aggregate_error":0.01592743658307654,"aggregate_action_cost":5.059145382898737}
+    },
+    "headline": "Exact posterior-policy optimization cuts aggregate error from 5.87 percent to 1.69 percent and slightly lowers expected action cost at lambda=100."
+  },
+  "pass2956": {
+    "target": "deep M36 representative ray 5",
+    "correction": "Pass 2910 used shallow ray 0 and imposed rejection of all single errors, a sufficient but non-necessary condition.",
+    "css_subspaces": 43617,
+    "syndromes_per_subspace": 16,
+    "projectors_examined": 697872,
+    "single_error_collinear_projectors": 54,
+    "collinear_projector_ranksplit": {"all_X":27,"all_Z":27},
+    "closed_and_collinear_magic_branches": 0,
+    "deep_clean_closed_branches": 67023,
+    "deep_clean_success_histogram": {"1/36":41202,"1/18":20520,"1/12":3186,"1/9":1701,"1/6":216,"7/36":108,"2/9":54,"1/4":36},
+    "minimum_closed_p_out_slope": 1,
+    "minimum_slope_branch_count": 3087,
+    "best_minimum_slope_clean_success": "1/4",
+    "best_minimum_slope_raw_inputs_per_accepted_output_at_p0": 12,
+    "explicit_identity_branch": {"x_generators":[1,4],"z_generators":[2,8],"syndrome":15,"success":"(2-p)^2/16","output_fidelity":"1-3p/4","p_out":"p"},
+    "headline": "No three-copy CSS [[6,2]] branch improves the deep M36 state to first order. Quadratic collinearity exists only when the clean logical line is stabilizer."
+  },
+  "pass2957": {
+    "status": "SOURCE_COMPLETE_OBSERVED_SYNTHESIS_PENDING",
+    "baseline": "43 LC / 72.40 MHz measured four-operation arithmetic engine",
+    "blocked_by": "GitHub runner queue; earlier Pass 2856 and 2917 placement jobs have not started",
+    "decision_rule": "Replace execution core only if same-harness P&R wins area without violating timing; otherwise use rank7 only as compressed context storage."
+  },
+  "pass2958": {
+    "hard_shell_fixed_incidence_total": 180,
+    "per_frame_count_histogram": {"0":15,"1":18,"2":13,"3":12,"4":15,"5":8},
+    "ternary_fourier_nonzero": 79,
+    "ternary_fourier_zero_count": 2,
+    "zero_characters": [[0,1,0,0],[0,2,0,0]],
+    "zp_slice_incidence": {"0":60,"1":60,"2":60},
+    "other_coordinate_slices": {"xp":{"0":54,"1":72,"2":54},"xf":{"0":34,"1":73,"2":73},"zf":{"0":44,"1":60,"2":76}},
+    "hodge_or_code_duality": "Refuted as a sparse 15/24/40/81 Fourier support; transform support is 79 of 81."
+  },
+  "pass2959": {
+    "phase_label": "s=mu+nu mod 3",
+    "middle_classes": {"A":1,"B":2},
+    "conjugation": "s -> -s mod 3",
+    "d12_relation": "The existing mirror reflection r -> r^-1 restricts on the C3 phase subgroup to the same 1<->2 swap.",
+    "reversible_metadata_map": "(s,mirror)->((-1)^mirror*s,mirror)"
+  }
+}
