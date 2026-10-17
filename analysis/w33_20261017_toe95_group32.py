@@ -44,7 +44,7 @@ def exact_braid(unitaries):
     x=word((4,1,4));y=word((1,4,1))
     assert matzero(x-omega*y)
     dets=[S.expand(S.det(u)) for u in matrices]
-    assert all(S.expand(d-omega**2)==0 for d in dets[:4])
+    assert all(S.simplify(d-omega**2)==0 for d in dets[:4])
     assert S.expand(dets[4]-1)==0
     return {'identity':'U4 U1 U4 = omega U1 U4 U1',
             'omega':'(-1+i sqrt(3))/2','verified_field':'Q(sqrt(3),i)',
