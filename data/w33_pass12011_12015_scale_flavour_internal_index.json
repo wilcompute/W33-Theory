@@ -1,0 +1,496 @@
+{
+  "status": "PASS",
+  "pass12011": {
+    "status": "PASS",
+    "names": [
+      "yb_ytau",
+      "mc_mt",
+      "mu_mc",
+      "ms_mb",
+      "md_ms",
+      "Vus",
+      "Vcb",
+      "Vub",
+      "J",
+      "mmu_mtau",
+      "me_mmu"
+    ],
+    "fitted_coordinates": [
+      -0.12113734813242999,
+      -5.234395562960745,
+      -0.13362993217135702,
+      0.11291225431755648,
+      0.04531505175636371,
+      11.578209908337737,
+      8.301819053990371,
+      -2.6160682472868846,
+      -9.88089638985497,
+      -7.0309278582387895,
+      10.73846537904411
+    ],
+    "matching_scale_GeV": 4203316.026963844,
+    "log_matching_scale": 10.73846537904411,
+    "running_target": [
+      0.9590674864488163,
+      0.0034596004275283016,
+      0.001983869439416202,
+      0.019733267697859994,
+      0.050382284342843996,
+      0.2250328252684335,
+      0.04377335417498139,
+      0.0040681128633060885,
+      3.4935133162258825e-05,
+      0.05882175359321146,
+      0.004736949530678606
+    ],
+    "theta_match": [
+      0.959067486448817,
+      0.00345960042752829,
+      0.001983869439424089,
+      0.019733267697860078,
+      0.050382284342852676,
+      0.22503282526843307,
+      0.043773354174981204,
+      0.004068112863306444,
+      3.493513316220028e-05,
+      0.05882175359321134,
+      0.004736949530680086
+    ],
+    "residual": [
+      6.661338147750937e-16,
+      -3.330669073875475e-15,
+      3.975708651174782e-12,
+      4.218847493575586e-15,
+      1.7230661342180945e-13,
+      -1.887379141862768e-15,
+      -4.32986979603812e-15,
+      8.748557434045851e-14,
+      -1.6758750293663323e-12,
+      -1.9984014443252837e-15,
+      3.1241675912947023e-13
+    ],
+    "back_to_MZ_max_relative_error": 8.271372475832095e-11,
+    "local_Jacobian_singular_values": [
+      61.378099739219266,
+      30.74927784366008,
+      4.518618734721707,
+      1.4096139993310224,
+      0.6315492533080121,
+      0.17262323891841638,
+      0.07902331679629387,
+      0.06871755195964843,
+      0.02724872734216563,
+      0.018445873103495124,
+      0.0018313886153463062
+    ],
+    "old_texture_crossing_GeV": 1133149.7405577914,
+    "old_texture_shape_drift_at_crossing": [
+      -0.38812340246924315,
+      -0.05588187293326319,
+      -7.064131242184857e-07,
+      0.05897788275823679,
+      8.867372074394808e-05,
+      0.0001323016704730673,
+      0.05915269533814005,
+      0.059067841784881336,
+      0.12174748038753513,
+      -9.388104300400713e-06,
+      -3.2594753895942574e-08
+    ],
+    "gauge_at_matching": [
+      0.3808320233580661,
+      0.5992764442785554,
+      0.7841189756127734
+    ],
+    "beta_convention": "Yu,Yd share left Q index; betaYu=[3/2(Hu-Hd)+T-gu]Yu/(16pi2), betaYd=[3/2(Hd-Hu)+T-gd]Yd/(16pi2), betaYe=[3/2He+T-ge]Ye/(16pi2); hypercharge gprime, b=(41/6,-19/6,-7); T=Tr(3Hu+3Hd+He).",
+    "inputs": "Prior12007 dimensionless MZ comparators; supplied MZ=91.1876,v=246.22,top=168.26,bottom=2.86,tau=1.74624GeV; gprime=.3575,g2=.6518,g3=1.2177. SM one-loop below freely fitted matching scale. No SUSY or vectorlike finite matching thresholds; heavy species integrated out.",
+    "boundary": "Eleven fitted shape/scale coordinates match eleven comparisons: NOT a prediction of the matching scale or constants. Updated experimental inputs, two-loop running, thresholds and unified gauge breaking remain uncomputed. Matching scale is not a GUT claim. The previous four neutrino comparators must be rematched on this new branch, including Weinberg running; they are not inherited.",
+    "prior": [
+      "11942 charge6 theta family",
+      "12005/12007 CP-real theta/Barr matching",
+      "11298 actual distinct E6 mediator running",
+      "0712.1419,hep-ph/0207271 standard SM running",
+      "2510.01312 updated data available but not substituted silently"
+    ]
+  },
+  "pass12012": {
+    "status": "PASS",
+    "U3_commutant_real_dimension": 1,
+    "SU3_continuous_stabilizer_dimension": 0,
+    "SU3_stabilizer": "Z3 center",
+    "commutator_map_singular_values": [
+      1.9995209283417037,
+      1.9992265716471465,
+      1.887367361176104,
+      1.7239569745436925,
+      0.07311615045303382,
+      0.043971714384646525,
+      0.03328767279902308,
+      0.00024627726741783103,
+      6.352122067588097e-17
+    ],
+    "up_Gram_eigenvalues": [
+      4.71060796664569e-11,
+      1.1968835117309728e-05,
+      0.9999999999283736
+    ],
+    "down_offdiagonal_in_up_basis": [
+      0.00015958874662337107,
+      0.0040657553354887235,
+      0.04371501548775813
+    ],
+    "normalized_CP_odd_cubic": 9.740542926276255e-13,
+    "proof": "Distinct up eigenvalues force every commuting unitary to be diagonal in that eigenbasis. Connected nonzero offdiagonal down support forces all three phases equal. U3 common stabilizer=U1; intersect SU3 gives Z3 center. This proof covers the displayed generic pair; numerical margins verify its hypotheses.",
+    "selection_boundary": "A generic realistic pair has no enhanced continuous common flavour stabilizer to pin its fitted coordinates. This does not rule out spontaneous breaking to the center, generalized CP/modular combined actions or a potential with generic minima. No vacuum potential or modulus stabilization is derived. Full gauge representations and right flavour rotations must be specified separately.",
+    "prior": [
+      "11921 magnetic flavour qutrit",
+      "11923 stabilizer Higgs lock",
+      "11927 geometric local-adjoint spurions",
+      "11321/11326 explicit CP vacua do not select observed CKM"
+    ]
+  },
+  "pass12013": {
+    "status": "PASS",
+    "nonuniversal_spectral_alignment": {
+      "quark": 1.2615302048453322e-14,
+      "gluino": -6.992672690179983e-17,
+      "sum": 1.2545375321551523e-14,
+      "minimum_soft_eigenvalue": 4.000000713391796
+    },
+    "misaligned_control": {
+      "quark": 1.0297513379785338e-09,
+      "gluino": 3.231007135801261e-11,
+      "sum": 1.0620614093365464e-09,
+      "minimum_soft_eigenvalue": 3.9999959140214387
+    },
+    "exact_theorem": "For a single invertible complex spurion M, LL=f(MMdag), RR=g(MdagM), LR=h(MMdag)M, all real functions on positive spectra, become independent real2x2 blocks in the singular basis. All real loop spectral functions give real determinant-trace and gluino channels. Universality is sufficient but not necessary.",
+    "group_action": "The mass-sector statement is equivariant under U(n)L x U(n)R spurion transformations M->UL M URdag. For full4x4 Barr block the heavy singlet and light weak-doublet left fields have different unbroken electroweak representations: this enlarged mass-basis covariance is NOT automatically an ultraviolet flavour symmetry.",
+    "boundary": "Conditional protection of the specified colored one-loop mass phases. Gauge mediation, multi-spurion running, neutral portal, forbidden operators and SUSY breaking still need a single gauge-invariant UV action. No total theta bound or all-orders MFV claim.",
+    "prior": [
+      "12008 universal special case",
+      "11978 F/VEV phase shielding",
+      "2002.04204 and0807.0801 MFV/mediation literature"
+    ]
+  },
+  "pass12014": {
+    "status": "PASS",
+    "native_tree_eigenvalues": [
+      0.0,
+      0.10102051443364415,
+      0.2554373534619718,
+      0.9999999999999962,
+      0.9999999999999981,
+      0.9999999999999986,
+      0.9999999999999991,
+      0.9999999999999991,
+      0.9999999999999993,
+      0.9999999999999994,
+      0.9999999999999997,
+      0.9999999999999997,
+      0.9999999999999997,
+      0.9999999999999998,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0000000000000002,
+      1.0000000000000002,
+      1.0000000000000002,
+      1.0000000000000004,
+      1.0000000000000004,
+      8.999999999999996,
+      9.898979485566347,
+      11.744562646538027
+    ],
+    "rows": [
+      {
+        "kappa": 0.0,
+        "dimensionless_optical_masses_squared": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "curvature_effective_species": 27.0,
+        "vacuum_effective_moment": 13.5,
+        "G_times_cutoff_squared": 1.3962634015954636,
+        "absolute_vacuum_over_reduced_Planck_fourth": 52.637890139143245
+      },
+      {
+        "kappa": 0.1,
+        "dimensionless_optical_masses_squared": [
+          0.0,
+          0.010102051443364415,
+          0.02554373534619718,
+          0.09999999999999963,
+          0.09999999999999981,
+          0.09999999999999987,
+          0.09999999999999992,
+          0.09999999999999992,
+          0.09999999999999994,
+          0.09999999999999995,
+          0.09999999999999998,
+          0.09999999999999998,
+          0.09999999999999998,
+          0.09999999999999998,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.10000000000000003,
+          0.10000000000000003,
+          0.10000000000000003,
+          0.10000000000000005,
+          0.10000000000000005,
+          0.8999999999999997,
+          0.9898979485566347,
+          1.1744562646538028
+        ],
+        "curvature_effective_species": 18.456270297181586,
+        "vacuum_effective_moment": 10.53198817910948,
+        "G_times_cutoff_squared": 2.0426181040941116,
+        "absolute_vacuum_over_reduced_Planck_fourth": 87.88499094032423
+      },
+      {
+        "kappa": 1.0,
+        "dimensionless_optical_masses_squared": [
+          0.0,
+          0.10102051443364415,
+          0.2554373534619718,
+          0.9999999999999962,
+          0.9999999999999981,
+          0.9999999999999986,
+          0.9999999999999991,
+          0.9999999999999991,
+          0.9999999999999993,
+          0.9999999999999994,
+          0.9999999999999997,
+          0.9999999999999997,
+          0.9999999999999997,
+          0.9999999999999998,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0000000000000002,
+          1.0000000000000002,
+          1.0000000000000002,
+          1.0000000000000004,
+          1.0000000000000004,
+          8.999999999999996,
+          9.898979485566347,
+          11.744562646538027
+        ],
+        "curvature_effective_species": 5.351208907061601,
+        "vacuum_effective_moment": 3.5409857286041264,
+        "G_times_cutoff_squared": 7.044971051929732,
+        "absolute_vacuum_over_reduced_Planck_fourth": 351.4896958368311
+      },
+      {
+        "kappa": 2916,
+        "dimensionless_optical_masses_squared": [
+          0.0,
+          294.57582008850636,
+          744.8553226951096,
+          2915.999999999989,
+          2915.9999999999945,
+          2915.999999999996,
+          2915.9999999999973,
+          2915.9999999999973,
+          2915.999999999998,
+          2915.999999999998,
+          2915.999999999999,
+          2915.999999999999,
+          2915.999999999999,
+          2915.9999999999995,
+          2916.0,
+          2916.0,
+          2916.0,
+          2916.0,
+          2916.0,
+          2916.0000000000005,
+          2916.0000000000005,
+          2916.0000000000005,
+          2916.0000000000014,
+          2916.0000000000014,
+          26243.99999999999,
+          28865.424179911468,
+          34247.14467730489
+        ],
+        "curvature_effective_species": 1.0,
+        "vacuum_effective_moment": 0.5,
+        "G_times_cutoff_squared": 37.69911184307752,
+        "absolute_vacuum_over_reduced_Planck_fourth": 1421.2230337568676
+      }
+    ],
+    "action": "Conditional27 real minimally coupled scalar tower Pj=-Delta_g+kappa*lambda_j/a2 with all modes sharing the12009 capacity-completed continuum metric. Lambda=1/a; frozen internal tree spectrum, no varying eigenvector/Berry terms. This is a supplied scalar extension, not the fermionic Wilson optical spectrum or full physical SM inventory.",
+    "proper_time": "Gamma=-1/2 integral_(a2)^infinity ds/s Tr exp(-sP). F2(x)=E2(x),F4(x)=E3(x). Gamma_R=-Lambda2 sumF2 R/(192pi2); compare Euclidean EH -R/(16piG) gives G Lambda2=12pi/sumF2. Gamma0=-Lambda4 sumF4/(32pi2). Nonminimal xi multiplies each curvature term by(1-6xi).",
+    "scope": "Native27 sites do not mean27 light gravitational species. Actual12002 optical coefficient2916 leaves only the acoustic mode below cutoff in this scalar diagnostic. Conformal xi=1/6 removes scalar induced EH term. Regulator moments, bare counterterms, field inventory and physical a remain supplied; no predicted Newton constant, observed cosmological constant, Lorentzian dynamics or constraint algebra.",
+    "prior": [
+      "11601 heat/metric warning",
+      "11604/11615 actual inventory and proper-time integrals",
+      "12002 native tree optical regulator",
+      "12009 capacity density map"
+    ]
+  },
+  "pass12015": {
+    "status": "PASS",
+    "internal_lattice": [
+      6,
+      6
+    ],
+    "supplied_flux": 3,
+    "overlap_index": -3,
+    "zero_modes": 3,
+    "kernel_gap": 0.7301923138762056,
+    "first_nonzero_DdagD": 0.9906271083711022,
+    "zero_mode_chiralities": [
+      -1.0000000000000013,
+      -1.0000000000000002,
+      -0.9999999999999996
+    ],
+    "Heisenberg_phase_real_imag": [
+      -0.4999999999999998,
+      -0.8660254037844387
+    ],
+    "restricted_commutator_error": 2.6131177963928347e-15,
+    "noncentral_character_max": 2.5110743991215813e-15,
+    "projected_fourier_singular_values": [
+      0.6014345841952297,
+      0.6014345841952293,
+      0.6014345841952292
+    ],
+    "X_real": [
+      [
+        0.6801322813698664,
+        0.683961002170018,
+        0.253777388686836
+      ],
+      [
+        0.4514100344071684,
+        -0.22666782600831023,
+        -0.443131791730035
+      ],
+      [
+        -0.2656536040806183,
+        0.4443101714362752,
+        -0.4534644553615572
+      ]
+    ],
+    "X_imag": [
+      [
+        -0.03980739997202076,
+        -0.042439701349044824,
+        0.0427633838390656
+      ],
+      [
+        -0.00772518622873633,
+        0.22906934859721123,
+        -0.7042389137773462
+      ],
+      [
+        0.5113051102026236,
+        -0.47867903756501906,
+        -0.18926194862519083
+      ]
+    ],
+    "Y_real": [
+      [
+        -0.4287426686280724,
+        0.358051619793219,
+        -0.458503262855677
+      ],
+      [
+        0.07206937308795233,
+        0.20122761787815993,
+        -0.6180894633488627
+      ],
+      [
+        0.09463120687696422,
+        -0.24586782165098858,
+        0.22751505074991285
+      ]
+    ],
+    "Y_imag": [
+      [
+        -0.4268167865227451,
+        0.5040809106043656,
+        0.20367470613333438
+      ],
+      [
+        0.6260086204166982,
+        0.056313335710790904,
+        -0.4209761061485705
+      ],
+      [
+        0.4774634039921567,
+        0.7166496643608573,
+        0.3705034508119549
+      ]
+    ],
+    "group_statement": "Translations by2 sites, with solved gauge compensators, commute with the finite2D overlap kernel. Their action on its3 zero modes has X3=Y3=I,XY=omega YX; noncentral characters vanish. This is the irreducible3D H27 module with nontrivial central character. Any Hermitian operator commuting with both is scalar (Schur), so nondegenerate masses need symmetry breaking.",
+    "family_reading": "An EXTERNAL internal2D compactification with flux3 supplies3 chiral zero modes. It is different from4D spacetime instanton index, which does NOT count independent generations. Product compactification, flux/size stabilization, SM embedding, all unwanted modes and interactions remain supplied/open. Original native4D W33 model alone does not contain this added torus.",
+    "measure_frontier": "New external preprint Craig2610.09093v1 (2026-10-06) CLAIMS nonperturbative nonAbelian overlap measure, including SM via10+bar5 SU5 restriction. Its hypotheses/current/global proof are not independently certified here; repository native pullback/admissibility/current implementation remain open. Do not describe the literature as simply lacking any proposed construction.",
+    "prior": [
+      "11921 flux-selected two flavour qutrits",
+      "11927 Fourier-mode Pauli spurions",
+      "11588 external/internal tensor index distinction",
+      "12010 native SU3 spacetime index, not family count",
+      "0812.1426 magnetic translation prior art",
+      "1001.1788 magnetized flavour prior art"
+    ],
+    "measure_restriction": {
+      "embedding": "diag(z^-2 g3,z^3 g2)",
+      "kernel": "Z6 generated by(exp(2pi i/3)I3,-I2,exp(pi i/3))",
+      "ten_integer_6Y_charges": [
+        -4,
+        -4,
+        1,
+        1,
+        -4,
+        1,
+        1,
+        1,
+        1,
+        6
+      ],
+      "bar5_integer_6Y_charges": [
+        2,
+        2,
+        2,
+        -3,
+        -3
+      ],
+      "homomorphism_error": 1.1548911159352458e-16,
+      "wedge_homomorphism_error": 4.3818349031895344e-16,
+      "admissibility_bound": "For an SU5 plaquette P, ||wedge2(P)-I||<=2||P-I||. Sufficient SM lifted bounds are ||P3-I||+|zP^-2-1|<delta and ||P2-I||+|zP^3-1|<delta. Numerical flux backgrounds here are NOT asserted to meet the much stronger uniform bounds of a global measure theorem.",
+      "scope": "Standard restriction map independently tested. Not an implementation or independent proof of Craig2610.09093, its current, refinement maps, locality or global integrability. Native path/tree transfer remains conditional on those hypotheses and bounded gauge-covariant conjugation."
+    }
+  }
+}
