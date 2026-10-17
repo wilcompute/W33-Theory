@@ -1,5 +1,15 @@
 # Pass 11941: the CKM needs parity breaking — and the down coupling alone can supply it
 
+> **Prior ownership and convention (added after the intake).**
+> * **Ownership.** The exact parity statement (PΘP = Θ; block-diagonal, 2 even + 1 odd, in the basis e₀, (e₁ ± e₂)/√2,
+>   for every Ω) is owned by **TOE39** (Codex, 2026-10-10, `analysis/2026-10-10_toe39_theta_parity_fifth_order.md`). This
+>   pass re-derived it without citation. This pass owns only the CKM consequences (isolated generation; V_us = V_cb = 0
+>   for near-product homes) and the down-only Wilson-line existence fit.
+> * **CP orientation.** The fits report J from V = (U_u†U_d) on the holomorphic theta matrices: J = +3.07·10⁻⁵. Under
+>   the Codex Weyl convention, where the physical mass matrix is Y* (commit 3429a5eb9), the same fits give
+>   J = −3.07·10⁻⁵. The exact mirror Ω → −Ω̄, z → −z̄ restores +3.07·10⁻⁵ and leaves every magnitude unchanged (checked
+>   2026-10-17). This is a labelling convention, not a retraction.
+
 Producer: `analysis/w33_pass11941_ckm_needs_parity_breaking.py`
 Certificate: `data/w33_pass11941_ckm_needs_parity_breaking.json`
 Regression: `tests/test_w33_pass11941.py`

@@ -1,5 +1,10 @@
 # Pass 11939: the symmetric-channel Weber law — normal ordering and m₁m₃/m₂² = m_u m_t/m_c²
 
+> **Corrected by Pass 11963.** In the direct-Weinberg reading the neutrino splitting needs |ε| = 0.22–0.29. There the
+> leading-order relation is not exact (true ratio 0.46–0.67 against 0.54), and the phase of ε moves m₁ by up to ×1.45.
+> The m₁ band is 0.69–1.00 meV at fixed R_up and 0.58–1.27 meV over R_up ∈ [0.45, 0.65]. The headline m₁ ≈ 1 meV
+> survives; "no free parameter" does not.
+
 > **Status after Pass 11945.** With μ–τ-clean neutrinos the odd neutrino must be ν₃ to fit PMNS (charged leptons always
 > have one nearly even state). The near-product, Wilson-free neutrino texture puts the odd state at ν₂, so this
 > relation is **disfavoured within the framework** unless the neutrino sector is itself μ–τ-broken.

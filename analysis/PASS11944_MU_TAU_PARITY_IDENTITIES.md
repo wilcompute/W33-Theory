@@ -1,5 +1,12 @@
 # Pass 11944: the theta central inversion is μ–τ reflection — and the mixing matrices measure its breaking
 
+> **Prior ownership (added after the intake).** The parity basis e₀, (e₁ ± e₂)/√2 and the block structure are owned by
+> TOE39 (Codex, 2026-10-10). This pass owns:
+> * the μ–τ identification;
+> * the exact identities (CKM charm row = odd content of the down states; PMNS ν₂ column = odd content of the charged
+>   leptons);
+> * the fork they imply.
+
 Producer: `analysis/w33_pass11944_mu_tau_parity_identities.py`
 Certificate: `data/w33_pass11944_mu_tau_parity_identities.json`
 Regression: `tests/test_w33_pass11944.py`

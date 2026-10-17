@@ -1,5 +1,13 @@
 # Pass 11940: the Weber invariant is seesaw-invariant
 
+> **Residual parameter (added after the intake).** In the seesaw version the ε-phase freedom found by Pass 11963
+> collapses, but ε_M remains a parameter. Refitting ε_D to the splitting gives:
+> * m₁ = 0.80 ± 0.01 meV for ε_M ≤ 10⁻²;
+> * 0.78–0.84 meV at 3·10⁻²;
+> * 0.77–0.87 meV at 5·10⁻², over Dirac and Majorana phases.
+>
+> (Scratch check, 2026-10-17; driver `analysis/search_drivers_11936_11949/conic/seesaw.py` family.)
+
 > **Status after Pass 11945.** With μ–τ-clean neutrinos the odd neutrino must be ν₃ to fit PMNS (charged leptons always
 > have one nearly even state). The near-product, Wilson-free neutrino texture puts the odd state at ν₂, so this
 > relation is **disfavoured within the framework** unless the neutrino sector is itself μ–τ-broken.

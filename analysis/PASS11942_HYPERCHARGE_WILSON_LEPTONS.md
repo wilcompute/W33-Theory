@@ -1,5 +1,11 @@
 # Pass 11942: a hypercharge Wilson line on the 5̄ torus fixes the lepton ratios from the quark fit
 
+> **Scope and convention (added after the intake).**
+> * **Scope.** z_e = 6·z_d assumes the 5̄ Wilson line lies along pure SU(5) hypercharge. TOE55 shows Y + t(B−L) is
+>   anomaly-free for every t. Along that direction z_e/z_d = X(e^c)/X(Q) = 6(1+t)/(1+2t). The band of Pass 11943 and the
+>   exclusion of Pass 11945 are statements at t = 0.
+> * **CP convention.** The CP-orientation convention of Pass 11941 applies here too.
+
 > **Corrected by Pass 11943.** A fifth chain (branch B, seed 7) excludes the data. The claim "near the centre of every
 > chain's band" is withdrawn. Over the quark-acceptable region the rule gives m_μ/m_τ ≈ 0.029–0.081 and
 > m_e/m_μ ≈ 0.002–0.017: this contains the data and excludes minimal SU(5), but it is a band, not a sharp prediction.

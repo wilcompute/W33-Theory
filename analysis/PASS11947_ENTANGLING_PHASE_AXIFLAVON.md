@@ -1,5 +1,14 @@
 # Pass 11947: the phase of the up-sector entangling modulus is an anomalous Froggatt–Nielsen rephasing — an axiflavon candidate
 
+> **Prior ownership and a correction (added after the intake).**
+> * **Ownership.** det Y_u = C·ε³ + O(ε⁵) with C = (6πi)³/2 · det F · det G is owned by **TOE38** (coefficient; Codex,
+>   a50a84773, 2026-10-10) and **TOE39** (parity and the O(ε⁵) remainder; 4b3fe892e). The "geometric flavon /
+>   Froggatt–Nielsen texture" reading is in Pass 11872. The Cauchy–Binet derivation here is a partial rediscovery. This
+>   pass owns only the winding/rephasing reading in the 11942 fits, and its axion reading is withdrawn by Pass 11949.
+> * **Correction.** det Y_d also winds exactly 3 around ε_d = 0 with the fitted Wilson line (radii 0.02 and 0.005, both
+>   fits). So arg ε_d shifts θ̄ by about 3·arg ε_d plus Wilson-line corrections, not by an unspecified amount. Pass 11950
+>   builds the strong-CP divisor programme on this winding.
+
 > **Withdrawn as a strong-CP solution by Pass 11949.** The theta Yukawa breaks the Froggatt–Nielsen U(1) explicitly
 > at second harmonic (top modulation 2–5·10⁻⁶); the top loop exceeds the axion quality bound by 10¹⁶–10¹⁷ and fixes θ̄ = O(1).
 > The rephasing structure and the f_a formula stand only as statements about the modulus.

@@ -1,5 +1,16 @@
 # Pass 11938: the second small parameter and the Weber law for the up texture
 
+> **Prior ownership (added after the 2026-10-17 intake).** Three statements used here were already made in Pass 11872
+> (Claude track, 2026-10-09, `analysis/PASS11869_11873_SIEGEL_LEVEL3_TWO_QUTRITS.md`):
+> * rank one ⟺ Ω₁₂ = 0;
+> * the Schmidt spectrum (1, ε, ε²);
+> * the dependence of σ₁σ₃/σ₂² on (τ₁, τ₂), with sampled values 4.4, 4.3 and 5.4.
+>
+> The determinant coefficient and its parity are owned by TOE38/TOE39 (Codex, 2026-10-10). This pass owns:
+> * the closed-form Weber law σ₁σ₃/σ₂² = |𝔣(τ₁)𝔣(τ₂)|⁸/4, which Pass 11963 confirmed independently to 3.9·10⁻⁸;
+> * the reducible polar line of the E8 Cartan;
+> * the CM, cusp and data comparisons.
+
 Producer: `analysis/w33_pass11938_weber_up_texture.py`
 Certificate: `data/w33_pass11938_weber_up_texture.json`
 Regression: `tests/test_w33_pass11938.py`
