@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "date": "2026-10-17",
+  "science_commit": "6b89e290bccdd832fb557c7d96b9580c669ba0fb",
+  "hosted_run": 39076743318,
+  "hosted_url": "https://github.com/wilcompute/W33-Theory/actions/runs/39076743318",
+  "hosted_conclusion": "success",
+  "hosted_frozen_tests": 30,
+  "hosted_regenerated_tests": 15,
+  "hosted_log_sha256": "da6c35aff0b236309e815b886b0e91cc7fa930ebea4d20efb6cc5bbf6fd2432c",
+  "local_tests": 30,
+  "local_log_sha256": "aa2b7c5ef166744144126004fbf36f7abf2ea2a6556aca9d3ee8a193f8c13988",
+  "artifact_sha256": "b47fe6571dab890588240ee56db49566bbb655ce5fd3d0641ef4d0bbaf0637b7",
+  "artifact_byte_identical": false,
+  "artifact_comparison": {
+    "status": "PASS",
+    "leaf_counts": {
+      "exact": 54,
+      "numeric": 151
+    },
+    "relative_tolerance": 1e-07,
+    "absolute_tolerance": 1e-10,
+    "fit_coordinates_checked_by_independent_residuals": [
+      "/pass12024/charged_parameters",
+      "/pass12024/neutrino_parameters",
+      "/pass12024/threshold_refits/0/parameters",
+      "/pass12024/threshold_refits/1/parameters",
+      "/pass12024/threshold_refits/2/parameters"
+    ],
+    "independent_fit_checks": [
+      {
+        "source": "local",
+        "charged_max_log_residual": 3.358658174097031e-12,
+        "neutrino_max_relative_error": 1.1093459484357027e-11,
+        "thresholds": [
+          {
+            "mu_GeV": -1000.0,
+            "max_log_residual": 1.359204618142113e-12
+          },
+          {
+            "mu_GeV": 0.0,
+            "max_log_residual": 1.1902256957725621e-11
+          },
+          {
+            "mu_GeV": 1000.0,
+            "max_log_residual": 2.4321317812384523e-12
+          }
+        ]
+      },
+      {
+        "source": "hosted",
+        "charged_max_log_residual": 3.358658174097031e-12,
+        "neutrino_max_relative_error": 1.1093459484357027e-11,
+        "thresholds": [
+          {
+            "mu_GeV": -1000.0,
+            "max_log_residual": 1.359204618142113e-12
+          },
+          {
+            "mu_GeV": 0.0,
+            "max_log_residual": 1.1902256957725621e-11
+          },
+          {
+            "mu_GeV": 1000.0,
+            "max_log_residual": 2.4321317812384523e-12
+          }
+        ]
+      }
+    ]
+  },
+  "science_files": {
+    ".github/workflows/pass12021-12025-uv-curvature.yml": {
+      "worktree_sha256": "1c8ef2008403a56e2cc8d697b4508f696a6f66ac62639378b33b1fbacf97e2a5",
+      "LF_sha256": "1c8ef2008403a56e2cc8d697b4508f696a6f66ac62639378b33b1fbacf97e2a5",
+      "verified_science_blob": "c7177a5d9f29013e6d2aa240938ad94e356ca89a"
+    },
+    "analysis/PASS12021_12025_UV_CURVATURE_THRESHOLDS_AND_HOLONOMY.md": {
+      "worktree_sha256": "2cb5c177c89e5bfe27a38655b7e959394803234a27c66916a87d03f22fdc7155",
+      "LF_sha256": "2cb5c177c89e5bfe27a38655b7e959394803234a27c66916a87d03f22fdc7155",
+      "verified_science_blob": "c0a6112db162b8cffe414c91196113ed20076185"
+    },
+    "analysis/w33_pass12021_12025_uv_curvature_threshold_holonomy.py": {
+      "worktree_sha256": "5c9053c3b5b7fa38294b9669574b76bf2c8a4c24c21832a502dac73706929fb4",
+      "LF_sha256": "5c9053c3b5b7fa38294b9669574b76bf2c8a4c24c21832a502dac73706929fb4",
+      "verified_science_blob": "9b26e2d7749dca0a9ddc2dd18d8af262c892649f"
+    },
+    "data/w33_pass12021_12025_uv_curvature_threshold_holonomy.json": {
+      "worktree_sha256": "0691da3bd74eea0b6a5afbfeb38f1a37e501f8950f1e9c0094e7cb609f7caaeb",
+      "LF_sha256": "0691da3bd74eea0b6a5afbfeb38f1a37e501f8950f1e9c0094e7cb609f7caaeb",
+      "verified_science_blob": "35c1588c18f8ba30cf1f6f2e91b7922d7de47e3e"
+    },
+    "docs/index.html": {
+      "worktree_sha256": "b93d42a604636f30eae00722dae8db8be3e86c22eff3650660acc62b6d55c609",
+      "LF_sha256": "e918989f960262a81f977659388883fdac762900c557d1eb5d543fd6512af60e",
+      "verified_science_blob": "1e8dc08fb03fc6eba9791cc9aa8d9ecbfa0da3ce"
+    },
+    "tests/test_w33_pass12021_12025_uv_curvature_threshold_holonomy.py": {
+      "worktree_sha256": "21e97eb2d90a37bf2b3d7bbae3b112009a194334afb8bbc4842cd7269c72845c",
+      "LF_sha256": "21e97eb2d90a37bf2b3d7bbae3b112009a194334afb8bbc4842cd7269c72845c",
+      "verified_science_blob": "fd02459c8ccfd5d53e3bc8bc13fcff5257f4eaf0"
+    }
+  },
+  "results_index": {
+    "files": 12344,
+    "distinctive": 16982
+  },
+  "scope": "Exact named finite-operator and classical-vacuum results plus conditional EFT/native recovery constructions. Engineered targets/spectrum are inputs. Full softRG and precision thresholds, coefficient/modulus selection, nonlinear native GR and a global native chiral measure remain open."
+}
