@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "physical_heat_times": [
+    0.08,
+    0.12,
+    0.18
+  ],
+  "geometric_response": [
+    {
+      "N": 32,
+      "response": [
+        0.4435708390638754,
+        0.47040239804492,
+        0.5068853644180735
+      ],
+      "continuum_errors": [
+        0.006002804602874279,
+        0.004049634997037366,
+        0.002776603140191347
+      ]
+    }
+  ],
+  "continuum_finite_time_response": [
+    0.4375680344610011,
+    0.46635276304788265,
+    0.5041087612778822
+  ],
+  "fixed_capacity_N16": [
+    -1.1020080778975787,
+    -1.0454624109318769,
+    -0.9840672028004263
+  ],
+  "fixed_capacity_continuum": [
+    -1.0401812332673965,
+    -1.006964985305673,
+    -0.9597609846789541
+  ],
+  "expected_small_time_curvature_coefficient": 0.37037037037037035,
+  "wrong_density_small_time_coefficient": -1.1111111111111112,
+  "observable": "C_a(t)=(4pi t)^2/[Vol*t] [d_epsilon^2 Tr exp(-t A_epsilon cos x0)|0 - onehalf*d_epsilon^2 Tr exp(-t A_uniform epsilon)|0]. Uniform response is computed from the SAME native spectrum, removing its local zero-derivative cutoff contribution.",
+  "derivation": "A=M^-1/2 L M^-1/2 with135 midpoint-weighted native edges and27 capacities per cell. A1 couples neighbouring longitudinal Bloch momenta; A2 and the exact divided difference of fprime=-t exp(-t lambda) give the finite-graph heat Hessian. All27 bands retained. Inversion-related transverse sectors are paired; independent full assembly/regressions check this reduction.",
+  "scope": "Finite native heat-curvature response and numerical fixed-physical-time continuum convergence on a conformal perturbation; not a uniform heat-trace theorem, full nonlinear Einstein action, selected regulator, renormalizedG/Lambda or Lorentzian constraints. Taking a->0 at fixedt and then t->0 is distinct from keeping t/a^2 fixed.",
+  "prior": [
+    "12023 actual curved recovery sequence",
+    "12019 native exactquartic",
+    "12009 fixedcapacity negativecontrol",
+    "11601 continuumheat/density warning",
+    "0811.1063 standard covariant heat perturbation"
+  ]
+}

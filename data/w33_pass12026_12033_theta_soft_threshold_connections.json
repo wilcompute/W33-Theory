@@ -1,0 +1,639 @@
+{
+  "status": "PASS",
+  "pass12026": {
+    "status": "PASS",
+    "theta_shape_coordinates": 10,
+    "orientation_rank": 4,
+    "local_unfixed_theta_directions": 6,
+    "mixing_Jacobian_singular_values": [
+      64.07664934424675,
+      8.308777127649432,
+      1.1603855909057452,
+      0.22400256737771576
+    ],
+    "mass_response_on_null_singular_values": [
+      1.4168389854659103,
+      0.6998849149835938,
+      0.07155309307818573,
+      0.056515223048633684
+    ],
+    "charged_residual_Jacobian_singular_values": [
+      69.59043637541382,
+      33.140756462813144,
+      4.039435530611251,
+      1.4114792722421143,
+      1.0296941533411466,
+      0.1066251202503731,
+      0.07959064455290109,
+      0.06802487695753724,
+      0.02365501252240115,
+      0.007494729449866492
+    ],
+    "fixed_orientation_continuations": [
+      {
+        "step": -0.04,
+        "parameters": [
+          -0.10714646234581061,
+          -5.31271565316999,
+          -0.299055417951561,
+          0.0997089355274168,
+          0.047133155076797315,
+          11.312195668565645,
+          7.613827408543164,
+          -2.131328566851488,
+          -7.44317230018146,
+          -11.763552690789142
+        ],
+        "max_mixing_log_residual": 6.892264536872972e-13,
+        "mass_ratio_log_changes": [
+          -0.03866667591045303,
+          -0.041432184972412855,
+          -0.0003546555027744702,
+          8.71661293730952e-05
+        ]
+      },
+      {
+        "step": 0.0,
+        "parameters": [
+          -0.10656491073583248,
+          -5.272793267008227,
+          -0.29810096172116246,
+          0.09976502092725588,
+          0.04716790982188003,
+          11.313684711138258,
+          7.6126948157198715,
+          -2.130188737763689,
+          -7.442911163051868,
+          -11.76326608746275
+        ],
+        "max_mixing_log_residual": 0.0,
+        "mass_ratio_log_changes": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "step": 0.04,
+        "parameters": [
+          -0.10597902686896177,
+          -5.23287090990925,
+          -0.297139818680763,
+          0.09982183321328807,
+          0.04720278822167776,
+          11.315171711523009,
+          7.611563996966151,
+          -2.1290512665591352,
+          -7.442649969870873,
+          -11.762979835077532
+        ],
+        "max_mixing_log_residual": 2.2932766796657233e-12,
+        "mass_ratio_log_changes": [
+          0.03865721000452016,
+          0.04144155914387504,
+          0.0003607669790994805,
+          -9.03125815034933e-05
+        ]
+      }
+    ],
+    "map": "Actual12028 theta/Barr matrices determine the relative up/down singular bases V. Pull12022 back by A=diag(1,2,4), B=V diag(1,3,7)Vdag, X=A2,Y=B2. Six radial invariants are then constant; only four mixing constraints act on the ten theta/Barr shape coordinates.",
+    "conclusion": "Exactly two classical matrix-orbits in12022 do not mean two isolated theta vacua. Its pullback has a regular six-dimensional local fibre. Displayed nonlinear continuations preserve all four mixing comparisons while changing quark mass ratios. At fixed matching scale the full charged/quark residual map has rank10; adding data-target functions could isolate the point, but would again fit coefficients rather than derive them.",
+    "scope": "Explicit vacuum-to-theta map and identifiability result, not a dynamically selected modulus vacuum or a retraction of12022 matrix-space theorem. No new stabilizing counterterms or invented coefficient prediction.",
+    "prior": [
+      "12022 two matrix-orbit theorem",
+      "12011 eleven-fit Jacobian",
+      "11942 theta/Barr shared kernel",
+      "11225 finite-symmetry-only exclusion"
+    ]
+  },
+  "pass12027": {
+    "status": "PASS",
+    "cubic_coefficient": -2.247836249482427e-06,
+    "CP_triangle": -1.2321368163383302,
+    "finite_controls": [
+      {
+        "t": 0.1,
+        "quark": 1.3634492482966685e-18,
+        "gluino": -2.250451305225734e-09,
+        "sum": -2.2504513038622848e-09,
+        "minimum_soft_eigenvalue": 4.752701225136505,
+        "theta_over_t3": -2.250451303862284e-06
+      },
+      {
+        "t": 0.05,
+        "quark": 7.269102375260957e-19,
+        "gluino": -2.810611799604148e-10,
+        "sum": -2.8106117923350456e-10,
+        "minimum_soft_eigenvalue": 4.838250538324229,
+        "theta_over_t3": -2.248489433868036e-06
+      },
+      {
+        "t": 0.025,
+        "quark": 2.7748160346949746e-18,
+        "gluino": -3.512499861489758e-11,
+        "sum": -3.5124995840081546e-11,
+        "minimum_soft_eigenvalue": 4.867406302934082,
+        "theta_over_t3": -2.2479997337652186e-06
+      }
+    ],
+    "mass_scaling_controls": [
+      {
+        "mass_factor": 1.0,
+        "cubic_coefficient": -2.247836249482427e-06
+      },
+      {
+        "mass_factor": 0.5,
+        "cubic_coefficient": -1.2581737793606952e-07
+      },
+      {
+        "mass_factor": 0.25,
+        "cubic_coefficient": -4.6997810312835675e-09
+      }
+    ],
+    "theorem": "For S=[[lI+epsilon E,aM],[aM,rI+eta*b*M E M]], M>0 diagonal,E Hermitian and real l,r,a,b, ImTr(M^-1 f(S)LR)=0 for every real spectralf, all epsilon/eta for whichS is positive. The common-function gluino trace ImTr(M f(S)LR) also vanishes. Species-dependent internalquarkmass functions in the actual gluino self energy break the latter cancellation.",
+    "all_orders_proof": "For realz let A=(z-l)I-epsilon E, D=(z-r)M^-2-eta*b E, Q=(D A-a2I)^-1. ResolventLR=a Q M^-1. TrQ,TrAQ,TrDQ are real by Qdag=(A D-a2I)^-1 and cyclicity. M^-2 is a real linear combination of D,A,I, so the determinant-trace is real. Spectral residues extend to realf. Zero epsilon follows by continuity/12018.",
+    "first_survivor": "At order epsilon^2 eta, theta_gluino=3alpha/(2pi mg)*a*b*Im(E12 E23 E31)*Vandermonde(m_i^2)* integral_0^infty (q+r)q2/[prod_i Delta_i(-q)*prod_i(q+m_i2)]dq. The integral is strictly positive for positive baseline. All epsilon eta terms and epsilon eta^2 cubic terms vanish. Thus the cubic term is nonzero exactly when the triangle and three mass differences are nonzero (and prefactors nonzero).",
+    "scope": "Exact linked-spurion family and stated colored one-loop channels, not a proof that the full MSSM/UV running enforces this relation, nor protection from LR,neutralportal or higherloopterms. Standard Jarlskog/GIM structure is prior art; this pass supplies its specific nonzero loop coefficient and a larger exact quark-safe family.",
+    "prior": [
+      "12018 one-sided theorem",
+      "12021 linked second-order cancellation",
+      "11978 singlet-soft diagnostic not full thresholds",
+      "standard Jarlskog mass-difference invariant"
+    ]
+  },
+  "pass12028": {
+    "status": "PASS",
+    "charged_parameters": [
+      -0.10656491073583248,
+      -5.272793267008227,
+      -0.29810096172116246,
+      0.09976502092725588,
+      0.04716790982188003,
+      11.313684711138258,
+      7.6126948157198715,
+      -2.130188737763689,
+      -7.442911163051868,
+      -11.76326608746275,
+      12.626469269059587
+    ],
+    "charged_max_log_residual": 8.922973471254655e-12,
+    "matching_scale_GeV": 27767815.495019767,
+    "all_six_quark_matching": [
+      {
+        "kind": "u",
+        "SM_mass_GeV": 145.43841709404603,
+        "bare_mass_GeV": 145.02031027176668,
+        "matching_residual": 2.842170943040401e-14,
+        "chirality": 0.0003358802830886384,
+        "wavefunction": 0.00254721120593024,
+        "total": 0.0028830914890188783,
+        "squark_mass_squares": [
+          5779259.226697514,
+          6268727.293387192
+        ]
+      },
+      {
+        "kind": "u",
+        "SM_mass_GeV": 0.523421807655721,
+        "bare_mass_GeV": 0.5219284985571836,
+        "matching_residual": 0.0,
+        "chirality": 0.00033671699448977697,
+        "wavefunction": 0.0025244203119908957,
+        "total": 0.0028611373064806726,
+        "squark_mass_squares": [
+          5758658.6492616385,
+          6247266.634859146
+        ]
+      },
+      {
+        "kind": "u",
+        "SM_mass_GeV": 0.0010384010170788305,
+        "bare_mass_GeV": 0.0010354384856936887,
+        "matching_residual": -1.0842021724855044e-18,
+        "chirality": 0.0003367170053572816,
+        "wavefunction": 0.0025244200163713876,
+        "total": 0.0028611370217286694,
+        "squark_mass_squares": [
+          5758658.382428544,
+          6247266.356875668
+        ]
+      },
+      {
+        "kind": "d",
+        "SM_mass_GeV": 2.3643404431726895,
+        "bare_mass_GeV": 2.278493620999088,
+        "matching_residual": -8.881784197001252e-16,
+        "chirality": 0.03569950369920889,
+        "wavefunction": 0.001977504207426484,
+        "total": 0.037677007906635376,
+        "squark_mass_squares": [
+          4840308.614472669,
+          6253777.029291625
+        ]
+      },
+      {
+        "kind": "d",
+        "SM_mass_GeV": 0.044856316360089535,
+        "bare_mass_GeV": 0.043227630730349895,
+        "matching_residual": 0.0,
+        "chirality": 0.035699416975723465,
+        "wavefunction": 0.0019775410768525675,
+        "total": 0.03767695805257603,
+        "squark_mass_squares": [
+          4840670.678384521,
+          6253404.586050667
+        ]
+      },
+      {
+        "kind": "d",
+        "SM_mass_GeV": 0.0022598221428393912,
+        "bare_mass_GeV": 0.002177770379636592,
+        "matching_residual": -8.239936510889834e-17,
+        "chirality": 0.03569941694457639,
+        "wavefunction": 0.001977541090094275,
+        "total": 0.037676958034670666,
+        "squark_mass_squares": [
+          4840670.808455287,
+          6253404.45225213
+        ]
+      }
+    ],
+    "leading_previous_SQCD": 0.03570828986501888,
+    "matching_log_derivative": -0.0178099310278135,
+    "formula": "For each real2x2 squark block with LR=m(A-mu tanbeta/cotbeta), include actual eigenvalues/mixing, EW Dterms, quarkm2, chirality term pref*M3/m [B0(M3^2,S)]LR and wavefunction -pref/2 sum_eigen B1(M3^2,mSq2). B1=-int_0^1(1-t)log([tM3^2+(1-t)mSq2]/Q2)dt. Solve mSM=mbare(1+delta) selfconsistently, for all six quarks.",
+    "RG_log_check": "d delta/dlogQ=-2alpha_s/(3pi), exactly betaY_SM,QCD/Y-betaY_MSSM,QCD/Y. Chirality-only12024 misses this matching-scale logarithm; the B1 term supplies it.",
+    "scope": "Complete declared p=0 SQCD quark-mass self energies for aligned real soft blocks; not complete MSSM thresholds. External momentum, finite EW/chargino/neutralino/Higgs/lepton terms, MSbar-DRbar conversion, all softRG and UV/EW vacuum remain open. Full matrix one-loopMSSM running is matched to the same supplied low data; no pole-spectrum/data update or scale prediction.",
+    "prior": [
+      "12024 leading SQCD benchmark",
+      "1411.7035 equations26-29 and41",
+      "hep-ph/9709356 beta conventions"
+    ]
+  },
+  "pass12031": {
+    "status": "PASS",
+    "new_branch_energy_in_old_parent": 1.7932339756888912e-07,
+    "old_target": [
+      7.0,
+      21.0,
+      73.0,
+      10.999999999999996,
+      58.99999999999995,
+      370.9999999999995,
+      0.9493436780092799,
+      0.05063977244845157,
+      0.05050890017606374,
+      0.9475749932882077
+    ],
+    "retargeted_coefficients": [
+      7.0,
+      21.0,
+      73.0,
+      11.000000000000007,
+      59.00000000000007,
+      371.00000000000074,
+      0.949363543625336,
+      0.05062224814933923,
+      0.05050993612544225,
+      0.9478453744906372
+    ],
+    "retargeted_positive_modes": 28,
+    "retargeted_symmetry_modes": 8,
+    "retargeted_smallest_normal_Hessian": 3.133797303926864e-09,
+    "result": "12022 targeted the12011/12017 orientation, not the changed12028MSSMbranch. Its coefficients must change to make the new orbit a zero. With that supplied retargeting the same36-field parent has28 positive modes and exactly the generic two CP-conjugate global orbits. This explicitly prevents presenting separately fitted packets as one common selected vacuum.",
+    "scope": "Cross-branch compatibility repair with changed input coefficients; no derivation of them from native interactions or new unification principle."
+  },
+  "pass12033": {
+    "status": "PASS",
+    "base_parameters": [
+      0.004840344968105148,
+      -0.4535551129015758,
+      0.7475455705612528,
+      -0.7094155943629775,
+      0.057271687258336604
+    ],
+    "Jacobian_singular_values": [
+      28.177385404604397,
+      4.85026277912208,
+      3.081858669494301,
+      0.47286996432598827
+    ],
+    "continuation": [
+      {
+        "step": -0.026515196129125725,
+        "parameters": [
+          0.000172454411062238,
+          -0.45011475728032235,
+          0.7544008193628324,
+          -0.7332566341136646,
+          0.062300159514416774
+        ],
+        "max_log_residual": 1.1102230246251571e-15,
+        "observables": [
+          0.30399999999999966,
+          0.5729999999999995,
+          0.02219,
+          0.029549980087614502
+        ],
+        "masses_eV": [
+          0.0039499698665936625,
+          0.00947640553939087,
+          0.050265318679453316
+        ],
+        "m_beta_beta_eV": 0.0010547814567125355,
+        "J": -0.025752411056406157
+      },
+      {
+        "step": -0.016294010659859734,
+        "parameters": [
+          0.0023524756831778816,
+          -0.45087534820404646,
+          0.7513080680642427,
+          -0.7246722748186657,
+          0.0583145220501655
+        ],
+        "max_log_residual": 2.6645352591003792e-15,
+        "observables": [
+          0.30399999999999966,
+          0.5730000000000001,
+          0.02218999999999997,
+          0.029549980087614416
+        ],
+        "masses_eV": [
+          0.0040598728440171756,
+          0.009522739496047757,
+          0.05027407450674341
+        ],
+        "m_beta_beta_eV": 0.0010606389646671233,
+        "J": -0.02267037242087106
+      },
+      {
+        "step": -0.009512049416945263,
+        "parameters": [
+          0.0035612362168344967,
+          -0.4518018417085098,
+          0.7495672302796751,
+          -0.7184263822995465,
+          0.057036313731350506
+        ],
+        "max_log_residual": 4.773959005888184e-15,
+        "observables": [
+          0.30399999999999855,
+          0.5729999999999998,
+          0.02219000000000003,
+          0.029549980087614537
+        ],
+        "masses_eV": [
+          0.004137637805118897,
+          0.009556152290872578,
+          0.05028041414513557
+        ],
+        "m_beta_beta_eV": 0.0010647518875610555,
+        "J": -0.02042816321106422
+      },
+      {
+        "step": -0.005003079492053565,
+        "parameters": [
+          0.004231267081729549,
+          -0.4525767842218749,
+          0.7485512274096044,
+          -0.7141582641676956,
+          0.05685676344530529
+        ],
+        "max_log_residual": 2.5091040356528222e-14,
+        "observables": [
+          0.3040000000000076,
+          0.5730000000000028,
+          0.02219000000000003,
+          0.029549980087614496
+        ],
+        "masses_eV": [
+          0.004190654257076381,
+          0.009579226644273138,
+          0.05028480469388693
+        ],
+        "m_beta_beta_eV": 0.0010675506778491629,
+        "J": -0.018906221529834285
+      },
+      {
+        "step": -0.002000659102064084,
+        "parameters": [
+          0.004613848261703821,
+          -0.45315083207027673,
+          0.7479333547875754,
+          -0.711307550748839,
+          0.05703081899160411
+        ],
+        "max_log_residual": 2.2204460492503107e-15,
+        "observables": [
+          0.30400000000000066,
+          0.5730000000000005,
+          0.02219,
+          0.029549980087614527
+        ],
+        "masses_eV": [
+          0.00422624855990986,
+          0.009594851582496742,
+          0.05028778357504077
+        ],
+        "m_beta_beta_eV": 0.0010694305587935179,
+        "J": -0.017896473913939843
+      },
+      {
+        "step": 0.0020006240901547364,
+        "parameters": [
+          0.005044401101582342,
+          -0.4539745147310799,
+          0.7471754048105629,
+          -0.7075354544699364,
+          0.057607858716848176
+        ],
+        "max_log_residual": 2.2204460492503107e-15,
+        "observables": [
+          0.30400000000000066,
+          0.5730000000000003,
+          0.02219000000000003,
+          0.02954998008761451
+        ],
+        "masses_eV": [
+          0.004273789536743169,
+          0.009615886698811268,
+          0.05029180129011464
+        ],
+        "m_beta_beta_eV": 0.0010719455943124484,
+        "J": -0.016570204989044813
+      },
+      {
+        "step": 0.0050025206036156036,
+        "parameters": [
+          0.005309609836409569,
+          -0.4546281754400175,
+          0.7466499177742613,
+          -0.7047453874857935,
+          0.058281033494128186
+        ],
+        "max_log_residual": 2.0206059048177644e-14,
+        "observables": [
+          0.3039999999999973,
+          0.5730000000000022,
+          0.022189999999999772,
+          0.029549980087615096
+        ],
+        "masses_eV": [
+          0.004309406149021973,
+          0.00963176937832452,
+          0.05029484050434228
+        ],
+        "m_beta_beta_eV": 0.001073834911729035,
+        "J": -0.015597120881683343
+      },
+      {
+        "step": 0.009507885552144275,
+        "parameters": [
+          0.0056201424233225114,
+          -0.4556529066084939,
+          0.7459190657472945,
+          -0.700649483507624,
+          0.059637954560565996
+        ],
+        "max_log_residual": 2.6645352591003792e-15,
+        "observables": [
+          0.30400000000000016,
+          0.5730000000000002,
+          0.022190000000000036,
+          0.029549980087614416
+        ],
+        "masses_eV": [
+          0.00436260497644054,
+          0.009655688591729933,
+          0.050299426658566036
+        ],
+        "m_beta_beta_eV": 0.0010766683691101294,
+        "J": -0.014181593922478825
+      },
+      {
+        "step": 0.016271414194360942,
+        "parameters": [
+          0.005909238030737717,
+          -0.4572590184117719,
+          0.7449209760782389,
+          -0.6947524754575833,
+          0.06234188898460617
+        ],
+        "max_log_residual": 2.3314683517128315e-15,
+        "observables": [
+          0.30399999999999927,
+          0.5730000000000001,
+          0.02218999999999997,
+          0.0295499800876145
+        ],
+        "masses_eV": [
+          0.004441633079664279,
+          0.0096916512738732,
+          0.050306342586341625
+        ],
+        "m_beta_beta_eV": 0.0010809108809363406,
+        "J": -0.012171756164959746
+      },
+      {
+        "step": 0.026425393998530312,
+        "parameters": [
+          0.0060159885855456206,
+          -0.459752156776175,
+          0.7435570701550834,
+          -0.6865214899779944,
+          0.0675636520916465
+        ],
+        "max_log_residual": 2.8865798640254113e-15,
+        "observables": [
+          0.3039999999999991,
+          0.5729999999999998,
+          0.02218999999999997,
+          0.029549980087614582
+        ],
+        "masses_eV": [
+          0.004558259372698097,
+          0.009745651774447426,
+          0.05031677382850365
+        ],
+        "m_beta_beta_eV": 0.0010872655611869533,
+        "J": -0.009421599895552307
+      }
+    ],
+    "failed_coordinate_chart": {
+      "fixed_q4": -0.022728312741663398,
+      "max_log_residual": 0.03095675240941942,
+      "interpretation": "Failedlocalq4chartattempt, not an excludedmodelbranch or globalno-go."
+    },
+    "reading": "A one-dimensional local family retains all four neutrino comparisons on the new full-p0SQCD branch; lightest mass, m_beta_beta and leptonicJ vary together. This is a conditional correlation in a supplied real-Majorana ansatz, not a unique prediction, a global allowed interval or an experimental update.",
+    "scope": "One-loop C5shape, supplied atmospheric normalization and historical oscillation targets. No fullMSSMthresholds, neutrino-scale selection or global branch census. CP-conjugate sign conventions follow12007/12016."
+  },
+  "pass12032": {
+    "status": "PASS",
+    "rows": [
+      {
+        "capacity_exponent": 4,
+        "exact_dimensionless_series": "x**4/72 - 17*x**3/140 + x**2/2 + x",
+        "small_time_response": [
+          {
+            "t": 0.001,
+            "value": 0.3712951726005489
+          },
+          {
+            "t": 0.01,
+            "value": 0.3795178363149913
+          },
+          {
+            "t": 0.04,
+            "value": 0.4056489944765632
+          },
+          {
+            "t": 0.08,
+            "value": 0.43756803488640783
+          }
+        ],
+        "limiting_curvature_coefficient": 0.37037037037037035
+      },
+      {
+        "capacity_exponent": 0,
+        "exact_dimensionless_series": "11*x**4/2520 - 23*x**3/420 + x**2/2 - 3*x",
+        "small_time_response": [
+          {
+            "t": 0.001,
+            "value": -1.1101856920378304
+          },
+          {
+            "t": 0.01,
+            "value": -1.1019023558569363
+          },
+          {
+            "t": 0.04,
+            "value": -1.0748725867135973
+          },
+          {
+            "t": 0.08,
+            "value": -1.0401812328560103
+          }
+        ],
+        "limiting_curvature_coefficient": -1.1111111111111112
+      }
+    ],
+    "derivation": "For continuumflatG0 andsigma=epsilon cos(qx), Duhamel derivative is a Gaussianmoment integral. Complete p-square atparameteru: v=u(1-u), x=t qGq, c=capacityexponent/4,d=1-2c,b=d(1/2-v)-1/2. C=M0/t[-12d2-4c2x+2int_0^1 exp(-xv)(6d2+x[d2(2u-1)^2/2+4db]+x2b2)du]. This derives the local response without inserting R/6.",
+    "scope": "Standard covariantheatperturbation applied to the statednativecontinuumtarget. Correctcapacity gives+H00 andfixedcapacity-3H00. It is an independent benchmark/order-of-limits diagnostic, not a proof of uniformnativeheatconvergence or a selectedEinsteinaction.",
+    "prior": [
+      "12009 exactcontinuumfixed-densityfactor-3",
+      "12029 actualnativefinitegraphresponse",
+      "0811.1063 covariantperturbation priorart"
+    ]
+  },
+  "natural_units": {
+    "status": "PASS",
+    "common_mass_rescaling": 10,
+    "dimensionless_threshold_error": 5.551115123125783e-17,
+    "result": "Scaling all masses,momenta,vevs andQ bylambda leaves the dimensionlessmatching map unchanged; I scaleslambda^-2, B0/B1 depend only ratios. Nativeheat Tr exp(-t A/a2) is invariant under a->a/lambda,t->t/lambda2. A fitted scale relative to suppliedMZ does not fix an absolute naturalunit orderiveG/Lambda.",
+    "prior": [
+      "12009 natural units/density gate",
+      "12024 spectrum sensitivity"
+    ]
+  }
+}

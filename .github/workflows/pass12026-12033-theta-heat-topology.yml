@@ -1,0 +1,42 @@
+name: Pass12026-12033 theta soft heat topology
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass12026_12033_theta_soft_threshold_connections.py'
+      - 'analysis/w33_pass12029_native_heat_curvature.py'
+      - 'analysis/w33_pass12030_native_determinant_torus.py'
+      - 'tests/test_w33_pass12026_12033_physical_connections.py'
+      - '.github/workflows/pass12026-12033-theta-heat-topology.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy scipy sympy==1.14.0 mpmath==1.3.0 pytest
+      - name: Frozen new and prior controls
+        run: python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass12026_12033_physical_connections.py tests/test_w33_pass12021_12025_uv_curvature_threshold_holonomy.py
+      - name: Regenerate all connection and operator certificates
+        run: |
+          python analysis/w33_pass12026_12033_theta_soft_threshold_connections.py
+          python analysis/w33_pass12029_native_heat_curvature.py
+          python analysis/w33_pass12029_native_heat_curvature.py --sizes 32 --output data/w33_pass12029_native_heat_extended.json
+          python analysis/w33_pass12030_native_determinant_torus.py
+      - name: Regenerated controls
+        run: python -m pytest --noconftest -o addopts='' -q tests/test_w33_pass12026_12033_physical_connections.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass12026-12033-theta-heat-topology
+          path: |
+            data/w33_pass12026_12033_theta_soft_threshold_connections.json
+            data/w33_pass12029_native_heat_curvature.json
+            data/w33_pass12029_native_heat_extended.json
+            data/w33_pass12030_native_determinant_torus.json

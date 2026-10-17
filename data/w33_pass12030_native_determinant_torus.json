@@ -1,0 +1,215 @@
+{
+  "status": "PASS",
+  "charges_multiplicities": {
+    "1": 6,
+    "2": 3,
+    "-3": 2,
+    "-4": 3,
+    "6": 1
+  },
+  "meshes": [
+    {
+      "mesh": 8,
+      "sectors": [
+        {
+          "L": 6,
+          "charge": 1,
+          "N": 8,
+          "Chern": -0.9999999999999997,
+          "gap": 0.9115743795172977,
+          "continuous_gap_bound": 0.12617621611984942,
+          "maxplaquette": 0.8758105888158165,
+          "min_overlap": 0.9110635895714984,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": 2,
+          "N": 8,
+          "Chern": -2.0,
+          "gap": 0.8214229046304432,
+          "continuous_gap_bound": 0.03602474123299493,
+          "maxplaquette": 1.7893339415239835,
+          "min_overlap": 0.8959352866991872,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": -3,
+          "N": 8,
+          "Chern": 3.0,
+          "gap": 0.7301923138762052,
+          "continuous_gap_bound": -0.05520584952124308,
+          "maxplaquette": 2.7756019402533587,
+          "min_overlap": 0.8781936376213684,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": -4,
+          "N": 8,
+          "Chern": 0.0,
+          "gap": 0.6281472830363007,
+          "continuous_gap_bound": -0.15725088036114754,
+          "maxplaquette": 2.4179736737561024,
+          "min_overlap": 0.8557492128678991,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": 6,
+          "N": 8,
+          "Chern": -1.9999999999999993,
+          "gap": 0.4560593740854797,
+          "continuous_gap_bound": -0.3293387893119686,
+          "maxplaquette": 1.0933266089979823,
+          "min_overlap": 0.8154953833668669,
+          "native_compiled": true
+        }
+      ],
+      "physical_toron_Chern_total": -47.99999999999997
+    },
+    {
+      "mesh": 16,
+      "sectors": [
+        {
+          "L": 6,
+          "charge": 1,
+          "N": 16,
+          "Chern": -0.9999999999999994,
+          "gap": 0.9115743795172977,
+          "continuous_gap_bound": 0.5188752978185736,
+          "maxplaquette": 0.34446846041667467,
+          "min_overlap": 0.9771289912477991,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": 2,
+          "N": 16,
+          "Chern": -1.9999999999999991,
+          "gap": 0.8214229046304432,
+          "continuous_gap_bound": 0.42872382293171907,
+          "maxplaquette": 0.7105695866798912,
+          "min_overlap": 0.9724600436539901,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": -3,
+          "N": 16,
+          "Chern": 3.0000000000000004,
+          "gap": 0.7301923138762052,
+          "continuous_gap_bound": 0.33749323217748106,
+          "maxplaquette": 1.123203691811286,
+          "min_overlap": 0.9665239649660594,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": -4,
+          "N": 16,
+          "Chern": 4.0,
+          "gap": 0.6281472830363007,
+          "continuous_gap_bound": 0.2354482013375766,
+          "maxplaquette": 1.6145008042214894,
+          "min_overlap": 0.9566586153560531,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": 6,
+          "N": 16,
+          "Chern": -5.999999999999997,
+          "gap": 0.4560593740854797,
+          "continuous_gap_bound": 0.06336029238675556,
+          "maxplaquette": 2.994132894132961,
+          "min_overlap": 0.940864584113033,
+          "native_compiled": true
+        }
+      ],
+      "physical_toron_Chern_total": 1.1368683772161603e-13
+    },
+    {
+      "mesh": 24,
+      "sectors": [
+        {
+          "L": 6,
+          "charge": 1,
+          "N": 24,
+          "Chern": -1.0,
+          "gap": 0.9115743795172977,
+          "continuous_gap_bound": 0.6497749917181483,
+          "maxplaquette": 0.17337681422713924,
+          "min_overlap": 0.9897731910200604,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": 2,
+          "N": 24,
+          "Chern": -2.0000000000000004,
+          "gap": 0.8214229046304432,
+          "continuous_gap_bound": 0.5596235168312937,
+          "maxplaquette": 0.3589197640984354,
+          "min_overlap": 0.9875986190392599,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": -3,
+          "N": 24,
+          "Chern": 2.9999999999999996,
+          "gap": 0.7301923138762052,
+          "continuous_gap_bound": 0.4683929260770558,
+          "maxplaquette": 0.5712564919615797,
+          "min_overlap": 0.9847971849687845,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": -4,
+          "N": 24,
+          "Chern": 4.000000000000001,
+          "gap": 0.6281472830363007,
+          "continuous_gap_bound": 0.36634789523715133,
+          "maxplaquette": 0.8308796888987675,
+          "min_overlap": 0.9795845883080345,
+          "native_compiled": true
+        },
+        {
+          "L": 6,
+          "charge": 6,
+          "N": 24,
+          "Chern": -5.999999999999997,
+          "gap": 0.4560593740854797,
+          "continuous_gap_bound": 0.1942599862863303,
+          "maxplaquette": 1.6238742974699591,
+          "min_overlap": 0.9676830769872632,
+          "native_compiled": true
+        }
+      ],
+      "physical_toron_Chern_total": 1.4210854715202004e-13
+    }
+  ],
+  "native_compile_constant_phase_errors": 4.80740671595891e-17,
+  "native_period_phase_offsets": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "anomaly_sum_q3": 0,
+  "family": "Four-dimensional Wilson kernel: two one-cell directions carry torons alpha,beta; a6x6 magnetic plane carries flux1. Each chargeq has fluxq. Native12000 period words are compiled in the actual unimodular clock marking; their links differ from straight magnetic links by tested constant phases. Positive-projector determinant links use arbitrary local eigenframes across the whole parameter torus, not one fixed reference frame.",
+  "topology": "On the effective-charge torus, resolved mesh Chern=-q. Physical torons map(alpha,beta)=(q theta0,q theta1) with degreeq^2, so contribution=-multiplicity*q^3. For10+bar5 underinteger6Y this sums to zero. Standard anomaly cancellation is prior art; this is an actual finite native-path-compatible family test, not a new anomaly formula.",
+  "gap_control": "Each toron partial derivative of the Hermitian Wilson kernel has operator norm1. A mesh minimum gap minus2pi/N is a whole-torus Lipschitz lower bound up to matrix-eigensolver rounding; positive margins are recorded. This controls gaps, not the correctness of an underresolved Chern mesh. Integer plaquette output alone and max sampled phase<pi do not certify resolution.",
+  "scope": "Multi-patch determinant topology on one declared finite Abelian subgroup family. Stable integer mesh results and native word compilation are numerical controls; no interval-certified general family-index theorem or full nonAbelian/allvolume measure construction. Coarse-loop null Chern is necessary, not sufficient, for the global current. Added flux/periods do not derive families or select physicalconstants.",
+  "prior": [
+    "12025 contractible frame current",
+    "12002 coarse factor plus Kato-trivial optical lines",
+    "12015 SM10+bar5 charge embedding",
+    "prior pump scripts already useFHS",
+    "cond-mat/0503172 determinant-link method",
+    "hep-lat/9904009 anomaly/determinant geometry"
+  ]
+}

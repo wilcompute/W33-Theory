@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "physical_heat_times": [
+    0.08,
+    0.12,
+    0.18
+  ],
+  "geometric_response": [
+    {
+      "N": 8,
+      "response": [
+        0.6151812782855857,
+        0.587495472371424,
+        0.570078305650291
+      ],
+      "continuum_errors": [
+        0.17761324382458454,
+        0.12114270932354132,
+        0.06596954437240887
+      ]
+    },
+    {
+      "N": 12,
+      "response": [
+        0.5004554108698931,
+        0.5019086286157648,
+        0.526460801278405
+      ],
+      "continuum_errors": [
+        0.06288737640889197,
+        0.03555586556788215,
+        0.02235204000052282
+      ]
+    },
+    {
+      "N": 16,
+      "response": [
+        0.4655407883072113,
+        0.48411891593993195,
+        0.5158715866462652
+      ],
+      "continuum_errors": [
+        0.027972753846210174,
+        0.017766152892049303,
+        0.011762825368383023
+      ]
+    },
+    {
+      "N": 24,
+      "response": [
+        0.44862755524921594,
+        0.47371663817523685,
+        0.5091163524254545
+      ],
+      "continuum_errors": [
+        0.011059520788214816,
+        0.0073638751273542025,
+        0.005007591147572321
+      ]
+    }
+  ],
+  "continuum_finite_time_response": [
+    0.4375680344610011,
+    0.46635276304788265,
+    0.5041087612778822
+  ],
+  "fixed_capacity_N16": [
+    -1.1020080778975787,
+    -1.0454624109318769,
+    -0.9840672028004263
+  ],
+  "fixed_capacity_continuum": [
+    -1.0401812332673965,
+    -1.006964985305673,
+    -0.9597609846789541
+  ],
+  "expected_small_time_curvature_coefficient": 0.37037037037037035,
+  "wrong_density_small_time_coefficient": -1.1111111111111112,
+  "observable": "C_a(t)=(4pi t)^2/[Vol*t] [d_epsilon^2 Tr exp(-t A_epsilon cos x0)|0 - onehalf*d_epsilon^2 Tr exp(-t A_uniform epsilon)|0]. Uniform response is computed from the SAME native spectrum, removing its local zero-derivative cutoff contribution.",
+  "derivation": "A=M^-1/2 L M^-1/2 with135 midpoint-weighted native edges and27 capacities per cell. A1 couples neighbouring longitudinal Bloch momenta; A2 and the exact divided difference of fprime=-t exp(-t lambda) give the finite-graph heat Hessian. All27 bands retained. Inversion-related transverse sectors are paired; independent full assembly/regressions check this reduction.",
+  "scope": "Finite native heat-curvature response and numerical fixed-physical-time continuum convergence on a conformal perturbation; not a uniform heat-trace theorem, full nonlinear Einstein action, selected regulator, renormalizedG/Lambda or Lorentzian constraints. Taking a->0 at fixedt and then t->0 is distinct from keeping t/a^2 fixed.",
+  "prior": [
+    "12023 actual curved recovery sequence",
+    "12019 native exactquartic",
+    "12009 fixedcapacity negativecontrol",
+    "11601 continuumheat/density warning",
+    "0811.1063 standard covariant heat perturbation"
+  ]
+}
