@@ -1,0 +1,346 @@
+{
+  "status": "PASS",
+  "date": "2026-10-17",
+  "science_commit": "ee4f41ed6900e0ce41ca0096dc24eff79c2ce76a",
+  "hosted_run": 39078651176,
+  "hosted_url": "https://github.com/wilcompute/W33-Theory/actions/runs/39078651176",
+  "hosted_conclusion": "success",
+  "hosted_frozen_tests": 31,
+  "hosted_regenerated_tests": 16,
+  "hosted_log_sha256": "5292560bda35a02f79296d8fe723486d3507d9c4ab64d7bccaf277dce06dea07",
+  "local_combined_tests_before_chart_convention_cleanup": 31,
+  "local_combined_log_sha256": "f0eb086583c12f39d15d8001469d3000871e16d6502d04c49afe6d7c4f31dfee",
+  "local_focused_tests_after_cleanup": 16,
+  "local_focused_log_sha256": "eef5c861251946c2c5ab4ccb9a7f3586d6d195158516c9bf8341df3fa3a0be63",
+  "artifacts": {
+    "w33_pass12026_12033_theta_soft_threshold_connections.json": {
+      "local_sha256": "ffa429e7331491ad5109d8fc64ab258530af28610cabf45119679bb86fd21553",
+      "hosted_sha256": "1c9f73123eec3b362a79e58cab1ff4c2ce74e05293c480f249b765ffcf5b513d",
+      "byte_identical": false,
+      "comparison": {
+        "status": "PASS",
+        "leaf_counts": {
+          "exact": 58,
+          "numeric": 238,
+          "finite_difference_diagnostics": 22,
+          "free_fibre_observables": 22
+        },
+        "relative_tolerance": 1e-07,
+        "absolute_tolerance": 1e-10,
+        "fit_coordinates_independently_checked": [
+          "/pass12026/fixed_orientation_continuations/0/parameters",
+          "/pass12026/fixed_orientation_continuations/1/parameters",
+          "/pass12026/fixed_orientation_continuations/2/parameters",
+          "/pass12033/base_parameters",
+          "/pass12033/continuation/0/parameters",
+          "/pass12033/continuation/1/parameters",
+          "/pass12033/continuation/2/parameters",
+          "/pass12033/continuation/3/parameters",
+          "/pass12033/continuation/4/parameters",
+          "/pass12033/continuation/5/parameters",
+          "/pass12033/continuation/6/parameters",
+          "/pass12033/continuation/7/parameters",
+          "/pass12033/continuation/8/parameters",
+          "/pass12033/continuation/9/parameters"
+        ],
+        "physical_fit_checks": [
+          {
+            "source": "local",
+            "charged_max_log_residual": 8.922973471254655e-12,
+            "orientation_fibre_residuals": [
+              {
+                "mixing_log_residual": 6.892264536872972e-13,
+                "actual_parent_invariant_error": 9.663381206337363e-13
+              },
+              {
+                "mixing_log_residual": 0.0,
+                "actual_parent_invariant_error": 0.0
+              },
+              {
+                "mixing_log_residual": 2.2932766796657233e-12,
+                "actual_parent_invariant_error": 5.115907697472721e-13
+              }
+            ],
+            "neutrino_fibre_residuals": [
+              1.1102230246251565e-15,
+              2.6645352591003757e-15,
+              4.773959005888173e-15,
+              2.5091040356528538e-14,
+              2.220446049250313e-15,
+              2.220446049250313e-15,
+              2.020605904817785e-14,
+              2.6645352591003757e-15,
+              2.3314683517128287e-15,
+              2.886579864025407e-15
+            ]
+          },
+          {
+            "source": "hosted",
+            "charged_max_log_residual": 8.922973471254655e-12,
+            "orientation_fibre_residuals": [
+              {
+                "mixing_log_residual": 2.931344056378293e-11,
+                "actual_parent_invariant_error": 1.3989920333301598e-12
+              },
+              {
+                "mixing_log_residual": 0.0,
+                "actual_parent_invariant_error": 7.389644451905042e-13
+              },
+              {
+                "mixing_log_residual": 1.6162626792493029e-12,
+                "actual_parent_invariant_error": 1.7053025658242404e-13
+              }
+            ],
+            "neutrino_fibre_residuals": [
+              2.0583534876550402e-13,
+              2.0761170560490427e-13,
+              2.0805579481475434e-13,
+              2.0472512574087887e-13,
+              2.091660178393795e-13,
+              2.0472512574087887e-13,
+              1.9872992140790302e-13,
+              2.0317081350640365e-13,
+              2.0472512574087887e-13,
+              2.0117241206207837e-13
+            ]
+          }
+        ],
+        "finite_difference_step_checks": [
+          {
+            "step": 5e-06,
+            "mixing_singular_values": [
+              64.07664973027576,
+              8.308776821961864,
+              1.160386261932264,
+              0.2240033923559801
+            ],
+            "mass_on_null_singular_values": [
+              1.4168392250871222,
+              0.6998815961784752,
+              0.07155316874821813,
+              0.05651516944126688
+            ],
+            "charged_singular_values": [
+              69.59043633128645,
+              33.14075671906187,
+              4.039435527077328,
+              1.4114791182291213,
+              1.029694191838951,
+              0.10662503128867672,
+              0.0795906529934168,
+              0.06802484429548276,
+              0.023655011285837763,
+              0.007494743563056134
+            ]
+          },
+          {
+            "step": 1e-05,
+            "mixing_singular_values": [
+              64.07664934424675,
+              8.308777127649432,
+              1.1603855909057452,
+              0.22400256737771576
+            ],
+            "mass_on_null_singular_values": [
+              1.4168389854659103,
+              0.699884914983594,
+              0.07155309307818576,
+              0.056515223048633684
+            ],
+            "charged_singular_values": [
+              69.59043637541382,
+              33.140756462813144,
+              4.039435530611251,
+              1.4114792722421143,
+              1.0296941533411466,
+              0.1066251202503731,
+              0.07959064455290109,
+              0.06802487695753724,
+              0.02365501252240115,
+              0.007494729449866492
+            ]
+          },
+          {
+            "step": 2e-05,
+            "mixing_singular_values": [
+              64.07664772802896,
+              8.308776955400617,
+              1.1603857329737366,
+              0.22400267929223358
+            ],
+            "mass_on_null_singular_values": [
+              1.4168391563348584,
+              0.6998845979585708,
+              0.07155317871528179,
+              0.056515205927741674
+            ],
+            "charged_singular_values": [
+              69.59043654654324,
+              33.140755550503464,
+              4.039435213833857,
+              1.4114793480784302,
+              1.0296940012956286,
+              0.106625143385903,
+              0.07959065120815115,
+              0.06802493400964715,
+              0.02365501365229523,
+              0.007494719025994242
+            ]
+          }
+        ],
+        "finite_difference_relative_tolerance": 0.0001,
+        "finite_difference_absolute_tolerance": 1e-08,
+        "free_fibre_relative_tolerance": 1e-06,
+        "free_fibre_J_absolute_tolerance": 1e-08,
+        "free_fibre_mass_log_absolute_tolerance": 1e-07
+      }
+    },
+    "w33_pass12029_native_heat_curvature.json": {
+      "local_sha256": "b05d7acd2f046ec289162092a245931b664c868a735e6998a03d652c4e2fe5f8",
+      "hosted_sha256": "e0c28bfb0572b63ca3f9ca465b233612a3f7ee62a4f5672bf4ce369ff4ac2404",
+      "byte_identical": false,
+      "comparison": {
+        "status": "PASS",
+        "leaf_counts": {
+          "exact": 13,
+          "numeric": 38,
+          "finite_difference_diagnostics": 0,
+          "free_fibre_observables": 0
+        },
+        "relative_tolerance": 1e-07,
+        "absolute_tolerance": 1e-10,
+        "fit_coordinates_independently_checked": [],
+        "physical_fit_checks": [],
+        "finite_difference_step_checks": [],
+        "finite_difference_relative_tolerance": 0.0001,
+        "finite_difference_absolute_tolerance": 1e-08,
+        "free_fibre_relative_tolerance": 1e-06,
+        "free_fibre_J_absolute_tolerance": 1e-08,
+        "free_fibre_mass_log_absolute_tolerance": 1e-07
+      }
+    },
+    "w33_pass12029_native_heat_extended.json": {
+      "local_sha256": "2101d8d0879dbed7ffaf8ffab94cdef32cf023150e01d7554cbb9849746d51a0",
+      "hosted_sha256": "241a88bdf8ec78cc07f1e70b64f3dcb7174b201625b5f0a69b536721accb8d25",
+      "byte_identical": false,
+      "comparison": {
+        "status": "PASS",
+        "leaf_counts": {
+          "exact": 10,
+          "numeric": 20,
+          "finite_difference_diagnostics": 0,
+          "free_fibre_observables": 0
+        },
+        "relative_tolerance": 1e-07,
+        "absolute_tolerance": 1e-10,
+        "fit_coordinates_independently_checked": [],
+        "physical_fit_checks": [],
+        "finite_difference_step_checks": [],
+        "finite_difference_relative_tolerance": 0.0001,
+        "finite_difference_absolute_tolerance": 1e-08,
+        "free_fibre_relative_tolerance": 1e-06,
+        "free_fibre_J_absolute_tolerance": 1e-08,
+        "free_fibre_mass_log_absolute_tolerance": 1e-07
+      }
+    },
+    "w33_pass12030_native_determinant_torus.json": {
+      "local_sha256": "388d5abb3bbf4df736a396a6fe755b1f5b4ac31fc780e986fee7525ab4933eaf",
+      "hosted_sha256": "38447756d753c3a537a585915defdc8cac0f8b0cf10eb7def1ada6d5a4704cab",
+      "byte_identical": false,
+      "comparison": {
+        "status": "PASS",
+        "leaf_counts": {
+          "exact": 80,
+          "numeric": 83,
+          "finite_difference_diagnostics": 0,
+          "free_fibre_observables": 0
+        },
+        "relative_tolerance": 1e-07,
+        "absolute_tolerance": 1e-10,
+        "fit_coordinates_independently_checked": [],
+        "physical_fit_checks": [],
+        "finite_difference_step_checks": [],
+        "finite_difference_relative_tolerance": 0.0001,
+        "finite_difference_absolute_tolerance": 1e-08,
+        "free_fibre_relative_tolerance": 1e-06,
+        "free_fibre_J_absolute_tolerance": 1e-08,
+        "free_fibre_mass_log_absolute_tolerance": 1e-07
+      }
+    }
+  },
+  "science_files": {
+    ".github/workflows/pass12026-12033-theta-heat-topology.yml": {
+      "worktree_sha256": "0ee2d55e4e99b06355434612fce495856c4d0b73605dac8f3ea7cfab07d3bfff",
+      "LF_sha256": "0ee2d55e4e99b06355434612fce495856c4d0b73605dac8f3ea7cfab07d3bfff",
+      "verified_science_blob": "e087e9fb0180f6f6ade70cd1584af9fb6b4a521d"
+    },
+    "analysis/PASS12026_12033_THETA_SOFT_HEAT_AND_DETERMINANT_TOPOLOGY.md": {
+      "worktree_sha256": "009c5e4857397009f47f8d0314df87aca07d24418d1413a11105484c11335f0f",
+      "LF_sha256": "009c5e4857397009f47f8d0314df87aca07d24418d1413a11105484c11335f0f",
+      "verified_science_blob": "3e72a0fd67251a13a3df672b7951acf09dab2550"
+    },
+    "analysis/w33_pass12026_12033_theta_soft_threshold_connections.py": {
+      "worktree_sha256": "7f90651a508f2bba3e514bdc580b50ed66d906b3d3f82a60db47887eb0e1719d",
+      "LF_sha256": "7f90651a508f2bba3e514bdc580b50ed66d906b3d3f82a60db47887eb0e1719d",
+      "verified_science_blob": "805fdec480b1fb68330d4ed70586471774690b9e"
+    },
+    "analysis/w33_pass12029_native_heat_curvature.py": {
+      "worktree_sha256": "bb580b665aa48c593c78a3c7e94ee1339521f96de89e3f76e38a7c7a597e8b5f",
+      "LF_sha256": "bb580b665aa48c593c78a3c7e94ee1339521f96de89e3f76e38a7c7a597e8b5f",
+      "verified_science_blob": "65beaac3a24aaad53da106a0ee1e377e245cc912"
+    },
+    "analysis/w33_pass12030_native_determinant_torus.py": {
+      "worktree_sha256": "095cfbdaffbe664c31d2d04ba6b9833c0a7a8f27f858dbd5c19b832f01408f24",
+      "LF_sha256": "095cfbdaffbe664c31d2d04ba6b9833c0a7a8f27f858dbd5c19b832f01408f24",
+      "verified_science_blob": "0914cbb3bb2f59462d0dca78c6aa073a1ee4fa11"
+    },
+    "docs/index.html": {
+      "worktree_sha256": "a64721839f7ac0cd42d047918b6f2383dc19ea30b9a7041050d7f3a7897b792c",
+      "LF_sha256": "38cf2d04c458b32a6929f3d93d939f81d32211016d726745c7bfeca42a98599a",
+      "verified_science_blob": "85d6ee2cf17ad2b213b746b757e505010ac0d146"
+    },
+    "tests/test_w33_pass12026_12033_physical_connections.py": {
+      "worktree_sha256": "04c2401cd92761175fabc601fa0962e8c7ea01d13a0ab310f03db4e5e5fc64fb",
+      "LF_sha256": "04c2401cd92761175fabc601fa0962e8c7ea01d13a0ab310f03db4e5e5fc64fb",
+      "verified_science_blob": "aa00e57f401333c8433aa458fa7a696293777997"
+    },
+    "data/w33_pass12026_12033_theta_soft_threshold_connections.json": {
+      "worktree_sha256": "ffa429e7331491ad5109d8fc64ab258530af28610cabf45119679bb86fd21553",
+      "LF_sha256": "ffa429e7331491ad5109d8fc64ab258530af28610cabf45119679bb86fd21553",
+      "verified_science_blob": "c675b84b4e5010a46a818bf0a934343a774b4826"
+    },
+    "data/w33_pass12029_native_heat_curvature.json": {
+      "worktree_sha256": "b05d7acd2f046ec289162092a245931b664c868a735e6998a03d652c4e2fe5f8",
+      "LF_sha256": "b05d7acd2f046ec289162092a245931b664c868a735e6998a03d652c4e2fe5f8",
+      "verified_science_blob": "dfa6c22defcec0096d9efa2687d6d5542d1eea7e"
+    },
+    "data/w33_pass12029_native_heat_extended.json": {
+      "worktree_sha256": "2101d8d0879dbed7ffaf8ffab94cdef32cf023150e01d7554cbb9849746d51a0",
+      "LF_sha256": "2101d8d0879dbed7ffaf8ffab94cdef32cf023150e01d7554cbb9849746d51a0",
+      "verified_science_blob": "d04ff5d854b78a7b0dfdf9c661895bbfe103fe53"
+    },
+    "data/w33_pass12030_native_determinant_torus.json": {
+      "worktree_sha256": "388d5abb3bbf4df736a396a6fe755b1f5b4ac31fc780e986fee7525ab4933eaf",
+      "LF_sha256": "388d5abb3bbf4df736a396a6fe755b1f5b4ac31fc780e986fee7525ab4933eaf",
+      "verified_science_blob": "48d50ecb8da7fb00640fdb9f1bbd4fb55e9832a9"
+    }
+  },
+  "science_index_blob": "a0733c8374181cdb70180952a8986101b45c361d",
+  "current_results_index": {
+    "files": 12349,
+    "distinctive": 16994,
+    "sha256": "c38bb332f1f1b3b21902e8585d9267b924f197f8fca62829c55f02c91f95703b"
+  },
+  "local_discovery_supplement": {
+    "analysis/w33_pass12028_sqcd_search.py": {
+      "sha256": "debc9dc139b1e8678a572812ede6383a8cbe3c96363e57003d5dbff69d5d84d3",
+      "validation": "Separately executed local discovery replay after science SHA; not represented as hosted science source."
+    },
+    "data/w33_pass12028_sqcd_search_record.json": {
+      "sha256": "d97ec6b721df62d13289cb8d0eb979ca4b734fb7c30a5459273d4a38f02d0ab6",
+      "validation": "Separately executed local discovery replay after science SHA; not represented as hosted science source."
+    }
+  },
+  "local_discovery_replay_max_log_residual": 4.930167385465086e-12,
+  "scope": "Exact linked-spurion and declared finite-operator results with conditional flavour/EFT/heat/topology investigations. Unselected coefficients, fullMSSMthresholds/softRG, nonlinear native GR and global native measure remain open; no complete TOE or parameter-free mass/constant prediction."
+}
