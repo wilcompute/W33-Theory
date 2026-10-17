@@ -2,6 +2,7 @@ name: TOE95 five Witting research fronts
 on:
   push:
     branches:
+      - master
       - toe95_witting_all_five_20261017
     paths:
       - 'analysis/w33_20261017_toe95_*.py'
