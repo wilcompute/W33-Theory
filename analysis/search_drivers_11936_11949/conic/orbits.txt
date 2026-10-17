@@ -1,0 +1,5 @@
+M2 0.6931 stab 24 : a=0.0000 b=0.0000 b/a=0.1638 slope_light=-0.44 resid 2e-15
+M2 0.0000 stab 18 : a=0.0000 b=0.0000 b/a=1.0000 slope_light=5.87 resid 1e-10
+M2 0.4700 stab 4 : a=0.4653 b=0.3705 b/a=0.7962 slope_light=1.00 resid 6e-16
+M2 0.5878 stab 3 : a=0.4406 b=0.2879 b/a=0.6534 slope_light=1.00 resid 3e-16
+M2 0.6908 stab 3 : a=0.0000 b=0.0000 b/a=0.5867 slope_light=3.06 resid 2e-08

@@ -1,0 +1,12 @@
+M2=0.6931    t=0.010 res 3e-15  Om diag Im [1.663 1.776]  boundary tau=(0.05918+1.66342j)  j=(32982.9-12568.61j)
+M2=0.6931    t=0.005 res 3e-15  Om diag Im [1.663 1.776]  boundary tau=(0.05918+1.66342j)  j=(32982.9-12568.61j)
+M2=0.0000    t=0.010 res 1e-10  Om diag Im [15.433 15.643]  boundary tau=(0.00824+15.43253j)  j=(1.2911195717749716e+42-6.688231298362507e+40j)
+M2=0.0000    t=0.005 res 2e-11  Om diag Im [18.791 19.14 ]  boundary tau=(-0.2571+18.7906j)  j=(-8.403352184364407e+49+1.881354605526964e+51j)
+M2=0.4700    t=0.010 res 8e-16  Om diag Im [1.    5.013]  boundary tau=(-0+1j)  j=(1728+0j)
+M2=0.4700    t=0.005 res 3e-16  Om diag Im [1.    5.675]  boundary tau=(-0+1j)  j=(1728+0j)
+M2=0.5878    t=0.010 res 1e-15  Om diag Im [0.866 4.844]  boundary tau=(-0.5+0.86603j)  j=0j
+M2=0.5878    t=0.005 res 7e-16  Om diag Im [0.866 5.505]  boundary tau=(0.5+0.86603j)  j=-0j
+M2=0.6908    t=0.010 res 3e-08  Om diag Im [4.74 8.52]  boundary tau=(0.18129+4.74032j)  j=(3603932987984.56-7823001956550.7j)
+M2=0.6908    t=0.005 res 1e-08  Om diag Im [5.402 8.971]  boundary tau=(0.18129+5.40223j)  j=(230650447741038.53-500672482218806.2j)
+random       t=0.010 res 3e-16  Om diag Im [1.253 4.835]  boundary tau=(0.20993+1.25319j)  j=(1414.64-2471.32j)
+random       t=0.005 res 2e-16  Om diag Im [1.253 5.497]  boundary tau=(0.20993+1.25319j)  j=(1414.64-2471.32j)

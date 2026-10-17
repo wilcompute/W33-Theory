@@ -1,0 +1,8 @@
+{
+ "inversions_converged": true,
+ "log85_boundary_is_square": true,
+ "t_orbit_boundary_is_hexagonal": true,
+ "stabiliser_runs_to_deep_cusp": true,
+ "log85_b_over_a": true,
+ "log85_orbit_members_all_square": true
+} True {'M2=0.0000': 1.0, 'M2=0.4700': 0.7962, 'M2=0.5878': 0.4882}
