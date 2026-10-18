@@ -1,0 +1,199 @@
+{
+  "classification": {
+    "n_involutions": 255,
+    "clock": 120,
+    "split": 135,
+    "clock_sets": 40,
+    "split_sets": 45,
+    "clock_mult": [
+      3
+    ],
+    "split_mult": [
+      3
+    ]
+  },
+  "transvections": [
+    {
+      "point": 0,
+      "det": [
+        0.9999999999999998,
+        -2.2204460492503116e-16
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 4,
+      "det": [
+        0.9999999999999997,
+        -1.1102230246251559e-16
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 8,
+      "det": [
+        0.9999999999999993,
+        1.6653345369377333e-16
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 12,
+      "det": [
+        0.9999999999999998,
+        -2.2204460492503116e-16
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 16,
+      "det": [
+        0.9999999999999998,
+        0.0
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 20,
+      "det": [
+        0.9999999999999998,
+        -2.2204460492503116e-16
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 24,
+      "det": [
+        0.9999999999999996,
+        -5.551115123125778e-17
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 28,
+      "det": [
+        0.9999999999999996,
+        5.551115123125778e-17
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 32,
+      "det": [
+        0.9999999999999996,
+        -1.9428902930940222e-16
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    },
+    {
+      "point": 36,
+      "det": [
+        0.9999999999999999,
+        -3.3306690738754676e-16
+      ],
+      "fixed_clock": 3,
+      "fixed_split": 0,
+      "centre_three": true
+    }
+  ],
+  "central_omega_fixes": [
+    0,
+    0
+  ],
+  "census_record": {
+    "table": {
+      "1,40,45": {
+        "120,135": 1
+      },
+      "2,8,13": {
+        "24,39": 90
+      },
+      "2,40,45": {
+        "120,135": 1
+      },
+      "3,4,3": {
+        "6,9": 480
+      },
+      "3,4,6": {
+        "0,0": 240
+      },
+      "3,13,9": {
+        "3,0": 80
+      },
+      "4,0,5": {
+        "0,15": 540
+      },
+      "4,4,1": {
+        "12,3": 1080
+      },
+      "5,0,0": {
+        "0,0": 5184
+      },
+      "6,2,1": {
+        "0,3": 2880
+      },
+      "6,2,4": {
+        "0,0": 2880
+      },
+      "6,4,3": {
+        "6,9": 480
+      },
+      "6,4,6": {
+        "0,0": 240
+      },
+      "6,5,1": {
+        "3,0": 1440
+      },
+      "6,13,9": {
+        "3,0": 80
+      },
+      "8,0,1": {
+        "0,3": 6480
+      },
+      "9,1,0": {
+        "0,0": 5760
+      },
+      "10,0,0": {
+        "0,0": 5184
+      },
+      "12,0,2": {
+        "0,0": 4320
+      },
+      "12,1,1": {
+        "3,0": 8640
+      },
+      "18,1,0": {
+        "0,0": 5760
+      }
+    },
+    "total": 51840,
+    "clock_only": 10240,
+    "split_only": 9900
+  },
+  "checks": {
+    "fibration: 40 Eisenstein fibres of 6; collinearity = root orthogonality, SRG(40,12,2,4) spectrum": true,
+    "Theorem A: 255 = 120 clock (40 point-neighbourhoods x 3) + 135 split (45 K44 factorisations x 3)": true,
+    "Theorem B: every determinant-one transvection fixes exactly the 3 clock involutions at its centre and no split one": true,
+    "the central Eisenstein element w fixes no involution (so the determinant-one group is the physical one)": true,
+    "frozen census covers all 51840 elements of Sp(4,3); transvection class (3,13,9) is clock-only": true
+  },
+  "all_checks_pass": true
+}
