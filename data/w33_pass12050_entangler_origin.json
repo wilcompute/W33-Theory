@@ -1,0 +1,52 @@
+{
+  "min_discriminant": {
+    "1.0": [
+      23716,
+      -1,
+      154,
+      0,
+      0,
+      1
+    ],
+    "2.0": [
+      22500,
+      -1,
+      150,
+      0,
+      0,
+      1
+    ],
+    "3.0": [
+      21025,
+      -1,
+      145,
+      0,
+      0,
+      1
+    ]
+  },
+  "minimal_surface_point": {
+    "relation": [
+      -1,
+      154,
+      0,
+      0,
+      1
+    ],
+    "eps": 0.005678375799624412,
+    "delta_pull": 0.95260841191573,
+    "residual": 0.0
+  },
+  "analytic_b_bound": 158.40105086305067,
+  "product_locus_pull_in_delta": 33.333333333333336,
+  "kobayashi_lebedev": {
+    "ref": "hep-th/0303009 eqs. 33-36",
+    "statement": "continuous Wilson lines enter twisted Yukawas as T_i + kappa(T_i+Tbar_i) a_i abar_i per plane (diagonal); no CP phases"
+  },
+  "checks": {
+    "minimal Humbert discriminant through the fitted up home exceeds 2e4 (1-3 sigma)": true,
+    "the minimiser is the linear relation eps = (tau - 1)/b with b ~ y/delta (~150)": true,
+    "the product locus (Delta = 1) is > 20 sigma from the fitted eps": true
+  },
+  "all_checks_pass": true
+}
