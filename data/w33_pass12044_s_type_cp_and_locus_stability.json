@@ -1,0 +1,259 @@
+{
+  "S_action_ratio_spread_max": 1.0330933463072938e-15,
+  "J_on_S_T0_fixed_points_with_Wilson": {
+    "n": 10,
+    "max": 3.469446951953614e-17,
+    "fixed_point_residual": 5.900916318210353e-16
+  },
+  "J_off_locus_control": {
+    "shift_Re_zd": 0.05,
+    "min": 2.6624241589185554e-06
+  },
+  "up_on_S_arc": {
+    "+": {
+      "a": [
+        0.8327639967329586,
+        0.8235814748225423
+      ],
+      "resid": 9.526379685053243e-12,
+      "tau": [
+        0.6762159009755911,
+        0.7366891988747546
+      ],
+      "abs_eps": 0.004591244824842041,
+      "unit": 0.9999999999999998
+    },
+    "-": {
+      "a": [
+        2.3180111787686726,
+        2.3088286568582865
+      ],
+      "resid": 4.463540648193018e-12,
+      "tau": [
+        -0.6762159009766497,
+        0.7366891988737831
+      ],
+      "abs_eps": 0.004591244824826947,
+      "unit": 1.0
+    }
+  },
+  "S_arc_up_abs_tau": 0.9999894601799354,
+  "S_x_T_down_needs_abs_tau_1": {
+    "abs_tau": 0.9999894601799354,
+    "image_of_tau_minus_tau": 2.1079751218109283e-05
+  },
+  "rank_up_at_eps_0": 1,
+  "SS_down_doublet_component": {
+    "z0_image": 0.004367522634035657,
+    "predicted": 0.004367522634035657
+  },
+  "S_x_T2b_up_lemma": {
+    "-3,0.01": "no |tau|=1 solution",
+    "-3,0.3": "no |tau|=1 solution",
+    "-3,1.5": "no |tau|=1 solution",
+    "-3,2.5": {
+      "fixed": 7.023038222575547e-16,
+      "min_eig_im": -0.6614378277661475,
+      "formula": -0.6614378277661477,
+      "identity": 0.0
+    },
+    "-2,0.01": "no |tau|=1 solution",
+    "-2,0.3": "no |tau|=1 solution",
+    "-2,1.5": {
+      "fixed": 6.280369834735101e-16,
+      "min_eig_im": -0.9682458365518546,
+      "formula": -0.9682458365518543,
+      "identity": 0.0
+    },
+    "-2,2.5": "no |tau|=1 solution",
+    "-1,0.01": {
+      "fixed": 1.1103585416259206e-16,
+      "min_eig_im": -5.516420653606247e-16,
+      "formula": -5.516351697917101e-16,
+      "identity": -1.1031757105040008e-17
+    },
+    "-1,0.3": {
+      "fixed": 1.2412670766236366e-16,
+      "min_eig_im": 1.6653345369377348e-16,
+      "formula": 1.6464929364316972e-16,
+      "identity": 9.71445146547012e-17
+    },
+    "-1,1.5": {
+      "fixed": 1.1188630228279524e-16,
+      "min_eig_im": 0.0,
+      "formula": 0.0,
+      "identity": 0.0
+    },
+    "-1,2.5": "no |tau|=1 solution",
+    "0,0.01": {
+      "fixed": 1.6626917941423014e-16,
+      "min_eig_im": 0.9929291077170397,
+      "formula": 0.9929291077170396,
+      "identity": 0.0
+    },
+    "0,0.3": {
+      "fixed": 7.850462293418876e-17,
+      "min_eig_im": 0.7916828624859531,
+      "formula": 0.7916828624859531,
+      "identity": 4.440892098500626e-16
+    },
+    "0,1.5": "no |tau|=1 solution",
+    "0,2.5": "no |tau|=1 solution",
+    "1,0.01": "no |tau|=1 solution",
+    "1,0.3": "no |tau|=1 solution",
+    "1,1.5": "no |tau|=1 solution",
+    "1,2.5": "no |tau|=1 solution",
+    "2,0.01": "no |tau|=1 solution",
+    "2,0.3": "no |tau|=1 solution",
+    "2,1.5": "no |tau|=1 solution",
+    "2,2.5": "no |tau|=1 solution"
+  },
+  "control_complex_down_at_S_arc_tau": {
+    "+": 1.8186214241984823e-08,
+    "-": 2.2218274589786903e-09
+  },
+  "SxS_wilson_free_decoupling": [
+    {
+      "parity": 2.2155940510316511e-16,
+      "one": 0.0,
+      "zeros": 4
+    },
+    {
+      "parity": 2.2837820739734055e-16,
+      "one": 3.3306690738754696e-16,
+      "zeros": 4
+    },
+    {
+      "parity": 1.6625869014078683e-16,
+      "one": 1.1102230246251565e-16,
+      "zeros": 4
+    },
+    {
+      "parity": 1.75252047213689e-16,
+      "one": 2.220446049250313e-16,
+      "zeros": 4
+    },
+    {
+      "parity": 2.351213722833163e-16,
+      "one": 2.220446049250313e-16,
+      "zeros": 4
+    },
+    {
+      "parity": 1.405241666549108e-16,
+      "one": 0.0,
+      "zeros": 4
+    }
+  ],
+  "scan_b_coarse_min_chi2_up": 94.71918146446974,
+  "search_record": {
+    "scan_b_min_chi2_up": 94.63,
+    "scan_b_abs_eps_u": 0.0096478,
+    "scan_b_theta_accuracy": 5e-07,
+    "discarded_cusp_artefacts": {
+      "values": [
+        10380.0,
+        3432.5
+      ],
+      "parity_residual": 0.41
+    },
+    "joint_slsqp": {
+      "branches": 27,
+      "starts_per_branch": 40,
+      "best_chi2": 9339.0,
+      "own_control_chi2": 1230.0,
+      "used_as_evidence": false
+    },
+    "loose_z0_artefact_J": -0.000343
+  },
+  "cw_vacuum_12005": {
+    "0.1": {
+      "gradT": 1.734723475976807e-12,
+      "gradL": 0.0005783256295729955,
+      "eigH": [
+        -0.2827351540150904,
+        -0.011222119703041657,
+        -0.0033838845654940632,
+        -0.0015569000613478445,
+        0.00028098456821043434
+      ],
+      "ct_eigs": [
+        -2950.829914056758,
+        -18.01270768957809,
+        1.9074652751198273,
+        3.3331575113047496,
+        8.38754063765865
+      ],
+      "best_min_eig_over_c": -0.011412871466391618
+    },
+    "1.0": {
+      "gradT": 2.7755575615628914e-11,
+      "gradL": 0.041845763618098,
+      "eigH": [
+        -14.861697642303541,
+        -0.09011439564226494,
+        -0.03759010471271995,
+        0.011718746393556433,
+        0.029732781468483942
+      ],
+      "ct_eigs": [
+        -2950.829914056758,
+        -18.01270768957809,
+        1.9074652751198273,
+        3.3331575113047496,
+        8.38754063765865
+      ],
+      "best_min_eig_over_c": -0.04831683048534825
+    },
+    "10.0": {
+      "gradT": 0.0,
+      "gradL": 1.7645510688168997,
+      "eigH": [
+        -613.0755410235984,
+        -3.7409093048288558,
+        0.28221049885710336,
+        0.6852689371739822,
+        1.7072638031074805
+      ],
+      "ct_eigs": [
+        -2950.829914056758,
+        -18.01270768957809,
+        1.9074652751198273,
+        3.3331575113047496,
+        8.38754063765865
+      ],
+      "best_min_eig_over_c": -0.17248804201087126
+    }
+  },
+  "cw_random_locus_best_min_eig": 11528.418826939276,
+  "cw_record": {
+    "min_eig_vacuum": {
+      "0.1": -0.0115,
+      "1.0": -0.048,
+      "10.0": -0.12
+    },
+    "ct_eigs_vacuum": [
+      -2951,
+      -18.0,
+      1.91,
+      3.33,
+      8.39
+    ],
+    "random_point_min_eig": 11530.0
+  },
+  "checks": {
+    "S acts on the level-3 theta as F x F (S x S) and F x 1 (S x 1), up to a scalar": true,
+    "J = 0 on S-type fixed points with Wilson lines; off-locus control (Re z_d shifted) nonzero": true,
+    "up sector fits exactly on the CP o (S x S) arc, |tau|^2 + |eps_u|^2 = 1": true,
+    "S x T^{2b} down needs |tau| = 1, but the S x S up home has |tau| < 1 unless eps_u = 0": true,
+    "eps_u = 0 gives a rank-one up Yukawa (m_c = m_u = 0)": true,
+    "S x S on the down home moves the 5bar Wilson line into the doublet factor: z0' = (Omega^-1)_12 z_d": true,
+    "S x T^{2b} up home: only b = 0 has Im Omega > 0 (eigenvalue formula and 2(1+b) identity)": true,
+    "positive control: a complex down home fits exactly at the S-arc tau": true,
+    "S x S Wilson-free branch: parity-symmetric Yukawas, CKM has a decoupled generation (one 1, four 0s)": true,
+    "S x T^0 up curve fails the up data (coarse >= frozen fine minimum > 50)": true,
+    "CP locus transversally stationary (symmetric criticality)": true,
+    "12005 vacuum is a transverse saddle for every s, and no counterterm coefficient cures it": true,
+    "control: at a generic locus point the counterterm does stabilise": true
+  },
+  "all_checks_pass": true
+}
