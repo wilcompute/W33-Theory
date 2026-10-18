@@ -6103,6 +6103,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4ae7340109151185d2cf66e4dd1b75f57982a41176901bade7465b6210b84a21",
+      "normalized_formula": "\"\"\"SU(3)DynkinindexTofthebrokensubspaceimage(ad_H),usingX=it_a:T=-tr(ad_X^2|image).\"\"\"",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 95,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "\"\"\"SU(3) Dynkin index T of the broken subspace image(ad_H), using X = i t_a: T = -tr(ad_X^2 | image).\"\"\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "17e981b53361af31c6fd57a26d89ef32cfc3bdbcb5f0e29d75561c1685b8960d",
+      "structural_formula": "\"\"\"SU(#)DynkinindexTofthebrokensubspaceimage(ad_H),usingX=it_a:T=-tr(ad_X^#|image).\"\"\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "db0e0ad1c01ca10cbaef3568ae12c63d79ca1ae3eb411a46b1597dd878dfbdf5",
       "normalized_formula": "\"\"\"SUMfromstatetensor|0>:sum_jstate[j]|j,j>.\"\"\"",
       "numeric_literals": [
@@ -260662,6 +260690,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8da9abd26e364412ea70cc42703a33f9165aed9ec0309a418bff9ee80e3f05c1",
+      "normalized_formula": "#coherence:hyperchargemassratioofthevectorlike5=(3,1,-1/3)+(1,2,1/2)",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 156,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "# coherence: hypercharge mass ratio of the vectorlike 5 = (3,1,-1/3) + (1,2,1/2)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "008bdad305e812a5ddcfe6ae9f9db6e19d2eaa517c003bb9df63240ef77f42c5",
+      "structural_formula": "#coherence:hyperchargemassratioofthevectorlike5=(#,#,#/#)+(#,#,#/#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5270e2378bb7ebf8b4bd33866eb61823a1c019bd5ae421f63b1fd4014b19b386",
       "normalized_formula": "#collinearity:<v_p,v_q>=0(matterQ=non-collinear)",
       "numeric_literals": [
@@ -355805,6 +355863,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c24f235b55b4b4a413513ff06f7e0a1489eb0c4d45fab0b3fbd3ed2f026663f4",
+      "normalized_formula": "*Ifthatpair'smasscomesfromthesamehyperchargeWilsonline,mu_L/mu_D=|Y(L_H)|/|Y(D)|=3/2.Sothe",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "* If that pair's mass comes from the same hypercharge Wilson line, mu_L/mu_D = |Y(L_H)|/|Y(D)| = 3/2. So the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d49fb273f508ad27dc50d9dbeeecbe7ea35c933501ea536476e5574cdfb064e6",
+      "structural_formula": "*Ifthatpair'smasscomesfromthesamehyperchargeWilsonline,mu_L/mu_D=|Y(L_H)|/|Y(D)|=#/#.Sothe"
+    },
+    {
+      "file_count": 1,
       "formula_id": "446a6bd3e409237d9b1ec95de014be2e70acb205c67715cc53c5a0e782b43a34",
       "normalized_formula": "*Ineverycasetheresultisasymplecticsplitwhosetotalcouplingrankis^exactly2l=n\u2212c^",
       "numeric_literals": [],
@@ -359988,6 +360074,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "37903f0292c4f7010fe76d5cde55e1f9dfb91ff36ac1bb9277217c1e25a2e2a4",
+      "normalized_formula": "*^Brokenvectormultiplets:^masses\u221dq_HV,contributing^b_vec=\u22123T+T=\u22122T^,whereTistheSU(3)index",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md",
+          "raw": "* **Broken vector multiplets:** masses \u221d q_H V, contributing **b_vec = \u22123T + T = \u22122T**, where T is the SU(3) index",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "14f681567ec5f0f6fc9196b7f71b91c50218c2ad3b85b9f47e8146ddd1b0662e",
+      "structural_formula": "*^Brokenvectormultiplets:^masses\u221dq_HV,contributing^b_vec=\u2212#T+T=\u2212#T^,whereTistheSU(#)index"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2e1305caa8aeffe144f32be20355c74259d39db25d90a554b6839dfc05c6d41f",
       "normalized_formula": "*^Butnohierarchy.^Therem2/m1=0.18\u20130.31,againstm_c/m_t=0.0037",
       "numeric_literals": [
@@ -360982,6 +361096,35 @@
       },
       "structural_family_id": "8214680bfef3cf2bba70796a5d8b58dd528eb11c33258a850e3e78a4f3e0453d",
       "structural_formula": "*^Oneoptionsetforeveryentry.^Theloweredentriesuseeither(n_S,n_T)=(#,#)orthreesingletsandno"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "54163f84471fd8db9254575e1ff850ca5fd48d3f88ad97408a3d185d2d193a7c",
+      "normalized_formula": "*^Onepair.^n=1isthesinglevectorlikerowthat12004/12005foundnecessaryandsufficientforCP-realtheta",
+      "numeric_literals": [
+        "1",
+        "12005",
+        "2004"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md",
+          "raw": "* **One pair.** n = 1 is the single vectorlike row that 12004/12005 found necessary and sufficient for CP-real theta",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8821373b21d8b95fda82fa0794e65a07027fbc91fca798bc21ea2193d7cfab85",
+      "structural_formula": "*^Onepair.^n=#isthesinglevectorlikerowthat1#/#foundnecessaryandsufficientforCP-realtheta"
     },
     {
       "file_count": 1,
@@ -364391,6 +364534,35 @@
       },
       "structural_family_id": "1df864ee08bc4c97b24d726868dca6f112d587d291cabc1ddcfde1342feb4e67",
       "structural_formula": "*mu-tausymmetryalsoforcestheta_1#=#,whichisfalse(theta_1#=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6f130ce79f0f879ee84caeefa67d95a13c638d059cfdfcea4bba05d13d62d017",
+      "normalized_formula": "*n=1isthesinglevectorlikerowthat12004/12005foundnecessaryandsufficientforCP-realthetaquarks",
+      "numeric_literals": [
+        "1",
+        "12005",
+        "2004"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 27,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "* n = 1 is the single vectorlike row that 12004/12005 found necessary and sufficient for CP-real theta quarks.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7fb91ed296fff67cad12369c77e38a2007c5cd77eba10f69cf374e900b4df8ff",
+      "structural_formula": "*n=#isthesinglevectorlikerowthat1#/#foundnecessaryandsufficientforCP-realthetaquarks"
     },
     {
       "file_count": 1,
@@ -369687,6 +369859,35 @@
       },
       "structural_family_id": "b53013ec9749775c8ebfa3fd2b8be2142fa4b0220ad2b55efad1cdd2f6372e93",
       "structural_formula": "#fermiongenerations:#/#=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "94123276c77daab0e075ea40888ed477c79c66ebf583ae606fa3bcabaaef5f18",
+      "normalized_formula": "-4+1=-3",
+      "numeric_literals": [
+        "+1",
+        "-3",
+        "-4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 594,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "-4+1=-3",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "13a005076bb0ecab3300cbb0507da5a013379264f11eae60e141e23dea97eed6",
+      "structural_formula": "##=#"
     },
     {
       "file_count": 1,
@@ -435251,6 +435452,33 @@
       },
       "structural_family_id": "aa91aed4a06a52d6963b8a13bee54a911008d0486fe89abf2594cac7fba6330a",
       "structural_formula": "#.^Factor1#indet(B_p)^:Appearsindisc(B_2)=#,disc(B_3)=#=#\u00b7#,det(B_5)containsfactor1#.AstructuralconstantoftheW(#,q)incidencetheory\u2014itsrepresentation-theoreticoriginisunidentified"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e92c3b96cccc2b0050eabcde063b91fb4867e9e2d9c3eedb43513ffafec64ac0",
+      "normalized_formula": "3.^LightXandYbosons.^M_X~\u03b5_uM_cforcesaveryhighcompactificationscaleforastandardM_X,orelsefast",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 68,
+          "path": "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md",
+          "raw": "3. **Light X and Y bosons.** M_X ~ \u03b5_u M_c forces a very high compactification scale for a standard M_X, or else fast",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dbef3924f2aa1c8e1139d90f08870dc63e7711263e3818af6933721e3d7b3d2b",
+      "structural_formula": "#.^LightXandYbosons.^M_X~\u03b5_uM_cforcesaveryhighcompactificationscaleforastandardM_X,orelsefast"
     },
     {
       "file_count": 1,
@@ -834988,6 +835216,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "dbd2026d5633e6a53a73b754f3869c6c6b5e24f8286728c5f88391ffa7523c5c",
+      "normalized_formula": "Twofurtherpatternsusestandardbranchingsandarenotcomputedhere:E6\u2192SO(10)\u00d7U(1)hasT=4;E6\u2192SU(3)3has",
+      "numeric_literals": [
+        "1",
+        "10",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 38,
+          "path": "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md",
+          "raw": "Two further patterns use standard branchings and are not computed here: E6 \u2192 SO(10)\u00d7U(1) has T = 4; E6 \u2192 SU(3)\u00b3 has",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "18ba6e9e9ff0e172e16c00bf112c017fcbdcd80d97fe972c0df51ff671879685",
+      "structural_formula": "Twofurtherpatternsusestandardbranchingsandarenotcomputedhere:E6\u2192SO(#)\u00d7U(#)hasT=#;E6\u2192SU(#)#has"
+    },
+    {
+      "file_count": 1,
       "formula_id": "aae7d3fbc5bbb4407ba75fde9f0c4e1a26ab91a66aba3ad949b2336774c6ab6e",
       "normalized_formula": "Tworowsdosuffice:thedeterministiccenteredintegerrowsfromPass4147wereexhaustivelyauditedon386,964simplecyclesand133,920thetacores,provingstackedsparkatleast15.Thereforetheexactnoiselessminimumis`m_min=2",
       "numeric_literals": [
@@ -973319,7 +973577,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 596,
+          "line": 597,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1007223,7 +1007481,7 @@
       "numeric_literals": [
         "0"
       ],
-      "occurrence_count": 2,
+      "occurrence_count": 3,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "papers/forty_points/appA_ledger.tex",
@@ -1007243,9 +1007501,17 @@
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon=0",
           "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
+          "line": 1569,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "\\varepsilon=0",
+          "status": "killed_or_retracted"
         }
       ],
       "status_profile": {
+        "killed_or_retracted": 1,
         "unclassified": 2
       },
       "structural_family_id": "5f8240fa65fb2c0db6815416bf5c30e08dede9e03e24d5fdc4f6ddc6623822d2",
@@ -1154631,6 +1154897,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "57b09ba8d052a74abb5af501be59accb3782a44c59970a2ebc7a6b1bca74f2bf",
+      "normalized_formula": "checks[\"coherence:thehypercharge-Wilson-linemassofthevectorlike5giveskappa=2/3(12047'sClebsch)\"]=bool(abs(kappa-2/3)<1e-15)",
+      "numeric_literals": [
+        "12047",
+        "1e-15",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 160,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "checks[\"coherence: the hypercharge-Wilson-line mass of the vectorlike 5 gives kappa = 2/3 (12047's Clebsch)\"] = bool(abs(kappa - 2 / 3) < 1e-15)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "26daf7f69f3eb6a5818b69ce33b34de9bfbcad88278249880d2bf098b7256218",
+      "structural_formula": "checks[\"coherence:thehypercharge-Wilson-linemassofthevectorlike5giveskappa=#/#(#'sClebsch)\"]=bool(abs(kappa-#/#)<#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "28bda0042ebdcb4593f598da743e0ec2a6689b2facab75054945a09e4e8c14ff",
       "normalized_formula": "checks[\"conjecture_to_theorem_loop_closed\"]=checks[\"p434_certified_q7\"]",
       "numeric_literals": [
@@ -1217849,6 +1218145,34 @@
       },
       "structural_family_id": "7b9cdad652db15b8b8213c2bd890c2758173eb66d905075e286efc9cb8b3b751",
       "structural_formula": "determinedbythepermutationnorbyparity.SincetheBoolean6#=##module"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fbccb6ff4fde4e57adb6515c64428d813ad2d6e829fe194f59bee782cfc2cc83",
+      "normalized_formula": "dets=np.array([np.linalg.det(theta(np.array([[tau,2e-3*np.exp(1j*p)],[2e-3*np.exp(1j*p),tau]])))forpinph])",
+      "numeric_literals": [
+        "1",
+        "2e-3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 149,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "dets = np.array([np.linalg.det(theta(np.array([[tau, 2e-3 * np.exp(1j * p)], [2e-3 * np.exp(1j * p), tau]]))) for p in ph])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "137ad06008139331beb7e25056431d73f4c5707153fb4da42a07ccd6768e3ea8",
+      "structural_formula": "dets=np.array([np.linalg.det(theta(np.array([[tau,#*np.exp(#j*p)],[#*np.exp(#j*p),tau]])))forpinph])"
     },
     {
       "file_count": 1,
@@ -1358400,6 +1358724,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "46b5b3c638d1aa9d97d30bb3b1cd3af3dbdee54e0eecbf51501a6e3f717c7d07",
+      "normalized_formula": "leptonrowisb_e=(2/3)b,theadjoint-massClebsch,theoneruleof12047thatfitsbothleptonratios",
+      "numeric_literals": [
+        "2",
+        "2047",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 29,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "lepton row is b_e = (2/3) b, the adjoint-mass Clebsch, the one rule of 12047 that fits both lepton ratios",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9b93058938a25231043519d38920b5855c520e65b73e5944ea65146197d58ac7",
+      "structural_formula": "leptonrowisb_e=(#/#)b,theadjoint-massClebsch,theoneruleof1#thatfitsbothleptonratios"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6f4f6a39c1a58bc4ea4f9ed9f33cce31c36b75d6860fa07070ac8889b04d4e9e",
       "normalized_formula": "leptons[rule]=dict(mmu_mtau=float(se[1]/se[0]),me_mmu=float(se[2]/se[1]),yb_ytau=float(sd[0]/se[0]))",
       "numeric_literals": [
@@ -1379446,7 +1379799,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 595,
+          "line": 596,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1384580,7 +1384933,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 595,
+          "line": 596,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1418211,6 +1418564,35 @@
       },
       "structural_family_id": "d414160cf38b49fa96ef6bedbb239a58d6074c108e834736e92424d4742adfc4",
       "structural_formula": "multipath=commonneighbours,deadlock-freedomfromdiameter2)isthestandardroutingdictionary"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fb1e8f6a74ac68b2cbed764ede561344671c8d077c5771934b23eb5d063acf98",
+      "normalized_formula": "multiplets(masses~q_HV)giveb_vec=-3T+T=-2T,whereTistheSU(3)indexofthebrokengenerators(vector",
+      "numeric_literals": [
+        "-2",
+        "-3",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "multiplets (masses ~ q_H V) give b_vec = -3T + T = -2T, where T is the SU(3) index of the broken generators (vector",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4ade709e480dde81297eb327401ed10371d2e8ef4f6713dec05e80fb9741a84c",
+      "structural_formula": "multiplets(masses~q_HV)giveb_vec=#T+T=#T,whereTistheSU(#)indexofthebrokengenerators(vector"
     },
     {
       "file_count": 1,
@@ -1488180,6 +1488562,35 @@
       },
       "structural_family_id": "8320e1705fe742d90b77f379f5c5cb0d8d6ad017855fd125dcac4470a2c5ef93",
       "structural_formula": "plus_one={k:{^v}fork,vinBASE.items()};plus_one['trace2_covariance_tagged']['cost']=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a1960e1a532c91a588715582b2df9989033607c18b97d9c13c3931340059bafb",
+      "normalized_formula": "pluseatenchiral;thesameforN=2).Eachvectorlikecolouredpair3+3barwhosemassis~Vgives+1.Regularity",
+      "numeric_literals": [
+        "+3",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "plus eaten chiral; the same for N = 2). Each vectorlike coloured pair 3 + 3bar whose mass is ~ V gives +1. Regularity",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9eb6fc1a44a7674f0d8dff9bc0c8b93a201a9f6bb65c808ad35516bce0d3d454",
+      "structural_formula": "pluseatenchiral;thesameforN=#).Eachvectorlikecolouredpair3#barwhosemassis~Vgives+#.Regularity"
     },
     {
       "file_count": 1,
@@ -1640557,6 +1640968,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "beba82a58a0f8fa0040724c7606df3ac6c4f017c858d662db6fe155b51227977",
+      "normalized_formula": "res[\"coherence\"]=dict(kappa_mu_D_over_mu_L=kappa,clebsch_12047=\"adjointmass2/3\",inverse_eps_u=1/0.005520606513514881",
+      "numeric_literals": [
+        "0.005520606513514881",
+        "1",
+        "2047",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 158,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "res[\"coherence\"] = dict(kappa_mu_D_over_mu_L=kappa, clebsch_12047=\"adjoint mass 2/3\", inverse_eps_u=1 / 0.005520606513514881,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "14b56987a5b2ece4c646ddfc9090ddc40ec98cc081160d8066bd2b821cb67fe4",
+      "structural_formula": "res[\"coherence\"]=dict(kappa_mu_D_over_mu_L=kappa,clebsch_1#=\"adjointmass2/#\",inverse_eps_u=#/#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c901da05094aa3b022c3f2cb149ffe02a0e0d96ac30b9bd3f03b6194c2ad3b4f",
       "normalized_formula": "res[\"combined\"]=dict(tc_commutes_with_spinor_lift=commute,so11_dim=int(C_spin.shape[1]),commutant=both)",
       "numeric_literals": [
@@ -1739329,6 +1739770,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8a99ce870d1936d0171f7e16e91f9f77e9ad37f83ad57cd8df3be0249dd3cc50",
+      "normalized_formula": "theta-bar=arg[e^{-8pi^2f3}detY_udetY_d]windsunlesse^{-8pi^2f3}~eps^-3,i.e",
+      "numeric_literals": [
+        "-3",
+        "-8",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12049_coloured_divisor_inventory.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass12049_coloured_divisor_inventory.py",
+          "raw": "theta-bar = arg[e^{-8 pi^2 f3} det Y_u det Y_d] winds unless e^{-8 pi^2 f3} ~ eps^-3, i.e.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "4fa351055546ed424c156c6b7a708e9c9b79d16984362940f6caba5fdb16cb49",
+      "structural_formula": "theta-bar=arg[e^{#pi^#f3}detY_udetY_d]windsunlesse^{#pi^#f3}~eps^#,i.e"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cf583bb73f6260b2f14dfe7b22eb335069d7af728bff9e1e0934247e7c9120a9",
       "normalized_formula": "theta-bar=argdet(Y_uY_d)by3phi(to1e-4rad)whilethemasses,|V|andJchangebyatmost3e-3relative",
       "numeric_literals": [
@@ -1792995,7 +1793465,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 595,
+          "line": 596,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1833354,6 +1833824,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4226a98ea2ec7ecf0f945d029a263429b186568aaa05cf2d7479a051d843ed72",
+      "normalized_formula": "\u03bc_L/\u03bc_D=|Y(L_H)|/|Y(D)|=3/2.Sob_e=(2/3)b,theadjoint-massClebsch,theonlyrulethatfittedbothlepton",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/PASS12049_COLOURED_DIVISOR_INVENTORY.md",
+          "raw": "\u03bc_L/\u03bc_D = |Y(L_H)|/|Y(D)| = 3/2. So b_e = (2/3) b, the adjoint-mass Clebsch, the only rule that fitted both lepton",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "97a9c7a2d59d602d67d6aaa54d68422e53e72a6b61e84d31f082f2dd2008be67",
+      "structural_formula": "\u03bc_L/\u03bc_D=|Y(L_H)|/|Y(D)|=#/#.Sob_e=(#/#)b,theadjoint-massClebsch,theonlyrulethatfittedbothlepton"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d1f105c4736a3f140ecf534e30a1c901301c1bf2fe104cfbbc881f8d2c3e8849",
       "normalized_formula": "\u03bdL,eL,eR\u21903Weylfermiontypes\u00d71=3",
       "numeric_literals": [
@@ -1841425,9 +1841923,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-18T19:06:12-04:00",
+  "frozen_at": "2026-10-18T19:24:27-04:00",
   "pass": 398,
-  "repository_head": "085a54195adc2bd396ae463c482b3d9c07f39c7f",
+  "repository_head": "b8a3c339b2c1a1fc992267529de24dad7b92dd8d",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1843171,6 +1843669,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8fea080308e6feb025819e861c8d1311c57272b28ab63c33e3e9a32cacfcedeb",
       "structural_formula": "\"\"\"SMgaugedim=k=#=W3#degree=dim(SU(#)\u00d7SU(#)\u00d7U(#)).\"\"\""
+    },
+    {
+      "exact_formula_ids": [
+        "4ae7340109151185d2cf66e4dd1b75f57982a41176901bade7465b6210b84a21"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "17e981b53361af31c6fd57a26d89ef32cfc3bdbcb5f0e29d75561c1685b8960d",
+      "structural_formula": "\"\"\"SU(#)DynkinindexTofthebrokensubspaceimage(ad_H),usingX=it_a:T=-tr(ad_X^#|image).\"\"\""
     },
     {
       "exact_formula_ids": [
@@ -1897270,6 +1897776,7 @@
     },
     {
       "exact_formula_ids": [
+        "94123276c77daab0e075ea40888ed477c79c66ebf583ae606fa3bcabaaef5f18",
         "54566422ddd300564781cdf6af7014943f7383e85f251af4d9b34aa81bac0b97",
         "b9b0fab3165325751b837711c72ebf7e9cef34a12c4f028e47aea155727a664b",
         "e719bd474980416ae6256d06c7d79590f7a3ca1f7cb4e48b42f9fe91423ff048",
@@ -1897331,7 +1897838,7 @@
         "7cb8cd408a09c88f7a8252c55902ea46e6440bf1e53469e28ea5914c295c4308",
         "cd0994099a60ba3ecbf9731dd4d916663bec7d0b62503620df49229cf96744a5"
       ],
-      "exact_member_count": 60,
+      "exact_member_count": 61,
       "structural_family_id": "13a005076bb0ecab3300cbb0507da5a013379264f11eae60e141e23dea97eed6",
       "structural_formula": "##=#"
     },
@@ -1903069,6 +1903576,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b357cf0cf75212197dca1b1cd515f57e84d8af4a4801f36256b2f0545fe10062",
       "structural_formula": "#.^Leafselection/cosmological^:WhichL_i=observedchirality(Pass3#)"
+    },
+    {
+      "exact_formula_ids": [
+        "e92c3b96cccc2b0050eabcde063b91fb4867e9e2d9c3eedb43513ffafec64ac0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dbef3924f2aa1c8e1139d90f08870dc63e7711263e3818af6933721e3d7b3d2b",
+      "structural_formula": "#.^LightXandYbosons.^M_X~\u03b5_uM_cforcesaveryhighcompactificationscaleforastandardM_X,orelsefast"
     },
     {
       "exact_formula_ids": [
@@ -1932736,6 +1933251,14 @@
     },
     {
       "exact_formula_ids": [
+        "8da9abd26e364412ea70cc42703a33f9165aed9ec0309a418bff9ee80e3f05c1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "008bdad305e812a5ddcfe6ae9f9db6e19d2eaa517c003bb9df63240ef77f42c5",
+      "structural_formula": "#coherence:hyperchargemassratioofthevectorlike5=(#,#,#/#)+(#,#,#/#)"
+    },
+    {
+      "exact_formula_ids": [
         "5270e2378bb7ebf8b4bd33866eb61823a1c019bd5ae421f63b1fd4014b19b386"
       ],
       "exact_member_count": 1,
@@ -1960570,6 +1961093,14 @@
     },
     {
       "exact_formula_ids": [
+        "c24f235b55b4b4a413513ff06f7e0a1489eb0c4d45fab0b3fbd3ed2f026663f4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d49fb273f508ad27dc50d9dbeeecbe7ea35c933501ea536476e5574cdfb064e6",
+      "structural_formula": "*Ifthatpair'smasscomesfromthesamehyperchargeWilsonline,mu_L/mu_D=|Y(L_H)|/|Y(D)|=#/#.Sothe"
+    },
+    {
+      "exact_formula_ids": [
         "446a6bd3e409237d9b1ec95de014be2e70acb205c67715cc53c5a0e782b43a34"
       ],
       "exact_member_count": 1,
@@ -1961730,6 +1962261,14 @@
     },
     {
       "exact_formula_ids": [
+        "37903f0292c4f7010fe76d5cde55e1f9dfb91ff36ac1bb9277217c1e25a2e2a4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "14f681567ec5f0f6fc9196b7f71b91c50218c2ad3b85b9f47e8146ddd1b0662e",
+      "structural_formula": "*^Brokenvectormultiplets:^masses\u221dq_HV,contributing^b_vec=\u2212#T+T=\u2212#T^,whereTistheSU(#)index"
+    },
+    {
+      "exact_formula_ids": [
         "2e1305caa8aeffe144f32be20355c74259d39db25d90a554b6839dfc05c6d41f"
       ],
       "exact_member_count": 1,
@@ -1962007,6 +1962546,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8214680bfef3cf2bba70796a5d8b58dd528eb11c33258a850e3e78a4f3e0453d",
       "structural_formula": "*^Oneoptionsetforeveryentry.^Theloweredentriesuseeither(n_S,n_T)=(#,#)orthreesingletsandno"
+    },
+    {
+      "exact_formula_ids": [
+        "54163f84471fd8db9254575e1ff850ca5fd48d3f88ad97408a3d185d2d193a7c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8821373b21d8b95fda82fa0794e65a07027fbc91fca798bc21ea2193d7cfab85",
+      "structural_formula": "*^Onepair.^n=#isthesinglevectorlikerowthat1#/#foundnecessaryandsufficientforCP-realtheta"
     },
     {
       "exact_formula_ids": [
@@ -1962967,6 +1963514,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9113a512121bf189ec661e762b09c5ad9a530d2be3f44cbc3d7cfc645ab74326",
       "structural_formula": "*n=#(#outerclassesofPGSp(#,#)):noclasswiththeta^#=#(astheorem(#)requires);everyinvolutionclass"
+    },
+    {
+      "exact_formula_ids": [
+        "6f130ce79f0f879ee84caeefa67d95a13c638d059cfdfcea4bba05d13d62d017"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7fb91ed296fff67cad12369c77e38a2007c5cd77eba10f69cf374e900b4df8ff",
+      "structural_formula": "*n=#isthesinglevectorlikerowthat1#/#foundnecessaryandsufficientforCP-realthetaquarks"
     },
     {
       "exact_formula_ids": [
@@ -2066606,6 +2067161,14 @@
     },
     {
       "exact_formula_ids": [
+        "dbd2026d5633e6a53a73b754f3869c6c6b5e24f8286728c5f88391ffa7523c5c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "18ba6e9e9ff0e172e16c00bf112c017fcbdcd80d97fe972c0df51ff671879685",
+      "structural_formula": "Twofurtherpatternsusestandardbranchingsandarenotcomputedhere:E6\u2192SO(#)\u00d7U(#)hasT=#;E6\u2192SU(#)#has"
+    },
+    {
+      "exact_formula_ids": [
         "aae7d3fbc5bbb4407ba75fde9f0c4e1a26ab91a66aba3ad949b2336774c6ab6e"
       ],
       "exact_member_count": 1,
@@ -2150016,6 +2150579,14 @@
     },
     {
       "exact_formula_ids": [
+        "57b09ba8d052a74abb5af501be59accb3782a44c59970a2ebc7a6b1bca74f2bf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "26daf7f69f3eb6a5818b69ce33b34de9bfbcad88278249880d2bf098b7256218",
+      "structural_formula": "checks[\"coherence:thehypercharge-Wilson-linemassofthevectorlike5giveskappa=#/#(#'sClebsch)\"]=bool(abs(kappa-#/#)<#)"
+    },
+    {
+      "exact_formula_ids": [
         "28bda0042ebdcb4593f598da743e0ec2a6689b2facab75054945a09e4e8c14ff"
       ],
       "exact_member_count": 1,
@@ -2167638,6 +2168209,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7b9cdad652db15b8b8213c2bd890c2758173eb66d905075e286efc9cb8b3b751",
       "structural_formula": "determinedbythepermutationnorbyparity.SincetheBoolean6#=##module"
+    },
+    {
+      "exact_formula_ids": [
+        "fbccb6ff4fde4e57adb6515c64428d813ad2d6e829fe194f59bee782cfc2cc83"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "137ad06008139331beb7e25056431d73f4c5707153fb4da42a07ccd6768e3ea8",
+      "structural_formula": "dets=np.array([np.linalg.det(theta(np.array([[tau,#*np.exp(#j*p)],[#*np.exp(#j*p),tau]])))forpinph])"
     },
     {
       "exact_formula_ids": [
@@ -2205744,6 +2206323,14 @@
     },
     {
       "exact_formula_ids": [
+        "46b5b3c638d1aa9d97d30bb3b1cd3af3dbdee54e0eecbf51501a6e3f717c7d07"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b93058938a25231043519d38920b5855c520e65b73e5944ea65146197d58ac7",
+      "structural_formula": "leptonrowisb_e=(#/#)b,theadjoint-massClebsch,theoneruleof1#thatfitsbothleptonratios"
+    },
+    {
+      "exact_formula_ids": [
         "6f4f6a39c1a58bc4ea4f9ed9f33cce31c36b75d6860fa07070ac8889b04d4e9e"
       ],
       "exact_member_count": 1,
@@ -2221717,6 +2222304,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d414160cf38b49fa96ef6bedbb239a58d6074c108e834736e92424d4742adfc4",
       "structural_formula": "multipath=commonneighbours,deadlock-freedomfromdiameter2)isthestandardroutingdictionary"
+    },
+    {
+      "exact_formula_ids": [
+        "fb1e8f6a74ac68b2cbed764ede561344671c8d077c5771934b23eb5d063acf98"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4ade709e480dde81297eb327401ed10371d2e8ef4f6713dec05e80fb9741a84c",
+      "structural_formula": "multiplets(masses~q_HV)giveb_vec=#T+T=#T,whereTistheSU(#)indexofthebrokengenerators(vector"
     },
     {
       "exact_formula_ids": [
@@ -2240363,6 +2240958,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8320e1705fe742d90b77f379f5c5cb0d8d6ad017855fd125dcac4470a2c5ef93",
       "structural_formula": "plus_one={k:{^v}fork,vinBASE.items()};plus_one['trace2_covariance_tagged']['cost']=#"
+    },
+    {
+      "exact_formula_ids": [
+        "a1960e1a532c91a588715582b2df9989033607c18b97d9c13c3931340059bafb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9eb6fc1a44a7674f0d8dff9bc0c8b93a201a9f6bb65c808ad35516bce0d3d454",
+      "structural_formula": "pluseatenchiral;thesameforN=#).Eachvectorlikecolouredpair3#barwhosemassis~Vgives+#.Regularity"
     },
     {
       "exact_formula_ids": [
@@ -2280402,6 +2281005,14 @@
     },
     {
       "exact_formula_ids": [
+        "beba82a58a0f8fa0040724c7606df3ac6c4f017c858d662db6fe155b51227977"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "14b56987a5b2ece4c646ddfc9090ddc40ec98cc081160d8066bd2b821cb67fe4",
+      "structural_formula": "res[\"coherence\"]=dict(kappa_mu_D_over_mu_L=kappa,clebsch_1#=\"adjointmass2/#\",inverse_eps_u=#/#"
+    },
+    {
+      "exact_formula_ids": [
         "c901da05094aa3b022c3f2cb149ffe02a0e0d96ac30b9bd3f03b6194c2ad3b4f"
       ],
       "exact_member_count": 1,
@@ -2307069,6 +2307680,14 @@
     },
     {
       "exact_formula_ids": [
+        "8a99ce870d1936d0171f7e16e91f9f77e9ad37f83ad57cd8df3be0249dd3cc50"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4fa351055546ed424c156c6b7a708e9c9b79d16984362940f6caba5fdb16cb49",
+      "structural_formula": "theta-bar=arg[e^{#pi^#f3}detY_udetY_d]windsunlesse^{#pi^#f3}~eps^#,i.e"
+    },
+    {
+      "exact_formula_ids": [
         "cf583bb73f6260b2f14dfe7b22eb335069d7af728bff9e1e0934247e7c9120a9"
       ],
       "exact_member_count": 1,
@@ -2331487,6 +2332106,14 @@
     },
     {
       "exact_formula_ids": [
+        "4226a98ea2ec7ecf0f945d029a263429b186568aaa05cf2d7479a051d843ed72"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "97a9c7a2d59d602d67d6aaa54d68422e53e72a6b61e84d31f082f2dd2008be67",
+      "structural_formula": "\u03bc_L/\u03bc_D=|Y(L_H)|/|Y(D)|=#/#.Sob_e=(#/#)b,theadjoint-massClebsch,theonlyrulethatfittedbothlepton"
+    },
+    {
+      "exact_formula_ids": [
         "d1f105c4736a3f140ecf534e30a1c901301c1bf2fe104cfbbc881f8d2c3e8849"
       ],
       "exact_member_count": 1,
@@ -2333583,20 +2334210,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89472026,
-    "exact_formula_families": 62975,
-    "files_scanned": 12258,
-    "formula_occurrences": 69009,
+    "bytes_scanned": 89487397,
+    "exact_formula_families": 62992,
+    "files_scanned": 12260,
+    "formula_occurrences": 69027,
     "status_occurrences": {
       "certified_or_theorem": 5116,
-      "killed_or_retracted": 1808,
-      "open_or_conditional": 2314,
+      "killed_or_retracted": 1809,
+      "open_or_conditional": 2316,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54406
+      "unclassified": 54421
     },
-    "structural_families": 61305
+    "structural_families": 61321
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "4465e1033c60d98fe0d2fa0bb737729402631a676d67a7896564de84d8e5601b"
+  "universe_sha256": "ccd3270934e6a76d40e080eb1bf8cfc2b832834c0a82974d8dd761a6203fb032"
 }
