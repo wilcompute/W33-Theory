@@ -1,0 +1,54 @@
+{
+  "pass_id": 12004,
+  "search_record": {
+    "grid_points": 746496,
+    "classes": 24,
+    "global_min_chi2": 329.0,
+    "artefact_discarded": {
+      "n40_value": 257.5,
+      "accurate_value": 356.7
+    },
+    "moving_tau_best_chi2": 213.44,
+    "frozen_multistart_best_chi2": 954.6
+  },
+  "locus_relation_max_error": {
+    "up": 9.706003403840526e-16,
+    "down": 4.814068072828238e-11
+  },
+  "off_locus_control_error": 0.030357689382015253,
+  "up_on_locus": {
+    "mc_mt": 0.003684096643538238,
+    "mu_mc": 0.001983839862376777
+  },
+  "centred_vs_reference_max_diff": 1.6653345369377348e-15,
+  "positive_control_complex_down_chi2": {
+    "1": 4.921544211168865e-16,
+    "-1": 8.133128015386574e-19
+  },
+  "bare_best": {
+    "obs": {
+      "ms_mb": 0.06586552883299494,
+      "md_ms": 0.04404287755169849,
+      "Vus": 0.22523681460979156,
+      "Vcb": 0.045844248945517405,
+      "Vub": 0.0026016567490042553
+    },
+    "chi2": 331.31634522019897
+  },
+  "codex_12005_bare_point_chi2": 254070.4057178042,
+  "codex_12005_status": "PASS",
+  "cp_invariant_potential_gradient": {
+    "transverse_max": 5.329070518200751e-09,
+    "longitudinal_max": 65.2694828442435
+  },
+  "checks": {
+    "cp_locus_relation_exact": true,
+    "up_sector_fits_on_locus": true,
+    "centred_evaluator_validated": true,
+    "positive_control_complex_down_fits": true,
+    "bare_cp_real_down_does_not_fit": true,
+    "codex_bare_point_above_global_minimum": true,
+    "cp_locus_transversally_stationary": true
+  },
+  "all_checks_pass": true
+}
