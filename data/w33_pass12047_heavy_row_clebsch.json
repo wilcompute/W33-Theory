@@ -1,0 +1,107 @@
+{
+  "scan": {
+    "entries": 280,
+    "within_15pct_both": [
+      {
+        "branch": "C",
+        "mu": 91.1876,
+        "kappa": "adjoint mass 2/3",
+        "dev": [
+          -0.024606498165291115,
+          0.0416281928761248
+        ]
+      }
+    ],
+    "best_two_maxdev": [
+      0.0416281928761248,
+      0.3202036207724546
+    ]
+  },
+  "mechanism": {
+    "1.0": {
+      "det_factor": 1.0,
+      "me_mmu": 0.0032926855192206062,
+      "mmu_mtau": 0.05739221330401403
+    },
+    "0.6667": {
+      "det_factor": 1.4999315764052725,
+      "me_mmu": 0.004938302258175006,
+      "mmu_mtau": 0.057392633919729964
+    },
+    "1.5": {
+      "det_factor": 0.66668018377441,
+      "me_mmu": 0.00219526713157858,
+      "mmu_mtau": 0.05739202626276007
+    }
+  },
+  "look_elsewhere": {
+    "ln_kappa_spacing": 0.4054651081081644,
+    "window_halfwidth": 0.13,
+    "chance_level": 0.6412389002178722
+  },
+  "scale_window": [
+    {
+      "mu": 91.1876,
+      "dev": [
+        -0.024606498165291115,
+        0.0416281928761248
+      ]
+    },
+    {
+      "mu": 10201.488159011691,
+      "dev": [
+        0.3203095365647335,
+        -0.6281499668773579
+      ]
+    },
+    {
+      "mu": 1141277.5493428465,
+      "dev": [
+        0.6238193752195669,
+        -1.2340823885988266
+      ]
+    },
+    {
+      "mu": 127678866.4880634,
+      "dev": [
+        0.894537478864975,
+        -1.7961514215190932
+      ]
+    },
+    {
+      "mu": 14283898738.797962,
+      "dev": [
+        1.1330433049493387,
+        -2.3250835404544
+      ]
+    },
+    {
+      "mu": 1597991655097.51,
+      "dev": [
+        1.3349183300797252,
+        -2.829086687049688
+      ]
+    },
+    {
+      "mu": 178773133054019.56,
+      "dev": [
+        1.4918230783600448,
+        -3.319064297800961
+      ]
+    },
+    {
+      "mu": 1.9999999999999988e+16,
+      "dev": [
+        1.5934537341997752,
+        -3.818471440334504
+      ]
+    }
+  ],
+  "checks": {
+    "exactly one of 280 entries fits both lepton ratios to 15%: branch C, M_Z, adjoint-mass kappa = 2/3": true,
+    "mechanism: kappa rescales m_e by ~1/kappa (det factor -> 1/kappa), m_mu/m_tau unchanged": true,
+    "look-elsewhere: chance level of a kappa hit >= 0.5 (not evidence)": true,
+    "the match needs matching near M_Z: at 1e4 GeV some ratio is > 25% off": true
+  },
+  "all_checks_pass": true
+}
