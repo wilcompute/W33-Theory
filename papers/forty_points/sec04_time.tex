@@ -546,11 +546,11 @@ two-qutrit direction exactly once.}
 \label{fig:spread}
 \end{figure}
 
-\begin{boundary}[The complex-structure weld does not exist]
+\begin{boundary}[The compatible complex-structure weld does not exist]
 One might hope to weld the Hermitian light cone to the symplectic geometry through a
 single complex structure $J$ ($J^2=-I$) with $\Omega(x,y)=B(Jx,y)$. Exhausting all
 $729$ candidates finds none. The light cone and the qutrit geometry meet through the
-point/line duality of Section~2, not through one compatible $J$. \tierX\ (for the direct weld)
+point/line duality of Section~2, not through one compatible $J$. \tierX\ (for the direct weld) A complex structure does carry the light cone once it reverses the form: each of the $72$ anti-symplectic $J$ with $J^2=-I$ ($36$ up to sign, the Kramers time reversals) leaves invariant ten Lagrangian planes, its $\F_9$-lines, and these ten-sets are exactly the $36$ spreads of $\W$, one for each $\pm J$ --- the celestial $P^1(\F_9)$ of the finite AdS$_4$ below. \tierC\ (\cert{w33\_pass11210\_kramers\_time\_reversal.py}, \cert{w33\_pass11831\_11833\_finite\_ads4.py})
 \end{boundary}
 
 \subsection{The arrow: forgetting two trits}
@@ -668,9 +668,9 @@ from the remaining lines --- a copy of the quadrangle $\mathrm{GQ}(2,2)$ --- and
 Clifford dynamics has no T-violation: every tick is inverted by some time reversal, as Wonenburger's
 theorem~\cite{Wonenburger1966} implies; but for $77/162$ of two-qutrit and $84013/157464$ of three-qutrit ticks the
 reversal cannot be unitary --- exactly the ticks whose period is divisible by $3$ --- so Wigner's anti-unitarity is
-forced by the dynamics. Any CP violation must therefore come from the non-Clifford layer. Two further readings of
+forced by the dynamics. Any T-violation of the substrate dynamics must therefore come from the non-Clifford layer. (The flavour CP phase is a separate question: with CP-real theta Yukawas, one complex vectorlike row suffices to fit the quark data, a Nelson--Barr structure; Passes~11950--11951 and~12005.) Two further readings of
 the arrow. Arrow-free dynamics becomes rare as the register grows: $1$, $133/360$ and $55241/884520$ of all ticks
-for one, two and three qutrits, about $0.0058\pm0.0005$ for four and $0$ of $3000$ samples for five --- a
+for one, two and three qutrits, $43815911/8703676800\approx0.00503$ for four and $\approx0.00020$ for five (exact class sums of Pass~11208 below, superseding earlier samples) --- a
 second law by counting. And a walk that re-chooses the subsystem split along a time-oriented relation is a clock
 that runs one way: every directed relation between three-qutrit splits has non-real eigenvalues, its reverse the
 conjugates, with rotation frequencies in the Eisenstein field (for the smallest, $-14\pm18\sqrt3\,i$). The twist is a measurable phase: a third-moment local-unitary invariant of the gate's Choi state is purely imaginary on the smallest time-oriented relation, $\pm i\sqrt3/243$ --- a quadratic Gauss sum --- with sign $Q$ on all $256$ members, and it changes sign under time reversal; invariants whose three-cycles all turn the same way are real, and averaging over all relabellings of the registers erases the sign --- the arrow is locally measurable only on labelled registers. \tierC\
@@ -748,7 +748,7 @@ Clifford group the perfect-tick edge pattern does not survive: one magic leg bre
 but magic on three of the four legs breaks every $\F_9$-linear perfect tick (exhaustive: $165\,888$ reduced cases covering all $13\,436\,928$ dressings, since $T^3=Z$ lets the Pauli parts be absorbed into the frame; one magic leg breaks exactly $\tfrac1{12}$ of them),
 against $91\%$ for other perfect ticks. Finally, the chamber group's cocycle orientation is not the orientation of the
 magic: the one-qutrit group $\langle X,S,T\rangle$ modulo scalars is $\mathrm{SmallGroup}(81,9)$, with $18$ elements of order
-$9$, while $U_{81}=C_3\wr C_3=\mathrm{Syl}_3\,\Sp(4,3)$ has $36$. On three qutrits $11.1\%\pm0.9\%$ of sampled symplectic classes are flagged bad by seven frames (one in eight is $12.5\%$; the seven-frame screen is exact if the affine law holds at $n=3$, checked on two classes). The uniform
+$9$, while $U_{81}=C_3\wr C_3=\mathrm{Syl}_3\,\Sp(4,3)$ has $36$. On three qutrits $11.1\%\pm0.9\%$ of sampled symplectic classes are flagged bad by seven frames (one in eight is $12.5\%$; the seven-frame screen is exact if the affine law holds at $n=3$, checked on two classes; this sample is superseded by the exact three-qutrit fraction $437/3276\approx13.3\%$ of Pass~11373 below). The uniform
 Clifford$+T$ random word is reversible with probability tending to $0$ (equidistribution in $PU(3)$ and the portmanteau
 theorem on the closed, Haar-null reversible set), although reversible circuits exist at every depth $9m$ because
 $T^9=1$; no rate is proved. \tierC\ (\cert{w33\_pass11308\_shared\_level\_and\_clifford\_bound.py},
@@ -835,7 +835,7 @@ pseudo-reflection locus, none reached from $307$ spurious starts, positive minim
 remains the conjecture; near the identity every witness is a twelfth-order effect. The four magic-axis rules reduce to one
 law, verified exhaustively at $n=2$, on every orbit at $n=3$ and on samples at $n=4$: if $M^2z_1=z_1$ then $v=z_1+Mz_1$ is fixed
 by $M$ and every frame with $\omega(a,v)\neq0$ breaks the arrow. At four qutrits the rules hold on every decided targeted class
-and the bad-class fraction is $0.118\pm0.006$, below the exact three-qutrit $437/3276$. Finally the exact one-qutrit reversible
+and a decider sample gave a bad-class fraction $0.118\pm0.006$, superseded by the rigorous bound $P_4\ge0.1337\pm0.0003$ of the one-gate law below. Finally the exact one-qutrit reversible
 fraction at depth five is $11003/49152$; the denominators $2^{3k-1}3^{[k\ \mathrm{odd}]}$ hold for $k\le5$, and the local decay rate
 appeared to drift upward with depth (withdrawn: a decider-threshold artefact, corrected in Pass 11459). \tierT\,\tierC\ (\cert{w33\_pass11418\_j8\_completeness.py},
 \cert{w33\_pass11419\_spurious\_family.py}, \cert{w33\_pass11420\_magic\_axis\_rules.py},
@@ -855,8 +855,8 @@ class size), without exception. Each magic gate offers
 only $216/27=8$ effective Clifford choices, because the $27$ Cliffords $\kappa$ with $T\kappa T^{-1}$ Clifford can be pushed
 through; this explains the powers $2^{3k}$ in the denominators and yields the exact reversible fractions $20327/131072$ and
 $353927/3145728$ at depths six and seven, with the denominator law $2^{3k-1}3^{[k\ \mathrm{odd}]}$ intact through $k=7$. At four
-qutrits the excess of $437/3276$ over $1/8$ disappears cell by cell: it lived in the same-line cell, which falls from
-$77/342$ to $0.14$. \tierT\,\tierC\ (\cert{w33\_pass11433\_magic\_axis\_law.py}, \cert{w33\_pass11434\_h6\_explicit.py},
+qutrits the same-line cell, which carries the three-qutrit excess of $437/3276$ over $1/8$, fell from
+$77/342$ to $0.14$ in a decider sample; the excess does not disappear, however (superseded by the one-gate law below: the cells converge near $0.133$--$0.137$ and $P_4\ge0.1337$). \tierT\,\tierC\ (\cert{w33\_pass11433\_magic\_axis\_law.py}, \cert{w33\_pass11434\_h6\_explicit.py},
 \cert{w33\_pass11435\_j8\_positivity.py}, \cert{w33\_pass11436\_depth\_reduction.py}, \cert{w33\_pass11437\_four\_qutrit\_cells.py})
 
 The magic-axis law is now a theorem on a quarter of each bad cell. The moduli of the Weyl coefficients of a tick are
@@ -948,7 +948,7 @@ solution $Q$ is reversible on all $51\,838$ two-qutrit classes and all $2\,117$ 
 $\mathrm{Sp}(6,3)$): the reversible frames are exactly the union over $Q$ of the subspaces $((1-(QJ)^{-1})K_0)^\perp$. The magic-axis law,
 the good rules and their exceptions are special cases. Its uniform part --- a subspace $W$ of vectors anti-fixed by every
 reversal --- is a fast, rigorous sufficient condition for violation: it gives $P_2=1/8$ exactly and $P_3\ge97/728$ (the exact value
-$437/3276$ exceeds it by $1/6552$, nine orbits with affine violating sets), and on $1.2\times10^6$ samples per size $P_4\ge0.1337\pm0.0003$, $P_5\ge0.1342\pm0.0003$, $P_6\ge0.1347\pm0.0005$. So the
+$437/3276$ exceeds it by $1/6552$, nine orbits with affine violating sets), and on $1.2\times10^6$ samples per size $P_4\ge0.1337\pm0.0003$, $P_5\ge0.1342\pm0.0003$, $P_6\ge0.1347\pm0.0005$ (superseding the decider samples above: $0.118$ at four qutrits and $0.123$--$0.131$ at six). So the
 one-gate bad-class fraction does not settle at $1/8$, and the conjectured non-collinear law $(1-9^{1-n})/8$ is refuted
 ($0.1327$ at $n=4$, $z=+21$). The cubed-phase test is exact on words because only Cliffords and single-$T$ operators ever carry a
 non-affine relation (depth $\le7$); every word with two or more $T$ gates is decided by affine relations alone. The invariants of
@@ -1164,7 +1164,7 @@ by counting into exact numbers: the arrow-free fraction is $P(c=n)$, which is $4
 four qutrits and $\approx0.00020$ for five. A random tick protects $0.7255\ldots$ qutrits on average (exactly $0.725322$,
 $0.725518$, $0.725535$ for $n=3,4,5$), so $E[A]=n-0.7255\ldots$ and the maximal arrow has probability about $0.45$. The
 same law holds class by class for qubits through $n=5$ and for $5$- and $7$-dits. It is a law of Clifford dynamics, not
-a special property of qutrits. The proof above covers every odd local dimension; qubits need a separate argument.
+a special property of qutrits. The proof above covers every odd local dimension; qubits need a separate argument. The closed formula for $c(S)$ in Theorem~4.8 is the qutrit case: for odd $q>3$, eigenvalue pairs $\lambda^{\pm1}\neq\pm1$ in $\F_q$ and further irreducible self-reciprocal quadratics $x^2-tx+1$ also give invariant nondegenerate planes (for $q=5$, $S=\mathrm{diag}(2,1,3,1)$ has $c=2$ where the qutrit formula gives $1$), so there the law is stated with $c$ as defined.
 Among the time reversals, the $36$ reflections are also the only \emph{Kramers} ones: an anti-symplectic $\theta$ with
 $\theta^2=-1$ exists only for an even number of qutrits and is local only by exchanging them. Those with $\theta^2=+1$
 are complex conjugation in suitable subsystems. \tierT\,\tierC\ (\cert{w33\_pass11207\_arrow\_theorem.py},
@@ -1217,7 +1217,7 @@ arrow: they are products in another one. The geometry's own perfect tick $p$ is 
 instead. The local gates with $A=2$ all swap the two qutrits, and of the three-qutrit ticks the largest arrow, $A=3$,
 belongs to the $\F_9$ gate, which cycles the qutrits where it acts locally. The perfect interacting tick has $A=2$:
 one qutrit stays dynamically protected. For qubits the mean number of protected qubits is now exact through six,
-$E_6[c]=0.665161$, tending to about $0.66517$. \tierC\ (\cert{w33\_pass11223\_named\_tick\_arrows.py},
+$E_6[c]=0.665161$, just above the exact limit $0.66516065\ldots$ given above, which the means approach non-monotonically. \tierC\ (\cert{w33\_pass11223\_named\_tick\_arrows.py},
 \cert{w33\_pass11220\_qubit\_mean\_protection.py})
 
 \emph{A finite AdS$_4$.} One level above the phase space the symmetry is no longer transitive. The $\omega$-traceless
@@ -1310,7 +1310,7 @@ on quarks and antiquarks and $1$ on every colour singlet. It removes exactly the
 is why Lorentz and the central translation together commute with the Standard-Model algebra. The translations' characters fall
 into three central-charge sectors. The neutral one is Minkowski momentum space ($1+20+30+30$); the two charged ones are conjugate,
 with orbits $6+15+60$. So the geometry supplies a $1+2$ pattern, not three identical copies. In the spinorial structure the extra
-$\mathfrak u(1)$ is $B-L$: lepton charge three times quark charge. Lorentz-invariant vevs cannot remove it, because they preserve
+$\mathfrak u(1)$ is $B-L$: lepton charge $-3$ times quark charge, as for $B-L$ in $\mathfrak{su}(4)\supset\mathfrak{su}(3)\oplus\mathfrak u(1)$ (spectrum $\pm\tfrac14$ on $48$ quark-like and $\pm\tfrac34$ on $16$ lepton-like states). Lorentz-invariant vevs cannot remove it, because they preserve
 rank. Reflection positivity of the boundary four-point function gives exact integer channel data, hence the bounds
 $g_3^2\le1/48$, $g'^2\le1/8+6g_3^2$ and $g_4\le1/12$ on the bulk couplings.
 \tierT\,\tierC\ (\cert{w33\_pass11859\_11862\_parity\_orbifold\_sectors\_breaking.py}, \cert{w33\_pass11861\_bootstrap\_positivity\_bounds.py}; Lean \texttt{W33.Pass11863A6NotInSL2})

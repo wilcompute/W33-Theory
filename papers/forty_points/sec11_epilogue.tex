@@ -26,7 +26,7 @@ three-family Standard Models, and the same geometry specifies a quantum computer
      $\bullet$ $F_4$, $E_{6(-26)}$, $\so(1,9)$, $16$\\
      $\bullet$ matter parity $=2\pi$ rotation\\
      $\bullet$ chirality no-go (antiunitary swap)\\
-     $\bullet$ string route closed: no parity-\\ \phantom{$\bullet$} keeping vacuum in 7 families\\
+     $\bullet$ string route closed: no clean\\ \phantom{$\bullet$} parity vacuum in 9 families\\
      $\bullet$ ISA, memory, magic census};
   \node[col=gold] at (5.0,0) {}; \node[hd=gold] at (5.0,-0.35) {bridge / hosted};
   \node[it] at (2.9,-0.75) {$\bullet$ ``null'' $=$ shared measurement\\
@@ -66,7 +66,7 @@ string construction, and none of it was touched by the corrections below.
 
 \emph{The string route closed.} Section~9 asked whether heterotic orbifolds carrying the forty-point twist
 give our universe. The answer, reached by exact computation over nine orbifold families and checked
-against the selection rules the worldsheet establishes, is no in all nine: in eight, their supersymmetric vacua
+against the selection rules the worldsheet establishes, is no in all nine: two of them yield no Standard Model at all; in six, their supersymmetric vacua
 cannot keep the proton stable; in the ninth, $\Z_3\times\Z_3$, the parity survives and the vacua are
 supersymmetric, but a counting argument over hidden representations leaves six massless particles of charge
 $1/3$ in every one. That is a finished negative result --- it tells the programme where the forty points do
@@ -90,7 +90,10 @@ representations pair up.
       \begin{itemize}
       \item for the $SO(16)\times SO(16)$ models with the $\W$ shift, a source of the light-generation
             hierarchies (the $\Delta(54)$ flavour symmetry keeps $m_c=m_u$ and $m_\mu=m_e$ at the same order under
-            every alignment of the scalar vacuum, and the stabilised family modulus $T=\rho$ gives $m_c=m_u=m_t/2$) and a
+            every alignment of the scalar vacuum tried; with a single Higgs triplet a residual $S_3$ locks $m_c=m_u$
+            exactly at every minimum of its general $\Delta(54)$-invariant potential, while a misaligned flavon
+            triplet splits charm from up but needs an order-one misalignment for the observed size; and the
+            stabilised family modulus $T=\rho$ gives $m_c=m_u=m_t/2$) and a
             vacuum at all (no minimum in the tachyon-free region: the Wilson-line moduli roll into a winding
             tachyon and the dilaton runs to weak coupling---but $21$ survivors have a neutral exit and in six of them
             every nearby instability is Standard-Model-neutral; there the potential drives them steeply to it, the
@@ -102,7 +105,10 @@ representations pair up.
       \item twists and lattices not yet scanned;
       \item a mechanism other than a parity for proton stability.
       \end{itemize}
-\item \textbf{A dynamical principle.} Every result in this paper is kinematics. What
+\item \textbf{A dynamical principle.} Apart from the vacuum selections of Section~\ref{sec:siegel} --- the
+      one-loop minimum at the forty Witting rays (trinification) and the soft-supertrace choice of the
+      $\log\tfrac85$ Clifford orbit, both computed for an assumed field content rather than derived from
+      $\W$ --- every result in this paper is kinematics. What
       action, Hamiltonian or spectral principle on $\W$ has the structures found here as its
       symmetries, and what does it predict? In particular: does such a principle select the
       clock real form $E_{8(-24)}$ over the split form --- does the geometry
@@ -119,7 +125,10 @@ representations pair up.
       central tick reverses sign. \cert{w33\_20261001\_u81\_antiunitary\_orientation.py}
       The remaining problem is dynamical rather than combinatorial: what selects one sign, and does
       that selected finite orientation couple to the unique global chirality character of
-      $\PGSp(4,3)$ (Holotrade 98cafff, P11091) in a physical vacuum?
+      $\PGSp(4,3)$ (Holotrade 98cafff, P11091) in a physical vacuum? Theorem~9.8 gives the outside datum a
+      name: the antiunitary coset is the generalised CP of the genus-two modulus, so the orientation is set by
+      whether the vacuum value of $\Omega$ lies off the CP-real locus, and the open question becomes what
+      stabilises $\Omega$.
 \item \textbf{A physical $54$ chamber gate.} The literal $H_{27}$-equivariant
       $54\times54$ intertwiner is impossible (rank ceiling $36$), but the symmetry-changing
       replacement is now explicit. Four single-foliation $27$-triangle factors transport through
@@ -129,9 +138,16 @@ representations pair up.
       What remains is physical: derive a local Hamiltonian or optical circuit whose finite
       evolution realises one of these transported weighted factors, with an error model and
       measurable calibration protocol.
-\item \textbf{Numbers.} The up-type Yukawa couplings of the $\Z_6$-I class have a $2+1$
-      block structure qualitatively like the observed quark mixing. Can any mass ratio or
-      mixing angle be computed, with an error, from a vacuum of the class?
+\item \textbf{Numbers.} The genus-two modulus of Section~\ref{sec:siegel} fixes the \emph{shape} of the
+      flavour data but not its size. The up texture obeys an exact Weber law,
+      $m_um_t/m_c^2=|\mathfrak f(\tau_1)\mathfrak f(\tau_2)|^8/4$, which every elliptic-point home misses
+      (it gives at least $1$; measured $0.54$); near-product homes fit all eight quark observables, but with
+      twelve parameters; the reactor angle needs $\mu$--$\tau$ breaking in the neutrino sector; and the
+      strong-CP problem of the chain is open, although with CP-real theta moduli one complex vectorlike row
+      suffices to fit the quark data (Pass~12005) --- a Nelson--Barr compatibility witness, not a protected
+      solution. \cert{w33\_pass12005\_cp\_real\_theta\_barr.py}
+      Can any mass ratio or mixing angle be computed, with an error, from a stabilised vacuum with fewer
+      parameters than data?
 \item \textbf{The machine.} Specify a magic-state injection circuit for the $36$ Witting
       rays with a decoder and a threshold, and build the two-qutrit photonic core.
 \end{enumerate}
@@ -162,6 +178,9 @@ the three families come from $\W$ & in the orbifolds they come from the three to
 directions each compatible with a parity form a parity-even vacuum & they must be even under \emph{one} element; the 84-direction vacuum was withdrawn, a 68-direction one certified (\S9.4)\\
 the Higgs quartic is positive at unification ($+1/40$) & measured running gives $-0.011$ at $10^{16}$\,GeV (\S9.4)\\
 a parity from plane rotations reopens one model & it used an $R$-rule valid only on prime planes; with the established rules it closes (\S9.4)\\
+the phase of the entangling modulus $\Omega_{12}$ is an axiflavon that relaxes $\bar\theta$ & the holomorphic $\varepsilon^2$ term breaks its $U(1)$ $10^{16}$--$10^{17}$ times above the quality bound; withdrawn, strong CP of the chain open (\S\ref{sec:siegel})\\
+a shared Weber home fixes the neutrino spectrum with no free parameter ($m_1\approx0.8$\,meV) & the phase of $\varepsilon$ is free and moves $m_1$ by up to $\times1.45$ ($0.69$--$1.00$\,meV); the $\mu$--$\tau$ lepton classes disfavour the relation (\S\ref{sec:siegel})\\
+the rank-one law and $(1,\varepsilon,\varepsilon^2)$ spectrum near a product torus are new with the Weber law & both are Pass~11872's (Theorem~9.8); the Weber law itself is the new step (\S\ref{sec:siegel})\\
 \bottomrule
 \end{tabularx}
 \end{center}

@@ -129,7 +129,7 @@ signature of this perfect evenness.
 Let $W(x)=X^{x_1}Z^{x_3}\otimes X^{x_2}Z^{x_4}$ be the two-qutrit Pauli operator with
 label $x\in\F_3^4$. A direct calculation from $ZX=\omega XZ$ gives
 \begin{equation}\label{eq:commutation}
-W(x)\,W(y)\;=\;\omega^{\langle x,y\rangle}\,W(y)\,W(x).
+W(x)\,W(y)\;=\;\omega^{-\langle x,y\rangle}\,W(y)\,W(x)\;=\;\omega^{\langle y,x\rangle}\,W(y)\,W(x).
 \end{equation}
 So the symplectic form is not an arbitrary choice: it \emph{is} the commutation phase of
 two-qutrit measurements.
@@ -154,8 +154,10 @@ two-qutrit measurements.
 The quantum operations that map Pauli operators to Pauli operators (up to phase) form the
 two-qutrit \emph{Clifford group} \cite{GHW}. Modulo the Paulis themselves and phases, it acts on the
 labels $x$ by exactly the linear maps preserving $\langle\,,\rangle$: the symplectic
-group $\Sp(4,3)$. So the symmetries of the geometry are, literally, the ``cheap'' quantum
-gates.
+group $\Sp(4,3)$. So the symplectic symmetries of the geometry are, literally, the ``cheap'' quantum
+gates. The rest of the automorphism group (the anti-symplectic maps, which reverse the sign of
+$\langle\,,\rangle$) is realised only by anti-unitary operations: these are the time
+reversals of Section~\ref{sec:time}.
 
 \subsection{Two groups of order 51,840, which are not the same group}
 
@@ -200,9 +202,14 @@ exactly one positive solution, $q=3$. Two can be checked by hand:
 \begin{itemize}
 \item The number of edges of the collinearity graph of $W(3,q)$ is
       $q(q+1)^2(q^2+1)/2$; the number of elements of $\F_{q^5}$ outside $\F_q$ is $q^5-q$.
-      Setting them equal gives $2(q-1)=q+1$, so $q=3$: both equal $240$.
+      Setting them equal gives $2(q-1)=q+1$, so $q=3$: both equal $240$. (The same $240$ is
+      the number of $E_8$ roots, but there is no equivariant bijection between edges and roots;
+      the true relation is a $6{:}1$ fibration of the roots over the \emph{points},
+      Section~\ref{sec:e8-trap}.)
 \item The number of points not collinear with a given point is $q^3$; it equals $27$,
-      the dimension of the fundamental representation of $E_6$, only for $q=3$.
+      the dimension of the fundamental representation of $E_6$, only for $q=3$. (Only the
+      numbers agree: the far points form the affine space $AG(3,3)$, while the $E_6$ $27$ in this
+      paper is carried by the $27$ factorisation frames of Section~\ref{sec:self}.)
 \end{itemize}
 
 \begin{boundary}
