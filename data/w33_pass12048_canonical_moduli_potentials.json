@@ -1,0 +1,60 @@
+{
+  "genus1": {
+    "min_tau": [
+      -2.329050625175006e-08,
+      1.2345799208239896
+    ],
+    "V": -8.928814870869054,
+    "fitted_up_in_fd": 1.1435499732046612,
+    "W_on_CP_line": {
+      "y=1.2346": 2.3741768162318513,
+      "y=0.810": 0.3657768766648029
+    },
+    "W_data": 0.5338184193548388,
+    "pulls": {
+      "y=1.2346": 44.68114701267537,
+      "y=0.810": -11.318329987065072
+    }
+  },
+  "chi10_product_limit": [
+    [
+      9.872235299661352,
+      3.209010700081257e-15
+    ],
+    [
+      9.869630710285909,
+      4.980893149423374e-15
+    ],
+    [
+      9.869604664171238,
+      3.3213388767301805e-15
+    ]
+  ],
+  "genus2_product_locus": {
+    "V": {
+      "0.002": 578513653.0161247,
+      "0.001": 5316623181.214979,
+      "0.0055": 22710093.220478546,
+      "0.3": -68.84655949617121
+    },
+    "log_slope": 3.200087305502968
+  },
+  "genus2_symmetric_min": {
+    "tau": [
+      1.0,
+      1.2720907909607049
+    ],
+    "eps": 0.6360429529439935,
+    "eps_over_tau": 0.4999980799040632,
+    "V": -83.38791616311255,
+    "m2_m1": 0.24969223444527755,
+    "m3_m2": 0.3516437334580238
+  },
+  "checks": {
+    "genus 1: minimum 1.2346 i (classic); its CP-line images miss m_u m_t/m_c^2 by > 5 sigma": true,
+    "control: chi10 / (eps^2 Delta(tau1) Delta(tau2)) -> pi^2 on the product locus": true,
+    "genus 2: V ~ |eps|^(-16/5) near the product locus (repelled); V > 0 at eps_u = 0.0055": true,
+    "genus 2 symmetric-home minimum at Im Omega ~ A2 Gram matrix (Im eps/Im tau = 1/2), no hierarchy (m2/m1 > 0.1)": true
+  },
+  "all_checks_pass": true
+}
