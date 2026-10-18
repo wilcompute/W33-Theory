@@ -1008173,6 +1008173,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5feb528c7ef9838f4b197794d9df2528e7f3e41b0fb74c176e45b7f66e2cc7c8",
+      "normalized_formula": "\\varepsilon\u22481/150",
+      "numeric_literals": [
+        "1",
+        "150"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec11_epilogue.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 157,
+          "path": "papers/forty_points/sec11_epilogue.tex",
+          "raw": "\\varepsilon\\approx1/150",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "96624734e3634b64d7e50d77451a54dcea17f7ab1753c8cb2441e4141797e954",
+      "structural_formula": "\\varepsilon\u2248#/#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f32069c1a5582d79649ec07fc63439348b5220417500d94d7d138c4cf8c4fcfd",
       "normalized_formula": "\\varphi(9)=6",
       "numeric_literals": [
@@ -1370684,7 +1370712,7 @@
         },
         {
           "category": "inline_math",
-          "line": 182,
+          "line": 195,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_1\\approx0.8",
           "status": "unclassified"
@@ -1401058,7 +1401086,7 @@
         },
         {
           "category": "inline_math",
-          "line": 143,
+          "line": 144,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_um_t/m_c^2=|\\mathfrak f(\\tau_1)\\mathfrak f(\\tau_2)|^8/4",
           "status": "unclassified"
@@ -1712883,33 +1712911,6 @@
     },
     {
       "file_count": 1,
-      "formula_id": "4d7d537ad0f23f99d176b172492cd2e8dc73d18c4329539f6ff3a6259309e886",
-      "normalized_formula": "sufficestofitthequarkdata(Pass~12005)---aNelson--Barrcompatibilitywitness,notaprotected",
-      "numeric_literals": [
-        "12005"
-      ],
-      "occurrence_count": 1,
-      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
-      "source_files": [
-        "papers/forty_points/sec11_epilogue.tex"
-      ],
-      "source_locations": [
-        {
-          "category": "relation_line",
-          "line": 147,
-          "path": "papers/forty_points/sec11_epilogue.tex",
-          "raw": "suffices to fit the quark data (Pass~12005) --- a Nelson--Barr compatibility witness, not a protected",
-          "status": "open_or_conditional"
-        }
-      ],
-      "status_profile": {
-        "open_or_conditional": 1
-      },
-      "structural_family_id": "c5ba5e1484443d5da8f9fa4fa975e725c8fdbafe22f5db188caa1f09cf544158",
-      "structural_formula": "sufficestofitthequarkdata(Pass~#)---aNelson--Barrcompatibilitywitness,notaprotected"
-    },
-    {
-      "file_count": 1,
       "formula_id": "930b34a32c97530dff57ff4ff4c43d06d9e7c5263b0afaf08a208eb43ce1eeaf",
       "normalized_formula": "sufficient_boundedness='lambda_Phi>='+str(contraction_constant)+'|kappa|2/M2ensuresV=lambda_Phi||Phi||^4+M2||H||2-2Re(kappaHdaggerJ)>=0;sufficient,notnecessarilysharp'",
       "numeric_literals": [
@@ -1842231,9 +1842232,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-18T19:35:51-04:00",
+  "frozen_at": "2026-10-18T19:43:53-04:00",
   "pass": 398,
-  "repository_head": "b1000c824b9143e26bd47497ec0c01904a6433dd",
+  "repository_head": "db4dc654eccad366dc1e972a43838d607b208275",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2111272,6 +2111273,14 @@
     },
     {
       "exact_formula_ids": [
+        "5feb528c7ef9838f4b197794d9df2528e7f3e41b0fb74c176e45b7f66e2cc7c8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "96624734e3634b64d7e50d77451a54dcea17f7ab1753c8cb2441e4141797e954",
+      "structural_formula": "\\varepsilon\u2248#/#"
+    },
+    {
+      "exact_formula_ids": [
         "f32069c1a5582d79649ec07fc63439348b5220417500d94d7d138c4cf8c4fcfd"
       ],
       "exact_member_count": 1,
@@ -2300736,14 +2300745,6 @@
     },
     {
       "exact_formula_ids": [
-        "4d7d537ad0f23f99d176b172492cd2e8dc73d18c4329539f6ff3a6259309e886"
-      ],
-      "exact_member_count": 1,
-      "structural_family_id": "c5ba5e1484443d5da8f9fa4fa975e725c8fdbafe22f5db188caa1f09cf544158",
-      "structural_formula": "sufficestofitthequarkdata(Pass~#)---aNelson--Barrcompatibilitywitness,notaprotected"
-    },
-    {
-      "exact_formula_ids": [
         "930b34a32c97530dff57ff4ff4c43d06d9e7c5263b0afaf08a208eb43ce1eeaf"
       ],
       "exact_member_count": 1,
@@ -2334613,20 +2334614,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89497204,
+    "bytes_scanned": 89498315,
     "exact_formula_families": 63003,
     "files_scanned": 12262,
     "formula_occurrences": 69038,
     "status_occurrences": {
       "certified_or_theorem": 5116,
       "killed_or_retracted": 1810,
-      "open_or_conditional": 2318,
+      "open_or_conditional": 2317,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54429
+      "unclassified": 54430
     },
     "structural_families": 61333
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "a54709e6662b0800c8608682e202c96fb137b5da986f6581553f4a6aa37d05de"
+  "universe_sha256": "1e965a8e6325c6f3184ecb7a27ea351036376fa37a2b7380a21650232c1e468d"
 }
