@@ -1,0 +1,113 @@
+{
+  "schema": "w33.round8.coherent_crosstalk_transfer_tomography.v1",
+  "model": "Single 18-mode photon paths: reference arm identity, signal path implements M W; M=U_mix diag(ell), ell_j=.68..96 and U_mix=e^(i epsilon H_chain) coherently mixes neighbouring 9 internal modes AFTER W. Both signal and identity-calibration modes have same stationary M.",
+  "why_diagonal_ratio_fails": "Measured balanced path port contrast for input j is Re[(M W)_jj]; reference is Re[M_jj]. Their ratio is not generally Re[W_jj] if M is non-diagonal.",
+  "full_transfer_protocol": "Perform independent complex linear-optical transfer tomography of 9x9 R=M (identity reference) and S=M W (signal) using coherent input/output superpositions, two reference phases X/Y and output mode resolution; compute W_est=R^-1 S. This assumes the phase reference and mode-gauge alignment are controlled. No laboratory implementation or optimal shot count is asserted.",
+  "ideal_W33_trace_deficit": 0.2962962962962963,
+  "mode_mixing_series": [
+    {
+      "coherent_mixing_eps_rad": 0,
+      "diagonal_reference_only_deficit": 0.2962962962962963,
+      "diagonal_reference_only_bias": 0.0,
+      "diagonal_reference_only_null_deficit": 0.0,
+      "full_complex_reference_transfer_inversion_deficit": 0.2962962962962963,
+      "full_tomographic_null_deficit": 0.0,
+      "full_matrix_reconstruction_error": 2.8102520310824275e-16,
+      "calibration_condition_number": 1.4117647058823528
+    },
+    {
+      "coherent_mixing_eps_rad": 0.03,
+      "diagonal_reference_only_deficit": 0.294707863669451,
+      "diagonal_reference_only_bias": -0.0015884326268452709,
+      "diagonal_reference_only_null_deficit": 0.0,
+      "full_complex_reference_transfer_inversion_deficit": 0.29629629629629617,
+      "full_tomographic_null_deficit": 0.0,
+      "full_matrix_reconstruction_error": 4.133740852009926e-16,
+      "calibration_condition_number": 1.4117647058823524
+    },
+    {
+      "coherent_mixing_eps_rad": 0.09,
+      "diagonal_reference_only_deficit": 0.29161258621527264,
+      "diagonal_reference_only_bias": -0.00468371008102364,
+      "diagonal_reference_only_null_deficit": 0.0,
+      "full_complex_reference_transfer_inversion_deficit": 0.2962962962962963,
+      "full_tomographic_null_deficit": 0.0,
+      "full_matrix_reconstruction_error": 3.583789239985016e-16,
+      "calibration_condition_number": 1.4117647058823533
+    },
+    {
+      "coherent_mixing_eps_rad": 0.16,
+      "diagonal_reference_only_deficit": 0.2880968432329504,
+      "diagonal_reference_only_bias": -0.008199453063345907,
+      "diagonal_reference_only_null_deficit": 0.0,
+      "full_complex_reference_transfer_inversion_deficit": 0.2962962962962963,
+      "full_tomographic_null_deficit": 0.0,
+      "full_matrix_reconstruction_error": 3.2549995555391833e-16,
+      "calibration_condition_number": 1.411764705882353
+    },
+    {
+      "coherent_mixing_eps_rad": 0.3,
+      "diagonal_reference_only_deficit": 0.2811256130251283,
+      "diagonal_reference_only_bias": -0.015170683271167995,
+      "diagonal_reference_only_null_deficit": 0.0,
+      "full_complex_reference_transfer_inversion_deficit": 0.2962962962962963,
+      "full_tomographic_null_deficit": 0.0,
+      "full_matrix_reconstruction_error": 4.1534946101865434e-16,
+      "calibration_condition_number": 1.4117647058823526
+    }
+  ],
+  "complex_transfer_gaussian_noise_simulation": [
+    {
+      "complex_transfer_entry_noise_sigma": 0,
+      "simulated_trials": 300,
+      "trace_deficit_bias_mean": 0.0,
+      "trace_deficit_RMSE": 0.0,
+      "full_transfer_Frobenius_error_mean": 3.2549995555391833e-16
+    },
+    {
+      "complex_transfer_entry_noise_sigma": 0.0005,
+      "simulated_trials": 300,
+      "trace_deficit_bias_mean": 1.0109443292105613e-05,
+      "trace_deficit_RMSE": 0.00019735051571717152,
+      "full_transfer_Frobenius_error_mean": 0.007867685616323214
+    },
+    {
+      "complex_transfer_entry_noise_sigma": 0.002,
+      "simulated_trials": 300,
+      "trace_deficit_bias_mean": 9.561188366550658e-07,
+      "trace_deficit_RMSE": 0.000824070621248005,
+      "full_transfer_Frobenius_error_mean": 0.031495551109505034
+    },
+    {
+      "complex_transfer_entry_noise_sigma": 0.005,
+      "simulated_trials": 300,
+      "trace_deficit_bias_mean": 4.203746335529335e-05,
+      "trace_deficit_RMSE": 0.002002206846657608,
+      "full_transfer_Frobenius_error_mean": 0.07842573444704132
+    }
+  ],
+  "stale_calibration_drift_examples": [
+    {
+      "drift_eps_rad": 0.0,
+      "uncalibrated_trace_bias": 0.0
+    },
+    {
+      "drift_eps_rad": 0.005,
+      "uncalibrated_trace_bias": -0.00025489117037869047
+    },
+    {
+      "drift_eps_rad": 0.02,
+      "uncalibrated_trace_bias": -0.0008694244642457605
+    }
+  ],
+  "experimental_boundary": "Full complex transfer reconstruction requires MORE measurements than 9 diagonal contrasts. Phase reference drift, loss inside W, detector dark counts, time-dependent M and nonunitary postselection require extra controls. Gaussian matrix-entry noise is synthetic, NOT a calibrated photon-shot-noise model.",
+  "checks": {
+    "diagonal_calibration_unbiased_only_zero_mixing": true,
+    "crosstalk_defeats_diagonal_calibration": true,
+    "full_transfer_inversion_recovers_W": true,
+    "full_transfer_inversion_recovers_null": true,
+    "small_tomography_noise_beats_naive_crosstalk_bias": true,
+    "stale_reference_not_invariant_under_drift": true
+  },
+  "all_checks_pass": true
+}

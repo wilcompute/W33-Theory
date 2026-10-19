@@ -1,0 +1,231 @@
+{
+  "schema": "w33.round8.heptad_continuous_mass_stationarity.v1",
+  "method": "Strictly feasible 7-simplex states using exact 9x9 Pauli projectors. F_T=1-T log Tr exp(Q/T); dF/ds_i=-Tr[rho P_i]. For a 7-clique C=(2/3)(1-s\u00b7s), derivative d(kappa C)/ds_i=-(4/3)kappa s_i. At equal weights, interaction derivatives are identical, so equality of Gibbs gradients is NECESSARY for finite-kappa stationarity.",
+  "temperature": 0.5,
+  "single_tick_F": -0.6690785274449971,
+  "five_family_stationarity": [
+    {
+      "family": 0,
+      "counts": 81,
+      "F_at_equal_weights": -0.4633476742045377,
+      "analytic_7_mass_gradient_range": 0.0029032762886719854,
+      "analytic_gradient": [
+        -0.39491966583718907,
+        -0.394919665837189,
+        -0.3949196658371892,
+        -0.397822942125861,
+        -0.3949196658371891,
+        -0.3949196658371891,
+        -0.3949196658371891
+      ],
+      "equal_weights_stationary_inside_seven_simplex": false
+    },
+    {
+      "family": 1,
+      "counts": 162,
+      "F_at_equal_weights": -0.4633350981474835,
+      "analytic_7_mass_gradient_range": 0.002874000587269998,
+      "analytic_gradient": [
+        -0.39486220701752966,
+        -0.3948622070175296,
+        -0.39486220701752966,
+        -0.39773620760479955,
+        -0.39486220701752955,
+        -0.39486220701752955,
+        -0.39486220701752955
+      ],
+      "equal_weights_stationary_inside_seven_simplex": false
+    },
+    {
+      "family": 2,
+      "counts": 486,
+      "F_at_equal_weights": -0.46457366223878604,
+      "analytic_7_mass_gradient_range": 0.0014385105809111565,
+      "analytic_gradient": [
+        -0.39908229541826334,
+        -0.39908229541826323,
+        -0.39908229541826323,
+        -0.3976437848373522,
+        -0.3990822954182633,
+        -0.3990822954182632,
+        -0.39908229541826323
+      ],
+      "equal_weights_stationary_inside_seven_simplex": false
+    },
+    {
+      "family": 3,
+      "counts": 486,
+      "F_at_equal_weights": -0.46457366223817564,
+      "analytic_7_mass_gradient_range": 0.0014385105894595407,
+      "analytic_gradient": [
+        -0.3990822954140623,
+        -0.3990822954140624,
+        -0.3990822954140623,
+        -0.3976437848246029,
+        -0.3990822954140624,
+        -0.39908229541406237,
+        -0.3990822954140623
+      ],
+      "equal_weights_stationary_inside_seven_simplex": false
+    },
+    {
+      "family": 4,
+      "counts": 972,
+      "F_at_equal_weights": -0.4639568171842271,
+      "analytic_7_mass_gradient_range": 0.0043304431942521315,
+      "analytic_gradient": [
+        -0.3991542513867203,
+        -0.39912494123064773,
+        -0.39915425138672034,
+        -0.39770438179679984,
+        -0.3948238081924682,
+        -0.3948238081924682,
+        -0.3948238081924682
+      ],
+      "equal_weights_stationary_inside_seven_simplex": false
+    }
+  ],
+  "seven_mass_SLSQP_witnesses": [
+    {
+      "kappa": -0.36,
+      "lowest_feasible_E": -0.6716570877768868,
+      "family": 0,
+      "optimized_weights": [
+        0.0382179810538517,
+        0.038217981053840465,
+        0.03821798105383851,
+        0.7706921136769468,
+        0.03821798105384138,
+        0.03821798105384091,
+        0.03821798105384019
+      ],
+      "Gibbs_F": -0.5763122922262063,
+      "C": 0.26484665430744603,
+      "optimizer_success": true,
+      "simplex_sum_residual": 1.1102230246251565e-16,
+      "singleton_E": -0.6690785274449971,
+      "improvement_over_uniform_heptad": 0.0013691398238151464,
+      "beats_single_tick": true,
+      "feasible_gap_below_singleton": -0.0025785603318897454
+    },
+    {
+      "kappa": -0.358,
+      "lowest_feasible_E": -0.671155989384804,
+      "family": 0,
+      "optimized_weights": [
+        0.03346968012745169,
+        0.03346968012744932,
+        0.03346968012745056,
+        0.7991819192353,
+        0.03346968012745071,
+        0.03346968012744877,
+        0.03346968012744883
+      ],
+      "Gibbs_F": -0.5865279056458335,
+      "C": 0.236391295360253,
+      "optimizer_success": true,
+      "simplex_sum_residual": 2.220446049250313e-16,
+      "singleton_E": -0.6690785274449971,
+      "improvement_over_uniform_heptad": 0.0020108985745894703,
+      "beats_single_tick": true,
+      "feasible_gap_below_singleton": -0.002077461939806957
+    },
+    {
+      "kappa": -0.357,
+      "lowest_feasible_E": -0.6709265840391271,
+      "family": 0,
+      "optimized_weights": [
+        0.031216561921960578,
+        0.03121656192195227,
+        0.03121656192196072,
+        0.8127006284682625,
+        0.031216561921954936,
+        0.031216561921953784,
+        0.031216561921955314
+      ],
+      "Gibbs_F": -0.5915129226773403,
+      "C": 0.22244723070528485,
+      "optimizer_success": true,
+      "simplex_sum_residual": 0.0,
+      "singleton_E": -0.6690785274449971,
+      "improvement_over_uniform_heptad": 0.002352921800341079,
+      "beats_single_tick": true,
+      "feasible_gap_below_singleton": -0.0018480565941300098
+    },
+    {
+      "kappa": -0.35,
+      "lowest_feasible_E": -0.6697024364044838,
+      "family": 0,
+      "optimized_weights": [
+        0.017018446781749862,
+        0.01701844678174978,
+        0.017018446781754813,
+        0.8978893193094893,
+        0.017018446781752523,
+        0.017018446781750487,
+        0.0170184467817531
+      ],
+      "Gibbs_F": -0.6248891352180393,
+      "C": 0.1280380033898413,
+      "optimizer_success": true,
+      "simplex_sum_residual": 0.0,
+      "singleton_E": -0.6690785274449971,
+      "improvement_over_uniform_heptad": 0.005128774165697791,
+      "beats_single_tick": true,
+      "feasible_gap_below_singleton": -0.0006239089594867187
+    },
+    {
+      "kappa": -0.34,
+      "lowest_feasible_E": -0.6690785274449971,
+      "family": 0,
+      "optimized_weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Gibbs_F": -0.6690785274449971,
+      "C": 0.0,
+      "optimizer_success": true,
+      "simplex_sum_residual": 0.0,
+      "singleton_E": -0.6690785274449971,
+      "improvement_over_uniform_heptad": 0.010219150920496745,
+      "beats_single_tick": false,
+      "feasible_gap_below_singleton": 0.0
+    },
+    {
+      "kappa": -0.3,
+      "lowest_feasible_E": -0.6690785274449972,
+      "family": 0,
+      "optimized_weights": [
+        2.7755575615628914e-16,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "Gibbs_F": -0.6690785274449972,
+      "C": 0.0,
+      "optimizer_success": true,
+      "simplex_sum_residual": 2.220446049250313e-16,
+      "singleton_E": -0.6690785274449971,
+      "improvement_over_uniform_heptad": 0.033076293777639765,
+      "beats_single_tick": true,
+      "feasible_gap_below_singleton": -1.1102230246251565e-16
+    }
+  ],
+  "claim_boundary": "Feasible seven-support candidate energies refute singleton whenever below F_single. Optimizer output is numerical, not interval-certified or a global 40-point phase boundary; no conclusion about unique heptad phase at intermediate kappa.",
+  "checks": {
+    "all_five_gradient_computed": true,
+    "nonstationary_heptad_family_exists": true,
+    "all_feasible_simplexes_valid": true,
+    "numerical_heptad_improves_equal_weight_trial": true,
+    "noncommuting_feasible_witness_below_known_bound": true
+  },
+  "all_checks_pass": true
+}

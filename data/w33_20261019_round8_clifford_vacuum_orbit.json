@@ -1,0 +1,29 @@
+{
+  "schema": "w33.round8.clifford_stabilizer_of_E8minus24_rank2.v1",
+  "selected_vacuum": "D=I9-2(|2,1><2,1|+|2,2><2,2|); the SU9 real-form selection records TWO basis rays in a single two-qutrit Pauli context.",
+  "contexts_count": 40,
+  "rays_per_context": 9,
+  "pair_vacua_per_context": 36,
+  "orbit_size": 1440,
+  "projective_clifford_group_order": 4199040,
+  "stabilizer_order": 2916,
+  "stabilizer_pauli_translation_order": 9,
+  "remaining_stabilizer_quotient_order": 324,
+  "five_generators": [
+    "F1",
+    "S1",
+    "CZ",
+    "SUM",
+    "SWAP"
+  ],
+  "logic": "Any qutrit stabilizer state supported on at most two computational basis positions is a single basis vector, because stabilizer-state support sizes are powers of three. Hence a Clifford preserving a marked 2D span must permute two basis rays, and maps their unique maximal commuting Pauli context onto itself. Each Pauli context has 36 unordered ray pairs; the five Clifford generators reach all 40*36=1440. Orbit-stabilizer gives 4199040/1440=2916; diagonal Pauli stabilizer order9.",
+  "scope": "This classifies an orbit of discrete *stabilizer-ray-pair* E8(-24) involutions under projective two-qutrit Cliffords. It does NOT classify all continuous SU9-conjugate D or prove vacuum dynamics, observer selection or cosmology.",
+  "checks": {
+    "40_maximal_commuting_contexts": true,
+    "nine_orthogonal_stabilizer_rays_per_context": true,
+    "Clifford_generators_transitive_on_all_1440_rank2_vacua": true,
+    "stabilizer_order_2916": true,
+    "Pauli_translation_stabilizer_order9": true
+  },
+  "all_checks_pass": true
+}

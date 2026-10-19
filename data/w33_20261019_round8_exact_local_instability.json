@@ -1,0 +1,139 @@
+{
+  "schema": "w33.round8.local_instability_sharp_global_exclusion.v1",
+  "theorem": "For T>0 choose any two projective Pauli outcome projectors Pa,Pb from NONCOMMUTING W33 directions. Q_epsilon=(1-epsilon)Pa+epsilon Pb, C(Q_epsilon)=4/3 epsilon(1-epsilon). At epsilon=0, dF_T/d epsilon = [2(1-exp(-1/T))]/[3+6exp(-1/T)]. Thus d(F_T+kappa C)/d epsilon at 0 = [2(1-u)/(3+6u)]+4kappa/3. For kappa< -(3/2)(1-u)/(3+6u) the derivative is strictly negative; a feasible positive epsilon beats singleton. Since every C=0 state has F>=single (previous majorization), every GLOBAL minimizer necessarily has C>0. This is an exact all-temperature global phase EXCLUSION theorem, not merely an unproven local heuristic.",
+  "status": "The true global phase transition remains between the exact sufficient global singleton bound and exact local-instability exclusion bound. We did not prove their equality or obtain full 40-mass global stationary solutions.",
+  "temperature_rows": [
+    {
+      "T": 0.1,
+      "kappa_local_exact_formula_evaluated": -0.4999319062882557,
+      "single_tick_certified_if_kappa_at_least": -0.09994098544982165,
+      "open_boundary_bracket": [
+        -0.4999319062882557,
+        -0.09994098544982165
+      ],
+      "directional_F_prime_at_singleton": 0.6665758750510077,
+      "directional_total_prime_at_kappa_critical": 1.1102230246251565e-16,
+      "epsilon_test_kappa": -0.5099319062882557,
+      "epsilon_test": 0.0001,
+      "energy_difference_feasible_two_tick_vs_singleton": -1.3287615024532018e-06
+    },
+    {
+      "T": 0.2,
+      "kappa_local_exact_formula_evaluated": -0.490027468281701,
+      "single_tick_certified_if_kappa_at_least": -0.18936263283381444,
+      "open_boundary_bracket": [
+        -0.490027468281701,
+        -0.18936263283381444
+      ],
+      "directional_F_prime_at_singleton": 0.6533699577089347,
+      "directional_total_prime_at_kappa_critical": 0.0,
+      "epsilon_test_kappa": -0.500027468281701,
+      "epsilon_test": 0.0001,
+      "energy_difference_feasible_two_tick_vs_singleton": -1.3292094708239333e-06
+    },
+    {
+      "T": 0.5,
+      "kappa_local_exact_formula_evaluated": -0.3402395316211989,
+      "single_tick_certified_if_kappa_at_least": -0.2337325527019981,
+      "open_boundary_bracket": [
+        -0.3402395316211989,
+        -0.2337325527019981
+      ],
+      "directional_F_prime_at_singleton": 0.4536527088282652,
+      "directional_total_prime_at_kappa_critical": 0.0,
+      "epsilon_test_kappa": -0.3502395316211989,
+      "epsilon_test": 0.0001,
+      "energy_difference_feasible_two_tick_vs_singleton": -1.3320888962997657e-06
+    },
+    {
+      "T": 1,
+      "kappa_local_exact_formula_evaluated": -0.18208766357437184,
+      "single_tick_certified_if_kappa_at_least": -0.1522337695316582,
+      "open_boundary_bracket": [
+        -0.18208766357437184,
+        -0.1522337695316582
+      ],
+      "directional_F_prime_at_singleton": 0.24278355143249578,
+      "directional_total_prime_at_kappa_critical": 0.0,
+      "epsilon_test_kappa": -0.19208766357437185,
+      "epsilon_test": 0.0001,
+      "energy_difference_feasible_two_tick_vs_singleton": -1.3330379950993176e-06
+    },
+    {
+      "T": 2,
+      "kappa_local_exact_formula_evaluated": -0.08889707140820452,
+      "single_tick_certified_if_kappa_at_least": -0.08151966657162114,
+      "open_boundary_bracket": [
+        -0.08889707140820452,
+        -0.08151966657162114
+      ],
+      "directional_F_prime_at_singleton": 0.1185294285442727,
+      "directional_total_prime_at_kappa_critical": 1.3877787807814457e-17,
+      "epsilon_test_kappa": -0.09889707140820451,
+      "epsilon_test": 0.0001,
+      "energy_difference_feasible_two_tick_vs_singleton": -1.3331812742656268e-06
+    },
+    {
+      "T": 5,
+      "kappa_local_exact_formula_evaluated": -0.034364339820491585,
+      "single_tick_certified_if_kappa_at_least": -0.03321962475191039,
+      "open_boundary_bracket": [
+        -0.034364339820491585,
+        -0.03321962475191039
+      ],
+      "directional_F_prime_at_singleton": 0.04581911976065545,
+      "directional_total_prime_at_kappa_critical": 0.0,
+      "epsilon_test_kappa": -0.04436433982049159,
+      "epsilon_test": 0.0001,
+      "energy_difference_feasible_two_tick_vs_singleton": -1.333198921926737e-06
+    }
+  ],
+  "T_point5_refined_noncommuting_exclusion_kappa_below": -0.3402395316211989,
+  "T_point5_previous_uniform_heptad_exclusion": -0.35788351411087066,
+  "rational_seven_mass_witness": {
+    "T": 0.5,
+    "heptad_indices": [
+      0,
+      4,
+      5,
+      9,
+      24,
+      27,
+      30
+    ],
+    "outcome_labels": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      1
+    ],
+    "seven_rational_weights": [
+      "1/60",
+      "1/60",
+      "1/60",
+      "9/10",
+      "1/60",
+      "1/60",
+      "1/60"
+    ],
+    "F_T": -0.6257577589962857,
+    "commutator_C": 0.12555555555555542,
+    "single_F": -0.6690785274449972,
+    "kappa_star_below_which_this_fixed_witness_wins": -0.34503266906053415,
+    "E_at_kappa_minus_035": -0.6697022034407301,
+    "gap_below_single_at_minus_035": -0.0006236759957328752
+  },
+  "prior_art": "The formula for local singleton instability appeared in the earlier round3 work. NEW here is the explicit rigorous implication for all global minimizers (using C=0 Gibbs majorization), and an optimizer-independent rational heptad witness. Credit the previous result; do not call the derivative novel.",
+  "checks": {
+    "exact_derivative_zero_at_local_threshold": true,
+    "pairwise_two_tick_feasible_direction_beats_singleton": true,
+    "local_instability_improves_previous_global_exclusion": true,
+    "rational_heptad_witness_valid": true,
+    "rational_heptad_witness_beats_single_at_negative_035": true,
+    "global_single_sufficient_vs_local_exclusion_separated": true
+  },
+  "all_checks_pass": true
+}

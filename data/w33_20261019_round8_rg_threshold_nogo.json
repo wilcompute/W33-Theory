@@ -1,0 +1,87 @@
+{
+  "schema": "w33.round8.rg_threshold_scale_nogo.v1",
+  "model": "Illustrative one-loop SU3 with bUV=9 (3 Dirac flavors) and bIR=11 (0 active flavors) below a matter threshold M, matching continuous g at mu=M. This is conditional gauge-model analysis, NOT a derived W33/E8 field action.",
+  "UV_gauge_reference_GeV": 1000000000000.0,
+  "UV_g": 0.62,
+  "UV_Lambda_b9_GeV": 122.5462002538655,
+  "thresholds": [
+    {
+      "matching_threshold_GeV": 1000.0,
+      "IR_one_loop_Lambda_GeV": 179.49961171042287,
+      "closed_form_Lambda_GeV": 179.49961171042287,
+      "relative_closed_form_residual": 0.0
+    },
+    {
+      "matching_threshold_GeV": 10000.0,
+      "IR_one_loop_Lambda_GeV": 272.8234492244207,
+      "closed_form_Lambda_GeV": 272.8234492244199,
+      "relative_closed_form_residual": 2.886579864025407e-15
+    },
+    {
+      "matching_threshold_GeV": 1000000.0,
+      "IR_one_loop_Lambda_GeV": 630.2575529324636,
+      "closed_form_Lambda_GeV": 630.2575529324621,
+      "relative_closed_form_residual": 2.4424906541753444e-15
+    },
+    {
+      "matching_threshold_GeV": 1000000000.0,
+      "IR_one_loop_Lambda_GeV": 2212.9551102831206,
+      "closed_form_Lambda_GeV": 2212.955110283116,
+      "relative_closed_form_residual": 1.9984014443252818e-15
+    },
+    {
+      "matching_threshold_GeV": 100000000000.0,
+      "IR_one_loop_Lambda_GeV": 5112.21332521581,
+      "closed_form_Lambda_GeV": 5112.213325215829,
+      "relative_closed_form_residual": 3.774758283725532e-15
+    }
+  ],
+  "two_sector_threshold_ratio": 12.328467394420679,
+  "analytic_ratio_power": 0.18181818181818177,
+  "UV_coupling_variation": [
+    {
+      "UV_g": 0.42,
+      "UV_Lambda_GeV": 2.5178761641272563e-10
+    },
+    {
+      "UV_g": 0.5,
+      "UV_Lambda_GeV": 0.0005751350682196821
+    },
+    {
+      "UV_g": 0.62,
+      "UV_Lambda_GeV": 122.5462002538655
+    },
+    {
+      "UV_g": 0.75,
+      "UV_Lambda_GeV": 168486.21626535922
+    }
+  ],
+  "kinetic_form_normalization_examples": [
+    {
+      "K_rescale": 0.1,
+      "quadratic_action_difference": 0.0
+    },
+    {
+      "K_rescale": 1,
+      "quadratic_action_difference": 0.0
+    },
+    {
+      "K_rescale": 3,
+      "quadratic_action_difference": 0.0
+    },
+    {
+      "K_rescale": 13,
+      "quadratic_action_difference": 0.0
+    }
+  ],
+  "parameter_identifiability": "Even if E8 forces g_C=g_L=g_R at a single UV reference, equality of dimensionless tree-level couplings only predicts matching 1-loop Lambda ratios if beta functions AND thresholds match. Unknown symmetry-breaking masses M_i make Lambda_i/Lambda_j=(M_i/M_j)^(1-bUV/bIR) variable. The simple algebra fixes the invariant quadratic form only up to normalization; neither its Cartan integers nor W33 counts determine the action's positive kinetic coefficient or the UV reference energy.",
+  "physical_limits": "Single-coupling one-loop decoupling toy model; ignores threshold matching finite corrections, Yukawa/scalar multiplets, higher loops and gravity. Realistic unified E8(-24) noncompact gauge sectors require separate unitarity/ghost analysis before a physical interpretation.",
+  "checks": {
+    "all_one_loop_threshold_match_closed_form": true,
+    "unification_unequal_thresholds_break_equal_Lambda": true,
+    "threshold_ratio_analytic_law": true,
+    "free_UV_g_changes_generated_scale_by_orders": true,
+    "kinetic_normalization_scalar_redundancy": true
+  },
+  "all_checks_pass": true
+}
