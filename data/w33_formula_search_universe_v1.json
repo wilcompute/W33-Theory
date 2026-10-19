@@ -526030,18 +526030,26 @@
       "structural_formula": "=#*#*#=#MeV"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "e025a25315e6164e4c34efed1f55bfc006a05b56abaa0b771c81d4275e53b99d",
       "normalized_formula": "=40",
       "numeric_literals": [
         "40"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "papers/forty_points/appA_ledger.tex",
         "single_photon_universal_computation.tex"
       ],
       "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 596,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "=40",
+          "status": "unclassified"
+        },
         {
           "category": "inline_math",
           "line": 578,
@@ -526051,7 +526059,7 @@
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "unclassified": 2
       },
       "structural_family_id": "10ce42759858c89d948896559f11e37c82428db33b5f4ed0396fdec0e5d88d11",
       "structural_formula": "=#"
@@ -526084,6 +526092,33 @@
       },
       "structural_family_id": "3db37f9d8b1f56fad5d831d24d82f4cb3aae32617ac89529fe6776625d41b8d1",
       "structural_formula": "=#qudits;symplecticstructureofPG(#,#)definesstabilizercode;graphminimalcuts=entanglement"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "716a5254f39e6fdb2a58f0faaed9dc8b2cb4f203c13c73c560ac5d28c186e48f",
+      "normalized_formula": "=45",
+      "numeric_literals": [
+        "45"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 596,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "=45",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "10ce42759858c89d948896559f11e37c82428db33b5f4ed0396fdec0e5d88d11",
+      "structural_formula": "=#"
     },
     {
       "file_count": 1,
@@ -599544,6 +599579,37 @@
       },
       "structural_family_id": "4b7889fa57859ac85f774d2b8a83737e170772880e82ca98603e7e2846246640",
       "structural_formula": "E8_theta={n:#*sigma3(n)forninrange(#,#)}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b7025d9bacc46c1c66d3565faba8ca61b5d4cc8728d88b85343de57d5ba5d0e7",
+      "normalized_formula": "E8istheta_h,hinE8/2E8,withrootsign(-1)^<h,a>anddimk=8+#{evenroots}.Onafibrea+wa+w^2a=0,so",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "2",
+        "2E8",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12052_real_forms_on_forty_points.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass12052_real_forms_on_forty_points.py",
+          "raw": "E8 is theta_h, h in E8/2E8, with root sign (-1)^<h,a> and dim k = 8 + #{even roots}. On a fibre a + wa + w^2 a = 0, so",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "ea89cf99c6a1472f2feff69e8de1385aa14ec75fd70b7ec05d8c1d23fd784c86",
+      "structural_formula": "E8istheta_h,hinE8/#,withrootsign(#)^<h,a>anddimk=#+#{evenroots}.Onafibrea+wa+w^#a=#,so"
     },
     {
       "file_count": 1,
@@ -948135,7 +948201,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 120,
+          "line": 123,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "\\item \\textbf{Chirality from outside.} Corollary~9.7 shows that reversing time's orientation,",
           "status": "unclassified"
@@ -960441,6 +960507,34 @@
       },
       "structural_family_id": "3968c6ce8c42163ba1f357d64bf07a235db73a37d323f823dda26dc26deefc21",
       "structural_formula": "\\mathbbC^#=(\\text{Cabibboplane})\\oplus(\\text{solarplane})\\oplus(\\text{reactorplane})\\oplus(\\text{atmosphericplane})\\oplus(\\text{sentinel})"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a051276caf916ce6f8f9d1cbbfe19e1d834a09ef071251c31adab6cf299b8e44",
+      "normalized_formula": "\\mathbbC^9=\\mathbbC^3\\otimes\\mathbbC^3",
+      "numeric_literals": [
+        "3",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 214,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "\\mathbb C^9=\\mathbb C^3\\otimes\\mathbb C^3",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "74d88a9614e66464fa3d5af726afe3edcb5ae4dd5d88ccca5c542e0c35c35a17",
+      "structural_formula": "\\mathbbC^#=\\mathbbC^#\\otimes\\mathbbC^#"
     },
     {
       "file_count": 1,
@@ -973689,7 +973783,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 598,
+          "line": 599,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1008187,7 +1008281,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 157,
+          "line": 160,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "\\varepsilon\\approx1/150",
           "status": "unclassified"
@@ -1370712,7 +1370806,7 @@
         },
         {
           "category": "inline_math",
-          "line": 195,
+          "line": 198,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_1\\approx0.8",
           "status": "unclassified"
@@ -1380049,7 +1380143,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 597,
+          "line": 598,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1385183,7 +1385277,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 597,
+          "line": 598,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1401086,7 +1401180,7 @@
         },
         {
           "category": "inline_math",
-          "line": 144,
+          "line": 147,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_um_t/m_c^2=|\\mathfrak f(\\tau_1)\\mathfrak f(\\tau_2)|^8/4",
           "status": "unclassified"
@@ -1793745,7 +1793839,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 597,
+          "line": 598,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1842232,9 +1842326,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-18T19:43:53-04:00",
+  "frozen_at": "2026-10-18T19:59:00-04:00",
   "pass": 398,
-  "repository_head": "db4dc654eccad366dc1e972a43838d607b208275",
+  "repository_head": "ef60042f0f99a44862116b58dcef46cea291f505",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1982866,6 +1982960,7 @@
         "a32173c7c1d98bf99f36450039b699982a813c6e5a5858072504b9a79465584d",
         "91188cd5da3f7ca6e4f640f5a9ef6f512491f3adea419d2b502b1bd8078a5357",
         "e025a25315e6164e4c34efed1f55bfc006a05b56abaa0b771c81d4275e53b99d",
+        "716a5254f39e6fdb2a58f0faaed9dc8b2cb4f203c13c73c560ac5d28c186e48f",
         "8b957d947ce64268a6b964375499b386b100d129692aa35924fd413f48506f98",
         "63f9bc545dba6686e8b0a2262d028bf8fb53b04572d9f455913257d242d9abe2",
         "270f84c357475286309fc9e616cdeae962c3caa07c42f4a49fb18e0eb24d05fa",
@@ -1982875,7 +1982970,7 @@
         "b0885081a097be7e23d1f7adc3d0a83e6b90113061962f24cfa8a8b94db2911c",
         "5fc30d53d34373b509bca23753fb19736506871596423df3daedefb7ca903a74"
       ],
-      "exact_member_count": 26,
+      "exact_member_count": 27,
       "structural_family_id": "10ce42759858c89d948896559f11e37c82428db33b5f4ed0396fdec0e5d88d11",
       "structural_formula": "=#"
     },
@@ -2003744,6 +2003839,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4b7889fa57859ac85f774d2b8a83737e170772880e82ca98603e7e2846246640",
       "structural_formula": "E8_theta={n:#*sigma3(n)forninrange(#,#)}"
+    },
+    {
+      "exact_formula_ids": [
+        "b7025d9bacc46c1c66d3565faba8ca61b5d4cc8728d88b85343de57d5ba5d0e7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ea89cf99c6a1472f2feff69e8de1385aa14ec75fd70b7ec05d8c1d23fd784c86",
+      "structural_formula": "E8istheta_h,hinE8/#,withrootsign(#)^<h,a>anddimk=#+#{evenroots}.Onafibrea+wa+w^#a=#,so"
     },
     {
       "exact_formula_ids": [
@@ -2099476,6 +2099579,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3968c6ce8c42163ba1f357d64bf07a235db73a37d323f823dda26dc26deefc21",
       "structural_formula": "\\mathbbC^#=(\\text{Cabibboplane})\\oplus(\\text{solarplane})\\oplus(\\text{reactorplane})\\oplus(\\text{atmosphericplane})\\oplus(\\text{sentinel})"
+    },
+    {
+      "exact_formula_ids": [
+        "a051276caf916ce6f8f9d1cbbfe19e1d834a09ef071251c31adab6cf299b8e44"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "74d88a9614e66464fa3d5af726afe3edcb5ae4dd5d88ccca5c542e0c35c35a17",
+      "structural_formula": "\\mathbbC^#=\\mathbbC^#\\otimes\\mathbbC^#"
     },
     {
       "exact_formula_ids": [
@@ -2334614,20 +2334725,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89498315,
-    "exact_formula_families": 63003,
-    "files_scanned": 12262,
-    "formula_occurrences": 69038,
+    "bytes_scanned": 89514453,
+    "exact_formula_families": 63006,
+    "files_scanned": 12264,
+    "formula_occurrences": 69042,
     "status_occurrences": {
-      "certified_or_theorem": 5116,
+      "certified_or_theorem": 5117,
       "killed_or_retracted": 1810,
       "open_or_conditional": 2317,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54430
+      "unclassified": 54433
     },
-    "structural_families": 61333
+    "structural_families": 61335
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "1e965a8e6325c6f3184ecb7a27ea351036376fa37a2b7380a21650232c1e468d"
+  "universe_sha256": "9f735827b73324a7194fa5d7eb6c333fc5460391928549fb2ea7fb6bfefddf75"
 }
