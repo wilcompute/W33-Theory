@@ -1,0 +1,53 @@
+{
+  "signed_line_signs": [
+    1,
+    1,
+    -1,
+    -1
+  ],
+  "phases": {
+    "event_V15": {
+      "symmetry": 1296,
+      "observer_orbits": [
+        36
+      ]
+    },
+    "event_V24": {
+      "symmetry": 1296,
+      "observer_orbits": [
+        36
+      ]
+    },
+    "staggered_factorisation_V15": {
+      "symmetry": 576,
+      "observer_orbits": [
+        12,
+        24
+      ]
+    },
+    "isotropic_line_V24": {
+      "symmetry": 1296,
+      "observer_orbits": [
+        9,
+        27
+      ]
+    },
+    "signed_hyperbolic_line_V24": {
+      "symmetry": 96,
+      "observer_orbits": [
+        12,
+        24
+      ]
+    }
+  },
+  "event_symmetry_order3_elements": 98,
+  "checks": {
+    "second realisation reproduces all five exact 12054 invariants": true,
+    "no phase fixes an observer (frame-free)": true,
+    "event phase: 1296, transitive on the 36 observers": true,
+    "context phase: 1296, observers 9 + 27, the 9 = observers whose sky contains the context": true,
+    "staggered factorisation 576 and signed hyperbolic line 96: observers 12 + 24, the 12 = J swapping H1, H2": true,
+    "event phase symmetry has order-3 elements outside the clock group's 26 (permutes the three clocks)": true
+  },
+  "all_checks_pass": true
+}

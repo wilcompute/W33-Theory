@@ -1,0 +1,17 @@
+{
+  "high_T_coefficient": [
+    0.05500289113058443,
+    0.05445644768453661,
+    0.053380986089757165
+  ],
+  "unequal_weights_min_gap": 1.41503235795426e-08,
+  "checks": {
+    "exact two-tick spectra: same {1^6,2^3}, collinear {0,1^4,2^4}, far {(1-+1/sqrt3)^3, 2^3} (all 119 partners)": true,
+    "closed forms reproduce the model free energies, T in [0.01, 100]": true,
+    "identity Z_col - Z_far = 4x[sinh^2(b/2) - 3 sinh^2(b/(2 sqrt3))] > 0 and Z_col - Z_same = (1-x)^2": true,
+    "high-T: the gap closes at fourth order, (Z_col - Z_far)/beta^4 -> 1/18 (sympy: b^4/18 - b^5/18 + ...)": true,
+    "F_col < F_far < F_same at every T on the grid": true,
+    "unequal weights (t, 1-t), 19 x 5 grid: collinear below every non-collinear pair": true
+  },
+  "all_checks_pass": true
+}

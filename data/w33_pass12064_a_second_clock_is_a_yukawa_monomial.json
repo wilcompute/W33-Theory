@@ -1,0 +1,33 @@
+{
+  "orbit_sizes": {
+    "one_clock": [
+      27
+    ],
+    "collinear_pair": [
+      3,
+      3,
+      3,
+      6,
+      6,
+      6
+    ],
+    "far_pair": [
+      1,
+      1,
+      1,
+      8,
+      8,
+      8
+    ]
+  },
+  "checks": {
+    "27 weights of E6(p): norms 4/3, others 1/3 (x16) and -2/3 (x10)": true,
+    "each far fibre carries one tritangent (E6 cubic monomial); 45 tritangents in all": true,
+    "the 27 far points give 9 tritangents, 3 points each, partitioning the 27 weights": true,
+    "orbits on the 27 (mod -1): one clock 27; collinear pair 3,3,3,6,6,6; far pair 1,1,1,8,8,8": true,
+    "far pair: the 3 fixed weights are exactly the second clock's monomial": true,
+    "E6 roots orthogonal to the monomial: 24, rank 4 (D4) = the fibres of the 4 common neighbours {p,q}^perp": true,
+    "triality: the three 8-orbits are minuscule D4 weight systems, pairwise distinct (8_v, 8_s, 8_c)": true
+  },
+  "all_checks_pass": true
+}

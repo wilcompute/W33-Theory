@@ -264,6 +264,26 @@ measurable) events $p,q$ the common symmetry is $\pm1\times S_3$, and it fixes e
 with $Jp=q$, in which the two events are each other's time reverse. For non-collinear events the common symmetry
 is $C_2\times Q_8$, pure spin without translations, and it fixes no observer. \cert{w33\_pass12060\_relativity\_principle\_for\_the\_clock\_vacuum.py}
 
+\paragraph{Two clocks.}
+Four further facts complete the two-clock picture. \emph{Compatible clocks condense together:} in the
+microscopic tick model two ticks at collinear events have spectrum $\{0,1^4,2^4\}$ and at non-collinear events
+$\{(1\mp1/\sqrt3)^3,2^3\}$, and $Z_{\rm col}-Z_{\rm far}=4e^{-\beta}[\sinh^2(\beta/2)-3\sinh^2(\beta/2\sqrt3)]>0$ at every
+temperature, so a two-clock condensate carries rest frames. \cert{w33\_pass12061\_compatible\_clocks\_condense\_together.py}
+\emph{Clocks compose:} the three clocks at one event and the identity form a Klein four-group; two clocks at
+collinear events always compose to a split involution (of the three factorisations separating the other two
+events of their context); two at non-collinear events compose to the clocks of the other two events of their
+hyperbolic line or to the split of the factorisation they span. \cert{w33\_pass12062\_composing\_clocks\_in\_e8.py}
+\emph{A second clock is a Yukawa monomial:} each far fibre carries a zero-sum tritangent of the $27$ of
+$E_6(p)$, and for two non-collinear clocks the common symmetry splits one generation as
+$27=1+1+1+8_v+8_s+8_c$, the $\mathrm{Spin}(8)$ triality branching, with the singlets on the second clock and the
+$D_4$ given by the fibres of the four common neighbours. \cert{w33\_pass12064\_a\_second\_clock\_is\_a\_yukawa\_monomial.py}
+\emph{No Landau phase has a rest frame:} rebuilt in an independent model, every phase of the point
+condensate fixes no observer, and the event phase does not choose among the three clocks; both the clock and
+the rest frame are tick-level order parameters. \cert{w33\_pass12065\_landau\_phases\_have\_no\_rest\_frame.py}
+
+\paragraph{Beyond $q=3$.}
+At $q=5$ observers are the $300$ $\mathbb F_{25}$-structures, with Lorentz group $SL(2,25)$, and the point stabiliser is still transitive on them. The index-$5$ analogue of the clock group, $U{:}(C_4\times SL(2,3))$, is not normal, and no pair of such clocks fixes an observer. The relativity principle survives, but the mirror rest frames are special to $q=3$, where the clock group is normal because $Q_8\triangleleft SL(2,3)$. By Galois's theorem on $PSL(2,q)$, index-$q$ clock analogues exist only for $q\le 11$. \cert{w33\_pass12063\_clocks\_beyond\_q3.py}
+
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse
 clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it

@@ -1,0 +1,13 @@
+{
+  "pairs": {
+    "collinear": 480,
+    "far": 1080
+  },
+  "checks": {
+    "120 clocks (3 per point), 135 splits (3 per factorisation of 8 points)": true,
+    "same event: the 3 clocks and 1 form a Klein four-group (c1 c2 = c3)": true,
+    "collinear p,q: all 9 products split = the 9 involutions of the 3 factorisations separating r and s": true,
+    "non-collinear p,q: 6 products = the clocks at r, s (3 each); 3 = the splits of <p,q> + <p,q>^perp": true
+  },
+  "all_checks_pass": true
+}

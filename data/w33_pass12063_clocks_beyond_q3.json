@@ -1,0 +1,15 @@
+{
+  "sources": {
+    "q_general": "rerun",
+    "q5_clock": "rerun"
+  },
+  "checks": {
+    "q = 3 control: 72 J, 36 observers, |C(J)| = 720, Stab(p) 1296 transitive on observers": true,
+    "q = 5: |Sp(4,5)| = 9360000, 600 J, 300 observers, |C(J)| = 15600 = |SL(2,25)|": true,
+    "q = 5: Stab(p) = 60000, transitive on the 300 observers; index <= 5 classes: 2, 4, 5 once each": true,
+    "q = 3: full point-stabiliser pairs fix no observer (108 collinear, 48 non-collinear)": true,
+    "q = 5: index-5 clock analogue U:(C4 x SL(2,3)), 5 conjugates, not normal, transitive on observers": true,
+    "q = 5: no clock pair fixes an observer (collinear 80; non-collinear 24 or 96)": true
+  },
+  "all_checks_pass": true
+}
