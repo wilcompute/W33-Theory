@@ -1,0 +1,57 @@
+{
+  "schema": "w33.round5.e8_repo_basis_248_intertwiner.v1",
+  "basis_origin": "Repository analysis/w33_pass11681_e8_from_two_qutrits.py e8_basis(), full bracket gamma=-1; analysis/w33_pass11687_11691_two_qutrit_e8_dictionary.py E8Data.act()",
+  "explicit_embedding": "J248[:,j]=(Slp@vec(P_p0-P_p1 or P_p0-P_p2), zeros84, zeros84); injects 80D two-qutrit traceless contrasts into first 80 basis vectors of the repository 248 basis.",
+  "J248_shape": [
+    248,
+    80
+  ],
+  "J248_rank": 80,
+  "per_generator": [
+    {
+      "generator": "F1",
+      "e8_248_embedding_equivariance": 1.760708794661553e-14,
+      "repository_full_E8_bracket_automorphism_residual": 1.9715444411805265e-13,
+      "old_operator80_coordinates_residual": 3.221925118266413e-15
+    },
+    {
+      "generator": "S1",
+      "e8_248_embedding_equivariance": 1.6773326674477688e-14,
+      "repository_full_E8_bracket_automorphism_residual": 7.680619261771286e-14,
+      "old_operator80_coordinates_residual": 2.414131487428759e-15
+    },
+    {
+      "generator": "CZ",
+      "e8_248_embedding_equivariance": 1.9123226964095808e-14,
+      "repository_full_E8_bracket_automorphism_residual": 1.0703870353204853e-13,
+      "old_operator80_coordinates_residual": 3.730415446859024e-15
+    },
+    {
+      "generator": "SUM",
+      "e8_248_embedding_equivariance": 1.8119269044276142e-14,
+      "repository_full_E8_bracket_automorphism_residual": 4.920279982389348e-14,
+      "old_operator80_coordinates_residual": 2.9731092038567544e-15
+    },
+    {
+      "generator": "SWAP",
+      "e8_248_embedding_equivariance": 1.4947147609132593e-14,
+      "repository_full_E8_bracket_automorphism_residual": 9.251743714361036e-14,
+      "old_operator80_coordinates_residual": 2.695101830894567e-15
+    }
+  ],
+  "max_operator_reconstruction_residual": 3.85674447133841e-15,
+  "jacobi_27_grade_case_max_residual": 1.2868476258827026e-13,
+  "jacobi_coefficient_fit": [
+    -1.0,
+    2.8220516768585165e-17
+  ],
+  "physical_scope": "This IS an explicit 80->248 coordinate matrix in the repository's existing elementary sl9/exterior basis, and 5-generator bracket automorphism regression. It is NOT a new E8 construction; Pass11681 had the bracket and Jacobi certificate already. It is NOT an explicit normalized 248 Chevalley-root basis map, E8(-24) real form proof, or a physical matter Hamiltonian.",
+  "checks": {
+    "80_to_repository_248_rank": true,
+    "operator_basis_reconstructs": true,
+    "all_five_repository_248_intertwiners": true,
+    "full_repo_E8_bracket_automorphism": true,
+    "repository_mixed_Jacobi_27_cases": true
+  },
+  "all_checks_pass": true
+}

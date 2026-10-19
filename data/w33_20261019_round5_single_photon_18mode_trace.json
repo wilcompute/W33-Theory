@@ -1,0 +1,158 @@
+{
+  "schema": "w33.round5.single_photon_18mode_trace.v1",
+  "architecture": "ONE PHOTON: 2 path modes (ancilla) x 9 OAM/time-bin/spatial register modes. Two balanced path couplers H and a one-arm 9x9 loop W; mode count 18. Nine equiprobable basis inputs yield I9/9, no genuine two-photon controlled operation required.",
+  "basis": "|path> tensor |j> for j=0,...,8; deterministic classical preparation of j per trial",
+  "network": "H2 x I9; path-controlled W=diag(I9,W); H2 x I9; measure port-0 vs port-1, sum over 9 internal output modes.",
+  "controlled_loop_compilation": "W=U_P(theta) G U_P(theta) G^dag U_P(-theta) G U_P(-theta) G^dag, G=CZ*(F3 tensor I3); 4 rank3 projector phase pulses, 2 G and 2 G^dag, 2 path Hadamards; 9 mode hardware on signal arm only.",
+  "coherent_gate_not_required": "No photon-photon entangling gate. One coherent photon carrying path+9-mode DOFs implements ideal transfer matrix. Large detector arrays / mode sorter and interferometric stability still required.",
+  "per_input_signal": [
+    {
+      "input_9mode_basis_j": 0,
+      "ancilla_0_probability": 0.7777777777777775,
+      "ancilla_1_probability": 0.22222222222222227,
+      "X_mean": 0.5555555555555551,
+      "exact_Real_diagonal_W": 0.5555555555555556
+    },
+    {
+      "input_9mode_basis_j": 1,
+      "ancilla_0_probability": 0.7777777777777776,
+      "ancilla_1_probability": 0.2222222222222222,
+      "X_mean": 0.5555555555555554,
+      "exact_Real_diagonal_W": 0.5555555555555557
+    },
+    {
+      "input_9mode_basis_j": 2,
+      "ancilla_0_probability": 0.7777777777777775,
+      "ancilla_1_probability": 0.22222222222222215,
+      "X_mean": 0.5555555555555554,
+      "exact_Real_diagonal_W": 0.5555555555555557
+    },
+    {
+      "input_9mode_basis_j": 3,
+      "ancilla_0_probability": 0.8888888888888887,
+      "ancilla_1_probability": 0.11111111111111105,
+      "X_mean": 0.7777777777777777,
+      "exact_Real_diagonal_W": 0.7777777777777779
+    },
+    {
+      "input_9mode_basis_j": 4,
+      "ancilla_0_probability": 0.8888888888888888,
+      "ancilla_1_probability": 0.11111111111111108,
+      "X_mean": 0.7777777777777778,
+      "exact_Real_diagonal_W": 0.7777777777777779
+    },
+    {
+      "input_9mode_basis_j": 5,
+      "ancilla_0_probability": 0.8888888888888885,
+      "ancilla_1_probability": 0.11111111111111108,
+      "X_mean": 0.7777777777777775,
+      "exact_Real_diagonal_W": 0.7777777777777778
+    },
+    {
+      "input_9mode_basis_j": 6,
+      "ancilla_0_probability": 0.8888888888888887,
+      "ancilla_1_probability": 0.11111111111111105,
+      "X_mean": 0.7777777777777777,
+      "exact_Real_diagonal_W": 0.7777777777777779
+    },
+    {
+      "input_9mode_basis_j": 7,
+      "ancilla_0_probability": 0.8888888888888888,
+      "ancilla_1_probability": 0.11111111111111105,
+      "X_mean": 0.7777777777777778,
+      "exact_Real_diagonal_W": 0.777777777777778
+    },
+    {
+      "input_9mode_basis_j": 8,
+      "ancilla_0_probability": 0.8888888888888888,
+      "ancilla_1_probability": 0.11111111111111105,
+      "X_mean": 0.7777777777777778,
+      "exact_Real_diagonal_W": 0.7777777777777779
+    }
+  ],
+  "per_input_commuting_null": [
+    {
+      "input_9mode_basis_j": 0,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 1,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 2,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 3,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 4,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 5,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 6,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 7,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    },
+    {
+      "input_9mode_basis_j": 8,
+      "ancilla_0_probability": 0.9999999999999996,
+      "ancilla_1_probability": 5.004680467665246e-34,
+      "X_mean": 0.9999999999999996,
+      "exact_Real_diagonal_W": 1.0
+    }
+  ],
+  "mean_signal": {
+    "X_mean": 0.7037037037037036,
+    "exact_Real_diagonal_W": 0.7037037037037037
+  },
+  "mean_null": 0.9999999999999996,
+  "expected_trace": 0.7037037037037037,
+  "compiled_loop_residual": 1.483232193020158e-15,
+  "unitarity_residual": 1.829432439920276e-15,
+  "ideal_deficit": 0.2962962962962963,
+  "prior_art": "Generic single-photon OAM/path controlled unitaries and DQC1 trace interferometry are established: https://link.springer.com/article/10.1140/epjqt/s40507-022-00142-1 and https://link.springer.com/article/10.1007/s13538-025-02006-2",
+  "scope": "This is an ideal network synthesis, not experimental calibration or evidence of universal photonic/TOE computation. Rank3 phase shifts in OAM/time-bin register and controlled beam paths require hardware-specific designs.",
+  "checks": {
+    "18mode_optical_transfer_unitary": true,
+    "four_projector_pulses_compose": true,
+    "normalized_trace_averaging": true,
+    "ideal_deficit_noncommuting_8_over_27": true,
+    "commuting_control_null": true,
+    "probabilities_within_zero_one": true
+  },
+  "all_checks_pass": true
+}

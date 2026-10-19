@@ -1,0 +1,196 @@
+{
+  "schema": "w33.round5.e8_fermion_center_and_heptad.v1",
+  "prior_art": "Repo Pass 11681 constructs e8=sl9+Lambda3+Lambda3* and Pass 11687-91 documents matter grades; earlier October-19 packets proved outcome-vertex reduction. The SU9/mu3 central-kernel obstruction is a representation-theoretic consequence, not a novel E8 classification.",
+  "matter_sector_center_obstruction": {
+    "central_element": "omega I_9, omega=e^(2pi*i/3), det(omega I_9)=1",
+    "fundamental9_character": [
+      -0.4999999999999998,
+      0.8660254037844385
+    ],
+    "E8_grade_characters": {
+      "sl9": [
+        1,
+        0
+      ],
+      "Lambda3": [
+        0.9999999999999993,
+        -2.220446049250313e-16
+      ],
+      "Lambda6": [
+        0.9999999999999986,
+        -4.440892098500626e-16
+      ]
+    },
+    "full_248_central_element_identity_residual": 1.5100665727558131e-15,
+    "fundamental_nontrivial_center_residual": 1.732050807568877,
+    "representation_theorem": "SU9->E8 has kernel mu3. The fundamental 9 of SU9 is nontrivial on this kernel, hence cannot be a linear representation of the embedded SU9/mu3 subgroup of E8. Neither sl9 nor Lambda3 nor Lambda6 contains a 9 SU9 representation. Therefore a nine-fundamental-fermion matter bath is not supplied by the E8 adjoint branching alone.",
+    "scope": "Does not forbid externally added fundamental fermions after lifting gauge group, symmetry breaking, charged defects or projective representations; no natural mu=1/2 follows.",
+    "pass": true
+  },
+  "heptad_outcome_exhaustive": {
+    "seven_clique": [
+      0,
+      4,
+      5,
+      9,
+      24,
+      27,
+      30
+    ],
+    "outcome_assignments_enumerated": 2187,
+    "distinct_eigenspectra_at_10_decimal_precision": 5,
+    "eigenspectrum_family_sizes": [
+      81,
+      162,
+      486,
+      486,
+      972
+    ],
+    "temperature_census": [
+      {
+        "T": 0.1,
+        "minimum_F": 0.3117467139355852,
+        "maximum_F": 0.32540443399174446,
+        "spread_F": 0.013657720056159284,
+        "argmin_outcomes": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "argmax_outcomes": [
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          0
+        ],
+        "all_zero_outcome_F": 0.31787415749179615,
+        "all_zero_outcome_rank": 973,
+        "number_nearly_optimal": 486
+      },
+      {
+        "T": 0.2,
+        "minimum_F": 0.14779224639653224,
+        "maximum_F": 0.1539857548010574,
+        "spread_F": 0.00619350840452515,
+        "argmin_outcomes": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "argmax_outcomes": [
+          0,
+          2,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "all_zero_outcome_F": 0.15080449096651774,
+        "all_zero_outcome_rank": 973,
+        "number_nearly_optimal": 486
+      },
+      {
+        "T": 0.5,
+        "minimum_F": -0.4645736622387863,
+        "maximum_F": -0.4633350981474833,
+        "spread_F": 0.0012385640913030183,
+        "argmin_outcomes": [
+          1,
+          2,
+          0,
+          2,
+          0,
+          0,
+          1
+        ],
+        "argmax_outcomes": [
+          0,
+          2,
+          0,
+          1,
+          2,
+          2,
+          2
+        ],
+        "all_zero_outcome_F": -0.4639568171842271,
+        "all_zero_outcome_rank": 973,
+        "number_nearly_optimal": 972
+      },
+      {
+        "T": 1.0,
+        "minimum_F": -1.546724008431328,
+        "maximum_F": -1.5464036883719015,
+        "spread_F": 0.00032032005942661534,
+        "argmin_outcomes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "argmax_outcomes": [
+          0,
+          0,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "all_zero_outcome_F": -1.5465639959049917,
+        "all_zero_outcome_rank": 973,
+        "number_nearly_optimal": 972
+      },
+      {
+        "T": 2.0,
+        "minimum_F": -3.7358008502239652,
+        "maximum_F": -3.735720091091973,
+        "spread_F": 8.075913199245832e-05,
+        "argmin_outcomes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "argmax_outcomes": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "all_zero_outcome_F": -3.735760479605346,
+        "all_zero_outcome_rank": 973,
+        "number_nearly_optimal": 972
+      }
+    ],
+    "noncommutation_C": "4/7 for every one of the 3^7 assignments at uniform s=1/7",
+    "significance": "Previous 40-rate scans fixed k=0; exactly 3^7 choices on this heptad have DIFFERENT Gibbs energies. Fixed identical outcomes is not globally justified.",
+    "pass": true
+  },
+  "checks": {
+    "E8_central_obstruction": true,
+    "heptad_outcome_census": true,
+    "outcome_energy_spread_detected": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "w33.round5.conditional_commutator_anomaly.v1",
+  "extra_hypothesis": "W_eta = exp(i eta K)*[U_P(theta) U_Q(theta+epsilon) U_P(-theta) U_Q(-theta-epsilon)], K=i[P,Q] Hermitian. eta supplied, not derived. Entire model STILL quantum mechanics with an extra gate; not TOE-exclusive.",
+  "eta_and_epsilon_are": "two unknown parameters; epsilon is optical calibration offset, eta is hypothetical additional dynamics",
+  "angles_rad": [
+    0.35,
+    0.7,
+    1.05,
+    1.4,
+    1.5707963267948966,
+    1.9,
+    2.25,
+    2.7
+  ],
+  "delta_standard_QM": [
+    0.0010890867992551234,
+    0.0163849472240426,
+    0.07479551167899756,
+    0.20413467966375953,
+    0.2962962962962963,
+    0.5188430452651256,
+    0.7854664728089151,
+    1.0742194731867971
+  ],
+  "jacobian_columns": [
+    "phase_offset_epsilon",
+    "conditional_eta"
+  ],
+  "jacobian": [
+    [
+      0.0061596929890050936,
+      0.017600611712520475
+    ],
+    [
+      0.04488676215164133,
+      0.06421473988660331
+    ],
+    [
+      0.1291314199403093,
+      0.12393600043458795
+    ],
+    [
+      0.2423572310894517,
+      0.17789076813823354
+    ],
+    [
+      0.2962962962982374,
+      0.1975308641988249
+    ],
+    [
+      0.37103082463074694,
+      0.21913811583118556
+    ],
+    [
+      0.3753594831734652,
+      0.22059965653076216
+    ],
+    [
+      0.24111470341425797,
+      0.20609636582902266
+    ]
+  ],
+  "one_angle_singular_values": [
+    0.3561038296777886
+  ],
+  "multi_angle_singular_values": [
+    0.8525737116647637,
+    0.0684663337780138
+  ],
+  "fisher_per_one_shot_per_angle": [
+    [
+      0.9146424641769513,
+      0.7257405385933168
+    ],
+    [
+      0.7257405385933168,
+      0.6956676410216299
+    ]
+  ],
+  "fisher_eigenvalues": [
+    0.07120217764634545,
+    1.5391079275522355
+  ],
+  "hypothetical_eta_precision_for_100000_independent_shots_each_angle": 0.009135756268080943,
+  "single_angle_epsilon_to_mimic_eta_0_point_01": 0.006666666666666665,
+  "max_null_control_amplitude": 0.0,
+  "conclusion": "Single angle cannot separate eta from miscalibrated phase. Multi-angle scan is locally identifiable for this SPECIFIED eta-shape; still needs externally fixed eta, real optical calibration, drift controls, and a theory that predicts eta without fitting.",
+  "literature": "Standard 9-level QM and DQC1 single-photon trace measurement already imply baseline delta; experiment would test instrument + added Hamiltonian, not uniqueness of a TOE.",
+  "checks": {
+    "one_angle_cannot_identify_two_unknowns": true,
+    "multi_angle_local_identifiability": true,
+    "ideal_QM_curve": true,
+    "null_commuting_control_insensitive": true,
+    "fisher_positive_semidefinite": true
+  },
+  "all_checks_pass": true
+}
