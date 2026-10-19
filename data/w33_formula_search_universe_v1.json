@@ -720874,6 +720874,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e1ff167ef31911daf1418acffe57ef77263561e133d7b855af4564cc7226d656",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass12060_relativity_principle_for_the_clock_vacuum.json\"",
+      "numeric_literals": [
+        "2060",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass12060_relativity_principle_for_the_clock_vacuum.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "804c70c9c65564f35abd2e2f944ee456c317e7447aa61967b68fb13e42c92b1c",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_relativity_principle_for_the_clock_vacuum.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "0e8bf54813ae09975b8ffb40c2c2eda3883ee020f6009f102f97b6ebf6841b48",
       "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass1310_1314_literal_a5_coset_correction.json\"",
       "numeric_literals": [
@@ -731160,6 +731188,33 @@
       },
       "structural_family_id": "c31206072efe1a72a715450ba76fff9a95e7a51262e79df7f131e946104eb847",
       "structural_formula": "Om_DM/Om_b=#/#~#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8296a00cecc46f03ba7ee59bffcb6640da1f6edb2b9a6b5daf0e58387e929391",
+      "normalized_formula": "Om_inv=(2*M.Om)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py",
+          "raw": "Om_inv = (2 * M.Om) % 3 # Om^2 = -1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b5032481dadbef70a78b2537b186374293e0ab059aa4ca5def9e2f6edf6b875b",
+      "structural_formula": "Om_inv=(#*M.Om)"
     },
     {
       "file_count": 1,
@@ -978242,7 +978297,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 607,
+          "line": 608,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1160689,6 +1160744,36 @@
       },
       "structural_family_id": "05589ff10a8f524abb59154bd0eb24eb35fb3ca5282d3c0cc9d460290d921a58",
       "structural_formula": "checks[\"constant_section_bijective\"]=len(set(matches.values()))=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "01e49ebb95d7afdf12d69dacab47db6fe1c0b6876547160e42b9aa5b2330a570",
+      "normalized_formula": "checks[\"control:Sp(4,3)istransitiveonthe36observers\"]=orbit_sizes(perm_on_observers(allmask))=[36]",
+      "numeric_literals": [
+        "3",
+        "36",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 80,
+          "path": "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py",
+          "raw": "checks[\"control: Sp(4,3) is transitive on the 36 observers\"] = orbit_sizes(perm_on_observers(allmask)) == [36]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d82d6363ad8a6242bdc823e56935c2f34f2ee6739b34dc91872b6e6cadf37be0",
+      "structural_formula": "checks[\"control:Sp(#,#)istransitiveonthe3#observers\"]=orbit_sizes(perm_on_observers(allmask))=[#]"
     },
     {
       "file_count": 1,
@@ -1386336,7 +1386421,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 606,
+          "line": 607,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1391470,7 +1391555,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 606,
+          "line": 607,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1727432,6 +1727517,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c2aceeeef72497e7b18d0aea1b55eed139db2184383723d4bb013624ec509153",
+      "normalized_formula": "symmetrygfixestheobserverwhengJg^-1=+-J(Lorentzorparitycoset).Exactresults(Sp(4,3)istransitiveon",
+      "numeric_literals": [
+        "-1",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass12060_relativity_principle_for_the_clock_vacuum.py",
+          "raw": "symmetry g fixes the observer when g J g^-1 = +-J (Lorentz or parity coset). Exact results (Sp(4,3) is transitive on",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7ed69cb2fa689c28687dd04f77f1d8a200ce00c8e12b835eb55a323a32a4e097",
+      "structural_formula": "symmetrygfixestheobserverwhengJg^#=+-J(Lorentzorparitycoset).Exactresults(Sp(#,#)istransitiveon"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c402461c72542a95d3d01ab7c5165865dc5b86ff712a49a6ea33cdd3823075f1",
       "normalized_formula": "symmetryoftheW(3,3)skeleton(q=3)isthegauge-theoretic",
       "numeric_literals": [
@@ -1801306,7 +1801420,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 606,
+          "line": 607,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1850000,9 +1850114,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-19T10:44:41-04:00",
+  "frozen_at": "2026-10-19T11:05:35-04:00",
   "pass": 398,
-  "repository_head": "af4a0e5ea9a9ae611eef70ae4be7c904179e0268",
+  "repository_head": "9679a2c354306d1a825e5ce09b3bc95df706aad9",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2044120,6 +2044234,14 @@
     },
     {
       "exact_formula_ids": [
+        "e1ff167ef31911daf1418acffe57ef77263561e133d7b855af4564cc7226d656"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "804c70c9c65564f35abd2e2f944ee456c317e7447aa61967b68fb13e42c92b1c",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_relativity_principle_for_the_clock_vacuum.json\""
+    },
+    {
+      "exact_formula_ids": [
         "7ff16650f582ebf0eb5a9e7065686249e86062d30d50450834357e1cdeabac3b"
       ],
       "exact_member_count": 1,
@@ -2047142,6 +2047264,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c31206072efe1a72a715450ba76fff9a95e7a51262e79df7f131e946104eb847",
       "structural_formula": "Om_DM/Om_b=#/#~#"
+    },
+    {
+      "exact_formula_ids": [
+        "8296a00cecc46f03ba7ee59bffcb6640da1f6edb2b9a6b5daf0e58387e929391"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b5032481dadbef70a78b2537b186374293e0ab059aa4ca5def9e2f6edf6b875b",
+      "structural_formula": "Om_inv=(#*M.Om)"
     },
     {
       "exact_formula_ids": [
@@ -2160209,6 +2160339,14 @@
       "exact_member_count": 1,
       "structural_family_id": "05589ff10a8f524abb59154bd0eb24eb35fb3ca5282d3c0cc9d460290d921a58",
       "structural_formula": "checks[\"constant_section_bijective\"]=len(set(matches.values()))=#"
+    },
+    {
+      "exact_formula_ids": [
+        "01e49ebb95d7afdf12d69dacab47db6fe1c0b6876547160e42b9aa5b2330a570"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d82d6363ad8a6242bdc823e56935c2f34f2ee6739b34dc91872b6e6cadf37be0",
+      "structural_formula": "checks[\"control:Sp(#,#)istransitiveonthe3#observers\"]=orbit_sizes(perm_on_observers(allmask))=[#]"
     },
     {
       "exact_formula_ids": [
@@ -2312478,6 +2312616,14 @@
     },
     {
       "exact_formula_ids": [
+        "c2aceeeef72497e7b18d0aea1b55eed139db2184383723d4bb013624ec509153"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7ed69cb2fa689c28687dd04f77f1d8a200ce00c8e12b835eb55a323a32a4e097",
+      "structural_formula": "symmetrygfixestheobserverwhengJg^#=+-J(Lorentzorparitycoset).Exactresults(Sp(#,#)istransitiveon"
+    },
+    {
+      "exact_formula_ids": [
         "c402461c72542a95d3d01ab7c5165865dc5b86ff712a49a6ea33cdd3823075f1"
       ],
       "exact_member_count": 1,
@@ -2344434,20 +2344580,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89749455,
-    "exact_formula_families": 63270,
-    "files_scanned": 12302,
-    "formula_occurrences": 69314,
+    "bytes_scanned": 89759211,
+    "exact_formula_families": 63274,
+    "files_scanned": 12304,
+    "formula_occurrences": 69318,
     "status_occurrences": {
       "certified_or_theorem": 5165,
       "killed_or_retracted": 1817,
       "open_or_conditional": 2326,
       "preregistered": 36,
       "retrospective_fit": 5344,
-      "unclassified": 54626
+      "unclassified": 54630
     },
-    "structural_families": 61588
+    "structural_families": 61592
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "5c24cf3c4eff73e37f1bb60af755d5bd68208d6a988e737fc4e571eef48c521c"
+  "universe_sha256": "992a7d4d1d2dd0bcdff94444969360245a993642dbf1dc592460edc814e9aab3"
 }
