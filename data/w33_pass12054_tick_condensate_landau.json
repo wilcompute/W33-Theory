@@ -1,0 +1,77 @@
+{
+  "invariants": {
+    "event_V15": [
+      0.16203703703703717,
+      0.23148148148148154
+    ],
+    "event_V24": [
+      0.3648148148148144,
+      0.14259259259259244
+    ],
+    "staggered_factorisation_V15": [
+      0.12499999999999996,
+      0.2499999999999999
+    ],
+    "isotropic_line_V24": [
+      0.20277777777777775,
+      0.3277777777777779
+    ]
+  },
+  "exact_boundaries": {
+    "V15_event_factorisation": "2",
+    "V24_event_line": "7/8",
+    "V24_hyperbolic_event": "-1081/301"
+  },
+  "probes": {
+    "V15 theta=180": [
+      1,
+      0.612372433963162
+    ],
+    "V24 theta=180": [
+      1,
+      0.7745966688285123
+    ],
+    "V15 theta_c-1": [
+      1,
+      0.6123724352978708
+    ],
+    "V15 theta_c+1": [
+      8,
+      0.3535593779711955
+    ],
+    "V24 theta_c-1": [
+      1,
+      0.7745966673147524
+    ],
+    "V24 theta_c+1": [
+      4,
+      0.47435163009311065
+    ],
+    "V24 lo-1": [
+      4,
+      0.40829850970256315
+    ],
+    "V24 lo+1": [
+      1,
+      0.7745966465481523
+    ]
+  },
+  "theta_c_deg": {
+    "V15": 243.43494882292202,
+    "V24": 221.18592516570965,
+    "V24_lower": 105.55964241106459
+  },
+  "event_phase_width_deg": {
+    "V15": 107.93494882292202,
+    "V24": 115.62628275464506
+  },
+  "checks": {
+    "exact rational invariants of the event, staggered factorisation and isotropic line patterns": true,
+    "the staggered factorisation (+1 on H1, -1 on H2) is an exact V15 eigenvector": true,
+    "exact boundaries: tan = 2 (V15 event|factorisation), 7/8 (V24 event|line), -1081/301 (V24 hyperbolic|event)": true,
+    "theta = 180 (localising quartic): the optimum is the single event in both irreps": true,
+    "across each exact boundary the optimum switches between the predicted patterns": true,
+    "the event phase covers ~30% of quartic space in either irrep": true
+  },
+  "all_checks_pass": true
+}
