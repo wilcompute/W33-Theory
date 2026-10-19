@@ -338,6 +338,20 @@ reversals ($e^2=-1$) and the $1080$ bosonic CPs ($e^2=+1$); $\omega$ $3$-cycles 
 keeps exactly one clock at each of its $8$ fixed events, those on $L$ leaving $\mathfrak{su}(2)^8$ on its own fixed
 set. \cert{w33\_pass12079\_a\_context\_of\_clocks\_is\_a\_hamming\_code.py} \cert{w33\_pass12080\_cp\_compatible\_clocks.py}
 
+\paragraph{The unification chain as a flag of gradings.}
+Commuting clock and split involutions generate subspaces of $E_8/2E_8=\mathbb F_2^8$. Classifying all of them, the
+fixed algebras run through $\mathfrak e_7+\mathfrak a_1$, $\mathfrak e_6$ (dimension $2$),
+$\mathfrak{so}(10)$ ($3$), $\mathfrak{su}(5)$ ($4$) and $\mathfrak{su}(3)+\mathfrak{su}(2)+\mathfrak u(1)^5$,
+which appears first and only at dimension $5$ ($40320$ subspaces, each with $16$ clocks); every sampled one contains a
+full flag $\mathfrak e_7+\mathfrak a_1\supset\mathfrak e_6\supset\mathfrak{so}(10)\supset\mathfrak{su}(5)\supset\mathfrak{su}(3)+\mathfrak{su}(2)$.
+The maximal branch turns to $\mathfrak d_4$ after $\mathfrak{so}(10)$, so the Standard Model is the next-to-maximal choice. \cert{w33\_pass12081\_the\_gut\_cascade\_of\_commuting\_gradings.py}
+\emph{CP.} A single clock is preserved by $72$ flavour CPs, but no CP preserves a Klein pair, so the $\mathfrak e_6+\mathfrak u(1)^2$
+vacuum breaks every flavour CP: CP violation is spontaneous at the second clock, as Nelson--Barr requires. \cert{w33\_pass12082\_the\_e6\_vacuum\_breaks\_cp.py}
+\emph{Ticks, clocks, fermion parity.} Ticks and clocks are inequivalent $\mathbb Z_3$-torsors (Pauli phases versus the
+Eisenstein unit; $ASp(4,3)$ does not embed in $W(E_8)$). \cert{w33\_pass12083\_ticks\_and\_clocks\_are\_different\_torsors.py} The corpus non-SUSY orbifold uses split $\mathbb Z_2$
+holonomies in all $135$ split classes, never clocks. \cert{w33\_pass12084\_the\_corpus\_orbifold\_uses\_the\_split\_form.py} And a Kramers reversal squares in $E_8$ to the split
+involution, $+1$ on $\mathfrak{so}(16)$ and $-1$ on the half-spinor $128$: fermion parity. \cert{w33\_pass12085\_kramers\_squared\_is\_fermion\_parity.py}
+
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse
 clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it

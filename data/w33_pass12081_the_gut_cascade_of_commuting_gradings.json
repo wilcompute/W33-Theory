@@ -1,0 +1,58 @@
+{
+  "cascade": {
+    "1": {
+      "(136, ('A1', 'E7')) clocks=1": 120,
+      "(120, ('D8',)) clocks=0": 135
+    },
+    "2": {
+      "(56, ('D4', 'D4')) clocks=0": 1575,
+      "(72, ('A1', 'A1', 'D6')) clocks=2": 3780,
+      "(64, ('A7',)) clocks=1": 4320,
+      "(80, ('E6',)) clocks=3": 1120
+    },
+    "3": {
+      "(32, ('A3', 'A3')) clocks=2": 37800,
+      "(40, ('A1', 'A5')) clocks=4": 40320,
+      "(40, ('A1', 'A1', 'A1', 'A1', 'D4')) clocks=4": 9450,
+      "(48, ('D5',)) clocks=6": 7560,
+      "(24, ('A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1')) clocks=0": 2025
+    },
+    "4": {
+      "(24, ('A1', 'A1', 'A3')) clocks=8": 75600,
+      "(20, ('A2', 'A2')) clocks=6": 67200,
+      "(16, ('A1', 'A1', 'A1', 'A1')) clocks=4": 28350,
+      "(28, ('A4',)) clocks=10": 24192,
+      "(32, ('D4',)) clocks=12": 3150,
+      "(8, ()) clocks=0": 270,
+      "(24, ('A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1')) clocks=8": 2025
+    },
+    "5": {
+      "(12, ('A1', 'A1'))": 37800,
+      "(16, ('A1', 'A2'))": 40320,
+      "(16, ('A1', 'A1', 'A1', 'A1'))": 9450,
+      "(20, ('A3',))": 7560,
+      "(8, ())": 2025
+    },
+    "6": {
+      "(8, ())": 1575,
+      "(12, ('A1', 'A1'))": 3780,
+      "(10, ('A1',))": 4320,
+      "(14, ('A2',))": 1120
+    },
+    "7": {
+      "(10, ('A1',))": 120,
+      "(8, ())": 135
+    }
+  },
+  "checks": {
+    "255 non-zero classes: 120 clocks + 135 splits": true,
+    "subspace counts 255, 10795, 97155, 200787 (Gaussian binomials of F_2^8)": true,
+    "each root class [alpha/2] is a clock, two roots per clock": true,
+    "fixed algebras of all subspaces, dimensions 1-7, as tabulated": true,
+    "su(3)+su(2) appears first and only at dimension 5 (40320 subspaces)": true,
+    "duality verified: each SM subspace V (31 elements) fixes exactly the roots whose class lies in V^perp": true,
+    "SM subspaces have 16 clocks + 15 splits": true,
+    "every sampled SM subspace (40/40) contains a flag e7+a1 > e6 > so(10) > su(5) > su(3)+su(2)": true
+  },
+  "all_checks_pass": true
+}

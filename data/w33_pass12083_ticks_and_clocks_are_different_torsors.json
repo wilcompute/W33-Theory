@@ -1,0 +1,8 @@
+{
+  "checks": {
+    "Sp(4,3) is perfect; 3 x Sp(4,3) has one complement class to its centre (GAP)": true,
+    "|W(E8)| = 2^14 3^5 5^2 7 and |ASp(4,3)| = 4199040 does not divide it": true,
+    "omega acts trivially on events and 3-cycles the clocks at every event": true
+  },
+  "all_checks_pass": true
+}

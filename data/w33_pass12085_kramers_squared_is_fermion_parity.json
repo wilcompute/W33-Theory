@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "W level: 72 Kramers with e^2 = -1 (central, alpha -> -alpha), 1080 CPs with e^2 = +1": true,
+    "-1 acts on roots as negation (central in W(E8))": true,
+    "inner involutions: fixed dimension 136 (120 clocks) or 120 (135 splits); 120 = |Phi+| singles out the split class": true,
+    "every split class: so(16) = 8 + 112 even roots; the 128 odd roots are one minuscule W(D8)-orbit (half-spinor)": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,13 @@
+{
+  "first_factor_gauge": {
+    "('A7',)": 144,
+    "('A3', 'A4')": 2016
+  },
+  "checks": {
+    "V1a has order 3 and centraliser A8 (72 roots)": true,
+    "all 2160 V0 halves are split involutions (128 odd roots): all 135 split classes, 16 each, no clock": true,
+    "halves of the 240 roots are clocks": true,
+    "with the A8 shift the first-factor gauge roots are A7 or A3+A4; a.V1a in Z reaches all 45 factorisations": true
+  },
+  "all_checks_pass": true
+}

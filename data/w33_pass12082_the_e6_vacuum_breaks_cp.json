@@ -1,0 +1,12 @@
+{
+  "pairs": {
+    "(False, 8)": 3780,
+    "(True, 0)": 3360
+  },
+  "checks": {
+    "1080 bosonic CPs; each clock preserved by exactly 72": true,
+    "clock pairs: 3780 non-Klein preserved by exactly 8 CPs; 3360 Klein pairs by none": true,
+    "no CP preserves any of the 1120 Klein triples (the e6 + u(1)^2 vacua)": true
+  },
+  "all_checks_pass": true
+}
