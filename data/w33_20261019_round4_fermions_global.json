@@ -1,0 +1,203 @@
+{
+  "schema": "w33.round4.fermion_reversal_and_rate_reduction.v1",
+  "model": "Nine free spinless fermion Fock modes with single-particle H=I-(P+Q)/2. Finite-dimensional stable Fock space. Chemical potential mu and identification with physical matter are supplied, not derived from W33.",
+  "grand_potential": "Omega_f(T,mu;Q) = -T * Tr log(1+exp((Q-I+mu)/T))",
+  "commuting_eigenvalues": "Qcomm spectrum: 1^1, (1/2)^4, 0^4",
+  "noncommuting_eigenvalues": "Qnon spectrum: ((1+1/sqrt3)/2)^3, ((1-1/sqrt3)/2)^3, 0^3",
+  "exact_mu_half_formula": "At the equal-density chemical potential mu=1/2 let x=1/(4T); Omega_non-Omega_comm= -2T [3 log cosh(x/sqrt(3)) - log cosh(x)] < 0 for every T>0. Mean particle number for BOTH competitors =3+3/(1+exp(1/(2T))), approaching 3 not 4.5 as T->0.",
+  "proof_of_all_T_sign": "h(x)=log cosh(x)/x^2 decreases strictly on x>0 since derivative numerator x tanh(x)-2logcosh(x) has derivative x sech^2(x)-tanh(x)<0. Hence 3logcosh(x/sqrt3)>logcosh x.",
+  "high_T_asymptotic": "Omega_non-Omega_comm= -1/(2304 T^3)+O(T^-5), mu=1/2",
+  "zero_T_limit": "Omega_non-Omega_comm -> -(sqrt3-1)/2 (mu=1/2)",
+  "physical_scope": "Fermionic occupation can reverse the pair preference without unstable bosons, but the chemical potential, fermionic bath and coupling H=I-Q are external assumptions. No constant universal negative kappa derived for arbitrary multi-tick states.",
+  "mu_equal_density_samples": [
+    {
+      "T": 0.01,
+      "mean_fermion_count_commuting": 3.0000000000000053,
+      "mean_fermion_count_noncommuting": 3.0,
+      "mean_fermion_count_closed_form": 3.0,
+      "fermion_nonminus_comm_grand_potential": -0.33829951656205826,
+      "exact_formula": -0.3382995165620583,
+      "residual": 5.551115123125783e-17,
+      "ratio_to_high_T_leading": 0.0007794420861589824
+    },
+    {
+      "T": 0.05,
+      "mean_fermion_count_commuting": 3.000136193606108,
+      "mean_fermion_count_noncommuting": 3.000136193606108,
+      "mean_fermion_count_closed_form": 3.0001361936061075,
+      "fermion_nonminus_comm_grand_potential": -0.22832263576295198,
+      "exact_formula": -0.22832263576295242,
+      "residual": 4.440892098500626e-16,
+      "ratio_to_high_T_leading": 0.0657569190997302
+    },
+    {
+      "T": 0.1,
+      "mean_fermion_count_commuting": 3.0200785527728558,
+      "mean_fermion_count_noncommuting": 3.020078552772855,
+      "mean_fermion_count_closed_form": 3.0200785527728544,
+      "fermion_nonminus_comm_grand_potential": -0.11997831970113015,
+      "exact_formula": -0.11997831970113025,
+      "residual": 9.71445146547012e-17,
+      "ratio_to_high_T_leading": 0.27643004859140397
+    },
+    {
+      "T": 0.2,
+      "mean_fermion_count_commuting": 3.227574540063731,
+      "mean_fermion_count_noncommuting": 3.227574540063731,
+      "mean_fermion_count_closed_form": 3.227574540063731,
+      "fermion_nonminus_comm_grand_potential": -0.034333739844657485,
+      "exact_formula": -0.03433373984465753,
+      "residual": 4.85722573273506e-17,
+      "ratio_to_high_T_leading": 0.6328394928167269
+    },
+    {
+      "T": 0.3,
+      "mean_fermion_count_commuting": 3.4766073146427456,
+      "mean_fermion_count_noncommuting": 3.4766073146427456,
+      "mean_fermion_count_closed_form": 3.476607314642745,
+      "fermion_nonminus_comm_grand_potential": -0.01284300434030472,
+      "exact_formula": -0.012843004340304854,
+      "residual": 1.3357370765021415e-16,
+      "ratio_to_high_T_leading": 0.798937614001676
+    },
+    {
+      "T": 0.5,
+      "mean_fermion_count_commuting": 3.806824264109985,
+      "mean_fermion_count_noncommuting": 3.8068242641099856,
+      "mean_fermion_count_closed_form": 3.806824264109985,
+      "fermion_nonminus_comm_grand_potential": -0.003187011834502318,
+      "exact_formula": -0.003187011834502762,
+      "residual": 4.440892098500626e-16,
+      "ratio_to_high_T_leading": 0.9178594083366676
+    },
+    {
+      "T": 1,
+      "mean_fermion_count_commuting": 4.1326220063944366,
+      "mean_fermion_count_noncommuting": 4.1326220063944366,
+      "mean_fermion_count_closed_form": 4.1326220063944366,
+      "fermion_nonminus_comm_grand_potential": -0.0004245769297339663,
+      "exact_formula": -0.00042457692973263406,
+      "residual": 1.3322676295501878e-15,
+      "ratio_to_high_T_leading": 0.9782252461070584
+    },
+    {
+      "T": 2,
+      "mean_fermion_count_commuting": 4.313470497342606,
+      "mean_fermion_count_noncommuting": 4.313470497342606,
+      "mean_fermion_count_closed_form": 4.313470497342606,
+      "fermion_nonminus_comm_grand_potential": -5.395360484783396e-05,
+      "exact_formula": -5.3953604849610315e-05,
+      "residual": 1.7763568394002505e-15,
+      "ratio_to_high_T_leading": 0.9944728445552755
+    },
+    {
+      "T": 5,
+      "mean_fermion_count_commuting": 4.42506243756318,
+      "mean_fermion_count_noncommuting": 4.42506243756318,
+      "mean_fermion_count_closed_form": 4.42506243756318,
+      "fermion_nonminus_comm_grand_potential": -3.4691383312690505e-06,
+      "exact_formula": -3.469138335487898e-06,
+      "residual": 4.218847493575595e-15,
+      "ratio_to_high_T_leading": 0.9991118394054865
+    },
+    {
+      "T": 10,
+      "mean_fermion_count_commuting": 4.462507810547369,
+      "mean_fermion_count_noncommuting": 4.462507810547369,
+      "mean_fermion_count_closed_form": 4.462507810547368,
+      "fermion_nonminus_comm_grand_potential": -4.3393135484848244e-07,
+      "exact_formula": -4.3393135085167955e-07,
+      "residual": 3.9968028886505635e-15,
+      "ratio_to_high_T_leading": 0.9997778415709035
+    }
+  ],
+  "chemical_potential_crossovers": [
+    {
+      "T": 0.08,
+      "roots_mu": [
+        0.2918350021059534,
+        0.7081649978940464
+      ],
+      "mu05_negative": -0.15674183778161865,
+      "mu_minus1_positive": 2.3666241340214633e-07,
+      "mu_2_positive": 2.3666241233399887e-07
+    },
+    {
+      "T": 0.2,
+      "roots_mu": [
+        0.17963725871133554,
+        0.8203627412886658
+      ],
+      "mu05_negative": -0.034333739844657485,
+      "mu_minus1_positive": 0.00031240682491824145,
+      "mu_2_positive": 0.00031240682491784355
+    },
+    {
+      "T": 0.5,
+      "roots_mu": [
+        -0.1835822446849733,
+        1.1835822446851545
+      ],
+      "mu05_negative": -0.003187011834502318,
+      "mu_minus1_positive": 0.0009067530431784987,
+      "mu_2_positive": 0.0009067530431767779
+    },
+    {
+      "T": 1.0,
+      "roots_mu": [
+        -0.8297160432354419,
+        1.8297160432374575
+      ],
+      "mu05_negative": -0.0004245769297339663,
+      "mu_minus1_positive": 4.988599506527969e-05,
+      "mu_2_positive": 4.988599506461355e-05
+    }
+  ],
+  "full_120_dimensional_reduction": {
+    "global_bound_rows": [
+      {
+        "T": 0.15,
+        "a_T_exact_sufficient_positive": 0.14815936589441459,
+        "tested_smallest_slack": 0.426782946732198,
+        "all_slacks_positive": true
+      },
+      {
+        "T": 0.3,
+        "a_T_exact_sufficient_positive": 0.2367333600272054,
+        "tested_smallest_slack": 0.24687529545671538,
+        "all_slacks_positive": true
+      },
+      {
+        "T": 0.5,
+        "a_T_exact_sufficient_positive": 0.2337325527019981,
+        "tested_smallest_slack": 0.12923971834644382,
+        "all_slacks_positive": true
+      },
+      {
+        "T": 1,
+        "a_T_exact_sufficient_positive": 0.1522337695316582,
+        "tested_smallest_slack": 0.0494939538282881,
+        "all_slacks_positive": true
+      },
+      {
+        "T": 2,
+        "a_T_exact_sufficient_positive": 0.08151966657162114,
+        "tested_smallest_slack": 0.020740287519008985,
+        "all_slacks_positive": true
+      }
+    ],
+    "conditional_p_vertex_strict_concavity_min_test_gap": 2.1878895577198687e-08,
+    "conditional_reduction": "At any fixed 40 point masses s_p, the Gibbs free energy is strictly concave along each nontrivial redistribution of the 3 projector outcomes. C depends only on s_p. Thus a global minimum of F_T+kappa*C may be chosen with at most 1 occupied outcome per point; at T>0 every global minimum has this property.",
+    "reduced_global_search": "40 continuous nonnegative masses plus up to 3^40 discrete Pauli-outcome labels; k=0 for all 40 is NOT justified by this theorem."
+  },
+  "checks": {
+    "closed_form_pair_spectra": true,
+    "mu_equal_density_negative_all_temperatures": true,
+    "mu_point_five_formula_numeric": true,
+    "both_competing_spectra_same_mean_occupancy": true,
+    "fermionic_reversal_far_from_half": true,
+    "global_stability_bound_random_checks": true,
+    "outcome_vertex_reduction": true
+  },
+  "all_checks_pass": true
+}

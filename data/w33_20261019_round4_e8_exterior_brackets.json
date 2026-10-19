@@ -1,0 +1,80 @@
+{
+  "schema": "w33.round4.e8_exterior_bracket_covariance.v1",
+  "model": "standard complex A8 E8 vector space sl9+Lambda3(V)+Lambda6(V), not a repository Chevalley-basis map",
+  "generators_tested": [
+    "F1",
+    "S1",
+    "CZ",
+    "SUM",
+    "SWAP"
+  ],
+  "phase_handling": "Each U(9) gate rephased to determinant 1; a central cubic root-of-unity acts trivially on sl9 and Lambda3/Lambda6 in 248.",
+  "brackets_tested": [
+    "Lambda3 wedge Lambda3 -> Lambda6",
+    "Lambda6 epsilon dual wedge Lambda6 epsilon dual -> Lambda3",
+    "Lambda3 epsilon contraction Lambda6 -> sl9"
+  ],
+  "mixed_map": "Use beta_dual^(j a b) = epsilon^(j a b ... six) beta_six, then M^i_j=(1/2)sum_ab alpha^(i a b) beta_dual_(j a b) minus trace/9",
+  "exact_scope": "Generator-level numerical equivariance of three bilinear maps and determinant-one epsilon duality. NOT full E8 Jacobi constants, Chevalley-coordinate equivalence, real-form identification or physical gauge action.",
+  "errors_by_generator": {
+    "F1": {
+      "det_SU9_residual": 1.1322097734007351e-15,
+      "wedge6_minor_max_error": 0.0,
+      "bracket_3_3_to_6_residual": 1.4675997806751974e-13,
+      "bracket_6_6_to_3_residual": 1.5479356933007775e-13,
+      "bracket_3_6_to_sl9_residual": 4.179949371900661e-14,
+      "wedge3_unitary_residual": 1.1028022873352585e-14,
+      "wedge6_unitary_residual": 1.2417691460726137e-14
+    },
+    "S1": {
+      "det_SU9_residual": 1.5700924586837752e-16,
+      "wedge6_minor_max_error": 0.0,
+      "bracket_3_3_to_6_residual": 2.3370722084272643e-14,
+      "bracket_6_6_to_3_residual": 2.419368128034689e-14,
+      "bracket_3_6_to_sl9_residual": 2.4963127701989246e-14,
+      "wedge3_unitary_residual": 1.282702253980726e-15,
+      "wedge6_unitary_residual": 1.2811489907750861e-15
+    },
+    "CZ": {
+      "det_SU9_residual": 2.2887833992611187e-16,
+      "wedge6_minor_max_error": 0.0,
+      "bracket_3_3_to_6_residual": 4.042938777239257e-14,
+      "bracket_6_6_to_3_residual": 4.354161840726832e-14,
+      "bracket_3_6_to_sl9_residual": 2.9165331045615293e-14,
+      "wedge3_unitary_residual": 3.1636737472115026e-15,
+      "wedge6_unitary_residual": 3.1412630061366503e-15
+    },
+    "SUM": {
+      "det_SU9_residual": 0.0,
+      "wedge6_minor_max_error": 0.0,
+      "bracket_3_3_to_6_residual": 1.5798945653694988e-14,
+      "bracket_6_6_to_3_residual": 1.333874171330862e-14,
+      "bracket_3_6_to_sl9_residual": 1.8811340093725964e-14,
+      "wedge3_unitary_residual": 0.0,
+      "wedge6_unitary_residual": 0.0
+    },
+    "SWAP": {
+      "det_SU9_residual": 4.47545209131181e-16,
+      "wedge6_minor_max_error": 0.0,
+      "bracket_3_3_to_6_residual": 4.235431722268755e-14,
+      "bracket_6_6_to_3_residual": 5.683499703536466e-14,
+      "bracket_3_6_to_sl9_residual": 3.860725741090703e-14,
+      "wedge3_unitary_residual": 2.0369740261325823e-15,
+      "wedge6_unitary_residual": 5.089963530787805e-15
+    }
+  },
+  "worst_numerical_error": 1.5479356933007775e-13,
+  "antisymmetry_residuals": {
+    "3_3": 1.8044753360399836e-14,
+    "6_6": 1.9874077524722184e-14
+  },
+  "prior_art": "Vinberg E8 trivector model, J. Baez September 2026 E8 9D trivectors; W33 repository temporal_SU9_E8_compiler already has the standard 80+84+84.",
+  "checks": {
+    "SU9_det_and_exterior_compatibility": true,
+    "all_three_bilinear_bracket_types_equivariant": true,
+    "antisymmetry_3_3": true,
+    "antisymmetry_6_6": true,
+    "tested_5_distinct_Clifford_generators": true
+  },
+  "all_checks_pass": true
+}

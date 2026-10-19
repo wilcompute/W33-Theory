@@ -1,0 +1,62 @@
+{
+  "schema": "w33.round4.operational_equivalence_firewall.v1",
+  "theorem": "If two hypotheses supply the same Hilbert space, density preparations, CPTP channels, and POVMs, their outcome probabilities agree for every finite experiment by induction/composition. W33 as merely Pauli commutation geometry supplies no operational distinction from ordinary two-qutrit quantum mechanics.",
+  "tested_clifford_circuits": 240,
+  "max_central_phase_probability_residual": 1.6653345369377348e-16,
+  "necessary_new_physics": "A TOE-specific, fully specified Hamiltonian/channel deviation with parameters fixed independently of the test observable, plus calibrated apparatus predictions; new labels, dimensional coincidences or posthoc fits cannot distinguish hypotheses.",
+  "gate_phase_calibration_confounder": {
+    "theta_rad": 1.5707963267948966,
+    "phase_overrotation_rad": 0.025,
+    "ideal_delta": 0.29629629629629683,
+    "with_phase_error_delta": 0.303702932122878,
+    "exact_linear_derivative_at_zero": 0.2962962962962963,
+    "linearized_prediction": 0.30370370370370425,
+    "one_percent_relative_effect_mimicked_by_phase_error_rad": 0.01000000000000002,
+    "commuting_control_exact_zero": 5.551115123125783e-16
+  },
+  "empirical_tiers": [
+    {
+      "claim": "240/540 commutation echo census",
+      "level": "known two-qutrit QM",
+      "novel_TOE_discrimination": false
+    },
+    {
+      "claim": "finite-filling fermionic preference flip",
+      "level": "standard grand-canonical fermion math in assumed Hamiltonian",
+      "novel_TOE_discrimination": false
+    },
+    {
+      "claim": "Clifford/sl9 E8 tensor bracket covariance",
+      "level": "finite algebraic model, not an experiment",
+      "novel_TOE_discrimination": false
+    },
+    {
+      "claim": "W33 uniquely fixes fermion bath chemical potential and mass spectrum",
+      "level": "not derived",
+      "novel_TOE_discrimination": false
+    },
+    {
+      "claim": "mass/gravity coupling predicted without fit",
+      "level": "open",
+      "novel_TOE_discrimination": false
+    }
+  ],
+  "literature_context": [
+    {
+      "url": "https://www.nature.com/articles/s41566-026-01846-x",
+      "fact": "2026 d=4 photonic heralded qudit gate experimental feasibility context; not a two-qutrit TOE test"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41467-026-68529-7",
+      "fact": "2026 quantum measurement precision bounds show independent calibration is crucial"
+    }
+  ],
+  "scope": "Not a claim that all possible W33-inspired models are experimentally indistinguishable; only those with identical operational predictions to standard QM.",
+  "checks": {
+    "operational_equivalence_all_240": true,
+    "phase_miscalibration_mimics_small_signal": true,
+    "ideal_noncommuting_8_over_27": true,
+    "commuting_null_survives_phase_error": true
+  },
+  "all_checks_pass": true
+}
