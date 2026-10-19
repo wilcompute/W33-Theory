@@ -114196,6 +114196,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f56d59791865d99af5da6fc49dc9f61b19bb6cbbafb565bc63b06aff6760f3d9",
+      "normalized_formula": "\"interaction_maximum_four_sevenths\":abs(extremum-4/7)<1e-12andabs(theoretical-4/7)<1e-12",
+      "numeric_literals": [
+        "1e-12",
+        "4",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_commutator_extremum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 100,
+          "path": "analysis/w33_20261019_tick_commutator_extremum.py",
+          "raw": "\"interaction_maximum_four_sevenths\":abs(extremum-4/7)<1e-12 and abs(theoretical-4/7)<1e-12,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "61922706531f64db93eb5467506d56be462bb56b5402162c58bb7fcfded32f68",
+      "structural_formula": "\"interaction_maximum_four_sevenths\":abs(extremum-#/#)<#andabs(theoretical-#/#)<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f391fd2add72349fe89c97b578dc4ffabd4c4119839fbd5d644c3c30d3eb1ec9",
       "normalized_formula": "\"interferometryarealreadyexperimentallystandard;aq=5implementation\"",
       "numeric_literals": [
@@ -151166,6 +151195,35 @@
       },
       "structural_family_id": "0c84189616977fe842d7181b69c845394f9140404103cc2f3ec841ee59295b23",
       "structural_formula": "\"random-walkidentity.W(#,#)isalpha-omega-perfectwiththeta=\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5a1d0f37d5143d97156f56398a699024b898645983560f9b56345f451886a8a3",
+      "normalized_formula": "\"random_points_below_sharp_bound\":sampled_max<=4/7+1e-12",
+      "numeric_literals": [
+        "+1e-12",
+        "4",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_commutator_extremum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/w33_20261019_tick_commutator_extremum.py",
+          "raw": "\"random_points_below_sharp_bound\":sampled_max <= 4/7+1e-12,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0424648edc5fd31bcb0d8390865717f669466bbc225a7ac59c522b653410d5aa",
+      "structural_formula": "\"random_points_below_sharp_bound\":sampled_max<=#/##"
     },
     {
       "file_count": 1,
@@ -552065,6 +552123,40 @@
       },
       "structural_family_id": "5c005713538a8cbb0a51725bd10827ebdd3d59526d7edf44205cf5d389845483",
       "structural_formula": "AnindependentfullRiccicalculationgivestheconnectionterm;directMaxwellcontractiongivesthemixing.AgloballydefinedconnectiononthetrivialtorusbundlerequiresintegralH=#.EliminatinghthereforeusesaweightedmeanmuandgivestheSchurform"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8efafe07651f667ab5808424babdff2e84f4c5d214554b17e130bf6a3588228e",
+      "normalized_formula": "Anindependentlyimplementedinteger-bitsetBron\u2013Kerboschsearchenumeratesall^2,970maximalcliques^ofthenoncommutationgraph:exactly^90ofsize4and2,880ofsize7^.Inparticular,itscliquenumberis7,soW33hasindependencenumber7and^no8-,9-,or10-pointmutuallynoncollinearset^.The\\(\\vartheta(W33)=10\\)spectral/Lov\u00e1szboundisthereforenotattainedbyagenuineindependentset.Weexplicitlyavoidcallinga10-pointupperboundanexistingovoid",
+      "numeric_literals": [
+        "0",
+        "10",
+        "2",
+        "3",
+        "880",
+        "9",
+        "90",
+        "970"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_commutator_extremum.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/2026-10-19_tick_commutator_extremum.md",
+          "raw": "An independently implemented integer-bitset Bron\u2013Kerbosch search enumerates all **2,970 maximal cliques** of the noncommutation graph: exactly **90 of size 4 and 2,880 of size 7**. In particular, its clique number is 7, so W33 has independence number 7 and **no 8-, 9-, or 10-point mutually noncollinear set**. The \\(\\vartheta(W33)=10\\) spectral/Lov\u00e1sz bound is therefore not attained by a genuine independent set. We explicitly avoid calling a 10-point upper bound an existing ovoid.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0a5ef8dcfe25da353d20a088113d59edc86d8febc8a5c979482562bed2264642",
+      "structural_formula": "Anindependentlyimplementedinteger-bitsetBron\u2013Kerboschsearchenumeratesall^#,#maximalcliques^ofthenoncommutationgraph:exactly^#ofsize4and2,#ofsize7^.Inparticular,itscliquenumberis7,soW3#hasindependencenumber7and^no8-,#-,or1#-pointmutuallynoncollinearset^.The\\(\\vartheta(W3#)=#\\)spectral/Lov\u00e1szboundisthereforenotattainedbyagenuineindependentset.Weexplicitlyavoidcallinga1#-pointupperboundanexistingovoid"
     },
     {
       "file_count": 1,
@@ -963873,6 +963965,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "341b48f1549f13a9289c634ae47f104e35b60d526d410feb22c065da0afdc8e6",
+      "normalized_formula": "\\mathcalC(w)=\\sum_{a<b}w_aw_b\\|[P_a,P_b]\\|_F^2=\\frac43\\sum_{\\{p,q\\}\\inE(\\overline{W33})}s_ps_q",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_commutator_extremum.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 21,
+          "path": "analysis/2026-10-19_tick_commutator_extremum.md",
+          "raw": "\\mathcal C(w)=\\sum_{a<b}w_aw_b\\|[P_a,P_b]\\|_F^2 =\\frac43\\sum_{\\{p,q\\}\\in E(\\overline{W33})}s_ps_q.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d44141c7148edd791ea7e831d0f623fed27737286791653446dbed5aa910e5b9",
+      "structural_formula": "\\mathcalC(w)=\\sum_{a<b}w_aw_b\\|[P_a,P_b]\\|_F^#=\\frac4#\\sum_{\\{p,q\\}\\inE(\\overline{W3#})}s_ps_q"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a1de6d00e1d7dbe0dd6c807ee043e73df07c2185206686d58b341063e5396ef5",
       "normalized_formula": "\\mathcalC(w)=\\sum_{a<b}w_aw_b\\|[\\Pi_a,\\Pi_b]\\|_F^2=\\frac43\\sum_{\\{p,q\\}\\{\\rmnoncollinear}}s_ps_q,\\quads_p=\\sum_kw_{p,k}",
       "numeric_literals": [
@@ -971426,6 +971546,35 @@
       },
       "structural_family_id": "2882f586d44882bd7674c1894b8a8a202fd25ef4212d3e149f3e1f9718635b7a",
       "structural_formula": "\\max_i|\\theta_i(\\mathcal{W}_0)-\\theta_i(\\mathcal{W}_1)|>#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "65cedc0b008670d3d7107a55a7c0dfe03402c00fa66533fd3bd546d6a8b652d5",
+      "normalized_formula": "\\max_{\\sums=1,s\\ge0}\\sum_{\\{p,q\\}\\inE(G)}s_ps_q=\\tfrac12(1-1/\\omega(G))",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_commutator_extremum.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 25,
+          "path": "analysis/2026-10-19_tick_commutator_extremum.md",
+          "raw": "\\max_{\\sum s=1,s\\ge0}\\sum_{\\{p,q\\}\\in E(G)}s_ps_q=\\tfrac12(1-1/\\omega(G))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3e26f0ddd07b74ade7fd6620b0a0b8036a4e40d5935d248363a1f3419c740a84",
+      "structural_formula": "\\max_{\\sums=#,s\\ge0}\\sum_{\\{p,q\\}\\inE(G)}s_ps_q=\\tfrac1#(##/\\omega(G))"
     },
     {
       "file_count": 1,
@@ -1009912,6 +1010061,34 @@
       },
       "structural_family_id": "9c12c5150eefa44636a1f9582ffa139a8e8eee21fa3a16ae1cfe955c04f0adf6",
       "structural_formula": "\\vartheta(G)\\vartheta(\\overlineG)=#=v"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ae219d84a9a67390f45633ed016ee586c5ad9a4c3e0c192114a7fe6b1ca25747",
+      "normalized_formula": "\\vartheta(W33)=10",
+      "numeric_literals": [
+        "10",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_commutator_extremum.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 18,
+          "path": "analysis/2026-10-19_tick_commutator_extremum.md",
+          "raw": "\\vartheta(W33)=10",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "31f7cda6539052d37d75ea520cb81fb8a4e544533fff72bcdb4946a842862f58",
+      "structural_formula": "\\vartheta(W3#)=#"
     },
     {
       "file_count": 1,
@@ -1345056,6 +1345233,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "46d50675c86b14187da4b65cf18c434d325cd0b2c4c261324a6b692bf370748d",
+      "normalized_formula": "k=0,1,2",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_commutator_extremum.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 5,
+          "path": "analysis/2026-10-19_tick_commutator_extremum.md",
+          "raw": "k=0,1,2",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "3e8c806adb303df24c62baec1b328bd9bdd54c080bd2fe8b73ff0f76d8b24094",
+      "structural_formula": "k=#,#,#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b03b724e3a9df826d51be07997a727a3c0cfb1b67bac24754e89a71eafe4f55a",
       "normalized_formula": "k=0,2,3,4,5",
       "numeric_literals": [
@@ -1633149,6 +1633355,60 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5b8b985d68d94fb04af919d7f4ec4de38a8aeee6478e469cd0329be745bc22f4",
+      "normalized_formula": "random_weights/=random_weights.sum(axis=1,keepdims=True)",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_commutator_extremum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 78,
+          "path": "analysis/w33_20261019_tick_commutator_extremum.py",
+          "raw": "random_weights /= random_weights.sum(axis=1,keepdims=True)",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "146e44a1372cd69a0913541a6b3d085506b83b6266761124f4cc8510f4078cfa",
+      "structural_formula": "random_weights/=random_weights.sum(axis=#,keepdims=True)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7857c54ecd5847686c257108a9efc54de6d12410896b8e6748de82bfb0003ddf",
+      "normalized_formula": "random_weights=rng.random((300,n))",
+      "numeric_literals": [
+        "300"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_commutator_extremum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 77,
+          "path": "analysis/w33_20261019_tick_commutator_extremum.py",
+          "raw": "random_weights = rng.random((300,n))",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "96d2fad81098db8d2a3ab4d28913a1e9f8db9e80738efbb1818878e14300a70b",
+      "structural_formula": "random_weights=rng.random((#,n))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6a2a9b931bbf3371f3542e07e746eafc3d40eebed8a5bc9479c2a00fbb55e98f",
       "normalized_formula": "range(cubic-formlift,lift-dependent).Som_betabeta~1.3-2.3meVisaRANGEtrackingm1;the",
       "numeric_literals": [
@@ -1672672,6 +1672932,34 @@
       },
       "structural_family_id": "1a11b7ea611129314e26b5e739be320cbb375a8c52f29eddc47c36eeac9aa740",
       "structural_formula": "sample_wall=completed_defect_spectral_uniform_wall_packet(#^#,#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4f350df0300e855dc8b848b342025bb6627fdeb821ebf6d73413aac10b8eabd5",
+      "normalized_formula": "sampled_max=max(float((2/3)*x@B@x)forxinrandom_weights)",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_commutator_extremum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 79,
+          "path": "analysis/w33_20261019_tick_commutator_extremum.py",
+          "raw": "sampled_max = max(float((2/3)*x@B@x) for x in random_weights)",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "0c80f79c857d43c0850bbb9d62ddb66c0e1f5075d9420005be8734d5d69c58e0",
+      "structural_formula": "sampled_max=max(float((#/#)*x@B@x)forxinrandom_weights)"
     },
     {
       "file_count": 1,
@@ -1844894,9 +1845182,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-19T07:59:32-04:00",
+  "frozen_at": "2026-10-19T08:05:39-04:00",
   "pass": 398,
-  "repository_head": "74cfc92d62af009a9b301f7416827c051533f21e",
+  "repository_head": "ea1e4bfb040fb62667620e557a195e899e0943e7",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1876891,6 +1877179,14 @@
     },
     {
       "exact_formula_ids": [
+        "f56d59791865d99af5da6fc49dc9f61b19bb6cbbafb565bc63b06aff6760f3d9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "61922706531f64db93eb5467506d56be462bb56b5402162c58bb7fcfded32f68",
+      "structural_formula": "\"interaction_maximum_four_sevenths\":abs(extremum-#/#)<#andabs(theoretical-#/#)<#"
+    },
+    {
+      "exact_formula_ids": [
         "f391fd2add72349fe89c97b578dc4ffabd4c4119839fbd5d644c3c30d3eb1ec9"
       ],
       "exact_member_count": 1,
@@ -1887252,6 +1887548,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0c84189616977fe842d7181b69c845394f9140404103cc2f3ec841ee59295b23",
       "structural_formula": "\"random-walkidentity.W(#,#)isalpha-omega-perfectwiththeta=\""
+    },
+    {
+      "exact_formula_ids": [
+        "5a1d0f37d5143d97156f56398a699024b898645983560f9b56345f451886a8a3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0424648edc5fd31bcb0d8390865717f669466bbc225a7ac59c522b653410d5aa",
+      "structural_formula": "\"random_points_below_sharp_bound\":sampled_max<=#/##"
     },
     {
       "exact_formula_ids": [
@@ -1993393,6 +1993697,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5c005713538a8cbb0a51725bd10827ebdd3d59526d7edf44205cf5d389845483",
       "structural_formula": "AnindependentfullRiccicalculationgivestheconnectionterm;directMaxwellcontractiongivesthemixing.AgloballydefinedconnectiononthetrivialtorusbundlerequiresintegralH=#.EliminatinghthereforeusesaweightedmeanmuandgivestheSchurform"
+    },
+    {
+      "exact_formula_ids": [
+        "8efafe07651f667ab5808424babdff2e84f4c5d214554b17e130bf6a3588228e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0a5ef8dcfe25da353d20a088113d59edc86d8febc8a5c979482562bed2264642",
+      "structural_formula": "Anindependentlyimplementedinteger-bitsetBron\u2013Kerboschsearchenumeratesall^#,#maximalcliques^ofthenoncommutationgraph:exactly^#ofsize4and2,#ofsize7^.Inparticular,itscliquenumberis7,soW3#hasindependencenumber7and^no8-,#-,or1#-pointmutuallynoncollinearset^.The\\(\\vartheta(W3#)=#\\)spectral/Lov\u00e1szboundisthereforenotattainedbyagenuineindependentset.Weexplicitlyavoidcallinga1#-pointupperboundanexistingovoid"
     },
     {
       "exact_formula_ids": [
@@ -2103050,6 +2103362,14 @@
     },
     {
       "exact_formula_ids": [
+        "341b48f1549f13a9289c634ae47f104e35b60d526d410feb22c065da0afdc8e6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d44141c7148edd791ea7e831d0f623fed27737286791653446dbed5aa910e5b9",
+      "structural_formula": "\\mathcalC(w)=\\sum_{a<b}w_aw_b\\|[P_a,P_b]\\|_F^#=\\frac4#\\sum_{\\{p,q\\}\\inE(\\overline{W3#})}s_ps_q"
+    },
+    {
+      "exact_formula_ids": [
         "a1de6d00e1d7dbe0dd6c807ee043e73df07c2185206686d58b341063e5396ef5"
       ],
       "exact_member_count": 1,
@@ -2104968,6 +2105288,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2882f586d44882bd7674c1894b8a8a202fd25ef4212d3e149f3e1f9718635b7a",
       "structural_formula": "\\max_i|\\theta_i(\\mathcal{W}_0)-\\theta_i(\\mathcal{W}_1)|>#"
+    },
+    {
+      "exact_formula_ids": [
+        "65cedc0b008670d3d7107a55a7c0dfe03402c00fa66533fd3bd546d6a8b652d5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3e26f0ddd07b74ade7fd6620b0a0b8036a4e40d5935d248363a1f3419c740a84",
+      "structural_formula": "\\max_{\\sums=#,s\\ge0}\\sum_{\\{p,q\\}\\inE(G)}s_ps_q=\\tfrac1#(##/\\omega(G))"
     },
     {
       "exact_formula_ids": [
@@ -2114376,6 +2114704,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9c12c5150eefa44636a1f9582ffa139a8e8eee21fa3a16ae1cfe955c04f0adf6",
       "structural_formula": "\\vartheta(G)\\vartheta(\\overlineG)=#=v"
+    },
+    {
+      "exact_formula_ids": [
+        "ae219d84a9a67390f45633ed016ee586c5ad9a4c3e0c192114a7fe6b1ca25747"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "31f7cda6539052d37d75ea520cb81fb8a4e544533fff72bcdb4946a842862f58",
+      "structural_formula": "\\vartheta(W3#)=#"
     },
     {
       "exact_formula_ids": [
@@ -2205950,10 +2206286,11 @@
     },
     {
       "exact_formula_ids": [
+        "46d50675c86b14187da4b65cf18c434d325cd0b2c4c261324a6b692bf370748d",
         "56470c045fa7a239bbb7852bb48ebc1f11adbc6234e9afebcc79490ca231ea37",
         "16fa95735f50ba02e5bd78da92a76a10dffb0e52d6b02e532253e29e796dd88a"
       ],
-      "exact_member_count": 2,
+      "exact_member_count": 3,
       "structural_family_id": "3e8c806adb303df24c62baec1b328bd9bdd54c080bd2fe8b73ff0f76d8b24094",
       "structural_formula": "k=#,#,#"
     },
@@ -2281760,6 +2282097,22 @@
     },
     {
       "exact_formula_ids": [
+        "5b8b985d68d94fb04af919d7f4ec4de38a8aeee6478e469cd0329be745bc22f4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "146e44a1372cd69a0913541a6b3d085506b83b6266761124f4cc8510f4078cfa",
+      "structural_formula": "random_weights/=random_weights.sum(axis=#,keepdims=True)"
+    },
+    {
+      "exact_formula_ids": [
+        "7857c54ecd5847686c257108a9efc54de6d12410896b8e6748de82bfb0003ddf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "96d2fad81098db8d2a3ab4d28913a1e9f8db9e80738efbb1818878e14300a70b",
+      "structural_formula": "random_weights=rng.random((#,n))"
+    },
+    {
+      "exact_formula_ids": [
         "6a2a9b931bbf3371f3542e07e746eafc3d40eebed8a5bc9479c2a00fbb55e98f"
       ],
       "exact_member_count": 1,
@@ -2292386,6 +2292739,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1a11b7ea611129314e26b5e739be320cbb375a8c52f29eddc47c36eeac9aa740",
       "structural_formula": "sample_wall=completed_defect_spectral_uniform_wall_packet(#^#,#)"
+    },
+    {
+      "exact_formula_ids": [
+        "4f350df0300e855dc8b848b342025bb6627fdeb821ebf6d73413aac10b8eabd5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0c80f79c857d43c0850bbb9d62ddb66c0e1f5075d9420005be8734d5d69c58e0",
+      "structural_formula": "sampled_max=max(float((#/#)*x@B@x)forxinrandom_weights)"
     },
     {
       "exact_formula_ids": [
@@ -2337956,20 +2338317,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89585890,
-    "exact_formula_families": 63095,
-    "files_scanned": 12276,
-    "formula_occurrences": 69134,
+    "bytes_scanned": 89595184,
+    "exact_formula_families": 63105,
+    "files_scanned": 12278,
+    "formula_occurrences": 69144,
     "status_occurrences": {
-      "certified_or_theorem": 5139,
+      "certified_or_theorem": 5143,
       "killed_or_retracted": 1813,
       "open_or_conditional": 2317,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54500
+      "unclassified": 54506
     },
-    "structural_families": 61417
+    "structural_families": 61426
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "d75a82b248322e5229025a5eecfcc1ba4d46cf5a2bc327d40b8c8232f9de8c9f"
+  "universe_sha256": "8b51d8f246f2f6aaeb71ed1ac188af4a711a4b918237494d0ad08e74d01799ca"
 }
