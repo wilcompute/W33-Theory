@@ -1,0 +1,55 @@
+{
+  "paper_scope": "two-qutrit rank-3 Pauli eigenspace ticks, Pass 12055",
+  "projector_rank": 3,
+  "Hilbert_dimension": 9,
+  "n_points": 40,
+  "n_projectors": 120,
+  "Gram_formula": "3 I_120 + (J_40-I_40) tensor J_3",
+  "Gram_spectrum": [
+    {
+      "eigenvalue": 0,
+      "multiplicity": 39
+    },
+    {
+      "eigenvalue": 3,
+      "multiplicity": 80
+    },
+    {
+      "eigenvalue": 120,
+      "multiplicity": 1
+    }
+  ],
+  "pair_types": {
+    "same_point_different_outcome": 120,
+    "collinear_distinct_point": 2160,
+    "noncollinear_distinct_point": 4860
+  },
+  "commutator_squared_norm": {
+    "same_point": 0,
+    "collinear": 0,
+    "noncollinear": 1.3333333333333333
+  },
+  "maximum_numeric_commutator_residual": 1.5543122344752192e-15,
+  "positive_T_exact_bound": "F_T >= -T log(3+6 exp(-R/T)) for R>0, T>0",
+  "equality": "one tick (up to identical projectors) at T>0; mixed compatible ticks may also minimize at T=0",
+  "meaning": "Generic majorization gives vertex selection; W33 enters the commutator, not pair Gram.",
+  "tested_temperatures": [
+    0.2,
+    1.0,
+    5.0
+  ],
+  "numerical_interior_gap_min": 0.022614021696439224,
+  "checks": {
+    "forty_projective_Pauli_directions": true,
+    "120_rank_three_projectors": true,
+    "projectors_hermitian_idempotent": true,
+    "projector_sum_equals_40I": true,
+    "operator_Gram_closed_form": true,
+    "operator_frame_rank_81": true,
+    "Gram_eigenvalue_multiplicities": true,
+    "pair_census_120_2160_4860": true,
+    "commutator_norm_squared_0_or_4_over_3": true,
+    "positive_temperature_majorization_bound": true
+  },
+  "all_checks_pass": true
+}
