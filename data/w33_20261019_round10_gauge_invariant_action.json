@@ -1,0 +1,21 @@
+{
+  "schema": "w33.round10.SU3cubed_scalar_invariants_and_noncompact_gauge_kinetic_obstruction.v1",
+  "fields": "Complex A~(3,bar3,1), B~(1,3,bar3), C~(bar3,1,3) with transformations A'=U_C A U_L\u2020, B'=U_L B U_R\u2020, C'=U_R C U_C\u2020. Transformation determinants all equal 1.",
+  "invariants": "Canonical Hermitian quadratic Tr(AA\u2020),Tr(BB\u2020),Tr(CC\u2020); four complex cubic invariants detA,detB,detC,Tr(ABC), plus their Hermitian conjugates; positive quartic invariants (Tr XX\u2020)^2 and Tr[(XX\u2020)^2], plus cross-quadratic norm products. These are SU3^3 invariant, not automatically full E6 invariant without coefficient constraints.",
+  "representative_real_scalar_action": "L_scalar = \u03a3 Tr[(D\u03bc X)\u2020D\u03bc X] - [ -m\u00b2\u03a3Tr(XX\u2020) + \u03bb1\u03a3(Tr XX\u2020)^2 + \u03bb2\u03a3Tr((XX\u2020)^2) + \u03bb3\u03a3_{X<Y}Tr(XX\u2020)Tr(YY\u2020) + (\u03b71 detA+\u03b72 detB+\u03b73 detC+\u03b74 Tr(ABC)+h.c.) ], with X=A,B,C. All coefficients independent unless higher symmetry specifies relations; boundedness/correct SSB needs extra restrictions.",
+  "max_random_gauge_invariance_residual": 2.0463630789890885e-12,
+  "E8minus24_Killing_signature": {
+    "positive": 112,
+    "negative": 136,
+    "rank": 248
+  },
+  "noncompact_YangMills_firewall": "If ALL of E8(-24) is gauged with the standard constant invariant bilinear form K, its Yang-Mills kinetic term has indefinite gauge polarisation energy. A simple Lie algebra has a one-dimensional space of invariant symmetric bilinear forms; changing overall sign cannot make both 112 and 136 sectors positive. This prevents an ordinary positive-energy YM model with that bare kinetic form; a compact subgroup, symmetry breaking plus constraints, or field-dependent kinetic tensor may change the physical model. This does NOT forbid E8(-24) as a global or gravitational symmetry.",
+  "scope": "No full E8 action, no ghost-free UV completion, no determination of \u03b7_i or quartic \u03bb_i, no Standard Model Higgs representation, CP phase, mass ratio or parameter-free prediction.",
+  "checks": {
+    "all_cubic_quartic_SU3cubed_tensors_invariant": true,
+    "each_scalar_sector_9_complex_fields": true,
+    "noncompact_E8_Killing_indefinite": true,
+    "simple_compact_vs_noncompact_signs_both_present": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "w33.round10.36setting_dark_replacement_and_phase_drift.v1",
+  "detector_model": "An independent probability d per photon of a detector-background 'replacement event' assigned uniformly among 18 output ports, instead of the intended path/mode or erasure. Then measured path difference D -> (1-d) D. Equal calibration/signal d cancels on transfer-matrix inversion; differential d or path-reference phase drift does not. NOT a realistic independent-Poisson multi-click or afterpulsing model.",
+  "ideal_trace_deficit": 0.2962962962962963,
+  "analytic_cases": [
+    {
+      "false_click_R": 0,
+      "false_click_S": 0,
+      "uncalibrated_path_phase_drift_rad": 0,
+      "idealized_observed_deficit": 0.2962962962962963,
+      "contrast_bias": 0.0
+    },
+    {
+      "false_click_R": 0.005,
+      "false_click_S": 0.005,
+      "uncalibrated_path_phase_drift_rad": 0,
+      "idealized_observed_deficit": 0.2962962962962963,
+      "contrast_bias": 0.0
+    },
+    {
+      "false_click_R": 0.005,
+      "false_click_S": 0.015,
+      "uncalibrated_path_phase_drift_rad": 0,
+      "idealized_observed_deficit": 0.3033686953284944,
+      "contrast_bias": 0.00707239903219814
+    },
+    {
+      "false_click_R": 0.005,
+      "false_click_S": 0.005,
+      "uncalibrated_path_phase_drift_rad": 0.03,
+      "idealized_observed_deficit": 0.2966129392136755,
+      "contrast_bias": 0.00031664291737920625
+    },
+    {
+      "false_click_R": 0.005,
+      "false_click_S": 0.015,
+      "uncalibrated_path_phase_drift_rad": 0.03,
+      "idealized_observed_deficit": 0.30368215590499525,
+      "contrast_bias": 0.007385859608698975
+    }
+  ],
+  "synthetic_photon_statistics": {
+    "n_per_setting": 12000,
+    "settings_per_run": 36,
+    "source_photons_per_run": 432000,
+    "repetitions_per_case": 70,
+    "cases": [
+      {
+        "false_click_R": 0.005,
+        "false_click_S": 0.005,
+        "path_drift": 0,
+        "sample_mean": 0.2953747931675349,
+        "sample_std": 0.007133225249584055,
+        "analytic_reference": 0.2962962962962963,
+        "sample_vs_analytic": -0.0009215031287613806
+      },
+      {
+        "false_click_R": 0.005,
+        "false_click_S": 0.015,
+        "path_drift": 0,
+        "sample_mean": 0.30226706281990695,
+        "sample_std": 0.007585380990393567,
+        "analytic_reference": 0.3033686953284944,
+        "sample_vs_analytic": -0.001101632508587469
+      },
+      {
+        "false_click_R": 0.005,
+        "false_click_S": 0.005,
+        "path_drift": 0.03,
+        "sample_mean": 0.29855135871370686,
+        "sample_std": 0.0067957342768440255,
+        "analytic_reference": 0.2966129392136755,
+        "sample_vs_analytic": 0.0019384195000313742
+      }
+    ]
+  },
+  "falsification_controls": "Interleave R and S reference acquisitions, test phase-reversed W, commuting null, detector-off/sham, source power drift, and mode-mixing transfer tomography; timestamp all 36 settings.",
+  "hardware_boundary": "Real dark count depends on gate duration and dead-time; this symmetric false-click toy channel does not reproduce multi-click events, erasure bias, correlated errors or path-dependent detector response. No physical photonic hardware constructed.",
+  "checks": {
+    "stationary_dark_false_clicks_cancel_by_ratio": true,
+    "differential_false_clicks_shift_witness": true,
+    "phase_drift_shifts_witness": true,
+    "MonteCarlo_near_analytic_expectation": true,
+    "70_repetitions_3_conditions": true
+  },
+  "all_checks_pass": true
+}

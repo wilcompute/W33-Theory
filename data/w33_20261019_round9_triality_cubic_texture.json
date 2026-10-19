@@ -1,0 +1,93 @@
+{
+  "schema": "w33.round9.trinification_jordan_cubic_triality.v1",
+  "SU3cubed_fields": "A:(3,bar3,1), B:(1,3,bar3), C:(bar3,1,3); each 9 complex components.",
+  "SU3cubed_cubic": "The 45 E6 cubic weight monomials can be organized as det A + det B + det C plus Tr(A B C), with 6 monomials in each determinant and 27 distinct trace monomials. The standard E6 invariant is a PARTICULAR fixed linear combination of the four independent SU3^3 tensors; coefficients not fitted here.",
+  "monomial_counts": {
+    "determinants": 18,
+    "cross": 27,
+    "total": 45
+  },
+  "octonion_triality_cubic": "Write J3(O)=R^3+O^3 (3+8+8+8=27), alpha=(a,b,c), x=(v,w,z) and N(v)=sum_i v_i^2. det_J=abc-a N(v)-b N(w)-c N(z)+2 Re((v w) z). This classical split into Spin8 triality components obeys simultaneous cyclic permutation of the singlets and octets. Proof via Cayley-Dickson quaternion/octonion identities, checked numerically.",
+  "max_octonion_norm_residual": 1.1368683772161603e-13,
+  "max_cyclic_trilinear_residual": 3.552713678800501e-15,
+  "max_Jordan_cubic_cyclic_residual": 1.0658141036401503e-14,
+  "prior_repo_Pass12067_clock_orbit_counts": {
+    "one_clock": [
+      9,
+      36
+    ],
+    "noncollinear": [
+      1,
+      4,
+      4,
+      4,
+      8,
+      8,
+      8,
+      8
+    ],
+    "collinear": [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      6,
+      6
+    ]
+  },
+  "schematic_bipartite_Yukawa_matrix_single_invariant": [
+    [
+      2.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "schematic_bipartite_Yukawa_matrix_three_disjoint_invariants": [
+    [
+      2.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -3.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.0
+    ]
+  ],
+  "essential_distinction": "Pass12067 ALREADY found exactly one fixed weight monomial for a noncollinear two-clock pair and three disjoint fixed monomials for a collinear pair. Restricted to chosen fermion sectors and scalar VEVs, a single monomial contributes a rank-one entry; three disjoint ones MAY support rank three if all couplings/VEVs nonzero. No canonical map of those exact W33 weight labels into a specific Jordan-octonion basis was constructed. These 3x3 texture matrices are illustrative, NOT measured generation mass matrices.",
+  "physics_limit": "The 45 terms are weight basis coordinates; the octonion triality formula is another coordinate system, and equality requires an explicit E6 change of basis not in this packet. No Yukawa coefficients, Higgs VEVs, generation identification, physical chirality or Standard Model mass ratio established.",
+  "checks": {
+    "45_distinct_E6_weight_cubic_terms": true,
+    "trinification_three_independent_determinant_blocks": true,
+    "Cayley_Dickson_octonion_norm_multiplicative": true,
+    "octonion_scalar_trilinear_cyclic": true,
+    "Spin8_triality_cubic_cyclic": true,
+    "old_clock_orbit_sizes_reproduced": true,
+    "one_coupling_rank1_three_disjoint_rank3_schematic": true
+  },
+  "all_checks_pass": true
+}

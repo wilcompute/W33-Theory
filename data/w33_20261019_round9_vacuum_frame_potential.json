@@ -1,0 +1,52 @@
+{
+  "schema": "w33.round9.clifford_rank2_fusion_frame.v1",
+  "theorem": "For all 1440 rank-two Q vacua in one projective 2-qutrit Clifford orbit, sum_Q Q = 320 I9, and the 81-dimensional frame operator on Mat9(C) has eigenvalues 640 (identity) and 28 (80 traceless directions). Hence sum_Q (Q-2I9/9)\u2297(Q-2I9/9) is 28 times identity on traceless Hermitian operators. A global Clifford-invariant on-site polynomial potential V(Q), quadratic, quartic or arbitrary degree, MUST be constant on the whole orbit: no unique chosen vacuum without explicit or spontaneous symmetry breaking.",
+  "size": 1440,
+  "sum_Q_vs_320I_residual": 1.7583882659654412e-11,
+  "frame_spectrum_predicted": {
+    "identity": 640,
+    "traceless_80": 28
+  },
+  "frame_spectrum_max_residual": 2.2737367544323206e-13,
+  "centered_frame_spectrum_max_residual": 8.881784197001252e-14,
+  "single_Q_moments": {
+    "1": {
+      "TrQpower": 2.0,
+      "TrQcenteredpower": 4.440892098500626e-16
+    },
+    "2": {
+      "TrQpower": 2.0,
+      "TrQcenteredpower": 1.5555555555555556
+    },
+    "3": {
+      "TrQpower": 2.0,
+      "TrQcenteredpower": 0.8641975308641977
+    },
+    "4": {
+      "TrQpower": 2.0,
+      "TrQcenteredpower": 0.7489711934156379
+    }
+  },
+  "fixed_Q_pair_overlap_histogram": {
+    "0.0": 79,
+    "-0.0": 14,
+    "0.333333333": 162,
+    "0.444444444": 972,
+    "0.666666667": 189,
+    "1.0": 14,
+    "1.333333333": 9,
+    "2.0": 1
+  },
+  "two_vacuum_interaction": "K(Q,R)=Tr[(Q-2I9/9)(R-2I9/9)] is Clifford invariant but varies with the relative orbit. Thus interactions can choose pair types, although the group still creates symmetry-equivalent degenerate minima. No physical Q vacuum selected.",
+  "novelty": "The 1440 orbit and 2916 stabilizer were established Round8. Tight 80-frame normalization and invariant-potential selection obstruction are new consequences; analogous Clifford designs are established stabilizer mathematics.",
+  "checks": {
+    "1440_rank2_vacua": true,
+    "fusion_frame_first_moment_320I": true,
+    "frame_spec_640_28x80": true,
+    "centered_frame_spec_0_28x80": true,
+    "quartic_vacuum_moment_exact": true,
+    "quartic_moment_constant_under_orbit": true,
+    "pairwise_overlap_is_nonconstant": true
+  },
+  "all_checks_pass": true
+}

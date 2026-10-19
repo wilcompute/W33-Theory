@@ -1,0 +1,108 @@
+{
+  "schema": "w33.round10.stabilizer_2916_pair_orbits.schreier.v1",
+  "algorithm": "BFS transversals of the 1440-node Clifford orbit, then generate Schreier stabilizer maps h=t_(g\u00b7v)^-1 g t_v for every orbit point v and every five Clifford generators g. Union orbit labels under h; no group element enumeration or optical matrix approximation required for orbit sizes.",
+  "full_clifford_order": 4199040,
+  "vacuum_orbit": 1440,
+  "stabilizer_order": 2916,
+  "nontrivial_schreier_generators_processed": 4903,
+  "identity_schreier_maps": 2297,
+  "stabilizer_orbit_count": 17,
+  "stabilizer_pair_orbits": [
+    {
+      "size": 6,
+      "overlap_to_reference": 1.1102230246251562e-16,
+      "representative": 23
+    },
+    {
+      "size": 18,
+      "overlap_to_reference": 1.1102230246251563e-16,
+      "representative": 57
+    },
+    {
+      "size": 27,
+      "overlap_to_reference": 1.1102230246251563e-16,
+      "representative": 59
+    },
+    {
+      "size": 3,
+      "overlap_to_reference": 1.1102230246251564e-16,
+      "representative": 24
+    },
+    {
+      "size": 6,
+      "overlap_to_reference": 1.1102230246251564e-16,
+      "representative": 21
+    },
+    {
+      "size": 27,
+      "overlap_to_reference": 1.6036554800141147e-16,
+      "representative": 177
+    },
+    {
+      "size": 6,
+      "overlap_to_reference": 2.2204460492503128e-16,
+      "representative": 15
+    },
+    {
+      "size": 162,
+      "overlap_to_reference": 0.3333333333333335,
+      "representative": 149
+    },
+    {
+      "size": 243,
+      "overlap_to_reference": 0.4444444444444446,
+      "representative": 470
+    },
+    {
+      "size": 729,
+      "overlap_to_reference": 0.4444444444444446,
+      "representative": 468
+    },
+    {
+      "size": 54,
+      "overlap_to_reference": 0.6666666666666664,
+      "representative": 38
+    },
+    {
+      "size": 54,
+      "overlap_to_reference": 0.6666666666666664,
+      "representative": 144
+    },
+    {
+      "size": 81,
+      "overlap_to_reference": 0.6666666666666667,
+      "representative": 146
+    },
+    {
+      "size": 2,
+      "overlap_to_reference": 1.0,
+      "representative": 1
+    },
+    {
+      "size": 12,
+      "overlap_to_reference": 1.0,
+      "representative": 2
+    },
+    {
+      "size": 9,
+      "overlap_to_reference": 1.3333333333333333,
+      "representative": 36
+    },
+    {
+      "size": 1,
+      "overlap_to_reference": 2.0,
+      "representative": 0
+    }
+  ],
+  "overlap_constant_max_residual": 6.291263806209221e-16,
+  "meaning": "For fixed Q0, the 2916 stabilizer's orbits on all 1440 Q classify distinct pair-vacuum geometry. Any Clifford-invariant pair energy depends only on these orbit classes; free coefficients remain undetermined, and even a minimizing pair breaks orbit symmetry spontaneously rather than selecting unique absolute vacuum.",
+  "checks": {
+    "complete_1440_pair_orbit": true,
+    "Schreier_stabilizer_generators_fix_base": true,
+    "stabilizer_orbits_partition_1440": true,
+    "identity_orbit_size_1": true,
+    "two_body_overlap_constant_per_orbit": true,
+    "all_1440_reachable_under_full_group": true
+  },
+  "all_checks_pass": true
+}

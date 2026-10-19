@@ -1,0 +1,81 @@
+{
+  "schema": "w33.round10.triple_support_adversarial_search.v1",
+  "T": 0.5,
+  "single_tick_free_energy": -0.6690785274449971,
+  "local_two_tick_instability_kappa": -0.3402395316211989,
+  "sampled_three_tick_candidates": 7454,
+  "best_feasible_three_tick_crossing_kappa": -0.340240172593888,
+  "best_three_tick_indices": [
+    42,
+    84,
+    94
+  ],
+  "best_three_weights": [
+    7.690671158865469e-06,
+    0.9999923093288411,
+    0.0
+  ],
+  "best_three_commuting_complement_edges": 3,
+  "best_three_C": 1.025414934992346e-05,
+  "best_three_F": -0.6690750385714525,
+  "stratum_best": {
+    "1": {
+      "crossing_kappa": -0.340240378454245,
+      "indices": [
+        51,
+        80,
+        93
+      ],
+      "weights": [
+        1.0160716094790474e-05,
+        0.9999898392839052,
+        0.0
+      ],
+      "noncommuting_pairs": 1,
+      "C": 1.354748380618522e-05
+    },
+    "2": {
+      "crossing_kappa": -0.34024021852019115,
+      "indices": [
+        68,
+        50,
+        35
+      ],
+      "weights": [
+        8.241445992539923e-06,
+        0.9999917585532387,
+        7.68712086899098e-13
+      ],
+      "noncommuting_pairs": 2,
+      "C": 1.0988505119743056e-05
+    },
+    "3": {
+      "crossing_kappa": -0.340240172593888,
+      "indices": [
+        42,
+        84,
+        94
+      ],
+      "weights": [
+        7.690671158865469e-06,
+        0.9999923093288411,
+        0.0
+      ],
+      "noncommuting_pairs": 3,
+      "C": 1.025414934992346e-05
+    }
+  },
+  "comparison": "If ANY three-tick feasible crossing kappa exceeds the two-tick local threshold, it is an explicit numerical counterexample to conjectured full-global boundary at local instability. If not, this finite sampling cannot prove the conjecture; the full 120-variable global phase remains open.",
+  "tests": {
+    "three_tick_counterexample_to_local_kappa": false,
+    "sampled_C_nonsingular": true
+  },
+  "checks": {
+    "all_3_noncommuting_pair_strata_sampled": true,
+    "all_C_positive_feasible": true,
+    "all_F_above_majorization_baseline": true,
+    "best_witness_has_negative_threshold": true,
+    "large_stratified_sample": true
+  },
+  "all_checks_pass": true
+}

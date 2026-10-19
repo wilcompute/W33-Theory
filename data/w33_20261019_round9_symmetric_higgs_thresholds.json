@@ -1,0 +1,144 @@
+{
+  "schema": "w33.round9.S3_higgs_scalar_threshold_free_parameters.v1",
+  "theorem": "For x_i=Tr(Phi_i^dag Phi_i)>=0, i=1,2,3, and S3-permutation-invariant radial potential V=-m\u00b2 sum x_i+b sum x_i\u00b2+c sum_{i<j} x_i x_j with m\u00b2,b>0,c>=0: if c<2b the GLOBAL minima are x_1=x_2=x_3=m\u00b2/[2(b+c)]; if c>2b the GLOBAL minima are three permutations of (m\u00b2/(2b),0,0); if c=2b the entire simplex sum x_i=m\u00b2/(2b) is flat. Proof rewrite V=-m\u00b2S+(b-c/2)sum x_i\u00b2+(c/2)S\u00b2, and at fixed S, S\u00b2/3<=sum x_i\u00b2<=S\u00b2.",
+  "rows": [
+    {
+      "quartic_cross_coefficient_c": 0.0,
+      "phase": "equal",
+      "representative_vev_squared": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "minimum_potential_exact_formula_evaluated": -0.75,
+      "energy_equal": -0.75,
+      "energy_single": -0.25,
+      "optimizer_min_gap_above_formula": -1.1102230246251565e-16
+    },
+    {
+      "quartic_cross_coefficient_c": 1.0,
+      "phase": "equal",
+      "representative_vev_squared": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "minimum_potential_exact_formula_evaluated": -0.375,
+      "energy_equal": -0.375,
+      "energy_single": -0.25,
+      "optimizer_min_gap_above_formula": 0.0
+    },
+    {
+      "quartic_cross_coefficient_c": 1.9,
+      "phase": "equal",
+      "representative_vev_squared": [
+        0.1724137931034483,
+        0.1724137931034483,
+        0.1724137931034483
+      ],
+      "minimum_potential_exact_formula_evaluated": -0.2586206896551724,
+      "energy_equal": -0.2586206896551724,
+      "energy_single": -0.25,
+      "optimizer_min_gap_above_formula": -5.551115123125783e-17
+    },
+    {
+      "quartic_cross_coefficient_c": 2.0,
+      "phase": "flat_two_simplex",
+      "representative_vev_squared": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ],
+      "minimum_potential_exact_formula_evaluated": -0.25,
+      "energy_equal": -0.25,
+      "energy_single": -0.25,
+      "optimizer_min_gap_above_formula": 0.0
+    },
+    {
+      "quartic_cross_coefficient_c": 2.1,
+      "phase": "single_condensate",
+      "representative_vev_squared": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "minimum_potential_exact_formula_evaluated": -0.25,
+      "energy_equal": -0.24193548387096775,
+      "energy_single": -0.25,
+      "optimizer_min_gap_above_formula": 2.7755575615628914e-17
+    },
+    {
+      "quartic_cross_coefficient_c": 3.0,
+      "phase": "single_condensate",
+      "representative_vev_squared": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "minimum_potential_exact_formula_evaluated": -0.25,
+      "energy_equal": -0.1875,
+      "energy_single": -0.25,
+      "optimizer_min_gap_above_formula": 2.7755575615628914e-17
+    },
+    {
+      "quartic_cross_coefficient_c": 5.0,
+      "phase": "single_condensate",
+      "representative_vev_squared": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "minimum_potential_exact_formula_evaluated": -0.25,
+      "energy_equal": -0.12499999999999997,
+      "energy_single": -0.25,
+      "optimizer_min_gap_above_formula": 0.0
+    }
+  ],
+  "conditional_mass_thresholds": "Only in equal-VEV regime and with IDENTICAL Yukawa y_i do M_i=y_i sqrt(x_i) coincide. Otherwise ratios remain continuous parameters. If one-loop bUV=9,bIR=11, Lambda_IR,i/Lambda_IR,j=(M_i/M_j)^(2/11); this does NOT arise from W33 alone.",
+  "Yukawa_examples": [
+    {
+      "Yukawas": [
+        1,
+        1,
+        1
+      ],
+      "radial_vev_sq": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "thresholds_GeV_relative": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "IR_scale_ratio_sector3_to1": 1.0
+    },
+    {
+      "Yukawas": [
+        1,
+        2,
+        4
+      ],
+      "radial_vev_sq": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "thresholds_GeV_relative": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "IR_scale_ratio_sector3_to1": 1.2866648980094317
+    }
+  ],
+  "physical_boundary": "A deliberately minimal radial S3 potential, not derived from W33 or the noncompact E8(-24) action. It omits gauge-index contractions/orientations, cubic invariants, flat directions, gauge breaking, physical vevs, EW scale and ghosts; phenomenological observables are not determined.",
+  "checks": {
+    "global_exchange_symmetric_potential_phases": true,
+    "numerical_optimizers_recover_analytic_min": true,
+    "critical_c_equal_2b_flat_many_VEVs": true,
+    "equal_thresholds_need_equal_Yukawas": true
+  },
+  "all_checks_pass": true
+}

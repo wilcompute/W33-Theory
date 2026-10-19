@@ -1,0 +1,251 @@
+{
+  "schema": "w33.round9.exact_2tick_free_energy_convexity.v1",
+  "theorem": "For any TWO Pauli rank-three outcome projectors from distinct noncommuting W33 points, P Q P=(1/3)P, so Q_w=(1-w)P+wQ has eigenvalues lambda\u00b1=[1\u00b1sqrt(1-(8/3)w(1-w))]/2 each multiplicity3 and 0 multiplicity3. F_T(w)=1-T log[3+6 exp(1/(2T)) cosh(sqrt(1-(8/3)w(1-w))/(2T))]. As function u=w(1-w), F_T(u) is STRICTLY convex on [0,1/4] for T>0, hence secant >= F'_T(0), and singleton minimizes F_T+kappa(4/3)u among ALL two-tick mixtures iff kappa>=-3/2(1-exp(-1/T))/(3+6 exp(-1/T)). For kappa below threshold an infinitesimal two-tick mixture improves.",
+  "analytic_convexity_proof": "Write a=8/3, x=sqrt(1-a u), z=x/(2T), c=(1/2)exp(-1/(2T)) in (0,1/2). Then F'_T(u)=(a/(8T))*g(z), g(z)=sinh(z)/[z(cosh(z)+c)]. Since z decreases as u increases, and -z\u00b2(cosh(z)+c)\u00b2 g'(z)=(1-c)(sinh(z)cosh(z)-z)+c(cosh(z)+1)(sinh(z)-z)>=0, g'(z)<=0. Hence F''_T(u)>=0. The inequality uses only sinh(2z)>=2z and sinh(z)>=z for z>=0.",
+  "noncommuting_pauli_outcome_pairs_tested": 4860,
+  "PQP_equals_Pover3_max_frobenius_residual": 9.321930967938499e-16,
+  "temperatures": [
+    {
+      "T": 0.1,
+      "two_tick_exact_critical_kappa": -0.4999319062882557,
+      "secant_ratios": [
+        {
+          "w": 1e-05,
+          "ratio_Gibbs_cost_per_commutator": 0.4999352353943549
+        },
+        {
+          "w": 0.001,
+          "ratio_Gibbs_cost_per_commutator": 0.5002649252622832
+        },
+        {
+          "w": 0.01,
+          "ratio_Gibbs_cost_per_commutator": 0.5032717918779238
+        },
+        {
+          "w": 0.05,
+          "ratio_Gibbs_cost_per_commutator": 0.5168292389067171
+        },
+        {
+          "w": 0.1,
+          "ratio_Gibbs_cost_per_commutator": 0.534118367738486
+        },
+        {
+          "w": 0.2,
+          "ratio_Gibbs_cost_per_commutator": 0.5688208728589115
+        },
+        {
+          "w": 0.3,
+          "ratio_Gibbs_cost_per_commutator": 0.6006810435256841
+        },
+        {
+          "w": 0.5,
+          "ratio_Gibbs_cost_per_commutator": 0.6329582908700847
+        }
+      ],
+      "ratios_increase_with_u": true
+    },
+    {
+      "T": 0.2,
+      "two_tick_exact_critical_kappa": -0.490027468281701,
+      "secant_ratios": [
+        {
+          "w": 1e-05,
+          "ratio_Gibbs_cost_per_commutator": 0.4900304614330408
+        },
+        {
+          "w": 0.001,
+          "ratio_Gibbs_cost_per_commutator": 0.4903268292693246
+        },
+        {
+          "w": 0.01,
+          "ratio_Gibbs_cost_per_commutator": 0.4930250200543071
+        },
+        {
+          "w": 0.05,
+          "ratio_Gibbs_cost_per_commutator": 0.5050795260875666
+        },
+        {
+          "w": 0.1,
+          "ratio_Gibbs_cost_per_commutator": 0.5201666681376227
+        },
+        {
+          "w": 0.2,
+          "ratio_Gibbs_cost_per_commutator": 0.5493424289891291
+        },
+        {
+          "w": 0.3,
+          "ratio_Gibbs_cost_per_commutator": 0.574619225770289
+        },
+        {
+          "w": 0.5,
+          "ratio_Gibbs_cost_per_commutator": 0.5985357572558403
+        }
+      ],
+      "ratios_increase_with_u": true
+    },
+    {
+      "T": 0.5,
+      "two_tick_exact_critical_kappa": -0.3402395316211989,
+      "secant_ratios": [
+        {
+          "w": 1e-05,
+          "ratio_Gibbs_cost_per_commutator": 0.3402403650740323
+        },
+        {
+          "w": 0.001,
+          "ratio_Gibbs_cost_per_commutator": 0.34032282923272383
+        },
+        {
+          "w": 0.01,
+          "ratio_Gibbs_cost_per_commutator": 0.3410681110127208
+        },
+        {
+          "w": 0.05,
+          "ratio_Gibbs_cost_per_commutator": 0.3442794857103777
+        },
+        {
+          "w": 0.1,
+          "ratio_Gibbs_cost_per_commutator": 0.3480378668952603
+        },
+        {
+          "w": 0.2,
+          "ratio_Gibbs_cost_per_commutator": 0.3545492566920483
+        },
+        {
+          "w": 0.3,
+          "ratio_Gibbs_cost_per_commutator": 0.3594669208625509
+        },
+        {
+          "w": 0.5,
+          "ratio_Gibbs_cost_per_commutator": 0.363575672285122
+        }
+      ],
+      "ratios_increase_with_u": true
+    },
+    {
+      "T": 1,
+      "two_tick_exact_critical_kappa": -0.18208766357437184,
+      "secant_ratios": [
+        {
+          "w": 1e-05,
+          "ratio_Gibbs_cost_per_commutator": 0.1820877851177043
+        },
+        {
+          "w": 0.001,
+          "ratio_Gibbs_cost_per_commutator": 0.18209980544724588
+        },
+        {
+          "w": 0.01,
+          "ratio_Gibbs_cost_per_commutator": 0.18220811032713818
+        },
+        {
+          "w": 0.05,
+          "ratio_Gibbs_cost_per_commutator": 0.1826680502594555
+        },
+        {
+          "w": 0.1,
+          "ratio_Gibbs_cost_per_commutator": 0.18319272372433468
+        },
+        {
+          "w": 0.2,
+          "ratio_Gibbs_cost_per_commutator": 0.1840682072079047
+        },
+        {
+          "w": 0.3,
+          "ratio_Gibbs_cost_per_commutator": 0.18470236420076172
+        },
+        {
+          "w": 0.5,
+          "ratio_Gibbs_cost_per_commutator": 0.18521509259208768
+        }
+      ],
+      "ratios_increase_with_u": true
+    },
+    {
+      "T": 2,
+      "two_tick_exact_critical_kappa": -0.08889707140820452,
+      "secant_ratios": [
+        {
+          "w": 1e-05,
+          "ratio_Gibbs_cost_per_commutator": 0.08889708544153244
+        },
+        {
+          "w": 0.001,
+          "ratio_Gibbs_cost_per_commutator": 0.08889847470373569
+        },
+        {
+          "w": 0.01,
+          "ratio_Gibbs_cost_per_commutator": 0.08891098129306796
+        },
+        {
+          "w": 0.05,
+          "ratio_Gibbs_cost_per_commutator": 0.0889638787933297
+        },
+        {
+          "w": 0.1,
+          "ratio_Gibbs_cost_per_commutator": 0.08902379990522272
+        },
+        {
+          "w": 0.2,
+          "ratio_Gibbs_cost_per_commutator": 0.0891227957818888
+        },
+        {
+          "w": 0.3,
+          "ratio_Gibbs_cost_per_commutator": 0.08919373861696771
+        },
+        {
+          "w": 0.5,
+          "ratio_Gibbs_cost_per_commutator": 0.08925063248703591
+        }
+      ],
+      "ratios_increase_with_u": true
+    },
+    {
+      "T": 5,
+      "two_tick_exact_critical_kappa": -0.034364339820491585,
+      "secant_ratios": [
+        {
+          "w": 1e-05,
+          "ratio_Gibbs_cost_per_commutator": 0.034364340624718784
+        },
+        {
+          "w": 0.001,
+          "ratio_Gibbs_cost_per_commutator": 0.034364420878466154
+        },
+        {
+          "w": 0.01,
+          "ratio_Gibbs_cost_per_commutator": 0.03436514313922859
+        },
+        {
+          "w": 0.05,
+          "ratio_Gibbs_cost_per_commutator": 0.03436819471815137
+        },
+        {
+          "w": 0.1,
+          "ratio_Gibbs_cost_per_commutator": 0.0343716451017458
+        },
+        {
+          "w": 0.2,
+          "ratio_Gibbs_cost_per_commutator": 0.034377330692114676
+        },
+        {
+          "w": 0.3,
+          "ratio_Gibbs_cost_per_commutator": 0.034381393814867225
+        },
+        {
+          "w": 0.5,
+          "ratio_Gibbs_cost_per_commutator": 0.03438464550604792
+        }
+      ],
+      "ratios_increase_with_u": true
+    }
+  ],
+  "scope": "This is an exact TWO-TICK result on all 4860 noncommuting tick pairs. It does not sharpen the certified global 120-variable sufficient bound; three-or-more-support states might intervene and must be checked.",
+  "checks": {
+    "all_4860_noncommuting_Pauli_outcome_pairs_isoclinic": true,
+    "numerical_all_T_secant_ratios_monotone": true,
+    "hyperbolic_monotonicity_numerator_positive": true,
+    "two_tick_Tpoint5_boundary_matches_old_local": true
+  },
+  "all_checks_pass": true
+}

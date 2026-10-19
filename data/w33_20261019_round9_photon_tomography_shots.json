@@ -1,0 +1,63 @@
+{
+  "schema": "w33.round9.full_photon_count_trace_tomography.v1",
+  "protocol": "Send a single photon into a balanced 2-path interferometer with initial internal |j>, j=0..8. The reference path applies Uref=F3 tensor F3 (all 81 elements have |r_kj|=1/3). The test path applies unknown lossy 9x9 T, either R=M or S=M W. For each j and path phase phi in {0,pi/2}, resolve 18 outputs (9 plus and 9 minus) and erasure. Measured path difference D_phi(k,j)=p_plus-p_minus=Re[exp(i phi) conj(r_kj) T_kj]. Thus T_kj=(D0-i Dpi/2)/conj(r_kj). After 36 settings, compute W=R^-1 S.",
+  "reference_matrix": "F3 tensor F3 (two 3-mode Fourier meshes; phase elements known)",
+  "input_states": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "path_quadratures_radians": [
+    0.0,
+    1.5707963267948966
+  ],
+  "conditions": [
+    "Identity loop with M: R",
+    "Noncommuting W33 loop with M: S"
+  ],
+  "detector_outcomes_per_configuration": 19,
+  "settings": 36,
+  "photons_per_setting": 40000,
+  "photons_per_full_run": 1440000,
+  "independent_multinomial_MonteCarlo_runs": 120,
+  "analytic_complex_transfer_error": 3.0289682686642156e-16,
+  "ideal_trace_deficit": 0.2962962962962963,
+  "estimated_deficit_mean": 0.29656188684688767,
+  "estimated_deficit_standard_deviation": 0.004508267004577821,
+  "estimated_deficit_RMSE": 0.004497292422142142,
+  "mean_W_transfer_Frobenius_error": 0.09831837218054475,
+  "stale_reference_drift": [
+    {
+      "additional_mixing_phase": 0.0,
+      "calibration_staleness_deficit_bias": 0.0
+    },
+    {
+      "additional_mixing_phase": 0.002,
+      "calibration_staleness_deficit_bias": -0.00010495759038930963
+    },
+    {
+      "additional_mixing_phase": 0.01,
+      "calibration_staleness_deficit_bias": -0.0004847664251280692
+    },
+    {
+      "additional_mixing_phase": 0.03,
+      "calibration_staleness_deficit_bias": -0.0011538971870267423
+    }
+  ],
+  "resource_boundary": "1.44 million synthetic input photons per independent reference+signal calibration under this noise-free-except-shot-multinomial model. Actual chip source brightness, detector loss/afterpulsing, independent stage tomography, integrated component count, thermal phase stability and path reference phase lock not demonstrated. The photon-number accounting includes source photons even when erased.",
+  "checks": {
+    "reference_has_all_81_nonzero_entries": true,
+    "complex_XY_quadrature_exact_reconstruction": true,
+    "multinomial_shot_delta_approximately_unbiased": true,
+    "multinomial_shot_precision_within_two_percent": true,
+    "nonzero_calibration_drift_bias": true,
+    "36_distinct_photon_shot_settings": true
+  },
+  "all_checks_pass": true
+}
