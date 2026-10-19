@@ -337703,6 +337703,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "64fe49fce52194ce1854fb0899766ca0f990d448b20c35b180072353f3567513",
+      "normalized_formula": "(1-c)(sinh(z)cosh(z)-z)+c(cosh(z)+1)(sinh(z)-z)>=0",
+      "numeric_literals": [
+        "+1",
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md",
+          "raw": "(1-c)(sinh(z)cosh(z)-z)+c(cosh(z)+1)(sinh(z)-z) >= 0.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "184b4da5de029e9e31da39f6cd6e1bfba232e3190ba81f6c5d92e8c4242a57f2",
+      "structural_formula": "(#-c)(sinh(z)cosh(z)-z)+c(cosh(z)#)(sinh(z)-z)>=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8059c64b752375dafefce00a51cc1bf26ed725765048cf915e2cd77ef0ad234d",
       "normalized_formula": "(1-w)(1-w^{-1})=1-w-w^{-1}+ww^{-1}=2-w-w^{-1}",
       "numeric_literals": [
@@ -386694,6 +386723,33 @@
       },
       "structural_family_id": "ed6b31e9f2121f2d30f6d062439c236b0c011c835a46f76d1767d008c68ef58c",
       "structural_formula": "-bosonic:J2=#,#ofthem,thecontextpairs"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8d18898cb4894691b70d8f3f0eca6a662114569d203ba793f25a4196dce22f9b",
+      "normalized_formula": "-c>2b:onex=m2/(2b),othertwozero(threesymmetry-relatedchoices)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md",
+          "raw": "- c>2b: one x=m\u00b2/(2b), other two zero (three symmetry-related choices);",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "9e0b22b08f939a7f2425cfec7e7033c632de2b70c3f8c8f6f377595db0a12914",
+      "structural_formula": "-c>#b:onex=m2/(#b),othertwozero(threesymmetry-relatedchoices)"
     },
     {
       "file_count": 1,
@@ -614007,6 +614063,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4503b45133addb700718c79c0b0350607a1b98cfdd9c6b956c8402276e894ed3",
+      "normalized_formula": "Eventheequal-condensatephasedoesnotsetthresholdratiosunlessYukawacouplingsy_iareseparatelyfixed:M_i=y_isqrt(x_i).Conditionalone-loopbUV=9,bIR=11modelwithy=(1,2,4)givesscaleratio4^(2/11)\u22481.286665versusunitywheny=(1,1,1).Thepotentialisanillustrativeradialsymmetry-breakingmodel,NOTanE8(-24)fundamentalaction;noparameter-freeparticlemasswaspredicted",
+      "numeric_literals": [
+        "-24",
+        "1",
+        "1.286665",
+        "11",
+        "2",
+        "4",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md",
+          "raw": "Even the equal-condensate phase does not set threshold ratios unless Yukawa couplings y_i are separately fixed: M_i=y_i sqrt(x_i). Conditional one-loop bUV=9,bIR=11 model with y=(1,2,4) gives scale ratio 4^(2/11)\u22481.286665 versus unity when y=(1,1,1). The potential is an illustrative radial symmetry-breaking model, NOT an E8(-24) fundamental action; no parameter-free particle mass was predicted.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "11dc5c97fa20d53b700c394b1fb94475fdff6179868a67f508c10f1138a6667b",
+      "structural_formula": "Eventheequal-condensatephasedoesnotsetthresholdratiosunlessYukawacouplingsy_iareseparatelyfixed:M_i=y_isqrt(x_i).Conditionalone-loopbUV=#,bIR=#modelwithy=(#,#,#)givesscaleratio4^(#/#)\u2248#versusunitywheny=(#,#,#).Thepotentialisanillustrativeradialsymmetry-breakingmodel,NOTanE8(#)fundamentalaction;noparameter-freeparticlemasswaspredicted"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e5ab795740d6f024bda71c9d0486278ce64a7b68ef4525e234d160d27e0cf8bb",
       "normalized_formula": "EveryE_8thetacoefficient=W(3,3)edgecounttimesasubstrate",
       "numeric_literals": [
@@ -621122,6 +621211,37 @@
       },
       "structural_family_id": "d1adf1b65fa196af41e8c4b642b33ce3d2e5dfb2ea2d0ff349b9403f69a9c664",
       "structural_formula": "F_T(\\phi)\\gef_T(S):=-T\\log(##e^{-S/T})"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9309002b4a27584ff104858c6670689e1c318e281bda2bcebf25d8c6b6fbb1be",
+      "normalized_formula": "F_T(u)=1-Tlog{3[1+2exp(1/(2T))cosh(sqrt(1-8u/3)/(2T))]}",
+      "numeric_literals": [
+        "+2",
+        "-8",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md",
+          "raw": "F_T(u)=1-T log{3[1+2 exp(1/(2T)) cosh(sqrt(1-8u/3)/(2T))]},",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "0f3a4a3af98348b6ce2397576152813ee6c47979d0271adccadbbf5d174f5ae5",
+      "structural_formula": "F_T(u)=#-Tlog{#[##exp(#/(#T))cosh(sqrt(##u/#)/(#T))]}"
     },
     {
       "file_count": 1,
@@ -799566,6 +799686,42 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7395e6c892928c4ac7cf13d87282ae0eb599506477a0c9518da3d75626c50b5f",
+      "normalized_formula": "Synthetic19-outcomemultinomialsimulationswithcoherentfirst-qutritmodemixingandheterogeneousarmloss:40,000sourcephotons/configuration(1,440,000total/run),120repetitions,idealdeficit8/27=0.296296...,samplemean~0.296562,std~0.004508.ThisisNOTanexperimentorfoundry-readychip,andassumesaknownreferencematrix,stablephasegaugeandidealdetectorsasidefromsimulatederasure/countstatistics.Phasedriftcausescalibrationbias",
+      "numeric_literals": [
+        "0.004508",
+        "0.296296",
+        "0.296562",
+        "000",
+        "1",
+        "120",
+        "27",
+        "40",
+        "440",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 42,
+          "path": "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md",
+          "raw": "Synthetic 19-outcome multinomial simulations with coherent first-qutrit mode mixing and heterogeneous arm loss: 40,000 source photons/configuration (1,440,000 total/run), 120 repetitions, ideal deficit 8/27=0.296296..., sample mean ~0.296562, std ~0.004508. This is NOT an experiment or foundry-ready chip, and assumes a known reference matrix, stable phase gauge and ideal detectors aside from simulated erasure/count statistics. Phase drift causes calibration bias.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "ac5ad846ce82be9c6c6519a4a9d7aad242825481eb9fcdc4cc8ffbcdd9d087fb",
+      "structural_formula": "Synthetic1#-outcomemultinomialsimulationswithcoherentfirst-qutritmodemixingandheterogeneousarmloss:#,#sourcephotons/configuration(#,#,#total/run),#repetitions,idealdeficit8/#=#...,samplemean~#,std~#.ThisisNOTanexperimentorfoundry-readychip,andassumesaknownreferencematrix,stablephasegaugeandidealdetectorsasidefromsimulatederasure/countstatistics.Phasedriftcausescalibrationbias"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0af8701c1d8212dfa9796dcf396a37e7dc79e811ba71530765ee063585b5b78b",
       "normalized_formula": "Syntheticstresstest:1,200randomizedframes\u00d7200shots=240,000shots,AR(1)serialcorrelation`rho=.85`carriedcontinuously*acrossframeboundaries*,clipping`T=.15`,`d=.001`,andONEcompletelyadversarialframewithinjected`100000*r`artifact.In24seededtestsperarm,observed^0/24^nullrejectionsand^24/24^detectionswithaseparatelyinjectedidealquarticcontrastproxy.Theseare*simulated*powers,notmeasuredgates.Anunmonitoredglitchspanning>1compromisedframe,cleansign-dependentdrift,untrusted`Q2`,oracorrelatedadversaryabletoanticipateframesignswouldviolatetheguarantee",
       "numeric_literals": [
@@ -812091,6 +812247,38 @@
       },
       "structural_family_id": "78c521b5c8f68887d59019502516857546447973dd7d8967fb89d95d3ed79b82",
       "structural_formula": "The1#time-reversal-invariantcornersremainanexactintegerphasecertificate.Theirmassclassesarethealreadycertifiedsequence\\(#,#,#,#,#\\),withbinomialmultiplicitiesandalternatingchiralities,yielding\\(C_2=#\\)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "27d7be66960dfc226d10f8b03c458d5771bc4a240ecb4230ea0cc21e4c2975ab",
+      "normalized_formula": "The18-modepath\u00d7internal-modecircuitcanbeinterrogatedwithUref=F3tensorF3inthereferencepath,whose81complexentriesallhavemodulus1/3.Prepareeachinputbasismodej=0..8,choosereferencephases0andpi/2,andresolve9outputmodesineachpathpluserasure.ForunknowntransferT,thetwomeasureddifferencessatisfy",
+      "numeric_literals": [
+        ".8",
+        "0",
+        "1",
+        "2",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md",
+          "raw": "The 18-mode path\u00d7internal-mode circuit can be interrogated with Uref=F3 tensor F3 in the reference path, whose 81 complex entries all have modulus 1/3. Prepare each input basis mode j=0..8, choose reference phases 0 and pi/2, and resolve 9 output modes in each path plus erasure. For unknown transfer T, the two measured differences satisfy",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "39e344ccaa51da3e9a5e8e284261ba4b6b4188d13424a87ab73d0b696bfb4450",
+      "structural_formula": "The1#-modepath\u00d7internal-modecircuitcanbeinterrogatedwithUref=F3tensorF3inthereferencepath,whose8#complexentriesallhavemodulus1/#.Prepareeachinputbasismodej=#.#,choosereferencephases0andpi/#,andresolve9outputmodesineachpathpluserasure.ForunknowntransferT,thetwomeasureddifferencessatisfy"
     },
     {
       "file_count": 1,
@@ -835275,6 +835463,38 @@
       },
       "structural_family_id": "a1aa5ce90e44581c8ea906498fd00d905c3fb4769da54f555c48518749d14819",
       "structural_formula": "Thirty-sixfrozenprobesspanthemean-zerosubspaceandobey\\(A^#x=#x\\).Thesingle-Jphasecontrollerischeckedonall1,#inputtransitions.Itsregistermaphaskernel"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4f6a69873fa6912ff1f6411e573077b6b3426a851ebfdf225f138163d384a818",
+      "normalized_formula": "ThisF_TisCONVEXinu.Toproveit,puta=8/3,x=sqrt(1-au),z=x/(2T),c=exp(-1/(2T))/2in(0,1/2),g(z)=sinh(z)/[z(cosh(z)+c)].ThenF'_T(u)=a*g(z)/(8T)and",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "1",
+        "2",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/2026-10-19_round9_interim_verified_findings_pending_worktree.md",
+          "raw": "This F_T is CONVEX in u. To prove it, put a=8/3, x=sqrt(1-au), z=x/(2T), c=exp(-1/(2T))/2 in (0,1/2), g(z)=sinh(z)/[z(cosh(z)+c)]. Then F'_T(u)=a*g(z)/(8T) and",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3ecebeb8247af1716ea857c89cb373543d686ea035281d8119a3757c41777a30",
+      "structural_formula": "ThisF_TisCONVEXinu.Toproveit,puta=#/#,x=sqrt(#-au),z=x/(#T),c=exp(#/(#T))/#in(#,#/#),g(z)=sinh(z)/[z(cosh(z)+c)].ThenF'_T(u)=a*g(z)/(#T)and"
     },
     {
       "file_count": 1,
@@ -1855102,9 +1855322,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-19T12:58:23-04:00",
+  "frozen_at": "2026-10-19T13:50:37-04:00",
   "pass": 398,
-  "repository_head": "24d636e55b252a04943ae4cb8fecc4206317aba6",
+  "repository_head": "2bccaa512b1bb98145fe8fb3922264f18d4b92b1",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1970078,6 +1970298,14 @@
     },
     {
       "exact_formula_ids": [
+        "64fe49fce52194ce1854fb0899766ca0f990d448b20c35b180072353f3567513"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "184b4da5de029e9e31da39f6cd6e1bfba232e3190ba81f6c5d92e8c4242a57f2",
+      "structural_formula": "(#-c)(sinh(z)cosh(z)-z)+c(cosh(z)#)(sinh(z)-z)>=#"
+    },
+    {
+      "exact_formula_ids": [
         "8059c64b752375dafefce00a51cc1bf26ed725765048cf915e2cd77ef0ad234d"
       ],
       "exact_member_count": 1,
@@ -1982197,6 +1982425,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ed6b31e9f2121f2d30f6d062439c236b0c011c835a46f76d1767d008c68ef58c",
       "structural_formula": "-bosonic:J2=#,#ofthem,thecontextpairs"
+    },
+    {
+      "exact_formula_ids": [
+        "8d18898cb4894691b70d8f3f0eca6a662114569d203ba793f25a4196dce22f9b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9e0b22b08f939a7f2425cfec7e7033c632de2b70c3f8c8f6f377595db0a12914",
+      "structural_formula": "-c>#b:onex=m2/(#b),othertwozero(threesymmetry-relatedchoices)"
     },
     {
       "exact_formula_ids": [
@@ -2020380,6 +2020616,14 @@
     },
     {
       "exact_formula_ids": [
+        "4503b45133addb700718c79c0b0350607a1b98cfdd9c6b956c8402276e894ed3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "11dc5c97fa20d53b700c394b1fb94475fdff6179868a67f508c10f1138a6667b",
+      "structural_formula": "Eventheequal-condensatephasedoesnotsetthresholdratiosunlessYukawacouplingsy_iareseparatelyfixed:M_i=y_isqrt(x_i).Conditionalone-loopbUV=#,bIR=#modelwithy=(#,#,#)givesscaleratio4^(#/#)\u2248#versusunitywheny=(#,#,#).Thepotentialisanillustrativeradialsymmetry-breakingmodel,NOTanE8(#)fundamentalaction;noparameter-freeparticlemasswaspredicted"
+    },
+    {
+      "exact_formula_ids": [
         "e5ab795740d6f024bda71c9d0486278ce64a7b68ef4525e234d160d27e0cf8bb"
       ],
       "exact_member_count": 1,
@@ -2022276,6 +2022520,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d1adf1b65fa196af41e8c4b642b33ce3d2e5dfb2ea2d0ff349b9403f69a9c664",
       "structural_formula": "F_T(\\phi)\\gef_T(S):=-T\\log(##e^{-S/T})"
+    },
+    {
+      "exact_formula_ids": [
+        "9309002b4a27584ff104858c6670689e1c318e281bda2bcebf25d8c6b6fbb1be"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0f3a4a3af98348b6ce2397576152813ee6c47979d0271adccadbbf5d174f5ae5",
+      "structural_formula": "F_T(u)=#-Tlog{#[##exp(#/(#T))cosh(sqrt(##u/#)/(#T))]}"
     },
     {
       "exact_formula_ids": [
@@ -2070679,6 +2070931,14 @@
     },
     {
       "exact_formula_ids": [
+        "7395e6c892928c4ac7cf13d87282ae0eb599506477a0c9518da3d75626c50b5f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ac5ad846ce82be9c6c6519a4a9d7aad242825481eb9fcdc4cc8ffbcdd9d087fb",
+      "structural_formula": "Synthetic1#-outcomemultinomialsimulationswithcoherentfirst-qutritmodemixingandheterogeneousarmloss:#,#sourcephotons/configuration(#,#,#total/run),#repetitions,idealdeficit8/#=#...,samplemean~#,std~#.ThisisNOTanexperimentorfoundry-readychip,andassumesaknownreferencematrix,stablephasegaugeandidealdetectorsasidefromsimulatederasure/countstatistics.Phasedriftcausescalibrationbias"
+    },
+    {
+      "exact_formula_ids": [
         "0af8701c1d8212dfa9796dcf396a37e7dc79e811ba71530765ee063585b5b78b"
       ],
       "exact_member_count": 1,
@@ -2073946,6 +2074206,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b4c394ec29d709bfac8f30d2889ba13906764f5f23593e66a3bf13197fd46593",
       "structural_formula": "The1#-dimkernel=adj(SU(#))=masslessgaugebosons"
+    },
+    {
+      "exact_formula_ids": [
+        "27d7be66960dfc226d10f8b03c458d5771bc4a240ecb4230ea0cc21e4c2975ab"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "39e344ccaa51da3e9a5e8e284261ba4b6b4188d13424a87ab73d0b696bfb4450",
+      "structural_formula": "The1#-modepath\u00d7internal-modecircuitcanbeinterrogatedwithUref=F3tensorF3inthereferencepath,whose8#complexentriesallhavemodulus1/#.Prepareeachinputbasismodej=#.#,choosereferencephases0andpi/#,andresolve9outputmodesineachpathpluserasure.ForunknowntransferT,thetwomeasureddifferencessatisfy"
     },
     {
       "exact_formula_ids": [
@@ -2080309,6 +2080577,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a1aa5ce90e44581c8ea906498fd00d905c3fb4769da54f555c48518749d14819",
       "structural_formula": "Thirty-sixfrozenprobesspanthemean-zerosubspaceandobey\\(A^#x=#x\\).Thesingle-Jphasecontrollerischeckedonall1,#inputtransitions.Itsregistermaphaskernel"
+    },
+    {
+      "exact_formula_ids": [
+        "4f6a69873fa6912ff1f6411e573077b6b3426a851ebfdf225f138163d384a818"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3ecebeb8247af1716ea857c89cb373543d686ea035281d8119a3757c41777a30",
+      "structural_formula": "ThisF_TisCONVEXinu.Toproveit,puta=#/#,x=sqrt(#-au),z=x/(#T),c=exp(#/(#T))/#in(#,#/#),g(z)=sinh(z)/[z(cosh(z)+c)].ThenF'_T(u)=a*g(z)/(#T)and"
     },
     {
       "exact_formula_ids": [
@@ -2350897,20 +2351173,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89950705,
-    "exact_formula_families": 63441,
-    "files_scanned": 12343,
-    "formula_occurrences": 69499,
+    "bytes_scanned": 89957515,
+    "exact_formula_families": 63448,
+    "files_scanned": 12344,
+    "formula_occurrences": 69506,
     "status_occurrences": {
-      "certified_or_theorem": 5191,
+      "certified_or_theorem": 5192,
       "killed_or_retracted": 1821,
-      "open_or_conditional": 2337,
+      "open_or_conditional": 2340,
       "preregistered": 36,
-      "retrospective_fit": 5354,
-      "unclassified": 54760
+      "retrospective_fit": 5355,
+      "unclassified": 54762
     },
-    "structural_families": 61758
+    "structural_families": 61765
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "b792d4dac4dd8f2060da49fd0eac77d0d178fbca738e717b4fceec0e527a5cb4"
+  "universe_sha256": "cd86e49a5121fac733499d0d25e07a69a1e116223ec9200ad0ba04940f761647"
 }
