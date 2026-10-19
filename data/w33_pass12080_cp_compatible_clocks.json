@@ -1,0 +1,15 @@
+{
+  "involutions_on_events": {
+    "(8, '+1', 8, ((1, 8),))": 1080,
+    "(0, '-1', 0, ())": 72
+  },
+  "checks": {
+    "w in W(E8): involution with w C w^-1 = C^-1 (inverts omega = C^10)": true,
+    "w preserves the forty fibres": true,
+    "omega keeps each clock at its event and 3-cycles the three clocks there": true,
+    "the coset w Sp(4,3) contains exactly 72 (0 fixed events, e^2 = -1) + 1080 (8 fixed events, e^2 = +1) event involutions": true,
+    "Kramers reversals preserve no clock; each bosonic CP preserves exactly one clock at each of its 8 fixed events": true,
+    "for all 1080 CPs, the CP-compatible clocks on L leave su(2)^8 on exactly the CP fixed set L u L'": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,51 @@
+{
+  "AG32_labelling": {
+    "0": [
+      0,
+      0,
+      0
+    ],
+    "1": [
+      0,
+      0,
+      1
+    ],
+    "20": [
+      0,
+      1,
+      0
+    ],
+    "3": [
+      0,
+      1,
+      1
+    ],
+    "37": [
+      1,
+      0,
+      0
+    ],
+    "38": [
+      1,
+      0,
+      1
+    ],
+    "39": [
+      1,
+      1,
+      0
+    ],
+    "17": [
+      1,
+      1,
+      1
+    ]
+  },
+  "checks": {
+    "81 choices: 8 orthogonal frame roots, glue code = extended Hamming [8,4,4], 16 + 224 = 240 roots": true,
+    "frame fibres = L u L' with L' disjoint from L; all 27 disjoint lines occur, 3 choices each": true,
+    "codewords: 6 unions of two matched pairs, 4 + 4 swapped copies of L, L'": true,
+    "an AG(3,2) labelling of the 8 events makes the 14 codewords exactly the affine planes": true
+  },
+  "all_checks_pass": true
+}

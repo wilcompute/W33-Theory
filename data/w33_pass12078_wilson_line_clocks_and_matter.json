@@ -1,0 +1,25 @@
+{
+  "k1": {
+    "clock": -64.28951588248117,
+    "split": 4.3196945966883504e-06
+  },
+  "k2_histograms": {
+    "(64, 128, 48)": -111.81392109507485,
+    "(72, 112, 56)": -128.12011807808622
+  },
+  "k3": {
+    "(72, 0, 168, 0)": -232.15775407089495,
+    "(40, 96, 72, 32)": -186.5794427326228,
+    "(32, 96, 96, 16)": -156.35744302722378,
+    "(40, 88, 88, 24)": -180.30363544234578,
+    "(32, 104, 80, 24)": -162.6332503175008
+  },
+  "checks": {
+    "S_1(0) = 2 zeta(5), S_1(1) = -(15/8) zeta(5) (lattice sum, N = 60)": true,
+    "k = 1: clock V_B = -62 zeta(5); split V_B = 0 exactly (all 135 splits odd on 128)": true,
+    "k = 2: two pair types; the Klein pair (72,112,56) has lower V_B than (64,128,48)": true,
+    "k = 3: the Klein triple has the lowest V_B, type (32,96,96,16) the highest (fermion choice)": true,
+    "lattice sums converged (N = 40 vs 60)": true
+  },
+  "all_checks_pass": true
+}

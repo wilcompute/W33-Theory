@@ -321,6 +321,23 @@ with exact edges $g_4(T)$ and $g_u(T)=\tfrac{120}{29}(F_u-F_4)$, $F_u=\tfrac23-T
 closes ($g_u/g_4\to30/29$), and above $T^*\approx1.39$ a $13$-tick star of contexts enters it. \cert{w33\_pass12074\_phase\_diagram\_of\_the\_tick\_condensate.py}
 \emph{$q=11$.} At $q=11$ the same holds ($7260$ observers, $SL(2,121)$; two non-normal index-$11$ clock classes; no clock pair fixes an observer). Over the whole Galois list $q\in\{3,5,7,11\}$ the relativity principle holds and rest frames occur only at $q=3$. \cert{w33\_pass12075\_the\_galois\_list\_q11.py}
 
+\paragraph{Time rotates SO(10).}
+For two non-collinear clocks each singlet $f_i$ defines $E_6\supset SO(10)_i\times U(1)$ with
+$27=1+10_i+16_i$, $10_i=8_i+f_j+f_k$, $16_i=8_j+8_k$; the triality ticks cycle the three $SO(10)$s. The octets are
+therefore not three generations: a tick of time moves an octet from the matter $16$ into the Higgs $10$. \cert{w33\_pass12076\_time\_rotates\_so10.py}
+\emph{Dynamics on the clocks.} The clock involutions act on the $248$ as commuting gradings; their free energy is
+concave, Klein pairs (product a clock) beat all other pairs by $Z_{72}-Z_{64}=8(1-e^{-1/2T})^2$, and with a capacity
+cost the first multi-clock condensate is a Klein triple, fixing $\mathfrak e_6+\mathfrak u(1)^2$. \cert{w33\_pass12077\_clock\_dynamics\_chooses\_e6.py}
+\emph{Clocks as Wilson lines.} For commuting order-$2$ holonomies on a torus, a clock gives $V_B=-62\zeta(5)$ and a
+split form exactly $0$; bosons choose a clock, then the Klein pair and Klein triple, and fermion domination the
+opposite, as in Passes 12056--12057. \cert{w33\_pass12078\_wilson\_line\_clocks\_and\_matter.py}
+\emph{Hamming code and CP.} A context of clocks leaves the Hamming-code $\mathfrak{su}(2)^8$ on a pair of disjoint
+contexts $L\cup L'$ (glue code $[8,4,4]$, codewords the planes of $AG(3,2)$). Inside $W(E_8)$ the antilinear
+elements inverting $\omega=C^{10}$ that act as involutions of the forty events are exactly the $72$ Kramers
+reversals ($e^2=-1$) and the $1080$ bosonic CPs ($e^2=+1$); $\omega$ $3$-cycles the clocks at each event, and each CP
+keeps exactly one clock at each of its $8$ fixed events, those on $L$ leaving $\mathfrak{su}(2)^8$ on its own fixed
+set. \cert{w33\_pass12079\_a\_context\_of\_clocks\_is\_a\_hamming\_code.py} \cert{w33\_pass12080\_cp\_compatible\_clocks.py}
+
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse
 clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it

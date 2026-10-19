@@ -1,0 +1,15 @@
+{
+  "singlet_permutations_by_ticks": [
+    [
+      1,
+      2,
+      0
+    ]
+  ],
+  "checks": {
+    "each singlet: D5 = 40 E6 roots orthogonal (rank 5); 27 = 1 + 10 + 16 with 10_i = 8_i + f_j + f_k, 16_i = 8_j + 8_k": true,
+    "the three D5 meet in the D4 of the four common neighbours (24 roots)": true,
+    "the triality ticks cycle the singlets f_0 -> f_1 -> f_2 and carry D5_i onto D5_{sigma(i)}": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,41 @@
+{
+  "triple_types": {
+    "(40, 88, 88, 24)": 90720,
+    "(32, 96, 96, 16)": 37800,
+    "(32, 104, 80, 24)": 120960,
+    "(40, 96, 72, 32)": 30240,
+    "(72, 0, 168, 0)": 1120
+  },
+  "klein_window": {
+    "0.05": [
+      0.039796863870908236,
+      0.35383679953394936
+    ],
+    "0.2": [
+      0.13917595870870542,
+      0.6224644740094859
+    ],
+    "0.5": [
+      0.1468131330175333,
+      0.2983110910004209
+    ],
+    "1.0": [
+      0.095663902951304,
+      0.1469350574533397
+    ],
+    "3.0": [
+      0.036094659895816505,
+      0.047384490359361896
+    ]
+  },
+  "checks": {
+    "each clock odd on 112 roots; each root odd under 56 clocks": true,
+    "pairs: 3360 with 72 even-even roots, 3780 with 64": true,
+    "the 72-pairs are exactly the pairs whose product is a clock": true,
+    "triples: five types; Klein type (72,0,168,0) occurs 1120 times": true,
+    "Klein triples: 40 at one event + 1080 on three pairwise non-collinear events": true,
+    "Z_72 - Z_64 = 8(1-x)^2 > 0, x = e^{-1/2T} (closed forms match)": true,
+    "capacity: the Klein triple condenses first (below all pairs, all other triple types, uniform; T in [0.05, 3])": true
+  },
+  "all_checks_pass": true
+}
