@@ -526984,6 +526984,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b6af5a8c461e07b5f31437a2ed48d4ec4b22cb39548c6bd5741f1f1b4f573b33",
+      "normalized_formula": "=3^{1+2}\\rtimes(2\\timesQ_8)",
+      "numeric_literals": [
+        "+2",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 603,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "=3^{1+2}\\rtimes(2\\times Q_8)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "83399193ef6b38ac4c034b78e59b6ba71919512bec90519fe0b2394c6c6cc12f",
+      "structural_formula": "=#^{##}\\rtimes(#\\timesQ_8)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "41bbea14d8e8a35ea07d56f29ab8d3bfb05a4352b9a18618ff3a51fc395f953e",
       "normalized_formula": "=3sin^2(theta_12)/4",
       "numeric_literals": [
@@ -630794,16 +630824,17 @@
       "structural_formula": "G=sp.Matrix.hstack(*gauges);assertK*G=sp.zeros(#,#)andK.rank()=#andG.rank()=#"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "bf06bd1a467190447a0e5f97d53d900282b48510eb04f38551f61c4396805db5",
       "normalized_formula": "G=sp43_from_ticks(tick)",
       "numeric_literals": [
         "3"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
-        "analysis/w33_pass12053_gate_sets_and_real_forms.py"
+        "analysis/w33_pass12053_gate_sets_and_real_forms.py",
+        "analysis/w33_pass12058_time_is_the_heisenberg_centre.py"
       ],
       "source_locations": [
         {
@@ -630812,10 +630843,17 @@
           "path": "analysis/w33_pass12053_gate_sets_and_real_forms.py",
           "raw": "G = sp43_from_ticks(tick)",
           "status": "unclassified"
+        },
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_pass12058_time_is_the_heisenberg_centre.py",
+          "raw": "G = sp43_from_ticks(tick)",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "unclassified": 2
       },
       "structural_family_id": "c8acb0fb8a007c267134a597d7c2781eec1d8edf9d45024facca6a08efb94415",
       "structural_formula": "G=sp4#_from_ticks(tick)"
@@ -976097,7 +976135,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 605,
+          "line": 606,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1361374,6 +1361412,42 @@
     },
     {
       "file_count": 1,
+      "formula_id": "18cabc13a0efb70b75acafe67138d6f9994bd5b294b160356e58e56703b134ea",
+      "normalized_formula": "len(cosU)=16andordHU={1:1,2:3,4:12}andlen(cosZ)=72andordHZ={1:1,2:9,3:8,4:54})",
+      "numeric_literals": [
+        "1",
+        "12",
+        "16",
+        "2",
+        "3",
+        "4",
+        "54",
+        "72",
+        "8",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12058_time_is_the_heisenberg_centre.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 121,
+          "path": "analysis/w33_pass12058_time_is_the_heisenberg_centre.py",
+          "raw": "len(cosU) == 16 and ordHU == {1: 1, 2: 3, 4: 12} and len(cosZ) == 72 and ordHZ == {1: 1, 2: 9, 3: 8, 4: 54})",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8d30453ede2ba6e8f3aaa79c10e533a679f9ae87402a5c8c29a76178507cd228",
+      "structural_formula": "len(cosU)=#andordHU={#:#,#:#,#:#}andlen(cosZ)=#andordHZ={#:#,#:#,#:#,#:#})"
+    },
+    {
+      "file_count": 1,
       "formula_id": "791aec1aea4b396f480cc9d967117189526ef06eba70267ad7185e5dda391914",
       "normalized_formula": "len(cosets)=8andset(cosets.values())={1})",
       "numeric_literals": [
@@ -1383677,7 +1383751,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 604,
+          "line": 605,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1388811,7 +1388885,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 604,
+          "line": 605,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1798282,7 +1798356,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 604,
+          "line": 605,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1846976,9 +1847050,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-19T08:33:19-04:00",
+  "frozen_at": "2026-10-19T08:42:11-04:00",
   "pass": 398,
-  "repository_head": "69dcdf884492aa2bf1d5f7f4c3a713dfaa949f7d",
+  "repository_head": "05fd3f98832e78e1a8d3abf23368d11e6aeeb0a4",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1988664,6 +1988738,14 @@
       "exact_member_count": 1,
       "structural_family_id": "adfc40b7410a68b3c688dc18739c0ca7135d5538190f614508af895e1bdd0fc2",
       "structural_formula": "=#^t.Soacircuitwithtcubicgatescoststheclassicalemulator~#^tsampleswhilethequantum"
+    },
+    {
+      "exact_formula_ids": [
+        "b6af5a8c461e07b5f31437a2ed48d4ec4b22cb39548c6bd5741f1f1b4f573b33"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "83399193ef6b38ac4c034b78e59b6ba71919512bec90519fe0b2394c6c6cc12f",
+      "structural_formula": "=#^{##}\\rtimes(#\\timesQ_8)"
     },
     {
       "exact_formula_ids": [
@@ -2212069,6 +2212151,14 @@
     },
     {
       "exact_formula_ids": [
+        "18cabc13a0efb70b75acafe67138d6f9994bd5b294b160356e58e56703b134ea"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8d30453ede2ba6e8f3aaa79c10e533a679f9ae87402a5c8c29a76178507cd228",
+      "structural_formula": "len(cosU)=#andordHU={#:#,#:#,#:#}andlen(cosZ)=#andordHZ={#:#,#:#,#:#,#:#})"
+    },
+    {
+      "exact_formula_ids": [
         "791aec1aea4b396f480cc9d967117189526ef06eba70267ad7185e5dda391914"
       ],
       "exact_member_count": 1,
@@ -2340593,20 +2340683,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89631999,
-    "exact_formula_families": 63167,
-    "files_scanned": 12283,
-    "formula_occurrences": 69207,
+    "bytes_scanned": 89643541,
+    "exact_formula_families": 63169,
+    "files_scanned": 12285,
+    "formula_occurrences": 69210,
     "status_occurrences": {
       "certified_or_theorem": 5155,
       "killed_or_retracted": 1813,
       "open_or_conditional": 2323,
       "preregistered": 36,
       "retrospective_fit": 5341,
-      "unclassified": 54539
+      "unclassified": 54542
     },
-    "structural_families": 61486
+    "structural_families": 61488
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "3f02486342c4b7cff18b72bf8b0d6f1dce2ad3d00a0ac2ea2527bd62270f9ea3"
+  "universe_sha256": "f4c163f833f113c3b9c0f2cb7d9a544cd430f442aa6c8ba4025002c01ff0e2ec"
 }
