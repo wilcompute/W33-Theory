@@ -1,0 +1,83 @@
+{
+  "title": "Exact W33 tick noncommutation Laplacian and Motzkin-Straus bound",
+  "n_directions": 40,
+  "n_outcome_projectors": 120,
+  "noncommuting_direction_edges": 540,
+  "noncommuting_tick_pairs": 4860,
+  "noncommutation_graph_srg": [
+    40,
+    27,
+    18,
+    18
+  ],
+  "maximal_clique_size_histogram": {
+    "4": 90,
+    "7": 2880
+  },
+  "maximum_mutually_noncommuting_directions": 7,
+  "maximal_seven_cliques": 2880,
+  "example_seven_projective_point_indices": [
+    0,
+    4,
+    5,
+    9,
+    24,
+    27,
+    30
+  ],
+  "tick_interaction_formula": "K = (4/3) [J40-I40-A_W33] tensor J3",
+  "K_eigenvalues": [
+    {
+      "eigenvalue": 108,
+      "multiplicity": 1
+    },
+    {
+      "eigenvalue": 12,
+      "multiplicity": 15
+    },
+    {
+      "eigenvalue": 0,
+      "multiplicity": 80
+    },
+    {
+      "eigenvalue": -12,
+      "multiplicity": 24
+    }
+  ],
+  "L_eigenvalues": [
+    {
+      "eigenvalue": 0,
+      "multiplicity": 1
+    },
+    {
+      "eigenvalue": 96,
+      "multiplicity": 15
+    },
+    {
+      "eigenvalue": 108,
+      "multiplicity": 80
+    },
+    {
+      "eigenvalue": 120,
+      "multiplicity": 24
+    }
+  ],
+  "sharp_simplex_interaction_maximum": "4/7",
+  "sharp_simplex_interaction_minimum": "0",
+  "motzkin_straus_formula": "max C = (2/3)(1-1/omega(noncommutation graph)); omega=7",
+  "physics_scope": "New candidate interaction diagnostic; the sign and scale are not derived from the microscopic free energy.",
+  "checks": {
+    "W33_srg_40_12_2_4": true,
+    "noncommutation_complement_srg_40_27_18_18": true,
+    "maximal_clique_census": true,
+    "max_noncommuting_clique_7": true,
+    "no_size_8_or_larger_clique": true,
+    "extremal_seven_is_clique": true,
+    "tick_commutator_spectrum": true,
+    "tick_commutator_laplacian_spectrum": true,
+    "interaction_maximum_four_sevenths": true,
+    "120_lift_matches_seven": true,
+    "random_points_below_sharp_bound": true
+  },
+  "all_checks_pass": true
+}
