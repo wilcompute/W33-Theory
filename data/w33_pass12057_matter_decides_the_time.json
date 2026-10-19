@@ -1,0 +1,65 @@
+{
+  "vacua": {
+    "witting": [
+      -6.591673732008657,
+      -19.775021196025975
+    ],
+    "c10": [
+      -6.230284903737801,
+      -21.853922618980533,
+      0
+    ],
+    "fmax": [
+      -6.226557490803849,
+      -21.768328482983627,
+      4
+    ]
+  },
+  "boundaries_deg": {
+    "naive_witting_c10": 9.861546840010448,
+    "fmax_witting": 190.37986322458394,
+    "true_boson_side_boundary": "b = 0 (Witting not a minimum for b > 0)",
+    "theta8": {
+      "zeros": 0,
+      "energy": -9.293170989098556,
+      "witting_energy": -9.279675037772709
+    },
+    "one_time_width_approx": 169.62013677541606
+  },
+  "scan_record": {
+    "0": "W",
+    "15": "C10",
+    "30": "C10",
+    "45": "C10",
+    "60": "C10",
+    "75": "C10",
+    "90": "C10",
+    "105": "C10",
+    "120": "C10",
+    "135": "C10",
+    "150": "C10",
+    "165": "C10",
+    "180": "Fmax",
+    "195": "W",
+    "210": "W",
+    "225": "W",
+    "240": "W"
+  },
+  "spot_checks": {
+    "270": "W",
+    "315": "W",
+    "345": "W",
+    "8": "deformed (0 massless, below Witting)",
+    "12": "deformed (0 massless)",
+    "188": "intermediate (10 massless)",
+    "193": "W"
+  },
+  "checks": {
+    "Witting ray: 24 massless vectors, F = -6 log 3, G = -18 log 3 (exact)": true,
+    "competitors agree with the 11892 certificate (G_min, F_max, 4 massless vectors)": true,
+    "boson side: at theta = 8 deg (inside the naive 9.86 wedge) the vacuum leaves the Witting ray (energy below it)": true,
+    "fermion side: two-pattern crossing F-max|Witting ~ 190.4 deg, within the observed (188, 193) window": true,
+    "scan + spot record: Witting at 0 and 193-345 deg, deformed/C10 for 8-165 deg, F-max at 180": true
+  },
+  "all_checks_pass": true
+}
