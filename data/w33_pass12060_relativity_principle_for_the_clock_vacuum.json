@@ -1,0 +1,20 @@
+{
+  "H_p_order": 432,
+  "H_p_observer_orbits": [
+    36
+  ],
+  "collinear_pairs": {
+    "(12, '{1: 1, 2: 7, 3: 2, 6: 2}', '[1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 6]')": 12
+  },
+  "noncollinear_pairs": {
+    "(16, '{1: 1, 2: 3, 4: 12}', '[4, 4, 4, 8, 8, 8]', 0)": 27
+  },
+  "checks": {
+    "control: Sp(4,3) is transitive on the 36 observers": true,
+    "relativity: H_p (432) is transitive on the 36 observers (no rest frame from one clock)": true,
+    "two collinear clocks: common symmetry +-1 x S3 (12; orders 1:1, 2:7, 3:2, 6:2), all 12 partners": true,
+    "two collinear clocks fix exactly 3 observers = the J with Jp = q (mirror frames)": true,
+    "two non-collinear clocks: common symmetry 2 x Q8 (16; orders 1:1, 2:3, 4:12), orbits 4,4,4,8,8,8, none fixed": true
+  },
+  "all_checks_pass": true
+}
