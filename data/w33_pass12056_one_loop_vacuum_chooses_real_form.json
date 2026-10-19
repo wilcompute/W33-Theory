@@ -1,0 +1,51 @@
+{
+  "E6p": {
+    "n_roots": 72,
+    "rank": 6,
+    "closed": true,
+    "equals_neighbour_fibres": true
+  },
+  "A2p": {
+    "n_roots": 6,
+    "rank": 2,
+    "closed": true
+  },
+  "D4D4": {
+    "sizes": [
+      24,
+      24
+    ],
+    "ranks": [
+      4,
+      4
+    ],
+    "closed": [
+      true,
+      true
+    ],
+    "mutually_orthogonal": true
+  },
+  "point_vacuum_containment": {
+    "clock": 3,
+    "split": 0
+  },
+  "factorisation_vacuum_containment": {
+    "clock": 0,
+    "split": 3
+  },
+  "n_points_checked": 40,
+  "n_factorisations_checked": 45,
+  "A2p_even_roots_per_clock_involution": [
+    2,
+    2,
+    2
+  ],
+  "checks": {
+    "E6(p) = roots orthogonal to the fibre = the 12 neighbour fibres (72 roots, rank 6, closed); A2(p) = fibre": true,
+    "factorisation fibres = D4(H1) + D4(H2): 24 + 24 roots, rank 4 each, closed, mutually orthogonal": true,
+    "(a) for all 40 points: k contains e6(p)+h for exactly the 3 clock involutions at p (no split one)": true,
+    "(b) for all 45 factorisations: k contains d4+d4+h for exactly the 3 split involutions there (no clock one)": true,
+    "each clock involution at p keeps exactly one su(2) of the family A2(p) (2 even roots)": true
+  },
+  "all_checks_pass": true
+}
