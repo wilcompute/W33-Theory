@@ -1,0 +1,115 @@
+{
+  "schema": "w33.forty_points.evidence_audit.v1",
+  "source": "papers/forty_points/main.tex and its 15 includes; prior local pdftotext extraction of main.pdf",
+  "source_tex_sha256": "abc1217e1df3e2f0bdf7e512f5312b5042e836e9c428d35310d1a35afe91edb0",
+  "module_count": 15,
+  "included_tex_count": 15,
+  "included_modules": [
+    "sec00_reading",
+    "sec01_prologue",
+    "sec02_object",
+    "sec03_selfentangle",
+    "sec04_time",
+    "sec05_e8",
+    "sec06_freudenthal",
+    "sec07_realforms",
+    "sec08_lorentz",
+    "sec09_physics",
+    "sec10_machine",
+    "sec11_epilogue",
+    "appA_ledger",
+    "appB_glossary",
+    "appC_references"
+  ],
+  "lines_by_module": {
+    "sec00_reading": 86,
+    "sec01_prologue": 131,
+    "sec02_object": 220,
+    "sec03_selfentangle": 458,
+    "sec04_time": 1342,
+    "sec05_e8": 836,
+    "sec06_freudenthal": 209,
+    "sec07_realforms": 237,
+    "sec08_lorentz": 270,
+    "sec09_physics": 1597,
+    "sec10_machine": 224,
+    "sec11_epilogue": 211,
+    "appA_ledger": 607,
+    "appB_glossary": 65,
+    "appC_references": 210
+  },
+  "status_marker_mentions": {
+    "T": 197,
+    "C": 717,
+    "B": 73,
+    "X": 12,
+    "O": 9
+  },
+  "cert_mentions": 1057,
+  "unique_cert_labels": 543,
+  "found_evidence_paths": 520,
+  "unresolved_evidence_labels_count": 23,
+  "unresolved_labels_sample": [
+    "1cde1f1",
+    "3caf15e",
+    "5419c27",
+    "5b3f3ad",
+    "68df33f",
+    "78ec0a0fc",
+    "93b34e1",
+    "94df376",
+    "98cafff",
+    "Holotrade1cde1f1",
+    "Holotrade68df33f",
+    "a3dbdf2d7",
+    "a6e1c69",
+    "a6f1cae",
+    "a779053",
+    "babfd48",
+    "canonical_su3_gauge_and_cubic.json",
+    "d772153",
+    "e92a047",
+    "ed1eaca",
+    "frame_chirality_is_reversed_only_by_antiunitaries.py",
+    "holonet_machine_blueprint_body.tex",
+    "w33_20261001_three_qutrit_fidelity_flag.py"
+  ],
+  "caution_unresolved": "Unresolved label need not be missing proof: some paths are macros, aliases, or non-analysis roots.",
+  "physical_terminology_mentions": {
+    "prediction": 27,
+    "parameter_free": 2,
+    "experiment": 0,
+    "interpret": 3,
+    "open_problem": 7
+  },
+  "edition_comparison": {
+    "pdf_bytes": 1200987,
+    "pdf_sha256": "2fc87c5974fab66d0ce6f6e8f809addde0cc63f0d62101d2acaf1075a84f95a9",
+    "extracted_pages": 190,
+    "page_nonempty_count": 190,
+    "opening_snippet": " one point 4 lines 12 neighbours 27 far points Forty Points One qutrit, the exceptional algebras, and a light cone An exact and honest account of the \u00f0\ufffd\u2018\u0160(3, 3) programme, written so that anyone can follow it The W(3,3) Theory Programme repository wilcompute/W33-Theory \u00e2\u2039\u2026 17 October 2026 Every mathematical statement in this paper carries a status badge and, where it is a computation, the path of the committed script and certificate that proves it. Interpre- tations are labelled as interpretatio",
+    "tex_date_mentions": [
+      "\\small repository \\texttt{wilcompute/W33-Theory}\\quad$\\cdot$\\quad 17 October 2026\\par}"
+    ],
+    "may_be_different_editions": false
+  },
+  "selected_source_excerpts": {
+    "dynamical_principle": "Apart from the vacuum selections of Section~\\ref{sec:siegel} --- the one-loop minimum at the forty Witting rays (trinification) and the soft-supertrace choice of the $\\log\\tfrac85$ Clifford orbit, both computed for an assumed field content rather than derived from $\\W$ --- every result in this paper is kinematics. What action, Hamiltonian or spectral principle on $\\W$ has the structures found here as its symmetries, and what does it predict? In particular: does such a principle select the clock real form $E_{8(-24)}$ over the split form --- does the geometry \\emph{choose} one time? Theorem~7.3 answers the second question at the level of a selection rule. The clock form is anchored at an event and the split form at a tensor factorisation. The elementary tick (a symplectic transvection) is compatible only with the clock form, at its centre."
+  },
+  "novelty_corrections": [
+    "Pass 12055's L2 statement is numerical in its own original script; new tick majorization certificate proves it for all p>=1 at T>0.",
+    "The 90 size-4 and 2880 size-7 noncollinear packets were prior corpus (BT819 and Passes 5904-5919, 7269-7276); only the interaction application is newly certified.",
+    "One tick from fixed-rate minimization is a model-selection statement, not a dynamical derivation of an arrow or measured time.",
+    "The new 80-dimensional Clifford operator module is not automatically the E8 80-sector without an explicit equivariant intertwiner.",
+    "The second-order free-energy variance cannot distinguish commuting from noncommuting projectors at distinct Pauli directions."
+  ],
+  "claim_boundary": "Automated inclusion/reference/edition audit plus selected falsification checks; not a verification of every theorem in the 190-page paper",
+  "checks": {
+    "all_included_tex_files_exist": true,
+    "all_extracted_pdf_pages_nonempty": true,
+    "five_explicit_status_tiers_exist": true,
+    "dynamical_open_problem_present": true,
+    "tick_scope_note_needed": true
+  },
+  "all_checks_pass": true
+}

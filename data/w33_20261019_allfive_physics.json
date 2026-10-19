@@ -1,0 +1,297 @@
+{
+  "schema": "w33.toe.tick_allfive.physics.v1",
+  "source_date": "2026-10-19",
+  "status": "MATH_VERIFIED_PHYSICAL_DERIVATION_OPEN",
+  "tracks": {
+    "microscopic": {
+      "result": "NO-GO for W33-incidence dependence in quadratic/high-temperature variance of fixed-rate Gibbs model",
+      "overlap_collinear": 1.0000000000000002,
+      "overlap_noncollinear": 1.0,
+      "exact_trQ2": "Tr Q^2 = 1 + 3 sum_a w_a^2 - sum_p (sum_k w_pk)^2",
+      "high_T_expansion": "F_T = -T log 9 + 2/3 -(Tr Q^2-1)/(18T)+O(T^-2), sum w=1",
+      "max_trace_residual": 1.9984014443252818e-15,
+      "conditional_wilson_plaquette_action": "gamma sum_{a<b} w_a w_b [1-ReTr(Ua Ub Ua^dag Ub^dag)/9] = kappa C; Ua=exp(i theta Pa)",
+      "derived_kappa": "gamma |exp(i theta)-1|^4 / 18 >= 0 for gamma>=0",
+      "theta_pi_over_two_kappa_per_gamma": 0.22222222222222215,
+      "negative_kappa_requires_nonstandard_sign_or_active_dynamics": true,
+      "scope": "This does not exclude W33 at third+ order or a separately specified matter-induced effective action",
+      "pass": true
+    },
+    "phase": {
+      "rigorous": "For kappa>=0, one tick globally minimizes F+kappa C (C>=0). For kappa<0, an upper test envelope from singleton and heptad; no global finite-kappa phase boundary established.",
+      "finite_size_firewall": "Analytic Gibbs free energy of 9-dimensional fixed Hamiltonian; optimized order parameter can switch but not thermodynamic-limit criticality",
+      "heptad_indices": [
+        0,
+        4,
+        5,
+        9,
+        24,
+        27,
+        30
+      ],
+      "family_scans": [
+        {
+          "temperature": 0.2,
+          "single_heptad_equal_energy_kappa": -0.6531072258277516,
+          "single_vertex_local_instability_kappa": -0.490027468281701,
+          "pattern_F_and_C": {
+            "singleton": {
+              "F": -0.22239963807791174,
+              "C": 0.0
+            },
+            "noncommuting_pair": {
+              "F": -0.022887718992631534,
+              "C": 0.3333333333333333
+            },
+            "commuting_line": {
+              "F": -0.03447814290293558,
+              "C": 0.0
+            },
+            "heptad_7": {
+              "F": 0.15080449096651768,
+              "C": 0.5714285714285714
+            },
+            "uniform_40": {
+              "F": 0.21111157233359246,
+              "C": 0.44999999999999984
+            }
+          }
+        },
+        {
+          "temperature": 0.5,
+          "single_heptad_equal_energy_kappa": -0.3589629929563476,
+          "single_vertex_local_instability_kappa": -0.3402395316211989,
+          "pattern_F_and_C": {
+            "singleton": {
+              "F": -0.6690785274449972,
+              "C": 0.0
+            },
+            "noncommuting_pair": {
+              "F": -0.5478866366832896,
+              "C": 0.3333333333333333
+            },
+            "commuting_line": {
+              "F": -0.5121313479789401,
+              "C": 0.0
+            },
+            "heptad_7": {
+              "F": -0.46395681718422715,
+              "C": 0.5714285714285714
+            },
+            "uniform_40": {
+              "F": -0.43783393310615826,
+              "C": 0.44999999999999984
+            }
+          }
+        },
+        {
+          "temperature": 1.0,
+          "single_heptad_equal_energy_kappa": -0.181112761716546,
+          "single_vertex_local_instability_kappa": -0.18208766357437184,
+          "pattern_F_and_C": {
+            "singleton": {
+              "F": -1.6500570026001609,
+              "C": 0.0
+            },
+            "noncommuting_pair": {
+              "F": -1.5883186384027985,
+              "C": 0.3333333333333333
+            },
+            "commuting_line": {
+              "F": -1.5642171788658088,
+              "C": 0.0
+            },
+            "heptad_7": {
+              "F": -1.5465639959049917,
+              "C": 0.5714285714285714
+            },
+            "uniform_40": {
+              "F": -1.5334165171337895,
+              "C": 0.44999999999999984
+            }
+          }
+        }
+      ],
+      "restricted_SLSQP": [
+        {
+          "T": 0.2,
+          "kappa": -1.0,
+          "best_energy": -0.42373101587503686,
+          "support_over_1e-3": 7,
+          "best_C": 0.5708862045749421,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 0.2,
+          "kappa": -0.5,
+          "best_energy": -0.22254097745675044,
+          "support_over_1e-3": 7,
+          "best_C": 0.028096419722898565,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 0.2,
+          "kappa": -0.25,
+          "best_energy": -0.22239963807791174,
+          "support_over_1e-3": 1,
+          "best_C": 0.0,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 0.2,
+          "kappa": 0.25,
+          "best_energy": -0.22239963807855537,
+          "support_over_1e-3": 1,
+          "best_C": 3.395512114318354e-25,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 0.5,
+          "kappa": -1.0,
+          "best_energy": -1.0354016410620903,
+          "support_over_1e-3": 7,
+          "best_C": 0.5714038069019335,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 0.5,
+          "kappa": -0.5,
+          "best_energy": -0.7497395888297615,
+          "support_over_1e-3": 7,
+          "best_C": 0.5709854249635412,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 0.5,
+          "kappa": -0.25,
+          "best_energy": -0.6690785274462697,
+          "support_over_1e-3": 1,
+          "best_C": 2.5474015042687147e-12,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 0.5,
+          "kappa": 0.25,
+          "best_energy": -0.6690785274541645,
+          "support_over_1e-3": 1,
+          "best_C": 1.3596490370486842e-11,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 1.0,
+          "kappa": -1.0,
+          "best_energy": -2.117993431955298,
+          "support_over_1e-3": 7,
+          "best_C": 0.5714275288206164,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 1.0,
+          "kappa": -0.5,
+          "best_energy": -1.8324384310479662,
+          "support_over_1e-3": 7,
+          "best_C": 0.5714281674981389,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 1.0,
+          "kappa": -0.25,
+          "best_energy": -1.6895817379503413,
+          "support_over_1e-3": 7,
+          "best_C": 0.5714209158281278,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        },
+        {
+          "T": 1.0,
+          "kappa": 0.25,
+          "best_energy": -1.6500570026586507,
+          "support_over_1e-3": 1,
+          "best_C": 2.4598810238436157e-10,
+          "all_optimizers_reported_success": true,
+          "scope": "heuristic restricted k=0-only 40-variable SLSQP, 4 starts"
+        }
+      ],
+      "pass": true
+    },
+    "echo": {
+      "exact_identity": "1-Re Tr(Ucomm)/9 = |exp(i theta)-1|^4 ||[P,Q]||_F^2/18",
+      "noncommuting_exact": "(32/27) sin(theta/2)^4",
+      "commuting_exact": "zero for all theta",
+      "cases": [
+        {
+          "theta": 0.15,
+          "noncommuting_deficit": 3.735961206485783e-05,
+          "exact_prediction": 3.7359612064721876e-05,
+          "commuting_null_deficit": 0.0
+        },
+        {
+          "theta": 0.5,
+          "noncommuting_deficit": 0.00444030493431824,
+          "exact_prediction": 0.004440304934318348,
+          "commuting_null_deficit": 0.0
+        },
+        {
+          "theta": 1.0,
+          "noncommuting_deficit": 0.06261391703411845,
+          "exact_prediction": 0.06261391703411832,
+          "commuting_null_deficit": 4.440892098500626e-16
+        },
+        {
+          "theta": 1.5707963267948966,
+          "noncommuting_deficit": 0.2962962962962965,
+          "exact_prediction": 0.29629629629629634,
+          "commuting_null_deficit": 5.551115123125783e-16
+        },
+        {
+          "theta": 3.141592653589793,
+          "noncommuting_deficit": 1.1851851851851851,
+          "exact_prediction": 1.1851851851851851,
+          "commuting_null_deficit": 4.440892098500626e-16
+        }
+      ],
+      "worst_numeric_residual": 5.551115123125783e-16,
+      "interferometric_protocol": "Prepare maximally mixed 9-level target or maximally entangled Choi state; ancilla Hadamard-test real trace of Ucomm, with four controlled projector-phase gates; compare commuting control; phase randomization, detector/electronics sham.",
+      "theta_pi_over_two_signal": 0.2962962962962963,
+      "total_shots_two_configs_95_percent_conservative": 3196,
+      "shots_per_config": 1598,
+      "shot_formula": "N >= 32 log(4/alpha) / delta^2 per condition for P(error of either mean by >= delta/4)<=alpha (Hoeffding)",
+      "visibility_caution": "If ancilla fringe visibility v<1, replace delta by v*delta; require independent calibration and common-mode controls",
+      "scope": "Exact unitary circuit prediction, not experimentally implemented or a demonstration of a literal past-future photon",
+      "pass": true
+    },
+    "representation": {
+      "representation": "80-dimensional real traceless Hermitian qutrit-operator module, 40 orthogonal real 2-planes (Pauli directions)",
+      "complexification": "80 one-dimensional nontrivial F3^4 characters, indexed by 80 nonzero displacement vectors",
+      "Pauli_translation_nontrivial_character": -1,
+      "Pauli_translation_80_actions_checked": 80,
+      "orthogonal_projective_points_to_nonzero_translation_counts": [
+        13,
+        27
+      ],
+      "outcome_fixed_point_trace_120": 39,
+      "underlying_adjoint_trace81": 0,
+      "irreducibility": "As representation of affine symplectic/Clifford semidirect product F3^4 : Sp(4,3), the 80 complex nontrivial Pauli characters are permuted transitively, so the 80-dimensional complex representation is irreducible.",
+      "E8_intertwiner_status": "OPEN: an 80-dimensional count or E8=80+56+56+56 is insufficient for equivariance; compare explicit generating matrices / characters before asserting module isomorphism",
+      "scope": "Exact finite operator representation, not a physical E8 gauge identification",
+      "pass": true
+    }
+  },
+  "checks": {
+    "microscopic": true,
+    "phase": true,
+    "echo": true,
+    "representation": true
+  },
+  "all_checks_pass": true
+}
