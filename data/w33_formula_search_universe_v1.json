@@ -370004,6 +370004,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ad1c415eeecbb3c2037fc950a548716d781927f2251e950d31f5cb44f5d10d55",
+      "normalized_formula": "-4(sum_p<T_p>^2<=16foranystate).ItisattainedbyanISOTROPICLINE(acommutingcontext,phi=-1/2,the",
+      "numeric_literals": [
+        "-1",
+        "-4",
+        "16",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "-4 (sum_p <T_p>^2 <= 16 for any state). It is attained by an ISOTROPIC LINE (a commuting context, phi = -1/2, the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0be3d141bc16a7922fe7c1d1abc405f7d9cfb2778509f62b8f713b8d3e2b6177",
+      "structural_formula": "#(sum_p<T_p>^#<=#foranystate).ItisattainedbyanISOTROPICLINE(acommutingcontext,phi=#/#,the"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e61f0405b731405e4aa02387476a1b4fce9f93df0ce06a3f7a33c319131433ab",
       "normalized_formula": "-4320=lambda^F_5*q^q*F_5(BW_16kissingnumber,BT440)",
       "numeric_literals": [
@@ -444810,6 +444840,35 @@
       },
       "structural_family_id": "ba0a531ad39cb1865591db2201d2f674f816b861387130029dd883d23cf8c578",
       "structural_formula": "#.^THEq=#TRUTHFITS`v_\u03bb(trD^m)=#(m+[modd])`^onallelevenexponents.Since`#v_3(m!)=m\u2212s_3(m)`(s_3=base-#digitsum),thetwodifferby^`s_3(m)+[modd]\u2212#`^,zeroexactlywhen`s_3(m)+[modd]=#`\u2014^asetcontainingeverym=#^j^.^Theprime-powertowerliesinsidetheagreementlocus^,whichiswhyitsfourconfirmedrungs(#,#,#,#)couldnotdetectthis.Everyearliertestwasatm=q,atm=p^j,orat|R|=#/#\u2014^neveratq=#offthetower^"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a85b771fe921643066153452ee6cb83e0068df0ebcb182242c61d9c0b1fda29c",
+      "normalized_formula": "4.^TheL2sphere.^HeretootheglobalminimumisasingletickatallTtried(0.02-2).AtlowT,F->-Tlog3",
+      "numeric_literals": [
+        "-2",
+        "0.02",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12055_MICROSCOPIC_TICK_MODEL.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/PASS12055_MICROSCOPIC_TICK_MODEL.md",
+          "raw": "4. **The L2 sphere.** Here too the global minimum is a single tick at all T tried (0.02-2). At low T, F -> -T log 3.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "530b21eeaf319b632c73791feda5d85d209a9531cfb58b9eb09eda974da0d35e",
+      "structural_formula": "#.^TheL2sphere.^HeretootheglobalminimumisasingletickatallTtried(##).AtlowT,F->-Tlog3"
     },
     {
       "file_count": 1,
@@ -553470,6 +553529,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ddaa7c763b742b3a80fdc49fa54a9023e4b32c2a71dfe4cfccffcfa6979b7c9e",
+      "normalized_formula": "Asingletickhasa3-dimensionalkernel;anytwodistincttickshavekernel<=1(0whennon-collinearorat",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "A single tick has a 3-dimensional kernel; any two distinct ticks have kernel <= 1 (0 when non-collinear or at",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "cb76355f0d2a1044f842b00a48f1a183f595c6cd4a71ded164192c20c0eedfb0",
+      "structural_formula": "Asingletickhasa3-dimensionalkernel;anytwodistincttickshavekernel<=#(#whennon-collinearorat"
+    },
+    {
+      "file_count": 1,
       "formula_id": "aff62ffcb2f6d214f767109bca2820e4d6ee21920dc0a00efa13e17d94864d02",
       "normalized_formula": "Aspecies-wiseH-equivariantfive-generationchargepartitionexistsatdimensions`(Q,u,d,L,e)=(30,15,15,10,5)`,leaving70gauge-singletstates.Howeveranidenticalfive-dimensionalgenerationfactorrepeatedoverall15Standard-Modelinternalstatesisimpossibleatorder72:anyconstituentofthatgenerationfactorwouldneedmultiplicityatleast15inH145,andonly`chi_00`clearsthatthreshold.Thusorder-72speciescovariancesurvives,butexactfamily-universalfactorizationdoesnot",
       "numeric_literals": [
@@ -600041,6 +600128,33 @@
       },
       "structural_family_id": "a1b7f4326fc7c25c125f94efd38faf696e3102f86cc9c8c90e09e8be2ddc9c95",
       "structural_formula": "E=(C_2)^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a59a22b3fcf1079ec5a06d9d4cb363ab7c31e3db2aca5551a8688bc445535bb8",
+      "normalized_formula": "E=-4",
+      "numeric_literals": [
+        "-4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 600,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "E=-4",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "609f5cb470088ed3327046a829c32b88cc6ecb50a36c91fab4bfff9c924028c3",
+      "structural_formula": "E=#"
     },
     {
       "file_count": 1,
@@ -700532,6 +700646,33 @@
       },
       "structural_family_id": "f44e49640cfa7762bc049eca60ad6dcb6b2ac8fc86b84f71b56a227ab733572f",
       "structural_formula": "Model(SM);theyareinputs,notoutputs~\\cite{Weinberg1#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a5c0dba262e8c77060e5f35278a01c19091b1548266dfeb7debf095b2a724303",
+      "normalized_formula": "Model.AtickisaCliffordtransvectionU=sum_kw^(k^2)Pi_k(p),wherePi_k(p)aretheeigenprojectorsofthe",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "Model. A tick is a Clifford transvection U = sum_k w^(k^2) Pi_k(p), where Pi_k(p) are the eigenprojectors of the",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "8fb7ceba7f8852ea478a3c277a805a7026428cc7b95a22be485835a0d5f23078",
+      "structural_formula": "Model.AtickisaCliffordtransvectionU=sum_kw^(k^#)Pi_k(p),wherePi_k(p)aretheeigenprojectorsofthe"
     },
     {
       "file_count": 1,
@@ -948701,7 +948842,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 123,
+          "line": 124,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "\\item \\textbf{Chirality from outside.} Corollary~9.7 shows that reversing time's orientation,",
           "status": "unclassified"
@@ -974283,7 +974424,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 602,
+          "line": 603,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1008835,7 +1008976,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 160,
+          "line": 161,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "\\varepsilon\\approx1/150",
           "status": "unclassified"
@@ -1020680,6 +1020821,33 @@
       },
       "structural_family_id": "a610e41447cb43fc3540663355f51541546c68499780679da02f7a0e28987e11",
       "structural_formula": "^Thetangentqutrit.^Takev=e0amongthe4#WittingraysofC4(thePass1#list).Onv\u22a5=span(e1,e2,e3)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f7dcb5e4269862959a51fbf2afd9c6036b8fa6955f65add0789650dc33301f0b",
+      "normalized_formula": "^Theticks.^AtickistheCliffordtransvectionU=sum_kw^(k^2)Pi_k(p)ontwoqutrits.Pauliconjugationshiftsk",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12055_MICROSCOPIC_TICK_MODEL.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/PASS12055_MICROSCOPIC_TICK_MODEL.md",
+          "raw": "**The ticks.** A tick is the Clifford transvection U = sum_k w^(k^2) Pi_k(p) on two qutrits. Pauli conjugation shifts k,",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "46fd79ae768a3e678dab819aa62475274f9ffe663736150e2ed74046d0f8e6a2",
+      "structural_formula": "^Theticks.^AtickistheCliffordtransvectionU=sum_kw^(k^#)Pi_k(p)ontwoqutrits.Pauliconjugationshiftsk"
     },
     {
       "file_count": 1,
@@ -1040932,6 +1041100,38 @@
       },
       "structural_family_id": "8e793f44387e7cf637d86ed0e3e66760e0911d5203a882e3a19732403d1f5d41",
       "structural_formula": "all(s[\"cost_rays\"]=#forsinsteps)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ba1bc2a7b7702db1fe91b380ae108d3c031c4b492e6a3e5f238574d84970a61c",
+      "normalized_formula": "all(v[\"support\"]=1andabs(v[\"F\"]-v[\"single\"])<1e-6forvinl2.values())andabs(l2[\"0.05\"][\"single\"]+0.05*np.log(3))<1e-3)",
+      "numeric_literals": [
+        "+0.05",
+        "0.05",
+        "1",
+        "1e-3",
+        "1e-6",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 133,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "all(v[\"support\"] == 1 and abs(v[\"F\"] - v[\"single\"]) < 1e-6 for v in l2.values()) and abs(l2[\"0.05\"][\"single\"] + 0.05 * np.log(3)) < 1e-3)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "edc74005279eab914f5f7e8b9546ea4c75ee5ccc066a389ad4af0fc48087be6d",
+      "structural_formula": "all(v[\"support\"]=#andabs(v[\"F\"]-v[\"single\"])<#forvinl2.values())andabs(l2[\"#\"][\"single\"]#*np.log(#))<#)"
     },
     {
       "file_count": 1,
@@ -1154915,6 +1155115,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6e50eab390246cbd0c9bc28ada63e696d7c8b9ccf6400e616e844855b8772695",
+      "normalized_formula": "checks[\"L2sphere:themultistartminimumisasingletick(T=0.05,1),F->-Tlog3atlowT\"]=bool(",
+      "numeric_literals": [
+        "0.05",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 132,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "checks[\"L2 sphere: the multistart minimum is a single tick (T = 0.05, 1), F -> -T log 3 at low T\"] = bool(",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9183445589beb15b250bdf5545a7fa3505cf65a984179c1243cc8cae67565b0e",
+      "structural_formula": "checks[\"L2sphere:themultistartminimumisasingletick(T=#,#),F->-Tlog3atlowT\"]=bool("
+    },
+    {
+      "file_count": 1,
       "formula_id": "cc7de2f289f47f4ed40618238800ca8de316c6de19cc9c85d5b34a2423361844",
       "normalized_formula": "checks[\"M_X_min_in_expected_window\"]=1e15<M_X_min<1e16",
       "numeric_literals": [
@@ -1155157,6 +1155385,34 @@
       },
       "structural_family_id": "afe9b787e7b6d69fef3867f3d65cf87d452b02e6a4b496f8e6f3ba7c98d4f09b",
       "structural_formula": "checks[\"SxSWilson-freebranch:parity-symmetricYukawas,CKMhasadecoupledgeneration(one1,four0s)\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "568f1fa7e3b550ad072e86078e34402ebf9a6469c512f1afdb4e0ca7cbf1ce68",
+      "normalized_formula": "checks[\"T=0:singletickkernel3;twoticks<=1(0atthesamepointornon-collinear)\"]=bool(",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "checks[\"T = 0: single tick kernel 3; two ticks <= 1 (0 at the same point or non-collinear)\"] = bool(",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "603fd650d017dc2c2aa1dd7f3a6b6705ec7975d6eceb3b197d18338e8429f627",
+      "structural_formula": "checks[\"T=#:singletickkernel3;twoticks<=#(#atthesamepointornon-collinear)\"]=bool("
     },
     {
       "file_count": 1,
@@ -1283392,6 +1283648,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f46637d3cc35ca9dd0338e9c824ca8f3cbd143ec51bd277aaccb5204cd9dc947",
+      "normalized_formula": "forainrng.choice(120,12,replace=False)",
+      "numeric_literals": [
+        "12",
+        "120"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 81,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "for a in rng.choice(120, 12, replace=False):",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "64bd6cfc8f800c7acdc99e090260a3d124a3b1df9713a7ef11458f3b8fc45832",
+      "structural_formula": "forainrng.choice(#,#,replace=False)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "64da9c18d113f5e6c5309d6c01b00256ac5b7767dd28ed1ed2a3efd5c3a9b981",
       "normalized_formula": "forainrng.choice(len(W),4,replace=False)",
       "numeric_literals": [
@@ -1349046,6 +1349330,64 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6b8506221b40ac8a43536da059d4631b2bc421e594c20b2d66e282158df1bce4",
+      "normalized_formula": "kd=dict(single=kernel([0]),same_point=kernel([0,1]),collinear=max(kernel([0,3*col+k])forkinrange(3))",
+      "numeric_literals": [
+        "0",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 96,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "kd = dict(single=kernel([0]), same_point=kernel([0, 1]), collinear=max(kernel([0, 3 * col + k]) for k in range(3)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6e8478de5f6ae82bb303b2a1a77abe000474a2116ea8c9e0641189c2d5e0c1ec",
+      "structural_formula": "kd=dict(single=kernel([#]),same_point=kernel([#,#]),collinear=max(kernel([#,#*col+k])forkinrange(#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "285b110f99d180bd6bc7375618c871d0f3ce89c28a6373c0d9431ebdea43cd94",
+      "normalized_formula": "kd[\"single\"]=3andkd[\"same_point\"]=0andkd[\"collinear\"]=1andkd[\"non_collinear\"]=0)",
+      "numeric_literals": [
+        "0",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 100,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "kd[\"single\"] == 3 and kd[\"same_point\"] == 0 and kd[\"collinear\"] == 1 and kd[\"non_collinear\"] == 0)",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "05851b72cf4cfd6188825326c9ef492e5d4154aadcc69932858bff6a643c19b0",
+      "structural_formula": "kd[\"single\"]=#andkd[\"same_point\"]=#andkd[\"collinear\"]=#andkd[\"non_collinear\"]=#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6a3e0e8a73f3938cd8fa3f82964569db63d0f661110ed4acfa498141cb0148f0",
       "normalized_formula": "kd^2/n=q+1",
       "numeric_literals": [
@@ -1351609,6 +1351951,36 @@
       },
       "structural_family_id": "55e9a323137e86845d91889efe83bcabe2e8859c1580dc38c8d14b3e79fe93f5",
       "structural_formula": "l1=##*np.sin(#*np.pi*t/#);l2=##*np.cos(#*np.pi*t/#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e8ba72dbd93187c3a16346c6081384ecad0ca5722d9cb47bc3709e499d91f2bc",
+      "normalized_formula": "l2[str(T)]=dict(F=best[0],single=free(np.eye(120)[0],T),support=int(np.sum(best[1]>0.05*best[1].max())))",
+      "numeric_literals": [
+        "0",
+        "0.05",
+        "1",
+        "120"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 129,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "l2[str(T)] = dict(F=best[0], single=free(np.eye(120)[0], T), support=int(np.sum(best[1] > 0.05 * best[1].max())))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b1d026c7d3cf57c927f9157a8660e8acc4dc3c28a24b066d7ca50f0cc5f9f2b6",
+      "structural_formula": "l2[str(T)]=dict(F=best[#],single=free(np.eye(#)[#],T),support=int(np.sum(best[#]>#*best[#].max())))"
     },
     {
       "file_count": 1,
@@ -1371674,7 +1372046,7 @@
         },
         {
           "category": "inline_math",
-          "line": 198,
+          "line": 199,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_1\\approx0.8",
           "status": "unclassified"
@@ -1381011,7 +1381383,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 601,
+          "line": 602,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1386145,7 +1386517,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 601,
+          "line": 602,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1402048,7 +1402420,7 @@
         },
         {
           "category": "inline_math",
-          "line": 147,
+          "line": 148,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_um_t/m_c^2=|\\mathfrak f(\\tau_1)\\mathfrak f(\\tau_2)|^8/4",
           "status": "unclassified"
@@ -1642048,6 +1642420,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cdc37cbc06cdf17ff3555fcb0bdfc8e44c062fab662a122d83d3417f010a7e5b",
+      "normalized_formula": "res[\"L2_record\"]=\"frozenscanT=0.02,0.05,0.1,0.2,0.3,0.5,1,2:singletickateveryT\"",
+      "numeric_literals": [
+        "0.02",
+        "0.05",
+        "0.1",
+        "0.2",
+        "0.3",
+        "0.5",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 131,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "res[\"L2_record\"] = \"frozen scan T = 0.02, 0.05, 0.1, 0.2, 0.3, 0.5, 1, 2: single tick at every T\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "56f9a78fc4fa5a7273947b500a0f9348e86b4910285a782aaae8a1851c3110a0",
+      "structural_formula": "res[\"L2_record\"]=\"frozenscanT=#,#,#,#,#,#,#,#:singletickateveryT\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "06606d191e0ef394d5a89150d0cd194b653ca4eb0aa31e0465bf8e8ffa879f98",
       "normalized_formula": "res[\"S2_A2_hexagon_reconciliation\"]={\"v_dot_rho_v\":-1,\"all_lines\":bool(hexok)",
       "numeric_literals": [
@@ -1643587,6 +1643993,33 @@
       },
       "structural_family_id": "08c506ff03881172d81bec6ea409b512da76667d5f6e092f514306d092564849",
       "structural_formula": "res[\"pattern_6#_constant_on_orbitals\"]=all(len(v[\"imag_values_units_i_sqrt3_over_7#\"])=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6b03b6fd40792e9f18b1413b20b3241a4bf1771308b5dbae11d8f429bad7c23c",
+      "normalized_formula": "res[\"pauli_contrast\"]=dict(E_min=float(best[0]),E_isotropic_line=float(E_line),E_single_point=float(E_point)",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 147,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "res[\"pauli_contrast\"] = dict(E_min=float(best[0]), E_isotropic_line=float(E_line), E_single_point=float(E_point),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4bc6ad3b35e2a28af51109bd4b9de79a4e46cc589fa12a598f65916113402d32",
+      "structural_formula": "res[\"pauli_contrast\"]=dict(E_min=float(best[#]),E_isotropic_line=float(E_line),E_single_point=float(E_point)"
     },
     {
       "file_count": 1,
@@ -1795056,7 +1795489,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 601,
+          "line": 602,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1805189,6 +1805622,34 @@
       },
       "structural_family_id": "c91a91229e2d511d92da3bbbefa59a5451bf3bfc7b3ad6f6012a8c05da0bc318",
       "structural_formula": "{opt['zeros']}zeroslieon|u|=#/sqrt({q})to{opt['max_dev']:#e}.Forthetrivialgaugefieldonly{triv['on_circle']}of{triv['zeros']}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "309f194bea9f439af313f03c7a76d09a3426f8213aab964797383a8263c5c057",
+      "normalized_formula": "{phi>=0,sumphi=1}--fixedtotaltickrate--itsminimumisattainedatavertex:asingletick,atEVERY",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12055_microscopic_tick_model.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass12055_microscopic_tick_model.py",
+          "raw": "{phi >= 0, sum phi = 1} -- fixed total tick rate -- its minimum is attained at a vertex: a single tick, at EVERY",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "9d569042813c00ad70fb768a784f54dc1770ab8ef82efbf3e0c276a9db5a27e8",
+      "structural_formula": "{phi>=#,sumphi=#}--fixedtotaltickrate--itsminimumisattainedatavertex:asingletick,atEVERY"
     },
     {
       "file_count": 1,
@@ -1843668,9 +1844129,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-18T21:06:07-04:00",
+  "frozen_at": "2026-10-18T21:51:36-04:00",
   "pass": 398,
-  "repository_head": "752ffab0a836a50324c4c8bbb769128a973667a1",
+  "repository_head": "ec582c5457a36767c257b3103b182a9729ad5935",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1901458,6 +1901919,14 @@
     },
     {
       "exact_formula_ids": [
+        "ad1c415eeecbb3c2037fc950a548716d781927f2251e950d31f5cb44f5d10d55"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0be3d141bc16a7922fe7c1d1abc405f7d9cfb2778509f62b8f713b8d3e2b6177",
+      "structural_formula": "#(sum_p<T_p>^#<=#foranystate).ItisattainedbyanISOTROPICLINE(acommutingcontext,phi=#/#,the"
+    },
+    {
+      "exact_formula_ids": [
         "1b60ab5d7524959d76c27daf111ddd474f45630b7d9fc08f7f563b13b40099dc"
       ],
       "exact_member_count": 1,
@@ -1905784,6 +1906253,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ba0a531ad39cb1865591db2201d2f674f816b861387130029dd883d23cf8c578",
       "structural_formula": "#.^THEq=#TRUTHFITS`v_\u03bb(trD^m)=#(m+[modd])`^onallelevenexponents.Since`#v_3(m!)=m\u2212s_3(m)`(s_3=base-#digitsum),thetwodifferby^`s_3(m)+[modd]\u2212#`^,zeroexactlywhen`s_3(m)+[modd]=#`\u2014^asetcontainingeverym=#^j^.^Theprime-powertowerliesinsidetheagreementlocus^,whichiswhyitsfourconfirmedrungs(#,#,#,#)couldnotdetectthis.Everyearliertestwasatm=q,atm=p^j,orat|R|=#/#\u2014^neveratq=#offthetower^"
+    },
+    {
+      "exact_formula_ids": [
+        "a85b771fe921643066153452ee6cb83e0068df0ebcb182242c61d9c0b1fda29c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "530b21eeaf319b632c73791feda5d85d209a9531cfb58b9eb09eda974da0d35e",
+      "structural_formula": "#.^TheL2sphere.^HeretootheglobalminimumisasingletickatallTtried(##).AtlowT,F->-Tlog3"
     },
     {
       "exact_formula_ids": [
@@ -1992554,6 +1993031,14 @@
     },
     {
       "exact_formula_ids": [
+        "ddaa7c763b742b3a80fdc49fa54a9023e4b32c2a71dfe4cfccffcfa6979b7c9e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cb76355f0d2a1044f842b00a48f1a183f595c6cd4a71ded164192c20c0eedfb0",
+      "structural_formula": "Asingletickhasa3-dimensionalkernel;anytwodistincttickshavekernel<=#(#whennon-collinearorat"
+    },
+    {
+      "exact_formula_ids": [
         "aff62ffcb2f6d214f767109bca2820e4d6ee21920dc0a00efa13e17d94864d02"
       ],
       "exact_member_count": 1,
@@ -2005297,6 +2005782,7 @@
     },
     {
       "exact_formula_ids": [
+        "a59a22b3fcf1079ec5a06d9d4cb363ab7c31e3db2aca5551a8688bc445535bb8",
         "aa8b920cf47d6cc1e2c28cb4c369407835c0c643fa13e60831aacb69b2cb0565",
         "e72e16ec7f767123f0c7b40391c0206f559a7b0576a6bf751ff22f868911dfc7",
         "e48494c281a104cf2885701f7fc431bbfff70ab54a8c732049e9ad4809d4821e",
@@ -2005305,7 +2005791,7 @@
         "a3e15d1a7b798056953b95beb5ae6b0086f8012e48180f6528eeb627f92f5b19",
         "95f0fb0f531049d244edde63b7986c223a185b0ed0e55acb3cca39d36b7b88df"
       ],
-      "exact_member_count": 7,
+      "exact_member_count": 8,
       "structural_family_id": "609f5cb470088ed3327046a829c32b88cc6ecb50a36c91fab4bfff9c924028c3",
       "structural_formula": "E=#"
     },
@@ -2032380,6 +2032866,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f44e49640cfa7762bc049eca60ad6dcb6b2ac8fc86b84f71b56a227ab733572f",
       "structural_formula": "Model(SM);theyareinputs,notoutputs~\\cite{Weinberg1#}"
+    },
+    {
+      "exact_formula_ids": [
+        "a5c0dba262e8c77060e5f35278a01c19091b1548266dfeb7debf095b2a724303"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8fb7ceba7f8852ea478a3c277a805a7026428cc7b95a22be485835a0d5f23078",
+      "structural_formula": "Model.AtickisaCliffordtransvectionU=sum_kw^(k^#)Pi_k(p),wherePi_k(p)aretheeigenprojectorsofthe"
     },
     {
       "exact_formula_ids": [
@@ -2115869,6 +2116363,14 @@
     },
     {
       "exact_formula_ids": [
+        "f7dcb5e4269862959a51fbf2afd9c6036b8fa6955f65add0789650dc33301f0b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "46fd79ae768a3e678dab819aa62475274f9ffe663736150e2ed74046d0f8e6a2",
+      "structural_formula": "^Theticks.^AtickistheCliffordtransvectionU=sum_kw^(k^#)Pi_k(p)ontwoqutrits.Pauliconjugationshiftsk"
+    },
+    {
+      "exact_formula_ids": [
         "764ac1aaae1ede21b55c8cb17fcde52042c819706b4ddef35f87783cccea04e3"
       ],
       "exact_member_count": 1,
@@ -2121343,6 +2121845,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8e793f44387e7cf637d86ed0e3e66760e0911d5203a882e3a19732403d1f5d41",
       "structural_formula": "all(s[\"cost_rays\"]=#forsinsteps)"
+    },
+    {
+      "exact_formula_ids": [
+        "ba1bc2a7b7702db1fe91b380ae108d3c031c4b492e6a3e5f238574d84970a61c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "edc74005279eab914f5f7e8b9546ea4c75ee5ccc066a389ad4af0fc48087be6d",
+      "structural_formula": "all(v[\"support\"]=#andabs(v[\"F\"]-v[\"single\"])<#forvinl2.values())andabs(l2[\"#\"][\"single\"]#*np.log(#))<#)"
     },
     {
       "exact_formula_ids": [
@@ -2152309,6 +2152819,14 @@
     },
     {
       "exact_formula_ids": [
+        "6e50eab390246cbd0c9bc28ada63e696d7c8b9ccf6400e616e844855b8772695"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9183445589beb15b250bdf5545a7fa3505cf65a984179c1243cc8cae67565b0e",
+      "structural_formula": "checks[\"L2sphere:themultistartminimumisasingletick(T=#,#),F->-Tlog3atlowT\"]=bool("
+    },
+    {
+      "exact_formula_ids": [
         "cc7de2f289f47f4ed40618238800ca8de316c6de19cc9c85d5b34a2423361844"
       ],
       "exact_member_count": 1,
@@ -2152378,6 +2152896,14 @@
       "exact_member_count": 1,
       "structural_family_id": "afe9b787e7b6d69fef3867f3d65cf87d452b02e6a4b496f8e6f3ba7c98d4f09b",
       "structural_formula": "checks[\"SxSWilson-freebranch:parity-symmetricYukawas,CKMhasadecoupledgeneration(one1,four0s)\"]=("
+    },
+    {
+      "exact_formula_ids": [
+        "568f1fa7e3b550ad072e86078e34402ebf9a6469c512f1afdb4e0ca7cbf1ce68"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "603fd650d017dc2c2aa1dd7f3a6b6705ec7975d6eceb3b197d18338e8429f627",
+      "structural_formula": "checks[\"T=#:singletickkernel3;twoticks<=#(#atthesamepointornon-collinear)\"]=bool("
     },
     {
       "exact_formula_ids": [
@@ -2187719,6 +2188245,14 @@
     },
     {
       "exact_formula_ids": [
+        "f46637d3cc35ca9dd0338e9c824ca8f3cbd143ec51bd277aaccb5204cd9dc947"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "64bd6cfc8f800c7acdc99e090260a3d124a3b1df9713a7ef11458f3b8fc45832",
+      "structural_formula": "forainrng.choice(#,#,replace=False)"
+    },
+    {
+      "exact_formula_ids": [
         "64da9c18d113f5e6c5309d6c01b00256ac5b7767dd28ed1ed2a3efd5c3a9b981"
       ],
       "exact_member_count": 1,
@@ -2205430,6 +2205964,22 @@
     },
     {
       "exact_formula_ids": [
+        "6b8506221b40ac8a43536da059d4631b2bc421e594c20b2d66e282158df1bce4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6e8478de5f6ae82bb303b2a1a77abe000474a2116ea8c9e0641189c2d5e0c1ec",
+      "structural_formula": "kd=dict(single=kernel([#]),same_point=kernel([#,#]),collinear=max(kernel([#,#*col+k])forkinrange(#))"
+    },
+    {
+      "exact_formula_ids": [
+        "285b110f99d180bd6bc7375618c871d0f3ce89c28a6373c0d9431ebdea43cd94"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "05851b72cf4cfd6188825326c9ef492e5d4154aadcc69932858bff6a643c19b0",
+      "structural_formula": "kd[\"single\"]=#andkd[\"same_point\"]=#andkd[\"collinear\"]=#andkd[\"non_collinear\"]=#)"
+    },
+    {
+      "exact_formula_ids": [
         "6a3e0e8a73f3938cd8fa3f82964569db63d0f661110ed4acfa498141cb0148f0"
       ],
       "exact_member_count": 1,
@@ -2206112,6 +2206662,14 @@
       "exact_member_count": 1,
       "structural_family_id": "55e9a323137e86845d91889efe83bcabe2e8859c1580dc38c8d14b3e79fe93f5",
       "structural_formula": "l1=##*np.sin(#*np.pi*t/#);l2=##*np.cos(#*np.pi*t/#)"
+    },
+    {
+      "exact_formula_ids": [
+        "e8ba72dbd93187c3a16346c6081384ecad0ca5722d9cb47bc3709e499d91f2bc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b1d026c7d3cf57c927f9157a8660e8acc4dc3c28a24b066d7ca50f0cc5f9f2b6",
+      "structural_formula": "l2[str(T)]=dict(F=best[#],single=free(np.eye(#)[#],T),support=int(np.sum(best[#]>#*best[#].max())))"
     },
     {
       "exact_formula_ids": [
@@ -2283039,6 +2283597,14 @@
     },
     {
       "exact_formula_ids": [
+        "cdc37cbc06cdf17ff3555fcb0bdfc8e44c062fab662a122d83d3417f010a7e5b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "56f9a78fc4fa5a7273947b500a0f9348e86b4910285a782aaae8a1851c3110a0",
+      "structural_formula": "res[\"L2_record\"]=\"frozenscanT=#,#,#,#,#,#,#,#:singletickateveryT\""
+    },
+    {
+      "exact_formula_ids": [
         "06606d191e0ef394d5a89150d0cd194b653ca4eb0aa31e0465bf8e8ffa879f98"
       ],
       "exact_member_count": 1,
@@ -2283476,6 +2284042,14 @@
       "exact_member_count": 1,
       "structural_family_id": "08c506ff03881172d81bec6ea409b512da76667d5f6e092f514306d092564849",
       "structural_formula": "res[\"pattern_6#_constant_on_orbitals\"]=all(len(v[\"imag_values_units_i_sqrt3_over_7#\"])=#"
+    },
+    {
+      "exact_formula_ids": [
+        "6b03b6fd40792e9f18b1413b20b3241a4bf1771308b5dbae11d8f429bad7c23c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4bc6ad3b35e2a28af51109bd4b9de79a4e46cc589fa12a598f65916113402d32",
+      "structural_formula": "res[\"pauli_contrast\"]=dict(E_min=float(best[#]),E_isotropic_line=float(E_line),E_single_point=float(E_point)"
     },
     {
       "exact_formula_ids": [
@@ -2326976,6 +2327550,14 @@
     },
     {
       "exact_formula_ids": [
+        "309f194bea9f439af313f03c7a76d09a3426f8213aab964797383a8263c5c057"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9d569042813c00ad70fb768a784f54dc1770ab8ef82efbf3e0c276a9db5a27e8",
+      "structural_formula": "{phi>=#,sumphi=#}--fixedtotaltickrate--itsminimumisattainedatavertex:asingletick,atEVERY"
+    },
+    {
+      "exact_formula_ids": [
         "8a0fcc50817f89513a88da97fa56830271f3cef86153e452c4231fcf1f82f2b0"
       ],
       "exact_member_count": 1,
@@ -2336414,20 +2336996,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89547846,
-    "exact_formula_families": 63052,
-    "files_scanned": 12270,
-    "formula_occurrences": 69090,
+    "bytes_scanned": 89560329,
+    "exact_formula_families": 63068,
+    "files_scanned": 12272,
+    "formula_occurrences": 69106,
     "status_occurrences": {
-      "certified_or_theorem": 5122,
-      "killed_or_retracted": 1812,
+      "certified_or_theorem": 5129,
+      "killed_or_retracted": 1813,
       "open_or_conditional": 2317,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54474
+      "unclassified": 54482
     },
-    "structural_families": 61378
+    "structural_families": 61393
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "08c1a83fbf6f1a44ca0e39a0221ba75aec1e19e39824dfdbaa84b09d7c50048f"
+  "universe_sha256": "766b57b553e6f79dc2123f8ae19d2ea3ee42b0ea24ec41af48eb55fc939f6105"
 }
