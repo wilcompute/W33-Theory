@@ -1,0 +1,27 @@
+{
+  "klein_planes": [
+    {
+      "types": {
+        "('D5',)": 27,
+        "('A1', 'A5')": 108
+      },
+      "patterns": {
+        "((('10', 'even'), 60), (('16', 'odd'), 128), (('singlet', 'even'), 12))": 27
+      }
+    },
+    {
+      "types": {
+        "('D5',)": 27,
+        "('A1', 'A5')": 108
+      },
+      "patterns": {
+        "((('10', 'even'), 60), (('16', 'odd'), 128), (('singlet', 'even'), 12))": 27
+      }
+    }
+  ],
+  "checks": {
+    "E6 Klein vacuum + split sigma: so(10) for exactly 27 of 135 splits (a5+a1 otherwise), two Klein planes": true,
+    "in every SO(10) case sigma is odd on all 128 spinor-weight roots (16s) and even on the 60 vector (10s) and 12 singlet roots": true
+  },
+  "all_checks_pass": true
+}

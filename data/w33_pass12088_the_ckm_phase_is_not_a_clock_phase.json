@@ -1,0 +1,33 @@
+{
+  "control_residual": 3.691738334685139e-14,
+  "control_phases_over_pi3": [
+    0.6223013364679324,
+    5.618533398886447
+  ],
+  "quantised_05_residual": 0.0532586871739823,
+  "record": {
+    "quantised_best": 0.0533,
+    "quantised_best_kl": [
+      0,
+      5
+    ],
+    "random_best": [
+      0.0208,
+      0.0473,
+      0.065,
+      0.0863,
+      0.1545
+    ],
+    "random_median": 0.5249,
+    "control_phases_over_pi3": [
+      0.6223,
+      5.6185
+    ]
+  },
+  "checks": {
+    "control (continuous equal-magnitude phases) fits exactly; phases not multiples of pi/3": true,
+    "best quantised fit (0,5) misses at |res| ~ 0.053 (4 parameters, 6 observables)": true,
+    "frozen baseline: random fixed phases do as well (best 0.021 < 0.053): no evidence for pi/3 quantisation": true
+  },
+  "all_checks_pass": true
+}

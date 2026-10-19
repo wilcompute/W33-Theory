@@ -1,0 +1,11 @@
+{
+  "odd_sector_patterns": {
+    "(('L', 4), ('Q', 3), ('XY', 1), ('dN', 6), ('ue', 2))": 10,
+    "(('L', 4), ('Q', 4), ('dN', 4), ('ue', 4))": 5
+  },
+  "checks": {
+    "15 splits in V: 5 clean (4 sectors of each matter type odd, gauge and X/Y even), 10 with X/Y odd": true,
+    "clean parity: bosonic leftovers 1 Q, 1 (u,e), 6 (d,N), 6 L of the 5/5/10/10 sectors": true
+  },
+  "all_checks_pass": true
+}

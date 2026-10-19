@@ -1,0 +1,24 @@
+{
+  "sector_labels": {
+    "gauge": 1,
+    "XY": 1,
+    "Q": 5,
+    "ue": 5,
+    "dN": 10,
+    "L": 10
+  },
+  "sm_generators": [
+    41,
+    27,
+    77,
+    25,
+    37
+  ],
+  "checks": {
+    "flag-built SM subspace: 31 elements, 16 clocks": true,
+    "X, Y bosons have hypercharge +-5/6": true,
+    "sector contents are exactly the SM pieces with SM hypercharges (6Y in parentheses)": true,
+    "multiplicities: Q 5, (u,e) 5, (d,N) 10, L 10, plus gauge and X/Y": true
+  },
+  "all_checks_pass": true
+}
