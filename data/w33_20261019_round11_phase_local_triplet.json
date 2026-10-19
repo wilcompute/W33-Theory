@@ -1,0 +1,256 @@
+{
+  "schema": "w33.round11.triple_near_singleton_explicit_sweep.v1",
+  "T": 0.5,
+  "exact_two_tick_threshold_evaluated": -0.3402395316211989,
+  "slices": {
+    "t=0.25,epsilon=0.01": {
+      "gap": 8.067235850450771e-06,
+      "indices": [
+        0,
+        75,
+        80
+      ],
+      "weights": [
+        0.99,
+        0.0025,
+        0.0075
+      ],
+      "C": 0.013224999999999997,
+      "candidate_count": 7021
+    },
+    "t=0.25,epsilon=0.025": {
+      "gap": 4.926023989504369e-05,
+      "indices": [
+        0,
+        75,
+        81
+      ],
+      "weights": [
+        0.975,
+        0.00625,
+        0.018750000000000003
+      ],
+      "C": 0.03265625,
+      "candidate_count": 7021
+    },
+    "t=0.25,epsilon=0.05": {
+      "gap": 0.0001893294775898724,
+      "indices": [
+        0,
+        77,
+        79
+      ],
+      "weights": [
+        0.95,
+        0.0125,
+        0.037500000000000006
+      ],
+      "C": 0.06395833333333333,
+      "candidate_count": 7021
+    },
+    "t=0.25,epsilon=0.1": {
+      "gap": 0.0006960945001663887,
+      "indices": [
+        0,
+        66,
+        72
+      ],
+      "weights": [
+        0.9,
+        0.025,
+        0.07500000000000001
+      ],
+      "C": 0.12250000000000003,
+      "candidate_count": 7021
+    },
+    "t=0.25,epsilon=0.2": {
+      "gap": 0.00230675990712903,
+      "indices": [
+        0,
+        68,
+        70
+      ],
+      "weights": [
+        0.8,
+        0.05,
+        0.15000000000000002
+      ],
+      "C": 0.22333333333333338,
+      "candidate_count": 7021
+    },
+    "t=0.5,epsilon=0.01": {
+      "gap": 7.110569807289302e-06,
+      "indices": [
+        0,
+        104,
+        110
+      ],
+      "weights": [
+        0.99,
+        0.005,
+        0.005
+      ],
+      "C": 0.013233333333333335,
+      "candidate_count": 7021
+    },
+    "t=0.5,epsilon=0.025": {
+      "gap": 4.344348042639723e-05,
+      "indices": [
+        0,
+        66,
+        71
+      ],
+      "weights": [
+        0.975,
+        0.0125,
+        0.0125
+      ],
+      "C": 0.03270833333333333,
+      "candidate_count": 7021
+    },
+    "t=0.5,epsilon=0.05": {
+      "gap": 0.00016715469540606875,
+      "indices": [
+        0,
+        98,
+        99
+      ],
+      "weights": [
+        0.95,
+        0.025,
+        0.025
+      ],
+      "C": 0.06416666666666666,
+      "candidate_count": 7021
+    },
+    "t=0.5,epsilon=0.1": {
+      "gap": 0.0006162542049873432,
+      "indices": [
+        0,
+        85,
+        88
+      ],
+      "weights": [
+        0.9,
+        0.05,
+        0.05
+      ],
+      "C": 0.12333333333333335,
+      "candidate_count": 7021
+    },
+    "t=0.5,epsilon=0.2": {
+      "gap": 0.0020593952569525342,
+      "indices": [
+        0,
+        85,
+        91
+      ],
+      "weights": [
+        0.8,
+        0.1,
+        0.1
+      ],
+      "C": 0.2266666666666667,
+      "candidate_count": 7021
+    },
+    "t=0.75,epsilon=0.01": {
+      "gap": 8.067235850339749e-06,
+      "indices": [
+        0,
+        84,
+        87
+      ],
+      "weights": [
+        0.99,
+        0.0075,
+        0.0025
+      ],
+      "C": 0.013224999999999997,
+      "candidate_count": 7021
+    },
+    "t=0.75,epsilon=0.025": {
+      "gap": 4.926023989504369e-05,
+      "indices": [
+        0,
+        85,
+        92
+      ],
+      "weights": [
+        0.975,
+        0.018750000000000003,
+        0.00625
+      ],
+      "C": 0.03265625,
+      "candidate_count": 7021
+    },
+    "t=0.75,epsilon=0.05": {
+      "gap": 0.0001893294775898724,
+      "indices": [
+        0,
+        86,
+        90
+      ],
+      "weights": [
+        0.95,
+        0.037500000000000006,
+        0.0125
+      ],
+      "C": 0.06395833333333333,
+      "candidate_count": 7021
+    },
+    "t=0.75,epsilon=0.1": {
+      "gap": 0.0006960945001666108,
+      "indices": [
+        0,
+        67,
+        73
+      ],
+      "weights": [
+        0.9,
+        0.07500000000000001,
+        0.025
+      ],
+      "C": 0.12250000000000003,
+      "candidate_count": 7021
+    },
+    "t=0.75,epsilon=0.2": {
+      "gap": 0.00230675990712903,
+      "indices": [
+        0,
+        69,
+        72
+      ],
+      "weights": [
+        0.8,
+        0.15000000000000002,
+        0.05
+      ],
+      "C": 0.22333333333333338,
+      "candidate_count": 7021
+    }
+  },
+  "best": {
+    "gap": 7.110569807289302e-06,
+    "indices": [
+      0,
+      104,
+      110
+    ],
+    "weights": [
+      0.99,
+      0.005,
+      0.005
+    ],
+    "C": 0.013233333333333335,
+    "candidate_count": 7021
+  },
+  "adversarial_counterexample_at_two_tick_kcrit": false,
+  "interpretation": "A gap<-1e-7 at kappa=kappa_2 is a feasible 3-tick numerical counterexample to extrapolating the support-two stability boundary to all 120 rates. If gap nonnegative, this scan still cannot prove the global theorem. Numerical 9x9 Hermitian eigensolver, NOT certified interval bounds.",
+  "checks": {
+    "all_explicit_triple_weights_positive": true,
+    "full_119_choose2_scan_each_trial": true,
+    "all_tests_have_real_finite_free_energy": true,
+    "fifteen_parameter_slices": true
+  },
+  "all_checks_pass": true
+}

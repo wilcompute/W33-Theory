@@ -1,0 +1,264 @@
+{
+  "schema": "w33.round11.full_multinomial_delta_method_tomography_covariance.v1",
+  "formula": "D_k=(N_+k-N_-k)/N. For each phase/input, Cov(D_k,D_l)=[(p_+k+p_-k)delta_kl - D_k D_l]/N, INCLUDING anti-correlations between simultaneous output-mode counts. Transfer entries T_kj=(D0_kj-i D90_kj)/conj(Uref_kj). With W=R^-1 S, first-order \u03b4W=R^-1(\u03b4S-\u03b4R W); \u03b4(trace deficit)=-ReTr \u03b4W/9. Sum all 36 setting contributions using exact Jacobian and multinomial covariances.",
+  "ideal_trace_deficit": 0.2962962962962963,
+  "settings_per_run": 36,
+  "tested": [
+    {
+      "N_per_setting": 5000,
+      "total_input_photons": 180000,
+      "delta_method_sigma": 0.011597331117232523,
+      "MonteCarlo_sigma": 0.01158532851210873,
+      "MonteCarlo_mean": 0.2964081693723806,
+      "delta_method_vs_sample_std_ratio": 1.0010360176762574,
+      "MonteCarlo_bias": 0.0001118730760843456,
+      "variance_detailed_36_settings": null
+    },
+    {
+      "N_per_setting": 20000,
+      "total_input_photons": 720000,
+      "delta_method_sigma": 0.0057986655586162615,
+      "MonteCarlo_sigma": 0.005330096784717803,
+      "MonteCarlo_mean": 0.2958569907919394,
+      "delta_method_vs_sample_std_ratio": 1.0879099935374374,
+      "MonteCarlo_bias": -0.00043930550435689053,
+      "variance_detailed_36_settings": [
+        {
+          "condition": "R",
+          "input": 0,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 9.706613409238392e-07
+        },
+        {
+          "condition": "R",
+          "input": 0,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 9.199375725439927e-07
+        },
+        {
+          "condition": "R",
+          "input": 1,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 1.3823375704934115e-06
+        },
+        {
+          "condition": "R",
+          "input": 1,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 3.737709472694742e-07
+        },
+        {
+          "condition": "R",
+          "input": 2,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 1.4091264950216058e-06
+        },
+        {
+          "condition": "R",
+          "input": 2,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 2.1651277640959722e-07
+        },
+        {
+          "condition": "R",
+          "input": 3,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 1.8043898938290572e-07
+        },
+        {
+          "condition": "R",
+          "input": 3,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.940058528203428e-06
+        },
+        {
+          "condition": "R",
+          "input": 4,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 9.736737003764259e-07
+        },
+        {
+          "condition": "R",
+          "input": 4,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.0264990786831194e-06
+        },
+        {
+          "condition": "R",
+          "input": 5,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 9.629162694672725e-07
+        },
+        {
+          "condition": "R",
+          "input": 5,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 6.404053295579956e-07
+        },
+        {
+          "condition": "R",
+          "input": 6,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 1.7825926829837133e-07
+        },
+        {
+          "condition": "R",
+          "input": 6,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.6963154464852814e-06
+        },
+        {
+          "condition": "R",
+          "input": 7,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 1.1221972738078272e-06
+        },
+        {
+          "condition": "R",
+          "input": 7,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 9.88334806627872e-07
+        },
+        {
+          "condition": "R",
+          "input": 8,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 9.134411479177773e-07
+        },
+        {
+          "condition": "R",
+          "input": 8,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 7.666841725209124e-07
+        },
+        {
+          "condition": "S",
+          "input": 0,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 2.009359921291132e-06
+        },
+        {
+          "condition": "S",
+          "input": 0,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 2.1933823145414788e-08
+        },
+        {
+          "condition": "S",
+          "input": 1,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 3.9883832751569934e-07
+        },
+        {
+          "condition": "S",
+          "input": 1,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.0461510247557554e-06
+        },
+        {
+          "condition": "S",
+          "input": 2,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 5.531390167456924e-07
+        },
+        {
+          "condition": "S",
+          "input": 2,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.4457364550665768e-06
+        },
+        {
+          "condition": "S",
+          "input": 3,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 5.076914905938629e-07
+        },
+        {
+          "condition": "S",
+          "input": 3,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.5833301302581451e-06
+        },
+        {
+          "condition": "S",
+          "input": 4,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 4.439650019554068e-07
+        },
+        {
+          "condition": "S",
+          "input": 4,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.1008736165456308e-06
+        },
+        {
+          "condition": "S",
+          "input": 5,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 6.525048250661878e-07
+        },
+        {
+          "condition": "S",
+          "input": 5,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.663482945163443e-06
+        },
+        {
+          "condition": "S",
+          "input": 6,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 4.3953525422811573e-07
+        },
+        {
+          "condition": "S",
+          "input": 6,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.363713790774379e-06
+        },
+        {
+          "condition": "S",
+          "input": 7,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 5.326657645412506e-07
+        },
+        {
+          "condition": "S",
+          "input": 7,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.3602796153339044e-06
+        },
+        {
+          "condition": "S",
+          "input": 8,
+          "phase": 0.0,
+          "contribution_to_deficit_variance": 5.324795162429237e-07
+        },
+        {
+          "condition": "S",
+          "input": 8,
+          "phase": 1.5707963267948966,
+          "contribution_to_deficit_variance": 1.3072710274678108e-06
+        }
+      ]
+    },
+    {
+      "N_per_setting": 80000,
+      "total_input_photons": 2880000,
+      "delta_method_sigma": 0.0028993327793081307,
+      "MonteCarlo_sigma": 0.00280225477601674,
+      "MonteCarlo_mean": 0.2964356731898539,
+      "delta_method_vs_sample_std_ratio": 1.0346428183911893,
+      "MonteCarlo_bias": 0.00013937689355764116,
+      "variance_detailed_36_settings": null
+    }
+  ],
+  "scope": "This is leading-order covariance of an unbiased transfer inversion under a known ideal Fourier reference, independent photon multinomial outcomes and STATIONARY lossy/crosstalk R, S. Finite-count nonlinear inversion bias, correlated drift, readout detector darks and non-Poisson photon source are not included. No actual device or detector measured.",
+  "checks": {
+    "all_36_setting_covariance_terms": true,
+    "delta_method_variance_scales_exactly_1_over_N": true,
+    "MonteCarlo_matches_correlated_covariance_within_25pct": true,
+    "MonteCarlo_low_bias": true,
+    "ideal_deficit_8_over_27": true
+  },
+  "all_checks_pass": true
+}

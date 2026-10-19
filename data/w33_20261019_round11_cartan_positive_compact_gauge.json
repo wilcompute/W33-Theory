@@ -1,0 +1,28 @@
+{
+  "schema": "w33.round11.cartan_decomposition_positive_kinetic_K_gauging.v1",
+  "mathematical_construction": "For real E8(-24) with Cartan involution theta, Lie algebra splits g=k\u2295p where k=e7_compact\u2295su2 (dim136) and p=(56,2) (dim112). Exact Z2 bracket rules [k,k]\u2282k, [k,p]\u2282p, [p,p]\u2282k follow from theta automorphism. With B the Killing bilinear form, B|_k<0, B|_p>0; define positive definite inner product <X,Y>_theta=-B(X,theta Y). This is invariant under K because K commutes with theta and preserves B.",
+  "positive_energy_candidate": "GAUGE ONLY COMPACT K=E7_c x SU2, not all noncompact E8(-24). A conventional Yang\u2013Mills kinetic term based on -B|_k is positive-sign on compact K. Treat p as a real K-representation scalar field with positive invariant kinetic metric <D_phi,D_phi>_theta and bounded quartic m\u00b2<phi,phi>_theta+lambda<phi,phi>_theta\u00b2 for m\u00b2>0,lambda>=0. The ambient algebraic E8(-24) is a GLOBAL solution-generating symmetry in this schematic model, not a gauged 248-generator symmetry.",
+  "Z2_grade_residuals": {
+    "[k,k]_in_k": 0.0,
+    "[k,p]_in_p": 0.0,
+    "[p,p]_in_k": 0.0,
+    "k_projector": 0.0,
+    "p_projector": 0.0
+  },
+  "dimensions": {
+    "K_E7_compact_plus_su2": 136,
+    "P_56_tensor_2": 112,
+    "positive_compact_gauge_polarizations": 136,
+    "positive_scalar_directions": 112
+  },
+  "external_prior_art": "https://msp.org/agt/2015/15-5/agt-v15-n5-p05-s.pdf (maximal compact e7\u2295su2 and (56,2) isotropy representation). This is a standard Cartan decomposition, not newly discovered.",
+  "physics_firewall": "A K-gauge/p-scalar model is NOT a proof of an unbroken full E8(-24) global symmetry of the interacting Lagrangian; gauge coupling, scalar mass/quartic, symmetry breaking, chiral fermions, anomalies, UV consistency and observed masses remain undetermined. No claim of full E8 gauge positivity.",
+  "checks": {
+    "compact_plus_noncompact_248": true,
+    "Z2_Cartan_bracket_grading_under_theta": true,
+    "Killing_sign_flip_produces_positive_Cartan_inner_product": true,
+    "compact_K_YangMills_sector_positive": true,
+    "noncompact_sector_as_K_rep_dimension": true
+  },
+  "all_checks_pass": true
+}

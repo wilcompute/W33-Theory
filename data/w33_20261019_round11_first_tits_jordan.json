@@ -1,0 +1,31 @@
+{
+  "schema": "w33.round11.first_tits_split_albert_exact.v1",
+  "theorem": "The 27 complex components of three 3x3 matrices (A,B,C) carry the FIRST TITS construction J(M3(C),mu=1) cubic N=det A+det B+det C-Tr(ABC), with unit (I3,0,0), trace pairing T((A,B,C),(D,E,F))=Tr(AD+BF+CE), quadratic adjoint #(A,B,C)=(adj A-BC,adj C-AB,adj B-CA), and defining cubic Jordan identity (x#)#=N(x)x. Exact integer matrix arithmetic verifies the adjoint identity and polarized-gradient formula on 40 reproducible random samples, and exact symbolic coefficient expansion finds 45 cubic monomials.",
+  "N_unit": "1",
+  "monomial_count": 45,
+  "samples_exact_integer": 40,
+  "sample_norms_first_12": [
+    -20,
+    9,
+    8,
+    -5,
+    43,
+    8,
+    -12,
+    -1,
+    18,
+    -16,
+    -23,
+    10
+  ],
+  "max_norm_decimal_digits": 2,
+  "critical_scope": "This provides an EXACT constructive 27D cubic Jordan model in the SAME SU3^3 coordinates as the E6 trinification. It is not a dense 27x27 coordinate intertwiner to the specific 3+8+8+8 Cayley-Dickson chart; deriving such a matrix and matching clock action is still OPEN. The fact the first Tits construction gives an Albert algebra is established prior art (not new).",
+  "source": "https://www.mdpi.com/2075-1680/13/5/299 section 2.4 first Tits construction, cubic N and quadratic sharp.",
+  "checks": {
+    "first_tits_cubic_45_monomials": true,
+    "adjoint_of_adjoint_identity_exact_40_instances": true,
+    "adjoint_is_trace_pairing_gradient_exact_40_instances": true,
+    "unit_norm_and_selfadjoint": true
+  },
+  "all_checks_pass": true
+}
