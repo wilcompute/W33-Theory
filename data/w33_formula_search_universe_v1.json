@@ -36354,7 +36354,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 116,
+          "line": 140,
           "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
           "raw": "\"Gram_eigenvalue_multiplicities\": all(np.sum(abs(eigs-k)<1e-7)==m for k,m in spectrum),",
           "status": "unclassified"
@@ -79104,7 +79104,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 122,
+          "line": 146,
           "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
           "raw": "\"commutator_norm_squared_0_or_4_over_3\": max_error < 1e-9,",
           "status": "unclassified"
@@ -123526,6 +123526,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "69dbc30e12607ba9bff5efda69aadedf6d278673c06a699d47413c873c2ff69e",
+      "normalized_formula": "\"lp_theorem\":\"Forallp>=1,phi>=0,||phi||_p=R,andT>0,F_T>=-Tlog(3+6exp(-R/T));singletonisuniqueuptolabels.\"",
+      "numeric_literals": [
+        "+6",
+        "0",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_operator_frame_majorization.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 161,
+          "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
+          "raw": "\"lp_theorem\":\"For all p>=1, phi>=0, ||phi||_p=R, and T>0, F_T>=-T log(3+6 exp(-R/T)); singleton is unique up to labels.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b7b11fdbb40854420c7fda918843da0799be5d8109294bd59e889b953f703386",
+      "structural_formula": "\"lp_theorem\":\"Forallp>=#,phi>=#,||phi||_p=R,andT>#,F_T>=-Tlog(##exp(-R/T));singletonisuniqueuptolabels.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "e979d49bbe010a295c9a55a5ddec7a2feb7bcca8ce2b16737d214e7079fbee91",
       "normalized_formula": "\"lucas_form\":\"rank=V_t(P=9,Q=16)+1(Lucassequence)\"",
       "numeric_literals": [
@@ -139572,7 +139602,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 114,
+          "line": 138,
           "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
           "raw": "\"operator_Gram_closed_form\": bool(np.allclose(gram, expected, atol=1e-9)),",
           "status": "unclassified"
@@ -144743,7 +144773,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 123,
+          "line": 147,
           "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
           "raw": "\"positive_temperature_majorization_bound\": min_free_gap > -1e-10,",
           "status": "unclassified"
@@ -146336,7 +146366,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 113,
+          "line": 137,
           "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
           "raw": "\"projector_sum_equals_40I\": bool(np.allclose(P.sum(axis=0),40*np.eye(9),atol=1e-10)),",
           "status": "unclassified"
@@ -616828,6 +616858,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3249603ccc7dfc1c76d3d62bae434b404d3e328d2100b125ceb42065c1cb2249",
+      "normalized_formula": "F_T(\\phi)\\gef_T(S):=-T\\log(3+6e^{-S/T})",
+      "numeric_literals": [
+        "+6",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 21,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "F_T(\\phi)\\ge f_T(S):=-T\\log(3+6e^{-S/T}).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d1adf1b65fa196af41e8c4b642b33ce3d2e5dfb2ea2d0ff349b9403f69a9c664",
+      "structural_formula": "F_T(\\phi)\\gef_T(S):=-T\\log(##e^{-S/T})"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e327a1c174c4718513fe5b27f5c4868e5980155df8b99482c0d5ecd08a005beb",
       "normalized_formula": "F_T=(1+2cos2\u03c0/9)/3=0.8440296287....Thatisthesamevalueastheone-qutritminimalviolators.Thecircuits",
       "numeric_literals": [
@@ -628835,7 +628893,7 @@
       "source_locations": [
         {
           "category": "tex_display",
-          "line": 27,
+          "line": 37,
           "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
           "raw": "G=3I_{120}+(J_{40}-I_{40})\\otimes J_3,\\qquad \\operatorname{spec}G=120^1\\,3^{80}\\,0^{39}.",
           "status": "unclassified"
@@ -744726,6 +744784,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "582cd51cde355ec9cbd8cc5587eda23086fe6f28ad3dba63fbfce0392c215824",
+      "normalized_formula": "Pass12055reportedthefixed-\\(\\ell_2\\)-spheresingle-tickminimumas^numerical^,unlikethefixed-\\(\\ell_1\\)simplextheorem.Itisactuallyexactatevery\\(T>0\\),andextendsto^every\\(p\\ge1\\)^",
+      "numeric_literals": [
+        "0",
+        "2055"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "Pass 12055 reported the fixed-\\(\\ell_2\\)-sphere single-tick minimum as **numerical**, unlike the fixed-\\(\\ell_1\\) simplex theorem. It is actually exact at every \\(T>0\\), and extends to **every \\(p\\ge1\\)**.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "c499e46906d2e16972c15f16e307ff18978139dbedfbccb08b8ccf8b3c823b08",
+      "structural_formula": "Pass1#reportedthefixed-\\(\\ell_2\\)-spheresingle-tickminimumas^numerical^,unlikethefixed-\\(\\ell_1\\)simplextheorem.Itisactuallyexactatevery\\(T>#\\),andextendsto^every\\(p\\ge1\\)^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "497d56a7060db51a27772f049dc0abcb337d917e863cb0375fd58cc587fcfcb8",
       "normalized_formula": "Pass138\u2014GUTscale,alpha_GUT=1/24,protondecay,andthedesert",
       "numeric_literals": [
@@ -784338,6 +784424,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4c09c32abc78a4fe064b99d31cfc909576a80d64a857576a842303a17055d7fa",
+      "normalized_formula": "Since\\(f_T'(S)=6e^{-S/T}/(3+6e^{-S/T})>0\\),thisimplies\\(F_T(\\phi)\\gef_T(R)\\).If\\(p>1\\),anycombinationoftwoormorenonzerorateshas\\(S>R\\)andtheboundisstrict.For\\(p=1\\),equalityanalysisalreadyforcesasingleprojector.Thusthe\\(\\ell_2\\)minimizationisprovenanalytically,notinferredfrommultistartoptimization.Atexactly\\(T=0\\),collinearprojectormixturescanstillhavezerogroundenergy",
+      "numeric_literals": [
+        "+6",
+        "0",
+        "1",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "Since \\(f_T'(S)=6e^{-S/T}/(3+6e^{-S/T})>0\\), this implies \\(F_T(\\phi)\\ge f_T(R)\\). If \\(p>1\\), any combination of two or more nonzero rates has \\(S>R\\) and the bound is strict. For \\(p=1\\), equality analysis already forces a single projector. Thus the \\(\\ell_2\\) minimization is proven analytically, not inferred from multistart optimization. At exactly \\(T=0\\), collinear projector mixtures can still have zero ground energy.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "76c0abbb3750d5d68faabf3f019272c063e364b85ecf98da1040e762f66f8ccd",
+      "structural_formula": "Since\\(f_T'(S)=#e^{-S/T}/(##e^{-S/T})>#\\),thisimplies\\(F_T(\\phi)\\gef_T(R)\\).If\\(p>#\\),anycombinationoftwoormorenonzerorateshas\\(S>R\\)andtheboundisstrict.For\\(p=#\\),equalityanalysisalreadyforcesasingleprojector.Thusthe\\(\\ell_2\\)minimizationisprovenanalytically,notinferredfrommultistartoptimization.Atexactly\\(T=#\\),collinearprojectormixturescanstillhavezerogroundenergy"
+    },
+    {
+      "file_count": 1,
       "formula_id": "36690c5534459d6f55516d7f99265ef2ff65d049811079ef547ce0c48ad63c23",
       "normalized_formula": "Since\\(g(t)=\\sqrt{5+2\\sqrtt}\\)isstrictlyconcave,\\(g(3+s)+g(3-s)\\)ismaximized^uniquely^at\\(s=0\\).Thelatterforcesthethreearmphasorstobethecuberootsofunity.Thus,modulo\\(2\\pi\\),the^onlyglobalfree-fermionfluxminimizingpairs^are",
       "numeric_literals": [
@@ -795162,7 +795279,7 @@
       "numeric_literals": [
         "0"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "analysis/2026-10-19_tick_operator_frame_majorization.md"
@@ -795174,10 +795291,17 @@
           "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
           "raw": "T=0",
           "status": "certified_or_theorem"
+        },
+        {
+          "category": "tex_paren",
+          "line": 24,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "T=0",
+          "status": "certified_or_theorem"
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1
+        "certified_or_theorem": 2
       },
       "structural_family_id": "28a25ea417a84842ce112037d7731cd55cdcc497da9cea62ebb8cb4ea4798a61",
       "structural_formula": "T=#"
@@ -796138,6 +796262,33 @@
       },
       "structural_family_id": "8f94deb902513d95b79eb745c659a10767534a38542fafcac4922f49e0f537ba",
       "structural_formula": "T=vk\\lambda/#=#\\times1#\\times2/#=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6c4873925ecca911f0de4a4612c3f1eab8c3cab8f6848693504d0b1d98734743",
+      "normalized_formula": "T>0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 18,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "T>0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "28a5c20209e10668670c522b51f34a55ff67bc75194c01aca7712fa3b56a629e",
+      "structural_formula": "T>#"
     },
     {
       "file_count": 1,
@@ -806978,7 +807129,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 31,
+          "line": 41,
           "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
           "raw": "The 80 contrasts \\(\\Pi_{p,k}-I/3\\) give 40 mutually orthogonal, two-dimensional traceless operator planes, spanning the entire 80-dimensional traceless Hermitian operator space on \\(\\mathbb C^9\\). The 39 Gram null modes reflect the 40 copies of the identity decomposition \\(\\sum_k\\Pi_{p,k}=I_9\\), with 39 independent differences.",
           "status": "unclassified"
@@ -963736,7 +963887,7 @@
       "source_locations": [
         {
           "category": "tex_display",
-          "line": 47,
+          "line": 57,
           "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
           "raw": "\\mathcal C(w)=\\sum_{a<b}w_aw_b\\|[\\Pi_a,\\Pi_b]\\|_F^2 =\\frac43\\sum_{\\{p,q\\}\\ {\\rm noncollinear}}s_p s_q, \\quad s_p=\\sum_k w_{p,k}.",
           "status": "unclassified"
@@ -978461,35 +978612,6 @@
       },
       "structural_family_id": "858e1929e6f461dfdaf04c7c3abaa29b7218f04648fd67c7d5ea46c64f508d87",
       "structural_formula": "\\operatorname{Tr}(P_1P_2P_3)=(#+i)/#"
-    },
-    {
-      "file_count": 1,
-      "formula_id": "b8803f39c6ab83f60e6948221f41dc2ec53c14ac47b47dbf0f7ddb9520a659c4",
-      "normalized_formula": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})=\\begin{cases}3,p=q,\\k=l,\\\\0,p=q,\\k\\nel,\\\\1,p\\neq.\\end{cases}",
-      "numeric_literals": [
-        "0",
-        "1",
-        "3"
-      ],
-      "occurrence_count": 1,
-      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
-      "source_files": [
-        "analysis/2026-10-19_tick_operator_frame_majorization.md"
-      ],
-      "source_locations": [
-        {
-          "category": "tex_display",
-          "line": 18,
-          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
-          "raw": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})= \\begin{cases} 3,&p=q,\\ k=l,\\\\ 0,&p=q,\\ k\\ne l,\\\\ 1,&p\\ne q. \\end{cases}",
-          "status": "unclassified"
-        }
-      ],
-      "status_profile": {
-        "unclassified": 1
-      },
-      "structural_family_id": "a04aab312a428e14b52653ab391ae8728fedcf655deb7c5bb7c1ebc70dafde10",
-      "structural_formula": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})=\\begin{cases}#,p=q,\\k=l,\\\\#,p=q,\\k\\nel,\\\\#,p\\neq.\\end{cases}"
     },
     {
       "file_count": 1,
@@ -1275816,6 +1275938,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7bd92c94aa699689412f6b5d7a5cc7c9b3ba6ec0b534832e5f5196d4b87983ee",
+      "normalized_formula": "f_T'(S)=6e^{-S/T}/(3+6e^{-S/T})>0",
+      "numeric_literals": [
+        "+6",
+        "0",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 24,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "f_T'(S)=6e^{-S/T}/(3+6e^{-S/T})>0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "ba023fca3b1d0f75363b706061a6907ccd2a70042de8116c269be6ff64325749",
+      "structural_formula": "f_T'(S)=#e^{-S/T}/(##e^{-S/T})>#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e75ec8b5703f1e6f2f4aa3c0e033997fdcd97f350c2b38719295aef4e4e889d5",
       "normalized_formula": "f_Y(U)=avg_C|tr(Y^dagCUC^dag)|^6.Returnsthesingularvaluesofthatderivativemap(8su(3)directions)",
       "numeric_literals": [
@@ -1472170,6 +1472322,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "791a7b3a1c84e05cbf520166fc1107eebd36ea5ed05f636222d80d2bf4183966",
+      "normalized_formula": "p=1",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 24,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "p=1",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "45190fdeb2c44156c9e69b5ad1d743a5098a707cfbae1796561b2d1a16f2a48f",
+      "structural_formula": "p=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d641b699a400f8419f431f7b3ff9a1efdbb72b16fb87e165a2e380688bddd37e",
       "normalized_formula": "p=10^{-4}",
       "numeric_literals": [
@@ -1474517,6 +1474696,33 @@
       },
       "structural_family_id": "1f3b07f47a5b0588c6839cafaf6fb96b46efc077234ef376b8fdf3e1576f8b25",
       "structural_formula": "p>#coherentrecombination,aberrations,andmeasuredloss"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6853ef20ce5ae30dcc980dbd0f44a89e89a2a53333c24ec52926c908ee35da62",
+      "normalized_formula": "p>1",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 24,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "p>1",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e198bed1c6911e4af09de36b54360fef933e04f707cf3fa74e52c4620f854a65",
+      "structural_formula": "p>#"
     },
     {
       "file_count": 1,
@@ -1844688,9 +1844894,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-19T07:52:13-04:00",
+  "frozen_at": "2026-10-19T07:59:32-04:00",
   "pass": 398,
-  "repository_head": "0fcbd55af01ed63e26c17aa8807525bb9ada8f15",
+  "repository_head": "74cfc92d62af009a9b301f7416827c051533f21e",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1879306,6 +1879512,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b05c161c71c06e9c669d70a94f4181ae5c8a4fd14c720a526bd0ed16ebb984ec",
       "structural_formula": "\"lower_bound_form\":\"ceil(v/alpha)=ceil(#/Phi_6)\""
+    },
+    {
+      "exact_formula_ids": [
+        "69dbc30e12607ba9bff5efda69aadedf6d278673c06a699d47413c873c2ff69e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b7b11fdbb40854420c7fda918843da0799be5d8109294bd59e889b953f703386",
+      "structural_formula": "\"lp_theorem\":\"Forallp>=#,phi>=#,||phi||_p=R,andT>#,F_T>=-Tlog(##exp(-R/T));singletonisuniqueuptolabels.\""
     },
     {
       "exact_formula_ids": [
@@ -2010673,6 +2010887,14 @@
     },
     {
       "exact_formula_ids": [
+        "3249603ccc7dfc1c76d3d62bae434b404d3e328d2100b125ceb42065c1cb2249"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d1adf1b65fa196af41e8c4b642b33ce3d2e5dfb2ea2d0ff349b9403f69a9c664",
+      "structural_formula": "F_T(\\phi)\\gef_T(S):=-T\\log(##e^{-S/T})"
+    },
+    {
+      "exact_formula_ids": [
         "e327a1c174c4718513fe5b27f5c4868e5980155df8b99482c0d5ecd08a005beb"
       ],
       "exact_member_count": 1,
@@ -2045329,6 +2045551,14 @@
     },
     {
       "exact_formula_ids": [
+        "582cd51cde355ec9cbd8cc5587eda23086fe6f28ad3dba63fbfce0392c215824"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c499e46906d2e16972c15f16e307ff18978139dbedfbccb08b8ccf8b3c823b08",
+      "structural_formula": "Pass1#reportedthefixed-\\(\\ell_2\\)-spheresingle-tickminimumas^numerical^,unlikethefixed-\\(\\ell_1\\)simplextheorem.Itisactuallyexactatevery\\(T>#\\),andextendsto^every\\(p\\ge1\\)^"
+    },
+    {
+      "exact_formula_ids": [
         "dbb942f75ac704d776ee992362e524bc820bc222fe6e45691389cd21802e03a4"
       ],
       "exact_member_count": 1,
@@ -2056040,6 +2056270,14 @@
     },
     {
       "exact_formula_ids": [
+        "4c09c32abc78a4fe064b99d31cfc909576a80d64a857576a842303a17055d7fa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "76c0abbb3750d5d68faabf3f019272c063e364b85ecf98da1040e762f66f8ccd",
+      "structural_formula": "Since\\(f_T'(S)=#e^{-S/T}/(##e^{-S/T})>#\\),thisimplies\\(F_T(\\phi)\\gef_T(R)\\).If\\(p>#\\),anycombinationoftwoormorenonzerorateshas\\(S>R\\)andtheboundisstrict.For\\(p=#\\),equalityanalysisalreadyforcesasingleprojector.Thusthe\\(\\ell_2\\)minimizationisprovenanalytically,notinferredfrommultistartoptimization.Atexactly\\(T=#\\),collinearprojectormixturescanstillhavezerogroundenergy"
+    },
+    {
+      "exact_formula_ids": [
         "36690c5534459d6f55516d7f99265ef2ff65d049811079ef547ce0c48ad63c23"
       ],
       "exact_member_count": 1,
@@ -2059319,6 +2059557,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8f94deb902513d95b79eb745c659a10767534a38542fafcac4922f49e0f537ba",
       "structural_formula": "T=vk\\lambda/#=#\\times1#\\times2/#=#"
+    },
+    {
+      "exact_formula_ids": [
+        "6c4873925ecca911f0de4a4612c3f1eab8c3cab8f6848693504d0b1d98734743"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "28a5c20209e10668670c522b51f34a55ff67bc75194c01aca7712fa3b56a629e",
+      "structural_formula": "T>#"
     },
     {
       "exact_formula_ids": [
@@ -2106394,14 +2106640,6 @@
       "exact_member_count": 1,
       "structural_family_id": "858e1929e6f461dfdaf04c7c3abaa29b7218f04648fd67c7d5ea46c64f508d87",
       "structural_formula": "\\operatorname{Tr}(P_1P_2P_3)=(#+i)/#"
-    },
-    {
-      "exact_formula_ids": [
-        "b8803f39c6ab83f60e6948221f41dc2ec53c14ac47b47dbf0f7ddb9520a659c4"
-      ],
-      "exact_member_count": 1,
-      "structural_family_id": "a04aab312a428e14b52653ab391ae8728fedcf655deb7c5bb7c1ebc70dafde10",
-      "structural_formula": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})=\\begin{cases}#,p=q,\\k=l,\\\\#,p=q,\\k\\nel,\\\\#,p\\neq.\\end{cases}"
     },
     {
       "exact_formula_ids": [
@@ -2186611,6 +2186849,14 @@
     },
     {
       "exact_formula_ids": [
+        "7bd92c94aa699689412f6b5d7a5cc7c9b3ba6ec0b534832e5f5196d4b87983ee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ba023fca3b1d0f75363b706061a6907ccd2a70042de8116c269be6ff64325749",
+      "structural_formula": "f_T'(S)=#e^{-S/T}/(##e^{-S/T})>#"
+    },
+    {
+      "exact_formula_ids": [
         "e75ec8b5703f1e6f2f4aa3c0e033997fdcd97f350c2b38719295aef4e4e889d5"
       ],
       "exact_member_count": 1,
@@ -2239380,6 +2239626,7 @@
         "916882f71e0164a6f4ba736e679ed49741e3b9e99b11f65d3aecbc5c80b88f1f",
         "29e3cb68b68f36aee2ade62926a4064bc8447cb5bf30b910bb7179dfc00b37e2",
         "90b712ccac647296c6a0903f8de49522b6231fc7d8cc88699567a6b1ec8cbb5d",
+        "791a7b3a1c84e05cbf520166fc1107eebd36ea5ed05f636222d80d2bf4183966",
         "23e16c3f16b33aab5d6976123072b5eeb47f5c8cc72739eff70a2c6f7089ca4d",
         "10fe3900d166f5197a96131c486976ff3c6f35fb783b2de4972781be9a9acc38",
         "b6bef5b89bc9e76e38c24d53afda7bb84a00147509248d1756b47e41078a3205",
@@ -2239388,7 +2239635,7 @@
         "09930e990e4badf8fb1195baaab99b02e94b9aec6755ab6b9bd04119c8c25416",
         "496c682ed560f1bf18aa4c60128c4cd54222391318abecd61175bc61023eea31"
       ],
-      "exact_member_count": 11,
+      "exact_member_count": 12,
       "structural_family_id": "45190fdeb2c44156c9e69b5ad1d743a5098a707cfbae1796561b2d1a16f2a48f",
       "structural_formula": "p=#"
     },
@@ -2239907,9 +2240154,10 @@
     },
     {
       "exact_formula_ids": [
+        "6853ef20ce5ae30dcc980dbd0f44a89e89a2a53333c24ec52926c908ee35da62",
         "326b6d5c645f25512aac29b4ed9f5b94fd0850a22581a1c551378d9e9a818c7c"
       ],
-      "exact_member_count": 1,
+      "exact_member_count": 2,
       "structural_family_id": "e198bed1c6911e4af09de36b54360fef933e04f707cf3fa74e52c4620f854a65",
       "structural_formula": "p>#"
     },
@@ -2337708,20 +2337956,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89583462,
-    "exact_formula_families": 63088,
+    "bytes_scanned": 89585890,
+    "exact_formula_families": 63095,
     "files_scanned": 12276,
-    "formula_occurrences": 69126,
+    "formula_occurrences": 69134,
     "status_occurrences": {
-      "certified_or_theorem": 5132,
+      "certified_or_theorem": 5139,
       "killed_or_retracted": 1813,
       "open_or_conditional": 2317,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54499
+      "unclassified": 54500
     },
-    "structural_families": 61412
+    "structural_families": 61417
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "1ef54796c9010d6d385339125f949129a3c9fe0a7d111d999fca9a1c963e04d0"
+  "universe_sha256": "d75a82b248322e5229025a5eecfcc1ba4d46cf5a2bc327d40b8c8232f9de8c9f"
 }
