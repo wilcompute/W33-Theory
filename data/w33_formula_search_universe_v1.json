@@ -629476,6 +629476,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bf06bd1a467190447a0e5f97d53d900282b48510eb04f38551f61c4396805db5",
+      "normalized_formula": "G=sp43_from_ticks(tick)",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12053_gate_sets_and_real_forms.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 200,
+          "path": "analysis/w33_pass12053_gate_sets_and_real_forms.py",
+          "raw": "G = sp43_from_ticks(tick)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c8acb0fb8a007c267134a597d7c2781eec1d8edf9d45024facca6a08efb94415",
+      "structural_formula": "G=sp4#_from_ticks(tick)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9732e9e33883849fd97a736a4b6273bc6cff0ce8b4467d559267d8228f145ab6",
       "normalized_formula": "G={n:Fraction(k,4*d[\"kissing\"])forn,dinrungs.items()}",
       "numeric_literals": [
@@ -780535,6 +780562,34 @@
       },
       "structural_family_id": "0d2e038f9869f5bfb657531d92941d1024986e2b43e3c602f0436da8f1db2089",
       "structural_formula": "Scope:B=#diagonal,#radiipermodel,familytorusatrho;K=#cosets;moduli-independentthetasectorsomitted"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "add3fc0377903b07bcc46c7cf2950c7ea09ca1b4371879e87742f429e48a53bc",
+      "normalized_formula": "Scope:compatibility=fixedinvolution(equivalently,commutingwiththerealstructure,sinceSp(4,3)sitsinthe",
+      "numeric_literals": [
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12053_gate_sets_and_real_forms.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/w33_pass12053_gate_sets_and_real_forms.py",
+          "raw": "Scope: compatibility = fixed involution (equivalently, commuting with the real structure, since Sp(4,3) sits in the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e30b42a48f53e38ed6f7ccd8d83976d9b0d48b8b8ae0cc41ff12700733a1f82c",
+      "structural_formula": "Scope:compatibility=fixedinvolution(equivalently,commutingwiththerealstructure,sinceSp(#,#)sitsinthe"
     },
     {
       "file_count": 1,
@@ -973902,7 +973957,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 600,
+          "line": 601,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1380400,7 +1380455,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 599,
+          "line": 600,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1385534,7 +1385589,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 599,
+          "line": 600,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1643171,6 +1643226,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "12c8415a5ec13f74dba9fe043ca80e72db681a155efd55ab54f682d90b85f556",
+      "normalized_formula": "res[\"sp43_order_from_ticks\"]=nG",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12053_gate_sets_and_real_forms.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 118,
+          "path": "analysis/w33_pass12053_gate_sets_and_real_forms.py",
+          "raw": "res[\"sp43_order_from_ticks\"] = nG",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9d0261091e6265121df83cc4bd8e0b3efba18478d06a56fb4ec4a212f54c0be2",
+      "structural_formula": "res[\"sp4#_order_from_ticks\"]=nG"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b5338c2d0985d6f64b6d0b72678d100dcaa12cc8a20b7c952db9d3a813c704a8",
       "normalized_formula": "res[\"spinor_lorentz\"]=dict(automorphism_error=aut_err,minus_one_acts_nontrivially=bool(notnp.allclose(Z,np.eye(N),atol=1e-8))",
       "numeric_literals": [
@@ -1794125,7 +1794207,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 599,
+          "line": 600,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1842639,9 +1842721,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-18T20:18:45-04:00",
+  "frozen_at": "2026-10-18T20:39:40-04:00",
   "pass": 398,
-  "repository_head": "50877a67bdc8a75f8c4e9d0e90ea8abbde616cfd",
+  "repository_head": "83d91776963153e77e3d975ec3297738bbdc6734",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2012064,6 +2012146,14 @@
     },
     {
       "exact_formula_ids": [
+        "bf06bd1a467190447a0e5f97d53d900282b48510eb04f38551f61c4396805db5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c8acb0fb8a007c267134a597d7c2781eec1d8edf9d45024facca6a08efb94415",
+      "structural_formula": "G=sp4#_from_ticks(tick)"
+    },
+    {
+      "exact_formula_ids": [
         "9732e9e33883849fd97a736a4b6273bc6cff0ce8b4467d559267d8228f145ab6"
       ],
       "exact_member_count": 1,
@@ -2052939,6 +2053029,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0d2e038f9869f5bfb657531d92941d1024986e2b43e3c602f0436da8f1db2089",
       "structural_formula": "Scope:B=#diagonal,#radiipermodel,familytorusatrho;K=#cosets;moduli-independentthetasectorsomitted"
+    },
+    {
+      "exact_formula_ids": [
+        "add3fc0377903b07bcc46c7cf2950c7ea09ca1b4371879e87742f429e48a53bc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e30b42a48f53e38ed6f7ccd8d83976d9b0d48b8b8ae0cc41ff12700733a1f82c",
+      "structural_formula": "Scope:compatibility=fixedinvolution(equivalently,commutingwiththerealstructure,sinceSp(#,#)sitsinthe"
     },
     {
       "exact_formula_ids": [
@@ -2282338,6 +2282436,14 @@
     },
     {
       "exact_formula_ids": [
+        "12c8415a5ec13f74dba9fe043ca80e72db681a155efd55ab54f682d90b85f556"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9d0261091e6265121df83cc4bd8e0b3efba18478d06a56fb4ec4a212f54c0be2",
+      "structural_formula": "res[\"sp4#_order_from_ticks\"]=nG"
+    },
+    {
+      "exact_formula_ids": [
         "b5338c2d0985d6f64b6d0b72678d100dcaa12cc8a20b7c952db9d3a813c704a8"
       ],
       "exact_member_count": 1,
@@ -2335112,20 +2335218,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89522902,
-    "exact_formula_families": 63017,
-    "files_scanned": 12266,
-    "formula_occurrences": 69054,
+    "bytes_scanned": 89536214,
+    "exact_formula_families": 63020,
+    "files_scanned": 12268,
+    "formula_occurrences": 69057,
     "status_occurrences": {
       "certified_or_theorem": 5117,
       "killed_or_retracted": 1812,
       "open_or_conditional": 2317,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54443
+      "unclassified": 54446
     },
-    "structural_families": 61344
+    "structural_families": 61347
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "2ef5eaf926d72550f9599fe1c266f3651643056dd021678a7d6275bb9ff2cd65"
+  "universe_sha256": "7f02471a78a7a6d9ad878305c6e8d3750b410568706c1954ae470f29e16fe83e"
 }
