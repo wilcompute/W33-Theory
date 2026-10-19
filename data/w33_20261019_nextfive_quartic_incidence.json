@@ -1,0 +1,144 @@
+{
+  "schema": "w33.nextfive.quartic_incidence.v1",
+  "claim": "For any two distinct W33 projective Pauli directions with the same positive weights a,b, the bare Gibbs trace is strictly larger for a COMMUTING pair than for NONCOMMUTING pair at all T>0 (if a,b>0). Incidence first appears at fourth trace moment.",
+  "noncommuting_projector_isoclinicity": "P Q P = P/3; Tr (PQ)^r=3^(1-r)",
+  "commuting_spectrum": "{a+b:1,a:2,b:2,0:4}",
+  "noncommuting_spectrum": "{(a+b+sqrt((a-b)^2+4ab/3))/2:3,(a+b-sqrt(...))/2:3,0:3}",
+  "moment_difference_n4": "Tr[(aP+bQcomm)^4]-Tr[(aP+bQnoncomm)^4]=(4/3)a^2 b^2",
+  "asymptotic_free_gap": "F_noncomm - F_comm = a^2*b^2/(162*T^3) + O(T^-4) for a+b=1",
+  "sign_proof": "Every cyclic mixed word has trace 1 for commuting P,Q; for isoclinic noncommuting P,Q it has trace 3^(1-r) where r alternating PQ blocks. For r>=2 this is strictly below 1, with positive exponential Taylor coefficients.",
+  "scope": "Two distinct projective Pauli directions, fixed positive a,b, rank-three outcome projectors. Does not prove arbitrary multi-tick incidence contributions have fixed sign; does not produce negative coupling or physical time.",
+  "input_weights": [
+    0.5,
+    0.5
+  ],
+  "moments": {
+    "1": {
+      "commuting": 3.0,
+      "noncommuting": 3.0,
+      "difference": 0.0
+    },
+    "2": {
+      "commuting": 2.0,
+      "noncommuting": 2.0,
+      "difference": 0.0
+    },
+    "3": {
+      "commuting": 1.5000000000000002,
+      "noncommuting": 1.5,
+      "difference": 2.220446049250313e-16
+    },
+    "4": {
+      "commuting": 1.25,
+      "noncommuting": 1.1666666666666667,
+      "difference": 0.08333333333333326
+    },
+    "5": {
+      "commuting": 1.125,
+      "noncommuting": 0.9166666666666665,
+      "difference": 0.20833333333333348
+    },
+    "6": {
+      "commuting": 1.0625,
+      "noncommuting": 0.7222222222222221,
+      "difference": 0.3402777777777779
+    },
+    "7": {
+      "commuting": 1.03125,
+      "noncommuting": 0.5694444444444443,
+      "difference": 0.4618055555555557
+    },
+    "8": {
+      "commuting": 1.015625,
+      "noncommuting": 0.44907407407407396,
+      "difference": 0.566550925925926
+    }
+  },
+  "temperature_comparison": [
+    {
+      "T": 0.1,
+      "commuting_preferred_free_energy_gap": 0.10379296886042716,
+      "large_T_quartic_asymptotic": 0.3858024691358024,
+      "ratio_to_quartic_asymptotic": 0.2690313752862272
+    },
+    {
+      "T": 0.2,
+      "commuting_preferred_free_energy_gap": 0.03791563476382246,
+      "large_T_quartic_asymptotic": 0.0482253086419753,
+      "ratio_to_quartic_asymptotic": 0.7862186024626227
+    },
+    {
+      "T": 0.5,
+      "commuting_preferred_free_energy_gap": 0.00355807724876126,
+      "large_T_quartic_asymptotic": 0.0030864197530864196,
+      "ratio_to_quartic_asymptotic": 1.1528170285986483
+    },
+    {
+      "T": 1.0,
+      "commuting_preferred_free_energy_gap": 0.0004349004324877075,
+      "large_T_quartic_asymptotic": 0.00038580246913580245,
+      "ratio_to_quartic_asymptotic": 1.1272619210081378
+    },
+    {
+      "T": 2.0,
+      "commuting_preferred_free_energy_gap": 5.181910518222077e-05,
+      "large_T_quartic_asymptotic": 4.8225308641975306e-05,
+      "ratio_to_quartic_asymptotic": 1.07452096505853
+    },
+    {
+      "T": 5.0,
+      "commuting_preferred_free_energy_gap": 3.1852907468570516e-06,
+      "large_T_quartic_asymptotic": 3.0864197530864196e-06,
+      "ratio_to_quartic_asymptotic": 1.0320342019816848
+    },
+    {
+      "T": 10.0,
+      "commuting_preferred_free_energy_gap": 3.921108960588088e-07,
+      "large_T_quartic_asymptotic": 3.8580246913580245e-07,
+      "ratio_to_quartic_asymptotic": 1.0163514425844324
+    },
+    {
+      "T": 20.0,
+      "commuting_preferred_free_energy_gap": 4.862344299057193e-08,
+      "large_T_quartic_asymptotic": 4.8225308641975306e-08,
+      "ratio_to_quartic_asymptotic": 1.0082557138524997
+    }
+  ],
+  "alternating_trace_checks": [
+    {
+      "r": 1,
+      "direct_trace": 1.0,
+      "analytic_trace": 1.0
+    },
+    {
+      "r": 2,
+      "direct_trace": 0.33333333333333337,
+      "analytic_trace": 0.3333333333333333
+    },
+    {
+      "r": 3,
+      "direct_trace": 0.11111111111111115,
+      "analytic_trace": 0.1111111111111111
+    },
+    {
+      "r": 4,
+      "direct_trace": 0.03703703703703705,
+      "analytic_trace": 0.037037037037037035
+    },
+    {
+      "r": 5,
+      "direct_trace": 0.012345679012345685,
+      "analytic_trace": 0.012345679012345678
+    }
+  ],
+  "checks": {
+    "commuting_eigenspectrum_exact": true,
+    "noncommuting_eigenspectrum_exact": true,
+    "same_moments_up_through_cubic": true,
+    "quartic_coefficient_exact": true,
+    "noncommuting_alternating_word_trace": true,
+    "intrinsic_commuting_preference_all_sampled_T": true,
+    "high_T_asymptotic_converges": true
+  },
+  "all_checks_pass": true
+}

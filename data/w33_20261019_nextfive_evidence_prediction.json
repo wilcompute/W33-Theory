@@ -1,0 +1,277 @@
+{
+  "schema": "w33.nextfive.evidence_prediction.v1",
+  "evidence_source": "Previously enumerated 23 Forty Points labels not resolved by analysis/data/tests scripts; now search all git-tracked paths in W33 and Holotrade local clones and reachable commit IDs",
+  "unresolved_before": 23,
+  "post_classification": {
+    "PATH_MATCH": 2,
+    "COMMIT_MATCH": 19,
+    "MANUAL_OR_EXTERNAL": 2
+  },
+  "lookup": [
+    {
+      "label": "1cde1f1",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "1cde1f14aa63efa599cb50e07aae935573ad3718"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "3caf15e",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "3caf15ebe9486edb648e221e1ebd254793b105cb"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "5419c27",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "5419c27f5e18263533e96d0dd24e9e73abfede62"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "5b3f3ad",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "5b3f3adee661ade02040283e763bf58b5fd30a37"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "68df33f",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "68df33ffee4bf99998bfdf2590c2e3532384b4fb"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "78ec0a0fc",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "w33",
+          "sha": "78ec0a0fcd92b250ab0664a89300874452b3e441"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "93b34e1",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "93b34e1511ea5d02bd1c33acc00c7115d3bd31e4"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "94df376",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "94df376511a900619bb7a5ea39fc7f5aebb465df"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "98cafff",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "98cafff80d5368cd70ce27f74610e7aea3714694"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "Holotrade1cde1f1",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "1cde1f14aa63efa599cb50e07aae935573ad3718"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "Holotrade68df33f",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "68df33ffee4bf99998bfdf2590c2e3532384b4fb"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "a3dbdf2d7",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "w33",
+          "sha": "a3dbdf2d78622c6d840367e2025009cd5c544b96"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "a6e1c69",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "a6e1c69507fc097ff4d88b2c144affc969040130"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "a6f1cae",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "a6f1cae87c835ca350ce017ee75e9546a018757b"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "a779053",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "a7790533e324a7f5bdbf06680bc344b01fb44a01"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "babfd48",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "babfd48d7fc57aaa7c106948032c014db9884753"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "canonical_su3_gauge_and_cubic.json",
+      "matching_repository_files": [
+        {
+          "repository": "w33",
+          "path": "extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json"
+        }
+      ],
+      "matching_commit_identifiers": [],
+      "status": "PATH_MATCH"
+    },
+    {
+      "label": "d772153",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "d7721530defb883d5a46e43384ed2b9f1f88c830"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "e92a047",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "e92a0470fde0a4e879b8fd4476b21b773a475ac6"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "ed1eaca",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [
+        {
+          "repository": "holotrade",
+          "sha": "ed1eaca19583ced1153eabefba12153c92728452"
+        }
+      ],
+      "status": "COMMIT_MATCH"
+    },
+    {
+      "label": "frame_chirality_is_reversed_only_by_antiunitaries.py",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [],
+      "status": "MANUAL_OR_EXTERNAL"
+    },
+    {
+      "label": "holonet_machine_blueprint_body.tex",
+      "matching_repository_files": [
+        {
+          "repository": "w33",
+          "path": "holonet_machine_blueprint_body.tex"
+        }
+      ],
+      "matching_commit_identifiers": [],
+      "status": "PATH_MATCH"
+    },
+    {
+      "label": "w33_20261001_three_qutrit_fidelity_flag.py",
+      "matching_repository_files": [],
+      "matching_commit_identifiers": [],
+      "status": "MANUAL_OR_EXTERNAL"
+    }
+  ],
+  "interpretation": "A matching basename or commit SHA is a LOCATOR, not a proof witness. Non-matches need manual or external lookup; evidence correctness remains unevaluated.",
+  "operational_parameter_free_test": {
+    "target": "Two-qutrit Pauli tick-projector echo at a calibrated theta=pi/2, across all 780 pairs of 40 projective Pauli directions",
+    "ideal_null_count": 240,
+    "ideal_signal_count": 540,
+    "ideal_deficit_null": "0",
+    "ideal_deficit_signal": "8/27",
+    "threshold_deficit": "4/27",
+    "correctly_classified_ideal_pairs": 780,
+    "max_numerical_error": 7.771561172376096e-16,
+    "ideal_shots_per_condition_95pc_conservative": 1598,
+    "falsifiability": "On a calibrated gate-level quantum device, noncommuting and commuting pairs must separate with 240:540 incidence and 0 vs 8/27 trace deficit, allowing device noise tolerances. A significant statistically controlled deviation would falsify the gate model/calibration, not the Standard Model or a TOE.",
+    "TOE_priority_firewall": "This is a parameter-free prediction of existing two-qutrit quantum mechanics, not a new parameter-free prediction of fundamental physical constants."
+  },
+  "checks": {
+    "all_23_old_unresolved_labels_rechecked": true,
+    "nontrivial_evidence_resolution": true,
+    "w33_instrument_40_choose_2": true,
+    "commuting_240_and_noncommuting_540": true,
+    "parameter_free_echo_census_exact": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,85 @@
+{
+  "optics": {
+    "qudit_target_dim": 9,
+    "local_projector": "|0><0| tensor I3",
+    "noncommuting_projector": "G P0 G^dag, G=CZ*(F3 tensor I3)",
+    "commuting_null": "I3 tensor |0><0|",
+    "projector_error": 4.1920091194537356e-16,
+    "noncommuting_commutator_norm_sq": 1.333333333333334,
+    "commuting_commutator_norm_sq": 0.0,
+    "pairwise_overlap_noncommuting": 1.0000000000000002,
+    "pairwise_overlap_commuting": 1.0,
+    "ideal_trace_deficit_theta_pi_2": 0.2962962962962963,
+    "compiled_gate_route": "Four controlled local phase gates; for Q use unconditional CZ and F3 basis conjugation around controlled |0> phase; inverse loop gates needed; ancilla Hadamard trace test.",
+    "synthetic_noise": {
+      "leak_per_gate": 0.01,
+      "ancilla_visibility": 0.95,
+      "readout_flip": 0.01,
+      "effective_visibility": 0.8943148853099999
+    },
+    "effective_predicted_contrast": 0.26498218823999997,
+    "shots_per_condition_conservative": 1998,
+    "synthetic_replicates": 4000,
+    "empirical_synthetic_detection_probability": 1.0,
+    "empirical_synthetic_false_alarm_probability": 0.0,
+    "statistical_caveat": "Simulated independent binomial readout with loss represented ONLY as visibility reduction. No actual target photon noise, drift, coherent leakage or device calibration.",
+    "pass": true
+  },
+  "su9_clifford_bridge": {
+    "operator_contrast_basis_size": 80,
+    "traceless_module": "40 pairwise orthogonal 2D real Pauli-projector planes = Hermitian traceless C9; complexification equals sl9(C)",
+    "constructive_Phi": "Phi(c)=sum_p [c_(p,1)*(P_p0-P_p1)+c_(p,2)*(P_p0-P_p2)]",
+    "inverse_on_traceless": "For each p use Gram inverse [[2,-1],[-1,2]]/9 against the two contrast operators",
+    "generator_tests": {
+      "F1": {
+        "intertwiner_residual": 1.781084170911672e-14,
+        "operator_image_residual": 3.108963482693284e-15,
+        "character_trace": 8.000000000000005,
+        "orthogonal_with_respect_to_projector_Gram": null
+      },
+      "S1": {
+        "intertwiner_residual": 1.531849745614666e-14,
+        "operator_image_residual": 2.4593608094473123e-15,
+        "character_trace": 25.999999999999993,
+        "orthogonal_with_respect_to_projector_Gram": null
+      },
+      "CZ": {
+        "intertwiner_residual": 1.9916123771736858e-14,
+        "operator_image_residual": 3.680937699113241e-15,
+        "character_trace": 8.000000000000004,
+        "orthogonal_with_respect_to_projector_Gram": null
+      },
+      "SUM": {
+        "intertwiner_residual": 1.50438667001052e-14,
+        "operator_image_residual": 2.9731092038567544e-15,
+        "character_trace": 7.999999999999999,
+        "orthogonal_with_respect_to_projector_Gram": null
+      },
+      "SWAP": {
+        "intertwiner_residual": 1.9220771217796767e-14,
+        "operator_image_residual": 2.6825337984110325e-15,
+        "character_trace": 7.999999999999996,
+        "orthogonal_with_respect_to_projector_Gram": null
+      }
+    },
+    "max_equivariance_residual": 1.9916123771736858e-14,
+    "Pauli_translation_character": -0.9999999999999987,
+    "F_CZ_composition_residual": 6.732489767781438e-15,
+    "exterior_cube_dimension": 84,
+    "exterior_cube_functor_composition_residual": 1.7784352869469468e-15,
+    "exterior_cube_unitarity_residual": 7.140524693019774e-15,
+    "standard_A8_E8_sector_dimensions": [
+      80,
+      84,
+      84
+    ],
+    "result": "EXPLICIT Clifford-equivariant Phi from 80-dimensional Pauli contrast quotient to sl9 sector of the standard E8 A8 model. Not a Chevalley-coordinate intertwiner to a named repository 248x248 representation.",
+    "prior_art": "Repo w33_20260924_temporal_su9_e8_compiler.py and standard sl9+Lambda3+Lambda6 E8 construction: 80/84/84 branching is established, not new.",
+    "pass": true
+  },
+  "checks": {
+    "optics": true,
+    "su9_clifford_bridge": true
+  },
+  "all_checks_pass": true
+}

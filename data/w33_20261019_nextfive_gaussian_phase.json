@@ -1,0 +1,89 @@
+{
+  "schema": "w33.nextfive.gaussian_phase.v1",
+  "physical_model": "540 stable massive real auxiliary modes coupled linearly to sqrt(4/3)*sqrt(s_p*s_q) for W33 noncollinear p,q. Classical Gaussian functional integration/minimization exactly produces negative coupling. Auxiliary sector POSTULATED, not derived from photon or SM.",
+  "auxiliary_energy": "sum_e [(m^2/2)x_e^2 - g sqrt(4/3)*sqrt(s_p*s_q)*x_e], m^2>0",
+  "induced_kappa": "-g^2/(2m^2) <0",
+  "canonical_Gaussian_derivation": "Complete squares in each stable x_e; finite-T partition integrates to w-independent determinant times exp(+beta*g^2*C/(2m^2))",
+  "global_bound": "F_T(w)-F_T(one tick) >= a(T) C(w); a(T) = 3*T*[1-(1+1/T)*exp(-1/T)]/[3+6 exp(-1/T)], all 120 weights >=0 sum 1.",
+  "proof_hint": "For eigenvalues 0<=q<=1, exp(beta q)<=1+(exp(beta)-1)q-[exp(beta)-1-beta]q(1-q); sum and use 3-Tr(Q^2)>=3*C and -log(1-x)>=x.",
+  "exact_global_single_tick_certified_if": "kappa>=-a(T), including negative coupling above a temperature-specific boundary",
+  "local_noncommutation_threshold": "kappa_local=-(3/2)*(1-exp(-1/T))/(3+6exp(-1/T))",
+  "temperatures": [
+    {
+      "T": 0.2,
+      "global_singleton_sufficient_kappa_min": -0.18936263283381444,
+      "local_vertex_noncommuting_instability_kappa": -0.490027468281701,
+      "tested_min_bound_slack": 0.0,
+      "heptad_energy_above_single": 0.3732041290444294,
+      "heptad_C": 0.5714285714285714
+    },
+    {
+      "T": 0.5,
+      "global_singleton_sufficient_kappa_min": -0.2337325527019981,
+      "local_vertex_noncommuting_instability_kappa": -0.3402395316211989,
+      "tested_min_bound_slack": 0.0,
+      "heptad_energy_above_single": 0.20512171026076997,
+      "heptad_C": 0.5714285714285714
+    },
+    {
+      "T": 1.0,
+      "global_singleton_sufficient_kappa_min": -0.1522337695316582,
+      "local_vertex_noncommuting_instability_kappa": -0.18208766357437184,
+      "tested_min_bound_slack": 0.0,
+      "heptad_energy_above_single": 0.10349300669516937,
+      "heptad_C": 0.5714285714285714
+    },
+    {
+      "T": 2.0,
+      "global_singleton_sufficient_kappa_min": -0.08151966657162114,
+      "local_vertex_noncommuting_instability_kappa": -0.08889707140820452,
+      "tested_min_bound_slack": 0.0,
+      "heptad_energy_above_single": 0.050217636566159296,
+      "heptad_C": 0.5714285714285714
+    }
+  ],
+  "numerical_all_120_search": [
+    {
+      "T": 0.5,
+      "kappa": -0.6,
+      "best_energy": -0.8074335161780151,
+      "support_gt_1e_3": 7,
+      "interaction": 0.5714175651361016,
+      "best_passed_solver": true,
+      "all_solvers_converged": true,
+      "note": "restricted to four numerical starts but optimization spans all 120 tick coordinates"
+    },
+    {
+      "T": 1.0,
+      "kappa": -0.3,
+      "best_energy": -1.7179981151410302,
+      "support_gt_1e_3": 7,
+      "interaction": 0.5713855616872734,
+      "best_passed_solver": true,
+      "all_solvers_converged": true,
+      "note": "restricted to four numerical starts but optimization spans all 120 tick coordinates"
+    },
+    {
+      "T": 1.0,
+      "kappa": -0.15,
+      "best_energy": -1.6500570026001609,
+      "support_gt_1e_3": 1,
+      "interaction": 0.0,
+      "best_passed_solver": true,
+      "all_solvers_converged": true,
+      "note": "restricted to four numerical starts but optimization spans all 120 tick coordinates"
+    }
+  ],
+  "Gaussian_max_abs_energy_residual": 4.163336342344337e-17,
+  "scope": "The global domain bound is rigorous but not sharp. Negative-kappa search is heuristic, not global certification. Source of auxiliary bosons is NOT physically established.",
+  "checks": {
+    "540_genuine_noncommutation_edges": true,
+    "stable_gaussian_exact_elimination": true,
+    "nonnegative_mass_oscillators": true,
+    "global_Gibbs_bound_full_120_coordinates": true,
+    "safe_domain_strictly_below_zero": true,
+    "global_heptad_C_four_sevenths": true,
+    "numeric_simplex_search_has_finite_objectives": true
+  },
+  "all_checks_pass": true
+}
