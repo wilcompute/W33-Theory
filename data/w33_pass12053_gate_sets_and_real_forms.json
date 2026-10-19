@@ -1,0 +1,82 @@
+{
+  "table": {
+    "one tick": {
+      "clock": 3,
+      "split": 0
+    },
+    "two ticks, collinear centres": {
+      "clock": 0,
+      "split": 0
+    },
+    "two ticks, non-collinear centres": {
+      "clock": 0,
+      "split": 0
+    },
+    "ticks on an isotropic line (4)": {
+      "clock": 0,
+      "split": 0
+    },
+    "ticks on p-perp (13)": {
+      "clock": 0,
+      "split": 0
+    },
+    "ticks on one hyperbolic line H1 (4): SL2(3) on one qutrit": {
+      "clock": 0,
+      "split": 0
+    },
+    "ticks on a factorisation H1+H2 (8): local Clifford group": {
+      "clock": 0,
+      "split": 0
+    },
+    "all 40 ticks: Sp(4,3)": {
+      "clock": 0,
+      "split": 0
+    }
+  },
+  "line_ok": true,
+  "H1_H2": [
+    [
+      2,
+      3,
+      4,
+      20
+    ],
+    [
+      17,
+      18,
+      19,
+      39
+    ]
+  ],
+  "sp43_order_from_ticks": 51840,
+  "clock_stabiliser": {
+    "order": 432,
+    "centre": 6,
+    "derived": 54,
+    "abelianisation": 8,
+    "ticks_in": 2,
+    "tick_centres": [
+      0
+    ],
+    "centre_is_minus1_times_tick": true
+  },
+  "split_stabiliser": {
+    "order": 384,
+    "centre": 2,
+    "derived": 192,
+    "abelianisation": 2,
+    "ticks_in": 0,
+    "tick_centres": []
+  },
+  "checks": {
+    "one tick: exactly 3 clock, 0 split (12052)": true,
+    "two ticks with different centres admit no non-compact real form": true,
+    "refuted hypothesis recorded: the local Clifford group of a tensor split fixes no split involution either": true,
+    "all ticks admit none (only the compact form)": true,
+    "sanity: the isotropic line is a 4-clique and H1, H2 are the two halves of K44": true,
+    "the 40 ticks generate Sp(4,3) (order 51840)": true,
+    "clock stabiliser: order 432, centre exactly <-1> x <t_p> = Z6, derived 54, contains only the two ticks at p": true,
+    "split stabiliser: order 384, centre {+-1}, derived 192, contains no tick": true
+  },
+  "all_checks_pass": true
+}
