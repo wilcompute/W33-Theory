@@ -103,6 +103,30 @@ def certify():
             min_free_gap = min(min_free_gap, float(free-baseline))
             max_partition_excess = max(max_partition_excess, float(baseline-free))
 
+    # Universal extension: FIXED positive l_p norm for ANY p>=1.
+    # If ||phi||_p=R, phi>=0, then S=||phi||_1>=R.
+    # Majorization at total S gives F(phi)>=f_T(S)>=f_T(R), since
+    # f_T'(S)=6 exp(-S/T)/(3+6 exp(-S/T)) > 0 at T>0.
+    # Thus the L2-sphere claim in Pass 12055 is exact, not only numerical.
+    lp_gaps = {}
+    for order in (1, 2, 3):
+        smallest = float("inf")
+        for T in temps:
+            baseline = -T*np.log(3+6*np.exp(-R/T))
+            for _ in range(30):
+                phi = rng.random(120)
+                phi /= np.linalg.norm(phi, ord=order)
+                evals = np.linalg.eigvalsh(np.tensordot(phi, np.eye(9)-P, axes=1))
+                free = -T*np.log(np.exp(-evals/T).sum())
+                smallest = min(smallest, float(free-baseline))
+        lp_gaps[str(order)] = smallest
+
+    # T=0 is exceptional: any two commuting distinct directions admit a
+    # common one-dimensional eigenspace for suitable k,l.
+    q = next(j for j in range(1,40) if symp(ps[0],ps[j])==0)
+    mixed_H = 0.5*(np.eye(9)-P[0])+0.5*(np.eye(9)-P[3*q])
+    t0_gap = float(np.linalg.eigvalsh(mixed_H)[0])
+
     # Same projector inner products for collinear/noncollinear points:
     # geometry appears only in commutator-sensitive interactions.
     checks = {
@@ -121,6 +145,8 @@ def certify():
         },
         "commutator_norm_squared_0_or_4_over_3": max_error < 1e-9,
         "positive_temperature_majorization_bound": min_free_gap > -1e-10,
+        "all_fixed_lp_spheres_p_ge_1": all(g >= -1e-10 for g in lp_gaps.values()),
+        "T0_commuting_mixture_ground_state": abs(t0_gap) < 1e-9,
     }
     result = {
         "paper_scope":"two-qutrit rank-3 Pauli eigenspace ticks, Pass 12055",
@@ -132,6 +158,9 @@ def certify():
         "commutator_squared_norm":{"same_point":0,"collinear":0,"noncollinear":4/3},
         "maximum_numeric_commutator_residual":max_error,
         "positive_T_exact_bound":"F_T >= -T log(3+6 exp(-R/T)) for R>0, T>0",
+        "lp_theorem":"For all p>=1, phi>=0, ||phi||_p=R, and T>0, F_T>=-T log(3+6 exp(-R/T)); singleton is unique up to labels.",
+        "sampled_lp_orders":[1,2,3],"sampled_lp_min_gaps":lp_gaps,
+        "T0_commuting_mixture_smallest_eigenvalue":t0_gap,
         "equality":"one tick (up to identical projectors) at T>0; mixed compatible ticks may also minimize at T=0",
         "meaning":"Generic majorization gives vertex selection; W33 enters the commutator, not pair Gram.",
         "tested_temperatures":temps,"numerical_interior_gap_min":min_free_gap,

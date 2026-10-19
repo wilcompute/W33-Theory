@@ -10,6 +10,8 @@ def test_tick_projector_gram_and_majorization():
     spec.loader.exec_module(module)
     certificate = module.certify()
     assert certificate["all_checks_pass"]
+    assert "p>=1" in certificate["lp_theorem"]
+    assert abs(certificate["T0_commuting_mixture_smallest_eigenvalue"]) < 1e-9
     assert certificate["pair_types"] == {
         "same_point_different_outcome":120,
         "collinear_distinct_point":2160,

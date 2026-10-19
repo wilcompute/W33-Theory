@@ -13,6 +13,16 @@ Equality at **positive** temperature requires \(Q\) itself to be a rank-3 projec
 
 This sharpens the concavity argument, and keeps a firewall: choosing a rank-3 event subspace does not establish an arrow of time, a physical clock rate, or the preference of a real form of \(E_8\) without an independently specified coupling and operational observable.
 
+### A stronger exact result: all nonnegative fixed-\(\ell_p\) constraints
+
+Pass 12055 reported the fixed-\(\ell_2\)-sphere single-tick minimum as **numerical**, unlike the fixed-\(\ell_1\) simplex theorem. It is actually exact at every \(T>0\), and extends to **every \(p\ge1\)**.
+
+For any nonnegative rate vector with \(\|\phi\|_p=R\), let \(S=\|\phi\|_1\ge R\). Applying the fixed-total-rate result at total \(S\),
+\[
+F_T(\phi)\ge f_T(S):=-T\log(3+6e^{-S/T}).
+\]
+Since \(f_T'(S)=6e^{-S/T}/(3+6e^{-S/T})>0\), this implies \(F_T(\phi)\ge f_T(R)\). If \(p>1\), any combination of two or more nonzero rates has \(S>R\) and the bound is strict. For \(p=1\), equality analysis already forces a single projector. Thus the \(\ell_2\) minimization is proven analytically, not inferred from multistart optimization. At exactly \(T=0\), collinear projector mixtures can still have zero ground energy.
+
 ## II. Exact 120-projector operator frame
 With two-qutrit Pauli directions \(p\in W(3,3)\) and outcomes \(k\in\mathbb F_3\), trace orthogonality yields
 \[

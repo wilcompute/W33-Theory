@@ -31,6 +31,18 @@
   },
   "maximum_numeric_commutator_residual": 1.5543122344752192e-15,
   "positive_T_exact_bound": "F_T >= -T log(3+6 exp(-R/T)) for R>0, T>0",
+  "lp_theorem": "For all p>=1, phi>=0, ||phi||_p=R, and T>0, F_T>=-T log(3+6 exp(-R/T)); singleton is unique up to labels.",
+  "sampled_lp_orders": [
+    1,
+    2,
+    3
+  ],
+  "sampled_lp_min_gaps": {
+    "1": 0.022616111740672906,
+    "2": 5.532176526083702,
+    "3": 11.44800774345279
+  },
+  "T0_commuting_mixture_smallest_eigenvalue": 0.0,
   "equality": "one tick (up to identical projectors) at T>0; mixed compatible ticks may also minimize at T=0",
   "meaning": "Generic majorization gives vertex selection; W33 enters the commutator, not pair Gram.",
   "tested_temperatures": [
@@ -49,7 +61,9 @@
     "Gram_eigenvalue_multiplicities": true,
     "pair_census_120_2160_4860": true,
     "commutator_norm_squared_0_or_4_over_3": true,
-    "positive_temperature_majorization_bound": true
+    "positive_temperature_majorization_bound": true,
+    "all_fixed_lp_spheres_p_ge_1": true,
+    "T0_commuting_mixture_ground_state": true
   },
   "all_checks_pass": true
 }
