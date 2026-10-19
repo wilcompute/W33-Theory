@@ -1,0 +1,22 @@
+{
+  "lorentz_order": [
+    720
+  ],
+  "little_group_pattern": {
+    "(18, 6, 2, ((1, 1), (2, 1), (3, 8), (6, 8)))": 1440
+  },
+  "z3_hit_pattern": [
+    "((3, 12), ('tick', 0))"
+  ],
+  "checks": {
+    "|Sp(4,3)| = 51840, 40 events": true,
+    "72 Kramers reversals, 36 observers up to sign": true,
+    "each observer's Lorentz group C_J has order 720 (SL(2,9))": true,
+    "every observer sees every event on one sky point (context <p, Jp>, an F9-line)": true,
+    "little group C_J n Stab(p) = +-1 x 3^2 (order 18: orders 1:1, 2:1, 3:8, 6:8) for all 1440 pairs": true,
+    "little group n clock group = +-1 x Z3 (order 6): maps onto the clock-choice Z3 = Stab(p)/H_p": true,
+    "C_J n U_p is one Z3, never the tick; each of the 12 space Z3 is hit by exactly 3 observers, time by 0": true,
+    "J t_p J^-1 = t_{Jp}^-1 with Jp != p: no observer's stabiliser (either coset) contains a tick": true
+  },
+  "all_checks_pass": true
+}

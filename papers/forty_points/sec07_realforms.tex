@@ -245,6 +245,18 @@ that group has mass. That $W(q)$ is an elation quadrangle with Heisenberg elatio
 (Payne--Thas); what is new is that its centre is the tick that fixes the real form. \cert{w33\_pass12058\_time\_is\_the\_heisenberg\_centre.py}
 \end{result}
 
+\paragraph{Observers see the clock's space but not its time.}
+Let an observer be a Kramers time reversal $J$ (anti-symplectic, $J^2=-1$; $36$ up to sign), with Lorentz group
+its centraliser $SL(2,9)$ (Pass 11831). The clock group of Theorem 7.4 is canonical: it is the unique subgroup of
+index $3$ in the point stabiliser. For every one of the $40\times36$ pairs of an event $p$ and an observer $J$:
+the observer sees $p$ at one point of its sky, the context $\langle p,Jp\rangle$; the little group of $p$ in
+the observer's Lorentz group is $\pm1\times3^2$, the nine null rotations about that sky point; exactly one
+$\mathbb Z_3$ of them lies in the Heisenberg group of $p$, and it is never the tick. Each of the twelve space
+translations is a null rotation for exactly three observers, and time for none, because
+$Jt_pJ^{-1}=t_{Jp}^{-1}$ with $Jp\ne p$. The little group meets the clock group only in $\pm1\times\mathbb Z_3$,
+and its other null rotations permute the three clock real forms at $p$. So the clock is Lorentz-invariant for no
+observer: it has to be chosen by the vacuum (Passes 12056--12057), not by kinematics. \cert{w33\_pass12059\_observers\_see\_space\_not\_time.py}
+
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse
 clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it
