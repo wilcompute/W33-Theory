@@ -1,0 +1,48 @@
+{
+  "one_clock": [
+    9,
+    36
+  ],
+  "far_pair": [
+    1,
+    4,
+    4,
+    4,
+    8,
+    8,
+    8,
+    8
+  ],
+  "far_pair_with_triality": [
+    1,
+    8,
+    12,
+    24
+  ],
+  "collinear_pair": [
+    1,
+    1,
+    1,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    6,
+    6
+  ],
+  "checks": {
+    "45 monomials; the 27 far points give 9 of them": true,
+    "one clock: 45 = 9 + 36, the 9 = the clock's far-point monomials": true,
+    "two non-collinear clocks: one invariant monomial = the second clock's; 1+8+4+4+4+8+8+8": true,
+    "with the triality ticks: 1 + 8 + 12 + 24": true,
+    "two collinear clocks: three invariant monomials, disjoint, outside the 9, = the three 3-orbits of matter": true,
+    "collinear pair: remaining 42 monomials in orbits 3^10 + 6^2": true
+  },
+  "all_checks_pass": true
+}

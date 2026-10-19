@@ -1,0 +1,16 @@
+{
+  "Stab_p_n_Stab_q_on_octets": {
+    "(0, 1, 2)": 16,
+    "(1, 2, 0)": 16,
+    "(2, 0, 1)": 16
+  },
+  "checks": {
+    "far clock pair: 27 = 1+1+1+8+8+8, singlets = the monomial of q (12064)": true,
+    "Stab(p) n Stab(q) (48) acts on the octets as cyclic Z3 (16 each of id, (012), (021)); no transposition": true,
+    "kernel = H_p n Stab(q) = Stab(p) n H_q = C2 x Q8 (16), trivial on the octets": true,
+    "ticks at the 4 common neighbours fix p, q and the monomial and 3-cycle the octets": true,
+    "ticks at p, q and the other two hyperbolic-line events do not fix the pair": true,
+    "the triality ticks move the clock real form at p (they lie outside H_p)": true
+  },
+  "all_checks_pass": true
+}

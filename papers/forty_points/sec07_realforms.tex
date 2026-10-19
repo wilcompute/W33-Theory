@@ -284,6 +284,24 @@ the rest frame are tick-level order parameters. \cert{w33\_pass12065\_landau\_ph
 \paragraph{Beyond $q=3$.}
 At $q=5$ observers are the $300$ $\mathbb F_{25}$-structures, with Lorentz group $SL(2,25)$, and the point stabiliser is still transitive on them. The index-$5$ analogue of the clock group, $U{:}(C_4\times SL(2,3))$, is not normal, and no pair of such clocks fixes an observer. The relativity principle survives, but the mirror rest frames are special to $q=3$, where the clock group is normal because $Q_8\triangleleft SL(2,3)$. By Galois's theorem on $PSL(2,q)$, index-$q$ clock analogues exist only for $q\le 11$. \cert{w33\_pass12063\_clocks\_beyond\_q3.py}
 
+\paragraph{Time turns triality.}
+For two non-collinear clocks the symmetries fixing both events act on the three octets $8_v,8_s,8_c$ of
+Pass 12064 as the cyclic group $\mathbb Z_3$, with kernel the two-clock group $C_2\times Q_8$. The generators are
+the ticks at the four common neighbours: each fixes both clocks and the monomial, cycles
+$8_v\to8_s\to8_c$, and re-chooses the clock real form. Only the cyclic half of triality occurs. \cert{w33\_pass12066\_time\_turns\_triality.py}
+\emph{Yukawa monomials.} On the $45$ cubic monomials, one clock leaves orbits $9+36$ (the $9$ its own); two
+non-collinear clocks leave exactly one invariant monomial (rank one), and two collinear clocks exactly three,
+disjoint, equal to the three $3$-orbits of matter. \cert{w33\_pass12067\_yukawa\_monomials\_of\_one\_and\_two\_clocks.py}
+\emph{A capacity cost condenses a context.} Adding $g\sum\phi_a^2$ to the tick free energy, the single tick gives way at
+$g_4=\tfrac43T\log[(3+6y^4)/(1+8y^3)]$, $y=e^{-1/4T}$, not to a pair but to the four compatible ticks of one
+context (a stabiliser state). The tick-to-clock identification behind the two-clock readings above is a count
+match only and remains open. \cert{w33\_pass12068\_a\_second\_clock\_needs\_capacity.py}
+\emph{Flavour CP is a bosonic time reversal.} The generalised CP elements of the Siegel flavour chain reduce mod $3$
+to anti-symplectic involutions ($J^2=+1$), never to Kramers reversals ($J^2=-1$): they are pairs of opposite contexts,
+fix eight events and invert exactly their ticks. \cert{w33\_pass12069\_flavour\_cp\_is\_a\_bosonic\_time\_reversal.py}
+\emph{$q=7$.} The relativity principle holds ($1176$ observers, $SL(2,49)$); the two classes of index-$7$ clock
+analogues are not normal and no clock pair fixes an observer, so on $q=3,5,7$ mirror rest frames occur only at $q=3$. \cert{w33\_pass12070\_the\_galois\_list\_q7.py}
+
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse
 clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it

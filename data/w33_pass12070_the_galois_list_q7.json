@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "|Sp(4,7)| = 276595200; J^2 = nu and anti-similitude verified; |C(J)| = 117600 = |SL(2,49)|": true,
+    "2352 J, 1176 observers = q^2(q^2-1)/2": true,
+    "Stab(p) = 691488 transitive on the 1176 observers (relativity)": true,
+    "two index-7 classes, each non-normal, containing U, |K/U| = 288, 7 conjugates, transitive": true,
+    "no clock pair fixes an observer (252 collinear; 48, 288 non-collinear)": true
+  },
+  "all_checks_pass": true
+}
