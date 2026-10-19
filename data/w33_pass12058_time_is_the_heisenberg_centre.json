@@ -1,0 +1,44 @@
+{
+  "U": {
+    "order": 27,
+    "orders": {
+      "1": 1,
+      "3": 26
+    },
+    "centre_is_tick": true,
+    "derived_is_tick": true
+  },
+  "commutator_unit": 2,
+  "H_mod_U_orders": {
+    "1": 1,
+    "2": 3,
+    "4": 12
+  },
+  "H_mod_Z_orders": {
+    "1": 1,
+    "2": 9,
+    "3": 8,
+    "4": 54
+  },
+  "orbits": {
+    "H": [
+      1,
+      12,
+      27
+    ],
+    "U_far_regular": true,
+    "U_on_neighbours": [
+      [
+        3,
+        12
+      ]
+    ]
+  },
+  "checks": {
+    "U = 3-elements: 27, normal, exponent 3, nonabelian; Z(U) = [U,U] = <t_p> (Heisenberg, centre = tick)": true,
+    "[T_u, T_v] = t_p^(c omega(u,v)) for all 27 x 27 pairs (time = symplectic area)": true,
+    "H/U = 2 x Q8 (orders 1:1, 2:3, 4:12) and H/Z(H) = 3^2:Q8 (orders 1:1, 2:9, 3:8, 4:54)": true,
+    "H-orbits 1 + 12 + 27; U regular on the 27 far points (Heisenberg torsor); U-orbits of 3 on the neighbours": true
+  },
+  "all_checks_pass": true
+}

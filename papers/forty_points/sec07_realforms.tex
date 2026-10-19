@@ -230,6 +230,21 @@ Finally, the physical vacua of Section~\ref{sec:siegel} already make this choice
 
 Which matter is ours decides it. Every one-loop angular potential on the Higgs Cartan is a combination $aF+bG$ of $F=\sum e^2\log e$ and $G=\sum e\log e$, where $a$ measures bosons against fermions and $b$ is the soft scalar mass. The point vacuum, and with it one time, is selected exactly when $b\le0$, provided fermions do not dominate by more than about five to one: about half of all matter contents. Any positive soft mass moves the vacuum continuously off the point. With supersymmetry the soft mass must be negative for the flat direction to break at all, so supersymmetric breaking along it lands on one time. \cert{w33\_pass12057\_matter\_decides\_the\_time.py}
 
+\begin{result}{Theorem 7.4 (time is the central charge of space translations) \hfill \tierC}
+The symmetry group of the clock real form at a point $p$ has order $432$ and the following structure.
+\begin{enumerate}
+\item Its elements of order three form a Heisenberg group $3^{1+2}$ whose centre is the tick group $\langle t_p\rangle$.
+      Two translations commute only up to a tick:
+      $[T_u,T_v]=t_p^{\,c\,\omega(u,v)}$ for $u,v\in\F_3^2$, with $\omega$ the symplectic area.
+\item The quotient by it is $2\times Q_8$. Choosing one of the three tick lines at $p$ breaks the binary tetrahedral
+      group of the point to the quaternion group.
+\item The Heisenberg group acts regularly on the $27$ points not collinear with $p$.
+\end{enumerate}
+The one-time real form is thus a finite, spinful analogue of the centrally extended Galilei group, with time where
+that group has mass. That $W(q)$ is an elation quadrangle with Heisenberg elation group is classical
+(Payne--Thas); what is new is that its centre is the tick that fixes the real form. \cert{w33\_pass12058\_time\_is\_the\_heisenberg\_centre.py}
+\end{result}
+
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse
 clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it
