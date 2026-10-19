@@ -36341,6 +36341,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e02db5c412f3651f78bb661e55abd77e08cf8e6d0407f2a53930fb77e406cce5",
+      "normalized_formula": "\"Gram_eigenvalue_multiplicities\":all(np.sum(abs(eigs-k)<1e-7)=mfork,minspectrum)",
+      "numeric_literals": [
+        "1e-7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_operator_frame_majorization.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 116,
+          "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
+          "raw": "\"Gram_eigenvalue_multiplicities\": all(np.sum(abs(eigs-k)<1e-7)==m for k,m in spectrum),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cf6f8e59ac647c1587ae0fc97151fe05b1802065d30442a94babcad29fa03c9f",
+      "structural_formula": "\"Gram_eigenvalue_multiplicities\":all(np.sum(abs(eigs-k)<#)=mfork,minspectrum)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a87ce536987350d1ec1fc6814496f05580d7873f4937edb34329364006f3a900",
       "normalized_formula": "\"Gram_formula\":\"G=(8/9)I+(2/9)A_line+(1/9)J\"",
       "numeric_literals": [
@@ -79061,6 +79088,33 @@
       },
       "structural_family_id": "a8fe0552ec202b0cc4b3b5d15acdcd1afa18c34b9240f3f763fd4e2de7f65e01",
       "structural_formula": "\"commutator_KB_cost_3#\":commutator_cost_KB=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "07e8cbf806e15cb1ac3a2d50431ac26d7263b02fc897b41bfdbe4f745017ef31",
+      "normalized_formula": "\"commutator_norm_squared_0_or_4_over_3\":max_error<1e-9",
+      "numeric_literals": [
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_operator_frame_majorization.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 122,
+          "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
+          "raw": "\"commutator_norm_squared_0_or_4_over_3\": max_error < 1e-9,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cba373d6dd4eccf84bea5b8d5a0cd84aa68339a99ac83cde7c3bfc52b7355ace",
+      "structural_formula": "\"commutator_norm_squared_0_or_4_over_3\":max_error<#"
     },
     {
       "file_count": 1,
@@ -139505,6 +139559,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "72025554bc71fcdbf0a3af618b820a59a2d4457cd59e947d4798fe545885b4cf",
+      "normalized_formula": "\"operator_Gram_closed_form\":bool(np.allclose(gram,expected,atol=1e-9))",
+      "numeric_literals": [
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_operator_frame_majorization.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 114,
+          "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
+          "raw": "\"operator_Gram_closed_form\": bool(np.allclose(gram, expected, atol=1e-9)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b73d61bba039eba3eed426c60a22cf7643fe9164ec78b55fb21e5b3c2a7aa84d",
+      "structural_formula": "\"operator_Gram_closed_form\":bool(np.allclose(gram,expected,atol=#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "efd3639acd0eeaf233c646a831e127076c0fbb9f3f005b26efcd465b17513ea3",
       "normalized_formula": "\"operator_form\":\"M_nu|doublet=29I_2+delta*H_nu\"",
       "numeric_literals": [
@@ -144649,6 +144730,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3ad0319c6b6a660d3a026c9e72b3ab4fa0f28ca6aa027baf97583d8b3d95a19e",
+      "normalized_formula": "\"positive_temperature_majorization_bound\":min_free_gap>-1e-10",
+      "numeric_literals": [
+        "-1e-10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_operator_frame_majorization.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 123,
+          "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
+          "raw": "\"positive_temperature_majorization_bound\": min_free_gap > -1e-10,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8a18080b21af8ee89244dc40d609e5e8942242739d0211dbbef72a01afcc79fe",
+      "structural_formula": "\"positive_temperature_majorization_bound\":min_free_gap>#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f020521ec51a0703a6f6b0989360201c2794c311e959157e376548b5f0e4a0c0",
       "normalized_formula": "\"positivecosmologicalconstant;withtheGauss-Bonnetconventionkappa=2/k=\"",
       "numeric_literals": [
@@ -146209,6 +146317,36 @@
       },
       "structural_family_id": "0cf24c2d09f965ca5aa46dd950fc0f75926234f008dafa1dae462c3cb414734f",
       "structural_formula": "\"projector_ranks_sum_to_1#\":harmonic+light_rank+heavy_rank=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b4bc9bcd2f08d000178059566e3758de69f6009b69c06a16a08291affd750eb7",
+      "normalized_formula": "\"projector_sum_equals_40I\":bool(np.allclose(P.sum(axis=0),40*np.eye(9),atol=1e-10))",
+      "numeric_literals": [
+        "0",
+        "1e-10",
+        "40",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261019_tick_operator_frame_majorization.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 113,
+          "path": "analysis/w33_20261019_tick_operator_frame_majorization.py",
+          "raw": "\"projector_sum_equals_40I\": bool(np.allclose(P.sum(axis=0),40*np.eye(9),atol=1e-10)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e7ad7f53f9af8d8cf9537cd1a42a7be77300f36837f3968ce6c0557455fd0a84",
+      "structural_formula": "\"projector_sum_equals_4#I\":bool(np.allclose(P.sum(axis=#),#*np.eye(#),atol=#))"
     },
     {
       "file_count": 1,
@@ -609003,6 +609141,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "463496c7aabcc335b5b1184d595712a050f7d4a41c0f63e838def2f0f79a9b59",
+      "normalized_formula": "Equalityat^positive^temperaturerequires\\(Q\\)itselftobearank-3projection.Becauseanontrivialmixtureofdistinctequal-rankprojectionscannotbeaprojection(use\\(\\operatorname{Tr}Q^2<3\\)),everyminimizerisanindividualtick,uptoduplicateprojectorlabels.Thisisa^universalrank-projectormajorizationtheorem^,notaW33-specificselectionmechanism.At\\(T=0\\),thegroundenergyiszerowheneverallactiveprojectorshaveacommonvector;thereforecompatiblemixturescantiewithsingleticks.Selectionisnotuniqueatzerotemperature",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "Equality at **positive** temperature requires \\(Q\\) itself to be a rank-3 projection. Because a nontrivial mixture of distinct equal-rank projections cannot be a projection (use \\(\\operatorname{Tr}Q^2<3\\)), every minimizer is an individual tick, up to duplicate projector labels. This is a **universal rank-projector majorization theorem**, not a W33-specific selection mechanism. At \\(T=0\\), the ground energy is zero whenever all active projectors have a common vector; therefore compatible mixtures can tie with single ticks. Selection is not unique at zero temperature.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "53ed6f838d2081c5a23453cec6b6589605218762a83c7ad400690a585ce08371",
+      "structural_formula": "Equalityat^positive^temperaturerequires\\(Q\\)itselftobearank-#projection.Becauseanontrivialmixtureofdistinctequal-rankprojectionscannotbeaprojection(use\\(\\operatorname{Tr}Q^#<#\\)),everyminimizerisanindividualtick,uptoduplicateprojectorlabels.Thisisa^universalrank-projectormajorizationtheorem^,notaW3#-specificselectionmechanism.At\\(T=#\\),thegroundenergyiszerowheneverallactiveprojectorshaveacommonvector;thereforecompatiblemixturescantiewithsingleticks.Selectionisnotuniqueatzerotemperature"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5db2993b8ee9200be5a49261c972e7a8ca5e2081b11489d887be63f7d05128db",
       "normalized_formula": "Equatealpha_1=alpha_2tofixM_GUT_12(theW33boundary)",
       "numeric_literals": [
@@ -628646,6 +628813,39 @@
       },
       "structural_family_id": "1957029a9cbfbf8a1c35754d00b8cf9fdfe2408c0036e87d02d5b220a43c770e",
       "structural_formula": "G=#I_8-A_{\\mathrm{sub}}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e6ab1847ce23d6b333f33e86c1640e04fb6876f1d8defe9f53e76313a7b34cbf",
+      "normalized_formula": "G=3I_{120}+(J_{40}-I_{40})\\otimesJ_3,\\qquad\\operatorname{spec}G=120^13^{80}0^{39}",
+      "numeric_literals": [
+        "0",
+        "120",
+        "13",
+        "3",
+        "39",
+        "40",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 27,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "G=3I_{120}+(J_{40}-I_{40})\\otimes J_3,\\qquad \\operatorname{spec}G=120^1\\,3^{80}\\,0^{39}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9f337a9929d17bc5d05684c5686160f10039991aac788e433452d5fd7ecb6438",
+      "structural_formula": "G=#I_{#}+(J_{#}-I_{#})\\otimesJ_3,\\qquad\\operatorname{spec}G=#^#^{#}#^{#}"
     },
     {
       "file_count": 1,
@@ -755663,6 +755863,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f3983dc5944605bad16900babe5c17d23224b04a4d365f2a5702c5f15958a7b8",
+      "normalized_formula": "Q=R^{-1}\\sum\\phi_{p,k}\\Pi_{p,k}",
+      "numeric_literals": [
+        "-1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 5,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "Q=R^{-1}\\sum\\phi_{p,k}\\Pi_{p,k}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "27bd06c8d6b6eec4b53f7fdb967ca35f42fe6b1486682c6e85101fd9776be2cb",
+      "structural_formula": "Q=R^{#}\\sum\\phi_{p,k}\\Pi_{p,k}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c30d06afb207721919625a2b122c607059b2c5e6b2895990937cb0447f842d25",
       "normalized_formula": "Q=T_3+Y/2",
       "numeric_literals": [
@@ -759114,6 +759341,33 @@
       },
       "structural_family_id": "0ad94ca840743441bde36d17162f6b343c10944144d77491ff34801e8ff5ae5d",
       "structural_formula": "R)^s4ND)<+c*Z;P|MZ#sIr@oPYxqW~pok}J6PKeW#e"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e25548bee8840c7db62aee60bca5fdd49dbd5e0bc0d058f670545af31f434119",
+      "normalized_formula": "R,T>0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 7,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "R,T>0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c5f10e204b3fe43c94872cf9511b0066eb94029b6d0a8294135d77ea6c66c829",
+      "structural_formula": "R,T>#"
     },
     {
       "file_count": 1,
@@ -794903,6 +795157,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e30c674dbe7d876429dd66857b0d44136e79a82229d83d61985bc653fb3a0ee0",
+      "normalized_formula": "T=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 12,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "T=0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "28a25ea417a84842ce112037d7731cd55cdcc497da9cea62ebb8cb4ea4798a61",
+      "structural_formula": "T=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "407cabe5879fcc3db23088632780973a7a956e0207612cd663be3a41dfa3f594",
       "normalized_formula": "T=1",
       "numeric_literals": [
@@ -806679,6 +806960,35 @@
       },
       "structural_family_id": "1f5ab80171628b44adb9d13c21070946d7c70a37601f312dc6035fedc4a88c6a",
       "structural_formula": "The7extraneutrinoparameters(#masses,#angles,#phase)equal\u03a6#.</p>"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "acb884e34c243505124db4b69b38380053f00dcf153fc42c13ea6e066187b684",
+      "normalized_formula": "The80contrasts\\(\\Pi_{p,k}-I/3\\)give40mutuallyorthogonal,two-dimensionaltracelessoperatorplanes,spanningtheentire80-dimensionaltracelessHermitianoperatorspaceon\\(\\mathbbC^9\\).The39Gramnullmodesreflectthe40copiesoftheidentitydecomposition\\(\\sum_k\\Pi_{p,k}=I_9\\),with39independentdifferences",
+      "numeric_literals": [
+        "0",
+        "3",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 31,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "The 80 contrasts \\(\\Pi_{p,k}-I/3\\) give 40 mutually orthogonal, two-dimensional traceless operator planes, spanning the entire 80-dimensional traceless Hermitian operator space on \\(\\mathbb C^9\\). The 39 Gram null modes reflect the 40 copies of the identity decomposition \\(\\sum_k\\Pi_{p,k}=I_9\\), with 39 independent differences.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6c5d518c9e8ff4382dc0ec9b8cf3b4c95b953bca3bcf1224247ebe1bd2783aa3",
+      "structural_formula": "The8#contrasts\\(\\Pi_{p,k}-I/#\\)give4#mutuallyorthogonal,two-dimensionaltracelessoperatorplanes,spanningtheentire8#-dimensionaltracelessHermitianoperatorspaceon\\(\\mathbbC^#\\).The3#Gramnullmodesreflectthe4#copiesoftheidentitydecomposition\\(\\sum_k\\Pi_{p,k}=I_9\\),with3#independentdifferences"
     },
     {
       "file_count": 1,
@@ -825199,6 +825509,34 @@
       },
       "structural_family_id": "227afa057f9c97b21cd489f47331cc7985cf80af4708f6f36e28cf12fb01b618",
       "structural_formula": "ThespectrumofCis`#^#+(#/#)^#`.Forallseparablestates,`F_phi<=#/#`,hence`P_match<=#/#=#`.Anytrustedobserved*basis-average*matchingrateabove4#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cbd2a79ffd9727426a057d60ee04730884231baa627711be6e891bc3ff5f648f",
+      "normalized_formula": "Thespectrumof\\(Q\\)ismajorizedby\\((1,1,1,0,0,0,0,0,0)\\).Since\\(x\\mapstoe^{Rx/T}\\)isstrictlyconvexfor\\(R,T>0\\)",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "The spectrum of \\(Q\\) is majorized by \\((1,1,1,0,0,0,0,0,0)\\). Since \\(x\\mapsto e^{Rx/T}\\) is strictly convex for \\(R,T>0\\),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "33dce55a15d9f0127373dffdc8078db6ca182d9650e78e024ca19966536e8dc7",
+      "structural_formula": "Thespectrumof\\(Q\\)ismajorizedby\\((#,#,#,#,#,#,#,#,#)\\).Since\\(x\\mapstoe^{Rx/T}\\)isstrictlyconvexfor\\(R,T>#\\)"
     },
     {
       "file_count": 1,
@@ -963384,6 +963722,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a1de6d00e1d7dbe0dd6c807ee043e73df07c2185206686d58b341063e5396ef5",
+      "normalized_formula": "\\mathcalC(w)=\\sum_{a<b}w_aw_b\\|[\\Pi_a,\\Pi_b]\\|_F^2=\\frac43\\sum_{\\{p,q\\}\\{\\rmnoncollinear}}s_ps_q,\\quads_p=\\sum_kw_{p,k}",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 47,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "\\mathcal C(w)=\\sum_{a<b}w_aw_b\\|[\\Pi_a,\\Pi_b]\\|_F^2 =\\frac43\\sum_{\\{p,q\\}\\ {\\rm noncollinear}}s_p s_q, \\quad s_p=\\sum_k w_{p,k}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c05276e4e57501bdd10b5ace8ed2b18beaf7071580671c83e3e295b6a891bc67",
+      "structural_formula": "\\mathcalC(w)=\\sum_{a<b}w_aw_b\\|[\\Pi_a,\\Pi_b]\\|_F^#=\\frac4#\\sum_{\\{p,q\\}\\{\\rmnoncollinear}}s_ps_q,\\quads_p=\\sum_kw_{p,k}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e86d3fab43d64b895cb6c93012d77c908a425609b0f8d5f366b54c7640122227",
       "normalized_formula": "\\mathcalC=0\\quad\\text{onall36horizontalaffinelifts}",
       "numeric_literals": [
@@ -978098,6 +978464,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b8803f39c6ab83f60e6948221f41dc2ec53c14ac47b47dbf0f7ddb9520a659c4",
+      "normalized_formula": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})=\\begin{cases}3,p=q,\\k=l,\\\\0,p=q,\\k\\nel,\\\\1,p\\neq.\\end{cases}",
+      "numeric_literals": [
+        "0",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 18,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})= \\begin{cases} 3,&p=q,\\ k=l,\\\\ 0,&p=q,\\ k\\ne l,\\\\ 1,&p\\ne q. \\end{cases}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a04aab312a428e14b52653ab391ae8728fedcf655deb7c5bb7c1ebc70dafde10",
+      "structural_formula": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})=\\begin{cases}#,p=q,\\k=l,\\\\#,p=q,\\k\\nel,\\\\#,p\\neq.\\end{cases}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "03eca8a17225aa65e48ddfbc03b263d53d4790fa760f9464f6d97a9287917ae2",
       "normalized_formula": "\\operatorname{Tr}(f(D^2/\\Lambda^2))~\\sum_nf_na_{2n}",
       "numeric_literals": [
@@ -978575,6 +978970,61 @@
       },
       "structural_family_id": "05c13903d0d6abc67d62eaa4d758d1df17eabeea1a414a460736b064d2feb5d0",
       "structural_formula": "\\operatorname{Tr}P=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "21e40b74a7ed44e325a5b56069403d6c1d64373bd57dc333dc877a18f89246b0",
+      "normalized_formula": "\\operatorname{Tr}Q=3",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 5,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "\\operatorname{Tr}Q=3",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "02469636da083118b39698b300f0cfe1702f1b9d8fd93955b5b5914a661f2854",
+      "structural_formula": "\\operatorname{Tr}Q=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d00988e9d39490fe650801039cf6b48bb1d0417a94f00074a688f10858e8b78d",
+      "normalized_formula": "\\operatorname{Tr}Q^2<3",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 12,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "\\operatorname{Tr}Q^2<3",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "05e50dfbee94cb2c256ca33fc77bf6489a54c98b3f8b5e8cb837d22e5eacc167",
+      "structural_formula": "\\operatorname{Tr}Q^#<#"
     },
     {
       "file_count": 1,
@@ -995098,6 +995548,33 @@
       },
       "structural_family_id": "095d25a5dc5b938afb94b7c8f2f55f5bac7a6f27d3106ec46d5189865165b6ea",
       "structural_formula": "\\sum\\mathrm{BR}\u2248#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "077439cc6ce92ed6932519dc5d46d51b5c5b53e82f36da6d180f789842fcf94a",
+      "normalized_formula": "\\sum\\phi_{p,k}=R>0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-19_tick_operator_frame_majorization.md"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_paren",
+          "line": 5,
+          "path": "analysis/2026-10-19_tick_operator_frame_majorization.md",
+          "raw": "\\sum\\phi_{p,k}=R>0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8817b1ab0e865beebbe2d975d0f138211f0827e350b05aad67c3ebc0bb1229e4",
+      "structural_formula": "\\sum\\phi_{p,k}=R>#"
     },
     {
       "file_count": 1,
@@ -1844211,9 +1844688,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-19T05:15:45-04:00",
+  "frozen_at": "2026-10-19T07:52:13-04:00",
   "pass": 398,
-  "repository_head": "9b9136467a1a2419b6b44a5094ad20ed1d82fdef",
+  "repository_head": "0fcbd55af01ed63e26c17aa8807525bb9ada8f15",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1854356,6 +1854833,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c0067a2da637f172dfb32c2c2d1e16369ffa9fd5fbcfa64143857b555c088aac",
       "structural_formula": "\"Gossettowervertices(#,#,#,#)=W(#,#)constants(\u03a6#,LINES_2#,GEWIRTZ_V,EDGES);\""
+    },
+    {
+      "exact_formula_ids": [
+        "e02db5c412f3651f78bb661e55abd77e08cf8e6d0407f2a53930fb77e406cce5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cf6f8e59ac647c1587ae0fc97151fe05b1802065d30442a94babcad29fa03c9f",
+      "structural_formula": "\"Gram_eigenvalue_multiplicities\":all(np.sum(abs(eigs-k)<#)=mfork,minspectrum)"
     },
     {
       "exact_formula_ids": [
@@ -1866356,6 +1866841,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a8fe0552ec202b0cc4b3b5d15acdcd1afa18c34b9240f3f763fd4e2de7f65e01",
       "structural_formula": "\"commutator_KB_cost_3#\":commutator_cost_KB=#"
+    },
+    {
+      "exact_formula_ids": [
+        "07e8cbf806e15cb1ac3a2d50431ac26d7263b02fc897b41bfdbe4f745017ef31"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cba373d6dd4eccf84bea5b8d5a0cd84aa68339a99ac83cde7c3bfc52b7355ace",
+      "structural_formula": "\"commutator_norm_squared_0_or_4_over_3\":max_error<#"
     },
     {
       "exact_formula_ids": [
@@ -1883314,6 +1883807,14 @@
     },
     {
       "exact_formula_ids": [
+        "72025554bc71fcdbf0a3af618b820a59a2d4457cd59e947d4798fe545885b4cf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b73d61bba039eba3eed426c60a22cf7643fe9164ec78b55fb21e5b3c2a7aa84d",
+      "structural_formula": "\"operator_Gram_closed_form\":bool(np.allclose(gram,expected,atol=#))"
+    },
+    {
+      "exact_formula_ids": [
         "efd3639acd0eeaf233c646a831e127076c0fbb9f3f005b26efcd465b17513ea3"
       ],
       "exact_member_count": 1,
@@ -1884747,6 +1885248,14 @@
     },
     {
       "exact_formula_ids": [
+        "3ad0319c6b6a660d3a026c9e72b3ab4fa0f28ca6aa027baf97583d8b3d95a19e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8a18080b21af8ee89244dc40d609e5e8942242739d0211dbbef72a01afcc79fe",
+      "structural_formula": "\"positive_temperature_majorization_bound\":min_free_gap>#"
+    },
+    {
+      "exact_formula_ids": [
         "f020521ec51a0703a6f6b0989360201c2794c311e959157e376548b5f0e4a0c0"
       ],
       "exact_member_count": 1,
@@ -1885184,6 +1885693,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0cf24c2d09f965ca5aa46dd950fc0f75926234f008dafa1dae462c3cb414734f",
       "structural_formula": "\"projector_ranks_sum_to_1#\":harmonic+light_rank+heavy_rank=#"
+    },
+    {
+      "exact_formula_ids": [
+        "b4bc9bcd2f08d000178059566e3758de69f6009b69c06a16a08291affd750eb7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e7ad7f53f9af8d8cf9537cd1a42a7be77300f36837f3968ce6c0557455fd0a84",
+      "structural_formula": "\"projector_sum_equals_4#I\":bool(np.allclose(P.sum(axis=#),#*np.eye(#),atol=#))"
     },
     {
       "exact_formula_ids": [
@@ -2008097,6 +2008614,14 @@
     },
     {
       "exact_formula_ids": [
+        "463496c7aabcc335b5b1184d595712a050f7d4a41c0f63e838def2f0f79a9b59"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "53ed6f838d2081c5a23453cec6b6589605218762a83c7ad400690a585ce08371",
+      "structural_formula": "Equalityat^positive^temperaturerequires\\(Q\\)itselftobearank-#projection.Becauseanontrivialmixtureofdistinctequal-rankprojectionscannotbeaprojection(use\\(\\operatorname{Tr}Q^#<#\\)),everyminimizerisanindividualtick,uptoduplicateprojectorlabels.Thisisa^universalrank-projectormajorizationtheorem^,notaW3#-specificselectionmechanism.At\\(T=#\\),thegroundenergyiszerowheneverallactiveprojectorshaveacommonvector;thereforecompatiblemixturescantiewithsingleticks.Selectionisnotuniqueatzerotemperature"
+    },
+    {
+      "exact_formula_ids": [
         "5db2993b8ee9200be5a49261c972e7a8ca5e2081b11489d887be63f7d05128db"
       ],
       "exact_member_count": 1,
@@ -2013386,6 +2013911,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1957029a9cbfbf8a1c35754d00b8cf9fdfe2408c0036e87d02d5b220a43c770e",
       "structural_formula": "G=#I_8-A_{\\mathrm{sub}}"
+    },
+    {
+      "exact_formula_ids": [
+        "e6ab1847ce23d6b333f33e86c1640e04fb6876f1d8defe9f53e76313a7b34cbf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9f337a9929d17bc5d05684c5686160f10039991aac788e433452d5fd7ecb6438",
+      "structural_formula": "G=#I_{#}+(J_{#}-I_{#})\\otimesJ_3,\\qquad\\operatorname{spec}G=#^#^{#}#^{#}"
     },
     {
       "exact_formula_ids": [
@@ -2047741,6 +2048274,14 @@
     },
     {
       "exact_formula_ids": [
+        "f3983dc5944605bad16900babe5c17d23224b04a4d365f2a5702c5f15958a7b8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "27bd06c8d6b6eec4b53f7fdb967ca35f42fe6b1486682c6e85101fd9776be2cb",
+      "structural_formula": "Q=R^{#}\\sum\\phi_{p,k}\\Pi_{p,k}"
+    },
+    {
+      "exact_formula_ids": [
         "c30d06afb207721919625a2b122c607059b2c5e6b2895990937cb0447f842d25"
       ],
       "exact_member_count": 1,
@@ -2048682,6 +2049223,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0ad94ca840743441bde36d17162f6b343c10944144d77491ff34801e8ff5ae5d",
       "structural_formula": "R)^s4ND)<+c*Z;P|MZ#sIr@oPYxqW~pok}J6PKeW#e"
+    },
+    {
+      "exact_formula_ids": [
+        "e25548bee8840c7db62aee60bca5fdd49dbd5e0bc0d058f670545af31f434119"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c5f10e204b3fe43c94872cf9511b0066eb94029b6d0a8294135d77ea6c66c829",
+      "structural_formula": "R,T>#"
     },
     {
       "exact_formula_ids": [
@@ -2058507,10 +2059056,11 @@
     },
     {
       "exact_formula_ids": [
+        "e30c674dbe7d876429dd66857b0d44136e79a82229d83d61985bc653fb3a0ee0",
         "407cabe5879fcc3db23088632780973a7a956e0207612cd663be3a41dfa3f594",
         "3272a2566bb0c89770a67b5eac59100b4c618c55d1a20d2d78e02d0b6c062198"
       ],
-      "exact_member_count": 2,
+      "exact_member_count": 3,
       "structural_family_id": "28a25ea417a84842ce112037d7731cd55cdcc497da9cea62ebb8cb4ea4798a61",
       "structural_formula": "T=#"
     },
@@ -2061725,6 +2062275,14 @@
       "exact_member_count": 1,
       "structural_family_id": "820cb451bf7617de6fef6568cb5aed4a9b3bd259578f8e1957f3608870588bcc",
       "structural_formula": "The8#=\u039b#C9isexactlytheZ3-twisted(W(#,#)-twist)matterofE8.SoIaskedwhetherthemodulusisaHiggsvev"
+    },
+    {
+      "exact_formula_ids": [
+        "acb884e34c243505124db4b69b38380053f00dcf153fc42c13ea6e066187b684"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6c5d518c9e8ff4382dc0ec9b8cf3b4c95b953bca3bcf1224247ebe1bd2783aa3",
+      "structural_formula": "The8#contrasts\\(\\Pi_{p,k}-I/#\\)give4#mutuallyorthogonal,two-dimensionaltracelessoperatorplanes,spanningtheentire8#-dimensionaltracelessHermitianoperatorspaceon\\(\\mathbbC^#\\).The3#Gramnullmodesreflectthe4#copiesoftheidentitydecomposition\\(\\sum_k\\Pi_{p,k}=I_9\\),with3#independentdifferences"
     },
     {
       "exact_formula_ids": [
@@ -2066701,6 +2067259,14 @@
       "exact_member_count": 1,
       "structural_family_id": "227afa057f9c97b21cd489f47331cc7985cf80af4708f6f36e28cf12fb01b618",
       "structural_formula": "ThespectrumofCis`#^#+(#/#)^#`.Forallseparablestates,`F_phi<=#/#`,hence`P_match<=#/#=#`.Anytrustedobserved*basis-average*matchingrateabove4#"
+    },
+    {
+      "exact_formula_ids": [
+        "cbd2a79ffd9727426a057d60ee04730884231baa627711be6e891bc3ff5f648f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "33dce55a15d9f0127373dffdc8078db6ca182d9650e78e024ca19966536e8dc7",
+      "structural_formula": "Thespectrumof\\(Q\\)ismajorizedby\\((#,#,#,#,#,#,#,#,#)\\).Since\\(x\\mapstoe^{Rx/T}\\)isstrictlyconvexfor\\(R,T>#\\)"
     },
     {
       "exact_formula_ids": [
@@ -2102238,6 +2102804,14 @@
     },
     {
       "exact_formula_ids": [
+        "a1de6d00e1d7dbe0dd6c807ee043e73df07c2185206686d58b341063e5396ef5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c05276e4e57501bdd10b5ace8ed2b18beaf7071580671c83e3e295b6a891bc67",
+      "structural_formula": "\\mathcalC(w)=\\sum_{a<b}w_aw_b\\|[\\Pi_a,\\Pi_b]\\|_F^#=\\frac4#\\sum_{\\{p,q\\}\\{\\rmnoncollinear}}s_ps_q,\\quads_p=\\sum_kw_{p,k}"
+    },
+    {
+      "exact_formula_ids": [
         "e86d3fab43d64b895cb6c93012d77c908a425609b0f8d5f366b54c7640122227"
       ],
       "exact_member_count": 1,
@@ -2105823,6 +2106397,14 @@
     },
     {
       "exact_formula_ids": [
+        "b8803f39c6ab83f60e6948221f41dc2ec53c14ac47b47dbf0f7ddb9520a659c4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a04aab312a428e14b52653ab391ae8728fedcf655deb7c5bb7c1ebc70dafde10",
+      "structural_formula": "\\operatorname{Tr}(\\Pi_{p,k}\\Pi_{q,l})=\\begin{cases}#,p=q,\\k=l,\\\\#,p=q,\\k\\nel,\\\\#,p\\neq.\\end{cases}"
+    },
+    {
+      "exact_formula_ids": [
         "03eca8a17225aa65e48ddfbc03b263d53d4790fa760f9464f6d97a9287917ae2"
       ],
       "exact_member_count": 1,
@@ -2105925,6 +2106507,22 @@
       "exact_member_count": 1,
       "structural_family_id": "05c13903d0d6abc67d62eaa4d758d1df17eabeea1a414a460736b064d2feb5d0",
       "structural_formula": "\\operatorname{Tr}P=#"
+    },
+    {
+      "exact_formula_ids": [
+        "21e40b74a7ed44e325a5b56069403d6c1d64373bd57dc333dc877a18f89246b0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "02469636da083118b39698b300f0cfe1702f1b9d8fd93955b5b5914a661f2854",
+      "structural_formula": "\\operatorname{Tr}Q=#"
+    },
+    {
+      "exact_formula_ids": [
+        "d00988e9d39490fe650801039cf6b48bb1d0417a94f00074a688f10858e8b78d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "05e50dfbee94cb2c256ca33fc77bf6489a54c98b3f8b5e8cb837d22e5eacc167",
+      "structural_formula": "\\operatorname{Tr}Q^#<#"
     },
     {
       "exact_formula_ids": [
@@ -2109995,6 +2110593,14 @@
       "exact_member_count": 1,
       "structural_family_id": "095d25a5dc5b938afb94b7c8f2f55f5bac7a6f27d3106ec46d5189865165b6ea",
       "structural_formula": "\\sum\\mathrm{BR}\u2248#"
+    },
+    {
+      "exact_formula_ids": [
+        "077439cc6ce92ed6932519dc5d46d51b5c5b53e82f36da6d180f789842fcf94a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8817b1ab0e865beebbe2d975d0f138211f0827e350b05aad67c3ebc0bb1229e4",
+      "structural_formula": "\\sum\\phi_{p,k}=R>#"
     },
     {
       "exact_formula_ids": [
@@ -2337102,20 +2337708,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 89572920,
-    "exact_formula_families": 63071,
-    "files_scanned": 12274,
-    "formula_occurrences": 69109,
+    "bytes_scanned": 89583462,
+    "exact_formula_families": 63088,
+    "files_scanned": 12276,
+    "formula_occurrences": 69126,
     "status_occurrences": {
-      "certified_or_theorem": 5129,
+      "certified_or_theorem": 5132,
       "killed_or_retracted": 1813,
       "open_or_conditional": 2317,
       "preregistered": 35,
       "retrospective_fit": 5330,
-      "unclassified": 54485
+      "unclassified": 54499
     },
-    "structural_families": 61396
+    "structural_families": 61412
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "99fee8adef3e313d450aa6278f9127b541af9e1b3da840be79755913251bc2fe"
+  "universe_sha256": "1ef54796c9010d6d385339125f949129a3c9fe0a7d111d999fca9a1c963e04d0"
 }
