@@ -1,0 +1,195 @@
+{
+  "schema": "w33.round7.global_phase_certified_outer_bracket.v1",
+  "theorem_1": "For all 120 normalized nonnegative rates at T>0, kappa >= -a(T), a(T)=3T*(1-(1+1/T)exp(-1/T))/(3+6exp(-1/T)), is a sufficient global single-tick condition (proven in prior round).",
+  "theorem_2": "For each T>0, choose heptad uniform point masses 1/7 with outcome assignment yielding minimum Gibbs F_h among five exactly classified characteristic-polynomial families. Then if kappa < -7/4*(F_h-F_single), that explicit state beats ALL singleton AND ALL C=0 states. Thus every true global minimizer has C>0, proving a noncommuting phase exists at sufficiently negative kappa.",
+  "key_limitation": "The interval between sufficient global-single bound and explicit heptad exclusion threshold is UNDECIDED; these do not establish the complete phase boundary or prove that a heptad is globally optimal at finite negative coupling. Polynomial coefficients are exact but root/log evaluations numeric.",
+  "source_exact_polynomials": "data/w33_20261019_round6_heptad_exact_charpoly.json",
+  "max_integer_polynomial_numeric_evaluation_residual": 5.636829882860184e-05,
+  "T0_max_heptad_eigenvalues": [
+    0.6146822339604395,
+    0.589536722793192,
+    0.5828190974014802,
+    0.5790248923980117,
+    0.5928105966983221
+  ],
+  "T0_uniform_heptad_single_exclusion_kappa_below": -0.6743060905692309,
+  "T_data": [
+    {
+      "T": 0.05,
+      "F_single": -0.05493061463952085,
+      "optimal_uniform_heptad_F": 0.37292365352199064,
+      "winning_family_index": 2,
+      "family_free_energies": [
+        0.37560783816248566,
+        0.3888382901552193,
+        0.37292365352199064,
+        0.3729268298666238,
+        0.37857082481142873
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.04999999762967335,
+      "single_tick_excluded_if_kappa_strictly_below": -0.7487449692826451,
+      "undetermined_kappa_interval": [
+        -0.7487449692826451,
+        -0.04999999762967335
+      ],
+      "test_kappa_below_exclusion": -0.7587449692826451,
+      "trial_advantage_at_test": -0.005714285714285693
+    },
+    {
+      "T": 0.1,
+      "F_single": -0.1098703084405577,
+      "optimal_uniform_heptad_F": 0.31174671393558173,
+      "winning_family_index": 2,
+      "family_free_energies": [
+        0.32210786354951654,
+        0.32540443399184804,
+        0.31174671393558173,
+        0.31174679102873554,
+        0.31787415749181325
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.09994098544982165,
+      "single_tick_excluded_if_kappa_strictly_below": -0.7378297891582439,
+      "undetermined_kappa_interval": [
+        -0.7378297891582439,
+        -0.09994098544982165
+      ],
+      "test_kappa_below_exclusion": -0.7478297891582439,
+      "trial_advantage_at_test": -0.005714285714285644
+    },
+    {
+      "T": 0.2,
+      "F_single": -0.22239963807791174,
+      "optimal_uniform_heptad_F": 0.14779224639653324,
+      "winning_family_index": 2,
+      "family_free_energies": [
+        0.15359849509516177,
+        0.15398575480106877,
+        0.14779224639653324,
+        0.14779224708779926,
+        0.15080449096652215
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.18936263283381444,
+      "single_tick_excluded_if_kappa_strictly_below": -0.6478357978302787,
+      "undetermined_kappa_interval": [
+        -0.6478357978302787,
+        -0.18936263283381444
+      ],
+      "test_kappa_below_exclusion": -0.6578357978302787,
+      "trial_advantage_at_test": -0.005714285714285644
+    },
+    {
+      "T": 0.5,
+      "F_single": -0.6690785274449971,
+      "optimal_uniform_heptad_F": -0.46457366223878527,
+      "winning_family_index": 2,
+      "family_free_energies": [
+        -0.4633476744677537,
+        -0.46333509814748153,
+        -0.46457366223878527,
+        -0.4645736622382912,
+        -0.4639568171842263
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.2337325527019981,
+      "single_tick_excluded_if_kappa_strictly_below": -0.35788351411087066,
+      "undetermined_kappa_interval": [
+        -0.35788351411087066,
+        -0.2337325527019981
+      ],
+      "test_kappa_below_exclusion": -0.36788351411087067,
+      "trial_advantage_at_test": -0.005714285714285672
+    },
+    {
+      "T": 1.0,
+      "F_single": -1.6500570026001609,
+      "optimal_uniform_heptad_F": -1.5467240084313825,
+      "winning_family_index": 3,
+      "family_free_energies": [
+        -1.5464045044682595,
+        -1.5464036883719006,
+        -1.5467240084313272,
+        -1.5467240084313825,
+        -1.5465639959049913
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.1522337695316582,
+      "single_tick_excluded_if_kappa_strictly_below": -0.18083273979536219,
+      "undetermined_kappa_interval": [
+        -0.18083273979536219,
+        -0.1522337695316582
+      ],
+      "test_kappa_below_exclusion": -0.1908327397953622,
+      "trial_advantage_at_test": -0.005714285714285783
+    },
+    {
+      "T": 2.0,
+      "F_single": -3.785978116171506,
+      "optimal_uniform_heptad_F": -3.7358008502239928,
+      "winning_family_index": 3,
+      "family_free_energies": [
+        -3.735720142637204,
+        -3.735720091091972,
+        -3.7358008502239644,
+        -3.7358008502239928,
+        -3.7357604796053456
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.08151966657162114,
+      "single_tick_excluded_if_kappa_strictly_below": -0.08781021540814782,
+      "undetermined_kappa_interval": [
+        -0.08781021540814782,
+        -0.08151966657162114
+      ],
+      "test_kappa_below_exclusion": -0.09781021540814781,
+      "trial_advantage_at_test": -0.005714285714285783
+    },
+    {
+      "T": 5.0,
+      "F_single": -10.342145962707027,
+      "optimal_uniform_heptad_F": -10.322644709845077,
+      "winning_family_index": 3,
+      "family_free_energies": [
+        -10.322631759378393,
+        -10.32263175803327,
+        -10.322644709845065,
+        -10.322644709845077,
+        -10.322638234163197
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.03321962475191039,
+      "single_tick_excluded_if_kappa_strictly_below": -0.03412719250841256,
+      "undetermined_kappa_interval": [
+        -0.03412719250841256,
+        -0.03321962475191039
+      ],
+      "test_kappa_below_exclusion": -0.044127192508412565,
+      "trial_advantage_at_test": -0.005714285714285339
+    },
+    {
+      "T": 10.0,
+      "F_single": -21.316810486176855,
+      "optimal_uniform_heptad_F": -21.307169944193337,
+      "winning_family_index": 3,
+      "family_free_energies": [
+        -21.307166705255497,
+        -21.30716670516118,
+        -21.307169944193326,
+        -21.307169944193337,
+        -21.30716832469114
+      ],
+      "global_single_guaranteed_if_kappa_at_least": -0.016652603711914488,
+      "single_tick_excluded_if_kappa_strictly_below": -0.016870948471157554,
+      "undetermined_kappa_interval": [
+        -0.016870948471157554,
+        -0.016652603711914488
+      ],
+      "test_kappa_below_exclusion": -0.026870948471157556,
+      "trial_advantage_at_test": -0.005714285714287115
+    }
+  ],
+  "checks": {
+    "five_exact_integer_polynomials_imported": true,
+    "heptad_matrix_root_residual": true,
+    "phase_threshold_order_valid": true,
+    "negative_competitor_wins_test": true,
+    "nontrivial_negative_phase_is_proven_to_exist": true,
+    "finite_temperature_rows": true
+  },
+  "all_checks_pass": true
+}

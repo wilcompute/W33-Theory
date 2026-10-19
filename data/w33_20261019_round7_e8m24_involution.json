@@ -1,0 +1,72 @@
+{
+  "schema": "w33.round7.e8minus24_su9_involution.v1",
+  "theorem": "In E8_C=sl9+Lambda3(V)+Lambda3(V)* with the committed gamma=-1 bracket, let sigma_c(A,x,y)=(-A^dagger,conj(y),conj(x)) and D=diag(1^7,-1^2) in SU9. theta=Ad_D on sl9 and Lambda3 action on x,y. sigma24=theta\u2218sigma_c is a conjugate-linear involutive Lie automorphism. Its fixed real Lie algebra has Killing signature (112 positive,136 negative) and maximal compact fixed theta algebra E7_compact+A1_compact; it is the real form E8(-24).",
+  "explicit_9x9_D_diagonal": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    -1
+  ],
+  "action_on_grade_zero": "X -> -D X^dagger D",
+  "action_on_grade_plus_minus": "(x,y) -> (Lambda3(D) conj(y), Lambda3(D) conj(x))",
+  "theta_graded_248_dimensions": {
+    "compact_plus": 136,
+    "noncompact_minus": 112,
+    "sl9_minus": 28,
+    "Lambda3_complex_minus": 42,
+    "Lambda3_real_minus": 84
+  },
+  "root_parity_at_simple_node6": {
+    "roots_total": 240,
+    "even_theta_roots": 128,
+    "odd_theta_roots": 112,
+    "theta_plus_dim": 136,
+    "theta_minus_dim": 112
+  },
+  "five_Clifford_generator_real_structure_screen": {
+    "F1": {
+      "D_commutation_residual": 3.2659863237109046,
+      "real_form_intertwiner_residual": 29.62217934440856,
+      "preserves_this_E8m24_fixed_real_structure": false
+    },
+    "S1": {
+      "D_commutation_residual": 0.0,
+      "real_form_intertwiner_residual": 1.1192126129076685e-15,
+      "preserves_this_E8m24_fixed_real_structure": true
+    },
+    "CZ": {
+      "D_commutation_residual": 4.006418880627229e-16,
+      "real_form_intertwiner_residual": 1.4178326998503524e-15,
+      "preserves_this_E8m24_fixed_real_structure": true
+    },
+    "SUM": {
+      "D_commutation_residual": 2.8284271247461903,
+      "real_form_intertwiner_residual": 31.642534522519046,
+      "preserves_this_E8m24_fixed_real_structure": false
+    },
+    "SWAP": {
+      "D_commutation_residual": 2.8284271247461903,
+      "real_form_intertwiner_residual": 31.361934462942695,
+      "preserves_this_E8m24_fixed_real_structure": false
+    }
+  },
+  "max_numeric_bracket_realstructure_residual": 1.3626828740321048e-14,
+  "physics_boundary": "This is an explicit mathematical REAL FORM; it does not uniquely choose gravity/matter, fix a vacuum, or prove Standard Model embeddings. Choosing the D involution is external, not dynamically selected.",
+  "prior_art": "Repo Pass 10949 already certified E8(-24) via tick line alpha8 parity and full Chevalley-root formulas. This is a NEW simpler implementation in the repo's SU9 elementary tensor coordinates, same real-form isomorphism class, NOT discovery of E8(-24).",
+  "checks": {
+    "SU9_D_det_plus_one": true,
+    "compact_conjugation_is_Lie_antilinear_automorphism": true,
+    "theta_involutive_Lie_automorphism": true,
+    "twisted_conjugation_is_real_structure": true,
+    "Killing_signature_from_compact_twist": true,
+    "root_parity_matches_compact_decomposition": true,
+    "E7_plus_A1_compact_dimension": true,
+    "five_Clifford_real_form_automorphism_screen": true
+  },
+  "all_checks_pass": true
+}

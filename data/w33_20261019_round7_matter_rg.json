@@ -1,0 +1,127 @@
+{
+  "schema": "w33.round7.trinification_anomaly_and_one_loop_rg.v1",
+  "trinification_27_representations": [
+    [
+      "3",
+      "bar3",
+      "1"
+    ],
+    [
+      "bar3",
+      "1",
+      "3"
+    ],
+    [
+      "1",
+      "3",
+      "bar3"
+    ]
+  ],
+  "group_representation_status": "A chiral (3,bar3,1)+(bar3,1,3)+(1,3,bar3) is an ANOMALY-FREE 27 under a conventional SU3_C x SU3_L x SU3_R gauge hypothesis. It is E6 prior art, not a W33-derived new matter multiplet. It does NOT realize a fundamental SU9 nine-mode fermion bath in E8 adjoint.",
+  "local_SU3_cubic_anomalies": {
+    "C": {
+      "sector_contributions": [
+        3,
+        -3,
+        0
+      ],
+      "total": 0
+    },
+    "L": {
+      "sector_contributions": [
+        -3,
+        0,
+        3
+      ],
+      "total": 0
+    },
+    "R": {
+      "sector_contributions": [
+        0,
+        3,
+        -3
+      ],
+      "total": 0
+    }
+  },
+  "one_loop_flavor_count_and_beta": {
+    "C": {
+      "charged_Weyl_triplets": 6,
+      "effective_Dirac_flavors": 3.0,
+      "one_loop_b0": 9,
+      "Witten_SU2_embedding_number_doublets": 6
+    },
+    "L": {
+      "charged_Weyl_triplets": 6,
+      "effective_Dirac_flavors": 3.0,
+      "one_loop_b0": 9,
+      "Witten_SU2_embedding_number_doublets": 6
+    },
+    "R": {
+      "charged_Weyl_triplets": 6,
+      "effective_Dirac_flavors": 3.0,
+      "one_loop_b0": 9,
+      "Witten_SU2_embedding_number_doublets": 6
+    }
+  },
+  "SU9_fundamental_chiral_anomaly": "An isolated left-handed SU9 fundamental 9 has nonzero cubic gauge anomaly A=+1, so cannot by itself be a consistent chiral SU9 gauge matter theory. A 9+bar9 vectorlike pair has zero anomaly, but its doubled field content and mass are external assumptions. If SU9 is not gauged, cubic gauge anomaly is not applicable.",
+  "scale_mechanism": "Standard 4D asymptotically-free SU3 gauge sector with b0=11N/3 - 2Nf/3=9 for N=3,Nf=3: beta(g)=-b0 g^3/(16pi\u00b2). Integrating gives Lambda=mu exp[-8pi\u00b2/(b0*g(mu)\u00b2)]. A gauge interaction can break continuous scaling through dimensional transmutation, but W33 counts alone determine neither g(mu0) nor the reference UV scale, so no absolute Lambda or physical mass is predicted.",
+  "conditional_transmutation_examples": [
+    {
+      "UV_mu_GeV": 1000000000000.0,
+      "UV_SU3_coupling_g": 0.35,
+      "Lambda_one_loop_GeV": 7.897497331091765e-20,
+      "ratio_Lambda_over_UV": 7.897497331091764e-32
+    },
+    {
+      "UV_mu_GeV": 1000000000000.0,
+      "UV_SU3_coupling_g": 0.5,
+      "Lambda_one_loop_GeV": 0.0005751350682196821,
+      "ratio_Lambda_over_UV": 5.751350682196822e-16
+    },
+    {
+      "UV_mu_GeV": 1000000000000.0,
+      "UV_SU3_coupling_g": 0.65,
+      "Lambda_one_loop_GeV": 959.648826802321,
+      "ratio_Lambda_over_UV": 9.59648826802321e-10
+    }
+  ],
+  "RG_invariant_check": [
+    {
+      "mu_ratio": 0.1,
+      "g_mu": 0.5172580555504604,
+      "Lambda_GeV": 0.0005751350682196889,
+      "relative_RG_invariant_error": 1.176836406102666e-14
+    },
+    {
+      "mu_ratio": 1,
+      "g_mu": 0.5,
+      "Lambda_GeV": 0.0005751350682196821,
+      "relative_RG_invariant_error": 0.0
+    },
+    {
+      "mu_ratio": 10,
+      "g_mu": 0.48436156896454463,
+      "Lambda_GeV": 0.0005751350682196835,
+      "relative_RG_invariant_error": 2.4424906541753444e-15
+    },
+    {
+      "mu_ratio": 100,
+      "g_mu": 0.4701043150037008,
+      "Lambda_GeV": 0.000575135068219685,
+      "relative_RG_invariant_error": 4.884981308350689e-15
+    }
+  ],
+  "scope": "One-loop illustrative gauge model; ignores threshold masses, scalar contributions, gravity, electroweak breaking, 2-loop terms, full UV completion, gauge-group quotients, SM chiral spectrum and measured couplings. NOT a TOE prediction.",
+  "prior_repo": "Existing repo Pass11687-91 E8 trinification, Pass11461-65 explicit physical maps, Pass10949 E8(-24).",
+  "checks": {
+    "trinification_chiral_27_anomaly_free": true,
+    "trinification_dimension_27": true,
+    "effective_nflavors_three_each": true,
+    "one_loop_b0_nine_for_three_SU3s": true,
+    "SU2_Witten_anomaly_even": true,
+    "one_loop_lambda_is_RG_invariant": true,
+    "UV_coupling_changes_generated_scale": true
+  },
+  "all_checks_pass": true
+}

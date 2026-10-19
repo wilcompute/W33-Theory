@@ -1,0 +1,162 @@
+{
+  "schema": "w33.round7.18mode_mode_resolved_loss_calibration.v1",
+  "experimental_status": "IDEAL circuit and synthetic photon/loss Monte Carlo, no real optical chip, single-photon source or detector data.",
+  "path_register": "two coherent paths, each 9 internal spatial modes. W33 echo one-arm nontrivial operation.",
+  "frequency_bin_phase_logic": "For W at theta=pi/2 use four P phases on three modes with signs +,+,-,- interleaved with G=CZ(F3 x I3),Gdag; two global 50/50 path couplers. Mesh settings below implement F3 via 3 complex two-mode couplers repeated across other qutrit index b=0,1,2.",
+  "F3_complex_Givens_two_mode_settings": [
+    {
+      "modes_of_F3": [
+        1,
+        2
+      ],
+      "amplitudes_2_by_2": [
+        [
+          {
+            "re": 0.7071067811865476,
+            "im": -0.0
+          },
+          {
+            "re": 0.7071067811865476,
+            "im": -0.0
+          }
+        ],
+        [
+          {
+            "re": -0.7071067811865476,
+            "im": 0.0
+          },
+          {
+            "re": 0.7071067811865476,
+            "im": 0.0
+          }
+        ]
+      ]
+    },
+    {
+      "modes_of_F3": [
+        0,
+        1
+      ],
+      "amplitudes_2_by_2": [
+        [
+          {
+            "re": 0.5773502691896258,
+            "im": -0.0
+          },
+          {
+            "re": 0.8164965809277261,
+            "im": -0.0
+          }
+        ],
+        [
+          {
+            "re": -0.8164965809277261,
+            "im": 0.0
+          },
+          {
+            "re": 0.5773502691896258,
+            "im": 0.0
+          }
+        ]
+      ]
+    },
+    {
+      "modes_of_F3": [
+        1,
+        2
+      ],
+      "amplitudes_2_by_2": [
+        [
+          {
+            "re": -0.7071067811865476,
+            "im": -7.737404329007668e-17
+          },
+          {
+            "re": -1.8645998454489395e-16,
+            "im": 0.7071067811865475
+          }
+        ],
+        [
+          {
+            "re": 1.8645998454489395e-16,
+            "im": 0.7071067811865475
+          },
+          {
+            "re": -0.7071067811865476,
+            "im": 7.737404329007668e-17
+          }
+        ]
+      ]
+    }
+  ],
+  "CZ_phase_mask_modes": "Four |a,b> with a,b in {1,2} receive omega^(a*b), all other 5 zero",
+  "projector_mask": "Local |a=0,b> for b=0,1,2; theta=+/-pi/2",
+  "loss_model": "Signal arm output-mode amplitude transmission ell_j (intensity ell_j\u00b2) following W, reference arm lossless, identical stationary ell_j for calibration, signal and commuting null; loss channel includes an erasure outcome.",
+  "amplitude_transmission_9_modes": [
+    0.68,
+    0.7150000000000001,
+    0.75,
+    0.785,
+    0.8200000000000001,
+    0.855,
+    0.89,
+    0.925,
+    0.96
+  ],
+  "ideal_deficit": 0.2962962962962963,
+  "raw_signal_mode_differences": [
+    0.3777777777777778,
+    0.3972222222222223,
+    0.41666666666666685,
+    0.6105555555555554,
+    0.637777777777778,
+    0.665,
+    0.6922222222222223,
+    0.7194444444444446,
+    0.7466666666666667
+  ],
+  "reference_mode_differences": [
+    0.6800000000000002,
+    0.7150000000000001,
+    0.75,
+    0.785,
+    0.8200000000000001,
+    0.855,
+    0.8900000000000001,
+    0.925,
+    0.96
+  ],
+  "mode_by_mode_corrected_deficit": 0.2962962962962963,
+  "commuting_control_corrected_deficit": 0.0,
+  "incorrect_global_reference_corrected_deficit": 0.2868112014453478,
+  "global_calibration_bias": -0.009485094850948506,
+  "shot_statistics": {
+    "photons_per_input_per_condition": 3500,
+    "conditions": [
+      "W=identity calibration",
+      "W=noncommuting",
+      "W=commuting null"
+    ],
+    "total_photons_per_repetition": 94500,
+    "Monte_Carlo_repetitions": 800,
+    "detected_signal_fraction": 1.0,
+    "false_positive_null_fraction": 0.0,
+    "signal_mean": 0.2958551741418281,
+    "signal_std": 0.005489279713542936,
+    "null_mean": 8.371828064010905e-05,
+    "null_std": 0.004133849991779046
+  },
+  "boundary": "Calibration assumes loss applied AFTER the ideal W and loss diagonal in chosen output modes. Coherent mode mixing, phase drift, detector dark counts, shot correlations and mode-dependent loss inside W are not corrected by this simple ratio. Must measure transfer matrix and source/crosstalk independently.",
+  "literature": "2026 local variance-based calibration https://arxiv.org/abs/2607.14759 and real 8x8 Clements photonic processor https://www.nature.com/articles/s41566-026-01997-x",
+  "checks": {
+    "per_mode_amplitude_reference_calibration_exact": true,
+    "loss_calibrated_noncommuting_deficit_exact": true,
+    "loss_calibrated_commuting_null_exact": true,
+    "nonuniform_mode_loss_global_visibility_calibration_biased": true,
+    "ideal_noncommuting_eight_over_27": true,
+    "800_trinary_shot_experiments_detect_witness": true,
+    "800_trinary_shot_experiments_no_null_false_alarm": true,
+    "3_structured_F3_coupler_settings": true
+  },
+  "all_checks_pass": true
+}
