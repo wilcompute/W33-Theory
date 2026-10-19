@@ -14,6 +14,10 @@ The noncommutation graph of the 40 point labels is the complement SRG(40,27,18,1
 \]
 These are **exact algebraic spectra**; the executable also checks the 120-by-120 numeric matrices and all SRG common-neighbor counts.
 
+## Repository prior art and novelty boundary
+
+**The seven-point census is not a new combinatorial discovery.** The repository already records the same 2,880 maximum noncollinear heptads in Passes 5904–5919 (including the rediscovery correction identifying them with BT819 beacon heptads) and the 90 size-four maximal partial ovoids in Passes 7269–7276. See `data/PART_W33_PASS5904_5911_ALL_2880_AND_ONE_ORBIT.json`, `data/PART_W33_PASS5912_5919_THE_2880_WAS_BT819S.json`, `data/bt819_beacon_heptads.json`, and `analysis/w33_pass7269_7276_the_ninety_are_maximal_at_four.py`. The independent enumeration here reproduces that frozen census. **The contribution of this packet is the exact 120-tick commutator interaction spectrum and its sharp continuous (4/7) extremum via Motzkin–Straus, applied to the current Pass-12055 microscopic tick model.** No priority claim is made for the already-known W33 heptads or their counts.
+
 ## The seven-point obstruction
 An independently implemented integer-bitset Bron–Kerbosch search enumerates all **2,970 maximal cliques** of the noncommutation graph: exactly **90 of size 4 and 2,880 of size 7**. In particular, its clique number is 7, so W33 has independence number 7 and **no 8-, 9-, or 10-point mutually noncollinear set**. The \(\vartheta(W33)=10\) spectral/Lovász bound is therefore not attained by a genuine independent set. We explicitly avoid calling a 10-point upper bound an existing ovoid.
 
