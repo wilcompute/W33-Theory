@@ -1,0 +1,46 @@
+{
+  "T0_kernels": {
+    "single": 3,
+    "same_point": 0,
+    "collinear": 1,
+    "non_collinear": 0
+  },
+  "concavity_midpoint_tests": 90,
+  "simplex": {
+    "0.1": {
+      "vertex": -0.10987030844055767,
+      "min_interior": 0.3848458314052729
+    },
+    "1.0": {
+      "vertex": -1.6500570026001609,
+      "min_interior": -1.5359401256332186
+    }
+  },
+  "L2_sphere": {
+    "0.05": {
+      "F": -0.054930613846102476,
+      "single": -0.05493061463952085,
+      "support": 1
+    },
+    "1.0": {
+      "F": -1.6500570025198371,
+      "single": -1.6500570026001609,
+      "support": 1
+    }
+  },
+  "L2_record": "frozen scan T = 0.02, 0.05, 0.1, 0.2, 0.3, 0.5, 1, 2: single tick at every T",
+  "pauli_contrast": {
+    "E_min": -3.9999999921028686,
+    "E_isotropic_line": -4.0,
+    "E_single_point": -1.0000000000000007,
+    "line_is_4clique": true
+  },
+  "checks": {
+    "120 ticks: Clifford, order 3, U = I + (w - 1)(I - Pi_k(p)) (generator I - Pi_k)": true,
+    "T = 0: single tick kernel 3; two ticks <= 1 (0 at the same point or non-collinear)": true,
+    "concavity of F_T in the tick rates (90 midpoint tests) and the simplex minimum at a vertex": true,
+    "L2 sphere: the multistart minimum is a single tick (T = 0.05, 1), F -> -T log 3 at low T": true,
+    "contrast: signed Pauli fields reach the bound E = -4, attained by an isotropic line (phi = -1/2); a point gives -1": true
+  },
+  "all_checks_pass": true
+}
