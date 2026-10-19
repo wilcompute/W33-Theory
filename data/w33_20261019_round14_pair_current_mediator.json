@@ -1,0 +1,192 @@
+{
+  "schema": "w33.round14.stable_pair_current_mediator_v1",
+  "mechanism": "For each unordered pair of rank-two projective vacuum labels a<b introduce an INDEPENDENT real traceless Hermitian bosonic field X_ab with positive quadratic mass m\u00b2. Couple it linearly to the Hermitian commutator current j_ab=i[Qa,Qb] with amplitude g w_a w_b. Completing squares produces V_eff=-g\u00b2/(2m\u00b2)\u03a3_(a<b)(w_aw_b)\u00b2||[Qa,Qb]||_F\u00b2. Strictly negative for noncommuting two-vacuum mixtures and zero for a singleton; bounded below on simplex because finitely many fields and ||j||\u00b2 finite. This is an engineered LOCAL-PAIR AUXILIARY MODEL; not a derived fundamental mediator, not bilinear \u03baC(w), and no W33 tick-clock identification.",
+  "pair_classes": [
+    {
+      "class_id": 0,
+      "valency": 6,
+      "reference_partner_index": 23,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 1,
+      "valency": 18,
+      "reference_partner_index": 57,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 2,
+      "valency": 27,
+      "reference_partner_index": 59,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 3,
+      "valency": 3,
+      "reference_partner_index": 24,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 4,
+      "valency": 6,
+      "reference_partner_index": 21,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 5,
+      "valency": 27,
+      "reference_partner_index": 177,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 6,
+      "valency": 6,
+      "reference_partner_index": 15,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 7,
+      "valency": 162,
+      "reference_partner_index": 149,
+      "norm_commutator_squared": "4/9"
+    },
+    {
+      "class_id": 8,
+      "valency": 243,
+      "reference_partner_index": 470,
+      "norm_commutator_squared": "40/81"
+    },
+    {
+      "class_id": 9,
+      "valency": 729,
+      "reference_partner_index": 468,
+      "norm_commutator_squared": "52/81"
+    },
+    {
+      "class_id": 10,
+      "valency": 54,
+      "reference_partner_index": 38,
+      "norm_commutator_squared": "4/9"
+    },
+    {
+      "class_id": 11,
+      "valency": 54,
+      "reference_partner_index": 144,
+      "norm_commutator_squared": "4/9"
+    },
+    {
+      "class_id": 12,
+      "valency": 81,
+      "reference_partner_index": 146,
+      "norm_commutator_squared": "8/9"
+    },
+    {
+      "class_id": 13,
+      "valency": 2,
+      "reference_partner_index": 1,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 14,
+      "valency": 12,
+      "reference_partner_index": 2,
+      "norm_commutator_squared": "0"
+    },
+    {
+      "class_id": 15,
+      "valency": 9,
+      "reference_partner_index": 36,
+      "norm_commutator_squared": "4/9"
+    },
+    {
+      "class_id": 16,
+      "valency": 1,
+      "reference_partner_index": 0,
+      "norm_commutator_squared": "0"
+    }
+  ],
+  "positive_commutator_classes": 7,
+  "distinct_costs": [
+    "0",
+    "4/9",
+    "40/81",
+    "52/81",
+    "8/9"
+  ],
+  "M2_interaction_blocks": [
+    {
+      "id": 5,
+      "matrix": [
+        [
+          "-36",
+          "-44/3"
+        ],
+        [
+          "16/27",
+          "-260/27"
+        ]
+      ],
+      "eigenvalues": {
+        "-616/27 - 20*sqrt(301)/27": 1,
+        "-616/27 + 20*sqrt(301)/27": 1
+      },
+      "real_numeric_eigenvalues": [
+        -35.666186350294424,
+        -9.963443279335205
+      ]
+    },
+    {
+      "id": 6,
+      "matrix": [
+        [
+          "-8",
+          "4"
+        ],
+        [
+          "4/27",
+          "16/27"
+        ]
+      ],
+      "eigenvalues": {
+        "-8*sqrt(217)/27 - 100/27": 1,
+        "-100/27 + 8*sqrt(217)/27": 1
+      },
+      "real_numeric_eigenvalues": [
+        -8.068420700046293,
+        0.6610132926388845
+      ]
+    },
+    {
+      "id": 7,
+      "matrix": [
+        [
+          "24",
+          "-12"
+        ],
+        [
+          "-4/9",
+          "-16/9"
+        ]
+      ],
+      "eigenvalues": {
+        "100/9 - 8*sqrt(217)/9": 1,
+        "100/9 + 8*sqrt(217)/9": 1
+      },
+      "real_numeric_eigenvalues": [
+        -1.9830398779166536,
+        24.205262100138874
+      ]
+    }
+  ],
+  "example_balanced_two_vacua_Veff_at_g2_over_m2_eq1": "-1/72",
+  "confinement_warning": "Unlike the single matrix Gaussian mediator from Round13, pair-labeled current bosons can prefer a mixed configuration. This gain requires a larger number of explicitly engineered fields. It does not force a 17-class resolving interaction or global multi-vacuum equilibrium, nor fix photon or gravitational physics.",
+  "checks": {
+    "all_17_classes_computed": true,
+    "all_commutator_costs_nonnegative": true,
+    "at_least_one_noncommuting_pair": true,
+    "three_rational_2x2_spectral_blocks": true,
+    "stable_mediator_can_favor_two_vacua": true,
+    "all_rational_coefficients_match_9x9_numeric": true
+  },
+  "all_checks_pass": true
+}

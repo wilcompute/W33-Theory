@@ -1,0 +1,62 @@
+{
+  "schema": "w33.round14.mag_torus_index_anomaly_firewall.v1",
+  "literature": "https://academic.oup.com/ptep/article/2024/5/053B06/7667937 (T2 index ind D_q=q M; M=3 gives three zero modes for charge1)",
+  "topological_input": "A 6D chiral fermion on magnetized T\u00b2 has 4D net chiral index q*M under standard assumptions. M=3 is freely CHOSEN, not derived from W33 q=3.",
+  "E6_27_SO10_U1": [
+    [
+      "16",
+      16,
+      1
+    ],
+    [
+      "10",
+      10,
+      -2
+    ],
+    [
+      "1",
+      1,
+      4
+    ]
+  ],
+  "case_internal_E6_U1_flux": {
+    "M": 3,
+    "net_chiral_indices": [
+      3,
+      -6,
+      12
+    ],
+    "4D_SO10_U1_anomalies": {
+      "mixed_gravity_U1": 216,
+      "U1_cubic": 1296,
+      "SO10_squared_U1": 18
+    },
+    "verdict": "Fails naive 4D gauged-U1 anomaly cancellation without added boundary matter, inflow or Green-Schwarz mechanism; not three full 27s."
+  },
+  "case_external_uniform_U1F_flux": {
+    "M": 3,
+    "net_chiral_indices": [
+      3,
+      3,
+      3
+    ],
+    "4D_SO10_U1_anomalies": {
+      "mixed_gravity_U1": 0,
+      "U1_cubic": 0,
+      "SO10_squared_U1": 0
+    },
+    "gauged_U1F_anomalies": {
+      "mixed_gravity_U1F": 81,
+      "U1F_cubic": 81
+    },
+    "verdict": "Produces an INDEX of three complete 27s for a uniform external flavor-U1 flux, but gauging U1F itself requires anomaly cancellation and full consistent 6D completion. Setting M=3 is input, not TOE prediction."
+  },
+  "checks": {
+    "external_flux_three_complete_27": true,
+    "three_complete_27_cancel_SO10xU1_anomalies": true,
+    "internal_flux_has_3_minus6_12_chiral_indices": true,
+    "internal_flux_surviving_4D_U1_anomalous": true,
+    "gauged_external_flavor_U1F_anomalous_without_inflow": true
+  },
+  "all_checks_pass": true
+}
