@@ -1,0 +1,26 @@
+{
+  "schema": "w33.round12.E7compact_SU2_quadratic_mass_protection_audit.v1",
+  "quadratic_positive_Hamiltonian": "With compact gauge K=E7_c\u00d7SU2, standard YM gauge fixing/Gauss constraints leave two transverse physical polarisations per massless generator: 2*(133+3)=272. For 112 real K-representation scalars p=(56,2), positive Cartan kinetic and m\u00b2>0 give 112 scalar oscillators. H\u00b2=1/2 \u222b(\u03a3_a |E_a^T|\u00b2+|B_a|\u00b2+\u03a3_I pi_I\u00b2+|grad phi_I|\u00b2+m\u00b2 phi_I\u00b2); bosonic physical linearized polarizations 384. Perturbative gauge fixing assumptions and positivity hold around trivial vacuum with unbroken compact K only.",
+  "gauge_dim": 136,
+  "massless_vector_transverse_polarizations": 272,
+  "real_scalar_modes": 112,
+  "total_bosonic_modes": 384,
+  "fermion_example": "One LEFT Weyl multiplet \u03c7 in (56,2) has 56 SU2 doublets, even Witten parity. E7 has no cubic local gauge invariant d^{abc}, and SU2 no local cubic anomaly; mixed simple-factor triangle anomalies vanish. The representation (56 pseudoreal)\u2297(2 pseudoreal) is REAL, as witnessed by symmetric nondegenerate bilinear Omega56\u2297epsilon2, so gauge-invariant symmetric Weyl Majorana mass is allowed. Thus anomaly freedom alone does NOT generate an observed protected chiral Standard Model spectrum.",
+  "symmetric_mass_tensor_nonzero_entries": 112,
+  "quadratic_Hamiltonian_test": {
+    "samples": 500,
+    "min_positive": 412.5348285089687,
+    "max_positive": 541.700824568285
+  },
+  "no_param_free_ratio": "The gauge coupling g, scalar mass m\u00b2 and quartic remain free. E8(-24) is not entirely gauged, and its noncompact global symmetry is not shown to survive the chosen quadratic action. Neither family spectrum nor observed particle masses are fixed.",
+  "checks": {
+    "E7_plus_SU2_gauge_dim_136": true,
+    "physical_two_transverse_polarizations_272": true,
+    "scalar_p_dimensions_112": true,
+    "quadratic_bosonic_dof_384": true,
+    "symmetric_nondegenerate_mass_tensor_on_56_tensor_2": true,
+    "500_positive_quadratic_Hamiltonian_samples": true,
+    "SU2_global_Witten_anomaly_absent_for_56_doublets": true
+  },
+  "all_checks_pass": true
+}

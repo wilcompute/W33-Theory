@@ -1,0 +1,40 @@
+{
+  "schema": "w33.round12.photon_falsification_preregistered_synthetic.v1",
+  "experiment": "54 settings per trial: R calibration + S signal + N commuting control, each with 9 basis inputs and 2 phase quadratures, 19 possible outcomes (18 path-mode detections and erasure). Calibrated coherent input mode mixing exp(i0.01 H_chain), output loss/crosstalk M, independent per-gate 19-outcome multinomial photon records, Poisson dark clicks at ~0.18% source-photon fraction redistributed across 18 output detectors, 0.1% sequential afterpulse counts from previous gate's detector-bin totals, coherent correlated path phase sigma=0.03 rad plus per-condition sigma=0.006 rad, independent detector dark drift.",
+  "photons_per_setting": 15000,
+  "total_source_photons_per_trial": 810000,
+  "acceptance_protocol": "TRAIN on 90 fresh NO-SIGNAL runs, predefine threshold=mean(delta_sig-delta_ctrl)+5*sampleSD(delta_sig-delta_ctrl). EVALUATE 100 held-out null (W=I) and 100 signal (W=W33) runs. Also monitor commuting control abs(delta_ctrl) below a training-derived 5-sigma limit. Do NOT use held-out outcomes to fit decision threshold.",
+  "null_training": {
+    "n": 90,
+    "paired_difference_mean": -0.0014373475502517021,
+    "paired_difference_std": 0.006948900600487026,
+    "predeclared_positive_threshold": 0.03330715545218343,
+    "control_abs5sd_limit": 0.03896112985461225
+  },
+  "held_out_null": {
+    "n": 100,
+    "paired_difference_mean": -0.0004945785102890188,
+    "paired_difference_std": 0.007679253261810556,
+    "false_positive_count": 0,
+    "control_gross_outlier_count": 0
+  },
+  "held_out_signal": {
+    "n": 100,
+    "paired_difference_mean": 0.2967025485788696,
+    "paired_difference_std": 0.007912425029883251,
+    "detected_count": 100,
+    "control_gross_outlier_count": 0
+  },
+  "ideal_W33_deficit": 0.2962962962962963,
+  "limitations": "Synthetic shot model, not calibrated against fabricated source/detector data. Poisson additive clicks are a low-rate approximation, not a complete dead-time/saturation model. Thermal drift correlation, Raman scattering, pulse pileup and calibration gauge alignment require lab-specific measurements; 0/100 simulated false positives would not prove zero physical FPR.",
+  "checks": {
+    "90_independent_null_training_runs": true,
+    "100_out_of_sample_null_and_signal": true,
+    "null_rate_no_overfit": true,
+    "W33_signal_detected": true,
+    "signal_mean_consistent_8_27": true,
+    "trained_threshold_positive_finite": true,
+    "null_control_remains_near_zero": true
+  },
+  "all_checks_pass": true
+}

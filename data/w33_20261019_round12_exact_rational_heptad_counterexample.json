@@ -1,0 +1,63 @@
+{
+  "schema": "w33.round12.rigorous_rational_T1_heptad_global_boundary_counterexample.v1",
+  "theorem": "At T=1, kappa_two_tick_local=-(e-1)/(2(e+2)), the proposed full-120-rate singleton global stability is FALSE. Explicit rational seven-tick mixture supported on seven pairwise noncommuting Pauli directions, with rational masses six times 1473/10000 plus 1162/10000, has F_1(Q)+kappa*C < F_1(single). Proof uses exact rational 18x18 Q(omega) matrix representation, finite Taylor lower bound for Z(Q)=Tr exp Q, rational bounds eL<e<eU, and degree-4 alternating-Taylor upper bound on exp(kappa_upper*C); all comparisons are exact rational inequalities. Thus the global transition may be FIRST ORDER at T=1, preceding local singleton instability.",
+  "prior_art": "Earlier numerical Round3/Round7 recorded equal-weight heptad versus singleton crossing around kappa=-0.181113 at T=1, already above local threshold \u2248-0.182088. The phenomenon was known numerically; NEW contribution is an exact rational proof for one explicit seven-point state, and explicit correction to any all-T conjecture of equality.",
+  "T": 1,
+  "outcome_indices_120": [
+    2,
+    71,
+    83,
+    85,
+    104,
+    108,
+    118
+  ],
+  "point_indices": [
+    0,
+    23,
+    27,
+    28,
+    34,
+    36,
+    39
+  ],
+  "outcome_labels": [
+    2,
+    2,
+    2,
+    1,
+    2,
+    0,
+    1
+  ],
+  "weights": [
+    "1473/10000",
+    "1473/10000",
+    "1473/10000",
+    "1473/10000",
+    "1473/10000",
+    "1473/10000",
+    "581/5000"
+  ],
+  "C_exact": "14271897/25000000",
+  "kappa_upper_exact": "-164611949/904025818",
+  "e_bounds": {
+    "lower": "260412269/95800320",
+    "upper": "2222710781/817689600"
+  },
+  "taylor_order": 12,
+  "trace_exp_Q_lower_exact": "127400118460419039133445487944616717493309346026296115909/9979200000000000000000000000000000000000000000000000000",
+  "strict_partition_gap_lower_exact": "648774085990712528427576880759276912062336838789057308405648480999663383972434238260386781/70402127467763380139136388370546290705492800000000000000000000000000000000000000000000000000",
+  "strict_partition_gap_lower_float": 0.009215262511602103,
+  "numerical_energy_gap_estimate": -0.0007221987518530837,
+  "interpretation": "At kappa_local the SINGLE TICK is locally stable along EVERY two-tick direction, but this seven-tick configuration is lower energy. It proves a nontrivial metastability/first-order pre-emption possibility for this finite-dimensional engineered functional; not a thermodynamic singular phase transition or physical fundamental coupling prediction.",
+  "checks": {
+    "all_seven_direction_pairs_noncommuting": true,
+    "exact_Q_field_trace_6": true,
+    "all_13_Taylor_terms_rational_nonnegative": true,
+    "rational_e_bounds_valid": true,
+    "strict_certified_gap_in_partition_inequality": true,
+    "simplex_weights_rational_positive": true
+  },
+  "all_checks_pass": true
+}
