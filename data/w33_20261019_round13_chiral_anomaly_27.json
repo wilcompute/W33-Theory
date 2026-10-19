@@ -1,0 +1,57 @@
+{
+  "schema": "w33.round13.so10_u1_chiral_27_anomaly_mass_v1",
+  "source_prior_art": "https://link.springer.com/article/10.1140/epjc/s10052-019-6878-1 ; https://doi.org/10.1140/epjc/s10052-018-6388-6",
+  "E6_27_branching": [
+    {
+      "irrep": "16_spinor",
+      "dimension": 16,
+      "U1_charge": 1,
+      "SO10_Dynkin_index": 2
+    },
+    {
+      "irrep": "10_vector",
+      "dimension": 10,
+      "U1_charge": -2,
+      "SO10_Dynkin_index": 1
+    },
+    {
+      "irrep": "1_singlet",
+      "dimension": 1,
+      "U1_charge": 4,
+      "SO10_Dynkin_index": 0
+    }
+  ],
+  "cancelled_anomaly_polynomials": {
+    "gravitational_U1": 0,
+    "U1_cubic": 0,
+    "SO10_squared_U1": 0
+  },
+  "single_SO10_spinor16_U1_anomalies": {
+    "U1_gravitational": 16,
+    "U1_cubic": 16,
+    "SO10_SO10_U1": 2
+  },
+  "SU5_spinor16_decomposition": "10_(+1) + 5bar_(-3) + 1_(+5), with twice-index SU5(10)=3, SU5(5bar)=1, cubic anomaly A(10)=+1,A(5bar)=-1.",
+  "SU5_anomaly_polynomials": {
+    "gravitational": 0,
+    "U1_cubic": 0,
+    "SU5_SU5_U1_index_twice": 0,
+    "SU5_cubic_anomaly": 0
+  },
+  "SO10_spinor_tensor_square_prior_art": "16 tensor 16 = 10_s + 120_a + 126_s; there is NO gauge-singlet quadratic Weyl mass. A single spinor16 at unbroken SO10 is gauge-protected against a bare Majorana mass; 16 tensor 16bar contains 1, so vectorlike pairs are not protected.",
+  "E6_cubic_allowed_Yukawa_charge_sums": {
+    "16_16_10": 0,
+    "10_10_1": 0
+  },
+  "constraint": "In an anomaly-safe FULL 27, the 10 and singlet must also be included; isolated 16_1 with U1 gauged is anomalous. An E6 27 theory does not explain WHY three generations occur or why exotics become heavy. Changing symmetry by a clock selection or Higgs VEV can remove mass protection; verify after breaking. This is not a protected chiral multiplet of the full compact E7xSU2 model, only of a proposed SO10 subgroup.",
+  "checks": {
+    "full27_gravitational_U1_anomaly_zero": true,
+    "full27_cubic_U1_anomaly_zero": true,
+    "full27_mixed_SO10_U1_anomaly_zero": true,
+    "single16_alone_has_U1_anomalies": true,
+    "SU5_chiral_spinor_family_all_anomalies_cancel": true,
+    "both_E6_cubic_Yukawa_monomials_charge_neutral": true,
+    "SO10_spinor_is_complex_no_bilinear_singlet": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "w33.round13.SNSPD_literature_anchored_photon_design_budget.v1",
+  "component_reference": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c00508 - single PNR SNSPD system demonstrated ~98% SDE, 20 counts/s darks, 40 ps timing jitter. NIST https://www.nist.gov/publications/superconducting-nanowire-single-photon-detectors-98-system-detection-efficiency-1550-nm reports independent 98.0\u00b10.5% SDE 1550nm. Neither validates 18 separate channels of equal efficiency on our chip.",
+  "published_component_benchmarks": {
+    "SNSPD_illustrative_detection_efficiency": 0.98,
+    "dark_counts_per_second_per_channel": 20.0,
+    "timing_jitter_ps_published": 40
+  },
+  "ASSUMPTIONS_not_component_spec": {
+    "18_independent_detectors_required": 18,
+    "source_repetition_rate_Hz": 1000000,
+    "interrogation_gate_sec": 1e-09,
+    "chip_collection_transmission_sweep": [
+      0.02,
+      0.1,
+      0.3,
+      0.6
+    ],
+    "fringe_visibility": 0.9,
+    "max_uncalibrated_contrast_bias": 0.02,
+    "stochastic_systematic_std_floor": 0.01,
+    "Gaussian_sigma_threshold": 5.0,
+    "minimum_n_per_setting_for_nonlinear_reconstruction": 5000
+  },
+  "calculation": "Use Round11 exact FIRST-ORDER complex tomography contrast sigma_single=0.0057987 at N=20000 per setting; conservatively approximate paired signal-minus-null sigma =sqrt(2)*sigma_single*sqrt(20000/(N_source*eta_chip*eta_detector)). Add assumed independent drift floor 0.01 quadratically. Require visibility*(8/27)-max_bias >=5*sigma. Solve for source N. This design scaling proxy ignores transfer-dependent Fisher information changes, readout nonlinearity under high erasure, calibration model uncertainty, SNSPD crosstalk and per-mode \u03b7.",
+  "illustrative_design_sweep": [
+    {
+      "chip_collection_and_transmission_ASSUMPTION": 0.02,
+      "net_photon_path_efficiency_ASSUMPTION": 0.0196,
+      "source_photons_per_setting": 29404,
+      "total_source_photons_54_settings": 1587816,
+      "effective_registered_photons_per_setting_PROXY": 576.3184,
+      "projected_Z_after_0_02_bias": 5.000032411580571,
+      "expected_total_dark_counts_18_channels": 0.5716137600000001,
+      "ideal_source_time_at_1MHz_sec": 1.587816
+    },
+    {
+      "chip_collection_and_transmission_ASSUMPTION": 0.1,
+      "net_photon_path_efficiency_ASSUMPTION": 0.098,
+      "source_photons_per_setting": 5881,
+      "total_source_photons_54_settings": 317574,
+      "effective_registered_photons_per_setting_PROXY": 576.338,
+      "projected_Z_after_0_02_bias": 5.000113940296035,
+      "expected_total_dark_counts_18_channels": 0.11432664000000001,
+      "ideal_source_time_at_1MHz_sec": 0.317574
+    },
+    {
+      "chip_collection_and_transmission_ASSUMPTION": 0.3,
+      "net_photon_path_efficiency_ASSUMPTION": 0.294,
+      "source_photons_per_setting": 5000,
+      "total_source_photons_54_settings": 270000,
+      "effective_registered_photons_per_setting_PROXY": 1470.0,
+      "projected_Z_after_0_02_bias": 7.7426121023914725,
+      "expected_total_dark_counts_18_channels": 0.09720000000000001,
+      "ideal_source_time_at_1MHz_sec": 0.27
+    },
+    {
+      "chip_collection_and_transmission_ASSUMPTION": 0.6,
+      "net_photon_path_efficiency_ASSUMPTION": 0.588,
+      "source_photons_per_setting": 5000,
+      "total_source_photons_54_settings": 270000,
+      "effective_registered_photons_per_setting_PROXY": 2940.0,
+      "projected_Z_after_0_02_bias": 10.447134481502793,
+      "expected_total_dark_counts_18_channels": 0.09720000000000001,
+      "ideal_source_time_at_1MHz_sec": 0.27
+    }
+  ],
+  "baseline_810000_source_pulses_expected_dark_counts_in_1ns_gates": 0.2916,
+  "baseline_810000_source_pulses_expected_dark_poisson_event_rate_each_18ch": 3.6000000000000005e-07,
+  "critical_falsification": "Compare phase-reversed W33 loop, commuting control, electronics-sham/dark control, and interleaved R calibration. Restrict conclusions to observed optical process fidelity. No detector instrument was measured here and source-to-chip efficiency \u03b7_chip is entirely hypothetical.",
+  "checks": {
+    "published_detector_eta98": true,
+    "published_20cps_used": true,
+    "correct_18_detector_gate_poisson_expectation": true,
+    "each_design_at_least_five_sigma_ASSUMPTION": true,
+    "source_efficiencies_derived_not_measured": true,
+    "data_quality_bounds_separate_from_source": true
+  },
+  "all_checks_pass": true
+}

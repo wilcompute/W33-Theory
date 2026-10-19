@@ -1,0 +1,158 @@
+{
+  "schema": "w33.round13.positive_Gaussian_adjoint_mediator_induced_vacuum_orbit_kernel.v1",
+  "microscopic_toy_action": "For a positive-mass real Hermitian traceless 9x9 auxiliary bosonic matrix X and vacuum mixture J(w)=\u03a3_a w_a(Q_a-2I/9), set V(X,w)=m\u00b2/2 Tr(X\u00b2)-g Tr[X J(w)]. The unique stable stationary value X*=(g/m\u00b2)J induces V_eff(w)=-(g\u00b2/2m\u00b2)Tr[J(w)\u00b2]. Hence pair coefficient equals -(g\u00b2/m\u00b2)[Tr(Q_a Q_b)-4/9]. This derives a NEGATIVE overlap interaction from a specified stable auxiliary field, but NOT a negative W33 PAULI commutator coefficient or fundamental spacetime mechanism.",
+  "critical_no_go": "Because all 1440 Q have equal centered norm\u00b2=14/9 and Tr||\u03a3 wQc||\u00b2<=\u03a3w||Qc||\u00b2=14/9, the attractive Gaussian mediator cannot energetically favor a dispersed multi-vacuum mixture over a pure vacuum at fixed weight simplex: singleton is already an absolute minimum of V_eff. Its kernel only depends on 7 distinct overlap values and cannot resolve all 17 stabilizer orbits.",
+  "fixed_reference_classes": [
+    {
+      "class_representative": 23,
+      "class_size": 6,
+      "tr_Q0Q": 1.6653345369377343e-16,
+      "tr_Q0Q_Q0Q": -1.078520768856852e-31,
+      "commutator_norm_squared": 3.7453410837537595e-96,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.4444444444444445
+    },
+    {
+      "class_representative": 57,
+      "class_size": 18,
+      "tr_Q0Q": -9.868649107779172e-17,
+      "tr_Q0Q_Q0Q": -1.6738946677143378e-32,
+      "commutator_norm_squared": 9.130334551169115e-33,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.4444444444444445
+    },
+    {
+      "class_representative": 59,
+      "class_size": 27,
+      "tr_Q0Q": 1.1102230246251564e-16,
+      "tr_Q0Q_Q0Q": -4.793425639363788e-32,
+      "commutator_norm_squared": 7.136878174163858e-32,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.44444444444444436
+    },
+    {
+      "class_representative": 24,
+      "class_size": 3,
+      "tr_Q0Q": 1.6653345369377346e-16,
+      "tr_Q0Q_Q0Q": -6.813512158809953e-32,
+      "commutator_norm_squared": 0.0,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.4444444444444443
+    },
+    {
+      "class_representative": 21,
+      "class_size": 6,
+      "tr_Q0Q": -1.4802973661668756e-16,
+      "tr_Q0Q_Q0Q": -3.013010401885809e-32,
+      "commutator_norm_squared": 1.8726705418768793e-96,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.44444444444444464
+    },
+    {
+      "class_representative": 177,
+      "class_size": 27,
+      "tr_Q0Q": 1.1102230246251565e-16,
+      "tr_Q0Q_Q0Q": -5.341245712433934e-32,
+      "commutator_norm_squared": 7.319484865187239e-32,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.4444444444444444
+    },
+    {
+      "class_representative": 15,
+      "class_size": 6,
+      "tr_Q0Q": 9.251858538542968e-17,
+      "tr_Q0Q_Q0Q": -1.749600358367782e-31,
+      "commutator_norm_squared": 3.7453410837537595e-96,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.4444444444444445
+    },
+    {
+      "class_representative": 149,
+      "class_size": 162,
+      "tr_Q0Q": 0.3333333333333334,
+      "tr_Q0Q_Q0Q": 0.11111111111111116,
+      "commutator_norm_squared": 0.44444444444444453,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": 0.11111111111111115
+    },
+    {
+      "class_representative": 470,
+      "class_size": 243,
+      "tr_Q0Q": 0.44444444444444453,
+      "tr_Q0Q_Q0Q": 0.19753086419753085,
+      "commutator_norm_squared": 0.493827160493827,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.0
+    },
+    {
+      "class_representative": 468,
+      "class_size": 729,
+      "tr_Q0Q": 0.44444444444444453,
+      "tr_Q0Q_Q0Q": 0.12345679012345681,
+      "commutator_norm_squared": 0.641975308641975,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.0
+    },
+    {
+      "class_representative": 38,
+      "class_size": 54,
+      "tr_Q0Q": 0.6666666666666667,
+      "tr_Q0Q_Q0Q": 0.4444444444444444,
+      "commutator_norm_squared": 0.44444444444444425,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.22222222222222215
+    },
+    {
+      "class_representative": 144,
+      "class_size": 54,
+      "tr_Q0Q": 0.6666666666666667,
+      "tr_Q0Q_Q0Q": 0.4444444444444444,
+      "commutator_norm_squared": 0.44444444444444425,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.22222222222222213
+    },
+    {
+      "class_representative": 146,
+      "class_size": 81,
+      "tr_Q0Q": 0.6666666666666667,
+      "tr_Q0Q_Q0Q": 0.22222222222222227,
+      "commutator_norm_squared": 0.8888888888888886,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.2222222222222222
+    },
+    {
+      "class_representative": 1,
+      "class_size": 2,
+      "tr_Q0Q": 1.0,
+      "tr_Q0Q_Q0Q": 1.0,
+      "commutator_norm_squared": 3.6931914471142943e-127,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.5555555555555555
+    },
+    {
+      "class_representative": 2,
+      "class_size": 12,
+      "tr_Q0Q": 1.0,
+      "tr_Q0Q_Q0Q": 1.0,
+      "commutator_norm_squared": 1.4772765788457177e-126,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.5555555555555554
+    },
+    {
+      "class_representative": 36,
+      "class_size": 9,
+      "tr_Q0Q": 1.3333333333333335,
+      "tr_Q0Q_Q0Q": 1.111111111111111,
+      "commutator_norm_squared": 0.44444444444444425,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -0.8888888888888888
+    },
+    {
+      "class_representative": 0,
+      "class_size": 1,
+      "tr_Q0Q": 2.0,
+      "tr_Q0Q_Q0Q": 2.0,
+      "commutator_norm_squared": 0.0,
+      "gaussian_mediator_pair_cross_coefficient_at_g2_over_m2_eq_1": -1.5555555555555556
+    }
+  ],
+  "num_17_orbits": 17,
+  "distinct_overlap_values": 7,
+  "distinct_overlap_and_quartic_signatures": 9,
+  "distinct_overlap_and_commutator_signatures": 9,
+  "single_centered_norm_sq": 1.5555555555555556,
+  "sampled_max_mixed_norm_sq": 1.216137966844768,
+  "physics_limitations": "X is an explicit engineered auxiliary scalar, not experimentally identified. Correct gauge and spatial kinetic dynamics/quantization and sign of any required repulsive or commutator interaction remain open. Coincident invariants in separate stabilizer orbits prohibit full 17-class identification by trace-overlap alone.",
+  "checks": {
+    "17_pair_classes_from_prior_exact_orbits": true,
+    "Gaussian_mediator_induces_negative_pair_trace": true,
+    "constant_single_Qcentered_norm_14_over9": true,
+    "120_sampled_mixture_quadratic_norm_bounded_by_single": true,
+    "commutator_equals_twice_overlap_minus_twice_quartic": true
+  },
+  "all_checks_pass": true
+}

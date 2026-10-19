@@ -1,0 +1,22 @@
+{
+  "schema": "w33.round13.certified_temperature_strip_heptad_preempts_local_stability.v1",
+  "theorem": "For EVERY real T in [0.9999,1.0001] and kappa=kappa_two_tick_local(T), the fixed seven-tick rational witness from Round12 has strictly lower Gibbs+commutator energy than a single tick. Round12 exact rational partition certificate at T=1 yields a lower bound \u0394(1)=E_single-E_heptad >= margin/Zlower >1/1500. For each finite 9D density matrix |dF/dT|=S in [0,ln9], so |d(F_heptad-F_single)/dT|<=ln9<3. The derivative \u03ba_local'(T)=(3/2)e^(-1/T)/[T\u00b2(1+2e^(-1/T))\u00b2]<2 for T>=9999/10000. Since C_witness<4/7, |d[\u03ba C]/dT|<=2C. Thus energy-gap variation <(3+2C)|T-1|<=worst<margin/Zlower throughout. No float spectra or nonlinear optimizer in logical proof.",
+  "T_interval": [
+    "9999/10000",
+    "10001/10000"
+  ],
+  "T1_positive_energy_advantage_lower_bound_exact": "648774085990712528427576880759276912062336838789057308405648480999663383972434238260386781/898793428256631363983365150696355920356056906881616087241355634794811001837988684238260386781",
+  "T1_positive_energy_advantage_lower_bound_float": 0.0007218278033575795,
+  "maximum_interval_energy_variation_upper_bound_exact": "51771897/125000000000",
+  "maximum_interval_energy_variation_upper_bound_float": 0.000414175176,
+  "rigorous_minimum_singleton_energy_advantage_over_strip_exact": "34564519956859857510330819799668397023778123339418544288503582059991351674931118934999607421393906443/112349178532078920497920643837044490044507113360202010905169454349351375229748585529782548347625000000000",
+  "computed_C_exact": "14271897/25000000",
+  "scope": "Proves a SMALL NONZERO temperature interval of global-threshold failure for this finite W33 engineered energy. It does not locate the exact first-order transition, all temperatures or physically realized coupling \u03ba.",
+  "checks": {
+    "exact_T1_energy_advantage_lower_bound_gt_1over1500": true,
+    "rigorous_Lipschitz_for_each_state_entropy": true,
+    "kappa_derivative_bounded_by_two_on_strip": true,
+    "whole_closed_temperature_interval_strict_negative_gap": true
+  },
+  "all_checks_pass": true
+}
