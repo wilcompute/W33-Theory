@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "|Sp(4,11)| = 25721308800, 1464 points; |C(J)| = 1771440 = |SL(2,121)|": true,
+    "14520 J, 7260 observers = q^2(q^2-1)/2": true,
+    "Stab(p) = 17569200 transitive on the observers (relativity)": true,
+    "two index-11 classes, order 1597200, non-normal, 11 conjugates, transitive": true,
+    "no clock pair fixes an observer (1100 collinear; 120, 1200 non-collinear)": true
+  },
+  "all_checks_pass": true
+}

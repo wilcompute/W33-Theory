@@ -40,3 +40,8 @@ My hand expansion gave a fourth-order coefficient of 1/12. sympy gives 1/18, and
 series.
 
 Producer: `analysis/w33_pass12061_compatible_clocks_condense_together.py`.
+
+
+## Withdrawn reading (Pass 12072)
+
+The sentence "by 12060, such a pair defines exactly three mirror rest frames" assumed that Clifford ticks are clocks. Pass 12072 proves there is no equivariant tick-to-clock map, so that reading is **withdrawn**. The spectra and the inequality F_col < F_far < F_same stand. Pass 12068 further shows that a capacity cost condenses a whole context, never a pair.

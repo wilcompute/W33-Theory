@@ -302,6 +302,25 @@ fix eight events and invert exactly their ticks. \cert{w33\_pass12069\_flavour\_
 \emph{$q=7$.} The relativity principle holds ($1176$ observers, $SL(2,49)$); the two classes of index-$7$ clock
 analogues are not normal and no clock pair fixes an observer, so on $q=3,5,7$ mirror rest frames occur only at $q=3$. \cert{w33\_pass12070\_the\_galois\_list\_q7.py}
 
+\paragraph{Ticks are not clocks.}
+The $120$ Clifford ticks are the affine hyperplanes $\omega(x,p)=k$ of phase space. Since
+$H^1(Sp(4,3),\mathbb F_3^4)=0$, every copy of $Sp(4,3)$ in the Clifford group fixes a point of phase space and hence
+$40$ ticks, while the point stabiliser fixes none of the three clocks at its point. So no tick--clock bijection is
+equivariant: a tick determines its event but not its clock, and the rest-frame reading of the two-tick condensate is
+withdrawn. \cert{w33\_pass12072\_no\_equivariant\_tick\_to\_clock\_map.py}
+\emph{What clocks leave of $E_8$.} One clock leaves $\mathfrak e_7+\mathfrak a_1$; two collinear clocks
+$\mathfrak d_6+2\mathfrak a_1$; three on a line $\mathfrak d_4+4\mathfrak a_1$; a whole context of clocks
+$\mathfrak{su}(2)^8$, with no $\mathfrak{su}(3)$; two incompatible clocks whose product is a clock leave
+$\mathfrak e_6+\mathfrak u(1)^2$. \cert{w33\_pass12071\_what\_a\_context\_of\_clocks\_leaves\_of\_e8.py}
+\emph{Families.} For two non-collinear clocks the $27$ is $F_0+F_1+F_2$ with $F_i=1+8_i$, each octet a regular
+$Q_8$-orbit; the $45$ Yukawa monomials are $12$ family-diagonal ($f_i\,8_i\,8_i$, pairing each octet by the centre
+of $Q_8$) and $33$ one-from-each-family, so a vacuum value on the second clock's monomial gives family-diagonal
+masses. \cert{w33\_pass12073\_three\_families\_of\_one\_plus\_a\_q8\_torsor.py}
+\emph{Phase diagram.} With a capacity cost the tick condensate runs single tick $\to$ context $\to$ spread,
+with exact edges $g_4(T)$ and $g_u(T)=\tfrac{120}{29}(F_u-F_4)$, $F_u=\tfrac23-T\log9$; the context window never
+closes ($g_u/g_4\to30/29$), and above $T^*\approx1.39$ a $13$-tick star of contexts enters it. \cert{w33\_pass12074\_phase\_diagram\_of\_the\_tick\_condensate.py}
+\emph{$q=11$.} At $q=11$ the same holds ($7260$ observers, $SL(2,121)$; two non-normal index-$11$ clock classes; no clock pair fixes an observer). Over the whole Galois list $q\in\{3,5,7,11\}$ the relativity principle holds and rest frames occur only at $q=3$. \cert{w33\_pass12075\_the\_galois\_list\_q11.py}
+
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse
 clock's tick lines make that choice: they select $E_{8(-24)}\supset E_{7(-25)}$, and with it

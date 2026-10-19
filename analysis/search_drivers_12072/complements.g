@@ -1,0 +1,14 @@
+F:=GF(3);; o:=One(F);;
+Om:=[[0,0,1,0],[0,0,0,1],[-1,0,0,0],[0,-1,0,0]]*o;;
+pts:=Set(List(Filtered(Elements(F^4),x->not IsZero(x)),NormedRowVector));;
+SpG:=Group(List(pts,v->IdentityMat(4,F)+Om*TransposedMat([v])*[v]));;
+Print("|Sp|=",Size(SpG),"\n");
+V:=Elements(F^4);;
+aff:=function(M,t) return PermList(List(V,x->Position(V,x*M+t))); end;;
+Tr:=Group(List(IdentityMat(4,F),e->aff(IdentityMat(4,F),e)));;
+L:=Group(List(GeneratorsOfGroup(SpG),g->aff(g,Zero(F^4))));;
+A:=ClosureGroup(Tr,L);;
+Print("|ASp|=",Size(A)," translations normal ",IsNormal(A,Tr),"\n");
+cc:=ComplementClassesRepresentatives(A,Tr);;
+Print("complement classes of the translations in ASp(4,3): ",Length(cc),"  (H^1(SpG(4,3),F_3^4) = 0 iff 1)\n");
+QUIT;

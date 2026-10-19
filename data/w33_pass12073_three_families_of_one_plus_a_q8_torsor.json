@@ -1,0 +1,16 @@
+{
+  "family_types": {
+    "(0, 0, 0)": 4,
+    "(0, 1, 2)": 33,
+    "(1, 1, 1)": 4,
+    "(2, 2, 2)": 4
+  },
+  "checks": {
+    "each singlet is at -2/3 from exactly one octet: three families F_i = 1 + 8": true,
+    "K acts on each octet through Q8 (orders 1:1, 2:1, 4:6), regularly (a Q8-torsor)": true,
+    "45 = 12 family-diagonal (4 per family) + 33 one-from-each-family": true,
+    "the diagonal monomials f_i x y pair each octet perfectly, by the orbits of the Q8 centre": true,
+    "cross monomials: f_0 f_1 f_2 invariant (orbit 1) + 4 orbits of 8 of type 8_0 8_1 8_2": true
+  },
+  "all_checks_pass": true
+}

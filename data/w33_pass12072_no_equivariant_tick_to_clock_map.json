@@ -1,0 +1,18 @@
+{
+  "orbits_under_weil_label0_ticks": [
+    40,
+    80
+  ],
+  "orbits_under_12055_label0_ticks": [
+    120
+  ],
+  "checks": {
+    "Pauli conjugation fixes the point and shifts the label iff omega(r,p) != 0 (affine-hyperplane action)": true,
+    "symmetric label-0 projectors are tick projectors (one per point)": true,
+    "the Weil copy of Sp(4,3) (symmetric label-0 ticks) has orbits 40 + 80 on ticks; the 40 = its label-0 ticks": true,
+    "control: 12055's own label-0 ticks (non-symmetric labels) generate translations too -- transitive on 120": true,
+    "H^1(Sp(4,3), F_3^4) = 0: one complement class of translations in ASp(4,3) (GAP, |ASp| = 4199040)": true,
+    "clocks: point stabiliser (1296) fixes none of the 3 clocks at p; clock stabiliser 432": true
+  },
+  "all_checks_pass": true
+}

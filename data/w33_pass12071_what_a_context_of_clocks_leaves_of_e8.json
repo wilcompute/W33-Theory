@@ -1,0 +1,33 @@
+{
+  "fixed_subalgebras": {
+    "one": {
+      "(136, ('A1', 'E7'))": 3
+    },
+    "collinear_pair": {
+      "(72, ('A1', 'A1', 'D6'))": 9
+    },
+    "far_pair": {
+      "(80, ('E6',))": 6,
+      "(72, ('A1', 'A1', 'D6'))": 3
+    },
+    "three_at_p": {
+      "(80, ('E6',))": 1
+    },
+    "three_on_line": {
+      "(40, ('A1', 'A1', 'A1', 'A1', 'D4'))": 27
+    },
+    "context": {
+      "(24, ('A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1'))": 81
+    }
+  },
+  "checks": {
+    "one clock: e7 + a1 (136)": true,
+    "two collinear clocks: d6 + 2a1 (72), all 9 choices": true,
+    "two non-collinear clocks: e6 + u(1)^2 (80) x6, d6 + 2a1 (72) x3": true,
+    "three clocks at one event: e6 + u(1)^2 (80)": true,
+    "three clocks on a line: d4 + 4a1 (40), all 27 choices": true,
+    "a whole context of clocks: su(2)^8 (24, rank 8), all 81 choices": true,
+    "far pair: e6 + u(1)^2 exactly when the product is a clock (12062)": true
+  },
+  "all_checks_pass": true
+}

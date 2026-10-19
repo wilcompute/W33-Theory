@@ -1,0 +1,52 @@
+{
+  "high_T": [
+    [
+      1.03505884956763,
+      1.0004155801198065,
+      1.000972699466729
+    ],
+    [
+      1.0347704552331838,
+      1.0002080623962684,
+      1.0004862269852313
+    ]
+  ],
+  "T_star": 1.3906819243251713,
+  "window": {
+    "0.05": [
+      0.07324065637165648,
+      2.304023007561245
+    ],
+    "0.2": [
+      0.2505619935666349,
+      1.0828961135269994
+    ],
+    "0.5": [
+      0.20926290595474262,
+      0.331803004044815
+    ],
+    "1.0": [
+      0.11445309831246941,
+      0.1392797304672652
+    ],
+    "2.0": [
+      0.05719003733684798,
+      0.06332317308867813
+    ],
+    "5.0": [
+      0.02255192708237293,
+      0.02389985123096053
+    ]
+  },
+  "checks": {
+    "sum of all tick projectors = 40 I; three ticks of one point give H = (2/3) I": true,
+    "4 compatible contexts through one tick; star of 13 ticks with spectrum {(15-3sqrt5)/26, (9/13)^7, (15+3sqrt5)/26}": true,
+    "closed forms F_1, F_4, F_u match the model": true,
+    "context window open on T in [0.01, 5]: g_4 < g_u": true,
+    "T -> 0: g_4 -> 0, g_u -> 80/29": true,
+    "high T: g_4 ~ 1/(9T), g_u ~ 10/(87T), ratio -> 30/29": true,
+    "T* (13-tick star enters the window) = 1.39 +- 0.01": true,
+    "below T*, inside the window the context beats every structured candidate (5 temperatures x 7 couplings)": true
+  },
+  "all_checks_pass": true
+}
