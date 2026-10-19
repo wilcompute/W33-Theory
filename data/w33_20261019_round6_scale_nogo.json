@@ -1,0 +1,59 @@
+{
+  "schema": "w33.round6.absolute_scale_nogo.v1",
+  "statement": "For the currently specified finite W33 model, H->sH, T->sT, kappa->s*kappa and t->t/s for s>0 leave all dimensionless Gibbs distributions, projector incidence and quantum propagators invariant. Therefore this model ALONE cannot determine an energy or time scale, c, G, hbar, or any dimensional particle mass.",
+  "proof": "Exp[-(sH)/(sT)]=exp[-H/T]. F_{sT}(sH)=sF_T(H). Fermionic Omega_{sT,s_mu}(sH)=s Omega_{T,mu}(H). U_{sH}(t/s)=U_H(t). The dimensionless ratio kappa/T remains fixed, but numerical conversion to SI units is undetermined.",
+  "scope": "This is a no-absolute-scale statement for the CURRENT finite dimensionless Hamiltonian; theories with additional dimensionful dynamics, reference clock, renormalization-scale anomaly or boundary conditions can in principle establish a physical scale. It is NOT a universal theorem ruling out emergent dimensional constants.",
+  "candidate_W33_signal": "The ideal commutator echo contrast 8/27 and the 240:540 commuting census are parameter-free, but are exactly predicted by textbook two-qutrit quantum mechanics, so do not distinguish a TOE.",
+  "physical_next_requirement": "Provide independently normalized field action, operational units, light-cone/metric coupling, source and target observable; freeze coefficients before comparing against measured mass or optical data.",
+  "rescaling_factors": [
+    {
+      "scale": 0.001,
+      "Gibbs_dimensionless_action_residual": 0.0,
+      "Fermion_Omega_residual": 0.0,
+      "unitary_time_scaling_residual": 1.8431347208824616e-16,
+      "dimensionless_kappa_over_T": -0.5945945945945946
+    },
+    {
+      "scale": 0.25,
+      "Gibbs_dimensionless_action_residual": 0.0,
+      "Fermion_Omega_residual": 0.0,
+      "unitary_time_scaling_residual": 0.0,
+      "dimensionless_kappa_over_T": -0.5945945945945946
+    },
+    {
+      "scale": 1.0,
+      "Gibbs_dimensionless_action_residual": 0.0,
+      "Fermion_Omega_residual": 0.0,
+      "unitary_time_scaling_residual": 0.0,
+      "dimensionless_kappa_over_T": -0.5945945945945946
+    },
+    {
+      "scale": 2.0,
+      "Gibbs_dimensionless_action_residual": 0.0,
+      "Fermion_Omega_residual": 0.0,
+      "unitary_time_scaling_residual": 0.0,
+      "dimensionless_kappa_over_T": -0.5945945945945946
+    },
+    {
+      "scale": 10.0,
+      "Gibbs_dimensionless_action_residual": 1.3877787807814457e-16,
+      "Fermion_Omega_residual": 2.220446049250313e-16,
+      "unitary_time_scaling_residual": 1.7589639338103394e-16,
+      "dimensionless_kappa_over_T": -0.5945945945945946
+    },
+    {
+      "scale": 100.0,
+      "Gibbs_dimensionless_action_residual": 5.551115123125783e-17,
+      "Fermion_Omega_residual": 0.0,
+      "unitary_time_scaling_residual": 2.721678703651767e-16,
+      "dimensionless_kappa_over_T": -0.5945945945945946
+    }
+  ],
+  "checks": {
+    "Gibbs_interaction_energy_scale_covariant": true,
+    "fermion_thermodynamic_scale_covariant": true,
+    "Schrodinger_dynamics_energy_time_scale_covariant": true,
+    "kappa_T_ratio_invariant": true
+  },
+  "all_checks_pass": true
+}

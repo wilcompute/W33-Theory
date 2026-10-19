@@ -1,0 +1,95 @@
+{
+  "schema": "w33.round6.optics_mesh_loss_budget.v1",
+  "route": "two coherent paths x nine spatial waveguide modes; G=CZ(F3 x I3); F3 from 3 complex Givens SU2 two-mode couplers and 3 output phase shifts; 4 G blocks in W; 2 global path 50/50 splitters. Use integrated waveguide/path hardware as a concrete encoding, rather than an unspecified OAM device.",
+  "one_F3_complex_givens_indices": [
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "one_F3_diagonal_phase_radians": [
+    0.0,
+    -1.232595164407831e-32,
+    -1.5707963267948972
+  ],
+  "F3_decomposition_Frobenius_error": 3.8621113051691443e-16,
+  "full_G_9mode_reconstruction_error": 6.744058873585516e-16,
+  "component_budget": {
+    "one_F3_two_mode_SU2_couplers": 3,
+    "one_F3_diagonal_phases": 3,
+    "one_G_9mode_two_mode_couplers": 9,
+    "one_G_Fourier_diagonal_phases": 9,
+    "one_G_CZ_diagonal_nonzero_phases": 4,
+    "full_W_G_Gdag_blocks": 4,
+    "full_W_tunable_SU2_couplers_upper_bound": 36,
+    "full_W_Fourier_phase_slots_upper_bound": 36,
+    "full_W_CZ_nonzero_phase_slots_upper_bound": 16,
+    "full_W_rank3_projector_phase_slots": 12,
+    "path_Hadamard_blocks": 2,
+    "detector_ports": "2 paths, each resolved or summed across 9 internal modes",
+    "note": "No cancellations, resource sharing or gate merging assumed. Static F3 networks can be reused/calibrated if architecture permits."
+  },
+  "signal_only_path_loss_calibration": "For arm intensity transmission eta and ideal no-loss reference arm: raw p0-p1=sqrt(eta)*Re W_jj, total click probability=(1+eta)/2; conditioned p0-p1 divided by click =V Re W_jj with V=2sqrt(eta)/(1+eta). Reference W=I calibration removes V if loss is state-independent and stationary.",
+  "loss_examples": {
+    "0.2": {
+      "signal_arm_intensity_transmission": 0.2,
+      "conditional_visibility": 0.7453559924999299,
+      "surviving_click_probability": 0.6,
+      "false_uncalibrated_deficit_for_ideal_W_equal_I": 0.2546440075000701,
+      "calibrated_visibility_normalization_works": true
+    },
+    "0.5": {
+      "signal_arm_intensity_transmission": 0.5,
+      "conditional_visibility": 0.9428090415820635,
+      "surviving_click_probability": 0.75,
+      "false_uncalibrated_deficit_for_ideal_W_equal_I": 0.05719095841793653,
+      "calibrated_visibility_normalization_works": true
+    },
+    "0.75": {
+      "signal_arm_intensity_transmission": 0.75,
+      "conditional_visibility": 0.989743318610787,
+      "surviving_click_probability": 0.875,
+      "false_uncalibrated_deficit_for_ideal_W_equal_I": 0.010256681389212985,
+      "calibrated_visibility_normalization_works": true
+    },
+    "0.9": {
+      "signal_arm_intensity_transmission": 0.9,
+      "conditional_visibility": 0.9986139979479093,
+      "surviving_click_probability": 0.95,
+      "false_uncalibrated_deficit_for_ideal_W_equal_I": 0.001386002052090718,
+      "calibrated_visibility_normalization_works": true
+    },
+    "0.99": {
+      "signal_arm_intensity_transmission": 0.99,
+      "conditional_visibility": 0.9999873739765025,
+      "surviving_click_probability": 0.995,
+      "false_uncalibrated_deficit_for_ideal_W_equal_I": 1.2626023497497307e-05,
+      "calibrated_visibility_normalization_works": true
+    },
+    "1.0": {
+      "signal_arm_intensity_transmission": 1.0,
+      "conditional_visibility": 1.0,
+      "surviving_click_probability": 1.0,
+      "false_uncalibrated_deficit_for_ideal_W_equal_I": 0.0,
+      "calibrated_visibility_normalization_works": true
+    }
+  },
+  "hardware_error_prior_art": "Reck 1994 https://doi.org/10.1103/PhysRevLett.73.58 and Clements 2016 https://doi.org/10.1364/OPTICA.3.001460; published universal 9-mode mesh upper bound 9*8/2=36 tunable 2-mode couplers for arbitrary U9, whereas one structured G requires 9 by this compilation.",
+  "physical_limits": "No foundry design, measured insertion loss, detector efficiency, actuator bandwidth, fabrication tolerance, heralded single-photon source or gate tomography. No actual optical hardware assembled.",
+  "checks": {
+    "Givens_three_couplers_recover_F3": true,
+    "lifted_9mode_G_reconstructed": true,
+    "CZ_exactly_four_active_modes": true,
+    "full_loop_has_36_two_mode_couplers_upper_bound": true,
+    "unbalanced_loss_formula_valid": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "w33.round6.chevalley_serre_e8.v1",
+  "construction": "Seven sl9 simple root e_i=E_(i,i+1), f_i=E_(i+1,i), i=0..6, plus 8th simple root e_7=dual Lambda3 basis (0,1,2), f_7=- Lambda3 basis (0,1,2). h_i=[e_i,f_i]. Coordinates in EXISTING repo Pass11681 sl9+Lambda3+Lambda3* elementary 248-basis.",
+  "cartan_matrix": [
+    [
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  ],
+  "cartan_determinant": 1,
+  "rank_of_generated_root_vectors_and_h": 248,
+  "positive_roots_generated": 120,
+  "negative_roots_generated": 120,
+  "Serre_max_error": 0.0,
+  "sl2_max_error": 0.0,
+  "Cartan_commutator_max_error": 0.0,
+  "Cartan_action_max_error": 0.0,
+  "root_weight_max_error": 2.220446049250313e-16,
+  "real_form": "All specified simple Chevalley generators have REAL coefficients in the underlying Pass11681 elementary basis; their real span yields SPLIT E8(8), with Cartan decomposition 128 noncompact and 120 compact generators, Killing signature +8. This does NOT realize E8(-24), whose maximal compact part has dim136 and Killing signature -24.",
+  "prior_art": "The Pass11681 E8 bracket and Jacobi (gamma=-1) already exist. Chevalley Serre construction is standard, here executed as explicit generator coordinates and full 248 rank in that repo basis.",
+  "checks": {
+    "Cartan_exact_E8": true,
+    "normalized_simple_sl2": true,
+    "cartan_commutes": true,
+    "h_e_and_h_f_roots": true,
+    "all_Serre_relations": true,
+    "Weyl_roots_240": true,
+    "all_248_root_and_cartans_span": true,
+    "root_h_weights": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,289 @@
+{
+  "schema": "w33.round6.heptad_exact_integer_charpoly.v1",
+  "mathematical_principle": "M=21Q=SUM_[seven P outcomes] (I+omega^-k W_p+omega^-2k W_p^2) belongs to Mat9(Z[omega]). It is Hermitian; charpoly coefficients belong to real Z[omega], hence to Z. Matrix traces computed by exact integer pair arithmetic with omega\u00b2=-1-omega and coefficients by Newton identities.",
+  "families": [
+    {
+      "count": 81,
+      "translation_orbits": 1,
+      "one_label": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "characteristic_polynomial_of_21Q_integer_coefficients_high_to_low": [
+        1,
+        -63,
+        1701,
+        -25731,
+        239274,
+        -1412316,
+        5272857,
+        -11986947,
+        15057495,
+        -7971615
+      ],
+      "power_traces_1_through_9_exact_integers": [
+        63,
+        567,
+        5751,
+        61803,
+        687933,
+        7862265,
+        91838691,
+        1092714867,
+        13203769743
+      ],
+      "trace_Q_exact": "3",
+      "reconstruction_error": 8.686706729516228e-15,
+      "floating_poly_coeff_error": 6.332993507385254e-08
+    },
+    {
+      "count": 162,
+      "translation_orbits": 2,
+      "one_label": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "characteristic_polynomial_of_21Q_integer_coefficients_high_to_low": [
+        1,
+        -63,
+        1701,
+        -25731,
+        239274,
+        -1411587,
+        5252445,
+        -11787930,
+        14270175,
+        -6889050
+      ],
+      "power_traces_1_through_9_exact_integers": [
+        63,
+        567,
+        5751,
+        61803,
+        684288,
+        7709175,
+        87873660,
+        1010676123,
+        11712192003
+      ],
+      "trace_Q_exact": "3",
+      "reconstruction_error": 1.0223295858715087e-14,
+      "floating_poly_coeff_error": 5.21540641784668e-08
+    },
+    {
+      "count": 486,
+      "translation_orbits": 6,
+      "one_label": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "characteristic_polynomial_of_21Q_integer_coefficients_high_to_low": [
+        1,
+        -63,
+        1701,
+        -25785,
+        241542,
+        -1449252,
+        5569317,
+        -13221873,
+        17605350,
+        -10024479
+      ],
+      "power_traces_1_through_9_exact_integers": [
+        63,
+        567,
+        5913,
+        66339,
+        770553,
+        9101565,
+        108413235,
+        1297085643,
+        15556865832
+      ],
+      "trace_Q_exact": "3",
+      "reconstruction_error": 9.354454645885458e-15,
+      "floating_poly_coeff_error": 7.450580596923828e-08
+    },
+    {
+      "count": 486,
+      "translation_orbits": 6,
+      "one_label": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "characteristic_polynomial_of_21Q_integer_coefficients_high_to_low": [
+        1,
+        -63,
+        1701,
+        -25785,
+        241542,
+        -1449252,
+        5569317,
+        -13221873,
+        17605350,
+        -10023750
+      ],
+      "power_traces_1_through_9_exact_integers": [
+        63,
+        567,
+        5913,
+        66339,
+        770553,
+        9101565,
+        108413235,
+        1297085643,
+        15556859271
+      ],
+      "trace_Q_exact": "3",
+      "reconstruction_error": 9.213724544036653e-15,
+      "floating_poly_coeff_error": 2.2351741790771484e-08
+    },
+    {
+      "count": 972,
+      "translation_orbits": 12,
+      "one_label": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "characteristic_polynomial_of_21Q_integer_coefficients_high_to_low": [
+        1,
+        -63,
+        1701,
+        -25758,
+        240408,
+        -1430541,
+        5414040,
+        -12532968,
+        16041645,
+        -8594910
+      ],
+      "power_traces_1_through_9_exact_integers": [
+        63,
+        567,
+        5832,
+        64071,
+        728028,
+        8430156,
+        98768565,
+        1166486751,
+        13857973614
+      ],
+      "trace_Q_exact": "3",
+      "reconstruction_error": 1.0179800255304923e-14,
+      "floating_poly_coeff_error": 3.166496753692627e-08
+    }
+  ],
+  "exact_27_translation_orbit_polynomial_multiplicities": [
+    {
+      "characteristic_polynomial_21Q": [
+        1,
+        -63,
+        1701,
+        -25758,
+        240408,
+        -1430541,
+        5414040,
+        -12532968,
+        16041645,
+        -8594910
+      ],
+      "orbit_count": 12
+    },
+    {
+      "characteristic_polynomial_21Q": [
+        1,
+        -63,
+        1701,
+        -25785,
+        241542,
+        -1449252,
+        5569317,
+        -13221873,
+        17605350,
+        -10024479
+      ],
+      "orbit_count": 6
+    },
+    {
+      "characteristic_polynomial_21Q": [
+        1,
+        -63,
+        1701,
+        -25785,
+        241542,
+        -1449252,
+        5569317,
+        -13221873,
+        17605350,
+        -10023750
+      ],
+      "orbit_count": 6
+    },
+    {
+      "characteristic_polynomial_21Q": [
+        1,
+        -63,
+        1701,
+        -25731,
+        239274,
+        -1411587,
+        5252445,
+        -11787930,
+        14270175,
+        -6889050
+      ],
+      "orbit_count": 2
+    },
+    {
+      "characteristic_polynomial_21Q": [
+        1,
+        -63,
+        1701,
+        -25731,
+        239274,
+        -1412316,
+        5272857,
+        -11986947,
+        15057495,
+        -7971615
+      ],
+      "orbit_count": 1
+    }
+  ],
+  "stronger_classification": "Five distinct exact integer characteristic polynomials, each representing one of the five Pauli-translation-invariant spectrum families for uniform heptad weights. Group transitivity transports to all 2880 heptads.",
+  "scope": "Exact Eisenstein-arithmetic characteristic polynomials computed for ALL 27 Pauli-translation orbit representatives. Group action preserves spectrum exactly by unitary conjugation, and the five polynomial classes are therefore an exact classification of all 2187 assignments on the heptad and via Clifford action all 2880 heptads at uniform weights. No continuous mass optimization.",
+  "checks": {
+    "five_distinct_integer_polynomials": true,
+    "all_27_translation_cosets_exactly_classified": true,
+    "full_2187_assignment_count": true,
+    "all_eisenstein_reconstructions": true,
+    "numeric_eigenpoly_crosscheck": true,
+    "integer_trace_normalization": true
+  },
+  "all_checks_pass": true
+}

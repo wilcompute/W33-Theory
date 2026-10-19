@@ -1,0 +1,66 @@
+{
+  "schema": "w33.round6.matter_lift_branching.v1",
+  "branch": "Lambda3(3a + 3b + 3c) = (1,1,1) x3 singlets + (3,3,3) dimension27 + 6 ordered (Lambda2 3_i tensor 3_j) dimensions9 each =3+27+54=84.",
+  "occupation_type_counts": {
+    "(3, 0, 0)": 1,
+    "(2, 1, 0)": 9,
+    "(2, 0, 1)": 9,
+    "(1, 2, 0)": 9,
+    "(1, 1, 1)": 27,
+    "(1, 0, 2)": 9,
+    "(0, 3, 0)": 1,
+    "(0, 2, 1)": 9,
+    "(0, 1, 2)": 9,
+    "(0, 0, 3)": 1
+  },
+  "dimension_1_27_54": [
+    3,
+    27,
+    54
+  ],
+  "center_kernel": "SU9 -> E8 factors through SU9/mu3. The SU9 fundamental 9 has nontrivial mu3 character; the 84 three-particle states are center-neutral. A 9 fundamental fermion bath cannot be identified with an adjoint E8 summand.",
+  "gauge_lift_option": "One can posit full SU9 with additional 9-valued fermion matter (nontrivial mu3 charge), or an independently justified matter bundle; this changes the global gauge structure and is an ADDED assumption. SU3cubed branching alone does not fix a natural nine-mode Hamiltonian.",
+  "equal_occupation_at_mu_point5": [
+    {
+      "T": 0.05,
+      "N_comm": 3.000136193606108,
+      "N_noncomm": 3.000136193606108,
+      "equal_formula": 3.0001361936061075
+    },
+    {
+      "T": 0.2,
+      "N_comm": 3.227574540063731,
+      "N_noncomm": 3.227574540063731,
+      "equal_formula": 3.227574540063731
+    },
+    {
+      "T": 0.5,
+      "N_comm": 3.806824264109985,
+      "N_noncomm": 3.8068242641099856,
+      "equal_formula": 3.806824264109985
+    },
+    {
+      "T": 1.0,
+      "N_comm": 4.1326220063944366,
+      "N_noncomm": 4.1326220063944366,
+      "equal_formula": 4.1326220063944366
+    },
+    {
+      "T": 2.0,
+      "N_comm": 4.313470497342606,
+      "N_noncomm": 4.313470497342606,
+      "equal_formula": 4.313470497342606
+    }
+  ],
+  "energy_origin_redundancy": "A uniform shift of the 9 one-particle energies E->E+c can be undone by mu->mu+c. No absolute numerical chemical potential is physically fixed without an independently chosen energy reference. The special relative location mu=.5 for H=I-Q is not guaranteed by group data.",
+  "max_energy_origin_shift_residual": 6.661338147750939e-16,
+  "prior_repo": "Pass11681 E8 two-qutrit grading, Pass11687-91 matter/triality, Pass11879-83 Higgs SU9 claims.",
+  "checks": {
+    "SU3cubed_Lambda3_branch_exact": true,
+    "dimension_84_partition": true,
+    "central_mu3_blocks_fundamental_representation": true,
+    "equal_density_not_half_filling": true,
+    "chemical_potential_energy_origin_redundancy": true
+  },
+  "all_checks_pass": true
+}
