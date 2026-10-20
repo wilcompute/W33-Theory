@@ -1,0 +1,198 @@
+[
+ [
+  "M00S",
+  "SO(10) and SU(4) x SU(3) and U(1)^6",
+  {}
+ ],
+ [
+  "M00E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M01S",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M01E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M02S",
+  "SO(10) and SU(7) and U(1)^5",
+  {}
+ ],
+ [
+  "M02E",
+  "E_6 and SU(7) and U(1)^4",
+  {
+   "(0, 27)": -1
+  }
+ ],
+ [
+  "M03S",
+  "SO(10) and SU(2) x SU(2) x SU(2) and U(1)^8",
+  {}
+ ],
+ [
+  "M03E",
+  "E_6 and SU(4) x SU(3) and U(1)^5",
+  {
+   "(0, 27)": 1
+  }
+ ],
+ [
+  "M04S",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M04E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M05S",
+  "SO(10) and SU(7) and U(1)^5",
+  {}
+ ],
+ [
+  "M05E",
+  "SO(10) and SU(7) and U(1)^5",
+  {
+   "(0, 16)": 1
+  }
+ ],
+ [
+  "M06S",
+  "SO(10) and SU(4) x SU(3) and U(1)^6",
+  {}
+ ],
+ [
+  "M06E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M07S",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M07E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M08S",
+  "SO(10) and SU(4) x SU(3) and U(1)^6",
+  {}
+ ],
+ [
+  "M08E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M09S",
+  "SO(10) and SU(2) x SU(2) x SU(2) and U(1)^8",
+  {}
+ ],
+ [
+  "M09E",
+  "E_6 and SU(4) x SU(3) and U(1)^5",
+  {
+   "(0, 27)": 1
+  }
+ ],
+ [
+  "M10S",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M10E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M11S",
+  "SO(10) and SU(2) x SU(2) x SU(2) and U(1)^8",
+  {}
+ ],
+ [
+  "M11E",
+  "SO(10) and SU(4) x SU(3) and U(1)^6",
+  {
+   "(0, 16)": 1
+  }
+ ],
+ [
+  "M12S",
+  "SO(10) and SU(2) x SU(2) x SU(2) and U(1)^8",
+  {}
+ ],
+ [
+  "M12E",
+  "E_6 and SU(4) x SU(3) and U(1)^5",
+  {
+   "(0, 27)": -1
+  }
+ ],
+ [
+  "M13S",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M13E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M14S",
+  "SO(10) and SU(4) x SU(3) and U(1)^6",
+  {}
+ ],
+ [
+  "M14E",
+  "E_6 and SU(7) and U(1)^4",
+  {
+   "(0, 27)": 1
+  }
+ ],
+ [
+  "M15S",
+  "SO(10) and SU(2) x SU(2) x SU(2) and U(1)^8",
+  {}
+ ],
+ [
+  "M15E",
+  "E_6 and SU(4) x SU(3) and U(1)^5",
+  {
+   "(0, 27)": -1
+  }
+ ],
+ [
+  "M16S",
+  "SO(10) and SU(3) x SU(2) x SU(2) and U(1)^7",
+  {}
+ ],
+ [
+  "M16E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ],
+ [
+  "M17S",
+  "SO(10) and SU(3) x SU(2) x SU(2) and U(1)^7",
+  {}
+ ],
+ [
+  "M17E",
+  "SO(10) and SU(5) x SU(3) and U(1)^5",
+  {}
+ ]
+]

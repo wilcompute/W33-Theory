@@ -1,0 +1,50 @@
+{
+  "12116": {
+    "attempts": 60,
+    "loaded": 19,
+    "three_generation_quark_models": {
+      "N004_F1_03_S002": {
+        "net_32": 3,
+        "net_colour_singlet_triplets": -6,
+        "tachyonic": 0,
+        "anomaly_ok": true
+      },
+      "N008_F1_03_S033": {
+        "net_32": -3,
+        "net_colour_singlet_triplets": 6,
+        "tachyonic": 0,
+        "anomaly_ok": true
+      },
+      "N008_F1_04_S037": {
+        "net_32": -3,
+        "net_colour_singlet_triplets": 6,
+        "tachyonic": 0,
+        "anomaly_ok": true
+      },
+      "N008_F1_02_S053": {
+        "net_32": 3,
+        "net_colour_singlet_triplets": -6,
+        "tachyonic": 0,
+        "anomaly_ok": true
+      }
+    }
+  },
+  "12117_NB_minus_NF": {
+    "control_z3_nsodump": -1298,
+    "N001_F1_04": -686,
+    "N004_F1_03": -686,
+    "N004_F1_04": -686,
+    "N004_F1_05": -660,
+    "N008_F1_02": -494,
+    "N008_F1_03": -710,
+    "N008_F1_04": -494
+  },
+  "checks": {
+    "12116: 60 attempts, 19 load, 4 SU(3)xSU(2)xSU(2) models with net |(3,2)| = 3, net 3bar singlets = 2 x net (3,2), tachyon- and anomaly-free": true,
+    "12117: N_B - N_F = -686,-686,-686,-660,-494,-710,-494 (control -1298): fermion excess": true,
+    "12118: one fermionic 16 (16 roots) and one scalar 10 (10 roots) per plane, but no 16+16+10 = 0 root triple": true,
+    "12119: the family a2 is an event fibre in 0 of 7 models": true,
+    "12120: corrected SUSY Z6-II scan: 36/36 consistent, dimension-weighted nets only 0 or +-1": true
+  },
+  "all_checks_pass": true
+}
