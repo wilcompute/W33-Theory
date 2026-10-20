@@ -1,0 +1,178 @@
+{
+  "12121_hypercharge": {
+    "N004_F1_03_S002": {
+      "n_exact": 2,
+      "n_exact_orth_anomalous": 2,
+      "min_y2_exact": "25/6",
+      "min_y2_good": "25/6",
+      "k_Y_min_good": "25/3",
+      "anomalous_basis": [
+        0
+      ]
+    },
+    "N008_F1_03_S033": {
+      "n_exact": 29,
+      "n_exact_orth_anomalous": 29,
+      "min_y2_exact": "7/3",
+      "min_y2_good": "7/3",
+      "k_Y_min_good": "14/3",
+      "anomalous_basis": [
+        0
+      ]
+    },
+    "N008_F1_04_S037": {
+      "n_exact": 64,
+      "n_exact_orth_anomalous": 64,
+      "min_y2_exact": "13/6",
+      "min_y2_good": "13/6",
+      "k_Y_min_good": "13/3",
+      "anomalous_basis": [
+        0
+      ]
+    },
+    "N008_F1_02_S053": {
+      "n_exact": 30,
+      "n_exact_orth_anomalous": 30,
+      "min_y2_exact": "11/6",
+      "min_y2_good": "11/6",
+      "k_Y_min_good": "11/3",
+      "anomalous_basis": [
+        0
+      ]
+    },
+    "N008_F1_04_S037_T115": {
+      "n_exact": 20,
+      "n_exact_orth_anomalous": 20,
+      "min_y2_exact": "17/6",
+      "min_y2_good": "17/6",
+      "k_Y_min_good": "17/3",
+      "anomalous_basis": [
+        0
+      ]
+    }
+  },
+  "12122_yukawa": {
+    "quark_couplings": {
+      "N004_F1_03_S002": 15,
+      "N008_F1_03_S033": 6,
+      "N008_F1_04_S037": 0,
+      "N008_F1_02_S053": 6,
+      "N008_F1_04_S037_T115": 0
+    },
+    "mixing": {
+      "N004_F1_03_S002": true,
+      "N008_F1_03_S033": true,
+      "N008_F1_04_S037": false,
+      "N008_F1_02_S053": true,
+      "N008_F1_04_S037_T115": false
+    },
+    "light_doublet_couples_to": {
+      "N004_F1_03_S002": [
+        "down",
+        "up"
+      ],
+      "N008_F1_03_S033": [
+        "down"
+      ],
+      "N008_F1_02_S053": [
+        "down"
+      ]
+    }
+  },
+  "12123_NB_minus_NF": {
+    "n_loaded": 75,
+    "min": -454,
+    "max": -186,
+    "left_right": [
+      -390,
+      -356,
+      -320,
+      -284
+    ],
+    "T115": -284
+  },
+  "12125_order3_on_so10": {
+    "N001_F1_04": {
+      "D5": 27,
+      "D4": 270,
+      "A4": 864,
+      "A3": 2160,
+      "A1 + A3": 1080,
+      "A1 + A1 + A2": 2160
+    },
+    "N004_F1_03": {
+      "D5": 27,
+      "A4": 864,
+      "A1 + A3": 1080,
+      "A1 + A1 + A2": 2160,
+      "A3": 2160,
+      "D4": 270
+    },
+    "N004_F1_04": {
+      "D5": 27,
+      "A4": 864,
+      "A1 + A3": 1080,
+      "A1 + A1 + A2": 2160,
+      "A3": 2160,
+      "D4": 270
+    },
+    "N004_F1_05": {
+      "D5": 27,
+      "A4": 864,
+      "A1 + A3": 1080,
+      "A1 + A1 + A2": 2160,
+      "A3": 2160,
+      "D4": 270
+    },
+    "N008_F1_02": {
+      "D5": 27,
+      "D4": 270,
+      "A1 + A3": 1080,
+      "A4": 864,
+      "A3": 2160,
+      "A1 + A1 + A2": 2160
+    },
+    "N008_F1_03": {
+      "D5": 27,
+      "D4": 270,
+      "A1 + A3": 1080,
+      "A4": 864,
+      "A3": 2160,
+      "A1 + A1 + A2": 2160
+    },
+    "N008_F1_04": {
+      "D5": 27,
+      "D4": 270,
+      "A1 + A3": 1080,
+      "A4": 864,
+      "A3": 2160,
+      "A1 + A1 + A2": 2160
+    }
+  },
+  "12125_third_line": {
+    "attempts": 120,
+    "loaded": 56,
+    "direct_sm": [
+      {
+        "label": "N008_F1_04_S037_T115",
+        "base": "N008_F1_04_S037",
+        "gauge": "A2 + A1 and A1 NU1 12",
+        "net32": -3,
+        "tachyonic": 0,
+        "anomaly_ok": true
+      }
+    ]
+  },
+  "checks": {
+    "12121: exact three-generation hypercharges 2/29/64/30 in the four left-right models, all orthogonal to the anomalous U(1)": true,
+    "12121: minimal k_Y = 25/3, 14/3, 13/3, 11/3 -- never the canonical 5/3": true,
+    "12122: chiral quark doublets have no gauge-invariant Q q^c H coupling (all five models)": true,
+    "12122: vector-like-doublet Yukawas U x T2 x T1 = 15, 6, 0, 6, 0; exact and mod-3 H-momentum agree": true,
+    "12122: chiral-to-vector-like mixing in S002, S033, S053 only; mixed doublet couples to u^c and d^c (S002), d^c only (S033, S053)": true,
+    "12123: N_B - N_F < 0 in all 75 loaded models (-454..-186): positive large-volume vacuum energy, no super-no-scale model": true,
+    "12124: colour A2 an event fibre in 0/4 (baseline 54/2160); L,R collinear 3/4 (baseline 1296/2160)": true,
+    "12125: order-3 elements on so(10): D5/D4/A1+A3/A1+A1+A2/A3/A4 = 27/270/1080/2160/2160/864, never A2+A1 (7/7 models)": true,
+    "12125: third Wilson line: 120 attempts, 56 load, exactly one SU(3) x SU(2) x U(1)s model with net 3 quark doublets, tachyon- and anomaly-free, 20 exact hypercharges, no quark Yukawa": true
+  },
+  "all_checks_pass": true
+}

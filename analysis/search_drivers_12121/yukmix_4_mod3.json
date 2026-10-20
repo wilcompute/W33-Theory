@@ -1,0 +1,24 @@
+{
+ "N004_F1_03_S002": {
+  "gauge B(-3,2) S(1,1)": 9,
+  "ALLOWED B(-3,2) S(1,1) secB=0,0 secS=0,0": 9,
+  "gauge B(3,2) S(3,1)": 9,
+  "ALLOWED B(3,2) S(3,1) secB=0,0 secS=0,0": 9
+ },
+ "N008_F1_03_S033": {
+  "gauge B(-3,2) S(-3,1)": 9,
+  "ALLOWED B(-3,2) S(-3,1) secB=0,0 secS=0,0": 9,
+  "gauge B(3,2) S(1,1)": 9,
+  "ALLOWED B(3,2) S(1,1) secB=0,0 secS=0,0": 9
+ },
+ "N008_F1_04_S037": {
+  "gauge B(1,2) S(3,1)": 9,
+  "ALLOWED B(1,2) S(3,1) secB=0,0 secS=0,0": 9
+ },
+ "N008_F1_02_S053": {
+  "gauge B(3,2) S(3,1)": 9,
+  "ALLOWED B(3,2) S(3,1) secB=0,0 secS=0,0": 9,
+  "gauge B(-3,2) S(1,1)": 9,
+  "ALLOWED B(-3,2) S(1,1) secB=0,0 secS=0,0": 9
+ }
+}

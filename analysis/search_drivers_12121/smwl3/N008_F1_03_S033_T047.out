@@ -1,0 +1,53 @@
+NSUSY 0
+GAUGE A1 + A1 + A1 NU1 13
+F m=13 k=0 m=0 n=0 dim=1,1,3adj x1
+F m=13 k=0 m=0 n=0 dim=1,3adj,1 x1
+F m=13 k=0 m=0 n=0 dim=3adj,1,1 x1
+F m=14 k=0 m=0 n=0 dim=1,1,3adj x1
+F m=14 k=0 m=0 n=0 dim=1,3adj,1 x1
+F m=14 k=0 m=0 n=0 dim=3adj,1,1 x1
+F m=15 k=0 m=0 n=0 dim=1,1,1 x6
+F m=15 k=0 m=0 n=0 dim=1,1,2 x3
+F m=15 k=0 m=0 n=2 dim=1,1,1 x113
+F m=15 k=0 m=0 n=2 dim=1,1,2 x4
+F m=15 k=0 m=0 n=2 dim=1,2,1 x3
+F m=15 k=0 m=0 n=2 dim=2,1,1 x9
+F m=16 k=0 m=0 n=0 dim=1,1,1 x6
+F m=16 k=0 m=0 n=0 dim=1,1,2 x3
+F m=16 k=0 m=0 n=1 dim=1,1,1 x113
+F m=16 k=0 m=0 n=1 dim=1,1,2 x4
+F m=16 k=0 m=0 n=1 dim=1,2,1 x3
+F m=16 k=0 m=0 n=1 dim=2,1,1 x9
+F m=17 k=0 m=0 n=0 dim=1,1,1 x9
+F m=18 k=0 m=0 n=0 dim=1,1,1 x9
+F m=19 k=0 m=0 n=0 dim=1,1,1 x5
+F m=19 k=0 m=0 n=0 dim=1,2,1 x3
+F m=19 k=0 m=0 n=0 dim=1,2,2 x2
+F m=19 k=0 m=0 n=2 dim=1,1,1 x115
+F m=19 k=0 m=0 n=2 dim=1,1,2 x3
+F m=19 k=0 m=0 n=2 dim=1,2,1 x4
+F m=19 k=0 m=0 n=2 dim=2,1,1 x7
+F m=19 k=0 m=1 n=0 dim=1,1,1 x7
+F m=19 k=0 m=1 n=0 dim=1,1,2 x3
+F m=19 k=0 m=1 n=1 dim=1,1,1 x73
+F m=19 k=0 m=1 n=1 dim=1,1,2 x14
+F m=19 k=0 m=1 n=1 dim=1,2,1 x9
+F m=19 k=0 m=1 n=1 dim=2,1,1 x3
+F m=20 k=0 m=0 n=0 dim=1,1,1 x5
+F m=20 k=0 m=0 n=0 dim=1,2,1 x3
+F m=20 k=0 m=0 n=0 dim=1,2,2 x2
+F m=20 k=0 m=0 n=1 dim=1,1,1 x115
+F m=20 k=0 m=0 n=1 dim=1,1,2 x3
+F m=20 k=0 m=0 n=1 dim=1,2,1 x4
+F m=20 k=0 m=0 n=1 dim=2,1,1 x7
+F m=20 k=0 m=1 n=0 dim=1,1,1 x7
+F m=20 k=0 m=1 n=0 dim=1,1,2 x3
+F m=20 k=0 m=1 n=2 dim=1,1,1 x73
+F m=20 k=0 m=1 n=2 dim=1,1,2 x14
+F m=20 k=0 m=1 n=2 dim=1,2,1 x9
+F m=20 k=0 m=1 n=2 dim=2,1,1 x3
+F m=8 k=0 m=0 n=0 dim=1,1,1 x2
+F m=9 k=0 m=0 n=0 dim=1,1,1 x2
+F_NFIELDS 800
+T_NFIELDS 0
+ANOMALY_OK 1

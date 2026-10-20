@@ -1,0 +1,22 @@
+{
+ "N004_F1_03_S002": {
+  "LR_collinear": true,
+  "baseline_collinear": 1296,
+  "baseline_total": 2160
+ },
+ "N008_F1_03_S033": {
+  "LR_collinear": true,
+  "baseline_collinear": 1296,
+  "baseline_total": 2160
+ },
+ "N008_F1_04_S037": {
+  "LR_collinear": true,
+  "baseline_collinear": 1296,
+  "baseline_total": 2160
+ },
+ "N008_F1_02_S053": {
+  "LR_collinear": false,
+  "baseline_collinear": 1296,
+  "baseline_total": 2160
+ }
+}

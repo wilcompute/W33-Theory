@@ -1,0 +1,90 @@
+{
+ "N004_F1_03_S002": {
+  "type": [
+   "A1",
+   "A1",
+   "A2"
+  ],
+  "colour_is_fibre": [
+   false
+  ],
+  "A1_points": [
+   34,
+   30
+  ],
+  "colour_points": [
+   11
+  ],
+  "baseline": {
+   "colour A2 not a fibre": 2106,
+   "A1s distinct points": 2160,
+   "colour A2 is a fibre": 54
+  }
+ },
+ "N008_F1_03_S033": {
+  "type": [
+   "A1",
+   "A1",
+   "A2"
+  ],
+  "colour_is_fibre": [
+   false
+  ],
+  "A1_points": [
+   5,
+   13
+  ],
+  "colour_points": [
+   12
+  ],
+  "baseline": {
+   "colour A2 not a fibre": 2106,
+   "A1s distinct points": 2160,
+   "colour A2 is a fibre": 54
+  }
+ },
+ "N008_F1_04_S037": {
+  "type": [
+   "A1",
+   "A1",
+   "A2"
+  ],
+  "colour_is_fibre": [
+   false
+  ],
+  "A1_points": [
+   4,
+   26
+  ],
+  "colour_points": [
+   21
+  ],
+  "baseline": {
+   "colour A2 not a fibre": 2106,
+   "A1s distinct points": 2160,
+   "colour A2 is a fibre": 54
+  }
+ },
+ "N008_F1_02_S053": {
+  "type": [
+   "A1",
+   "A1",
+   "A2"
+  ],
+  "colour_is_fibre": [
+   false
+  ],
+  "A1_points": [
+   17,
+   15
+  ],
+  "colour_points": [
+   4
+  ],
+  "baseline": {
+   "colour A2 not a fibre": 2106,
+   "A1s distinct points": 2160,
+   "colour A2 is a fibre": 54
+  }
+ }
+}

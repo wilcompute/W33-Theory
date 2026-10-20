@@ -1,0 +1,21 @@
+NSUSY 0
+GAUGE  NU1 16
+F m=15 k=0 m=0 n=0 dim= x9
+F m=15 k=0 m=0 n=2 dim= x130
+F m=16 k=0 m=0 n=0 dim= x9
+F m=16 k=0 m=0 n=1 dim= x130
+F m=17 k=0 m=0 n=0 dim= x9
+F m=18 k=0 m=0 n=0 dim= x9
+F m=19 k=0 m=0 n=0 dim= x15
+F m=19 k=0 m=0 n=2 dim= x131
+F m=19 k=0 m=1 n=0 dim= x17
+F m=19 k=0 m=1 n=1 dim= x113
+F m=20 k=0 m=0 n=0 dim= x15
+F m=20 k=0 m=0 n=1 dim= x131
+F m=20 k=0 m=1 n=0 dim= x17
+F m=20 k=0 m=1 n=2 dim= x113
+F m=8 k=0 m=0 n=0 dim= x2
+F m=9 k=0 m=0 n=0 dim= x2
+F_NFIELDS 852
+T_NFIELDS 0
+ANOMALY_OK 1
