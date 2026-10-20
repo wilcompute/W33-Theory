@@ -1,0 +1,15 @@
+|U|=125 index-5: normal false contains U true K/U C4 x SL(2,3) conjugates 5
+clock-candidate K orbits on observers: [ [ 300, 1 ] ]
+Syntax warning: Unbound global variable in analysis/search_drivers_12063/q5_cl\
+ock.g:17
+  for Kx in List(AsList(ConjugacyClassSubgroups(Sp_,K)),Y->Y^g) do
+                                                             ^
+Syntax warning: Unbound global variable in analysis/search_drivers_12063/q5_cl\
+ock.g:19
+    fix:=Filtered(obs,S->ForAll(GeneratorsOfGroup(I),h->act(S,h)=S));
+                                                  ^
+pairs [collinear, |K_p n K_x|, #fixed observers, #fixed mirror]: 
+[ [ [ true, 80, 0, 0 ], 150 ], [ [ false, 24, 0, 0 ], 500 ], 
+  [ [ false, 96, 0, 0 ], 125 ] ]
+
+[exited with code 0]

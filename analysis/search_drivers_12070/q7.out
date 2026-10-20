@@ -1,0 +1,15 @@
+q=7 |G|=276595200
+ J ok true true |C(J)|=117600
+ J's 2352 observers 1176
+ |Stab(p)|=691488 |U|=343 orbits on observers [ [ 1176, 1 ] ]
+ index-q classes: 2
+  K: normal false contains U true |K/U| 288 conjugates 7 orbits on observers 
+[ [ 1176, 1 ] ]
+  pairs [collinear, |K_p n K_x|, #fixed, #fixed mirror]: 
+[ [ [ true, 252, 0, 0 ], 7 ], [ [ false, 48, 0, 0 ], 6 ], 
+  [ [ false, 288, 0, 0 ], 1 ] ]
+  K: normal false contains U true |K/U| 288 conjugates 7 orbits on observers 
+[ [ 1176, 1 ] ]
+  pairs [collinear, |K_p n K_x|, #fixed, #fixed mirror]: 
+[ [ [ true, 252, 0, 0 ], 7 ], [ [ false, 48, 0, 0 ], 6 ], 
+  [ [ false, 288, 0, 0 ], 1 ] ]

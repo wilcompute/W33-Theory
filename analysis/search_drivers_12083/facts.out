@@ -1,0 +1,4 @@
+Sp(4,3) perfect: true
+|W(E8)| = 696729600 = [ [ 2, 14 ], [ 3, 5 ], [ 5, 2 ], [ 7, 1 ] ]
+|ASp(4,3)| = 4199040  divides |W(E8)|: false
+complement classes of the central 3 in 3 x Sp(4,3): 1

@@ -1,0 +1,4 @@
+control equal-|b|, continuous phases: |res| = 3.691738334685139e-14  phases/(pi/3) = [0.62230134 5.6185334 ]
+best quantised (k,l): [(np.float64(0.0533), 0, 5), (np.float64(0.0533), 5, 0), (np.float64(0.0851), 1, 5), (np.float64(0.0851), 5, 1), (np.float64(0.0882), 4, 0), (np.float64(0.0882), 0, 4)]
+
+[exited with code 0]
