@@ -1,0 +1,272 @@
+[
+ {
+  "label": "N001_F1_00",
+  "base": "N001",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F1_01",
+  "base": "N001",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F1_02",
+  "base": "N001",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F1_03",
+  "base": "N001",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F1_04",
+  "base": "N001",
+  "nwl": 1,
+  "gauge": "D5 and A2 + A2 NU1 7",
+  "net16": {
+   "0": 3
+  }
+ },
+ {
+  "label": "N001_F1_05",
+  "base": "N001",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F2_00",
+  "base": "N001",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F2_01",
+  "base": "N001",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F2_02",
+  "base": "N001",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F2_03",
+  "base": "N001",
+  "nwl": 2,
+  "gauge": "D5 and A1 + A1 NU1 9",
+  "net16": {
+   "0": 0
+  }
+ },
+ {
+  "label": "N001_F2_04",
+  "base": "N001",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N001_F2_05",
+  "base": "N001",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F1_00",
+  "base": "N004",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F1_01",
+  "base": "N004",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F1_02",
+  "base": "N004",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F1_03",
+  "base": "N004",
+  "nwl": 1,
+  "gauge": "D5 and A2 + A2 NU1 7",
+  "net16": {
+   "0": 3
+  }
+ },
+ {
+  "label": "N004_F1_04",
+  "base": "N004",
+  "nwl": 1,
+  "gauge": "D5 and A2 + A2 NU1 7",
+  "net16": {
+   "0": 3
+  }
+ },
+ {
+  "label": "N004_F1_05",
+  "base": "N004",
+  "nwl": 1,
+  "gauge": "D5 and A1 + A1 + A1 + A1 + A1 NU1 6",
+  "net16": {
+   "0": 3
+  }
+ },
+ {
+  "label": "N004_F2_00",
+  "base": "N004",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F2_01",
+  "base": "N004",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F2_02",
+  "base": "N004",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F2_03",
+  "base": "N004",
+  "nwl": 2,
+  "gauge": "D5 and A1 + A1 + A1 + A1 + A1 NU1 6",
+  "net16": {
+   "0": 0
+  }
+ },
+ {
+  "label": "N004_F2_04",
+  "base": "N004",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N004_F2_05",
+  "base": "N004",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F1_00",
+  "base": "N008",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F1_01",
+  "base": "N008",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F1_02",
+  "base": "N008",
+  "nwl": 1,
+  "gauge": "D5 and A3 + A1 NU1 7",
+  "net16": {
+   "0": 3
+  }
+ },
+ {
+  "label": "N008_F1_03",
+  "base": "N008",
+  "nwl": 1,
+  "gauge": "D5 and A3 + A1 NU1 7",
+  "net16": {
+   "0": 3
+  }
+ },
+ {
+  "label": "N008_F1_04",
+  "base": "N008",
+  "nwl": 1,
+  "gauge": "D5 and A3 + A1 NU1 7",
+  "net16": {
+   "0": 3
+  }
+ },
+ {
+  "label": "N008_F1_05",
+  "base": "N008",
+  "nwl": 1,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F2_00",
+  "base": "N008",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F2_01",
+  "base": "N008",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F2_02",
+  "base": "N008",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F2_03",
+  "base": "N008",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F2_04",
+  "base": "N008",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ },
+ {
+  "label": "N008_F2_05",
+  "base": "N008",
+  "nwl": 2,
+  "gauge": "LOADFAIL",
+  "net16": {}
+ }
+]

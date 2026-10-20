@@ -1,0 +1,92 @@
+{
+  "models": {
+    "N001_F1_04": {
+      "gauge": "D5 and A2 + A2 NU1 7",
+      "net16_original": 3,
+      "net16_converted": 3,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N004_F1_03": {
+      "gauge": "D5 and A2 + A2 NU1 7",
+      "net16_original": 3,
+      "net16_converted": 3,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N004_F1_04": {
+      "gauge": "D5 and A2 + A2 NU1 7",
+      "net16_original": 3,
+      "net16_converted": 3,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N004_F1_05": {
+      "gauge": "D5 and A1 + A1 + A1 + A1 + A1 NU1 6",
+      "net16_original": 3,
+      "net16_converted": 3,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N008_F1_02": {
+      "gauge": "D5 and A3 + A1 NU1 7",
+      "net16_original": 3,
+      "net16_converted": 3,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N008_F1_03": {
+      "gauge": "D5 and A3 + A1 NU1 7",
+      "net16_original": 3,
+      "net16_converted": 3,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N008_F1_04": {
+      "gauge": "D5 and A3 + A1 NU1 7",
+      "net16_original": 3,
+      "net16_converted": 3,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N001_F2_03": {
+      "gauge": "D5 and A1 + A1 NU1 9",
+      "net16_original": 0,
+      "net16_converted": 0,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    },
+    "N004_F2_03": {
+      "gauge": "D5 and A1 + A1 + A1 + A1 + A1 NU1 6",
+      "net16_original": 0,
+      "net16_converted": 0,
+      "tachyonic": 0,
+      "anomaly_ok": true,
+      "untwisted_only": true
+    }
+  },
+  "12112": {
+    "x_in_F": 29,
+    "total": 87,
+    "random_expectation": 17.4,
+    "wilson_a2_fibre": 9
+  },
+  "checks": {
+    "control (original non-SUSY engine): stock Z3 = SO(10)xSU(3)xSO(16)xU(1), 438 fields, 0 tachyons, anomaly OK, net 36": true,
+    "12111: seven one-family-Wilson-line models: SO(10) x hidden, net 16 = 3 in BOTH engines, all 16s untwisted": true,
+    "12111: two-Wilson-line models: net 16 = 0": true,
+    "12113: no tachyonic fields and anomalies cancelled in all seven three-generation models": true,
+    "12114: gcd(N)(V.W) = 0 mod 2 separates accepted (12) from rejected (24) Z6-II models exactly": true,
+    "12112: clock event in split factorisation 29/87 vs 17.4 by chance; Wilson a2 a fibre in 9/87": true,
+    "12115: first order eps.A.H antisymmetric; second order = cofactor adj(A) = diag(a2a3, a3a1, a1a2), symmetric": true
+  },
+  "all_checks_pass": true
+}

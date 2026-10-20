@@ -1,0 +1,74 @@
+[
+ {
+  "label": "N001_F1_04",
+  "gauge": "D5 and A2 + A2 NU1 7",
+  "net16": 3,
+  "tachyonic_fields": 0,
+  "fields": 816,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N001_F2_03",
+  "gauge": "D5 and A1 + A1 NU1 9",
+  "net16": 0,
+  "tachyonic_fields": 0,
+  "fields": 1064,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N004_F1_03",
+  "gauge": "D5 and A2 + A2 NU1 7",
+  "net16": 3,
+  "tachyonic_fields": 0,
+  "fields": 816,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N004_F1_04",
+  "gauge": "D5 and A2 + A2 NU1 7",
+  "net16": 3,
+  "tachyonic_fields": 0,
+  "fields": 816,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N004_F1_05",
+  "gauge": "D5 and A1 + A1 + A1 + A1 + A1 NU1 6",
+  "net16": 3,
+  "tachyonic_fields": 0,
+  "fields": 808,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N004_F2_03",
+  "gauge": "D5 and A1 + A1 + A1 + A1 + A1 NU1 6",
+  "net16": 0,
+  "tachyonic_fields": 0,
+  "fields": 724,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N008_F1_02",
+  "gauge": "D5 and A3 + A1 NU1 7",
+  "net16": 3,
+  "tachyonic_fields": 0,
+  "fields": 826,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N008_F1_03",
+  "gauge": "D5 and A3 + A1 NU1 7",
+  "net16": 3,
+  "tachyonic_fields": 0,
+  "fields": 748,
+  "anomaly_ok": "1"
+ },
+ {
+  "label": "N008_F1_04",
+  "gauge": "D5 and A3 + A1 NU1 7",
+  "net16": 3,
+  "tachyonic_fields": 0,
+  "fields": 826,
+  "anomaly_ok": "1"
+ }
+]

@@ -1,0 +1,135 @@
+NSUSY 0
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = -1.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 3.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 1.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 3.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 17.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 11.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 9.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 43.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 33.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 27.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 3.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 1.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 3.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 17.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 11.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 9.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 43.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 33.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 27.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 3.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 1.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 3.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 17.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 11.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 9.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 43.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 33.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 27.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 21.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 15.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 13.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 43.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 33.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 27.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 77.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 63.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 53.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 21.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 15.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 13.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 43.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 33.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 27.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 77.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 63.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 53.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 21.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 15.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 13.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 43.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 33.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 27.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 77.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 63.00 = 0 mod 2 failed. Return false.
+
+  Warning in bool CFixedBrane::CreateMasslessHalfState(...): local condition N (V_loc^2 - v_loc^2) = 53.00 = 0 mod 2 failed. Return false.
+GAUGE D5 and A1 + A1 NU1 9
+F m=2 dim=-16,1,1 x1
+F m=2 dim=1,1,1 x168
+F m=2 dim=1,1,2 x36
+F m=2 dim=1,2,1 x12
+F m=2 dim=1,2,2 x2
+F m=2 dim=16,1,1 x1
+F m=3 dim=-16,1,1 x1
+F m=3 dim=1,1,1 x168
+F m=3 dim=1,1,2 x36
+F m=3 dim=1,2,1 x12
+F m=3 dim=1,2,2 x2
+F m=3 dim=16,1,1 x1
+F m=4 dim=1,1,3adj x1
+F m=4 dim=1,3adj,1 x1
+F m=4 dim=45adj,1,1 x1
+F m=5 dim=1,1,3adj x1
+F m=5 dim=1,3adj,1 x1
+F m=5 dim=45adj,1,1 x1
+F m=6 dim=1,1,1 x276
+F m=6 dim=1,1,2 x24
+F m=6 dim=1,2,1 x72
+F m=6 dim=1,2,2 x12
+NFIELDS 830
