@@ -1,0 +1,26 @@
+{
+  "fixed_dims_of_compatible_shifts": {
+    "134": 30,
+    "86": 62,
+    "92": 90,
+    "80": 60
+  },
+  "V_B_by_fixed_dim": {
+    "134": -161.1462540956141,
+    "86": -12.44313306172046,
+    "92": -31.03102319095717,
+    "80": 6.144757067516224
+  },
+  "12100": {
+    "alpha_G": 0.04,
+    "tau_bound_yr": 2.4e+34,
+    "MX_min_GeV": 6048926415064836.0,
+    "invR_min_GeV": 1.2097852830129672e+16
+  },
+  "checks": {
+    "12099: S(0) = 2 zeta(5), S(1/3) = -(240/243) zeta(5)": true,
+    "12099: 242 compatible shifts with fixed dims {134, 92, 86, 80}; V_B strictly decreasing in N0; 86 is neither extreme": true,
+    "12100: M_X > ~6e15 GeV and 1/R > ~1.2e16 GeV (order of magnitude, alpha_G = 1/25)": true
+  },
+  "all_checks_pass": true
+}

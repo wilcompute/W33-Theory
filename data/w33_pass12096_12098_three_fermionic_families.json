@@ -1,0 +1,42 @@
+{
+  "12096": {
+    "(0.0, 0, 134, True)": 324,
+    "(0.0, 0, 92, True)": 162,
+    "(-3.0, 0, 86, True)": 108,
+    "(3.0, 0, 86, True)": 108
+  },
+  "12097": {
+    "7": {
+      "('perfect', (3, 3, 3, 3, 3), (0, 0, 0, 0, 0))": 20,
+      "('split', (2, 2, 0, 0, 2), (1, 1, 3, 3, 1))": 30,
+      "('perfect', (-3, -3, -3, -3, -3), (0, 0, 0, 0, 0))": 20,
+      "('split', (-2, -2, 0, 0, -2), (-1, -1, -3, -3, -1))": 30
+    },
+    "8": {
+      "('split', (-2, -2, 0, 0, -2), (-1, -1, -3, -3, -1))": 30,
+      "('perfect', (-3, -3, -3, -3, -3), (0, 0, 0, 0, 0))": 20,
+      "('perfect', (3, 3, 3, 3, 3), (0, 0, 0, 0, 0))": 20,
+      "('split', (2, 2, 0, 0, 2), (1, 1, 3, 3, 1))": 30
+    },
+    "9": {
+      "('split', (2, 2, 0, 0, 2), (1, 1, 3, 3, 1))": 30,
+      "('perfect', (3, 3, 3, 3, 3), (0, 0, 0, 0, 0))": 20,
+      "('perfect', (-3, -3, -3, -3, -3), (0, 0, 0, 0, 0))": 20,
+      "('split', (-2, -2, 0, 0, -2), (-1, -1, -3, -3, -1))": 30
+    }
+  },
+  "12098_distribution_(family_shifts,fibre_type)": {
+    "(20, 2)": 12,
+    "(20, 0)": 21
+  },
+  "12098_fibre_cases": [
+    24,
+    24
+  ],
+  "checks": {
+    "12096: 27 SO(10) gradings; net chiral 16s per plane only 0 or +-3, +-3 iff e6+a2 (108+108), 10s vector-like, sigma odd on all spinors": true,
+    "12097: three SM gradings: 40 of 100 (shift, clean sigma) pairs make all three families fermionic, none bosonic": true,
+    "12098: every grading has 20 three-family shifts; fibre-type ones are a minority, and fibre a2 always comes with e6 = E6(x)": true
+  },
+  "all_checks_pass": true
+}
