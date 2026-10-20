@@ -1,0 +1,65 @@
+{
+ "N004_F1_03_S002": {
+  "n_fraction_free": 0,
+  "all_in_lattice": true,
+  "N_values": [],
+  "N_matches_formula": true,
+  "root_candidates_kY_5_3": 24,
+  "root_candidates_giving_SM": 0
+ },
+ "N008_F1_03_S033": {
+  "n_fraction_free": 11,
+  "all_in_lattice": true,
+  "N_values": [
+   "4",
+   "6",
+   "8",
+   "10"
+  ],
+  "N_matches_formula": true,
+  "root_candidates_kY_5_3": 24,
+  "root_candidates_giving_SM": 0
+ },
+ "N008_F1_04_S037": {
+  "n_fraction_free": 22,
+  "all_in_lattice": true,
+  "N_values": [
+   "4",
+   "6",
+   "8",
+   "10",
+   "12",
+   "18",
+   "36"
+  ],
+  "N_matches_formula": true,
+  "root_candidates_kY_5_3": 24,
+  "root_candidates_giving_SM": 0
+ },
+ "N008_F1_02_S053": {
+  "n_fraction_free": 4,
+  "all_in_lattice": true,
+  "N_values": [
+   "4",
+   "6",
+   "8",
+   "10"
+  ],
+  "N_matches_formula": true,
+  "root_candidates_kY_5_3": 24,
+  "root_candidates_giving_SM": 0
+ },
+ "N008_F1_04_S037_T115": {
+  "n_fraction_free": 14,
+  "all_in_lattice": true,
+  "N_values": [
+   "4",
+   "6",
+   "8",
+   "10"
+  ],
+  "N_matches_formula": true,
+  "root_candidates_kY_5_3": 24,
+  "root_candidates_giving_SM": 0
+ }
+}

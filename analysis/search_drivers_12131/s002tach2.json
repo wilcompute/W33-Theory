@@ -1,0 +1,34 @@
+{
+ "rho_rho": {
+  "n": 56,
+  "Delta": -0.0555555555555558
+ },
+ "0.9i_rho": {
+  "n": 0,
+  "Delta": null
+ },
+ "0.8i_rho": {
+  "n": 0,
+  "Delta": null
+ },
+ "0.7i_rho": {
+  "n": 0,
+  "Delta": null
+ },
+ "i_i": {
+  "n": 0,
+  "Delta": null
+ },
+ "rho_i": {
+  "n": 56,
+  "Delta": -0.0555555555555558
+ },
+ "2i_i": {
+  "n": 0,
+  "Delta": null
+ },
+ "1.25i_2i": {
+  "n": 0,
+  "Delta": null
+ }
+}

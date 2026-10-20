@@ -1,0 +1,207 @@
+{
+  "12131": {
+    "N004_F1_03_S002": {
+      "n_fraction_free": 0,
+      "all_in_lattice": true,
+      "N_values": [],
+      "N_matches_formula": true,
+      "root_candidates_kY_5_3": 24,
+      "root_candidates_giving_SM": 0
+    },
+    "N008_F1_03_S033": {
+      "n_fraction_free": 11,
+      "all_in_lattice": true,
+      "N_values": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "N_matches_formula": true,
+      "root_candidates_kY_5_3": 24,
+      "root_candidates_giving_SM": 0
+    },
+    "N008_F1_04_S037": {
+      "n_fraction_free": 22,
+      "all_in_lattice": true,
+      "N_values": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "18",
+        "36"
+      ],
+      "N_matches_formula": true,
+      "root_candidates_kY_5_3": 24,
+      "root_candidates_giving_SM": 0
+    },
+    "N008_F1_02_S053": {
+      "n_fraction_free": 4,
+      "all_in_lattice": true,
+      "N_values": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "N_matches_formula": true,
+      "root_candidates_kY_5_3": 24,
+      "root_candidates_giving_SM": 0
+    },
+    "N008_F1_04_S037_T115": {
+      "n_fraction_free": 14,
+      "all_in_lattice": true,
+      "N_values": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "N_matches_formula": true,
+      "root_candidates_kY_5_3": 24,
+      "root_candidates_giving_SM": 0
+    }
+  },
+  "12132": {
+    "Lambda": {
+      "3j_rho": 1475.268296570197,
+      "2.5j_rho": 1036.6436637479399,
+      "2j_rho": 677.6258796673606,
+      "1.75j_rho": 527.9708647583772,
+      "1.5j_rho": 398.2309661392784,
+      "1.25j_rho": 288.50280155771515,
+      "1j_rho": 199.42344979771653,
+      "0.8j_rho": 145.26454800047202,
+      "2j_1j": 707.6537475310519,
+      "2j_1.5j": 821.2916275590038,
+      "2j_2j": 1029.7832708146807
+    },
+    "Lambda_arc_75deg": 183.02528641008905,
+    "tachyons_axis": {
+      "control_model2_ImT1": -0.21132486540518758,
+      "control_model2_large": 0,
+      "S002_ImT3.00": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT2.50": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT2.00": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT1.75": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT1.60": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT1.50": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT1.40": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT1.25": {
+        "n": 0,
+        "Delta": null
+      },
+      "S002_ImT1.00": {
+        "n": 0,
+        "Delta": null
+      }
+    },
+    "tachyons_more": {
+      "rho_rho": {
+        "n": 56,
+        "Delta": -0.0555555555555558
+      },
+      "0.9i_rho": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.8i_rho": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.7i_rho": {
+        "n": 0,
+        "Delta": null
+      },
+      "i_i": {
+        "n": 0,
+        "Delta": null
+      },
+      "rho_i": {
+        "n": 56,
+        "Delta": -0.0555555555555558
+      },
+      "2i_i": {
+        "n": 0,
+        "Delta": null
+      },
+      "1.25i_2i": {
+        "n": 0,
+        "Delta": null
+      }
+    },
+    "tachyons_arc": {
+      "85": {
+        "T": "(0.08715574274765814+0.9961946980917455j)",
+        "n": 0,
+        "Delta": null
+      },
+      "80": {
+        "T": "(0.17364817766693041+0.984807753012208j)",
+        "n": 0,
+        "Delta": null
+      },
+      "75": {
+        "T": "(0.25881904510252074+0.9659258262890683j)",
+        "n": 56,
+        "Delta": -0.012205614892713379
+      },
+      "70": {
+        "T": "(0.3420201433256688+0.9396926207859083j)",
+        "n": 56,
+        "Delta": -0.02880027409557906
+      },
+      "65": {
+        "T": "(0.42261826174069944+0.9063077870366499j)",
+        "n": 56,
+        "Delta": -0.04325440029323063
+      },
+      "note": "62 degrees not run (process ended); onset bracketed between 80 and 75 degrees"
+    }
+  },
+  "12135": {
+    "attempts": 250,
+    "loaded": 78,
+    "first_E8_groups": [
+      "A1",
+      "A1 + A1",
+      "A1 + A1 + A1",
+      "A2",
+      "A2 + A1 + A1"
+    ]
+  },
+  "checks": {
+    "12131: all 51 fraction-free hypercharges have q +- lambda in E8 x E8 with even N = 1/2 + y^2 + 2/3": true,
+    "12131: k_Y = 5/3 root test: 24 admissible roots per model, none gives the SM (5/5)": true,
+    "12132: Lambda > 0 at every sampled point; falls monotonically along T_WL = 3i ... 0.8i (no duality turnaround at i); T* = rho lowest of the family points": true,
+    "12132: controls (model 2: Delta = -0.2113 at Im T = 1, none at large radius); S002 tachyon-free on the imaginary axis 3i..0.7i, tachyonic at T_WL = rho (Delta = -1/18)": true,
+    "12132: tachyon onset on the arc |T_WL| = 1 between 80 and 75 degrees (85, 80 clean; 75, 70, 65 tachyonic)": true,
+    "12133: light vector-like pairs trilinear -> quartic: T115 7 -> 1, S002 41 -> 12 (9 charge-1/3 pairs stay)": true,
+    "12134: A8 down sector: 11098 reproduced (77 none / 27 rank 3); vector-like mixing changes no rank; all vector-like d^c lifted in 8/92": true,
+    "12135: third Wilson line on S002: 250 attempts, 78 load, no first-E8 A2 + A1": true
+  },
+  "all_checks_pass": true
+}
