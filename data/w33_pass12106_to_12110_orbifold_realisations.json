@@ -1,0 +1,51 @@
+{
+  "12106_models": {
+    "N001": {
+      "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+      "net_left_16": 9
+    },
+    "N004": {
+      "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+      "net_left_16": 9
+    },
+    "N008": {
+      "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+      "net_left_16": 9
+    },
+    "N010": {
+      "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+      "net_left_16": 9
+    },
+    "N011": {
+      "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+      "net_left_16": 9
+    },
+    "N019": {
+      "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+      "net_left_16": 9
+    },
+    "N003": {
+      "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+      "net_left_16": 0
+    }
+  },
+  "12109": {
+    "(('clock', 'split'), (('A2', 'E6'), ('A2', 'E6')))": 87
+  },
+  "12110": {
+    "h27": "2/3",
+    "h6": "5/6",
+    "h3": "1/3",
+    "h_27_6bar": "3/2",
+    "h_27_3": "1"
+  },
+  "checks": {
+    "12106 control: stock Z3_1_1 gives D5 + A2 and D8 (SO(10) x SU(3) x SO(16) x U(1)) and net 36 left-handed 16s": true,
+    "12106: every frozen model with SO(10) x SU(3) has net 9 left-handed 16s (= 3 x (16,3bar)); SU(6)xSU(2)^2 model has none": true,
+    "12106: scan 24 attempts, 13 loaded, 6 with an SO(10) x SU(3) factor": true,
+    "12107: SUSY Z6-II accepted models, dimension-weighted: net 16s/27s only 0 or +-1": true,
+    "12109: all 87 corpus A8 Standard Models: Z2 part = one clock + one split; Wilson line e6 + a2 in both E8s": true,
+    "12110: h(27) = 2/3, h(6bar) = 5/6, h(27,6bar) = 3/2 > 1 (never massless at level 1); h(27,3) = 1": true
+  },
+  "all_checks_pass": true
+}

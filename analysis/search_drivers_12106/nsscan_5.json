@@ -1,0 +1,194 @@
+[
+ {
+  "label": "N000",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N001",
+  "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+  "perfect": true,
+  "net16": 3,
+  "net27": 0,
+  "nf": 188
+ },
+ {
+  "label": "N002",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N003",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 306
+ },
+ {
+  "label": "N004",
+  "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+  "perfect": true,
+  "net16": 3,
+  "net27": 0,
+  "nf": 188
+ },
+ {
+  "label": "N005",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N006",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N007",
+  "gauge": "LOADFAIL",
+  "perfect": true,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N008",
+  "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+  "perfect": true,
+  "net16": 3,
+  "net27": 0,
+  "nf": 188
+ },
+ {
+  "label": "N009",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 306
+ },
+ {
+  "label": "N010",
+  "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 188
+ },
+ {
+  "label": "N011",
+  "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 188
+ },
+ {
+  "label": "N012",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 306
+ },
+ {
+  "label": "N013",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N014",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 306
+ },
+ {
+  "label": "N015",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N016",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N017",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N018",
+  "gauge": "LOADFAIL",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N019",
+  "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 188
+ },
+ {
+  "label": "N020",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 306
+ },
+ {
+  "label": "N021",
+  "gauge": "LOADFAIL",
+  "perfect": true,
+  "net16": 0,
+  "net27": 0,
+  "nf": null
+ },
+ {
+  "label": "N022",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 306
+ },
+ {
+  "label": "N023",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16": 0,
+  "net27": 0,
+  "nf": 306
+ }
+]

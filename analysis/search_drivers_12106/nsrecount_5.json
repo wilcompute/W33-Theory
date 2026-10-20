@@ -1,0 +1,183 @@
+[
+ {
+  "label": "N001",
+  "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+  "perfect": true,
+  "net16_by_position": {
+   "0": 3
+  },
+  "multiplet_codes": {
+   "2": 41,
+   "3": 41,
+   "4": 5,
+   "5": 5,
+   "6": 96
+  }
+ },
+ {
+  "label": "N003",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16_by_position": {},
+  "multiplet_codes": {
+   "2": 72,
+   "3": 72,
+   "4": 6,
+   "5": 6,
+   "6": 150
+  }
+ },
+ {
+  "label": "N004",
+  "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+  "perfect": true,
+  "net16_by_position": {
+   "0": 3
+  },
+  "multiplet_codes": {
+   "2": 41,
+   "3": 41,
+   "4": 5,
+   "5": 5,
+   "6": 96
+  }
+ },
+ {
+  "label": "N008",
+  "gauge": "D5 + A2 and A5 + A1 + A1 NU1 2",
+  "perfect": true,
+  "net16_by_position": {
+   "0": 3
+  },
+  "multiplet_codes": {
+   "2": 41,
+   "3": 41,
+   "4": 5,
+   "5": 5,
+   "6": 96
+  }
+ },
+ {
+  "label": "N009",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16_by_position": {},
+  "multiplet_codes": {
+   "2": 72,
+   "3": 72,
+   "4": 6,
+   "5": 6,
+   "6": 150
+  }
+ },
+ {
+  "label": "N010",
+  "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+  "perfect": false,
+  "net16_by_position": {
+   "3": 3
+  },
+  "multiplet_codes": {
+   "2": 41,
+   "3": 41,
+   "4": 5,
+   "5": 5,
+   "6": 96
+  }
+ },
+ {
+  "label": "N011",
+  "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+  "perfect": false,
+  "net16_by_position": {
+   "3": 3
+  },
+  "multiplet_codes": {
+   "2": 41,
+   "3": 41,
+   "4": 5,
+   "5": 5,
+   "6": 96
+  }
+ },
+ {
+  "label": "N012",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16_by_position": {},
+  "multiplet_codes": {
+   "2": 72,
+   "3": 72,
+   "4": 6,
+   "5": 6,
+   "6": 150
+  }
+ },
+ {
+  "label": "N014",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16_by_position": {},
+  "multiplet_codes": {
+   "2": 72,
+   "3": 72,
+   "4": 6,
+   "5": 6,
+   "6": 150
+  }
+ },
+ {
+  "label": "N019",
+  "gauge": "A5 + A1 + A1 and D5 + A2 NU1 2",
+  "perfect": false,
+  "net16_by_position": {
+   "3": 3
+  },
+  "multiplet_codes": {
+   "2": 41,
+   "3": 41,
+   "4": 5,
+   "5": 5,
+   "6": 96
+  }
+ },
+ {
+  "label": "N020",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16_by_position": {},
+  "multiplet_codes": {
+   "2": 72,
+   "3": 72,
+   "4": 6,
+   "5": 6,
+   "6": 150
+  }
+ },
+ {
+  "label": "N022",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16_by_position": {},
+  "multiplet_codes": {
+   "2": 72,
+   "3": 72,
+   "4": 6,
+   "5": 6,
+   "6": 150
+  }
+ },
+ {
+  "label": "N023",
+  "gauge": "A5 + A1 + A1 and A5 + A1 + A1 NU1 2",
+  "perfect": false,
+  "net16_by_position": {},
+  "multiplet_codes": {
+   "2": 72,
+   "3": 72,
+   "4": 6,
+   "5": 6,
+   "6": 150
+  }
+ }
+]
