@@ -14,6 +14,8 @@ Results (orbifolder spectra, frozen in analysis/search_drivers_12101/):
   3. Scan: 36 models (6 events x 3 three-family shifts x with/without sigma); 12 accepted by the orbifolder (24 rejected
      as 'orbifold group ill-defined' -- my modular-invariance filter is incomplete). Every accepted model has net 16s
      or 27s in {0, +-1}; none has 3. All accepted models with sigma have no spinors at all.
+Control. The same orbifolder run and summary parsing on the published three-generation Z6-II model PRSZ-1
+(Parameswaran, Ramos-Sanchez, Zavala) gives net (3,2) = 3, so the counting is not an artefact.
 Conclusion. The three families of 12091/12096-12097 are an untwisted, per-plane statement; in actual Z6-II realisations
 built this way the twisted sectors and Wilson-line projections remove them. The three-family claims stay scoped to
 untwisted counting; realising them needs a different orbifold (e.g. the corpus's non-SUSY route with sigma paired with
@@ -56,6 +58,12 @@ def main():
     checks["scan: 36 attempted, 12 accepted; every accepted model has net 16s and 27s in {0, +-1}, none 3"] = (
         len(scan) == 36 and len(loaded) == 12 and all(abs(s[3]) <= 1 and abs(s[4]) <= 1 for s in loaded))
     checks["scan: every accepted model with sigma has no 16 or 16bar"] = all(s[5] == 0 and s[6] == 0 for s in loaded if s[0].endswith("S"))
+    ctrl = (DRV / "control_prsz1.out").read_text()
+    cc = Counter()
+    for m in re.finditer(r"^\s+(\d+) \(\s*(-?\d+),\s*(-?\d+),", ctrl, re.M):
+        cc[(int(m.group(2)), int(m.group(3)))] += int(m.group(1))
+    res["control_PRSZ1_net_quark_doublets"] = cc[(3, 2)] - cc[(-3, 2)]
+    checks["known-positive control: the same parsing gives 3 net (3,2) for the published PRSZ-1 Z6-II model"] = cc[(3, 2)] - cc[(-3, 2)] == 3
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

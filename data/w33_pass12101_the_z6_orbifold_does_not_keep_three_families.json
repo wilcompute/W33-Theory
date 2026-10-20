@@ -20,11 +20,13 @@
       "(0, -1)": 1
     }
   },
+  "control_PRSZ1_net_quark_doublets": 3,
   "checks": {
     "W33SO10 (Klein clock shift + clock and sigma Wilson lines): SO(10) x SU(2)^3 x U(1)^8, no 16 or 16bar at all": true,
     "W33E6 (no sigma): one 16 and one 16bar -- net zero": true,
     "scan: 36 attempted, 12 accepted; every accepted model has net 16s and 27s in {0, +-1}, none 3": true,
-    "scan: every accepted model with sigma has no 16 or 16bar": true
+    "scan: every accepted model with sigma has no 16 or 16bar": true,
+    "known-positive control: the same parsing gives 3 net (3,2) for the published PRSZ-1 Z6-II model": true
   },
   "all_checks_pass": true
 }
