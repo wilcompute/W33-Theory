@@ -1,0 +1,30 @@
+{
+  "W33SO10": {
+    "gauge": "SO(10) and SU(2) x SU(2) x SU(2) and U(1)^8",
+    "n16": 0,
+    "n16bar": 0,
+    "n10": 3
+  },
+  "W33E6": {
+    "gauge": "SO(10) and SU(3) x SU(3) x SU(2) and U(1)^6",
+    "n16": 1,
+    "n16bar": 1
+  },
+  "scan": {
+    "attempted": 36,
+    "loaded": 12,
+    "nets": {
+      "(0, 0)": 9,
+      "(-1, 0)": 1,
+      "(0, 1)": 1,
+      "(0, -1)": 1
+    }
+  },
+  "checks": {
+    "W33SO10 (Klein clock shift + clock and sigma Wilson lines): SO(10) x SU(2)^3 x U(1)^8, no 16 or 16bar at all": true,
+    "W33E6 (no sigma): one 16 and one 16bar -- net zero": true,
+    "scan: 36 attempted, 12 accepted; every accepted model has net 16s and 27s in {0, +-1}, none 3": true,
+    "scan: every accepted model with sigma has no 16 or 16bar": true
+  },
+  "all_checks_pass": true
+}

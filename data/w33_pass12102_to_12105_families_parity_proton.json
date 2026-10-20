@@ -1,0 +1,14 @@
+{
+  "12103_family_shift_wins": 0,
+  "12104": {
+    "(True, 0, 32)": 40,
+    "(False, 4, 40)": 60
+  },
+  "checks": {
+    "12102: for every event, all 540 zero-sum matter cubics (270 in (27,3)^3 + 270 conjugate) use three distinct family phases (d epsilon_ijk; = 11271)": true,
+    "12103: over r in [0,5] the three-family shifts never win (fam N0all = 86, N0mat = 58)": true,
+    "12104: perfect iff sigma even on the family a2 (40 perfect: 0 odd a2 roots; 60 imperfect: 4)": true,
+    "12105: X/Y couplings form a perfect matching (each Q with one (u,e), each L with one (d,N))": true
+  },
+  "all_checks_pass": true
+}
