@@ -1,0 +1,30 @@
+{
+  "12093_min_all_shifts": {
+    "('A1', 'A1', 'A3')": -727.9197915887004,
+    "('A2', 'A2')": -650.6195258919149,
+    "('A4',)": -740.4492512814052,
+    "('A1', 'A1', 'A1', 'A1')": -634.500453540757,
+    "('D4',)": -750.4641324831218,
+    "('A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1')": -714.636375122353
+  },
+  "12093_min_nontrivial_shifts": {
+    "('A1', 'A1', 'A3')": -411.40931324495375,
+    "('A2', 'A2')": -337.04178886408,
+    "('A4',)": -428.70358245023544,
+    "('A1', 'A1', 'A1', 'A1')": -314.98079373470995,
+    "('D4',)": -437.3321136435037,
+    "('A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1', 'A1')": -390.0068573877261
+  },
+  "12094_xy_pairs": {
+    "('XY', 'gauge')": 1,
+    "('Q', 'ue')": 5,
+    "('L', 'dN')": 10
+  },
+  "checks": {
+    "12092: the 27 SO(10) splits = 3 x the 9 factorisations through p; each has 3 far points of p": true,
+    "12093: with a Z3 circle (any or non-trivial shift) the bosonic minimum is still d4, ahead of a4": true,
+    "12094: X/Y character pairs are (Q,ue) x5, (L,dN) x10, (gauge,XY) x1 -- no grading protection of the proton": true,
+    "12095: omega fixes no class; the SM grading is not omega-invariant; its orbit is 3 SM gradings with distinct su(3), su(2)": true
+  },
+  "all_checks_pass": true
+}
