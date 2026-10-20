@@ -1,0 +1,140 @@
+{
+  "12126_so10_plane": {
+    "N004_F1_03_S002": {
+      "candidates": 27,
+      "sm": 0
+    },
+    "N008_F1_03_S033": {
+      "candidates": 27,
+      "sm": 0
+    },
+    "N008_F1_04_S037": {
+      "candidates": 31,
+      "sm": 0
+    },
+    "N008_F1_02_S053": {
+      "candidates": 27,
+      "sm": 0
+    },
+    "N008_F1_04_S037_T115": {
+      "candidates": 74,
+      "sm": 0
+    }
+  },
+  "12126_fraction_free": {
+    "N004_F1_03_S002": {
+      "n_exact": 2,
+      "n_no_fractional": 0,
+      "kY_of_fraction_free": []
+    },
+    "N008_F1_03_S033": {
+      "n_exact": 29,
+      "n_no_fractional": 11,
+      "kY_of_fraction_free": [
+        "17/3",
+        "29/3",
+        "41/3",
+        "53/3"
+      ]
+    },
+    "N008_F1_04_S037": {
+      "n_exact": 64,
+      "n_no_fractional": 22,
+      "kY_of_fraction_free": [
+        "17/3",
+        "29/3",
+        "41/3",
+        "53/3",
+        "65/3",
+        "101/3",
+        "209/3"
+      ]
+    },
+    "N008_F1_02_S053": {
+      "n_exact": 30,
+      "n_no_fractional": 4,
+      "kY_of_fraction_free": [
+        "17/3",
+        "29/3",
+        "41/3",
+        "53/3"
+      ]
+    },
+    "N008_F1_04_S037_T115": {
+      "n_exact": 20,
+      "n_no_fractional": 14,
+      "kY_of_fraction_free": [
+        "17/3",
+        "29/3",
+        "41/3",
+        "53/3"
+      ]
+    }
+  },
+  "12128_exotic_masses": {
+    "N008_F1_04_S037_T115": {
+      "unlifted": 7
+    },
+    "N004_F1_03_S002": {
+      "unlifted": 41
+    }
+  },
+  "12129_a8": {
+    "models": 104,
+    "vl_Q": {
+      "0": 104
+    },
+    "vl_u": {
+      "0": 104
+    },
+    "vl_d_models": 95,
+    "x56_models": 41
+  },
+  "12130_NB_minus_NF_corrected": {
+    "range": [
+      -432,
+      -160
+    ],
+    "left_right": [
+      -372,
+      -336,
+      -300,
+      -264
+    ],
+    "T115": -260,
+    "so10_parents": {
+      "N001_F1_04": -672,
+      "N004_F1_03": -672,
+      "N004_F1_04": -672,
+      "N004_F1_05": -648,
+      "N008_F1_02": -480,
+      "N008_F1_03": -696,
+      "N008_F1_04": -480
+    }
+  },
+  "12130_one_loop": {
+    "oneloop_model2_2j": {
+      "I_beta": -1240.9893808516524,
+      "I_twisted": -74.26208290841721,
+      "Lambda_over_M4": 657.6257318800348
+    },
+    "oneloop_N004_F1_03_S002_2j": {
+      "I_beta": -1274.5152205120899,
+      "I_twisted": -80.7365388226312,
+      "Lambda_over_M4": 677.6258796673606
+    }
+  },
+  "checks": {
+    "12126: no hypercharge in the so(10)-Cartan plane (contains k_Y = 5/3) gives the SM spectrum, 5/5 models": true,
+    "12126: fraction-free hypercharges in 4/5 models (11/22/4/14, none in S002), all with k_Y = 5/3 + 4n, n >= 1": true,
+    "12126: every difference of two fraction-free hypercharges is integral on all states and of even norm (383 pairs)": true,
+    "12127: S002 Yukawas all local (same fixed point); up Higgs at 3 points (torus-1 label 0), down at 6 (label 1,2); distinct scalars": true,
+    "12128: T115 at trilinear order: d^c pair lifts, 2/6 doublet pairs and 5/33 charged-singlet pairs stay light; S002 leaves 41": true,
+    "12129: A8 models: net Q = 3 in 104/104, no vector-like Y=1/6 doublet or u^c anywhere, vector-like d^c in 95, (3,2)_5/6 pairs in 41": true,
+    "12130: corrected N_B - N_F (with U(1) gauge bosons) in [-432, -160] over 75 models, never zero; LR -372/-336/-300/-264": true,
+    "12130: control -- 11106 model 2 at T_WL = 2i, T* = rho reproduced (Lambda/M4 = 657.6 within 1%)": true,
+    "12130: S002 integrand modular invariant (Gamma_1(6) seed, S on beta part, S and T on twisted part) to 1e-11": true,
+    "12130: S002 full one-loop Lambda/M^4 = +677.6 > 0 at T_WL = 2i, T* = rho": true
+  },
+  "all_checks_pass": true
+}

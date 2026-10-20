@@ -1,0 +1,107 @@
+{
+ "N008_F1_04_S037_T115": {
+  "classes": {
+   "(1, 1, Fraction(-1, 1))": {
+    "nR": 36,
+    "nRbar": 33,
+    "rank": 28,
+    "need": 33,
+    "ok": false
+   },
+   "(-3, 2, Fraction(-1, 6))": {
+    "nR": 3,
+    "nRbar": 0,
+    "rank": 0,
+    "need": 0,
+    "ok": true
+   },
+   "(1, 2, Fraction(1, 2))": {
+    "nR": 9,
+    "nRbar": 6,
+    "rank": 4,
+    "need": 6,
+    "ok": false
+   },
+   "(3, 1, Fraction(-1, 3))": {
+    "nR": 4,
+    "nRbar": 1,
+    "rank": 1,
+    "need": 1,
+    "ok": true
+   },
+   "(3, 1, Fraction(2, 3))": {
+    "nR": 3,
+    "nRbar": 0,
+    "rank": 0,
+    "need": 0,
+    "ok": true
+   }
+  },
+  "n_classes": 5,
+  "n_bad": 2,
+  "unlifted_pairs": 7
+ },
+ "N004_F1_03_S002": {
+  "classes": {
+   "(-3, 2, Fraction(-1, 6))": {
+    "nR": 1,
+    "nRbar": 4,
+    "rank": 1,
+    "need": 1,
+    "ok": true
+   },
+   "(1, 1, Fraction(-5, 3))": {
+    "nR": 3,
+    "nRbar": 3,
+    "rank": 0,
+    "need": 3,
+    "ok": false
+   },
+   "(1, 1, Fraction(2, 3))": {
+    "nR": 18,
+    "nRbar": 18,
+    "rank": 9,
+    "need": 18,
+    "ok": false
+   },
+   "(1, 1, Fraction(1, 1))": {
+    "nR": 42,
+    "nRbar": 39,
+    "rank": 33,
+    "need": 39,
+    "ok": false
+   },
+   "(-3, 1, Fraction(-2, 3))": {
+    "nR": 6,
+    "nRbar": 3,
+    "rank": 0,
+    "need": 3,
+    "ok": false
+   },
+   "(1, 1, Fraction(1, 3))": {
+    "nR": 9,
+    "nRbar": 9,
+    "rank": 0,
+    "need": 9,
+    "ok": false
+   },
+   "(-3, 1, Fraction(1, 3))": {
+    "nR": 10,
+    "nRbar": 7,
+    "rank": 5,
+    "need": 7,
+    "ok": false
+   },
+   "(1, 2, Fraction(-1, 2))": {
+    "nR": 12,
+    "nRbar": 9,
+    "rank": 0,
+    "need": 9,
+    "ok": false
+   }
+  },
+  "n_classes": 8,
+  "n_bad": 7,
+  "unlifted_pairs": 41
+ }
+}

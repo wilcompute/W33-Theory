@@ -1,0 +1,53 @@
+{
+ "N008_F1_03_S033": {
+  "n_fraction_free": 11,
+  "pairs": 55,
+  "integral_differences": 55,
+  "even_norm_differences": 55,
+  "y2": [
+   "17/6",
+   "29/6",
+   "41/6",
+   "53/6"
+  ]
+ },
+ "N008_F1_04_S037": {
+  "n_fraction_free": 22,
+  "pairs": 231,
+  "integral_differences": 231,
+  "even_norm_differences": 231,
+  "y2": [
+   "17/6",
+   "29/6",
+   "41/6",
+   "53/6",
+   "65/6",
+   "101/6",
+   "209/6"
+  ]
+ },
+ "N008_F1_02_S053": {
+  "n_fraction_free": 4,
+  "pairs": 6,
+  "integral_differences": 6,
+  "even_norm_differences": 6,
+  "y2": [
+   "17/6",
+   "29/6",
+   "41/6",
+   "53/6"
+  ]
+ },
+ "N008_F1_04_S037_T115": {
+  "n_fraction_free": 14,
+  "pairs": 91,
+  "integral_differences": 91,
+  "even_norm_differences": 91,
+  "y2": [
+   "17/6",
+   "29/6",
+   "41/6",
+   "53/6"
+  ]
+ }
+}

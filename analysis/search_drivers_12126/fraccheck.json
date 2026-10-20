@@ -1,0 +1,50 @@
+{
+ "N004_F1_03_S002": {
+  "n_exact": 2,
+  "n_no_fractional": 0,
+  "kY_of_fraction_free": []
+ },
+ "N008_F1_03_S033": {
+  "n_exact": 29,
+  "n_no_fractional": 11,
+  "kY_of_fraction_free": [
+   "17/3",
+   "29/3",
+   "41/3",
+   "53/3"
+  ]
+ },
+ "N008_F1_04_S037": {
+  "n_exact": 64,
+  "n_no_fractional": 22,
+  "kY_of_fraction_free": [
+   "17/3",
+   "29/3",
+   "41/3",
+   "53/3",
+   "65/3",
+   "101/3",
+   "209/3"
+  ]
+ },
+ "N008_F1_02_S053": {
+  "n_exact": 30,
+  "n_no_fractional": 4,
+  "kY_of_fraction_free": [
+   "17/3",
+   "29/3",
+   "41/3",
+   "53/3"
+  ]
+ },
+ "N008_F1_04_S037_T115": {
+  "n_exact": 20,
+  "n_no_fractional": 14,
+  "kY_of_fraction_free": [
+   "17/3",
+   "29/3",
+   "41/3",
+   "53/3"
+  ]
+ }
+}
