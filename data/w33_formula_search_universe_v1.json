@@ -381887,6 +381887,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ed4460dd64e1d8f9b23e847d3960902d0fdb52103a43dd23e2251eb30a66f042",
+      "normalized_formula": "-MasslessN_B\u2212N_F<0in^all75^loadedmodelsofbothscans,rangingfrom\u2212454to\u2212186.Thefourleft-right",
+      "numeric_literals": [
+        "0",
+        "186",
+        "454",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12121_12125_HYPERCHARGE_YUKAWAS_VACUUM.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 66,
+          "path": "analysis/PASS12121_12125_HYPERCHARGE_YUKAWAS_VACUUM.md",
+          "raw": "- Massless N_B \u2212 N_F < 0 in **all 75** loaded models of both scans, ranging from \u2212454 to \u2212186. The four left-right",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dd78dcec68b392109c7183c8bd237d446e289a4f383266a36c487becc389308c",
+      "structural_formula": "-MasslessN_B\u2212N_F<#in^all7#^loadedmodelsofbothscans,rangingfrom\u2212#to\u2212#.Thefourleft-right"
+    },
+    {
+      "file_count": 1,
       "formula_id": "af3cbf545ca6bb29c478b06b5de7b8061e0c3d75dacbbf0406322f9e738231f0",
       "normalized_formula": "-Massscale:m_W33=sqrt(11/33)*Lambda_substrate",
       "numeric_literals": [
@@ -409977,6 +410007,66 @@
       },
       "structural_family_id": "8c2ea2ab68deb516e736c9abdea213489cd2979d9d484e87babdc313522658bd",
       "structural_formula": "#--Bose-Fermicountofthemasslessspectrum(helicitystates,representation-weighted):N_B-N_F=#,#,#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7cbb159b03ac287be880d22bd24510b05530b1b92a19949fa5b157d2c872204b",
+      "normalized_formula": "12122--Yukawas(gauge,WittenZ2,pointgroup,spacegroup,H-momentum;theexactrulesumR=0of11098andthe",
+      "numeric_literals": [
+        "0",
+        "1098",
+        "12122"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "12122 -- Yukawas (gauge, Witten Z2, point group, space group, H-momentum; the exact rule sum R = 0 of 11098 and the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "166a8b2a898e9f4da91e1af1109bc499e8a81370127ee6cf8d2506c7cfadae18",
+      "structural_formula": "#--Yukawas(gauge,WittenZ2,pointgroup,spacegroup,H-momentum;theexactrulesumR=#of1#andthe"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5053db6df3680b0df6ab3d6436ffa6034eae844d63304d133c0b2a66f79e9e9a",
+      "normalized_formula": "12123--vacuumenergy.MasslessN_B-N_F<0inall75loadedmodelsofbothscans(-454..-186;thefourleft-right",
+      "numeric_literals": [
+        "-186",
+        "-454",
+        "0",
+        "12123",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "12123 -- vacuum energy. Massless N_B - N_F < 0 in all 75 loaded models of both scans (-454 .. -186; the four left-right",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0dc3496d542fc2337d3f58badb1cb6c17925c72ca0bfcd20adb0b62fcdb5e05f",
+      "structural_formula": "#--vacuumenergy.MasslessN_B-N_F<#inall7#loadedmodelsofbothscans(#..#;thefourleft-right"
     },
     {
       "file_count": 1,
@@ -559055,6 +559145,34 @@
       },
       "structural_family_id": "dfaa17de559ff6c1907cf53e49f1e97107be223336433aea764ff7e41c7a365c",
       "structural_formula": "AnamedSU3-family-invariantEFTfortwocomplexsymmetric3\u00d7#fieldsusesrealquadratic,cubicandquarticcouplingsplusthetwoactual1#vectorlikesingletprobeloops.Nospectra,mixinganglesorCPphasesareprescribed.Itstreequarticiscoercivefor|sigma|<#,using`|Tr[(U\u2020D)#]|\u2264Tr(UU\u2020DD\u2020)`.Fermionloopsalonedonotconstituteagloballystablelarge-fieldUVtheory"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "42fafd97ee695ba79290e70b1ec11acc71e6a02689616862e55ca312abbbb40f",
+      "normalized_formula": "AnapparentN_B=N_F=0model(T110,all-abeliangaugegroup)wasacountingartefact:emptydimensionstringswere",
+      "numeric_literals": [
+        "0",
+        "10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12121_12125_HYPERCHARGE_YUKAWAS_VACUUM.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/PASS12121_12125_HYPERCHARGE_YUKAWAS_VACUUM.md",
+          "raw": "An apparent N_B = N_F = 0 model (T110, all-abelian gauge group) was a counting artefact: empty dimension strings were",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a8eea9fbf397a78504514fcdc2e4c790b23b15678f895349895be6f6aff854c4",
+      "structural_formula": "AnapparentN_B=N_F=#model(T1#,all-abeliangaugegroup)wasacountingartefact:emptydimensionstringswere"
     },
     {
       "file_count": 1,
@@ -728788,6 +728906,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "99edc3dffa805a3aade3e1a81048d471572e1262096490841833194d924d60cc",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass12121_to_12125_hypercharge_yukawas_vacuum.json\"",
+      "numeric_literals": [
+        "2121",
+        "2125",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass12121_to_12125_hypercharge_yukawas_vacuum.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1e8427f426e3cddfdf2684aae5b46f22176eda2c483be70d3fdc3fd414bcbb1c",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_hypercharge_yukawas_vacuum.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "0e8bf54813ae09975b8ffb40c2c2eda3883ee020f6009f102f97b6ebf6841b48",
       "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass1310_1314_literal_a5_coset_correction.json\"",
       "numeric_literals": [
@@ -849375,6 +849522,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f413aee6938e8113fd53ecb282ab8f46cb0ff8543199b24395fa3811f9315873",
+      "normalized_formula": "U(1)charge)andanexactrationalbranchsearchoverYinspan(U(1)s,SU(2)_RCartan),with(3,2)atY=+-1/6",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "U(1) charge) and an exact rational branch search over Y in span(U(1)s, SU(2)_R Cartan), with (3,2) at Y = +-1/6,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "35e447971b75adb1e69fd3c4f73d7b0b7a1e4354721ade3aae2052d45fbe738a",
+      "structural_formula": "U(#)charge)andanexactrationalbranchsearchoverYinspan(U(#)s,SU(#)_RCartan),with(#,#)atY=+#/#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "631caed8180c35266c2d734ab8050ab25054606bc49c4744a9705c2d8612768a",
       "normalized_formula": "U(1)parts(sum_vc_vq_v=0),tau=1/2(odd)or0(even).Thesaturatedrelationlatticedependsonlyonthe",
       "numeric_literals": [
@@ -886758,6 +886936,33 @@
       },
       "structural_family_id": "208565e150edc411759f2093d3a7c4fc08839c864847c311c0bb31b8829eb5a0",
       "structural_formula": "[indexforindexinrange(#)ifindex!=singled_family_index])]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0b1efe389397bf4be6f2883cf22fc29241128bd18bc0a8b43dde20bf0665bf43",
+      "normalized_formula": "[mixing[m]forminLR+[T115]]=[True,True,False,True,False]",
+      "numeric_literals": [
+        "15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 101,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "[mixing[m] for m in LR + [T115]] == [True, True, False, True, False]",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "b6c610e8f367a34ae84d3f87ee137a3f228d508d85d2a3a2c357de62649adac3",
+      "structural_formula": "[mixing[m]forminLR+[T1#]]=[True,True,False,True,False]"
     },
     {
       "file_count": 1,
@@ -989124,7 +989329,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 647,
+          "line": 648,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1034572,6 +1034777,34 @@
       },
       "structural_family_id": "ae0fbc944daec4680905b63d5f16f143bfa9d2640dfa7972b8a74b8177bf0a4c",
       "structural_formula": "^Rigorousrestricted-coordinateobstruction:^amonomiallinearmaponC^#(independentnonzerocoordinaterescalingsandapermutation)preservesmonomialsupportcardinalityofacubicpolynomial.#!=#,sonosuchSIMPLEsignedpermutationandscalingoftrinificationcoordinatesproducesthestandardJordancubic.AgenuinecomplexE6-equivariantchangeofbasisMUSTmixcoordinates;thisdoesNOTruleoutanarbitraryinvertible2#\u00d7#intertwiner.ThelatterremainsOPEN,andnoW3#weight-to-octonionmap,Yukawamagnitude,orSMmassmatrixwasderived.ParallelPass1#alreadyresolved1#family-diagonal+#crossmonomialsinadifferentclock-pairbasis;thosepriorfindingsarecredited,notrepeatedasnovelty"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "afded4845ad437d589ddd3d7b8c5ed55b152b0faa9e1980ba20ca91f3a023199",
+      "normalized_formula": "^Rules.^Gauge,WittenZ2,pointgroup,spacegroup,andH-momentum.Theexactrule\u03a3R=0of11098andtheweaker",
+      "numeric_literals": [
+        "0",
+        "1098"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12121_12125_HYPERCHARGE_YUKAWAS_VACUUM.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/PASS12121_12125_HYPERCHARGE_YUKAWAS_VACUUM.md",
+          "raw": "**Rules.** Gauge, Witten Z2, point group, space group, and H-momentum. The exact rule \u03a3R = 0 of 11098 and the weaker",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "771fad093c6d1a7a1970f22664a599eea259dbd6f81d633a4555856ff418a521",
+      "structural_formula": "^Rules.^Gauge,WittenZ2,pointgroup,spacegroup,andH-momentum.Theexactrule\u03a3R=#of1#andtheweaker"
     },
     {
       "file_count": 1,
@@ -1082691,6 +1082924,35 @@
       },
       "structural_family_id": "48d2630b146452e43a20f0c0d2b3e9712585a01cfa3345cc2ff98197136cfb15",
       "structural_formula": "andhom_dimension([ad1,ad2],trivial)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1d62488057dd5dbdacf1585a2cb99f7898057416513a16223d698535461f14d9",
+      "normalized_formula": "andhy[T115][\"n_exact\"]=20andlen(yk[T115][\"quark\"])=0)",
+      "numeric_literals": [
+        "0",
+        "15",
+        "20"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 147,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "and hy[T115][\"n_exact\"] == 20 and len(yk[T115][\"quark\"]) == 0)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0b412434972c145f4f3a8bedd69cbfd5fd8bc8f4e595a364ca7ca448d26b5ebe",
+      "structural_formula": "andhy[T1#][\"n_exact\"]=#andlen(yk[T1#][\"quark\"])=#)"
     },
     {
       "file_count": 1,
@@ -1171243,6 +1171505,158 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e26ab1884c91b9d8def97b9de2b51955dd069c27a4843e85baf459340ae74450",
+      "normalized_formula": "checks[\"12122:chiral-to-vector-likemixinginS002,S033,S053only;mixeddoubletcouplestou^candd^c(S002),d^conly(S033,S053)\"]=(",
+      "numeric_literals": [
+        "02",
+        "12122",
+        "33",
+        "53"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 100,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "checks[\"12122: chiral-to-vector-like mixing in S002, S033, S053 only; mixed doublet couples to u^c and d^c (S002), d^c only (S033, S053)\"] = (",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "d677239c7b1e0e0cd3e997a3643aded83c9e5f12f054d41a4947065af4ae7c95",
+      "structural_formula": "checks[\"#:chiral-to-vector-likemixinginS0#,S0#,S0#only;mixeddoubletcouplestou^candd^c(S0#),d^conly(S0#,S0#)\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "09f47d2b09854780d08d177e37bb0bb33801ab91d740ce191d719d6c515813ee",
+      "normalized_formula": "checks[\"12122:chiralquarkdoubletshavenogauge-invariantQq^cHcoupling(allfivemodels)\"]=no_direct",
+      "numeric_literals": [
+        "12122"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 96,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "checks[\"12122: chiral quark doublets have no gauge-invariant Q q^c H coupling (all five models)\"] = no_direct",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c68f5f8308bfd5d94add375d3b7a016fbab5ab8fa94021543a2b013c82b4e92f",
+      "structural_formula": "checks[\"#:chiralquarkdoubletshavenogauge-invariantQq^cHcoupling(allfivemodels)\"]=no_direct"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a3414cfea67e43d0f7253562f3c2d38cfe54ab3243e65ad1fd0b9505109c9ca1",
+      "normalized_formula": "checks[\"12122:vector-like-doubletYukawasUxT2xT1=15,6,0,6,0;exactandmod-3H-momentumagree\"]=(",
+      "numeric_literals": [
+        "0",
+        "12122",
+        "15",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 97,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "checks[\"12122: vector-like-doublet Yukawas U x T2 x T1 = 15, 6, 0, 6, 0; exact and mod-3 H-momentum agree\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c39023ade585233f773425fa3b023f499cfac7fadacb7d3b7a11aa38b4ca43fb",
+      "structural_formula": "checks[\"#:vector-like-doubletYukawasUxT2xT1=#,#,#,#,#;exactandmod-#H-momentumagree\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8c1ae7161e03efea63581e9a5051bdc2ee3c9926bf1dd45796b4ee6c06ea5926",
+      "normalized_formula": "checks[\"12123:N_B-N_F<0inall75loadedmodels(-454..-186):positivelarge-volumevacuumenergy,nosuper-no-scalemodel\"]=(",
+      "numeric_literals": [
+        "-186",
+        "-454",
+        "0",
+        "12123",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 113,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "checks[\"12123: N_B - N_F < 0 in all 75 loaded models (-454..-186): positive large-volume vacuum energy, no super-no-scale model\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "aa3dfe17e4121fd61e1e6f096b21c217f709f20553acd97240769544d9794f4f",
+      "structural_formula": "checks[\"#:N_B-N_F<#inall7#loadedmodels(#..#):positivelarge-volumevacuumenergy,nosuper-no-scalemodel\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "460c35881c3f23ba50eca374431c7e60e54f8ecca11770597cb7646d35705847",
+      "normalized_formula": "checks[\"12125:thirdWilsonline:120attempts,56load,exactlyoneSU(3)xSU(2)xU(1)smodelwithnet3quarkdoublets,tachyon-andanomaly-free,20exacthypercharges,noquarkYukawa\"]=(",
+      "numeric_literals": [
+        "1",
+        "120",
+        "12125",
+        "2",
+        "20",
+        "3",
+        "56"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 145,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "checks[\"12125: third Wilson line: 120 attempts, 56 load, exactly one SU(3) x SU(2) x U(1)s model with net 3 quark doublets, tachyon- and anomaly-free, 20 exact hypercharges, no quark Yukawa\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a5118159448cca7c35cb195d6b957677544d988a296b1af14db7d586d944390d",
+      "structural_formula": "checks[\"#:thirdWilsonline:#attempts,#load,exactlyoneSU(#)xSU(#)xU(#)smodelwithnet3quarkdoublets,tachyon-andanomaly-free,#exacthypercharges,noquarkYukawa\"]=("
+    },
+    {
+      "file_count": 1,
       "formula_id": "bb811ae9007f03eb7458a962180e5d159626dcb3cc27634fcee7f7c8699f37a8",
       "normalized_formula": "checks[\"15_fermionic\"]=g=15#15Weylfermionspergeneration",
       "numeric_literals": [
@@ -1253358,6 +1253772,35 @@
       },
       "structural_family_id": "fa3cac36ab3384b4bb3327b71f9fd6abf56e279ab37ebd21d119a2773a823e80",
       "structural_formula": "doubletclassesmirrorthesingletexcesscountforcount:#=#\u00d7#and6=#\u00d7#.Buttwocondensatesof"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "58c08da00ad2b957b8104ea8961e1620cf0649667f8bb80116b4c5dd91d54f78",
+      "normalized_formula": "doublets,notachyons,anomaliescancelled,20exactthree-generationhypercharges(k_Y>=17/3)--butnoquarkYukawa",
+      "numeric_literals": [
+        "17",
+        "20",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 34,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "doublets, no tachyons, anomalies cancelled, 20 exact three-generation hypercharges (k_Y >= 17/3) -- but no quark Yukawa",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "655d89e7d3c7e8559bb2a226d9eb63e1aace211118aff9db877c8db4eeb39261",
+      "structural_formula": "doublets,notachyons,anomaliescancelled,#exactthree-generationhypercharges(k_Y>=#/#)--butnoquarkYukawa"
     },
     {
       "file_count": 1,
@@ -1368056,19 +1368499,27 @@
       "structural_formula": "k_B\\cdot1#^{#}=\\Phi_{#}(\\alpha^{#}_{\\text{int}}rq\\mathrm{Ogg}_9+\\Phi_6)=#\\\\[#pt]"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "c3e8bcd437a2e66813019a0fa506594f82240c45369fd81e7788388aa289a83f",
       "normalized_formula": "k_Y=5/3",
       "numeric_literals": [
         "3",
         "5"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "papers/forty_points/sec07_realforms.tex",
         "w33_paper_body.tex"
       ],
       "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 406,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "k_Y=5/3",
+          "status": "unclassified"
+        },
         {
           "category": "inline_math",
           "line": 15255,
@@ -1368078,7 +1368529,8 @@
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1
+        "certified_or_theorem": 1,
+        "unclassified": 1
       },
       "structural_family_id": "8a25ed67f68fa25190f0386995457dca67f9974403b77a7cf29faadc6ee9d181",
       "structural_formula": "k_Y=#/#"
@@ -1369756,6 +1370208,35 @@
       },
       "structural_family_id": "5882bab33b44e3eddb553fed69befcd1d2319ec9af0a443263019b67e84922a1",
       "structural_formula": "kinds[\"missing\"]+=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "055ba65ecf4f2f9b532920025bb95f59cf85ab4ca1bcac207cb6ce3ea6b6271c",
+      "normalized_formula": "kinds[m]=sorted({\"up\"ifabs(Fr(q[\"cy\"][0]))=Fr(2,3)else\"down\"forqinyk[m][\"quark\"]ifq[\"Qy\"]=chiral_y})",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 94,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "kinds[m] = sorted({\"up\" if abs(Fr(q[\"cy\"][0])) == Fr(2, 3) else \"down\" for q in yk[m][\"quark\"] if q[\"Qy\"] == chiral_y})",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "aac7f331bfe0e622127514e9813bccd1a87eb87de2ec6a0b6ab4fa52c7d01680",
+      "structural_formula": "kinds[m]=sorted({\"up\"ifabs(Fr(q[\"cy\"][#]))=Fr(#,#)else\"down\"forqinyk[m][\"quark\"]ifq[\"Qy\"]=chiral_y})"
     },
     {
       "file_count": 1,
@@ -1401209,7 +1401690,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 646,
+          "line": 647,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1406343,7 +1406824,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 646,
+          "line": 647,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1437095,6 +1437576,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "344bc7a28d8d9fb00a35af0cb74939d53ff03e8614cb9d89b810f3ef89bc0040",
+      "normalized_formula": "mixing={m:any(re.match(r\"ALLOWEDB\\(-?3,2\\)S\\(1,1\\)\",k)forkinmx[m])forminLR+[T115]}",
+      "numeric_literals": [
+        "1",
+        "15",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 91,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "mixing = {m: any(re.match(r\"ALLOWED B\\(-?3,2\\) S\\(1,1\\)\", k) for k in mx[m]) for m in LR + [T115]}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9939296b2d59f83a5bb7926dda20ef51a364a0cbf121ad41aaf1fa79bf3f7d85",
+      "structural_formula": "mixing={m:any(re.match(r\"ALLOWEDB\\(-?#,#\\)S\\(#,#\\)\",k)forkinmx[m])forminLR+[T1#]}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "018936755d793d2a88d3ebe6d8d267b6b368ff97821881b86de34ebad784fb41",
       "normalized_formula": "mixingN=1,2changesnormalizedsectorweights,withd_Cp=-betap(1-p)",
       "numeric_literals": [
@@ -1450869,6 +1451380,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6faf55874102fefcd9e6eff490da9995f2df9a14904c2906f792819fa174827a",
+      "normalized_formula": "no_direct=all(notany(re.match(r\"gaugeB\\(-?3,1\\)S\\(1,2\\)\",k)forkinmx[m])forminLR+[T115])",
+      "numeric_literals": [
+        "1",
+        "15",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 90,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "no_direct = all(not any(re.match(r\"gauge B\\(-?3,1\\) S\\(1,2\\)\", k) for k in mx[m]) for m in LR + [T115])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d6d39e3ee2b02888b998a5c6bc45206ce9b301a00b6fc4780d55c359b3ba5d92",
+      "structural_formula": "no_direct=all(notany(re.match(r\"gaugeB\\(-?#,#\\)S\\(#,#\\)\",k)forkinmx[m])forminLR+[T1#])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1e53ba7c87f47eeee51d96f35cc233412833055de8b96c1fdb6fdb4d2603ba43",
       "normalized_formula": "no_doubling_proof='L(k)ispositivedefiniteoffk=0modulo2pi:itszerowouldbeacovariantlyconstantscalar,whosethreeunitdeck-loopholonomiesforceexp(ik_i)=1.WriteH=[[rL,S],[S,-rL]],SHermitian.Azerovectorobeysr(psi.dagLpsi+chi.dagLchi)=0bytakingrealpartsofbothblockequations.Offoriginitvanishes;atoriginbothspinorsareconstantandSkillsthem.Thusexactly4zeromodes,allatorigin,foreveryr>0.'",
       "numeric_literals": [
@@ -1455309,6 +1455850,63 @@
       },
       "structural_family_id": "5a9af8ba3f9c541f7e1ffda61676e19f0c450b8efedef242f9177a405386ee64",
       "structural_formula": "np.kron(gv.T.astype(np.int6#),np.eye(dim_w,dtype=np.int6#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c0d521eb86d67e0622ae8b0d10e63ad678cc513fe35175c477bc17672e0aace7",
+      "normalized_formula": "nq=[15,6,0,6,0]and[len(ymod3[m][\"quark\"])forminLR]=nq[:4]",
+      "numeric_literals": [
+        "0",
+        "15",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 98,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "nq == [15, 6, 0, 6, 0] and [len(ymod3[m][\"quark\"]) for m in LR] == nq[:4]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6effd2f9417355c217a41b6db166207c099c02dfb2d7933f156943e6b4229c4f",
+      "structural_formula": "nq=[#,#,#,#,#]and[len(ymod3[m][\"quark\"])forminLR]=nq[:#]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3d54797e6124d741e81f21c8e59f8925ac2b1df3f1222b5e9a12a33aa3b2914b",
+      "normalized_formula": "nq=[len(yk[m][\"quark\"])forminLR+[T115]]",
+      "numeric_literals": [
+        "15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 89,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "nq = [len(yk[m][\"quark\"]) for m in LR + [T115]]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "849aaf220d27e5a32c8553c885e20dc683bb03d7e368ce8deeab50a030744030",
+      "structural_formula": "nq=[len(yk[m][\"quark\"])forminLR+[T1#]]"
     },
     {
       "file_count": 1,
@@ -1663829,6 +1664427,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f5cf42c8ccdeeca00ce98fa995a10c3f61788300d67895b98512f7631843ff8e",
+      "normalized_formula": "res[\"12122_yukawa\"]=dict(quark_couplings=dict(zip(LR+[T115],nq)),mixing=mixing,light_doublet_couples_to=kinds)",
+      "numeric_literals": [
+        "12122",
+        "15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 95,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "res[\"12122_yukawa\"] = dict(quark_couplings=dict(zip(LR + [T115], nq)), mixing=mixing, light_doublet_couples_to=kinds)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a601ca4c8894acdefb4b1dacbc993499560a30e9292d9d01e8cc26e180ac10f3",
+      "structural_formula": "res[\"#_yukawa\"]=dict(quark_couplings=dict(zip(LR+[T1#],nq)),mixing=mixing,light_doublet_couples_to=kinds)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7fca7a0df44053885faa83541510ce66482f1c43d4f5379f0fcd8a9d1f99f5ff",
       "normalized_formula": "res[\"E_n_if_F_m_flat\"]={str(n):str(En[n])forninrange(2,13)}",
       "numeric_literals": [
@@ -1723208,6 +1723834,35 @@
       },
       "structural_family_id": "495e1549d0cafe25090c338817320bd56c377f7769841aa91545c29a773abf37",
       "structural_formula": "slowdown.MagicperroundistheKSdeficittheta-alpha=q=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0267609853f11e2b9ee06581f27d3d117b443ebde35a9d35b8efc9bf3c4dd5bf",
+      "normalized_formula": "sm=[rforrinloadedifr[\"gauge\"].split(\"and\")[0].split(\"NU1\")[0].strip()=\"A2+A1\"andabs(r[\"net32\"])=3]",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 143,
+          "path": "analysis/w33_pass12121_to_12125_hypercharge_yukawas_vacuum.py",
+          "raw": "sm = [r for r in loaded if r[\"gauge\"].split(\" and \")[0].split(\" NU1\")[0].strip() == \"A2 + A1\" and abs(r[\"net32\"]) == 3]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e2482244f45e4b34a1fda01ab4fec3553094d55304d0bafd1927bc47fb2ff7e1",
+      "structural_formula": "sm=[rforrinloadedifr[\"gauge\"].split(\"and\")[#].split(\"NU1\")[#].strip()=\"A2+A1\"andabs(r[\"net3#\"])=#]"
     },
     {
       "file_count": 1,
@@ -1818415,7 +1819070,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 646,
+          "line": 647,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1867282,9 +1867937,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-20T11:54:24-04:00",
+  "frozen_at": "2026-10-20T13:09:07-04:00",
   "pass": 398,
-  "repository_head": "e431f7507d9cb6cc86037993b458736ffaf84db7",
+  "repository_head": "d6409a3df216d588710a7dfba5713a486d240dd7",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1927112,11 +1927767,27 @@
     },
     {
       "exact_formula_ids": [
+        "7cbb159b03ac287be880d22bd24510b05530b1b92a19949fa5b157d2c872204b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "166a8b2a898e9f4da91e1af1109bc499e8a81370127ee6cf8d2506c7cfadae18",
+      "structural_formula": "#--Yukawas(gauge,WittenZ2,pointgroup,spacegroup,H-momentum;theexactrulesumR=#of1#andthe"
+    },
+    {
+      "exact_formula_ids": [
         "f026339893f1e188901bbb29460f7f1cdc7dc3c1625c87ea9d1b2cc7a8514a7a"
       ],
       "exact_member_count": 1,
       "structural_family_id": "245646c342b905b212beb344bc07cb08367569f4e526243096482c96a5b8d9fe",
       "structural_formula": "#--the(#,#bar)familyHiggscannotbemasslessatlevel1.Withh=C2/(#(k+h^vee))(rootsofnorm2)"
+    },
+    {
+      "exact_formula_ids": [
+        "5053db6df3680b0df6ab3d6436ffa6034eae844d63304d133c0b2a66f79e9e9a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0dc3496d542fc2337d3f58badb1cb6c17925c72ca0bfcd20adb0b62fcdb5e05f",
+      "structural_formula": "#--vacuumenergy.MasslessN_B-N_F<#inall7#loadedmodelsofbothscans(#..#;thefourleft-right"
     },
     {
       "exact_formula_ids": [
@@ -1993173,6 +1993844,14 @@
     },
     {
       "exact_formula_ids": [
+        "ed4460dd64e1d8f9b23e847d3960902d0fdb52103a43dd23e2251eb30a66f042"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dd78dcec68b392109c7183c8bd237d446e289a4f383266a36c487becc389308c",
+      "structural_formula": "-MasslessN_B\u2212N_F<#in^all7#^loadedmodelsofbothscans,rangingfrom\u2212#to\u2212#.Thefourleft-right"
+    },
+    {
+      "exact_formula_ids": [
         "af3cbf545ca6bb29c478b06b5de7b8061e0c3d75dacbbf0406322f9e738231f0"
       ],
       "exact_member_count": 1,
@@ -2017702,6 +2018381,14 @@
       "exact_member_count": 1,
       "structural_family_id": "dfaa17de559ff6c1907cf53e49f1e97107be223336433aea764ff7e41c7a365c",
       "structural_formula": "AnamedSU3-family-invariantEFTfortwocomplexsymmetric3\u00d7#fieldsusesrealquadratic,cubicandquarticcouplingsplusthetwoactual1#vectorlikesingletprobeloops.Nospectra,mixinganglesorCPphasesareprescribed.Itstreequarticiscoercivefor|sigma|<#,using`|Tr[(U\u2020D)#]|\u2264Tr(UU\u2020DD\u2020)`.Fermionloopsalonedonotconstituteagloballystablelarge-fieldUVtheory"
+    },
+    {
+      "exact_formula_ids": [
+        "42fafd97ee695ba79290e70b1ec11acc71e6a02689616862e55ca312abbbb40f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a8eea9fbf397a78504514fcdc2e4c790b23b15678f895349895be6f6aff854c4",
+      "structural_formula": "AnapparentN_B=N_F=#model(T1#,all-abeliangaugegroup)wasacountingartefact:emptydimensionstringswere"
     },
     {
       "exact_formula_ids": [
@@ -2063612,6 +2064299,14 @@
     },
     {
       "exact_formula_ids": [
+        "99edc3dffa805a3aade3e1a81048d471572e1262096490841833194d924d60cc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1e8427f426e3cddfdf2684aae5b46f22176eda2c483be70d3fdc3fd414bcbb1c",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_hypercharge_yukawas_vacuum.json\""
+    },
+    {
+      "exact_formula_ids": [
         "f555dfb3367f2143081dbe862eb7d9c516fea101176a33ec2458d31696a357e5"
       ],
       "exact_member_count": 1,
@@ -2096277,6 +2096972,14 @@
     },
     {
       "exact_formula_ids": [
+        "f413aee6938e8113fd53ecb282ab8f46cb0ff8543199b24395fa3811f9315873"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "35e447971b75adb1e69fd3c4f73d7b0b7a1e4354721ade3aae2052d45fbe738a",
+      "structural_formula": "U(#)charge)andanexactrationalbranchsearchoverYinspan(U(#)s,SU(#)_RCartan),with(#,#)atY=+#/#"
+    },
+    {
+      "exact_formula_ids": [
         "631caed8180c35266c2d734ab8050ab25054606bc49c4744a9705c2d8612768a"
       ],
       "exact_member_count": 1,
@@ -2106267,6 +2106970,14 @@
       "exact_member_count": 1,
       "structural_family_id": "208565e150edc411759f2093d3a7c4fc08839c864847c311c0bb31b8829eb5a0",
       "structural_formula": "[indexforindexinrange(#)ifindex!=singled_family_index])]"
+    },
+    {
+      "exact_formula_ids": [
+        "0b1efe389397bf4be6f2883cf22fc29241128bd18bc0a8b43dde20bf0665bf43"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b6c610e8f367a34ae84d3f87ee137a3f228d508d85d2a3a2c357de62649adac3",
+      "structural_formula": "[mixing[m]forminLR+[T1#]]=[True,True,False,True,False]"
     },
     {
       "exact_formula_ids": [
@@ -2143167,6 +2143878,14 @@
     },
     {
       "exact_formula_ids": [
+        "afded4845ad437d589ddd3d7b8c5ed55b152b0faa9e1980ba20ca91f3a023199"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "771fad093c6d1a7a1970f22664a599eea259dbd6f81d633a4555856ff418a521",
+      "structural_formula": "^Rules.^Gauge,WittenZ2,pointgroup,spacegroup,andH-momentum.Theexactrule\u03a3R=#of1#andtheweaker"
+    },
+    {
+      "exact_formula_ids": [
         "c90ccf64bdb6f584fa39b537d970275a859f566ec70b5dc49ef8371c3aaa547a"
       ],
       "exact_member_count": 1,
@@ -2156133,6 +2156852,14 @@
       "exact_member_count": 1,
       "structural_family_id": "48d2630b146452e43a20f0c0d2b3e9712585a01cfa3345cc2ff98197136cfb15",
       "structural_formula": "andhom_dimension([ad1,ad2],trivial)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "1d62488057dd5dbdacf1585a2cb99f7898057416513a16223d698535461f14d9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0b412434972c145f4f3a8bedd69cbfd5fd8bc8f4e595a364ca7ca448d26b5ebe",
+      "structural_formula": "andhy[T1#][\"n_exact\"]=#andlen(yk[T1#][\"quark\"])=#)"
     },
     {
       "exact_formula_ids": [
@@ -2180160,6 +2180887,14 @@
     },
     {
       "exact_formula_ids": [
+        "8c1ae7161e03efea63581e9a5051bdc2ee3c9926bf1dd45796b4ee6c06ea5926"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aa3dfe17e4121fd61e1e6f096b21c217f709f20553acd97240769544d9794f4f",
+      "structural_formula": "checks[\"#:N_B-N_F<#inall7#loadedmodels(#..#):positivelarge-volumevacuumenergy,nosuper-no-scalemodel\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "c7e38cad55ab663b7f603ff326099e8a4fea5318a8a2845e3ec9500568e64558"
       ],
       "exact_member_count": 1,
@@ -2180192,6 +2180927,22 @@
     },
     {
       "exact_formula_ids": [
+        "e26ab1884c91b9d8def97b9de2b51955dd069c27a4843e85baf459340ae74450"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d677239c7b1e0e0cd3e997a3643aded83c9e5f12f054d41a4947065af4ae7c95",
+      "structural_formula": "checks[\"#:chiral-to-vector-likemixinginS0#,S0#,S0#only;mixeddoubletcouplestou^candd^c(S0#),d^conly(S0#,S0#)\"]=("
+    },
+    {
+      "exact_formula_ids": [
+        "09f47d2b09854780d08d177e37bb0bb33801ab91d740ce191d719d6c515813ee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c68f5f8308bfd5d94add375d3b7a016fbab5ab8fa94021543a2b013c82b4e92f",
+      "structural_formula": "checks[\"#:chiralquarkdoubletshavenogauge-invariantQq^cHcoupling(allfivemodels)\"]=no_direct"
+    },
+    {
+      "exact_formula_ids": [
         "5eb4b98501f876e080cf5e7c626816793f0322c940a1b536632b2ad401782c26"
       ],
       "exact_member_count": 1,
@@ -2180216,11 +2180967,27 @@
     },
     {
       "exact_formula_ids": [
+        "460c35881c3f23ba50eca374431c7e60e54f8ecca11770597cb7646d35705847"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a5118159448cca7c35cb195d6b957677544d988a296b1af14db7d586d944390d",
+      "structural_formula": "checks[\"#:thirdWilsonline:#attempts,#load,exactlyoneSU(#)xSU(#)xU(#)smodelwithnet3quarkdoublets,tachyon-andanomaly-free,#exacthypercharges,noquarkYukawa\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "827b80c22bf0d18e6ca5d8bd2124e9dd7e0e2f2da3173a6659c2ec11111a76cd"
       ],
       "exact_member_count": 1,
       "structural_family_id": "f15782249789037d19a861e4d874c90e78dbc1c7ba399b7eb90f0c2cd77a541c",
       "structural_formula": "checks[\"#:threeSMgradings:#of1#(shift,cleansigma)pairsmakeallthreefamiliesfermionic,nonebosonic\"]=bool(ok9#)"
+    },
+    {
+      "exact_formula_ids": [
+        "a3414cfea67e43d0f7253562f3c2d38cfe54ab3243e65ad1fd0b9505109c9ca1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c39023ade585233f773425fa3b023f499cfac7fadacb7d3b7a11aa38b4ca43fb",
+      "structural_formula": "checks[\"#:vector-like-doubletYukawasUxT2xT1=#,#,#,#,#;exactandmod-#H-momentumagree\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2203007,6 +2203774,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fa3cac36ab3384b4bb3327b71f9fd6abf56e279ab37ebd21d119a2773a823e80",
       "structural_formula": "doubletclassesmirrorthesingletexcesscountforcount:#=#\u00d7#and6=#\u00d7#.Buttwocondensatesof"
+    },
+    {
+      "exact_formula_ids": [
+        "58c08da00ad2b957b8104ea8961e1620cf0649667f8bb80116b4c5dd91d54f78"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "655d89e7d3c7e8559bb2a226d9eb63e1aace211118aff9db877c8db4eeb39261",
+      "structural_formula": "doublets,notachyons,anomaliescancelled,#exactthree-generationhypercharges(k_Y>=#/#)--butnoquarkYukawa"
     },
     {
       "exact_formula_ids": [
@@ -2234542,6 +2235317,14 @@
     },
     {
       "exact_formula_ids": [
+        "055ba65ecf4f2f9b532920025bb95f59cf85ab4ca1bcac207cb6ce3ea6b6271c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aac7f331bfe0e622127514e9813bccd1a87eb87de2ec6a0b6ab4fa52c7d01680",
+      "structural_formula": "kinds[m]=sorted({\"up\"ifabs(Fr(q[\"cy\"][#]))=Fr(#,#)else\"down\"forqinyk[m][\"quark\"]ifq[\"Qy\"]=chiral_y})"
+    },
+    {
+      "exact_formula_ids": [
         "4dcd7f45bcf677d3d7def36e1d929e02a5c367e51697ef446f28891f60ae8b40"
       ],
       "exact_member_count": 1,
@@ -2252555,6 +2253338,14 @@
     },
     {
       "exact_formula_ids": [
+        "344bc7a28d8d9fb00a35af0cb74939d53ff03e8614cb9d89b810f3ef89bc0040"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9939296b2d59f83a5bb7926dda20ef51a364a0cbf121ad41aaf1fa79bf3f7d85",
+      "structural_formula": "mixing={m:any(re.match(r\"ALLOWEDB\\(-?#,#\\)S\\(#,#\\)\",k)forkinmx[m])forminLR+[T1#]}"
+    },
+    {
+      "exact_formula_ids": [
         "018936755d793d2a88d3ebe6d8d267b6b368ff97821881b86de34ebad784fb41"
       ],
       "exact_member_count": 1,
@@ -2256118,6 +2256909,14 @@
     },
     {
       "exact_formula_ids": [
+        "6faf55874102fefcd9e6eff490da9995f2df9a14904c2906f792819fa174827a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d6d39e3ee2b02888b998a5c6bc45206ce9b301a00b6fc4780d55c359b3ba5d92",
+      "structural_formula": "no_direct=all(notany(re.match(r\"gaugeB\\(-?#,#\\)S\\(#,#\\)\",k)forkinmx[m])forminLR+[T1#])"
+    },
+    {
+      "exact_formula_ids": [
         "1e53ba7c87f47eeee51d96f35cc233412833055de8b96c1fdb6fdb4d2603ba43"
       ],
       "exact_member_count": 1,
@@ -2257327,6 +2258126,22 @@
       "exact_member_count": 1,
       "structural_family_id": "5a9af8ba3f9c541f7e1ffda61676e19f0c450b8efedef242f9177a405386ee64",
       "structural_formula": "np.kron(gv.T.astype(np.int6#),np.eye(dim_w,dtype=np.int6#))"
+    },
+    {
+      "exact_formula_ids": [
+        "c0d521eb86d67e0622ae8b0d10e63ad678cc513fe35175c477bc17672e0aace7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6effd2f9417355c217a41b6db166207c099c02dfb2d7933f156943e6b4229c4f",
+      "structural_formula": "nq=[#,#,#,#,#]and[len(ymod3[m][\"quark\"])forminLR]=nq[:#]"
+    },
+    {
+      "exact_formula_ids": [
+        "3d54797e6124d741e81f21c8e59f8925ac2b1df3f1222b5e9a12a33aa3b2914b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "849aaf220d27e5a32c8553c885e20dc683bb03d7e368ce8deeab50a030744030",
+      "structural_formula": "nq=[len(yk[m][\"quark\"])forminLR+[T1#]]"
     },
     {
       "exact_formula_ids": [
@@ -2312431,6 +2313246,14 @@
     },
     {
       "exact_formula_ids": [
+        "f5cf42c8ccdeeca00ce98fa995a10c3f61788300d67895b98512f7631843ff8e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a601ca4c8894acdefb4b1dacbc993499560a30e9292d9d01e8cc26e180ac10f3",
+      "structural_formula": "res[\"#_yukawa\"]=dict(quark_couplings=dict(zip(LR+[T1#],nq)),mixing=mixing,light_doublet_couples_to=kinds)"
+    },
+    {
+      "exact_formula_ids": [
         "7fca7a0df44053885faa83541510ce66482f1c43d4f5379f0fcd8a9d1f99f5ff"
       ],
       "exact_member_count": 1,
@@ -2328451,6 +2329274,14 @@
       "exact_member_count": 1,
       "structural_family_id": "495e1549d0cafe25090c338817320bd56c377f7769841aa91545c29a773abf37",
       "structural_formula": "slowdown.MagicperroundistheKSdeficittheta-alpha=q=#"
+    },
+    {
+      "exact_formula_ids": [
+        "0267609853f11e2b9ee06581f27d3d117b443ebde35a9d35b8efc9bf3c4dd5bf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e2482244f45e4b34a1fda01ab4fec3553094d55304d0bafd1927bc47fb2ff7e1",
+      "structural_formula": "sm=[rforrinloadedifr[\"gauge\"].split(\"and\")[#].split(\"NU1\")[#].strip()=\"A2+A1\"andabs(r[\"net3#\"])=#]"
     },
     {
       "exact_formula_ids": [
@@ -2366311,20 +2367142,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90386541,
-    "exact_formula_families": 63847,
-    "files_scanned": 12441,
-    "formula_occurrences": 69928,
+    "bytes_scanned": 90403465,
+    "exact_formula_families": 63869,
+    "files_scanned": 12443,
+    "formula_occurrences": 69951,
     "status_occurrences": {
       "certified_or_theorem": 5229,
-      "killed_or_retracted": 1849,
+      "killed_or_retracted": 1851,
       "open_or_conditional": 2353,
       "preregistered": 36,
       "retrospective_fit": 5370,
-      "unclassified": 55091
+      "unclassified": 55112
     },
-    "structural_families": 62162
+    "structural_families": 62184
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "599726bc53af1063bd6b310621a1d308d7d9b0a2aba67d25605920e6b6b8c098"
+  "universe_sha256": "12c6813a472d40b9f77e7850e3415daf741809bcfeaf0f64e4ec83214ed878aa"
 }
