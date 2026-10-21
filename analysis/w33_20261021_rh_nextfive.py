@@ -138,6 +138,24 @@ def sieve_lambdas(bound):
             out.append((n,math.log(p)));n*=p
     return sorted(out)
 
+def rigorous_prime_tail_upper(a,d,M):
+    """Analytic upper bound on omitted n>M von Mangoldt Gaussian terms.
+
+    Lambda(n)<=log(n); the two nonnegative comparison summands
+    log(x)/sqrt(x)*exp(-(log(x) +/- d)^2/(4a)) decrease for x>=M,
+    for the registered a=.025, |d|<=1.5 and M=400.
+    Bound their sums by integrals from M to infinity, evaluate by erfc.
+    """
+    L=math.log(M)
+    total=0.
+    for shift in (d,-d):
+        mu=shift+a
+        z=(L-mu)/(2*math.sqrt(a))
+        integral=math.exp(shift/2+a/4)*(
+            mu*math.sqrt(math.pi*a)*math.erfc(z)+2*a*math.exp(-z*z))
+        total+=integral
+    return math.sqrt(math.pi/a)/(2*math.pi)*total
+
 def arithmetic_gaussian(a,d,lam):
     pole=2*math.exp(a/4)*math.cosh(d/2)
     arch=quad(lambda t:math.exp(-a*t*t)*math.cos(d*t)*
@@ -157,6 +175,8 @@ def weil_completed_galerkin():
     for d in (0.,.5,1.,1.5):
         ar=arithmetic_gaussian(a,d,lam)
         z=float(2*np.sum(np.exp(-a*zeros**2)*np.cos(d*zeros)))
+        ar["rigorous_prime_power_tail_bound"]=rigorous_prime_tail_upper(a,d,400)
+        assert ar["rigorous_prime_power_tail_bound"]<1e-80
         ar["sum_first30_ordinates"]=z
         ar["formula_minus_zero_sum"]=ar["total"]-z
         assert abs(ar["formula_minus_zero_sum"])<5e-10,(d,ar)
