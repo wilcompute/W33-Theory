@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-21",
+  "status": "PASS_SCOPED_LOCAL_EXPERIMENTS",
+  "classical_RH_proved": false,
+  "data_provenance": "Independently executed prototype (five tests passed) and corresponding repository verifier; not a GitHub CI run.",
+  "replay": {
+    "producer": "python analysis/w33_20261021_rh_five_frontiers.py",
+    "tests": "PYTHONPATH=. pytest -q tests/test_w33_20261021_rh_five_frontiers.py",
+    "generated_certificate": "data/w33_20261021_rh_five_frontiers.json"
+  },
+  "frontiers": {
+    "E8_Hecke": {
+      "checks": 1200,
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "n_range": [
+        1,
+        240
+      ],
+      "hecke_eigenvalues": [
+        9,
+        28,
+        126,
+        344,
+        1332
+      ],
+      "canonical_nonconstant_W33_Hecke_map_proved": false
+    },
+    "Levi_Frobenius": {
+      "Levi_projector_ranks": [
+        2,
+        48,
+        30
+      ],
+      "rational_Krylov_blocks": {
+        "x4_plus_9": 24,
+        "x2_plus_3": 30
+      },
+      "rank_mod101": [
+        96,
+        60
+      ],
+      "dimension": 156,
+      "canonical_galois_equivariant_transfer_proved": false
+    },
+    "Weil_toy": {
+      "test_ordinate_quartet": "z=±14±0.2i",
+      "negative_eigenvalue": -0.016124461468950857,
+      "positive_eigenvalue": 8.016124461468952,
+      "W33_nonconstant_projector_ranks": [
+        24,
+        15
+      ],
+      "actual_Weil_explicit_formula_evaluated": false
+    },
+    "Artin_Ihara": {
+      "Levi_apartments": 1620,
+      "eight_cycles_through_edge": 81,
+      "unsigned_trace_8": 193280,
+      "signed_trace_8": 190688,
+      "trace_difference": 2592,
+      "one_edge_signed_spectral_radius": 3.973117243550979,
+      "tempered_bound": 3.4641016151377544
+    },
+    "compact_resolvent_tower": {
+      "bounded_perturbation_amplitude": 0.05,
+      "zero_multiplicity_inflation": false,
+      "first_20_mean_absolute_relative_error_baseline": 0.04883044669612214,
+      "first_20_mean_absolute_relative_error_W33_modulated": 0.04877994945764904,
+      "counting_samples": [
+        {
+          "T": 30,
+          "N": 3
+        },
+        {
+          "T": 100,
+          "N": 28
+        },
+        {
+          "T": 500,
+          "N": 269
+        },
+        {
+          "T": 1000,
+          "N": 648
+        }
+      ],
+      "Xi_determinant_proved": false
+    }
+  }
+}
