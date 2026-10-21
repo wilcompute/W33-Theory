@@ -1,0 +1,26 @@
+{
+ "N008_F1_03_S033": {
+  "strict_fraction_free": 11,
+  "strict_commuting": 1,
+  "strict_commuting_found_by_lattice": 1,
+  "lattice": 4
+ },
+ "N008_F1_02_S053": {
+  "strict_fraction_free": 4,
+  "strict_commuting": 4,
+  "strict_commuting_found_by_lattice": 4,
+  "lattice": 45
+ },
+ "N008_F1_04_S037_T115": {
+  "strict_fraction_free": 14,
+  "strict_commuting": 14,
+  "strict_commuting_found_by_lattice": 14,
+  "lattice": 59
+ },
+ "N004_F1_03_S002": {
+  "strict_fraction_free": 0,
+  "strict_commuting": 0,
+  "strict_commuting_found_by_lattice": 0,
+  "lattice": 3
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "N008_F1_04_S037_T115": {
+  "classes": {
+   "(1, 1, Fraction(-1, 1))": {
+    "nR": 36,
+    "nRbar": 33,
+    "need": 33,
+    "rank_trilinear": 28,
+    "rank_up_to_quartic": 33,
+    "rank_up_to_quintic": 33,
+    "n_quintic_entries": 0
+   },
+   "(1, 2, Fraction(1, 2))": {
+    "nR": 9,
+    "nRbar": 6,
+    "need": 6,
+    "rank_trilinear": 4,
+    "rank_up_to_quartic": 5,
+    "rank_up_to_quintic": 5,
+    "n_quintic_entries": 24
+   },
+   "(3, 1, Fraction(-1, 3))": {
+    "nR": 4,
+    "nRbar": 1,
+    "need": 1,
+    "rank_trilinear": 1,
+    "rank_up_to_quartic": 1,
+    "rank_up_to_quintic": 1,
+    "n_quintic_entries": 0
+   }
+  },
+  "light_trilinear": 7,
+  "light_up_to_quartic": 1,
+  "light_up_to_quintic": 1
+ }
+}

@@ -1,0 +1,242 @@
+{
+  "12136": {
+    "Lambda_axis": {
+      "0.9j": 170.13887425308394,
+      "0.8j": 145.26454923155325,
+      "0.6j": 115.76855892341226,
+      "0.55j": 115.38698549161529,
+      "0.5j": 119.5969437178756,
+      "0.4j": 148.9717995285292
+    },
+    "K2_vs_K3_at_08i": [
+      145.26454800047202,
+      145.26454923155325
+    ],
+    "tachyons": {
+      "control_model2_ImT1": -0.21132486540518758,
+      "0.8i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.6i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.5i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.4i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.3i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.1+0.9i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.2+0.9i": {
+        "n": 56,
+        "Delta": -0.017929019609371377
+      }
+    }
+  },
+  "12140": {
+    "tachyons_055": {
+      "0.55i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.1+0.55i": {
+        "n": 56,
+        "Delta": -0.046845131576360444
+      },
+      "0.3+0.55i": {
+        "n": 72,
+        "Delta": -0.10982879730613765
+      },
+      "0.5+0.55i": {
+        "n": 72,
+        "Delta": -0.1308233525493967
+      },
+      "0.05+0.55i": {
+        "n": 56,
+        "Delta": -0.02453841663039763
+      }
+    },
+    "tachyons_09": {
+      "0.1+0.9i": {
+        "n": 0,
+        "Delta": null
+      },
+      "0.2+0.9i": {
+        "n": 56,
+        "Delta": -0.017929019609371377
+      }
+    },
+    "Lambda_off_axis": {
+      "0.1+0.9j": 168.52305683574528,
+      "0.2+0.9j": 163.96132698301693,
+      "0.3+0.55j": -132.5949070721097,
+      "0.5+0.55j": -441.75516772945286
+    }
+  },
+  "12137": {
+    "control": {
+      "S002_two_torus_vs_three_torus_W3_0_at_tau_0.13+1.07i": {
+        "old": [
+          6870.243145505252,
+          -2614.1597089523366
+        ],
+        "new": [
+          6870.243144295375,
+          -2614.15970849198
+        ],
+        "rel": 1.7610357616847225e-10
+      }
+    },
+    "modcheck": {
+      "beta_S": 1.8856638823235728e-14,
+      "beta_T": 4.783761543598558e-15,
+      "twisted_S": 1.1998656742585474e-14,
+      "twisted_T": 2.8666350752375527e-14,
+      "gamma1_6": 7.164584784914361e-14
+    },
+    "tachyons": {
+      "control_S002_rho": {
+        "n": 56,
+        "Delta": -0.0555555555555558
+      },
+      "control_S002_2i": 0,
+      "T115_3i": {
+        "n": 0,
+        "Delta": null
+      },
+      "T115_2i": {
+        "n": 0,
+        "Delta": null
+      },
+      "T115_1.5i": {
+        "n": 10,
+        "Delta": -0.06698729810778065
+      },
+      "T115_1.25i": {
+        "n": 12,
+        "Delta": -0.13915608175648386
+      },
+      "T115_i": {
+        "n": 16,
+        "Delta": -0.21132486540518708
+      },
+      "T115_0.8i": {
+        "n": 16,
+        "Delta": -0.2690598923241497
+      },
+      "T115_rho": {
+        "n": 56,
+        "Delta": -0.16666666666666669
+      },
+      "T115_1.75i": {
+        "n": 0,
+        "Delta": null
+      },
+      "note": "1.75i from tach3b.py (separate run, same code)"
+    },
+    "Lambda": {
+      "2i": 987.5844031043987,
+      "1.75i": 663.8392707301202,
+      "i (void)": -304.9206389279656
+    }
+  },
+  "12139_control": {
+    "N008_F1_03_S033": {
+      "strict_fraction_free": 11,
+      "strict_commuting": 1,
+      "strict_commuting_found_by_lattice": 1,
+      "lattice": 4
+    },
+    "N008_F1_02_S053": {
+      "strict_fraction_free": 4,
+      "strict_commuting": 4,
+      "strict_commuting_found_by_lattice": 4,
+      "lattice": 45
+    },
+    "N008_F1_04_S037_T115": {
+      "strict_fraction_free": 14,
+      "strict_commuting": 14,
+      "strict_commuting_found_by_lattice": 14,
+      "lattice": 59
+    },
+    "N004_F1_03_S002": {
+      "strict_fraction_free": 0,
+      "strict_commuting": 0,
+      "strict_commuting_found_by_lattice": 0,
+      "lattice": 3
+    }
+  },
+  "12139_e6a2_lattice": {
+    "N008_F1_03_S033": {
+      "n": 4,
+      "kY": [
+        "17/3",
+        "29/3",
+        "65/3"
+      ]
+    },
+    "N008_F1_02_S053": {
+      "n": 45,
+      "kY": [
+        "17/3",
+        "29/3",
+        "41/3",
+        "53/3",
+        "65/3"
+      ]
+    },
+    "N008_F1_04_S037_T115": {
+      "n": 59,
+      "kY": [
+        "17/3",
+        "29/3",
+        "41/3",
+        "53/3",
+        "65/3"
+      ]
+    },
+    "N004_F1_03_S002": {
+      "n": 3,
+      "kY": [
+        "41/3"
+      ]
+    }
+  },
+  "12139_a8": {
+    "models": 104,
+    "with_fraction_free": 102,
+    "kY": [
+      "17/3",
+      "29/3",
+      "41/3",
+      "53/3",
+      "65/3"
+    ]
+  },
+  "checks": {
+    "12136: winding cut-off converged (K = 2 vs 3 at 0.8i, 1e-6 relative)": true,
+    "12136: Lambda on the axis has a positive minimum near Im T_WL = 0.55 (0.6i > 0.55i < 0.5i, all > 0)": true,
+    "12136: control Delta = -0.2113 reproduced; S002 tachyon-free on the axis 0.8i .. 0.3i": true,
+    "12140: at Im 0.55 the axis is the only tachyon-free line: Delta < 0 at Re 0.05, 0.1, 0.3, 0.5 (monotone in |Re|), 0 on the axis": true,
+    "12140: at Im 0.9 Re 0.1 clean and lower than the axis (168.5 < 170.1: a ridge), Re 0.2 tachyonic; off-axis Lambda < 0 points are tachyonic (void)": true,
+    "12137: three-torus engine = two-torus engine on S002 (2e-10); T115 integrand modular invariant (1e-13)": true,
+    "12137: three-torus tachyon enumerator control (S002: 56 at rho, Delta -1/18; none at 2i)": true,
+    "12137: T115 Lambda/M^4 = +987.6 (2i), +663.8 (1.75i); tachyon-free 3i/2i/1.75i, tachyonic 1.5i/1.25i; (i,i,i) value void (growing integrand)": true,
+    "12138: T115 doublet class: rank 5 of 6 up to quintic (24 quintic entries), structural rank of the allowed pattern = 5": true,
+    "12139: control -- every strict fraction-free hypercharge commuting with all nonabelian factors is found (19/19)": true,
+    "12139: lattice search finds 4/45/59/3 commuting fraction-free hypercharges (S033/S053/T115/S002), all k_Y = 5/3 + 4n": true,
+    "12139: A8 models (N <= 12, 104/104): fraction-free hypercharges in 102 (10920 total), every k_Y = 5/3 + 4n, minimum 17/3 -- never 5/3": true
+  },
+  "all_checks_pass": true
+}
