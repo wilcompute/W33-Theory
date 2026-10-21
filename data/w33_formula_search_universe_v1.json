@@ -352289,6 +352289,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ca38ca3327304dfa7a82120ffad714ad042a1422a221624e7382f4ffd789ea1e",
+      "normalized_formula": "(i)fraction-freehyperchargeshavek_Y>=17/3andfailtheWeinbergangle(12154,12156)",
+      "numeric_literals": [
+        "12154",
+        "12156",
+        "17",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "(i) fraction-free hypercharges have k_Y >= 17/3 and fail the Weinberg angle (12154, 12156);",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "620214ab5d6fc9b5ad464037e9e2b7bc4086148968093e0ab1ca144eaef4b159",
+      "structural_formula": "(i)fraction-freehyperchargeshavek_Y>=#/#andfailtheWeinbergangle(#,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4fb158bd8783d59a49cd2119b5e579541e4ab9a81a0cccafbe12a8fd7490880d",
       "normalized_formula": "(i)theta_E_8^3=E_4^3(h=720),noDelta",
       "numeric_literals": [
@@ -410718,6 +410748,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "140736ea27170199dbe3ea4fd7b2ce8289643576f2737121c7b5f422960a9a49",
+      "normalized_formula": "12166--andthatlow-scaleescapeisclosedbytheproton:inallthree,6colour-tripletscalarcomponents(Y=-+1/3)carryBOTHa",
+      "numeric_literals": [
+        "+1",
+        "12166",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "12166 -- and that low-scale escape is closed by the proton: in all three, 6 colour-triplet scalar components (Y = -+1/3) carry BOTH a",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "a6a55aca4a6688f2627367404131ea6be78adc81558e7deedce7bd9efd4fc8bd",
+      "structural_formula": "#--andthatlow-scaleescapeisclosedbytheproton:inallthree,#colour-tripletscalarcomponents(Y=-#/#)carryBOTHa"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0c2d4ff662676ea3fa3ab291e663a8fbd7e5d47806f1e34dd07e87952368e587",
       "normalized_formula": "121=36double-sixes+40Steinertriads+45tritangents",
       "numeric_literals": [
@@ -422520,6 +422580,40 @@
       },
       "structural_family_id": "1ed42705a2543bddd7442a7e77684622deef47b0a4511debc629d2e411a41d93",
       "structural_formula": "##=#=\\Phi_6"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fe3b165cedcb006ed731e963acdce9e7ca1d2eda83a665b67329f6c62f180520",
+      "normalized_formula": "2,15,77,atM_s~1.2e13,1.1e12,3.6e11GeVwithM_X~1e6-2e8GeV--farbelowtheperturbativeheteroticscale",
+      "numeric_literals": [
+        "-2e8",
+        "1.1e12",
+        "1.2e13",
+        "15",
+        "1e6",
+        "2",
+        "3.6e11",
+        "77"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "2, 15, 77, at M_s ~ 1.2e13, 1.1e12, 3.6e11 GeV with M_X ~ 1e6-2e8 GeV -- far below the perturbative heterotic scale.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "628ec2abddda91b65864aca0f34536dbfc2f2a06609f19300696cceb96fddeec",
+      "structural_formula": "#,#,#,atM_s~#,#,#GeVwithM_X~##GeV--farbelowtheperturbativeheteroticscale"
     },
     {
       "file_count": 1,
@@ -604860,6 +604954,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3bf14260b7ca43d3f328a6e203e95170399de9ec6cdfb593d622998b1fc39e13",
+      "normalized_formula": "Deltab=total-SM).(a)M_sfixedattheheteroticvalueg_U5.27e17GeV,colouredandcolourlessexoticsatindependent",
+      "numeric_literals": [
+        ".27",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "Delta b = total - SM). (a) M_s fixed at the heterotic value g_U 5.27e17 GeV, coloured and colourless exotics at independent",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3647281904ace23dc68dabb593ed36b1b07184de85262d76a9527e23668295c8",
+      "structural_formula": "Deltab=total-SM).(a)M_sfixedattheheteroticvalueg_U5#e1#GeV,colouredandcolourlessexoticsatindependent"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9cab78a2e479be54e97e85e9023fb79400a64b0bdf79d8bbfe732e67a81c47cd",
       "normalized_formula": "Deltam^2_21=7.41e-5eV^2(solar)",
       "numeric_literals": [
@@ -665217,6 +665339,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f997b5ac14ffad7f940d5308e7dbe674f2c4e007562c0b256b3d9d42b33532e7",
+      "normalized_formula": "Inallthree,^6colour-tripletscalarcomponents(Y=\u22131/3)havebothadiquarkandaleptoquarktrilinearcoupling^",
+      "numeric_literals": [
+        "1",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12162_12167_SURVIVORS_THRESHOLDS_PROTON_CLOSURE.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/PASS12162_12167_SURVIVORS_THRESHOLDS_PROTON_CLOSURE.md",
+          "raw": "In all three, **6 colour-triplet scalar components (Y = \u22131/3) have both a diquark and a leptoquark trilinear coupling**",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "2ce2c9204521386813777677406269af41df60ac36c29dbe86de75a6ec82bdbb",
+      "structural_formula": "Inallthree,^#colour-tripletscalarcomponents(Y=\u2213#/#)havebothadiquarkandaleptoquarktrilinearcoupling^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fa9e668f054103936cee177902396625d39e3dcbfd522a6b33f5e36c29aac674",
       "normalized_formula": "Inanyproperten-colouringeachsuch`K9`usesninedifferentcoloursandhasonemissingcolour.Ifcolour`i`hasclasssize`n_i`,put`d_i=60-n_i`.Itoccurson`4n_i`carrieredgesandismissingon",
       "numeric_literals": [
@@ -708407,6 +708558,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0bce0196bcd9559fb32b134a36510a2ae361612349b301fbc981ac3fce898766",
+      "normalized_formula": "M_s~10^{11}",
+      "numeric_literals": [
+        "10",
+        "11"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 449,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "M_s\\sim10^{11}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2d684cbe841587a892466abd33191d59d22dc648413964c06bcec7d25b8fd763",
+      "structural_formula": "M_s~#^{#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "739caf694464442040117651c9f3e7bf2e265825ff4ca53d674214c814c4b2e5",
       "normalized_formula": "M_t=172.4#GeV-topquarkmass",
       "numeric_literals": [
@@ -730303,6 +730482,35 @@
       },
       "structural_family_id": "336ef126f7ba28046be0dd8aeb744f3a6a390390b7d704427304aef0d0bfc917",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_axis_fricke_leptons_running_hmom.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5a5b6a450dbedbf4e8b4b95d77e8cf56c662d43ad4549722ee0ac9f686be3399",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass12162_to_12167_survivors_thresholds_proton_closure.json\"",
+      "numeric_literals": [
+        "2162",
+        "2167",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass12162_to_12167_survivors_thresholds_proton_closure.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0af6e89c0b286219f75257d0f36c1fe0567313ea3eae86231e9053f6b06ce27d",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_survivors_thresholds_proton_closure.json\""
     },
     {
       "file_count": 1,
@@ -991384,7 +991592,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 655,
+          "line": 656,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1174622,6 +1174830,94 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f1acdaa2e2ec4c0345234e42cfc667ed55bf364769019d012eb2b0506eef6ec3",
+      "normalized_formula": "checks[\"12162:M_sattheheteroticscale->everysurvivorneedsitsexoticsaboveM_s(12/12inconsistent)\"]=(",
+      "numeric_literals": [
+        "12",
+        "12162"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 42,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "checks[\"12162: M_s at the heterotic scale -> every survivor needs its exotics above M_s (12/12 inconsistent)\"] = (",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "d984f95e43c09b22d37b537ce3c8fc7c5ffcca6de2dec4ba03d9c42151f92de6",
+      "structural_formula": "checks[\"#:M_sattheheteroticscale->everysurvivorneedsitsexoticsaboveM_s(#/#inconsistent)\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "51d9a16ac05a3a8bd3efc40f17f97c7b3da7cfc9c0e4a418a49791fdfa451dbb",
+      "normalized_formula": "checks[\"12162:singleexoticscaleconsistentonlyforsurvivors2,15,77,withM_s<2e13GeVandM_X<1e9GeV\"]=(",
+      "numeric_literals": [
+        "12162",
+        "15",
+        "1e9",
+        "2e13",
+        "77"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "checks[\"12162: single exotic scale consistent only for survivors 2, 15, 77, with M_s < 2e13 GeV and M_X < 1e9 GeV\"] = (",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "bb8364ad27c8626429811e99af4bbb5cdceba50e5b58b463d84868b073bf4b5f",
+      "structural_formula": "checks[\"#:singleexoticscaleconsistentonlyforsurvivors2,#,#,withM_s<#GeVandM_X<#GeV\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7cc734c1121606b1338b112e8e293a2121cb3773b8f228cb61b6ae542c168980",
+      "normalized_formula": "checks[\"12166:in2,15,77sixcolour-tripletscalarcomponentscouplebothasdiquarkandleptoquark(fullrules)\"]=(",
+      "numeric_literals": [
+        "12166",
+        "15",
+        "77"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "checks[\"12166: in 2, 15, 77 six colour-triplet scalar components couple both as diquark and leptoquark (full rules)\"] = (",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "42e57146022e10a707f9d438031fecb53c16380bb01a26e024fa3095951a5e4e",
+      "structural_formula": "checks[\"#:in2,#,#sixcolour-tripletscalarcomponentscouplebothasdiquarkandleptoquark(fullrules)\"]=("
+    },
+    {
+      "file_count": 1,
       "formula_id": "bb811ae9007f03eb7458a962180e5d159626dcb3cc27634fcee7f7c8699f37a8",
       "normalized_formula": "checks[\"15_fermionic\"]=g=15#15Weylfermionspergeneration",
       "numeric_literals": [
@@ -1214181,6 +1214477,33 @@
       },
       "structural_family_id": "541263d32312f3b582facdd9b7dc8ee4ca02cd1da3333d69f994a6624ea2a377",
       "structural_formula": "couplingsthatspanaWilson-linetorusatO(Z1#^#)(Pass1#).Hencem_u/m_c=#+O(Z^#):noparametric"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2b8041a6b53128adc06551475d6bb478ff2d6474df39f8ece4fc2bfd98f6cb32",
+      "normalized_formula": "couplingsthewrongway.(b)onecommonexoticscale,M_sfree:consistent(0<=lnM_s/M_X<=lnM_s/M_Z)onlyforsurvivors",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "couplings the wrong way. (b) one common exotic scale, M_s free: consistent (0 <= ln M_s/M_X <= ln M_s/M_Z) only for survivors",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c9dedbe52acb636f40318bb53c6b9d14b5b5b23dade9d60fe407fa210f4b9f21",
+      "structural_formula": "couplingsthewrongway.(b)onecommonexoticscale,M_sfree:consistent(#<=lnM_s/M_X<=lnM_s/M_Z)onlyforsurvivors"
     },
     {
       "file_count": 1,
@@ -1325657,6 +1325980,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4a8f67a2c8ab155a0666cfc144ffe6edee34023702e89011feae87d03ed5186a",
+      "normalized_formula": "good=[\"15\",\"2\",\"77\"]andall(s1[k][\"fit\"][\"Ms_GeV\"]<2e13ands1[k][\"fit\"][\"MX_GeV\"]<1e9forkingood))",
+      "numeric_literals": [
+        "15",
+        "1e9",
+        "2",
+        "2e13",
+        "77"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "good == [\"15\", \"2\", \"77\"] and all(s1[k][\"fit\"][\"Ms_GeV\"] < 2e13 and s1[k][\"fit\"][\"MX_GeV\"] < 1e9 for k in good))",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "00a13533c923cfbdab59c91bae2dad84fd6e83744a6fb20524733d586fab1ad3",
+      "structural_formula": "good=[\"#\",\"#\",\"#\"]andall(s1[k][\"fit\"][\"Ms_GeV\"]<#ands1[k][\"fit\"][\"MX_GeV\"]<#forkingood))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e4b4fcf0246e4ae7ca7f642edd2325fca33e8d9b818138e36edae107bf17aff0",
       "normalized_formula": "good=[rforrinresultsifr[\"max_single_leakage\"]<1e-9",
       "numeric_literals": [
@@ -1383184,6 +1383538,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "46671dbfb86fb9280028dac85094d9dff8f2c79f3029014add79cf0130736c73",
+      "normalized_formula": "len(s2)=12andall(notv[\"consistent\"]forvins2.values())andall(v[\"Mc_GeV\"]>v[\"Ms_GeV\"]orv[\"Ml_GeV\"]>v[\"Ms_GeV\"]forvins2.values()))",
+      "numeric_literals": [
+        "12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 43,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "len(s2) == 12 and all(not v[\"consistent\"] for v in s2.values()) and all(v[\"Mc_GeV\"] > v[\"Ms_GeV\"] or v[\"Ml_GeV\"] > v[\"Ms_GeV\"] for v in s2.values()))",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "a8d996913e31a7efe8be33b1c00e5572c409e835911aa365d810ae2d93563b2b",
+      "structural_formula": "len(s2)=#andall(notv[\"consistent\"]forvins2.values())andall(v[\"Mc_GeV\"]>v[\"Ms_GeV\"]orv[\"Ml_GeV\"]>v[\"Ms_GeV\"]forvins2.values()))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "34a8afa3d0e8ff60ce7ed759e09940b3f6d445c1cb0adf2a83dd37a800a4d457",
       "normalized_formula": "len(scan)=24andlen(loaded)=13andsum(\"D5+A2\"inr[\"gauge\"]forrinloaded)=6)",
       "numeric_literals": [
@@ -1405293,7 +1405674,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 654,
+          "line": 655,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1410427,7 +1410808,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 654,
+          "line": 655,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1627339,6 +1627720,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "eb90b7d81ee2187d82c49171c5e5011aa6577b21b6585a4cfd968703c229ee5e",
+      "normalized_formula": "protonlifetimeofyears,against>1e34yr.Withthetripletspushedto>~1e15GeVthefitrevertsto(a)",
+      "numeric_literals": [
+        "1e15",
+        "1e34"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "proton lifetime of years, against > 1e34 yr. With the triplets pushed to >~ 1e15 GeV the fit reverts to (a).",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "cd95c4cc2daf92b8699b1744bf4bcc444b10b488ce92dd63f0952d42f078855e",
+      "structural_formula": "protonlifetimeofyears,against>#yr.Withthetripletspushedto>~#GeVthefitrevertsto(a)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e901d8db1cae16bacd3e3801f71ab146baf18f5c7621dca6782d6ab46c1de22c",
       "normalized_formula": "protonm_p(MeV)=2*Phi_6*Heegner_67=938",
       "numeric_literals": [
@@ -1668282,6 +1668691,60 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c051feef85ff230996329514e6a2a70f8e20ca619407f0b6ba06e63212310c8e",
+      "normalized_formula": "res[\"12162a\"]={k:dict(Ms=v[\"Ms_GeV\"],Mc=v[\"Mc_GeV\"],Ml=v[\"Ml_GeV\"])fork,vins2.items()}",
+      "numeric_literals": [
+        "12162"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 41,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "res[\"12162a\"] = {k: dict(Ms=v[\"Ms_GeV\"], Mc=v[\"Mc_GeV\"], Ml=v[\"Ml_GeV\"]) for k, v in s2.items()}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1d8d5ccea510f50d0b8de0da96aba3d6b676dbb9e468c088820efc464a84223e",
+      "structural_formula": "res[\"#a\"]={k:dict(Ms=v[\"Ms_GeV\"],Mc=v[\"Mc_GeV\"],Ml=v[\"Ml_GeV\"])fork,vins2.items()}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ccb758a44342e498f954156e137bb449743a0f18462b01edf6c3e7ccd62105f9",
+      "normalized_formula": "res[\"12162b\"]={k:dict(Ms=s1[k][\"fit\"][\"Ms_GeV\"],MX=s1[k][\"fit\"][\"MX_GeV\"])forkingood}",
+      "numeric_literals": [
+        "12162"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "res[\"12162b\"] = {k: dict(Ms=s1[k][\"fit\"][\"Ms_GeV\"], MX=s1[k][\"fit\"][\"MX_GeV\"]) for k in good}",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "dafacaae2a2e5af644ccea60e1aa270f24555947ea3cbca8dfeaeeaacc42bcbc",
+      "structural_formula": "res[\"#b\"]={k:dict(Ms=s1[k][\"fit\"][\"Ms_GeV\"],MX=s1[k][\"fit\"][\"MX_GeV\"])forkingood}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7fca7a0df44053885faa83541510ce66482f1c43d4f5379f0fcd8a9d1f99f5ff",
       "normalized_formula": "res[\"E_n_if_F_m_flat\"]={str(n):str(En[n])forninrange(2,13)}",
       "numeric_literals": [
@@ -1699578,6 +1700041,33 @@
       },
       "structural_family_id": "df2f7734d05886c8d019d7334223a9ffe07b98dfba38691e00c25e3e458f141c",
       "structural_formula": "scalerho_Lambda^{#/#}=M_Pl1#^{-beat}=#meV(beat=#=h(E8)decadesbelowthe"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b1ace08b244f1a0b8e8b80a52c9e160e3b23b1b25322727d9570f38bf03d019e",
+      "normalized_formula": "scales:thethreecouplingsthenrequireEVERYsurvivor'sexoticsABOVEM_s(M_c,M_l>M_s,12/12)--theexoticspushthe",
+      "numeric_literals": [
+        "12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_pass12162_to_12167_survivors_thresholds_proton_closure.py",
+          "raw": "scales: the three couplings then require EVERY survivor's exotics ABOVE M_s (M_c, M_l > M_s, 12/12) -- the exotics push the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "04cf5e3293c9a4850a92568bbe05edd6a1e09297e546af419633ae42eb54485f",
+      "structural_formula": "scales:thethreecouplingsthenrequireEVERYsurvivor'sexoticsABOVEM_s(M_c,M_l>M_s,#/#)--theexoticspushthe"
     },
     {
       "file_count": 1,
@@ -1823500,7 +1823990,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 654,
+          "line": 655,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1872641,9 +1873131,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-21T13:38:38-04:00",
+  "frozen_at": "2026-10-21T14:36:43-04:00",
   "pass": 398,
-  "repository_head": "dc08081f764000e5be17f6c717aa2a578e9fa3cf",
+  "repository_head": "42bb3739bd319b2e20cc5f07ccfd980b4bcd5dc0",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1932119,6 +1932609,14 @@
     },
     {
       "exact_formula_ids": [
+        "fe3b165cedcb006ed731e963acdce9e7ca1d2eda83a665b67329f6c62f180520"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "628ec2abddda91b65864aca0f34536dbfc2f2a06609f19300696cceb96fddeec",
+      "structural_formula": "#,#,#,atM_s~#,#,#GeVwithM_X~##GeV--farbelowtheperturbativeheteroticscale"
+    },
+    {
+      "exact_formula_ids": [
         "8d30e39c0dddb7a4628829ddaf3f798dd43b2635a1bfec0cd40b325fa73da5d9"
       ],
       "exact_member_count": 1,
@@ -1932516,6 +1933014,14 @@
       "exact_member_count": 1,
       "structural_family_id": "166a8b2a898e9f4da91e1af1109bc499e8a81370127ee6cf8d2506c7cfadae18",
       "structural_formula": "#--Yukawas(gauge,WittenZ2,pointgroup,spacegroup,H-momentum;theexactrulesumR=#of1#andthe"
+    },
+    {
+      "exact_formula_ids": [
+        "140736ea27170199dbe3ea4fd7b2ce8289643576f2737121c7b5f422960a9a49"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a6a55aca4a6688f2627367404131ea6be78adc81558e7deedce7bd9efd4fc8bd",
+      "structural_formula": "#--andthatlow-scaleescapeisclosedbytheproton:inallthree,#colour-tripletscalarcomponents(Y=-#/#)carryBOTHa"
     },
     {
       "exact_formula_ids": [
@@ -1991273,6 +1991779,14 @@
     },
     {
       "exact_formula_ids": [
+        "ca38ca3327304dfa7a82120ffad714ad042a1422a221624e7382f4ffd789ea1e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "620214ab5d6fc9b5ad464037e9e2b7bc4086148968093e0ab1ca144eaef4b159",
+      "structural_formula": "(i)fraction-freehyperchargeshavek_Y>=#/#andfailtheWeinbergangle(#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "4fb158bd8783d59a49cd2119b5e579541e4ab9a81a0cccafbe12a8fd7490880d"
       ],
       "exact_member_count": 1,
@@ -2035597,6 +2036111,14 @@
     },
     {
       "exact_formula_ids": [
+        "3bf14260b7ca43d3f328a6e203e95170399de9ec6cdfb593d622998b1fc39e13"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3647281904ace23dc68dabb593ed36b1b07184de85262d76a9527e23668295c8",
+      "structural_formula": "Deltab=total-SM).(a)M_sfixedattheheteroticvalueg_U5#e1#GeV,colouredandcolourlessexoticsatindependent"
+    },
+    {
+      "exact_formula_ids": [
         "9cab78a2e479be54e97e85e9023fb79400a64b0bdf79d8bbfe732e67a81c47cd"
       ],
       "exact_member_count": 1,
@@ -2051818,6 +2052340,14 @@
     },
     {
       "exact_formula_ids": [
+        "f997b5ac14ffad7f940d5308e7dbe674f2c4e007562c0b256b3d9d42b33532e7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2ce2c9204521386813777677406269af41df60ac36c29dbe86de75a6ec82bdbb",
+      "structural_formula": "Inallthree,^#colour-tripletscalarcomponents(Y=\u2213#/#)havebothadiquarkandaleptoquarktrilinearcoupling^"
+    },
+    {
+      "exact_formula_ids": [
         "fa9e668f054103936cee177902396625d39e3dcbfd522a6b33f5e36c29aac674"
       ],
       "exact_member_count": 1,
@@ -2063439,6 +2063969,14 @@
     },
     {
       "exact_formula_ids": [
+        "0bce0196bcd9559fb32b134a36510a2ae361612349b301fbc981ac3fce898766"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2d684cbe841587a892466abd33191d59d22dc648413964c06bcec7d25b8fd763",
+      "structural_formula": "M_s~#^{#}"
+    },
+    {
+      "exact_formula_ids": [
         "739caf694464442040117651c9f3e7bf2e265825ff4ca53d674214c814c4b2e5"
       ],
       "exact_member_count": 1,
@@ -2069368,6 +2069906,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1e8427f426e3cddfdf2684aae5b46f22176eda2c483be70d3fdc3fd414bcbb1c",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_hypercharge_yukawas_vacuum.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "5a5b6a450dbedbf4e8b4b95d77e8cf56c662d43ad4549722ee0ac9f686be3399"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0af6e89c0b286219f75257d0f36c1fe0567313ea3eae86231e9053f6b06ce27d",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_survivors_thresholds_proton_closure.json\""
     },
     {
       "exact_formula_ids": [
@@ -2186256,6 +2186802,14 @@
     },
     {
       "exact_formula_ids": [
+        "f1acdaa2e2ec4c0345234e42cfc667ed55bf364769019d012eb2b0506eef6ec3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d984f95e43c09b22d37b537ce3c8fc7c5ffcca6de2dec4ba03d9c42151f92de6",
+      "structural_formula": "checks[\"#:M_sattheheteroticscale->everysurvivorneedsitsexoticsaboveM_s(#/#inconsistent)\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "8c1ae7161e03efea63581e9a5051bdc2ee3c9926bf1dd45796b4ee6c06ea5926"
       ],
       "exact_member_count": 1,
@@ -2186392,6 +2186946,14 @@
     },
     {
       "exact_formula_ids": [
+        "7cc734c1121606b1338b112e8e293a2121cb3773b8f228cb61b6ae542c168980"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "42e57146022e10a707f9d438031fecb53c16380bb01a26e024fa3095951a5e4e",
+      "structural_formula": "checks[\"#:in2,#,#sixcolour-tripletscalarcomponentscouplebothasdiquarkandleptoquark(fullrules)\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "9586b47681f0a8662c05ec2b56deb7002e42a715c56b8b4f33205f343772be41"
       ],
       "exact_member_count": 1,
@@ -2186413,6 +2186975,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7ca7af7624ec8fae163dae9778847e2315e9a65f7cdc54868f31acd2f2ac5347",
       "structural_formula": "checks[\"#:onefermionic1#(#roots)andonescalar1#(#roots)perplane,butno1###=#roottriple\"]=bool(y_ok)"
+    },
+    {
+      "exact_formula_ids": [
+        "51d9a16ac05a3a8bd3efc40f17f97c7b3da7cfc9c0e4a418a49791fdfa451dbb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bb8364ad27c8626429811e99af4bbb5cdceba50e5b58b463d84868b073bf4b5f",
+      "structural_formula": "checks[\"#:singleexoticscaleconsistentonlyforsurvivors2,#,#,withM_s<#GeVandM_X<#GeV\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2197658,6 +2198228,14 @@
       "exact_member_count": 1,
       "structural_family_id": "541263d32312f3b582facdd9b7dc8ee4ca02cd1da3333d69f994a6624ea2a377",
       "structural_formula": "couplingsthatspanaWilson-linetorusatO(Z1#^#)(Pass1#).Hencem_u/m_c=#+O(Z^#):noparametric"
+    },
+    {
+      "exact_formula_ids": [
+        "2b8041a6b53128adc06551475d6bb478ff2d6474df39f8ece4fc2bfd98f6cb32"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c9dedbe52acb636f40318bb53c6b9d14b5b5b23dade9d60fe407fa210f4b9f21",
+      "structural_formula": "couplingsthewrongway.(b)onecommonexoticscale,M_sfree:consistent(#<=lnM_s/M_X<=lnM_s/M_Z)onlyforsurvivors"
     },
     {
       "exact_formula_ids": [
@@ -2228024,6 +2228602,14 @@
     },
     {
       "exact_formula_ids": [
+        "4a8f67a2c8ab155a0666cfc144ffe6edee34023702e89011feae87d03ed5186a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "00a13533c923cfbdab59c91bae2dad84fd6e83744a6fb20524733d586fab1ad3",
+      "structural_formula": "good=[\"#\",\"#\",\"#\"]andall(s1[k][\"fit\"][\"Ms_GeV\"]<#ands1[k][\"fit\"][\"MX_GeV\"]<#forkingood))"
+    },
+    {
+      "exact_formula_ids": [
         "e4b4fcf0246e4ae7ca7f642edd2325fca33e8d9b818138e36edae107bf17aff0"
       ],
       "exact_member_count": 1,
@@ -2243473,6 +2244059,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6e71619c4d388f76e6cea5a890de1566bf221331751323306072ebb010b9015b",
       "structural_formula": "len(rows)=#andlen(good)=#andgood[#][\"branch\"]=\"C\"andgood[#][\"kappa\"]=\"adjointmass2/#\""
+    },
+    {
+      "exact_formula_ids": [
+        "46671dbfb86fb9280028dac85094d9dff8f2c79f3029014add79cf0130736c73"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a8d996913e31a7efe8be33b1c00e5572c409e835911aa365d810ae2d93563b2b",
+      "structural_formula": "len(s2)=#andall(notv[\"consistent\"]forvins2.values())andall(v[\"Mc_GeV\"]>v[\"Ms_GeV\"]orv[\"Ml_GeV\"]>v[\"Ms_GeV\"]forvins2.values()))"
     },
     {
       "exact_formula_ids": [
@@ -2310112,6 +2310706,14 @@
     },
     {
       "exact_formula_ids": [
+        "eb90b7d81ee2187d82c49171c5e5011aa6577b21b6585a4cfd968703c229ee5e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cd95c4cc2daf92b8699b1744bf4bcc444b10b488ce92dd63f0952d42f078855e",
+      "structural_formula": "protonlifetimeofyears,against>#yr.Withthetripletspushedto>~#GeVthefitrevertsto(a)"
+    },
+    {
+      "exact_formula_ids": [
         "e901d8db1cae16bacd3e3801f71ab146baf18f5c7621dca6782d6ab46c1de22c"
       ],
       "exact_member_count": 1,
@@ -2318928,6 +2319530,22 @@
     },
     {
       "exact_formula_ids": [
+        "c051feef85ff230996329514e6a2a70f8e20ca619407f0b6ba06e63212310c8e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1d8d5ccea510f50d0b8de0da96aba3d6b676dbb9e468c088820efc464a84223e",
+      "structural_formula": "res[\"#a\"]={k:dict(Ms=v[\"Ms_GeV\"],Mc=v[\"Mc_GeV\"],Ml=v[\"Ml_GeV\"])fork,vins2.items()}"
+    },
+    {
+      "exact_formula_ids": [
+        "ccb758a44342e498f954156e137bb449743a0f18462b01edf6c3e7ccd62105f9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dafacaae2a2e5af644ccea60e1aa270f24555947ea3cbca8dfeaeeaacc42bcbc",
+      "structural_formula": "res[\"#b\"]={k:dict(Ms=s1[k][\"fit\"][\"Ms_GeV\"],MX=s1[k][\"fit\"][\"MX_GeV\"])forkingood}"
+    },
+    {
+      "exact_formula_ids": [
         "7fca7a0df44053885faa83541510ce66482f1c43d4f5379f0fcd8a9d1f99f5ff"
       ],
       "exact_member_count": 1,
@@ -2327253,6 +2327871,14 @@
       "exact_member_count": 1,
       "structural_family_id": "df2f7734d05886c8d019d7334223a9ffe07b98dfba38691e00c25e3e458f141c",
       "structural_formula": "scalerho_Lambda^{#/#}=M_Pl1#^{-beat}=#meV(beat=#=h(E8)decadesbelowthe"
+    },
+    {
+      "exact_formula_ids": [
+        "b1ace08b244f1a0b8e8b80a52c9e160e3b23b1b25322727d9570f38bf03d019e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "04cf5e3293c9a4850a92568bbe05edd6a1e09297e546af419633ae42eb54485f",
+      "structural_formula": "scales:thethreecouplingsthenrequireEVERYsurvivor'sexoticsABOVEM_s(M_c,M_l>M_s,#/#)--theexoticspushthe"
     },
     {
       "exact_formula_ids": [
@@ -2373056,20 +2373682,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90606842,
-    "exact_formula_families": 64022,
-    "files_scanned": 12470,
-    "formula_occurrences": 70123,
+    "bytes_scanned": 90617182,
+    "exact_formula_families": 64039,
+    "files_scanned": 12472,
+    "formula_occurrences": 70140,
     "status_occurrences": {
       "certified_or_theorem": 5241,
       "killed_or_retracted": 1852,
       "open_or_conditional": 2358,
       "preregistered": 36,
-      "retrospective_fit": 5383,
-      "unclassified": 55253
+      "retrospective_fit": 5392,
+      "unclassified": 55261
     },
-    "structural_families": 62335
+    "structural_families": 62352
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "78530ff5d0287a08ad0f1fea2324938bb255ea5693dd4bfa6dc641fd00fd7da5"
+  "universe_sha256": "f864f5eb6043fc608295fc68cedf7234ab60717eadc638f9a72a7336fe34cdfe"
 }
