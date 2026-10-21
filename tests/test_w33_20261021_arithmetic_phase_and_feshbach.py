@@ -30,6 +30,9 @@ def test_rank_two_coupling_interlacing_and_dark_modes():
     assert r["offdiagonal_rank"]==2
     assert r["bright_internal_dimensions"]==2
     assert r["dark_internal_dimensions"]==37
+    assert r["operator_norm_perturbation_bound"]<0.13
+    assert r["spurious_eigenvalues_inside_abs5_at_least"]>=39
+    assert r["full_Hilbert_Polya_Xi_determinant_possible"] is False
     assert all(abs(v["difference"])<=41 for v in r["count_checks"].values())
 
 def test_schur_determinant_ratio():
