@@ -1,0 +1,145 @@
+{
+  "12168": {
+    "points": 14,
+    "max_dev": 6.418476861114186e-16
+  },
+  "12171": {
+    "2": {
+      "+0.002": {
+        "y": 1.7340508075688772,
+        "n": 0,
+        "Delta": null
+      },
+      "-0.002": {
+        "y": 1.7300508075688772,
+        "n": 12,
+        "Delta": -0.0005773502691900911
+      }
+    },
+    "10": {
+      "+0.002": {
+        "y": 1.5135226281523415,
+        "n": 0,
+        "Delta": null
+      },
+      "-0.002": {
+        "y": 1.5095226281523415,
+        "n": 8,
+        "Delta": -0.0004930043962791397
+      }
+    },
+    "77": {
+      "+0.002": {
+        "y": 0.8680254037844386,
+        "n": 0,
+        "Delta": null
+      },
+      "-0.002": {
+        "y": 0.8640254037844386,
+        "n": 8,
+        "Delta": -0.0011547005383792386
+      }
+    }
+  },
+  "12170": {
+    "N001_F1_04": {
+      "('scalar', 'has10')": 0,
+      "('scalar', 'sizes:5')": 384,
+      "('fermion', 'has10')": 288,
+      "('fermion', 'sizes:5')": 288,
+      "models": 864,
+      "('fermion', 'sizes:10')": 288,
+      "('scalar', 'none')": 192,
+      "('fermion', 'sizes:1')": 288,
+      "('scalar', 'sizes:1,5')": 192,
+      "('scalar', 'sizes:1')": 96
+    },
+    "N004_F1_03": {
+      "('scalar', 'has10')": 0,
+      "('scalar', 'sizes:1,5')": 192,
+      "('fermion', 'has10')": 288,
+      "('fermion', 'sizes:10')": 288,
+      "models": 864,
+      "('fermion', 'sizes:1')": 288,
+      "('scalar', 'sizes:5')": 384,
+      "('scalar', 'none')": 192,
+      "('scalar', 'sizes:1')": 96,
+      "('fermion', 'sizes:5')": 288
+    },
+    "N004_F1_04": {
+      "('scalar', 'has10')": 0,
+      "('scalar', 'sizes:1,5')": 192,
+      "('fermion', 'has10')": 288,
+      "('fermion', 'sizes:10')": 288,
+      "models": 864,
+      "('fermion', 'sizes:1')": 288,
+      "('scalar', 'sizes:5')": 384,
+      "('scalar', 'none')": 192,
+      "('scalar', 'sizes:1')": 96,
+      "('fermion', 'sizes:5')": 288
+    },
+    "N004_F1_05": {
+      "('scalar', 'has10')": 0,
+      "('scalar', 'sizes:1,5')": 192,
+      "('fermion', 'has10')": 288,
+      "('fermion', 'sizes:10')": 288,
+      "models": 864,
+      "('fermion', 'sizes:1')": 288,
+      "('scalar', 'sizes:5')": 384,
+      "('scalar', 'none')": 192,
+      "('scalar', 'sizes:1')": 96,
+      "('fermion', 'sizes:5')": 288
+    },
+    "N008_F1_02": {
+      "('scalar', 'has10')": 0,
+      "('scalar', 'sizes:5')": 384,
+      "('fermion', 'has10')": 288,
+      "('fermion', 'sizes:5')": 288,
+      "models": 864,
+      "('fermion', 'sizes:1')": 288,
+      "('scalar', 'sizes:1,5')": 192,
+      "('fermion', 'sizes:10')": 288,
+      "('scalar', 'none')": 192,
+      "('scalar', 'sizes:1')": 96
+    },
+    "N008_F1_03": {
+      "('scalar', 'has10')": 0,
+      "('scalar', 'sizes:5')": 384,
+      "('fermion', 'has10')": 288,
+      "('fermion', 'sizes:5')": 288,
+      "models": 864,
+      "('fermion', 'sizes:1')": 288,
+      "('scalar', 'sizes:1,5')": 192,
+      "('fermion', 'sizes:10')": 288,
+      "('scalar', 'none')": 192,
+      "('scalar', 'sizes:1')": 96
+    },
+    "N008_F1_04": {
+      "('scalar', 'has10')": 0,
+      "('scalar', 'sizes:1,5')": 192,
+      "('fermion', 'has10')": 288,
+      "('fermion', 'sizes:10')": 288,
+      "models": 864,
+      "('scalar', 'sizes:5')": 384,
+      "('fermion', 'sizes:5')": 288,
+      "('scalar', 'sizes:1')": 96,
+      "('scalar', 'none')": 192,
+      "('fermion', 'sizes:1')": 288
+    }
+  },
+  "12172": {
+    "bases": 58,
+    "v0_scanned": 464,
+    "draws": 27840,
+    "tachyon_free": 10986,
+    "SM": 4,
+    "SM_tachyon_free": 0
+  },
+  "checks": {
+    "12168: S002 lowest Witten level = (sqrt3 y - 1)^2/(6 sqrt3 y) to 1e-14 on the axis (11136 charged form at B = 0)": true,
+    "12171: exact onsets sqrt3 / sqrt3/2 + sqrt(5/12) / sqrt3/2 bracketed (models 2, 10, 77); Delta slopes 1/(2 sqrt3) and 1/sqrt3 exact": true,
+    "12170: untwisted scalar 10s: 0 in all 7 x 864 A4-type models; untwisted fermion 10s: 288 per base (control)": true,
+    "12172: Z6-I with 8 V0 per base: 464 V0, 27840 draws, 10986 tachyon-free, 4 SM-like, 0 SM & tachyon-free; SM only on tachyonic bases": true
+  },
+  "all_checks_pass": true
+}

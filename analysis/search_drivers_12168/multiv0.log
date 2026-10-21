@@ -1,0 +1,465 @@
+Z6I_00 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_00 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_00 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_00 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_00 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_00 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_00 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_00 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D8 and D6 + A1 + A1 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 45, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 46, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 44, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 45, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 46, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_01 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 48, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 43, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 48, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 7 {'V0': '-1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 44, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_02 8 {'V0': '0 -1 0 0 0 0 0 0 0 1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and A5 + A1 + A1 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 45, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 45, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 44, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 46, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 44, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_03 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D8 and D5 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 0 1/2 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 2 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 3 {'V0': '-1/2 -1/2 0 -1/2 0 0 0 1/2 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 0 1/2 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 5 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 6 {'V0': '-1/2 -1/2 0 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 0 1/2 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_04 8 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A7 and A5 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 42, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 45, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_05 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 42, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_06 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A3 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 21, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 46, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_07 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D7 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_08 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D4 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_09 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 1 {'V0': '0 0 0 0 0 0 -1 0 -1/2 -1/2 0 0 0 0 1/2 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 2 {'V0': '0 0 0 0 0 0 0 -1 -1/2 -1/2 0 0 0 0 1/2 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 42, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 3 {'V0': '0 0 0 0 0 0 -1 0 -1/2 -1/2 0 0 0 1/2 0 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 4 {'V0': '0 0 0 0 0 0 0 -1 -1/2 -1/2 0 0 0 1/2 0 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 43, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 5 {'V0': '-1 0 0 0 0 0 0 0 -1/2 -1/2 0 0 0 1/2 1/2 0', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 6 {'V0': '0 -1 0 0 0 0 0 0 -1/2 -1/2 0 0 0 1/2 1/2 0', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 7 {'V0': '0 0 -1 0 0 0 0 0 -1/2 -1/2 0 0 0 1/2 1/2 0', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 53, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_10 8 {'V0': '0 0 0 0 0 0 -1 0 -1/2 -1/2 0 0 1/2 0 0 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 42, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_11 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D5 + A2 NU1 1', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_12 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D4 + A2 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 22, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 0 1/2 0 0 0 0 0 0 -1 0', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 2 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 0 0 0 0 -1 0', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 3 {'V0': '-1/2 -1/2 0 -1/2 0 0 0 1/2 0 0 0 0 0 0 -1 0', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 -1/2 0 0 0 0 0 0 0 0 -1', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 5 {'V0': '-1/2 -1/2 -1/2 0 0 0 0 -1/2 0 0 0 0 0 0 0 -1', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 6 {'V0': '-1/2 -1/2 0 -1/2 0 0 -1/2 0 0 0 0 0 0 0 0 -1', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 0 1/2 0 0 0 0 0 0 0 1', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_13 8 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 0 0 0 0 0 1', 'gauge': 'GAUGE A7 and A5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_14 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 + A1 + A1 and D8 NU1 0', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_15 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D5 + A2 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_16 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D4 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 1 {'V0': '-1/2 -1/2 -1/2 0 0 -1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 2 {'V0': '-1/2 -1/2 -1/2 0 0 0 -1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 3 {'V0': '-1/2 -1/2 0 -1/2 0 -1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 6 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_17 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_18 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 1 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 2 {'V0': '-1/2 -1/2 0 -1/2 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 3 {'V0': '-1/2 -1/2 0 0 -1/2 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 4 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 5 {'V0': '-1/2 -1/2 0 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 6 {'V0': '-1/2 -1/2 0 0 -1/2 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 7 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_19 8 {'V0': '-1/2 -1/2 0 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_20 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 22, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 20, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_21 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_22 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 50, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 7 {'V0': '-1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_23 8 {'V0': '0 -1 0 0 0 0 0 0 0 1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and A5 + A1 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_24 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A2 and D5 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 20, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 45, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 7 {'V0': '0 0 0 0 0 0 1 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_25 8 {'V0': '0 0 0 0 0 1 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and A5 + A1 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_26 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A2 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_27 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A3 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 1 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 2 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 3 {'V0': '-1/2 -1/2 0 -1/2 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 4 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 5 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 6 {'V0': '-1/2 -1/2 0 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 21, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 7 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_28 8 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A6 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 1 {'V0': '0 0 0 0 0 1 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 2 {'V0': '0 0 0 0 1 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 3 {'V0': '0 0 0 0 0 1 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 4 {'V0': '0 0 0 0 1 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 5 {'V0': '0 0 0 0 0 1 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 6 {'V0': '0 0 0 0 1 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 7 {'V0': '0 0 0 0 0 1 0 0 0 0 0 -1 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_29 8 {'V0': '0 0 0 0 1 0 0 0 0 0 0 -1 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_30 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A1 + A1 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 1 {'V0': '-1/2 -1/2 -1/2 0 -1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 2 {'V0': '-1/2 -1/2 -1/2 0 0 -1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 3 {'V0': '-1/2 -1/2 0 -1/2 -1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 4 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 5 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 6 {'V0': '-1/2 -1/2 0 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 7 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_31 8 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A4 + A1 and A7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 22, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_32 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 18, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_33 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_33 2 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_33 3 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_33 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_33 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 1, 'SM_tf': 0, 'problems': 0}
+Z6I_33 6 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_33 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_33 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A4 + A2 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 1 {'V0': '-1/2 0 -1/2 -1/2 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 2 {'V0': '-1/2 0 -1/2 -1/2 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 3 {'V0': '-1/2 0 -1/2 -1/2 1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 4 {'V0': '-1/2 0 -1/2 0 0 1/2 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 5 {'V0': '-1/2 0 -1/2 0 1/2 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 6 {'V0': '-1/2 0 -1/2 0 1/2 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 7 {'V0': '-1/2 0 -1/2 0 0 1/2 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_34 8 {'V0': '-1/2 0 -1/2 0 1/2 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A2 + A2 + A1 and A5 + A1 NU1 5', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 3 {'V0': '0 1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 6 {'V0': '0 1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_35 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 + A1 + A1 and D8 NU1 1', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 2 {'V0': '0 0 0 0 0 0 1 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 3 {'V0': '0 0 0 0 0 1 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 5 {'V0': '0 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 6 {'V0': '0 0 0 0 0 1 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_36 8 {'V0': '0 0 0 0 0 0 1 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A6 and A5 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 2 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 3 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 6 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 38, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_37 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 35, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 2 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 3 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 6 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_38 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D4 + A3 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 2 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 3 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 6 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_39 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 + A1 and D7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_40 1 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_40 2 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 1, 'SM_tf': 0, 'problems': 0}
+Z6I_40 3 {'V0': '-1/2 -1/2 -1/2 1/2 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_40 4 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_40 5 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_40 6 {'V0': '-1/2 -1/2 -1/2 1/2 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_40 7 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_40 8 {'V0': '-1/2 -1/2 -1/2 0 1/2 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 + A1 and D5 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 2, 'SM_tf': 0, 'problems': 0}
+Z6I_41 1 {'V0': '-1/2 -1/2 0 0 0 1/2 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_41 2 {'V0': '-1/2 -1/2 0 0 1/2 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_41 3 {'V0': '-1/2 -1/2 0 0 1/2 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_41 4 {'V0': '-1/2 -1/2 0 0 0 1/2 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 47, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_41 5 {'V0': '-1/2 -1/2 0 0 1/2 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_41 6 {'V0': '-1/2 -1/2 0 0 1/2 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_41 7 {'V0': '-1/2 -1/2 0 0 0 1/2 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 49, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_41 8 {'V0': '-1/2 -1/2 0 0 1/2 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and D6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 49, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 1 {'V0': '0 0 0 0 0 0 1 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 2 {'V0': '0 0 0 0 0 1 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 3 {'V0': '0 0 0 0 1 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 4 {'V0': '0 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 5 {'V0': '0 0 0 0 0 1 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 6 {'V0': '0 0 0 0 1 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 21, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 7 {'V0': '0 0 0 0 0 0 1 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_42 8 {'V0': '0 0 0 0 0 1 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A6 and A6 NU1 4', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 1 {'V0': '0 0 0 0 0 1 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 2 {'V0': '0 0 0 0 1 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 3 {'V0': '0 0 0 1 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 4 {'V0': '0 0 0 0 0 1 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 27, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 5 {'V0': '0 0 0 0 1 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 6 {'V0': '0 0 0 1 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 7 {'V0': '0 0 0 0 0 1 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 22, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_43 8 {'V0': '0 0 0 0 1 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A5 and A4 + A2 NU1 5', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 14, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 2 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 3 {'V0': '-1/2 -1/2 0 0 -1/2 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 5 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 6 {'V0': '-1/2 -1/2 0 0 -1/2 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_44 8 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A2 and D6 + A1 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 2 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 3 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 6 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_45 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 2 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 3 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 6 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_46 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D4 + A3 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 2 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 3 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 5 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 6 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_47 8 {'V0': '-1/2 -1/2 -1/2 0 0 1/2 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A1 + A1 and D7 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 1 {'V0': '0 0 0 0 0 0 0 -1 0 0 0 0 0 0 -1 0', 'gauge': 'GAUGE A7 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 30', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 2 {'V0': '0 0 0 0 0 0 1 0 0 0 0 0 0 0 -1 0', 'gauge': 'GAUGE A7 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 3 {'V0': '0 0 0 0 0 1 0 0 0 0 0 0 0 0 -1 0', 'gauge': 'GAUGE A7 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 4 {'V0': '-1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0', 'gauge': 'GAUGE A7 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 5 {'V0': '0 -1 0 0 0 0 0 0 0 0 0 0 0 0 1 0', 'gauge': 'GAUGE A7 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 6 {'V0': '0 0 -1 0 0 0 0 0 0 0 0 0 0 0 1 0', 'gauge': 'GAUGE A7 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 7 {'V0': '-1/2 -1/2 0 0 0 1/2 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A3 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_48 8 {'V0': '-1/2 -1/2 0 0 1/2 0 1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A4 + A3 and D6 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 1 {'V0': '0 0 0 0 0 0 0 -1 -1/2 -1/2 -1/2 -1/2 0 0 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 2 {'V0': '0 0 0 0 0 0 1 0 -1/2 -1/2 -1/2 -1/2 0 0 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 3 {'V0': '0 0 0 0 0 1 0 0 -1/2 -1/2 -1/2 -1/2 0 0 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 4 {'V0': '0 0 0 0 0 0 0 -1 -1/2 -1/2 -1/2 0 -1/2 0 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 5 {'V0': '0 0 0 0 0 0 1 0 -1/2 -1/2 -1/2 0 -1/2 0 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 6 {'V0': '0 0 0 0 0 1 0 0 -1/2 -1/2 -1/2 0 -1/2 0 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 7 {'V0': '0 0 0 0 0 0 0 -1 -1/2 -1/2 -1/2 0 0 -1/2 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_49 8 {'V0': '0 0 0 0 0 0 1 0 -1/2 -1/2 -1/2 0 0 -1/2 0 0', 'gauge': 'GAUGE A7 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 18, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 40, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_50 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 30, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_51 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D6 and D6 + A1 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 1 {'V0': '-1/2 -1/2 -1/2 0 0 0 -1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 2 {'V0': '-1/2 -1/2 0 -1/2 0 0 -1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 3 {'V0': '-1/2 -1/2 0 0 -1/2 0 -1/2 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 4 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 5 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 6 {'V0': '-1/2 -1/2 0 0 -1/2 0 1/2 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 7 {'V0': '-1/2 -1/2 -1/2 0 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_52 8 {'V0': '-1/2 -1/2 0 -1/2 0 0 1/2 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A3 + A3 and A7 NU1 3', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 1 {'V0': '0 0 0 0 0 0 -1 0 -1/2 -1/2 0 0 0 0 1/2 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 2 {'V0': '0 0 0 0 0 0 0 1 -1/2 -1/2 0 0 0 0 1/2 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 3 {'V0': '0 0 0 0 0 0 -1 0 -1/2 -1/2 0 0 0 1/2 0 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 4 {'V0': '0 0 0 0 0 0 0 1 -1/2 -1/2 0 0 0 1/2 0 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 18', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 5 {'V0': '-1 0 0 0 0 0 0 0 -1/2 -1/2 0 0 0 1/2 1/2 0', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 6 {'V0': '0 -1 0 0 0 0 0 0 -1/2 -1/2 0 0 0 1/2 1/2 0', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 7 {'V0': '0 0 -1 0 0 0 0 0 -1/2 -1/2 0 0 0 1/2 1/2 0', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_53 8 {'V0': '0 0 0 0 0 0 -1 0 -1/2 -1/2 0 0 1/2 0 0 1/2', 'gauge': 'GAUGE D6 + A1 and A3 + A2 NU1 4', 'base_tachyons': 'T_NFIELDS 6', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 39, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 41, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 37, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_54 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D5 + A1 and D8 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 34, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 26, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 28, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_55 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D4 + A3 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 22, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 2 {'V0': '0 0 0 0 0 0 0 -1 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 36', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 3 {'V0': '0 0 0 0 0 0 1 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 32, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 36, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 5 {'V0': '0 0 0 0 0 0 0 -1 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 36', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 6 {'V0': '0 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 33, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_56 8 {'V0': '0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE A7 and A6 NU1 3', 'base_tachyons': 'T_NFIELDS 36', 'ok': 60, 'tachyon_free': 0, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 1 {'V0': '-1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 2 {'V0': '0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 24, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 3 {'V0': '0 0 -1 0 0 0 0 0 -1 0 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 23, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 4 {'V0': '-1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 31, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 5 {'V0': '0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 16, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 6 {'V0': '0 0 -1 0 0 0 0 0 0 -1 0 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 25, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 7 {'V0': '-1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 29, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+Z6I_57 8 {'V0': '0 -1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0', 'gauge': 'GAUGE D7 and D6 + A1 NU1 2', 'base_tachyons': 'T_NFIELDS 0', 'ok': 60, 'tachyon_free': 21, 'SM': 0, 'SM_tf': 0, 'problems': 0}
+DONE

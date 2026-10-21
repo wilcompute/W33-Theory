@@ -1,0 +1,86 @@
+{
+ "N001_F1_04": {
+  "('scalar', 'has10')": 0,
+  "('scalar', 'sizes:5')": 384,
+  "('fermion', 'has10')": 288,
+  "('fermion', 'sizes:5')": 288,
+  "models": 864,
+  "('fermion', 'sizes:10')": 288,
+  "('scalar', 'none')": 192,
+  "('fermion', 'sizes:1')": 288,
+  "('scalar', 'sizes:1,5')": 192,
+  "('scalar', 'sizes:1')": 96
+ },
+ "N004_F1_03": {
+  "('scalar', 'has10')": 0,
+  "('scalar', 'sizes:1,5')": 192,
+  "('fermion', 'has10')": 288,
+  "('fermion', 'sizes:10')": 288,
+  "models": 864,
+  "('fermion', 'sizes:1')": 288,
+  "('scalar', 'sizes:5')": 384,
+  "('scalar', 'none')": 192,
+  "('scalar', 'sizes:1')": 96,
+  "('fermion', 'sizes:5')": 288
+ },
+ "N004_F1_04": {
+  "('scalar', 'has10')": 0,
+  "('scalar', 'sizes:1,5')": 192,
+  "('fermion', 'has10')": 288,
+  "('fermion', 'sizes:10')": 288,
+  "models": 864,
+  "('fermion', 'sizes:1')": 288,
+  "('scalar', 'sizes:5')": 384,
+  "('scalar', 'none')": 192,
+  "('scalar', 'sizes:1')": 96,
+  "('fermion', 'sizes:5')": 288
+ },
+ "N004_F1_05": {
+  "('scalar', 'has10')": 0,
+  "('scalar', 'sizes:1,5')": 192,
+  "('fermion', 'has10')": 288,
+  "('fermion', 'sizes:10')": 288,
+  "models": 864,
+  "('fermion', 'sizes:1')": 288,
+  "('scalar', 'sizes:5')": 384,
+  "('scalar', 'none')": 192,
+  "('scalar', 'sizes:1')": 96,
+  "('fermion', 'sizes:5')": 288
+ },
+ "N008_F1_02": {
+  "('scalar', 'has10')": 0,
+  "('scalar', 'sizes:5')": 384,
+  "('fermion', 'has10')": 288,
+  "('fermion', 'sizes:5')": 288,
+  "models": 864,
+  "('fermion', 'sizes:1')": 288,
+  "('scalar', 'sizes:1,5')": 192,
+  "('fermion', 'sizes:10')": 288,
+  "('scalar', 'none')": 192,
+  "('scalar', 'sizes:1')": 96
+ },
+ "N008_F1_03": {
+  "('scalar', 'has10')": 0,
+  "('scalar', 'sizes:5')": 384,
+  "('fermion', 'has10')": 288,
+  "('fermion', 'sizes:5')": 288,
+  "models": 864,
+  "('fermion', 'sizes:1')": 288,
+  "('scalar', 'sizes:1,5')": 192,
+  "('fermion', 'sizes:10')": 288,
+  "('scalar', 'none')": 192,
+  "('scalar', 'sizes:1')": 96
+ },
+ "N008_F1_04": {
+  "('scalar', 'has10')": 0,
+  "('scalar', 'sizes:1,5')": 192,
+  "('fermion', 'has10')": 288,
+  "('fermion', 'sizes:10')": 288,
+  "models": 864,
+  "('scalar', 'sizes:5')": 384,
+  "('fermion', 'sizes:5')": 288,
+  "('scalar', 'sizes:1')": 96,
+  "('scalar', 'none')": 192,
+  "('fermion', 'sizes:1')": 288
+ }
+}
