@@ -60,6 +60,8 @@ One flipped incidence-edge bit changes 81 apartment holonomies. All 12,720 disti
 
 For the existing compact-resolvent diagonal model t_n=2pi(n-7/8)/LambertW((n-7/8)/e), add the bounded W33 modulation 0.05*[24cos(n theta2)+15cos(n theta_minus4)]/39. Compare 1200-level finite determinants product_{n<=1200}(1-t²/lambda_n²), inverse spectral moments S2,S4,S6 and first 20 zero ordinates against the independent completed Xi function.
 
+The completed Xi function itself supplies exact inverse-zero moment coefficients via S_(2k)= -k/(2k)! * [d^(2k)/dt^(2k) log(Xi(t)/Xi(0))]_(t=0), without assuming classical RH. Their computed values are S2=0.02310499311542, S4=3.71725992853e-5, S6=1.44173931401e-7. Against these, the modulated W33 1200-level scaffold misses by -16.30%, -49.34%, -70.83%, respectively. This **strongly falsifies** spectral equality for the registered finite model; it does not rule out all possible renormalized infinite operators.
+
 Mean first-20 relative error: baseline 4.8830%, modulated 4.8780%. At t=6, **finite** normalized determinant relative errors are 16.1343% and 16.1092%. Improvements are negligible; correct leading zero density does not specify an exact Xi determinant.
 
 **Boundary:** This is **not** an implementation of the Connes–Consani–Moscovici all-prime finite spectral triple. Finite determinant truncations must not be confused with analytic infinite-product equality.
