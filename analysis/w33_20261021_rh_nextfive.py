@@ -224,11 +224,50 @@ def apartment_classification():
     assert set(incidence)=={81}
     rank=gf2_rank_bitsets(octagons)
     assert rank==81==160-80+1
+    # Fix a canonical spanning-tree gauge. The 81 non-tree edges are
+    # unique coordinates for the 2^81 gauge-inequivalent sign classes.
+    from collections import deque
+    adjacency=[[] for _ in range(80)]
+    for p,j in flags:
+        adjacency[p].append((40+j,(p,j)))
+        adjacency[40+j].append((p,(p,j)))
+    seen={0};queue=deque([0]);tree=set()
+    while queue:
+        u=queue.popleft()
+        for v,e in sorted(adjacency[u]):
+            if v not in seen:
+                seen.add(v);queue.append(v);tree.add(e)
+    chords=[e for e in flags if e not in tree]
+    assert len(tree)==79 and len(chords)==81
+    L=np.block([[np.zeros((40,40)),N.astype(float)],
+                [N.T.astype(float),np.zeros((40,40))]])
+    bound=2*math.sqrt(3)
+    def radius(indices):
+        B=L.copy()
+        for k in indices:
+            p,j=chords[int(k)]
+            B[p,40+j]=B[40+j,p]=-1
+        return float(np.max(np.abs(np.linalg.eigvalsh(B))))
+    single=[radius([k]) for k in range(81)]
+    assert min(single)>bound
+    rng=np.random.default_rng(20261021)
+    random_radii=[radius(np.flatnonzero(rng.integers(0,2,size=81))) for _ in range(128)]
+    tempered=sum(r<=bound+1e-10 for r in random_radii)
+    assert tempered==126
+
     # Every gauge boundary is orthogonal to each cycle; a full 81D
     # cycle-span has annihilator of dimension 160-81=79=|V|-1.
     return {"status":"PASS","edges":160,"vertices":80,"apartments":len(octagons),
             "octagons_per_edge":81,"cycle_space_rank":81,
             "gauge_boundary_rank":79,"undetected_non_gauge_signings":0,
+            "canonical_tree_edges":79,"canonical_chord_coordinates":81,
+            "one_negative_chord_count":len(single),
+            "all_single_chord_signings_untempered":True,
+            "single_chord_radius_range":[min(single),max(single)],
+            "random_samples":128,"random_tempered":tempered,
+            "random_untempered":128-tempered,
+            "random_radius_range":[min(random_radii),max(random_radii)],
+            "sampling_scope":"Deterministic sampled canonical-gauge representatives, not a complete orbit classification.",
             "theorem":"All octagon holonomies +1 iff the binary signing is a vertex-switching coboundary.",
             "qualification":"Classifies Z2 gauge-triviality only; it does not classify which nontrivial signings have tempered Artin-Ihara L-factors."}
 
