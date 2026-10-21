@@ -1,0 +1,52 @@
+name: W33 RH five follow-up frontiers
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261021_rh_nextfive.py"
+      - "tests/test_w33_20261021_rh_nextfive.py"
+      - ".github/workflows/w33-rh-nextfive.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261021_rh_nextfive.py"
+      - "tests/test_w33_20261021_rh_nextfive.py"
+      - ".github/workflows/w33-rh-nextfive.yml"
+  workflow_dispatch:
+
+jobs:
+  exact-and-numerical-boundaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install focused mathematical dependencies
+        run: python -m pip install numpy scipy mpmath pytest
+      - name: Test five research claims
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python -m pytest -q tests/test_w33_20261021_rh_nextfive.py
+      - name: Regenerate checked certificate
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python analysis/w33_20261021_rh_nextfive.py > /tmp/rh_nextfive.txt
+      - name: Enforce theorem scope and test count
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open("data/w33_20261021_rh_nextfive_certificate.json"))
+          assert x["status"]=="PASS"
+          assert x["classical_RH_proved"] is False
+          assert len(x["frontiers"]) == 5
+          assert x["frontiers"]["apartment_holonomy_completeness"]["cycle_space_rank"]==81
+          assert x["frontiers"]["levi_explicit_conjugator"]["rational_rank_witness_mod101"]==156
+          print("Five research checks passed; classical RH remains open.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-rh-nextfive-certificate
+          path: data/w33_20261021_rh_nextfive_certificate.json
