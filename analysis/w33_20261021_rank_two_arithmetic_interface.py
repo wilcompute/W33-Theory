@@ -24,6 +24,13 @@ def certificate(N=120,eta=0.1):
     B=eta*np.outer(u,v)
     H=np.block([[np.diag(t),B],[B.T,np.diag(K)]])
     eig=np.linalg.eigvalsh(H)
+    # Weyl perturbation bound: 39 added internal modes cannot disappear.
+    # The offdiagonal block has operator norm eta ||u|| ||v||.
+    norm_bound=abs(eta)*float(np.linalg.norm(u))*float(np.linalg.norm(v))
+    assert norm_bound<0.13
+    assert float(t.min())>14.1
+    assert int(np.sum((eig>=-4-norm_bound-1e-8)&(eig<=2+norm_bound+1e-8)))>=39
+    assert max(abs(eig[i]) for i in range(39))<5.
     assert sum(abs(eig-2)<1e-8)==23
     assert sum(abs(eig+4)<1e-8)==14
     counts={}
@@ -44,6 +51,10 @@ def certificate(N=120,eta=0.1):
       "status":"PASS_SCOPED","classical_RH_proved":False,
       "external_levels":N,"W33_nonconstant_dimensions":39,
       "offdiagonal_rank":2,"bright_internal_dimensions":2,"dark_internal_dimensions":37,
+      "operator_norm_perturbation_bound":norm_bound,
+      "spurious_eigenvalues_inside_abs5_at_least":39,
+      "full_Hilbert_Polya_Xi_determinant_possible":False,
+      "Xi_obstruction":"39 added modes lie within abs(t)<5, below the established first classical zero ordinate 14.1347; full determinant cannot equal Xi",
       "internal_dark_multiplicities":{"eigenvalue_2":23,"eigenvalue_minus4":14},
       "finite_rank_eigenvalue_count_discrepancy_bound":41,
       "count_checks":counts,"determinant_checks":determinant_ratios,
