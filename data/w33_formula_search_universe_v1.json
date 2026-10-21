@@ -237365,6 +237365,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b56e7e86ffa8fae1a1b8fd932e94bccae51591cb1f229c670d2690dc0937b221",
+      "normalized_formula": "#Normedp=11rootshave2cos(theta)=2/sqrt(11)or-4/sqrt(11)",
+      "numeric_literals": [
+        "11",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261021_local_frobenius_phase_split.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/w33_20261021_local_frobenius_phase_split.py",
+          "raw": "# Normed p=11 roots have 2cos(theta)=2/sqrt(11) or -4/sqrt(11).",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "3bfe8679bc7d7925df01e9ab43a1ccdb26586e965f21c5f9a2871bfafd9a13d6",
+      "structural_formula": "#Normedp=#rootshave2cos(theta)=#/sqrt(#)or-#/sqrt(#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "570e0b1b805abb2422fd275ebfe1b0c6f1ed22848cadd075c36fd35e989394d8",
       "normalized_formula": "#Note:137\u22481/\u03b1(finestructureconstantnumerology!)",
       "numeric_literals": [
@@ -383130,6 +383159,37 @@
       },
       "structural_family_id": "0c5016a13967e9ecd66fcf16304d12b6efb913b8790cb4b8f94d6601e7d606e3",
       "structural_formula": "-Pass4#:whatSigmam_nu=#meVactuallysaysaboutthemassordering"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c415fa09303f4d412a0f03a424bc2122b72bd25dbaa0d45abd5003afc3f82b43",
+      "normalized_formula": "-Pass5051(data/PART_W33_PASS5051_Q_FAMILY_THETA_CODE.json)alreadycertifiestheq=3apartmentcharactercode[1620,81,81].Theindependentlycalculatedthree-edgefrustrationminimum81isnotanewdistancetheorem",
+      "numeric_literals": [
+        "051",
+        "1",
+        "1620",
+        "3",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
+          "raw": "- Pass 5051 (data/PART_W33_PASS5051_Q_FAMILY_THETA_CODE.json) already certifies the q=3 apartment character code [1620,81,81]. The independently calculated three-edge frustration minimum 81 is not a new distance theorem.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "ad6c65d3d564acc06b2925ff1ab22f5d9630ec059cc526a47b4f00ec6570c8b4",
+      "structural_formula": "-Pass5#(data/PART_W3#_PASS5#_Q_FAMILY_THETA_CODE.json)alreadycertifiestheq=#apartmentcharactercode[#,#,#].Theindependentlycalculatedthree-edgefrustrationminimum8#isnotanewdistancetheorem"
     },
     {
       "file_count": 1,
@@ -824602,6 +824662,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b596d0610a36b50d1309d520d94d5095da2053b1f35cdf1802e3e4c3ebd08265",
+      "normalized_formula": "TheW33nonconstantinternalmatrixisK=2I_24direct_sum(-4I_15),with39modes.Coupleoneseparablechannelofaself-adjointarithmeticcandidateH_a",
+      "numeric_literals": [
+        "-4",
+        "2",
+        "3",
+        "4",
+        "5",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
+          "raw": "The W33 nonconstant internal matrix is K=2I_24 direct_sum(-4I_15), with 39 modes. Couple one separable channel of a self-adjoint arithmetic candidate H_a:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d06fe8b961e4708490a79206aaf5b262e295310b127723558f2ca9557ae50fbe",
+      "structural_formula": "TheW3#nonconstantinternalmatrixisK=#I_2#direct_sum(#I_1#),with3#modes.Coupleoneseparablechannelofaself-adjointarithmeticcandidateH_a"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e347ba8224c7fbb52b1092b5b7a52b2221da03149b7330c9e2439a0af4725aaf",
       "normalized_formula": "TheW33order-fivenormalizergenerator^preservesbothcolorededgesets^,whiletheorder-fournormalizergenerator^exchangesthemexactly^.Thisverifiesthematchedgrouprelation\\(srs^{-1}=r^2\\)on*concretechiral-coloredH4adjacency*.Thechosenembeddingisnoncanonicalbecausedifferentorbitanchorsandgroup-isomorphismchoicesexist;^not^all48,000mapswork,anda*single*H4chiraladjacencygraphdoesnotcontainallW33edges",
       "numeric_literals": [
@@ -833078,6 +833170,40 @@
       },
       "structural_family_id": "728b2e56ed5bcc12300fded43fccfb706ccdb1fde97c4c1057b53acaa17cc97d",
       "structural_formula": "Thelocal1#-coordinatecodeisnotidentifiedwiththeglobalq=#binaryCSSpoint-codefamilymerelybecausebothhavedistance6"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "83e8db5acb0ac88b736a89484b96c33a23013bc5739172ca83e6ab092d6038e9",
+      "normalized_formula": "ThelocalFrobeniusfactorsarisefromC/F3:y^2=x^5+1(genustwo,x^4+9)andE/F3:y^2=x^3-x(elliptic,x^2+3).EveryFrobenius3-adicNewtonslopeis1/2:botharesupersingular.ThisisastandardalgebraicconsequenceoftheseWeilpolynomials,andthespecialgenus-twocurvewasspecificallystudiedbyEverettW.Howe(2006)",
+      "numeric_literals": [
+        "+1",
+        "+3",
+        "+9",
+        "2",
+        "2006",
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
+          "raw": "The local Frobenius factors arise from C/F3: y^2=x^5+1 (genus two, x^4+9) and E/F3: y^2=x^3-x (elliptic, x^2+3). Every Frobenius 3-adic Newton slope is 1/2: both are supersingular. This is a standard algebraic consequence of these Weil polynomials, and the special genus-two curve was specifically studied by Everett W. Howe (2006).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9e7b4d558638352c72d82f8222dfc989b3c0a799a27e1e607e298a1c4b7d9d11",
+      "structural_formula": "ThelocalFrobeniusfactorsarisefromC/F3:y^#=x^##(genustwo,x^##)andE/F3:y^#=x^#-x(elliptic,x^##).EveryFrobenius3-adicNewtonslopeis1/#:botharesupersingular.ThisisastandardalgebraicconsequenceoftheseWeilpolynomials,andthespecialgenus-twocurvewasspecificallystudiedbyEverettW.Howe(#)"
     },
     {
       "file_count": 1,
@@ -1497449,6 +1497575,36 @@
       "structural_formula": "p=#/#"
     },
     {
+      "file_count": 1,
+      "formula_id": "ff4295498fc9967cefdd8c23ce0e9e49a19b461476b53c178f9f2281588d44a5",
+      "normalized_formula": "p=3Levinontrivialtransfer:156D,T^8=81I,supersingular",
+      "numeric_literals": [
+        "156",
+        "3",
+        "8",
+        "81"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261021_local_frobenius_phase_split.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 4,
+          "path": "analysis/w33_20261021_local_frobenius_phase_split.py",
+          "raw": "p=3 Levi nontrivial transfer: 156D, T^8=81 I, supersingular;",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "febab24882e5d44d758c97defdaf3d0fab1a4c0754f584d2a7130f074d0bd2f9",
+      "structural_formula": "p=#Levinontrivialtransfer:#D,T^#=#I,supersingular"
+    },
+    {
       "file_count": 4,
       "formula_id": "1098d6c9f7a5f8d49f7de0ea7536a5627b1c7131b99665e38abc393684217f69",
       "normalized_formula": "p=5",
@@ -1814929,6 +1815085,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d32e9f8afcc767778c7502eee60fbe1c26add90d063d64bdfde2d9ab0887d6cb",
+      "normalized_formula": "whereuinl2(N),vinC^39.Theoff-diagonalperturbationhasrankatmosttwo.Finite-rankinterlacinggives|N_total(T)-N_a(T)|<=39+2=41ateverythreshold.HencetheexternalTlogTcountingcoefficientsurvives^without^arepeated39-foldtower.BoundedcouplingpreservescompactresolventifH_ahasit",
+      "numeric_literals": [
+        "+2",
+        "39",
+        "41",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 41,
+          "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
+          "raw": "where u in l2(N), v in C^39. The off-diagonal perturbation has rank at most two. Finite-rank interlacing gives |N_total(T)-N_a(T)| <= 39+2=41 at every threshold. Hence the external T log T counting coefficient survives **without** a repeated 39-fold tower. Bounded coupling preserves compact resolvent if H_a has it.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0d4160dac214341a96860fb0014aee475b772b1562c26efbbd9617e70ae77a24",
+      "structural_formula": "whereuinl2(N),vinC^#.Theoff-diagonalperturbationhasrankatmosttwo.Finite-rankinterlacinggives|N_total(T)-N_a(T)|<=##=#ateverythreshold.HencetheexternalTlogTcountingcoefficientsurvives^without^arepeated3#-foldtower.BoundedcouplingpreservescompactresolventifH_ahasit"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5bd8cb858d9bd86d2e2ba375a77317224adfbcd26cfae202dc9612fd0c6d08cd",
       "normalized_formula": "wherev=246GeVistheHiggsVEVandlambda_higgsisthequartic",
       "numeric_literals": [
@@ -1873131,9 +1873317,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-21T14:36:43-04:00",
+  "frozen_at": "2026-10-21T14:44:15-04:00",
   "pass": 398,
-  "repository_head": "42bb3739bd319b2e20cc5f07ccfd980b4bcd5dc0",
+  "repository_head": "2d42d88ebbd5758b4fbbfa9370a3717c6c3daa0a",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1955071,6 +1955257,14 @@
     },
     {
       "exact_formula_ids": [
+        "b56e7e86ffa8fae1a1b8fd932e94bccae51591cb1f229c670d2690dc0937b221"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3bfe8679bc7d7925df01e9ab43a1ccdb26586e965f21c5f9a2871bfafd9a13d6",
+      "structural_formula": "#Normedp=#rootshave2cos(theta)=#/sqrt(#)or-#/sqrt(#)"
+    },
+    {
+      "exact_formula_ids": [
         "2034459ae35de45ef99cc624bdda40d21d0284ea80a8844e195d4d50a7835440"
       ],
       "exact_member_count": 1,
@@ -1999499,6 +1999693,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0c5016a13967e9ecd66fcf16304d12b6efb913b8790cb4b8f94d6601e7d606e3",
       "structural_formula": "-Pass4#:whatSigmam_nu=#meVactuallysaysaboutthemassordering"
+    },
+    {
+      "exact_formula_ids": [
+        "c415fa09303f4d412a0f03a424bc2122b72bd25dbaa0d45abd5003afc3f82b43"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ad6c65d3d564acc06b2925ff1ab22f5d9630ec059cc526a47b4f00ec6570c8b4",
+      "structural_formula": "-Pass5#(data/PART_W3#_PASS5#_Q_FAMILY_THETA_CODE.json)alreadycertifiestheq=#apartmentcharactercode[#,#,#].Theindependentlycalculatedthree-edgefrustrationminimum8#isnotanewdistancetheorem"
     },
     {
       "exact_formula_ids": [
@@ -2095436,6 +2095638,14 @@
     },
     {
       "exact_formula_ids": [
+        "b596d0610a36b50d1309d520d94d5095da2053b1f35cdf1802e3e4c3ebd08265"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d06fe8b961e4708490a79206aaf5b262e295310b127723558f2ca9557ae50fbe",
+      "structural_formula": "TheW3#nonconstantinternalmatrixisK=#I_2#direct_sum(#I_1#),with3#modes.Coupleoneseparablechannelofaself-adjointarithmeticcandidateH_a"
+    },
+    {
+      "exact_formula_ids": [
         "e347ba8224c7fbb52b1092b5b7a52b2221da03149b7330c9e2439a0af4725aaf"
       ],
       "exact_member_count": 1,
@@ -2097697,6 +2097907,14 @@
       "exact_member_count": 1,
       "structural_family_id": "728b2e56ed5bcc12300fded43fccfb706ccdb1fde97c4c1057b53acaa17cc97d",
       "structural_formula": "Thelocal1#-coordinatecodeisnotidentifiedwiththeglobalq=#binaryCSSpoint-codefamilymerelybecausebothhavedistance6"
+    },
+    {
+      "exact_formula_ids": [
+        "83e8db5acb0ac88b736a89484b96c33a23013bc5739172ca83e6ab092d6038e9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9e7b4d558638352c72d82f8222dfc989b3c0a799a27e1e607e298a1c4b7d9d11",
+      "structural_formula": "ThelocalFrobeniusfactorsarisefromC/F3:y^#=x^##(genustwo,x^##)andE/F3:y^#=x^#-x(elliptic,x^##).EveryFrobenius3-adicNewtonslopeis1/#:botharesupersingular.ThisisastandardalgebraicconsequenceoftheseWeilpolynomials,andthespecialgenus-twocurvewasspecificallystudiedbyEverettW.Howe(#)"
     },
     {
       "exact_formula_ids": [
@@ -2274415,6 +2274633,14 @@
     },
     {
       "exact_formula_ids": [
+        "ff4295498fc9967cefdd8c23ce0e9e49a19b461476b53c178f9f2281588d44a5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "febab24882e5d44d758c97defdaf3d0fab1a4c0754f584d2a7130f074d0bd2f9",
+      "structural_formula": "p=#Levinontrivialtransfer:#D,T^#=#I,supersingular"
+    },
+    {
+      "exact_formula_ids": [
         "d641b699a400f8419f431f7b3ff9a1efdbb72b16fb87e165a2e380688bddd37e"
       ],
       "exact_member_count": 1,
@@ -2358961,6 +2359187,14 @@
     },
     {
       "exact_formula_ids": [
+        "d32e9f8afcc767778c7502eee60fbe1c26add90d063d64bdfde2d9ab0887d6cb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0d4160dac214341a96860fb0014aee475b772b1562c26efbbd9617e70ae77a24",
+      "structural_formula": "whereuinl2(N),vinC^#.Theoff-diagonalperturbationhasrankatmosttwo.Finite-rankinterlacinggives|N_total(T)-N_a(T)|<=##=#ateverythreshold.HencetheexternalTlogTcountingcoefficientsurvives^without^arepeated3#-foldtower.BoundedcouplingpreservescompactresolventifH_ahasit"
+    },
+    {
+      "exact_formula_ids": [
         "5bd8cb858d9bd86d2e2ba375a77317224adfbcd26cfae202dc9612fd0c6d08cd"
       ],
       "exact_member_count": 1,
@@ -2373682,20 +2373916,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90617182,
-    "exact_formula_families": 64039,
-    "files_scanned": 12472,
-    "formula_occurrences": 70140,
+    "bytes_scanned": 90630117,
+    "exact_formula_families": 64045,
+    "files_scanned": 12475,
+    "formula_occurrences": 70146,
     "status_occurrences": {
-      "certified_or_theorem": 5241,
-      "killed_or_retracted": 1852,
+      "certified_or_theorem": 5242,
+      "killed_or_retracted": 1853,
       "open_or_conditional": 2358,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55261
+      "unclassified": 55265
     },
-    "structural_families": 62352
+    "structural_families": 62358
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "f864f5eb6043fc608295fc68cedf7234ab60717eadc638f9a72a7336fe34cdfe"
+  "universe_sha256": "950c0e1c81798681b3337df8c2f14104a08a651f60cca8fdf4b221719a19ea21"
 }
