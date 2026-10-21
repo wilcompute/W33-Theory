@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-21",
+  "title": "Five W33 RH follow-up frontiers — frozen independent subset",
+  "classical_RH_proved": false,
+  "code": "analysis/w33_20261021_rh_nextfive.py",
+  "tests": "tests/test_w33_20261021_rh_nextfive.py",
+  "scope": "Local independent mathematical checks plus algebraic formulas. GitHub CI replay is tracked separately, not claimed passed.",
+  "frontiers": {
+    "hecke": {
+      "result": "Hom_G(trivial,V24)=Hom_G(trivial,V15)=0 for transitive W33 permutation G-action",
+      "claim": "Obstruction only for scalar E4 eigenspace"
+    },
+    "levi": {
+      "dimension": 156,
+      "companion_blocks": {
+        "x4+9": 24,
+        "x2+3": 30
+      },
+      "check": "TS=SC with integer 160x156 Krylov columns; rank modulo 101 from explicit generators",
+      "status": "CI replay pending"
+    },
+    "weil": {
+      "a": 0.025,
+      "d": [
+        0,
+        0.5,
+        1,
+        1.5
+      ],
+      "arithmetic": [
+        0.013578830701154251,
+        0.009576127183308247,
+        0.000015380410332666017,
+        -0.009511863841510149
+      ],
+      "zeros": [
+        0.013578830701161851,
+        0.009576127183316364,
+        0.00001538041034135861,
+        -0.009511863841500033
+      ],
+      "prime_tail_error_bounds_upper": [
+        4.496e-156,
+        2.112e-131,
+        1.348e-108,
+        5.854e-88
+      ],
+      "archimedean_quadrature_interval_certified": false,
+      "universal_Weil_positivity_proved": false
+    },
+    "apartments": {
+      "vertices": 80,
+      "edges": 160,
+      "octagons": 1620,
+      "rank_gf2": 81,
+      "gauge_tree_edges": 79,
+      "independent_chords": 81,
+      "single_chord_signings_untempered": 81,
+      "random_seed": 20261021,
+      "random_count": 128,
+      "random_tempered": 126,
+      "random_untempered": 2,
+      "spectral_bound": "2 sqrt(3)",
+      "classification_exhaustive": false
+    },
+    "spectral": {
+      "levels": 3000,
+      "inverse_moments_target": [
+        0.02310499311541897,
+        0.00003717259928526969,
+        1.44173931400974e-7
+      ],
+      "inverse_moments_toy": [
+        0.0196417205557443,
+        0.0000188326551474111,
+        4.20559047377992e-8
+      ],
+      "normalized_Xi": [
+        0.97714167458712,
+        0.55429185307524,
+        0.076375504659661
+      ],
+      "toy_determinant": [
+        0.98054067435172,
+        0.60825620415643,
+        0.12541815039648
+      ],
+      "determinant_equality_proved": false
+    }
+  }
+}
