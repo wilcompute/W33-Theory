@@ -60,6 +60,8 @@ Construct the 160 incidence edges of the 80-vertex Levi graph as coordinates of 
 
 A Z2 edge signing has holonomy +1 around all apartments if and only if the signing is a vertex-switching coboundary. The annihilator of the octagon span has dimension 160-81=79, exactly the connected-graph gauge-boundary space of dimension |V|-1. Every incidence edge appears in precisely 81 apartment octagons.
 
+The current follow-up fixes a canonical spanning-tree gauge (79 tree edges and 81 non-tree chords). Every one of the 2^81 gauge classes has exactly one representative with all tree-edge signs positive. The producer now checks **all 81 single-chord flips**; all are non-tempered, with spectral radius about 3.97311724355. It also tests 128 independent, deterministically seeded random chord signings; **126 are tempered, 2 are untempered**, under the graph bound 2sqrt(3). This is a sample of the enormous 2^81 character space, NOT a full classification and NOT an arithmetic sheaf purity theorem.
+
 This is a complete finite Z2 holonomy detector. It does NOT classify all 2^81 gauge inequivalent classes into tempered vs nontempered Artin–Ihara factors, and doesn't transfer to a global Dirichlet L-function.
 
 ## Frontier 5 — Quantitative Xi determinant and inverse-moment falsifier
