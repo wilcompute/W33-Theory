@@ -1,0 +1,2107 @@
+[
+ {
+  "label": "N004_F1_05_T000",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T001",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T002",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T003",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T004",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T005",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T006",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T007",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T008",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T009",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T010",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T011",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T012",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T013",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T014",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T015",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T016",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T017",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T018",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T019",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A3 + A1 NU1 8",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T020",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T021",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T022",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T023",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T024",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T025",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T026",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T027",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T028",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T029",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T030",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T031",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T032",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T033",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T034",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T035",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T036",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T037",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T038",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T039",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A3 + A1 NU1 8",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T040",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T041",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T042",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T043",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T044",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T045",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T046",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T047",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T048",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T049",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T050",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T051",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T052",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T053",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T054",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T055",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T056",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T057",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T058",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T059",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T060",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T061",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T062",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T063",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T064",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T065",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T066",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T067",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T068",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T069",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T070",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T071",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T072",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 + A1 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T073",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T074",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T075",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 + A1 + A1 NU1 9",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T076",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T077",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T078",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T079",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T080",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T081",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T082",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T083",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T084",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T085",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T086",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A3 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T087",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T088",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T089",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T090",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T091",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T092",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T093",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T094",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T095",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T096",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T097",
+  "base": "N004_F1_05",
+  "gauge": "A4 NU1 12",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T098",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T099",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T100",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T101",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T102",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T103",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T104",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T105",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T106",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T107",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T108",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T109",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T110",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T111",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T112",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T113",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T114",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T115",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T116",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T117",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T118",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T119",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T120",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T121",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T122",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T123",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T124",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T125",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T126",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T127",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T128",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T129",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T130",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T131",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T132",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T133",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T134",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T135",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T136",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T137",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T138",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T139",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T140",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T141",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T142",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T143",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T144",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T145",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T146",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T147",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T148",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T149",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T150",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T151",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T152",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T153",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T154",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T155",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T156",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T157",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T158",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T159",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A3 + A1 NU1 8",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T160",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T161",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T162",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T163",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T164",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T165",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T166",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T167",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T168",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T169",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T170",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T171",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T172",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T173",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T174",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T175",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T176",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T177",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T178",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T179",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T180",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T181",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T182",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T183",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T184",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T185",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T186",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T187",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T188",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T189",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T190",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T191",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T192",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T193",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T194",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T195",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T196",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 + A1 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T197",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 3,
+  "net5bar": 3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T198",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T199",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T200",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T201",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T202",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T203",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T204",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T205",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T206",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A2 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T207",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T208",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T209",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T210",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T211",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T212",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T213",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T214",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T215",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T216",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T217",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T218",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T219",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T220",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T221",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T222",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T223",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T224",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T225",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T226",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T227",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T228",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T229",
+  "base": "N004_F1_05",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T230",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T231",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T232",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T233",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T234",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T235",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T236",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T237",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T238",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T239",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T240",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T241",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T242",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T243",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T244",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T245",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T246",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T247",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T248",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T249",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A2 + A2 NU1 8",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T250",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T251",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T252",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T253",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T254",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A2 + A2 NU1 8",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T255",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T256",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T257",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T258",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T259",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T260",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T261",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T262",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T263",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T264",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 + A1 NU1 9",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_04_T265",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T266",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T267",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T268",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T269",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T270",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T271",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A2 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N001_F1_04_T272",
+  "base": "N001_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T273",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T274",
+  "base": "N004_F1_03",
+  "gauge": "A4 and A2 + A2 NU1 8",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T275",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T276",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T277",
+  "base": "N008_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T278",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T279",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T280",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T281",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T282",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T283",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T284",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_03_T285",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_03_T286",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_03_T287",
+  "base": "N008_F1_03",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_04_T288",
+  "base": "N008_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T289",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_04_T290",
+  "base": "N008_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T291",
+  "base": "N004_F1_04",
+  "gauge": "A4 and A1 + A1 NU1 10",
+  "net10": 0,
+  "net5bar": 0,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T292",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N001_F1_04_T293",
+  "base": "N001_F1_04",
+  "gauge": "A4 and A2 + A2 NU1 8",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N008_F1_02_T294",
+  "base": "N008_F1_02",
+  "gauge": "A4 and A1 NU1 11",
+  "net10": -3,
+  "net5bar": -3,
+  "scalar10": 0,
+  "tachyonic": 0,
+  "anomaly_ok": true
+ },
+ {
+  "label": "N004_F1_05_T295",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_04_T296",
+  "base": "N004_F1_04",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_03_T297",
+  "base": "N004_F1_03",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N004_F1_05_T298",
+  "base": "N004_F1_05",
+  "gauge": "LOADFAIL"
+ },
+ {
+  "label": "N008_F1_02_T299",
+  "base": "N008_F1_02",
+  "gauge": "LOADFAIL"
+ }
+]

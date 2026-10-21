@@ -1,0 +1,854 @@
+{
+ "2": {
+  "n_triplet_components": 54,
+  "diquark": 6,
+  "leptoquark": 9,
+  "both": 6,
+  "detail": [
+   {
+    "field": 54,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 61,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 62,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 74,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 81,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 88,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 90,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 107,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 108,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 128,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 135,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 136,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 148,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 155,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 162,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 164,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 181,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 182,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 202,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 209,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 210,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 222,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 229,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 236,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 238,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 255,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 256,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 274,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 285,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 286,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 298,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 299,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 317,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 326,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 328,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 342,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 348,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 359,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 360,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 372,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 373,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 391,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 400,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 402,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 416,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 422,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 433,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 434,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 446,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 447,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 465,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 474,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 476,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 490,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   }
+  ]
+ },
+ "15": {
+  "n_triplet_components": 30,
+  "diquark": 6,
+  "leptoquark": 9,
+  "both": 6,
+  "detail": [
+   {
+    "field": 16,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 17,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 18,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 25,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 26,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 27,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 60,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 74,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 80,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 112,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 122,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 136,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 142,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 174,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 184,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 198,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 204,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 236,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 254,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 264,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 276,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 282,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 316,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 326,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 338,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 344,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 378,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 388,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 400,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 406,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   }
+  ]
+ },
+ "77": {
+  "n_triplet_components": 54,
+  "diquark": 6,
+  "leptoquark": 9,
+  "both": 6,
+  "detail": [
+   {
+    "field": 63,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 66,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 87,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 90,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 111,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 114,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 132,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 139,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 140,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 154,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 161,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 162,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 176,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 183,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 184,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 196,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 204,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 209,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 224,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 228,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 236,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 241,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 256,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 260,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 268,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 273,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": true
+   },
+   {
+    "field": 288,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 306,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 309,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 330,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 333,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 354,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 357,
+    "Y": "-1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 366,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 370,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 378,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 382,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 398,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 402,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 410,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 414,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 430,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 434,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 442,
+    "Y": "1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 446,
+    "Y": "-1/3",
+    "diquark": true,
+    "leptoquark": true
+   },
+   {
+    "field": 460,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 472,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 473,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 482,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 494,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 495,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 504,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 516,
+    "Y": "1/3",
+    "diquark": false,
+    "leptoquark": false
+   },
+   {
+    "field": 517,
+    "Y": "0",
+    "diquark": false,
+    "leptoquark": false
+   }
+  ]
+ }
+}

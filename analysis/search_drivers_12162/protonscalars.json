@@ -1,0 +1,28 @@
+{
+ "2": {
+  "label": "A8SM_20260928_1577_TF",
+  "coloured_scalars": {
+   "(1, '1/3')": 9,
+   "(1, '-1/3')": 6,
+   "(1, '0')": 12
+  },
+  "proton_dangerous": 15
+ },
+ "15": {
+  "label": "A8SM_20260928_16457_TF",
+  "coloured_scalars": {
+   "(1, '1/3')": 9,
+   "(1, '0')": 6
+  },
+  "proton_dangerous": 9
+ },
+ "77": {
+  "label": "A8SM_20260928_14608_TF",
+  "coloured_scalars": {
+   "(1, '0')": 12,
+   "(1, '-1/3')": 6,
+   "(1, '1/3')": 9
+  },
+  "proton_dangerous": 15
+ }
+}
