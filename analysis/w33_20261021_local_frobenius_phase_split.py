@@ -71,6 +71,20 @@ def theorem():
     assert np.array_equal(R2.T@G2@R2,3*G2)
     assert np.array_equal(np.linalg.matrix_power(R4,8),81*np.eye(4,dtype=np.int64))
     assert np.array_equal(np.linalg.matrix_power(R2,8),81*np.eye(2,dtype=np.int64))
+    # Similarity by positive metric square root maps companion dynamics
+    # into signed orthogonal shift blocks: a passive *surrogate* gate.
+    U4=np.zeros((4,4),dtype=np.int64)
+    for j in range(3):U4[j+1,j]=1
+    U4[0,3]=-1
+    U2=np.array([[0,-1],[1,0]],dtype=np.int64)
+    assert np.array_equal(U4.T@U4,np.eye(4,dtype=np.int64))
+    assert np.array_equal(U2.T@U2,np.eye(2,dtype=np.int64))
+    assert np.array_equal(np.linalg.matrix_power(U4,4),-np.eye(4,dtype=np.int64))
+    assert np.array_equal(np.linalg.matrix_power(U2,2),-np.eye(2,dtype=np.int64))
+    # Native R/sqrt(3) has Euclidean singular values (sqrt27,1/sqrt3,...)
+    # or (sqrt3,1/sqrt3), hence cannot itself be a passive unitary.
+    assert np.array_equal(R4.T@R4,np.diag([1,1,1,81]))
+    assert np.array_equal(R2.T@R2,np.diag([1,9]))
     phase_trace=[round(trace(n)/(3**(n/2))) for n in range(1,9)]
     assert phase_trace==[0,-60,0,-36,0,-60,0,156]
     curves={}
@@ -91,6 +105,13 @@ def theorem():
            "normalized_period":8,"normalized_trace_cycle":phase_trace,
            "positive_companion_metrics":{"quartic":[1,3,9,27],"quadratic":[1,3]},
            "exact_metric_invariance":"R.T G R = 3 G; (R/sqrt(3)) is G-orthogonal",
+           "weighted_orthonormal_surrogates":{
+               "quartic":"four-mode signed cyclic shift U4^4=-I, U4^8=I",
+               "quadratic":"two-mode signed swap U2^2=-I, U2^4=I"},
+           "native_Euclidean_singular_values":{
+               "quartic":["sqrt(27)","1/sqrt(3) x3"],
+               "quadratic":["sqrt(3)","1/sqrt(3)"]},
+           "optical_boundary":"Signed shifts are passive-unitary surrogates; unweighted native transfer is nonunitary and weighted physical encoding is not constructed.",
            "p_adic_newton_slopes":"all 1/2 (supersingular)",
            "Frobenius_polynomials":["x^4+9","x^2+3"],
            "curves":["C/F3: y^2=x^5+1","E/F3: y^2=x^3-x"]},
