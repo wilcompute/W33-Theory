@@ -20,6 +20,9 @@ def test_apartment_holonomy_spanning():
     r=apartment_classification()
     assert r["apartments"]==1620 and r["cycle_space_rank"]==81
     assert r["undetected_non_gauge_signings"]==0
+    assert r["canonical_chord_coordinates"]==81
+    assert r["random_tempered"]==126 and r["random_untempered"]==2
+    assert r["all_single_chord_signings_untempered"]
 def test_infinite_spectral_determinant_negative_control():
     r=spectral_determinant_falsifier()
     assert not r["exact_Xi_determinant"]
