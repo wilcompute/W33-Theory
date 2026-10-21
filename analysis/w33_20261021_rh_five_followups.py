@@ -296,12 +296,26 @@ def spectral_benchmark():
         s=mp.mpf(".5")+1j*t
         return mp.mpf(".5")*s*(s-1)*mp.power(mp.pi,-s/2)*mp.gamma(s/2)*mp.zeta(s)
     classical={str(t):float(mp.re(xi(t)/xi(0))) for t in (2,4,6)}
+    # These inverse-zero moments come from the entire completed Xi function,
+    # independent of any assumption that RH holds.
+    logXi=lambda x: mp.log(xi(x)/xi(0))
+    classical_moments={
+        str(2*j):float(-j*mp.re(mp.diff(logXi,mp.mpf("0"),2*j))/mp.factorial(2*j))
+        for j in (1,2,3)
+    }
+    moment_errors={
+        name:{k:row["inverse_spectral_moments"][k]/target-1
+              for k,target in classical_moments.items()}
+        for name,row in errors.items()
+    }
     errs={name:{s:abs(row["finite_det_values"][s]/val-1)
                 for s,val in classical.items()} for name,row in errors.items()}
     return {
         "status":"PASS","n_levels":k,"zero_count_uninflated":True,
         "max_W33_modulation":.05,"finite_model_data":errors,
         "Xi_ratio_at_test_points":classical,"finite_det_relative_errors":errs,
+        "classical_completed_Xi_inverse_moments":classical_moments,
+        "relative_inverse_moment_errors":moment_errors,
         "bounded_scalar_perturbation_compact_resolvent":True,
         "scope":"Finite diagnostic products, not an exact Xi determinant or arithmetic triple"
     }
