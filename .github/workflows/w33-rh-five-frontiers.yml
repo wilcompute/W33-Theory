@@ -1,0 +1,54 @@
+name: W33 RH five-frontier audit
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261021_rh_five_frontiers.py"
+      - "analysis/w33_pass4461_line_signing_apartment_trace.py"
+      - "tests/test_w33_20261021_rh_five_frontiers.py"
+      - ".github/workflows/w33-rh-five-frontiers.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261021_rh_five_frontiers.py"
+      - "analysis/w33_pass4461_line_signing_apartment_trace.py"
+      - "tests/test_w33_20261021_rh_five_frontiers.py"
+      - ".github/workflows/w33-rh-five-frontiers.yml"
+  workflow_dispatch:
+
+jobs:
+  theorem-boundary-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install focused dependencies
+        run: python -m pip install --disable-pip-version-check numpy mpmath pytest
+      - name: Reproduce five scoped theorem checks
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python -m pytest -q tests/test_w33_20261021_rh_five_frontiers.py
+      - name: Generate reproducible JSON evidence
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python analysis/w33_20261021_rh_five_frontiers.py > /tmp/w33_rh_five_frontiers.log
+      - name: Require classical-RH claim boundary
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("data/w33_20261021_rh_five_frontiers.json"))
+          assert d["status"]=="PASS"
+          assert d["classical_RH_proved"] is False
+          assert len(d["frontiers"])==5
+          print("Five scoped claims PASS; classical RH explicitly unproved.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-rh-five-frontiers-certificate
+          path: |
+            data/w33_20261021_rh_five_frontiers.json
+            /tmp/w33_rh_five_frontiers.log
