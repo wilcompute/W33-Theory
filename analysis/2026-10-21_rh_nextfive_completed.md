@@ -50,6 +50,8 @@ sum_rho h_d((rho-1/2)/i) =
 
 Finite cutoffs: prime powers n<=400, archimedean quadrature t<=50. The four numerical cross-check discrepancies are below 5e-10, with typical actual differences around 1e-14. Form the 4×4 Toeplitz Galerkin matrix on x={0,0.5,1,1.5}; its tested eigenvalues are positive.
 
+**Additional rigorous tail advance:** For every Gaussian prime-power term, use the elementary bound Lambda(n)<=log(n), monotonicity of log(x)/sqrt(x) exp(-(log(x)±d)^2/(4a)) beyond x=400, and compare the omitted discrete sum with the integral from x=400 to infinity. Completing the square evaluates this integral in terms of erfc. Across the four registered d values, the upper bound on the **omitted prime-power contribution** is below 6×10^(-88) (the worst case is d=1.5). This is an analytical tail bound, not an interval-arithmetic verification of the archimedean quadrature or completed Galerkin eigenvalues.
+
 **Critical qualification:** This is a valuable numerical verification of the FULL formula, not a rigorous certified interval enclosure. These Gaussian test transforms are not compactly supported, and all truncations need mathematically controlled tails. A finite positive matrix cannot prove the Weil criterion, which requires every admissible test function and all matrix sizes.
 
 ## Frontier 4 — The 1620 apartments span the ENTIRE Levi binary cycle space
