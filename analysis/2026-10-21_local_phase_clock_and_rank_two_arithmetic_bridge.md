@@ -18,6 +18,8 @@ Let L be the 80-vertex W33 Levi adjacency matrix and T=[[L,-3I],[I,0]] the 160D 
 
 Consequently (T^8-81I) vanishes **identically** on this nontrivial sector, equivalently (T/sqrt(3))^8=I. This is exact integer linear algebra verified in the producer.
 
+The rational companion blocks can be made exactly orthogonal after a positive change of metric: quartic companion R4 has G4=diag(1,3,9,27), quadratic R2 has G2=diag(1,3), and R_j^T G_j R_j=3G_j in both cases. Thus R_j/sqrt(3) is G_j-orthogonal and its eighth power is identity. The combined 156D rational direct sum carries the block-diagonal positive invariant metric. This is an exact finite mathematical norm, not a demonstrated photon-energy or laboratory phase metric.
+
 The normalized nontrivial traces have period eight and first period:
 
     n=1..8:  0, -60, 0, -36, 0, -60, 0, 156.
