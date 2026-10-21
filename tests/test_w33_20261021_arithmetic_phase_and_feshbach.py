@@ -9,6 +9,8 @@ def test_levi_eight_step_local_arithmetic_clock():
     assert r["classical_RH_proved"] is False
     assert r["Levi_prime3"]["nontrivial_dimension"]==156
     assert r["Levi_prime3"]["normalized_trace_cycle"]==[0,-60,0,-36,0,-60,0,156]
+    assert r["Levi_prime3"]["positive_companion_metrics"]=={
+        "quartic":[1,3,9,27],"quadratic":[1,3]}
 
 def test_p11_ordinary_nonperiodic_obstruction():
     r=theorem()["collinearity_prime11"]
