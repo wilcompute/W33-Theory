@@ -11,6 +11,8 @@ def test_levi_eight_step_local_arithmetic_clock():
     assert r["Levi_prime3"]["normalized_trace_cycle"]==[0,-60,0,-36,0,-60,0,156]
     assert r["Levi_prime3"]["positive_companion_metrics"]=={
         "quartic":[1,3,9,27],"quadratic":[1,3]}
+    assert r["Levi_prime3"]["weighted_orthonormal_surrogates"]["quartic"].startswith("four-mode")
+    assert r["Levi_prime3"]["native_Euclidean_singular_values"]["quartic"][0]=="sqrt(27)"
 
 def test_p11_ordinary_nonperiodic_obstruction():
     r=theorem()["collinearity_prime11"]
