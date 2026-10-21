@@ -46,6 +46,9 @@ jobs:
           raw=zlib.decompress(base64.b64decode(m["data"]))
           assert len(raw)==160*156*4
           assert hashlib.sha256(raw).hexdigest()==m["sha256_raw"]
+          sq=zlib.decompress(base64.b64decode(m["coordinate_square_data"]))
+          assert len(sq)==156*156*4
+          assert hashlib.sha256(sq).hexdigest()==m["coordinate_square_sha256"]
           print("Five scoped research frontiers PASS; classical RH unproved.")
           PY
       - uses: actions/upload-artifact@v4
