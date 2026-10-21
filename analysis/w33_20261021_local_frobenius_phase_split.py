@@ -60,6 +60,17 @@ def theorem():
     trace=lambda n:(96*(-9)**(n//4) if n%4==0 else 0)+(60*(-3)**(n//2) if n%2==0 else 0)
     for n,mat in ((2,T2),(4,T4),(8,T8)):
         assert int(np.trace(mat))-triv(n)==trace(n)
+    # Exact positive metric: R.T G R = 3 G on each rational companion.
+    R4=np.zeros((4,4),dtype=np.int64)
+    for j in range(3):R4[j+1,j]=1
+    R4[0,3]=-9
+    G4=np.diag([1,3,9,27]).astype(np.int64)
+    R2=np.array([[0,-3],[1,0]],dtype=np.int64)
+    G2=np.diag([1,3]).astype(np.int64)
+    assert np.array_equal(R4.T@G4@R4,3*G4)
+    assert np.array_equal(R2.T@G2@R2,3*G2)
+    assert np.array_equal(np.linalg.matrix_power(R4,8),81*np.eye(4,dtype=np.int64))
+    assert np.array_equal(np.linalg.matrix_power(R2,8),81*np.eye(2,dtype=np.int64))
     phase_trace=[round(trace(n)/(3**(n/2))) for n in range(1,9)]
     assert phase_trace==[0,-60,0,-36,0,-60,0,156]
     curves={}
@@ -78,6 +89,8 @@ def theorem():
       "Levi_prime3":{"nontrivial_dimension":156,"quartic_blocks":24,"quadratic_blocks":30,
            "exact_revival":"T^8=81I on nontrivial 156D transfer sector",
            "normalized_period":8,"normalized_trace_cycle":phase_trace,
+           "positive_companion_metrics":{"quartic":[1,3,9,27],"quadratic":[1,3]},
+           "exact_metric_invariance":"R.T G R = 3 G; (R/sqrt(3)) is G-orthogonal",
            "p_adic_newton_slopes":"all 1/2 (supersingular)",
            "Frobenius_polynomials":["x^4+9","x^2+3"],
            "curves":["C/F3: y^2=x^5+1","E/F3: y^2=x^3-x"]},
