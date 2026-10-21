@@ -53,3 +53,6 @@ def test_compact_diagonal_but_wrong_xi_determinant():
     assert result["status"]=="PASS"
     assert result["finite_det_relative_errors"]["W33_scalar"]["6"]>0.10
     assert result["finite_model_data"]["W33_scalar"]["mean_first20_relative_error"]>0.04
+    assert abs(result["relative_inverse_moment_errors"]["W33_scalar"]["2"])>0.15
+    assert abs(result["relative_inverse_moment_errors"]["W33_scalar"]["4"])>0.49
+    assert abs(result["relative_inverse_moment_errors"]["W33_scalar"]["6"])>0.70
