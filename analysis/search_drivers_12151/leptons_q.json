@@ -1,0 +1,18 @@
+{
+ "A8SM_20260928_16222_TF": {
+  "majorana_quartic_rank_on_dirac_N": 0,
+  "netQ": 3,
+  "nL": 12,
+  "nLb": 9,
+  "light_L": 9,
+  "nE": 33,
+  "nEb": 30,
+  "light_E": 21,
+  "lepton_rank": 3,
+  "nN": 140,
+  "dirac_rank": 3,
+  "n_N_with_dirac": 3,
+  "majorana_rank": 64,
+  "majorana_rank_on_dirac_N": 0
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "A8SM_20260928_10006_TF": {
+  "netQ": 3,
+  "nL": 10,
+  "nLb": 7,
+  "light_L": 8,
+  "nE": 28,
+  "nEb": 25,
+  "light_E": 14,
+  "lepton_rank": 0,
+  "nN": 127,
+  "dirac_rank": 0,
+  "n_N_with_dirac": 0,
+  "majorana_rank": 56,
+  "majorana_rank_on_dirac_N": 0
+ },
+ "A8SM_20260928_16222_TF": {
+  "netQ": 3,
+  "nL": 12,
+  "nLb": 9,
+  "light_L": 9,
+  "nE": 33,
+  "nEb": 30,
+  "light_E": 21,
+  "lepton_rank": 3,
+  "nN": 140,
+  "dirac_rank": 3,
+  "n_N_with_dirac": 3,
+  "majorana_rank": 64,
+  "majorana_rank_on_dirac_N": 0
+ }
+}
