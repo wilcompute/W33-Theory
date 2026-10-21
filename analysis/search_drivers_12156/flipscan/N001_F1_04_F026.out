@@ -1,0 +1,6 @@
+
+  3.00 V_N x W_3 = -3.00 = 0 mod 2 failed!
+  3.00 V_N x W_4 = -3.00 = 0 mod 2 failed!
+
+  Warning in bool COrbifoldGroup::LoadOrbifoldGroup(...): Orbifold group ill-defined.
+LOADFAIL

@@ -1,0 +1,85 @@
+{
+  "12156": {
+    "isotropic": true,
+    "needed": {
+      "1.6667": {
+        "Delta_2": -7.817424161613217,
+        "Delta_Y": -259.37378213517053,
+        "Delta_Y_minus_kY_Delta_2": -246.34474186581517,
+        "relative_to_kY_over_alphaU": -0.24423092878643038
+      },
+      "5.6667": {
+        "Delta_2": -7.817424161613217,
+        "Delta_Y": -2680.145727014272,
+        "Delta_Y_minus_kY_Delta_2": -2635.8469900984637,
+        "relative_to_kY_over_alphaU": -0.768596925992772
+      }
+    }
+  },
+  "12158": {
+    "levels": {
+      "0.5200": {
+        "0.15193697": 272,
+        "0.170318466": 16,
+        "0.0018259": 56,
+        "0.186874063": 104
+      },
+      "0.6410": {
+        "0.186874063": 272,
+        "0.170318466": 16,
+        "0.0018259": 56,
+        "0.15193697": 104
+      }
+    },
+    "block_deviation": {
+      "(0.1+1.2j)": {
+        "(0, 1)": 0.0011273620748300235,
+        "(1, 0)": 0.010473030142048843,
+        "(1, 1)": 0.027977721438536742
+      },
+      "(-0.3+1.6j)": {
+        "(0, 1)": 3.913957786127927e-05,
+        "(1, 0)": 0.020095688285369676,
+        "(1, 1)": 0.023843970677986968
+      },
+      "(0.05+2.5j)": {
+        "(0, 1)": 6.01981017906775e-08,
+        "(1, 0)": 0.010292108395661852,
+        "(1, 1)": 0.010456165815229838
+      }
+    }
+  },
+  "12159": {
+    "A8SM_20260928_10006_TF": 1,
+    "A8SM_20260928_10139_TF": 1,
+    "A8SM_20260928_17724_TF": 1,
+    "A8SM_20260928_16222_TF": 1,
+    "A8SM_20260928_1295_TF": 1,
+    "A8SM_20260928_1279_TF": 1,
+    "A8SM_20260928_1799_TF": 1,
+    "A8SM_20260928_4168_TF": 1,
+    "A8SM_20260928_17993_TF": 1,
+    "A8SM_20260928_438_TF": 1,
+    "A8SM_20260928_2889_TF": 1,
+    "A8SM_20260928_5110_TF": 1,
+    "A8SM_20260928_6052_TF": 1,
+    "A8SM_20260928_6573_TF": 1,
+    "A8SM_20260928_7339_TF": 1,
+    "A8SM_20260928_7753_TF": 1
+  },
+  "12161": {
+    "attempts": 200,
+    "su5_models": 64,
+    "three_generation": 22,
+    "with_scalar_10": 0
+  },
+  "checks": {
+    "12156: (p.y)^2 lattice sums isotropic on every E8 shell and SO(16) class (volume thresholds universal)": true,
+    "12156: needed non-universal threshold -246 (k_Y = 5/3, 24%) vs -2636 (k_Y = 17/3, 77%)": true,
+    "12158: Fricke-paired level VALUES equal (4/4), multiplicities 272 <-> 104 swapped; beta-insertion block invariant at large tau_2": true,
+    "12159: with H-momentum the quartic up rank stays 1 in all 16 crossed models (12147 'charm at next order' retracted)": true,
+    "12161: 64 SU(5)xU(1) models, 22 three-generation (tachyon- and anomaly-free), none with a scalar 10": true,
+    "12161: N001_F1_04_S023 (3 x (10 + 5bar)) has no scalar 10 or 24": true
+  },
+  "all_checks_pass": true
+}
