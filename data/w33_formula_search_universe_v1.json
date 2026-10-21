@@ -214916,6 +214916,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "aa513c26f4a4f6bd817a45e57aff04c8d28619bc03c496349f351a3844db00c8",
+      "normalized_formula": "#C(F_(3^n))=3^n+1+sum_xchi(x^5+1)",
+      "numeric_literals": [
+        "+1",
+        "1",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md",
+          "raw": "#C(F_(3^n)) = 3^n + 1 + sum_x chi(x^5+1)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "aee6eb9e037d4daa065ff00907397095f1079ea53a3d80699b7e2bfd55a09c26",
+      "structural_formula": "#C(F_(#^n))=#^n+#+sum_xchi(x^##)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "12d1ce9fce8c6b669bb42d35ab119dd201f7b4fd663d18c9463f7cae60023fdc",
       "normalized_formula": "#C197:|W(E6)|=k*f*q*(lambda_gauge-k)",
       "numeric_literals": [
@@ -452262,6 +452292,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "527f994fe7657163ce50e7a33fead45d2e6a18f685e4262a96cf564273a7962b",
+      "normalized_formula": "4.Thisdoes^not^giveclassicalRH.Asinglelocalfactoratp=3doesnotidentifyEulerfactorsatotherprimes,acompletedglobalL-function,ortheRiemannXifunction.Afinitegraphzetaisperiodicafter`u=3^-s`,unlikeclassicalzeta",
+      "numeric_literals": [
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 65,
+          "path": "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md",
+          "raw": "4. This does **not** give classical RH. A single local factor at p=3 does not identify Euler factors at other primes, a completed global L-function, or the Riemann Xi function. A finite graph zeta is periodic after `u=3^-s`, unlike classical zeta.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "7b8253045f1ac999fa72edbf6211ea2850aa05ef9a01ebf61c33d0b8e3c2eb18",
+      "structural_formula": "#.Thisdoes^not^giveclassicalRH.Asinglelocalfactoratp=#doesnotidentifyEulerfactorsatotherprimes,acompletedglobalL-function,ortheRiemannXifunction.Afinitegraphzetaisperiodicafter`u=#^-s`,unlikeclassicalzeta"
+    },
+    {
+      "file_count": 1,
       "formula_id": "205dc277d2590db6de49d4f989590115520385944987364a68c0928c26c21491",
       "normalized_formula": "4.VELOCITIES:v_p*v_g=c^2;v_gsub-luminal,v_psuper-luminal",
       "numeric_literals": [
@@ -534108,6 +534166,34 @@
       },
       "structural_family_id": "1556d6cddd3a42fc9a5ab7ac5a4ac41f65a048cae47e8ce07c3e364db4f19db2",
       "structural_formula": "=#\\times2=#=q!"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e8493ecd1527918521dc0df8dfe78edf4cf495b5017953d2100ac7526f14b377",
+      "normalized_formula": "=3^n+1+sum_zchi(z+1)",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 29,
+          "path": "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md",
+          "raw": "= 3^n + 1 + sum_z chi(z+1)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1323f1321882a88661e043b4bbfee193d15819c53bbe9f9e7adb48bbacdcac49",
+      "structural_formula": "=#^n+#+sum_zchi(z+#)"
     },
     {
       "file_count": 1,
@@ -636135,6 +636221,38 @@
       },
       "structural_family_id": "41a04d04b48c1375cdc49f1643810ad2fbe50c4b913442a3a5d3cc79183385dd",
       "structural_formula": "Forthescalarchannel,theaddednonnegativerenormalizablepotential||MH+\u03b1vF\u2020||#makestheheavy-scalarzerolocusagraphH=\u2212\u03b1vF\u2020/Moverthealignmentvacuum.Itsstabilizingquarticisexplicit,ratherthananomittednegativethresholdpotential.Thefamily-sextetdynamicsremainsaseparateinput.PositivegaugecoefficientsdonotprovecompleteasymptoticfreedomofallYukawa/quarticcouplings,andfamilySU3stillfailsAF.Thenewinventorychangesthearchitecture;itdoesnotretracttheoldfixed-inventoryobstruction.TheearlierSO1#Higgsliteratureremainspriorart:[SO1#symmetrybreaking](https://doi.org/#/PhysRevD.#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4719dc4b4b5344214a3032f64148e6dd8ebe7716f21697a9675738715235c5a3",
+      "normalized_formula": "Forthesmoothgenus-twocurve`y^2=x^5+1`,thepolynomialissquarefreeincharacteristic3sinceitsderivativeis`2x^4`anditsvalueat0is1.Thecurvehasonepointatinfinity.For`n=1,2,3`,`gcd(5,3^n-1)=1`,so`x->x^5`permutesthefield`F_(3^n)`.Hence",
+      "numeric_literals": [
+        "+1",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md",
+          "raw": "For the smooth genus-two curve `y^2=x^5+1`, the polynomial is squarefree in characteristic 3 since its derivative is `2x^4` and its value at 0 is 1. The curve has one point at infinity. For `n=1,2,3`, `gcd(5,3^n-1)=1`, so `x -> x^5` permutes the field `F_(3^n)`. Hence",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3d06c9dc8c7790f6e3047e5f21767a47197d0f3beb815f8c11382c1572fdde2a",
+      "structural_formula": "Forthesmoothgenus-twocurve`y^#=x^##`,thepolynomialissquarefreeincharacteristic3sinceitsderivativeis`#x^#`anditsvalueat0is1.Thecurvehasonepointatinfinity.For`n=#,#,#`,`gcd(#,#^n-#)=#`,so`x->x^#`permutesthefield`F_(#^n)`.Hence"
     },
     {
       "file_count": 1,
@@ -1869807,9 +1869925,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-21T10:11:52-04:00",
+  "frozen_at": "2026-10-21T11:16:43-04:00",
   "pass": 398,
-  "repository_head": "d01e711c17b372c9b231549737a0f74ea43b2a85",
+  "repository_head": "a1414b595af2f125d89ace0c62d8ab848848195a",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1932573,6 +1932691,14 @@
     },
     {
       "exact_formula_ids": [
+        "527f994fe7657163ce50e7a33fead45d2e6a18f685e4262a96cf564273a7962b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7b8253045f1ac999fa72edbf6211ea2850aa05ef9a01ebf61c33d0b8e3c2eb18",
+      "structural_formula": "#.Thisdoes^not^giveclassicalRH.Asinglelocalfactoratp=#doesnotidentifyEulerfactorsatotherprimes,acompletedglobalL-function,ortheRiemannXifunction.Afinitegraphzetaisperiodicafter`u=#^-s`,unlikeclassicalzeta"
+    },
+    {
+      "exact_formula_ids": [
         "f5793dd12be51784cfebd7d1baced8b806422a821c4ef76cf86bc5dc550e0868"
       ],
       "exact_member_count": 1,
@@ -1945013,6 +1945139,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a5a6453173072d360afdd779df965bd411ffa67a9dfa0bf25aa1780fc2528427",
       "structural_formula": "#B|_knegativeandB|_ppositive,so-B(X,thetaX)>#"
+    },
+    {
+      "exact_formula_ids": [
+        "aa513c26f4a4f6bd817a45e57aff04c8d28619bc03c496349f351a3844db00c8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aee6eb9e037d4daa065ff00907397095f1079ea53a3d80699b7e2bfd55a09c26",
+      "structural_formula": "#C(F_(#^n))=#^n+#+sum_xchi(x^##)"
     },
     {
       "exact_formula_ids": [
@@ -2013435,6 +2013569,14 @@
     },
     {
       "exact_formula_ids": [
+        "e8493ecd1527918521dc0df8dfe78edf4cf495b5017953d2100ac7526f14b377"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1323f1321882a88661e043b4bbfee193d15819c53bbe9f9e7adb48bbacdcac49",
+      "structural_formula": "=#^n+#+sum_zchi(z+#)"
+    },
+    {
+      "exact_formula_ids": [
         "09478fda3a57abcad8e7c52b12207822cbee9ca66670d5b361153bbdd501eb4c"
       ],
       "exact_member_count": 1,
@@ -2041023,6 +2041165,14 @@
       "exact_member_count": 1,
       "structural_family_id": "41a04d04b48c1375cdc49f1643810ad2fbe50c4b913442a3a5d3cc79183385dd",
       "structural_formula": "Forthescalarchannel,theaddednonnegativerenormalizablepotential||MH+\u03b1vF\u2020||#makestheheavy-scalarzerolocusagraphH=\u2212\u03b1vF\u2020/Moverthealignmentvacuum.Itsstabilizingquarticisexplicit,ratherthananomittednegativethresholdpotential.Thefamily-sextetdynamicsremainsaseparateinput.PositivegaugecoefficientsdonotprovecompleteasymptoticfreedomofallYukawa/quarticcouplings,andfamilySU3stillfailsAF.Thenewinventorychangesthearchitecture;itdoesnotretracttheoldfixed-inventoryobstruction.TheearlierSO1#Higgsliteratureremainspriorart:[SO1#symmetrybreaking](https://doi.org/#/PhysRevD.#)"
+    },
+    {
+      "exact_formula_ids": [
+        "4719dc4b4b5344214a3032f64148e6dd8ebe7716f21697a9675738715235c5a3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3d06c9dc8c7790f6e3047e5f21767a47197d0f3beb815f8c11382c1572fdde2a",
+      "structural_formula": "Forthesmoothgenus-twocurve`y^#=x^##`,thepolynomialissquarefreeincharacteristic3sinceitsderivativeis`#x^#`anditsvalueat0is1.Thecurvehasonepointatinfinity.For`n=#,#,#`,`gcd(#,#^n-#)=#`,so`x->x^#`permutesthefield`F_(#^n)`.Hence"
     },
     {
       "exact_formula_ids": [
@@ -2369486,20 +2369636,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90472547,
-    "exact_formula_families": 63930,
-    "files_scanned": 12453,
-    "formula_occurrences": 70025,
+    "bytes_scanned": 90481183,
+    "exact_formula_families": 63934,
+    "files_scanned": 12455,
+    "formula_occurrences": 70029,
     "status_occurrences": {
       "certified_or_theorem": 5229,
-      "killed_or_retracted": 1851,
+      "killed_or_retracted": 1852,
       "open_or_conditional": 2353,
       "preregistered": 36,
       "retrospective_fit": 5371,
-      "unclassified": 55185
+      "unclassified": 55188
     },
-    "structural_families": 62243
+    "structural_families": 62247
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "0c015b27686c0a0eb7a2271d66714fe8a39445b630d9a3da86248df23adbc3c0"
+  "universe_sha256": "dbf413b8599b300a2568a41c09b35f7e317e189db45f5711c7461ac2861d581a"
 }
