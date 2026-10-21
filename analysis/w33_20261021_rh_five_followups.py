@@ -132,12 +132,25 @@ def levi_intertwiner(points,lines,A,N):
         "column_order":"24 quartic length-4 blocks then 30 quadratic length-2 blocks",
         "note":"Full 160x156 integer embedding. Select independent 156 rows for a square rational coordinate transform."
     }
+    # Materialize an actual invertible 156x156 coordinate matrix, not just the embedding.
+    selected=list(piv.keys())
+    C_square=C[selected,:]
+    assert C_square.shape==(156,156)
+    assert rank_mod_p_columns(C_square)==156
+    square_raw=C_square.astype("<i4").tobytes(order="C")
+    square_sha=hashlib.sha256(square_raw).hexdigest()
+    artifact.update({
+        "coordinate_square_shape":[156,156],
+        "coordinate_square_data":base64.b64encode(zlib.compress(square_raw,level=9)).decode(),
+        "coordinate_square_sha256":square_sha
+    })
     return ({
         "status":"PASS","dimension":156,"blocks_quartic":24,"blocks_quadratic":30,
         "integer_intertwining":True,"rank_mod101":156,
         "symplectic_transvection_commutes":True,
         "induced_action_commutes_mod101":True,"matrix_sha256":digest,
-        "artifact_shape":[160,156],"selected_rows_mod101":list(piv.keys()),
+        "artifact_shape":[160,156],"selected_rows_mod101":selected,
+        "square_coordinate_rank_mod101":156,"square_coordinate_sha256":square_sha,
         "generators_quartic":chosen[4],"generators_quadratic":chosen[2],
         "geometric_point_permutation":perm,"geometric_line_permutation":perm_l,
         "scope":"Abstract rational operator module; no canonical geometric/Galois-equivariant curve map"
