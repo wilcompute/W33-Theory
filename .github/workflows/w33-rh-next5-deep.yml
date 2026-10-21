@@ -1,0 +1,48 @@
+name: W33 RH second five-frontier audit
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261021_rh_next5_deep.py"
+      - "tests/test_w33_20261021_rh_next5_deep.py"
+      - ".github/workflows/w33-rh-next5-deep.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261021_rh_next5_deep.py"
+      - "tests/test_w33_20261021_rh_next5_deep.py"
+      - ".github/workflows/w33-rh-next5-deep.yml"
+  workflow_dispatch:
+jobs:
+  rh-proof-boundary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install focused dependencies
+        run: python -m pip install --disable-pip-version-check numpy mpmath pytest
+      - name: Run all five scientific regression tests
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python -m pytest -q tests/test_w33_20261021_rh_next5_deep.py
+      - name: Generate source-derived certificate
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python analysis/w33_20261021_rh_next5_deep.py
+      - name: Fail closed on classical RH proof claim
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open("data/w33_20261021_rh_next5_deep.json"))
+          assert x["classical_RH_proved"] is False
+          assert len(x["five_frontiers"])==5
+          print("Finite fronts verified; classical RH remains unproved")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-rh-next5-deep
+          path: data/w33_20261021_rh_next5_deep.json
