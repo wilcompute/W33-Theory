@@ -1,0 +1,59 @@
+name: W33 local arithmetic phase and Feshbach
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261021_local_frobenius_phase_split.py"
+      - "analysis/w33_20261021_rank_two_arithmetic_interface.py"
+      - "tests/test_w33_20261021_arithmetic_phase_and_feshbach.py"
+      - ".github/workflows/w33-arithmetic-phase-feshbach.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261021_local_frobenius_phase_split.py"
+      - "analysis/w33_20261021_rank_two_arithmetic_interface.py"
+      - "tests/test_w33_20261021_arithmetic_phase_and_feshbach.py"
+      - ".github/workflows/w33-arithmetic-phase-feshbach.yml"
+  workflow_dispatch:
+
+jobs:
+  scoped-theorem-and-spectral-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install minimal dependencies
+        run: python -m pip install --disable-pip-version-check numpy mpmath pytest
+      - name: Exact phase and finite-rank interface regressions
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python -m pytest -q tests/test_w33_20261021_arithmetic_phase_and_feshbach.py
+      - name: Generate exact and numerical certificates
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: |
+          python analysis/w33_20261021_local_frobenius_phase_split.py >/tmp/w33_phase.log
+          python analysis/w33_20261021_rank_two_arithmetic_interface.py >/tmp/w33_feshbach.log
+      - name: Enforce theorem scope and critical exact assertions
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open("data/w33_20261021_local_frobenius_phase_split.json"))
+          f=json.load(open("data/w33_20261021_rank_two_arithmetic_interface.json"))
+          assert p["classical_RH_proved"] is False and f["classical_RH_proved"] is False
+          assert p["Levi_prime3"]["normalized_trace_cycle"]==[0,-60,0,-36,0,-60,0,156]
+          assert p["collinearity_prime11"]["ordinary"]
+          assert f["dark_internal_dimensions"]==37 and f["bright_internal_dimensions"]==2
+          assert len(f["determinant_checks"])==5
+          print("Local arithmetic and finite-rank interface checks pass; RH unproved.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-local-phase-and-feshbach-20261021
+          path: |
+            data/w33_20261021_local_frobenius_phase_split.json
+            data/w33_20261021_rank_two_arithmetic_interface.json
