@@ -1,0 +1,346 @@
+point group
+7
+1
+
+ZMxZN
+false
+
+begin twist
+    0,   1/7,   2/7,  -3/7
+end twist
+
+begin twist space group generators
+1 0     0     0     0     0     0     0
+end twist space group generators
+
+begin shift space group generators
+0 0     1     0     0     0     0     0
+0 0     0     1     0     0     0     0
+0 0     0     0     1     0     0     0
+0 0     0     0     0     1     0     0
+0 0     0     0     0     0     1     0
+0 0     0     0     0     0     0     1
+end shift space group generators
+
+lattice label
+SU(7)
+
+begin lattice
+next lattice vector
+0.46384123
+0.00000000
+0.83581301
+0.00000000
+1.04224178
+0.00000000
+next lattice vector
+0.28920028
+0.36264568
+-0.18598589
+0.81485743
+-0.93902739
+-0.45221176
+next lattice vector
+-0.10321438
+0.45221176
+-0.75304150
+-0.36264568
+0.64982712
+0.81485743
+next lattice vector
+-0.41790651
+0.20125317
+0.52112089
+-0.65346493
+-0.23192061
+-1.01611060
+next lattice vector
+-0.41790651
+-0.20125317
+0.52112089
+0.65346493
+-0.23192061
+1.01611060
+next lattice vector
+-0.10321438
+-0.45221176
+-0.75304150
+0.36264568
+0.64982712
+-0.81485743
+end lattice
+
+begin discrete symmetries
+new non-R symmetry
+7
+0
+1 0 0 0 0 0 0 0
+1 0 0 0 0 0 0 0
+new non-R symmetry
+7
+0
+0 0 1 1 1 1 1 1
+0 0 0 0 0 0 0 1
+new modular symmetry
+T1
+-1
+1
+-1 1 -1
+new modular symmetry
+T2
+-1
+2
+-1 1 -1
+new modular symmetry
+T3
+-1
+3
+-1 1 -1
+end discrete symmetries
+
+allowed order of Wilson lines
+7
+7
+7
+7
+7
+7
+
+begin identical WLs
+1 2 3 4 5 6 
+end identical WLs
+
+begin constructing elements
+new sector
+0 0     0     0     0     0     0     0
+new sector
+1 0     5     3     0    -1     0    -1
+1 0     4    -5    -5    -5    -5    -5
+1 0     5    -1    -1    -1     0    -1
+1 0     5    -1     0    -1     0    -1
+1 0     5    -1     0    -1     0     0
+1 0     5     1     0    -1     0    -1
+1 0     5     2     0    -1     0    -1
+new sector
+2 0    -6    -6    -6    -6    -6    -6
+2 0    -6    -6    -6    -6    -6    -5
+2 0    -6    -6    -6    -6    -5    -5
+2 0    -6    -6    -6    -5    -5    -5
+2 0    -6    -6    -5    -5    -5    -5
+2 0    -6    -5    -5    -5    -5    -5
+2 0    -5    -5    -5    -5    -5    -5
+new sector
+3 0    -6    -6    -6    -6    -6    -6
+3 0    -6    -6    -6    -6    -6    -5
+3 0    -6    -6    -6    -6    -5    -5
+3 0    -6    -6    -6    -5    -5    -5
+3 0    -6    -6    -5    -5    -5    -5
+3 0    -6    -5    -5    -5    -5    -5
+3 0    -5    -5    -5    -5    -5    -5
+new sector
+4 0    -6    -6    -6    -6    -6    -6
+4 0    -6    -6    -6    -6    -6    -5
+4 0    -6    -6    -6    -6    -5    -5
+4 0    -6    -6    -6    -5    -5    -5
+4 0    -6    -6    -5    -5    -5    -5
+4 0    -6    -5    -5    -5    -5    -5
+4 0    -5    -5    -5    -5    -5    -5
+new sector
+5 0    -6    -6    -6    -6    -6    -6
+5 0    -6    -6    -6    -6    -6    -5
+5 0    -6    -6    -6    -6    -5    -5
+5 0    -6    -6    -6    -5    -5    -5
+5 0    -6    -6    -5    -5    -5    -5
+5 0    -6    -5    -5    -5    -5    -5
+5 0    -5    -5    -5    -5    -5    -5
+new sector
+6 0    -6    -6    -6    -6    -6    -6
+6 0    -6    -6    -6    -6    -6    -5
+6 0    -6    -6    -6    -6    -5    -5
+6 0    -6    -6    -6    -5    -5    -5
+6 0    -6    -6    -5    -5    -5    -5
+6 0    -6    -5    -5    -5    -5    -5
+6 0    -5    -5    -5    -5    -5    -5
+end constructing elements
+
+begin centralizer elements
+begin data
+1 0     0     0     0     0     0     0
+0 0     1     0     0     0     0     0
+0 0     0     1     0     0     0     0
+0 0     0     0     1     0     0     0
+0 0     0     0     0     1     0     0
+0 0     0     0     0     0     1     0
+0 0     0     0     0     0     0     1
+end data
+
+begin data
+1 0     5     3     0    -1     0    -1
+end data
+
+begin data
+1 0     4    -5    -5    -5    -5    -5
+end data
+
+begin data
+1 0     5    -1    -1    -1     0    -1
+end data
+
+begin data
+1 0     5    -1     0    -1     0    -1
+end data
+
+begin data
+1 0     5    -1     0    -1     0     0
+end data
+
+begin data
+1 0     5     1     0    -1     0    -1
+end data
+
+begin data
+1 0     5     2     0    -1     0    -1
+end data
+
+begin data
+2 0    -6    -6    -6    -6    -6    -6
+end data
+
+begin data
+2 0    -6    -6    -6    -6    -6    -5
+end data
+
+begin data
+2 0    -6    -6    -6    -6    -5    -5
+end data
+
+begin data
+2 0    -6    -6    -6    -5    -5    -5
+end data
+
+begin data
+2 0    -6    -6    -5    -5    -5    -5
+end data
+
+begin data
+2 0    -6    -5    -5    -5    -5    -5
+end data
+
+begin data
+2 0    -5    -5    -5    -5    -5    -5
+end data
+
+begin data
+3 0    -6    -6    -6    -6    -6    -6
+end data
+
+begin data
+3 0    -6    -6    -6    -6    -6    -5
+end data
+
+begin data
+3 0    -6    -6    -6    -6    -5    -5
+end data
+
+begin data
+3 0    -6    -6    -6    -5    -5    -5
+end data
+
+begin data
+3 0    -6    -6    -5    -5    -5    -5
+end data
+
+begin data
+3 0    -6    -5    -5    -5    -5    -5
+end data
+
+begin data
+3 0    -5    -5    -5    -5    -5    -5
+end data
+
+begin data
+4 0    -6    -6    -6    -6    -6    -6
+end data
+
+begin data
+4 0    -6    -6    -6    -6    -6    -5
+end data
+
+begin data
+4 0    -6    -6    -6    -6    -5    -5
+end data
+
+begin data
+4 0    -6    -6    -6    -5    -5    -5
+end data
+
+begin data
+4 0    -6    -6    -5    -5    -5    -5
+end data
+
+begin data
+4 0    -6    -5    -5    -5    -5    -5
+end data
+
+begin data
+4 0    -5    -5    -5    -5    -5    -5
+end data
+
+begin data
+5 0    -6    -6    -6    -6    -6    -6
+end data
+
+begin data
+5 0    -6    -6    -6    -6    -6    -5
+end data
+
+begin data
+5 0    -6    -6    -6    -6    -5    -5
+end data
+
+begin data
+5 0    -6    -6    -6    -5    -5    -5
+end data
+
+begin data
+5 0    -6    -6    -5    -5    -5    -5
+end data
+
+begin data
+5 0    -6    -5    -5    -5    -5    -5
+end data
+
+begin data
+5 0    -5    -5    -5    -5    -5    -5
+end data
+
+begin data
+6 0    -6    -6    -6    -6    -6    -6
+end data
+
+begin data
+6 0    -6    -6    -6    -6    -6    -5
+end data
+
+begin data
+6 0    -6    -6    -6    -6    -5    -5
+end data
+
+begin data
+6 0    -6    -6    -6    -5    -5    -5
+end data
+
+begin data
+6 0    -6    -6    -5    -5    -5    -5
+end data
+
+begin data
+6 0    -6    -5    -5    -5    -5    -5
+end data
+
+begin data
+6 0    -5    -5    -5    -5    -5    -5
+end data
+
+end centralizer elements
+

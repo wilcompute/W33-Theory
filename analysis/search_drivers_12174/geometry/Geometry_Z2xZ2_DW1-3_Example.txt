@@ -1,0 +1,83 @@
+point group
+2
+2
+
+ZMxZN
+true
+
+additional label
+DW1-3Example
+
+begin twist
+    0     0   1/2  -1/2
+    0  -1/2     0   1/2
+end twist
+
+lattice label
+SU(2)^6
+
+begin lattice
+next lattice vector
+1.41421360
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+next lattice vector
+0.00000000
+1.41421360
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+next lattice vector
+0.00000000
+0.00000000
+1.41421360
+0.00000000
+0.00000000
+0.00000000
+next lattice vector
+0.00000000
+0.00000000
+0.00000000
+1.41421360
+0.00000000
+0.00000000
+next lattice vector
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+1.41421360
+0.00000000
+next lattice vector
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+1.41421360
+end lattice
+
+begin twist space group generators
+1 0     0     0     0     0     0     0
+0 1     0     0     0     0   1/2     0
+end twist space group generators
+
+begin shift space group generators
+0 0     1     0     0     0     0     0
+0 0     0     1     0     0     0     0
+0 0     0     0     1     0     0     0
+0 0     0     0     0     1     0     0
+0 0     0     0     0     0     1     0
+0 0     0     0     0     0     0     1
+0 0     0   1/2     0   1/2     0   1/2
+end shift space group generators
+
+find Wilson lines relations
+
+create constructing elements
+
+create centralizer elements

@@ -1,0 +1,529 @@
+{
+  "12174": {
+    "0x0": {
+      "V2": 0.0,
+      "Z": [
+        [
+          4.0882219933925605e-12,
+          0.05852057359806528,
+          2.0,
+          2.5224952783872267e-16
+        ],
+        [
+          2.757614351546464e-12,
+          0.8210826855011676,
+          3.3884808434375353,
+          1.5009880863706587e-16
+        ]
+      ],
+      "gauge_dim": 496,
+      "even_roots": 480,
+      "odd_roots": 0,
+      "nB": 4032,
+      "nF": 4032,
+      "tachyons": 0,
+      "twisted_norm_nonintegral": false
+    },
+    "splitx0": {
+      "V2": 1.0,
+      "Z": [
+        [
+          13151.017606701746,
+          2.2141281165083728e-16,
+          1.8597263166182484e-12,
+          7.926640521658724e-16
+        ],
+        [
+          4913.444213420382,
+          4.557640017964596e-16,
+          1.4024528058461256e-12,
+          9.899794076669502e-17
+        ]
+      ],
+      "gauge_dim": 368,
+      "even_roots": 352,
+      "odd_roots": 128,
+      "nB": 3008,
+      "nF": 2048,
+      "tachyons": 16,
+      "twisted_norm_nonintegral": false
+    },
+    "splitxsplit": {
+      "V2": 2.0,
+      "Z": [
+        [
+          1657.0183648755099,
+          3.633054136092943e-15,
+          7.758455345759922e-12,
+          1.4652071956625494e-15
+        ],
+        [
+          5926.595698819242,
+          2.1100734358966396e-16,
+          2.2333772837435426e-12,
+          2.595598725694546e-16
+        ]
+      ],
+      "gauge_dim": 240,
+      "even_roots": 224,
+      "odd_roots": 256,
+      "nB": 1984,
+      "nF": 4096,
+      "tachyons": 0,
+      "twisted_norm_nonintegral": false
+    },
+    "clockxclock": {
+      "V2": 1.0,
+      "Z": [
+        [
+          3990.1786111716833,
+          1.8019712008665556e-15,
+          8.931943179941604e-12,
+          1.823055602323596e-15
+        ],
+        [
+          3227.938513410517,
+          4.578553414945581e-16,
+          3.0768792583413306e-12,
+          3.0898184452796916e-16
+        ]
+      ],
+      "gauge_dim": 272,
+      "even_roots": 256,
+      "odd_roots": 224,
+      "nB": 2240,
+      "nF": 3584,
+      "tachyons": 4,
+      "twisted_norm_nonintegral": false
+    },
+    "clockx0": {
+      "V2": 0.5,
+      "Z": [
+        [
+          6318.818501908196,
+          1.8452214548370838,
+          0.743648048475664,
+          2.0000000000000004
+        ],
+        [
+          4083.6914866072866,
+          1.651192043855219,
+          1.075290933105727,
+          2.0
+        ]
+      ],
+      "gauge_dim": 384,
+      "even_roots": 368,
+      "odd_roots": 112,
+      "nB": 3136,
+      "nF": 896,
+      "tachyons": 0,
+      "twisted_norm_nonintegral": true
+    },
+    "clockxsplit": {
+      "V2": 1.5,
+      "Z": [
+        [
+          4324.4908442146,
+          1.7688257775190057,
+          0.4421096153301846,
+          1.9999999999999998
+        ],
+        [
+          4400.388316770957,
+          1.7424962681369065,
+          0.7014764502614016,
+          2.0000000000000004
+        ]
+      ],
+      "gauge_dim": 256,
+      "even_roots": 240,
+      "odd_roots": 240,
+      "nB": 2112,
+      "nF": 1920,
+      "tachyons": 0,
+      "twisted_norm_nonintegral": true
+    }
+  },
+  "12176": {
+    "0x0": 0,
+    "splitx0": 960,
+    "splitxsplit": -2112,
+    "clockxclock": -1344
+  },
+  "12177": {
+    "Z3_SU3^3": {
+      "twists": [
+        [
+          "1/3",
+          "1/3",
+          "-2/3"
+        ]
+      ],
+      "integrality_error": 1.576592023599943e-08,
+      "det_1_minus_theta": [
+        27
+      ],
+      "ss_kernel_dim": 0
+    },
+    "Z3xZ3_SU3^3": {
+      "twists": [
+        [
+          "1/3",
+          "0",
+          "-1/3"
+        ],
+        [
+          "1/3",
+          "-1/3",
+          "0"
+        ]
+      ],
+      "integrality_error": 1.5765920013954826e-08,
+      "det_1_minus_theta": [
+        0,
+        0
+      ],
+      "ss_kernel_dim": 0
+    },
+    "Z6-I_G2xG2xSU3": {
+      "twists": [
+        [
+          "1/6",
+          "1/6",
+          "-1/3"
+        ]
+      ],
+      "integrality_error": 8.127063466645268e-10,
+      "det_1_minus_theta": [
+        3
+      ],
+      "ss_kernel_dim": 0
+    },
+    "Z12-I_E6": {
+      "twists": [
+        [
+          "1/12",
+          "-5/12",
+          "1/3"
+        ]
+      ],
+      "integrality_error": 2.8040406840901255e-07,
+      "det_1_minus_theta": [
+        3
+      ],
+      "ss_kernel_dim": 0
+    },
+    "Z2xZ6-II_G2xG2xSU3": {
+      "twists": [
+        [
+          "1/2",
+          "0",
+          "-1/2"
+        ],
+        [
+          "1/6",
+          "1/6",
+          "-1/3"
+        ]
+      ],
+      "integrality_error": 8.566551779054521e-08,
+      "det_1_minus_theta": [
+        0,
+        3
+      ],
+      "ss_kernel_dim": 0
+    },
+    "Z3xZ6_SU3xG2xG2": {
+      "twists": [
+        [
+          "1/3",
+          "0",
+          "-1/3"
+        ],
+        [
+          "0",
+          "1/6",
+          "-1/6"
+        ]
+      ],
+      "integrality_error": 8.566551779054521e-08,
+      "det_1_minus_theta": [
+        0,
+        0
+      ],
+      "ss_kernel_dim": 0
+    },
+    "Z6xZ6_G2^3": {
+      "twists": [
+        [
+          "1/6",
+          "0",
+          "-1/6"
+        ],
+        [
+          "0",
+          "1/6",
+          "-1/6"
+        ]
+      ],
+      "integrality_error": 8.566551779054521e-08,
+      "det_1_minus_theta": [
+        0,
+        0
+      ],
+      "ss_kernel_dim": 0
+    },
+    "Z6-II_G2xSU3xSU2^2": {
+      "twists": [
+        [
+          "1/6",
+          "1/3",
+          "-1/2"
+        ]
+      ],
+      "integrality_error": 2.0726067040399698e-07,
+      "det_1_minus_theta": [
+        12
+      ],
+      "ss_kernel_dim": 2
+    },
+    "Z6-II_SU3xSO7xSU2": {
+      "twists": [
+        [
+          "1/3",
+          "1/6",
+          "-1/2"
+        ]
+      ],
+      "integrality_error": 6.1237245381795955e-09,
+      "det_1_minus_theta": [
+        12
+      ],
+      "ss_kernel_dim": 2
+    },
+    "Z6-II_SU3xSO8": {
+      "twists": [
+        [
+          "1/3",
+          "1/6",
+          "-1/2"
+        ]
+      ],
+      "integrality_error": 2.3094004234394394e-07,
+      "det_1_minus_theta": [
+        12
+      ],
+      "ss_kernel_dim": 2
+    },
+    "Z6-II_SU6xSU2": {
+      "twists": [
+        [
+          "1/3",
+          "1/6",
+          "-1/2"
+        ]
+      ],
+      "integrality_error": 3.105246031941093e-08,
+      "det_1_minus_theta": [
+        12
+      ],
+      "ss_kernel_dim": 2
+    },
+    "Z2xZ6-I_SO4xG2xG2": {
+      "twists": [
+        [
+          "1/2",
+          "0",
+          "-1/2"
+        ],
+        [
+          "0",
+          "1/6",
+          "-1/6"
+        ]
+      ],
+      "integrality_error": 2.8013368402746153e-08,
+      "det_1_minus_theta": [
+        0,
+        0
+      ],
+      "ss_kernel_dim": 2
+    }
+  },
+  "12178": {
+    "classes": [
+      "78",
+      "88",
+      "96"
+    ],
+    "reps": 12,
+    "draws": 24000,
+    "tachyon_free": 0,
+    "detail": {
+      "78": [
+        {
+          "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 1/4 1/4",
+          "roots": 78,
+          "gauge": "GAUGE A5 + A2 and A6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "0 0 1/2 0 0 1/2 0 0 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4",
+          "roots": 78,
+          "gauge": "GAUGE A5 + A2 and A6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "-1/4 -1/4 1/4 1/4 1/4 1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 1/4 1/4",
+          "roots": 78,
+          "gauge": "GAUGE A5 + A2 and A6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "1/4 -1/4 -1/4 1/4 1/4 -1/4 -1/4 1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4 -1/4",
+          "roots": 78,
+          "gauge": "GAUGE A5 + A2 and A6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        }
+      ],
+      "88": [
+        {
+          "V0": "-1/2 0 0 0 0 0 1/2 0 -1/2 -1/2 0 0 0 0 0 0",
+          "roots": 88,
+          "gauge": "GAUGE A6 + A1 and D5 + A1 + A1 NU1 2",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 1",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "0 0 -1/2 1/2 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+          "roots": 88,
+          "gauge": "GAUGE A6 + A1 and D5 + A1 + A1 NU1 2",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 1",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "0 0 1/2 0 -1/2 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+          "roots": 88,
+          "gauge": "GAUGE A6 + A1 and D5 + A1 + A1 NU1 2",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 1",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "-1/4 -1/4 -1/4 -1/4 -1/4 -1/4 1/4 1/4 -1/2 -1/2 0 0 0 0 0 0",
+          "roots": 88,
+          "gauge": "GAUGE A6 + A1 and D5 + A1 + A1 NU1 2",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 1",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        }
+      ],
+      "96": [
+        {
+          "V0": "-1/2 0 0 0 0 0 0 1/2 -1/2 0 0 0 0 0 0 -1/2",
+          "roots": 96,
+          "gauge": "GAUGE A5 + A2 and D6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "-1/4 -1/4 -1/4 -1/4 -1/4 1/4 1/4 -1/4 -1/2 0 0 0 0 0 0 1/2",
+          "roots": 96,
+          "gauge": "GAUGE A5 + A2 and D6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "-1/4 1/4 -1/4 1/4 -1/4 -1/4 -1/4 -1/4 -1/2 0 0 0 0 0 0 1/2",
+          "roots": 96,
+          "gauge": "GAUGE A5 + A2 and D6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        },
+        {
+          "V0": "1/4 -1/4 1/4 1/4 -1/4 1/4 1/4 1/4 -1/2 0 0 0 0 0 0 -1/2",
+          "roots": 96,
+          "gauge": "GAUGE A5 + A2 and D6 NU1 3",
+          "loadfail": false,
+          "tachyons": "T_NFIELDS 2",
+          "ok": 2000,
+          "tachyon_free": 0,
+          "SM": 0,
+          "SM_tf": 0,
+          "problems": 0
+        }
+      ]
+    }
+  },
+  "checks": {
+    "12174: Q(V1) = Q(V2) cases close under T^2 (1e-13) and are S-invariant (1e-10); clock x 0, clock x split fail level matching exactly": true,
+    "12174: controls -- V = 0 is supersymmetric (Z = 0, n_B = n_F = 4032); split x split = SO(16)^2 with 1984 - 4096 (Pass 11099)": true,
+    "12174: gauge groups E8xSO16 (368), SO16^2 (240), (E7xSU2)^2 (272); only split x split is tachyon-free and non-SUSY": true,
+    "12174: consistent classes = singular vectors of O+(16,2): 136^2 + 120^2 = 32896 = 2^15 + 2^7": true,
+    "12175: tachyons = minimal coset vectors: 16 (split x 0, the frame v/2), 4 = 2 x 2 (clock x clock, the two clocks' roots +-alpha/2)": true,
+    "12176: n_B - n_F = 0, 960, -2112, -1344": true,
+    "12177: no Scherk-Schwarz translation on Z3 (27), Z3xZ3, Z6-I, Z12-I, Z2xZ6-II, Z3xZ6, Z6xZ6; a 2-dim one on Z6-II (4 lattices) and Z2xZ6-I": true,
+    "12177: cyclic law (kernel > 0 iff det(1 - theta) even) holds on every cyclic geometry, controls Z4/Z7/Z8-I included": true,
+    "12178: clock V0 on the A8 base: 3 classes, 12 reps load, all tachyonic at the orbifold point, 0/24000 tachyon-free with Wilson lines": true,
+    "12178: mechanism -- clock x clock V0^2 = 1 (the tachyon momentum p = V0), split x split V0^2 = 2": true
+  },
+  "all_checks_pass": true
+}
