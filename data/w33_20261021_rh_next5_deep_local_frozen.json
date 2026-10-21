@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-21",
+  "status": "LOCAL_FIVE_TRACK_CHECKS_PASS",
+  "classical_RH_proved": false,
+  "provenance": "Independently executed in local Python environment. Dedicated GitHub Actions workflow is separate and its status must be checked.",
+  "artifacts": {
+    "producer": "analysis/w33_20261021_rh_next5_deep.py",
+    "tests": "tests/test_w33_20261021_rh_next5_deep.py",
+    "report": "analysis/2026-10-21_rh_next5_deep_results.md"
+  },
+  "Levi": {
+    "integer_companion_intertwiner": true,
+    "embedding_shape": [
+      160,
+      156
+    ],
+    "rank_mod101": 156,
+    "quartic_blocks": 24,
+    "quadratic_blocks": 30,
+    "symplectic_transvection_mod101": true
+  },
+  "Hecke": {
+    "full_symmetry_scalar_E4_to_nonconstant_W33_Hom_dimension": 0,
+    "nonconstant_sector_dimensions": [
+      24,
+      15
+    ]
+  },
+  "apartment": {
+    "octagons": 1620,
+    "binary_cycle_rank": 81,
+    "relations": 1539,
+    "two_edge_frustration_histogram": {
+      "108": 480,
+      "144": 1440,
+      "156": 4320,
+      "160": 6480
+    }
+  },
+  "Weil": {
+    "basis_fourier_centers": [
+      0,
+      7,
+      14
+    ],
+    "gaussian_exponent_a": 0.07,
+    "prime_powers_up_to": 1000,
+    "first_critical_line_zeros": 64,
+    "full_formula_max_difference": 2.366386515045645e-17,
+    "eigenvalues": [
+      -2.3664347739258113e-17,
+      0.0000016115861867694634,
+      1.9985385718396045
+    ],
+    "interval_certified": false
+  },
+  "spectral": {
+    "model": "Bounded W33 modulation of Lambert-W Weyl ladder",
+    "levels_checked": 1200,
+    "zeta_first60_inverse_fourth_lower_bound": 0.00003712948515714769,
+    "model_inverse_fourth_sum_through_1200": 0.00001883259334255898,
+    "global_tail_upper_bound": 7e-9,
+    "exact_xi_spectrum_identification_falsified": true,
+    "finite_product_log_error_z12": 0.9907986408322045
+  }
+}
