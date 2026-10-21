@@ -1,0 +1,392 @@
+{
+  "12141": {
+    "Lambda_pm": [
+      168.52305683574528,
+      168.52305683574528
+    ],
+    "lowest_levels": {
+      "0.55i": {
+        "lowest": [
+          0.00039261772097254344,
+          0.00039261772097254344,
+          0.00039261772097254344
+        ],
+        "n_below_0p05": 56
+      },
+      "0.02+0.55i": {
+        "lowest": [
+          -0.009894714348224365,
+          -0.009894714348224365,
+          -0.009894714348224365
+        ],
+        "n_below_0p05": 56
+      },
+      "0.9i": {
+        "lowest": [
+          0.03339100431859521,
+          0.03339100431859521,
+          0.03339100431859521
+        ],
+        "n_below_0p05": 56
+      }
+    }
+  },
+  "12142": {
+    "singlet_sectors": {
+      "(1, 0)": 69,
+      "(2, 0)": 69
+    },
+    "block": {
+      "deficient_columns": [
+        {
+          "field": 507,
+          "sector": [
+            1,
+            1
+          ],
+          "fp": [
+            1,
+            2,
+            0
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 514,
+          "sector": [
+            1,
+            1
+          ],
+          "fp": [
+            2,
+            1,
+            0
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 543,
+          "sector": [
+            1,
+            1
+          ],
+          "fp": [
+            1,
+            1,
+            1
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 609,
+          "sector": [
+            1,
+            1
+          ],
+          "fp": [
+            2,
+            2,
+            2
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        }
+      ],
+      "their_rows": [
+        {
+          "field": 503,
+          "sector": [
+            1,
+            1
+          ],
+          "fp": [
+            1,
+            1,
+            0
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 540,
+          "sector": [
+            1,
+            1
+          ],
+          "fp": [
+            1,
+            0,
+            1
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 550,
+          "sector": [
+            1,
+            1
+          ],
+          "fp": [
+            1,
+            2,
+            1
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        }
+      ],
+      "other_rows": [
+        {
+          "field": 271,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            0,
+            1,
+            0
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 297,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            1,
+            1,
+            0
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 384,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            2,
+            1,
+            1
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 414,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            0,
+            2,
+            2
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 416,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            0,
+            2,
+            2
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 436,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            1,
+            2,
+            2
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        }
+      ],
+      "other_cols": [
+        {
+          "field": 342,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            0,
+            1,
+            1
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        },
+        {
+          "field": 435,
+          "sector": [
+            2,
+            0
+          ],
+          "fp": [
+            1,
+            2,
+            2
+          ],
+          "dim": [
+            "1",
+            "2",
+            "1"
+          ]
+        }
+      ]
+    }
+  },
+  "12143": {
+    "A8_candidates": 1060,
+    "A8_SM": 97,
+    "e6a2_candidates": 44
+  },
+  "12144": {
+    "Lambda": {
+      "175_2_2": 862.2211132494921,
+      "2_2_175": 863.8453970549701,
+      "B0.2_175": 663.907185821709,
+      "diag2": 987.5844031043987,
+      "diag175": 663.8392707301202
+    },
+    "tachyons": {
+      "T115 1.75i,2i,2i": {
+        "n": 0,
+        "Delta": null
+      },
+      "T115 2i,2i,1.75i": {
+        "n": 0,
+        "Delta": null
+      },
+      "T115 0.2+1.75i x3": {
+        "n": 0,
+        "Delta": null
+      },
+      "T115 0.1+1.75i x3": {
+        "n": 0,
+        "Delta": null
+      }
+    }
+  },
+  "12145": {
+    "hypercharges": 218,
+    "models": 81,
+    "rank_pairs": {
+      "(3, 3)": 34,
+      "(0, 1)": 25,
+      "(1, 1)": 20,
+      "(1, 0)": 7,
+      "(0, 3)": 48,
+      "(3, 0)": 83,
+      "(0, 0)": 1
+    },
+    "single_heavy_up_models": [
+      "A8SM_20260928_10006_TF",
+      "A8SM_20260928_10139_TF",
+      "A8SM_20260928_1279_TF",
+      "A8SM_20260928_1295_TF",
+      "A8SM_20260928_16222_TF",
+      "A8SM_20260928_17724_TF",
+      "A8SM_20260928_17993_TF",
+      "A8SM_20260928_1799_TF",
+      "A8SM_20260928_2889_TF",
+      "A8SM_20260928_4168_TF",
+      "A8SM_20260928_438_TF",
+      "A8SM_20260928_5110_TF",
+      "A8SM_20260928_6052_TF",
+      "A8SM_20260928_6573_TF",
+      "A8SM_20260928_7339_TF",
+      "A8SM_20260928_7753_TF"
+    ],
+    "single_heavy_up_and_down_models": [
+      "A8SM_20260928_10006_TF",
+      "A8SM_20260928_10139_TF",
+      "A8SM_20260928_1279_TF",
+      "A8SM_20260928_16222_TF",
+      "A8SM_20260928_17724_TF",
+      "A8SM_20260928_1799_TF",
+      "A8SM_20260928_2889_TF",
+      "A8SM_20260928_4168_TF",
+      "A8SM_20260928_438_TF",
+      "A8SM_20260928_5110_TF",
+      "A8SM_20260928_6052_TF",
+      "A8SM_20260928_6573_TF",
+      "A8SM_20260928_7753_TF"
+    ]
+  },
+  "checks": {
+    "12141: S002 potential CP-even: Lambda(-0.1+0.9i) = Lambda(+0.1+0.9i) (1e-12), tachyon levels at +-0.1+0.55i equal": true,
+    "12141: lowest axis level = 56-state multiplet, Delta = +0.00039 (0.55i), +0.033 (0.9i); Delta = -0.0099 at 0.02 off axis": true,
+    "12142: T115 SM-singlet scalars only in theta/theta^2 (mm = 0); deficient block = beta-theta sector, 4 Rbar vs 3 R; other block theta^2": true,
+    "12143: all 1104 k_Y = 5/3 root candidates: no untwisted fractional state, always a fractional beta-theta state; none fraction-free": true,
+    "12144: T115 single-torus shrink 862.2 / 863.8 between diagonals 987.6 and 663.8; B-field raises Lambda (axis = transverse minimum); all tachyon-free": true,
+    "12145: 218 fraction-free k_Y = 17/3 hypercharges (81 A8 models, all net 3 Q); 16 models with a single heavy up quark, 13 with up and down; all via vector-like Q mixing": true
+  },
+  "all_checks_pass": true
+}

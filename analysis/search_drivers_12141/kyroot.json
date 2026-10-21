@@ -1,0 +1,1270 @@
+{
+ "N004_F1_03_S002": {
+  "n": 8,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 8,
+   "T1b": 8
+  }
+ },
+ "N008_F1_03_S033": {
+  "n": 8,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 8,
+   "T1b": 8
+  }
+ },
+ "N008_F1_04_S037": {
+  "n": 8,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 8,
+   "T2": 8,
+   "W": 8,
+   "T1b": 8
+  }
+ },
+ "N008_F1_02_S053": {
+  "n": 8,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 8,
+   "T1b": 8
+  }
+ },
+ "N008_F1_04_S037_T115": {
+  "n": 12,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_10006_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_10139_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_10086_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_10269_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_10545_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_10338_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_10864_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_10740_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_11188_TF": {
+  "n": 6,
+  "sm": 2,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "T1b": 6,
+   "W": 2
+  }
+ },
+ "A8SM_20260928_10966_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_11138_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_11397_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 8,
+   "T1b": 12,
+   "T1": 10,
+   "T2": 10
+  }
+ },
+ "A8SM_20260928_1356_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_12722_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_1335_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 4,
+   "T1b": 8,
+   "T1": 6,
+   "T2": 6
+  }
+ },
+ "A8SM_20260928_1295_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_1279_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_13698_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_14359_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 2,
+   "T1b": 6
+  }
+ },
+ "A8SM_20260928_14376_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 2,
+   "T1b": 6
+  }
+ },
+ "A8SM_20260928_137_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_14146_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_14681_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_14608_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_15565_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_14861_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_14993_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_14914_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_15495_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_16222_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_16432_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_1577_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_1691_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_16834_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_16457_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_17793_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "T1b": 6,
+   "W": 2
+  }
+ },
+ "A8SM_20260928_17993_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 4,
+   "T1b": 8,
+   "T1": 6,
+   "T2": 6
+  }
+ },
+ "A8SM_20260928_17724_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 8,
+   "T1b": 12,
+   "T1": 10,
+   "T2": 10
+  }
+ },
+ "A8SM_20260928_1799_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_19529_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_18197_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_18875_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_18573_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_19483_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_1953_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 2,
+   "T1b": 6
+  }
+ },
+ "A8SM_20260928_19635_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_19804_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_2356_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "T1b": 6,
+   "W": 2
+  }
+ },
+ "A8SM_20260928_2321_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_2303_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_2233_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_2373_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_2375_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_2423_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_2519_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_2866_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_3284_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_2889_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_3250_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_3294_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "T1b": 6,
+   "W": 2
+  }
+ },
+ "A8SM_20260928_3572_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 2,
+   "T1b": 6
+  }
+ },
+ "A8SM_20260928_3298_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_3762_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_3721_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_4146_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 4,
+   "T1b": 8,
+   "T1": 6,
+   "T2": 6
+  }
+ },
+ "A8SM_20260928_3994_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 4,
+   "T1b": 8
+  }
+ },
+ "A8SM_20260928_4200_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_4168_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_438_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_4537_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_4582_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 8,
+   "T1b": 12,
+   "T1": 10,
+   "T2": 10
+  }
+ },
+ "A8SM_20260928_5110_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 8,
+   "T1b": 12,
+   "T1": 10,
+   "T2": 10
+  }
+ },
+ "A8SM_20260928_515_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_533_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_5468_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_5798_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 4,
+   "T1b": 8,
+   "T1": 6,
+   "T2": 6
+  }
+ },
+ "A8SM_20260928_5752_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_5760_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_6322_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_6052_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_6276_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_7100_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 4,
+   "T1b": 8
+  }
+ },
+ "A8SM_20260928_639_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "W": 4,
+   "T1b": 8,
+   "T1": 6,
+   "T2": 6
+  }
+ },
+ "A8SM_20260928_6573_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_7339_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_7833_TF": {
+  "n": 0,
+  "sm": 0,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {}
+ },
+ "A8SM_20260928_7414_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_7616_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_783_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_8363_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "T1b": 6,
+   "W": 2
+  }
+ },
+ "A8SM_20260928_7753_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_7974_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_904_TF": {
+  "n": 8,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "W": 4,
+   "T1b": 8
+  }
+ },
+ "A8SM_20260928_8460_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_8780_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_851_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_8904_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_9246_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_9509_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_9667_TF": {
+  "n": 6,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 6,
+   "T2": 6,
+   "T1b": 6,
+   "W": 2
+  }
+ },
+ "A8SM_20260928_9594_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_9434_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ },
+ "A8SM_20260928_9767_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 10,
+   "T2": 10,
+   "W": 8,
+   "T1b": 12
+  }
+ },
+ "A8SM_20260928_9787_TF": {
+  "n": 12,
+  "sm": 1,
+  "fraction_free": 0,
+  "untwisted_fractional": 0,
+  "sectors": {
+   "T1": 12,
+   "T2": 12,
+   "T1b": 12,
+   "W": 8
+  }
+ }
+}
