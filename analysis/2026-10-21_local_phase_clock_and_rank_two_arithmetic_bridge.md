@@ -20,6 +20,17 @@ Consequently (T^8-81I) vanishes **identically** on this nontrivial sector, equiv
 
 The rational companion blocks can be made exactly orthogonal after a positive change of metric: quartic companion R4 has G4=diag(1,3,9,27), quadratic R2 has G2=diag(1,3), and R_j^T G_j R_j=3G_j in both cases. Thus R_j/sqrt(3) is G_j-orthogonal and its eighth power is identity. The combined 156D rational direct sum carries the block-diagonal positive invariant metric. This is an exact finite mathematical norm, not a demonstrated photon-energy or laboratory phase metric.
 
+### Exact passive-unitary surrogate and the nonunitary native warning
+
+Let R4 be the rational quartic companion for x^4+9 and R2 the quadratic companion for x^2+3. With D4=diag(1,sqrt(3),3,3sqrt(3)) and D2=diag(1,sqrt(3)), the *weighted* similarities D4(R4/sqrt(3))D4^-1 and D2(R2/sqrt(3))D2^-1 become signed permutation matrices:
+
+    U4 = [[0,0,0,-1],[1,0,0,0],[0,1,0,0],[0,0,1,0]]
+    U2 = [[0,-1],[1,0]]
+
+These satisfy U4^T U4=I, U4^4=-I and U2^T U2=I, U2^2=-I exactly. Consequently a signed four-mode cyclic shifter (single pi phase at the wrap) and a signed two-mode swap are **passive unitary analogues** of the Frobenius transfer blocks in their weighted Hilbert structure.
+
+However the original normalized R4/sqrt(3) has ordinary Euclidean singular values (sqrt(27), 1/sqrt(3),1/sqrt(3),1/sqrt(3)); R2/sqrt(3) has (sqrt(3),1/sqrt(3)). Thus the raw native companion is NOT unitary in standard optical mode amplitudes. Implementing the diagonal metric map physically could need loss, gain, heralding, or a different encoding; a passive signed-shift demonstration alone would not realize the full native Levi transfer. This is an implementation boundary, not a proposal that optical hardware simulates actual arithmetic Frobenius or classical RH.
+
 The normalized nontrivial traces have period eight and first period:
 
     n=1..8:  0, -60, 0, -36, 0, -60, 0, 156.
