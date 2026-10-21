@@ -1,0 +1,53 @@
+name: W33 RH five followups
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261021_rh_followup_five.py"
+      - "tests/test_w33_20261021_rh_followup_five.py"
+      - "analysis/w33_pass4461_line_signing_apartment_trace.py"
+      - ".github/workflows/w33-rh-followup-five.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261021_rh_followup_five.py"
+      - "tests/test_w33_20261021_rh_followup_five.py"
+      - ".github/workflows/w33-rh-followup-five.yml"
+  workflow_dispatch:
+jobs:
+  exact-and-arithmetic-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numerical dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy mpmath pytest
+      - name: Run five regression tests
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python -m pytest -q tests/test_w33_20261021_rh_followup_five.py
+      - name: Generate five-frontier JSON
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python -m analysis.w33_20261021_rh_followup_five
+      - name: Enforce classical RH research scope
+        run: |
+          python - <<'PY'
+          import json
+          p="data/w33_20261021_rh_five_followups.json"
+          d=json.load(open(p))
+          assert d["status"]=="PASS"
+          assert d["classical_RH_proved"] is False
+          assert len(d["experiments"])==5
+          assert d["experiments"]["complete_binary_apartment_holonomy"]["GF2_rank"]==81
+          assert d["experiments"]["levi_conjugator"]["rank_mod_101"]==156
+          print("All five scoped experiments pass; classical RH unproved.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-rh-five-followups
+          path: data/w33_20261021_rh_five_followups.json
