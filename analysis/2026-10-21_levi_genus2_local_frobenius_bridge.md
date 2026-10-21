@@ -57,6 +57,18 @@ Z_Levi(u)^-1
 
 This proves the stated local curve-factor identity.
 
+## A deeper cyclotomic explanation for the quartic factor
+
+The genus-two factor is not an arbitrary numerical match. The curve C has an order-five automorphism over F_{3^4}: (x,y) -> (zeta_5*x,y), since 3 has multiplicative order 4 modulo 5. The four nontrivial characters of this cyclic automorphism act on the four-dimensional H^1(C), and the 3-power Frobenius permutes their exponents by multiplication by 3 mod 5:
+
+```
+1 -> 3 -> 4 -> 2 -> 1.
+```
+
+This single four-cycle forces the traces of Frobenius, its square, and its cube to vanish. With the genus-two Weil determinant 3^2=9, it yields the characteristic polynomial X^4+9, equivalently P_C(u)=1+9u^4. This is an algebraic mechanism for the observed 4-step clock, not merely a point-count fit.
+
+The arithmetic trigger is the substrate's familiar `Phi_4(3)=3^2+1=10`: the prime 5 divides Phi_4(3), so ord_5(3)=4. In parallel, E's factor X^2+3 gives a 2-step conjugate-pair clock. Thus the Levi nontrivial determinant assembles 24 four-dimensional and 30 two-dimensional Frobenius clocks. This observation concerns local arithmetic eigenvalues; it does not identify W33's physical time bins with Frobenius or produce a classical-zeta proof.
+
 ## Implications and boundaries
 
 1. Both nontrivial curve factors obey the finite-field Weil-RH bound and have reciprocal zeros on `|u|=3^-1/2`. This identifies the graph-RH circle with the Frobenius circles of concrete genus-one and genus-two objects.
