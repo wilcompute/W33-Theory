@@ -24,6 +24,8 @@ def test_xi_normalized_determinant_falsifier():
     assert x["N"]==1200
     assert x["baseline_error"][-1]>.5
     assert x["inverse_moments"]["4"]["baseline"] < x["inverse_moments"]["4"]["actual_first60_lower_bound"]
+    assert x["spectral_identity_ruled_out_by_fourth_moment"] is True
+    assert x["inverse_fourth_tail_upper_bound_beyond_1200"] < 7e-9
 
 def test_completed_prime_gamma_pole_weil_matrix():
     x=completed_weil_galerkin()
