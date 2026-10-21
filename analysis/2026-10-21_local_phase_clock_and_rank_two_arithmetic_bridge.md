@@ -50,6 +50,12 @@ for g(z)=<u,(z-H_a)^-1 u> and h(z)=<v,(z-K)^-1 v>, away from poles with polynomi
 
 A 120-level Lambert-W *toy* arithmetic diagonal and eta=0.1, u_n=1/n passes 10 eigenvalue-count comparisons and 5 determinant-ratio checks against independently formed 159x159 matrices. The external toy fails Xi moment identities (already established in concurrent research); the interface does not fix that.
 
+### Exact obstruction: density preservation does not imply an Xi spectral determinant
+
+The proposed rank-two interface, with normalized v, has perturbation operator norm <= eta ||u|| < 0.13. The uncoupled spectrum consists of 15 copies of -4, 24 copies of 2, and external arithmetic ordinates above 17.84 for this toy model. Weyl eigenvalue perturbation bounds show that the full coupled matrix **still has at least 39 eigenvalues in the interval (-4.13,2.13)**. The test verifies this alongside the 37 exact dark levels. Yet the first positive classical Riemann zero ordinate is about 14.134725, and its negatives are symmetric; Xi has no zeros at such low absolute ordinates. Therefore the unmodified full coupled determinant **cannot equal Xi**, even if the external operator's high-lying level count is correct. The two-sector internal degrees of freedom must instead be treated as auxiliary/compressed or removed via a mathematically justified quotient/renormalization. An unproven cancellation is not an acceptable regularization.
+
+An attempt to eliminate all *exact* dark levels by increasing the coupling rank still leaves 39 additional low-lying levels under sufficiently small norm perturbations. The counting coefficient remains right, but the full zero set stays wrong. This is an explicit negative result for this Hilbert-Polya block ansatz, not a general no-go theorem for arithmetic spectral triples.
+
 ## External sources and scope
 
 - Everett W. Howe (2006), supersingular genus-two curves characteristic three: https://arxiv.org/abs/math/0604413
