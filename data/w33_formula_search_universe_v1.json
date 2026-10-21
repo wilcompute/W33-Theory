@@ -237380,7 +237380,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 72,
+          "line": 97,
           "path": "analysis/w33_20261021_local_frobenius_phase_split.py",
           "raw": "# Normed p=11 roots have 2cos(theta)=2/sqrt(11) or -4/sqrt(11).",
           "status": "killed_or_retracted"
@@ -824680,7 +824680,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 37,
+          "line": 50,
           "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
           "raw": "The W33 nonconstant internal matrix is K=2I_24 direct_sum(-4I_15), with 39 modes. Couple one separable channel of a self-adjoint arithmetic candidate H_a:",
           "status": "unclassified"
@@ -833193,7 +833193,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 25,
+          "line": 38,
           "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
           "raw": "The local Frobenius factors arise from C/F3: y^2=x^5+1 (genus two, x^4+9) and E/F3: y^2=x^3-x (elliptic, x^2+3). Every Frobenius 3-adic Newton slope is 1/2: both are supersingular. This is a standard algebraic consequence of these Weil polynomials, and the special genus-two curve was specifically studied by Everett W. Howe (2006).",
           "status": "unclassified"
@@ -839703,6 +839703,34 @@
       },
       "structural_family_id": "d33d0e5d55181053eb7a7b78d12c0374af3c63ac5ad3ef15e0bf551082029536",
       "structural_formula": "TheseriesfixestheSIGNofitshigh-temperaturefree-energypreferencewithoutafitorarandomoptimizer.Atbeta=#,theactualnormalizedfinitedeterminantFdiff/beta7\u2248\u2212#(about2#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fcca8f7ec0f21cbc037a274a4e65993fbdf170d0affe9fc56f06189054e307e4",
+      "normalized_formula": "ThesesatisfyU4^TU4=I,U4^4=-IandU2^TU2=I,U2^2=-Iexactly.Consequentlyasignedfour-modecyclicshifter(singlepiphaseatthewrap)andasignedtwo-modeswapare^passiveunitaryanalogues^oftheFrobeniustransferblocksintheirweightedHilbertstructure",
+      "numeric_literals": [
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
+          "raw": "These satisfy U4^T U4=I, U4^4=-I and U2^T U2=I, U2^2=-I exactly. Consequently a signed four-mode cyclic shifter (single pi phase at the wrap) and a signed two-mode swap are **passive unitary analogues** of the Frobenius transfer blocks in their weighted Hilbert structure.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bab554f2e24fcb998b59232694d14a069d265abcd6b778ca2e6c565967ed07d7",
+      "structural_formula": "ThesesatisfyU4^TU4=I,U4^#=-IandU2^TU2=I,U2^#=-Iexactly.Consequentlyasignedfour-modecyclicshifter(singlepiphaseatthewrap)andasignedtwo-modeswapare^passiveunitaryanalogues^oftheFrobeniustransferblocksintheirweightedHilbertstructure"
     },
     {
       "file_count": 1,
@@ -1111923,6 +1111951,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e7c7c46a74255afd2efc866a49b0a660f67b9bdfa868d64b050eed6e958b5c9d",
+      "normalized_formula": "assertint(np.sum((eig>=-4-norm_bound-1e-8)(eig<=2+norm_bound+1e-8)))>=39",
+      "numeric_literals": [
+        "-4",
+        "1e-8",
+        "2",
+        "39"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261021_rank_two_arithmetic_interface.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/w33_20261021_rank_two_arithmetic_interface.py",
+          "raw": "assert int(np.sum((eig>=-4-norm_bound-1e-8)&(eig<=2+norm_bound+1e-8)))>=39",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "96515370eb9d3896aa8c59d17ec913c6c979f8eb7606a4ab305582025b211b73",
+      "structural_formula": "assertint(np.sum((eig>=#-norm_bound-#)(eig<=#+norm_bound+#)))>=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "de2ba6fe127fbbf7598d1071d5b1e0b4c4fa9fd1bd0882a3eccb841cd5591b2c",
       "normalized_formula": "assertint(np.sum(ev<1e-8))=3",
       "numeric_literals": [
@@ -1120649,6 +1120707,33 @@
       },
       "structural_family_id": "68f26984c3cb539d1b19b24ca5df30833ace2af6384896019e3199abaa6f52b7",
       "structural_formula": "assertnorm_E4=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "24c4d2061be6c8fa992625e6f537310e2042f0867c65ba07af086c48d8b1f52d",
+      "normalized_formula": "assertnorm_bound<0.13",
+      "numeric_literals": [
+        "0.13"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261021_rank_two_arithmetic_interface.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/w33_20261021_rank_two_arithmetic_interface.py",
+          "raw": "assert norm_bound<0.13",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "328844f5a3c16987e68788855ea0f4cee17322cb6e6e82dc58e359f58029855e",
+      "structural_formula": "assertnorm_bound<#"
     },
     {
       "file_count": 1,
@@ -1815101,7 +1815186,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 41,
+          "line": 54,
           "path": "analysis/2026-10-21_local_phase_clock_and_rank_two_arithmetic_bridge.md",
           "raw": "where u in l2(N), v in C^39. The off-diagonal perturbation has rank at most two. Finite-rank interlacing gives |N_total(T)-N_a(T)| <= 39+2=41 at every threshold. Hence the external T log T counting coefficient survives **without** a repeated 39-fold tower. Bounded coupling preserves compact resolvent if H_a has it.",
           "status": "unclassified"
@@ -1873317,9 +1873402,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-21T14:44:15-04:00",
+  "frozen_at": "2026-10-21T14:52:03-04:00",
   "pass": 398,
-  "repository_head": "2d42d88ebbd5758b4fbbfa9370a3717c6c3daa0a",
+  "repository_head": "d945dbe22ff63b912fcf46a996f47d311ca9fc48",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2099646,6 +2099731,14 @@
     },
     {
       "exact_formula_ids": [
+        "fcca8f7ec0f21cbc037a274a4e65993fbdf170d0affe9fc56f06189054e307e4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bab554f2e24fcb998b59232694d14a069d265abcd6b778ca2e6c565967ed07d7",
+      "structural_formula": "ThesesatisfyU4^TU4=I,U4^#=-IandU2^TU2=I,U2^#=-Iexactly.Consequentlyasignedfour-modecyclicshifter(singlepiphaseatthewrap)andasignedtwo-modeswapare^passiveunitaryanalogues^oftheFrobeniustransferblocksintheirweightedHilbertstructure"
+    },
+    {
+      "exact_formula_ids": [
         "b5e392154c6dd54568f5a46b3703bec3ef8b27db7d125b04e19919540a6656a3"
       ],
       "exact_member_count": 1,
@@ -2170185,6 +2170278,14 @@
     },
     {
       "exact_formula_ids": [
+        "e7c7c46a74255afd2efc866a49b0a660f67b9bdfa868d64b050eed6e958b5c9d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "96515370eb9d3896aa8c59d17ec913c6c979f8eb7606a4ab305582025b211b73",
+      "structural_formula": "assertint(np.sum((eig>=#-norm_bound-#)(eig<=#+norm_bound+#)))>=#"
+    },
+    {
+      "exact_formula_ids": [
         "de2ba6fe127fbbf7598d1071d5b1e0b4c4fa9fd1bd0882a3eccb841cd5591b2c"
       ],
       "exact_member_count": 1,
@@ -2172529,6 +2172630,14 @@
       "exact_member_count": 1,
       "structural_family_id": "68f26984c3cb539d1b19b24ca5df30833ace2af6384896019e3199abaa6f52b7",
       "structural_formula": "assertnorm_E4=#"
+    },
+    {
+      "exact_formula_ids": [
+        "24c4d2061be6c8fa992625e6f537310e2042f0867c65ba07af086c48d8b1f52d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "328844f5a3c16987e68788855ea0f4cee17322cb6e6e82dc58e359f58029855e",
+      "structural_formula": "assertnorm_bound<#"
     },
     {
       "exact_formula_ids": [
@@ -2373916,20 +2374025,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90630117,
-    "exact_formula_families": 64045,
+    "bytes_scanned": 90636011,
+    "exact_formula_families": 64048,
     "files_scanned": 12475,
-    "formula_occurrences": 70146,
+    "formula_occurrences": 70149,
     "status_occurrences": {
       "certified_or_theorem": 5242,
       "killed_or_retracted": 1853,
       "open_or_conditional": 2358,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55265
+      "unclassified": 55268
     },
-    "structural_families": 62358
+    "structural_families": 62361
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "950c0e1c81798681b3337df8c2f14104a08a651f60cca8fdf4b221719a19ea21"
+  "universe_sha256": "e28794cbf052a67b6b2a8112a1b9f89db9eba2febde37a2a71447dccb36df34c"
 }
