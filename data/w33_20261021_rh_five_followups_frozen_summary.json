@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-21",
+  "status": "PASS_SCOPED",
+  "classical_RH_proved": false,
+  "workflow": {
+    "head_sha": "566dce8f178b8716f11c44b0a7ab2a0d064bb03b",
+    "run_id": 39642938262,
+    "conclusion": "success",
+    "tests_passed": 5,
+    "certificate_artifact_id": 12365817043,
+    "full_certificate": "https://github.com/wilcompute/W33-Theory/actions/runs/39642938262/artifacts/12365817043"
+  },
+  "generator": "analysis/w33_20261021_rh_followup_five.py",
+  "experiments": {
+    "levi_rational_conjugator": {
+      "ambient_shape": [
+        160,
+        156
+      ],
+      "companion_shape": [
+        156,
+        156
+      ],
+      "mod101_rank": 156,
+      "blocks": {
+        "x4+9": 24,
+        "x2+3": 30
+      },
+      "integer_intertwining": "T B = B C",
+      "geometric_or_galois_equivariance_proved": false
+    },
+    "completed_weil_galerkin": {
+      "basis_dimension": 4,
+      "sigma": 11,
+      "translation_parameters": [
+        0,
+        0.15,
+        0.35,
+        0.65
+      ],
+      "min_eigenvalue_approx": 0.279998266008083,
+      "independent_first60_zeta_pairs_max_diff_approx": 8.104628079763643e-15,
+      "entire_admissible_function_cone_proved": false
+    },
+    "formal_hecke_nonuniqueness": {
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "example_p3_traces": [
+        1120,
+        73
+      ],
+      "canonical_geometric_Hecke_lift_proved": false
+    },
+    "levi_Z2_holonomy": {
+      "octagons": 1620,
+      "GF2_rank": 81,
+      "cycle_space_dimension": 81,
+      "octagons_per_edge": 81,
+      "gauge_class_count": "2^81",
+      "tempered_all_signings": false
+    },
+    "spectral_nonidentifiability": {
+      "modulation_amplitude": 0.05,
+      "mean_relative_error_first20_unperturbed": 0.04883044669612214,
+      "mean_relative_error_first20_W33_plus": 0.04877994945764904,
+      "mean_relative_error_first20_W33_minus": 0.04888094393459523,
+      "correct_leading_zero_density": true,
+      "exact_Xi_determinant": false
+    }
+  }
+}
