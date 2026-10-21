@@ -23,6 +23,10 @@ def test_full_rational_levi_embedding_and_symmetry(geo):
     raw=zlib.decompress(base64.b64decode(artifact["data"]))
     assert hashlib.sha256(raw).hexdigest()==artifact["sha256_raw"]
     assert np.frombuffer(raw,dtype="<i4").reshape((160,156)).shape==(160,156)
+    square=zlib.decompress(base64.b64decode(artifact["coordinate_square_data"]))
+    assert hashlib.sha256(square).hexdigest()==artifact["coordinate_square_sha256"]
+    assert np.frombuffer(square,dtype="<i4").reshape((156,156)).shape==(156,156)
+    assert result["square_coordinate_rank_mod101"]==156
 
 def test_completed_resolvent_and_negative_quartet():
     result=completed_weil_resolvent()
