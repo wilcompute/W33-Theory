@@ -140,7 +140,22 @@ def spectral_determinant():
     moments={str(k):{"baseline":float(sum(lam**(-k))),
              "modulated":float(sum((lam+delta)**(-k))),
              "actual_first60_lower_bound":float(sum(zeros**(-k)))} for k in (2,4,6)}
-    return {"N":N,"test_z":heights,"log_Xi_ratio":true,"baseline_log_finite_products":base,
+    # Tail n>1200: t_n=2*pi*(n-7/8)/W((n-7/8)/e)>pi*n/log(n),
+    # and t_n>500 there. The W33 bounded shift is at most 0.05.
+    # Sum of (t_n+shift)^-4 is <1.001 * sum_(n>1200)(log(n)/(pi*n))^4.
+    # Bound the decreasing series by a first term plus the exact integral.
+    b=1200.;u=math.log(b)
+    I4=(u**4/3+4*u**3/9+12*u*u/27+24*u/81+24/243)/(math.pi**4*b**3)
+    tail_upper=1.001*((u/(math.pi*b))**4+I4)
+    assert tail_upper<7e-9
+    zeta_first60_S4=float(np.sum(zeros**(-4)))
+    model_S4_upper=float(np.sum((lam+delta)**(-4)))+tail_upper
+    assert model_S4_upper<zeta_first60_S4
+    return {"inverse_fourth_tail_upper_bound_beyond_1200":tail_upper,
+       "model_inverse_fourth_moment_global_upper":model_S4_upper,
+       "first60_zeta_zeros_inverse_fourth_lower_bound":zeta_first60_S4,
+       "spectral_identity_ruled_out_by_fourth_moment":True,
+       "N":N,"test_z":heights,"log_Xi_ratio":true,"baseline_log_finite_products":base,
        "W33_log_finite_products":mod,"baseline_error":[abs(x-y) for x,y in zip(true,base)],
        "W33_error":[abs(x-y) for x,y in zip(true,mod)],
        "inverse_moments":moments,
