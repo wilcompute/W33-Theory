@@ -8,6 +8,7 @@ on:
       - "analysis/w33_20261022_golden_dualnumber_clock.py"
       - "analysis/w33_20261022_gold_prime5_ramification.py"
       - "analysis/w33_20261022_supergolden_prime31.py"
+      - "analysis/w33_20261022_pascal_beta_discriminants.py"
       - "tests/test_w33_20261022_golden_dualnumber_clock.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
@@ -18,6 +19,7 @@ on:
       - "analysis/w33_20261022_golden_dualnumber_clock.py"
       - "analysis/w33_20261022_gold_prime5_ramification.py"
       - "analysis/w33_20261022_supergolden_prime31.py"
+      - "analysis/w33_20261022_pascal_beta_discriminants.py"
       - "tests/test_w33_20261022_golden_dualnumber_clock.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
@@ -49,6 +51,7 @@ jobs:
           python analysis/w33_20261022_golden_dualnumber_clock.py
           python analysis/w33_20261022_gold_prime5_ramification.py
           python analysis/w33_20261022_supergolden_prime31.py
+          python analysis/w33_20261022_pascal_beta_discriminants.py
       - name: Fail closed on proof and physical-scope boundaries
         run: |
           python - <<'PY'
@@ -76,6 +79,9 @@ jobs:
           assert f["classical_RH_proved"] is False
           assert f["faithful_six_dimensional_tensor_order"]==930
           assert f["predicted_full_W3_31_dimension"]==92352
+          d=json.load(open("data/w33_20261022_pascal_beta_discriminants.json"))
+          assert d["classical_RH_proved"] is False
+          assert d["m5_sample_overlap"]["Levi_family_nondivisor_control"]==43
           print("Six scoped checks PASS; classical RH and photonic physical validation NOT established.")
           PY
       - uses: actions/upload-artifact@v4
@@ -87,3 +93,4 @@ jobs:
             data/w33_20261022_golden_dualnumber_clock.json
             data/w33_20261022_gold_prime5_ramification.json
             data/w33_20261022_supergolden_prime31.json
+            data/w33_20261022_pascal_beta_discriminants.json
