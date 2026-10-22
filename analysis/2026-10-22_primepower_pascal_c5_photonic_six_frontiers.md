@@ -74,6 +74,8 @@ At p=3, x^3-x^2-1 factors (x+1)(x^2+x-1), producing an F9 quadratic constituent;
 
 The small N=4, cutoff-13 finite-prime Connes–Consani–Moscovici matrix and smooth compact-support two-function Weil test are rerun. The next parameter sensitivity experiment scans N=4 and 5 and cutoff 13 and 14 to expose the ill-conditioning of near-zero Weil eigenvalues under float64 arithmetic. A successful small-N eigenvalue approximation is **not** the paper's corrected-metric high-precision N=120 spectral triple. The Weil test has numerical gamma integrals, not interval-certified universal positivity.
 
+The GitHub-verified cutoff scan found these absolute first-zero errors: N=4 at cutoff 13: 7.43345108e-5; N=5 at cutoff 13: 1.19522088e-6; N=4 at cutoff 14: 1.00138615e-3. The corresponding smallest computed Weil eigenvalues are 9.60717e-15, 1.19371e-17, and 5.81626e-15, respectively. The N=5 eigenvalue spread is around 6.4e16, meaning float64 eigenvector stability is inadequate for large-N claims. Increasing prime cutoff at fixed small N need not monotonically improve individual zeros. These are finite numerical diagnostics only.
+
 The rank-two W33 bright-channel coupling still fails to determine a canonical prime-dependent trace and leaves 37 dark modes, so unmodified Hilbert-Polya Xi determinant equality is unavailable.
 
 ## Code, CI and reproducibility
