@@ -23,6 +23,9 @@ def test_exact_missing_dual_parity_dimensions(result):
 
 def test_golden_ratio_is_intrinsic_hamada_transfer(result):
     assert result["characteristic_two_eigenvalues"]==["5+sqrt5","5-sqrt5"]
+    assert result["square_field_gap_samples"]=={
+        "2":8,"3":130,"5":3400,"7":27538,"11":441650
+    }
     assert result["binary_strict_gap_theorem"].startswith("For all t>=2")
     assert result["classical_RH_proved"] is False
     assert "CANNOT" in result["caveat"]
