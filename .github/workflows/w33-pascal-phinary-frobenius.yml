@@ -4,11 +4,13 @@ on:
     branches: [master]
     paths:
       - "analysis/w33_20261022_pascal_phinary_frobenius.py"
+      - "analysis/w33_20261022_pascal_jordan_w3p.py"
       - "tests/test_w33_20261022_pascal_phinary_frobenius.py"
       - ".github/workflows/w33-pascal-phinary-frobenius.yml"
   pull_request:
     paths:
       - "analysis/w33_20261022_pascal_phinary_frobenius.py"
+      - "analysis/w33_20261022_pascal_jordan_w3p.py"
       - "tests/test_w33_20261022_pascal_phinary_frobenius.py"
       - ".github/workflows/w33-pascal-phinary-frobenius.yml"
   workflow_dispatch:
@@ -33,7 +35,9 @@ jobs:
         env:
           PYTHONPATH: "."
           OPENBLAS_NUM_THREADS: "1"
-        run: python analysis/w33_20261022_pascal_phinary_frobenius.py
+        run: |
+          python analysis/w33_20261022_pascal_phinary_frobenius.py
+          python analysis/w33_20261022_pascal_jordan_w3p.py
       - name: Fail closed on numerical and RH boundaries
         run: |
           python - <<'PY'
@@ -43,9 +47,14 @@ jobs:
           assert all(v["status"].startswith("PASS") for k,v in r.items() if k!="classical_RH_proved")
           assert r["Frobenius_golden_gaussian"]["golden_phi_p"].startswith("phi^p=")
           assert r["Levi_curve_prime_powers"]["cases"]==18
+          j=json.load(open("data/w33_20261022_pascal_jordan_w3p.json"))
+          assert j["classical_RH_proved"] is False
+          assert [x["Jordan_size2_minus1"] for x in j["cases"]]==[4,10,35,84]
           print("Scoped Pascal/Frobenius/CCM checks pass; classical RH unproved")
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: w33-pascal-phinary-frobenius-20261022
-          path: data/w33_20261022_pascal_phinary_frobenius.json
+          path: |
+            data/w33_20261022_pascal_phinary_frobenius.json
+            data/w33_20261022_pascal_jordan_w3p.json
