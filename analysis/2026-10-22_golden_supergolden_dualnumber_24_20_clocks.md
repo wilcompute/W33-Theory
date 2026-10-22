@@ -96,6 +96,26 @@ This sharp characteristic dependence is an **obstruction** to interpreting the f
 
 The combined CI job \`.github/workflows/w33-primepower-pascal-c5-optics.yml\` checks these together with six existing prime-power Pascal, C5/Frobenius, beta and optical-control tests. JSON artifacts: \`data/w33_20261022_golden_dualnumber_clock.json\` and \`data/w33_20261022_gold_prime5_ramification.json\`.
 
+
+## 7. Supergolden ramification at p=31 and the 930-step modular tensor (algebraic prediction)
+
+The quadratic golden field has discriminant +5, but the cubic supergolden polynomial x³-x²-1 has discriminant **-31**. Its only ramified rational prime is 31. Indeed,
+
+    x³-x²-1 = (x-10)(x-11)²   over F31.
+
+The residues 10 and 11 have multiplicative orders 15 and 30 respectively. The 3D supergolden companion S is similar to an eigenline (10) and a size-two Jordan block (11). The exact script \`analysis/w33_20261022_supergolden_prime31.py\` checks the factorization and nilpotency over F31, and verifies directly that a faithful 6D block S tensor J2(1) has **order 930 = 30*31**. No floating-point logarithms or asymptotics enter this result.
+
+For W(3,31), the previously proved generalized-Pascal p-rank theorem gives n=(31+1)(31²+1)=30784 and rank B=binomial(33,3)=5456. The nontrivial square-zero B module has 5456 J2 blocks and 19872 J1 blocks. Tensor with the two-dimensional repeated-root 11 sector produces:
+
+    eigenvalue 11 : J3^5456 + J2^19872 + J1^5456  (dimension 61568)
+    eigenvalue 10 : J2^5456 + J1^19872             (dimension 30784)
+
+Total dimension: 92352. This census is **derived algebraically** from the q-family rank theorem and cubic factorization; no 92352-square matrix was constructed or numerically diagonalized. The corresponding scalar/eigenvalue and unipotent orders imply order 930 for the full abstract tensor action. The six-dimensional faithful block is an independently executed witness.
+
+Thus the prime 5 is exceptional for the *golden* base, while prime 31 is exceptional for the *supergolden* base. Both create Jordan chains longer than those at their semisimple primes. Discriminant ramification, rather than a raw coincidence of decimal constants, is the structural feature to generalize.
+
+The formula \`-31\` is an elementary polynomial discriminant computation, consistent with published number-field tables; the tensor-Jordan analysis is a newly implemented cross-track repo calculation, not a claim that the base itself causes new physics.
+
 ## Five independent top next steps
 
 1. **General modular beta-clock classification:** For beta-polynomials x^m-x^(m-1)-1 and W(3,p^t), classify separable versus ramified primes via discriminants/resultants, tensor nilpotency depth, and exact modular Jordan types.
