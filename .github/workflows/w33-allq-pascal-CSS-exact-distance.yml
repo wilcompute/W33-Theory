@@ -1,0 +1,53 @@
+name: W33 all-q Pascal CSS exact distance
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - "tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - ".github/workflows/w33-allq-pascal-CSS-exact-distance.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - "tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - ".github/workflows/w33-allq-pascal-CSS-exact-distance.yml"
+  workflow_dispatch:
+
+jobs:
+  exact-quantum-code-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install focused dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Verify six fields and exact dual distances
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python -m pytest -q tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py
+      - name: Produce six-field finite-geometry certificate
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python analysis/w33_20261022_allq_pascal_CSS_exact_distance.py
+      - name: Scope guard and exact integer code parameters
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open("data/w33_20261022_allq_pascal_CSS_exact_distance.json"))
+          assert a["status"]=="PASS_EXACT_GEOMETRIC_CSS"
+          assert a["classical_RH_proved"] is False
+          got={z["q"]:(z["CSS"]["n"],z["CSS"]["k"],z["CSS"]["distance"]) for z in a["cases"]}
+          expected={2:(15,7,3),3:(40,20,4),4:(85,53,5),
+                    5:(156,86,6),8:(585,457,9),9:(820,620,10)}
+          assert got==expected
+          print("Six geometric CSS code parameters verified; RH not proved.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-allq-pascal-CSS-exact-distance
+          path: data/w33_20261022_allq_pascal_CSS_exact_distance.json
