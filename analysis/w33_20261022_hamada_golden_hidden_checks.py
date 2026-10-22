@@ -110,6 +110,13 @@ def release():
     vals={(r["p"],r["t"]):r["independent_checks_missing_from_lines"] for r in extended}
     assert vals=={(2,1):0,(2,2):8,(2,3):120,(2,4):1312,
                   (3,1):0,(3,2):130,(5,1):0,(5,2):3400}
+    # This closed all-p formula follows by substituting the explicit
+    # multinomial Hamada 2x2 transfer and factoring the t=2 rank difference.
+    square_field_gaps={}
+    for p in (2,3,5,7,11):
+        closed=p*p*(p-1)**2*(5*p*p+4*p+8)//18
+        assert closed==symbolic_case(p,2)["independent_checks_missing_from_lines"]
+        square_field_gaps[str(p)]=closed
     assert hamada_transfer(2).tolist()==[[4,1],[4,6]]
     assert hamada_transfer(3).tolist()==[[10,4],[16,19]]
     assert hamada_transfer(5).tolist()==[[35,20],[80,85]]
@@ -124,6 +131,9 @@ def release():
             "hidden_check_gap":"dim(C_B^perp)-rank(H_point_line)",
             "characteristic_two_eigenvalues":["5+sqrt5","5-sqrt5"],
             "characteristic_two_closed_gap":"8^t+2^t-(5+sqrt5)^t-(5-sqrt5)^t",
+            "all_prime_square_field_gap":"p²(p-1)²(5p²+4p+8)/18",
+            "square_field_gap_samples":square_field_gaps,
+            "general_Hamada_transfer_entries":"[[p(p+1)(p+2)/6, p(p-1)(p+1)/6], [2p(p-1)(p+1)/3, p(2p²+1)/3]]",
             "binary_strict_gap_theorem":"For all t>=2, rank(line checks)<dim(C_B^perp); majorization and strict convexity prove positivity.",
             "local_recovery":"Each point lies on q²+q+1 projective lines, each giving a disjoint-by-helper repair group of q other symbols in the classical C_B code.",
             "direct_finite_field_rank_samples":samples,
