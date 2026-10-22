@@ -138574,6 +138574,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a93f9effc3f475e9ebf50674efd5f335f7a5516d3c899cf93b41164b33f2f8c9",
+      "normalized_formula": "\"norm_identity\":\"Forinertp,phi^(p+1)=Norm(phi)=-1inF_(p^2).\"",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_pascal_phinary_frobenius.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 135,
+          "path": "analysis/w33_20261022_pascal_phinary_frobenius.py",
+          "raw": "\"norm_identity\":\"For inert p, phi^(p+1)=Norm(phi)=-1 in F_(p^2).\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7320ccd22a2b00d9004b04fee8dab8cb921f926146f693ece3c121c490a23067",
+      "structural_formula": "\"norm_identity\":\"Forinertp,phi^(p+#)=Norm(phi)=#inF_(p^#).\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "2ef2217e9a27bf1f1dd9d73053fde288f3bc091c6c8dfde82252be993b91e468",
       "normalized_formula": "\"norm_identity_holds\":xy={0:Fraction(norm)}",
       "numeric_literals": [
@@ -387200,6 +387229,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0959fbf3104378821c6d71b65f98dc7b5ba39dde5d75db3a092da3f7264d3b01",
+      "normalized_formula": "-\\`analysis/w33_BREAKTHROUGH_435_pascal_trinity_triangular.py\\`:provesanexacttriangularreciprocal-squareidentityyetitsproseerroneouslywrites\\`4*pi^2/3-q!\\`with\\`q=3\\`.Thetrueconstantis^12^,while3!is^6^.Donotcopythatunqualifiedformula",
+      "numeric_literals": [
+        "12",
+        "2",
+        "3",
+        "35",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "- \\`analysis/w33_BREAKTHROUGH_435_pascal_trinity_triangular.py\\`: proves an exact triangular reciprocal-square identity yet its prose erroneously writes \\`4*pi^2/3 - q!\\` with \\`q=3\\`. The true constant is **12**, while 3! is **6**. Do not copy that unqualified formula.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ee42931b08a0d370c21ee3d0d5abd5dd7b1996028544e0a939b4f35bfd86442e",
+      "structural_formula": "-\\`analysis/w3#_BREAKTHROUGH_4#_pascal_trinity_triangular.py\\`:provesanexacttriangularreciprocal-squareidentityyetitsproseerroneouslywrites\\`#*pi^#/#-q!\\`with\\`q=#\\`.Thetrueconstantis^#^,while3!is^#^.Donotcopythatunqualifiedformula"
+    },
+    {
+      "file_count": 1,
       "formula_id": "663785f57b0617e1cece667c76c793e9de92bdb28684283a3a76b38e15659be9",
       "normalized_formula": "-\\lambda/N_e^{2}=-1/1800",
       "numeric_literals": [
@@ -402118,6 +402179,35 @@
       },
       "structural_family_id": "072dc0a803e55ab29db8dde0f287f4ce91b2d46d595c183b364abe6457a20b16",
       "structural_formula": "#.^NECESSITYCONFIRMEDATASECONDPRIME.^OverZ/#(characterorder2#,`v_\u03bb(#)=#`,`v_\u03bb(#)=#`,Newtondivisionsby5,#,#,#,#eachcosting2#against4overZ[\u03b6#]):thelawwouldpredict4#,^measuredminimum3#^.So^\"generatingcharacteroforderp\"isnecessary,notmerelysufficient^\u2014thelawfailsatp=#(Z/#)andp=#(Z/#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "07a28df6eabbe47a04502e9b7f2b23bac25e1f825bc501edbb8264f95327f7c9",
+      "normalized_formula": "1.^Pascalmodularmoduletheoremforq=p^t.^Usethe2010Chandler\u2013Sin\u2013Xiangq-familyp-rankformulatodetermineallnonsemisimpleJordan-blockmultiplicities,thencompareexactlywithq-generalizedPascalmultinomialcoefficientsandactualW33cohomology",
+      "numeric_literals": [
+        "010",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 140,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "1. **Pascal modular module theorem for q=p^t.** Use the 2010 Chandler\u2013Sin\u2013Xiang q-family p-rank formula to determine all nonsemisimple Jordan-block multiplicities, then compare exactly with q-generalized Pascal multinomial coefficients and actual W33 cohomology.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "6e9b8543410a2187b3d40c843b486b0463d3d4e55ac940469df1ef506c5fd1fa",
+      "structural_formula": "#.^Pascalmodularmoduletheoremforq=p^t.^Usethe2#Chandler\u2013Sin\u2013Xiangq-familyp-rankformulatodetermineallnonsemisimpleJordan-blockmultiplicities,thencompareexactlywithq-generalizedPascalmultinomialcoefficientsandactualW3#cohomology"
     },
     {
       "file_count": 1,
@@ -565293,6 +565383,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e81e1f7b45da3669db15438d3ad0b12a78539724fa7ab6c2bed83ca48457f323",
+      "normalized_formula": "Atp=3,W33'srealnonconstanteigenvalues2and-4collapsetothesameeigenvalue-1overF3,with^tenJordan-twoblocks^.ScalarextensiontoF9viaphinaryphicannotdiagonalizethesenilpotentblocks.Thisisthemathematicallineseparatingchangeofnotation,extensionofcoefficientfield,andgenuinechangeofcharacteristic",
+      "numeric_literals": [
+        "1",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "At p=3, W33's real nonconstant eigenvalues 2 and -4 collapse to the same eigenvalue -1 over F3, with **ten Jordan-two blocks**. Scalar extension to F9 via phinary phi cannot diagonalize these nilpotent blocks. This is the mathematical line separating change of notation, extension of coefficient field, and genuine change of characteristic.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e497ddeca49b144fede46744f24e101808ee813bf51d7ce3dd39a95460d64769",
+      "structural_formula": "Atp=#,W3#'srealnonconstanteigenvalues2and-#collapsetothesameeigenvalue-#overF3,with^tenJordan-twoblocks^.ScalarextensiontoF9viaphinaryphicannotdiagonalizethesenilpotentblocks.Thisisthemathematicallineseparatingchangeofnotation,extensionofcoefficientfield,andgenuinechangeofcharacteristic"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5b757514ba2e01dc7221e2979d61387690bb3b749edce44100e296750b883f3c",
       "normalized_formula": "Atp_phys=10^-100(vacuumnoise):suppressionisBEYONDDOUBLE-",
       "numeric_literals": [
@@ -725623,6 +725742,93 @@
     },
     {
       "file_count": 1,
+      "formula_id": "19b34bb868b8b7bb7346075e07869cfd6fcabaabd7f1d3c20e6007ea20f609be",
+      "normalized_formula": "OPENBLAS_NUM_THREADS=1PYTHONPATH=.python-mpytest-qtests/test_w33_20261022_pascal_phinary_frobenius.py",
+      "numeric_literals": [
+        "0261022",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 123,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "OPENBLAS_NUM_THREADS=1 PYTHONPATH=. python -m pytest -q tests/test_w33_20261022_pascal_phinary_frobenius.py",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8059b22828b56adb9e776cd9f05c48ee62fab69ff1f3b3cf6720eb9a2ca65fac",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#PYTHONPATH=.python-mpytest-qtests/test_w3#_2#_pascal_phinary_frobenius.py"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f17a4832fee9dabb724dde12e5d259cb03b309e436e5e861a9ef552089d6b153",
+      "normalized_formula": "OPENBLAS_NUM_THREADS=1PYTHONPATH=.pythonanalysis/w33_20261022_pascal_jordan_w3p.py",
+      "numeric_literals": [
+        "0261022",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 125,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "OPENBLAS_NUM_THREADS=1 PYTHONPATH=. python analysis/w33_20261022_pascal_jordan_w3p.py",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "aac128c0c3823882ea1637ac29c46ddfcc41bdb303894ac81b4935351fe74a7a",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#PYTHONPATH=.pythonanalysis/w3#_2#_pascal_jordan_w3p.py"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e6ae24d73ba35f93644417a3f16b034df8f9dec6c92e86dae03de1db323d4860",
+      "normalized_formula": "OPENBLAS_NUM_THREADS=1PYTHONPATH=.pythonanalysis/w33_20261022_pascal_phinary_frobenius.py",
+      "numeric_literals": [
+        "0261022",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 124,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "OPENBLAS_NUM_THREADS=1 PYTHONPATH=. python analysis/w33_20261022_pascal_phinary_frobenius.py",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "004fd33342ad880f669e1d8bb10b61d859884a3e64b3eb38f9dcda824594d484",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#PYTHONPATH=.pythonanalysis/w3#_2#_pascal_phinary_frobenius.py"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a849f579b212fd77eaac0967b553f22417fff2aa7e119922ff2cdb4f45b714ef",
       "normalized_formula": "OPENBLAS_NUM_THREADS=1python3-mpytest--noconftest--ignore-glob='tests/test_*.py'-q\\",
       "numeric_literals": [
@@ -839534,6 +839740,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f18a1cf8156636256d1a8dfacec5c1cfbdaf05967d22dd146d7d85bb70a73699",
+      "normalized_formula": "Thescriptchecks18symbolicinstancesforp=3,7,23andexponentsr=1,...,6.TheseidentitiesconcernFrobeniusbasechange,notaglobalfixed-degreemotive,anddonotimplyclassicalRH",
+      "numeric_literals": [
+        "1",
+        "23",
+        "3",
+        "6",
+        "7",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 112,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "The script checks 18 symbolic instances for p=3,7,23 and exponents r=1,...,6. These identities concern Frobenius base change, not a global fixed-degree motive, and do not imply classical RH.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3f918ba46983a0f58c9da0a9e0db3cbf7f0910d6d6ef07714c5c21c02af35def",
+      "structural_formula": "Thescriptchecks1#symbolicinstancesforp=#,#,#andexponentsr=#,...,#.TheseidentitiesconcernFrobeniusbasechange,notaglobalfixed-degreemotive,anddonotimplyclassicalRH"
+    },
+    {
+      "file_count": 1,
       "formula_id": "31d9c7b804e9c160ed79963a8d566cdb8bf0736cf19257b072872ca478405124",
       "normalized_formula": "Thescriptitselfcomputesasingle-fieldconsistencyvalueof`n_s`thatisincompatiblewiththecomparisonvalueitquotes,andthensays`n_s`needsanindependentmechanism.Thatfurtherdemonstratesthat`r=1/45`isnotyetaclosedinflationarymodel",
       "numeric_literals": [
@@ -846395,6 +846633,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "74b2370f86bc01c772ef517389b628f56e2b83090b04e08e5526c3a8fff743b0",
+      "normalized_formula": "Thisisthenumberofcompositionsofnintoparts1andm(distinguishthetwochoiceswhenm=1),anditsordinarygeneratingfunctionis\\`1/(1-x-x^m)\\`.Hence",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "This is the number of compositions of n into parts 1 and m (distinguish the two choices when m=1), and its ordinary generating function is \\`1/(1-x-x^m)\\`. Hence",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "75d9f592d5f440a74bef894ab02f527fbf576510bf5fdde03fcc7399131d947e",
+      "structural_formula": "Thisisthenumberofcompositionsofnintoparts1andm(distinguishthetwochoiceswhenm=#),anditsordinarygeneratingfunctionis\\`#/(#-x-x^m)\\`.Hence"
+    },
+    {
+      "file_count": 1,
       "formula_id": "13e5b947c7862121a2aa907b7b569242bb80a877b53d83c1dba150a1e108983e",
       "normalized_formula": "ThisisthestandardcosmologypredictionT_nu=(4/11)^(1/3)*T_CMB",
       "numeric_literals": [
@@ -848363,6 +848628,35 @@
       },
       "structural_family_id": "fb2f895fb81be4b81daec0784b1a6d80a70bfa17723c51c813292e3a2ea9803d",
       "structural_formula": "ThusexactKoide`Q=#/#`wouldrequire"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "eb2e4673c9374389f7e92bba245e856c07d38b1009278f0f445c8e2978b0f8b3",
+      "normalized_formula": "Thusphihasexactmultiplicativeorder8inF9andphi2isasquarerootof-1:twoformsofthesameF9coefficientfield.Theorder-eightnumberagreeswiththenormalizedsupersingularLevi*phaseorder*,butnocanonicalcross-characteristicidentificationfollows.Theactualfinite-field5throotsneedF81.Atp=7thegoldenunithasorder16,sonoglobaleight-ordercoincidence",
+      "numeric_literals": [
+        "1",
+        "6",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "Thus phi has exact multiplicative order 8 in F9 and phi\u00b2 is a square root of -1: two forms of the same F9 coefficient field. The order-eight number agrees with the normalized supersingular Levi *phase order*, but no canonical cross-characteristic identification follows. The actual finite-field 5th roots need F81. At p=7 the golden unit has order 16, so no global eight-order coincidence.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "c120bef1f7c1630934b22f89f0b0e624fadf16632bc6d7dabe92240e4c7cbfd9",
+      "structural_formula": "Thusphihasexactmultiplicativeorder8inF9andphi2isasquarerootof-#:twoformsofthesameF9coefficientfield.Theorder-eightnumberagreeswiththenormalizedsupersingularLevi*phaseorder*,butnocanonicalcross-characteristicidentificationfollows.Theactualfinite-field5throotsneedF8#.Atp=#thegoldenunithasorder1#,sonoglobaleight-ordercoincidence"
     },
     {
       "file_count": 1,
@@ -1035184,6 +1035478,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1fafa5f5c78eaf74cf122e692d8310c92629d77e273c33b58b3d20c36c557635",
+      "normalized_formula": "^Directproofofrank:^thenondegeneratesymplecticformidentifiesthecolumnswiththe(p-1)thpowersof*all*linearfunctionalsin4variables.Because0<=p-1<p,allassociatedmultinomialcoefficientsarenonzeromodpandthelinear-formpowersspanthedegree-(p-1)homogeneouspolynomialspace,ofdimension\\`binomial(p+2,3)\\`.EvaluationonFp^4(henceonprojectivepoints,wherescalingtop-1poweristrivial)isinjective,sinceexponentsare<p.Thusthep-rankisexactlythatPascalcoefficient.Thisstandardtheoremagreeswithestablishedp-rankliterature",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 85,
+          "path": "analysis/2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md",
+          "raw": "**Direct proof of rank:** the nondegenerate symplectic form identifies the columns with the (p-1)th powers of *all* linear functionals in 4 variables. Because 0<=p-1<p, all associated multinomial coefficients are nonzero mod p and the linear-form powers span the degree-(p-1) homogeneous polynomial space, of dimension \\`binomial(p+2,3)\\`. Evaluation on Fp^4 (hence on projective points, where scaling to p-1 power is trivial) is injective, since exponents are <p. Thus the p-rank is exactly that Pascal coefficient. This standard theorem agrees with established p-rank literature.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "1664648a67a344c7856556629d68399eec935d3ca70446bd4f009d14a1bbb3a8",
+      "structural_formula": "^Directproofofrank:^thenondegeneratesymplecticformidentifiesthecolumnswiththe(p-#)thpowersof*all*linearfunctionalsin4variables.Because0<=p-#<p,allassociatedmultinomialcoefficientsarenonzeromodpandthelinear-formpowersspanthedegree-(p-#)homogeneouspolynomialspace,ofdimension\\`binomial(p+#,#)\\`.EvaluationonFp^#(henceonprojectivepoints,wherescalingtop-#poweristrivial)isinjective,sinceexponentsare<p.Thusthep-rankisexactlythatPascalcoefficient.Thisstandardtheoremagreeswithestablishedp-rankliterature"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d6627183cc4d9ed2533225ab658ea23a8c0d0b52effdbe94a469d180d254729c",
       "normalized_formula": "^Distance(d_X=6)^wasfirstfoundbyaboundedintegerlinear-programoptimumonbothlogicaltargetcoordinateswithsolverstatussuccess,zeroMIPgapandweight-sixwitnesses.An^independentexhaustiveproof^thencheckedallcocyclecandidatesofweights1,2and3directlyandweights4and5byfinitesyndromemeet-in-the-middle(2+2,3+2,testingdisjointsupports).^None^isanontrivialcohomologyclass,andtheindependentsix-edgewitness`[25,30,40,45,48,57]`satisfieseveryfacecheckwhilepairingnontriviallywithalogicalcycle",
       "numeric_literals": [
@@ -1128963,6 +1129287,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5d849e592a7da60d721cb2d6ab889ec9f2cb87e0d62566d8cbaf5f849656691f",
+      "normalized_formula": "assertsingles>=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_pascal_jordan_w3p.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 69,
+          "path": "analysis/w33_20261022_pascal_jordan_w3p.py",
+          "raw": "assert singles>=0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "d0f4c888fed11f6f0f369ac3a83a5de4df0f19ddfcdd4738d4a48334eab55efb",
+      "structural_formula": "assertsingles>=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f4ad2e16f35b61f797210c5521396c214bcb2ebba261a572ded1860f07abfff4",
       "normalized_formula": "assertsings=dict(four=1,sqrt_six=24,zero=15),sings",
       "numeric_literals": [
@@ -1152776,6 +1153127,34 @@
       },
       "structural_family_id": "496d027db6cf023ba285e3cebe1ffa1acb718a07235866377f0c3d9f99dc57ff",
       "structural_formula": "c=cc_eff*np.exp(#j*alpha);s=ss_eff*np.exp(#j*(alpha+phi))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0389f3a591a0da8e2f54bf4beb0013bc45d707cd53029ad4649da38182083936",
+      "normalized_formula": "c=ccm_matrix(N=4,cutoff=13)",
+      "numeric_literals": [
+        "13",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_pascal_phinary_frobenius.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 171,
+          "path": "analysis/w33_20261022_pascal_phinary_frobenius.py",
+          "raw": "c=ccm_matrix(N=4,cutoff=13)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "15e40ac68fa12d3bbe967b8414a7db641769d5eda3ac34db1ad8da626a086746",
+      "structural_formula": "c=ccm_matrix(N=#,cutoff=#)"
     },
     {
       "file_count": 1,
@@ -1389243,7 +1389622,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 81,
+          "line": 87,
           "path": "analysis/w33_20261022_levi_prime_family.py",
           "raw": "local_Galois=\"Since Gal(Fbarp/Fp) is procyclic and the curve Frobenius is semisimple, the abstract Q_l companion module is noncanonically Galois-isomorphic to H1(C)^f plus H1(E)^(2g). NOT a geometric motive map or PSp-equivariant construction.\",",
           "status": "certified_or_theorem"
@@ -1389273,11 +1389652,11 @@
           "line": 70,
           "path": "analysis/w33_20261022_levi_prime_family.py",
           "raw": "local_Newton_slopes=\"all 1/2; supersingular\",",
-          "status": "killed_or_retracted"
+          "status": "certified_or_theorem"
         }
       ],
       "status_profile": {
-        "killed_or_retracted": 1
+        "certified_or_theorem": 1
       },
       "structural_family_id": "6e0e4e7dfcee7e44fa896e615298f05e3f14bde7bcaf98e66f84c48afaaecc28",
       "structural_formula": "local_Newton_slopes=\"all1/#;supersingular\""
@@ -1623636,6 +1624015,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b6b02d2a2ed82fa627f972f31f5fb77bd0f5b1f656b8f3542a7fcb7596374d9d",
+      "normalized_formula": "print(json.dumps({k:(v.get(\"status\")ifisinstance(v,dict)elsev)fork,vind.items()},indent=2))",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_pascal_phinary_frobenius.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 199,
+          "path": "analysis/w33_20261022_pascal_phinary_frobenius.py",
+          "raw": "print(json.dumps({k:(v.get(\"status\") if isinstance(v,dict) else v) for k,v in d.items()},indent=2))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e6657f7bc7b5dce9a786b5433120145686d9cfb991a5de4227dec74482d36581",
+      "structural_formula": "print(json.dumps({k:(v.get(\"status\")ifisinstance(v,dict)elsev)fork,vind.items()},indent=#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1196e85a454fce4cfc8220e11244a5ba71355e010ac96fee6db1d9cde90563b1",
       "normalized_formula": "print(json.dumps({k:({'status':'PASS'}ifisinstance(v,dict)elsev)fork,vinresult.items()},indent=2))",
       "numeric_literals": [
@@ -1726164,6 +1726570,34 @@
       },
       "structural_family_id": "9daef1b6f9fcb4978828ca65f04b18fcfa48e4557817de6549d78c35b89a1f87",
       "structural_formula": "singles=([np.kron(np.kron(e[i],m),m)foriinrange(#)]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7015a41f3927d21ec16b86b172f8505e603c796295886c69c0fd78360bc860eb",
+      "normalized_formula": "singles=(n-1)-2*d",
+      "numeric_literals": [
+        "-2",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_pascal_jordan_w3p.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 68,
+          "path": "analysis/w33_20261022_pascal_jordan_w3p.py",
+          "raw": "singles=(n-1)-2*d",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "1b64de7e3ad87725471f36e33ec04aaa147440748b633a3a3bbed8f70098cb8c",
+      "structural_formula": "singles=(n-#)#*d"
     },
     {
       "file_count": 1,
@@ -1874826,9 +1875260,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T13:12:22-04:00",
+  "frozen_at": "2026-10-22T13:37:45-04:00",
   "pass": 398,
-  "repository_head": "402276bca0638740a30c223f3650dae266bb422a",
+  "repository_head": "5348405597dc8f9b1c31f50c8d7bdfd4cae9f043",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1913657,6 +1914091,14 @@
     },
     {
       "exact_formula_ids": [
+        "a93f9effc3f475e9ebf50674efd5f335f7a5516d3c899cf93b41164b33f2f8c9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7320ccd22a2b00d9004b04fee8dab8cb921f926146f693ece3c121c490a23067",
+      "structural_formula": "\"norm_identity\":\"Forinertp,phi^(p+#)=Norm(phi)=#inF_(p^#).\""
+    },
+    {
+      "exact_formula_ids": [
         "2ef2217e9a27bf1f1dd9d73053fde288f3bc091c6c8dfde82252be993b91e468"
       ],
       "exact_member_count": 1,
@@ -1938182,6 +1938624,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7454813bdeb46bb1e7adf36afcb399d6c9375ccdd53008de05c0f506314443c2",
       "structural_formula": "#.^Parallelclasstest:^Blockoneparallelclass(#edges)atatime.Verifythattopologicalprotection(W(#,#)CSScodedistanced=#)preventsinformationloss"
+    },
+    {
+      "exact_formula_ids": [
+        "07a28df6eabbe47a04502e9b7f2b23bac25e1f825bc501edbb8264f95327f7c9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6e9b8543410a2187b3d40c843b486b0463d3d4e55ac940469df1ef506c5fd1fa",
+      "structural_formula": "#.^Pascalmodularmoduletheoremforq=p^t.^Usethe2#Chandler\u2013Sin\u2013Xiangq-familyp-rankformulatodetermineallnonsemisimpleJordan-blockmultiplicities,thencompareexactlywithq-generalizedPascalmultinomialcoefficientsandactualW3#cohomology"
     },
     {
       "exact_formula_ids": [
@@ -2002349,6 +2002799,14 @@
     },
     {
       "exact_formula_ids": [
+        "0959fbf3104378821c6d71b65f98dc7b5ba39dde5d75db3a092da3f7264d3b01"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ee42931b08a0d370c21ee3d0d5abd5dd7b1996028544e0a939b4f35bfd86442e",
+      "structural_formula": "-\\`analysis/w3#_BREAKTHROUGH_4#_pascal_trinity_triangular.py\\`:provesanexacttriangularreciprocal-squareidentityyetitsproseerroneouslywrites\\`#*pi^#/#-q!\\`with\\`q=#\\`.Thetrueconstantis^#^,while3!is^#^.Donotcopythatunqualifiedformula"
+    },
+    {
+      "exact_formula_ids": [
         "663785f57b0617e1cece667c76c793e9de92bdb28684283a3a76b38e15659be9"
       ],
       "exact_member_count": 1,
@@ -2026911,6 +2027369,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4f54e289a755d51a5ac9f886d5714558bea0417dedd89c9b028ddcf5083667a0",
       "structural_formula": "Atone-percentfamilywiseerroranddark-varianceratio`#`,theconservativeshotspertraceare2#at`a=#`,#at`a=#`,#at`a=#`,and5#at`a=#`.AsimultaneousHoeffdingboundrequires2,#classifiedloopstoestimateallfourhistogramfrequencieswithinabsoluteerror0#at9#percentconfidence"
+    },
+    {
+      "exact_formula_ids": [
+        "e81e1f7b45da3669db15438d3ad0b12a78539724fa7ab6c2bed83ca48457f323"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e497ddeca49b144fede46744f24e101808ee813bf51d7ce3dd39a95460d64769",
+      "structural_formula": "Atp=#,W3#'srealnonconstanteigenvalues2and-#collapsetothesameeigenvalue-#overF3,with^tenJordan-twoblocks^.ScalarextensiontoF9viaphinaryphicannotdiagonalizethesenilpotentblocks.Thisisthemathematicallineseparatingchangeofnotation,extensionofcoefficientfield,andgenuinechangeofcharacteristic"
     },
     {
       "exact_formula_ids": [
@@ -2070236,6 +2070702,30 @@
     },
     {
       "exact_formula_ids": [
+        "19b34bb868b8b7bb7346075e07869cfd6fcabaabd7f1d3c20e6007ea20f609be"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8059b22828b56adb9e776cd9f05c48ee62fab69ff1f3b3cf6720eb9a2ca65fac",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#PYTHONPATH=.python-mpytest-qtests/test_w3#_2#_pascal_phinary_frobenius.py"
+    },
+    {
+      "exact_formula_ids": [
+        "f17a4832fee9dabb724dde12e5d259cb03b309e436e5e861a9ef552089d6b153"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aac128c0c3823882ea1637ac29c46ddfcc41bdb303894ac81b4935351fe74a7a",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#PYTHONPATH=.pythonanalysis/w3#_2#_pascal_jordan_w3p.py"
+    },
+    {
+      "exact_formula_ids": [
+        "e6ae24d73ba35f93644417a3f16b034df8f9dec6c92e86dae03de1db323d4860"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "004fd33342ad880f669e1d8bb10b61d859884a3e64b3eb38f9dcda824594d484",
+      "structural_formula": "OPENBLAS_NUM_THREADS=#PYTHONPATH=.pythonanalysis/w3#_2#_pascal_phinary_frobenius.py"
+    },
+    {
+      "exact_formula_ids": [
         "a849f579b212fd77eaac0967b553f22417fff2aa7e119922ff2cdb4f45b714ef"
       ],
       "exact_member_count": 1,
@@ -2101115,6 +2101605,14 @@
     },
     {
       "exact_formula_ids": [
+        "f18a1cf8156636256d1a8dfacec5c1cfbdaf05967d22dd146d7d85bb70a73699"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3f918ba46983a0f58c9da0a9e0db3cbf7f0910d6d6ef07714c5c21c02af35def",
+      "structural_formula": "Thescriptchecks1#symbolicinstancesforp=#,#,#andexponentsr=#,...,#.TheseidentitiesconcernFrobeniusbasechange,notaglobalfixed-degreemotive,anddonotimplyclassicalRH"
+    },
+    {
+      "exact_formula_ids": [
         "31d9c7b804e9c160ed79963a8d566cdb8bf0736cf19257b072872ca478405124"
       ],
       "exact_member_count": 1,
@@ -2102982,6 +2103480,14 @@
     },
     {
       "exact_formula_ids": [
+        "74b2370f86bc01c772ef517389b628f56e2b83090b04e08e5526c3a8fff743b0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "75d9f592d5f440a74bef894ab02f527fbf576510bf5fdde03fcc7399131d947e",
+      "structural_formula": "Thisisthenumberofcompositionsofnintoparts1andm(distinguishthetwochoiceswhenm=#),anditsordinarygeneratingfunctionis\\`#/(#-x-x^m)\\`.Hence"
+    },
+    {
+      "exact_formula_ids": [
         "13e5b947c7862121a2aa907b7b569242bb80a877b53d83c1dba150a1e108983e"
       ],
       "exact_member_count": 1,
@@ -2103507,6 +2104013,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fb2f895fb81be4b81daec0784b1a6d80a70bfa17723c51c813292e3a2ea9803d",
       "structural_formula": "ThusexactKoide`Q=#/#`wouldrequire"
+    },
+    {
+      "exact_formula_ids": [
+        "eb2e4673c9374389f7e92bba245e856c07d38b1009278f0f445c8e2978b0f8b3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c120bef1f7c1630934b22f89f0b0e624fadf16632bc6d7dabe92240e4c7cbfd9",
+      "structural_formula": "Thusphihasexactmultiplicativeorder8inF9andphi2isasquarerootof-#:twoformsofthesameF9coefficientfield.Theorder-eightnumberagreeswiththenormalizedsupersingularLevi*phaseorder*,butnocanonicalcross-characteristicidentificationfollows.Theactualfinite-field5throotsneedF8#.Atp=#thegoldenunithasorder1#,sonoglobaleight-ordercoincidence"
     },
     {
       "exact_formula_ids": [
@@ -2150864,6 +2151378,14 @@
     },
     {
       "exact_formula_ids": [
+        "1fafa5f5c78eaf74cf122e692d8310c92629d77e273c33b58b3d20c36c557635"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1664648a67a344c7856556629d68399eec935d3ca70446bd4f009d14a1bbb3a8",
+      "structural_formula": "^Directproofofrank:^thenondegeneratesymplecticformidentifiesthecolumnswiththe(p-#)thpowersof*all*linearfunctionalsin4variables.Because0<=p-#<p,allassociatedmultinomialcoefficientsarenonzeromodpandthelinear-formpowersspanthedegree-(p-#)homogeneouspolynomialspace,ofdimension\\`binomial(p+#,#)\\`.EvaluationonFp^#(henceonprojectivepoints,wherescalingtop-#poweristrivial)isinjective,sinceexponentsare<p.Thusthep-rankisexactlythatPascalcoefficient.Thisstandardtheoremagreeswithestablishedp-rankliterature"
+    },
+    {
+      "exact_formula_ids": [
         "d6627183cc4d9ed2533225ab658ea23a8c0d0b52effdbe94a469d180d254729c"
       ],
       "exact_member_count": 1,
@@ -2176359,6 +2176881,14 @@
     },
     {
       "exact_formula_ids": [
+        "5d849e592a7da60d721cb2d6ab889ec9f2cb87e0d62566d8cbaf5f849656691f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d0f4c888fed11f6f0f369ac3a83a5de4df0f19ddfcdd4738d4a48334eab55efb",
+      "structural_formula": "assertsingles>=#"
+    },
+    {
+      "exact_formula_ids": [
         "f4ad2e16f35b61f797210c5521396c214bcb2ebba261a572ded1860f07abfff4"
       ],
       "exact_member_count": 1,
@@ -2182683,6 +2183213,14 @@
       "exact_member_count": 1,
       "structural_family_id": "496d027db6cf023ba285e3cebe1ffa1acb718a07235866377f0c3d9f99dc57ff",
       "structural_formula": "c=cc_eff*np.exp(#j*alpha);s=ss_eff*np.exp(#j*(alpha+phi))"
+    },
+    {
+      "exact_formula_ids": [
+        "0389f3a591a0da8e2f54bf4beb0013bc45d707cd53029ad4649da38182083936"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "15e40ac68fa12d3bbe967b8414a7db641769d5eda3ac34db1ad8da626a086746",
+      "structural_formula": "c=ccm_matrix(N=#,cutoff=#)"
     },
     {
       "exact_formula_ids": [
@@ -2311257,6 +2311795,14 @@
     },
     {
       "exact_formula_ids": [
+        "b6b02d2a2ed82fa627f972f31f5fb77bd0f5b1f656b8f3542a7fcb7596374d9d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e6657f7bc7b5dce9a786b5433120145686d9cfb991a5de4227dec74482d36581",
+      "structural_formula": "print(json.dumps({k:(v.get(\"status\")ifisinstance(v,dict)elsev)fork,vind.items()},indent=#))"
+    },
+    {
+      "exact_formula_ids": [
         "1196e85a454fce4cfc8220e11244a5ba71355e010ac96fee6db1d9cde90563b1"
       ],
       "exact_member_count": 1,
@@ -2336701,6 +2337247,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9daef1b6f9fcb4978828ca65f04b18fcfa48e4557817de6549d78c35b89a1f87",
       "structural_formula": "singles=([np.kron(np.kron(e[i],m),m)foriinrange(#)]"
+    },
+    {
+      "exact_formula_ids": [
+        "7015a41f3927d21ec16b86b172f8505e603c796295886c69c0fd78360bc860eb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1b64de7e3ad87725471f36e33ec04aaa147440748b633a3a3bbed8f70098cb8c",
+      "structural_formula": "singles=(n-#)#*d"
     },
     {
       "exact_formula_ids": [
@@ -2375833,20 +2376387,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90682454,
-    "exact_formula_families": 64096,
-    "files_scanned": 12482,
-    "formula_occurrences": 70198,
+    "bytes_scanned": 90707013,
+    "exact_formula_families": 64111,
+    "files_scanned": 12485,
+    "formula_occurrences": 70213,
     "status_occurrences": {
-      "certified_or_theorem": 5251,
+      "certified_or_theorem": 5258,
       "killed_or_retracted": 1857,
       "open_or_conditional": 2359,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55303
+      "unclassified": 55311
     },
-    "structural_families": 62409
+    "structural_families": 62424
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "4df811f9629ea6c9503cd1279e657fc6b78d54e7041e7dcef7bb7fb9793f247a"
+  "universe_sha256": "655466357a9643927b8d55778e5773882ca783ed1199466efa955c5b98b0551e"
 }
