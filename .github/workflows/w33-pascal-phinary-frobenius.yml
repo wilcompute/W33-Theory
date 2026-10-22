@@ -1,0 +1,51 @@
+name: W33 Pascal phinary Frobenius research
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261022_pascal_phinary_frobenius.py"
+      - "tests/test_w33_20261022_pascal_phinary_frobenius.py"
+      - ".github/workflows/w33-pascal-phinary-frobenius.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261022_pascal_phinary_frobenius.py"
+      - "tests/test_w33_20261022_pascal_phinary_frobenius.py"
+      - ".github/workflows/w33-pascal-phinary-frobenius.yml"
+  workflow_dispatch:
+
+jobs:
+  five-frontier-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install exact and finite numeric dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy mpmath pytest
+      - name: Test five independent arithmetic frontiers
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python -m pytest -q tests/test_w33_20261022_pascal_phinary_frobenius.py
+      - name: Generate exact phinary and Frobenius certificates
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python analysis/w33_20261022_pascal_phinary_frobenius.py
+      - name: Fail closed on numerical and RH boundaries
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open("data/w33_20261022_pascal_phinary_frobenius.json"))
+          assert r["classical_RH_proved"] is False
+          assert all(v["status"].startswith("PASS") for k,v in r.items() if k!="classical_RH_proved")
+          assert r["Frobenius_golden_gaussian"]["golden_phi_p"].startswith("phi^p=")
+          assert r["Levi_curve_prime_powers"]["cases"]==18
+          print("Scoped Pascal/Frobenius/CCM checks pass; classical RH unproved")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-pascal-phinary-frobenius-20261022
+          path: data/w33_20261022_pascal_phinary_frobenius.json
