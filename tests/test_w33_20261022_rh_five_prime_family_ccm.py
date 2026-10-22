@@ -27,6 +27,8 @@ def test_local_galois_congruence_and_fixed_rank_obstruction(arithmetic):
     with pytest.raises(AssertionError):local_packet(11,False)
     assert "ONE fixed-rank global motive" in arithmetic["global_obstruction"]
     assert "noncanonically" in arithmetic["local_Galois"]
+    assert arithmetic["out_of_family_controls"]=={
+        "p11_genus2_first_trace":4,"p13_elliptic_trace":6}
 
 def test_true_finite_prime_CCM_operator(analytic):
     data=analytic["finite_prime_CCM"]
