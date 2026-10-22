@@ -57,3 +57,13 @@ def test_supergolden_discriminant_prime31_jordan_depth_three():
     assert a["predicted_full_Jordan_blocks"]["root_11_repeated_Jordan"]=={
         "J3":5456,"J2":19872,"J1":5456}
     assert a["classical_RH_proved"] is False
+
+
+def test_generalized_pascal_beta_discriminant_family_and_null_prime():
+    from analysis.w33_20261022_pascal_beta_discriminants import certificate as discriminants
+    r=discriminants()
+    assert r["status"]=="PASS_EXACT_SYMBOLIC"
+    assert [v["discriminant"] for v in r["candidate_exceptional_characteristics"][:4]]==[5,-31,-283,3381]
+    assert r["m5_sample_overlap"]["divisors"]==[3,7,23]
+    assert r["m5_sample_overlap"]["Levi_family_nondivisor_control"]==43
+    assert r["classical_RH_proved"] is False
