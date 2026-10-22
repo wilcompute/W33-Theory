@@ -73,8 +73,14 @@ def local_packet(p,extension_counts=True):
 def certificate():
     samples=[local_packet(p) for p in (3,7,23)]
     assert [v["local_cohomology_rank"] for v in samples]==[156,1596,50876]
+    # Independent out-of-family controls: the two conditions matter separately.
+    # At 11 the C trace is nonzero; at 13 the E trace is nonzero.
+    c11=12-count_fp(11,"C")
+    e13=14-count_fp(13,"E")
+    assert (c11,e13)==(4,6)
     return dict(status="PASS_EXACT_LOCAL",classical_RH_proved=False,
       prime_family="p ≡ 3 or 7 (mod 20), infinitely many primes by Dirichlet",
+      out_of_family_controls={"p11_genus2_first_trace":c11,"p13_elliptic_trace":e13},
       formula="D_Levi,nt(u)=(1+p^2u^4)^[p(p+1)^2/2]*(1+pu^2)^[p(p^2+1)]",
       genus2_C="y^2=x^5+1",elliptic_E="y^2=x^3-x",
       proof="GQ(p,p) Ihara-Bass factors; x^5 permutation on Fp and Fp2; p≡3 mod4 implies E trace zero; genus-two functional equation",
