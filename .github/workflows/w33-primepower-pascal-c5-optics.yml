@@ -4,11 +4,13 @@ on:
     branches: [master]
     paths:
       - "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      - "analysis/w33_20261022_beta_ccm_sensitivity.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
   pull_request:
     paths:
       - "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      - "analysis/w33_20261022_beta_ccm_sensitivity.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
   workflow_dispatch:
@@ -33,7 +35,9 @@ jobs:
         env:
           OPENBLAS_NUM_THREADS: "1"
           PYTHONPATH: "."
-        run: python analysis/w33_20261022_six_algebra_optics_frontiers.py
+        run: |
+          python analysis/w33_20261022_six_algebra_optics_frontiers.py
+          python analysis/w33_20261022_beta_ccm_sensitivity.py
       - name: Fail closed on proof and physical-scope boundaries
         run: |
           python - <<'PY'
@@ -45,9 +49,14 @@ jobs:
           assert cases=={3:10,4:16,8:64,9:100}
           assert p["order_five_mu5_Galois"]["transfer_sector_characters"]["quartic_96"]["trivial_C5_copies"]==16
           assert p["optical_signed_clock"]["normalized_state_revival_with_fixed_diagonal_loss"]
+          b=json.load(open("data/w33_20261022_beta_ccm_sensitivity.json"))
+          assert b["classical_RH_proved"] is False
+          assert b["beta_companion_modular"]["orders_GL_Fp"]["3"]=={"golden":8,"supergolden":8}
           print("Six scoped checks PASS; classical RH and photonic physical validation NOT established.")
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: w33-primepower-pascal-c5-optics
-          path: data/w33_20261022_six_algebra_optics_frontiers.json
+          path: |
+            data/w33_20261022_six_algebra_optics_frontiers.json
+            data/w33_20261022_beta_ccm_sensitivity.json
