@@ -248477,6 +248477,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8d74c4a32972a53a1f84701a4ed997a214c8cf88c08c9b0b65221a1e9c4af2e1",
+      "normalized_formula": "#Standardconic+nucleusinplanex3=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_q8_hyperoval_dual_completion.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/w33_20261022_q8_hyperoval_dual_completion.py",
+          "raw": "# Standard conic + nucleus in plane x3=0:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a64967ec1b2e122d64cd5611af960e1d05bce727e6ff07b22efc8372b9ed9d8c",
+      "structural_formula": "#Standardconic+nucleusinplanex3=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "80ca673dfc3cde12265327a492fabad03709d7431afd0cad2d2123e40292dd26",
       "normalized_formula": "#Standardform:J=[[0,1,0,0],[-1,0,0,0],[0,0,0,1],[0,0,-1,0]]",
       "numeric_literals": [
@@ -390451,6 +390478,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "be1a2e00fa1e7eb693ef6ba1c6ef97757168899140b99d4799725e722fd5c49a",
+      "normalized_formula": "-analysis/w33_20261022_allq_pascal_CSS_exact_distance.pyestablishesexact[[n,k,q+1]]_pcodesforeveryq=p^tbyhyperplaneisolation",
+      "numeric_literals": [
+        "0261022",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_q4_hyperoval_hidden_parity_completion.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/2026-10-22_q4_hyperoval_hidden_parity_completion.md",
+          "raw": "- analysis/w33_20261022_allq_pascal_CSS_exact_distance.py establishes exact [[n,k,q+1]]_p codes for every q=p^t by hyperplane isolation.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "cc81e60bb7af6a1b8f27717be2cef6f76c49e7c40a4aa8f972f1501da825ea3a",
+      "structural_formula": "-analysis/w3#_2#_allq_pascal_CSS_exact_distance.pyestablishesexact[[n,k,q+#]]_pcodesforeveryq=p^tbyhyperplaneisolation"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0bd3bbc27d41b9d050196dd3c442156675b12a4a6a33ec1c037d9af830e74110",
       "normalized_formula": "-analysis/w33_pass5744_5751_quadratic_code_overlays.pyalreadyestablishestheq=3ternaryself-orthogonalcode,itsdualdistance4andCSS[[40,20,4]]_3.Itestablishescompletelinechecksonlyatq=3",
       "numeric_literals": [
@@ -402071,6 +402127,37 @@
       },
       "structural_family_id": "8574ad812999fb80bec4145d9440fcd8fafd1bc0dd189995bc0a718c147a68db",
       "structural_formula": "#.Thepolarlineofthestabiliserstate.Foreverytangentdirectionuorthogonaltothestabiliserstatee1=(#,#,#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7b71c293703ff629f29f02eda36b55bea6817fe9c911036efc7fc2a24e33abb6",
+      "normalized_formula": "1.Theprime-powersymplecticnoncollinearitycodeC_BhasB2=0incharacteristicp,rank(B)=binomial(p+2,3)^tandanexactq+1CSSdistance.Seeanalysis/w33_20261022_allq_pascal_CSS_exact_distance.py",
+      "numeric_literals": [
+        "0",
+        "0261022",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_q8_hyperoval_full_classical_dual.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/2026-10-22_q8_hyperoval_full_classical_dual.md",
+          "raw": "1. The prime-power symplectic noncollinearity code C_B has B\u00b2=0 in characteristic p, rank(B)=binomial(p+2,3)^t and an exact q+1 CSS distance. See analysis/w33_20261022_allq_pascal_CSS_exact_distance.py.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2e7d85047e86f41aaf0b566d472b7143c7f93963f677d5ad4df11d4d59bc931a",
+      "structural_formula": "#.Theprime-powersymplecticnoncollinearitycodeC_BhasB2=#incharacteristicp,rank(B)=binomial(p+#,#)^tandanexactq+#CSSdistance.Seeanalysis/w3#_2#_allq_pascal_CSS_exact_distance.py"
     },
     {
       "file_count": 1,
@@ -563609,6 +563696,34 @@
       },
       "structural_family_id": "d2e5dbe6d3f750264c1f24d691e1a79e446c36ed50bc6846078004a2cf6fc07f",
       "structural_formula": "Asuppliedselector`V=sum_six(G-I/#)#`hasHessian`#J^TJ`,rank6and1#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6723690ded6f808bad56f9ae7aa8a12b53d93774548fa60f56157986a88965fc",
+      "normalized_formula": "Aswvaries,nondegeneracyofomegasuppliesalllinearforms.Sincep-1<p,polarizationallowspowersoflinearformstospaneveryhomogeneouspolynomialofdegreep-1infourvariables;thedegree-(p-1)evaluationmaponPG(3,p)isinjective.HencethecodeCistheimageofSym^(p-1)(V*)andhasthestatedbinomialrank",
+      "numeric_literals": [
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_css_logical_transvection_jordan.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/2026-10-22_pascal_css_logical_transvection_jordan.md",
+          "raw": "As w varies, nondegeneracy of omega supplies all linear forms. Since p-1<p, polarization allows powers of linear forms to span every homogeneous polynomial of degree p-1 in four variables; the degree-(p-1) evaluation map on PG(3,p) is injective. Hence the code C is the image of Sym^(p-1)(V*) and has the stated binomial rank.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "c953b556411f47f92c147422b79c01a4377c295b2ccd6b8077fc1f9441c118b8",
+      "structural_formula": "Aswvaries,nondegeneracyofomegasuppliesalllinearforms.Sincep-#<p,polarizationallowspowersoflinearformstospaneveryhomogeneouspolynomialofdegreep-#infourvariables;thedegree-(p-#)evaluationmaponPG(#,p)isinjective.HencethecodeCistheimageofSym^(p-#)(V*)andhasthestatedbinomialrank"
     },
     {
       "file_count": 1,
@@ -779736,6 +779851,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5458221dbe6e476a3800bd236e7aecff8315e8d3303196d737cff47314a827c2",
+      "normalized_formula": "RepresentF8asF2[z]/(z3+z+1).Itsstandardprojectiveplanex3=0containsthehyperovalformedbythetenpoints",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_q8_hyperoval_full_classical_dual.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/2026-10-22_q8_hyperoval_full_classical_dual.md",
+          "raw": "Represent F8 as F2[z]/(z\u00b3+z+1). Its standard projective plane x3=0 contains the hyperoval formed by the ten points",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7df880eca7c359c75f03e8af6091f6e9300923d5add22c566096e66efb990002",
+      "structural_formula": "RepresentF8asF2[z]/(z3+z+#).Itsstandardprojectiveplanex3=#containsthehyperovalformedbythetenpoints"
+    },
+    {
+      "file_count": 1,
       "formula_id": "288d5853eef864025d72122c416867ddb7cfb698f267984e37dcebe17a95eb56",
       "normalized_formula": "RepresentthecyclotomicfieldQ(omega),omega2+omega+1=0,by^2x2rationalmatrix^foromega[[0,-1],[1,-1]].Thephysical9x9PauliprojectorsthenbecomeEXACTrational18x18matrices.ComputerationaltracesTrQ^nthroughn=12.Since0<=Q<=I,omittedtermsfromTrexpQarenonnegative,givingacertifiedlowerboundonitspartitionfunction.BoundebyrationaltruncatedTaylorserieswithexplicituppertail;thefunctionkappa(e)isdecreasing.Theevenfourth-orderexpTaylorpolynomialgivesanexactUPPERboundonexp(kappa_upperC)fornegativearguments",
       "numeric_literals": [
@@ -857711,6 +857854,37 @@
       },
       "structural_family_id": "1482f3a238eb2c18d0edeb02da9b5560c31e0b87b81072144c603b25ec289e2d",
       "structural_formula": "Usethesmall-NCCMrank-oneoperator's^realeigenvaluelist^asa*self-adjointdiagonalisospectralsurrogate*,andcoupleitthrougheta*u*v^*toK=#I2#+(#)I1#withu_j=#/j,v_i=#/sqrt3#.ThisisNOTautomaticallyaspectraltriplepreservingthepaper'scorrectedinnerproduct;thechoiceisexplicitlyanewtoyrank-twocoupling"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8dc558df4874ab0845702bd5e2869286c4c9f5fe9f81513875b73b9994f8b2ca",
+      "normalized_formula": "Usethestandardcoordinateorderreturnedbyprojective_points(4)(4-componentvectors,firstnonzerocoordinate1,trailingcoordinatesin{0,1,2,3}underF4=F2[a]/(a2+a+1)).Anexplicitlistof^eightsix-pointhyperovalsupports^is",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_q4_hyperoval_hidden_parity_completion.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/2026-10-22_q4_hyperoval_hidden_parity_completion.md",
+          "raw": "Use the standard coordinate order returned by projective_points(4) (4-component vectors, first nonzero coordinate 1, trailing coordinates in {0,1,2,3} under F4=F2[a]/(a\u00b2+a+1)). An explicit list of **eight six-point hyperoval supports** is:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9d75cd9632cee607781d3def7b5f18c9c96243d7400144f5c20b53593bf86c98",
+      "structural_formula": "Usethestandardcoordinateorderreturnedbyprojective_points(#)(#-componentvectors,firstnonzerocoordinate1,trailingcoordinatesin{#,#,#,#}underF4=F2[a]/(a2+a+#)).Anexplicitlistof^eightsix-pointhyperovalsupports^is"
     },
     {
       "file_count": 1,
@@ -1876282,9 +1876456,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T19:14:29-04:00",
+  "frozen_at": "2026-10-22T19:44:47-04:00",
   "pass": 398,
-  "repository_head": "b1a189f512a0ce98a0b1bc30a610edbb292227b1",
+  "repository_head": "0c7a3e184277aebc78000db349db40ce157232f1",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1939112,6 +1939286,14 @@
     },
     {
       "exact_formula_ids": [
+        "7b71c293703ff629f29f02eda36b55bea6817fe9c911036efc7fc2a24e33abb6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2e7d85047e86f41aaf0b566d472b7143c7f93963f677d5ad4df11d4d59bc931a",
+      "structural_formula": "#.Theprime-powersymplecticnoncollinearitycodeC_BhasB2=#incharacteristicp,rank(B)=binomial(p+#,#)^tandanexactq+#CSSdistance.Seeanalysis/w3#_2#_allq_pascal_CSS_exact_distance.py"
+    },
+    {
+      "exact_formula_ids": [
         "b57bbf552cb2ba4f6923692e50c0184475b3eb40e363947fa734ba9d7e24e168"
       ],
       "exact_member_count": 1,
@@ -1961492,6 +1961674,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6ef5347043cadbb116d7c816a021635ca3a8354624b6be07dacdfc6dbb7f5001",
       "structural_formula": "#Standardchamber:p=<e0>insideL=<e0,e1>.T|L=diag(#,#)"
+    },
+    {
+      "exact_formula_ids": [
+        "8d74c4a32972a53a1f84701a4ed997a214c8cf88c08c9b0b65221a1e9c4af2e1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a64967ec1b2e122d64cd5611af960e1d05bce727e6ff07b22efc8372b9ed9d8c",
+      "structural_formula": "#Standardconic+nucleusinplanex3=#"
     },
     {
       "exact_formula_ids": [
@@ -2004629,6 +2004819,14 @@
     },
     {
       "exact_formula_ids": [
+        "be1a2e00fa1e7eb693ef6ba1c6ef97757168899140b99d4799725e722fd5c49a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cc81e60bb7af6a1b8f27717be2cef6f76c49e7c40a4aa8f972f1501da825ea3a",
+      "structural_formula": "-analysis/w3#_2#_allq_pascal_CSS_exact_distance.pyestablishesexact[[n,k,q+#]]_pcodesforeveryq=p^tbyhyperplaneisolation"
+    },
+    {
+      "exact_formula_ids": [
         "de8066dcaa145bf8c47601a2416f1802e4c70a8117f9a203c8510c95dc4f042d"
       ],
       "exact_member_count": 1,
@@ -2027927,6 +2028125,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d2e5dbe6d3f750264c1f24d691e1a79e446c36ed50bc6846078004a2cf6fc07f",
       "structural_formula": "Asuppliedselector`V=sum_six(G-I/#)#`hasHessian`#J^TJ`,rank6and1#"
+    },
+    {
+      "exact_formula_ids": [
+        "6723690ded6f808bad56f9ae7aa8a12b53d93774548fa60f56157986a88965fc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c953b556411f47f92c147422b79c01a4377c295b2ccd6b8077fc1f9441c118b8",
+      "structural_formula": "Aswvaries,nondegeneracyofomegasuppliesalllinearforms.Sincep-#<p,polarizationallowspowersoflinearformstospaneveryhomogeneouspolynomialofdegreep-#infourvariables;thedegree-(p-#)evaluationmaponPG(#,p)isinjective.HencethecodeCistheimageofSym^(p-#)(V*)andhasthestatedbinomialrank"
     },
     {
       "exact_formula_ids": [
@@ -2086321,6 +2086527,14 @@
     },
     {
       "exact_formula_ids": [
+        "5458221dbe6e476a3800bd236e7aecff8315e8d3303196d737cff47314a827c2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7df880eca7c359c75f03e8af6091f6e9300923d5add22c566096e66efb990002",
+      "structural_formula": "RepresentF8asF2[z]/(z3+z+#).Itsstandardprojectiveplanex3=#containsthehyperovalformedbythetenpoints"
+    },
+    {
+      "exact_formula_ids": [
         "288d5853eef864025d72122c416867ddb7cfb698f267984e37dcebe17a95eb56"
       ],
       "exact_member_count": 1,
@@ -2107508,6 +2107722,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1482f3a238eb2c18d0edeb02da9b5560c31e0b87b81072144c603b25ec289e2d",
       "structural_formula": "Usethesmall-NCCMrank-oneoperator's^realeigenvaluelist^asa*self-adjointdiagonalisospectralsurrogate*,andcoupleitthrougheta*u*v^*toK=#I2#+(#)I1#withu_j=#/j,v_i=#/sqrt3#.ThisisNOTautomaticallyaspectraltriplepreservingthepaper'scorrectedinnerproduct;thechoiceisexplicitlyanewtoyrank-twocoupling"
+    },
+    {
+      "exact_formula_ids": [
+        "8dc558df4874ab0845702bd5e2869286c4c9f5fe9f81513875b73b9994f8b2ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9d75cd9632cee607781d3def7b5f18c9c96243d7400144f5c20b53593bf86c98",
+      "structural_formula": "Usethestandardcoordinateorderreturnedbyprojective_points(#)(#-componentvectors,firstnonzerocoordinate1,trailingcoordinatesin{#,#,#,#}underF4=F2[a]/(a2+a+#)).Anexplicitlistof^eightsix-pointhyperovalsupports^is"
     },
     {
       "exact_formula_ids": [
@@ -2377689,20 +2377911,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90779937,
-    "exact_formula_families": 64146,
-    "files_scanned": 12496,
-    "formula_occurrences": 70248,
+    "bytes_scanned": 90808394,
+    "exact_formula_families": 64152,
+    "files_scanned": 12502,
+    "formula_occurrences": 70254,
     "status_occurrences": {
-      "certified_or_theorem": 5264,
+      "certified_or_theorem": 5265,
       "killed_or_retracted": 1864,
-      "open_or_conditional": 2359,
+      "open_or_conditional": 2360,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55333
+      "unclassified": 55337
     },
-    "structural_families": 62459
+    "structural_families": 62465
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "7ee35d315d5c5e8e4cda96c214d330c03a7a41e0fb8de78f8cc69f66977ff7d0"
+  "universe_sha256": "80bd0491c361a3d36d2ed619b36dd6c21c37177fa4cc9d33e4ff9fa91274efd1"
 }
