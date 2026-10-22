@@ -7,6 +7,7 @@ on:
       - "analysis/w33_20261022_beta_ccm_sensitivity.py"
       - "analysis/w33_20261022_golden_dualnumber_clock.py"
       - "analysis/w33_20261022_gold_prime5_ramification.py"
+      - "analysis/w33_20261022_supergolden_prime31.py"
       - "tests/test_w33_20261022_golden_dualnumber_clock.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
@@ -16,6 +17,7 @@ on:
       - "analysis/w33_20261022_beta_ccm_sensitivity.py"
       - "analysis/w33_20261022_golden_dualnumber_clock.py"
       - "analysis/w33_20261022_gold_prime5_ramification.py"
+      - "analysis/w33_20261022_supergolden_prime31.py"
       - "tests/test_w33_20261022_golden_dualnumber_clock.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
@@ -46,6 +48,7 @@ jobs:
           python analysis/w33_20261022_beta_ccm_sensitivity.py
           python analysis/w33_20261022_golden_dualnumber_clock.py
           python analysis/w33_20261022_gold_prime5_ramification.py
+          python analysis/w33_20261022_supergolden_prime31.py
       - name: Fail closed on proof and physical-scope boundaries
         run: |
           python - <<'PY'
@@ -69,6 +72,10 @@ jobs:
           assert e["classical_RH_proved"] is False
           assert e["Jordan_unipotent_blocks"]=={"J3":35,"J2":86,"J1":35}
           assert e["order_unscaled_U_mod5"]==20
+          f=json.load(open("data/w33_20261022_supergolden_prime31.json"))
+          assert f["classical_RH_proved"] is False
+          assert f["faithful_six_dimensional_tensor_order"]==930
+          assert f["predicted_full_W3_31_dimension"]==92352
           print("Six scoped checks PASS; classical RH and photonic physical validation NOT established.")
           PY
       - uses: actions/upload-artifact@v4
@@ -79,3 +86,4 @@ jobs:
             data/w33_20261022_beta_ccm_sensitivity.json
             data/w33_20261022_golden_dualnumber_clock.json
             data/w33_20261022_gold_prime5_ramification.json
+            data/w33_20261022_supergolden_prime31.json
