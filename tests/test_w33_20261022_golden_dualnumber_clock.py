@@ -46,3 +46,14 @@ def test_exceptional_prime5_gold_ramification_jordan_depth_three():
     assert r["rank_M_squared"]==35
     assert r["tensor_nilpotency_index"]==3
     assert r["classical_RH_proved"] is False
+
+def test_supergolden_discriminant_prime31_jordan_depth_three():
+    from analysis.w33_20261022_supergolden_prime31 import certificate as prime31
+    a=prime31()
+    assert a["beta_discriminants"]=={"golden":5,"supergolden":-31}
+    assert a["scalar_orders"]=={"root_10":15,"root_11":30}
+    assert a["faithful_six_dimensional_tensor_order"]==930
+    assert a["predicted_full_W3_31_dimension"]==92352
+    assert a["predicted_full_Jordan_blocks"]["root_11_repeated_Jordan"]=={
+        "J3":5456,"J2":19872,"J1":5456}
+    assert a["classical_RH_proved"] is False
