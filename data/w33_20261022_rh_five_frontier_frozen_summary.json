@@ -1,0 +1,85 @@
+{
+  "release": "2026-10-22 RH five-track analysis",
+  "status": "LOCAL_SCOPED_TESTS_PASS_GITHUB_CI_PENDING",
+  "classical_RH_proved": false,
+  "local_curve_family": {
+    "residue_classes_mod20": [
+      3,
+      7
+    ],
+    "theorem": "D_Levi,nt=(1+p²u⁴)^[p(p+1)²/2]*(1+pu²)^[p(p²+1)] for all primes p in these classes",
+    "samples": [
+      {
+        "p": 3,
+        "rank": 156,
+        "C_Fp": 4,
+        "C_Fp2": 10,
+        "E_Fp": 4,
+        "E_Fp2": 16
+      },
+      {
+        "p": 7,
+        "rank": 1596,
+        "C_Fp": 8,
+        "C_Fp2": 50,
+        "E_Fp": 8,
+        "E_Fp2": 64
+      },
+      {
+        "p": 23,
+        "rank": 50876,
+        "C_Fp": 24,
+        "C_Fp2": 530,
+        "E_Fp": 24,
+        "E_Fp2": 576
+      }
+    ],
+    "fixed_rank_motive_boundary": "Cannot be the unmodified Euler factors of one fixed-rank global motive for infinitely many good primes."
+  },
+  "local_Galois_boundary": "Abstract noncanonical unramified Q_l Gal(Fbarp/Fp) Frobenius module isomorphism from semisimplicity; canonical geometric equivariance not shown",
+  "finite_CCM": {
+    "lambda_squared": 13,
+    "N": 4,
+    "size": 9,
+    "prime_powers": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      13
+    ],
+    "predicted_first_ordinate": 14.134799593512334,
+    "true_first_ordinate": 14.134725141734695,
+    "absolute_error": 0.00007445177763898414,
+    "numerical_smallest_Weil_eigenvalue": 9.584324730557645e-15
+  },
+  "compact_smooth_Weil": {
+    "smooth": true,
+    "log_support": "[0,log13]",
+    "exact_prime_power_tail_zero": true,
+    "numerical_eigenvalues": [
+      0.0000010971542012874064,
+      0.032522169864867875
+    ],
+    "interval_certified": false,
+    "universal_positivity_proved": false
+  },
+  "bright_trace": {
+    "eta": 0.1,
+    "relative_trace2_local": 0.030795354632573435,
+    "relative_trace2_theory": 0.03079535462333082,
+    "relative_trace3_local": -3.376327731719357,
+    "relative_trace3_theory": -3.3763277308893795,
+    "dark_modes": 37,
+    "canonically_arithmetic_coupling": false
+  },
+  "scope": "Exact finite field and matrix identities plus explicitly numerical small-N tests. RH remains open.",
+  "producers": [
+    "analysis/w33_20261022_levi_prime_family.py",
+    "analysis/w33_20261022_ccm_compact_weil_trace.py"
+  ]
+}
