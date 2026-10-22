@@ -23,6 +23,11 @@ def test_exact_missing_dual_parity_dimensions(result):
 
 def test_golden_ratio_is_intrinsic_hamada_transfer(result):
     assert result["characteristic_two_eigenvalues"]==["5+sqrt5","5-sqrt5"]
+    table=result["Fibonacci_Lucas_integer_recurrence_checks"]
+    assert [table[str(t)]["rank"] for t in (1,2,3,4,5)]==[
+        11,61,401,2801,20001]
+    assert result["intrinsic_phinary_identity"].endswith("phi^2")
+    assert "NOT" in result["Weil_purity_no_go"]
     assert result["square_field_gap_samples"]=={
         "2":8,"3":130,"5":3400,"7":27538,"11":441650
     }
