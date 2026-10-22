@@ -24,6 +24,8 @@ def test_golden_gaussian_cyclotomic_and_lucas_classes():
     assert 7 in r["sample_family_primes_below100"]
     assert 23 in r["sample_family_primes_below100"]
     assert fp_pow_phi(7)==(1,6)
+    assert r["golden_unit_orders"]=={"3":8,"7":16,"23":48}
+    assert r["phi_squared_is_i_in_F9"] is True
     assert r["Lucas_pascal_checks"]==4*3240
 
 def test_curve_prime_power_extension_parity_obstruction():
