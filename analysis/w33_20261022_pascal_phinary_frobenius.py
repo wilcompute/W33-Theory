@@ -87,6 +87,14 @@ def fp_pow_phi(p):
         b=fp_multiply(b,b,p);n>>=1
     return a
 
+def golden_unit_order(p):
+    # Norm phi=-1 for inert p, so phi^(p+1)=-1 and order divides 2(p+1).
+    v=(1,0)
+    for n in range(1,2*(p+1)+1):
+        v=fp_multiply(v,(0,1),p)
+        if v==(1,0):return n
+    raise AssertionError("golden unit order exceeds field norm bound")
+
 def primes_below(n):
     return [p for p in range(3,n+1,2) if is_prime(p)]
 
@@ -117,7 +125,15 @@ def cyclotomic_phi_audit():
         for n in range(80):
             for k in range(n+1):
                 assert lucas_mod_p(n,k,p)==math.comb(n,k)%p
+    orders={str(p):golden_unit_order(p) for p in (3,7,23)}
+    assert orders=={"3":8,"7":16,"23":48}
+    assert fp_multiply((1,1),(1,1),3)==(2,0)
+    assert fp_pow_phi(3)==(1,2)
     return {"status":"PASS_EXACT_FINITE_FIELD","primes_checked":tested,
+            "golden_unit_orders":orders,
+            "phi_squared_is_i_in_F9":True,
+            "norm_identity":"For inert p, phi^(p+1)=Norm(phi)=-1 in F_(p^2).",
+            "Levi_phase_caution":"At p=3 the order-8 F9 golden unit matches a complex normalized Frobenius phase order; NO canonical cross-characteristic operator identification.",
             "joint_frobenius_class":"p=3 or 7 mod20 iff (5/p)=(-4/p)=-1",
             "golden_phi_p":"phi^p=1-phi in Fp[phi]/(phi²-phi-1)",
             "gaussian_i_p":"i^p=-i in Fp[i]/(i²+1)",
