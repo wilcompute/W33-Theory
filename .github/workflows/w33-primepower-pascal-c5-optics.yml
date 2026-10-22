@@ -1,0 +1,53 @@
+name: W33 prime-power Pascal C5 and optics
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
+      - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
+      - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
+  workflow_dispatch:
+
+jobs:
+  exact-arithmetic-and-physical-boundaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Minimal scientific dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy mpmath pytest
+      - name: Test 6 scoped W33 research frontiers
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python -m pytest -q tests/test_w33_20261022_six_algebra_optics_frontiers.py
+      - name: Generate frozen machine-verifiable certificate
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python analysis/w33_20261022_six_algebra_optics_frontiers.py
+      - name: Fail closed on proof and physical-scope boundaries
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open("data/w33_20261022_six_algebra_optics_frontiers.json"))
+          assert p["classical_RH_proved"] is False
+          assert all(v["status"].startswith("PASS") for v in p.values() if isinstance(v,dict))
+          cases={x["q"]:x["rank_B"] for x in p["prime_power_modular_Jordan"]["cases"]}
+          assert cases=={3:10,4:16,8:64,9:100}
+          assert p["order_five_mu5_Galois"]["transfer_sector_characters"]["quartic_96"]["trivial_C5_copies"]==16
+          assert p["optical_signed_clock"]["normalized_state_revival_with_fixed_diagonal_loss"]
+          print("Six scoped checks PASS; classical RH and photonic physical validation NOT established.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-primepower-pascal-c5-optics
+          path: data/w33_20261022_six_algebra_optics_frontiers.json
