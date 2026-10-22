@@ -34,6 +34,18 @@ def exact_trace_power(M,t):
     for _ in range(t):a=a@b
     return int(a.trace())
 
+def fibonacci_lucas(n):
+    a,b=0,1
+    for _ in range(n):a,b=b,a+b
+    fn=a
+    a,b=2,1
+    for _ in range(n):a,b=b,a+b
+    return fn,a
+
+def golden_fibonacci_line_rank(t):
+    F,L=fibonacci_lucas(t)
+    return 1+(2**t)*(5**(t//2))* (L if t%2==0 else 5*F)
+
 def projective_points(q):
     return [(0,)*i+(1,)+v for i in range(4)
             for v in itertools.product(range(q),repeat=3-i)]
@@ -120,6 +132,17 @@ def release():
     assert hamada_transfer(2).tolist()==[[4,1],[4,6]]
     assert hamada_transfer(3).tolist()==[[10,4],[16,19]]
     assert hamada_transfer(5).tolist()==[[35,20],[80,85]]
+    fibonacci_checks={}
+    for t in range(1,13):
+        line_rank=1+exact_trace_power(hamada_transfer(2),t)
+        formula=golden_fibonacci_line_rank(t)
+        assert line_rank==formula
+        F,L=fibonacci_lucas(t)
+        fibonacci_checks[str(t)]={"q":2**t,"rank":line_rank,
+                                 "Fibonacci":F,"Lucas":L}
+    # The ratio (5+sqrt5)/(5-sqrt5)=(3+sqrt5)/2=phi^2.
+    # The eigenvalues have distinct positive absolute values, hence are
+    # NOT a pure-weight conjugate pair of Weil Frobenius eigenvalues.
     # For p=2 the eigenvalues of [[4,1],[4,6]] are 5±sqrt5.
     # Since (8,2) majorizes (5+sqrt5,5-sqrt5), strict convexity of
     # x^t for t>1 gives hidden check gap strictly >0 for every t>=2.
@@ -130,6 +153,10 @@ def release():
             "noncollinearity_dual_rank_formula":"(q+1)(q²+1)-binomial(p+2,3)^t",
             "hidden_check_gap":"dim(C_B^perp)-rank(H_point_line)",
             "characteristic_two_eigenvalues":["5+sqrt5","5-sqrt5"],
+            "intrinsic_phinary_identity":"(5+sqrt5)/(5-sqrt5)=phi^2",
+            "Lucas_Fibonacci_line_rank":"For even t, 1+2^t*5^(t/2)*Lucas_t; for odd t, 1+2^t*5^((t+1)/2)*Fibonacci_t",
+            "Fibonacci_Lucas_integer_recurrence_checks":fibonacci_checks,
+            "Weil_purity_no_go":"Positive unequal conjugate eigenvalues 5±sqrt5 cannot be the same pure-weight finite-field Frobenius pair; projective line ranks are combinatorial, not local Hasse-Weil factors.",
             "characteristic_two_closed_gap":"8^t+2^t-(5+sqrt5)^t-(5-sqrt5)^t",
             "all_prime_square_field_gap":"p²(p-1)²(5p²+4p+8)/18",
             "square_field_gap_samples":square_field_gaps,
