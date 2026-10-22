@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-22",
+  "status": "GITHUB_ACTIONS_VERIFIED_7_TESTS",
+  "classical_RH_proved": false,
+  "verified_workflow": "https://github.com/wilcompute/W33-Theory/actions/runs/39827481100",
+  "artifact_id": 12447162247,
+  "repo_code": {
+    "main": "analysis/w33_20261022_six_algebra_optics_frontiers.py",
+    "supplement": "analysis/w33_20261022_beta_ccm_sensitivity.py",
+    "tests": "tests/test_w33_20261022_six_algebra_optics_frontiers.py",
+    "analysis": "analysis/2026-10-22_primepower_pascal_c5_photonic_six_frontiers.md"
+  },
+  "proven_scoped": {
+    "prime_power_pascal_jordan": "rank_Fp(J-I-A) = binomial(p+2,3)^t, (J-I-A)^2=0 for W(3,p^t)",
+    "exact_ranks": {
+      "q3": 10,
+      "q4": 16,
+      "q8": 64,
+      "q9": 100
+    },
+    "C5_Levi_character": {
+      "quartic96": {
+        "trivial": 16,
+        "cyclotomic_Qzeta5": 20
+      },
+      "quadratic60": {
+        "trivial": 12,
+        "cyclotomic_Qzeta5": 12
+      }
+    },
+    "obstruction": "Frobenius does not commute with obvious geometric mu5 on C:y²=x^5+1 at p congruent 3 or 7 mod20",
+    "optical_identity": "(D U4)^4=-det(D) I for fixed diagonal complex D",
+    "optical_mix03_residual": 0.05256959711626595,
+    "beta_orders_mod3": {
+      "golden": 8,
+      "supergolden": 8
+    },
+    "beta_orders_mod7": {
+      "golden": 16,
+      "supergolden": 57
+    }
+  },
+  "numerical_only": {
+    "ccm_first_zero_absolute_errors": [
+      {
+        "N": 4,
+        "cutoff": 13,
+        "error": 0.00007433451082938802,
+        "min_eigenvalue": 9.607168712374996e-15
+      },
+      {
+        "N": 5,
+        "cutoff": 13,
+        "error": 0.0000011952208787135987,
+        "min_eigenvalue": 1.1937098053293053e-17
+      },
+      {
+        "N": 4,
+        "cutoff": 14,
+        "error": 0.0010013861490207887,
+        "min_eigenvalue": 5.816256138027247e-15
+      }
+    ],
+    "N5_weil_eigenvalue_spread": 64092082225809940,
+    "warning": "Double precision near-zero eigenvector ill-conditioning; no corrected-metric convergence or interval certified Weil positivity"
+  },
+  "prior_art": "Existing symplectic incidence representation theory and existing W33 p-prime code; cross-track synthesis and certificates are new within this repo.",
+  "open_theorems": [
+    "canonical Galois-equivariant symplectic-motive map",
+    "all-admissible Weil positivity",
+    "convergence of corrected-metric prime CCM determinant to Xi",
+    "physical realization of weighted native Levi transfer"
+  ]
+}
