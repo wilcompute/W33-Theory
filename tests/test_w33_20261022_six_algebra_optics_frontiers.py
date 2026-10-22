@@ -39,3 +39,16 @@ def test_strict_scope_and_all_subreports():
     r=release()
     assert r["classical_RH_proved"] is False
     assert all(a["status"].startswith("PASS") for a in r.values() if isinstance(a,dict))
+
+
+def test_golden_supergolden_nonuniversal_clock_and_ccm_conditioning():
+    from analysis.w33_20261022_beta_ccm_sensitivity import run
+    result=run()
+    assert result["classical_RH_proved"] is False
+    assert result["beta_companion_modular"]["orders_GL_Fp"]["3"]=={
+        "golden":8,"supergolden":8}
+    assert result["beta_companion_modular"]["orders_GL_Fp"]["7"]=={
+        "golden":16,"supergolden":57}
+    assert len(result["CCM_conditioning"]["scans"])==3
+    assert all(x["first_ordinate_absolute_error"]<.0015
+               for x in result["CCM_conditioning"]["scans"])
