@@ -5,12 +5,16 @@ on:
     paths:
       - "analysis/w33_20261022_six_algebra_optics_frontiers.py"
       - "analysis/w33_20261022_beta_ccm_sensitivity.py"
+      - "analysis/w33_20261022_golden_dualnumber_clock.py"
+      - "tests/test_w33_20261022_golden_dualnumber_clock.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
   pull_request:
     paths:
       - "analysis/w33_20261022_six_algebra_optics_frontiers.py"
       - "analysis/w33_20261022_beta_ccm_sensitivity.py"
+      - "analysis/w33_20261022_golden_dualnumber_clock.py"
+      - "tests/test_w33_20261022_golden_dualnumber_clock.py"
       - "tests/test_w33_20261022_six_algebra_optics_frontiers.py"
       - ".github/workflows/w33-primepower-pascal-c5-optics.yml"
   workflow_dispatch:
@@ -30,7 +34,7 @@ jobs:
         env:
           OPENBLAS_NUM_THREADS: "1"
           PYTHONPATH: "."
-        run: python -m pytest -q tests/test_w33_20261022_six_algebra_optics_frontiers.py
+        run: python -m pytest -q tests/test_w33_20261022_six_algebra_optics_frontiers.py tests/test_w33_20261022_golden_dualnumber_clock.py
       - name: Generate frozen machine-verifiable certificate
         env:
           OPENBLAS_NUM_THREADS: "1"
@@ -38,6 +42,7 @@ jobs:
         run: |
           python analysis/w33_20261022_six_algebra_optics_frontiers.py
           python analysis/w33_20261022_beta_ccm_sensitivity.py
+          python analysis/w33_20261022_golden_dualnumber_clock.py
       - name: Fail closed on proof and physical-scope boundaries
         run: |
           python - <<'PY'
@@ -52,6 +57,11 @@ jobs:
           b=json.load(open("data/w33_20261022_beta_ccm_sensitivity.json"))
           assert b["classical_RH_proved"] is False
           assert b["beta_companion_modular"]["orders_GL_Fp"]["3"]=={"golden":8,"supergolden":8}
+          c=json.load(open("data/w33_20261022_golden_dualnumber_clock.json"))
+          assert c["classical_RH_proved"] is False
+          assert c["physical_photon_clock_constructed"] is False
+          assert c["native_W39_dual_number_clock"]["free_rank"]==100
+          assert c["W33_hybrid_complex_no_go"]["order_mod3"]==24
           print("Six scoped checks PASS; classical RH and photonic physical validation NOT established.")
           PY
       - uses: actions/upload-artifact@v4
@@ -60,3 +70,4 @@ jobs:
           path: |
             data/w33_20261022_six_algebra_optics_frontiers.json
             data/w33_20261022_beta_ccm_sensitivity.json
+            data/w33_20261022_golden_dualnumber_clock.json
