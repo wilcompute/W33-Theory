@@ -116,6 +116,26 @@ Thus the prime 5 is exceptional for the *golden* base, while prime 31 is excepti
 
 The formula \`-31\` is an elementary polynomial discriminant computation, consistent with published number-field tables; the tensor-Jordan analysis is a newly implemented cross-track repo calculation, not a claim that the base itself causes new physics.
 
+
+## 8. A general discriminant theorem for the full Pascal/base family (and a selection-bias falsifier)
+
+For every integer m>=2, let f_m(x)=x^m-x^(m-1)-1, whose dominant positive real root is the Pascal/composition growth base beta_m. An exact resultant computation gives
+
+    Disc(f_m)=(-1)^[m(m-1)/2+m+1] * (m^m + (m-1)^(m-1)).
+
+Proof: f'_m(x)=x^(m-2)(m x-(m-1)). Therefore Res(f,f')=(-1)^(m+1)*(m^m+(m-1)^(m-1)); combine with the standard monic discriminant sign. Script \`analysis/w33_20261022_pascal_beta_discriminants.py\` independently verifies symbolic discriminants for every m=2,...,10, factors each integer, and checks that every discriminant prime produces a repeated-root polynomial modulo p. A nonmaximal order index could affect which primes truly ramify in the maximal number field, so make only the **polynomial order/repeated-root** claim without further proof.
+
+Notable discriminants:
+
+    m=2: +5,        golden phi
+    m=3: -31,       supergolden psi
+    m=4: -283
+    m=5: +3381 = 3 * 7^2 * 23
+
+The last three prime divisors of m=5's discriminant coincide with the three primes 3,7,23 used in earlier local Levi arithmetic sampling. This is an intriguing *finite* numerical intersection, but **not evidence of a common arithmetic motive**. The Levi congruence family also contains p=43 (p=3 mod20), which does NOT divide 3381. Thus any suggestion that the m=5 base ramification universally characterizes the Levi family is falsified immediately. This explicit null control is frozen in the tests.
+
+A well-posed new direction is to classify the prime splitting of f_m together with the cyclotomic characteristic polynomial of the local curve C_p and the modular representation class of W(3,p), using a predeclared all-prime criterion rather than selecting numerical coincidences.
+
 ## Five independent top next steps
 
 1. **General modular beta-clock classification:** For beta-polynomials x^m-x^(m-1)-1 and W(3,p^t), classify separable versus ramified primes via discriminants/resultants, tensor nilpotency depth, and exact modular Jordan types.
