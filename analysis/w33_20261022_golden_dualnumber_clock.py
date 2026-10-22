@@ -25,6 +25,16 @@ F=np.array([[0,1],[1,1]],dtype=np.int64)
 S=np.array([[0,0,1],[1,0,0],[0,1,1]],dtype=np.int64)
 Q=np.array([[1,1,0],[2,1,2],[2,0,2]],dtype=np.int64)
 
+def matrix_power_mod(A,n,p):
+    """Exact repeated squaring with reduction at EACH multiplication (no int64 overflow)."""
+    R=np.eye(A.shape[0],dtype=np.int64)
+    A=np.asarray(A,dtype=np.int64)%p
+    while n:
+        if n&1:R=(R@A)%p
+        A=(A@A)%p
+        n//=2
+    return R
+
 def matrix_conjugacy():
     target=np.zeros((3,3),dtype=np.int64)
     target[0,0]=-1
@@ -33,9 +43,9 @@ def matrix_conjugacy():
     assert round(np.linalg.det(Q))%3==2
     I2=np.eye(2,dtype=np.int64)
     I3=np.eye(3,dtype=np.int64)
-    assert np.array_equal(np.linalg.matrix_power(F,4)%3,(-I2)%3)
-    assert np.array_equal(np.linalg.matrix_power(S,8)%3,I3%3)
-    assert not np.array_equal(np.linalg.matrix_power(S,4)%3,I3%3)
+    assert np.array_equal(matrix_power_mod(F,4,3),(-I2)%3)
+    assert np.array_equal(matrix_power_mod(S,8,3),I3%3)
+    assert not np.array_equal(matrix_power_mod(S,4,3),I3%3)
     return dict(status="PASS_EXACT",similarity_Q_mod3=Q.tolist(),
       block_matrix_mod3=(target%3).tolist(),
       determinant_Q_mod3=2,supergolden_order_mod3=8,
@@ -120,9 +130,9 @@ def w33_hybrid_and_complex_nogo():
     I=np.eye(n,dtype=np.int64)
     T=np.kron(F,I+B)%3
     Id=np.eye(2*n,dtype=np.int64)
-    assert np.array_equal(np.linalg.matrix_power(T,24)%3,Id)
+    assert np.array_equal(matrix_power_mod(T,24,3),Id)
     for exponent in (8,12):
-        assert not np.array_equal(np.linalg.matrix_power(T,exponent)%3,Id)
+        assert not np.array_equal(matrix_power_mod(T,exponent,3),Id)
     # Over the reals B is a nonnegative symmetric regular graph matrix
     # of degree 27. I+B therefore has a real eigenvalue 28.
     assert np.array_equal(B.sum(axis=1),27*np.ones(n,dtype=np.int64))
