@@ -11,7 +11,7 @@
 
 ## Exact q8 witness
 
-Represent F8 as F2[z]/(z³+z+1). Its standard projective plane x3=0 contains the hyperoval formed by the nine? **ten** points
+Represent F8 as F2[z]/(z³+z+1). Its standard projective plane x3=0 contains the hyperoval formed by the ten points
 
     [1,a,a²,0] for a in F8,
     [0,0,1,0], and [0,1,0,0].
