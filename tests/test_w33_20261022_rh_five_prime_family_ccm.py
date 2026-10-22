@@ -4,7 +4,7 @@ from analysis.w33_20261022_levi_prime_family import (
     certificate as prime_certificate,local_packet,count_fp,count_fp2
 )
 from analysis.w33_20261022_ccm_compact_weil_trace import (
-    certificate as analytic_certificate,prime_powers,ccm_kernel
+    certificate as analytic_certificate,prime_powers,kernel as ccm_kernel
 )
 
 @pytest.fixture(scope="module")
