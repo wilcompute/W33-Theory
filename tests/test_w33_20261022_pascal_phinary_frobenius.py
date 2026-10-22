@@ -45,3 +45,13 @@ def test_previous_arithmetic_operator_completed_Weil_and_trace():
 def test_complete_scope_firewall():
     r=all_results()
     assert r["classical_RH_proved"] is False
+
+
+def test_pascal_jordan_modular_W3p_nonsemisimple():
+    from analysis.w33_20261022_pascal_jordan_w3p import certificate
+    r=certificate()
+    assert r["status"]=="PASS_EXACT_MODULAR"
+    assert [v["Jordan_size2_minus1"] for v in r["cases"]]==[4,10,35,84]
+    assert [v["Jordan_size1_minus1"] for v in r["cases"]]==[6,19,85,231]
+    assert all(v["B_squared_zero"] for v in r["cases"])
+    assert r["classical_RH_proved"] is False
