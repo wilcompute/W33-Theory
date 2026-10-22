@@ -35,3 +35,14 @@ def test_research_scope_boundary():
     assert r["classical_RH_proved"] is False
     assert r["physical_photon_clock_constructed"] is False
     assert all(v["status"]=="PASS_EXACT" for v in r.values() if isinstance(v,dict))
+
+
+def test_exceptional_prime5_gold_ramification_jordan_depth_three():
+    from analysis.w33_20261022_gold_prime5_ramification import certificate as prime5
+    r=prime5()
+    assert r["status"]=="PASS_EXACT_MODULAR"
+    assert r["Jordan_unipotent_blocks"]=={"J3":35,"J2":86,"J1":35}
+    assert r["order_unscaled_U_mod5"]==20
+    assert r["rank_M_squared"]==35
+    assert r["tensor_nilpotency_index"]==3
+    assert r["classical_RH_proved"] is False
