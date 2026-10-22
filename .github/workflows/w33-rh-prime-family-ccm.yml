@@ -1,0 +1,60 @@
+name: W33 RH prime family and CCM audit
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261022_levi_prime_family.py"
+      - "analysis/w33_20261022_ccm_compact_weil_trace.py"
+      - "tests/test_w33_20261022_rh_five_prime_family_ccm.py"
+      - ".github/workflows/w33-rh-prime-family-ccm.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261022_levi_prime_family.py"
+      - "analysis/w33_20261022_ccm_compact_weil_trace.py"
+      - "tests/test_w33_20261022_rh_five_prime_family_ccm.py"
+      - ".github/workflows/w33-rh-prime-family-ccm.yml"
+  workflow_dispatch:
+
+jobs:
+  scientific-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numerical dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy mpmath pytest
+      - name: Replay all five research experiments
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: python -m pytest -q tests/test_w33_20261022_rh_five_prime_family_ccm.py
+      - name: Generate exact and numerical certificates
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          PYTHONPATH: "."
+        run: |
+          python analysis/w33_20261022_levi_prime_family.py >/tmp/prime_family.log
+          python analysis/w33_20261022_ccm_compact_weil_trace.py >/tmp/ccm_weil.log
+      - name: Require explicit classical RH proof boundary
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open("data/w33_20261022_levi_prime_family.json"))
+          c=json.load(open("data/w33_20261022_ccm_compact_weil_trace.json"))
+          assert p["classical_RH_proved"] is False
+          assert c["classical_RH_proved"] is False
+          assert p["status"]=="PASS_EXACT_LOCAL"
+          assert c["status"]=="PASS_SCOPED"
+          assert c["finite_prime_CCM"]["prime_powers"]==[2,3,4,5,7,8,9,11,13]
+          assert c["smooth_compact_Weil"]["exact_prime_tail_zero"]
+          print("Exact local arithmetic and scoped completed-Weil CCM checks pass; RH remains open.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-rh-oct22-prime-family-ccm-certificates
+          path: |
+            data/w33_20261022_levi_prime_family.json
+            data/w33_20261022_ccm_compact_weil_trace.json
