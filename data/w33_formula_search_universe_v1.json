@@ -137694,6 +137694,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c538ee172cf7ec13531bee565d8bd282560f6c435064095b29381c376443767a",
+      "normalized_formula": "\"no_go\":\"ThegraphC5commuteswithLevitransfer;curvegeometricmu5doesnotcommutewithFrobeniusforp=3,7mod20.ThesetwoC5actionscannotbeidentifiedbyasimultaneouslyequivariantmap.\"",
+      "numeric_literals": [
+        "0",
+        "3",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 144,
+          "path": "analysis/w33_20261022_six_algebra_optics_frontiers.py",
+          "raw": "\"no_go\":\"The graph C5 commutes with Levi transfer; curve geometric mu5 does not commute with Frobenius for p=3,7 mod20. These two C5 actions cannot be identified by a simultaneously equivariant map.\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "626e00ddb0dcaa0d352faa04e8aef17323f4c8f8d6f305b16a16984b50c3e4ea",
+      "structural_formula": "\"no_go\":\"ThegraphC5commuteswithLevitransfer;curvegeometricmu5doesnotcommutewithFrobeniusforp=#,#mod2#.ThesetwoC5actionscannotbeidentifiedbyasimultaneouslyequivariantmap.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "456676e73bd142c1dea62ff86bc3137867b743d329d7927346bedf6b16b7b840",
       "normalized_formula": "\"no_hamming_distance_union_is_W33\":srg_hits=0",
       "numeric_literals": [
@@ -636873,6 +636902,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a1466140345282c9a0be42c73930c971b433a683e923fcf64140e76dcf101514",
+      "normalized_formula": "ForthecurveC:y^2=x^5+1,theobviousgeometricautomorphismsigma(x,y)=(zeta_5*x,y)satisfiesFsigmaF^-1=sigma^punderarithmeticFrobenius,whereaspmod5hasorderfourforp=3or7mod20.It^doesnotcommutewithFrobenius^.ConsequentlythecommutinggraphC5actioncannotbeidentifiedwiththisparticularcurvemu5actionbyasimultaneousequivariantoperatorintertwiner.Othergeometriccorrespondencesandtwistedsemidirect-productdescentC5semidirectC4remainpossible",
+      "numeric_literals": [
+        "+1",
+        "-1",
+        "0",
+        "2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_primepower_pascal_c5_photonic_six_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/2026-10-22_primepower_pascal_c5_photonic_six_frontiers.md",
+          "raw": "For the curve C:y^2=x^5+1, the obvious geometric automorphism sigma(x,y)=(zeta_5*x,y) satisfies F sigma F^-1=sigma^p under arithmetic Frobenius, whereas p mod5 has order four for p=3 or 7 mod20. It **does not commute with Frobenius**. Consequently the commuting graph C5 action cannot be identified with this particular curve mu5 action by a simultaneous equivariant operator intertwiner. Other geometric correspondences and twisted semidirect-product descent C5 semidirect C4 remain possible.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "fc7971cd4793950df5225fc87fa27e12e101c1121241f35b6b2dbafe53df617b",
+      "structural_formula": "ForthecurveC:y^#=x^##,theobviousgeometricautomorphismsigma(x,y)=(zeta_5*x,y)satisfiesFsigmaF^#=sigma^punderarithmeticFrobenius,whereaspmod5hasorderfourforp=#or7mod2#.It^doesnotcommutewithFrobenius^.ConsequentlythecommutinggraphC5actioncannotbeidentifiedwiththisparticularcurvemu5actionbyasimultaneousequivariantoperatorintertwiner.Othergeometriccorrespondencesandtwistedsemidirect-productdescentC5semidirectC4remainpossible"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fee1419507e464df8bc917cb88a3363b4de00ee280b6efd5340af0f50795e706",
       "normalized_formula": "Forthedominantorbit\\(\\nu_k=(\\varphie^{i\\alpha})^k\\),thelogarithmic-covercoordinatesare\\((\\rho_k,\\theta_k)=(k\\log\\varphi,k\\alpha)\\).Theylieonastraightlatticelinebeforeexponentiationandbecomealogarithmicspiralinthepuncturedplane.At\\(\\alpha=\\pi/2\\)thevisibleplanehasfourarms.Thesymplecticquarter-turn\\(J(\\rho,\\theta)=(-\\theta,\\rho)\\)exchangesradialandangularrolesandsendstheslope/pitch\\(a\\)to\\(-1/a\\).Thisformalizestheproposedrecursive-versus-iterativeviewpoint:linearityorcurvaturedependsonwhichcoveringcoordinateistreatedasprimitive",
       "numeric_literals": [
@@ -844720,6 +844781,34 @@
       },
       "structural_family_id": "1f96d7e8d4e246ad429864cb7419ff3c8807f6cb381d06a53d27a3e4f203d6d5",
       "structural_formula": "Thewitnessisneverthelessimpossibleasa^globaldualcharacter^.Since`T3=-A3`andthe1#A3checksspanallof`K^perp`,everygeneratorhassign`#`,forcing`chi(h)=(#)^wt(h)`onthewholedualcodeandtherefore`T4=+A4=#`,contradictingthelocalwitness`T4=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "64a3a7eabc93d788fd3a0426bef3aede59f4d465177ef97b8b8e2da1d5ffd571",
+      "normalized_formula": "Theworkflowgeneratesdata/w33_20261022_six_algebra_optics_frontiers.jsonanddata/w33_20261022_beta_ccm_sensitivity.json,publishesthemasGitHubActionsartifacts,andchecksthestrictclassical_RH_proved=falsefirewall",
+      "numeric_literals": [
+        "0261022",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_primepower_pascal_c5_photonic_six_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 85,
+          "path": "analysis/2026-10-22_primepower_pascal_c5_photonic_six_frontiers.md",
+          "raw": "The workflow generates data/w33_20261022_six_algebra_optics_frontiers.json and data/w33_20261022_beta_ccm_sensitivity.json, publishes them as GitHub Actions artifacts, and checks the strict classical_RH_proved=false firewall.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "4fc5fe4a765080614853bf79a31500c504132866a5b65a67319d8a15afaff771",
+      "structural_formula": "Theworkflowgeneratesdata/w3#_2#_six_algebra_optics_frontiers.jsonanddata/w3#_2#_beta_ccm_sensitivity.json,publishesthemasGitHubActionsartifacts,andchecksthestrictclassical_RH_proved=falsefirewall"
     },
     {
       "file_count": 1,
@@ -1443288,6 +1443377,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "baa2e2f545734f5387cb7434de52d911aad1b1f23669526f0c65bfd993cdf7ac",
+      "normalized_formula": "mixing=np.eye(4)+.03*(np.ones((4,4))-np.eye(4))",
+      "numeric_literals": [
+        "+.03",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 159,
+          "path": "analysis/w33_20261022_six_algebra_optics_frontiers.py",
+          "raw": "mixing=np.eye(4)+.03*(np.ones((4,4))-np.eye(4))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c532ef352670d0bbec25a3432ca2f796a83d55426a99c82bd8a225ee80ed3163",
+      "structural_formula": "mixing=np.eye(#)#*(np.ones((#,#))-np.eye(#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fe4f239ddffa3c309c5d0e434973d02ce766fb90c4cd2276e68041fd135a25e0",
       "normalized_formula": "mixing=sqrt(6)*(cross[0]-cross[1])/n24",
       "numeric_literals": [
@@ -1507482,6 +1507599,35 @@
       },
       "structural_family_id": "36efcbe1fc882439d8e8649bc0aa7275aa4473b30463bf7b9ddb76a65b97af06",
       "structural_formula": "path=Path(\"artifacts/verify_e8_chevalley_from_w3#_discrete.json\")"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d6b035565f243b7b1b7da447b3c5fde7067d33fe216df4801411ded136b8f5dc",
+      "normalized_formula": "path=Path(__file__).resolve().parents[1]/\"data\"/\"w33_20261022_beta_ccm_sensitivity.json\"",
+      "numeric_literals": [
+        "0261022",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_beta_ccm_sensitivity.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 71,
+          "path": "analysis/w33_20261022_beta_ccm_sensitivity.py",
+          "raw": "path=Path(__file__).resolve().parents[1]/\"data\"/\"w33_20261022_beta_ccm_sensitivity.json\"",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "889f1eb323b37e9997edd4620711761db56fc7f59a2c320acb55fca422408395",
+      "structural_formula": "path=Path(__file__).resolve().parents[#]/\"data\"/\"w3#_2#_beta_ccm_sensitivity.json\""
     },
     {
       "file_count": 1,
@@ -1624042,6 +1624188,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "36e0d3b204a5563c3e3c5913e4b9a9ad75fb5d7b12712c4c180b03a7da7da414",
+      "normalized_formula": "print(json.dumps({k:(v.get(\"status\")ifisinstance(v,dict)elsev)fork,vinresult.items()},indent=2))",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 217,
+          "path": "analysis/w33_20261022_six_algebra_optics_frontiers.py",
+          "raw": "print(json.dumps({k:(v.get(\"status\") if isinstance(v,dict) else v) for k,v in result.items()},indent=2))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "61d8d0ff1c2893cea35488c1ba90ff811a16d7c8b5ec99533e40fd9e907132fe",
+      "structural_formula": "print(json.dumps({k:(v.get(\"status\")ifisinstance(v,dict)elsev)fork,vinresult.items()},indent=#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1196e85a454fce4cfc8220e11244a5ba71355e010ac96fee6db1d9cde90563b1",
       "normalized_formula": "print(json.dumps({k:({'status':'PASS'}ifisinstance(v,dict)elsev)fork,vinresult.items()},indent=2))",
       "numeric_literals": [
@@ -1673555,6 +1673728,33 @@
       },
       "structural_family_id": "03e26a7062057a7994586ef6a27727582a3c6cdda64d60fa3d19d1ae87ddc809",
       "structural_formula": "residual=float(np.linalg.norm(H@u-ev[order[#]]*u))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "768470cc89e754f13fb2b7ef8de4447b06ad569851e2ee1764d349a1db2594d9",
+      "normalized_formula": "residual=float(np.linalg.norm(np.linalg.matrix_power(mixing@D4@U4,4)+np.prod(d4)*np.eye(4)))",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 160,
+          "path": "analysis/w33_20261022_six_algebra_optics_frontiers.py",
+          "raw": "residual=float(np.linalg.norm(np.linalg.matrix_power(mixing@D4@U4,4)+np.prod(d4)*np.eye(4)))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ebe07cdcd6385d74a7522af428fca7fc2b0ea95f2271005ed3141952f19208b3",
+      "structural_formula": "residual=float(np.linalg.norm(np.linalg.matrix_power(mixing@D4@U4,#)+np.prod(d4)*np.eye(#)))"
     },
     {
       "file_count": 1,
@@ -1731306,6 +1731506,34 @@
       },
       "structural_family_id": "a1ae92907f44bf332c4378983db8b3dafa6bf85fe6469ef816fbee895dfe903e",
       "structural_formula": "small-distancewitnessesforL=#,#toseewhetherlow-weightlogicalssurvive"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a3e829f8d69890a27f541c97d31c2b4f8cd68febff6de5cc179dcdefb697adf1",
+      "normalized_formula": "small=ccm_matrix(N=4,cutoff=13)",
+      "numeric_literals": [
+        "13",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_six_algebra_optics_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 190,
+          "path": "analysis/w33_20261022_six_algebra_optics_frontiers.py",
+          "raw": "small=ccm_matrix(N=4,cutoff=13)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b368b2d173c9a88c03f0c562407d8ac3801491caf4949625ebdd7daa03df5a26",
+      "structural_formula": "small=ccm_matrix(N=#,cutoff=#)"
     },
     {
       "file_count": 1,
@@ -1875260,9 +1875488,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T13:37:45-04:00",
+  "frozen_at": "2026-10-22T14:03:31-04:00",
   "pass": 398,
-  "repository_head": "5348405597dc8f9b1c31f50c8d7bdfd4cae9f043",
+  "repository_head": "08c5dc5957083a6e2e3313c01602c8ce780d0911",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1913840,6 +1914068,14 @@
       "exact_member_count": 1,
       "structural_family_id": "04f2cd2e19adf94dedc9d5d672543a68bfc88719212dfe26cae424d9e83c5399",
       "structural_formula": "\"no_constant_term\":poly_eval(P,#)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "c538ee172cf7ec13531bee565d8bd282560f6c435064095b29381c376443767a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "626e00ddb0dcaa0d352faa04e8aef17323f4c8f8d6f305b16a16984b50c3e4ea",
+      "structural_formula": "\"no_go\":\"ThegraphC5commuteswithLevitransfer;curvegeometricmu5doesnotcommutewithFrobeniusforp=#,#mod2#.ThesetwoC5actionscannotbeidentifiedbyasimultaneouslyequivariantmap.\""
     },
     {
       "exact_formula_ids": [
@@ -2046663,6 +2046899,14 @@
     },
     {
       "exact_formula_ids": [
+        "a1466140345282c9a0be42c73930c971b433a683e923fcf64140e76dcf101514"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fc7971cd4793950df5225fc87fa27e12e101c1121241f35b6b2dbafe53df617b",
+      "structural_formula": "ForthecurveC:y^#=x^##,theobviousgeometricautomorphismsigma(x,y)=(zeta_5*x,y)satisfiesFsigmaF^#=sigma^punderarithmeticFrobenius,whereaspmod5hasorderfourforp=#or7mod2#.It^doesnotcommutewithFrobenius^.ConsequentlythecommutinggraphC5actioncannotbeidentifiedwiththisparticularcurvemu5actionbyasimultaneousequivariantoperatorintertwiner.Othergeometriccorrespondencesandtwistedsemidirect-productdescentC5semidirectC4remainpossible"
+    },
+    {
+      "exact_formula_ids": [
         "fee1419507e464df8bc917cb88a3363b4de00ee280b6efd5340af0f50795e706"
       ],
       "exact_member_count": 1,
@@ -2102949,6 +2103193,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1f96d7e8d4e246ad429864cb7419ff3c8807f6cb381d06a53d27a3e4f203d6d5",
       "structural_formula": "Thewitnessisneverthelessimpossibleasa^globaldualcharacter^.Since`T3=-A3`andthe1#A3checksspanallof`K^perp`,everygeneratorhassign`#`,forcing`chi(h)=(#)^wt(h)`onthewholedualcodeandtherefore`T4=+A4=#`,contradictingthelocalwitness`T4=#"
+    },
+    {
+      "exact_formula_ids": [
+        "64a3a7eabc93d788fd3a0426bef3aede59f4d465177ef97b8b8e2da1d5ffd571"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4fc5fe4a765080614853bf79a31500c504132866a5b65a67319d8a15afaff771",
+      "structural_formula": "Theworkflowgeneratesdata/w3#_2#_six_algebra_optics_frontiers.jsonanddata/w3#_2#_beta_ccm_sensitivity.json,publishesthemasGitHubActionsartifacts,andchecksthestrictclassical_RH_proved=falsefirewall"
     },
     {
       "exact_formula_ids": [
@@ -2262135,6 +2262387,14 @@
     },
     {
       "exact_formula_ids": [
+        "baa2e2f545734f5387cb7434de52d911aad1b1f23669526f0c65bfd993cdf7ac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c532ef352670d0bbec25a3432ca2f796a83d55426a99c82bd8a225ee80ed3163",
+      "structural_formula": "mixing=np.eye(#)#*(np.ones((#,#))-np.eye(#))"
+    },
+    {
+      "exact_formula_ids": [
         "fe4f239ddffa3c309c5d0e434973d02ce766fb90c4cd2276e68041fd135a25e0"
       ],
       "exact_member_count": 1,
@@ -2279257,6 +2279517,14 @@
       "exact_member_count": 1,
       "structural_family_id": "36efcbe1fc882439d8e8649bc0aa7275aa4473b30463bf7b9ddb76a65b97af06",
       "structural_formula": "path=Path(\"artifacts/verify_e8_chevalley_from_w3#_discrete.json\")"
+    },
+    {
+      "exact_formula_ids": [
+        "d6b035565f243b7b1b7da447b3c5fde7067d33fe216df4801411ded136b8f5dc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "889f1eb323b37e9997edd4620711761db56fc7f59a2c320acb55fca422408395",
+      "structural_formula": "path=Path(__file__).resolve().parents[#]/\"data\"/\"w3#_2#_beta_ccm_sensitivity.json\""
     },
     {
       "exact_formula_ids": [
@@ -2311803,6 +2312071,14 @@
     },
     {
       "exact_formula_ids": [
+        "36e0d3b204a5563c3e3c5913e4b9a9ad75fb5d7b12712c4c180b03a7da7da414"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "61d8d0ff1c2893cea35488c1ba90ff811a16d7c8b5ec99533e40fd9e907132fe",
+      "structural_formula": "print(json.dumps({k:(v.get(\"status\")ifisinstance(v,dict)elsev)fork,vinresult.items()},indent=#))"
+    },
+    {
+      "exact_formula_ids": [
         "1196e85a454fce4cfc8220e11244a5ba71355e010ac96fee6db1d9cde90563b1"
       ],
       "exact_member_count": 1,
@@ -2323016,6 +2323292,14 @@
       "exact_member_count": 1,
       "structural_family_id": "03e26a7062057a7994586ef6a27727582a3c6cdda64d60fa3d19d1ae87ddc809",
       "structural_formula": "residual=float(np.linalg.norm(H@u-ev[order[#]]*u))"
+    },
+    {
+      "exact_formula_ids": [
+        "768470cc89e754f13fb2b7ef8de4447b06ad569851e2ee1764d349a1db2594d9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ebe07cdcd6385d74a7522af428fca7fc2b0ea95f2271005ed3141952f19208b3",
+      "structural_formula": "residual=float(np.linalg.norm(np.linalg.matrix_power(mixing@D4@U4,#)+np.prod(d4)*np.eye(#)))"
     },
     {
       "exact_formula_ids": [
@@ -2338567,6 +2338851,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a1ae92907f44bf332c4378983db8b3dafa6bf85fe6469ef816fbee895dfe903e",
       "structural_formula": "small-distancewitnessesforL=#,#toseewhetherlow-weightlogicalssurvive"
+    },
+    {
+      "exact_formula_ids": [
+        "a3e829f8d69890a27f541c97d31c2b4f8cd68febff6de5cc179dcdefb697adf1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b368b2d173c9a88c03f0c562407d8ac3801491caf4949625ebdd7daa03df5a26",
+      "structural_formula": "small=ccm_matrix(N=#,cutoff=#)"
     },
     {
       "exact_formula_ids": [
@@ -2376387,20 +2376679,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90707013,
-    "exact_formula_families": 64111,
-    "files_scanned": 12485,
-    "formula_occurrences": 70213,
+    "bytes_scanned": 90729118,
+    "exact_formula_families": 64119,
+    "files_scanned": 12488,
+    "formula_occurrences": 70221,
     "status_occurrences": {
-      "certified_or_theorem": 5258,
-      "killed_or_retracted": 1857,
+      "certified_or_theorem": 5259,
+      "killed_or_retracted": 1859,
       "open_or_conditional": 2359,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55311
+      "unclassified": 55316
     },
-    "structural_families": 62424
+    "structural_families": 62432
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "655466357a9643927b8d55778e5773882ca783ed1199466efa955c5b98b0551e"
+  "universe_sha256": "eeda67c4b1b499d2dd0ca650d3c5eb7874950964d2becd3941fbd510de550795"
 }
