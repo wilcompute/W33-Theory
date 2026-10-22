@@ -5,8 +5,10 @@ on:
     paths:
       - "analysis/w33_20261022_allq_pascal_CSS_exact_distance.py"
       - "analysis/w33_20261022_hamada_golden_hidden_checks.py"
+      - "analysis/w33_20261022_q4_hyperoval_dual_completion.py"
       - "tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py"
       - "tests/test_w33_20261022_hamada_golden_hidden_checks.py"
+      - "tests/test_w33_20261022_q4_hyperoval_dual_completion.py"
       - ".github/workflows/w33-pascal-CSS-hamada-hidden-checks.yml"
   pull_request:
     paths:
@@ -32,7 +34,7 @@ jobs:
         env:
           PYTHONPATH: "."
           OPENBLAS_NUM_THREADS: "1"
-        run: python -m pytest -q tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py tests/test_w33_20261022_hamada_golden_hidden_checks.py
+        run: python -m pytest -q tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py tests/test_w33_20261022_hamada_golden_hidden_checks.py tests/test_w33_20261022_q4_hyperoval_dual_completion.py
       - name: Generate exact geometric certificates
         env:
           PYTHONPATH: "."
@@ -40,6 +42,7 @@ jobs:
         run: |
           python analysis/w33_20261022_allq_pascal_CSS_exact_distance.py
           python analysis/w33_20261022_hamada_golden_hidden_checks.py
+          python analysis/w33_20261022_q4_hyperoval_dual_completion.py
       - name: Fail closed on dimension and RH claims
         run: |
           python - <<'PY'
@@ -51,6 +54,8 @@ jobs:
           assert h["status"]=="PASS_EXACT_HAMADA_AND_DIRECT_RANKS"
           gaps={(z["p"],z["t"]):z["independent_checks_missing_from_lines"] for z in h["exact_transfer_predictions"]}
           assert gaps[(2,2)]==8 and gaps[(2,3)]==120 and gaps[(3,2)]==130
+          q4=json.load(open("data/w33_20261022_q4_hyperoval_dual_completion.json"))
+          assert q4["line_plus_hyperoval_rank"]==69 and q4["added_hyperoval_words"]==8
           print("Geometric CSS exact distances and Hamada line gaps confirmed; RH remains open.")
           PY
       - uses: actions/upload-artifact@v4
@@ -59,3 +64,4 @@ jobs:
           path: |
             data/w33_20261022_allq_pascal_CSS_exact_distance.json
             data/w33_20261022_hamada_golden_hidden_checks.json
+            data/w33_20261022_q4_hyperoval_dual_completion.json
