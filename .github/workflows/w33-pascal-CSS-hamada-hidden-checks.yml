@@ -1,0 +1,61 @@
+name: W33 Pascal CSS golden Hamada ranks
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - "analysis/w33_20261022_hamada_golden_hidden_checks.py"
+      - "tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - "tests/test_w33_20261022_hamada_golden_hidden_checks.py"
+      - ".github/workflows/w33-pascal-CSS-hamada-hidden-checks.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - "analysis/w33_20261022_hamada_golden_hidden_checks.py"
+      - "tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py"
+      - "tests/test_w33_20261022_hamada_golden_hidden_checks.py"
+      - ".github/workflows/w33-pascal-CSS-hamada-hidden-checks.yml"
+  workflow_dispatch:
+
+jobs:
+  mathematical-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Numerical library and pytest
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Test CSS distance and Hamada rank gap
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: python -m pytest -q tests/test_w33_20261022_allq_pascal_CSS_exact_distance.py tests/test_w33_20261022_hamada_golden_hidden_checks.py
+      - name: Generate exact geometric certificates
+        env:
+          PYTHONPATH: "."
+          OPENBLAS_NUM_THREADS: "1"
+        run: |
+          python analysis/w33_20261022_allq_pascal_CSS_exact_distance.py
+          python analysis/w33_20261022_hamada_golden_hidden_checks.py
+      - name: Fail closed on dimension and RH claims
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("data/w33_20261022_allq_pascal_CSS_exact_distance.json"))
+          h=json.load(open("data/w33_20261022_hamada_golden_hidden_checks.json"))
+          assert not d["classical_RH_proved"] and not h["classical_RH_proved"]
+          assert d["status"]=="PASS_EXACT_GEOMETRIC_CSS"
+          assert h["status"]=="PASS_EXACT_HAMADA_AND_DIRECT_RANKS"
+          gaps={(z["p"],z["t"]):z["independent_checks_missing_from_lines"] for z in h["exact_transfer_predictions"]}
+          assert gaps[(2,2)]==8 and gaps[(2,3)]==120 and gaps[(3,2)]==130
+          print("Geometric CSS exact distances and Hamada line gaps confirmed; RH remains open.")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-allq-CSS-hamada-golden-certificates
+          path: |
+            data/w33_20261022_allq_pascal_CSS_exact_distance.json
+            data/w33_20261022_hamada_golden_hidden_checks.json
