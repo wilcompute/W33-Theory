@@ -595,6 +595,31 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fde70f04268ed68a0baa8871ee327f95e8e5fd56f27f4fb1f00a17ab48a0cb2c",
+      "normalized_formula": "\"\"\"Aconvenientidealbalanced2x2MZIgauge:bar=I,cross=iX.\"\"\"",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_linebus_xor2_photonic_compiler_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 29,
+          "path": "analysis/w33_linebus_xor2_photonic_compiler_20261023.py",
+          "raw": "\"\"\"A convenient ideal balanced 2x2 MZI gauge: bar=I, cross=i X.\"\"\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fde70f04268ed68a0baa8871ee327f95e8e5fd56f27f4fb1f00a17ab48a0cb2c",
+      "structural_formula": "\"\"\"Aconvenientidealbalanced2x2MZIgauge:bar=I,cross=iX.\"\"\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "ed30bf564226c0010ed8aeaeb8230000a895f7ee34b377a7c6e5b5a0fad30a5a",
       "normalized_formula": "\"\"\"Adifferentspectator-masschannel:the27kernelofSym2(Sym33)->Sym63",
       "numeric_literals": [
@@ -425143,7 +425168,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 500,
+          "line": 501,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "2-\\sqrt2<R<2+\\sqrt2",
           "status": "unclassified"
@@ -453873,17 +453898,18 @@
       "structural_formula": "#!#^#=#"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "b1a2711ea12825a9a9e10d4fbc87559229b31eb0fb75f49684c3f6329823f001",
       "normalized_formula": "4!=24",
       "numeric_literals": [
         "24",
         "4"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
-        "W33_FOR_EVERYONE.tex"
+        "W33_FOR_EVERYONE.tex",
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
       ],
       "source_locations": [
         {
@@ -453892,10 +453918,17 @@
           "path": "W33_FOR_EVERYONE.tex",
           "raw": "4! = 24",
           "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
+          "line": 82,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "4!=24",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "unclassified": 2
       },
       "structural_family_id": "8ae73e7db322431893b800110414a074e864e9334721f2e6da22af668692bdaa",
       "structural_formula": "#!=#"
@@ -466890,6 +466923,35 @@
       },
       "structural_family_id": "c6b184aa4430452e065eda095ee19e50e12f033419e4d40e939cf08b7107f519",
       "structural_formula": "#=|PSp(#,#)|/|S4|=#/#=cosetsofS4inPSp(#,#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "12a185a7942a3049f8fe373cb9e246ff0b452d6a58939d565bfd0b298399d3c1",
+      "normalized_formula": "540\\binom42=3240",
+      "numeric_literals": [
+        "2",
+        "3240",
+        "540"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 136,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "540\\binom42=3240",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2fa0775015212db07fbdf865beff6de0e2513d77cdfeca4da5900598cd3f8d10",
+      "structural_formula": "#\\binom4#=#"
     },
     {
       "file_count": 2,
@@ -560828,6 +560890,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "db5a9d2303c70e968e5b24115f4b1aa0e53016571710852919ff45beb617ab5a",
+      "normalized_formula": "All4050twisted10-typemasslessmomentaoftheone-lineclassareWitten-twisted(w=1)andhaveintegralsplit-parity",
+      "numeric_literals": [
+        "0",
+        "050",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12223_12228_TWISTED_TENS_THREE_GENERATIONS_AND_RADIUS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 41,
+          "path": "analysis/PASS12223_12228_TWISTED_TENS_THREE_GENERATIONS_AND_RADIUS.md",
+          "raw": "All 4050 twisted 10-type massless momenta of the one-line class are Witten-twisted (w = 1) and have integral split-parity",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e1d97fd2abf20b55e73ea59bf4dcb43d4d845718731373c3cfe99da45f6457cd",
+      "structural_formula": "All4#twisted1#-typemasslessmomentaoftheone-lineclassareWitten-twisted(w=#)andhaveintegralsplit-parity"
+    },
+    {
+      "file_count": 1,
       "formula_id": "53e6615992e4ba7e54558318c2003b8f27bd76e5ea64d9cf7d331e5edeb4dd40",
       "normalized_formula": "All7group-theoreticconsistencytestspassforthek=9Burnsidecandidate:Burnsidesingle-orbitequation,non-negativity,identity-fixes-all,pair-orbitpositivity,Schurorthogonality,andaverage-orbit-sizeintegrality(432/9=48exactly)",
       "numeric_literals": [
@@ -561007,6 +561098,36 @@
       },
       "structural_family_id": "379ed7fdb925f75855ba0ca89212b42bddb375ad6a7d38e34cee7be0bbba8db2",
       "structural_formula": "All\\(#\\times3\\times4=#\\)mask/residual/signgaugeswereexhausted"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "34523041f7ca4ba1f5c4cfb98529fd8e18181e8ad3aa01117737e12b0cdfae83",
+      "normalized_formula": "All^40buses^simultaneouslyoperatetwodisjointpairexchangesperslot,so40x2=80neighborexchangesperslotandall240edgesinthreeslots.Eachchildbelongstofourincidentparentlinesanduses^fourindependentlyaddressableopticalbusports^perslot.Thisavoidspretendingthefiniteincidencebusesmustbefabricatedas240independentwaveguidelinks.Itstillrequiresa*real4-portprogrammablecrossbar*;apassive4-waysplitterisnotenough.Agenericprogrammable4x4meshcouldusesixtwo-modeMZIs/bus,240per40-busparent,butthespecialthreeXORstatesmaypermitasimplerdesign.Thatcountis^architecture-only^,notPDKextraction",
+      "numeric_literals": [
+        "0",
+        "240",
+        "40",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_fractal_holonet_build_decision.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/2026-10-23_fractal_holonet_build_decision.md",
+          "raw": "All **40 buses** simultaneously operate two disjoint pair exchanges per slot, so 40 x 2 = 80 neighbor exchanges per slot and all 240 edges in three slots. Each child belongs to four incident parent lines and uses **four independently addressable optical bus ports** per slot. This avoids pretending the finite incidence buses must be fabricated as 240 independent waveguide links. It still requires a *real 4-port programmable crossbar*; a passive 4-way splitter is not enough. A generic programmable 4x4 mesh could use six two-mode MZIs/bus, 240 per 40-bus parent, but the special three XOR states may permit a simpler design. That count is **architecture-only**, not PDK extraction.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "eeb054cd14df90655b9d07e2bdc9c0a8feb565ff9752855b2c9ca3bdff813251",
+      "structural_formula": "All^#buses^simultaneouslyoperatetwodisjointpairexchangesperslot,so4#x2=#neighborexchangesperslotandall2#edgesinthreeslots.Eachchildbelongstofourincidentparentlinesanduses^fourindependentlyaddressableopticalbusports^perslot.Thisavoidspretendingthefiniteincidencebusesmustbefabricatedas2#independentwaveguidelinks.Itstillrequiresa*real4-portprogrammablecrossbar*;apassive4-waysplitterisnotenough.Agenericprogrammable4x4meshcouldusesixtwo-modeMZIs/bus,#per4#-busparent,butthespecialthreeXORstatesmaypermitasimplerdesign.Thatcountis^architecture-only^,notPDKextraction"
     },
     {
       "file_count": 1,
@@ -693383,6 +693504,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "27f8a61db34d09084617003ad34041a634fe83c52ecf51bfe1f86bf0d996caf4",
+      "normalized_formula": "M(\\theta)=\\begin{pmatrix}\\cos(\\theta/2)i\\sin(\\theta/2)\\\\i\\sin(\\theta/2)\\cos(\\theta/2)\\end{pmatrix},\\qquadM(0)=I_2,\\quadM(\\pi)=iX",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 43,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "M(\\theta)= \\begin{pmatrix} \\cos(\\theta/2)&i\\sin(\\theta/2)\\\\ i\\sin(\\theta/2)&\\cos(\\theta/2) \\end{pmatrix},\\qquad M(0)=I_2,\\quad M(\\pi)=iX.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "aac9b38a9f9839e5d1c556f3be6be552120055ac9bc2c86b9d669d66b82739f8",
+      "structural_formula": "M(\\theta)=\\begin{pmatrix}\\cos(\\theta/#)i\\sin(\\theta/#)\\\\i\\sin(\\theta/#)\\cos(\\theta/#)\\end{pmatrix},\\qquadM(#)=I_2,\\quadM(\\pi)=iX"
+    },
+    {
+      "file_count": 1,
       "formula_id": "482e030fcf65d03a824a4351c06173e210559f865e9bc249debf43ac2e509fc9",
       "normalized_formula": "M(rho)=logsum_u|W_rho(u)|ofthediscreteWignerfunctiononF_3^(2n)(phase-pointoperatorsA_u=D_uA_0D_u^dag",
       "numeric_literals": [
@@ -777155,7 +777304,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 500,
+          "line": 501,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "R<2\\sqrt2",
           "status": "unclassified"
@@ -842854,6 +843003,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d6eafe968ab829dee1a73b3c7f80d33c7031b5e171c56d4192c88b500a48a745",
+      "normalized_formula": "Thereason,planebyplane:anasymmetrictwisthasnoinvariantHom(V_L,V_R);asymmetriconehasdet(1\u2212g)=9,which",
+      "numeric_literals": [
+        "1",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12223_12228_TWISTED_TENS_THREE_GENERATIONS_AND_RADIUS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/PASS12223_12228_TWISTED_TENS_THREE_GENERATIONS_AND_RADIUS.md",
+          "raw": "The reason, plane by plane: an asymmetric twist has no invariant Hom(V_L, V_R); a symmetric one has det(1 \u2212 g) = 9, which",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f7fe5d9ab10c63d0fd0d0436026873418a67b45499ce57a9218f9a1d7664b6cf",
+      "structural_formula": "Thereason,planebyplane:anasymmetrictwisthasnoinvariantHom(V_L,V_R);asymmetriconehasdet(#\u2212g)=#,which"
+    },
+    {
+      "file_count": 1,
       "formula_id": "039750dc50edb76e43d1bac5a7aa5c7cc01f2e08867925e71991aa2c814fb820",
       "normalized_formula": "TherecentViazovska/CKMRVproofsusemodularforms(weight12=",
       "numeric_literals": [
@@ -866511,7 +866688,7 @@
         },
         {
           "category": "inline_math",
-          "line": 499,
+          "line": 500,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "V=0",
           "status": "unclassified"
@@ -923029,6 +923206,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f3262d60336469b89abf6437aa87d8523727936cafc3840c92a90daf586f0af6",
+      "normalized_formula": "\\begin{tikzpicture}[>=Latex,nodedistance=10mm",
+      "numeric_literals": [
+        "10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 71,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "\\begin{tikzpicture}[>=Latex,node distance=10mm,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "980fd7b890532685face3bcf32a97307b12772b485f1b1a7e1a395b021b9f4cd",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,nodedistance=#mm"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1d2972458b04cd01b0121d6dbb1ed802e71927ae8a90ad97501f290b1d93b640",
       "normalized_formula": "\\begin{tikzpicture}[>=Latex,nodedistance=11mm,blk/.style={draw,roundedcorners,minimumheight=10mm,textwidth=29mm,align=center}]",
       "numeric_literals": [
@@ -963484,6 +963688,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "da1491db678eaba6093202ea98c4efd4aefd2c55bab81ab8d737804e9c59c28b",
+      "normalized_formula": "\\ell=2\\ell_M+\\ell_X",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 107,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "\\ell=2\\ell_M+\\ell_X",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d1f1072b2969367f6ef4156e847a0084d1c6a3a21ba1e540c2769e592be7beb6",
+      "structural_formula": "\\ell=#\\ell_M+\\ell_X"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bd92c75bd318fc258a8be372786d648d91d05b87031279a6efe388bd657c74b2",
       "normalized_formula": "\\ell=30",
       "numeric_literals": [
@@ -963590,6 +963821,60 @@
       },
       "structural_family_id": "813887de63d86bd810863bb1f503498118ca9741f9bd96b3a399f820cfeb2652",
       "structural_formula": "\\ell_1=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "93d1f2625e68a684fed7dce1e743f7a53299fa839da7a36817ef8f28b90efba8",
+      "normalized_formula": "\\ell_M=0.2",
+      "numeric_literals": [
+        "0.2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 108,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "\\ell_M=0.2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "84ecc21dfa78448a5a70fa21197bdb6211eaabcd37df4a66381712000d74ee3e",
+      "structural_formula": "\\ell_M=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f1f5a85d59690a76666de06b840e90c672a906a1c82bcdb5dfd0444caa1d557c",
+      "normalized_formula": "\\ell_X=0.1",
+      "numeric_literals": [
+        "0.1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 108,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "\\ell_X=0.1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b02f33979fa88bd4f32e030a9c8217e559ce5c6b9d1eb31cd01cee3c44a25e44",
+      "structural_formula": "\\ell_X=#"
     },
     {
       "file_count": 1,
@@ -998295,7 +998580,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 663,
+          "line": 664,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1086676,6 +1086961,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1f4538d4e156d8145318d256e3e84a315d099c2c949eb061cbfa43c195842703",
+      "normalized_formula": "amp=10^(-(2*mzi_loss_db+crossing_loss_db)/20.0)",
+      "numeric_literals": [
+        "10",
+        "2",
+        "20.0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_linebus_xor2_photonic_compiler_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 64,
+          "path": "analysis/w33_linebus_xor2_photonic_compiler_20261023.py",
+          "raw": "amp=10**(-(2*mzi_loss_db+crossing_loss_db)/20.0)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1171137b2ae7626906f04f6bfcf2fbd4ca41fe2dfa7a6dc9847405f0f58904dc",
+      "structural_formula": "amp=#^(-(#*mzi_loss_db+crossing_loss_db)/#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "60090e3f7445100737aceb5d413953403c086d56fceaa0028dde8c6d7c4d1a21",
       "normalized_formula": "amplitude_formula=_load_json(\"w33_ckm_amplitude_rank_gap_formula_bridge_summary.json\")",
       "numeric_literals": [
@@ -1087026,6 +1087340,42 @@
       },
       "structural_family_id": "f5b7f261088d63732de211a81e065a1ea25a06fef71f8b0b79d880b325aa825a",
       "structural_formula": "analysis/w3#_2#_round4_fermions_global.py->data/w3#_2#_round4_fermions_global.json"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bfdf4f026e3522fc9cc0303ddbf310eaa35387b52b6d032fecbb6cd4ef4294c6",
+      "normalized_formula": "analysis/w33_fractal_optical_switch_budget_20261023.py`separatelymodelsthe^pairwise-linksparse1-of-3design^,usingtwoidealMZItransformationsasathree-modetree.Itverifieslosslessidealportselection,attenuation,wrong-portleakage,androute-levellossaccumulation.With^illustrativeassumptionsonly^(0.2dB/MZI,0.1dBlink,0.05dBlocalgraphhop,0.05radphaseerror),20sampleddepth-threeroutesshowselected-pathlossesfrom~1.11to~5.87dB,mean~4.15dB.Thesenumbersare^notmeasurements^andmust^not^beassignedtothe40-busXORcrossbarunlessseparatelyderived",
+      "numeric_literals": [
+        "0",
+        "0.05",
+        "0.1",
+        "0.2",
+        "0261023",
+        "1.11",
+        "20",
+        "3",
+        "4.15",
+        "5.87"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_fractal_holonet_build_decision.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 38,
+          "path": "analysis/2026-10-23_fractal_holonet_build_decision.md",
+          "raw": "`analysis/w33_fractal_optical_switch_budget_20261023.py` separately models the **pairwise-link sparse 1-of-3 design**, using two ideal MZI transformations as a three-mode tree. It verifies lossless ideal port selection, attenuation, wrong-port leakage, and route-level loss accumulation. With **illustrative assumptions only** (0.2 dB/MZI, 0.1 dB link, 0.05 dB local graph hop, 0.05 rad phase error), 20 sampled depth-three routes show selected-path losses from ~1.11 to ~5.87 dB, mean ~4.15 dB. These numbers are **not measurements** and must **not** be assigned to the 40-bus XOR crossbar unless separately derived.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e9446f65914c8529ad24f88adeb13f70c24dd61a2b6e37f20c237b2b0387091b",
+      "structural_formula": "analysis/w3#_fractal_optical_switch_budget_2#.py`separatelymodelsthe^pairwise-linksparse1-of-#design^,usingtwoidealMZItransformationsasathree-modetree.Itverifieslosslessidealportselection,attenuation,wrong-portleakage,androute-levellossaccumulation.With^illustrativeassumptionsonly^(#dB/MZI,#dBlink,#dBlocalgraphhop,#radphaseerror),#sampleddepth-threeroutesshowselected-pathlossesfrom~#to~#dB,mean~#dB.Thesenumbersare^notmeasurements^andmust^not^beassignedtothe4#-busXORcrossbarunlessseparatelyderived"
     },
     {
       "file_count": 1,
@@ -1157727,6 +1158077,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3d35646821434010b547a4068f1f41ce7f383eb416955333bff75ff590d5917e",
+      "normalized_formula": "c,s=math.cos(theta/2),math.sin(theta/2)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_linebus_xor2_photonic_compiler_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/w33_linebus_xor2_photonic_compiler_20261023.py",
+          "raw": "c,s=math.cos(theta/2),math.sin(theta/2)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "959faa24e5676d1d059bb7e9b39846b2f1daf10b537d0e114ea0c314ef0fdeb0",
+      "structural_formula": "c,s=math.cos(theta/#),math.sin(theta/#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d2792c1886ab82a8b5466d27128e63b086c6ccb4586712fffb3c3564c881d060",
       "normalized_formula": "c,s=np.cosh(2*r),np.sinh(2*r)",
       "numeric_literals": [
@@ -1183403,6 +1183780,36 @@
       },
       "structural_family_id": "4ca1b9be5575e3c29447529c5dff6e1188731b8c7f44e36c76095317c2dba9ff",
       "structural_formula": "checks[\"#:SM_2#hastwoA2(colour,family)onlywithbothorder-#Wilsonlines;everytrivial-directionchoiceleavesone\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ea323d941c9d8875b1b99e8b40d6d005257bf5b15005040d4f55d19b68544281",
+      "normalized_formula": "checks[\"12224:twolines:density63/3000(95",
+      "numeric_literals": [
+        "12224",
+        "3",
+        "3000",
+        "95"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py",
+          "raw": "checks[\"12224: two lines: density 63/3000 (95% CI 1.6-2.7%), 12x the one-line density; 9 consistent models, all 10s fermions, 0 scalars\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f06bdbd4167a7c35c3a7066b5c7977b60b510a12d57d950589ce83c315f5e64c",
+      "structural_formula": "checks[\"#:twolines:density6#/#(#"
     },
     {
       "file_count": 1,
@@ -1219275,6 +1219682,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bf5a7666e1850aa14dd704367ff9523ddd744fd54ff51f5deb8971c2f8d47759",
+      "normalized_formula": "cosets(w=1)andALLhaveintegralsplit-paritycharacterP.V0;theWittenprojectionthereforeseesasingleleft-movingphaseand",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py",
+          "raw": "cosets (w = 1) and ALL have integral split-parity character P.V0; the Witten projection therefore sees a single left-moving phase and",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "def13d5573dbd3a0a5219618da3ebee5b96de08de5be672715c2e3cf4d4ede8c",
+      "structural_formula": "cosets(w=#)andALLhaveintegralsplit-paritycharacterP.V0;theWittenprojectionthereforeseesasingleleft-movingphaseand"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1385c749c0bf51b93d550769abd338732ae87cfb3c5eae6a5d9a67869ba4dfad",
       "normalized_formula": "cosets(w=1modsqrt(-3))andthesplittingisoddunderf1->-f1,sothefirstallowedtermis(x1barx2)^3",
       "numeric_literals": [
@@ -1224399,6 +1224833,33 @@
       },
       "structural_family_id": "3160699c718dc7a93f0d09100b06598efdbfaa3dd90d52bed68ea8a4e9fc2c5f",
       "structural_formula": "crossing_channels=Q##OPEchannels(s,t,u)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "68f93c1ecff38ba96c5e51e340acf2b6198fb57efc1b70fc4f28b27af9fd3857",
+      "normalized_formula": "crossing_loss_db=0.0)",
+      "numeric_literals": [
+        "0.0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_linebus_xor2_photonic_compiler_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 39,
+          "path": "analysis/w33_linebus_xor2_photonic_compiler_20261023.py",
+          "raw": "crossing_loss_db=0.0):",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f0d53c6a151bd2fc6a7d14fee22f15f3e3f878503d80fd568aa50fe48344931f",
+      "structural_formula": "crossing_loss_db=#)"
     },
     {
       "file_count": 1,
@@ -1237375,6 +1237836,35 @@
       },
       "structural_family_id": "4c2df8429a533b2d0c234a95459301066025795b6b904c1ac137c3506bdef662",
       "structural_formula": "defcommutant_dim(gens,n=#,tol=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "07d04095c0678fa2074932627026b3aa1d6cd62e7f617392d4b56a9c2b864d75",
+      "normalized_formula": "defcompile_manifest(mzi_loss_db=.2,crossing_loss_db=.1,phase_error_rad=.05)",
+      "numeric_literals": [
+        ".05",
+        ".1",
+        ".2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_linebus_xor2_photonic_compiler_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 121,
+          "path": "analysis/w33_linebus_xor2_photonic_compiler_20261023.py",
+          "raw": "def compile_manifest(mzi_loss_db=.2,crossing_loss_db=.1,phase_error_rad=.05):",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2e8eb42ae39077c44108f1c33ff2cdc063e8219aec178da920075ad1a7435574",
+      "structural_formula": "defcompile_manifest(mzi_loss_db=#,crossing_loss_db=#,phase_error_rad=#)"
     },
     {
       "file_count": 1,
@@ -1357675,6 +1358165,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ed2a5f864c9beeb8ae179bcd47d3427afd59a72429ebcf654b667dffe1e6cc30",
+      "normalized_formula": "ifmzi_loss_db<0orcrossing_loss_db<0:raiseValueError(\"lossesmustbenonnegative\")",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_linebus_xor2_photonic_compiler_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_linebus_xor2_photonic_compiler_20261023.py",
+          "raw": "if mzi_loss_db<0 or crossing_loss_db<0:raise ValueError(\"losses must be nonnegative\")",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "420707bdada09cc8e42dd3685fd96f8555f9686730f778fe0dba7df77452552d",
+      "structural_formula": "ifmzi_loss_db<#orcrossing_loss_db<#:raiseValueError(\"lossesmustbenonnegative\")"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2c1e0ad357d18573393b04c4eb852de64fbe4a643d0c7cf7054fe8197e187cbf",
       "normalized_formula": "ifn<=15orf_standardin[89,144,233]",
       "numeric_literals": [
@@ -1415240,7 +1415757,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 662,
+          "line": 663,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1420374,7 +1420891,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 662,
+          "line": 663,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1505127,6 +1505644,33 @@
       },
       "structural_family_id": "253cdc7d17b14ad9ad9340d951d2bf16f16b3d73ea83562d7160aca3f091ddc1",
       "structural_formula": "p.add_argument(\"--sigma-cos\",type=float,default=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "811d70baa875fdebf662155a2bc7266ce7222a2454a63fb047f633e16af40be1",
+      "normalized_formula": "p.add_argument('--crossing-loss-db',type=float,default=.1)",
+      "numeric_literals": [
+        ".1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_linebus_xor2_photonic_compiler_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 190,
+          "path": "analysis/w33_linebus_xor2_photonic_compiler_20261023.py",
+          "raw": "p.add_argument('--crossing-loss-db',type=float,default=.1)",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "c75fe6bff4727f3c2381076c8ec49220e3f486315275b8986d61d54d7ff21a94",
+      "structural_formula": "p.add_argument('--crossing-loss-db',type=float,default=#)"
     },
     {
       "file_count": 1,
@@ -1679283,6 +1679827,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "009b67372bc7b8aff324c0731974e8dc4a4ff853575aeaffcd1d61c2af2e7d3a",
+      "normalized_formula": "res[\"12224\"]=dict(sampling=t2,built=len(b2),loaded=sum(1forxinb2ifx[\"gauge\"]!=\"LOADFAIL\"),tens=dict(c))",
+      "numeric_literals": [
+        "1",
+        "12224"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py",
+          "raw": "res[\"12224\"] = dict(sampling=t2, built=len(b2), loaded=sum(1 for x in b2 if x[\"gauge\"] != \"LOADFAIL\"), tens=dict(c))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ca2f9dea3ed592e3298ba71636d57ab144cbf1a6b5a97bfa84c47369ddc1c3db",
+      "structural_formula": "res[\"#\"]=dict(sampling=t2,built=len(b2),loaded=sum(#forxinb2ifx[\"gauge\"]!=\"LOADFAIL\"),tens=dict(c))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7fca7a0df44053885faa83541510ce66482f1c43d4f5379f0fcd8a9d1f99f5ff",
       "normalized_formula": "res[\"E_n_if_F_m_flat\"]={str(n):str(En[n])forninrange(2,13)}",
       "numeric_literals": [
@@ -1704308,6 +1704880,33 @@
       },
       "structural_family_id": "5591dd9f48a032695be708c1104cefbaad5bcc7251dea09b5265bf3bfe30c0c9",
       "structural_formula": "r\u2248#/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "376b800e78ab1a3d1299340bc67118f27cc1b69a86d3daa59aca503798b8f46a",
+      "normalized_formula": "s(a)s(b)=(-1)^{w(a\\wedgeb)}s(a\\oplusb)",
+      "numeric_literals": [
+        "-1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 118,
+          "path": "papers/fractal_holonet_xor2_photonic_phase_frame_20261023.tex",
+          "raw": "s(a)s(b)=(-1)^{w(a\\wedge b)}s(a\\oplus b).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "385a27b18f8e570000f59ecb45665c8e4a82ea24e65d202bef0c9e6b7872f352",
+      "structural_formula": "s(a)s(b)=(#)^{w(a\\wedgeb)}s(a\\oplusb)"
     },
     {
       "file_count": 1,
@@ -1798847,6 +1799446,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "174bfa33a249d4186cf1cd18db1bc8d2bbb6cb56f25018ba46290a08156b4c6a",
+      "normalized_formula": "twisthasnoinvariantHom(V_L,V_R)(allmodulifrozen),asymmetriconehasdet(1-g)=9,odd(notranslation)",
+      "numeric_literals": [
+        "1",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/w33_pass12223_to_12228_twisted_tens_three_generations_and_radius.py",
+          "raw": "twist has no invariant Hom(V_L, V_R) (all moduli frozen), a symmetric one has det(1 - g) = 9, odd (no translation).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "39a2c671e4be84962a8376d389d36afd91559539cf177720ff9d27d19fd8ec35",
+      "structural_formula": "twisthasnoinvariantHom(V_L,V_R)(allmodulifrozen),asymmetriconehasdet(#-g)=#,odd(notranslation)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "675c3919a931db55836736c1dc76b938379be06dfa59d2450fba9a21d6241500",
       "normalized_formula": "two-generatorintertwinertotheincidenceH10.Multiplicationby<code>\u03c9</code>istheSinger",
       "numeric_literals": [
@@ -1835146,7 +1835773,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 662,
+          "line": 663,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1884487,9 +1885114,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T12:16:32-04:00",
+  "frozen_at": "2026-10-23T12:29:42-04:00",
   "pass": 398,
-  "repository_head": "2c61458c6a19201f27d29e21d413c8f6e565844c",
+  "repository_head": "cb5ef025004ef137971d3b030916345bdae82e34",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1884693,6 +1885320,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3336a6f83a364df6dd60230e2483b58b8710b3333d1d5709d91ec2bc76c1ddfa",
       "structural_formula": "\"\"\"A(p,q;c)=(sqrt(q^##cp)-q)/#isincreasinginpandc,decreasinginq\"\"\""
+    },
+    {
+      "exact_formula_ids": [
+        "fde70f04268ed68a0baa8871ee327f95e8e5fd56f27f4fb1f00a17ab48a0cb2c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fde70f04268ed68a0baa8871ee327f95e8e5fd56f27f4fb1f00a17ab48a0cb2c",
+      "structural_formula": "\"\"\"Aconvenientidealbalanced2x2MZIgauge:bar=I,cross=iX.\"\"\""
     },
     {
       "exact_formula_ids": [
@@ -1974599,6 +1975234,14 @@
     },
     {
       "exact_formula_ids": [
+        "12a185a7942a3049f8fe373cb9e246ff0b452d6a58939d565bfd0b298399d3c1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2fa0775015212db07fbdf865beff6de0e2513d77cdfeca4da5900598cd3f8d10",
+      "structural_formula": "#\\binom4#=#"
+    },
+    {
+      "exact_formula_ids": [
         "ad7335e033945e9fb71491d7b8fe370d33250814ec937c025089ba5c0e5065b9"
       ],
       "exact_member_count": 1,
@@ -2035379,6 +2036022,14 @@
     },
     {
       "exact_formula_ids": [
+        "db5a9d2303c70e968e5b24115f4b1aa0e53016571710852919ff45beb617ab5a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e1d97fd2abf20b55e73ea59bf4dcb43d4d845718731373c3cfe99da45f6457cd",
+      "structural_formula": "All4#twisted1#-typemasslessmomentaoftheone-lineclassareWitten-twisted(w=#)andhaveintegralsplit-parity"
+    },
+    {
+      "exact_formula_ids": [
         "53e6615992e4ba7e54558318c2003b8f27bd76e5ea64d9cf7d331e5edeb4dd40"
       ],
       "exact_member_count": 1,
@@ -2035424,6 +2036075,14 @@
       "exact_member_count": 1,
       "structural_family_id": "acb30d21296c28e2a4e06bb83f6425f0ab6a7bdf8e993d8ed18d5e700438059e",
       "structural_formula": "All\\(#^{#}=#\\)partialapplicationsofthisdifferencewereenumeratedusingcentralFourierblocks.Exactlytwopointshavethetargetspectrum"
+    },
+    {
+      "exact_formula_ids": [
+        "34523041f7ca4ba1f5c4cfb98529fd8e18181e8ad3aa01117737e12b0cdfae83"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "eeb054cd14df90655b9d07e2bdc9c0a8feb565ff9752855b2c9ca3bdff813251",
+      "structural_formula": "All^#buses^simultaneouslyoperatetwodisjointpairexchangesperslot,so4#x2=#neighborexchangesperslotandall2#edgesinthreeslots.Eachchildbelongstofourincidentparentlinesanduses^fourindependentlyaddressableopticalbusports^perslot.Thisavoidspretendingthefiniteincidencebusesmustbefabricatedas2#independentwaveguidelinks.Itstillrequiresa*real4-portprogrammablecrossbar*;apassive4-waysplitterisnotenough.Agenericprogrammable4x4meshcouldusesixtwo-modeMZIs/bus,#per4#-busparent,butthespecialthreeXORstatesmaypermitasimplerdesign.Thatcountis^architecture-only^,notPDKextraction"
     },
     {
       "exact_formula_ids": [
@@ -2071329,6 +2071988,14 @@
       "exact_member_count": 1,
       "structural_family_id": "457fc4ac89188439497c4669fc8dea4a3b2f5d618facf1c86eeb90dde407d9a6",
       "structural_formula": "M(H_{#})=\\operatorname{im}(MM^{\\mathsfT}),\\qquad\\dimM(H_{#})=#"
+    },
+    {
+      "exact_formula_ids": [
+        "27f8a61db34d09084617003ad34041a634fe83c52ecf51bfe1f86bf0d996caf4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aac9b38a9f9839e5d1c556f3be6be552120055ac9bc2c86b9d669d66b82739f8",
+      "structural_formula": "M(\\theta)=\\begin{pmatrix}\\cos(\\theta/#)i\\sin(\\theta/#)\\\\i\\sin(\\theta/#)\\cos(\\theta/#)\\end{pmatrix},\\qquadM(#)=I_2,\\quadM(\\pi)=iX"
     },
     {
       "exact_formula_ids": [
@@ -2111661,6 +2112328,14 @@
     },
     {
       "exact_formula_ids": [
+        "d6eafe968ab829dee1a73b3c7f80d33c7031b5e171c56d4192c88b500a48a745"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f7fe5d9ab10c63d0fd0d0436026873418a67b45499ce57a9218f9a1d7664b6cf",
+      "structural_formula": "Thereason,planebyplane:anasymmetrictwisthasnoinvariantHom(V_L,V_R);asymmetriconehasdet(#\u2212g)=#,which"
+    },
+    {
+      "exact_formula_ids": [
         "039750dc50edb76e43d1bac5a7aa5c7cc01f2e08867925e71991aa2c814fb820"
       ],
       "exact_member_count": 1,
@@ -2132499,6 +2133174,14 @@
     },
     {
       "exact_formula_ids": [
+        "f3262d60336469b89abf6437aa87d8523727936cafc3840c92a90daf586f0af6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "980fd7b890532685face3bcf32a97307b12772b485f1b1a7e1a395b021b9f4cd",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,nodedistance=#mm"
+    },
+    {
+      "exact_formula_ids": [
         "1d2972458b04cd01b0121d6dbb1ed802e71927ae8a90ad97501f290b1d93b640"
       ],
       "exact_member_count": 1,
@@ -2142929,6 +2143612,14 @@
     },
     {
       "exact_formula_ids": [
+        "da1491db678eaba6093202ea98c4efd4aefd2c55bab81ab8d737804e9c59c28b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d1f1072b2969367f6ef4156e847a0084d1c6a3a21ba1e540c2769e592be7beb6",
+      "structural_formula": "\\ell=#\\ell_M+\\ell_X"
+    },
+    {
+      "exact_formula_ids": [
         "461abd462495692321d3ff7ac725860710f15f9d58ea12e575f7c5e904d00fc0"
       ],
       "exact_member_count": 1,
@@ -2142950,6 +2143641,22 @@
       "exact_member_count": 1,
       "structural_family_id": "813887de63d86bd810863bb1f503498118ca9741f9bd96b3a399f820cfeb2652",
       "structural_formula": "\\ell_1=#"
+    },
+    {
+      "exact_formula_ids": [
+        "93d1f2625e68a684fed7dce1e743f7a53299fa839da7a36817ef8f28b90efba8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "84ecc21dfa78448a5a70fa21197bdb6211eaabcd37df4a66381712000d74ee3e",
+      "structural_formula": "\\ell_M=#"
+    },
+    {
+      "exact_formula_ids": [
+        "f1f5a85d59690a76666de06b840e90c672a906a1c82bcdb5dfd0444caa1d557c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b02f33979fa88bd4f32e030a9c8217e559ce5c6b9d1eb31cd01cee3c44a25e44",
+      "structural_formula": "\\ell_X=#"
     },
     {
       "exact_formula_ids": [
@@ -2174314,6 +2175021,14 @@
     },
     {
       "exact_formula_ids": [
+        "1f4538d4e156d8145318d256e3e84a315d099c2c949eb061cbfa43c195842703"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1171137b2ae7626906f04f6bfcf2fbd4ca41fe2dfa7a6dc9847405f0f58904dc",
+      "structural_formula": "amp=#^(-(#*mzi_loss_db+crossing_loss_db)/#)"
+    },
+    {
+      "exact_formula_ids": [
         "60090e3f7445100737aceb5d413953403c086d56fceaa0028dde8c6d7c4d1a21"
       ],
       "exact_member_count": 1,
@@ -2174407,6 +2175122,14 @@
       "exact_member_count": 1,
       "structural_family_id": "16b6a87be8d2db691ad7024b8d604a8b823dfa2ed25eedf4eb27323441b49030",
       "structural_formula": "analysis/w3#_2#_toe6#_thermal_continuous_falsifier.py`computesthecompletenative8#x8#Hermitianfree-fermionhoppingspectrumatfiveregimes(beta=#,#,#,#andzero-temperature)with2#seededSobolholonomypoints,eightlocalBFGSstartsperregime,andexplicitconjugationcross-checks.Amongthesefinitetests,nolowerfree-energystatethanthree-piwasfound.Inparticularatbeta=#,`F(pi)-F(#)~#`;atbeta=#,`~#`;atzero-temperature,`~#"
+    },
+    {
+      "exact_formula_ids": [
+        "bfdf4f026e3522fc9cc0303ddbf310eaa35387b52b6d032fecbb6cd4ef4294c6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e9446f65914c8529ad24f88adeb13f70c24dd61a2b6e37f20c237b2b0387091b",
+      "structural_formula": "analysis/w3#_fractal_optical_switch_budget_2#.py`separatelymodelsthe^pairwise-linksparse1-of-#design^,usingtwoidealMZItransformationsasathree-modetree.Itverifieslosslessidealportselection,attenuation,wrong-portleakage,androute-levellossaccumulation.With^illustrativeassumptionsonly^(#dB/MZI,#dBlink,#dBlocalgraphhop,#radphaseerror),#sampleddepth-threeroutesshowselected-pathlossesfrom~#to~#dB,mean~#dB.Thesenumbersare^notmeasurements^andmust^not^beassignedtothe4#-busXORcrossbarunlessseparatelyderived"
     },
     {
       "exact_formula_ids": [
@@ -2193739,6 +2194462,14 @@
     },
     {
       "exact_formula_ids": [
+        "3d35646821434010b547a4068f1f41ce7f383eb416955333bff75ff590d5917e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "959faa24e5676d1d059bb7e9b39846b2f1daf10b537d0e114ea0c314ef0fdeb0",
+      "structural_formula": "c,s=math.cos(theta/#),math.sin(theta/#)"
+    },
+    {
+      "exact_formula_ids": [
         "d2792c1886ab82a8b5466d27128e63b086c6ccb4586712fffb3c3564c881d060"
       ],
       "exact_member_count": 1,
@@ -2200603,6 +2201334,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f15782249789037d19a861e4d874c90e78dbc1c7ba399b7eb90f0c2cd77a541c",
       "structural_formula": "checks[\"#:threeSMgradings:#of1#(shift,cleansigma)pairsmakeallthreefamiliesfermionic,nonebosonic\"]=bool(ok9#)"
+    },
+    {
+      "exact_formula_ids": [
+        "ea323d941c9d8875b1b99e8b40d6d005257bf5b15005040d4f55d19b68544281"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f06bdbd4167a7c35c3a7066b5c7977b60b510a12d57d950589ce83c315f5e64c",
+      "structural_formula": "checks[\"#:twolines:density6#/#(#"
     },
     {
       "exact_formula_ids": [
@@ -2210841,6 +2211580,14 @@
     },
     {
       "exact_formula_ids": [
+        "bf5a7666e1850aa14dd704367ff9523ddd744fd54ff51f5deb8971c2f8d47759"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "def13d5573dbd3a0a5219618da3ebee5b96de08de5be672715c2e3cf4d4ede8c",
+      "structural_formula": "cosets(w=#)andALLhaveintegralsplit-paritycharacterP.V0;theWittenprojectionthereforeseesasingleleft-movingphaseand"
+    },
+    {
+      "exact_formula_ids": [
         "1385c749c0bf51b93d550769abd338732ae87cfb3c5eae6a5d9a67869ba4dfad"
       ],
       "exact_member_count": 1,
@@ -2212233,6 +2212980,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3160699c718dc7a93f0d09100b06598efdbfaa3dd90d52bed68ea8a4e9fc2c5f",
       "structural_formula": "crossing_channels=Q##OPEchannels(s,t,u)"
+    },
+    {
+      "exact_formula_ids": [
+        "68f93c1ecff38ba96c5e51e340acf2b6198fb57efc1b70fc4f28b27af9fd3857"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f0d53c6a151bd2fc6a7d14fee22f15f3e3f878503d80fd568aa50fe48344931f",
+      "structural_formula": "crossing_loss_db=#)"
     },
     {
       "exact_formula_ids": [
@@ -2215635,6 +2216390,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4c2df8429a533b2d0c234a95459301066025795b6b904c1ac137c3506bdef662",
       "structural_formula": "defcommutant_dim(gens,n=#,tol=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "07d04095c0678fa2074932627026b3aa1d6cd62e7f617392d4b56a9c2b864d75"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2e8eb42ae39077c44108f1c33ff2cdc063e8219aec178da920075ad1a7435574",
+      "structural_formula": "defcompile_manifest(mzi_loss_db=#,crossing_loss_db=#,phase_error_rad=#)"
     },
     {
       "exact_formula_ids": [
@@ -2248612,6 +2249375,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a6bc4d8e7542015dbc0909c9f56d7918f5cf9b933ad824f5cc144e424ee4832c",
       "structural_formula": "ifmults=[#,#,#,#,#,#,#]:eigen=ev;zvec=z;Lz=M;break"
+    },
+    {
+      "exact_formula_ids": [
+        "ed2a5f864c9beeb8ae179bcd47d3427afd59a72429ebcf654b667dffe1e6cc30"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "420707bdada09cc8e42dd3685fd96f8555f9686730f778fe0dba7df77452552d",
+      "structural_formula": "ifmzi_loss_db<#orcrossing_loss_db<#:raiseValueError(\"lossesmustbenonnegative\")"
     },
     {
       "exact_formula_ids": [
@@ -2287988,6 +2288759,14 @@
       "exact_member_count": 1,
       "structural_family_id": "253cdc7d17b14ad9ad9340d951d2bf16f16b3d73ea83562d7160aca3f091ddc1",
       "structural_formula": "p.add_argument(\"--sigma-cos\",type=float,default=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "811d70baa875fdebf662155a2bc7266ce7222a2454a63fb047f633e16af40be1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c75fe6bff4727f3c2381076c8ec49220e3f486315275b8986d61d54d7ff21a94",
+      "structural_formula": "p.add_argument('--crossing-loss-db',type=float,default=#)"
     },
     {
       "exact_formula_ids": [
@@ -2333662,6 +2334441,14 @@
     },
     {
       "exact_formula_ids": [
+        "009b67372bc7b8aff324c0731974e8dc4a4ff853575aeaffcd1d61c2af2e7d3a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ca2f9dea3ed592e3298ba71636d57ab144cbf1a6b5a97bfa84c47369ddc1c3db",
+      "structural_formula": "res[\"#\"]=dict(sampling=t2,built=len(b2),loaded=sum(#forxinb2ifx[\"gauge\"]!=\"LOADFAIL\"),tens=dict(c))"
+    },
+    {
+      "exact_formula_ids": [
         "c10302e1d5d745f1e4d80799993102b65ec78ddde2a4a5a8885d1f428302c299"
       ],
       "exact_member_count": 1,
@@ -2340534,6 +2341321,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5591dd9f48a032695be708c1104cefbaad5bcc7251dea09b5265bf3bfe30c0c9",
       "structural_formula": "r\u2248#/#"
+    },
+    {
+      "exact_formula_ids": [
+        "376b800e78ab1a3d1299340bc67118f27cc1b69a86d3daa59aca503798b8f46a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "385a27b18f8e570000f59ecb45665c8e4a82ea24e65d202bef0c9e6b7872f352",
+      "structural_formula": "s(a)s(b)=(#)^{w(a\\wedgeb)}s(a\\oplusb)"
     },
     {
       "exact_formula_ids": [
@@ -2366099,6 +2366894,14 @@
     },
     {
       "exact_formula_ids": [
+        "174bfa33a249d4186cf1cd18db1bc8d2bbb6cb56f25018ba46290a08156b4c6a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "39a2c671e4be84962a8376d389d36afd91559539cf177720ff9d27d19fd8ec35",
+      "structural_formula": "twisthasnoinvariantHom(V_L,V_R)(allmodulifrozen),asymmetriconehasdet(#-g)=#,odd(notranslation)"
+    },
+    {
+      "exact_formula_ids": [
         "675c3919a931db55836736c1dc76b938379be06dfa59d2450fba9a21d6241500"
       ],
       "exact_member_count": 1,
@@ -2388095,20 +2388898,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91406995,
-    "exact_formula_families": 64429,
-    "files_scanned": 12572,
-    "formula_occurrences": 70536,
+    "bytes_scanned": 91449958,
+    "exact_formula_families": 64451,
+    "files_scanned": 12578,
+    "formula_occurrences": 70559,
     "status_occurrences": {
-      "certified_or_theorem": 5291,
-      "killed_or_retracted": 1872,
+      "certified_or_theorem": 5293,
+      "killed_or_retracted": 1873,
       "open_or_conditional": 2378,
       "preregistered": 36,
       "retrospective_fit": 5398,
-      "unclassified": 55561
+      "unclassified": 55581
     },
-    "structural_families": 62733
+    "structural_families": 62755
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "50edda0fa5d702b1a7346e298d730f3e90aa930f832e209fcac786834b280a75"
+  "universe_sha256": "337662c4d63378e0416627351c700d25afbdbfb8fe4a61393f1b7d43d9ddf027"
 }
