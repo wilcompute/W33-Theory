@@ -1,0 +1,321 @@
+{
+  "Choi_dephasing_negativity_law": "N(J(dephase_lambda^n))=lambda^n",
+  "Choi_unitary_recursion": [
+    {
+      "channel_compositions": 0,
+      "choi_entropy_bits": 1.584962500721156,
+      "choi_pure_negativity": 1.0000000000000007
+    },
+    {
+      "channel_compositions": 1,
+      "choi_entropy_bits": 1.584962500721156,
+      "choi_pure_negativity": 1.0000000000000007
+    },
+    {
+      "channel_compositions": 2,
+      "choi_entropy_bits": 1.5849625007211563,
+      "choi_pure_negativity": 1.0000000000000007
+    },
+    {
+      "channel_compositions": 3,
+      "choi_entropy_bits": 1.584962500721156,
+      "choi_pure_negativity": 1.0000000000000013
+    },
+    {
+      "channel_compositions": 4,
+      "choi_entropy_bits": 1.5849625007211563,
+      "choi_pure_negativity": 1.0000000000000009
+    },
+    {
+      "channel_compositions": 5,
+      "choi_entropy_bits": 1.5849625007211563,
+      "choi_pure_negativity": 1.0000000000000013
+    }
+  ],
+  "budget_law": "mode demand 3^n for independent n time trits; W33 site count 40^n; ideal eraser acceptance 3^-n, optical losses multiply; ABIs are not clock seconds",
+  "budgets": [
+    {
+      "BT1700_ABI_total_ticks_not_seconds": 72,
+      "W33_site_substitution_packet_count": 1,
+      "all_plus_time_eraser_trigger": 1,
+      "depth": 0,
+      "fresh_qutrit_time_registers": 0,
+      "full_time_hilbert_dimension": 1,
+      "gaussian_phase_sigma_per_step_rad": 0.1,
+      "module_loss_db": 0.5,
+      "phase_offdiag_visibility": 1.0,
+      "predicted_detected_coincidence_rate_including_loss": 1,
+      "predicted_joint_eraser_pathplus_with_dephasing": 1,
+      "survival_probability": 1.0
+    },
+    {
+      "BT1700_ABI_total_ticks_not_seconds": 2880,
+      "W33_site_substitution_packet_count": 40,
+      "all_plus_time_eraser_trigger": 0.3333333333333333,
+      "depth": 1,
+      "fresh_qutrit_time_registers": 1,
+      "full_time_hilbert_dimension": 3,
+      "gaussian_phase_sigma_per_step_rad": 0.1,
+      "module_loss_db": 0.5,
+      "phase_offdiag_visibility": 0.9950124791926823,
+      "predicted_detected_coincidence_rate_including_loss": 0.2960958388004744,
+      "predicted_joint_eraser_pathplus_with_dephasing": 0.33222499537615163,
+      "survival_probability": 0.8912509381337456
+    },
+    {
+      "BT1700_ABI_total_ticks_not_seconds": 115200,
+      "W33_site_substitution_packet_count": 1600,
+      "all_plus_time_eraser_trigger": 0.1111111111111111,
+      "depth": 2,
+      "fresh_qutrit_time_registers": 2,
+      "full_time_hilbert_dimension": 9,
+      "gaussian_phase_sigma_per_step_rad": 0.1,
+      "module_loss_db": 0.5,
+      "phase_offdiag_visibility": 0.9900498337491681,
+      "predicted_detected_coincidence_rate_including_loss": 0.08767323363653229,
+      "predicted_joint_eraser_pathplus_with_dephasing": 0.11037406175919763,
+      "survival_probability": 0.7943282347242815
+    },
+    {
+      "BT1700_ABI_total_ticks_not_seconds": 4608000,
+      "W33_site_substitution_packet_count": 64000,
+      "all_plus_time_eraser_trigger": 0.037037037037037035,
+      "depth": 3,
+      "fresh_qutrit_time_registers": 3,
+      "full_time_hilbert_dimension": 27,
+      "gaussian_phase_sigma_per_step_rad": 0.1,
+      "module_loss_db": 0.5,
+      "phase_offdiag_visibility": 0.9851119396030626,
+      "predicted_detected_coincidence_rate_including_loss": 0.025959968814334284,
+      "predicted_joint_eraser_pathplus_with_dephasing": 0.03666943060748303,
+      "survival_probability": 0.7079457843841379
+    },
+    {
+      "BT1700_ABI_total_ticks_not_seconds": 184320000,
+      "W33_site_substitution_packet_count": 2560000,
+      "all_plus_time_eraser_trigger": 0.012345679012345678,
+      "depth": 4,
+      "fresh_qutrit_time_registers": 4,
+      "full_time_hilbert_dimension": 81,
+      "gaussian_phase_sigma_per_step_rad": 0.1,
+      "module_loss_db": 0.5,
+      "phase_offdiag_visibility": 0.9801986733067554,
+      "predicted_detected_coincidence_rate_including_loss": 0.007686767277471074,
+      "predicted_joint_eraser_pathplus_with_dephasing": 0.01218270513009675,
+      "survival_probability": 0.6309573444801932
+    },
+    {
+      "BT1700_ABI_total_ticks_not_seconds": 7372800000,
+      "W33_site_substitution_packet_count": 102400000,
+      "all_plus_time_eraser_trigger": 0.00411522633744856,
+      "depth": 5,
+      "fresh_qutrit_time_registers": 5,
+      "full_time_hilbert_dimension": 243,
+      "gaussian_phase_sigma_per_step_rad": 0.1,
+      "module_loss_db": 0.5,
+      "phase_offdiag_visibility": 0.9753099120283327,
+      "predicted_detected_coincidence_rate_including_loss": 0.0022760705925829084,
+      "predicted_joint_eraser_pathplus_with_dephasing": 0.004047489470585275,
+      "survival_probability": 0.5623413251903491
+    }
+  ],
+  "eraser_law": "postselect all n time factors in Fourier plus, p=3^-n; conditional path plus=1 coherent vs 1/3 incoherent null",
+  "fresh_register_GHZ": [
+    {
+      "depth": 1,
+      "fully_coherent_eraser": {
+        "all_time_fourier_plus_trigger_probability": 0.33333333333333354,
+        "conditional_path_plus_probability": 1.0,
+        "conditional_path_state_purity": 1.0,
+        "expected_conditional_path_plus_probability": 1.0,
+        "fresh_time_registers": 1,
+        "joint_trigger_and_path_plus_probability": 0.33333333333333365,
+        "phase_coherence": 1.0
+      },
+      "incoherent_null": {
+        "all_time_fourier_plus_trigger_probability": 0.33333333333333337,
+        "conditional_path_plus_probability": 0.3333333333333334,
+        "conditional_path_state_purity": 0.33333333333333337,
+        "expected_conditional_path_plus_probability": 0.3333333333333333,
+        "fresh_time_registers": 1,
+        "joint_trigger_and_path_plus_probability": 0.11111111111111116,
+        "phase_coherence": 0.0
+      },
+      "pair_path_first_time_negativity": 1,
+      "path_rest_entropy_bits": 1.584962500721156,
+      "path_rest_negativity": 1.0000000000000007
+    },
+    {
+      "depth": 2,
+      "fully_coherent_eraser": {
+        "all_time_fourier_plus_trigger_probability": 0.11111111111111113,
+        "conditional_path_plus_probability": 1.0,
+        "conditional_path_state_purity": 1.0,
+        "expected_conditional_path_plus_probability": 1.0,
+        "fresh_time_registers": 2,
+        "joint_trigger_and_path_plus_probability": 0.11111111111111116,
+        "phase_coherence": 1.0
+      },
+      "incoherent_null": {
+        "all_time_fourier_plus_trigger_probability": 0.1111111111111111,
+        "conditional_path_plus_probability": 0.33333333333333337,
+        "conditional_path_state_purity": 0.3333333333333333,
+        "expected_conditional_path_plus_probability": 0.3333333333333333,
+        "fresh_time_registers": 2,
+        "joint_trigger_and_path_plus_probability": 0.03703703703703704,
+        "phase_coherence": 0.0
+      },
+      "pair_path_first_time_negativity": 0,
+      "path_rest_entropy_bits": 1.584962500721156,
+      "path_rest_negativity": 1.0000000000000007
+    },
+    {
+      "depth": 3,
+      "fully_coherent_eraser": {
+        "all_time_fourier_plus_trigger_probability": 0.03703703703703705,
+        "conditional_path_plus_probability": 1.0000000000000002,
+        "conditional_path_state_purity": 1.0000000000000002,
+        "expected_conditional_path_plus_probability": 1.0,
+        "fresh_time_registers": 3,
+        "joint_trigger_and_path_plus_probability": 0.03703703703703706,
+        "phase_coherence": 1.0
+      },
+      "incoherent_null": {
+        "all_time_fourier_plus_trigger_probability": 0.037037037037037035,
+        "conditional_path_plus_probability": 0.33333333333333337,
+        "conditional_path_state_purity": 0.3333333333333333,
+        "expected_conditional_path_plus_probability": 0.3333333333333333,
+        "fresh_time_registers": 3,
+        "joint_trigger_and_path_plus_probability": 0.012345679012345682,
+        "phase_coherence": 0.0
+      },
+      "pair_path_first_time_negativity": 0,
+      "path_rest_entropy_bits": 1.584962500721156,
+      "path_rest_negativity": 1.0000000000000007
+    },
+    {
+      "depth": 4,
+      "fully_coherent_eraser": {
+        "all_time_fourier_plus_trigger_probability": 0.01234567901234568,
+        "conditional_path_plus_probability": 1.0000000000000002,
+        "conditional_path_state_purity": 1.0000000000000002,
+        "expected_conditional_path_plus_probability": 1.0,
+        "fresh_time_registers": 4,
+        "joint_trigger_and_path_plus_probability": 0.012345679012345682,
+        "phase_coherence": 1.0
+      },
+      "incoherent_null": {
+        "all_time_fourier_plus_trigger_probability": 0.012345679012345678,
+        "conditional_path_plus_probability": 0.33333333333333337,
+        "conditional_path_state_purity": 0.3333333333333333,
+        "expected_conditional_path_plus_probability": 0.3333333333333333,
+        "fresh_time_registers": 4,
+        "joint_trigger_and_path_plus_probability": 0.004115226337448561,
+        "phase_coherence": 0.0
+      },
+      "pair_path_first_time_negativity": 0,
+      "path_rest_entropy_bits": 1.584962500721156,
+      "path_rest_negativity": 1.0000000000000007
+    },
+    {
+      "depth": 5,
+      "fully_coherent_eraser": {
+        "all_time_fourier_plus_trigger_probability": 0.00411522633744856,
+        "conditional_path_plus_probability": 1.0,
+        "conditional_path_state_purity": 1.0,
+        "expected_conditional_path_plus_probability": 1.0,
+        "fresh_time_registers": 5,
+        "joint_trigger_and_path_plus_probability": 0.004115226337448562,
+        "phase_coherence": 1.0
+      },
+      "incoherent_null": {
+        "all_time_fourier_plus_trigger_probability": 0.004115226337448558,
+        "conditional_path_plus_probability": 0.3333333333333334,
+        "conditional_path_state_purity": 0.33333333333333337,
+        "expected_conditional_path_plus_probability": 0.3333333333333333,
+        "fresh_time_registers": 5,
+        "joint_trigger_and_path_plus_probability": 0.0013717421124828531,
+        "phase_coherence": 0.0
+      },
+      "pair_path_first_time_negativity": 0,
+      "path_rest_entropy_bits": 1.584962500721156,
+      "path_rest_negativity": 1.0000000000000007
+    }
+  ],
+  "fresh_time_GHZ_law": "path-vs-all-time entropy log2(3) bits at every depth; for n>=2 pair path/time_0 negativity zero",
+  "independent_external_prior_art": [
+    "2025 npj Quantum Information energy-time and time-bin entanglement review: https://www.nature.com/articles/s41534-025-01072-3",
+    "2021/2024 temporal process entanglement work: https://doi.org/10.21468/SciPostPhys.10.6.141",
+    "single-photon mode-entanglement experiment: https://arxiv.org/abs/2112.05039"
+  ],
+  "operational_boundary": [
+    "Choi past/future legs are input/output reference Hilbert factors, not two copies of the physical photon",
+    "A time-delay/time-bin superposition is not a photon traveling backward in time",
+    "Single-photon path-time nonseparability is not a loophole-free Bell nonlocality test between two spacelike observers",
+    "Classical wave coherence can reproduce first-order eraser fringes: need genuine single-photon source characterization and operational mode access",
+    "Fresh time registers require physically distinguishable coherent time modes and control; no quantum storage yet",
+    "No experimental detector counts; all figures are algebraic and ideal noisy-process estimates",
+    "Single-photon internal entanglement cannot substitute for deterministic two-photon entangling quantum gates"
+  ],
+  "repeated_shift_law": "controlled-SUM^n cycles modulo 3; at n=3 returns separable input",
+  "research_basis": [
+    "analysis/BT1556_w33_self_entangled_qutrit_reinterpretation.md",
+    "analysis/BT1569_self_applied_circuit_falsifier_simulator.md",
+    "analysis/bt1700_recursive_holonet_packet_compiler.py",
+    "analysis/w33_walsh_qutrit_metaplectic_noise_20261023.py"
+  ],
+  "reused_same_3bin_register": [
+    {
+      "path_time_entropy_bits": -3.2034265038149176e-16,
+      "path_time_negativity": 0.0,
+      "residue_mod3": 0,
+      "rounds": 0,
+      "separable": true
+    },
+    {
+      "path_time_entropy_bits": 1.584962500721156,
+      "path_time_negativity": 1.0000000000000007,
+      "residue_mod3": 1,
+      "rounds": 1,
+      "separable": false
+    },
+    {
+      "path_time_entropy_bits": 1.584962500721156,
+      "path_time_negativity": 1.0000000000000007,
+      "residue_mod3": 2,
+      "rounds": 2,
+      "separable": false
+    },
+    {
+      "path_time_entropy_bits": -3.2034265038149176e-16,
+      "path_time_negativity": 0.0,
+      "residue_mod3": 0,
+      "rounds": 3,
+      "separable": true
+    },
+    {
+      "path_time_entropy_bits": 1.584962500721156,
+      "path_time_negativity": 1.0000000000000007,
+      "residue_mod3": 1,
+      "rounds": 4,
+      "separable": false
+    },
+    {
+      "path_time_entropy_bits": 1.584962500721156,
+      "path_time_negativity": 1.0000000000000007,
+      "residue_mod3": 2,
+      "rounds": 5,
+      "separable": false
+    },
+    {
+      "path_time_entropy_bits": -3.2034265038149176e-16,
+      "path_time_negativity": 0.0,
+      "residue_mod3": 0,
+      "rounds": 6,
+      "separable": true
+    }
+  ],
+  "schema": "w33.single_photon.recursive_mode_vs_temporal_choi.v1",
+  "sha256": "54b83dcb5b5cb8694b97b227196c1c46326d618eceba377f89b5a453358aaa32",
+  "single_photon_modes": "H_path(3) tensor H_time(3^n), not independently addressable photons"
+}
