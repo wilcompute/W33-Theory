@@ -1,0 +1,46 @@
+{
+  "schema": "w33.anchored_transvection_hamiltonian.v1",
+  "source_base_walk": "DCLXVIII: (13I+B)/40",
+  "status": "EXACT_FINITE_SYMMETRY_BREAKING_TOY_NO_DERIVED_CLOCK",
+  "hamiltonian": "H=27I-B+2I-T-T^(-1)",
+  "anchor_stabilizer_order": 648,
+  "W33_adjacency_spectrum": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "base_H0_spectrum": {
+    "0": 1,
+    "24": 15,
+    "30": 24
+  },
+  "anchored_H_spectrum": {
+    "0": 1,
+    "24": 9,
+    "27": 6,
+    "30": 12,
+    "33": 12
+  },
+  "T_trace_on_E2": 6,
+  "T_trace_on_Eminus4": 6,
+  "E2_fixed_and_rotating": [
+    12,
+    12
+  ],
+  "Eminus4_fixed_and_rotating": [
+    9,
+    6
+  ],
+  "trace_H": 1134,
+  "trace_H_squared": 33426,
+  "exact_matrix_annihilator_verified": true,
+  "continuous_epsilon_spectrum": {
+    "E0": "0 (multiplicity 1)",
+    "E2_fixed": "30 (multiplicity 12)",
+    "E2_rotating": "30+3*epsilon (multiplicity 12)",
+    "Eminus4_fixed": "24 (multiplicity 9)",
+    "Eminus4_rotating": "24+3*epsilon (multiplicity 6)"
+  },
+  "dynamics_selects_anchor": false,
+  "physical_implementation_verified": false
+}
