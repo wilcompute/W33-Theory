@@ -35,7 +35,7 @@ module tb_w33_linebus_phase_frame;
     push(2'd3,1'b0,2'd2);
     push(2'd1,1'b1,2'd1);
     @(negedge clk);
-    result_ready=0;cmd_mask=2'd3;cmd_valid=1;
+    result_ready=0;cmd_mask=2'd3;cmd_clear=0;cmd_valid=1;
     @(posedge clk);#1;
     if (!result_valid || result_frame!==2'd3)
       $fatal(1,"first stall transfer frame");
