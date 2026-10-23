@@ -1,0 +1,57 @@
+{
+  "schema": "w33.single_photon.timebin_recursion_guard.verified_UP5K_20261023.v1",
+  "design": "hardware/w33_single_photon_timebin_recursion_guard.sv",
+  "testbench": "hardware/tb_w33_single_photon_timebin_recursion_guard_20261023.sv",
+  "Icarus": {
+    "simulation_pass": true,
+    "randomized_cycles": 2000,
+    "commands_accepted": 676,
+    "backpressure_stalls": 665,
+    "fresh_register_obligations": 254,
+    "reuse_commands": 246,
+    "invalid_qutrit_path_values": 176,
+    "notes": "Fresh registers are tracked as resource obligations; NO physical quantum time-bin memory"
+  },
+  "Yosys": {
+    "tool": "YoWASP Yosys 0.70",
+    "mapped_cell_counts": {
+      "SB_LUT4": 35,
+      "SB_DFFER": 16,
+      "SB_CARRY": 8
+    },
+    "synth_pass": true
+  },
+  "nextpnr": {
+    "tool": "YoWASP nextpnr-ice40",
+    "device": "UP5K",
+    "package": "sg48",
+    "seed": 20261023,
+    "LC_used": 42,
+    "LC_total": 5280,
+    "SB_IO_used": 25,
+    "SB_IO_total": 39,
+    "target_clock_MHz": 24,
+    "preliminary_placement_fmax_MHz": 75.45,
+    "final_post_route_fmax_MHz": 68.82,
+    "target_timing_pass": true,
+    "no_PCF_pin_file": true,
+    "IO_assigned_automatically": true,
+    "board_specific_constraints": false,
+    "physical_fpga_deployed": false,
+    "photon_delays_implemented": false
+  },
+  "tests": {
+    "selected_Python_test_modules": 4,
+    "passed": 28,
+    "failed": 0,
+    "scope": "two new recursive mathematical, new acceptance and earlier two-photon postselection tests, not entire repository"
+  },
+  "gates": [
+    "choose board-specific pin constraints",
+    "implement real photon delay and phase shifter",
+    "measure source and detector clock-latency distributions",
+    "connect time-bin output analyzer and characterize mode overlap"
+  ],
+  "source": "analysis/2026-10-23_single_photon_self_entanglement_recursion_five_fronts.md",
+  "disclaimer": "FPGA metadata tooling only, not universal photon computer or quantum memory"
+}
