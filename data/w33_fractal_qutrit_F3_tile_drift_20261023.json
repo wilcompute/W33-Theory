@@ -1,0 +1,50 @@
+{
+  "active_two_mode_gates": 3,
+  "auxiliary_input_mode": 3,
+  "auxiliary_output_mode": 3,
+  "device_port_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "ideal_reconstruction_error": 4.1869153460808796e-16,
+  "noise_sweep": [
+    {
+      "mean_unconditional_process_overlap": 1.0,
+      "mean_worst_basis_leakage": 0.0,
+      "p05_unconditional_process_overlap": 1.0,
+      "phase_error_sigma_rad": 0.0
+    },
+    {
+      "mean_unconditional_process_overlap": 0.9998717193192399,
+      "mean_worst_basis_leakage": 3.321150247827716e-06,
+      "p05_unconditional_process_overlap": 0.9996349575236557,
+      "phase_error_sigma_rad": 0.01
+    },
+    {
+      "mean_unconditional_process_overlap": 0.9972705458172988,
+      "mean_worst_basis_leakage": 8.014117051462426e-05,
+      "p05_unconditional_process_overlap": 0.9926522914216358,
+      "phase_error_sigma_rad": 0.05
+    },
+    {
+      "mean_unconditional_process_overlap": 0.9870757375274644,
+      "mean_worst_basis_leakage": 0.00038805185453414504,
+      "p05_unconditional_process_overlap": 0.9678162655399055,
+      "phase_error_sigma_rad": 0.1
+    }
+  ],
+  "phase_bank": 4,
+  "physical_gate_status": "UNFABRICATED; stochastic coupling/phase errors hypothetical",
+  "schema": "w33.fractal.qutrit_F3_tile_drift.v1",
+  "scope": "no GDS routing, coupler S-parameters or experimental fidelity"
+}
