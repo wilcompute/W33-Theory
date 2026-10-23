@@ -1,0 +1,40 @@
+{
+  "12205": {
+    "parents": 128,
+    "gamma": 103,
+    "refined": 103,
+    "gens": {
+      "(1, 2)": 103
+    }
+  },
+  "12206": {
+    "2": 10,
+    "1": 117,
+    "3": 1
+  },
+  "12207": {
+    "kernel_mod2": 0,
+    "kernel_mod3": 3,
+    "det(1-theta)": 27
+  },
+  "12208": {
+    "models": 163,
+    "counts": {
+      "fermion|untw-W|Z3-untwisted": 614
+    }
+  },
+  "12209": {
+    "tangent": 4,
+    "C3xC3": 0,
+    "C3_first": 0,
+    "C3_second": 0
+  },
+  "checks": {
+    "12205: 103 Gamma-valued Z6-II directions all pass the even-products criterion; all (1, 2); no violations": true,
+    "12206: N_even = 3 in exactly one parent, which has no Gamma-valued direction": true,
+    "12207: T6/Z3 admits a 3-dim space of order-3 translations (mod 3 kernel 3), none of order 2": true,
+    "12208: 163 SU(5) models, 614 fields in the 10, all Z3-untwisted Witten-untwisted fermions; no twisted 10": true,
+    "12209: native Narain tangent space 4 (control); invariant deformations 0 under C3 x C3 and under each single C3": true
+  },
+  "all_checks_pass": true
+}
