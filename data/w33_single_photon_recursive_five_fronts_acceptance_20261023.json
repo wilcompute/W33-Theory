@@ -1,0 +1,133 @@
+{
+  "accuracy_boundary": "Executed code and lab protocols. Cannot physically complete five experiments without a foundry PDK, hardware, photon source, detectors, and calibrated interfaces; no measurements invented",
+  "date": "2026-10-23",
+  "project": "W33-Theory",
+  "schema": "w33.single_photon.self_recursive_five_fronts_acceptance.v1",
+  "separate_exact_theorems": {
+    "Choi": "entangled identity-channel Choi is formal input/output reference; not physical time travel",
+    "W33_graph_phase_area_law": "all contiguous cuts n>=2 Schmidt probabilities [0.16 (1), 0.04 (15), 0.01 (24)]; entropy 4.803856 bits",
+    "fresh_time_GHZ": "path-vs-time entropy log2(3) constant, eraser acceptance 3^-n",
+    "independent_W33_address_product": "uniform W33 address superposition without cross-address gates is separable",
+    "period3_reuse": "one photon controlled-add reuse U^3=identity, self-mode entanglement vanishes"
+  },
+  "sha256": "d02afcee244d8384e6eca732e9336ac8c071929a3be9f0dc83db37f0868ad847",
+  "source_material": [
+    "data/w33_walsh_qutrit_phase_ii_verified_20261023.json",
+    "data/w33_walsh_qutrit_lab_ref_layout_20261023.json",
+    "data/w33_walsh_qutrit_phase_noise_falsification_20261023.json",
+    "data/w33_walsh_qutrit_160_incidence_transfer_20261023.json",
+    "data/w33_walsh_two_photon_postselected_entangler_20261023.json",
+    "data/w33_single_photon_recursive_self_entanglement_20261023.json",
+    "data/w33_single_photon_recursive_graph_phase_area_law_20261023.json"
+  ],
+  "track_results": {
+    "1_foundry_pic": {
+      "W33_pairwise_address_mode_count": 1600,
+      "W33_phase_flipped_ordered_address_pairs": 480,
+      "W33_undirected_graph_edges": 240,
+      "barrier": "Existing 4-rail GDS symbolic. Cannot sign off real photonic design without PDK/materials/foundry and experimental device.",
+      "executed": "symbolic 4-rail PIC reference GDS/readback; derived separate 9-mode 3-path x 3-time self-entanglement experiment and 1600-mode W33 controlled phase target",
+      "experiment": [
+        "heralded g2(0) single photon source",
+        "3-path interferometric encoder + 3 delay bins",
+        "interfere time Fourier basis and path Fourier analyzer",
+        "phase stabilize path and time; tomography of all 9 single-photon modes"
+      ],
+      "foundry_pdk_available": false,
+      "minimum_path_time_qutrit_product_mode_count": 9,
+      "prior_gds": "hardware/generated/w33_walsh_qutrit_lab_ref_20261023.gds",
+      "real_DRC_LVS": false
+    },
+    "2_noise_lab": {
+      "all_results_are_synthetic": true,
+      "barrier": "No real photon counts or calibrated source/detector; no physical test performed",
+      "executed": "new exact coherent-versus-incoherent eraser null, old 12-condition correlated differential-phase data and detector-calibrated CSV parser",
+      "phase_noise_model": "E[p_aux]=(1-exp(-sigma^2*(1-rho)))/4",
+      "predictions_250k_photon_trials": [
+        {
+          "event_difference": 38620.87398579569,
+          "fresh_registers": 1,
+          "mode_address_dimension_required": 3,
+          "postselected_coherent_pathplus_given_trigger": 1.0,
+          "postselected_incoherent_pathplus_given_trigger": 0.3333333333333333,
+          "predicted_detections_joint_coherent_no_dark": 57931.31097869352,
+          "predicted_detections_joint_incoherent_no_dark": 19310.43699289783,
+          "time_fourier_all_plus_probability": 0.3333333333333333
+        },
+        {
+          "event_difference": 11473.63005712852,
+          "fresh_registers": 2,
+          "mode_address_dimension_required": 9,
+          "postselected_coherent_pathplus_given_trigger": 1.0,
+          "postselected_incoherent_pathplus_given_trigger": 0.3333333333333333,
+          "predicted_detections_joint_coherent_no_dark": 17210.445085692772,
+          "predicted_detections_joint_incoherent_no_dark": 5736.815028564256,
+          "time_fourier_all_plus_probability": 0.1111111111111111
+        },
+        {
+          "event_difference": 3408.6278507384454,
+          "fresh_registers": 3,
+          "mode_address_dimension_required": 27,
+          "postselected_coherent_pathplus_given_trigger": 1.0,
+          "postselected_incoherent_pathplus_given_trigger": 0.3333333333333333,
+          "predicted_detections_joint_coherent_no_dark": 5112.9417761076675,
+          "predicted_detections_joint_incoherent_no_dark": 1704.3139253692216,
+          "time_fourier_all_plus_probability": 0.037037037037037035
+        },
+        {
+          "event_difference": 1012.6475899064831,
+          "fresh_registers": 4,
+          "mode_address_dimension_required": 81,
+          "postselected_coherent_pathplus_given_trigger": 1.0,
+          "postselected_incoherent_pathplus_given_trigger": 0.3333333333333333,
+          "predicted_detections_joint_coherent_no_dark": 1518.9713848597248,
+          "predicted_detections_joint_incoherent_no_dark": 506.32379495324165,
+          "time_fourier_all_plus_probability": 0.012345679012345678
+        },
+        {
+          "event_difference": 300.84103816767663,
+          "fresh_registers": 5,
+          "mode_address_dimension_required": 243,
+          "postselected_coherent_pathplus_given_trigger": 1.0,
+          "postselected_incoherent_pathplus_given_trigger": 0.3333333333333333,
+          "predicted_detections_joint_coherent_no_dark": 451.2615572515149,
+          "predicted_detections_joint_incoherent_no_dark": 150.4205190838382,
+          "time_fourier_all_plus_probability": 0.00411522633744856
+        }
+      ]
+    },
+    "3_interbus_transfer": {
+      "barrier": "No physical four-rail routing waveguides or cross-stage mode phase gates; phase transfer rank not measured",
+      "executed": "all 780 pair-specific 4-rail qutrit permutations on 160 physically distinct incidence addresses; mode level entanglement across W33 graph-phase recursion",
+      "four_distinct_rail_moves_required_per_pair": 4,
+      "incidence_rails": 160,
+      "line_pairs": 780,
+      "recursive_entanglement_entropy_bits": 4.803856189774729
+    },
+    "4_fpga": {
+      "UP5K_LC": 42,
+      "UP5K_LC_total": 5280,
+      "accepted_commands": 676,
+      "backpressure_stalls": 665,
+      "barrier": "No deployed FPGA board, detector actuator I/O, time-bin physical memory or board PCF",
+      "cycles": 2000,
+      "estimated_fmax_MHz": 68.82,
+      "executed": "new recursive time-bin metadata RTL and real Icarus 2000-cycle scoreboard, Yosys UP5K synthesis plus nextpnr UP5K unpinned PNR",
+      "fresh_register_obligations_accepted": 254,
+      "invalid_path_codes": 176,
+      "pin_constraints_real": false,
+      "quantum_memory_implemented": false,
+      "recursion_RTL": "hardware/w33_single_photon_timebin_recursion_guard.sv",
+      "reuse_commands": 246,
+      "target_passed_MHz": 24
+    },
+    "5_two_photons": {
+      "barrier": "Output coincidence consumes photons; no QND heralding or measured source indistinguishability",
+      "conditional_state_generator_not_gate": true,
+      "executed": "compared intra-photon path-time mode nonseparability with real two-photon bosonic postselected entanglement target",
+      "two_photon_both_code_postselect_probability": 0.49999999999999917,
+      "two_photon_conditional_negativity": 0.25000000000000044,
+      "two_photon_source": "analysis/w33_walsh_two_photon_postselected_entangler_20261023.py"
+    }
+  }
+}
