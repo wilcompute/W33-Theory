@@ -1,0 +1,91 @@
+{
+  "schema": "w33.K_jordan_extension_census.v1",
+  "result_status": "FINITE_CERTIFIED_P2_P3_P5_P7_GENERAL_FORMULA_CONJECTURAL",
+  "module": "K=C^perp is dual to M/C under coordinate dot product",
+  "conjectural_formula": "K: J1^((p^2+p+4)/2) + sum_(j=2)^(p-1) Jj^j + Jp^(p(p+1)/2)",
+  "proof_boundary": "An extension class calculation for arbitrary p is still missing. K is not generally C direct-sum Q as cyclic modules.",
+  "samples": [
+    {
+      "p": 2,
+      "physical_n": 15,
+      "stabilizer_dim": 4,
+      "K_dimension": 11,
+      "rank_powers_K": [
+        11,
+        3,
+        0
+      ],
+      "Jordan_K": {
+        "1": 5,
+        "2": 3
+      },
+      "uniform_K_conjecture_matches": true
+    },
+    {
+      "p": 3,
+      "physical_n": 40,
+      "stabilizer_dim": 10,
+      "K_dimension": 30,
+      "rank_powers_K": [
+        30,
+        14,
+        6,
+        0
+      ],
+      "Jordan_K": {
+        "1": 8,
+        "2": 2,
+        "3": 6
+      },
+      "uniform_K_conjecture_matches": true
+    },
+    {
+      "p": 5,
+      "physical_n": 156,
+      "stabilizer_dim": 35,
+      "K_dimension": 121,
+      "rank_powers_K": [
+        121,
+        80,
+        56,
+        34,
+        15,
+        0
+      ],
+      "Jordan_K": {
+        "1": 17,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 15
+      },
+      "uniform_K_conjecture_matches": true
+    },
+    {
+      "p": 7,
+      "physical_n": 400,
+      "stabilizer_dim": 84,
+      "K_dimension": 316,
+      "rank_powers_K": [
+        316,
+        238,
+        190,
+        144,
+        101,
+        62,
+        28,
+        0
+      ],
+      "Jordan_K": {
+        "1": 30,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 28
+      },
+      "uniform_K_conjecture_matches": true
+    }
+  ]
+}
