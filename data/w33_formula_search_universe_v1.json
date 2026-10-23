@@ -226796,6 +226796,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "87f3524f5723674a43d3854a85f906d8f72101c3189d9c7204e34a4cb34bd243",
+      "normalized_formula": "#H0=40(I-K)=27I-B.Theanchorcostis2I-T-T^{-1}",
+      "numeric_literals": [
+        "-1",
+        "27",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_anchored_transvection_hamiltonian.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/w33_20261022_anchored_transvection_hamiltonian.py",
+          "raw": "# H0=40(I-K)=27I-B. The anchor cost is 2I-T-T^{-1}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "914f15ca040fe31455d85a3be8707336db9f4fb7f2f68bcdc77a3a85ae6d153d",
+      "structural_formula": "#H0=#(I-K)=#I-B.Theanchorcostis2I-T-T^{#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4e3de93dd3443229604b45ce7eb8829bc1800fbe74b5b2e990128fd542c9c9a8",
       "normalized_formula": "#HL-LHCreach:~2TeVfornewscalars(dependingonproduction)",
       "numeric_literals": [
@@ -1788433,6 +1788462,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "16c6ce791e48265caf86519e01975d0906a689e3a8c8c5246f770f0939d80485",
+      "normalized_formula": "transvection=perm_of_direction(points,X[0])",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_anchored_transvection_hamiltonian.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 34,
+          "path": "analysis/w33_20261022_anchored_transvection_hamiltonian.py",
+          "raw": "transvection = perm_of_direction(points, X[0])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d1fd57565d86e707c4450d17c571e75d4555e134c93e6032d506453c069c0409",
+      "structural_formula": "transvection=perm_of_direction(points,X[#])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "60579928c1b9d043f6979382a082be0d9e3fe7d0252ee7d62d03e74087aefe61",
       "normalized_formula": "transvection_coset+=len(L.rref3((g-np.eye(4,dtype=np.int64))",
       "numeric_literals": [
@@ -1876516,9 +1876572,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T19:50:55-04:00",
+  "frozen_at": "2026-10-22T20:14:00-04:00",
   "pass": 398,
-  "repository_head": "c63b9ade1ecd077e21ff565a644766a0c7ed3586",
+  "repository_head": "55796febd0de707aa6c89b512f2dc9a2dadbfd70",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1955332,6 +1955388,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5d30267f1668ace75538ee3d0a62bdb37306acf93f2f008015321918b65d72f6",
       "structural_formula": "#H-orbitsontarget=basisofHom_G(Q[#],Q[#])"
+    },
+    {
+      "exact_formula_ids": [
+        "87f3524f5723674a43d3854a85f906d8f72101c3189d9c7204e34a4cb34bd243"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "914f15ca040fe31455d85a3be8707336db9f4fb7f2f68bcdc77a3a85ae6d153d",
+      "structural_formula": "#H0=#(I-K)=#I-B.Theanchorcostis2I-T-T^{#}"
     },
     {
       "exact_formula_ids": [
@@ -2355311,6 +2355375,14 @@
     },
     {
       "exact_formula_ids": [
+        "16c6ce791e48265caf86519e01975d0906a689e3a8c8c5246f770f0939d80485"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d1fd57565d86e707c4450d17c571e75d4555e134c93e6032d506453c069c0409",
+      "structural_formula": "transvection=perm_of_direction(points,X[#])"
+    },
+    {
+      "exact_formula_ids": [
         "60579928c1b9d043f6979382a082be0d9e3fe7d0252ee7d62d03e74087aefe61"
       ],
       "exact_member_count": 1,
@@ -2377987,20 +2378059,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90816446,
-    "exact_formula_families": 64154,
-    "files_scanned": 12504,
-    "formula_occurrences": 70256,
+    "bytes_scanned": 90835889,
+    "exact_formula_families": 64156,
+    "files_scanned": 12508,
+    "formula_occurrences": 70258,
     "status_occurrences": {
       "certified_or_theorem": 5266,
       "killed_or_retracted": 1864,
       "open_or_conditional": 2360,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55338
+      "unclassified": 55340
     },
-    "structural_families": 62467
+    "structural_families": 62469
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "dfa131fb511e38e3a45852b3067a76ce4b929d08e2c2428ed3a72c86a08d0a3e"
+  "universe_sha256": "5a21285686b73d6ca5d54da962e345cc034266b51297d5924cf41ff67d8362d0"
 }
