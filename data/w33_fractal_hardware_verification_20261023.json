@@ -1,0 +1,65 @@
+{
+  "schema": "w33.fractal.20261023.hardware_verification.v1",
+  "date": "2026-10-23",
+  "master_repo": "wilcompute/W33-Theory",
+  "workspace": "C:\\Repos\\Theory of Everything",
+  "pytest": {
+    "files": 11,
+    "passed": 75,
+    "failed": 0,
+    "execution_seconds": 76.42,
+    "scope": "Finite-geometry topology, optical 4x4 transfer identities, coherent path counts, FPGA Python reference, PIC GDS readback, F3 drift and simulated scheduled traffic"
+  },
+  "icarus": {
+    "tool": "Icarus Verilog",
+    "version": "12.2022.06.11",
+    "top_module": "w33_linebus_phase_frame",
+    "directed_testbench": "PASS",
+    "randomized_testbench": "PASS",
+    "random_cycles": 1500,
+    "randomized_commands_accepted": 493,
+    "backpressure_stall_observations": 507,
+    "limits": [
+      "No FPGA synthesis",
+      "No FPGA timing closure",
+      "No electrical detector interface",
+      "No quantum optical measurement"
+    ]
+  },
+  "gds": {
+    "path": "hardware/generated/w33_40bus_switch_ref_20261023.gds",
+    "bytes": 7100,
+    "git_blob_sha": "1220bbe5ab742a499c8ba2b5a8beda89b6be229e",
+    "sha256": "e8431002eb7cc36a3ccd5ffae4864821ab39171fbbff4e7e667ce2ac06dd5247",
+    "gdstk_readback": true,
+    "technology": "process-neutral, NOT foundry PDK",
+    "drc": false,
+    "lvs": false,
+    "optical_connected": false,
+    "tapeout_ready": false
+  },
+  "synchronous_interference": {
+    "pair_comparisons": 3240,
+    "simultaneous_nontrivial_phase_witnesses": 192,
+    "earliest": [
+      "4-5-19",
+      "4-11-19"
+    ],
+    "arrival_slots": 4,
+    "required_wait_slots_each": 2,
+    "measurements": "No real photon counts"
+  },
+  "capacity": {
+    "demands_per_case": 90,
+    "models": 4,
+    "delivered_per_case": 90,
+    "physical_quantum_memory": false,
+    "traffic_proof": "Deterministic greedy classical reservation simulation, not multi-commodity optimality"
+  },
+  "qutrit": {
+    "mathematical_two_mode_gates": 3,
+    "error_frobenius_ideal": 4.1869153460808796e-16,
+    "photonic_process_fidelity_measured": false
+  },
+  "overall": "Verified software, numerical and generic GDS/HDL prototypes only, NOT physical device certification"
+}
