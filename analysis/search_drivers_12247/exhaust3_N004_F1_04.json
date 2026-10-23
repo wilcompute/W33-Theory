@@ -1,0 +1,12 @@
+{
+ "extended": true,
+ "control_sampled_hits": 98,
+ "control_found": 98,
+ "base": "N004_F1_04",
+ "A4_classes": 16,
+ "lines": 22117,
+ "pairs": 13820158,
+ "twisted10_pairs": 558858,
+ "scalar10_pairs": 0,
+ "seconds": 293
+}

@@ -1,0 +1,50 @@
+{
+ "C10_N001_F1_04_1062_34": {
+  "agree": 668,
+  "mismatch": 0,
+  "mismatches": {}
+ },
+ "C10_N001_F1_04_2816_59": {
+  "agree": 668,
+  "mismatch": 0,
+  "mismatches": {}
+ },
+ "C10_N004_F1_04_3054_5536": {
+  "agree": 650,
+  "mismatch": 0,
+  "mismatches": {}
+ },
+ "T10_N001_F1_04_4612_5416_4612_6483": {
+  "agree": 830,
+  "mismatch": 0,
+  "mismatches": {}
+ },
+ "T10_N004_F1_05_4906_3085_3822_4947": {
+  "agree": 1000,
+  "mismatch": 0,
+  "mismatches": {}
+ },
+ "Z6II_2496_v0": {
+  "agree": 782,
+  "mismatch": 8,
+  "mismatches": {
+   "((0, 1, 2), 'B', 'F')": 4,
+   "((0, 1, 4), 'B', 'F')": 4
+  }
+ },
+ "A8_1": {
+  "agree": 756,
+  "mismatch": 0,
+  "mismatches": {}
+ },
+ "A8_40": {
+  "agree": 800,
+  "mismatch": 0,
+  "mismatches": {}
+ },
+ "A8_90": {
+  "agree": 602,
+  "mismatch": 0,
+  "mismatches": {}
+ }
+}

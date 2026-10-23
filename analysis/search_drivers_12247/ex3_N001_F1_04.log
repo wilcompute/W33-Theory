@@ -1,0 +1,2 @@
+N001_F1_04 tables 28 s; A4 classes 16 lines 22506
+{'extended': True, 'control_sampled_hits': 85, 'control_found': 85, 'base': 'N001_F1_04', 'A4_classes': 16, 'lines': 22506, 'pairs': 14668779, 'twisted10_pairs': 549256, 'scalar10_pairs': 0, 'seconds': 305}

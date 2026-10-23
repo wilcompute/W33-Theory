@@ -1,0 +1,163 @@
+{
+  "12247": {
+    "per_base": [
+      {
+        "extended": true,
+        "control_sampled_hits": 85,
+        "control_found": 85,
+        "base": "N001_F1_04",
+        "A4_classes": 16,
+        "lines": 22506,
+        "pairs": 14668779,
+        "twisted10_pairs": 549256,
+        "scalar10_pairs": 0,
+        "seconds": 305
+      },
+      {
+        "extended": true,
+        "control_sampled_hits": 90,
+        "control_found": 90,
+        "base": "N004_F1_03",
+        "A4_classes": 16,
+        "lines": 22503,
+        "pairs": 14169966,
+        "twisted10_pairs": 543074,
+        "scalar10_pairs": 0,
+        "seconds": 298
+      },
+      {
+        "extended": true,
+        "control_sampled_hits": 98,
+        "control_found": 98,
+        "base": "N004_F1_04",
+        "A4_classes": 16,
+        "lines": 22117,
+        "pairs": 13820158,
+        "twisted10_pairs": 558858,
+        "scalar10_pairs": 0,
+        "seconds": 293
+      },
+      {
+        "extended": true,
+        "control_sampled_hits": 93,
+        "control_found": 93,
+        "base": "N004_F1_05",
+        "A4_classes": 16,
+        "lines": 22117,
+        "pairs": 13820158,
+        "twisted10_pairs": 558858,
+        "scalar10_pairs": 0,
+        "seconds": 251
+      },
+      {
+        "extended": true,
+        "control_sampled_hits": 0,
+        "control_found": 0,
+        "base": "N008_F1_02",
+        "A4_classes": 16,
+        "lines": 25572,
+        "pairs": 21325113,
+        "twisted10_pairs": 0,
+        "scalar10_pairs": 0,
+        "seconds": 243
+      },
+      {
+        "extended": true,
+        "control_sampled_hits": 0,
+        "control_found": 0,
+        "base": "N008_F1_03",
+        "A4_classes": 16,
+        "lines": 25267,
+        "pairs": 20948056,
+        "twisted10_pairs": 0,
+        "scalar10_pairs": 0,
+        "seconds": 323
+      },
+      {
+        "extended": true,
+        "control_sampled_hits": 0,
+        "control_found": 0,
+        "base": "N008_F1_04",
+        "A4_classes": 16,
+        "lines": 25383,
+        "pairs": 21162896,
+        "twisted10_pairs": 0,
+        "scalar10_pairs": 0,
+        "seconds": 318
+      }
+    ],
+    "pairs": 119915126,
+    "twisted10": 2210046,
+    "scalar10": 0,
+    "control": [
+      366,
+      366
+    ]
+  },
+  "12250": {
+    "C10_N001_F1_04_1062_34": {
+      "agree": 668,
+      "mismatch": 0,
+      "mismatches": {}
+    },
+    "C10_N001_F1_04_2816_59": {
+      "agree": 668,
+      "mismatch": 0,
+      "mismatches": {}
+    },
+    "C10_N004_F1_04_3054_5536": {
+      "agree": 650,
+      "mismatch": 0,
+      "mismatches": {}
+    },
+    "T10_N001_F1_04_4612_5416_4612_6483": {
+      "agree": 830,
+      "mismatch": 0,
+      "mismatches": {}
+    },
+    "T10_N004_F1_05_4906_3085_3822_4947": {
+      "agree": 1000,
+      "mismatch": 0,
+      "mismatches": {}
+    },
+    "Z6II_2496_v0": {
+      "agree": 782,
+      "mismatch": 8,
+      "mismatches": {
+        "((0, 1, 2), 'B', 'F')": 4,
+        "((0, 1, 4), 'B', 'F')": 4
+      }
+    },
+    "A8_1": {
+      "agree": 756,
+      "mismatch": 0,
+      "mismatches": {}
+    },
+    "A8_40": {
+      "agree": 800,
+      "mismatch": 0,
+      "mismatches": {}
+    },
+    "A8_90": {
+      "agree": 602,
+      "mismatch": 0,
+      "mismatches": {}
+    }
+  },
+  "12248": {
+    "nsdump_v2_rejects": true
+  },
+  "12249": {
+    "v0_rank": 16,
+    "v9_rank": 16,
+    "higgs_branch_rank": 15
+  },
+  "checks": {
+    "12247: every SU(5)-preserving two-line configuration: 119,915,126 pairs, 2,210,046 with twisted 10s, 0 scalar; control 366/366": true,
+    "12250: the rule predicts the engine's statistics for all 5,974 T6/Z3 fields; 782/790 on Z6-II, misses = the 8 suspect states": true,
+    "12248: the independent engine rejects the translated Z6-II model (inconclusive cross-check, recorded)": true,
+    "12249: shift class rank 16 vs scalar-10 Higgs branch rank 15 -- root identity only": true,
+    "paper: Theorem 7.7 states every Wilson-line configuration with an SU(5)": true
+  },
+  "all_checks_pass": true
+}
