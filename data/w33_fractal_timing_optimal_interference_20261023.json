@@ -1,0 +1,34 @@
+{
+  "all_path_pair_comparisons": 3240,
+  "experiment_boundary": [
+    "same discrete tick does not imply same optical carrier phase",
+    "all WAIT events require physical optical delay or storage",
+    "switch settling and group-delay dispersion unmodelled"
+  ],
+  "minimum_same_arrival_witness": {
+    "arrival_slots": 4,
+    "path_a": [
+      4,
+      5,
+      19
+    ],
+    "path_b": [
+      4,
+      11,
+      19
+    ],
+    "relative_i_exponent": 1,
+    "waits_a": 2,
+    "waits_b": 2
+  },
+  "no_wait_nontrivial_phase_pairs": 0,
+  "proof_boundary": "with two consecutive no-WAIT moves under globally fixed mask slots, each path has the same mask sequence and thus identical ideal i-phase frame",
+  "relative_phase_histogram": {
+    "t=4;i_exp=1": 66,
+    "t=4;i_exp=3": 54,
+    "t=5;i_exp=1": 36,
+    "t=5;i_exp=3": 36
+  },
+  "same_start_same_arrival_nontrivial_phase_pairs": 192,
+  "schema": "w33.linebus.timed_coherent_two_hop.v1"
+}
