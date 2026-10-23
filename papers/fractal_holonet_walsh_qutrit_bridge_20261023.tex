@@ -1,0 +1,279 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\title{\textbf{Walsh-Encoded Qutrits on the Forty W33 Optical Line Buses}\\
+Exact Invariant Subspace, Metaplectic Reflection, Phase-Noise Law,\\
+and a Rigorous Inter-Bus Transfer Obstruction}
+\author{W33-Theory photonic architecture research}
+\date{23 October 2026 --- mathematical software-verification edition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\maketitle
+\begin{abstract}
+Four-mode XOR line buses admit a natural three-dimensional
+single-photon quantum-information subspace: the nontrivial
+Walsh characters of the Klein four group. Unlike the naive
+three-of-four spatial-port encoding, this qutrit is exactly
+invariant under all four ideal XOR permutations. Its logical
+XOR actions are sign-reflections related to the known qutrit
+metaplectic $R$ gate. A distinct Fourier processor generates a
+noncommuting transformation; their product is proved to have
+infinite projective order by a non-algebraic-integer trace
+witness. Independent Gaussian rail-phase noise obeys the
+exact average auxiliary leakage law
+$(1-e^{-\sigma^2})/4$. Finally, the shared-vertex
+40-mode representation exhibits an important interface
+obstruction: code overlap between distinct W33 line buses
+has rank zero or one, never three. An explicitly constructed
+three- or four-rail permutation target restores complete
+qutrit transport, though its physical implementation is
+unresolved. These are mathematical and simulation results,
+not laboratory device measurements or a universality proof.
+\end{abstract}
+\tableofcontents
+
+\section{The carrier geometry and a four-mode definition}
+Each of the forty totally isotropic lines of $W(3,3)$ has
+four projective points. Each of the forty points lies on
+four lines, producing 160 point--line incidences. The
+three nonidentity port permutations of each line bus
+form the Klein four-group $K=C_2\times C_2$, with
+\[
+ (P_m)_{k,j}=\delta_{k,j\oplus m},
+ \qquad j,k,m\in\mathbb F_2^2 .
+\]
+Let $H_2=2^{-1/2}\left(\begin{smallmatrix}1&1\\
+1&-1\end{smallmatrix}\right)$ and $W=H_2\otimes H_2$.
+The normalized uniform character is
+\[
+ |a\rangle=\frac{1}{2}(1,1,1,1)^{\mathsf T},
+\]
+and the $4\times3$ isometry $V$ consists of the remaining
+three columns of $W$, in the declared character order
+$s=1,2,3$. Thus $V^\dagger V=I_3$, $V^\dagger a=0$,
+and $VV^\dagger+aa^\dagger=I_4$. Physically the logical
+qutrit is a \emph{coherent four-rail encoding}; it is not
+a state restricted to three physical port numbers.
+
+\begin{theorem}[Leakage-free XOR action]
+For every $m\in\mathbb F_2^2$,
+\[
+ P_m V=VD_m,\qquad
+ D_m=\operatorname{diag}_{s=1,2,3}(-1)^{s\cdot m}.
+\]
+Thus $(I_4-VV^\dagger)P_mV=0$ exactly.
+\end{theorem}
+\begin{proof}
+Walsh characters diagonalize translations of $\mathbb F_2^2$.
+The trivial character has eigenvalue one and the three
+nontrivial characters give the stated signs. Their span
+is consequently invariant under all $P_m$.
+\end{proof}
+A previous three-spatial-port compression produces singular
+values $(1,1,0)$ for any nonidentity XOR permutation, and
+therefore loses an entire computational basis direction.
+There is no contradiction: it is a \emph{different code
+subspace}. The present code is permutation-symmetry adapted,
+not a quantum error-correcting code for arbitrary optical noise.
+
+\section{A concrete qutrit processor and a known gate family}
+Let $\omega=e^{2\pi i/3}$ and
+\[
+ F_3=\frac1{\sqrt3}
+ \begin{pmatrix}
+ 1&1&1\\1&\omega&\omega^2\\1&\omega^2&\omega
+ \end{pmatrix}.
+\]
+Define a physical four-mode target
+\[
+ U_{\mathrm{encoded}\,F_3}
+ =VF_3V^\dagger+aa^\dagger.
+\]
+This unitary acts as $F_3$ on the encoded qutrit while
+fixing the auxiliary Walsh mode. Its abstract optical
+factorization is: one Walsh decoder $W^\dagger$,
+an independent three-mode $F_3$ processor with
+the fourth mode bypassing, then a Walsh encoder $W$.
+The qutrit $F_3$ itself has an exact three-complex-Givens
+plus terminal-phase decomposition in the existing software;
+physical waveguides, couplers, electrodes and per-port delays
+still require a selected PDK.
+
+In the chosen character order, XOR mask $m=1$
+acts as
+\[
+ D_1=\operatorname{diag}(-1,1,-1).
+\]
+Up to multiplication by a physically irrelevant
+single-operation global $-1$ and a relabeling of qutrit
+basis states, it is the familiar single-qutrit
+metaplectic reflection $R=\operatorname{diag}(1,1,-1)$.
+\textbf{The metaplectic qutrit gate is established prior art},
+not a newly discovered quantum-gate species.
+See Glaudell, Ross, van de Wetering, and Yeh,
+\emph{Qutrit metaplectic gates are a subset of
+Clifford+T} (2022), \url{https://arxiv.org/abs/2202.09235}.
+Our project-specific contribution is its explicitly tested
+four-rail W33 Walsh-character encoding.
+
+\begin{theorem}[Infinite projective order]
+The unitary $A=F_3D_1$ has infinite order modulo
+global phase.
+\end{theorem}
+\begin{proof}
+Direct exact symbolic calculation gives
+\[
+ \operatorname{tr}(A)=-\frac1{\sqrt3},\qquad
+ \det(A)=-i.
+\]
+The field norm of $-1/\sqrt3$ in $\mathbb Q(\sqrt3)$ is
+$-1/3$, not an integer. Hence $\operatorname{tr}(A)$
+is not an algebraic integer. If $A^n=\lambda I$
+for some $n>0$, then $\lambda^3=\det(A)^n$
+is a root of unity, so $\lambda$ is a root of unity.
+Every eigenvalue of $A$ would then be a root of unity,
+and its trace would be an algebraic integer, contradiction.
+\end{proof}
+This proves infinitely many distinct projective operations
+from $F_3$ and the sign reflection; it does \emph{not}
+establish density in $PU(3)$, general single-qutrit
+synthesis, a two-qutrit entangler, error correction,
+or a universal quantum computer.
+
+\section{Exact differential optical-phase leakage law}
+Let four rails accumulate phases
+$\phi_0,\ldots,\phi_3$ and define
+$E=\operatorname{diag}(e^{i\phi_j})$. For an
+equally weighted incoherent ensemble of three logical
+basis states ($I_3/3$ in the code), leakage into the
+single auxiliary Walsh character is
+\[
+ p_{\mathrm{aux}}=
+ \frac13\left\|a^\dagger EV\right\|^2
+ =\frac{1-\left|\frac14\sum_{j=0}^3
+ e^{i\phi_j}\right|^2}{3}.
+\]
+A common-mode phase $\phi_j=\phi$ contributes zero
+code-to-auxiliary leakage. Under independent Gaussian
+$\phi_j\sim\mathcal N(0,\sigma^2)$, the expected
+character coherence obeys
+\[
+ \mathbb E\left|\frac14\sum_j e^{i\phi_j}\right|^2
+ =\frac{1+3e^{-\sigma^2}}4,
+\]
+so
+\begin{equation}
+ \boxed{\mathbb E[p_{\mathrm{aux}}]
+ =\frac{1-e^{-\sigma^2}}4.}
+ \label{eq:noise}
+\end{equation}
+This is an exact statistical identity \emph{for the
+stated input ensemble and iid Gaussian phase model},
+not a worst-case bound or a characterization of
+a fabricated chip. For example, $\sigma=0.1$ rad gives
+$\mathbb E[p_{\mathrm{aux}}]\approx0.00249$.
+To target mean auxiliary leakage at most $\epsilon<1/4$,
+the corresponding model constraint is
+\[
+ \sigma\le\sqrt{-\ln(1-4\epsilon)}.
+\]
+The code does not correct an unknown per-rail phase:
+differential phase fluctuates the code into the auxiliary
+mode. Uniform attenuation does not mix code with auxiliary
+but loses photon survival to the environment.
+Unequal attenuations cause both loss and mode mixing.
+
+\section{The inter-bus rank obstruction}
+Suppose, solely for this graph-level test, that there
+is one orthonormal physical optical mode per W33 point,
+giving an ambient $\mathbb C^{40}$. Let $V_L$ be the
+$40\times3$ Walsh-character isometry supported on the
+four points of an isotropic line $L$.
+For distinct lines $L,L'$, their intersections have
+cardinality zero or one, so the direct overlap
+$V_L^\dagger V_{L'}$ has rank zero or one.
+The exact enumeration of all $\binom{40}{2}=780$
+distinct line pairs yields:
+\[
+\begin{array}{lrr}
+\toprule
+\text{Line relationship}&\text{Pairs}&
+ \text{Singular values of direct code overlap}\\
+\midrule
+|L\cap L'|=1&240&(3/4,0,0)\\
+|L\cap L'|=0&540&(0,0,0)\\
+\bottomrule
+\end{array}
+\]
+Thus \emph{simple overlap via the shared point}
+cannot carry an arbitrary logical qutrit between
+distinct buses. This is not a no-go theorem for
+actively controlled optical mode shuffling.
+
+A constructive full-qutrit transfer is obtained
+by an explicit permutation of the 40 physical
+mode labels that maps the ordered four-port
+carrier of $L$ to that of $L'$. Choose aligned
+line-port orderings, placing a common point first
+if one exists. Swap the three nonshared pairs
+for intersecting lines, or swap all four pairs
+for disjoint lines. For the resulting mode-permutation
+operator $S_{L\to L'}$,
+\[
+ S_{L\to L'}V_L=V_{L'}.
+\]
+The code verifies this for every one of the
+780 distinct line pairs. These 3- or 4-swap
+sequences are \emph{mathematical optical
+mode-routing targets}; real crossovers,
+waveguides, coupling, timing and controller
+resources are unspecified.
+
+A crucial caveat: the earlier hardware model
+contains 160 \emph{point--line incidence ports},
+not necessarily the forty identical physical
+spatial modes of this particular direct-overlap
+calculation. If different bus incidences at one
+point use separate waveguides, direct overlap
+must be replaced by a measured/interconnected
+scattering map. It cannot be silently assumed.
+
+\section{Physical falsification plan}
+Build a four-rail encoder with calibrated $W^\dagger$
+and measure complex transfer matrices for each of the
+four XOR states. Prepare three orthogonal encoded
+input states and directly measure leakage into the
+uniform auxiliary mode. Apply controlled common-mode
+and rail-dependent phase perturbations; check
+Eq.~\eqref{eq:noise} using a specified source ensemble
+and noise model. Then construct a line-to-line
+four-rail transfer test that independently measures
+all three logical singular values, including arrival
+time and inter-bus phase. The physical target requires
+waveguide S-parameters, an authorized foundry PDK,
+DRC/LVS, optical phase stabilization, detectors and
+a corresponding loss/measurement budget.
+
+\section{Reproducibility and evidence boundaries}
+\texttt{analysis/w33\_walsh\_encoded\_qutrit\_interface\_20261023.py}
+and its tests verify the invariant three-dimensional
+representation and embedded Fourier gate.
+\texttt{analysis/w33\_walsh\_qutrit\_metaplectic\_noise\_20261023.py}
+uses SymPy exact algebra and Monte Carlo phase experiments
+against the closed-form leakage law.
+\texttt{analysis/w33\_walsh\_qutrit\_interbus\_rank\_20261023.py}
+exhausts all 780 distinct line pairs and certifies
+both the rank obstruction and explicit full-rail
+permutation construction. The corresponding frozen
+\texttt{data/*.json} and \texttt{tests/*.py} files
+carry machine-readable evidence.
+
+All results concern finite-dimensional mathematical
+models, executable regressions and synthetic noise.
+They do \emph{not} establish an experimentally
+realized W33 photon processor, optical quantum memory,
+fault-tolerant gate set, or a theory of everything.
+\end{document}
