@@ -1,0 +1,42 @@
+{
+ "sym-sym-sym": {
+  "invariant_moduli": 18,
+  "translations": 0,
+  "some_translation_radius_runs": false
+ },
+ "sym-sym-asym": {
+  "invariant_moduli": 12,
+  "translations": 2,
+  "some_translation_radius_runs": false
+ },
+ "sym-asym-sym": {
+  "invariant_moduli": 12,
+  "translations": 2,
+  "some_translation_radius_runs": false
+ },
+ "sym-asym-asym": {
+  "invariant_moduli": 6,
+  "translations": 4,
+  "some_translation_radius_runs": false
+ },
+ "asym-sym-sym": {
+  "invariant_moduli": 12,
+  "translations": 2,
+  "some_translation_radius_runs": false
+ },
+ "asym-sym-asym": {
+  "invariant_moduli": 6,
+  "translations": 4,
+  "some_translation_radius_runs": false
+ },
+ "asym-asym-sym": {
+  "invariant_moduli": 6,
+  "translations": 4,
+  "some_translation_radius_runs": false
+ },
+ "asym-asym-asym": {
+  "invariant_moduli": 0,
+  "translations": 6,
+  "some_translation_radius_runs": false
+ }
+}

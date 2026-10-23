@@ -1,0 +1,62 @@
+{
+ "per_plane": {
+  "sym": {
+   "translations": 0,
+   "moduli": 2
+  },
+  "asym": {
+   "translations": 2,
+   "moduli": 0
+  }
+ },
+ "assignments": {
+  "sym-sym-sym": {
+   "translations": 0,
+   "moduli": 6,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  },
+  "sym-sym-asym": {
+   "translations": 2,
+   "moduli": 4,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  },
+  "sym-asym-sym": {
+   "translations": 2,
+   "moduli": 4,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  },
+  "sym-asym-asym": {
+   "translations": 4,
+   "moduli": 2,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  },
+  "asym-sym-sym": {
+   "translations": 2,
+   "moduli": 4,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  },
+  "asym-sym-asym": {
+   "translations": 4,
+   "moduli": 2,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  },
+  "asym-asym-sym": {
+   "translations": 4,
+   "moduli": 2,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  },
+  "asym-asym-asym": {
+   "translations": 6,
+   "moduli": 0,
+   "moduli_on_translation_planes": 0,
+   "interpolation_possible": false
+  }
+ }
+}

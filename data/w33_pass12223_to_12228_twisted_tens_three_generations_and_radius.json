@@ -1,0 +1,84 @@
+{
+  "12223": {
+    "models": 153,
+    "generations": {
+      "(3, 3)": 58,
+      "(6, 6)": 95
+    },
+    "anomaly_ok": 153,
+    "tachyon_free": 153,
+    "with_scalar5": 153
+  },
+  "12224": {
+    "sampling": {
+      "draws": 3000,
+      "tries": 9598,
+      "hits": 63,
+      "density": 0.021,
+      "wilson95": [
+        0.016448476023296632,
+        0.026776706023586276
+      ],
+      "one_line_density": 0.0017523061213893841
+    },
+    "built": 63,
+    "loaded": 9,
+    "tens": {
+      "fermion_tw_W": 14,
+      "fermion_tw": 4,
+      "fermion_untw": 12
+    }
+  },
+  "12225": {
+    "1|0": 4050
+  },
+  "12226": {
+    "sym-sym-sym": {
+      "invariant_moduli": 18,
+      "translations": 0,
+      "some_translation_radius_runs": false
+    },
+    "sym-sym-asym": {
+      "invariant_moduli": 12,
+      "translations": 2,
+      "some_translation_radius_runs": false
+    },
+    "sym-asym-sym": {
+      "invariant_moduli": 12,
+      "translations": 2,
+      "some_translation_radius_runs": false
+    },
+    "sym-asym-asym": {
+      "invariant_moduli": 6,
+      "translations": 4,
+      "some_translation_radius_runs": false
+    },
+    "asym-sym-sym": {
+      "invariant_moduli": 12,
+      "translations": 2,
+      "some_translation_radius_runs": false
+    },
+    "asym-sym-asym": {
+      "invariant_moduli": 6,
+      "translations": 4,
+      "some_translation_radius_runs": false
+    },
+    "asym-asym-sym": {
+      "invariant_moduli": 6,
+      "translations": 4,
+      "some_translation_radius_runs": false
+    },
+    "asym-asym-asym": {
+      "invariant_moduli": 0,
+      "translations": 6,
+      "some_translation_radius_runs": false
+    }
+  },
+  "checks": {
+    "12223: 153 twisted-10 models: 58 three-generation (net 10 = net 5bar = 3), 95 six-generation; all anomaly- and tachyon-free": true,
+    "12224: two lines: density 63/3000 (95% CI 1.6-2.7%), 12x the one-line density; 9 consistent models, all 10s fermions, 0 scalars": true,
+    "12225: all 4050 twisted 10-type momenta (one line) are Witten-twisted with integral P.V0": true,
+    "12226: (II(2,2) at rho)^3, all 8 sym/asym assignments: translations only on asymmetric planes, no translation length varies (cross-plane moduli included)": true
+  },
+  "all_checks_pass": true
+}
