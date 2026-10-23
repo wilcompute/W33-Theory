@@ -67430,6 +67430,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fb77143945d10049e613d7b045e2c4a164883ca249a3d8fcd3812273ace1f0f2",
+      "normalized_formula": "\"ancilla_initial_and_final\":\"|0>(disentangled)\"",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_followups_round5.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 171,
+          "path": "analysis/w33_20261022_five_followups_round5.py",
+          "raw": "\"ancilla_initial_and_final\":\"|0> (disentangled)\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c6f8227a92f5022b15f41e1388fd63e14b780b82e149d1a49ea72fff8092f599",
+      "structural_formula": "\"ancilla_initial_and_final\":\"|#>(disentangled)\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "ab7f38cb013f41bb2c042d5c07affb8f3a68a9e6e6949292c4021548feb679d2",
       "normalized_formula": "\"and137=q^q*(mu+1)+lamisthefine-structureW(3,3)primefromCCCXXIX.\"",
       "numeric_literals": [
@@ -125936,6 +125963,34 @@
       },
       "structural_family_id": "3e6b105356bd0745cf023567027d19eb0b80c3c2fe5872a5850d379df80f6792",
       "structural_formula": "\"logical_normalizer_boundary\":\"Theq=#linecodeC_Whasdistance6,sodistancealonedoesnotruleoutamapintoC_W;nocanonical1#-cover-to-#-pointcoordinatemapiscertifiedhere.\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1e89ab3982bc7cb6308a1bddcaa3c01751aef3a0123413362eed8db2284f5c62",
+      "normalized_formula": "\"logical_operator\":\"M_L=diag(1,zeta9,zeta9^2)ononelogicalchargeq=<v,x>mod3\"",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_followups_round5.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 169,
+          "path": "analysis/w33_20261022_five_followups_round5.py",
+          "raw": "\"logical_operator\":\"M_L=diag(1,zeta9,zeta9^2) on one logical charge q=<v,x> mod3\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "72baab50346d0ad980e2e602f6a70d6b6cde03b30af00a7fa14a0d11dae1d1de",
+      "structural_formula": "\"logical_operator\":\"M_L=diag(#,zeta9,zeta9^#)ononelogicalchargeq=<v,x>mod3\""
     },
     {
       "file_count": 1,
@@ -604824,6 +604879,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "32ab1e3d4447b851430b5bf68858cc3d122e05615e5959454cbdd42e31f21905",
+      "normalized_formula": "D_x^dagger=D_(-x),sothesymplecticprojectivedirection[x]uniquelydeterminestherealobservableRe(W_x)=(W_x+W_x^dagger)/2.Anexhaustivecheckofall780distinctpairsproves^W_xandW_ycommuteexactlywhenx,yarecollinearinW33A^(uptonumerical1e-9toleranceincomplexevaluation;thecommutatorrelationisalgebraic)",
+      "numeric_literals": [
+        "2",
+        "3",
+        "80",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_followups_round5.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/2026-10-22_five_followups_round5.md",
+          "raw": "D_x^dagger=D_(-x), so the symplectic projective direction [x] uniquely determines the real observable Re(W_x)=(W_x+W_x^dagger)/2. An exhaustive check of all 780 distinct pairs proves **W_x and W_y commute exactly when x,y are collinear in W33 A** (up to numerical 1e-9 tolerance in complex evaluation; the commutator relation is algebraic).",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "84dec5209bf750c711566bd5c2d64942cc6c4591d9292982bba332e57775ddca",
+      "structural_formula": "D_x^dagger=D_(-x),sothesymplecticprojectivedirection[x]uniquelydeterminestherealobservableRe(W_x)=(W_x+W_x^dagger)/#.Anexhaustivecheckofall7#distinctpairsproves^W_xandW_ycommuteexactlywhenx,yarecollinearinW3#A^(uptonumerical1e-#toleranceincomplexevaluation;thecommutatorrelationisalgebraic)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "88cb18770bfe670d4b8e9869fa2c59a6c069eb40e498baba35987b516149de73",
       "normalized_formula": "D_{10}=C_5\\rtimesC_2",
       "numeric_literals": [
@@ -675877,6 +675962,34 @@
       },
       "structural_family_id": "a2625e365816f42c3dbc7fd5b0c7d79d1d3b0a585e5a827e65fc4b630c125988",
       "structural_formula": "KG(#,#)=\\operatorname{SRG}(#,#,#,#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a980e7a29a836113cb436d06c9cdde767a05c0de03b71ec727b44e41541c84a6",
+      "normalized_formula": "KH(kappa)K^-1=H(-kappa),soH(+1)andH(-1)haveidenticalspectra.Withthesourceparameterkappaheldfixedandnonzero,themodelisnotK-invariant.^Nospontaneoustime-reversalviolationfollows^,becausetheoddsourcewasexplicitlyinserted.MoreoverKisa*chosenbasisantiunitary*,notindependentlyjustifiedasthephysicaltime-reversaloperatorofphoton/qutrithardware",
+      "numeric_literals": [
+        "+1",
+        "-1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_followups_round5.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 65,
+          "path": "analysis/2026-10-22_five_followups_round5.md",
+          "raw": "K H(kappa) K^-1=H(-kappa), so H(+1) and H(-1) have identical spectra. With the source parameter kappa held fixed and nonzero, the model is not K-invariant. **No spontaneous time-reversal violation follows**, because the odd source was explicitly inserted. Moreover K is a *chosen basis antiunitary*, not independently justified as the physical time-reversal operator of photon/qutrit hardware.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c3e474850a94c32c1dcfc37065bfb51881cbc6bc003e8ee5f0a40f9ab673bc92",
+      "structural_formula": "KH(kappa)K^#=H(-kappa),soH(#)andH(#)haveidenticalspectra.Withthesourceparameterkappaheldfixedandnonzero,themodelisnotK-invariant.^Nospontaneoustime-reversalviolationfollows^,becausetheoddsourcewasexplicitlyinserted.MoreoverKisa*chosenbasisantiunitary*,notindependentlyjustifiedasthephysicaltime-reversaloperatorofphoton/qutrithardware"
     },
     {
       "file_count": 1,
@@ -840643,6 +840756,36 @@
       },
       "structural_family_id": "2f2d20906c0d85f83fbf648a8775fc4f7ea2d63b128da4a8d50f789d51f04cd5",
       "structural_formula": "Thereforethesingularquadric\\(Q^+(#,q)\\)isexactlytheprojectivizedrank-onelocus.Writing\\(X=uv^T\\)givestheSegreparametrization"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "63c97ae88e4bafee3d0041f5e6de625e0a33f296734ccf32451cdf1621e928b5",
+      "normalized_formula": "Thereforetheternarycharge`q(x)=sum_(i=0)^3x_imod3`is^constantoneveryCSScosetx+C^,andtakesvalues0,1,2onthethreerepresentativecosetsC,v+C,2v+C",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_followups_round5.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 101,
+          "path": "analysis/2026-10-22_five_followups_round5.md",
+          "raw": "Therefore the ternary charge `q(x)=sum_(i=0)^3 x_i mod3` is **constant on every CSS coset x+C**, and takes values 0,1,2 on the three representative cosets C, v+C,2v+C.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "96cf30ef7f6fa4e0035bab556b2381ad02b7272828e8bb49bb1564c0f675e3fb",
+      "structural_formula": "Thereforetheternarycharge`q(x)=sum_(i=#)^#x_imod3`is^constantoneveryCSScosetx+C^,andtakesvalues0,#,#onthethreerepresentativecosetsC,v+C,#v+C"
     },
     {
       "file_count": 1,
@@ -1037769,6 +1037912,34 @@
       },
       "structural_family_id": "228b1b920a62cf499a328e279eb959c991cea334c7142894e3e8045324d2c69d",
       "structural_formula": "^Equivariance.^Foreveryone-qutritCliffordg,g^{\u2297#}B=BR(g),sou(g\u03c8)=R(g)u(\u03c8).SinceBisreal"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "834d1fa3dd811dfadaf658df0eb1c1c8fc27eb0dd277aebb8bf0107498816cb9",
+      "normalized_formula": "^Essentialgeometryfirewall:^ThisistheLaplacianoftheregularCayleyrepresentationofSL(2,q),NOTtheW(3,q)point-coordinatesingle/two-clockHamiltonian.Theresultneitherestablishesanactualq->infinitylimitnoraWeyllaw,spectraldimension,localcausalpropagation,relativisticfielddynamics,orgravity.Identifyingaphysicalimplementationandanoperatorfamilywithsuchpropertiesisstillopen",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_followups_round5.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 138,
+          "path": "analysis/2026-10-22_five_followups_round5.md",
+          "raw": "**Essential geometry firewall:** This is the Laplacian of the regular Cayley representation of SL(2,q), NOT the W(3,q) point-coordinate single/two-clock Hamiltonian. The result neither establishes an actual q->infinity limit nor a Weyl law, spectral dimension, local causal propagation, relativistic field dynamics, or gravity. Identifying a physical implementation and an operator family with such properties is still open.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "5d4eb34fe061868b8d79935ad683a55bd72054a2d45499c245c0414619cba5bd",
+      "structural_formula": "^Essentialgeometryfirewall:^ThisistheLaplacianoftheregularCayleyrepresentationofSL(#,q),NOTtheW(#,q)point-coordinatesingle/two-clockHamiltonian.Theresultneitherestablishesanactualq->infinitylimitnoraWeyllaw,spectraldimension,localcausalpropagation,relativisticfielddynamics,orgravity.Identifyingaphysicalimplementationandanoperatorfamilywithsuchpropertiesisstillopen"
     },
     {
       "file_count": 1,
@@ -1878247,9 +1878418,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T21:06:28-04:00",
+  "frozen_at": "2026-10-22T21:20:04-04:00",
   "pass": 398,
-  "repository_head": "9e2f4147d4f14dace61b34fe445f2106eb099a47",
+  "repository_head": "e0b1cbccba1971d54bf1de990572d92cfc8030fa",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1897123,6 +1897294,14 @@
     },
     {
       "exact_formula_ids": [
+        "fb77143945d10049e613d7b045e2c4a164883ca249a3d8fcd3812273ace1f0f2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c6f8227a92f5022b15f41e1388fd63e14b780b82e149d1a49ea72fff8092f599",
+      "structural_formula": "\"ancilla_initial_and_final\":\"|#>(disentangled)\""
+    },
+    {
+      "exact_formula_ids": [
         "ab7f38cb013f41bb2c042d5c07affb8f3a68a9e6e6949292c4021548feb679d2"
       ],
       "exact_member_count": 1,
@@ -1913537,6 +1913716,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3e6b105356bd0745cf023567027d19eb0b80c3c2fe5872a5850d379df80f6792",
       "structural_formula": "\"logical_normalizer_boundary\":\"Theq=#linecodeC_Whasdistance6,sodistancealonedoesnotruleoutamapintoC_W;nocanonical1#-cover-to-#-pointcoordinatemapiscertifiedhere.\""
+    },
+    {
+      "exact_formula_ids": [
+        "1e89ab3982bc7cb6308a1bddcaa3c01751aef3a0123413362eed8db2284f5c62"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "72baab50346d0ad980e2e602f6a70d6b6cde03b30af00a7fa14a0d11dae1d1de",
+      "structural_formula": "\"logical_operator\":\"M_L=diag(#,zeta9,zeta9^#)ononelogicalchargeq=<v,x>mod3\""
     },
     {
       "exact_formula_ids": [
@@ -2041179,6 +2041366,14 @@
     },
     {
       "exact_formula_ids": [
+        "32ab1e3d4447b851430b5bf68858cc3d122e05615e5959454cbdd42e31f21905"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "84dec5209bf750c711566bd5c2d64942cc6c4591d9292982bba332e57775ddca",
+      "structural_formula": "D_x^dagger=D_(-x),sothesymplecticprojectivedirection[x]uniquelydeterminestherealobservableRe(W_x)=(W_x+W_x^dagger)/#.Anexhaustivecheckofall7#distinctpairsproves^W_xandW_ycommuteexactlywhenx,yarecollinearinW3#A^(uptonumerical1e-#toleranceincomplexevaluation;thecommutatorrelationisalgebraic)"
+    },
+    {
+      "exact_formula_ids": [
         "88cb18770bfe670d4b8e9869fa2c59a6c069eb40e498baba35987b516149de73"
       ],
       "exact_member_count": 1,
@@ -2060290,6 +2060485,14 @@
       "exact_member_count": 1,
       "structural_family_id": "dddce455b8f9fe43b146f81292058d650b8d9151c2e4897e3dddafd68e475fc0",
       "structural_formula": "KG(#,#)=\\text{Petersen}"
+    },
+    {
+      "exact_formula_ids": [
+        "a980e7a29a836113cb436d06c9cdde767a05c0de03b71ec727b44e41541c84a6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c3e474850a94c32c1dcfc37065bfb51881cbc6bc003e8ee5f0a40f9ab673bc92",
+      "structural_formula": "KH(kappa)K^#=H(-kappa),soH(#)andH(#)haveidenticalspectra.Withthesourceparameterkappaheldfixedandnonzero,themodelisnotK-invariant.^Nospontaneoustime-reversalviolationfollows^,becausetheoddsourcewasexplicitlyinserted.MoreoverKisa*chosenbasisantiunitary*,notindependentlyjustifiedasthephysicaltime-reversaloperatorofphoton/qutrithardware"
     },
     {
       "exact_formula_ids": [
@@ -2104845,6 +2105048,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2f2d20906c0d85f83fbf648a8775fc4f7ea2d63b128da4a8d50f789d51f04cd5",
       "structural_formula": "Thereforethesingularquadric\\(Q^+(#,q)\\)isexactlytheprojectivizedrank-onelocus.Writing\\(X=uv^T\\)givestheSegreparametrization"
+    },
+    {
+      "exact_formula_ids": [
+        "63c97ae88e4bafee3d0041f5e6de625e0a33f296734ccf32451cdf1621e928b5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "96cf30ef7f6fa4e0035bab556b2381ad02b7272828e8bb49bb1564c0f675e3fb",
+      "structural_formula": "Thereforetheternarycharge`q(x)=sum_(i=#)^#x_imod3`is^constantoneveryCSScosetx+C^,andtakesvalues0,#,#onthethreerepresentativecosetsC,v+C,#v+C"
     },
     {
       "exact_formula_ids": [
@@ -2154986,6 +2155197,14 @@
       "exact_member_count": 1,
       "structural_family_id": "228b1b920a62cf499a328e279eb959c991cea334c7142894e3e8045324d2c69d",
       "structural_formula": "^Equivariance.^Foreveryone-qutritCliffordg,g^{\u2297#}B=BR(g),sou(g\u03c8)=R(g)u(\u03c8).SinceBisreal"
+    },
+    {
+      "exact_formula_ids": [
+        "834d1fa3dd811dfadaf658df0eb1c1c8fc27eb0dd277aebb8bf0107498816cb9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5d4eb34fe061868b8d79935ad683a55bd72054a2d45499c245c0414619cba5bd",
+      "structural_formula": "^Essentialgeometryfirewall:^ThisistheLaplacianoftheregularCayleyrepresentationofSL(#,q),NOTtheW(#,q)point-coordinatesingle/two-clockHamiltonian.Theresultneitherestablishesanactualq->infinitylimitnoraWeyllaw,spectraldimension,localcausalpropagation,relativisticfielddynamics,orgravity.Identifyingaphysicalimplementationandanoperatorfamilywithsuchpropertiesisstillopen"
     },
     {
       "exact_formula_ids": [
@@ -2380198,20 +2380417,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90979567,
-    "exact_formula_families": 64214,
-    "files_scanned": 12523,
-    "formula_occurrences": 70316,
+    "bytes_scanned": 91003461,
+    "exact_formula_families": 64220,
+    "files_scanned": 12525,
+    "formula_occurrences": 70322,
     "status_occurrences": {
-      "certified_or_theorem": 5274,
+      "certified_or_theorem": 5275,
       "killed_or_retracted": 1865,
-      "open_or_conditional": 2363,
+      "open_or_conditional": 2364,
       "preregistered": 36,
       "retrospective_fit": 5393,
-      "unclassified": 55385
+      "unclassified": 55389
     },
-    "structural_families": 62527
+    "structural_families": 62533
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "6d9dd55973fa94309b6a7199014ca241c0db5fa88f4ce949993fc6575df49242"
+  "universe_sha256": "46f87d9ce892aa95f86c557e9fb3f8afa91e13af375e2e42e1c32d6f5290d042"
 }
