@@ -1,0 +1,49 @@
+{
+  "schema": "w33.walsh.qutrit.UP5K.unpinned_place_route.v1",
+  "date": "2026-10-23",
+  "controller": "hardware/w33_walsh_qutrit_frame.sv",
+  "toolchain": {
+    "synthesis": "YoWASP Yosys 0.70 (git sha1 28ba3cb92)",
+    "placement": "YoWASP nextpnr-ice40 0.11.1.0.post826",
+    "device": "iCE40UP5K",
+    "package": "sg48",
+    "target_frequency_MHz": 24,
+    "seed": 20261023
+  },
+  "synthesis": {
+    "SB_LUT4": 9,
+    "SB_DFFER": 8,
+    "json_path": "data/w33_walsh_qutrit_frame_ice40_20261023.json",
+    "actual_yosys_run": true
+  },
+  "placement": {
+    "placed_and_routed": true,
+    "exit_code": 0,
+    "ICESTORM_LC_used": 15,
+    "ICESTORM_LC_available": 5280,
+    "SB_IO_used": 19,
+    "SB_IO_available": 39,
+    "SB_GB_used": 1,
+    "estimated_max_clock_frequency_MHz": 78.91,
+    "target_24_MHz_met": true,
+    "one_warning": "No PCF file specified; IO pins placed automatically",
+    "pin_constraints_supplied": false,
+    "board_specific_timing_closed": false
+  },
+  "artifact": {
+    "ascii_bitstream": "data/w33_walsh_qutrit_frame_UP5K_unpinned_20261023.asc",
+    "ascii_bitstream_sha256": "fbe87424052bbef46f0da13033d84245f9c6b876f7241037e778a00a98ca1949",
+    "netlist_json_size_bytes": 375199,
+    "ascii_size_bytes": 713332
+  },
+  "verification": {
+    "preexisting_icarus_randomized_cycles": 1200,
+    "preexisting_icarus_passed": true,
+    "board_test": false,
+    "detector_interface": false,
+    "phase_actuator_interface": false,
+    "optical_experiment": false
+  },
+  "boundary": "This is place and route of an UNPINNED logic module with automatic I/O, not operational control hardware. No physical pad assignment, FPGA board clock, detector latency or phase-shifter calibration.",
+  "reproduction": "hardware/build_w33_walsh_qutrit_UP5K_reference_20261023.ps1"
+}
