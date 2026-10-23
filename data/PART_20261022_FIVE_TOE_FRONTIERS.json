@@ -1,0 +1,328 @@
+{
+  "schema": "w33.toe.five_fronts.20261022.v1",
+  "jordan": {
+    "status": "THEOREM_C_MODULE_LOGICAL_Q_OPEN",
+    "module": "C=Sym^(p-1)(F_p^4)^*, restricted to order-p transvection",
+    "all_prime_formula": "sum_(j=1)^p J_j^(p-j+1)",
+    "proof": "V^*=J2 + 1 + 1; degree p-1 monomials split as sum_t Sym^t(J2) tensor Sym^(p-1-t)(1+1), with Sym^t(J2)=J_(t+1) for t<p",
+    "finite_regressions": [
+      {
+        "p": 2,
+        "C_dimension": 4,
+        "rank_powers": [
+          4,
+          1,
+          0
+        ],
+        "jordan_blocks": {
+          "1": 2,
+          "2": 1
+        }
+      },
+      {
+        "p": 3,
+        "C_dimension": 10,
+        "rank_powers": [
+          10,
+          4,
+          1,
+          0
+        ],
+        "jordan_blocks": {
+          "1": 3,
+          "2": 2,
+          "3": 1
+        }
+      },
+      {
+        "p": 5,
+        "C_dimension": 35,
+        "rank_powers": [
+          35,
+          20,
+          10,
+          4,
+          1,
+          0
+        ],
+        "jordan_blocks": {
+          "1": 5,
+          "2": 4,
+          "3": 3,
+          "4": 2,
+          "5": 1
+        }
+      },
+      {
+        "p": 7,
+        "C_dimension": 84,
+        "rank_powers": [
+          84,
+          56,
+          35,
+          20,
+          10,
+          4,
+          1,
+          0
+        ],
+        "jordan_blocks": {
+          "1": 7,
+          "2": 6,
+          "3": 5,
+          "4": 4,
+          "5": 3,
+          "6": 2,
+          "7": 1
+        }
+      }
+    ]
+  },
+  "clock": {
+    "status": "EXACT_TOY_MINIMA_FINITE_T_NO_SPONTANEOUS_SELECTION",
+    "energy": "V(x)=-a*sum(x_i^4)+gamma*sum_(i<j)B_ij*x_i^2*x_j^2; norm(x)=1; a>0 gamma>=0",
+    "global_minimum": "-a",
+    "minimizers": "{+e_i,-e_i : i=1..40}",
+    "projective_minima": 40,
+    "group_transitive": "PSp(4,3) permutes all 40 anchor choices",
+    "tangent_Hessian": "diag(4*a + 2*gamma*B_ij, j!=i): 12 directions 4a and 27 directions 4a+2gamma",
+    "finite_temperature_exact": "Gibbs measure is PSp-invariant, hence E[x_i^2]=1/40 for every beta finite",
+    "temperature_zero_ensemble": "Symmetric mixture remains unselected unless one adds a seed/thermodynamic limit",
+    "numerical_nonviolations": 1000,
+    "sample_lowest_V_a2_gamma3": 0.4892135519088063
+  },
+  "routing": {
+    "status": "EXACT_ABSTRACT_B_COUPLER_ROUTING_NOT_PHOTONIC_HARDWARE",
+    "transvections_certified": 40,
+    "each_transvection": {
+      "anchor": 0,
+      "fixed_points": 13,
+      "triangles": 9,
+      "swap_gates": 18,
+      "parallel_layers": 2
+    },
+    "permutation_circuits": "9 disjoint SWAPs then 9 disjoint SWAPs",
+    "B_topology_degree": 27,
+    "A_topology_degree": 12,
+    "A_coupler_pair_within_any_moving_cycle": false,
+    "distinct_B_edges_exercised": 540,
+    "edge_anchor_multiplicities": {
+      "2": 540
+    },
+    "physical_device_assumed": false
+  },
+  "nonclifford": {
+    "status": "EXACT_ZERO_LOGICAL_PRESERVED_OTHER_COSET_LEAKS",
+    "physical_gate": "diag(1,zeta9,zeta9^2) on each of 40 qutrits",
+    "non_clifford": true,
+    "all_stabilizer_codewords": 59049,
+    "zero_logical_phase_distribution_mod9": {
+      "0": 59049
+    },
+    "logical_coset_u_support": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "relative_phase_distribution_mod9": {
+      "0": 19683,
+      "3": 13122,
+      "6": 26244
+    },
+    "code_projector_survival_probability": "1/27",
+    "abstract_injection_conclusion": "Uniform transversal ninth-root gate does not preserve all encoded states. Syndrome measurement + postselection gives nonunitary state-dependent channel.",
+    "encoded_non_clifford_unitary_obtained": false,
+    "threshold_or_decoder_proved": false
+  },
+  "continuum": {
+    "status": "THEOREM_BOUNDED_ATOMIC_SPECTRUM_NO_WEYL_LAW_FIXED_CHARACTERISTIC",
+    "source_prior_repo": "Pass11197 already proved uniform Laplacian collapse; this extends to ONE anchored transvection",
+    "operator": "a(q)*I+b(q)*A_q + epsilon(q)*(2I-T-T^-1) with single order-p transvection",
+    "nontrivial_eigenvalue_bound": "p+2 for odd fixed p, independent of t",
+    "proof": "A_q has three eigenspaces and commutes with T. T has p-th roots of unity; 2-T-T^-1 has (p+1)/2 distinct eigenvalues for odd p. The constant sector contributes one point and two other A eigenspaces at most (p+1)/2 each.",
+    "no_go": "This narrowly specified family cannot develop infinitely many distinct low-energy eigenvalues at fixed p. It is not a proof against interacting/tensor/graph-tower continuum models.",
+    "cases": [
+      {
+        "p": 3,
+        "t": 1,
+        "q": 3,
+        "n": 40,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.8333333333333334,
+          1.3333333333333333
+        ],
+        "multiplicities": [
+          24,
+          15
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 5
+      },
+      {
+        "p": 3,
+        "t": 2,
+        "q": 9,
+        "n": 820,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9111111111111111,
+          1.1111111111111112
+        ],
+        "multiplicities": [
+          450,
+          369
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 5
+      },
+      {
+        "p": 3,
+        "t": 3,
+        "q": 27,
+        "n": 20440,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9656084656084656,
+          1.037037037037037
+        ],
+        "multiplicities": [
+          10584,
+          9855
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 5
+      },
+      {
+        "p": 3,
+        "t": 4,
+        "q": 81,
+        "n": 538084,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9879554351099067,
+          1.0123456790123457
+        ],
+        "multiplicities": [
+          272322,
+          265761
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 5
+      },
+      {
+        "p": 5,
+        "t": 1,
+        "q": 5,
+        "n": 156,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.8666666666666667,
+          1.2
+        ],
+        "multiplicities": [
+          90,
+          65
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 7
+      },
+      {
+        "p": 5,
+        "t": 2,
+        "q": 25,
+        "n": 16276,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.963076923076923,
+          1.04
+        ],
+        "multiplicities": [
+          8450,
+          7825
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 7
+      },
+      {
+        "p": 5,
+        "t": 3,
+        "q": 125,
+        "n": 1968876,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9921269841269841,
+          1.008
+        ],
+        "multiplicities": [
+          992250,
+          976625
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 7
+      },
+      {
+        "p": 5,
+        "t": 4,
+        "q": 625,
+        "n": 244531876,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9984051118210863,
+          1.0016
+        ],
+        "multiplicities": [
+          122461250,
+          122070625
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 7
+      },
+      {
+        "p": 7,
+        "t": 1,
+        "q": 7,
+        "n": 400,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.8928571428571429,
+          1.1428571428571428
+        ],
+        "multiplicities": [
+          224,
+          175
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 9
+      },
+      {
+        "p": 7,
+        "t": 2,
+        "q": 49,
+        "n": 120100,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9804081632653061,
+          1.0204081632653061
+        ],
+        "multiplicities": [
+          61250,
+          58849
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 9
+      },
+      {
+        "p": 7,
+        "t": 3,
+        "q": 343,
+        "n": 40471600,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9971014984066716,
+          1.0029154518950438
+        ],
+        "multiplicities": [
+          20294624,
+          20176975
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 9
+      },
+      {
+        "p": 7,
+        "t": 4,
+        "q": 2401,
+        "n": 13847054404,
+        "normalized_laplacian_nonzero_eigenvalues": [
+          0.9995838536607526,
+          1.0004164931278634
+        ],
+        "multiplicities": [
+          6926409602,
+          6920644801
+        ],
+        "anchor_perturbation_distinct_eigenvalue_upper_bound": 9
+      }
+    ]
+  }
+}
