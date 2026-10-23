@@ -1794181,6 +1794181,34 @@
       "structural_formula": "u2=(lam_i-math.sqrt(disc))/(#*k)"
     },
     {
+      "file_count": 1,
+      "formula_id": "97e36a42025981740206a76373b2337decd1b019b378a50d943e3af72d649c85",
+      "normalized_formula": "u=(1,0)andv=(0,lambda).Relativetothestandardalternatingformtheygive",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_q9_native_controlled_ticks.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/2026-10-22_q9_native_controlled_ticks.md",
+          "raw": "u=(1,0) and v=(0,lambda). Relative to the standard alternating form they give",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c67f8e6e8353e1aa0d0fa97e7670ea19e2fca766dfe0c8de731214e96c46ed66",
+      "structural_formula": "u=(#,#)andv=(#,lambda).Relativetothestandardalternatingformtheygive"
+    },
+    {
       "file_count": 3,
       "formula_id": "27876f6c492d5f05cc3f0e329b65b2f1bba05ee245279a0179680d0e2e12acc2",
       "normalized_formula": "u=(1,0,0)",
@@ -1878219,9 +1878247,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T21:00:56-04:00",
+  "frozen_at": "2026-10-22T21:06:28-04:00",
   "pass": 398,
-  "repository_head": "eee7eed25e65d96ac1fe2d2c779f58c9e6a61548",
+  "repository_head": "9e2f4147d4f14dace61b34fe445f2106eb099a47",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2358658,6 +2358686,14 @@
     },
     {
       "exact_formula_ids": [
+        "97e36a42025981740206a76373b2337decd1b019b378a50d943e3af72d649c85"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c67f8e6e8353e1aa0d0fa97e7670ea19e2fca766dfe0c8de731214e96c46ed66",
+      "structural_formula": "u=(#,#)andv=(#,lambda).Relativetothestandardalternatingformtheygive"
+    },
+    {
+      "exact_formula_ids": [
         "27876f6c492d5f05cc3f0e329b65b2f1bba05ee245279a0179680d0e2e12acc2",
         "ada6cbd16aa1cd67b9054dbe812667c6ae263ef6ccde2efe48c6ded6e4f71e71"
       ],
@@ -2380162,20 +2380198,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90973063,
-    "exact_formula_families": 64213,
-    "files_scanned": 12521,
-    "formula_occurrences": 70315,
+    "bytes_scanned": 90979567,
+    "exact_formula_families": 64214,
+    "files_scanned": 12523,
+    "formula_occurrences": 70316,
     "status_occurrences": {
       "certified_or_theorem": 5274,
       "killed_or_retracted": 1865,
       "open_or_conditional": 2363,
       "preregistered": 36,
       "retrospective_fit": 5393,
-      "unclassified": 55384
+      "unclassified": 55385
     },
-    "structural_families": 62526
+    "structural_families": 62527
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "966888edc589e8bac4452ff42267c47736e0cd5df31990a4eb4d29377e747757"
+  "universe_sha256": "6d9dd55973fa94309b6a7199014ca241c0db5fa88f4ce949993fc6575df49242"
 }
