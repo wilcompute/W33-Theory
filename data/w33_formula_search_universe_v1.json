@@ -618177,6 +618177,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "26b1c35827ba6199862dc0b7e9fb174d356fa32d44c5d11f7e658140545e4a01",
+      "normalized_formula": "E_F(n)=24040^{n-1}+960\\frac{40^{n-1}-1}{39},\\quadE_C(n)=240n40^{n-1}",
+      "numeric_literals": [
+        "+960",
+        "-1",
+        "0",
+        "1",
+        "240",
+        "24040",
+        "39",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_architecture_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 47,
+          "path": "papers/fractal_holonet_architecture_20261023.tex",
+          "raw": "E_F(n)=240\\,40^{n-1}+960\\frac{40^{n-1}-1}{39}, \\quad E_C(n)=240n40^{n-1}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "40dd12d50f276ddbaf11669f81fbe04d9790db15f5a3988930dfc07caeb080a6",
+      "structural_formula": "E_F(n)=#^{n-#}#\\frac{#^{n-#}#}{#},\\quadE_C(n)=#n4#^{n-#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b0e4198b587bf6a556c8ddbf6b73bd3f9b958ec75e250b996b03d27a07274145",
       "normalized_formula": "E_Laplacian_max=2*k=f=gauge_mult=24",
       "numeric_literals": [
@@ -666797,6 +666831,35 @@
       },
       "structural_family_id": "1f7d6173111081e1202cd34035d86dbb316d367f0af0d86c2ebebff4ab0400be",
       "structural_formula": "I_lept=#,i.e.impliedImtau=#(up),#(down),#(leptons).Downandleptonsagree(invariantsto"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "307437454ebef08cd07ecb6c6e1086743bb6c3beb2999321a8b17f971bdddf5c",
+      "normalized_formula": "I_n=(40^n-1)/39",
+      "numeric_literals": [
+        "1",
+        "39",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_architecture_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 46,
+          "path": "papers/fractal_holonet_architecture_20261023.tex",
+          "raw": "I_n=(40^n-1)/39",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ecb19b26edb18a974f5672aff8a1f3eef05bf0d873845dca34ce2b51dd3b5db3",
+      "structural_formula": "I_n=(#^n-#)/#"
     },
     {
       "file_count": 1,
@@ -922457,6 +922520,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1d2972458b04cd01b0121d6dbb1ed802e71927ae8a90ad97501f290b1d93b640",
+      "normalized_formula": "\\begin{tikzpicture}[>=Latex,nodedistance=11mm,blk/.style={draw,roundedcorners,minimumheight=10mm,textwidth=29mm,align=center}]",
+      "numeric_literals": [
+        "10",
+        "11",
+        "29"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_architecture_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "papers/fractal_holonet_architecture_20261023.tex",
+          "raw": "\\begin{tikzpicture}[>=Latex,node distance=11mm,blk/.style={draw,rounded corners,minimum height=10mm,text width=29mm,align=center}]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "58ef114dd3f8eda36813c0fcf966421da7c749ecc8eadfc914020e17d50f3d8d",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,nodedistance=#mm,blk/.style={draw,roundedcorners,minimumheight=#mm,textwidth=#mm,align=center}]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1f81bc55d16a76e13914a75c7d7355dcfbf6435b2a225404addd0742e3d0dd4e",
       "normalized_formula": "\\begin{tikzpicture}[ev/.style={circle,draw=ink!55,linewidth=0.4pt,minimumsize=8.2mm,innersep=0pt}]",
       "numeric_literals": [
@@ -1116728,6 +1116820,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "00e6a55adc569b19eb773fe19ce64b02072eb55eb5f5077213b51e79d740b760",
+      "normalized_formula": "assertg4_edges=240*(N^(depth-1))+960*(instances-N^(depth-1))",
+      "numeric_literals": [
+        "+960",
+        "1",
+        "240"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_fractal_port_fabric_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 135,
+          "path": "analysis/w33_fractal_port_fabric_20261023.py",
+          "raw": "assert g4_edges==240*(N**(depth-1))+960*(instances-N**(depth-1))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "73c0cddee0271f4011a59580d8901303f3920a95684847518eae09ccb4235789",
+      "structural_formula": "assertg4_edges=#*(N^(depth-#))#*(instances-N^(depth-#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d47bde9a7951c4c3f36f28911aab78efaf022589d096bcbf6c8dba5fc66b0666",
       "normalized_formula": "assertg['open_drc_contract']['minimum_edge_to_edge_lane_gap_um']>31",
       "numeric_literals": [
@@ -1262978,6 +1263099,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "20fadde5ada0b29c9fb3fe7711117f3eefb1dea54d9424ff5df740bb4abcc49c",
+      "normalized_formula": "distances={source:0};q=collections.deque([source])",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_fractal_port_fabric_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 154,
+          "path": "analysis/w33_fractal_port_fabric_20261023.py",
+          "raw": "distances={source:0};q=collections.deque([source])",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cd8bcd4ace439e21bbc4cf5f584a5861c21f9427e785d876f91bb4b584f0eab1",
+      "structural_formula": "distances={source:#};q=collections.deque([source])"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a4591be4dbe615ceceaf819a1e3a23f2ed91a4778c5c62cfe67ae66da3be69eb",
       "normalized_formula": "distances={start:0}",
       "numeric_literals": [
@@ -1263137,6 +1263285,33 @@
       },
       "structural_family_id": "8a23cdfa92a1f7b2eba7e740b0ab4528b37ea3f1b4ca9b6ae08362de472bb7e2",
       "structural_formula": "distances[start]:=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f1dad3e73311742a9b72744f022ecaf32fa50fecf15e8a3769bd8b8337b8f5a5",
+      "normalized_formula": "distances[y]=distances[x]+1;q.append(y)",
+      "numeric_literals": [
+        "+1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_fractal_port_fabric_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 159,
+          "path": "analysis/w33_fractal_port_fabric_20261023.py",
+          "raw": "distances[y]=distances[x]+1;q.append(y)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ec638c4b29467a4cb7d3b9ec928fe7ca6352ba2d491c6afb6da9837d55a3996d",
+      "structural_formula": "distances[y]=distances[x]#;q.append(y)"
     },
     {
       "file_count": 1,
@@ -1270473,6 +1270648,33 @@
       },
       "structural_family_id": "126f0db6b8682209e35cee5fb754282d851d536a83fe8f7903307726f5b1ea33",
       "structural_formula": "ec=nx.edge_connectivity(levi());rate=#*ec*math.log(#);ch,gap=chern()"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "79579a467a3f23348e0db284d5afbbaac01296620898a6d0da8d89bcac885ed6",
+      "normalized_formula": "ecc=max(distances.values());ecc_counts[ecc]+=1",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_fractal_port_fabric_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 161,
+          "path": "analysis/w33_fractal_port_fabric_20261023.py",
+          "raw": "ecc=max(distances.values());ecc_counts[ecc]+=1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6be9bee820b079877627054b6ffc9b87db4ac22f4b4d0fc6164ae56e0318208e",
+      "structural_formula": "ecc=max(distances.values());ecc_counts[ecc]+=#"
     },
     {
       "file_count": 1,
@@ -1363906,6 +1364108,34 @@
       },
       "structural_family_id": "6181ae7420798b7b25460f7c76a4506efe5be046582c8a42ef6e79920d17ae7e",
       "structural_formula": "instances=(#^level-#)//#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4d9fda71d381705c71dcc990f992eb9770c98e777c2d6a4422023f033c1dfab2",
+      "normalized_formula": "instances=(leaves-1)//39",
+      "numeric_literals": [
+        "1",
+        "39"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_fractal_port_fabric_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 130,
+          "path": "analysis/w33_fractal_port_fabric_20261023.py",
+          "raw": "instances=(leaves-1)//39",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1530bf06e13ba3154f8966c7cff2d2ed41a46f9a13c6ea13482bd1433d77ebdb",
+      "structural_formula": "instances=(leaves-#)//#"
     },
     {
       "file_count": 1,
@@ -1883318,9 +1883548,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T11:34:34-04:00",
+  "frozen_at": "2026-10-23T11:54:42-04:00",
   "pass": 398,
-  "repository_head": "dbd2e39fa1711bf0e094779083c2b1f635baac7a",
+  "repository_head": "b83c1ea83802df5bde1ac8c6db427e68e62fb41d",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2049695,6 +2049925,14 @@
     },
     {
       "exact_formula_ids": [
+        "26b1c35827ba6199862dc0b7e9fb174d356fa32d44c5d11f7e658140545e4a01"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "40dd12d50f276ddbaf11669f81fbe04d9790db15f5a3988930dfc07caeb080a6",
+      "structural_formula": "E_F(n)=#^{n-#}#\\frac{#^{n-#}#}{#},\\quadE_C(n)=#n4#^{n-#}"
+    },
+    {
+      "exact_formula_ids": [
         "b0e4198b587bf6a556c8ddbf6b73bd3f9b958ec75e250b996b03d27a07274145"
       ],
       "exact_member_count": 1,
@@ -2062926,6 +2063164,14 @@
       "exact_member_count": 1,
       "structural_family_id": "89ae687a3f182750454580f5db8607f3763d549d81ea43a2cc1ece472303cced",
       "structural_formula": "I_n=##+\\cdots+#^{n-#}=\\frac{#^n-#}{#}"
+    },
+    {
+      "exact_formula_ids": [
+        "307437454ebef08cd07ecb6c6e1086743bb6c3beb2999321a8b17f971bdddf5c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ecb19b26edb18a974f5672aff8a1f3eef05bf0d873845dca34ce2b51dd3b5db3",
+      "structural_formula": "I_n=(#^n-#)/#"
     },
     {
       "exact_formula_ids": [
@@ -2131213,6 +2131459,14 @@
     },
     {
       "exact_formula_ids": [
+        "1d2972458b04cd01b0121d6dbb1ed802e71927ae8a90ad97501f290b1d93b640"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "58ef114dd3f8eda36813c0fcf966421da7c749ecc8eadfc914020e17d50f3d8d",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,nodedistance=#mm,blk/.style={draw,roundedcorners,minimumheight=#mm,textwidth=#mm,align=center}]"
+    },
+    {
+      "exact_formula_ids": [
         "1f81bc55d16a76e13914a75c7d7355dcfbf6435b2a225404addd0742e3d0dd4e"
       ],
       "exact_member_count": 1,
@@ -2181503,6 +2181757,14 @@
     },
     {
       "exact_formula_ids": [
+        "00e6a55adc569b19eb773fe19ce64b02072eb55eb5f5077213b51e79d740b760"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "73c0cddee0271f4011a59580d8901303f3920a95684847518eae09ccb4235789",
+      "structural_formula": "assertg4_edges=#*(N^(depth-#))#*(instances-N^(depth-#))"
+    },
+    {
+      "exact_formula_ids": [
         "d47bde9a7951c4c3f36f28911aab78efaf022589d096bcbf6c8dba5fc66b0666"
       ],
       "exact_member_count": 1,
@@ -2221607,6 +2221869,14 @@
     },
     {
       "exact_formula_ids": [
+        "20fadde5ada0b29c9fb3fe7711117f3eefb1dea54d9424ff5df740bb4abcc49c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cd8bcd4ace439e21bbc4cf5f584a5861c21f9427e785d876f91bb4b584f0eab1",
+      "structural_formula": "distances={source:#};q=collections.deque([source])"
+    },
+    {
+      "exact_formula_ids": [
         "a4591be4dbe615ceceaf819a1e3a23f2ed91a4778c5c62cfe67ae66da3be69eb"
       ],
       "exact_member_count": 1,
@@ -2221652,6 +2221922,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8a23cdfa92a1f7b2eba7e740b0ab4528b37ea3f1b4ca9b6ae08362de472bb7e2",
       "structural_formula": "distances[start]:=#"
+    },
+    {
+      "exact_formula_ids": [
+        "f1dad3e73311742a9b72744f022ecaf32fa50fecf15e8a3769bd8b8337b8f5a5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ec638c4b29467a4cb7d3b9ec928fe7ca6352ba2d491c6afb6da9837d55a3996d",
+      "structural_formula": "distances[y]=distances[x]#;q.append(y)"
     },
     {
       "exact_formula_ids": [
@@ -2223613,6 +2223891,14 @@
       "exact_member_count": 1,
       "structural_family_id": "126f0db6b8682209e35cee5fb754282d851d536a83fe8f7903307726f5b1ea33",
       "structural_formula": "ec=nx.edge_connectivity(levi());rate=#*ec*math.log(#);ch,gap=chern()"
+    },
+    {
+      "exact_formula_ids": [
+        "79579a467a3f23348e0db284d5afbbaac01296620898a6d0da8d89bcac885ed6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6be9bee820b079877627054b6ffc9b87db4ac22f4b4d0fc6164ae56e0318208e",
+      "structural_formula": "ecc=max(distances.values());ecc_counts[ecc]+=#"
     },
     {
       "exact_formula_ids": [
@@ -2249249,6 +2249535,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6181ae7420798b7b25460f7c76a4506efe5be046582c8a42ef6e79920d17ae7e",
       "structural_formula": "instances=(#^level-#)//#"
+    },
+    {
+      "exact_formula_ids": [
+        "4d9fda71d381705c71dcc990f992eb9770c98e777c2d6a4422023f033c1dfab2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1530bf06e13ba3154f8966c7cff2d2ed41a46f9a13c6ea13482bd1433d77ebdb",
+      "structural_formula": "instances=(leaves-#)//#"
     },
     {
       "exact_formula_ids": [
@@ -2386641,20 +2386935,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91330979,
-    "exact_formula_families": 64389,
-    "files_scanned": 12562,
-    "formula_occurrences": 70495,
+    "bytes_scanned": 91349844,
+    "exact_formula_families": 64397,
+    "files_scanned": 12564,
+    "formula_occurrences": 70503,
     "status_occurrences": {
       "certified_or_theorem": 5290,
       "killed_or_retracted": 1872,
       "open_or_conditional": 2375,
       "preregistered": 36,
       "retrospective_fit": 5398,
-      "unclassified": 55524
+      "unclassified": 55532
     },
-    "structural_families": 62698
+    "structural_families": 62706
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "becbee276ce32bdb3ac9993820ae4d1cfbbfbe4f7f4b96c99977cb521cbf8e10"
+  "universe_sha256": "db17ae59e0168abca9a161a6b98a6680086187fa26466e67021ef78bec67892e"
 }
