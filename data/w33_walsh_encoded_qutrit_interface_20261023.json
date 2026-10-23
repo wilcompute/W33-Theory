@@ -1,0 +1,137 @@
+{
+  "F3_noncommutation_with_XOR_logical_phase": 2.3094010767585034,
+  "V_real": [
+    [
+      0.4999999999999999,
+      0.4999999999999999,
+      0.4999999999999999
+    ],
+    [
+      -0.4999999999999999,
+      0.4999999999999999,
+      -0.4999999999999999
+    ],
+    [
+      0.4999999999999999,
+      -0.4999999999999999,
+      -0.4999999999999999
+    ],
+    [
+      -0.4999999999999999,
+      -0.4999999999999999,
+      0.4999999999999999
+    ]
+  ],
+  "auxiliary_character_real": [
+    0.4999999999999999,
+    0.4999999999999999,
+    0.4999999999999999,
+    0.4999999999999999
+  ],
+  "embedded_F3_imag": [
+    [
+      1.110223024625156e-16,
+      -5.551115123125779e-17,
+      -1.110223024625156e-16,
+      5.551115123125779e-17
+    ],
+    [
+      -2.7755575615628914e-17,
+      0.4999999999999999,
+      2.7755575615628914e-17,
+      -0.4999999999999999
+    ],
+    [
+      -1.110223024625156e-16,
+      5.551115123125779e-17,
+      1.110223024625156e-16,
+      -5.551115123125779e-17
+    ],
+    [
+      2.7755575615628914e-17,
+      -0.4999999999999999,
+      -2.7755575615628914e-17,
+      0.4999999999999999
+    ]
+  ],
+  "embedded_F3_real": [
+    [
+      0.6830127018922191,
+      -0.1830127018922194,
+      0.6830127018922191,
+      -0.1830127018922192
+    ],
+    [
+      -0.18301270189221935,
+      0.39433756729740654,
+      0.3943375672974064,
+      0.394337567297406
+    ],
+    [
+      0.6830127018922191,
+      0.3943375672974064,
+      -0.47168783648703205,
+      0.3943375672974062
+    ],
+    [
+      -0.1830127018922192,
+      0.394337567297406,
+      0.3943375672974062,
+      0.39433756729740654
+    ]
+  ],
+  "encoded_F3_unitarity_residual": 1.3174764502143811e-15,
+  "encoding": "3D span of nontrivial Fourier characters of (Z2)^2 in four physical optical modes",
+  "physical_requirements": [
+    "prepare coherent four-mode Walsh-character superpositions",
+    "preserve interferometric phases during bus switching",
+    "encode and decode using real H4 optical transform",
+    "separate noncommuting 3-mode F3 processing tile",
+    "account for loss, auxiliary contamination and mode distinguishability"
+  ],
+  "schema": "w33.holonet.walsh_qutrit_encoding.v1",
+  "scope": "Exact abstract 4-mode unitary geometry, no PDK/fabrication/quantum fidelity data. XOR alone never generates full qutrit unitary group.",
+  "sha256": "7c0a524fa5c5be209c2df0969bf2d6c2b5ca3eb3488020137889e4f2f563f297",
+  "switch_logical_characters": [
+    {
+      "encoded_leakage_frobenius": 7.691850745534255e-16,
+      "logical_residual": 7.691850745534255e-16,
+      "logical_signs": [
+        1,
+        1,
+        1
+      ],
+      "mask": 0
+    },
+    {
+      "encoded_leakage_frobenius": 7.691850745534255e-16,
+      "logical_residual": 7.691850745534255e-16,
+      "logical_signs": [
+        -1,
+        1,
+        -1
+      ],
+      "mask": 1
+    },
+    {
+      "encoded_leakage_frobenius": 7.691850745534255e-16,
+      "logical_residual": 7.691850745534255e-16,
+      "logical_signs": [
+        1,
+        -1,
+        -1
+      ],
+      "mask": 2
+    },
+    {
+      "encoded_leakage_frobenius": 7.691850745534255e-16,
+      "logical_residual": 7.691850745534255e-16,
+      "logical_signs": [
+        -1,
+        -1,
+        1
+      ],
+      "mask": 3
+    }
+  ]
+}
