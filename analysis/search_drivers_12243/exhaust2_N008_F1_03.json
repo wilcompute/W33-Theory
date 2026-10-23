@@ -1,0 +1,11 @@
+{
+ "control_sampled_hits": 0,
+ "control_found": 0,
+ "base": "N008_F1_03",
+ "A4_classes": 16,
+ "lines": 25267,
+ "pairs": 13816170,
+ "twisted10_pairs": 0,
+ "scalar10_pairs": 0,
+ "seconds": 256
+}

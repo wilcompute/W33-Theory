@@ -1,0 +1,23 @@
+{
+ "v0_A4_roots": 20,
+ "v9_roots_in_A4_span": 8,
+ "scalar10_weights": 60,
+ "distinct_stabilisers": 10,
+ "stabiliser_sizes": [
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8
+ ],
+ "v9_equals_a_stabiliser": true,
+ "v9_component_sizes": [
+  2,
+  6
+ ]
+}

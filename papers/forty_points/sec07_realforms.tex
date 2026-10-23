@@ -516,6 +516,21 @@ has the fermionic value, which makes the absence of a scalar $10$ a lattice theo
 for two (twisted $10$s in $2.0\%$ of configurations, none scalar). The $58$ three-generation models among them carry only scalar
 $SU(5)$ singlets and $5$s, so none can be broken to the Standard Model. \cert{w33\_pass12229\_to\_12234\_the\_statistics\_rule.py} \cert{w33\_pass12205\_to\_12210\_twisted\_sectors\_carry\_no\_ten.py} \cert{w33\_pass12211\_to\_12216\_no\_order3\_interpolation\_no\_twisted\_ten.py} \cert{w33\_pass12217\_to\_12222\_twisted\_tens\_are\_fermions.py}
 
+\begin{result}{Theorem 7.7 (no Higgs $10$) \hfill \tierC}
+On the $e_6+a_2$ route ($T^6/\mathbb Z_3$, split Witten shift, the seven three-family bases) with one or two $SU(5)$-type order-three
+Wilson lines, no consistent configuration has a scalar in the $10$ of $SU(5)$, in any sector.
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item In every sector the projection fixes $(P\cdot V_0-R_0)\bmod1=w/2$ ($w$ the Witten label, $R_0$ the spacetime component of the
+      right-mover), derived from the Witten phase whenever $V_0^2=2$ and the products of $V_0$ with the shifts and Wilson lines are even;
+      configurations with an odd product are inconsistent. A state is a scalar exactly when $P\cdot V_0\equiv w/2$.
+\item Untwisted $10$s have $w=0$, $P\cdot V_0=\tfrac12$: fermions ($7\times864$ lines). Twisted $10$-type massless momenta occur in
+      $294$ of $165{,}465$ consistent one-line and in $1{,}417{,}482$ of $77{,}192{,}286$ consistent two-line configurations, and every
+      one has the fermionic value.
+\end{enumerate}
+The field-theoretic escape from Wen and Witten's theorem is therefore closed on this route; the twisted $10$s that do occur are extra
+chiral fermions, and the $58$ three-generation models among them carry only scalar singlets and $5$s. \cert{w33\_pass12217\_to\_12222\_twisted\_tens\_are\_fermions.py} \cert{w33\_pass12229\_to\_12234\_the\_statistics\_rule.py} \cert{w33\_pass12235\_to\_12240\_the\_rule\_derived.py} \cert{w33\_pass12241\_to\_12246\_no\_scalar\_ten\_theorem.py}
+\end{result}
+
 \paragraph{The native Narain point.} The native lattice of the parallel track (II$(2,2)$ at $T=U=\rho$) admits no Scherk--Schwarz
 translation compatible with its $C_3\times C_3$, and even a single $C_3$ freezes all four of its moduli, so an interpolation radius
 there requires breaking the native symmetry completely; whether any dynamics does so is open. \cert{w33\_pass12199\_to\_12204\_no\_three\_generation\_interpolation.py} \cert{w33\_pass12205\_to\_12210\_twisted\_sectors\_carry\_no\_ten.py}

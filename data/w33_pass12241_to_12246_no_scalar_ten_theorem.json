@@ -1,0 +1,152 @@
+{
+  "12241": {
+    "consistent_one_line": 165465,
+    "consistent_candidates": 294,
+    "density": 0.0017768108059106156,
+    "two_line_even_sample": {
+      "draws": 20000,
+      "tries": 125528,
+      "hits": 366,
+      "scalar_type_configs": 0,
+      "density": 0.0183,
+      "wilson95": [
+        0.01653276707402237,
+        0.020252247260424273
+      ],
+      "one_line_density": 0.0017523061213893841
+    }
+  },
+  "12242": {
+    "(0, 1, 2)": {
+      "bosons": 4,
+      "fermions": 36,
+      "boson_records_also_listed_as_fermion": 1,
+      "boson_records": 3
+    },
+    "(0, 1, 4)": {
+      "bosons": 4,
+      "fermions": 36,
+      "boson_records_also_listed_as_fermion": 1,
+      "boson_records": 3
+    }
+  },
+  "12243": {
+    "per_base": [
+      {
+        "control_sampled_hits": 85,
+        "control_found": 85,
+        "base": "N001_F1_04",
+        "A4_classes": 16,
+        "lines": 22506,
+        "pairs": 9059610,
+        "twisted10_pairs": 337232,
+        "scalar10_pairs": 0,
+        "seconds": 199
+      },
+      {
+        "control_sampled_hits": 90,
+        "control_found": 90,
+        "base": "N004_F1_03",
+        "A4_classes": 16,
+        "lines": 22503,
+        "pairs": 8961864,
+        "twisted10_pairs": 347322,
+        "scalar10_pairs": 0,
+        "seconds": 203
+      },
+      {
+        "control_sampled_hits": 98,
+        "control_found": 98,
+        "base": "N004_F1_04",
+        "A4_classes": 16,
+        "lines": 22117,
+        "pairs": 8631310,
+        "twisted10_pairs": 366464,
+        "scalar10_pairs": 0,
+        "seconds": 186
+      },
+      {
+        "control_sampled_hits": 93,
+        "control_found": 93,
+        "base": "N004_F1_05",
+        "A4_classes": 16,
+        "lines": 22117,
+        "pairs": 8631310,
+        "twisted10_pairs": 366464,
+        "scalar10_pairs": 0,
+        "seconds": 177
+      },
+      {
+        "control_sampled_hits": 0,
+        "control_found": 0,
+        "base": "N008_F1_02",
+        "A4_classes": 16,
+        "lines": 25572,
+        "pairs": 14157128,
+        "twisted10_pairs": 0,
+        "scalar10_pairs": 0,
+        "seconds": 258
+      },
+      {
+        "control_sampled_hits": 0,
+        "control_found": 0,
+        "base": "N008_F1_03",
+        "A4_classes": 16,
+        "lines": 25267,
+        "pairs": 13816170,
+        "twisted10_pairs": 0,
+        "scalar10_pairs": 0,
+        "seconds": 256
+      },
+      {
+        "control_sampled_hits": 0,
+        "control_found": 0,
+        "base": "N008_F1_04",
+        "A4_classes": 16,
+        "lines": 25383,
+        "pairs": 13934894,
+        "twisted10_pairs": 0,
+        "scalar10_pairs": 0,
+        "seconds": 150
+      }
+    ],
+    "pairs": 77192286,
+    "twisted10_pairs": 1417482,
+    "scalar10_pairs": 0,
+    "control": [
+      366,
+      366
+    ]
+  },
+  "12244": {
+    "v0_A4_roots": 20,
+    "v9_roots_in_A4_span": 8,
+    "scalar10_weights": 60,
+    "distinct_stabilisers": 10,
+    "stabiliser_sizes": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+    ],
+    "v9_equals_a_stabiliser": true,
+    "v9_component_sizes": [
+      2,
+      6
+    ]
+  },
+  "checks": {
+    "12241: consistent one-line space 165,465, 294 consistent candidates; two-line even sample 366/20000, 0 scalar": true,
+    "12242: Z6-II exception confined to 4 bosons per Witten-twisted theta^2 / theta^4 sector, one record duplicated as a fermion": true,
+    "12243: exhaustive two-line: 77,192,286 consistent pairs, 1,417,482 with twisted 10s, 0 scalar; control 366/366": true,
+    "12244: v9's hidden roots = the stabiliser (A2 + A1) of a scalar-10 weight of v0": true,
+    "12245: Theorem 7.7 in Section 7": true
+  },
+  "all_checks_pass": true
+}

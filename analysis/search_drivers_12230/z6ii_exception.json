@@ -1,0 +1,14 @@
+{
+ "(0, 1, 2)": {
+  "bosons": 4,
+  "fermions": 36,
+  "boson_records_also_listed_as_fermion": 1,
+  "boson_records": 3
+ },
+ "(0, 1, 4)": {
+  "bosons": 4,
+  "fermions": 36,
+  "boson_records_also_listed_as_fermion": 1,
+  "boson_records": 3
+ }
+}
