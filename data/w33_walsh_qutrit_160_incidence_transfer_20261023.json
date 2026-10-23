@@ -1,0 +1,117 @@
+{
+  "W33_line_buses": 40,
+  "distinct_physical_incidence_ports": 160,
+  "exact_transfer": {
+    "disjoint": {
+      "destination_160_incidence_rails": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "four_pair_swaps": [
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          2,
+          22
+        ],
+        [
+          3,
+          23
+        ]
+      ],
+      "lines": [
+        0,
+        5
+      ],
+      "number_of_distinct_physical_rail_swaps": 4,
+      "one_direct_point_coupler_possible": false,
+      "physical_reality": "This is a 160-mode target permutation, not a placed/routed chip or parallel optical switch schedule",
+      "point_intersection": [],
+      "qutrit_transfer_residual": 0.0,
+      "source_160_incidence_rails": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "three_nonlocal_rail_routes_required_at_least": 4
+    },
+    "intersecting": {
+      "destination_160_incidence_rails": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "four_pair_swaps": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "lines": [
+        0,
+        1
+      ],
+      "number_of_distinct_physical_rail_swaps": 4,
+      "one_direct_point_coupler_possible": true,
+      "physical_reality": "This is a 160-mode target permutation, not a placed/routed chip or parallel optical switch schedule",
+      "point_intersection": [
+        0
+      ],
+      "qutrit_transfer_residual": 0.0,
+      "source_160_incidence_rails": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "three_nonlocal_rail_routes_required_at_least": 3
+    }
+  },
+  "graph_all_incidence_degree": 6,
+  "inter_line_same_point_possible_coupler_links": 240,
+  "intersections": {
+    "0": 540,
+    "1": 240
+  },
+  "intra_line_possible_neighbor_links": 240,
+  "line_pairs_checked": 780,
+  "not_established": [
+    "manufacturable photonic chip",
+    "parallel switch schedule",
+    "optical quantum memory",
+    "real transfer fidelity",
+    "no-cloning compatible copy; this is MOVE not COPY"
+  ],
+  "optical_validation_gates": [
+    "physically implement 4 distinct interbus optical rail transfers even when buses share a W33 graph point",
+    "source and target 4-rail mode matching and optical path phase",
+    "enforce collision-free temporal scheduling simultaneously on all 4 rails",
+    "calibrate 4x4 complex transfer including uniform auxiliary Walsh mode",
+    "route valid electrode pads and junction couplers under chosen PDK and run foundry DRC/LVS"
+  ],
+  "point_coupler_junctions": 40,
+  "schema": "w33.walsh.qutrit.160_incidence_transfer.v1",
+  "sha256": "0b729c80eff6dfd46a21a25638feea8f29eae510e34dd7f39198e81fac4499cb"
+}
