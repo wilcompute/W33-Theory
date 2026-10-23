@@ -1,0 +1,51 @@
+{
+  "schema": "w33.gf2_frobenius_delta_exact.v1",
+  "cases": [
+    {
+      "q": 4,
+      "p": 2,
+      "n": 85,
+      "dimC": 16,
+      "dimK": 69,
+      "rankDC": 6,
+      "rankDK": 26,
+      "rank_C_plus_DK": 36,
+      "rank_DK_intersection_C": 6,
+      "rank_delta1": 0,
+      "fixed_points_T": 21,
+      "moving_pairs": 32,
+      "all_rows_verified_orthogonal": true
+    },
+    {
+      "q": 8,
+      "p": 2,
+      "n": 585,
+      "dimC": 64,
+      "dimK": 521,
+      "rankDC": 28,
+      "rankDK": 228,
+      "rank_C_plus_DK": 264,
+      "rank_DK_intersection_C": 28,
+      "rank_delta1": 0,
+      "fixed_points_T": 73,
+      "moving_pairs": 256,
+      "all_rows_verified_orthogonal": true
+    },
+    {
+      "q": 16,
+      "p": 2,
+      "n": 4369,
+      "dimC": 256,
+      "dimK": 4113,
+      "rankDC": 120,
+      "rankDK": 1928,
+      "rank_C_plus_DK": 2064,
+      "rank_DK_intersection_C": 120,
+      "rank_delta1": 0,
+      "fixed_points_T": 273,
+      "moving_pairs": 2048,
+      "all_rows_verified_orthogonal": true
+    }
+  ],
+  "scope": "Exact GF(16) first-order extension obstruction measured by kernel/bitset elimination, not a general Frobenius module theorem."
+}

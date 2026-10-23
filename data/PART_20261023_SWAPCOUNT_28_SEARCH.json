@@ -1,0 +1,11 @@
+{
+  "status": "UNKNOWN",
+  "anchor": 0,
+  "depth": 4,
+  "swap_budget": 28,
+  "wall_seconds": 35.130974800000004,
+  "branches": 182838,
+  "conflicts": 35713,
+  "proof_of_lower_bound_36": false,
+  "unknown_not_a_proof": true
+}

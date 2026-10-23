@@ -1,0 +1,466 @@
+{
+  "schema": "w33.toe.round9.20261023.v1",
+  "gf16": {
+    "status": "GF2_GROWING_EXTENSION_CENSUS_Q4_Q8_Q16",
+    "cases": [
+      {
+        "q": 4,
+        "p": 2,
+        "n": 85,
+        "dimC": 16,
+        "dimK": 69,
+        "rankDC": 6,
+        "rankDK": 26,
+        "rank_C_plus_DK": 36,
+        "rank_DK_intersection_C": 6,
+        "rank_delta1": 0,
+        "fixed_points_T": 21,
+        "moving_pairs": 32,
+        "all_rows_verified_orthogonal": true
+      },
+      {
+        "q": 8,
+        "p": 2,
+        "n": 585,
+        "dimC": 64,
+        "dimK": 521,
+        "rankDC": 28,
+        "rankDK": 228,
+        "rank_C_plus_DK": 264,
+        "rank_DK_intersection_C": 28,
+        "rank_delta1": 0,
+        "fixed_points_T": 73,
+        "moving_pairs": 256,
+        "all_rows_verified_orthogonal": true
+      },
+      {
+        "q": 16,
+        "p": 2,
+        "n": 4369,
+        "dimC": 256,
+        "dimK": 4113,
+        "rankDC": 120,
+        "rankDK": 1928,
+        "rank_C_plus_DK": 2064,
+        "rank_DK_intersection_C": 120,
+        "rank_delta1": 0,
+        "fixed_points_T": 273,
+        "moving_pairs": 2048,
+        "all_rows_verified_orthogonal": true
+      }
+    ],
+    "splitting": "For modules over F2[T]/(T+1)^2, delta1=0 implies the exact module extension 0->C->K->Q->0 splits: the only nonprojective indecomposable is J1 and extensions of J1 by J1 are measured by delta1.",
+    "general_q_proof": false,
+    "scope": "GF16 4369-dimensional exact computation; splitting as cyclic transvection F2[C2]-modules, NOT splitting as full Sp4(q) modules."
+  },
+  "chirality": {
+    "status": "EXACT_SMALL_GRAPH_K_EVEN_CHIRAL_TUNNELING",
+    "H": "H=-9/32 sum_W33edges ZiZj - h sum_i Xi - epsilon sum_i Zi in a selected parity-ground two-level onsite sector",
+    "source_free_h": true,
+    "K": "K=(tensor_i Xi) complex conjugation, at epsilon=0 KHK^-1=H",
+    "finite_N_uniqueness": "At h>0 a real irreducible stoquastic transverse-Ising Hamiltonian has a unique strictly positive ground eigenvector; source-free chiral expectation vanishes.",
+    "spectral_rows": [
+      {
+        "n": 2,
+        "edges": 1,
+        "vertices": [
+          0,
+          4
+        ],
+        "h": 0.0,
+        "bias": 0.0,
+        "energy0": -0.28125,
+        "energy1": -0.28125,
+        "gap": 0.0,
+        "graph_degree_max": 1
+      },
+      {
+        "n": 2,
+        "edges": 1,
+        "vertices": [
+          0,
+          4
+        ],
+        "h": 0.1,
+        "bias": 0.0,
+        "energy0": -0.3451109423069631,
+        "energy1": -0.28125000000000006,
+        "gap": 0.06386094230696304,
+        "graph_degree_max": 1
+      },
+      {
+        "n": 2,
+        "edges": 1,
+        "vertices": [
+          0,
+          4
+        ],
+        "h": 0.2,
+        "bias": 0.0,
+        "energy0": -0.4889801248517162,
+        "energy1": -0.2812499999999999,
+        "gap": 0.20773012485171632,
+        "graph_degree_max": 1
+      },
+      {
+        "n": 4,
+        "edges": 6,
+        "vertices": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "h": 0.0,
+        "bias": 0.0,
+        "energy0": -1.6875,
+        "energy1": -1.6875,
+        "gap": 0.0,
+        "graph_degree_max": 3
+      },
+      {
+        "n": 4,
+        "edges": 6,
+        "vertices": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "h": 0.1,
+        "bias": 0.0,
+        "energy0": -1.7116131581979097,
+        "energy1": -1.7108797841153882,
+        "gap": 0.0007333740825214985,
+        "graph_degree_max": 3
+      },
+      {
+        "n": 4,
+        "edges": 6,
+        "vertices": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "h": 0.2,
+        "bias": 0.0,
+        "energy0": -1.7884896772610333,
+        "energy1": -1.7775133867848956,
+        "gap": 0.010976290476137684,
+        "graph_degree_max": 3
+      },
+      {
+        "n": 6,
+        "edges": 9,
+        "vertices": [
+          0,
+          4,
+          5,
+          6,
+          13,
+          14
+        ],
+        "h": 0.0,
+        "bias": 0.0,
+        "energy0": -2.53125,
+        "energy1": -2.53125,
+        "gap": 0.0,
+        "graph_degree_max": 5
+      },
+      {
+        "n": 6,
+        "edges": 9,
+        "vertices": [
+          0,
+          4,
+          5,
+          6,
+          13,
+          14
+        ],
+        "h": 0.1,
+        "bias": 0.0,
+        "energy0": -2.5704229438045862,
+        "energy1": -2.5703888464164226,
+        "gap": 3.4097388163623066e-05,
+        "graph_degree_max": 5
+      },
+      {
+        "n": 6,
+        "edges": 9,
+        "vertices": [
+          0,
+          4,
+          5,
+          6,
+          13,
+          14
+        ],
+        "h": 0.2,
+        "bias": 0.0,
+        "energy0": -2.6892824497410968,
+        "energy1": -2.687361176804027,
+        "gap": 0.0019212729370696735,
+        "graph_degree_max": 5
+      },
+      {
+        "n": 8,
+        "edges": 13,
+        "vertices": [
+          0,
+          4,
+          5,
+          6,
+          13,
+          14,
+          15,
+          22
+        ],
+        "h": 0.0,
+        "bias": 0.0,
+        "energy0": -3.65625,
+        "energy1": -3.65625,
+        "gap": 0.0,
+        "graph_degree_max": 7
+      },
+      {
+        "n": 8,
+        "edges": 13,
+        "vertices": [
+          0,
+          4,
+          5,
+          6,
+          13,
+          14,
+          15,
+          22
+        ],
+        "h": 0.1,
+        "bias": 0.0,
+        "energy0": -3.7116407509177964,
+        "energy1": -3.711639837690208,
+        "gap": 9.132275882173246e-07,
+        "graph_degree_max": 7
+      },
+      {
+        "n": 8,
+        "edges": 13,
+        "vertices": [
+          0,
+          4,
+          5,
+          6,
+          13,
+          14,
+          15,
+          22
+        ],
+        "h": 0.2,
+        "bias": 0.0,
+        "energy0": -3.8732647508201357,
+        "energy1": -3.8730799891947654,
+        "gap": 0.00018476162537028884,
+        "graph_degree_max": 7
+      }
+    ],
+    "bias_symmetry_checks": [
+      {
+        "n": 4,
+        "h": 0.1,
+        "bias_plus_energy": -1.7152349152102078,
+        "bias_minus_energy": -1.7152349152102078,
+        "even_energy_under_K": true
+      },
+      {
+        "n": 6,
+        "h": 0.1,
+        "bias_plus_energy": -2.576349979344874,
+        "bias_minus_energy": -2.5763499793448745,
+        "even_energy_under_K": true
+      },
+      {
+        "n": 8,
+        "h": 0.1,
+        "bias_plus_energy": -3.7195388003863092,
+        "bias_minus_energy": -3.7195388003863137,
+        "even_energy_under_K": true
+      }
+    ],
+    "caveat": "The two-state sector is selected/engineered and the induced n<=8 W33 subgraphs are not a thermodynamic graph sequence. K need not be physical time reversal, and no time arrow follows."
+  },
+  "routing": {
+    "status": "UNKNOWN",
+    "anchor": 0,
+    "depth": 4,
+    "swap_budget": 28,
+    "wall_seconds": 35.130974800000004,
+    "branches": 182838,
+    "conflicts": 35713,
+    "proof_of_lower_bound_36": false,
+    "unknown_not_a_proof": true
+  },
+  "magic": {
+    "status": "W33_HERALDED_MAGIC_FIRST_ORDER_FAULT_SENSITIVITY",
+    "input": "Pass12189 precomputed and independently frozen all-40 single-Z histograms",
+    "ideal_postselection_success": 0.35802469135802467,
+    "number_accepted_fault_sites": 4,
+    "accepted_fault_sites": [
+      {
+        "site": 0,
+        "success": 0.02469135802469133,
+        "fidelity": 0.01724137931034477
+      },
+      {
+        "site": 1,
+        "success": 0.02469135802469133,
+        "fidelity": 0.01724137931034477
+      },
+      {
+        "site": 2,
+        "success": 0.02469135802469133,
+        "fidelity": 0.01724137931034477
+      },
+      {
+        "site": 3,
+        "success": 0.02469135802469133,
+        "fidelity": 0.01724137931034477
+      }
+    ],
+    "dSuccess_dp_at_p0": -14.222222222222221,
+    "dConditionalFidelity_dp_at_p0": -0.271105826397146,
+    "noise_controls": [
+      {
+        "single_Z_per_site_fault_probability": 0.0,
+        "single_fault_truncated_success_probability": 0.35802469135802467,
+        "single_fault_truncated_conditional_fidelity": 1.0
+      },
+      {
+        "single_Z_per_site_fault_probability": 0.0001,
+        "single_fault_truncated_success_probability": 0.35660246913580246,
+        "single_fault_truncated_conditional_fidelity": 0.9999727812933947
+      },
+      {
+        "single_Z_per_site_fault_probability": 0.001,
+        "single_fault_truncated_success_probability": 0.3438024691358024,
+        "single_fault_truncated_conditional_fidelity": 0.9997176792241628
+      },
+      {
+        "single_Z_per_site_fault_probability": 0.01,
+        "single_fault_truncated_success_probability": 0.21580246913580245,
+        "single_fault_truncated_conditional_fidelity": 0.9955022488755623
+      }
+    ],
+    "scope": "A true single-fault *first-order* response model. p=0.01 truncation omits >=2 simultaneous faults and should not be treated as physical channel prediction. Does not distill, provide logical decoder or threshold."
+  },
+  "gauge": {
+    "status": "NATIVE_METRIC_FOUR_DIMENSIONAL_GAUGE_WARD_TEMPLATE",
+    "source": "Pass12192 native 27-site / 135-edge periodic voltage cover, actual acoustic metric G, not bare W33 40-point carrier",
+    "native_G": [
+      [
+        0.37037037037037035,
+        0.18518518518518517,
+        -0.2222222222222222,
+        0.0
+      ],
+      [
+        0.18518518518518517,
+        0.37037037037037035,
+        0.0,
+        -0.2222222222222222
+      ],
+      [
+        -0.2222222222222222,
+        0.0,
+        0.4444444444444444,
+        -0.2222222222222222
+      ],
+      [
+        0.0,
+        -0.2222222222222222,
+        -0.2222222222222222,
+        0.4444444444444444
+      ]
+    ],
+    "rho": 0.07407407407407408,
+    "metric_G_over_rho": [
+      [
+        4.999999999999999,
+        2.4999999999999996,
+        -2.9999999999999996,
+        0.0
+      ],
+      [
+        2.4999999999999996,
+        4.999999999999999,
+        0.0,
+        -2.9999999999999996
+      ],
+      [
+        -2.9999999999999996,
+        0.0,
+        5.999999999999999,
+        -2.9999999999999996
+      ],
+      [
+        0.0,
+        -2.9999999999999996,
+        -2.9999999999999996,
+        5.999999999999999
+      ]
+    ],
+    "d0": "sqrt(G/rho) (exp(ik)-1)",
+    "d1": "antisymmetric discrete wedge with rows -d0_nu at mu, +d0_mu at nu",
+    "exact_Ward": "d1 d0=0 and M=d1^dag d1 has M d0=0",
+    "Maxwell_symbol": "eigenvalues [0,s,s,s], s=d0^dag d0",
+    "continuum_symbol": "lim_{N->infinity} N\u00b2 s/(2pi)\u00b2 = m^T G/rho m for k=(2pi/N)m",
+    "rows": [
+      {
+        "N": 8,
+        "discrete_gauge_eigenvalues": [
+          4.329869796037268e-15,
+          17.928932188134503,
+          17.928932188134517,
+          17.928932188134517
+        ],
+        "scaled_transverse_dispersion": 29.065290091919973,
+        "relative_acoustic_metric_error": 0.16956314023085775
+      },
+      {
+        "N": 16,
+        "discrete_gauge_eigenvalues": [
+          -5.967448757360216e-16,
+          5.154602957088918,
+          5.154602957088918,
+          5.154602957088922
+        ],
+        "scaled_transverse_dispersion": 33.425310260386794,
+        "relative_acoustic_metric_error": 0.044991135417519965
+      },
+      {
+        "N": 32,
+        "discrete_gauge_eigenvalues": [
+          5.551115123125783e-17,
+          1.3339542082983933,
+          1.333954208298394,
+          1.333954208298394
+        ],
+        "scaled_transverse_dispersion": 34.600401743224545,
+        "relative_acoustic_metric_error": 0.011417093050727092
+      },
+      {
+        "N": 64,
+        "discrete_gauge_eigenvalues": [
+          -4.163336342344337e-17,
+          0.3363735272295742,
+          0.33637352722957425,
+          0.33637352722957425
+        ],
+        "scaled_transverse_dispersion": 34.89972625904496,
+        "relative_acoustic_metric_error": 0.0028649640272866306
+      }
+    ],
+    "scope": "A gauge-invariant FOUR-DIMENSIONAL EUCLIDEAN coarse-grained cochain template with native G; this is not a derived microscopic gauge field, not a Lorentzian action, and its 3 off-gauge modes are not yet two physical photon helicities. No gravity or dynamics of G established."
+  }
+}
