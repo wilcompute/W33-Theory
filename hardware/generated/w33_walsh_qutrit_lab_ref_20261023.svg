@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9350" height="1640" viewBox="-425 -1135 9350 1640">
+<defs>
+<style type="text/css">
+.l20d0 {stroke: #F38400; fill: #F38400; fill-opacity: 0.5;}
+.l1d0 {stroke: #A1CAF1; fill: #A1CAF1; fill-opacity: 0.5;}
+.l99d0 {stroke: #875692; fill: #875692; fill-opacity: 0.5;}
+.l61t0 {stroke: none; fill: #A1CAF1;}
+.l60t0 {stroke: none; fill: #F38400;}
+</style>
+</defs>
+<rect x="-425" y="-1135" width="9350" height="1640" fill="#222222" stroke="none"/>
+<g id="W33_WALSH_QUTRIT_LAB_REF" transform="scale(1 -1)">
+<polygon id="0000017B7413A920" class="l1d0" points="0,-2.5 8500,-2.5 8500,2.5 0,2.5"/>
+<polygon id="0000017B7413A990" class="l20d0" points="180,20 460,20 460,70 180,70"/>
+<polygon id="0000017B7413A8B0" class="l1d0" points="0,197.5 8500,197.5 8500,202.5 0,202.5"/>
+<polygon id="0000017B7413AD10" class="l20d0" points="180,220 460,220 460,270 180,270"/>
+<polygon id="0000017B7413A300" class="l1d0" points="0,397.5 8500,397.5 8500,402.5 0,402.5"/>
+<polygon id="0000017B7413A3E0" class="l20d0" points="180,420 460,420 460,470 180,470"/>
+<polygon id="0000017B7413A610" class="l1d0" points="0,597.5 8500,597.5 8500,602.5 0,602.5"/>
+<polygon id="0000017B7413A370" class="l20d0" points="180,620 460,620 460,670 180,670"/>
+<polygon id="0000017B7413AE60" class="l99d0" points="720,-80 1540,-80 1540,680 720,680"/>
+<polygon id="0000017B7413AA70" class="l99d0" points="1840,-80 2820,-80 2820,680 1840,680"/>
+<polygon id="0000017B7413AAE0" class="l99d0" points="3200,-80 4300,-80 4300,680 3200,680"/>
+<polygon id="0000017B7413A680" class="l99d0" points="4740,-80 6350,-80 6350,680 4740,680"/>
+<polygon id="0000017B7413ADF0" class="l99d0" points="6850,-80 7600,-80 7600,680 6850,680"/>
+<text id="0000017B741509F0" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 20) scale(1 -1)">OPT_IN_0</text>
+<text id="0000017B74150C30" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(7600 30) scale(1 -1)">AUX0_OUT</text>
+<text id="0000017B74150600" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(180 110) scale(1 -1)">PHASECAL0</text>
+<text id="0000017B74151020" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 220) scale(1 -1)">OPT_IN_1</text>
+<text id="0000017B74150060" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(7600 230) scale(1 -1)">QUTRIT1_OUT</text>
+<text id="0000017B741511D0" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(180 310) scale(1 -1)">PHASECAL1</text>
+<text id="0000017B74150180" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 420) scale(1 -1)">OPT_IN_2</text>
+<text id="0000017B741502A0" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(7600 430) scale(1 -1)">QUTRIT2_OUT</text>
+<text id="0000017B74150690" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(180 510) scale(1 -1)">PHASECAL2</text>
+<text id="0000017B74150450" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 620) scale(1 -1)">OPT_IN_3</text>
+<text id="0000017B74151530" class="l60t0" text-anchor="middle" dominant-baseline="central" transform="translate(7600 630) scale(1 -1)">QUTRIT3_OUT</text>
+<text id="0000017B74151B60" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(180 710) scale(1 -1)">PHASECAL3</text>
+<text id="0000017B741516E0" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(730 660) scale(1 -1)">WALSH_ENCODER</text>
+<text id="0000017B74151F50" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(1850 660) scale(1 -1)">XOR_V4_SWITCH</text>
+<text id="0000017B74151650" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(3210 660) scale(1 -1)">S4_RAIL_3CYCLE</text>
+<text id="0000017B74151AD0" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(4750 660) scale(1 -1)">ENCODED_F3</text>
+<text id="0000017B741512F0" class="l61t0" text-anchor="middle" dominant-baseline="central" transform="translate(6860 660) scale(1 -1)">WALSH_DECODER</text>
+</g>
+</svg>
