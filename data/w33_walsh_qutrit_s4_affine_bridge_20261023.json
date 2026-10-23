@@ -1,0 +1,728 @@
+{
+  "Z3_F3_conjugate_imag": [
+    [
+      0.0,
+      -1.1960990744404329e-16,
+      -1.8370866365682872e-16
+    ],
+    [
+      1.0243469748098801e-16,
+      -0.8660254037844384,
+      2.220446049250313e-16
+    ],
+    [
+      1.9229626863835643e-16,
+      5.551115123125783e-17,
+      0.8660254037844384
+    ]
+  ],
+  "Z3_F3_conjugate_real": [
+    [
+      0.9999999999999999,
+      -2.8207374214984593e-18,
+      1.8318896805504802e-16
+    ],
+    [
+      -3.686287619893721e-17,
+      -0.4999999999999999,
+      -2.7755575615628914e-16
+    ],
+    [
+      1.6371271627227497e-16,
+      2.220446049250313e-16,
+      -0.4999999999999999
+    ]
+  ],
+  "all_permutations_preserve_qutrit": true,
+  "carrier": "one four-rail Walsh qutrit, coherent 4-mode single-photon Hilbert space",
+  "engineering_boundary": [
+    "existing XOR four-state bus cannot execute rail 3-cycle",
+    "3-cycle requires at least two ordinary transpositions in a 4-rail permutation-only realization",
+    "routing waveguides and state preparation must be coherent and synchronized",
+    "Clifford+R is prior-art; no novel quantum gate species, dense-gate proof or two-qutrit entangler implied"
+  ],
+  "group_theory": "S4 on 4 physical rails has a 3D standard real representation on the nontrivial Walsh characters. V4 normal; 3-cycle extends V4 to A4.",
+  "logical_sign_permutation_count": 24,
+  "nonzero_induced_logical_generators": {
+    "Fourier_3": "needed to construct Z3 by conjugating X3",
+    "XOR_V4": "diagonal signed metaplectic-reflection class",
+    "rail_3cycle": "qutrit cyclic shift X3"
+  },
+  "permutation_table": [
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "physical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "physical_permutation": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "physical_permutation": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "physical_permutation": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "physical_permutation": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "physical_permutation": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "physical_permutation": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": -1,
+      "logical_signed_permutation": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "physical_permutation": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "code_leakage_residual": 7.691850745534255e-16,
+      "determinant": 1,
+      "logical_signed_permutation": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "physical_permutation": [
+        3,
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "physical_rail_permutation_count": 24,
+  "schema": "w33.walsh.qutrit.s4_physical_rail_bridge.v1",
+  "sha256": "2ebd80771f57762a5c2c204a4cbb27c04d64edf3542809ce69f0790dc6b5eac9",
+  "three_cycle_logical_X3": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "three_cycle_order": 3,
+  "three_cycle_rail_permutation": [
+    0,
+    2,
+    3,
+    1
+  ]
+}
