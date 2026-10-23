@@ -1,0 +1,23 @@
+{
+  "schema": "w33.pass3064_3070.belief_machine_source_summary.v1",
+  "status": "SOURCE_COMPLETE_EXACT_AND_EXPLICIT_MODELS_REMOTE_EVIDENCE_PENDING",
+  "headlines": {
+    "3064": "Exact collision-conditioned two-step Bayes policies for three explicit synthetic D4-plus-erasure channels.",
+    "3065": "Verified 28-row full-D4 upper bound and proof-producing fail-closed 164220-clause decision of size 27.",
+    "3066": "Cyclic edit obstruction plus zero-extra-channel pilot-order construction with scores 1/2 and 3/5.",
+    "3067": "Synthesizable signed three-score posterior-gap stopping core and protocol testbench.",
+    "3068": "Exact 1436-to-457 future-action quotient, 470 total states, 1.078290855-bit conditional reduction.",
+    "3069": "Exact five-channel D4 Fourier predictor for class-invariant convolution.",
+    "3070": "Exact measurement-alphabet Blackwell frontier for the moderate synthetic channel."
+  },
+  "current_fixed_schedule_bounds": [23, 28],
+  "pending": [
+    "independently checked SAT/DRUP decision for size 27",
+    "RTL simulation, synthesis, placement and timing",
+    "four-front-door materialization and idempotence",
+    "three PDF builds",
+    "fully noisy base-panel inference",
+    "laboratory D4 likelihood and edit-rate calibration"
+  ],
+  "claim_boundary": "Exact finite calculations, explicit synthetic decision models, source RTL and physical measurements remain separately typed."
+}
