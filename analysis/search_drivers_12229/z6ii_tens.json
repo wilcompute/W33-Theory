@@ -1,0 +1,798 @@
+{
+ "models": 134,
+ "total": {
+  "scalar|w0|tw": 54,
+  "fermion|w0|untw": 106,
+  "fermion|w1|tw": 12
+ },
+ "per_model": [
+  {
+   "model": "Z6II_01_SM_20260917_569_v0",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v1",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v2",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v3",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v4",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v5",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v6",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v7",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v8",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v9",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v10",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v11",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v12",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v13",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v14",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v15",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v16",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v17",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v18",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_569_v19",
+   "gauge": "A4 + A2 and A1 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v6",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v7",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v8",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v9",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v10",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v11",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v12",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v13",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v14",
+   "gauge": "A4 + A3 and A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v15",
+   "gauge": "A4 + A3 and A1 + A1 NU1 7",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v16",
+   "gauge": "A4 + A3 and A1 + A1 NU1 7",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v17",
+   "gauge": "A4 + A3 and A1 + A1 NU1 7",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v18",
+   "gauge": "A4 + A3 and A1 + A1 NU1 7",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_273_v19",
+   "gauge": "A4 + A3 and A1 + A1 NU1 7",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v0",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v1",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v2",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v3",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v4",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v5",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v6",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v7",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_06_SM_20260917_2496_v8",
+   "gauge": "A4 and A2 NU1 10",
+   "tens": {
+    "scalar|w0|tw": 6
+   }
+  },
+  {
+   "model": "Z6II_10_SM_20260917_818_v3",
+   "gauge": "A4 and A1 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 4
+   }
+  },
+  {
+   "model": "Z6II_10_SM_20260917_818_v4",
+   "gauge": "A4 and A1 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 4
+   }
+  },
+  {
+   "model": "Z6II_10_SM_20260917_818_v5",
+   "gauge": "A4 and A1 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 4
+   }
+  },
+  {
+   "model": "Z6II_10_SM_20260917_818_v6",
+   "gauge": "A4 and A1 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 4
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v0",
+   "gauge": "A2 and A4 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v1",
+   "gauge": "A2 + A1 and A4 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v2",
+   "gauge": "A1 and A4 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v3",
+   "gauge": "A1 and A4 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v4",
+   "gauge": "A1 and A4 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v5",
+   "gauge": "A2 and A4 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v6",
+   "gauge": "A2 + A1 and A4 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v7",
+   "gauge": "A2 + A1 and A4 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v8",
+   "gauge": "A2 + A1 and A4 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v9",
+   "gauge": "A1 and A4 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v10",
+   "gauge": "A1 and A4 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v11",
+   "gauge": "A1 and A4 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v12",
+   "gauge": "A2 + A1 and A4 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_23_SM_20260917_2913_v13",
+   "gauge": "A2 + A1 and A4 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v0",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v1",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v2",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v3",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v4",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v5",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v6",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v7",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v8",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v9",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v10",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_59_SM_20260917_1105_v11",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v0",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v1",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v2",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v3",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v4",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v5",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v6",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v7",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v8",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v9",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v10",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v11",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v12",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {
+    "fermion|w1|tw": 12
+   }
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v13",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v14",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v15",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v16",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v17",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v18",
+   "gauge": "A2 + A1 and A4 + A1 NU1 8",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_34_SM_20260917_617_v19",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v0",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v1",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v2",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v3",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v4",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v5",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v6",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v7",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v8",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v9",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v10",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v11",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v12",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v13",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v14",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v15",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v16",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v17",
+   "gauge": "A2 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v18",
+   "gauge": "A1 and A4 + A1 NU1 10",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_49_SM_20260917_145_v19",
+   "gauge": "A1 + A1 and A4 + A1 NU1 9",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_470_v3",
+   "gauge": "A4 + A3 and A1 + A1 NU1 7",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_01_SM_20260917_470_v15",
+   "gauge": "A4 + A3 and A1 + A1 NU1 7",
+   "tens": {}
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v0",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v1",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v2",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v3",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v4",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v5",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v6",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v7",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v8",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v9",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_12_SM_20260917_574_v10",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v12",
+   "gauge": "A4 and A1 + A1 + A1 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v13",
+   "gauge": "A4 and A1 + A1 + A1 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v14",
+   "gauge": "A4 and A1 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v15",
+   "gauge": "A4 and A2 + A1 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v16",
+   "gauge": "A4 and A2 + A1 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v17",
+   "gauge": "A4 and A2 + A1 NU1 9",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v18",
+   "gauge": "A4 and A2 + A1 + A1 NU1 8",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  },
+  {
+   "model": "Z6II_19_SM_20260917_477_v19",
+   "gauge": "A4 and A1 NU1 11",
+   "tens": {
+    "fermion|w0|untw": 2
+   }
+  }
+ ]
+}

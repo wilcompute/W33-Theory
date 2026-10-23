@@ -1,0 +1,87 @@
+{
+  "12229": {
+    "models": 58,
+    "union": {
+      "1": 11952,
+      "5": 840
+    }
+  },
+  "12230": {
+    "models": 5,
+    "sectors": 30,
+    "tens_observed": [
+      "[19, '[0, 0, 0]', '1/2', '1/2']",
+      "[19, '[0, 0, 2]', '1/2', '1/2']",
+      "[19, '[0, 1, 1]', '0', '1/2']",
+      "[20, '[0, 0, 0]', '1/2', '1/2']",
+      "[20, '[0, 0, 1]', '1/2', '1/2']",
+      "[20, '[0, 1, 2]', '0', '1/2']"
+    ]
+  },
+  "12231": {
+    "draws": 20000,
+    "tries": 64259,
+    "hits": 401,
+    "scalar_type_configs": 0,
+    "density": 0.02005,
+    "wilson95": [
+      0.01819749679984996,
+      0.02208684538370342
+    ],
+    "one_line_density": 0.0017523061213893841
+  },
+  "12233": {
+    "models": 134,
+    "total": {
+      "scalar|w0|tw": 54,
+      "fermion|w0|untw": 106,
+      "fermion|w1|tw": 12
+    },
+    "scalar_models": [
+      "Z6II_06_SM_20260917_2496_v0",
+      "Z6II_06_SM_20260917_2496_v1",
+      "Z6II_06_SM_20260917_2496_v2",
+      "Z6II_06_SM_20260917_2496_v3",
+      "Z6II_06_SM_20260917_2496_v4",
+      "Z6II_06_SM_20260917_2496_v5",
+      "Z6II_06_SM_20260917_2496_v6",
+      "Z6II_06_SM_20260917_2496_v7",
+      "Z6II_06_SM_20260917_2496_v8"
+    ],
+    "rule_on_hidden_scalar_10s": [
+      [
+        15,
+        "[0, 0, 2]",
+        "0",
+        "0"
+      ],
+      [
+        15,
+        "[0, 0, 4]",
+        "0",
+        "0"
+      ],
+      [
+        16,
+        "[0, 0, 2]",
+        "0",
+        "0"
+      ],
+      [
+        16,
+        "[0, 0, 4]",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "checks": {
+    "12229: the 58 three-generation twisted-10 models carry only scalar SU(5) singlets and 5s": true,
+    "12230: (P.V0 - R0) mod 1 = w/2 in all 30 sectors of 5 models; every observed 10 obeys it and is a fermion": true,
+    "12230: one-line theorem -- all 4050 twisted 10-type massless momenta have w = 1, P.V0 in Z, hence fermions by the rule": true,
+    "12231: two lines, lattice scalar test on 20000 draws: no scalar-type 10 configuration": true,
+    "12233: Z6-II: 134 A4 models; the only scalar 10s (54) sit in the HIDDEN SU(5) of parent SM_2496 and obey the rule (w=0, P.V0 in Z, R0=0)": true,
+    "12233: on Z6-II the constant phase holds in 12/12 sectors": true
+  },
+  "all_checks_pass": true
+}
