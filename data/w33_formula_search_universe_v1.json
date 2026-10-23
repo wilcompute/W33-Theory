@@ -289956,7 +289956,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 239,
+          "line": 256,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "'Dterm_normalization':'With Tr(tA tB)=deltaAB/2 and canonical kinetic terms, V_D=(gL^2+gR^2)*(Tr(Y^4)-(Tr(Y^2))^2/3)/4=(gL^2+gR^2)*(Tr(Y^2))^2/24, also radial on this slice.',",
           "status": "unclassified"
@@ -293861,6 +293861,33 @@
       },
       "structural_family_id": "0901540813b6f9452a61c982d2c85be9a1a01dce8b3dac027592f81b060e959b",
       "structural_formula": "'answer':'Themissing1#-sectoristhecentered4#-linex3#-spreadincidenceframe,equivalentlythenonsquareO(#,#)polar-incidenceframeC0.Ithasrank1#,C0C0^T=#P1#,andW3#point-lineincidenceannihilatesitexactly:NC0=#.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "145f38da1f3798617c46151e4d12afbb5f3b08f5bcaff13f616305694697355e",
+      "normalized_formula": "'antiunitary':'Theta=Z^2complex_conjugation;Theta^2=I'",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 243,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'antiunitary':'Theta=Z^2 complex_conjugation; Theta^2=I',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ce8cadb8a63ccf74c73ee7e92e9e33aa94a5e9094b13e0f7992e878ccc11db97",
+      "structural_formula": "'antiunitary':'Theta=Z^#complex_conjugation;Theta^#=I'"
     },
     {
       "file_count": 1,
@@ -298199,6 +298226,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1c0b3c8dfd9804e8bff04d4ef64141079e8b0bdb39c9de07bb7cf576b52dbcab",
+      "normalized_formula": "'coefficient_map':'alpha->omega^2conjugate(alpha);beta->beta'",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 242,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'coefficient_map':'alpha -> omega^2 conjugate(alpha); beta -> beta',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f0e0d1f28dd903a5d3043aacf4bbf349ad1dda494d0bda0a6f7a407bd7cc7aab",
+      "structural_formula": "'coefficient_map':'alpha->omega^#conjugate(alpha);beta->beta'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4657995c38db0c172cd5bb305afc640ce3fafcfd5fcbfb51822c6a9bc7755d4e",
       "normalized_formula": "'coherent_fault_early_halt':joint_paths[7]['cost']=5",
       "numeric_literals": [
@@ -301573,6 +301627,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "aed4497b2fa76a09d05b4e876f484a495b5cd3b3ca39e3be9e6a8b8a095145b5",
+      "normalized_formula": "'determinant':-1,'square':'I','form_identity':'K^TF(1,0)K=F(1,-2)'",
+      "numeric_literals": [
+        "-1",
+        "-2",
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 241,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'determinant':-1,'square':'I','form_identity':'K^T F(1,0) K=F(1,-2)',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "394dc51410ca32b225e3bc3fc9ddb5fb633709363ac4b99de2461787ca257616",
+      "structural_formula": "'determinant':#,'square':'I','form_identity':'K^TF(#,#)K=F(#,#)'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "21862a41cb8ad629e16bb459a4c42d2e6eaa619be2be349d5d2a389716f82dd0",
       "normalized_formula": "'deterministic_census_has_141_seeds':len(basins)=141",
       "numeric_literals": [
@@ -304762,7 +304846,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 303,
+          "line": 320,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "'flat_limit_theorem':'Primitivity of the actual cycle-voltage lattice gives a Bloch zero only at k=0. The base graph has one zero and a positive optical gap. Analytic perturbation gives lambda0(k)=k^T G k+O(|k|^4). Compactness gaps all momenta away from0. Therefore at a=2pi/N every fixed-energy spectral window of L/(rho*a^2) converges, with multiplicities away from boundary levels, to the flat4torus Laplacian with symbol G/rho. Its limiting counting function grows as (pi^2*rho/2)*E^2. This is a standard periodic-graph argument specialized to the certified native data, not new homogenization theory.',",
           "status": "certified_or_theorem"
@@ -311604,7 +311688,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 232,
+          "line": 249,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "'map':'x -> (Y(x),0,0), Y=alpha X+alpha* Xdag+beta Z+beta* Zdag',",
           "status": "unclassified"
@@ -318007,7 +318091,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 241,
+          "line": 258,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "'radial_vacuum':'V_F=9*(|alpha|^2+|beta|^2)^2. Adding a common tachyonic soft mass -m2*r2 yields r2=m2/18 but leaves the entire angular S3 flat.',",
           "status": "unclassified"
@@ -320478,7 +320562,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 240,
+          "line": 257,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "'soft_cubic_selection':'At fixed r2, |det Y|<=2*r2^(3/2). Equality requires exactly one of alpha,beta nonzero, with its cube real. A nonzero real soft detY term therefore selects singular values proportional to (2,1,1), not a three-way hierarchy, if a stable nonzero radial minimum exists.',",
           "status": "unclassified"
@@ -679809,7 +679893,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 290,
+          "line": 307,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "Kg,_=conductivity(w,b,V+b@gauge);gauge_error=float(np.max(abs(Kg-K)));assert gauge_error<1e-12",
           "status": "unclassified"
@@ -845019,6 +845103,34 @@
       },
       "structural_family_id": "a4040370a10b6b083d051db5906999b4669b75824bdc40faf3eac1021a5b9cb5",
       "structural_formula": "Theta=theta_val#=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f6e82ada989a2de2180ed104c4556b7e7d96eda24b79c57d4d9ab4a1b1811201",
+      "normalized_formula": "ThetaW(a,b,c)Theta^-1=W(a,\u2212b,\u2212c+2a)",
+      "numeric_literals": [
+        "-1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 192,
+          "path": "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md",
+          "raw": "Theta W(a,b,c) Theta^-1 = W(a,\u2212b,\u2212c+2a).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9e436b6832bbd016becc900096c4a7da65570daf6b89c19fc5c548c90495aad8",
+      "structural_formula": "ThetaW(a,b,c)Theta^#=W(a,\u2212b,\u2212c+#a)"
     },
     {
       "file_count": 1,
@@ -1324140,7 +1324252,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 285,
+          "line": 302,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "gauge=rng.normal(size=(26,4));nonlinear=[]",
           "status": "unclassified"
@@ -1817783,7 +1817895,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 287,
+          "line": 304,
           "path": "analysis/w33_pass12189_12193_five_bridges.py",
           "raw": "w=np.exp(theta*directions[0]+phi*directions[1]);K,h=conductivity(w,b,V)",
           "status": "unclassified"
@@ -1879283,9 +1879395,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T06:51:49-04:00",
+  "frozen_at": "2026-10-23T07:08:54-04:00",
   "pass": 398,
-  "repository_head": "da33158b4076856094421f87147d4a54b8da56d2",
+  "repository_head": "d9da7d9a7f37f2e99897ee0e5cf1d1740f11ade2",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1982048,6 +1982160,14 @@
     },
     {
       "exact_formula_ids": [
+        "145f38da1f3798617c46151e4d12afbb5f3b08f5bcaff13f616305694697355e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ce8cadb8a63ccf74c73ee7e92e9e33aa94a5e9094b13e0f7992e878ccc11db97",
+      "structural_formula": "'antiunitary':'Theta=Z^#complex_conjugation;Theta^#=I'"
+    },
+    {
+      "exact_formula_ids": [
         "4a7e669da04b10af63001c9e6feaf18e61555c9503db9b0cd5be6577b3eee0e7"
       ],
       "exact_member_count": 1,
@@ -1983191,6 +1983311,14 @@
     },
     {
       "exact_formula_ids": [
+        "1c0b3c8dfd9804e8bff04d4ef64141079e8b0bdb39c9de07bb7cf576b52dbcab"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f0e0d1f28dd903a5d3043aacf4bbf349ad1dda494d0bda0a6f7a407bd7cc7aab",
+      "structural_formula": "'coefficient_map':'alpha->omega^#conjugate(alpha);beta->beta'"
+    },
+    {
+      "exact_formula_ids": [
         "4657995c38db0c172cd5bb305afc640ce3fafcfd5fcbfb51822c6a9bc7755d4e"
       ],
       "exact_member_count": 1,
@@ -1984100,6 +1984228,14 @@
       "exact_member_count": 1,
       "structural_family_id": "055ff7f25b65f466bb210faadf7b66ac94d17b228ec3530b8344ce496b3aa4bd",
       "structural_formula": "'design_principle':{'classification':'MaximizetheminimumrobustKLinformationperdecodedshotoverthethreeWilsonchannels.','guard_piggyback':'BothdarkguardmodesareobservedoneveryWalshdecodingshot,socovariance-sentinelevidenceaccumulateswithoutaseparateacquisitionblock.','alpha_codesign':'Minimizesharedclass/guardshotsplusreferenceshotsunderalpha_class+alpha_guard+alpha_reference=#.Attheoptimumalpha_class=#exp(-nI_class)andalpha_guard=#exp(-nI_guard),withtheremainingalphaassignedtothephasereference.','raw_photon_conversion':'Thecorrelatedopticalpair-errorbounddeterminestherawphotonsrequiredforeachdecodedWilsonobservationattheselectedconfusioncap.'}"
+    },
+    {
+      "exact_formula_ids": [
+        "aed4497b2fa76a09d05b4e876f484a495b5cd3b3ca39e3be9e6a8b8a095145b5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "394dc51410ca32b225e3bc3fc9ddb5fb633709363ac4b99de2461787ca257616",
+      "structural_formula": "'determinant':#,'square':'I','form_identity':'K^TF(#,#)K=F(#,#)'"
     },
     {
       "exact_formula_ids": [
@@ -2107065,6 +2107201,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a4040370a10b6b083d051db5906999b4669b75824bdc40faf3eac1021a5b9cb5",
       "structural_formula": "Theta=theta_val#=#"
+    },
+    {
+      "exact_formula_ids": [
+        "f6e82ada989a2de2180ed104c4556b7e7d96eda24b79c57d4d9ab4a1b1811201"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9e436b6832bbd016becc900096c4a7da65570daf6b89c19fc5c548c90495aad8",
+      "structural_formula": "ThetaW(a,b,c)Theta^#=W(a,\u2212b,\u2212c+#a)"
     },
     {
       "exact_formula_ids": [
@@ -2381515,20 +2381659,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91096922,
-    "exact_formula_families": 64250,
+    "bytes_scanned": 91099520,
+    "exact_formula_families": 64254,
     "files_scanned": 12532,
-    "formula_occurrences": 70353,
+    "formula_occurrences": 70357,
     "status_occurrences": {
       "certified_or_theorem": 5281,
       "killed_or_retracted": 1866,
       "open_or_conditional": 2365,
       "preregistered": 36,
       "retrospective_fit": 5394,
-      "unclassified": 55411
+      "unclassified": 55415
     },
-    "structural_families": 62562
+    "structural_families": 62566
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "3d9e930c21dfc5c80f892fed8b315e4c5e52dfa5258e7dd053256f5003d3cef5"
+  "universe_sha256": "7caed0676cfd8759d395ebae10728df85f87de99a84e2810ca0fdb93af25b6ac"
 }
