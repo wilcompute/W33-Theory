@@ -348138,6 +348138,42 @@
       "structural_formula": "(PDG>#;substratepredictionjustabovebound)"
     },
     {
+      "file_count": 2,
+      "formula_id": "78c0c9edac0929915177b3df1dc214c706aaaaae9dbd22d33541a72c62ec185b",
+      "normalized_formula": "(P\\cdotV_0-R_0)\\bmod1=w/2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex",
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 662,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "(P\\cdot V_0-R_0)\\bmod1=w/2",
+          "status": "certified_or_theorem"
+        },
+        {
+          "category": "inline_math",
+          "line": 513,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "(P\\cdot V_0-R_0)\\bmod1=w/2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1,
+        "unclassified": 1
+      },
+      "structural_family_id": "02445ca9af3109be52d78b0129fe5402c32ebef845f9ad54e4ccffb7ab4f3f40",
+      "structural_formula": "(P\\cdotV_0-R_0)\\bmod1=w/#"
+    },
+    {
       "file_count": 1,
       "formula_id": "1e915083b1eea72e776ee3399c7a207bff12d5ec71ed74a0e7b03db8119c5d2b",
       "normalized_formula": "(P_m)_{j,k}=\\begin{cases}1j=k\\oplusm,\\\\0\\text{otherwise}.\\end{cases}",
@@ -359980,6 +360016,37 @@
       },
       "structural_family_id": "6a176dd5c6586a061f0e1fd3dffc2c7a2a0876806d83f01af66f4ca31c871773",
       "structural_formula": "(w3#_su4_is_spacetime.py).Since2T<SU(#)(asunitquaternions)andSU(#)<SU(#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "07f8ef4443f2145197df31967b2b076209857908f64991a69d35b1b695c21ddb",
+      "normalized_formula": "(w=0,P.V0=1/2:fermions).With12225(all4050one-linetwisted10-typemasslessmomentahavew=1andP.V0inZ)the",
+      "numeric_literals": [
+        "0",
+        "050",
+        "1",
+        "2",
+        "2225"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "(w = 0, P.V0 = 1/2: fermions). With 12225 (all 4050 one-line twisted 10-type massless momenta have w = 1 and P.V0 in Z) the",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "f6f334fbed1eed942b3e7e323a9ae11751b5036c4144267cc094544d41654d25",
+      "structural_formula": "(w=#,P.V0=#/#:fermions).With1#(all4#one-linetwisted1#-typemasslessmomentahavew=#andP.V0inZ)the"
     },
     {
       "file_count": 1,
@@ -658100,6 +658167,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5e46a3f420115c04d21e2afbcf69c4dcd67e113fab2aba5718c3d992c4ef39f9",
+      "normalized_formula": "H_2=2^{-1/2}(\\begin{smallmatrix}11\\\\1-1\\end{smallmatrix})",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "11",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_all5_engineering_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 177,
+          "path": "papers/fractal_holonet_all5_engineering_20261023.tex",
+          "raw": "H_2=2^{-1/2} \\left(\\begin{smallmatrix}1&1\\\\1&-1\\end{smallmatrix}\\right)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9b574ffe791649b7769b778e639556bd37321b4b0159f3b6390a8f66e1e3b027",
+      "structural_formula": "H_2=#^{#/#}(\\begin{smallmatrix}#\\\\##\\end{smallmatrix})"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3667a46e3803c1dfad0ccd6f251ad161b5d0cd0413c0511ccf6aa448a71dd6bf",
       "normalized_formula": "H_2=40",
       "numeric_literals": [
@@ -758203,6 +758300,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e59507aafb5ed204fbc8ca141f113066cb833b2425b3e935fbf46f5ac580b076",
+      "normalized_formula": "P\\cdotV_0\u2261w/2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 514,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "P\\cdot V_0\\equiv w/2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8b60237098d79294599374d3e16991d4dcd26d04fb5c902cedc46ce4dd2e85ad",
+      "structural_formula": "P\\cdotV_0\u2261w/#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ab6a35c6402b3c6e62e9be1f6def61ed35137a2cad25b950062c8c4b11330211",
       "normalized_formula": "P\\ket{\\Omega}=q^{-1/2}\\sum_j\\ket{j,j}=\\ket{\\Omega}",
       "numeric_literals": [
@@ -759442,6 +759566,34 @@
       },
       "structural_family_id": "2750d161d3870c510cfc63a2d29917475973aa235984f4d9a297faf0686ae485",
       "structural_formula": "P_log=#*np.pi/theta_BC"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "468db75f7692f5be323070f206f91027c4ca6dec3fff273bda4274f408f0d081",
+      "normalized_formula": "P_m=W\\operatorname{diag}((-1)^{s\\cdotm})_{s\\in\\mathbb{F}_2^2}W",
+      "numeric_literals": [
+        "-1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_all5_engineering_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 182,
+          "path": "papers/fractal_holonet_all5_engineering_20261023.tex",
+          "raw": "P_m=W\\operatorname{diag} \\left((-1)^{s\\cdot m}\\right)_{s\\in\\mathbb{F}_2^2}W.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ca1e6b0082153476852eef29768e2a612a58e4fbf571d5c6513046a9ceb1c70c",
+      "structural_formula": "P_m=W\\operatorname{diag}((#)^{s\\cdotm})_{s\\in\\mathbb{F}_2^#}W"
     },
     {
       "file_count": 1,
@@ -860617,6 +860769,36 @@
       },
       "structural_family_id": "6e34ed9ec6967001c77fbb7e798aacaf2ccce6402adcbe3dd265ac12cc3768ae",
       "structural_formula": "U_e\\cdotV_e=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "26fcef0f16e903cd6d7480b3d1f3792b28a29668ef1dc0be09bdb1851a2a6747",
+      "normalized_formula": "U_m=i^{w(m)}P_m,\\qquadm\\in\\{0,1,2,3\\}",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_all5_engineering_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 57,
+          "path": "papers/fractal_holonet_all5_engineering_20261023.tex",
+          "raw": "U_m=i^{w(m)}P_m,\\qquad m\\in\\{0,1,2,3\\}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ea9c3146ed948c88717d9a7b9f7c5aee7ccc54de1b529cb691a9bcaaeefbba80",
+      "structural_formula": "U_m=i^{w(m)}P_m,\\qquadm\\in\\{#,#,#,#\\}"
     },
     {
       "file_count": 1,
@@ -998580,7 +998762,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 664,
+          "line": 665,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1044528,6 +1044710,35 @@
       },
       "structural_family_id": "c90ccf64bdb6f584fa39b537d970275a859f566ec70b5dc49ef8371c3aaa547a",
       "structural_formula": "^R||msW(t>ZOschnei"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c2e9b97d4aebef5ab05cbefbcee29c7dbf0e9f355d5a591ad8356823c6dfaaf5",
+      "normalized_formula": "^Scope.^OnZ6-IItheconstantphaseholdsin12/12sectors,buttwoWitten-twistedsectorscarrybosonswithR0=1\u20442",
+      "numeric_literals": [
+        "1",
+        "12",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12229_12234_THE_STATISTICS_RULE.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 55,
+          "path": "analysis/PASS12229_12234_THE_STATISTICS_RULE.md",
+          "raw": "**Scope.** On Z6-II the constant phase holds in 12/12 sectors, but two Witten-twisted sectors carry bosons with R0 = \u00bd.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cd59fd750e9191dd6da1f0a9facba0c618d0b2d04377da0c6b40cd97a8d8d33b",
+      "structural_formula": "^Scope.^OnZ6-IItheconstantphaseholdsin1#/#sectors,buttwoWitten-twistedsectorscarrybosonswithR0=#\u2044#"
     },
     {
       "file_count": 1,
@@ -1183813,6 +1184024,125 @@
     },
     {
       "file_count": 1,
+      "formula_id": "380099df66d0e96530334aec2648bd4fe37a073dabe31b13e07d6c67cad25029",
+      "normalized_formula": "checks[\"12229:the58three-generationtwisted-10modelscarryonlyscalarSU(5)singletsand5s\"]=(",
+      "numeric_literals": [
+        "10",
+        "12229",
+        "5",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "checks[\"12229: the 58 three-generation twisted-10 models carry only scalar SU(5) singlets and 5s\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f109fc332e519b2e85ec23ffc0742c490dbff7f34503d6932d05e09123f8e56d",
+      "structural_formula": "checks[\"#:the5#three-generationtwisted-#modelscarryonlyscalarSU(#)singletsand5s\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "75baf68fdaebd795b41b235c023913c14004c9ac0301f38c67d56d7ec8e9e108",
+      "normalized_formula": "checks[\"12230:(P.V0-R0)mod1=w/2inall30sectorsof5models;everyobserved10obeysitandisafermion\"]=(",
+      "numeric_literals": [
+        "0",
+        "12230",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "checks[\"12230: (P.V0 - R0) mod 1 = w/2 in all 30 sectors of 5 models; every observed 10 obeys it and is a fermion\"] = (",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "de47ff781c621207b11477f0865694ff7dc130d3107ae560fdaf452371bd6e08",
+      "structural_formula": "checks[\"#:(P.V0-R0)mod1=w/#inall3#sectorsof5models;everyobserved1#obeysitandisafermion\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d4947fc14d9133baecdbeaa7e03549631f4e45a5d0c517eea0e8574d05f90e2c",
+      "normalized_formula": "checks[\"12230:one-linetheorem--all4050twisted10-typemasslessmomentahavew=1,P.V0inZ,hencefermionsbytherule\"]=(",
+      "numeric_literals": [
+        "0",
+        "050",
+        "1",
+        "12230"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 56,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "checks[\"12230: one-line theorem -- all 4050 twisted 10-type massless momenta have w = 1, P.V0 in Z, hence fermions by the rule\"] = (",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "13cd187cb9b78120f01a5c750bf9814f1934945b74f67ee57649459825ef7e34",
+      "structural_formula": "checks[\"#:one-linetheorem--all4#twisted1#-typemasslessmomentahavew=#,P.V0inZ,hencefermionsbytherule\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6f4938b24b5aedb69ddf482f33229bb5c1672348b98fb127aee0e7e427f5892b",
+      "normalized_formula": "checks[\"12233:onZ6-IItheconstantphaseholdsin12/12sectors\"]=len(sel[\"sectors\"])=12andall(len(v)=1forvinsel[\"sectors\"].values())",
+      "numeric_literals": [
+        "1",
+        "12",
+        "12233",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "checks[\"12233: on Z6-II the constant phase holds in 12/12 sectors\"] = len(sel[\"sectors\"]) == 12 and all(len(v) == 1 for v in sel[\"sectors\"].values())",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "43fe5113527c93fef3cd211820e11c552ebc39a134ef1159ac11627689b1b5ba",
+      "structural_formula": "checks[\"#:onZ6-IItheconstantphaseholdsin1#/#sectors\"]=len(sel[\"sectors\"])=#andall(len(v)=#forvinsel[\"sectors\"].values())"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bb811ae9007f03eb7458a962180e5d159626dcb3cc27634fcee7f7c8699f37a8",
       "normalized_formula": "checks[\"15_fermionic\"]=g=15#15Weylfermionspergeneration",
       "numeric_literals": [
@@ -1213875,6 +1214205,35 @@
       },
       "structural_family_id": "7d61206887e7608983511279e87d75a7505958ad7a81347b6719ccf342539f5f",
       "structural_formula": "constant,supports=max(sums.items(),key=lambdakv:len(kv[#]));assertlen(supports)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4c2eaf985d3ca3132a53314f0be0b6e40a892c29b51d0544917d3d3eae60724b",
+      "normalized_formula": "constant-phasepartholds(12/12sectors)buttwoWitten-twistedsectorscarrybosonswithR0=1/2,sotherethestatisticsisread",
+      "numeric_literals": [
+        "1",
+        "12",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "constant-phase part holds (12/12 sectors) but two Witten-twisted sectors carry bosons with R0 = 1/2, so there the statistics is read",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b1fccda3f3d24ce3873838b4df8e4c1769b6f749162a71cc0cd10f62d2fa8735",
+      "structural_formula": "constant-phasepartholds(#/#sectors)buttwoWitten-twistedsectorscarrybosonswithR0=#/#,sotherethestatisticsisread"
     },
     {
       "file_count": 1,
@@ -1269769,6 +1270128,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ebbe087ebd62405f27898c8eab866b8611a53e1f708b44de6c0de57fee124fd4",
+      "normalized_formula": "e=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_all5_engineering_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 121,
+          "path": "papers/fractal_holonet_all5_engineering_20261023.tex",
+          "raw": "e=0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6e3bc8d970855854dcd77f4608e834615d0f6152a4d177d3b77dbe9c01366f18",
+      "structural_formula": "e=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "12cff6b6e3eed1292d1c439de4e714a74b7ba290af299b13686631ecf4f492a4",
       "normalized_formula": "e=0.02;random_replace=.03",
       "numeric_literals": [
@@ -1311016,6 +1311402,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fb061206209759cfecb3406af7e0a68f2251cd236e392d7ce18edf09751dcc9c",
+      "normalized_formula": "fermioniffP.V0=(w+1)/2mod1.Itreproduceseveryobserved10:untwisted10s(w=0,P.V0=1/2:fermions,12170's'16odd",
+      "numeric_literals": [
+        "0",
+        "1",
+        "12170",
+        "16",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "fermion iff P.V0 = (w+1)/2 mod 1. It reproduces every observed 10: untwisted 10s (w = 0, P.V0 = 1/2: fermions, 12170's '16 odd",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "8bf8ace69470429698090d76f74171215824c26b2a3a35a67a7c2de7f8226ea7",
+      "structural_formula": "fermioniffP.V0=(w+#)/#mod1.Itreproduceseveryobserved1#:untwisted1#s(w=#,P.V0=#/#:fermions,#'s'#odd"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a19c80a313fddb76af17f8bc022888ea1b395b75f5d082a17e05f3a365a4b1d5",
       "normalized_formula": "fermions_between=sum((bits>>j)1forjinrange(min(a,b)+1,max(a,b)))",
       "numeric_literals": [
@@ -1342037,6 +1342454,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d404c95abac6d798bb673f682659dd4686981f5476bb63a51b4741161abe1bb9",
+      "normalized_formula": "half-integralforfermions--istheconstantw/2(wtheWittenlabel).HenceamasslessstateisaSCALARiffP.V0=w/2mod1anda",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "half-integral for fermions -- is the constant w/2 (w the Witten label). Hence a massless state is a SCALAR iff P.V0 = w/2 mod 1 and a",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "c2948a480172457e5cc92b5c0bef54a05e85e1026e81038e8be7b380fdd46867",
+      "structural_formula": "half-integralforfermions--istheconstantw/#(wtheWittenlabel).HenceamasslessstateisaSCALARiffP.V0=w/#mod1anda"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6a23931e69594053f199b8b46ecd311ed13dac7cfa1fc86a92fbb801f557af03",
       "normalized_formula": "half=json.loads((ROOT/\"data\"/\"w33_schur_extraspecial_coset_geometry.json\").read_text(encoding=\"utf-8\"))",
       "numeric_literals": [
@@ -1369066,6 +1369510,37 @@
       },
       "structural_family_id": "81763eaee7b8f639e0f5983b6c3068da6a80ad92ce0e88fa17191b297946bd91",
       "structural_formula": "isLOCKED:m_u/m_c~#orm_c/m_t~#(adegeneratepair),independentofeps.AHiggsthatpreservesPisa"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1f6457f330adccae039cd31393fec639f17172faf3cecab183c604f808953959",
+      "normalized_formula": "isSU(5)xSU(3)xSU(2)withquarkdoublets(1,3,2):theSU(5)isHIDDEN.Thescalar10sobeytherule(w=0,P.V0integral",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "is SU(5) x SU(3) x SU(2) with quark doublets (1, 3, 2): the SU(5) is HIDDEN. The scalar 10s obey the rule (w = 0, P.V0 integral,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "285d46b47425529ad4fe14bf187c4019077a2a9bb803b560789c233bc786e647",
+      "structural_formula": "isSU(#)xSU(#)xSU(#)withquarkdoublets(#,#,#):theSU(#)isHIDDEN.Thescalar1#sobeytherule(w=#,P.V0integral"
     },
     {
       "file_count": 1,
@@ -1415757,7 +1416232,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 663,
+          "line": 664,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1420891,7 +1421366,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 663,
+          "line": 664,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1510223,6 +1510698,62 @@
       },
       "structural_family_id": "7f392239d068232fd75c8f2f45ba2ef69c22e9d25451d9ebd13d94153c39a8b2",
       "structural_formula": "p_(q*<Phi_6orp_Ih>)=(Phi_1#oralpha^#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "176252c94ec000a0d11f356d70df99d005fb802d8b0e7e51786de537befea965",
+      "normalized_formula": "p_+(\\theta)=\\frac{1+V\\cos(\\Delta+\\theta)}2",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_all5_engineering_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "papers/fractal_holonet_all5_engineering_20261023.tex",
+          "raw": "p_+(\\theta)=\\frac{1+V\\cos(\\Delta+\\theta)}2,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ec720787edb1df5ac1cf8dc5e0090529cd62549dffb6a6054e0c2b930869fe0b",
+      "structural_formula": "p_+(\\theta)=\\frac{#+V\\cos(\\Delta+\\theta)}#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6407f4e12b49456085d9826a7ecde5cb2538da1c731ca5ad5d96b8c65cc2672f",
+      "normalized_formula": "p_+(\\theta)=\\frac{1+V\\cos(\\Delta+\\theta)}2,\\qquad\\Delta=\\frac{\\pi}{2}",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_all5_engineering_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 66,
+          "path": "papers/fractal_holonet_all5_engineering_20261023.tex",
+          "raw": "p_+(\\theta)=\\frac{1+V\\cos(\\Delta+\\theta)}2, \\qquad \\Delta=\\frac{\\pi}{2}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1a8eaf78effb4d7ff2d6a2dd2fbce1e7480069ee68da6b0a2d7e18843d218d79",
+      "structural_formula": "p_+(\\theta)=\\frac{#+V\\cos(\\Delta+\\theta)}#,\\qquad\\Delta=\\frac{\\pi}{#}"
     },
     {
       "file_count": 1,
@@ -1661029,6 +1661560,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "35db199081f8652a992574fb2b414543e37cc12831101ab3fca9e8da15d5dcef",
+      "normalized_formula": "quarkdoubletsin(1,3,2).Thesescalarsobeytherule(w=0,P\u00b7V0integral,R0=0).Thereisnovisiblescalar10on",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12229_12234_THE_STATISTICS_RULE.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/PASS12229_12234_THE_STATISTICS_RULE.md",
+          "raw": "quark doublets in (1, 3, 2). These scalars obey the rule (w = 0, P\u00b7V0 integral, R0 = 0). There is no visible scalar 10 on",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "62a30bd0c0661a3034141bc2a468c2d6473c430f72bb92240a2d07661f8a0190",
+      "structural_formula": "quarkdoubletsin(#,#,#).Thesescalarsobeytherule(w=#,P\u00b7V0integral,R0=#).Thereisnovisiblescalar1#on"
+    },
+    {
+      "file_count": 1,
       "formula_id": "68152fb2c928f726bcc46e8f56f6d9da2625dae3807d6efbbc43030ae30ab1c4",
       "normalized_formula": "quarks=dict(mc_mt=su[1]/su[0],mu_mc=su[2]/su[1],ms_mb=sd[1]/sd[0],md_ms=sd[2]/sd[1],Vus=abs(V[0,1])",
       "numeric_literals": [
@@ -1710384,6 +1710945,34 @@
       },
       "structural_family_id": "1549412e001032f8e89a15520a096546a4787033fd356a0c30ed364175a2f66c",
       "structural_formula": "scalar-only:<code>#=#\u00d7#</code>istheexactl6spinor<code>E6</code>/Cartanbaseblock,the"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "dcf77712a8ee52c1aa4345cffc5fc99e59a94b9b44360809b9adf75c7b223100",
+      "normalized_formula": "scalar-typeone(no10-typemomentumwithP.V0=w/2):withtwolinestoo,everytwisted10isafermion--alargesample,lattice-only",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "scalar-type one (no 10-type momentum with P.V0 = w/2): with two lines too, every twisted 10 is a fermion -- a large sample, lattice-only.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "542f49aa8e779158824af99d5d5e4903495a1c0a26b815222eeda6272a427523",
+      "structural_formula": "scalar-typeone(no1#-typemomentumwithP.V0=w/#):withtwolinestoo,everytwisted1#isafermion--alargesample,lattice-only"
     },
     {
       "file_count": 1,
@@ -1803010,6 +1803599,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "999e8b5a940aa5cd65b57f47b2d51cb8aaf1d24b3df4c73b23bc6d959addcea8",
+      "normalized_formula": "underthesplitparity'),one-linetwisted10s(w=1,P.V0inZ:fermions,12225),two-lineWitten-untwistedtwisted10s",
+      "numeric_literals": [
+        "0",
+        "1",
+        "12225"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12229_to_12234_the_statistics_rule.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass12229_to_12234_the_statistics_rule.py",
+          "raw": "under the split parity'), one-line twisted 10s (w = 1, P.V0 in Z: fermions, 12225), two-line Witten-untwisted twisted 10s",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "01aa7c03a7d74d86bab21d4c7a7a0153888385e8e1aae4fa872fe1f444c246ad",
+      "structural_formula": "underthesplitparity'),one-linetwisted1#s(w=#,P.V0inZ:fermions,#),two-lineWitten-untwistedtwisted1#s"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e28c9db4e149a857b527c8224ebf5b36d9b30ea9d7ada01e02c91fd25e4bfbcd",
       "normalized_formula": "underthethetagroup,rangingover(0,inf)(0atthecusp1,infatiinf;r(1+i)=sqrt2,r(1+i/2)=3-2sqrt2)",
       "numeric_literals": [
@@ -1832402,6 +1833020,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "910de1a7b76e14e1e485301ecdfdfccf3b6aa7e59cc30852fcd39fa4a0a6883b",
+      "normalized_formula": "x=\\hatp_+(0)-\\hatp_+(\\pi),\\quady=\\hatp_+(3\\pi/2)-\\hatp_+(\\pi/2),\\quad\\hat\\Delta=\\operatorname{atan2}(y,x)",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_all5_engineering_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 74,
+          "path": "papers/fractal_holonet_all5_engineering_20261023.tex",
+          "raw": "x=\\hat p_+(0)-\\hat p_+(\\pi),\\quad y=\\hat p_+(3\\pi/2)-\\hat p_+(\\pi/2), \\quad \\hat\\Delta=\\operatorname{atan2}(y,x)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a34b2c4d52d3d787472afbf2fb8cd5e872e2fb8166f83c6f385dfbd62012f1aa",
+      "structural_formula": "x=\\hatp_+(#)-\\hatp_+(\\pi),\\quady=\\hatp_+(#\\pi/#)-\\hatp_+(\\pi/#),\\quad\\hat\\Delta=\\operatorname{atan2}(y,x)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a54ce75313e9150d20e48f5a86a986b84d4654e1f22b80fd6a19926be5154c5a",
       "normalized_formula": "x=\\mathbf1_{L_+\\setminus\\{p\\}}-\\mathbf1_{L_-\\setminus\\{p\\}},\\qquad\\|x\\|^2=6",
       "numeric_literals": [
@@ -1835773,7 +1836420,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 663,
+          "line": 664,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1885114,9 +1885761,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T12:29:42-04:00",
+  "frozen_at": "2026-10-23T12:47:02-04:00",
   "pass": 398,
-  "repository_head": "cb5ef025004ef137971d3b030916345bdae82e34",
+  "repository_head": "57b3003e06c927836c9ecb9a7167617b372810b2",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2002786,6 +2003433,14 @@
     },
     {
       "exact_formula_ids": [
+        "78c0c9edac0929915177b3df1dc214c706aaaaae9dbd22d33541a72c62ec185b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "02445ca9af3109be52d78b0129fe5402c32ebef845f9ad54e4ccffb7ab4f3f40",
+      "structural_formula": "(P\\cdotV_0-R_0)\\bmod1=w/#"
+    },
+    {
+      "exact_formula_ids": [
         "1e915083b1eea72e776ee3399c7a207bff12d5ec71ed74a0e7b03db8119c5d2b"
       ],
       "exact_member_count": 1,
@@ -2005942,6 +2006597,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6a176dd5c6586a061f0e1fd3dffc2c7a2a0876806d83f01af66f4ca31c871773",
       "structural_formula": "(w3#_su4_is_spacetime.py).Since2T<SU(#)(asunitquaternions)andSU(#)<SU(#)"
+    },
+    {
+      "exact_formula_ids": [
+        "07f8ef4443f2145197df31967b2b076209857908f64991a69d35b1b695c21ddb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f6f334fbed1eed942b3e7e323a9ae11751b5036c4144267cc094544d41654d25",
+      "structural_formula": "(w=#,P.V0=#/#:fermions).With1#(all4#one-linetwisted1#-typemasslessmomentahavew=#andP.V0inZ)the"
     },
     {
       "exact_formula_ids": [
@@ -2062295,6 +2062958,14 @@
     },
     {
       "exact_formula_ids": [
+        "5e46a3f420115c04d21e2afbcf69c4dcd67e113fab2aba5718c3d992c4ef39f9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9b574ffe791649b7769b778e639556bd37321b4b0159f3b6390a8f66e1e3b027",
+      "structural_formula": "H_2=#^{#/#}(\\begin{smallmatrix}#\\\\##\\end{smallmatrix})"
+    },
+    {
+      "exact_formula_ids": [
         "2fd1dd65dc3ef02b6331314f5a1a89463d1277783741b1c285d8c0d72627dbe6"
       ],
       "exact_member_count": 1,
@@ -2089342,6 +2090013,14 @@
     },
     {
       "exact_formula_ids": [
+        "e59507aafb5ed204fbc8ca141f113066cb833b2425b3e935fbf46f5ac580b076"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8b60237098d79294599374d3e16991d4dcd26d04fb5c902cedc46ce4dd2e85ad",
+      "structural_formula": "P\\cdotV_0\u2261w/#"
+    },
+    {
+      "exact_formula_ids": [
         "ab6a35c6402b3c6e62e9be1f6def61ed35137a2cad25b950062c8c4b11330211"
       ],
       "exact_member_count": 1,
@@ -2089669,6 +2090348,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2750d161d3870c510cfc63a2d29917475973aa235984f4d9a297faf0686ae485",
       "structural_formula": "P_log=#*np.pi/theta_BC"
+    },
+    {
+      "exact_formula_ids": [
+        "468db75f7692f5be323070f206f91027c4ca6dec3fff273bda4274f408f0d081"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ca1e6b0082153476852eef29768e2a612a58e4fbf571d5c6513046a9ceb1c70c",
+      "structural_formula": "P_m=W\\operatorname{diag}((#)^{s\\cdotm})_{s\\in\\mathbb{F}_2^#}W"
     },
     {
       "exact_formula_ids": [
@@ -2117137,6 +2117824,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c14b1090182578bf44fc08c8663dc136eb297f83518a91a9aa50e1219f0fee12",
       "structural_formula": "U_e\\cdotV_e=(#-\\frac1n)-(#-\\frac1m)"
+    },
+    {
+      "exact_formula_ids": [
+        "26fcef0f16e903cd6d7480b3d1f3792b28a29668ef1dc0be09bdb1851a2a6747"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ea9c3146ed948c88717d9a7b9f7c5aee7ccc54de1b529cb691a9bcaaeefbba80",
+      "structural_formula": "U_m=i^{w(m)}P_m,\\qquadm\\in\\{#,#,#,#\\}"
     },
     {
       "exact_formula_ids": [
@@ -2163624,6 +2164319,14 @@
     },
     {
       "exact_formula_ids": [
+        "c2e9b97d4aebef5ab05cbefbcee29c7dbf0e9f355d5a591ad8356823c6dfaaf5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cd59fd750e9191dd6da1f0a9facba0c618d0b2d04377da0c6b40cd97a8d8d33b",
+      "structural_formula": "^Scope.^OnZ6-IItheconstantphaseholdsin1#/#sectors,buttwoWitten-twistedsectorscarrybosonswithR0=#\u2044#"
+    },
+    {
+      "exact_formula_ids": [
         "03fca55bfa021fc9b83abf6c597b1bbed275d8d8f380e350c15e595c335d1467"
       ],
       "exact_member_count": 1,
@@ -2201041,6 +2201744,14 @@
     },
     {
       "exact_formula_ids": [
+        "75baf68fdaebd795b41b235c023913c14004c9ac0301f38c67d56d7ec8e9e108"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "de47ff781c621207b11477f0865694ff7dc130d3107ae560fdaf452371bd6e08",
+      "structural_formula": "checks[\"#:(P.V0-R0)mod1=w/#inall3#sectorsof5models;everyobserved1#obeysitandisafermion\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "3014e42506136b6a6fc990bf071a89ae6f35280a4048107b3916edee3fb02e76"
       ],
       "exact_member_count": 1,
@@ -2201289,6 +2202000,22 @@
     },
     {
       "exact_formula_ids": [
+        "6f4938b24b5aedb69ddf482f33229bb5c1672348b98fb127aee0e7e427f5892b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "43fe5113527c93fef3cd211820e11c552ebc39a134ef1159ac11627689b1b5ba",
+      "structural_formula": "checks[\"#:onZ6-IItheconstantphaseholdsin1#/#sectors\"]=len(sel[\"sectors\"])=#andall(len(v)=#forvinsel[\"sectors\"].values())"
+    },
+    {
+      "exact_formula_ids": [
+        "d4947fc14d9133baecdbeaa7e03549631f4e45a5d0c517eea0e8574d05f90e2c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "13cd187cb9b78120f01a5c750bf9814f1934945b74f67ee57649459825ef7e34",
+      "structural_formula": "checks[\"#:one-linetheorem--all4#twisted1#-typemasslessmomentahavew=#,P.V0inZ,hencefermionsbytherule\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "d08ebc84ea89dbd3a23ebe0bdce4c2453060c1560649ddb0da14256fdd78fa7c"
       ],
       "exact_member_count": 1,
@@ -2201310,6 +2202037,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3933ba5412009fac79f93dcd5e63359c86c83fd8ddf8c1767259ef48f3890103",
       "structural_formula": "checks[\"#:tachyons=minimalcosetvectors:#(splitx0,theframev/#),#=#x2(clockxclock,thetwoclocks'roots+-alpha/#)\"]=("
+    },
+    {
+      "exact_formula_ids": [
+        "380099df66d0e96530334aec2648bd4fe37a073dabe31b13e07d6c67cad25029"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f109fc332e519b2e85ec23ffc0742c490dbff7f34503d6932d05e09123f8e56d",
+      "structural_formula": "checks[\"#:the5#three-generationtwisted-#modelscarryonlyscalarSU(#)singletsand5s\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2209966,6 +2210701,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7d61206887e7608983511279e87d75a7505958ad7a81347b6719ccf342539f5f",
       "structural_formula": "constant,supports=max(sums.items(),key=lambdakv:len(kv[#]));assertlen(supports)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "4c2eaf985d3ca3132a53314f0be0b6e40a892c29b51d0544917d3d3eae60724b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b1fccda3f3d24ce3873838b4df8e4c1769b6f749162a71cc0cd10f62d2fa8735",
+      "structural_formula": "constant-phasepartholds(#/#sectors)buttwoWitten-twistedsectorscarrybosonswithR0=#/#,sotherethestatisticsisread"
     },
     {
       "exact_formula_ids": [
@@ -2225205,12 +2225948,13 @@
     },
     {
       "exact_formula_ids": [
+        "ebbe087ebd62405f27898c8eab866b8611a53e1f708b44de6c0de57fee124fd4",
         "f7c4ae2e27b4b973069a795a18047fc1e2735a02a06f693940b5a4edce97182e",
         "6656ce4652cd43dd591b43060be840a1465892bcfa984576f6e07e64bb76023b",
         "d0fa0d64b6a6a9ab28da780a68577eec0d7d514f35929078d550998139afad7b",
         "acc250241494e64aebb918a390395473f2b2ba0efd0ef38d28a14ebc636b3e00"
       ],
-      "exact_member_count": 4,
+      "exact_member_count": 5,
       "structural_family_id": "6e3bc8d970855854dcd77f4608e834615d0f6152a4d177d3b77dbe9c01366f18",
       "structural_formula": "e=#"
     },
@@ -2236426,6 +2237170,14 @@
     },
     {
       "exact_formula_ids": [
+        "fb061206209759cfecb3406af7e0a68f2251cd236e392d7ce18edf09751dcc9c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8bf8ace69470429698090d76f74171215824c26b2a3a35a67a7c2de7f8226ea7",
+      "structural_formula": "fermioniffP.V0=(w+#)/#mod1.Itreproduceseveryobserved1#:untwisted1#s(w=#,P.V0=#/#:fermions,#'s'#odd"
+    },
+    {
+      "exact_formula_ids": [
         "a19c80a313fddb76af17f8bc022888ea1b395b75f5d082a17e05f3a365a4b1d5"
       ],
       "exact_member_count": 1,
@@ -2244877,6 +2245629,14 @@
     },
     {
       "exact_formula_ids": [
+        "d404c95abac6d798bb673f682659dd4686981f5476bb63a51b4741161abe1bb9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c2948a480172457e5cc92b5c0bef54a05e85e1026e81038e8be7b380fdd46867",
+      "structural_formula": "half-integralforfermions--istheconstantw/#(wtheWittenlabel).HenceamasslessstateisaSCALARiffP.V0=w/#mod1anda"
+    },
+    {
+      "exact_formula_ids": [
         "6a23931e69594053f199b8b46ecd311ed13dac7cfa1fc86a92fbb801f557af03"
       ],
       "exact_member_count": 1,
@@ -2252451,6 +2253211,14 @@
       "exact_member_count": 1,
       "structural_family_id": "81763eaee7b8f639e0f5983b6c3068da6a80ad92ce0e88fa17191b297946bd91",
       "structural_formula": "isLOCKED:m_u/m_c~#orm_c/m_t~#(adegeneratepair),independentofeps.AHiggsthatpreservesPisa"
+    },
+    {
+      "exact_formula_ids": [
+        "1f6457f330adccae039cd31393fec639f17172faf3cecab183c604f808953959"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "285d46b47425529ad4fe14bf187c4019077a2a9bb803b560789c233bc786e647",
+      "structural_formula": "isSU(#)xSU(#)xSU(#)withquarkdoublets(#,#,#):theSU(#)isHIDDEN.Thescalar1#sobeytherule(w=#,P.V0integral"
     },
     {
       "exact_formula_ids": [
@@ -2289820,6 +2290588,22 @@
       "exact_member_count": 1,
       "structural_family_id": "7f392239d068232fd75c8f2f45ba2ef69c22e9d25451d9ebd13d94153c39a8b2",
       "structural_formula": "p_(q*<Phi_6orp_Ih>)=(Phi_1#oralpha^#)"
+    },
+    {
+      "exact_formula_ids": [
+        "176252c94ec000a0d11f356d70df99d005fb802d8b0e7e51786de537befea965"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ec720787edb1df5ac1cf8dc5e0090529cd62549dffb6a6054e0c2b930869fe0b",
+      "structural_formula": "p_+(\\theta)=\\frac{#+V\\cos(\\Delta+\\theta)}#"
+    },
+    {
+      "exact_formula_ids": [
+        "6407f4e12b49456085d9826a7ecde5cb2538da1c731ca5ad5d96b8c65cc2672f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1a8eaf78effb4d7ff2d6a2dd2fbce1e7480069ee68da6b0a2d7e18843d218d79",
+      "structural_formula": "p_+(\\theta)=\\frac{#+V\\cos(\\Delta+\\theta)}#,\\qquad\\Delta=\\frac{\\pi}{#}"
     },
     {
       "exact_formula_ids": [
@@ -2329594,6 +2330378,14 @@
     },
     {
       "exact_formula_ids": [
+        "35db199081f8652a992574fb2b414543e37cc12831101ab3fca9e8da15d5dcef"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "62a30bd0c0661a3034141bc2a468c2d6473c430f72bb92240a2d07661f8a0190",
+      "structural_formula": "quarkdoubletsin(#,#,#).Thesescalarsobeytherule(w=#,P\u00b7V0integral,R0=#).Thereisnovisiblescalar1#on"
+    },
+    {
+      "exact_formula_ids": [
         "68152fb2c928f726bcc46e8f56f6d9da2625dae3807d6efbbc43030ae30ab1c4"
       ],
       "exact_member_count": 1,
@@ -2342638,6 +2343430,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1549412e001032f8e89a15520a096546a4787033fd356a0c30ed364175a2f66c",
       "structural_formula": "scalar-only:<code>#=#\u00d7#</code>istheexactl6spinor<code>E6</code>/Cartanbaseblock,the"
+    },
+    {
+      "exact_formula_ids": [
+        "dcf77712a8ee52c1aa4345cffc5fc99e59a94b9b44360809b9adf75c7b223100"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "542f49aa8e779158824af99d5d5e4903495a1c0a26b815222eeda6272a427523",
+      "structural_formula": "scalar-typeone(no1#-typemomentumwithP.V0=w/#):withtwolinestoo,everytwisted1#isafermion--alargesample,lattice-only"
     },
     {
       "exact_formula_ids": [
@@ -2367820,6 +2368620,14 @@
     },
     {
       "exact_formula_ids": [
+        "999e8b5a940aa5cd65b57f47b2d51cb8aaf1d24b3df4c73b23bc6d959addcea8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "01aa7c03a7d74d86bab21d4c7a7a0153888385e8e1aae4fa872fe1f444c246ad",
+      "structural_formula": "underthesplitparity'),one-linetwisted1#s(w=#,P.V0inZ:fermions,#),two-lineWitten-untwistedtwisted1#s"
+    },
+    {
+      "exact_formula_ids": [
         "e28c9db4e149a857b527c8224ebf5b36d9b30ea9d7ada01e02c91fd25e4bfbcd"
       ],
       "exact_member_count": 1,
@@ -2375673,6 +2376481,14 @@
       "exact_member_count": 1,
       "structural_family_id": "9382d5d1cba9e092a707fc074adea5b8967890cdb66264afbd2b9e4023588ea1",
       "structural_formula": "x=\\frac1#N^{\\mathsfT}y"
+    },
+    {
+      "exact_formula_ids": [
+        "910de1a7b76e14e1e485301ecdfdfccf3b6aa7e59cc30852fcd39fa4a0a6883b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a34b2c4d52d3d787472afbf2fb8cd5e872e2fb8166f83c6f385dfbd62012f1aa",
+      "structural_formula": "x=\\hatp_+(#)-\\hatp_+(\\pi),\\quady=\\hatp_+(#\\pi/#)-\\hatp_+(\\pi/#),\\quad\\hat\\Delta=\\operatorname{atan2}(y,x)"
     },
     {
       "exact_formula_ids": [
@@ -2388898,20 +2389714,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91449958,
-    "exact_formula_families": 64451,
-    "files_scanned": 12578,
-    "formula_occurrences": 70559,
+    "bytes_scanned": 91469339,
+    "exact_formula_families": 64473,
+    "files_scanned": 12581,
+    "formula_occurrences": 70582,
     "status_occurrences": {
-      "certified_or_theorem": 5293,
+      "certified_or_theorem": 5297,
       "killed_or_retracted": 1873,
       "open_or_conditional": 2378,
       "preregistered": 36,
-      "retrospective_fit": 5398,
-      "unclassified": 55581
+      "retrospective_fit": 5401,
+      "unclassified": 55597
     },
-    "structural_families": 62755
+    "structural_families": 62776
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "337662c4d63378e0416627351c700d25afbdbfb8fe4a61393f1b7d43d9ddf027"
+  "universe_sha256": "be00ed79b39ec4225632062633f35c428a5ec0870967a61aa187ef2cfca1e746"
 }
