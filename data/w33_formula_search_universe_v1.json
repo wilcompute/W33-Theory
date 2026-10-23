@@ -289940,6 +289940,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b3d6175a43b56b770a958c462095c2643b25daceb248e8926ce4c74ca1fa614a",
+      "normalized_formula": "'Dterm_normalization':'WithTr(tAtB)=deltaAB/2andcanonicalkineticterms,V_D=(gL^2+gR^2)*(Tr(Y^4)-(Tr(Y^2))^2/3)/4=(gL^2+gR^2)*(Tr(Y^2))^2/24,alsoradialonthisslice.'",
+      "numeric_literals": [
+        "2",
+        "24",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 239,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'Dterm_normalization':'With Tr(tA tB)=deltaAB/2 and canonical kinetic terms, V_D=(gL^2+gR^2)*(Tr(Y^4)-(Tr(Y^2))^2/3)/4=(gL^2+gR^2)*(Tr(Y^2))^2/24, also radial on this slice.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d96c237ba972af62d73874069a20237261afc8fa7529053c726dcee670276c1c",
+      "structural_formula": "'Dterm_normalization':'WithTr(tAtB)=deltaAB/#andcanonicalkineticterms,V_D=(gL^#+gR^#)*(Tr(Y^#)-(Tr(Y^#))^#/#)/#=(gL^#+gR^#)*(Tr(Y^#))^#/#,alsoradialonthisslice.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b564f2b360d00395fb291a7720e9178a62e3730fb7b57dd1117ac7507b59b16f",
       "normalized_formula": "'E15_coordinate_gauge':'columnsindexedbyPG(3,2)directions,withX^TX=24I'",
       "numeric_literals": [
@@ -304717,6 +304747,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "362d21890e74cbcf2e68376698ace2ceec357d696a53bf7d0cfccdf5ddf998c6",
+      "normalized_formula": "'flat_limit_theorem':'Primitivityoftheactualcycle-voltagelatticegivesaBlochzeroonlyatk=0.Thebasegraphhasonezeroandapositiveopticalgap.Analyticperturbationgiveslambda0(k)=k^TGk+O(|k|^4).Compactnessgapsallmomentaawayfrom0.Thereforeata=2pi/Neveryfixed-energyspectralwindowofL/(rho*a^2)converges,withmultiplicitiesawayfromboundarylevels,totheflat4torusLaplacianwithsymbolG/rho.Itslimitingcountingfunctiongrowsas(pi^2*rho/2)*E^2.Thisisastandardperiodic-graphargumentspecializedtothecertifiednativedata,notnewhomogenizationtheory.'",
+      "numeric_literals": [
+        "0",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 303,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'flat_limit_theorem':'Primitivity of the actual cycle-voltage lattice gives a Bloch zero only at k=0. The base graph has one zero and a positive optical gap. Analytic perturbation gives lambda0(k)=k^T G k+O(|k|^4). Compactness gaps all momenta away from0. Therefore at a=2pi/N every fixed-energy spectral window of L/(rho*a^2) converges, with multiplicities away from boundary levels, to the flat4torus Laplacian with symbol G/rho. Its limiting counting function grows as (pi^2*rho/2)*E^2. This is a standard periodic-graph argument specialized to the certified native data, not new homogenization theory.',",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e29feefe3e89ceac680aa86e046398302965d0c56ea277ef3dc105491c464ba9",
+      "structural_formula": "'flat_limit_theorem':'Primitivityoftheactualcycle-voltagelatticegivesaBlochzeroonlyatk=#.Thebasegraphhasonezeroandapositiveopticalgap.Analyticperturbationgiveslambda0(k)=k^TGk+O(|k|^#).Compactnessgapsallmomentaawayfrom0.Thereforeata=#pi/Neveryfixed-energyspectralwindowofL/(rho*a^#)converges,withmultiplicitiesawayfromboundarylevels,totheflat4torusLaplacianwithsymbolG/rho.Itslimitingcountingfunctiongrowsas(pi^#*rho/#)*E^#.Thisisastandardperiodic-graphargumentspecializedtothecertifiednativedata,notnewhomogenizationtheory.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c737878150302b690b55cb6823e359df407fc25e1ec297f4124414fafd96b856",
       "normalized_formula": "'flux':'F=D4^TA3+(Q/ticks)*ones.Exact3-formvariationshavezerototalfluxbecauseD4*ones=0;Qisanindependenttopologicalsector.Integerquantization,ifimposed,isadditionalcompact-gaugeinput.'",
       "numeric_literals": [
@@ -311532,6 +311591,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "69423e883fbbdf3c1849b0bbcd994b52b2d4b42a0330a53f56ceb59fbbfb1cae",
+      "normalized_formula": "'map':'x->(Y(x),0,0),Y=alphaX+alpha*Xdag+betaZ+beta*Zdag'",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 232,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'map':'x -> (Y(x),0,0), Y=alpha X+alpha* Xdag+beta Z+beta* Zdag',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8cf8d5d10efbba5e56b2a65414a2a63ef0e263377397f22b9bc0c8429757d50f",
+      "structural_formula": "'map':'x->(Y(x),#,#),Y=alphaX+alpha*Xdag+betaZ+beta*Zdag'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e56dfe45853013e1e990989d3de83e0cd5019e8ac6ba13e491ffd9acb392e7da",
       "normalized_formula": "'map':{'space':'CP^2purequtritstates','degree':5,'definition':'[psi]->[D^daggerpsi^(tensor5)]conditionedonnonzeroacceptance'}",
       "numeric_literals": [
@@ -317906,6 +317992,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b2c6f613f7f1a6e1284c6fdf740afb8438923cc2340714a32c23f536a3e093e0",
+      "normalized_formula": "'radial_vacuum':'V_F=9*(|alpha|^2+|beta|^2)^2.Addingacommontachyonicsoftmass-m2*r2yieldsr2=m2/18butleavestheentireangularS3flat.'",
+      "numeric_literals": [
+        "18",
+        "2",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 241,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'radial_vacuum':'V_F=9*(|alpha|^2+|beta|^2)^2. Adding a common tachyonic soft mass -m2*r2 yields r2=m2/18 but leaves the entire angular S3 flat.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a91dd962a72f08b242d2faa54a9a67cacb8c16d547efef78a4163ee7771fafd1",
+      "structural_formula": "'radial_vacuum':'V_F=#*(|alpha|^#+|beta|^#)^#.Addingacommontachyonicsoftmass-m2*r2yieldsr2=m2/#butleavestheentireangularS3flat.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e1d0edc545b98ce1f390b741cb2182c86222b74de13ed719dcdd0cbf6cdd0baf",
       "normalized_formula": "'ramified_fields':[f['index']forfinFiff['local'][p]['v_field_disc']>0]",
       "numeric_literals": [
@@ -320345,6 +320460,35 @@
       },
       "structural_family_id": "056221d3f09415f5e4058dea27ab1157837ce7b99e03afc95d1fb28e8caf36dd",
       "structural_formula": "'smith_jump':'curvaturechangesbothrationalspectrumandintegralcriticalgroup;therearenocospectral/non-Smith-equivalentsectionsatq=#'}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "184e8e5fbcba2bf64ab02c3a8e80f8d84b021988c8f7619b4bff278aa496204f",
+      "normalized_formula": "'soft_cubic_selection':'Atfixedr2,|detY|<=2*r2^(3/2).Equalityrequiresexactlyoneofalpha,betanonzero,withitscubereal.AnonzerorealsoftdetYtermthereforeselectssingularvaluesproportionalto(2,1,1),notathree-wayhierarchy,ifastablenonzeroradialminimumexists.'",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 240,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "'soft_cubic_selection':'At fixed r2, |det Y|<=2*r2^(3/2). Equality requires exactly one of alpha,beta nonzero, with its cube real. A nonzero real soft detY term therefore selects singular values proportional to (2,1,1), not a three-way hierarchy, if a stable nonzero radial minimum exists.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "58e1925d3f9796bcc17def884ff91da9b70e08ee71924e79f9bcc9aa3b3f3ca9",
+      "structural_formula": "'soft_cubic_selection':'Atfixedr2,|detY|<=#*r2^(#/#).Equalityrequiresexactlyoneofalpha,betanonzero,withitscubereal.AnonzerorealsoftdetYtermthereforeselectssingularvaluesproportionalto(#,#,#),notathree-wayhierarchy,ifastablenonzeroradialminimumexists.'"
     },
     {
       "file_count": 1,
@@ -627008,6 +627152,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1e0f66f320393f8791b27e2f6c6dd16babd118f02d04b6fe1975915d3b870db4",
+      "normalized_formula": "F^-1R^-T=RF^-1.UsingRdirectlyisadifferent,generallywrongmap",
+      "numeric_literals": [
+        "-1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 69,
+          "path": "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md",
+          "raw": "F^-1 R^-T=R F^-1. Using R directly is a different, generally wrong map;",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "06525c1c8dd11e1d9cf50d90a4cc75dbde400fea864aef684185e25440270fa3",
+      "structural_formula": "F^#R^-T=RF^#.UsingRdirectlyisadifferent,generallywrongmap"
+    },
+    {
+      "file_count": 1,
       "formula_id": "87d2cb5721a57838ae3e551a21533879f84dd53189e4b1521a6d32a9936f62ec",
       "normalized_formula": "F^2+136F+5313\\Pi_{48}=0,\\qquad(F+68\\Pi_{48})^2=-689\\Pi_{48},\\quad689=13\\cdot53",
       "numeric_literals": [
@@ -679622,6 +679793,33 @@
       },
       "structural_family_id": "afe7b4dd7e51f0087a198a192f0ee39a1767b6b7839b0c6543b1a67c376b1476",
       "structural_formula": "Kf=#/#=#;R_adj=(K+#)/(#V)=#/#(numerator1#=supersingularprime!);R_non=(K+#)/(#V)=#/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "df7afa6b11963e11114c68c0179ff601add2a0aa9cd866472a5ae2647057fa22",
+      "normalized_formula": "Kg,_=conductivity(w,b,V+b@gauge);gauge_error=float(np.max(abs(Kg-K)));assertgauge_error<1e-12",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 290,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "Kg,_=conductivity(w,b,V+b@gauge);gauge_error=float(np.max(abs(Kg-K)));assert gauge_error<1e-12",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2624c12144f77be4cee6c9f60d2c1e3d5c5af571f684332a8b2d3a40b084b1f2",
+      "structural_formula": "Kg,_=conductivity(w,b,V+b@gauge);gauge_error=float(np.max(abs(Kg-K)));assertgauge_error<#"
     },
     {
       "file_count": 1,
@@ -853381,6 +853579,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "27bba758432f65739aa753ab7169a926ad71be0e368edd3311a43026b6275e03",
+      "normalized_formula": "Tr(tAtB)=deltaAB/2,thetwogaugedSL3compactfactorsadd",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 134,
+          "path": "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md",
+          "raw": "Tr(tA tB)=deltaAB/2, the two gauged SL3 compact factors add",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "03b9fa33280e28a9638c741494d80f4de7a0d9724a770a4ab74b8521cfe5df9d",
+      "structural_formula": "Tr(tAtB)=deltaAB/#,thetwogaugedSL3compactfactorsadd"
+    },
+    {
+      "file_count": 1,
       "formula_id": "386abc4edcde64f2ade539b6c30ebed4a6e4504a92fac802a1fb80c0a282e146",
       "normalized_formula": "TrQ2=1+3sum_aw_a2-sum_p(sum_kw_p,k)2",
       "numeric_literals": [
@@ -866986,6 +867211,34 @@
       },
       "structural_family_id": "35238de1dff6324cad15235b86543aff5e4868a9c4b5ced097fb92f9e2bb8324",
       "structural_formula": "V_Cs=#=Phi_6"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f1a06cc552667a517905715832844f6793a7477d21eecb955b3c7a78f91a63ad",
+      "normalized_formula": "V_D=(gL2+gR2)(TrY2)2/24,alsoradialonthisslice.TheonlyF-flatpoint",
+      "numeric_literals": [
+        "2",
+        "24"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 135,
+          "path": "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md",
+          "raw": "V_D=(gL\u00b2+gR\u00b2)(TrY\u00b2)\u00b2/24, also radial on this slice. The only F-flat point",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "96c524fc1a7eb016350ccf92ce712d1fb8f7951aa83356fe82ed9bb2e8d23e69",
+      "structural_formula": "V_D=(gL2+gR2)(TrY2)#/#,alsoradialonthisslice.TheonlyF-flatpoint"
     },
     {
       "file_count": 1,
@@ -1245779,6 +1246032,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "636bede496723137acfcebdf243e3e8cd98c6759765a2ebcf3d0db9658a05522",
+      "normalized_formula": "detY=2Re(alpha3+beta3)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 128,
+          "path": "analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md",
+          "raw": "detY=2 Re(alpha\u00b3+beta\u00b3),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7c098aaf9f3a2bc6c102c7ea77c9cf0da4a6c4c2b03d48db121ac9eb1440f560",
+      "structural_formula": "detY=#Re(alpha3+beta3)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bdea7f4129843aa771623015484372c7ff6dde245b3bd8949a41d613e7cd858c",
       "normalized_formula": "det[H_u,H_d]=2iJ_CKM(U)prod_{i<j}(m_u,i-m_u,j)(m_d,i-m_d,j)(checkednumerically,signincluded)",
       "numeric_literals": [
@@ -1323843,6 +1324123,34 @@
       },
       "structural_family_id": "2dfb807519057237512adea6db8d32278c0ac88d87225cc4dde1999dd7e98e61",
       "structural_formula": "gauge=phase_record(\"gauge\",sector_by_lambda(hashimoto,#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "984082a2deb12a1091af476335146b5455a8173dac2c68b2c6c8c0d05caa8385",
+      "normalized_formula": "gauge=rng.normal(size=(26,4));nonlinear=[]",
+      "numeric_literals": [
+        "26",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 285,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "gauge=rng.normal(size=(26,4));nonlinear=[]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8e520eff9a91c3089848eabe5975b4c657d8e3b00f44a9820af0158f6ae8dd9c",
+      "structural_formula": "gauge=rng.normal(size=(#,#));nonlinear=[]"
     },
     {
       "file_count": 1,
@@ -1817461,6 +1817769,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5e1a409a8b8ce01cc1d5ce32f407fdf29d8787635808b1aca65a4335e8f7ea49",
+      "normalized_formula": "w=np.exp(theta*directions[0]+phi*directions[1]);K,h=conductivity(w,b,V)",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12189_12193_five_bridges.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 287,
+          "path": "analysis/w33_pass12189_12193_five_bridges.py",
+          "raw": "w=np.exp(theta*directions[0]+phi*directions[1]);K,h=conductivity(w,b,V)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "544cf6e8175a73365cd85a363e962dbfc7abb76f2d5d58f875a11ef91e9ab016",
+      "structural_formula": "w=np.exp(theta*directions[#]+phi*directions[#]);K,h=conductivity(w,b,V)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a6f615dcdd3de03ffffca454f39646e9b736ec44c4f9086bb1f2b78ef0e2d560",
       "normalized_formula": "w=sum_iw_iandOmega=sum_{i<j}omega(w_i,w_j);andsinceomega(w,w)=0",
       "numeric_literals": [
@@ -1878947,9 +1879283,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T06:46:22-04:00",
+  "frozen_at": "2026-10-23T06:51:49-04:00",
   "pass": 398,
-  "repository_head": "b3003d48a02af262dc546901bb4ea1021c6fb3ba",
+  "repository_head": "da33158b4076856094421f87147d4a54b8da56d2",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1980624,6 +1980960,14 @@
     },
     {
       "exact_formula_ids": [
+        "b3d6175a43b56b770a958c462095c2643b25daceb248e8926ce4c74ca1fa614a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d96c237ba972af62d73874069a20237261afc8fa7529053c726dcee670276c1c",
+      "structural_formula": "'Dterm_normalization':'WithTr(tAtB)=deltaAB/#andcanonicalkineticterms,V_D=(gL^#+gR^#)*(Tr(Y^#)-(Tr(Y^#))^#/#)/#=(gL^#+gR^#)*(Tr(Y^#))^#/#,alsoradialonthisslice.'"
+    },
+    {
+      "exact_formula_ids": [
         "b564f2b360d00395fb291a7720e9178a62e3730fb7b57dd1117ac7507b59b16f"
       ],
       "exact_member_count": 1,
@@ -1984639,6 +1984983,14 @@
     },
     {
       "exact_formula_ids": [
+        "362d21890e74cbcf2e68376698ace2ceec357d696a53bf7d0cfccdf5ddf998c6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e29feefe3e89ceac680aa86e046398302965d0c56ea277ef3dc105491c464ba9",
+      "structural_formula": "'flat_limit_theorem':'Primitivityoftheactualcycle-voltagelatticegivesaBlochzeroonlyatk=#.Thebasegraphhasonezeroandapositiveopticalgap.Analyticperturbationgiveslambda0(k)=k^TGk+O(|k|^#).Compactnessgapsallmomentaawayfrom0.Thereforeata=#pi/Neveryfixed-energyspectralwindowofL/(rho*a^#)converges,withmultiplicitiesawayfromboundarylevels,totheflat4torusLaplacianwithsymbolG/rho.Itslimitingcountingfunctiongrowsas(pi^#*rho/#)*E^#.Thisisastandardperiodic-graphargumentspecializedtothecertifiednativedata,notnewhomogenizationtheory.'"
+    },
+    {
+      "exact_formula_ids": [
         "c737878150302b690b55cb6823e359df407fc25e1ec297f4124414fafd96b856"
       ],
       "exact_member_count": 1,
@@ -1986511,6 +1986863,14 @@
     },
     {
       "exact_formula_ids": [
+        "69423e883fbbdf3c1849b0bbcd994b52b2d4b42a0330a53f56ceb59fbbfb1cae"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8cf8d5d10efbba5e56b2a65414a2a63ef0e263377397f22b9bc0c8429757d50f",
+      "structural_formula": "'map':'x->(Y(x),#,#),Y=alphaX+alpha*Xdag+betaZ+beta*Zdag'"
+    },
+    {
+      "exact_formula_ids": [
         "e56dfe45853013e1e990989d3de83e0cd5019e8ac6ba13e491ffd9acb392e7da"
       ],
       "exact_member_count": 1,
@@ -1988263,6 +1988623,14 @@
     },
     {
       "exact_formula_ids": [
+        "b2c6f613f7f1a6e1284c6fdf740afb8438923cc2340714a32c23f536a3e093e0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a91dd962a72f08b242d2faa54a9a67cacb8c16d547efef78a4163ee7771fafd1",
+      "structural_formula": "'radial_vacuum':'V_F=#*(|alpha|^#+|beta|^#)^#.Addingacommontachyonicsoftmass-m2*r2yieldsr2=m2/#butleavestheentireangularS3flat.'"
+    },
+    {
+      "exact_formula_ids": [
         "e1d0edc545b98ce1f390b741cb2182c86222b74de13ed719dcdd0cbf6cdd0baf"
       ],
       "exact_member_count": 1,
@@ -1988948,6 +1989316,14 @@
       "exact_member_count": 1,
       "structural_family_id": "056221d3f09415f5e4058dea27ab1157837ce7b99e03afc95d1fb28e8caf36dd",
       "structural_formula": "'smith_jump':'curvaturechangesbothrationalspectrumandintegralcriticalgroup;therearenocospectral/non-Smith-equivalentsectionsatq=#'}"
+    },
+    {
+      "exact_formula_ids": [
+        "184e8e5fbcba2bf64ab02c3a8e80f8d84b021988c8f7619b4bff278aa496204f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "58e1925d3f9796bcc17def884ff91da9b70e08ee71924e79f9bcc9aa3b3f3ca9",
+      "structural_formula": "'soft_cubic_selection':'Atfixedr2,|detY|<=#*r2^(#/#).Equalityrequiresexactlyoneofalpha,betanonzero,withitscubereal.AnonzerorealsoftdetYtermthereforeselectssingularvaluesproportionalto(#,#,#),notathree-wayhierarchy,ifastablenonzeroradialminimumexists.'"
     },
     {
       "exact_formula_ids": [
@@ -2047781,6 +2048157,14 @@
     },
     {
       "exact_formula_ids": [
+        "1e0f66f320393f8791b27e2f6c6dd16babd118f02d04b6fe1975915d3b870db4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "06525c1c8dd11e1d9cf50d90a4cc75dbde400fea864aef684185e25440270fa3",
+      "structural_formula": "F^#R^-T=RF^#.UsingRdirectlyisadifferent,generallywrongmap"
+    },
+    {
+      "exact_formula_ids": [
         "dea84c36ecae4cde6026e665859725c8c408407e2c832e4fca69932b70777e4b"
       ],
       "exact_member_count": 1,
@@ -2062038,6 +2062422,14 @@
       "exact_member_count": 1,
       "structural_family_id": "afe7b4dd7e51f0087a198a192f0ee39a1767b6b7839b0c6543b1a67c376b1476",
       "structural_formula": "Kf=#/#=#;R_adj=(K+#)/(#V)=#/#(numerator1#=supersingularprime!);R_non=(K+#)/(#V)=#/#"
+    },
+    {
+      "exact_formula_ids": [
+        "df7afa6b11963e11114c68c0179ff601add2a0aa9cd866472a5ae2647057fa22"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2624c12144f77be4cee6c9f60d2c1e3d5c5af571f684332a8b2d3a40b084b1f2",
+      "structural_formula": "Kg,_=conductivity(w,b,V+b@gauge);gauge_error=float(np.max(abs(Kg-K)));assertgauge_error<#"
     },
     {
       "exact_formula_ids": [
@@ -2109015,6 +2109407,14 @@
     },
     {
       "exact_formula_ids": [
+        "27bba758432f65739aa753ab7169a926ad71be0e368edd3311a43026b6275e03"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "03b9fa33280e28a9638c741494d80f4de7a0d9724a770a4ab74b8521cfe5df9d",
+      "structural_formula": "Tr(tAtB)=deltaAB/#,thetwogaugedSL3compactfactorsadd"
+    },
+    {
+      "exact_formula_ids": [
         "386abc4edcde64f2ade539b6c30ebed4a6e4504a92fac802a1fb80c0a282e146"
       ],
       "exact_member_count": 1,
@@ -2112619,6 +2113019,14 @@
       "exact_member_count": 1,
       "structural_family_id": "35238de1dff6324cad15235b86543aff5e4868a9c4b5ced097fb92f9e2bb8324",
       "structural_formula": "V_Cs=#=Phi_6"
+    },
+    {
+      "exact_formula_ids": [
+        "f1a06cc552667a517905715832844f6793a7477d21eecb955b3c7a78f91a63ad"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "96c524fc1a7eb016350ccf92ce712d1fb8f7951aa83356fe82ed9bb2e8d23e69",
+      "structural_formula": "V_D=(gL2+gR2)(TrY2)#/#,alsoradialonthisslice.TheonlyF-flatpoint"
     },
     {
       "exact_formula_ids": [
@@ -2212587,6 +2212995,14 @@
     },
     {
       "exact_formula_ids": [
+        "636bede496723137acfcebdf243e3e8cd98c6759765a2ebcf3d0db9658a05522"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7c098aaf9f3a2bc6c102c7ea77c9cf0da4a6c4c2b03d48db121ac9eb1440f560",
+      "structural_formula": "detY=#Re(alpha3+beta3)"
+    },
+    {
+      "exact_formula_ids": [
         "bdea7f4129843aa771623015484372c7ff6dde245b3bd8949a41d613e7cd858c"
       ],
       "exact_member_count": 1,
@@ -2233783,6 +2234199,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2dfb807519057237512adea6db8d32278c0ac88d87225cc4dde1999dd7e98e61",
       "structural_formula": "gauge=phase_record(\"gauge\",sector_by_lambda(hashimoto,#))"
+    },
+    {
+      "exact_formula_ids": [
+        "984082a2deb12a1091af476335146b5455a8173dac2c68b2c6c8c0d05caa8385"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8e520eff9a91c3089848eabe5975b4c657d8e3b00f44a9820af0158f6ae8dd9c",
+      "structural_formula": "gauge=rng.normal(size=(#,#));nonlinear=[]"
     },
     {
       "exact_formula_ids": [
@@ -2365442,6 +2365866,14 @@
     },
     {
       "exact_formula_ids": [
+        "5e1a409a8b8ce01cc1d5ce32f407fdf29d8787635808b1aca65a4335e8f7ea49"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "544cf6e8175a73365cd85a363e962dbfc7abb76f2d5d58f875a11ef91e9ab016",
+      "structural_formula": "w=np.exp(theta*directions[#]+phi*directions[#]);K,h=conductivity(w,b,V)"
+    },
+    {
+      "exact_formula_ids": [
         "a6f615dcdd3de03ffffca454f39646e9b736ec44c4f9086bb1f2b78ef0e2d560"
       ],
       "exact_member_count": 1,
@@ -2381083,20 +2381515,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91062346,
-    "exact_formula_families": 64238,
-    "files_scanned": 12530,
-    "formula_occurrences": 70341,
+    "bytes_scanned": 91096922,
+    "exact_formula_families": 64250,
+    "files_scanned": 12532,
+    "formula_occurrences": 70353,
     "status_occurrences": {
-      "certified_or_theorem": 5280,
+      "certified_or_theorem": 5281,
       "killed_or_retracted": 1866,
       "open_or_conditional": 2365,
       "preregistered": 36,
       "retrospective_fit": 5394,
-      "unclassified": 55400
+      "unclassified": 55411
     },
-    "structural_families": 62550
+    "structural_families": 62562
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "dcd176379d5f8a98185163533d803ed7247a287977fcd69c56bdb5ad3319fb47"
+  "universe_sha256": "3d9e930c21dfc5c80f892fed8b315e4c5e52dfa5258e7dd053256f5003d3cef5"
 }
