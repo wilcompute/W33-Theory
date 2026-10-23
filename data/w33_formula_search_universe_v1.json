@@ -150319,6 +150319,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cb3ce2fecf5d48d674e76f0a6d473bfaaf07c73734c951d1e0f70766a08bde54",
+      "normalized_formula": "\"proof\":\"B_xy=omega(x,y)^(q-1)inFp.Asapolynomialiny,expandthelinearformpowerq-1.CoefficientextractiononFq^4using4-variableVandermondeinterpolation(eachcoordinateexponent<q)showstherowspanoverFqequalsthespanofitsnonzeromonomialcoefficients.Lucas'stheoremsaysmultinomialcoefficientssurvivemodpexactlywheneachbase-pdigitoffourexponentssumstop-1.Therearebinom(p+2,3)choicesperdigit,independentlyfortdigits.Thesemonomialshavedegreeq-1andevaluateindependentlyonFq^4sincetheirindividualexponents<q;degreeq-1guaranteesprojectivescaleinvariance.MatrixentrieslieinFp,henceranksagreeafterscalarextensionFp->Fq.\"",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261023_five_frontiers_round8.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 35,
+          "path": "analysis/w33_20261023_five_frontiers_round8.py",
+          "raw": "\"proof\":\"B_xy=omega(x,y)^(q-1) in Fp. As a polynomial in y, expand the linear form power q-1. Coefficient extraction on Fq^4 using 4-variable Vandermonde interpolation (each coordinate exponent < q) shows the row span over Fq equals the span of its nonzero monomial coefficients. Lucas's theorem says multinomial coefficients survive mod p exactly when each base-p digit of four exponents sums to p-1. There are binom(p+2,3) choices per digit, independently for t digits. These monomials have degree q-1 and evaluate independently on Fq^4 since their individual exponents < q; degree q-1 guarantees projective scale invariance. Matrix entries lie in Fp, hence ranks agree after scalar extension Fp->Fq.\",",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "41b9be61b4a4da7f0716868c93e9c2c4c33518285bd2eba2cb8c8480a346bbd3",
+      "structural_formula": "\"proof\":\"B_xy=omega(x,y)^(q-#)inFp.Asapolynomialiny,expandthelinearformpowerq-#.CoefficientextractiononFq^#using4-variableVandermondeinterpolation(eachcoordinateexponent<q)showstherowspanoverFqequalsthespanofitsnonzeromonomialcoefficients.Lucas'stheoremsaysmultinomialcoefficientssurvivemodpexactlywheneachbase-pdigitoffourexponentssumstop-#.Therearebinom(p+#,#)choicesperdigit,independentlyfortdigits.Thesemonomialshavedegreeq-#andevaluateindependentlyonFq^#sincetheirindividualexponents<q;degreeq-#guaranteesprojectivescaleinvariance.MatrixentrieslieinFp,henceranksagreeafterscalarextensionFp->Fq.\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "c936f1b6519a96959a6166d9d0d35ce7a8699d0ea62f27e6d1454585d2b4b217",
       "normalized_formula": "\"proof\":\"BothmapsCPTPfor0<=eta<=1;Ustabilizes|00>.Onpsi2=(|01>+|02>)/sqrt2,Usendsittoorthogonalpsi2'=(|01>-|02>)/sqrt2,sooutputshavetracedistanceeta.\"",
       "numeric_literals": [
@@ -559645,6 +559675,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "daa63658e099325c24e0fb8bff8991430190fb1408a48cad50f7e247dac72be3",
+      "normalized_formula": "All216projectivesingle-qutritCliffordswereexplicitlyenumerated.^Conclusion:^thisbaretrivial-syndrome,five-copyprojectioncannotactasanexactfixed-pointdistillerofthe*same*ninth-root`|M+>`targetunderasinglelogicalCliffordcorrection,evenfromfiveperfectinputcopies.Thecodemaydistillothernonstabilizerstates;pre-twirling,differentbranches,multi-round/moregeneraltransformations,andknownproperqutritprotocolsareNOTruledout.Thisisa*specificimplementationdiagnostic*ratherthanano-goagainstqutritdistillation",
+      "numeric_literals": [
+        "16"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_round8_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 96,
+          "path": "analysis/2026-10-23_round8_five_frontiers.md",
+          "raw": "All 216 projective single-qutrit Cliffords were explicitly enumerated. **Conclusion:** this bare trivial-syndrome, five-copy projection cannot act as an exact fixed-point distiller of the *same* ninth-root `|M+>` target under a single logical Clifford correction, even from five perfect input copies. The code may distill other nonstabilizer states; pre-twirling, different branches, multi-round/more general transformations, and known proper qutrit protocols are NOT ruled out. This is a *specific implementation diagnostic* rather than a no-go against qutrit distillation.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b31aa877b0acd7fa71d42d1617f8788476bcb5db821f12254e94ee332a8decfe",
+      "structural_formula": "All2#projectivesingle-qutritCliffordswereexplicitlyenumerated.^Conclusion:^thisbaretrivial-syndrome,five-copyprojectioncannotactasanexactfixed-pointdistillerofthe*same*ninth-root`|M+>`targetunderasinglelogicalCliffordcorrection,evenfromfiveperfectinputcopies.Thecodemaydistillothernonstabilizerstates;pre-twirling,differentbranches,multi-round/moregeneraltransformations,andknownproperqutritprotocolsareNOTruledout.Thisisa*specificimplementationdiagnostic*ratherthanano-goagainstqutritdistillation"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5db0aeee67152e7b9497ed6828ef01e69e1425e4d1ab76b44c626225ae4bce5c",
       "normalized_formula": "All240protectededgeimages`A_*(e_i+e_j)`spandimension9,not10.SincePass4496provestheuniqueinvariant-submodulelattice`0<1<9<10`,thefulledgespanisexactlytheunique9DsubmoduleofH10.Yetthe24internalcelledgesalreadyspanrank9,andeventhe12centerspokesdo;nineexplicitlyfrozenspokesformabasis.ThusonelocalBorelcelliscompletefortheedgecarrier,whilethetenthprotecteddirectionliesoutsidetheentire240-edgefamily",
       "numeric_literals": [
@@ -620814,6 +620871,39 @@
       },
       "structural_family_id": "53ed6f838d2081c5a23453cec6b6589605218762a83c7ad400690a585ce08371",
       "structural_formula": "Equalityat^positive^temperaturerequires\\(Q\\)itselftobearank-#projection.Becauseanontrivialmixtureofdistinctequal-rankprojectionscannotbeaprojection(use\\(\\operatorname{Tr}Q^#<#\\)),everyminimizerisanindividualtick,uptoduplicateprojectorlabels.Thisisa^universalrank-projectormajorizationtheorem^,notaW3#-specificselectionmechanism.At\\(T=#\\),thegroundenergyiszerowheneverallactiveprojectorshaveacommonvector;thereforecompatiblemixturescantiewithsingleticks.Selectionisnotuniqueatzerotemperature"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f03867270fa41b43d2bfa0b640123759ab5fe52f51ddcdfd0b5aa5d29e2821bf",
+      "normalized_formula": "Equalityholdsexactlywhenallsitesaregroundstateswith`O_i=+3sqrt2/8`orall`O_i=-3sqrt2/8`.ConnectednessofW33forbidsmixedsignsinagroundstate.Eachsigneigenspacehas^two^onsitechoices,givingexactgroundmultiplicity`2*2^40=2^41`.Globalcomputational-basiscomplexconjugationKchangesallsigns,leavingHinvariant",
+      "numeric_literals": [
+        "+3",
+        "-3",
+        "2",
+        "3",
+        "40",
+        "41",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_round8_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/2026-10-23_round8_five_frontiers.md",
+          "raw": "Equality holds exactly when all sites are ground states with `O_i=+3sqrt2/8` or all `O_i=-3sqrt2/8`. Connectedness of W33 forbids mixed signs in a ground state. Each sign eigenspace has **two** onsite choices, giving exact ground multiplicity `2*2^40=2^41`. Global computational-basis complex conjugation K changes all signs, leaving H invariant.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1ee405aef298eb08b15002df652e6072b4c90be56c04f542c56f6d031bfdd8a8",
+      "structural_formula": "Equalityholdsexactlywhenallsitesaregroundstateswith`O_i=#sqrt2/#`orall`O_i=#sqrt2/#`.ConnectednessofW3#forbidsmixedsignsinagroundstate.Eachsigneigenspacehas^two^onsitechoices,givingexactgroundmultiplicity`#*#^#=#^#`.Globalcomputational-basiscomplexconjugationKchangesallsigns,leavingHinvariant"
     },
     {
       "file_count": 1,
@@ -801293,6 +801383,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f06bf16c6d51f225d01c4edbf8bc05718d2de3e652a49c4616d9eb05c01bf7aa",
+      "normalized_formula": "Since`z^(q-1)`equals1forz!=0andzeroatz=0,they-thcolumnistheevaluationof`omega(x,y)^(q-1)`.Expandthisexpressionasapolynomialinthefourycoordinates.Everycoordinateexponentislessthanq.Tensor-productVandermondeinterpolationoverFqextracts*all*monomialcoefficientsasFq-linearcombinationsoftheevaluationsaty\u2208Fq^4(includingthezerovector,whichaddsnothing);converselyeverycolumnisacombinationofthesecoefficients",
+      "numeric_literals": [
+        "0",
+        "1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_round8_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 20,
+          "path": "analysis/2026-10-23_round8_five_frontiers.md",
+          "raw": "Since `z^(q-1)` equals 1 for z !=0 and zero at z=0, the y-th column is the evaluation of `omega(x,y)^(q-1)`. Expand this expression as a polynomial in the four y coordinates. Every coordinate exponent is less than q. Tensor-product Vandermonde interpolation over Fq extracts *all* monomial coefficients as Fq-linear combinations of the evaluations at y\u2208Fq^4 (including the zero vector, which adds nothing); conversely every column is a combination of these coefficients.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "f2d9643dc666a63f691a6e5e859690fa6ea210c75ee7b22603db59730449730e",
+      "structural_formula": "Since`z^(q-#)`equals1forz!=#andzeroatz=#,they-thcolumnistheevaluationof`omega(x,y)^(q-#)`.Expandthisexpressionasapolynomialinthefourycoordinates.Everycoordinateexponentislessthanq.Tensor-productVandermondeinterpolationoverFqextracts*all*monomialcoefficientsasFq-linearcombinationsoftheevaluationsaty\u2208Fq^#(includingthezerovector,whichaddsnothing);converselyeverycolumnisacombinationofthesecoefficients"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b0f16c46955ee58a0e9297efe29c9f14183815c8a092c5d0b84d6600d5de0436",
       "normalized_formula": "Since`|U_4(2):2|=51,840`,thenumberofgrouporbitsisatleast",
       "numeric_literals": [
@@ -837777,6 +837896,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e8cf43b883807cd6391089b979d240268e8c3fbdd13696b6fa14b9f2b3864874",
+      "normalized_formula": "Theninemovingcyclesareeach3-cyclesandthereforeevenpermutations.Theirproducthassign+1.EverySWAPisatransposition,so^everyexactimplementationusesaneventotalSWAPcount^.Combiningthiswiththeearliertransport-distancebound`N>=27`gives",
+      "numeric_literals": [
+        "1",
+        "27"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_round8_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 65,
+          "path": "analysis/2026-10-23_round8_five_frontiers.md",
+          "raw": "The nine moving cycles are each 3-cycles and therefore even permutations. Their product has sign+1. Every SWAP is a transposition, so **every exact implementation uses an even total SWAP count**. Combining this with the earlier transport-distance bound `N>=27` gives",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "76e58bbd9b118008462cea265e789a7d7f7646a11fb1876dfebe751781aa9d53",
+      "structural_formula": "Theninemovingcyclesareeach3-cyclesandthereforeevenpermutations.Theirproducthassign+#.EverySWAPisatransposition,so^everyexactimplementationusesaneventotalSWAPcount^.Combiningthiswiththeearliertransport-distancebound`N>=#`gives"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ee0a4d07078b544bf026c377dbd6ede5ec377063eced3a291c9adec8fd0f0a41",
       "normalized_formula": "ThenontrivialE6switchingcosetoverthe35-dimensionalcutcodeiscompletelyenumeratedbyanexactrank-sixroot-sumdynamicprogram.Ithas`2^35`wordson40evenweightsfrom120through198;`A_120=25920`recoverstheWeyl-chamberminimumshell",
       "numeric_literals": [
@@ -851232,6 +851379,35 @@
       },
       "structural_family_id": "f14189acc8c7d5ca9b350952813ca30ecb0375af82817b485c8ce59ef2a44aae",
       "structural_formula": "Thus`E6=#,#,#,#,#`.Aweight-#differencegivesdisjointpartners,invisibletoeverycoordinatechart.The4#,#,#weight-#codewordsthroughafixedcoordinatecontribute`#,#,#,#`external-partnerincidenceswithmultiplicity.ThereforeU6isnotdeterminedbythecollisionmoment.Thesuppliedexternal-memoryworkergeneratesandmergesallfixed-chartsyndromes,removesweight-#/#/#shadows,marksexternalpartnersinacombinadicbitmap,andcountstruesingletoncomponents.Theheavyrunisnotrepresentedascomplete"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "18916ac8ec0483886341a10486201c7b600dfdc0053bfebe3a5903edc1e30bed",
+      "normalized_formula": "Thusahalf-systemsigndomainwith|S|=20hasatleast100boundaryedgesandacostof^atleast56.25^energyunitsrelativetothepolarizedsector.Thelowerboundisanexactspectral-graphconsequence,notsimulation",
+      "numeric_literals": [
+        "00",
+        "20",
+        "6.25"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_round8_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 57,
+          "path": "analysis/2026-10-23_round8_five_frontiers.md",
+          "raw": "Thus a half-system sign domain with |S|=20 has at least 100 boundary edges and a cost of **at least 56.25** energy units relative to the polarized sector. The lower bound is an exact spectral-graph consequence, not simulation.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "f2739618566d40853f84ac9a61f372effb1f1bc3d08c69c183e41f000a96d58d",
+      "structural_formula": "Thusahalf-systemsigndomainwith|S|=#hasatleast1#boundaryedgesandacostof^atleast5#^energyunitsrelativetothepolarizedsector.Thelowerboundisanexactspectral-graphconsequence,notsimulation"
     },
     {
       "file_count": 1,
@@ -880644,6 +880820,40 @@
       },
       "structural_family_id": "d8607b162de1166367314be5fc4db8b28fa3acffefc8b0952e47eac538753ee3",
       "structural_formula": "Wenowprove^basepoint-freenessover(\\mathbfC\\)^explicitly.Atanycoordinateboundary,selectapure-squaremonomialusingthenonzerohomogeneouscoordinateineachfactor;itscomplementarymonomialvanishesandtheorbit-sumdoesnot.Insidethedensetorus,write(t_i=(x_i/y_i)^#\\).If*alleight*pure-squarepairedsectionsvanish,the0#sectiongives(P=\\prod_it_i=#\\),andeachsingletonsectionforces(t_i^#=#\\).Thusevery(t_i=\\pm1\\),withanoddnumbernegative.Foreverysuchfour-signassignment,chooseapairwithproduct(#\\);thecorrespondingtwo-(x_iy_i)-factorinvariantsectionevaluatestoanonzeromultipleof(#+t_it_j=#\\).All8#noninteriorsupportpatternsandeightexceptionalinteriorsignpatternsareexhaustivelyencodedaswitnesses"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f36222474340ede35877761951db8efb1ed7622380e05b6101102ee8e8be9679",
+      "normalized_formula": "Weobtainmathematically^localontheW33graph^,K-symmetric,oppositechiralsectors*withoutanexternaloddsource*.Theone-sitezero-chargedefectcostsexactly`12*(9/32)=27/8`;asign-flipcosts`2*12*(9/32)=27/4",
+      "numeric_literals": [
+        "12",
+        "2",
+        "27",
+        "3",
+        "32",
+        "4",
+        "8",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_round8_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/2026-10-23_round8_five_frontiers.md",
+          "raw": "We obtain mathematically **local on the W33 graph**, K-symmetric, opposite chiral sectors *without an external odd source*. The one-site zero-charge defect costs exactly `12*(9/32)=27/8`; a sign-flip costs `2*12*(9/32)=27/4`.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "44b8847e16c2be43f4cf27b271143e0c741e56e18cb40462505a0226cf356329",
+      "structural_formula": "Weobtainmathematically^localontheW3#graph^,K-symmetric,oppositechiralsectors*withoutanexternaloddsource*.Theone-sitezero-chargedefectcostsexactly`#*(#/#)=#/#`;asign-flipcosts`#*#*(#/#)=#/#"
     },
     {
       "file_count": 1,
@@ -1039406,6 +1039616,37 @@
       },
       "structural_family_id": "7f21e37395521c4e261da9d634871070887ab8cc23135cd32a935737d8f968f7",
       "structural_formula": "^Importanterratum:^Theearlier5/#/#/#-statefloatingRitzreductioninsertedanextraneouspoint/linesidesigninCov(Z,Y)andinU.grad(Y),inadditiontothelegitimatesidesigninCov(X,Y).AgreementofindependentGaussianquadratureordersdidnottestthathypothesis,andthepreviousvalue`#`fortheeleven-stateboundshouldNOTbeusedfortheactualnamedquantumHamiltonian.ParallelPass1#discoveredandcertifiedthisdefect,alreadyobtaining`E0<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "464b8488e049d920f48763d3f1b06cc325cab6a40c0eb8515f4cf96a22403a6e",
+      "normalized_formula": "^Importantliteratureandrepositorypriorityguard:^Thisp-rankformulais*alreadyknown*(Hamada/projectiveincidencetheory)andwaspresentbeforethispassin`analysis/w33_20261022_allq_pascal_CSS_exact_distance.py`.Theincrementhereisashort,stand-alonecoefficient-interpolationproofandindependentq=3,4,8,9matrixcontrols,notnoveltyoftheformulaand^not^thestill-openall-qFrobeniusconnecting-mapranks(GF9rankdelta1=4alreadyhasexplicitwitnessesfromround7)",
+      "numeric_literals": [
+        "0261022",
+        "3",
+        "4",
+        "8",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_round8_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/2026-10-23_round8_five_frontiers.md",
+          "raw": "**Important literature and repository priority guard:** This p-rank formula is *already known* (Hamada/projective incidence theory) and was present before this pass in `analysis/w33_20261022_allq_pascal_CSS_exact_distance.py`. The increment here is a short, stand-alone coefficient-interpolation proof and independent q=3,4,8,9 matrix controls, not novelty of the formula and **not** the still-open all-q Frobenius connecting-map ranks (GF9 rank delta1=4 already has explicit witnesses from round7).",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "f2cc3fd7e56dfa9328fac577bb493899f8ae6337fe9d9b9230a591f3bc03fd54",
+      "structural_formula": "^Importantliteratureandrepositorypriorityguard:^Thisp-rankformulais*alreadyknown*(Hamada/projectiveincidencetheory)andwaspresentbeforethispassin`analysis/w3#_2#_allq_pascal_CSS_exact_distance.py`.Theincrementhereisashort,stand-alonecoefficient-interpolationproofandindependentq=#,#,#,#matrixcontrols,notnoveltyoftheformulaand^not^thestill-openall-qFrobeniusconnecting-mapranks(GF9rankdelta1=#alreadyhasexplicitwitnessesfromround7)"
     },
     {
       "file_count": 1,
@@ -1736671,18 +1736912,19 @@
       "structural_formula": "solver.parameters.num_search_workers=#"
     },
     {
-      "file_count": 15,
+      "file_count": 16,
       "formula_id": "1e6057fb6a7879d3e899cbdc419f1eded66bc6f828baa34db42405170c79ab70",
       "normalized_formula": "solver.parameters.num_search_workers=8",
       "numeric_literals": [
         "8"
       ],
-      "occurrence_count": 17,
+      "occurrence_count": 18,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "analysis/bt3506_m57_permutation_csp.py",
         "analysis/w33_20261010_toe33_p13_cpsat_cover.py",
         "analysis/w33_20261010_toe34_p13_local_exact_repair.py",
+        "analysis/w33_20261023_swapcount_optimization.py",
         "analysis/w33_20261023_three_layer_routing_cpsat.py",
         "scripts/check_forbids_coverage.py",
         "scripts/edge_to_e8_mapping.py",
@@ -1736715,6 +1736957,13 @@
           "category": "relation_line",
           "line": 54,
           "path": "analysis/w33_20261010_toe34_p13_local_exact_repair.py",
+          "raw": "solver.parameters.num_search_workers=8",
+          "status": "unclassified"
+        },
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/w33_20261023_swapcount_optimization.py",
           "raw": "solver.parameters.num_search_workers=8",
           "status": "unclassified"
         },
@@ -1736820,7 +1737069,7 @@
       "status_profile": {
         "killed_or_retracted": 3,
         "open_or_conditional": 1,
-        "unclassified": 13
+        "unclassified": 14
       },
       "structural_family_id": "55786b31d55d23ba59412ad2d76692e49b080948731c67f39de7db7bee799e44",
       "structural_formula": "solver.parameters.num_search_workers=#"
@@ -1736888,18 +1737137,26 @@
       "structural_formula": "solver.parameters.random_seed=#"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "c90eb6bbd0ccef17f420bb4bb63a9875dea3c51972b3dfa7972f70e1fb28a504",
       "normalized_formula": "solver.parameters.random_seed=20261023",
       "numeric_literals": [
         "20261023"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "analysis/w33_20261023_swapcount_optimization.py",
         "analysis/w33_20261023_three_layer_routing_cpsat.py"
       ],
       "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/w33_20261023_swapcount_optimization.py",
+          "raw": "solver.parameters.random_seed=20261023",
+          "status": "unclassified"
+        },
         {
           "category": "relation_line",
           "line": 52,
@@ -1736909,7 +1737166,7 @@
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "unclassified": 2
       },
       "structural_family_id": "71d5504a1d3e8e5dde0c2a5d19c592f5909f08b4dbb893622f0c4bb0162f8744",
       "structural_formula": "solver.parameters.random_seed=#"
@@ -1879395,9 +1879652,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T07:08:54-04:00",
+  "frozen_at": "2026-10-23T07:12:32-04:00",
   "pass": 398,
-  "repository_head": "d9da7d9a7f37f2e99897ee0e5cf1d1740f11ade2",
+  "repository_head": "f2155010a3d86e4cffc650d5bfd659ef68b41a37",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1921520,6 +1921777,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ab7801d7ab3b2b8005580f8884857adcf98ac9328f19c0d27b692ee67622c36d",
       "structural_formula": "\"proof\":\"Atzerothetaargument,Theta[alpha](#,Omega)=sum_{ninZ2}exp(ipi(n+alpha)^TOmega(n+alpha))isexactlyevenunderalpha->-alpha,byn->-n(withtheinteger-characteristicshift).Takingalpha=(c/#,#),#/#and2/#arenegativesmodulointegers,sothecomplexamplitudescoincideexactlyFORALLsymmetricOmegaintheSiegelupperhalf-space.Takingalpha=(c/#,#/#)and(-c/#,#/#)givesexactclass-#/class-#chargemirroringateveryfiniteOmega,notonlytheleadingGaussianterm.\""
+    },
+    {
+      "exact_formula_ids": [
+        "cb3ce2fecf5d48d674e76f0a6d473bfaaf07c73734c951d1e0f70766a08bde54"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "41b9be61b4a4da7f0716868c93e9c2c4c33518285bd2eba2cb8c8480a346bbd3",
+      "structural_formula": "\"proof\":\"B_xy=omega(x,y)^(q-#)inFp.Asapolynomialiny,expandthelinearformpowerq-#.CoefficientextractiononFq^#using4-variableVandermondeinterpolation(eachcoordinateexponent<q)showstherowspanoverFqequalsthespanofitsnonzeromonomialcoefficients.Lucas'stheoremsaysmultinomialcoefficientssurvivemodpexactlywheneachbase-pdigitoffourexponentssumstop-#.Therearebinom(p+#,#)choicesperdigit,independentlyfortdigits.Thesemonomialshavedegreeq-#andevaluateindependentlyonFq^#sincetheirindividualexponents<q;degreeq-#guaranteesprojectivescaleinvariance.MatrixentrieslieinFp,henceranksagreeafterscalarextensionFp->Fq.\""
     },
     {
       "exact_formula_ids": [
@@ -2030002,6 +2030267,14 @@
     },
     {
       "exact_formula_ids": [
+        "daa63658e099325c24e0fb8bff8991430190fb1408a48cad50f7e247dac72be3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b31aa877b0acd7fa71d42d1617f8788476bcb5db821f12254e94ee332a8decfe",
+      "structural_formula": "All2#projectivesingle-qutritCliffordswereexplicitlyenumerated.^Conclusion:^thisbaretrivial-syndrome,five-copyprojectioncannotactasanexactfixed-pointdistillerofthe*same*ninth-root`|M+>`targetunderasinglelogicalCliffordcorrection,evenfromfiveperfectinputcopies.Thecodemaydistillothernonstabilizerstates;pre-twirling,differentbranches,multi-round/moregeneraltransformations,andknownproperqutritprotocolsareNOTruledout.Thisisa*specificimplementationdiagnostic*ratherthanano-goagainstqutritdistillation"
+    },
+    {
+      "exact_formula_ids": [
         "5db0aeee67152e7b9497ed6828ef01e69e1425e4d1ab76b44c626225ae4bce5c"
       ],
       "exact_member_count": 1,
@@ -2046503,6 +2046776,14 @@
       "exact_member_count": 1,
       "structural_family_id": "53ed6f838d2081c5a23453cec6b6589605218762a83c7ad400690a585ce08371",
       "structural_formula": "Equalityat^positive^temperaturerequires\\(Q\\)itselftobearank-#projection.Becauseanontrivialmixtureofdistinctequal-rankprojectionscannotbeaprojection(use\\(\\operatorname{Tr}Q^#<#\\)),everyminimizerisanindividualtick,uptoduplicateprojectorlabels.Thisisa^universalrank-projectormajorizationtheorem^,notaW3#-specificselectionmechanism.At\\(T=#\\),thegroundenergyiszerowheneverallactiveprojectorshaveacommonvector;thereforecompatiblemixturescantiewithsingleticks.Selectionisnotuniqueatzerotemperature"
+    },
+    {
+      "exact_formula_ids": [
+        "f03867270fa41b43d2bfa0b640123759ab5fe52f51ddcdfd0b5aa5d29e2821bf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1ee405aef298eb08b15002df652e6072b4c90be56c04f542c56f6d031bfdd8a8",
+      "structural_formula": "Equalityholdsexactlywhenallsitesaregroundstateswith`O_i=#sqrt2/#`orall`O_i=#sqrt2/#`.ConnectednessofW3#forbidsmixedsignsinagroundstate.Eachsigneigenspacehas^two^onsitechoices,givingexactgroundmultiplicity`#*#^#=#^#`.Globalcomputational-basiscomplexconjugationKchangesallsigns,leavingHinvariant"
     },
     {
       "exact_formula_ids": [
@@ -2095309,6 +2095590,14 @@
     },
     {
       "exact_formula_ids": [
+        "f06bf16c6d51f225d01c4edbf8bc05718d2de3e652a49c4616d9eb05c01bf7aa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f2d9643dc666a63f691a6e5e859690fa6ea210c75ee7b22603db59730449730e",
+      "structural_formula": "Since`z^(q-#)`equals1forz!=#andzeroatz=#,they-thcolumnistheevaluationof`omega(x,y)^(q-#)`.Expandthisexpressionasapolynomialinthefourycoordinates.Everycoordinateexponentislessthanq.Tensor-productVandermondeinterpolationoverFqextracts*all*monomialcoefficientsasFq-linearcombinationsoftheevaluationsaty\u2208Fq^#(includingthezerovector,whichaddsnothing);converselyeverycolumnisacombinationofthesecoefficients"
+    },
+    {
+      "exact_formula_ids": [
         "b0f16c46955ee58a0e9297efe29c9f14183815c8a092c5d0b84d6600d5de0436"
       ],
       "exact_member_count": 1,
@@ -2105252,6 +2105541,14 @@
     },
     {
       "exact_formula_ids": [
+        "e8cf43b883807cd6391089b979d240268e8c3fbdd13696b6fa14b9f2b3864874"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "76e58bbd9b118008462cea265e789a7d7f7646a11fb1876dfebe751781aa9d53",
+      "structural_formula": "Theninemovingcyclesareeach3-cyclesandthereforeevenpermutations.Theirproducthassign+#.EverySWAPisatransposition,so^everyexactimplementationusesaneventotalSWAPcount^.Combiningthiswiththeearliertransport-distancebound`N>=#`gives"
+    },
+    {
+      "exact_formula_ids": [
         "ee0a4d07078b544bf026c377dbd6ede5ec377063eced3a291c9adec8fd0f0a41"
       ],
       "exact_member_count": 1,
@@ -2108868,6 +2109165,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f14189acc8c7d5ca9b350952813ca30ecb0375af82817b485c8ce59ef2a44aae",
       "structural_formula": "Thus`E6=#,#,#,#,#`.Aweight-#differencegivesdisjointpartners,invisibletoeverycoordinatechart.The4#,#,#weight-#codewordsthroughafixedcoordinatecontribute`#,#,#,#`external-partnerincidenceswithmultiplicity.ThereforeU6isnotdeterminedbythecollisionmoment.Thesuppliedexternal-memoryworkergeneratesandmergesallfixed-chartsyndromes,removesweight-#/#/#shadows,marksexternalpartnersinacombinadicbitmap,andcountstruesingletoncomponents.Theheavyrunisnotrepresentedascomplete"
+    },
+    {
+      "exact_formula_ids": [
+        "18916ac8ec0483886341a10486201c7b600dfdc0053bfebe3a5903edc1e30bed"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f2739618566d40853f84ac9a61f372effb1f1bc3d08c69c183e41f000a96d58d",
+      "structural_formula": "Thusahalf-systemsigndomainwith|S|=#hasatleast1#boundaryedgesandacostof^atleast5#^energyunitsrelativetothepolarizedsector.Thelowerboundisanexactspectral-graphconsequence,notsimulation"
     },
     {
       "exact_formula_ids": [
@@ -2116731,6 +2117036,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d8607b162de1166367314be5fc4db8b28fa3acffefc8b0952e47eac538753ee3",
       "structural_formula": "Wenowprove^basepoint-freenessover(\\mathbfC\\)^explicitly.Atanycoordinateboundary,selectapure-squaremonomialusingthenonzerohomogeneouscoordinateineachfactor;itscomplementarymonomialvanishesandtheorbit-sumdoesnot.Insidethedensetorus,write(t_i=(x_i/y_i)^#\\).If*alleight*pure-squarepairedsectionsvanish,the0#sectiongives(P=\\prod_it_i=#\\),andeachsingletonsectionforces(t_i^#=#\\).Thusevery(t_i=\\pm1\\),withanoddnumbernegative.Foreverysuchfour-signassignment,chooseapairwithproduct(#\\);thecorrespondingtwo-(x_iy_i)-factorinvariantsectionevaluatestoanonzeromultipleof(#+t_it_j=#\\).All8#noninteriorsupportpatternsandeightexceptionalinteriorsignpatternsareexhaustivelyencodedaswitnesses"
+    },
+    {
+      "exact_formula_ids": [
+        "f36222474340ede35877761951db8efb1ed7622380e05b6101102ee8e8be9679"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "44b8847e16c2be43f4cf27b271143e0c741e56e18cb40462505a0226cf356329",
+      "structural_formula": "Weobtainmathematically^localontheW3#graph^,K-symmetric,oppositechiralsectors*withoutanexternaloddsource*.Theone-sitezero-chargedefectcostsexactly`#*(#/#)=#/#`;asign-flipcosts`#*#*(#/#)=#/#"
     },
     {
       "exact_formula_ids": [
@@ -2156582,6 +2156895,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7f21e37395521c4e261da9d634871070887ab8cc23135cd32a935737d8f968f7",
       "structural_formula": "^Importanterratum:^Theearlier5/#/#/#-statefloatingRitzreductioninsertedanextraneouspoint/linesidesigninCov(Z,Y)andinU.grad(Y),inadditiontothelegitimatesidesigninCov(X,Y).AgreementofindependentGaussianquadratureordersdidnottestthathypothesis,andthepreviousvalue`#`fortheeleven-stateboundshouldNOTbeusedfortheactualnamedquantumHamiltonian.ParallelPass1#discoveredandcertifiedthisdefect,alreadyobtaining`E0<#"
+    },
+    {
+      "exact_formula_ids": [
+        "464b8488e049d920f48763d3f1b06cc325cab6a40c0eb8515f4cf96a22403a6e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f2cc3fd7e56dfa9328fac577bb493899f8ae6337fe9d9b9230a591f3bc03fd54",
+      "structural_formula": "^Importantliteratureandrepositorypriorityguard:^Thisp-rankformulais*alreadyknown*(Hamada/projectiveincidencetheory)andwaspresentbeforethispassin`analysis/w3#_2#_allq_pascal_CSS_exact_distance.py`.Theincrementhereisashort,stand-alonecoefficient-interpolationproofandindependentq=#,#,#,#matrixcontrols,notnoveltyoftheformulaand^not^thestill-openall-qFrobeniusconnecting-mapranks(GF9rankdelta1=#alreadyhasexplicitwitnessesfromround7)"
     },
     {
       "exact_formula_ids": [
@@ -2381659,20 +2381980,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91099520,
-    "exact_formula_families": 64254,
-    "files_scanned": 12532,
-    "formula_occurrences": 70357,
+    "bytes_scanned": 91125785,
+    "exact_formula_families": 64262,
+    "files_scanned": 12535,
+    "formula_occurrences": 70367,
     "status_occurrences": {
-      "certified_or_theorem": 5281,
+      "certified_or_theorem": 5283,
       "killed_or_retracted": 1866,
-      "open_or_conditional": 2365,
+      "open_or_conditional": 2367,
       "preregistered": 36,
-      "retrospective_fit": 5394,
-      "unclassified": 55415
+      "retrospective_fit": 5395,
+      "unclassified": 55420
     },
-    "structural_families": 62566
+    "structural_families": 62574
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "7caed0676cfd8759d395ebae10728df85f87de99a84e2810ca0fdb93af25b6ac"
+  "universe_sha256": "28cbe81800cd15dfdd27f228129ded7af7425339f747bf20b8fadf4d589c849a"
 }
