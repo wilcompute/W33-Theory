@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30800" height="12500" viewBox="-1400 -11030 30800 12500">
+<defs>
+<style type="text/css">
+.l20d0 {stroke: #F38400; fill: #F38400; fill-opacity: 0.5;}
+.l1d0 {stroke: #A1CAF1; fill: #A1CAF1; fill-opacity: 0.5;}
+.l99d0 {stroke: #875692; fill: #875692; fill-opacity: 0.5;}
+.l10d0 {stroke: #F6A600; fill: #F6A600; fill-opacity: 0.5;}
+.l51t0 {stroke: none; fill: #B3446C;}
+.l50t0 {stroke: none; fill: #F6A600;}
+</style>
+<g id="W33_FOUR_MZI_SYMBOL">
+<polygon id="000001F5721933E0" class="l1d0" points="0,-2.5 4500,-2.5 4500,2.5 0,2.5"/>
+<polygon id="000001F572193A70" class="l1d0" points="0,197.5 4500,197.5 4500,202.5 0,202.5"/>
+<polygon id="000001F572193300" class="l1d0" points="0,397.5 4500,397.5 4500,402.5 0,402.5"/>
+<polygon id="000001F5721935A0" class="l1d0" points="0,597.5 4500,597.5 4500,602.5 0,602.5"/>
+<polygon id="000001F572193610" class="l10d0" points="950,-20 1600,-20 1600,220 950,220"/>
+<polygon id="000001F572193ED0" class="l20d0" points="1130,30 1480,30 1480,60 1130,60"/>
+<polygon id="000001F5721936F0" class="l10d0" points="950,380 1600,380 1600,620 950,620"/>
+<polygon id="000001F572193A00" class="l20d0" points="1130,430 1480,430 1480,460 1130,460"/>
+<polygon id="000001F572193DF0" class="l10d0" points="3100,-20 3750,-20 3750,420 3100,420"/>
+<polygon id="000001F5721934C0" class="l20d0" points="3280,30 3630,30 3630,60 3280,60"/>
+<polygon id="000001F572193140" class="l99d0" points="3060,-30 3790,-30 3790,430 3060,430"/>
+<polygon id="000001F572193920" class="l10d0" points="3100,180 3750,180 3750,620 3100,620"/>
+<polygon id="000001F572193680" class="l20d0" points="3280,230 3630,230 3630,260 3280,260"/>
+<polygon id="000001F572193060" class="l99d0" points="3060,170 3790,170 3790,630 3060,630"/>
+<text id="000001F57218B180" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 0) scale(1 -1)">IN0</text>
+<text id="000001F57218B330" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 0) scale(1 -1)">OUT0</text>
+<text id="000001F57218B450" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 200) scale(1 -1)">IN1</text>
+<text id="000001F57218B8D0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 200) scale(1 -1)">OUT1</text>
+<text id="000001F57218B840" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 400) scale(1 -1)">IN2</text>
+<text id="000001F57218BDE0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 400) scale(1 -1)">OUT2</text>
+<text id="000001F57218BD50" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 600) scale(1 -1)">IN3</text>
+<text id="000001F57218C1D0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 600) scale(1 -1)">OUT3</text>
+<text id="000001F57218B210" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(960 90) scale(1 -1)">MZI_S0_0_PAIR_01</text>
+<text id="000001F57218BB10" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(960 490) scale(1 -1)">MZI_S0_1_PAIR_23</text>
+<text id="000001F57218B570" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(3110 90) scale(1 -1)">MZI_S1_0_PAIR_02</text>
+<text id="000001F57218B720" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(3110 290) scale(1 -1)">MZI_S1_1_PAIR_13</text>
+</g>
+<g id="W33_WALSH_SYMBOL">
+<polygon id="000001F572193990" class="l1d0" points="0,-2.5 4500,-2.5 4500,2.5 0,2.5"/>
+<polygon id="000001F5721931B0" class="l1d0" points="0,197.5 4500,197.5 4500,202.5 0,202.5"/>
+<polygon id="000001F572193BC0" class="l1d0" points="0,397.5 4500,397.5 4500,402.5 0,402.5"/>
+<polygon id="000001F572193760" class="l1d0" points="0,597.5 4500,597.5 4500,602.5 0,602.5"/>
+<polygon id="000001F572193B50" class="l10d0" points="650,-20 950,-20 950,220 650,220"/>
+<polygon id="000001F572170F40" class="l10d0" points="650,380 950,380 950,620 650,620"/>
+<polygon id="000001F572170E60" class="l10d0" points="1230,-20 1530,-20 1530,420 1230,420"/>
+<polygon id="000001F572170ED0" class="l99d0" points="1200,-30 1560,-30 1560,430 1200,430"/>
+<polygon id="000001F572170840" class="l10d0" points="1230,180 1530,180 1530,620 1230,620"/>
+<polygon id="000001F572170450" class="l99d0" points="1200,170 1560,170 1560,630 1200,630"/>
+<polygon id="000001F572170920" class="l10d0" points="3050,-20 3350,-20 3350,220 3050,220"/>
+<polygon id="000001F572170990" class="l10d0" points="3050,380 3350,380 3350,620 3050,620"/>
+<polygon id="000001F572170D80" class="l10d0" points="3630,-20 3930,-20 3930,420 3630,420"/>
+<polygon id="000001F572170140" class="l99d0" points="3600,-30 3960,-30 3960,430 3600,430"/>
+<polygon id="000001F5721705A0" class="l10d0" points="3630,180 3930,180 3930,620 3630,620"/>
+<polygon id="000001F5721707D0" class="l99d0" points="3600,170 3960,170 3960,630 3600,630"/>
+<polygon id="000001F572170BC0" class="l20d0" points="2270,30 2730,30 2730,60 2270,60"/>
+<polygon id="000001F572170DF0" class="l20d0" points="2270,230 2730,230 2730,260 2270,260"/>
+<polygon id="000001F572170060" class="l20d0" points="2270,430 2730,430 2730,460 2270,460"/>
+<polygon id="000001F572170D10" class="l20d0" points="2270,630 2730,630 2730,660 2270,660"/>
+<text id="000001F57218BA80" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 0) scale(1 -1)">IN0</text>
+<text id="000001F57218BF90" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 0) scale(1 -1)">OUT0</text>
+<text id="000001F57218BBA0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 200) scale(1 -1)">IN1</text>
+<text id="000001F57218B4E0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 200) scale(1 -1)">OUT1</text>
+<text id="000001F57218C020" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 400) scale(1 -1)">IN2</text>
+<text id="000001F57218B2A0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 400) scale(1 -1)">OUT2</text>
+<text id="000001F57218B9F0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(0 600) scale(1 -1)">IN3</text>
+<text id="000001F57218B0F0" class="l50t0" text-anchor="middle" dominant-baseline="central" transform="translate(4500 600) scale(1 -1)">OUT3</text>
+</g>
+</defs>
+<rect x="-1400" y="-11030" width="30800" height="12500" fill="#222222" stroke="none"/>
+<g id="W33_40BUS_PHOTONIC_REF" transform="scale(1 -1)">
+<use transform="translate(0 0)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 1000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 2000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 3000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 4000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 5000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 6000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 7000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 8000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(0 9000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 0)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 1000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 2000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 3000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 4000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 5000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 6000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 7000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 8000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(5500 9000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 0)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 1000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 2000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 3000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 4000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 5000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 6000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 7000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 8000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(11000 9000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 0)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 1000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 2000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 3000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 4000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 5000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 6000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 7000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 8000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(16500 9000)" xlink:href="#W33_FOUR_MZI_SYMBOL"/>
+<use transform="translate(23500 0)" xlink:href="#W33_WALSH_SYMBOL"/>
+<text id="000001F57218B7B0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 -70) scale(1 -1)">BUS_00</text>
+<text id="000001F57218BE70" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 930) scale(1 -1)">BUS_01</text>
+<text id="000001F57218B060" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 1930) scale(1 -1)">BUS_02</text>
+<text id="000001F57218CD10" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 2930) scale(1 -1)">BUS_03</text>
+<text id="000001F572151DA0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 3930) scale(1 -1)">BUS_04</text>
+<text id="000001F572151920" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 4930) scale(1 -1)">BUS_05</text>
+<text id="000001F572151C80" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 5930) scale(1 -1)">BUS_06</text>
+<text id="000001F5721512F0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 6930) scale(1 -1)">BUS_07</text>
+<text id="000001F572151260" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 7930) scale(1 -1)">BUS_08</text>
+<text id="000001F572151A40" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(50 8930) scale(1 -1)">BUS_09</text>
+<text id="000001F572151F50" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 -70) scale(1 -1)">BUS_10</text>
+<text id="000001F5721519B0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 930) scale(1 -1)">BUS_11</text>
+<text id="000001F5721515C0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 1930) scale(1 -1)">BUS_12</text>
+<text id="000001F572151E30" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 2930) scale(1 -1)">BUS_13</text>
+<text id="000001F572151EC0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 3930) scale(1 -1)">BUS_14</text>
+<text id="000001F572151650" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 4930) scale(1 -1)">BUS_15</text>
+<text id="000001F572151800" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 5930) scale(1 -1)">BUS_16</text>
+<text id="000001F572150690" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 6930) scale(1 -1)">BUS_17</text>
+<text id="000001F572150F90" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 7930) scale(1 -1)">BUS_18</text>
+<text id="000001F572150720" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(5550 8930) scale(1 -1)">BUS_19</text>
+<text id="000001F572151020" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 -70) scale(1 -1)">BUS_20</text>
+<text id="000001F572150180" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 930) scale(1 -1)">BUS_21</text>
+<text id="000001F5721511D0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 1930) scale(1 -1)">BUS_22</text>
+<text id="000001F572150E70" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 2930) scale(1 -1)">BUS_23</text>
+<text id="000001F5721502A0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 3930) scale(1 -1)">BUS_24</text>
+<text id="000001F5721504E0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 4930) scale(1 -1)">BUS_25</text>
+<text id="000001F572150060" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 5930) scale(1 -1)">BUS_26</text>
+<text id="000001F572150B10" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 6930) scale(1 -1)">BUS_27</text>
+<text id="000001F572150CC0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 7930) scale(1 -1)">BUS_28</text>
+<text id="000001F5802FD210" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(11050 8930) scale(1 -1)">BUS_29</text>
+<text id="000001F5802FD450" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 -70) scale(1 -1)">BUS_30</text>
+<text id="000001F5802FD180" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 930) scale(1 -1)">BUS_31</text>
+<text id="000001F5802FD570" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 1930) scale(1 -1)">BUS_32</text>
+<text id="000001F5802FE140" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 2930) scale(1 -1)">BUS_33</text>
+<text id="000001F5802FDF00" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 3930) scale(1 -1)">BUS_34</text>
+<text id="000001F5802FDCC0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 4930) scale(1 -1)">BUS_35</text>
+<text id="000001F5802FD7B0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 5930) scale(1 -1)">BUS_36</text>
+<text id="000001F5802FE0B0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 6930) scale(1 -1)">BUS_37</text>
+<text id="000001F5802FD4E0" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 7930) scale(1 -1)">BUS_38</text>
+<text id="000001F5802FDE70" class="l51t0" text-anchor="middle" dominant-baseline="central" transform="translate(16550 8930) scale(1 -1)">BUS_39</text>
+</g>
+</svg>
