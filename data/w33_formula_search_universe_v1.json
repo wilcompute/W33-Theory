@@ -830660,6 +830660,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9931ddaa1005d7d7ea5f72553b62ee252e743e0f970157ee4315cee39e4eb5fb",
+      "normalized_formula": "Theequality^ispresentlyafour-primeconjecture^,notanall-primetheorem.Itisverifiedbymodulareliminationforp=2,3,5,7.Thep=2overlapofthelastandintermediateblockconventionsishandledexplicitly.Thisnewintermediate-modulepatterncouldhelpthealgebraicextensionproof.Pass12187isseparatelyreservedonanotherCodextrack:priorcodeandsimultaneousworktakeprecedence",
+      "numeric_literals": [
+        "2",
+        "2187",
+        "3",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_allfive_deeper_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 42,
+          "path": "analysis/2026-10-22_allfive_deeper_frontiers.md",
+          "raw": "The equality **is presently a four-prime conjecture**, not an all-prime theorem. It is verified by modular elimination for p=2,3,5,7. The p=2 overlap of the last and intermediate block conventions is handled explicitly. This new intermediate-module pattern could help the algebraic extension proof. Pass12187 is separately reserved on another Codex track: prior code and simultaneous work take precedence.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "8931fabb09e1ef1f4ae4b16e5b7367428298ecd6342a33561e4e92c160b3b586",
+      "structural_formula": "Theequality^ispresentlyafour-primeconjecture^,notanall-primetheorem.Itisverifiedbymodulareliminationforp=#,#,#,#.Thep=#overlapofthelastandintermediateblockconventionsishandledexplicitly.Thisnewintermediate-modulepatterncouldhelpthealgebraicextensionproof.Pass1#isseparatelyreservedonanotherCodextrack:priorcodeandsimultaneousworktakeprecedence"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7632f976eca025cfc75a0b9f3a34db0cc42e2df929d6b26d233b1ed2678e37d5",
       "normalized_formula": "Theequality`Theta_E8=E4`isclassical,independentlyofW33.TherepositoryrealizesE8rootstogetherwithfiniteW33geometry,buttheequalityofW33edgecount(240)andE8rootcount(240)*alone*isnotanarithmeticoperatorintertwiner.AsoundprogrammustfirstbuildacanonicalequivariantW33-to-E8theta/Heckecouplingbeyondcountmatches,andthenproveapositivityinequalityonthe^degree-oneEisensteinfactor^inthefullWeilexplicitformula.Nosuchidentityiscurrentlyknownfromthesearchedmaterials",
       "numeric_literals": [
@@ -1120405,6 +1120436,33 @@
       },
       "structural_family_id": "23dab1e9a0252a08ec8fcc3c73c877230caaf55ae748c57714e688eb6c211605",
       "structural_formula": "assertlen({round(float(z.real),#)#j*round(float(z.imag),#)forzinev})=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e5150f9e071123340e4a52842b738cafbf06e6b92672b293e0fada902a58110b",
+      "normalized_formula": "assertlen({xfori,jinsimultaneousforxin(i,j)})=18",
+      "numeric_literals": [
+        "18"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_allfive_deeper_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 93,
+          "path": "analysis/w33_20261022_allfive_deeper_frontiers.py",
+          "raw": "assert len({x for i,j in simultaneous for x in (i,j)})==18",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f1141b18cf4c6b3a3bf0bea2157cd4d5e1e7c10cac5bc756b694002d8e33735f",
+      "structural_formula": "assertlen({xfori,jinsimultaneousforxin(i,j)})=#"
     },
     {
       "file_count": 1,
@@ -1877641,9 +1877699,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T20:36:30-04:00",
+  "frozen_at": "2026-10-22T20:46:11-04:00",
   "pass": 398,
-  "repository_head": "38d932cbb3ea197c84c3e3e627f61d9c5f39d1b0",
+  "repository_head": "73c0eade3731453d32dc1bd10146b4f356cd0759",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2101570,6 +2101628,14 @@
     },
     {
       "exact_formula_ids": [
+        "9931ddaa1005d7d7ea5f72553b62ee252e743e0f970157ee4315cee39e4eb5fb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8931fabb09e1ef1f4ae4b16e5b7367428298ecd6342a33561e4e92c160b3b586",
+      "structural_formula": "Theequality^ispresentlyafour-primeconjecture^,notanall-primetheorem.Itisverifiedbymodulareliminationforp=#,#,#,#.Thep=#overlapofthelastandintermediateblockconventionsishandledexplicitly.Thisnewintermediate-modulepatterncouldhelpthealgebraicextensionproof.Pass1#isseparatelyreservedonanotherCodextrack:priorcodeandsimultaneousworktakeprecedence"
+    },
+    {
+      "exact_formula_ids": [
         "7632f976eca025cfc75a0b9f3a34db0cc42e2df929d6b26d233b1ed2678e37d5"
       ],
       "exact_member_count": 1,
@@ -2176770,6 +2176836,14 @@
       "exact_member_count": 1,
       "structural_family_id": "23dab1e9a0252a08ec8fcc3c73c877230caaf55ae748c57714e688eb6c211605",
       "structural_formula": "assertlen({round(float(z.real),#)#j*round(float(z.imag),#)forzinev})=#"
+    },
+    {
+      "exact_formula_ids": [
+        "e5150f9e071123340e4a52842b738cafbf06e6b92672b293e0fada902a58110b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f1141b18cf4c6b3a3bf0bea2157cd4d5e1e7c10cac5bc756b694002d8e33735f",
+      "structural_formula": "assertlen({xfori,jinsimultaneousforxin(i,j)})=#"
     },
     {
       "exact_formula_ids": [
@@ -2379424,20 +2379498,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90925782,
-    "exact_formula_families": 64193,
-    "files_scanned": 12516,
-    "formula_occurrences": 70295,
+    "bytes_scanned": 90948571,
+    "exact_formula_families": 64195,
+    "files_scanned": 12519,
+    "formula_occurrences": 70297,
     "status_occurrences": {
-      "certified_or_theorem": 5271,
+      "certified_or_theorem": 5272,
       "killed_or_retracted": 1865,
       "open_or_conditional": 2362,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55369
+      "unclassified": 55370
     },
-    "structural_families": 62506
+    "structural_families": 62508
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "c291e02ed6f8147b244734ab1fd7639bd0ad402d0bc791bdb426fb0f827ec931"
+  "universe_sha256": "aeacc676238244ecabef289ccc79a884d50a5ff2456ae97c773015ef59d7967a"
 }
