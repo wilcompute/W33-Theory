@@ -228,6 +228,10 @@ Successive ratios approach1/4. The canonical Lie-generator target has the same s
 
 The pre-publication rediscovery guard flags `[[0,2,1]]`: this is the elementary parity/permutation array, not an asserted code parameter. Its named owners11975–11979,11924,11697–11698 and11975 mediator source were read completely; their existing parity, misalignment and mediator results are credited above. The candidate is retained transparently rather than changing notation to hide it.
 
+## Publication receipt
+
+Research commit `1f3fff418a5f63b53c0d045733c7edcd3673698e` was pushed to W33 master through GitKraken. [Hosted replay39952562839](https://github.com/wilcompute/W33-Theory/actions/runs/39952562839), job120410354709, completed **SUCCESS**:21 frozen controls, all five producer sections,21 regenerated controls and certificate artifact upload. Runtime frontier lock, YAML gate, certificate integrity, theoretical bounds, stale boundaries and W33-Theory verification also passed for that science commit when checked. Other broad repository jobs were still running; no global CI-green claim is made. Shared dirty and unpublished peer work remains preserved.
+
 ## Primary external sources
 
 - [Narain orbifolds, generalized vielbeins and invariant moduli](https://arxiv.org/abs/1703.05323): the lattice/CFT framework is standard.
