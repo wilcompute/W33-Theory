@@ -101766,6 +101766,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f2324a2cb255e80a5bb8799d595902a7e4befeb51f089a46f1f49741bc31c83f",
+      "normalized_formula": "\"finite_temperature_exact\":\"GibbsmeasureisPSp-invariant,henceE[x_i^2]=1/40foreverybetafinite\"",
+      "numeric_literals": [
+        "1",
+        "2",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_toe_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 96,
+          "path": "analysis/w33_20261022_five_toe_frontiers.py",
+          "raw": "\"finite_temperature_exact\":\"Gibbs measure is PSp-invariant, hence E[x_i^2]=1/40 for every beta finite\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6f73d31702aef6979dfee90a0e0a95e44d2133d0aa8a70f5826b8393bbd1c00b",
+      "structural_formula": "\"finite_temperature_exact\":\"GibbsmeasureisPSp-invariant,henceE[x_i^#]=#/#foreverybetafinite\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "a57d5bebc9ca91ae67a88995aefd9bc31192635b19861c00ccafcce1b01b8c2f",
       "normalized_formula": "\"finite_temperature_rows\":len(rows)=8}",
       "numeric_literals": [
@@ -150304,6 +150333,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e413b8b0fd4d68fbd9a70421c16a340033e0fb32ac07f29dc4c899dbe5b1ea1a",
+      "normalized_formula": "\"proof\":\"V^*=J2+1+1;degreep-1monomialssplitassum_tSym^t(J2)tensorSym^(p-1-t)(1+1),withSym^t(J2)=J_(t+1)fort<p\"",
+      "numeric_literals": [
+        "+1",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_toe_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 61,
+          "path": "analysis/w33_20261022_five_toe_frontiers.py",
+          "raw": "\"proof\":\"V^*=J2 + 1 + 1; degree p-1 monomials split as sum_t Sym^t(J2) tensor Sym^(p-1-t)(1+1), with Sym^t(J2)=J_(t+1) for t<p\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4faa74272ca97bfd7e5c76a84ddee56127d32e7977003933334bdeee3264157f",
+      "structural_formula": "\"proof\":\"V^*=J2##;degreep-#monomialssplitassum_tSym^t(J2)tensorSym^(p-#-t)(##),withSym^t(J2)=J_(t+#)fort<p\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "62b279aef33e387efe61b5b507d8a1b87447e80effac0c7fa1f66181bb0d035e",
       "normalized_formula": "\"proof\":\"f'(x)=x^(m-2)(mx-(m-1));useresultantRes(f,f')=f(0)^(m-2)*m^m*f((m-1)/m),thenstandarddiscriminantsign.\"",
       "numeric_literals": [
@@ -175911,6 +175968,36 @@
       },
       "structural_family_id": "060e55026660fcc5412fdd12d66ae3c8338f6c91cdc40610c93e3c43d3f51ddb",
       "structural_formula": "\"tandelta_CKM=Phi_4/mu+#/F_5^#=#(BT8#)\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2cba4a88cc31ec1a74e4609016a04536a48b624316fb3cfb81568ea8902cb3d6",
+      "normalized_formula": "\"tangent_Hessian\":\"diag(4*a+2*gamma*B_ij,j!=i):12directions4aand27directions4a+2gamma\"",
+      "numeric_literals": [
+        "12",
+        "2",
+        "4",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_toe_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 95,
+          "path": "analysis/w33_20261022_five_toe_frontiers.py",
+          "raw": "\"tangent_Hessian\":\"diag(4*a + 2*gamma*B_ij, j!=i): 12 directions 4a and 27 directions 4a+2gamma\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "42c03eea77880960d56d0d5dfbefd27b7d3e61fa32ad8ffcf50222e1a3c11eb6",
+      "structural_formula": "\"tangent_Hessian\":\"diag(#*a+#*gamma*B_ij,j!=i):#directions4aand2#directions4a+#gamma\""
     },
     {
       "file_count": 1,
@@ -638193,6 +638280,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fb23944ce2a36bc0fd469c0f9f4b523be9730c1128bcab97295c3dfa4f07fcc0",
+      "normalized_formula": "FortheternaryCSS`[[40,20,4]]_3`,considerthephysicalnon-Clifforddiagonaloperator`U=diag(1,zeta_9,zeta_92)^(tensor40)`.Anencodedcomputationalbasisketisauniformcosetstate`|u+C>`for`uinC^perp`.Directexhaustiveevaluationofthe^entire^`3^10=59049`-wordclassicalcodefindsthattheintegerdigitsumofeverystabilizerwordis`0mod9`.Thus`U|0_L>=|0_L>",
+      "numeric_literals": [
+        "0",
+        "1",
+        "10",
+        "2",
+        "20",
+        "3",
+        "4",
+        "40",
+        "59049"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_toe_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 48,
+          "path": "analysis/2026-10-22_five_toe_frontiers.md",
+          "raw": "For the ternary CSS `[[40,20,4]]_3`, consider the physical non-Clifford diagonal operator `U = diag(1,zeta_9,zeta_9\u00b2)^(tensor 40)`. An encoded computational basis ket is a uniform coset state `|u+C>` for `u in C^perp`. Direct exhaustive evaluation of the **entire** `3^10=59049`-word classical code finds that the integer digit sum of every stabilizer word is `0 mod 9`. Thus `U|0_L>=|0_L>`.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a9983e03c87eec228d592a1c79cf15d69a52eae52b8ab9130a71310720111234",
+      "structural_formula": "FortheternaryCSS`[[#,#,#]]_3`,considerthephysicalnon-Clifforddiagonaloperator`U=diag(#,zeta_9,zeta_9#)^(tensor4#)`.Anencodedcomputationalbasisketisauniformcosetstate`|u+C>`for`uinC^perp`.Directexhaustiveevaluationofthe^entire^`#^#=#`-wordclassicalcodefindsthattheintegerdigitsumofeverystabilizerwordis`#mod9`.Thus`U|#_L>=|#_L>"
+    },
+    {
+      "file_count": 1,
       "formula_id": "75443fb5e3df7c3ed732012f708dfd36eff130d738d49768f5d9b8a961ee4e48",
       "normalized_formula": "Forthevertex-avoidancecode,the^fourincidentlinkX's^similarlycommutewithallchosenWilsonloops.TheirsignedproductisthesinglevertexGaussstabilizer,leaving^threeindependentweight-onelogicalX's^;thusitscodedistanceisalso^d=1^",
       "numeric_literals": [
@@ -659332,6 +659454,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "42ba372d92bbdbce1e8c9c9025750529aaefb1b27987d0ad52cef637af9b1818",
+      "normalized_formula": "Here`Sym^t(J2)=J_(t+1)`fort<p,bythestandardactiononbinaryhomogeneouspolynomialsandinvertibilityofbinomialcoefficientsbelowp.Thisisa^general-primemathematicalproof^.Independentexactmatricesconfirmitatp=2,3,5,7withfullsequencesofranksof`(T-I)^k`onC",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_toe_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/2026-10-22_five_toe_frontiers.md",
+          "raw": "Here `Sym^t(J2)=J_(t+1)` for t<p, by the standard action on binary homogeneous polynomials and invertibility of binomial coefficients below p. This is a **general-prime mathematical proof**. Independent exact matrices confirm it at p=2,3,5,7 with full sequences of ranks of `(T-I)^k` on C.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "3fa0ceeb911e3e5af59e384813b866a17cab7d3143d1251b69cf5a3bf83e7c0b",
+      "structural_formula": "Here`Sym^t(J2)=J_(t+#)`fort<p,bythestandardactiononbinaryhomogeneouspolynomialsandinvertibilityofbinomialcoefficientsbelowp.Thisisa^general-primemathematicalproof^.Independentexactmatricesconfirmitatp=#,#,#,#withfullsequencesofranksof`(T-I)^k`onC"
+    },
+    {
+      "file_count": 1,
       "formula_id": "8a3c703687f0e47e44d3b1e60ab6fd9d7515ca732d0bbf68e7f77f6675cb1d53",
       "normalized_formula": "HereeachV_iisadistinct2-dimensionalnontrivialsimplemoduleinflatedfrom`H27/Z~=F3^2`,correspondingtoonemaximalabelian/Paulidirection,whileW_6isa^faithfulirreducible^binaryHeisenbergmodulewithnontrivialcentralaction.Thisfaithfulsummandisthefield-restricted3-dimensionalSchr\u00f6dinger-typerepresentationoverF4;thatrepresentation-theoreticdescriptionfollowsfromthecharacteristic-2irreducibleclassification,whereastheprojectorranksand63-vectortestaredirectfinitecomputations",
       "numeric_literals": [
@@ -662094,6 +662247,34 @@
       },
       "structural_family_id": "8498793d99caac311d5957b09e667ad159b7c3996d093275780b413a1512a39e",
       "structural_formula": "However,T_E6(#)=#fixestheaddedone-loopcosts:sixcomplex2#copiescost6,whiletwosetsofthreeWeyl2#copiescost1#.TheexistingcompositeinventoryhasbE6=#\u2212#randbSO(#r)=#r\u2212#.AuxiliaryAFneedsintegerr\u2265#;atr=#thescalarchannelgivesbE6=\u2212#andthefermionchannelgives\u2212#.Neithersingle-propagatorcompletionpreservesjointAFanywhereinthisinventory"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fd2cfe147bfbf52181080eeac35014c22cc5ddea100524dfc93724aaed21f3da",
+      "normalized_formula": "However,thefinite-dimensionalGibbsensembleat^everyfiniteinversetemperature^isinvariantunderthatgroup.Bytransitivityandtheunit-sphereconstraintitobeystheexactequality`E[x_i2]=1/40`foreveryi.Thusnounseededfinite-temperatureensembleprefersaclock.Asymmetry-breakingperturbation,singularzero-temperatureselection,measurement/initial-conditionselection,oragenuinethermodynamiclimitisstillneeded",
+      "numeric_literals": [
+        "1",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_toe_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 34,
+          "path": "analysis/2026-10-22_five_toe_frontiers.md",
+          "raw": "However, the finite-dimensional Gibbs ensemble at **every finite inverse temperature** is invariant under that group. By transitivity and the unit-sphere constraint it obeys the exact equality `E[x_i\u00b2]=1/40` for every i. Thus no unseeded finite-temperature ensemble prefers a clock. A symmetry-breaking perturbation, singular zero-temperature selection, measurement/initial-condition selection, or a genuine thermodynamic limit is still needed.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f4b9dd7d4e5ba4ee755ceb6170b234d0b6f7ba220be771ad5b9b836ad3502be6",
+      "structural_formula": "However,thefinite-dimensionalGibbsensembleat^everyfiniteinversetemperature^isinvariantunderthatgroup.Bytransitivityandtheunit-sphereconstraintitobeystheexactequality`E[x_i2]=#/#`foreveryi.Thusnounseededfinite-temperatureensembleprefersaclock.Asymmetry-breakingperturbation,singularzero-temperatureselection,measurement/initial-conditionselection,oragenuinethermodynamiclimitisstillneeded"
     },
     {
       "file_count": 1,
@@ -724139,6 +724320,34 @@
       },
       "structural_family_id": "89fb8425ae6363fa66b49174676b34e5fafe01420204908d55b986abfa303c71",
       "structural_formula": "Nowtakelambda-valuations.Since(q)=(lambda)^{q-#}(qtotallyramified"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8579104390ebba5e4ac6fcbce2a4dbf581c443e179ae80f8b40b62093215e1a5",
+      "normalized_formula": "Nowtaketheexplicitweight-fourlogicalrepresentative`u=(1,1,1,1,0,...,0)`intherepository'scanonicalprojectiveordering;theverifierestablishes`Bu=0`and`unotinC`.Thephasechanges`sum_i(u_i+c_imod3)-sum_iu_i`modulo9occuras",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_toe_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/2026-10-22_five_toe_frontiers.md",
+          "raw": "Now take the explicit weight-four logical representative `u=(1,1,1,1,0,...,0)` in the repository's canonical projective ordering; the verifier establishes `Bu=0` and `u not in C`. The phase changes `sum_i (u_i+c_i mod 3) - sum_i u_i` modulo 9 occur as:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4f345f3bda4a709278be36ff6f22160c7699c26f33f335a412cd74535fbbf626",
+      "structural_formula": "Nowtaketheexplicitweight-fourlogicalrepresentative`u=(#,#,#,#,#,...,#)`intherepository'scanonicalprojectiveordering;theverifierestablishes`Bu=#`and`unotinC`.Thephasechanges`sum_i(u_i+c_imod3)-sum_iu_i`modulo9occuras"
     },
     {
       "file_count": 1,
@@ -799687,6 +799896,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "abb37a02908a4362f0e9a84acada5a01759551e4cfc5ab9bbe053da0067ccf91",
+      "normalized_formula": "Since`sum_ix_i^4<=(sum_ix_i2)^2=1`andthepairtermisnonnegative,the^only^minimizersaretheeighty`\u00b1e_i`,formingfortyprojectiveclockchoices;theminimumequals`-a`.ThetangentHessianat`\u00b1e_i`is^anisotropic^:`4a`onthetwelvecollineardirectionsand`4a+2gamma`onthetwenty-sevennoncollineardirections.Thisfollowsbyexpanding`x_i2=1-sum_(j!=i)x_j2`toquadraticorder.Thusasymmetric,explicitlypostulatedlocalizingpotentialhas40isolatedcandidateclockvacua,permutedbyPSp(4,3)",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_toe_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/2026-10-22_five_toe_frontiers.md",
+          "raw": "Since `sum_i x_i^4 <= (sum_i x_i\u00b2)^2 =1` and the pair term is nonnegative, the **only** minimizers are the eighty `\u00b1e_i`, forming forty projective clock choices; the minimum equals `-a`. The tangent Hessian at `\u00b1e_i` is **anisotropic**: `4a` on the twelve collinear directions and `4a+2gamma` on the twenty-seven noncollinear directions. This follows by expanding `x_i\u00b2=1-sum_(j!=i)x_j\u00b2` to quadratic order. Thus a symmetric, explicitly postulated localizing potential has 40 isolated candidate clock vacua, permuted by PSp(4,3).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b5a0606774510842fcb6ca4e3b0a298feb6225e74e4474859166e63bc5efc546",
+      "structural_formula": "Since`sum_ix_i^#<=(sum_ix_i2)^#=#`andthepairtermisnonnegative,the^only^minimizersaretheeighty`\u00b1e_i`,formingfortyprojectiveclockchoices;theminimumequals`-a`.ThetangentHessianat`\u00b1e_i`is^anisotropic^:`#a`onthetwelvecollineardirectionsand`#a+#gamma`onthetwenty-sevennoncollineardirections.Thisfollowsbyexpanding`x_i2=#-sum_(j!=i)x_j2`toquadraticorder.Thusasymmetric,explicitlypostulatedlocalizingpotentialhas4#isolatedcandidateclockvacua,permutedbyPSp(#,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b0f16c46955ee58a0e9297efe29c9f14183815c8a092c5d0b84d6600d5de0436",
       "normalized_formula": "Since`|U_4(2):2|=51,840`,thenumberofgrouporbitsisatleast",
       "numeric_literals": [
@@ -860604,6 +860844,33 @@
       },
       "structural_family_id": "a56eaf54c8a8d6a8451a59b9a27d73510424e2f51d40182922dec6b24b6ec27e",
       "structural_formula": "V(x)=(x_0^#,x_0x_1,x_0x_2,x_0x_3,x_1^#,x_1x_2,x_1x_3,x_2^#,x_2x_3,x_3^#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0259027f78bbf943e83b7c25752ca837dd8a0676f56516dcc9a8da498f8735ae",
+      "normalized_formula": "V(x)=-asum_ix_i^4+gammasum_{i<j}B_ijx_i2x_j2",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_toe_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/2026-10-22_five_toe_frontiers.md",
+          "raw": "V(x) = -a sum_i x_i^4 + gamma sum_{i<j} B_ij x_i\u00b2 x_j\u00b2,",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "94e79591eec7115a104a3856af442bbfffa4c7f1c30309f5d2051d1757ad5ae8",
+      "structural_formula": "V(x)=-asum_ix_i^#+gammasum_{i<j}B_ijx_i2x_j2"
     },
     {
       "file_count": 1,
@@ -1231454,6 +1231721,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "becfbb47fb7c844933cd82cfbbc797a3202079fa4a9e9c3020a21cb07c07a691",
+      "normalized_formula": "defcontinuum_fixed_characteristic(primes=(3,5,7),extensions=(1,2,3,4))",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_toe_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 178,
+          "path": "analysis/w33_20261022_five_toe_frontiers.py",
+          "raw": "def continuum_fixed_characteristic(primes=(3,5,7), extensions=(1,2,3,4)):",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "61a66d966453e6ba5e9864187e1ee0f839cc815328de5a163d95d28e22d964d0",
+      "structural_formula": "defcontinuum_fixed_characteristic(primes=(#,#,#),extensions=(#,#,#,#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "64241b75ad3a402205009423d500f9c526b8d70c0d3242f8bab888d0126e0169",
       "normalized_formula": "defcontinuum_torus4_heat_trace(t:float,modes:int=24)->float",
       "numeric_literals": [
@@ -1381355,6 +1381654,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6b1a3eb9ca6fcbc1b0b8fcde090a129339319206981171b62541af5207096678",
+      "normalized_formula": "lam_r=1-r/k",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_toe_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 190,
+          "path": "analysis/w33_20261022_five_toe_frontiers.py",
+          "raw": "lam_r=1-r/k",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bffbc8f536268be949eb611aa4c501d73b408b6a64b8b646381231f6843b26af",
+      "structural_formula": "lam_r=#-r/k"
+    },
+    {
+      "file_count": 1,
       "formula_id": "afabf7262d0c48849871c8ef7419e6a4a6fe5c96752c1cf578e963d1f348ff23",
       "normalized_formula": "lam_rho=next(r['Lambda_over_M4']forrinrowsifr['T_WL']=['2j','2j']andr['T_star']=rho)",
       "numeric_literals": [
@@ -1381379,6 +1381705,33 @@
       },
       "structural_family_id": "7fdf6af3e971527029246df02ecd0f91d06385c2759da53ed17eaa0ea67d9368",
       "structural_formula": "lam_rho=next(r['Lambda_over_M4']forrinrowsifr['T_WL']=['#j','#j']andr['T_star']=rho)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "233d06f305f541f1b1a79463da61e589659a912aa8432987b2314d62f7b16f63",
+      "normalized_formula": "lam_s=1-s/k",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261022_five_toe_frontiers.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 191,
+          "path": "analysis/w33_20261022_five_toe_frontiers.py",
+          "raw": "lam_s=1-s/k",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "502215c8f52f5bd35f98d6953bd10644a9c158417928b3ff502ff532d5d62b7f",
+      "structural_formula": "lam_s=#-s/k"
     },
     {
       "file_count": 1,
@@ -1876572,9 +1876925,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T20:14:00-04:00",
+  "frozen_at": "2026-10-22T20:29:00-04:00",
   "pass": 398,
-  "repository_head": "55796febd0de707aa6c89b512f2dc9a2dadbfd70",
+  "repository_head": "241f48dfbc16e3006206cdbb892a9b046350f7aa",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1905080,6 +1905433,14 @@
     },
     {
       "exact_formula_ids": [
+        "f2324a2cb255e80a5bb8799d595902a7e4befeb51f089a46f1f49741bc31c83f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6f73d31702aef6979dfee90a0e0a95e44d2133d0aa8a70f5826b8393bbd1c00b",
+      "structural_formula": "\"finite_temperature_exact\":\"GibbsmeasureisPSp-invariant,henceE[x_i^#]=#/#foreverybetafinite\""
+    },
+    {
+      "exact_formula_ids": [
         "a57d5bebc9ca91ae67a88995aefd9bc31192635b19861c00ccafcce1b01b8c2f"
       ],
       "exact_member_count": 1,
@@ -1918692,6 +1919053,14 @@
     },
     {
       "exact_formula_ids": [
+        "e413b8b0fd4d68fbd9a70421c16a340033e0fb32ac07f29dc4c899dbe5b1ea1a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4faa74272ca97bfd7e5c76a84ddee56127d32e7977003933334bdeee3264157f",
+      "structural_formula": "\"proof\":\"V^*=J2##;degreep-#monomialssplitassum_tSym^t(J2)tensorSym^(p-#-t)(##),withSym^t(J2)=J_(t+#)fort<p\""
+    },
+    {
+      "exact_formula_ids": [
         "62b279aef33e387efe61b5b507d8a1b87447e80effac0c7fa1f66181bb0d035e"
       ],
       "exact_member_count": 1,
@@ -1925882,6 +1926251,14 @@
       "exact_member_count": 1,
       "structural_family_id": "060e55026660fcc5412fdd12d66ae3c8338f6c91cdc40610c93e3c43d3f51ddb",
       "structural_formula": "\"tandelta_CKM=Phi_4/mu+#/F_5^#=#(BT8#)\""
+    },
+    {
+      "exact_formula_ids": [
+        "2cba4a88cc31ec1a74e4609016a04536a48b624316fb3cfb81568ea8902cb3d6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "42c03eea77880960d56d0d5dfbefd27b7d3e61fa32ad8ffcf50222e1a3c11eb6",
+      "structural_formula": "\"tangent_Hessian\":\"diag(#*a+#*gamma*B_ij,j!=i):#directions4aand2#directions4a+#gamma\""
     },
     {
       "exact_formula_ids": [
@@ -2048335,6 +2048712,14 @@
     },
     {
       "exact_formula_ids": [
+        "fb23944ce2a36bc0fd469c0f9f4b523be9730c1128bcab97295c3dfa4f07fcc0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a9983e03c87eec228d592a1c79cf15d69a52eae52b8ab9130a71310720111234",
+      "structural_formula": "FortheternaryCSS`[[#,#,#]]_3`,considerthephysicalnon-Clifforddiagonaloperator`U=diag(#,zeta_9,zeta_9#)^(tensor4#)`.Anencodedcomputationalbasisketisauniformcosetstate`|u+C>`for`uinC^perp`.Directexhaustiveevaluationofthe^entire^`#^#=#`-wordclassicalcodefindsthattheintegerdigitsumofeverystabilizerwordis`#mod9`.Thus`U|#_L>=|#_L>"
+    },
+    {
+      "exact_formula_ids": [
         "75443fb5e3df7c3ed732012f708dfd36eff130d738d49768f5d9b8a961ee4e48"
       ],
       "exact_member_count": 1,
@@ -2054116,6 +2054501,14 @@
     },
     {
       "exact_formula_ids": [
+        "42ba372d92bbdbce1e8c9c9025750529aaefb1b27987d0ad52cef637af9b1818"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3fa0ceeb911e3e5af59e384813b866a17cab7d3143d1251b69cf5a3bf83e7c0b",
+      "structural_formula": "Here`Sym^t(J2)=J_(t+#)`fort<p,bythestandardactiononbinaryhomogeneouspolynomialsandinvertibilityofbinomialcoefficientsbelowp.Thisisa^general-primemathematicalproof^.Independentexactmatricesconfirmitatp=#,#,#,#withfullsequencesofranksof`(T-I)^k`onC"
+    },
+    {
+      "exact_formula_ids": [
         "8a3c703687f0e47e44d3b1e60ab6fd9d7515ca732d0bbf68e7f77f6675cb1d53"
       ],
       "exact_member_count": 1,
@@ -2054881,6 +2055274,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8498793d99caac311d5957b09e667ad159b7c3996d093275780b413a1512a39e",
       "structural_formula": "However,T_E6(#)=#fixestheaddedone-loopcosts:sixcomplex2#copiescost6,whiletwosetsofthreeWeyl2#copiescost1#.TheexistingcompositeinventoryhasbE6=#\u2212#randbSO(#r)=#r\u2212#.AuxiliaryAFneedsintegerr\u2265#;atr=#thescalarchannelgivesbE6=\u2212#andthefermionchannelgives\u2212#.Neithersingle-propagatorcompletionpreservesjointAFanywhereinthisinventory"
+    },
+    {
+      "exact_formula_ids": [
+        "fd2cfe147bfbf52181080eeac35014c22cc5ddea100524dfc93724aaed21f3da"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f4b9dd7d4e5ba4ee755ceb6170b234d0b6f7ba220be771ad5b9b836ad3502be6",
+      "structural_formula": "However,thefinite-dimensionalGibbsensembleat^everyfiniteinversetemperature^isinvariantunderthatgroup.Bytransitivityandtheunit-sphereconstraintitobeystheexactequality`E[x_i2]=#/#`foreveryi.Thusnounseededfinite-temperatureensembleprefersaclock.Asymmetry-breakingperturbation,singularzero-temperatureselection,measurement/initial-conditionselection,oragenuinethermodynamiclimitisstillneeded"
     },
     {
       "exact_formula_ids": [
@@ -2071563,6 +2071964,14 @@
       "exact_member_count": 1,
       "structural_family_id": "89fb8425ae6363fa66b49174676b34e5fafe01420204908d55b986abfa303c71",
       "structural_formula": "Nowtakelambda-valuations.Since(q)=(lambda)^{q-#}(qtotallyramified"
+    },
+    {
+      "exact_formula_ids": [
+        "8579104390ebba5e4ac6fcbce2a4dbf581c443e179ae80f8b40b62093215e1a5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4f345f3bda4a709278be36ff6f22160c7699c26f33f335a412cd74535fbbf626",
+      "structural_formula": "Nowtaketheexplicitweight-fourlogicalrepresentative`u=(#,#,#,#,#,...,#)`intherepository'scanonicalprojectiveordering;theverifierestablishes`Bu=#`and`unotinC`.Thephasechanges`sum_i(u_i+c_imod3)-sum_iu_i`modulo9occuras"
     },
     {
       "exact_formula_ids": [
@@ -2092038,6 +2092447,14 @@
     },
     {
       "exact_formula_ids": [
+        "abb37a02908a4362f0e9a84acada5a01759551e4cfc5ab9bbe053da0067ccf91"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b5a0606774510842fcb6ca4e3b0a298feb6225e74e4474859166e63bc5efc546",
+      "structural_formula": "Since`sum_ix_i^#<=(sum_ix_i2)^#=#`andthepairtermisnonnegative,the^only^minimizersaretheeighty`\u00b1e_i`,formingfortyprojectiveclockchoices;theminimumequals`-a`.ThetangentHessianat`\u00b1e_i`is^anisotropic^:`#a`onthetwelvecollineardirectionsand`#a+#gamma`onthetwenty-sevennoncollineardirections.Thisfollowsbyexpanding`x_i2=#-sum_(j!=i)x_j2`toquadraticorder.Thusasymmetric,explicitlypostulatedlocalizingpotentialhas4#isolatedcandidateclockvacua,permutedbyPSp(#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "b0f16c46955ee58a0e9297efe29c9f14183815c8a092c5d0b84d6600d5de0436"
       ],
       "exact_member_count": 1,
@@ -2108574,6 +2108991,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a56eaf54c8a8d6a8451a59b9a27d73510424e2f51d40182922dec6b24b6ec27e",
       "structural_formula": "V(x)=(x_0^#,x_0x_1,x_0x_2,x_0x_3,x_1^#,x_1x_2,x_1x_3,x_2^#,x_2x_3,x_3^#)"
+    },
+    {
+      "exact_formula_ids": [
+        "0259027f78bbf943e83b7c25752ca837dd8a0676f56516dcc9a8da498f8735ae"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "94e79591eec7115a104a3856af442bbfffa4c7f1c30309f5d2051d1757ad5ae8",
+      "structural_formula": "V(x)=-asum_ix_i^#+gammasum_{i<j}B_ijx_i2x_j2"
     },
     {
       "exact_formula_ids": [
@@ -2206155,6 +2206580,14 @@
     },
     {
       "exact_formula_ids": [
+        "becfbb47fb7c844933cd82cfbbc797a3202079fa4a9e9c3020a21cb07c07a691"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "61a66d966453e6ba5e9864187e1ee0f839cc815328de5a163d95d28e22d964d0",
+      "structural_formula": "defcontinuum_fixed_characteristic(primes=(#,#,#),extensions=(#,#,#,#))"
+    },
+    {
+      "exact_formula_ids": [
         "64241b75ad3a402205009423d500f9c526b8d70c0d3242f8bab888d0126e0169"
       ],
       "exact_member_count": 1,
@@ -2246894,11 +2247327,27 @@
     },
     {
       "exact_formula_ids": [
+        "6b1a3eb9ca6fcbc1b0b8fcde090a129339319206981171b62541af5207096678"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bffbc8f536268be949eb611aa4c501d73b408b6a64b8b646381231f6843b26af",
+      "structural_formula": "lam_r=#-r/k"
+    },
+    {
+      "exact_formula_ids": [
         "afabf7262d0c48849871c8ef7419e6a4a6fe5c96752c1cf578e963d1f348ff23"
       ],
       "exact_member_count": 1,
       "structural_family_id": "7fdf6af3e971527029246df02ecd0f91d06385c2759da53ed17eaa0ea67d9368",
       "structural_formula": "lam_rho=next(r['Lambda_over_M4']forrinrowsifr['T_WL']=['#j','#j']andr['T_star']=rho)"
+    },
+    {
+      "exact_formula_ids": [
+        "233d06f305f541f1b1a79463da61e589659a912aa8432987b2314d62f7b16f63"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "502215c8f52f5bd35f98d6953bd10644a9c158417928b3ff502ff532d5d62b7f",
+      "structural_formula": "lam_s=#-s/k"
     },
     {
       "exact_formula_ids": [
@@ -2378059,20 +2378508,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90835889,
-    "exact_formula_families": 64156,
-    "files_scanned": 12508,
-    "formula_occurrences": 70258,
+    "bytes_scanned": 90854898,
+    "exact_formula_families": 64168,
+    "files_scanned": 12510,
+    "formula_occurrences": 70270,
     "status_occurrences": {
-      "certified_or_theorem": 5266,
-      "killed_or_retracted": 1864,
+      "certified_or_theorem": 5268,
+      "killed_or_retracted": 1865,
       "open_or_conditional": 2360,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55340
+      "unclassified": 55349
     },
-    "structural_families": 62469
+    "structural_families": 62481
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "5a21285686b73d6ca5d54da962e345cc034266b51297d5924cf41ff67d8362d0"
+  "universe_sha256": "a14b678778a52a01557f37ed0827265a69495974cc75656c73e8419441dddc8e"
 }
