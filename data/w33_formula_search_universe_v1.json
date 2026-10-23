@@ -718907,7 +718907,7 @@
         },
         {
           "category": "inline_math",
-          "line": 78,
+          "line": 80,
           "path": "papers/no_higgs_10/main.tex",
           "raw": "N=0",
           "status": "unclassified"
@@ -724182,6 +724182,34 @@
       },
       "structural_family_id": "037a827a30807932b411e2004d89e2168bbffad152cc00c532cbb573a2ee7032",
       "structural_formula": "N_\\nu=q=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "016be1a7a1b904eefe014793f19c8653bd8768eb89df6549bb09f2372e58c655",
+      "normalized_formula": "N_a(A_a.V_i)=0mod2(7d)andgcd(N_a,N_b)(A_a.A_b)=0mod2(7f),derivedintheirappendixAfrom",
+      "numeric_literals": [
+        "0",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12259_to_12264_ploger_conditions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass12259_to_12264_ploger_conditions.py",
+          "raw": "N_a (A_a . V_i) = 0 mod 2 (7d) and gcd(N_a, N_b)(A_a . A_b) = 0 mod 2 (7f), derived in their appendix A from",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bdf76208e5e324654abf948b43a19756475bbac65ad3104b49aeb0ef101d5093",
+      "structural_formula": "N_a(A_a.V_i)=#mod2(#d)andgcd(N_a,N_b)(A_a.A_b)=#mod2(#f),derivedintheirappendixAfrom"
     },
     {
       "file_count": 1,
@@ -910285,6 +910313,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "df7222e74305ad4a9d82a7d32ce93dd9a2e1f0920b744e094f35ffb068c2b84a",
+      "normalized_formula": "\\Phi_{\\rmvac}(g,h)^{\\gcd(n,s)}=1",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/no_higgs_10/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 75,
+          "path": "papers/no_higgs_10/main.tex",
+          "raw": "\\Phi_{\\rm vac}(g,h)^{\\gcd(n,s)}=1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "44384b49ed9f4d271bf3bc778b4afd4012b6841006155107cc32a0ecd6d8dee2",
+      "structural_formula": "\\Phi_{\\rmvac}(g,h)^{\\gcd(n,s)}=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ddef75c13ba5076988289d1860f45092112fcfca5904bfcd259005fb689de73d",
       "normalized_formula": "\\Phi_{\\text{total}}=40\\cdot\\tfrac{2\\pi}{3}=\\tfrac{80\\pi}{3}\u2261\\tfrac{2\\pi}{3}\\pmod{2\\pi}",
       "numeric_literals": [
@@ -999742,7 +999797,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 669,
+          "line": 670,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1417908,7 +1417963,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 668,
+          "line": 669,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1423042,7 +1423097,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 668,
+          "line": 669,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1471820,17 +1471875,18 @@
       "structural_formula": "note='The4uncoveredcontexts=chi=Eulercharacteristic=EWbosoncount'"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "3b1371503e557f4b38aa127c26f3362a40861d6814198f4001e202b4573077a7",
       "normalized_formula": "note=(ROOT/\"papers\"/\"no_higgs_10\"/\"main.tex\").read_text(encoding=\"utf-8\")",
       "numeric_literals": [
         "0",
         "8"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
-        "analysis/w33_pass12253_to_12258_note_and_cross_engine.py"
+        "analysis/w33_pass12253_to_12258_note_and_cross_engine.py",
+        "analysis/w33_pass12259_to_12264_ploger_conditions.py"
       ],
       "source_locations": [
         {
@@ -1471839,10 +1471895,18 @@
           "path": "analysis/w33_pass12253_to_12258_note_and_cross_engine.py",
           "raw": "note = (ROOT / \"papers\" / \"no_higgs_10\" / \"main.tex\").read_text(encoding=\"utf-8\")",
           "status": "certified_or_theorem"
+        },
+        {
+          "category": "relation_line",
+          "line": 48,
+          "path": "analysis/w33_pass12259_to_12264_ploger_conditions.py",
+          "raw": "note = (ROOT / \"papers\" / \"no_higgs_10\" / \"main.tex\").read_text(encoding=\"utf-8\")",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1
+        "certified_or_theorem": 1,
+        "unclassified": 1
       },
       "structural_family_id": "7112e0fa2ae631eeac493380bf2dbd624c79804cf4c617eedae0a20a1621e3a9",
       "structural_formula": "note=(ROOT/\"papers\"/\"no_higgs_1#\"/\"main.tex\").read_text(encoding=\"utf-#\")"
@@ -1838695,7 +1838759,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 668,
+          "line": 669,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1888044,9 +1888108,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T15:16:33-04:00",
+  "frozen_at": "2026-10-23T19:16:15-04:00",
   "pass": 398,
-  "repository_head": "9a5b4694ca5f04298b106290d1e19485548924d3",
+  "repository_head": "b4f4c0ed520a73430f69f19731b7ff0ca178e840",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2083005,6 +2083069,14 @@
     },
     {
       "exact_formula_ids": [
+        "016be1a7a1b904eefe014793f19c8653bd8768eb89df6549bb09f2372e58c655"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bdf76208e5e324654abf948b43a19756475bbac65ad3104b49aeb0ef101d5093",
+      "structural_formula": "N_a(A_a.V_i)=#mod2(#d)andgcd(N_a,N_b)(A_a.A_b)=#mod2(#f),derivedintheirappendixAfrom"
+    },
+    {
+      "exact_formula_ids": [
         "38b747869798dba5ad4600eff7509fcbc31c3f8d3d692d9501b608b769101d8d"
       ],
       "exact_member_count": 1,
@@ -2132996,6 +2133068,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ef5222f0f60a8fbecad014411c8ecca8dc1d355b64fea7b97f36cdce4eb7c2c3",
       "structural_formula": "\\Phi_{#}\\cdot\\Phi_6=#=M_9=#^##\\quad(\\Omega_b{+}\\Omega_{\\mathrm{DM}}{+}\\Omega_\\Lambda\\text{sum})"
+    },
+    {
+      "exact_formula_ids": [
+        "df7222e74305ad4a9d82a7d32ce93dd9a2e1f0920b744e094f35ffb068c2b84a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "44384b49ed9f4d271bf3bc778b4afd4012b6841006155107cc32a0ecd6d8dee2",
+      "structural_formula": "\\Phi_{\\rmvac}(g,h)^{\\gcd(n,s)}=#"
     },
     {
       "exact_formula_ids": [
@@ -2392578,20 +2392658,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91599562,
-    "exact_formula_families": 64550,
-    "files_scanned": 12604,
-    "formula_occurrences": 70671,
+    "bytes_scanned": 91612210,
+    "exact_formula_families": 64552,
+    "files_scanned": 12607,
+    "formula_occurrences": 70674,
     "status_occurrences": {
       "certified_or_theorem": 5301,
       "killed_or_retracted": 1876,
       "open_or_conditional": 2378,
       "preregistered": 36,
       "retrospective_fit": 5404,
-      "unclassified": 55676
+      "unclassified": 55679
     },
-    "structural_families": 62848
+    "structural_families": 62850
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "8612c14a897c6ade04455045299a1f4f8ff2afaf509851ad2be69f2b994bf839"
+  "universe_sha256": "f69bac2d28598baf836c268da4915b83dd515310a194e4a9305a5bb15577a670"
 }
