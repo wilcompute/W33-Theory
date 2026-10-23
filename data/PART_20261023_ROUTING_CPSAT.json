@@ -1,0 +1,12 @@
+{
+  "status": "INFEASIBLE",
+  "requested_layers": 3,
+  "n": 40,
+  "graph": "W33 12-regular collinearity",
+  "exhaustive_proof_of_infeasibility": true,
+  "feasible_route_found": false,
+  "termination_semantics": "UNKNOWN means inconclusive; only INFEASIBLE is an exhaustive no-go",
+  "solver_wall_seconds": 2.6736648,
+  "branches": 79271,
+  "conflicts": 8760
+}
