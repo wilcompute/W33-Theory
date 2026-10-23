@@ -1,0 +1,417 @@
+{
+  "12180": {
+    "parents": 70,
+    "runs": 1400,
+    "min": -80,
+    "max": 464,
+    "zeros": [
+      [
+        "Z6II_59_SM_20260917_1105",
+        "-1/2 -1/2 0 0 0 1/2 0 1/2 -1/2 -1/2 -1/2 0 0 0 0 -1/2",
+        "A2 + A1 and A2 + A1 NU1 10",
+        0
+      ],
+      [
+        "Z6II_59_SM_20260917_1105",
+        "-1/2 0 -1/2 0 1/2 0 0 1/2 -1/2 -1/2 -1/2 0 0 0 0 -1/2",
+        "A1 + A1 and A2 + A1 NU1 11",
+        0
+      ],
+      [
+        "Z6II_59_SM_20260917_1105",
+        "-1/2 0 -1/2 1/2 0 0 0 1/2 -1/2 -1/2 -1/2 0 0 0 0 -1/2",
+        "A1 + A1 and A2 + A1 NU1 11",
+        0
+      ]
+    ],
+    "histogram": [
+      [
+        -80,
+        2
+      ],
+      [
+        -48,
+        5
+      ],
+      [
+        -40,
+        10
+      ],
+      [
+        -32,
+        2
+      ],
+      [
+        -24,
+        3
+      ],
+      [
+        -16,
+        10
+      ],
+      [
+        -8,
+        58
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        8,
+        25
+      ],
+      [
+        16,
+        106
+      ],
+      [
+        24,
+        122
+      ],
+      [
+        32,
+        80
+      ],
+      [
+        40,
+        68
+      ],
+      [
+        48,
+        90
+      ],
+      [
+        56,
+        121
+      ],
+      [
+        64,
+        57
+      ],
+      [
+        72,
+        113
+      ],
+      [
+        80,
+        49
+      ],
+      [
+        88,
+        60
+      ],
+      [
+        96,
+        32
+      ],
+      [
+        104,
+        18
+      ],
+      [
+        112,
+        45
+      ],
+      [
+        120,
+        39
+      ],
+      [
+        128,
+        16
+      ],
+      [
+        136,
+        23
+      ],
+      [
+        144,
+        26
+      ],
+      [
+        152,
+        30
+      ],
+      [
+        160,
+        8
+      ],
+      [
+        168,
+        12
+      ],
+      [
+        176,
+        38
+      ],
+      [
+        184,
+        7
+      ],
+      [
+        192,
+        20
+      ],
+      [
+        200,
+        4
+      ],
+      [
+        232,
+        67
+      ],
+      [
+        240,
+        6
+      ],
+      [
+        272,
+        2
+      ],
+      [
+        304,
+        9
+      ],
+      [
+        464,
+        14
+      ]
+    ]
+  },
+  "12180b_v12": {
+    "gauge": "A2 + A1 and A2 + A1 NU1 10",
+    "content": {
+      "qbar": {
+        "parent_net": 6.0,
+        "ss_large_R_net_fermions": 4.0,
+        "detail": {
+          "15_even": 0.0,
+          "15_odd": 0.0,
+          "19_even": 2.0,
+          "19_odd": 4.0
+        }
+      },
+      "L": {
+        "parent_net": 51.0,
+        "ss_large_R_net_fermions": 24.0,
+        "detail": {
+          "15_even": 6.0,
+          "15_odd": 20.0,
+          "19_even": 3.0,
+          "19_odd": 22.0
+        }
+      },
+      "Q": {
+        "parent_net": 3.0,
+        "ss_large_R_net_fermions": 2.0,
+        "detail": {
+          "19_even": 1.0,
+          "19_odd": 2.0
+        }
+      }
+    }
+  },
+  "12180b_generations": {
+    "w6zero": {
+      "(1, 2)": 70
+    },
+    "all128": {
+      "(1, 2)": 117,
+      "(2, 1)": 10,
+      "(3, 0)": 1
+    }
+  },
+  "12180b_all_even_parents": [
+    "Z6II_24__SM_20260917_2751"
+  ],
+  "12180c_SM2751": {
+    "W5": false,
+    "W6": false,
+    "W5+W6": false
+  },
+  "12181": {
+    "clock_Z12": {
+      "Z12I_sm00": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE A3 + A1 + A1 + A1 and A2 + A2 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 13",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z12I_sm01": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE A3 + A1 + A1 + A1 and A2 + A1 + A1 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 13",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z12I_sm02": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 0 0 0 1/2 0 0 0",
+        "gauge": "GAUGE A3 + A1 + A1 + A1 and A2 + A2 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 1",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z12I_sm03": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE A3 + A1 + A1 + A1 and A3 + A1 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 9",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z12I_sm04": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE A3 + A1 + A1 and A2 + A2 + A1 NU1 6",
+        "tachyons": "T_NFIELDS 7",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z12I_sm05": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 0 0 0 1/2 0 0 0",
+        "gauge": "GAUGE A3 + A1 + A1 and A2 + A2 + A1 NU1 6",
+        "tachyons": "T_NFIELDS 7",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      }
+    },
+    "clock_Z3Z3": {
+      "Z3Z3_0000_c1": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+        "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 20",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z3Z3_0000_c2": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+        "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 20",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z3Z3_0000_c3": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+        "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 20",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z3Z3_0000_c4": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+        "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+        "tachyons": "T_NFIELDS 20",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z3Z3_0001_c1": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 0 0 0 0 0 1/2 0",
+        "gauge": "GAUGE A1 + A1 + A1 + A1 and A3 + A2 + A1 NU1 6",
+        "tachyons": "T_NFIELDS 37",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z3Z3_0001_c2": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 0 0 0 0 0 1/2 0",
+        "gauge": "GAUGE A1 + A1 + A1 + A1 and A3 + A2 + A1 NU1 6",
+        "tachyons": "T_NFIELDS 37",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      }
+    },
+    "clock_Z6I": {
+      "Z6I_00": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE E7 + A1 and D6 + A1 + A1 NU1 0",
+        "tachyons": "T_NFIELDS 1",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z6I_01": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE E7 + A1 and A5 + A1 + A1 NU1 1",
+        "tachyons": "T_NFIELDS 7",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z6I_02": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE E7 + A1 and A5 + A2 + A1 NU1 0",
+        "tachyons": "T_NFIELDS 1",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z6I_03": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE E7 + A1 and A3 + A1 + A1 + A1 NU1 2",
+        "tachyons": "T_NFIELDS 1",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z6I_04": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 0 0 0 0 1/2 0 0",
+        "gauge": "GAUGE D6 + A1 and A4 + A1 NU1 4",
+        "tachyons": "T_NFIELDS 1",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      },
+      "Z6I_05": {
+        "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 -1/2 0 0 0 0 0 0",
+        "gauge": "GAUGE D6 + A1 and D5 + A1 + A1 NU1 2",
+        "tachyons": "T_NFIELDS 7",
+        "ok": 300,
+        "tachyon_free": 0,
+        "SM": 0
+      }
+    }
+  },
+  "12182": {
+    "draws": 150,
+    "su5": 53,
+    "three_gen": 21,
+    "scalar10": 0
+  },
+  "12183": {
+    "0x0": [
+      0.5860405033752814,
+      3.41401366780565
+    ],
+    "splitx0": [
+      0.05,
+      2.828385698808234
+    ],
+    "splitxsplit": null,
+    "clockxclock": [
+      0.05,
+      2.828385698808234
+    ]
+  },
+  "checks": {
+    "12180: 70 parents x 20 V0 = 1400 interpolations; V0-independent total (control) 70/70; n_B - n_F in 8Z, 3 exact zeros": true,
+    "12180b: the degenerate v12 point: parent net 3 quark doublets (control), large-R net 2": true,
+    "12180b: all 70 W6 = 0 parents have net quark doublets (even, odd) = (1, 2) -> at most 2 generations survive interpolation": true,
+    "12180b: dimension-weighted census sums to 3 in all 128 parents; exactly one (Z6II_24 SM_2751, untwisted family triplet) has no odd-sector generation, and it is not a W6 = 0 parent": true,
+    "12180c: SM_2751 (the only all-even parent) has no translation with W_2t in Gamma -> no three-generation interpolation": true,
+    "12181: clock V0 on Z6-I, Z3xZ3, Z12-I: 18 bases, all tachyonic at the orbifold point, 0/5400 tachyon-free": true,
+    "12182: 53 new SU(5)xU(1) models (21 three-generation), scalar 10: 0; fermion 10s present (control)": true,
+    "12183: thermal window = Hagedorn (2 -+ sqrt2); clock/split x 0 tachyonic below 2 sqrt2; split x split never": true
+  },
+  "all_checks_pass": true
+}

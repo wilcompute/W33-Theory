@@ -1,0 +1,50 @@
+{
+ "Z3Z3_0000_c1": {
+  "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+  "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+  "tachyons": "T_NFIELDS 20",
+  "ok": 300,
+  "tachyon_free": 0,
+  "SM": 0
+ },
+ "Z3Z3_0000_c2": {
+  "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+  "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+  "tachyons": "T_NFIELDS 20",
+  "ok": 300,
+  "tachyon_free": 0,
+  "SM": 0
+ },
+ "Z3Z3_0000_c3": {
+  "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+  "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+  "tachyons": "T_NFIELDS 20",
+  "ok": 300,
+  "tachyon_free": 0,
+  "SM": 0
+ },
+ "Z3Z3_0000_c4": {
+  "V0": "-1/2 -1/2 0 0 0 0 0 0 0 0 -1/2 0 0 0 1/2 0",
+  "gauge": "GAUGE D5 + A1 and A4 + A1 NU1 5",
+  "tachyons": "T_NFIELDS 20",
+  "ok": 300,
+  "tachyon_free": 0,
+  "SM": 0
+ },
+ "Z3Z3_0001_c1": {
+  "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 0 0 0 0 0 1/2 0",
+  "gauge": "GAUGE A1 + A1 + A1 + A1 and A3 + A2 + A1 NU1 6",
+  "tachyons": "T_NFIELDS 37",
+  "ok": 300,
+  "tachyon_free": 0,
+  "SM": 0
+ },
+ "Z3Z3_0001_c2": {
+  "V0": "-1/2 -1/2 0 0 0 0 0 0 -1/2 0 0 0 0 0 1/2 0",
+  "gauge": "GAUGE A1 + A1 + A1 + A1 and A3 + A2 + A1 NU1 6",
+  "tachyons": "T_NFIELDS 37",
+  "ok": 300,
+  "tachyon_free": 0,
+  "SM": 0
+ }
+}

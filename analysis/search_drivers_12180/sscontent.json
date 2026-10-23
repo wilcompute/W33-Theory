@@ -1,0 +1,54 @@
+{
+ "12": {
+  "gauge": "A2 + A1 and A2 + A1 NU1 10",
+  "content": {
+   "qbar": {
+    "parent_net": 6.0,
+    "ss_large_R_net_fermions": 4.0,
+    "detail": {
+     "15_even": 0.0,
+     "15_odd": 0.0,
+     "19_even": 2.0,
+     "19_odd": 4.0
+    }
+   },
+   "L": {
+    "parent_net": 51.0,
+    "ss_large_R_net_fermions": 24.0,
+    "detail": {
+     "15_even": 6.0,
+     "15_odd": 20.0,
+     "19_even": 3.0,
+     "19_odd": 22.0
+    }
+   },
+   "Q": {
+    "parent_net": 3.0,
+    "ss_large_R_net_fermions": 2.0,
+    "detail": {
+     "19_even": 1.0,
+     "19_odd": 2.0
+    }
+   }
+  }
+ },
+ "13": {
+  "gauge": "A1 + A1 and A2 + A1 NU1 11",
+  "content": {
+   "L": {
+    "parent_net": 24.0,
+    "ss_large_R_net_fermions": 12.0,
+    "detail": {
+     "15_even": 6.0,
+     "15_odd": 4.0,
+     "19_even": 6.0,
+     "19_odd": 8.0
+    }
+   }
+  }
+ },
+ "0": {
+  "gauge": "A1 and A4 + A1 NU1 10",
+  "content": {}
+ }
+}
