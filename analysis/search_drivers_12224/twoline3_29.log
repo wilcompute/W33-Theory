@@ -1,0 +1,8 @@
+N001_F1_04 A4 classes 16 admissible lines 32904
+N004_F1_03 A4 classes 16 admissible lines 32274
+N004_F1_04 A4 classes 16 admissible lines 31956
+N004_F1_05 A4 classes 16 admissible lines 31956
+N008_F1_02 A4 classes 16 admissible lines 34198
+N008_F1_03 A4 classes 16 admissible lines 33862
+N008_F1_04 A4 classes 16 admissible lines 33974
+{'draws': 20000, 'tries': 64109, 'hits': 405, 'scalar_type_configs': 0, 'density': 0.02025, 'wilson95': [0.018388005824986408, 0.02229625954132203], 'one_line_density': 0.0017523061213893841}

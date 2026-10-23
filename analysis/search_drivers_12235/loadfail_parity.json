@@ -1,0 +1,14 @@
+{
+ "one_line": {
+  "even|LOADFAIL": 141,
+  "even|loads": 153,
+  "odd|LOADFAIL": 111
+ },
+ "two_line": {
+  "(1, 0)|LOADFAIL": 19,
+  "(1, 1)|LOADFAIL": 6,
+  "(0, 0)|LOADFAIL": 18,
+  "(0, 0)|loads": 9,
+  "(0, 1)|LOADFAIL": 11
+ }
+}

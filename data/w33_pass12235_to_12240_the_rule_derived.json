@@ -1,0 +1,461 @@
+{
+  "12235_models": {
+    "C10_N001_F1_04_1062_34": {
+      "V0sq": "2",
+      "products": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "all_even": true,
+      "V0sq_is_2": true
+    },
+    "C10_N001_F1_04_2816_59": {
+      "V0sq": "2",
+      "products": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "all_even": true,
+      "V0sq_is_2": true
+    },
+    "C10_N004_F1_04_3054_5536": {
+      "V0sq": "2",
+      "products": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "all_even": true,
+      "V0sq_is_2": true
+    },
+    "T10_N001_F1_04_4612_5416_4612_6483": {
+      "V0sq": "2",
+      "products": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "all_even": true,
+      "V0sq_is_2": true
+    },
+    "T10_N004_F1_05_4906_3085_3822_4947": {
+      "V0sq": "2",
+      "products": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "all_even": true,
+      "V0sq_is_2": true
+    },
+    "Z6II_2496_v0": {
+      "V0sq": "2",
+      "products": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "all_even": true,
+      "V0sq_is_2": true
+    }
+  },
+  "12235_space": {
+    "N001_F1_04": {
+      "V0V1": 0.0,
+      "V0Wf": 1.3877787807814457e-17,
+      "V0sq": 2.0,
+      "admissible": 32904,
+      "V0W_odd": 10398
+    },
+    "N004_F1_03": {
+      "V0V1": 0.0,
+      "V0Wf": 0.0,
+      "V0sq": 2.0,
+      "admissible": 32274,
+      "V0W_odd": 9771
+    },
+    "N004_F1_04": {
+      "V0V1": 0.0,
+      "V0Wf": 5.551115123125783e-17,
+      "V0sq": 2.0,
+      "admissible": 31956,
+      "V0W_odd": 9839
+    },
+    "N004_F1_05": {
+      "V0V1": 0.0,
+      "V0Wf": 5.551115123125783e-17,
+      "V0sq": 2.0,
+      "admissible": 31956,
+      "V0W_odd": 9839
+    },
+    "N008_F1_02": {
+      "V0V1": 0.0,
+      "V0Wf": 1.3877787807814457e-17,
+      "V0sq": 2.0,
+      "admissible": 34198,
+      "V0W_odd": 8626
+    },
+    "N008_F1_03": {
+      "V0V1": 0.0,
+      "V0Wf": 2.7755575615628914e-17,
+      "V0sq": 2.0,
+      "admissible": 33862,
+      "V0W_odd": 8595
+    },
+    "N008_F1_04": {
+      "V0V1": 0.0,
+      "V0Wf": 0.0,
+      "V0sq": 2.0,
+      "admissible": 33974,
+      "V0W_odd": 8591
+    }
+  },
+  "12235_engine": {
+    "one_line": {
+      "even|LOADFAIL": 141,
+      "even|loads": 153,
+      "odd|LOADFAIL": 111
+    },
+    "two_line": {
+      "(1, 0)|LOADFAIL": 19,
+      "(1, 1)|LOADFAIL": 6,
+      "(0, 0)|LOADFAIL": 18,
+      "(0, 0)|loads": 9,
+      "(0, 1)|LOADFAIL": 11
+    }
+  },
+  "12236": [
+    {
+      "draws": 20000,
+      "tries": 64259,
+      "hits": 401,
+      "scalar_type_configs": 0,
+      "density": 0.02005,
+      "wilson95": [
+        0.01819749679984996,
+        0.02208684538370342
+      ],
+      "one_line_density": 0.0017523061213893841
+    },
+    {
+      "draws": 20000,
+      "tries": 65307,
+      "hits": 421,
+      "scalar_type_configs": 0,
+      "density": 0.02105,
+      "wilson95": [
+        0.019150529105192077,
+        0.023133428992136586
+      ],
+      "one_line_density": 0.0017523061213893841
+    },
+    {
+      "draws": 20000,
+      "tries": 64109,
+      "hits": 405,
+      "scalar_type_configs": 0,
+      "density": 0.02025,
+      "wilson95": [
+        0.018388005824986408,
+        0.02229625954132203
+      ],
+      "one_line_density": 0.0017523061213893841
+    }
+  ],
+  "12237": {
+    "parity": {
+      "1": {
+        "V0sq": "2",
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true
+      },
+      "40": {
+        "V0sq": "2",
+        "products": [
+          "0",
+          "0",
+          "2",
+          "2",
+          "0",
+          "0",
+          "2",
+          "2"
+        ],
+        "all_even": true
+      },
+      "90": {
+        "V0sq": "2",
+        "products": [
+          "0",
+          "0",
+          "2",
+          "2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true
+      }
+    }
+  },
+  "12238": {
+    "parent_generations": {
+      "even": 1,
+      "odd": 2
+    },
+    "interpolations": [
+      {
+        "v": 0,
+        "V0": "0 0 1 0 0 0 0 0 0 -1 0 0 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 8,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 1,
+        "V0": "0 0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 14,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 2,
+        "V0": "0 -1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 8,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 3,
+        "V0": "0 0 0 0 0 1 0 0 0 0 0 -1 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 14,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 4,
+        "V0": "0 0 0 0 1 0 0 0 0 0 0 -1 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 8,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 5,
+        "V0": "0 0 0 -1 0 0 0 0 0 0 0 1 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 14,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 6,
+        "V0": "0 0 0 0 -1 0 0 0 0 0 0 1 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 8,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 7,
+        "V0": "0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 14,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 8,
+        "V0": "0 0 -1 0 0 0 0 0 0 1 0 0 0 0 0 0",
+        "gauge": "A4 and A2 NU1 10",
+        "SS_diff": 144,
+        "nB": 304,
+        "nF": 160,
+        "tachyons": 8,
+        "hidden_scalar_10": true
+      },
+      {
+        "v": 9,
+        "V0": "-1/2 0 1/2 -1/2 0 -1/2 0 0 0 -1 0 0 0 0 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 12,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 10,
+        "V0": "-1/2 1/2 1/2 0 -1/2 0 0 0 0 -1 0 0 0 0 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 12,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 11,
+        "V0": "-1/2 0 1/2 -1/2 -1/2 0 0 0 0 0 -1 0 0 0 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 10,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 12,
+        "V0": "-1/2 0 1/2 0 -1/2 -1/2 0 0 0 0 -1 0 0 0 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 12,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 13,
+        "V0": "0 0 0 -1/2 -1/2 0 1/2 1/2 0 0 0 0 -1 0 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 12,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 14,
+        "V0": "0 0 0 0 -1/2 -1/2 1/2 1/2 0 0 0 0 -1 0 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 10,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 15,
+        "V0": "-1/2 0 -1/2 0 0 0 1/2 1/2 0 0 0 0 0 -1 0 0",
+        "gauge": "A3 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 8,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 16,
+        "V0": "0 -1/2 0 0 1/2 0 1/2 1/2 0 0 0 0 0 -1 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 10,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 17,
+        "V0": "0 0 0 1/2 0 1/2 1/2 1/2 0 0 0 0 0 -1 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 10,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 18,
+        "V0": "0 0 0 -1/2 0 -1/2 -1/2 -1/2 0 0 0 0 0 1 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 10,
+        "hidden_scalar_10": false
+      },
+      {
+        "v": 19,
+        "V0": "0 1/2 0 0 -1/2 0 -1/2 -1/2 0 0 0 0 0 1 0 0",
+        "gauge": "A2 + A1 and A2 NU1 11",
+        "SS_diff": 48,
+        "nB": 256,
+        "nF": 208,
+        "tachyons": 10,
+        "hidden_scalar_10": false
+      }
+    ]
+  },
+  "checks": {
+    "12235: every model the rule was observed in has V0^2 = 2 and all V0 products even": true,
+    "12235: about 30% of the one-line admissible space has V0.W odd (65,659 of 231,124)": true,
+    "12235: engine rejects every odd-parity configuration (111/111, 36/36); every loading model has even parity": true,
+    "12236: two lines, three seeds x 20,000 draws: no scalar-type twisted 10": true,
+    "12237: A8 route, 3 SMs: constant w/2 in 18/18 sectors, R0 fixes statistics, V0^2 = 2, products even": true,
+    "12238: SM_2496: 9 V0 keep hidden SU(5) with scalar 10s (n_B - n_F = 144), 11 break it (48); parent generations (1, 2)": true,
+    "12239: Section 7 boundary states the rule's scope": true
+  },
+  "all_checks_pass": true
+}

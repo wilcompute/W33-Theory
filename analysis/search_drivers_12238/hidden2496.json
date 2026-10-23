@@ -1,0 +1,208 @@
+{
+ "parent_generations": {
+  "even": 1,
+  "odd": 2
+ },
+ "interpolations": [
+  {
+   "v": 0,
+   "V0": "0 0 1 0 0 0 0 0 0 -1 0 0 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 8,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 1,
+   "V0": "0 0 -1 0 0 0 0 0 0 0 -1 0 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 14,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 2,
+   "V0": "0 -1 0 0 0 0 0 0 0 0 0 -1 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 8,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 3,
+   "V0": "0 0 0 0 0 1 0 0 0 0 0 -1 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 14,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 4,
+   "V0": "0 0 0 0 1 0 0 0 0 0 0 -1 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 8,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 5,
+   "V0": "0 0 0 -1 0 0 0 0 0 0 0 1 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 14,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 6,
+   "V0": "0 0 0 0 -1 0 0 0 0 0 0 1 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 8,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 7,
+   "V0": "0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 14,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 8,
+   "V0": "0 0 -1 0 0 0 0 0 0 1 0 0 0 0 0 0",
+   "gauge": "A4 and A2 NU1 10",
+   "SS_diff": 144,
+   "nB": 304,
+   "nF": 160,
+   "tachyons": 8,
+   "hidden_scalar_10": true
+  },
+  {
+   "v": 9,
+   "V0": "-1/2 0 1/2 -1/2 0 -1/2 0 0 0 -1 0 0 0 0 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 12,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 10,
+   "V0": "-1/2 1/2 1/2 0 -1/2 0 0 0 0 -1 0 0 0 0 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 12,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 11,
+   "V0": "-1/2 0 1/2 -1/2 -1/2 0 0 0 0 0 -1 0 0 0 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 10,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 12,
+   "V0": "-1/2 0 1/2 0 -1/2 -1/2 0 0 0 0 -1 0 0 0 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 12,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 13,
+   "V0": "0 0 0 -1/2 -1/2 0 1/2 1/2 0 0 0 0 -1 0 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 12,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 14,
+   "V0": "0 0 0 0 -1/2 -1/2 1/2 1/2 0 0 0 0 -1 0 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 10,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 15,
+   "V0": "-1/2 0 -1/2 0 0 0 1/2 1/2 0 0 0 0 0 -1 0 0",
+   "gauge": "A3 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 8,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 16,
+   "V0": "0 -1/2 0 0 1/2 0 1/2 1/2 0 0 0 0 0 -1 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 10,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 17,
+   "V0": "0 0 0 1/2 0 1/2 1/2 1/2 0 0 0 0 0 -1 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 10,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 18,
+   "V0": "0 0 0 -1/2 0 -1/2 -1/2 -1/2 0 0 0 0 0 1 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 10,
+   "hidden_scalar_10": false
+  },
+  {
+   "v": 19,
+   "V0": "0 1/2 0 0 -1/2 0 -1/2 -1/2 0 0 0 0 0 1 0 0",
+   "gauge": "A2 + A1 and A2 NU1 11",
+   "SS_diff": 48,
+   "nB": 256,
+   "nF": 208,
+   "tachyons": 10,
+   "hidden_scalar_10": false
+  }
+ ]
+}
