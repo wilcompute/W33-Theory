@@ -1,0 +1,225 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.79in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,longtable,hyperref,tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{\textbf{Fractal Holonet: Five Engineering Frontiers}\\
+Four-MZI PIC handoff, coherent interferometry, $ \mathbb{Z}_4 $ FPGA control, loss-aware routing, and qutrit separation}
+\author{W33-Theory engineering programme}
+\date{23 October 2026 --- executable simulation / hardware-source edition}
+\begin{document}\maketitle
+\begin{abstract}
+This edition extends the 40-line-bus W33 photonic construction by implementing
+five connected technical investigations: a technology-neutral foundry I/O
+contract, a four-phase coherent route interferometer protocol, a
+synthesizable SystemVerilog modulo-four phase-frame controller, a
+loss/phase-aware Dijkstra router with line-bus failure injection,
+and a loss/leakage-aware qutrit Fourier-gate bridge. It also
+derives an alternative fixed Walsh--Hadamard optical architecture
+that simultaneously diagonalizes the four XOR bus permutations.
+Mathematical and software claims are distinguished from missing
+fabrication, simulator, and experimental evidence.
+\end{abstract}
+\tableofcontents
+\section{Starting point and source boundaries}
+The preceding files
+\texttt{papers/fractal\_holonet\_40bus\_optical\_addendum\_20261023.tex}
+and \texttt{papers/fractal\_holonet\_xor2\_photonic\_phase\_frame\_20261023.tex}
+establish forty four-port line buses, three switch states and an ideal
+four-MZI-per-bus compilation. The original
+\texttt{holonet\_machine\_blueprint.pdf},
+\texttt{photonic\_holonet.pdf}, and
+\texttt{papers/forty\_points/main.pdf} motivate the proposed machine.
+Earlier project work in \texttt{analysis/w33\_scheduler\_os.py}
+already discovered the 40 buses; that combinatorics is not new here.
+The source checkout is shared with unrelated parallel research. The
+new outputs are isolated to newly named files.
+
+\section{Track 1: fail-closed PIC / PDK engineering handoff}
+The 40-bus logical parent has 160 abstract MZI instances,
+80 paired stage-control words and 160 provisional individual
+electrode device identifiers. Each instance now has a named
+optical input/output pair, required mode pairing, command word
+and unresolved process technology fields in
+\texttt{data/w33\_fractal\_all5\_engineering\_20261023.json}.
+\emph{This is an implementable schematic contract, not a finished GDS.}
+The connected workstation did not have gdsfactory, KLayout,
+an authorized foundry PDK or a DRC/LVS deck. The handoff
+therefore keeps \texttt{foundry\_pdk\_selected},
+\texttt{DRC\_passed}, \texttt{optical\_LVS\_passed}, and
+\texttt{foundry\_tapeout\_ready} explicitly false. In
+particular, second-stage mode pairs $(0,2),(1,3)$
+require real topology-specific crossing/routing solutions.
+
+\section{Track 2: falsifiable coherent interferometry}
+For ideal switch masks $m$, the bus transfer is
+\[
+U_m=i^{w(m)}P_m,\qquad m\in\{0,1,2,3\}.
+\]
+The two W33 length-two routes
+$0\rightarrow4\rightarrow7$ and $0\rightarrow14\rightarrow7$
+differ by an ideal factor of $i$ in the frozen mode-port
+convention. A balanced recombiner with reference phase
+$\theta$ and interference visibility $V$ would ideally
+produce a normalized single-port detection probability
+\[
+p_+(\theta)=\frac{1+V\cos(\Delta+\theta)}2,
+\qquad \Delta=\frac{\pi}{2}.
+\]
+The software prepares four phase settings
+$\theta\in\{0,\pi/2,\pi,3\pi/2\}$ and samples independent
+binomial counts. Quadrature differences estimate
+$V\cos\Delta$ and $V\sin\Delta$; using
+\[
+x=\hat p_+(0)-\hat p_+(\pi),\quad
+y=\hat p_+(3\pi/2)-\hat p_+(\pi/2),
+\quad \hat\Delta=\operatorname{atan2}(y,x)
+\]
+correctly reconstructs the sign convention. Its sample data
+are simulated and seeded, \emph{not laboratory photon counts}.
+The protocol requires stable source/detector calibration,
+path equalization, a phase reference, balanced recombination
+and a physically controllable delay or phase shifter.
+Observed phase alone does not prove exotic temporal
+self-entanglement or a new topological holonomy.
+
+\section{Track 3: coherent $\mathbb{Z}_4$ phase-frame controller}
+The new controller
+\texttt{hardware/w33\_linebus\_phase\_frame.sv}
+exposes a valid/ready registered command interface with
+\texttt{cmd\_mask[1:0]}, \texttt{cmd\_clear},
+\texttt{result\_frame[1:0]}, and
+\texttt{result\_correction[1:0]}. If a command is
+accepted, the state transition is
+\[
+e_{\mathrm{next}}
+=(e_{\mathrm{old}}+w(m))\bmod4,
+\qquad c_{\mathrm{next}}=-e_{\mathrm{next}}\bmod4.
+\]
+A clear command resets the accumulation before adding the
+current switch's phase. Backpressure holds all registered
+outputs stable until consumed. The ready/valid semantics are
+also implemented in a Python reference with deterministic and
+randomized tests. A self-checking SystemVerilog testbench is
+provided at \texttt{hardware/tb\_w33\_linebus\_phase\_frame.sv}.
+\textbf{No Verilator, Icarus or Yosys tool was installed}; therefore
+this release does not claim compiled HDL, post-synthesis timing
+or functional HDL simulation. A phase-frame word does not
+automatically correct a physical optical path: coherent
+relative phases must be referenced or compensated where relevant.
+
+\section{Track 4: loss-, phase- and failure-aware routing}
+The explicit line-bus graph has 1600 leaves at recursion
+depth two and exact diameter six. The new optimizer
+treats each search state as
+\[
+(\text{leaf address}, e),\qquad e\in\mathbb{Z}_4
+\]
+and uses Dijkstra's algorithm on a synthetic
+nonnegative link-loss cost. An optional endpoint
+condition $e=0$ forces routes with the desired
+modulo-four coherent phase. A failed line-bus ID
+removes all logical links through that line
+and exercises alternate-route selection.
+Costs include declared per-MZI attenuation,
+illustrative line-/mask-dependent penalties,
+and an explicitly optional time-slot weight.
+The computed attenuation is neither a measured
+physical path loss nor a quantum channel fidelity.
+Because an exact phase-frame constraint can force
+a longer path, route-count comparisons are reported
+separately from modeled power transmission.
+No guarantee is made for congestion, multiuser
+scheduling, coherent multi-path splitting, or
+fault-tolerant live quantum computation.
+
+\section{Track 5: typed qutrit Fourier-gate bridge}
+On three computational optical modes, set
+\[
+F_3=\frac1{\sqrt3}
+\begin{pmatrix}
+1&1&1\\1&\omega&\omega^2\\
+1&\omega^2&\omega
+\end{pmatrix},\qquad
+\omega=e^{2\pi i/3}.
+\]
+The separate four-mode qutrit-gate target is
+\[
+U_{F_3}=\operatorname{diag}(F_3,1).
+\]
+An independent complex Givens elimination
+constructs this target with exactly three
+two-mode SU(2) blocks acting \emph{only} on
+modes 0, 1 and 2, plus a phase diagonal.
+Numerical reconstruction is checked.
+This is an abstract optical interferometer
+program, not the already verified four-state
+XOR bus switch.
+
+A strong negative result prevents a tempting
+architectural error. For any nonidentity XOR
+permutation $P_m$ on four computational basis
+modes, its $3\times3$ upper-left block has
+singular values $(1,1,0)$. Thus among input
+basis states $|0\rangle,|1\rangle,|2\rangle$,
+one is routed into the fourth auxiliary port.
+The success probability for that basis input
+is zero, and the uniform-basis mean is $2/3$.
+Consequently \emph{the binary four-port router
+cannot act as a deterministic qutrit gate
+on the naive three-spatial-mode encoding}.
+The correct solution requires a distinct
+three-mode programmable gate or an explicit
+different encoding and physical interface.
+
+\section{Outside-box result: Walsh optics instead of active MZIs}
+Let $H_2=2^{-1/2}
+\left(\begin{smallmatrix}1&1\\1&-1\end{smallmatrix}\right)$
+and $W=H_2\otimes H_2$. Since the four XOR
+permutations commute, all are simultaneously
+diagonalized:
+\[
+P_m=W\operatorname{diag}
+\left((-1)^{s\cdot m}\right)_{s\in\mathbb{F}_2^2}W.
+\]
+The exact switch family can therefore be expressed
+with \emph{fixed} input/output four-port Walsh
+mixers and a diagonal set of two independent
+binary phase words. A conventional
+two-stage implementation of each Walsh mixer
+uses four passive 50:50 couplers, giving eight
+fixed couplers over the pair plus diagonal
+phase elements. This trades four \emph{active}
+MZIs for more \emph{passive} couplers and two
+binary phase settings, without establishing
+a better real device. Which choice minimizes
+energy, footprint, loss, and complexity is a
+process-specific experimental question.
+
+\section{Next physical and proof obligations}
+\begin{longtable}{p{0.29\linewidth}p{0.54\linewidth}}
+\toprule
+Area & Evidence required\\\midrule
+Foundry & Authorized PDK, actual optics S-parameters,
+real GDS/OASIS, optical LVS/DRC and electrical parasitics\\
+Quantum test & Interferometric reference, source/measurement
+SPAM model, visibility and delay scan, real detector counts\\
+HDL & Independent Icarus/Verilator simulation,
+synthesis, clock constraints, resource and timing closure\\
+Routing & Traffic, optical coherence, congestion,
+physical loss, realistic switch time and fault coverage\\
+Qutrit & Optical F3 cells, finite loss/leakage,
+auxiliary-mode port isolation and single-photon test\\
+\bottomrule
+\end{longtable}
+\section{Files and reproduction}
+\texttt{analysis/w33\_fractal\_all5\_engineering\_20261023.py}
+recomputes the mathematical/synthetic tracks and exports
+\texttt{data/w33\_fractal\_all5\_engineering\_20261023.json}.
+The regression file is
+\texttt{tests/test\_w33\_fractal\_all5\_engineering\_20261023.py}.
+The separate reference model for hardware timing
+is \texttt{tests/test\_w33\_linebus\_phase\_frame\_protocol\_20261023.py}.
+The lab, foundry and physical-hardware gates remain open.
+\end{document}
