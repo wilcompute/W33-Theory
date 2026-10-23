@@ -1,0 +1,2102 @@
+[
+ {
+  "cls": "W6=W5+lam",
+  "j": 0,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 1,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 2,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 3,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 4,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 5,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 6,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 7,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 8,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 9,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 10,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 11,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 12,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 13,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 14,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 15,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 16,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 17,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 18,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 19,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 20,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 21,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 22,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 23,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 24,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 25,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 26,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 27,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 28,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 29,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 30,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 31,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 32,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 33,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 34,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 35,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 36,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 37,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 38,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 39,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 40,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 41,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 42,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 43,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 44,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 45,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 46,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 47,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 48,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 49,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 23.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 50,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 51,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 52,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 53,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 54,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 55,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 56,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 57,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 58,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 59,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 60,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 61,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 62,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 23.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 63,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 19.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 64,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 65,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 66,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 67,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 15.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 68,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 69,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 70,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 71,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 72,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 15.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 73,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 21.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 74,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 17.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 75,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 15.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 76,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 77,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 78,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 79,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 80,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 81,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 82,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 83,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 84,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 85,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 86,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 87,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 88,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 89,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 1.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 90,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 91,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 92,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 93,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 94,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 95,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 96,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 97,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 98,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=W5+lam",
+  "j": 99,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 0,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 1,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 2,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 3,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 4,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 5,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 6,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 7,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 8,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 9,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 10,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 11,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 12,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 13,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 14,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 15,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 16,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 17,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 18,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 19,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 20,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 21,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 22,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 23,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 24,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 25,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 26,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 27,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 28,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 29,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 30,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 31,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 32,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 33,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 34,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 35,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 36,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 37,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 38,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 39,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 40,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 41,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 42,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 43,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 44,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 45,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 46,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 47,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 48,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 49,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 5.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 50,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 51,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 52,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 53,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 54,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 55,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 56,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 57,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 58,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 59,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 60,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 61,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 62,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 5.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 63,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 64,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 65,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 66,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 67,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -3.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 68,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 69,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 70,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 71,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 72,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -3.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 73,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 3.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 74,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 75,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -3.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 76,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 77,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 78,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 79,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 80,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 81,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 82,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 83,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 84,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 85,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 86,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 87,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 88,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 89,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 1.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 90,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 91,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 92,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 93,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 94,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 95,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 96,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 97,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 98,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W6=lam",
+  "j": 99,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_6 = -1.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 0,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 1,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 7.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 2,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 3,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 3.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 4,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 5,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 6,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 7,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 8,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 9,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 10,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 11,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 12,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 5.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 13,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 14,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 15,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 5.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 16,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 17,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 18,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 19,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 20,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 21,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 22,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 23,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 24,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 5.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 25,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 26,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 27,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 28,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 29,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 30,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 31,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 32,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 33,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 34,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 35,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 36,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 3.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 37,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -3.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 38,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 39,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 40,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 41,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -5.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 42,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 43,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -7.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 44,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 45,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 46,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 47,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 48,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 49,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 50,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 51,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 52,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 53,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -5.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 54,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 55,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 56,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -7.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 57,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 58,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 59,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 60,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 61,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 62,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 63,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 64,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 65,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 66,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = -5.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 67,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 68,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 69,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 70,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 71,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 72,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 1.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 73,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 74,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 75,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 76,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 W_5 x W_6 = 7.00 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 77,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 78,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 79,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 80,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.00 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 81,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 82,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 83,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 84,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 85,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 86,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.33 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 87,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 88,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 89,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 1.33 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 90,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = 0.67 = 0 mod 2 failed!\n"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 91,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 92,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 93,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 94,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 95,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 96,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 97,
+  "rc": 3,
+  "SM": false,
+  "out": "noSM"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 98,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -0.67 = 0 mod 2 failed!"
+ },
+ {
+  "cls": "W5=lam",
+  "j": 99,
+  "rc": 2,
+  "SM": false,
+  "out": "2.00 V_M x W_5 = -1.33 = 0 mod 2 failed!"
+ }
+]

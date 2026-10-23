@@ -1,0 +1,242 @@
+{
+  "12199_census": {
+    "(0, 3)": 19,
+    "(2, 1)": 1,
+    "(1, 2)": 7,
+    "(-1, 4)": 2
+  },
+  "12199b": {
+    "cases": {
+      "Z2Z6I_0010__SM_20260926_2020:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 2
+      },
+      "Z2Z6I_0010__SM_20260926_2572:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 2
+      },
+      "Z2Z6I_0016__SM_20260926_2811:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 2
+      },
+      "Z2Z6I_0017__SM_20260926_680:W2": {
+        "products": [
+          "3",
+          "-1",
+          "-3",
+          "16",
+          "8"
+        ],
+        "all_even": false,
+        "odd_net": 3
+      },
+      "Z2Z6I_0017__SM_20260926_1577:W1": {
+        "products": [
+          "1",
+          "-1",
+          "6",
+          "0",
+          "3"
+        ],
+        "all_even": false,
+        "odd_net": 3
+      },
+      "Z2Z6I_0018__SM_20260926_128:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 4
+      },
+      "Z2Z6I_0018__SM_20260926_808:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 2
+      },
+      "Z2Z6I_0018__SM_20260926_1798:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 4
+      },
+      "Z2Z6I_0018__SM_20260926_1805:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 2
+      },
+      "Z2Z6I_0018__SM_20260926_2579:W2": {
+        "products": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "all_even": true,
+        "odd_net": 2
+      },
+      "Z2Z6I_0021__SM_20260926_9:W2": {
+        "products": [
+          "-2",
+          "3",
+          "-6",
+          "22",
+          "11"
+        ],
+        "all_even": false,
+        "odd_net": 3
+      }
+    },
+    "agree": true
+  },
+  "12199": {
+    "runs_total": 200,
+    "runs_valid": 160,
+    "parents_valid": 8,
+    "zeros": 4,
+    "zero_parents": [
+      "Z2Z6I_0010_SM_20260926_2572"
+    ],
+    "range": [
+      -24,
+      296
+    ]
+  },
+  "12199_valid_parent_generations": {
+    "(1, 2)": 6,
+    "(-1, 4)": 2
+  },
+  "12200": {
+    "parents": 128,
+    "trivial_direction": 103,
+    "violations": [],
+    "trivial_generations": {
+      "(1, 2)": 103
+    }
+  },
+  "12201": {
+    "variants": 300,
+    "consistent": 86,
+    "SM": 0
+  },
+  "12203": {
+    "integral": true,
+    "preserve_eta": true,
+    "order3": true,
+    "common_kernel_dim_mod2": 0,
+    "single_generator_kernel_dims": [
+      2,
+      2
+    ],
+    "det(1-g)": [
+      0,
+      0
+    ],
+    "generators": [
+      [
+        [
+          -1,
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    ]
+  },
+  "checks": {
+    "12199b: all-products-even <=> paired-sector net even, 11/11 Gamma-valued plane-1 directions": true,
+    "12199b: the odd-product directions are exactly SM_680, SM_1577, SM_9 (net 3 in paired sectors)": true,
+    "12199: 160 valid interpolations of 8 parents, control 10/10, n_B - n_F in 8Z, 4 exact zeros all in SM_2572": true,
+    "12199: every admissible Z2xZ6-I parent has (even, odd) in {(1,2), (-1,4)} -> at most 2 generations survive": true,
+    "12200: Z6-II: 128 parents, 0 parity violations; all 103 with a Gamma-valued direction have (even, odd) = (1, 2)": true,
+    "12201: SM_2751 trivial-direction variants: 300 tried, 86 consistent, 0 Standard Models": true,
+    "12203: native C3 x C3 integral, eta-preserving, order 3; common fixed space mod 2 = 0 (single C3: 2)": true
+  },
+  "all_checks_pass": true
+}
