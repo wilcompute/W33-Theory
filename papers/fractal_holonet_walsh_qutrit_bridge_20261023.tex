@@ -241,6 +241,56 @@ point use separate waveguides, direct overlap
 must be replaced by a measured/interconnected
 scattering map. It cannot be silently assumed.
 
+\section{An essential second FPGA frame: code-preserving does not mean coherent}
+The four Walsh-code logical actions preserve the
+three-dimensional subspace, but \emph{different}
+XOR mask values implement different qutrit sign operations.
+A controller that tracks only the common optical
+$i$-phase cannot recover arbitrary logical superpositions.
+For $D_m=\operatorname{diag}((-1)^{s\cdot m})_{s=1,2,3}$,
+the uniform unobserved XOR-channel is
+\[
+ \mathcal T(\rho)=\frac14\sum_{m\in\mathbb F_2^2}
+ D_m\rho D_m^\dagger=\operatorname{diag}(\rho).
+\]
+Indeed, for $s\ne t$, the Fourier-character average
+$\frac14\sum_m(-1)^{(s\oplus t)\cdot m}=0$.
+Thus an encoded equal-superposition pure qutrit
+would become $I_3/3$ when the masks are uniformly
+random and \emph{unrecorded}, despite identically
+zero auxiliary leakage in each ideal operation.
+This is logical dephasing, not photon leakage.
+
+The actual ideal MZI transfer contains both
+its scalar $i^{w(m)}$ and its logical $D_m$.
+For a succession of masks $m_1,\ldots,m_r$,
+maintain the pair
+\[
+ (e,M)\in\mathbb Z_4\times\mathbb F_2^2,\qquad
+ e=\sum_jw(m_j)\bmod4,\quad M=\bigoplus_jm_j.
+\]
+Then the encoded net operation is $i^e D_M$.
+The exact ideal correction is $i^{-e}D_M$,
+because $D_M^{-1}=D_M$. One cannot in general
+replace $e$ by $w(M)$: two successive mask-01
+crossings have $M=0$ but $e=2$, producing a
+scalar $-I$ rather than $+I$.
+
+The dedicated implementation
+\texttt{hardware/w33\_walsh\_qutrit\_frame.sv}
+tracks both two-bit registers and exposes
+ready/valid correction metadata. The companion
+\texttt{hardware/tb\_w33\_walsh\_qutrit\_frame\_20261023.sv}
+passed \emph{actual Icarus Verilog simulation} with
+1,200 pseudorandom clock cycles, 368 accepted
+commands and 416 backpressure observations.
+The Python regression
+\texttt{tests/test\_w33\_walsh\_qutrit\_frame\_math\_20261023.py}
+verifies exact logical composition, uniform-mask
+dephasing, and phase-and-sign recovery.
+No FPGA place-and-route, physical phase correction,
+fault-tolerant encoding or photon experiment is claimed.
+
 \section{Physical falsification plan}
 Build a four-rail encoder with calibrated $W^\dagger$
 and measure complex transfer matrices for each of the
