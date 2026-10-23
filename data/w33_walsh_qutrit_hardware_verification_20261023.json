@@ -1,0 +1,74 @@
+{
+  "schema": "w33.holonet.walsh_qutrit_20261023.verification.v1",
+  "date": "2026-10-23",
+  "repository": "wilcompute/W33-Theory",
+  "branch": "master",
+  "test_scope": "Sixteen named 20261023 fractal/Walsh-qutrit pytest modules, not the entire repository",
+  "integrated_python_pytest": {
+    "modules": 16,
+    "tests": 99,
+    "passed": 99,
+    "failed": 0,
+    "seconds": 109.15
+  },
+  "actual_icarus_verilog": {
+    "version": "Icarus Verilog 12",
+    "testbench": "hardware/tb_w33_walsh_qutrit_frame_20261023.sv",
+    "source": "hardware/w33_walsh_qutrit_frame.sv",
+    "random_cycles": 1200,
+    "accepted_commands": 368,
+    "stall_cycles_observed": 416,
+    "result": "PASS",
+    "physical_hardware_built": false
+  },
+  "mathematical_certificates": {
+    "four_rail_Walsh_qutrit_orthonormal": true,
+    "xor_masks_preserve_three_dimensional_code": true,
+    "infinite_projective_order_witness": {
+      "operator": "F3 diag(-1,1,-1)",
+      "trace": "-1/sqrt(3)",
+      "determinant": "-i",
+      "quadratic_field_norm_of_trace": "-1/3"
+    },
+    "independent_rail_gaussian_phase_noise_expected_aux_leakage": "(1-exp(-sigma^2))/4; maximally mixed qutrit",
+    "line_pairs": {
+      "total": 780,
+      "intersection_one": 240,
+      "disjoint": 540,
+      "overlap_rank_intersecting": 1,
+      "overlap_rank_disjoint": 0
+    },
+    "constructive_full_rail_swaps": {
+      "intersecting": 3,
+      "disjoint": 4
+    },
+    "full_S4_rail_permutations_accepted": 24,
+    "physical_rail_threecycle_order": 3,
+    "logical_qutrit_action": "X3^-1",
+    "qutrit_fourier_conjugate": "Z3^-1",
+    "unknown_uniform_mask_channel": "complete qutrit dephasing in Walsh-character basis; no auxiliary leakage",
+    "dual_frame": "Z4 optical scalar phase plus V4 logical Walsh mask; four state bits total"
+  },
+  "source_paths": [
+    "analysis/w33_walsh_encoded_qutrit_interface_20261023.py",
+    "analysis/w33_walsh_qutrit_metaplectic_noise_20261023.py",
+    "analysis/w33_walsh_qutrit_interbus_rank_20261023.py",
+    "analysis/w33_walsh_qutrit_s4_affine_bridge_20261023.py",
+    "hardware/w33_walsh_qutrit_frame.sv",
+    "hardware/tb_w33_walsh_qutrit_frame_20261023.sv",
+    "papers/fractal_holonet_walsh_qutrit_bridge_20261023.tex",
+    "analysis/2026-10-23_walsh_qutrit_hardware_bridge_decision.md"
+  ],
+  "physical_signoff": {
+    "foundry_pdk_selected": false,
+    "optical_waveguides_routed": false,
+    "gds_of_the_new_four_rail_qutrit": false,
+    "optical_LVS": false,
+    "DRC": false,
+    "actual_two_arm_photon_interference": false,
+    "measured_qutrit_fidelity": false,
+    "FPGA_synthesized_or_timing_closed": false,
+    "quantum_error_correction_or_universality_proven": false
+  },
+  "external_prior_art": "Qutrit metaplectic R gate from Glaudell, Ross, van de Wetering, Yeh (2022) is NOT newly discovered here."
+}
