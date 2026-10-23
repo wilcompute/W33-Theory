@@ -1,0 +1,167 @@
+{
+  "12217_space": {
+    "N001_F1_04": {
+      "lambdas": 864,
+      "admissible_pairs": 32904,
+      "pairs_with_twisted_10_vector": 98
+    },
+    "N004_F1_03": {
+      "lambdas": 864,
+      "admissible_pairs": 32274,
+      "pairs_with_twisted_10_vector": 105
+    },
+    "N004_F1_04": {
+      "lambdas": 864,
+      "admissible_pairs": 31956,
+      "pairs_with_twisted_10_vector": 101
+    },
+    "N004_F1_05": {
+      "lambdas": 864,
+      "admissible_pairs": 31956,
+      "pairs_with_twisted_10_vector": 101
+    },
+    "N008_F1_02": {
+      "lambdas": 864,
+      "admissible_pairs": 34198,
+      "pairs_with_twisted_10_vector": 0
+    },
+    "N008_F1_03": {
+      "lambdas": 864,
+      "admissible_pairs": 33862,
+      "pairs_with_twisted_10_vector": 0
+    },
+    "N008_F1_04": {
+      "lambdas": 864,
+      "admissible_pairs": 33974,
+      "pairs_with_twisted_10_vector": 0
+    }
+  },
+  "12217_models": {
+    "candidates": 405,
+    "loaded": 153,
+    "su5": 153,
+    "tens": {
+      "fermion_tw_W": 918,
+      "fermion_untw": 570
+    },
+    "tachyon_free": 153
+  },
+  "12218": {
+    "actual": {
+      "roots": 34,
+      "type": [
+        "A1",
+        "A2",
+        "A2",
+        "A4"
+      ],
+      "A2_count": 2,
+      "SU5_unbroken": false
+    },
+    "W5=0": {
+      "roots": 54,
+      "type": [
+        "A1",
+        "A1",
+        "A1",
+        "A2",
+        "A3",
+        "A5"
+      ],
+      "A2_count": 1,
+      "SU5_unbroken": false
+    },
+    "W6=0": {
+      "roots": 66,
+      "type": [
+        "A2",
+        "A4",
+        "D5"
+      ],
+      "A2_count": 1,
+      "SU5_unbroken": true
+    },
+    "W5=W6=0": {
+      "roots": 118,
+      "type": [
+        "A2",
+        "D5",
+        "E6"
+      ],
+      "A2_count": 1,
+      "SU5_unbroken": false
+    },
+    "W6=W5": {
+      "roots": 66,
+      "type": [
+        "A2",
+        "A4",
+        "D5"
+      ],
+      "A2_count": 1,
+      "SU5_unbroken": true
+    }
+  },
+  "12219": {
+    "g1": {
+      "order3": true,
+      "preserves_eta": true,
+      "preserves_H": true,
+      "translations_mod2": 2,
+      "invariant_moduli": 0,
+      "det_1_minus_g": 0,
+      "eta_norms_of_moved_vectors": [
+        "6",
+        "6"
+      ]
+    },
+    "g2": {
+      "order3": true,
+      "preserves_eta": true,
+      "preserves_H": true,
+      "translations_mod2": 2,
+      "invariant_moduli": 0,
+      "det_1_minus_g": 0,
+      "eta_norms_of_moved_vectors": [
+        "-2",
+        "-2"
+      ]
+    },
+    "g1g2": {
+      "order3": true,
+      "preserves_eta": true,
+      "preserves_H": true,
+      "translations_mod2": 0,
+      "invariant_moduli": 2,
+      "det_1_minus_g": 9,
+      "eta_norms_of_moved_vectors": [
+        "6",
+        "6",
+        "0",
+        "0"
+      ]
+    },
+    "g1g2inv": {
+      "order3": true,
+      "preserves_eta": true,
+      "preserves_H": true,
+      "translations_mod2": 0,
+      "invariant_moduli": 2,
+      "det_1_minus_g": 9,
+      "eta_norms_of_moved_vectors": [
+        "6",
+        "6",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "checks": {
+    "12217: 7 x 864 lambda, 231124 admissible configurations, exactly 405 admit a twisted 10-type massless vector": true,
+    "12217: 153 consistent candidate models, all with twisted 10s (918 Witten-twisted fermions), twisted scalar 10s: 0": true,
+    "12218: SM_2751 has two A2 (colour, family) only with both order-2 Wilson lines; every trivial-direction choice leaves one": true,
+    "12219: asymmetric Z3: 2 translations, 0 moduli; symmetric Z3: 0 translations, 2 moduli (det(1 - g) = 9)": true,
+    "12221: Sections 9 and 11 cite Theorems 7.5-7.6; Section 7 carries the twisted-10 correction": true
+  },
+  "all_checks_pass": true
+}

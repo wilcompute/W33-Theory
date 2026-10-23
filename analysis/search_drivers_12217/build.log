@@ -1,0 +1,406 @@
+0 {'base': 'N001_F1_04', 'j': 4, 'k': 3135, 'gauge': 'LOADFAIL'}
+1 {'base': 'N001_F1_04', 'j': 81, 'k': 5761, 'gauge': 'LOADFAIL'}
+2 {'base': 'N001_F1_04', 'j': 111, 'k': 59, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+3 {'base': 'N001_F1_04', 'j': 162, 'k': 3989, 'gauge': 'LOADFAIL'}
+4 {'base': 'N001_F1_04', 'j': 203, 'k': 2682, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+5 {'base': 'N001_F1_04', 'j': 215, 'k': 2682, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+6 {'base': 'N001_F1_04', 'j': 243, 'k': 5946, 'gauge': 'LOADFAIL'}
+7 {'base': 'N001_F1_04', 'j': 387, 'k': 1209, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+8 {'base': 'N001_F1_04', 'j': 399, 'k': 1209, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+9 {'base': 'N001_F1_04', 'j': 472, 'k': 34, 'gauge': 'LOADFAIL'}
+10 {'base': 'N001_F1_04', 'j': 484, 'k': 34, 'gauge': 'LOADFAIL'}
+11 {'base': 'N001_F1_04', 'j': 690, 'k': 2067, 'gauge': 'LOADFAIL'}
+12 {'base': 'N001_F1_04', 'j': 735, 'k': 4635, 'gauge': 'LOADFAIL'}
+13 {'base': 'N001_F1_04', 'j': 942, 'k': 3135, 'gauge': 'LOADFAIL'}
+14 {'base': 'N001_F1_04', 'j': 1062, 'k': 34, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+15 {'base': 'N001_F1_04', 'j': 1155, 'k': 5795, 'gauge': 'LOADFAIL'}
+16 {'base': 'N001_F1_04', 'j': 1184, 'k': 5946, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+17 {'base': 'N001_F1_04', 'j': 1206, 'k': 4045, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+18 {'base': 'N001_F1_04', 'j': 1236, 'k': 1209, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+19 {'base': 'N001_F1_04', 'j': 1368, 'k': 2682, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+20 {'base': 'N001_F1_04', 'j': 1453, 'k': 4045, 'gauge': 'LOADFAIL'}
+21 {'base': 'N001_F1_04', 'j': 1461, 'k': 2682, 'gauge': 'LOADFAIL'}
+22 {'base': 'N001_F1_04', 'j': 1498, 'k': 34, 'gauge': 'LOADFAIL'}
+23 {'base': 'N001_F1_04', 'j': 1605, 'k': 5946, 'gauge': 'LOADFAIL'}
+24 {'base': 'N001_F1_04', 'j': 1690, 'k': 5761, 'gauge': 'LOADFAIL'}
+25 {'base': 'N001_F1_04', 'j': 1716, 'k': 2067, 'gauge': 'LOADFAIL'}
+26 {'base': 'N001_F1_04', 'j': 1778, 'k': 3989, 'gauge': 'LOADFAIL'}
+27 {'base': 'N001_F1_04', 'j': 1826, 'k': 5795, 'gauge': 'LOADFAIL'}
+28 {'base': 'N001_F1_04', 'j': 1951, 'k': 2067, 'gauge': 'LOADFAIL'}
+29 {'base': 'N001_F1_04', 'j': 2109, 'k': 59, 'gauge': 'LOADFAIL'}
+30 {'base': 'N001_F1_04', 'j': 2205, 'k': 5795, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+31 {'base': 'N001_F1_04', 'j': 2282, 'k': 1209, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+32 {'base': 'N001_F1_04', 'j': 2290, 'k': 4635, 'gauge': 'LOADFAIL'}
+33 {'base': 'N001_F1_04', 'j': 2364, 'k': 34, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+34 {'base': 'N001_F1_04', 'j': 2385, 'k': 3989, 'gauge': 'LOADFAIL'}
+35 {'base': 'N001_F1_04', 'j': 2514, 'k': 1209, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+36 {'base': 'N001_F1_04', 'j': 2551, 'k': 5761, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+37 {'base': 'N001_F1_04', 'j': 2658, 'k': 2682, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+38 {'base': 'N001_F1_04', 'j': 2769, 'k': 4635, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+39 {'base': 'N001_F1_04', 'j': 2816, 'k': 59, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+40 {'base': 'N001_F1_04', 'j': 2879, 'k': 3989, 'gauge': 'LOADFAIL'}
+41 {'base': 'N001_F1_04', 'j': 2958, 'k': 4635, 'gauge': 'LOADFAIL'}
+42 {'base': 'N001_F1_04', 'j': 3056, 'k': 3989, 'gauge': 'LOADFAIL'}
+43 {'base': 'N001_F1_04', 'j': 3159, 'k': 59, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+44 {'base': 'N001_F1_04', 'j': 3219, 'k': 5761, 'gauge': 'LOADFAIL'}
+45 {'base': 'N001_F1_04', 'j': 3321, 'k': 4045, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+46 {'base': 'N001_F1_04', 'j': 3388, 'k': 3135, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+47 {'base': 'N001_F1_04', 'j': 3400, 'k': 3135, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+48 {'base': 'N001_F1_04', 'j': 3483, 'k': 2682, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+49 {'base': 'N001_F1_04', 'j': 3627, 'k': 5946, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+50 {'base': 'N001_F1_04', 'j': 3639, 'k': 5946, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+51 {'base': 'N001_F1_04', 'j': 3721, 'k': 34, 'gauge': 'LOADFAIL'}
+52 {'base': 'N001_F1_04', 'j': 3757, 'k': 4045, 'gauge': 'LOADFAIL'}
+53 {'base': 'N001_F1_04', 'j': 3769, 'k': 4045, 'gauge': 'LOADFAIL'}
+54 {'base': 'N001_F1_04', 'j': 3939, 'k': 2067, 'gauge': 'LOADFAIL'}
+55 {'base': 'N001_F1_04', 'j': 3978, 'k': 3135, 'gauge': 'LOADFAIL'}
+56 {'base': 'N001_F1_04', 'j': 4049, 'k': 5795, 'gauge': 'LOADFAIL'}
+57 {'base': 'N001_F1_04', 'j': 4100, 'k': 59, 'gauge': 'LOADFAIL'}
+58 {'base': 'N001_F1_04', 'j': 4237, 'k': 3135, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+59 {'base': 'N001_F1_04', 'j': 4302, 'k': 5761, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+60 {'base': 'N001_F1_04', 'j': 4320, 'k': 59, 'gauge': 'LOADFAIL'}
+61 {'base': 'N001_F1_04', 'j': 4332, 'k': 59, 'gauge': 'LOADFAIL'}
+62 {'base': 'N001_F1_04', 'j': 4383, 'k': 4045, 'gauge': 'LOADFAIL'}
+63 {'base': 'N001_F1_04', 'j': 4450, 'k': 3135, 'gauge': 'LOADFAIL'}
+64 {'base': 'N001_F1_04', 'j': 4505, 'k': 1209, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+65 {'base': 'N001_F1_04', 'j': 4527, 'k': 5761, 'gauge': 'LOADFAIL'}
+66 {'base': 'N001_F1_04', 'j': 4541, 'k': 2682, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+67 {'base': 'N001_F1_04', 'j': 4553, 'k': 2682, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+68 {'base': 'N001_F1_04', 'j': 4561, 'k': 2067, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+69 {'base': 'N001_F1_04', 'j': 4689, 'k': 5946, 'gauge': 'LOADFAIL'}
+70 {'base': 'N001_F1_04', 'j': 4774, 'k': 5761, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+71 {'base': 'N001_F1_04', 'j': 4810, 'k': 34, 'gauge': 'LOADFAIL'}
+72 {'base': 'N001_F1_04', 'j': 4822, 'k': 34, 'gauge': 'LOADFAIL'}
+73 {'base': 'N001_F1_04', 'j': 4910, 'k': 5795, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+74 {'base': 'N001_F1_04', 'j': 4992, 'k': 4635, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+75 {'base': 'N001_F1_04', 'j': 5028, 'k': 2067, 'gauge': 'LOADFAIL'}
+76 {'base': 'N001_F1_04', 'j': 5102, 'k': 3989, 'gauge': 'LOADFAIL'}
+77 {'base': 'N001_F1_04', 'j': 5280, 'k': 3135, 'gauge': 'LOADFAIL'}
+78 {'base': 'N001_F1_04', 'j': 5327, 'k': 5795, 'gauge': 'LOADFAIL'}
+79 {'base': 'N001_F1_04', 'j': 5382, 'k': 59, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+80 {'base': 'N001_F1_04', 'j': 5416, 'k': 4635, 'gauge': 'LOADFAIL'}
+81 {'base': 'N001_F1_04', 'j': 5445, 'k': 3989, 'gauge': 'LOADFAIL'}
+82 {'base': 'N001_F1_04', 'j': 5515, 'k': 3135, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+83 {'base': 'N001_F1_04', 'j': 5522, 'k': 5946, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+84 {'base': 'N001_F1_04', 'j': 5754, 'k': 5946, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+85 {'base': 'N001_F1_04', 'j': 5791, 'k': 4045, 'gauge': 'LOADFAIL'}
+86 {'base': 'N001_F1_04', 'j': 5895, 'k': 2682, 'gauge': 'LOADFAIL'}
+87 {'base': 'N001_F1_04', 'j': 5907, 'k': 2682, 'gauge': 'LOADFAIL'}
+88 {'base': 'N001_F1_04', 'j': 5980, 'k': 4045, 'gauge': 'LOADFAIL'}
+89 {'base': 'N001_F1_04', 'j': 5992, 'k': 4045, 'gauge': 'LOADFAIL'}
+90 {'base': 'N001_F1_04', 'j': 6028, 'k': 5761, 'gauge': 'LOADFAIL'}
+91 {'base': 'N001_F1_04', 'j': 6116, 'k': 3989, 'gauge': 'LOADFAIL'}
+92 {'base': 'N001_F1_04', 'j': 6128, 'k': 3989, 'gauge': 'LOADFAIL'}
+93 {'base': 'N001_F1_04', 'j': 6201, 'k': 3135, 'gauge': 'LOADFAIL'}
+94 {'base': 'N001_F1_04', 'j': 6348, 'k': 3989, 'gauge': 'LOADFAIL'}
+95 {'base': 'N001_F1_04', 'j': 6385, 'k': 2067, 'gauge': 'LOADFAIL'}
+96 {'base': 'N001_F1_04', 'j': 6397, 'k': 2067, 'gauge': 'LOADFAIL'}
+97 {'base': 'N001_F1_04', 'j': 6459, 'k': 4045, 'gauge': 'LOADFAIL'}
+98 {'base': 'N004_F1_03', 'j': 81, 'k': 2403, 'gauge': 'LOADFAIL'}
+99 {'base': 'N004_F1_03', 'j': 102, 'k': 2403, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+100 {'base': 'N004_F1_03', 'j': 108, 'k': 2403, 'gauge': 'LOADFAIL'}
+101 {'base': 'N004_F1_03', 'j': 117, 'k': 2403, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+102 {'base': 'N004_F1_03', 'j': 120, 'k': 2403, 'gauge': 'LOADFAIL'}
+103 {'base': 'N004_F1_03', 'j': 162, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+104 {'base': 'N004_F1_03', 'j': 177, 'k': 4482, 'gauge': 'LOADFAIL'}
+105 {'base': 'N004_F1_03', 'j': 216, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+106 {'base': 'N004_F1_03', 'j': 234, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+107 {'base': 'N004_F1_03', 'j': 240, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+108 {'base': 'N004_F1_03', 'j': 608, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+109 {'base': 'N004_F1_03', 'j': 611, 'k': 571, 'gauge': 'LOADFAIL'}
+110 {'base': 'N004_F1_03', 'j': 620, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+111 {'base': 'N004_F1_03', 'j': 626, 'k': 571, 'gauge': 'LOADFAIL'}
+112 {'base': 'N004_F1_03', 'j': 647, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+113 {'base': 'N004_F1_03', 'j': 761, 'k': 5256, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+114 {'base': 'N004_F1_03', 'j': 776, 'k': 5256, 'gauge': 'LOADFAIL'}
+115 {'base': 'N004_F1_03', 'j': 779, 'k': 5256, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+116 {'base': 'N004_F1_03', 'j': 788, 'k': 5256, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+117 {'base': 'N004_F1_03', 'j': 794, 'k': 5256, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+118 {'base': 'N004_F1_03', 'j': 1161, 'k': 5426, 'gauge': 'LOADFAIL'}
+119 {'base': 'N004_F1_03', 'j': 1170, 'k': 5426, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+120 {'base': 'N004_F1_03', 'j': 1173, 'k': 5426, 'gauge': 'LOADFAIL'}
+121 {'base': 'N004_F1_03', 'j': 1197, 'k': 5426, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+122 {'base': 'N004_F1_03', 'j': 1200, 'k': 5426, 'gauge': 'LOADFAIL'}
+123 {'base': 'N004_F1_03', 'j': 1209, 'k': 5426, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+124 {'base': 'N004_F1_03', 'j': 1387, 'k': 1345, 'gauge': 'LOADFAIL'}
+125 {'base': 'N004_F1_03', 'j': 1393, 'k': 1345, 'gauge': 'LOADFAIL'}
+126 {'base': 'N004_F1_03', 'j': 1396, 'k': 1345, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+127 {'base': 'N004_F1_03', 'j': 1411, 'k': 1345, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+128 {'base': 'N004_F1_03', 'j': 1423, 'k': 1345, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+129 {'base': 'N004_F1_03', 'j': 1793, 'k': 1934, 'gauge': 'LOADFAIL'}
+130 {'base': 'N004_F1_03', 'j': 1802, 'k': 1934, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+131 {'base': 'N004_F1_03', 'j': 1805, 'k': 1934, 'gauge': 'LOADFAIL'}
+132 {'base': 'N004_F1_03', 'j': 1841, 'k': 1934, 'gauge': 'LOADFAIL'}
+133 {'base': 'N004_F1_03', 'j': 1847, 'k': 1934, 'gauge': 'LOADFAIL'}
+134 {'base': 'N004_F1_03', 'j': 2067, 'k': 4171, 'gauge': 'LOADFAIL'}
+135 {'base': 'N004_F1_03', 'j': 2070, 'k': 4171, 'gauge': 'LOADFAIL'}
+136 {'base': 'N004_F1_03', 'j': 2076, 'k': 4171, 'gauge': 'LOADFAIL'}
+137 {'base': 'N004_F1_03', 'j': 2079, 'k': 4171, 'gauge': 'LOADFAIL'}
+138 {'base': 'N004_F1_03', 'j': 2097, 'k': 4171, 'gauge': 'LOADFAIL'}
+139 {'base': 'N004_F1_03', 'j': 2103, 'k': 4171, 'gauge': 'LOADFAIL'}
+140 {'base': 'N004_F1_03', 'j': 2383, 'k': 5426, 'gauge': 'LOADFAIL'}
+141 {'base': 'N004_F1_03', 'j': 2389, 'k': 5426, 'gauge': 'LOADFAIL'}
+142 {'base': 'N004_F1_03', 'j': 2416, 'k': 5426, 'gauge': 'LOADFAIL'}
+143 {'base': 'N004_F1_03', 'j': 2425, 'k': 5426, 'gauge': 'LOADFAIL'}
+144 {'base': 'N004_F1_03', 'j': 2428, 'k': 5426, 'gauge': 'LOADFAIL'}
+145 {'base': 'N004_F1_03', 'j': 2603, 'k': 1345, 'gauge': 'LOADFAIL'}
+146 {'base': 'N004_F1_03', 'j': 2612, 'k': 1345, 'gauge': 'LOADFAIL'}
+147 {'base': 'N004_F1_03', 'j': 2615, 'k': 1345, 'gauge': 'LOADFAIL'}
+148 {'base': 'N004_F1_03', 'j': 2624, 'k': 1345, 'gauge': 'LOADFAIL'}
+149 {'base': 'N004_F1_03', 'j': 2639, 'k': 1345, 'gauge': 'LOADFAIL'}
+150 {'base': 'N004_F1_03', 'j': 2642, 'k': 1345, 'gauge': 'LOADFAIL'}
+151 {'base': 'N004_F1_03', 'j': 2916, 'k': 6092, 'gauge': 'LOADFAIL'}
+152 {'base': 'N004_F1_03', 'j': 2931, 'k': 6092, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+153 {'base': 'N004_F1_03', 'j': 2958, 'k': 6092, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+154 {'base': 'N004_F1_03', 'j': 2961, 'k': 6092, 'gauge': 'LOADFAIL'}
+155 {'base': 'N004_F1_03', 'j': 2967, 'k': 6092, 'gauge': 'LOADFAIL'}
+156 {'base': 'N004_F1_03', 'j': 3280, 'k': 4171, 'gauge': 'LOADFAIL'}
+157 {'base': 'N004_F1_03', 'j': 3286, 'k': 4171, 'gauge': 'LOADFAIL'}
+158 {'base': 'N004_F1_03', 'j': 3295, 'k': 4171, 'gauge': 'LOADFAIL'}
+159 {'base': 'N004_F1_03', 'j': 3298, 'k': 4171, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+160 {'base': 'N004_F1_03', 'j': 3313, 'k': 4171, 'gauge': 'LOADFAIL'}
+161 {'base': 'N004_F1_03', 'j': 3836, 'k': 413, 'gauge': 'LOADFAIL'}
+162 {'base': 'N004_F1_03', 'j': 3842, 'k': 413, 'gauge': 'LOADFAIL'}
+163 {'base': 'N004_F1_03', 'j': 3845, 'k': 413, 'gauge': 'LOADFAIL'}
+164 {'base': 'N004_F1_03', 'j': 3872, 'k': 413, 'gauge': 'LOADFAIL'}
+165 {'base': 'N004_F1_03', 'j': 3887, 'k': 413, 'gauge': 'LOADFAIL'}
+166 {'base': 'N004_F1_03', 'j': 4011, 'k': 571, 'gauge': 'LOADFAIL'}
+167 {'base': 'N004_F1_03', 'j': 4014, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+168 {'base': 'N004_F1_03', 'j': 4020, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+169 {'base': 'N004_F1_03', 'j': 4023, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+170 {'base': 'N004_F1_03', 'j': 4041, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+171 {'base': 'N004_F1_03', 'j': 4047, 'k': 571, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+172 {'base': 'N004_F1_03', 'j': 4496, 'k': 4171, 'gauge': 'LOADFAIL'}
+173 {'base': 'N004_F1_03', 'j': 4499, 'k': 4171, 'gauge': 'LOADFAIL'}
+174 {'base': 'N004_F1_03', 'j': 4508, 'k': 4171, 'gauge': 'LOADFAIL'}
+175 {'base': 'N004_F1_03', 'j': 4514, 'k': 4171, 'gauge': 'LOADFAIL'}
+176 {'base': 'N004_F1_03', 'j': 4535, 'k': 4171, 'gauge': 'LOADFAIL'}
+177 {'base': 'N004_F1_03', 'j': 4647, 'k': 3843, 'gauge': 'LOADFAIL'}
+178 {'base': 'N004_F1_03', 'j': 4650, 'k': 3843, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+179 {'base': 'N004_F1_03', 'j': 4665, 'k': 3843, 'gauge': 'LOADFAIL'}
+180 {'base': 'N004_F1_03', 'j': 4674, 'k': 3843, 'gauge': 'LOADFAIL'}
+181 {'base': 'N004_F1_03', 'j': 4677, 'k': 3843, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+182 {'base': 'N004_F1_03', 'j': 4686, 'k': 3843, 'gauge': 'LOADFAIL'}
+183 {'base': 'N004_F1_03', 'j': 4861, 'k': 6092, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+184 {'base': 'N004_F1_03', 'j': 4864, 'k': 6092, 'gauge': 'LOADFAIL'}
+185 {'base': 'N004_F1_03', 'j': 4873, 'k': 6092, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+186 {'base': 'N004_F1_03', 'j': 4900, 'k': 6092, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+187 {'base': 'N004_F1_03', 'j': 4906, 'k': 6092, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+188 {'base': 'N004_F1_03', 'j': 5224, 'k': 571, 'gauge': 'LOADFAIL'}
+189 {'base': 'N004_F1_03', 'j': 5230, 'k': 571, 'gauge': 'LOADFAIL'}
+190 {'base': 'N004_F1_03', 'j': 5239, 'k': 571, 'gauge': 'LOADFAIL'}
+191 {'base': 'N004_F1_03', 'j': 5242, 'k': 571, 'gauge': 'LOADFAIL'}
+192 {'base': 'N004_F1_03', 'j': 5257, 'k': 571, 'gauge': 'LOADFAIL'}
+193 {'base': 'N004_F1_03', 'j': 6009, 'k': 1345, 'gauge': 'LOADFAIL'}
+194 {'base': 'N004_F1_03', 'j': 6015, 'k': 1345, 'gauge': 'LOADFAIL'}
+195 {'base': 'N004_F1_03', 'j': 6024, 'k': 1345, 'gauge': 'LOADFAIL'}
+196 {'base': 'N004_F1_03', 'j': 6027, 'k': 1345, 'gauge': 'LOADFAIL'}
+197 {'base': 'N004_F1_03', 'j': 6042, 'k': 1345, 'gauge': 'LOADFAIL'}
+198 {'base': 'N004_F1_03', 'j': 6109, 'k': 5256, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+199 {'base': 'N004_F1_03', 'j': 6121, 'k': 5256, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+200 {'base': 'N004_F1_03', 'j': 6136, 'k': 5256, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+201 {'base': 'N004_F1_03', 'j': 6139, 'k': 5256, 'gauge': 'LOADFAIL'}
+202 {'base': 'N004_F1_03', 'j': 6145, 'k': 5256, 'gauge': 'LOADFAIL'}
+203 {'base': 'N004_F1_04', 'j': 81, 'k': 2403, 'gauge': 'LOADFAIL'}
+204 {'base': 'N004_F1_04', 'j': 102, 'k': 2403, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+205 {'base': 'N004_F1_04', 'j': 108, 'k': 2403, 'gauge': 'LOADFAIL'}
+206 {'base': 'N004_F1_04', 'j': 117, 'k': 2403, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+207 {'base': 'N004_F1_04', 'j': 120, 'k': 2403, 'gauge': 'LOADFAIL'}
+208 {'base': 'N004_F1_04', 'j': 162, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+209 {'base': 'N004_F1_04', 'j': 177, 'k': 4482, 'gauge': 'LOADFAIL'}
+210 {'base': 'N004_F1_04', 'j': 216, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+211 {'base': 'N004_F1_04', 'j': 234, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+212 {'base': 'N004_F1_04', 'j': 240, 'k': 4482, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+213 {'base': 'N004_F1_04', 'j': 439, 'k': 3360, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+214 {'base': 'N004_F1_04', 'j': 445, 'k': 3360, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+215 {'base': 'N004_F1_04', 'j': 472, 'k': 3360, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+216 {'base': 'N004_F1_04', 'j': 481, 'k': 3360, 'gauge': 'LOADFAIL'}
+217 {'base': 'N004_F1_04', 'j': 484, 'k': 3360, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+218 {'base': 'N004_F1_04', 'j': 1161, 'k': 5426, 'gauge': 'LOADFAIL'}
+219 {'base': 'N004_F1_04', 'j': 1170, 'k': 5426, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+220 {'base': 'N004_F1_04', 'j': 1173, 'k': 5426, 'gauge': 'LOADFAIL'}
+221 {'base': 'N004_F1_04', 'j': 1197, 'k': 5426, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+222 {'base': 'N004_F1_04', 'j': 1200, 'k': 5426, 'gauge': 'LOADFAIL'}
+223 {'base': 'N004_F1_04', 'j': 1209, 'k': 5426, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+224 {'base': 'N004_F1_04', 'j': 1222, 'k': 6347, 'gauge': 'LOADFAIL'}
+225 {'base': 'N004_F1_04', 'j': 1237, 'k': 6347, 'gauge': 'LOADFAIL'}
+226 {'base': 'N004_F1_04', 'j': 1240, 'k': 6347, 'gauge': 'LOADFAIL'}
+227 {'base': 'N004_F1_04', 'j': 1282, 'k': 6347, 'gauge': 'LOADFAIL'}
+228 {'base': 'N004_F1_04', 'j': 1291, 'k': 6347, 'gauge': 'LOADFAIL'}
+229 {'base': 'N004_F1_04', 'j': 1294, 'k': 6347, 'gauge': 'LOADFAIL'}
+230 {'base': 'N004_F1_04', 'j': 1492, 'k': 4615, 'gauge': 'LOADFAIL'}
+231 {'base': 'N004_F1_04', 'j': 1504, 'k': 4615, 'gauge': 'LOADFAIL'}
+232 {'base': 'N004_F1_04', 'j': 1519, 'k': 4615, 'gauge': 'LOADFAIL'}
+233 {'base': 'N004_F1_04', 'j': 1522, 'k': 4615, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+234 {'base': 'N004_F1_04', 'j': 1528, 'k': 4615, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+235 {'base': 'N004_F1_04', 'j': 2067, 'k': 4171, 'gauge': 'LOADFAIL'}
+236 {'base': 'N004_F1_04', 'j': 2070, 'k': 4171, 'gauge': 'LOADFAIL'}
+237 {'base': 'N004_F1_04', 'j': 2076, 'k': 4171, 'gauge': 'LOADFAIL'}
+238 {'base': 'N004_F1_04', 'j': 2079, 'k': 4171, 'gauge': 'LOADFAIL'}
+239 {'base': 'N004_F1_04', 'j': 2097, 'k': 4171, 'gauge': 'LOADFAIL'}
+240 {'base': 'N004_F1_04', 'j': 2103, 'k': 4171, 'gauge': 'LOADFAIL'}
+241 {'base': 'N004_F1_04', 'j': 2383, 'k': 5426, 'gauge': 'LOADFAIL'}
+242 {'base': 'N004_F1_04', 'j': 2389, 'k': 5426, 'gauge': 'LOADFAIL'}
+243 {'base': 'N004_F1_04', 'j': 2416, 'k': 5426, 'gauge': 'LOADFAIL'}
+244 {'base': 'N004_F1_04', 'j': 2425, 'k': 5426, 'gauge': 'LOADFAIL'}
+245 {'base': 'N004_F1_04', 'j': 2428, 'k': 5426, 'gauge': 'LOADFAIL'}
+246 {'base': 'N004_F1_04', 'j': 2432, 'k': 6347, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+247 {'base': 'N004_F1_04', 'j': 2438, 'k': 6347, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+248 {'base': 'N004_F1_04', 'j': 2456, 'k': 6347, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+249 {'base': 'N004_F1_04', 'j': 2495, 'k': 6347, 'gauge': 'LOADFAIL'}
+250 {'base': 'N004_F1_04', 'j': 2510, 'k': 6347, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+251 {'base': 'N004_F1_04', 'j': 2703, 'k': 2309, 'gauge': 'LOADFAIL'}
+252 {'base': 'N004_F1_04', 'j': 2706, 'k': 2309, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+253 {'base': 'N004_F1_04', 'j': 2721, 'k': 2309, 'gauge': 'LOADFAIL'}
+254 {'base': 'N004_F1_04', 'j': 2730, 'k': 2309, 'gauge': 'LOADFAIL'}
+255 {'base': 'N004_F1_04', 'j': 2733, 'k': 2309, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+256 {'base': 'N004_F1_04', 'j': 2742, 'k': 2309, 'gauge': 'LOADFAIL'}
+257 {'base': 'N004_F1_04', 'j': 2916, 'k': 3214, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+258 {'base': 'N004_F1_04', 'j': 2931, 'k': 3214, 'gauge': 'LOADFAIL'}
+259 {'base': 'N004_F1_04', 'j': 2958, 'k': 3214, 'gauge': 'LOADFAIL'}
+260 {'base': 'N004_F1_04', 'j': 2961, 'k': 3214, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+261 {'base': 'N004_F1_04', 'j': 2967, 'k': 3214, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+262 {'base': 'N004_F1_04', 'j': 3012, 'k': 5536, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+263 {'base': 'N004_F1_04', 'j': 3018, 'k': 5536, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+264 {'base': 'N004_F1_04', 'j': 3054, 'k': 5536, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+265 {'base': 'N004_F1_04', 'j': 3057, 'k': 5536, 'gauge': 'LOADFAIL'}
+266 {'base': 'N004_F1_04', 'j': 3066, 'k': 5536, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+267 {'base': 'N004_F1_04', 'j': 3280, 'k': 4171, 'gauge': 'LOADFAIL'}
+268 {'base': 'N004_F1_04', 'j': 3286, 'k': 4171, 'gauge': 'LOADFAIL'}
+269 {'base': 'N004_F1_04', 'j': 3295, 'k': 4171, 'gauge': 'LOADFAIL'}
+270 {'base': 'N004_F1_04', 'j': 3298, 'k': 4171, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+271 {'base': 'N004_F1_04', 'j': 3313, 'k': 4171, 'gauge': 'LOADFAIL'}
+272 {'base': 'N004_F1_04', 'j': 3434, 'k': 4615, 'gauge': 'LOADFAIL'}
+273 {'base': 'N004_F1_04', 'j': 3449, 'k': 4615, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+274 {'base': 'N004_F1_04', 'j': 3452, 'k': 4615, 'gauge': 'LOADFAIL'}
+275 {'base': 'N004_F1_04', 'j': 3461, 'k': 4615, 'gauge': 'LOADFAIL'}
+276 {'base': 'N004_F1_04', 'j': 3467, 'k': 4615, 'gauge': 'LOADFAIL'}
+277 {'base': 'N004_F1_04', 'j': 4496, 'k': 4171, 'gauge': 'LOADFAIL'}
+278 {'base': 'N004_F1_04', 'j': 4499, 'k': 4171, 'gauge': 'LOADFAIL'}
+279 {'base': 'N004_F1_04', 'j': 4508, 'k': 4171, 'gauge': 'LOADFAIL'}
+280 {'base': 'N004_F1_04', 'j': 4514, 'k': 4171, 'gauge': 'LOADFAIL'}
+281 {'base': 'N004_F1_04', 'j': 4535, 'k': 4171, 'gauge': 'LOADFAIL'}
+282 {'base': 'N004_F1_04', 'j': 4861, 'k': 3214, 'gauge': 'LOADFAIL'}
+283 {'base': 'N004_F1_04', 'j': 4864, 'k': 3214, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+284 {'base': 'N004_F1_04', 'j': 4873, 'k': 3214, 'gauge': 'LOADFAIL'}
+285 {'base': 'N004_F1_04', 'j': 4900, 'k': 3214, 'gauge': 'LOADFAIL'}
+286 {'base': 'N004_F1_04', 'j': 4906, 'k': 3214, 'gauge': 'LOADFAIL'}
+287 {'base': 'N004_F1_04', 'j': 4951, 'k': 5536, 'gauge': 'LOADFAIL'}
+288 {'base': 'N004_F1_04', 'j': 4957, 'k': 5536, 'gauge': 'LOADFAIL'}
+289 {'base': 'N004_F1_04', 'j': 4960, 'k': 5536, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+290 {'base': 'N004_F1_04', 'j': 5002, 'k': 5536, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+291 {'base': 'N004_F1_04', 'j': 5005, 'k': 5536, 'gauge': 'LOADFAIL'}
+292 {'base': 'N004_F1_04', 'j': 5011, 'k': 5536, 'gauge': 'LOADFAIL'}
+293 {'base': 'N004_F1_04', 'j': 5778, 'k': 3360, 'gauge': 'LOADFAIL'}
+294 {'base': 'N004_F1_04', 'j': 5787, 'k': 3360, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+295 {'base': 'N004_F1_04', 'j': 5790, 'k': 3360, 'gauge': 'LOADFAIL'}
+296 {'base': 'N004_F1_04', 'j': 5814, 'k': 3360, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+297 {'base': 'N004_F1_04', 'j': 5817, 'k': 3360, 'gauge': 'LOADFAIL'}
+298 {'base': 'N004_F1_04', 'j': 5826, 'k': 3360, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+299 {'base': 'N004_F1_04', 'j': 5832, 'k': 6347, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+300 {'base': 'N004_F1_04', 'j': 5853, 'k': 6347, 'gauge': 'LOADFAIL'}
+301 {'base': 'N004_F1_04', 'j': 5895, 'k': 6347, 'gauge': 'LOADFAIL'}
+302 {'base': 'N004_F1_04', 'j': 5898, 'k': 6347, 'gauge': 'A4 and A2 + A2 NU1 8', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+303 {'base': 'N004_F1_04', 'j': 5907, 'k': 6347, 'gauge': 'LOADFAIL'}
+304 {'base': 'N004_F1_05', 'j': 81, 'k': 2403, 'gauge': 'LOADFAIL'}
+305 {'base': 'N004_F1_05', 'j': 102, 'k': 2403, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+306 {'base': 'N004_F1_05', 'j': 108, 'k': 2403, 'gauge': 'LOADFAIL'}
+307 {'base': 'N004_F1_05', 'j': 117, 'k': 2403, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+308 {'base': 'N004_F1_05', 'j': 120, 'k': 2403, 'gauge': 'LOADFAIL'}
+309 {'base': 'N004_F1_05', 'j': 162, 'k': 4482, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+310 {'base': 'N004_F1_05', 'j': 177, 'k': 4482, 'gauge': 'LOADFAIL'}
+311 {'base': 'N004_F1_05', 'j': 216, 'k': 4482, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+312 {'base': 'N004_F1_05', 'j': 234, 'k': 4482, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+313 {'base': 'N004_F1_05', 'j': 240, 'k': 4482, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+314 {'base': 'N004_F1_05', 'j': 439, 'k': 3417, 'gauge': 'LOADFAIL'}
+315 {'base': 'N004_F1_05', 'j': 445, 'k': 3417, 'gauge': 'LOADFAIL'}
+316 {'base': 'N004_F1_05', 'j': 472, 'k': 3417, 'gauge': 'LOADFAIL'}
+317 {'base': 'N004_F1_05', 'j': 481, 'k': 3417, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+318 {'base': 'N004_F1_05', 'j': 484, 'k': 3417, 'gauge': 'LOADFAIL'}
+319 {'base': 'N004_F1_05', 'j': 1161, 'k': 5426, 'gauge': 'LOADFAIL'}
+320 {'base': 'N004_F1_05', 'j': 1170, 'k': 5426, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+321 {'base': 'N004_F1_05', 'j': 1173, 'k': 5426, 'gauge': 'LOADFAIL'}
+322 {'base': 'N004_F1_05', 'j': 1197, 'k': 5426, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+323 {'base': 'N004_F1_05', 'j': 1200, 'k': 5426, 'gauge': 'LOADFAIL'}
+324 {'base': 'N004_F1_05', 'j': 1209, 'k': 5426, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+325 {'base': 'N004_F1_05', 'j': 1222, 'k': 5918, 'gauge': 'LOADFAIL'}
+326 {'base': 'N004_F1_05', 'j': 1237, 'k': 5918, 'gauge': 'LOADFAIL'}
+327 {'base': 'N004_F1_05', 'j': 1240, 'k': 5918, 'gauge': 'LOADFAIL'}
+328 {'base': 'N004_F1_05', 'j': 1282, 'k': 5918, 'gauge': 'LOADFAIL'}
+329 {'base': 'N004_F1_05', 'j': 1291, 'k': 5918, 'gauge': 'LOADFAIL'}
+330 {'base': 'N004_F1_05', 'j': 1294, 'k': 5918, 'gauge': 'LOADFAIL'}
+331 {'base': 'N004_F1_05', 'j': 1492, 'k': 4663, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+332 {'base': 'N004_F1_05', 'j': 1504, 'k': 4663, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+333 {'base': 'N004_F1_05', 'j': 1519, 'k': 4663, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+334 {'base': 'N004_F1_05', 'j': 1522, 'k': 4663, 'gauge': 'LOADFAIL'}
+335 {'base': 'N004_F1_05', 'j': 1528, 'k': 4663, 'gauge': 'LOADFAIL'}
+336 {'base': 'N004_F1_05', 'j': 2067, 'k': 4171, 'gauge': 'LOADFAIL'}
+337 {'base': 'N004_F1_05', 'j': 2070, 'k': 4171, 'gauge': 'LOADFAIL'}
+338 {'base': 'N004_F1_05', 'j': 2076, 'k': 4171, 'gauge': 'LOADFAIL'}
+339 {'base': 'N004_F1_05', 'j': 2079, 'k': 4171, 'gauge': 'LOADFAIL'}
+340 {'base': 'N004_F1_05', 'j': 2097, 'k': 4171, 'gauge': 'LOADFAIL'}
+341 {'base': 'N004_F1_05', 'j': 2103, 'k': 4171, 'gauge': 'LOADFAIL'}
+342 {'base': 'N004_F1_05', 'j': 2383, 'k': 5426, 'gauge': 'LOADFAIL'}
+343 {'base': 'N004_F1_05', 'j': 2389, 'k': 5426, 'gauge': 'LOADFAIL'}
+344 {'base': 'N004_F1_05', 'j': 2416, 'k': 5426, 'gauge': 'LOADFAIL'}
+345 {'base': 'N004_F1_05', 'j': 2425, 'k': 5426, 'gauge': 'LOADFAIL'}
+346 {'base': 'N004_F1_05', 'j': 2428, 'k': 5426, 'gauge': 'LOADFAIL'}
+347 {'base': 'N004_F1_05', 'j': 2432, 'k': 5918, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+348 {'base': 'N004_F1_05', 'j': 2438, 'k': 5918, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+349 {'base': 'N004_F1_05', 'j': 2456, 'k': 5918, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+350 {'base': 'N004_F1_05', 'j': 2495, 'k': 5918, 'gauge': 'LOADFAIL'}
+351 {'base': 'N004_F1_05', 'j': 2510, 'k': 5918, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+352 {'base': 'N004_F1_05', 'j': 2703, 'k': 2738, 'gauge': 'LOADFAIL'}
+353 {'base': 'N004_F1_05', 'j': 2706, 'k': 2738, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+354 {'base': 'N004_F1_05', 'j': 2721, 'k': 2738, 'gauge': 'LOADFAIL'}
+355 {'base': 'N004_F1_05', 'j': 2730, 'k': 2738, 'gauge': 'LOADFAIL'}
+356 {'base': 'N004_F1_05', 'j': 2733, 'k': 2738, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+357 {'base': 'N004_F1_05', 'j': 2742, 'k': 2738, 'gauge': 'LOADFAIL'}
+358 {'base': 'N004_F1_05', 'j': 2916, 'k': 3085, 'gauge': 'LOADFAIL'}
+359 {'base': 'N004_F1_05', 'j': 2931, 'k': 3085, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+360 {'base': 'N004_F1_05', 'j': 2958, 'k': 3085, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+361 {'base': 'N004_F1_05', 'j': 2961, 'k': 3085, 'gauge': 'LOADFAIL'}
+362 {'base': 'N004_F1_05', 'j': 2967, 'k': 3085, 'gauge': 'LOADFAIL'}
+363 {'base': 'N004_F1_05', 'j': 3012, 'k': 5245, 'gauge': 'LOADFAIL'}
+364 {'base': 'N004_F1_05', 'j': 3018, 'k': 5245, 'gauge': 'LOADFAIL'}
+365 {'base': 'N004_F1_05', 'j': 3054, 'k': 5245, 'gauge': 'LOADFAIL'}
+366 {'base': 'N004_F1_05', 'j': 3057, 'k': 5245, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+367 {'base': 'N004_F1_05', 'j': 3066, 'k': 5245, 'gauge': 'LOADFAIL'}
+368 {'base': 'N004_F1_05', 'j': 3280, 'k': 4171, 'gauge': 'LOADFAIL'}
+369 {'base': 'N004_F1_05', 'j': 3286, 'k': 4171, 'gauge': 'LOADFAIL'}
+370 {'base': 'N004_F1_05', 'j': 3295, 'k': 4171, 'gauge': 'LOADFAIL'}
+371 {'base': 'N004_F1_05', 'j': 3298, 'k': 4171, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+372 {'base': 'N004_F1_05', 'j': 3313, 'k': 4171, 'gauge': 'LOADFAIL'}
+373 {'base': 'N004_F1_05', 'j': 3434, 'k': 4663, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+374 {'base': 'N004_F1_05', 'j': 3449, 'k': 4663, 'gauge': 'LOADFAIL'}
+375 {'base': 'N004_F1_05', 'j': 3452, 'k': 4663, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+376 {'base': 'N004_F1_05', 'j': 3461, 'k': 4663, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+377 {'base': 'N004_F1_05', 'j': 3467, 'k': 4663, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+378 {'base': 'N004_F1_05', 'j': 4496, 'k': 4171, 'gauge': 'LOADFAIL'}
+379 {'base': 'N004_F1_05', 'j': 4499, 'k': 4171, 'gauge': 'LOADFAIL'}
+380 {'base': 'N004_F1_05', 'j': 4508, 'k': 4171, 'gauge': 'LOADFAIL'}
+381 {'base': 'N004_F1_05', 'j': 4514, 'k': 4171, 'gauge': 'LOADFAIL'}
+382 {'base': 'N004_F1_05', 'j': 4535, 'k': 4171, 'gauge': 'LOADFAIL'}
+383 {'base': 'N004_F1_05', 'j': 4861, 'k': 3085, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+384 {'base': 'N004_F1_05', 'j': 4864, 'k': 3085, 'gauge': 'LOADFAIL'}
+385 {'base': 'N004_F1_05', 'j': 4873, 'k': 3085, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+386 {'base': 'N004_F1_05', 'j': 4900, 'k': 3085, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+387 {'base': 'N004_F1_05', 'j': 4906, 'k': 3085, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+388 {'base': 'N004_F1_05', 'j': 4951, 'k': 5245, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+389 {'base': 'N004_F1_05', 'j': 4957, 'k': 5245, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+390 {'base': 'N004_F1_05', 'j': 4960, 'k': 5245, 'gauge': 'LOADFAIL'}
+391 {'base': 'N004_F1_05', 'j': 5002, 'k': 5245, 'gauge': 'LOADFAIL'}
+392 {'base': 'N004_F1_05', 'j': 5005, 'k': 5245, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+393 {'base': 'N004_F1_05', 'j': 5011, 'k': 5245, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+394 {'base': 'N004_F1_05', 'j': 5778, 'k': 3417, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+395 {'base': 'N004_F1_05', 'j': 5787, 'k': 3417, 'gauge': 'LOADFAIL'}
+396 {'base': 'N004_F1_05', 'j': 5790, 'k': 3417, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+397 {'base': 'N004_F1_05', 'j': 5814, 'k': 3417, 'gauge': 'LOADFAIL'}
+398 {'base': 'N004_F1_05', 'j': 5817, 'k': 3417, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+399 {'base': 'N004_F1_05', 'j': 5826, 'k': 3417, 'gauge': 'LOADFAIL'}
+400 {'base': 'N004_F1_05', 'j': 5832, 'k': 5918, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_tw_W': 6}, 'tachyons': 0}
+401 {'base': 'N004_F1_05', 'j': 5853, 'k': 5918, 'gauge': 'LOADFAIL'}
+402 {'base': 'N004_F1_05', 'j': 5895, 'k': 5918, 'gauge': 'LOADFAIL'}
+403 {'base': 'N004_F1_05', 'j': 5898, 'k': 5918, 'gauge': 'A4 and A1 + A1 + A1 NU1 9', 'tens': {'fermion_untw': 6, 'fermion_tw_W': 6}, 'tachyons': 0}
+404 {'base': 'N004_F1_05', 'j': 5907, 'k': 5918, 'gauge': 'LOADFAIL'}
+DONE

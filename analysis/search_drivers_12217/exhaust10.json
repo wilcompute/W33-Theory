@@ -1,0 +1,37 @@
+{
+ "N001_F1_04": {
+  "lambdas": 864,
+  "twisted_10_type_vectors": 30720,
+  "control_failures": 0
+ },
+ "N004_F1_03": {
+  "lambdas": 864,
+  "twisted_10_type_vectors": 30720,
+  "control_failures": 0
+ },
+ "N004_F1_04": {
+  "lambdas": 864,
+  "twisted_10_type_vectors": 30720,
+  "control_failures": 0
+ },
+ "N004_F1_05": {
+  "lambdas": 864,
+  "twisted_10_type_vectors": 30720,
+  "control_failures": 0
+ },
+ "N008_F1_02": {
+  "lambdas": 864,
+  "twisted_10_type_vectors": 30720,
+  "control_failures": 0
+ },
+ "N008_F1_03": {
+  "lambdas": 864,
+  "twisted_10_type_vectors": 30720,
+  "control_failures": 0
+ },
+ "N008_F1_04": {
+  "lambdas": 864,
+  "twisted_10_type_vectors": 30720,
+  "control_failures": 0
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "g1": {
+  "order3": true,
+  "preserves_eta": true,
+  "preserves_H": true,
+  "translations_mod2": 2,
+  "invariant_moduli": 0,
+  "det_1_minus_g": 0,
+  "eta_norms_of_moved_vectors": [
+   "6",
+   "6"
+  ]
+ },
+ "g2": {
+  "order3": true,
+  "preserves_eta": true,
+  "preserves_H": true,
+  "translations_mod2": 2,
+  "invariant_moduli": 0,
+  "det_1_minus_g": 0,
+  "eta_norms_of_moved_vectors": [
+   "-2",
+   "-2"
+  ]
+ },
+ "g1g2": {
+  "order3": true,
+  "preserves_eta": true,
+  "preserves_H": true,
+  "translations_mod2": 0,
+  "invariant_moduli": 2,
+  "det_1_minus_g": 9,
+  "eta_norms_of_moved_vectors": [
+   "6",
+   "6",
+   "0",
+   "0"
+  ]
+ },
+ "g1g2inv": {
+  "order3": true,
+  "preserves_eta": true,
+  "preserves_H": true,
+  "translations_mod2": 0,
+  "invariant_moduli": 2,
+  "det_1_minus_g": 9,
+  "eta_norms_of_moved_vectors": [
+   "6",
+   "6",
+   "0",
+   "0"
+  ]
+ }
+}

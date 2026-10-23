@@ -1,0 +1,7 @@
+N001_F1_04 {'lambdas': 864, 'admissible_pairs': 32904, 'pairs_with_twisted_10_vector': 98}
+N004_F1_03 {'lambdas': 864, 'admissible_pairs': 32274, 'pairs_with_twisted_10_vector': 105}
+N004_F1_04 {'lambdas': 864, 'admissible_pairs': 31956, 'pairs_with_twisted_10_vector': 101}
+N004_F1_05 {'lambdas': 864, 'admissible_pairs': 31956, 'pairs_with_twisted_10_vector': 101}
+N008_F1_02 {'lambdas': 864, 'admissible_pairs': 34198, 'pairs_with_twisted_10_vector': 0}
+N008_F1_03 {'lambdas': 864, 'admissible_pairs': 33862, 'pairs_with_twisted_10_vector': 0}
+N008_F1_04 {'lambdas': 864, 'admissible_pairs': 33974, 'pairs_with_twisted_10_vector': 0}

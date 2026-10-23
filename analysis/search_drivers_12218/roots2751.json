@@ -1,0 +1,56 @@
+{
+ "actual": {
+  "roots": 34,
+  "type": [
+   "A1",
+   "A2",
+   "A2",
+   "A4"
+  ],
+  "A2_count": 2,
+  "SU5_unbroken": false
+ },
+ "W5=0": {
+  "roots": 54,
+  "type": [
+   "A1",
+   "A1",
+   "A1",
+   "A2",
+   "A3",
+   "A5"
+  ],
+  "A2_count": 1,
+  "SU5_unbroken": false
+ },
+ "W6=0": {
+  "roots": 66,
+  "type": [
+   "A2",
+   "A4",
+   "D5"
+  ],
+  "A2_count": 1,
+  "SU5_unbroken": true
+ },
+ "W5=W6=0": {
+  "roots": 118,
+  "type": [
+   "A2",
+   "D5",
+   "E6"
+  ],
+  "A2_count": 1,
+  "SU5_unbroken": false
+ },
+ "W6=W5": {
+  "roots": 66,
+  "type": [
+   "A2",
+   "A4",
+   "D5"
+  ],
+  "A2_count": 1,
+  "SU5_unbroken": true
+ }
+}
