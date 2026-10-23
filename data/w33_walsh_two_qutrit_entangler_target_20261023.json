@@ -1,0 +1,49 @@
+{
+  "boundary": "Only 9x9 ideal mathematical CZ3 target. No cross-Kerr medium, scattering Hamiltonian, heralded optical circuit, or two-photon measurement implemented.",
+  "current_device_has_entangler": false,
+  "hardware_gates": [
+    "two four-rail logical qutrits with true photon indistinguishability",
+    "mode coupling, ancilla photons or verified nonlinear interaction",
+    "two-qutrit truth table and heralding/postselection specification",
+    "coincidence tomography with loss and accidental-count subtraction",
+    "positive entanglement witness confidence interval and measured success probability"
+  ],
+  "input": "(|0>+|1>+|2>)/sqrt(3) tensor itself, product state",
+  "local_F3_R_operations_entangle": false,
+  "logical_CZ3_diagonal_imag": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.8660254037844387,
+    -0.8660254037844384,
+    0.0,
+    -0.8660254037844384,
+    0.8660254037844389
+  ],
+  "logical_CZ3_diagonal_real": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    -0.4999999999999998,
+    -0.5000000000000003,
+    1.0,
+    -0.5000000000000003,
+    -0.4999999999999992
+  ],
+  "min_distinct_photons_for_two_qutrits": 2,
+  "needed_nonlocal_resource": "a physically realized two-photon optical nonlinearity or measurement-induced entangling process with ancillas/heralding",
+  "one_photon_four_rail_qudit_count_per_tile": 1,
+  "outcome": "maximally entangled two-qutrit pure state",
+  "partial_transpose_negativity": 1.0000000000000007,
+  "reduced_eigenvalues": [
+    0.33333333333333315,
+    0.3333333333333334,
+    0.3333333333333336
+  ],
+  "reduced_purity": 0.3333333333333337,
+  "schema": "w33.walsh.two_qutrit_entanglement_target.v1",
+  "sha256": "e93bd280e4e44c497fbfc513242b8f292cd2fcc0a0b6988c780c23d0056e35a4",
+  "von_neumann_entanglement_bits": 1.584962500721156
+}
