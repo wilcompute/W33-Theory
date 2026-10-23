@@ -1,0 +1,114 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.83in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,longtable,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\title{\textbf{A Scheduled Optical Holonet Must Carry Time as Well as Phase}\\
+An exact 480-state time-expanded W33 control and interference witness}
+\author{W33-Theory engineering programme}
+\date{23 October 2026 --- logical clock and optical-coherence boundary}
+\begin{document}\maketitle
+\begin{abstract}
+The three-slot global switch schedule of the forty W33 four-port line buses
+permits 80 disjoint neighbor-pair connections per time slot. The
+existing optical route-phase model, however, ignores a physical timing
+constraint: two paths of the same graph-hop length may require different
+line-bus masks in different slots and cannot be recombined coherently
+without temporal-mode alignment. This addendum implements an explicit
+time-expanded address/clock/phase graph, and verifies the first
+two-arm optical interference proposal has a one-slot modeled
+arrival discrepancy. A WAIT step is \emph{not} a free classical
+buffer: an actual flying photon requires a delay line, memory or
+appropriately synchronized optical source.
+\end{abstract}
+\section{Exact discrete schedule}
+Within a four-point W33 line, the input/output local port labels
+$j,k\in\{0,1,2,3\}$ require XOR mask $m=j\oplus k\in\{1,2,3\}$.
+Our schedule permits mask $m=s+1$ during global slot
+$s\in\mathbb{Z}_3$. Every one of the 40 line buses
+implements two disjoint pair exchanges in each slot, hence
+80 graph edges per slot and all 240 edges over a full period.
+Each W33 point participates in four outgoing edge
+opportunities per slot, one for each incident line.
+\section{The time-expanded graph}
+For a single 40-point parent define the finite search state
+\[
+(x,s,e)\in \{0,\ldots,39\}\times\mathbb{Z}_3\times\mathbb{Z}_4,
+\]
+with exactly $40\cdot3\cdot4=480$ states.
+Each legal MOVE along edge $x\sim y$ has
+\[
+(x,s,e)\longrightarrow(y,s+1,e+w(m)\bmod4)
+\quad\text{iff}\quad s=m-1;
+\]
+a WAIT has
+\[
+(x,s,e)\longrightarrow(x,s+1,e).
+\]
+Both actions occupy one \emph{discrete scheduling slot}.
+This definition records only the ideal MZI discrete
+phase frame $i^e$. It deliberately does not model the
+continuous optical phase accumulated by a physical
+delay or the photon's evolving wavepacket.
+An ordinary breadth-first search finds minimum slot count
+to a desired destination, optionally with a required final
+modulo-four phase frame. A failed line-bus ID can be excluded.
+\section{The critical two-arm witness}
+The previously proposed W33 pair of optical routes is
+\[
+A:\quad 0\to4\to7,\qquad
+B:\quad 0\to14\to7.
+\]
+Both are two-hop graph routes, and the ideal two-MZI
+switch-gauge frame difference is $\Delta e=1$,
+corresponding to the scalar $i$.
+However, applying the exact three-slot switching sequence
+and starting both paths at slot zero yields
+\[
+t_A-t_B=-1\text{ slot}.
+\]
+They do \emph{not} automatically arrive in the same
+temporal optical mode. An isolated graph-level statement
+about relative $i$ phase therefore cannot be directly
+converted into a Hong--Ou--Mandel or single-photon
+path-interference measurement.
+The implementation schedules every MOVE and WAIT
+for both paths and verifies the discrete discrepancy.
+\section{Optical measurement requirements}
+A real experiment must either equalize the relevant
+time delays, supply coherent quantum-compatible optical
+storage, or launch the two arms with an intentionally
+staggered but coherent timing relationship.
+For a timing difference $\Delta t$, a waveguide group
+index $n_g$ would imply an approximate additional
+path-length budget
+\[
+\Delta L\simeq\frac{c\,\Delta t}{n_g}.
+\]
+The \emph{optical carrier} also accumulates a
+continuous relative phase sensitive to length and
+dispersion, not merely one of four values $i^e$.
+At free-space wavelength $\lambda$, the carrier period
+is $\lambda/c$; at 1550 nm that is approximately
+5.17 femtoseconds. A discrete switching slot has no
+measured duration in the current Holonet hardware.
+The proposed optical experiment must therefore include
+phase referencing, arrival-time calibration, differential
+path loss, detector timing-jitter characterization,
+and photon coherence length/spectral bandwidth.
+\section{Provenance and execution}
+The exact time-expanded compiler and deterministic
+schedule manifest are
+\texttt{analysis/w33\_fractal\_time\_expanded\_linebus\_20261023.py}
+and
+\texttt{data/w33\_fractal\_time\_expanded\_linebus\_20261023.json}.
+The companion regression module
+\texttt{tests/test\_w33\_fractal\_time\_expanded\_linebus\_20261023.py}
+tests 80 edges per slot, local graph degree,
+all fixed-path MOVE legality, arrival misalignment,
+phase-constrained shortest time, failure avoidance
+and source digest determinism.
+The six dedicated tests passed on the authorized
+Windows workstation. Neither photon storage hardware
+nor actual time-delay measurements are present.
+\end{document}
