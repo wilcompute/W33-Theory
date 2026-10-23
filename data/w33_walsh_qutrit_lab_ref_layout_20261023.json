@@ -1,0 +1,109 @@
+{
+  "DRC_passed": false,
+  "LVS_passed": false,
+  "PDK_selected": false,
+  "cell_name": "W33_WALSH_QUTRIT_LAB_REF",
+  "device_length_um": 850.0,
+  "experimental_aux_port": "output rail 0 after Walsh decoder (uniform character)",
+  "gds_bytes": 1858,
+  "gds_relative_path": "hardware/generated/w33_walsh_qutrit_lab_ref_20261023.gds",
+  "gds_sha256": "a6820e7c8e4926e4bc2689f221b6df1d42b300fc66b2c4d723b61e49cef56df2",
+  "layer_99": "SYMBOLIC BLOCK. No physical optical coupling implemented.",
+  "necessary_next_steps": [
+    "choose licensed PDK and process wavelength/polarization",
+    "replace each symbolic marker with optical compact-model backed MZI/directional coupler/crossing/cavity devices",
+    "physically route 3-cycle and 3-Givens F3 network",
+    "electrode driver/pad and thermal cross-talk extraction",
+    "calibrate all 4x4 complex S matrices over wavelength and temperature",
+    "foundry DRC/LVS and post-fabrication auxiliary leakage/tomography"
+  ],
+  "numerical_unitary_targets": [
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118184e-17,
+      "decoded_qutrit_unitarity_residual": 2.8166714830126257e-15,
+      "rail_threecycle": false,
+      "xor_mask": 0
+    },
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118177e-17,
+      "decoded_qutrit_unitarity_residual": 2.947690968412451e-15,
+      "rail_threecycle": true,
+      "xor_mask": 0
+    },
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118177e-17,
+      "decoded_qutrit_unitarity_residual": 2.7303154689101853e-15,
+      "rail_threecycle": false,
+      "xor_mask": 1
+    },
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118184e-17,
+      "decoded_qutrit_unitarity_residual": 2.5252226512751033e-15,
+      "rail_threecycle": true,
+      "xor_mask": 1
+    },
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118177e-17,
+      "decoded_qutrit_unitarity_residual": 2.8418128640488824e-15,
+      "rail_threecycle": false,
+      "xor_mask": 2
+    },
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118177e-17,
+      "decoded_qutrit_unitarity_residual": 2.7763867929638355e-15,
+      "rail_threecycle": true,
+      "xor_mask": 2
+    },
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118184e-17,
+      "decoded_qutrit_unitarity_residual": 2.7280658994175498e-15,
+      "rail_threecycle": false,
+      "xor_mask": 3
+    },
+    {
+      "decoded_aux_coherence_loss_exact": 6.206335383118184e-17,
+      "decoded_qutrit_unitarity_residual": 2.7206872959235354e-15,
+      "rail_threecycle": true,
+      "xor_mask": 3
+    }
+  ],
+  "optical_input_modes": 4,
+  "optical_output_modes": 4,
+  "photonic_nets_status": "SCHEMATIC_NOT_CONNECTED_FUNCTIONALLY",
+  "rail_pitch_um": 20.0,
+  "reference_width_um": 0.5,
+  "schema": "w33.walsh.qutrit.lab_ref_layout.v1",
+  "stages": [
+    {
+      "block": "WALSH_ENCODER",
+      "requires": "H2 tensor H2 4-mode couplers",
+      "x0": 72,
+      "x1": 154
+    },
+    {
+      "block": "XOR_V4_SWITCH",
+      "requires": "four tunable MZI or two fixed Walsh mixers and phase bank",
+      "x0": 184,
+      "x1": 282
+    },
+    {
+      "block": "S4_RAIL_3CYCLE",
+      "requires": "additional two rail swaps; not a V4 mode",
+      "x0": 320,
+      "x1": 430
+    },
+    {
+      "block": "ENCODED_F3",
+      "requires": "W diag(1,F3) W; 3 Givens plus phases within 3-mode tile",
+      "x0": 474,
+      "x1": 635
+    },
+    {
+      "block": "WALSH_DECODER",
+      "requires": "H2 tensor H2; aux monitoring",
+      "x0": 685,
+      "x1": 760
+    }
+  ],
+  "tapeout_ready": false
+}
