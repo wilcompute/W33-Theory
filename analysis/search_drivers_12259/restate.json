@@ -1,0 +1,22 @@
+{
+ "12163_third_torus": {
+  "models": 121,
+  "consistent": 57,
+  "three_gen": 52,
+  "three_gen_consistent": 20,
+  "scalar10": 0
+ },
+ "12182_third_torus": {
+  "models": 53,
+  "consistent": 31,
+  "three_gen": 21,
+  "three_gen_consistent": 12,
+  "scalar10": 0
+ },
+ "12223_twisted10": {
+  "models": 153,
+  "consistent": 88,
+  "three_gen_consistent": 32,
+  "six_gen_consistent": 56
+ }
+}

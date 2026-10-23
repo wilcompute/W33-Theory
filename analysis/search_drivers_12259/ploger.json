@@ -1,0 +1,32 @@
+{
+ "twisted10_C10_loaded": {
+  "models": 153,
+  "fully_consistent": 88,
+  "failure_patterns": {
+   "()": 88,
+   "('7f',)": 65
+  }
+ },
+ "A8_SMs": {
+  "models": 104,
+  "fully_consistent": 104,
+  "failure_patterns": {
+   "()": 104
+  }
+ },
+ "three_generation_bases_12111": {
+  "models": 9,
+  "fully_consistent": 9,
+  "failure_patterns": {
+   "()": 9
+  }
+ },
+ "flipscan2_SU5_models": {
+  "models": 163,
+  "fully_consistent": 86,
+  "failure_patterns": {
+   "()": 86,
+   "('7f',)": 77
+  }
+ }
+}

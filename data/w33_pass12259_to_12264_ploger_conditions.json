@@ -1,0 +1,63 @@
+{
+  "12259": {
+    "twisted10_C10_loaded": {
+      "models": 153,
+      "fully_consistent": 88,
+      "failure_patterns": {
+        "()": 88,
+        "('7f',)": 65
+      }
+    },
+    "A8_SMs": {
+      "models": 104,
+      "fully_consistent": 104,
+      "failure_patterns": {
+        "()": 104
+      }
+    },
+    "three_generation_bases_12111": {
+      "models": 9,
+      "fully_consistent": 9,
+      "failure_patterns": {
+        "()": 9
+      }
+    },
+    "flipscan2_SU5_models": {
+      "models": 163,
+      "fully_consistent": 86,
+      "failure_patterns": {
+        "()": 86,
+        "('7f',)": 77
+      }
+    }
+  },
+  "12261": {
+    "12163_third_torus": {
+      "models": 121,
+      "consistent": 57,
+      "three_gen": 52,
+      "three_gen_consistent": 20,
+      "scalar10": 0
+    },
+    "12182_third_torus": {
+      "models": 53,
+      "consistent": 31,
+      "three_gen": 21,
+      "three_gen_consistent": 12,
+      "scalar10": 0
+    },
+    "12223_twisted10": {
+      "models": 153,
+      "consistent": 88,
+      "three_gen_consistent": 32,
+      "six_gen_consistent": 56
+    }
+  },
+  "checks": {
+    "12259: the Ploger et al. text states (7d), (7f) mod 2 and derives them from Phi_vac^gcd = 1 (A.11)": true,
+    "12259: audit -- A8 104/104, 12111 bases 9/9, twisted-10 88/153, SU(5) scans 86/163; only (7f) fails": true,
+    "12261: restated -- 12163 57/121 (3-gen 20), 12182 31/53 (3-gen 12), 12223 88/153 (3-gen 32); scalar 10s 0": true,
+    "12262: note states the settled condition and cites hep-th/0702176": true
+  },
+  "all_checks_pass": true
+}
