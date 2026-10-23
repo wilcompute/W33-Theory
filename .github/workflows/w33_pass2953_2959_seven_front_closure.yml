@@ -1,0 +1,173 @@
+name: Passes 2953-2959 Seven-Front Closure
+
+on:
+  push:
+    branches: [agent/pass2953-2959-seven-front-closure]
+    paths:
+      - 'analysis/bt2953_2959_seven_front_closure.py'
+      - 'analysis/bt2953_2958_conjugacy_and_hard_shell_fourier.py'
+      - 'analysis/bt2954_2959_chirality_probe_and_mirror.py'
+      - 'analysis/bt2955_bayes_optimal_noisy_observer.py'
+      - 'analysis/bt2956_threecopy_css_closure.py'
+      - 'analysis/bt2957_rank7_hardware_verdict.py'
+      - 'analysis/BT2953_BT2959*'
+      - 'data/PART_BT2953_BT2959*'
+      - 'rtl/*2954*'
+      - 'rtl/*2957*'
+      - 'rtl/*2959*'
+      - 'tests/test_bt2953_2959*'
+      - 'tools/integrate_bt2953_bt2959_blueprint.py'
+      - '.github/workflows/w33_pass2953_2959_seven_front_closure.yml'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass2953-2959-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  exact-rtl-pnr-blueprint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      PYTHONUNBUFFERED: '1'
+      SOURCE_DATE_EPOCH: '1785715200'
+    steps:
+      - name: Check out writable branch head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Reconcile newest canonical master
+        run: |
+          git config user.name 'W33 evidence bot'
+          git config user.email 'noreply@github.com'
+          git fetch origin master
+          git merge --no-edit origin/master
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install exact dependencies
+        run: python -m pip install --upgrade pip numpy sympy pytest
+
+      - name: Syntax and frozen-evidence gate
+        run: |
+          python -m py_compile \
+            analysis/bt2953_2959_seven_front_closure.py \
+            analysis/bt2953_2958_conjugacy_and_hard_shell_fourier.py \
+            analysis/bt2954_2959_chirality_probe_and_mirror.py \
+            analysis/bt2955_bayes_optimal_noisy_observer.py \
+            analysis/bt2956_threecopy_css_closure.py \
+            analysis/bt2957_rank7_hardware_verdict.py \
+            tools/integrate_bt2953_bt2959_blueprint.py
+          pytest -q tests/test_bt2953_2959_seven_front_closure.py -k 'not blueprint'
+
+      - name: Execute all exact finite fronts
+        run: python analysis/bt2953_2959_seven_front_closure.py
+
+      - name: Rewrite the current blueprint twice
+        run: |
+          python tools/integrate_bt2953_bt2959_blueprint.py
+          python tools/integrate_bt2953_bt2959_blueprint.py
+          pytest -q tests/test_bt2953_2959_seven_front_closure.py
+          git diff --check
+
+      - name: Install FPGA tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys nextpnr-ice40 fpga-icestorm
+
+      - name: Exhaust chirality and rank RTL
+        run: |
+          mkdir -p analysis/evidence/pass2953_2959
+          iverilog -g2012 -s tb_w33_pass2954_2959_chirality_control \
+            -o /tmp/chirality.vvp \
+            rtl/w33_pass2954_chirality_probe_controller.sv \
+            rtl/w33_pass2959_chirality_mirror_metadata.sv \
+            rtl/tb_w33_pass2954_2959_chirality_control.sv
+          vvp /tmp/chirality.vvp | tee analysis/evidence/pass2953_2959/chirality_sim.log
+          grep -F 'PASS 24 probe outcomes and 6 reversible metadata states' analysis/evidence/pass2953_2959/chirality_sim.log
+          iverilog -g2012 -s tb_w33_pass2957_rank7_frame_engine \
+            -o /tmp/rank7.vvp \
+            rtl/w33_pass2957_rank7_frame_engine.sv \
+            rtl/tb_w33_pass2957_rank7_frame_engine.sv
+          vvp /tmp/rank7.vvp | tee analysis/evidence/pass2953_2959/rank7_sim.log
+          grep -F 'PASS 324/324 rank7 transitions' analysis/evidence/pass2953_2959/rank7_sim.log
+
+      - name: Same-harness synthesis and placement verdict
+        shell: bash
+        run: |
+          set -o pipefail
+          yosys -p 'read_verilog -sv rtl/w33_pass2957_rank7_frame_engine.sv; synth_ice40 -top w33_pass2957_rank7_frame_engine -json /tmp/rank7.json; stat' 2>&1 | tee analysis/evidence/pass2953_2959/rank7_yosys.log
+          yosys -p 'read_verilog -sv rtl/w33_pass2796_minimal_frame_engine.sv; synth_ice40 -top w33_minimal_frame_engine -json /tmp/base.json; stat' 2>&1 | tee analysis/evidence/pass2953_2959/base_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --freq 25 --json /tmp/rank7.json --asc /tmp/rank7.asc 2>&1 | tee analysis/evidence/pass2953_2959/rank7_pnr.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --freq 25 --json /tmp/base.json --asc /tmp/base.asc 2>&1 | tee analysis/evidence/pass2953_2959/base_pnr.log
+          python analysis/bt2957_rank7_hardware_verdict.py \
+            --rank-yosys analysis/evidence/pass2953_2959/rank7_yosys.log \
+            --base-yosys analysis/evidence/pass2953_2959/base_yosys.log \
+            --rank-pnr analysis/evidence/pass2953_2959/rank7_pnr.log \
+            --base-pnr analysis/evidence/pass2953_2959/base_pnr.log \
+            --output data/PART_BT2957_RANK7_HARDWARE_VERDICT_results.json
+
+      - uses: tectonic-typesetting/setup-tectonic@v1
+
+      - name: Compile blueprint twice and require clean byte identity
+        shell: bash
+        run: |
+          rm -f holonet_machine_blueprint.pdf holonet_machine_blueprint.log
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          cp holonet_machine_blueprint.pdf /tmp/blueprint.first.pdf
+          tectonic --keep-logs holonet_machine_blueprint.tex
+          cmp /tmp/blueprint.first.pdf holonet_machine_blueprint.pdf
+          test -s holonet_machine_blueprint.pdf
+          if grep -E 'Overfull|Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' holonet_machine_blueprint.log; then
+            echo 'release-blocking TeX or layout error'
+            exit 1
+          fi
+
+      - name: Drift-free rerun of quick fronts
+        run: |
+          python tools/integrate_bt2953_bt2959_blueprint.py
+          python analysis/bt2954_2959_chirality_probe_and_mirror.py
+          python analysis/bt2955_bayes_optimal_noisy_observer.py
+          pytest -q tests/test_bt2953_2959_seven_front_closure.py
+          git diff --check
+
+      - name: Freeze exact evidence, observed hardware, and PDF on head
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          git config user.name 'W33 evidence bot'
+          git config user.email 'noreply@github.com'
+          git add holonet_machine_blueprint.tex
+          git add -f holonet_machine_blueprint.pdf
+          git add data/PART_BT2953_*.json data/PART_BT2954_*.json data/PART_BT2955_*.json
+          git add data/PART_BT2956_*.json data/PART_BT2957_*.json data/PART_BT2958_*.json data/PART_BT2959_*.json
+          git add -f analysis/evidence/pass2953_2959/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 2953-2959: freeze exact evidence, hardware verdict and blueprint PDF'
+          fi
+          git push origin "HEAD:${TARGET_BRANCH}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass2953-2959-seven-front-closure
+          path: |
+            holonet_machine_blueprint.pdf
+            holonet_machine_blueprint.log
+            data/PART_BT2953_*.json
+            data/PART_BT2954_*.json
+            data/PART_BT2955_*.json
+            data/PART_BT2956_*.json
+            data/PART_BT2957_*.json
+            data/PART_BT2958_*.json
+            data/PART_BT2959_*.json
+            analysis/evidence/pass2953_2959/
