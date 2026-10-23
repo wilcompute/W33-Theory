@@ -292898,6 +292898,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1b125ad7a61031842e4f6232b44e9bf3524ec7c7a31af82165ad171b65426a0c",
+      "normalized_formula": "'W33_graph_phase_area_law':'allcontiguouscutsn>=2Schmidtprobabilities[0.16(1),0.04(15),0.01(24)];entropy4.803856bits'",
+      "numeric_literals": [
+        ".803856",
+        "0.01",
+        "0.04",
+        "0.16",
+        "1",
+        "15",
+        "2",
+        "24",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py",
+          "raw": "'W33_graph_phase_area_law':'all contiguous cuts n>=2 Schmidt probabilities [0.16 (1), 0.04 (15), 0.01 (24)]; entropy 4.803856 bits',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "815a7d2397e23c72c20f904c86246ae1df9ec9ea3b820693007e4fb100110239",
+      "structural_formula": "'W3#_graph_phase_area_law':'allcontiguouscutsn>=#Schmidtprobabilities[#(#),#(#),#(#)];entropy4#bits'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2998f069f2af00efbf150b28b67de4f5e0b02aa11638c6fbd74acb3c1cc5b2da",
       "normalized_formula": "'W33_singular_40_set':{'size':40,'all_singular':True,'spans_quotient':True,'pairing_rule':'B(e_p,e_q)=1iffp,qareadjacentinW33','interpretation':'W33isthenonorthogonalitygraphinducedonfortycanonicalsingularpoint-starclasses.'}",
       "numeric_literals": [
@@ -294422,6 +294457,39 @@
       },
       "structural_family_id": "10d91223df0a1791162baa420ca50d298b295f313924e5236e2a5e644b9e7902",
       "structural_formula": "'apex_adds_thirteenth_singlet':p['#']['module_bridge']['with_apex']={'J1':#,'J2':#,'J3':#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c17275a4303fc9e3a4b70fde754f3071b7d2806ffe4e75c4a6c0a90933bc52d5",
+      "normalized_formula": "'area_law':'Acrosseverysinglecontiguouscutatanyn>=2,the40nonzeroSchmidtprobabilitiesare{0.16x1,0.04x15,0.01x24},independentofnandcut'",
+      "numeric_literals": [
+        "0",
+        "0.01",
+        "0.04",
+        "0.16",
+        "2",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 104,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "'area_law':'Across every single contiguous cut at any n>=2, the 40 nonzero Schmidt probabilities are {0.16 x1, 0.04 x15, 0.01 x24}, independent of n and cut',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a98f811c1cbec7acc79710b6782b693353525e31bbfbd8c99fe9502b4b3e8645",
+      "structural_formula": "'area_law':'Acrosseverysinglecontiguouscutatanyn>=#,the4#nonzeroSchmidtprobabilitiesare{#x1,#x1#,#x2#},independentofnandcut'"
     },
     {
       "file_count": 1,
@@ -298989,6 +299057,33 @@
       },
       "structural_family_id": "f008d0a34c458794d727eae576f1b5c78d6ce283132e60deabc3481a61385ff6",
       "structural_formula": "'companion_values':[sp.simplify(companion.subs(x,e))foreinev]=[#,#,#,#,#]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fb45b0d6579b4f94a58d73112955ebb77fbd04bd03962b76aba76339820fbb1d",
+      "normalized_formula": "'comparewithall-plusproductnull(entropy=0)andrandom-phasenull'",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 111,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "'compare with all-plus product null (entropy=0) and random-phase null',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "32f5a949029654f8e2b0895dfe8157ab5689476c404b48cb8e4616fb260d1411",
+      "structural_formula": "'comparewithall-plusproductnull(entropy=#)andrandom-phasenull'"
     },
     {
       "file_count": 1,
@@ -305706,6 +305801,34 @@
       },
       "structural_family_id": "49f2ab550118c3f6bd18c8b386c806f097b61cb17fdfe93bd2e53495ab7299f2",
       "structural_formula": "'framed_link_alternative':'Bcanalsoberealizedby8#framedunknotcomponents,withdiagonalframingsBiiandsignedpairwiseHopfclaspsBij.Surgeryonachosenstandardrealizationgivesanamedclosed3-manifoldwithH1=cokerB;linkrealizationandorientationremainaddedchoices.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "67a55bc9bed27db43e1cb0d5ce11763debd2fa8cdf258de353996dc72cb35ae6",
+      "normalized_formula": "'fresh_time_GHZ_law':'path-vs-all-timeentropylog2(3)bitsateverydepth;forn>=2pairpath/time_0negativityzero'",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_self_entanglement_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 169,
+          "path": "analysis/w33_single_photon_recursive_self_entanglement_20261023.py",
+          "raw": "'fresh_time_GHZ_law':'path-vs-all-time entropy log2(3) bits at every depth; for n>=2 pair path/time_0 negativity zero',",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "8bc9c15bc11ef762d455c2cf7197cb6b679a97aaf291847185241962b437fe66",
+      "structural_formula": "'fresh_time_GHZ_law':'path-vs-all-timeentropylog2(#)bitsateverydepth;forn>=#pairpath/time_0negativityzero'"
     },
     {
       "file_count": 1,
@@ -316346,6 +316469,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7a3ec2b84cc3b5ac1aecc990e74048925165c4ffcac605498a0ed54eb72f98b5",
+      "normalized_formula": "'period3_reuse':'onephotoncontrolled-addreuseU^3=identity,self-modeentanglementvanishes'",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py",
+          "raw": "'period3_reuse':'one photon controlled-add reuse U^3=identity, self-mode entanglement vanishes',",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "302cfdc8631831e2f5a5586f81f224922e892eba8aac75b8fc05c8e151c7198e",
+      "structural_formula": "'period3_reuse':'onephotoncontrolled-addreuseU^#=identity,self-modeentanglementvanishes'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e21d79c754ffc9f9c12d57b6d95a850fb035277cb43c1d513fcededac9bda95b",
       "normalized_formula": "'petersen_missing_vertex_profile_3_each':missing=Counter({0:3,1:3,2:3,3:3,4:3})",
       "numeric_literals": [
@@ -322445,6 +322595,35 @@
       },
       "structural_family_id": "828af8d6a54d1fcdb6b4c839aab118b6767d556a5eb89aa59afd1a965e8ce4c2",
       "structural_formula": "'tested_coefficients':redesign,'minimum_integer_redesign':'reducethetrace2calibrationcoefficientfrom2to0,equivalentlygrantatwo-blockcovariance-calibrationcreditatkappa=#'}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "aea9e27e9770c93bda3fb60ce2205029942c04c78f18a94f086dedbab28a6ee0",
+      "normalized_formula": "'testn=3contiguouscuts:sameentropyoncut1|23and12|3']",
+      "numeric_literals": [
+        "2",
+        "23",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 112,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "'test n=3 contiguous cuts: same entropy on cut 1|23 and 12|3'],",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "55a148694f13b834fe50c3c43d8158ca41868da95f8fb5c5475941b206dca993",
+      "structural_formula": "'testn=#contiguouscuts:sameentropyoncut1|#and1#|#']"
     },
     {
       "file_count": 1,
@@ -747300,6 +747479,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "807ed245cd37cd22b0196a43b797e2baa113fd396744793a3095dda8d9f9a215",
+      "normalized_formula": "Onephoton'spathfactorhasthreeaddressesandthereusedtemporalfactorhasthreeorthogonalbins.Thecontrolled-addoperationsends(a,t)to(a,t+amodulo3).Startingfromequal-path-superpositiontensor|time0>,roundsoneandtwoproduce1.5849625-bitpath/timeentanglementandnegativity1;roundthreerestoresaproductstate.Thecompletecyclerepeatseverythreerounds.Thisisnotbackwardtimetravel",
+      "numeric_literals": [
+        ".5849625"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_single_photon_self_entanglement_recursion_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/2026-10-23_single_photon_self_entanglement_recursion_five_fronts.md",
+          "raw": "One photon's path factor has three addresses and the reused temporal factor has three orthogonal bins. The controlled-add operation sends (a,t) to (a,t+a modulo 3). Starting from equal-path-superposition tensor |time0>, rounds one and two produce 1.5849625-bit path/time entanglement and negativity 1; round three restores a product state. The complete cycle repeats every three rounds. This is not backward time travel.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6b2b5a6904ab48a0f5bad2fd0f8818a65890b743d7fa5febaa20f6c2b32e43bf",
+      "structural_formula": "Onephoton'spathfactorhasthreeaddressesandthereusedtemporalfactorhasthreeorthogonalbins.Thecontrolled-addoperationsends(a,t)to(a,t+amodulo3).Startingfromequal-path-superpositiontensor|time0>,roundsoneandtwoproduce1#-bitpath/timeentanglementandnegativity1;roundthreerestoresaproductstate.Thecompletecyclerepeatseverythreerounds.Thisisnotbackwardtimetravel"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6018936ad541c6333ef480ca5141fde415b025b28683cde9c86526ceebc19f89",
       "normalized_formula": "Oneveryonethesingleexoticd-tripletpairismasslesstoallordersandW|_S=0identically(the",
       "numeric_literals": [
@@ -772478,6 +772684,34 @@
       },
       "structural_family_id": "f6a278a863d756e67b6031fb285d6a3d706860990f03c619bf9f925e416529c0",
       "structural_formula": "ProvethattheW3#substratevacuum|#>isunique"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b7d6d298e94adf087882e99a8f81bf1c146eb7ecea7783e64d44b59df70b51b6",
+      "normalized_formula": "ProvidinggenuinelyfreshindependenttimetritsgivesaGHZ-typeone-photonmodestate:sum_a|a>pathtimes|a>time1through|a>timendividedbysqrt(3).Thepath-versus-all-timesentropyremainslog2(3)bitsateverydepth.Forn>=2anypath/single-timepairisseparableeventhoughthefullGHZstateiscoherent.Fourier-plusprojectionofallntimefactorssucceedswithprobability3^(-n).Conditionalpath-plusdetectionis1forthecoherentstateand1/3foritsequal-populationincoherentnull.A3^n-dimensionalindependenttemporaladdresssystemandphysicalsource/interferometriccontrolsarerequired;athree-binlabelreusedntimesisnotnindependentsubsystems",
+      "numeric_literals": [
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_single_photon_self_entanglement_recursion_five_fronts.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/2026-10-23_single_photon_self_entanglement_recursion_five_fronts.md",
+          "raw": "Providing genuinely fresh independent time trits gives a GHZ-type one-photon mode state: sum_a |a>path times |a>time1 through |a>timen divided by sqrt(3). The path-versus-all-times entropy remains log2(3) bits at every depth. For n>=2 any path/single-time pair is separable even though the full GHZ state is coherent. Fourier-plus projection of all n time factors succeeds with probability 3^(-n). Conditional path-plus detection is 1 for the coherent state and 1/3 for its equal-population incoherent null. A 3^n-dimensional independent temporal address system and physical source/interferometric controls are required; a three-bin label reused n times is not n independent subsystems.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "7d5a0d1cb678d73f3a182eed6639f22330b999e2607424d183754bf226761cda",
+      "structural_formula": "ProvidinggenuinelyfreshindependenttimetritsgivesaGHZ-typeone-photonmodestate:sum_a|a>pathtimes|a>time1through|a>timendividedbysqrt(#).Thepath-versus-all-timesentropyremainslog2(#)bitsateverydepth.Forn>=#anypath/single-timepairisseparableeventhoughthefullGHZstateiscoherent.Fourier-plusprojectionofallntimefactorssucceedswithprobability3^(-n).Conditionalpath-plusdetectionis1forthecoherentstateand1/#foritsequal-populationincoherentnull.A3^n-dimensionalindependenttemporaladdresssystemandphysicalsource/interferometriccontrolsarerequired;athree-binlabelreusedntimesisnotnindependentsubsystems"
     },
     {
       "file_count": 1,
@@ -800519,6 +800753,65 @@
       },
       "structural_family_id": "6663591b762b5b2d32ef3c9ae97fdc94583dd0b6be67e73b8785ac87f00342d9",
       "structural_formula": "Schl\u00e4fli/E6dual:complement->SRG(#,#,#,#),#lines/#tritangents/#double-sixes"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1cf3555285254671f3e2a638eb692edf41cb4916ee49412ae93814f3ab3e7157",
+      "normalized_formula": "Schmidt_rank=40,Schmidt_entropy_bits=entropy,Schmidt_purity=purity",
+      "numeric_literals": [
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "Schmidt_rank=40,Schmidt_entropy_bits=entropy,Schmidt_purity=purity,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e5178cfb3bd616f8d3a9502c434e86cf10827242087aef683e8507cb28e08cc7",
+      "structural_formula": "Schmidt_rank=#,Schmidt_entropy_bits=entropy,Schmidt_purity=purity"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "092e1ee7b4b582f1c34d452994013e5738a9d43b3a5acb159dfa4373157cce6b",
+      "normalized_formula": "Schmidt_singular_values={'0.4':1,'0.2':15,'0.1':24}",
+      "numeric_literals": [
+        "0.1",
+        "0.2",
+        "0.4",
+        "1",
+        "15",
+        "24"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "Schmidt_singular_values={'0.4':1,'0.2':15,'0.1':24},",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7b71b57fb59492491166fdc79cdbdb8a35ac858f1af08c55b6d8318c53035d8c",
+      "structural_formula": "Schmidt_singular_values={'#':#,'#':#,'#':#}"
     },
     {
       "file_count": 1,
@@ -1102199,6 +1102492,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0b727e096c8260814c683c11b7c9a3155bb17fc2c00101cd1103f4a6e0cf03a7",
+      "normalized_formula": "assert(abs(r['path_time_entropy_bits'])<1e-10)=r['separable']",
+      "numeric_literals": [
+        "1e-10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_self_entanglement_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 125,
+          "path": "analysis/w33_single_photon_recursive_self_entanglement_20261023.py",
+          "raw": "assert (abs(r['path_time_entropy_bits'])<1e-10)==r['separable']",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f8c7a9838f014e914c4c18c1e38638a9cfe2e489596e9b164338a595f615974a",
+      "structural_formula": "assert(abs(r['path_time_entropy_bits'])<#)=r['separable']"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f0642be5a425d0c0fafcffb627541f498a6bcbbf6d2d235185abf20ee86dbc76",
       "normalized_formula": "assert(alpha-beta)",
       "numeric_literals": [],
@@ -1107491,6 +1107811,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3ead80ccba86b7dea00001d4f897c726c44d3dddc1c04e84fcd56eb62e3a1549",
+      "normalized_formula": "assertabs(boson['ideal_full_swap_end_state']['qutrit_code_postselected_success_probability']-.5)<1e-10",
+      "numeric_literals": [
+        "-.5",
+        "1e-10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py",
+          "raw": "assert abs(boson['ideal_full_swap_end_state']['qutrit_code_postselected_success_probability']-.5)<1e-10",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8a2c68a2deb34fb821ed6e25e4e37012792bdd0b2b29efb524a40aa864dc5f82",
+      "structural_formula": "assertabs(boson['ideal_full_swap_end_state']['qutrit_code_postselected_success_probability']#)<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3c1653593ce756bb5a09d3cfff7f0cfd0097a2922b2fe1c75c75e1f0379f335a",
       "normalized_formula": "assertabs(cases[\"generic_random\"][\"variance\"]-cases[\"product_theta\"][\"variance\"])>1e-4",
       "numeric_literals": [
@@ -1107543,6 +1107891,34 @@
       },
       "structural_family_id": "857523a7bb1ee37d3d5929c45df22cee28a4de1d7325f3e47e1e09fedd2f9247",
       "structural_formula": "assertabs(cc_meV+vq)<#andcc_TeV>#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "662f2a7377891ac8baf3494ff27e356110c19b757ba1855788c0834088bdf508",
+      "normalized_formula": "assertabs(choi_rows[-1]['choi_pure_negativity']-1)<1e-11",
+      "numeric_literals": [
+        "-1",
+        "1e-11"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_self_entanglement_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 154,
+          "path": "analysis/w33_single_photon_recursive_self_entanglement_20261023.py",
+          "raw": "assert abs(choi_rows[-1]['choi_pure_negativity']-1)<1e-11",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d90400231d64b6898363d20329ef81d18fc5961ee69324803973c4dfd13b8c40",
+      "structural_formula": "assertabs(choi_rows[#]['choi_pure_negativity']#)<#"
     },
     {
       "file_count": 1,
@@ -1109086,6 +1109462,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bfec2440bbfe5b324d854283bee39d366565ffe6ac0e360dc3598189bdaee9bb",
+      "normalized_formula": "assertabs(negativity(channel_choi_dephase(n,lam),3,3)-lam^n)<1e-10",
+      "numeric_literals": [
+        "1e-10",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_self_entanglement_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 157,
+          "path": "analysis/w33_single_photon_recursive_self_entanglement_20261023.py",
+          "raw": "assert abs(negativity(channel_choi_dephase(n,lam),3,3)-lam**n)<1e-10",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "124cd2d8615060ca5f6e3e37e3a562a8f91467f573fbbc866f0566c38ae15db7",
+      "structural_formula": "assertabs(negativity(channel_choi_dephase(n,lam),#,#)-lam^n)<#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "51d5ec883b2e89cf71a5ac0dc729cacafffe39746643312203d9603abca3a00a",
       "normalized_formula": "assertabs(np.sum(np.sign(ev)))<1e-9",
       "numeric_literals": [
@@ -1110623,6 +1111027,34 @@
       },
       "structural_family_id": "e10953c90addc6f86492e383fe9441dbf2e884efde5224c0a678c57b4b061325",
       "structural_formula": "assertabs(trials[#][\"arm_sum_modulus\"])<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "75285ab934b621eb6b5bde9b20b2ba21a3895e2a199e560a4d19533bd9983195",
+      "normalized_formula": "assertabs(vn_entropy(tr)-math.log2(3))<1e-12",
+      "numeric_literals": [
+        "1e-12",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_self_entanglement_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 132,
+          "path": "analysis/w33_single_photon_recursive_self_entanglement_20261023.py",
+          "raw": "assert abs(vn_entropy(tr)-math.log2(3))<1e-12",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "de1e4279688096c14295241f90a2623543d887636e80b2e3328ce1194ef708d1",
+      "structural_formula": "assertabs(vn_entropy(tr)-math.log2(#))<#"
     },
     {
       "file_count": 1,
@@ -1130723,6 +1131155,33 @@
       },
       "structural_family_id": "5e4c872c96e4af60ac7b57ab8bb9ae56aa18776a8413da7d3f0611100fb112b1",
       "structural_formula": "assertnp.allclose(rotated[\"up_masses\"],canonical[\"up_masses\"],atol=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c9e916f9c1f8ec702724f148686dee103a0da075bc19cf8f43f026026a46eedb",
+      "normalized_formula": "assertnp.allclose(singular,expected,atol=1e-12)",
+      "numeric_literals": [
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 41,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "assert np.allclose(singular,expected,atol=1e-12)",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "64f8639be3e554462674b468fe0d7f7819ceb73039fb433077d1ff81ae5e503f",
+      "structural_formula": "assertnp.allclose(singular,expected,atol=#)"
     },
     {
       "file_count": 1,
@@ -1154243,6 +1154702,34 @@
       },
       "structural_family_id": "eacebabe0ee59edae9cb9025a62ead8a48b308d184e6cbcb6784182a74c6d49c",
       "structural_formula": "boson-fermionimbalance(bosonicloopsa>#,adjointfermionsa<#,SUSYa=#)andbisthesoftscalarmass^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c6a0ad7477dcef1a37da3156d789655b6c380e84856f12edd1b2472cffe42794",
+      "normalized_formula": "boson=load('data/w33_walsh_two_photon_postselected_entangler_20261023.json')",
+      "numeric_literals": [
+        "0261023",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py",
+          "raw": "boson=load('data/w33_walsh_two_photon_postselected_entangler_20261023.json')",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c4bab70e1208f1c985ad55ce04c9573474f899abce7b74078190cc93338fa8fe",
+      "structural_formula": "boson=load('data/w3#_walsh_two_photon_postselected_entangler_2#.json')"
     },
     {
       "file_count": 1,
@@ -1278793,6 +1279280,33 @@
       },
       "structural_family_id": "1f462f3a0dc7a835deb09622d769b587913f9e12360bfef1a4747fcca3e3b7c5",
       "structural_formula": "entropy_0=v*math.log(#)##\u00d7#...\u2248#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4c485aea97be64ae9dc5870c2beab73204a0410f6ea4a88714c0b77df9a994de",
+      "normalized_formula": "entropy_deficit_bits=math.log2(40)-entropy)",
+      "numeric_literals": [
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 55,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "entropy_deficit_bits=math.log2(40)-entropy)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c2ffa0442ee414c8f9d12ba96fd761bc6df7dd69ec125582a6760056ef2f14cb",
+      "structural_formula": "entropy_deficit_bits=math.log2(#)-entropy)"
     },
     {
       "file_count": 1,
@@ -1448299,6 +1448813,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ecc0a8184a89e12cdd634d47cbf934239ca5971328ebbe637a2bee1695e3cfbf",
+      "normalized_formula": "maximal_40_dim_entropy_bits=math.log2(40)",
+      "numeric_literals": [
+        "0",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "maximal_40_dim_entropy_bits=math.log2(40),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cc6b3f2f860fce51061e8e35f64b687cc57b9f2469cce01af65a8e7e95e190a5",
+      "structural_formula": "maximal_4#_dim_entropy_bits=math.log2(#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "292d94e498df76d89a52dbe53bdcf8320b1fd4037f8543d7e0d9d01d7832f0ef",
       "normalized_formula": "maximal_cliques=tuple(sorted(tuple(sorted(c))forcinnx.find_cliques(nx.from_numpy_array(a45))))",
       "numeric_literals": [
@@ -1511586,6 +1512128,62 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fae39b982b6dc5806886753da14430bc1b86e2b6fb1d450f1249fa18b7e37a06",
+      "normalized_formula": "p=ROOT/'data/w33_single_photon_recursive_five_fronts_acceptance_20261023.json'",
+      "numeric_literals": [
+        "0261023",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 117,
+          "path": "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py",
+          "raw": "p=ROOT/'data/w33_single_photon_recursive_five_fronts_acceptance_20261023.json'",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "062d20b8e911d375fa165dccb2acaccf636a3d33cc0500dfdd062067ec982e90",
+      "structural_formula": "p=ROOT/'data/w3#_single_photon_recursive_five_fronts_acceptance_2#.json'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8dbf2349c9ab5f3110cc8a5c0ea03679bc8c46d07de7ecf1cda3f6b00db299b8",
+      "normalized_formula": "p=ROOT/'data/w33_single_photon_recursive_graph_phase_area_law_20261023.json'",
+      "numeric_literals": [
+        "0261023",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 122,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "p=ROOT/'data/w33_single_photon_recursive_graph_phase_area_law_20261023.json'",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a33835fa1d9dc30ae4a09efea920b2399011f61f8ae3a358b5b4aa1ff7853dd3",
+      "structural_formula": "p=ROOT/'data/w3#_single_photon_recursive_graph_phase_area_law_2#.json'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "07764674b815e86095e1403927cf990c43c886e8c579b452ffcd90707b53c6bf",
       "normalized_formula": "p=ROOT/'data/w33_walsh_two_photon_postselected_entangler_20261023.json'",
       "numeric_literals": [
@@ -1519557,6 +1520155,34 @@
       },
       "structural_family_id": "7edad9ca8cfdc13335b8c21dc7e2f833477b36df7fbe569873a5f80510f16b30",
       "structural_formula": "path=ROOT/'data/w3#_pass1#_native_adm_weights.json'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "13f729afb3b2a42325b534f8d1820127305131f57c8918d3527de8db404aab99",
+      "normalized_formula": "path=ROOT/'data/w33_single_photon_recursive_self_entanglement_20261023.json'",
+      "numeric_literals": [
+        "0261023",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_self_entanglement_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 194,
+          "path": "analysis/w33_single_photon_recursive_self_entanglement_20261023.py",
+          "raw": "path=ROOT/'data/w33_single_photon_recursive_self_entanglement_20261023.json'",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "d01fb8539ee0b7ac5035f3648c4f9619729a13829b6a2628d7ffaf72711f6f29",
+      "structural_formula": "path=ROOT/'data/w3#_single_photon_recursive_self_entanglement_2#.json'"
     },
     {
       "file_count": 1,
@@ -1687610,6 +1688236,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7781509fc180902076f3351b5aa7f99cf9e16c0967d184c005713fb76d4311a1",
+      "normalized_formula": "result={'schema':'w33.single_photon.self_recursive_five_fronts_acceptance.v1'",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 95,
+          "path": "analysis/w33_single_photon_recursive_five_fronts_acceptance_20261023.py",
+          "raw": "result={'schema':'w33.single_photon.self_recursive_five_fronts_acceptance.v1',",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "6f79233568aa738f96dfb373eea12dd80dabc7923abe4e1831095a438b7ec729",
+      "structural_formula": "result={'schema':'w3#.single_photon.self_recursive_five_fronts_acceptance.v1'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "41d834febefc7bd68834c7276d300a11a962eaac4c4986939906e62749977061",
       "normalized_formula": "result[\"F20_H1_no_order_three_character_if_zero\"]=result[\"F20\"][\"dim_H1_F3_invariant_under_group\"]=0",
       "numeric_literals": [
@@ -1741292,6 +1741945,33 @@
       },
       "structural_family_id": "54427c1c9526d0057e3abff75c736d3df5d3f25e97983d6208e4313a0eabf71d",
       "structural_formula": "singular=np.linalg.svd(H[:#,#:],compute_uv=False)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cbee6977a519e79daf9cd5389dc7e163d47278095fb920e3563a4888c7d29ca7",
+      "normalized_formula": "singular=np.linalg.svd(S/40,compute_uv=False)",
+      "numeric_literals": [
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 39,
+          "path": "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py",
+          "raw": "singular=np.linalg.svd(S/40,compute_uv=False)",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "d5b18cc7f5fab93601028905f6665564bf7ad7479b4c88c7cc85bdc2ed81dc04",
+      "structural_formula": "singular=np.linalg.svd(S/#,compute_uv=False)"
     },
     {
       "file_count": 4,
@@ -1888646,9 +1889326,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T19:31:41-04:00",
+  "frozen_at": "2026-10-23T19:53:26-04:00",
   "pass": 398,
-  "repository_head": "3480729b49b65ed7882b70c405e10fb075ce8781",
+  "repository_head": "e177ae747e3ab440535252b0e9ffb0d40bcf25db",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1991249,6 +1991929,14 @@
     },
     {
       "exact_formula_ids": [
+        "1b125ad7a61031842e4f6232b44e9bf3524ec7c7a31af82165ad171b65426a0c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "815a7d2397e23c72c20f904c86246ae1df9ec9ea3b820693007e4fb100110239",
+      "structural_formula": "'W3#_graph_phase_area_law':'allcontiguouscutsn>=#Schmidtprobabilities[#(#),#(#),#(#)];entropy4#bits'"
+    },
+    {
+      "exact_formula_ids": [
         "2998f069f2af00efbf150b28b67de4f5e0b02aa11638c6fbd74acb3c1cc5b2da"
       ],
       "exact_member_count": 1,
@@ -1991670,6 +1992358,14 @@
       "exact_member_count": 1,
       "structural_family_id": "10d91223df0a1791162baa420ca50d298b295f313924e5236e2a5e644b9e7902",
       "structural_formula": "'apex_adds_thirteenth_singlet':p['#']['module_bridge']['with_apex']={'J1':#,'J2':#,'J3':#}"
+    },
+    {
+      "exact_formula_ids": [
+        "c17275a4303fc9e3a4b70fde754f3071b7d2806ffe4e75c4a6c0a90933bc52d5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a98f811c1cbec7acc79710b6782b693353525e31bbfbd8c99fe9502b4b3e8645",
+      "structural_formula": "'area_law':'Acrosseverysinglecontiguouscutatanyn>=#,the4#nonzeroSchmidtprobabilitiesare{#x1,#x1#,#x2#},independentofnandcut'"
     },
     {
       "exact_formula_ids": [
@@ -1992877,6 +1993573,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f008d0a34c458794d727eae576f1b5c78d6ce283132e60deabc3481a61385ff6",
       "structural_formula": "'companion_values':[sp.simplify(companion.subs(x,e))foreinev]=[#,#,#,#,#]"
+    },
+    {
+      "exact_formula_ids": [
+        "fb45b0d6579b4f94a58d73112955ebb77fbd04bd03962b76aba76339820fbb1d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "32f5a949029654f8e2b0895dfe8157ab5689476c404b48cb8e4616fb260d1411",
+      "structural_formula": "'comparewithall-plusproductnull(entropy=#)andrandom-phasenull'"
     },
     {
       "exact_formula_ids": [
@@ -1994717,6 +1995421,14 @@
       "exact_member_count": 1,
       "structural_family_id": "49f2ab550118c3f6bd18c8b386c806f097b61cb17fdfe93bd2e53495ab7299f2",
       "structural_formula": "'framed_link_alternative':'Bcanalsoberealizedby8#framedunknotcomponents,withdiagonalframingsBiiandsignedpairwiseHopfclaspsBij.Surgeryonachosenstandardrealizationgivesanamedclosed3-manifoldwithH1=cokerB;linkrealizationandorientationremainaddedchoices.'"
+    },
+    {
+      "exact_formula_ids": [
+        "67a55bc9bed27db43e1cb0d5ce11763debd2fa8cdf258de353996dc72cb35ae6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8bc9c15bc11ef762d455c2cf7197cb6b679a97aaf291847185241962b437fe66",
+      "structural_formula": "'fresh_time_GHZ_law':'path-vs-all-timeentropylog2(#)bitsateverydepth;forn>=#pairpath/time_0negativityzero'"
     },
     {
       "exact_formula_ids": [
@@ -1997640,6 +1998352,14 @@
     },
     {
       "exact_formula_ids": [
+        "7a3ec2b84cc3b5ac1aecc990e74048925165c4ffcac605498a0ed54eb72f98b5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "302cfdc8631831e2f5a5586f81f224922e892eba8aac75b8fc05c8e151c7198e",
+      "structural_formula": "'period3_reuse':'onephotoncontrolled-addreuseU^#=identity,self-modeentanglementvanishes'"
+    },
+    {
+      "exact_formula_ids": [
         "e21d79c754ffc9f9c12d57b6d95a850fb035277cb43c1d513fcededac9bda95b"
       ],
       "exact_member_count": 1,
@@ -1999341,6 +2000061,14 @@
       "exact_member_count": 1,
       "structural_family_id": "828af8d6a54d1fcdb6b4c839aab118b6767d556a5eb89aa59afd1a965e8ce4c2",
       "structural_formula": "'tested_coefficients':redesign,'minimum_integer_redesign':'reducethetrace2calibrationcoefficientfrom2to0,equivalentlygrantatwo-blockcovariance-calibrationcreditatkappa=#'}"
+    },
+    {
+      "exact_formula_ids": [
+        "aea9e27e9770c93bda3fb60ce2205029942c04c78f18a94f086dedbab28a6ee0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "55a148694f13b834fe50c3c43d8158ca41868da95f8fb5c5475941b206dca993",
+      "structural_formula": "'testn=#contiguouscuts:sameentropyoncut1|#and1#|#']"
     },
     {
       "exact_formula_ids": [
@@ -2090104,6 +2090832,14 @@
     },
     {
       "exact_formula_ids": [
+        "807ed245cd37cd22b0196a43b797e2baa113fd396744793a3095dda8d9f9a215"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6b2b5a6904ab48a0f5bad2fd0f8818a65890b743d7fa5febaa20f6c2b32e43bf",
+      "structural_formula": "Onephoton'spathfactorhasthreeaddressesandthereusedtemporalfactorhasthreeorthogonalbins.Thecontrolled-addoperationsends(a,t)to(a,t+amodulo3).Startingfromequal-path-superpositiontensor|time0>,roundsoneandtwoproduce1#-bitpath/timeentanglementandnegativity1;roundthreerestoresaproductstate.Thecompletecyclerepeatseverythreerounds.Thisisnotbackwardtimetravel"
+    },
+    {
+      "exact_formula_ids": [
         "6018936ad541c6333ef480ca5141fde415b025b28683cde9c86526ceebc19f89"
       ],
       "exact_member_count": 1,
@@ -2096719,6 +2097455,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f6a278a863d756e67b6031fb285d6a3d706860990f03c619bf9f925e416529c0",
       "structural_formula": "ProvethattheW3#substratevacuum|#>isunique"
+    },
+    {
+      "exact_formula_ids": [
+        "b7d6d298e94adf087882e99a8f81bf1c146eb7ecea7783e64d44b59df70b51b6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7d5a0d1cb678d73f3a182eed6639f22330b999e2607424d183754bf226761cda",
+      "structural_formula": "ProvidinggenuinelyfreshindependenttimetritsgivesaGHZ-typeone-photonmodestate:sum_a|a>pathtimes|a>time1through|a>timendividedbysqrt(#).Thepath-versus-all-timesentropyremainslog2(#)bitsateverydepth.Forn>=#anypath/single-timepairisseparableeventhoughthefullGHZstateiscoherent.Fourier-plusprojectionofallntimefactorssucceedswithprobability3^(-n).Conditionalpath-plusdetectionis1forthecoherentstateand1/#foritsequal-populationincoherentnull.A3^n-dimensionalindependenttemporaladdresssystemandphysicalsource/interferometriccontrolsarerequired;athree-binlabelreusedntimesisnotnindependentsubsystems"
     },
     {
       "exact_formula_ids": [
@@ -2104284,6 +2105028,22 @@
       "exact_member_count": 1,
       "structural_family_id": "6663591b762b5b2d32ef3c9ae97fdc94583dd0b6be67e73b8785ac87f00342d9",
       "structural_formula": "Schl\u00e4fli/E6dual:complement->SRG(#,#,#,#),#lines/#tritangents/#double-sixes"
+    },
+    {
+      "exact_formula_ids": [
+        "1cf3555285254671f3e2a638eb692edf41cb4916ee49412ae93814f3ab3e7157"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e5178cfb3bd616f8d3a9502c434e86cf10827242087aef683e8507cb28e08cc7",
+      "structural_formula": "Schmidt_rank=#,Schmidt_entropy_bits=entropy,Schmidt_purity=purity"
+    },
+    {
+      "exact_formula_ids": [
+        "092e1ee7b4b582f1c34d452994013e5738a9d43b3a5acb159dfa4373157cce6b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7b71b57fb59492491166fdc79cdbdb8a35ac858f1af08c55b6d8318c53035d8c",
+      "structural_formula": "Schmidt_singular_values={'#':#,'#':#,'#':#}"
     },
     {
       "exact_formula_ids": [
@@ -2182692,6 +2183452,14 @@
     },
     {
       "exact_formula_ids": [
+        "0b727e096c8260814c683c11b7c9a3155bb17fc2c00101cd1103f4a6e0cf03a7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f8c7a9838f014e914c4c18c1e38638a9cfe2e489596e9b164338a595f615974a",
+      "structural_formula": "assert(abs(r['path_time_entropy_bits'])<#)=r['separable']"
+    },
+    {
+      "exact_formula_ids": [
         "f0642be5a425d0c0fafcffb627541f498a6bcbbf6d2d235185abf20ee86dbc76"
       ],
       "exact_member_count": 1,
@@ -2184144,6 +2184912,14 @@
     },
     {
       "exact_formula_ids": [
+        "3ead80ccba86b7dea00001d4f897c726c44d3dddc1c04e84fcd56eb62e3a1549"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8a2c68a2deb34fb821ed6e25e4e37012792bdd0b2b29efb524a40aa864dc5f82",
+      "structural_formula": "assertabs(boson['ideal_full_swap_end_state']['qutrit_code_postselected_success_probability']#)<#"
+    },
+    {
+      "exact_formula_ids": [
         "3c1653593ce756bb5a09d3cfff7f0cfd0097a2922b2fe1c75c75e1f0379f335a"
       ],
       "exact_member_count": 1,
@@ -2184157,6 +2184933,14 @@
       "exact_member_count": 1,
       "structural_family_id": "857523a7bb1ee37d3d5929c45df22cee28a4de1d7325f3e47e1e09fedd2f9247",
       "structural_formula": "assertabs(cc_meV+vq)<#andcc_TeV>#"
+    },
+    {
+      "exact_formula_ids": [
+        "662f2a7377891ac8baf3494ff27e356110c19b757ba1855788c0834088bdf508"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d90400231d64b6898363d20329ef81d18fc5961ee69324803973c4dfd13b8c40",
+      "structural_formula": "assertabs(choi_rows[#]['choi_pure_negativity']#)<#"
     },
     {
       "exact_formula_ids": [
@@ -2184600,6 +2185384,14 @@
     },
     {
       "exact_formula_ids": [
+        "bfec2440bbfe5b324d854283bee39d366565ffe6ac0e360dc3598189bdaee9bb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "124cd2d8615060ca5f6e3e37e3a562a8f91467f573fbbc866f0566c38ae15db7",
+      "structural_formula": "assertabs(negativity(channel_choi_dephase(n,lam),#,#)-lam^n)<#"
+    },
+    {
+      "exact_formula_ids": [
         "51d5ec883b2e89cf71a5ac0dc729cacafffe39746643312203d9603abca3a00a"
       ],
       "exact_member_count": 1,
@@ -2185022,6 +2185814,14 @@
       "exact_member_count": 2,
       "structural_family_id": "e10953c90addc6f86492e383fe9441dbf2e884efde5224c0a678c57b4b061325",
       "structural_formula": "assertabs(trials[#][\"arm_sum_modulus\"])<#"
+    },
+    {
+      "exact_formula_ids": [
+        "75285ab934b621eb6b5bde9b20b2ba21a3895e2a199e560a4d19533bd9983195"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "de1e4279688096c14295241f90a2623543d887636e80b2e3328ce1194ef708d1",
+      "structural_formula": "assertabs(vn_entropy(tr)-math.log2(#))<#"
     },
     {
       "exact_formula_ids": [
@@ -2190534,6 +2191334,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5e4c872c96e4af60ac7b57ab8bb9ae56aa18776a8413da7d3f0611100fb112b1",
       "structural_formula": "assertnp.allclose(rotated[\"up_masses\"],canonical[\"up_masses\"],atol=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "c9e916f9c1f8ec702724f148686dee103a0da075bc19cf8f43f026026a46eedb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "64f8639be3e554462674b468fe0d7f7819ceb73039fb433077d1ff81ae5e503f",
+      "structural_formula": "assertnp.allclose(singular,expected,atol=#)"
     },
     {
       "exact_formula_ids": [
@@ -2196921,6 +2197729,14 @@
       "exact_member_count": 1,
       "structural_family_id": "eacebabe0ee59edae9cb9025a62ead8a48b308d184e6cbcb6784182a74c6d49c",
       "structural_formula": "boson-fermionimbalance(bosonicloopsa>#,adjointfermionsa<#,SUSYa=#)andbisthesoftscalarmass^#"
+    },
+    {
+      "exact_formula_ids": [
+        "c6a0ad7477dcef1a37da3156d789655b6c380e84856f12edd1b2472cffe42794"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c4bab70e1208f1c985ad55ce04c9573474f899abce7b74078190cc93338fa8fe",
+      "structural_formula": "boson=load('data/w3#_walsh_two_photon_postselected_entangler_2#.json')"
     },
     {
       "exact_formula_ids": [
@@ -2231134,6 +2231950,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1f462f3a0dc7a835deb09622d769b587913f9e12360bfef1a4747fcca3e3b7c5",
       "structural_formula": "entropy_0=v*math.log(#)##\u00d7#...\u2248#"
+    },
+    {
+      "exact_formula_ids": [
+        "4c485aea97be64ae9dc5870c2beab73204a0410f6ea4a88714c0b77df9a994de"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c2ffa0442ee414c8f9d12ba96fd761bc6df7dd69ec125582a6760056ef2f14cb",
+      "structural_formula": "entropy_deficit_bits=math.log2(#)-entropy)"
     },
     {
       "exact_formula_ids": [
@@ -2276765,6 +2277589,14 @@
     },
     {
       "exact_formula_ids": [
+        "ecc0a8184a89e12cdd634d47cbf934239ca5971328ebbe637a2bee1695e3cfbf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cc6b3f2f860fce51061e8e35f64b687cc57b9f2469cce01af65a8e7e95e190a5",
+      "structural_formula": "maximal_4#_dim_entropy_bits=math.log2(#)"
+    },
+    {
+      "exact_formula_ids": [
         "292d94e498df76d89a52dbe53bdcf8320b1fd4037f8543d7e0d9d01d7832f0ef"
       ],
       "exact_member_count": 1,
@@ -2293680,6 +2294512,22 @@
     },
     {
       "exact_formula_ids": [
+        "fae39b982b6dc5806886753da14430bc1b86e2b6fb1d450f1249fa18b7e37a06"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "062d20b8e911d375fa165dccb2acaccf636a3d33cc0500dfdd062067ec982e90",
+      "structural_formula": "p=ROOT/'data/w3#_single_photon_recursive_five_fronts_acceptance_2#.json'"
+    },
+    {
+      "exact_formula_ids": [
+        "8dbf2349c9ab5f3110cc8a5c0ea03679bc8c46d07de7ecf1cda3f6b00db299b8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a33835fa1d9dc30ae4a09efea920b2399011f61f8ae3a358b5b4aa1ff7853dd3",
+      "structural_formula": "p=ROOT/'data/w3#_single_photon_recursive_graph_phase_area_law_2#.json'"
+    },
+    {
+      "exact_formula_ids": [
         "07764674b815e86095e1403927cf990c43c886e8c579b452ffcd90707b53c6bf"
       ],
       "exact_member_count": 1,
@@ -2295865,6 +2296713,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7edad9ca8cfdc13335b8c21dc7e2f833477b36df7fbe569873a5f80510f16b30",
       "structural_formula": "path=ROOT/'data/w3#_pass1#_native_adm_weights.json'"
+    },
+    {
+      "exact_formula_ids": [
+        "13f729afb3b2a42325b534f8d1820127305131f57c8918d3527de8db404aab99"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d01fb8539ee0b7ac5035f3648c4f9619729a13829b6a2628d7ffaf72711f6f29",
+      "structural_formula": "path=ROOT/'data/w3#_single_photon_recursive_self_entanglement_2#.json'"
     },
     {
       "exact_formula_ids": [
@@ -2340139,6 +2340995,14 @@
     },
     {
       "exact_formula_ids": [
+        "7781509fc180902076f3351b5aa7f99cf9e16c0967d184c005713fb76d4311a1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6f79233568aa738f96dfb373eea12dd80dabc7923abe4e1831095a438b7ec729",
+      "structural_formula": "result={'schema':'w3#.single_photon.self_recursive_five_fronts_acceptance.v1'"
+    },
+    {
+      "exact_formula_ids": [
         "41d834febefc7bd68834c7276d300a11a962eaac4c4986939906e62749977061"
       ],
       "exact_member_count": 1,
@@ -2354599,6 +2355463,14 @@
       "exact_member_count": 1,
       "structural_family_id": "54427c1c9526d0057e3abff75c736d3df5d3f25e97983d6208e4313a0eabf71d",
       "structural_formula": "singular=np.linalg.svd(H[:#,#:],compute_uv=False)"
+    },
+    {
+      "exact_formula_ids": [
+        "cbee6977a519e79daf9cd5389dc7e163d47278095fb920e3563a4888c7d29ca7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d5b18cc7f5fab93601028905f6665564bf7ad7479b4c88c7cc85bdc2ed81dc04",
+      "structural_formula": "singular=np.linalg.svd(S/#,compute_uv=False)"
     },
     {
       "exact_formula_ids": [
@@ -2393341,20 +2394213,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91648926,
-    "exact_formula_families": 64571,
-    "files_scanned": 12613,
-    "formula_occurrences": 70694,
+    "bytes_scanned": 91680646,
+    "exact_formula_families": 64595,
+    "files_scanned": 12617,
+    "formula_occurrences": 70718,
     "status_occurrences": {
-      "certified_or_theorem": 5301,
-      "killed_or_retracted": 1879,
-      "open_or_conditional": 2379,
+      "certified_or_theorem": 5302,
+      "killed_or_retracted": 1881,
+      "open_or_conditional": 2381,
       "preregistered": 36,
-      "retrospective_fit": 5404,
-      "unclassified": 55695
+      "retrospective_fit": 5406,
+      "unclassified": 55712
     },
-    "structural_families": 62868
+    "structural_families": 62892
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "b15108a4043e3ad90a7eb58241b08981344efed5de818740c30aad993443520e"
+  "universe_sha256": "7961105bf8ae2b377f4d9e581b4d823bc65494e215705c85fd97c6f9c7642c1c"
 }
