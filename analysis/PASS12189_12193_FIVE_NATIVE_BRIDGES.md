@@ -167,6 +167,39 @@ six-dimensional fitted-theta fibre and its counterterm boundary);
 The standard cubic construction is described in the primary mathematical
 source https://mahalex.net/about-me/publications/minie6.pdf.
 
+### A concrete antiunitary exchanges the two integral polarities
+
+The actual original-lattice matrix
+
+```
+K=[[1,0,1, 1],
+   [0,1,1, 1],
+   [0,0,0,-1],
+   [0,0,-1,0]]
+```
+
+has K²=I, detK=−1 and **K^T F(1,0) K=F(1,−2)**. Its repaired matrix
+S^-1 K S is also integral and stored in the certificate. Thus this is an
+actual element of both full integral normalizers, not merely a comparison
+of their orbit counts. The repaired texture map is explicitly y→Y(Sy).
+
+Its action on the coefficient rows is
+alpha(Kx)=omega² conjugate(alpha(x)), beta(Kx)=beta(x), giving
+
+```
+Y(Kx)=Z² conjugate(Y(x)) Z^(-2).
+Theta=Z² complex_conjugation, Theta²=I.
+Theta W(a,b,c) Theta^-1 = W(a,−b,−c+2a).
+```
+
+All27 address identities and generic texture/cubic controls are checked.
+Consequently the two integrally liftable polarities are **antiunitarily
+isospectral**, with identical real determinant and minimal F/D, isotropic
+soft-mass and real-cubic soft potentials. Switching between them alone
+cannot generate different texture hierarchies. This supplies the missing
+explicit polarity-to-operator map; it does not identify Theta as physical
+time reversal, select a chirality, or provide the absent family embedding.
+
 ##12192 — A native growing spectral carrier, and nonlinear constitutive identities
 
 The incoming round6 gives51 distinct levels on820 W(3,9) points; it correctly

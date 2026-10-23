@@ -106,6 +106,28 @@ def test_binary_ternary_action_mismatch(cert):
             assert sorted(perm)==list(range(6))
 
 
+def test_integral_polarity_exchange_has_actual_antiunitary_lift(cert):
+    rec=cert['yukawa']['polarity_exchange'];K=np.array(rec['original_matrix']);Kr=s.Matrix(rec['repaired_matrix'])
+    F0=p.native.alternating([-3,-1,-2,2,1,0]);F1=p.native.alternating([-3,-1,-2,2,1,-2])
+    assert s.Matrix(K).T*F0*s.Matrix(K)==F1
+    assert Kr*Kr==s.eye(4) and Kr.det()==-1
+    w=np.exp(2j*np.pi/3);X=np.roll(np.eye(3),1,axis=0);Z=np.diag(w**np.arange(3));U=Z@Z
+    la=np.array([0,0,-w.conjugate(),1]);lb=np.array([-1-2*w,2+w,-w,1])
+    def Y(x):
+        a,b=la@x,lb@x
+        return a*X+a.conjugate()*X.T+b*Z+b.conjugate()*Z.conj()
+    rng=np.random.default_rng(12193)
+    for _ in range(20):
+        x=rng.normal(size=4);A=Y(x);B=Y(K@x)
+        assert np.allclose(B,U@A.conj()@U.conj().T)
+        assert np.allclose(np.linalg.eigvalsh(A),np.linalg.eigvalsh(B))
+        assert np.allclose(np.linalg.det(A),np.linalg.det(B))
+    for a,b,c in product(range(3),repeat=3):
+        W=w**c*np.linalg.matrix_power(X,a)@np.linalg.matrix_power(Z,(-b)%3)
+        target=w**((-c+2*a)%3)*np.linalg.matrix_power(X,a)@np.linalg.matrix_power(Z,b)
+        assert np.allclose(U@W.conj()@U.conj().T,target)
+
+
 def test_native_yukawa_intertwiner_and_cubic_equivariance():
     _,R=p.native.native();w=np.exp(2j*np.pi/3)
     la=np.array([0,0,-w.conjugate(),1]);lb=np.array([-1-2*w,2+w,-w,1])

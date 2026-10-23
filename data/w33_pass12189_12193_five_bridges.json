@@ -1,6 +1,6 @@
 {
   "schema": "w33.passes12189-12193.five_bridges.v1",
-  "source_sha256": "516a148544f22ce737d467bda658b64d23482e9809d973a8e0558447834fcfc6",
+  "source_sha256": "fab9b39b71e189649dbcdf07c1a46e9967e3afb879488eadaac7d4ff8e2ce4ce",
   "input_sha256": {
     "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
     "data/w33_pass12186_context_cover_holonomy.json": "8d572f62e2cee74ab38938bb1d174013500146cab5f7e0b70f8a48be238db0ba"
@@ -2384,6 +2384,69 @@
       "1"
     ],
     "real_map_determinant": "-9/4",
+    "polarity_exchange": {
+      "original_matrix": [
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          -1,
+          0
+        ]
+      ],
+      "repaired_matrix": [
+        [
+          1,
+          0,
+          3,
+          -1
+        ],
+        [
+          0,
+          1,
+          3,
+          -1
+        ],
+        [
+          0,
+          0,
+          -2,
+          1
+        ],
+        [
+          0,
+          0,
+          -3,
+          2
+        ]
+      ],
+      "determinant": -1,
+      "square": "I",
+      "form_identity": "K^T F(1,0) K=F(1,-2)",
+      "coefficient_map": "alpha -> omega^2 conjugate(alpha); beta -> beta",
+      "antiunitary": "Theta=Z^2 complex_conjugation; Theta^2=I",
+      "texture_identity": "Y(Kx)=Z^2 conjugate(Y(x)) Z^(-2)",
+      "address_automorphism": "(a,b,c)->(a,-b,-c+2a) mod3",
+      "consequence": "The two integral polarities give antiunitarily isospectral textures with identical real cubic, F/D potential and isotropic/real-cubic soft potential. They cannot select different mass hierarchies in this model.",
+      "scope": "Explicit finite antiunitary intertwiner, not an independently justified physical time-reversal operation or derived chirality choice."
+    },
     "address_operator": "W(a,b,c)=omega^c X^a Z^(-b)",
     "map": "x -> (Y(x),0,0), Y=alpha X+alpha* Xdag+beta Z+beta* Zdag",
     "E6_action": "(P,Q,R)=(W_g,W_g,I): (A,B,C)->(P A Q^-1,Q B R^-1,R C P^-1)",

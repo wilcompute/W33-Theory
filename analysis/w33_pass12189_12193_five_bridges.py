@@ -218,6 +218,15 @@ def yukawa_slice():
     assert s.simplify(tr2-6*(a*a+b*b+c*c+d*d))==0
     assert s.expand(det-2*(a**3-3*a*b*b+c**3-3*c*d*d))==0
     assert s.simplify(norm-tr2**2/4)==0
+    # An actual integral normalizer exchanges the two liftable polarities.
+    K=s.Matrix([[1,0,1,1],[0,1,1,1],[0,0,0,-1],[0,0,-1,0]])
+    F0=native.alternating([-3,-1,-2,2,1,0])
+    F1=native.alternating([-3,-1,-2,2,1,-2])
+    _,_,S,_=native.repaired();Krepair=S.inv()*K*S
+    assert K*K==s.eye(4) and K.det()==-1 and K.T*F0*K==F1
+    assert all(s.simplify(z)==0 for z in la*K-w**2*la.conjugate())
+    assert all(s.simplify(z)==0 for z in lb*K-lb)
+    assert all(K*R[g]*K==R[(g[0],(-g[1])%3,(-g[2]+2*g[0])%3)]for g in R)
     # Standard E6 norm N(A,B,C)=det A+det B+det C-Tr ABC.
     # At (Y,0,0), F_A=adj(Y)^T and the other18 F terms vanish.
     r2=a*a+b*b+c*c+d*d
@@ -228,6 +237,14 @@ def yukawa_slice():
         'alpha_row':[str(s.expand_complex(z))for z in la],
         'beta_row':[str(s.expand_complex(z))for z in lb],
         'real_map_determinant':str(determinant),
+        'polarity_exchange':{'original_matrix':matrix_list(K),'repaired_matrix':matrix_list(Krepair),
+            'determinant':-1,'square':'I','form_identity':'K^T F(1,0) K=F(1,-2)',
+            'coefficient_map':'alpha -> omega^2 conjugate(alpha); beta -> beta',
+            'antiunitary':'Theta=Z^2 complex_conjugation; Theta^2=I',
+            'texture_identity':'Y(Kx)=Z^2 conjugate(Y(x)) Z^(-2)',
+            'address_automorphism':'(a,b,c)->(a,-b,-c+2a) mod3',
+            'consequence':'The two integral polarities give antiunitarily isospectral textures with identical real cubic, F/D potential and isotropic/real-cubic soft potential. They cannot select different mass hierarchies in this model.',
+            'scope':'Explicit finite antiunitary intertwiner, not an independently justified physical time-reversal operation or derived chirality choice.'},
         'address_operator':'W(a,b,c)=omega^c X^a Z^(-b)',
         'map':'x -> (Y(x),0,0), Y=alpha X+alpha* Xdag+beta Z+beta* Zdag',
         'E6_action':'(P,Q,R)=(W_g,W_g,I): (A,B,C)->(P A Q^-1,Q B R^-1,R C P^-1)',
