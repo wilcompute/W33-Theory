@@ -73,7 +73,7 @@ def make(out_dir):
                'decoded_qutrit_unitarity_residual':float(np.linalg.norm(U[1:,1:].conj().T@U[1:,1:]-np.eye(3)))})
     gds=out_dir/'w33_walsh_qutrit_lab_ref_20261023.gds'
     return {'schema':'w33.walsh.qutrit.lab_ref_layout.v1',
-      'gds_relative_path':str(gds.relative_to(ROOT)).replace('\\','/'),
+      'gds_relative_path':str(gds.relative_to(ROOT) if gds.is_relative_to(ROOT) else gds).replace('\\','/'),
       'gds_bytes':gds.stat().st_size,'gds_sha256':hashlib.sha256(gds.read_bytes()).hexdigest(),
       'cell_name':cell.name,'optical_input_modes':4,'optical_output_modes':4,
       'rail_pitch_um':pitch,'reference_width_um':width,'device_length_um':length,
