@@ -1,0 +1,112 @@
+{
+  "Walsh_logical_qutrits": 2,
+  "angles": [
+    {
+      "coherent_rail_coupling_power": 0.0,
+      "coupler_angle_rad": 0,
+      "entanglement_entropy_bits": -0.0,
+      "logical_input": "|Walsh logical 0> A tensor |Walsh logical 0> B",
+      "partial_transpose_negativity": 0.0,
+      "qutrit_code_postselected_success_probability": 0.9999999999999991,
+      "schmidt_coefficients": [
+        1.0,
+        2.4651903288156624e-32,
+        0.0
+      ],
+      "whole_bank_coincidence_probability": 0.9999999999999991
+    },
+    {
+      "coherent_rail_coupling_power": 0.14644660940672624,
+      "coupler_angle_rad": 0.39269908169872414,
+      "entanglement_entropy_bits": 0.005127526303118071,
+      "logical_input": "|Walsh logical 0> A tensor |Walsh logical 0> B",
+      "partial_transpose_negativity": 0.02007442012293892,
+      "qutrit_code_postselected_success_probability": 0.9118981302440246,
+      "schmidt_coefficients": [
+        0.999798407245652,
+        0.020078467796564838,
+        7.359808400080187e-18
+      ],
+      "whole_bank_coincidence_probability": 0.9138325214724767
+    },
+    {
+      "coherent_rail_coupling_power": 0.5000000000000001,
+      "coupler_angle_rad": 0.7853981633974483,
+      "entanglement_entropy_bits": 0.06334167503205046,
+      "logical_input": "|Walsh logical 0> A tensor |Walsh logical 0> B",
+      "partial_transpose_negativity": 0.08596941605779884,
+      "qutrit_code_postselected_success_probability": 0.727002728016437,
+      "schmidt_coefficients": [
+        0.9962699502714933,
+        0.08629128684888214,
+        0.0
+      ],
+      "whole_bank_coincidence_probability": 0.7499999999999993
+    },
+    {
+      "coherent_rail_coupling_power": 0.8535533905932737,
+      "coupler_angle_rad": 1.1780972450961724,
+      "entanglement_entropy_bits": 0.2212050556258224,
+      "logical_input": "|Walsh logical 0> A tensor |Walsh logical 0> B",
+      "partial_transpose_negativity": 0.18500829202411728,
+      "qutrit_code_postselected_success_probability": 0.5766994152362143,
+      "schmidt_coefficients": [
+        0.9820960108435164,
+        0.1883810645613096,
+        9.81307786677359e-18
+      ],
+      "whole_bank_coincidence_probability": 0.6486674785275217
+    },
+    {
+      "coherent_rail_coupling_power": 1.0,
+      "coupler_angle_rad": 1.5707963267948966,
+      "entanglement_entropy_bits": 0.35457890266526954,
+      "logical_input": "|Walsh logical 0> A tensor |Walsh logical 0> B",
+      "partial_transpose_negativity": 0.25000000000000044,
+      "qutrit_code_postselected_success_probability": 0.49999999999999917,
+      "schmidt_coefficients": [
+        0.9659258262890684,
+        0.25881904510252085,
+        0.0
+      ],
+      "whole_bank_coincidence_probability": 0.6249999999999993
+    }
+  ],
+  "experiment_gates": [
+    "two indistinguishable single-photon sources each prepared in a four-rail Walsh character",
+    "coherent cross-bank rail-A0/rail-B0 tunable beamsplitter",
+    "resolve one photon in each output bank and project away uniform auxiliary Walsh modes",
+    "two-qutrit coincidence tomography and source indistinguishability controls",
+    "pre-registered entanglement witness with loss/accidental confidence bounds"
+  ],
+  "ideal_full_swap_end_state": {
+    "coherent_rail_coupling_power": 1.0,
+    "coupler_angle_rad": 1.5707963267948966,
+    "entanglement_entropy_bits": 0.35457890266526954,
+    "logical_input": "|Walsh logical 0> A tensor |Walsh logical 0> B",
+    "partial_transpose_negativity": 0.25000000000000044,
+    "qutrit_code_postselected_success_probability": 0.49999999999999917,
+    "schmidt_coefficients": [
+      0.9659258262890684,
+      0.25881904510252085,
+      0.0
+    ],
+    "whole_bank_coincidence_probability": 0.6249999999999993
+  },
+  "mathematical_model": "indistinguishable bosonic creation operators; two-photon permanent, condition one photon per bank then each Walsh-qutrit code",
+  "not_claimed": [
+    "composable deterministic CZ3",
+    "complete qutrit unitary gate",
+    "heralded QND source",
+    "fabricated coupler",
+    "measured entanglement",
+    "fault-tolerant operation"
+  ],
+  "optical_rails": 8,
+  "photon_count": 2,
+  "physical_primitive": "cross-bank 2x2 directional coupler on rail A0 and rail B0",
+  "postselection": "destructive output-coincidence and code projections generally, not heralded nondemolition quantum gate",
+  "potential_significance": "Passive optical interference and postselection CAN entangle the two encoded Walsh qutrits as states without an optical Kerr nonlinearity.",
+  "schema": "w33.walsh.two_photon_postselected_beamsplitter_entangler.v1",
+  "sha256": "0c5bda49772c49bfb2ccf88ebc2fb4db79b422f7293515349e08f717120fdfac"
+}
