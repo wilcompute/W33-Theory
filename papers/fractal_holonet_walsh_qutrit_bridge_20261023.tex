@@ -291,6 +291,54 @@ dephasing, and phase-and-sign recovery.
 No FPGA place-and-route, physical phase correction,
 fault-tolerant encoding or photon experiment is claimed.
 
+\section{A concrete physical-rail three-cycle generates the qutrit shift}
+The four physical rail labels have the full permutation group
+$S_4$, which preserves the uniform Walsh character $a$.
+Consequently every physical rail permutation $\Pi\in S_4$
+preserves the three-dimensional orthogonal complement
+and acts there as a real, signed permutation $V^\dagger\Pi V$.
+The exact compiler
+\texttt{analysis/w33\_walsh\_qutrit\_s4\_affine\_bridge\_20261023.py}
+enumerates all 24 operations, confirms zero ideal
+code-to-auxiliary leakage, and verifies all 24 distinct
+induced logical matrices.
+
+In particular, let the physical rail permutation
+fix port 0 and perform the three-cycle
+$1\mapsto2\mapsto3\mapsto1$. Then the encoded logical
+action, in our character order, is exactly
+\[
+ X^{-1}_3=
+ \begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix},
+ \qquad (X^{-1}_3)^3=I.
+\]
+Conjugation by the separately specified qutrit Fourier
+processor gives
+\[
+ F_3X^{-1}_3F_3^\dagger
+ =\operatorname{diag}(1,\omega^2,\omega)=Z_3^{-1}.
+\]
+Thus the \emph{mathematical} bridge has both qutrit
+Pauli $X$ and $Z$ directions: a physical rail three-cycle,
+and the already modeled encoded Fourier processing tile.
+The normal XOR subgroup $V_4$ alone has no element
+of order three, so the existing four-state XOR-only
+optical device cannot perform this extra operation.
+The corresponding three-cycle would require two
+pairwise swaps in a permutation-only implementation,
+or some other independently engineered optical
+crossbar. This supplies an explicit new \emph{hardware
+requirement}, not a claim that a physical operation
+has already been fabricated or measured.
+
+These $24$ signed-permutation operations are not all
+of $U(3)$ and cannot establish an arbitrary qutrit
+quantum gate, still less a two-qutrit entangler.
+The $S_4\cong\mathbb F_2^2\rtimes GL(2,2)$ identification
+is standard finite group theory; our contribution is
+its exact representation/port mapping in the W33
+Holonet model.
+
 \section{Physical falsification plan}
 Build a four-rail encoder with calibrated $W^\dagger$
 and measure complex transfer matrices for each of the
