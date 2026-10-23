@@ -55839,6 +55839,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "292b268df48f4e149e1b59f372aab93a75f6242c983d68ce949b47b77e118fe1",
+      "normalized_formula": "\"Theorems7.5--7.6\"intex9and\"Theorem~7.6\"intex9and\"Theorem~7.6\"intex11and\"corrects\"intex7and\"twistedfermions\"intex7)",
+      "numeric_literals": [
+        "-7.6",
+        ".5",
+        "1",
+        "7.6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 75,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "\"Theorems 7.5--7.6\" in tex9 and \"Theorem~7.6\" in tex9 and \"Theorem~7.6\" in tex11 and \"corrects\" in tex7 and \"twisted fermions\" in tex7)",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "f55cb32a10ca67edfccb754ba1f9e94d40c56b57cdf25ff88854589106e7acd5",
+      "structural_formula": "\"Theorems7#-#\"intex9and\"Theorem~#\"intex9and\"Theorem~#\"intex1#and\"corrects\"intex7and\"twistedfermions\"intex7)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "00ecbf2d6da4c46728e5b91629b7260edf21394fde6369e00ee3c2a6e7451fae",
       "normalized_formula": "\"Theoryuniformlyin-bar,~22predictionsinPDG1-sigma,\"",
       "numeric_literals": [
@@ -346175,7 +346205,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 473,
+          "line": 475,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "(B-L,Y)=(1,0)",
           "status": "unclassified"
@@ -349956,7 +349986,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 1255,
+          "line": 1257,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "(Theorem~9.4). Its Vinberg Cartan subspace is the odd Weil module, and its points are exactly the odd-characteristic",
           "status": "certified_or_theorem"
@@ -350566,7 +350596,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1327,
+          "line": 1329,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "(\\Z[\\omega]/\\sqrt{-3})^2=\\F_3^2",
           "status": "unclassified"
@@ -351268,7 +351298,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "(\\theta_{12},\\theta_{23},\\theta_{13})\\approx(45^\\circ,83^\\circ,1^\\circ)",
           "status": "killed_or_retracted"
@@ -384239,7 +384269,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1514,
+          "line": 1516,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "-N_{12}\\tau_1+(N_{11}-N_{22})\\tau_2+N_{12}\\tau_3=0",
           "status": "unclassified"
@@ -387036,6 +387066,37 @@
       },
       "structural_family_id": "be73d08bb1f37ed8ad6b9045f06d3e30768e4607cfa1a7e6cf8cb325c48c4257",
       "structural_formula": "-Theexcessf-\u03c7=##=\u03bb=massratiok/q!"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1f1351c905e7956bec4b9b4d80a60d483744875e4de15cf231cd4d7ed080238f",
+      "normalized_formula": "-ThefirstE8alonedoesnotexcludeit:hitsoccurwith|P1|2=4/3,andwith11/9inWitten-twistedcosets",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12217_12222_TWISTED_TENS_ARE_FERMIONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/PASS12217_12222_TWISTED_TENS_ARE_FERMIONS.md",
+          "raw": "- The first E8 alone does not exclude it: hits occur with |P1|\u00b2 = 4/3, and with 11/9 in Witten-twisted cosets.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "74ed621450418a43c8848a7e3c5aa360e97c0a5cc44d626f2c0be03c0a05f41f",
+      "structural_formula": "-ThefirstE8alonedoesnotexcludeit:hitsoccurwith|P1|#=#/#,andwith1#/#inWitten-twistedcosets"
     },
     {
       "file_count": 1,
@@ -399333,7 +399394,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 541,
+          "line": 543,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1+1-0=2",
           "status": "unclassified"
@@ -407322,7 +407383,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1581,
+          "line": 1583,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\alpha\\approx137",
           "status": "unclassified"
@@ -407427,7 +407488,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "1/\\varepsilon\\approx150",
           "status": "killed_or_retracted"
@@ -411717,6 +411778,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a716b0ce014112ea955f6a70ead05c5a9d3f9358131613ebb7459723eb99d291",
+      "normalized_formula": "12/4=3",
+      "numeric_literals": [
+        "12",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 78,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "12/4=3",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7d22d8a0b12e1b8936efbcb686b6985af2960494183505abc23e186365bbbc15",
+      "structural_formula": "#/#=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "97ea7e7d5aa3e2af45eead39e4e2e01854259de7dedbee70337e792e0abe6f81",
       "normalized_formula": "120(2)+16=256",
       "numeric_literals": [
@@ -413940,7 +414030,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 693,
+          "line": 695,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "12=4\\times3",
           "status": "unclassified"
@@ -424777,7 +424867,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 542,
+          "line": 544,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "2+0-2=0",
           "status": "unclassified"
@@ -425025,7 +425115,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 496,
+          "line": 500,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "2-\\sqrt2<R<2+\\sqrt2",
           "status": "unclassified"
@@ -429936,7 +430026,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 415,
+          "line": 417,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "23+105=128",
           "status": "unclassified"
@@ -440756,7 +440846,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1003,
+          "line": 1005,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "2^1=2",
           "status": "unclassified"
@@ -443284,7 +443374,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 407,
+          "line": 409,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "3(B-L)=3",
           "status": "unclassified"
@@ -457814,6 +457904,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "aab1cbb276aa6d733201078819e163ab4fc6dfa05416c4ddf6303601e91daf4c",
+      "normalized_formula": "40\\cdot4\\cdot2=320",
+      "numeric_literals": [
+        "320",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 83,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "40\\cdot4\\cdot2=320",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c2f2490c8dec1667367164448bdaddda63ce0fba8bdc35d9a5d32d74b7567dcd",
+      "structural_formula": "#\\cdot4\\cdot2=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "83b90524c2be5aa86e1308c7aec2933154b4f5591c5d22602ebca337ca0e9021",
       "normalized_formula": "40\\cdot4\\cdot3=480",
       "numeric_literals": [
@@ -462079,6 +462197,35 @@
       },
       "structural_family_id": "f4d7cc16af15f48f81393a72c7282cf32196029347ec426deefbcfa4c3882353",
       "structural_formula": "#\\cdot1#=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ab0e1fdba64c45efbcc1656e22f43875ef00e755bf55e7708261d8c179ef3ad5",
+      "normalized_formula": "4\\cdot20=80",
+      "numeric_literals": [
+        "0",
+        "4",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 73,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "4\\cdot20=80",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6ebb3281d88c7408e9ce30e1c7fb34dceb92e0a44b79aa4aa78b0cf2a111f066",
+      "structural_formula": "#\\cdot2#=#"
     },
     {
       "file_count": 1,
@@ -549779,7 +549926,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1211,
+          "line": 1213,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "A=\\C^2/(\\Z^2+\\Omega\\Z^2)",
           "status": "unclassified"
@@ -555230,7 +555377,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1520,
+          "line": 1522,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "A[3]=\\mathbb F_3^4",
           "status": "unclassified"
@@ -570417,21 +570564,21 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 407,
+          "line": 409,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "B-L=+1",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 453,
+          "line": 455,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "B-L=+1",
           "status": "certified_or_theorem"
         },
         {
           "category": "inline_math",
-          "line": 469,
+          "line": 471,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "B-L=+1",
           "status": "unclassified"
@@ -571298,7 +571445,7 @@
         },
         {
           "category": "inline_math",
-          "line": 974,
+          "line": 976,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "B=0",
           "status": "unclassified"
@@ -575823,7 +575970,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 530,
+          "line": 532,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "B_3=\\exp\\bigl(2\\pi i(B-2Y)/3\\bigr)",
           "status": "unclassified"
@@ -576285,6 +576432,36 @@
       },
       "structural_family_id": "2d3334dd5a9c88cbc9ec71d6b8bc940887cb18d94db6d9047089340735c36cf6",
       "structural_formula": "B_m=\\sum_{n=#}^{m-#}c_nc_{m-#-n},\\qquadz_m=e^{im\\phi}C_m+e^{-i(K+#-m)\\phi}B_m"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "899229379f9f4b0d1e666bb013a2303216be01e08a7dc6555a81132008b6015a",
+      "normalized_formula": "B_n=(40^{n-1}-1)/39",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "39",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 89,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "B_n=(40^{n-1}-1)/39",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8abbb3e3e0a08d979086708e7b0b8f41cea3910fa2c7e88058b69f0bcff6ddf2",
+      "structural_formula": "B_n=(#^{n-#}#)/#"
     },
     {
       "file_count": 1,
@@ -610207,6 +610384,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "011d9e0d2e39dd748fda92f28bef57758527655524d95cd16178221e07adb455",
+      "normalized_formula": "E(W33)=M_0\\sqcupM_1\\sqcup\\cdots\\sqcupM_{11},\\quad|M_k|=20",
+      "numeric_literals": [
+        "11",
+        "20",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 36,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "E(W33)=M_0\\sqcup M_1\\sqcup\\cdots\\sqcup M_{11}, \\quad |M_k|=20,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f57e34bec60c3cae74413fc0a8746ecad6b9116c9d3d6bcfb1148a99ab8f4983",
+      "structural_formula": "E(W3#)=M_0\\sqcupM_1\\sqcup\\cdots\\sqcupM_{#},\\quad|M_k|=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3183ef348fd744b1068be31f9768bb0f37f714ad979c8d0c2ace3dbb914d21de",
       "normalized_formula": "E(W_{3,3})=\\frac{40\\cdot12}{2}=240",
       "numeric_literals": [
@@ -611050,7 +611256,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "E/N=8/3",
           "status": "killed_or_retracted"
@@ -624928,7 +625134,7 @@
       "source_locations": [
         {
           "category": "tex_display",
-          "line": 1554,
+          "line": 1556,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "F-F_0={\\kappa_{\\rm CW}\\over2}t^2+4t^4\\log t^2+O(t^4),\\qquad G-G_0=8t^2\\log t^2+4t^2+o(t^2),",
           "status": "unclassified"
@@ -627068,7 +627274,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1553,
+          "line": 1555,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "F=\\sum e^2\\log e",
           "status": "open_or_conditional"
@@ -659382,7 +659588,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 842,
+          "line": 844,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "H_{27}/Z=\\F_3^2",
           "status": "unclassified"
@@ -672013,7 +672219,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "J=+3.07\\cdot10^{-5}",
           "status": "killed_or_retracted"
@@ -672048,7 +672254,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "J=0",
           "status": "killed_or_retracted"
@@ -675312,7 +675518,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1520,
+          "line": 1522,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "K(L_5)=\\ell_{10}\\times\\ell_{10}",
           "status": "unclassified"
@@ -675339,7 +675545,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1520,
+          "line": 1522,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "K(L_{10})=\\ell_5\\times\\ell_5",
           "status": "unclassified"
@@ -682609,6 +682815,36 @@
       },
       "structural_family_id": "8018d60dcb41b7e96351b747caa953cdf07c6f66b5a8e89b18cf82acaeb6c8ba",
       "structural_formula": "L:=#Theta_Leech=#^##^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9f63f278aa5f74c915d634f1288e5e8745075246c0393f24d15caf65f7d3c2ca",
+      "normalized_formula": "L=(0,31,32,33)",
+      "numeric_literals": [
+        "0",
+        "31",
+        "32",
+        "33"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 47,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "L=(0,31,32,33).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7182d9a95485bf5e24a36326912ee92074ebaf54f9026c5977369e38225669c6",
+      "structural_formula": "L=(#,#,#,#)"
     },
     {
       "file_count": 1,
@@ -699744,14 +699980,14 @@
         },
         {
           "category": "inline_math",
-          "line": 1546,
+          "line": 1548,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "M_2=\\log\\tfrac85",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "M_2=\\log\\tfrac85",
           "status": "killed_or_retracted"
@@ -699806,7 +700042,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1546,
+          "line": 1548,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "M_2\\approx0.691",
           "status": "unclassified"
@@ -717356,7 +717592,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1507,
+          "line": 1509,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "N+3N^{-1}=({\\rm tr}\\,N)\\mathbf1",
           "status": "unclassified"
@@ -717892,7 +718128,7 @@
         },
         {
           "category": "inline_math",
-          "line": 746,
+          "line": 748,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "N=0",
           "status": "unclassified"
@@ -717971,7 +718207,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1538,
+          "line": 1540,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "N=1",
           "status": "unclassified"
@@ -719387,7 +719623,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1475,
+          "line": 1477,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "N=8",
           "status": "unclassified"
@@ -722380,7 +722616,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1512,
+          "line": 1514,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "N_1m^{-1}N_2=(3/m)\\mathbf1",
           "status": "unclassified"
@@ -725151,6 +725387,36 @@
       },
       "structural_family_id": "f81b9925ebd8604c05e37fdb3c7a84be0c26eefc278b880bf183441de6c2cb15",
       "structural_formula": "Nearzerotheradialintegralis`integralr^(#/##theta-#)dr`;forlargeparametersuse`||(U-I)psi||<=#||psi||`.Choosing`theta=#/#`leavesthepositiveintegrabilitymargin`#/#`.Thus,asforms"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bd90889ec84e65bb214dc5abf0a0511fe96a41ac1abecb6d863097671a8a613d",
+      "normalized_formula": "Necessarycondition(beforeanyprojectionphase):atwistedmassless10needsP=(P1,P2),|P|^2=4/3(nooscillator;withone",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "Necessary condition (before any projection phase): a twisted massless 10 needs P = (P1, P2), |P|^2 = 4/3 (no oscillator; with one,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fcecb9ae15c4049077c514c1c6c4e66c5a838715b016ff7907d6aafa06bc26ae",
+      "structural_formula": "Necessarycondition(beforeanyprojectionphase):atwistedmassless1#needsP=(P1,P2),|P|^#=#/#(nooscillator;withone"
     },
     {
       "file_count": 1,
@@ -734526,6 +734792,35 @@
       },
       "structural_family_id": "0af6e89c0b286219f75257d0f36c1fe0567313ea3eae86231e9053f6b06ce27d",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_survivors_thresholds_proton_closure.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6f55a25ed911b50c078f2d2a890d447f2f442e42f3c1ab56813b7e34a05f1beb",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass12217_to_12222_twisted_tens_are_fermions.json\"",
+      "numeric_literals": [
+        "2217",
+        "2222",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 34,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass12217_to_12222_twisted_tens_are_fermions.json\"",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "2d596bb0ffbbb51b48677f1f07b8a1cc11cc04b4188e962c2197619278c64e25",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_twisted_tens_are_fermions.json\""
     },
     {
       "file_count": 1,
@@ -758467,7 +758762,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 941,
+          "line": 943,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "P_L^2=2",
           "status": "unclassified"
@@ -771536,7 +771831,7 @@
         },
         {
           "category": "tex_display",
-          "line": 537,
+          "line": 539,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "Q(u^c)+Q(e^c)=2\\,Q(q)",
           "status": "unclassified"
@@ -775501,7 +775796,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 473,
+          "line": 475,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "Q_\\chi=4Y-5(B-L)",
           "status": "unclassified"
@@ -776796,7 +777091,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 496,
+          "line": 500,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "R<2\\sqrt2",
           "status": "unclassified"
@@ -806836,7 +807131,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 1225,
+          "line": 1227,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "So the one antiunitary coset of Corollary~9.7 --- time reversal, chirality exchange --- is the \\emph{generalised CP} of",
           "status": "unclassified"
@@ -807425,7 +807720,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1331,
+          "line": 1333,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "Sp(4,3)=\\mathrm{Aut}\\,\\W",
           "status": "unclassified"
@@ -821403,7 +821698,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1324,
+          "line": 1326,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "T^4/\\Z_3=(\\C/\\Z[\\omega])^2/\\Z_3",
           "status": "unclassified"
@@ -840190,7 +840485,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 504,
+          "line": 506,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "Theorem~9.6 covers singlets of every nonabelian group. Fields that are Standard-Model",
           "status": "certified_or_theorem"
@@ -866152,7 +866447,7 @@
         },
         {
           "category": "inline_math",
-          "line": 495,
+          "line": 499,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "V=0",
           "status": "unclassified"
@@ -874879,7 +875174,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1456,
+          "line": 1458,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "V_{us}=0",
           "status": "unclassified"
@@ -874914,7 +875209,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "V_{us}=V_{cb}=0",
           "status": "killed_or_retracted"
@@ -879965,7 +880260,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1549,
+          "line": 1551,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "W=\\alpha(x^3+y^3+z^3)+\\beta xyz",
           "status": "unclassified"
@@ -888201,7 +888496,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1512,
+          "line": 1514,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "Y^c_{ab}=\\sum_k e^{\\pi i(3/m)u\\cdot\\Omega u}",
           "status": "unclassified"
@@ -897338,7 +897633,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1514,
+          "line": 1516,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Delta=(\\mathrm{tr}\\,N)^2-4\\det N=m^2-12",
           "status": "unclassified"
@@ -897394,7 +897689,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 872,
+          "line": 874,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Delta=-(3-\\sqrt3)/6",
           "status": "unclassified"
@@ -897421,7 +897716,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 971,
+          "line": 973,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Delta=-\\frac12",
           "status": "unclassified"
@@ -901214,7 +901509,7 @@
         },
         {
           "category": "inline_math",
-          "line": 876,
+          "line": 878,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Lambda>0",
           "status": "unclassified"
@@ -901494,7 +901789,7 @@
         },
         {
           "category": "inline_math",
-          "line": 938,
+          "line": 940,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Lambda_\\beta\\approx160\\,y^2-(5\\text{--}13)",
           "status": "unclassified"
@@ -901742,7 +902037,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 819,
+          "line": 821,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Lambda_{10}=+363\\,M^{10}",
           "status": "unclassified"
@@ -902430,7 +902725,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Leftrightarrow\\Omega_{12}=0",
           "status": "killed_or_retracted"
@@ -902811,7 +903106,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1423,
+          "line": 1425,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Omega=6\\tau",
           "status": "unclassified"
@@ -903521,7 +903816,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1506,
+          "line": 1508,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Omega_{11}=\\Omega_{22}",
           "status": "unclassified"
@@ -903549,7 +903844,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1236,
+          "line": 1238,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Omega_{12}=0",
           "status": "unclassified"
@@ -904253,7 +904548,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1222,
+          "line": 1224,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\PGSp(4,3)=W(E_6)",
           "status": "unclassified"
@@ -910178,7 +910473,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Sigma m_\\nu\\approx0.0594",
           "status": "killed_or_retracted"
@@ -910205,7 +910500,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Sigma m_\\nu\\approx0.10",
           "status": "killed_or_retracted"
@@ -910831,7 +911126,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 1466,
+          "line": 1468,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "$\\Theta[(\\alpha_1,\\alpha_2)](0,\\Omega)=\\sum_n e^{i\\pi(n+\\alpha_2)^2\\Omega_{22}}\\,",
           "status": "unclassified"
@@ -910862,7 +911157,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1466,
+          "line": 1468,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\Theta[(\\alpha_1,\\alpha_2)](0,\\Omega)=\\sum_n e^{i\\pi(n+\\alpha_2)^2\\Omega_{22}}\\, \\theta[\\alpha_1]((n+\\alpha_2)\\Omega_{12},\\Omega_{11})",
           "status": "unclassified"
@@ -913792,7 +914087,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1549,
+          "line": 1551,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\alpha=0",
           "status": "unclassified"
@@ -920501,7 +920796,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\arg\\det Y_u=3\\arg\\varepsilon_u+\\mathrm{const}+O(|\\varepsilon_u|^2)",
           "status": "killed_or_retracted"
@@ -920563,7 +920858,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\bar\\theta=O(1)",
           "status": "killed_or_retracted"
@@ -920867,6 +921162,38 @@
       },
       "structural_family_id": "90ac0e45a5de648b2c686e0b05ca4a52fe91d246d3d6cc108cbdcdbd6530fbef",
       "structural_formula": "\\begin{aligned}#\\cdotq=#=\\dimH_1(\\W;\\mathbb{Z})=q^{q+#}\\quad\\text{(logicalmatter/generations)},\\\\#\\cdot8#=#=\\text{nilpotentQEC-taillift},\\\\#\\cdot1#=#=\\text{directedphotoniccarrier(orientededges)},\\\\#/#=#=\\text{$Q_4$packetlengthperanchor},\\\\#\\cdot\\Phi_6^#=#=\\text{protectedSteane/$\\Phi_6$lift}.\\end{aligned}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9fd07327395b31726db27a9218f9aa69c9c944d01354a6b516566ce943ecbd35",
+      "normalized_formula": "\\begin{aligned}E_{\\mathrm{cart}}(n)=240n40^{n-1},\\\\E_{\\mathrm{4gateway}}(n)=240\\cdot40^{n-1}+960B_n,\\\\E_{\\mathrm{sparse}}(n)=240\\cdot40^{n-1}+240B_n.\\end{aligned}",
+      "numeric_literals": [
+        "+240",
+        "+960",
+        "0",
+        "1",
+        "240",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 92,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "\\begin{aligned} E_{\\mathrm{cart}}(n)&=240n40^{n-1},\\\\ E_{\\mathrm{4gateway}}(n)&=240\\cdot40^{n-1}+960 B_n,\\\\ E_{\\mathrm{sparse}}(n)&=240\\cdot40^{n-1}+240 B_n. \\end{aligned}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e9860d36a44810e6b9f8882ab8b9d23072796b3c94b9e6a5611b1780f3103c81",
+      "structural_formula": "\\begin{aligned}E_{\\mathrm{cart}}(n)=#n4#^{n-#},\\\\E_{\\mathrm{#gateway}}(n)=#\\cdot4#^{n-#}#B_n,\\\\E_{\\mathrm{sparse}}(n)=#\\cdot4#^{n-#}#B_n.\\end{aligned}"
     },
     {
       "file_count": 1,
@@ -922462,6 +922789,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "57e833b331d3fa0a4b27e6617713fcb37d64157d5135e9b8d1d1f941799ec856",
+      "normalized_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=28mm,minimumheight=10mm},nodedistance=8mm]",
+      "numeric_literals": [
+        "10",
+        "28",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,rounded corners,align=center,text width=28mm,minimum height=10mm},node distance=8mm]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f04b11a30e82ba9ddd04ab3cb1aeaacbdd606371e367d9dd2dc9755aa53f3175",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=#mm,minimumheight=#mm},nodedistance=#mm]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9c1b050a9d3850194a570ef7b347765572b4d37aec62cda9d7dfa739bba146c8",
       "normalized_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=28mm,minimumheight=11mm},nodedistance=7mm]",
       "numeric_literals": [
@@ -923054,7 +923410,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1549,
+          "line": 1551,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\beta^3+27\\alpha^3=0",
           "status": "unclassified"
@@ -949938,7 +950294,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 129,
+          "line": 131,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\chi(g)=\\chi(g^2)=0",
           "status": "certified_or_theorem"
@@ -951282,7 +951638,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\chi^2\\approx1.3",
           "status": "killed_or_retracted"
@@ -952196,7 +952552,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1141,
+          "line": 1143,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\cos\\delta=0",
           "status": "unclassified"
@@ -955404,7 +955760,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1302,
+          "line": 1304,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\delta\\sim(v/\\Lambda)^8",
           "status": "unclassified"
@@ -955431,14 +955787,14 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1403,
+          "line": 1405,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\delta\\approx0.06",
           "status": "retrospective_fit"
         },
         {
           "category": "inline_math",
-          "line": 1417,
+          "line": 1419,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\delta\\approx0.06",
           "status": "unclassified"
@@ -957963,7 +958319,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\det Y_u=C\\varepsilon_u^3+O(\\varepsilon_u^5)",
           "status": "killed_or_retracted"
@@ -957991,7 +958347,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\det\\Theta=C\\varepsilon^3+O(\\varepsilon^5)",
           "status": "killed_or_retracted"
@@ -960844,7 +961200,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 150,
+          "line": 152,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\dim\\e_6=78",
           "status": "unclassified"
@@ -964243,7 +964599,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 966,
+          "line": 968,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\epsilon\\approx0.12",
           "status": "unclassified"
@@ -964280,7 +964636,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1457,
+          "line": 1459,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\epsilon\\approx3\\cdot10^{-3}",
           "status": "unclassified"
@@ -970833,7 +971189,7 @@
         },
         {
           "category": "inline_math",
-          "line": 118,
+          "line": 120,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "\\gamma=2\\beta",
           "status": "unclassified"
@@ -971154,7 +971510,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1512,
+          "line": 1514,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\gcd(m,3)=1",
           "status": "unclassified"
@@ -971911,7 +972267,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 124,
+          "line": 126,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "\\item \\textbf{Chirality from outside.} Corollary~9.7 shows that reversing time's orientation,",
           "status": "unclassified"
@@ -973022,7 +973378,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1558,
+          "line": 1560,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\kappa_{\\rm CW}=7.21108\\ldots",
           "status": "unclassified"
@@ -973084,7 +973440,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1567,
+          "line": 1569,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\kappa\\approx0.9",
           "status": "unclassified"
@@ -975521,7 +975877,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 605,
+          "line": 607,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\lambda'\\sim\\lambda''\\sim\\langle n\\rangle/M_s\\approx0.2",
           "status": "unclassified"
@@ -977127,7 +977483,7 @@
         },
         {
           "category": "inline_math",
-          "line": 902,
+          "line": 904,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\lambda=\\omega^2",
           "status": "unclassified"
@@ -978446,7 +978802,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1259,
+          "line": 1261,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\lambda_2>0",
           "status": "unclassified"
@@ -980029,7 +980385,7 @@
         },
         {
           "category": "inline_math",
-          "line": 989,
+          "line": 991,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\langle T\\rangle/M_P=0.15",
           "status": "unclassified"
@@ -980057,7 +980413,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 966,
+          "line": 968,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\langle T\\rangle\\langle S\\rangle/M^2 \\approx0.01",
           "status": "unclassified"
@@ -980560,14 +980916,14 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 391,
+          "line": 393,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\langle n\\rangle/M_s\\approx0.2",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 577,
+          "line": 579,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\langle n\\rangle/M_s\\approx0.2",
           "status": "unclassified"
@@ -980667,6 +981023,31 @@
       },
       "structural_family_id": "5ab9f49213e95a58446ede6385c60275795a0bce1276b295137fd6f8f6f24585",
       "structural_formula": "\\langleu,v\\rangle=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9cf0b8dde8ac16e10cc519f6359887676758a0da4fc20dbe7bce695d964e3fbe",
+      "normalized_formula": "\\langleu,v\\rangle=u_0v_1-u_1v_0+u_2v_3-u_3v_2\\pmod3",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 30,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "\\langle u,v\\rangle =u_0v_1-u_1v_0+u_2v_3-u_3v_2\\pmod 3.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9cf0b8dde8ac16e10cc519f6359887676758a0da4fc20dbe7bce695d964e3fbe",
+      "structural_formula": "\\langleu,v\\rangle=u_0v_1-u_1v_0+u_2v_3-u_3v_2\\pmod3"
     },
     {
       "file_count": 1,
@@ -983652,7 +984033,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1559,
+          "line": 1561,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\log t_*=-\\kappa_{\\rm CW}/(32r)-3/4+o(1)",
           "status": "certified_or_theorem"
@@ -985315,7 +985696,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1316,
+          "line": 1318,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathbf4=3+1",
           "status": "unclassified"
@@ -985368,7 +985749,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1316,
+          "line": 1318,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathbf5=3+2",
           "status": "unclassified"
@@ -986282,7 +986663,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1254,
+          "line": 1256,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathbf{84}=\\Lambda^3\\C^9",
           "status": "unclassified"
@@ -990190,7 +990571,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 927,
+          "line": 929,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Im}\\,T=0.6",
           "status": "unclassified"
@@ -990217,7 +990598,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 872,
+          "line": 874,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Im}\\,T=1",
           "status": "unclassified"
@@ -990244,7 +990625,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 948,
+          "line": 950,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Im}\\,T=1.4",
           "status": "unclassified"
@@ -990298,7 +990679,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 929,
+          "line": 931,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Im}\\,T\\approx1.5",
           "status": "unclassified"
@@ -990333,7 +990714,7 @@
         },
         {
           "category": "inline_math",
-          "line": 888,
+          "line": 890,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Im}\\,T\\approx3.2",
           "status": "retrospective_fit"
@@ -990362,7 +990743,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Im}\\,\\Omega\\sim(3/\\pi)\\ln(1/t)",
           "status": "killed_or_retracted"
@@ -990390,7 +990771,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1296,
+          "line": 1298,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Im}\\,\\Omega\\simeq(3/\\pi)\\ln(1/\\delta)",
           "status": "unclassified"
@@ -990932,7 +991313,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\mathrm{Re}\\tau=1",
           "status": "killed_or_retracted"
@@ -997732,7 +998113,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 662,
+          "line": 663,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -997930,7 +998311,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 694,
+          "line": 696,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\nabla_pF=0",
           "status": "unclassified"
@@ -997989,7 +998370,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 325,
+          "line": 327,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\node[band=rose,text width=2.9cm,align=center] (z4) at (6.4,-7.35) {viable vacuum: \\textbf{0} of 14\\\\ (all decided, P10978)};",
           "status": "unclassified"
@@ -998019,7 +998400,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 324,
+          "line": 326,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\node[band=sky,minimum width=2.6cm] (z3) at (6.4,-6.45) {with a vacuum \\quad \\textbf{14}};",
           "status": "unclassified"
@@ -998049,7 +998430,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 335,
+          "line": 337,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\node[band=sky,minimum width=3.2cm] (x1) at (-2.55,-8.8) {Standard Models \\quad \\textbf{5}};",
           "status": "unclassified"
@@ -998079,7 +998460,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 329,
+          "line": 331,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\node[band=sky,minimum width=3.2cm] (y1) at (-2.55,-7.3) {Standard Models \\quad \\textbf{29}};",
           "status": "unclassified"
@@ -998109,7 +998490,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 322,
+          "line": 324,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\node[band=sky,minimum width=3.6cm] (z1) at (6.4,-4.75) {Standard Models \\quad \\textbf{289}};",
           "status": "unclassified"
@@ -998251,7 +998632,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 622,
+          "line": 624,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\node[font=\\sffamily\\tiny,text=rose!80!black,align=center] at (16.95,0.11) {squarks needed\\\\ to tame RPV};",
           "status": "unclassified"
@@ -1002130,7 +1002511,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1537,
+          "line": 1539,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\operatorname{ad}_{[x^\\dagger,x]}=0",
           "status": "unclassified"
@@ -1002799,6 +1003180,33 @@
       },
       "structural_family_id": "23608750f92284d0812a9f10f412ca38182a4599466a94b46adfb343c1639aa7",
       "structural_formula": "\\operatorname{inc}(H_{mixed})=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "426e5d95152a4f03ea33371a7862fc2348592e24ed1857feceddf11a06273644",
+      "normalized_formula": "\\operatorname{lane}(u,v)=k\\bmod4,\\quad\\operatorname{slot}(u,v)=\\lfloork/4\\rfloor,\\quad\\operatorname{gateway}(u,v)=L_{k\\bmod4}",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 52,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "\\operatorname{lane}(u,v)=k\\bmod4,\\quad \\operatorname{slot}(u,v)=\\lfloor k/4\\rfloor,\\quad \\operatorname{gateway}(u,v)=L_{k\\bmod4}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "757ae50554a0eca9d143bd025042142e8eeb2617fc60bbabf290ad02e099434f",
+      "structural_formula": "\\operatorname{lane}(u,v)=k\\bmod4,\\quad\\operatorname{slot}(u,v)=\\lfloork/#\\rfloor,\\quad\\operatorname{gateway}(u,v)=L_{k\\bmod4}"
     },
     {
       "file_count": 1,
@@ -1007789,7 +1008197,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1217,
+          "line": 1219,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\psi(\\Omega)_c=f_c(0)",
           "status": "unclassified"
@@ -1008303,6 +1008711,33 @@
       },
       "structural_family_id": "30281ca544edd27a5809fed4da64bc99f6d63cd6eb393949e48214979b43cf3a",
       "structural_formula": "\\quadp=\\dot\\theta/(Ne^#V)=m\\in\\mathbbZ"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b8d4b1a0d174f40568ab13813ae4d1821f772d563d9d1011e3c57bcefde4cc1b",
+      "normalized_formula": "\\quad|M_k|=20",
+      "numeric_literals": [
+        "20"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 38,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "\\quad |M_k|=20,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c0e9ed41df6ccc1ca263ebd8d828309e39a980a3a6a3d92a3b25f96f44c7244b",
+      "structural_formula": "\\quad|M_k|=#"
     },
     {
       "file_count": 1,
@@ -1009358,7 +1009793,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 171,
+          "line": 173,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\rho=4/9",
           "status": "unclassified"
@@ -1011458,7 +1011893,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1244,
+          "line": 1246,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sigma_1\\sigma_3/\\sigma_2^2=r(\\tau_1)r(\\tau_2)/2",
           "status": "unclassified"
@@ -1014119,7 +1014554,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1586,
+          "line": 1588,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_W=3/8",
           "status": "unclassified"
@@ -1015203,7 +1015638,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1131,
+          "line": 1133,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_{12}=0.317",
           "status": "unclassified"
@@ -1015334,7 +1015769,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1127,
+          "line": 1129,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_{12}=4/13",
           "status": "unclassified"
@@ -1016250,7 +1016685,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1128,
+          "line": 1130,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_{13}=2/91",
           "status": "unclassified"
@@ -1016876,7 +1017311,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1128,
+          "line": 1130,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sin^2\\theta_{23}=7/13",
           "status": "unclassified"
@@ -1021588,7 +1022023,7 @@
       "source_locations": [
         {
           "category": "tex_display",
-          "line": 1275,
+          "line": 1277,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sum e_i=20,\\qquad \\sum e_i^2=8,\\qquad \\sum e_i^3=4,",
           "status": "unclassified"
@@ -1023960,7 +1024395,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\tau=1+0.8745i",
           "status": "killed_or_retracted"
@@ -1023987,7 +1024422,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\tau=1+iy",
           "status": "killed_or_retracted"
@@ -1024360,7 +1024795,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\tau=\\pm0.676+0.737i",
           "status": "killed_or_retracted"
@@ -1027709,7 +1028144,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 131,
+          "line": 133,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\tfrac13\\bigl(\\chi(1)+\\omega^{-j}\\chi(g)+\\omega^{-2j}\\chi(g^2)\\bigr)=81/3=27",
           "status": "unclassified"
@@ -1027935,7 +1028370,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1328,
+          "line": 1330,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\theta(-Z^{-1})=\\det(Z/i)\\,F\\theta(Z)",
           "status": "unclassified"
@@ -1029284,7 +1029719,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1328,
+          "line": 1330,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\theta_\\mu(Z)=\\sum_{x\\in\\Z[\\omega]^2+\\mu/\\sqrt{-3}}e(x^*Zx)",
           "status": "unclassified"
@@ -1029660,7 +1030095,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\theta_{13}<1^\\circ",
           "status": "killed_or_retracted"
@@ -1029697,21 +1030132,21 @@
         },
         {
           "category": "inline_math",
-          "line": 1160,
+          "line": 1162,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\theta_{13}=0",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 1166,
+          "line": 1168,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\theta_{13}=0",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 1171,
+          "line": 1173,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\theta_{13}=0",
           "status": "unclassified"
@@ -1031748,14 +1032183,14 @@
         },
         {
           "category": "inline_math",
-          "line": 1168,
+          "line": 1170,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon<0",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 1170,
+          "line": 1172,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon<0",
           "status": "unclassified"
@@ -1031852,14 +1032287,14 @@
         },
         {
           "category": "inline_math",
-          "line": 1173,
+          "line": 1175,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon=0",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon=0",
           "status": "killed_or_retracted"
@@ -1032047,7 +1032482,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1171,
+          "line": 1173,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon>0",
           "status": "unclassified"
@@ -1032105,7 +1032540,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon_M=5\\cdot10^{-2}",
           "status": "killed_or_retracted"
@@ -1032169,7 +1032604,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon_\\nu=\\varepsilon_D^2/\\varepsilon_M",
           "status": "killed_or_retracted"
@@ -1032261,7 +1032696,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon_d=0",
           "status": "killed_or_retracted"
@@ -1032288,7 +1032723,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon_u=1.34\\,e^{-\\pi(\\mathrm{Im}\\tau_1+\\mathrm{Im}\\tau_2)}",
           "status": "killed_or_retracted"
@@ -1032375,7 +1032810,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1565,
+          "line": 1567,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon\\approx0.02",
           "status": "open_or_conditional"
@@ -1032402,7 +1032837,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varepsilon\\approx0.22",
           "status": "killed_or_retracted"
@@ -1032430,7 +1032865,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 161,
+          "line": 163,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "\\varepsilon\\approx1/150",
           "status": "unclassified"
@@ -1032622,7 +1033057,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 971,
+          "line": 973,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\varphi^2/\\sqrt3=(3+\\sqrt5)/(2\\sqrt3)",
           "status": "unclassified"
@@ -1035032,7 +1035467,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1434,
+          "line": 1436,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\zeta=0",
           "status": "unclassified"
@@ -1035627,7 +1036062,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1516,
+          "line": 1518,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\zeta_X=\\zeta+Y_XN^{-1}w",
           "status": "unclassified"
@@ -1037547,7 +1037982,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\|P_-e\\|\\ge|U_{e3}|=0.15",
           "status": "killed_or_retracted"
@@ -1042205,6 +1042640,37 @@
       },
       "structural_family_id": "b34f14f0fb100cf77510c1a42cbed10b8e11e3210a4b4274d9ecc18fa273bdf7",
       "structural_formula": "^Necessaryandsufficientsymmetric-sectorpositivity:^\\(A(r)>#\\)and\\(A(r)[C(r)+E(r)]#B(r)^#>#\\).Theseareintegerpolynomials.Theproducerconvertseachto^exactrationalBernsteincoefficients^on6#equalsubintervalsfrom\\(r=#\\)to\\(r=(#+\\epsilon_{\\rmhigh})/(#-\\epsilon_{\\rmhigh})\\).PositivityofallBernsteincoefficientsisarationalcheckableproofontheinterval;thescriptrecordsboththewhole-intervaloutcomeandthepositivitynearthebracket.Exactanti-symmetricendpointsignsestablishauniquewitnesscrossing.Ifsubdivisionprovesthesymmetricblockpositivethroughout,thatidentifiesthe^firstlossofPSDwithinthespecified1#-edgewitnessfamily^.Noall-#-edgeminimaxproofisclaimed,andafailedBernsteincheckisreportedhonestlyratherthansilentlyasserted"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4275baeae275884a5acc85de21f86a2f00e6a76f3a24a052606ac9916c600053",
+      "normalized_formula": "^Necessarycondition,checkedbeforeanyprojectionphase.^Atwistedmassless10needs|P|2=4/3andanSU(5)-projection",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12217_12222_TWISTED_TENS_ARE_FERMIONS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/PASS12217_12222_TWISTED_TENS_ARE_FERMIONS.md",
+          "raw": "**Necessary condition, checked before any projection phase.** A twisted massless 10 needs |P|\u00b2 = 4/3 and an SU(5)-projection",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0aa4ff4e19e9c50c582a07f8206b579da9b84eeace9a8bec3dac167ec04c089d",
+      "structural_formula": "^Necessarycondition,checkedbeforeanyprojectionphase.^Atwistedmassless1#needs|P|#=#/#andanSU(#)-projection"
     },
     {
       "file_count": 1,
@@ -1055125,7 +1055591,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 148,
+          "line": 150,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "a-b>0",
           "status": "unclassified"
@@ -1056081,21 +1056547,21 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1366,
+          "line": 1368,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "a=0",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 1395,
+          "line": 1397,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "a=0",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 1469,
+          "line": 1471,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "a=0",
           "status": "unclassified"
@@ -1090220,6 +1090686,34 @@
       },
       "structural_family_id": "bde9b16020ae5f8343792bfa53fdb9d583ca65f38954174af10e9b845733a82e",
       "structural_formula": "andbus[\"global_tangential_dimension\"]=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b3b9aa9e798b91f7bbfaf752dabed82f702f62c40d2e0e5f5765d837d9fa65aa",
+      "normalized_formula": "andc.get(\"fermion_tw_W\",0)=918andnotany(k.startswith(\"scalar\")forkinc)",
+      "numeric_literals": [
+        "0",
+        "918"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 58,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "and c.get(\"fermion_tw_W\", 0) == 918 and not any(k.startswith(\"scalar\") for k in c)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5007271343567875c36a427a32e4f1f4c04e360bfd8427048783510012bf5092",
+      "structural_formula": "andc.get(\"fermion_tw_W\",#)=#andnotany(k.startswith(\"scalar\")forkinc)"
     },
     {
       "file_count": 1,
@@ -1161908,7 +1162402,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 506,
+          "line": 508,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "can be compensated by a hidden gauge element. Pass~10962 attacks this loophole in tiers:",
           "status": "certified_or_theorem"
@@ -1182609,6 +1183103,97 @@
       },
       "structural_family_id": "d343695f33d962fd321d1722aa95d95196284bd023f537999753002d348ffca7",
       "structural_formula": "checks[\"#:#twisted1#-typevectorsonthemasslessshell:#savedmodels+##freshdraws=#;control1#rootseach\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "34b2b9cdda1e1fa6d70fca40ea051f4c0d1759e3a6dd3a2955b7e2e0f8b434d0",
+      "normalized_formula": "checks[\"12217:153consistentcandidatemodels,allwithtwisted10s(918Witten-twistedfermions),twistedscalar10s:0\"]=(",
+      "numeric_literals": [
+        "0",
+        "12217",
+        "153",
+        "918"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 56,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "checks[\"12217: 153 consistent candidate models, all with twisted 10s (918 Witten-twisted fermions), twisted scalar 10s: 0\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2b83681be1d5251e51e43bbf8535bea2ebccbcef89ff5ebe29357a2609b4887a",
+      "structural_formula": "checks[\"#:#consistentcandidatemodels,allwithtwisted1#s(#Witten-twistedfermions),twistedscalar1#s:#\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "282e347020798767ce9b26647f8ae669ed48988f88b6185947e693e970066613",
+      "normalized_formula": "checks[\"12217:7x864lambda,231124admissibleconfigurations,exactly405admitatwisted10-typemasslessvector\"]=(",
+      "numeric_literals": [
+        "0",
+        "05",
+        "12217",
+        "231124",
+        "64",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "checks[\"12217: 7 x 864 lambda, 231124 admissible configurations, exactly 405 admit a twisted 10-type massless vector\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a63069bb6afc4e74fc1cad7aec99a3df39c7b4b4bca20b15d69324dc87cd3796",
+      "structural_formula": "checks[\"#:#x8#lambda,#admissibleconfigurations,exactly4#admitatwisted1#-typemasslessvector\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d378f99a39fc6eb67be17bb8e1305de241e530a1183cc8c44afeda6132cfed4d",
+      "normalized_formula": "checks[\"12218:SM_2751hastwoA2(colour,family)onlywithbothorder-2Wilsonlines;everytrivial-directionchoiceleavesone\"]=(",
+      "numeric_literals": [
+        "12218",
+        "2",
+        "751"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "checks[\"12218: SM_2751 has two A2 (colour, family) only with both order-2 Wilson lines; every trivial-direction choice leaves one\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4ca1b9be5575e3c29447529c5dff6e1188731b8c7f44e36c76095317c2dba9ff",
+      "structural_formula": "checks[\"#:SM_2#hastwoA2(colour,family)onlywithbothorder-#Wilsonlines;everytrivial-directionchoiceleavesone\"]=("
     },
     {
       "file_count": 1,
@@ -1218510,6 +1219095,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e8030611c35fcb912aeeb70707136b9d62c6a45bd657de5eed2c60df59049451",
+      "normalized_formula": "cosets,11/9);combinedwiththesecond-E8class(P2=0resp.|P2|^2=1/9required),exactly405ofthe231,124configurations",
+      "numeric_literals": [
+        "0",
+        "05",
+        "1",
+        "11",
+        "124",
+        "2",
+        "31",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "cosets, 11/9); combined with the second-E8 class (P2 = 0 resp. |P2|^2 = 1/9 required), exactly 405 of the 231,124 configurations",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8c1f77971fb20d36a307a31ec05b540fbf8a92342f30a096212c0990136cdf59",
+      "structural_formula": "cosets,#/#);combinedwiththesecond-E8class(P2=#resp.|P2|^#=#/#required),exactly4#ofthe2#,#configurations"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cf38b58ba3e75cfd6c06f7b1604b37184e4e1ef95a066e5d1e8ddc0908a5ce8e",
       "normalized_formula": "cosets,A_sample=construct_27_action()",
       "numeric_literals": [
@@ -1230338,7 +1230957,7 @@
         },
         {
           "category": "inline_math",
-          "line": 940,
+          "line": 942,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "d\\Lambda/dy\\approx600",
           "status": "unclassified"
@@ -1264328,7 +1264947,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 944,
+          "line": 946,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "dm^2/dy>0",
           "status": "unclassified"
@@ -1268565,6 +1269184,33 @@
       },
       "structural_family_id": "6e3bc8d970855854dcd77f4608e834615d0f6152a4d177d3b77dbe9c01366f18",
       "structural_formula": "e=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "37c97fec7b34099cca1ebb2abe3e4009846b9173364e8ac63cd4c60783e5eaa2",
+      "normalized_formula": "e=40u+v",
+      "numeric_literals": [
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/fractal_holonet_four_lane_addendum_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 42,
+          "path": "papers/fractal_holonet_four_lane_addendum_20261023.tex",
+          "raw": "e=40u+v",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "007c4269c2fd0c271f6e6b5a5850e1f54502a987ee24c7dd541d2507cc531bb4",
+      "structural_formula": "e=#u+v"
     },
     {
       "file_count": 1,
@@ -1303518,7 +1304164,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 484,
+          "line": 486,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f<0",
           "status": "unclassified"
@@ -1304672,14 +1305318,14 @@
         },
         {
           "category": "inline_math",
-          "line": 471,
+          "line": 473,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f=4Q_\\psi-\\tfrac45Q_\\chi",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 497,
+          "line": 499,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f=4Q_\\psi-\\tfrac45Q_\\chi",
           "status": "certified_or_theorem"
@@ -1304795,7 +1305441,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 466,
+          "line": 468,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f=\\tfrac85",
           "status": "unclassified"
@@ -1304823,7 +1305469,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 466,
+          "line": 468,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f=\\tfrac{24}{5}",
           "status": "unclassified"
@@ -1306599,7 +1307245,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f_a=M_P|\\Omega_{12}|/(3\\sqrt{\\mathrm{Im}\\tau_1\\mathrm{Im}\\tau_2})",
           "status": "killed_or_retracted"
@@ -1306781,7 +1307427,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f_a\\approx(3.7",
           "status": "killed_or_retracted"
@@ -1306809,7 +1307455,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1212,
+          "line": 1214,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "f_c(z)=\\theta[c/3,0](3z,3\\Omega)",
           "status": "unclassified"
@@ -1325130,7 +1325776,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1387,
+          "line": 1389,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "g_H=-2g\\equiv g\\pmod 3",
           "status": "unclassified"
@@ -1325789,7 +1326435,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "g_{a\\gamma\\gamma}\\approx2\\times10^{-19}",
           "status": "killed_or_retracted"
@@ -1370865,7 +1371511,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "j=0",
           "status": "killed_or_retracted"
@@ -1376892,7 +1377538,7 @@
         },
         {
           "category": "inline_math",
-          "line": 893,
+          "line": 895,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "k=1",
           "status": "certified_or_theorem"
@@ -1376973,7 +1377619,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1274,
+          "line": 1276,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "k=1,2,3,4",
           "status": "unclassified"
@@ -1378563,7 +1379209,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1415,
+          "line": 1417,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "k=3",
           "status": "unclassified"
@@ -1389822,7 +1390468,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 560,
+          "line": 562,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "lattice. Pass~10967 closes both. It takes the most general candidate: any element of the gauge",
           "status": "unclassified"
@@ -1402353,7 +1402999,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1514,
+          "line": 1516,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m=4",
           "status": "unclassified"
@@ -1404226,7 +1404872,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1536,
+          "line": 1538,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m^2=e_{\\rm vector}/6",
           "status": "unclassified"
@@ -1404562,7 +1405208,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_1=0.80\\pm0.01",
           "status": "killed_or_retracted"
@@ -1404755,7 +1405401,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1427,
+          "line": 1429,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_1m_2/m_0^2=e^{-(4\\pi/3){\\rm Im}\\,\\tau}",
           "status": "unclassified"
@@ -1404813,7 +1405459,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1453,
+          "line": 1455,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_1m_2/m_3^2=e^{-(4\\pi/3){\\rm Im}\\,\\tau}",
           "status": "unclassified"
@@ -1404868,7 +1405514,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_1m_3/m_2^2=m_um_t/m_c^2\\approx0.54",
           "status": "killed_or_retracted"
@@ -1404976,7 +1405622,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_1\\approx0.7",
           "status": "killed_or_retracted"
@@ -1405012,14 +1405658,14 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_1\\approx0.8",
           "status": "killed_or_retracted"
         },
         {
           "category": "inline_math",
-          "line": 199,
+          "line": 201,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_1\\approx0.8",
           "status": "unclassified"
@@ -1405461,7 +1406107,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1567,
+          "line": 1569,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_3/m_1=\\kappa\\,{\\Delta m^2_{21}}/{\\Delta m^2_{31}}",
           "status": "unclassified"
@@ -1405497,7 +1406143,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1565,
+          "line": 1567,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_3/m_1\\sim10^{-3}",
           "status": "open_or_conditional"
@@ -1405622,7 +1406268,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1567,
+          "line": 1569,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_3\\approx1.3",
           "status": "unclassified"
@@ -1414356,7 +1415002,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 661,
+          "line": 662,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1415729,7 +1416375,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_a\\approx1.1",
           "status": "killed_or_retracted"
@@ -1415931,14 +1416577,14 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 966,
+          "line": 968,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_b/m_\\tau=O(1)",
           "status": "unclassified"
         },
         {
           "category": "inline_math",
-          "line": 987,
+          "line": 989,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_b/m_\\tau=O(1)",
           "status": "unclassified"
@@ -1417828,7 +1418474,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_c/m_t=\\kappa(\\tau)|\\Omega_{12}|",
           "status": "killed_or_retracted"
@@ -1418381,7 +1419027,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 888,
+          "line": 890,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_c=m_u=m_t/2",
           "status": "retrospective_fit"
@@ -1418798,7 +1419444,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1516,
+          "line": 1518,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_d/m_s>0.01",
           "status": "unclassified"
@@ -1418953,7 +1419599,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1518,
+          "line": 1520,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_d=m_e=0",
           "status": "retrospective_fit"
@@ -1419490,7 +1420136,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 661,
+          "line": 662,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1430758,7 +1431404,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 625,
+          "line": 627,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_t=172.57",
           "status": "retrospective_fit"
@@ -1434354,7 +1435000,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_u/m_c=0.80",
           "status": "killed_or_retracted"
@@ -1434528,7 +1435174,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1402,
+          "line": 1404,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_u/m_c=e^{-4\\pi\\,{\\rm Im}\\,\\Omega\\,\\delta/3}",
           "status": "unclassified"
@@ -1434588,7 +1435234,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1542,
+          "line": 1544,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_u/m_c\\approx2\\times10^{-3}",
           "status": "certified_or_theorem"
@@ -1435316,7 +1435962,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1401,
+          "line": 1403,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_um_c/m_t^2=e^{-2\\pi\\,{\\rm Im}\\,\\Omega/9}",
           "status": "unclassified"
@@ -1435415,14 +1436061,14 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_um_t/m_c^2=|\\mathfrak f(\\tau_1)\\mathfrak f(\\tau_2)|^8/4",
           "status": "killed_or_retracted"
         },
         {
           "category": "inline_math",
-          "line": 148,
+          "line": 150,
           "path": "papers/forty_points/sec11_epilogue.tex",
           "raw": "m_um_t/m_c^2=|\\mathfrak f(\\tau_1)\\mathfrak f(\\tau_2)|^8/4",
           "status": "unclassified"
@@ -1437382,7 +1438028,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "m_{\\rm light}m_{\\rm heavy}/m_{\\rm mid}^2=|\\mathfrak f(\\tau)|^{16}/4",
           "status": "killed_or_retracted"
@@ -1505799,7 +1506445,7 @@
         },
         {
           "category": "inline_math",
-          "line": 882,
+          "line": 884,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "p=0.16",
           "status": "unclassified"
@@ -1509586,7 +1510232,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 941,
+          "line": 943,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "p_R^2=1",
           "status": "unclassified"
@@ -1509613,7 +1510259,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 969,
+          "line": 971,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "p_R^2=y_1/\\sqrt3",
           "status": "unclassified"
@@ -1529567,7 +1530213,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 1574,
+          "line": 1576,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "prediction yet: the quark and lepton fits (Passes~11941, 12005--12015) show existence only, and no moduli stabilisation or string model is claimed, and the natural home is a magnetized or",
           "status": "unclassified"
@@ -1646201,7 +1646847,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1582,
+          "line": 1584,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "q=3",
           "status": "unclassified"
@@ -1663876,7 +1664522,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1436,
+          "line": 1438,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "r=\\tfrac12",
           "status": "unclassified"
@@ -1665213,7 +1665859,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1558,
+          "line": 1560,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "r>0",
           "status": "unclassified"
@@ -1665503,7 +1666149,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1438,
+          "line": 1440,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "r^*=0.890",
           "status": "unclassified"
@@ -1672073,6 +1672719,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f0f06c1f84c37714c41c2e1d65d4eccbbc7f81112e49010529111ef7427ab941",
+      "normalized_formula": "realisticStandardModeltoo(Section~\\ref{sec:interp}):itsfermionparitymustbeasplitinvolution(Theorem~7.5),andno",
+      "numeric_literals": [
+        "7.5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec09_physics.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "papers/forty_points/sec09_physics.tex",
+          "raw": "realistic Standard Model too (Section~\\ref{sec:interp}): its fermion parity must be a split involution (Theorem~7.5), and no",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "51a78b67417250412e9cffb326afd238fb690337f40ca6d1ed587cf66a20f49e",
+      "structural_formula": "realisticStandardModeltoo(Section~\\ref{sec:interp}):itsfermionparitymustbeasplitinvolution(Theorem~#),andno"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4d59254e2ce983df6b18b961cc5c67bb1bf75a65f6fb7ae0a21a623cb5a7a6cb",
       "normalized_formula": "realization=\"mass-weightedsupercharged=(H+K)/2andd*=(H-K)/2whereK=GammaH\"",
       "numeric_literals": [
@@ -1678341,6 +1679014,34 @@
       },
       "structural_family_id": "2fccc7205d8927aea1e94bb4b62a6954493982bf7b9fc44b55522e13fd438833",
       "structural_formula": "res[\"#b_all_even_parents\"]=allev"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "33d4bff8fff957f7f7dfb5ada4fcc2b254504b58633d4262dc4c98f60ed4ad1d",
+      "normalized_formula": "res[\"12217_models\"]=dict(candidates=len(r),loaded=sum(1forxinrifx[\"gauge\"]!=\"LOADFAIL\"),su5=sum(1forxinrif\"tens\"inx)",
+      "numeric_literals": [
+        "1",
+        "12217"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/w33_pass12217_to_12222_twisted_tens_are_fermions.py",
+          "raw": "res[\"12217_models\"] = dict(candidates=len(r), loaded=sum(1 for x in r if x[\"gauge\"] != \"LOADFAIL\"), su5=sum(1 for x in r if \"tens\" in x),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b47d90f51f1aec408a01b61884fabd7732e357ae8f5b7541ee939705d569893b",
+      "structural_formula": "res[\"#_models\"]=dict(candidates=len(r),loaded=sum(#forxinrifx[\"gauge\"]!=\"LOADFAIL\"),su5=sum(#forxinrif\"tens\"inx)"
     },
     {
       "file_count": 1,
@@ -1703321,7 +1704022,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "r\\approx0.055",
           "status": "killed_or_retracted"
@@ -1760877,7 +1761578,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "t=0",
           "status": "killed_or_retracted"
@@ -1761954,7 +1762655,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "t=O(1)",
           "status": "killed_or_retracted"
@@ -1762886,7 +1763587,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 363,
+          "line": 365,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "t\\cdot q_s=0",
           "status": "unclassified"
@@ -1799986,7 +1800687,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1512,
+          "line": 1514,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "u=k+(N_2a-N_1b)/3",
           "status": "unclassified"
@@ -1833758,7 +1834459,7 @@
         },
         {
           "category": "inline_math",
-          "line": 970,
+          "line": 972,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "y^2-\\sqrt3\\,y+\\frac13=0",
           "status": "unclassified"
@@ -1833847,7 +1834548,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1293,
+          "line": 1295,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "y^2=x^5-1",
           "status": "unclassified"
@@ -1834207,7 +1834908,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 661,
+          "line": 662,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1837202,7 +1837903,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1423,
+          "line": 1425,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "z=3\\zeta",
           "status": "unclassified"
@@ -1837947,7 +1838648,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1409,
+          "line": 1411,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "z=m/2+k\\Omega/6",
           "status": "unclassified"
@@ -1838411,7 +1839112,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1397,
+          "line": 1399,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "z^*=\\tfrac12+(\\tfrac12-a)\\Omega",
           "status": "unclassified"
@@ -1838708,7 +1839409,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "z_e/z_d=6(1+t)/(1+2t)",
           "status": "killed_or_retracted"
@@ -1838744,7 +1839445,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "z_e=6z_d",
           "status": "killed_or_retracted"
@@ -1839147,7 +1839848,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1469,
+          "line": 1471,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "z_{\\rm eff}=0",
           "status": "unclassified"
@@ -1839175,7 +1839876,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1469,
+          "line": 1471,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "z_{\\rm eff}=\\pm\\Omega_{12}/3",
           "status": "unclassified"
@@ -1844120,7 +1844821,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1471,
+          "line": 1473,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "{\\rm Im}\\,\\Omega_{11}=25.25",
           "status": "unclassified"
@@ -1844148,7 +1844849,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1471,
+          "line": 1473,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "{\\rm Im}\\,\\Omega_{12}=4.57",
           "status": "unclassified"
@@ -1844175,7 +1844876,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1403,
+          "line": 1405,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "{\\rm Im}\\,\\Omega\\approx25",
           "status": "retrospective_fit"
@@ -1844202,14 +1844903,14 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1428,
+          "line": 1430,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "{\\rm Im}\\,\\tau=4.21",
           "status": "retrospective_fit"
         },
         {
           "category": "inline_math",
-          "line": 1438,
+          "line": 1440,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "{\\rm Im}\\,\\tau=4.21",
           "status": "unclassified"
@@ -1844237,7 +1844938,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1428,
+          "line": 1430,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "{\\rm Im}\\,\\zeta/{\\rm Im}\\,\\tau=0.121",
           "status": "retrospective_fit"
@@ -1852496,7 +1853197,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1177,
+          "line": 1179,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "|U_{e1}|^2=2/3",
           "status": "unclassified"
@@ -1854970,7 +1855671,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 854,
+          "line": 856,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "|V_{cb}|\\sim|V_{ub}|\\sim\\epsilon^2",
           "status": "unclassified"
@@ -1856510,7 +1857211,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 887,
+          "line": 889,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "|Y_{\\rm distinct}/Y_{\\rm same}|=\\frac12",
           "status": "unclassified"
@@ -1856545,7 +1857246,7 @@
         },
         {
           "category": "inline_math",
-          "line": 903,
+          "line": 905,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "|Y_{\\rm dist}/Y_{\\rm same}|=\\frac12",
           "status": "unclassified"
@@ -1858385,7 +1859086,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1142,
+          "line": 1144,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "|\\delta-90^\\circ|<26^\\circ",
           "status": "unclassified"
@@ -1860648,7 +1861349,7 @@
         },
         {
           "category": "inline_math",
-          "line": 1569,
+          "line": 1571,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "|\\tau|=1",
           "status": "killed_or_retracted"
@@ -1867397,7 +1868098,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1449,
+          "line": 1451,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sim(v/\\tilde m)^2",
           "status": "unclassified"
@@ -1868299,7 +1869000,7 @@
         },
         {
           "category": "inline_math",
-          "line": 854,
+          "line": 856,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sim10",
           "status": "unclassified"
@@ -1871177,7 +1871878,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 1520,
+          "line": 1522,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\sim4\\times10^{-7}",
           "status": "unclassified"
@@ -1878732,7 +1879433,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 234,
+          "line": 236,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\approx2.6\\times10^{-22}",
           "status": "unclassified"
@@ -1879113,7 +1879814,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 237,
+          "line": 239,
           "path": "papers/forty_points/sec09_physics.tex",
           "raw": "\\approx8.6\\times10^{-14}",
           "status": "unclassified"
@@ -1883548,9 +1884249,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T11:54:42-04:00",
+  "frozen_at": "2026-10-23T12:01:57-04:00",
   "pass": 398,
-  "repository_head": "b83c1ea83802df5bde1ac8c6db427e68e62fb41d",
+  "repository_head": "d311cbb9a48850d1af0b867f50022ae3444b69f5",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1899173,6 +1899874,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f43514425999b690d35a324b80f6ddd515fbd90d22a3a8f9ec9f5ecf4dabae64",
       "structural_formula": "\"TheoremI.#:ThebareelectromagneticcouplingattheW3#(Planck)scaleis1/alpha_W3#=#*pi/#,and1-loopRGrunningtotheelectronscalereproducesthemeasured1/alpha~#\""
+    },
+    {
+      "exact_formula_ids": [
+        "292b268df48f4e149e1b59f372aab93a75f6242c983d68ce949b47b77e118fe1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f55cb32a10ca67edfccb754ba1f9e94d40c56b57cdf25ff88854589106e7acd5",
+      "structural_formula": "\"Theorems7#-#\"intex9and\"Theorem~#\"intex9and\"Theorem~#\"intex1#and\"corrects\"intex7and\"twistedfermions\"intex7)"
     },
     {
       "exact_formula_ids": [
@@ -1948472,6 +1949181,7 @@
         "191d3d4438d57f3aac36819f56152f2ac4e768366f4cfe69eef81b233c0f5bc7",
         "026f71f7f8c050380e01349868af60f6071f3e64b512bf38fb98e4638dc5e531",
         "b82acba1fd6b9873e2160f185fe72c66bdae66b5c0a7b82659ecacf0bf9ec4b0",
+        "a716b0ce014112ea955f6a70ead05c5a9d3f9358131613ebb7459723eb99d291",
         "35d7a4c3a64f8308b7fd38cbc1f72ff3e775513dd6dddc7e84e095d51e6bc520",
         "93517ff238439b4285acbdcbf7b4553390ad5d8bab2da78f8fb7b88257c1fac0",
         "7a96e3c9e86fa2d7d11400072e159dab5d1d9e51b06ae12f96b43f3bc994d066",
@@ -1948519,7 +1949229,7 @@
         "b40375b41f58ec001693d2ccd41cfca222aba7ae80dda196e229b1fc8268048f",
         "67f4aef562b5e3b12b9e04c27c2a0565bb9a10ab19f49379126de0282d9dbaf5"
       ],
-      "exact_member_count": 54,
+      "exact_member_count": 55,
       "structural_family_id": "7d22d8a0b12e1b8936efbcb686b6985af2960494183505abc23e186365bbbc15",
       "structural_formula": "#/#=#"
     },
@@ -1973852,12 +1974562,13 @@
         "8720d135bf99d07af45530e1077fdbf44d28cc0abea87115d04571a860ccca91",
         "94fdec207aef4440ecdcb194ef8f423fd6e807003ac9a71e200453c69ae6313b",
         "755517d109c97a8a7eca8f6f5047fc3a07e17a71bfd74e11c2beec05c04d9320",
+        "ab0e1fdba64c45efbcc1656e22f43875ef00e755bf55e7708261d8c179ef3ad5",
         "588fc3c53acd2f7755f4e8d230dd39f4566c7717a6be70481a731d68fe6f24ee",
         "de95d85b38de304ae3cffb7806a5d4bcfeb9c163cd38deca183cbfcc9d16695f",
         "d46e9fa1e6d650c3747be0f519f773b860aeebbbd5c06491a4577aaf62adde5f",
         "798d3ee64a9cf34d37d95cf362e28d07e1b46b7ec4c564faf09d69753ac0a4b3"
       ],
-      "exact_member_count": 10,
+      "exact_member_count": 11,
       "structural_family_id": "6ebb3281d88c7408e9ce30e1c7fb34dceb92e0a44b79aa4aa78b0cf2a111f066",
       "structural_formula": "#\\cdot2#=#"
     },
@@ -1974197,6 +1974908,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3ba252d203079e5eb60e1b3ca9736de7ff69f9909bea184418a3b2bcf39a12b9",
       "structural_formula": "#\\cdot4=(\\#\\text{lines})\\cdot4"
+    },
+    {
+      "exact_formula_ids": [
+        "aab1cbb276aa6d733201078819e163ab4fc6dfa05416c4ddf6303601e91daf4c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c2f2490c8dec1667367164448bdaddda63ce0fba8bdc35d9a5d32d74b7567dcd",
+      "structural_formula": "#\\cdot4\\cdot2=#"
     },
     {
       "exact_formula_ids": [
@@ -2011121,6 +2011840,14 @@
     },
     {
       "exact_formula_ids": [
+        "1f1351c905e7956bec4b9b4d80a60d483744875e4de15cf231cd4d7ed080238f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "74ed621450418a43c8848a7e3c5aa360e97c0a5cc44d626f2c0be03c0a05f41f",
+      "structural_formula": "-ThefirstE8alonedoesnotexcludeit:hitsoccurwith|P1|#=#/#,andwith1#/#inWitten-twistedcosets"
+    },
+    {
+      "exact_formula_ids": [
         "26f5bdf61b184b842d98908a1d6fecc67651da35368ca321a9ef7a1cd2bf3d8e"
       ],
       "exact_member_count": 1,
@@ -2038608,6 +2039335,14 @@
     },
     {
       "exact_formula_ids": [
+        "899229379f9f4b0d1e666bb013a2303216be01e08a7dc6555a81132008b6015a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8abbb3e3e0a08d979086708e7b0b8f41cea3910fa2c7e88058b69f0bcff6ddf2",
+      "structural_formula": "B_n=(#^{n-#}#)/#"
+    },
+    {
+      "exact_formula_ids": [
         "b6c4c6b902302834b4ddda32759de1e2fd5bc89c0473c40bef9d1fa1ffcb7456"
       ],
       "exact_member_count": 1,
@@ -2047960,6 +2048695,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e858410ab89e8e02ea4c52e4f83ead5e321888c7b23e9dc36bdfd7efaeea4043",
       "structural_formula": "E(S,F)=#n-sum_qd(P_q)andA(S)=#n-max{sumd(P):P_1,...,P_kmutuallyorthogonal}"
+    },
+    {
+      "exact_formula_ids": [
+        "011d9e0d2e39dd748fda92f28bef57758527655524d95cd16178221e07adb455"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f57e34bec60c3cae74413fc0a8746ecad6b9116c9d3d6bcfb1148a99ab8f4983",
+      "structural_formula": "E(W3#)=M_0\\sqcupM_1\\sqcup\\cdots\\sqcupM_{#},\\quad|M_k|=#"
     },
     {
       "exact_formula_ids": [
@@ -2067542,6 +2068285,14 @@
     },
     {
       "exact_formula_ids": [
+        "9f63f278aa5f74c915d634f1288e5e8745075246c0393f24d15caf65f7d3c2ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7182d9a95485bf5e24a36326912ee92074ebaf54f9026c5977369e38225669c6",
+      "structural_formula": "L=(#,#,#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "e36ee51d3f524288055aab373afae6c5163a554176b484f3bc242e4aa390dda0"
       ],
       "exact_member_count": 1,
@@ -2078816,6 +2079567,14 @@
     },
     {
       "exact_formula_ids": [
+        "bd90889ec84e65bb214dc5abf0a0511fe96a41ac1abecb6d863097671a8a613d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fcecb9ae15c4049077c514c1c6c4e66c5a838715b016ff7907d6aafa06bc26ae",
+      "structural_formula": "Necessarycondition(beforeanyprojectionphase):atwistedmassless1#needsP=(P1,P2),|P|^#=#/#(nooscillator;withone"
+    },
+    {
+      "exact_formula_ids": [
         "c5e98357b54b7597a59776a0a48dc4df964288f468551c9d49a36a6a488f3c1f"
       ],
       "exact_member_count": 1,
@@ -2081429,6 +2082188,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0af6e89c0b286219f75257d0f36c1fe0567313ea3eae86231e9053f6b06ce27d",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_survivors_thresholds_proton_closure.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "6f55a25ed911b50c078f2d2a890d447f2f442e42f3c1ab56813b7e34a05f1beb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2d596bb0ffbbb51b48677f1f07b8a1cc11cc04b4188e962c2197619278c64e25",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_twisted_tens_are_fermions.json\""
     },
     {
       "exact_formula_ids": [
@@ -2131082,6 +2131849,14 @@
     },
     {
       "exact_formula_ids": [
+        "9fd07327395b31726db27a9218f9aa69c9c944d01354a6b516566ce943ecbd35"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e9860d36a44810e6b9f8882ab8b9d23072796b3c94b9e6a5611b1780f3103c81",
+      "structural_formula": "\\begin{aligned}E_{\\mathrm{cart}}(n)=#n4#^{n-#},\\\\E_{\\mathrm{#gateway}}(n)=#\\cdot4#^{n-#}#B_n,\\\\E_{\\mathrm{sparse}}(n)=#\\cdot4#^{n-#}#B_n.\\end{aligned}"
+    },
+    {
+      "exact_formula_ids": [
         "7dc8d3fc337310fb57b1aaca5f2e7866c652993c0f2db9bc4502ff4cc7d74833"
       ],
       "exact_member_count": 1,
@@ -2131450,10 +2132225,11 @@
     },
     {
       "exact_formula_ids": [
+        "57e833b331d3fa0a4b27e6617713fcb37d64157d5135e9b8d1d1f941799ec856",
         "9c1b050a9d3850194a570ef7b347765572b4d37aec62cda9d7dfa739bba146c8",
         "201d193188adf3a4568a719af6ee87d02672acc28ebbf55195c5cdf4092d5598"
       ],
-      "exact_member_count": 2,
+      "exact_member_count": 3,
       "structural_family_id": "f04b11a30e82ba9ddd04ab3cb1aeaacbdd606371e367d9dd2dc9755aa53f3175",
       "structural_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=#mm,minimumheight=#mm},nodedistance=#mm]"
     },
@@ -2146206,6 +2146982,14 @@
     },
     {
       "exact_formula_ids": [
+        "9cf0b8dde8ac16e10cc519f6359887676758a0da4fc20dbe7bce695d964e3fbe"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9cf0b8dde8ac16e10cc519f6359887676758a0da4fc20dbe7bce695d964e3fbe",
+      "structural_formula": "\\langleu,v\\rangle=u_0v_1-u_1v_0+u_2v_3-u_3v_2\\pmod3"
+    },
+    {
+      "exact_formula_ids": [
         "08e032e38bc66488eb37b754ce00fc4d0231be70818363034345aad97dd446b8"
       ],
       "exact_member_count": 1,
@@ -2151712,6 +2152496,14 @@
     },
     {
       "exact_formula_ids": [
+        "426e5d95152a4f03ea33371a7862fc2348592e24ed1857feceddf11a06273644"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "757ae50554a0eca9d143bd025042142e8eeb2617fc60bbabf290ad02e099434f",
+      "structural_formula": "\\operatorname{lane}(u,v)=k\\bmod4,\\quad\\operatorname{slot}(u,v)=\\lfloork/#\\rfloor,\\quad\\operatorname{gateway}(u,v)=L_{k\\bmod4}"
+    },
+    {
+      "exact_formula_ids": [
         "631583ee39ab19a8e5be6cf35033f7318cf6cdff5f1d499332842253ffc3c8f3"
       ],
       "exact_member_count": 1,
@@ -2153215,6 +2154007,14 @@
       "exact_member_count": 1,
       "structural_family_id": "30281ca544edd27a5809fed4da64bc99f6d63cd6eb393949e48214979b43cf3a",
       "structural_formula": "\\quadp=\\dot\\theta/(Ne^#V)=m\\in\\mathbbZ"
+    },
+    {
+      "exact_formula_ids": [
+        "b8d4b1a0d174f40568ab13813ae4d1821f772d563d9d1011e3c57bcefde4cc1b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c0e9ed41df6ccc1ca263ebd8d828309e39a980a3a6a3d92a3b25f96f44c7244b",
+      "structural_formula": "\\quad|M_k|=#"
     },
     {
       "exact_formula_ids": [
@@ -2161474,6 +2162274,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b34f14f0fb100cf77510c1a42cbed10b8e11e3210a4b4274d9ecc18fa273bdf7",
       "structural_formula": "^Necessaryandsufficientsymmetric-sectorpositivity:^\\(A(r)>#\\)and\\(A(r)[C(r)+E(r)]#B(r)^#>#\\).Theseareintegerpolynomials.Theproducerconvertseachto^exactrationalBernsteincoefficients^on6#equalsubintervalsfrom\\(r=#\\)to\\(r=(#+\\epsilon_{\\rmhigh})/(#-\\epsilon_{\\rmhigh})\\).PositivityofallBernsteincoefficientsisarationalcheckableproofontheinterval;thescriptrecordsboththewhole-intervaloutcomeandthepositivitynearthebracket.Exactanti-symmetricendpointsignsestablishauniquewitnesscrossing.Ifsubdivisionprovesthesymmetricblockpositivethroughout,thatidentifiesthe^firstlossofPSDwithinthespecified1#-edgewitnessfamily^.Noall-#-edgeminimaxproofisclaimed,andafailedBernsteincheckisreportedhonestlyratherthansilentlyasserted"
+    },
+    {
+      "exact_formula_ids": [
+        "4275baeae275884a5acc85de21f86a2f00e6a76f3a24a052606ac9916c600053"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0aa4ff4e19e9c50c582a07f8206b579da9b84eeace9a8bec3dac167ec04c089d",
+      "structural_formula": "^Necessarycondition,checkedbeforeanyprojectionphase.^Atwistedmassless1#needs|P|#=#/#andanSU(#)-projection"
     },
     {
       "exact_formula_ids": [
@@ -2174401,6 +2175209,14 @@
       "exact_member_count": 1,
       "structural_family_id": "bde9b16020ae5f8343792bfa53fdb9d583ca65f38954174af10e9b845733a82e",
       "structural_formula": "andbus[\"global_tangential_dimension\"]=#"
+    },
+    {
+      "exact_formula_ids": [
+        "b3b9aa9e798b91f7bbfaf752dabed82f702f62c40d2e0e5f5765d837d9fa65aa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5007271343567875c36a427a32e4f1f4c04e360bfd8427048783510012bf5092",
+      "structural_formula": "andc.get(\"fermion_tw_W\",#)=#andnotany(k.startswith(\"scalar\")forkinc)"
     },
     {
       "exact_formula_ids": [
@@ -2199174,6 +2199990,14 @@
     },
     {
       "exact_formula_ids": [
+        "34b2b9cdda1e1fa6d70fca40ea051f4c0d1759e3a6dd3a2955b7e2e0f8b434d0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2b83681be1d5251e51e43bbf8535bea2ebccbcef89ff5ebe29357a2609b4887a",
+      "structural_formula": "checks[\"#:#consistentcandidatemodels,allwithtwisted1#s(#Witten-twistedfermions),twistedscalar1#s:#\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "645187869cc91ac3349313974d0448739941fd7c12e7ef825eaf4f958fdb445b"
       ],
       "exact_member_count": 1,
@@ -2199195,6 +2200019,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d343695f33d962fd321d1722aa95d95196284bd023f537999753002d348ffca7",
       "structural_formula": "checks[\"#:#twisted1#-typevectorsonthemasslessshell:#savedmodels+##freshdraws=#;control1#rootseach\"]=("
+    },
+    {
+      "exact_formula_ids": [
+        "282e347020798767ce9b26647f8ae669ed48988f88b6185947e693e970066613"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a63069bb6afc4e74fc1cad7aec99a3df39c7b4b4bca20b15d69324dc87cd3796",
+      "structural_formula": "checks[\"#:#x8#lambda,#admissibleconfigurations,exactly4#admitatwisted1#-typemasslessvector\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2199251,6 +2200083,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e7547a31d7ba60af700943813b14a2074e0d5e8cb39fd88092d7e4dc068de09a",
       "structural_formula": "checks[\"#:S0#lowestWittenlevel=(sqrt3y-#)^#/(#sqrt3y)to1e-#ontheaxis(#chargedformatB=#)\"]=dev<#andlen(exact)>=#"
+    },
+    {
+      "exact_formula_ids": [
+        "d378f99a39fc6eb67be17bb8e1305de241e530a1183cc8c44afeda6132cfed4d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4ca1b9be5575e3c29447529c5dff6e1188731b8c7f44e36c76095317c2dba9ff",
+      "structural_formula": "checks[\"#:SM_2#hastwoA2(colour,family)onlywithbothorder-#Wilsonlines;everytrivial-directionchoiceleavesone\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2209726,6 +2210566,14 @@
       "exact_member_count": 1,
       "structural_family_id": "52a8b3bccc3035e49d0ad76ada38e56ee223da111564eec07985d76b75698c8b",
       "structural_formula": "cosets(w=#modsqrt(#))andthesplittingisoddunderf1->-f1,sothefirstallowedtermis(x1barx2)^#"
+    },
+    {
+      "exact_formula_ids": [
+        "e8030611c35fcb912aeeb70707136b9d62c6a45bd657de5eed2c60df59049451"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8c1f77971fb20d36a307a31ec05b540fbf8a92342f30a096212c0990136cdf59",
+      "structural_formula": "cosets,#/#);combinedwiththesecond-E8class(P2=#resp.|P2|^#=#/#required),exactly4#ofthe2#,#configurations"
     },
     {
       "exact_formula_ids": [
@@ -2223338,6 +2224186,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ad52bedbfeb203c922227751ea80435cd3418f6e5ebd2a6c466a35d3e5451705",
       "structural_formula": "e=#;random_replace=#"
+    },
+    {
+      "exact_formula_ids": [
+        "37c97fec7b34099cca1ebb2abe3e4009846b9173364e8ac63cd4c60783e5eaa2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "007c4269c2fd0c271f6e6b5a5850e1f54502a987ee24c7dd541d2507cc531bb4",
+      "structural_formula": "e=#u+v"
     },
     {
       "exact_formula_ids": [
@@ -2330806,6 +2331662,14 @@
     },
     {
       "exact_formula_ids": [
+        "f0f06c1f84c37714c41c2e1d65d4eccbbc7f81112e49010529111ef7427ab941"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "51a78b67417250412e9cffb326afd238fb690337f40ca6d1ed587cf66a20f49e",
+      "structural_formula": "realisticStandardModeltoo(Section~\\ref{sec:interp}):itsfermionparitymustbeasplitinvolution(Theorem~#),andno"
+    },
+    {
+      "exact_formula_ids": [
         "4d59254e2ce983df6b18b961cc5c67bb1bf75a65f6fb7ae0a21a623cb5a7a6cb"
       ],
       "exact_member_count": 1,
@@ -2332539,6 +2333403,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e5beb25979dee2d555bc32eb4b2c310631aee405ad24cbcb65283229e0df4b8c",
       "structural_formula": "res[\"#_exotic_masses\"]={m:dict(unlifted=v[\"unlifted_pairs\"])form,vinex.items()}"
+    },
+    {
+      "exact_formula_ids": [
+        "33d4bff8fff957f7f7dfb5ada4fcc2b254504b58633d4262dc4c98f60ed4ad1d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b47d90f51f1aec408a01b61884fabd7732e357ae8f5b7541ee939705d569893b",
+      "structural_formula": "res[\"#_models\"]=dict(candidates=len(r),loaded=sum(#forxinrifx[\"gauge\"]!=\"LOADFAIL\"),su5=sum(#forxinrif\"tens\"inx)"
     },
     {
       "exact_formula_ids": [
@@ -2386935,20 +2387807,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91349844,
-    "exact_formula_families": 64397,
-    "files_scanned": 12564,
-    "formula_occurrences": 70503,
+    "bytes_scanned": 91378269,
+    "exact_formula_families": 64421,
+    "files_scanned": 12568,
+    "formula_occurrences": 70527,
     "status_occurrences": {
-      "certified_or_theorem": 5290,
+      "certified_or_theorem": 5291,
       "killed_or_retracted": 1872,
-      "open_or_conditional": 2375,
+      "open_or_conditional": 2377,
       "preregistered": 36,
       "retrospective_fit": 5398,
-      "unclassified": 55532
+      "unclassified": 55553
     },
-    "structural_families": 62706
+    "structural_families": 62727
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "db17ae59e0168abca9a161a6b98a6680086187fa26466e67021ef78bec67892e"
+  "universe_sha256": "e884adad0637ed55aba6bb54ac1d17bbecfdb58d803fa31a1c332f0c2a0d1191"
 }
