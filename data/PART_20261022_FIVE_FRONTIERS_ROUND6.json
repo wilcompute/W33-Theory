@@ -1,0 +1,367 @@
+{
+  "schema": "w33.toe.20261022.round6.v1",
+  "primepower": {
+    "status": "EXACT_EXTENSION_FIELD_C_K_Q_CENSUS_GF4_GF9",
+    "cases": [
+      {
+        "q": 4,
+        "p": 2,
+        "n": 85,
+        "Cdim": 16,
+        "Kdim": 69,
+        "Qdim": 53,
+        "moving_p_cycles": 32,
+        "ranks_C": [
+          16,
+          6,
+          0
+        ],
+        "ranks_K": [
+          69,
+          26,
+          0
+        ],
+        "ranks_Q": [
+          53,
+          20,
+          0
+        ],
+        "Jordan_C": {
+          "1": 4,
+          "2": 6
+        },
+        "Jordan_K": {
+          "1": 17,
+          "2": 26
+        },
+        "Jordan_Q": {
+          "1": 13,
+          "2": 20
+        },
+        "delta_higher_rank": [
+          0,
+          0
+        ]
+      },
+      {
+        "q": 8,
+        "p": 2,
+        "n": 585,
+        "Cdim": 64,
+        "Kdim": 521,
+        "Qdim": 457,
+        "moving_p_cycles": 256,
+        "ranks_C": [
+          64,
+          28,
+          0
+        ],
+        "ranks_K": [
+          521,
+          228,
+          0
+        ],
+        "ranks_Q": [
+          457,
+          200,
+          0
+        ],
+        "Jordan_C": {
+          "1": 8,
+          "2": 28
+        },
+        "Jordan_K": {
+          "1": 65,
+          "2": 228
+        },
+        "Jordan_Q": {
+          "1": 57,
+          "2": 200
+        },
+        "delta_higher_rank": [
+          0,
+          0
+        ]
+      },
+      {
+        "q": 9,
+        "p": 3,
+        "n": 820,
+        "Cdim": 100,
+        "Kdim": 720,
+        "Qdim": 620,
+        "moving_p_cycles": 243,
+        "ranks_C": [
+          100,
+          54,
+          21,
+          0
+        ],
+        "ranks_K": [
+          720,
+          428,
+          206,
+          0
+        ],
+        "ranks_Q": [
+          620,
+          370,
+          169,
+          0
+        ],
+        "Jordan_C": {
+          "1": 13,
+          "2": 12,
+          "3": 21
+        },
+        "Jordan_K": {
+          "1": 70,
+          "2": 16,
+          "3": 206
+        },
+        "Jordan_Q": {
+          "1": 49,
+          "2": 32,
+          "3": 169
+        },
+        "delta_higher_rank": [
+          4,
+          16,
+          0
+        ]
+      }
+    ],
+    "boundary": "GF(4),GF(8),GF(9) are sample prime-power fields, not a general t theorem. Formula over F_p remains separate."
+  },
+  "clock": {
+    "status": "MICROSCOPIC_TWO_QUTRIT_REALITY_AND_CHIRAL_DEGENERACY_TEST",
+    "Hermitian_H_polynomial": "H\u00b2-H-20I=0",
+    "ground_energy": -4,
+    "ground_rank": 5,
+    "exact_ground_projector": "P=(5I-H)/9",
+    "projected_current_eigenvalues": [
+      -4.488362217486492e-16,
+      -3.2154064824249085e-16,
+      -1.7991468238550677e-16,
+      -6.0045395143145104e-18,
+      7.897585781826935e-34,
+      2.5747243095065044e-18,
+      3.137436077059774e-17,
+      1.782995243065386e-16,
+      5.846703662951513e-16
+    ],
+    "parity_identification": "H=(I-9Pi)/2, Pi|a,b>=|-a,-b>",
+    "parity_odd_current": "Pi J Pi=-J",
+    "ground_projection_current_exactly_zero": true,
+    "linear_chiral_ground_response": "vanishes identically at first order",
+    "composite_chiral_operator": "O=[Re(X_1),Re(Z_1)]/(2i), parity even, conjugation odd",
+    "composite_ground_spectrum": [
+      -0.5303300858899106,
+      -0.5303300858899105,
+      -1.1295604772115906e-16,
+      -1.6493830907421718e-17,
+      -8.342419735178067e-19,
+      9.284590901390977e-18,
+      4.1314263563878533e-17,
+      0.5303300858899106,
+      0.5303300858899107
+    ],
+    "composite_ground_projection_nonzero": true,
+    "composite_projected_minimal_polynomial": "O_proj(O_proj^2-9/32 I)=0",
+    "composite_nonzero_eigenvalues": "plus/minus 3sqrt(2)/8, each multiplicity 2",
+    "K_conjugate_spectrum_symmetric": true,
+    "selection_proved": false,
+    "boundary": "A single-body parity-odd current cannot split this ground multiplet, but a parity-even K-odd composite can. Its source is not derived dynamically; physical T and time arrow remain open."
+  },
+  "routing": {
+    "status": "EXACT_MATCHING_DEGENERACY_AND_RESTRICTED_OPTIMALITY",
+    "one_anchor_matchings": 8124,
+    "distinct_available_hubs": 12,
+    "four_choices_per_three_cycle": true,
+    "all_40_anchors_symmetry_equivalent": true,
+    "restricted_normal_form_min_swaps": 36,
+    "restricted_normal_form_min_depth": 4,
+    "global_SWAPS_bounds": [
+      27,
+      36
+    ],
+    "global_depth_bounds": [
+      3,
+      4
+    ],
+    "scope": "Optimal only in disjoint-single-fixed-hub per-three-cycle architecture; unrestricted circuits may improve."
+  },
+  "magic": {
+    "status": "EXACT_9_BRANCH_CLIFFORD_CORRECTED_QUTRIT_BELL_GATE_TELEPORTATION",
+    "gate": "M=diag(1,zeta9,zeta9\u00b2), a level-3 non-Clifford gate",
+    "resource": "(I tensor M)|Phi_3>; must be supplied/prepared independently",
+    "Bell_outcome_formula": "(1/3) M X^a Z^(-b)|psi>",
+    "correction": "C_ab=M Z^b X^(-a) M^dagger; all nine are Clifford",
+    "outcomes": [
+      {
+        "a": 0,
+        "b": 0,
+        "outcome_probability": 0.1111111111111111
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "outcome_probability": 0.11111111111111117
+      },
+      {
+        "a": 0,
+        "b": 2,
+        "outcome_probability": 0.11111111111111124
+      },
+      {
+        "a": 1,
+        "b": 0,
+        "outcome_probability": 0.1111111111111111
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "outcome_probability": 0.11111111111111117
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "outcome_probability": 0.11111111111111124
+      },
+      {
+        "a": 2,
+        "b": 0,
+        "outcome_probability": 0.11111111111111113
+      },
+      {
+        "a": 2,
+        "b": 1,
+        "outcome_probability": 0.11111111111111122
+      },
+      {
+        "a": 2,
+        "b": 2,
+        "outcome_probability": 0.11111111111111129
+      }
+    ],
+    "resource_fidelity_F_trace_bound": "output trace norm <= 2 sqrt(1-F) by contractivity plus Fuchs-van-de-Graaf (ideal resource pure)",
+    "native_magic_preparation_or_distillation": false,
+    "fault_threshold": false
+  },
+  "point_spectrum": {
+    "status": "EXACT_GF9_W33_POINT_SPACE_LOWER_BOUND_NOT_REGULAR_CAYLEY",
+    "cases": [
+      {
+        "q": 3,
+        "dimension": 40,
+        "krylov_probe": "seeded generic integer vector",
+        "second_transvection_parameter": 1,
+        "generated_group_order": 24,
+        "certified_distinct_pointspace_eigenvalues_lower_bound": 12,
+        "steps_cap": 40,
+        "saturated": true,
+        "w33_B_degree": 27
+      },
+      {
+        "q": 9,
+        "dimension": 820,
+        "krylov_probe": "seeded generic integer vector",
+        "second_transvection_parameter": 1,
+        "generated_group_order": 24,
+        "certified_distinct_pointspace_eigenvalues_lower_bound": 13,
+        "steps_cap": 100,
+        "saturated": true,
+        "w33_B_degree": 729
+      },
+      {
+        "q": 9,
+        "dimension": 820,
+        "krylov_probe": "seeded generic integer vector",
+        "second_transvection_parameter": 3,
+        "generated_group_order": 120,
+        "certified_distinct_pointspace_eigenvalues_lower_bound": 23,
+        "steps_cap": 100,
+        "saturated": true,
+        "w33_B_degree": 729
+      },
+      {
+        "q": 9,
+        "dimension": 820,
+        "krylov_probe": "seeded generic integer vector",
+        "second_transvection_parameter": 4,
+        "generated_group_order": 720,
+        "certified_distinct_pointspace_eigenvalues_lower_bound": 51,
+        "steps_cap": 100,
+        "saturated": true,
+        "w33_B_degree": 729
+      }
+    ],
+    "proof": "integer symmetric W33 point Hamiltonian; Krylov independence modulo65521 implies rational independence and at least as many distinct real eigenvalues.",
+    "boundary": "Two finite geometries and dense B coupling do not establish Weyl law, spectral dimension, Lorentz invariance, locality, continuum spacetime or gravity."
+  },
+  "sparse_equivalence": {
+    "status": "EXACT_RANK_ONE_DENSE_TO_SPARSE_SPECTRAL_EQUIVALENCE",
+    "sparse_model": "H_sparse=(q^3+1)I + A_q + D_u + D_v",
+    "dense_model": "H_dense=q^3 I-B_q+D_u+D_v",
+    "note": "Nonuniform eigenvalues coincide exactly; uniform mode shifts from 0 to n. Distinct spectral counts coincide for q=3,9 by isolation bound.",
+    "cases": [
+      {
+        "q": 3,
+        "n": 40,
+        "shear": 1,
+        "B_degree": 27,
+        "A_degree": 12,
+        "sparse_max_nondiagonal_neighbors": 16,
+        "constant_eigenvalue_dense": 0,
+        "constant_eigenvalue_sparse": 40,
+        "nonconstant_spectra_identical": true,
+        "constant_isolated_in_sparse_model": true,
+        "identity": "H_sparse-H_dense=11^T",
+        "nonconstant_top_energy_upper_bound": 36
+      },
+      {
+        "q": 9,
+        "n": 820,
+        "shear": 1,
+        "B_degree": 729,
+        "A_degree": 90,
+        "sparse_max_nondiagonal_neighbors": 94,
+        "constant_eigenvalue_dense": 0,
+        "constant_eigenvalue_sparse": 820,
+        "nonconstant_spectra_identical": true,
+        "constant_isolated_in_sparse_model": true,
+        "identity": "H_sparse-H_dense=11^T",
+        "nonconstant_top_energy_upper_bound": 744
+      },
+      {
+        "q": 9,
+        "n": 820,
+        "shear": 3,
+        "B_degree": 729,
+        "A_degree": 90,
+        "sparse_max_nondiagonal_neighbors": 94,
+        "constant_eigenvalue_dense": 0,
+        "constant_eigenvalue_sparse": 820,
+        "nonconstant_spectra_identical": true,
+        "constant_isolated_in_sparse_model": true,
+        "identity": "H_sparse-H_dense=11^T",
+        "nonconstant_top_energy_upper_bound": 744
+      },
+      {
+        "q": 9,
+        "n": 820,
+        "shear": 4,
+        "B_degree": 729,
+        "A_degree": 90,
+        "sparse_max_nondiagonal_neighbors": 94,
+        "constant_eigenvalue_dense": 0,
+        "constant_eigenvalue_sparse": 820,
+        "nonconstant_spectra_identical": true,
+        "constant_isolated_in_sparse_model": true,
+        "identity": "H_sparse-H_dense=11^T",
+        "nonconstant_top_energy_upper_bound": 744
+      }
+    ],
+    "physical_limit": "W33 graph degree q(q+1) diverges and diameter=2; abstract graph sparsity does not establish continuum locality or causal speed."
+  }
+}
