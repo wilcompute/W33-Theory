@@ -1,0 +1,464 @@
+{
+  "schema": "w33.toe.20261023.five_round8.v1",
+  "primepower": {
+    "status": "INDEPENDENT_LUCAS_PROOF_OF_KNOWN_ALLQ_P_RANK",
+    "theorem": "rank_Fp(B_{W(3,p^t)})=binom(p+2,3)^t",
+    "proof": "B_xy=omega(x,y)^(q-1) in Fp. As a polynomial in y, expand the linear form power q-1. Coefficient extraction on Fq^4 using 4-variable Vandermonde interpolation (each coordinate exponent < q) shows the row span over Fq equals the span of its nonzero monomial coefficients. Lucas's theorem says multinomial coefficients survive mod p exactly when each base-p digit of four exponents sums to p-1. There are binom(p+2,3) choices per digit, independently for t digits. These monomials have degree q-1 and evaluate independently on Fq^4 since their individual exponents < q; degree q-1 guarantees projective scale invariance. Matrix entries lie in Fp, hence ranks agree after scalar extension Fp->Fq.",
+    "exact_geometry_checks": [
+      {
+        "q": 3,
+        "p": 3,
+        "extension_t": 1,
+        "matrix_p_rank": 10,
+        "lucas_formula": 10
+      },
+      {
+        "q": 4,
+        "p": 2,
+        "extension_t": 2,
+        "matrix_p_rank": 16,
+        "lucas_formula": 16
+      },
+      {
+        "q": 8,
+        "p": 2,
+        "extension_t": 3,
+        "matrix_p_rank": 64,
+        "lucas_formula": 64
+      },
+      {
+        "q": 9,
+        "p": 3,
+        "extension_t": 2,
+        "matrix_p_rank": 100,
+        "lucas_formula": 100
+      }
+    ],
+    "formula_scenarios": [
+      {
+        "p": 2,
+        "t": 1,
+        "formula": 4,
+        "PG_points": 15
+      },
+      {
+        "p": 2,
+        "t": 2,
+        "formula": 16,
+        "PG_points": 85
+      },
+      {
+        "p": 2,
+        "t": 3,
+        "formula": 64,
+        "PG_points": 585
+      },
+      {
+        "p": 2,
+        "t": 4,
+        "formula": 256,
+        "PG_points": 4369
+      },
+      {
+        "p": 3,
+        "t": 1,
+        "formula": 10,
+        "PG_points": 40
+      },
+      {
+        "p": 3,
+        "t": 2,
+        "formula": 100,
+        "PG_points": 820
+      },
+      {
+        "p": 3,
+        "t": 3,
+        "formula": 1000,
+        "PG_points": 20440
+      },
+      {
+        "p": 5,
+        "t": 1,
+        "formula": 35,
+        "PG_points": 156
+      },
+      {
+        "p": 5,
+        "t": 2,
+        "formula": 1225,
+        "PG_points": 16276
+      },
+      {
+        "p": 7,
+        "t": 1,
+        "formula": 84,
+        "PG_points": 400
+      }
+    ],
+    "scope": "Independent elementary interpolation derivation of classical Hamada p-rank already explicitly used in analysis/w33_20261022_allq_pascal_CSS_exact_distance.py; not a novel rank result. Does not calculate the all-q connecting-map ranks or establish physics."
+  },
+  "local_chirality": {
+    "status": "EXACT_W33_EDGE_LOCAL_K_SYMMETRIC_CHIRAL_SECTORS",
+    "sites": 40,
+    "graph_degree": 12,
+    "edge_count": 240,
+    "H": "sum_i H0_i - sum_(i,j in W33_edges) O_i O_j",
+    "symmetries": "graph automorphisms on sites and global computational-basis complex conjugation K",
+    "onsite_operator": "H0=(I-9Pi)/2, O=[Re(X1),Re(Z1)]/(2i)",
+    "onsite_O_spectrum": "0 mult5 total 9D; in ground 0 mult1, +/-3sqrt2/8 each mult2",
+    "exact_ground_energy": -227.5,
+    "ground_degeneracy": 2199023255552,
+    "ground_sectors": "all O_i=+3sqrt2/8 or all O_i=-3sqrt2/8; 2 local multiplicity at each vertex",
+    "one_zero_charge_energy_cost": 3.375,
+    "one_sign_flip_energy_cost": 6.75,
+    "domain_wall_bound": "cut(S)>=(k-r)|S|(n-|S|)/n via adjacency eigenvalue r=q-1=2",
+    "domain_controls": [
+      {
+        "domain_size": 1,
+        "spectral_cut_lower_bound": 9.75,
+        "chiral_domain_wall_energy_lower_bound": 5.484375
+      },
+      {
+        "domain_size": 2,
+        "spectral_cut_lower_bound": 19.0,
+        "chiral_domain_wall_energy_lower_bound": 10.6875
+      },
+      {
+        "domain_size": 10,
+        "spectral_cut_lower_bound": 75.0,
+        "chiral_domain_wall_energy_lower_bound": 42.1875
+      },
+      {
+        "domain_size": 20,
+        "spectral_cut_lower_bound": 100.0,
+        "chiral_domain_wall_energy_lower_bound": 56.25
+      }
+    ],
+    "boundary": "Commuting W33 edge-local quantum toy with exact finite-N degeneracy and no dynamics between sectors; graph diameter2 and site degree12 do not imply physical 3+1D localization or spontaneous time arrow."
+  },
+  "routing": {
+    "status": "PROVED_EVEN_SWAP_COUNT_AND_SOLVER_BOUNDARY",
+    "target": "nine disjoint length-three cycles, thirteen fixed points",
+    "permutation_sign": "+1",
+    "all_valid_SWAP_counts_even": true,
+    "transport_distance_lower_bound": 27,
+    "parity_refined_lower_bound": 28,
+    "known_construction_upper_bound": 36,
+    "possible_counts_under_bounds": [
+      28,
+      30,
+      32,
+      34,
+      36
+    ],
+    "four_layer_35_SWAP_budget_solver": {
+      "status": "UNKNOWN",
+      "anchor": 0,
+      "depth": 4,
+      "swap_budget": 35,
+      "wall_seconds": 40.1539876,
+      "branches": 32804,
+      "conflicts": 1,
+      "proof_of_lower_bound_36": false,
+      "unknown_not_a_proof": true
+    },
+    "critical": "UNKNOWN does not prove that 34 or 35 SWAPs are impossible; no optimum total gate count claimed."
+  },
+  "five_qutrit_magic": {
+    "status": "ACTUAL_5_QUTRIT_STABILIZER_PROJECTOR_TARGET_MISMATCH",
+    "code": "cyclic qutrit [[5,1,3]] with four commuting Pauli stabilizers",
+    "stabilizer_xz_rows": [
+      [
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "codespace_rank": 3,
+    "input_resource": "(|0>+zeta9|1>+zeta9\u00b2|2>)/sqrt(3)",
+    "ideal_5_copy_projection_probability": 0.03978052126200278,
+    "normalized_output_amplitudes_real_imag": [
+      [
+        -0.32163376045133835,
+        4.696656311471382e-16
+      ],
+      [
+        0.6679852887617147,
+        -0.04551391069656197
+      ],
+      [
+        -0.2945764414920582,
+        -0.6012491847702089
+      ]
+    ],
+    "projective_single_qutrit_Cliffords_tested": 216,
+    "max_Clifford_corrected_overlap_with_same_magic_target": 0.9182226590143102,
+    "is_exact_target_fixed_point_under_one_Clifford": false,
+    "boundary": "Only bare trivial-syndrome projection and one logical qutrit Clifford correction tested. Does not exclude other syndrome branches, code choices, stabilizer transformations before projection, or the known qutrit magic-state distillers targeting other states. No W33 magic threshold proved."
+  },
+  "kinematic_rigidity": {
+    "status": "ALL_Q_RANK3_SYMPLECTIC_SCALAR_COMMUTANT_THEOREM",
+    "theorem": "Any Sp(4,q)-equivariant scalar complex-linear endomorphism of C[PG(3,q)] belongs to span{I,A_q,B_q}, hence has <=3 distinct eigenvalues.",
+    "reason": "Sp(4,q) is transitive on ordered projective pairs of each type: same point, distinct symplectically orthogonal, and symplectically nonorthogonal (Witt's lemma). The centralizer dimension equals the number of orbitals, 3. The basis indicator matrices are I,A,B.",
+    "locality": "Any nonempty nontrivial invariant simple loopless graph has degree q(q+1), q^3 or q(q+1)+q^3; no uniformly bounded-degree nonempty such graph as q grows.",
+    "cases": [
+      {
+        "q": 3,
+        "n": 40,
+        "orbit_sizes": [
+          1,
+          12,
+          27
+        ],
+        "nontrivial_invariant_simple_graph_degrees": [
+          12,
+          27,
+          39
+        ],
+        "commutant_dimension": 3,
+        "sample_operator_eigenvalues": [
+          {
+            "coefficients": [
+              0,
+              1,
+              0
+            ],
+            "eigenvalues_at_most_3": [
+              12,
+              2,
+              -4
+            ]
+          },
+          {
+            "coefficients": [
+              2,
+              3,
+              5
+            ],
+            "eigenvalues_at_most_3": [
+              173,
+              -7,
+              5
+            ]
+          },
+          {
+            "coefficients": [
+              7,
+              -2,
+              4
+            ],
+            "eigenvalues_at_most_3": [
+              91,
+              -9,
+              27
+            ]
+          }
+        ]
+      },
+      {
+        "q": 4,
+        "n": 85,
+        "orbit_sizes": [
+          1,
+          20,
+          64
+        ],
+        "nontrivial_invariant_simple_graph_degrees": [
+          20,
+          64,
+          84
+        ],
+        "commutant_dimension": 3,
+        "sample_operator_eigenvalues": [
+          {
+            "coefficients": [
+              0,
+              1,
+              0
+            ],
+            "eigenvalues_at_most_3": [
+              20,
+              3,
+              -5
+            ]
+          },
+          {
+            "coefficients": [
+              2,
+              3,
+              5
+            ],
+            "eigenvalues_at_most_3": [
+              382,
+              -9,
+              7
+            ]
+          },
+          {
+            "coefficients": [
+              7,
+              -2,
+              4
+            ],
+            "eigenvalues_at_most_3": [
+              223,
+              -15,
+              33
+            ]
+          }
+        ]
+      },
+      {
+        "q": 8,
+        "n": 585,
+        "orbit_sizes": [
+          1,
+          72,
+          512
+        ],
+        "nontrivial_invariant_simple_graph_degrees": [
+          72,
+          512,
+          584
+        ],
+        "commutant_dimension": 3,
+        "sample_operator_eigenvalues": [
+          {
+            "coefficients": [
+              0,
+              1,
+              0
+            ],
+            "eigenvalues_at_most_3": [
+              72,
+              7,
+              -9
+            ]
+          },
+          {
+            "coefficients": [
+              2,
+              3,
+              5
+            ],
+            "eigenvalues_at_most_3": [
+              2778,
+              -17,
+              15
+            ]
+          },
+          {
+            "coefficients": [
+              7,
+              -2,
+              4
+            ],
+            "eigenvalues_at_most_3": [
+              1911,
+              -39,
+              57
+            ]
+          }
+        ]
+      },
+      {
+        "q": 9,
+        "n": 820,
+        "orbit_sizes": [
+          1,
+          90,
+          729
+        ],
+        "nontrivial_invariant_simple_graph_degrees": [
+          90,
+          729,
+          819
+        ],
+        "commutant_dimension": 3,
+        "sample_operator_eigenvalues": [
+          {
+            "coefficients": [
+              0,
+              1,
+              0
+            ],
+            "eigenvalues_at_most_3": [
+              90,
+              8,
+              -10
+            ]
+          },
+          {
+            "coefficients": [
+              2,
+              3,
+              5
+            ],
+            "eigenvalues_at_most_3": [
+              3917,
+              -19,
+              17
+            ]
+          },
+          {
+            "coefficients": [
+              7,
+              -2,
+              4
+            ],
+            "eigenvalues_at_most_3": [
+              2743,
+              -45,
+              63
+            ]
+          }
+        ]
+      }
+    ],
+    "physics_boundary": "Break symmetry, add internal fibers/modes, or change the carrier to get growing scalar spectral bands/locality. This is classical rank-three association-scheme rigidity, not a universal no-go for quantum gravity."
+  }
+}
