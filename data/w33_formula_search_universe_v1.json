@@ -315253,6 +315253,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ddc0cdbf3970d397be38c23437b08a1408aed7ff586e8e454be5fd2ffc36b41f",
+      "normalized_formula": "'operation':'G(theta,phi,alpha=0)^HinUreconstruction'",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_control_netlist_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 90,
+          "path": "analysis/w33_photonic_control_netlist_20261023.py",
+          "raw": "'operation':'G(theta,phi,alpha=0)^H in U reconstruction',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "748fadbcc8334f954b068dab8e31d5a2e9f8a698dd3f2a34ac1e8f40a314ff3d",
+      "structural_formula": "'operation':'G(theta,phi,alpha=#)^HinUreconstruction'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6b3e7efc73577a4202c2335308b12d6bb9d7e804da24aa41739e701ac68e4cbf",
       "normalized_formula": "'operator':'16pi2betaV=(1/2)Tr(H_V2)+(3/2)Tr(X_vector2)-3g2sum_fieldsC2phi.dV+gammaSS.dV-nactive*y4TrS4.C2S=10,C2K=8,gammaS=nactive*y2.Ratioflowadds2btimeseachquartic.'",
       "numeric_literals": [
@@ -319157,6 +319184,33 @@
       },
       "structural_family_id": "6f99d3aa32f77167dc281465cdc481596dace714768258d1b9d7fb40263a4a9c",
       "structural_formula": "'repo_inputs':['Pass5#:all-qminimumdistanceandcompleteminimum-shellclassification.','Pass5#:all-oddequalityim_2(F)=C_W^perp.']"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a935d926aa65d66fb8d9a5f9cc11e99d9a5ce65d764d16ee37c5842e02b0cbd6",
+      "normalized_formula": "'residual=',obj['checks']['gauge_reduced_reconstruction_norm'],'sha256=',obj['sha256'])",
+      "numeric_literals": [
+        "56"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_control_netlist_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 192,
+          "path": "analysis/w33_photonic_control_netlist_20261023.py",
+          "raw": "'residual=',obj['checks']['gauge_reduced_reconstruction_norm'],'sha256=',obj['sha256'])",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "96a119fe6de30d474c3454cf26bde9698b39037cbfb3cd24f4e059eed510fd6e",
+      "structural_formula": "'residual=',obj['checks']['gauge_reduced_reconstruction_norm'],'sha2#=',obj['sha2#'])"
     },
     {
       "file_count": 1,
@@ -403148,6 +403202,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "51c604a20b1964ff0b43595228e18452d439c26b83952c4bb7efb7bf5cdf595f",
+      "normalized_formula": "1.Theidentity`G(theta,phi,alpha)=D(alpha)R(theta,phi)`plusthecommutingrule`PR^H(theta,phi)=R^H(theta,phi+delta_i-delta_j)P`definesanexactall-gatereduction",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_photonic_control_mapping_audit.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 27,
+          "path": "analysis/2026-10-23_photonic_control_mapping_audit.md",
+          "raw": "1. The identity `G(theta,phi,alpha) = D(alpha)R(theta,phi)` plus the commuting rule `P R^H(theta,phi) = R^H(theta,phi+delta_i-delta_j) P` defines an exact all-gate reduction.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "63f5d5542d876e62778d12fe1f7d321c356e86736691e80a5e245408e62b4921",
+      "structural_formula": "#.Theidentity`G(theta,phi,alpha)=D(alpha)R(theta,phi)`plusthecommutingrule`PR^H(theta,phi)=R^H(theta,phi+delta_i-delta_j)P`definesanexactall-gatereduction"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3b9eba36e9a265960b81da4330feedb05f859b8017d804466edd0357a26787e9",
       "normalized_formula": "1.ThemodelW33SO10(V,W5=Kleinclock,W6=sigma)isaccepted:gaugegroupSO(10)xSU(2)^3xU(1)^8,andthe",
       "numeric_literals": [
@@ -411347,6 +411428,66 @@
       },
       "structural_family_id": "a2caf986c49f2f68c515d46db182f43f14af0e8424ed94fdb7a60d261a56a715",
       "structural_formula": "#/#=#\\gamma_m\\cdot3/(#(##n_f))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "97ea7e7d5aa3e2af45eead39e4e2e01854259de7dedbee70337e792e0abe6f81",
+      "normalized_formula": "120(2)+16=256",
+      "numeric_literals": [
+        "+16",
+        "120",
+        "2",
+        "256"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 62,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "120(2)+16=256",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fd5c284336915e9a9f38dcf6d9b7ff362e1ef0d75813422bb3e49a00cb1ba21d",
+      "structural_formula": "#(#)#=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "737f7094f4f870060248a0493017c32104f7442dc04c3add83a8ea64ee8a3550",
+      "normalized_formula": "120(3)+16=376",
+      "numeric_literals": [
+        "+16",
+        "120",
+        "3",
+        "376"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 62,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "120(3)+16=376",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fd5c284336915e9a9f38dcf6d9b7ff362e1ef0d75813422bb3e49a00cb1ba21d",
+      "structural_formula": "#(#)#=#"
     },
     {
       "file_count": 1,
@@ -453715,6 +453856,34 @@
       },
       "structural_family_id": "86ad4f7192c8750e3ea01c4f1582465a2e1d58a7398eddfaf25450238fb0f938",
       "structural_formula": "#.A_CKM+lambda_H=(v+Phi_6)/(lambda*(mu+#)^#)=#/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4ebc5f85b311ed8b53f180b58ca0c532030e7b2f61a9cf97eb1ddb3c0c12b5be",
+      "normalized_formula": "4.Atwo-balanced-coupleridentityprovidesanindependentalgebraicsurrogate`R^H=D(gamma)HD(theta)HD(-gamma)`with`gamma=(phi+pi/2)/2`.Thisis^not^afabricatedtwo-electrodeMZI",
+      "numeric_literals": [
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_photonic_control_mapping_audit.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/2026-10-23_photonic_control_mapping_audit.md",
+          "raw": "4. A two-balanced-coupler identity provides an independent algebraic surrogate `R^H = D(gamma) H D(theta) H D(-gamma)` with `gamma=(phi+pi/2)/2`. This is **not** a fabricated two-electrode MZI.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "a530e01083c876f0420dc13762fb86ffaa5cf39e117b864f7e2c36536763cf86",
+      "structural_formula": "#.Atwo-balanced-coupleridentityprovidesanindependentalgebraicsurrogate`R^H=D(gamma)HD(theta)HD(-gamma)`with`gamma=(phi+pi/#)/#`.Thisis^not^afabricatedtwo-electrodeMZI"
     },
     {
       "file_count": 1,
@@ -651575,6 +651744,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "05da4370cd0ecbdd91dd66394cf67c1d7e535f9c86779e486831694044f16775",
+      "normalized_formula": "H=2^{-1/2}(\\begin{smallmatrix}11\\\\1-1\\end{smallmatrix})",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "11",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 68,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "H=2^{-1/2}\\left(\\begin{smallmatrix}1&1\\\\1&-1\\end{smallmatrix}\\right)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5d429384615203a2cca2590d405ce2bd7c952e82fc4c0df1e44f786e32f76bb5",
+      "structural_formula": "H=#^{#/#}(\\begin{smallmatrix}#\\\\##\\end{smallmatrix})"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1187686d4553d67d8f4845fb83d7cd08453211c4f569294ffef70c2a32ae9e35",
       "normalized_formula": "H=3^3{:}S_4",
       "numeric_literals": [
@@ -779206,6 +779405,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "dfb7e5493435a09fa333e92e92473f400264ffa12d35cab6da0ed02c3ada17ca",
+      "normalized_formula": "R^\\dagger(\\theta,\\phi)=D(\\gamma)HD(\\theta)HD(-\\gamma),\\qquad\\gamma=\\frac{\\phi+\\pi/2}{2}",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 69,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "R^\\dagger(\\theta,\\phi)=D(\\gamma)HD(\\theta)HD(-\\gamma), \\qquad\\gamma=\\frac{\\phi+\\pi/2}{2}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a489e45c69a217e71062f5dc950429114b2c37177cd2392a5e77d07a0ae84f10",
+      "structural_formula": "R^\\dagger(\\theta,\\phi)=D(\\gamma)HD(\\theta)HD(-\\gamma),\\qquad\\gamma=\\frac{\\phi+\\pi/#}{#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "aa7cca1978a21615663e95c323e7e6f099734094793f90d79e67384dabc7062b",
       "normalized_formula": "R^{2t}=9^t",
       "numeric_literals": [
@@ -850377,6 +850603,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "eb2efb2df8b9420b2ab24be3eb1f7d08e726126def0b2c69d486258d94bb3cbe",
+      "normalized_formula": "Thispacketadvancesalogicalschematic/measurementprotocolandanewlivingLaTeXatlas,notamanufacturedphotonicintegratedcircuit.Itdoesnotprovephysicalquantumuniversality,implementedfaulttolerance,photonself-entanglement,oratheoryofeverything.Theoriginalv5targetresidual(~5.44e-9)isinherited;thenewgaugeequivalenceistestedmoretightly.Exactphysicalactuatorcountremainsopen",
+      "numeric_literals": [
+        "5.44e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_photonic_control_mapping_audit.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/2026-10-23_photonic_control_mapping_audit.md",
+          "raw": "This packet advances a logical schematic/measurement protocol and a new living LaTeX atlas, not a manufactured photonic integrated circuit. It does not prove physical quantum universality, implemented fault tolerance, photon self-entanglement, or a theory of everything. The original v5 target residual (~5.44e-9) is inherited; the new gauge equivalence is tested more tightly. Exact physical actuator count remains open.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "8633143fa6199804a71ee7f1341c3bc1c1ac58174b7eaf267e67b970fc23c885",
+      "structural_formula": "Thispacketadvancesalogicalschematic/measurementprotocolandanewlivingLaTeXatlas,notamanufacturedphotonicintegratedcircuit.Itdoesnotprovephysicalquantumuniversality,implementedfaulttolerance,photonself-entanglement,oratheoryofeverything.Theoriginalv5targetresidual(~#)isinherited;thenewgaugeequivalenceistestedmoretightly.Exactphysicalactuatorcountremainsopen"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b88005c020019d24a36d94beac9a46936982e95fbf32f4a2303af209c2cca7af",
       "normalized_formula": "ThispacketbeginsfromthetwopriorLedgerpacketsandchecksrepositorypriorartbeforepromotinganything.Thebouquet/free-grouptopologyisnotnew:archivedexploratoryworkalreadyownedtheq=3statementandstatedtheall-qpattern.ThecontributionhereisthemissingconstructivecollapsecertificateanditsLedgerconsequence",
       "numeric_literals": [
@@ -858531,6 +858784,35 @@
       },
       "structural_family_id": "0a7672a12bcba015305cb73d5398dde3079cbedcad3d2cc480735f4c1a0fedd9",
       "structural_formula": "U_Gram_min_positive='#-sqrt6',U_Gram_max='#+sqrt6'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "97366ac6d2ff093ff331e86f961aa4a40086325dd71902be9cb4f9b167df5dc1",
+      "normalized_formula": "U_H=\\begin{pmatrix}C(I-CC^\\dagger)^{1/2}\\\\(I-C^\\daggerC)^{1/2}-C^\\dagger\\end{pmatrix}\\inU(16)",
+      "numeric_literals": [
+        "1",
+        "16",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 34,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "U_H=\\begin{pmatrix} C&(I-CC^\\dagger)^{1/2}\\\\ (I-C^\\dagger C)^{1/2}&-C^\\dagger \\end{pmatrix}\\in U(16).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a0ec4884f5c1ece0580ef5851d37ac0b4d9bd8d657f856ef86a65dbabb7c9844",
+      "structural_formula": "U_H=\\begin{pmatrix}C(I-CC^\\dagger)^{#/#}\\\\(I-C^\\daggerC)^{#/#}-C^\\dagger\\end{pmatrix}\\inU(#)"
     },
     {
       "file_count": 1,
@@ -921193,6 +921475,64 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9c1b050a9d3850194a570ef7b347765572b4d37aec62cda9d7dfa739bba146c8",
+      "normalized_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=28mm,minimumheight=11mm},nodedistance=7mm]",
+      "numeric_literals": [
+        "11",
+        "28",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 91,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,rounded corners,align=center,text width=28mm,minimum height=11mm},node distance=7mm]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f04b11a30e82ba9ddd04ab3cb1aeaacbdd606371e367d9dd2dc9755aa53f3175",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=#mm,minimumheight=#mm},nodedistance=#mm]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "201d193188adf3a4568a719af6ee87d02672acc28ebbf55195c5cdf4092d5598",
+      "normalized_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=30mm,minimumheight=11mm},nodedistance=8mm]",
+      "numeric_literals": [
+        "11",
+        "30",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 77,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,rounded corners,align=center,text width=30mm,minimum height=11mm},node distance=8mm]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f04b11a30e82ba9ddd04ab3cb1aeaacbdd606371e367d9dd2dc9755aa53f3175",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=#mm,minimumheight=#mm},nodedistance=#mm]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1f81bc55d16a76e13914a75c7d7355dcfbf6435b2a225404addd0742e3d0dd4e",
       "normalized_formula": "\\begin{tikzpicture}[ev/.style={circle,draw=ink!55,linewidth=0.4pt,minimumsize=8.2mm,innersep=0pt}]",
       "numeric_literals": [
@@ -961028,6 +961368,34 @@
       },
       "structural_family_id": "b2fe953b5e69cceb5c76de95980b8b71a48f5878da071cf07faf450caf8000c6",
       "structural_formula": "\\dim_{\\mathbbQ}\\operatorname{End}_{S_3}(\\mathbbQ[\\Omega])=#^##^##^#=\\boxed{#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ab9d70817a0639ae00631dff60fcadd87058ca4b100bb5350cb91d30e4acd33d",
+      "normalized_formula": "\\dim_{\\mathbbR}U(16)=256",
+      "numeric_literals": [
+        "16",
+        "256"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 62,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "\\dim_{\\mathbb R}U(16)=256",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1ba3a117da702df39261a5c92c5ce1196327360e44ca33c6fe7ed5527439eaca",
+      "structural_formula": "\\dim_{\\mathbbR}U(#)=#"
     },
     {
       "file_count": 1,
@@ -1130663,6 +1131031,34 @@
       },
       "structural_family_id": "d5b81ea63e41a3fe71a2653e8c2fc8af47cd337426a5e7018b8b974a4c300bdb",
       "structural_formula": "assertresidual<#andchoi_error<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3267a8d096d84ff72faccd1197504717aaffa1702c39e630142f1606a7df3c36",
+      "normalized_formula": "assertresidual_original<1e-7andresidual_reduced<1e-7andgauge_equivalence<1e-11,(residual_original,residual_reduced,gauge_equivalence)",
+      "numeric_literals": [
+        "1e-11",
+        "1e-7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_control_netlist_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/w33_photonic_control_netlist_20261023.py",
+          "raw": "assert residual_original<1e-7 and residual_reduced<1e-7 and gauge_equivalence<1e-11, (residual_original,residual_reduced,gauge_equivalence)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b56d8f8d405098dd6267eafd47d3ae1e9b594c3fa8caccf6d4ca936333668976",
+      "structural_formula": "assertresidual_original<#andresidual_reduced<#andgauge_equivalence<#,(residual_original,residual_reduced,gauge_equivalence)"
     },
     {
       "file_count": 1,
@@ -1842281,6 +1842677,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f663a5a44c5dc565bcaf00ec1e3e8b7f5e040ddcac1dbbf587eee05dca5bc1d6",
+      "normalized_formula": "|(UD_{\\mathrm{in}})_{oi}|^2=|U_{oi}|^2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/photonic_hardware_atlas/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 123,
+          "path": "papers/photonic_hardware_atlas/main.tex",
+          "raw": "|(U D_{\\mathrm{in}})_{oi}|^2=|U_{oi}|^2.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2bcf3f03c24e9a1669b0ad5e39f6e81ab50f2c94bf931e68dbb359560d2630d9",
+      "structural_formula": "|(UD_{\\mathrm{in}})_{oi}|^#=|U_{oi}|^#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c40f030bae83911e749403e521474336788c13464533e3022a5967e6b2639713",
       "normalized_formula": "|+(1+\u221a97)/2\u2248+5.42|15|Quark/leptondoublets(3gen\u00d75)|",
       "numeric_literals": [
@@ -1880892,9 +1881315,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T08:19:55-04:00",
+  "frozen_at": "2026-10-23T08:25:35-04:00",
   "pass": 398,
-  "repository_head": "1f3fff418a5f63b53c0d045733c7edcd3673698e",
+  "repository_head": "887c9718ea0276216288c0dbf19b7b3113a45064",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1939688,10 +1940111,12 @@
     },
     {
       "exact_formula_ids": [
+        "97ea7e7d5aa3e2af45eead39e4e2e01854259de7dedbee70337e792e0abe6f81",
+        "737f7094f4f870060248a0493017c32104f7442dc04c3add83a8ea64ee8a3550",
         "b1330e6ad151501a1b69f3cf5ea0bc9c9d0906b10c0ea4ff6cb749174c9a433a",
         "69b4da82764ef90efe45158a2869f2dd8e14b08f80f1bc5d9331e36c1226a0ca"
       ],
-      "exact_member_count": 2,
+      "exact_member_count": 4,
       "structural_family_id": "fd5c284336915e9a9f38dcf6d9b7ff362e1ef0d75813422bb3e49a00cb1ba21d",
       "structural_formula": "#(#)#=#"
     },
@@ -1941834,6 +1942259,14 @@
     },
     {
       "exact_formula_ids": [
+        "4ebc5f85b311ed8b53f180b58ca0c532030e7b2f61a9cf97eb1ddb3c0c12b5be"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a530e01083c876f0420dc13762fb86ffaa5cf39e117b864f7e2c36536763cf86",
+      "structural_formula": "#.Atwo-balanced-coupleridentityprovidesanindependentalgebraicsurrogate`R^H=D(gamma)HD(theta)HD(-gamma)`with`gamma=(phi+pi/#)/#`.Thisis^not^afabricatedtwo-electrodeMZI"
+    },
+    {
+      "exact_formula_ids": [
         "b914decf69658ed671ecfa9c791db3c637f369294099733618ecfa94e358987b"
       ],
       "exact_member_count": 1,
@@ -1943847,6 +1944280,14 @@
       "exact_member_count": 1,
       "structural_family_id": "67a9d7e0426b90f37536052a8464583a7f0de3ab492994b82c7ca9d8b5c67e4a",
       "structural_formula": "#.TheheatkernelK(t)=Tr(e^{-tA2})ofW(#,#)encodescouplings"
+    },
+    {
+      "exact_formula_ids": [
+        "51c604a20b1964ff0b43595228e18452d439c26b83952c4bb7efb7bf5cdf595f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "63f5d5542d876e62778d12fe1f7d321c356e86736691e80a5e245408e62b4921",
+      "structural_formula": "#.Theidentity`G(theta,phi,alpha)=D(alpha)R(theta,phi)`plusthecommutingrule`PR^H(theta,phi)=R^H(theta,phi+delta_i-delta_j)P`definesanexactall-gatereduction"
     },
     {
       "exact_formula_ids": [
@@ -1989488,6 +1989929,14 @@
     },
     {
       "exact_formula_ids": [
+        "ddc0cdbf3970d397be38c23437b08a1408aed7ff586e8e454be5fd2ffc36b41f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "748fadbcc8334f954b068dab8e31d5a2e9f8a698dd3f2a34ac1e8f40a314ff3d",
+      "structural_formula": "'operation':'G(theta,phi,alpha=#)^HinUreconstruction'"
+    },
+    {
+      "exact_formula_ids": [
         "6b3e7efc73577a4202c2335308b12d6bb9d7e804da24aa41739e701ac68e4cbf"
       ],
       "exact_member_count": 1,
@@ -1990565,6 +1991014,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6f99d3aa32f77167dc281465cdc481596dace714768258d1b9d7fb40263a4a9c",
       "structural_formula": "'repo_inputs':['Pass5#:all-qminimumdistanceandcompleteminimum-shellclassification.','Pass5#:all-oddequalityim_2(F)=C_W^perp.']"
+    },
+    {
+      "exact_formula_ids": [
+        "a935d926aa65d66fb8d9a5f9cc11e99d9a5ce65d764d16ee37c5842e02b0cbd6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "96a119fe6de30d474c3454cf26bde9698b39037cbfb3cd24f4e059eed510fd6e",
+      "structural_formula": "'residual=',obj['checks']['gauge_reduced_reconstruction_norm'],'sha2#=',obj['sha2#'])"
     },
     {
       "exact_formula_ids": [
@@ -2056289,6 +2056746,14 @@
     },
     {
       "exact_formula_ids": [
+        "05da4370cd0ecbdd91dd66394cf67c1d7e535f9c86779e486831694044f16775"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5d429384615203a2cca2590d405ce2bd7c952e82fc4c0df1e44f786e32f76bb5",
+      "structural_formula": "H=#^{#/#}(\\begin{smallmatrix}#\\\\##\\end{smallmatrix})"
+    },
+    {
+      "exact_formula_ids": [
         "3495e5006af374036f9461ccce51531e8f6f11bb79536eb24bafe0692e5f6731"
       ],
       "exact_member_count": 1,
@@ -2090787,6 +2091252,14 @@
     },
     {
       "exact_formula_ids": [
+        "dfb7e5493435a09fa333e92e92473f400264ffa12d35cab6da0ed02c3ada17ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a489e45c69a217e71062f5dc950429114b2c37177cd2392a5e77d07a0ae84f10",
+      "structural_formula": "R^\\dagger(\\theta,\\phi)=D(\\gamma)HD(\\theta)HD(-\\gamma),\\qquad\\gamma=\\frac{\\phi+\\pi/#}{#}"
+    },
+    {
+      "exact_formula_ids": [
         "aa7cca1978a21615663e95c323e7e6f099734094793f90d79e67384dabc7062b"
       ],
       "exact_member_count": 1,
@@ -2110144,6 +2110617,14 @@
     },
     {
       "exact_formula_ids": [
+        "eb2efb2df8b9420b2ab24be3eb1f7d08e726126def0b2c69d486258d94bb3cbe"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8633143fa6199804a71ee7f1341c3bc1c1ac58174b7eaf267e67b970fc23c885",
+      "structural_formula": "Thispacketadvancesalogicalschematic/measurementprotocolandanewlivingLaTeXatlas,notamanufacturedphotonicintegratedcircuit.Itdoesnotprovephysicalquantumuniversality,implementedfaulttolerance,photonself-entanglement,oratheoryofeverything.Theoriginalv5targetresidual(~#)isinherited;thenewgaugeequivalenceistestedmoretightly.Exactphysicalactuatorcountremainsopen"
+    },
+    {
+      "exact_formula_ids": [
         "b88005c020019d24a36d94beac9a46936982e95fbf32f4a2303af209c2cca7af"
       ],
       "exact_member_count": 1,
@@ -2112382,6 +2112863,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0a7672a12bcba015305cb73d5398dde3079cbedcad3d2cc480735f4c1a0fedd9",
       "structural_formula": "U_Gram_min_positive='#-sqrt6',U_Gram_max='#+sqrt6'"
+    },
+    {
+      "exact_formula_ids": [
+        "97366ac6d2ff093ff331e86f961aa4a40086325dd71902be9cb4f9b167df5dc1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a0ec4884f5c1ece0580ef5851d37ac0b4d9bd8d657f856ef86a65dbabb7c9844",
+      "structural_formula": "U_H=\\begin{pmatrix}C(I-CC^\\dagger)^{#/#}\\\\(I-C^\\daggerC)^{#/#}-C^\\dagger\\end{pmatrix}\\inU(#)"
     },
     {
       "exact_formula_ids": [
@@ -2128464,6 +2128953,15 @@
     },
     {
       "exact_formula_ids": [
+        "9c1b050a9d3850194a570ef7b347765572b4d37aec62cda9d7dfa739bba146c8",
+        "201d193188adf3a4568a719af6ee87d02672acc28ebbf55195c5cdf4092d5598"
+      ],
+      "exact_member_count": 2,
+      "structural_family_id": "f04b11a30e82ba9ddd04ab3cb1aeaacbdd606371e367d9dd2dc9755aa53f3175",
+      "structural_formula": "\\begin{tikzpicture}[>=Latex,blk/.style={draw,roundedcorners,align=center,textwidth=#mm,minimumheight=#mm},nodedistance=#mm]"
+    },
+    {
+      "exact_formula_ids": [
         "1f81bc55d16a76e13914a75c7d7355dcfbf6435b2a225404addd0742e3d0dd4e"
       ],
       "exact_member_count": 1,
@@ -2138730,6 +2139228,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b2fe953b5e69cceb5c76de95980b8b71a48f5878da071cf07faf450caf8000c6",
       "structural_formula": "\\dim_{\\mathbbQ}\\operatorname{End}_{S_3}(\\mathbbQ[\\Omega])=#^##^##^#=\\boxed{#}"
+    },
+    {
+      "exact_formula_ids": [
+        "ab9d70817a0639ae00631dff60fcadd87058ca4b100bb5350cb91d30e4acd33d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1ba3a117da702df39261a5c92c5ce1196327360e44ca33c6fe7ed5527439eaca",
+      "structural_formula": "\\dim_{\\mathbbR}U(#)=#"
     },
     {
       "exact_formula_ids": [
@@ -2182883,6 +2183389,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d5b81ea63e41a3fe71a2653e8c2fc8af47cd337426a5e7018b8b974a4c300bdb",
       "structural_formula": "assertresidual<#andchoi_error<#"
+    },
+    {
+      "exact_formula_ids": [
+        "3267a8d096d84ff72faccd1197504717aaffa1702c39e630142f1606a7df3c36"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b56d8f8d405098dd6267eafd47d3ae1e9b594c3fa8caccf6d4ca936333668976",
+      "structural_formula": "assertresidual_original<#andresidual_reduced<#andgauge_equivalence<#,(residual_original,residual_reduced,gauge_equivalence)"
     },
     {
       "exact_formula_ids": [
@@ -2374403,6 +2374917,14 @@
     },
     {
       "exact_formula_ids": [
+        "f663a5a44c5dc565bcaf00ec1e3e8b7f5e040ddcac1dbbf587eee05dca5bc1d6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2bcf3f03c24e9a1669b0ad5e39f6e81ab50f2c94bf931e68dbb359560d2630d9",
+      "structural_formula": "|(UD_{\\mathrm{in}})_{oi}|^#=|U_{oi}|^#"
+    },
+    {
+      "exact_formula_ids": [
         "c40f030bae83911e749403e521474336788c13464533e3022a5967e6b2639713"
       ],
       "exact_member_count": 1,
@@ -2383564,20 +2384086,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91202324,
-    "exact_formula_families": 64305,
-    "files_scanned": 12540,
-    "formula_occurrences": 70410,
+    "bytes_scanned": 91233639,
+    "exact_formula_families": 64320,
+    "files_scanned": 12543,
+    "formula_occurrences": 70425,
     "status_occurrences": {
       "certified_or_theorem": 5284,
-      "killed_or_retracted": 1869,
-      "open_or_conditional": 2370,
+      "killed_or_retracted": 1870,
+      "open_or_conditional": 2371,
       "preregistered": 36,
-      "retrospective_fit": 5396,
-      "unclassified": 55455
+      "retrospective_fit": 5397,
+      "unclassified": 55467
     },
-    "structural_families": 62617
+    "structural_families": 62629
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "304a843ef21e368ce91a57bfbc24916b570e9b1e3a943635917b39bba4c9009b"
+  "universe_sha256": "7582f2944cf9bd58f18a7385c1591c6034bb6c1226db513813254c992d2d3f54"
 }
