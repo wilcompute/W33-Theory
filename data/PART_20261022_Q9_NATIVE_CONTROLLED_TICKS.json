@@ -1,0 +1,82 @@
+{
+  "schema": "w33.q9.native_vs_controlled_ticks.v1",
+  "status": "EXACT_GF9_GROUP_CLOSURE_PHYSICAL_PUMP_UNPROVED",
+  "field": "F9=F3[z]/(z^2+1), z^2=2; integer 0..8 encodes a+3b",
+  "native_transvections": "T_u(x)=x+omega(x,u)u",
+  "native_pair_matrices": "U=[[1,-1],[0,1]], L=[[1,0],[lambda^2,1]]",
+  "native_possible_lower_parameters": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "native_all_scalings": [
+    {
+      "lambda": 1,
+      "lambda_square": 1,
+      "order": 24
+    },
+    {
+      "lambda": 2,
+      "lambda_square": 1,
+      "order": 24
+    },
+    {
+      "lambda": 3,
+      "lambda_square": 2,
+      "order": 24
+    },
+    {
+      "lambda": 4,
+      "lambda_square": 6,
+      "order": 120
+    },
+    {
+      "lambda": 5,
+      "lambda_square": 3,
+      "order": 120
+    },
+    {
+      "lambda": 6,
+      "lambda_square": 2,
+      "order": 24
+    },
+    {
+      "lambda": 7,
+      "lambda_square": 3,
+      "order": 120
+    },
+    {
+      "lambda": 8,
+      "lambda_square": 6,
+      "order": 120
+    }
+  ],
+  "native_possible_generated_orders": [
+    24,
+    120
+  ],
+  "active_control": "T_(u,c)(x)=x+c*omega(x,u)u, with a controlled non-square c",
+  "active_nonsquare_parameters": [
+    {
+      "controlled_parameter": 4,
+      "order": 720
+    },
+    {
+      "controlled_parameter": 5,
+      "order": 720
+    },
+    {
+      "controlled_parameter": 7,
+      "order": 720
+    },
+    {
+      "controlled_parameter": 8,
+      "order": 720
+    }
+  ],
+  "full_SL29_order": 720,
+  "meaning": "Field extension + native unit ticks insufficient for full SL(2,9) from only two transverse directions; independently controlled nonsquare transvection amplitude does generate full group.",
+  "physics_boundary": "No physical evidence for adjustable nonsquare pump amplitude, no quantum Hamiltonian/dispersion/continuum derived.",
+  "literature_boundary": "Finite subgroup generation is classical; this is an independently computed W33/Holonet control-design diagnostic, not priority claim."
+}
