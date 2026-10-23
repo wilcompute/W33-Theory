@@ -1,0 +1,654 @@
+{
+ "N001_F1_04_T005": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T008": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T030": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T031": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T038": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T049": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T053": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T062": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T063": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T068": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T070": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T089": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T090": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T113": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T118": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T153": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T166": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T174": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T178": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T206": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T261": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T280": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N001_F1_04_T293": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T038": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T050": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T052": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T076": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T085": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T096": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T135": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T145": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T150": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T168": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T180": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T239": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T249": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_03_T274": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T029": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T043": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T056": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T065": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T083": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T098": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T100": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T121": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T130": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T131": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T147": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T162": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T187": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T192": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T193": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T197": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T201": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T252": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T254": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T259": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T265": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T278": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T283": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_04_T291": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T013": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T018": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T035": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T060": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T072": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T073": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T075": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T077": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T097": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T124": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T143": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T149": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T190": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T196": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T209": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T210": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N004_F1_05_T229": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T002": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T003": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T007": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T014": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T064": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T073": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T089": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T109": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T113": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T119": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T126": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T128": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T133": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T136": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T148": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T149": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T183": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T217": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T269": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T276": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_02_T294": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T000": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T001": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T009": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T015": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T019": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T035": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T040": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T044": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T050": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T057": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T060": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T061": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T065": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T066": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T078": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T080": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T105": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T107": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T134": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T141": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T151": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T156": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T159": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T181": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T198": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T213": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T271": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T284": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T286": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_03_T287": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T004": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T011": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T015": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T016": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T019": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T025": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T037": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T042": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T048": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T069": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T071": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T083": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T086": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T098": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T106": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T108": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T110": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T112": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T121": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T128": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T143": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T154": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T169": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T215": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T218": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T225": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T232": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T244": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T246": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T251": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T258": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T264": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T273": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ },
+ "N008_F1_04_T288": {
+  "twisted_10_type_vectors": 0,
+  "control_untwisted_10_type_roots": 100
+ }
+}

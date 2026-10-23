@@ -1,0 +1,87 @@
+{
+  "12211": {
+    "free": 72,
+    "phase_kinds": [
+      [
+        "0"
+      ],
+      [
+        "1/2"
+      ]
+    ],
+    "primitive": 0,
+    "control": {
+      "1/2": 58,
+      "2/3": 57,
+      "5/6": 57,
+      "0": 57,
+      "1/6": 57,
+      "1/3": 57
+    }
+  },
+  "12212": {
+    "saved_models": 163,
+    "saved_hits": 0,
+    "draws7": {
+      "draws": 300,
+      "tries": 48350,
+      "with_twisted10": 0,
+      "control_ok": true,
+      "by_torus": {
+        "5": 146,
+        "7": 154
+      }
+    },
+    "draws11": {
+      "draws": 1153,
+      "tries": 200000,
+      "with_twisted10": 0,
+      "control_ok": true,
+      "by_torus": {
+        "5": 565,
+        "7": 588
+      }
+    }
+  },
+  "12213": {
+    "family_multiplet_parents": [
+      {
+        "parent": "Z6II_03__SM_20260917_923",
+        "family_multiplets": [
+          {
+            "k": 0,
+            "mult": 2,
+            "anti": false
+          }
+        ],
+        "even": 2,
+        "odd": 1,
+        "symmetric_direction": false
+      },
+      {
+        "parent": "Z6II_24__SM_20260917_2751",
+        "family_multiplets": [
+          {
+            "k": 0,
+            "mult": 3,
+            "anti": false
+          }
+        ],
+        "even": 3,
+        "odd": 0,
+        "symmetric_direction": false
+      }
+    ],
+    "n_even_3": [
+      "Z6II_24__SM_20260917_2751"
+    ]
+  },
+  "checks": {
+    "12211: 72 free order-3 rotations, gravitino phase only +-1 (0 cube roots); control without freeness: 114 cube roots": true,
+    "12212: 0 twisted 10-type vectors on the massless shell: 163 saved models + 300 + 1153 fresh draws = 1616; control 100 roots each": true,
+    "12213: N_even = 2 parents (10) have no symmetric direction (parity theorem); N_even = 3 only in SM_2751 = the only family triplet": true,
+    "12214: cross-track note present": true,
+    "12215: consolidated subsection with two theorem boxes in Section 7": true
+  },
+  "all_checks_pass": true
+}

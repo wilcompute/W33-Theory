@@ -457,29 +457,58 @@ no tachyon-free Standard Model (the Standard-Model-like shifts are exactly the t
 structure of the Wilson-line modulus and the closed-form tachyon onsets are those of Passes 11115, 11136 and 11139; the onsets
 $\sqrt3$, $\sqrt3/2+\sqrt{5/12}$ and $\sqrt3/2$ are exact. \cert{w33\_pass12168\_to\_12173\_level3\_rediscovery\_no10\_z6i.py}
 
-\paragraph{The real form decides the string.}
-Orbifold the $E_8\times E_8$ string by a fermion parity $(-1)^F\exp(2\pi i\,p\cdot V)$, with each half of $V$ in $E_8/2E_8$ either $0$, a clock or a split.
-The partition function is modular invariant exactly when both halves have the same quadratic-form value: $0\times0$ is supersymmetric, split$\times0$ gives
-$E_8\times SO(16)$, clock$\times$clock gives $(E_7\times SU(2))^2$, both tachyonic, and only split$\times$split gives the tachyon-free $SO(16)\times SO(16)$
-(Bose--Fermi $1984-4096$). The list is classical; the reading is that the one-time clock form can be the fermion parity only
-with a tachyon, whose momentum is the clock's own half-root. In four dimensions this is exact: a clock Witten shift on $T^6/\mathbb Z_3$ carries the
-zero-winding tachyon $p=V_0$, $p^2=1$, at every point of moduli space ($0$ of $24{,}000$ Wilson-line draws are tachyon-free).
-And no $T^6/\mathbb Z_3$ model can interpolate to supersymmetry: an order-two Scherk--Schwarz translation needs an even number of
-fixed points, and there are $27$; among the $\W$ families only $\mathbb Z_6$-II and $\mathbb Z_2\times\mathbb Z_6$-I admit one. \cert{w33\_pass12174\_to\_12179\_real\_forms\_decide\_the\_string.py}
-Where interpolation is allowed it costs a generation. On $\mathbb Z_6$-II a Scherk--Schwarz translation must lie on the order-two plane and
-needs the Wilson line along $2t$ to vanish; it pairs the fixed points of the sectors that rotate that plane and halves their
-states. In $1400$ interpolations of the $70$ admissible Standard Models, Bose--Fermi degeneracy occurs exactly three times, but every
-parent carries one generation in an unpaired sector and two in paired ones, so at most two survive at large radius; the one
-parent with all three generations unpaired admits no consistent translation. Clock Witten shifts are tachyonic on every family
-($0$ of $5400$ further draws), and the clock tachyon is not the Hagedorn one: the thermal ensemble ($V=0$) is unstable for
-$2-\sqrt2<R<2+\sqrt2$, the clock class for every $R<2\sqrt2$, the split class never. \cert{w33\_pass12180\_to\_12185\_interpolation\_halves\_the\_generations.py}
-The same holds on the other interpolating family, $\mathbb Z_2\times\mathbb Z_6$-I: four of $160$ admissible interpolations are Bose--Fermi
-degenerate, none keeps three generations. A Wilson line in the lattice is not enough to make a translation a symmetry; all its
-products with the shifts and Wilson lines must be even (checked on all eleven cases). And the native Narain point of the
-parallel track admits no Scherk--Schwarz translation compatible with its $C_3\times C_3$. \cert{w33\_pass12199\_to\_12204\_no\_three\_generation\_interpolation.py}
-The missing $10_H$ is not hidden in the twisted sectors: in all $163$ $SU(5)\times U(1)$ models of this route every field in a $10$
-($614$ of them) is an untwisted fermion, and no twisted state of either statistics carries a $10$. And a single $C_3$ of the
-native Narain lattice already freezes all four of its moduli. \cert{w33\_pass12205\_to\_12210\_twisted\_sectors\_carry\_no\_ten.py}
+\subsection{The string's fermion parity, and why interpolation fails}
+\label{sec:interp}
+
+The non-supersymmetric strings above are orbifolds by a fermion parity $(-1)^F\exp(2\pi i\,p\cdot V)$, and $V$ is an involution of
+$E_8\times E_8$: each half is $0$, a clock or a split. The two real forms of Theorem~7.3 therefore reappear as two kinds of string.
+
+\begin{result}{Theorem 7.5 (the real form decides the string) \hfill \tierC}
+The orbifold is modular invariant exactly when both halves of $V$ have the same value of the quadratic form of $E_8/2E_8$
+($136^2+120^2=2^{15}+2^7$ classes). Then $0\times0$ is supersymmetric, split$\times0$ gives $E_8\times SO(16)$, clock$\times$clock gives
+$(E_7\times SU(2))^2$ --- both tachyonic, the tachyon momentum being the class's minimal vector, for a clock its own half-root --- and
+only split$\times$split gives the tachyon-free $SO(16)\times SO(16)$ (Bose--Fermi $1984-4096$). In four dimensions a clock Witten
+shift carries the zero-winding tachyon $p=V_0$, $p^2=1$, at every point of moduli space, on every $\W$ family ($0$ of $29{,}400$
+Wilson-line draws are tachyon-free). The list of strings is classical; the reading is that the one-time clock form can be the
+fermion parity only with a tachyon. \cert{w33\_pass12174\_to\_12179\_real\_forms\_decide\_the\_string.py} \cert{w33\_pass12180\_to\_12185\_interpolation\_halves\_the\_generations.py}
+\end{result}
+
+A non-supersymmetric string can still be close to a supersymmetric one: a Scherk--Schwarz interpolation attaches the fermion parity
+to a translation, so that supersymmetry returns as a radius grows and the vacuum energy is exponentially small when bosons and
+fermions balance. For the $\W$ geometries this route closes.
+
+\begin{result}{Theorem 7.6 (no interpolation keeps three generations) \hfill \tierC}
+\begin{enumerate}[label=(\roman*),leftmargin=1.5em]
+\item An order-two translation commuting with the point group exists iff the group fixes a vector of $\Lambda/2\Lambda$; for a
+      cyclic twist iff the number of fixed points is even. $T^6/\mathbb Z_3$ has $27$: among the nine families only
+      $\mathbb Z_6$-II and $\mathbb Z_2\times\mathbb Z_6$-I admit one. There is no order-three route either: every freely acting
+      order-three rotation gives the gravitino the phase $\pm1$, never a cube root ($72$ cases; $114$ cube roots without freeness).
+\item The translation $t$ is a symmetry only if the Wilson line along $2t$ lies in the lattice and all its products with the shifts
+      and Wilson lines are even (eleven of eleven cases); it then pairs the fixed points of the sectors that rotate its plane.
+\item Every admissible Standard Model keeps one generation in an unpaired sector and two (or four, with a vector-like
+      antigeneration) in paired ones, so at most two generations survive at large radius. Bose--Fermi degeneracy does occur ---
+      $3$ of $1400$ interpolations on $\mathbb Z_6$-II, $4$ of $160$ on $\mathbb Z_2\times\mathbb Z_6$-I --- but never with three generations.
+\end{enumerate}
+\cert{w33\_pass12174\_to\_12179\_real\_forms\_decide\_the\_string.py} \cert{w33\_pass12180\_to\_12185\_interpolation\_halves\_the\_generations.py} \cert{w33\_pass12199\_to\_12204\_no\_three\_generation\_interpolation.py} \cert{w33\_pass12211\_to\_12216\_no\_order3\_interpolation\_no\_twisted\_ten.py}
+\end{result}
+
+\paragraph{Clocks and temperature.} The clock tachyon is not the Hagedorn one. In nine dimensions the thermal ensemble ($V=0$)
+is unstable for $2-\sqrt2<R<2+\sqrt2$ (the heterotic Hagedorn radius), the clock class for every $R<2\sqrt2$, and the split
+class never. \cert{w33\_pass12180\_to\_12185\_interpolation\_halves\_the\_generations.py}
+
+\paragraph{The missing Higgs $10$.} The field-theoretic escape from Wen and Witten's theorem needs a scalar $10$. None exists in
+the untwisted sector (a theorem over all $7\times864$ lines), and none in the twisted sectors: in $163$ engine spectra every one of
+$614$ fields in a $10$ is an untwisted fermion, and a lattice computation finds no $10$-type vector on the twisted massless shell in
+$1616$ configurations, before any projection phase. \cert{w33\_pass12205\_to\_12210\_twisted\_sectors\_carry\_no\_ten.py} \cert{w33\_pass12211\_to\_12216\_no\_order3\_interpolation\_no\_twisted\_ten.py}
+
+\paragraph{The native Narain point.} The native lattice of the parallel track (II$(2,2)$ at $T=U=\rho$) admits no Scherk--Schwarz
+translation compatible with its $C_3\times C_3$, and even a single $C_3$ freezes all four of its moduli, so an interpolation radius
+there requires breaking the native symmetry completely; whether any dynamics does so is open. \cert{w33\_pass12199\_to\_12204\_no\_three\_generation\_interpolation.py} \cert{w33\_pass12205\_to\_12210\_twisted\_sectors\_carry\_no\_ten.py}
+
+\begin{boundary}
+These statements concern heterotic shift orbifolds of the nine $\W$ families with the established selection rules. Other
+lattices, non-geometric constructions and non-supersymmetric strings not obtained by a fermion-parity shift are not covered.
+\end{boundary}
 
 \begin{keyidea}
 Signature is not visible over a finite field. It is a choice of real form, and the Hesse

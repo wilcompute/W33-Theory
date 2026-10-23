@@ -1,0 +1,741 @@
+{
+ "free": [
+  {
+   "vp": [
+    "-1",
+    "-2/3",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1",
+    "-2/3",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1",
+    "-1/3",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1",
+    "-1/3",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1",
+    "1/3",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1",
+    "1/3",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1",
+    "2/3",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1",
+    "2/3",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "-1",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "-1",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "-1/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "-1/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "-1/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "0",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "0",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "2/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "2/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "2/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "1",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-2/3",
+    "1",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "-1",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "-1",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "-2/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "-2/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "-2/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "0",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "0",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "1/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "1/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "1/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "1",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "-1/3",
+    "1",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "-2/3",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "-2/3",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "-1/3",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "-1/3",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "1/3",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "1/3",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "2/3",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "0",
+    "2/3",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "-1",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "-1",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "-1/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "-1/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "-1/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "0",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "0",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "2/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "2/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "2/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "1",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1/3",
+    "1",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "-1",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "-1",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "-2/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "-2/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "-2/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "0",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "0",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "1/3",
+    "-1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "1/3",
+    "0"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "1/3",
+    "1"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "1",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "2/3",
+    "1",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "-2/3",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "-2/3",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "-1/3",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "-1/3",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "1/3",
+    "-1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "1/3",
+    "2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "2/3",
+    "-2/3"
+   ],
+   "gravitino_phase_exponents": [
+    "1/2"
+   ]
+  },
+  {
+   "vp": [
+    "1",
+    "2/3",
+    "1/3"
+   ],
+   "gravitino_phase_exponents": [
+    "0"
+   ]
+  }
+ ],
+ "phase_kinds": [
+  [
+   "0"
+  ],
+  [
+   "1/2"
+  ]
+ ],
+ "primitive": 0,
+ "control_without_freeness": {
+  "1/2": 58,
+  "2/3": 57,
+  "5/6": 57,
+  "0": 57,
+  "1/6": 57,
+  "1/3": 57
+ }
+}
