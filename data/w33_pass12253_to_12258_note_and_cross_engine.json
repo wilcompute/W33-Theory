@@ -1,0 +1,201 @@
+{
+  "12254_mod2": {
+    "C10_one_line_models": {
+      "models": 153,
+      "mod2_ok": 88
+    },
+    "A8_SMs": {
+      "models": 104,
+      "mod2_ok": 104
+    },
+    "three_generation_mod2": 32,
+    "six_generation_mod2": 56
+  },
+  "12254_engines": {
+    "candidates": {
+      "C10_N001_F1_04_111_59": {
+        "v2": {
+          "tens": {},
+          "states_by_code": {
+            "2": 202,
+            "3": 202,
+            "4": 40,
+            "5": 40,
+            "6": 408
+          }
+        },
+        "nso": {
+          "tens": {
+            "(19, '10')": 3,
+            "(20, '-10')": 3
+          },
+          "states_by_code": {
+            "8": 2,
+            "9": 2,
+            "13": 40,
+            "14": 40,
+            "15": 195,
+            "16": 195,
+            "17": 9,
+            "18": 9,
+            "19": 452,
+            "20": 452
+          }
+        }
+      },
+      "C10_N001_F1_04_203_2682": {
+        "v2": {
+          "tens": {
+            "(2, '-10')": 3,
+            "(3, '10')": 3
+          },
+          "states_by_code": {
+            "2": 214,
+            "3": 214,
+            "4": 40,
+            "5": 40,
+            "6": 384
+          }
+        },
+        "nso": {
+          "tens": {
+            "(19, '-10')": 6,
+            "(20, '10')": 6
+          },
+          "states_by_code": {
+            "8": 2,
+            "9": 2,
+            "13": 40,
+            "14": 40,
+            "15": 183,
+            "16": 183,
+            "17": 9,
+            "18": 9,
+            "19": 476,
+            "20": 476
+          }
+        }
+      },
+      "C10_N001_F1_04_215_2682": {
+        "v2": {
+          "tens": {
+            "(2, '-10')": 3,
+            "(3, '10')": 3
+          },
+          "states_by_code": {
+            "2": 214,
+            "3": 214,
+            "4": 40,
+            "5": 40,
+            "6": 384
+          }
+        },
+        "nso": {
+          "tens": {
+            "(19, '-10')": 6,
+            "(20, '10')": 6
+          },
+          "states_by_code": {
+            "8": 2,
+            "9": 2,
+            "13": 40,
+            "14": 40,
+            "15": 183,
+            "16": 183,
+            "17": 9,
+            "18": 9,
+            "19": 476,
+            "20": 476
+          }
+        }
+      }
+    },
+    "control": {
+      "v2": {
+        "states_by_code": {
+          "2": 368,
+          "3": 368,
+          "4": 61,
+          "5": 61,
+          "6": 516
+        },
+        "sixteens": {
+          "(2, '-16')": 1,
+          "(2, '16')": 4,
+          "(3, '-16')": 4,
+          "(3, '16')": 1
+        }
+      },
+      "nso": {
+        "states_by_code": {
+          "8": 2,
+          "9": 2,
+          "13": 61,
+          "14": 61,
+          "15": 249,
+          "16": 249,
+          "17": 9,
+          "18": 9,
+          "19": 664,
+          "20": 664
+        },
+        "sixteens": {
+          "(19, '-16')": 1,
+          "(19, '16')": 4,
+          "(20, '-16')": 4,
+          "(20, '16')": 1
+        }
+      }
+    }
+  },
+  "12255": {
+    "models": 104,
+    "total": {
+      "agree": 74174,
+      "mismatch": 0
+    }
+  },
+  "12256": {
+    "n_u1": 11,
+    "u_in_u1_span_residual": 1.7596179502113001e-15,
+    "tr_u": -6.572670690063301,
+    "tr_u1_dirs": [
+      51.691392,
+      0.0,
+      -0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "left_weights": 404,
+    "v0_traces": [
+      40.199502,
+      0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      0.0,
+      -0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "v0_anomalous": 1,
+    "v9_anomalous": 1,
+    "massless_rank_v0": 15,
+    "massless_rank_v9": 15
+  },
+  "checks": {
+    "12253: the standalone note exists and states the certified numbers": true,
+    "12254a: mod-2 Wilson-line condition: A8 104/104; twisted-10 models 88/153 (three-generation 32/58)": true,
+    "12254b: control agrees on chiral 16s; candidate models: the independent engine keeps fewer twisted 10s": true,
+    "12255: rule reproduces the statistics of all 74,174 fields of the 104 A8 Standard Models": true,
+    "12256: extra U(1) in span, Tr = -6.57 (mixes with the anomalous U(1)); one anomalous U(1) per class; massless rank 15 both": true
+  },
+  "all_checks_pass": true
+}

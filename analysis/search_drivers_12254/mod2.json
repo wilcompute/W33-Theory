@@ -1,0 +1,12 @@
+{
+ "C10_one_line_models": {
+  "models": 153,
+  "mod2_ok": 88
+ },
+ "A8_SMs": {
+  "models": 104,
+  "mod2_ok": 104
+ },
+ "three_generation_mod2": 32,
+ "six_generation_mod2": 56
+}

@@ -1,0 +1,529 @@
+{
+ "models": 104,
+ "total": {
+  "agree": 74174,
+  "mismatch": 0
+ },
+ "per_model": {
+  "A8SM_20260928_1335_TF": {
+   "agree": 756,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_1577_TF": {
+   "agree": 756,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3294_TF": {
+   "agree": 640,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_4146_TF": {
+   "agree": 694,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_5110_TF": {
+   "agree": 754,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_5752_TF": {
+   "agree": 638,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_6276_TF": {
+   "agree": 666,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_8460_TF": {
+   "agree": 736,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_8780_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_9434_TF": {
+   "agree": 732,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_9509_TF": {
+   "agree": 584,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_9787_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10338_TF": {
+   "agree": 842,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14146_TF": {
+   "agree": 754,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_16457_TF": {
+   "agree": 688,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_18875_TF": {
+   "agree": 638,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_137_TF": {
+   "agree": 694,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_639_TF": {
+   "agree": 708,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_851_TF": {
+   "agree": 690,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_904_TF": {
+   "agree": 672,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_1691_TF": {
+   "agree": 708,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_1799_TF": {
+   "agree": 816,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2303_TF": {
+   "agree": 718,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2356_TF": {
+   "agree": 576,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2373_TF": {
+   "agree": 822,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2375_TF": {
+   "agree": 678,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2519_TF": {
+   "agree": 700,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2889_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3298_TF": {
+   "agree": 754,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_4168_TF": {
+   "agree": 754,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_5468_TF": {
+   "agree": 720,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_5798_TF": {
+   "agree": 658,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_6573_TF": {
+   "agree": 778,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_7339_TF": {
+   "agree": 778,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_7414_TF": {
+   "agree": 722,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_7753_TF": {
+   "agree": 814,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_9767_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10966_TF": {
+   "agree": 682,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_11188_TF": {
+   "agree": 612,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_13698_TF": {
+   "agree": 800,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14681_TF": {
+   "agree": 722,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_15565_TF": {
+   "agree": 688,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_16432_TF": {
+   "agree": 770,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_16834_TF": {
+   "agree": 578,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_17793_TF": {
+   "agree": 618,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_17993_TF": {
+   "agree": 714,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_18573_TF": {
+   "agree": 786,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_19529_TF": {
+   "agree": 698,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_19635_TF": {
+   "agree": 770,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_19804_TF": {
+   "agree": 708,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_438_TF": {
+   "agree": 734,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_515_TF": {
+   "agree": 642,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_533_TF": {
+   "agree": 712,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_783_TF": {
+   "agree": 656,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_1279_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_1953_TF": {
+   "agree": 724,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2233_TF": {
+   "agree": 842,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2321_TF": {
+   "agree": 792,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2866_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3721_TF": {
+   "agree": 782,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3762_TF": {
+   "agree": 814,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3994_TF": {
+   "agree": 708,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_4537_TF": {
+   "agree": 690,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_6052_TF": {
+   "agree": 754,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_7100_TF": {
+   "agree": 708,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_7616_TF": {
+   "agree": 712,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_9667_TF": {
+   "agree": 616,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10006_TF": {
+   "agree": 680,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10086_TF": {
+   "agree": 722,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10139_TF": {
+   "agree": 816,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10269_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10545_TF": {
+   "agree": 658,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10740_TF": {
+   "agree": 676,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_10864_TF": {
+   "agree": 834,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_12722_TF": {
+   "agree": 658,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14359_TF": {
+   "agree": 594,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14608_TF": {
+   "agree": 696,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14914_TF": {
+   "agree": 712,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14993_TF": {
+   "agree": 694,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_17724_TF": {
+   "agree": 758,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_19483_TF": {
+   "agree": 786,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_1295_TF": {
+   "agree": 714,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_1356_TF": {
+   "agree": 708,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_2423_TF": {
+   "agree": 708,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3250_TF": {
+   "agree": 724,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3284_TF": {
+   "agree": 694,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_3572_TF": {
+   "agree": 624,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_4200_TF": {
+   "agree": 600,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_4582_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_5760_TF": {
+   "agree": 602,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_6322_TF": {
+   "agree": 688,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_7833_TF": {
+   "agree": 642,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_7974_TF": {
+   "agree": 750,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_8363_TF": {
+   "agree": 618,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_8904_TF": {
+   "agree": 684,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_9246_TF": {
+   "agree": 706,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_9594_TF": {
+   "agree": 834,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_11138_TF": {
+   "agree": 602,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_11397_TF": {
+   "agree": 666,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14376_TF": {
+   "agree": 636,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_14861_TF": {
+   "agree": 838,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_15495_TF": {
+   "agree": 744,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_16222_TF": {
+   "agree": 780,
+   "mismatch": 0,
+   "mismatches": {}
+  },
+  "A8SM_20260928_18197_TF": {
+   "agree": 658,
+   "mismatch": 0,
+   "mismatches": {}
+  }
+ }
+}

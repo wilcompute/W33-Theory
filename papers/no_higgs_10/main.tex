@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{No Higgs $\mathbf{10}$ on the $e_6+a_2$ route of the non-supersymmetric heterotic string\\[2pt]
+\large A lattice theorem for $T^6/\mathbb Z_3$ orbifolds of the $SO(16)\times SO(16)$ string}
+\author{W(3,3) programme --- Claude track (Passes 12161--12252)}
+\date{October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In $T^6/\mathbb Z_3$ orbifolds of the $SO(16)\times SO(16)$ heterotic string built on a three-family $e_6+a_2$ shift, Wilson-line breaking
+to $SU(5)$ leaves fractional charges (Wen--Witten), and the field-theoretic escape needs a scalar in the $\mathbf{10}$ of $SU(5)$. We show
+that no such scalar exists for any Wilson-line configuration that leaves an $SU(5)$, in any sector. The proof has two parts: a statistics
+rule, derived from the projection phase of the fermion-parity element, that decides boson versus fermion from the left-moving momentum
+alone; and an exhaustive enumeration, by coset tables over $E_8/3E_8$, of the twisted massless $\mathbf{10}$-type momenta. Twisted
+$\mathbf{10}$s do occur, in $0.18\%$ of one-line and $1.8\%$ of two-line configurations, but every one has the fermionic value of the rule.
+\end{abstract}
+
+\section{Setup}
+The orbifold group is $\mathbb Z_2^W\times\mathbb Z_3$. The fermion-parity (Witten) element $g=(-1)^F e^{2\pi i\,p\cdot V_0}$ acts
+trivially on $T^6$; its gauge shift $V_0$ is a \emph{split} involution of $E_8\times E_8$, $V_0^2=2$, the class that makes the
+ten-dimensional parent the tachyon-free $SO(16)\times SO(16)$ string. The $\mathbb Z_3$ shift $V_1$ is one of seven $e_6+a_2$ bases with
+three chiral families; torus one carries a family Wilson line $W_f$; tori two and three carry order-three Wilson lines $W_1,W_2$.
+Sectors are labelled by the Witten label $w\in\{0,1\}$, the $\mathbb Z_3$ power $n$ and fixed-point labels $m_a$.
+
+\section{The statistics rule}
+\begin{lemma}\label{lem:rule}
+On a state of sector $h=(w,n,m_a)$ with left momentum $P$ and right-moving weight $R$, invariance under $g$ requires
+\[
+P\cdot V_0-R_0\;\equiv\;\tfrac12\Bigl(w\,(V_0^2-1)+n\,V_1\cdot V_0+\textstyle\sum_a m_a\,W_a\cdot V_0\Bigr)\pmod 1 ,
+\]
+$R_0$ the spacetime component of $R$ (integral for bosons, half-integral for fermions). If $V_0^2=2$ and all products of $V_0$ with
+the shifts and Wilson lines are even, the right side is $w/2$, and a state is a boson iff $P\cdot V_0\equiv w/2$.
+\end{lemma}
+\begin{proof}
+The phase of $g$ on the state is $(P\cdot V_0-R\cdot s_0)-\tfrac12(V_h\cdot V_0-v_h\cdot s_0)$; $g$ is a pure shift, so there are no
+oscillator or fixed-point phases. With $R\cdot s_0=R_0$, $v_h\cdot s_0=w$ and $V_h=wV_0+nV_1+\sum m_aW_a$ the formula follows.
+\end{proof}
+\emph{Consistency forces the evenness.} If some $W\cdot V_0$ is odd, the right side depends on whether a fixed-point label is written
+$1$ or $-2$; the projection is ill-defined. The orbifolder rejects every such configuration ($147/147$), and $65{,}659$ of the $231{,}124$
+one-line configurations that satisfy only $W\cdot V_0\in\mathbb Z$ are of this kind.
+\emph{Check.} From left weights alone the rule reproduces the engine's statistics for all $5{,}974$ fields of eight full $T^6/\mathbb Z_3$
+spectra and for all $74{,}174$ fields of the $104$ $A_8$ Standard Models of the companion route.
+
+\section{The theorem}
+\begin{theorem}[no Higgs $\mathbf{10}$]
+For every consistent configuration of order-three Wilson lines that leaves an $SU(5)$, no state in the $\mathbf{10}$ of $SU(5)$ is a scalar.
+\end{theorem}
+\begin{proof}[Proof (computer-assisted)]
+\emph{Untwisted:} the $\mathbf{10}$ lies in the $\mathbf{16}$ of $SO(10)$, with $P\cdot V_0=\tfrac12$, $w=0$: fermions (all $7\times864$ lines).
+\emph{Twisted:} a massless twisted state has $|P|^2=4/3$ (with an oscillator the shell $2/3$ is below the $\mathbf{10}$-weight norm $6/5$);
+a $\mathbf{10}$ needs the $SU(5)$ projection of the first-$E_8$ part to have norm $6/5$. Commuting order-three lines diagonalise on the
+$D_5$ Cartan, so an $SU(5)$ intersection forces one line of $SU(5)$ type and the other preserving it. For each base, the cosets
+$V_1+n_1W_f+wV_0+n_2\lambda_1+n_3\lambda_2$ (and their second-$E_8$ partners) are fixed by classes in $E_8/3E_8$, so all short vectors are
+tabulated once and every pair is decided by table look-up. Results:
+\begin{center}\begin{tabular}{lrrr}
+\toprule
+& consistent configurations & with a twisted $\mathbf{10}$ & scalar type\\
+\midrule
+one line & $165{,}465$ & $294$ & $0$\\
+two lines & $119{,}915{,}126$ & $2{,}210{,}046$ & $0$\\
+\bottomrule
+\end{tabular}\end{center}
+Every twisted $\mathbf{10}$-type momentum of the one-line class lies in a Witten-twisted coset with $P\cdot V_0\in\mathbb Z$; by the lemma
+all are fermions. Positive controls: an independent random sample of $366$ two-line hits is recovered exactly; bases with no hits in the
+sample have none in the enumeration.
+\end{proof}
+
+\section{Caveats}
+\begin{itemize}
+\item \emph{Wilson-line modular invariance.} The non-supersymmetric orbifolder imposes $3\,W_a\cdot W_b\in\mathbb Z$ across tori; orbifolder
+1.2.1 imposes the stronger $3\,W_a\cdot W_b\in2\mathbb Z$ (Pl\"oger et al., \emph{mirage torsion}). The theorem is a statement of absence and
+holds a fortiori on the smaller set. All $104$ $A_8$ Standard Models satisfy the stronger condition; $88$ of the $153$ consistent models with
+twisted $\mathbf{10}$s (and $32$ of their $58$ three-generation members) do.
+\item \emph{Engine dependence of existence claims.} The two $N=0$ engines agree on gauge groups and on the chiral $\mathbf{16}$s of the base
+models, but differ on how many Witten-twisted $\mathbf{10}$s survive in the candidate models. The \emph{absence} of a scalar $\mathbf{10}$ is
+engine-independent (no scalar-type momentum exists on the mass shell); the number of twisted fermionic $\mathbf{10}$s is not.
+\item \emph{Scope.} One geometry ($T^6/\mathbb Z_3$), one shift class ($e_6+a_2$), shift orbifolds only.
+\end{itemize}
+
+\paragraph{Consequence.} Wilson-line breaking on this route leaves fractional charges, and the field-theoretic escape is closed. Together
+with the Weinberg-angle and proton obstructions recorded elsewhere, this route does not give a realistic Standard Model.
+
+\paragraph{Reproducibility.} Producers \texttt{w33\_pass12217\ldots}, \texttt{12229\ldots}, \texttt{12235\ldots}, \texttt{12241\ldots},
+\texttt{12247\ldots}, \texttt{12253\ldots} in \texttt{analysis/}, with drivers in \texttt{analysis/search\_drivers\_122*}.
+\end{document}
