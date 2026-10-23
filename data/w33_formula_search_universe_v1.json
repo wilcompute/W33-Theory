@@ -425012,6 +425012,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f8c5685f074d1b3c5381af4f1da2e18446d87656c3acfec369a868c7ba2ac8ce",
+      "normalized_formula": "2-\\sqrt2<R<2+\\sqrt2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 496,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "2-\\sqrt2<R<2+\\sqrt2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e9646cebc8cd52f65e8855815d2ac561bfe0ad1fb0e7d3c71b9cbb51e2976aa7",
+      "structural_formula": "#-\\sqrt2<R<#+\\sqrt2"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7ad04840e84355fadc254516d99ad8bfcb30474e995783ef27ccf669849c543d",
       "normalized_formula": "2-complexismod-21-connected(H1=0).Evenasinglechannelsheet",
       "numeric_literals": [
@@ -776693,6 +776720,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b3aeaf33d98ff9a915795ea7346f477ed5908fe7fc25e4a95748c07129500711",
+      "normalized_formula": "R<2\\sqrt2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 496,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "R<2\\sqrt2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5e764d4a739eb931804440449c6dda23da60850e95d373fcbab5233e3b46787d",
+      "structural_formula": "R<#\\sqrt2"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c0772ee1d0c69c05d6725fc0df402cf81fddab8be6a9431063f354d5ae267c9b",
       "normalized_formula": "R=(\\mathbbZ/9)\\times\\mathbbF_9",
       "numeric_literals": [
@@ -794859,6 +794913,35 @@
       },
       "structural_family_id": "b4c7e2d7feb3e3b9b5c12445911d3605408145d5e0dbec2124f5fa6257673342",
       "structural_formula": "SU(#)=A_4:dim=#=f(gaugemult)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5502414b0ca6e6826ed4083bf3ffdcc65e43dec62b531cc7afe4d9047dfec6e7",
+      "normalized_formula": "SU(5)=theinvariantA4;all27fixed-pointshiftsV_fandtheirWittenpartnersV_f+V0;vectorsofGamma+V_fwithnorm4/3",
+      "numeric_literals": [
+        "3",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py",
+          "raw": "SU(5) = the invariant A4; all 27 fixed-point shifts V_f and their Witten partners V_f + V0; vectors of Gamma + V_f with norm 4/3",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "e6b01d2807a957bbd1490a7b468fd25055c128b4b84813a6c86aa319dd2b7a38",
+      "structural_formula": "SU(#)=theinvariantA4;all2#fixed-pointshiftsV_fandtheirWittenpartnersV_f+V0;vectorsofGamma+V_fwithnorm4/#"
     },
     {
       "file_count": 1,
@@ -865974,17 +866057,18 @@
       "structural_formula": "V=-r|phi|^#+u|phi|^#+beta*sum_pphi_p^#+gamma*sum_{p~q}phi_p^#phi_q^#"
     },
     {
-      "file_count": 4,
+      "file_count": 5,
       "formula_id": "4bf58e1bd6052dba6d8372369d27aa8e6b58661ea56ad92596c1a425af23bdd6",
       "normalized_formula": "V=0",
       "numeric_literals": [
         "0"
       ],
-      "occurrence_count": 5,
+      "occurrence_count": 6,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "analysis/2026-10-08_execute_all_five_chiral240_Lorentzian_CY420.md",
         "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+        "papers/forty_points/sec07_realforms.tex",
         "single_photon_universal_computation.tex",
         "w33_paper_body.tex"
       ],
@@ -866000,6 +866084,13 @@
           "category": "tex_paren",
           "line": 96,
           "path": "analysis/2026-10-14_toe76_six_fronts_rh_ihara.md",
+          "raw": "V=0",
+          "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
+          "line": 495,
+          "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "V=0",
           "status": "unclassified"
         },
@@ -866026,7 +866117,7 @@
         }
       ],
       "status_profile": {
-        "unclassified": 5
+        "unclassified": 6
       },
       "structural_family_id": "41500c022466c4ade898d82f7d37cf09765250afc383d7b2e3346e894e5e12d0",
       "structural_formula": "V=#"
@@ -997549,7 +997640,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 661,
+          "line": 662,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1066597,6 +1066688,35 @@
       },
       "structural_family_id": "c23380673e01082bb2939b3dbb35c1fea744ac3213a53683a8f1e70380cab307",
       "structural_formula": "alllatticevectorswithN<=#,halveshash-joinedonthecolour-singletchargeresidues;E8shells1,#,...,#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "09a37ba06079a994f3cce353beb051252b9b4de2bee50dad9d487edd99fefdc6",
+      "normalized_formula": "allofthem--neveracuberoot.+1:supersymmetrypreserved;-1:theta'^3=(-1)^Ftimesalatticetranslation,i.e.a",
+      "numeric_literals": [
+        "+1",
+        "-1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py",
+          "raw": "all of them -- never a cube root. +1: supersymmetry preserved; -1: theta'^3 = (-1)^F times a lattice translation, i.e. a",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "8b423e6b51f7af694b6f2bbf937e68404e95293c4d83ddc74ee414df4adb6979",
+      "structural_formula": "allofthem--neveracuberoot.#:supersymmetrypreserved;#:theta'^#=(#)^Ftimesalatticetranslation,i.e.a"
     },
     {
       "file_count": 1,
@@ -1182335,6 +1182455,39 @@
       },
       "structural_family_id": "b59fde731679f273a66ab797a118715f581902f7b29e0471bd46e67566862166",
       "structural_formula": "checks[\"#:nativeNaraintangentspace4(control);invariantdeformations0underC3xC3andundereachsingleC3\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "657895a254a4fa15ace41cc93caaa2d0bbac3516f8d2d7909a0321d0586d4f14",
+      "normalized_formula": "checks[\"12212:0twisted10-typevectorsonthemasslessshell:163savedmodels+300+1153freshdraws=1616;control100rootseach\"]=(",
+      "numeric_literals": [
+        "+1153",
+        "0",
+        "00",
+        "12212",
+        "1616",
+        "163",
+        "300"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py",
+          "raw": "checks[\"12212: 0 twisted 10-type vectors on the massless shell: 163 saved models + 300 + 1153 fresh draws = 1616; control 100 roots each\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d343695f33d962fd321d1722aa95d95196284bd023f537999753002d348ffca7",
+      "structural_formula": "checks[\"#:#twisted1#-typevectorsonthemasslessshell:#savedmodels+##freshdraws=#;control1#rootseach\"]=("
     },
     {
       "file_count": 1,
@@ -1308416,6 +1308569,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ee1d9ff4ff54b5ef1dae4e6d45547e4d2e84ac288952c9e8fe4b6603bc90584d",
+      "normalized_formula": "family-tripletquarkmultiplet.(SM_923hasafamilydoubletandN_even=2.)",
+      "numeric_literals": [
+        "2",
+        "23"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12211_12216_NO_ORDER3_INTERPOLATION_NO_TWISTED_TEN.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/PASS12211_12216_NO_ORDER3_INTERPOLATION_NO_TWISTED_TEN.md",
+          "raw": "family-triplet quark multiplet. (SM_923 has a family doublet and N_even = 2.)",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "def136b621d02c7f0c0866255310d035ad5ef3742b3b663228adb8aa55de6428",
+      "structural_formula": "family-tripletquarkmultiplet.(SM_9#hasafamilydoubletandN_even=#.)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ea3c1f3d27442bbce20c19674ddadd5568755ddef34397a99575372d6814bae1",
       "normalized_formula": "family='Four-dimensionalWilsonkernel:twoone-celldirectionscarrytoronsalpha,beta;a6x6magneticplanecarriesflux1.Eachchargeqhasfluxq.Native12000periodwordsarecompiledintheactualunimodularclockmarking;theirlinksdifferfromstraightmagneticlinksbytestedconstantphases.Positive-projectordeterminantlinksusearbitrarylocaleigenframesacrossthewholeparametertorus,notonefixedreferenceframe.'",
       "numeric_literals": [
@@ -1413945,7 +1414126,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 660,
+          "line": 661,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1419079,7 +1419260,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 660,
+          "line": 661,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1508283,7 +1508464,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 466,
+          "line": 471,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "p^2=1",
           "status": "unclassified"
@@ -1512578,6 +1512759,35 @@
       },
       "structural_family_id": "b58077fbc0be23a53db4e7daf8a7908d7ec771b774f10dbd4b7dd4832b12b0cb",
       "structural_formula": "paras=p['h2']*inter*np.cos(#*ph+#)+p['leak']*inter*np.cos(ph+#);amp=max(#,#+ring[t])"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c0ffec91f2dfbbe777881491202bbd77b03f7321abc541fd57a83394529c4171",
+      "normalized_formula": "parent(SM_2751)--theonlyonewithanuntwistedfamily-tripletquarkmultiplet(SM_923hasafamilydoublet,N_even=2)",
+      "numeric_literals": [
+        "2",
+        "23",
+        "751"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 18,
+          "path": "analysis/w33_pass12211_to_12216_no_order3_interpolation_no_twisted_ten.py",
+          "raw": "parent (SM_2751) -- the only one with an untwisted family-triplet quark multiplet (SM_923 has a family doublet, N_even = 2).",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "c0484281844895d0d6b0b3cd09671905109e929046a7f1c917a988bd99743ee7",
+      "structural_formula": "parent(SM_2#)--theonlyonewithanuntwistedfamily-tripletquarkmultiplet(SM_9#hasafamilydoublet,N_even=#)"
     },
     {
       "file_count": 1,
@@ -1833767,7 +1833977,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 660,
+          "line": 661,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1883108,9 +1883318,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T11:08:16-04:00",
+  "frozen_at": "2026-10-23T11:34:34-04:00",
   "pass": 398,
-  "repository_head": "2d40aa3b94ee09e21f4ab7552d72b4dac62805f3",
+  "repository_head": "dbd2e39fa1711bf0e094779083c2b1f635baac7a",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1943569,6 +1943779,14 @@
       "exact_member_count": 1,
       "structural_family_id": "635d66361aa80ac5fef9e88fa72d0555e2397eae3efb334e7ab9176baa5a9495",
       "structural_formula": "#-\\prod_{p\u2261#\\(#)}(#-\\frac{#}{p^#})\u2248#"
+    },
+    {
+      "exact_formula_ids": [
+        "f8c5685f074d1b3c5381af4f1da2e18446d87656c3acfec369a868c7ba2ac8ce"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e9646cebc8cd52f65e8855815d2ac561bfe0ad1fb0e7d3c71b9cbb51e2976aa7",
+      "structural_formula": "#-\\sqrt2<R<#+\\sqrt2"
     },
     {
       "exact_formula_ids": [
@@ -2092322,6 +2092540,14 @@
     },
     {
       "exact_formula_ids": [
+        "b3aeaf33d98ff9a915795ea7346f477ed5908fe7fc25e4a95748c07129500711"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5e764d4a739eb931804440449c6dda23da60850e95d373fcbab5233e3b46787d",
+      "structural_formula": "R<#\\sqrt2"
+    },
+    {
+      "exact_formula_ids": [
         "a94f342f49cd28b8a356d1a5719ff5b29c896c1f42b968681a1badf91b342e38",
         "5751c3ebba6a1cb4fc27dcadea2c2d90a93abe6584d1c60a423aa61b13f4b68d",
         "2eb76822d44632f271c47da2c61d4b950267eaad49902c26267b62f20ee8c32c",
@@ -2097219,6 +2097445,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2fd36d46559fd9b2657f730740a5d4a31ee4d84221cd6d9ae13b2306fe0f6ab2",
       "structural_formula": "SU(#)=q^#*Phi_6,SU(#)=#v(=m_W!),SU(#)=q^#*p_Ih"
+    },
+    {
+      "exact_formula_ids": [
+        "5502414b0ca6e6826ed4083bf3ffdcc65e43dec62b531cc7afe4d9047dfec6e7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e6b01d2807a957bbd1490a7b468fd25055c128b4b84813a6c86aa319dd2b7a38",
+      "structural_formula": "SU(#)=theinvariantA4;all2#fixed-pointshiftsV_fandtheirWittenpartnersV_f+V0;vectorsofGamma+V_fwithnorm4/#"
     },
     {
       "exact_formula_ids": [
@@ -2167618,6 +2167852,14 @@
     },
     {
       "exact_formula_ids": [
+        "09a37ba06079a994f3cce353beb051252b9b4de2bee50dad9d487edd99fefdc6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8b423e6b51f7af694b6f2bbf937e68404e95293c4d83ddc74ee414df4adb6979",
+      "structural_formula": "allofthem--neveracuberoot.#:supersymmetrypreserved;#:theta'^#=(#)^Ftimesalatticetranslation,i.e.a"
+    },
+    {
+      "exact_formula_ids": [
         "d4cbfdd32fedba61fcd8364ac3fffa22ccb6d51458960d14885cc75d22bda691"
       ],
       "exact_member_count": 1,
@@ -2198683,6 +2198925,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8a7e1b61883254bc6c6482227a818cd305c53c04228dece94c942ef395e0a1ff",
       "structural_formula": "checks[\"#:#newSU(#)xU(#)models(#three-generation),scalar1#:#;fermion1#spresent(control)\"]=("
+    },
+    {
+      "exact_formula_ids": [
+        "657895a254a4fa15ace41cc93caaa2d0bbac3516f8d2d7909a0321d0586d4f14"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d343695f33d962fd321d1722aa95d95196284bd023f537999753002d348ffca7",
+      "structural_formula": "checks[\"#:#twisted1#-typevectorsonthemasslessshell:#savedmodels+##freshdraws=#;control1#rootseach\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2233732,6 +2233982,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5f38d641e276426d67c0e98fe0021df0287db63e896a9bc140ee05261859d89c",
       "structural_formula": "family-neutralcomplex2#sandthereal7#of1#givesbE6=#;usingacomplex7#"
+    },
+    {
+      "exact_formula_ids": [
+        "ee1d9ff4ff54b5ef1dae4e6d45547e4d2e84ac288952c9e8fe4b6603bc90584d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "def136b621d02c7f0c0866255310d035ad5ef3742b3b663228adb8aa55de6428",
+      "structural_formula": "family-tripletquarkmultiplet.(SM_9#hasafamilydoubletandN_even=#.)"
     },
     {
       "exact_formula_ids": [
@@ -2288492,6 +2288750,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b58077fbc0be23a53db4e7daf8a7908d7ec771b774f10dbd4b7dd4832b12b0cb",
       "structural_formula": "paras=p['h2']*inter*np.cos(#*ph+#)+p['leak']*inter*np.cos(ph+#);amp=max(#,#+ring[t])"
+    },
+    {
+      "exact_formula_ids": [
+        "c0ffec91f2dfbbe777881491202bbd77b03f7321abc541fd57a83394529c4171"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c0484281844895d0d6b0b3cd09671905109e929046a7f1c917a988bd99743ee7",
+      "structural_formula": "parent(SM_2#)--theonlyonewithanuntwistedfamily-tripletquarkmultiplet(SM_9#hasafamilydoublet,N_even=#)"
     },
     {
       "exact_formula_ids": [
@@ -2386375,20 +2386641,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91318371,
-    "exact_formula_families": 64382,
-    "files_scanned": 12559,
-    "formula_occurrences": 70487,
+    "bytes_scanned": 91330979,
+    "exact_formula_families": 64389,
+    "files_scanned": 12562,
+    "formula_occurrences": 70495,
     "status_occurrences": {
-      "certified_or_theorem": 5288,
+      "certified_or_theorem": 5290,
       "killed_or_retracted": 1872,
-      "open_or_conditional": 2373,
+      "open_or_conditional": 2375,
       "preregistered": 36,
       "retrospective_fit": 5398,
-      "unclassified": 55520
+      "unclassified": 55524
     },
-    "structural_families": 62691
+    "structural_families": 62698
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "0ae87ccf0b662a78ea12485e5dce2998ba6d5098d27755f2401974ba281929a6"
+  "universe_sha256": "becbee276ce32bdb3ac9993820ae4d1cfbbfbe4f7f4b96c99977cb521cbf8e10"
 }
