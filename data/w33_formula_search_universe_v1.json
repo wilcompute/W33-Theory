@@ -566887,6 +566887,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fa40358f89e3d37b15dbb8b416c0eee321b8a5a0bdb0baef43c864775875d999",
+      "normalized_formula": "Atq=9choosethesecondtransvectionparametercinGF9=F3[z]/(z2+1),encodedinintegers0..8.Previousexactgroupclosuresprovethatparameters1,3,4generateSL(2,3)(order24),thebinary-icosahedral-type120-ordersubgroup,andfullSL(2,9)(order720)respectively",
+      "numeric_literals": [
+        "+1",
+        ".8",
+        "2",
+        "20",
+        "3",
+        "4",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_frontiers_round6.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 112,
+          "path": "analysis/2026-10-22_five_frontiers_round6.md",
+          "raw": "At q=9 choose the second transvection parameter c in GF9=F3[z]/(z\u00b2+1), encoded in integers 0..8. Previous exact group closures prove that parameters 1,3,4 generate SL(2,3) (order24), the binary-icosahedral-type 120-order subgroup, and full SL(2,9) (order720) respectively.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a7f863ef05719f09b1625536db1f22c6d7480362d7a01dfaf7a2b7b3dfacd919",
+      "structural_formula": "Atq=#choosethesecondtransvectionparametercinGF9=F3[z]/(z2#),encodedinintegers0.#.Previousexactgroupclosuresprovethatparameters1,#,#generateSL(#,#)(order2#),thebinary-icosahedral-type1#-ordersubgroup,andfullSL(#,#)(order7#)respectively"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d03ef0d02653ff9ec89fe125e3b34b765d4521502bb6897dbc732355edd6bcfc",
       "normalized_formula": "Atq^lambda=9:1+1=2supersingularj-values(refinedformula)",
       "numeric_literals": [
@@ -605582,6 +605615,33 @@
       },
       "structural_family_id": "d8fbbb48d0d2f01ced26e732c4d7bb9abace2a35993f6c8c8aaa7b1a5bd2f2b5",
       "structural_formula": "Definethe4#projectivetwo-qutritPaulipowers\\(q_p=#|\\langle\\psi|W_p|\\psi\\rangle|^#\\).Fora^pureproduct^\\(\\psi=a\\otimesb\\),let\\(u_i=#|\\langlea|W_i|a\\rangle|^#\\)and\\(v_j=#|\\langleb|W_j|b\\rangle|^#\\),indexedbythefourprojectivesingle-qutritPauliclasseseach"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "93bf6aaa9091dfbe61ae2a4ead4f39dd5d10fe9ec5c5fa9020d02534ff98f9a6",
+      "normalized_formula": "Definetheactualnine-dimensionaltwo-qutritHamiltonian`H=-sum_v(W_v+W_v^dagger)/2`.Directmatrixcalculationsgivean^exactalgebraicidentity^(equivalentlyderivedfromtheWeyldisplacementsum/characterorthogonality)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_frontiers_round6.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 39,
+          "path": "analysis/2026-10-22_five_frontiers_round6.md",
+          "raw": "Define the actual nine-dimensional two-qutrit Hamiltonian `H=-sum_v (W_v+W_v^dagger)/2`. Direct matrix calculations give an **exact algebraic identity** (equivalently derived from the Weyl displacement sum/character orthogonality)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "336fad56ed830acdf036f27900d1fbab92b1a821c889de5152bebf229a3b11c7",
+      "structural_formula": "Definetheactualnine-dimensionaltwo-qutritHamiltonian`H=-sum_v(W_v+W_v^dagger)/#`.Directmatrixcalculationsgivean^exactalgebraicidentity^(equivalentlyderivedfromtheWeyldisplacementsum/characterorthogonality)"
     },
     {
       "file_count": 1,
@@ -659926,6 +659986,34 @@
       },
       "structural_family_id": "3615a8e21fe95d8a7babbec7744209aa71737e5f3c2ae6e0deb36426f034c35e",
       "structural_formula": "Here`#=#*#`isasecondcopyoftheBT8#fixed-plus-diagonalcomplementscale,and`#=###`isthegaugeadjointprofile"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9afa77715dddc624ba8d6112aa770dc7a8aab1bfa0252e24cafedc72eca1db76",
+      "normalized_formula": "Here`D=(2I-T_u-T_u^-1)+(2I-T_v-T_v^-1)`.EachTisagraphautomorphism,soitcommuteswithJ,andDannihilatestheconstantvector.Onthe^orthogonalcomplementoftheuniformvector^theoperatorsare^identical^,notmerelysimilar",
+      "numeric_literals": [
+        "-1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_frontiers_round6.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 139,
+          "path": "analysis/2026-10-22_five_frontiers_round6.md",
+          "raw": "Here `D=(2I-T_u-T_u^-1)+(2I-T_v-T_v^-1)`. Each T is a graph automorphism, so it commutes with J, and D annihilates the constant vector. On the **orthogonal complement of the uniform vector** the operators are **identical**, not merely similar:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "90144f322837a08082c8ac228241d25776161bbe14cde43e30d779fa6fa0e78f",
+      "structural_formula": "Here`D=(#I-T_u-T_u^#)+(#I-T_v-T_v^#)`.EachTisagraphautomorphism,soitcommuteswithJ,andDannihilatestheconstantvector.Onthe^orthogonalcomplementoftheuniformvector^theoperatorsare^identical^,notmerelysimilar"
     },
     {
       "file_count": 1,
@@ -828887,6 +828975,37 @@
       },
       "structural_family_id": "4d95ffae855aa7c1aa198bb7bc53a909225a42497d6a688ca4b21dde3c40af75",
       "structural_formula": "ThechangedbranchalsorequiresanewMajoranafit.EvolveC5shapewith`q_i=+y_i2/(#pi2)`intheMSSMand`q_i=#y_i2/(#pi2)`intheSM;universalrunningandthesin2betamatchingfactorareabsorbedinthesuppliedatmosphericnormalization.Fouroscillationcomparisonsarerematched,retainingfifteenfittedcomparisons.Theseareone-loopshapeequations;#'stwo-loopSMshapecorrectionisnotsilentlyclaimedinthenewMSSMinventory"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2ae177d0f1042d88a0e22b61279d7b6bd27226db92efea9d519a89e03ef32b52",
+      "normalized_formula": "Thecharacteristic-three^fixedprime-subfield^two-anchorupperboundof13issaturatedatq=9underc=1,whilemoreexpressivecoefficientchoicesyieldindependentlycertifiedvalues^23and51^onthe^actual820-dimensionalW33-familypointrepresentation^.ThisismuchstrongergeometricallythanmerelygrowingeigenvaluesontheregularCayleygroup",
+      "numeric_literals": [
+        "1",
+        "20",
+        "23",
+        "3",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_frontiers_round6.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 123,
+          "path": "analysis/2026-10-22_five_frontiers_round6.md",
+          "raw": "The characteristic-three **fixed prime-subfield** two-anchor upper bound of13 is saturated at q=9 under c=1, while more expressive coefficient choices yield independently certified values **23 and 51** on the **actual 820-dimensional W33-family point representation**. This is much stronger geometrically than merely growing eigenvalues on the regular Cayley group.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "08453ca0d74113286c44cc2aa8fc40e761e32ab99a76f807fee98571e9a2156e",
+      "structural_formula": "Thecharacteristic-three^fixedprime-subfield^two-anchorupperboundof1#issaturatedatq=#underc=#,whilemoreexpressivecoefficientchoicesyieldindependentlycertifiedvalues^#and5#^onthe^actual8#-dimensionalW3#-familypointrepresentation^.ThisismuchstrongergeometricallythanmerelygrowingeigenvaluesontheregularCayleygroup"
     },
     {
       "file_count": 1,
@@ -1845682,6 +1845801,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "96e2daeea31e779e6839914987155f2aafdbb8ac806c8906dfa621e853faca59",
+      "normalized_formula": "|R_M>=(ItensorM)|Phi_3>`,where`|Phi_3>=3^(-1/2)sum_j|j,j>`and`M=diag(1,zeta9,zeta92)",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_five_frontiers_round6.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 80,
+          "path": "analysis/2026-10-22_five_frontiers_round6.md",
+          "raw": "`|R_M>=(I tensor M)|Phi_3>`, where `|Phi_3>=3^(-1/2)sum_j |j,j>` and `M=diag(1,zeta9,zeta9\u00b2)`.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5e749f76e8413ece937a3e6ac2b291a1c04e62d8bbc99a262e9dfa8b24334c98",
+      "structural_formula": "|R_M>=(ItensorM)|Phi_3>`,where`|Phi_3>=#^(#/#)sum_j|j,j>`and`M=diag(#,zeta9,zeta9#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cd1f1f7fa1de5d896331100edd0625ad8aafbf774db3c74aee2ded9aa2490291",
       "normalized_formula": "|R_M|^(-1/2)|sum_jtau_jomega^(js(p)+qj^2)|withsaffineonR_M.Forq!=0thethreevaluesaredistinct,sothe",
       "numeric_literals": [
@@ -1878418,9 +1878567,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T21:20:04-04:00",
+  "frozen_at": "2026-10-22T21:44:44-04:00",
   "pass": 398,
-  "repository_head": "e0b1cbccba1971d54bf1de990572d92cfc8030fa",
+  "repository_head": "fff32accb730ccc0c0af680014610503805a0a83",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2030882,6 +2031031,14 @@
     },
     {
       "exact_formula_ids": [
+        "fa40358f89e3d37b15dbb8b416c0eee321b8a5a0bdb0baef43c864775875d999"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a7f863ef05719f09b1625536db1f22c6d7480362d7a01dfaf7a2b7b3dfacd919",
+      "structural_formula": "Atq=#choosethesecondtransvectionparametercinGF9=F3[z]/(z2#),encodedinintegers0.#.Previousexactgroupclosuresprovethatparameters1,#,#generateSL(#,#)(order2#),thebinary-icosahedral-type1#-ordersubgroup,andfullSL(#,#)(order7#)respectively"
+    },
+    {
+      "exact_formula_ids": [
         "c49f5c348678e48384fde1104bf75084da5574fc6225bfb2404935d24e25d424"
       ],
       "exact_member_count": 1,
@@ -2041563,6 +2041720,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d8fbbb48d0d2f01ced26e732c4d7bb9abace2a35993f6c8c8aaa7b1a5bd2f2b5",
       "structural_formula": "Definethe4#projectivetwo-qutritPaulipowers\\(q_p=#|\\langle\\psi|W_p|\\psi\\rangle|^#\\).Fora^pureproduct^\\(\\psi=a\\otimesb\\),let\\(u_i=#|\\langlea|W_i|a\\rangle|^#\\)and\\(v_j=#|\\langleb|W_j|b\\rangle|^#\\),indexedbythefourprojectivesingle-qutritPauliclasseseach"
+    },
+    {
+      "exact_formula_ids": [
+        "93bf6aaa9091dfbe61ae2a4ead4f39dd5d10fe9ec5c5fa9020d02534ff98f9a6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "336fad56ed830acdf036f27900d1fbab92b1a821c889de5152bebf229a3b11c7",
+      "structural_formula": "Definetheactualnine-dimensionaltwo-qutritHamiltonian`H=-sum_v(W_v+W_v^dagger)/#`.Directmatrixcalculationsgivean^exactalgebraicidentity^(equivalentlyderivedfromtheWeyldisplacementsum/characterorthogonality)"
     },
     {
       "exact_formula_ids": [
@@ -2056127,6 +2056292,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3615a8e21fe95d8a7babbec7744209aa71737e5f3c2ae6e0deb36426f034c35e",
       "structural_formula": "Here`#=#*#`isasecondcopyoftheBT8#fixed-plus-diagonalcomplementscale,and`#=###`isthegaugeadjointprofile"
+    },
+    {
+      "exact_formula_ids": [
+        "9afa77715dddc624ba8d6112aa770dc7a8aab1bfa0252e24cafedc72eca1db76"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "90144f322837a08082c8ac228241d25776161bbe14cde43e30d779fa6fa0e78f",
+      "structural_formula": "Here`D=(#I-T_u-T_u^#)+(#I-T_v-T_v^#)`.EachTisagraphautomorphism,soitcommuteswithJ,andDannihilatestheconstantvector.Onthe^orthogonalcomplementoftheuniformvector^theoperatorsare^identical^,notmerelysimilar"
     },
     {
       "exact_formula_ids": [
@@ -2101880,6 +2102053,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4d95ffae855aa7c1aa198bb7bc53a909225a42497d6a688ca4b21dde3c40af75",
       "structural_formula": "ThechangedbranchalsorequiresanewMajoranafit.EvolveC5shapewith`q_i=+y_i2/(#pi2)`intheMSSMand`q_i=#y_i2/(#pi2)`intheSM;universalrunningandthesin2betamatchingfactorareabsorbedinthesuppliedatmosphericnormalization.Fouroscillationcomparisonsarerematched,retainingfifteenfittedcomparisons.Theseareone-loopshapeequations;#'stwo-loopSMshapecorrectionisnotsilentlyclaimedinthenewMSSMinventory"
+    },
+    {
+      "exact_formula_ids": [
+        "2ae177d0f1042d88a0e22b61279d7b6bd27226db92efea9d519a89e03ef32b52"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "08453ca0d74113286c44cc2aa8fc40e761e32ab99a76f807fee98571e9a2156e",
+      "structural_formula": "Thecharacteristic-three^fixedprime-subfield^two-anchorupperboundof1#issaturatedatq=#underc=#,whilemoreexpressivecoefficientchoicesyieldindependentlycertifiedvalues^#and5#^onthe^actual8#-dimensionalW3#-familypointrepresentation^.ThisismuchstrongergeometricallythanmerelygrowingeigenvaluesontheregularCayleygroup"
     },
     {
       "exact_formula_ids": [
@@ -2372490,6 +2372671,14 @@
     },
     {
       "exact_formula_ids": [
+        "96e2daeea31e779e6839914987155f2aafdbb8ac806c8906dfa621e853faca59"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5e749f76e8413ece937a3e6ac2b291a1c04e62d8bbc99a262e9dfa8b24334c98",
+      "structural_formula": "|R_M>=(ItensorM)|Phi_3>`,where`|Phi_3>=#^(#/#)sum_j|j,j>`and`M=diag(#,zeta9,zeta9#)"
+    },
+    {
+      "exact_formula_ids": [
         "cd1f1f7fa1de5d896331100edd0625ad8aafbf774db3c74aee2ded9aa2490291"
       ],
       "exact_member_count": 1,
@@ -2380417,20 +2380606,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91003461,
-    "exact_formula_families": 64220,
-    "files_scanned": 12525,
-    "formula_occurrences": 70322,
+    "bytes_scanned": 91037442,
+    "exact_formula_families": 64225,
+    "files_scanned": 12527,
+    "formula_occurrences": 70327,
     "status_occurrences": {
-      "certified_or_theorem": 5275,
+      "certified_or_theorem": 5276,
       "killed_or_retracted": 1865,
       "open_or_conditional": 2364,
       "preregistered": 36,
       "retrospective_fit": 5393,
-      "unclassified": 55389
+      "unclassified": 55393
     },
-    "structural_families": 62533
+    "structural_families": 62538
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "46f87d9ce892aa95f86c557e9fb3f8afa91e13af375e2e42e1c32d6f5290d042"
+  "universe_sha256": "56682ee5f3790551355f38031cc663e6dca2c8a7fd6e1cc94be8124aea1a2bd9"
 }
