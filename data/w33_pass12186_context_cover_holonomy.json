@@ -1,0 +1,2438 @@
+{
+  "status": "EXACT_FINITE_CLASSIFICATION_AND_CONDITIONAL_PARENT_THEOREM",
+  "source_sha256": "dafd829f9c503871b808b4f12426b095ac0f51c1a592788394ce541631e91a1e",
+  "native_input_sha256": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+  "base": {
+    "vertices": 27,
+    "edges": 135,
+    "SRG": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "independence_number": 6,
+    "maximal_independent_sets": 288,
+    "chromatic_number": 6,
+    "five_colour_exhaustive_search_nodes": 23465,
+    "six_colour_witness": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2,
+      0,
+      1,
+      3,
+      4,
+      1,
+      0,
+      1,
+      0,
+      5,
+      0,
+      5,
+      1,
+      2,
+      3,
+      4,
+      2,
+      3,
+      4,
+      2,
+      3,
+      5
+    ]
+  },
+  "colour_equivariance": "c(v,x)=rho(x) r_v on the actualZ4 deck cover; adjacent native edge(v,w,V_e) requires r_v!=rho(V_e)r_w. Every abelian subgroup ofS4 is conjugate intoC2,C3,C4,regularV4 or nonregularV4, all enumerated with root-orbit representatives.",
+  "action_classification": {
+    "C2": {
+      "homomorphisms": 16,
+      "successful": 0,
+      "search_nodes": 4340,
+      "root_orbit_representatives": [
+        0,
+        2
+      ]
+    },
+    "C3": {
+      "homomorphisms": 81,
+      "successful": 0,
+      "search_nodes": 21182,
+      "root_orbit_representatives": [
+        0,
+        3
+      ]
+    },
+    "C4": {
+      "homomorphisms": 256,
+      "successful": 0,
+      "search_nodes": 32576,
+      "root_orbit_representatives": [
+        0
+      ]
+    },
+    "V4": {
+      "homomorphisms": 256,
+      "successful": 36,
+      "search_nodes": 28887,
+      "root_orbit_representatives": [
+        0
+      ]
+    },
+    "V4_nonregular": {
+      "homomorphisms": 256,
+      "successful": 0,
+      "search_nodes": 69456,
+      "root_orbit_representatives": [
+        0,
+        2
+      ]
+    }
+  },
+  "binary_successful_maps": [
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        2,
+        3,
+        0,
+        2,
+        0,
+        1,
+        2,
+        1,
+        3,
+        2,
+        3,
+        0,
+        0,
+        1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        3,
+        2,
+        1,
+        3,
+        3,
+        1,
+        0,
+        1,
+        2,
+        0,
+        2,
+        3,
+        1,
+        3,
+        1,
+        2,
+        3,
+        0,
+        2,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        0,
+        2,
+        3,
+        1,
+        0,
+        3,
+        2,
+        1,
+        3,
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        2,
+        0,
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        0,
+        2,
+        3,
+        0,
+        2,
+        1,
+        0,
+        3,
+        2,
+        1,
+        3,
+        0,
+        2,
+        0,
+        1,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        3,
+        0,
+        2,
+        0,
+        2,
+        3,
+        2,
+        1,
+        3,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        3,
+        2,
+        3,
+        1,
+        0,
+        2,
+        3,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        0,
+        1,
+        3,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        0,
+        3,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        1,
+        0,
+        1,
+        3,
+        0,
+        3,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        1,
+        2,
+        3,
+        2,
+        0,
+        1,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        0,
+        2,
+        3,
+        3,
+        0,
+        1,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        0,
+        3,
+        0,
+        2,
+        0,
+        3,
+        2,
+        3,
+        2,
+        1,
+        2,
+        0,
+        1,
+        0,
+        3,
+        1,
+        0,
+        1,
+        2,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        2,
+        0,
+        3,
+        2,
+        0,
+        1,
+        3,
+        2,
+        0,
+        1,
+        2,
+        1,
+        3,
+        2,
+        1,
+        3,
+        0,
+        3,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        2,
+        1,
+        0,
+        2,
+        1,
+        3,
+        0,
+        2,
+        3,
+        3,
+        0,
+        1,
+        0,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2,
+        1,
+        3,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        2,
+        3,
+        0,
+        3,
+        1,
+        2,
+        2,
+        1,
+        3,
+        1,
+        0,
+        2,
+        3,
+        0,
+        1,
+        2,
+        0,
+        3,
+        0,
+        1,
+        3,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3,
+        2,
+        0,
+        3,
+        0,
+        1,
+        3,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        0,
+        3,
+        2,
+        2,
+        0,
+        1,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        3,
+        0,
+        3,
+        2,
+        0,
+        3,
+        2,
+        2,
+        0,
+        1,
+        2,
+        3,
+        1,
+        3,
+        1,
+        2,
+        0,
+        1,
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        1,
+        2,
+        0,
+        3,
+        2,
+        1,
+        0,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        2,
+        1,
+        3,
+        3,
+        0,
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        0,
+        2,
+        3,
+        2,
+        1,
+        3,
+        2,
+        1,
+        3,
+        3,
+        0,
+        1,
+        2,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        2,
+        3,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        2,
+        1,
+        3,
+        2,
+        0,
+        3,
+        1,
+        2,
+        3,
+        1,
+        3,
+        0,
+        3,
+        0,
+        2,
+        0,
+        2,
+        3,
+        0,
+        2,
+        1,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        1,
+        3,
+        2,
+        0,
+        2,
+        1,
+        0,
+        1,
+        2,
+        3,
+        2,
+        0,
+        3,
+        0,
+        1,
+        3,
+        1,
+        2,
+        0,
+        1,
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        0,
+        2,
+        1,
+        3,
+        3,
+        1,
+        2,
+        1,
+        0,
+        3,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        0,
+        3,
+        2,
+        0,
+        3,
+        1,
+        0,
+        2,
+        3,
+        1,
+        2,
+        0,
+        3,
+        0,
+        1,
+        0,
+        1,
+        3,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        2,
+        1,
+        0,
+        3,
+        0,
+        2,
+        2,
+        1,
+        0,
+        2,
+        3,
+        0,
+        0,
+        1,
+        3,
+        2,
+        1,
+        3,
+        3,
+        0,
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        0,
+        3,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1,
+        3,
+        3,
+        0,
+        1,
+        2,
+        0,
+        3,
+        2,
+        0,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3,
+        2,
+        2,
+        0,
+        1,
+        0,
+        3,
+        1,
+        0,
+        3,
+        1,
+        3,
+        1,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        1,
+        3,
+        2,
+        3,
+        0,
+        1,
+        1,
+        3,
+        2,
+        1,
+        3,
+        0,
+        0,
+        1,
+        2,
+        0,
+        3,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        1,
+        3,
+        2,
+        3,
+        0,
+        2,
+        0,
+        1,
+        2,
+        1,
+        3,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2,
+        3,
+        3,
+        0,
+        1,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        3,
+        0,
+        1,
+        3,
+        3,
+        1,
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2,
+        3,
+        0,
+        2,
+        0,
+        1,
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        0,
+        3,
+        0,
+        1,
+        3,
+        1,
+        2,
+        3,
+        2,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1,
+        3,
+        2,
+        0,
+        1,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        1,
+        2,
+        3,
+        0,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        2,
+        3,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        0,
+        1,
+        2,
+        0,
+        2,
+        3,
+        0,
+        2,
+        3,
+        3,
+        0,
+        1,
+        3,
+        2,
+        1,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        3,
+        0,
+        3,
+        1,
+        0,
+        1,
+        3,
+        2,
+        3,
+        0,
+        2,
+        0,
+        1,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        1,
+        3,
+        0,
+        1,
+        3,
+        2,
+        0,
+        1,
+        2,
+        0,
+        3,
+        0,
+        3,
+        2,
+        3,
+        1,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        1,
+        2,
+        0,
+        2,
+        0,
+        3,
+        0,
+        2,
+        3,
+        2,
+        3,
+        1,
+        3,
+        0,
+        1,
+        0,
+        2,
+        1,
+        0,
+        1,
+        3,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        0,
+        2,
+        1,
+        3,
+        2,
+        1,
+        2,
+        0,
+        2,
+        0,
+        3,
+        0,
+        3,
+        2,
+        0,
+        3,
+        1,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        0,
+        2,
+        0,
+        3,
+        3,
+        1,
+        0,
+        3,
+        2,
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        2,
+        0,
+        1,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1,
+        3,
+        0,
+        3,
+        2,
+        1,
+        2,
+        1,
+        3,
+        2,
+        0,
+        3,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "kind": "V4",
+      "coefficients": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "vertex_colours": [
+        0,
+        1,
+        3,
+        0,
+        3,
+        2,
+        3,
+        2,
+        1,
+        0,
+        3,
+        2,
+        1,
+        3,
+        2,
+        0,
+        1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        0,
+        3
+      ]
+    }
+  ],
+  "binary_quadric": {
+    "polynomial": "Q(x)=x0+x1+x0*x1+x0*x2+x1*x3 overF2",
+    "zero_vectors": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      7,
+      10,
+      11,
+      13,
+      14
+    ],
+    "polar_matrix": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "Arf_invariant": 0,
+    "maximal_singular_planes": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        10,
+        11
+      ],
+      [
+        0,
+        2,
+        5,
+        7
+      ],
+      [
+        0,
+        3,
+        13,
+        14
+      ],
+      [
+        0,
+        5,
+        11,
+        14
+      ],
+      [
+        0,
+        7,
+        10,
+        13
+      ]
+    ],
+    "H27_orbits": [
+      [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          11,
+          14
+        ],
+        [
+          0,
+          7,
+          10,
+          13
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          10,
+          11
+        ],
+        [
+          0,
+          2,
+          5,
+          7
+        ],
+        [
+          0,
+          3,
+          13,
+          14
+        ]
+      ]
+    ],
+    "all_rank2_kernels": 35,
+    "H27_invariant_quadratic_forms": [
+      {
+        "coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nonsingular": false
+      },
+      {
+        "coefficients": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "nonsingular": false
+      },
+      {
+        "coefficients": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "nonsingular": true
+      },
+      {
+        "coefficients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "nonsingular": false
+      }
+    ],
+    "cover_stabilizers": [
+      {
+        "subgroup": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "generator": [
+          1,
+          2,
+          0
+        ],
+        "deck_matrix": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            -1,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            1
+          ],
+          [
+            0,
+            0,
+            -1,
+            0
+          ]
+        ],
+        "fixed_real_vectors": 0,
+        "contains_prior_clock_subgroup": false
+      },
+      {
+        "subgroup": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "generator": [
+          1,
+          1,
+          0
+        ],
+        "deck_matrix": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            -1,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            0,
+            1,
+            -1
+          ]
+        ],
+        "fixed_real_vectors": 0,
+        "contains_prior_clock_subgroup": false
+      }
+    ],
+    "prior_clock_subgroup": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        2
+      ]
+    ],
+    "clock_symmetry_completion": [
+      {
+        "clock_orbit": [
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            5,
+            11,
+            14
+          ],
+          [
+            0,
+            7,
+            10,
+            13
+          ]
+        ],
+        "intersection": [
+          0
+        ],
+        "completed_binary_cover_index": 16
+      },
+      {
+        "clock_orbit": [
+          [
+            0,
+            1,
+            10,
+            11
+          ],
+          [
+            0,
+            2,
+            5,
+            7
+          ],
+          [
+            0,
+            3,
+            13,
+            14
+          ]
+        ],
+        "intersection": [
+          0
+        ],
+        "completed_binary_cover_index": 16
+      }
+    ],
+    "real_clock_obstruction": "Each selected index4cover has order9 native H27 stabilizer generated on the real period4space by M with M2+M+I=0. It fixes no real nonzero vector. Every M-invariant nondegenerate real metric is Hermitian for J=(2M+I)/sqrt3 and hence has even positive/negative indices: no invariant(1,3) metric. The prior11991 clock subgroup cycles3quotient kernels; their common refinement has16sheets. A finite binary split quadric is not a real Lorentz cone. This refers to the native address H27 period action, not an asserted identification with E6/operator H27.",
+    "identification": "Exactly the6 maximal singular2planes of the unique nonsingular H27-invariant quadratic form; two reguli of3planes. This is finiteQplus(3,2), not a real Lorentz signature."
+  },
+  "minimal_equivariant_quotient": "Only regularV4 colour action succeeds; six kernels of index4 inZ4. Cyclic covers cannot support any deck-equivariant4colouring. Non-equivariant colourings and covers outside this givenZ4 period quotient are not classified.",
+  "period_affine_group": {
+    "group": "G=(F2)^4 semidirect H27 using the contragredient R_g=M_g^(-T) of the stored11991 deck matrices",
+    "order": 432,
+    "element_orders": {
+      "1": 1,
+      "2": 15,
+      "3": 242,
+      "6": 174
+    },
+    "center": [
+      {
+        "translation": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "H27": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "translation": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "H27": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "translation": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "H27": [
+          0,
+          0,
+          2
+        ]
+      }
+    ],
+    "normal_Sylow2": "elementary abelian C2^4, exponent2",
+    "faithful_period_affine_image": "A4 x A4, order144; kernel is the H27 centerC3",
+    "binary_character_planes": [
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    ],
+    "six_GL2_pairings": [
+      {
+        "kernel": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "parity": 0
+      },
+      {
+        "kernel": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "parity": 1
+      },
+      {
+        "kernel": [
+          0,
+          2,
+          5,
+          7
+        ],
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "parity": 1
+      },
+      {
+        "kernel": [
+          0,
+          3,
+          13,
+          14
+        ],
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "parity": 1
+      },
+      {
+        "kernel": [
+          0,
+          5,
+          11,
+          14
+        ],
+        "permutation": [
+          2,
+          0,
+          1
+        ],
+        "parity": 0
+      },
+      {
+        "kernel": [
+          0,
+          7,
+          10,
+          13
+        ],
+        "permutation": [
+          1,
+          2,
+          0
+        ],
+        "parity": 0
+      }
+    ],
+    "connection": "The six selected maximal singular planes are graphs of all6linear isomorphisms between the two binary2planes. The two reguli are even/odd permutations of their three nonzero vectors; nativeC3xC3 rotations preserve that parity.",
+    "clock_group_nonisomorphism": "Pass12058 clock stabilizer also has order432, but quotient2xQ8 forces elements of order4. This explicit period affine group has no order4 element. Equal group order and centralC3 do not identify the groups or address/operator H27 roles.",
+    "scope": "Explicit semidirect group multiplication and faithful affine action on period coordinates, not an asserted map into E8 clock stabilizers or a separately constructed permutation lift on every cover vertex."
+  },
+  "example_cover": {
+    "deck": "Z2xZ2",
+    "vertices": 108,
+    "edges": 540,
+    "coefficients": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "base_vertex_colours": [
+      0,
+      1,
+      3,
+      2,
+      3,
+      0,
+      2,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2,
+      3,
+      0,
+      0,
+      1,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      1,
+      3
+    ],
+    "lifted_colours": [
+      0,
+      1,
+      3,
+      2,
+      3,
+      0,
+      2,
+      0,
+      1,
+      2,
+      1,
+      3,
+      2,
+      3,
+      0,
+      0,
+      1,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      1,
+      3,
+      1,
+      0,
+      2,
+      3,
+      2,
+      1,
+      3,
+      1,
+      0,
+      3,
+      0,
+      2,
+      3,
+      2,
+      1,
+      1,
+      0,
+      2,
+      1,
+      0,
+      3,
+      2,
+      1,
+      0,
+      3,
+      0,
+      2,
+      2,
+      3,
+      1,
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      0,
+      3,
+      1,
+      0,
+      1,
+      2,
+      2,
+      3,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      3,
+      1,
+      3,
+      2,
+      0,
+      1,
+      0,
+      3,
+      1,
+      3,
+      2,
+      1,
+      2,
+      0,
+      1,
+      0,
+      3,
+      3,
+      2,
+      0,
+      3,
+      2,
+      1,
+      0,
+      3,
+      2,
+      1,
+      2,
+      0
+    ],
+    "connected": true
+  },
+  "star_parent": {
+    "ground_energy_error": 2.0983215165415544e-13,
+    "minimum_site_gap_for_displayed_cover": 4.999999999999999,
+    "distinct_stabilizer_overlap_max": 0.3333333333333338,
+    "parent": "H_star=sum_{edges uv}[(h_a(u)+h_a(v))/2]_u+[(h_a(u)+h_a(v))/2]_v+kappa sum_edges delta_{a(u),a(v)} I, kappa>0; h_a=I-Pi_a.",
+    "ground_theorem": "For any connected graph with an edge: exact zero-energy dimension360*P_G(4). Every ground label word is a proper4colouring in one pure stabilizer context, with quantum product state rho_context^tensor_vertices.",
+    "gap_lower_bound": "min{kappa,(1-1/sqrt3)/2}",
+    "gap_scope": "A true gap above zero when the frustration-free kernel exists. Otherwise only an energy floor above zero, not a spacing bound above the frustrated ground energy.",
+    "proof": [
+      "All terms are positive. Equal neighbouring labels costkappa. Incompatible neighbour ticks give local energy at least(1-1/sqrt3)/2 (or1/2 for different outcomes of the same direction).",
+      "Otherwise each edge has a unique rank1 stabilizer kernel rho_e and K_e>=(I-rho_e)/2.",
+      "If two incident edge kernels disagree, their two constraints act on the SAME vertex: K_e+K_f>=(2I-rho_e-rho_f)/2, whose minimum is at least(1-1/sqrt3)/2.",
+      "If all incident kernels agree, graph connectivity propagates a single global rho. The block is a sum of onsite operators with unique product ground state and gap>=1/2. Distinct proper words determine their context uniquely.",
+      "The full Hamiltonian is block diagonal in classical labels. After summing at each quantum vertex, different onsite terms commute. No SWAP exchange or entangled ground state is asserted."
+    ],
+    "scope": "Supplied dimensionless classical-quantum parent interaction. No derived UV coefficient, finite-temperature phase, relativistic matter, physical mass, causal clock, GR or TOE follows."
+  },
+  "prior": [
+    "11991 actual fourperiod native voltage cover",
+    "12055 native tick projectors",
+    "Local20261021 exchange_context_lock_candidate (separate unpublished Hamiltonian)",
+    "Standard graph-colouring and finite hyperbolic quadric geometry; not globally novel mathematical methods"
+  ],
+  "boundary": "A conditional local parent and an exact finite context/cover compatibility result. No selection of one of6covers, absolute scale, spacetime dimension, continuum action or physical TOE. The fourperiod input and positive couplings are supplied."
+}
