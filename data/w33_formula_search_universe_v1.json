@@ -348167,7 +348167,7 @@
         },
         {
           "category": "inline_math",
-          "line": 541,
+          "line": 542,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "(P\\cdot V_0-R_0)\\bmod1=w/2",
           "status": "unclassified"
@@ -825497,6 +825497,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "61b70a8dc9310e886f466205d6454e0b97d5dab9a930a42ed97affddda40220d",
+      "normalized_formula": "The12244identityholdsfortheROOTS(8=A2+A1),butthetwoarenotthesamevacuum:theshiftclasskeepsonemoreU(1)",
+      "numeric_literals": [
+        "1",
+        "2244",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12247_to_12252_theorem_77_complete.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_pass12247_to_12252_theorem_77_complete.py",
+          "raw": "The 12244 identity holds for the ROOTS (8 = A2 + A1), but the two are not the same vacuum: the shift class keeps one more U(1)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0e57b1f5ba2a31dfbc35f0fb955ff04203288ecd3f558e7f3cd289944d4abc2f",
+      "structural_formula": "The1#identityholdsfortheROOTS(#=A2+A1),butthetwoarenotthesamevacuum:theshiftclasskeepsonemoreU(#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ddd9d3ef4e65e0455fff0511ce234e293cf61c1b44b52e3a67df826bcbffb8ba",
       "normalized_formula": "The12SO(16)\u00d7SO(16)A8survivors(Passes11095\u201311110)havem_c=m_uattreelevel",
       "numeric_literals": [
@@ -869661,7 +869690,7 @@
         },
         {
           "category": "inline_math",
-          "line": 541,
+          "line": 542,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "V_0^2=2",
           "status": "unclassified"
@@ -999061,7 +999090,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 667,
+          "line": 668,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1045110,6 +1045139,38 @@
       },
       "structural_family_id": "8b8c2baeeb991f94be9bd90ca12c6e102cdd7d702a158aa959f8fc221f04b82d",
       "structural_formula": "^Secondcrossing.^Onthe7#Dquotientrowspace,therepresentationdecomposesinto`####_point+#_line`.Theeigenspaceofdimension2#meetingthe-#bandat`t_2=(#+sqrt1#)/#`isgroupinvariantandhencetheirreducible^#^module.Thisassignmentisrepresentationtheoryonthefinitegraph,^not^thestill-unknowntrueL2quantumvacuum"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4ceb4a73501adcbce0e01e3d619eec0ad07d09a5c665d23ce546445650f1ee88",
+      "normalized_formula": "^Selectedexternalcontext:^gdsfactory'sPDKmethodology(<https://gdsfactory.com/plus/v2/gdsfactory/notebooks/08_pdk/>)andanexperimentalelectro-opticallyprogrammablefour-modePICin*PhysicalReviewResearch*5,033206(2023),DOI:10.1103/PhysRevResearch.5.033206.ThosepublisheddevicemeasurementsarenotmeasurementsoftheHolonet",
+      "numeric_literals": [
+        "033206",
+        "08",
+        "10.1103",
+        "2023",
+        "5",
+        "5.033206"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_fractal_holonet_five_frontiers_hardware_review.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 106,
+          "path": "analysis/2026-10-23_fractal_holonet_five_frontiers_hardware_review.md",
+          "raw": "**Selected external context:** gdsfactory's PDK methodology (<https://gdsfactory.com/plus/v2/gdsfactory/notebooks/08_pdk/>) and an experimental electro-optically programmable four-mode PIC in *Physical Review Research* 5, 033206 (2023), DOI:10.1103/PhysRevResearch.5.033206. Those published device measurements are not measurements of the Holonet.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "85655cb07475f8934dba299892c68b86c15358de44b47516487f7490398babf5",
+      "structural_formula": "^Selectedexternalcontext:^gdsfactory'sPDKmethodology(<https://gdsfactory.com/plus/v2/gdsfactory/notebooks/#_pdk/>)andanexperimentalelectro-opticallyprogrammablefour-modePICin*PhysicalReviewResearch*#,#(#),DOI:#/PhysRevResearch.#.ThosepublisheddevicemeasurementsarenotmeasurementsoftheHolonet"
     },
     {
       "file_count": 1,
@@ -1184560,6 +1184621,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7c6ea33abab818f6b8fb0cc2e8c015841cd27508c6b6d219c687c942919fddc9",
+      "normalized_formula": "checks[\"12249:shiftclassrank16vsscalar-10Higgsbranchrank15--rootidentityonly\"]=rank_v9=16andrank_v0=16",
+      "numeric_literals": [
+        "10",
+        "12249",
+        "16",
+        "5",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12247_to_12252_theorem_77_complete.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 51,
+          "path": "analysis/w33_pass12247_to_12252_theorem_77_complete.py",
+          "raw": "checks[\"12249: shift class rank 16 vs scalar-10 Higgs branch rank 15 -- root identity only\"] = rank_v9 == 16 and rank_v0 == 16",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e2469b60e5b2d81db35fca9e2f29a5142067694d5de3e9d0339433077d9b4b7e",
+      "structural_formula": "checks[\"#:shiftclassrank1#vsscalar-#Higgsbranchrank1#--rootidentityonly\"]=rank_v9=#andrank_v0=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bb811ae9007f03eb7458a962180e5d159626dcb3cc27634fcee7f7c8699f37a8",
       "normalized_formula": "checks[\"15_fermionic\"]=g=15#15Weylfermionspergeneration",
       "numeric_literals": [
@@ -1272457,6 +1272549,34 @@
       },
       "structural_family_id": "d5e895bca9f557a040cb1b24196ed642141050036afbb831e6aeee2bbf7c4a80",
       "structural_formula": "e_{ij}e_{k\\ell}=\\delta_{jk}e_{i\\ell},\\qquad\\mathcalA_{#}\\congM_2(\\mathbbQ)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "19aa20796b48fd24bfcee6309e05d46fd18d7f3c5dd1c746dbd6764eca2a3d6e",
+      "normalized_formula": "e_{t+1}=\\bigl[(\\mathrm{clear}?0:e_t)+\\mathrm{popcount}(m_t)\\bigr]\\bmod4",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-23_fractal_holonet_five_frontiers_hardware_review.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 51,
+          "path": "analysis/2026-10-23_fractal_holonet_five_frontiers_hardware_review.md",
+          "raw": "e_{t+1}=\\bigl[(\\mathrm{clear} ? 0 : e_t)+\\mathrm{popcount}(m_t)\\bigr]\\bmod4",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3130235e54ccb6f4de7ae8c6ae270c05762341ad9af5ed38f4a31fa65cdb13ac",
+      "structural_formula": "e_{t+#}=\\bigl[(\\mathrm{clear}?#:e_t)+\\mathrm{popcount}(m_t)\\bigr]\\bmod4"
     },
     {
       "file_count": 1,
@@ -1416847,7 +1416967,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 666,
+          "line": 667,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1421981,7 +1422101,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 666,
+          "line": 667,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1681201,6 +1681321,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "91d19f9a1cdb1a7c619acc0947d80080b0609ab759181a0f4099ddcdd9a5b62c",
+      "normalized_formula": "res[\"12249\"]=dict(v0_rank=rank_v0,v9_rank=rank_v9,higgs_branch_rank=rank_v0-1)",
+      "numeric_literals": [
+        "-1",
+        "12249"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12247_to_12252_theorem_77_complete.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/w33_pass12247_to_12252_theorem_77_complete.py",
+          "raw": "res[\"12249\"] = dict(v0_rank=rank_v0, v9_rank=rank_v9, higgs_branch_rank=rank_v0 - 1)",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "aa2b74cb672341d237b56f85ea30b3342d6d189c1fed511e68c4c02473bbf3f0",
+      "structural_formula": "res[\"#\"]=dict(v0_rank=rank_v0,v9_rank=rank_v9,higgs_branch_rank=rank_v0#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7fca7a0df44053885faa83541510ce66482f1c43d4f5379f0fcd8a9d1f99f5ff",
       "normalized_formula": "res[\"E_n_if_F_m_flat\"]={str(n):str(En[n])forninrange(2,13)}",
       "numeric_literals": [
@@ -1837485,7 +1837633,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 666,
+          "line": 667,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1886826,9 +1886974,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T13:22:56-04:00",
+  "frozen_at": "2026-10-23T13:51:03-04:00",
   "pass": 398,
-  "repository_head": "19ec12b70ba6b75cc943289b619bf17f6d4008d9",
+  "repository_head": "3802b84318e87040a24e6d5f5113a22820490bef",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2109409,6 +2109557,14 @@
     },
     {
       "exact_formula_ids": [
+        "61b70a8dc9310e886f466205d6454e0b97d5dab9a930a42ed97affddda40220d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0e57b1f5ba2a31dfbc35f0fb955ff04203288ecd3f558e7f3cd289944d4abc2f",
+      "structural_formula": "The1#identityholdsfortheROOTS(#=A2+A1),butthetwoarenotthesamevacuum:theshiftclasskeepsonemoreU(#)"
+    },
+    {
+      "exact_formula_ids": [
         "32be12f84e9d0211e5aa9d535ed8c852a3edadc8d2d32afa5e5bf7ea8c407539"
       ],
       "exact_member_count": 1,
@@ -2165481,6 +2165637,14 @@
     },
     {
       "exact_formula_ids": [
+        "4ceb4a73501adcbce0e01e3d619eec0ad07d09a5c665d23ce546445650f1ee88"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "85655cb07475f8934dba299892c68b86c15358de44b47516487f7490398babf5",
+      "structural_formula": "^Selectedexternalcontext:^gdsfactory'sPDKmethodology(<https://gdsfactory.com/plus/v2/gdsfactory/notebooks/#_pdk/>)andanexperimentalelectro-opticallyprogrammablefour-modePICin*PhysicalReviewResearch*#,#(#),DOI:#/PhysRevResearch.#.ThosepublisheddevicemeasurementsarenotmeasurementsoftheHolonet"
+    },
+    {
+      "exact_formula_ids": [
         "c45350141cdd0cc10c9de7315802273ea4f45fc002a24eeb335a3f9254547d21"
       ],
       "exact_member_count": 1,
@@ -2203194,6 +2203358,14 @@
     },
     {
       "exact_formula_ids": [
+        "7c6ea33abab818f6b8fb0cc2e8c015841cd27508c6b6d219c687c942919fddc9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e2469b60e5b2d81db35fca9e2f29a5142067694d5de3e9d0339433077d9b4b7e",
+      "structural_formula": "checks[\"#:shiftclassrank1#vsscalar-#Higgsbranchrank1#--rootidentityonly\"]=rank_v9=#andrank_v0=#"
+    },
+    {
+      "exact_formula_ids": [
         "51d9a16ac05a3a8bd3efc40f17f97c7b3da7cfc9c0e4a418a49791fdfa451dbb"
       ],
       "exact_member_count": 1,
@@ -2227608,6 +2227780,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d5e895bca9f557a040cb1b24196ed642141050036afbb831e6aeee2bbf7c4a80",
       "structural_formula": "e_{ij}e_{k\\ell}=\\delta_{jk}e_{i\\ell},\\qquad\\mathcalA_{#}\\congM_2(\\mathbbQ)"
+    },
+    {
+      "exact_formula_ids": [
+        "19aa20796b48fd24bfcee6309e05d46fd18d7f3c5dd1c746dbd6764eca2a3d6e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3130235e54ccb6f4de7ae8c6ae270c05762341ad9af5ed38f4a31fa65cdb13ac",
+      "structural_formula": "e_{t+#}=\\bigl[(\\mathrm{clear}?#:e_t)+\\mathrm{popcount}(m_t)\\bigr]\\bmod4"
     },
     {
       "exact_formula_ids": [
@@ -2336531,6 +2336711,14 @@
     },
     {
       "exact_formula_ids": [
+        "91d19f9a1cdb1a7c619acc0947d80080b0609ab759181a0f4099ddcdd9a5b62c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aa2b74cb672341d237b56f85ea30b3342d6d189c1fed511e68c4c02473bbf3f0",
+      "structural_formula": "res[\"#\"]=dict(v0_rank=rank_v0,v9_rank=rank_v9,higgs_branch_rank=rank_v0#)"
+    },
+    {
+      "exact_formula_ids": [
         "17b84f6ae748b69023d3ed4396ff16302b4eafbfb3bf7171f02756569a300fd5"
       ],
       "exact_member_count": 1,
@@ -2391061,20 +2391249,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91528723,
-    "exact_formula_families": 64510,
-    "files_scanned": 12592,
-    "formula_occurrences": 70622,
+    "bytes_scanned": 91544019,
+    "exact_formula_families": 64515,
+    "files_scanned": 12595,
+    "formula_occurrences": 70627,
     "status_occurrences": {
-      "certified_or_theorem": 5297,
+      "certified_or_theorem": 5299,
       "killed_or_retracted": 1874,
       "open_or_conditional": 2378,
       "preregistered": 36,
       "retrospective_fit": 5404,
-      "unclassified": 55633
+      "unclassified": 55636
     },
-    "structural_families": 62811
+    "structural_families": 62816
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "142e7ab90013d88dd1b9abeda98da7d9a5d6ee41b513e63dc7c6bf86b4459d13"
+  "universe_sha256": "0876ff16a5a70c529aef8688ea15275aef95c9205d26c2eac74c0ca3be430bec"
 }
