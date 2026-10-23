@@ -1,0 +1,131 @@
+{
+  "W33_exact_spectral_certificate": {
+    "Schmidt_entropy_bits": 4.803856189774729,
+    "Schmidt_probability_spectrum": {
+      "0.01": 24,
+      "0.04": 15,
+      "0.16": 1
+    },
+    "Schmidt_purity": 0.052000000000000046,
+    "Schmidt_rank": 40,
+    "Schmidt_singular_values": {
+      "0.1": 24,
+      "0.2": 15,
+      "0.4": 1
+    },
+    "coefficient_matrix": "S=(J-2A)/40, path-address 2-factor amplitude",
+    "eigenvalues_A": {
+      "-4": 15,
+      "12": 1,
+      "2": 24
+    },
+    "entropy_deficit_bits": 0.5180719051126337,
+    "maximal_40_dim_entropy_bits": 5.321928094887363,
+    "pure_state_negativity": 16.31999999999997
+  },
+  "area_law": "Across every single contiguous cut at any n>=2, the 40 nonzero Schmidt probabilities are {0.16 x1, 0.04 x15, 0.01 x24}, independent of n and cut",
+  "falsification": [
+    "n=2 requires 1600 distinct product address modes to prepare a full 40x40 physical factorization",
+    "program 240 W33 edge-conditioned pi phases out of 1600 address pairs",
+    "measure 40x40 complex coefficient array or sufficient Schmidt-spectrum tomography",
+    "compare with all-plus product null (entropy=0) and random-phase null",
+    "test n=3 contiguous cuts: same entropy on cut 1|23 and 12|3"
+  ],
+  "gate": "two-address-factor controlled phase (-1)^(adjacent_W33_points)",
+  "geometry": "SRG(40,12,2,4) W33 collinearity adjacency on address alphabet",
+  "numerical_checks": "Explicit SVD for n=2 and n=3 at every cut, plus SRG adjacency polynomial identity; other n by exact local-isometry argument",
+  "physical_boundary": [
+    "Graph-controlled phases require a fabricated programmable phase network across 40-ary address factors",
+    "A single photon with n address digits is not n photons or n independently accessible particle systems",
+    "No genuine multi-photon Bell nonlocality, physical optical chip or TOE prediction shown",
+    "Mathematical tensor-factor entanglement only applies if the address digits have operationally separable controls/observables",
+    "40^n modes scale exponentially while entanglement across any one cut stays bounded",
+    "Input uniform address superposition is separable despite identical fractal address dimension"
+  ],
+  "proof": "Local diagonal phases entirely within either half do not affect Schmidt spectrum. Group left configurations by boundary address a and right by boundary b, producing orthonormal conditioned vectors of norm one. The remaining coefficient matrix is (J-2A)/40.",
+  "recursion_table": [
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 1,
+      "depth": 2,
+      "physical_mode_address_count_if_all_independent": 1600
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 1,
+      "depth": 3,
+      "physical_mode_address_count_if_all_independent": 64000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 2,
+      "depth": 3,
+      "physical_mode_address_count_if_all_independent": 64000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 1,
+      "depth": 4,
+      "physical_mode_address_count_if_all_independent": 2560000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 2,
+      "depth": 4,
+      "physical_mode_address_count_if_all_independent": 2560000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 3,
+      "depth": 4,
+      "physical_mode_address_count_if_all_independent": 2560000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 1,
+      "depth": 5,
+      "physical_mode_address_count_if_all_independent": 102400000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 2,
+      "depth": 5,
+      "physical_mode_address_count_if_all_independent": 102400000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 3,
+      "depth": 5,
+      "physical_mode_address_count_if_all_independent": 102400000
+    },
+    {
+      "Schmidt_entropy_bits": 4.803856189774729,
+      "Schmidt_purity": 0.052000000000000046,
+      "Schmidt_rank": 40,
+      "cut_between_digit": 4,
+      "depth": 5,
+      "physical_mode_address_count_if_all_independent": 102400000
+    }
+  ],
+  "schema": "w33.single_photon.recursive_graph_phase_area_law.v1",
+  "sha256": "0003b0df291d027a43d105fd847dcd3394d0e8d74dca8fecb925fbd5549385f0",
+  "state": "40^(-n/2) sum_{a_1...a_n} (-1)^(sum_{i=1}^{n-1} A[a_i,a_{i+1}]) |a_1,...,a_n>"
+}
