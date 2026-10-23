@@ -1,0 +1,68 @@
+{
+  "status": "FULL_NINE_DIMENSIONAL_TWO_QUTRIT_NATIVE_MIXING",
+  "onsite_operator": "O=[Re(X_1),Re(Z_1)]/(2i), mixing=Re(X_1)",
+  "H2": "H0 tensor I + I tensor H0 - O tensor O -h(mixing tensor I + I tensor mixing)",
+  "K_symmetry": "H2 is entrywise real, hence invariant under computational-basis conjugation",
+  "mixing_commutes_with_parity": true,
+  "mixing_noncommutes_with_O": true,
+  "positive_negative_chirality_overlap_norm": 1.299038105676658,
+  "spectrum": [
+    {
+      "mixing": "first_only",
+      "h": 0.0,
+      "E0": -8.281250000000005,
+      "gap": 3.552713678800501e-15,
+      "ground_degeneracy": 8
+    },
+    {
+      "mixing": "first_only",
+      "h": 0.05,
+      "E0": -8.316078275554878,
+      "gap": 0.0,
+      "ground_degeneracy": 4
+    },
+    {
+      "mixing": "first_only",
+      "h": 0.1,
+      "E0": -8.368750000000007,
+      "gap": 5.329070518200751e-15,
+      "ground_degeneracy": 4
+    },
+    {
+      "mixing": "first_only",
+      "h": 0.2,
+      "E0": -8.51121960373991,
+      "gap": 1.7763568394002505e-15,
+      "ground_degeneracy": 4
+    },
+    {
+      "mixing": "both_qutrits",
+      "h": 0.0,
+      "E0": -8.281250000000005,
+      "gap": 3.552713678800501e-15,
+      "ground_degeneracy": 8
+    },
+    {
+      "mixing": "both_qutrits",
+      "h": 0.05,
+      "E0": -8.353906506316044,
+      "gap": 0.009828275554864874,
+      "ground_degeneracy": 1
+    },
+    {
+      "mixing": "both_qutrits",
+      "h": 0.1,
+      "E0": -8.444406461522318,
+      "gap": 0.03749999999997655,
+      "ground_degeneracy": 1
+    },
+    {
+      "mixing": "both_qutrits",
+      "h": 0.2,
+      "E0": -8.66253252678456,
+      "gap": 0.09797958971132026,
+      "ground_degeneracy": 1
+    }
+  ],
+  "physical_boundary": "Explicit full 9D on-site operator and 81D two-site spectrum, NOT a verified physical time reversal or thermodynamic spontaneous selection; residual spectator symmetries possible."
+}

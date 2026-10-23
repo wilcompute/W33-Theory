@@ -1,0 +1,30 @@
+{
+  "status": "NATIVE_H27_GQ24_QUTRIT_CSS_135_64_2_AND_GAUGE_ALGEBRA",
+  "geometry": "27 vertices, 135 edges, 45 zero-voltage triangular faces, native GQ(2,4)",
+  "physical_link_qutrits": 135,
+  "Gauss_X_star_generators": 27,
+  "rank_HX": 26,
+  "magnetic_Z_face_generators": 45,
+  "rank_HZ": 45,
+  "HX_HZ_commute_mod3": true,
+  "CSS_parameters": "[[135,64,2]]_3",
+  "logical_qutrits": 64,
+  "distance": 2,
+  "logical_X_weight2_witness": [
+    {
+      "edge": 0,
+      "x_exponent_mod3": 1
+    },
+    {
+      "edge": 10,
+      "x_exponent_mod3": 2
+    }
+  ],
+  "single_link_Pauli_syndrome_detected": true,
+  "gauge_Hamiltonian": "H=-gE sum_e Re(X_e)-gB sum_f Re(prod_{e in face(f)} Z_e^{sign_{fe}})",
+  "Gauss_generators": "G_v=prod_e X_e^{Hx[v,e]}; [G_v,H]=0 exactly for every vertex",
+  "Hamiltonian_noncommuting_terms": "Individual electric X_e fails to commute with its unique magnetic Z_face; interactions are genuine quantum, not diagonal commuting stabilizer Hamiltonian.",
+  "Hilbert_dimension_symbolic": "3^135",
+  "topological_origin": "k=b1=64 of finite GQ(2,4) triangle 2-complex over F3",
+  "limitation": "Distance TWO is not robust fault tolerance. Hilbert dynamics, physical link realization, gauge coupling, Gauss-sector state preparation, four-dimensional continuum and Lorentzian propagation are NOT demonstrated."
+}

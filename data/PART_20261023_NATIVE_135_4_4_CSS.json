@@ -1,0 +1,54 @@
+{
+  "status": "NATIVE_135_4_4_QUTRIT_CSS_FROM_4D_VOLTAGE_COMPLETION",
+  "physical_edges": 135,
+  "gauss_rows": 27,
+  "rank_HX": 26,
+  "magnetic_face_basis_rows": 105,
+  "rank_HZ": 105,
+  "independent_face_lengths": {
+    "3": 45,
+    "4": 56,
+    "5": 4
+  },
+  "logical_qutrits": 4,
+  "rank_native_period_map_mod3": 4,
+  "all_105_magnetic_faces_zero_integer_period": true,
+  "X_logical_distance_lower_bound": 4,
+  "Z_logical_distance_exact": 4,
+  "CSS_parameters": "[[135,4,4]]_3",
+  "weight4_Z_logical_cycle": [
+    0,
+    1,
+    11,
+    4,
+    0
+  ],
+  "weight4_Z_logical_vector": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      13,
+      1
+    ],
+    [
+      38,
+      2
+    ]
+  ],
+  "nonzero_4_period_mod3": [
+    0,
+    2,
+    2,
+    1
+  ],
+  "proof_distance": "All X syndromes of HZ columns have no linear dependence over F3 with support <=3. A Z logical must be an oriented graph cycle; lengths <=3 are only the 45 triangular faces in HZ. An explicit nonzero-period C4 gives a nontrivial Z logical of weight4.",
+  "gauge_Hamiltonian": "H=-gE sum_{135 edges} Re(X_e)-gB sum_{105 faces} Re(prod_e Z_e^signed_face_boundary). All 27 Gauss stars commute with both terms; nontrivial overlapping faces prevent the 45-decoupled-triangle decomposition.",
+  "topological_meaning": "Cellular H1(GQ24 periodic base with zero-period C3,C4,C5 faces; F3) = F3^4, matched exactly to four primitive voltage periods.",
+  "hard_boundary": "A distance-four code is not a demonstrated FT threshold; the choice of 105 face basis is mathematical, physical 3/4/5-link couplers, 3^135 Hilbert dynamics, photon losses, Lorentzian propagation and gravity are NOT derived."
+}

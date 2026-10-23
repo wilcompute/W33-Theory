@@ -1,0 +1,237 @@
+{
+  "status": "NATIVE_GQ24_FOURCYCLE_VOLTAGE_AND_OVERLAP_CENSUS",
+  "all_simple_fourcycles": 1080,
+  "zero_period_fourcycles": 189,
+  "nonzero_period_fourcycles": 891,
+  "rank_triangle_faces": 45,
+  "rank_triangle_plus_zero_period_fourcycle_faces_mod3": 101,
+  "additional_face_rank": 56,
+  "remaining_F3_first_homology_rank": 8,
+  "period_rank_over_Z_expected": 4,
+  "zero_period_cycle_space_dimension_over_Q": 105,
+  "example_zero_period_fourcycles": [
+    [
+      0,
+      1,
+      5,
+      4,
+      0
+    ],
+    [
+      0,
+      1,
+      6,
+      8,
+      0
+    ],
+    [
+      0,
+      1,
+      11,
+      10,
+      0
+    ],
+    [
+      0,
+      1,
+      24,
+      10,
+      0
+    ],
+    [
+      0,
+      1,
+      13,
+      12,
+      0
+    ],
+    [
+      0,
+      1,
+      21,
+      12,
+      0
+    ],
+    [
+      0,
+      1,
+      15,
+      17,
+      0
+    ],
+    [
+      0,
+      1,
+      18,
+      17,
+      0
+    ],
+    [
+      0,
+      1,
+      18,
+      20,
+      0
+    ],
+    [
+      0,
+      1,
+      21,
+      23,
+      0
+    ]
+  ],
+  "example_nonzero_period_fourcycles": [
+    {
+      "cycle": [
+        0,
+        1,
+        11,
+        4,
+        0
+      ],
+      "flux": [
+        0,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        13,
+        4,
+        0
+      ],
+      "flux": [
+        1,
+        0,
+        -1,
+        1
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        15,
+        4,
+        0
+      ],
+      "flux": [
+        0,
+        0,
+        -1,
+        1
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        18,
+        8,
+        0
+      ],
+      "flux": [
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        21,
+        8,
+        0
+      ],
+      "flux": [
+        1,
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        24,
+        8,
+        0
+      ],
+      "flux": [
+        1,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        6,
+        10,
+        0
+      ],
+      "flux": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        15,
+        10,
+        0
+      ],
+      "flux": [
+        1,
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        6,
+        12,
+        0
+      ],
+      "flux": [
+        -1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cycle": [
+        0,
+        1,
+        11,
+        12,
+        0
+      ],
+      "flux": [
+        -1,
+        0,
+        1,
+        -1
+      ]
+    }
+  ],
+  "physical_caution": "Overlapping zero-period C4 faces can give non-factorized gauge magnetic interactions; mod3 face span need not equal integral null-voltage span, and no gapless photon theorem follows."
+}

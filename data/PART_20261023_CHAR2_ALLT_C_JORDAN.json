@@ -1,0 +1,92 @@
+{
+  "status": "ALL_CHARACTERISTIC_TWO_TRANSVECTION_C_JORDAN_THEOREM",
+  "theorem": "For q=2^t, C_q=row(B) as a C2-module is J1^q plus J2^[q(q-1)/2].",
+  "representation_input": "C_q tensor decomposition \u2297_{i=0}^{t-1} (natural 4D module)^(2^i), from Lucas surviving monomials of degree q-1.",
+  "factor_structure": "Natural 4D module restricted to a transvection has J1^2 + J2^1; Frobenius twisting preserves that structure in characteristic two.",
+  "tensor_rule": "J1\u2297J1=J1, J2\u2297J1=J2, J2\u2297J2=2J2; hence only choosing 2 trivial lines from every digit contributes J1, namely 2^t=q.",
+  "derived_rank_formula": "rank(T-I on C_q)=q(q-1)/2 for all t>=1",
+  "sample_q": [
+    {
+      "q": 2,
+      "t": 1,
+      "Cdim": 4,
+      "J1": 2,
+      "J2": 1,
+      "rank_D_on_C": 1
+    },
+    {
+      "q": 4,
+      "t": 2,
+      "Cdim": 16,
+      "J1": 4,
+      "J2": 6,
+      "rank_D_on_C": 6
+    },
+    {
+      "q": 8,
+      "t": 3,
+      "Cdim": 64,
+      "J1": 8,
+      "J2": 28,
+      "rank_D_on_C": 28
+    },
+    {
+      "q": 16,
+      "t": 4,
+      "Cdim": 256,
+      "J1": 16,
+      "J2": 120,
+      "rank_D_on_C": 120
+    },
+    {
+      "q": 32,
+      "t": 5,
+      "Cdim": 1024,
+      "J1": 32,
+      "J2": 496,
+      "rank_D_on_C": 496
+    },
+    {
+      "q": 64,
+      "t": 6,
+      "Cdim": 4096,
+      "J1": 64,
+      "J2": 2016,
+      "rank_D_on_C": 2016
+    },
+    {
+      "q": 128,
+      "t": 7,
+      "Cdim": 16384,
+      "J1": 128,
+      "J2": 8128,
+      "rank_D_on_C": 8128
+    },
+    {
+      "q": 256,
+      "t": 8,
+      "Cdim": 65536,
+      "J1": 256,
+      "J2": 32640,
+      "rank_D_on_C": 32640
+    },
+    {
+      "q": 512,
+      "t": 9,
+      "Cdim": 262144,
+      "J1": 512,
+      "J2": 130816,
+      "rank_D_on_C": 130816
+    },
+    {
+      "q": 1024,
+      "t": 10,
+      "Cdim": 1048576,
+      "J1": 1024,
+      "J2": 523776,
+      "rank_D_on_C": 523776
+    }
+  ],
+  "extension_boundary": "No all-t result for K or connecting delta1 inferred. Verified delta1=0 only q=4,8,16; GF9 delta1=4.",
+  "priority": "The p-rank/C tensor theorem and all-prime Jordan ingredients are classical/appear elsewhere in W33 repository; the specific char2 corollary is algebraic bookkeeping, not a claimed fundamentally new field theorem."
+}

@@ -1,0 +1,834 @@
+{
+  "status": "NATIVE_ZERO_VOLTAGE_PLAQUETTE_WARD_CENSUS",
+  "vertices": 27,
+  "edges": 135,
+  "rank_periods": 4,
+  "total_base_triangles": 45,
+  "contractible_zero_voltage_triangles": 45,
+  "nontrivial_voltage_triangles": 0,
+  "all_edges_in_exactly_one_triangle": true,
+  "incidence_structure": "GQ(2,4), verified by point-outside-line axiom",
+  "collinearity_srg_parameters": [
+    27,
+    10,
+    1,
+    5
+  ],
+  "graph_spectrum_expected": "10 multiplicity1, 1 multiplicity20, -5 multiplicity6",
+  "triangles_per_vertex": 5,
+  "finite_2_complex_betti": [
+    1,
+    64,
+    0
+  ],
+  "finite_2_complex_Euler_characteristic": -63,
+  "generic_Bloch_first_homology_rank": 63,
+  "finite_cell_first_homology_rank": 64,
+  "four_voltage_periods_not_four_gauge_polarizations": true,
+  "closed_cycles": [
+    {
+      "vertices": [
+        0,
+        1,
+        2
+      ],
+      "edge_ids": [
+        0,
+        10,
+        1
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        4,
+        8
+      ],
+      "edge_ids": [
+        2,
+        37,
+        3
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        10,
+        20
+      ],
+      "edge_ids": [
+        4,
+        82,
+        7
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        12,
+        26
+      ],
+      "edge_ids": [
+        5,
+        95,
+        9
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        17,
+        23
+      ],
+      "edge_ids": [
+        6,
+        115,
+        8
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        5,
+        6
+      ],
+      "edge_ids": [
+        11,
+        44,
+        12
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        11,
+        18
+      ],
+      "edge_ids": [
+        13,
+        87,
+        16
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        13,
+        24
+      ],
+      "edge_ids": [
+        14,
+        100,
+        18
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        15,
+        21
+      ],
+      "edge_ids": [
+        15,
+        108,
+        17
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        3,
+        7
+      ],
+      "edge_ids": [
+        19,
+        29,
+        20
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        9,
+        19
+      ],
+      "edge_ids": [
+        21,
+        76,
+        24
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        14,
+        25
+      ],
+      "edge_ids": [
+        22,
+        104,
+        26
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        16,
+        22
+      ],
+      "edge_ids": [
+        23,
+        112,
+        25
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        3,
+        4,
+        5
+      ],
+      "edge_ids": [
+        27,
+        36,
+        28
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        3,
+        10,
+        24
+      ],
+      "edge_ids": [
+        30,
+        84,
+        35
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        3,
+        12,
+        21
+      ],
+      "edge_ids": [
+        31,
+        94,
+        34
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        3,
+        17,
+        18
+      ],
+      "edge_ids": [
+        32,
+        114,
+        33
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        4,
+        11,
+        25
+      ],
+      "edge_ids": [
+        38,
+        89,
+        43
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        4,
+        13,
+        22
+      ],
+      "edge_ids": [
+        39,
+        99,
+        42
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        4,
+        15,
+        19
+      ],
+      "edge_ids": [
+        40,
+        107,
+        41
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        5,
+        9,
+        26
+      ],
+      "edge_ids": [
+        45,
+        78,
+        50
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        5,
+        14,
+        23
+      ],
+      "edge_ids": [
+        46,
+        103,
+        49
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        5,
+        16,
+        20
+      ],
+      "edge_ids": [
+        47,
+        111,
+        48
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        6,
+        7,
+        8
+      ],
+      "edge_ids": [
+        51,
+        59,
+        52
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        6,
+        10,
+        22
+      ],
+      "edge_ids": [
+        53,
+        83,
+        57
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        6,
+        12,
+        19
+      ],
+      "edge_ids": [
+        54,
+        93,
+        56
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        6,
+        17,
+        25
+      ],
+      "edge_ids": [
+        55,
+        116,
+        58
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        7,
+        11,
+        23
+      ],
+      "edge_ids": [
+        60,
+        88,
+        64
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        7,
+        13,
+        20
+      ],
+      "edge_ids": [
+        61,
+        98,
+        63
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        7,
+        15,
+        26
+      ],
+      "edge_ids": [
+        62,
+        109,
+        65
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        8,
+        9,
+        21
+      ],
+      "edge_ids": [
+        66,
+        77,
+        70
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        8,
+        14,
+        18
+      ],
+      "edge_ids": [
+        67,
+        102,
+        69
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        8,
+        16,
+        24
+      ],
+      "edge_ids": [
+        68,
+        113,
+        71
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        9,
+        10,
+        11
+      ],
+      "edge_ids": [
+        72,
+        79,
+        73
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        9,
+        13,
+        17
+      ],
+      "edge_ids": [
+        74,
+        97,
+        75
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        10,
+        14,
+        15
+      ],
+      "edge_ids": [
+        80,
+        101,
+        81
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        11,
+        12,
+        16
+      ],
+      "edge_ids": [
+        85,
+        92,
+        86
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        12,
+        13,
+        14
+      ],
+      "edge_ids": [
+        90,
+        96,
+        91
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        15,
+        16,
+        17
+      ],
+      "edge_ids": [
+        105,
+        110,
+        106
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        18,
+        19,
+        20
+      ],
+      "edge_ids": [
+        117,
+        121,
+        118
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        18,
+        22,
+        26
+      ],
+      "edge_ids": [
+        119,
+        130,
+        120
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        19,
+        23,
+        24
+      ],
+      "edge_ids": [
+        122,
+        131,
+        123
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        20,
+        21,
+        25
+      ],
+      "edge_ids": [
+        124,
+        128,
+        125
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        21,
+        22,
+        23
+      ],
+      "edge_ids": [
+        126,
+        129,
+        127
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        24,
+        25,
+        26
+      ],
+      "edge_ids": [
+        132,
+        134,
+        133
+      ],
+      "orientation_signs": [
+        1,
+        1,
+        -1
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "k": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "rank_grad": 26,
+      "rank_contractible_triangle_curl": 45,
+      "gauge_ward_max": 0.0,
+      "gradient_nullity_in_linkspace": 109
+    },
+    {
+      "k": [
+        0.1,
+        0.2,
+        -0.3,
+        0.05
+      ],
+      "rank_grad": 27,
+      "rank_contractible_triangle_curl": 45,
+      "gauge_ward_max": 2.7336071744532853e-16,
+      "gradient_nullity_in_linkspace": 108
+    },
+    {
+      "k": [
+        0.3,
+        -0.4,
+        0.15,
+        0.35
+      ],
+      "rank_grad": 27,
+      "rank_contractible_triangle_curl": 45,
+      "gauge_ward_max": 2.2366721948491697e-16,
+      "gradient_nullity_in_linkspace": 108
+    }
+  ],
+  "key_boundary": "Native 3-edge loops with nonzero period are NOT plaquettes of the infinite voltage lift. Zero-holonomy loops support exact gauge-invariant curl rows, but their span may be smaller than the full physical link-space complement and no Lorentzian dynamics are inferred."
+}
