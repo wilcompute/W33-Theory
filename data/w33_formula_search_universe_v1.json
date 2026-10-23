@@ -592306,6 +592306,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fe6b2d3e80257e0870149f85f1a49b7b817fef8459ee78432fb10dca396391b8",
+      "normalized_formula": "Considerthe^point-coordinate^ternaryCSScodefromthe40-by-40noncollinearitymatrixBofW(3,3).ItsrowcodeChasrank10,satisfiesCsubsetC^perp,anddefinesa[[40,20,4]]_3CSScode(distanceprovedbytheprecedingall-qPascalCSSwork).ItslogicalX-labelvectorspaceisQ=C^perp/C,withdim_F3Q=20",
+      "numeric_literals": [
+        "0",
+        "20",
+        "3",
+        "4",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_css_faithful_logical_clifford.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/2026-10-22_pascal_css_faithful_logical_clifford.md",
+          "raw": "Consider the **point-coordinate** ternary CSS code from the 40-by-40 noncollinearity matrix B of W(3,3). Its row code C has rank 10, satisfies C subset C^perp, and defines a [[40,20,4]]_3 CSS code (distance proved by the preceding all-q Pascal CSS work). Its logical X-label vector space is Q=C^perp/C, with dim_F3 Q = 20.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "52eac00db8ac1e7896a6485a184f6e6ff1dd4a75fdd944a280a60706240cd11e",
+      "structural_formula": "Considerthe^point-coordinate^ternaryCSScodefromthe4#-by-#noncollinearitymatrixBofW(#,#).ItsrowcodeChasrank1#,satisfiesCsubsetC^perp,anddefinesa[[#,#,#]]_3CSScode(distanceprovedbytheprecedingall-qPascalCSSwork).ItslogicalX-labelvectorspaceisQ=C^perp/C,withdim_F3Q=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a5f252d9abf3c56c01eedbc8126ad1219bc38ad50028a72ddf5a437f11837655",
       "normalized_formula": "Considertheharmonicnetworkwithkernel`K=5I-A_Levi`,correspondingtomass^2=1.Thepoint-lineincidencesingularvaluesare",
       "numeric_literals": [
@@ -1734394,6 +1734425,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3c72cad72db10397951ade75e04d0ffe8b544dc7a67bb14ed3c977a26d880a50",
+      "normalized_formula": "sorank(rho(t)-I)=10andrhoisnontrivial.SincePSp(4,3)issimple,ker(rho)iseithertrivialorthewholegroup.Itisnotthewholegroup.Therefore",
+      "numeric_literals": [
+        "10",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-22_pascal_css_faithful_logical_clifford.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/2026-10-22_pascal_css_faithful_logical_clifford.md",
+          "raw": "so rank(rho(t)-I)=10 and rho is nontrivial. Since PSp(4,3) is simple, ker(rho) is either trivial or the whole group. It is not the whole group. Therefore",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6fe38c9939986c762c7a89b97f8765f2c1a5f29b083073b0e9c5de6f4000e65d",
+      "structural_formula": "sorank(rho(t)-I)=#andrhoisnontrivial.SincePSp(#,#)issimple,ker(rho)iseithertrivialorthewholegroup.Itisnotthewholegroup.Therefore"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ab32241e5a7c04c330168a745b910b939becea1d8f9ea8ce39159cd305a3fac0",
       "normalized_formula": "sorho_Lambda^{1/4}/m1~1.1--thedark-energyscaleandthelightestneutrinocoincideat",
       "numeric_literals": [
@@ -1876456,9 +1876516,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-22T19:44:47-04:00",
+  "frozen_at": "2026-10-22T19:50:55-04:00",
   "pass": 398,
-  "repository_head": "0c7a3e184277aebc78000db349db40ce157232f1",
+  "repository_head": "c63b9ade1ecd077e21ff565a644766a0c7ed3586",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2035883,6 +2035943,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e3db681809298a78812941dbfaec1530ec13e3a73733fddee7eb616f94173c0f",
       "structural_formula": "ConsiderlinearamplitudedynamicsgeneratedbyA,withoutputCselectingthe4#coordinatesN.SinceAhasthreedistincteigenvalues,theall-timeobservabilitymatrixisO=[C;CA;CA2]"
+    },
+    {
+      "exact_formula_ids": [
+        "fe6b2d3e80257e0870149f85f1a49b7b817fef8459ee78432fb10dca396391b8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "52eac00db8ac1e7896a6485a184f6e6ff1dd4a75fdd944a280a60706240cd11e",
+      "structural_formula": "Considerthe^point-coordinate^ternaryCSScodefromthe4#-by-#noncollinearitymatrixBofW(#,#).ItsrowcodeChasrank1#,satisfiesCsubsetC^perp,anddefinesa[[#,#,#]]_3CSScode(distanceprovedbytheprecedingall-qPascalCSSwork).ItslogicalX-labelvectorspaceisQ=C^perp/C,withdim_F3Q=#"
     },
     {
       "exact_formula_ids": [
@@ -2340541,6 +2340609,14 @@
     },
     {
       "exact_formula_ids": [
+        "3c72cad72db10397951ade75e04d0ffe8b544dc7a67bb14ed3c977a26d880a50"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6fe38c9939986c762c7a89b97f8765f2c1a5f29b083073b0e9c5de6f4000e65d",
+      "structural_formula": "sorank(rho(t)-I)=#andrhoisnontrivial.SincePSp(#,#)issimple,ker(rho)iseithertrivialorthewholegroup.Itisnotthewholegroup.Therefore"
+    },
+    {
+      "exact_formula_ids": [
         "ab32241e5a7c04c330168a745b910b939becea1d8f9ea8ce39159cd305a3fac0"
       ],
       "exact_member_count": 1,
@@ -2377911,20 +2377987,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 90808394,
-    "exact_formula_families": 64152,
-    "files_scanned": 12502,
-    "formula_occurrences": 70254,
+    "bytes_scanned": 90816446,
+    "exact_formula_families": 64154,
+    "files_scanned": 12504,
+    "formula_occurrences": 70256,
     "status_occurrences": {
-      "certified_or_theorem": 5265,
+      "certified_or_theorem": 5266,
       "killed_or_retracted": 1864,
       "open_or_conditional": 2360,
       "preregistered": 36,
       "retrospective_fit": 5392,
-      "unclassified": 55337
+      "unclassified": 55338
     },
-    "structural_families": 62465
+    "structural_families": 62467
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "80bd0491c361a3d36d2ed619b36dd6c21c37177fa4cc9d33e4ff9fa91274efd1"
+  "universe_sha256": "dfa131fb511e38e3a45852b3067a76ce4b929d08e2c2428ed3a72c86a08d0a3e"
 }
