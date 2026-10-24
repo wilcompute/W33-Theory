@@ -317728,6 +317728,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4375afb6acdf5fcc6a19848055220c7839bbf431760244c6558b6997bb7bfc0b",
+      "normalized_formula": "'proof':'A(a,b)=sum_kU[a,k]V[b,k]modulo2;(-1)^A=product_kCZ(flag_Uk(a),flag_Vk(b)).RankGF2(A)=16lowerboundsparity-productcrosslinks,withinthisgatefamily.'",
+      "numeric_literals": [
+        "-1",
+        "16"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py",
+          "raw": "'proof':'A(a,b)=sum_k U[a,k]V[b,k] modulo 2; (-1)^A = product_k CZ(flag_Uk(a),flag_Vk(b)). Rank GF2(A)=16 lower bounds parity-product cross links, within this gate family.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9d9732438070ae94a1ffdced3ccb2d56e50ce07c456bec05af972b59578c2708",
+      "structural_formula": "'proof':'A(a,b)=sum_kU[a,k]V[b,k]modulo2;(#)^A=product_kCZ(flag_Uk(a),flag_Vk(b)).RankGF2(A)=#lowerboundsparity-productcrosslinks,withinthisgatefamily.'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a950a2e0226c3e6d479278849315b2a879295d030aa925585f345f93d214f50f",
       "normalized_formula": "'proof':'AllsummandsarenonnegativeandThasu6=u12=0.Thereducedcompleteintersectionconsistsof72rays.Radialsquarefixesthenorm.TheangularHessianis2Re(J^dagdiag(alpha,beta)J),positiveontheprojectivetangent;noglobalnumericaloptimizationisused.'",
       "numeric_literals": [
@@ -317753,6 +317781,35 @@
       },
       "structural_family_id": "9e1c5a43d5ec94ecc5382952fca45f9a6a6c103f083d2c8bc4dbcc8e6d0bdfaa",
       "structural_formula": "'proof':'AllsummandsarenonnegativeandThasu6=u1#=#.Thereducedcompleteintersectionconsistsof7#rays.Radialsquarefixesthenorm.TheangularHessianis2Re(J^dagdiag(alpha,beta)J),positiveontheprojectivetangent;noglobalnumericaloptimizationisused.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4d08af83bdda078758e26b70aa8e82bd713f2a44aaf86b802ad968c20e871a43",
+      "normalized_formula": "'proof':'B=A+A[:,0]1^T+1A[0,:]isalternatingrank14.Repeatedlypeelx*y^T+y*x^Twherex=B[:,i],y=B[:,j],B[i,j]=1,decreasingrankby2untilzero.Restoretwolocalphasetables.'",
+      "numeric_literals": [
+        "0",
+        "1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_phase_oracle_seven_symplectic_pairs_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 51,
+          "path": "analysis/w33_phase_oracle_seven_symplectic_pairs_20261023.py",
+          "raw": "'proof':'B=A+A[:,0]1^T+1A[0,:] is alternating rank14. Repeatedly peel x*y^T+y*x^T where x=B[:,i],y=B[:,j],B[i,j]=1, decreasing rank by 2 until zero. Restore two local phase tables.',",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "8f274bed33b5ad3e9e239bb9b3c1510030535e438492e8388dd435a95a82e86c",
+      "structural_formula": "'proof':'B=A+A[:,#]#^T+#A[#,:]isalternatingrank1#.Repeatedlypeelx*y^T+y*x^Twherex=B[:,i],y=B[:,j],B[i,j]=#,decreasingrankby2untilzero.Restoretwolocalphasetables.'"
     },
     {
       "file_count": 1,
@@ -318095,6 +318152,35 @@
       },
       "structural_family_id": "c1aa1bcd1cb4be24b3c44df9c8ba9a6065cf1b5f165828289daa2933b090b6ef",
       "structural_formula": "'proof_mechanism':'Theexact1##blockdecompositiongivesfiveHenselrootbranchesreducingtoallelementsofF5.Teichmullerdecompositionandtheprincipal-unitLTEv_pi(u^(#n)#)=v_pi(u^n-#)#yieldthedisplayedresiduetableandv5lifts.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2f98fea8beea5cd83bd190bd08e7cb48d9b6172b9d0a0827840882c428ef9689",
+      "normalized_formula": "'proof_of_lower_bound':'C=A+u*1^T+1*v^T+g*J;double_center(C)=B=double_center(A),withdouble_center(C)=P*C*QoverF2andrank(P*C*Q)<=rank(C).rank_F2(B)=14.ThechoiceC=Battains14.'",
+      "numeric_literals": [
+        "1",
+        "14",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_phase_oracle_mod_local_gauge_rank14_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 90,
+          "path": "analysis/w33_phase_oracle_mod_local_gauge_rank14_20261023.py",
+          "raw": "'proof_of_lower_bound':'C=A+u*1^T+1*v^T+g*J; double_center(C)=B=double_center(A), with double_center(C)=P*C*Q over F2 and rank(P*C*Q)<=rank(C). rank_F2(B)=14. The choice C=B attains 14.',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "240a68950958923af286cc46ec98eb1994bc3defdee65dc47f85a65baf2fb4b2",
+      "structural_formula": "'proof_of_lower_bound':'C=A+u*#^T+#*v^T+g*J;double_center(C)=B=double_center(A),withdouble_center(C)=P*C*QoverF2andrank(P*C*Q)<=rank(C).rank_F2(B)=#.ThechoiceC=Battains1#.'"
     },
     {
       "file_count": 1,
@@ -323249,6 +323335,35 @@
       },
       "structural_family_id": "271567f61133c959af0daf4712ea31fbe96f7e8635d23ffd362b5f8be0571689",
       "structural_formula": "'theorem':'Forany4#x4#off-diagonalcoupling,nullity(left)-nullity(right)=##=#;henceatleastfivezeromodessurvive,but3#neednot.'}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b3dd450622e863825671b1fef175ca49e027999f8a59616846a90150458d0284",
+      "normalized_formula": "'theorem':'ForrdisjointW33controlled-phaselinkscrossingonepartition,independentfactorsgiveSchmidtrank40^randentropyr*H_W33.Nearest-neighborchainisthespecialr=1arealaw.'",
+      "numeric_literals": [
+        "0",
+        "1",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 130,
+          "path": "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py",
+          "raw": "'theorem':'For r disjoint W33 controlled-phase links crossing one partition, independent factors give Schmidt rank 40^r and entropy r*H_W33. Nearest-neighbor chain is the special r=1 area law.',",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "56bea2de1eb52f14973e8b8646581ebe63404bf5961aaf5a6caf4a7542057f2f",
+      "structural_formula": "'theorem':'ForrdisjointW3#controlled-phaselinkscrossingonepartition,independentfactorsgiveSchmidtrank4#^randentropyr*H_W3#.Nearest-neighborchainisthespecialr=#arealaw.'"
     },
     {
       "file_count": 1,
@@ -351602,6 +351717,34 @@
       },
       "structural_family_id": "4bae7a08c19ad3c641698b638ed46992338e098f5af6f7a3b4fb28cdaa0d18e4",
       "structural_formula": "(\\phi_1,\\phi_2)=(\\pi+\\delta,\\pi-\\delta),\\qquad\\delta\\in[#,\\pi/#]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f64fab98e2fc77836f899c891c6b0f52befa3b0365ce0987ed14e31b1dc44fb0",
+      "normalized_formula": "(\\rho_{ac})_{(a,c),(a',c')}=\\frac{H_{cc'}}{40^4}\\sum_bS_{ab}S_{a'b}S_{bc}S_{bc'}",
+      "numeric_literals": [
+        "4",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 181,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "(\\rho_{ac})_{(a,c),(a',c')}= \\frac{H_{cc'}}{40^4} \\sum_b S_{ab}S_{a'b}S_{bc}S_{bc'}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4bd05980d72611fdb544c1caac12627341819dfb186d50a1e19eb34ec7b9a699",
+      "structural_formula": "(\\rho_{ac})_{(a,c),(a',c')}=\\frac{H_{cc'}}{#^#}\\sum_bS_{ab}S_{a'b}S_{bc}S_{bc'}"
     },
     {
       "file_count": 1,
@@ -558045,6 +558188,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b23ef8383621d86aacca4841a385509da128924462204feb22d38e7cf77ea0ad",
+      "normalized_formula": "A_G(0,0)=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 118,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "A_G(0,0)=0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ce34d40586d9abc9f70d963ae71bfa1fda303ccc43c803549fec3d165a8e4f2a",
+      "structural_formula": "A_G(#,#)=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fa07387ae440d31450f459472c6226b81cad45d97a60eba66e1067d39d7db3fc",
       "normalized_formula": "A_H^2=\\begin{pmatrix}BB^T0\\\\0B^TB\\end{pmatrix}=\\begin{pmatrix}2I+J0\\\\02I+J\\end{pmatrix}",
       "numeric_literals": [
@@ -577047,6 +577217,61 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1a33e134b2ee0a3255a8612a9e648b8bc68272e6d9a51212fa27cfa4ef0387da",
+      "normalized_formula": "B_G(a,b)=A_G(a,b)+A_G(a,0)+A_G(0,b)+A_G(0,0)",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 115,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "B_G(a,b)=A_G(a,b)+A_G(a,0)+A_G(0,b)+A_G(0,0).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "43faafc48cb0683854ecd07dcf8f66b49d836941e49f35b6cecf7d2d4f2339b2",
+      "structural_formula": "B_G(a,b)=A_G(a,b)+A_G(a,#)+A_G(#,b)+A_G(#,#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c2d3b2047d9745523e7e9116759377a6ca8014c067e3cfaf4206e706b74d73e8",
+      "normalized_formula": "B_G=\\sum_{k=1}^{r/2}(x_ky_k^{\\mathsfT}+y_kx_k^{\\mathsfT})\\quad(\\bmod2)",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 154,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "B_G=\\sum_{k=1}^{r/2} \\left(x_ky_k^{\\mathsf T}+y_kx_k^{\\mathsf T}\\right) \\quad(\\bmod 2).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5366a7bc44308e8c4f47f86e05867840c965fe26c42210811dbd6552a88d1578",
+      "structural_formula": "B_G=\\sum_{k=#}^{r/#}(x_ky_k^{\\mathsfT}+y_kx_k^{\\mathsfT})\\quad(\\bmod2)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2c4e89bb912c0b3b4985741d77822f7f942679a221e1f0d638fdca43006cc5c8",
       "normalized_formula": "B_X^{\\mathrm{wall}}=\\frac{12}{X_*}+\\frac{72}{(1-(6/X_*)^2)X_*^2}",
       "numeric_literals": [
@@ -590215,6 +590440,36 @@
       },
       "structural_family_id": "20ee23cfe3c565b7126d1fc3efa6d658794df22dd31f22b98a64ffcb473e25e1",
       "structural_formula": "C_G=#,\\qquadM_2=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1fdb949b5e99988406f5fda52a7f1c4e80b9c3087efe951de09ade9889af119f",
+      "normalized_formula": "C_G=\\frac{J-2A_G}{40},\\qquad|\\Psi_G\\rangle=\\sum_{a,b=0}^{39}(C_G)_{ab}|a\\rangle|b\\rangle",
+      "numeric_literals": [
+        "0",
+        "2",
+        "39",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 61,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "C_G=\\frac{J-2A_G}{40},\\qquad |\\Psi_G\\rangle=\\sum_{a,b=0}^{39}(C_G)_{ab}|a\\rangle|b\\rangle.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "61acffdcdd3910d179dee422cc54dcba3ea458cfa3b753298a75af6d667775fa",
+      "structural_formula": "C_G=\\frac{J-#A_G}{#},\\qquad|\\Psi_G\\rangle=\\sum_{a,b=#}^{#}(C_G)_{ab}|a\\rangle|b\\rangle"
     },
     {
       "file_count": 1,
@@ -653474,6 +653729,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "929144fdd86f9b01db185e76d605066443cd63986a91e21e128afe0a94878dae",
+      "normalized_formula": "H=-.16\\log_2(.16)-15(.04)\\log_2(.04)-24(.01)\\log_2(.01)=4.803856189774729\\text{bits}",
+      "numeric_literals": [
+        "-.16",
+        "-15",
+        "-24",
+        ".01",
+        ".04",
+        ".16",
+        "4.803856189774729"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 76,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "H=-.16\\log_2(.16)-15(.04)\\log_2(.04) -24(.01)\\log_2(.01) =4.803856189774729\\text{ bits}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5a27ae306a015853c7df57a6a59166699adaba2435b646268a20cb88c124340e",
+      "structural_formula": "H=#\\log_2(#)#(#)\\log_2(#)#(#)\\log_2(#)=#\\text{bits}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cc39aaa8319415c7341fa161b0bf7ebdcdbae8125af62abdbee5794472bb931c",
       "normalized_formula": "H=-\\sum_{\\{i,j\\}\\in\\mathrm{octagon}}s_{ij}(c_i^\\daggerc_j+c_j^\\daggerc_i)+V\\sum_{\\{i,j\\}\\in\\mathrm{octagon}}(n_i-\\tfrac12)(n_j-\\tfrac12)",
       "numeric_literals": [
@@ -653910,6 +654198,33 @@
       },
       "structural_family_id": "4b8d500df47a8142daba41315b98b93156cc3e0ca7b1f1646098915fd2b51e1d",
       "structural_formula": "H=R\\capR^\\perp=[#,#,#],\\qquadW_H=##z^{#}#z^{#}#z^{#}+z^{#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "654606ef1e9f21c99e345bbfeb2f4d975a272bc1ca511d7c6e75b8bc9f3add36",
+      "normalized_formula": "H=S^2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 175,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "H=S^2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b5132104082e4d0e100f298d00ee37338e4d51beca35aec81e67d8527e4a93de",
+      "structural_formula": "H=S^#"
     },
     {
       "file_count": 1,
@@ -721554,6 +721869,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "19e874baf2b24fcc7f2eb2316cef0d36d5b1b0c40de77ea51058dbaace4d4f72",
+      "normalized_formula": "NETLIST='data/w33_single_photon_timebin_recursion_guard_ice40_20261023.json'",
+      "numeric_literals": [
+        "0",
+        "0261023",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_timebin_UP5K_board_pin_contract_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_timebin_UP5K_board_pin_contract_20261023.py",
+          "raw": "NETLIST='data/w33_single_photon_timebin_recursion_guard_ice40_20261023.json'",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dff8faa6647703a63ad3c061583573ec7b63f2fe930dca84534fdd62287f52d0",
+      "structural_formula": "NETLIST='data/w3#_single_photon_timebin_recursion_guard_ice4#_2#.json'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "da17ee174179e4fc0a02bb6d7e543f2c4f00f06e3b9f07bd69e53486ed3edcc8",
       "normalized_formula": "NEUTRINO:T_nu/T_CMB=(mu/p_Ih)^(1/q)EXACT(qutritcuberoot!)",
       "numeric_literals": [
@@ -745223,6 +745567,31 @@
       },
       "structural_family_id": "740cf1ec95911ee3cb4fa6a1bb95651bb166b191014bc94464ad292d17601401",
       "structural_formula": "OVOID_IS_ALPHA=(OVOID_SIZE=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "35544fd81fdeb04536bde4adbcac0fa39a92daa578b15fbfa44f2ec014176ce0",
+      "normalized_formula": "O\\mathbf1=\\pm\\mathbf1",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 94,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "O\\mathbf 1=\\pm\\mathbf 1",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "35544fd81fdeb04536bde4adbcac0fa39a92daa578b15fbfa44f2ec014176ce0",
+      "structural_formula": "O\\mathbf1=\\pm\\mathbf1"
     },
     {
       "file_count": 1,
@@ -781803,6 +782172,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "50cc117b99e64adafea8b2b49402c0b291b179b86b4402ed24862f93b872d83d",
+      "normalized_formula": "RTL='hardware/w33_single_photon_timebin_recursion_guard.sv'",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_timebin_UP5K_board_pin_contract_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_timebin_UP5K_board_pin_contract_20261023.py",
+          "raw": "RTL='hardware/w33_single_photon_timebin_recursion_guard.sv'",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "115ad0492bed3a05625f0873da4a9acbc5c78b8bbbbfc7dcb467899f2512e379",
+      "structural_formula": "RTL='hardware/w3#_single_photon_timebin_recursion_guard.sv'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4437b290146681bac941d5e62edada199b0e5fc9d1c54c763d0c7f2c7f5a374c",
       "normalized_formula": "RYeWcm-5*UmZa4-i()4Gra!(w?ZcV~0>",
       "numeric_literals": [
@@ -788361,6 +788757,33 @@
       },
       "structural_family_id": "ca520060a3158d7a63804528e7e4d4e86f9ea45878eeb9dc6a3f63fb5ef4ecbd",
       "structural_formula": "S=F+q+#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "23a4916065f0488bd63a44b06b431fd85e71b92f6dc9bead25cfa3ce050b88ee",
+      "normalized_formula": "S=J-2A",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 175,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "S=J-2A",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6805874a020feb78ce7b70be20b47dbf6421a786ee40d724f60bb464ea6598a6",
+      "structural_formula": "S=J-#A"
     },
     {
       "file_count": 1,
@@ -861755,6 +862178,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c55a07c9e506f328c6806ec09272d7648c88bab078fab5bf578ae06557b41374",
+      "normalized_formula": "U_G|a,b\\rangle=(-1)^{(A_G)_{ab}}|a,b\\rangle",
+      "numeric_literals": [
+        "-1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 108,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "U_G|a,b\\rangle=(-1)^{(A_G)_{ab}}|a,b\\rangle.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8a800b7adfe946337bbaff005e1e39fa21e1065cea54db6b5fea3ec01df318cd",
+      "structural_formula": "U_G|a,b\\rangle=(#)^{(A_G)_{ab}}|a,b\\rangle"
+    },
+    {
+      "file_count": 1,
       "formula_id": "97366ac6d2ff093ff331e86f961aa4a40086325dd71902be9cb4f9b167df5dc1",
       "normalized_formula": "U_H=\\begin{pmatrix}C(I-CC^\\dagger)^{1/2}\\\\(I-C^\\daggerC)^{1/2}-C^\\dagger\\end{pmatrix}\\inU(16)",
       "numeric_literals": [
@@ -924166,6 +924616,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1c4aea46696da908eb84345e72cf6a7c05f4fd65f0c212cee94c0e58d49c3819",
+      "normalized_formula": "\\begin{array}{c|cc}G=W(3,3)G=Q(4,3)\\\\\\hline\\mathrm{rank}_{\\mathbbF_2}A_G1610\\\\\\mathrm{rank}_{\\mathbbF_2}B_G148\\\\\\mathrm{alternating\\hyperbolic\\pairs}74\\end{array}",
+      "numeric_literals": [
+        "3",
+        "4",
+        "48",
+        "610",
+        "74"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 127,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "\\begin{array}{c|cc} &G=W(3,3)&G=Q(4,3)\\\\\\hline \\mathrm{rank}_{\\mathbb F_2}A_G&16&10\\\\ \\mathrm{rank}_{\\mathbb F_2}B_G&14&8\\\\ \\mathrm{alternating\\ hyperbolic\\ pairs}&7&4 \\end{array}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "de9468b2ba5e61063305f4ba67d7bfff4930033d0a970ba65f6071ac7ad6f6b3",
+      "structural_formula": "\\begin{array}{c|cc}G=W(#,#)G=Q(#,#)\\\\\\hline\\mathrm{rank}_{\\mathbbF_2}A_G1#\\\\\\mathrm{rank}_{\\mathbbF_2}B_G1#\\\\\\mathrm{alternating\\hyperbolic\\pairs}#\\end{array}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "db732a506a07fb0ef4e3e5bb5718a7892c1c2e830283b4a28ad422ab783ac225",
       "normalized_formula": "\\begin{array}{c|c|c}p\\dim\\operatorname{rad}(W)\\text{intrinsicradical}\\\\\\hline216\\operatorname{im}(A\\bmod2)=C\\\\310\\operatorname{im}\\big((A+I)|_{\\mathbf1^\\perp}\\big)\\\\51\\langle\\mathbf1\\rangle.\\end{array}",
       "numeric_literals": [
@@ -945309,6 +945790,34 @@
       },
       "structural_family_id": "ff7a51c37c9f8033620425875a18a1985b354a055827b9b6fcc4abfcb658a3ae",
       "structural_formula": "\\boxed{\\operatorname{tr}H_{\\phi,t}^{#}-\\operatorname{tr}H_{#,t}^{#}=#\\sum_{C}t^{d_C}\\bigl[\\cos(w_C\\cdot\\phi)#\\bigr].}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "71fba7d7b9f921b516c920cba78b603a224e48bec77344bac55ca85c6dbf351f",
+      "normalized_formula": "\\boxed{\\operatorname{tr}\\rho_{ac}^2=0.0020128}",
+      "numeric_literals": [
+        "0.0020128",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 188,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "\\boxed{\\operatorname{tr}\\rho_{ac}^2=0.0020128}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ea755cfefccf5eb93872e1045ec3abe3ed4da22cb6335fade790f4070e703012",
+      "structural_formula": "\\boxed{\\operatorname{tr}\\rho_{ac}^#=#}"
     },
     {
       "file_count": 1,
@@ -1008020,6 +1008529,38 @@
       },
       "structural_family_id": "1f140dc2fb24d7b271d4fbc73acdbeb83be31ed3ceb00740ba83a5d8b1a22aa8",
       "structural_formula": "\\operatorname{spec}(A)=#^#\\oplus3^{#}\\oplus(#)^{#}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3b963a9352c45d57997c7e7df74b0a7e6fd4243fa2fdc2eafd96d992e924c939",
+      "normalized_formula": "\\operatorname{spec}(A)=\\{12^{(1)},2^{(24)},(-4)^{(15)}\\}",
+      "numeric_literals": [
+        "-4",
+        "1",
+        "12",
+        "15",
+        "2",
+        "24"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 51,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "\\operatorname{spec}(A)= \\{12^{(1)},\\,2^{(24)},\\,(-4)^{(15)}\\}.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d699efd65004b3eadc813597759067414e0155e6c9e6527ce42d7ded843aacd1",
+      "structural_formula": "\\operatorname{spec}(A)=\\{#^{(#)},#^{(#)},(#)^{(#)}\\}"
     },
     {
       "file_count": 2,
@@ -1108174,6 +1108715,35 @@
       },
       "structural_family_id": "cbc97932d0081b8a3e4d97e6f2a6e93308ba187144ecf4bc963993eaeee79176",
       "structural_formula": "assertabs(ev.imag).max()<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "87c1c6c999eaee527108c72741500c128f8abb10fb8735d9de2eb1b20ce656f0",
+      "normalized_formula": "assertabs(ev.sum()-1)<1e-12andmin(ev)>-1e-12",
+      "numeric_literals": [
+        "-1",
+        "-1e-12",
+        "1e-12"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 116,
+          "path": "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py",
+          "raw": "assert abs(ev.sum()-1)<1e-12 and min(ev)>-1e-12",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "fb344f663649bd903ec961cdf79b91a6287057d7bf12f5694ce612f1881254ab",
+      "structural_formula": "assertabs(ev.sum()#)<#andmin(ev)>#"
     },
     {
       "file_count": 1,
@@ -1313338,6 +1313908,88 @@
     },
     {
       "file_count": 1,
+      "formula_id": "67ec555f43fce2508f9619de3b286a34db3533d9713e69fc1cba38a1cfb85c37",
+      "normalized_formula": "fatal(1,\"coveragecount\");','@(negedgeclk);valid_in=0;','@(posedgeclk);#1;','if(valid_out||oracle_bit||cross_phase_flags)",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_phase_oracle_rank14_RTL_codegen_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 95,
+          "path": "analysis/w33_phase_oracle_rank14_RTL_codegen_20261023.py",
+          "raw": "fatal(1,\"coverage count\");', ' @(negedge clk);valid_in=0;', ' @(posedge clk);#1;', ' if(valid_out || oracle_bit || cross_phase_flags)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5f84ac54a0066f037adc439d5d67080bef7f23a223ee2ec396f83ba2015109c9",
+      "structural_formula": "fatal(#,\"coveragecount\");','@(negedgeclk);valid_in=#;','@(posedgeclk);##;','if(valid_out||oracle_bit||cross_phase_flags)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f0dae24fc23679e2274b9c328df12fe4455a7135973383492bfe4f4d8dd20a04",
+      "normalized_formula": "fatal(1,\"missingvalid",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_phase_oracle_rank14_RTL_codegen_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 82,
+          "path": "analysis/w33_phase_oracle_rank14_RTL_codegen_20261023.py",
+          "raw": "fatal(1,\"missing valid: %d,%d\",i,j);', ' if(i>=40 || j>=40)begin', ' if(!invalid_addr || oracle_bit || cross_phase_flags || local_phase_a || local_phase_b)', '",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "95a0318d97678f936d6be72ebab4fef9fef74b702ca9cf20277f88d64d921cd2",
+      "structural_formula": "fatal(#,\"missingvalid"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "40c317a4f4db673ce8045733ef57c79d57f7f9cfa0f8192ac4a461eb9ab36d38",
+      "normalized_formula": "fatal(1,\"oracledisagreementat",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_phase_oracle_rank14_RTL_codegen_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 89,
+          "path": "analysis/w33_phase_oracle_rank14_RTL_codegen_20261023.py",
+          "raw": "fatal(1,\"oracle disagreement at %d,%d\",i,j);', ' if(oracle_bit!==((^cross_phase_flags)^local_phase_a^local_phase_b))', '",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4854ed47fe84d4553e9a96c3c2f61d44e74f78ce62fdd02ceae4bc47f119ec13",
+      "structural_formula": "fatal(#,\"oracledisagreementat"
+    },
+    {
+      "file_count": 1,
       "formula_id": "34899b89edbab9b775953e018c5373f5e273f92fe745152a91b501d4c9a291dd",
       "normalized_formula": "fate=\"MATTER(stable)\"ifu_ev=1else\"KILLEDin1step\"",
       "numeric_literals": [
@@ -1456019,6 +1456671,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ae7d54b2f6c67f290aa90401814fb9dde8a7a9f32b6bf89f942a9cbae1d6b8e6",
+      "normalized_formula": "module=data['modules']['w33_single_photon_timebin_recursion_guard']",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_timebin_UP5K_board_pin_contract_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_timebin_UP5K_board_pin_contract_20261023.py",
+          "raw": "module=data['modules']['w33_single_photon_timebin_recursion_guard']",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c2a8efb7c92c737b69079b91989917ce2cd8353a54a61db3a4f4e3276a8be7b6",
+      "structural_formula": "module=data['modules']['w3#_single_photon_timebin_recursion_guard']"
+    },
+    {
+      "file_count": 1,
       "formula_id": "41291e3965937ff1f1fb384f27730d7a249e94b3040a473e8c163a6c1d4af2fe",
       "normalized_formula": "moduli_check=(r_factor_constant_over_leading=Fraction(1,k-1)=",
       "numeric_literals": [
@@ -1512246,6 +1512925,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d3d4ccf862d279ef1aed7196e8a0c065467606520e4bb57c822eba96d9a737b0",
+      "normalized_formula": "p=ROOT/'data/w33_phase_oracle_mod_local_gauge_rank14_20261023.json'",
+      "numeric_literals": [
+        "0261023",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_phase_oracle_mod_local_gauge_rank14_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 97,
+          "path": "analysis/w33_phase_oracle_mod_local_gauge_rank14_20261023.py",
+          "raw": "p=ROOT/'data/w33_phase_oracle_mod_local_gauge_rank14_20261023.json'",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "66c11610916381b7b6177f27e4d3533b5e34ce1054eeae00a97471298d7a9a62",
+      "structural_formula": "p=ROOT/'data/w3#_phase_oracle_mod_local_gauge_rank1#_2#.json'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fae39b982b6dc5806886753da14430bc1b86e2b6fb1d450f1249fa18b7e37a06",
       "normalized_formula": "p=ROOT/'data/w33_single_photon_recursive_five_fronts_acceptance_20261023.json'",
       "numeric_literals": [
@@ -1551482,6 +1552190,37 @@
       },
       "structural_family_id": "170f118ba2efd11d67b0978e999d0a86f7ba12cbcbc4f44c7b30b30efccdb403",
       "structural_formula": "print('PASS',d['#']['records'][#]['weak_basis_Im_trace_commutator_cubed'],d['#']['canonical_light_mass_GeV_if_Lambda_1e1#'],d['#']['exact_curve_soft_sweep'],flush=True)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c92603a1e941f94571b621fd3a577f109350c07536a1d682a10502dcb3fce18b",
+      "normalized_formula": "print('PASS40basepointsand1600phases;W33rank16->nonlocalgaugerank14,optimal')",
+      "numeric_literals": [
+        "0",
+        "3",
+        "4",
+        "6",
+        "600"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_phase_oracle_mod_local_gauge_rank14_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/w33_phase_oracle_mod_local_gauge_rank14_20261023.py",
+          "raw": "print('PASS 40 basepoints and 1600 phases; W33 rank16 -> nonlocal gauge rank14, optimal')",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "3732c6d7deb02e8b96d1c7762a8a47a5a62af847bb9190c29f80c046bf10addd",
+      "structural_formula": "print('PASS4#basepointsand1#phases;W3#rank1#->nonlocalgaugerank1#,optimal')"
     },
     {
       "file_count": 1,
@@ -1656974,6 +1657713,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "efdb3951c8c40262368afa7df239a9f51eb2ef576b5a82ecf0b9519b6bd40543",
+      "normalized_formula": "q=singular^2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 108,
+          "path": "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py",
+          "raw": "q=singular**2",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "77f0f6030d1ac2ca041c81adec47d6567055808a29effe284792c3623c39dc02",
+      "structural_formula": "q=singular^#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f5f66c9d88f3f36601581a9aa21d11afeafa80168c167456637d6143091ce224",
       "normalized_formula": "q={'up':.0036,'down':.019,'charged_lepton':.059}",
       "numeric_literals": [
@@ -1668228,6 +1668994,33 @@
       },
       "structural_family_id": "f34b45c23c646b273ee974eea72854c99c705406cf1d656fc76a31e5136bb33a",
       "structural_formula": "r=#/N^#=#/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e37704091cfe6e391819b9a2f3ba756c8dbb3314713f7280a4eb1672cfe0cc6a",
+      "normalized_formula": "r=14",
+      "numeric_literals": [
+        "14"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 160,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "r=14",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "49dc06a76aea71ef6255ae86c144be9094ca182f52fe1b04345b83198f95072f",
+      "structural_formula": "r=#"
     },
     {
       "file_count": 16,
@@ -1742065,18 +1742858,26 @@
       "structural_formula": "singular=np.linalg.svd(H[:#,#:],compute_uv=False)"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "cbee6977a519e79daf9cd5389dc7e163d47278095fb920e3563a4888c7d29ca7",
       "normalized_formula": "singular=np.linalg.svd(S/40,compute_uv=False)",
       "numeric_literals": [
         "40"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py",
         "analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py"
       ],
       "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 107,
+          "path": "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py",
+          "raw": "singular=np.linalg.svd(S/40,compute_uv=False)",
+          "status": "killed_or_retracted"
+        },
         {
           "category": "relation_line",
           "line": 39,
@@ -1742086,7 +1742887,7 @@
         }
       ],
       "status_profile": {
-        "killed_or_retracted": 1
+        "killed_or_retracted": 2
       },
       "structural_family_id": "d5b18cc7f5fab93601028905f6665564bf7ad7479b4c88c7cc85bdc2ed81dc04",
       "structural_formula": "singular=np.linalg.svd(S/#,compute_uv=False)"
@@ -1801770,6 +1802571,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d6897bc1562ee62924bd372cf735b28b4e39556dbd2bc999a7ed1613fc905009",
+      "normalized_formula": "triangle_H=float(-sum(x*math.log2(x)forxinevifx>1e-14))",
+      "numeric_literals": [
+        "1e-14"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 117,
+          "path": "analysis/w33_photonic_five_fronts_GF2_phase_causal_break_20261023.py",
+          "raw": "triangle_H=float(-sum(x*math.log2(x) for x in ev if x>1e-14))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f3cf4c060cfa5568ae4a0b021680a1555e48a85c1e62f9c8bde241b10cf4c1e7",
+      "structural_formula": "triangle_H=float(-sum(x*math.log2(x)forxinevifx>#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6c5b2bfc998846159567e8bf828cc730b4b26f408ba82a8d29c35ed0acc63e88",
       "normalized_formula": "triangle_holonomy[perm_type(hol)]+=1",
       "numeric_literals": [
@@ -1837819,6 +1838647,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7b313f68e5f0db02251fd3645e0899a474b1b13032064ac7f09c33cbb163f3e9",
+      "normalized_formula": "x^{\\mathsfT}Ax=-32",
+      "numeric_literals": [
+        "-32"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 193,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "x^{\\mathsf T}Ax=-32",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4c7b75215f72b2d7ab3488503ff2e2c25a75d30d962ab5d3bbc7e5aef04620d5",
+      "structural_formula": "x^{\\mathsfT}Ax=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0da7a59ab3d91ec7135081427e665194874bf8b42f1e0f8a84a396faebc5bbca",
       "normalized_formula": "x^{\\mathsfT}Hx=0",
       "numeric_literals": [
@@ -1863400,6 +1864255,34 @@
       "structural_formula": "|\\Phi(\\Eone)|=#"
     },
     {
+      "file_count": 1,
+      "formula_id": "cc46874901c9ab7881e58bf15c42ff36304309e5f38e8543504a28810fae7883",
+      "normalized_formula": "|\\Phi\\rangle=\\frac1{40^2}\\sum_{a,b,c,d}S_{ab}S_{bc}S_{cd}|a,b,c,d\\rangle",
+      "numeric_literals": [
+        "2",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 176,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "|\\Phi\\rangle=\\frac1{40^2} \\sum_{a,b,c,d}S_{ab}S_{bc}S_{cd}|a,b,c,d\\rangle,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d2620238816d40875015e47baee76326a4846f7f22ac52100edfd24663c7e4bb",
+      "structural_formula": "|\\Phi\\rangle=\\frac1{#^#}\\sum_{a,b,c,d}S_{ab}S_{bc}S_{cd}|a,b,c,d\\rangle"
+    },
+    {
       "file_count": 2,
       "formula_id": "0fad1366ed5a4ee87fab4d2bec823a490d04bd912dfb80cdeaab9e9b63d2d654",
       "normalized_formula": "|\\Phi^+(\\Eone)|=240",
@@ -1863433,6 +1864316,34 @@
       },
       "structural_family_id": "ea1fdb010425158f6aa632607cffd9eb6c45a72a4ed72976270ebb2e36e37bf3",
       "structural_formula": "|\\Phi^+(\\Eone)|=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "535680e5bac11af514348b4ceaf96e9370dab511a85c783deaafc80de5e9023b",
+      "normalized_formula": "|\\Psi_A\\rangle=40^{-1}\\sum_{a,b}(-1)^{A_{ab}}|a,b\\rangle",
+      "numeric_literals": [
+        "-1",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/w33_q43_cospectral_photon_entanglement_20261023.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 21,
+          "path": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+          "raw": "|\\Psi_A\\rangle=40^{-1}\\sum_{a,b}(-1)^{A_{ab}}|a,b\\rangle",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3ef6db63bdb29713e00d2db013d1dadd2d2ac2e36960584a066b205672eb0893",
+      "structural_formula": "|\\Psi_A\\rangle=#^{#}\\sum_{a,b}(#)^{A_{ab}}|a,b\\rangle"
     },
     {
       "file_count": 1,
@@ -1889444,9 +1890355,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-23T20:05:32-04:00",
+  "frozen_at": "2026-10-23T20:24:00-04:00",
   "pass": 398,
-  "repository_head": "21c3a789876843491b44762c45fe277804044a57",
+  "repository_head": "d5065b9024256aa3a6734e9ef12e5a5ba1630373",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1998822,11 +1999733,27 @@
     },
     {
       "exact_formula_ids": [
+        "4375afb6acdf5fcc6a19848055220c7839bbf431760244c6558b6997bb7bfc0b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9d9732438070ae94a1ffdced3ccb2d56e50ce07c456bec05af972b59578c2708",
+      "structural_formula": "'proof':'A(a,b)=sum_kU[a,k]V[b,k]modulo2;(#)^A=product_kCZ(flag_Uk(a),flag_Vk(b)).RankGF2(A)=#lowerboundsparity-productcrosslinks,withinthisgatefamily.'"
+    },
+    {
+      "exact_formula_ids": [
         "a950a2e0226c3e6d479278849315b2a879295d030aa925585f345f93d214f50f"
       ],
       "exact_member_count": 1,
       "structural_family_id": "9e1c5a43d5ec94ecc5382952fca45f9a6a6c103f083d2c8bc4dbcc8e6d0bdfaa",
       "structural_formula": "'proof':'AllsummandsarenonnegativeandThasu6=u1#=#.Thereducedcompleteintersectionconsistsof7#rays.Radialsquarefixesthenorm.TheangularHessianis2Re(J^dagdiag(alpha,beta)J),positiveontheprojectivetangent;noglobalnumericaloptimizationisused.'"
+    },
+    {
+      "exact_formula_ids": [
+        "4d08af83bdda078758e26b70aa8e82bd713f2a44aaf86b802ad968c20e871a43"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8f274bed33b5ad3e9e239bb9b3c1510030535e438492e8388dd435a95a82e86c",
+      "structural_formula": "'proof':'B=A+A[:,#]#^T+#A[#,:]isalternatingrank1#.Repeatedlypeelx*y^T+y*x^Twherex=B[:,i],y=B[:,j],B[i,j]=#,decreasingrankby2untilzero.Restoretwolocalphasetables.'"
     },
     {
       "exact_formula_ids": [
@@ -1998915,6 +1999842,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c1aa1bcd1cb4be24b3c44df9c8ba9a6065cf1b5f165828289daa2933b090b6ef",
       "structural_formula": "'proof_mechanism':'Theexact1##blockdecompositiongivesfiveHenselrootbranchesreducingtoallelementsofF5.Teichmullerdecompositionandtheprincipal-unitLTEv_pi(u^(#n)#)=v_pi(u^n-#)#yieldthedisplayedresiduetableandv5lifts.'"
+    },
+    {
+      "exact_formula_ids": [
+        "2f98fea8beea5cd83bd190bd08e7cb48d9b6172b9d0a0827840882c428ef9689"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "240a68950958923af286cc46ec98eb1994bc3defdee65dc47f85a65baf2fb4b2",
+      "structural_formula": "'proof_of_lower_bound':'C=A+u*#^T+#*v^T+g*J;double_center(C)=B=double_center(A),withdouble_center(C)=P*C*QoverF2andrank(P*C*Q)<=rank(C).rank_F2(B)=#.ThechoiceC=Battains1#.'"
     },
     {
       "exact_formula_ids": [
@@ -2000347,6 +2001282,14 @@
       "exact_member_count": 1,
       "structural_family_id": "271567f61133c959af0daf4712ea31fbe96f7e8635d23ffd362b5f8be0571689",
       "structural_formula": "'theorem':'Forany4#x4#off-diagonalcoupling,nullity(left)-nullity(right)=##=#;henceatleastfivezeromodessurvive,but3#neednot.'}"
+    },
+    {
+      "exact_formula_ids": [
+        "b3dd450622e863825671b1fef175ca49e027999f8a59616846a90150458d0284"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "56bea2de1eb52f14973e8b8646581ebe63404bf5961aaf5a6caf4a7542057f2f",
+      "structural_formula": "'theorem':'ForrdisjointW3#controlled-phaselinkscrossingonepartition,independentfactorsgiveSchmidtrank4#^randentropyr*H_W3#.Nearest-neighborchainisthespecialr=#arealaw.'"
     },
     {
       "exact_formula_ids": [
@@ -2008069,6 +2009012,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4bae7a08c19ad3c641698b638ed46992338e098f5af6f7a3b4fb28cdaa0d18e4",
       "structural_formula": "(\\phi_1,\\phi_2)=(\\pi+\\delta,\\pi-\\delta),\\qquad\\delta\\in[#,\\pi/#]"
+    },
+    {
+      "exact_formula_ids": [
+        "f64fab98e2fc77836f899c891c6b0f52befa3b0365ce0987ed14e31b1dc44fb0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4bd05980d72611fdb544c1caac12627341819dfb186d50a1e19eb34ec7b9a699",
+      "structural_formula": "(\\rho_{ac})_{(a,c),(a',c')}=\\frac{H_{cc'}}{#^#}\\sum_bS_{ab}S_{a'b}S_{bc}S_{bc'}"
     },
     {
       "exact_formula_ids": [
@@ -2039569,6 +2040520,14 @@
     },
     {
       "exact_formula_ids": [
+        "b23ef8383621d86aacca4841a385509da128924462204feb22d38e7cf77ea0ad"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ce34d40586d9abc9f70d963ae71bfa1fda303ccc43c803549fec3d165a8e4f2a",
+      "structural_formula": "A_G(#,#)=#"
+    },
+    {
+      "exact_formula_ids": [
         "fa07387ae440d31450f459472c6226b81cad45d97a60eba66e1067d39d7db3fc"
       ],
       "exact_member_count": 1,
@@ -2044684,6 +2045643,22 @@
     },
     {
       "exact_formula_ids": [
+        "1a33e134b2ee0a3255a8612a9e648b8bc68272e6d9a51212fa27cfa4ef0387da"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "43faafc48cb0683854ecd07dcf8f66b49d836941e49f35b6cecf7d2d4f2339b2",
+      "structural_formula": "B_G(a,b)=A_G(a,b)+A_G(a,#)+A_G(#,b)+A_G(#,#)"
+    },
+    {
+      "exact_formula_ids": [
+        "c2d3b2047d9745523e7e9116759377a6ca8014c067e3cfaf4206e706b74d73e8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5366a7bc44308e8c4f47f86e05867840c965fe26c42210811dbd6552a88d1578",
+      "structural_formula": "B_G=\\sum_{k=#}^{r/#}(x_ky_k^{\\mathsfT}+y_kx_k^{\\mathsfT})\\quad(\\bmod2)"
+    },
+    {
+      "exact_formula_ids": [
         "2c4e89bb912c0b3b4985741d77822f7f942679a221e1f0d638fdca43006cc5c8"
       ],
       "exact_member_count": 1,
@@ -2048261,6 +2049236,14 @@
       "exact_member_count": 1,
       "structural_family_id": "20ee23cfe3c565b7126d1fc3efa6d658794df22dd31f22b98a64ffcb473e25e1",
       "structural_formula": "C_G=#,\\qquadM_2=#"
+    },
+    {
+      "exact_formula_ids": [
+        "1fdb949b5e99988406f5fda52a7f1c4e80b9c3087efe951de09ade9889af119f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "61acffdcdd3910d179dee422cc54dcba3ea458cfa3b753298a75af6d667775fa",
+      "structural_formula": "C_G=\\frac{J-#A_G}{#},\\qquad|\\Psi_G\\rangle=\\sum_{a,b=#}^{#}(C_G)_{ab}|a\\rangle|b\\rangle"
     },
     {
       "exact_formula_ids": [
@@ -2065343,6 +2066326,14 @@
     },
     {
       "exact_formula_ids": [
+        "929144fdd86f9b01db185e76d605066443cd63986a91e21e128afe0a94878dae"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5a27ae306a015853c7df57a6a59166699adaba2435b646268a20cb88c124340e",
+      "structural_formula": "H=#\\log_2(#)#(#)\\log_2(#)#(#)\\log_2(#)=#\\text{bits}"
+    },
+    {
+      "exact_formula_ids": [
         "1187686d4553d67d8f4845fb83d7cd08453211c4f569294ffef70c2a32ae9e35"
       ],
       "exact_member_count": 1,
@@ -2065508,6 +2066499,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4b8d500df47a8142daba41315b98b93156cc3e0ca7b1f1646098915fd2b51e1d",
       "structural_formula": "H=R\\capR^\\perp=[#,#,#],\\qquadW_H=##z^{#}#z^{#}#z^{#}+z^{#}"
+    },
+    {
+      "exact_formula_ids": [
+        "654606ef1e9f21c99e345bbfeb2f4d975a272bc1ca511d7c6e75b8bc9f3add36"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b5132104082e4d0e100f298d00ee37338e4d51beca35aec81e67d8527e4a93de",
+      "structural_formula": "H=S^#"
     },
     {
       "exact_formula_ids": [
@@ -2083676,6 +2084675,14 @@
     },
     {
       "exact_formula_ids": [
+        "19e874baf2b24fcc7f2eb2316cef0d36d5b1b0c40de77ea51058dbaace4d4f72"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dff8faa6647703a63ad3c061583573ec7b63f2fe930dca84534fdd62287f52d0",
+      "structural_formula": "NETLIST='data/w3#_single_photon_timebin_recursion_guard_ice4#_2#.json'"
+    },
+    {
+      "exact_formula_ids": [
         "da17ee174179e4fc0a02bb6d7e543f2c4f00f06e3b9f07bd69e53486ed3edcc8"
       ],
       "exact_member_count": 1,
@@ -2090322,6 +2091329,14 @@
       "exact_member_count": 1,
       "structural_family_id": "740cf1ec95911ee3cb4fa6a1bb95651bb166b191014bc94464ad292d17601401",
       "structural_formula": "OVOID_IS_ALPHA=(OVOID_SIZE=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "35544fd81fdeb04536bde4adbcac0fa39a92daa578b15fbfa44f2ec014176ce0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "35544fd81fdeb04536bde4adbcac0fa39a92daa578b15fbfa44f2ec014176ce0",
+      "structural_formula": "O\\mathbf1=\\pm\\mathbf1"
     },
     {
       "exact_formula_ids": [
@@ -2099994,6 +2101009,14 @@
     },
     {
       "exact_formula_ids": [
+        "50cc117b99e64adafea8b2b49402c0b291b179b86b4402ed24862f93b872d83d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "115ad0492bed3a05625f0873da4a9acbc5c78b8bbbbfc7dcb467899f2512e379",
+      "structural_formula": "RTL='hardware/w3#_single_photon_timebin_recursion_guard.sv'"
+    },
+    {
+      "exact_formula_ids": [
         "4437b290146681bac941d5e62edada199b0e5fc9d1c54c763d0c7f2c7f5a374c"
       ],
       "exact_member_count": 1,
@@ -2101756,6 +2102779,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ca520060a3158d7a63804528e7e4d4e86f9ea45878eeb9dc6a3f63fb5ef4ecbd",
       "structural_formula": "S=F+q+#"
+    },
+    {
+      "exact_formula_ids": [
+        "23a4916065f0488bd63a44b06b431fd85e71b92f6dc9bead25cfa3ce050b88ee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6805874a020feb78ce7b70be20b47dbf6421a786ee40d724f60bb464ea6598a6",
+      "structural_formula": "S=J-#A"
     },
     {
       "exact_formula_ids": [
@@ -2121760,6 +2122791,14 @@
     },
     {
       "exact_formula_ids": [
+        "c55a07c9e506f328c6806ec09272d7648c88bab078fab5bf578ae06557b41374"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8a800b7adfe946337bbaff005e1e39fa21e1065cea54db6b5fea3ec01df318cd",
+      "structural_formula": "U_G|a,b\\rangle=(#)^{(A_G)_{ab}}|a,b\\rangle"
+    },
+    {
+      "exact_formula_ids": [
         "97366ac6d2ff093ff331e86f961aa4a40086325dd71902be9cb4f9b167df5dc1"
       ],
       "exact_member_count": 1,
@@ -2137791,6 +2138830,14 @@
     },
     {
       "exact_formula_ids": [
+        "1c4aea46696da908eb84345e72cf6a7c05f4fd65f0c212cee94c0e58d49c3819"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "de9468b2ba5e61063305f4ba67d7bfff4930033d0a970ba65f6071ac7ad6f6b3",
+      "structural_formula": "\\begin{array}{c|cc}G=W(#,#)G=Q(#,#)\\\\\\hline\\mathrm{rank}_{\\mathbbF_2}A_G1#\\\\\\mathrm{rank}_{\\mathbbF_2}B_G1#\\\\\\mathrm{alternating\\hyperbolic\\pairs}#\\end{array}"
+    },
+    {
+      "exact_formula_ids": [
         "db732a506a07fb0ef4e3e5bb5718a7892c1c2e830283b4a28ad422ab783ac225"
       ],
       "exact_member_count": 1,
@@ -2143131,6 +2144178,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ff7a51c37c9f8033620425875a18a1985b354a055827b9b6fcc4abfcb658a3ae",
       "structural_formula": "\\boxed{\\operatorname{tr}H_{\\phi,t}^{#}-\\operatorname{tr}H_{#,t}^{#}=#\\sum_{C}t^{d_C}\\bigl[\\cos(w_C\\cdot\\phi)#\\bigr].}"
+    },
+    {
+      "exact_formula_ids": [
+        "71fba7d7b9f921b516c920cba78b603a224e48bec77344bac55ca85c6dbf351f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ea755cfefccf5eb93872e1045ec3abe3ed4da22cb6335fade790f4070e703012",
+      "structural_formula": "\\boxed{\\operatorname{tr}\\rho_{ac}^#=#}"
     },
     {
       "exact_formula_ids": [
@@ -2158959,6 +2160014,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1f140dc2fb24d7b271d4fbc73acdbeb83be31ed3ceb00740ba83a5d8b1a22aa8",
       "structural_formula": "\\operatorname{spec}(A)=#^#\\oplus3^{#}\\oplus(#)^{#}"
+    },
+    {
+      "exact_formula_ids": [
+        "3b963a9352c45d57997c7e7df74b0a7e6fd4243fa2fdc2eafd96d992e924c939"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d699efd65004b3eadc813597759067414e0155e6c9e6527ce42d7ded843aacd1",
+      "structural_formula": "\\operatorname{spec}(A)=\\{#^{(#)},#^{(#)},(#)^{(#)}\\}"
     },
     {
       "exact_formula_ids": [
@@ -2185131,6 +2186194,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cbc97932d0081b8a3e4d97e6f2a6e93308ba187144ecf4bc963993eaeee79176",
       "structural_formula": "assertabs(ev.imag).max()<#"
+    },
+    {
+      "exact_formula_ids": [
+        "87c1c6c999eaee527108c72741500c128f8abb10fb8735d9de2eb1b20ce656f0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fb344f663649bd903ec961cdf79b91a6287057d7bf12f5694ce612f1881254ab",
+      "structural_formula": "assertabs(ev.sum()#)<#andmin(ev)>#"
     },
     {
       "exact_formula_ids": [
@@ -2241338,6 +2242409,30 @@
     },
     {
       "exact_formula_ids": [
+        "67ec555f43fce2508f9619de3b286a34db3533d9713e69fc1cba38a1cfb85c37"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5f84ac54a0066f037adc439d5d67080bef7f23a223ee2ec396f83ba2015109c9",
+      "structural_formula": "fatal(#,\"coveragecount\");','@(negedgeclk);valid_in=#;','@(posedgeclk);##;','if(valid_out||oracle_bit||cross_phase_flags)"
+    },
+    {
+      "exact_formula_ids": [
+        "f0dae24fc23679e2274b9c328df12fe4455a7135973383492bfe4f4d8dd20a04"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "95a0318d97678f936d6be72ebab4fef9fef74b702ca9cf20277f88d64d921cd2",
+      "structural_formula": "fatal(#,\"missingvalid"
+    },
+    {
+      "exact_formula_ids": [
+        "40c317a4f4db673ce8045733ef57c79d57f7f9cfa0f8192ac4a461eb9ab36d38"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4854ed47fe84d4553e9a96c3c2f61d44e74f78ce62fdd02ceae4bc47f119ec13",
+      "structural_formula": "fatal(#,\"oracledisagreementat"
+    },
+    {
+      "exact_formula_ids": [
         "34899b89edbab9b775953e018c5373f5e273f92fe745152a91b501d4c9a291dd"
       ],
       "exact_member_count": 1,
@@ -2279725,6 +2280820,14 @@
     },
     {
       "exact_formula_ids": [
+        "ae7d54b2f6c67f290aa90401814fb9dde8a7a9f32b6bf89f942a9cbae1d6b8e6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c2a8efb7c92c737b69079b91989917ce2cd8353a54a61db3a4f4e3276a8be7b6",
+      "structural_formula": "module=data['modules']['w3#_single_photon_timebin_recursion_guard']"
+    },
+    {
+      "exact_formula_ids": [
         "41291e3965937ff1f1fb384f27730d7a249e94b3040a473e8c163a6c1d4af2fe"
       ],
       "exact_member_count": 1,
@@ -2294662,6 +2295765,14 @@
     },
     {
       "exact_formula_ids": [
+        "d3d4ccf862d279ef1aed7196e8a0c065467606520e4bb57c822eba96d9a737b0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "66c11610916381b7b6177f27e4d3533b5e34ce1054eeae00a97471298d7a9a62",
+      "structural_formula": "p=ROOT/'data/w3#_phase_oracle_mod_local_gauge_rank1#_2#.json'"
+    },
+    {
+      "exact_formula_ids": [
         "fae39b982b6dc5806886753da14430bc1b86e2b6fb1d450f1249fa18b7e37a06"
       ],
       "exact_member_count": 1,
@@ -2305527,6 +2306638,14 @@
       "exact_member_count": 1,
       "structural_family_id": "170f118ba2efd11d67b0978e999d0a86f7ba12cbcbc4f44c7b30b30efccdb403",
       "structural_formula": "print('PASS',d['#']['records'][#]['weak_basis_Im_trace_commutator_cubed'],d['#']['canonical_light_mass_GeV_if_Lambda_1e1#'],d['#']['exact_curve_soft_sweep'],flush=True)"
+    },
+    {
+      "exact_formula_ids": [
+        "c92603a1e941f94571b621fd3a577f109350c07536a1d682a10502dcb3fce18b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3732c6d7deb02e8b96d1c7762a8a47a5a62af847bb9190c29f80c046bf10addd",
+      "structural_formula": "print('PASS4#basepointsand1#phases;W3#rank1#->nonlocalgaugerank1#,optimal')"
     },
     {
       "exact_formula_ids": [
@@ -2332967,6 +2334086,14 @@
     },
     {
       "exact_formula_ids": [
+        "efdb3951c8c40262368afa7df239a9f51eb2ef576b5a82ecf0b9519b6bd40543"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "77f0f6030d1ac2ca041c81adec47d6567055808a29effe284792c3623c39dc02",
+      "structural_formula": "q=singular^#"
+    },
+    {
+      "exact_formula_ids": [
         "f5f66c9d88f3f36601581a9aa21d11afeafa80168c167456637d6143091ce224"
       ],
       "exact_member_count": 1,
@@ -2335511,11 +2336638,12 @@
         "25f5821b847a7e4af712e147c97d9a803ab160d38eea4180069cf4d93c2683d3",
         "b62b1c8e63cacd3364e5e2cab9c46875cf2e7ef3ddb1326e576fe3b6d28e30e6",
         "55f8fe51377aded4d32f31b7033560ff8f87458387f40b16b9cb58d9c268f443",
+        "e37704091cfe6e391819b9a2f3ba756c8dbb3314713f7280a4eb1672cfe0cc6a",
         "0b6c19fb95ede4042a15946cfcaf06799c4dd7f83bc6c5d98a51a9ff334903de",
         "54290b18fe323f90b19979a55fdb0e73256286bb8c913d43fdf2bc6e00c93695",
         "f264f4d62de6b348524adc6029fd95c860d6062c78a0ccc62cbe1820ef3d8124"
       ],
-      "exact_member_count": 8,
+      "exact_member_count": 9,
       "structural_family_id": "49dc06a76aea71ef6255ae86c144be9094ca182f52fe1b04345b83198f95072f",
       "structural_formula": "r=#"
     },
@@ -2371798,6 +2372926,14 @@
     },
     {
       "exact_formula_ids": [
+        "d6897bc1562ee62924bd372cf735b28b4e39556dbd2bc999a7ed1613fc905009"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f3cf4c060cfa5568ae4a0b021680a1555e48a85c1e62f9c8bde241b10cf4c1e7",
+      "structural_formula": "triangle_H=float(-sum(x*math.log2(x)forxinevifx>#))"
+    },
+    {
+      "exact_formula_ids": [
         "6c5b2bfc998846159567e8bf828cc730b4b26f408ba82a8d29c35ed0acc63e88"
       ],
       "exact_member_count": 1,
@@ -2381421,6 +2382557,14 @@
     },
     {
       "exact_formula_ids": [
+        "7b313f68e5f0db02251fd3645e0899a474b1b13032064ac7f09c33cbb163f3e9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4c7b75215f72b2d7ab3488503ff2e2c25a75d30d962ab5d3bbc7e5aef04620d5",
+      "structural_formula": "x^{\\mathsfT}Ax=#"
+    },
+    {
+      "exact_formula_ids": [
         "0da7a59ab3d91ec7135081427e665194874bf8b42f1e0f8a84a396faebc5bbca"
       ],
       "exact_member_count": 1,
@@ -2388195,11 +2389339,27 @@
     },
     {
       "exact_formula_ids": [
+        "cc46874901c9ab7881e58bf15c42ff36304309e5f38e8543504a28810fae7883"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d2620238816d40875015e47baee76326a4846f7f22ac52100edfd24663c7e4bb",
+      "structural_formula": "|\\Phi\\rangle=\\frac1{#^#}\\sum_{a,b,c,d}S_{ab}S_{bc}S_{cd}|a,b,c,d\\rangle"
+    },
+    {
+      "exact_formula_ids": [
         "0fad1366ed5a4ee87fab4d2bec823a490d04bd912dfb80cdeaab9e9b63d2d654"
       ],
       "exact_member_count": 1,
       "structural_family_id": "ea1fdb010425158f6aa632607cffd9eb6c45a72a4ed72976270ebb2e36e37bf3",
       "structural_formula": "|\\Phi^+(\\Eone)|=#"
+    },
+    {
+      "exact_formula_ids": [
+        "535680e5bac11af514348b4ceaf96e9370dab511a85c783deaafc80de5e9023b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3ef6db63bdb29713e00d2db013d1dadd2d2ac2e36960584a066b205672eb0893",
+      "structural_formula": "|\\Psi_A\\rangle=#^{#}\\sum_{a,b}(#)^{A_{ab}}|a,b\\rangle"
     },
     {
       "exact_formula_ids": [
@@ -2394363,20 +2395523,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91690468,
-    "exact_formula_families": 64599,
-    "files_scanned": 12618,
-    "formula_occurrences": 70722,
+    "bytes_scanned": 91731981,
+    "exact_formula_families": 64631,
+    "files_scanned": 12624,
+    "formula_occurrences": 70755,
     "status_occurrences": {
-      "certified_or_theorem": 5304,
-      "killed_or_retracted": 1881,
+      "certified_or_theorem": 5308,
+      "killed_or_retracted": 1884,
       "open_or_conditional": 2381,
       "preregistered": 36,
       "retrospective_fit": 5406,
-      "unclassified": 55714
+      "unclassified": 55740
     },
-    "structural_families": 62896
+    "structural_families": 62927
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "06d2965890fe6d5cd5c3236a889ce65891a8f089fc6a7b03c635f61844bc9981"
+  "universe_sha256": "18fd206bab0bdff1a0f3d662c6230f70e7fb2ab42154f6aef456929e5c477df7"
 }
