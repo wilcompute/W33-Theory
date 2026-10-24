@@ -1,0 +1,270 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\title{Can a Photon's Mode Entanglement Hear the Difference Between\\
+the Two Nonisomorphic Generalized Quadrangles of Order Three?\\
+\large Cospectral Phase States, Binary-Gauge Rank and Symplectic FPGA Oracles}
+\author{W33-Theory mathematical photonics research}
+\date{23 October 2026 --- mathematical and technology-neutral FPGA reference}
+\begin{document}
+\maketitle
+\begin{abstract}
+Two nonisomorphic generalized quadrangles of order $(3,3)$,
+the symplectic $W(3,3)$ and the parabolic-quadric $Q(4,3)$,
+have cospectral point-collinearity graphs on forty points,
+both $\operatorname{SRG}(40,12,2,4)$. We compare a specified
+two-factor single-photon \emph{mode} phase state
+$|\Psi_A\rangle=40^{-1}\sum_{a,b}(-1)^{A_{ab}}|a,b\rangle$.
+The states have exactly identical Schmidt probabilities and
+are even related by identical real orthogonal mode changes on
+both factors. Nonetheless, when coherent operations must
+respect computational address labels and only local diagonal
+signs are treated as free, the number of binary parity-product
+cross-register couplings needed for the corresponding phase
+oracle is exactly 14 for $W(3,3)$ and eight for $Q(4,3)$.
+The difference corresponds to seven versus four alternating
+hyperbolic pairs. Exact compilers, 4096-vector Icarus tests
+for each registered oracle, and matched-toolchain
+iCE40UP5K reference builds document this \emph{gate-set-dependent}
+separation. This is not an experimental single-photon test,
+nor a device-independent separation between quantum states.
+\end{abstract}
+\section{Established geometric and coding results}
+We draw both adjacency matrices from existing independently
+audited repository builders:
+\texttt{w33\_pass76\_cospectral\_mates.py} and
+\texttt{w33\_pass88\_smith\_group.py}.
+The latter establishes the already-known binary adjacency
+ranks $16$ and $10$, and nonisomorphism and equal adjacency
+spectra had been established in earlier project passes.
+These observations are not new results of this note.
+External mathematical prior art treats minimal binary ranks
+of strongly regular graphs and the GQ$(3,3)$ geometries;
+see the bibliography.
+
+Let $A_W,A_Q$ be their $40\times40$ zero-diagonal
+adjacency matrices. Each has
+\[
+\operatorname{spec}(A)=
+\{12^{(1)},\,2^{(24)},\,(-4)^{(15)}\}.
+\]
+
+\section{Bipartite mode entanglement cannot separate the mates}
+For $G\in\{W,Q\}$, consider two \emph{operationally
+independent} forty-dimensional degrees of freedom of a
+single photon. Define the normalized pure-state coefficient
+matrix
+\[
+C_G=\frac{J-2A_G}{40},\qquad
+|\Psi_G\rangle=\sum_{a,b=0}^{39}(C_G)_{ab}|a\rangle|b\rangle.
+\]
+This physical interpretation requires an actual addressable
+tensor decomposition of path, time, frequency, or other modes;
+two labels do not by themselves supply two independently
+accessible particles.
+
+\begin{theorem}[Spectral blindness and local equivalence]
+Both two-factor states have Schmidt probabilities
+\[
+\boxed{\{.16^{(1)},\ .04^{(15)},\ .01^{(24)}\}},
+\]
+Schmidt rank forty, purity $0.052$, and entropy
+\[
+H=-.16\log_2(.16)-15(.04)\log_2(.04)
+  -24(.01)\log_2(.01)
+ =4.803856189774729\text{ bits}.
+\]
+Moreover there is a real orthogonal $O\in O(40)$ with
+$|\Psi_Q\rangle=(O\otimes O)|\Psi_W\rangle$.
+\end{theorem}
+\begin{proof}
+Regularity and cospectrality imply $J$ commutes with
+each adjacency matrix. $J-2A_G$ therefore has
+eigenvalues $16$ (once), $-4$ (24 times), $8$
+(15 times). Dividing their absolute values by
+forty gives the common Schmidt coefficients.
+As real symmetric matrices with the same spectrum,
+$A_W,A_Q$ are orthogonally similar: choose $O$
+so that $A_Q=OA_WO^{\mathsf T}$.
+The $12$-eigenspace is one-dimensional and spanned
+by the uniform vector, so $O\mathbf 1=\pm\mathbf 1$
+and $OJO^{\mathsf T}=J$.
+Thus $C_Q=OC_WO^{\mathsf T}$, exactly the
+coefficient-matrix transformation under
+$O\otimes O$.
+\end{proof}
+The software produces a numerical explicit
+orthogonal witness with small residual.
+No bipartite entanglement monotone can distinguish
+these two pure states if unrestricted local
+unitaries are allowed.
+
+\section{The binary local-diagonal gate restriction}
+A computational-basis address-controlled sign is
+\[
+U_G|a,b\rangle=(-1)^{(A_G)_{ab}}|a,b\rangle.
+\]
+Allow independent computational-basis signs
+$f(a),g(b)$ and a global sign as local phase
+corrections. Define the double-centered matrix
+over $\mathbb F_2$ using reference address $0$:
+\[
+B_G(a,b)=A_G(a,b)+A_G(a,0)+A_G(0,b)+A_G(0,0).
+\]
+Here $A_G(0,0)=0$.
+\begin{theorem}[Restricted phase-coupling optimum]
+For a gate set whose cross-register entangling
+resources are rank-one binary parity products
+$(-1)^{u_k(a)v_k(b)}$, with local diagonal
+phase tables freely permitted, the minimum
+number of nonlocal binary terms is
+$\operatorname{rank}_{\mathbb F_2}B_G$.
+For the two geometries,
+\[
+\begin{array}{c|cc}
+&G=W(3,3)&G=Q(4,3)\\\hline
+\mathrm{rank}_{\mathbb F_2}A_G&16&10\\
+\mathrm{rank}_{\mathbb F_2}B_G&14&8\\
+\mathrm{alternating\ hyperbolic\ pairs}&7&4
+\end{array}.
+\]
+\end{theorem}
+\begin{proof}
+For any locally compensated binary phase table
+$D=A+f\mathbf1^{\mathsf T}
++\mathbf1g^{\mathsf T}
++cJ$, its double-centering is $B_G$.
+Double-centering is left and right
+multiplication by binary matrices,
+so $\mathrm{rank}(B_G)\le\mathrm{rank}(D)$.
+Every sum of $r$ separable binary parity
+products has rank at most $r$. Conversely,
+binary Gaussian elimination constructs
+$B_G=LR^{\mathsf T}$ of rank $r=\mathrm{rank}B_G$
+and the two omitted single-register phase
+tables exactly restore $A_G$. The code
+checks every one of the 1600 address pairs.
+The computed centered matrices are symmetric
+with zero diagonals, hence alternating;
+successive symplectic elimination gives
+\[
+B_G=\sum_{k=1}^{r/2}
+\left(x_ky_k^{\mathsf T}+y_kx_k^{\mathsf T}\right)
+\quad(\bmod 2).
+\]
+In the explicit GQ builders, elimination yields
+$r=14$ and $8$. Every reference address in
+each graph gives the same locally centered ranks.
+\end{proof}
+This is \emph{not} a lower bound for arbitrary
+quantum circuit libraries: an unrestricted
+local $O(40)$ can interchange these two states,
+and changing optical primitives or nonlocal
+computing resources changes the cost model.
+The 14 and eight terms are not counts of
+fabricated Mach--Zehnder interferometers.
+
+\section{Noncontiguous four-register recursion: negative control}
+For four independently addressable forty-state
+factors with the three nearest-neighbor
+controlled signs, consider the cut $(a,c)|(b,d)$.
+Let $S=J-2A$ and $H=S^2$. For
+\[
+|\Phi\rangle=\frac1{40^2}
+\sum_{a,b,c,d}S_{ab}S_{bc}S_{cd}|a,b,c,d\rangle,
+\]
+the reduced density matrix on $(a,c)$ satisfies
+\[
+(\rho_{ac})_{(a,c),(a',c')}=
+\frac{H_{cc'}}{40^4}
+\sum_b S_{ab}S_{a'b}S_{bc}S_{bc'}.
+\]
+The exact integer contraction of
+$\operatorname{tr}\rho_{ac}^2$ gives the same
+\[
+\boxed{\operatorname{tr}\rho_{ac}^2=0.0020128}
+\]
+for W and Q. In both graphs, for every ordered
+nonadjacent pair $(c,c')$, the associated
+signed-neighbor vector has $x^{\mathsf T}Ax=-32$.
+Thus this particular four-factor
+noncontiguous purity test is also blind
+to the geometry. We make no general claim
+for all multipartite partitions or all
+entanglement monotones.
+
+\section{Matched electronic phase-control references}
+The existing W33 registered mask controller
+was run through 4096 Icarus address combinations
+(1600 valid; 2496 invalid). The Q43 companion
+was generated with the same six-bit address
+ranges, valid gating, local correction outputs,
+and default Yosys/nextpnr settings.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Reference result & W33 & Q43\\
+\midrule
+Nonlocal binary cross products&14&8\\
+Symplectic pairs&7&4\\
+Yosys SB\_LUT4&172&115\\
+Yosys SB\_DFFR&19&13\\
+Yosys SB\_CARRY&4&4\\
+iCE40UP5K routed logic cells&182&125\\
+I/O resources (of 39)&34&28\\
+Valid/invalid oracle test vectors&1600/2496&1600/2496\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are \emph{classical phase metadata}
+generators, with different output widths and
+graph-label decoding. Resource comparisons
+therefore illustrate implementation costs
+for these \emph{specific} encodings, not
+a label-independent, gate-independent
+photonic efficiency theorem. Pin assignments
+were automatic, without board PCF or
+optoelectronic connections. nextpnr reported
+no meaningful internal-clock Fmax for
+these input-to-register controller designs.
+There is no measured optical actuation
+latency, photon storage, phase fidelity, or
+fault-tolerant entangling capability.
+
+\section{Scientific implication and next falsifier}
+A single photon's bipartite mode
+entanglement spectrum cannot by itself
+select W33 from its cospectral mate.
+Even a measured two-register state entropy
+matching $4.803856$ bits would be
+\emph{insufficient} evidence for unique
+W33 geometry, much less a theory of everything.
+A meaningful optical comparison needs a fixed
+address calibration, a specified restricted
+gate set, real controlled phases, and measured
+resource/error trade-offs; or it must use
+additional operator-algebraic/contextuality
+relations specific to the two-qutrit Pauli
+representation of W33. The latter is a
+different proposed experiment and remains open.
+
+\section{Prior art}
+\begin{itemize}
+\item Project repository Pass 76:
+\texttt{w33\_pass76\_cospectral\_mates.py};
+Pass 88: \texttt{w33\_pass88\_smith\_group.py};
+binary extension:
+\texttt{analysis/w33\_20260829\_adjacency\_sentinel\_extension.py}.
+\item Haemers and collaborators,
+\emph{Uniqueness of strongly regular graphs having
+minimal $p$-rank}; accessible preprint
+\url{https://research.tilburguniversity.edu/files/572103/uniquene.pdf}.
+\item Godsil and Royle, \emph{Algebraic Graph Theory},
+standard results on binary graph ranks
+and symplectic representations.
+\end{itemize}
+\end{document}
