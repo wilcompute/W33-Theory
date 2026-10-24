@@ -1,0 +1,66 @@
+{
+  "schema": "w33.phase_oracle.rank14.hardware_implementation_20261023.v1",
+  "date": "2026-10-23",
+  "repository": "wilcompute/W33-Theory",
+  "branch": "master",
+  "math": {
+    "preexisting_binary_adjacency_rank": 16,
+    "new_mod_local_gauge_rank": 14,
+    "seven_symplectic_pairs": true,
+    "lower_bound_for_binary_bilinear_couplings": 14,
+    "all_1600_phase_pairs_verified": true,
+    "all_40_reference_points_checked": true,
+    "origin_of_rank16_prior": "w33_pass88_smith_group.py; analysis/w33_20260829_adjacency_sentinel_extension.py"
+  },
+  "RTL": {
+    "compiler": "analysis/w33_phase_oracle_rank14_RTL_codegen_20261023.py",
+    "source": "hardware/w33_phase_oracle_rank14_20261023.sv",
+    "testbench": "hardware/tb_w33_phase_oracle_rank14_20261023.sv",
+    "icarus_pass": true,
+    "valid_addresses": 1600,
+    "invalid_addresses": 2496,
+    "total_address_pairs_tested": 4096,
+    "spec": "Classical control phase-mask flags, not a physical CZ gate"
+  },
+  "Yosys": {
+    "netlist": "data/w33_phase_oracle_rank14_ice40_20261023.json.gz",
+    "mapped_cells": {
+      "SB_LUT4": 172,
+      "SB_DFFR": 19,
+      "SB_CARRY": 4
+    },
+    "output_ports_and_input_ports_bit_total": 34,
+    "mapped_pass": true
+  },
+  "nextpnr": {
+    "target": "iCE40UP5K SG48",
+    "routed": true,
+    "return_code": 0,
+    "ICESTORM_LC_used": 182,
+    "ICESTORM_LC_available": 5280,
+    "SB_IO_used": 34,
+    "SB_IO_available": 39,
+    "nominal_clock_requested_MHz": 24,
+    "fmax_reported": null,
+    "timing_status": "No Fmax available; no interior timing paths found in design. External async->clock input-to-register delay without realistic source timing. Do NOT assert timing closed at 24 MHz for board.",
+    "board_PCF_supplied": false,
+    "auto_assigned_pins": true,
+    "no_electrical_pin_voltage_signoff": true
+  },
+  "compressed_artifacts": {
+    "netlist_gz_sha256": "b49b56a1cc72a621e1d4f3593c63dc997394d141851de0240ded1fe037aca15a",
+    "netlist_gz_bytes": 23263,
+    "unpinned_asc_gz_sha256": "fdb4a3ae33f6b09afe9dfdf0a679279c87ae612d751a175e7665a28ed3e14ad5",
+    "unpinned_asc_gz_bytes": 22349
+  },
+  "tests": {
+    "integrated_selected_python_modules": 8,
+    "passed": 52,
+    "failed": 0,
+    "elapsed_seconds": 27.08,
+    "full_repo_suite": false
+  },
+  "board_constraint": "data/w33_timebin_UP5K_board_pin_contract_20261023.json is incomplete and intentionally lists no actual pins; board pin contract is syntactic only.",
+  "optics": "No controlled optical phase gate, no 40-mode physical address decoder, no photon source or measurements, no quantum storage, no fault-tolerant inter-photon gate.",
+  "reproducer": "hardware/build_w33_phase_oracle_rank14_UP5K_20261023.ps1"
+}
