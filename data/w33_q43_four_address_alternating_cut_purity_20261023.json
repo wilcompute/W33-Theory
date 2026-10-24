@@ -1,0 +1,24 @@
+{
+  "Q43": {
+    "denominator": 6553600000000,
+    "method": "Exact integer reduction formula for noncontiguous a,c | b,d cut of nearest-neighbor four-factor pure phase tensor",
+    "nonadjacent_two_address_xAx_values": {
+      "-32": 1080
+    },
+    "purity": 0.0020128,
+    "purity_numerator": 13191086080
+  },
+  "W33": {
+    "denominator": 6553600000000,
+    "method": "Exact integer reduction formula for noncontiguous a,c | b,d cut of nearest-neighbor four-factor pure phase tensor",
+    "nonadjacent_two_address_xAx_values": {
+      "-32": 1080
+    },
+    "purity": 0.0020128,
+    "purity_numerator": 13191086080
+  },
+  "geometry_cut": "n4 path graph; odd-even factor cut (a,c)|(b,d)",
+  "numerators_different": false,
+  "physical_boundary": "Four independently addressable 40-state factors and three coherent cross-digit graph-controlled phase operations unbuilt",
+  "schema": "w33.q43.four_address_alternating_cut_purity.v1"
+}
