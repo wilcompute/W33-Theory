@@ -1,0 +1,35 @@
+{
+  "12271": {
+    "relabel": {
+      "('even', 'identical')": 60,
+      "('even', 'different')": 20,
+      "('odd', 'identical')": 80,
+      "('ctrl', 'different')": 39,
+      "('ctrl', 'identical')": 39,
+      "('ctrl', 'same sectors+dims')": 2
+    },
+    "odd_consistent": {
+      "identical": 80
+    }
+  },
+  "12272": {
+    "2": 22,
+    "3": 12,
+    "4": 4,
+    "1": 2
+  },
+  "12272_stock_vs_repairs": {
+    "('different spectrum', 'different spectrum', 'identical')": 9,
+    "('identical', 'different spectrum', 'different spectrum')": 2,
+    "('different spectrum', 'different spectrum', 'different spectrum')": 21,
+    "('identical', 'identical', 'identical')": 3,
+    "('different spectrum', 'identical', 'different spectrum')": 5
+  },
+  "checks": {
+    "12271: odd order 80/80 + 80/80 invariant; even order 60/80 (weak) and 39/80 (consistent)": true,
+    "12271: every order-2 input is lenient-only and both repairs are strict-consistent (40 + 80)": true,
+    "12272: distinct consistent spectra per input 1/2/3/4 for 2/22/12/4 inputs": true,
+    "12272: stock output of an order-2 input agrees with neither repair in 30/40, with both in 3": true
+  },
+  "all_checks_pass": true
+}

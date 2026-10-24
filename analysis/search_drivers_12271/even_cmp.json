@@ -1,0 +1,731 @@
+{
+ "summary": {
+  "('different spectrum', 'different spectrum', 'identical')": 9,
+  "('identical', 'different spectrum', 'different spectrum')": 2,
+  "('different spectrum', 'different spectrum', 'different spectrum')": 21,
+  "('identical', 'identical', 'identical')": 3,
+  "('different spectrum', 'identical', 'different spectrum')": 5
+ },
+ "rows": [
+  {
+   "i": 0,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    648
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ]
+  },
+  {
+   "i": 1,
+   "o_s0": "identical",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A4 and A3 + A3",
+    1132
+   ],
+   "s0": [
+    "GAUGE A4 and A3 + A3",
+    1132
+   ],
+   "s1": [
+    "GAUGE A4 and A3 + A3",
+    1132
+   ]
+  },
+  {
+   "i": 2,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A4 and A3 + A3",
+    692
+   ],
+   "s0": [
+    "GAUGE A4 and A3 + A3",
+    964
+   ],
+   "s1": [
+    "GAUGE A4 and A3 + A3",
+    964
+   ]
+  },
+  {
+   "i": 3,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A4 and A3 + A3",
+    740
+   ],
+   "s0": [
+    "GAUGE A4 and A3 + A3",
+    964
+   ],
+   "s1": [
+    "GAUGE A4 and A3 + A3",
+    1060
+   ]
+  },
+  {
+   "i": 4,
+   "o_s0": "identical",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ]
+  },
+  {
+   "i": 5,
+   "o_s0": "identical",
+   "o_s1": "identical",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ]
+  },
+  {
+   "i": 6,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    648
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ]
+  },
+  {
+   "i": 7,
+   "o_s0": "identical",
+   "o_s1": "identical",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ]
+  },
+  {
+   "i": 8,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    636
+   ],
+   "s0": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    764
+   ],
+   "s1": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    796
+   ]
+  },
+  {
+   "i": 9,
+   "o_s0": "different spectrum",
+   "o_s1": "identical",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ]
+  },
+  {
+   "i": 10,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    620
+   ],
+   "s0": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    766
+   ],
+   "s1": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    764
+   ]
+  },
+  {
+   "i": 11,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A2 + A1 and A5 + A1",
+    862
+   ],
+   "s0": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1214
+   ],
+   "s1": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1198
+   ]
+  },
+  {
+   "i": 12,
+   "o_s0": "different spectrum",
+   "o_s1": "identical",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1350
+   ],
+   "s0": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1350
+   ],
+   "s1": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1350
+   ]
+  },
+  {
+   "i": 13,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A2 + A1 and A5 + A1",
+    916
+   ],
+   "s0": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1316
+   ],
+   "s1": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1316
+   ]
+  },
+  {
+   "i": 14,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A1 + A1 + A1 + A1 and D6 + A1 + A1",
+    816
+   ],
+   "s0": [
+    "GAUGE A1 + A1 + A1 + A1 and D6 + A1 + A1",
+    1008
+   ],
+   "s1": [
+    "GAUGE A1 + A1 + A1 + A1 and D6 + A1 + A1",
+    1136
+   ]
+  },
+  {
+   "i": 15,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE A1 + A1 and D5",
+    1278
+   ],
+   "s0": [
+    "GAUGE A1 + A1 and D5",
+    1854
+   ],
+   "s1": [
+    "GAUGE A1 + A1 and D5",
+    1854
+   ]
+  },
+  {
+   "i": 16,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A2 + A1 and A5 + A1",
+    862
+   ],
+   "s0": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1214
+   ],
+   "s1": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1198
+   ]
+  },
+  {
+   "i": 17,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE A1 + A1 + A1 + A1 and D6 + A1 + A1",
+    816
+   ],
+   "s0": [
+    "GAUGE A1 + A1 + A1 + A1 and D6 + A1 + A1",
+    1008
+   ],
+   "s1": [
+    "GAUGE A1 + A1 + A1 + A1 and D6 + A1 + A1",
+    1008
+   ]
+  },
+  {
+   "i": 18,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE A4 and A3 + A3",
+    740
+   ],
+   "s0": [
+    "GAUGE A4 and A3 + A3",
+    964
+   ],
+   "s1": [
+    "GAUGE A4 and A3 + A3",
+    964
+   ]
+  },
+  {
+   "i": 19,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE A4 and A3 + A3",
+    740
+   ],
+   "s0": [
+    "GAUGE A4 and A3 + A3",
+    1060
+   ],
+   "s1": [
+    "GAUGE A4 and A3 + A3",
+    1060
+   ]
+  },
+  {
+   "i": 20,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A2 + A1 and A5 + A1",
+    854
+   ],
+   "s0": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1198
+   ],
+   "s1": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1198
+   ]
+  },
+  {
+   "i": 21,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE A1 + A1 and D5",
+    1278
+   ],
+   "s0": [
+    "GAUGE A1 + A1 and D5",
+    1854
+   ],
+   "s1": [
+    "GAUGE A1 + A1 and D5",
+    1854
+   ]
+  },
+  {
+   "i": 22,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A4 and A3 + A3",
+    740
+   ],
+   "s0": [
+    "GAUGE A4 and A3 + A3",
+    964
+   ],
+   "s1": [
+    "GAUGE A4 and A3 + A3",
+    1060
+   ]
+  },
+  {
+   "i": 23,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    648
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ]
+  },
+  {
+   "i": 24,
+   "o_s0": "identical",
+   "o_s1": "identical",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ]
+  },
+  {
+   "i": 25,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE A1 + A1 and D5",
+    1252
+   ],
+   "s0": [
+    "GAUGE A1 + A1 and D5",
+    1854
+   ],
+   "s1": [
+    "GAUGE A1 + A1 and D5",
+    1854
+   ]
+  },
+  {
+   "i": 26,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    648
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ]
+  },
+  {
+   "i": 27,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A1 + A1 and D5",
+    1252
+   ],
+   "s0": [
+    "GAUGE A1 + A1 and D5",
+    1854
+   ],
+   "s1": [
+    "GAUGE A1 + A1 and D5",
+    1828
+   ]
+  },
+  {
+   "i": 28,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    648
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ]
+  },
+  {
+   "i": 29,
+   "o_s0": "different spectrum",
+   "o_s1": "identical",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1350
+   ],
+   "s0": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1350
+   ],
+   "s1": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1350
+   ]
+  },
+  {
+   "i": 30,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    636
+   ],
+   "s0": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    764
+   ],
+   "s1": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    862
+   ]
+  },
+  {
+   "i": 31,
+   "o_s0": "different spectrum",
+   "o_s1": "identical",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    968
+   ]
+  },
+  {
+   "i": 32,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE D4 and D8",
+    664
+   ],
+   "s0": [
+    "GAUGE D4 and D8",
+    982
+   ],
+   "s1": [
+    "GAUGE D4 and D8",
+    982
+   ]
+  },
+  {
+   "i": 33,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A3 and A7",
+    778
+   ],
+   "s0": [
+    "GAUGE A3 and A7",
+    1162
+   ],
+   "s1": [
+    "GAUGE A3 and A7",
+    1050
+   ]
+  },
+  {
+   "i": 34,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and D4 + D4",
+    584
+   ],
+   "s0": [
+    "GAUGE D5 and D4 + D4",
+    792
+   ],
+   "s1": [
+    "GAUGE D5 and D4 + D4",
+    792
+   ]
+  },
+  {
+   "i": 35,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    648
+   ],
+   "s0": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ],
+   "s1": [
+    "GAUGE D5 and A1 + A1 + A1 + A1 + A1 + A1 + A1 + A1",
+    840
+   ]
+  },
+  {
+   "i": 36,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A2 + A1 and A5 + A1",
+    862
+   ],
+   "s0": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1198
+   ],
+   "s1": [
+    "GAUGE A2 + A1 and A5 + A1",
+    1198
+   ]
+  },
+  {
+   "i": 37,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A4 and A3 + A3",
+    740
+   ],
+   "s0": [
+    "GAUGE A4 and A3 + A3",
+    1060
+   ],
+   "s1": [
+    "GAUGE A4 and A3 + A3",
+    964
+   ]
+  },
+  {
+   "i": 38,
+   "o_s0": "different spectrum",
+   "o_s1": "different spectrum",
+   "s0_s1": "identical",
+   "o": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    636
+   ],
+   "s0": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    764
+   ],
+   "s1": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    764
+   ]
+  },
+  {
+   "i": 39,
+   "o_s0": "different spectrum",
+   "o_s1": "identical",
+   "s0_s1": "different spectrum",
+   "o": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    884
+   ],
+   "s0": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    840
+   ],
+   "s1": [
+    "GAUGE A3 + A1 + A1 and D4 + A1 + A1 + A1 + A1",
+    884
+   ]
+  }
+ ]
+}

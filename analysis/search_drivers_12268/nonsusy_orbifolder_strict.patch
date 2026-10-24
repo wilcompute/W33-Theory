@@ -1,0 +1,29 @@
+--- /home/wiljd/orb/nonSUSYorbifolder/src/orbifolder/corbifoldgroup.cpp	2026-09-28 09:58:58.736803403 -0400
++++ corbifoldgroup_strict.cpp	2026-10-23 19:55:49.375323396 -0400
+@@ -554,11 +554,7 @@
+ 	this->CreateModelDependentPart(Print, true);
+ 	if (this->OrbifoldGroup_CheckStatus != CheckedAndGood)
+ 	{
+-	   if(verbose)
+-	   {
+-		cout << "\n  Warning in bool CRandomModel::Create() : Orbifold group ill-defined." << endl;
+-		return false;
+-	   }
++	   if (verbose) cout << "\n  Warning in bool CRandomModel::Create() : Orbifold group ill-defined." << endl; return false;
+ 	}
+ 	return true;
+ }
+@@ -1334,12 +1330,7 @@
+ 
+ 					if (!is_even(sp))
+ 					{
+-						if (info)
+-						if(verbose)
+-						{
+-							(*Print.out) << "\n  " << SP_factors[i+3][j+3] << " W_" << i+1 << " x W_" << j+1 << " = " << sp << " = 0 mod 2 failed!" << flush;
+-						IsModularInvariant = false;
+-					    } 
++						if (info) (*Print.out) << "\n  " << SP_factors[i+3][j+3] << " W_" << i+1 << " x W_" << j+1 << " = " << sp << " = 0 mod 2 failed!" << flush; IsModularInvariant = false; 
+ 					}
+ 				}
+ 			}

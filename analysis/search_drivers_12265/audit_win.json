@@ -1,0 +1,220 @@
+{
+ "C:/tmp/toe_round/orb/m87 | Geometry_Z6-I_G2xG2xSU3.txt": {
+  "models": 87,
+  "consistent": 87
+ },
+ "C:/tmp/toe_round/orb/z6ii | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 128,
+  "consistent": 128
+ },
+ "C:/tmp/toe_round/prov | Geometry_Z3_1_1.txt": {
+  "models": 600,
+  "consistent": 599,
+  "fail_7f": 1
+ },
+ "C:/tmp/toe_round/resc | Geometry_NSO_Z3_1_1.txt": {
+  "models": 387,
+  "consistent": 387
+ },
+ "C:/tmp/toe_round/resc | Geometry_Z3_1_1.txt": {
+  "models": 774,
+  "consistent": 774
+ },
+ "C:/tmp/toe_round/split10 | Geometry_NSO_Z3_1_1.txt": {
+  "models": 109,
+  "consistent": 108,
+  "fail_7f": 1
+ },
+ "C:/tmp/toe_round/split10 | Geometry_Z3_1_1.txt": {
+  "models": 338,
+  "consistent": 335,
+  "fail_7f": 3
+ },
+ "C:/tmp/toe_round/stype | Geometry_Z2xZ6-I_SO4xG2xG2.txt": {
+  "models": 29,
+  "consistent": 26,
+  "fail_7d": 3,
+  "fail_7f": 1
+ },
+ "C:/tmp/toe_round/stype | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 2,
+  "consistent": 2
+ },
+ "C:/tmp/toe_round/stype/a8 | Geometry_Z3_1_1.txt": {
+  "models": 104,
+  "consistent": 104
+ },
+ "C:/tmp/toe_round/stype/a8all | Geometry_Z3_1_1.txt": {
+  "models": 104,
+  "consistent": 104
+ },
+ "C:/tmp/toe_round/stype/cand10 | Geometry_Z3_1_1.txt": {
+  "models": 468,
+  "consistent": 89,
+  "fail_7f": 238,
+  "fail_7d": 306
+ },
+ "C:/tmp/toe_round/stype/flipscan | Geometry_Z3_1_1.txt": {
+  "models": 200,
+  "consistent": 38,
+  "fail_7d": 136,
+  "fail_7f": 95
+ },
+ "C:/tmp/toe_round/stype/flipscan2 | Geometry_Z3_1_1.txt": {
+  "models": 430,
+  "consistent": 86,
+  "fail_7f": 214,
+  "fail_7d": 266
+ },
+ "C:/tmp/toe_round/stype/nsmodels | Geometry_Z3_1_1_N0.txt": {
+  "models": 24,
+  "consistent": 24
+ },
+ "C:/tmp/toe_round/stype/nswl | Geometry_Z3_1_1.txt": {
+  "models": 9,
+  "consistent": 9
+ },
+ "C:/tmp/toe_round/stype/nswl | Geometry_Z3_1_1_N0.txt": {
+  "models": 65,
+  "consistent": 14,
+  "fail_7d": 51,
+  "fail_7f": 12
+ },
+ "C:/tmp/toe_round/stype/smwl | Geometry_Z3_1_1.txt": {
+  "models": 60,
+  "consistent": 9,
+  "fail_7d": 41,
+  "fail_7f": 30
+ },
+ "C:/tmp/toe_round/stype/smwl3 | Geometry_Z3_1_1.txt": {
+  "models": 120,
+  "consistent": 6,
+  "fail_7f": 104,
+  "fail_7d": 64
+ },
+ "C:/tmp/toe_round/stype/smwl4 | Geometry_Z3_1_1.txt": {
+  "models": 250,
+  "consistent": 23,
+  "fail_7d": 172,
+  "fail_7f": 192
+ },
+ "C:/tmp/toe_round/stype/z6models | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 36,
+  "consistent": 12,
+  "fail_7d": 24,
+  "fail_7f": 1
+ },
+ "C:/tmp/toe_round/stype/z6models2 | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 36,
+  "consistent": 36
+ },
+ "C:/tmp/toe_round/susy | Geometry_Z3_SU3^3.txt": {
+  "models": 4,
+  "consistent": 4
+ },
+ "C:/tmp/toe_wt/analysis/orbifolder_n0_drivers/split10_bases | Geometry_Z3_1_1.txt": {
+  "models": 9,
+  "consistent": 9
+ },
+ "C:/tmp/toe_wt/analysis/orbifolder_n0_drivers/susy_z3_bases | Geometry_Z3_SU3^3.txt": {
+  "models": 4,
+  "consistent": 4
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12101 | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 2,
+  "consistent": 2
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12101/models | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 36,
+  "consistent": 12,
+  "fail_7d": 24,
+  "fail_7f": 1
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12106 | Geometry_Z3_1_1_N0.txt": {
+  "models": 1,
+  "consistent": 1
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12106/models | Geometry_Z3_1_1_N0.txt": {
+  "models": 24,
+  "consistent": 24
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12109 | Geometry_Z6-I_G2xG2xSU3.txt": {
+  "models": 87,
+  "consistent": 87
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12111 | Geometry_Z3_1_1.txt": {
+  "models": 9,
+  "consistent": 9
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12111 | Geometry_Z3_1_1_N0.txt": {
+  "models": 9,
+  "consistent": 9
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12116/smwl | Geometry_Z3_1_1.txt": {
+  "models": 60,
+  "consistent": 9,
+  "fail_7d": 41,
+  "fail_7f": 30
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12116/z6models2 | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 36,
+  "consistent": 36
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12121/smwl3 | Geometry_Z3_1_1.txt": {
+  "models": 120,
+  "consistent": 6,
+  "fail_7f": 104,
+  "fail_7d": 64
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12126/a8 | Geometry_Z3_1_1.txt": {
+  "models": 104,
+  "consistent": 104
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12131/smwl4 | Geometry_Z3_1_1.txt": {
+  "models": 250,
+  "consistent": 23,
+  "fail_7d": 172,
+  "fail_7f": 192
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12156/flipscan | Geometry_Z3_1_1.txt": {
+  "models": 200,
+  "consistent": 38,
+  "fail_7d": 136,
+  "fail_7f": 95
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12162/flipscan2 | Geometry_Z3_1_1.txt": {
+  "models": 301,
+  "consistent": 58,
+  "fail_7f": 156,
+  "fail_7d": 179
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12205 | Geometry_Z6-II_G2xSU3xSU2^2.txt": {
+  "models": 128,
+  "consistent": 128
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12230 | Geometry_Z6-II_1_1.txt": {
+  "models": 1,
+  "consistent": 1
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12237 | Geometry_Z3_1_1.txt": {
+  "models": 3,
+  "consistent": 3
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12238 | Geometry_Z6-II_1_1.txt": {
+  "models": 2,
+  "consistent": 2
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12248 | Geometry_Z6-II_N0.txt": {
+  "models": 1,
+  "consistent": 1
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12254 | Geometry_Z3_1_1.txt": {
+  "models": 1,
+  "consistent": 1
+ },
+ "C:/tmp/toe_wt/analysis/search_drivers_12254 | Geometry_Z3_1_1_N0.txt": {
+  "models": 5,
+  "consistent": 4,
+  "fail_7f": 1
+ }
+}

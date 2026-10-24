@@ -1,0 +1,132 @@
+{
+  "12265": {
+    "lenient=1 strict=1 audit=ok": 416,
+    "lenient=1 strict=1 audit=parse": 2018,
+    "lenient=0 strict=0 audit=7d+7f": 953,
+    "lenient=1 strict=0 audit=7f": 497,
+    "lenient=0 strict=0 audit=7d": 624,
+    "lenient=0 strict=0 audit=ok": 6
+  },
+  "12266": {
+    "C10_N001_F1_04_1062_34": {
+      "v2": {},
+      "nso": null,
+      "v2_tens": {},
+      "nso_tens": {},
+      "v2_local_condition_failures": 0
+    },
+    "C10_N001_F1_04_111_59": {
+      "v2": {
+        "Z3^0": 52,
+        "Z3^2": 207,
+        "Z3^1": 207
+      },
+      "nso": {
+        "Z3^0": 52,
+        "Z3^2": 207,
+        "Z3^1": 207,
+        "W Z3^0": 24,
+        "W Z3^1": 87,
+        "W Z3^2": 87,
+        "Z3^0 gravity": 4
+      },
+      "v2_tens": {},
+      "nso_tens": {
+        "W Z3^1": 3,
+        "W Z3^2": 3
+      },
+      "v2_local_condition_failures": 55
+    },
+    "C10_N001_F1_04_203_2682": {
+      "v2": {
+        "Z3^0": 58,
+        "Z3^2": 177,
+        "Z3^1": 177
+      },
+      "nso": {
+        "Z3^0": 58,
+        "Z3^2": 177,
+        "Z3^1": 177,
+        "W Z3^0": 24,
+        "W Z3^1": 99,
+        "W Z3^2": 99,
+        "Z3^0 gravity": 4
+      },
+      "v2_tens": {
+        "Z3^0": 6
+      },
+      "nso_tens": {
+        "Z3^0": 6,
+        "W Z3^1": 3,
+        "W Z3^2": 3
+      },
+      "v2_local_condition_failures": 55
+    },
+    "C10_N001_F1_04_215_2682": {
+      "v2": {
+        "Z3^0": 58,
+        "Z3^2": 177,
+        "Z3^1": 177
+      },
+      "nso": {
+        "Z3^0": 58,
+        "Z3^2": 177,
+        "Z3^1": 177,
+        "W Z3^0": 24,
+        "W Z3^1": 99,
+        "W Z3^2": 99,
+        "Z3^0 gravity": 4
+      },
+      "v2_tens": {
+        "Z3^0": 6
+      },
+      "nso_tens": {
+        "Z3^0": 6,
+        "W Z3^1": 3,
+        "W Z3^2": 3
+      },
+      "v2_local_condition_failures": 55
+    },
+    "ctrl": {
+      "v2": {
+        "Z3^0": 92,
+        "Z3^2": 261,
+        "Z3^1": 261
+      },
+      "nso": {
+        "Z3^0": 92,
+        "Z3^2": 261,
+        "Z3^1": 261,
+        "W Z3^0": 54,
+        "W Z3^1": 72,
+        "W Z3^2": 72,
+        "Z3^0 gravity": 4
+      },
+      "v2_tens": {
+        "Z3^0": 6
+      },
+      "nso_tens": {
+        "Z3^0": 6,
+        "W Z3^0": 10
+      },
+      "v2_local_condition_failures": 55
+    }
+  },
+  "12267": {
+    "(0, 'identical')": 497,
+    "(1, 'identical')": 486
+  },
+  "12267_T115_identical": true,
+  "12268_gate": {
+    "('gatePASS', 'strict=1')": 2434,
+    "('gateFAIL', 'strict=0')": 2074,
+    "('gatePASS', 'strict=0')": 6
+  },
+  "checks": {
+    "12265: lenient-only <=> (7f)-only (497); (7d) <=> rejected by both (1577); clean <=> accepted (2434) up to 6 (7c) inputs": true,
+    "12266: engines agree sector by sector off the Witten-twisted sectors; v2 has none (55 local-condition drops)": true,
+    "12267: all 497 lenient-only models repaired; stock spectrum = repair spectrum in 983/983": true,
+    "12268: patch moves the failure flag out of the verbose branch; gate = strict engine on 4508/4514": true
+  },
+  "all_checks_pass": true
+}

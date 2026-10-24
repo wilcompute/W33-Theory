@@ -1,0 +1,5 @@
+{
+ "('gatePASS', 'strict=1')": 2434,
+ "('gateFAIL', 'strict=0')": 2074,
+ "('gatePASS', 'strict=0')": 6
+}

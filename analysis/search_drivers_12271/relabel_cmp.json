@@ -1,0 +1,1212 @@
+{
+ "summary": {
+  "('even', 'identical')": 60,
+  "('even', 'different')": 20,
+  "('odd', 'identical')": 80,
+  "('ctrl', 'different')": 39,
+  "('ctrl', 'identical')": 39,
+  "('ctrl', 'same sectors+dims')": 2
+ },
+ "per": {
+  "even000_r0": [
+   "identical",
+   648,
+   648
+  ],
+  "even000_r1": [
+   "identical",
+   648,
+   648
+  ],
+  "even001_r0": [
+   "different",
+   1132,
+   908
+  ],
+  "even001_r1": [
+   "identical",
+   1132,
+   1132
+  ],
+  "even002_r0": [
+   "different",
+   692,
+   644
+  ],
+  "even002_r1": [
+   "different",
+   692,
+   644
+  ],
+  "even003_r0": [
+   "identical",
+   740,
+   740
+  ],
+  "even003_r1": [
+   "identical",
+   740,
+   740
+  ],
+  "even004_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "even004_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "even005_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "even005_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "even006_r0": [
+   "different",
+   648,
+   520
+  ],
+  "even006_r1": [
+   "identical",
+   648,
+   648
+  ],
+  "even007_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "even007_r1": [
+   "different",
+   968,
+   712
+  ],
+  "even008_r0": [
+   "identical",
+   636,
+   636
+  ],
+  "even008_r1": [
+   "identical",
+   636,
+   636
+  ],
+  "even009_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "even009_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "even010_r0": [
+   "identical",
+   620,
+   620
+  ],
+  "even010_r1": [
+   "identical",
+   620,
+   620
+  ],
+  "even011_r0": [
+   "different",
+   862,
+   798
+  ],
+  "even011_r1": [
+   "identical",
+   862,
+   862
+  ],
+  "even012_r0": [
+   "identical",
+   1350,
+   1350
+  ],
+  "even012_r1": [
+   "identical",
+   1350,
+   1350
+  ],
+  "even013_r0": [
+   "identical",
+   916,
+   916
+  ],
+  "even013_r1": [
+   "identical",
+   916,
+   916
+  ],
+  "even014_r0": [
+   "different",
+   816,
+   688
+  ],
+  "even014_r1": [
+   "identical",
+   816,
+   816
+  ],
+  "even015_r0": [
+   "identical",
+   1278,
+   1278
+  ],
+  "even015_r1": [
+   "identical",
+   1278,
+   1278
+  ],
+  "even016_r0": [
+   "identical",
+   862,
+   862
+  ],
+  "even016_r1": [
+   "identical",
+   862,
+   862
+  ],
+  "even017_r0": [
+   "identical",
+   816,
+   816
+  ],
+  "even017_r1": [
+   "identical",
+   816,
+   816
+  ],
+  "even018_r0": [
+   "identical",
+   740,
+   740
+  ],
+  "even018_r1": [
+   "identical",
+   740,
+   740
+  ],
+  "even019_r0": [
+   "identical",
+   740,
+   740
+  ],
+  "even019_r1": [
+   "different",
+   740,
+   692
+  ],
+  "even020_r0": [
+   "identical",
+   854,
+   854
+  ],
+  "even020_r1": [
+   "identical",
+   854,
+   854
+  ],
+  "even021_r0": [
+   "identical",
+   1278,
+   1278
+  ],
+  "even021_r1": [
+   "identical",
+   1278,
+   1278
+  ],
+  "even022_r0": [
+   "identical",
+   740,
+   740
+  ],
+  "even022_r1": [
+   "identical",
+   740,
+   740
+  ],
+  "even023_r0": [
+   "different",
+   648,
+   520
+  ],
+  "even023_r1": [
+   "identical",
+   648,
+   648
+  ],
+  "even024_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "even024_r1": [
+   "different",
+   968,
+   712
+  ],
+  "even025_r0": [
+   "identical",
+   1252,
+   1252
+  ],
+  "even025_r1": [
+   "different",
+   1252,
+   1188
+  ],
+  "even026_r0": [
+   "identical",
+   648,
+   648
+  ],
+  "even026_r1": [
+   "identical",
+   648,
+   648
+  ],
+  "even027_r0": [
+   "different",
+   1252,
+   1188
+  ],
+  "even027_r1": [
+   "identical",
+   1252,
+   1252
+  ],
+  "even028_r0": [
+   "identical",
+   648,
+   648
+  ],
+  "even028_r1": [
+   "identical",
+   648,
+   648
+  ],
+  "even029_r0": [
+   "different",
+   1350,
+   1222
+  ],
+  "even029_r1": [
+   "different",
+   1350,
+   1222
+  ],
+  "even030_r0": [
+   "identical",
+   636,
+   636
+  ],
+  "even030_r1": [
+   "identical",
+   636,
+   636
+  ],
+  "even031_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "even031_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "even032_r0": [
+   "different",
+   664,
+   568
+  ],
+  "even032_r1": [
+   "different",
+   664,
+   568
+  ],
+  "even033_r0": [
+   "identical",
+   778,
+   778
+  ],
+  "even033_r1": [
+   "different",
+   778,
+   730
+  ],
+  "even034_r0": [
+   "identical",
+   584,
+   584
+  ],
+  "even034_r1": [
+   "identical",
+   584,
+   584
+  ],
+  "even035_r0": [
+   "different",
+   648,
+   520
+  ],
+  "even035_r1": [
+   "different",
+   648,
+   520
+  ],
+  "even036_r0": [
+   "identical",
+   862,
+   862
+  ],
+  "even036_r1": [
+   "identical",
+   862,
+   862
+  ],
+  "even037_r0": [
+   "identical",
+   740,
+   740
+  ],
+  "even037_r1": [
+   "identical",
+   740,
+   740
+  ],
+  "even038_r0": [
+   "identical",
+   636,
+   636
+  ],
+  "even038_r1": [
+   "different",
+   636,
+   524
+  ],
+  "even039_r0": [
+   "identical",
+   884,
+   884
+  ],
+  "even039_r1": [
+   "identical",
+   884,
+   884
+  ],
+  "odd0000_r0": [
+   "identical",
+   716,
+   716
+  ],
+  "odd0000_r1": [
+   "identical",
+   716,
+   716
+  ],
+  "odd0001_r0": [
+   "identical",
+   854,
+   854
+  ],
+  "odd0001_r1": [
+   "identical",
+   854,
+   854
+  ],
+  "odd0002_r0": [
+   "identical",
+   812,
+   812
+  ],
+  "odd0002_r1": [
+   "identical",
+   812,
+   812
+  ],
+  "odd0003_r0": [
+   "identical",
+   854,
+   854
+  ],
+  "odd0003_r1": [
+   "identical",
+   854,
+   854
+  ],
+  "odd0004_r0": [
+   "identical",
+   766,
+   766
+  ],
+  "odd0004_r1": [
+   "identical",
+   766,
+   766
+  ],
+  "odd0005_r0": [
+   "identical",
+   782,
+   782
+  ],
+  "odd0005_r1": [
+   "identical",
+   782,
+   782
+  ],
+  "odd0006_r0": [
+   "identical",
+   824,
+   824
+  ],
+  "odd0006_r1": [
+   "identical",
+   824,
+   824
+  ],
+  "odd0007_r0": [
+   "identical",
+   740,
+   740
+  ],
+  "odd0007_r1": [
+   "identical",
+   740,
+   740
+  ],
+  "odd0008_r0": [
+   "identical",
+   864,
+   864
+  ],
+  "odd0008_r1": [
+   "identical",
+   864,
+   864
+  ],
+  "odd0009_r0": [
+   "identical",
+   806,
+   806
+  ],
+  "odd0009_r1": [
+   "identical",
+   806,
+   806
+  ],
+  "odd0010_r0": [
+   "identical",
+   664,
+   664
+  ],
+  "odd0010_r1": [
+   "identical",
+   664,
+   664
+  ],
+  "odd0011_r0": [
+   "identical",
+   776,
+   776
+  ],
+  "odd0011_r1": [
+   "identical",
+   776,
+   776
+  ],
+  "odd0012_r0": [
+   "identical",
+   784,
+   784
+  ],
+  "odd0012_r1": [
+   "identical",
+   784,
+   784
+  ],
+  "odd0013_r0": [
+   "identical",
+   780,
+   780
+  ],
+  "odd0013_r1": [
+   "identical",
+   780,
+   780
+  ],
+  "odd0014_r0": [
+   "identical",
+   798,
+   798
+  ],
+  "odd0014_r1": [
+   "identical",
+   798,
+   798
+  ],
+  "odd0015_r0": [
+   "identical",
+   770,
+   770
+  ],
+  "odd0015_r1": [
+   "identical",
+   770,
+   770
+  ],
+  "odd0016_r0": [
+   "identical",
+   824,
+   824
+  ],
+  "odd0016_r1": [
+   "identical",
+   824,
+   824
+  ],
+  "odd0017_r0": [
+   "identical",
+   784,
+   784
+  ],
+  "odd0017_r1": [
+   "identical",
+   784,
+   784
+  ],
+  "odd0018_r0": [
+   "identical",
+   836,
+   836
+  ],
+  "odd0018_r1": [
+   "identical",
+   836,
+   836
+  ],
+  "odd0019_r0": [
+   "identical",
+   760,
+   760
+  ],
+  "odd0019_r1": [
+   "identical",
+   760,
+   760
+  ],
+  "odd0020_r0": [
+   "identical",
+   842,
+   842
+  ],
+  "odd0020_r1": [
+   "identical",
+   842,
+   842
+  ],
+  "odd0021_r0": [
+   "identical",
+   840,
+   840
+  ],
+  "odd0021_r1": [
+   "identical",
+   840,
+   840
+  ],
+  "odd0022_r0": [
+   "identical",
+   812,
+   812
+  ],
+  "odd0022_r1": [
+   "identical",
+   812,
+   812
+  ],
+  "odd0023_r0": [
+   "identical",
+   846,
+   846
+  ],
+  "odd0023_r1": [
+   "identical",
+   846,
+   846
+  ],
+  "odd0024_r0": [
+   "identical",
+   756,
+   756
+  ],
+  "odd0024_r1": [
+   "identical",
+   756,
+   756
+  ],
+  "odd0025_r0": [
+   "identical",
+   776,
+   776
+  ],
+  "odd0025_r1": [
+   "identical",
+   776,
+   776
+  ],
+  "odd0026_r0": [
+   "identical",
+   846,
+   846
+  ],
+  "odd0026_r1": [
+   "identical",
+   846,
+   846
+  ],
+  "odd0027_r0": [
+   "identical",
+   832,
+   832
+  ],
+  "odd0027_r1": [
+   "identical",
+   832,
+   832
+  ],
+  "odd0028_r0": [
+   "identical",
+   710,
+   710
+  ],
+  "odd0028_r1": [
+   "identical",
+   710,
+   710
+  ],
+  "odd0029_r0": [
+   "identical",
+   788,
+   788
+  ],
+  "odd0029_r1": [
+   "identical",
+   788,
+   788
+  ],
+  "odd0030_r0": [
+   "identical",
+   836,
+   836
+  ],
+  "odd0030_r1": [
+   "identical",
+   836,
+   836
+  ],
+  "odd0031_r0": [
+   "identical",
+   804,
+   804
+  ],
+  "odd0031_r1": [
+   "identical",
+   804,
+   804
+  ],
+  "odd0032_r0": [
+   "identical",
+   820,
+   820
+  ],
+  "odd0032_r1": [
+   "identical",
+   820,
+   820
+  ],
+  "odd0033_r0": [
+   "identical",
+   850,
+   850
+  ],
+  "odd0033_r1": [
+   "identical",
+   850,
+   850
+  ],
+  "odd0034_r0": [
+   "identical",
+   806,
+   806
+  ],
+  "odd0034_r1": [
+   "identical",
+   806,
+   806
+  ],
+  "odd0035_r0": [
+   "identical",
+   812,
+   812
+  ],
+  "odd0035_r1": [
+   "identical",
+   812,
+   812
+  ],
+  "odd0036_r0": [
+   "identical",
+   826,
+   826
+  ],
+  "odd0036_r1": [
+   "identical",
+   826,
+   826
+  ],
+  "odd0037_r0": [
+   "identical",
+   804,
+   804
+  ],
+  "odd0037_r1": [
+   "identical",
+   804,
+   804
+  ],
+  "odd0038_r0": [
+   "identical",
+   828,
+   828
+  ],
+  "odd0038_r1": [
+   "identical",
+   828,
+   828
+  ],
+  "odd0039_r0": [
+   "identical",
+   828,
+   828
+  ],
+  "odd0039_r1": [
+   "identical",
+   828,
+   828
+  ],
+  "ctrl000_r0": [
+   "different",
+   840,
+   840
+  ],
+  "ctrl000_r1": [
+   "identical",
+   840,
+   840
+  ],
+  "ctrl001_r0": [
+   "different",
+   1132,
+   908
+  ],
+  "ctrl001_r1": [
+   "identical",
+   1132,
+   1132
+  ],
+  "ctrl002_r0": [
+   "different",
+   964,
+   916
+  ],
+  "ctrl002_r1": [
+   "different",
+   964,
+   916
+  ],
+  "ctrl003_r0": [
+   "different",
+   964,
+   1060
+  ],
+  "ctrl003_r1": [
+   "different",
+   964,
+   1060
+  ],
+  "ctrl004_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl004_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl005_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl005_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl006_r0": [
+   "different",
+   840,
+   712
+  ],
+  "ctrl006_r1": [
+   "identical",
+   840,
+   840
+  ],
+  "ctrl007_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl007_r1": [
+   "different",
+   968,
+   712
+  ],
+  "ctrl008_r0": [
+   "different",
+   764,
+   796
+  ],
+  "ctrl008_r1": [
+   "different",
+   764,
+   796
+  ],
+  "ctrl009_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl009_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl010_r0": [
+   "identical",
+   766,
+   766
+  ],
+  "ctrl010_r1": [
+   "different",
+   766,
+   734
+  ],
+  "ctrl011_r0": [
+   "different",
+   1214,
+   1134
+  ],
+  "ctrl011_r1": [
+   "identical",
+   1214,
+   1214
+  ],
+  "ctrl012_r0": [
+   "identical",
+   1350,
+   1350
+  ],
+  "ctrl012_r1": [
+   "identical",
+   1350,
+   1350
+  ],
+  "ctrl013_r0": [
+   "identical",
+   1316,
+   1316
+  ],
+  "ctrl013_r1": [
+   "identical",
+   1316,
+   1316
+  ],
+  "ctrl014_r0": [
+   "different",
+   1008,
+   1008
+  ],
+  "ctrl014_r1": [
+   "different",
+   1008,
+   1136
+  ],
+  "ctrl015_r0": [
+   "identical",
+   1854,
+   1854
+  ],
+  "ctrl015_r1": [
+   "identical",
+   1854,
+   1854
+  ],
+  "ctrl016_r0": [
+   "different",
+   1214,
+   1198
+  ],
+  "ctrl016_r1": [
+   "identical",
+   1214,
+   1214
+  ],
+  "ctrl017_r0": [
+   "different",
+   1008,
+   1136
+  ],
+  "ctrl017_r1": [
+   "different",
+   1008,
+   1136
+  ],
+  "ctrl018_r0": [
+   "different",
+   964,
+   1060
+  ],
+  "ctrl018_r1": [
+   "different",
+   964,
+   1060
+  ],
+  "ctrl019_r0": [
+   "identical",
+   1060,
+   1060
+  ],
+  "ctrl019_r1": [
+   "different",
+   1060,
+   1044
+  ],
+  "ctrl020_r0": [
+   "identical",
+   1198,
+   1198
+  ],
+  "ctrl020_r1": [
+   "different",
+   1198,
+   1198
+  ],
+  "ctrl021_r0": [
+   "same sectors+dims",
+   1854,
+   1854
+  ],
+  "ctrl021_r1": [
+   "same sectors+dims",
+   1854,
+   1854
+  ],
+  "ctrl022_r0": [
+   "identical",
+   964,
+   964
+  ],
+  "ctrl022_r1": [
+   "different",
+   964,
+   1060
+  ],
+  "ctrl023_r0": [
+   "different",
+   840,
+   712
+  ],
+  "ctrl023_r1": [
+   "identical",
+   840,
+   840
+  ],
+  "ctrl024_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl024_r1": [
+   "different",
+   968,
+   712
+  ],
+  "ctrl025_r0": [
+   "identical",
+   1854,
+   1854
+  ],
+  "ctrl025_r1": [
+   "different",
+   1854,
+   1790
+  ],
+  "ctrl026_r0": [
+   "identical",
+   840,
+   840
+  ],
+  "ctrl026_r1": [
+   "identical",
+   840,
+   840
+  ],
+  "ctrl027_r0": [
+   "different",
+   1854,
+   1758
+  ],
+  "ctrl027_r1": [
+   "identical",
+   1854,
+   1854
+  ],
+  "ctrl028_r0": [
+   "different",
+   840,
+   840
+  ],
+  "ctrl028_r1": [
+   "identical",
+   840,
+   840
+  ],
+  "ctrl029_r0": [
+   "different",
+   1350,
+   1222
+  ],
+  "ctrl029_r1": [
+   "different",
+   1350,
+   1222
+  ],
+  "ctrl030_r0": [
+   "different",
+   764,
+   796
+  ],
+  "ctrl030_r1": [
+   "different",
+   764,
+   796
+  ],
+  "ctrl031_r0": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl031_r1": [
+   "identical",
+   968,
+   968
+  ],
+  "ctrl032_r0": [
+   "different",
+   982,
+   726
+  ],
+  "ctrl032_r1": [
+   "different",
+   982,
+   726
+  ],
+  "ctrl033_r0": [
+   "different",
+   1162,
+   1050
+  ],
+  "ctrl033_r1": [
+   "different",
+   1162,
+   1066
+  ],
+  "ctrl034_r0": [
+   "identical",
+   792,
+   792
+  ],
+  "ctrl034_r1": [
+   "identical",
+   792,
+   792
+  ],
+  "ctrl035_r0": [
+   "different",
+   840,
+   712
+  ],
+  "ctrl035_r1": [
+   "different",
+   840,
+   712
+  ],
+  "ctrl036_r0": [
+   "identical",
+   1198,
+   1198
+  ],
+  "ctrl036_r1": [
+   "identical",
+   1198,
+   1198
+  ],
+  "ctrl037_r0": [
+   "identical",
+   1060,
+   1060
+  ],
+  "ctrl037_r1": [
+   "different",
+   1060,
+   964
+  ],
+  "ctrl038_r0": [
+   "identical",
+   764,
+   764
+  ],
+  "ctrl038_r1": [
+   "different",
+   764,
+   684
+  ],
+  "ctrl039_r0": [
+   "identical",
+   840,
+   840
+  ],
+  "ctrl039_r1": [
+   "identical",
+   840,
+   840
+  ]
+ }
+}

@@ -1,0 +1,8402 @@
+{
+ "summary": {
+  "(0, 'identical')": 497,
+  "(1, 'identical')": 486
+ },
+ "per_model": [
+  {
+   "name": "split/00143_N004_F1_03_S002_U001.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00151_N004_F1_03_S002_U009.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00152_N004_F1_03_S002_U010.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00153_N004_F1_03_S002_U011.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00155_N004_F1_03_S002_U013.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00163_N004_F1_03_S002_U021.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00164_N004_F1_03_S002_U022.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00167_N004_F1_03_S002_U025.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00175_N004_F1_03_S002_U033.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00185_N004_F1_03_S002_U043.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00188_N004_F1_03_S002_U046.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00190_N004_F1_03_S002_U048.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00191_N004_F1_03_S002_U049.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00193_N004_F1_03_S002_U051.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00200_N004_F1_03_S002_U058.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00201_N004_F1_03_S002_U059.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00204_N004_F1_03_S002_U062.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00206_N004_F1_03_S002_U064.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00207_N004_F1_03_S002_U065.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00211_N004_F1_03_S002_U069.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00220_N004_F1_03_S002_U078.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00226_N004_F1_03_S002_U084.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00228_N004_F1_03_S002_U086.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00232_N004_F1_03_S002_U090.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00252_N004_F1_03_S002_U110.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00257_N004_F1_03_S002_U115.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00259_N004_F1_03_S002_U117.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00265_N004_F1_03_S002_U123.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00267_N004_F1_03_S002_U125.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00272_N004_F1_03_S002_U130.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00275_N004_F1_03_S002_U133.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00284_N004_F1_03_S002_U142.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00294_N004_F1_03_S002_U152.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00311_N004_F1_03_S002_U169.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00312_N004_F1_03_S002_U170.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00322_N004_F1_03_S002_U180.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00324_N004_F1_03_S002_U182.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00329_N004_F1_03_S002_U187.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00333_N004_F1_03_S002_U191.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00341_N004_F1_03_S002_U199.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00344_N004_F1_03_S002_U202.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00346_N004_F1_03_S002_U204.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00361_N004_F1_03_S002_U219.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00363_N004_F1_03_S002_U221.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00369_N004_F1_03_S002_U227.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00371_N004_F1_03_S002_U229.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00372_N004_F1_03_S002_U230.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00375_N004_F1_03_S002_U233.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00376_N004_F1_03_S002_U234.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00378_N004_F1_03_S002_U236.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00380_N004_F1_03_S002_U238.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00382_N004_F1_03_S002_U240.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00384_N004_F1_03_S002_U242.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00386_N004_F1_03_S002_U244.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00387_N004_F1_03_S002_U245.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00469_N004_F1_03_F069.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00472_N004_F1_03_F083.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00474_N004_F1_03_F090.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00475_N004_F1_03_F097.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00512_N004_F1_04_F110.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00514_N004_F1_04_F119.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00536_N004_F1_05_F047.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00540_N004_F1_05_F075.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00541_N004_F1_05_F080.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00549_N004_F1_05_F140.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00563_N008_F1_02_F117.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00564_N008_F1_02_F123.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00571_N008_F1_02_F155.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00577_N008_F1_02_F170.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00589_N008_F1_03_F030.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00590_N008_F1_03_F058.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00596_N008_F1_03_F101.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00597_N008_F1_03_F103.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00607_N008_F1_04_F029.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00612_N008_F1_04_F055.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00614_N008_F1_04_F063.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00615_N008_F1_04_F065.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00616_N008_F1_04_F073.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00625_N008_F1_04_F151.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00626_N008_F1_04_F158.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00630_N008_F1_04_F178.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00885_N004_F1_03_S002_T002.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00888_N004_F1_03_S002_T011.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00890_N004_F1_03_S002_T026.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00893_N004_F1_03_S002_T034.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00898_N004_F1_03_S002_T051.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00899_N004_F1_03_S002_T065.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00912_N008_F1_02_S053_T015.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00913_N008_F1_02_S053_T016.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00914_N008_F1_02_S053_T018.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00917_N008_F1_02_S053_T029.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00918_N008_F1_02_S053_T030.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00919_N008_F1_02_S053_T031.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00921_N008_F1_02_S053_T037.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00923_N008_F1_02_S053_T046.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00925_N008_F1_02_S053_T050.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00929_N008_F1_02_S053_T060.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00932_N008_F1_02_S053_T067.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00934_N008_F1_02_S053_T071.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00937_N008_F1_02_S053_T082.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00939_N008_F1_02_S053_T086.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00940_N008_F1_02_S053_T090.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00941_N008_F1_02_S053_T093.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00942_N008_F1_02_S053_T102.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00944_N008_F1_02_S053_T106.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00947_N008_F1_02_S053_T119.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00948_N008_F1_03_S033_T000.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00951_N008_F1_03_S033_T012.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00955_N008_F1_03_S033_T023.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00957_N008_F1_03_S033_T040.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00958_N008_F1_03_S033_T043.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00960_N008_F1_03_S033_T047.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00961_N008_F1_03_S033_T054.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00962_N008_F1_03_S033_T055.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00966_N008_F1_03_S033_T081.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00967_N008_F1_03_S033_T087.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00970_N008_F1_03_S033_T103.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00971_N008_F1_03_S033_T107.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00972_N008_F1_03_S033_T108.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00973_N008_F1_03_S033_T110.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00974_N008_F1_03_S033_T111.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00975_N008_F1_03_S033_T112.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00977_N008_F1_03_S033_T117.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00978_N008_F1_04_S037_T001.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00979_N008_F1_04_S037_T004.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00983_N008_F1_04_S037_T025.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00984_N008_F1_04_S037_T028.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00986_N008_F1_04_S037_T041.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00989_N008_F1_04_S037_T059.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/00992_N008_F1_04_S037_T066.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01003_N008_F1_04_S037_T115.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01007_N001_F1_04_S017.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01013_N001_F1_04_S052.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01027_N004_F1_04_S056.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01031_N004_F1_05_S009.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01034_N004_F1_05_S015.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01039_N004_F1_05_S036.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01049_N008_F1_02_S053.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01051_N008_F1_03_S033.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01052_N008_F1_03_S034.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01057_N008_F1_03_S049.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01103_N001_F1_04_B000.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01111_N001_F1_04_T030.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01116_N001_F1_04_T063.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01117_N001_F1_04_T068.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01133_N001_F1_04_T178.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01136_N001_F1_04_T206.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01146_N001_F1_04_T293.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01148_N004_F1_03_T038.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01156_N004_F1_03_T085.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01162_N004_F1_03_T135.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01172_N004_F1_03_T239.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01174_N004_F1_03_T274.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01177_N004_F1_04_T006.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01190_N004_F1_04_T100.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01192_N004_F1_04_T129.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01194_N004_F1_04_T131.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01206_N004_F1_04_T187.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01207_N004_F1_04_T192.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01220_N004_F1_04_T278.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01221_N004_F1_04_T283.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01222_N004_F1_04_T291.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01233_N004_F1_05_T075.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01234_N004_F1_05_T077.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01236_N004_F1_05_T097.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01246_N004_F1_05_T209.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01260_N008_F1_02_T007.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01266_N008_F1_02_T073.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01270_N008_F1_02_T113.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01272_N008_F1_02_T119.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01274_N008_F1_02_T133.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01277_N008_F1_02_T148.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01284_N008_F1_02_T217.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01297_N008_F1_02_T276.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01301_N008_F1_02_T294.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01303_N008_F1_03_T001.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01304_N008_F1_03_T035.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01305_N008_F1_03_T044.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01307_N008_F1_03_T060.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01308_N008_F1_03_T061.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01312_N008_F1_03_T079.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01313_N008_F1_03_T080.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01319_N008_F1_03_T107.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01328_N008_F1_03_T134.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01329_N008_F1_03_T141.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01331_N008_F1_03_T151.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01333_N008_F1_03_T159.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01338_N008_F1_03_T198.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01346_N008_F1_03_T271.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01349_N008_F1_03_T286.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01351_N008_F1_04_T004.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01354_N008_F1_04_T016.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01360_N008_F1_04_T037.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01361_N008_F1_04_T039.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01368_N008_F1_04_T086.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01372_N008_F1_04_T110.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01374_N008_F1_04_T121.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01377_N008_F1_04_T143.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01380_N008_F1_04_T169.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01386_N008_F1_04_T215.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01390_N008_F1_04_T232.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01395_N008_F1_04_T246.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01396_N008_F1_04_T251.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01398_N008_F1_04_T258.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/01402_N008_F1_04_T288.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04036_C10_N001_F1_04_1062_34.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04056_C10_N001_F1_04_2205_5795.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04059_C10_N001_F1_04_2364_34.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04065_C10_N001_F1_04_2769_4635.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04070_C10_N001_F1_04_3159_59.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04072_C10_N001_F1_04_3321_4045.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04073_C10_N001_F1_04_3388_3135.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04074_C10_N001_F1_04_3400_3135.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04075_C10_N001_F1_04_3483_2682.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04081_C10_N001_F1_04_387_1209.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04084_C10_N001_F1_04_399_1209.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04088_C10_N001_F1_04_4302_5761.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04095_C10_N001_F1_04_4541_2682.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04096_C10_N001_F1_04_4553_2682.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04097_C10_N001_F1_04_4561_2067.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04104_C10_N001_F1_04_4910_5795.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04105_C10_N001_F1_04_4992_4635.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04111_C10_N001_F1_04_5382_59.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04115_C10_N001_F1_04_5522_5946.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04116_C10_N001_F1_04_5754_5946.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04149_C10_N004_F1_03_162_4482.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04152_C10_N004_F1_03_1802_1934.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04162_C10_N004_F1_03_216_4482.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04163_C10_N004_F1_03_234_4482.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04166_C10_N004_F1_03_240_4482.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04184_C10_N004_F1_03_3298_4171.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04203_C10_N004_F1_03_4650_3843.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04206_C10_N004_F1_03_4677_3843.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04223_C10_N004_F1_03_608_571.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04230_C10_N004_F1_03_620_571.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04232_C10_N004_F1_03_647_571.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04233_C10_N004_F1_03_761_5256.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04235_C10_N004_F1_03_779_5256.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04236_C10_N004_F1_03_788_5256.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04237_C10_N004_F1_03_794_5256.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04258_C10_N004_F1_04_1522_4615.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04259_C10_N004_F1_04_1528_4615.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04276_C10_N004_F1_04_2432_6347.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04277_C10_N004_F1_04_2438_6347.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04278_C10_N004_F1_04_2456_6347.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04280_C10_N004_F1_04_2510_6347.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04282_C10_N004_F1_04_2706_2309.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04285_C10_N004_F1_04_2733_2309.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04287_C10_N004_F1_04_2916_3214.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04290_C10_N004_F1_04_2961_3214.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04291_C10_N004_F1_04_2967_3214.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04292_C10_N004_F1_04_3012_5536.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04293_C10_N004_F1_04_3018_5536.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04294_C10_N004_F1_04_3054_5536.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04296_C10_N004_F1_04_3066_5536.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04303_C10_N004_F1_04_3449_4615.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04307_C10_N004_F1_04_439_3360.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04308_C10_N004_F1_04_445_3360.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04314_C10_N004_F1_04_472_3360.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04316_C10_N004_F1_04_484_3360.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04318_C10_N004_F1_04_4864_3214.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04324_C10_N004_F1_04_4960_5536.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04325_C10_N004_F1_04_5002_5536.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04377_C10_N004_F1_05_2432_5918.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04378_C10_N004_F1_05_2438_5918.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04379_C10_N004_F1_05_2456_5918.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04381_C10_N004_F1_05_2510_5918.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04429_C10_N004_F1_05_5778_3417.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04431_C10_N004_F1_05_5790_3417.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04433_C10_N004_F1_05_5817_3417.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04442_T10_N001_F1_04_215_887_1062_34.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04444_T10_N001_F1_04_4504_1822_3388_3135.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04445_T10_N001_F1_04_4612_5416_4612_6483.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04470_T10_N004_F1_03_608_34_3298_2706.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04474_T10_N004_F1_04_1504_2813_1504_306.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04495_T10_N004_F1_05_4108_4383_4957_5245.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04498_T10_N004_F1_05_4906_3085_3822_4947.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04503_T10_N004_F1_05_6444_847_2220_3567.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04540_N004_F1_03_F069.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04543_N004_F1_03_F083.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04545_N004_F1_03_F090.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04546_N004_F1_03_F097.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04583_N004_F1_04_F110.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04585_N004_F1_04_F119.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04607_N004_F1_05_F047.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04611_N004_F1_05_F075.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04612_N004_F1_05_F080.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04620_N004_F1_05_F140.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04634_N008_F1_02_F117.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04635_N008_F1_02_F123.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04642_N008_F1_02_F155.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04648_N008_F1_02_F170.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04660_N008_F1_03_F030.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04661_N008_F1_03_F058.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04667_N008_F1_03_F101.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04668_N008_F1_03_F103.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04678_N008_F1_04_F029.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04683_N008_F1_04_F055.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04685_N008_F1_04_F063.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04686_N008_F1_04_F065.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04687_N008_F1_04_F073.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04696_N008_F1_04_F151.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04697_N008_F1_04_F158.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04701_N008_F1_04_F178.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04704_N001_F1_04_B000.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04715_N001_F1_04_T030.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04723_N001_F1_04_T053.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04726_N001_F1_04_T063.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04727_N001_F1_04_T068.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04739_N001_F1_04_T113.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04741_N001_F1_04_T118.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04752_N001_F1_04_T178.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04755_N001_F1_04_T206.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04765_N001_F1_04_T293.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04768_N004_F1_03_T038.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04780_N004_F1_03_T076.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04782_N004_F1_03_T085.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04795_N004_F1_03_T135.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04807_N004_F1_03_T239.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04809_N004_F1_03_T274.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04830_N004_F1_04_T083.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04834_N004_F1_04_T100.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04838_N004_F1_04_T121.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04842_N004_F1_04_T131.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04859_N004_F1_04_T187.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04860_N004_F1_04_T192.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04873_N004_F1_04_T278.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04874_N004_F1_04_T283.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04875_N004_F1_04_T291.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04881_N004_F1_05_T018.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04887_N004_F1_05_T035.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04895_N004_F1_05_T075.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04896_N004_F1_05_T077.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04902_N004_F1_05_T097.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04906_N004_F1_05_T124.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04920_N004_F1_05_T209.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04936_N008_F1_02_T007.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04938_N008_F1_02_T014.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04949_N008_F1_02_T073.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04957_N008_F1_02_T113.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04960_N008_F1_02_T119.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04964_N008_F1_02_T133.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04970_N008_F1_02_T148.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04977_N008_F1_02_T217.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04990_N008_F1_02_T276.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04994_N008_F1_02_T294.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04996_N008_F1_03_T000.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04997_N008_F1_03_T001.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/04998_N008_F1_03_T009.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05001_N008_F1_03_T019.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05004_N008_F1_03_T035.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05005_N008_F1_03_T040.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05006_N008_F1_03_T044.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05008_N008_F1_03_T050.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05011_N008_F1_03_T060.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05012_N008_F1_03_T061.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05017_N008_F1_03_T078.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05019_N008_F1_03_T080.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05028_N008_F1_03_T107.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05039_N008_F1_03_T134.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05040_N008_F1_03_T141.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05042_N008_F1_03_T151.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05044_N008_F1_03_T159.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05049_N008_F1_03_T198.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05057_N008_F1_03_T271.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05060_N008_F1_03_T286.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05063_N008_F1_04_T004.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05069_N008_F1_04_T016.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05074_N008_F1_04_T025.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05079_N008_F1_04_T037.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05091_N008_F1_04_T086.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05095_N008_F1_04_T106.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05097_N008_F1_04_T110.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05101_N008_F1_04_T121.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05107_N008_F1_04_T143.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05110_N008_F1_04_T169.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05116_N008_F1_04_T215.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05120_N008_F1_04_T232.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05125_N008_F1_04_T246.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05126_N008_F1_04_T251.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05128_N008_F1_04_T258.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05132_N008_F1_04_T288.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05238_N001_F1_04_S017.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05244_N001_F1_04_S052.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05258_N004_F1_04_S056.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05262_N004_F1_05_S009.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05265_N004_F1_05_S015.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05270_N004_F1_05_S036.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05280_N008_F1_02_S053.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05282_N008_F1_03_S033.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05283_N008_F1_03_S034.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05288_N008_F1_03_S049.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05297_N004_F1_03_S002_T002.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05300_N004_F1_03_S002_T011.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05302_N004_F1_03_S002_T026.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05305_N004_F1_03_S002_T034.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05310_N004_F1_03_S002_T051.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05311_N004_F1_03_S002_T065.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05324_N008_F1_02_S053_T015.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05325_N008_F1_02_S053_T016.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05326_N008_F1_02_S053_T018.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05329_N008_F1_02_S053_T029.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05330_N008_F1_02_S053_T030.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05331_N008_F1_02_S053_T031.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05333_N008_F1_02_S053_T037.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05335_N008_F1_02_S053_T046.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05337_N008_F1_02_S053_T050.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05341_N008_F1_02_S053_T060.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05344_N008_F1_02_S053_T067.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05346_N008_F1_02_S053_T071.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05349_N008_F1_02_S053_T082.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05351_N008_F1_02_S053_T086.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05352_N008_F1_02_S053_T090.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05353_N008_F1_02_S053_T093.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05354_N008_F1_02_S053_T102.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05356_N008_F1_02_S053_T106.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05359_N008_F1_02_S053_T119.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05360_N008_F1_03_S033_T000.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05363_N008_F1_03_S033_T012.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05367_N008_F1_03_S033_T023.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05369_N008_F1_03_S033_T040.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05370_N008_F1_03_S033_T043.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05372_N008_F1_03_S033_T047.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05373_N008_F1_03_S033_T054.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05374_N008_F1_03_S033_T055.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05378_N008_F1_03_S033_T081.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05379_N008_F1_03_S033_T087.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05382_N008_F1_03_S033_T103.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05383_N008_F1_03_S033_T107.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05384_N008_F1_03_S033_T108.txt",
+   "shifts": [
+    {
+     "tori": [
+      1,
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05385_N008_F1_03_S033_T110.txt",
+   "shifts": [
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05386_N008_F1_03_S033_T111.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05387_N008_F1_03_S033_T112.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05389_N008_F1_03_S033_T117.txt",
+   "shifts": [
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05390_N008_F1_04_S037_T001.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05391_N008_F1_04_S037_T004.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05395_N008_F1_04_S037_T025.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05396_N008_F1_04_S037_T028.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05398_N008_F1_04_S037_T041.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05401_N008_F1_04_S037_T059.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05404_N008_F1_04_S037_T066.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05415_N008_F1_04_S037_T115.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05418_N004_F1_03_S002_U001.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05426_N004_F1_03_S002_U009.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05427_N004_F1_03_S002_U010.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05428_N004_F1_03_S002_U011.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05430_N004_F1_03_S002_U013.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05438_N004_F1_03_S002_U021.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05439_N004_F1_03_S002_U022.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05442_N004_F1_03_S002_U025.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05450_N004_F1_03_S002_U033.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05460_N004_F1_03_S002_U043.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05463_N004_F1_03_S002_U046.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05465_N004_F1_03_S002_U048.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05466_N004_F1_03_S002_U049.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05468_N004_F1_03_S002_U051.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05475_N004_F1_03_S002_U058.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05476_N004_F1_03_S002_U059.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05479_N004_F1_03_S002_U062.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05481_N004_F1_03_S002_U064.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05482_N004_F1_03_S002_U065.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05486_N004_F1_03_S002_U069.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05495_N004_F1_03_S002_U078.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05501_N004_F1_03_S002_U084.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05503_N004_F1_03_S002_U086.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05507_N004_F1_03_S002_U090.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05527_N004_F1_03_S002_U110.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05532_N004_F1_03_S002_U115.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05534_N004_F1_03_S002_U117.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05540_N004_F1_03_S002_U123.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05542_N004_F1_03_S002_U125.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05547_N004_F1_03_S002_U130.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05550_N004_F1_03_S002_U133.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05559_N004_F1_03_S002_U142.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05569_N004_F1_03_S002_U152.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05586_N004_F1_03_S002_U169.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05587_N004_F1_03_S002_U170.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05597_N004_F1_03_S002_U180.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05599_N004_F1_03_S002_U182.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05604_N004_F1_03_S002_U187.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05608_N004_F1_03_S002_U191.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05616_N004_F1_03_S002_U199.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05619_N004_F1_03_S002_U202.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05621_N004_F1_03_S002_U204.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05636_N004_F1_03_S002_U219.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05638_N004_F1_03_S002_U221.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05644_N004_F1_03_S002_U227.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05646_N004_F1_03_S002_U229.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05647_N004_F1_03_S002_U230.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05650_N004_F1_03_S002_U233.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05651_N004_F1_03_S002_U234.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05653_N004_F1_03_S002_U236.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05655_N004_F1_03_S002_U238.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05657_N004_F1_03_S002_U240.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      2
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05659_N004_F1_03_S002_U242.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05661_N004_F1_03_S002_U244.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    }
+   ]
+  },
+  {
+   "name": "split/05662_N004_F1_03_S002_U245.txt",
+   "shifts": [
+    {
+     "tori": [
+      3
+     ],
+     "verdict": "identical"
+    },
+    {
+     "tori": [
+      1
+     ],
+     "verdict": "identical"
+    }
+   ]
+  }
+ ]
+}

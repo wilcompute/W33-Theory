@@ -1,0 +1,146 @@
+{
+ "table": {
+  "lenient=1 strict=1 audit=ok": 416,
+  "lenient=1 strict=1 audit=parse": 2018,
+  "lenient=0 strict=0 audit=7d+7f": 953,
+  "lenient=1 strict=0 audit=7f": 497,
+  "lenient=0 strict=0 audit=7d": 624,
+  "lenient=0 strict=0 audit=ok": 6
+ },
+ "perdir": {
+  "search_drivers_12254": {
+   "L1S1": 1
+  },
+  "search_drivers_12237": {
+   "L1S1": 3
+  },
+  "search_drivers_12126/a8": {
+   "L1S1": 104
+  },
+  "search_drivers_12131/smwl4": {
+   "L0S0": 172,
+   "L1S0": 55,
+   "L1S1": 23
+  },
+  "search_drivers_12156/flipscan": {
+   "L0S0": 136,
+   "L1S1": 38,
+   "L1S0": 26
+  },
+  "search_drivers_12111": {
+   "L1S1": 9
+  },
+  "orbifolder_n0_drivers/split10_bases": {
+   "L1S1": 6,
+   "L0S0": 3
+  },
+  "search_drivers_12121/smwl3": {
+   "L1S0": 50,
+   "L0S0": 64,
+   "L1S1": 6
+  },
+  "search_drivers_12116/smwl": {
+   "L0S0": 41,
+   "L1S0": 10,
+   "L1S1": 9
+  },
+  "search_drivers_12162/flipscan2": {
+   "L1S0": 64,
+   "L0S0": 179,
+   "L1S1": 58
+  },
+  "C:/tmp/toe_round/prov": {
+   "L1S1": 600
+  },
+  "C:/tmp/toe_round/resc": {
+   "L1S1": 774
+  },
+  "C:/tmp/toe_round/split10": {
+   "L1S1": 335,
+   "L0S0": 3
+  },
+  "C:/tmp/toe_round/stype/a8": {
+   "L1S1": 104
+  },
+  "C:/tmp/toe_round/stype/a8all": {
+   "L1S1": 104
+  },
+  "C:/tmp/toe_round/stype/cand10": {
+   "L1S0": 73,
+   "L1S1": 89,
+   "L0S0": 306
+  },
+  "C:/tmp/toe_round/stype/flipscan": {
+   "L0S0": 136,
+   "L1S1": 38,
+   "L1S0": 26
+  },
+  "C:/tmp/toe_round/stype/flipscan2": {
+   "L1S0": 78,
+   "L1S1": 86,
+   "L0S0": 266
+  },
+  "C:/tmp/toe_round/stype/nswl": {
+   "L1S1": 9
+  },
+  "C:/tmp/toe_round/stype/smwl": {
+   "L0S0": 41,
+   "L1S0": 10,
+   "L1S1": 9
+  },
+  "C:/tmp/toe_round/stype/smwl3": {
+   "L1S0": 50,
+   "L0S0": 64,
+   "L1S1": 6
+  },
+  "C:/tmp/toe_round/stype/smwl4": {
+   "L0S0": 172,
+   "L1S0": 55,
+   "L1S1": 23
+  }
+ },
+ "examples": {
+  "lenient=1 strict=1 audit=ok": [
+   "split/00003_N001_F1_04.txt",
+   "split/00146_N004_F1_03_S002_U004.txt",
+   "split/00171_N004_F1_03_S002_U029.txt",
+   "split/00176_N004_F1_03_S002_U034.txt",
+   "split/00180_N004_F1_03_S002_U038.txt"
+  ],
+  "lenient=1 strict=1 audit=parse": [
+   "split/00035_A8SM_20260928_1335_TF.txt",
+   "split/00036_A8SM_20260928_13698_TF.txt",
+   "split/00037_A8SM_20260928_5760_TF.txt",
+   "split/00038_A8SM_20260928_10006_TF.txt",
+   "split/00039_A8SM_20260928_10086_TF.txt"
+  ],
+  "lenient=0 strict=0 audit=7d+7f": [
+   "split/00142_N004_F1_03_S002_U000.txt",
+   "split/00147_N004_F1_03_S002_U005.txt",
+   "split/00148_N004_F1_03_S002_U006.txt",
+   "split/00149_N004_F1_03_S002_U007.txt",
+   "split/00150_N004_F1_03_S002_U008.txt"
+  ],
+  "lenient=1 strict=0 audit=7f": [
+   "split/00143_N004_F1_03_S002_U001.txt",
+   "split/00151_N004_F1_03_S002_U009.txt",
+   "split/00152_N004_F1_03_S002_U010.txt",
+   "split/00153_N004_F1_03_S002_U011.txt",
+   "split/00155_N004_F1_03_S002_U013.txt"
+  ],
+  "lenient=0 strict=0 audit=7d": [
+   "split/00144_N004_F1_03_S002_U002.txt",
+   "split/00145_N004_F1_03_S002_U003.txt",
+   "split/00154_N004_F1_03_S002_U012.txt",
+   "split/00157_N004_F1_03_S002_U015.txt",
+   "split/00166_N004_F1_03_S002_U024.txt"
+  ],
+  "lenient=0 strict=0 audit=ok": [
+   "split/00873_S10_3_E6SU3_E6SU3.txt",
+   "split/00875_S10_5_E6SU3_E6SU3.txt",
+   "split/00877_S10_7_E7U1_SO14U1.txt",
+   "split/03383_S10_3_E6SU3_E6SU3.txt",
+   "split/03385_S10_5_E6SU3_E6SU3.txt"
+  ]
+ }
+}
