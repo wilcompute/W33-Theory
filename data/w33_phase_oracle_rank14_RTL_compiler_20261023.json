@@ -1,0 +1,14 @@
+{
+  "RTL": "hardware/w33_phase_oracle_rank14_20261023.sv",
+  "cross_cz_terms": 14,
+  "invalid_address_tests": 2496,
+  "logical_only": "The FPGA computes control masks; it contains NO quantum CZ gate, no photon waveguide, no optical phase actuator or board pinout.",
+  "plus_local_phase_tables": 2,
+  "schema": "w33.phase_oracle.rank14.RTL_codegen.v1",
+  "sha256": "95d4c0de9584deeeb77d78f3b7942f9e96d8a85f1839bd02a2879434df20e4e0",
+  "symplectic_pairs": 7,
+  "target": "iCE40UP5K SG48",
+  "testbench": "hardware/tb_w33_phase_oracle_rank14_20261023.sv",
+  "total_interface_io_bits": 34,
+  "valid_address_tests": 1600
+}
