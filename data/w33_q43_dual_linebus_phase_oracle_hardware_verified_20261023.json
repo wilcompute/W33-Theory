@@ -1,0 +1,92 @@
+{
+  "schema": "w33.q43.cospectral_phase_oracle_dual_bus_hardware.v1",
+  "date": "2026-10-23",
+  "branch": "master",
+  "prior_art": {
+    "rank_W33_16_rank_Q43_10": "w33_pass88_smith_group.py",
+    "cospectral_mates": "w33_pass76_cospectral_mates.py",
+    "forty_W33_line_buses": "analysis/w33_fractal_linebus_switch_matrix_20261023.py"
+  },
+  "results": {
+    "Schmidt_probabilities": {
+      "0.16": 1,
+      "0.04": 15,
+      "0.01": 24
+    },
+    "Schmidt_entropy_bits": 4.803856189774729,
+    "reduced_purity": 0.052,
+    "local_real_orthogonal_equivalence": true,
+    "W33_GF2_rank": 16,
+    "Q43_GF2_rank": 10,
+    "W33_local_gauge_cross_rank": 14,
+    "Q43_local_gauge_cross_rank": 8,
+    "W33_symplectic_pairs": 7,
+    "Q43_symplectic_pairs": 4,
+    "W33_40_bus_intersection_graph_is_Q43": true,
+    "alternating_four_address_purity_W_and_Q": 0.0020128,
+    "scope": "Two pure states locally orthogonally equivalent; fixed address bases and local diagonal sign compensation required for rank comparison"
+  },
+  "fpga_reference": {
+    "device": "iCE40UP5K SG48",
+    "tools": "YoWASP Yosys, nextpnr-ice40, Icarus",
+    "seed": 20261023,
+    "nominal_target_MHz": 24,
+    "no_board_PCF": true,
+    "IO_auto_assigned": true,
+    "fmax_reported": null,
+    "fmax_status": "No Fmax available; no interior timing paths; no verified board timing",
+    "designs": [
+      {
+        "name": "W33_point14",
+        "nonlocal_terms": 14,
+        "LC": 182,
+        "LUT4": 172,
+        "DFFR": 19,
+        "CARRY": 4,
+        "IO": 34,
+        "rtl": "hardware/w33_phase_oracle_rank14_20261023.sv"
+      },
+      {
+        "name": "Q43_canonical8",
+        "nonlocal_terms": 8,
+        "LC": 125,
+        "LUT4": 115,
+        "DFFR": 13,
+        "CARRY": 4,
+        "IO": 28,
+        "rtl": "hardware/q43_phase_oracle_rank8_20261023.sv"
+      },
+      {
+        "name": "Q43_W33_bus_runtime8",
+        "nonlocal_terms": 8,
+        "LC": 185,
+        "LUT4": 175,
+        "DFFR": 13,
+        "CARRY": 4,
+        "IO": 28,
+        "rtl": "hardware/w33_linebus_dual_q43_phase_bridge_20261023.sv"
+      },
+      {
+        "name": "Q43_W33_bus_direct8",
+        "nonlocal_terms": 8,
+        "LC": 116,
+        "LUT4": 106,
+        "DFFR": 13,
+        "CARRY": 4,
+        "IO": 28,
+        "rtl": "hardware/w33_linebus_dual_rank8_direct_20261023.sv"
+      }
+    ],
+    "valid_and_invalid_Icarus_cases_per_Q_variant": [
+      1600,
+      2496
+    ],
+    "LC_saving_direct_vs_point": 66,
+    "fractional_saving_direct_vs_point": 0.3626373626373626,
+    "cost_of_runtime_bus_permutation_LCs": 69,
+    "boundary": "Controller LUT resource for particular labeling, not optical component cost, energy or physical coherent CZ realization"
+  },
+  "reproduction": "hardware/build_w33_q43_dual_linebus_UP5K_20261023.ps1",
+  "paper": "papers/w33_q43_cospectral_photon_entanglement_20261023.tex",
+  "optical_status": "No real photonic phase gates, photon-source characterization, detector experiments, FPGA board PCF, time-bin quantum storage or demonstrated TOE."
+}
