@@ -267,4 +267,84 @@ minimal $p$-rank}; accessible preprint
 standard results on binary graph ranks
 and symplectic representations.
 \end{itemize}
+
+\section{The Q(4,3) graph is the dual forty-bus W33 architecture}
+The physical W33 line-bus manifest already specifies
+forty four-point lines, with four line buses through each
+W33 point. A line bus is an optical address with four
+internal rail slots, not a $40$-mode photon by itself.
+The line-intersection adjacency
+\[
+D_{ij}=\begin{cases}
+1&i\ne j,\quad L_i\cap L_j\ne\varnothing,\\
+0&\text{otherwise}
+\end{cases}
+\]
+has parameters $(40,12,2,4)$.
+As an established geometric duality,
+the point graph of $Q(4,3)$ is isomorphic
+to this intersection graph of W33 lines.
+Our script \texttt{analysis/w33\_linebus\_dual\_q43\_phase\_geometry\_20261023.py}
+constructs and exhaustively verifies an explicit
+forty-element permutation between the actual
+W33 bus IDs and the independently constructed
+parabolic-quadric points. It confirms binary
+adjacency rank ten, locally centered phase
+rank eight, and four symplectic hyperbolic
+pairs \emph{in the actual line-bus address system}.
+This demonstrates the dual geometry inside the
+already-defined Holonet compiler; it does
+not imply that intersecting abstract lines
+are physically connected by coherent optical
+phase gates.
+
+\section{The cost of changing phase-oracle address bases}
+We generated three Q43 registered SystemVerilog
+control variants and compared them against the
+previous W33 point-based controller using the
+same iCE40UP5K target, Yosys mapping,
+nextpnr routing seed and nominal timing request:
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+Classical address encoder & Cross terms & LUT4 & Logic cells & I/O\\
+\midrule
+W33 point native &14&172&182&34\\
+Q43 canonical point IDs &8&115&125&28\\
+Q43 after runtime W33 line-bus remapping &8&175&185&28\\
+Q43 directly compiled for W33 line-bus IDs &8&106&116&28\\
+\bottomrule
+\end{tabular}
+\end{center}
+All three Q43 variants passed exhaustive Icarus
+tests on the 1600 valid $(a,b)\in\{0,\ldots,39\}^2$
+and 2496 invalid six-bit address pairs. Each
+produces the oracle bit and individual
+cross-product and local gauge sign flags.
+The runtime address translator increases the
+Q43 logic-cell cost from 125 to 185, eliminating
+its apparent gain over W33's 182.
+The \emph{compile-time} translator instead
+permutes the eight-term lookup tables during
+RTL generation and uses \textbf{116 logic cells},
+36.3\% fewer than the 182-cell W33 reference.
+This is a comparison of four \emph{specific
+classical address-to-phase control encoders}.
+It neither establishes minimal FPGA area nor
+equates a phase flag with a physical optical CZ.
+
+The complete compiled technology netlists and
+unconstrained routes are archived as compressed
+files in \texttt{data/}; see
+\texttt{data/w33\_q43\_dual\_linebus\_phase\_oracle\_hardware\_verified\_20261023.json}.
+No pin-constraint file was available,
+all pads were automatically assigned, and
+nextpnr reported no meaningful internal clock
+frequency for these register-boundary-only
+phase metadata circuits. No genuine
+physical inter-bus phase coupling, time-bin
+quantum memory, photonic coherence measurement,
+or fundamental physical TOE conclusion
+is claimed.
+
 \end{document}
