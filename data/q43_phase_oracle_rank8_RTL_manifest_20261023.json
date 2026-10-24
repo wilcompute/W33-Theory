@@ -1,0 +1,16 @@
+{
+  "binary_cross_terms": 8,
+  "full_interface_bits": 28,
+  "generator": "analysis/w33_q43_eight_term_oracle_rtl_20261023.py",
+  "invalid_address_cases": 2496,
+  "one_body_phase_tables": 2,
+  "physical_claim": "Classical registered mask oracle; not a coherent optical phase gate or deployed FPGA",
+  "reference_w33_cross_terms": 14,
+  "reference_w33_interface_bits": 34,
+  "rtl": "hardware/q43_phase_oracle_rank8_20261023.sv",
+  "schema": "w33.q43.eight_term_RTL.v1",
+  "sha256": "8bedf130fc52eda2338f8ee39df06c0436e714b82eb4d92e4a3f46dbb4aac33b",
+  "symplectic_pairs": 4,
+  "testbench": "hardware/tb_q43_phase_oracle_rank8_20261023.sv",
+  "valid_address_truth_table_cases": 1600
+}
