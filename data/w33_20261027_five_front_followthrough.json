@@ -1,0 +1,1174 @@
+{
+  "status": "FIVE_FRONT_CONTINUATION_WITH_EXPLICIT_SCOPE",
+  "metric_classification": {
+    "unknown_symmetric_metric_parameters": 21,
+    "constraint_rank": 20,
+    "all_metrics_for_fixed_target_symbol": "H(theta)=H0+theta*J",
+    "J": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "positive_interval": "-2 < theta < 2",
+    "determinant": "-(theta - 2)**3*(theta + 2)**3",
+    "interpretation": "One four-form ambiguity is invisible to the leading plane-wave symbol. It is an analogue of an axion constitutive term, not a derived QCD axion or full spacetime theta term.",
+    "microscopic_selection": "Common-cone requirement plus an imposed orientation reversal fixes theta=0 in this class. Neither requirement is a microscopic derivation of the couplings."
+  },
+  "finite_k_four_form": {
+    "samples": [
+      {
+        "t": 0.04,
+        "four_form_operator_norm_over_t3": 32.14665317279149,
+        "spectra": [
+          {
+            "theta": -1,
+            "lambda_over_t2": [
+              2.4834190010500885,
+              3.2296029149974697,
+              3.3764620707809465
+            ]
+          },
+          {
+            "theta": 0,
+            "lambda_over_t2": [
+              2.484213292915768,
+              3.230441306629649,
+              3.3750001194793207
+            ]
+          },
+          {
+            "theta": 1,
+            "lambda_over_t2": [
+              2.4833952760393383,
+              3.2322581351720956,
+              3.373899733470666
+            ]
+          }
+        ]
+      },
+      {
+        "t": 0.02,
+        "four_form_operator_norm_over_t3": 32.04977617737533,
+        "spectra": [
+          {
+            "theta": -1,
+            "lambda_over_t2": [
+              3.1742530309911516,
+              3.417802819839922,
+              3.4657445025307525
+            ]
+          },
+          {
+            "theta": 0,
+            "lambda_over_t2": [
+              3.1755530975036828,
+              3.4179969127648278,
+              3.464239110250292
+            ]
+          },
+          {
+            "theta": 1,
+            "lambda_over_t2": [
+              3.174621521209653,
+              3.4196948667141176,
+              3.4634408963414973
+            ]
+          }
+        ]
+      },
+      {
+        "t": 0.01,
+        "four_form_operator_norm_over_t3": 31.995527538719152,
+        "spectra": [
+          {
+            "theta": -1,
+            "lambda_over_t2": [
+              3.3926977843856347,
+              3.4654038895635546,
+              3.4861666030304606
+            ]
+          },
+          {
+            "theta": 0,
+            "lambda_over_t2": [
+              3.393952636642362,
+              3.4654185820280374,
+              3.4848890956783314
+            ]
+          },
+          {
+            "theta": 1,
+            "lambda_over_t2": [
+              3.3931752120979617,
+              3.466347933465422,
+              3.4847278570045868
+            ]
+          }
+        ]
+      },
+      {
+        "t": 0.005,
+        "four_form_operator_norm_over_t3": 31.966961572485697,
+        "spectra": [
+          {
+            "theta": -1,
+            "lambda_over_t2": [
+              3.4529176333400082,
+              3.477438545282473,
+              3.488816171609979
+            ]
+          },
+          {
+            "theta": 0,
+            "lambda_over_t2": [
+              3.4537873359211866,
+              3.4774336022075767,
+              3.4879490651056977
+            ]
+          },
+          {
+            "theta": 1,
+            "lambda_over_t2": [
+              3.4532939732422547,
+              3.4777565580514187,
+              3.4881170395537935
+            ]
+          }
+        ]
+      }
+    ],
+    "scope": "The leading four-form ambiguity is generally visible at finite lattice momentum. The supplied loop discretization is not proved to realize an exact topological F wedge F action; no physical axion inferred."
+  },
+  "microscopic_induction_probe": {
+    "native_patch_vertices": 19,
+    "internal_charge_multiplicities": {
+      "1": 16,
+      "-2": 10,
+      "4": 1
+    },
+    "model": "Static grand-canonical spinless hopping free energy, mu=0,t=1",
+    "samples": [
+      {
+        "temperature": 0.25,
+        "minimum_flux_angles": [
+          4.188790194203085,
+          2.094395093129939
+        ],
+        "free_energy": -341.28550968111597,
+        "hessian": [
+          [
+            0.25124047351440726,
+            -0.04478725621457241
+          ],
+          [
+            -0.04478725621457236,
+            0.2512404735144072
+          ]
+        ],
+        "hessian_eigenvalues": [
+          0.20645321729983485,
+          0.2960277297289796
+        ],
+        "zero_flux_hessian_eigenvalues": [
+          -0.606092547463126,
+          -0.42916982126961956
+        ],
+        "central_flux_angles": [
+          2.0943951023931953,
+          4.1887902047863905
+        ],
+        "central_flux_gradient_max": 5.5441762292218755e-15,
+        "central_flux_free_energy": -341.28550968111585,
+        "best_target_scale": 0.06619227650298296,
+        "relative_shape_residual": 0.3183527692592135,
+        "scan_scope": "13x13 angle grid followed by5 local optimizations; global minimality not certified"
+      },
+      {
+        "temperature": 1.0,
+        "minimum_flux_angles": [
+          2.094394782097513,
+          4.18879052514092
+        ],
+        "free_energy": -475.60970999146434,
+        "hessian": [
+          [
+            4.6574211072847316e-05,
+            -3.3298228084566173e-07
+          ],
+          [
+            -3.329822808734173e-07,
+            4.657421107295834e-05
+          ]
+        ],
+        "hessian_eigenvalues": [
+          4.624122879202941e-05,
+          4.6907193353776244e-05
+        ],
+        "zero_flux_hessian_eigenvalues": [
+          -9.381439247097001e-05,
+          -9.24826364030462e-05
+        ],
+        "central_flux_angles": [
+          2.0943951023931953,
+          4.1887902047863905
+        ],
+        "central_flux_gradient_max": 4.511148399277687e-15,
+        "central_flux_free_energy": -475.6097099914643,
+        "best_target_scale": 1.1276175321576408e-05,
+        "relative_shape_residual": 0.46585018488991836,
+        "scan_scope": "13x13 angle grid followed by5 local optimizations; global minimality not certified"
+      },
+      {
+        "temperature": 2.0,
+        "minimum_flux_angles": [
+          2.107985267822693,
+          4.181251835155443
+        ],
+        "free_energy": -776.4838125688165,
+        "hessian": [
+          [
+            5.4200951504768113e-08,
+            -3.152378358350916e-11
+          ],
+          [
+            -3.1523832155766485e-11,
+            5.4200951865590596e-08
+          ]
+        ],
+        "hessian_eigenvalues": [
+          5.416942785302307e-08,
+          5.423247551733564e-08
+        ],
+        "zero_flux_hessian_eigenvalues": [
+          -1.0846494596233991e-07,
+          -1.0833885819710898e-07
+        ],
+        "central_flux_angles": [
+          2.0943951023931953,
+          4.1887902047863905
+        ],
+        "central_flux_gradient_max": 3.4833247397614286e-15,
+        "central_flux_free_energy": -776.4838125688228,
+        "best_target_scale": 1.3078284760063787e-08,
+        "relative_shape_residual": 0.47145329956880333,
+        "scan_scope": "13x13 angle grid followed by5 local optimizations; global minimality not certified"
+      }
+    ],
+    "central_stationarity": "All27 Qpsi charges are1 mod3, so at Z3 central flux all species hopping matrices are gauge-equivalent, with the same spectrum. The first derivative is proportional to Tr Q=0, and the Hessian to Tr Q^2=72. Third derivatives are proportional to Tr Q^3=0.",
+    "target_shape_obstruction": "The native theta patch has two equal8-edge paths and a4-edge path. Exchange plus flux conjugation fixes the central flux, forcing K11=K22 at every T. The target H0 principal block has diagonals25/9 and11/3; it cannot be proportional to this induced central Hessian.",
+    "scope": "Concrete induced spatial stiffness candidate. Analytic spectral derivatives avoid finite-difference cancellation. It neither computes a relativistic electric response nor selects the full six-loop metric; global minima are not certified."
+  },
+  "central_link_gauge_equivalence": {
+    "controls": [
+      {
+        "charge": -2,
+        "edge_phase_coboundary_max": 2.531698018113677e-15
+      },
+      {
+        "charge": 4,
+        "edge_phase_coboundary_max": 2.531698018113677e-15
+      }
+    ],
+    "scope": "Explicit vertex-phase intertwiners. The link matrices are gauge-equivalent, not literally equal in the chosen harmonic gauge."
+  },
+  "dimensional_reduction": {
+    "native_momentum_commutant_dimension": 4,
+    "native_symmetry_invariant_rational_projector_ranks": [
+      0,
+      2,
+      4
+    ],
+    "native_rank3_projector_exists": false,
+    "circle_zero_mode_count": {
+      "three_dimensional_photon": 2,
+      "extra_massless_scalar": 1
+    },
+    "circle_obstruction": "Setting compact momentum to zero leaves the compact component of A as a massless scalar. It cannot be removed by zero-mode gauge transformations.",
+    "orbifold_zero_mode_count": {
+      "three_dimensional_photon": 2,
+      "extra_massless_scalar": 0
+    },
+    "orbifold_assumption": "Supply a reflection, A along its odd line odd and the three tangent components even. This is a continuum boundary condition, not a verified automorphism of the selected105-face microscopic action.",
+    "scope": "No native-H27-invariant rational3D truncation. A chosen compactification/projection breaks that symmetry; no radius is dynamically selected.",
+    "integral_metric_reflection": {
+      "odd_vector": [
+        -2,
+        1,
+        -1,
+        0
+      ],
+      "matrix": [
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "even_projector": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "ranks_even_odd": [
+        3,
+        1
+      ],
+      "commutes_with_native_group": false
+    }
+  },
+  "compact_metric_completion": {
+    "potential": "sum_q w_q*(1-cos(q dot f))",
+    "harmonics": [
+      {
+        "q": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "weight": "1/100"
+      },
+      {
+        "q": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "weight": "1/100"
+      },
+      {
+        "q": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "weight": "1/100"
+      },
+      {
+        "q": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "weight": "1/100"
+      },
+      {
+        "q": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "weight": "1/100"
+      },
+      {
+        "q": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "weight": "1/100"
+      },
+      {
+        "q": [
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "weight": "593/3600"
+      },
+      {
+        "q": [
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          0
+        ],
+        "weight": "17/75"
+      },
+      {
+        "q": [
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "weight": "191/1200"
+      },
+      {
+        "q": [
+          0,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ],
+        "weight": "103/1200"
+      },
+      {
+        "q": [
+          0,
+          1,
+          1,
+          0,
+          -1,
+          1
+        ],
+        "weight": "13/90"
+      },
+      {
+        "q": [
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "weight": "389/3600"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "weight": "191/1800"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0
+        ],
+        "weight": "1/150"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          0,
+          1,
+          1,
+          -1
+        ],
+        "weight": "247/450"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          0
+        ],
+        "weight": "17/75"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "weight": "167/900"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "weight": "43/450"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          1,
+          0,
+          1,
+          -1
+        ],
+        "weight": "139/300"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "weight": "257/900"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "weight": "113/450"
+      },
+      {
+        "q": [
+          1,
+          -1,
+          1,
+          1,
+          0,
+          -1
+        ],
+        "weight": "43/900"
+      },
+      {
+        "q": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "weight": "31/72"
+      },
+      {
+        "q": [
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "weight": "1/72"
+      },
+      {
+        "q": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ],
+        "weight": "7/100"
+      },
+      {
+        "q": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "weight": "2/75"
+      },
+      {
+        "q": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "weight": "17/1800"
+      }
+    ],
+    "all_weights_positive": true,
+    "Hessian_at_zero_equals_prior_H0": true,
+    "unique_global_minimum_on_flux_6_torus": "f=0 mod2pi, because all six positive unit harmonics are included",
+    "max_integer_harmonic_charge": 1,
+    "scope": "A supplied finite-loop periodic interaction exists with exactly the desired harmonic Hessian, all q entries0,+1,-1. LP only locates a candidate; exact rational reconstruction proves feasibility, not optimality. Higher interactions and couplings remain modeling choices."
+  },
+  "compact_dynamics": {
+    "native_finite_cover_periods": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "patch_vertices": 19,
+    "patch_links": 20,
+    "loop_Gram": [
+      [
+        12,
+        4
+      ],
+      [
+        4,
+        12
+      ]
+    ],
+    "loops": "first two actual lifted16-traversal commutators from prior certificate",
+    "magnetic_potential_weights": [
+      "10/9",
+      "2",
+      "5/3"
+    ],
+    "magnetic_harmonics": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "neutral_cutoff_sequences": [
+      {
+        "g": 0.5,
+        "samples": [
+          {
+            "cutoff": 2,
+            "dimension": 25,
+            "g": 0.5,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 5.73703998215919,
+            "gap": 4.834622222697361,
+            "Wilson_cosines": [
+              0.8192526886244411,
+              0.8303491639959824,
+              0.7834930769063062
+            ],
+            "boundary_probability": 0.1493327853996723,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 4,
+            "dimension": 81,
+            "g": 0.5,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 5.389126139332731,
+            "gap": 4.449872470711762,
+            "Wilson_cosines": [
+              0.8478077457576049,
+              0.867767942082714,
+              0.8385846381425517
+            ],
+            "boundary_probability": 0.0008113534493449308,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 6,
+            "dimension": 169,
+            "g": 0.5,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 5.388263644068506,
+            "gap": 4.448425886805144,
+            "Wilson_cosines": [
+              0.8478994375644462,
+              0.8680100718653138,
+              0.8388777383806618
+            ],
+            "boundary_probability": 2.716917588284509e-07,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 8,
+            "dimension": 289,
+            "g": 0.5,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 5.388263472222125,
+            "gap": 4.448425613697307,
+            "Wilson_cosines": [
+              0.8478994522457881,
+              0.8680101629726951,
+              0.8388778315915917
+            ],
+            "boundary_probability": 1.1798914412812356e-11,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 10,
+            "dimension": 441,
+            "g": 0.5,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 5.388263472217221,
+            "gap": 4.448425613690033,
+            "Wilson_cosines": [
+              0.8478994522460765,
+              0.868010162976661,
+              0.8388778315953427
+            ],
+            "boundary_probability": 9.831677466012549e-17,
+            "Gauss_exact_for_every_basis_state": true
+          }
+        ],
+        "last_energy_difference": 4.9036330551643914e-12
+      },
+      {
+        "g": 1.0,
+        "samples": [
+          {
+            "cutoff": 2,
+            "dimension": 25,
+            "g": 1.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 4.071823484462633,
+            "gap": 5.631145495826167,
+            "Wilson_cosines": [
+              0.27188114302374405,
+              0.3539499693188344,
+              0.26696360794267604
+            ],
+            "boundary_probability": 0.0005444392266507464,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 4,
+            "dimension": 81,
+            "g": 1.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 4.0717963468956375,
+            "gap": 5.878488893795056,
+            "Wilson_cosines": [
+              0.27189773374298143,
+              0.35398709550520746,
+              0.2670035546083037
+            ],
+            "boundary_probability": 1.8394147643048243e-10,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 6,
+            "dimension": 169,
+            "g": 1.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 4.071796346891922,
+            "gap": 5.878488893748067,
+            "Wilson_cosines": [
+              0.27189773374490844,
+              0.35398709551500285,
+              0.2670035546175436
+            ],
+            "boundary_probability": 2.080376401638289e-18,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 8,
+            "dimension": 289,
+            "g": 1.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 4.071796346891983,
+            "gap": 5.8784888937481625,
+            "Wilson_cosines": [
+              0.27189773374489845,
+              0.3539870955149941,
+              0.267003554617537
+            ],
+            "boundary_probability": 2.2170254961025266e-27,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 10,
+            "dimension": 441,
+            "g": 1.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 4.071796346891926,
+            "gap": 5.878488893748024,
+            "Wilson_cosines": [
+              0.2718977337449014,
+              0.35398709551499813,
+              0.2670035546175413
+            ],
+            "boundary_probability": 5.078509326425967e-32,
+            "Gauss_exact_for_every_basis_state": true
+          }
+        ],
+        "last_energy_difference": 5.684341886080802e-14
+      },
+      {
+        "g": 2.0,
+        "samples": [
+          {
+            "cutoff": 2,
+            "dimension": 25,
+            "g": 2.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 1.1847909663374594,
+            "gap": 23.795546456282604,
+            "Wilson_cosines": [
+              0.012026158745137615,
+              0.02107858291165044,
+              0.01332315921615046
+            ],
+            "boundary_probability": 6.919766040501116e-09,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 4,
+            "dimension": 81,
+            "g": 2.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 1.184790966332003,
+            "gap": 23.79554644171838,
+            "Wilson_cosines": [
+              0.012026158752897604,
+              0.021078582945255303,
+              0.013323159248284058
+            ],
+            "boundary_probability": 3.564859109117004e-20,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 6,
+            "dimension": 169,
+            "g": 2.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 1.1847909663322913,
+            "gap": 23.79554644171751,
+            "Wilson_cosines": [
+              0.012026158752896553,
+              0.021078582945254568,
+              0.013323159248299181
+            ],
+            "boundary_probability": 3.629161594383511e-32,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 8,
+            "dimension": 289,
+            "g": 2.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 1.1847909663327887,
+            "gap": 23.795546441717512,
+            "Wilson_cosines": [
+              0.012026158752905568,
+              0.021078582945264206,
+              0.013323159248291031
+            ],
+            "boundary_probability": 5.011130560020759e-32,
+            "Gauss_exact_for_every_basis_state": true
+          },
+          {
+            "cutoff": 10,
+            "dimension": 441,
+            "g": 2.0,
+            "charge": 0,
+            "dynamical_two_site_matter": false,
+            "ground_energy": 1.184790966331664,
+            "gap": 23.79554644171593,
+            "Wilson_cosines": [
+              0.012026158752889591,
+              0.021078582945246855,
+              0.013323159248270692
+            ],
+            "boundary_probability": 1.2916952524637525e-31,
+            "Gauss_exact_for_every_basis_state": true
+          }
+        ],
+        "last_energy_difference": 1.1246559239452836e-12
+      }
+    ],
+    "static_endpoint_charge_controls": [
+      {
+        "cutoff": 8,
+        "dimension": 289,
+        "g": 1.0,
+        "charge": 0,
+        "dynamical_two_site_matter": false,
+        "ground_energy": 4.071796346891983,
+        "gap": 5.8784888937481625,
+        "Wilson_cosines": [
+          0.27189773374489845,
+          0.3539870955149941,
+          0.267003554617537
+        ],
+        "boundary_probability": 2.2170254961025266e-27,
+        "Gauss_exact_for_every_basis_state": true
+      },
+      {
+        "cutoff": 8,
+        "dimension": 289,
+        "g": 1.0,
+        "charge": 1,
+        "dynamical_two_site_matter": false,
+        "ground_energy": 4.556056259627463,
+        "gap": 4.840696916611766,
+        "Wilson_cosines": [
+          0.27925568102694115,
+          0.36185603611268724,
+          0.2702699216115376
+        ],
+        "boundary_probability": 2.7527324082923264e-27,
+        "Gauss_exact_for_every_basis_state": true
+      },
+      {
+        "cutoff": 8,
+        "dimension": 289,
+        "g": 1.0,
+        "charge": -2,
+        "dynamical_two_site_matter": false,
+        "ground_energy": 6.003885493297609,
+        "gap": 3.980768621287657,
+        "Wilson_cosines": [
+          0.30275167260792235,
+          0.3865324993712256,
+          0.28133841376219726
+        ],
+        "boundary_probability": 4.8208178961791486e-27,
+        "Gauss_exact_for_every_basis_state": true
+      },
+      {
+        "cutoff": 8,
+        "dimension": 289,
+        "g": 1.0,
+        "charge": 4,
+        "dynamical_two_site_matter": false,
+        "ground_energy": 11.696033722396077,
+        "gap": 2.5925474262085757,
+        "Wilson_cosines": [
+          0.40943537259856455,
+          0.48908307582231464,
+          0.3481169079240656
+        ],
+        "boundary_probability": 2.635714155395552e-26,
+        "Gauss_exact_for_every_basis_state": true
+      }
+    ],
+    "dynamical_matter_controls": [
+      {
+        "cutoff": 8,
+        "dimension": 578,
+        "g": 1.0,
+        "charge": 1,
+        "dynamical_two_site_matter": true,
+        "ground_energy": 3.779827239349151,
+        "gap": 1.068100886964996,
+        "Wilson_cosines": [
+          0.2724403177381519,
+          0.3545734933223599,
+          0.2672335014073419
+        ],
+        "boundary_probability": 2.251973286477967e-27,
+        "Gauss_exact_for_every_basis_state": true
+      },
+      {
+        "cutoff": 8,
+        "dimension": 578,
+        "g": 1.0,
+        "charge": -2,
+        "dynamical_two_site_matter": true,
+        "ground_energy": 3.834171175629704,
+        "gap": 2.406761849246789,
+        "Wilson_cosines": [
+          0.27223141882002583,
+          0.35434977167252873,
+          0.26714044450488716
+        ],
+        "boundary_probability": 2.243105868263891e-27,
+        "Gauss_exact_for_every_basis_state": true
+      },
+      {
+        "cutoff": 8,
+        "dimension": 578,
+        "g": 1.0,
+        "charge": 4,
+        "dynamical_two_site_matter": true,
+        "ground_energy": 3.86095737590586,
+        "gap": 5.627260818308981,
+        "Wilson_cosines": [
+          0.2719645993055915,
+          0.35406137099791507,
+          0.267028466772203
+        ],
+        "boundary_probability": 2.2201723178035983e-27,
+        "Gauss_exact_for_every_basis_state": true
+      }
+    ],
+    "scope": "Two native magnetic flux coordinates only. Other native gauge modes are held out; charged/dynamical sectors use one actual patch edge. This is finite-patch compact U1 ED with unitary infinite-cutoff shifts approximated by hard-wall Galerkin projections, not a full phase diagram, confinement proof, or continuum photon."
+  },
+  "matter_interface": {
+    "canonical_cubic_sha256": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+    "internal_Qpsi": [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2
+    ],
+    "branching": "27=16_1+10_-2+1_4",
+    "cubic_charge_patterns": {
+      "(-2, -2, 4)": 5,
+      "(-2, 1, 1)": 40
+    },
+    "all45_signed_cubic_terms_U1_invariant": true,
+    "trace_Q": 0,
+    "trace_Q_cubed": 0,
+    "hopping": "sum_(edge v->w,A) -t_A psi_(w,A)^dag U_edge^(q_A) psi_(v,A)+h.c.",
+    "Gauss": "div E - sum_A q_A n_(v,A) + background_v = 0",
+    "matter_site_carrier": "native spatial vertex v tensor independent internal E6 index A; the two27-element sets are not identified",
+    "prior_owner": "analysis/w33_pass10950_clock_albert_lorentz_spinor.py and data/w33_qpsi_matter_parity_e8_d8_bridge.json",
+    "scope": "An explicit gauged U1 subgroup charge map and signed-cubic compatibility, with one-particle two-site ED controls. No nonabelian E6 link, chiral lattice regulator, full Fock vacuum, common fermion speed, or Standard Model derived."
+  },
+  "intake": "Tracked separately in analysis/2026-10-27_research_intake_coverage.json; extraction/archival is not labeled human/model reading."
+}
