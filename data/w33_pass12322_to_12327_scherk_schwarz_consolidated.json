@@ -1,0 +1,71 @@
+{
+  "12322": {
+    "lmin_twisted": {
+      "v9_ctrl": {
+        "2": "-1/3",
+        "4": "-1/3"
+      },
+      "v9_w6odd": {
+        "2": "-1/3",
+        "4": "-1/3"
+      },
+      "v4_ctrl": {
+        "2": "-1/3",
+        "4": "-1/3"
+      },
+      "v4_w6odd": {
+        "2": "-1/3",
+        "4": "-1/3"
+      },
+      "v0_ctrl": {
+        "2": "-1/3",
+        "4": "-1/3"
+      },
+      "v0_w6odd": {
+        "2": "-1/3",
+        "4": "-1/3"
+      }
+    },
+    "lmin_untwisted": {
+      "v9_ctrl": {
+        "V0": "0",
+        "V0+W5": "-1/2"
+      },
+      "v9_w6odd": {
+        "V0": "0",
+        "V0+W5": "-1/2"
+      },
+      "v4_ctrl": {
+        "V0": "0",
+        "V0+W5": "-1/2"
+      },
+      "v4_w6odd": {
+        "V0": "0",
+        "V0+W5": "-1/2"
+      },
+      "v0_ctrl": {
+        "V0": "0",
+        "V0+W5": "-1/2"
+      },
+      "v0_w6odd": {
+        "V0": "0",
+        "V0+W5": "-1/2"
+      }
+    }
+  },
+  "12323": {
+    "R6_upper": 0.6123724356957945,
+    "R5_lower": 1.4142135623730951
+  },
+  "12324": {
+    "tachyonic parent": 1300,
+    "tachyon-free parent": 99
+  },
+  "checks": {
+    "12322: Witten theta^2/theta^4 L_min = -1/3 > -2/3 in all six models (n w = 1/2 channel closed)": true,
+    "12322: Witten-untwisted L_min = 0 (control: 10d tachyon-free); V0 + W5 coset L_min = -1/2 (e5 winding channel)": true,
+    "12323: window R_6 < 0.612 sqrt(alpha'), R_5 > 1.414 sqrt(alpha')": true,
+    "12324: 99 tachyon-free parents of 1399": true
+  },
+  "all_checks_pass": true
+}

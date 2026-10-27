@@ -21,6 +21,10 @@
   Z2xZ6-I the corpus closed three-generation Scherk-Schwarz models in 12199.  Within the geometries the corpus covers, this route
   yields no three-generation model with a tachyon-free window (an argument built on cited closures, not a new scan).
 12321 -- synthesis.
+
+WITHDRAWN in 12322: for a lattice Wilson line the half-integer momentum shift does NOT flip with winding (bicharacter:
+phase (1/2)(V_h.lam + w lam^2) = (1/2) V_h.lam mod 1), so there is no (w = 1, n = 0) state and the small-R bound 0.816 is void; the
+large-R bound R_6 > 0.612 sqrt(alpha') stands.  The window is not empty (see 12322-12327).
 """
 
 import json
