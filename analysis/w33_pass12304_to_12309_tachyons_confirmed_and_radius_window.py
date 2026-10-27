@@ -19,6 +19,10 @@ its radius window; the left-right census over all 1399 models (Claude track).
 12308 -- texture degrees with the sector rule: not computed, and not needed -- the sector rule only adds constraints, so it can only
   raise the 12301 lower bounds, which already exclude SM_2579 and push SM_808's bottom and charm to degree >= 7.
 12309 -- synthesis.
+
+CORRECTED in 12316: the parent's tachyons return with half-integer MOMENTUM (not winding) along e6 -> tachyonic for
+R_6 > 0.612 sqrt(alpha'); odd-winding states are tachyonic for R_6 < 0.816 sqrt(alpha'); the window is empty.  Statements here about
+R_6 >= 1.63 sqrt(alpha') and the radius running into the tachyonic region are superseded.
 """
 
 import json

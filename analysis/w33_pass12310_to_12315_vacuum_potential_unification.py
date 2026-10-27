@@ -24,6 +24,10 @@ its Scherk-Schwarz potential proxy points inward; k_Y = 8/3 does not unify; tach
 12315 -- synthesis.  The left-right candidate's remaining assets (three chiral generations, no chiral fractional charge, fractional
   states liftable under the full space-group rule, tachyon-free for R_6 >= 1.63 sqrt(alpha')) are offset by two obstructions found
   here: the radius is driven into the tachyonic region (proxy) and k_Y = 8/3 is far from unification.
+
+CORRECTED in 12316: the parent's tachyons return with half-integer MOMENTUM (not winding) along e6 -> tachyonic for
+R_6 > 0.612 sqrt(alpha'); odd-winding states are tachyonic for R_6 < 0.816 sqrt(alpha'); the window is empty.  Statements here about
+R_6 >= 1.63 sqrt(alpha') and the radius running into the tachyonic region are superseded.
 """
 
 import json
