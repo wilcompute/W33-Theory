@@ -1,0 +1,140 @@
+{
+  "12311": {
+    "vacuum": {
+      "fractional": 48,
+      "singlets": 50,
+      "allowed_pairs": 134,
+      "liftable": 48,
+      "degrees": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "control": {
+      "e5": {
+        "allowed": 0,
+        "rejected": 134
+      },
+      "e1": {
+        "allowed": 134,
+        "rejected": 0
+      }
+    }
+  },
+  "12312": {
+    "v9_w6odd": {
+      "components": {
+        "fermion": 604,
+        "scalar": 660,
+        "gauge": 154,
+        "gravity": 4,
+        "moduli": 8
+      },
+      "n_F": 604,
+      "n_B": 826,
+      "nF_minus_nB": -222
+    },
+    "v9_ctrl": {
+      "components": {
+        "fermion": 992,
+        "scalar": 560,
+        "gauge": 154,
+        "gravity": 4,
+        "moduli": 8,
+        "excited tachyon": 16
+      },
+      "n_F": 992,
+      "n_B": 726,
+      "nF_minus_nB": 266
+    },
+    "v4_w6odd": {
+      "components": {
+        "fermion": 604,
+        "scalar": 660,
+        "gauge": 154,
+        "gravity": 4,
+        "moduli": 8
+      },
+      "n_F": 604,
+      "n_B": 826,
+      "nF_minus_nB": -222
+    },
+    "v4_ctrl": {
+      "components": {
+        "fermion": 744,
+        "scalar": 744,
+        "gauge": 154,
+        "gravity": 4,
+        "moduli": 8,
+        "excited tachyon": 32
+      },
+      "n_F": 744,
+      "n_B": 910,
+      "nF_minus_nB": -166
+    }
+  },
+  "12313": {
+    "M23": 9.666135179097701e+16,
+    "k_needed_at_M23": 1.2918623551122468,
+    "k_needed_at_Ms": 1.2321452088662737,
+    "alpha2inv_minus_alpha3inv_at_Ms": -1.002625007201651,
+    "sin2_string_kY_8_3": 0.27272727272727276,
+    "sin2_string_kY_5_3": 0.37499999999999994
+  },
+  "12310": {
+    "('w6odd', 'ok', 'no SU3xSU2xSU2', '-')": 987,
+    "('ctrl', 'ok', 'no SU3xSU2xSU2', '-')": 948,
+    "('w6odd', 'ok', 'LR-type', '-')": 396,
+    "('ctrl', 'ok', 'LR-type', '-')": 425,
+    "('ctrl', 'missing', 'no SU3xSU2xSU2', '-')": 11,
+    "('w6odd', 'ok', 'LR-type', 'three generations')": 15,
+    "('ctrl', 'ok', 'LR-type', 'three generations')": 15
+  },
+  "12310_hits": [
+    "Z6II_60_SM_20260917_810_v0__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v10__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v11__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v12__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v13__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v17__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v1__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v2__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v3__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v4__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v5__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v6__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v7__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v8__w6odd.nsoq",
+    "Z6II_60_SM_20260917_810_v9__w6odd.nsoq"
+  ],
+  "12310_timeouts": 0,
+  "checks": {
+    "12311: 48/48 liftable at degree <= 2 under the full space-group rule; control e5 134/134 rejected, e1 0/134": true,
+    "12312: candidate brother n_F - n_B = -222 (radius driven inward)": true,
+    "12313: SM running needs k_Y ~ 1.2-1.3, far from 8/3": true,
+    "12310: 2797 dumps, 0 timeouts; 15 hits, all SM_810 variants, all tachyon-free brothers with n_F - n_B = -222": true
+  },
+  "all_checks_pass": true
+}

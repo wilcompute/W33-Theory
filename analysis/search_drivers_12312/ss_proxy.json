@@ -1,0 +1,52 @@
+{
+ "v9_w6odd": {
+  "components": {
+   "fermion": 604,
+   "scalar": 660,
+   "gauge": 154,
+   "gravity": 4,
+   "moduli": 8
+  },
+  "n_F": 604,
+  "n_B": 826,
+  "nF_minus_nB": -222
+ },
+ "v9_ctrl": {
+  "components": {
+   "fermion": 992,
+   "scalar": 560,
+   "gauge": 154,
+   "gravity": 4,
+   "moduli": 8,
+   "excited tachyon": 16
+  },
+  "n_F": 992,
+  "n_B": 726,
+  "nF_minus_nB": 266
+ },
+ "v4_w6odd": {
+  "components": {
+   "fermion": 604,
+   "scalar": 660,
+   "gauge": 154,
+   "gravity": 4,
+   "moduli": 8
+  },
+  "n_F": 604,
+  "n_B": 826,
+  "nF_minus_nB": -222
+ },
+ "v4_ctrl": {
+  "components": {
+   "fermion": 744,
+   "scalar": 744,
+   "gauge": 154,
+   "gravity": 4,
+   "moduli": 8,
+   "excited tachyon": 32
+  },
+  "n_F": 744,
+  "n_B": 910,
+  "nF_minus_nB": -166
+ }
+}

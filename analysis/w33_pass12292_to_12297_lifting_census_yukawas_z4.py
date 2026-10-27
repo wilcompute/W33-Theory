@@ -42,7 +42,7 @@ def main():
     res["12292"] = li
     checks["12292: 48 fractional Weyl fermions, all liftable by integer singlet monomials (gauge level)"] = (
         li["fractional_fermions"] == 48 and li["liftable_fields_integer"] == 48 and li["lattice_rank"] == 4)
-    lv = json.loads((A / "search_drivers_12293" / "levels.json").read_text())
+    lv = json.loads((A / "search_drivers_12293" / "levels_12292_frozen.json").read_text())
     ctrl_fail = any(k.startswith("('massless-type'") and not k.endswith("'0')") for k in lv["levels"])
     res["12293_level_control_failed"] = ctrl_fail
     checks["12293: the level computation fails its massless control (no critical radius quoted)"] = ctrl_fail

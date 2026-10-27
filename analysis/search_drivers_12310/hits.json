@@ -1,0 +1,182 @@
+[
+ {
+  "model": "Z6II_60_SM_20260917_810_v0",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v10",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v11",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v12",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 8,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v13",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 8,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v17",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v1",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v2",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v3",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v4",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v5",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v6",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v7",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v8",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v9",
+  "parent_SM": "Z6II_60_SM_20260917_810",
+  "brother_tachyonic": 0,
+  "parent_tachyonic": 16,
+  "parent_also_hits": true,
+  "t_values": [
+   [
+    "-1/148"
+   ]
+  ]
+ }
+]
