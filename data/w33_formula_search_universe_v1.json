@@ -146901,6 +146901,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bef7829906449acd5144e4a582579187cb60c25cca8bd6c46eb88c73f738c10c",
+      "normalized_formula": "\"physical_zero_modes\":int(sum(ev<1e-8))",
+      "numeric_literals": [
+        "1e-8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261027_native_bloch_face_module.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 303,
+          "path": "analysis/w33_20261027_native_bloch_face_module.py",
+          "raw": "\"physical_zero_modes\": int(sum(ev < 1e-8)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d26dc72072caadf7808f0ebcd918f3e7e66ba7fe7abfe1751f884c268548282a",
+      "structural_formula": "\"physical_zero_modes\":int(sum(ev<#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "698f16a426c280362b28ae1468a7fd344d496959459a59335298885b0c703889",
       "normalized_formula": "\"physics\":\"CCboson-fermionbalancef*Phi4=g*mu^2\"",
       "numeric_literals": [
@@ -569182,6 +569209,44 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cd01f6b2205f0d9e7d70c43dff7358761416753bac1c9093b22fe9e2017e26eb",
+      "normalized_formula": "Atk=(0.17,-0.23,0.31,0.11),theall1287short-facecurlhasnumericalrank106andstillleavestwoflatmodes.Alongthethirdorfourthcoordinateaxis,ithasnumericalrank105andleavesthree.Theexactmodularwitnessgivesrank106atz=(2,3,5,7)inF101;thisisa^genericlowerbound^,notbyitselfaproofofthegenericupperbound106.Theselected105boundalreadyprovesthataone-cellindependentsubsetcannotbeusedasacompletepropagatinggaugepresentation",
+      "numeric_literals": [
+        "-0.23",
+        "0.11",
+        "0.17",
+        "0.31",
+        "01",
+        "05",
+        "06",
+        "2",
+        "287",
+        "3",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-27_native_gauge_propagation_completion.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/2026-10-27_native_gauge_propagation_completion.md",
+          "raw": "At k=(0.17,-0.23,0.31,0.11), the all1287 short-face curl has numerical rank106 and still leaves two flat modes. Along the third or fourth coordinate axis, it has numerical rank105 and leaves three. The exact modular witness gives rank106 at z=(2,3,5,7) in F101; this is a **generic lower bound**, not by itself a proof of the generic upper bound106. The selected105 bound already proves that a one-cell independent subset cannot be used as a complete propagating gauge presentation.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "7e67daabbbcc12b03fcc642b2dca0ef9beb4a9bf55546ac7d7998bae1242656d",
+      "structural_formula": "Atk=(#,#,#,#),theall1#short-facecurlhasnumericalrank1#andstillleavestwoflatmodes.Alongthethirdorfourthcoordinateaxis,ithasnumericalrank1#andleavesthree.Theexactmodularwitnessgivesrank1#atz=(#,#,#,#)inF1#;thisisa^genericlowerbound^,notbyitselfaproofofthegenericupperbound1#.Theselected1#boundalreadyprovesthataone-cellindependentsubsetcannotbeusedasacompletepropagatinggaugepresentation"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fd6f98f8b24c2d4de706d6521f5e67f83adc85efbc7dc2366e8c817dd89cd024",
       "normalized_formula": "Atk=0thesignedcurl/plaquetteboundarymatrixhasrank^78^(includingindependentexactGF(3)rankverification,notmerelyfloatingrank)insidetheLevigraph's81-dimensionalnativecyclespace.The3unfilledcyclesaretheintendedthreefirst-homology/windingdirections,notarandommissingconstraint",
       "numeric_literals": [
@@ -638811,6 +638876,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3ac6123cd03295711f6a7dfc1aea63d1fc552fa778c06ec6269b13d94b85be7a",
+      "normalized_formula": "Foreachorientededgee=(a,b),defineD_ea(k)=-1andD_eb(k)=exp(ik.V_e).Foreachliftedzero-periodloopf,sumtheedgefieldswiththephaseofthe^runningintegerdeckposition^,obtainingF_f(k).ThetelescopingidentityisexactlyF(k)D(k)=0.Itsnumericalresidualischeckedatthedeclaredrealmomenta;theintegerLaurentspecializationalsoverifiesitexactlymodulo101",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "01"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-27_native_gauge_propagation_completion.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 41,
+          "path": "analysis/2026-10-27_native_gauge_propagation_completion.md",
+          "raw": "For each oriented edge e=(a,b), define D_ea(k)=-1 and D_eb(k)=exp(i k.V_e). For each lifted zero-period loop f, sum the edge fields with the phase of the **running integer deck position**, obtaining F_f(k). The telescoping identity is exactly F(k)D(k)=0. Its numerical residual is checked at the declared real momenta; the integer Laurent specialization also verifies it exactly modulo 101.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "dc114aef5bcdbe3bf50cb5c3fe5a21c481f6dce5a55eefc2fca4c153b2fa2f5e",
+      "structural_formula": "Foreachorientededgee=(a,b),defineD_ea(k)=#andD_eb(k)=exp(ik.V_e).Foreachliftedzero-periodloopf,sumtheedgefieldswiththephaseofthe^runningintegerdeckposition^,obtainingF_f(k).ThetelescopingidentityisexactlyF(k)D(k)=#.Itsnumericalresidualischeckedatthedeclaredrealmomenta;theintegerLaurentspecializationalsoverifiesitexactlymodulo1#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d9703209d7652744acc0dcef930dfc1a2457932acc8a504491a42f888ee4bdee",
       "normalized_formula": "Foreachprimeq=3,5,7,thecodeconstructsF_(q2)=F_q(alpha),alpha2a",
       "numeric_literals": [
@@ -654508,6 +654602,34 @@
       },
       "structural_family_id": "fc00cf34abfc016e831cb9321f6eeef09c1c319eb25d360a763cd00e26838787",
       "structural_formula": "H:=D^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b0a7a7b2cf1a61fd2d20019144e05f552fdaf74fc764d1b8a1bd2520eca89ef4",
+      "normalized_formula": "H=(1/2)sum_eE_e^2+(1/2)||FA||^2",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-27_native_gauge_propagation_completion.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/2026-10-27_native_gauge_propagation_completion.md",
+          "raw": "H = (1/2) sum_e E_e^2 + (1/2) ||F A||^2,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "18db529c009007fa694e308df15e342789b08bd2cf01b4a3f4d8445a60566bda",
+      "structural_formula": "H=(#/#)sum_eE_e^#+(#/#)||FA||^#"
     },
     {
       "file_count": 1,
@@ -835609,6 +835731,45 @@
       },
       "structural_family_id": "36efc8242bacca25c3f1d192863ef8a28c6d19df1dc4df23c5e044ce5e2c77ae",
       "structural_formula": "ThecomplementarygraphW3#_barhastheta(W3#_bar)=#=linesize"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2ac02f1f59c3b24e01fbf71287e96dcf8939078615e209dd98769d2b4acd54f0",
+      "normalized_formula": "Thecompletedcurlhas111rows:selected105plussixcommutators.Atz=(2,3,5,7)overF101,exacteliminationgivesrankD=27,rankF=108andFD=0.SincerankF<=135-27=108overtheLaurentfunctionfield,thisproves^genericrank108exactly^.AnonzerointegerLaurentminormodulo101cannotbethezeropolynomial;itsrestrictiontotheunittorusisnonzeroonadenseopensubset.Thisprovesagenericstatement,notabsenceofallexceptionalfinitemomenta",
+      "numeric_literals": [
+        "-27",
+        "0",
+        "01",
+        "05",
+        "08",
+        "108",
+        "11",
+        "135",
+        "2",
+        "27",
+        "3",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-27_native_gauge_propagation_completion.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 69,
+          "path": "analysis/2026-10-27_native_gauge_propagation_completion.md",
+          "raw": "The completed curl has111 rows: selected105 plus six commutators. At z=(2,3,5,7) over F101, exact elimination gives rankD=27, rankF=108 and FD=0. Since rankF<=135-27=108 over the Laurent function field, this proves **generic rank108 exactly**. A nonzero integer Laurent minor modulo101 cannot be the zero polynomial; its restriction to the unit torus is nonzero on a dense open subset. This proves a generic statement, not absence of all exceptional finite momenta.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "f40b98fd721bd77ce6de5a5287e87ddecb1c86361a401174560eb13ce47db475",
+      "structural_formula": "Thecompletedcurlhas1#rows:selected1#plussixcommutators.Atz=(#,#,#,#)overF1#,exacteliminationgivesrankD=#,rankF=#andFD=#.SincerankF<=##=#overtheLaurentfunctionfield,thisproves^genericrank1#exactly^.AnonzerointegerLaurentminormodulo1#cannotbethezeropolynomial;itsrestrictiontotheunittorusisnonzeroonadenseopensubset.Thisprovesagenericstatement,notabsenceofallexceptionalfinitemomenta"
     },
     {
       "file_count": 1,
@@ -1678539,6 +1678700,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a44adfece4bed2fbb11af0a01debf481cbf7b2e7dcf0d0361c4ac7ad2c569d38",
+      "normalized_formula": "rank=int(np.count_nonzero(singular>1e-9))",
+      "numeric_literals": [
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261027_native_bloch_face_module.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 97,
+          "path": "analysis/w33_20261027_native_bloch_face_module.py",
+          "raw": "rank = int(np.count_nonzero(singular > 1e-9))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a6d07d2c639b3e5e75ca1d1d2cfab4199481450a9f5532053fb320cd48b43adc",
+      "structural_formula": "rank=int(np.count_nonzero(singular>#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d7e433404c4d6ec2c34db9214de47f5e27ebaf855a91e4d9210552aa986efb1c",
       "normalized_formula": "rank=int(np.sum(singular>1e-8))",
       "numeric_literals": [
@@ -1894966,9 +1895154,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-27T14:01:31-04:00",
+  "frozen_at": "2026-10-27T16:14:50-04:00",
   "pass": 398,
-  "repository_head": "a15185e5c9fa28d820a69df8d1dcfda7fb040544",
+  "repository_head": "619cd06e51c18e4df0095bed2a3ddef68e64ded3",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1936131,6 +1936319,14 @@
       "exact_member_count": 1,
       "structural_family_id": "10ed4e93ea5aaefd9c10919f3fc6e03626a4bb25b665f6fecc89b8926c338e12",
       "structural_formula": "\"physical_scale_invariant_ratio\":\"K_phys^#*R_phys/T_phys^#=#/#,K=M_Pl^#istheEinstein-Hilbertcoefficient\""
+    },
+    {
+      "exact_formula_ids": [
+        "bef7829906449acd5144e4a582579187cb60c25cca8bd6c46eb88c73f738c10c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d26dc72072caadf7808f0ebcd918f3e7e66ba7fe7abfe1751f884c268548282a",
+      "structural_formula": "\"physical_zero_modes\":int(sum(ev<#))"
     },
     {
       "exact_formula_ids": [
@@ -2048086,6 +2048282,14 @@
     },
     {
       "exact_formula_ids": [
+        "cd01f6b2205f0d9e7d70c43dff7358761416753bac1c9093b22fe9e2017e26eb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7e67daabbbcc12b03fcc642b2dca0ef9beb4a9bf55546ac7d7998bae1242656d",
+      "structural_formula": "Atk=(#,#,#,#),theall1#short-facecurlhasnumericalrank1#andstillleavestwoflatmodes.Alongthethirdorfourthcoordinateaxis,ithasnumericalrank1#andleavesthree.Theexactmodularwitnessgivesrank1#atz=(#,#,#,#)inF1#;thisisa^genericlowerbound^,notbyitselfaproofofthegenericupperbound1#.Theselected1#boundalreadyprovesthataone-cellindependentsubsetcannotbeusedasacompletepropagatinggaugepresentation"
+    },
+    {
+      "exact_formula_ids": [
         "bb2a47cb54a72d399a18b3700b15bf78e0299248943ada66bdafd1c31d04947e"
       ],
       "exact_member_count": 1,
@@ -2066888,6 +2067092,14 @@
     },
     {
       "exact_formula_ids": [
+        "3ac6123cd03295711f6a7dfc1aea63d1fc552fa778c06ec6269b13d94b85be7a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dc114aef5bcdbe3bf50cb5c3fe5a21c481f6dce5a55eefc2fca4c153b2fa2f5e",
+      "structural_formula": "Foreachorientededgee=(a,b),defineD_ea(k)=#andD_eb(k)=exp(ik.V_e).Foreachliftedzero-periodloopf,sumtheedgefieldswiththephaseofthe^runningintegerdeckposition^,obtainingF_f(k).ThetelescopingidentityisexactlyF(k)D(k)=#.Itsnumericalresidualischeckedatthedeclaredrealmomenta;theintegerLaurentspecializationalsoverifiesitexactlymodulo1#"
+    },
+    {
+      "exact_formula_ids": [
         "d9703209d7652744acc0dcef930dfc1a2457932acc8a504491a42f888ee4bdee"
       ],
       "exact_member_count": 1,
@@ -2071208,6 +2071420,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5d429384615203a2cca2590d405ce2bd7c952e82fc4c0df1e44f786e32f76bb5",
       "structural_formula": "H=#^{#/#}(\\begin{smallmatrix}#\\\\##\\end{smallmatrix})"
+    },
+    {
+      "exact_formula_ids": [
+        "b0a7a7b2cf1a61fd2d20019144e05f552fdaf74fc764d1b8a1bd2520eca89ef4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "18db529c009007fa694e308df15e342789b08bd2cf01b4a3f4d8445a60566bda",
+      "structural_formula": "H=(#/#)sum_eE_e^#+(#/#)||FA||^#"
     },
     {
       "exact_formula_ids": [
@@ -2120190,6 +2120410,14 @@
       "exact_member_count": 1,
       "structural_family_id": "36efc8242bacca25c3f1d192863ef8a28c6d19df1dc4df23c5e044ce5e2c77ae",
       "structural_formula": "ThecomplementarygraphW3#_barhastheta(W3#_bar)=#=linesize"
+    },
+    {
+      "exact_formula_ids": [
+        "2ac02f1f59c3b24e01fbf71287e96dcf8939078615e209dd98769d2b4acd54f0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f40b98fd721bd77ce6de5a5287e87ddecb1c86361a401174560eb13ce47db475",
+      "structural_formula": "Thecompletedcurlhas1#rows:selected1#plussixcommutators.Atz=(#,#,#,#)overF1#,exacteliminationgivesrankD=#,rankF=#andFD=#.SincerankF<=##=#overtheLaurentfunctionfield,thisproves^genericrank1#exactly^.AnonzerointegerLaurentminormodulo1#cannotbethezeropolynomial;itsrestrictiontotheunittorusisnonzeroonadenseopensubset.Thisprovesagenericstatement,notabsenceofallexceptionalfinitemomenta"
     },
     {
       "exact_formula_ids": [
@@ -2343883,6 +2344111,14 @@
     },
     {
       "exact_formula_ids": [
+        "a44adfece4bed2fbb11af0a01debf481cbf7b2e7dcf0d0361c4ac7ad2c569d38"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a6d07d2c639b3e5e75ca1d1d2cfab4199481450a9f5532053fb320cd48b43adc",
+      "structural_formula": "rank=int(np.count_nonzero(singular>#))"
+    },
+    {
+      "exact_formula_ids": [
         "d7e433404c4d6ec2c34db9214de47f5e27ebaf855a91e4d9210552aa986efb1c"
       ],
       "exact_member_count": 1,
@@ -2401348,20 +2401584,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91883711,
-    "exact_formula_families": 64788,
-    "files_scanned": 12656,
-    "formula_occurrences": 70922,
+    "bytes_scanned": 91910182,
+    "exact_formula_families": 64794,
+    "files_scanned": 12658,
+    "formula_occurrences": 70928,
     "status_occurrences": {
-      "certified_or_theorem": 5310,
+      "certified_or_theorem": 5311,
       "killed_or_retracted": 1915,
-      "open_or_conditional": 2392,
+      "open_or_conditional": 2394,
       "preregistered": 36,
       "retrospective_fit": 5407,
-      "unclassified": 55862
+      "unclassified": 55865
     },
-    "structural_families": 63078
+    "structural_families": 63084
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "53228b03b0917c8305217aa05b5fe36d585c08da8a0d9398639bc7d1b9c689a7"
+  "universe_sha256": "26f7b14a07472d034f41d556bba75ec22c72330e5e5343206dbd1f6247f0b7fc"
 }
