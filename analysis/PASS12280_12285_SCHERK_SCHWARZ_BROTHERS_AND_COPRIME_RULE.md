@@ -82,3 +82,17 @@ Drafted (12278), **not sent**: whether to send it is the user's decision.
 The `specdump` batch loops recorded exit code 0 for every run. Verdicts are now read from the output (`sdclass`: an `NU1` line means
 an SM, `noSM` means not an SM, anything else is a load failure). An earlier tally that read warning-only files as SMs was caught by
 the prefilter control: 906 rejected classes all fail to load.
+
+## Addendum: the 12281 census completed (299 models)
+
+The frozen numbers above (155 models) are what the producer checks. The full run, which finished after the commit
+(`census_cmp_full299.json`, `chirality_full299.json`), gives:
+
+| brother | result |
+|---|---|
+| even | **298/298** identical |
+| odd | **293/293** changed (19 tachyon-free) |
+| W6-odd | **298/298** changed and tachyon-free (parents: 24/299 tachyon-free) |
+
+The chirality proxy goes 3 → 2 in 43 of 45 three-doublet parents. The two 3 → 3 cases are V0 variants (v4, v9) of the same parent,
+SM_20260917_810, and their tachyon-free brothers have identical chiral content. **So there is still one lead, not two.**
