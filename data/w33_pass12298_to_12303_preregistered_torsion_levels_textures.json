@@ -1,0 +1,69 @@
+{
+  "12298": {
+    "('control', 'loaded')": 12,
+    "('changed', 'changed')": 32,
+    "('identical', 'identical')": 92
+  },
+  "12299": {
+    "left": {
+      "('massless-type', 0, 0, '0')": 28,
+      "('massless-type', 0, 1, '0')": 58,
+      "('massless-type', 0, 2, '0')": 45,
+      "('massless-type', 0, 3, '0')": 36,
+      "('massless-type', 0, 4, '0')": 45,
+      "('massless-type', 0, 5, '0')": 58,
+      "('massless-type', 1, 0, '0')": 4,
+      "('massless-type', 1, 1, '0')": 58,
+      "('massless-type', 1, 2, '0')": 24,
+      "('massless-type', 1, 3, '0')": 80,
+      "('massless-type', 1, 4, '0')": 24,
+      "('massless-type', 1, 5, '0')": 58,
+      "('tachyon-type', 1, 2, '0')": 8,
+      "('tachyon-type', 1, 4, '0')": 8
+    },
+    "right": {
+      "ctrl": {
+        "('massless-type', '0')": 518,
+        "('tachyon-type', '0')": 16
+      },
+      "w6odd": {
+        "('massless-type', '0')": 466
+      }
+    },
+    "survey": {
+      "models": 20,
+      "table": {
+        "('massless-type', '0', '0')": 13632,
+        "('excited-tachyon label', '0', '0')": 120
+      }
+    }
+  },
+  "12300": {
+    "fractional_fermions": 48,
+    "allowed_pairs": 134,
+    "liftable": 48
+  },
+  "12301": {
+    "SM_20260926_808_24__odd": {
+      "control": {
+        "q_1 bu_1 bl_2": 0,
+        "q_2 bu_1 bl_4": 0,
+        "q_3 bu_1 bl_5": 0
+      }
+    },
+    "SM_20260926_2579_27__odd": {
+      "control": {
+        "q_1 bu_1 bl_1": 0,
+        "q_2 bu_1 bl_6": 0,
+        "q_3 bu_1 bl_7": 0
+      }
+    }
+  },
+  "checks": {
+    "12298: pre-registered predictions 124/124 (32 changed, 92 identical)": true,
+    "12299: calibrated levels -- every massless-type and every excited-tachyon-labelled state at (0, 0)": true,
+    "12300: 48/48 liftable under gauge + point group + Witten": true,
+    "12301: controls at degree 0; SM_808 down >= 7, SM_2579 no down to degree 12": true
+  },
+  "all_checks_pass": true
+}

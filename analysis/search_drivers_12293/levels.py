@@ -1,5 +1,5 @@
 """12293: left-moving levels of the parent's tachyonic states.  alpha' m_L^2 / 4 = P^2/2 + N - 1 + dc(h), with P the engine's
-left-moving weight (W line), N = sum of oscillator frequencies x occupation (O lines), dc = (1/2) sum_i w_i (1 - w_i) over the twist
+left-moving weight (W line), N = sum of |oscillator frequency| x occupation (O lines; a first version summed signed frequencies and failed the control), dc = (1/2) sum_i w_i (1 - w_i) over the twist
 w = frac(n v) of the Z6 power n (v = (1/6, 1/3, -1/2); the Witten element adds no twist).  Control: massless fields of the same sectors
 must give exactly 0.  Then the Scherk-Schwarz bound: a state with winding 1/2 along e6 has alpha' m^2/4 = m0 + R^2/(16 alpha'),
 so it stays non-tachyonic iff R >= R_c = 4 sqrt(-m0 alpha')."""
@@ -19,7 +19,7 @@ def parse(p):
             cur['W'] = [F(x).limit_denominator(48) for x in l[2:].split(',')]
         elif l.startswith('O ') and cur is not None:
             m = re.search(r'freq=(\S+) N=(\S+)', l)
-            cur['N'] += F(m.group(1)).limit_denominator(48) * int(float(m.group(2)))
+            cur['N'] += abs(F(m.group(2)).limit_denominator(12))   # N= is the number-operator value (freq x occupation), printed to 2 decimals; earlier versions used signed freq and int(N) and failed the control
     return recs
 recs = parse('../search_drivers_12281/bro/Z6II_60_SM_20260917_810_v9__ctrl.nsoq')
 lev = collections.Counter(); tach = []

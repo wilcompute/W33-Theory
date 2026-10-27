@@ -95,14 +95,16 @@ def analyse(fac, fs, i3, iL, iR):
             hits.append(str(tv))
     return dict(status='scanned', free=len(free), candidates=len(cands), sm_values=hits)
 if __name__ == '__main__':
-    idx = json.load(open('../search_drivers_12281/census_index.json'))
+    D = sys.argv[1] if len(sys.argv) > 1 else '../search_drivers_12281'
+    OUTF = sys.argv[2] if len(sys.argv) > 2 else 'lr_census.json'
+    idx = json.load(open(D + '/census_index.json'))
     out = {}; tab = collections.Counter()
     for e in idx:
         for tag in ('w6odd', 'ctrl'):
             if tag not in e['files']:
                 continue
-            p = '../search_drivers_12281/' + e['files'][tag][:-4] + '.nsoq'
-            if not os.path.exists(p):
+            p = D + '/' + e['files'][tag][:-4] + '.nsoq'
+            if not os.path.exists(p) or not open(p, errors='ignore').read().rstrip().endswith('END'):
                 continue
             r = load(p)
             if r is None:
@@ -122,4 +124,4 @@ if __name__ == '__main__':
                 print('HIT', e['model'], tag, [x for x in res if x.get('sm_values')])
     for k, v in sorted(tab.items()):
         print(k, v)
-    json.dump(dict(table={str(k): v for k, v in tab.items()}, results=out), open('lr_census.json', 'w'), indent=1)
+    json.dump(dict(table={str(k): v for k, v in tab.items()}, results=out), open(OUTF, 'w'), indent=1)
