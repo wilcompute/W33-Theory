@@ -1,0 +1,20 @@
+{
+ "t": "-1/148",
+ "Y_coefficients": [
+  "0",
+  "-3/164",
+  "-3/1025",
+  "49/11100",
+  "-1/148"
+ ],
+ "higgs_scalars": {
+  "bidoublet (1,2,2), Y' = 0": 10,
+  "SU2_L doublet, |Y| = 1/2": 14,
+  "SU2_R doublet, |Y'| = 1/2": 14
+ },
+ "fractional_fermion_fields": 96,
+ "fractional_scalar_fields": 102,
+ "fermion_fields": 210,
+ "scalar_fields": 236,
+ "TrY": "0"
+}

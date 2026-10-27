@@ -1,0 +1,546 @@
+{
+ "SM_20260926_8_03__odd": {
+  "fields": {
+   "bd": 11,
+   "n": 77,
+   "d": 8,
+   "bl": 10,
+   "l": 13,
+   "v": 21,
+   "w": 4,
+   "x": 11,
+   "bv": 24,
+   "bw": 7,
+   "q": 3,
+   "bu": 3,
+   "be": 3
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_8_03__ctrl": {
+  "fields": {
+   "d": 13,
+   "n": 107,
+   "bd": 16,
+   "v": 21,
+   "w": 4,
+   "x": 11,
+   "bv": 24,
+   "bw": 7,
+   "l": 8,
+   "bu": 3,
+   "be": 3,
+   "q": 3,
+   "bl": 5
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 8,
+   "udd gauge+SG+R": 8
+  }
+ },
+ "SM_20260926_821_06__odd": {
+  "fields": {
+   "bq": 2,
+   "q": 5,
+   "n": 75,
+   "bd": 11,
+   "d": 8,
+   "l": 10,
+   "bu": 3,
+   "be": 3,
+   "bl": 7,
+   "v": 14,
+   "w": 19,
+   "x": 5,
+   "bw": 19,
+   "bx": 5
+  },
+  "allowed": {
+   "QLd gauge+SG": 22,
+   "QLd gauge+SG+R": 22,
+   "udd gauge+SG": 8,
+   "udd gauge+SG+R": 8
+  }
+ },
+ "SM_20260926_821_06__ctrl": {
+  "fields": {
+   "bq": 2,
+   "q": 5,
+   "n": 75,
+   "bd": 11,
+   "d": 8,
+   "l": 10,
+   "bl": 7,
+   "be": 3,
+   "bu": 3,
+   "v": 19,
+   "bv": 19,
+   "w": 14,
+   "x": 5,
+   "bx": 5
+  },
+  "allowed": {
+   "QLd gauge+SG": 22,
+   "QLd gauge+SG+R": 22,
+   "udd gauge+SG": 7,
+   "udd gauge+SG+R": 7
+  }
+ },
+ "SM_20260926_920_07__odd": {
+  "fields": {
+   "bd": 13,
+   "n": 110,
+   "d": 10,
+   "v": 21,
+   "w": 7,
+   "bv": 18,
+   "x": 11,
+   "bw": 4,
+   "be": 3,
+   "bu": 3,
+   "q": 3,
+   "l": 5,
+   "bl": 2
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 8,
+   "udd gauge+SG+R": 8
+  }
+ },
+ "SM_20260926_920_07__ctrl": {
+  "fields": {
+   "d": 5,
+   "n": 77,
+   "bd": 8,
+   "l": 10,
+   "bl": 7,
+   "v": 21,
+   "w": 7,
+   "bv": 18,
+   "x": 11,
+   "bw": 4,
+   "bu": 3,
+   "be": 3,
+   "q": 3
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_1081_08__odd": {
+  "fields": {
+   "bd": 13,
+   "d": 10,
+   "n": 97,
+   "q": 3,
+   "bu": 3,
+   "be": 3,
+   "l": 5,
+   "bl": 2,
+   "v": 18,
+   "bv": 21,
+   "w": 7,
+   "x": 11,
+   "bw": 4
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 8,
+   "udd gauge+SG+R": 8
+  }
+ },
+ "SM_20260926_1081_08__ctrl": {
+  "fields": {
+   "bd": 8,
+   "d": 5,
+   "n": 70,
+   "bl": 7,
+   "l": 10,
+   "q": 3,
+   "bu": 3,
+   "be": 3,
+   "v": 7,
+   "w": 21,
+   "x": 11,
+   "bw": 18,
+   "bv": 4
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_1267_09__odd": {
+  "fields": {
+   "bd": 13,
+   "n": 123,
+   "d": 10,
+   "v": 5,
+   "w": 29,
+   "bw": 29,
+   "x": 10,
+   "bv": 5,
+   "be": 3,
+   "bu": 3,
+   "q": 3,
+   "l": 5,
+   "bl": 2
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 8,
+   "udd gauge+SG+R": 8
+  }
+ },
+ "SM_20260926_1267_09__ctrl": {
+  "fields": {
+   "d": 5,
+   "n": 93,
+   "bd": 8,
+   "l": 10,
+   "bl": 7,
+   "v": 5,
+   "w": 29,
+   "bw": 29,
+   "x": 10,
+   "bv": 5,
+   "bu": 3,
+   "be": 3,
+   "q": 3
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_2013_12__odd": {
+  "fields": {
+   "bq": 2,
+   "q": 5,
+   "n": 83,
+   "bd": 13,
+   "d": 10,
+   "l": 12,
+   "bu": 3,
+   "be": 3,
+   "bl": 9,
+   "v": 5,
+   "w": 17,
+   "x": 22,
+   "bx": 22,
+   "bv": 5
+  },
+  "allowed": {
+   "QLd gauge+SG": 22,
+   "QLd gauge+SG+R": 22,
+   "udd gauge+SG": 7,
+   "udd gauge+SG+R": 7
+  }
+ },
+ "SM_20260926_2013_12__ctrl": {
+  "fields": {
+   "bq": 2,
+   "q": 5,
+   "n": 89,
+   "bd": 11,
+   "d": 8,
+   "l": 10,
+   "be": 3,
+   "bu": 3,
+   "bl": 7,
+   "v": 7,
+   "w": 21,
+   "x": 19,
+   "bx": 19,
+   "bv": 7
+  },
+  "allowed": {
+   "QLd gauge+SG": 22,
+   "QLd gauge+SG+R": 22,
+   "udd gauge+SG": 7,
+   "udd gauge+SG+R": 7
+  }
+ },
+ "SM_20260926_2413_13__odd": {
+  "fields": {
+   "bd": 8,
+   "n": 84,
+   "d": 5,
+   "bl": 7,
+   "l": 10,
+   "bu": 3,
+   "be": 3,
+   "q": 3,
+   "v": 6,
+   "w": 16,
+   "x": 12,
+   "bw": 16,
+   "bv": 6
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_2413_13__ctrl": {
+  "fields": {
+   "bd": 13,
+   "n": 114,
+   "d": 10,
+   "bu": 3,
+   "be": 3,
+   "q": 3,
+   "l": 5,
+   "bl": 2,
+   "v": 6,
+   "w": 16,
+   "x": 12,
+   "bw": 16,
+   "bv": 6
+  },
+  "allowed": {
+   "QLd gauge+SG": 8,
+   "QLd gauge+SG+R": 8,
+   "udd gauge+SG": 8,
+   "udd gauge+SG+R": 8
+  }
+ },
+ "SM_20260926_768_16__odd": {
+  "fields": {
+   "n": 87,
+   "d": 6,
+   "bd": 8,
+   "bl": 4,
+   "l": 6,
+   "bu": 3,
+   "be": 3,
+   "q": 3,
+   "v": 5,
+   "w": 29,
+   "x": 10,
+   "bw": 29,
+   "bv": 5
+  },
+  "allowed": {
+   "QLd gauge+SG": 2,
+   "QLd gauge+SG+R": 2,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_768_16__ctrl": {
+  "fields": {
+   "n": 87,
+   "d": 6,
+   "bd": 8,
+   "bl": 4,
+   "l": 6,
+   "bu": 3,
+   "be": 3,
+   "q": 3,
+   "v": 10,
+   "w": 29,
+   "bw": 29,
+   "x": 5,
+   "bx": 5
+  },
+  "allowed": {
+   "QLd gauge+SG": 2,
+   "QLd gauge+SG+R": 2,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_2811_20__odd": {
+  "fields": {
+   "d": 9,
+   "bd": 11,
+   "n": 106,
+   "bu": 3,
+   "q": 3,
+   "be": 3,
+   "l": 7,
+   "bl": 5,
+   "v": 10,
+   "w": 22,
+   "bw": 22,
+   "x": 8,
+   "bv": 10
+  },
+  "allowed": {
+   "QLd gauge+SG": 9,
+   "QLd gauge+SG+R": 9,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_2811_20__ctrl": {
+  "fields": {
+   "d": 9,
+   "bd": 11,
+   "n": 106,
+   "bu": 3,
+   "q": 3,
+   "be": 3,
+   "l": 7,
+   "bl": 5,
+   "v": 8,
+   "w": 22,
+   "x": 12,
+   "bw": 22,
+   "bv": 8
+  },
+  "allowed": {
+   "QLd gauge+SG": 9,
+   "QLd gauge+SG+R": 9,
+   "udd gauge+SG": 1,
+   "udd gauge+SG+R": 1
+  }
+ },
+ "SM_20260926_128_23__odd": {
+  "fields": {
+   "n": 91,
+   "d": 5,
+   "e": 1,
+   "u": 1,
+   "bq": 1,
+   "l": 6,
+   "bl": 6,
+   "bd": 6,
+   "v": 14,
+   "w": 14,
+   "x": 2,
+   "bv": 16,
+   "bx": 2,
+   "bu": 4,
+   "be": 4,
+   "q": 4
+  },
+  "allowed": {}
+ },
+ "SM_20260926_128_23__ctrl": {
+  "fields": {
+   "n": 91,
+   "d": 5,
+   "e": 1,
+   "u": 1,
+   "bq": 1,
+   "l": 6,
+   "bl": 6,
+   "bd": 6,
+   "v": 14,
+   "w": 14,
+   "bw": 16,
+   "x": 2,
+   "bx": 2,
+   "bu": 4,
+   "be": 4,
+   "q": 4
+  },
+  "allowed": {}
+ },
+ "SM_20260926_808_24__odd": {
+  "fields": {
+   "n": 84,
+   "be": 3,
+   "bu": 3,
+   "bd": 8,
+   "bl": 5,
+   "q": 3,
+   "l": 5,
+   "d": 9,
+   "v": 12,
+   "w": 22,
+   "x": 4,
+   "bx": 4,
+   "bw": 20
+  },
+  "allowed": {
+   "udd gauge+SG": 4,
+   "udd gauge+SG+R": 4
+  }
+ },
+ "SM_20260926_808_24__ctrl": {
+  "fields": {
+   "n": 84,
+   "be": 3,
+   "bu": 3,
+   "bd": 8,
+   "bl": 5,
+   "q": 3,
+   "l": 5,
+   "d": 9,
+   "v": 14,
+   "w": 8,
+   "bw": 8,
+   "x": 20,
+   "bx": 18
+  },
+  "allowed": {
+   "udd gauge+SG": 4,
+   "udd gauge+SG+R": 4
+  }
+ },
+ "SM_20260926_2579_27__odd": {
+  "fields": {
+   "n": 89,
+   "bu": 3,
+   "be": 3,
+   "bd": 6,
+   "l": 7,
+   "bl": 7,
+   "q": 3,
+   "d": 7,
+   "v": 14,
+   "w": 14,
+   "bw": 16,
+   "x": 2,
+   "bx": 2
+  },
+  "allowed": {
+   "udd gauge+SG": 4,
+   "udd gauge+SG+R": 4
+  }
+ },
+ "SM_20260926_2579_27__ctrl": {
+  "fields": {
+   "n": 89,
+   "bu": 3,
+   "be": 3,
+   "bd": 6,
+   "l": 7,
+   "bl": 7,
+   "q": 3,
+   "d": 7,
+   "v": 14,
+   "w": 14,
+   "x": 2,
+   "bx": 2,
+   "bw": 16
+  },
+  "allowed": {
+   "udd gauge+SG": 4,
+   "udd gauge+SG+R": 4
+  }
+ }
+}
