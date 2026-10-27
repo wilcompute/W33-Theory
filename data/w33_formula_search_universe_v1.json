@@ -414773,6 +414773,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b3ba201149f7412a82b244a0af496443035140536e2bdb5c2f3dd0f8e16fa3af",
+      "normalized_formula": "12330--one-loopbetacoefficientsofthecandidate'sfullmasslessspectrum(Y=T3R+Y'percomponent):b3=7,b2=16",
+      "numeric_literals": [
+        "12330",
+        "16",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py",
+          "raw": "12330 -- one-loop beta coefficients of the candidate's full massless spectrum (Y = T3R + Y' per component): b3 = 7, b2 = 16,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2682144a80ac1a0325411ec6e679cfc2d42165f7344698144e74d8885850fabf",
+      "structural_formula": "#--one-loopbetacoefficientsofthecandidate'sfullmasslessspectrum(Y=T3R+Y'percomponent):b3=#,b2=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "35d7a4c3a64f8308b7fd38cbc1f72ff3e775513dd6dddc7e84e095d51e6bc520",
       "normalized_formula": "12480/39=320",
       "numeric_literals": [
@@ -443903,6 +443932,42 @@
       },
       "structural_family_id": "7554fb98385bf2e36ad1edc37885fb711ce6ab1e926ae3f9bff6b35b7b53b2c9",
       "structural_formula": "#p_1\u2261p_2\\pmod{\\lambda^{q+#}}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c005ea243487d68b1ad57db14fc8c47d37feb9e4054ed3a4170f1fe85572d49f",
+      "normalized_formula": "2pt]\\largeatestedphaseformula,itsselectionrule,andaScherk--Schwarzwindow}\\author{W(3,3)programme---Claudetrack(Passes12265--12333)}\\date{October2026}\\begin{document}\\maketitle\\begin{abstract}ShiftingaWilsonlineofaheteroticorbifoldbyalatticevector$\\lambda$changesnoconsistencyconditionbutcanchangethespectrum.Wewritethechangeofeveryprojectionphaseasanalternatingbicharacter$B(g,h)$oncommutingspace-groupelementsandtestitagainsttheorbifolderengines:$B=0$onallcommutingpairsimpliesanunchangedspectrum($232/232$),everychangehas$B\\neq0$($61/61$),andapre-registeredpredictionforfresh$T^6/\\mathbbZ_4$modelsiscorrectin$124/124$cases.Brothermodelsandgeneralizeddiscretetorsionareknown(Pl\\\"oger,Ramos-S\\'anchez,Ratz,Vaudrevange);whatisnewhereistheexplicit,testedformula,itsuseonthe$W(3,3)$orbifoldroutes,andaradiusanalysisofaScherk--Schwarzbrotherwiththreechiralgeneratio",
+      "numeric_literals": [
+        "-12333",
+        "0",
+        "026",
+        "124",
+        "2",
+        "2265",
+        "232",
+        "3",
+        "6",
+        "61"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/wilson_line_torsion/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "tex_display",
+          "line": 6,
+          "path": "papers/wilson_line_torsion/main.tex",
+          "raw": "2pt] \\large a tested phase formula, its selection rule, and a Scherk--Schwarz window} \\author{W(3,3) programme --- Claude track (Passes 12265--12333)} \\date{October 2026} \\begin{document} \\maketitle \\begin{abstract} Shifting a Wilson line of a heterotic orbifold by a lattice vector $\\lambda$ changes no consistency condition but can change the spectrum. We write the change of every projection phase as an alternating bicharacter $B(g,h)$ on commuting space-group elements and test it against the orbifolder engines: $B=0$ on all commuting pairs implies an unchanged spectrum ($232/232$), every change has $B\\neq0$ ($61/61$), and a pre-registered prediction for fresh $T^6/\\mathbb Z_4$ models is correct in $124/124$ cases. Brother models and generalized discrete torsion are known (Pl\\\"oger, Ramos-S\\'anchez, Ratz, Vaudrevange); what is new here is the explicit, tested formula, its use on the $W(3,3)$ orbifold routes, and a radius analysis of a Scherk--Schwarz brother with three chiral generatio",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "66eab441582883cba859e71001070c5017c8348a66202a2f1e5d2b63a245651d",
+      "structural_formula": "#pt]\\largeatestedphaseformula,itsselectionrule,andaScherk--Schwarzwindow}\\author{W(#,#)programme---Claudetrack(Passes1#-#)}\\date{October2#}\\begin{document}\\maketitle\\begin{abstract}ShiftingaWilsonlineofaheteroticorbifoldbyalatticevector$\\lambda$changesnoconsistencyconditionbutcanchangethespectrum.Wewritethechangeofeveryprojectionphaseasanalternatingbicharacter$B(g,h)$oncommutingspace-groupelementsandtestitagainsttheorbifolderengines:$B=#$onallcommutingpairsimpliesanunchangedspectrum($#/#$),everychangehas$B\\neq0$($#/#$),andapre-registeredpredictionforfresh$T^#/\\mathbbZ_4$modelsiscorrectin$#/#$cases.Brothermodelsandgeneralizeddiscretetorsionareknown(Pl\\\"oger,Ramos-S\\'anchez,Ratz,Vaudrevange);whatisnewhereistheexplicit,testedformula,itsuseonthe$W(#,#)$orbifoldroutes,andaradiusanalysisofaScherk--Schwarzbrotherwiththreechiralgeneratio"
     },
     {
       "file_count": 1,
@@ -572066,6 +572131,33 @@
       },
       "structural_family_id": "84f2b74bbdd519e34d8495b9569c7735db6c57642ca3805581d671b6b053e5e1",
       "structural_formula": "B(g,h)=\\tfrac1#(\\sigma_gV_h\\cdot\\lambda-\\sigma_hV_g\\cdot\\lambda)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "69973487b679105acca5297ea6d62b165964ca1c70dccc73d624772d107ed429",
+      "normalized_formula": "B(g,h)=\\tfrac12\\bigl(\\sigma_gV_h\\cdot\\lambda-\\sigma_hV_g\\cdot\\lambda\\bigr)\\pmod1",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/wilson_line_torsion/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 29,
+          "path": "papers/wilson_line_torsion/main.tex",
+          "raw": "B(g,h)=\\tfrac12\\bigl(\\sigma_g\\,V_h\\cdot\\lambda-\\sigma_h\\,V_g\\cdot\\lambda\\bigr)\\pmod 1,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c0c810662d801b991965a0c02cd9cd9d8955290d069e60b2aafa644ec55d281a",
+      "structural_formula": "B(g,h)=\\tfrac1#\\bigl(\\sigma_gV_h\\cdot\\lambda-\\sigma_hV_g\\cdot\\lambda\\bigr)\\pmod1"
     },
     {
       "file_count": 1,
@@ -783723,6 +783815,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0742234ce0e55b7dea5ed583f477d39314814b6bd812effd1f311741b0255dc1",
+      "normalized_formula": "R_6>\\sqrt{3\\alpha'/8}",
+      "numeric_literals": [
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/wilson_line_torsion/main.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 59,
+          "path": "papers/wilson_line_torsion/main.tex",
+          "raw": "R_6>\\sqrt{3\\alpha'/8}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "34df00ea8d8b53ef93d9ef9d55e58426210d42597b66e60b79baa27a3c902a4d",
+      "structural_formula": "R_6>\\sqrt{#\\alpha'/#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a4d1c312baf74b8e09d8576dc18f3ff5522528047e89ae28e1de407f66fcc341",
       "normalized_formula": "R_6>\\sqrt{3\\alpha'/8}\u22480.61\\sqrt{\\alpha'}",
       "numeric_literals": [
@@ -888184,6 +888304,38 @@
       },
       "structural_family_id": "da6ebb51f12e4d2464aca47ef560ff03f70853ccdc4b900d5548e2445622b194",
       "structural_formula": "WiththeREDUCEDPlanckmassthecleanresult-vq=#needsNOcorrection--the+mu-lambda"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a7943998c61fee9c0ff9417f7ef2055f9a4ab1cb4152a573cb4355ba712ae4b2",
+      "normalized_formula": "Withthecandidate'sfullmasslessspectrum,b=(7,16,148/3):notasymptoticallyfree.Overcommonthresholdsfrom103to1016GeV",
+      "numeric_literals": [
+        "016",
+        "03",
+        "148",
+        "16",
+        "3",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12328_12333_E5_CHANNEL_BETA_NOTE.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 19,
+          "path": "analysis/PASS12328_12333_E5_CHANNEL_BETA_NOTE.md",
+          "raw": "With the candidate's full massless spectrum, b = (7, 16, 148/3): not asymptotically free. Over common thresholds from 10\u00b3 to 10\u00b9\u2076 GeV",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "493d54390ba1686d7f3ff2fca969038b0f957115da4e6df5131be20ac76d13df",
+      "structural_formula": "Withthecandidate'sfullmasslessspectrum,b=(#,#,#/#):notasymptoticallyfree.Overcommonthresholdsfrom1#to1#GeV"
     },
     {
       "file_count": 1,
@@ -1002510,7 +1002662,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 681,
+          "line": 682,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1150595,6 +1150747,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7342156fbce25435c863f2d3c3b8dcbe97c44fcdb2b88bb6d327f0916fa2575e",
+      "normalized_formula": "bY=148/3(notasymptoticallyfree).SMbelowacommonthresholdM_Xandthefullspectrumabove,M_X=1e3...1e16GeV:43",
+      "numeric_literals": [
+        ".1",
+        "148",
+        "1e3",
+        "3",
+        "43",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py",
+          "raw": "bY = 148/3 (not asymptotically free). SM below a common threshold M_X and the full spectrum above, M_X = 1e3 ... 1e16 GeV: 43",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3fbbe7de5d0d3207b6763b4273a4107069ecfe6fe823f901ac6d3f72d7d22ee0",
+      "structural_formula": "bY=#/#(notasymptoticallyfree).SMbelowacommonthresholdM_Xandthefullspectrumabove,M_X=#..#e1#GeV:#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2b65a580a31063039abc085504120a4a42ee4c8e4d7b61fe6f30151adb7eee1a",
       "normalized_formula": "b[2*i+1]=2*mp.log(x/mp.mpf('.01'))-2*constant+3ifxelse0",
       "numeric_literals": [
@@ -1161306,6 +1161490,33 @@
       },
       "structural_family_id": "f11cda8db06b4d9ec6d7489390dc5e8f77db9605ff302ec058532fbb7662620c",
       "structural_formula": "brokengeneratorsf\u2212k=k=#(X,Ybosons).<strong>ELECTROWEAK:</strong>v<sub>EW</sub>=E+q!=#GeV"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "61154ca865a5a8be14b9c357256100047fa03e140d04ab2ce88de74bdfabbbdb",
+      "normalized_formula": "brother)--thechannel'stranslationconditionsaremet,soR_5>~sqrt(2alpha')standsunlessthetheta^2/statisticsprojections",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 6,
+          "path": "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py",
+          "raw": "brother) -- the channel's translation conditions are met, so R_5 >~ sqrt(2 alpha') stands unless the theta^2 / statistics projections",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cb0d324a8051d84c68529b03d90008a211af616b8e7c212b37a29569f49f69c3",
+      "structural_formula": "brother)--thechannel'stranslationconditionsaremet,soR_5>~sqrt(#alpha')standsunlessthetheta^#/statisticsprojections"
     },
     {
       "file_count": 1,
@@ -1389272,18 +1389483,19 @@
       "structural_formula": "k_Y=#/##n"
     },
     {
-      "file_count": 2,
+      "file_count": 3,
       "formula_id": "e97d3cadcecf19d7f3b5969643c98ebf39483edc9199485779ff69d973ad204f",
       "normalized_formula": "k_Y=8/3",
       "numeric_literals": [
         "3",
         "8"
       ],
-      "occurrence_count": 3,
+      "occurrence_count": 5,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "papers/forty_points/appA_ledger.tex",
-        "papers/forty_points/sec07_realforms.tex"
+        "papers/forty_points/sec07_realforms.tex",
+        "papers/wilson_line_torsion/main.tex"
       ],
       "source_locations": [
         {
@@ -1389302,16 +1389514,30 @@
         },
         {
           "category": "inline_math",
+          "line": 679,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "k_Y=8/3",
+          "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
           "line": 545,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "k_Y=8/3",
           "status": "killed_or_retracted"
+        },
+        {
+          "category": "inline_math",
+          "line": 66,
+          "path": "papers/wilson_line_torsion/main.tex",
+          "raw": "k_Y=8/3",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
         "killed_or_retracted": 1,
         "open_or_conditional": 1,
-        "unclassified": 1
+        "unclassified": 3
       },
       "structural_family_id": "8a25ed67f68fa25190f0386995457dca67f9974403b77a7cf29faadc6ee9d181",
       "structural_formula": "k_Y=#/#"
@@ -1423006,7 +1423232,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 680,
+          "line": 681,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1428140,7 +1428366,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 680,
+          "line": 681,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1529655,6 +1529881,36 @@
       },
       "structural_family_id": "cfc80e0740c5e47693e82aea196afd3570019bb1dd1980bb0cd790bd8551f6f0",
       "structural_formula": "perturbation_theorem='Forphase-fixedlinkfieldswithsum_ec_e|qa_e|<g0/#,c_e=#+sum_i|J_ei|/#,||Q(a)-Q0||#<=thatsum.Exactinverseresidualgivesg0>#;gap>=#g0/#.Davis-Kahangives||P-P0||<#/#,soE0^dagPE0>(#-(#/#)^#)I.TheStiefelframethereforeexiststhroughoutthisfiniteweak-fieldtube.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4199685dd6958d55f2e48dfdc47d38f20722ac792bf7fdb498c248204e940ad1",
+      "normalized_formula": "perturbativealpha_2=alpha_3crossings,k_Yneededin[0.21,1.28]--never8/3.Thek_Y=8/3obstructionholdswithinone-loop",
+      "numeric_literals": [
+        "0.21",
+        "1.28",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py",
+          "raw": "perturbative alpha_2 = alpha_3 crossings, k_Y needed in [0.21, 1.28] -- never 8/3. The k_Y = 8/3 obstruction holds within one-loop",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "00483e8d13069b36475302f1a6e4eb9a787ccc5694727582ad37182a62f462db",
+      "structural_formula": "perturbativealpha_2=alpha_3crossings,k_Yneededin[#,#]--never8/#.Thek_Y=#/#obstructionholdswithinone-loop"
     },
     {
       "file_count": 1,
@@ -1684985,6 +1685241,33 @@
       },
       "structural_family_id": "cad5bf6ca4a55739cf366c43cc880ae3df74b3d04731efe1f79cccaba8184874",
       "structural_formula": "removeO2->loseHiggs/CKM-A/PMNS-theta1#/tau"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "0caa09e14bea86ce161b340184b9eec43be2e6aaf4220949c67b6fc3194cb16c",
+      "normalized_formula": "removethose8(notcomputed).TheR_6<0.61sqrt(alpha')windowitselfneedsnoprojection:itschannelsareclosedbylevelminima",
+      "numeric_literals": [
+        "0.61"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass12328_to_12333_e5_channel_beta_note.py",
+          "raw": "remove those 8 (not computed). The R_6 < 0.61 sqrt(alpha') window itself needs no projection: its channels are closed by level minima.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f70cf3e6c12ff830c42a8519f9f7e85d1dff027d613c9c52294da6bdbee2ed7d",
+      "structural_formula": "removethose8(notcomputed).TheR_6<#sqrt(alpha')windowitselfneedsnoprojection:itschannelsareclosedbylevelminima"
     },
     {
       "file_count": 1,
@@ -1845165,7 +1845448,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 680,
+          "line": 681,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1894683,9 +1894966,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-27T13:54:13-04:00",
+  "frozen_at": "2026-10-27T14:01:31-04:00",
   "pass": 398,
-  "repository_head": "23c894176358ef04823260b8d94a64b795a2e063",
+  "repository_head": "a15185e5c9fa28d820a69df8d1dcfda7fb040544",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1954915,6 +1955198,14 @@
     },
     {
       "exact_formula_ids": [
+        "b3ba201149f7412a82b244a0af496443035140536e2bdb5c2f3dd0f8e16fa3af"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2682144a80ac1a0325411ec6e679cfc2d42165f7344698144e74d8885850fabf",
+      "structural_formula": "#--one-loopbetacoefficientsofthecandidate'sfullmasslessspectrum(Y=T3R+Y'percomponent):b3=#,b2=#"
+    },
+    {
+      "exact_formula_ids": [
         "3f6b4a5bb3a9e82d7e32c639393016fc8db74b2c1e937a75dcfeee91ac749b44"
       ],
       "exact_member_count": 1,
@@ -1992132,6 +1992423,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6d73cac6655df272210cb5198dc06ce2fdb5de80a5902ffb61bc643cbbd1f393",
       "structural_formula": "#pt]\\itshape\\footnotesizerawnoisystatesconsumedperdistilledoutput\\end{center}\\headline{Themapconverges\\emph{linearly}.Standarddistillationisquadraticorcubic---Reed--Muller$#$-to-$#$gives$p'\u2248#p^#$---andthatgapisthewholegame.}\\begin{plain}So:thedeep-gradebranchisagenuinefidelity-improvingmapandagenuinerefutationoftheearlierno-go.Itis\\emph{not},byitself,ausabledistillationroutine.Tentothetwenty-sevenrawstatesisnotanengineeringnumber.Whatitestablishesisthattheresourceisnotinert---whichisthethingthatwasgenuinelyindoubt.\\end{plain}\\subsection{Andnoothertwo-copybranchwillfixit}\\begin{plain}Thenaturalnextmoveistohopeoneoftheother$#$branchesconvergesfaster.Itdoesnot,andthereasoncanbesettledwithoutexamininganyofthem.Foraprotocoltobequadratic---fortheerrorto\\emph{square}ratherthanshrinkbyathird---itmustthrowawayeveryinputinwhichexact"
+    },
+    {
+      "exact_formula_ids": [
+        "c005ea243487d68b1ad57db14fc8c47d37feb9e4054ed3a4170f1fe85572d49f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "66eab441582883cba859e71001070c5017c8348a66202a2f1e5d2b63a245651d",
+      "structural_formula": "#pt]\\largeatestedphaseformula,itsselectionrule,andaScherk--Schwarzwindow}\\author{W(#,#)programme---Claudetrack(Passes1#-#)}\\date{October2#}\\begin{document}\\maketitle\\begin{abstract}ShiftingaWilsonlineofaheteroticorbifoldbyalatticevector$\\lambda$changesnoconsistencyconditionbutcanchangethespectrum.Wewritethechangeofeveryprojectionphaseasanalternatingbicharacter$B(g,h)$oncommutingspace-groupelementsandtestitagainsttheorbifolderengines:$B=#$onallcommutingpairsimpliesanunchangedspectrum($#/#$),everychangehas$B\\neq0$($#/#$),andapre-registeredpredictionforfresh$T^#/\\mathbbZ_4$modelsiscorrectin$#/#$cases.Brothermodelsandgeneralizeddiscretetorsionareknown(Pl\\\"oger,Ramos-S\\'anchez,Ratz,Vaudrevange);whatisnewhereistheexplicit,testedformula,itsuseonthe$W(#,#)$orbifoldroutes,andaradiusanalysisofaScherk--Schwarzbrotherwiththreechiralgeneratio"
     },
     {
       "exact_formula_ids": [
@@ -2048584,6 +2048883,14 @@
       "exact_member_count": 1,
       "structural_family_id": "84f2b74bbdd519e34d8495b9569c7735db6c57642ca3805581d671b6b053e5e1",
       "structural_formula": "B(g,h)=\\tfrac1#(\\sigma_gV_h\\cdot\\lambda-\\sigma_hV_g\\cdot\\lambda)"
+    },
+    {
+      "exact_formula_ids": [
+        "69973487b679105acca5297ea6d62b165964ca1c70dccc73d624772d107ed429"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c0c810662d801b991965a0c02cd9cd9d8955290d069e60b2aafa644ec55d281a",
+      "structural_formula": "B(g,h)=\\tfrac1#\\bigl(\\sigma_gV_h\\cdot\\lambda-\\sigma_hV_g\\cdot\\lambda\\bigr)\\pmod1"
     },
     {
       "exact_formula_ids": [
@@ -2105740,6 +2106047,14 @@
     },
     {
       "exact_formula_ids": [
+        "0742234ce0e55b7dea5ed583f477d39314814b6bd812effd1f311741b0255dc1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "34df00ea8d8b53ef93d9ef9d55e58426210d42597b66e60b79baa27a3c902a4d",
+      "structural_formula": "R_6>\\sqrt{#\\alpha'/#}"
+    },
+    {
+      "exact_formula_ids": [
         "a4d1c312baf74b8e09d8576dc18f3ff5522528047e89ae28e1de407f66fcc341"
       ],
       "exact_member_count": 1,
@@ -2133997,6 +2134312,14 @@
       "exact_member_count": 1,
       "structural_family_id": "da6ebb51f12e4d2464aca47ef560ff03f70853ccdc4b900d5548e2445622b194",
       "structural_formula": "WiththeREDUCEDPlanckmassthecleanresult-vq=#needsNOcorrection--the+mu-lambda"
+    },
+    {
+      "exact_formula_ids": [
+        "a7943998c61fee9c0ff9417f7ef2055f9a4ab1cb4152a573cb4355ba712ae4b2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "493d54390ba1686d7f3ff2fca969038b0f957115da4e6df5131be20ac76d13df",
+      "structural_formula": "Withthecandidate'sfullmasslessspectrum,b=(#,#,#/#):notasymptoticallyfree.Overcommonthresholdsfrom1#to1#GeV"
     },
     {
       "exact_formula_ids": [
@@ -2202021,6 +2202344,14 @@
     },
     {
       "exact_formula_ids": [
+        "7342156fbce25435c863f2d3c3b8dcbe97c44fcdb2b88bb6d327f0916fa2575e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3fbbe7de5d0d3207b6763b4273a4107069ecfe6fe823f901ac6d3f72d7d22ee0",
+      "structural_formula": "bY=#/#(notasymptoticallyfree).SMbelowacommonthresholdM_Xandthefullspectrumabove,M_X=#..#e1#GeV:#"
+    },
+    {
+      "exact_formula_ids": [
         "2b65a580a31063039abc085504120a4a42ee4c8e4d7b61fe6f30151adb7eee1a"
       ],
       "exact_member_count": 1,
@@ -2204873,6 +2205204,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f11cda8db06b4d9ec6d7489390dc5e8f77db9605ff302ec058532fbb7662620c",
       "structural_formula": "brokengeneratorsf\u2212k=k=#(X,Ybosons).<strong>ELECTROWEAK:</strong>v<sub>EW</sub>=E+q!=#GeV"
+    },
+    {
+      "exact_formula_ids": [
+        "61154ca865a5a8be14b9c357256100047fa03e140d04ab2ce88de74bdfabbbdb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cb0d324a8051d84c68529b03d90008a211af616b8e7c212b37a29569f49f69c3",
+      "structural_formula": "brother)--thechannel'stranslationconditionsaremet,soR_5>~sqrt(#alpha')standsunlessthetheta^#/statisticsprojections"
     },
     {
       "exact_formula_ids": [
@@ -2304568,6 +2304907,14 @@
     },
     {
       "exact_formula_ids": [
+        "4199685dd6958d55f2e48dfdc47d38f20722ac792bf7fdb498c248204e940ad1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "00483e8d13069b36475302f1a6e4eb9a787ccc5694727582ad37182a62f462db",
+      "structural_formula": "perturbativealpha_2=alpha_3crossings,k_Yneededin[#,#]--never8/#.Thek_Y=#/#obstructionholdswithinone-loop"
+    },
+    {
+      "exact_formula_ids": [
         "3d5b6eab1a3c0e85ce8af7eb94f885418e143682991282dba330be24e515080b"
       ],
       "exact_member_count": 1,
@@ -2345378,6 +2345725,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cad5bf6ca4a55739cf366c43cc880ae3df74b3d04731efe1f79cccaba8184874",
       "structural_formula": "removeO2->loseHiggs/CKM-A/PMNS-theta1#/tau"
+    },
+    {
+      "exact_formula_ids": [
+        "0caa09e14bea86ce161b340184b9eec43be2e6aaf4220949c67b6fc3194cb16c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f70cf3e6c12ff830c42a8519f9f7e85d1dff027d613c9c52294da6bdbee2ed7d",
+      "structural_formula": "removethose8(notcomputed).TheR_6<#sqrt(alpha')windowitselfneedsnoprojection:itschannelsareclosedbylevelminima"
     },
     {
       "exact_formula_ids": [
@@ -2400993,20 +2401348,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91872765,
-    "exact_formula_families": 64779,
-    "files_scanned": 12653,
-    "formula_occurrences": 70911,
+    "bytes_scanned": 91883711,
+    "exact_formula_families": 64788,
+    "files_scanned": 12656,
+    "formula_occurrences": 70922,
     "status_occurrences": {
       "certified_or_theorem": 5310,
       "killed_or_retracted": 1915,
       "open_or_conditional": 2392,
       "preregistered": 36,
       "retrospective_fit": 5407,
-      "unclassified": 55851
+      "unclassified": 55862
     },
-    "structural_families": 63069
+    "structural_families": 63078
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "452ad17ad42ffc48ed6a7fbe4c5a6f522c3e3790c3b886697bfcb480d6cbf736"
+  "universe_sha256": "53228b03b0917c8305217aa05b5fe36d585c08da8a0d9398639bc7d1b9c689a7"
 }
