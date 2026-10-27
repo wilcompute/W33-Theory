@@ -1,0 +1,7623 @@
+{
+ "table": {
+  "('w6odd', 'no SU3 x SU2 x SU2', '-')": 213,
+  "('ctrl', 'no SU3 x SU2 x SU2', '-')": 212,
+  "('w6odd', 'LR-type', '-')": 84,
+  "('ctrl', 'LR-type', '-')": 86,
+  "('w6odd', 'LR-type', 'three generations found')": 2,
+  "('ctrl', 'LR-type', 'three generations found')": 2
+ },
+ "results": {
+  "Z6II_52_SM_20260917_405_v15__w6odd": [],
+  "Z6II_52_SM_20260917_405_v15__ctrl": [],
+  "Z6II_57_SM_20260917_1103_v13__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_57_SM_20260917_1103_v13__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_1702_v19__w6odd": [],
+  "Z6II_34_SM_20260917_1702_v19__ctrl": [],
+  "Z6II_54_SM_20260917_1301_v12__w6odd": [],
+  "Z6II_54_SM_20260917_1301_v12__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_1585_v11__w6odd": [],
+  "Z6II_34_SM_20260917_1585_v11__ctrl": [],
+  "Z6II_10_SM_20260917_1497_v14__w6odd": [],
+  "Z6II_10_SM_20260917_1497_v14__ctrl": [],
+  "Z6II_52_SM_20260917_405_v2__w6odd": [],
+  "Z6II_52_SM_20260917_405_v2__ctrl": [],
+  "Z6II_06_SM_20260917_2496_v5__w6odd": [],
+  "Z6II_06_SM_20260917_2496_v5__ctrl": [],
+  "Z6II_60_SM_20260917_810_v15__w6odd": [],
+  "Z6II_60_SM_20260917_810_v15__ctrl": [],
+  "Z6II_22_SM_20260917_399_v3__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_22_SM_20260917_399_v3__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_03_SM_20260917_1353_v3__w6odd": [],
+  "Z6II_03_SM_20260917_1353_v3__ctrl": [],
+  "Z6II_52_SM_20260917_1437_v3__w6odd": [],
+  "Z6II_52_SM_20260917_1437_v3__ctrl": [],
+  "Z6II_20_SM_20260917_1383_v4__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_20_SM_20260917_1383_v4__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_2618_v4__w6odd": [],
+  "Z6II_06_SM_20260917_2618_v4__ctrl": [],
+  "Z6II_53_SM_20260917_1614_v3__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_1614_v3__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v16__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v16__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_57_SM_20260917_1103_v1__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_57_SM_20260917_1103_v1__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_33_SM_20260917_619_v1__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_33_SM_20260917_619_v1__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2056_v15__w6odd": [],
+  "Z6II_34_SM_20260917_2056_v15__ctrl": [],
+  "Z6II_35_SM_20260917_473_v5__w6odd": [],
+  "Z6II_35_SM_20260917_473_v5__ctrl": [],
+  "Z6II_10_SM_20260917_1497_v6__w6odd": [],
+  "Z6II_10_SM_20260917_1497_v6__ctrl": [],
+  "Z6II_34_SM_20260917_2056_v3__w6odd": [],
+  "Z6II_34_SM_20260917_2056_v3__ctrl": [],
+  "Z6II_34_SM_20260917_2698_v18__w6odd": [],
+  "Z6II_34_SM_20260917_2698_v18__ctrl": [],
+  "Z6II_10_SM_20260917_818_v8__w6odd": [],
+  "Z6II_10_SM_20260917_818_v8__ctrl": [],
+  "Z6II_03_SM_20260917_1353_v8__w6odd": [],
+  "Z6II_03_SM_20260917_1353_v8__ctrl": [],
+  "Z6II_12_SM_20260917_2503_v2__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_2503_v2__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_10_SM_20260917_1497_v5__w6odd": [],
+  "Z6II_10_SM_20260917_1497_v5__ctrl": [],
+  "Z6II_01_SM_20260917_273_v0__w6odd": [],
+  "Z6II_01_SM_20260917_273_v0__ctrl": [],
+  "Z6II_34_SM_20260917_2722_v7__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2722_v7__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2068_v7__w6odd": [],
+  "Z6II_34_SM_20260917_2068_v7__ctrl": [],
+  "Z6II_23_SM_20260917_2913_v15__w6odd": [],
+  "Z6II_23_SM_20260917_2913_v15__ctrl": [],
+  "Z6II_23_SM_20260917_2913_v5__w6odd": [],
+  "Z6II_23_SM_20260917_2913_v5__ctrl": [],
+  "Z6II_49_SM_20260917_145_v19__w6odd": [],
+  "Z6II_49_SM_20260917_145_v19__ctrl": [],
+  "Z6II_34_SM_20260917_2229_v7__w6odd": [],
+  "Z6II_34_SM_20260917_2229_v7__ctrl": [],
+  "Z6II_59_SM_20260917_2533_v2__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_59_SM_20260917_2533_v2__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_52_SM_20260917_405_v1__w6odd": [],
+  "Z6II_52_SM_20260917_405_v1__ctrl": [],
+  "Z6II_35_SM_20260917_473_v14__w6odd": [],
+  "Z6II_35_SM_20260917_473_v14__ctrl": [],
+  "Z6II_04_SM_20260917_245_v12__w6odd": [],
+  "Z6II_04_SM_20260917_245_v12__ctrl": [],
+  "Z6II_59_SM_20260917_2473_v8__w6odd": [],
+  "Z6II_59_SM_20260917_2473_v8__ctrl": [],
+  "Z6II_01_SM_20260917_569_v1__w6odd": [],
+  "Z6II_01_SM_20260917_569_v1__ctrl": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_18_SM_20260917_656_v0__w6odd": [],
+  "Z6II_18_SM_20260917_656_v0__ctrl": [],
+  "Z6II_59_SM_20260917_1628_v13__w6odd": [],
+  "Z6II_59_SM_20260917_1628_v13__ctrl": [],
+  "Z6II_06_SM_20260917_1474_v13__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_1474_v13__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2056_v13__w6odd": [],
+  "Z6II_34_SM_20260917_2056_v13__ctrl": [],
+  "Z6II_28_SM_20260917_2417_v1__w6odd": [],
+  "Z6II_28_SM_20260917_2417_v1__ctrl": [],
+  "Z6II_34_SM_20260917_2698_v17__w6odd": [],
+  "Z6II_34_SM_20260917_2698_v17__ctrl": [],
+  "Z6II_59_SM_20260917_1628_v10__w6odd": [],
+  "Z6II_59_SM_20260917_1628_v10__ctrl": [],
+  "Z6II_04_SM_20260917_245_v15__w6odd": [],
+  "Z6II_04_SM_20260917_245_v15__ctrl": [],
+  "Z6II_10_SM_20260917_818_v4__w6odd": [],
+  "Z6II_10_SM_20260917_818_v4__ctrl": [],
+  "Z6II_01_SM_20260917_325_v15__w6odd": [],
+  "Z6II_01_SM_20260917_325_v15__ctrl": [],
+  "Z6II_39_SM_20260917_478_v7__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v7__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_23_SM_20260917_1411_v0__w6odd": [],
+  "Z6II_23_SM_20260917_1411_v0__ctrl": [],
+  "Z6II_34_SM_20260917_617_v0__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_617_v0__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_45_SM_20260917_1962_v15__w6odd": [],
+  "Z6II_45_SM_20260917_1962_v15__ctrl": [],
+  "Z6II_43_SM_20260917_1867_v13__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v13__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_60_SM_20260917_810_v9__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "scanned",
+    "free": 1,
+    "candidates": 5,
+    "sm_values": [
+     "-1/148"
+    ]
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "scanned",
+    "free": 1,
+    "candidates": 5,
+    "sm_values": []
+   }
+  ],
+  "Z6II_60_SM_20260917_810_v9__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "scanned",
+    "free": 0,
+    "candidates": 1,
+    "sm_values": [
+     "None"
+    ]
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "scanned",
+    "free": 0,
+    "candidates": 1,
+    "sm_values": [
+     "None"
+    ]
+   }
+  ],
+  "Z6II_22_SM_20260917_399_v1__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_22_SM_20260917_399_v1__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_23_SM_20260917_1411_v5__w6odd": [],
+  "Z6II_23_SM_20260917_1411_v5__ctrl": [],
+  "Z6II_28_SM_20260917_2417_v16__w6odd": [],
+  "Z6II_28_SM_20260917_2417_v16__ctrl": [],
+  "Z6II_52_SM_20260917_1437_v10__w6odd": [],
+  "Z6II_52_SM_20260917_1437_v10__ctrl": [],
+  "Z6II_06_SM_20260917_998_v9__w6odd": [],
+  "Z6II_06_SM_20260917_998_v9__ctrl": [],
+  "Z6II_23_SM_20260917_2678_v4__w6odd": [],
+  "Z6II_23_SM_20260917_2678_v4__ctrl": [],
+  "Z6II_01_SM_20260917_470_v7__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_01_SM_20260917_470_v7__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_28_SM_20260917_2417_v12__w6odd": [],
+  "Z6II_28_SM_20260917_2417_v12__ctrl": [],
+  "Z6II_06_SM_20260917_2496_v10__w6odd": [],
+  "Z6II_06_SM_20260917_2496_v10__ctrl": [],
+  "Z6II_06_SM_20260917_2158_v5__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_2158_v5__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_2368_v7__w6odd": [],
+  "Z6II_53_SM_20260917_2368_v7__ctrl": [],
+  "Z6II_28_SM_20260917_2298_v17__w6odd": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_28_SM_20260917_2298_v17__ctrl": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_2158_v12__w6odd": [],
+  "Z6II_06_SM_20260917_2158_v12__ctrl": [],
+  "Z6II_05_SM_20260917_58_v12__w6odd": [],
+  "Z6II_05_SM_20260917_58_v12__ctrl": [],
+  "Z6II_53_SM_20260917_1614_v10__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_1614_v10__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_1585_v1__w6odd": [],
+  "Z6II_34_SM_20260917_1585_v1__ctrl": [],
+  "Z6II_59_SM_20260917_2533_v0__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_59_SM_20260917_2533_v0__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_2496_v6__w6odd": [],
+  "Z6II_06_SM_20260917_2496_v6__ctrl": [],
+  "Z6II_34_SM_20260917_2722_v14__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2722_v14__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v16__w6odd": [],
+  "Z6II_39_SM_20260917_478_v16__ctrl": [],
+  "Z6II_59_SM_20260917_2533_v13__w6odd": [],
+  "Z6II_59_SM_20260917_2533_v13__ctrl": [],
+  "Z6II_28_SM_20260917_2298_v6__w6odd": [],
+  "Z6II_28_SM_20260917_2298_v6__ctrl": [],
+  "Z6II_19_SM_20260917_477_v8__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_19_SM_20260917_477_v8__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_33_SM_20260917_619_v8__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_33_SM_20260917_619_v8__ctrl": [],
+  "Z6II_06_SM_20260917_1188_v11__w6odd": [],
+  "Z6II_06_SM_20260917_1188_v11__ctrl": [],
+  "Z6II_12_SM_20260917_1993_v1__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_1993_v1__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   }
+  ],
+  "Z6II_52_SM_20260917_1437_v0__w6odd": [
+   {
+    "SU3": 6,
+    "SU2L": 0,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 1,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 2,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 3,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 4,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 5,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 0,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_52_SM_20260917_1437_v0__ctrl": [
+   {
+    "SU3": 6,
+    "SU2L": 0,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 1,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 2,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 3,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 4,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 5,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 0,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v1__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v1__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_998_v7__w6odd": [],
+  "Z6II_06_SM_20260917_998_v7__ctrl": [],
+  "Z6II_54_SM_20260917_1301_v5__w6odd": [],
+  "Z6II_54_SM_20260917_1301_v5__ctrl": [],
+  "Z6II_06_SM_20260917_691_v1__w6odd": [],
+  "Z6II_06_SM_20260917_691_v1__ctrl": [],
+  "Z6II_53_SM_20260917_1614_v15__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_1614_v15__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_03_SM_20260917_1353_v11__w6odd": [],
+  "Z6II_03_SM_20260917_1353_v11__ctrl": [],
+  "Z6II_01_SM_20260917_470_v3__w6odd": [],
+  "Z6II_01_SM_20260917_470_v3__ctrl": [],
+  "Z6II_05_SM_20260917_58_v3__w6odd": [],
+  "Z6II_05_SM_20260917_58_v3__ctrl": [],
+  "Z6II_34_SM_20260917_292_v19__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_292_v19__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_01_SM_20260917_325_v1__w6odd": [],
+  "Z6II_01_SM_20260917_325_v1__ctrl": [],
+  "Z6II_05_SM_20260917_60_v15__w6odd": [],
+  "Z6II_05_SM_20260917_60_v15__ctrl": [],
+  "Z6II_19_SM_20260917_477_v5__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_19_SM_20260917_477_v5__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2229_v13__w6odd": [],
+  "Z6II_34_SM_20260917_2229_v13__ctrl": [],
+  "Z6II_06_SM_20260917_1474_v7__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_1474_v7__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_35_SM_20260917_473_v3__w6odd": [],
+  "Z6II_35_SM_20260917_473_v3__ctrl": [],
+  "Z6II_23_SM_20260917_2913_v2__w6odd": [],
+  "Z6II_23_SM_20260917_2913_v2__ctrl": [],
+  "Z6II_04_SM_20260917_245_v4__w6odd": [],
+  "Z6II_04_SM_20260917_245_v4__ctrl": [],
+  "Z6II_10_SM_20260917_1497_v0__w6odd": [],
+  "Z6II_10_SM_20260917_1497_v0__ctrl": [],
+  "Z6II_34_SM_20260917_2698_v8__w6odd": [],
+  "Z6II_34_SM_20260917_2698_v8__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_03_SM_20260917_1353_v1__w6odd": [],
+  "Z6II_03_SM_20260917_1353_v1__ctrl": [],
+  "Z6II_03_SM_20260917_1353_v13__w6odd": [],
+  "Z6II_03_SM_20260917_1353_v13__ctrl": [],
+  "Z6II_01_SM_20260917_273_v16__w6odd": [],
+  "Z6II_01_SM_20260917_273_v16__ctrl": [],
+  "Z6II_01_SM_20260917_569_v6__w6odd": [],
+  "Z6II_01_SM_20260917_569_v6__ctrl": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_60_v7__w6odd": [],
+  "Z6II_05_SM_20260917_60_v7__ctrl": [],
+  "Z6II_01_SM_20260917_470_v19__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_01_SM_20260917_470_v19__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_19_SM_20260917_477_v18__w6odd": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_19_SM_20260917_477_v18__ctrl": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_35_SM_20260917_473_v13__w6odd": [],
+  "Z6II_35_SM_20260917_473_v13__ctrl": [],
+  "Z6II_04_SM_20260917_245_v10__w6odd": [],
+  "Z6II_04_SM_20260917_245_v10__ctrl": [],
+  "Z6II_23_SM_20260917_2913_v3__w6odd": [],
+  "Z6II_23_SM_20260917_2913_v3__ctrl": [],
+  "Z6II_45_SM_20260917_1962_v3__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_45_SM_20260917_1962_v3__ctrl": [],
+  "Z6II_06_SM_20260917_2215_v9__w6odd": [],
+  "Z6II_06_SM_20260917_2215_v9__ctrl": [],
+  "Z6II_06_SM_20260917_1487_v4__w6odd": [],
+  "Z6II_06_SM_20260917_1487_v4__ctrl": [],
+  "Z6II_39_SM_20260917_478_v17__w6odd": [
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 6,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 6,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 6,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 6,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 6,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 6,
+    "SU2R": 0,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 6,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 6,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 6,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 6,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v17__ctrl": [
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 6,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 6,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_23_SM_20260917_2678_v5__w6odd": [],
+  "Z6II_23_SM_20260917_2678_v5__ctrl": [],
+  "Z6II_34_SM_20260917_2722_v11__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2722_v11__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_57_SM_20260917_2231_v8__w6odd": [],
+  "Z6II_57_SM_20260917_2231_v8__ctrl": [],
+  "Z6II_34_SM_20260917_292_v13__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_292_v13__ctrl": [],
+  "Z6II_06_SM_20260917_226_v12__w6odd": [],
+  "Z6II_06_SM_20260917_226_v12__ctrl": [],
+  "Z6II_20_SM_20260917_1383_v18__w6odd": [],
+  "Z6II_20_SM_20260917_1383_v18__ctrl": [],
+  "Z6II_59_SM_20260917_1105_v8__w6odd": [],
+  "Z6II_59_SM_20260917_1105_v8__ctrl": [],
+  "Z6II_01_SM_20260917_325_v17__w6odd": [],
+  "Z6II_01_SM_20260917_325_v17__ctrl": [],
+  "Z6II_01_SM_20260917_325_v5__w6odd": [],
+  "Z6II_01_SM_20260917_325_v5__ctrl": [],
+  "Z6II_35_SM_20260917_473_v16__w6odd": [],
+  "Z6II_35_SM_20260917_473_v16__ctrl": [],
+  "Z6II_06_SM_20260917_2541_v16__w6odd": [],
+  "Z6II_06_SM_20260917_2541_v16__ctrl": [],
+  "Z6II_35_SM_20260917_473_v2__w6odd": [],
+  "Z6II_35_SM_20260917_473_v2__ctrl": [],
+  "Z6II_28_SM_20260917_2298_v12__w6odd": [],
+  "Z6II_28_SM_20260917_2298_v12__ctrl": [],
+  "Z6II_23_SM_20260917_2678_v3__w6odd": [],
+  "Z6II_23_SM_20260917_2678_v3__ctrl": [],
+  "Z6II_52_SM_20260917_405_v4__ctrl": [],
+  "Z6II_34_SM_20260917_2229_v19__w6odd": [],
+  "Z6II_34_SM_20260917_2229_v19__ctrl": [],
+  "Z6II_59_SM_20260917_2473_v18__w6odd": [],
+  "Z6II_59_SM_20260917_2473_v18__ctrl": [],
+  "Z6II_23_SM_20260917_2678_v2__w6odd": [],
+  "Z6II_23_SM_20260917_2678_v2__ctrl": [],
+  "Z6II_03_SM_20260917_1353_v4__w6odd": [],
+  "Z6II_03_SM_20260917_1353_v4__ctrl": [],
+  "Z6II_59_SM_20260917_2533_v17__w6odd": [],
+  "Z6II_59_SM_20260917_2533_v17__ctrl": [],
+  "Z6II_34_SM_20260917_2698_v4__w6odd": [],
+  "Z6II_34_SM_20260917_2698_v4__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_58_v4__w6odd": [],
+  "Z6II_05_SM_20260917_58_v4__ctrl": [],
+  "Z6II_10_SM_20260917_818_v2__w6odd": [],
+  "Z6II_10_SM_20260917_818_v2__ctrl": [],
+  "Z6II_34_SM_20260917_1702_v1__w6odd": [],
+  "Z6II_34_SM_20260917_1702_v1__ctrl": [],
+  "Z6II_01_SM_20260917_325_v2__w6odd": [],
+  "Z6II_01_SM_20260917_325_v2__ctrl": [],
+  "Z6II_52_SM_20260917_405_v17__w6odd": [],
+  "Z6II_52_SM_20260917_405_v17__ctrl": [],
+  "Z6II_06_SM_20260917_2215_v18__w6odd": [],
+  "Z6II_06_SM_20260917_2215_v18__ctrl": [],
+  "Z6II_54_SM_20260917_1301_v16__w6odd": [],
+  "Z6II_54_SM_20260917_1301_v16__ctrl": [],
+  "Z6II_22_SM_20260917_1197_v8__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v8__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2229_v12__w6odd": [],
+  "Z6II_34_SM_20260917_2229_v12__ctrl": [],
+  "Z6II_52_SM_20260917_1437_v18__w6odd": [],
+  "Z6II_52_SM_20260917_1437_v18__ctrl": [],
+  "Z6II_34_SM_20260917_1585_v16__w6odd": [],
+  "Z6II_34_SM_20260917_1585_v16__ctrl": [],
+  "Z6II_10_SM_20260917_1497_v18__w6odd": [],
+  "Z6II_10_SM_20260917_1497_v18__ctrl": [],
+  "Z6II_10_SM_20260917_1497_v10__w6odd": [],
+  "Z6II_10_SM_20260917_1497_v10__ctrl": [],
+  "Z6II_35_SM_20260917_473_v11__w6odd": [],
+  "Z6II_35_SM_20260917_473_v11__ctrl": [],
+  "Z6II_23_SM_20260917_1411_v7__w6odd": [],
+  "Z6II_23_SM_20260917_1411_v7__ctrl": [],
+  "Z6II_01_SM_20260917_88_v14__w6odd": [],
+  "Z6II_01_SM_20260917_88_v14__ctrl": [],
+  "Z6II_06_SM_20260917_1474_v3__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_1474_v3__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v5__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v5__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_2503_v9__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_2503_v9__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2056_v6__w6odd": [],
+  "Z6II_34_SM_20260917_2056_v6__ctrl": [],
+  "Z6II_06_SM_20260917_2618_v16__w6odd": [],
+  "Z6II_06_SM_20260917_2618_v16__ctrl": [],
+  "Z6II_01_SM_20260917_325_v18__w6odd": [],
+  "Z6II_01_SM_20260917_325_v18__ctrl": [],
+  "Z6II_05_SM_20260917_60_v3__w6odd": [],
+  "Z6II_05_SM_20260917_60_v3__ctrl": [],
+  "Z6II_06_SM_20260917_1474_v14__w6odd": [],
+  "Z6II_06_SM_20260917_1474_v14__ctrl": [],
+  "Z6II_06_SM_20260917_691_v6__w6odd": [],
+  "Z6II_06_SM_20260917_691_v6__ctrl": [],
+  "Z6II_18_SM_20260917_656_v19__w6odd": [],
+  "Z6II_18_SM_20260917_656_v19__ctrl": [],
+  "Z6II_06_SM_20260917_1474_v4__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_1474_v4__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_59_SM_20260917_1628_v14__w6odd": [],
+  "Z6II_59_SM_20260917_1628_v14__ctrl": [],
+  "Z6II_54_SM_20260917_1301_v4__w6odd": [],
+  "Z6II_54_SM_20260917_1301_v4__ctrl": [],
+  "Z6II_34_SM_20260917_2068_v13__w6odd": [],
+  "Z6II_34_SM_20260917_2068_v13__ctrl": [],
+  "Z6II_45_SM_20260917_1962_v4__w6odd": [],
+  "Z6II_45_SM_20260917_1962_v4__ctrl": [],
+  "Z6II_06_SM_20260917_741_v2__w6odd": [],
+  "Z6II_06_SM_20260917_741_v2__ctrl": [],
+  "Z6II_34_SM_20260917_2229_v9__w6odd": [],
+  "Z6II_34_SM_20260917_2229_v9__ctrl": [],
+  "Z6II_59_SM_20260917_1105_v5__w6odd": [],
+  "Z6II_59_SM_20260917_1105_v5__ctrl": [],
+  "Z6II_06_SM_20260917_2113_v19__w6odd": [],
+  "Z6II_06_SM_20260917_2113_v19__ctrl": [],
+  "Z6II_59_SM_20260917_1105_v19__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_59_SM_20260917_1105_v19__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2229_v16__w6odd": [],
+  "Z6II_34_SM_20260917_2229_v16__ctrl": [],
+  "Z6II_54_SM_20260917_1301_v8__w6odd": [],
+  "Z6II_54_SM_20260917_1301_v8__ctrl": [],
+  "Z6II_34_SM_20260917_2698_v11__w6odd": [],
+  "Z6II_34_SM_20260917_2698_v11__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v10__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v10__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_2113_v4__w6odd": [],
+  "Z6II_06_SM_20260917_2113_v4__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 2,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_2113_v3__w6odd": [],
+  "Z6II_06_SM_20260917_2113_v3__ctrl": [],
+  "Z6II_43_SM_20260917_1867_v5__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v5__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_49_SM_20260917_145_v12__w6odd": [],
+  "Z6II_49_SM_20260917_145_v12__ctrl": [],
+  "Z6II_12_SM_20260917_2503_v8__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_2503_v8__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_226_v4__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_226_v4__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_56_SM_20260917_2753_v11__w6odd": [],
+  "Z6II_56_SM_20260917_2753_v11__ctrl": [],
+  "Z6II_12_SM_20260917_574_v5__w6odd": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_574_v5__ctrl": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v9__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v9__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_56_SM_20260917_2753_v10__w6odd": [
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_56_SM_20260917_2753_v10__ctrl": [
+   {
+    "SU3": 4,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 3,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_20_SM_20260917_1383_v3__w6odd": [],
+  "Z6II_20_SM_20260917_1383_v3__ctrl": [],
+  "Z6II_39_SM_20260917_478_v9__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v9__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_151_v17__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_151_v17__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_1188_v17__w6odd": [],
+  "Z6II_06_SM_20260917_1188_v17__ctrl": [],
+  "Z6II_10_SM_20260917_687_v8__w6odd": [],
+  "Z6II_10_SM_20260917_687_v8__ctrl": [],
+  "Z6II_06_SM_20260917_2541_v6__w6odd": [],
+  "Z6II_06_SM_20260917_2541_v6__ctrl": [],
+  "Z6II_52_SM_20260917_405_v9__w6odd": [],
+  "Z6II_52_SM_20260917_405_v9__ctrl": [],
+  "Z6II_01_SM_20260917_325_v3__w6odd": [],
+  "Z6II_01_SM_20260917_325_v3__ctrl": [],
+  "Z6II_23_SM_20260917_1411_v3__w6odd": [],
+  "Z6II_23_SM_20260917_1411_v3__ctrl": [],
+  "Z6II_34_SM_20260917_2722_v13__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2722_v13__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_59_SM_20260917_2473_v10__w6odd": [],
+  "Z6II_59_SM_20260917_2473_v10__ctrl": [],
+  "Z6II_35_SM_20260917_473_v8__w6odd": [],
+  "Z6II_35_SM_20260917_473_v8__ctrl": [],
+  "Z6II_04_SM_20260917_245_v19__w6odd": [],
+  "Z6II_04_SM_20260917_245_v19__ctrl": [],
+  "Z6II_06_SM_20260917_2541_v0__w6odd": [],
+  "Z6II_06_SM_20260917_2541_v0__ctrl": [],
+  "Z6II_06_SM_20260917_2541_v18__w6odd": [],
+  "Z6II_06_SM_20260917_2541_v18__ctrl": [],
+  "Z6II_10_SM_20260917_818_v6__w6odd": [],
+  "Z6II_10_SM_20260917_818_v6__ctrl": [],
+  "Z6II_19_SM_20260917_477_v6__w6odd": [],
+  "Z6II_19_SM_20260917_477_v6__ctrl": [],
+  "Z6II_06_SM_20260917_2158_v6__w6odd": [],
+  "Z6II_06_SM_20260917_2158_v6__ctrl": [],
+  "Z6II_34_SM_20260917_1702_v3__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_1702_v3__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_58_v2__w6odd": [],
+  "Z6II_05_SM_20260917_58_v2__ctrl": [],
+  "Z6II_33_SM_20260917_619_v17__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_33_SM_20260917_619_v17__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_57_SM_20260917_2231_v0__w6odd": [],
+  "Z6II_57_SM_20260917_2231_v0__ctrl": [],
+  "Z6II_01_SM_20260917_470_v15__w6odd": [],
+  "Z6II_01_SM_20260917_470_v15__ctrl": [],
+  "Z6II_35_SM_20260917_473_v19__w6odd": [],
+  "Z6II_35_SM_20260917_473_v19__ctrl": [],
+  "Z6II_05_SM_20260917_60_v17__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_60_v17__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_57_SM_20260917_2231_v2__w6odd": [],
+  "Z6II_57_SM_20260917_2231_v2__ctrl": [],
+  "Z6II_49_SM_20260917_145_v15__w6odd": [],
+  "Z6II_49_SM_20260917_145_v15__ctrl": [],
+  "Z6II_34_SM_20260917_2722_v4__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2722_v4__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 0,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_1614_v8__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_1614_v8__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2056_v9__w6odd": [],
+  "Z6II_34_SM_20260917_2056_v9__ctrl": [],
+  "Z6II_43_SM_20260917_1867_v1__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v1__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_56_SM_20260917_2753_v13__w6odd": [],
+  "Z6II_56_SM_20260917_2753_v13__ctrl": [],
+  "Z6II_12_SM_20260917_1993_v13__w6odd": [],
+  "Z6II_12_SM_20260917_1993_v13__ctrl": [],
+  "Z6II_06_SM_20260917_2541_v17__w6odd": [],
+  "Z6II_06_SM_20260917_2541_v17__ctrl": [],
+  "Z6II_34_SM_20260917_617_v13__w6odd": [],
+  "Z6II_34_SM_20260917_617_v13__ctrl": [],
+  "Z6II_43_SM_20260917_1867_v2__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v2__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_998_v1__w6odd": [],
+  "Z6II_06_SM_20260917_998_v1__ctrl": [],
+  "Z6II_22_SM_20260917_399_v4__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_22_SM_20260917_399_v4__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v18__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v18__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_1585_v4__w6odd": [],
+  "Z6II_34_SM_20260917_1585_v4__ctrl": [],
+  "Z6II_49_SM_20260917_145_v6__w6odd": [],
+  "Z6II_49_SM_20260917_145_v6__ctrl": [],
+  "Z6II_06_SM_20260917_1188_v13__w6odd": [],
+  "Z6II_06_SM_20260917_1188_v13__ctrl": [],
+  "Z6II_28_SM_20260917_2417_v11__w6odd": [],
+  "Z6II_28_SM_20260917_2417_v11__ctrl": [],
+  "Z6II_05_SM_20260917_60_v13__w6odd": [],
+  "Z6II_05_SM_20260917_60_v13__ctrl": [],
+  "Z6II_52_SM_20260917_1026_v9__w6odd": [],
+  "Z6II_52_SM_20260917_1026_v9__ctrl": [],
+  "Z6II_06_SM_20260917_2158_v4__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_2158_v4__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_01_SM_20260917_470_v16__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_01_SM_20260917_470_v16__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_23_SM_20260917_2678_v18__w6odd": [],
+  "Z6II_23_SM_20260917_2678_v18__ctrl": [],
+  "Z6II_52_SM_20260917_1026_v12__w6odd": [],
+  "Z6II_52_SM_20260917_1026_v12__ctrl": [],
+  "Z6II_06_SM_20260917_998_v13__w6odd": [],
+  "Z6II_06_SM_20260917_998_v13__ctrl": [],
+  "Z6II_06_SM_20260917_226_v10__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_226_v10__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_60_v8__w6odd": [],
+  "Z6II_05_SM_20260917_60_v8__ctrl": [],
+  "Z6II_34_SM_20260917_1702_v12__w6odd": [],
+  "Z6II_34_SM_20260917_1702_v12__ctrl": [],
+  "Z6II_49_SM_20260917_145_v0__w6odd": [],
+  "Z6II_49_SM_20260917_145_v0__ctrl": [],
+  "Z6II_45_SM_20260917_1962_v1__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_45_SM_20260917_1962_v1__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_01_SM_20260917_325_v6__w6odd": [],
+  "Z6II_01_SM_20260917_325_v6__ctrl": [],
+  "Z6II_54_SM_20260917_1301_v1__w6odd": [],
+  "Z6II_54_SM_20260917_1301_v1__ctrl": [],
+  "Z6II_12_SM_20260917_2503_v0__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_2503_v0__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_05_SM_20260917_151_v0__w6odd": [],
+  "Z6II_05_SM_20260917_151_v0__ctrl": [],
+  "Z6II_59_SM_20260917_2473_v2__w6odd": [],
+  "Z6II_59_SM_20260917_2473_v2__ctrl": [],
+  "Z6II_12_SM_20260917_2503_v12__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_12_SM_20260917_2503_v12__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_60_SM_20260917_810_v14__w6odd": [],
+  "Z6II_60_SM_20260917_810_v14__ctrl": [],
+  "Z6II_01_SM_20260917_325_v16__w6odd": [],
+  "Z6II_01_SM_20260917_325_v16__ctrl": [],
+  "Z6II_06_SM_20260917_1474_v2__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_1474_v2__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_59_SM_20260917_2473_v4__w6odd": [],
+  "Z6II_59_SM_20260917_2473_v4__ctrl": [],
+  "Z6II_06_SM_20260917_2215_v17__w6odd": [],
+  "Z6II_06_SM_20260917_2215_v17__ctrl": [],
+  "Z6II_54_SM_20260917_265_v8__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_54_SM_20260917_265_v8__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_23_SM_20260917_2678_v15__w6odd": [],
+  "Z6II_23_SM_20260917_2678_v15__ctrl": [],
+  "Z6II_43_SM_20260917_1867_v8__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v8__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_01_SM_20260917_88_v12__w6odd": [],
+  "Z6II_01_SM_20260917_88_v12__ctrl": [],
+  "Z6II_23_SM_20260917_2913_v7__w6odd": [],
+  "Z6II_23_SM_20260917_2913_v7__ctrl": [],
+  "Z6II_34_SM_20260917_1702_v6__w6odd": [],
+  "Z6II_34_SM_20260917_1702_v6__ctrl": [],
+  "Z6II_28_SM_20260917_2298_v5__w6odd": [],
+  "Z6II_28_SM_20260917_2298_v5__ctrl": [],
+  "Z6II_60_SM_20260917_810_v4__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "scanned",
+    "free": 1,
+    "candidates": 5,
+    "sm_values": [
+     "-1/148"
+    ]
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "scanned",
+    "free": 1,
+    "candidates": 5,
+    "sm_values": []
+   }
+  ],
+  "Z6II_60_SM_20260917_810_v4__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "scanned",
+    "free": 0,
+    "candidates": 1,
+    "sm_values": [
+     "None"
+    ]
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "scanned",
+    "free": 0,
+    "candidates": 1,
+    "sm_values": []
+   }
+  ],
+  "Z6II_10_SM_20260917_687_v15__w6odd": [],
+  "Z6II_10_SM_20260917_687_v15__ctrl": [],
+  "Z6II_53_SM_20260917_1614_v6__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_1614_v6__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_53_SM_20260917_2368_v6__w6odd": [],
+  "Z6II_53_SM_20260917_2368_v6__ctrl": [],
+  "Z6II_53_SM_20260917_2368_v8__w6odd": [],
+  "Z6II_53_SM_20260917_2368_v8__ctrl": [],
+  "Z6II_06_SM_20260917_2541_v9__w6odd": [],
+  "Z6II_06_SM_20260917_2541_v9__ctrl": [],
+  "Z6II_39_SM_20260917_478_v15__w6odd": [],
+  "Z6II_39_SM_20260917_478_v15__ctrl": [],
+  "Z6II_59_SM_20260917_2473_v13__w6odd": [],
+  "Z6II_59_SM_20260917_2473_v13__ctrl": [],
+  "Z6II_39_SM_20260917_478_v11__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v11__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_54_SM_20260917_265_v10__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_54_SM_20260917_265_v10__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_54_SM_20260917_265_v16__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_54_SM_20260917_265_v16__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_49_SM_20260917_145_v17__w6odd": [],
+  "Z6II_49_SM_20260917_145_v17__ctrl": [],
+  "Z6II_35_SM_20260917_473_v0__w6odd": [],
+  "Z6II_35_SM_20260917_473_v0__ctrl": [],
+  "Z6II_06_SM_20260917_2496_v16__w6odd": [],
+  "Z6II_06_SM_20260917_2496_v16__ctrl": [],
+  "Z6II_49_SM_20260917_145_v10__w6odd": [],
+  "Z6II_49_SM_20260917_145_v10__ctrl": [],
+  "Z6II_45_SM_20260917_1962_v0__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_45_SM_20260917_1962_v0__ctrl": [],
+  "Z6II_19_SM_20260917_477_v2__w6odd": [],
+  "Z6II_19_SM_20260917_477_v2__ctrl": [],
+  "Z6II_59_SM_20260917_1105_v9__w6odd": [],
+  "Z6II_59_SM_20260917_1105_v9__ctrl": [],
+  "Z6II_59_SM_20260917_2473_v19__w6odd": [],
+  "Z6II_59_SM_20260917_2473_v19__ctrl": [],
+  "Z6II_57_SM_20260917_1103_v9__w6odd": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_57_SM_20260917_1103_v9__ctrl": [
+   {
+    "SU3": 1,
+    "SU2L": 2,
+    "SU2R": 3,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 1,
+    "SU2L": 3,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2722_v19__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_34_SM_20260917_2722_v19__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "9 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "9 free directions (not scanned)"
+   }
+  ],
+  "Z6II_52_SM_20260917_1437_v1__w6odd": [
+   {
+    "SU3": 6,
+    "SU2L": 0,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 1,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 2,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 3,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 4,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 5,
+    "SU2R": 7,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 0,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   }
+  ],
+  "Z6II_52_SM_20260917_1437_v1__ctrl": [
+   {
+    "SU3": 6,
+    "SU2L": 0,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 1,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 2,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 3,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 4,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 5,
+    "SU2R": 7,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 0,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 3,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 6,
+    "SU2L": 7,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_28_SM_20260917_2417_v19__w6odd": [],
+  "Z6II_28_SM_20260917_2417_v19__ctrl": [],
+  "Z6II_19_SM_20260917_477_v12__w6odd": [],
+  "Z6II_19_SM_20260917_477_v12__ctrl": [],
+  "Z6II_57_SM_20260917_2231_v7__w6odd": [],
+  "Z6II_57_SM_20260917_2231_v7__ctrl": [],
+  "Z6II_54_SM_20260917_265_v18__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_54_SM_20260917_265_v18__ctrl": [
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_10_SM_20260917_687_v6__w6odd": [],
+  "Z6II_10_SM_20260917_687_v6__ctrl": [],
+  "Z6II_22_SM_20260917_1197_v4__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_22_SM_20260917_1197_v4__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "6 free directions (not scanned)"
+   }
+  ],
+  "Z6II_06_SM_20260917_1188_v0__w6odd": [],
+  "Z6II_06_SM_20260917_1188_v0__ctrl": [],
+  "Z6II_39_SM_20260917_478_v10__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_39_SM_20260917_478_v10__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 0,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 0,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 4,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 2,
+    "status": "8 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 4,
+    "SU2R": 5,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 0,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "6 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_33_SM_20260917_619_v16__w6odd": [
+   {
+    "SU3": 2,
+    "SU2L": 0,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 0,
+    "status": "10 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "10 free directions (not scanned)"
+   }
+  ],
+  "Z6II_33_SM_20260917_619_v16__ctrl": [],
+  "Z6II_22_SM_20260917_399_v15__w6odd": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_22_SM_20260917_399_v15__ctrl": [
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 2,
+    "SU2R": 5,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "3 free directions (not scanned)"
+   },
+   {
+    "SU3": 3,
+    "SU2L": 5,
+    "SU2R": 2,
+    "status": "4 free directions (not scanned)"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 2,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 1,
+    "SU2R": 5,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 2,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   },
+   {
+    "SU3": 4,
+    "SU2L": 5,
+    "SU2R": 1,
+    "status": "no hypercharge"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v4__w6odd": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_43_SM_20260917_1867_v4__ctrl": [
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 0,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 3,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 1,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 1,
+    "status": "5 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 3,
+    "SU2R": 4,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 1,
+    "status": "7 free directions (not scanned)"
+   },
+   {
+    "SU3": 2,
+    "SU2L": 4,
+    "SU2R": 3,
+    "status": "7 free directions (not scanned)"
+   }
+  ],
+  "Z6II_23_SM_20260917_2678_v6__w6odd": [],
+  "Z6II_23_SM_20260917_2678_v6__ctrl": [],
+  "Z6II_06_SM_20260917_2158_v11__w6odd": [],
+  "Z6II_06_SM_20260917_2158_v11__ctrl": [],
+  "Z6II_10_SM_20260917_818_v5__w6odd": [],
+  "Z6II_10_SM_20260917_818_v5__ctrl": [],
+  "Z6II_05_SM_20260917_60_v12__w6odd": [],
+  "Z6II_05_SM_20260917_60_v12__ctrl": [],
+  "Z6II_06_SM_20260917_998_v0__w6odd": [],
+  "Z6II_06_SM_20260917_998_v0__ctrl": [],
+  "Z6II_34_SM_20260917_2056_v10__w6odd": [],
+  "Z6II_34_SM_20260917_2056_v10__ctrl": [],
+  "Z6II_20_SM_20260917_1383_v13__w6odd": [],
+  "Z6II_20_SM_20260917_1383_v13__ctrl": []
+ }
+}

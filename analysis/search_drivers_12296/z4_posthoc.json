@@ -1,0 +1,6 @@
+{
+ "('V.lam odd=False', 'pred=identical', 'obs=identical')": 36,
+ "('V.lam odd=True', 'pred=identical', 'obs=identical')": 48,
+ "('V.lam odd=False', 'pred=changed', 'obs=changed')": 8,
+ "('V.lam odd=True', 'pred=changed', 'obs=changed')": 8
+}

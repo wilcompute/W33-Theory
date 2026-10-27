@@ -1,0 +1,11 @@
+{
+ "synthetic": {
+  "U1 U2 U3": true,
+  "U2 U2 U2": false,
+  "U1 U1 U1": false,
+  "U3 U3 U3": false
+ },
+ "plane_sums": {
+  "('-1', '-1', '-1')": 284
+ }
+}

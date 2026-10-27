@@ -1,0 +1,6 @@
+{
+ "lattice_rank": 4,
+ "allowed_pairs_integer": 134,
+ "liftable_fields_integer": 48,
+ "fractional_fermions": 48
+}

@@ -1,0 +1,1418 @@
+[
+ {
+  "model": 0,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m00_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m00_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m00_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m00_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m00_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m00_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m00_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m00_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 1,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m01_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m01_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m01_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m01_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m01_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m01_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m01_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m01_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 2,
+  "classes": 128,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m02_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c003.txt"
+   },
+   {
+    "j": 8,
+    "cls": [
+     0,
+     0,
+     144,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c008.txt"
+   },
+   {
+    "j": 9,
+    "cls": [
+     0,
+     0,
+     144,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c009.txt"
+   },
+   {
+    "j": 10,
+    "cls": [
+     0,
+     0,
+     144,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c010.txt"
+   },
+   {
+    "j": 11,
+    "cls": [
+     0,
+     0,
+     144,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c011.txt"
+   },
+   {
+    "j": 64,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c064.txt"
+   },
+   {
+    "j": 65,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c065.txt"
+   },
+   {
+    "j": 66,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c066.txt"
+   },
+   {
+    "j": 67,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c067.txt"
+   },
+   {
+    "j": 72,
+    "cls": [
+     144,
+     0,
+     144,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c072.txt"
+   },
+   {
+    "j": 73,
+    "cls": [
+     144,
+     0,
+     144,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c073.txt"
+   },
+   {
+    "j": 74,
+    "cls": [
+     144,
+     0,
+     144,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c074.txt"
+   },
+   {
+    "j": 75,
+    "cls": [
+     144,
+     0,
+     144,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m02_c075.txt"
+   }
+  ]
+ },
+ {
+  "model": 3,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m03_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m03_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m03_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m03_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m03_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m03_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m03_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m03_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 4,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m04_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m04_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m04_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m04_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m04_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m04_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m04_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m04_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 5,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m05_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m05_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m05_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m05_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m05_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m05_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m05_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m05_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 6,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m06_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m06_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m06_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m06_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m06_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m06_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m06_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m06_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 7,
+  "classes": 128,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m07_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c003.txt"
+   },
+   {
+    "j": 8,
+    "cls": [
+     0,
+     0,
+     144,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c008.txt"
+   },
+   {
+    "j": 9,
+    "cls": [
+     0,
+     0,
+     144,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c009.txt"
+   },
+   {
+    "j": 10,
+    "cls": [
+     0,
+     0,
+     144,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c010.txt"
+   },
+   {
+    "j": 11,
+    "cls": [
+     0,
+     0,
+     144,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c011.txt"
+   },
+   {
+    "j": 64,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c064.txt"
+   },
+   {
+    "j": 65,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c065.txt"
+   },
+   {
+    "j": 66,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c066.txt"
+   },
+   {
+    "j": 67,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c067.txt"
+   },
+   {
+    "j": 72,
+    "cls": [
+     144,
+     0,
+     144,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c072.txt"
+   },
+   {
+    "j": 73,
+    "cls": [
+     144,
+     0,
+     144,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c073.txt"
+   },
+   {
+    "j": 74,
+    "cls": [
+     144,
+     0,
+     144,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c074.txt"
+   },
+   {
+    "j": 75,
+    "cls": [
+     144,
+     0,
+     144,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m07_c075.txt"
+   }
+  ]
+ },
+ {
+  "model": 8,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m08_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m08_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m08_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m08_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m08_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m08_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m08_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m08_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 9,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m09_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m09_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m09_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m09_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m09_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m09_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m09_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m09_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 10,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m10_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m10_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m10_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m10_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m10_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m10_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m10_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m10_c019.txt"
+   }
+  ]
+ },
+ {
+  "model": 11,
+  "classes": 32,
+  "brothers": [
+   {
+    "j": 0,
+    "cls": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": true,
+    "file": "z4/m11_c000.txt"
+   },
+   {
+    "j": 1,
+    "cls": [
+     0,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m11_c001.txt"
+   },
+   {
+    "j": 2,
+    "cls": [
+     0,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m11_c002.txt"
+   },
+   {
+    "j": 3,
+    "cls": [
+     0,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m11_c003.txt"
+   },
+   {
+    "j": 16,
+    "cls": [
+     144,
+     0,
+     0,
+     0,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m11_c016.txt"
+   },
+   {
+    "j": 17,
+    "cls": [
+     144,
+     0,
+     0,
+     72,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m11_c017.txt"
+   },
+   {
+    "j": 18,
+    "cls": [
+     144,
+     0,
+     0,
+     144,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m11_c018.txt"
+   },
+   {
+    "j": 19,
+    "cls": [
+     144,
+     0,
+     0,
+     216,
+     0
+    ],
+    "trivial": false,
+    "file": "z4/m11_c019.txt"
+   }
+  ]
+ }
+]

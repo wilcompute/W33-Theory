@@ -1,0 +1,166 @@
+{
+  "12292": {
+    "lattice_rank": 4,
+    "allowed_pairs_integer": 134,
+    "liftable_fields_integer": 48,
+    "fractional_fermions": 48
+  },
+  "12293_level_control_failed": true,
+  "12294": {
+    "('w6odd', 'no SU3 x SU2 x SU2', '-')": 213,
+    "('ctrl', 'no SU3 x SU2 x SU2', '-')": 212,
+    "('w6odd', 'LR-type', '-')": 84,
+    "('ctrl', 'LR-type', '-')": 86,
+    "('w6odd', 'LR-type', 'three generations found')": 2,
+    "('ctrl', 'LR-type', 'three generations found')": 2
+  },
+  "12294_hits": [
+    "Z6II_60_SM_20260917_810_v4__w6odd",
+    "Z6II_60_SM_20260917_810_v9__w6odd"
+  ],
+  "12295": {
+    "rcontrol": {
+      "synthetic": {
+        "U1 U2 U3": true,
+        "U2 U2 U2": false,
+        "U1 U1 U1": false,
+        "U3 U3 U3": false
+      },
+      "plane_sums": {
+        "('-1', '-1', '-1')": 284
+      }
+    },
+    "yukawas": {
+      "SM_20260926_128_23__odd": {
+        "n_fields": {
+          "q": 4,
+          "bu": 4,
+          "bd": 6,
+          "l": 6,
+          "bl": 6,
+          "be": 4
+        },
+        "allowed": {},
+        "q_rows": {}
+      },
+      "SM_20260926_128_23__ctrl": {
+        "n_fields": {
+          "q": 4,
+          "bu": 4,
+          "bd": 6,
+          "l": 6,
+          "bl": 6,
+          "be": 4
+        },
+        "allowed": {},
+        "q_rows": {}
+      },
+      "SM_20260926_808_24__odd": {
+        "n_fields": {
+          "q": 3,
+          "bu": 3,
+          "bd": 8,
+          "l": 5,
+          "bl": 5,
+          "be": 3
+        },
+        "allowed": {
+          "up": 3,
+          "lepton": 4
+        },
+        "q_rows": {
+          "up": [
+            "q_1",
+            "q_2",
+            "q_3"
+          ]
+        }
+      },
+      "SM_20260926_808_24__ctrl": {
+        "n_fields": {
+          "q": 3,
+          "bu": 3,
+          "bd": 8,
+          "l": 5,
+          "bl": 5,
+          "be": 3
+        },
+        "allowed": {
+          "up": 3,
+          "lepton": 4
+        },
+        "q_rows": {
+          "up": [
+            "q_1",
+            "q_2",
+            "q_3"
+          ]
+        }
+      },
+      "SM_20260926_2579_27__odd": {
+        "n_fields": {
+          "q": 3,
+          "bu": 3,
+          "bd": 6,
+          "l": 7,
+          "bl": 7,
+          "be": 3
+        },
+        "allowed": {
+          "up": 3,
+          "lepton": 4
+        },
+        "q_rows": {
+          "up": [
+            "q_1",
+            "q_2",
+            "q_3"
+          ]
+        }
+      },
+      "SM_20260926_2579_27__ctrl": {
+        "n_fields": {
+          "q": 3,
+          "bu": 3,
+          "bd": 6,
+          "l": 7,
+          "bl": 7,
+          "be": 3
+        },
+        "allowed": {
+          "up": 3,
+          "lepton": 4
+        },
+        "q_rows": {
+          "up": [
+            "q_1",
+            "q_2",
+            "q_3"
+          ]
+        }
+      }
+    }
+  },
+  "12296": {
+    "table": {
+      "control loaded": 12,
+      "identical": 84,
+      "changed": 16
+    },
+    "posthoc": {
+      "('V.lam odd=False', 'pred=identical', 'obs=identical')": 36,
+      "('V.lam odd=True', 'pred=identical', 'obs=identical')": 48,
+      "('V.lam odd=False', 'pred=changed', 'obs=changed')": 8,
+      "('V.lam odd=True', 'pred=changed', 'obs=changed')": 8
+    }
+  },
+  "checks": {
+    "12292: 48 fractional Weyl fermions, all liftable by integer singlet monomials (gauge level)": true,
+    "12293: the level computation fails its massless control (no critical radius quoted)": true,
+    "12294: the only Scherk-Schwarz brothers with three LR chiral generations are SM_810 v9 and v4": true,
+    "12295: R-rule control passes and all 284 allowed couplings have plane sums (-1,-1,-1)": true,
+    "12295: SM_808 and SM_2579 have three up couplings through one bu (rank 1), SM_128 none": true,
+    "12296: prediction refuted (16/100 changed); post-hoc fixed-point rule fits 100/100; V.lam alone never matters": true
+  },
+  "all_checks_pass": true
+}

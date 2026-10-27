@@ -1,0 +1,8 @@
+{
+ "fractional_fermions": 48,
+ "singlet_scalars": 50,
+ "singlet_charge_rank": 4,
+ "allowed_pairs": 134,
+ "liftable_fields": 48,
+ "unbalanced": 0
+}
