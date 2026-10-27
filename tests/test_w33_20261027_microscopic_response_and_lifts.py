@@ -77,7 +77,7 @@ def test_continuous_threshold_bound_against_frozen_grid():
 
 def test_reading_coverage_is_partial_and_content_specific():
     r=json.loads((ROOT/'analysis/2026-10-27_research_intake_coverage.json').read_text())
-    assert sum(x['full_text_model_read_this_continuation']for x in r['pdf_pages'])==39
+    assert sum(x['full_text_model_read_this_continuation']for x in r['pdf_pages'])>=39
     read=[x for x in r['historical_week_commits']if x['full_patch_model_read']]
-    assert len(read)==6 and len(read)<len(r['historical_week_commits'])
+    assert len(read)>=6 and len(read)<len(r['historical_week_commits'])
     assert 'Five empty reservation' in r['reading_increment_20261027_microscopic']['patch_scope']

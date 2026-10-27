@@ -1943,7 +1943,7 @@
       "patch_bytes": 2261,
       "gzip_bytes": 1267,
       "archive": ".research_20261027_intake\\commits\\887c9718ea0276216288c0dbf19b7b3113a45064.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "c099ef2e1ada127825421486d2cf8982351f2b5f",
@@ -2303,7 +2303,7 @@
       "patch_bytes": 5923,
       "gzip_bytes": 3026,
       "archive": ".research_20261027_intake\\commits\\c63b9ade1ecd077e21ff565a644766a0c7ed3586.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "038eaf322625afc039e3f44400d3961d47a5a125",
@@ -2319,7 +2319,7 @@
       "patch_bytes": 3565,
       "gzip_bytes": 1775,
       "archive": ".research_20261027_intake\\commits\\6a26f6bed2caf96142323b06064b8d62bfb6507d.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "8ed901498378fb6b623dcf89afeab295408cb411",
@@ -4627,56 +4627,56 @@
       "text_bytes": 3226,
       "text_sha256": "6d21088ae23c674e3ddfd70f4d60781e520021b27ad7204d18026f31fa949876",
       "archive": ".research_20261027_intake\\pdf\\page111.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 112,
       "text_bytes": 3392,
       "text_sha256": "8dc4c71bd6b91951732d3f48c940239e09d8cdef9144449ac50e3efd466c369e",
       "archive": ".research_20261027_intake\\pdf\\page112.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 113,
       "text_bytes": 3668,
       "text_sha256": "6509f2066e451f8f8d812b8b88f600a99806cc96f29b278c1371e4de4fe16f25",
       "archive": ".research_20261027_intake\\pdf\\page113.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 114,
       "text_bytes": 3789,
       "text_sha256": "7877e32b95cb15b83d809814ee42e84cf72fce90379c724dbe09835cc45dc351",
       "archive": ".research_20261027_intake\\pdf\\page114.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 115,
       "text_bytes": 3417,
       "text_sha256": "4eedd55731aeaff9371855d39a409755429cca4cad0dd233f34b4f7c1216f60d",
       "archive": ".research_20261027_intake\\pdf\\page115.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 116,
       "text_bytes": 4555,
       "text_sha256": "2e18ba867db05ea7886fc2f051380d342ef9106815a72f4d8166867b178d1a68",
       "archive": ".research_20261027_intake\\pdf\\page116.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 117,
       "text_bytes": 4764,
       "text_sha256": "90095002cbf77955a6d559d6da988097208a9aa4f4a284e66b41f6fff27dce43",
       "archive": ".research_20261027_intake\\pdf\\page117.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 118,
       "text_bytes": 4763,
       "text_sha256": "bb2f8796ac3214cd440a73e1143070072328b293e2495178632cba9a49424281",
       "archive": ".research_20261027_intake\\pdf\\page118.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 119,
@@ -12701,5 +12701,23 @@
     ],
     "patch_scope": "Five empty reservation commits plus the entire substantive a15185e5c patch, including code, JSON, TeX and PDF text conversion. This does not validate every inherited string claim.",
     "findings": "Pages95-110 document FI/parity, fractional-charge, Yukawa-degeneracy and vacuum-instability constraints. The native spatial reflection is distinct from the Delta54 family reflection. Full patch a15185e5c exposes the Pass12330 common-threshold scan; the new packet proves a continuous bound under exactly that running model."
+  },
+  "reading_increment_20261027_operator": {
+    "pages_added": [
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118
+    ],
+    "full_patches_added": [
+      "c63b9ade1",
+      "887c9718e",
+      "6a26f6bed"
+    ],
+    "findings": "Pages111-118 separate hosting chirality from selecting it, finite orientation/antiunitary character from a field-theory measure, and modulus-dependent vacuum/matter choices. This packet supplies Euclidean Weyl projectors but no dynamical handedness selection. Three full patches cover an honest earlier391-commit audit, a hosted12194-12198 receipt, and the faithful20-dimensional CSS action; none proves a TOE."
   }
 }
