@@ -1,0 +1,54 @@
+{
+  "12328": {
+    "v9": {
+      "ctrl": {
+        "candidates": 16,
+        "phases": {
+          "phi5=0 phi6=0": 8,
+          "phi5=1/2 phi6=0": 8
+        }
+      },
+      "w6odd": {
+        "candidates": 16,
+        "phases": {
+          "phi5=0 phi6=0": 8,
+          "phi5=1/2 phi6=0": 8
+        }
+      }
+    },
+    "v4": {
+      "ctrl": {
+        "candidates": 16,
+        "phases": {
+          "phi5=1/2 phi6=0": 8,
+          "phi5=0 phi6=0": 8
+        }
+      },
+      "w6odd": {
+        "candidates": 16,
+        "phases": {
+          "phi5=1/2 phi6=0": 8,
+          "phi5=0 phi6=0": 8
+        }
+      }
+    }
+  },
+  "12330": {
+    "b": {
+      "b3": "7",
+      "b2": "16",
+      "bY": "148/3"
+    },
+    "k_range": [
+      0.2122097298569724,
+      1.2811812202853192
+    ],
+    "reaches_8_3": false
+  },
+  "checks": {
+    "12328: 16 candidates per model, 8 with e5 and e6 phases 0 (parent and brother)": true,
+    "12330: b = (7, 16, 148/3); perturbative k_Y needed in [0.21, 1.28], never 8/3": true,
+    "12331: the note states the formula, the 124/124 test and the record of corrections": true
+  },
+  "all_checks_pass": true
+}

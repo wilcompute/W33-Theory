@@ -1,0 +1,34 @@
+{
+ "v9": {
+  "ctrl": {
+   "candidates": 16,
+   "phases": {
+    "phi5=0 phi6=0": 8,
+    "phi5=1/2 phi6=0": 8
+   }
+  },
+  "w6odd": {
+   "candidates": 16,
+   "phases": {
+    "phi5=0 phi6=0": 8,
+    "phi5=1/2 phi6=0": 8
+   }
+  }
+ },
+ "v4": {
+  "ctrl": {
+   "candidates": 16,
+   "phases": {
+    "phi5=1/2 phi6=0": 8,
+    "phi5=0 phi6=0": 8
+   }
+  },
+  "w6odd": {
+   "candidates": 16,
+   "phases": {
+    "phi5=1/2 phi6=0": 8,
+    "phi5=0 phi6=0": 8
+   }
+  }
+ }
+}
