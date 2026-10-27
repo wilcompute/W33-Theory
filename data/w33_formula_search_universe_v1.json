@@ -353955,6 +353955,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "614494c15aad9dac6891dcfebb11af9cbedaf9e310ab7cf54513691ba35be0fe",
+      "normalized_formula": "(enginesolver);threechiralgenerations,nochiralfractionalcharge,Higgscandidates,TrY=0(12286);48vector-likefractional",
+      "numeric_literals": [
+        "0",
+        "12286",
+        "48"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "(engine solver); three chiral generations, no chiral fractional charge, Higgs candidates, Tr Y = 0 (12286); 48 vector-like fractional",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d32588abd33095728b7398234ccce8e326e37e74c0ef05f3f285a35cb988d1f2",
+      "structural_formula": "(enginesolver);threechiralgenerations,nochiralfractionalcharge,Higgscandidates,TrY=#(#);#vector-likefractional"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1e68ec86dee35e2e40571f8a7014177e0b900f92a89707fe7d8ac6a3224eac9c",
       "normalized_formula": "(eps(Lambda)=0),epsisgeneratedbymessengersthatseebothflavons.TheS4-equivariantmessengermassmatrix",
       "numeric_literals": [
@@ -356885,6 +356914,38 @@
       },
       "structural_family_id": "8d30d4f9d8d7acbbc2b08e47c2728ee455c43a8aa00d0973955038dd479ce520",
       "structural_formula": "(n/#)(k-\\lambda_2)=(#/#)(##)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fb659e6657b60f1f68c1a46f36cca8e288267a70480682cb1e638339b874aadb",
+      "normalized_formula": "(n/R+-wR/alpha')sqrt(alpha'/2))alpha'm^2/4=-1/6+R^2/(16alpha'):tachyon-freeiffR_6>=4sqrt(alpha'/6)~1.63sqrt(alpha')",
+      "numeric_literals": [
+        "-1",
+        "1.63",
+        "16",
+        "2",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "(n/R +- w R/alpha') sqrt(alpha'/2)) alpha' m^2/4 = -1/6 + R^2/(16 alpha'): tachyon-free iff R_6 >= 4 sqrt(alpha'/6) ~ 1.63 sqrt(alpha').",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e6c21a1d8cafb68c6dd164125476735f1d59006477852564d478e19e43fce7a5",
+      "structural_formula": "(n/R+-wR/alpha')sqrt(alpha'/#))alpha'm^#/#=#/#+R^#/(#alpha'):tachyon-freeiffR_6>=#sqrt(alpha'/#)~#sqrt(alpha')"
     },
     {
       "file_count": 1,
@@ -390490,6 +390551,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "47b01e86dc9b8851743de4fcdf1c4d84a021e4c71897ba7e3cffa40a3bac645b",
+      "normalized_formula": "-^Against:^k_Y=8/3;thetranslationselectionruleandthesingletvacuumarenotbuilt;thepotentialisnotcomputed;the",
+      "numeric_literals": [
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12304_12309_TACHYONS_CONFIRMED_AND_RADIUS_WINDOW.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 23,
+          "path": "analysis/PASS12304_12309_TACHYONS_CONFIRMED_AND_RADIUS_WINDOW.md",
+          "raw": "- **Against:** k_Y = 8/3; the translation selection rule and the singlet vacuum are not built; the potential is not computed; the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e73796024efaa9f3b96a5472c5fef05aeb26065ad737e932aaa5b5a6e1a96f42",
+      "structural_formula": "-^Against:^k_Y=#/#;thetranslationselectionruleandthesingletvacuumarenotbuilt;thepotentialisnotcomputed;the"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2b71b711f8fb2dc0a1b30a53c5eb821386ce1d402693d31b4c28553296e7e17d",
       "normalized_formula": "-^Complexconjugatepair^with|alpha|=\u221a35,697,025=65\u221a8449\u22485975.7",
       "numeric_literals": [
@@ -414493,17 +414582,46 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 16,
+          "line": 18,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "12300 -- the candidate's 48 fractional Weyl fermions under gauge + point-group (sum of Z6 powers = 0 mod 6) + Witten (sum of labels",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "57e0343788c15ceeb11d7f33e7ec690ec2ccea09654ccf19b0c80d46f6c1a3b7",
+      "structural_formula": "#--thecandidate's4#fractionalWeylfermionsundergauge+point-group(sumofZ6powers=#mod6)+Witten(sumoflabels"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4bc6756c23d57fc42c41badd48f9b5eb669d0c329693a720aadd69a3f40d78aa",
+      "normalized_formula": "12307--radiuswindow.Inthebrothertheparent'stachyonscarrywinding1/2alonge6,so(alpha'm^2/4levels,p_L,R=",
+      "numeric_literals": [
+        "12307",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "12307 -- radius window. In the brother the parent's tachyons carry winding 1/2 along e6, so (alpha' m^2/4 levels, p_L,R =",
           "status": "unclassified"
         }
       ],
       "status_profile": {
         "unclassified": 1
       },
-      "structural_family_id": "57e0343788c15ceeb11d7f33e7ec690ec2ccea09654ccf19b0c80d46f6c1a3b7",
-      "structural_formula": "#--thecandidate's4#fractionalWeylfermionsundergauge+point-group(sumofZ6powers=#mod6)+Witten(sumoflabels"
+      "structural_family_id": "64ee5acf1e796b51f633ab977da268855c115c000db45462d2308960456cb166",
+      "structural_formula": "#--radiuswindow.Inthebrothertheparent'stachyonscarrywinding1/#alonge6,so(alpha'm^#/#levels,p_L,R="
     },
     {
       "file_count": 1,
@@ -571792,11 +571910,11 @@
           "line": 545,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "B(g,h)=\\tfrac12(\\sigma_gV_h\\cdot\\lambda-\\sigma_hV_g\\cdot\\lambda)",
-          "status": "open_or_conditional"
+          "status": "killed_or_retracted"
         }
       ],
       "status_profile": {
-        "open_or_conditional": 1
+        "killed_or_retracted": 1
       },
       "structural_family_id": "84f2b74bbdd519e34d8495b9569c7735db6c57642ca3805581d671b6b053e5e1",
       "structural_formula": "B(g,h)=\\tfrac1#(\\sigma_gV_h\\cdot\\lambda-\\sigma_hV_g\\cdot\\lambda)"
@@ -573043,7 +573161,7 @@
           "line": 545,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "B=0",
-          "status": "open_or_conditional"
+          "status": "killed_or_retracted"
         },
         {
           "category": "inline_math",
@@ -573054,7 +573172,7 @@
         }
       ],
       "status_profile": {
-        "open_or_conditional": 1,
+        "killed_or_retracted": 1,
         "unclassified": 4
       },
       "structural_family_id": "976b9bfad6d805e8651e4cb14408d909ebb4d84019d6f47cc21076bd1c158dcc",
@@ -720320,7 +720438,7 @@
           "line": 545,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "N=0",
-          "status": "open_or_conditional"
+          "status": "killed_or_retracted"
         },
         {
           "category": "inline_math",
@@ -720331,7 +720449,7 @@
         }
       ],
       "status_profile": {
-        "open_or_conditional": 1,
+        "killed_or_retracted": 1,
         "unclassified": 6
       },
       "structural_family_id": "2c851cb218b2a6270199600617fc563993bed9c4261cc9bd63ab4740858502b3",
@@ -781570,6 +781688,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5aacc7078a7cbe6dbedb6fc09cb717383eb013c22c56e1b500c5957dda1cc77c",
+      "normalized_formula": "RETRACTEDin12304:theengine'sverboseTachyonSolvershowsthesearegenuinetachyons(m^2=-1/6,Witten-twistedtheta^2/theta^4)",
+      "numeric_literals": [
+        "-1",
+        "2",
+        "2304",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
+          "raw": "RETRACTED in 12304: the engine's verbose TachyonSolver shows these are genuine tachyons (m^2 = -1/6, Witten-twisted theta^2/theta^4);",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "36b91fdab9b8f1eca6246dde081ed0673b669ef4e60ae42b786e3268f2dec6e4",
+      "structural_formula": "RETRACTEDin1#:theengine'sverboseTachyonSolvershowsthesearegenuinetachyons(m^#=#/#,Witten-twistedtheta^#/theta^#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a9c4fb42eb7b3b2af756dda5ae7fe0a1da34b69ba0107ad8013a43fb17506aa2",
       "normalized_formula": "RG-flowstotheobservedLambda~M_Pl^4*q^-mu^4throughthe",
       "numeric_literals": [
@@ -783177,6 +783326,35 @@
       },
       "structural_family_id": "b89491d151943f1fc1e85a811836c9dae8d64931d3eec97a7299ebee30a1b214",
       "structural_formula": "R_4^#U_6:quad\\chi(t)=(t+#)(t^#-t-#),\\quad|R_4^#U_6|=\\infty,\\quad\\rho=\\varphi"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f2a63d0e957f6327b662cb0382a9f64e9f1e57121a5ae892e5c501edba7080b0",
+      "normalized_formula": "R_6=4\\sqrt{\\alpha'/6}\u22481.63\\sqrt{\\alpha'}",
+      "numeric_literals": [
+        "1.63",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 545,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "R_6=4\\sqrt{\\alpha'/6}\\approx1.63\\sqrt{\\alpha'}",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "d62de882329f97daccb01b31493d05107126382e3f4bbe69ec0ec4e9edb2431f",
+      "structural_formula": "R_6=#\\sqrt{\\alpha'/#}\u2248#\\sqrt{\\alpha'}"
     },
     {
       "file_count": 1,
@@ -794895,6 +795073,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a19e579278e7c496f59d5ae96b462b7d2a0762c0afa86d34dbcf5fdac1480c58",
+      "normalized_formula": "SM_20260917_810_v9(parent)itfindsright-movingtachyonicvacuaq=(0,+-1/3,-+1/3,0)withm_R^2=-1/6intheWitten-twisted",
+      "numeric_literals": [
+        "+1",
+        "-1",
+        "0",
+        "0260917",
+        "10",
+        "2",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "SM_20260917_810_v9 (parent) it finds right-moving tachyonic vacua q = (0, +-1/3, -+1/3, 0) with m_R^2 = -1/6 in the Witten-twisted",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "a0fb1c546e0df3dab860c6ed9300cec83f658fddaa7dc29778727bff3c8a9183",
+      "structural_formula": "SM_2#_8#_v9(parent)itfindsright-movingtachyonicvacuaq=(#,+#/#,-#/#,#)withm_R^#=#/#intheWitten-twisted"
+    },
+    {
+      "file_count": 1,
       "formula_id": "551f47f232da92925f936053f173f69cdb6ac7dc52fff07809f898a4334d62d8",
       "normalized_formula": "SM_4D_FIELDS=K+LAM#=14=4DSMgaugesectorreald.o.f",
       "numeric_literals": [
@@ -794938,7 +795150,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 23,
+          "line": 25,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "SM_808 needs epsilon ~ 0.5 for m_b/m_t ~ 1e-2: the Z2xZ6-I lineages that passed the proton test fail the texture test.",
           "status": "unclassified"
@@ -996218,11 +996430,11 @@
           "line": 545,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "\\mathrm{Tr}\\,Y=0",
-          "status": "open_or_conditional"
+          "status": "killed_or_retracted"
         }
       ],
       "status_profile": {
-        "open_or_conditional": 1
+        "killed_or_retracted": 1
       },
       "structural_family_id": "50b83ff22089048b8daf966a151b8c842774615b29b16475ed4c427a5f2e6148",
       "structural_formula": "\\mathrm{Tr}Y=#"
@@ -1001841,7 +1002053,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 677,
+          "line": 678,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1070099,7 +1070311,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 49,
+          "line": 51,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "all(k.endswith(\"'0')\") for k in lv) and set(rl[\"ctrl\"]) == {\"('massless-type', '0')\", \"('tachyon-type', '0')\"}",
           "status": "unclassified"
@@ -1095686,7 +1095898,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 50,
+          "line": 52,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "and ex[\"models\"] == 20 and set(ex[\"table\"]) == {\"('excited-tachyon label', '0', '0')\", \"('massless-type', '0', '0')\"})",
           "status": "unclassified"
@@ -1167439,6 +1167651,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b532d78a912414d98a8c8762ebdb2393319fb815c2bed59b22491f66f70fca64",
+      "normalized_formula": "candidates,TrY=0;its48vector-likefractionalfermionscanbeliftedunderthegauge,point-groupandWittenrules",
+      "numeric_literals": [
+        "0",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12304_12309_TACHYONS_CONFIRMED_AND_RADIUS_WINDOW.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/PASS12304_12309_TACHYONS_CONFIRMED_AND_RADIUS_WINDOW.md",
+          "raw": "candidates, Tr Y = 0; its 48 vector-like fractional fermions can be lifted under the gauge, point-group and Witten rules.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "6665d09a553e4b50397cde51a3ae6995498ffc53e36549cf82d6172bf85d5144",
+      "structural_formula": "candidates,TrY=#;its4#vector-likefractionalfermionscanbeliftedunderthegauge,point-groupandWittenrules"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3c51d717df3fd0d1f1f7afc3000695a1d6376a31a92a3c2a726da3da4f6b8718",
       "normalized_formula": "candidates=[cforcincatalogifc['degree']=8andmin(c['distance_vector'])>=4]",
       "numeric_literals": [
@@ -1188615,7 +1188855,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 48,
+          "line": 50,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "checks[\"12299: calibrated levels -- every massless-type and every excited-tachyon-labelled state at (0, 0)\"] = (",
           "status": "unclassified"
@@ -1188643,7 +1188883,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 53,
+          "line": 55,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "checks[\"12300: 48/48 liftable under gauge + point group + Witten\"] = pg[\"liftable\"] == 48 and pg[\"fractional_fermions\"] == 48",
           "status": "unclassified"
@@ -1188654,6 +1188894,69 @@
       },
       "structural_family_id": "4e36bceff3c0967d4842f3fd755c87698f3c99aecedbbf3eb38bfd0e395420cf",
       "structural_formula": "checks[\"#:#/#liftableundergauge+pointgroup+Witten\"]=pg[\"liftable\"]=#andpg[\"fractional_fermions\"]=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c6945876db9ad2c79dc851c6c9b46f5fbfdc9c0598e56cbaaf1d45f4198e22e0",
+      "normalized_formula": "checks[\"12304:solverfindsm_R^2=-1/6vacuainWittentheta^2,theta^4(bothmodels);parent16tachyons,brother0\"]=(",
+      "numeric_literals": [
+        "-1",
+        "12304",
+        "2",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "checks[\"12304: solver finds m_R^2 = -1/6 vacua in Witten theta^2, theta^4 (both models); parent 16 tachyons, brother 0\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "62078e6d683b4c5f84dfc3142afe0932452bc935986496ba5f2841a0681ba017",
+      "structural_formula": "checks[\"#:solverfindsm_R^#=#/#vacuainWittentheta^#,theta^#(bothmodels);parent1#tachyons,brother0\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "835574f790c1442971dfe1d2321b2209189701d1c4137b21d6bebb278ee0693e",
+      "normalized_formula": "checks[\"12307:R_c=4sqrt(1/6)~1.633sqrt(alpha')\"]=abs(Rc-1.633)<1e-3",
+      "numeric_literals": [
+        "1",
+        "1.633",
+        "12307",
+        "1e-3",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "checks[\"12307: R_c = 4 sqrt(1/6) ~ 1.633 sqrt(alpha')\"] = abs(Rc - 1.633) < 1e-3",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e7e3645c3b633cbe483b4bdea68f9bc2707a694b8bcf97f2d04d7eda031aba35",
+      "structural_formula": "checks[\"#:R_c=#sqrt(#/#)~#sqrt(alpha')\"]=abs(Rc-#)<#"
     },
     {
       "file_count": 1,
@@ -1228497,7 +1228800,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 21,
+          "line": 23,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "couplings at degree 0). SM_808: up column of the top at degree 0-1, the other two up columns >= 7; down >= 7; tau at degree 0,",
           "status": "unclassified"
@@ -1316595,6 +1316898,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "81722b0394a0f9885cca092e470f7230691a206dfcf0e2cb848353fd5ac73b71",
+      "normalized_formula": "fermionsliftableundergauge+point-group+Wittenrules(12292/12300).Against:k_Y=8/3;thetranslationselectionruleandthe",
+      "numeric_literals": [
+        "12292",
+        "12300",
+        "3",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "fermions liftable under gauge + point-group + Witten rules (12292/12300). Against: k_Y = 8/3; the translation selection rule and the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bcb90a4c31f708e3981d09a50fa4b8f5ae9e45495067bfd1df65b3dd2de84e50",
+      "structural_formula": "fermionsliftableundergauge+point-group+Wittenrules(#/#).Against:k_Y=#/#;thetranslationselectionruleandthe"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0754c303d0c7c73431be81b9bbc0a067f4a61d78e36f734b3364c9496bfd84f3",
       "normalized_formula": "fermionswithn_F=2dominateandbreak:48masslessrootsintwocomponentsof24(D4+D4),16massless4d",
       "numeric_literals": [
@@ -1317525,6 +1317858,38 @@
       },
       "structural_family_id": "2b9c74692da02991b01599580e75fc39de02807fdeaeb6b9e3b93629bf380e23",
       "structural_formula": "findings,bothflagged:(#)thesubstrate'sSumm_nu~#eVisintensionwith"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f0d63efc995e4062ef5c97c205becd15f7e00a6a6fb8e50d3a7cc042fb76ad85",
+      "normalized_formula": "findsright-movingtachyonicvacuaq=(0,\u00b11\u20443,\u22131\u20443,0)with^m_R2=\u22121/6^intheWitten-twisted\u03b82and\u03b84sectors.The16\"excited",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12304_12309_TACHYONS_CONFIRMED_AND_RADIUS_WINDOW.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "analysis/PASS12304_12309_TACHYONS_CONFIRMED_AND_RADIUS_WINDOW.md",
+          "raw": "finds right-moving tachyonic vacua q = (0, \u00b1\u2153, \u2213\u2153, 0) with **m_R\u00b2 = \u22121/6** in the Witten-twisted \u03b8\u00b2 and \u03b8\u2074 sectors. The 16 \"excited",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "7ae206d541979c86220768abea189050efab165cba44f3e7bf8ebec0eed9ecb0",
+      "structural_formula": "findsright-movingtachyonicvacuaq=(#,\u00b1#\u2044#,\u2213#\u2044#,#)with^m_R2=\u2212#/#^intheWitten-twisted\u03b8#and\u03b8#sectors.The1#\"excited"
     },
     {
       "file_count": 1,
@@ -1388143,11 +1388508,12 @@
           "line": 545,
           "path": "papers/forty_points/sec07_realforms.tex",
           "raw": "k_Y=8/3",
-          "status": "open_or_conditional"
+          "status": "killed_or_retracted"
         }
       ],
       "status_profile": {
-        "open_or_conditional": 2
+        "killed_or_retracted": 1,
+        "open_or_conditional": 1
       },
       "structural_family_id": "8a25ed67f68fa25190f0386995457dca67f9974403b77a7cf29faadc6ee9d181",
       "structural_formula": "k_Y=#/#"
@@ -1418168,6 +1418534,43 @@
       "structural_formula": "m_Pl~#GeV.Theratiom_W/m_Pl~#hasnoclassical"
     },
     {
+      "file_count": 2,
+      "formula_id": "9a3325648a2920544b24cebca259075eb2a281d8d5692ad9ce3b812986a330e9",
+      "normalized_formula": "m_R^2=-1/6",
+      "numeric_literals": [
+        "-1",
+        "2",
+        "6"
+      ],
+      "occurrence_count": 2,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex",
+        "papers/forty_points/sec07_realforms.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 675,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "m_R^2=-1/6",
+          "status": "killed_or_retracted"
+        },
+        {
+          "category": "inline_math",
+          "line": 545,
+          "path": "papers/forty_points/sec07_realforms.tex",
+          "raw": "m_R^2=-1/6",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 2
+      },
+      "structural_family_id": "61ee55fe59b7ae190fef7c1e4afa87c75dd12952b294cca3b1bffef303f4567d",
+      "structural_formula": "m_R^#=#/#"
+    },
+    {
       "file_count": 1,
       "formula_id": "d021a66cec767b9a3272a2ea0e3e855b7de2ab114c6ad4c80631e982fe96e65f",
       "normalized_formula": "m_S^2=M^2+g(I-I_0)",
@@ -1421661,7 +1422064,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 676,
+          "line": 677,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1426795,7 +1427198,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 676,
+          "line": 677,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1490292,7 +1490695,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 22,
+          "line": 24,
           "path": "analysis/w33_pass12298_to_12303_preregistered_torsion_levels_textures.py",
           "raw": "other leptons >= 8. SM_2579: no down Yukawa up to degree 12; two up columns forbidden to degree 12. So SM_2579 is excluded and",
           "status": "unclassified"
@@ -1686779,6 +1687182,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0d2def04d0958e5f80f61ceab14ab69f6f6cc9d1fd4f9f652d6d21964ba57405",
+      "normalized_formula": "res[\"12307_Rc_over_sqrt_alpha\"]=Rc",
+      "numeric_literals": [
+        "12307"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "res[\"12307_Rc_over_sqrt_alpha\"] = Rc",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "baa7a0987093f65aba60d24f9df5bfae7d4d29887e63e497eda661e51e85ba1a",
+      "structural_formula": "res[\"#_Rc_over_sqrt_alpha\"]=Rc"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7fca7a0df44053885faa83541510ce66482f1c43d4f5379f0fcd8a9d1f99f5ff",
       "normalized_formula": "res[\"E_n_if_F_m_flat\"]={str(n):str(En[n])forninrange(2,13)}",
       "numeric_literals": [
@@ -1749116,6 +1749546,33 @@
       },
       "structural_family_id": "8ca4af0d6422604ad1b0d1f18644fc9c77669011193344f722473ab8e0eb52be",
       "structural_formula": "sols.append(dict(z=key,odd=leptons(Om,ze)[#]))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "542a38fa32e3ea0b6f0105077047c0e2f9e50f65296b8a2f883dc97b45a63ccc",
+      "normalized_formula": "sols=re.findall(r\"potentialtachyonsinsector\\((\\d+),(\\d+),(\\d+)\\).*?massM_R\\^2=(-?[\\d.]+)\",t,re.S)",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 35,
+          "path": "analysis/w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
+          "raw": "sols = re.findall(r\"potential tachyons in sector \\((\\d+), (\\d+), (\\d+)\\).*?mass M_R\\^2 = (-?[\\d.]+)\", t, re.S)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b21c94bd653d82d4361a3ea889d5ec8377d84d5538fd4bb88d0035e724a09f74",
+      "structural_formula": "sols=re.findall(r\"potentialtachyonsinsector\\((\\d+),(\\d+),(\\d+)\\).*?massM_R\\^#=(-?[\\d.]+)\",t,re.S)"
     },
     {
       "file_count": 1,
@@ -1843268,7 +1843725,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 676,
+          "line": 677,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1892730,9 +1893187,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-27T12:55:11-04:00",
+  "frozen_at": "2026-10-27T13:06:46-04:00",
   "pass": 398,
-  "repository_head": "a989975c24da85e92a6cba105f5d6b2a1205a749",
+  "repository_head": "bfcdf3e54cf8642946a040b684a90e4a2ab52c76",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1952962,6 +1953419,14 @@
     },
     {
       "exact_formula_ids": [
+        "4bc6756c23d57fc42c41badd48f9b5eb669d0c329693a720aadd69a3f40d78aa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "64ee5acf1e796b51f633ab977da268855c115c000db45462d2308960456cb166",
+      "structural_formula": "#--radiuswindow.Inthebrothertheparent'stachyonscarrywinding1/#alonge6,so(alpha'm^#/#levels,p_L,R="
+    },
+    {
+      "exact_formula_ids": [
         "f026339893f1e188901bbb29460f7f1cdc7dc3c1625c87ea9d1b2cc7a8514a7a"
       ],
       "exact_member_count": 1,
@@ -2012024,6 +2012489,14 @@
     },
     {
       "exact_formula_ids": [
+        "614494c15aad9dac6891dcfebb11af9cbedaf9e310ab7cf54513691ba35be0fe"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d32588abd33095728b7398234ccce8e326e37e74c0ef05f3f285a35cb988d1f2",
+      "structural_formula": "(enginesolver);threechiralgenerations,nochiralfractionalcharge,Higgscandidates,TrY=#(#);#vector-likefractional"
+    },
+    {
+      "exact_formula_ids": [
         "1e68ec86dee35e2e40571f8a7014177e0b900f92a89707fe7d8ac6a3224eac9c"
       ],
       "exact_member_count": 1,
@@ -2012829,6 +2013302,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8d30d4f9d8d7acbbc2b08e47c2728ee455c43a8aa00d0973955038dd479ce520",
       "structural_formula": "(n/#)(k-\\lambda_2)=(#/#)(##)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "fb659e6657b60f1f68c1a46f36cca8e288267a70480682cb1e638339b874aadb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e6c21a1d8cafb68c6dd164125476735f1d59006477852564d478e19e43fce7a5",
+      "structural_formula": "(n/R+-wR/alpha')sqrt(alpha'/#))alpha'm^#/#=#/#+R^#/(#alpha'):tachyon-freeiffR_6>=#sqrt(alpha'/#)~#sqrt(alpha')"
     },
     {
       "exact_formula_ids": [
@@ -2021320,6 +2021801,14 @@
       "exact_member_count": 1,
       "structural_family_id": "0e5ca32cbfa390051f0751c275814e7f847052efd8d0ad3d7f1fd152a95ee015",
       "structural_formula": "-^#\u2014protected/cubicnonlinearshortcut:^NEGATIVEthroughunaryBooleandegreetwo.Fullequivariancesystems,includingconstants,haveranks`#/#`for`V8->U6`and`#/#`for`U6->V8`;theonlydegree-<=#unaryequivariantmapsarezero.ThisisconsistentwiththelaterPass4#pair-valuedexterior-squarebridge:`(v,w)->vwedgew`hastwoindependentinputsandalargerintermediatemodule"
+    },
+    {
+      "exact_formula_ids": [
+        "47b01e86dc9b8851743de4fcdf1c4d84a021e4c71897ba7e3cffa40a3bac645b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e73796024efaa9f3b96a5472c5fef05aeb26065ad737e932aaa5b5a6e1a96f42",
+      "structural_formula": "-^Against:^k_Y=#/#;thetranslationselectionruleandthesingletvacuumarenotbuilt;thepotentialisnotcomputed;the"
     },
     {
       "exact_formula_ids": [
@@ -2103216,6 +2103705,14 @@
     },
     {
       "exact_formula_ids": [
+        "5aacc7078a7cbe6dbedb6fc09cb717383eb013c22c56e1b500c5957dda1cc77c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "36b91fdab9b8f1eca6246dde081ed0673b669ef4e60ae42b786e3268f2dec6e4",
+      "structural_formula": "RETRACTEDin1#:theengine'sverboseTachyonSolvershowsthesearegenuinetachyons(m^#=#/#,Witten-twistedtheta^#/theta^#)"
+    },
+    {
+      "exact_formula_ids": [
         "a9c4fb42eb7b3b2af756dda5ae7fe0a1da34b69ba0107ad8013a43fb17506aa2"
       ],
       "exact_member_count": 1,
@@ -2103661,6 +2104158,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b89491d151943f1fc1e85a811836c9dae8d64931d3eec97a7299ebee30a1b214",
       "structural_formula": "R_4^#U_6:quad\\chi(t)=(t+#)(t^#-t-#),\\quad|R_4^#U_6|=\\infty,\\quad\\rho=\\varphi"
+    },
+    {
+      "exact_formula_ids": [
+        "f2a63d0e957f6327b662cb0382a9f64e9f1e57121a5ae892e5c501edba7080b0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d62de882329f97daccb01b31493d05107126382e3f4bbe69ec0ec4e9edb2431f",
+      "structural_formula": "R_6=#\\sqrt{\\alpha'/#}\u2248#\\sqrt{\\alpha'}"
     },
     {
       "exact_formula_ids": [
@@ -2106854,6 +2107359,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d62a6b41fdcf077ef5236a9190b7c1aaa92db95b88289631f65947c5e961be43",
       "structural_formula": "SMGAUGEGROUPDIM=k=#"
+    },
+    {
+      "exact_formula_ids": [
+        "a19e579278e7c496f59d5ae96b462b7d2a0762c0afa86d34dbcf5fdac1480c58"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a0fb1c546e0df3dab860c6ed9300cec83f658fddaa7dc29778727bff3c8a9183",
+      "structural_formula": "SM_2#_8#_v9(parent)itfindsright-movingtachyonicvacuaq=(#,+#/#,-#/#,#)withm_R^#=#/#intheWitten-twisted"
     },
     {
       "exact_formula_ids": [
@@ -2204532,6 +2205045,14 @@
     },
     {
       "exact_formula_ids": [
+        "b532d78a912414d98a8c8762ebdb2393319fb815c2bed59b22491f66f70fca64"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6665d09a553e4b50397cde51a3ae6995498ffc53e36549cf82d6172bf85d5144",
+      "structural_formula": "candidates,TrY=#;its4#vector-likefractionalfermionscanbeliftedunderthegauge,point-groupandWittenrules"
+    },
+    {
+      "exact_formula_ids": [
         "3c51d717df3fd0d1f1f7afc3000695a1d6376a31a92a3c2a726da3da4f6b8718"
       ],
       "exact_member_count": 1,
@@ -2209893,6 +2210414,14 @@
     },
     {
       "exact_formula_ids": [
+        "835574f790c1442971dfe1d2321b2209189701d1c4137b21d6bebb278ee0693e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e7e3645c3b633cbe483b4bdea68f9bc2707a694b8bcf97f2d04d7eda031aba35",
+      "structural_formula": "checks[\"#:R_c=#sqrt(#/#)~#sqrt(alpha')\"]=abs(Rc-#)<#"
+    },
+    {
+      "exact_formula_ids": [
         "ef0bf4e8dd0aedfcc3ed4ea60cb23199edc86c650f4613605350a7048232982b"
       ],
       "exact_member_count": 1,
@@ -2210186,6 +2210715,14 @@
       "exact_member_count": 1,
       "structural_family_id": "bb8364ad27c8626429811e99af4bbb5cdceba50e5b58b463d84868b073bf4b5f",
       "structural_formula": "checks[\"#:singleexoticscaleconsistentonlyforsurvivors2,#,#,withM_s<#GeVandM_X<#GeV\"]=("
+    },
+    {
+      "exact_formula_ids": [
+        "c6945876db9ad2c79dc851c6c9b46f5fbfdc9c0598e56cbaaf1d45f4198e22e0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "62078e6d683b4c5f84dfc3142afe0932452bc935986496ba5f2841a0681ba017",
+      "structural_formula": "checks[\"#:solverfindsm_R^#=#/#vacuainWittentheta^#,theta^#(bothmodels);parent1#tachyons,brother0\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2245536,6 +2246073,14 @@
     },
     {
       "exact_formula_ids": [
+        "81722b0394a0f9885cca092e470f7230691a206dfcf0e2cb848353fd5ac73b71"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bcb90a4c31f708e3981d09a50fa4b8f5ae9e45495067bfd1df65b3dd2de84e50",
+      "structural_formula": "fermionsliftableundergauge+point-group+Wittenrules(#/#).Against:k_Y=#/#;thetranslationselectionruleandthe"
+    },
+    {
+      "exact_formula_ids": [
         "0754c303d0c7c73431be81b9bbc0a067f4a61d78e36f734b3364c9496bfd84f3"
       ],
       "exact_member_count": 1,
@@ -2245797,6 +2246342,14 @@
       "exact_member_count": 1,
       "structural_family_id": "2b9c74692da02991b01599580e75fc39de02807fdeaeb6b9e3b93629bf380e23",
       "structural_formula": "findings,bothflagged:(#)thesubstrate'sSumm_nu~#eVisintensionwith"
+    },
+    {
+      "exact_formula_ids": [
+        "f0d63efc995e4062ef5c97c205becd15f7e00a6a6fb8e50d3a7cc042fb76ad85"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7ae206d541979c86220768abea189050efab165cba44f3e7bf8ebec0eed9ecb0",
+      "structural_formula": "findsright-movingtachyonicvacuaq=(#,\u00b1#\u2044#,\u2213#\u2044#,#)with^m_R2=\u2212#/#^intheWitten-twisted\u03b8#and\u03b8#sectors.The1#\"excited"
     },
     {
       "exact_formula_ids": [
@@ -2272725,6 +2273278,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6f9d4f6d2d4913ef162e956b1a142768211546d82a3d7e172b2013ecd02667ad",
       "structural_formula": "m_Pl~#GeV.Theratiom_W/m_Pl~#hasnoclassical"
+    },
+    {
+      "exact_formula_ids": [
+        "9a3325648a2920544b24cebca259075eb2a281d8d5692ad9ce3b812986a330e9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "61ee55fe59b7ae190fef7c1e4afa87c75dd12952b294cca3b1bffef303f4567d",
+      "structural_formula": "m_R^#=#/#"
     },
     {
       "exact_formula_ids": [
@@ -2343921,6 +2344482,14 @@
     },
     {
       "exact_formula_ids": [
+        "0d2def04d0958e5f80f61ceab14ab69f6f6cc9d1fd4f9f652d6d21964ba57405"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "baa7a0987093f65aba60d24f9df5bfae7d4d29887e63e497eda661e51e85ba1a",
+      "structural_formula": "res[\"#_Rc_over_sqrt_alpha\"]=Rc"
+    },
+    {
+      "exact_formula_ids": [
         "53b27366ffe3acfffac78f5ba851f74f4fe1dd4c19b608d4175dccd3139e9e6f"
       ],
       "exact_member_count": 1,
@@ -2360825,6 +2361394,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8ca4af0d6422604ad1b0d1f18644fc9c77669011193344f722473ab8e0eb52be",
       "structural_formula": "sols.append(dict(z=key,odd=leptons(Om,ze)[#]))"
+    },
+    {
+      "exact_formula_ids": [
+        "542a38fa32e3ea0b6f0105077047c0e2f9e50f65296b8a2f883dc97b45a63ccc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b21c94bd653d82d4361a3ea889d5ec8377d84d5538fd4bb88d0035e724a09f74",
+      "structural_formula": "sols=re.findall(r\"potentialtachyonsinsector\\((\\d+),(\\d+),(\\d+)\\).*?massM_R\\^#=(-?[\\d.]+)\",t,re.S)"
     },
     {
       "exact_formula_ids": [
@@ -2398555,20 +2399132,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 91842342,
-    "exact_formula_families": 64714,
-    "files_scanned": 12645,
-    "formula_occurrences": 70840,
+    "bytes_scanned": 91849497,
+    "exact_formula_families": 64729,
+    "files_scanned": 12647,
+    "formula_occurrences": 70856,
     "status_occurrences": {
       "certified_or_theorem": 5310,
-      "killed_or_retracted": 1890,
-      "open_or_conditional": 2388,
+      "killed_or_retracted": 1903,
+      "open_or_conditional": 2383,
       "preregistered": 36,
       "retrospective_fit": 5407,
-      "unclassified": 55809
+      "unclassified": 55817
     },
-    "structural_families": 63009
+    "structural_families": 63024
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "4419c5d70b345d356398ce69b27ccda3a1d8e55c6ce317af98953b1f198919e9"
+  "universe_sha256": "6136aa35907b1c40ab6ecc3185ea1a68bf02f67bb0933aff8524f547e86bc9ef"
 }
