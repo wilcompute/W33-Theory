@@ -15,7 +15,8 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 SCRATCH=ROOT/'.research_20261027_intake'
-READ_PAGES=set(range(72,95))
+READ_PAGES=set(range(72,111))
+READ_COMMIT_PREFIXES={'ccee9e84e','5bb5acd74','909913f17','a23c01282','47e5d1365','a15185e5c'}
 EXPECTED_PDF_SHA256='c5b44ee9e447561e4fbb892bb870d2506187e37e35c613a39eaf85af6cf6e19c'
 
 
@@ -36,7 +37,7 @@ def archive_commit(sha):
     assert proc.wait()==0,error
     return {'sha':sha,'patch_sha256':digest.hexdigest(),'patch_bytes':size,
             'gzip_bytes':target.stat().st_size,'archive':str(target.relative_to(ROOT)),
-            'full_patch_model_read':False}
+            'full_patch_model_read':any(sha.startswith(p) for p in READ_COMMIT_PREFIXES)}
 
 
 def certificate_references():
@@ -112,6 +113,13 @@ if __name__=='__main__':
         assert d['pdf_sha256']==EXPECTED_PDF_SHA256
         for page in d['pdf_pages']:
             page['full_text_model_read_this_continuation']=page['page'] in READ_PAGES
+        for commit in d['historical_week_commits']:
+            commit['full_patch_model_read']=any(commit['sha'].startswith(p)for p in READ_COMMIT_PREFIXES)
+        d['reading_increment_20261027_microscopic']={
+            'pages_added':list(range(95,111)),
+            'full_patches_added':sorted(READ_COMMIT_PREFIXES),
+            'patch_scope':'Five empty reservation commits plus the entire substantive a15185e5c patch, including code, JSON, TeX and PDF text conversion. This does not validate every inherited string claim.',
+            'findings':'Pages95-110 document FI/parity, fractional-charge, Yukawa-degeneracy and vacuum-instability constraints. The native spatial reflection is distinct from the Delta54 family reflection. Full patch a15185e5c exposes the Pass12330 common-threshold scan; the new packet proves a continuous bound under exactly that running model.'}
         finding='Pages91-94 explicitly distinguish finite1+3+8 modules from gauge Lie algebras and prove a Pauli-stable E6 obstruction. Our U1/internal-index construction does not claim a nonabelian Pauli E6 action.'
         if finding not in d['paper_read_findings']:d['paper_read_findings'].append(finding)
     elif '--refresh-merges' in sys.argv:

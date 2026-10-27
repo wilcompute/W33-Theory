@@ -15,7 +15,7 @@
       "patch_bytes": 737,
       "gzip_bytes": 501,
       "archive": ".research_20261027_intake\\commits\\ccee9e84ebce754c51e3a021e985fb676eeb9ed3.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "a15185e5c9fa28d820a69df8d1dcfda7fb040544",
@@ -23,7 +23,7 @@
       "patch_bytes": 52329,
       "gzip_bytes": 16833,
       "archive": ".research_20261027_intake\\commits\\a15185e5c9fa28d820a69df8d1dcfda7fb040544.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "b7ad9f0ffa6b3385307a4a0481449f5cf6149e1e",
@@ -39,7 +39,7 @@
       "patch_bytes": 616,
       "gzip_bytes": 434,
       "archive": ".research_20261027_intake\\commits\\5bb5acd74eabfa3c82d0a75108dd50daad1781b9.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "23c894176358ef04823260b8d94a64b795a2e063",
@@ -63,7 +63,7 @@
       "patch_bytes": 796,
       "gzip_bytes": 543,
       "archive": ".research_20261027_intake\\commits\\909913f175b579e5758a37775ede24aa4d495f43.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "928a3a4c605a5b3d011df21c22895c9f965c6f3e",
@@ -87,7 +87,7 @@
       "patch_bytes": 744,
       "gzip_bytes": 504,
       "archive": ".research_20261027_intake\\commits\\a23c012825e22c1c7d21158cd394d10cd128f55e.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "dc9572e9e617488c3e82725b01191ef9ec7a61e4",
@@ -111,7 +111,7 @@
       "patch_bytes": 695,
       "gzip_bytes": 489,
       "archive": ".research_20261027_intake\\commits\\47e5d1365e2327c5928716327430e781cafceb04.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "bfcdf3e54cf8642946a040b684a90e4a2ab52c76",
@@ -4515,112 +4515,112 @@
       "text_bytes": 3199,
       "text_sha256": "6adbb8cad6d81382de6a97083c00e953b45ade519e43c6dc46f6412486c13e5d",
       "archive": ".research_20261027_intake\\pdf\\page095.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 96,
       "text_bytes": 3851,
       "text_sha256": "3919a76ed9cf876f9870abd5ec252a5cf117f3bc671f87f57ec552dc24960128",
       "archive": ".research_20261027_intake\\pdf\\page096.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 97,
       "text_bytes": 3567,
       "text_sha256": "0eb87f0f0a1c9a810a4d8515a0044089599258a69b7a7d17d71069245bc4619f",
       "archive": ".research_20261027_intake\\pdf\\page097.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 98,
       "text_bytes": 3652,
       "text_sha256": "6ea796ed2cf20b54e36a9a3bc9811c8fb7f6a81c4d35e9beb1aee50196c74e5b",
       "archive": ".research_20261027_intake\\pdf\\page098.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 99,
       "text_bytes": 3608,
       "text_sha256": "ee218854ef799f14b94083793e800b7b578212e94a098854997d229fbd1d2b67",
       "archive": ".research_20261027_intake\\pdf\\page099.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 100,
       "text_bytes": 3266,
       "text_sha256": "9684db19e083c1aa696b5b1fca6d035af95793ff9aefb67a038e26a9bfca068b",
       "archive": ".research_20261027_intake\\pdf\\page100.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 101,
       "text_bytes": 3838,
       "text_sha256": "d72b3b33b565ae1325c4431d930d25e998241f07cc59ce4aab15796714b5529c",
       "archive": ".research_20261027_intake\\pdf\\page101.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 102,
       "text_bytes": 3013,
       "text_sha256": "a42a4b391e8a21782e588c5f696b330285f1799cd5f51d5f500fa7da5f378656",
       "archive": ".research_20261027_intake\\pdf\\page102.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 103,
       "text_bytes": 4397,
       "text_sha256": "26308ec631d30e84230b888fb946dadb304f1a11d414ddc1d2ff325db7c28f30",
       "archive": ".research_20261027_intake\\pdf\\page103.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 104,
       "text_bytes": 3859,
       "text_sha256": "b0a1f137382513909422d563f3e52266765e969b5723123e2eb695af90395f90",
       "archive": ".research_20261027_intake\\pdf\\page104.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 105,
       "text_bytes": 3775,
       "text_sha256": "d4e98123d8115e43377bab5b155890b31e0252439524b39bea7cd54bf5570c04",
       "archive": ".research_20261027_intake\\pdf\\page105.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 106,
       "text_bytes": 3670,
       "text_sha256": "b73367eeda15c96c6821f43d5e4d750c1502d6b8e84153d209757e6996b9aa9d",
       "archive": ".research_20261027_intake\\pdf\\page106.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 107,
       "text_bytes": 4482,
       "text_sha256": "a67ea91c24658833c4b0cc02204de4736db179f068cf2152a858c96b6ebefe82",
       "archive": ".research_20261027_intake\\pdf\\page107.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 108,
       "text_bytes": 4106,
       "text_sha256": "bbfa7f3fda55e259175133c96e5156f542c6c4c75f5eaf2443e62f1e738468d2",
       "archive": ".research_20261027_intake\\pdf\\page108.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 109,
       "text_bytes": 4401,
       "text_sha256": "825e2c52409f0ba42cc8db3d9c0a216bd8f5897ef28d050be85ef344250823d3",
       "archive": ".research_20261027_intake\\pdf\\page109.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 110,
       "text_bytes": 4411,
       "text_sha256": "94590227cb96b2974ba897576e3c15d1629c5aebcd6d228fb254171505bde2c0",
       "archive": ".research_20261027_intake\\pdf\\page110.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 111,
@@ -12671,5 +12671,35 @@
     ],
     "scope": "Literal cert-macro basename existence only. This neither executes the witnesses nor validates their mathematics or correspondence to individual claims."
   },
-  "archive_diff_mode": "Separate full binary diff against every parent for merge commits; ordinary full diff for single-parent commits."
+  "archive_diff_mode": "Separate full binary diff against every parent for merge commits; ordinary full diff for single-parent commits.",
+  "reading_increment_20261027_microscopic": {
+    "pages_added": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110
+    ],
+    "full_patches_added": [
+      "47e5d1365",
+      "5bb5acd74",
+      "909913f17",
+      "a15185e5c",
+      "a23c01282",
+      "ccee9e84e"
+    ],
+    "patch_scope": "Five empty reservation commits plus the entire substantive a15185e5c patch, including code, JSON, TeX and PDF text conversion. This does not validate every inherited string claim.",
+    "findings": "Pages95-110 document FI/parity, fractional-charge, Yukawa-degeneracy and vacuum-instability constraints. The native spatial reflection is distinct from the Delta54 family reflection. Full patch a15185e5c exposes the Pass12330 common-threshold scan; the new packet proves a continuous bound under exactly that running model."
+  }
 }
