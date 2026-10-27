@@ -1,0 +1,52 @@
+{
+  "12304": {
+    "parent_solutions": [
+      [
+        "1",
+        "0",
+        "0",
+        -0.5
+      ],
+      [
+        "1",
+        "2",
+        "0",
+        -0.17
+      ],
+      [
+        "1",
+        "4",
+        "0",
+        -0.17
+      ]
+    ],
+    "parent_T": 16,
+    "brother_solutions": [
+      [
+        "1",
+        "0",
+        "0",
+        -0.5
+      ],
+      [
+        "1",
+        "2",
+        "0",
+        -0.17
+      ],
+      [
+        "1",
+        "4",
+        "0",
+        -0.17
+      ]
+    ],
+    "brother_T": 0
+  },
+  "12307_Rc_over_sqrt_alpha": 1.632993161855452,
+  "checks": {
+    "12304: solver finds m_R^2 = -1/6 vacua in Witten theta^2, theta^4 (both models); parent 16 tachyons, brother 0": true,
+    "12307: R_c = 4 sqrt(1/6) ~ 1.633 sqrt(alpha')": true
+  },
+  "all_checks_pass": true
+}

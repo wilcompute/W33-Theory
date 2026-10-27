@@ -13,6 +13,8 @@ lineages fail the texture test; the left-right census extended (Claude track).
   Suspected (not confirmed against the engine's internal tachyon mass): the 'excited tachyonic' branch yields level-matched massless
   states, so the 'tachyon-free' statements of 12281/12286/12292 mean 'free of excited-tachyon-labelled states'; the parent of the
   left-right candidate is then not tachyonic either at this level.  No critical radius is computed.
+  RETRACTED in 12304: the engine's verbose TachyonSolver shows these are genuine tachyons (m^2 = -1/6, Witten-twisted theta^2/theta^4);
+  the printed W/R lines used here are not the tachyonic configuration.  The level data below are kept as recorded; their reading is wrong.
 12300 -- the candidate's 48 fractional Weyl fermions under gauge + point-group (sum of Z6 powers = 0 mod 6) + Witten (sum of labels
   = 0 mod 2) selection: still 134 allowed pairs, all 48 liftable.  Control: unit Z6 and Witten residuals are not in the lattice (the
   rules are live).  The fixed-point translation rule is still not imposed.
