@@ -1,0 +1,188 @@
+{
+ "summary": {
+  "identical": 8,
+  "different": 8
+ },
+ "per": {
+  "c000.txt": {
+   "cls": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c001.txt": {
+   "cls": [
+    0,
+    0,
+    0,
+    72
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c002.txt": {
+   "cls": [
+    0,
+    0,
+    0,
+    144
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c003.txt": {
+   "cls": [
+    0,
+    0,
+    0,
+    216
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c144.txt": {
+   "cls": [
+    0,
+    144,
+    0,
+    0
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c145.txt": {
+   "cls": [
+    0,
+    144,
+    0,
+    72
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c146.txt": {
+   "cls": [
+    0,
+    144,
+    0,
+    144
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c147.txt": {
+   "cls": [
+    0,
+    144,
+    0,
+    216
+   ],
+   "verdict": "identical",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 790
+  },
+  "c576.txt": {
+   "cls": [
+    144,
+    0,
+    0,
+    0
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  },
+  "c577.txt": {
+   "cls": [
+    144,
+    0,
+    0,
+    72
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  },
+  "c578.txt": {
+   "cls": [
+    144,
+    0,
+    0,
+    144
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  },
+  "c579.txt": {
+   "cls": [
+    144,
+    0,
+    0,
+    216
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  },
+  "c720.txt": {
+   "cls": [
+    144,
+    144,
+    0,
+    0
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  },
+  "c721.txt": {
+   "cls": [
+    144,
+    144,
+    0,
+    72
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  },
+  "c722.txt": {
+   "cls": [
+    144,
+    144,
+    0,
+    144
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  },
+  "c723.txt": {
+   "cls": [
+    144,
+    144,
+    0,
+    216
+   ],
+   "verdict": "different",
+   "gauge": "GAUGE A4 and A2",
+   "fields": 804
+  }
+ },
+ "control": {
+  "gauge": "GAUGE A4 and A2",
+  "fields": 790
+ }
+}

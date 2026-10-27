@@ -1,0 +1,2700 @@
+[
+ {
+  "model": "Z6II_52_SM_20260917_405_v15",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_405_v15__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_405_v15__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_405_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_405_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_57_SM_20260917_1103_v13",
+  "files": {
+   "even": "bro/Z6II_57_SM_20260917_1103_v13__even.txt",
+   "odd": "bro/Z6II_57_SM_20260917_1103_v13__odd.txt",
+   "w6odd": "bro/Z6II_57_SM_20260917_1103_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_57_SM_20260917_1103_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1702_v19",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1702_v19__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1702_v19__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1702_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1702_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_1301_v12",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_1301_v12__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_1301_v12__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_1301_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_1301_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1585_v11",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1585_v11__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1585_v11__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1585_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1585_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_1497_v14",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_1497_v14__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_1497_v14__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_1497_v14__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_1497_v14__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_405_v2",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_405_v2__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_405_v2__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_405_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_405_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2496_v5",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2496_v5__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2496_v5__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2496_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2496_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v15",
+  "files": {
+   "even": "bro/Z6II_60_SM_20260917_810_v15__even.txt",
+   "odd": "bro/Z6II_60_SM_20260917_810_v15__odd.txt",
+   "w6odd": "bro/Z6II_60_SM_20260917_810_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_60_SM_20260917_810_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_399_v3",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_399_v3__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_399_v3__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_399_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_399_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_03_SM_20260917_1353_v3",
+  "files": {
+   "even": "bro/Z6II_03_SM_20260917_1353_v3__even.txt",
+   "odd": "bro/Z6II_03_SM_20260917_1353_v3__odd.txt",
+   "w6odd": "bro/Z6II_03_SM_20260917_1353_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_03_SM_20260917_1353_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_1437_v3",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_1437_v3__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_1437_v3__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_1437_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_1437_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_20_SM_20260917_1383_v4",
+  "files": {
+   "even": "bro/Z6II_20_SM_20260917_1383_v4__even.txt",
+   "odd": "bro/Z6II_20_SM_20260917_1383_v4__odd.txt",
+   "w6odd": "bro/Z6II_20_SM_20260917_1383_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_20_SM_20260917_1383_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2618_v4",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2618_v4__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2618_v4__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2618_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2618_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_1614_v3",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_1614_v3__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_1614_v3__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_1614_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_1614_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v16",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v16__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v16__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_57_SM_20260917_1103_v1",
+  "files": {
+   "even": "bro/Z6II_57_SM_20260917_1103_v1__even.txt",
+   "odd": "bro/Z6II_57_SM_20260917_1103_v1__odd.txt",
+   "w6odd": "bro/Z6II_57_SM_20260917_1103_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_57_SM_20260917_1103_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_33_SM_20260917_619_v1",
+  "files": {
+   "even": "bro/Z6II_33_SM_20260917_619_v1__even.txt",
+   "odd": "bro/Z6II_33_SM_20260917_619_v1__odd.txt",
+   "w6odd": "bro/Z6II_33_SM_20260917_619_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_33_SM_20260917_619_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2056_v15",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2056_v15__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2056_v15__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2056_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2056_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v5",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v5__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v5__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_1497_v6",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_1497_v6__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_1497_v6__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_1497_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_1497_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2056_v3",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2056_v3__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2056_v3__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2056_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2056_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2698_v18",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2698_v18__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2698_v18__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2698_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2698_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_818_v8",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_818_v8__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_818_v8__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_818_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_818_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_03_SM_20260917_1353_v8",
+  "files": {
+   "even": "bro/Z6II_03_SM_20260917_1353_v8__even.txt",
+   "odd": "bro/Z6II_03_SM_20260917_1353_v8__odd.txt",
+   "w6odd": "bro/Z6II_03_SM_20260917_1353_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_03_SM_20260917_1353_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_2503_v2",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_2503_v2__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_2503_v2__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_2503_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_2503_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_1497_v5",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_1497_v5__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_1497_v5__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_1497_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_1497_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_273_v0",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_273_v0__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_273_v0__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_273_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_273_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2722_v7",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2722_v7__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2722_v7__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2722_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2722_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2068_v7",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2068_v7__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2068_v7__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2068_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2068_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2913_v15",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2913_v15__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2913_v15__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2913_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2913_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2913_v5",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2913_v5__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2913_v5__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2913_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2913_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_49_SM_20260917_145_v19",
+  "files": {
+   "even": "bro/Z6II_49_SM_20260917_145_v19__even.txt",
+   "odd": "bro/Z6II_49_SM_20260917_145_v19__odd.txt",
+   "w6odd": "bro/Z6II_49_SM_20260917_145_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_49_SM_20260917_145_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2229_v7",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2229_v7__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2229_v7__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2229_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2229_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2533_v2",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2533_v2__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2533_v2__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2533_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2533_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_405_v1",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_405_v1__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_405_v1__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_405_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_405_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v14",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v14__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v14__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v14__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v14__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_04_SM_20260917_245_v12",
+  "files": {
+   "even": "bro/Z6II_04_SM_20260917_245_v12__even.txt",
+   "odd": "bro/Z6II_04_SM_20260917_245_v12__odd.txt",
+   "w6odd": "bro/Z6II_04_SM_20260917_245_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_04_SM_20260917_245_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2473_v8",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2473_v8__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2473_v8__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2473_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2473_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_569_v1",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_569_v1__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_569_v1__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_569_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_569_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_18_SM_20260917_656_v0",
+  "files": {
+   "even": "bro/Z6II_18_SM_20260917_656_v0__even.txt",
+   "odd": "bro/Z6II_18_SM_20260917_656_v0__odd.txt",
+   "w6odd": "bro/Z6II_18_SM_20260917_656_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_18_SM_20260917_656_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_1628_v13",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_1628_v13__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_1628_v13__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_1628_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_1628_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1474_v13",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1474_v13__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1474_v13__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1474_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1474_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2056_v13",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2056_v13__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2056_v13__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2056_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2056_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2417_v1",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2417_v1__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2417_v1__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2417_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2417_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2698_v17",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2698_v17__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2698_v17__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2698_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2698_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_1628_v10",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_1628_v10__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_1628_v10__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_1628_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_1628_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_04_SM_20260917_245_v15",
+  "files": {
+   "even": "bro/Z6II_04_SM_20260917_245_v15__even.txt",
+   "odd": "bro/Z6II_04_SM_20260917_245_v15__odd.txt",
+   "w6odd": "bro/Z6II_04_SM_20260917_245_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_04_SM_20260917_245_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_818_v4",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_818_v4__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_818_v4__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_818_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_818_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v15",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v15__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v15__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v7",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v7__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v7__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_1411_v0",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_1411_v0__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_1411_v0__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_1411_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_1411_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_617_v0",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_617_v0__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_617_v0__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_617_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_617_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_45_SM_20260917_1962_v15",
+  "files": {
+   "even": "bro/Z6II_45_SM_20260917_1962_v15__even.txt",
+   "odd": "bro/Z6II_45_SM_20260917_1962_v15__odd.txt",
+   "w6odd": "bro/Z6II_45_SM_20260917_1962_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_45_SM_20260917_1962_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v13",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v13__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v13__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v9",
+  "files": {
+   "even": "bro/Z6II_60_SM_20260917_810_v9__even.txt",
+   "odd": "bro/Z6II_60_SM_20260917_810_v9__odd.txt",
+   "w6odd": "bro/Z6II_60_SM_20260917_810_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_60_SM_20260917_810_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_399_v1",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_399_v1__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_399_v1__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_399_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_399_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_1411_v5",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_1411_v5__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_1411_v5__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_1411_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_1411_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2417_v16",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2417_v16__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2417_v16__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2417_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2417_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_1437_v10",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_1437_v10__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_1437_v10__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_1437_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_1437_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_998_v9",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_998_v9__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_998_v9__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_998_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_998_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2678_v4",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2678_v4__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2678_v4__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2678_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2678_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_470_v7",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_470_v7__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_470_v7__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_470_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_470_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2417_v12",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2417_v12__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2417_v12__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2417_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2417_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2496_v10",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2496_v10__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2496_v10__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2496_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2496_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2158_v5",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2158_v5__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2158_v5__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2158_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2158_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_2368_v7",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_2368_v7__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_2368_v7__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_2368_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_2368_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2298_v17",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2298_v17__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2298_v17__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2298_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2298_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2158_v12",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2158_v12__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2158_v12__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2158_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2158_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_58_v12",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_58_v12__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_58_v12__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_58_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_58_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_1614_v10",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_1614_v10__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_1614_v10__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_1614_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_1614_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1585_v1",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1585_v1__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1585_v1__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1585_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1585_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2533_v0",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2533_v0__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2533_v0__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2533_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2533_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2496_v6",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2496_v6__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2496_v6__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2496_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2496_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2722_v14",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2722_v14__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2722_v14__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2722_v14__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2722_v14__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v16",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v16__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v16__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2533_v13",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2533_v13__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2533_v13__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2533_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2533_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2298_v6",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2298_v6__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2298_v6__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2298_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2298_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_19_SM_20260917_477_v8",
+  "files": {
+   "even": "bro/Z6II_19_SM_20260917_477_v8__even.txt",
+   "odd": "bro/Z6II_19_SM_20260917_477_v8__odd.txt",
+   "w6odd": "bro/Z6II_19_SM_20260917_477_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_19_SM_20260917_477_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_33_SM_20260917_619_v8",
+  "files": {
+   "even": "bro/Z6II_33_SM_20260917_619_v8__even.txt",
+   "odd": "bro/Z6II_33_SM_20260917_619_v8__odd.txt",
+   "w6odd": "bro/Z6II_33_SM_20260917_619_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_33_SM_20260917_619_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1188_v11",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1188_v11__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1188_v11__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1188_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1188_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_1993_v1",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_1993_v1__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_1993_v1__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_1993_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_1993_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_1437_v0",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_1437_v0__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_1437_v0__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_1437_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_1437_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_1197_v1",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_1197_v1__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_1197_v1__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_1197_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_1197_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_998_v7",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_998_v7__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_998_v7__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_998_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_998_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_1301_v5",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_1301_v5__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_1301_v5__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_1301_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_1301_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_691_v1",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_691_v1__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_691_v1__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_691_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_691_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_1614_v15",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_1614_v15__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_1614_v15__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_1614_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_1614_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_03_SM_20260917_1353_v11",
+  "files": {
+   "even": "bro/Z6II_03_SM_20260917_1353_v11__even.txt",
+   "odd": "bro/Z6II_03_SM_20260917_1353_v11__odd.txt",
+   "w6odd": "bro/Z6II_03_SM_20260917_1353_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_03_SM_20260917_1353_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_470_v3",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_470_v3__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_470_v3__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_470_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_470_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_58_v3",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_58_v3__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_58_v3__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_58_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_58_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_292_v19",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_292_v19__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_292_v19__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_292_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_292_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v1",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v1__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v1__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_60_v15",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_60_v15__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_60_v15__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_60_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_60_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_19_SM_20260917_477_v5",
+  "files": {
+   "even": "bro/Z6II_19_SM_20260917_477_v5__even.txt",
+   "odd": "bro/Z6II_19_SM_20260917_477_v5__odd.txt",
+   "w6odd": "bro/Z6II_19_SM_20260917_477_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_19_SM_20260917_477_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2229_v13",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2229_v13__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2229_v13__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2229_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2229_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1474_v7",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1474_v7__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1474_v7__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1474_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1474_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v3",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v3__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v3__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2913_v2",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2913_v2__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2913_v2__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2913_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2913_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_04_SM_20260917_245_v4",
+  "files": {
+   "even": "bro/Z6II_04_SM_20260917_245_v4__even.txt",
+   "odd": "bro/Z6II_04_SM_20260917_245_v4__odd.txt",
+   "w6odd": "bro/Z6II_04_SM_20260917_245_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_04_SM_20260917_245_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_1497_v0",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_1497_v0__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_1497_v0__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_1497_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_1497_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2698_v8",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2698_v8__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2698_v8__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2698_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2698_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_03_SM_20260917_1353_v1",
+  "files": {
+   "even": "bro/Z6II_03_SM_20260917_1353_v1__even.txt",
+   "odd": "bro/Z6II_03_SM_20260917_1353_v1__odd.txt",
+   "w6odd": "bro/Z6II_03_SM_20260917_1353_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_03_SM_20260917_1353_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_03_SM_20260917_1353_v13",
+  "files": {
+   "even": "bro/Z6II_03_SM_20260917_1353_v13__even.txt",
+   "odd": "bro/Z6II_03_SM_20260917_1353_v13__odd.txt",
+   "w6odd": "bro/Z6II_03_SM_20260917_1353_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_03_SM_20260917_1353_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_273_v16",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_273_v16__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_273_v16__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_273_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_273_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_569_v6",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_569_v6__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_569_v6__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_569_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_569_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_60_v7",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_60_v7__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_60_v7__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_60_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_60_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_470_v19",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_470_v19__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_470_v19__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_470_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_470_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_19_SM_20260917_477_v18",
+  "files": {
+   "even": "bro/Z6II_19_SM_20260917_477_v18__even.txt",
+   "odd": "bro/Z6II_19_SM_20260917_477_v18__odd.txt",
+   "w6odd": "bro/Z6II_19_SM_20260917_477_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_19_SM_20260917_477_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v13",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v13__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v13__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_04_SM_20260917_245_v10",
+  "files": {
+   "even": "bro/Z6II_04_SM_20260917_245_v10__even.txt",
+   "odd": "bro/Z6II_04_SM_20260917_245_v10__odd.txt",
+   "w6odd": "bro/Z6II_04_SM_20260917_245_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_04_SM_20260917_245_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2913_v3",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2913_v3__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2913_v3__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2913_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2913_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_45_SM_20260917_1962_v3",
+  "files": {
+   "even": "bro/Z6II_45_SM_20260917_1962_v3__even.txt",
+   "odd": "bro/Z6II_45_SM_20260917_1962_v3__odd.txt",
+   "w6odd": "bro/Z6II_45_SM_20260917_1962_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_45_SM_20260917_1962_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2215_v9",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2215_v9__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2215_v9__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2215_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2215_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1487_v4",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1487_v4__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1487_v4__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1487_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1487_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v17",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v17__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v17__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2678_v5",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2678_v5__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2678_v5__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2678_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2678_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2722_v11",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2722_v11__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2722_v11__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2722_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2722_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_57_SM_20260917_2231_v8",
+  "files": {
+   "even": "bro/Z6II_57_SM_20260917_2231_v8__even.txt",
+   "odd": "bro/Z6II_57_SM_20260917_2231_v8__odd.txt",
+   "w6odd": "bro/Z6II_57_SM_20260917_2231_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_57_SM_20260917_2231_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_292_v13",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_292_v13__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_292_v13__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_292_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_292_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_226_v12",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_226_v12__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_226_v12__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_226_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_226_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_20_SM_20260917_1383_v18",
+  "files": {
+   "even": "bro/Z6II_20_SM_20260917_1383_v18__even.txt",
+   "odd": "bro/Z6II_20_SM_20260917_1383_v18__odd.txt",
+   "w6odd": "bro/Z6II_20_SM_20260917_1383_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_20_SM_20260917_1383_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_1105_v8",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_1105_v8__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_1105_v8__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_1105_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_1105_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v17",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v17__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v17__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v5",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v5__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v5__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v16",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v16__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v16__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2541_v16",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2541_v16__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2541_v16__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2541_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2541_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v2",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v2__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v2__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2298_v12",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2298_v12__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2298_v12__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2298_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2298_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2678_v3",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2678_v3__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2678_v3__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2678_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2678_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_405_v4",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_405_v4__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_405_v4__odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_405_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2229_v19",
+  "files": {
+   "odd": "bro/Z6II_34_SM_20260917_2229_v19__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2229_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2229_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2473_v18",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2473_v18__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2473_v18__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2473_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2473_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2678_v2",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2678_v2__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2678_v2__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2678_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2678_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_03_SM_20260917_1353_v4",
+  "files": {
+   "even": "bro/Z6II_03_SM_20260917_1353_v4__even.txt",
+   "odd": "bro/Z6II_03_SM_20260917_1353_v4__odd.txt",
+   "w6odd": "bro/Z6II_03_SM_20260917_1353_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_03_SM_20260917_1353_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2533_v17",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2533_v17__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2533_v17__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2533_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2533_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2698_v4",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2698_v4__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2698_v4__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2698_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2698_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_58_v4",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_58_v4__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_58_v4__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_58_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_58_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_818_v2",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_818_v2__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_818_v2__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_818_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_818_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1702_v1",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1702_v1__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1702_v1__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1702_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1702_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v2",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v2__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v2__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_405_v17",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_405_v17__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_405_v17__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_405_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_405_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2215_v18",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2215_v18__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2215_v18__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2215_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2215_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_1301_v16",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_1301_v16__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_1301_v16__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_1301_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_1301_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_1197_v8",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_1197_v8__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_1197_v8__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_1197_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_1197_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2229_v12",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2229_v12__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2229_v12__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2229_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2229_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_1437_v18",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_1437_v18__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_1437_v18__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_1437_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_1437_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1585_v16",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1585_v16__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1585_v16__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1585_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1585_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_1497_v18",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_1497_v18__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_1497_v18__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_1497_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_1497_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_1497_v10",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_1497_v10__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_1497_v10__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_1497_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_1497_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v11",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v11__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v11__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_1411_v7",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_1411_v7__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_1411_v7__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_1411_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_1411_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_88_v14",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_88_v14__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_88_v14__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_88_v14__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_88_v14__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1474_v3",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1474_v3__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1474_v3__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1474_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1474_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v5",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v5__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v5__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_2503_v9",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_2503_v9__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_2503_v9__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_2503_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_2503_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2056_v6",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2056_v6__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2056_v6__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2056_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2056_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2618_v16",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2618_v16__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2618_v16__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2618_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2618_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v18",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v18__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v18__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_60_v3",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_60_v3__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_60_v3__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_60_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_60_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1474_v14",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1474_v14__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1474_v14__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1474_v14__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1474_v14__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_691_v6",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_691_v6__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_691_v6__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_691_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_691_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_18_SM_20260917_656_v19",
+  "files": {
+   "even": "bro/Z6II_18_SM_20260917_656_v19__even.txt",
+   "odd": "bro/Z6II_18_SM_20260917_656_v19__odd.txt",
+   "w6odd": "bro/Z6II_18_SM_20260917_656_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_18_SM_20260917_656_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1474_v4",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1474_v4__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1474_v4__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1474_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1474_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_1628_v14",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_1628_v14__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_1628_v14__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_1628_v14__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_1628_v14__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_1301_v4",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_1301_v4__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_1301_v4__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_1301_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_1301_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2068_v13",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2068_v13__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2068_v13__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2068_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2068_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_45_SM_20260917_1962_v4",
+  "files": {
+   "even": "bro/Z6II_45_SM_20260917_1962_v4__even.txt",
+   "odd": "bro/Z6II_45_SM_20260917_1962_v4__odd.txt",
+   "w6odd": "bro/Z6II_45_SM_20260917_1962_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_45_SM_20260917_1962_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_741_v2",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_741_v2__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_741_v2__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_741_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_741_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2229_v9",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2229_v9__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2229_v9__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2229_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2229_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_1105_v5",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_1105_v5__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_1105_v5__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_1105_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_1105_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2113_v19",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2113_v19__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2113_v19__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2113_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2113_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_1105_v19",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_1105_v19__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_1105_v19__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_1105_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_1105_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2229_v16",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2229_v16__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2229_v16__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2229_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2229_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_1301_v8",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_1301_v8__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_1301_v8__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_1301_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_1301_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2698_v11",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2698_v11__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2698_v11__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2698_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2698_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v10",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v10__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v10__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2113_v4",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2113_v4__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2113_v4__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2113_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2113_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2113_v3",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2113_v3__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2113_v3__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2113_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2113_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v5",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v5__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v5__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_49_SM_20260917_145_v12",
+  "files": {
+   "even": "bro/Z6II_49_SM_20260917_145_v12__even.txt",
+   "odd": "bro/Z6II_49_SM_20260917_145_v12__odd.txt",
+   "w6odd": "bro/Z6II_49_SM_20260917_145_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_49_SM_20260917_145_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_2503_v8",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_2503_v8__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_2503_v8__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_2503_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_2503_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_226_v4",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_226_v4__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_226_v4__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_226_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_226_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_56_SM_20260917_2753_v11",
+  "files": {
+   "even": "bro/Z6II_56_SM_20260917_2753_v11__even.txt",
+   "odd": "bro/Z6II_56_SM_20260917_2753_v11__odd.txt",
+   "w6odd": "bro/Z6II_56_SM_20260917_2753_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_56_SM_20260917_2753_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_574_v5",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_574_v5__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_574_v5__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_574_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_574_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_1197_v9",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_1197_v9__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_1197_v9__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_1197_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_1197_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_56_SM_20260917_2753_v10",
+  "files": {
+   "even": "bro/Z6II_56_SM_20260917_2753_v10__even.txt",
+   "odd": "bro/Z6II_56_SM_20260917_2753_v10__odd.txt",
+   "w6odd": "bro/Z6II_56_SM_20260917_2753_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_56_SM_20260917_2753_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_20_SM_20260917_1383_v3",
+  "files": {
+   "even": "bro/Z6II_20_SM_20260917_1383_v3__even.txt",
+   "odd": "bro/Z6II_20_SM_20260917_1383_v3__odd.txt",
+   "w6odd": "bro/Z6II_20_SM_20260917_1383_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_20_SM_20260917_1383_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v9",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v9__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v9__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_151_v17",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_151_v17__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_151_v17__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_151_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_151_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1188_v17",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1188_v17__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1188_v17__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1188_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1188_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_687_v8",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_687_v8__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_687_v8__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_687_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_687_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2541_v6",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2541_v6__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2541_v6__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2541_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2541_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_405_v9",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_405_v9__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_405_v9__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_405_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_405_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v3",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v3__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v3__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_1411_v3",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_1411_v3__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_1411_v3__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_1411_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_1411_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2722_v13",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2722_v13__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2722_v13__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2722_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2722_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2473_v10",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2473_v10__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2473_v10__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2473_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2473_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v8",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v8__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v8__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_04_SM_20260917_245_v19",
+  "files": {
+   "even": "bro/Z6II_04_SM_20260917_245_v19__even.txt",
+   "odd": "bro/Z6II_04_SM_20260917_245_v19__odd.txt",
+   "w6odd": "bro/Z6II_04_SM_20260917_245_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_04_SM_20260917_245_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2541_v0",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2541_v0__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2541_v0__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2541_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2541_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2541_v18",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2541_v18__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2541_v18__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2541_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2541_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_818_v6",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_818_v6__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_818_v6__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_818_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_818_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_19_SM_20260917_477_v6",
+  "files": {
+   "even": "bro/Z6II_19_SM_20260917_477_v6__even.txt",
+   "odd": "bro/Z6II_19_SM_20260917_477_v6__odd.txt",
+   "w6odd": "bro/Z6II_19_SM_20260917_477_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_19_SM_20260917_477_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2158_v6",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2158_v6__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2158_v6__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2158_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2158_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1702_v3",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1702_v3__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1702_v3__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1702_v3__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1702_v3__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_58_v2",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_58_v2__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_58_v2__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_58_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_58_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_33_SM_20260917_619_v17",
+  "files": {
+   "even": "bro/Z6II_33_SM_20260917_619_v17__even.txt",
+   "odd": "bro/Z6II_33_SM_20260917_619_v17__odd.txt",
+   "w6odd": "bro/Z6II_33_SM_20260917_619_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_33_SM_20260917_619_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_57_SM_20260917_2231_v0",
+  "files": {
+   "even": "bro/Z6II_57_SM_20260917_2231_v0__even.txt",
+   "odd": "bro/Z6II_57_SM_20260917_2231_v0__odd.txt",
+   "w6odd": "bro/Z6II_57_SM_20260917_2231_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_57_SM_20260917_2231_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_470_v15",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_470_v15__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_470_v15__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_470_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_470_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v19",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v19__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v19__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_60_v17",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_60_v17__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_60_v17__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_60_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_60_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_57_SM_20260917_2231_v2",
+  "files": {
+   "even": "bro/Z6II_57_SM_20260917_2231_v2__even.txt",
+   "odd": "bro/Z6II_57_SM_20260917_2231_v2__odd.txt",
+   "w6odd": "bro/Z6II_57_SM_20260917_2231_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_57_SM_20260917_2231_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_49_SM_20260917_145_v15",
+  "files": {
+   "even": "bro/Z6II_49_SM_20260917_145_v15__even.txt",
+   "odd": "bro/Z6II_49_SM_20260917_145_v15__odd.txt",
+   "w6odd": "bro/Z6II_49_SM_20260917_145_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_49_SM_20260917_145_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2722_v4",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2722_v4__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2722_v4__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2722_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2722_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_1614_v8",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_1614_v8__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_1614_v8__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_1614_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_1614_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2056_v9",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2056_v9__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2056_v9__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2056_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2056_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v1",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v1__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v1__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_56_SM_20260917_2753_v13",
+  "files": {
+   "even": "bro/Z6II_56_SM_20260917_2753_v13__even.txt",
+   "odd": "bro/Z6II_56_SM_20260917_2753_v13__odd.txt",
+   "w6odd": "bro/Z6II_56_SM_20260917_2753_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_56_SM_20260917_2753_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_1993_v13",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_1993_v13__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_1993_v13__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_1993_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_1993_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2541_v17",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2541_v17__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2541_v17__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2541_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2541_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_617_v13",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_617_v13__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_617_v13__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_617_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_617_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v2",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v2__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v2__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_998_v1",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_998_v1__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_998_v1__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_998_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_998_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_399_v4",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_399_v4__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_399_v4__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_399_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_399_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_1197_v18",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_1197_v18__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_1197_v18__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_1197_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_1197_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1585_v4",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1585_v4__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1585_v4__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1585_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1585_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_49_SM_20260917_145_v6",
+  "files": {
+   "even": "bro/Z6II_49_SM_20260917_145_v6__even.txt",
+   "odd": "bro/Z6II_49_SM_20260917_145_v6__odd.txt",
+   "w6odd": "bro/Z6II_49_SM_20260917_145_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_49_SM_20260917_145_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1188_v13",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1188_v13__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1188_v13__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1188_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1188_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2417_v11",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2417_v11__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2417_v11__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2417_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2417_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_60_v13",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_60_v13__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_60_v13__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_60_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_60_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_1026_v9",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_1026_v9__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_1026_v9__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_1026_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_1026_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2158_v4",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2158_v4__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2158_v4__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2158_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2158_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_470_v16",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_470_v16__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_470_v16__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_470_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_470_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2678_v18",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2678_v18__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2678_v18__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2678_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2678_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_1026_v12",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_1026_v12__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_1026_v12__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_1026_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_1026_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_998_v13",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_998_v13__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_998_v13__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_998_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_998_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_226_v10",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_226_v10__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_226_v10__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_226_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_226_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_60_v8",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_60_v8__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_60_v8__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_60_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_60_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1702_v12",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1702_v12__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1702_v12__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1702_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1702_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_49_SM_20260917_145_v0",
+  "files": {
+   "even": "bro/Z6II_49_SM_20260917_145_v0__even.txt",
+   "odd": "bro/Z6II_49_SM_20260917_145_v0__odd.txt",
+   "w6odd": "bro/Z6II_49_SM_20260917_145_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_49_SM_20260917_145_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_45_SM_20260917_1962_v1",
+  "files": {
+   "even": "bro/Z6II_45_SM_20260917_1962_v1__even.txt",
+   "odd": "bro/Z6II_45_SM_20260917_1962_v1__odd.txt",
+   "w6odd": "bro/Z6II_45_SM_20260917_1962_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_45_SM_20260917_1962_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v6",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v6__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v6__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_1301_v1",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_1301_v1__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_1301_v1__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_1301_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_1301_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_2503_v0",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_2503_v0__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_2503_v0__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_2503_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_2503_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_151_v0",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_151_v0__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_151_v0__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_151_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_151_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2473_v2",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2473_v2__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2473_v2__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2473_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2473_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_12_SM_20260917_2503_v12",
+  "files": {
+   "even": "bro/Z6II_12_SM_20260917_2503_v12__even.txt",
+   "odd": "bro/Z6II_12_SM_20260917_2503_v12__odd.txt",
+   "w6odd": "bro/Z6II_12_SM_20260917_2503_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_12_SM_20260917_2503_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v14",
+  "files": {
+   "even": "bro/Z6II_60_SM_20260917_810_v14__even.txt",
+   "odd": "bro/Z6II_60_SM_20260917_810_v14__odd.txt",
+   "w6odd": "bro/Z6II_60_SM_20260917_810_v14__w6odd.txt",
+   "ctrl": "bro/Z6II_60_SM_20260917_810_v14__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_325_v16",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_325_v16__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_325_v16__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_325_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_325_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1474_v2",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1474_v2__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1474_v2__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1474_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1474_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2473_v4",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2473_v4__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2473_v4__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2473_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2473_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2215_v17",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2215_v17__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2215_v17__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2215_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2215_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_265_v8",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_265_v8__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_265_v8__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_265_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_265_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2678_v15",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2678_v15__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2678_v15__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2678_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2678_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v8",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v8__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v8__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_01_SM_20260917_88_v12",
+  "files": {
+   "even": "bro/Z6II_01_SM_20260917_88_v12__even.txt",
+   "odd": "bro/Z6II_01_SM_20260917_88_v12__odd.txt",
+   "w6odd": "bro/Z6II_01_SM_20260917_88_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_01_SM_20260917_88_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2913_v7",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2913_v7__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2913_v7__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2913_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2913_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_1702_v6",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_1702_v6__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_1702_v6__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_1702_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_1702_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2298_v5",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2298_v5__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2298_v5__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2298_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2298_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_60_SM_20260917_810_v4",
+  "files": {
+   "even": "bro/Z6II_60_SM_20260917_810_v4__even.txt",
+   "odd": "bro/Z6II_60_SM_20260917_810_v4__odd.txt",
+   "w6odd": "bro/Z6II_60_SM_20260917_810_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_60_SM_20260917_810_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_687_v15",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_687_v15__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_687_v15__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_687_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_687_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_1614_v6",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_1614_v6__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_1614_v6__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_1614_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_1614_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_2368_v6",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_2368_v6__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_2368_v6__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_2368_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_2368_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_53_SM_20260917_2368_v8",
+  "files": {
+   "even": "bro/Z6II_53_SM_20260917_2368_v8__even.txt",
+   "odd": "bro/Z6II_53_SM_20260917_2368_v8__odd.txt",
+   "w6odd": "bro/Z6II_53_SM_20260917_2368_v8__w6odd.txt",
+   "ctrl": "bro/Z6II_53_SM_20260917_2368_v8__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2541_v9",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2541_v9__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2541_v9__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2541_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2541_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v15",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v15__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v15__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2473_v13",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2473_v13__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2473_v13__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2473_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2473_v13__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v11",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v11__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v11__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_265_v10",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_265_v10__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_265_v10__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_265_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_265_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_265_v16",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_265_v16__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_265_v16__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_265_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_265_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_49_SM_20260917_145_v17",
+  "files": {
+   "even": "bro/Z6II_49_SM_20260917_145_v17__even.txt",
+   "odd": "bro/Z6II_49_SM_20260917_145_v17__odd.txt",
+   "w6odd": "bro/Z6II_49_SM_20260917_145_v17__w6odd.txt",
+   "ctrl": "bro/Z6II_49_SM_20260917_145_v17__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_35_SM_20260917_473_v0",
+  "files": {
+   "even": "bro/Z6II_35_SM_20260917_473_v0__even.txt",
+   "odd": "bro/Z6II_35_SM_20260917_473_v0__odd.txt",
+   "w6odd": "bro/Z6II_35_SM_20260917_473_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_35_SM_20260917_473_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2496_v16",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2496_v16__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2496_v16__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2496_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2496_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_49_SM_20260917_145_v10",
+  "files": {
+   "even": "bro/Z6II_49_SM_20260917_145_v10__even.txt",
+   "odd": "bro/Z6II_49_SM_20260917_145_v10__odd.txt",
+   "w6odd": "bro/Z6II_49_SM_20260917_145_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_49_SM_20260917_145_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_45_SM_20260917_1962_v0",
+  "files": {
+   "even": "bro/Z6II_45_SM_20260917_1962_v0__even.txt",
+   "odd": "bro/Z6II_45_SM_20260917_1962_v0__odd.txt",
+   "w6odd": "bro/Z6II_45_SM_20260917_1962_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_45_SM_20260917_1962_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_19_SM_20260917_477_v2",
+  "files": {
+   "even": "bro/Z6II_19_SM_20260917_477_v2__even.txt",
+   "odd": "bro/Z6II_19_SM_20260917_477_v2__odd.txt",
+   "w6odd": "bro/Z6II_19_SM_20260917_477_v2__w6odd.txt",
+   "ctrl": "bro/Z6II_19_SM_20260917_477_v2__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_1105_v9",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_1105_v9__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_1105_v9__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_1105_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_1105_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_59_SM_20260917_2473_v19",
+  "files": {
+   "even": "bro/Z6II_59_SM_20260917_2473_v19__even.txt",
+   "odd": "bro/Z6II_59_SM_20260917_2473_v19__odd.txt",
+   "w6odd": "bro/Z6II_59_SM_20260917_2473_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_59_SM_20260917_2473_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_57_SM_20260917_1103_v9",
+  "files": {
+   "even": "bro/Z6II_57_SM_20260917_1103_v9__even.txt",
+   "odd": "bro/Z6II_57_SM_20260917_1103_v9__odd.txt",
+   "w6odd": "bro/Z6II_57_SM_20260917_1103_v9__w6odd.txt",
+   "ctrl": "bro/Z6II_57_SM_20260917_1103_v9__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2722_v19",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2722_v19__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2722_v19__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2722_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2722_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_52_SM_20260917_1437_v1",
+  "files": {
+   "even": "bro/Z6II_52_SM_20260917_1437_v1__even.txt",
+   "odd": "bro/Z6II_52_SM_20260917_1437_v1__odd.txt",
+   "w6odd": "bro/Z6II_52_SM_20260917_1437_v1__w6odd.txt",
+   "ctrl": "bro/Z6II_52_SM_20260917_1437_v1__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_28_SM_20260917_2417_v19",
+  "files": {
+   "even": "bro/Z6II_28_SM_20260917_2417_v19__even.txt",
+   "odd": "bro/Z6II_28_SM_20260917_2417_v19__odd.txt",
+   "w6odd": "bro/Z6II_28_SM_20260917_2417_v19__w6odd.txt",
+   "ctrl": "bro/Z6II_28_SM_20260917_2417_v19__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_19_SM_20260917_477_v12",
+  "files": {
+   "even": "bro/Z6II_19_SM_20260917_477_v12__even.txt",
+   "odd": "bro/Z6II_19_SM_20260917_477_v12__odd.txt",
+   "w6odd": "bro/Z6II_19_SM_20260917_477_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_19_SM_20260917_477_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_57_SM_20260917_2231_v7",
+  "files": {
+   "even": "bro/Z6II_57_SM_20260917_2231_v7__even.txt",
+   "odd": "bro/Z6II_57_SM_20260917_2231_v7__odd.txt",
+   "w6odd": "bro/Z6II_57_SM_20260917_2231_v7__w6odd.txt",
+   "ctrl": "bro/Z6II_57_SM_20260917_2231_v7__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_54_SM_20260917_265_v18",
+  "files": {
+   "even": "bro/Z6II_54_SM_20260917_265_v18__even.txt",
+   "odd": "bro/Z6II_54_SM_20260917_265_v18__odd.txt",
+   "w6odd": "bro/Z6II_54_SM_20260917_265_v18__w6odd.txt",
+   "ctrl": "bro/Z6II_54_SM_20260917_265_v18__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_687_v6",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_687_v6__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_687_v6__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_687_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_687_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_1197_v4",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_1197_v4__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_1197_v4__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_1197_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_1197_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_1188_v0",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_1188_v0__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_1188_v0__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_1188_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_1188_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_39_SM_20260917_478_v10",
+  "files": {
+   "even": "bro/Z6II_39_SM_20260917_478_v10__even.txt",
+   "odd": "bro/Z6II_39_SM_20260917_478_v10__odd.txt",
+   "w6odd": "bro/Z6II_39_SM_20260917_478_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_39_SM_20260917_478_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_33_SM_20260917_619_v16",
+  "files": {
+   "even": "bro/Z6II_33_SM_20260917_619_v16__even.txt",
+   "odd": "bro/Z6II_33_SM_20260917_619_v16__odd.txt",
+   "w6odd": "bro/Z6II_33_SM_20260917_619_v16__w6odd.txt",
+   "ctrl": "bro/Z6II_33_SM_20260917_619_v16__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_22_SM_20260917_399_v15",
+  "files": {
+   "even": "bro/Z6II_22_SM_20260917_399_v15__even.txt",
+   "odd": "bro/Z6II_22_SM_20260917_399_v15__odd.txt",
+   "w6odd": "bro/Z6II_22_SM_20260917_399_v15__w6odd.txt",
+   "ctrl": "bro/Z6II_22_SM_20260917_399_v15__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_43_SM_20260917_1867_v4",
+  "files": {
+   "even": "bro/Z6II_43_SM_20260917_1867_v4__even.txt",
+   "odd": "bro/Z6II_43_SM_20260917_1867_v4__odd.txt",
+   "w6odd": "bro/Z6II_43_SM_20260917_1867_v4__w6odd.txt",
+   "ctrl": "bro/Z6II_43_SM_20260917_1867_v4__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_23_SM_20260917_2678_v6",
+  "files": {
+   "even": "bro/Z6II_23_SM_20260917_2678_v6__even.txt",
+   "odd": "bro/Z6II_23_SM_20260917_2678_v6__odd.txt",
+   "w6odd": "bro/Z6II_23_SM_20260917_2678_v6__w6odd.txt",
+   "ctrl": "bro/Z6II_23_SM_20260917_2678_v6__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_2158_v11",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_2158_v11__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_2158_v11__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_2158_v11__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_2158_v11__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_10_SM_20260917_818_v5",
+  "files": {
+   "even": "bro/Z6II_10_SM_20260917_818_v5__even.txt",
+   "odd": "bro/Z6II_10_SM_20260917_818_v5__odd.txt",
+   "w6odd": "bro/Z6II_10_SM_20260917_818_v5__w6odd.txt",
+   "ctrl": "bro/Z6II_10_SM_20260917_818_v5__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_05_SM_20260917_60_v12",
+  "files": {
+   "even": "bro/Z6II_05_SM_20260917_60_v12__even.txt",
+   "odd": "bro/Z6II_05_SM_20260917_60_v12__odd.txt",
+   "w6odd": "bro/Z6II_05_SM_20260917_60_v12__w6odd.txt",
+   "ctrl": "bro/Z6II_05_SM_20260917_60_v12__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_06_SM_20260917_998_v0",
+  "files": {
+   "even": "bro/Z6II_06_SM_20260917_998_v0__even.txt",
+   "odd": "bro/Z6II_06_SM_20260917_998_v0__odd.txt",
+   "w6odd": "bro/Z6II_06_SM_20260917_998_v0__w6odd.txt",
+   "ctrl": "bro/Z6II_06_SM_20260917_998_v0__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_34_SM_20260917_2056_v10",
+  "files": {
+   "even": "bro/Z6II_34_SM_20260917_2056_v10__even.txt",
+   "odd": "bro/Z6II_34_SM_20260917_2056_v10__odd.txt",
+   "w6odd": "bro/Z6II_34_SM_20260917_2056_v10__w6odd.txt",
+   "ctrl": "bro/Z6II_34_SM_20260917_2056_v10__ctrl.txt"
+  }
+ },
+ {
+  "model": "Z6II_20_SM_20260917_1383_v13",
+  "files": {
+   "even": "bro/Z6II_20_SM_20260917_1383_v13__even.txt",
+   "odd": "bro/Z6II_20_SM_20260917_1383_v13__odd.txt",
+   "w6odd": "bro/Z6II_20_SM_20260917_1383_v13__w6odd.txt",
+   "ctrl": "bro/Z6II_20_SM_20260917_1383_v13__ctrl.txt"
+  }
+ }
+]

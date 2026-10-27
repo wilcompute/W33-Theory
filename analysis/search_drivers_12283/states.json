@@ -1,0 +1,14 @@
+{
+ "ctrl005_r0": {
+  "fields": 968,
+  "differing_states": 0
+ },
+ "ctrl024_r0": {
+  "fields": 968,
+  "differing_states": 0
+ },
+ "ctrl039_r1": {
+  "fields": 840,
+  "differing_states": 0
+ }
+}

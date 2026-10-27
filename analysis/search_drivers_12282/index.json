@@ -1,0 +1,234 @@
+[
+ {
+  "model": "SM_20260926_385_00",
+  "files": {
+   "even": "bro/SM_20260926_385_00__even.txt",
+   "odd": "bro/SM_20260926_385_00__odd.txt",
+   "ctrl": "bro/SM_20260926_385_00__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_384_01",
+  "files": {
+   "even": "bro/SM_20260926_384_01__even.txt",
+   "odd": "bro/SM_20260926_384_01__odd.txt",
+   "ctrl": "bro/SM_20260926_384_01__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1082_02",
+  "files": {
+   "even": "bro/SM_20260926_1082_02__even.txt",
+   "odd": "bro/SM_20260926_1082_02__odd.txt",
+   "ctrl": "bro/SM_20260926_1082_02__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_8_03",
+  "files": {
+   "even": "bro/SM_20260926_8_03__even.txt",
+   "odd": "bro/SM_20260926_8_03__odd.txt",
+   "ctrl": "bro/SM_20260926_8_03__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_97_04",
+  "files": {
+   "even": "bro/SM_20260926_97_04__even.txt",
+   "odd": "bro/SM_20260926_97_04__odd.txt",
+   "ctrl": "bro/SM_20260926_97_04__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_388_05",
+  "files": {
+   "even": "bro/SM_20260926_388_05__even.txt",
+   "odd": "bro/SM_20260926_388_05__odd.txt",
+   "ctrl": "bro/SM_20260926_388_05__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_821_06",
+  "files": {
+   "even": "bro/SM_20260926_821_06__even.txt",
+   "odd": "bro/SM_20260926_821_06__odd.txt",
+   "ctrl": "bro/SM_20260926_821_06__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_920_07",
+  "files": {
+   "even": "bro/SM_20260926_920_07__even.txt",
+   "odd": "bro/SM_20260926_920_07__odd.txt",
+   "ctrl": "bro/SM_20260926_920_07__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1081_08",
+  "files": {
+   "even": "bro/SM_20260926_1081_08__even.txt",
+   "odd": "bro/SM_20260926_1081_08__odd.txt",
+   "ctrl": "bro/SM_20260926_1081_08__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1267_09",
+  "files": {
+   "even": "bro/SM_20260926_1267_09__even.txt",
+   "odd": "bro/SM_20260926_1267_09__odd.txt",
+   "ctrl": "bro/SM_20260926_1267_09__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1513_10",
+  "files": {
+   "even": "bro/SM_20260926_1513_10__even.txt",
+   "odd": "bro/SM_20260926_1513_10__odd.txt",
+   "ctrl": "bro/SM_20260926_1513_10__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1762_11",
+  "files": {
+   "even": "bro/SM_20260926_1762_11__even.txt",
+   "odd": "bro/SM_20260926_1762_11__odd.txt",
+   "ctrl": "bro/SM_20260926_1762_11__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_2013_12",
+  "files": {
+   "even": "bro/SM_20260926_2013_12__even.txt",
+   "odd": "bro/SM_20260926_2013_12__odd.txt",
+   "ctrl": "bro/SM_20260926_2013_12__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_2413_13",
+  "files": {
+   "even": "bro/SM_20260926_2413_13__even.txt",
+   "odd": "bro/SM_20260926_2413_13__odd.txt",
+   "ctrl": "bro/SM_20260926_2413_13__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_2020_14",
+  "files": {
+   "even": "bro/SM_20260926_2020_14__even.txt",
+   "odd": "bro/SM_20260926_2020_14__odd.txt",
+   "ctrl": "bro/SM_20260926_2020_14__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_2572_15",
+  "files": {
+   "even": "bro/SM_20260926_2572_15__even.txt",
+   "odd": "bro/SM_20260926_2572_15__odd.txt",
+   "ctrl": "bro/SM_20260926_2572_15__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_768_16",
+  "files": {
+   "even": "bro/SM_20260926_768_16__even.txt",
+   "odd": "bro/SM_20260926_768_16__odd.txt",
+   "ctrl": "bro/SM_20260926_768_16__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1150_17",
+  "files": {
+   "even": "bro/SM_20260926_1150_17__even.txt",
+   "odd": "bro/SM_20260926_1150_17__odd.txt",
+   "ctrl": "bro/SM_20260926_1150_17__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1197_18",
+  "files": {
+   "even": "bro/SM_20260926_1197_18__even.txt",
+   "odd": "bro/SM_20260926_1197_18__odd.txt",
+   "ctrl": "bro/SM_20260926_1197_18__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1738_19",
+  "files": {
+   "even": "bro/SM_20260926_1738_19__even.txt",
+   "odd": "bro/SM_20260926_1738_19__odd.txt",
+   "ctrl": "bro/SM_20260926_1738_19__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_2811_20",
+  "files": {
+   "even": "bro/SM_20260926_2811_20__even.txt",
+   "odd": "bro/SM_20260926_2811_20__odd.txt",
+   "ctrl": "bro/SM_20260926_2811_20__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_680_21",
+  "files": {
+   "even": "bro/SM_20260926_680_21__even.txt",
+   "odd": "bro/SM_20260926_680_21__odd.txt",
+   "ctrl": "bro/SM_20260926_680_21__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1577_22",
+  "files": {
+   "even": "bro/SM_20260926_1577_22__even.txt",
+   "odd": "bro/SM_20260926_1577_22__odd.txt",
+   "ctrl": "bro/SM_20260926_1577_22__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_128_23",
+  "files": {
+   "even": "bro/SM_20260926_128_23__even.txt",
+   "odd": "bro/SM_20260926_128_23__odd.txt",
+   "ctrl": "bro/SM_20260926_128_23__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_808_24",
+  "files": {
+   "even": "bro/SM_20260926_808_24__even.txt",
+   "odd": "bro/SM_20260926_808_24__odd.txt",
+   "ctrl": "bro/SM_20260926_808_24__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1798_25",
+  "files": {
+   "even": "bro/SM_20260926_1798_25__even.txt",
+   "odd": "bro/SM_20260926_1798_25__odd.txt",
+   "ctrl": "bro/SM_20260926_1798_25__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_1805_26",
+  "files": {
+   "even": "bro/SM_20260926_1805_26__even.txt",
+   "odd": "bro/SM_20260926_1805_26__odd.txt",
+   "ctrl": "bro/SM_20260926_1805_26__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_2579_27",
+  "files": {
+   "even": "bro/SM_20260926_2579_27__even.txt",
+   "odd": "bro/SM_20260926_2579_27__odd.txt",
+   "ctrl": "bro/SM_20260926_2579_27__ctrl.txt"
+  }
+ },
+ {
+  "model": "SM_20260926_9_28",
+  "files": {
+   "even": "bro/SM_20260926_9_28__even.txt",
+   "odd": "bro/SM_20260926_9_28__odd.txt",
+   "ctrl": "bro/SM_20260926_9_28__ctrl.txt"
+  }
+ }
+]

@@ -1,0 +1,445 @@
+{
+ "table": {
+  "('even', 'identical')": 29,
+  "('odd', 'consistent, no Standard Model')": 15,
+  "('odd', 'SM, different spectrum')": 12,
+  "('odd', 'identical')": 2
+ },
+ "rows": [
+  {
+   "model": "SM_20260926_385_00",
+   "ctrl_fields": 538,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 538,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_384_01",
+   "ctrl_fields": 536,
+   "ctrl_netq": 2,
+   "even": {
+    "verdict": "identical",
+    "fields": 536,
+    "netq": 2
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_1082_02",
+   "ctrl_fields": 396,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 396,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_8_03",
+   "ctrl_fields": 466,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 466,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 406,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_97_04",
+   "ctrl_fields": 440,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 440,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_388_05",
+   "ctrl_fields": 438,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 438,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_821_06",
+   "ctrl_fields": 390,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 390,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 390,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_920_07",
+   "ctrl_fields": 372,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 372,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 438,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_1081_08",
+   "ctrl_fields": 358,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 358,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 412,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_1267_09",
+   "ctrl_fields": 438,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 438,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 498,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_1513_10",
+   "ctrl_fields": 406,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 406,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_1762_11",
+   "ctrl_fields": 438,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 438,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_2013_12",
+   "ctrl_fields": 438,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 438,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 438,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_2413_13",
+   "ctrl_fields": 436,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 436,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 376,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_2020_14",
+   "ctrl_fields": 518,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 518,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_2572_15",
+   "ctrl_fields": 490,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 490,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_768_16",
+   "ctrl_fields": 414,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 414,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 414,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_1150_17",
+   "ctrl_fields": 490,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 490,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_1197_18",
+   "ctrl_fields": 330,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 330,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_1738_19",
+   "ctrl_fields": 360,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 360,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_2811_20",
+   "ctrl_fields": 454,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 454,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 454,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_680_21",
+   "ctrl_fields": 332,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 332,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "identical",
+    "fields": 332,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_1577_22",
+   "ctrl_fields": 450,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 450,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_128_23",
+   "ctrl_fields": 374,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 374,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 374,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_808_24",
+   "ctrl_fields": 394,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 394,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 382,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_1798_25",
+   "ctrl_fields": 448,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 448,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_1805_26",
+   "ctrl_fields": 414,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 414,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "consistent, no Standard Model",
+    "fields": 0,
+    "netq": 0
+   }
+  },
+  {
+   "model": "SM_20260926_2579_27",
+   "ctrl_fields": 366,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 366,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "SM, different spectrum",
+    "fields": 366,
+    "netq": 3
+   }
+  },
+  {
+   "model": "SM_20260926_9_28",
+   "ctrl_fields": 318,
+   "ctrl_netq": 3,
+   "even": {
+    "verdict": "identical",
+    "fields": 318,
+    "netq": 3
+   },
+   "odd": {
+    "verdict": "identical",
+    "fields": 318,
+    "netq": 3
+   }
+  }
+ ]
+}

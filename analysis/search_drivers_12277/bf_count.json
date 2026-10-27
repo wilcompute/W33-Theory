@@ -1,0 +1,28 @@
+{
+ "original": {
+  "components": {
+   "gauge": 64,
+   "scalar": 512,
+   "fermion": 752,
+   "gravity": 4,
+   "moduli": 8,
+   "excited tachyon": 8
+  },
+  "n_B": 588,
+  "n_F": 752,
+  "nF_minus_nB": 164
+ },
+ "brother": {
+  "components": {
+   "gauge": 64,
+   "scalar": 536,
+   "fermion": 696,
+   "gravity": 4,
+   "moduli": 8,
+   "excited tachyon": 14
+  },
+  "n_B": 612,
+  "n_F": 696,
+  "nF_minus_nB": 84
+ }
+}

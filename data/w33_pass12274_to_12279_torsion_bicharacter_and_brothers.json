@@ -1,0 +1,301 @@
+{
+  "12274": {
+    "('even', 'B!=0', 'identical')": 24,
+    "('even', 'B=0', 'identical')": 36,
+    "('even', 'B!=0', 'changed')": 20,
+    "('ctrl', 'B!=0', 'changed')": 41,
+    "('ctrl', 'B=0', 'identical')": 36,
+    "('ctrl', 'B!=0', 'identical')": 3,
+    "('odd', 'B=0', 'identical')": 80,
+    "('oddc', 'B=0', 'identical')": 80
+  },
+  "12274_exceptions": {
+    "ctrl000_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 64
+    },
+    "ctrl001_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 568
+    },
+    "ctrl002_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 488
+    },
+    "ctrl002_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 416
+    },
+    "ctrl003_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 288
+    },
+    "ctrl003_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 288
+    },
+    "ctrl005_r0": {
+      "spectrum": "identical",
+      "torsion_sectors": 32,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 288
+    },
+    "ctrl006_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 352
+    },
+    "ctrl007_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 416
+    },
+    "ctrl008_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 48
+    },
+    "ctrl008_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 48
+    },
+    "ctrl010_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 144
+    },
+    "ctrl011_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 40,
+      "massless_fields_in_torsion_sectors": 656
+    },
+    "ctrl014_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 16,
+      "massless_fields_in_torsion_sectors": 384
+    },
+    "ctrl014_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 64
+    },
+    "ctrl016_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 112
+    },
+    "ctrl017_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 64
+    },
+    "ctrl017_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 64
+    },
+    "ctrl018_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 12,
+      "massless_fields_in_torsion_sectors": 208
+    },
+    "ctrl018_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 12,
+      "massless_fields_in_torsion_sectors": 208
+    },
+    "ctrl019_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 552
+    },
+    "ctrl020_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 344
+    },
+    "ctrl021_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 576
+    },
+    "ctrl021_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 576
+    },
+    "ctrl022_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 12,
+      "massless_fields_in_torsion_sectors": 208
+    },
+    "ctrl023_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 40,
+      "massless_fields_in_torsion_sectors": 416
+    },
+    "ctrl024_r0": {
+      "spectrum": "identical",
+      "torsion_sectors": 32,
+      "populated_torsion_sectors": 32,
+      "massless_fields_in_torsion_sectors": 288
+    },
+    "ctrl024_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 40,
+      "massless_fields_in_torsion_sectors": 544
+    },
+    "ctrl025_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 832
+    },
+    "ctrl027_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 832
+    },
+    "ctrl028_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 192
+    },
+    "ctrl029_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 40,
+      "massless_fields_in_torsion_sectors": 720
+    },
+    "ctrl029_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 40,
+      "massless_fields_in_torsion_sectors": 720
+    },
+    "ctrl030_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 128
+    },
+    "ctrl030_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 128
+    },
+    "ctrl032_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 384
+    },
+    "ctrl032_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 384
+    },
+    "ctrl033_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 20,
+      "massless_fields_in_torsion_sectors": 352
+    },
+    "ctrl033_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 38,
+      "massless_fields_in_torsion_sectors": 640
+    },
+    "ctrl035_r0": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 352
+    },
+    "ctrl035_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 352
+    },
+    "ctrl037_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 40,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 96
+    },
+    "ctrl038_r1": {
+      "spectrum": "changed",
+      "torsion_sectors": 64,
+      "populated_torsion_sectors": 24,
+      "massless_fields_in_torsion_sectors": 320
+    },
+    "ctrl039_r1": {
+      "spectrum": "identical",
+      "torsion_sectors": 32,
+      "populated_torsion_sectors": 8,
+      "massless_fields_in_torsion_sectors": 248
+    }
+  },
+  "12275": {
+    "('shift violates Ploger', 'B!=0')": 360,
+    "('shift consistent', 'B=0')": 37
+  },
+  "12276": {
+    "('control', 0)": 153,
+    "SM, identical": 1471
+  },
+  "12276_new_SM_brothers": 0,
+  "12277": {
+    "identical": 8,
+    "different": 8
+  },
+  "checks": {
+    "12274: B = 0 => unchanged 232/232; changed => B != 0 61/61; consistent Z2xZ2 B != 0 => changed 41/44": true,
+    "12275: on T6/Z3 B vanishes for all 160 relabellings": true,
+    "12274: the 3 exceptions carry massless fields in their torsion sectors (necessary, not sufficient)": true,
+    "12275: consistent shifts B = 0 (37/37), Ploger-violating shifts B != 0 (360/360)": true,
+    "12276: every control (unshifted) is an SM under the strict engine": true,
+    "12277: SM_2496 W5 brothers -- spectrum changes iff V0.lam odd (8 identical / 8 changed, 790 -> 804 fields)": true,
+    "12278: bug report names the verbose-only flag and the fix": true
+  },
+  "all_checks_pass": true
+}

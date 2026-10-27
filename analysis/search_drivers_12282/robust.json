@@ -1,0 +1,158 @@
+{
+ "SM_20260926_8_03": {
+  "identification_independent_difference": true,
+  "fields": [
+   466,
+   406
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 106,
+  "only_brother": 46
+ },
+ "SM_20260926_821_06": {
+  "identification_independent_difference": true,
+  "fields": [
+   390,
+   390
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 12,
+  "only_brother": 12
+ },
+ "SM_20260926_920_07": {
+  "identification_independent_difference": true,
+  "fields": [
+   372,
+   438
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 48,
+  "only_brother": 114
+ },
+ "SM_20260926_1081_08": {
+  "identification_independent_difference": true,
+  "fields": [
+   358,
+   412
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 50,
+  "only_brother": 104
+ },
+ "SM_20260926_1267_09": {
+  "identification_independent_difference": true,
+  "fields": [
+   438,
+   498
+  ],
+  "NU1": [
+   8,
+   8
+  ],
+  "only_parent": 52,
+  "only_brother": 112
+ },
+ "SM_20260926_2013_12": {
+  "identification_independent_difference": true,
+  "fields": [
+   438,
+   438
+  ],
+  "NU1": [
+   8,
+   8
+  ],
+  "only_parent": 6,
+  "only_brother": 6
+ },
+ "SM_20260926_2413_13": {
+  "identification_independent_difference": true,
+  "fields": [
+   436,
+   376
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 100,
+  "only_brother": 40
+ },
+ "SM_20260926_768_16": {
+  "identification_independent_difference": true,
+  "fields": [
+   414,
+   414
+  ],
+  "NU1": [
+   8,
+   8
+  ],
+  "only_parent": 6,
+  "only_brother": 6
+ },
+ "SM_20260926_2811_20": {
+  "identification_independent_difference": true,
+  "fields": [
+   454,
+   454
+  ],
+  "NU1": [
+   8,
+   8
+  ],
+  "only_parent": 24,
+  "only_brother": 24
+ },
+ "SM_20260926_128_23": {
+  "identification_independent_difference": true,
+  "fields": [
+   374,
+   374
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 42,
+  "only_brother": 42
+ },
+ "SM_20260926_808_24": {
+  "identification_independent_difference": true,
+  "fields": [
+   394,
+   382
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 50,
+  "only_brother": 38
+ },
+ "SM_20260926_2579_27": {
+  "identification_independent_difference": true,
+  "fields": [
+   366,
+   366
+  ],
+  "NU1": [
+   7,
+   7
+  ],
+  "only_parent": 42,
+  "only_brother": 42
+ }
+}

@@ -1,0 +1,360 @@
+{
+ "table": {
+  "('changed', ('translation', 'twisted', 'witten'))": 41,
+  "('identical', ('translation', 'twisted', 'witten'))": 3
+ },
+ "rows": {
+  "ctrl000_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl001_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl002_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl002_r1": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 896,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl003_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl003_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl005_r0": {
+   "spectrum": "identical",
+   "types": {
+    "translation": 192,
+    "twisted": 384,
+    "witten": 192
+   }
+  },
+  "ctrl006_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 1280,
+    "witten": 256
+   }
+  },
+  "ctrl007_r1": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl008_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl008_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl010_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl011_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl014_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl014_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl016_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl017_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl017_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl018_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl018_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl019_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 1280,
+    "witten": 256
+   }
+  },
+  "ctrl020_r1": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 896,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl021_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl021_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl022_r1": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 896,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl023_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl024_r0": {
+   "spectrum": "identical",
+   "types": {
+    "translation": 192,
+    "twisted": 384,
+    "witten": 192
+   }
+  },
+  "ctrl024_r1": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl025_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl027_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl028_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl029_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1152,
+    "translation": 192,
+    "witten": 192
+   }
+  },
+  "ctrl029_r1": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1152,
+    "translation": 192,
+    "witten": 192
+   }
+  },
+  "ctrl030_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl030_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl032_r0": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 1280,
+    "witten": 256
+   }
+  },
+  "ctrl032_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 1280,
+    "witten": 256
+   }
+  },
+  "ctrl033_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 896,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl033_r1": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl035_r0": {
+   "spectrum": "changed",
+   "types": {
+    "twisted": 1280,
+    "translation": 256,
+    "witten": 256
+   }
+  },
+  "ctrl035_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 1280,
+    "witten": 256
+   }
+  },
+  "ctrl037_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 896,
+    "witten": 256
+   }
+  },
+  "ctrl038_r1": {
+   "spectrum": "changed",
+   "types": {
+    "translation": 256,
+    "twisted": 1280,
+    "witten": 256
+   }
+  },
+  "ctrl039_r1": {
+   "spectrum": "identical",
+   "types": {
+    "translation": 192,
+    "twisted": 384,
+    "witten": 192
+   }
+  }
+ }
+}
