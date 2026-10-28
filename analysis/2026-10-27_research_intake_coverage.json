@@ -2343,7 +2343,7 @@
       "patch_bytes": 1645,
       "gzip_bytes": 775,
       "archive": ".research_20261027_intake\\commits\\7fb937f8a2a9e8eab45a27d7d5c147fbbf861213.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "7ce6ff89416cc6b145bd6f5e2a5efdcabcfedd1f",
@@ -3159,7 +3159,7 @@
       "patch_bytes": 1977,
       "gzip_bytes": 998,
       "archive": ".research_20261027_intake\\commits\\31c150bc8e0c9955f6524e08d678dadac55a16a9.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "d7b137bfcb20f1f0634197c2de547c0296ccb550",
@@ -3247,7 +3247,7 @@
       "patch_bytes": 1905,
       "gzip_bytes": 1053,
       "archive": ".research_20261027_intake\\commits\\78ae741e3905b0a9256dba661095dbf906240232.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "32edb498b0ca20b753104f2dc983d27720ca2e2f",
@@ -3295,7 +3295,7 @@
       "patch_bytes": 2013,
       "gzip_bytes": 1131,
       "archive": ".research_20261027_intake\\commits\\00cf043ac3d86c81647e31c670cd1d05bb30dae5.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "52515ea07bb3b007bd4bd74ec74bb120dee975e6",
@@ -3303,7 +3303,7 @@
       "patch_bytes": 1979,
       "gzip_bytes": 1009,
       "archive": ".research_20261027_intake\\commits\\52515ea07bb3b007bd4bd74ec74bb120dee975e6.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "0ffafa90253677168ce2e7d7ffe6de604b7bfe13",
@@ -4739,56 +4739,56 @@
       "text_bytes": 4796,
       "text_sha256": "39ab0e32e03847cf726d5ac897c1ec8062de4430e3e4846066177924be881007",
       "archive": ".research_20261027_intake\\pdf\\page127.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 128,
       "text_bytes": 4770,
       "text_sha256": "6adce8ab2df99259f292aeb3bdeacd50469dd059e0b534a1e7e92a804e536e0e",
       "archive": ".research_20261027_intake\\pdf\\page128.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 129,
       "text_bytes": 4844,
       "text_sha256": "d086d71abf377a17c396469ad2e751e0025cf7e7788bfb75ad683532dbf96054",
       "archive": ".research_20261027_intake\\pdf\\page129.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 130,
       "text_bytes": 4105,
       "text_sha256": "88a1091b18f429970c591ac821d64e7a0da5314991366a8c27514f4b71504635",
       "archive": ".research_20261027_intake\\pdf\\page130.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 131,
       "text_bytes": 2643,
       "text_sha256": "706a5e9c030e5f67d706b6f85937e992e97afc427ef47db8d50092142bb4d1e4",
       "archive": ".research_20261027_intake\\pdf\\page131.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 132,
       "text_bytes": 2794,
       "text_sha256": "c14668db760cc14168e349b2664cc0ff512e6c3581e3fa123b316135507286ba",
       "archive": ".research_20261027_intake\\pdf\\page132.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 133,
       "text_bytes": 2974,
       "text_sha256": "0d185c96a39187b50c96ddf81b681137d4c760e50a8dae578431cef80cdf45f8",
       "archive": ".research_20261027_intake\\pdf\\page133.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 134,
       "text_bytes": 3278,
       "text_sha256": "a6620856083150941ca24c34d85088f37935c53811c14f3bd4191d75b047ec07",
       "archive": ".research_20261027_intake\\pdf\\page134.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 135,
@@ -5278,7 +5278,7 @@
       "text_bytes": 2410,
       "text_sha256": "24b3a6cfc0f82578fbd54dff84fbdd60595dbd5c119fb8902c0298d5c62ef02c",
       "archive": ".research_20261027_intake\\pdf\\page204.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 205,
@@ -5338,7 +5338,7 @@
   ],
   "completion": "All frozen patches and PDF pages archived with hashes. Full481-commit/210-page model reading remains incomplete. A read flag is not inferred from successful extraction.",
   "certificate_references": {
-    "total": 1216,
+    "total": 1218,
     "unresolved": [],
     "references": [
       {
@@ -9252,6 +9252,12 @@
       },
       {
         "tex": "papers\\forty_points\\appA_ledger.tex",
+        "reference": "w33_pass12334_to_12339_towers_potential_leads.py",
+        "basename_exists": true,
+        "resolution": "local_file"
+      },
+      {
+        "tex": "papers\\forty_points\\appA_ledger.tex",
         "reference": "w33_pass12005_cp_real_theta_barr.py",
         "basename_exists": true,
         "resolution": "local_file"
@@ -11400,6 +11406,12 @@
       },
       {
         "tex": "papers\\forty_points\\sec07_realforms.tex",
+        "reference": "w33_pass12334_to_12339_towers_potential_leads.py",
+        "basename_exists": true,
+        "resolution": "local_file"
+      },
+      {
+        "tex": "papers\\forty_points\\sec07_realforms.tex",
         "reference": "w33_pass12304_to_12309_tachyons_confirmed_and_radius_window.py",
         "basename_exists": true,
         "resolution": "local_file"
@@ -12739,5 +12751,39 @@
       "7acd13de0"
     ],
     "findings": "Pages119-126 constrain flavour: local-SU5 up degeneracy, shared flux/Higgs CKM failures, stabilizer/Hesse locks, and supplied soft-supertrace escape parameters. Do not interpret the SU5 cubic intertwiner as a realistic flavour vacuum. Five full test-only patches distinguish exact finite Levi/Frobenius certificates, numerical Weil checks and failed Xi-identification; imported producers have not thereby been fully read."
+  },
+  "reading_increment_20261027_acoustic": {
+    "pages_added": [
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      204
+    ],
+    "full_patches_added": [
+      "7fb937f8a",
+      "31c150bc8",
+      "52515ea07",
+      "00cf043ac",
+      "78ae741e3"
+    ],
+    "visual_pages_checked": [
+      132
+    ],
+    "findings": "Pages127-130 distinguish fitted flavour/Nelson-Barr existence from scalar-vacuum stability and retract the axiflavon interpretation. Page131 excludes numerical coincidences as evidence. Pages132-134 describe engineering/compiler/code results, not a derived field-theory vacuum; page132 figures were rendered and visually read. Five full patches cover a finite modular Jordan test, completed-Xi spectral falsifiers, analytic prime-tail bounds with uncertified quadrature, and finite signing samples. Imported complete producers were not thereby read. The finite-density tensor identity is scoped to the named27-site operator."
+  },
+  "live_pdf_edition": {
+    "current_sha256": "c813e604f3cb2c8fc6f6417f85e7ed96a2eeb8faa191d7ccbc6b869d21e3f9a5",
+    "matches_frozen_review": false,
+    "frozen_git_ref": "a03ff9dc04d4b43c684e83dab22121b46ff5b624:papers/forty_points/main.pdf",
+    "live_full_text_pages_read": [
+      86,
+      204
+    ],
+    "scope": "Historical210-page flags refer only to the frozen c5b44ee9 edition. The70278ece1 live edition changed during this continuation; only its pages86 and204 and source diffs were read. No flags transfer to another edition by extraction alone."
   }
 }

@@ -1,0 +1,143 @@
+{
+  "schema": "acoustic_vacuum_density_reproduction_manifest_v1",
+  "research_base": "a03ff9dc04d4b43c684e83dab22121b46ff5b624",
+  "upstream_integrated": "70278ece136074954f9943b4503a32424da01dd6",
+  "versions": {
+    "python": "3.13.14",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "networkx": "3.6.1"
+  },
+  "files": {
+    "analysis/w33_20261027_acoustic_density_backreaction.py": {
+      "sha256": "8c342f750a594da5c698fa4adf29082bb23132276437a9823b1e89e8315735d9",
+      "bytes": 20193
+    },
+    "analysis/w33_20261027_shared_singlet_masses.py": {
+      "sha256": "c764c1aee0772b6ee336e006ceee9d876df416046b93fc215aa7c3db04e8fa99",
+      "bytes": 10786
+    },
+    "analysis/2026-10-27_acoustic_vacuum_density.md": {
+      "sha256": "b90dcccc68f0cb3809200f5c25f5bfcd487ec27832087bad4b94f387ed0be7cc",
+      "bytes": 13514
+    },
+    "tests/test_w33_20261027_acoustic_vacuum_density.py": {
+      "sha256": "f60ac5fa20d7c2826950e04e5d5bd895dffa09bc6e35d18d79abc5d25bcb3eca",
+      "bytes": 6853
+    },
+    "tests/test_w33_20261027_gap_matter_radion.py": {
+      "sha256": "04f7249a88d11805a2ab53832929883289817be5a2c77fcd8c56ee65b31148f3",
+      "bytes": 5049
+    },
+    "tests/test_w33_20261027_five_front_followthrough.py": {
+      "sha256": "7063f79eb29aeb7ff1d822e0ad1bd1d027db74ad34ab73b13c09d201c3780345",
+      "bytes": 4639
+    },
+    "data/w33_20261027_acoustic_density_backreaction.json": {
+      "sha256": "21d209bc8d919c3b8a14a0989893292b039677708b1b25a39179965d444d2867",
+      "bytes": 107926
+    },
+    "data/w33_20261027_shared_singlet_masses.json": {
+      "sha256": "67d2932d78e6117107f219a3b9120a23be72382afe33b39abb705874f7a12e85",
+      "bytes": 18065
+    },
+    "analysis/w33_20261027_research_intake.py": {
+      "sha256": "d03151f009bdb5b06a6d06ece76c7aea2ad1b5469d1f2aa3a2cfdcd733c98ca8",
+      "bytes": 12955
+    },
+    "analysis/2026-10-27_research_intake_coverage.json": {
+      "sha256": "c3bf3518c2857027c189082df97fb6c747c3b7fb74c60c52e315d5e5efed3785",
+      "bytes": 499968
+    },
+    "analysis/w33_20261027_native_operator_closure.py": {
+      "sha256": "019714393b04aee49740e1ae9006ee884646741f1b2991a1301d519e03b35d44",
+      "bytes": 20998
+    },
+    "analysis/w33_20261027_microscopic_response_and_lifts.py": {
+      "sha256": "d80dfef7e3e2b47df324292534da92ea3aa751401305a32dac20c1772a5b4cd7",
+      "bytes": 22182
+    },
+    "analysis/w33_20261027_five_front_followthrough.py": {
+      "sha256": "fb445c8de1081524e8dac24172631ad08b84eea8303a04e05ce6e0e9f4f17907",
+      "bytes": 22322
+    },
+    "analysis/w33_20261027_native_bloch_face_module.py": {
+      "sha256": "35b51978da7071f45f28ed32748948acab1bf0c2354a167be6c61eb1550c2fa6",
+      "bytes": 15059
+    },
+    "analysis/w33_pass12002_native_path_overlap.py": {
+      "sha256": "4181ee655564664a52bbd56e4450e09c62631287f3ad885aeee8509184049e8a",
+      "bytes": 7981
+    },
+    "analysis/w33_pass12000_native_unitary_clock.py": {
+      "sha256": "a413e4d2c614316aa5ca196d6782d7a59da053cbe51c4bf1a00dd83f2b353251",
+      "bytes": 5525
+    },
+    "analysis/w33_pass11991_native_four_period_cover.py": {
+      "sha256": "9acd7276709cb6677054cc3523632149316a2387bb3b82679a2e98e446325296",
+      "bytes": 13697
+    },
+    "analysis/search_drivers_12281/bro/Z6II_60_SM_20260917_810_v9__w6odd.nsoq": {
+      "sha256": "9ea39702acafca56df6f2d91a4b4dca27724c6679037245be34c8c31b6bc7c70",
+      "bytes": 247173
+    },
+    "analysis/search_drivers_12311/vacuum.py": {
+      "sha256": "bb6e8c42820b5064b523dda430a82b01aab520906b0edacc52919709b59daab7",
+      "bytes": 5635
+    },
+    "analysis/search_drivers_12311/vacuum.json": {
+      "sha256": "b6ebd1c247450ca0719dd4f75e4c9d18da18575326a695de4ca9760577f9df05",
+      "bytes": 246
+    },
+    "analysis/search_drivers_12334/split3.json": {
+      "sha256": "83e0d2efd10d826a934fd208d3ada192281e043be24369f6d26241d324bb49d3",
+      "bytes": 1701
+    },
+    "analysis/search_drivers_12335/potential.json": {
+      "sha256": "591938d3b2e14be75501153beff45b74d733ac8f32564b00e4ded32ea4af0354",
+      "bytes": 473
+    },
+    "analysis/search_drivers_12335/controls.json": {
+      "sha256": "f779a20fd70f3498a766b7216a42a75402c8061d66fec8b1e69589a9169e7ad2",
+      "bytes": 181
+    },
+    "analysis/search_drivers_12338/gen3.json": {
+      "sha256": "342b67401e816b750bd0f189b779c4a9ce14b13a1e12d6451cce3a204b807ff2",
+      "bytes": 924
+    },
+    "papers/forty_points/main.pdf": {
+      "sha256": "c813e604f3cb2c8fc6f6417f85e7ed96a2eeb8faa191d7ccbc6b869d21e3f9a5",
+      "bytes": 1301390
+    }
+  },
+  "frozen_PDF": {
+    "git_ref": "a03ff9dc04d4b43c684e83dab22121b46ff5b624:papers/forty_points/main.pdf",
+    "sha256": "c5b44ee9e447561e4fbb892bb870d2506187e37e35c613a39eaf85af6cf6e19c",
+    "pages_read": 64,
+    "total_pages": 210
+  },
+  "historical_patch_review": {
+    "full_patches_read": 19,
+    "total_frozen_patches": 481
+  },
+  "validation": {
+    "tests_passed": 50,
+    "elapsed_seconds": 88.81,
+    "producer_commands": [
+      "python analysis/w33_20261027_acoustic_density_backreaction.py",
+      "python analysis/w33_20261027_shared_singlet_masses.py"
+    ],
+    "test_files": [
+      "tests/test_w33_20261027_acoustic_vacuum_density.py",
+      "tests/test_w33_20261027_gap_matter_radion.py",
+      "tests/test_w33_20261027_native_operator_closure.py",
+      "tests/test_w33_20261027_microscopic_response_and_lifts.py",
+      "tests/test_w33_20261027_five_front_followthrough.py",
+      "tests/test_w33_20261027_native_bloch_face_module.py",
+      "tests/test_w33_pass12334_to_12339.py"
+    ]
+  },
+  "scope": "Selected artifact/input hashes, not a complete dependency lockfile. Exact finite harmonic tensor and cover inertia certificates; numerical finite comparison current and Ward checks; supplied radial potential/masses and leading gravitational EFT examples. Full measure, string vacuum, gravity and exhaustive content review incomplete."
+}

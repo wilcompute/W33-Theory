@@ -15,15 +15,30 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 SCRATCH=ROOT/'.research_20261027_intake'
-READ_PAGES=set(range(72,127))
+READ_PAGES=set(range(72,135))|{204}
 READ_COMMIT_PREFIXES={'ccee9e84e','5bb5acd74','909913f17','a23c01282','47e5d1365','a15185e5c',
                       'c63b9ade1','887c9718e','6a26f6bed','d579880fe','752562e19',
-                      'be700f9c7','da24b4f20','7acd13de0'}
+                      'be700f9c7','da24b4f20','7acd13de0','7fb937f8a','31c150bc8',
+                      '52515ea07','00cf043ac','78ae741e3'}
 EXPECTED_PDF_SHA256='c5b44ee9e447561e4fbb892bb870d2506187e37e35c613a39eaf85af6cf6e19c'
+FROZEN_PDF_GIT_REF='a03ff9dc04d4b43c684e83dab22121b46ff5b624:papers/forty_points/main.pdf'
+LIVE_REVIEW_SHA256='c813e604f3cb2c8fc6f6417f85e7ed96a2eeb8faa191d7ccbc6b869d21e3f9a5'
 
 
 def command(*args):
     return subprocess.check_output(args,cwd=ROOT)
+
+
+def frozen_pdf():
+    live=ROOT/'papers/forty_points/main.pdf'
+    if hashlib.sha256(live.read_bytes()).hexdigest()==EXPECTED_PDF_SHA256:return live
+    target=SCRATCH/'frozen_forty_points_main_a03ff9dc0.pdf'
+    if not target.exists():
+        raw=command('git','show',FROZEN_PDF_GIT_REF)
+        assert hashlib.sha256(raw).hexdigest()==EXPECTED_PDF_SHA256
+        target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+    assert hashlib.sha256(target.read_bytes()).hexdigest()==EXPECTED_PDF_SHA256
+    return target
 
 
 def archive_commit(sha):
@@ -82,8 +97,7 @@ def run():
     assert len(set(chosen))==481
     with ThreadPoolExecutor(max_workers=2) as pool:
         commits=list(pool.map(archive_commit,chosen))
-    pdf=ROOT/'papers/forty_points/main.pdf'
-    assert hashlib.sha256(pdf.read_bytes()).hexdigest()==EXPECTED_PDF_SHA256, 'Reading flags belong to the frozen PDF; create a new ledger for a changed paper.'
+    pdf=frozen_pdf()
     pages=[]
     for number in range(1,211):
         raw=command('pdftotext','-f',str(number),'-l',str(number),'-layout',str(pdf),'-')
@@ -146,6 +160,17 @@ if __name__=='__main__':
         'pages_added':list(range(119,127)),
         'full_patches_added':['d579880fe','752562e19','be700f9c7','da24b4f20','7acd13de0'],
         'findings':'Pages119-126 constrain flavour: local-SU5 up degeneracy, shared flux/Higgs CKM failures, stabilizer/Hesse locks, and supplied soft-supertrace escape parameters. Do not interpret the SU5 cubic intertwiner as a realistic flavour vacuum. Five full test-only patches distinguish exact finite Levi/Frobenius certificates, numerical Weil checks and failed Xi-identification; imported producers have not thereby been fully read.'}
+    d['reading_increment_20261027_acoustic']={
+        'pages_added':list(range(127,135))+[204],
+        'full_patches_added':['7fb937f8a','31c150bc8','52515ea07','00cf043ac','78ae741e3'],
+        'visual_pages_checked':[132],
+        'findings':'Pages127-130 distinguish fitted flavour/Nelson-Barr existence from scalar-vacuum stability and retract the axiflavon interpretation. Page131 excludes numerical coincidences as evidence. Pages132-134 describe engineering/compiler/code results, not a derived field-theory vacuum; page132 figures were rendered and visually read. Five full patches cover a finite modular Jordan test, completed-Xi spectral falsifiers, analytic prime-tail bounds with uncertified quadrature, and finite signing samples. Imported complete producers were not thereby read. The finite-density tensor identity is scoped to the named27-site operator.'}
+    live_hash=hashlib.sha256((ROOT/'papers/forty_points/main.pdf').read_bytes()).hexdigest()
+    d['live_pdf_edition']={
+        'current_sha256':live_hash,'matches_frozen_review':live_hash==EXPECTED_PDF_SHA256,
+        'frozen_git_ref':FROZEN_PDF_GIT_REF,
+        'live_full_text_pages_read':[86,204]if live_hash==LIVE_REVIEW_SHA256 else[],
+        'scope':'Historical210-page flags refer only to the frozen c5b44ee9 edition. The70278ece1 live edition changed during this continuation; only its pages86 and204 and source diffs were read. No flags transfer to another edition by extraction alone.'}
     out.write_text(json.dumps(d,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'commits':len(d['historical_week_commits']),
                       'patch_bytes':d['historical_week_fullpatch_bytes'],

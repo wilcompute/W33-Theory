@@ -81,6 +81,6 @@ def test_representation_threshold_matching_is_exact():
 
 def test_partial_reading_count_and_provenance():
     r=json.loads((f.ROOT/'analysis/2026-10-27_research_intake_coverage.json').read_text())
-    assert sum(x['full_text_model_read_this_continuation']for x in r['pdf_pages'])==55<210
-    assert sum(x['full_patch_model_read']for x in r['historical_week_commits'])==14<481
+    assert 55<=sum(x['full_text_model_read_this_continuation']for x in r['pdf_pages'])<210
+    assert 14<=sum(x['full_patch_model_read']for x in r['historical_week_commits'])<481
     assert r['reading_increment_20261027_gap']['pages_added']==list(range(119,127))

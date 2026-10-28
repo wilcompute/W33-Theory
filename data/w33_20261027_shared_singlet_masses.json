@@ -1,0 +1,888 @@
+{
+  "schema": "shared_singlet_radial_vacuum_and_pair_witnesses_v1",
+  "independent_complex_singlets": 25,
+  "raw_scalar_records": 50,
+  "scalar_conjugate_pairs": [
+    [
+      41,
+      229
+    ],
+    [
+      48,
+      236
+    ],
+    [
+      49,
+      240
+    ],
+    [
+      50,
+      242
+    ],
+    [
+      51,
+      241
+    ],
+    [
+      52,
+      237
+    ],
+    [
+      53,
+      239
+    ],
+    [
+      54,
+      238
+    ],
+    [
+      95,
+      176
+    ],
+    [
+      99,
+      181
+    ],
+    [
+      106,
+      186
+    ],
+    [
+      116,
+      198
+    ],
+    [
+      118,
+      196
+    ],
+    [
+      169,
+      86
+    ],
+    [
+      171,
+      90
+    ],
+    [
+      177,
+      96
+    ],
+    [
+      183,
+      97
+    ],
+    [
+      188,
+      104
+    ],
+    [
+      197,
+      117
+    ],
+    [
+      199,
+      115
+    ],
+    [
+      293,
+      458
+    ],
+    [
+      294,
+      457
+    ],
+    [
+      315,
+      428
+    ],
+    [
+      317,
+      426
+    ],
+    [
+      320,
+      430
+    ]
+  ],
+  "fractional_Weyl_multiplets": 48,
+  "allowed_pair_count_degree_at_most2": 124,
+  "selection_rule_correction": "Fixed canonical representatives alone need not contain a field and its CPT conjugate. Allow independent theta-orbit representatives in the necessary space-group test. Gamma-eigenstate coefficients and non-SUSY world-sheet vertices remain uncomputed; kinematic allowance is not a nonzero string amplitude.",
+  "shifted_e5_allowed_edges": 0,
+  "matched_pairs": [
+    {
+      "fermion_ids": [
+        212,
+        362
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 49,
+          "conjugated": true,
+          "coordinate": 2
+        },
+        {
+          "field_id": 293,
+          "conjugated": true,
+          "coordinate": 20
+        }
+      ],
+      "mass_over_cutoff": 0.010014170353271845
+    },
+    {
+      "fermion_ids": [
+        217,
+        258
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 95,
+          "conjugated": false,
+          "coordinate": 8
+        }
+      ],
+      "mass_over_cutoff": 0.09994488162209765
+    },
+    {
+      "fermion_ids": [
+        222,
+        265
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 49,
+          "conjugated": false,
+          "coordinate": 2
+        },
+        {
+          "field_id": 50,
+          "conjugated": false,
+          "coordinate": 3
+        }
+      ],
+      "mass_over_cutoff": 0.010002712775893107
+    },
+    {
+      "fermion_ids": [
+        224,
+        268
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 106,
+          "conjugated": false,
+          "coordinate": 10
+        }
+      ],
+      "mass_over_cutoff": 0.10031823273537191
+    },
+    {
+      "fermion_ids": [
+        225,
+        305
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 48,
+          "conjugated": false,
+          "coordinate": 1
+        },
+        {
+          "field_id": 293,
+          "conjugated": true,
+          "coordinate": 20
+        }
+      ],
+      "mass_over_cutoff": 0.010005867841602203
+    },
+    {
+      "fermion_ids": [
+        226,
+        269
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 99,
+          "conjugated": false,
+          "coordinate": 9
+        }
+      ],
+      "mass_over_cutoff": 0.09983029104221502
+    },
+    {
+      "fermion_ids": [
+        227,
+        390
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 50,
+          "conjugated": true,
+          "coordinate": 3
+        },
+        {
+          "field_id": 317,
+          "conjugated": true,
+          "coordinate": 23
+        }
+      ],
+      "mass_over_cutoff": 0.009982872444435405
+    },
+    {
+      "fermion_ids": [
+        266,
+        378
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 48,
+          "conjugated": true,
+          "coordinate": 1
+        },
+        {
+          "field_id": 293,
+          "conjugated": true,
+          "coordinate": 20
+        }
+      ],
+      "mass_over_cutoff": 0.010005867841602203
+    },
+    {
+      "fermion_ids": [
+        267,
+        313
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 41,
+          "conjugated": false,
+          "coordinate": 0
+        },
+        {
+          "field_id": 320,
+          "conjugated": true,
+          "coordinate": 24
+        }
+      ],
+      "mass_over_cutoff": 0.009973558634073208
+    },
+    {
+      "fermion_ids": [
+        270,
+        360
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 95,
+          "conjugated": false,
+          "coordinate": 8
+        }
+      ],
+      "mass_over_cutoff": 0.09994488162209765
+    },
+    {
+      "fermion_ids": [
+        273,
+        348
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 95,
+          "conjugated": false,
+          "coordinate": 8
+        }
+      ],
+      "mass_over_cutoff": 0.09994488162209765
+    },
+    {
+      "fermion_ids": [
+        274,
+        344
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 95,
+          "conjugated": false,
+          "coordinate": 8
+        }
+      ],
+      "mass_over_cutoff": 0.09994488162209765
+    },
+    {
+      "fermion_ids": [
+        277,
+        278
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 95,
+          "conjugated": true,
+          "coordinate": 8
+        }
+      ],
+      "mass_over_cutoff": 0.09994488162209765
+    },
+    {
+      "fermion_ids": [
+        280,
+        392
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 95,
+          "conjugated": false,
+          "coordinate": 8
+        }
+      ],
+      "mass_over_cutoff": 0.09994488162209765
+    },
+    {
+      "fermion_ids": [
+        281,
+        284
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 49,
+          "conjugated": true,
+          "coordinate": 2
+        },
+        {
+          "field_id": 50,
+          "conjugated": true,
+          "coordinate": 3
+        }
+      ],
+      "mass_over_cutoff": 0.010002712775893107
+    },
+    {
+      "fermion_ids": [
+        285,
+        380
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 95,
+          "conjugated": false,
+          "coordinate": 8
+        }
+      ],
+      "mass_over_cutoff": 0.09994488162209765
+    },
+    {
+      "fermion_ids": [
+        302,
+        310
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 49,
+          "conjugated": true,
+          "coordinate": 2
+        },
+        {
+          "field_id": 50,
+          "conjugated": true,
+          "coordinate": 3
+        }
+      ],
+      "mass_over_cutoff": 0.010002712775893107
+    },
+    {
+      "fermion_ids": [
+        306,
+        307
+      ],
+      "degree": 1,
+      "point_group_rotations": [
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 99,
+          "conjugated": true,
+          "coordinate": 9
+        }
+      ],
+      "mass_over_cutoff": 0.09983029104221502
+    },
+    {
+      "fermion_ids": [
+        330,
+        346
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 48,
+          "conjugated": true,
+          "coordinate": 1
+        },
+        {
+          "field_id": 49,
+          "conjugated": false,
+          "coordinate": 2
+        }
+      ],
+      "mass_over_cutoff": 0.00996536750326254
+    },
+    {
+      "fermion_ids": [
+        332,
+        342
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 48,
+          "conjugated": true,
+          "coordinate": 1
+        },
+        {
+          "field_id": 49,
+          "conjugated": false,
+          "coordinate": 2
+        }
+      ],
+      "mass_over_cutoff": 0.00996536750326254
+    },
+    {
+      "fermion_ids": [
+        336,
+        358
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 41,
+          "conjugated": true,
+          "coordinate": 0
+        },
+        {
+          "field_id": 41,
+          "conjugated": false,
+          "coordinate": 0
+        }
+      ],
+      "mass_over_cutoff": 0.00999652876208008
+    },
+    {
+      "fermion_ids": [
+        354,
+        356
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 41,
+          "conjugated": true,
+          "coordinate": 0
+        },
+        {
+          "field_id": 41,
+          "conjugated": false,
+          "coordinate": 0
+        }
+      ],
+      "mass_over_cutoff": 0.00999652876208008
+    },
+    {
+      "fermion_ids": [
+        364,
+        366
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 41,
+          "conjugated": true,
+          "coordinate": 0
+        },
+        {
+          "field_id": 41,
+          "conjugated": false,
+          "coordinate": 0
+        }
+      ],
+      "mass_over_cutoff": 0.00999652876208008
+    },
+    {
+      "fermion_ids": [
+        368,
+        374
+      ],
+      "degree": 2,
+      "point_group_rotations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "singlet_monomial": [
+        {
+          "field_id": 48,
+          "conjugated": true,
+          "coordinate": 1
+        },
+        {
+          "field_id": 49,
+          "conjugated": false,
+          "coordinate": 2
+        }
+      ],
+      "mass_over_cutoff": 0.00996536750326254
+    }
+  ],
+  "degree_counts": {
+    "2": 14,
+    "1": 10
+  },
+  "paired_Weyl_gauge_components": 148,
+  "mass_rank_certificate": "Each selected pair consists of distinct multiplets with dual nonabelian representations and nonzero mass. Their invariant contraction is nonsingular. Disjoint pairs therefore give full rank on all listed Weyl gauge components, conditional on the supplied operator coefficients; this is not a computed string amplitude.",
+  "potential": {
+    "definition": "V/v^4=-sum(t)+t^T(I+kappa Q^T Q)t/2, t=|S|^2/v^2",
+    "kappa": "1/1000000",
+    "exact_squared_vevs": [
+      "276900876342758534786553/276997028601697318356841",
+      "275808862392179238315357/276997028601697318356841",
+      "276266764970163781481394/276997028601697318356841",
+      "277879926425892369620967/276997028601697318356841",
+      "277879926425892369620967/276997028601697318356841",
+      "276266764970163781481394/276997028601697318356841",
+      "277879926425892369620967/276997028601697318356841",
+      "277879926425892369620967/276997028601697318356841",
+      "276691760216374289579483/276997028601697318356841",
+      "39436806977682790896332/39571004085956759765263",
+      "278762824250087420885093/276997028601697318356841",
+      "276691760216374289579483/276997028601697318356841",
+      "276691760216374289579483/276997028601697318356841",
+      "39705201194230728634194/39571004085956759765263",
+      "275231232953307215828589/276997028601697318356841",
+      "277302296987020347134199/276997028601697318356841",
+      "39705201194230728634194/39571004085956759765263",
+      "275231232953307215828589/276997028601697318356841",
+      "277302296987020347134199/276997028601697318356841",
+      "277302296987020347134199/276997028601697318356841",
+      "278516884476192692721470/276997028601697318356841",
+      "278516884476192692721470/276997028601697318356841",
+      "274537792969284161909695/276997028601697318356841",
+      "275171904341878915214854/276997028601697318356841",
+      "275629806919863458380891/276997028601697318356841"
+    ],
+    "scalar_field_ids": [
+      41,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      95,
+      99,
+      106,
+      116,
+      118,
+      169,
+      171,
+      177,
+      183,
+      188,
+      197,
+      199,
+      293,
+      294,
+      315,
+      317,
+      320
+    ],
+    "charge_matrix": [
+      [
+        "-5/3",
+        "0",
+        "1",
+        "-2/3",
+        "-2/3",
+        "1",
+        "-2/3",
+        "-2/3",
+        "-2/3",
+        "2",
+        "-4/3",
+        "-2/3",
+        "-2/3",
+        "-2",
+        "4/3",
+        "2/3",
+        "-2",
+        "4/3",
+        "2/3",
+        "2/3",
+        "1",
+        "1",
+        "1",
+        "-5/3",
+        "-2/3"
+      ],
+      [
+        "21/2",
+        "11/2",
+        "11/2",
+        "-11/2",
+        "-11/2",
+        "11/2",
+        "-11/2",
+        "-11/2",
+        "0",
+        "-5",
+        "-11",
+        "0",
+        "0",
+        "5",
+        "11",
+        "0",
+        "5",
+        "11",
+        "0",
+        "0",
+        "-1/2",
+        "-1/2",
+        "-9/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "-38/3",
+        "148/3",
+        "-98/3",
+        "16/3",
+        "16/3",
+        "-98/3",
+        "16/3",
+        "16/3",
+        "164/3",
+        "104/3",
+        "32/3",
+        "164/3",
+        "164/3",
+        "-104/3",
+        "-32/3",
+        "-164/3",
+        "-104/3",
+        "-32/3",
+        "-164/3",
+        "-164/3",
+        "76/3",
+        "76/3",
+        "28/3",
+        "88/3",
+        "-158/3"
+      ],
+      [
+        "9/2",
+        "111/2",
+        "39/2",
+        "-63/2",
+        "-63/2",
+        "39/2",
+        "-63/2",
+        "-63/2",
+        "24",
+        "39",
+        "-63",
+        "24",
+        "24",
+        "-39",
+        "63",
+        "-24",
+        "-39",
+        "63",
+        "-24",
+        "-24",
+        "-93/2",
+        "-93/2",
+        "171/2",
+        "141/2",
+        "69/2"
+      ],
+      [
+        "-20",
+        "0",
+        "12",
+        "-8",
+        "-8",
+        "12",
+        "-8",
+        "-8",
+        "-8",
+        "24",
+        "-16",
+        "-8",
+        "-8",
+        "-24",
+        "16",
+        "8",
+        "-24",
+        "16",
+        "8",
+        "8",
+        "-40",
+        "-40",
+        "64",
+        "32",
+        "44"
+      ]
+    ],
+    "exact_stationarity": true,
+    "squared_modulus_coordinate_Hessian_lower": 1,
+    "proof": "A=I+kappa Q^TQ is strictly positive. Exact t=A^-1 1 has all positive entries, hence is the unique global minimum in the nonnegative radial orthant. Scalar phases remain flat, with gauge directions among them.",
+    "Dflat_zero_FI_feasible": true,
+    "Dflat_solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "unbroken_U1_dimension": 1,
+    "mass_ratio_max_to_min": 10.066686723046484
+  },
+  "scope": "Explicit correlated fractional-state pair masses at the global radial minimum of a SUPPLIED gauge-invariant non-SUSY test potential, with selected Yukawa coefficients1 and all other pair coefficients0. Nonabelian singlet vevs preserve SU2R and cannot independently split its multiplets. Not the string scalar potential, all exotic masses, left-right breaking, a full threshold fit or an isolated phase-stabilized vacuum.",
+  "inherited_candidate_window": "Pass12316 empty-window claim was withdrawn in12322. Current statement: R6<sqrt(3/8) string units survives computed e6 conditions; e5 winding projections/potential remain unresolved. Do not use the withdrawn empty-window assertion.",
+  "prior_owner": "analysis/search_drivers_12311/vacuum.py; Pass12322-12333; Oct27 representation threshold witness"
+}
