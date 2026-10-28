@@ -377509,6 +377509,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "00cb263554bd5a502f34ba9d7702e2d0b14570812447f2eff98c41218d1e1b78",
+      "normalized_formula": "-1/RtowardR->0(integer-towerbosonsdominatethewindingsum):NOminimuminthewindow--theradiusrunstosmallR(the",
+      "numeric_literals": [
+        "-1",
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12334_to_12339_towers_potential_leads.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 16,
+          "path": "analysis/w33_pass12334_to_12339_towers_potential_leads.py",
+          "raw": "-1/R toward R -> 0 (integer-tower bosons dominate the winding sum): NO minimum in the window -- the radius runs to small R (the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "52ef7b282a9a6985dd3dea283c8ef3489b8919f67e0c6769b02c179ad5ff8353",
+      "structural_formula": "#/RtowardR->#(integer-towerbosonsdominatethewindingsum):NOminimuminthewindow--theradiusrunstosmallR(the"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a66d91e608fc725933831f7eb88fcfd7eb18b7f7497950865c09f7fe7961ed20",
       "normalized_formula": "-1/q^2=-1/9.Themeasuredvalueis-1/27.So-1/q^2wasneverthestatement;itwasan",
       "numeric_literals": [
@@ -415166,6 +415194,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c6938be6c0b2d43313a87ebd49f630623d75387a99a639fd73e510bf7716489c",
+      "normalized_formula": "12335--truncatedone-looppotentialalongR_6(alpha'=1):specieswithe6momentum=brother'seven-sectorstates(integertower",
+      "numeric_literals": [
+        "1",
+        "12335"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12334_to_12339_towers_potential_leads.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass12334_to_12339_towers_potential_leads.py",
+          "raw": "12335 -- truncated one-loop potential along R_6 (alpha' = 1): species with e6 momentum = brother's even-sector states (integer tower:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e9ad4c02fd64f104ada595d5362e5932ac017e1d321604de48194fec7da7ac0e",
+      "structural_formula": "#--truncatedone-looppotentialalongR_6(alpha'=#):specieswithe6momentum=brother'seven-sectorstates(integertower"
+    },
+    {
+      "file_count": 1,
       "formula_id": "35d7a4c3a64f8308b7fd38cbc1f72ff3e775513dd6dddc7e84e095d51e6bc520",
       "normalized_formula": "12480/39=320",
       "numeric_literals": [
@@ -451974,6 +452030,39 @@
       },
       "structural_family_id": "5edf5abb00b206096228c40ed4c15cc980ce3cc1ff7ad07a74bae82978f14bbe",
       "structural_formula": "#=vk\\cdot\\Phi_4/k=f\\cdotg"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fcc00f6f51606ab98798e1b18bdce6531f7b3bd428367efa66a39160f95e623c",
+      "normalized_formula": "366bosonic,144fermioniccomponents)andthehalftower(288fermionic,16tachyoniccomponentsatlevel-1/6);V=-sum(-1)^FdI",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "144",
+        "16",
+        "288",
+        "366",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12334_to_12339_towers_potential_leads.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/w33_pass12334_to_12339_towers_potential_leads.py",
+          "raw": "366 bosonic, 144 fermionic components) and the half tower (288 fermionic, 16 tachyonic components at level -1/6); V = -sum (-1)^F d I,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "aa1ea64fb6c9bf25eb66f4704eef2d3611a90eb7aa7024fa4514e069af91d514",
+      "structural_formula": "#bosonic,#fermioniccomponents)andthehalftower(#fermionic,#tachyoniccomponentsatlevel-#/#);V=-sum(#)^FdI"
     },
     {
       "file_count": 1,
@@ -669012,6 +669101,35 @@
       },
       "structural_family_id": "564cc03cf2c8d9c77fa0347b1353b8745327a0cba6202d0684114f6d6ce2e972",
       "structural_formula": "I=int_Fd^#tau/tau2^#Z;Lambda_1#=-(#/#)M^#I(M=M_s/#pi,thestandardnormalisation)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "25aa77a55e67cb64b5fcda904c6de92d7c3b44a10cc1a3dc7a263bf70fdcd8f7",
+      "normalized_formula": "I=int_Fd^2tau/tau2^3exp(-4pitau2l)sum_{n,w}exp(-pitau2(n^2/R^2+w^2R^2))cos(2pitau1nw).V(R)risesmonotonicallyfrom",
+      "numeric_literals": [
+        "-4",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12334_to_12339_towers_potential_leads.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/w33_pass12334_to_12339_towers_potential_leads.py",
+          "raw": "I = int_F d^2tau/tau2^3 exp(-4 pi tau2 l) sum_{n,w} exp(-pi tau2 (n^2/R^2 + w^2 R^2)) cos(2 pi tau1 n w). V(R) rises monotonically from",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "500de2edc1f64d95fdd042fe5ddd73952b480b01c9b325284e7eb68fd7a00362",
+      "structural_formula": "I=int_Fd^#tau/tau2^#exp(#pitau2l)sum_{n,w}exp(-pitau2(n^#/R^#+w^#R^#))cos(#pitau1nw).V(R)risesmonotonicallyfrom"
     },
     {
       "file_count": 1,
@@ -1003772,7 +1003890,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 682,
+          "line": 683,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1425804,7 +1425922,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 681,
+          "line": 682,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1430938,7 +1431056,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 681,
+          "line": 682,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1487171,6 +1487289,34 @@
       },
       "structural_family_id": "1f0a920d49f8ac014e05ffa0d04e8df2a561b08196959dfaa341e14ef5243425",
       "structural_formula": "oddprimes--v_p(M)>=#,sothatthePass8#unramifiedrankformuladoesnot"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bb9cd63d717ff141e3f0a8c3a447eb8afa673bf1da22288ebef74429a187e6a7",
+      "normalized_formula": "oddsectors(localisedontorus3):unchanged,exceptatfixedpointswithodde6label,whereB(w,h)=1/2swapsbosonsandfermions",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12334_to_12339_towers_potential_leads.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/w33_pass12334_to_12339_towers_potential_leads.py",
+          "raw": "odd sectors (localised on torus 3): unchanged, except at fixed points with odd e6 label, where B(w, h) = 1/2 swaps bosons and fermions.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4685af2ef4d30194a0311256ab200c5d69f16a95f721e4b3bfff622cf1e99032",
+      "structural_formula": "oddsectors(localisedontorus3):unchanged,exceptatfixedpointswithodde6label,whereB(w,h)=#/#swapsbosonsandfermions"
     },
     {
       "file_count": 1,
@@ -1849425,7 +1849571,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 681,
+          "line": 682,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1898970,9 +1899116,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-27T20:09:23-04:00",
+  "frozen_at": "2026-10-27T20:41:48-04:00",
   "pass": 398,
-  "repository_head": "a03ff9dc04d4b43c684e83dab22121b46ff5b624",
+  "repository_head": "70278ece136074954f9943b4503a32424da01dd6",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1959274,6 +1959420,14 @@
     },
     {
       "exact_formula_ids": [
+        "c6938be6c0b2d43313a87ebd49f630623d75387a99a639fd73e510bf7716489c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e9ad4c02fd64f104ada595d5362e5932ac017e1d321604de48194fec7da7ac0e",
+      "structural_formula": "#--truncatedone-looppotentialalongR_6(alpha'=#):specieswithe6momentum=brother'seven-sectorstates(integertower"
+    },
+    {
+      "exact_formula_ids": [
         "2b8705d7b35b7e07c98ea8b4fe791ab3ab8b40840aac94bc37aaa87b5c9daf3c"
       ],
       "exact_member_count": 1,
@@ -1964855,6 +1965009,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cc33cf6d5b2c66eaa9c9be3dffa77bc732f1111b65d11b31408c1abcd08a345e",
       "structural_formula": "#/R>~#x1#^#GeV(orderofmagnitude;hadronicmatrixelementsandRGfactorsomitted).Thisisaboundonthe"
+    },
+    {
+      "exact_formula_ids": [
+        "00cb263554bd5a502f34ba9d7702e2d0b14570812447f2eff98c41218d1e1b78"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "52ef7b282a9a6985dd3dea283c8ef3489b8919f67e0c6769b02c179ad5ff8353",
+      "structural_formula": "#/RtowardR->#(integer-towerbosonsdominatethewindingsum):NOminimuminthewindow--theradiusrunstosmallR(the"
     },
     {
       "exact_formula_ids": [
@@ -1992439,6 +1992601,14 @@
       "exact_member_count": 1,
       "structural_family_id": "aaf2e98062b81d466280127a34c1562cd3ec68a0a4da0cac69368abb3d3393a8",
       "structural_formula": "#block-correlatedfringevisibility:meanv0=survival*fringe*(##flip)"
+    },
+    {
+      "exact_formula_ids": [
+        "fcc00f6f51606ab98798e1b18bdce6531f7b3bd428367efa66a39160f95e623c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "aa1ea64fb6c9bf25eb66f4704eef2d3611a90eb7aa7024fa4514e069af91d514",
+      "structural_formula": "#bosonic,#fermioniccomponents)andthehalftower(#fermionic,#tachyoniccomponentsatlevel-#/#);V=-sum(#)^FdI"
     },
     {
       "exact_formula_ids": [
@@ -2079127,6 +2079297,14 @@
       "exact_member_count": 1,
       "structural_family_id": "564cc03cf2c8d9c77fa0347b1353b8745327a0cba6202d0684114f6d6ce2e972",
       "structural_formula": "I=int_Fd^#tau/tau2^#Z;Lambda_1#=-(#/#)M^#I(M=M_s/#pi,thestandardnormalisation)"
+    },
+    {
+      "exact_formula_ids": [
+        "25aa77a55e67cb64b5fcda904c6de92d7c3b44a10cc1a3dc7a263bf70fdcd8f7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "500de2edc1f64d95fdd042fe5ddd73952b480b01c9b325284e7eb68fd7a00362",
+      "structural_formula": "I=int_Fd^#tau/tau2^#exp(#pitau2l)sum_{n,w}exp(-pitau2(n^#/R^#+w^#R^#))cos(#pitau1nw).V(R)risesmonotonicallyfrom"
     },
     {
       "exact_formula_ids": [
@@ -2297577,6 +2297755,14 @@
     },
     {
       "exact_formula_ids": [
+        "bb9cd63d717ff141e3f0a8c3a447eb8afa673bf1da22288ebef74429a187e6a7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4685af2ef4d30194a0311256ab200c5d69f16a95f721e4b3bfff622cf1e99032",
+      "structural_formula": "oddsectors(localisedontorus3):unchanged,exceptatfixedpointswithodde6label,whereB(w,h)=#/#swapsbosonsandfermions"
+    },
+    {
+      "exact_formula_ids": [
         "9e351bd226535c17814befee832a699a844f1305ca47d4dc22f2ecc86a11542a"
       ],
       "exact_member_count": 1,
@@ -2406480,20 +2406666,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92071031,
-    "exact_formula_families": 64929,
-    "files_scanned": 12668,
-    "formula_occurrences": 71064,
+    "bytes_scanned": 92078829,
+    "exact_formula_families": 64934,
+    "files_scanned": 12670,
+    "formula_occurrences": 71069,
     "status_occurrences": {
       "certified_or_theorem": 5322,
       "killed_or_retracted": 1927,
       "open_or_conditional": 2399,
       "preregistered": 36,
       "retrospective_fit": 5414,
-      "unclassified": 55966
+      "unclassified": 55971
     },
-    "structural_families": 63219
+    "structural_families": 63224
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "fe78955def2d263be433929f761d0df058b6e2847fbdf618ab9dbb81e88a85c9"
+  "universe_sha256": "df4d65f7f492968609f3576e9538ae1390e0c54e1048ee940a514a1062e78c15"
 }
