@@ -1,0 +1,68 @@
+{
+  "schema": "gap_matter_radion_reproduction_manifest_v1",
+  "git_base": "a4ac80b85bad7886e1f227113fc57bb7506940c0",
+  "versions": {
+    "python": "3.13.14",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "files": {
+    "analysis/w33_20261027_gap_matter_radion.py": {
+      "sha256": "912f2d63995ce730fd6d455ee828fe032df423b15d2f89bc8b0791f67482eae6",
+      "bytes": 21800
+    },
+    "analysis/2026-10-27_gap_matter_radion.md": {
+      "sha256": "1c800aefc026a488ff434897eb89ff6fe4ae13b965daf59e5aa5ba3dfc8cd6b8",
+      "bytes": 12174
+    },
+    "tests/test_w33_20261027_gap_matter_radion.py": {
+      "sha256": "ea6400d6f59b64fcb23032dfad28f7e0b62f5c7f4cd9d279ac9a6c2bf9cbe8c3",
+      "bytes": 5049
+    },
+    "data/w33_20261027_gap_matter_radion.json": {
+      "sha256": "b41ee1ea09ac52faea1be98c1d0343fcddae45d199ae115aeb4393d369e48b20",
+      "bytes": 40268
+    },
+    "analysis/w33_20261027_research_intake.py": {
+      "sha256": "064443d22c72e43bab061505ebf75b726cbe019af2f7ef66140f7af5222dad15",
+      "bytes": 10862
+    },
+    "analysis/2026-10-27_research_intake_coverage.json": {
+      "sha256": "781f3995da9690369ef54b783107dd24727876e28f547ab7b054955c129c13a1",
+      "bytes": 497946
+    },
+    "data/w33_20261027_certified_rotor_bounds.json": {
+      "sha256": "59300798a374bfa6c214f9a956574ab5fc68556d32b9e4d536e349a1b8b54a65",
+      "bytes": 1090942
+    },
+    "data/w33_20261027_five_front_followthrough.json": {
+      "sha256": "2e52b967ac05584feccbb2dfcefbb055c8be4b30f1b08d84d17878018a0cd834",
+      "bytes": 30795
+    },
+    "artifacts/canonical_su3_gauge_and_cubic.json": {
+      "sha256": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+      "bytes": 433282
+    },
+    "analysis/search_drivers_12281/bro/Z6II_60_SM_20260917_810_v9__w6odd.nsoq": {
+      "sha256": "9ea39702acafca56df6f2d91a4b4dca27724c6679037245be34c8c31b6bc7c70",
+      "bytes": 247173
+    },
+    "analysis/search_drivers_12311/vacuum.json": {
+      "sha256": "b6ebd1c247450ca0719dd4f75e4c9d18da18575326a695de4ca9760577f9df05",
+      "bytes": 246
+    },
+    "papers/forty_points/main.pdf": {
+      "sha256": "c5b44ee9e447561e4fbb892bb870d2506187e37e35c613a39eaf85af6cf6e19c",
+      "bytes": 1300601
+    }
+  },
+  "validation": {
+    "tests_passed": 37,
+    "elapsed_seconds": 45.79,
+    "producer": "python analysis/w33_20261027_gap_matter_radion.py",
+    "test_command": "python -m pytest tests/test_w33_20261027_gap_matter_radion.py tests/test_w33_20261027_native_operator_closure.py tests/test_w33_20261027_microscopic_response_and_lifts.py tests/test_w33_20261027_five_front_followthrough.py tests/test_w33_20261027_native_bloch_face_module.py -q"
+  },
+  "scope": "Exact finite-spatial-patch rotor gap and rational threshold witness; numerical finite-sector responses and heavy-frame controls; conditional external acoustic measure theorem. Full TOE and exhaustive reading incomplete."
+}

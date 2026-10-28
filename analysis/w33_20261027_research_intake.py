@@ -15,9 +15,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 SCRATCH=ROOT/'.research_20261027_intake'
-READ_PAGES=set(range(72,119))
+READ_PAGES=set(range(72,127))
 READ_COMMIT_PREFIXES={'ccee9e84e','5bb5acd74','909913f17','a23c01282','47e5d1365','a15185e5c',
-                      'c63b9ade1','887c9718e','6a26f6bed'}
+                      'c63b9ade1','887c9718e','6a26f6bed','d579880fe','752562e19',
+                      'be700f9c7','da24b4f20','7acd13de0'}
 EXPECTED_PDF_SHA256='c5b44ee9e447561e4fbb892bb870d2506187e37e35c613a39eaf85af6cf6e19c'
 
 
@@ -118,7 +119,7 @@ if __name__=='__main__':
             commit['full_patch_model_read']=any(commit['sha'].startswith(p)for p in READ_COMMIT_PREFIXES)
         d['reading_increment_20261027_microscopic']={
             'pages_added':list(range(95,111)),
-            'full_patches_added':sorted(READ_COMMIT_PREFIXES-{'c63b9ade1','887c9718e','6a26f6bed'}),
+            'full_patches_added':['ccee9e84e','5bb5acd74','909913f17','a23c01282','47e5d1365','a15185e5c'],
             'patch_scope':'Five empty reservation commits plus the entire substantive a15185e5c patch, including code, JSON, TeX and PDF text conversion. This does not validate every inherited string claim.',
             'findings':'Pages95-110 document FI/parity, fractional-charge, Yukawa-degeneracy and vacuum-instability constraints. The native spatial reflection is distinct from the Delta54 family reflection. Full patch a15185e5c exposes the Pass12330 common-threshold scan; the new packet proves a continuous bound under exactly that running model.'}
         finding='Pages91-94 explicitly distinguish finite1+3+8 modules from gauge Lie algebras and prove a Pauli-stable E6 obstruction. Our U1/internal-index construction does not claim a nonabelian Pauli E6 action.'
@@ -141,6 +142,10 @@ if __name__=='__main__':
         'pages_added':list(range(111,119)),
         'full_patches_added':['c63b9ade1','887c9718e','6a26f6bed'],
         'findings':'Pages111-118 separate hosting chirality from selecting it, finite orientation/antiunitary character from a field-theory measure, and modulus-dependent vacuum/matter choices. This packet supplies Euclidean Weyl projectors but no dynamical handedness selection. Three full patches cover an honest earlier391-commit audit, a hosted12194-12198 receipt, and the faithful20-dimensional CSS action; none proves a TOE.'}
+    d['reading_increment_20261027_gap']={
+        'pages_added':list(range(119,127)),
+        'full_patches_added':['d579880fe','752562e19','be700f9c7','da24b4f20','7acd13de0'],
+        'findings':'Pages119-126 constrain flavour: local-SU5 up degeneracy, shared flux/Higgs CKM failures, stabilizer/Hesse locks, and supplied soft-supertrace escape parameters. Do not interpret the SU5 cubic intertwiner as a realistic flavour vacuum. Five full test-only patches distinguish exact finite Levi/Frobenius certificates, numerical Weil checks and failed Xi-identification; imported producers have not thereby been fully read.'}
     out.write_text(json.dumps(d,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'commits':len(d['historical_week_commits']),
                       'patch_bytes':d['historical_week_fullpatch_bytes'],

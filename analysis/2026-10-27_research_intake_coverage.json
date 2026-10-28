@@ -3095,7 +3095,7 @@
       "patch_bytes": 1796,
       "gzip_bytes": 871,
       "archive": ".research_20261027_intake\\commits\\7acd13de0a5c20ac996341b36ba44a7d44af392a.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "b138afc92ef654e3f61b1752b23fefe20902d920",
@@ -3359,7 +3359,7 @@
       "patch_bytes": 1863,
       "gzip_bytes": 948,
       "archive": ".research_20261027_intake\\commits\\da24b4f2071066fcb8d98f29bbce4b3e41ef91c6.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "3182f2faf318ab21ac78e64d7ad5bfcd54c41156",
@@ -3383,7 +3383,7 @@
       "patch_bytes": 1835,
       "gzip_bytes": 889,
       "archive": ".research_20261027_intake\\commits\\be700f9c7d32afe8386be58f09b4b22f45b8c6c0.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "f33b26a1185e90f8e4a80fe16eff1c0f2386460e",
@@ -3407,7 +3407,7 @@
       "patch_bytes": 1657,
       "gzip_bytes": 866,
       "archive": ".research_20261027_intake\\commits\\752562e19ce5a3d3ef877d40ca0076fe7cbc9798.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "7635d9c4b4f3d56bcf6f79c6018924d2c4c30e13",
@@ -3479,7 +3479,7 @@
       "patch_bytes": 1615,
       "gzip_bytes": 802,
       "archive": ".research_20261027_intake\\commits\\d579880fe22b7cbb44859619234df68139e2a1dc.patch.gz",
-      "full_patch_model_read": false
+      "full_patch_model_read": true
     },
     {
       "sha": "8b5b1d20f092c7a852a4b8b3a065a0ebca5c0765",
@@ -4683,56 +4683,56 @@
       "text_bytes": 4666,
       "text_sha256": "955863cb62e19553fbf6a6c13d687b17bfa340aabbb9284417b2b9d562fd4a1d",
       "archive": ".research_20261027_intake\\pdf\\page119.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 120,
       "text_bytes": 4041,
       "text_sha256": "f6eea70b13bd756d168a9bb579cb545e0f9423cd99445c298b755b7dd77d705a",
       "archive": ".research_20261027_intake\\pdf\\page120.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 121,
       "text_bytes": 4056,
       "text_sha256": "4fe8e5b00a4cc66d7e68ac72a3a6a869813b1f0ff950d2492aca075d8d289f00",
       "archive": ".research_20261027_intake\\pdf\\page121.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 122,
       "text_bytes": 4444,
       "text_sha256": "97f3bc7e92089854a746e825e166f1fb74ee44b82a4f639dcb69ce405496b2eb",
       "archive": ".research_20261027_intake\\pdf\\page122.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 123,
       "text_bytes": 4489,
       "text_sha256": "72d70061f27fcf8183f7c6f87e6e1e9a6d88fc44d2b1577990285942266b4608",
       "archive": ".research_20261027_intake\\pdf\\page123.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 124,
       "text_bytes": 4386,
       "text_sha256": "8a89505f0b6a195e50774af5518fde00710319dfc37fc32577a4b3158cc1cdd7",
       "archive": ".research_20261027_intake\\pdf\\page124.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 125,
       "text_bytes": 4323,
       "text_sha256": "36d2f934863fda055399fa1c12d523a3bfd686eaa6fbb12ec79067c9835087b6",
       "archive": ".research_20261027_intake\\pdf\\page125.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 126,
       "text_bytes": 4378,
       "text_sha256": "a997f76ee7edcbf9992c9a1ae470456b28602e7829f5bf2da2daeb1a84516f21",
       "archive": ".research_20261027_intake\\pdf\\page126.txt",
-      "full_text_model_read_this_continuation": false
+      "full_text_model_read_this_continuation": true
     },
     {
       "page": 127,
@@ -12692,12 +12692,12 @@
       110
     ],
     "full_patches_added": [
-      "47e5d1365",
+      "ccee9e84e",
       "5bb5acd74",
       "909913f17",
-      "a15185e5c",
       "a23c01282",
-      "ccee9e84e"
+      "47e5d1365",
+      "a15185e5c"
     ],
     "patch_scope": "Five empty reservation commits plus the entire substantive a15185e5c patch, including code, JSON, TeX and PDF text conversion. This does not validate every inherited string claim.",
     "findings": "Pages95-110 document FI/parity, fractional-charge, Yukawa-degeneracy and vacuum-instability constraints. The native spatial reflection is distinct from the Delta54 family reflection. Full patch a15185e5c exposes the Pass12330 common-threshold scan; the new packet proves a continuous bound under exactly that running model."
@@ -12719,5 +12719,25 @@
       "6a26f6bed"
     ],
     "findings": "Pages111-118 separate hosting chirality from selecting it, finite orientation/antiunitary character from a field-theory measure, and modulus-dependent vacuum/matter choices. This packet supplies Euclidean Weyl projectors but no dynamical handedness selection. Three full patches cover an honest earlier391-commit audit, a hosted12194-12198 receipt, and the faithful20-dimensional CSS action; none proves a TOE."
+  },
+  "reading_increment_20261027_gap": {
+    "pages_added": [
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126
+    ],
+    "full_patches_added": [
+      "d579880fe",
+      "752562e19",
+      "be700f9c7",
+      "da24b4f20",
+      "7acd13de0"
+    ],
+    "findings": "Pages119-126 constrain flavour: local-SU5 up degeneracy, shared flux/Higgs CKM failures, stabilizer/Hesse locks, and supplied soft-supertrace escape parameters. Do not interpret the SU5 cubic intertwiner as a realistic flavour vacuum. Five full test-only patches distinguish exact finite Levi/Frobenius certificates, numerical Weil checks and failed Xi-identification; imported producers have not thereby been fully read."
   }
 }

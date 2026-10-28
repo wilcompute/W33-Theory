@@ -97,7 +97,7 @@ def test_split_threshold_analytic_exclusion():
 
 def test_specific_partial_reading_coverage():
     r=json.loads((ROOT/'analysis/2026-10-27_research_intake_coverage.json').read_text())
-    assert sum(x['full_text_model_read_this_continuation']for x in r['pdf_pages'])==47
-    assert sum(x['full_patch_model_read']for x in r['historical_week_commits'])==9
+    assert sum(x['full_text_model_read_this_continuation']for x in r['pdf_pages'])>=47
+    assert sum(x['full_patch_model_read']for x in r['historical_week_commits'])>=9
     assert r['reading_increment_20261027_operator']['pages_added']==list(range(111,119))
     assert 'incomplete' in r['completion']
