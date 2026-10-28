@@ -1,0 +1,32 @@
+{
+ "v9": {
+  "parent": 534,
+  "brother": 466,
+  "parent_even": 242,
+  "parent_odd": 292,
+  "nonintegral_Vhlam": 0,
+  "even_equals_brother": false,
+  "only_even": 222,
+  "only_brother": 446
+ },
+ "v4": {
+  "parent": 534,
+  "brother": 466,
+  "parent_even": 242,
+  "parent_odd": 292,
+  "nonintegral_Vhlam": 0,
+  "even_equals_brother": false,
+  "only_even": 222,
+  "only_brother": 446
+ },
+ "v0": {
+  "parent": 534,
+  "brother": 466,
+  "parent_even": 242,
+  "parent_odd": 292,
+  "nonintegral_Vhlam": 0,
+  "even_equals_brother": false,
+  "only_even": 222,
+  "only_brother": 446
+ }
+}

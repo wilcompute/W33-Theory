@@ -1,0 +1,190 @@
+{
+  "12334": {
+    "v0": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v1": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v2": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v3": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v4": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v5": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v6": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v7": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v8": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v9": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v10": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v11": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    },
+    "v12": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 8
+      }
+    },
+    "v13": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 8
+      }
+    },
+    "v17": {
+      "rule_matches": true,
+      "mismatch": 0,
+      "half_tower": {
+        "F": 52,
+        "tachyon": 16
+      }
+    }
+  },
+  "12335": {
+    "V": {
+      "0.15": -668.3698658463463,
+      "0.2": -501.5630061889742,
+      "0.25": -401.3309422748577,
+      "0.3": -334.59042598567214,
+      "0.35": -286.95665740356327,
+      "0.4": -251.07928970032054,
+      "0.45": -222.83328065763575,
+      "0.5": -199.97955790634944,
+      "0.55": -181.555071706125,
+      "0.58": -172.62867933465964,
+      "0.6": -167.7372612311056
+    },
+    "controls": {
+      "R04_T40": -251.07928970032054,
+      "R04_T120": -251.14962185277815,
+      "R060_T400": -167.81704298940983,
+      "R061_T400": -165.80099775646855,
+      "R0612_T1500": -165.4574842429883
+    },
+    "species": {
+      "('int', 'F')": 144,
+      "('int', 'B')": 366,
+      "('half', 'F')": 288,
+      "('half', 'T')": 16
+    }
+  },
+  "12338": {
+    "table": {
+      "('ctrl', 0)": 17,
+      "('w6odd', 0)": 17,
+      "('ctrl', None)": 47,
+      "('w6odd', None)": 47,
+      "('ctrl', 3)": 17,
+      "('w6odd', 2)": 17,
+      "('ctrl', 1)": 16,
+      "('w6odd', 1)": 18,
+      "('ctrl', 2)": 2
+    },
+    "hits": [
+      "Z6II_06_SM_20260917_2618_v0__ctrl",
+      "Z6II_06_SM_20260917_2618_v1__ctrl",
+      "Z6II_06_SM_20260917_2618_v2__ctrl",
+      "Z6II_06_SM_20260917_2618_v3__ctrl",
+      "Z6II_12_SM_20260917_2503_v10__ctrl",
+      "Z6II_12_SM_20260917_2503_v11__ctrl",
+      "Z6II_12_SM_20260917_2503_v12__ctrl",
+      "Z6II_12_SM_20260917_2503_v5__ctrl",
+      "Z6II_12_SM_20260917_2503_v6__ctrl",
+      "Z6II_12_SM_20260917_2503_v7__ctrl",
+      "Z6II_12_SM_20260917_574_v0__ctrl",
+      "Z6II_12_SM_20260917_574_v5__ctrl",
+      "Z6II_12_SM_20260917_574_v6__ctrl",
+      "Z6II_23_SM_20260917_2913_v6__ctrl",
+      "Z6II_23_SM_20260917_2913_v7__ctrl",
+      "Z6II_23_SM_20260917_2913_v8__ctrl",
+      "Z6II_59_SM_20260917_1105_v12__ctrl"
+    ]
+  },
+  "checks": {
+    "12334: sector rule reproduces all 15 brothers exactly (0 mismatches)": true,
+    "12335: V rises monotonically across the window (no minimum); cutoff stable; finite at the edge": true,
+    "12338: 17 tachyon-free parents with three net (3,2) doublets; brothers at most 2": true
+  },
+  "all_checks_pass": true
+}
