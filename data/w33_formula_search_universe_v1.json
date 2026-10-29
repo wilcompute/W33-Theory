@@ -207046,6 +207046,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "141445ced9874410f2404cfb1670beaa370d4051c5396c980c49e8dd5e7206bc",
+      "normalized_formula": "#6*1_{C_beta}(x)=sum_alpha(3*M-1)*1_{C_alpha}(x)",
+      "numeric_literals": [
+        "1",
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 79,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "# 6*1_{C_beta}(x) = sum_alpha (3*M-1) * 1_{C_alpha}(x).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bf881a0f70b20654eecdc9761312aea5b13884b85cde62e655004cf547e310dd",
+      "structural_formula": "##*#_{C_beta}(x)=sum_alpha(#*M-#)*#_{C_alpha}(x)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6a0074c05964dd98e40a1fc1fabb4c070f57aa9f18688ab53f0e1d9643453905",
       "normalized_formula": "#6.AUT_ORDER//NUM_DOUBLE_SIXES//NUM_TRIADS=NUM_DOUBLE_SIXES=36",
       "numeric_literals": [
@@ -321649,6 +321678,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5fca3b430018643574d975ba3419f83318d5d2526ac4fb0b54328a2091cca42b",
+      "normalized_formula": "'single_ruling_frame_Gram':'A=(3/4)I+(1/4)J'",
+      "numeric_literals": [
+        "1",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 163,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "'single_ruling_frame_Gram':'A=(3/4)I+(1/4)J',",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "e861993f2d7a726ff36c848000e0c802a7d241266e2e883a224a0e423db9d28e",
+      "structural_formula": "'single_ruling_frame_Gram':'A=(#/#)I+(#/#)J'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "64571feee2ede34a361ee1c425bd4a176ed5d83daad34d761314c622dcb8e87a",
       "normalized_formula": "'single_scalar_action':'H(27,bar6):V=||MH+J/M||2,J=sum_abmu_abv_aF_bdagger;Yukawayd(psi,psi,H).Heremuhasmassdimension1.EliminatingH=-J/M2givesC_ab=-ymu_ab/M2,whoserankcanbe2.Thesourcesquareincludesrequiredcrossportals.'",
       "numeric_literals": [
@@ -322385,6 +322443,33 @@
       },
       "structural_family_id": "05d1483d4c54deaf36f1f993ca93052d397ecbdcf5325d904b71b867f1ba87ff",
       "structural_formula": "'sqrt(#)':#,#=-m_s^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "af35e04b31848031d7836b1fb4bb6787aee726ed11477ea89bf73d2fff24b172",
+      "normalized_formula": "'stabilizer_frame_relation':'|beta_j>=sum_iT_ij|alpha_i>,exactlyinC^256'",
+      "numeric_literals": [
+        "256"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 158,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "'stabilizer_frame_relation':'|beta_j>=sum_i T_ij |alpha_i>, exactly in C^256',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "af440d6ab148d959014370932e8b6b22e4f533a366ec477ac74e7f69c6bed0d8",
+      "structural_formula": "'stabilizer_frame_relation':'|beta_j>=sum_iT_ij|alpha_i>,exactlyinC^#'"
     },
     {
       "file_count": 1,
@@ -326508,6 +326593,34 @@
       },
       "structural_family_id": "863330455215f61b887e07b57dc9c139d7300b61c4c0abc29186ce9e93f28231",
       "structural_formula": "'transfer_model':{'kernel':'T_eta=(#-eta)I+etaA_W3#/#','n_stage_line_mass':'p_n=#/#+(#/#)(##eta/#)^n','reason':'thepartition{fixedW3#line,#off-linepoints}isequitablewithrandom-walktransitionprobabilities1/#and1/#intotheline'}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6795e55a0f8e2557152b749f829425f8ab53a698d69fa6af4069661142435f57",
+      "normalized_formula": "'transform_formula':'T=(3M-J)/6,T*T^T=I'",
+      "numeric_literals": [
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 157,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "'transform_formula':'T=(3M-J)/6, T*T^T=I',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8eecd50fb979702cd3caf4577a27931c02d9d82509a88573a6b5533af838b00d",
+      "structural_formula": "'transform_formula':'T=(#M-J)/#,T*T^T=I'"
     },
     {
       "file_count": 1,
@@ -611052,6 +611165,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "edda050d1aac9c36ca15d8196362c16dea289fead1a9576b96ec9341cb721e47",
+      "normalized_formula": "Define\u039b(C)={x/sqrt(2):xinZ^8,xmod2inC}.BecauseCisdoublyevenandself-dual,thisisanevenunimodulareight-dimensionallattice,isometrictoE8.Its240shortestvectorshaveexplicitConstruction-Arepresentatives:16axisroots(\u00b12e_i)/sqrt2and224rootsobtainedbychoosingoneof14weight-fourcodewordsandoneofits16signassignments",
+      "numeric_literals": [
+        "16",
+        "2",
+        "24",
+        "4",
+        "40",
+        "6",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_klein_e8_hamming_twistor_transform.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-29_klein_e8_hamming_twistor_transform.md",
+          "raw": "Define \u039b(C) = {x/sqrt(2) : x in Z^8, x mod 2 in C}. Because C is doubly even and self-dual, this is an even unimodular eight-dimensional lattice, isometric to E8. Its 240 shortest vectors have explicit Construction-A representatives: 16 axis roots (\u00b12e_i)/sqrt2 and 224 roots obtained by choosing one of 14 weight-four codewords and one of its 16 sign assignments.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "effe79a9373cc756d498c819a566f41b0dbfef7cfb8f9d39a00155d10871d4c4",
+      "structural_formula": "Define\u039b(C)={x/sqrt(#):xinZ^#,xmod2inC}.BecauseCisdoublyevenandself-dual,thisisanevenunimodulareight-dimensionallattice,isometrictoE8.Its2#shortestvectorshaveexplicitConstruction-Arepresentatives:#axisroots(\u00b1#e_i)/sqrt2and2#rootsobtainedbychoosingoneof1#weight-fourcodewordsandoneofits1#signassignments"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f25a0754903ec904ae51fce3d8abcf5119ead075c1d1a46c723df05c6b63a101",
       "normalized_formula": "Definingfinitegeodesicentropy`S=ln(numberofshortestpaths)`gives`S=0`throughdistancethreeand`S=ln4`foreverydiameter-fourdiamond.Inthediameter-fourcase,themiddlewaistcontainsexactlyfourvertices,so",
       "numeric_literals": [
@@ -695972,6 +696118,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2346e5745887058c440bf86581f0082e3764da1a170488d3005a97fb2dd833f3",
+      "normalized_formula": "LetEbethebinaryeven-weightsubspaceofF2^8;quotientbytheall-onesvector.V=E/<1>hasdimensionsix.Thequadraticq([x])=wt(x)/2mod2iswell-defined.Its63nonzeroclassesconsistexactlyof28nonsingularduads(weight-twovectors)and35singularcomplementarytetrads(weight-fourvectors).Theselatter35pointsareQ+(5,2)",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_klein_e8_hamming_twistor_transform.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/2026-10-29_klein_e8_hamming_twistor_transform.md",
+          "raw": "Let E be the binary even-weight subspace of F2^8; quotient by the all-ones vector. V=E/<1> has dimension six. The quadratic q([x])=wt(x)/2 mod 2 is well-defined. Its 63 nonzero classes consist exactly of 28 nonsingular duads (weight-two vectors) and 35 singular complementary tetrads (weight-four vectors). These latter 35 points are Q+(5,2).",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "9f9960fae25056014b9c860b6210587c5d25fde20733a6f0e1cc89ffa9836197",
+      "structural_formula": "LetEbethebinaryeven-weightsubspaceofF2^#;quotientbytheall-onesvector.V=E/<#>hasdimensionsix.Thequadraticq([x])=wt(x)/#mod2iswell-defined.Its6#nonzeroclassesconsistexactlyof2#nonsingularduads(weight-twovectors)and3#singularcomplementarytetrads(weight-fourvectors).Theselatter3#pointsareQ+(#,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "388f178371a830ba7f96004f80baba1193b52719849b2948340c69b3a86ccd61",
       "normalized_formula": "LetFbePass11389'sprimitiveFCCbasis,theta=F^Tptheprimitivetorus",
       "numeric_literals": [
@@ -696111,6 +696288,37 @@
       },
       "structural_family_id": "5503001c4f5f81dcfd57099867e0841fb7207a1b8d59b6c971bf86fc62d51b13",
       "structural_formula": "LetLbetheconnected-Lcompatibilitymap.Pass5#givesrank(L|V_P)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "af6c62b1253db3dab5d6b1be4b7b178aeb63a23a777169431898b6f9cca68821",
+      "normalized_formula": "LetMbethe15\u00d715incidencematrixbetweenalpha-andbeta-generators,withM_ij=1whentheirintersectionisaprojectiveline.Eachrow/columnhas7ones.ThecompleteintersectionauditgivesMM^T=4I+3J.Define",
+      "numeric_literals": [
+        "1",
+        "15",
+        "3",
+        "4",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_klein_e8_hamming_twistor_transform.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 53,
+          "path": "analysis/2026-10-29_klein_e8_hamming_twistor_transform.md",
+          "raw": "Let M be the 15\u00d715 incidence matrix between alpha- and beta-generators, with M_ij=1 when their intersection is a projective line. Each row/column has 7 ones. The complete intersection audit gives M M^T = 4I+3J. Define",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5cc1106afcba03893994c9b79db074d34b3b45efe344b2ffd551fb02f2236c3a",
+      "structural_formula": "LetMbethe1#\u00d7#incidencematrixbetweenalpha-andbeta-generators,withM_ij=#whentheirintersectionisaprojectiveline.Eachrow/columnhas7ones.ThecompleteintersectionauditgivesMM^T=#I+#J.Define"
     },
     {
       "file_count": 1,
@@ -699266,6 +699474,33 @@
       },
       "structural_family_id": "d9cb2cc6d6175c77463f70604fa7c5b91b03e6838e15cd06ba1521f5de8aef35",
       "structural_formula": "M=V_q4*F_q4*I_medial=#*#*#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "08091b479961d904fa6fceefedd2c3f66c031c13ea83028c1eb89f97c3468bbb",
+      "normalized_formula": "M=[[int(len(ab)=4)forbinbeta]forainalpha]",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 64,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "M = [[int(len(a&b) == 4) for b in beta] for a in alpha]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7681a4d41054ad511d2f5338728b0fa443e50cbb8e1d779ae4df2f942163b4fe",
+      "structural_formula": "M=[[int(len(ab)=#)forbinbeta]forainalpha]"
     },
     {
       "file_count": 1,
@@ -1080805,6 +1081040,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "59fd74a16679fe8fc88b09ce1f00ab8619cbca21ff667b2c593c0716e5edec18",
+      "normalized_formula": "alpha=[gs[0]]+[gforgingsifg!=gs[0]andlen(gs[0]g)=2]",
+      "numeric_literals": [
+        "0",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "alpha = [gs[0]] + [g for g in gs if g != gs[0] and len(gs[0]&g) == 2]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3ea8781b00231e766db41b87cffd6ba3352a7ef8064242a6f5ffd1bb087392d3",
+      "structural_formula": "alpha=[gs[#]]+[gforgingsifg!=gs[#]andlen(gs[#]g)=#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "339e1aea129677b3ec9685305b6f3441523ea7ae00d5d41f797f62afd8d7d1e3",
       "normalized_formula": "alpha=[np.kron(np.array([[0,1],[1,0]]),s)forsinsigma]",
       "numeric_literals": [
@@ -1118177,6 +1118440,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d9374cfc7042f03a4635629139ce0608a6d55c753ccd24dd7498ed1a8ffcadd4",
+      "normalized_formula": "assertall(len(ab)=2fora,bincombinations(alpha,2))",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 55,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "assert all(len(a & b) == 2 for a,b in combinations(alpha, 2))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0a5e8829566f0d8ddab17b0d6ddfcb100d003c2b08b64e8591369b49ab9edede",
+      "structural_formula": "assertall(len(ab)=#fora,bincombinations(alpha,#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ce70284139e0e9eebad4615fc7ef3ad00915d0dcafc67bf2ff22abe079823b12",
       "normalized_formula": "assertall(len(coset)=3forcosetinright_cosets)",
       "numeric_literals": [
@@ -1129607,6 +1129897,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "1d9389a01bd3bebb1765af02e8e51c7b70731f1ba72064bf01363478376cd377",
+      "normalized_formula": "assertlen(alpha)=15andlen(beta)=15",
+      "numeric_literals": [
+        "15"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 54,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "assert len(alpha) == 15 and len(beta) == 15",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "91256b0057026530080b26e22d764491cbcd08f5478084ddef8dae82ff2110ba",
+      "structural_formula": "assertlen(alpha)=#andlen(beta)=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7630d8f43bcaf5912e14f92dfe69487eb54275787655f4b877eff20f82f5ee41",
       "normalized_formula": "assertlen(atom_coords)=25",
       "numeric_literals": [
@@ -1132298,6 +1132615,35 @@
           "line": 77,
           "path": "analysis/w33_20261028_f2_klein_native_gauge_bridge.py",
           "raw": "assert len(points)==63 and len(singular)==35 and len(nonsingular)==28",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7643311f3746cfdb7338b1e8d2beea62139911d5170da77b5c0c3be4849bd0ea",
+      "structural_formula": "assertlen(points)=#andlen(singular)=#andlen(nonsingular)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "90545ce762d30de57e20e226ae430e9f8735db9559bdc8c5c4ece603af037c20",
+      "normalized_formula": "assertlen(points)=64andlen(singular)=35andlen(nonsingular)=28",
+      "numeric_literals": [
+        "28",
+        "35",
+        "64"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 33,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "assert len(points) == 64 and len(singular) == 35 and len(nonsingular) == 28",
           "status": "unclassified"
         }
       ],
@@ -1481789,6 +1482135,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "37ea982868c2fbb87340bce3d574e9d2d482dd99a34ad834376a6ccf840a0b06",
+      "normalized_formula": "nonsingular=[xforxinpointsifquadratic(x)=1]",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "nonsingular = [x for x in points if quadratic(x) == 1]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8faae0d718a1ba4f95c44c796ed2b98e822f4e55659700afc4621f4c782103b4",
+      "structural_formula": "nonsingular=[xforxinpointsifquadratic(x)=#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d69f45ff31fd6850b0e25fae816f85da7ed184a21cb632457644a3471d6db758",
       "normalized_formula": "nonsingular=[xforxinrange(1,64)ifq(x)=1]",
       "numeric_literals": [
@@ -1755124,6 +1755497,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "698a2c94dfe1798358bf65fc07e920f857ee9eb8b1c02cefd7b00cabbe0f6b61",
+      "normalized_formula": "singular=[xforxinpointsifxandquadratic(x)=0]",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 31,
+          "path": "analysis/w33_20261029_klein_e8_hamming_twistor_transform.py",
+          "raw": "singular = [x for x in points if x and quadratic(x) == 0]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "77b659c84cdf785be64c4d905c6ee35abccdd7f2e61449037c3ea8d6c493c87d",
+      "structural_formula": "singular=[xforxinpointsifxandquadratic(x)=#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6923aa5b936b12b59b986f5b10259bafa3aada59ec2a55c5e3a39e9b905e8b0f",
       "normalized_formula": "singular=[xforxinrange(1,64)ifq(x)=0]",
       "numeric_literals": [
@@ -1904000,9 +1904400,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T00:10:04-04:00",
+  "frozen_at": "2026-10-29T00:37:19-04:00",
   "pass": 398,
-  "repository_head": "bd8b056eba98a78f77f107689b1b63a57ed075f5",
+  "repository_head": "508f1b516e312d20126b27409570a96b832174ce",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1960789,6 +1961189,14 @@
     },
     {
       "exact_formula_ids": [
+        "141445ced9874410f2404cfb1670beaa370d4051c5396c980c49e8dd5e7206bc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bf881a0f70b20654eecdc9761312aea5b13884b85cde62e655004cf547e310dd",
+      "structural_formula": "##*#_{C_beta}(x)=sum_alpha(#*M-#)*#_{C_alpha}(x)"
+    },
+    {
+      "exact_formula_ids": [
         "f79b3fc78971992dc75b84e8f05c0764624879d244369820b48ee9680c21057a"
       ],
       "exact_member_count": 1,
@@ -2014644,6 +2015052,14 @@
     },
     {
       "exact_formula_ids": [
+        "5fca3b430018643574d975ba3419f83318d5d2526ac4fb0b54328a2091cca42b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e861993f2d7a726ff36c848000e0c802a7d241266e2e883a224a0e423db9d28e",
+      "structural_formula": "'single_ruling_frame_Gram':'A=(#/#)I+(#/#)J'"
+    },
+    {
+      "exact_formula_ids": [
         "64571feee2ede34a361ee1c425bd4a176ed5d83daad34d761314c622dcb8e87a"
       ],
       "exact_member_count": 1,
@@ -2014849,6 +2015265,14 @@
       "exact_member_count": 1,
       "structural_family_id": "653b18f146007f22754c9b1b5c53773646b2bce3b078099d40c4add1d57f86b4",
       "structural_formula": "'sqrt(#)':#,#=-r^m_s=#^#"
+    },
+    {
+      "exact_formula_ids": [
+        "af35e04b31848031d7836b1fb4bb6787aee726ed11477ea89bf73d2fff24b172"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "af440d6ab148d959014370932e8b6b22e4f533a366ec477ac74e7f69c6bed0d8",
+      "structural_formula": "'stabilizer_frame_relation':'|beta_j>=sum_iT_ij|alpha_i>,exactlyinC^#'"
     },
     {
       "exact_formula_ids": [
@@ -2015937,6 +2016361,14 @@
       "exact_member_count": 1,
       "structural_family_id": "863330455215f61b887e07b57dc9c139d7300b61c4c0abc29186ce9e93f28231",
       "structural_formula": "'transfer_model':{'kernel':'T_eta=(#-eta)I+etaA_W3#/#','n_stage_line_mass':'p_n=#/#+(#/#)(##eta/#)^n','reason':'thepartition{fixedW3#line,#off-linepoints}isequitablewithrandom-walktransitionprobabilities1/#and1/#intotheline'}"
+    },
+    {
+      "exact_formula_ids": [
+        "6795e55a0f8e2557152b749f829425f8ab53a698d69fa6af4069661142435f57"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8eecd50fb979702cd3caf4577a27931c02d9d82509a88573a6b5533af838b00d",
+      "structural_formula": "'transform_formula':'T=(#M-J)/#,T*T^T=I'"
     },
     {
       "exact_formula_ids": [
@@ -2068604,6 +2069036,14 @@
     },
     {
       "exact_formula_ids": [
+        "edda050d1aac9c36ca15d8196362c16dea289fead1a9576b96ec9341cb721e47"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "effe79a9373cc756d498c819a566f41b0dbfef7cfb8f9d39a00155d10871d4c4",
+      "structural_formula": "Define\u039b(C)={x/sqrt(#):xinZ^#,xmod2inC}.BecauseCisdoublyevenandself-dual,thisisanevenunimodulareight-dimensionallattice,isometrictoE8.Its2#shortestvectorshaveexplicitConstruction-Arepresentatives:#axisroots(\u00b1#e_i)/sqrt2and2#rootsobtainedbychoosingoneof1#weight-fourcodewordsandoneofits1#signassignments"
+    },
+    {
+      "exact_formula_ids": [
         "f25a0754903ec904ae51fce3d8abcf5119ead075c1d1a46c723df05c6b63a101"
       ],
       "exact_member_count": 1,
@@ -2091520,6 +2091960,14 @@
     },
     {
       "exact_formula_ids": [
+        "2346e5745887058c440bf86581f0082e3764da1a170488d3005a97fb2dd833f3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9f9960fae25056014b9c860b6210587c5d25fde20733a6f0e1cc89ffa9836197",
+      "structural_formula": "LetEbethebinaryeven-weightsubspaceofF2^#;quotientbytheall-onesvector.V=E/<#>hasdimensionsix.Thequadraticq([x])=wt(x)/#mod2iswell-defined.Its6#nonzeroclassesconsistexactlyof2#nonsingularduads(weight-twovectors)and3#singularcomplementarytetrads(weight-fourvectors).Theselatter3#pointsareQ+(#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "388f178371a830ba7f96004f80baba1193b52719849b2948340c69b3a86ccd61"
       ],
       "exact_member_count": 1,
@@ -2091557,6 +2092005,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5503001c4f5f81dcfd57099867e0841fb7207a1b8d59b6c971bf86fc62d51b13",
       "structural_formula": "LetLbetheconnected-Lcompatibilitymap.Pass5#givesrank(L|V_P)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "af6c62b1253db3dab5d6b1be4b7b178aeb63a23a777169431898b6f9cca68821"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5cc1106afcba03893994c9b79db074d34b3b45efe344b2ffd551fb02f2236c3a",
+      "structural_formula": "LetMbethe1#\u00d7#incidencematrixbetweenalpha-andbeta-generators,withM_ij=#whentheirintersectionisaprojectiveline.Eachrow/columnhas7ones.ThecompleteintersectionauditgivesMM^T=#I+#J.Define"
     },
     {
       "exact_formula_ids": [
@@ -2092402,6 +2092858,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d9cb2cc6d6175c77463f70604fa7c5b91b03e6838e15cd06ba1521f5de8aef35",
       "structural_formula": "M=V_q4*F_q4*I_medial=#*#*#"
+    },
+    {
+      "exact_formula_ids": [
+        "08091b479961d904fa6fceefedd2c3f66c031c13ea83028c1eb89f97c3468bbb"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7681a4d41054ad511d2f5338728b0fa443e50cbb8e1d779ae4df2f942163b4fe",
+      "structural_formula": "M=[[int(len(ab)=#)forbinbeta]forainalpha]"
     },
     {
       "exact_formula_ids": [
@@ -2192221,6 +2192685,14 @@
     },
     {
       "exact_formula_ids": [
+        "59fd74a16679fe8fc88b09ce1f00ab8619cbca21ff667b2c593c0716e5edec18"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3ea8781b00231e766db41b87cffd6ba3352a7ef8064242a6f5ffd1bb087392d3",
+      "structural_formula": "alpha=[gs[#]]+[gforgingsifg!=gs[#]andlen(gs[#]g)=#]"
+    },
+    {
+      "exact_formula_ids": [
         "339e1aea129677b3ec9685305b6f3441523ea7ae00d5d41f797f62afd8d7d1e3"
       ],
       "exact_member_count": 1,
@@ -2202430,6 +2202902,14 @@
     },
     {
       "exact_formula_ids": [
+        "d9374cfc7042f03a4635629139ce0608a6d55c753ccd24dd7498ed1a8ffcadd4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0a5e8829566f0d8ddab17b0d6ddfcb100d003c2b08b64e8591369b49ab9edede",
+      "structural_formula": "assertall(len(ab)=#fora,bincombinations(alpha,#))"
+    },
+    {
+      "exact_formula_ids": [
         "ce70284139e0e9eebad4615fc7ef3ad00915d0dcafc67bf2ff22abe079823b12"
       ],
       "exact_member_count": 1,
@@ -2205582,6 +2206062,14 @@
     },
     {
       "exact_formula_ids": [
+        "1d9389a01bd3bebb1765af02e8e51c7b70731f1ba72064bf01363478376cd377"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "91256b0057026530080b26e22d764491cbcd08f5478084ddef8dae82ff2110ba",
+      "structural_formula": "assertlen(alpha)=#andlen(beta)=#"
+    },
+    {
+      "exact_formula_ids": [
         "7630d8f43bcaf5912e14f92dfe69487eb54275787655f4b877eff20f82f5ee41"
       ],
       "exact_member_count": 1,
@@ -2206257,9 +2206745,10 @@
     },
     {
       "exact_formula_ids": [
-        "4661cc02e0a7af371b4f9f453aa8c4dcf8397c698d9ab54ce8fb24cbbe7fda4c"
+        "4661cc02e0a7af371b4f9f453aa8c4dcf8397c698d9ab54ce8fb24cbbe7fda4c",
+        "90545ce762d30de57e20e226ae430e9f8735db9559bdc8c5c4ece603af037c20"
       ],
-      "exact_member_count": 1,
+      "exact_member_count": 2,
       "structural_family_id": "7643311f3746cfdb7338b1e8d2beea62139911d5170da77b5c0c3be4849bd0ea",
       "structural_formula": "assertlen(points)=#andlen(singular)=#andlen(nonsingular)=#"
     },
@@ -2301113,6 +2301602,14 @@
     },
     {
       "exact_formula_ids": [
+        "37ea982868c2fbb87340bce3d574e9d2d482dd99a34ad834376a6ccf840a0b06"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8faae0d718a1ba4f95c44c796ed2b98e822f4e55659700afc4621f4c782103b4",
+      "structural_formula": "nonsingular=[xforxinpointsifquadratic(x)=#]"
+    },
+    {
+      "exact_formula_ids": [
         "d69f45ff31fd6850b0e25fae816f85da7ed184a21cb632457644a3471d6db758"
       ],
       "exact_member_count": 1,
@@ -2373745,6 +2374242,14 @@
     },
     {
       "exact_formula_ids": [
+        "698a2c94dfe1798358bf65fc07e920f857ee9eb8b1c02cefd7b00cabbe0f6b61"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "77b659c84cdf785be64c4d905c6ee35abccdd7f2e61449037c3ea8d6c493c87d",
+      "structural_formula": "singular=[xforxinpointsifxandquadratic(x)=#]"
+    },
+    {
+      "exact_formula_ids": [
         "6923aa5b936b12b59b986f5b10259bafa3aada59ec2a55c5e3a39e9b905e8b0f"
       ],
       "exact_member_count": 1,
@@ -2412902,20 +2413407,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92375769,
-    "exact_formula_families": 65103,
-    "files_scanned": 12698,
-    "formula_occurrences": 71239,
+    "bytes_scanned": 92390139,
+    "exact_formula_families": 65117,
+    "files_scanned": 12700,
+    "formula_occurrences": 71253,
     "status_occurrences": {
-      "certified_or_theorem": 5350,
+      "certified_or_theorem": 5352,
       "killed_or_retracted": 1933,
       "open_or_conditional": 2405,
       "preregistered": 36,
       "retrospective_fit": 5418,
-      "unclassified": 56097
+      "unclassified": 56109
     },
-    "structural_families": 63393
+    "structural_families": 63406
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "5e85a94f312dc67ec67478fd72167b14dcc32b0ad18e0005cbf6d8ca151d8126"
+  "universe_sha256": "0a40e0444574c8fb7ae8e02dfc334fcf85f3b4e403978907ef6069bbf5af9017"
 }
