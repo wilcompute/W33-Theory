@@ -72,3 +72,13 @@ def test_native_four_term_shortcut_and_symmetry_selection_limits():
     assert c['matter_selector']['GL4_F2_orbit_of_28_nondegenerate_forms']==28
     assert c['native_reflection']['finite_F2_fixes_4_off_quadric_points']
     assert not c['native_reflection']['Lorentzian_time_or_photon_helicities_derived']
+
+
+def test_explicit_28_CSS_seven_plus_six_checks_and_one_error_syndromes():
+    c=certificate()['explicit_28_CSS_checks']
+    assert c['quantum_CSS_parameters']==[28,15,3]
+    assert (c['X_check_rank'],c['Z_check_rank'])==(7,6)
+    assert c['dual_quadratic_equals_C1_plus_allones']
+    assert c['all_28_single_qubit_Pauli_error_locations_identifiable']
+    assert c['single_X_error_syndrome_is_off_quadric_point']
+    assert c['single_Z_error_syndrome_is_off_quadric_point_with_top_bit_1']

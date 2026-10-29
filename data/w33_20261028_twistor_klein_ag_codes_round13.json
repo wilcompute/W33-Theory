@@ -562,6 +562,43 @@
       "32": 63
     }
   },
+  "explicit_28_CSS_checks": {
+    "quantum_CSS_parameters": [
+      28,
+      15,
+      3
+    ],
+    "X_check_rank": 7,
+    "Z_check_rank": 6,
+    "X_checks_bitsets": [
+      156498602,
+      178955260,
+      214748367,
+      252645135,
+      267390960,
+      268431360,
+      268435455
+    ],
+    "Z_checks_bitsets": [
+      156498602,
+      178955260,
+      214748367,
+      252645135,
+      267390960,
+      268431360
+    ],
+    "dual_quadratic_equals_C1_plus_allones": true,
+    "X_check_code_weight_enumerator": {
+      "0": 1,
+      "12": 63,
+      "16": 63,
+      "28": 1
+    },
+    "single_X_error_syndrome_is_off_quadric_point": true,
+    "single_Z_error_syndrome_is_off_quadric_point_with_top_bit_1": true,
+    "all_28_single_qubit_Pauli_error_locations_identifiable": true,
+    "physical_measurement_circuit_implemented": false
+  },
   "other_five_frontiers": {
     "smaller_than_six_gauge_repair": {
       "four_term_common_e0_e1_activation_disproved": true,

@@ -217,6 +217,42 @@ def other_five_frontiers():
     }
 
 
+def explicit_28_CSS_checks():
+    """A seven-X/six-Z stabilizer description and all 28 one-error syndromes.
+
+    Constructed from the actual six Plucker coordinate evaluation vectors,
+    not arbitrary generators of a 21-dimensional quadratic code.
+    """
+    points=[p for p in range(1,64) if Q(p)==1]
+    coord=evaluation_rows(points,1)
+    assert len(coord)==6 and len(rref(coord,28)[0])==6
+    ones=(1<<28)-1
+    quadratic=evaluation_rows(points,2)
+    dual=null_basis(quadratic,28)
+    x_checks=coord+[ones]
+    z_checks=coord
+    assert len(rref(x_checks,28)[0])==7
+    assert len(rref(dual+x_checks,28)[0])==7
+    assert all((x&z).bit_count()%2==0 for x in x_checks for z in z_checks)
+    assert all((x&row).bit_count()%2==0 for x in x_checks for row in quadratic)
+    assert codeword_weight_enumerator(x_checks)=={0:1,12:63,16:63,28:1}
+    sx=[sum(((r>>i)&1)<<j for j,r in enumerate(z_checks)) for i in range(28)]
+    sz=[sum(((r>>i)&1)<<j for j,r in enumerate(x_checks)) for i in range(28)]
+    assert sx==points
+    assert sz==[p|64 for p in points]
+    assert len(set(sx))==len(set(sz))==28
+    return {'quantum_CSS_parameters':[28,15,3],
+            'X_check_rank':7,'Z_check_rank':6,
+            'X_checks_bitsets':[int(x) for x in x_checks],
+            'Z_checks_bitsets':[int(x) for x in z_checks],
+            'dual_quadratic_equals_C1_plus_allones':True,
+            'X_check_code_weight_enumerator':{'0':1,'12':63,'16':63,'28':1},
+            'single_X_error_syndrome_is_off_quadric_point':True,
+            'single_Z_error_syndrome_is_off_quadric_point_with_top_bit_1':True,
+            'all_28_single_qubit_Pauli_error_locations_identifiable':True,
+            'physical_measurement_circuit_implemented':False}
+
+
 @lru_cache(maxsize=1)
 def certificate():
     allpoints=list(range(1,64));klein=[x for x in allpoints if Q(x)==0];off=[x for x in allpoints if Q(x)]
@@ -297,6 +333,7 @@ def certificate():
                  'native_reflection_F2_action':reflection,
                  'symmetry': 'eight heptads canonically determined as 7-cliques; numbering of heptads is conventional'},
       'codes':records,'full_simplex_code':both,
+      'explicit_28_CSS_checks':explicit_28_CSS_checks(),
       'other_five_frontiers':other_five_frontiers(),
       'limits':{
         'not_a_Lorentzian_spacetime':True,

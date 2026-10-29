@@ -81,3 +81,24 @@ python -m pytest -q tests/test_w33_20261028_twistor_klein_ag_codes_round13.py
 ```
 
 **Validation status:** dedicated local tests `7/7 PASS`; exact classical codeword enumeration and 20,160-element generated group closure executed. Any whole-repo CI result is separate and must not be claimed until verified after the push.
+
+## VII. Further simplification: 13 explicit stabilizer rows and a single-Pauli syndrome decoder
+
+A stronger exact identity arose during the code audit. Let `C` be the six-dimensional coordinate-evaluation code on the 28 anisotropic bivectors, and let `1` be the length-28 all-ones word. Exhaustive binary elimination proves
+
+```text
+C is self-orthogonal;
+(C_degree2)^perp = C + span(1);
+weight_enumerator(C + 1) = 1 + 63*y^12 + 63*y^16 + y^28.
+```
+
+Thus the *entire* `[[28,15,3]]` CSS stabilizer can be specified without the 21-dimensional quadratic generator matrix:
+
+- X checks = six Plücker-coordinate evaluation rows **plus all-ones** (rank seven);
+- Z checks = six Plücker-coordinate evaluation rows (rank six).
+
+For a single-qubit X error at external point `p`, its six-component X-error syndrome (measured by the Z checks) is **exactly the six-bit Plücker coordinate p**. For a single-qubit Z error, the seven-component Z-error syndrome (measured by the X checks) is **(p,1)**. Y errors give both syndrome blocks. Every one of the 28 location syndromes is unique and nonzero. This supplies a fully explicit **single-Pauli-error syndrome lookup**, but not an actual syndrome measurement circuit, fault-tolerant threshold, or a compatible physical photon encoding.
+
+This also exhibits the direct route from the **equivariant eight-heptad labeling** of each bivector to a stabilizer decoder: label the error by its heptad pair, then convert through the canonical Plücker coordinate map. The code is projectively defined; labeling heptads 1–8 remains conventional.
+
+After this extension the targeted local regression suite passed **9/9**. The producer and its exact frozen certificate include the seven X-check and six Z-check 28-bit masks.
