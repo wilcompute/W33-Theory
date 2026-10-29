@@ -200050,6 +200050,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "918c2be3e3672c5837ac56e4c35f8f656abe558e49080e365f3438a93f70dfb0",
+      "normalized_formula": "##2.Exactq=5minimumdistance,partialq=7",
+      "numeric_literals": [
+        "2",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_front_research.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/2026-10-29_W33_five_front_research.md",
+          "raw": "## 2. Exact q=5 minimum distance, partial q=7",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "f7c0b163598c0fe27cb00ad9ca7d9c45f68a62cc8564619de4a77b374db28d73",
+      "structural_formula": "###.Exactq=#minimumdistance,partialq=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ee62127349acb3831f9f9e2577cfa91f33b3f0cd108ae1bd4c34ada8e0f32a9c",
       "normalized_formula": "##2.Nativecoupledoverlapping-octagongaugetheoryatfluxcutoffL=3",
       "numeric_literals": [
@@ -384533,6 +384562,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d37d69bed50767c6bd91a72a57e16a20ba3a04f35732665cf328b792db3d4275",
+      "normalized_formula": "-ForuniformtotalphotonlossL_eta(rho)=eta*rho+(1-eta)|vac><vac|,twoorthogonalone-photoninputshaveoutputtracedistanceetainsteadof1.Contractivityforbidsdeterministicexactrecoveryfromthatoutputaloneforeta<1.Heraldedsuccess,additionalphotonsandquantumancillas,ormattermemoryarenotexcluded",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_front_research.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 41,
+          "path": "analysis/2026-10-29_W33_five_front_research.md",
+          "raw": "- For uniform total photon loss L_eta(rho)=eta*rho+(1-eta)|vac><vac|, two orthogonal one-photon inputs have output trace distance eta instead of 1. Contractivity forbids deterministic exact recovery from that output alone for eta<1. Heralded success, additional photons and quantum ancillas, or matter memory are not excluded.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "bffb09358de765910fef2b01274ecbfe8c7069312338e6054e572f0cd773fcbf",
+      "structural_formula": "-ForuniformtotalphotonlossL_eta(rho)=eta*rho+(#-eta)|vac><vac|,twoorthogonalone-photoninputshaveoutputtracedistanceetainsteadof1.Contractivityforbidsdeterministicexactrecoveryfromthatoutputaloneforeta<#.Heraldedsuccess,additionalphotonsandquantumancillas,ormattermemoryarenotexcluded"
+    },
+    {
+      "file_count": 1,
       "formula_id": "afee9ddd8592e5fa9b7e8cbe1fc461cb2fe831c0137648fd17e4009829f0ff3a",
       "normalized_formula": "-G27D,stabilizerand1+3+3*model:https://math.univ-cotedazur.fr/~pauly/G2Theta.pdf",
       "numeric_literals": [
@@ -389041,6 +389097,35 @@
       },
       "structural_family_id": "91daed43051166b232b0810dfd86b2181f3d1ccdeffa7410ba967d5cb12dfadf",
       "structural_formula": "-The^#-characterExtandKuranishitheorem^(Pass6#):thecommutantorder`R=Z_2[S]/(S^##S)`has`Ext^#=Z/#`andKuranishiobstructioncone`xy=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f55513295b10fb5fb17981fcc5b3532cd8de96977368022e78fbfadfe753976d",
+      "normalized_formula": "-TheadjacencyCSScodehasn=820,k=80,d<=18.Exactdistanceremainsopen",
+      "numeric_literals": [
+        "18",
+        "80",
+        "820"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_front_research.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 11,
+          "path": "analysis/2026-10-29_W33_five_front_research.md",
+          "raw": "- The adjacency CSS code has n=820, k=80, d<=18. Exact distance remains open.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "c55e58e903ee9ac47b81a76e2654716554155198787c8a9e1629c6b2dfa53c9f",
+      "structural_formula": "-TheadjacencyCSScodehasn=#,k=#,d<=#.Exactdistanceremainsopen"
     },
     {
       "file_count": 1,
@@ -397218,6 +397303,42 @@
       },
       "structural_family_id": "8693c063219cb6a4d3a260fc3dd057d0d47b0d2fe5a5309ef654f8e16ac52d50",
       "structural_formula": "-q=#:#=#(YES,sinceq^#-q+#=#and(q+#)^#=#^#=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fdff22556a8d4be2d0192f56a7ef8da1fbe86e8f9d88ab37d7a48cd10a7fe3e6",
+      "normalized_formula": "-q=7:allC(400,3)=10,586,800projectedthree-pointsumsaredistinct.Nononzerokernelwordhasweight<=6.Anintersecting-linewordoutsideim(A)hasweight14.Thus^[[400,48,d]]with8<=d<=14^,notanexactdistanceassertion",
+      "numeric_literals": [
+        "10",
+        "14",
+        "3",
+        "4",
+        "400",
+        "48",
+        "586",
+        "6",
+        "7",
+        "800"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_front_research.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/2026-10-29_W33_five_front_research.md",
+          "raw": "- q=7: all C(400,3)=10,586,800 projected three-point sums are distinct. No nonzero kernel word has weight <=6. An intersecting-line word outside im(A) has weight 14. Thus **[[400,48,d]] with 8<=d<=14**, not an exact distance assertion.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "386c4ddd433a1fe1dcf892d98e78fd0cd4158a29d9b0fd9938e2797d9f9c729a",
+      "structural_formula": "-q=#:allC(#,#)=#,#,#projectedthree-pointsumsaredistinct.Nononzerokernelwordhasweight<=#.Anintersecting-linewordoutsideim(A)hasweight1#.Thus^[[#,#,d]]with8<=d<=#^,notanexactdistanceassertion"
     },
     {
       "file_count": 1,
@@ -738233,6 +738354,34 @@
       },
       "structural_family_id": "f6b3da6a734c37b20d752626323bad5b6722b9dba0ceb4b225bc9fcb14abc5a6",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_2#_round5_single_photon_1#mode_trace.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "044990bdb758288cd1b62bdd2a1088ce35a53a4567e541abbe6714fd7907102f",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_20261029_adjacency_css_distance_falsifier.json\"",
+      "numeric_literals": [
+        "0261029",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_adjacency_css_distance_falsifier.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/w33_20261029_adjacency_css_distance_falsifier.py",
+          "raw": "OUT=ROOT/\"data\"/\"w33_20261029_adjacency_css_distance_falsifier.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2ccdffb420f400e74678fa754f1af44f48c1907d3f1f00a1a6fc7d78cc9d8cef",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_2#_adjacency_css_distance_falsifier.json\""
     },
     {
       "file_count": 1,
@@ -1097643,6 +1097792,65 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5761f4ced78fb17d457e20070de748d7a803e3638ebc5d41160e684728f494a7",
+      "normalized_formula": "analysis/w33_20261029_adjacency_css_distance_falsifier.pyreconstructsadjacencysyndromes.ItdefinesadeterministiclinearprojectionF2^n->F2^64byassigningonefixedSHA256-derived64-bitcoefficienttoeachsyndromecoordinateandXORingthosepresent.Thecryptographiccollision-resistanceofSHA256isNOTassumed",
+      "numeric_literals": [
+        "0261029",
+        "3",
+        "4",
+        "56",
+        "64"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_front_research.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 17,
+          "path": "analysis/2026-10-29_W33_five_front_research.md",
+          "raw": "analysis/w33_20261029_adjacency_css_distance_falsifier.py reconstructs adjacency syndromes. It defines a deterministic linear projection F2^n -> F2^64 by assigning one fixed SHA256-derived 64-bit coefficient to each syndrome coordinate and XORing those present. The cryptographic collision-resistance of SHA256 is NOT assumed.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6e4bb7a036791341c7cc804fa65cfa623116b4bf9d726251c47c02f89722ec48",
+      "structural_formula": "analysis/w3#_2#_adjacency_css_distance_falsifier.pyreconstructsadjacencysyndromes.ItdefinesadeterministiclinearprojectionF2^n->F2^#byassigningonefixedSHA2#-derived6#-bitcoefficienttoeachsyndromecoordinateandXORingthosepresent.Thecryptographiccollision-resistanceofSHA2#isNOTassumed"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "884023fd2a3c79cc8a343cc601f95d1ed8537a895273438b203f0e2e94b84167",
+      "normalized_formula": "analysis/w33_20261029_explicit_mod2_E8_isometry.pybuildsH=ker(A)/im(A),ahyperbolicbasis,andanexplicitisometryintotheE8simple-rootlatticemodulo2,usingQ(v)=sum_iv_i+sum_{i~j}v_iv_j",
+      "numeric_literals": [
+        "0261029",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_front_research.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/2026-10-29_W33_five_front_research.md",
+          "raw": "analysis/w33_20261029_explicit_mod2_E8_isometry.py builds H=ker(A)/im(A), a hyperbolic basis, and an explicit isometry into the E8 simple-root lattice modulo 2, using Q(v)=sum_i v_i + sum_{i~j} v_i v_j.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cca1a4071bc6dbc6c0209e1e602597895b3fff9fa18e74aae60b4676528a8db4",
+      "structural_formula": "analysis/w3#_2#_explicit_mod2_E8_isometry.pybuildsH=ker(A)/im(A),ahyperbolicbasis,andanexplicitisometryintotheE8simple-rootlatticemodulo2,usingQ(v)=sum_iv_i+sum_{i~j}v_iv_j"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bfdf4f026e3522fc9cc0303ddbf310eaa35387b52b6d032fecbb6cd4ef4294c6",
       "normalized_formula": "analysis/w33_fractal_optical_switch_budget_20261023.py`separatelymodelsthe^pairwise-linksparse1-of-3design^,usingtwoidealMZItransformationsasathree-modetree.Itverifieslosslessidealportselection,attenuation,wrong-portleakage,androute-levellossaccumulation.With^illustrativeassumptionsonly^(0.2dB/MZI,0.1dBlink,0.05dBlocalgraphhop,0.05radphaseerror),20sampleddepth-threeroutesshowselected-pathlossesfrom~1.11to~5.87dB,mean~4.15dB.Thesenumbersare^notmeasurements^andmust^not^beassignedtothe40-busXORcrossbarunlessseparatelyderived",
       "numeric_literals": [
@@ -1145211,6 +1145419,62 @@
     },
     {
       "file_count": 1,
+      "formula_id": "762f793c7d35ad261ffe517092cff99a9b28af9cf87884790d6f4408222dc53f",
+      "normalized_formula": "assertresults[0][\"distance_exact\"]=10",
+      "numeric_literals": [
+        "0",
+        "10"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_adjacency_css_distance_falsifier.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/w33_20261029_adjacency_css_distance_falsifier.py",
+          "raw": "assert results[0][\"distance_exact\"]==10",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "55591cc3e26b2988b594935eb7d5af01c3e9f8816cd9d3a34b99687b8f8bdfce",
+      "structural_formula": "assertresults[#][\"distance_exact\"]=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d07f9e6a478cd9714b90a0b685a104e9d1ac4b59a884da4e0fbe5495b52c4bbf",
+      "normalized_formula": "assertresults[1][\"distance_lower_bound\"]=8",
+      "numeric_literals": [
+        "1",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_adjacency_css_distance_falsifier.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 100,
+          "path": "analysis/w33_20261029_adjacency_css_distance_falsifier.py",
+          "raw": "assert results[1][\"distance_lower_bound\"]==8",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9ac70e8ff6666808704ff3bac08f5eb0d823f69ca35146eeb59cd89d5fb4e373",
+      "structural_formula": "assertresults[#][\"distance_lower_bound\"]=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f0cbc8233c9090cb79593968040174a1cdf27f8071697f2a8b8873810e692bbc",
       "normalized_formula": "assertrev[lv][1]=fano_line_from_pair(p_prev,p_next)",
       "numeric_literals": [
@@ -1161020,6 +1161284,34 @@
       },
       "structural_family_id": "ec3eeac5a886a07c3f7593eb897eb7a2a577ce1654970d08b721f8e6c661ce65",
       "structural_formula": "basis=[G[#<<i]foriinrange(#)];sub=p4#.enum_code(basis[:#]);assertlen(sub)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "903b5720f8a25c74304baa9792eddb797460b08b126287b20614a78994b4c414",
+      "normalized_formula": "basis=[int.from_bytes(hashlib.sha256(f\"{SEED}:{i}\".encode()).digest()[:8],\"little\")",
+      "numeric_literals": [
+        "56",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_adjacency_css_distance_falsifier.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/w33_20261029_adjacency_css_distance_falsifier.py",
+          "raw": "basis=[int.from_bytes(hashlib.sha256(f\"{SEED}:{i}\".encode()).digest()[:8],\"little\")",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c2b36a0d9ecd97abdd648c1ea180fa2c8551e1830e0ce19e244da4fa2649d9a1",
+      "structural_formula": "basis=[int.from_bytes(hashlib.sha2#(f\"{SEED}:{i}\".encode()).digest()[:#],\"little\")"
     },
     {
       "file_count": 10,
@@ -1557658,6 +1557950,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f8869d455f78f3a17bdea82de4f2200a032dfe0a010d304cfa8ecf12e888a5b9",
+      "normalized_formula": "print(\"PASS:exactq=5CSSdistance;certifiedq=7distanceinterval\")",
+      "numeric_literals": [
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_adjacency_css_distance_falsifier.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 106,
+          "path": "analysis/w33_20261029_adjacency_css_distance_falsifier.py",
+          "raw": "print(\"PASS: exact q=5 CSS distance; certified q=7 distance interval\")",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "944d4d622d42e9ea8de23b8189a6b93a63acf46ef1b98c1e7b6888d31de72d6a",
+      "structural_formula": "print(\"PASS:exactq=#CSSdistance;certifiedq=#distanceinterval\")"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ff39203abb163f7f1bba648b72b1a64d43254a826960bb85631adf9be804ee5e",
       "normalized_formula": "print(\"PASS_5744_5751\",json.dumps({\"code\":R[\"pass_5744\"][\"parameters\"],\"css\":R[\"pass_5746\"][\"standard_css_consequence\"],\"dual_d\":R[\"pass_5747\"][\"dual_distance\"],\"logical_graph\":R[\"pass_5750\"][\"srg\"],\"overlays\":R[\"pass_5751\"][\"symplectic_overlays\"]},sort_keys=True))",
       "numeric_literals": [
@@ -1908723,9 +1909043,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T14:09:44-04:00",
+  "frozen_at": "2026-10-29T14:26:22-04:00",
   "pass": 398,
-  "repository_head": "4b93784c110e6a9361ca872d5af84f0825df6667",
+  "repository_head": "cdde9b06ba7867f318c47059af8f2038f8de043d",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1965037,6 +1965357,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b06801f9cf385c313b2cc5a3cf43154c9b7d2b56367fab7492d9e6d0dc298620",
       "structural_formula": "###.Chirality/orderandgaugeholonomy:#->#cycles"
+    },
+    {
+      "exact_formula_ids": [
+        "918c2be3e3672c5837ac56e4c35f8f656abe558e49080e365f3438a93f70dfb0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f7c0b163598c0fe27cb00ad9ca7d9c45f68a62cc8564619de4a77b374db28d73",
+      "structural_formula": "###.Exactq=#minimumdistance,partialq=#"
     },
     {
       "exact_formula_ids": [
@@ -2035806,6 +2036134,14 @@
     },
     {
       "exact_formula_ids": [
+        "d37d69bed50767c6bd91a72a57e16a20ba3a04f35732665cf328b792db3d4275"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bffb09358de765910fef2b01274ecbfe8c7069312338e6054e572f0cd773fcbf",
+      "structural_formula": "-ForuniformtotalphotonlossL_eta(rho)=eta*rho+(#-eta)|vac><vac|,twoorthogonalone-photoninputshaveoutputtracedistanceetainsteadof1.Contractivityforbidsdeterministicexactrecoveryfromthatoutputaloneforeta<#.Heraldedsuccess,additionalphotonsandquantumancillas,ormattermemoryarenotexcluded"
+    },
+    {
+      "exact_formula_ids": [
         "afee9ddd8592e5fa9b7e8cbe1fc461cb2fe831c0137648fd17e4009829f0ff3a"
       ],
       "exact_member_count": 1,
@@ -2037075,6 +2037411,14 @@
       "exact_member_count": 1,
       "structural_family_id": "91daed43051166b232b0810dfd86b2181f3d1ccdeffa7410ba967d5cb12dfadf",
       "structural_formula": "-The^#-characterExtandKuranishitheorem^(Pass6#):thecommutantorder`R=Z_2[S]/(S^##S)`has`Ext^#=Z/#`andKuranishiobstructioncone`xy=#"
+    },
+    {
+      "exact_formula_ids": [
+        "f55513295b10fb5fb17981fcc5b3532cd8de96977368022e78fbfadfe753976d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c55e58e903ee9ac47b81a76e2654716554155198787c8a9e1629c6b2dfa53c9f",
+      "structural_formula": "-TheadjacencyCSScodehasn=#,k=#,d<=#.Exactdistanceremainsopen"
     },
     {
       "exact_formula_ids": [
@@ -2039331,6 +2039675,14 @@
       "exact_member_count": 1,
       "structural_family_id": "8693c063219cb6a4d3a260fc3dd057d0d47b0d2fe5a5309ef654f8e16ac52d50",
       "structural_formula": "-q=#:#=#(YES,sinceq^#-q+#=#and(q+#)^#=#^#=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "fdff22556a8d4be2d0192f56a7ef8da1fbe86e8f9d88ab37d7a48cd10a7fe3e6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "386c4ddd433a1fe1dcf892d98e78fd0cd4158a29d9b0fd9938e2797d9f9c729a",
+      "structural_formula": "-q=#:allC(#,#)=#,#,#projectedthree-pointsumsaredistinct.Nononzerokernelwordhasweight<=#.Anintersecting-linewordoutsideim(A)hasweight1#.Thus^[[#,#,d]]with8<=d<=#^,notanexactdistanceassertion"
     },
     {
       "exact_formula_ids": [
@@ -2107516,6 +2107868,14 @@
       "exact_member_count": 1,
       "structural_family_id": "30a110aacccf80f48ca385fd5076ebf146ff85478fff7feda22c6518460482aa",
       "structural_formula": "OUT=ROOT/\"data\"/\"bt1#_symmetric_q4_gauge_quotient.json\""
+    },
+    {
+      "exact_formula_ids": [
+        "044990bdb758288cd1b62bdd2a1088ce35a53a4567e541abbe6714fd7907102f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2ccdffb420f400e74678fa754f1af44f48c1907d3f1f00a1a6fc7d78cc9d8cef",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_2#_adjacency_css_distance_falsifier.json\""
     },
     {
       "exact_formula_ids": [
@@ -2201432,6 +2201792,22 @@
     },
     {
       "exact_formula_ids": [
+        "5761f4ced78fb17d457e20070de748d7a803e3638ebc5d41160e684728f494a7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6e4bb7a036791341c7cc804fa65cfa623116b4bf9d726251c47c02f89722ec48",
+      "structural_formula": "analysis/w3#_2#_adjacency_css_distance_falsifier.pyreconstructsadjacencysyndromes.ItdefinesadeterministiclinearprojectionF2^n->F2^#byassigningonefixedSHA2#-derived6#-bitcoefficienttoeachsyndromecoordinateandXORingthosepresent.Thecryptographiccollision-resistanceofSHA2#isNOTassumed"
+    },
+    {
+      "exact_formula_ids": [
+        "884023fd2a3c79cc8a343cc601f95d1ed8537a895273438b203f0e2e94b84167"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cca1a4071bc6dbc6c0209e1e602597895b3fff9fa18e74aae60b4676528a8db4",
+      "structural_formula": "analysis/w3#_2#_explicit_mod2_E8_isometry.pybuildsH=ker(A)/im(A),ahyperbolicbasis,andanexplicitisometryintotheE8simple-rootlatticemodulo2,usingQ(v)=sum_iv_i+sum_{i~j}v_iv_j"
+    },
+    {
+      "exact_formula_ids": [
         "4ecc84382fe00821ccd0f3344a912ce16910790307b30523469160bc6be30d41"
       ],
       "exact_member_count": 1,
@@ -2214529,6 +2214905,22 @@
     },
     {
       "exact_formula_ids": [
+        "762f793c7d35ad261ffe517092cff99a9b28af9cf87884790d6f4408222dc53f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "55591cc3e26b2988b594935eb7d5af01c3e9f8816cd9d3a34b99687b8f8bdfce",
+      "structural_formula": "assertresults[#][\"distance_exact\"]=#"
+    },
+    {
+      "exact_formula_ids": [
+        "d07f9e6a478cd9714b90a0b685a104e9d1ac4b59a884da4e0fbe5495b52c4bbf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9ac70e8ff6666808704ff3bac08f5eb0d823f69ca35146eeb59cd89d5fb4e373",
+      "structural_formula": "assertresults[#][\"distance_lower_bound\"]=#"
+    },
+    {
+      "exact_formula_ids": [
         "401b62476fed74369a1661f1542c04ea4c9767fbb1a195059b1255e60df3d493"
       ],
       "exact_member_count": 1,
@@ -2218828,6 +2219220,14 @@
       "exact_member_count": 1,
       "structural_family_id": "ec3eeac5a886a07c3f7593eb897eb7a2a577ce1654970d08b721f8e6c661ce65",
       "structural_formula": "basis=[G[#<<i]foriinrange(#)];sub=p4#.enum_code(basis[:#]);assertlen(sub)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "903b5720f8a25c74304baa9792eddb797460b08b126287b20614a78994b4c414"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c2b36a0d9ecd97abdd648c1ea180fa2c8551e1830e0ce19e244da4fa2649d9a1",
+      "structural_formula": "basis=[int.from_bytes(hashlib.sha2#(f\"{SEED}:{i}\".encode()).digest()[:#],\"little\")"
     },
     {
       "exact_formula_ids": [
@@ -2326352,6 +2326752,14 @@
     },
     {
       "exact_formula_ids": [
+        "f8869d455f78f3a17bdea82de4f2200a032dfe0a010d304cfa8ecf12e888a5b9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "944d4d622d42e9ea8de23b8189a6b93a63acf46ef1b98c1e7b6888d31de72d6a",
+      "structural_formula": "print(\"PASS:exactq=#CSSdistance;certifiedq=#distanceinterval\")"
+    },
+    {
+      "exact_formula_ids": [
         "ff39203abb163f7f1bba648b72b1a64d43254a826960bb85631adf9be804ee5e"
       ],
       "exact_member_count": 1,
@@ -2418885,20 +2419293,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92632207,
-    "exact_formula_families": 65264,
-    "files_scanned": 12740,
-    "formula_occurrences": 71407,
+    "bytes_scanned": 92656374,
+    "exact_formula_families": 65275,
+    "files_scanned": 12745,
+    "formula_occurrences": 71418,
     "status_occurrences": {
-      "certified_or_theorem": 5366,
+      "certified_or_theorem": 5367,
       "killed_or_retracted": 1953,
-      "open_or_conditional": 2414,
+      "open_or_conditional": 2416,
       "preregistered": 36,
-      "retrospective_fit": 5432,
-      "unclassified": 56206
+      "retrospective_fit": 5433,
+      "unclassified": 56213
     },
-    "structural_families": 63550
+    "structural_families": 63561
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "c332523a9227f9a4875205a5c56f452e9a1e4e09db7f34ba484b393ec7dc5283"
+  "universe_sha256": "598d6292dfcd73c34c30366cd3930bfc0f12ca86aff069e653f1f5683fc3a3c1"
 }
