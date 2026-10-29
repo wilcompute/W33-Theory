@@ -103931,6 +103931,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "430150f9066e2e3bd3a88f0566006b1a631a54b0fa172ee18c56abb33fef3c3a",
+      "normalized_formula": "\"formula\":\"V(g)=1/10000sum_i(1-cos(g_i))+sum_{a=1}^6w_a(1-cos(q_a.g))\"",
+      "numeric_literals": [
+        "1",
+        "10000",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_three_mixed_loop_minimal_maxwell.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 178,
+          "path": "analysis/w33_20261028_three_mixed_loop_minimal_maxwell.py",
+          "raw": "\"formula\": \"V(g)=1/10000 sum_i(1-cos(g_i))+sum_{a=1}^6 w_a(1-cos(q_a.g))\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bee9fa8e04360320abc7f9e8da6477d54b85cd2d2a1e1488fd56fbaaf92b2e9e",
+      "structural_formula": "\"formula\":\"V(g)=#/#sum_i(#-cos(g_i))+sum_{a=#}^#w_a(#-cos(q_a.g))\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "4480a3be5d1c432026dd7de5fc29203097fc687a805161d0e69815abd53ab114",
       "normalized_formula": "\"formula\":\"V=sum_i(u_i/u_i(p)-1)^2\"",
       "numeric_literals": [
@@ -189934,6 +189963,33 @@
       },
       "structural_family_id": "2a28b915944b768a64061195a4c0abb7455f4643c5ad35e111b5684ce558febc",
       "structural_formula": "\"unique_integral_zero_one_solution\":gram_solutions=[{c:#},{c:sp.Rational(#,#)}]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "caf2a1b633d16cf1d27b5a39cf98cbad509745711682e613200dd9cb9c11fd6b",
+      "normalized_formula": "\"unique_minimum_in_g_torus\":\"g=0modulo2pi\"",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_three_mixed_loop_minimal_maxwell.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 182,
+          "path": "analysis/w33_20261028_three_mixed_loop_minimal_maxwell.py",
+          "raw": "\"unique_minimum_in_g_torus\": \"g=0 modulo 2pi\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "eec6bfaf61428e0e9793bbab2684a38ad7099cfe58cfe1c7b53648a83ba16ab1",
+      "structural_formula": "\"unique_minimum_in_g_torus\":\"g=#modulo2pi\""
     },
     {
       "file_count": 1,
@@ -376614,6 +376670,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f149bd7fafad33d796b34d5a7b2d4929b97aa3e1e9cd2ad4960df7d7b75ba873",
+      "normalized_formula": "+sum_(a=1)^6w_a(1-cos(q_a.g))",
+      "numeric_literals": [
+        "1",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 102,
+          "path": "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md",
+          "raw": "+ sum_(a=1)^6 w_a (1-cos(q_a . g))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2038faaab5694a5843282d392ac34201231045d78981072f9e47ce921a6277e6",
+      "structural_formula": "+sum_(a=#)^#w_a(#-cos(q_a.g))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "05c0be29bd09108cbf8a41de30f03654477f6e4835e8eeb458b895b643adb1c9",
       "normalized_formula": "+sum_iM[i,c]*C[a,b,i]=0mod3",
       "numeric_literals": [
@@ -405639,6 +405723,34 @@
       },
       "structural_family_id": "44b0a747e22bbc0e90febcdb4f630941b90c9aa61b992a54851a0762e8ef9230",
       "structural_formula": "#.^Localedgeonsitemass^`H_local=[#,B\u2020;B,mI1#]`moves8#zeromodestoE=m,buteachacousticpairchangesto`E\u00b1=(m\u00b1sqrt(m2#\u03bb))/#`,andnearzeromomentum`E_\u2212\u2248\u2212\u03bb/m~\u2212k2`.Directmomentumhalvinggives|E(k)/E(k/#)|\u2248^#^,ratherthan2"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "79d87fa62b704a8bf9547a40b09b890f0538ce4e5bd72954edb6ae2e00aaa359",
+      "normalized_formula": "1.^Microscopicactionselection:^deriveapreferencefortheta=-2",
+      "numeric_literals": [
+        "-2",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 165,
+          "path": "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md",
+          "raw": "1. **Microscopic action selection:** derive a preference for theta=-2",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "3522719dd894a0c6525dffb03a0f51cc78b8b8ee72d2051d756cbab862b63e68",
+      "structural_formula": "#.^Microscopicactionselection:^deriveapreferencefortheta=#"
     },
     {
       "file_count": 1,
@@ -569446,6 +569558,33 @@
       },
       "structural_family_id": "c4e3f44b7b83aa4000f33deafad0c1353898dd8cd462142d461e0e11a30ce231",
       "structural_formula": "Ateitherendpoint`t=#,#`,rankcollapsesto4#,with^#zeromodes^;throughouttheopenintervaltheexactprotectedcyclekernelis8#D.Thepoint/line1#-dimensionalirreduciblesbecomedegenerateat(t=#/#)ina^positive-energysector^.Thisisamathematicallytunabledualityandausefulhardwarearchitecturecomparison,notthesameasthepreviousA6/A3#crossing,noraphysicalquantum-gravitytheory"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5dd1916345cd0b089ee81e2d6069178dc60a4bca5d57189c0260b9f25fbcce62",
+      "normalized_formula": "Ateitherendpointtheta=+/-2,thecouplingbecomes^positive",
+      "numeric_literals": [
+        "-2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 42,
+          "path": "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md",
+          "raw": "At either endpoint theta=+/-2, the coupling becomes **positive",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "db90ba88329b0d5f269d1238068abd84683380b55214d4f719b70403f7c2a283",
+      "structural_formula": "Ateitherendpointtheta=+/#,thecouplingbecomes^positive"
     },
     {
       "file_count": 1,
@@ -869585,6 +869724,35 @@
       },
       "structural_family_id": "6bea56e6ad2d7e3ec283c6bcc6474a9f08779dd960ae4fee5e0c8de4a60eb54d",
       "structural_formula": "V(f)=sum_qw_q(#-cos(q.f)),w_q>#,qinZ^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a06c7203b6c34c8a993d72788b12712656925c3c639bee064d426e5aa48c87de",
+      "normalized_formula": "V(g)=1/10000sum_(i=1)^3(1-cosg_i)",
+      "numeric_literals": [
+        "1",
+        "10000",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 101,
+          "path": "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md",
+          "raw": "V(g) = 1/10000 sum_(i=1)^3 (1 - cos g_i)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "04f61c26b4d122707f41e10a7a2572b27b10ea9135803f4d1eb8b1b4be474568",
+      "structural_formula": "V(g)=#/#sum_(i=#)^#(#-cosg_i)"
     },
     {
       "file_count": 1,
@@ -1325297,6 +1325465,33 @@
       },
       "structural_family_id": "7cf3cee0f0bef960d184ef5e622dfc884471d658d42a1d49a6afcd1737b37d8b",
       "structural_formula": "for(i,j),a,binzip(pairs,theta[d:d+n],theta[d+n:]):E[i,j]=a+#j*b;E[j,i]=a-#j*b"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "207bc11227745a5da70fd495696a0eb08600f3a5149ad0dacb2b3294082de66f",
+      "normalized_formula": "for-2<theta<2",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/2026-10-28_three_mixed_loop_minimal_maxwell.md",
+          "raw": "for -2<theta<2.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ac71616e0484f1748b1f3e3091f61730f7d2fd439cc81a806d6da0d0c2344586",
+      "structural_formula": "for-#<theta<#"
     },
     {
       "file_count": 1,
@@ -1900104,9 +1900299,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-27T20:55:47-04:00",
+  "frozen_at": "2026-10-28T22:07:10-04:00",
   "pass": 398,
-  "repository_head": "c12f80458c9eee546280f056d731ae98aa176d73",
+  "repository_head": "9baf04f1752fec07d95f6d6fa0dedf44a116f9e5",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1929220,6 +1929415,14 @@
     },
     {
       "exact_formula_ids": [
+        "430150f9066e2e3bd3a88f0566006b1a631a54b0fa172ee18c56abb33fef3c3a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bee9fa8e04360320abc7f9e8da6477d54b85cd2d2a1e1488fd56fbaaf92b2e9e",
+      "structural_formula": "\"formula\":\"V(g)=#/#sum_i(#-cos(g_i))+sum_{a=#}^#w_a(#-cos(q_a.g))\""
+    },
+    {
+      "exact_formula_ids": [
         "4480a3be5d1c432026dd7de5fc29203097fc687a805161d0e69815abd53ab114"
       ],
       "exact_member_count": 1,
@@ -1953331,6 +1953534,14 @@
     },
     {
       "exact_formula_ids": [
+        "caf2a1b633d16cf1d27b5a39cf98cbad509745711682e613200dd9cb9c11fd6b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "eec6bfaf61428e0e9793bbab2684a38ad7099cfe58cfe1c7b53648a83ba16ab1",
+      "structural_formula": "\"unique_minimum_in_g_torus\":\"g=#modulo2pi\""
+    },
+    {
+      "exact_formula_ids": [
         "86dd91475ae81d29e5e5a355bd3fa88f3fdc7af63eab6810eb8086b68f23798e"
       ],
       "exact_member_count": 1,
@@ -1963846,6 +1964057,14 @@
       "exact_member_count": 1,
       "structural_family_id": "64b3940c53ff9235e69b69dbc39c132d71c35dd3202d51ca8d9086f98203c6aa",
       "structural_formula": "#.^Localqutritgauge:^`#->#x3`refinestoapoint-selectedC3torsor;theouterfinitesignsuppliesreflectionparitybutnotanorigin"
+    },
+    {
+      "exact_formula_ids": [
+        "79d87fa62b704a8bf9547a40b09b890f0538ce4e5bd72954edb6ae2e00aaa359"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "3522719dd894a0c6525dffb03a0f51cc78b8b8ee72d2051d756cbab862b63e68",
+      "structural_formula": "#.^Microscopicactionselection:^deriveapreferencefortheta=#"
     },
     {
       "exact_formula_ids": [
@@ -2025675,6 +2025894,14 @@
     },
     {
       "exact_formula_ids": [
+        "f149bd7fafad33d796b34d5a7b2d4929b97aa3e1e9cd2ad4960df7d7b75ba873"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2038faaab5694a5843282d392ac34201231045d78981072f9e47ce921a6277e6",
+      "structural_formula": "+sum_(a=#)^#w_a(#-cos(q_a.g))"
+    },
+    {
+      "exact_formula_ids": [
         "05c0be29bd09108cbf8a41de30f03654477f6e4835e8eeb458b895b643adb1c9"
       ],
       "exact_member_count": 1,
@@ -2053293,6 +2053520,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c4e3f44b7b83aa4000f33deafad0c1353898dd8cd462142d461e0e11a30ce231",
       "structural_formula": "Ateitherendpoint`t=#,#`,rankcollapsesto4#,with^#zeromodes^;throughouttheopenintervaltheexactprotectedcyclekernelis8#D.Thepoint/line1#-dimensionalirreduciblesbecomedegenerateat(t=#/#)ina^positive-energysector^.Thisisamathematicallytunabledualityandausefulhardwarearchitecturecomparison,notthesameasthepreviousA6/A3#crossing,noraphysicalquantum-gravitytheory"
+    },
+    {
+      "exact_formula_ids": [
+        "5dd1916345cd0b089ee81e2d6069178dc60a4bca5d57189c0260b9f25fbcce62"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "db90ba88329b0d5f269d1238068abd84683380b55214d4f719b70403f7c2a283",
+      "structural_formula": "Ateitherendpointtheta=+/#,thecouplingbecomes^positive"
     },
     {
       "exact_formula_ids": [
@@ -2134492,6 +2134727,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6bea56e6ad2d7e3ec283c6bcc6474a9f08779dd960ae4fee5e0c8de4a60eb54d",
       "structural_formula": "V(f)=sum_qw_q(#-cos(q.f)),w_q>#,qinZ^#"
+    },
+    {
+      "exact_formula_ids": [
+        "a06c7203b6c34c8a993d72788b12712656925c3c639bee064d426e5aa48c87de"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "04f61c26b4d122707f41e10a7a2572b27b10ea9135803f4d1eb8b1b4be474568",
+      "structural_formula": "V(g)=#/#sum_(i=#)^#(#-cosg_i)"
     },
     {
       "exact_formula_ids": [
@@ -2255312,6 +2255555,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7cf3cee0f0bef960d184ef5e622dfc884471d658d42a1d49a6afcd1737b37d8b",
       "structural_formula": "for(i,j),a,binzip(pairs,theta[d:d+n],theta[d+n:]):E[i,j]=a+#j*b;E[j,i]=a-#j*b"
+    },
+    {
+      "exact_formula_ids": [
+        "207bc11227745a5da70fd495696a0eb08600f3a5149ad0dacb2b3294082de66f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ac71616e0484f1748b1f3e3091f61730f7d2fd439cc81a806d6da0d0c2344586",
+      "structural_formula": "for-#<theta<#"
     },
     {
       "exact_formula_ids": [
@@ -2407934,20 +2408185,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92125415,
-    "exact_formula_families": 64969,
-    "files_scanned": 12673,
-    "formula_occurrences": 71104,
+    "bytes_scanned": 92142013,
+    "exact_formula_families": 64976,
+    "files_scanned": 12675,
+    "formula_occurrences": 71111,
     "status_occurrences": {
       "certified_or_theorem": 5323,
       "killed_or_retracted": 1930,
       "open_or_conditional": 2399,
       "preregistered": 36,
       "retrospective_fit": 5414,
-      "unclassified": 56002
+      "unclassified": 56009
     },
-    "structural_families": 63259
+    "structural_families": 63266
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "abd122de4a4c49301793fc673c2a3f793729767b7a36412494d944e86eee7507"
+  "universe_sha256": "f819c7386f17007135ca1a35e2733bdd32e0bd8a1b64b8a0c81d9b9f47ec01f0"
 }
