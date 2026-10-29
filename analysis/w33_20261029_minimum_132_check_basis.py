@@ -5,10 +5,22 @@ Also exhibits single-ancilla hook faults beyond t=2 correction.
 import itertools,json
 from collections import Counter
 
-CHECKS_HEX=['0x101072041','0x8040201f','0x8812140060','0x312220a00',
-'0x31c0020104','0x5044090060','0x424c80082','0x244400ca00',
-'0x40201010b8','0x882800c480','0x2049410402','0x2428220060',
-'0x100804391','0x9282080402','0x84011b004','0x80b1184644']
+CHECKS_HEX=['0x40201010b8',
+'0x402011252',
+'0x312220a00',
+'0x8801890a00',
+'0x200b82021',
+'0x41024a402',
+'0x882800c480',
+'0x80040c6104',
+'0x328091100',
+'0x4990010082',
+'0x1042d00208',
+'0x1c80808041',
+'0x8023421004',
+'0x4015440808',
+'0x31c0020104',
+'0x4c9124922']
 
 def graph():
  def norm(v):
@@ -49,7 +61,7 @@ def verify():
  assert all(syndrome(A,x)==0 for x in M)
  assert sum(x.bit_count() for x in M)==132
  degrees=[sum((x>>i)&1 for x in M) for i in range(40)]
- assert max(degrees)==5 and min(degrees)>=2
+ assert max(degrees)==4 and min(degrees)>=1
  leader={0:0}
  for w in (1,2):
   for indices in itertools.combinations(range(40),w):
