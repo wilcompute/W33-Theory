@@ -1,0 +1,266 @@
+{
+  "schema": "w33.toe.20261028.round12.five_frontiers.certificate",
+  "source": "analysis/w33_20261028_round12_five_frontiers.py",
+  "status": "Independent exact integer/rational mathematics and 81-point finite-field rank audits; no complete TOE",
+  "matter": {
+    "common_kernel_response": [
+      [
+        120,
+        0
+      ],
+      [
+        0,
+        72
+      ]
+    ],
+    "eta_1_split": [
+      [
+        130,
+        10
+      ],
+      [
+        10,
+        82
+      ]
+    ],
+    "eta_1_ratio": "65/41",
+    "physical_endpoint_selected": false
+  },
+  "Bloch": {
+    "order_three_grid_size": 81,
+    "samples": [
+      {
+        "p": 103,
+        "roots": [
+          1,
+          46,
+          56
+        ],
+        "mixed_rank_histogram": {
+          "105": 1,
+          "107": 10,
+          "108": 70
+        }
+      },
+      {
+        "p": 109,
+        "roots": [
+          1,
+          45,
+          63
+        ],
+        "mixed_rank_histogram": {
+          "105": 1,
+          "107": 10,
+          "108": 70
+        }
+      }
+    ],
+    "ten_exception_exponents": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        2
+      ]
+    ],
+    "one_harmonic_candidate": "epsilon(1-cos(f0(x+e0+e3)-f0(x)))",
+    "candidate_fixes_all_10_grid_exceptions_in_both_primes": true,
+    "continuous_torus_proof": false,
+    "prime_specific_5th_root_rank_control": [
+      {
+        "p": 101,
+        "rank": 107
+      },
+      {
+        "p": 151,
+        "rank": 108
+      },
+      {
+        "p": 181,
+        "rank": 108
+      }
+    ],
+    "warning": "Prime-specific modular rank drops can be artifacts; known cyclotomic exact witness remains valid.",
+    "one_harmonic_global_falsifier": {
+      "original_character": [
+        "1",
+        "(-1+2i*sqrt(30))/11",
+        "(1+2i*sqrt(30))/11",
+        "1"
+      ],
+      "h_character": [
+        "-1",
+        "(1+2i*sqrt(30))/11",
+        "(1+2i*sqrt(30))/11",
+        "(1+2i*sqrt(30))/11"
+      ],
+      "Q_exact_zero": true,
+      "candidate_translation_e0_plus_e3_factor_one": true,
+      "full_mixed_curl_rank_by_existing_global_theorem": 107,
+      "six_commutator_curl_rank_by_existing_global_theorem": 108,
+      "conclusion": "Candidate one cosine fails on exact algebraic unitary character outside third-root grid."
+    },
+    "one_harmonic_candidate_disproved": true
+  },
+  "rotor": {
+    "G": [
+      [
+        794,
+        -42,
+        768
+      ],
+      [
+        -42,
+        22,
+        -52
+      ],
+      [
+        768,
+        -52,
+        766
+      ]
+    ],
+    "G-7I_leading_minors": [
+      787,
+      10041,
+      335
+    ],
+    "shortest_nonzero_integer_norm_squared": 22,
+    "minimizers": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "potential_weight_sum": "7009/28125",
+    "zero_to_excited_coupling_norm_squared": "297803260427/44651250000000",
+    "g": "1/5",
+    "lower_energy_bound_formula": "(W+11g^2-sqrt((W-11g^2)^2+4b^2))/2",
+    "lower_energy_approx": 0.2190263763753912,
+    "upper_energy_exact": "7009/28125",
+    "validity": "rigorous three-mode infinite electric-flux bound, NOT infinite spatial gauge spectrum"
+  },
+  "parity": {
+    "index": 2,
+    "quotient": "Z2",
+    "even_gram": [
+      [
+        10,
+        0,
+        -6
+      ],
+      [
+        0,
+        12,
+        -6
+      ],
+      [
+        -6,
+        -6,
+        12
+      ]
+    ],
+    "odd_primitive": [
+      2,
+      -1,
+      1,
+      0
+    ],
+    "odd_norm": 18,
+    "physical_orbifold_built": false
+  },
+  "H4_E6": {
+    "H4_Weyl_order": 14400,
+    "H4_rotation_order": 7200,
+    "E6_Weyl_order": 51840,
+    "direct_Weyl_subgroup_embedding": false,
+    "direct_isometric_root_subsystem": false,
+    "trace_smith_invariants": [
+      24,
+      360
+    ],
+    "trace_det": 8640,
+    "quadratic_trace_original": [
+      [
+        120,
+        0
+      ],
+      [
+        0,
+        72
+      ]
+    ],
+    "GL2Z_rebased": [
+      [
+        120,
+        120
+      ],
+      [
+        120,
+        192
+      ]
+    ],
+    "mediated_E8_icosian_connection_excluded": false
+  }
+}
