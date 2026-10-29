@@ -1,0 +1,62 @@
+{
+  "checked_fields": [
+    3,
+    5,
+    7
+  ],
+  "results": [
+    {
+      "q": 3,
+      "points": 40,
+      "lines": 40,
+      "rank_incidence": 25,
+      "rank_adjacency": 16,
+      "kernel_dimension": 24,
+      "even_line_span_dimension": 24,
+      "logical_dimension": 8,
+      "incidence_rank_complement": true,
+      "adjacency_nilpotent_mod2": true,
+      "adjacency_line_syndrome": "all-ones",
+      "doubly_even_stabilizer": true,
+      "arf_invariant": 0,
+      "orthogonal_type": "plus",
+      "hyperbolic_pairs": 4,
+      "quadratic_counts": {
+        "singular_including_zero": 136,
+        "nonsingular": 120
+      },
+      "intersecting_line_hexads": 240
+    },
+    {
+      "q": 5,
+      "points": 156,
+      "lines": 156,
+      "rank_incidence": 91,
+      "rank_adjacency": 66,
+      "kernel_dimension": 90,
+      "even_line_span_dimension": 90,
+      "logical_dimension": 24,
+      "incidence_rank_complement": true,
+      "adjacency_nilpotent_mod2": true,
+      "adjacency_line_syndrome": "all-ones",
+      "doubly_even_stabilizer": false
+    },
+    {
+      "q": 7,
+      "points": 400,
+      "lines": 400,
+      "rank_incidence": 225,
+      "rank_adjacency": 176,
+      "kernel_dimension": 224,
+      "even_line_span_dimension": 224,
+      "logical_dimension": 48,
+      "incidence_rank_complement": true,
+      "adjacency_nilpotent_mod2": true,
+      "adjacency_line_syndrome": "all-ones",
+      "doubly_even_stabilizer": true,
+      "arf_invariant": 0,
+      "orthogonal_type": "plus",
+      "hyperbolic_pairs": 24
+    }
+  ]
+}
