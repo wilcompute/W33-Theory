@@ -347146,6 +347146,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "954f2e1082d0bd958f8c0a133d357ccc8a5dc982311a8dec557b686ce24aa89e",
+      "normalized_formula": "(A+I)^2\u2261J",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 687,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "(A+I)^2\\equiv J",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "d6149272aba7e0993e891bc7a5b5f4106476062a026bb772b6921d1ee110b45a",
+      "structural_formula": "(A+I)^#\u2261J"
+    },
+    {
+      "file_count": 1,
       "formula_id": "bff8aad75dde228bbb4288209cf4fa444e79b30fb555afb455371a3dbca6eb16",
       "normalized_formula": "(A-12I)(A-2I)(A+4I)=0",
       "numeric_literals": [
@@ -392763,6 +392790,33 @@
       },
       "structural_family_id": "41327979a64cbaac0464a284e2ac9d9024d277c7866f1b390017fccf0f83eff8",
       "structural_formula": "-^Yukawatexture^=Z3gradeconservation(BT8#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "68efdda77d3a7b675d087fcd17c8cdea95e9a9800110bec09ea8509b31905a5d",
+      "normalized_formula": "-^[E]^R_K=h/e2istopological:theHallconductanceis(e2/h)\u00d7(aChernnumber)(TKNN1982)",
+      "numeric_literals": [
+        "982"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 66,
+          "path": "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md",
+          "raw": "- **[E]** R_K = h/e\u00b2 is topological: the Hall conductance is (e\u00b2/h) \u00d7 (a Chern number) (TKNN 1982).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "60e5d7a0006854ba4cdb51764a0bf84dd5a5ceaa57a7074b83f839ada73e04db",
+      "structural_formula": "-^[E]^R_K=h/e2istopological:theHallconductanceis(e2/h)\u00d7(aChernnumber)(TKNN1#)"
     },
     {
       "file_count": 1,
@@ -549316,6 +549370,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3a058e9aef57135e17523b88a390595b84239807ed1f50c3b978085007193e9b",
+      "normalized_formula": ">`PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md",
+      "numeric_literals": [
+        "2410",
+        "2417"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12402_12409_CLOSURE_ALL_Q_JOINT_SYMMETRY_CONSTANTS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/PASS12402_12409_CLOSURE_ALL_Q_JOINT_SYMMETRY_CONSTANTS.md",
+          "raw": "> `PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md`.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "67c8eb222c206370db9d659cf4b62c2518a6b0411a6be90d73dcd5226176f42f",
+      "structural_formula": ">`PASS1#_1#_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md"
+    },
+    {
+      "file_count": 1,
       "formula_id": "2508b2519118f40404b28f0ac7e227a73b28af38255b05b874830572b6cb2b81",
       "normalized_formula": ">`SolveforLambda_QCD_effthatgivesexactly1818MeV",
       "numeric_literals": [
@@ -625468,7 +625550,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 18,
+          "line": 22,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "Eb/N0 -> ln 2 = Landauer k T ln 2; alpha = Z0 / (2 R_K); a Schwarzschild hole saturates the Bekenstein bound and equals A/(4 l_P^2);",
           "status": "unclassified"
@@ -741168,7 +741250,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 27,
+          "line": 31,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "OUT = ROOT / \"data\" / \"w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.json\"",
           "status": "unclassified"
@@ -741179,6 +741261,35 @@
       },
       "structural_family_id": "dbcc1cf52817109394fc74b93537f6d1c40fec52036dbb18ff14ae8b62148428",
       "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_closure_all_q_joint_symmetry_constants.json\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "eaf86c5656df1fa5e3f0b0364ffc8d01b334a8f4cbc4afb4ab1a2873e2d0d895",
+      "normalized_formula": "OUT=ROOT/\"data\"/\"w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.json\"",
+      "numeric_literals": [
+        "2410",
+        "2417",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 12,
+          "path": "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py",
+          "raw": "OUT = ROOT / \"data\" / \"w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "16a3028678187e6a19646347784c7bc1aad560b6d7cdbba75d34bdcf694f221a",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_closure_proof_alpha_ceiling_tprime.json\""
     },
     {
       "file_count": 1,
@@ -812698,7 +812809,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 19,
+          "line": 23,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "Smarr: M c^2 = 2 x bits x k T_H ln 2; Margolus-Levitin 2/(pi hbar) updates/s/J; Compton clock; Pendry constant = 2 g0/T; Unruh.",
           "status": "unclassified"
@@ -850455,6 +850566,34 @@
       },
       "structural_family_id": "90d209dc7cdd29e725c8e1c8dd1da8e89e0ee8ad9dd94822b04d9f4bc331d840",
       "structural_formula": "Thequantumkineticmetricandfirst-ordereffectiveconnectionareK(q)=UTdiag(z2)UandA(q)=K(q)^#aUTz2wherez=Vq+a.ItscurvaturedAisanantisymmetric7#x7#rationalfunctionofnormalizedrationalcoordinateinputsq=(a/#)Dk,withDthefixed8#x7#integeraugmentationchartanddualcotangentnormalizationessential"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7482123c4733a007f731662fd648657a066110f75694b01a0239da07815bca35",
+      "normalized_formula": "Thequtritgraphstateonthe40pointsofW(3,3)hasentanglementS(A)=rank3\u0393[A,\u0100]acrossacut",
+      "numeric_literals": [
+        "0",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 76,
+          "path": "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md",
+          "raw": "The qutrit graph state on the 40 points of W(3,3) has entanglement S(A) = rank\u2083 \u0393[A, \u0100] across a cut.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "2be719f22c10f30811e27cd326c5123f55c1bfceeafacdbfc4a8505528169794",
+      "structural_formula": "Thequtritgraphstateonthe4#pointsofW(#,#)hasentanglementS(A)=rank3\u0393[A,\u0100]acrossacut"
     },
     {
       "file_count": 1,
@@ -982100,6 +982239,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5e166a970556666738fb9557f6e5aab6cf9723c15e5f3db49a08a69ac7a3aaeb",
+      "normalized_formula": "\\kappa=0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 687,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "\\kappa=0",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "c6d0b0585df1901bc68633881d3dc383ee7cf66b150973a681ff22bee7dd1772",
+      "structural_formula": "\\kappa=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "60934c10cb678cbccdcd769f8030360c4509004a18b96800e4c0c39c923e2d30",
       "normalized_formula": "\\kappa=1",
       "numeric_literals": [
@@ -982583,7 +982749,7 @@
         "-1",
         "2"
       ],
-      "occurrence_count": 2,
+      "occurrence_count": 3,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "papers/forty_points/appA_ledger.tex"
@@ -982602,10 +982768,17 @@
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\kappa^2=-1",
           "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
+          "line": 687,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "\\kappa^2=-1",
+          "status": "certified_or_theorem"
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1,
+        "certified_or_theorem": 2,
         "unclassified": 1
       },
       "structural_family_id": "63f7305c991805d974fff1be5dabd43e9166128c6920c639ffacda26d623a888",
@@ -1007871,7 +1008044,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 689,
+          "line": 690,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1101324,7 +1101497,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 91,
+          "line": 95,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "and ci[\"3_bekenstein_vs_hawking\"][\"rel_err\"] < 1e-12 and ci[\"8_smarr_bits\"][\"rel_err\"] < 1e-12 and ci[\"6_pendry\"][\"same_constant_rel_err\"] < 1e-12)",
           "status": "unclassified"
@@ -1196953,7 +1197126,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 89,
+          "line": 93,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "checks[\"12406: Shannon -> Landauer (ln 2), alpha = Z0/2R_K, Bekenstein = Bekenstein-Hawking, Smarr = 2 x bits x kT ln 2, Pendry = 2 g0\"] = (",
           "status": "unclassified"
@@ -1196964,6 +1197137,36 @@
       },
       "structural_family_id": "069e35495c57f00883e238913929f7b1d29e6e0f97eb411c0358f8b6f620ab45",
       "structural_formula": "checks[\"#:Shannon->Landauer(ln2),alpha=Z0/#R_K,Bekenstein=Bekenstein-Hawking,Smarr=#xbitsxkTln2,Pendry=#g0\"]=("
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5ebde5fd031bbe6650263a1cf42b476e4703259e0016f438a87acbab23dcea9c",
+      "normalized_formula": "checks[\"12411:alpha=Z0/(2R_K)holdsnumerically(12406)\"]=old[\"12406\"][\"2_alpha\"][\"rel_err\"]<1e-9",
+      "numeric_literals": [
+        "12406",
+        "12411",
+        "1e-9",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py",
+          "raw": "checks[\"12411: alpha = Z0 / (2 R_K) holds numerically (12406)\"] = old[\"12406\"][\"2_alpha\"][\"rel_err\"] < 1e-9",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "50041652d770315b35d1b27f1c1a4d3cecae9296aab3b2b7538ff913197747e8",
+      "structural_formula": "checks[\"#:alpha=Z0/(#R_K)holdsnumerically(#)\"]=old[\"#\"][\"#_alpha\"][\"rel_err\"]<#"
     },
     {
       "file_count": 1,
@@ -1217386,7 +1217589,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 87,
+          "line": 91,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "ci = json.loads((A / \"search_drivers_12406\" / \"constants_info.json\").read_text())",
           "status": "unclassified"
@@ -1217416,7 +1217619,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 90,
+          "line": 94,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "ci[\"1_shannon_wideband_Eb_over_N0\"][\"limit_rel_err\"] < 1e-6 and ci[\"2_alpha\"][\"rel_err\"] < 1e-9",
           "status": "unclassified"
@@ -1290451,6 +1290654,35 @@
       },
       "structural_family_id": "df57c59d0fdf1ed1705fc2cc14db2fde76f0bb6a30be41b44fbe91bf9c2b5fd8",
       "structural_formula": "entanglement_fidelity=sum(abs(np.trace(O))^#forOinoperators)/#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "df2379181b920a34ea89caef70de7136bf057fff22c5f42f3f93bf9b9aa33d7f",
+      "normalized_formula": "entanglementceilingofthequtritW(3,3)graphstate((A+I)^2=Jmod3,rank_3(A+I)=11),thebinarytetrahedralgrouponpoints",
+      "numeric_literals": [
+        "11",
+        "2",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 3,
+          "path": "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py",
+          "raw": "entanglement ceiling of the qutrit W(3,3) graph state ((A + I)^2 = J mod 3, rank_3(A + I) = 11), the binary tetrahedral group on points,",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "dba5e399eba17493402c34c19028b66f82ec7863ad30fcc19c463b763d98d80f",
+      "structural_formula": "entanglementceilingofthequtritW(#,#)graphstate((A+I)^#=Jmod3,rank_3(A+I)=#),thebinarytetrahedralgrouponpoints"
     },
     {
       "file_count": 1,
@@ -1432702,7 +1432934,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 688,
+          "line": 689,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1437836,7 +1438068,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 688,
+          "line": 689,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1484146,7 +1484378,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 8,
+          "line": 12,
           "path": "analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py",
           "raw": "non-null cone (192 of 288) and abelian of order 8 for the 96 null ones. [I] U(2) ~ (SU(2) x U(1))/Z2 is the electroweak group; a",
           "status": "certified_or_theorem"
@@ -1495416,6 +1495648,35 @@
       },
       "structural_family_id": "1ff94387b8e2f4857a207e277fb6d4a527b26b9620e5da8003ae65800467d655",
       "structural_formula": "old=_load(ROOT/\"analysis/w3#_pass1#_e8_cubic_cartan_kernel.py\",\"old_p1#\")"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f970d98716639eadaafee7d52db0248e28d7a382f47b9eea88de81136d3adde8",
+      "normalized_formula": "old=json.loads((ROOT/\"data\"/\"w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.json\").read_text())",
+      "numeric_literals": [
+        "2402",
+        "2409",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py",
+          "raw": "old = json.loads((ROOT / \"data\" / \"w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.json\").read_text())",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "69a32f6cd28a32938e7e81566e6731e0b07cd6f04c131d3f32708f0817eaa90a",
+      "structural_formula": "old=json.loads((ROOT/\"data\"/\"w3#_pass1#_to_1#_closure_all_q_joint_symmetry_constants.json\").read_text())"
     },
     {
       "file_count": 1,
@@ -1546505,6 +1546766,33 @@
       },
       "structural_family_id": "3e4456c3c98b7c7177382a77a9b9b2169cb080e17f1bad02c606034b34e4b7dc",
       "structural_formula": "point|theta[a](z)|=|theta[-a-k/#](z)|,pairingc<->-c-kmod3.Thetheta-zerolawofPass1#isthecase"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "77ae8d1c2287c930de6a8d95c1ddad570da5b34f2f952b2035e8af81eb49a912",
+      "normalized_formula": "point\u2013lineincidencematrix,sinceMMT=4I+A",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 82,
+          "path": "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md",
+          "raw": "point\u2013line incidence matrix, since MM\u1d40 = 4I + A.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "a26bd834e5b147d5b1b3a953679e1c9ed3ee4ef4f82d4e0bb9a8b79a2b2653f6",
+      "structural_formula": "point\u2013lineincidencematrix,sinceMMT=#I+A"
     },
     {
       "file_count": 1,
@@ -1771369,6 +1771657,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f799315e856c016cd03ab558dc80b92b8eff4c8879222b83e4bfd26b8c4015a0",
+      "normalized_formula": "starifftrkappa=0,non-metricsolutionssuchaskappa=iIexist),alphaasconstitutive/topologicalimpedance,the11-trit",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 2,
+          "path": "analysis/w33_pass12410_to_12417_closure_proof_alpha_ceiling_tprime.py",
+          "raw": "star iff tr kappa = 0, non-metric solutions such as kappa = i I exist), alpha as constitutive / topological impedance, the 11-trit",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "722d7061b9f909c16b5f5780dbe840f5863c3390239e55fd14be2a403665f501",
+      "structural_formula": "starifftrkappa=#,non-metricsolutionssuchaskappa=iIexist),alphaasconstitutive/topologicalimpedance,the1#-trit"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4e88ac2dd725c4085066c08bce842479ac15e28af1e3fe35156fbb3c1dd9e6c6",
       "normalized_formula": "stars(transfer/impedance);closure='c^2mu0eps0=1';alpha=ratiooftheimpedanceoftheEMdualitytothatofaquantumchannel",
       "numeric_literals": [
@@ -1858195,7 +1858511,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 688,
+          "line": 689,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1875933,7 +1876249,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 87,
+          "line": 94,
           "path": "analysis/PASS12402_12409_CLOSURE_ALL_Q_JOINT_SYMMETRY_CONSTANTS.md",
           "raw": "| Smarr | bits | mass-energy | Mc\u00b2 = 2 \u00d7 (bits) \u00d7 k T_H ln 2 (to 10\u207b\u00b9\u2076): a black hole's energy is twice the erasure cost of its memory at its own temperature |",
           "status": "unclassified"
@@ -1886813,7 +1887129,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 88,
+          "line": 95,
           "path": "analysis/PASS12402_12409_CLOSURE_ALL_Q_JOINT_SYMMETRY_CONSTANTS.md",
           "raw": "| e\u00b2/h, \u03c0\u00b2k\u00b2T/(3h) | channels | charge or heat current | Landauer and Pendry per-channel quanta; Pendry's entropy constant = 2 g\u2080/T |",
           "status": "unclassified"
@@ -1908088,9 +1908404,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T13:11:13-04:00",
+  "frozen_at": "2026-10-29T13:37:01-04:00",
   "pass": 398,
-  "repository_head": "5cbb2f6697c4650f0d63ed59efb6501c99afed38",
+  "repository_head": "c12908d5992933a49388b418d002e73e7637f5a7",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2025715,6 +2026031,14 @@
     },
     {
       "exact_formula_ids": [
+        "954f2e1082d0bd958f8c0a133d357ccc8a5dc982311a8dec557b686ce24aa89e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d6149272aba7e0993e891bc7a5b5f4106476062a026bb772b6921d1ee110b45a",
+      "structural_formula": "(A+I)^#\u2261J"
+    },
+    {
+      "exact_formula_ids": [
         "f9ac1ae20eab7def1e5da42d1ff008be68b0ea6f85beb11943d234aa3e2c8b37"
       ],
       "exact_member_count": 1,
@@ -2037440,6 +2037764,14 @@
       "exact_member_count": 1,
       "structural_family_id": "41327979a64cbaac0464a284e2ac9d9024d277c7866f1b390017fccf0f83eff8",
       "structural_formula": "-^Yukawatexture^=Z3gradeconservation(BT8#)"
+    },
+    {
+      "exact_formula_ids": [
+        "68efdda77d3a7b675d087fcd17c8cdea95e9a9800110bec09ea8509b31905a5d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "60e5d7a0006854ba4cdb51764a0bf84dd5a5ceaa57a7074b83f839ada73e04db",
+      "structural_formula": "-^[E]^R_K=h/e2istopological:theHallconductanceis(e2/h)\u00d7(aChernnumber)(TKNN1#)"
     },
     {
       "exact_formula_ids": [
@@ -2055915,6 +2056247,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d7dfd828dcae6eb737466491dac5aca1c54fd16940a53f7bda3e73d3fc1d0afc",
       "structural_formula": ">`Li/#Li~=H1#`forallthree`i`,byaninvertiblesimultaneousintertwiner"
+    },
+    {
+      "exact_formula_ids": [
+        "3a058e9aef57135e17523b88a390595b84239807ed1f50c3b978085007193e9b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "67c8eb222c206370db9d659cf4b62c2518a6b0411a6be90d73dcd5226176f42f",
+      "structural_formula": ">`PASS1#_1#_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md"
     },
     {
       "exact_formula_ids": [
@@ -2107668,6 +2108008,14 @@
     },
     {
       "exact_formula_ids": [
+        "eaf86c5656df1fa5e3f0b0364ffc8d01b334a8f4cbc4afb4ab1a2873e2d0d895"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "16a3028678187e6a19646347784c7bc1aad560b6d7cdbba75d34bdcf694f221a",
+      "structural_formula": "OUT=ROOT/\"data\"/\"w3#_pass1#_to_1#_closure_proof_alpha_ceiling_tprime.json\""
+    },
+    {
+      "exact_formula_ids": [
         "67ba4e78904d01df43705e8fec2fd3909c1f67db2371769432292eac7e60dae6"
       ],
       "exact_member_count": 1,
@@ -2137281,6 +2137629,14 @@
       "exact_member_count": 1,
       "structural_family_id": "90d209dc7cdd29e725c8e1c8dd1da8e89e0ee8ad9dd94822b04d9f4bc331d840",
       "structural_formula": "Thequantumkineticmetricandfirst-ordereffectiveconnectionareK(q)=UTdiag(z2)UandA(q)=K(q)^#aUTz2wherez=Vq+a.ItscurvaturedAisanantisymmetric7#x7#rationalfunctionofnormalizedrationalcoordinateinputsq=(a/#)Dk,withDthefixed8#x7#integeraugmentationchartanddualcotangentnormalizationessential"
+    },
+    {
+      "exact_formula_ids": [
+        "7482123c4733a007f731662fd648657a066110f75694b01a0239da07815bca35"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2be719f22c10f30811e27cd326c5123f55c1bfceeafacdbfc4a8505528169794",
+      "structural_formula": "Thequtritgraphstateonthe4#pointsofW(#,#)hasentanglementS(A)=rank3\u0393[A,\u0100]acrossacut"
     },
     {
       "exact_formula_ids": [
@@ -2171381,12 +2171737,13 @@
     {
       "exact_formula_ids": [
         "077d1325b6cfd29407ddde3b9b394eaf666492556c9da83ce93b6ea0edd3de47",
+        "5e166a970556666738fb9557f6e5aab6cf9723c15e5f3db49a08a69ac7a3aaeb",
         "60934c10cb678cbccdcd769f8030360c4509004a18b96800e4c0c39c923e2d30",
         "b83cb5645bd77e0148d9ed17914da71a57c7570366bb0be86c05527a43fef89a",
         "850a2128dd01c0c8395b66aeaf54a4e4e7446e02d657ff2381d8a9edf2f2f7a1",
         "b03570488d50c4f3557b5a006976b0b4d63fb3947bdeb5329cb36169f0ee1c95"
       ],
-      "exact_member_count": 5,
+      "exact_member_count": 6,
       "structural_family_id": "c6d0b0585df1901bc68633881d3dc383ee7cf66b150973a681ff22bee7dd1772",
       "structural_formula": "\\kappa=#"
     },
@@ -2227529,6 +2227886,14 @@
     },
     {
       "exact_formula_ids": [
+        "5ebde5fd031bbe6650263a1cf42b476e4703259e0016f438a87acbab23dcea9c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "50041652d770315b35d1b27f1c1a4d3cecae9296aab3b2b7538ff913197747e8",
+      "structural_formula": "checks[\"#:alpha=Z0/(#R_K)holdsnumerically(#)\"]=old[\"#\"][\"#_alpha\"][\"rel_err\"]<#"
+    },
+    {
+      "exact_formula_ids": [
         "bff419e7f9fcc6a298746c6ea228d154be05623b0aba1a6e50b74919a080af35"
       ],
       "exact_member_count": 1,
@@ -2253755,6 +2254120,14 @@
       "exact_member_count": 1,
       "structural_family_id": "df57c59d0fdf1ed1705fc2cc14db2fde76f0bb6a30be41b44fbe91bf9c2b5fd8",
       "structural_formula": "entanglement_fidelity=sum(abs(np.trace(O))^#forOinoperators)/#"
+    },
+    {
+      "exact_formula_ids": [
+        "df2379181b920a34ea89caef70de7136bf057fff22c5f42f3f93bf9b9aa33d7f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dba5e399eba17493402c34c19028b66f82ec7863ad30fcc19c463b763d98d80f",
+      "structural_formula": "entanglementceilingofthequtritW(#,#)graphstate((A+I)^#=Jmod3,rank_3(A+I)=#),thebinarytetrahedralgrouponpoints"
     },
     {
       "exact_formula_ids": [
@@ -2308938,6 +2309311,14 @@
     },
     {
       "exact_formula_ids": [
+        "f970d98716639eadaafee7d52db0248e28d7a382f47b9eea88de81136d3adde8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "69a32f6cd28a32938e7e81566e6731e0b07cd6f04c131d3f32708f0817eaa90a",
+      "structural_formula": "old=json.loads((ROOT/\"data\"/\"w3#_pass1#_to_1#_closure_all_q_joint_symmetry_constants.json\").read_text())"
+    },
+    {
+      "exact_formula_ids": [
         "af11f79789309a45e10a4058ecad08c0beb8f629ddb973f1dcd547122a5072b2"
       ],
       "exact_member_count": 1,
@@ -2322600,6 +2322981,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3e4456c3c98b7c7177382a77a9b9b2169cb080e17f1bad02c606034b34e4b7dc",
       "structural_formula": "point|theta[a](z)|=|theta[-a-k/#](z)|,pairingc<->-c-kmod3.Thetheta-zerolawofPass1#isthecase"
+    },
+    {
+      "exact_formula_ids": [
+        "77ae8d1c2287c930de6a8d95c1ddad570da5b34f2f952b2035e8af81eb49a912"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a26bd834e5b147d5b1b3a953679e1c9ed3ee4ef4f82d4e0bb9a8b79a2b2653f6",
+      "structural_formula": "point\u2013lineincidencematrix,sinceMMT=#I+A"
     },
     {
       "exact_formula_ids": [
@@ -2382182,6 +2382571,14 @@
     },
     {
       "exact_formula_ids": [
+        "f799315e856c016cd03ab558dc80b92b8eff4c8879222b83e4bfd26b8c4015a0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "722d7061b9f909c16b5f5780dbe840f5863c3390239e55fd14be2a403665f501",
+      "structural_formula": "starifftrkappa=#,non-metricsolutionssuchaskappa=iIexist),alphaasconstitutive/topologicalimpedance,the1#-trit"
+    },
+    {
+      "exact_formula_ids": [
         "4e88ac2dd725c4085066c08bce842479ac15e28af1e3fe35156fbb3c1dd9e6c6"
       ],
       "exact_member_count": 1,
@@ -2418089,20 +2418486,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92579040,
-    "exact_formula_families": 65243,
-    "files_scanned": 12729,
-    "formula_occurrences": 71383,
+    "bytes_scanned": 92591757,
+    "exact_formula_families": 65254,
+    "files_scanned": 12731,
+    "formula_occurrences": 71395,
     "status_occurrences": {
-      "certified_or_theorem": 5358,
+      "certified_or_theorem": 5365,
       "killed_or_retracted": 1953,
-      "open_or_conditional": 2413,
+      "open_or_conditional": 2414,
       "preregistered": 36,
       "retrospective_fit": 5432,
-      "unclassified": 56191
+      "unclassified": 56195
     },
-    "structural_families": 63530
+    "structural_families": 63540
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "a584c6d9dda139efc8891bb8f4acaa9283d5e93dea087d31c35e1e6402eb5247"
+  "universe_sha256": "2e7d325fda42de9965d77bb3d1bb4feaac466c47bf338170e687cbac297de8b0"
 }
