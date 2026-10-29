@@ -85,7 +85,7 @@ def verify():
              fraction_couplings_saved=0.3125,
              count_weight8=45,weight8_span_rank=15,
              check_masks_hex=CHECKS_HEX,per_qubit_check_incidences=degrees,
-             max_incidence=5,uncorrectable_hook_examples=len(hooks),
+             max_incidence=max(degrees),uncorrectable_hook_examples=len(hooks),
              first_hook=hooks[0],scope='One Pauli sector; ideal syndrome, no full fault-tolerant extraction or noise threshold.')
 
 if __name__=='__main__':print(json.dumps(verify(),indent=2))
