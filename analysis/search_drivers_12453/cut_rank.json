@@ -1,0 +1,42 @@
+{
+ "q=3,p=3": {
+  "n": 40,
+  "ceiling": 11,
+  "random_balanced": {
+   "min": 11,
+   "max": 11,
+   "at_ceiling": 40
+  },
+  "local_search_min": 11
+ },
+ "q=3,p=2": {
+  "n": 40,
+  "ceiling": 40,
+  "random_balanced": {
+   "min": 15,
+   "max": 16,
+   "at_ceiling": 0
+  },
+  "local_search_min": 11
+ },
+ "q=5,p=5": {
+  "n": 156,
+  "ceiling": 36,
+  "random_balanced": {
+   "min": 36,
+   "max": 36,
+   "at_ceiling": 40
+  },
+  "local_search_min": 36
+ },
+ "q=5,p=2": {
+  "n": 156,
+  "ceiling": 156,
+  "random_balanced": {
+   "min": 65,
+   "max": 66,
+   "at_ceiling": 0
+  },
+  "local_search_min": 63
+ }
+}

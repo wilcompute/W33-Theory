@@ -1,0 +1,12 @@
+{
+ "3": {
+  "partial_ovoids_of_size_q_plus_1": 9450,
+  "with_even_profile": 0,
+  "hyperbolic_line_profiles": [
+   [
+    1,
+    4
+   ]
+  ]
+ }
+}

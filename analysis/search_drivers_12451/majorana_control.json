@@ -1,0 +1,32 @@
+{
+ "c22": {
+  "model": "Z6II_06_SM_20260917_2541_c22",
+  "fractional": 92,
+  "majorana_rescued": 2,
+  "liftable_with_majorana": 92,
+  "real_y0_fields": 6,
+  "real_y0_self_ok": 6,
+  "self_lattice_ok_any_rep": 8,
+  "liftable_cap40": 90,
+  "liftable_all_orders_upper": 90,
+  "unmatched_types": [
+   "(1, 2, '0')"
+  ]
+ },
+ "sm2618": {
+  "model": "Z6II_06_SM_20260917_2618_v0",
+  "fractional": 52,
+  "majorana_rescued": 0,
+  "liftable_with_majorana": 40,
+  "real_y0_fields": 0,
+  "real_y0_self_ok": 0,
+  "liftable_cap40": 40,
+  "liftable_all_orders_upper": 40,
+  "unmatched_types": [
+   "(-3, 1, '1/6')",
+   "(1, 1, '-1/2')",
+   "(1, 1, '1/2')",
+   "(3, 1, '-1/6')"
+  ]
+ }
+}

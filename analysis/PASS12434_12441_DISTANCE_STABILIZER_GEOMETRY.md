@@ -1,5 +1,7 @@
 # Passes 12434–12441: the adjacency-code distance, and stabilizer-state geometry
 
+> **Correction (Pass 12451).** The "unliftable (1,2,0) fractional pair" reported below for SM_2541 was an artefact of Dirac-only pairing. The leftover doublets are real-representation (2,2) Weyl fermions with Y = 0, and a Majorana self-mass passes the same exact lattice test, so every fractional state of all 52 SM_2541 models is liftable. See `PASS12450_12457_MAJORANA_RESCUE_DEFICIT_CUTRANK_INDEX.md`. Passes 12426-12449 also omit the dual theorem of Pass 4754 (line graph, d = q + 1).
+
 > **Oldest prior art (found with `scripts/check_prior_art_all_repos.py`, Pass 12446).** For W(3,3) the identity (A + I)² ≡ J (mod 3)
 > has been in the repository since **2026-03-12**: `tests/test_finite_field_methods_computation.py` (from the SRG equation, with rank
 > of (A − 2I)² = 1). It recurs in Pass 157 (2026-07-09, eigenlattice prime collision) and in the 2026-10-22 note (general p).

@@ -1,0 +1,592 @@
+{
+  "12450": {
+    "q3W4": {
+      "q": 3,
+      "W": 4,
+      "cases": {
+        "a": {
+          "status": "INFEASIBLE",
+          "seconds": 0.2
+        },
+        "b": {
+          "status": "INFEASIBLE",
+          "seconds": 0.0
+        }
+      },
+      "no_word_of_weight_le_W": true
+    },
+    "q3W6": {
+      "q": 3,
+      "W": 6,
+      "cases": {
+        "a": {
+          "status": "OPTIMAL",
+          "seconds": 0.0,
+          "weight": 6,
+          "kernel_ok": true
+        },
+        "b": {
+          "status": "INFEASIBLE",
+          "seconds": 0.0
+        }
+      },
+      "no_word_of_weight_le_W": false
+    },
+    "q5W8": {
+      "q": 5,
+      "W": 8,
+      "cases": {
+        "a": {
+          "status": "UNKNOWN",
+          "seconds": 901.8
+        },
+        "b": {
+          "status": "UNKNOWN",
+          "seconds": 900.5
+        }
+      },
+      "no_word_of_weight_le_W": false
+    }
+  },
+  "12450b": {
+    "3": {
+      "partial_ovoids_of_size_q_plus_1": 9450,
+      "with_even_profile": 0,
+      "hyperbolic_line_profiles": [
+        [
+          1,
+          4
+        ]
+      ]
+    }
+  },
+  "12451_c22": {
+    "doublets": 8,
+    "none": {
+      "edges": 11,
+      "matched": 6,
+      "unmatched": 2
+    },
+    "gauge": {
+      "edges": 11,
+      "matched": 6,
+      "unmatched": 2
+    },
+    "point_group": {
+      "edges": 11,
+      "matched": 6,
+      "unmatched": 2
+    },
+    "witten": {
+      "edges": 11,
+      "matched": 6,
+      "unmatched": 2
+    },
+    "translation": {
+      "edges": 11,
+      "matched": 6,
+      "unmatched": 2
+    },
+    "majorana": {
+      "real_rep": {
+        "0": false,
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true
+      },
+      "self_pairing_allowed": {
+        "0": false,
+        "1": false,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true
+      },
+      "unmatched_after_dirac": [
+        2,
+        5
+      ],
+      "unmatched_after_majorana": []
+    }
+  },
+  "12451_family": {
+    "Z6II_06_SM_20260917_2541_c1060": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c1164": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c1224": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c1430": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c1493": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c1585": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c1614": {
+      "kY": "41/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c1968": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2107": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c22": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2224": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2281": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c2450": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2606": {
+      "kY": "41/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c2736": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2738": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2753": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2783": {
+      "kY": "41/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c279": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c281": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c2872": {
+      "kY": "35/9",
+      "fractional": 110,
+      "dirac": 108,
+      "with_majorana": 110
+    },
+    "Z6II_06_SM_20260917_2541_c290": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c2961": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c3022": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c316": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c3180": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c3330": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c3653": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c3721": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c387": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c3874": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c3920": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c4003": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c4124": {
+      "kY": "41/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c4229": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c4282": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c4317": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c4671": {
+      "kY": "35/9",
+      "fractional": 110,
+      "dirac": 108,
+      "with_majorana": 110
+    },
+    "Z6II_06_SM_20260917_2541_c4686": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c4747": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c4854": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c489": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c5326": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c5388": {
+      "kY": "41/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c5416": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c5460": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c5484": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c5514": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c5714": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    },
+    "Z6II_06_SM_20260917_2541_c766": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c897": {
+      "kY": "53/9",
+      "fractional": 104,
+      "dirac": 102,
+      "with_majorana": 104
+    },
+    "Z6II_06_SM_20260917_2541_c993": {
+      "kY": "17/3",
+      "fractional": 92,
+      "dirac": 90,
+      "with_majorana": 92
+    }
+  },
+  "12451_control": {
+    "c22": {
+      "model": "Z6II_06_SM_20260917_2541_c22",
+      "fractional": 92,
+      "majorana_rescued": 2,
+      "liftable_with_majorana": 92,
+      "real_y0_fields": 6,
+      "real_y0_self_ok": 6,
+      "self_lattice_ok_any_rep": 8,
+      "liftable_cap40": 90,
+      "liftable_all_orders_upper": 90,
+      "unmatched_types": [
+        "(1, 2, '0')"
+      ]
+    },
+    "sm2618": {
+      "model": "Z6II_06_SM_20260917_2618_v0",
+      "fractional": 52,
+      "majorana_rescued": 0,
+      "liftable_with_majorana": 40,
+      "real_y0_fields": 0,
+      "real_y0_self_ok": 0,
+      "liftable_cap40": 40,
+      "liftable_all_orders_upper": 40,
+      "unmatched_types": [
+        "(-3, 1, '1/6')",
+        "(1, 1, '-1/2')",
+        "(1, 1, '1/2')",
+        "(3, 1, '-1/6')"
+      ]
+    }
+  },
+  "12452": {
+    "milp": {
+      "3": {
+        "n": 40,
+        "optimal": true,
+        "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "seconds": 4.9,
+        "min_region": 6,
+        "x_weight": 6,
+        "x_in_kernel": true
+      },
+      "5": {
+        "n": 156,
+        "optimal": false,
+        "status": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "seconds": 3000.4,
+        "min_region": 31,
+        "x_weight": 1,
+        "x_in_kernel": false
+      }
+    },
+    "cpsat_q3_R5": {
+      "q": 3,
+      "R": 5,
+      "cases": {
+        "a": {
+          "status": "INFEASIBLE",
+          "seconds": 0.3
+        },
+        "b": {
+          "status": "INFEASIBLE",
+          "seconds": 0.0
+        }
+      },
+      "no_region_le_R": true
+    },
+    "cpsat_q3_R6": {
+      "q": 3,
+      "R": 6,
+      "cases": {
+        "a": {
+          "status": "OPTIMAL",
+          "seconds": 0.0,
+          "region": 6,
+          "x_weight": 6
+        },
+        "b": {
+          "status": "INFEASIBLE",
+          "seconds": 0.1
+        }
+      },
+      "no_region_le_R": false
+    },
+    "cpsat_q5_R9": {
+      "q": 5,
+      "R": 9,
+      "cases": {
+        "a": {
+          "status": "UNKNOWN",
+          "seconds": 900.1
+        },
+        "b": {
+          "status": "UNKNOWN",
+          "seconds": 900.2
+        }
+      },
+      "no_region_le_R": false
+    }
+  },
+  "12452_q5_status": "OPEN: CP-SAT {'a': 'UNKNOWN', 'b': 'UNKNOWN'}",
+  "12453": {
+    "q=3,p=3": {
+      "n": 40,
+      "ceiling": 11,
+      "random_balanced": {
+        "min": 11,
+        "max": 11,
+        "at_ceiling": 40
+      },
+      "local_search_min": 11
+    },
+    "q=3,p=2": {
+      "n": 40,
+      "ceiling": 40,
+      "random_balanced": {
+        "min": 15,
+        "max": 16,
+        "at_ceiling": 0
+      },
+      "local_search_min": 11
+    },
+    "q=5,p=5": {
+      "n": 156,
+      "ceiling": 36,
+      "random_balanced": {
+        "min": 36,
+        "max": 36,
+        "at_ceiling": 40
+      },
+      "local_search_min": 36
+    },
+    "q=5,p=2": {
+      "n": 156,
+      "ceiling": 156,
+      "random_balanced": {
+        "min": 65,
+        "max": 66,
+        "at_ceiling": 0
+      },
+      "local_search_min": 63
+    }
+  },
+  "12454_parameters": 189,
+  "checks": {
+    "12450: CP-SAT controls at q = 3 exact (no word <= 4, weight-6 kernel word found); q = 5 W = 8 UNKNOWN in both cases (tool limit, not a result)": true,
+    "12450: prior art Pass 4754 (line-graph kernel, d = q + 1 for all odd q) exists and is the dual statement": true,
+    "12450b: d >= q + 3 for every odd q (4754 double count + no hyperbolic-line kernel word); exhaustive at q = 3: 9450 pairwise non-collinear 4-sets, 0 with an even profile, hyperbolic lines profile {1, 4}": true,
+    "12451: SM_2541_c22 -- every relaxation leaves 2 Dirac-unmatched doublets; Majorana self-pairing of the real-rep ones leaves none": true,
+    "12451: all 52 SM_2541 models -- Dirac pairing leaves exactly 2 fractional fermions, Majorana self-pairing lifts ALL fractional states": true,
+    "12451 control: the self-mass lattice test is not vacuous -- on c22 it passes for only 8 of 92 fractional fields, and all 6 real Y = 0 fields are among them; on SM_2618 it rescues nothing (0 real Y = 0 fields)": true,
+    "12451: SM_2618 unaffected -- its unmatched types are colour triplets or carry Y != 0 (no real-rep Y = 0 self-mass)": true,
+    "12452: q = 3 smallest deficient region = 6 = d, twice (HiGHS optimum 6 with a kernel word; CP-SAT: none <= 5, one of size 6)": true,
+    "12452: q = 5 -- HiGHS hits its 3000 s limit at the trivial incumbent 31 (a vertex and its neighbours); recorded, not used": true,
+    "12453: own-characteristic W(3,q) graph states -- every sampled balanced cut and every local-search cut at the ceiling (11, 36)": true,
+    "12453: binary states on the same graphs exceed the q-ary ceiling on balanced cuts (>= 15 at q = 3, >= 65 at q = 5)": true,
+    "12454: cross-repo code-parameter index built; contains the W(3,3) CSS [[40,8,6]]": true
+  },
+  "all_checks_pass": true
+}

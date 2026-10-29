@@ -1,0 +1,55 @@
+{
+ "doublets": 8,
+ "none": {
+  "edges": 11,
+  "matched": 6,
+  "unmatched": 2
+ },
+ "gauge": {
+  "edges": 11,
+  "matched": 6,
+  "unmatched": 2
+ },
+ "point_group": {
+  "edges": 11,
+  "matched": 6,
+  "unmatched": 2
+ },
+ "witten": {
+  "edges": 11,
+  "matched": 6,
+  "unmatched": 2
+ },
+ "translation": {
+  "edges": 11,
+  "matched": 6,
+  "unmatched": 2
+ },
+ "majorana": {
+  "real_rep": {
+   "0": false,
+   "1": false,
+   "2": true,
+   "3": true,
+   "4": true,
+   "5": true,
+   "6": true,
+   "7": true
+  },
+  "self_pairing_allowed": {
+   "0": false,
+   "1": false,
+   "2": true,
+   "3": true,
+   "4": true,
+   "5": true,
+   "6": true,
+   "7": true
+  },
+  "unmatched_after_dirac": [
+   2,
+   5
+  ],
+  "unmatched_after_majorana": []
+ }
+}

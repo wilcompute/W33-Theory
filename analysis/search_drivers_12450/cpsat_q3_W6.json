@@ -1,0 +1,17 @@
+{
+ "q": 3,
+ "W": 6,
+ "cases": {
+  "a": {
+   "status": "OPTIMAL",
+   "seconds": 0.0,
+   "weight": 6,
+   "kernel_ok": true
+  },
+  "b": {
+   "status": "INFEASIBLE",
+   "seconds": 0.0
+  }
+ },
+ "no_word_of_weight_le_W": false
+}

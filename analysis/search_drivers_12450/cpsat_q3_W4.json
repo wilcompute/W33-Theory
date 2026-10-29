@@ -1,0 +1,15 @@
+{
+ "q": 3,
+ "W": 4,
+ "cases": {
+  "a": {
+   "status": "INFEASIBLE",
+   "seconds": 0.2
+  },
+  "b": {
+   "status": "INFEASIBLE",
+   "seconds": 0.0
+  }
+ },
+ "no_word_of_weight_le_W": true
+}

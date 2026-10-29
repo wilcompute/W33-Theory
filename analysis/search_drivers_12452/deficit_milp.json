@@ -1,0 +1,20 @@
+{
+ "3": {
+  "n": 40,
+  "optimal": true,
+  "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "seconds": 4.9,
+  "min_region": 6,
+  "x_weight": 6,
+  "x_in_kernel": true
+ },
+ "5": {
+  "n": 156,
+  "optimal": false,
+  "status": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+  "seconds": 3000.4,
+  "min_region": 31,
+  "x_weight": 1,
+  "x_in_kernel": false
+ }
+}
