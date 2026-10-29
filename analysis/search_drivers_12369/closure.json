@@ -1,0 +1,15 @@
+{
+ "all_solutions": 16848,
+ "metric_solutions": 16848,
+ "metric_by_type": {
+  "elliptic": 16848
+ },
+ "lambda_hist": {
+  "('hyperbolic', 1)": 21060,
+  "('elliptic', 2)": 16848
+ },
+ "nonmetric": 0,
+ "metrics_per_kappa": {
+  "2": 16848
+ }
+}

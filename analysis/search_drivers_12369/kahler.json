@@ -1,0 +1,19 @@
+{
+ "compatible": {
+  "hyperbolic J^2=+1": 1080,
+  "hyperbolic J^2=-1": 540
+ },
+ "pfaffian_omega": 1,
+ "klein_points": 130,
+ "W33_lines": 40,
+ "second_invariant_hist": {
+  "0": 6480,
+  "1": 5184,
+  "2": 5184
+ },
+ "kappa_with_omega_eigen": 0,
+ "intersection_hist": {
+  "10": 10368,
+  "16": 6480
+ }
+}

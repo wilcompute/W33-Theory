@@ -1,0 +1,155 @@
+{
+  "12369": {
+    "all_solutions": 16848,
+    "metric_solutions": 16848,
+    "metric_by_type": {
+      "elliptic": 16848
+    },
+    "lambda_hist": {
+      "('hyperbolic', 1)": 21060,
+      "('elliptic', 2)": 16848
+    },
+    "nonmetric": 0,
+    "metrics_per_kappa": {
+      "2": 16848
+    }
+  },
+  "12370_12371": {
+    "compatible": {
+      "hyperbolic J^2=+1": 1080,
+      "hyperbolic J^2=-1": 540
+    },
+    "pfaffian_omega": 1,
+    "klein_points": 130,
+    "W33_lines": 40,
+    "second_invariant_hist": {
+      "0": 6480,
+      "1": 5184,
+      "2": 5184
+    },
+    "kappa_with_omega_eigen": 0,
+    "intersection_hist": {
+      "10": 10368,
+      "16": 6480
+    }
+  },
+  "duality_circle": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "12371": {
+    "link": {
+      "(0, 16)": 6480,
+      "(1, 10)": 5184,
+      "(2, 10)": 5184
+    },
+    "orbits": {
+      "sp_order": 51840,
+      "orbits": [
+        {
+          "size": 3240,
+          "second_invariant": 0,
+          "stabilizer": 16
+        },
+        {
+          "size": 3240,
+          "second_invariant": 0,
+          "stabilizer": 16
+        },
+        {
+          "size": 2592,
+          "second_invariant": 1,
+          "stabilizer": 20
+        },
+        {
+          "size": 2592,
+          "second_invariant": 1,
+          "stabilizer": 20
+        },
+        {
+          "size": 2592,
+          "second_invariant": 2,
+          "stabilizer": 20
+        },
+        {
+          "size": 2592,
+          "second_invariant": 2,
+          "stabilizer": 20
+        }
+      ]
+    },
+    "joint": {
+      "distinct_J": 540,
+      "omega_fixed": 540,
+      "commuting_per_J": {
+        "288": 540
+      },
+      "second_invariant": {
+        "2": 51840,
+        "1": 51840,
+        "0": 51840
+      }
+    }
+  },
+  "12372_qca": {
+    "0.0": {
+      "outside_cone": 0.0,
+      "dispersion_err": 1.1102230246251565e-16,
+      "w0": 0.0,
+      "arcsin_m": 0.0,
+      "vmax": 1.0000000000000568,
+      "n": 1.0,
+      "small_k_rel_err": 6.505213034913027e-19
+    },
+    "0.1": {
+      "outside_cone": 0.0,
+      "dispersion_err": 3.3306690738754696e-16,
+      "w0": 0.10016742116155981,
+      "arcsin_m": 0.1001674211615598,
+      "vmax": 0.994987420739676,
+      "n": 0.99498743710662,
+      "small_k_rel_err": 4.8285791967193556e-05
+    },
+    "0.3": {
+      "outside_cone": 0.0,
+      "dispersion_err": 3.3306690738754696e-16,
+      "w0": 0.30469265401539747,
+      "arcsin_m": 0.3046926540153975,
+      "vmax": 0.9539390601914306,
+      "n": 0.9539392014169457,
+      "small_k_rel_err": 0.0029683135023422097
+    },
+    "0.6": {
+      "outside_cone": 0.0,
+      "dispersion_err": 3.3306690738754696e-16,
+      "w0": 0.6435011087932843,
+      "arcsin_m": 0.6435011087932844,
+      "vmax": 0.7999995262578921,
+      "n": 0.8,
+      "small_k_rel_err": 0.054577743017372504
+    }
+  },
+  "checks": {
+    "12369: 16848 closure solutions, all +-Hodge stars of elliptic metrics (2 metrics each); hyperbolic kappa_g^2 = +1; none exotic": true,
+    "12370: 540 Kahler (J^2=-1) and 1080 para-Kahler metrics for omega, all hyperbolic; 540 = 51840/96": true,
+    "12370: the duality circle {x + yX : x^2 + y^2 = 1} has order 4 = q + 1": true,
+    "12371: no cone fixes omega; shared contexts 16 iff null invariant (6480) else 10 (10368); Sp orbits 3240x2 + 2592x4": true,
+    "12371: each of the 540 quantum J commutes with 288 cones, 96 per invariant class": true,
+    "12372b: Dirac QCA -- exact light cone; cos w = n cos k; rest frequency = arcsin m; group velocity <= n (= 1 if massless)": true
+  },
+  "all_checks_pass": true
+}

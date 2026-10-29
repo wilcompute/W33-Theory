@@ -1,0 +1,12 @@
+{
+ "distinct_J": 540,
+ "omega_fixed": 540,
+ "commuting_per_J": {
+  "288": 540
+ },
+ "second_invariant": {
+  "2": 51840,
+  "1": 51840,
+  "0": 51840
+ }
+}

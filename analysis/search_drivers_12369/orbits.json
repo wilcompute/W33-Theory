@@ -1,0 +1,35 @@
+{
+ "sp_order": 51840,
+ "orbits": [
+  {
+   "size": 3240,
+   "second_invariant": 0,
+   "stabilizer": 16
+  },
+  {
+   "size": 3240,
+   "second_invariant": 0,
+   "stabilizer": 16
+  },
+  {
+   "size": 2592,
+   "second_invariant": 1,
+   "stabilizer": 20
+  },
+  {
+   "size": 2592,
+   "second_invariant": 1,
+   "stabilizer": 20
+  },
+  {
+   "size": 2592,
+   "second_invariant": 2,
+   "stabilizer": 20
+  },
+  {
+   "size": 2592,
+   "second_invariant": 2,
+   "stabilizer": 20
+  }
+ ]
+}
