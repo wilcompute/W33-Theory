@@ -1053112,6 +1053112,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0071b5bb469ed7c7a980daa4cb4f3ed2949221ef62e339194219832c04d5d61c",
+      "normalized_formula": "^No-gounderfullpermutations:^TheW33graphsymmetrygroup`G=PGSp4(3)`hasorder51,840;itsindex-twonormalsubgroup`H=PSp4(3)`is*nonabeliansimple*,order25,920.ThenaturalConwelllabelactioniscontainedin`S8`,order40,320.Since25,920doesnotdivide40,320,noinjectivegrouphomomorphism`H->S8`exists.Simplicityimplies^every^homomorphismfromHtoS8istrivial.Thereforeanyhomomorphism`G->S8`factorsthrough`G/H\u2245C2`.InparticularitcannotinducethetransitiveA8actiononeightlabels,oracttransitivelyontheir28unorderedpairs.Conversely,A8oforder20,160cannotembedinGbecause20,160doesnotdivide51,840",
+      "numeric_literals": [
+        "0",
+        "1",
+        "160",
+        "3",
+        "320",
+        "5",
+        "8",
+        "840",
+        "920"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_conwell_w33_eight_label_nogo.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/2026-10-29_conwell_w33_eight_label_nogo.md",
+          "raw": "**No-go under full permutations:** The W33 graph symmetry group `G=PGSp4(3)` has order 51,840; its index-two normal subgroup `H=PSp4(3)` is *nonabelian simple*, order 25,920. The natural Conwell label action is contained in `S8`, order 40,320. Since 25,920 does not divide 40,320, no injective group homomorphism `H -> S8` exists. Simplicity implies **every** homomorphism from H to S8 is trivial. Therefore any homomorphism `G -> S8` factors through `G/H \u2245 C2`. In particular it cannot induce the transitive A8 action on eight labels, or act transitively on their 28 unordered pairs. Conversely, A8 of order20,160 cannot embed in G because 20,160 does not divide 51,840.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ede0a9a040bf5d4272490097ef5246c5deca395654fe8b1e089728615779ac04",
+      "structural_formula": "^No-gounderfullpermutations:^TheW3#graphsymmetrygroup`G=PGSp4(#)`hasorder5#,#;itsindex-twonormalsubgroup`H=PSp4(#)`is*nonabeliansimple*,order2#,#.ThenaturalConwelllabelactioniscontainedin`S8`,order4#,#.Since2#,#doesnotdivide4#,#,noinjectivegrouphomomorphism`H->S8`exists.Simplicityimplies^every^homomorphismfromHtoS8istrivial.Thereforeanyhomomorphism`G->S8`factorsthrough`G/H\u2245C2`.InparticularitcannotinducethetransitiveA8actiononeightlabels,oracttransitivelyontheir2#unorderedpairs.Conversely,A8oforder2#,#cannotembedinGbecause2#,#doesnotdivide5#,#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1d839a3605e7c42f07be47905dcd9650e85cbc31126d91524e9a77881956f4a8",
       "normalized_formula": "^Non-transfertooptics:^Theliteralinteger/complexliftX_R=Ftensor(I+B_real)haseigenvalue28*phi\u224845.30495,sinceB_realisa27-regulargraphadjacency.ThereforeitisnotunitaryorfiniteorderoverC.ComplexHilbert-spacerepresentationofabstractC24ispossible,butwould*not*bethisgraphoperator",
       "numeric_literals": [
@@ -1908525,9 +1908560,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T13:43:33-04:00",
+  "frozen_at": "2026-10-29T13:47:59-04:00",
   "pass": 398,
-  "repository_head": "923c4eb20e8c686bedba283759226c42b18e0ec7",
+  "repository_head": "a8bb48f61755cebffcb8c2a2871d569a7c1c0bd3",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2189301,6 +2189336,14 @@
     },
     {
       "exact_formula_ids": [
+        "0071b5bb469ed7c7a980daa4cb4f3ed2949221ef62e339194219832c04d5d61c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ede0a9a040bf5d4272490097ef5246c5deca395654fe8b1e089728615779ac04",
+      "structural_formula": "^No-gounderfullpermutations:^TheW3#graphsymmetrygroup`G=PGSp4(#)`hasorder5#,#;itsindex-twonormalsubgroup`H=PSp4(#)`is*nonabeliansimple*,order2#,#.ThenaturalConwelllabelactioniscontainedin`S8`,order4#,#.Since2#,#doesnotdivide4#,#,noinjectivegrouphomomorphism`H->S8`exists.Simplicityimplies^every^homomorphismfromHtoS8istrivial.Thereforeanyhomomorphism`G->S8`factorsthrough`G/H\u2245C2`.InparticularitcannotinducethetransitiveA8actiononeightlabels,oracttransitivelyontheir2#unorderedpairs.Conversely,A8oforder2#,#cannotembedinGbecause2#,#doesnotdivide5#,#"
+    },
+    {
+      "exact_formula_ids": [
         "1d839a3605e7c42f07be47905dcd9650e85cbc31126d91524e9a77881956f4a8"
       ],
       "exact_member_count": 1,
@@ -2418639,20 +2418682,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92610620,
-    "exact_formula_families": 65258,
-    "files_scanned": 12734,
-    "formula_occurrences": 71399,
+    "bytes_scanned": 92615127,
+    "exact_formula_families": 65259,
+    "files_scanned": 12736,
+    "formula_occurrences": 71400,
     "status_occurrences": {
       "certified_or_theorem": 5365,
       "killed_or_retracted": 1953,
       "open_or_conditional": 2414,
       "preregistered": 36,
       "retrospective_fit": 5432,
-      "unclassified": 56199
+      "unclassified": 56200
     },
-    "structural_families": 63544
+    "structural_families": 63545
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "eb19f0f2159506cafcbd298c7b688f701806f4e1e8f4a0875eb5f641d0a98af2"
+  "universe_sha256": "366b627f1e87460e5a13a7c1a9c2651ba40359e33ebdae98628216a661136fdf"
 }
