@@ -95,7 +95,7 @@ def main():
     # the four specified output triples. Numerical statistics use SciPy.
     from scipy.stats import binom
     budget=[]
-    for overlap,N,threshold in ((0,20333,16),(0.5,6881,9),(0.8,2437,5),(1,1413,4)):
+    for overlap,N,threshold in ((0,19427,15),(0.5,6881,9),(0.8,2437,5),(1,1413,4)):
         pw=sum(z*v for z,v in zip(w4,(1,overlap**2,overlap**3)))/DENOM
         pd=sum(z*v for z,v in zip(d4,(1,overlap**2,overlap**3)))/DENOM
         false_point=float(binom.sf(threshold-1,N,pd))
@@ -108,6 +108,16 @@ def main():
                        "P_W33":pw,"P_dual":pd,
                        "false_W33_given_dual":false_point,
                        "false_dual_given_W33":false_dual})
+    # Prior N-1-only check is not a proof of GLOBAL minimum: a lower N can
+    # admit a different cutoff. Check every N below the corrected s=0 optimum.
+    import numpy as np
+    n_grid=np.arange(1,19428)
+    pw0=w4[0]/DENOM
+    pd0=d4[0]/DENOM
+    min_k=binom.isf(0.001,n_grid,pd0).astype(np.int64)+1
+    min_k+=(binom.sf(min_k-1,n_grid,pd0)>=0.001)
+    viable=(binom.sf(min_k-1,n_grid,pd0)<0.001)&(binom.cdf(min_k-1,n_grid,pw0)<0.001)
+    assert list(n_grid[viable])==[19427]
     data={
       "status":"PASS","model":"Three photon pure internal states with equal real pairwise overlap s in [0,1], detector insensitive to internal state",
       "unitary":"U=(2J-5(I+A))/15 at t=pi/2",
