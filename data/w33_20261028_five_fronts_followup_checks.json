@@ -1,0 +1,313 @@
+{
+  "schema": "w33.2026-10-28.five-front-followup-independent-controls.v1",
+  "prepublication_verified": true,
+  "exact_checks": {
+    "reference_deck": "Rdeck^2=I, det=-1, Rdeck^T M Rdeck=M",
+    "six_loop_endpoint_exchange": "S^T H0 S=H0; S^T J S=-J; S^T H(-2) S=H(+2)",
+    "generalized_hodge": "(2 H0^-1 J)^2=I, trace=0, projectors rank3 each",
+    "reduced_period_even_metric": [
+      [
+        10,
+        0,
+        -6
+      ],
+      [
+        0,
+        12,
+        -6
+      ],
+      [
+        -6,
+        -6,
+        12
+      ]
+    ],
+    "even_det": 648,
+    "odd_generator": [
+      2,
+      -1,
+      1,
+      0
+    ],
+    "odd_M_norm_squared": 18,
+    "lifted_integer_loop_gram": [
+      [
+        794,
+        -42,
+        768
+      ],
+      [
+        -42,
+        22,
+        -52
+      ],
+      [
+        768,
+        -52,
+        766
+      ]
+    ],
+    "lifted_integer_loop_gram_det": 260784,
+    "E6_trace_quadratic": [
+      [
+        120,
+        0
+      ],
+      [
+        0,
+        72
+      ]
+    ],
+    "E6_cubic_mixed_anomaly_tensors_zero": true,
+    "E6_45_cubic_term_counts": [
+      5,
+      5,
+      20,
+      15
+    ],
+    "strictly_positive_compact_couplings": true
+  },
+  "finite_math_controls": {
+    "transverse_squared_speeds": {
+      "eps_0": [
+        0.37037037037037035,
+        0.37037037037037035,
+        0.37037037037037046
+      ],
+      "eps_0_01": [
+        0.37123176495771293,
+        0.3714814814814814,
+        0.3739534202274719
+      ],
+      "eps_0_1": [
+        0.37898431624379725,
+        0.38148148148148137,
+        0.4062008689413879
+      ]
+    },
+    "all_corner_bloch_ranks": [
+      {
+        "mask": 0,
+        "signs": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 105
+      },
+      {
+        "mask": 1,
+        "signs": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 2,
+        "signs": [
+          1,
+          -1,
+          1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 3,
+        "signs": [
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 4,
+        "signs": [
+          1,
+          1,
+          -1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 5,
+        "signs": [
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 6,
+        "signs": [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 7,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 8,
+        "signs": [
+          1,
+          1,
+          1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 9,
+        "signs": [
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 10,
+        "signs": [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 11,
+        "signs": [
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 12,
+        "signs": [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 13,
+        "signs": [
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 14,
+        "signs": [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      },
+      {
+        "mask": 15,
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "short_face_rank": 105,
+        "three_mixed_curl_rank": 108
+      }
+    ],
+    "rotor": {
+      "g_0_2": [
+        {
+          "L": 3,
+          "states": 343,
+          "E0": 0.24920887687885135,
+          "gap": 0.43978292904579025,
+          "approx_max_Ritz_residual": 6.78e-11
+        },
+        {
+          "L": 4,
+          "states": 729,
+          "E0": 0.2485320384727967,
+          "gap": 0.440181637085552,
+          "approx_max_Ritz_residual": 6.53e-11
+        },
+        {
+          "L": 5,
+          "states": 1331,
+          "E0": 0.24853203844931157,
+          "gap": 0.439956542547842,
+          "approx_max_Ritz_residual": 6.87e-11
+        }
+      ],
+      "g_0_1": [
+        {
+          "L": 3,
+          "states": 343,
+          "E0": 0.24920884053888617,
+          "gap": 0.109099690286415
+        },
+        {
+          "L": 4,
+          "states": 729,
+          "E0": 0.24650051407018594,
+          "gap": 0.11064817522687312
+        },
+        {
+          "L": 5,
+          "states": 1331,
+          "E0": 0.2465004964716073,
+          "gap": 0.10975086188486669
+        }
+      ]
+    }
+  },
+  "validation_scope": "Exact rational matrix identities, independently reconstructed native integer-loop Gram, all 16 k_mu=0/pi Bloch ranks mod 101, 6 finite truncations g=.1,.2. Repo-native producer/tests require CI; no global Brillouin theorem, infinite spatial volume, physical time, fault tolerance, or mass gap claim."
+}
