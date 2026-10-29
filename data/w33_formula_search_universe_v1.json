@@ -843022,6 +843022,46 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c50ad7435884b433a8d3fa6862518982203fae21ed4b16d5657fbeb32ffdb7f3",
+      "normalized_formula": "Theexecutable`analysis/w33_20261029_e8_cover_photonic_sign.py`constructsall^240integralE8roots^inthesimple-rootbasisandgroupsthemin120mod-twoantipodalpairs.EachofthesevenpreviouslyverifiedPSp4(3)binarygeneratorsisliftedconstructivelytoan^integer^matrixpreservingtheE8CartanGramform,usingthetreeofsimplerootstofixsigns.Choosingsignssoeachlifthasorder3,theliftsgeneratetheexactpullbackoftheorder-25,920PSp4(3)subgroupunder`W(E8)->O8+(2)`.Becausetheexplicitwordofgeneratorindices`(0,1,5,4)`squaresto`-I8`,theintegralsubgrouphasorderexactly^51,840^.Thisprovestheextensionis^nonsplit^;the270rank-fourinvolutionslifttoorderfourandthe45rank-twoinvolutionstoordertwo",
+      "numeric_literals": [
+        "0",
+        "0261029",
+        "1",
+        "2",
+        "20",
+        "240",
+        "25",
+        "3",
+        "4",
+        "5",
+        "51",
+        "70",
+        "840",
+        "920"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md",
+          "raw": "The executable `analysis/w33_20261029_e8_cover_photonic_sign.py` constructs all **240 integral E8 roots** in the simple-root basis and groups them in 120 mod-two antipodal pairs. Each of the seven previously verified PSp4(3) binary generators is lifted constructively to an **integer** matrix preserving the E8 Cartan Gram form, using the tree of simple roots to fix signs. Choosing signs so each lift has order 3, the lifts generate the exact pullback of the order-25,920 PSp4(3) subgroup under `W(E8)->O8+(2)`. Because the explicit word of generator indices `(0,1,5,4)` squares to `-I8`, the integral subgroup has order exactly **51,840**. This proves the extension is **nonsplit**; the 270 rank-four involutions lift to order four and the 45 rank-two involutions to order two.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c343033485f3e16f6785dd57297bceb613b21b8fb7eff8b76b5e9e57883a61f4",
+      "structural_formula": "Theexecutable`analysis/w3#_2#_e8_cover_photonic_sign.py`constructsall^#integralE8roots^inthesimple-rootbasisandgroupsthemin1#mod-twoantipodalpairs.EachofthesevenpreviouslyverifiedPSp4(#)binarygeneratorsisliftedconstructivelytoan^integer^matrixpreservingtheE8CartanGramform,usingthetreeofsimplerootstofixsigns.Choosingsignssoeachlifthasorder3,theliftsgeneratetheexactpullbackoftheorder-#,#PSp4(#)subgroupunder`W(E8)->O8+(#)`.Becausetheexplicitwordofgeneratorindices`(#,#,#,#)`squaresto`-I8`,theintegralsubgrouphasorderexactly^#,#^.Thisprovestheextensionis^nonsplit^;the2#rank-fourinvolutionslifttoorderfourandthe4#rank-twoinvolutionstoordertwo"
+    },
+    {
+      "file_count": 1,
       "formula_id": "65195f0ce76e082d90992fbf18c4427825f3bb35b5ce1aa4d936c6a2a576f9d0",
       "normalized_formula": "Theexecutablesourcereconstructsallnecessaryincidencefromtheexisting,CI-verifiedW3327-octagongroupcertificate.ItthenchecksQ2=18Q,thecompleterootcensus,exactreflectionclosureandCartanmatrix,all51,840Weylpermutations,andtheH27-centerconjugate-sectorsplit.CIrunsthetestandregeneratesamachine-readablecertificate",
       "numeric_literals": [
@@ -847299,6 +847339,36 @@
       },
       "structural_family_id": "85ac16aa6d2236571db9f39a4488b9c357a345b6c8bccb11841f5ca2865c42e5",
       "structural_formula": "Thematchingpolynomialm(G,x)=sum_{k=#}^{M}m_k*x^kenumeratesmatchingsinagraphG"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e353ce3265263ce22e61580b4b8c6770bc30ddf54d8ac422d1f93b9098966998",
+      "normalized_formula": "ThematrixMofthatorder-fourwitnesssatisfies`M^TGM=G`butisnotorthogonalunderordinaryEuclideanmodeamplitudes.Diagonalizeandwhitenthe^positive-definite^GramG:`O=G^(1/2)MG^(-1/2)`.Then`O^TO=I`and`O^2=-I`.Anordinaryreal8-modeopticalscattererimplementingOisdecomposedinto^28adjacent-modeSU(2)elements^.Withonecoherentuntouchedreferencemode(ninemodestotal),twopassescauseanobservablerelativepiphase.Intheideallossless,phase-lockedinterferometer,thereference^minus^outputis1and^plus^outputis0.Withoutthereference,-Iisglobalandcannotbemeasured",
+      "numeric_literals": [
+        "-1",
+        "1",
+        "2",
+        "28"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md",
+          "raw": "The matrix M of that order-four witness satisfies `M^T G M = G` but is not orthogonal under ordinary Euclidean mode amplitudes. Diagonalize and whiten the **positive-definite** Gram G: `O = G^(1/2) M G^(-1/2)`. Then `O^T O=I` and `O^2=-I`. An ordinary real 8-mode optical scatterer implementing O is decomposed into **28 adjacent-mode SU(2) elements**. With one coherent untouched reference mode (nine modes total), two passes cause an observable relative pi phase. In the ideal lossless, phase-locked interferometer, the reference **minus** output is 1 and **plus** output is 0. Without the reference, -I is global and cannot be measured.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "c1fbe4e37d409d91ccb9014fb0d3a3c06c8ffbcd7eb44aefcc8811a3ff7967ff",
+      "structural_formula": "ThematrixMofthatorder-fourwitnesssatisfies`M^TGM=G`butisnotorthogonalunderordinaryEuclideanmodeamplitudes.Diagonalizeandwhitenthe^positive-definite^GramG:`O=G^(#/#)MG^(#/#)`.Then`O^TO=I`and`O^#=-I`.Anordinaryreal8-modeopticalscattererimplementingOisdecomposedinto^#adjacent-modeSU(#)elements^.Withonecoherentuntouchedreferencemode(ninemodestotal),twopassescauseanobservablerelativepiphase.Intheideallossless,phase-lockedinterferometer,thereference^minus^outputis1and^plus^outputis0.Withoutthereference,-Iisglobalandcannotbemeasured"
     },
     {
       "file_count": 1,
@@ -1052038,6 +1052108,42 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b9a0f4ea5942cb7c166d907a512730b174b94ea6e55899a0be0d384c0de2a60e",
+      "normalized_formula": "^DistinctiveW33fingerprint:^thecataloghasexactlytwographswith40four-cliques:index26has`rank_2(A)=10`andistheorthogonalGQ(3,3)dual;index27has`rank_2(A)=16`andisthesymplecticW(3,3)pointgraph.Everyothercataloggraphhasfewerthan40K4.Thustheorderedpair^(rank_2(A),numberof4-cliques)=(16,40)^singlesoutW33withinthecomplete28-graphcontrolgroup.Thedualhas[[40,20,4]],whileW33has[[40,8,6]].Sixteennon-W33cospectralgraphsalsohave[[40,8,6]],soW33'sCSSparameters^alone^arenotidentifying",
+      "numeric_literals": [
+        "0",
+        "10",
+        "16",
+        "20",
+        "3",
+        "4",
+        "40",
+        "6",
+        "7",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md",
+          "raw": "**Distinctive W33 fingerprint:** the catalog has exactly two graphs with 40 four-cliques: index 26 has `rank_2(A)=10` and is the orthogonal GQ(3,3) dual; index 27 has `rank_2(A)=16` and is the symplectic W(3,3) point graph. Every other catalog graph has fewer than 40 K4. Thus the ordered pair **(rank_2(A), number of 4-cliques) = (16,40)** singles out W33 within the complete 28-graph control group. The dual has [[40,20,4]], while W33 has [[40,8,6]]. Sixteen non-W33 cospectral graphs also have [[40,8,6]], so W33's CSS parameters **alone** are not identifying.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4fd6f5806c987d3dc6b9f6b93223b0054f520e6c5a5c4e4edc7803f22206de10",
+      "structural_formula": "^DistinctiveW3#fingerprint:^thecataloghasexactlytwographswith4#four-cliques:index2#has`rank_2(A)=#`andistheorthogonalGQ(#,#)dual;index2#has`rank_2(A)=#`andisthesymplecticW(#,#)pointgraph.Everyothercataloggraphhasfewerthan4#K4.Thustheorderedpair^(rank_2(A),numberof4-cliques)=(#,#)^singlesoutW3#withinthecomplete2#-graphcontrolgroup.Thedualhas[[#,#,#]],whileW3#has[[#,#,#]].Sixteennon-W3#cospectralgraphsalsohave[[#,#,#]],soW3#'sCSSparameters^alone^arenotidentifying"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ec1e8cb7e7cf809d82fa750a09b2ff2065b743124eb5d8d048a2428e8b43a995",
       "normalized_formula": "^Doublet\u2013tripletsplitting.^H(plane3)anditscolourpartnerT=colour\u2227c\u2227d(planes1,2)aretheweakandcolourhalvesof^onelevel-pairmultiplet\u2227{c,d}^(31/31).Themissing-partnerdoublet\u2013tripletsplittingofHolotradea6f1caeistheplanesplitofthatonemultiplet",
       "numeric_literals": [
@@ -1178465,6 +1178571,33 @@
       },
       "structural_family_id": "11d817fe028ab1165c61a10918a4b24115670b7d2842917d0c32d5137b72edf9",
       "structural_formula": "caution='Qisonlythedegeneratefirst-ordercompression;A2doesnotpreservesector-uniformvectors.Exactfinite-epsilonsplittingswerecomputedonthefull1#Dmatrix.Notafundamentalvacuumlaw.')"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4e980a0cb8b8adacc12035bca803db5b3dd208eb89ddacf412aeb6bf71beeb0c",
+      "normalized_formula": "caveat='9-modewitnessisstandardphase-referencedquantumoptics,notademonstrationoffundamentalE8physics')",
+      "numeric_literals": [
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_e8_cover_photonic_sign.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 127,
+          "path": "analysis/w33_20261029_e8_cover_photonic_sign.py",
+          "raw": "caveat='9-mode witness is standard phase-referenced quantum optics, not a demonstration of fundamental E8 physics')",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "055718df4b19a1d60167e7486f7e4d6cf2e144edd1165c62c2fe21b6b5cea9f7",
+      "structural_formula": "caveat='#-modewitnessisstandardphase-referencedquantumoptics,notademonstrationoffundamentalE8physics')"
     },
     {
       "file_count": 1,
@@ -1503878,6 +1504011,34 @@
       },
       "structural_family_id": "1ff2381e6600495dd9a646a4a5822d1f0e26eac79070c8565fd4b1626310346e",
       "structural_formula": "ours='theup-quarkmassdeterminantovertheDelta(#)HiggstripletisaHesse-pencilcubic(forcedbyDelta(#));thefamilymoduluspicksthemember:singularattheone-loopminimumrho(Pass1#)'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6c7bef7a5f39a88c843fef6dbe5e2df49e58840c25fc2e00877c51e53a760b12",
+      "normalized_formula": "out.append(dict(graph6_catalog_index=ix,rank2=len(b),logical_qubits=40-2*len(b),K4=kth(A),distance_leq6=d,witness_support=([jforjinrange(40)ifw>>j1]ifwelseNone)))",
+      "numeric_literals": [
+        "-2",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_srg28_css_population.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 72,
+          "path": "analysis/w33_20261029_srg28_css_population.py",
+          "raw": "out.append(dict(graph6_catalog_index=ix,rank2=len(b),logical_qubits=40-2*len(b),K4=kth(A),distance_leq6=d, witness_support=([j for j in range(40) if w>>j&1] if w else None)))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2c17e0f25afceab3d3036fe97b147da64aacb589645d236879088bd5d3eccb0c",
+      "structural_formula": "out.append(dict(graph6_catalog_index=ix,rank2=len(b),logical_qubits=##*len(b),K4=kth(A),distance_leq6=d,witness_support=([jforjinrange(#)ifw>>j1]ifwelseNone)))"
     },
     {
       "file_count": 1,
@@ -1909700,9 +1909861,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T14:46:25-04:00",
+  "frozen_at": "2026-10-29T15:11:14-04:00",
   "pass": 398,
-  "repository_head": "055804fc2e56ccd10a9739334e7f49a58425306f",
+  "repository_head": "812e85e2e7686c2015b34882868db42183350ffd",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2136920,6 +2137081,14 @@
     },
     {
       "exact_formula_ids": [
+        "c50ad7435884b433a8d3fa6862518982203fae21ed4b16d5657fbeb32ffdb7f3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c343033485f3e16f6785dd57297bceb613b21b8fb7eff8b76b5e9e57883a61f4",
+      "structural_formula": "Theexecutable`analysis/w3#_2#_e8_cover_photonic_sign.py`constructsall^#integralE8roots^inthesimple-rootbasisandgroupsthemin1#mod-twoantipodalpairs.EachofthesevenpreviouslyverifiedPSp4(#)binarygeneratorsisliftedconstructivelytoan^integer^matrixpreservingtheE8CartanGramform,usingthetreeofsimplerootstofixsigns.Choosingsignssoeachlifthasorder3,theliftsgeneratetheexactpullbackoftheorder-#,#PSp4(#)subgroupunder`W(E8)->O8+(#)`.Becausetheexplicitwordofgeneratorindices`(#,#,#,#)`squaresto`-I8`,theintegralsubgrouphasorderexactly^#,#^.Thisprovestheextensionis^nonsplit^;the2#rank-fourinvolutionslifttoorderfourandthe4#rank-twoinvolutionstoordertwo"
+    },
+    {
+      "exact_formula_ids": [
         "65195f0ce76e082d90992fbf18c4427825f3bb35b5ce1aa4d936c6a2a576f9d0"
       ],
       "exact_member_count": 1,
@@ -2138061,6 +2138230,14 @@
       "exact_member_count": 1,
       "structural_family_id": "85ac16aa6d2236571db9f39a4488b9c357a345b6c8bccb11841f5ca2865c42e5",
       "structural_formula": "Thematchingpolynomialm(G,x)=sum_{k=#}^{M}m_k*x^kenumeratesmatchingsinagraphG"
+    },
+    {
+      "exact_formula_ids": [
+        "e353ce3265263ce22e61580b4b8c6770bc30ddf54d8ac422d1f93b9098966998"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c1fbe4e37d409d91ccb9014fb0d3a3c06c8ffbcd7eb44aefcc8811a3ff7967ff",
+      "structural_formula": "ThematrixMofthatorder-fourwitnesssatisfies`M^TGM=G`butisnotorthogonalunderordinaryEuclideanmodeamplitudes.Diagonalizeandwhitenthe^positive-definite^GramG:`O=G^(#/#)MG^(#/#)`.Then`O^TO=I`and`O^#=-I`.Anordinaryreal8-modeopticalscattererimplementingOisdecomposedinto^#adjacent-modeSU(#)elements^.Withonecoherentuntouchedreferencemode(ninemodestotal),twopassescauseanobservablerelativepiphase.Intheideallossless,phase-lockedinterferometer,thereference^minus^outputis1and^plus^outputis0.Withoutthereference,-Iisglobalandcannotbemeasured"
     },
     {
       "exact_formula_ids": [
@@ -2190188,6 +2190365,14 @@
     },
     {
       "exact_formula_ids": [
+        "b9a0f4ea5942cb7c166d907a512730b174b94ea6e55899a0be0d384c0de2a60e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4fd6f5806c987d3dc6b9f6b93223b0054f520e6c5a5c4e4edc7803f22206de10",
+      "structural_formula": "^DistinctiveW3#fingerprint:^thecataloghasexactlytwographswith4#four-cliques:index2#has`rank_2(A)=#`andistheorthogonalGQ(#,#)dual;index2#has`rank_2(A)=#`andisthesymplecticW(#,#)pointgraph.Everyothercataloggraphhasfewerthan4#K4.Thustheorderedpair^(rank_2(A),numberof4-cliques)=(#,#)^singlesoutW3#withinthecomplete2#-graphcontrolgroup.Thedualhas[[#,#,#]],whileW3#has[[#,#,#]].Sixteennon-W3#cospectralgraphsalsohave[[#,#,#]],soW3#'sCSSparameters^alone^arenotidentifying"
+    },
+    {
+      "exact_formula_ids": [
         "ec1e8cb7e7cf809d82fa750a09b2ff2065b743124eb5d8d048a2428e8b43a995"
       ],
       "exact_member_count": 1,
@@ -2224459,6 +2224644,14 @@
       "exact_member_count": 1,
       "structural_family_id": "11d817fe028ab1165c61a10918a4b24115670b7d2842917d0c32d5137b72edf9",
       "structural_formula": "caution='Qisonlythedegeneratefirst-ordercompression;A2doesnotpreservesector-uniformvectors.Exactfinite-epsilonsplittingswerecomputedonthefull1#Dmatrix.Notafundamentalvacuumlaw.')"
+    },
+    {
+      "exact_formula_ids": [
+        "4e980a0cb8b8adacc12035bca803db5b3dd208eb89ddacf412aeb6bf71beeb0c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "055718df4b19a1d60167e7486f7e4d6cf2e144edd1165c62c2fe21b6b5cea9f7",
+      "structural_formula": "caveat='#-modewitnessisstandardphase-referencedquantumoptics,notademonstrationoffundamentalE8physics')"
     },
     {
       "exact_formula_ids": [
@@ -2312910,6 +2313103,14 @@
       "exact_member_count": 1,
       "structural_family_id": "1ff2381e6600495dd9a646a4a5822d1f0e26eac79070c8565fd4b1626310346e",
       "structural_formula": "ours='theup-quarkmassdeterminantovertheDelta(#)HiggstripletisaHesse-pencilcubic(forcedbyDelta(#));thefamilymoduluspicksthemember:singularattheone-loopminimumrho(Pass1#)'"
+    },
+    {
+      "exact_formula_ids": [
+        "6c7bef7a5f39a88c843fef6dbe5e2df49e58840c25fc2e00877c51e53a760b12"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2c17e0f25afceab3d3036fe97b147da64aacb589645d236879088bd5d3eccb0c",
+      "structural_formula": "out.append(dict(graph6_catalog_index=ix,rank2=len(b),logical_qubits=##*len(b),K4=kth(A),distance_leq6=d,witness_support=([jforjinrange(#)ifw>>j1]ifwelseNone)))"
     },
     {
       "exact_formula_ids": [
@@ -2420126,20 +2420327,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92686345,
-    "exact_formula_families": 65297,
-    "files_scanned": 12750,
-    "formula_occurrences": 71441,
+    "bytes_scanned": 92700381,
+    "exact_formula_families": 65302,
+    "files_scanned": 12753,
+    "formula_occurrences": 71446,
     "status_occurrences": {
       "certified_or_theorem": 5373,
       "killed_or_retracted": 1953,
       "open_or_conditional": 2417,
       "preregistered": 36,
-      "retrospective_fit": 5434,
-      "unclassified": 56228
+      "retrospective_fit": 5435,
+      "unclassified": 56232
     },
-    "structural_families": 63583
+    "structural_families": 63588
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "ddfb2f900c3851db3cfdcd7827aece9618ccc3525922cbf18aa5d41a6f2f2785"
+  "universe_sha256": "a4ef3d35ce389d28a1ecb04098f7fe4414c57e241171a9cd5308315ab2491da3"
 }
