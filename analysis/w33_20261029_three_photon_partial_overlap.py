@@ -75,6 +75,39 @@ def main():
     assert bound==(3564,5832,3888)
     margin=tuple(w[i]-bound[i] for i in range(3))
     assert margin==(810,7290,4860) and min(margin)>0
+    # Now use the SAME precommitted input and FOUR output events for
+    # both graphs, rather than merely a conservative cross-input bound.
+    neighbors=tuple(j for j in range(40) if all(A[i,j] for i in witness[0]))
+    assert len(neighbors)==4
+    outputs=tuple(combinations(neighbors,3))
+    def port_pattern(M,input3,output3):
+        return sum((1 << (3*i+j)) for i,x in enumerate(output3)
+                   for j,y in enumerate(input3) if x==y or M[x,y])
+    w4=tuple(sum(coefficients(port_pattern(A,witness[0],out))[k]
+                 for out in outputs) for k in range(3))
+    d4=tuple(sum(coefficients(port_pattern(B,witness[0],out))[k]
+                 for out in outputs) for k in range(3))
+    assert w4==(17496,52488,34992)
+    assert d4==(3376,1328,-2048)
+    aggregate_gap=tuple(a-b for a,b in zip(w4,d4))
+    assert aggregate_gap==(14120,51160,37040)
+    # A calibrated, ideal binomial acceptance test on K counts among
+    # the four specified output triples. Numerical statistics use SciPy.
+    from scipy.stats import binom
+    budget=[]
+    for overlap,N,threshold in ((0,20333,16),(0.5,6881,9),(0.8,2437,5),(1,1413,4)):
+        pw=sum(z*v for z,v in zip(w4,(1,overlap**2,overlap**3)))/DENOM
+        pd=sum(z*v for z,v in zip(d4,(1,overlap**2,overlap**3)))/DENOM
+        false_point=float(binom.sf(threshold-1,N,pd))
+        false_dual=float(binom.cdf(threshold-1,N,pw))
+        assert max(false_point,false_dual)<0.001
+        assert all(max(float(binom.sf(t-1,N-1,pd)),
+                       float(binom.cdf(t-1,N-1,pw)))>=0.001
+                   for t in range(1,55))
+        budget.append({"overlap":overlap,"N":N,"W33_if_K_ge":threshold,
+                       "P_W33":pw,"P_dual":pd,
+                       "false_W33_given_dual":false_point,
+                       "false_dual_given_W33":false_dual})
     data={
       "status":"PASS","model":"Three photon pure internal states with equal real pairwise overlap s in [0,1], detector insensitive to internal state",
       "unitary":"U=(2J-5(I+A))/15 at t=pi/2",
@@ -87,6 +120,11 @@ def main():
       "W33_witness_coefficient_tuple":list(w),
       "dual_universal_upper_coefficient_tuple":list(bound),
       "guaranteed_strict_gap_coefficient_tuple":list(margin),
+      "common_port_four_output_triples":[list(out) for out in outputs],
+      "common_port_W33_aggregate_coefficients":list(w4),
+      "common_port_dual_aggregate_coefficients":list(d4),
+      "common_port_strict_gap_coefficients":list(aggregate_gap),
+      "ideal_registered_trial_budgets_0p001_each_error":budget,
       "probability_denominator":DENOM,
       "guaranteed_probability_gap_at_s0":margin[0]/DENOM,
       "guaranteed_probability_gap_at_s1":sum(margin)/DENOM,
