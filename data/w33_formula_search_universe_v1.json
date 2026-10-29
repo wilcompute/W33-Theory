@@ -387676,6 +387676,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "93ae6a5a5e1cb8eb04dfac101df7748f472a636df9b36e12d64eaa62810e1c83",
+      "normalized_formula": "-Standard^SU(5)hyperchargenormalization^:`Tr_5Y2=3(1/3)2+2(1/2)2=5/6`;relativetothecanonicalgeneratortrace1/2thisyields`k_Y=5/3`andconventionally`g12=(5/3)g'2`.Thatisa^distinctphysicallyusedembeddingnormalization^",
+      "numeric_literals": [
+        "+2",
+        "1",
+        "2",
+        "3",
+        "5",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 104,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "- Standard **SU(5) hypercharge normalization**: `Tr_5 Y\u00b2=3(1/3)\u00b2+2(1/2)\u00b2=5/6`; relative to the canonical generator trace1/2 this yields `k_Y=5/3` and conventionally `g1\u00b2=(5/3)g'\u00b2`. That is a **distinct physically used embedding normalization**.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "348c1b66d61bf73e79cd7439cf8eb46debf903b22bd0f15bb89a247f6e89a8fd",
+      "structural_formula": "-Standard^SU(#)hyperchargenormalization^:`Tr_5Y2=#(#/#)##(#/#)#=#/#`;relativetothecanonicalgeneratortrace1/#thisyields`k_Y=#/#`andconventionally`g1#=(#/#)g'#`.Thatisa^distinctphysicallyusedembeddingnormalization^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "175b152f89cf8c805cd1bdd41de42f7e27604e5b742ad09fc50973ceaaadd7bf",
       "normalized_formula": "-StanfordCS255notes:one-timepadandperfectsecrecy:https://crypto.stanford.edu/~dwu4/notes/CS255LectureNotes.pdf",
       "numeric_literals": [
@@ -388194,6 +388226,36 @@
       },
       "structural_family_id": "aec8fbf0d8684d819eff0acb41c973e6d8ee2eeb9bb82c00e11d3a8c4e2602b2",
       "structural_formula": "-The9missingfibers=the9tritangentplanesthatDON'Tformcliques"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "467fc6f967c7d539a81c48498f55ddf9d79548cf38a6b433427313972d3c9bf2",
+      "normalized_formula": "-TheFibonacciratio`F5/F4=5/3`isanapproximationtothegoldenratio,^not^theexactgoldenratio.H4hasgenuineicosahedral/golden-ratiogeometry,but`5/3!=(1+sqrt5)/2",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 105,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "- The Fibonacci ratio `F5/F4=5/3` is an approximation to the golden ratio, **not** the exact golden ratio. H4 has genuine icosahedral/golden-ratio geometry, but `5/3 != (1+sqrt5)/2`.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "5ce530434cc30d4a0fe39570e3ffce77f863053c4bf0c8288688c88848b1f7b3",
+      "structural_formula": "-TheFibonacciratio`F5/F4=#/#`isanapproximationtothegoldenratio,^not^theexactgoldenratio.H4hasgenuineicosahedral/golden-ratiogeometry,but`#/#!=(#+sqrt5)/#"
     },
     {
       "file_count": 1,
@@ -417774,6 +417836,35 @@
       },
       "structural_family_id": "13a005076bb0ecab3300cbb0507da5a013379264f11eae60e141e23dea97eed6",
       "structural_formula": "##=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "07474fe38f3259c84889470be926a07ed4cea5f48b81345d8f8bd1182b68766e",
+      "normalized_formula": "135-107-27=^onecomplexnongaugemagneticzeromode^there,whilethe",
+      "numeric_literals": [
+        "-107",
+        "-27",
+        "135"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 176,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "135-107-27=**one complex nongauge magnetic zero mode** there, while the",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ad9870743dc09c383f44a06ade26e1cdd951963e2cfe74cff46abb98cea2bdb6",
+      "structural_formula": "###=^onecomplexnongaugemagneticzeromode^there,whilethe"
     },
     {
       "file_count": 2,
@@ -563216,6 +563307,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "88dece05943ec5880490b335384f44a49a846b82a7dd9af613d03402ece96617",
+      "normalized_formula": "All45termsofthecanonicalE6cubicareneutralinthesetwoU1charges.A^shared^matterresponsekernelimpliestheconditionaltraceweighting`120:72=5:3`.Thephysicalresponseisnotshowntobeuniversalacrossdistinctmassesorcouplings",
+      "numeric_literals": [
+        "120",
+        "3",
+        "5",
+        "72"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 84,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "All45 terms of the canonical E6 cubic are neutral in these two U1 charges. A **shared** matter response kernel implies the conditional trace weighting `120:72=5:3`. The physical response is not shown to be universal across distinct masses or couplings.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "d0f09d75dd72a2f7315a2d382a93473e04ff3f47efa60ae579f09429b51391a3",
+      "structural_formula": "All4#termsofthecanonicalE6cubicareneutralinthesetwoU1charges.A^shared^matterresponsekernelimpliestheconditionaltraceweighting`#:#=#:#`.Thephysicalresponseisnotshowntobeuniversalacrossdistinctmassesorcouplings"
+    },
+    {
+      "file_count": 1,
       "formula_id": "53e6615992e4ba7e54558318c2003b8f27bd76e5ea64d9cf7d331e5edeb4dd40",
       "normalized_formula": "All7group-theoreticconsistencytestspassforthek=9Burnsidecandidate:Burnsidesingle-orbitequation,non-negativity,identity-fixes-all,pair-orbitpositivity,Schurorthogonality,andaverage-orbit-sizeintegrality(432/9=48exactly)",
       "numeric_literals": [
@@ -567448,6 +567569,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "10c66fedbb65e9c062be5623c9ea3990483f9f62f0ad945c57ce1e02b820bebf",
+      "normalized_formula": "Asecondgenuinecombinatorialidentityisthenumberofroots:`H4`has`r*h=4*30=120`roots,`E6`has`6*12=72`roots,giving5/3.^ThereisnodemonstratedcanonicalembeddingofthenoncrystallographicH4rootsystemasarootsubsystemofE6^:itsCoxeterbondlabeled5requiresirrationalsimple-rootinnerproductsunavailableamongequal-lengthE6roots.ThisdoesnotruleoutnontrivialembeddingsafteranE8/icosianprojection",
+      "numeric_literals": [
+        "12",
+        "120",
+        "3",
+        "30",
+        "4",
+        "6",
+        "72"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "A second genuine combinatorial identity is the number of roots: `H4` has `r*h=4*30=120` roots, `E6` has `6*12=72` roots, giving 5/3. **There is no demonstrated canonical embedding of the noncrystallographic H4 root system as a root subsystem of E6**: its Coxeter bond labeled5 requires irrational simple-root inner products unavailable among equal-length E6 roots. This does not rule out nontrivial embeddings after an E8/icosian projection.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "437793fb3da056fba435af730e5faa701f3b80e0a78b00c5d9c62ccf3ae05aec",
+      "structural_formula": "Asecondgenuinecombinatorialidentityisthenumberofroots:`H4`has`r*h=#*#=#`roots,`E6`has`#*#=#`roots,giving5/#.^ThereisnodemonstratedcanonicalembeddingofthenoncrystallographicH4rootsystemasarootsubsystemofE6^:itsCoxeterbondlabeled5requiresirrationalsimple-rootinnerproductsunavailableamongequal-lengthE6roots.ThisdoesnotruleoutnontrivialembeddingsafteranE8/icosianprojection"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5575a55f3fb670fb2be54e09f638b1aac98b44039dba6f09f49ef9958ec98b4e",
       "normalized_formula": "Aseededsimulationwithindependentsigns,AR(1)electronicdriftrho=0.98,pump-evennonlinearquadraticdetectorcrosstalk=0.08anddetectornoisetestsnull,alternativeanddeliberatepump-sign-dependentdetectorbias.Withalpha=0.01,nulltrials400atN3000gave^1^rejection;alternative160trialsatN24000gave^159^rejections;thedeliberatelyfalsepump-odddetectorcontaminationgave^160^apparentdetections.TheseMonteCarlofrequenciesareillustrative,notguaranteeddetectionpowerorlaboratoryresults.Thelastcaseisadeliberatelydemonstrated*fundamentalinstrumentalloophole*:pump-signrandomizationalonecannotdistinguishopticalphysicsfrompump-odddetectorartifacts",
       "numeric_literals": [
@@ -571661,6 +571815,33 @@
       },
       "structural_family_id": "cbbe5a8e049c0bc08322bde183d4dd84e436134c9bd2c0bed432f71a10c8551e",
       "structural_formula": "Attheexplicitfour-coordinateposition,bothprimeshave^nonzero7#x7#exactfinite-fieldcurvaturedeterminantsandinvertiblekineticmatrices^.ConsequentlytherankoverQis*exactly*#atthatrationalconfiguration.Morestrongly,therationaldeterminant/Pfaffianisanonzerorationalfunction,sotheeffectivecurvaturehasmaximalpossiblerank^genericallyonanonemptyrealZariski-openset^whereverKisnonsingular.Therank1#pointisaspeciallower-ranklocus.Fprank2#byitselfisONLYarank>=#overQwitness;Fprank0atoriginisnotbyitselfanexactrationalzeroproof"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "655db593ba5a0c59be1e55ccfbf1baed60d56568a1941f10f1db567e4a3542ef",
+      "normalized_formula": "AttheidentityallsixcommutatorBlochrowsvanish,soequalityholdstheretoo.Therepairentersat^O(|k|^4)^sinceeachcommutatorrowisO(k)andw=O(k2);itcannotspoilthealready-provedO(k2)commonacousticcone",
+      "numeric_literals": [
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "At the identity all six commutator Bloch rows vanish, so equality holds there too. The repair enters at **O(|k|^4)** since each commutator row is O(k) and w=O(k\u00b2); it cannot spoil the already-proved O(k\u00b2) common acoustic cone.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "ae4bffabd2b138234ca032d839075ab5d8eeaeb5417badeef5c1071e1b122523",
+      "structural_formula": "AttheidentityallsixcommutatorBlochrowsvanish,soequalityholdstheretoo.Therepairentersat^O(|k|^#)^sinceeachcommutatorrowisO(k)andw=O(k2);itcannotspoilthealready-provedO(k2)commonacousticcone"
     },
     {
       "file_count": 1,
@@ -626793,6 +626974,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "06d43d3eeb4d5cea06e7f8d65123bdd91e4b1b45674d592c61688a4d90b4e742",
+      "normalized_formula": "ExactSylvester-principal-minorarithmeticproves`G_E-7I`is^positivedefinite^;thetotalpositivecosineweightisexactly`7009/28125`.Projectontotheelectricbox`|m_i|<=L`.Callits^true^minimum`E_L`;thecomplementaryblockhaselectrickineticlowerbound`K_out=7g2(L+1)2/2`;andthecross-boundarycosineoperatorhasnormatmost`W=sumw_a`.Thetwo-by-twomin-max/Schurcomparisongivestheall-fluxlowerbound",
+      "numeric_literals": [
+        "1",
+        "2",
+        "28125",
+        "7",
+        "7009"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 63,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "Exact Sylvester-principal-minor arithmetic proves `G_E-7 I` is **positive definite**; the total positive cosine weight is exactly `7009/28125`. Project onto the electric box `|m_i|<=L`. Call its **true** minimum `E_L`; the complementary block has electric kinetic lower bound `K_out=7g\u00b2(L+1)\u00b2/2`; and the cross-boundary cosine operator has norm at most `W=sum w_a`. The two-by-two min-max/Schur comparison gives the all-flux lower bound",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "92c6f85f87f80e6b6c829feaa6ad18f86c389e590f7052a7d267f890cd485e0a",
+      "structural_formula": "ExactSylvester-principal-minorarithmeticproves`G_E-#I`is^positivedefinite^;thetotalpositivecosineweightisexactly`#/#`.Projectontotheelectricbox`|m_i|<=L`.Callits^true^minimum`E_L`;thecomplementaryblockhaselectrickineticlowerbound`K_out=#g2(L+#)#/#`;andthecross-boundarycosineoperatorhasnormatmost`W=sumw_a`.Thetwo-by-twomin-max/Schurcomparisongivestheall-fluxlowerbound"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0f14f2c054daf09d63098918d34663e671cbdcbad35ed8b6122c77a089a5dc71",
       "normalized_formula": "Exacteig=10(24):{rep_ex10['commutant_dim']}component(s){'[IRREDUCIBLE]'ifrep_ex10['irreducible']else''}",
       "numeric_literals": [
@@ -655790,6 +656002,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f3cad1886f48ed3d7887d990a491426237f83cd50d72f58a143ac1dfa49402d4",
+      "normalized_formula": "H=(g2/2)m^TG_Em+sumw_a(1-cos(q_a.theta))`,thenativelifted-loopelectricGramhas",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 55,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "`H=(g\u00b2/2) m^T G_E m + sum w_a(1-cos(q_a.theta))`, the native lifted-loop electric Gram has",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1a34315c18f7f646de731ffbf0f8c55d3c583766a3447a5aa1b30d987aabbf1a",
+      "structural_formula": "H=(g2/#)m^TG_Em+sumw_a(#-cos(q_a.theta))`,thenativelifted-loopelectricGramhas"
+    },
+    {
+      "file_count": 1,
       "formula_id": "929144fdd86f9b01db185e76d605066443cd63986a91e21e128afe0a94878dae",
       "normalized_formula": "H=-.16\\log_2(.16)-15(.04)\\log_2(.04)-24(.01)\\log_2(.01)=4.803856189774729\\text{bits}",
       "numeric_literals": [
@@ -683827,6 +684067,34 @@
       },
       "structural_family_id": "092c80049c9494ce1679a77bf26d7dfda5bf056fc258055830587264cc63322b",
       "structural_formula": "K_Q=\\operatorname{diag}(#,#,#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "c5222264ce6275a5a61459eddce231882ce4e7655c85208dfb9ed0e851730ae2",
+      "normalized_formula": "K_R(t)=M[Cdelta(t)-(d/3)theta(t)sin(6t)]",
+      "numeric_literals": [
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 74,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "K_R(t)=M[C delta(t)-(d/3) theta(t) sin(6t)].",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "0fe9db24937e13458c3590ddb87813dc7d53a13ef9900d82858eb333a4889f43",
+      "structural_formula": "K_R(t)=M[Cdelta(t)-(d/#)theta(t)sin(#t)]"
     },
     {
       "file_count": 1,
@@ -720518,6 +720786,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "90899e8924f7922b353da0677dddb87b0a49fee37d30a9bfc640b338a965b5f6",
+      "normalized_formula": "Moreimportantly,thenumericratioof*diagonalentries*isnotinvariantevenunderprimitivelattice-preserving`GL(2,Z)`redefinitions.E.g.`Q'=Q,R'=Q+R`gives`[[120,120],[120,192]]`anddiagonalratio`120/192=5/8`.The^fullquadraticbilinearform^transformscovariantly;itsrawdiagonalratioisnotaphysicalobservablewithoutafixedgroup-embeddingnormalizationanddynamicalcouplingprescription",
+      "numeric_literals": [
+        "120",
+        "192",
+        "2",
+        "5",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 86,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "More importantly, the numeric ratio of *diagonal entries* is not invariant even under primitive lattice-preserving `GL(2,Z)` redefinitions. E.g. `Q'=Q, R'=Q+R` gives `[[120,120],[120,192]]` and diagonal ratio `120/192=5/8`. The **full quadratic bilinear form** transforms covariantly; its raw diagonal ratio is not a physical observable without a fixed group-embedding normalization and dynamical coupling prescription.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "b3111601f30a8b5518664840c89c4b1c57d5e13db75bdf9b67da371efbcda318",
+      "structural_formula": "Moreimportantly,thenumericratioof*diagonalentries*isnotinvariantevenunderprimitivelattice-preserving`GL(#,Z)`redefinitions.E.g.`Q'=Q,R'=Q+R`gives`[[#,#],[#,#]]`anddiagonalratio`#/#=#/#`.The^fullquadraticbilinearform^transformscovariantly;itsrawdiagonalratioisnotaphysicalobservablewithoutafixedgroup-embeddingnormalizationanddynamicalcouplingprescription"
+    },
+    {
+      "file_count": 1,
       "formula_id": "17399f2265fe6fab3fbb7b734ae7d7765284a24e04dc1258aecc819434c93311",
       "normalized_formula": "Moreover`C^2=F^2=CF=FC=0`over`F2`.Since`F`annihilatesthematching",
       "numeric_literals": [
@@ -750610,6 +750909,45 @@
       },
       "structural_family_id": "a414d2313933a8c0003d2ecaf71681bc6e3c0dae166ed5d233aa4bba053dd4f5",
       "structural_formula": "OnonecanonicalSpin(#)Weyl1#,normalizetherightCartanby(r=#T_{#R}).Thejointweightsgive"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "503dcd457c67dc7226af060976b7d516a9f05a2d7e80ef692e4868b5bd0897d4",
+      "normalized_formula": "Onthe*actualfrozen135-link,2-componentQ(omega)witness*,allsixoriginalcommutatornormsare`[4112913,4112913,4112913,4112913,4112913,0]`;thustheselectedcomplementnormis`12338739`.At`epsilon=1/1000`and`w=6`,itsnormalizedquadraticwitnesscostis^49/13000>0^,comparedwith^49/7800^inthe24-termrepair.Thisextra3/5factorisa^choice-dependentprojectionofthewitness^,notanewuniversalphysicalconstant",
+      "numeric_literals": [
+        "0",
+        "1",
+        "1000",
+        "12338739",
+        "13000",
+        "2",
+        "35",
+        "4",
+        "4112913",
+        "49",
+        "5",
+        "6",
+        "7800"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "On the *actual frozen 135-link, 2-component Q(omega) witness*, all six original commutator norms are `[4112913,4112913,4112913,4112913,4112913,0]`; thus the selected complement norm is `12338739`. At `epsilon=1/1000` and `w=6`, its normalized quadratic witness cost is **49/13000 > 0**, compared with **49/7800** in the 24-term repair. This extra 3/5 factor is a **choice-dependent projection of the witness**, not a new universal physical constant.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e3a6b8b94eaec2db1c3f3f77c7d1c7beffba3b5ddbfdc0912867991601235b0a",
+      "structural_formula": "Onthe*actualfrozen1#-link,#-componentQ(omega)witness*,allsixoriginalcommutatornormsare`[#,#,#,#,#,#]`;thustheselectedcomplementnormis`#`.At`epsilon=#/#`and`w=#`,itsnormalizedquadraticwitnesscostis^#/#>#^,comparedwith^#/#^inthe2#-termrepair.Thisextra3/#factorisa^choice-dependentprojectionofthewitness^,notanewuniversalphysicalconstant"
     },
     {
       "file_count": 1,
@@ -787451,6 +787789,41 @@
       },
       "structural_family_id": "3a18c7c185d7cf2629f8c55444b0447779d1494a2865abab681c1788a5d7e36a",
       "structural_formula": "Recurrence(CLXVII)</strong>\u2014r+s=-\u03bb,r\u00b7s=\u03bc-k,r-s=\u03bb+\u03bc=#;k+r+s=\u03b8=#=Lov\u00e1sztheta(stunning!)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6dd01fac0b7a6bff65c95ec08611ee4d76b7eb6d16abe20de55ee29806c5ba49",
+      "normalized_formula": "References:Coxetergroupclassificationhttps://people.math.osu.edu/davis.12/second_edition.pdf;600-cellincidencehttps://mathworld.wolfram.com/600-Cell.html;H4rootshttps://www.math.ru.nl/~heckman/CoxeterGroups.pdf;canonicalSU5hyperchargehttps://frankwilczek.com/2015/maxwellUnification04.pdf.Repo-localpriormath:`analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md`,`exploration/w33_geometric_quantization_bridge.py`,`analysis/2026-10-28_five_fronts_followup.md",
+      "numeric_literals": [
+        "-10",
+        "-28",
+        "12",
+        "2015",
+        "2026",
+        "2340",
+        "3",
+        "4",
+        "600"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 109,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "References: Coxeter group classification https://people.math.osu.edu/davis.12/second_edition.pdf ; 600-cell incidence https://mathworld.wolfram.com/600-Cell.html ; H4 roots https://www.math.ru.nl/~heckman/CoxeterGroups.pdf ; canonical SU5 hypercharge https://frankwilczek.com/2015/maxwellUnification04.pdf . Repo-local prior math: `analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md`, `exploration/w33_geometric_quantization_bridge.py`, `analysis/2026-10-28_five_fronts_followup.md`.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "1cae88cc61cb9df3bc0266078bcdc10b97056c46749fe87083f7facd3a118018",
+      "structural_formula": "References:Coxetergroupclassificationhttps://people.math.osu.edu/davis.#/second_edition.pdf;#-cellincidencehttps://mathworld.wolfram.com/#-Cell.html;H4rootshttps://www.math.ru.nl/~heckman/CoxeterGroups.pdf;canonicalSU5hyperchargehttps://frankwilczek.com/#/maxwellUnification0#.pdf.Repo-localpriormath:`analysis/PASS1#_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md`,`exploration/w3#_geometric_quantization_bridge.py`,`analysis/###_five_fronts_followup.md"
     },
     {
       "file_count": 1,
@@ -835613,6 +835986,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "287d8182943ea1fb9e39b3ab89b99d85f9abf1853d1428d8350e81f4860b5774",
+      "normalized_formula": "Theanalysisaddressesthepreviousfiveindependentproblemsasfarasexactstructureandfinitenumericalevidencepermit,plusasixthfalsifiability-mindedauditofthe`120:72=5:3`ratio.^Noobservedparticlespectrum,Einsteingravity,Lorentziantime,fullinteractingmatterdeterminant,gaugecouplingprediction,orTOEisderived.^",
+      "numeric_literals": [
+        "120",
+        "3",
+        "5",
+        "72"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "The analysis addresses the previous five independent problems as far as exact structure and finite numerical evidence permit, plus a sixth falsifiability-minded audit of the `120:72=5:3` ratio. **No observed particle spectrum, Einstein gravity, Lorentzian time, full interacting matter determinant, gauge coupling prediction, or TOE is derived.**",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "056f9a1474651e9bd9044d57c29f1fffbf9dbea4a1f4c001ad5728e98a0a2287",
+      "structural_formula": "Theanalysisaddressesthepreviousfiveindependentproblemsasfarasexactstructureandfinitenumericalevidencepermit,plusasixthfalsifiability-mindedauditofthe`#:#=#:#`ratio.^Noobservedparticlespectrum,Einsteingravity,Lorentziantime,fullinteractingmatterdeterminant,gaugecouplingprediction,orTOEisderived.^"
+    },
+    {
+      "file_count": 1,
       "formula_id": "de4f72469cee0cef404053eccebee019edd6c6cc785fdb380f8fa19a425ab936",
       "normalized_formula": "Theanswerisyes.WiththeCabibbolegfixedto``q^2/v=9/40``andquarter-",
       "numeric_literals": [
@@ -842623,6 +843026,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6cd00ed0177609b877a0e0ab8e287f718815cfcdde1f7357372aa2845e5a3e56",
+      "normalized_formula": "TheirquadraticBlochsymbolis`epsilonw(z)(SL6(z))^dagger(SL6(z))`,with`w(z)=sum_mu|z_mu-1|2`.Forevery^nonidentity^unitarycharacter,`w>0`and`[R;S]`invertibleimply",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "Their quadratic Bloch symbol is `epsilon w(z) (S L6(z))^dagger(S L6(z))`, with `w(z)=sum_mu |z_mu-1|\u00b2`. For every **nonidentity** unitary character, `w>0` and `[R;S]` invertible imply",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "4f373535b36bab33650dbc7e4549b5b81cd49442e2972866b3947de89999b95a",
+      "structural_formula": "TheirquadraticBlochsymbolis`epsilonw(z)(SL6(z))^dagger(SL6(z))`,with`w(z)=sum_mu|z_mu-#|#`.Forevery^nonidentity^unitarycharacter,`w>#`and`[R;S]`invertibleimply"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1604c0404249a7a83f94825a7f26e3a0733cd275b63e37ad6f035db76335474c",
       "normalized_formula": "Theirsumisunitysinceq+Phi_4=q+(q^2+1)=q^2+q+1=Phi_3",
       "numeric_literals": [
@@ -843119,6 +843551,41 @@
       },
       "structural_family_id": "c5c1add8d025f882fc9fa9a4f562f8e707b4f0746bffe3cfa65ed77fc27ab6ef",
       "structural_formula": "Thelastratioiscritical:#,#/#=#isnotaninteger.Thismeansthe5#toruscellsdo^not^formasingleorbitunderSp(#,F3).Theremustbe^atleasttwoorbits^"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f9a79238e713e403ee3d36ef8fcae1ebaaf28f62d3f79220741888c74589227e",
+      "normalized_formula": "ThelaterPass12340workdiscoveredtheexactnongaugeflatmodeat`z=(omega,omega,1,1)`where`omega^2+omega+1=0`.Itsselectedshort-face/mixed/six-loop/gradientranksare`105/107/108/27`;thisisan^actualcounterexample^toextrapolatingthethree-channelgenericrankintoanall-momentumgap.Pass12340added^24^translatedloop-differencecosineharmonicstorestoreequalitywiththesix-loopkernelatallmomentawithoutchangingthelongwaveO(k2)cone",
+      "numeric_literals": [
+        "0",
+        "1",
+        "105",
+        "107",
+        "108",
+        "2",
+        "2340",
+        "24",
+        "27"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "The later Pass12340 work discovered the exact nongauge flat mode at `z=(omega,omega,1,1)` where `omega^2+omega+1=0`. Its selected short-face/mixed/six-loop/gradient ranks are `105/107/108/27`; this is an **actual counterexample** to extrapolating the three-channel generic rank into an all-momentum gap. Pass12340 added **24** translated loop-difference cosine harmonics to restore equality with the six-loop kernel at all momenta without changing the longwave O(k\u00b2) cone.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c86d3a09807bb2dd80e04012ae6bf9b6d74151950f15d5cbbf57c7de5e314907",
+      "structural_formula": "ThelaterPass1#workdiscoveredtheexactnongaugeflatmodeat`z=(omega,omega,#,#)`where`omega^#+omega+#=#`.Itsselectedshort-face/mixed/six-loop/gradientranksare`#/#/#/#`;thisisan^actualcounterexample^toextrapolatingthethree-channelgenericrankintoanall-momentumgap.Pass1#added^#^translatedloop-differencecosineharmonicstorestoreequalitywiththesix-loopkernelatallmomentawithoutchangingthelongwaveO(k2)cone"
     },
     {
       "file_count": 1,
@@ -846143,6 +846610,35 @@
       },
       "structural_family_id": "b9d44ed4ebbecffb5058f475318c97c450c1b0f1d6b7cebf4f396ce6a4bfe13e",
       "structural_formula": "ThepotentialatImT*=#(Pass1#)ishigherthanatrho:thestabilisedvacuumhasnofamilyhierarchy"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d484a6793c27e03cfb8e94d5d90ee32588f73a53ab33f4178c1adf1340cf90df",
+      "normalized_formula": "Thepre-existingexactcommon-conefamilyis`H(theta)=H0+thetaJ`.Theverifiednativeorientationreflectionhas`S^TH0S=H0`and`S^TJS=-J`,so`H(theta)`transformsinto`H(-theta)`.Thereforeareflection-invariantquadraticaction^withinthisaffinefamily^musthave`theta=0`.Thecompressedthree-channelendpoints`theta=+2,-2`areexchanged,notindependentlyinvariant",
+      "numeric_literals": [
+        "+2",
+        "-2",
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "The pre-existing exact common-cone family is `H(theta)=H0+theta J`. The verified native orientation reflection has `S^T H0 S=H0` and `S^T J S=-J`, so `H(theta)` transforms into `H(-theta)`. Therefore a reflection-invariant quadratic action **within this affine family** must have `theta=0`. The compressed three-channel endpoints `theta=+2,-2` are exchanged, not independently invariant.",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "5591d887266549aa87201d36532830b038af932d5080bfd0d41fbd79b5340ed2",
+      "structural_formula": "Thepre-existingexactcommon-conefamilyis`H(theta)=H0+thetaJ`.Theverifiednativeorientationreflectionhas`S^TH0S=H0`and`S^TJS=-J`,so`H(theta)`transformsinto`H(-theta)`.Thereforeareflection-invariantquadraticaction^withinthisaffinefamily^musthave`theta=#`.Thecompressedthree-channelendpoints`theta=#,#`areexchanged,notindependentlyinvariant"
     },
     {
       "file_count": 1,
@@ -868430,6 +868926,37 @@
       },
       "structural_family_id": "b67a37144f969350cc91c30b9b25e2df773d594b2a6aba6495e9081c0e90e1e3",
       "structural_formula": "UsingtheTOE7#^numerical^,notinterval-certified,PgroundandfirstexcitedvaluesE0\u2248\u2212#,E1\u2212E0\u2248#,theelementaryblockmin\u2013maxlowerboundgivesa^conditional^unboundedgroundintervalapproximately"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "22d72c54960aeb8aab9e47b5aae9e45ba0b469b5a88f4f3f85f8cc54e416d962",
+      "normalized_formula": "Usingthe^previouslycomputednumericalestimate^atL=5,g=.2,`E_L\u22480.2485320384493`,theformulayieldstheindicativeinterval`[0.2356053,0.2485321]`.Thisis^notaninterval-certifiednumericbound^untilthefinite-boxeigenvalueitselfhasarigorouslowercertificate.Itisavalidanalyticboundformulawithanexplicitlylabelednumericalinputandconcernsjustthethree-loopsector,notinfinite-volume4Dlatticegaugedynamics",
+      "numeric_literals": [
+        ".2",
+        "0.2356053",
+        "0.2485320384493",
+        "0.2485321",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 70,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "Using the **previously computed numerical estimate** at L=5,g=.2, `E_L\u22480.2485320384493`, the formula yields the indicative interval `[0.2356053, 0.2485321]`. This is **not an interval-certified numeric bound** until the finite-box eigenvalue itself has a rigorous lower certificate. It is a valid analytic bound formula with an explicitly labeled numerical input and concerns just the three-loop sector, not infinite-volume 4D lattice gauge dynamics.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "afbf3756e122f6abe516aedc21acbe51dd480dff6d18dbe3ff7151a2739e3b90",
+      "structural_formula": "Usingthe^previouslycomputednumericalestimate^atL=#,g=#,`E_L\u2248#`,theformulayieldstheindicativeinterval`[#,#]`.Thisis^notaninterval-certifiednumericbound^untilthefinite-boxeigenvalueitselfhasarigorouslowercertificate.Itisavalidanalyticboundformulawithanexplicitlylabelednumericalinputandconcernsjustthethree-loopsector,notinfinite-volume4Dlatticegaugedynamics"
     },
     {
       "file_count": 1,
@@ -899376,6 +899903,34 @@
       },
       "structural_family_id": "c203b00d52df2f64ca0647fe6524d5edaf1a34b19f0c3d1051f220a3770e774a",
       "structural_formula": "[#,#]thisneedsm_sq>~##GeV"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "17e64cf5540d0dbcedaa378793a19a906296991c6e28d2eda3a0c82b44887ff4",
+      "normalized_formula": "[1-cos(g_a(x+e_mu)-g_a(x))],epsilon>0",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_sixfront_ratio_and_12repair.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/2026-10-28_sixfront_ratio_and_12repair.md",
+          "raw": "[1 - cos(g_a(x+e_mu)-g_a(x))], epsilon>0.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "57db5b4d970e7849bf3530f2f1e52e5ea1355038269274fccf7feecebc03598f",
+      "structural_formula": "[#-cos(g_a(x+e_mu)-g_a(x))],epsilon>#"
     },
     {
       "file_count": 1,
@@ -1070553,6 +1071108,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b9b3b3e9e1117a647fd4a0dbdb20fea11ca27b495cb28815059127fcb6b5f9ac",
+      "normalized_formula": "action='epsilon*sum_{mu=0..3,ab=0..5}[1-cos(f_ab(x+e_mu)-f_ab(x))]'",
+      "numeric_literals": [
+        ".3",
+        ".5",
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_mixed_loop_exception.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 128,
+          "path": "analysis/w33_pass12340_mixed_loop_exception.py",
+          "raw": "action='epsilon*sum_{mu=0..3,ab=0..5} [1-cos(f_ab(x+e_mu)-f_ab(x))]',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8b814d7e7c9c68c8ab8b687d76e8079776640baac4b8ce999cf69f534fde6d20",
+      "structural_formula": "action='epsilon*sum_{mu=#.#,ab=#.#}[#-cos(f_ab(x+e_mu)-f_ab(x))]'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4955e708bd6a3d7d4f1430d0bd03bc7bbb59de78199ab300c6296eba419d9960",
       "normalized_formula": "action='lambda(||f||^2-1)^2+||Mq-Q(f)||^2+||Mz-P(q)||^2+m_z^2||z||^2'",
       "numeric_literals": [
@@ -1102164,6 +1102749,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5a5fb242a73d8a697e4d9c8a5a69e311faa9d351149aedc97c825a8e7d29c85b",
+      "normalized_formula": "andsix-curl(v)!=0.Thusthemodeisnotagaugeartefactorasmallsingular",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 186,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "and six-curl(v) !=0. Thus the mode is not a gauge artefact or a small singular",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "96977b80faec1aaf7acc2be99bd0542f113778c9b33a2d331acc33996d476ed4",
+      "structural_formula": "andsix-curl(v)!=#.Thusthemodeisnotagaugeartefactorasmallsingular"
+    },
+    {
+      "file_count": 1,
       "formula_id": "16b156cf77091327eb276102a8e67001c48585e7628a87d4ed5bc04664c13d75",
       "normalized_formula": "andsix_qutrit[\"invariant_form_nullspace_dim\"]=1",
       "numeric_literals": [
@@ -1120386,6 +1120998,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "30ad7660bd3527fe9e2fea79e2537ae98f73341903f1e9aea57ef6db0a2271ce",
+      "normalized_formula": "assertcompact_cost=F(49,13000)",
+      "numeric_literals": [
+        "13000",
+        "49"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_sixfront_ratio_and_12repair.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 59,
+          "path": "analysis/w33_20261028_sixfront_ratio_and_12repair.py",
+          "raw": "assert compact_cost==F(49,13000)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "45076b4701e72a24c6e1d17800de50fa70e93d21ab5f3a936b8086461201d84f",
+      "structural_formula": "assertcompact_cost=F(#,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "098a8a039d6a54f9b29ac78ff5ed5720e9111fec8132ef9952da87346f1fae1c",
       "normalized_formula": "assertcond[\"3\"][\"gram_condition_squared_singular_condition\"]=\"81/5\"",
       "numeric_literals": [
@@ -1137583,6 +1138223,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "dc7d32e8ec17b0027637b6e51d89ab971b9e5caa5c20b9f77bb00e8586870d5d",
+      "normalized_formula": "assertoriginal_cost=F(49,7800)",
+      "numeric_literals": [
+        "49",
+        "7800"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_sixfront_ratio_and_12repair.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 58,
+          "path": "analysis/w33_20261028_sixfront_ratio_and_12repair.py",
+          "raw": "assert original_cost==F(49,7800)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "fb31ced4bbb3351756a1edc8e0604b81394d3f1620f9fd449d692d95f448c271",
+      "structural_formula": "assertoriginal_cost=F(#,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d75850730200ad729b88ad3a0992d3becb589c25831607d769971e0a69a3711e",
       "normalized_formula": "assertother_q_substrate[2][\"v\"]=m_s",
       "numeric_literals": [
@@ -1139390,6 +1140058,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "07565a268a445e900b335dfc6b22d323cbccc190d1ce513f3279e65f5cdbdaf0",
+      "normalized_formula": "assertquantum_metric=M/216andberry=s.zeros(4)",
+      "numeric_literals": [
+        "216",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_causal_harmonic_response.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 82,
+          "path": "analysis/w33_pass12340_causal_harmonic_response.py",
+          "raw": "assert quantum_metric == M/216 and berry == s.zeros(4)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2cb53c4afb403747130d3983803840435552b30d0766dd5af972dccd37d213fd",
+      "structural_formula": "assertquantum_metric=M/#andberry=s.zeros(#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "62ad270b0f587dea4a855aa0ca954e8e26aadc69472303eaae87c4a7a72be03b",
       "normalized_formula": "assertr['design_rank']=9andabs(r['calibrated_optical_estimate']-.08)<5*r['conditional_gaussian_standard_error']",
       "numeric_literals": [
@@ -1140063,6 +1140759,33 @@
       },
       "structural_family_id": "787a4bfc716cf24d408d32a4b2d6d3f6d6eb34dcc76e57bc9eab77ad6537b58b",
       "structural_formula": "assertrelation=Counter({'GQ_noncollinear_distance1#':#,'GQ_collinear_distance1#':#})"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d964b3f0474398cec4bafb6cba699df4c3ece77210dd88f8fcae447851d7d090",
+      "normalized_formula": "assertrepair_cost>0",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_mixed_loop_exception.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 120,
+          "path": "analysis/w33_pass12340_mixed_loop_exception.py",
+          "raw": "assert repair_cost > 0",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0d095024b698529b2700a79281fdaa76cb6e60a4afb4c92356e540cf6e54ad23",
+      "structural_formula": "assertrepair_cost>#"
     },
     {
       "file_count": 1,
@@ -1148682,6 +1149405,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ae0dc2bc6432cd98d6a78d8db904b37e198776280840cc24fdbf67495ea66bec",
+      "normalized_formula": "aswell.SinceL6(k)=O(k)andw(k)=O(k^2),theaddedtermstartsatO(k^4)",
+      "numeric_literals": [
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 220,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "as well. Since L6(k)=O(k) and w(k)=O(k^2), the added term starts at O(k^4),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4bfe4a4d77c7458a19eeae1d844549f0214e733e823d8c78cfb0aba19b9663ac",
+      "structural_formula": "aswell.SinceL6(k)=O(k)andw(k)=O(k^#),theaddedtermstartsatO(k^#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a8e9d3afa69375a1b5871e9675a49fffc0fd0b5da9f58e6e53c8adac4df624c7",
       "normalized_formula": "asymmetricdistancesd_X=2,d_Z=4",
       "numeric_literals": [
@@ -1150216,6 +1150967,34 @@
       },
       "structural_family_id": "4790b2a3d886b976ef64a62d1a4bd417f31a27b297e4ee59dc40b479923b86d9",
       "structural_formula": "autonomous_toy_plaquette_energy=f\"F(phi)={K}*g*cos(#phi),g>#,foroneunfrozenedgephase\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e65f77688b1aeb92a9c4e1866e205672555133168f8ad158d35fa66354cd6ff5",
+      "normalized_formula": "auxiliary_inverse='(36+nu^2)*M/[2*(f_m-f_p)]',coupling='M',contact='contact*M'",
+      "numeric_literals": [
+        "2",
+        "36"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_causal_harmonic_response.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 172,
+          "path": "analysis/w33_pass12340_causal_harmonic_response.py",
+          "raw": "auxiliary_inverse='(36+nu^2)*M/[2*(f_m-f_p)]', coupling='M', contact='contact*M',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2e0365b29c200ebe93ecf61b904fb214480a82debd7f368c93c87718acbd1b6b",
+      "structural_formula": "auxiliary_inverse='(#+nu^#)*M/[#*(f_m-f_p)]',coupling='M',contact='contact*M'"
     },
     {
       "file_count": 1,
@@ -1219362,6 +1220141,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "93d0ecedf5dad9aacefb3fffcc7a052f78c047e21d5dffc768935c696b92d5f7",
+      "normalized_formula": "compact_cost=eps*weight_at_root3*F(sum(flux_norm[i]foriin(2,3,4)),witness_norm)",
+      "numeric_literals": [
+        "2",
+        "3",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_sixfront_ratio_and_12repair.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 57,
+          "path": "analysis/w33_20261028_sixfront_ratio_and_12repair.py",
+          "raw": "compact_cost=eps*weight_at_root3*F(sum(flux_norm[i] for i in (2,3,4)),witness_norm)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e92b43ee72399974de723d954f0e25ee687f599386af2bdb2d4164ab607c4151",
+      "structural_formula": "compact_cost=eps*weight_at_root3*F(sum(flux_norm[i]foriin(#,#,#)),witness_norm)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "03aa5610aa3010cf407ac9790018268f57cba195521858551faf782b1ef06f1b",
       "normalized_formula": "compact_killing[:8,:8]=-cartan_killing",
       "numeric_literals": [
@@ -1287157,6 +1287965,64 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c4d03a298fa655c72e2288f9f2e2d9ad166abe0e84104dbc193548b08f85084f",
+      "normalized_formula": "epsilonsum_(mu=0..3,ab=0..5)[1-cos(f_ab(x+e_mu)-f_ab(x))],epsilon>0",
+      "numeric_literals": [
+        ".3",
+        ".5",
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 209,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "epsilon sum_(mu=0..3,ab=0..5) [1-cos(f_ab(x+e_mu)-f_ab(x))], epsilon>0.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7cf8ec645ac6d81b349e62ff86ddfe1360f4d53921db60ed51e07dc27c76e975",
+      "structural_formula": "epsilonsum_(mu=#.#,ab=#.#)[#-cos(f_ab(x+e_mu)-f_ab(x))],epsilon>#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7e301b47af30667693af1b72127085651ccf84ef9d08f419c846c02cfdb39498",
+      "normalized_formula": "epsilonw(z)L6(z)^daggerL6(z),w(z)=sum_mu|z_mu-1|^2",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 214,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "epsilon w(z) L6(z)^dagger L6(z), w(z)=sum_mu |z_mu-1|^2.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e17d5184eb6f47937f885ecf15b7fbbfe3b9e098f2ec1fa0ee8e18c30910d7ca",
+      "structural_formula": "epsilonw(z)L6(z)^daggerL6(z),w(z)=sum_mu|z_mu-#|^#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7eaa38b3c00bc3d7e8014b417105b5d47243a4e159689426c18d0c64b05efe97",
       "normalized_formula": "eq(\"cross_EK_Q_bitangents\",EK,Q*BITANGENTS)#84=3\u00d728",
       "numeric_literals": [
@@ -1321706,6 +1322572,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f124dc53efb8dcedee7182cac95be4932d2d5209819ffea26a4cc07fdc83a94f",
+      "normalized_formula": "filled21_quantum_geometry=dict(Fubini_Study_metric='M/216',Berry_curvature='zero'",
+      "numeric_literals": [
+        "1",
+        "216"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_causal_harmonic_response.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 89,
+          "path": "analysis/w33_pass12340_causal_harmonic_response.py",
+          "raw": "filled21_quantum_geometry=dict(Fubini_Study_metric='M/216', Berry_curvature='zero',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7898dd2ea5397d01fd349c4a79121923f6e5a3c613e112e567bb2c6d6cd64fc9",
+      "structural_formula": "filled2#_quantum_geometry=dict(Fubini_Study_metric='M/#',Berry_curvature='zero'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0e0db0ab81fe3f2cc102ce0267785cb73fc5802fe2c1a6c49a45ffc7beedc90c",
       "normalized_formula": "filled=sorted(map(int,rng.choice(80,40,replace=False)))",
       "numeric_literals": [
@@ -1337070,6 +1337964,34 @@
       },
       "structural_family_id": "49a205893d4aff2cc73e139b8b4f6e5221dd8a9173d577d778cd6dcd8a6a9f06",
       "structural_formula": "g_i^{#}=g_i^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6cfadadcc9fca6a0b93e199b5a8c1706caa6953ab0ad7e143d354001b5eacef3",
+      "normalized_formula": "g_ij=Tr(d_iP_occd_jP_occ)/2=M_ij/216,anditsBerrycurvature",
+      "numeric_literals": [
+        "2",
+        "216"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 144,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "g_ij=Tr(d_i P_occ d_j P_occ)/2=M_ij/216, and its Berry curvature",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "905485c82ab0b696103e6bd2d1af8c30cda6f95997e9d65abc41713a657b5aeb",
+      "structural_formula": "g_ij=Tr(d_iP_occd_jP_occ)/#=M_ij/#,anditsBerrycurvature"
     },
     {
       "file_count": 2,
@@ -1379041,6 +1379963,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a5b4f343bd13816224c1b753113d7c86cc0957e7c1232f5575e537d500461336",
+      "normalized_formula": "inverse_transform='K_R(t)=M*[contact*delta(t)-(f_m-f_p)*theta(t)*sin(6*t)/3]'",
+      "numeric_literals": [
+        "3",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_causal_harmonic_response.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 164,
+          "path": "analysis/w33_pass12340_causal_harmonic_response.py",
+          "raw": "inverse_transform='K_R(t)=M*[contact*delta(t)-(f_m-f_p)*theta(t)*sin(6*t)/3]',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f947d62d532d7c21163329c4b682bfa10b103d0983c13ed5f0b409126fb9f63a",
+      "structural_formula": "inverse_transform='K_R(t)=M*[contact*delta(t)-(f_m-f_p)*theta(t)*sin(#*t)/#]'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0e48a543e908eb6caf5363d53b2179783aed5ba749e860a9a9cb699a3c40fd87",
       "normalized_formula": "inverted);therulebecomessuml_ig_i=0:theta^3couplings=collineartriplesofAG(3,3)(117lines;12in",
       "numeric_literals": [
@@ -1394461,6 +1395411,34 @@
       },
       "structural_family_id": "d28cd1b47013bec48d4b01fa9e01907ace1faa19821bf32cc5225f8d2413acb0",
       "structural_formula": "kernel='pi^(#/#)*exp(-|q|^#/#)tensorfermionvacuum.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "2dcb9964360dc2554182bcf55d7daa69abbda40cb26d78f07476734818592efe",
+      "normalized_formula": "kernelQ(nu)=(36+nu^2)M/(2d),couplingMtothefourexternalprobes,and",
+      "numeric_literals": [
+        "2",
+        "36"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 115,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "kernel Q(nu)=(36+nu^2)M/(2d), coupling M to the four external probes, and",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0a150d56cd66fdccd24f81b0a8851dc31f1036299e9e686b2d954ed4401cdc0d",
+      "structural_formula": "kernelQ(nu)=(#+nu^#)M/(#d),couplingMtothefourexternalprobes,and"
     },
     {
       "file_count": 1,
@@ -1673097,6 +1674075,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9ab17b14b54ec078eb05bd13921d1faad46eabe63517bf8b86cb37243998991e",
+      "normalized_formula": "quadratic_symbol='epsilon*w(z)*L6(z)^dagger*L6(z),w(z)=sum_mu|z_mu-1|^2'",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_mixed_loop_exception.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 129,
+          "path": "analysis/w33_pass12340_mixed_loop_exception.py",
+          "raw": "quadratic_symbol='epsilon*w(z)*L6(z)^dagger*L6(z), w(z)=sum_mu |z_mu-1|^2',",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "965514ee6dccdfdfc673853f6a06b256f4b6a9bbbaa1410c135eff9f1972af2d",
+      "structural_formula": "quadratic_symbol='epsilon*w(z)*L6(z)^dagger*L6(z),w(z)=sum_mu|z_mu-#|^#'"
+    },
+    {
+      "file_count": 1,
       "formula_id": "ffcf98870bb686bc696b9fe1d45df0f2902e337f9e5013472795c75d4867d00c",
       "normalized_formula": "quadraticdescendant(J_lambda)^2/2.Sincelambda=(lambda_1,lambda_1,lambda_4)",
       "numeric_literals": [
@@ -1673350,6 +1674356,34 @@
       },
       "structural_family_id": "5d40fb4caa5742367c6073bf74d5343c6d67a65cf3502a7994b30b7fa9216a78",
       "structural_formula": "quantum_clock='Independently,C=p_t+Hfortheactualself-adjoint1#HamiltonianhassolutionsPsi(t)=exp(-itH)psi0;groupaveragingretainsphysicalL2(R7#).Thissuppliedidealclockneedsnomatter-killingopposite-centerconstraint.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "3d3c160ffcdb9b091806bff22c4e71091821f6e853b2552952a0a409d1c74f8a",
+      "normalized_formula": "quantum_metric=s.Matrix(4,4,lambdai,j:s.trace(dP[i]*dP[j])/2)",
+      "numeric_literals": [
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_causal_harmonic_response.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 80,
+          "path": "analysis/w33_pass12340_causal_harmonic_response.py",
+          "raw": "quantum_metric = s.Matrix(4, 4, lambda i,j: s.trace(dP[i]*dP[j])/2)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "cb5825b16c6b85746685ff6d02157c33bcd64fc8432955b8f39856fd774267e5",
+      "structural_formula": "quantum_metric=s.Matrix(#,#,lambdai,j:s.trace(dP[i]*dP[j])/#)"
     },
     {
       "file_count": 1,
@@ -1690125,6 +1691159,34 @@
       },
       "structural_family_id": "3034d80c4bcd650c257e2cab344df2723a2ed4ad51fc534f669c58ce5a4ca804",
       "structural_formula": "repair=json.loads((ROOT/'data/w3#_pass1#_spinor_weil_intertwiner.json').read_text())['exact_projective_tangent_repair']"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9c7dd14dc29be85824907d80b5b77de6f6c91cc4168e1e2a66589bdca0acd6fc",
+      "normalized_formula": "repair_cost=s.Rational(6,1000)*curl_norm/w['norm_squared']",
+      "numeric_literals": [
+        "1000",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_mixed_loop_exception.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 119,
+          "path": "analysis/w33_pass12340_mixed_loop_exception.py",
+          "raw": "repair_cost = s.Rational(6,1000)*curl_norm/w['norm_squared']",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b31e857edc0fb857402ec4ab38c6c95257efbe8208e3cd0cb988f7650fcd0dcf",
+      "structural_formula": "repair_cost=s.Rational(#,#)*curl_norm/w['norm_squared']"
     },
     {
       "file_count": 1,
@@ -1727483,6 +1728545,35 @@
       },
       "structural_family_id": "aaaa805ec1064160844bd86efe4a9345c5a7a6b3aed878ec10d55161253cc45b",
       "structural_formula": "scope='Finitecompactgroundsector,notitsunknownW3#multiplicityorathermodynamicspontaneous-symmetry-breakingproof.')"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "51fbfe53ee69f821158aa636b16bc69aa482319b2c09be7c35bf8697207f73c3",
+      "normalized_formula": "scope='Finitefreespinless27-site/135-edgecellandfourharmonicholonomyprobes.Nononzerospatialmomentum,thermodynamicDrudeweight,bulkconductor/insulatorclassification,derivedMaxwellphoton,universalspeed,chiralvacuumorTOE.Theexistingno-global21-band-gapcoverobstructionremainsinforce.')",
+      "numeric_literals": [
+        "1",
+        "135",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_causal_harmonic_response.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 207,
+          "path": "analysis/w33_pass12340_causal_harmonic_response.py",
+          "raw": "scope='Finite free spinless27-site/135-edge cell and four harmonic holonomy probes. No nonzero spatial momentum, thermodynamic Drude weight, bulk conductor/insulator classification, derived Maxwell photon, universal speed, chiral vacuum or TOE. The existing no-global21-band-gap cover obstruction remains in force.')",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "91cb8782f1bec10b3e7b58985aa042c611c438cb3eeae724efc71f277b6b2811",
+      "structural_formula": "scope='Finitefreespinless2#-site/#-edgecellandfourharmonicholonomyprobes.Nononzerospatialmomentum,thermodynamicDrudeweight,bulkconductor/insulatorclassification,derivedMaxwellphoton,universalspeed,chiralvacuumorTOE.Theexistingno-global2#-band-gapcoverobstructionremainsinforce.')"
     },
     {
       "file_count": 1,
@@ -1773081,6 +1774172,35 @@
       },
       "structural_family_id": "a65cd298c35d864983873d3385f1d04ef7f03ade6c28e0c79e57d02e0a9d587f",
       "structural_formula": "supplied_portal='DeltaV=#/#[#H+(kappa/#)(|h|#-|h0|#)]#.Itsvalue/firstderivativesvanishatH=#,h=h0;itsHessianisapositive-squarecompletion,sothepriorlocalminimumisretained.HisarealneutralHiggsfluctuationwithYukawaderivativeYH=m;B=Chsuppliesthesixrealhvertices.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "740bda2b66368518b22e8060ee3915b9c08e260dd78740f438514e76c1ab83c0",
+      "normalized_formula": "supplied_repair=dict(epsilon='1/1000',additional_cosines=24",
+      "numeric_literals": [
+        "1",
+        "1000",
+        "24"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_mixed_loop_exception.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 127,
+          "path": "analysis/w33_pass12340_mixed_loop_exception.py",
+          "raw": "supplied_repair=dict(epsilon='1/1000',additional_cosines=24,",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f380aa3d8544fbd9a3b753bd0127a3c4b0db2f2ff93a002ebb0314bbf69659fb",
+      "structural_formula": "supplied_repair=dict(epsilon='#/#',additional_cosines=#"
     },
     {
       "file_count": 1,
@@ -1838111,6 +1839231,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "8c15caf548e20a180e9d56bd4af42fe621a7a3de5808df0c8d966e6f1aeb9d44",
+      "normalized_formula": "w=6andthestorednormalizedquadraticcostforepsilon=1/1000is",
+      "numeric_literals": [
+        "1",
+        "1000",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 222,
+          "path": "analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md",
+          "raw": "w=6 and the stored normalized quadratic cost for epsilon=1/1000 is",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ecc9b16cfc0b14d39a17e525a6368048fca9adc3ec12e8812529e824a5800892",
+      "structural_formula": "w=#andthestorednormalizedquadraticcostforepsilon=#/#is"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f87ac76c5eef5b737a90e9c05bd6db0b2b5eef6173dae85b706849f1a639d317",
       "normalized_formula": "w=PREV.root_omega(p);inv3=pow(3,-1,p)",
       "numeric_literals": [
@@ -1838656,6 +1839805,33 @@
       },
       "structural_family_id": "95a0f33dca7d973f878eb737dd80a8f50ae85796e3cc0f25c1a6276627f54db8",
       "structural_formula": "w_\\phi=(#,e^{i\\phi},#)/\\sqrt3"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8a191df430e765ca2a5748399c599c022cd07d33b7dd9d8100aeeac441f0eeca",
+      "normalized_formula": "w_at_witness='6',normalized_witness_quadratic_form=str(repair_cost)",
+      "numeric_literals": [
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12340_mixed_loop_exception.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 130,
+          "path": "analysis/w33_pass12340_mixed_loop_exception.py",
+          "raw": "w_at_witness='6',normalized_witness_quadratic_form=str(repair_cost),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1f7e6b4ff709332f4ff26ec278062054d39b64199cde702e821a879df55e6748",
+      "structural_formula": "w_at_witness='#',normalized_witness_quadratic_form=str(repair_cost)"
     },
     {
       "file_count": 1,
@@ -1900544,9 +1901720,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-28T22:25:14-04:00",
+  "frozen_at": "2026-10-28T22:43:00-04:00",
   "pass": 398,
-  "repository_head": "686188ce06cb8580179eda56cc917d22965d53d0",
+  "repository_head": "449bcd3c5568f6afd70af2a4e729dba135a26e20",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1957106,6 +1958282,14 @@
       "exact_member_count": 1,
       "structural_family_id": "adee2b2771de80cd299b8afc883aa9f11e36c5fe6bd9f6393c5dfaa2352d4998",
       "structural_formula": "###=\\{#^q,f,\\mu\\}"
+    },
+    {
+      "exact_formula_ids": [
+        "07474fe38f3259c84889470be926a07ed4cea5f48b81345d8f8bd1182b68766e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ad9870743dc09c383f44a06ade26e1cdd951963e2cfe74cff46abb98cea2bdb6",
+      "structural_formula": "###=^onecomplexnongaugemagneticzeromode^there,whilethe"
     },
     {
       "exact_formula_ids": [
@@ -2028451,6 +2029635,14 @@
     },
     {
       "exact_formula_ids": [
+        "93ae6a5a5e1cb8eb04dfac101df7748f472a636df9b36e12d64eaa62810e1c83"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "348c1b66d61bf73e79cd7439cf8eb46debf903b22bd0f15bb89a247f6e89a8fd",
+      "structural_formula": "-Standard^SU(#)hyperchargenormalization^:`Tr_5Y2=#(#/#)##(#/#)#=#/#`;relativetothecanonicalgeneratortrace1/#thisyields`k_Y=#/#`andconventionally`g1#=(#/#)g'#`.Thatisa^distinctphysicallyusedembeddingnormalization^"
+    },
+    {
+      "exact_formula_ids": [
         "175b152f89cf8c805cd1bdd41de42f7e27604e5b742ad09fc50973ceaaadd7bf"
       ],
       "exact_member_count": 1,
@@ -2028600,6 +2029792,14 @@
       "exact_member_count": 1,
       "structural_family_id": "aec8fbf0d8684d819eff0acb41c973e6d8ee2eeb9bb82c00e11d3a8c4e2602b2",
       "structural_formula": "-The9missingfibers=the9tritangentplanesthatDON'Tformcliques"
+    },
+    {
+      "exact_formula_ids": [
+        "467fc6f967c7d539a81c48498f55ddf9d79548cf38a6b433427313972d3c9bf2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5ce530434cc30d4a0fe39570e3ffce77f863053c4bf0c8288688c88848b1f7b3",
+      "structural_formula": "-TheFibonacciratio`F5/F4=#/#`isanapproximationtothegoldenratio,^not^theexactgoldenratio.H4hasgenuineicosahedral/golden-ratiogeometry,but`#/#!=(#+sqrt5)/#"
     },
     {
       "exact_formula_ids": [
@@ -2052063,6 +2053263,14 @@
     },
     {
       "exact_formula_ids": [
+        "88dece05943ec5880490b335384f44a49a846b82a7dd9af613d03402ece96617"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d0f09d75dd72a2f7315a2d382a93473e04ff3f47efa60ae579f09429b51391a3",
+      "structural_formula": "All4#termsofthecanonicalE6cubicareneutralinthesetwoU1charges.A^shared^matterresponsekernelimpliestheconditionaltraceweighting`#:#=#:#`.Thephysicalresponseisnotshowntobeuniversalacrossdistinctmassesorcouplings"
+    },
+    {
+      "exact_formula_ids": [
         "db5a9d2303c70e968e5b24115f4b1aa0e53016571710852919ff45beb617ab5a"
       ],
       "exact_member_count": 1,
@@ -2053215,6 +2054423,14 @@
     },
     {
       "exact_formula_ids": [
+        "10c66fedbb65e9c062be5623c9ea3990483f9f62f0ad945c57ce1e02b820bebf"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "437793fb3da056fba435af730e5faa701f3b80e0a78b00c5d9c62ccf3ae05aec",
+      "structural_formula": "Asecondgenuinecombinatorialidentityisthenumberofroots:`H4`has`r*h=#*#=#`roots,`E6`has`#*#=#`roots,giving5/#.^ThereisnodemonstratedcanonicalembeddingofthenoncrystallographicH4rootsystemasarootsubsystemofE6^:itsCoxeterbondlabeled5requiresirrationalsimple-rootinnerproductsunavailableamongequal-lengthE6roots.ThisdoesnotruleoutnontrivialembeddingsafteranE8/icosianprojection"
+    },
+    {
+      "exact_formula_ids": [
         "5575a55f3fb670fb2be54e09f638b1aac98b44039dba6f09f49ef9958ec98b4e"
       ],
       "exact_member_count": 1,
@@ -2054333,6 +2055549,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cbbe5a8e049c0bc08322bde183d4dd84e436134c9bd2c0bed432f71a10c8551e",
       "structural_formula": "Attheexplicitfour-coordinateposition,bothprimeshave^nonzero7#x7#exactfinite-fieldcurvaturedeterminantsandinvertiblekineticmatrices^.ConsequentlytherankoverQis*exactly*#atthatrationalconfiguration.Morestrongly,therationaldeterminant/Pfaffianisanonzerorationalfunction,sotheeffectivecurvaturehasmaximalpossiblerank^genericallyonanonemptyrealZariski-openset^whereverKisnonsingular.Therank1#pointisaspeciallower-ranklocus.Fprank2#byitselfisONLYarank>=#overQwitness;Fprank0atoriginisnotbyitselfanexactrationalzeroproof"
+    },
+    {
+      "exact_formula_ids": [
+        "655db593ba5a0c59be1e55ccfbf1baed60d56568a1941f10f1db567e4a3542ef"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ae4bffabd2b138234ca032d839075ab5d8eeaeb5417badeef5c1071e1b122523",
+      "structural_formula": "AttheidentityallsixcommutatorBlochrowsvanish,soequalityholdstheretoo.Therepairentersat^O(|k|^#)^sinceeachcommutatorrowisO(k)andw=O(k2);itcannotspoilthealready-provedO(k2)commonacousticcone"
     },
     {
       "exact_formula_ids": [
@@ -2069247,6 +2070471,14 @@
     },
     {
       "exact_formula_ids": [
+        "06d43d3eeb4d5cea06e7f8d65123bdd91e4b1b45674d592c61688a4d90b4e742"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "92c6f85f87f80e6b6c829feaa6ad18f86c389e590f7052a7d267f890cd485e0a",
+      "structural_formula": "ExactSylvester-principal-minorarithmeticproves`G_E-#I`is^positivedefinite^;thetotalpositivecosineweightisexactly`#/#`.Projectontotheelectricbox`|m_i|<=L`.Callits^true^minimum`E_L`;thecomplementaryblockhaselectrickineticlowerbound`K_out=#g2(L+#)#/#`;andthecross-boundarycosineoperatorhasnormatmost`W=sumw_a`.Thetwo-by-twomin-max/Schurcomparisongivestheall-fluxlowerbound"
+    },
+    {
+      "exact_formula_ids": [
         "0f14f2c054daf09d63098918d34663e671cbdcbad35ed8b6122c77a089a5dc71",
         "3645604f0caabfd6f83a1153bb6e5709bbf98b4ffdab5a1b5e3915a0b03dd556"
       ],
@@ -2077149,6 +2078381,14 @@
     },
     {
       "exact_formula_ids": [
+        "f3cad1886f48ed3d7887d990a491426237f83cd50d72f58a143ac1dfa49402d4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1a34315c18f7f646de731ffbf0f8c55d3c583766a3447a5aa1b30d987aabbf1a",
+      "structural_formula": "H=(g2/#)m^TG_Em+sumw_a(#-cos(q_a.theta))`,thenativelifted-loopelectricGramhas"
+    },
+    {
+      "exact_formula_ids": [
         "cc39aaa8319415c7341fa161b0bf7ebdcdbae8125af62abdbee5794472bb931c"
       ],
       "exact_member_count": 1,
@@ -2084739,6 +2085979,14 @@
       "exact_member_count": 1,
       "structural_family_id": "092c80049c9494ce1679a77bf26d7dfda5bf056fc258055830587264cc63322b",
       "structural_formula": "K_Q=\\operatorname{diag}(#,#,#)"
+    },
+    {
+      "exact_formula_ids": [
+        "c5222264ce6275a5a61459eddce231882ce4e7655c85208dfb9ed0e851730ae2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0fe9db24937e13458c3590ddb87813dc7d53a13ef9900d82858eb333a4889f43",
+      "structural_formula": "K_R(t)=M[Cdelta(t)-(d/#)theta(t)sin(#t)]"
     },
     {
       "exact_formula_ids": [
@@ -2094607,6 +2095855,14 @@
     },
     {
       "exact_formula_ids": [
+        "90899e8924f7922b353da0677dddb87b0a49fee37d30a9bfc640b338a965b5f6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b3111601f30a8b5518664840c89c4b1c57d5e13db75bdf9b67da371efbcda318",
+      "structural_formula": "Moreimportantly,thenumericratioof*diagonalentries*isnotinvariantevenunderprimitivelattice-preserving`GL(#,Z)`redefinitions.E.g.`Q'=Q,R'=Q+R`gives`[[#,#],[#,#]]`anddiagonalratio`#/#=#/#`.The^fullquadraticbilinearform^transformscovariantly;itsrawdiagonalratioisnotaphysicalobservablewithoutafixedgroup-embeddingnormalizationanddynamicalcouplingprescription"
+    },
+    {
+      "exact_formula_ids": [
         "17399f2265fe6fab3fbb7b734ae7d7765284a24e04dc1258aecc819434c93311"
       ],
       "exact_member_count": 1,
@@ -2102897,6 +2104153,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a414d2313933a8c0003d2ecaf71681bc6e3c0dae166ed5d233aa4bba053dd4f5",
       "structural_formula": "OnonecanonicalSpin(#)Weyl1#,normalizetherightCartanby(r=#T_{#R}).Thejointweightsgive"
+    },
+    {
+      "exact_formula_ids": [
+        "503dcd457c67dc7226af060976b7d516a9f05a2d7e80ef692e4868b5bd0897d4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e3a6b8b94eaec2db1c3f3f77c7d1c7beffba3b5ddbfdc0912867991601235b0a",
+      "structural_formula": "Onthe*actualfrozen1#-link,#-componentQ(omega)witness*,allsixoriginalcommutatornormsare`[#,#,#,#,#,#]`;thustheselectedcomplementnormis`#`.At`epsilon=#/#`and`w=#`,itsnormalizedquadraticwitnesscostis^#/#>#^,comparedwith^#/#^inthe2#-termrepair.Thisextra3/#factorisa^choice-dependentprojectionofthewitness^,notanewuniversalphysicalconstant"
     },
     {
       "exact_formula_ids": [
@@ -2112630,6 +2113894,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3a18c7c185d7cf2629f8c55444b0447779d1494a2865abab681c1788a5d7e36a",
       "structural_formula": "Recurrence(CLXVII)</strong>\u2014r+s=-\u03bb,r\u00b7s=\u03bc-k,r-s=\u03bb+\u03bc=#;k+r+s=\u03b8=#=Lov\u00e1sztheta(stunning!)"
+    },
+    {
+      "exact_formula_ids": [
+        "6dd01fac0b7a6bff65c95ec08611ee4d76b7eb6d16abe20de55ee29806c5ba49"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1cae88cc61cb9df3bc0266078bcdc10b97056c46749fe87083f7facd3a118018",
+      "structural_formula": "References:Coxetergroupclassificationhttps://people.math.osu.edu/davis.#/second_edition.pdf;#-cellincidencehttps://mathworld.wolfram.com/#-Cell.html;H4rootshttps://www.math.ru.nl/~heckman/CoxeterGroups.pdf;canonicalSU5hyperchargehttps://frankwilczek.com/#/maxwellUnification0#.pdf.Repo-localpriormath:`analysis/PASS1#_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md`,`exploration/w3#_geometric_quantization_bridge.py`,`analysis/###_five_fronts_followup.md"
     },
     {
       "exact_formula_ids": [
@@ -2125787,6 +2127059,14 @@
     },
     {
       "exact_formula_ids": [
+        "287d8182943ea1fb9e39b3ab89b99d85f9abf1853d1428d8350e81f4860b5774"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "056f9a1474651e9bd9044d57c29f1fffbf9dbea4a1f4c001ad5728e98a0a2287",
+      "structural_formula": "Theanalysisaddressesthepreviousfiveindependentproblemsasfarasexactstructureandfinitenumericalevidencepermit,plusasixthfalsifiability-mindedauditofthe`#:#=#:#`ratio.^Noobservedparticlespectrum,Einsteingravity,Lorentziantime,fullinteractingmatterdeterminant,gaugecouplingprediction,orTOEisderived.^"
+    },
+    {
+      "exact_formula_ids": [
         "de4f72469cee0cef404053eccebee019edd6c6cc785fdb380f8fa19a425ab936"
       ],
       "exact_member_count": 1,
@@ -2127651,6 +2128931,14 @@
     },
     {
       "exact_formula_ids": [
+        "6cd00ed0177609b877a0e0ab8e287f718815cfcdde1f7357372aa2845e5a3e56"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4f373535b36bab33650dbc7e4549b5b81cd49442e2972866b3947de89999b95a",
+      "structural_formula": "TheirquadraticBlochsymbolis`epsilonw(z)(SL6(z))^dagger(SL6(z))`,with`w(z)=sum_mu|z_mu-#|#`.Forevery^nonidentity^unitarycharacter,`w>#`and`[R;S]`invertibleimply"
+    },
+    {
+      "exact_formula_ids": [
         "1604c0404249a7a83f94825a7f26e3a0733cd275b63e37ad6f035db76335474c"
       ],
       "exact_member_count": 1,
@@ -2127784,6 +2129072,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c5c1add8d025f882fc9fa9a4f562f8e707b4f0746bffe3cfa65ed77fc27ab6ef",
       "structural_formula": "Thelastratioiscritical:#,#/#=#isnotaninteger.Thismeansthe5#toruscellsdo^not^formasingleorbitunderSp(#,F3).Theremustbe^atleasttwoorbits^"
+    },
+    {
+      "exact_formula_ids": [
+        "f9a79238e713e403ee3d36ef8fcae1ebaaf28f62d3f79220741888c74589227e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c86d3a09807bb2dd80e04012ae6bf9b6d74151950f15d5cbbf57c7de5e314907",
+      "structural_formula": "ThelaterPass1#workdiscoveredtheexactnongaugeflatmodeat`z=(omega,omega,#,#)`where`omega^#+omega+#=#`.Itsselectedshort-face/mixed/six-loop/gradientranksare`#/#/#/#`;thisisan^actualcounterexample^toextrapolatingthethree-channelgenericrankintoanall-momentumgap.Pass1#added^#^translatedloop-differencecosineharmonicstorestoreequalitywiththesix-loopkernelatallmomentawithoutchangingthelongwaveO(k2)cone"
     },
     {
       "exact_formula_ids": [
@@ -2128592,6 +2129888,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b9d44ed4ebbecffb5058f475318c97c450c1b0f1d6b7cebf4f396ce6a4bfe13e",
       "structural_formula": "ThepotentialatImT*=#(Pass1#)ishigherthanatrho:thestabilisedvacuumhasnofamilyhierarchy"
+    },
+    {
+      "exact_formula_ids": [
+        "d484a6793c27e03cfb8e94d5d90ee32588f73a53ab33f4178c1adf1340cf90df"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5591d887266549aa87201d36532830b038af932d5080bfd0d41fbd79b5340ed2",
+      "structural_formula": "Thepre-existingexactcommon-conefamilyis`H(theta)=H0+thetaJ`.Theverifiednativeorientationreflectionhas`S^TH0S=H0`and`S^TJS=-J`,so`H(theta)`transformsinto`H(-theta)`.Thereforeareflection-invariantquadraticaction^withinthisaffinefamily^musthave`theta=#`.Thecompressedthree-channelendpoints`theta=#,#`areexchanged,notindependentlyinvariant"
     },
     {
       "exact_formula_ids": [
@@ -2134628,6 +2135932,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b67a37144f969350cc91c30b9b25e2df773d594b2a6aba6495e9081c0e90e1e3",
       "structural_formula": "UsingtheTOE7#^numerical^,notinterval-certified,PgroundandfirstexcitedvaluesE0\u2248\u2212#,E1\u2212E0\u2248#,theelementaryblockmin\u2013maxlowerboundgivesa^conditional^unboundedgroundintervalapproximately"
+    },
+    {
+      "exact_formula_ids": [
+        "22d72c54960aeb8aab9e47b5aae9e45ba0b469b5a88f4f3f85f8cc54e416d962"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "afbf3756e122f6abe516aedc21acbe51dd480dff6d18dbe3ff7151a2739e3b90",
+      "structural_formula": "Usingthe^previouslycomputednumericalestimate^atL=#,g=#,`E_L\u2248#`,theformulayieldstheindicativeinterval`[#,#]`.Thisis^notaninterval-certifiednumericbound^untilthefinite-boxeigenvalueitselfhasarigorouslowercertificate.Itisavalidanalyticboundformulawithanexplicitlylabelednumericalinputandconcernsjustthethree-loopsector,notinfinite-volume4Dlatticegaugedynamics"
     },
     {
       "exact_formula_ids": [
@@ -2142948,6 +2144260,14 @@
       "exact_member_count": 1,
       "structural_family_id": "c203b00d52df2f64ca0647fe6524d5edaf1a34b19f0c3d1051f220a3770e774a",
       "structural_formula": "[#,#]thisneedsm_sq>~##GeV"
+    },
+    {
+      "exact_formula_ids": [
+        "17e64cf5540d0dbcedaa378793a19a906296991c6e28d2eda3a0c82b44887ff4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "57db5b4d970e7849bf3530f2f1e52e5ea1355038269274fccf7feecebc03598f",
+      "structural_formula": "[#-cos(g_a(x+e_mu)-g_a(x))],epsilon>#"
     },
     {
       "exact_formula_ids": [
@@ -2186018,6 +2187338,14 @@
     },
     {
       "exact_formula_ids": [
+        "b9b3b3e9e1117a647fd4a0dbdb20fea11ca27b495cb28815059127fcb6b5f9ac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8b814d7e7c9c68c8ab8b687d76e8079776640baac4b8ce999cf69f534fde6d20",
+      "structural_formula": "action='epsilon*sum_{mu=#.#,ab=#.#}[#-cos(f_ab(x+e_mu)-f_ab(x))]'"
+    },
+    {
+      "exact_formula_ids": [
         "4955e708bd6a3d7d4f1430d0bd03bc7bbb59de78199ab300c6296eba419d9960"
       ],
       "exact_member_count": 1,
@@ -2194569,6 +2195897,14 @@
     },
     {
       "exact_formula_ids": [
+        "5a5fb242a73d8a697e4d9c8a5a69e311faa9d351149aedc97c825a8e7d29c85b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "96977b80faec1aaf7acc2be99bd0542f113778c9b33a2d331acc33996d476ed4",
+      "structural_formula": "andsix-curl(v)!=#.Thusthemodeisnotagaugeartefactorasmallsingular"
+    },
+    {
+      "exact_formula_ids": [
         "16b156cf77091327eb276102a8e67001c48585e7628a87d4ed5bc04664c13d75"
       ],
       "exact_member_count": 1,
@@ -2199625,6 +2200961,14 @@
     },
     {
       "exact_formula_ids": [
+        "30ad7660bd3527fe9e2fea79e2537ae98f73341903f1e9aea57ef6db0a2271ce"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "45076b4701e72a24c6e1d17800de50fa70e93d21ab5f3a936b8086461201d84f",
+      "structural_formula": "assertcompact_cost=F(#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "098a8a039d6a54f9b29ac78ff5ed5720e9111fec8132ef9952da87346f1fae1c"
       ],
       "exact_member_count": 1,
@@ -2204326,6 +2205670,14 @@
     },
     {
       "exact_formula_ids": [
+        "dc7d32e8ec17b0027637b6e51d89ab971b9e5caa5c20b9f77bb00e8586870d5d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fb31ced4bbb3351756a1edc8e0604b81394d3f1620f9fd449d692d95f448c271",
+      "structural_formula": "assertoriginal_cost=F(#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "d75850730200ad729b88ad3a0992d3becb589c25831607d769971e0a69a3711e"
       ],
       "exact_member_count": 1,
@@ -2204824,6 +2206176,14 @@
     },
     {
       "exact_formula_ids": [
+        "07565a268a445e900b335dfc6b22d323cbccc190d1ce513f3279e65f5cdbdaf0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2cb53c4afb403747130d3983803840435552b30d0766dd5af972dccd37d213fd",
+      "structural_formula": "assertquantum_metric=M/#andberry=s.zeros(#)"
+    },
+    {
+      "exact_formula_ids": [
         "62ad270b0f587dea4a855aa0ca954e8e26aadc69472303eaae87c4a7a72be03b"
       ],
       "exact_member_count": 1,
@@ -2204998,6 +2206358,14 @@
       "exact_member_count": 1,
       "structural_family_id": "787a4bfc716cf24d408d32a4b2d6d3f6d6eb34dcc76e57bc9eab77ad6537b58b",
       "structural_formula": "assertrelation=Counter({'GQ_noncollinear_distance1#':#,'GQ_collinear_distance1#':#})"
+    },
+    {
+      "exact_formula_ids": [
+        "d964b3f0474398cec4bafb6cba699df4c3ece77210dd88f8fcae447851d7d090"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0d095024b698529b2700a79281fdaa76cb6e60a4afb4c92356e540cf6e54ad23",
+      "structural_formula": "assertrepair_cost>#"
     },
     {
       "exact_formula_ids": [
@@ -2207429,6 +2208797,14 @@
     },
     {
       "exact_formula_ids": [
+        "ae0dc2bc6432cd98d6a78d8db904b37e198776280840cc24fdbf67495ea66bec"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4bfe4a4d77c7458a19eeae1d844549f0214e733e823d8c78cfb0aba19b9663ac",
+      "structural_formula": "aswell.SinceL6(k)=O(k)andw(k)=O(k^#),theaddedtermstartsatO(k^#)"
+    },
+    {
+      "exact_formula_ids": [
         "a8e9d3afa69375a1b5871e9675a49fffc0fd0b5da9f58e6e53c8adac4df624c7",
         "17217b339f21ba0729e560ddddc5cf06a14dd050ae32962d3d9fb36d97e38d31"
       ],
@@ -2207843,6 +2209219,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4790b2a3d886b976ef64a62d1a4bd417f31a27b297e4ee59dc40b479923b86d9",
       "structural_formula": "autonomous_toy_plaquette_energy=f\"F(phi)={K}*g*cos(#phi),g>#,foroneunfrozenedgephase\""
+    },
+    {
+      "exact_formula_ids": [
+        "e65f77688b1aeb92a9c4e1866e205672555133168f8ad158d35fa66354cd6ff5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2e0365b29c200ebe93ecf61b904fb214480a82debd7f368c93c87718acbd1b6b",
+      "structural_formula": "auxiliary_inverse='(#+nu^#)*M/[#*(f_m-f_p)]',coupling='M',contact='contact*M'"
     },
     {
       "exact_formula_ids": [
@@ -2226822,6 +2228206,14 @@
     },
     {
       "exact_formula_ids": [
+        "93d0ecedf5dad9aacefb3fffcc7a052f78c047e21d5dffc768935c696b92d5f7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e92b43ee72399974de723d954f0e25ee687f599386af2bdb2d4164ab607c4151",
+      "structural_formula": "compact_cost=eps*weight_at_root3*F(sum(flux_norm[i]foriin(#,#,#)),witness_norm)"
+    },
+    {
+      "exact_formula_ids": [
         "03aa5610aa3010cf407ac9790018268f57cba195521858551faf782b1ef06f1b"
       ],
       "exact_member_count": 1,
@@ -2245326,6 +2246718,22 @@
     },
     {
       "exact_formula_ids": [
+        "c4d03a298fa655c72e2288f9f2e2d9ad166abe0e84104dbc193548b08f85084f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7cf8ec645ac6d81b349e62ff86ddfe1360f4d53921db60ed51e07dc27c76e975",
+      "structural_formula": "epsilonsum_(mu=#.#,ab=#.#)[#-cos(f_ab(x+e_mu)-f_ab(x))],epsilon>#"
+    },
+    {
+      "exact_formula_ids": [
+        "7e301b47af30667693af1b72127085651ccf84ef9d08f419c846c02cfdb39498"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e17d5184eb6f47937f885ecf15b7fbbfe3b9e098f2ec1fa0ee8e18c30910d7ca",
+      "structural_formula": "epsilonw(z)L6(z)^daggerL6(z),w(z)=sum_mu|z_mu-#|^#"
+    },
+    {
+      "exact_formula_ids": [
         "7eaa38b3c00bc3d7e8014b417105b5d47243a4e159689426c18d0c64b05efe97"
       ],
       "exact_member_count": 1,
@@ -2254737,6 +2256145,14 @@
     },
     {
       "exact_formula_ids": [
+        "f124dc53efb8dcedee7182cac95be4932d2d5209819ffea26a4cc07fdc83a94f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7898dd2ea5397d01fd349c4a79121923f6e5a3c613e112e567bb2c6d6cd64fc9",
+      "structural_formula": "filled2#_quantum_geometry=dict(Fubini_Study_metric='M/#',Berry_curvature='zero'"
+    },
+    {
+      "exact_formula_ids": [
         "0e0db0ab81fe3f2cc102ce0267785cb73fc5802fe2c1a6c49a45ffc7beedc90c"
       ],
       "exact_member_count": 1,
@@ -2258885,6 +2260301,14 @@
       "exact_member_count": 1,
       "structural_family_id": "49a205893d4aff2cc73e139b8b4f6e5221dd8a9173d577d778cd6dcd8a6a9f06",
       "structural_formula": "g_i^{#}=g_i^#"
+    },
+    {
+      "exact_formula_ids": [
+        "6cfadadcc9fca6a0b93e199b5a8c1706caa6953ab0ad7e143d354001b5eacef3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "905485c82ab0b696103e6bd2d1af8c30cda6f95997e9d65abc41713a657b5aeb",
+      "structural_formula": "g_ij=Tr(d_iP_occd_jP_occ)/#=M_ij/#,anditsBerrycurvature"
     },
     {
       "exact_formula_ids": [
@@ -2270565,6 +2271989,14 @@
     },
     {
       "exact_formula_ids": [
+        "a5b4f343bd13816224c1b753113d7c86cc0957e7c1232f5575e537d500461336"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f947d62d532d7c21163329c4b682bfa10b103d0983c13ed5f0b409126fb9f63a",
+      "structural_formula": "inverse_transform='K_R(t)=M*[contact*delta(t)-(f_m-f_p)*theta(t)*sin(#*t)/#]'"
+    },
+    {
+      "exact_formula_ids": [
         "0e48a543e908eb6caf5363d53b2179783aed5ba749e860a9a9cb699a3c40fd87"
       ],
       "exact_member_count": 1,
@@ -2274379,6 +2275811,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d28cd1b47013bec48d4b01fa9e01907ace1faa19821bf32cc5225f8d2413acb0",
       "structural_formula": "kernel='pi^(#/#)*exp(-|q|^#/#)tensorfermionvacuum.'"
+    },
+    {
+      "exact_formula_ids": [
+        "2dcb9964360dc2554182bcf55d7daa69abbda40cb26d78f07476734818592efe"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0a150d56cd66fdccd24f81b0a8851dc31f1036299e9e686b2d954ed4401cdc0d",
+      "structural_formula": "kernelQ(nu)=(#+nu^#)M/(#d),couplingMtothefourexternalprobes,and"
     },
     {
       "exact_formula_ids": [
@@ -2348258,6 +2349698,14 @@
     },
     {
       "exact_formula_ids": [
+        "9ab17b14b54ec078eb05bd13921d1faad46eabe63517bf8b86cb37243998991e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "965514ee6dccdfdfc673853f6a06b256f4b6a9bbbaa1410c135eff9f1972af2d",
+      "structural_formula": "quadratic_symbol='epsilon*w(z)*L6(z)^dagger*L6(z),w(z)=sum_mu|z_mu-#|^#'"
+    },
+    {
+      "exact_formula_ids": [
         "ffcf98870bb686bc696b9fe1d45df0f2902e337f9e5013472795c75d4867d00c"
       ],
       "exact_member_count": 1,
@@ -2348327,6 +2349775,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5d40fb4caa5742367c6073bf74d5343c6d67a65cf3502a7994b30b7fa9216a78",
       "structural_formula": "quantum_clock='Independently,C=p_t+Hfortheactualself-adjoint1#HamiltonianhassolutionsPsi(t)=exp(-itH)psi0;groupaveragingretainsphysicalL2(R7#).Thissuppliedidealclockneedsnomatter-killingopposite-centerconstraint.'"
+    },
+    {
+      "exact_formula_ids": [
+        "3d3c160ffcdb9b091806bff22c4e71091821f6e853b2552952a0a409d1c74f8a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "cb5825b16c6b85746685ff6d02157c33bcd64fc8432955b8f39856fd774267e5",
+      "structural_formula": "quantum_metric=s.Matrix(#,#,lambdai,j:s.trace(dP[i]*dP[j])/#)"
     },
     {
       "exact_formula_ids": [
@@ -2352671,6 +2354127,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3034d80c4bcd650c257e2cab344df2723a2ed4ad51fc534f669c58ce5a4ca804",
       "structural_formula": "repair=json.loads((ROOT/'data/w3#_pass1#_spinor_weil_intertwiner.json').read_text())['exact_projective_tangent_repair']"
+    },
+    {
+      "exact_formula_ids": [
+        "9c7dd14dc29be85824907d80b5b77de6f6c91cc4168e1e2a66589bdca0acd6fc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b31e857edc0fb857402ec4ab38c6c95257efbe8208e3cd0cb988f7650fcd0dcf",
+      "structural_formula": "repair_cost=s.Rational(#,#)*curl_norm/w['norm_squared']"
     },
     {
       "exact_formula_ids": [
@@ -2362727,6 +2364191,14 @@
       "exact_member_count": 1,
       "structural_family_id": "aaaa805ec1064160844bd86efe4a9345c5a7a6b3aed878ec10d55161253cc45b",
       "structural_formula": "scope='Finitecompactgroundsector,notitsunknownW3#multiplicityorathermodynamicspontaneous-symmetry-breakingproof.')"
+    },
+    {
+      "exact_formula_ids": [
+        "51fbfe53ee69f821158aa636b16bc69aa482319b2c09be7c35bf8697207f73c3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "91cb8782f1bec10b3e7b58985aa042c611c438cb3eeae724efc71f277b6b2811",
+      "structural_formula": "scope='Finitefreespinless2#-site/#-edgecellandfourharmonicholonomyprobes.Nononzerospatialmomentum,thermodynamicDrudeweight,bulkconductor/insulatorclassification,derivedMaxwellphoton,universalspeed,chiralvacuumorTOE.Theexistingno-global2#-band-gapcoverobstructionremainsinforce.')"
     },
     {
       "exact_formula_ids": [
@@ -2375187,6 +2376659,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a65cd298c35d864983873d3385f1d04ef7f03ade6c28e0c79e57d02e0a9d587f",
       "structural_formula": "supplied_portal='DeltaV=#/#[#H+(kappa/#)(|h|#-|h0|#)]#.Itsvalue/firstderivativesvanishatH=#,h=h0;itsHessianisapositive-squarecompletion,sothepriorlocalminimumisretained.HisarealneutralHiggsfluctuationwithYukawaderivativeYH=m;B=Chsuppliesthesixrealhvertices.'"
+    },
+    {
+      "exact_formula_ids": [
+        "740bda2b66368518b22e8060ee3915b9c08e260dd78740f438514e76c1ab83c0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f380aa3d8544fbd9a3b753bd0127a3c4b0db2f2ff93a002ebb0314bbf69659fb",
+      "structural_formula": "supplied_repair=dict(epsilon='#/#',additional_cosines=#"
     },
     {
       "exact_formula_ids": [
@@ -2392604,6 +2394084,14 @@
     },
     {
       "exact_formula_ids": [
+        "8c15caf548e20a180e9d56bd4af42fe621a7a3de5808df0c8d966e6f1aeb9d44"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ecc9b16cfc0b14d39a17e525a6368048fca9adc3ec12e8812529e824a5800892",
+      "structural_formula": "w=#andthestorednormalizedquadraticcostforepsilon=#/#is"
+    },
+    {
+      "exact_formula_ids": [
         "d2d23cff55be8031e29d03ee4088dc49f24894ef98019016a4c4e293f82d675f"
       ],
       "exact_member_count": 1,
@@ -2392745,6 +2394233,14 @@
       "exact_member_count": 1,
       "structural_family_id": "95a0f33dca7d973f878eb737dd80a8f50ae85796e3cc0f25c1a6276627f54db8",
       "structural_formula": "w_\\phi=(#,e^{i\\phi},#)/\\sqrt3"
+    },
+    {
+      "exact_formula_ids": [
+        "8a191df430e765ca2a5748399c599c022cd07d33b7dd9d8100aeeac441f0eeca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1f7e6b4ff709332f4ff26ec278062054d39b64199cde702e821a879df55e6748",
+      "structural_formula": "w_at_witness='#',normalized_witness_quadratic_form=str(repair_cost)"
     },
     {
       "exact_formula_ids": [
@@ -2408494,20 +2409990,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92161320,
-    "exact_formula_families": 64984,
-    "files_scanned": 12677,
-    "formula_occurrences": 71119,
+    "bytes_scanned": 92214157,
+    "exact_formula_families": 65024,
+    "files_scanned": 12683,
+    "formula_occurrences": 71159,
     "status_occurrences": {
-      "certified_or_theorem": 5326,
+      "certified_or_theorem": 5333,
       "killed_or_retracted": 1930,
-      "open_or_conditional": 2399,
+      "open_or_conditional": 2401,
       "preregistered": 36,
-      "retrospective_fit": 5414,
-      "unclassified": 56014
+      "retrospective_fit": 5417,
+      "unclassified": 56042
     },
-    "structural_families": 63274
+    "structural_families": 63314
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "f1e0cd2df0002c7df6bf63793f8df8d15b0b929da0925b3665546d722ee4d487"
+  "universe_sha256": "7a558b4bdc237cf011ae66d1e44f1457eec7a1ceb299c9feb0516c4d3e465594"
 }
