@@ -1,9 +1,58 @@
 {
   "pdf_sha256": "c813e604f3cb2c8fc6f6417f85e7ed96a2eeb8faa191d7ccbc6b869d21e3f9a5",
   "pdf_pages": 210,
-  "additional_fully_read_pages_this_turn": [20, 21, 22, 23, 24, 25],
-  "previously_recorded_fully_read_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 135, 136, 137, 138, 139],
-  "full_parallel_patch_read_this_turn": ["449bcd3c55"],
+  "additional_fully_read_pages_this_turn": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "previously_recorded_fully_read_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    135,
+    136,
+    137,
+    138,
+    139
+  ],
+  "full_parallel_patch_read_this_turn": [
+    "449bcd3c55"
+  ],
   "historical_patch_manifest": "analysis/2026-10-28_two_week_patch_manifest.json",
-  "completion": "Thirty complete PDF text pages documented across the two latest turns, plus other partial reading; the full 210-page paper and 729 historical diffs are not completely read. A prior archive and its hashes do not constitute semantic review."
+  "completion": "Forty-three complete PDF text pages documented across the two latest turns, plus other partial reading; the full 210-page paper and 729 historical diffs are not completely read. A prior archive and its hashes do not constitute semantic review.",
+  "additional_fully_read_pages_after_first_publication": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ]
 }

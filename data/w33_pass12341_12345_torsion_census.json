@@ -1,0 +1,1959 @@
+{
+  "schema": "w33.pass12341_12345.torsion_census.v1",
+  "census": [
+    {
+      "n": 2,
+      "screen_prime": 10000019,
+      "screen_primitive_root": 10000018,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 1,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 3,
+      "screen_prime": 10000141,
+      "screen_primitive_root": 3774126,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 2,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 10,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "n": 4,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 6693184,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 2,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 5,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 3875471,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 4,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 6,
+      "screen_prime": 10000141,
+      "screen_primitive_root": 3774127,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 2,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          2
+        ],
+        [
+          2,
+          0,
+          4,
+          4
+        ],
+        [
+          2,
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          2,
+          4
+        ],
+        [
+          4,
+          2,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "n": 7,
+      "screen_prime": 10000019,
+      "screen_primitive_root": 8169179,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 6,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 8,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 9045439,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 4,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 9,
+      "screen_prime": 10000189,
+      "screen_primitive_root": 2261684,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 6,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          3,
+          6,
+          0
+        ],
+        [
+          0,
+          6,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          6,
+          3
+        ],
+        [
+          3,
+          0,
+          6,
+          6
+        ],
+        [
+          3,
+          3,
+          3,
+          6
+        ],
+        [
+          3,
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          3,
+          3
+        ],
+        [
+          6,
+          0,
+          3,
+          6
+        ],
+        [
+          6,
+          3,
+          0,
+          0
+        ],
+        [
+          6,
+          6,
+          6,
+          3
+        ]
+      ]
+    },
+    {
+      "n": 10,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 1977127,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 4,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 11,
+      "screen_prime": 10000079,
+      "screen_primitive_root": 7502583,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 10,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 12,
+      "screen_prime": 10000141,
+      "screen_primitive_root": 2189466,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 4,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          4,
+          8,
+          0
+        ],
+        [
+          0,
+          8,
+          4,
+          0
+        ],
+        [
+          4,
+          0,
+          8,
+          4
+        ],
+        [
+          4,
+          0,
+          8,
+          8
+        ],
+        [
+          4,
+          4,
+          4,
+          8
+        ],
+        [
+          4,
+          8,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          4,
+          4
+        ],
+        [
+          8,
+          0,
+          4,
+          8
+        ],
+        [
+          8,
+          4,
+          0,
+          0
+        ],
+        [
+          8,
+          8,
+          8,
+          4
+        ]
+      ]
+    },
+    {
+      "n": 13,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 5175803,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 12,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 14,
+      "screen_prime": 10000019,
+      "screen_primitive_root": 2793058,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 6,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 15,
+      "screen_prime": 10000141,
+      "screen_primitive_root": 3728004,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 8,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          5,
+          10,
+          0
+        ],
+        [
+          0,
+          10,
+          5,
+          0
+        ],
+        [
+          5,
+          0,
+          10,
+          5
+        ],
+        [
+          5,
+          0,
+          10,
+          10
+        ],
+        [
+          5,
+          5,
+          5,
+          10
+        ],
+        [
+          5,
+          10,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          5,
+          5
+        ],
+        [
+          10,
+          0,
+          5,
+          10
+        ],
+        [
+          10,
+          5,
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          10,
+          5
+        ]
+      ]
+    },
+    {
+      "n": 16,
+      "screen_prime": 10000481,
+      "screen_primitive_root": 2494602,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 8,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 17,
+      "screen_prime": 10000591,
+      "screen_primitive_root": 8669009,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 16,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 18,
+      "screen_prime": 10000189,
+      "screen_primitive_root": 9345162,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 6,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          6,
+          12,
+          0
+        ],
+        [
+          0,
+          12,
+          6,
+          0
+        ],
+        [
+          6,
+          0,
+          12,
+          6
+        ],
+        [
+          6,
+          0,
+          12,
+          12
+        ],
+        [
+          6,
+          6,
+          6,
+          12
+        ],
+        [
+          6,
+          12,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          6,
+          6
+        ],
+        [
+          12,
+          0,
+          6,
+          12
+        ],
+        [
+          12,
+          6,
+          0,
+          0
+        ],
+        [
+          12,
+          12,
+          12,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 19,
+      "screen_prime": 10000271,
+      "screen_primitive_root": 7627384,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 18,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 20,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 3565885,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 8,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 21,
+      "screen_prime": 10000453,
+      "screen_primitive_root": 2374332,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 12,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          7,
+          14,
+          0
+        ],
+        [
+          0,
+          14,
+          7,
+          0
+        ],
+        [
+          7,
+          0,
+          14,
+          7
+        ],
+        [
+          7,
+          0,
+          14,
+          14
+        ],
+        [
+          7,
+          7,
+          7,
+          14
+        ],
+        [
+          7,
+          14,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          7,
+          7
+        ],
+        [
+          14,
+          0,
+          7,
+          14
+        ],
+        [
+          14,
+          7,
+          0,
+          0
+        ],
+        [
+          14,
+          14,
+          14,
+          7
+        ]
+      ]
+    },
+    {
+      "n": 22,
+      "screen_prime": 10000079,
+      "screen_primitive_root": 9320262,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 10,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 23,
+      "screen_prime": 10000079,
+      "screen_primitive_root": 2702777,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 22,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 24,
+      "screen_prime": 10000537,
+      "screen_primitive_root": 8456603,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 8,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          8,
+          16,
+          0
+        ],
+        [
+          0,
+          16,
+          8,
+          0
+        ],
+        [
+          8,
+          0,
+          16,
+          8
+        ],
+        [
+          8,
+          0,
+          16,
+          16
+        ],
+        [
+          8,
+          8,
+          8,
+          16
+        ],
+        [
+          8,
+          16,
+          0,
+          0
+        ],
+        [
+          16,
+          0,
+          8,
+          8
+        ],
+        [
+          16,
+          0,
+          8,
+          16
+        ],
+        [
+          16,
+          8,
+          0,
+          0
+        ],
+        [
+          16,
+          16,
+          16,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 25,
+      "screen_prime": 10000451,
+      "screen_primitive_root": 6627004,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 20,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 26,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 6857241,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 12,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 27,
+      "screen_prime": 10000261,
+      "screen_primitive_root": 7879318,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 18,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          9,
+          18,
+          0
+        ],
+        [
+          0,
+          18,
+          9,
+          0
+        ],
+        [
+          9,
+          0,
+          18,
+          9
+        ],
+        [
+          9,
+          0,
+          18,
+          18
+        ],
+        [
+          9,
+          9,
+          9,
+          18
+        ],
+        [
+          9,
+          18,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          9,
+          9
+        ],
+        [
+          18,
+          0,
+          9,
+          18
+        ],
+        [
+          18,
+          9,
+          0,
+          0
+        ],
+        [
+          18,
+          18,
+          18,
+          9
+        ]
+      ]
+    },
+    {
+      "n": 28,
+      "screen_prime": 10000229,
+      "screen_primitive_root": 8205591,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 12,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 29,
+      "screen_prime": 10000303,
+      "screen_primitive_root": 9257864,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 28,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 30,
+      "screen_prime": 10000141,
+      "screen_primitive_root": 9278053,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 8,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          10,
+          20,
+          0
+        ],
+        [
+          0,
+          20,
+          10,
+          0
+        ],
+        [
+          10,
+          0,
+          20,
+          10
+        ],
+        [
+          10,
+          0,
+          20,
+          20
+        ],
+        [
+          10,
+          10,
+          10,
+          20
+        ],
+        [
+          10,
+          20,
+          0,
+          0
+        ],
+        [
+          20,
+          0,
+          10,
+          10
+        ],
+        [
+          20,
+          0,
+          10,
+          20
+        ],
+        [
+          20,
+          10,
+          0,
+          0
+        ],
+        [
+          20,
+          20,
+          20,
+          10
+        ]
+      ]
+    },
+    {
+      "n": 31,
+      "screen_prime": 10000229,
+      "screen_primitive_root": 7463058,
+      "modular_candidates": 2,
+      "cyclotomic_degree": 30,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 32,
+      "screen_prime": 10000481,
+      "screen_primitive_root": 8634951,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 16,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 33,
+      "screen_prime": 10000189,
+      "screen_primitive_root": 9950769,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 20,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          11,
+          22,
+          0
+        ],
+        [
+          0,
+          22,
+          11,
+          0
+        ],
+        [
+          11,
+          0,
+          22,
+          11
+        ],
+        [
+          11,
+          0,
+          22,
+          22
+        ],
+        [
+          11,
+          11,
+          11,
+          22
+        ],
+        [
+          11,
+          22,
+          0,
+          0
+        ],
+        [
+          22,
+          0,
+          11,
+          11
+        ],
+        [
+          22,
+          0,
+          11,
+          22
+        ],
+        [
+          22,
+          11,
+          0,
+          0
+        ],
+        [
+          22,
+          22,
+          22,
+          11
+        ]
+      ]
+    },
+    {
+      "n": 34,
+      "screen_prime": 10000591,
+      "screen_primitive_root": 5680842,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 16,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 35,
+      "screen_prime": 10000271,
+      "screen_primitive_root": 9858361,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 24,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 36,
+      "screen_prime": 10000189,
+      "screen_primitive_root": 9499915,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 12,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          12,
+          24,
+          0
+        ],
+        [
+          0,
+          24,
+          12,
+          0
+        ],
+        [
+          12,
+          0,
+          24,
+          12
+        ],
+        [
+          12,
+          0,
+          24,
+          24
+        ],
+        [
+          12,
+          12,
+          12,
+          24
+        ],
+        [
+          12,
+          24,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          12,
+          12
+        ],
+        [
+          24,
+          0,
+          12,
+          24
+        ],
+        [
+          24,
+          12,
+          0,
+          0
+        ],
+        [
+          24,
+          24,
+          24,
+          12
+        ]
+      ]
+    },
+    {
+      "n": 37,
+      "screen_prime": 10000139,
+      "screen_primitive_root": 6897892,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 36,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 38,
+      "screen_prime": 10000271,
+      "screen_primitive_root": 3123207,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 18,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 39,
+      "screen_prime": 10000303,
+      "screen_primitive_root": 1258094,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 24,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          13,
+          26,
+          0
+        ],
+        [
+          0,
+          26,
+          13,
+          0
+        ],
+        [
+          13,
+          0,
+          26,
+          13
+        ],
+        [
+          13,
+          0,
+          26,
+          26
+        ],
+        [
+          13,
+          13,
+          13,
+          26
+        ],
+        [
+          13,
+          26,
+          0,
+          0
+        ],
+        [
+          26,
+          0,
+          13,
+          13
+        ],
+        [
+          26,
+          0,
+          13,
+          26
+        ],
+        [
+          26,
+          13,
+          0,
+          0
+        ],
+        [
+          26,
+          26,
+          26,
+          13
+        ]
+      ]
+    },
+    {
+      "n": 40,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 856576,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 16,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 41,
+      "screen_prime": 10000229,
+      "screen_primitive_root": 8889747,
+      "modular_candidates": 3,
+      "cyclotomic_degree": 40,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 42,
+      "screen_prime": 10000453,
+      "screen_primitive_root": 4215126,
+      "modular_candidates": 13,
+      "cyclotomic_degree": 12,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          14,
+          28,
+          0
+        ],
+        [
+          0,
+          28,
+          14,
+          0
+        ],
+        [
+          14,
+          0,
+          28,
+          14
+        ],
+        [
+          14,
+          0,
+          28,
+          28
+        ],
+        [
+          14,
+          14,
+          14,
+          28
+        ],
+        [
+          14,
+          28,
+          0,
+          0
+        ],
+        [
+          28,
+          0,
+          14,
+          14
+        ],
+        [
+          28,
+          0,
+          14,
+          28
+        ],
+        [
+          28,
+          14,
+          0,
+          0
+        ],
+        [
+          28,
+          28,
+          28,
+          14
+        ]
+      ]
+    },
+    {
+      "n": 43,
+      "screen_prime": 10000253,
+      "screen_primitive_root": 7128867,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 42,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 44,
+      "screen_prime": 10000189,
+      "screen_primitive_root": 9388527,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 20,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 45,
+      "screen_prime": 10000261,
+      "screen_primitive_root": 5281210,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 24,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          15,
+          30,
+          0
+        ],
+        [
+          0,
+          30,
+          15,
+          0
+        ],
+        [
+          15,
+          0,
+          30,
+          15
+        ],
+        [
+          15,
+          0,
+          30,
+          30
+        ],
+        [
+          15,
+          15,
+          15,
+          30
+        ],
+        [
+          15,
+          30,
+          0,
+          0
+        ],
+        [
+          30,
+          0,
+          15,
+          15
+        ],
+        [
+          30,
+          0,
+          15,
+          30
+        ],
+        [
+          30,
+          15,
+          0,
+          0
+        ],
+        [
+          30,
+          30,
+          30,
+          15
+        ]
+      ]
+    },
+    {
+      "n": 46,
+      "screen_prime": 10000079,
+      "screen_primitive_root": 7530834,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 22,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 47,
+      "screen_prime": 10000379,
+      "screen_primitive_root": 8040979,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 46,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 48,
+      "screen_prime": 10000609,
+      "screen_primitive_root": 5569482,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 16,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          16,
+          32,
+          0
+        ],
+        [
+          0,
+          32,
+          16,
+          0
+        ],
+        [
+          16,
+          0,
+          32,
+          16
+        ],
+        [
+          16,
+          0,
+          32,
+          32
+        ],
+        [
+          16,
+          16,
+          16,
+          32
+        ],
+        [
+          16,
+          32,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          16,
+          16
+        ],
+        [
+          32,
+          0,
+          16,
+          32
+        ],
+        [
+          32,
+          16,
+          0,
+          0
+        ],
+        [
+          32,
+          32,
+          32,
+          16
+        ]
+      ]
+    },
+    {
+      "n": 49,
+      "screen_prime": 10000019,
+      "screen_primitive_root": 3541214,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 42,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 50,
+      "screen_prime": 10000451,
+      "screen_primitive_root": 6243698,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 20,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 51,
+      "screen_prime": 10000591,
+      "screen_primitive_root": 5637620,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 32,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          17,
+          34,
+          0
+        ],
+        [
+          0,
+          34,
+          17,
+          0
+        ],
+        [
+          17,
+          0,
+          34,
+          17
+        ],
+        [
+          17,
+          0,
+          34,
+          34
+        ],
+        [
+          17,
+          17,
+          17,
+          34
+        ],
+        [
+          17,
+          34,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          17,
+          17
+        ],
+        [
+          34,
+          0,
+          17,
+          34
+        ],
+        [
+          34,
+          17,
+          0,
+          0
+        ],
+        [
+          34,
+          34,
+          34,
+          17
+        ]
+      ]
+    },
+    {
+      "n": 52,
+      "screen_prime": 10000121,
+      "screen_primitive_root": 5336008,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 24,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 53,
+      "screen_prime": 10000253,
+      "screen_primitive_root": 6163784,
+      "modular_candidates": 5,
+      "cyclotomic_degree": 52,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 54,
+      "screen_prime": 10000261,
+      "screen_primitive_root": 8879859,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 18,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          18,
+          36,
+          0
+        ],
+        [
+          0,
+          36,
+          18,
+          0
+        ],
+        [
+          18,
+          0,
+          36,
+          18
+        ],
+        [
+          18,
+          0,
+          36,
+          36
+        ],
+        [
+          18,
+          18,
+          18,
+          36
+        ],
+        [
+          18,
+          36,
+          0,
+          0
+        ],
+        [
+          36,
+          0,
+          18,
+          18
+        ],
+        [
+          36,
+          0,
+          18,
+          36
+        ],
+        [
+          36,
+          18,
+          0,
+          0
+        ],
+        [
+          36,
+          36,
+          36,
+          18
+        ]
+      ]
+    },
+    {
+      "n": 55,
+      "screen_prime": 10000651,
+      "screen_primitive_root": 8261530,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 40,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 56,
+      "screen_prime": 10000481,
+      "screen_primitive_root": 4410618,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 24,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 57,
+      "screen_prime": 10000537,
+      "screen_primitive_root": 8795175,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 36,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          19,
+          38,
+          0
+        ],
+        [
+          0,
+          38,
+          19,
+          0
+        ],
+        [
+          19,
+          0,
+          38,
+          19
+        ],
+        [
+          19,
+          0,
+          38,
+          38
+        ],
+        [
+          19,
+          19,
+          19,
+          38
+        ],
+        [
+          19,
+          38,
+          0,
+          0
+        ],
+        [
+          38,
+          0,
+          19,
+          19
+        ],
+        [
+          38,
+          0,
+          19,
+          38
+        ],
+        [
+          38,
+          19,
+          0,
+          0
+        ],
+        [
+          38,
+          38,
+          38,
+          19
+        ]
+      ]
+    },
+    {
+      "n": 58,
+      "screen_prime": 10000303,
+      "screen_primitive_root": 2333359,
+      "modular_candidates": 5,
+      "cyclotomic_degree": 28,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 59,
+      "screen_prime": 10001209,
+      "screen_primitive_root": 4396117,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 58,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 60,
+      "screen_prime": 10000141,
+      "screen_primitive_root": 2058198,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 16,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          20,
+          40,
+          0
+        ],
+        [
+          0,
+          40,
+          20,
+          0
+        ],
+        [
+          20,
+          0,
+          40,
+          20
+        ],
+        [
+          20,
+          0,
+          40,
+          40
+        ],
+        [
+          20,
+          20,
+          20,
+          40
+        ],
+        [
+          20,
+          40,
+          0,
+          0
+        ],
+        [
+          40,
+          0,
+          20,
+          20
+        ],
+        [
+          40,
+          0,
+          20,
+          40
+        ],
+        [
+          40,
+          20,
+          0,
+          0
+        ],
+        [
+          40,
+          40,
+          40,
+          20
+        ]
+      ]
+    },
+    {
+      "n": 61,
+      "screen_prime": 10002659,
+      "screen_primitive_root": 1995098,
+      "modular_candidates": 1,
+      "cyclotomic_degree": 60,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 62,
+      "screen_prime": 10000229,
+      "screen_primitive_root": 9812005,
+      "modular_candidates": 4,
+      "cyclotomic_degree": 30,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    },
+    {
+      "n": 63,
+      "screen_prime": 10000747,
+      "screen_primitive_root": 5745346,
+      "modular_candidates": 11,
+      "cyclotomic_degree": 36,
+      "nonidentity_count": 10,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": [
+        [
+          0,
+          21,
+          42,
+          0
+        ],
+        [
+          0,
+          42,
+          21,
+          0
+        ],
+        [
+          21,
+          0,
+          42,
+          21
+        ],
+        [
+          21,
+          0,
+          42,
+          42
+        ],
+        [
+          21,
+          21,
+          21,
+          42
+        ],
+        [
+          21,
+          42,
+          0,
+          0
+        ],
+        [
+          42,
+          0,
+          21,
+          21
+        ],
+        [
+          42,
+          0,
+          21,
+          42
+        ],
+        [
+          42,
+          21,
+          0,
+          0
+        ],
+        [
+          42,
+          42,
+          42,
+          21
+        ]
+      ]
+    },
+    {
+      "n": 64,
+      "screen_prime": 10000769,
+      "screen_primitive_root": 5082106,
+      "modular_candidates": 5,
+      "cyclotomic_degree": 32,
+      "nonidentity_count": 0,
+      "primitive_nonidentity_count": 0,
+      "nonidentity_loop_labels": []
+    }
+  ],
+  "soft_mode": {
+    "period_path_length": 4,
+    "gradient_lipschitz_squared": 342,
+    "curl_lipschitz_squared": 25818,
+    "sigma_inverse_lower_bound_squared": 1692,
+    "certified_n0": 12172,
+    "certified_rayleigh_coefficient": 1652352,
+    "numeric_rayleigh_controls": [
+      {
+        "n": 31,
+        "rayleigh_upper_bound": 0.049682595707611944,
+        "n_squared_times_rayleigh": 47.74497447501508
+      },
+      {
+        "n": 40,
+        "rayleigh_upper_bound": 0.030116835747193225,
+        "n_squared_times_rayleigh": 48.18693719550916
+      },
+      {
+        "n": 61,
+        "rayleigh_upper_bound": 0.013089492182234366,
+        "n_squared_times_rayleigh": 48.70600041009408
+      },
+      {
+        "n": 100,
+        "rayleigh_upper_bound": 0.00490879858369803,
+        "n_squared_times_rayleigh": 49.0879858369803
+      },
+      {
+        "n": 127,
+        "rayleigh_upper_bound": 0.0030512935183673448,
+        "n_squared_times_rayleigh": 49.2143131577469
+      },
+      {
+        "n": 160,
+        "rayleigh_upper_bound": 0.0019261944510051154,
+        "n_squared_times_rayleigh": 49.310577945730955
+      }
+    ],
+    "bound": "For n >= n0, lambda_min on the transverse sector at a grid character approaching (omega,omega,1,1) is <= certified_rayleigh_coefficient/n^2."
+  },
+  "scope": "Exact enumeration only for periods 2 through 64; no all-period torsion classification.",
+  "source_sha256": "9f72b7d5b59a04bfa611d9dfabe59e72933b9592f410c10827628c30a186e3ea"
+}
