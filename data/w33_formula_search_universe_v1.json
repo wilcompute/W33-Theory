@@ -628496,6 +628496,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "6d1f52bedf59660d393d7579a1aea327f083cc5b46d3202cc51452b61e0dd283",
+      "normalized_formula": "ExactArfcomputationsforq=3andq=7bothgiveplustype;forq=3,Hhas136singularvectors(includingzero)and120nonsingularvectors,agreeingwiththealreadyknownE8/2E8finitequadratic-spacetype.Thismatchingdoes^not^provideacanonicalE8latticeisomorphism,aHamiltonian,oranexperimentallyvalidatedphysicalclaim",
+      "numeric_literals": [
+        "20",
+        "2E8",
+        "3",
+        "36",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_even_line_resolution.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 32,
+          "path": "analysis/2026-10-29_W33_even_line_resolution.md",
+          "raw": "Exact Arf computations for q=3 and q=7 both give plus type; for q=3, H has 136 singular vectors (including zero) and 120 nonsingular vectors, agreeing with the already known E8/2E8 finite quadratic-space type. This matching does **not** provide a canonical E8 lattice isomorphism, a Hamiltonian, or an experimentally validated physical claim.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "da4b5307162f0117481f9eeb52f3c591dccd321258b4c58f94a978912057226f",
+      "structural_formula": "ExactArfcomputationsforq=#andq=#bothgiveplustype;forq=#,Hhas1#singularvectors(includingzero)and1#nonsingularvectors,agreeingwiththealreadyknownE8/#finitequadratic-spacetype.Thismatchingdoes^not^provideacanonicalE8latticeisomorphism,aHamiltonian,oranexperimentallyvalidatedphysicalclaim"
+    },
+    {
+      "file_count": 1,
       "formula_id": "eeaf5bd2c59c3b9b19f42c77fbf3f55de775da58ddd8b488f627b82fe2c2a2af",
       "normalized_formula": "ExactKoide`Q=2/3`requires`epsilon^2=2`.Thereforeasmallpositivereservoir-projectorperturbationcannotbeliterallythesquare-rootcharged-leptonvector",
       "numeric_literals": [
@@ -809495,6 +809526,33 @@
       },
       "structural_family_id": "f4723ae6ec18104feb34587ee21a3b216947743903bc4d94bc60cf90bee275bf",
       "structural_formula": "Since9C\u2212#=NqandN\u00b7#=#\u00b7#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "8ec16a4ebce87f82ef59e027771bfe7ec7bbb315dc8868e00f371015c5c63885",
+      "normalized_formula": "SinceAN=J,theall-onesvectorliesinimA,soeveryvectorofkerAhasevenweight.ThequadraticfunctionQ(x)=wt(x)/2mod2haspolarformtheordinarybinarydotproductontheeven-weightsubspace.ItdescendstothequotientHiffthestabilizerimAisdoublyeven",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_even_line_resolution.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/2026-10-29_W33_even_line_resolution.md",
+          "raw": "Since A N=J, the all-ones vector lies in im A, so every vector of ker A has even weight. The quadratic function Q(x)=wt(x)/2 mod 2 has polar form the ordinary binary dot product on the even-weight subspace. It descends to the quotient H iff the stabilizer im A is doubly even.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7de4857eb100105922f912b92460c0e10ad7d6a8a2627d148ea8074228bc226d",
+      "structural_formula": "SinceAN=J,theall-onesvectorliesinimA,soeveryvectorofkerAhasevenweight.ThequadraticfunctionQ(x)=wt(x)/#mod2haspolarformtheordinarybinarydotproductontheeven-weightsubspace.ItdescendstothequotientHiffthestabilizerimAisdoublyeven"
     },
     {
       "file_count": 1,
@@ -1704933,6 +1704991,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a9a9997e772494376da1f24bc8ef13b4d0cbf9391975e5c8c67fe904bad36b7a",
+      "normalized_formula": "result[\"quadratic_counts\"]={\"singular_including_zero\":136,\"nonsingular\":120}",
+      "numeric_literals": [
+        "120",
+        "136"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_incidence_even_line_resolution_20261029.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 147,
+          "path": "analysis/w33_incidence_even_line_resolution_20261029.py",
+          "raw": "result[\"quadratic_counts\"]={\"singular_including_zero\":136,\"nonsingular\":120}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "28085596ad1ea6cb2e085599625552f831a24b905b95650ba2fb9c430813fe89",
+      "structural_formula": "result[\"quadratic_counts\"]={\"singular_including_zero\":#,\"nonsingular\":#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "87ba021da9ad26da4cf9fc8e5026efbae38b9ae45a3454cf63f5c02091cdd96d",
       "normalized_formula": "result['pass11797']['actual_named_gauge_space_group_corrected_R_passes']=19",
       "numeric_literals": [
@@ -1908637,9 +1908723,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T13:54:07-04:00",
+  "frozen_at": "2026-10-29T14:09:44-04:00",
   "pass": 398,
-  "repository_head": "af1a7ee05d5681f7b00e393ca0824efd6feda60b",
+  "repository_head": "4b93784c110e6a9361ca872d5af84f0825df6667",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2077796,6 +2077882,14 @@
     },
     {
       "exact_formula_ids": [
+        "6d1f52bedf59660d393d7579a1aea327f083cc5b46d3202cc51452b61e0dd283"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "da4b5307162f0117481f9eeb52f3c591dccd321258b4c58f94a978912057226f",
+      "structural_formula": "ExactArfcomputationsforq=#andq=#bothgiveplustype;forq=#,Hhas1#singularvectors(includingzero)and1#nonsingularvectors,agreeingwiththealreadyknownE8/#finitequadratic-spacetype.Thismatchingdoes^not^provideacanonicalE8latticeisomorphism,aHamiltonian,oranexperimentallyvalidatedphysicalclaim"
+    },
+    {
+      "exact_formula_ids": [
         "eeaf5bd2c59c3b9b19f42c77fbf3f55de775da58ddd8b488f627b82fe2c2a2af"
       ],
       "exact_member_count": 1,
@@ -2126695,6 +2126789,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f4723ae6ec18104feb34587ee21a3b216947743903bc4d94bc60cf90bee275bf",
       "structural_formula": "Since9C\u2212#=NqandN\u00b7#=#\u00b7#"
+    },
+    {
+      "exact_formula_ids": [
+        "8ec16a4ebce87f82ef59e027771bfe7ec7bbb315dc8868e00f371015c5c63885"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7de4857eb100105922f912b92460c0e10ad7d6a8a2627d148ea8074228bc226d",
+      "structural_formula": "SinceAN=J,theall-onesvectorliesinimA,soeveryvectorofkerAhasevenweight.ThequadraticfunctionQ(x)=wt(x)/#mod2haspolarformtheordinarybinarydotproductontheeven-weightsubspace.ItdescendstothequotientHiffthestabilizerimAisdoublyeven"
     },
     {
       "exact_formula_ids": [
@@ -2364835,6 +2364937,14 @@
     },
     {
       "exact_formula_ids": [
+        "a9a9997e772494376da1f24bc8ef13b4d0cbf9391975e5c8c67fe904bad36b7a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "28085596ad1ea6cb2e085599625552f831a24b905b95650ba2fb9c430813fe89",
+      "structural_formula": "result[\"quadratic_counts\"]={\"singular_including_zero\":#,\"nonsingular\":#}"
+    },
+    {
+      "exact_formula_ids": [
         "89decc06e666b31b49d2deb1c5500d933d709eb76f39e1e2d908230ec01825d4"
       ],
       "exact_member_count": 1,
@@ -2418775,20 +2418885,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92622620,
-    "exact_formula_families": 65261,
-    "files_scanned": 12738,
-    "formula_occurrences": 71404,
+    "bytes_scanned": 92632207,
+    "exact_formula_families": 65264,
+    "files_scanned": 12740,
+    "formula_occurrences": 71407,
     "status_occurrences": {
       "certified_or_theorem": 5366,
       "killed_or_retracted": 1953,
       "open_or_conditional": 2414,
       "preregistered": 36,
       "retrospective_fit": 5432,
-      "unclassified": 56203
+      "unclassified": 56206
     },
-    "structural_families": 63547
+    "structural_families": 63550
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "f0dca3290de0fe0acbf59d5ff0c23ef0b333be86819b17dfe6cb6313ca65d7b8"
+  "universe_sha256": "c332523a9227f9a4875205a5c56f452e9a1e4e09db7f34ba484b393ec7dc5283"
 }
