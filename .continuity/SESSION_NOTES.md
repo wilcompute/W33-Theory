@@ -2327,3 +2327,13 @@ Five independent next research targets: nonambient chiral matter with a computed
 - Final focused suite:17 tests pass, including10 new controls,3 upstream controls and4 prior response regressions. Source computer offline; server calculations only.
 - Manual decision fallback: analysis/2026-10-28_pass12340_decisions.jsonl. GitHub connector publication with expected-head lease; GitKraken/Continuity tools unavailable. No TOE claim.
 - Publication update: complete686188c four-file patch read; its5 further repository tests pass (22 focused checks total). Its order-two-corner results leave the order-three exception open. Preserve both parallel science commits. All729 archives completed and all132553292 decompressed bytes verified against SHA256 manifests.
+
+
+### 2026-10-29 — Passes12341-12345 global Bloch and five-front continuation
+
+- Reserved 6cd5c74a8a on master before computation. Read the complete parallel449bcd3c55 four-file patch; preserve its smaller12-term repair.
+- Exact integer Laurent-unit minors105 and109 fix native short-face and period-path ranks over the entire (C*)^4. The mixed-curl nonidentity zero locus is exactly Q(z^W-1)=0, one nongauge complex zero each; the six-loop and both positive repairs have none. Exact period-three kernel count is14 versus4; a conservative rational zero-free neighborhood is recorded.
+- Same-Hamiltonian 1849-state two-particle Hubbard six-loop response at U=0,2,8 has gauge Ward controls and finite differences; for U=2 static/electric shape residual0.6853 and common-cone-family residual0.5951. These finite-model results do not select a physical Maxwell action.
+- The single-character parity constraint removes its nongauge line, but no full orbifold or chiral measure is built. Conditional projected16 has nonzero U1psi anomalies whereas the full27 cancels.
+- Analytic tau2 integration corrects the earlier truncated R=.4 potential and finds exact negative logarithmic edge curvature -4096*pi^2/27; 201 sampled slopes do not prove interval monotonicity or establish a full string vacuum.
+- Ten focused new tests and five parallel repair tests pass. Full paper and two-week semantic diff reading remain incomplete; PDF pages20-25 added to prior read ledger. Workstation offline; server only. Manual decision log: analysis/2026-10-29_pass12341_12345_decisions.jsonl.

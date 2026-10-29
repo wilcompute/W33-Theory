@@ -820,3 +820,16 @@ representation-theory transfer is claimed.
 **Boundary:** Finite named models and a supplied lattice improvement. No derived photon, bulk transport phase, Lorentzian continuum, microscopic selection or TOE. Prior low-frequency/current identities belong to c12f80458; prior three-mixed factorization belongs to9baf04f.
 
 **Primary artifacts:** [Pass12340 report](analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md), [causal response producer](analysis/w33_pass12340_causal_harmonic_response.py), [exact finite-k witness](analysis/w33_pass12340_mixed_loop_exception.py).
+
+
+## Global native Bloch null set and the six-loop matter test (Passes12341-12345)
+
+**Aliases:** Laurent unit minors105/109, complete three-mixed Bloch quadric, period-three fourteen magnetic zero modes, Q(d)=d^T N d/2, all-character 12-term repair, 43-site interacting six-loop response, threshold -4096 pi^2/27 log.
+
+**Canonical objects:** Actual selected native short faces have a105-by-105 Laurent-unit minor; adjoining the four native period paths gives a109-by-109 Laurent-unit minor. The mixed curl has one nongauge magnetic null at precisely nonidentity unitary characters satisfying Q(z^W-1)=0 and none elsewhere. The six-loop and both positive12- and24-term repairs have no nonidentity nongauge nulls. At period three the unrepaired/repaired physical kernel dimensions are14/4.
+
+The supplied two-particle Hubbard model on the43-vertex six-loop patch produces static and electric flux tensors with a substantial shape mismatch. A projected chiral16 leaves nonzero U1psi anomaly coefficients unless compensated. Analytic tau2 integration corrects the finite-radius truncated string quadrature and gives a logarithmically divergent negative tachyon-threshold curvature.
+
+**Boundary:** Exact mathematical lattice and charge statements, numerical response on one finite model, and a truncated string integrand. None supplies a selected action, chiral measure, complete string partition function or physical TOE. Prior isolated zero and24-term repair belong to Pass12340; 12-term repair to449bcd3c55.
+
+**Primary artifacts:** [Five-front report](analysis/PASS12341_12345_GLOBAL_BLOCH_AND_PHYSICAL_CONTROLS.md), [global geometry producer](analysis/w33_pass12341_12345_geometry.py), [physical controls producer](analysis/w33_pass12341_12345_physics.py).
