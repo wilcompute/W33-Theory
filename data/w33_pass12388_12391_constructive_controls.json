@@ -1,0 +1,711 @@
+{
+  "overlap": {
+    "mass_parameter": 1,
+    "samples": [
+      {
+        "k": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Wilson_kernel_gap": 1.0,
+        "GW_residual": 0.0,
+        "overlap_smallest_singular": 0.0
+      },
+      {
+        "k": [
+          0.0,
+          0.0,
+          0.0,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 1.0,
+        "GW_residual": 0.0,
+        "overlap_smallest_singular": 2.0
+      },
+      {
+        "k": [
+          0.0,
+          0.0,
+          3.141592653589793,
+          0.0
+        ],
+        "Wilson_kernel_gap": 1.0,
+        "GW_residual": 0.0,
+        "overlap_smallest_singular": 2.0
+      },
+      {
+        "k": [
+          0.0,
+          0.0,
+          3.141592653589793,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 3.0,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9999999999999998
+      },
+      {
+        "k": [
+          0.0,
+          3.141592653589793,
+          0.0,
+          0.0
+        ],
+        "Wilson_kernel_gap": 1.0,
+        "GW_residual": 0.0,
+        "overlap_smallest_singular": 2.0
+      },
+      {
+        "k": [
+          0.0,
+          3.141592653589793,
+          0.0,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 3.0,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9999999999999998
+      },
+      {
+        "k": [
+          0.0,
+          3.141592653589793,
+          3.141592653589793,
+          0.0
+        ],
+        "Wilson_kernel_gap": 2.9999999999999982,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9999999999999996
+      },
+      {
+        "k": [
+          0.0,
+          3.141592653589793,
+          3.141592653589793,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 5.0,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 2.0
+      },
+      {
+        "k": [
+          3.141592653589793,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Wilson_kernel_gap": 1.0,
+        "GW_residual": 0.0,
+        "overlap_smallest_singular": 2.0
+      },
+      {
+        "k": [
+          3.141592653589793,
+          0.0,
+          0.0,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 3.0,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9999999999999998
+      },
+      {
+        "k": [
+          3.141592653589793,
+          0.0,
+          3.141592653589793,
+          0.0
+        ],
+        "Wilson_kernel_gap": 2.9999999999999982,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9999999999999993
+      },
+      {
+        "k": [
+          3.141592653589793,
+          0.0,
+          3.141592653589793,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 5.0,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9999999999999998
+      },
+      {
+        "k": [
+          3.141592653589793,
+          3.141592653589793,
+          0.0,
+          0.0
+        ],
+        "Wilson_kernel_gap": 3.0,
+        "GW_residual": 4.522125247866167e-16,
+        "overlap_smallest_singular": 2.0
+      },
+      {
+        "k": [
+          3.141592653589793,
+          3.141592653589793,
+          0.0,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 4.9999999999999964,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9999999999999996
+      },
+      {
+        "k": [
+          3.141592653589793,
+          3.141592653589793,
+          3.141592653589793,
+          0.0
+        ],
+        "Wilson_kernel_gap": 5.0,
+        "GW_residual": 4.445768331151997e-16,
+        "overlap_smallest_singular": 1.9999999999999998
+      },
+      {
+        "k": [
+          3.141592653589793,
+          3.141592653589793,
+          3.141592653589793,
+          3.141592653589793
+        ],
+        "Wilson_kernel_gap": 7.0,
+        "GW_residual": 1.1102230246251565e-16,
+        "overlap_smallest_singular": 2.0
+      },
+      {
+        "k": [
+          -0.5240578852450346,
+          -1.1012759941192631,
+          -0.8575530196034356,
+          -0.9242734081108805
+        ],
+        "Wilson_kernel_gap": 1.5605575962125264,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.5952208881040515
+      },
+      {
+        "k": [
+          -2.6192919323412784,
+          0.7988258065341842,
+          0.4538249213594039,
+          1.9949729926118813
+        ],
+        "Wilson_kernel_gap": 2.996297988068288,
+        "GW_residual": 1.7763568394002505e-15,
+        "overlap_smallest_singular": 1.946832039855464
+      },
+      {
+        "k": [
+          -0.7731288520950406,
+          -0.8238150438578868,
+          2.9613783718311755,
+          0.7606364819949811
+        ],
+        "Wilson_kernel_gap": 2.238062110243725,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.91466758452904
+      },
+      {
+        "k": [
+          1.470586657080629,
+          -2.058854693371201,
+          -0.11994781013316436,
+          -2.8243299343708905
+        ],
+        "Wilson_kernel_gap": 3.5979181136725527,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9618687893890352
+      },
+      {
+        "k": [
+          -1.0904088291113214,
+          -0.44945370282123154,
+          -2.4006338964088805,
+          1.6974398112942364
+        ],
+        "Wilson_kernel_gap": 2.944736864147569,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9232370565154204
+      },
+      {
+        "k": [
+          1.5916067353831655,
+          0.29566226457455835,
+          0.1440687660133162,
+          1.0002093414304625
+        ],
+        "Wilson_kernel_gap": 1.4487790842173203,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.6546210010063316
+      },
+      {
+        "k": [
+          2.9629574711040965,
+          0.3410414341830279,
+          2.981998951151107,
+          -2.9742795910857547
+        ],
+        "Wilson_kernel_gap": 5.0345541115045975,
+        "GW_residual": 1.3322676295501878e-15,
+        "overlap_smallest_singular": 1.9980578604455017
+      },
+      {
+        "k": [
+          -1.5617075532003706,
+          2.849387329774938,
+          1.12002026981951,
+          -2.8978175371594395
+        ],
+        "Wilson_kernel_gap": 4.6958768105828845,
+        "GW_residual": 4.574911618495444e-16,
+        "overlap_smallest_singular": 1.9772351542223057
+      },
+      {
+        "k": [
+          -2.1691042012963195,
+          0.36052382090311585,
+          0.034739865461206776,
+          0.31322207331710317
+        ],
+        "Wilson_kernel_gap": 1.1667865809107927,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.7776650978098214
+      },
+      {
+        "k": [
+          -2.059568425858606,
+          2.321132472105334,
+          -1.5258123575474345,
+          -1.4526364895766153
+        ],
+        "Wilson_kernel_gap": 4.382620028296074,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9545274052847985
+      },
+      {
+        "k": [
+          1.9975003143341592,
+          -1.3369620731617102,
+          -1.408109009203344,
+          -1.8786678213693468
+        ],
+        "Wilson_kernel_gap": 3.834158860348316,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9322221789488854
+      },
+      {
+        "k": [
+          2.557174740903543,
+          -2.050866734721552,
+          1.1193423915958158,
+          -1.3616124479641396
+        ],
+        "Wilson_kernel_gap": 4.02421311601982,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9531981335711146
+      },
+      {
+        "k": [
+          1.8102768619545486,
+          1.8593172770507467,
+          -0.6531336762612678,
+          2.4996758260172323
+        ],
+        "Wilson_kernel_gap": 3.8782513057669608,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9543883693109652
+      },
+      {
+        "k": [
+          -0.19280000215658122,
+          -1.298006704695347,
+          1.6219454742674957,
+          2.849492859290291
+        ],
+        "Wilson_kernel_gap": 3.1064972504711346,
+        "GW_residual": 2.220446049250313e-15,
+        "overlap_smallest_singular": 1.9430786223703171
+      },
+      {
+        "k": [
+          -0.2723545452472993,
+          -1.2811188427798927,
+          -2.4371137424217233,
+          -1.8591151109794661
+        ],
+        "Wilson_kernel_gap": 3.1867531845792305,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9379653253433877
+      },
+      {
+        "k": [
+          -1.1801538603467014,
+          3.1110589121137826,
+          -1.9300178517984707,
+          -0.0838160338859355
+        ],
+        "Wilson_kernel_gap": 3.2531356312083006,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.956596887330318
+      },
+      {
+        "k": [
+          1.6741756224302708,
+          -0.6796377481101152,
+          1.1566158858120241,
+          1.9903301098279167
+        ],
+        "Wilson_kernel_gap": 2.9132023585186673,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.8973173545987283
+      },
+      {
+        "k": [
+          3.1186195459885964,
+          1.2967344446362628,
+          2.4016183652746426,
+          0.44907733220914237
+        ],
+        "Wilson_kernel_gap": 3.780470075950845,
+        "GW_residual": 2.220446049250313e-15,
+        "overlap_smallest_singular": 1.9715283639001866
+      },
+      {
+        "k": [
+          1.10255725451196,
+          -1.1659763153486142,
+          1.7433457880117231,
+          -0.12299045998788127
+        ],
+        "Wilson_kernel_gap": 2.099174389320754,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.8086048498817484
+      },
+      {
+        "k": [
+          -0.8383534187515056,
+          2.4218776598902902,
+          2.545113592671222,
+          -1.7688124733931239
+        ],
+        "Wilson_kernel_gap": 4.374302160756738,
+        "GW_residual": 1.0397118778523691e-15,
+        "overlap_smallest_singular": 1.9692497823371684
+      },
+      {
+        "k": [
+          -1.9877071305588887,
+          -3.071571184545991,
+          0.8771692858019966,
+          -2.2806852133836237
+        ],
+        "Wilson_kernel_gap": 4.63667972240826,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9759401887267412
+      },
+      {
+        "k": [
+          2.2818974944454107,
+          0.16334384734665042,
+          -0.6224848929776794,
+          2.444839533567536
+        ],
+        "Wilson_kernel_gap": 2.8669045565440667,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9565500669353468
+      },
+      {
+        "k": [
+          1.633423574397745,
+          -2.7181648382712416,
+          0.8103063872899776,
+          -3.0576913634581753
+        ],
+        "Wilson_kernel_gap": 4.475252711742186,
+        "GW_residual": 1.7763568394002505e-15,
+        "overlap_smallest_singular": 1.9782319583042447
+      },
+      {
+        "k": [
+          -2.7294757073710807,
+          -2.5629047305896058,
+          0.8414659624059353,
+          -1.1100466981220984
+        ],
+        "Wilson_kernel_gap": 3.8839913208353996,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.9686620362585958
+      },
+      {
+        "k": [
+          0.35137175015102295,
+          -1.7437350656688035,
+          -3.0275556599080944,
+          -0.40121189431973825
+        ],
+        "Wilson_kernel_gap": 2.5636659699290716,
+        "GW_residual": 1.7763568394002505e-15,
+        "overlap_smallest_singular": 1.9491174535953004
+      },
+      {
+        "k": [
+          -1.678955112527585,
+          -0.14889438041488257,
+          -3.130348735818869,
+          2.37503341647922
+        ],
+        "Wilson_kernel_gap": 4.028832568900539,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9763318240762937
+      },
+      {
+        "k": [
+          1.2370157609320893,
+          0.5088228817216951,
+          2.679069052621041,
+          -1.9171524840390086
+        ],
+        "Wilson_kernel_gap": 3.3787213591975154,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.9482375691352252
+      },
+      {
+        "k": [
+          2.2066795950703586,
+          -0.673363243974809,
+          -0.9572602061801363,
+          0.04788532138107637
+        ],
+        "Wilson_kernel_gap": 1.7995833759360513,
+        "GW_residual": 4.440892098500626e-16,
+        "overlap_smallest_singular": 1.8372171617523398
+      },
+      {
+        "k": [
+          0.052818061545610195,
+          -1.6412286922762207,
+          2.862769967365254,
+          0.7738910935402155
+        ],
+        "Wilson_kernel_gap": 2.6334349712204417,
+        "GW_residual": 2.220446049250313e-15,
+        "overlap_smallest_singular": 1.9391756405341083
+      },
+      {
+        "k": [
+          -2.0601242657197627,
+          1.4404440550183875,
+          1.2699673821965352,
+          -0.38816353175867535
+        ],
+        "Wilson_kernel_gap": 2.7026113979737367,
+        "GW_residual": 8.881784197001252e-16,
+        "overlap_smallest_singular": 1.8887748316408257
+      }
+    ],
+    "scope": "Standard free4D Euclidean overlap symbol; tests GW relation and removes the15 naive corner doublers. No native-cover embedding, gauge interaction, chiral determinant measure or anomaly cancellation proof."
+  },
+  "preparation": {
+    "register": "8 qubits tensor1 qutrit",
+    "rank_one_reflections": [
+      {
+        "input_column": 0,
+        "denominator_real": 0.5669872981077806,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 1,
+        "denominator_real": 0.5669872981077806,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 2,
+        "denominator_real": 0.5669872981077806,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 3,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 4,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 5,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 6,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 7,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 8,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 9,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 10,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 11,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 12,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 13,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 14,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 15,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 16,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 17,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 18,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 19,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 20,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 21,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 22,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 23,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 24,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 25,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      },
+      {
+        "input_column": 26,
+        "denominator_real": 1.0,
+        "denominator_imag": 0.0
+      }
+    ],
+    "embedding_error": 5.2303685082256695e-16,
+    "unitarity_error": 9.992007221626409e-16,
+    "formula": "H_j=I-v_j v_j^dagger/(v_j^dagger x_j), v_j=x_j-target_j; apply sequentially",
+    "scope": "Explicit dense unitary preparation,27 many-body reflections. Not an efficient elementary-gate or fault-tolerant hardware circuit and not an E6 extension."
+  },
+  "GGSO_counterexample": {
+    "sample_pairs": 300,
+    "failed_reciprocity": 83,
+    "first_counterexample": {
+      "u": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "v": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "candidate_product_sign": 1,
+      "required_sign": -1
+    },
+    "scope": "Rejects naive bilinear GGSO extension even though original basis checks pass. Proper reduced-boundary cocycle and full spin sum remain unbuilt."
+  },
+  "global_stiffness_criterion": {
+    "claim": "For the specified repaired matched-metric model there exists c>0 with lambda_min_physical(k)>=c*dist(k,2piZ4)^2.",
+    "inputs": [
+      "Exact all-unitary kernel equality of the positive six-term repair",
+      "Positive105-dimensional optical block at identity",
+      "Uniform positive quadratic transverse acoustic symbol from positive definite G"
+    ],
+    "proof": [
+      "Near identity eliminate the optical block by an analytic Schur complement. Compactness of the direction sphere and its positive quadratic symbol give a uniform local quadratic lower bound.",
+      "Off any small identity neighborhood, the physical gauge quotient has constant dimension108; the exact no-kernel theorem and compactness give a positive minimum.",
+      "Combine both constants using bounded torus distance."
+    ],
+    "scope": "Conditional on the cited exact native module/Schur-symbol results and their uniform expansion; standard compactness application, not a new computed c. Gauge rank changes at identity; four global holonomies are excluded from the nonidentity statement."
+  }
+}

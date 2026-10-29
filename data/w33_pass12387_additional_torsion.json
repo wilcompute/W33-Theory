@@ -1,0 +1,457 @@
+{
+  "method": "Exact finite-field elimination followed by exact cyclotomic remainders",
+  "orders": [
+    {
+      "n": 99,
+      "characters_certified": 96059601,
+      "quadratic_triples": 970299,
+      "primes_and_primitive_roots": [
+        [
+          1000099,
+          96356
+        ],
+        [
+          1010791,
+          694166
+        ]
+      ],
+      "first_prime_survivors": 123,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          33,
+          66,
+          0
+        ],
+        [
+          0,
+          66,
+          33,
+          0
+        ],
+        [
+          33,
+          0,
+          66,
+          33
+        ],
+        [
+          33,
+          0,
+          66,
+          66
+        ],
+        [
+          33,
+          33,
+          33,
+          66
+        ],
+        [
+          33,
+          66,
+          0,
+          0
+        ],
+        [
+          66,
+          0,
+          33,
+          33
+        ],
+        [
+          66,
+          0,
+          33,
+          66
+        ],
+        [
+          66,
+          33,
+          0,
+          0
+        ],
+        [
+          66,
+          66,
+          66,
+          33
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.21853971481323242
+    },
+    {
+      "n": 117,
+      "characters_certified": 187388721,
+      "quadratic_triples": 1601613,
+      "primes_and_primitive_roots": [
+        [
+          1003627,
+          60818
+        ],
+        [
+          1013923,
+          955277
+        ]
+      ],
+      "first_prime_survivors": 195,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          39,
+          78,
+          0
+        ],
+        [
+          0,
+          78,
+          39,
+          0
+        ],
+        [
+          39,
+          0,
+          78,
+          39
+        ],
+        [
+          39,
+          0,
+          78,
+          78
+        ],
+        [
+          39,
+          39,
+          39,
+          78
+        ],
+        [
+          39,
+          78,
+          0,
+          0
+        ],
+        [
+          78,
+          0,
+          39,
+          39
+        ],
+        [
+          78,
+          0,
+          39,
+          78
+        ],
+        [
+          78,
+          39,
+          0,
+          0
+        ],
+        [
+          78,
+          78,
+          78,
+          39
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.30978894233703613
+    },
+    {
+      "n": 165,
+      "characters_certified": 741200625,
+      "quadratic_triples": 4492125,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          815704
+        ],
+        [
+          1010791,
+          884258
+        ]
+      ],
+      "first_prime_survivors": 755,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          55,
+          110,
+          0
+        ],
+        [
+          0,
+          110,
+          55,
+          0
+        ],
+        [
+          55,
+          0,
+          110,
+          55
+        ],
+        [
+          55,
+          0,
+          110,
+          110
+        ],
+        [
+          55,
+          55,
+          55,
+          110
+        ],
+        [
+          55,
+          110,
+          0,
+          0
+        ],
+        [
+          110,
+          0,
+          55,
+          55
+        ],
+        [
+          110,
+          0,
+          55,
+          110
+        ],
+        [
+          110,
+          55,
+          0,
+          0
+        ],
+        [
+          110,
+          110,
+          110,
+          55
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.8657572269439697
+    },
+    {
+      "n": 273,
+      "characters_certified": 5554571841,
+      "quadratic_triples": 20346417,
+      "primes_and_primitive_roots": [
+        [
+          1001911,
+          275247
+        ],
+        [
+          1012831,
+          85580
+        ]
+      ],
+      "first_prime_survivors": 5514,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          91,
+          182,
+          0
+        ],
+        [
+          0,
+          182,
+          91,
+          0
+        ],
+        [
+          91,
+          0,
+          182,
+          91
+        ],
+        [
+          91,
+          0,
+          182,
+          182
+        ],
+        [
+          91,
+          91,
+          91,
+          182
+        ],
+        [
+          91,
+          182,
+          0,
+          0
+        ],
+        [
+          182,
+          0,
+          91,
+          91
+        ],
+        [
+          182,
+          0,
+          91,
+          182
+        ],
+        [
+          182,
+          91,
+          0,
+          0
+        ],
+        [
+          182,
+          182,
+          182,
+          91
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 4.491395473480225
+    },
+    {
+      "n": 315,
+      "characters_certified": 9845600625,
+      "quadratic_triples": 31255875,
+      "primes_and_primitive_roots": [
+        [
+          1012411,
+          357830
+        ],
+        [
+          1022491,
+          750034
+        ]
+      ],
+      "first_prime_survivors": 9730,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          105,
+          210,
+          0
+        ],
+        [
+          0,
+          210,
+          105,
+          0
+        ],
+        [
+          105,
+          0,
+          210,
+          105
+        ],
+        [
+          105,
+          0,
+          210,
+          210
+        ],
+        [
+          105,
+          105,
+          105,
+          210
+        ],
+        [
+          105,
+          210,
+          0,
+          0
+        ],
+        [
+          210,
+          0,
+          105,
+          105
+        ],
+        [
+          210,
+          0,
+          105,
+          210
+        ],
+        [
+          210,
+          105,
+          0,
+          0
+        ],
+        [
+          210,
+          210,
+          210,
+          105
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 6.607874155044556
+    }
+  ],
+  "scope": "Complete declared grids; no claim of complete464-order classification",
+  "producer_sha256": "505bcd91f785d485fd0f90b73507340ba76119824bd7addf79f4f8cbf3a863d7"
+}
