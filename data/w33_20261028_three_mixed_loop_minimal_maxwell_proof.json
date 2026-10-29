@@ -1,0 +1,166 @@
+{
+  "schema": "w33.native-27.gauge.minimal-three-mixed-loop.v1",
+  "status": "SYMBOLIC_EXACT_AND_THREE_PRIME_LAURENT_CERTIFIED",
+  "generated_utc_date": "2026-10-28",
+  "prior_sources": [
+    "data/w33_20261027_native_bloch_face_module.json",
+    "data/w33_20261027_five_front_followthrough.json",
+    "data/PART_20261023_NATIVE_ZERO_HOLONOMY_FACE_COMPLETION.json",
+    "data/w33_pass11991_native_four_period_cover.json"
+  ],
+  "counts": {
+    "vertices": 27,
+    "edges": 135,
+    "selected_short_faces": 105,
+    "available_commutators": 6,
+    "smallest_extra_rows_for_generic_rank": 3,
+    "full_curl_rank": 108
+  },
+  "generic_ranks": [
+    {
+      "prime": 101,
+      "z_values": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "short_rank": 105,
+      "mixed3_rank": 108,
+      "three_individual_subset_rank_histogram": {
+        "107": 4,
+        "108": 16
+      }
+    },
+    {
+      "prime": 103,
+      "z_values": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "short_rank": 105,
+      "mixed3_rank": 108,
+      "three_individual_subset_rank_histogram": {
+        "107": 4,
+        "108": 16
+      }
+    },
+    {
+      "prime": 107,
+      "z_values": [
+        3,
+        4,
+        7,
+        11
+      ],
+      "short_rank": 105,
+      "mixed3_rank": 108,
+      "three_individual_subset_rank_histogram": {
+        "107": 4,
+        "108": 16
+      }
+    }
+  ],
+  "six_flux_four_form_family": "H(theta)=H0+theta*J with det=(4-theta^2)^3 and C(n)^T J C(n)=0",
+  "endpoint_theta": -2,
+  "endpoint_rank": 3,
+  "endpoint_positive_semidefinite": true,
+  "R": [
+    [
+      1,
+      0,
+      5,
+      -5,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      -1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      5,
+      -5,
+      0,
+      1
+    ]
+  ],
+  "K": [
+    [
+      "25/9",
+      "-5/3",
+      "-26/9"
+    ],
+    [
+      "-5/3",
+      "11/3",
+      "2"
+    ],
+    [
+      "-26/9",
+      "2",
+      "28/9"
+    ]
+  ],
+  "principal_minors": [
+    "25/9",
+    "200/27",
+    "16/27"
+  ],
+  "exact_matrix_identity": "H0-2J=R^T K R",
+  "exact_four_variable_cone_identity": "C(n)^T R^T K R C(n)=((n^T M n)M-(M n)(M n)^T)/27",
+  "compact_cosine_hessian": {
+    "unit_weight": "1/10000",
+    "charges": [
+      [
+        3,
+        -4,
+        -4
+      ],
+      [
+        3,
+        -4,
+        -3
+      ],
+      [
+        3,
+        4,
+        -3
+      ],
+      [
+        4,
+        -4,
+        -3
+      ],
+      [
+        4,
+        4,
+        -3
+      ],
+      [
+        4,
+        -3,
+        -4
+      ]
+    ],
+    "weights": [
+      "49937/630000",
+      "21313/378000",
+      "49241/1350000",
+      "1241/90000",
+      "1/56",
+      "142189/3150000"
+    ],
+    "identity": "K=(1/10000)I+sum_a w_a q_a q_a^T",
+    "unique_minima": "R*f=0 mod 2pi (three mixed angles); three original six-flux directions remain unconstrained"
+  },
+  "caveats": "A supplied compact loop model in four Euclidean deck directions. Rank completion and longwave cone exact, but microscopic coupling selection, nonzero momentum dispersion, Lorentz time, anomaly and gravity open."
+}
