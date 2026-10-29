@@ -73121,6 +73121,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "c14b73f6089a33ceb936767096e544ae6bbb9351cc129bcecfd363f7f00966e0",
+      "normalized_formula": "\"boundary_mass\":float(np.sum(abs(vec[np.any(abs(coords)=L,axis=1),0])^2))",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_five_fronts_followup.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 135,
+          "path": "analysis/w33_20261028_five_fronts_followup.py",
+          "raw": "\"boundary_mass\":float(np.sum(abs(vec[np.any(abs(coords)==L,axis=1),0])**2)),",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ef3d4e746087b8a8d10d0cf0cb2ecf55920873763e91fc493f00faf4ec94b61e",
+      "structural_formula": "\"boundary_mass\":float(np.sum(abs(vec[np.any(abs(coords)=L,axis=#),#])^#))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "06193e3e92f5ffa40dbeadea167408384aea9424f6cbe9355c2e4e1950cba318",
       "normalized_formula": "\"boundarycentralchargef=c=24(gravitydictionary);V^(1/4)~M_GUT=M_Ple^-Phi_6\"",
       "numeric_literals": [
@@ -405908,6 +405937,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "14e534720f806e36b90320129fee65705c3660096aac66e8c18263d79beffa6f",
+      "normalized_formula": "1.^Quantumselectionoftheta:^computetheactualsix-loopmatter-inducedHessiananditsparitytransformationincludingradiativecorrections;testwhetheritchoosestheinteriortheta=0oranendpointratherthanfittingeither",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_five_fronts_followup.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 98,
+          "path": "analysis/2026-10-28_five_fronts_followup.md",
+          "raw": "1. **Quantum selection of theta:** compute the actual six-loop matter-induced Hessian and its parity transformation including radiative corrections; test whether it chooses the interior theta=0 or an endpoint rather than fitting either.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "30c2f667f714d00bd5f76e86b8734faf93c14d96504b87eee164c8dccdf6d782",
+      "structural_formula": "#.^Quantumselectionoftheta:^computetheactualsix-loopmatter-inducedHessiananditsparitytransformationincludingradiativecorrections;testwhetheritchoosestheinteriortheta=#oranendpointratherthanfittingeither"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3b28c605c7259c0f47454dd9df139e1d85ff16507126dc12f43e746cd0f9ee6c",
       "normalized_formula": "1.^Radiusfrontier:^localoctahedralconstraintsarenotenough;globaldual-characterclosureisthemissingingredient.Thetheoremremains`134<=rho(K)<=173",
       "numeric_literals": [
@@ -457639,6 +457696,34 @@
       },
       "structural_family_id": "7454813bdeb46bb1e7adf36afcb399d6c9375ccdd53008de05c0f506314443c2",
       "structural_formula": "#.^Parallelclasstest:^Blockoneparallelclass(#edges)atatime.Verifythattopologicalprotection(W(#,#)CSScodedistanced=#)preventsinformationloss"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4350bce7d106494305735e2422377f011d26d95cbf4be5d2fea5abdea01fac26",
+      "normalized_formula": "4.^Parity/domain-wallphysics:^deriveananomaly-compatiblereflection/orbifoldboundarytreatmentanddeterminewhethertheta=\u00b12sectorsmustappearasseparateorientationdomains;countphysicalmodesonlyafterselectingaLorentziantime",
+      "numeric_literals": [
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_five_fronts_followup.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 101,
+          "path": "analysis/2026-10-28_five_fronts_followup.md",
+          "raw": "4. **Parity/domain-wall physics:** derive an anomaly-compatible reflection/orbifold boundary treatment and determine whether theta=\u00b12 sectors must appear as separate orientation domains; count physical modes only after selecting a Lorentzian time.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0c6844f177def2127e16fea6ec97cdce651e94a839057e21f646cbbedec234d0",
+      "structural_formula": "#.^Parity/domain-wallphysics:^deriveananomaly-compatiblereflection/orbifoldboundarytreatmentanddeterminewhethertheta=\u00b1#sectorsmustappearasseparateorientationdomains;countphysicalmodesonlyafterselectingaLorentziantime"
     },
     {
       "file_count": 1,
@@ -714803,6 +714888,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0af4b1846d677c0cea922d49d2bd7e95ee2e19ec7d8bd63503f5f3b71706f647",
+      "normalized_formula": "M_even=[100-6;012-6;-6-612],det=648",
+      "numeric_literals": [
+        "-6",
+        "-612",
+        "012",
+        "100",
+        "648"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_five_fronts_followup.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 74,
+          "path": "analysis/2026-10-28_five_fronts_followup.md",
+          "raw": "M_even = [10 0 -6; 0 12 -6; -6 -6 12], det=648.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9e002ec219f7b912025637fb3e9f4c3f72f00644c821fb8f9c22dc208e86763a",
+      "structural_formula": "M_even=[##;##;##],det=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3cbfbdbda1bb5e5097752f78b25384c4576414d9b6e8ab1405cd01f4573698f2",
       "normalized_formula": "M_ext=np.array([[2,2,1,2,1,2],[0,2,2,0,2,1],list(ext_row)],dtype=int)",
       "numeric_literals": [
@@ -812616,6 +812732,47 @@
     },
     {
       "file_count": 1,
+      "formula_id": "15005844e82f5fb7b8fa213d04d4501a3d6e4c909b6e608f526c1e6a81b1a54c",
+      "normalized_formula": "Sparsefinite-cutoffexactdiagonalizationiscarriedoutforboxes|m_i|<=L,L=3,4,5,andtwosuppliedcouplingsg=.1,.2.Thestate-spacedimensionsare343,729,1331.Atg=.2thegroundenergiesareapproximately.249208876879,.248532038473and.248532038449;thepositivefinite-cutoffgapsareapproximately.439782929,.440181637and.439956543.Ground-statenumericalRitzresidualsstaybelow1e-10.Resultsatg=.1andboundaryprobabilitiesareintheproducer/certificate",
+      "numeric_literals": [
+        ".1",
+        ".2",
+        ".248532038473",
+        ".440181637",
+        "10",
+        "1331",
+        "248532038449",
+        "249208876879",
+        "3",
+        "4",
+        "43",
+        "439782929",
+        "439956543",
+        "5",
+        "729"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_five_fronts_followup.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 65,
+          "path": "analysis/2026-10-28_five_fronts_followup.md",
+          "raw": "Sparse finite-cutoff exact diagonalization is carried out for boxes |m_i|<=L, L=3,4,5, and two supplied couplings g=.1,.2. The state-space dimensions are 343, 729, 1331. At g=.2 the ground energies are approximately .249208876879, .248532038473 and .248532038449; the positive finite-cutoff gaps are approximately .439782929, .440181637 and .439956543. Ground-state numerical Ritz residuals stay below 1e-10. Results at g=.1 and boundary probabilities are in the producer/certificate.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "a8acd4d4b0e952ed2b66db8197ccffc22f6db42c50c77f7db82563b0aa881176",
+      "structural_formula": "Sparsefinite-cutoffexactdiagonalizationiscarriedoutforboxes|m_i|<=L,L=#,#,#,andtwosuppliedcouplingsg=#,#.Thestate-spacedimensionsare3#,#,#.Atg=#thegroundenergiesareapproximately.#,#and.#;thepositivefinite-cutoffgapsareapproximately.#,#and.#.Ground-statenumericalRitzresidualsstaybelow1e-#.Resultsatg=#andboundaryprobabilitiesareintheproducer/certificate"
+    },
+    {
+      "file_count": 1,
       "formula_id": "156df639abf2ced71ed6ec61728926aec84c38975954ab0425c75dda51a4a31a",
       "normalized_formula": "Specialcasen=4:3^4-1=80=Phi_1*Phi_2*Phi_4=lambda*mu*Phi_4=2v=m_W",
       "numeric_literals": [
@@ -838200,6 +838357,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "2503c85a5ccec9b23d0c2a93e40d0e8e88399e1d7e9e64f171d119889ee34f4a",
+      "normalized_formula": "ThedropatL=4isaphysical^cutoff-selectionwarning^:high-chargeharmonicsqwithcomponentsofsize4cannotmovebetweenmanystatesinsmallerfluxboxes.Thereforeconvergencecannotbeinferredfromlowcutoffs.Theupper-boundvariationalmonotonicityisexactinprinciple;numericalgapsare^not^rigorousinfinite-fluxorinfinite-spatial-volumeresults.Thisisasuppliedthree-loopquantumtruncation,notthefullgauge-fieldHilbertspace.Standardframework:KogutandSusskind(PhysRevD11,395,1975);KaplanandStryker(PhysRevD102,094515,2020)",
+      "numeric_literals": [
+        "02",
+        "094515",
+        "1",
+        "1975",
+        "2020",
+        "395",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_five_fronts_followup.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 67,
+          "path": "analysis/2026-10-28_five_fronts_followup.md",
+          "raw": "The drop at L=4 is a physical **cutoff-selection warning**: high-charge harmonics q with components of size4 cannot move between many states in smaller flux boxes. Therefore convergence cannot be inferred from low cutoffs. The upper-bound variational monotonicity is exact in principle; numerical gaps are **not** rigorous infinite-flux or infinite-spatial-volume results. This is a supplied three-loop quantum truncation, not the full gauge-field Hilbert space. Standard framework: Kogut and Susskind (Phys Rev D 11, 395, 1975); Kaplan and Stryker (Phys Rev D 102, 094515, 2020).",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "ddf6b61e654852b043204260fa477eba32fff62025f7bdd408d7b650025a0f01",
+      "structural_formula": "ThedropatL=#isaphysical^cutoff-selectionwarning^:high-chargeharmonicsqwithcomponentsofsize4cannotmovebetweenmanystatesinsmallerfluxboxes.Thereforeconvergencecannotbeinferredfromlowcutoffs.Theupper-boundvariationalmonotonicityisexactinprinciple;numericalgapsare^not^rigorousinfinite-fluxorinfinite-spatial-volumeresults.Thisisasuppliedthree-loopquantumtruncation,notthefullgauge-fieldHilbertspace.Standardframework:KogutandSusskind(PhysRevD1#,#,#);KaplanandStryker(PhysRevD1#,#,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "18618b30a9ea4a60611c8401c7e8296b907896a30efacf8f3406a9e4e976155b",
       "normalized_formula": "Thedurablelessonsareunusuallycoherent.ThePerplexityarithmeticwasmostlycorrectwhileseveralphysicsframingswerenot;thetargetedforced-arithmeticguardisusefulwhilethebroadguardwastoonoisy;apriorBT820flagwasretractedaftertheactualproducerwasread;alpha(W(3,3))isexactly7andalpha(W(3,5))exactly18;Talliniimprovestheq=9upperboundfromtherepo's80to73;and,mostimportantlyforthispacket,therepo'sq=9lowerbound51hadnostoredwitness",
       "numeric_literals": [
@@ -846233,6 +846423,34 @@
       },
       "structural_family_id": "90b43a4a086f54a1dcbe24a0fc7fd5503ee46fe6a9d8567f1dc4f742502d3e23",
       "structural_formula": "Thepreviousmoveidentifiedthecosmological-constantsectorasSO(#)(dim1#="
+    },
+    {
+      "file_count": 1,
+      "formula_id": "eb56b85909982d3cadc6459dde4246405b90c20c19d2196641806d8d3c739b95",
+      "normalized_formula": "Thepreviouspacketprovedaone-parametermagneticfamily`H(theta)=H0+thetaJ`,withleadingcommonacousticconeandpositivedefinitemetriconlyat`-2<theta<2`.Therank-threecompressedactionis`H(-2)",
+      "numeric_literals": [
+        "-2",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_five_fronts_followup.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-28_five_fronts_followup.md",
+          "raw": "The previous packet proved a one-parameter magnetic family `H(theta)=H0+theta J`, with leading common acoustic cone and positive definite metric only at `-2<theta<2`. The rank-three compressed action is `H(-2)`.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "149fc6cef4cbcf3049d22f1ee7bdaaad55bf191934bfb237956741df8e410dc5",
+      "structural_formula": "Thepreviouspacketprovedaone-parametermagneticfamily`H(theta)=H0+thetaJ`,withleadingcommonacousticconeandpositivedefinitemetriconlyat`#<theta<#`.Therank-threecompressedactionis`H(#)"
     },
     {
       "file_count": 1,
@@ -854868,6 +855086,33 @@
       },
       "structural_family_id": "e9254c91f59caaef4a1f7e58c1961f92f03511d8ae0a08b83ae1ed0186e63784",
       "structural_formula": "Thisconsistsof^sixconjugatepairsplusasinglecenter^.Intheexactadaptedeight-dimensionalmatrixbasis,\\(r_i=E_{#i}\\),\\(v_i=E_{i7}\\),\\(z=E_{#}\\),\\(i=#,\\ldots,#\\)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "288e6ddb328d5a02179e90ea502ece974d87ff2e6f37f70d6b46a1f1379d8cc7",
+      "normalized_formula": "Thisdemonstratesthatgenericsymmetricpositiveperturbationsdonotpreservetheoriginalcone.Amicroscopicsymmetry,Wardidentityorrenormalizationmechanismwouldhavetoprotect/recoverit.Nofermiondeterminantselectingtheta=-2isderived",
+      "numeric_literals": [
+        "-2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_five_fronts_followup.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 37,
+          "path": "analysis/2026-10-28_five_fronts_followup.md",
+          "raw": "This demonstrates that generic symmetric positive perturbations do not preserve the original cone. A microscopic symmetry, Ward identity or renormalization mechanism would have to protect/recover it. No fermion determinant selecting theta=-2 is derived.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "003d154fed0f2881b9b202d8876877519381ec2d4573d0c28a189f67ba6799ee",
+      "structural_formula": "Thisdemonstratesthatgenericsymmetricpositiveperturbationsdonotpreservetheoriginalcone.Amicroscopicsymmetry,Wardidentityorrenormalizationmechanismwouldhavetoprotect/recoverit.Nofermiondeterminantselectingtheta=#isderived"
     },
     {
       "file_count": 1,
@@ -1900299,9 +1900544,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-28T22:07:10-04:00",
+  "frozen_at": "2026-10-28T22:25:14-04:00",
   "pass": 398,
-  "repository_head": "9baf04f1752fec07d95f6d6fa0dedf44a116f9e5",
+  "repository_head": "686188ce06cb8580179eda56cc917d22965d53d0",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1920780,6 +1921025,14 @@
       "exact_member_count": 1,
       "structural_family_id": "931127308543453f192d70f3b095d3a47423d8b8f9af61e723b9c68137f7b561",
       "structural_formula": "\"boundary\":(\"alphaisEXHAUSTIVEonlyatq=#(n=#),whereitis7withboth\""
+    },
+    {
+      "exact_formula_ids": [
+        "c14b73f6089a33ceb936767096e544ae6bbb9351cc129bcecfd363f7f00966e0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ef3d4e746087b8a8d10d0cf0cb2ecf55920873763e91fc493f00faf4ec94b61e",
+      "structural_formula": "\"boundary_mass\":float(np.sum(abs(vec[np.any(abs(coords)=L,axis=#),#])^#))"
     },
     {
       "exact_formula_ids": [
@@ -1964132,6 +1964385,14 @@
     },
     {
       "exact_formula_ids": [
+        "4350bce7d106494305735e2422377f011d26d95cbf4be5d2fea5abdea01fac26"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0c6844f177def2127e16fea6ec97cdce651e94a839057e21f646cbbedec234d0",
+      "structural_formula": "#.^Parity/domain-wallphysics:^deriveananomaly-compatiblereflection/orbifoldboundarytreatmentanddeterminewhethertheta=\u00b1#sectorsmustappearasseparateorientationdomains;countphysicalmodesonlyafterselectingaLorentziantime"
+    },
+    {
+      "exact_formula_ids": [
         "07a28df6eabbe47a04502e9b7f2b23bac25e1f825bc501edbb8264f95327f7c9"
       ],
       "exact_member_count": 1,
@@ -1964177,6 +1964438,14 @@
       "exact_member_count": 1,
       "structural_family_id": "062c0e5f42337d878279e5be026f167334f949cf765814070a2011bebbbd334c",
       "structural_formula": "#.^Quantifiedrail-phasefragility.^ForamaximallymixedWalsh-encodedqutritand4differentialopticalrailphases(\\phi_j\\),auxiliaryleakageis(\\bigl(#-|\\sum_je^{i\\phi_j}/#|^#\\bigr)/#\\).IndependentiidGaussianphasenoiseofstandarddeviation(\\sigma\\)obeystheexactexpectation\\(\\mathbbE[p_{aux}]=(#-e^{-\\sigma^#})/#\\).For(\\sigma=#\\)radtheexpectedleakageisabout^#^.Uniformphasedoesnotproduceauxiliaryleakage;differentialattenuationcan.Thisisnotacompletequantum-processfidelityorworst-caseerrorguarantee"
+    },
+    {
+      "exact_formula_ids": [
+        "14e534720f806e36b90320129fee65705c3660096aac66e8c18263d79beffa6f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "30c2f667f714d00bd5f76e86b8734faf93c14d96504b87eee164c8dccdf6d782",
+      "structural_formula": "#.^Quantumselectionoftheta:^computetheactualsix-loopmatter-inducedHessiananditsparitytransformationincludingradiativecorrections;testwhetheritchoosestheinteriortheta=#oranendpointratherthanfittingeither"
     },
     {
       "exact_formula_ids": [
@@ -2092810,6 +2093079,14 @@
     },
     {
       "exact_formula_ids": [
+        "0af4b1846d677c0cea922d49d2bd7e95ee2e19ec7d8bd63503f5f3b71706f647"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9e002ec219f7b912025637fb3e9f4c3f72f00644c821fb8f9c22dc208e86763a",
+      "structural_formula": "M_even=[##;##;##],det=#"
+    },
+    {
+      "exact_formula_ids": [
         "3cbfbdbda1bb5e5097752f78b25384c4576414d9b6e8ab1405cd01f4573698f2"
       ],
       "exact_member_count": 1,
@@ -2119287,6 +2119564,14 @@
     },
     {
       "exact_formula_ids": [
+        "15005844e82f5fb7b8fa213d04d4501a3d6e4c909b6e608f526c1e6a81b1a54c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a8acd4d4b0e952ed2b66db8197ccffc22f6db42c50c77f7db82563b0aa881176",
+      "structural_formula": "Sparsefinite-cutoffexactdiagonalizationiscarriedoutforboxes|m_i|<=L,L=#,#,#,andtwosuppliedcouplingsg=#,#.Thestate-spacedimensionsare3#,#,#.Atg=#thegroundenergiesareapproximately.#,#and.#;thepositivefinite-cutoffgapsareapproximately.#,#and.#.Ground-statenumericalRitzresidualsstaybelow1e-#.Resultsatg=#andboundaryprobabilitiesareintheproducer/certificate"
+    },
+    {
+      "exact_formula_ids": [
         "156df639abf2ced71ed6ec61728926aec84c38975954ab0425c75dda51a4a31a"
       ],
       "exact_member_count": 1,
@@ -2126230,6 +2126515,14 @@
     },
     {
       "exact_formula_ids": [
+        "2503c85a5ccec9b23d0c2a93e40d0e8e88399e1d7e9e64f171d119889ee34f4a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ddf6b61e654852b043204260fa477eba32fff62025f7bdd408d7b650025a0f01",
+      "structural_formula": "ThedropatL=#isaphysical^cutoff-selectionwarning^:high-chargeharmonicsqwithcomponentsofsize4cannotmovebetweenmanystatesinsmallerfluxboxes.Thereforeconvergencecannotbeinferredfromlowcutoffs.Theupper-boundvariationalmonotonicityisexactinprinciple;numericalgapsare^not^rigorousinfinite-fluxorinfinite-spatial-volumeresults.Thisisasuppliedthree-loopquantumtruncation,notthefullgauge-fieldHilbertspace.Standardframework:KogutandSusskind(PhysRevD1#,#,#);KaplanandStryker(PhysRevD1#,#,#)"
+    },
+    {
+      "exact_formula_ids": [
         "18618b30a9ea4a60611c8401c7e8296b907896a30efacf8f3406a9e4e976155b"
       ],
       "exact_member_count": 1,
@@ -2128371,6 +2128664,14 @@
       "exact_member_count": 1,
       "structural_family_id": "90b43a4a086f54a1dcbe24a0fc7fd5503ee46fe6a9d8567f1dc4f742502d3e23",
       "structural_formula": "Thepreviousmoveidentifiedthecosmological-constantsectorasSO(#)(dim1#="
+    },
+    {
+      "exact_formula_ids": [
+        "eb56b85909982d3cadc6459dde4246405b90c20c19d2196641806d8d3c739b95"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "149fc6cef4cbcf3049d22f1ee7bdaaad55bf191934bfb237956741df8e410dc5",
+      "structural_formula": "Thepreviouspacketprovedaone-parametermagneticfamily`H(theta)=H0+thetaJ`,withleadingcommonacousticconeandpositivedefinitemetriconlyat`#<theta<#`.Therank-threecompressedactionis`H(#)"
     },
     {
       "exact_formula_ids": [
@@ -2130694,6 +2130995,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e9254c91f59caaef4a1f7e58c1961f92f03511d8ae0a08b83ae1ed0186e63784",
       "structural_formula": "Thisconsistsof^sixconjugatepairsplusasinglecenter^.Intheexactadaptedeight-dimensionalmatrixbasis,\\(r_i=E_{#i}\\),\\(v_i=E_{i7}\\),\\(z=E_{#}\\),\\(i=#,\\ldots,#\\)"
+    },
+    {
+      "exact_formula_ids": [
+        "288e6ddb328d5a02179e90ea502ece974d87ff2e6f37f70d6b46a1f1379d8cc7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "003d154fed0f2881b9b202d8876877519381ec2d4573d0c28a189f67ba6799ee",
+      "structural_formula": "Thisdemonstratesthatgenericsymmetricpositiveperturbationsdonotpreservetheoriginalcone.Amicroscopicsymmetry,Wardidentityorrenormalizationmechanismwouldhavetoprotect/recoverit.Nofermiondeterminantselectingtheta=#isderived"
     },
     {
       "exact_formula_ids": [
@@ -2408185,20 +2408494,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92142013,
-    "exact_formula_families": 64976,
-    "files_scanned": 12675,
-    "formula_occurrences": 71111,
+    "bytes_scanned": 92161320,
+    "exact_formula_families": 64984,
+    "files_scanned": 12677,
+    "formula_occurrences": 71119,
     "status_occurrences": {
-      "certified_or_theorem": 5323,
+      "certified_or_theorem": 5326,
       "killed_or_retracted": 1930,
       "open_or_conditional": 2399,
       "preregistered": 36,
       "retrospective_fit": 5414,
-      "unclassified": 56009
+      "unclassified": 56014
     },
-    "structural_families": 63266
+    "structural_families": 63274
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "f819c7386f17007135ca1a35e2733bdd32e0bd8a1b64b8a0c81d9b9f47ec01f0"
+  "universe_sha256": "f1e0cd2df0002c7df6bf63793f8df8d15b0b929da0925b3665546d722ee4d487"
 }
