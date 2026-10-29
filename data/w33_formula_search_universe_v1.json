@@ -441366,6 +441366,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "7e61cc0b09540f25bb8ddd8767af1345858429d752e94cfd2a8db0441955f5d3",
+      "normalized_formula": "2Q(u^e-1)=0(modp)`,usingsigned64-bitarithmeticwithanexplicit",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12341_12345_FINITE_COVERS_AND_SOFT_MODES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 35,
+          "path": "analysis/PASS12341_12345_FINITE_COVERS_AND_SOFT_MODES.md",
+          "raw": "`2Q(u^e-1) = 0 (mod p)`, using signed 64-bit arithmetic with an explicit",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "9438ce27aeb1b47d36db87c9ea665994668c8db68c9438517fff4dee0bbbcbb9",
+      "structural_formula": "#Q(u^e-#)=#(modp)`,usingsigned6#-bitarithmeticwithanexplicit"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a88990e0df4ada0d3a22f4d2e2d062d79b184941c1f85b52fa1a684da3686176",
       "normalized_formula": "2Re(u-1)^k,and(u-1)^k=e^{ikpij/e}(2i)^ksin^k(pij/e)ispurely",
       "numeric_literals": [
@@ -808490,6 +808520,33 @@
       },
       "structural_family_id": "cb41c67a67f05b0adfe61e6bb5e51621ad7ce6e688550c943a9aec54dca448d1",
       "structural_formula": "Sincead_x^#=#forallx,wehavearestrictedrepresentation"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "419a550c0d28b9df555c98aa075080ab4ae9bb5830be193451a11f0928ff05aa",
+      "normalized_formula": "Sinceallrowsareclosedliftedloops,`A(k)D(k)=0`.Thefinite-range",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12341_12345_FINITE_COVERS_AND_SOFT_MODES.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "analysis/PASS12341_12345_FINITE_COVERS_AND_SOFT_MODES.md",
+          "raw": "Since all rows are closed lifted loops, `A(k)D(k)=0`. The finite-range",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "15f4bdc7321137b53ad11828b29bbf622565fbb3dae2e57fd08b274c0230ca02",
+      "structural_formula": "Sinceallrowsareclosedliftedloops,`A(k)D(k)=#`.Thefinite-range"
     },
     {
       "file_count": 1,
@@ -1342018,6 +1342075,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4a20299234316b80fda9dfd0ca501dc967163de73161475a0f24ac7efe2df5b5",
+      "normalized_formula": "gauge_lipschitz_squared=int(np.square(np.abs(voltage).sum(axis=1)).sum())",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12341_12345_torsion_census.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 99,
+          "path": "analysis/w33_pass12341_12345_torsion_census.py",
+          "raw": "gauge_lipschitz_squared = int(np.square(np.abs(voltage).sum(axis=1)).sum())",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e33a6c1c3ba804aa428b98b299659c024cc8e0c76b6148cd5e195b54c38ba548",
+      "structural_formula": "gauge_lipschitz_squared=int(np.square(np.abs(voltage).sum(axis=#)).sum())"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a8a47f01273fcfe18e3be2a00e16ea1ccf95f7757fd9ec762f754a91aee56ea9",
       "normalized_formula": "gauge_mass_Gram_rank=14,U1_plus_SU4_Lie_dimension=24,kernel_dimension=10",
       "numeric_literals": [
@@ -1683095,6 +1683179,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5225ae528b7af008693e7f4b49868011f03fa6a1f6476f11c94383ec24fc24c2",
+      "normalized_formula": "radicand=256*gauge_lipschitz_squared*sigma_inverse_squared",
+      "numeric_literals": [
+        "256"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12341_12345_torsion_census.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 123,
+          "path": "analysis/w33_pass12341_12345_torsion_census.py",
+          "raw": "radicand = 256*gauge_lipschitz_squared*sigma_inverse_squared",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ca5ae13d2f158ce7003e364958faf7fdcff891baf58b7c99eda579a4ebfb0cee",
+      "structural_formula": "radicand=#*gauge_lipschitz_squared*sigma_inverse_squared"
+    },
+    {
+      "file_count": 1,
       "formula_id": "517658f431a7c45b9444103b99e0639354af93649bb7ed7668ea4dc93f3370a4",
       "normalized_formula": "radii.append({'competitor':b['name'],'uniform_margin':margin,'safe_radius':margin/denifmargin>0else0.0})",
       "numeric_literals": [
@@ -1902581,9 +1902692,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-28T22:54:11-04:00",
+  "frozen_at": "2026-10-28T23:00:44-04:00",
   "pass": 398,
-  "repository_head": "96d16a6b073f15bdc1748b39cae8844f3d61040f",
+  "repository_head": "b020e5aab7ba800d037a766489f4b312e5afa106",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1986468,6 +1986579,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cecd6f156bd90517c34005f2d5a12400194afed2e2b47af7968ab87f195249e3",
       "structural_formula": "#Puregauge:G_i=exp(thetaf_iad_X),U_ij=G_i^#G_j"
+    },
+    {
+      "exact_formula_ids": [
+        "7e61cc0b09540f25bb8ddd8767af1345858429d752e94cfd2a8db0441955f5d3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9438ce27aeb1b47d36db87c9ea665994668c8db68c9438517fff4dee0bbbcbb9",
+      "structural_formula": "#Q(u^e-#)=#(modp)`,usingsigned6#-bitarithmeticwithanexplicit"
     },
     {
       "exact_formula_ids": [
@@ -2120390,6 +2120509,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cb41c67a67f05b0adfe61e6bb5e51621ad7ce6e688550c943a9aec54dca448d1",
       "structural_formula": "Sincead_x^#=#forallx,wehavearestrictedrepresentation"
+    },
+    {
+      "exact_formula_ids": [
+        "419a550c0d28b9df555c98aa075080ab4ae9bb5830be193451a11f0928ff05aa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "15f4bdc7321137b53ad11828b29bbf622565fbb3dae2e57fd08b274c0230ca02",
+      "structural_formula": "Sinceallrowsareclosedliftedloops,`A(k)D(k)=#`.Thefinite-range"
     },
     {
       "exact_formula_ids": [
@@ -2262309,6 +2262436,14 @@
     },
     {
       "exact_formula_ids": [
+        "4a20299234316b80fda9dfd0ca501dc967163de73161475a0f24ac7efe2df5b5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e33a6c1c3ba804aa428b98b299659c024cc8e0c76b6148cd5e195b54c38ba548",
+      "structural_formula": "gauge_lipschitz_squared=int(np.square(np.abs(voltage).sum(axis=#)).sum())"
+    },
+    {
+      "exact_formula_ids": [
         "a8a47f01273fcfe18e3be2a00e16ea1ccf95f7757fd9ec762f754a91aee56ea9"
       ],
       "exact_member_count": 1,
@@ -2352754,6 +2352889,14 @@
     },
     {
       "exact_formula_ids": [
+        "5225ae528b7af008693e7f4b49868011f03fa6a1f6476f11c94383ec24fc24c2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ca5ae13d2f158ce7003e364958faf7fdcff891baf58b7c99eda579a4ebfb0cee",
+      "structural_formula": "radicand=#*gauge_lipschitz_squared*sigma_inverse_squared"
+    },
+    {
+      "exact_formula_ids": [
         "517658f431a7c45b9444103b99e0639354af93649bb7ed7668ea4dc93f3370a4"
       ],
       "exact_member_count": 1,
@@ -2411091,20 +2411234,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92262077,
-    "exact_formula_families": 65054,
-    "files_scanned": 12686,
-    "formula_occurrences": 71189,
+    "bytes_scanned": 92275166,
+    "exact_formula_families": 65058,
+    "files_scanned": 12688,
+    "formula_occurrences": 71193,
     "status_occurrences": {
       "certified_or_theorem": 5333,
-      "killed_or_retracted": 1931,
+      "killed_or_retracted": 1932,
       "open_or_conditional": 2402,
       "preregistered": 36,
       "retrospective_fit": 5418,
-      "unclassified": 56069
+      "unclassified": 56072
     },
-    "structural_families": 63344
+    "structural_families": 63348
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "19d5ebc3cc42ee8e67b39c55fc135b24369a61367357de1c472c08cb55f5875d"
+  "universe_sha256": "43d942a9ba5bf99c8db3caaf013d23d39726a77e7fd539992b6a62ac1b42afd5"
 }
