@@ -841,3 +841,12 @@ The supplied two-particle Hubbard model on the43-vertex six-loop patch produces 
 **Result:** no positive-dimensional unitary torus coset on the native Q locus; Mann's theorem and support minors restrict exceptional torsion to464 necessary orders, at most480480, with prime divisors at most13. Removing larger prime factors from a cover period preserves its exceptional set. Six exact witnesses obstruct every two-coordinate inactive repair plane; six terms are minimal only for exactly two channels sharing coordinate translations. This is not unrestricted optimality or a complete torsion census.
 
 **Artifacts:** [report](analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md), [producer](analysis/w33_pass12346_torsion_repair_certificate.py). Earlier six-term construction:67cbaba; overlapping (0,2) witness independently in the Conwell report.
+
+
+## Passes12377–12381: full-paper reading, scoped native continuations
+
+**Results:** Entire211-page pinned PDF text read (hash and per-page ledger stored); three stale general-CM quantifiers corrected using prior Pass12046 (CM counterexample ratio0.5134475818984771), rebuilt PDF215 pages. Exact integer cyclotomic screening of2,093,416 characters on13 grids finds only identity and the known ten order-three roots where applicable; full464-order census remains open. In the specified unweighted135-link model, the epsilon=.001 six-term repair lifts the supplied order-three zero to0.0011837233362156094. Free432-site static determinant verifies nonuniversal charge-response ratios and real-space finite differences; no selected physical couplings. Native H27 regular27 module maps into30 Hamming frames with an explicit maximal-rank9 quotient intertwiner, kernel18; coordinate permutations kill the central character. Known10D SO16xSO16 character block passes exact S/T tests; no new4D partition function.
+
+**Boundaries:** Complete text reading is not complete visual auditing or semantic review of every historical commit. Torsion completeness, chiral interacting matter, physical dispersion selection, faithful quantum H27 lifting and a viable4D string vacuum remain open. Weber CM counterexample is prior12046; 30-code geometry and finite-repair theorems are reused.
+
+**Artifacts:** [report](analysis/PASS12377_12381_COMPLETE_READING_AND_FIVE_FRONTS.md), [producer](analysis/w33_pass12377_12381_continuation.py), [scoped result index](analysis/PASS12377_12381_RESULTS_INDEX.md), [reading ledger](data/w33_pass12377_paper_reading_ledger.json).

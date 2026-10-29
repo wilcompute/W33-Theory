@@ -1,0 +1,16 @@
+{
+  "reservation": "d4d4cf43b39cc424a4c28c505435230c58df0870",
+  "input_head": "80c85d680cd38edddb8e4d12dabebcdbadfdc9ec",
+  "workflow": "GitKraken and Continuity tools unavailable; authorized GitHub connector fallback with expected-head lease. No raw git commands. Manual decision record.",
+  "decisions": [
+    "Pinned and finished the 211-page PDF text, retaining page hashes and prior-reading equality checks.",
+    "Cite Pass12046 for the general-CM counterexample; correct three stale wording sites instead of claiming discovery.",
+    "Use unit short-face and mixed-loop couplings and identity electric metric for full-link spectra; do not conflate with metric-matched theories.",
+    "Matter is an explicit free spinless finite-cover model; verify the response by independent real-space grand-potential differences.",
+    "Construct a rank-nine quotient intertwiner, and prove only the coordinate-permutation obstruction.",
+    "Known 10D string modular invariance is a control, not a new four-dimensional solution.",
+    "Preserve global RESULTS_INDEX.md on this partial checkout; generate a scoped packet index and append vocabulary/session notes."
+  ],
+  "validation": "Five independent pytest checks passed; producer exact/numerical assertions passed; PDF build and post-build verification recorded separately.",
+  "limits": "464-order classification, interacting chiral determinant, complete new 4D modular invariant, physical mass selection and TOE remain open."
+}

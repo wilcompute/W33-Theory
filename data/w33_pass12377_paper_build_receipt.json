@@ -1,0 +1,47 @@
+{
+  "input_pdf_sha256": "5a041d4d047932ab2b377fa7f12d2dcbebf2d4297a97d52bea9eb67ab8594f26",
+  "input_pdf_pages": 211,
+  "output_pdf_sha256": "8761d16c7b3f3540301f859411c8433a0d3edf5dfe4bcf4c5b626983898d85c5",
+  "output_pdf_git_blob": "9b5b24575939db9bd9aaa15053bb3935077c6f9f",
+  "output_pdf_bytes": 1274904,
+  "output_pdf_pages": 215,
+  "build": "Three XeLaTeX passes; final pagination stable at215. TeX Gyre text/math fonts downloaded from CTAN. Original font specifications preserved.",
+  "engine": "XeTeX 3.141592653-2.6-0.999995 (TeX Live 2023/Debian)",
+  "text_checks": [
+    "Three corrected CM statements found in extracted PDF",
+    "General-CM counterexample retained",
+    "No undefined-reference or missing-character warnings in final log"
+  ],
+  "visual_checked_output_pages": [
+    128,
+    194
+  ],
+  "layout_scope": "XeLaTeX rebuild changes pagination from211 to215; existing overfull-box warnings remain. Targeted visual checks, not complete visual QA.",
+  "source_changes": [
+    "papers/forty_points/sec09_physics.tex: one narrow CM quantifier correction",
+    "papers/forty_points/appA_ledger.tex: two matching ledger corrections"
+  ],
+  "tests": "5 passed in0.62s; full producer assertions and independent432-site determinant finite differences passed.",
+  "source_sha256": {
+    "papers/forty_points/sec11_epilogue.tex": "0afb95ffe7bf5ba1f2f082f77d77477ae7b49efb4a6e5de81fe524ca84b317ae",
+    "papers/forty_points/sec00_reading.tex": "32c8562bb619d297ca80461052d9839ebba1602aa8e9a5ca4bd7274823aa5438",
+    "papers/forty_points/sec08_lorentz.tex": "6d0f22f7659db2a6b17a809ff5c197e30c2c45f10f9e9662f7d81b606fd40ca1",
+    "papers/forty_points/sec04_time.tex": "04b47b9ef2a0086bbd8425baa187b1c31062f840eca045dc2897abe6935a7192",
+    "papers/forty_points/sec09_physics.tex": "8bc7594918b4a4c017c48c9f592fccd6fa398f9f6cc84e17511e999949e86106",
+    "papers/forty_points/sec03_selfentangle.tex": "27a83932b3ea268b12c229ceeaca54972884518e99854d56d87769d2c618e0ac",
+    "papers/forty_points/sec01_prologue.tex": "d1e9ddb1e0a8cdc7043f63d2f913667257caf509e29bdc589992e98a73109449",
+    "papers/forty_points/fig_cone.tex": "f075ba3c43114a232712c2f030035a7885102c50985d5177fddbb0c621777394",
+    "papers/forty_points/fig_w33portrait.tex": "ecd203d34dfc83f12644bb68d75c71491ea2eb36f1625f82f8c6af6266728fdc",
+    "papers/forty_points/sec10_machine.tex": "4835ad68cb05a6c2b2e0fec6dfbc978bd3435b1b66254abb66a8d799eebba582",
+    "papers/forty_points/main.tex": "236499179097d0d85be2c494c0a7b5fd1d4e15d731081b723772798732310978",
+    "papers/forty_points/appA_ledger.tex": "6ee657f960793efb5a257f63c089e9d6e5873c82718d853a44a6004828a8acd3",
+    "papers/forty_points/appB_glossary.tex": "ad6795f65e78f044dbb4fb6ff3aae2e27b33ae93ce38564755ae1607b603931f",
+    "papers/forty_points/sec05_e8.tex": "175ac4eb4bbeb95fd1afbc3362c0486835ea2eb13f7131c4ecef00008086fde0",
+    "papers/forty_points/fig_minkowski27.tex": "5b50206b9efbc96648b9a5a7c905806743dd0a5170419dcf2911d399679e0528",
+    "papers/forty_points/fig_e8coxeter.tex": "119628f813a9ba4b62365ab266482a3dcfa22ae648529367db6ff58228bc847f",
+    "papers/forty_points/sec07_realforms.tex": "5418f56110f29641a4f4afe74587adc46ec56a7e88f7bb5e4c707db96a4bcea3",
+    "papers/forty_points/sec02_object.tex": "b6dde430abca82c82231c58e965408c869a3a9a9ef2980cbc0c0be3490d5131c",
+    "papers/forty_points/sec06_freudenthal.tex": "da93fcd89d848dfcd41faea04e36661a44ff13c10bbddef78ea922605386b2c0",
+    "papers/forty_points/appC_references.tex": "e48096990ed6dd159ab3ef0c16a7dfc6a3e81dda1375c497667e6a9b7ccc51e8"
+  }
+}
