@@ -1,0 +1,114 @@
+{
+  "schema": "w33.20261029.five_fronts_beyond.v1",
+  "date": "2026-10-29",
+  "status": "CERTIFIED_FINITE_MATH_AND_NUMERICAL_OPTICS; Q7_DISTANCE_OPEN",
+  "integral_e8": {
+    "natural_group": "Sp(4,3)",
+    "order": 51840,
+    "projective": "PSp(4,3)",
+    "projective_order": 25920,
+    "central_minus_I4_to_minus_I8": true,
+    "finite_involutions": {
+      "square_minus": 270,
+      "square_plus": 45
+    },
+    "integral_involution_lifts": {
+      "square_minus": 540,
+      "square_plus": 90
+    }
+  },
+  "photonic_rectangular": {
+    "modes": 40,
+    "active_components": 656,
+    "layers": 40,
+    "error_max": 4.718447854656915e-16,
+    "survival_min": 0.9649166711027222,
+    "survival_mean": 0.9677314659358298,
+    "survival_input0": 0.9719032630689977
+  },
+  "photonic_triangular": {
+    "modes": 40,
+    "active_components": 653,
+    "layers": 77,
+    "error_max": 4.440892098500626e-16,
+    "survival_min": 0.9560580642943812,
+    "survival_mean": 0.9679187334443722,
+    "survival_input0": 0.9804659818948783
+  },
+  "dual_polar_c3_3": {
+    "vertices": 1120,
+    "degree": 39,
+    "diameter": 3,
+    "distance_shells": [
+      1,
+      39,
+      351,
+      729
+    ],
+    "number_isotropic_planes": 3640,
+    "intersection_array": {
+      "a": [
+        0,
+        2,
+        8,
+        26
+      ],
+      "b": [
+        39,
+        36,
+        27,
+        0
+      ],
+      "c": [
+        0,
+        1,
+        4,
+        13
+      ]
+    },
+    "eigenvalues": [
+      39,
+      11,
+      -1,
+      -13
+    ],
+    "three_step_walks_distance3": 52
+  },
+  "dual_point_graphs": {
+    "parameters": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "w33_binary_rank": 16,
+    "dual_binary_rank": 10,
+    "w33_css": "[[40,8,6]]_2",
+    "dual_css": "[[40,20,4]]_2",
+    "dual_stabilizer_min_weight": 12,
+    "dual_weight4_logicals": 270,
+    "two_photon_distinct_output_histograms_match": true,
+    "input_output_two_photon_pair_comparisons": 608400,
+    "independent_input_triplets_per_graph": 3240,
+    "distinct_output_triplets_per_input": 9880,
+    "w33_common_neighbor_input_counts": {
+      "1": 2880,
+      "4": 360
+    },
+    "dual_common_neighbor_input_counts": {
+      "0": 1080,
+      "2": 2160
+    },
+    "w33_exclusive_max_ideal_event": 0.002304,
+    "dual_max_ideal_event": 0.001024
+  },
+  "q7": {
+    "code_family": "[[400,48,d]]_2",
+    "certified_lower_bound": 10,
+    "certified_upper_bound": 14,
+    "weight10_adjacent_pair_solver": "TIME_LIMIT_INCONCLUSIVE",
+    "weight10_nonadjacent_pair_solver": "TIME_LIMIT_INCONCLUSIVE",
+    "weight12": "UNRESOLVED"
+  },
+  "physical_scope": "Mathematical and conventional quantum-optical predictions only. No real fault-tolerant 8-logical-qubit device or beyond-standard-model result."
+}
