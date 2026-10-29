@@ -216640,6 +216640,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cddc8c255cb346baebf3d88d04876fdc053d6dbaf3fe97f6cc2855de12718b05",
+      "normalized_formula": "#CSSdistance:min(d(C2\\C1),d(C1^perp\\C2^perp))=min(d2,3)",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_twistor_klein_ag_codes_round13.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 263,
+          "path": "analysis/w33_20261028_twistor_klein_ag_codes_round13.py",
+          "raw": "# CSS distance: min(d(C2\\C1),d(C1^perp\\C2^perp))=min(d2,3).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "41e468132f0b7c6498fff9058fcbc7c4b96c4502e23bab7353f00bd5777fe766",
+      "structural_formula": "#CSSdistance:min(d(C2\\C1),d(C1^perp\\C2^perp))=min(d2,#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "478d3867df5b7d3030e77aee87b7e14f15cec2f2122f431419f3204d4ed13ea3",
       "normalized_formula": "#CSSdistance=girth/2",
       "numeric_literals": [
@@ -290537,6 +290564,35 @@
       },
       "structural_family_id": "d60b7476442100efe44d75819ac92f758d3fb3156d96808f74f6cc9340577d85",
       "structural_formula": "'ATLAS_crosscheck':'ATLASliststhefaithful1#-dimensionalGF(#)irreducibleofU4(#)=PSp(#,#);sincePSpissimple,thisnontrivial1#Dquotientisfaithfulandtheexhaustiveirreducibilitycertificateplacesitinthat1#Disomorphismclass.'"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9cd81c87fac05d2788e0b8009705bbb48099f08824359945c0757b5c87f14a77",
+      "normalized_formula": "'AtidentitycommutatorcurlrowsvanishandtheBlochcurlrankfallsfrom108to105;boundedanalyticnativelinkoperatorshavevanishingeigenvaluesasz->1.Nouniformmassivegapfortheacousticfluxbranches.'",
+      "numeric_literals": [
+        "05",
+        "08",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_twistor_klein_ag_codes_round13.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 203,
+          "path": "analysis/w33_20261028_twistor_klein_ag_codes_round13.py",
+          "raw": "'At identity commutator curl rows vanish and the Bloch curl rank falls from 108 to 105; bounded analytic native link operators have vanishing eigenvalues as z->1. No uniform massive gap for the acoustic flux branches.',",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "986fc170d08f83b649a8042d5e37f79c52a90c9aaaf300a7898fb9e9014e6fd0",
+      "structural_formula": "'AtidentitycommutatorcurlrowsvanishandtheBlochcurlrankfallsfrom1#to1#;boundedanalyticnativelinkoperatorshavevanishingeigenvaluesasz->#.Nouniformmassivegapfortheacousticfluxbranches.'"
     },
     {
       "file_count": 1,
@@ -406254,6 +406310,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a7c84f94d0f0f408284ca5c7886dd2976670d756504c75c9a9ca8e2bdd6fd3ce",
+      "normalized_formula": "1.^Smallerpositiverepair:^theprevioussix-termglobalall-Blochproofremainsintact.Foraproposed^four-term^,equal-translationarchitectureusingbothnativeaddedchannelsalongonly`e0,e1`,theexactunitarycharacter`z=(1,1,\u03c9,\u03c92)`(`\u03c93=1`,nontrivial)has`Q=0`andzerotranslated-differenceweight.Hencethatarchitecture^fails^.Numericalsearchesalsofoundnonidentityexceptionalmomentaineachofthesixcoordinate-fixedtwo-torussections;nogeneralno-goforarbitrary2\u20135harmonicsfollows",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 61,
+          "path": "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md",
+          "raw": "1. **Smaller positive repair:** the previous six-term global all-Bloch proof remains intact. For a proposed **four-term**, equal-translation architecture using both native added channels along only `e\u2080,e\u2081`, the exact unitary character `z=(1,1,\u03c9,\u03c9\u00b2)` (`\u03c9\u00b3=1`, nontrivial) has `Q=0` and zero translated-difference weight. Hence that architecture **fails**. Numerical searches also found nonidentity exceptional momenta in each of the six coordinate-fixed two-torus sections; no general no-go for arbitrary 2\u20135 harmonics follows.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "5daf0ec531fa8903bbc7dd38ccbb0dd36569d394444017bd97be5aecec951762",
+      "structural_formula": "#.^Smallerpositiverepair:^theprevioussix-termglobalall-Blochproofremainsintact.Foraproposed^four-term^,equal-translationarchitectureusingbothnativeaddedchannelsalongonly`e0,e1`,theexactunitarycharacter`z=(#,#,\u03c9,\u03c9#)`(`\u03c9#=#`,nontrivial)has`Q=#`andzerotranslated-differenceweight.Hencethatarchitecture^fails^.Numericalsearchesalsofoundnonidentityexceptionalmomentaineachofthesixcoordinate-fixedtwo-torussections;nogeneralno-goforarbitrary2\u2013#harmonicsfollows"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9e25619c4eb458f6ff357b8250d14000c5410d3064fe165088697e226d1ed070",
       "normalized_formula": "1.^THECONFOUND.^Pass505readitsdataas\"anextrafactorofqappearswhentheexponentequalsthecharacteristic.\"But^everyqtestedtherewasprime^,whereblocksize=ringorder=characteristic.Nothingmeasuredcouldseparatethosethreeroles",
       "numeric_literals": [
@@ -429309,6 +429396,37 @@
       },
       "structural_family_id": "64b3940c53ff9235e69b69dbc39c132d71c35dd3202d51ca8d9086f98203c6aa",
       "structural_formula": "#.^Localqutritgauge:^`#->#x3`refinestoapoint-selectedC3torsor;theouterfinitesignsuppliesreflectionparitybutnotanorigin"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "787ddfce0e36a012f5a23a5f0b6c831b3a307e31c024d7441c699a644049e599",
+      "normalized_formula": "2.^Nativespectrum:^thecertifiedcommutatorcurlvanishesat`z=1`,whilethefinite-momentumcompletedrankis108.Bycontinuity,modesassociatedwiththosedisappearingrowssoftenasmomentumapproacheszero.A^uniformpositivemassivegap^forthatentireacousticsectoristhereforeimpossiblewithoutfurtherdynamics;thisiscompatiblewithanintentionallymasslessMaxwell-liketheory.Acomplete135\u00d7135finite-momentumdispersion/equal-couplinghardwarecomparisonhas^not^beencomputedinthispacket",
+      "numeric_literals": [
+        "08",
+        "1",
+        "135",
+        "2",
+        "35"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md",
+          "raw": "2. **Native spectrum:** the certified commutator curl vanishes at `z=1`, while the finite-momentum completed rank is108. By continuity, modes associated with those disappearing rows soften as momentum approaches zero. A **uniform positive massive gap** for that entire acoustic sector is therefore impossible without further dynamics; this is compatible with an intentionally massless Maxwell-like theory. A complete 135\u00d7135 finite-momentum dispersion/equal-coupling hardware comparison has **not** been computed in this packet.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "478c0800c1797f2449436488ea23c47d294570835567756ea957f759787a81bd",
+      "structural_formula": "#.^Nativespectrum:^thecertifiedcommutatorcurlvanishesat`z=#`,whilethefinite-momentumcompletedrankis1#.Bycontinuity,modesassociatedwiththosedisappearingrowssoftenasmomentumapproacheszero.A^uniformpositivemassivegap^forthatentireacousticsectoristhereforeimpossiblewithoutfurtherdynamics;thisiscompatiblewithanintentionallymasslessMaxwell-liketheory.Acomplete1#\u00d7#finite-momentumdispersion/equal-couplinghardwarecomparisonhas^not^beencomputedinthispacket"
     },
     {
       "file_count": 1,
@@ -808418,6 +808536,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "78cfebd2a9bad41a4ff295b2af9dbc2a12a9ef9c7b3d35617985367df957ea56",
+      "normalized_formula": "Since`C1(X)\u2282C2(X)`forthedegree-oneanddegree-twoevaluationspaces,choosetheCSSX-checkspace`C2(X)^\u22a5`andZ-checkspace`C1(X)`.Orthogonalityisautomatic.Theresultingquantumstabilizercodehas`k=dimC2-dimC1`.TheminimumnontrivialZ-logicalweightistheminimumof`C2\\C1`,whichis6onthequadricand4outside;theminimumnontrivialX-logicalweightis3,certifiedbythe105or56incidencetriplesin`C1^\u22a5\\C2^\u22a5`.Thus",
+      "numeric_literals": [
+        "05",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md",
+          "raw": "Since `C\u2081(X) \u2282 C\u2082(X)` for the degree-one and degree-two evaluation spaces, choose the CSS X-check space `C\u2082(X)^\u22a5` and Z-check space `C\u2081(X)`. Orthogonality is automatic. The resulting quantum stabilizer code has `k=dim C\u2082 - dim C\u2081`. The minimum nontrivial Z-logical weight is the minimum of `C\u2082\\C\u2081`, which is 6 on the quadric and 4 outside; the minimum nontrivial X-logical weight is 3, certified by the 105 or 56 incidence triples in `C\u2081^\u22a5\\C\u2082^\u22a5`. Thus:",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "ca9a856366294e3f71fcf2f48445dba2d1b3e59856f3bb8d97547adfd24a654b",
+      "structural_formula": "Since`C1(X)\u2282C2(X)`forthedegree-oneanddegree-twoevaluationspaces,choosetheCSSX-checkspace`C2(X)^\u22a5`andZ-checkspace`C1(X)`.Orthogonalityisautomatic.Theresultingquantumstabilizercodehas`k=dimC2-dimC1`.TheminimumnontrivialZ-logicalweightistheminimumof`C2\\C1`,whichis6onthequadricand4outside;theminimumnontrivialX-logicalweightis3,certifiedbythe1#or5#incidencetriplesin`C1^\u22a5\\C2^\u22a5`.Thus"
+    },
+    {
+      "file_count": 1,
       "formula_id": "994e11ddf905114263e3ad46c53671c996ebd81a787dd64e7f2575930f092737",
       "normalized_formula": "Since`H/C=D12`,`K/C`isareflection,anditsnormalizerinD12isV4.Therefore",
       "numeric_literals": [
@@ -834363,6 +834509,34 @@
       },
       "structural_family_id": "422e75bc09d8fd068eb12e263f61455386a9e33212ff156d1517cc01b75f1095",
       "structural_formula": "ThePass5#massoperatorwasM=m0I+gH_mag,withbothm0andgfree"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6b2201ec9642866edc4aa9fd4239c7cf2ff693361f0712ea8381d4e1446e158e",
+      "normalized_formula": "ThePl\u00fcckermapsendsa2-planespannedby`u,v\u2208F4`tothesixcoordinates`p_ab=u_av_b-u_bv_a`.Itsimageisthefour-dimensionalKleinquadric`Gr(2,4)\u2282P5`cutoutby",
+      "numeric_literals": [
+        "2",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-28_twistor_klein_AG_CSS_six_frontiers.md",
+          "raw": "The Pl\u00fccker map sends a 2-plane spanned by `u,v \u2208 F\u2074` to the six coordinates `p_ab=u_a v_b-u_b v_a`. Its image is the four-dimensional Klein quadric `Gr(2,4) \u2282 P\u2075` cut out by",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "57aa7c6aa690f448337fe57f08219a19f3e7ab5e374eb0e2377e1ca7e7377490",
+      "structural_formula": "ThePl\u00fcckermapsendsa2-planespannedby`u,v\u2208F4`tothesixcoordinates`p_ab=u_av_b-u_bv_a`.Itsimageisthefour-dimensionalKleinquadric`Gr(#,#)\u2282P5`cutoutby"
     },
     {
       "file_count": 1,
@@ -1141394,6 +1141568,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "fdc584813fa8018cbe7fd5b05de867ac8ce68bc0214e4c2f1ddff2eb01b86cac",
+      "normalized_formula": "assertrecords['Klein']['2']['distance']=6andrecords['off_quadric']['2']['distance']=4",
+      "numeric_literals": [
+        "2",
+        "4",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_twistor_klein_ag_codes_round13.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 277,
+          "path": "analysis/w33_20261028_twistor_klein_ag_codes_round13.py",
+          "raw": "assert records['Klein']['2']['distance']==6 and records['off_quadric']['2']['distance']==4",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5c557b5c521260e50e6e3553d452e0d9e8d0f41b82f77fb3be3b6be912ac1c24",
+      "structural_formula": "assertrecords['Klein']['#']['distance']=#andrecords['off_quadric']['#']['distance']=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "be4296198069a51660f0b793c31e02b2bd4e2d0f94380294d427c41da9cd82ae",
       "normalized_formula": "assertrectangle_count=2160",
       "numeric_literals": [
@@ -1217203,6 +1217406,33 @@
       },
       "structural_family_id": "1ea05253c3bc3006488b8f2f75fae7c139f2c5f4a5301684f821c0eb080d26a8",
       "structural_formula": "code=(tuple(phase_code(theta(unitaries[g],#)).items()),tuple(phase_code(theta(unitaries[g],#)).items()))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "4eb9501cc19c2733bc436d0ca9001b756c1cf2b3807fbfcb5156d1226e80314c",
+      "normalized_formula": "code=0;prev=0;weights=collections.Counter()",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_twistor_klein_ag_codes_round13.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 44,
+          "path": "analysis/w33_20261028_twistor_klein_ag_codes_round13.py",
+          "raw": "code=0;prev=0;weights=collections.Counter()",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8af53facadf73437a0482db2913c747499e9f375d411ba977efce022b9e3c4a2",
+      "structural_formula": "code=#;prev=#;weights=collections.Counter()"
     },
     {
       "file_count": 1,
@@ -1368689,6 +1368919,33 @@
       },
       "structural_family_id": "307a3a781a244746f7ab629058082f632ea0cd9823e2829e5170df7eea36de23",
       "structural_formula": "ifhits=#:singles.append(o)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "5e72dbe0aca1fe89a97f706a92c104d5002ae3e4918c5de6c24a84c06ea68490",
+      "normalized_formula": "ifi:code^=basis[(gray^prev).bit_length()-1]",
+      "numeric_literals": [
+        "-1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_twistor_klein_ag_codes_round13.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_20261028_twistor_klein_ag_codes_round13.py",
+          "raw": "if i: code ^= basis[(gray^prev).bit_length()-1]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a2fdd199a2bb98e90c32a4ac64d6c7c8dbe58214eb8cc9429f2d846453e19faa",
+      "structural_formula": "ifi:code^=basis[(gray^prev).bit_length()#]"
     },
     {
       "file_count": 1,
@@ -1903587,9 +1903844,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-28T23:21:26-04:00",
+  "frozen_at": "2026-10-28T23:40:44-04:00",
   "pass": 398,
-  "repository_head": "ccd7a7165b3deac7586aac4b1ac7bd85d060247c",
+  "repository_head": "c9fb500cad432496778a93662f2f83fc89e3433a",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1967444,6 +1967701,14 @@
     },
     {
       "exact_formula_ids": [
+        "787ddfce0e36a012f5a23a5f0b6c831b3a307e31c024d7441c699a644049e599"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "478c0800c1797f2449436488ea23c47d294570835567756ea957f759787a81bd",
+      "structural_formula": "#.^Nativespectrum:^thecertifiedcommutatorcurlvanishesat`z=#`,whilethefinite-momentumcompletedrankis1#.Bycontinuity,modesassociatedwiththosedisappearingrowssoftenasmomentumapproacheszero.A^uniformpositivemassivegap^forthatentireacousticsectoristhereforeimpossiblewithoutfurtherdynamics;thisiscompatiblewithanintentionallymasslessMaxwell-liketheory.Acomplete1#\u00d7#finite-momentumdispersion/equal-couplinghardwarecomparisonhas^not^beencomputedinthispacket"
+    },
+    {
+      "exact_formula_ids": [
         "c01461832d95921c34f93c8d2a3b1a9fb395d196d55103f24954fd3499ead1ff"
       ],
       "exact_member_count": 1,
@@ -1967601,6 +1967866,14 @@
       "exact_member_count": 1,
       "structural_family_id": "01897a8a063fa48f565eb5a3388c662b1d69a24e7cf85452aab4ad7e45487594",
       "structural_formula": "#.^Six-qutritW3#slicespace(Pass8#\u2013#).^The`Sp1#(#)/(Sp4(#)xSp8(#))`actionhasexactly3#doublecosets.Theirorbitsizessumto`#,#,#,#,#,#`,reproducingthefullW3#-slicecensus.IntersectionshellswithafixedW3#are`d=#:#`,`d=#:#`,`d=#:#`,`d=#:#`,`d=#:#"
+    },
+    {
+      "exact_formula_ids": [
+        "a7c84f94d0f0f408284ca5c7886dd2976670d756504c75c9a9ca8e2bdd6fd3ce"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5daf0ec531fa8903bbc7dd38ccbb0dd36569d394444017bd97be5aecec951762",
+      "structural_formula": "#.^Smallerpositiverepair:^theprevioussix-termglobalall-Blochproofremainsintact.Foraproposed^four-term^,equal-translationarchitectureusingbothnativeaddedchannelsalongonly`e0,e1`,theexactunitarycharacter`z=(#,#,\u03c9,\u03c9#)`(`\u03c9#=#`,nontrivial)has`Q=#`andzerotranslated-differenceweight.Hencethatarchitecture^fails^.Numericalsearchesalsofoundnonidentityexceptionalmomentaineachofthesixcoordinate-fixedtwo-torussections;nogeneralno-goforarbitrary2\u2013#harmonicsfollows"
     },
     {
       "exact_formula_ids": [
@@ -1979598,6 +1979871,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5037d0e274328afa2cb59fbe76a083195029191973ea43e529361ed54a2ae83a",
       "structural_formula": "#CPdeltaviaW3#:delta_CP=#degrees(fromPMNSPhi6/Phi3formula)"
+    },
+    {
+      "exact_formula_ids": [
+        "cddc8c255cb346baebf3d88d04876fdc053d6dbaf3fe97f6cc2855de12718b05"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "41e468132f0b7c6498fff9058fcbc7c4b96c4502e23bab7353f00bd5777fe766",
+      "structural_formula": "#CSSdistance:min(d(C2\\C1),d(C1^perp\\C2^perp))=min(d2,#)"
     },
     {
       "exact_formula_ids": [
@@ -2005693,6 +2005974,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d60b7476442100efe44d75819ac92f758d3fb3156d96808f74f6cc9340577d85",
       "structural_formula": "'ATLAS_crosscheck':'ATLASliststhefaithful1#-dimensionalGF(#)irreducibleofU4(#)=PSp(#,#);sincePSpissimple,thisnontrivial1#Dquotientisfaithfulandtheexhaustiveirreducibilitycertificateplacesitinthat1#Disomorphismclass.'"
+    },
+    {
+      "exact_formula_ids": [
+        "9cd81c87fac05d2788e0b8009705bbb48099f08824359945c0757b5c87f14a77"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "986fc170d08f83b649a8042d5e37f79c52a90c9aaaf300a7898fb9e9014e6fd0",
+      "structural_formula": "'AtidentitycommutatorcurlrowsvanishandtheBlochcurlrankfallsfrom1#to1#;boundedanalyticnativelinkoperatorshavevanishingeigenvaluesasz->#.Nouniformmassivegapfortheacousticfluxbranches.'"
     },
     {
       "exact_formula_ids": [
@@ -2121375,6 +2121664,14 @@
     },
     {
       "exact_formula_ids": [
+        "78cfebd2a9bad41a4ff295b2af9dbc2a12a9ef9c7b3d35617985367df957ea56"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ca9a856366294e3f71fcf2f48445dba2d1b3e59856f3bb8d97547adfd24a654b",
+      "structural_formula": "Since`C1(X)\u2282C2(X)`forthedegree-oneanddegree-twoevaluationspaces,choosetheCSSX-checkspace`C2(X)^\u22a5`andZ-checkspace`C1(X)`.Orthogonalityisautomatic.Theresultingquantumstabilizercodehas`k=dimC2-dimC1`.TheminimumnontrivialZ-logicalweightistheminimumof`C2\\C1`,whichis6onthequadricand4outside;theminimumnontrivialX-logicalweightis3,certifiedbythe1#or5#incidencetriplesin`C1^\u22a5\\C2^\u22a5`.Thus"
+    },
+    {
+      "exact_formula_ids": [
         "994e11ddf905114263e3ad46c53671c996ebd81a787dd64e7f2575930f092737"
       ],
       "exact_member_count": 1,
@@ -2128491,6 +2128788,14 @@
       "exact_member_count": 1,
       "structural_family_id": "422e75bc09d8fd068eb12e263f61455386a9e33212ff156d1517cc01b75f1095",
       "structural_formula": "ThePass5#massoperatorwasM=m0I+gH_mag,withbothm0andgfree"
+    },
+    {
+      "exact_formula_ids": [
+        "6b2201ec9642866edc4aa9fd4239c7cf2ff693361f0712ea8381d4e1446e158e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "57aa7c6aa690f448337fe57f08219a19f3e7ab5e374eb0e2377e1ca7e7377490",
+      "structural_formula": "ThePl\u00fcckermapsendsa2-planespannedby`u,v\u2208F4`tothesixcoordinates`p_ab=u_av_b-u_bv_a`.Itsimageisthefour-dimensionalKleinquadric`Gr(#,#)\u2282P5`cutoutby"
     },
     {
       "exact_formula_ids": [
@@ -2208404,6 +2208709,14 @@
     },
     {
       "exact_formula_ids": [
+        "fdc584813fa8018cbe7fd5b05de867ac8ce68bc0214e4c2f1ddff2eb01b86cac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5c557b5c521260e50e6e3553d452e0d9e8d0f41b82f77fb3be3b6be912ac1c24",
+      "structural_formula": "assertrecords['Klein']['#']['distance']=#andrecords['off_quadric']['#']['distance']=#"
+    },
+    {
+      "exact_formula_ids": [
         "be4296198069a51660f0b793c31e02b2bd4e2d0f94380294d427c41da9cd82ae"
       ],
       "exact_member_count": 1,
@@ -2229214,6 +2229527,14 @@
       "exact_member_count": 1,
       "structural_family_id": "127cd660557100b0a6ac22778a0a65790471f8bb0fd47bfb5cf4f691e28dd81a",
       "structural_formula": "cocycle=np.prod([np.exp(#j*q*alpha.sum())^nforq,ninzip(charges,mult)])"
+    },
+    {
+      "exact_formula_ids": [
+        "4eb9501cc19c2733bc436d0ca9001b756c1cf2b3807fbfcb5156d1226e80314c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8af53facadf73437a0482db2913c747499e9f375d411ba977efce022b9e3c4a2",
+      "structural_formula": "code=#;prev=#;weights=collections.Counter()"
     },
     {
       "exact_formula_ids": [
@@ -2270656,6 +2270977,14 @@
       "exact_member_count": 1,
       "structural_family_id": "307a3a781a244746f7ab629058082f632ea0cd9823e2829e5170df7eea36de23",
       "structural_formula": "ifhits=#:singles.append(o)"
+    },
+    {
+      "exact_formula_ids": [
+        "5e72dbe0aca1fe89a97f706a92c104d5002ae3e4918c5de6c24a84c06ea68490"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a2fdd199a2bb98e90c32a4ac64d6c7c8dbe58214eb8cc9429f2d846453e19faa",
+      "structural_formula": "ifi:code^=basis[(gray^prev).bit_length()#]"
     },
     {
       "exact_formula_ids": [
@@ -2412377,20 +2412706,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92326825,
-    "exact_formula_families": 65089,
-    "files_scanned": 12694,
-    "formula_occurrences": 71225,
+    "bytes_scanned": 92353487,
+    "exact_formula_families": 65098,
+    "files_scanned": 12696,
+    "formula_occurrences": 71234,
     "status_occurrences": {
-      "certified_or_theorem": 5345,
-      "killed_or_retracted": 1932,
+      "certified_or_theorem": 5348,
+      "killed_or_retracted": 1933,
       "open_or_conditional": 2405,
       "preregistered": 36,
       "retrospective_fit": 5418,
-      "unclassified": 56089
+      "unclassified": 56094
     },
-    "structural_families": 63379
+    "structural_families": 63388
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "969c66b6f9606d51822d3120206f0ff0f6daf848a3555e969c9e58a960ede17a"
+  "universe_sha256": "54ca1df8af974168eed0cc4f69351a22a563c127431f2a79370aae467c7f0539"
 }
