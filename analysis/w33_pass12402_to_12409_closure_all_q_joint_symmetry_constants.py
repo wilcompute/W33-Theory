@@ -1,6 +1,10 @@
 """Passes 12402-12409: the closure theorem for every odd q, the joint symmetry of the two i's, the twin obstruction, and constants as
 exchange rates between counting and transfer (Claude track).
 
+CORRECTION (Pass 12410): "closure always produces a metric" holds for q = 3 mod 4 only; for q = 1 mod 4 the closure solutions with
+unequal eigenspace dimensions (e.g. kappa = i I) are non-metric, and kappa is a Hodge star iff tr kappa = 0.  The q = 5, 13 sampling was
+conditional on dim U = 3.
+
 12402 -- the twin obstruction over all 59 radius-safe, exotic-free candidates of 12373-12375 (colour-only vs colour + Y-neutral hidden).
 12403 -- joint symmetry on F_3^4.  The stabilizer of a Kahler structure J of W(3,3) in Sp(4,3) has order 96 = |GU(2,3)| (the finite
   U(2)); centre Z4 (the norm-1 'phase circle'); derived subgroup of order 24 with element orders 1, 2, 3^8, 4^6, 6^8 = SL(2,3), the

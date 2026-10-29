@@ -1,5 +1,12 @@
 # Passes 12402–12409: closure for every odd q, the joint symmetry of the two i's, and constants as exchange rates
 
+> **Correction (Pass 12410).** The statement below holds as written only for q ≡ 3 (mod 4). For q ≡ 1 (mod 4), i lies in F_q,
+> and closure solutions whose eigenspaces have unequal dimensions also exist; κ = i·I is one, and none of them is a Hodge star. The
+> exact counts are 2,834,952 solutions at q = 5, of which 71% are hyperbolic Hodge stars. There, κ is a Hodge star iff tr κ = 0.
+> The q = 5 and 13 sampling drew only 3-dimensional eigenspaces, so it was conditional on that. See
+> `PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md`.
+
+
 Claude track. Producer: `analysis/w33_pass12402_to_12409_closure_all_q_joint_symmetry_constants.py`. Drivers:
 `analysis/search_drivers_12402`–`12406`.
 

@@ -1,0 +1,26 @@
+{
+ "rank_A_mod3": 39,
+ "max_cutrank_F3": {
+  "10": 10,
+  "15": 11,
+  "20": 11
+ },
+ "control_max_cutrank_F3": {
+  "10": 10,
+  "15": 15,
+  "20": 20
+ },
+ "rank_A_mod2": 16,
+ "max_cutrank_F2": {
+  "10": 10,
+  "15": 15,
+  "20": 16
+ },
+ "control_max_cutrank_F2": {
+  "10": 10,
+  "15": 15,
+  "20": 20
+ },
+ "rank_A_plus_I_mod3": 11,
+ "A_plus_I_squared_is_J_mod3": true
+}

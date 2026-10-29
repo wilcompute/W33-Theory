@@ -1,0 +1,36 @@
+{
+ "q5_examples": {
+  "kappa_2I": {
+   "P_symmetric": true,
+   "closure": true,
+   "trace": 2
+  },
+  "split_1_5": {
+   "P_symmetric": true,
+   "closure": true,
+   "trace": 2
+  }
+ },
+ "q5_counts_by_dimU": {
+  "0": 1,
+  "1": 3100,
+  "2": 406875,
+  "3": 2015000,
+  "4": 406875,
+  "5": 3100,
+  "6": 1
+ },
+ "q5_total": 2834952,
+ "q5_metric_fraction": 0.7107704116330718,
+ "q13_counts_by_dimU": {
+  "0": 1,
+  "1": 371124,
+  "2": 820586091,
+  "3": 10662392520,
+  "4": 820586091,
+  "5": 371124,
+  "6": 1
+ },
+ "q13_total": 12304306952,
+ "q13_metric_fraction": 0.8665577477540809
+}
