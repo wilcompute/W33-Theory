@@ -3,7 +3,7 @@
   "windows_host": "Windows-10-10.0.26340-SP0",
   "windows_python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
   "producer_sha256": "54d415001dfaff2c68203a83f4b83172fbc6122c9814a6db7c66d5086263f686",
-  "server_windows_maximum_numeric_difference": 5.437297723176471e-09,
+  "server_windows_maximum_numeric_difference": 5.437297723176471e-9,
   "numeric_entries_compared": 1577,
   "source_and_nonnumeric_fields_match": true,
   "windows_combined_tests": "12 passed in 19.53s",
@@ -34,5 +34,8 @@
   },
   "root_sync": "GitKraken pull fast-forwarded original master through3d23371f3; final metadata/index commit synchronization verified separately.",
   "preservation": "Only session notes staged/stashed; conflict combined both sides, original backup and named stash retained. All unique original note lines retained. Scientific edits/config payloads matched saved hashes; five instruction metadata files refreshed during the synchronization window, so their byte identity is not claimed.",
-  "continuity": "Decision logged successfully, total7497; local mixed stores remain uncommitted."
+  "continuity": "Decision logged successfully, total7497; local mixed stores remain uncommitted.",
+  "final_windows_tests": "13 passed in20.41s, plugin autoload disabled, exit0",
+  "final_index_and_metric_commit": "7594c1e847a1ceee291f7f32aea129f3b22172cf",
+  "windows_test_note": "An earlier slow plugin-autoload run is superseded by the successful isolated run."
 }
