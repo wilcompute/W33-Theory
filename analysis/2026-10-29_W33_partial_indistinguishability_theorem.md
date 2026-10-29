@@ -50,10 +50,12 @@ For independent ideal **registered triple-photon trials**, the script evaluates 
 
 | Pairwise overlap s | Minimum N | W33 if K>=k |
 |---:|---:|---:|
-| 0 | 20333 | 16 |
+| 0 | 19427 | 15 |
 | 0.5 | 6881 | 9 |
 | 0.8 | 2437 | 5 |
 | 1 | 1413 | 4 |
 
 The verifier explicitly checks both binomial error tails and confirms no integer threshold works with N-1 trials in each row. This is an *ideal* statistical bound, not an account of source brightness, optical transmission, detector inefficiency, timing or device calibration. The N=1500 result from the prior repo applies near the indistinguishable ideal, not at arbitrary s. The source code uses SciPy for this additional numerical statistic; the exact algebraic graph witness does not depend on SciPy.
 
+
+**October 29 correction:** The previous (s=0) value of (N=20,333), cutoff 16, was only minimal with respect to checking (N-1) at that *particular candidate*, not globally minimal. An independent search found (N=19,427), cutoff 15, with false-negative probability 0.000999712 and false-positive probability 0.000938946. The revised producer checks **every** (1\le N\le19,427) against the minimal false-positive cutoff. This correction changes the ideal distinguishable-photon shot budget; the exact bosonic event probability formulas are unaffected. See `analysis/w33_20261029_three_photon_loss_global_budget.py`.
