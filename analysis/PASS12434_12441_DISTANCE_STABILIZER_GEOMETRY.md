@@ -1,5 +1,10 @@
 # Passes 12434–12441: the adjacency-code distance, and stabilizer-state geometry
 
+> **Oldest prior art (found with `scripts/check_prior_art_all_repos.py`, Pass 12446).** For W(3,3) the identity (A + I)² ≡ J (mod 3)
+> has been in the repository since **2026-03-12**: `tests/test_finite_field_methods_computation.py` (from the SRG equation, with rank
+> of (A − 2I)² = 1). It recurs in Pass 157 (2026-07-09, eigenlattice prime collision) and in the 2026-10-22 note (general p).
+
+
 Claude track. Producer: `analysis/w33_pass12434_to_12441_distance_stabilizer_geometry.py`. Drivers:
 `analysis/search_drivers_12434`, `12435`, `12437`.
 

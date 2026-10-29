@@ -1,0 +1,20 @@
+{
+ "parent": "SM_20260917_2541",
+ "admissible": 28550,
+ "sampled": 6000,
+ "strict": 2959,
+ "tachyon_free": 694,
+ "three_doublet": 62,
+ "large_safe": 52,
+ "exotic_free": 52,
+ "relaxed_hypercharge": 52,
+ "anomaly_free": 52,
+ "kY_hist": {
+  "53/9": 15,
+  "17/3": 30,
+  "41/9": 5,
+  "35/9": 2
+ },
+ "all_fractional_liftable": 0,
+ "unmatched_always_one_120_pair": true
+}

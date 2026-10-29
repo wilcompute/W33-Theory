@@ -11,7 +11,7 @@ recs = [json.loads(l) for f in sorted(glob.glob(f'{D}/{PFX}*.jsonl')) for l in o
 cand = [r for r in recs if r.get('T') == 0 and r.get('best32') == 3]
 TESTS = dict(t3=(2, 'Geometry_Z6-II_sub2.txt', (7, 8)), t2=(3, 'Geometry_Z6-II_sub3.txt', (5, 6)), e5=(2, 'Geometry_Z6-II_win_e5.txt', ()),
              e3a=(3, 'Geometry_Z6-II_win_e3a.txt', ()), e3b=(3, 'Geometry_Z6-II_win_e3b.txt', ()))
-log = open(f'{D}/' + ('filt2_' if PFX == 'scan2_' else 'filt_') + f'{WK}.jsonl', 'a')
+log = open(f'{D}/' + ('filt' + PFX[4:] if PFX != 'scan_' else 'filt_') + f'{WK}.jsonl', 'a')
 for n, r in enumerate(cand):
     if n % NW != WK: continue
     base = f"{r['parent']}_c{r['i']}"

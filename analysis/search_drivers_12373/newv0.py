@@ -12,6 +12,8 @@ env = dict(os.environ, LD_LIBRARY_PATH=os.path.expanduser('~/orb/libfix') + ':' 
 OUT = os.path.expanduser('~/orb/newv0'); os.makedirs(OUT, exist_ok=True)
 D = '/mnt/c/tmp/toe_wt/analysis/search_drivers_12373'
 WANT = ('SM_20260917_2913', 'SM_20260917_2618', 'SM_20260917_2503', 'SM_20260917_574', 'SM_20260917_1105')
+if os.environ.get('WANT_ONLY'):
+    WANT = (os.environ['WANT_ONLY'],)
 models = []
 for f in sorted(x for x in os.listdir(os.path.expanduser('~/orb/scan/sm')) if x.startswith('Z6II_')):
     t = open(os.path.expanduser('~/orb/scan/sm/' + f)).read()
@@ -59,7 +61,7 @@ def best32(dump):
                 tot += (1 if d[i3] > 0 else -1) * x * mult
         if seen and abs(tot) > best: best, arg = abs(tot), (i3, i2)
     return best, arg
-log = open(f'{D}/' + ('scan2_' if os.environ.get('WANT_ALL') else 'scan_') + f'{WK}.jsonl', 'a')
+log = open(f'{D}/' + ('scan3_' if os.environ.get('WANT_ONLY') else 'scan2_' if os.environ.get('WANT_ALL') else 'scan_') + f'{WK}.jsonl', 'a')
 for lab, rows in models:
     V, W = rows[0], rows[2:8]
     cands = all_candidates([V] + W)
