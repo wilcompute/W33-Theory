@@ -13,13 +13,13 @@
   },
   "W33_witness_input": [
     0,
-    1,
-    2
+    7,
+    9
   ],
   "W33_witness_output": [
     4,
-    13,
-    22
+    14,
+    23
   ],
   "W33_witness_coefficient_tuple": [
     4374,
@@ -40,5 +40,81 @@
   "guaranteed_probability_gap_at_s0": 0.0000711111111111111,
   "guaranteed_probability_gap_at_s1": 0.0011377777777777777,
   "theorem": "For every s in [0,1], W33 has an event P=(4374+13122*s^2+8748*s^3)/15^6 exceeding ALL independent-input, distinct-output dual events bounded by (3564+5832*s^2+3888*s^3)/15^6.",
-  "scope": "Calibrated ideal conventional quantum optics; no loss/dark counts/partial-number-resolution modeling; no beyond-QM or TOE prediction."
+  "scope": "Calibrated ideal conventional quantum optics; no loss/dark counts/partial-number-resolution modeling; no beyond-QM or TOE prediction.",
+  "identical_input_ports_independent_in_both_graphs": true,
+  "common_port_four_output_triples": [
+    [
+      4,
+      14,
+      23
+    ],
+    [
+      4,
+      14,
+      32
+    ],
+    [
+      4,
+      23,
+      32
+    ],
+    [
+      14,
+      23,
+      32
+    ]
+  ],
+  "common_port_W33_aggregate_coefficients": [
+    17496,
+    52488,
+    34992
+  ],
+  "common_port_dual_aggregate_coefficients": [
+    3376,
+    1328,
+    -2048
+  ],
+  "common_port_strict_gap_coefficients": [
+    14120,
+    51160,
+    37040
+  ],
+  "ideal_registered_trial_budgets_0p001_each_error": [
+    {
+      "overlap": 0,
+      "N": 20333,
+      "W33_if_K_ge": 16,
+      "P_W33": 0.001536,
+      "P_dual": 0.0002963840877914952,
+      "false_W33_given_dual": 0.0005318456401068845,
+      "false_dual_given_W33": 0.0009998052495366844
+    },
+    {
+      "overlap": 0.5,
+      "N": 6881,
+      "W33_if_K_ge": 9,
+      "P_W33": 0.003072,
+      "P_dual": 0.0003030562414266118,
+      "false_W33_given_dual": 0.0003198108549339141,
+      "false_dual_given_W33": 0.0009984146256534104
+    },
+    {
+      "overlap": 0.8,
+      "N": 2437,
+      "W33_if_K_ge": 5,
+      "P_W33": 0.0060579840000000015,
+      "P_dual": 0.000278943780521262,
+      "false_W33_given_dual": 0.0006877165854036465,
+      "false_dual_given_W33": 0.0009985789905135518
+    },
+    {
+      "overlap": 1,
+      "N": 1413,
+      "W33_if_K_ge": 4,
+      "P_W33": 0.009216,
+      "P_dual": 0.00023317421124828533,
+      "false_W33_given_dual": 0.00037645447190943186,
+      "false_dual_given_W33": 0.000994930338996238
+    }
+  ]
 }

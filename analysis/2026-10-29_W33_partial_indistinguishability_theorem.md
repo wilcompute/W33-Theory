@@ -30,3 +30,30 @@ An exact independent replay recomputes all 3240 independent input triples on eac
 Reproduce:
     python analysis/w33_20261029_three_photon_partial_overlap.py
     python -m unittest discover -s tests -p test_w33_20261029_partial_overlap.py -v
+
+## Same precommitted ports: exact four-event test and sample-budget extension
+
+To ensure a physically fair comparison, the exact verifier now chooses the same independent triple **(0,7,9)** for both W33 point and orthogonal dual graphs, using the repository's canonical mode order. Its W33 common neighbors are (4,14,23,32). Designate all four 3-element output subsets of these as the success event. They are fixed *before* data collection.
+
+For uniform real pairwise internal-photon overlap s in [0,1], the EXACT aggregate probabilities are
+
+    P_W33(s)=[17496 + 52488*s^2 + 34992*s^3]/11390625
+    P_dual(s)=[3376 + 1328*s^2 - 2048*s^3]/11390625
+
+so the fixed-port aggregate gap is
+
+    Delta(s)=[14120 + 51160*s^2 + 37040*s^3]/11390625 > 0.
+
+The dual expression is nonnegative throughout [0,1] despite its negative cubic interference term. The s=1 limit recovers the already-established perfect-indistinguishability protocol with P_W33=0.009216, P_dual=2656/11390625. At s=0, P_W33=0.001536 and P_dual=3376/11390625; this remains a valid graph test, now using classical distinguishable-photon amplitudes.
+
+For independent ideal **registered triple-photon trials**, the script evaluates binomial error probabilities with SciPy, using a deterministic threshold K>=k on the count of successful four-port events. To keep each of the two wrong-classification probabilities strictly below 0.001, minimal integer N under this fixed threshold-test family are:
+
+| Pairwise overlap s | Minimum N | W33 if K>=k |
+|---:|---:|---:|
+| 0 | 20333 | 16 |
+| 0.5 | 6881 | 9 |
+| 0.8 | 2437 | 5 |
+| 1 | 1413 | 4 |
+
+The verifier explicitly checks both binomial error tails and confirms no integer threshold works with N-1 trials in each row. This is an *ideal* statistical bound, not an account of source brightness, optical transmission, detector inefficiency, timing or device calibration. The N=1500 result from the prior repo applies near the indistinguishable ideal, not at arbitrary s. The source code uses SciPy for this additional numerical statistic; the exact algebraic graph witness does not depend on SciPy.
+
