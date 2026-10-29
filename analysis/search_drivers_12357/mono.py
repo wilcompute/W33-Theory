@@ -11,13 +11,13 @@ from scipy.optimize import milp, LinearConstraint, Bounds
 HERE = os.path.dirname(os.path.abspath(__file__))
 M_ = os.environ.get('MONO_MODEL', 'Z6II_23_SM_20260917_2913_v6')
 yv = json.load(open(os.path.join(HERE, '../search_drivers_12351/yvec.json'))); ch = json.load(open(os.path.join(HERE, '../search_drivers_12351/chiral.json')))
-Yv = [sp.Rational(x) for x in yv[re.search(r'(SM_20260917_\d+)', M_).group(1)]['Yvec']]
-I3, I2 = ch[M_]['SU3'], ch[M_]['SU2']
+Yv = [sp.Rational(x) for x in (json.loads(os.environ['MONO_Y']) if os.environ.get('MONO_Y') else yv[re.search(r'(SM_20260917_\d+)', M_).group(1)]['Yvec'])]
+I3, I2 = (int(os.environ['MONO_I3']), int(os.environ['MONO_I2'])) if os.environ.get('MONO_I3') else (ch[M_]['SU3'], ch[M_]['SU2'])
 th = np.zeros((6, 6), dtype=np.int64)
 th[0:2, 0:2] = [[1, -1], [1, 0]]; th[2:4, 2:4] = [[0, -1], [1, -1]]; th[4:6, 4:6] = -np.eye(2, dtype=np.int64)
 D6 = {k: np.eye(6, dtype=np.int64) - np.linalg.matrix_power(th, k) for k in range(1, 6)}
 def load(p=None):
-    p = p or next(q for q in (os.path.join(HERE, f'../search_drivers_12302/bro/{M_}__ctrl.nsoq'), os.path.join(HERE, f'../search_drivers_12281/bro/{M_}__ctrl.nsoq')) if os.path.exists(q))
+    p = p or os.environ.get('MONO_PATH') or next(q for q in (os.path.join(HERE, f'../search_drivers_12302/bro/{M_}__ctrl.nsoq'), os.path.join(HERE, f'../search_drivers_12281/bro/{M_}__ctrl.nsoq')) if os.path.exists(q))
     roots = []
     for l in open(p, errors='ignore'):
         if l.startswith('FACTOR'):

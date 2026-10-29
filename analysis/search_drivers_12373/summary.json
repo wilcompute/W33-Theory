@@ -1,0 +1,28 @@
+{
+ "sampled": 15000,
+ "strict": 7391,
+ "tachyon_free": 2141,
+ "three_doublet": 202,
+ "three_doublet_by_parent": {
+  "2618": 34,
+  "574": 40,
+  "2503": 26,
+  "2913": 41,
+  "1105": 61
+ },
+ "radius_classes": {
+  "large-T,small-clean": 47,
+  "large-clean,small-clean": 27,
+  "large-clean,small-T": 75,
+  "large-T,small-T": 53
+ },
+ "large_safe": 102,
+ "y_independent_exotics": 43,
+ "all_radius_exotic_free": 27,
+ "base_hypercharge_found": 0,
+ "pairings_tested": 65,
+ "pairing_hypercharge_found": 0,
+ "relaxed_done": 18,
+ "relaxed_of": 59,
+ "relaxed_found": 0
+}

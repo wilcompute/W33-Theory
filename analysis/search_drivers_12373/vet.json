@@ -1,0 +1,555 @@
+{
+ "Z6II_12_SM_20260917_574_c420": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c2514": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c108": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c1146": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(-3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c2082": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 2
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c1729": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_2503_c632": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c710": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_2503_c39": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_12_SM_20260917_2503_c208": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c262": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c268": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1972": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1163": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c1241": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c2981": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c2387": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c2526": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c822": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c2316": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c931": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c91": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1880": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c1472": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c1268": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c1017": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c2277": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1791": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c310": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c694": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c604": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c1889": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c143": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c2759": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1428": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c18": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c546": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c900": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 2
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c2568": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c1537": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c577": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c1904": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c1778": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c926": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1586": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c2895": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1797": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1288": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1710": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c1080": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c822": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c2304": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1098": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1759": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1045": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c2107": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c584": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c2276": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c2228": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1287": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c2925": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c9": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c2194": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c1480": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(-3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c2608": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c2183": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c1308": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c2754": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_12_SM_20260917_574_c2173": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c1807": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(-3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c2575": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c722": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c2498": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c2288": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_12_SM_20260917_574_c1377": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c1695": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c2367": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_2503_c2512": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c1552": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c2836": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c185": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c2771": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c2681": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c1937": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c2496": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c2490": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c924": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(-3, 1, 1, 2)": 1
+  }
+ },
+ "Z6II_23_SM_20260917_2913_c2766": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1608": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c2221": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c1267": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c2641": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c1154": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_23_SM_20260917_2913_c140": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c2768": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 2
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c813": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_59_SM_20260917_1105_c2373": {
+  "all_radius": false,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_574_c2650": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c2866": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ },
+ "Z6II_59_SM_20260917_1105_c1798": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, 3, 1)": 2
+  }
+ },
+ "Z6II_12_SM_20260917_574_c683": {
+  "all_radius": true,
+  "y_independent_exotics": {},
+  "hypercharges": []
+ },
+ "Z6II_12_SM_20260917_2503_c767": {
+  "all_radius": false,
+  "y_independent_exotics": {
+   "(1, 2, -3, 1)": 1
+  }
+ }
+}

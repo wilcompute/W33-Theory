@@ -9,7 +9,7 @@ import numpy as np
 import sympy as sp
 from scipy.optimize import milp, LinearConstraint, Bounds
 M, I3, I2 = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]); NSOL = int(sys.argv[4]) if len(sys.argv) > 4 else 6
-p = f'../search_drivers_12281/bro/{M}__ctrl.nsoq'
+p = os.environ.get('YS_NSOQ') or f'../search_drivers_12281/bro/{M}__ctrl.nsoq'
 if not os.path.exists(p): p = p.replace('12281', '12302')
 roots = []; fields = []; cur = None
 for l in open(p, errors='ignore'):
