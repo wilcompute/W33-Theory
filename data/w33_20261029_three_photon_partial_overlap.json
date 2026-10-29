@@ -82,12 +82,12 @@
   "ideal_registered_trial_budgets_0p001_each_error": [
     {
       "overlap": 0,
-      "N": 20333,
-      "W33_if_K_ge": 16,
+      "N": 19427,
+      "W33_if_K_ge": 15,
       "P_W33": 0.001536,
       "P_dual": 0.0002963840877914952,
-      "false_W33_given_dual": 0.0005318456401068845,
-      "false_dual_given_W33": 0.0009998052495366844
+      "false_W33_given_dual": 0.0009389460865577728,
+      "false_dual_given_W33": 0.0009997122453481305
     },
     {
       "overlap": 0.5,
