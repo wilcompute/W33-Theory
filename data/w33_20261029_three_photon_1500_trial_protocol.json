@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "scope": "Ideal port-labeled W(3,3) vs port-labeled dual, ordinary three-boson quantum optics",
+  "input_ports": [
+    0,
+    7,
+    9
+  ],
+  "independent_in_both_graphs": true,
+  "point_common_neighbor_ports": [
+    4,
+    14,
+    23,
+    32
+  ],
+  "designated_output_triplets": [
+    [
+      4,
+      14,
+      23
+    ],
+    [
+      4,
+      14,
+      32
+    ],
+    [
+      4,
+      23,
+      32
+    ],
+    [
+      14,
+      23,
+      32
+    ]
+  ],
+  "point_probability_numerators": [
+    26244,
+    26244,
+    26244,
+    26244
+  ],
+  "dual_probability_numerators": [
+    784,
+    1024,
+    784,
+    64
+  ],
+  "common_probability_denominator": 11390625,
+  "W33_event_probability": "144/15625",
+  "dual_event_probability": "2656/11390625",
+  "ideal_registered_three_photon_trials": 1500,
+  "decision_rule": "Choose W33 if event count >= 4; else dual",
+  "dual_false_W33_probability": 0.0004705969401694378,
+  "W33_false_dual_probability": 0.0005245337713091489,
+  "experimental_assumptions": "Exactly three perfectly indistinguishable input photons in each trial; lossless unitary; labeled modes and phase calibrations fixed; ideal number-resolving detection. All three-photon outcomes including output bunching count as trials.",
+  "limits": "No physical hardware experiment, no beyond-quantum-mechanics prediction. Detection loss, distinguishability, systematic mode relabelings and uncertain calibration alter error rates."
+}
