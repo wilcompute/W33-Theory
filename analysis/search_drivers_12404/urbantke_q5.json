@@ -1,0 +1,19 @@
+{
+ "q": 5,
+ "extension": false,
+ "controls": {
+  "elliptic, kappa^2 scalar has closure: False": [
+   35,
+   0
+  ],
+  "hyperbolic, kappa^2 scalar has closure: True": [
+   25,
+   25
+  ]
+ },
+ "sampled": 400,
+ "metric": 400,
+ "reconstructed_types": {
+  "hyperbolic": 400
+ }
+}
