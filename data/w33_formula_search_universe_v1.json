@@ -850845,6 +850845,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bc7cdfd377af4c2e084b1a67dfd5e41ad952776a998a33102b4f6f46542b5b48",
+      "normalized_formula": "Thesearenotarbitrarynumerologicalcounts:the28nondegeneratealternatingformsformoneorbitunder`GL4(2)`(order20160),with`Sp4(2)`stabilizeroforder720.Thus^20160/720=28^.TheexistingW33`28/56/8`workbenchalsofeaturesthese28finitepointsandtheir8-labelcombinatorialstructure;nocanonicalmapfromtheselectedgaugekerneltoonenamed8-labelpairisassertedwithoutfixinganequivariantidentification",
+      "numeric_literals": [
+        "0160",
+        "2",
+        "20",
+        "20160",
+        "28",
+        "3",
+        "56",
+        "720",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-28_f2_klein_native_gauge_bridge.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/2026-10-28_f2_klein_native_gauge_bridge.md",
+          "raw": "These are not arbitrary numerological counts: the 28 nondegenerate alternating forms form one orbit under `GL4(2)` (order 20160), with `Sp4(2)` stabilizer of order 720. Thus **20160/720=28**. The existing W33 `28/56/8` workbench also features these 28 finite points and their 8-label combinatorial structure; no canonical map from the selected gauge kernel to one named 8-label pair is asserted without fixing an equivariant identification.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "29f52902e9cc5decce96541a724628c4efcf404e758b2f1ecb2680fa2445b42c",
+      "structural_formula": "Thesearenotarbitrarynumerologicalcounts:the2#nondegeneratealternatingformsformoneorbitunder`GL4(#)`(order2#),with`Sp4(#)`stabilizeroforder7#.Thus^#/#=#^.TheexistingW3#`#/#/#`workbenchalsofeaturesthese2#finitepointsandtheir8-labelcombinatorialstructure;nocanonicalmapfromtheselectedgaugekerneltoonenamed8-labelpairisassertedwithoutfixinganequivariantidentification"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b3f1266c332a4bd933f2efa8fbb07d3a0bf8bd6dd9335f3595555fbad0597d70",
       "normalized_formula": "Thesearerelativesquared-VEVweights.Theygive`sum_sa_sQ_s=(-1,0,0,0,0,0,0,0,0)`exactly(FInormalization-1),eachisnonabelian-singletandhyperchargeneutral,andthereisanadmissiblecontinuousB-Lchargedirectionwith`3(B-L)=0`onallsix.Thisisan^explicitcounterexampletothe*amendedassignment-aware*D-flatno-go^,notacounterexampletotheliteraloverconstrainedall-bdgate'salgebra",
       "numeric_literals": [
@@ -1131975,6 +1132010,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4661cc02e0a7af371b4f9f453aa8c4dcf8397c698d9ab54ce8fb24cbbe7fda4c",
+      "normalized_formula": "assertlen(points)=63andlen(singular)=35andlen(nonsingular)=28",
+      "numeric_literals": [
+        "28",
+        "35",
+        "63"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_f2_klein_native_gauge_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 77,
+          "path": "analysis/w33_20261028_f2_klein_native_gauge_bridge.py",
+          "raw": "assert len(points)==63 and len(singular)==35 and len(nonsingular)==28",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7643311f3746cfdb7338b1e8d2beea62139911d5170da77b5c0c3be4849bd0ea",
+      "structural_formula": "assertlen(points)=#andlen(singular)=#andlen(nonsingular)=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b868cfd35e63b39e12abf399f4d7d91a824882e64134717182a8e7dd7fb2c9f3",
       "normalized_formula": "assertlen(positive)=12andlen(zero)=2andmin(ev)>-mp.mpf('1e-65')",
       "numeric_literals": [
@@ -1133171,6 +1133235,34 @@
       },
       "structural_family_id": "3828c1933218a5881722e8e778afd9cc559d977698a48062ff1d228234710759",
       "structural_formula": "assertlen(singular_planes)=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "6c8f34f411716f961d4866c0a63a7295984ae654e27c4755271b12086096a538",
+      "normalized_formula": "assertlen(singular_points)=1andlen(nonsingular_points)=6",
+      "numeric_literals": [
+        "1",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_f2_klein_native_gauge_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 89,
+          "path": "analysis/w33_20261028_f2_klein_native_gauge_bridge.py",
+          "raw": "assert len(singular_points)==1 and len(nonsingular_points)==6",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "1b2e80a49ae4ed81d1ae5e6787150d28eb7ab335ead1afc150602553d65803c7",
+      "structural_formula": "assertlen(singular_points)=#andlen(nonsingular_points)=#"
     },
     {
       "file_count": 1,
@@ -1481232,6 +1481324,31 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9bcc5c4f4ab78cf257621fa8e7ef0cef3a723ddf21fbe564bda15eba7b57a458",
+      "normalized_formula": "nonsingular=[pforpinpointsifpf(p)",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_f2_klein_native_gauge_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 76,
+          "path": "analysis/w33_20261028_f2_klein_native_gauge_bridge.py",
+          "raw": "nonsingular=[p for p in points if pf(p)%2]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "9bcc5c4f4ab78cf257621fa8e7ef0cef3a723ddf21fbe564bda15eba7b57a458",
+      "structural_formula": "nonsingular=[pforpinpointsifpf(p)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b31858bc4c6477a3e259d1d5edba611c7a511626210e75a77112bd477ad37778",
       "normalized_formula": "nonsingular=[vforvinVifqminus(v)=1]",
       "numeric_literals": [
@@ -1481372,6 +1481489,31 @@
       },
       "structural_family_id": "24a710b6c8860113e61b499fffa30b4ec6c7d7075555d5d301ac897bb3b893ed",
       "structural_formula": "nonsingular=tuple(xforxinrange(#,#)ifquadratic(x)=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "04f141c63a0c781bf43b87a9b8d6caebe8c8c21dd38d2119fce9c13257d2c93d",
+      "normalized_formula": "nonsingular_points={tuple(x['primitive_kernel'][t]",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_f2_klein_native_gauge_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 88,
+          "path": "analysis/w33_20261028_f2_klein_native_gauge_bridge.py",
+          "raw": "nonsingular_points={tuple(x['primitive_kernel'][t]%2 for t in range(6)) for x in odd}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "04f141c63a0c781bf43b87a9b8d6caebe8c8c21dd38d2119fce9c13257d2c93d",
+      "structural_formula": "nonsingular_points={tuple(x['primitive_kernel'][t]"
     },
     {
       "file_count": 1,
@@ -1754373,6 +1754515,31 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a92bdbf9b819fc44c5996f6eb39fdda0c18ad90813a1cb5494c1f61b13c7000e",
+      "normalized_formula": "singular=[pforpinpointsifpf(p)",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_f2_klein_native_gauge_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 75,
+          "path": "analysis/w33_20261028_f2_klein_native_gauge_bridge.py",
+          "raw": "singular=[p for p in points if pf(p)%2==0]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a92bdbf9b819fc44c5996f6eb39fdda0c18ad90813a1cb5494c1f61b13c7000e",
+      "structural_formula": "singular=[pforpinpointsifpf(p)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6cc2b87fbcbecadd37165f12501f829dd7c28c035f45b19377c3cb98cc2e0302",
       "normalized_formula": "singular=[vforv,cinlinks.items()iflen(c)!=1]",
       "numeric_literals": [
@@ -1755340,6 +1755507,31 @@
       },
       "structural_family_id": "16a30a1b3a0600d926ff976ade756b9b31490644ac386cd45421786fe0331aea",
       "structural_formula": "singular_planes=[SforSinplanesifall(qdet(x)=#forxinS)]"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "e781b6aa76a4dcd515bfd36270ac7466a3a184deebe4bcd3675824a67e449704",
+      "normalized_formula": "singular_points={tuple(x['primitive_kernel'][t]",
+      "numeric_literals": [],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261028_f2_klein_native_gauge_bridge.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 87,
+          "path": "analysis/w33_20261028_f2_klein_native_gauge_bridge.py",
+          "raw": "singular_points={tuple(x['primitive_kernel'][t]%2 for t in range(6)) for x in even}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e781b6aa76a4dcd515bfd36270ac7466a3a184deebe4bcd3675824a67e449704",
+      "structural_formula": "singular_points={tuple(x['primitive_kernel'][t]"
     },
     {
       "file_count": 1,
@@ -1903395,9 +1903587,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-28T23:16:34-04:00",
+  "frozen_at": "2026-10-28T23:21:26-04:00",
   "pass": 398,
-  "repository_head": "67cbaba6193b7eaa42494ff195eaaa52335eb1e0",
+  "repository_head": "ccd7a7165b3deac7586aac4b1ac7bd85d060247c",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2132694,6 +2132886,14 @@
     },
     {
       "exact_formula_ids": [
+        "bc7cdfd377af4c2e084b1a67dfd5e41ad952776a998a33102b4f6f46542b5b48"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "29f52902e9cc5decce96541a724628c4efcf404e758b2f1ecb2680fa2445b42c",
+      "structural_formula": "Thesearenotarbitrarynumerologicalcounts:the2#nondegeneratealternatingformsformoneorbitunder`GL4(#)`(order2#),with`Sp4(#)`stabilizeroforder7#.Thus^#/#=#^.TheexistingW3#`#/#/#`workbenchalsofeaturesthese2#finitepointsandtheir8-labelcombinatorialstructure;nocanonicalmapfromtheselectedgaugekerneltoonenamed8-labelpairisassertedwithoutfixinganequivariantidentification"
+    },
+    {
+      "exact_formula_ids": [
         "b3f1266c332a4bd933f2efa8fbb07d3a0bf8bd6dd9335f3595555fbad0597d70"
       ],
       "exact_member_count": 1,
@@ -2205572,6 +2205772,14 @@
     },
     {
       "exact_formula_ids": [
+        "4661cc02e0a7af371b4f9f453aa8c4dcf8397c698d9ab54ce8fb24cbbe7fda4c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7643311f3746cfdb7338b1e8d2beea62139911d5170da77b5c0c3be4849bd0ea",
+      "structural_formula": "assertlen(points)=#andlen(singular)=#andlen(nonsingular)=#"
+    },
+    {
+      "exact_formula_ids": [
         "b868cfd35e63b39e12abf399f4d7d91a824882e64134717182a8e7dd7fb2c9f3"
       ],
       "exact_member_count": 1,
@@ -2205899,6 +2206107,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3828c1933218a5881722e8e778afd9cc559d977698a48062ff1d228234710759",
       "structural_formula": "assertlen(singular_planes)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "6c8f34f411716f961d4866c0a63a7295984ae654e27c4755271b12086096a538"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "1b2e80a49ae4ed81d1ae5e6787150d28eb7ab335ead1afc150602553d65803c7",
+      "structural_formula": "assertlen(singular_points)=#andlen(nonsingular_points)=#"
     },
     {
       "exact_formula_ids": [
@@ -2300356,6 +2300572,14 @@
     },
     {
       "exact_formula_ids": [
+        "9bcc5c4f4ab78cf257621fa8e7ef0cef3a723ddf21fbe564bda15eba7b57a458"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9bcc5c4f4ab78cf257621fa8e7ef0cef3a723ddf21fbe564bda15eba7b57a458",
+      "structural_formula": "nonsingular=[pforpinpointsifpf(p)"
+    },
+    {
+      "exact_formula_ids": [
         "b31858bc4c6477a3e259d1d5edba611c7a511626210e75a77112bd477ad37778"
       ],
       "exact_member_count": 1,
@@ -2300385,6 +2300609,14 @@
       "exact_member_count": 1,
       "structural_family_id": "24a710b6c8860113e61b499fffa30b4ec6c7d7075555d5d301ac897bb3b893ed",
       "structural_formula": "nonsingular=tuple(xforxinrange(#,#)ifquadratic(x)=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "04f141c63a0c781bf43b87a9b8d6caebe8c8c21dd38d2119fce9c13257d2c93d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "04f141c63a0c781bf43b87a9b8d6caebe8c8c21dd38d2119fce9c13257d2c93d",
+      "structural_formula": "nonsingular_points={tuple(x['primitive_kernel'][t]"
     },
     {
       "exact_formula_ids": [
@@ -2372932,6 +2373164,14 @@
     },
     {
       "exact_formula_ids": [
+        "a92bdbf9b819fc44c5996f6eb39fdda0c18ad90813a1cb5494c1f61b13c7000e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a92bdbf9b819fc44c5996f6eb39fdda0c18ad90813a1cb5494c1f61b13c7000e",
+      "structural_formula": "singular=[pforpinpointsifpf(p)"
+    },
+    {
+      "exact_formula_ids": [
         "6cc2b87fbcbecadd37165f12501f829dd7c28c035f45b19377c3cb98cc2e0302"
       ],
       "exact_member_count": 1,
@@ -2373185,6 +2373425,14 @@
       "exact_member_count": 1,
       "structural_family_id": "16a30a1b3a0600d926ff976ade756b9b31490644ac386cd45421786fe0331aea",
       "structural_formula": "singular_planes=[SforSinplanesifall(qdet(x)=#forxinS)]"
+    },
+    {
+      "exact_formula_ids": [
+        "e781b6aa76a4dcd515bfd36270ac7466a3a184deebe4bcd3675824a67e449704"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e781b6aa76a4dcd515bfd36270ac7466a3a184deebe4bcd3675824a67e449704",
+      "structural_formula": "singular_points={tuple(x['primitive_kernel'][t]"
     },
     {
       "exact_formula_ids": [
@@ -2412129,20 +2412377,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92317577,
-    "exact_formula_families": 65082,
-    "files_scanned": 12692,
-    "formula_occurrences": 71218,
+    "bytes_scanned": 92326825,
+    "exact_formula_families": 65089,
+    "files_scanned": 12694,
+    "formula_occurrences": 71225,
     "status_occurrences": {
       "certified_or_theorem": 5345,
       "killed_or_retracted": 1932,
       "open_or_conditional": 2405,
       "preregistered": 36,
       "retrospective_fit": 5418,
-      "unclassified": 56082
+      "unclassified": 56089
     },
-    "structural_families": 63372
+    "structural_families": 63379
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "3c6e61c65524daa66d5e6b9cb40be772833a29ac24398662e7f3350920fdb85f"
+  "universe_sha256": "969c66b6f9606d51822d3120206f0ff0f6daf848a3555e969c9e58a960ede17a"
 }
