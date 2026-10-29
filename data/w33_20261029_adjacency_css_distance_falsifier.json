@@ -1,0 +1,74 @@
+{
+  "proof": "Injective fixed 64-bit linear projection on all d-element adjacency column sums certifies no even kernel word of weight <=2d; even parity follows from 1 in im A. Intersecting line differences certify nonstabilizer upper bound.",
+  "results": [
+    {
+      "q": 5,
+      "n": 156,
+      "rank_A": 66,
+      "k": 24,
+      "weight_exclusion_through": 8,
+      "distance_lower_bound": 10,
+      "distance_upper_bound": 10,
+      "witness": {
+        "weight": 10,
+        "support": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          31,
+          32,
+          33,
+          34,
+          35
+        ],
+        "not_a_stabilizer": true
+      },
+      "collision_certificate": {
+        "degree": 4,
+        "combinations": 23738715,
+        "projected_collisions": 0,
+        "sorted_projection_sha256": "d953d08deb2217f5b252c76d181fd426fefcac5fbca28e700cdd3a50b2ff8dbc",
+        "linear_projection_seed": "W33-20261029-FIXED-LINEAR-PROJECTION-v1"
+      },
+      "distance_exact": 10
+    },
+    {
+      "q": 7,
+      "n": 400,
+      "rank_A": 176,
+      "k": 48,
+      "weight_exclusion_through": 6,
+      "distance_lower_bound": 8,
+      "distance_upper_bound": 14,
+      "witness": {
+        "weight": 14,
+        "support": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "not_a_stabilizer": true
+      },
+      "collision_certificate": {
+        "degree": 3,
+        "combinations": 10586800,
+        "projected_collisions": 0,
+        "sorted_projection_sha256": "8fefd08b4c49086abd03b136876c7b8bd103bf50924696046961881031276dac",
+        "linear_projection_seed": "W33-20261029-FIXED-LINEAR-PROJECTION-v1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "scope": "explicit noncanonical finite quadratic-space isometry; not integral lattice or dynamical equivariance",
+  "W33_logical_hyperbolic_representatives": [
+    58515,
+    29361299,
+    640224,
+    138513745074,
+    327794688,
+    550292799570,
+    306247045,
+    306245990
+  ],
+  "E8_simple_root_hyperbolic_representatives": [
+    5,
+    9,
+    20,
+    18,
+    38,
+    51,
+    85,
+    253
+  ],
+  "E8_Dynkin_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      2,
+      7
+    ]
+  ],
+  "roots": 240,
+  "root_mod2_antipodal_classes": 120,
+  "nonzero_classes_q1": 120,
+  "checked_group_generators": [
+    {
+      "transvection_u": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "E8_simple_root_mod2_columns": [
+        74,
+        15,
+        101,
+        200,
+        87,
+        126,
+        140,
+        56
+      ],
+      "logical_hyperbolic_columns": [
+        18,
+        211,
+        20,
+        119,
+        4,
+        111,
+        130,
+        82
+      ]
+    },
+    {
+      "transvection_u": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "E8_simple_root_mod2_columns": [
+        137,
+        149,
+        128,
+        45,
+        178,
+        1,
+        91,
+        132
+      ],
+      "logical_hyperbolic_columns": [
+        2,
+        195,
+        20,
+        36,
+        4,
+        248,
+        134,
+        70
+      ]
+    },
+    {
+      "transvection_u": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "E8_simple_root_mod2_columns": [
+        96,
+        197,
+        128,
+        190,
+        178,
+        81,
+        137,
+        132
+      ],
+      "logical_hyperbolic_columns": [
+        134,
+        145,
+        20,
+        101,
+        4,
+        124,
+        144,
+        199
+      ]
+    },
+    {
+      "transvection_u": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "E8_simple_root_mod2_columns": [
+        74,
+        90,
+        140,
+        128,
+        190,
+        194,
+        145,
+        41
+      ],
+      "logical_hyperbolic_columns": [
+        150,
+        149,
+        20,
+        179,
+        4,
+        111,
+        132,
+        211
+      ]
+    },
+    {
+      "transvection_u": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "E8_simple_root_mod2_columns": [
+        181,
+        86,
+        127,
+        45,
+        56,
+        194,
+        69,
+        241
+      ],
+      "logical_hyperbolic_columns": [
+        149,
+        237,
+        72,
+        86,
+        189,
+        51,
+        255,
+        244
+      ]
+    },
+    {
+      "transvection_u": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "E8_simple_root_mod2_columns": [
+        197,
+        86,
+        15,
+        162,
+        135,
+        120,
+        138,
+        177
+      ],
+      "logical_hyperbolic_columns": [
+        149,
+        84,
+        220,
+        159,
+        40,
+        111,
+        162,
+        245
+      ]
+    },
+    {
+      "transvection_u": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "E8_simple_root_mod2_columns": [
+        1,
+        87,
+        128,
+        45,
+        249,
+        137,
+        48,
+        132
+      ],
+      "logical_hyperbolic_columns": [
+        222,
+        31,
+        95,
+        204,
+        123,
+        16,
+        70,
+        90
+      ]
+    }
+  ],
+  "complete_group_order": 25920,
+  "faithful_mod2_action_order": 25920,
+  "all_256_q_values_match": true
+}

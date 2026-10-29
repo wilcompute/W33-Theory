@@ -1,0 +1,12 @@
+{
+  "field": "F3[t]/(t^2+1)",
+  "v": 820,
+  "rank_A_mod2": 370,
+  "rank_N_mod2": 451,
+  "even_line_span_rank": 450,
+  "kernel_rank": 450,
+  "logical_dimension": 80,
+  "A_squared_zero_mod2": true,
+  "AN_equal_J_mod2": true,
+  "scope": "independent finite-field, finite-geometry code; distance remains unproved"
+}

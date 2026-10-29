@@ -1,0 +1,43 @@
+{
+  "W33_srg": {
+    "v": 40,
+    "degree": 12,
+    "adjacent_common_neighbors": 2,
+    "nonadjacent_common_neighbors": 4,
+    "A_squared_identity": "8I - 2A + 4J",
+    "integer_spectrum": {
+      "12": 1,
+      "2": 24,
+      "-4": 15
+    }
+  },
+  "invariant_dynamics_counterexample": {
+    "H1": "A",
+    "H2": "A+J/40",
+    "time": "pi in units where b=1",
+    "H1_site_return_probability": "1",
+    "H2_site_return_probability": "361/400",
+    "conclusion": "W33 symmetry alone does not fix a unique Hamiltonian or clock rate"
+  },
+  "one_photon_dimension": {
+    "40_modes_logical_qubit_ceiling": 5,
+    "240_modes_logical_qubit_ceiling": 7,
+    "256_modes_logical_qubit_ceiling": 8,
+    "full_adjacency_css_8_logical_requires_at_least_modes": 256,
+    "one_photon_40_mode_model_fails_8_logicals": true,
+    "one_photon_240_mode_model_fails_8_logicals": true
+  },
+  "loss_no_go": {
+    "eta": "9/10",
+    "orthogonal_input_trace_distance": "1",
+    "postloss_trace_distance": "9/10",
+    "exact_deterministic_recovery_impossible_for_eta_lt_1": true,
+    "heralded_survival_not_excluded": true,
+    "requires": "additional quantum carriers and a precise syndrome/erasure recovery model"
+  },
+  "limits": [
+    "no prediction of particle masses or GR",
+    "does not preclude encoding 4 qubits in 40 modes",
+    "does not preclude heralded or externally assisted photonic schemes"
+  ]
+}
