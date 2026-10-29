@@ -1,0 +1,56 @@
+{
+ "F2": {
+  "1": {
+   "min_region": 13,
+   "example_region_cut_rank": 9,
+   "example_region_size": 13
+  },
+  "2": {
+   "min_region": 18,
+   "example_region_cut_rank": 13,
+   "example_region_size": 18
+  },
+  "3": {
+   "min_region": 19,
+   "example_region_cut_rank": 15,
+   "example_region_size": 19
+  },
+  "4": {
+   "min_region": 14,
+   "example_region_cut_rank": 11,
+   "example_region_size": 14
+  },
+  "5": {
+   "min_region": 15,
+   "example_region_cut_rank": 12,
+   "example_region_size": 15
+  },
+  "6": {
+   "min_region": 6,
+   "example_region_cut_rank": 5,
+   "example_region_size": 6
+  }
+ },
+ "F3": {
+  "1": {
+   "min_region": 13,
+   "example_region_cut_rank": 6,
+   "example_region_size": 13
+  },
+  "2": {
+   "min_region": 18,
+   "example_region_cut_rank": 8,
+   "example_region_size": 18
+  },
+  "3": {
+   "min_region": 22,
+   "example_region_cut_rank": 10,
+   "example_region_size": 22
+  },
+  "4": {
+   "min_region": 18,
+   "example_region_cut_rank": 8,
+   "example_region_size": 18
+  }
+ }
+}

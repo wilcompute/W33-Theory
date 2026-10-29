@@ -17,7 +17,9 @@ for f in sorted(x for x in os.listdir(os.path.expanduser('~/orb/scan/sm')) if x.
     t = open(os.path.expanduser('~/orb/scan/sm/' + f)).read()
     for blk in t.split('begin model')[1:]:
         lab = re.search(r'Label:(\S+)', blk).group(1)
-        if lab not in WANT: continue
+        if os.environ.get('WANT_ALL'):
+            if lab in WANT: continue
+        elif lab not in WANT: continue
         rows = blk.split('Shifts and Wilsonlines:')[1].split('end model')[0].strip().splitlines()
         rows = [[F(x.strip(',')) for x in r.replace(',', ' ').split()] for r in rows]
         if all(x == 0 for x in rows[7]):
@@ -57,7 +59,7 @@ def best32(dump):
                 tot += (1 if d[i3] > 0 else -1) * x * mult
         if seen and abs(tot) > best: best, arg = abs(tot), (i3, i2)
     return best, arg
-log = open(f'{D}/scan_{WK}.jsonl', 'a')
+log = open(f'{D}/' + ('scan2_' if os.environ.get('WANT_ALL') else 'scan_') + f'{WK}.jsonl', 'a')
 for lab, rows in models:
     V, W = rows[0], rows[2:8]
     cands = all_candidates([V] + W)

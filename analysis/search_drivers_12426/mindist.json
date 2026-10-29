@@ -1,0 +1,35 @@
+{
+ "3": {
+  "n": 40,
+  "k": 8,
+  "kernel_dim": 24,
+  "rounds": 60,
+  "min_logical_found": 6,
+  "min_stabiliser_found": 8,
+  "low_weight_logical_hits": {
+   "6": 2325
+  }
+ },
+ "5": {
+  "n": 156,
+  "k": 24,
+  "kernel_dim": 90,
+  "rounds": 60,
+  "min_logical_found": 10,
+  "min_stabiliser_found": 12,
+  "low_weight_logical_hits": {
+   "10": 1928
+  }
+ },
+ "7": {
+  "n": 400,
+  "k": 48,
+  "kernel_dim": 224,
+  "rounds": 6,
+  "min_logical_found": 14,
+  "min_stabiliser_found": 16,
+  "low_weight_logical_hits": {
+   "14": 82
+  }
+ }
+}

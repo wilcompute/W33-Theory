@@ -1,0 +1,32 @@
+{
+ "parents": 65,
+ "sampled": 15600,
+ "strict": 8458,
+ "tachyon_free": 759,
+ "three_doublet": 66,
+ "three_doublet_parents": 22,
+ "hidden_groups": {
+  "A3 + A3 and A2 + A1 NU1 7": 11,
+  "A2 + A1 and A1 + A1 + A1 + A1 NU1 9": 11,
+  "A1 + A1 + A1 + A1 and A2 + A1 NU1 9": 10,
+  "A3 + A1 + A1 and A2 + A1 NU1 8": 8,
+  "A2 + A1 and D4 + A3 NU1 6": 6,
+  "A2 + A1 and A2 + A1 NU1 10": 4,
+  "A2 + A1 + A1 and A1 + A1 NU1 10": 2,
+  "A2 + A1 and A1 + A1 NU1 11": 2
+ },
+ "radius_classes": {
+  "large-clean,small-clean": 15,
+  "large-T,small-clean": 19,
+  "large-T,small-T": 7,
+  "large-clean,small-T": 25
+ },
+ "large_safe": 40,
+ "y_independent_exotics": 17,
+ "exotic_free": 23,
+ "exotic_free_all_radius": 4,
+ "pairings": 23,
+ "pairing_hypercharge_found": 0,
+ "colour_only_feasible": 0,
+ "twin_present": 0
+}

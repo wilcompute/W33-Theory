@@ -1,0 +1,176 @@
+{
+  "12426": {
+    "3": {
+      "n": 40,
+      "k": 8,
+      "kernel_dim": 24,
+      "rounds": 60,
+      "min_logical_found": 6,
+      "min_stabiliser_found": 8,
+      "low_weight_logical_hits": {
+        "6": 2325
+      }
+    },
+    "5": {
+      "n": 156,
+      "k": 24,
+      "kernel_dim": 90,
+      "rounds": 60,
+      "min_logical_found": 10,
+      "min_stabiliser_found": 12,
+      "low_weight_logical_hits": {
+        "10": 1928
+      }
+    },
+    "7": {
+      "n": 400,
+      "k": 48,
+      "kernel_dim": 224,
+      "rounds": 6,
+      "min_logical_found": 14,
+      "min_stabiliser_found": 16,
+      "low_weight_logical_hits": {
+        "14": 82
+      }
+    }
+  },
+  "12427": {
+    "F2": {
+      "1": {
+        "min_region": 13,
+        "example_region_cut_rank": 9,
+        "example_region_size": 13
+      },
+      "2": {
+        "min_region": 18,
+        "example_region_cut_rank": 13,
+        "example_region_size": 18
+      },
+      "3": {
+        "min_region": 19,
+        "example_region_cut_rank": 15,
+        "example_region_size": 19
+      },
+      "4": {
+        "min_region": 14,
+        "example_region_cut_rank": 11,
+        "example_region_size": 14
+      },
+      "5": {
+        "min_region": 15,
+        "example_region_cut_rank": 12,
+        "example_region_size": 15
+      },
+      "6": {
+        "min_region": 6,
+        "example_region_cut_rank": 5,
+        "example_region_size": 6
+      }
+    },
+    "F3": {
+      "1": {
+        "min_region": 13,
+        "example_region_cut_rank": 6,
+        "example_region_size": 13
+      },
+      "2": {
+        "min_region": 18,
+        "example_region_cut_rank": 8,
+        "example_region_size": 18
+      },
+      "3": {
+        "min_region": 22,
+        "example_region_cut_rank": 10,
+        "example_region_size": 22
+      },
+      "4": {
+        "min_region": 18,
+        "example_region_cut_rank": 8,
+        "example_region_size": 18
+      }
+    }
+  },
+  "12428_12429": {
+    "12428_diameter": {
+      "3": 2,
+      "5": 2,
+      "7": 2
+    },
+    "12429": {
+      "flux": "1/3",
+      "band_chern": [
+        -1,
+        2,
+        -1
+      ],
+      "sum": 0,
+      "tknn": [
+        {
+          "r": 1,
+          "t": 1,
+          "s": 0.0,
+          "diophantine_ok": true
+        },
+        {
+          "r": 2,
+          "t": -1,
+          "s": 1.0,
+          "diophantine_ok": true
+        }
+      ],
+      "second_chern_two_qutrits": {
+        "0,0": 1,
+        "0,1": -2,
+        "0,2": 1,
+        "1,0": -2,
+        "1,1": 4,
+        "1,2": -2,
+        "2,0": 1,
+        "2,1": -2,
+        "2,2": 1
+      },
+      "lowest_band_pair_C2": 1,
+      "filled_lowest_bands_C2": 1
+    }
+  },
+  "12430_12432": {
+    "parents": 65,
+    "sampled": 15600,
+    "strict": 8458,
+    "tachyon_free": 759,
+    "three_doublet": 66,
+    "three_doublet_parents": 22,
+    "hidden_groups": {
+      "A3 + A3 and A2 + A1 NU1 7": 11,
+      "A2 + A1 and A1 + A1 + A1 + A1 NU1 9": 11,
+      "A1 + A1 + A1 + A1 and A2 + A1 NU1 9": 10,
+      "A3 + A1 + A1 and A2 + A1 NU1 8": 8,
+      "A2 + A1 and D4 + A3 NU1 6": 6,
+      "A2 + A1 and A2 + A1 NU1 10": 4,
+      "A2 + A1 + A1 and A1 + A1 NU1 10": 2,
+      "A2 + A1 and A1 + A1 NU1 11": 2
+    },
+    "radius_classes": {
+      "large-clean,small-clean": 15,
+      "large-T,small-clean": 19,
+      "large-T,small-T": 7,
+      "large-clean,small-T": 25
+    },
+    "large_safe": 40,
+    "y_independent_exotics": 17,
+    "exotic_free": 23,
+    "exotic_free_all_radius": 4,
+    "pairings": 23,
+    "pairing_hypercharge_found": 0,
+    "colour_only_feasible": 0,
+    "twin_present": 0
+  },
+  "checks": {
+    "12426: control q = 3 gives d = 6, stabiliser 8; q = 5, 7 lightest logicals found 2q (10, 14), stabilisers 2q + 2": true,
+    "12427: binary -- all regions of <= 5 points maximally entangled; smallest deficient regions have 6 points (hexads, cut-rank 5)": true,
+    "12428: diameter 2 for q = 3, 5, 7": true,
+    "12429: flux-1/3 Hofstadter Chern numbers +-(1, -2, 1), sum 0, TKNN Diophantine satisfied": true,
+    "12430-12432: 65 new parents, 15600 shifts -> 66 three-doublet models (22 parents), 40 large-radius safe, 23 exotic-free, no hypercharge in any pairing; all 23 colour-blocked (no twin sector)": true
+  },
+  "all_checks_pass": true
+}
