@@ -567606,6 +567606,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "da9d6742bbc335a8ab682a93ba28914f196874059eb77bb86c170532c18c4d41",
+      "normalized_formula": "Apositive-dimensionaltoruscosetmeetingtheunitarylocuswouldcontainacurveh_i=a_i*t^v_iwithintegerv!=0and|a_i|=1.Aftergroupingmonomialsbytheirexponentdotv,nogroupmaybeasingleton.Branchonasingletonandimposeequalitywitheachothercurrentgroup.Everytruedirectionisretainedinonebranch.Fourindependentequalitiesforcev=0andarerejected.Theexactsearchvisits232canonicalrationalsubspacesandleaves17possibledirections,allone-dimensional",
+      "numeric_literals": [
+        "0",
+        "1",
+        "32",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md",
+          "raw": "A positive-dimensional torus coset meeting the unitary locus would contain a curve h_i=a_i*t^v_i with integer v!=0 and |a_i|=1. After grouping monomials by their exponent dot v, no group may be a singleton. Branch on a singleton and impose equality with each other current group. Every true direction is retained in one branch. Four independent equalities force v=0 and are rejected. The exact search visits232 canonical rational subspaces and leaves17 possible directions, all one-dimensional.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "850fd2cb8b6ff76aee1f4b0259fb87dff0ecb07c2fc0ad7913f3f01522d14ec8",
+      "structural_formula": "Apositive-dimensionaltoruscosetmeetingtheunitarylocuswouldcontainacurveh_i=a_i*t^v_iwithintegerv!=#and|a_i|=#.Aftergroupingmonomialsbytheirexponentdotv,nogroupmaybeasingleton.Branchonasingletonandimposeequalitywitheachothercurrentgroup.Everytruedirectionisretainedinonebranch.Fourindependentequalitiesforcev=#andarerejected.Theexactsearchvisits2#canonicalrationalsubspacesandleaves1#possibledirections,allone-dimensional"
+    },
+    {
+      "file_count": 1,
       "formula_id": "cd076c159e94b7127d546953da5deea2c9ac6015418641b02097065926d6d08d",
       "normalized_formula": "Appleby'sextended-Cliffordconstructionsuppliesthestandardunitary/antiunitary(\\det=\\pm1)dictionary(arXiv:0909.5233).Jiang,WangandWang,*Quantum*^5^,600(2021),emphasizethatCPTPmapsarethephysicallyimplementabledeterministicquantumoperations,whilepositivenon-CPmapsarenot.Pollocketal.'sprocess-tensorframeworksuppliestheinterventionlanguagealreadyusedelsewhereinthisrepository",
       "numeric_literals": [
@@ -597610,6 +597640,34 @@
       },
       "structural_family_id": "3eecfc64b72673a8c62361b452d958e6c7388149ca6ff4c5914765b93f47680d",
       "structural_formula": "CombiningZwithanysinglefiberV_ggives8##=#dimensions"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "1ca7516ed3b2fa566921b461b565d65f4ddd064062ca098c0c9b5034d26c44c5",
+      "normalized_formula": "Commit67cbabaindependentlyownsthesix-positive-cosinerepairusingtwoaddednativecommutatorchannelsandthreesharedcoordinatetranslations.ThenewcertificategivesexactnonidentityunitaryQ=0witnessesforeverypairofinactivecoordinatedirections.Thereforeatleastthreecoordinatedirectionsarenecessarywhenthetwoaddedchannelssharethesamecoordinatetranslationset.Sixtermsareminimal^withinthatpreciselyrestrictedtwo-channelscheme^.Unequaltranslationsets,otherchannelsandgeneralnoncoordinaterepairsremainopen",
+      "numeric_literals": [
+        "0",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 38,
+          "path": "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md",
+          "raw": "Commit67cbaba independently owns the six-positive-cosine repair using two added native commutator channels and three shared coordinate translations. The new certificate gives exact nonidentity unitary Q=0 witnesses for every pair of inactive coordinate directions. Therefore at least three coordinate directions are necessary when the two added channels share the same coordinate translation set. Six terms are minimal **within that precisely restricted two-channel scheme**. Unequal translation sets, other channels and general noncoordinate repairs remain open.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "fec05b4a5b94e0ef47f7833a85fe2623858d67697a3a230836a5f823f7a7a3a5",
+      "structural_formula": "Commit6#cbabaindependentlyownsthesix-positive-cosinerepairusingtwoaddednativecommutatorchannelsandthreesharedcoordinatetranslations.ThenewcertificategivesexactnonidentityunitaryQ=#witnessesforeverypairofinactivecoordinatedirections.Thereforeatleastthreecoordinatedirectionsarenecessarywhenthetwoaddedchannelssharethesamecoordinatetranslationset.Sixtermsareminimal^withinthatpreciselyrestrictedtwo-channelscheme^.Unequaltranslationsets,otherchannelsandgeneralnoncoordinaterepairsremainopen"
     },
     {
       "file_count": 1,
@@ -767117,6 +767175,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "37f5cc8b0876990ab1fc9d14f593be56a0498c08dec7b021066d0fe50cbb52f5",
+      "normalized_formula": "Partitionthe13-termrationalvanishingsumatatorsionpointintominimalvanishingsubsums.Mann'stheoremmakeseachratioofmonomialsinablocka30030throot,where30030=2*3*5*7*11*13.Thelatticegeneratedbydifferencesofexponentswithinblockshasrank4:otherwiseanonzeroorthogonalintegerdirectionproducesaforbiddenunitarytoruscoset",
+      "numeric_literals": [
+        "0030",
+        "11",
+        "13",
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 26,
+          "path": "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md",
+          "raw": "Partition the13-term rational vanishing sum at a torsion point into minimal vanishing subsums. Mann's theorem makes each ratio of monomials in a block a30030th root, where30030=2*3*5*7*11*13. The lattice generated by differences of exponents within blocks has rank4: otherwise a nonzero orthogonal integer direction produces a forbidden unitary torus coset.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "8f33fab6efcacaec360c42269b4e35d660f6c92a36d0031ed52da59623209c6a",
+      "structural_formula": "Partitionthe1#-termrationalvanishingsumatatorsionpointintominimalvanishingsubsums.Mann'stheoremmakeseachratioofmonomialsinablocka3#throot,where3#=#*#*#*#*#*#.Thelatticegeneratedbydifferencesofexponentswithinblockshasrank4:otherwiseanonzeroorthogonalintegerdirectionproducesaforbiddenunitarytoruscoset"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6b06e3c99e1af5579c074aed753eac32cdb5ec737342239f94e02bb80edf0d74",
       "normalized_formula": "Pascal(1654)->CKMRV(2017)=363years",
       "numeric_literals": [
@@ -842781,6 +842872,36 @@
       },
       "structural_family_id": "4399f361e7d8edf20e54b49c1044ff6e8f2145e0dbbf1e6022434e38dd36f954",
       "structural_formula": "Thefirstnon-substrateconstant(F_5=#)emergesastheCheeger"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "739f884754875a8238e918aa9b252c6692aa3881a89aea0da5a85b9f75c34380",
+      "normalized_formula": "Thefirstthreecontradictunitmodulus.Forthelast,divisionbya_iandwritinga_i=x+iygives11x+6=0andy=0,incompatiblewithx^2+y^2=1.Thusnopositive-dimensionaltoruscosetcanmeettheunitaryzerolocus.FullequationsandbasesarestoredintheJSONcertificate",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 22,
+          "path": "analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md",
+          "raw": "The first three contradict unit modulus. For the last, division by a_i and writing a_i=x+iy gives11x+6=0 and y=0, incompatible with x^2+y^2=1. Thus no positive-dimensional torus coset can meet the unitary zero locus. Full equations and bases are stored in the JSON certificate.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "b8c761f814c787734aa34f2cb3a4c903dd9ed10300c9cc98c149525ceeae4726",
+      "structural_formula": "Thefirstthreecontradictunitmodulus.Forthelast,divisionbya_iandwritinga_i=x+iygives1#x+#=#andy=#,incompatiblewithx^#+y^#=#.Thusnopositive-dimensionaltoruscosetcanmeettheunitaryzerolocus.FullequationsandbasesarestoredintheJSONcertificate"
     },
     {
       "file_count": 1,
@@ -1363938,6 +1364059,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "0526ab3d74a4de12b51420ef8451540164eaafabba30c8c2fb9598e76ca4e6dc",
+      "normalized_formula": "i=single[0]",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12346_torsion_repair_certificate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 34,
+          "path": "analysis/w33_pass12346_torsion_repair_certificate.py",
+          "raw": "i=single[0]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ed035e01e7690a8c9819287af7afa69ec38cb63b2503a1e2d68b07bbdf4ba9ac",
+      "structural_formula": "i=single[#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b377b431458b91701efdd004f396c622fde3c336c36d9d487598bba4e4cb2dc9",
       "normalized_formula": "iEgoIEQSxsa(gm_wU1dlto<5CDh41NZF<SOuv1o;ybGkv9yEcjx^OGaZdmi9uZkb2)R~>ynCq",
       "numeric_literals": [
@@ -1753576,6 +1753724,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bdb5174a72463af9f1e23531ead66743b966a664c80d9afdd07ded7af77fc0bd",
+      "normalized_formula": "single=[g[0]forgingroups.values()iflen(g)=1]",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12346_torsion_repair_certificate.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/w33_pass12346_torsion_repair_certificate.py",
+          "raw": "single=[g[0] for g in groups.values() if len(g)==1]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0a7a4b0ccc1f5a1363dbf574eb2b25e40a4eb9eb006ebb7e1dfb51f22c998bc4",
+      "structural_formula": "single=[g[#]forgingroups.values()iflen(g)=#]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "65a03166682993e7faa898d873a6dc3aea3e008f357a05b89c3abdc5d532c19c",
       "normalized_formula": "single=[ifori,cinenumerate(color)ifcounts[c]=1andnp.any(params[i])];basis=[]",
       "numeric_literals": [
@@ -1906415,9 +1906591,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T10:21:16-04:00",
+  "frozen_at": "2026-10-29T10:49:20-04:00",
   "pass": 398,
-  "repository_head": "156f212d1d44d38f529f0bf7e9d464ee1d14fe03",
+  "repository_head": "1477a2f423601d4d7132a75c86708c843b9245e6",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2059126,6 +2059302,14 @@
     },
     {
       "exact_formula_ids": [
+        "da9d6742bbc335a8ab682a93ba28914f196874059eb77bb86c170532c18c4d41"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "850fd2cb8b6ff76aee1f4b0259fb87dff0ecb07c2fc0ad7913f3f01522d14ec8",
+      "structural_formula": "Apositive-dimensionaltoruscosetmeetingtheunitarylocuswouldcontainacurveh_i=a_i*t^v_iwithintegerv!=#and|a_i|=#.Aftergroupingmonomialsbytheirexponentdotv,nogroupmaybeasingleton.Branchonasingletonandimposeequalitywitheachothercurrentgroup.Everytruedirectionisretainedinonebranch.Fourindependentequalitiesforcev=#andarerejected.Theexactsearchvisits2#canonicalrationalsubspacesandleaves1#possibledirections,allone-dimensional"
+    },
+    {
+      "exact_formula_ids": [
         "cd076c159e94b7127d546953da5deea2c9ac6015418641b02097065926d6d08d"
       ],
       "exact_member_count": 1,
@@ -2067258,6 +2067442,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3eecfc64b72673a8c62361b452d958e6c7388149ca6ff4c5914765b93f47680d",
       "structural_formula": "CombiningZwithanysinglefiberV_ggives8##=#dimensions"
+    },
+    {
+      "exact_formula_ids": [
+        "1ca7516ed3b2fa566921b461b565d65f4ddd064062ca098c0c9b5034d26c44c5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "fec05b4a5b94e0ef47f7833a85fe2623858d67697a3a230836a5f823f7a7a3a5",
+      "structural_formula": "Commit6#cbabaindependentlyownsthesix-positive-cosinerepairusingtwoaddednativecommutatorchannelsandthreesharedcoordinatetranslations.ThenewcertificategivesexactnonidentityunitaryQ=#witnessesforeverypairofinactivecoordinatedirections.Thereforeatleastthreecoordinatedirectionsarenecessarywhenthetwoaddedchannelssharethesamecoordinatetranslationset.Sixtermsareminimal^withinthatpreciselyrestrictedtwo-channelscheme^.Unequaltranslationsets,otherchannelsandgeneralnoncoordinaterepairsremainopen"
     },
     {
       "exact_formula_ids": [
@@ -2113012,6 +2113204,14 @@
     },
     {
       "exact_formula_ids": [
+        "37f5cc8b0876990ab1fc9d14f593be56a0498c08dec7b021066d0fe50cbb52f5"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8f33fab6efcacaec360c42269b4e35d660f6c92a36d0031ed52da59623209c6a",
+      "structural_formula": "Partitionthe1#-termrationalvanishingsumatatorsionpointintominimalvanishingsubsums.Mann'stheoremmakeseachratioofmonomialsinablocka3#throot,where3#=#*#*#*#*#*#.Thelatticegeneratedbydifferencesofexponentswithinblockshasrank4:otherwiseanonzeroorthogonalintegerdirectionproducesaforbiddenunitarytoruscoset"
+    },
+    {
+      "exact_formula_ids": [
         "6b06e3c99e1af5579c074aed753eac32cdb5ec737342239f94e02bb80edf0d74"
       ],
       "exact_member_count": 1,
@@ -2133560,6 +2133760,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4399f361e7d8edf20e54b49c1044ff6e8f2145e0dbbf1e6022434e38dd36f954",
       "structural_formula": "Thefirstnon-substrateconstant(F_5=#)emergesastheCheeger"
+    },
+    {
+      "exact_formula_ids": [
+        "739f884754875a8238e918aa9b252c6692aa3881a89aea0da5a85b9f75c34380"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b8c761f814c787734aa34f2cb3a4c903dd9ed10300c9cc98c149525ceeae4726",
+      "structural_formula": "Thefirstthreecontradictunitmodulus.Forthelast,divisionbya_iandwritinga_i=x+iygives1#x+#=#andy=#,incompatiblewithx^#+y^#=#.Thusnopositive-dimensionaltoruscosetcanmeettheunitaryzerolocus.FullequationsandbasesarestoredintheJSONcertificate"
     },
     {
       "exact_formula_ids": [
@@ -2272134,6 +2272342,14 @@
     },
     {
       "exact_formula_ids": [
+        "0526ab3d74a4de12b51420ef8451540164eaafabba30c8c2fb9598e76ca4e6dc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ed035e01e7690a8c9819287af7afa69ec38cb63b2503a1e2d68b07bbdf4ba9ac",
+      "structural_formula": "i=single[#]"
+    },
+    {
+      "exact_formula_ids": [
         "b377b431458b91701efdd004f396c622fde3c336c36d9d487598bba4e4cb2dc9"
       ],
       "exact_member_count": 1,
@@ -2375682,6 +2375898,14 @@
     },
     {
       "exact_formula_ids": [
+        "bdb5174a72463af9f1e23531ead66743b966a664c80d9afdd07ded7af77fc0bd"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0a7a4b0ccc1f5a1363dbf574eb2b25e40a4eb9eb006ebb7e1dfb51f22c998bc4",
+      "structural_formula": "single=[g[#]forgingroups.values()iflen(g)=#]"
+    },
+    {
+      "exact_formula_ids": [
         "65a03166682993e7faa898d873a6dc3aea3e008f357a05b89c3abdc5d532c19c"
       ],
       "exact_member_count": 1,
@@ -2415959,20 +2416183,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92438706,
-    "exact_formula_families": 65185,
-    "files_scanned": 12708,
-    "formula_occurrences": 71324,
+    "bytes_scanned": 92449776,
+    "exact_formula_families": 65191,
+    "files_scanned": 12710,
+    "formula_occurrences": 71330,
     "status_occurrences": {
-      "certified_or_theorem": 5352,
+      "certified_or_theorem": 5354,
       "killed_or_retracted": 1949,
-      "open_or_conditional": 2409,
+      "open_or_conditional": 2410,
       "preregistered": 36,
       "retrospective_fit": 5429,
-      "unclassified": 56149
+      "unclassified": 56152
     },
-    "structural_families": 63473
+    "structural_families": 63479
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "47a2a0193d9678f19808714a6edad8fe88ab7f846646eb159ef2128a6d3b680f"
+  "universe_sha256": "135281aabae84af89be91fa8bc9fa2bd993b9ba6c346e127bb828ef6d8f3d995"
 }
