@@ -1,0 +1,169 @@
+{
+  "schema": "w33.pass12340.causal_harmonic_response.v1",
+  "base_commit": "41b1bb2434034af141500087308cd6084cbe4f10",
+  "prior_owner": "analysis/w33_20261027_acoustic_density_backreaction.py",
+  "primary_method": "https://arxiv.org/abs/2004.04561",
+  "exact": {
+    "metric": [
+      [
+        "10",
+        "5",
+        "-6",
+        "0"
+      ],
+      [
+        "5",
+        "10",
+        "0",
+        "-6"
+      ],
+      [
+        "-6",
+        "0",
+        "12",
+        "-6"
+      ],
+      [
+        "0",
+        "-6",
+        "-6",
+        "12"
+      ]
+    ],
+    "metric_determinant": "2916",
+    "metric_LDL_diagonal": [
+      "10",
+      "15/2",
+      "36/5",
+      "27/5"
+    ],
+    "spectrum": {
+      "-10": 1,
+      "-1": 20,
+      "5": 6
+    },
+    "current_blocks": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "5/3",
+        "1/6"
+      ],
+      [
+        "0",
+        "1/6",
+        "0"
+      ]
+    ],
+    "contact_coefficients": [
+      "2/27",
+      "4/27",
+      "-2/9"
+    ],
+    "filled21_quantum_geometry": {
+      "Fubini_Study_metric": "M/216",
+      "Berry_curvature": "zero",
+      "metric_to_electric_coefficient_ratio": "3",
+      "scope": "Local occupied-Slater-state parameter geometry at zero holonomy. Not a global band invariant, quantized Chern class, spacetime metric or gravitational field."
+    }
+  },
+  "completion": {
+    "retarded_kernel_over_M": "2*f_g/27 + 4*f_m/27 - 2*f_p/9 - (2*f_m - 2*f_p)/(36 - z**2)",
+    "euclidean_kernel_over_M": "2*f_g/27 + 4*f_m/27 - 2*f_p/9 - (2*f_m - 2*f_p)/(nu**2 + 36)",
+    "regular_zero_frequency_over_M": "(4*f_g + 5*f_m - 9*f_p)/54",
+    "electric_low_frequency_over_M": "(f_m-f_p)/648",
+    "retarded_poles": [
+      -6,
+      6
+    ],
+    "positive_pole_residue_over_M": "f_m/6 - f_p/6",
+    "inverse_transform": "K_R(t)=M*[contact*delta(t)-(f_m-f_p)*theta(t)*sin(6*t)/3]",
+    "formal_conductivity": "sigma(z)=i*K_R(z)/z, E=-dA/dt, Fourier convention exp(-i omega t)",
+    "real_conductivity_over_pi_M": "R0*delta(omega)+(f_m-f_p)/36*[delta(omega-6)+delta(omega+6)]",
+    "full_line_sum_rule": "integral Re sigma(omega) d omega = pi*contact*M",
+    "filled21": {
+      "contact": "2/9",
+      "adiabatic": "1/6",
+      "each_optical_delta": "1/36",
+      "zero_frequency_weight_fraction": "3/4",
+      "total_finite_frequency_weight_fraction": "1/4"
+    },
+    "oscillator_equivalence": {
+      "auxiliary_dimension": 4,
+      "auxiliary_inverse": "(36+nu^2)*M/[2*(f_m-f_p)]",
+      "coupling": "M",
+      "contact": "contact*M",
+      "minimality": "The positive-frequency pole residue is (f_m-f_p)*M/6 of rank4 for f_m>f_p. Four independent scalar harmonic coordinates suffice and fewer cannot realize its residue rank.",
+      "boundary": "Exact equality only for the collisionless quadratic four-probe response at a chosen T,mu. The oscillator parameters depend on the populations. This is not an equivalence of the fermion Fock space, higher correlators or the separate isothermal zero-Matsubara term."
+    }
+  },
+  "controls": [
+    {
+      "T": 0.0,
+      "mu": 2.0,
+      "contact": 0.2222222222222222,
+      "population_difference": 1.0,
+      "adiabatic": 0.16666666666666666,
+      "isothermal": 0.16666666666666666,
+      "static_jump": 0.0,
+      "maximum_dense_Lehmann_error": 1.8989422859524713e-13
+    },
+    {
+      "T": 0.0,
+      "mu": -5.0,
+      "contact": 0.07407407407407407,
+      "population_difference": 0.0,
+      "adiabatic": 0.07407407407407407,
+      "isothermal": 0.07407407407407407,
+      "static_jump": 0.0,
+      "maximum_dense_Lehmann_error": 2.220446049250313e-16
+    },
+    {
+      "T": 0.25,
+      "mu": -1.0,
+      "contact": 0.14814814813975893,
+      "population_difference": 0.49999999996224864,
+      "adiabatic": 0.12037037036407845,
+      "isothermal": -1.5462962963025884,
+      "static_jump": 1.6666666666666667,
+      "maximum_dense_Lehmann_error": 9.544535105126294e-14
+    },
+    {
+      "T": 1.0,
+      "mu": 2.0,
+      "contact": 0.20465662888426403,
+      "population_difference": 0.9051482536448666,
+      "adiabatic": 0.15437061479288255,
+      "isothermal": 0.07907618190802922,
+      "static_jump": 0.07529443288485334,
+      "maximum_dense_Lehmann_error": 1.6946528038088196e-13
+    },
+    {
+      "T": 2.0,
+      "mu": -10.0,
+      "contact": 0.03854189254447523,
+      "population_difference": 0.01043416399366958,
+      "adiabatic": 0.03796221676704914,
+      "isothermal": 0.028907025331861444,
+      "static_jump": 0.009055191435187696,
+      "maximum_dense_Lehmann_error": 3.3545300158612903e-15
+    },
+    {
+      "T": 10.0,
+      "mu": 0.0,
+      "contact": 0.048029255347662864,
+      "population_difference": 0.1474385186807946,
+      "adiabatic": 0.03983822653206316,
+      "isothermal": -0.0017244468334188315,
+      "static_jump": 0.04156267336548199,
+      "maximum_dense_Lehmann_error": 2.7089498676973652e-14
+    }
+  ],
+  "source_sha256": "47651f6554f0b722c47c557d6065d578f6327b2526fc0f6da2a04a675adfab66",
+  "units": "Nearest-edge hopping amplitude, charge and hbar set to1; harmonic flux response has no spatial-volume normalization.",
+  "scope": "Finite free spinless27-site/135-edge cell and four harmonic holonomy probes. No nonzero spatial momentum, thermodynamic Drude weight, bulk conductor/insulator classification, derived Maxwell photon, universal speed, chiral vacuum or TOE. The existing no-global21-band-gap cover obstruction remains in force."
+}

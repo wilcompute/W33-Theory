@@ -809,3 +809,14 @@ chain-ring characteristic-polynomial classification or semisimple
 representation-theory transfer is claimed.
 
 **Primary artifact:** [Pass 540](analysis/w33_pass540_symplectic_separator_chainring.g).
+
+
+## Causal harmonic response and the three-mixed finite-k exception (Pass12340)
+
+**Aliases:** pole6, harmonic optical response, M/216, oscillator response control, rank107 at omega, translated-loop-difference repair.
+
+**Canonical objects:** The existing27-site free cell has K_R(z)=[C-2(f_m-f_p)/(36-z^2)]M and filled21 Slater metric M/216, with zero local Berry curvature. Its four-probe collisionless quadratic response admits a four-oscillator realization. Independently, the supplied three-mixed magnetic completion of9baf04f has one nongauge zero at z=(omega,omega,1,1): short/mixed/six/gradient ranks105/107/108/27. A positive24-harmonic difference-loop correction starts at O(k^4) and restores the six-loop kernel at every unitary character.
+
+**Boundary:** Finite named models and a supplied lattice improvement. No derived photon, bulk transport phase, Lorentzian continuum, microscopic selection or TOE. Prior low-frequency/current identities belong to c12f80458; prior three-mixed factorization belongs to9baf04f.
+
+**Primary artifacts:** [Pass12340 report](analysis/PASS12340_CAUSAL_RESPONSE_AND_IDENTIFIABILITY.md), [causal response producer](analysis/w33_pass12340_causal_harmonic_response.py), [exact finite-k witness](analysis/w33_pass12340_mixed_loop_exception.py).

@@ -2317,3 +2317,13 @@ Science4b3e067622890b32dad576619949f77a1619c3b8 is published to master directly 
 Legacy10947run37784733155 fails on missing artifacts/canonical_su3_gauge_and_cubic.json, the same error recorded before this packet. Only scoped CI success is claimed. A redundant manual dispatch was cancelled after the automatic science run appeared. The main forty-points paper and unrelated10956 source/certificate and mixed Continuity stores remain preserved; no unrelated dirty files are staged. Receipt publication follows.
 
 Five independent next research targets: nonambient chiral matter with a computed nonzero normalized cup product; an actual integrable generalized Scherk-Schwarz frame for the QC gauging; anomaly-complete removal of extra abelian factors and exotics; a coupled dynamical action selecting compatible geometry,Higgs and clock data; and a fixed-state/fixed-boundary quantum vacuum-energy response mechanism. No completed TOE is established.
+
+
+### 2026-10-28 — Pass12340 causal response and finite-momentum control
+
+- Reserved a2b8d98 on master before computing. Full semantic two-week/paper reading remains unfinished;729 patches are being archived with hashes, and the current210-page PDF is c813e604f3cb2c8fc6f6417f85e7ed96a2eeb8faa191d7ccbc6b869d21e3f9a5.
+- Exact finite-cell response K_R=[C-2(f_m-f_p)/(36-z^2)]M, spectral weights, four-oscillator control and occupied-state metric M/216.
+- Complete parallel9baf04f patch read; all three upstream regressions pass. Exact finite-k witness z=(omega,omega,1,1) has short/mixed/six/gradient ranks105/107/108/27, one nongauge magnetic zero. A supplied24-cosine translated-loop-difference improvement lifts it while preserving the O(k^2) cone.
+- Final focused suite:17 tests pass, including10 new controls,3 upstream controls and4 prior response regressions. Source computer offline; server calculations only.
+- Manual decision fallback: analysis/2026-10-28_pass12340_decisions.jsonl. GitHub connector publication with expected-head lease; GitKraken/Continuity tools unavailable. No TOE claim.
+- Publication update: complete686188c four-file patch read; its5 further repository tests pass (22 focused checks total). Its order-two-corner results leave the order-three exception open. Preserve both parallel science commits. All729 archives completed and all132553292 decompressed bytes verified against SHA256 manifests.
