@@ -102,8 +102,12 @@ def main():
   e2=integral_product(e,e,roots,index)
   if e2 in (eye8,neg8):
    n2=natural_product(n,n)
-   if n2 in (eye4,neg4) and n2==neg4:continue
-   if n2==eye4:invsq["minus" if e2==neg8 else "plus"]+=1
+   if n2==neg4:
+    assert e2==neg8
+    invsq["minus"]+=1
+   elif n2==eye4:
+    assert e2==eye8
+    invsq["plus"]+=1
  assert invsq=={"minus":540,"plus":90},invsq
  output={"status":"PASS","integral_cover_order":len(seen),"natural_symplectic_group":"Sp(4,3)",
          "projective_image_order":len(classes),"kernel":"{+I,-I}",

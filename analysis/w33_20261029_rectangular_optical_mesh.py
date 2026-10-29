@@ -35,7 +35,7 @@ def left(a,b):
  h=np.hypot(abs(a),abs(b))
  return None if h<1e-14 else np.array([[np.conj(a),np.conj(b)],[-b,a]],complex)/h
 def rectangular(U):
- n=len(U);W=U.copy();ops=[];lefts=[]
+ n=len(U);W=U.astype(np.complex128).copy();ops=[];lefts=[]
  for width in range(n-1):
   for offset in range(width+1):
    if width%2==0:
@@ -60,13 +60,13 @@ def rectangular(U):
  assert np.max(abs(W-np.diag(np.diag(W))))<3e-12
  phases=np.diag(W).copy()
  gates=[(i,R.conj().T) for i,R in ops]
- product=np.diag(phases)
+ product=np.diag(phases.astype(np.complex128))
  for i,B in reversed(gates):product[:,i:i+2]=product[:,i:i+2]@B
  error=float(np.max(abs(product-U)))
  assert error<3e-12
  return gates,phases,error
 def triangular(U):
- n=len(U);W=U.copy();gates=[]
+ n=len(U);W=U.astype(np.complex128).copy();gates=[]
  for col in range(n-1):
   for row in range(n-1,col,-1):
    L=left(W[row-1,col],W[row,col])
@@ -75,7 +75,7 @@ def triangular(U):
     gates.append((row-1,L.conj().T))
  assert np.max(abs(W-np.diag(np.diag(W))))<2e-12
  gates=gates[::-1];phases=np.diag(W).copy()
- P=np.diag(phases)
+ P=np.diag(phases.astype(np.complex128))
  for i,B in gates:P[i:i+2,:]=B@P[i:i+2,:]
  error=float(np.max(abs(P-U)))
  assert error<3e-12
@@ -87,7 +87,7 @@ def depth(gates):
   last[i]=last[i+1]=k
  return max(last)+1
 def attenuate(gates,phases,output_phases=False,eta=.999):
- K=np.eye(40,dtype=complex) if output_phases else np.diag(phases)
+ K=np.eye(40,dtype=complex) if output_phases else np.diag(phases.astype(np.complex128))
  for i,B in gates:K[i:i+2,:]=eta**.5*B@K[i:i+2,:]
  if output_phases:K=np.diag(phases)@K
  return K
