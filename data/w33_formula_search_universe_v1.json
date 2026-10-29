@@ -383764,6 +383764,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "39ca4e8c4aa3e40fc9b1e015df95a85dd9106b717941777f44846d2af89dcb71",
+      "normalized_formula": "-E=mc2isthesmall-anglelimitof\u03c90=arcsinm.Atm=1,propagationstops",
+      "numeric_literals": [
+        "0",
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12369_12372_INFORMATION_DUALITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 138,
+          "path": "analysis/PASS12369_12372_INFORMATION_DUALITY.md",
+          "raw": "- E = mc\u00b2 is the small-angle limit of \u03c9\u2080 = arcsin m. At m = 1, propagation stops.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7f319c1c0dadf80ba15c02c90931067edb8d13596744a4a256663c7cf7dbde7f",
+      "structural_formula": "-E=mc2isthesmall-anglelimitof\u03c9#=arcsinm.Atm=#,propagationstops"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a9d7ff6c1b260c106d7ed042980b1b91a23dde643dff5fb6d619b6b8793c5c51",
       "normalized_formula": "-E_8(=2*600-cell+Cartan)",
       "numeric_literals": [
@@ -392707,6 +392735,33 @@
       },
       "structural_family_id": "41327979a64cbaac0464a284e2ac9d9024d277c7866f1b390017fccf0f83eff8",
       "structural_formula": "-^Yukawatexture^=Z3gradeconservation(BT8#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b8ffb95ae6f2090ea40a5e6bb8c3607c0ee6f55f11c0d1a7a68b158ece104331",
+      "normalized_formula": "-^[E]\u03b1isaratiooftwoimpedances:^\u03b1=Z0/(2R_K),thevacuumimpedance(thescalaroftheelectromagneticHodgestar)overtwice",
+      "numeric_literals": [
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12369_12372_INFORMATION_DUALITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 28,
+          "path": "analysis/PASS12369_12372_INFORMATION_DUALITY.md",
+          "raw": "- **[E] \u03b1 is a ratio of two impedances:** \u03b1 = Z\u2080/(2R_K), the vacuum impedance (the scalar of the electromagnetic Hodge star) over twice",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "701b959bfb92a00975ae0375a4c95f984587c9b3e9ab5057556c87e4ccedb87f",
+      "structural_formula": "-^[E]\u03b1isaratiooftwoimpedances:^\u03b1=Z0/(#R_K),thevacuumimpedance(thescalaroftheelectromagneticHodgestar)overtwice"
     },
     {
       "file_count": 1,
@@ -654893,6 +654948,34 @@
       },
       "structural_family_id": "acc07bd3ae4a957c6761ffc6eb249f68af2c2dcd67ac02d1060eb8bb8b430d97",
       "structural_formula": "Graycode(info)=#-bitreflectedsingle-flipcycle"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "be82031f8efca9227b1e86fd9ab5486a6cf52eacb3188f821c1a6e243f9434d8",
+      "normalized_formula": "Gross-Rubilar;Hehl-Obukhovbook);foranisotropicvacuumtheclosurerelationismu0eps0c^2=1.Geometricquantummechanics--state",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12369_to_12372_information_duality.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/w33_pass12369_to_12372_information_duality.py",
+          "raw": "Gross-Rubilar; Hehl-Obukhov book); for an isotropic vacuum the closure relation is mu0 eps0 c^2 = 1. Geometric quantum mechanics -- state",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "557656ea05402d9578ea8e8d53039e5b315073461a8fb39d3a1092ac15ef289d",
+      "structural_formula": "Gross-Rubilar;Hehl-Obukhovbook);foranisotropicvacuumtheclosurerelationismu0eps0c^#=#.Geometricquantummechanics--state"
     },
     {
       "file_count": 1,
@@ -982119,6 +982202,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3de55f5e6fbdf4af99b438fe28729570caa9db87ab4753b215e6d2373086f2a7",
+      "normalized_formula": "\\kappa^2=-1",
+      "numeric_literals": [
+        "-1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 684,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "\\kappa^2=-1",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "63f7305c991805d974fff1be5dabd43e9166128c6920c639ffacda26d623a888",
+      "structural_formula": "\\kappa^#=#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "772fb95285821246d3d34ac14d789e1e585073e0a25ce538c486138f8cc8cd5a",
       "normalized_formula": "\\kappa^2=1",
       "numeric_literals": [
@@ -1007377,7 +1007488,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 686,
+          "line": 688,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1196304,6 +1196415,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "9ee51dd1c13191ddbca42509edd84ef8b8b11adafc1bade6be3c1177d6cd9371",
+      "normalized_formula": "checks[\"12372b:DiracQCA--exactlightcone;cosw=ncosk;restfrequency=arcsinm;groupvelocity<=n(=1ifmassless)\"]=all(",
+      "numeric_literals": [
+        "1",
+        "12372"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12369_to_12372_information_duality.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "analysis/w33_pass12369_to_12372_information_duality.py",
+          "raw": "checks[\"12372b: Dirac QCA -- exact light cone; cos w = n cos k; rest frequency = arcsin m; group velocity <= n (= 1 if massless)\"] = all(",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4e83ea85264ee4e56a9c795293df809f55b1cdf9bdb290b8f5ec221213b6732a",
+      "structural_formula": "checks[\"#b:DiracQCA--exactlightcone;cosw=ncosk;restfrequency=arcsinm;groupvelocity<=n(=#ifmassless)\"]=all("
+    },
+    {
+      "file_count": 1,
       "formula_id": "bb811ae9007f03eb7458a962180e5d159626dcb3cc27634fcee7f7c8699f37a8",
       "normalized_formula": "checks[\"15_fermionic\"]=g=15#15Weylfermionspergeneration",
       "numeric_literals": [
@@ -1350861,6 +1351000,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "37766e93a1113aaf77bb1592d9c19ca0c815e9d1267615c11f433a881f886231",
+      "normalized_formula": "gr-qc/9706069);anytwoof(g,omega,J)fixthethird.alpha=Z0/(2R_K):vacuumimpedanceovertwicethequantumHallresistance",
+      "numeric_literals": [
+        "2",
+        "9706069"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12369_to_12372_information_duality.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 7,
+          "path": "analysis/w33_pass12369_to_12372_information_duality.py",
+          "raw": "gr-qc/9706069); any two of (g, omega, J) fix the third. alpha = Z0 / (2 R_K): vacuum impedance over twice the quantum Hall resistance",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "37cf6ae7da57cc6175f4c1093682562418aa8b4f71ef665e3dbf1e7e5fd19f29",
+      "structural_formula": "gr-qc/#);anytwoof(g,omega,J)fixthethird.alpha=Z0/(#R_K):vacuumimpedanceovertwicethequantumHallresistance"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1cc38f0b3b3672851cf49ea9e5b84cfe32435c6fe40944abb01823e52006e02a",
       "normalized_formula": "gr=-2*np.einsum('a,ai->i',eta*coupling,deriv[:nchannel].conj())",
       "numeric_literals": [
@@ -1385871,6 +1386038,35 @@
       },
       "structural_family_id": "cdf671ef4025b30f29716b9b1aa6ad3a72ea839b4588839c65c73a89605f56f9",
       "structural_formula": "isotropic_P=(q2^m_P-#)*(q2^(m_P-#)#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "83f7a572f957aa0b5f532eb691382382c9129c433e41946f3cd0cd8dd4795640",
+      "normalized_formula": "isotropicvacuum,\u03ba2=\u22121reads\u03bc0\u03b50c2=1",
+      "numeric_literals": [
+        "0",
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12369_12372_INFORMATION_DUALITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/PASS12369_12372_INFORMATION_DUALITY.md",
+          "raw": "isotropic vacuum, \u03ba\u00b2 = \u22121 reads \u03bc\u2080\u03b5\u2080c\u00b2 = 1.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "c25187b809775ba4d2d423d28729c4c539b741a23cc0043a45f4ed6436f87100",
+      "structural_formula": "isotropicvacuum,\u03ba#=\u2212#reads\u03bc#\u03b5#c2=#"
     },
     {
       "file_count": 1,
@@ -1431925,7 +1432121,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 685,
+          "line": 687,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1437059,7 +1437255,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 685,
+          "line": 687,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1770414,6 +1770610,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "4e88ac2dd725c4085066c08bce842479ac15e28af1e3fe35156fbb3c1dd9e6c6",
+      "normalized_formula": "stars(transfer/impedance);closure='c^2mu0eps0=1';alpha=ratiooftheimpedanceoftheEMdualitytothatofaquantumchannel",
+      "numeric_literals": [
+        "1",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12369_to_12372_information_duality.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/w33_pass12369_to_12372_information_duality.py",
+          "raw": "stars (transfer/impedance); closure = 'c^2 mu0 eps0 = 1'; alpha = ratio of the impedance of the EM duality to that of a quantum channel.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "615b1496d9010732189f0a589a6b7bc8dc17908f2f0f00b7dc9f0cbb9b46c66a",
+      "structural_formula": "stars(transfer/impedance);closure='c^#mu0eps0=#';alpha=ratiooftheimpedanceoftheEMdualitytothatofaquantumchannel"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d43a31ce83617f79b89f49d9a13b9ff53d13c3bd22e45d8e1cb81b50489d3bb3",
       "normalized_formula": "start=min(graph);prev=None;cur=start;nxt=graph[start][0];row={}",
       "numeric_literals": [
@@ -1830966,6 +1831190,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f76b93e26f538238da2d12440d70ceb256a273749ddb506052deb83144ca2984",
+      "normalized_formula": "v[\"outside_cone\"]=0andv[\"dispersion_err\"]<1e-12andabs(v[\"w0\"]-v[\"arcsin_m\"])<1e-9andv[\"vmax\"]<=v[\"n\"]+1e-5",
+      "numeric_literals": [
+        "+1e-5",
+        "0",
+        "1e-12",
+        "1e-9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12369_to_12372_information_duality.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 63,
+          "path": "analysis/w33_pass12369_to_12372_information_duality.py",
+          "raw": "v[\"outside_cone\"] == 0 and v[\"dispersion_err\"] < 1e-12 and abs(v[\"w0\"] - v[\"arcsin_m\"]) < 1e-9 and v[\"vmax\"] <= v[\"n\"] + 1e-5",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b81f4fc96170d7c8dd52cea1af0fcaef8cd0b27c99fb5871b209a192ea6e5371",
+      "structural_formula": "v[\"outside_cone\"]=#andv[\"dispersion_err\"]<#andabs(v[\"w0\"]-v[\"arcsin_m\"])<#andv[\"vmax\"]<=v[\"n\"]#"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1699615a02778dbdfe6c6e88fb87d31421f587a49d394b09c7b48f58a7d8a50a",
       "normalized_formula": "v\\cdot2^q=320",
       "numeric_literals": [
@@ -1857182,7 +1857436,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 685,
+          "line": 687,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1871692,6 +1871946,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5b41ec11e3e9cec0d25ca8d780138ad2f4b6a936b4621420a43a5b67995e3109",
+      "normalized_formula": "|Gravity[E](Jacobsongr-qc/9504004)|horizonareacountsentropy|\u03b4Q=TdSgivesEinstein'sequationasanequationofstate|G(areaperbit)|",
+      "numeric_literals": [
+        "9504004"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12369_12372_INFORMATION_DUALITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 122,
+          "path": "analysis/PASS12369_12372_INFORMATION_DUALITY.md",
+          "raw": "| Gravity [E] (Jacobson gr-qc/9504004) | horizon area counts entropy | \u03b4Q = T dS gives Einstein's equation as an equation of state | G (area per bit) |",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "dff5dac64aa9509a877c938290a8a4d7d88e02aa08e92190fef5a3505f7d2b6f",
+      "structural_formula": "|Gravity[E](Jacobsongr-qc/#)|horizonareacountsentropy|\u03b4Q=TdSgivesEinstein'sequationasanequationofstate|G(areaperbit)|"
+    },
+    {
+      "file_count": 1,
       "formula_id": "0e2bc8bf26024f61a3c8d64dfbd697fcf3424ab1a360a79cb0e8290be046c8d4",
       "normalized_formula": "|G|/|\\mathrm{orbit}|=51840/40=1296",
       "numeric_literals": [
@@ -1872414,6 +1872695,34 @@
       },
       "structural_family_id": "928b664505e60a1c3c098cd25ce92887a80e5d97f277cbf03d9b73f750b7aaa0",
       "structural_formula": "|Kernelfusion:mode-#programs,defect-awarepages,walkingdefect|E|Liftedrouterexecutesthroughthekernelwith1#/#outputequalityandline-legalhops;safezone=theAG(#,#)phasedirectorywithaconstant9-pointrelocationpagebill;thedefectisaquad-constrainednearest-neighborwalker(#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "36ee8fbbd75a3369985ffa9df3311697079dcd6e442325488c5daa9d77fd42ac",
+      "normalized_formula": "|Kirchhoff[E]|KVL=cyclespace,KCL=cutspace;theyareorthogonal(\"dot\"duals)|Ohm'slaw,CandL:aHodgestaronedges|R,C,L;effectiveresistance=random-walkcommutetime/(2\\|E\\|)(Chandraetal.,1989)|",
+      "numeric_literals": [
+        "1989",
+        "2"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12369_12372_INFORMATION_DUALITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 119,
+          "path": "analysis/PASS12369_12372_INFORMATION_DUALITY.md",
+          "raw": "| Kirchhoff [E] | KVL = cycle space, KCL = cut space; they are orthogonal (\"dot\" duals) | Ohm's law, C and L: a Hodge star on edges | R, C, L; effective resistance = random-walk commute time / (2\\|E\\|) (Chandra et al., 1989) |",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "477f38ab123f67b3b26e49d1d964b3f58703a4c288c9cd8f69cba7ecedc8ec3c",
+      "structural_formula": "|Kirchhoff[E]|KVL=cyclespace,KCL=cutspace;theyareorthogonal(\"dot\"duals)|Ohm'slaw,CandL:aHodgestaronedges|R,C,L;effectiveresistance=random-walkcommutetime/(#\\|E\\|)(Chandraetal.,#)|"
     },
     {
       "file_count": 1,
@@ -1873935,6 +1874244,33 @@
       },
       "structural_family_id": "6932afb7e164fc4428e49ecaf8c49c34bab5851db17a8319610b640e6c67c8f4",
       "structural_formula": "|Rate=k/n=#/#=\u03b1|^ThefinestructureconstantISthecoderate^|"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9af03533be71b179e22536aca5cb43bd2668fa4336d2ab84ad41494ed82ddd67",
+      "normalized_formula": "|Relativity/DiracQCA[E+computed]|causalgraph,1cellperstep(exactcone)|mixinganglembetweenchiralities|c=cellsperstep;mass=mixingperstep|",
+      "numeric_literals": [
+        "1"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12369_12372_INFORMATION_DUALITY.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 121,
+          "path": "analysis/PASS12369_12372_INFORMATION_DUALITY.md",
+          "raw": "| Relativity / Dirac QCA [E + computed] | causal graph, 1 cell per step (exact cone) | mixing angle m between chiralities | c = cells per step; mass = mixing per step |",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "18b88cdc8ac00840c87fcd1b5911deb5622bbfd5d5091d51a308a20445d902cd",
+      "structural_formula": "|Relativity/DiracQCA[E+computed]|causalgraph,#cellperstep(exactcone)|mixinganglembetweenchiralities|c=cellsperstep;mass=mixingperstep|"
     },
     {
       "file_count": 2,
@@ -1906936,9 +1907272,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T12:03:25-04:00",
+  "frozen_at": "2026-10-29T12:09:20-04:00",
   "pass": 398,
-  "repository_head": "79f762129484149765e51d1349bdafaea6a01d2a",
+  "repository_head": "8a7912931fde3eabaa7decdda37264b91b8accf3",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2033795,6 +2034131,14 @@
     },
     {
       "exact_formula_ids": [
+        "39ca4e8c4aa3e40fc9b1e015df95a85dd9106b717941777f44846d2af89dcb71"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7f319c1c0dadf80ba15c02c90931067edb8d13596744a4a256663c7cf7dbde7f",
+      "structural_formula": "-E=mc2isthesmall-anglelimitof\u03c9#=arcsinm.Atm=#,propagationstops"
+    },
+    {
+      "exact_formula_ids": [
         "a9d7ff6c1b260c106d7ed042980b1b91a23dde643dff5fb6d619b6b8793c5c51"
       ],
       "exact_member_count": 1,
@@ -2036272,6 +2036616,14 @@
       "exact_member_count": 1,
       "structural_family_id": "41327979a64cbaac0464a284e2ac9d9024d277c7866f1b390017fccf0f83eff8",
       "structural_formula": "-^Yukawatexture^=Z3gradeconservation(BT8#)"
+    },
+    {
+      "exact_formula_ids": [
+        "b8ffb95ae6f2090ea40a5e6bb8c3607c0ee6f55f11c0d1a7a68b158ece104331"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "701b959bfb92a00975ae0375a4c95f984587c9b3e9ab5057556c87e4ccedb87f",
+      "structural_formula": "-^[E]\u03b1isaratiooftwoimpedances:^\u03b1=Z0/(#R_K),thevacuumimpedance(thescalaroftheelectromagneticHodgestar)overtwice"
     },
     {
       "exact_formula_ids": [
@@ -2083234,6 +2083586,14 @@
       "exact_member_count": 1,
       "structural_family_id": "acc07bd3ae4a957c6761ffc6eb249f68af2c2dcd67ac02d1060eb8bb8b430d97",
       "structural_formula": "Graycode(info)=#-bitreflectedsingle-flipcycle"
+    },
+    {
+      "exact_formula_ids": [
+        "be82031f8efca9227b1e86fd9ab5486a6cf52eacb3188f821c1a6e243f9434d8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "557656ea05402d9578ea8e8d53039e5b315073461a8fb39d3a1092ac15ef289d",
+      "structural_formula": "Gross-Rubilar;Hehl-Obukhovbook);foranisotropicvacuumtheclosurerelationismu0eps0c^#=#.Geometricquantummechanics--state"
     },
     {
       "exact_formula_ids": [
@@ -2170216,9 +2170576,10 @@
     },
     {
       "exact_formula_ids": [
+        "3de55f5e6fbdf4af99b438fe28729570caa9db87ab4753b215e6d2373086f2a7",
         "772fb95285821246d3d34ac14d789e1e585073e0a25ce538c486138f8cc8cd5a"
       ],
-      "exact_member_count": 1,
+      "exact_member_count": 2,
       "structural_family_id": "63f7305c991805d974fff1be5dabd43e9166128c6920c639ffacda26d623a888",
       "structural_formula": "\\kappa^#=#"
     },
@@ -2226624,6 +2226985,14 @@
     },
     {
       "exact_formula_ids": [
+        "9ee51dd1c13191ddbca42509edd84ef8b8b11adafc1bade6be3c1177d6cd9371"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4e83ea85264ee4e56a9c795293df809f55b1cdf9bdb290b8f5ec221213b6732a",
+      "structural_formula": "checks[\"#b:DiracQCA--exactlightcone;cosw=ncosk;restfrequency=arcsinm;groupvelocity<=n(=#ifmassless)\"]=all("
+    },
+    {
+      "exact_formula_ids": [
         "4a683733221573c4714df828e42b61589a1aea645a4a34fad31b07332c8e0fec"
       ],
       "exact_member_count": 1,
@@ -2269098,6 +2269467,14 @@
     },
     {
       "exact_formula_ids": [
+        "37766e93a1113aaf77bb1592d9c19ca0c815e9d1267615c11f433a881f886231"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "37cf6ae7da57cc6175f4c1093682562418aa8b4f71ef665e3dbf1e7e5fd19f29",
+      "structural_formula": "gr-qc/#);anytwoof(g,omega,J)fixthethird.alpha=Z0/(#R_K):vacuumimpedanceovertwicethequantumHallresistance"
+    },
+    {
+      "exact_formula_ids": [
         "1cc38f0b3b3672851cf49ea9e5b84cfe32435c6fe40944abb01823e52006e02a"
       ],
       "exact_member_count": 1,
@@ -2278820,6 +2279197,14 @@
       "exact_member_count": 1,
       "structural_family_id": "cdf671ef4025b30f29716b9b1aa6ad3a72ea839b4588839c65c73a89605f56f9",
       "structural_formula": "isotropic_P=(q2^m_P-#)*(q2^(m_P-#)#)"
+    },
+    {
+      "exact_formula_ids": [
+        "83f7a572f957aa0b5f532eb691382382c9129c433e41946f3cd0cd8dd4795640"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "c25187b809775ba4d2d423d28729c4c539b741a23cc0043a45f4ed6436f87100",
+      "structural_formula": "isotropicvacuum,\u03ba#=\u2212#reads\u03bc#\u03b5#c2=#"
     },
     {
       "exact_formula_ids": [
@@ -2380773,6 +2381158,14 @@
     },
     {
       "exact_formula_ids": [
+        "4e88ac2dd725c4085066c08bce842479ac15e28af1e3fe35156fbb3c1dd9e6c6"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "615b1496d9010732189f0a589a6b7bc8dc17908f2f0f00b7dc9f0cbb9b46c66a",
+      "structural_formula": "stars(transfer/impedance);closure='c^#mu0eps0=#';alpha=ratiooftheimpedanceoftheEMdualitytothatofaquantumchannel"
+    },
+    {
+      "exact_formula_ids": [
         "d43a31ce83617f79b89f49d9a13b9ff53d13c3bd22e45d8e1cb81b50489d3bb3"
       ],
       "exact_member_count": 1,
@@ -2397081,6 +2397474,14 @@
     },
     {
       "exact_formula_ids": [
+        "f76b93e26f538238da2d12440d70ceb256a273749ddb506052deb83144ca2984"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b81f4fc96170d7c8dd52cea1af0fcaef8cd0b27c99fb5871b209a192ea6e5371",
+      "structural_formula": "v[\"outside_cone\"]=#andv[\"dispersion_err\"]<#andabs(v[\"w0\"]-v[\"arcsin_m\"])<#andv[\"vmax\"]<=v[\"n\"]#"
+    },
+    {
+      "exact_formula_ids": [
         "1699615a02778dbdfe6c6e88fb87d31421f587a49d394b09c7b48f58a7d8a50a"
       ],
       "exact_member_count": 1,
@@ -2408023,6 +2408424,14 @@
     },
     {
       "exact_formula_ids": [
+        "5b41ec11e3e9cec0d25ca8d780138ad2f4b6a936b4621420a43a5b67995e3109"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "dff5dac64aa9509a877c938290a8a4d7d88e02aa08e92190fef5a3505f7d2b6f",
+      "structural_formula": "|Gravity[E](Jacobsongr-qc/#)|horizonareacountsentropy|\u03b4Q=TdSgivesEinstein'sequationasanequationofstate|G(areaperbit)|"
+    },
+    {
+      "exact_formula_ids": [
         "0e2bc8bf26024f61a3c8d64dfbd697fcf3424ab1a360a79cb0e8290be046c8d4"
       ],
       "exact_member_count": 1,
@@ -2408220,6 +2408629,14 @@
       "exact_member_count": 1,
       "structural_family_id": "928b664505e60a1c3c098cd25ce92887a80e5d97f277cbf03d9b73f750b7aaa0",
       "structural_formula": "|Kernelfusion:mode-#programs,defect-awarepages,walkingdefect|E|Liftedrouterexecutesthroughthekernelwith1#/#outputequalityandline-legalhops;safezone=theAG(#,#)phasedirectorywithaconstant9-pointrelocationpagebill;thedefectisaquad-constrainednearest-neighborwalker(#"
+    },
+    {
+      "exact_formula_ids": [
+        "36ee8fbbd75a3369985ffa9df3311697079dcd6e442325488c5daa9d77fd42ac"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "477f38ab123f67b3b26e49d1d964b3f58703a4c288c9cd8f69cba7ecedc8ec3c",
+      "structural_formula": "|Kirchhoff[E]|KVL=cyclespace,KCL=cutspace;theyareorthogonal(\"dot\"duals)|Ohm'slaw,CandL:aHodgestaronedges|R,C,L;effectiveresistance=random-walkcommutetime/(#\\|E\\|)(Chandraetal.,#)|"
     },
     {
       "exact_formula_ids": [
@@ -2408629,6 +2409046,14 @@
       "exact_member_count": 1,
       "structural_family_id": "6932afb7e164fc4428e49ecaf8c49c34bab5851db17a8319610b640e6c67c8f4",
       "structural_formula": "|Rate=k/n=#/#=\u03b1|^ThefinestructureconstantISthecoderate^|"
+    },
+    {
+      "exact_formula_ids": [
+        "9af03533be71b179e22536aca5cb43bd2668fa4336d2ab84ad41494ed82ddd67"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "18b88cdc8ac00840c87fcd1b5911deb5622bbfd5d5091d51a308a20445d902cd",
+      "structural_formula": "|Relativity/DiracQCA[E+computed]|causalgraph,#cellperstep(exactcone)|mixinganglembetweenchiralities|c=cellsperstep;mass=mixingperstep|"
     },
     {
       "exact_formula_ids": [
@@ -2416624,20 +2417049,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92510368,
-    "exact_formula_families": 65203,
-    "files_scanned": 12716,
-    "formula_occurrences": 71342,
+    "bytes_scanned": 92533082,
+    "exact_formula_families": 65215,
+    "files_scanned": 12720,
+    "formula_occurrences": 71354,
     "status_occurrences": {
-      "certified_or_theorem": 5354,
+      "certified_or_theorem": 5356,
       "killed_or_retracted": 1949,
       "open_or_conditional": 2410,
       "preregistered": 36,
       "retrospective_fit": 5432,
-      "unclassified": 56161
+      "unclassified": 56171
     },
-    "structural_families": 63491
+    "structural_families": 63502
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "3bd3ad8f85ec0f21986b9804f7de2a6751887e5a6054c29b5c9e7bcf56f6fe77"
+  "universe_sha256": "7ac454d4c137682512300748ce06f381f056090bbac628a9af27cb0797da1f67"
 }
