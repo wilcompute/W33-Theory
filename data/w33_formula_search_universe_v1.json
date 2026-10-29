@@ -1055546,6 +1055546,45 @@
     },
     {
       "file_count": 1,
+      "formula_id": "e3bda8534cc072c9de4d86bf06609aef98b11434d12ca48ac9e5f41571493e75",
+      "normalized_formula": "^October29correction:^Theprevious(s=0)valueof(N=20,333),cutoff16,wasonlyminimalwithrespecttochecking(N-1)atthat*particularcandidate*,notgloballyminimal.Anindependentsearchfound(N=19,427),cutoff15,withfalse-negativeprobability0.000999712andfalse-positiveprobability0.000938946.Therevisedproducerchecks^every^(1\\leN\\le19,427)againsttheminimalfalse-positivecutoff.Thiscorrectionchangestheidealdistinguishable-photonshotbudget;theexactbosoniceventprobabilityformulasareunaffected.See`analysis/w33_20261029_three_photon_loss_global_budget.py",
+      "numeric_literals": [
+        ".000938946",
+        ".000999712",
+        "0",
+        "0261029",
+        "1",
+        "19",
+        "20",
+        "3",
+        "333",
+        "427",
+        "5",
+        "6",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 61,
+          "path": "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md",
+          "raw": "**October 29 correction:** The previous (s=0) value of (N=20,333), cutoff 16, was only minimal with respect to checking (N-1) at that *particular candidate*, not globally minimal. An independent search found (N=19,427), cutoff 15, with false-negative probability 0.000999712 and false-positive probability 0.000938946. The revised producer checks **every** (1\\le N\\le19,427) against the minimal false-positive cutoff. This correction changes the ideal distinguishable-photon shot budget; the exact bosonic event probability formulas are unaffected. See `analysis/w33_20261029_three_photon_loss_global_budget.py`.",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "53e784745734df3e7f7742eefd04fbce4f2a73f1717604754f270e504dc9667f",
+      "structural_formula": "^October2#correction:^Theprevious(s=#)valueof(N=#,#),cutoff1#,wasonlyminimalwithrespecttochecking(N-#)atthat*particularcandidate*,notgloballyminimal.Anindependentsearchfound(N=#,#),cutoff1#,withfalse-negativeprobability0#andfalse-positiveprobability0#.Therevisedproducerchecks^every^(#\\leN\\le1#,#)againsttheminimalfalse-positivecutoff.Thiscorrectionchangestheidealdistinguishable-photonshotbudget;theexactbosoniceventprobabilityformulasareunaffected.See`analysis/w3#_2#_three_photon_loss_global_budget.py"
+    },
+    {
+      "file_count": 1,
       "formula_id": "55e6a9312b9fa5a6f2692b7bbb6c3537201358ba18dd1c4acaf992c5510f2195",
       "normalized_formula": "^One27-rep=OneSMgeneration^(withright-handedneutrino)",
       "numeric_literals": [
@@ -1256876,6 +1256915,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d5a5b13e7f6703cc7a25479c66df25a40bef959138bc7e0968490fb03072e1c7",
+      "normalized_formula": "defglobal_budget(pw,pd,alpha=.001,nmax=85000)",
+      "numeric_literals": [
+        ".001",
+        "85000"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_three_photon_loss_global_budget.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 21,
+          "path": "analysis/w33_20261029_three_photon_loss_global_budget.py",
+          "raw": "def global_budget(pw,pd,alpha=.001,nmax=85000):",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "f5f43eabc9992fb1e0394ef8813cb2313d8c3cfaa0414e3c5772496c10d8cd94",
+      "structural_formula": "defglobal_budget(pw,pd,alpha=#,nmax=#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "3767d09338dcb245ba256128a24eece766cd0501d015e77ef0ca351e46710c57",
       "normalized_formula": "defgrading_162(num_generations:int=GENERATION_COUNT)->np.ndarray",
       "numeric_literals": [
@@ -1400278,6 +1400345,34 @@
       },
       "structural_family_id": "3749dbdfb75afb780d300ba6717253afdf32871b862317702631e95cc06dc0bb",
       "structural_formula": "k=\\muq=#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "ce4d55d5cf87a441764495459ca4616b15874146fc0f9ebb72d943b7fad11d8b",
+      "normalized_formula": "k=binom.isf(alpha,N,pd).astype(np.int64)+1",
+      "numeric_literals": [
+        "+1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_three_photon_loss_global_budget.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/w33_20261029_three_photon_loss_global_budget.py",
+          "raw": "k=binom.isf(alpha,N,pd).astype(np.int64)+1",
+          "status": "killed_or_retracted"
+        }
+      ],
+      "status_profile": {
+        "killed_or_retracted": 1
+      },
+      "structural_family_id": "ea586277078e1e6bea383f22d535046d669eb7ec1ea5f7ffb384808c0c9ba73a",
+      "structural_formula": "k=binom.isf(alpha,N,pd).astype(np.int6#)#"
     },
     {
       "file_count": 1,
@@ -1912153,9 +1912248,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T17:59:44-04:00",
+  "frozen_at": "2026-10-29T18:06:20-04:00",
   "pass": 398,
-  "repository_head": "3dbac9754287fa900fc45a5626c7742eb121444e",
+  "repository_head": "410db7087312e5bf5be5eef9d70297f86a479163",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2193562,6 +2193657,14 @@
     },
     {
       "exact_formula_ids": [
+        "e3bda8534cc072c9de4d86bf06609aef98b11434d12ca48ac9e5f41571493e75"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "53e784745734df3e7f7742eefd04fbce4f2a73f1717604754f270e504dc9667f",
+      "structural_formula": "^October2#correction:^Theprevious(s=#)valueof(N=#,#),cutoff1#,wasonlyminimalwithrespecttochecking(N-#)atthat*particularcandidate*,notgloballyminimal.Anindependentsearchfound(N=#,#),cutoff1#,withfalse-negativeprobability0#andfalse-positiveprobability0#.Therevisedproducerchecks^every^(#\\leN\\le1#,#)againsttheminimalfalse-positivecutoff.Thiscorrectionchangestheidealdistinguishable-photonshotbudget;theexactbosoniceventprobabilityformulasareunaffected.See`analysis/w3#_2#_three_photon_loss_global_budget.py"
+    },
+    {
+      "exact_formula_ids": [
         "55e6a9312b9fa5a6f2692b7bbb6c3537201358ba18dd1c4acaf992c5510f2195"
       ],
       "exact_member_count": 1,
@@ -2248548,6 +2248651,14 @@
     },
     {
       "exact_formula_ids": [
+        "d5a5b13e7f6703cc7a25479c66df25a40bef959138bc7e0968490fb03072e1c7"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f5f43eabc9992fb1e0394ef8813cb2313d8c3cfaa0414e3c5772496c10d8cd94",
+      "structural_formula": "defglobal_budget(pw,pd,alpha=#,nmax=#)"
+    },
+    {
+      "exact_formula_ids": [
         "3767d09338dcb245ba256128a24eece766cd0501d015e77ef0ca351e46710c57"
       ],
       "exact_member_count": 1,
@@ -2287574,6 +2287685,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3749dbdfb75afb780d300ba6717253afdf32871b862317702631e95cc06dc0bb",
       "structural_formula": "k=\\muq=#"
+    },
+    {
+      "exact_formula_ids": [
+        "ce4d55d5cf87a441764495459ca4616b15874146fc0f9ebb72d943b7fad11d8b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ea586277078e1e6bea383f22d535046d669eb7ec1ea5f7ffb384808c0c9ba73a",
+      "structural_formula": "k=binom.isf(alpha,N,pd).astype(np.int6#)#"
     },
     {
       "exact_formula_ids": [
@@ -2423204,20 +2423323,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92828326,
-    "exact_formula_families": 65376,
-    "files_scanned": 12776,
-    "formula_occurrences": 71531,
+    "bytes_scanned": 92835512,
+    "exact_formula_families": 65379,
+    "files_scanned": 12778,
+    "formula_occurrences": 71534,
     "status_occurrences": {
       "certified_or_theorem": 5385,
-      "killed_or_retracted": 1954,
+      "killed_or_retracted": 1957,
       "open_or_conditional": 2425,
       "preregistered": 36,
       "retrospective_fit": 5439,
       "unclassified": 56292
     },
-    "structural_families": 63661
+    "structural_families": 63664
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "5697460a3a82359740d46ac2aaa3822e708d8254f99870748c530ea0a785bc50"
+  "universe_sha256": "8d7e1a88cd65dee56648ac0c13b57481abcd4533d0013375a4d6dc5f0ca0a690"
 }
