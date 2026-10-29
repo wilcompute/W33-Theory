@@ -835,3 +835,9 @@ The supplied two-particle Hubbard model on the43-vertex six-loop patch produces 
 **Primary artifacts:** [Five-front report](analysis/PASS12341_12345_GLOBAL_BLOCH_AND_PHYSICAL_CONTROLS.md), [global geometry producer](analysis/w33_pass12341_12345_geometry.py), [physical controls producer](analysis/w33_pass12341_12345_physics.py).
 
 **Finite-cover addendum:** Exact cyclotomic enumeration for periods2-64 finds14 unrepaired real magnetic zero modes when3 divides the period and4 otherwise. All multiples of3 inherit at least14. At grid momenta approaching a fixed nonzero exceptional character, an explicit variational estimate gives O(n^-2) softening for every sufficiently large cover, even when the finite grid has no exact zero. This does not classify torsion for all n. [Finite-cover report](analysis/PASS12341_12345_FINITE_COVERS_AND_SOFT_MODES.md).
+
+## Pass12346 recovered torsion-order and repair certificate
+
+**Result:** no positive-dimensional unitary torus coset on the native Q locus; Mann's theorem and support minors restrict exceptional torsion to464 necessary orders, at most480480, with prime divisors at most13. Removing larger prime factors from a cover period preserves its exceptional set. Six exact witnesses obstruct every two-coordinate inactive repair plane; six terms are minimal only for exactly two channels sharing coordinate translations. This is not unrestricted optimality or a complete torsion census.
+
+**Artifacts:** [report](analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md), [producer](analysis/w33_pass12346_torsion_repair_certificate.py). Earlier six-term construction:67cbaba; overlapping (0,2) witness independently in the Conwell report.
