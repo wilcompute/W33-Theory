@@ -850,3 +850,10 @@ The supplied two-particle Hubbard model on the43-vertex six-loop patch produces 
 **Boundaries:** Complete text reading is not complete visual auditing or semantic review of every historical commit. Torsion completeness, chiral interacting matter, physical dispersion selection, faithful quantum H27 lifting and a viable4D string vacuum remain open. Weber CM counterexample is prior12046; 30-code geometry and finite-repair theorems are reused.
 
 **Artifacts:** [report](analysis/PASS12377_12381_COMPLETE_READING_AND_FIVE_FRONTS.md), [producer](analysis/w33_pass12377_12381_continuation.py), [scoped result index](analysis/PASS12377_12381_RESULTS_INDEX.md), [reading ledger](data/w33_pass12377_paper_reading_ledger.json).
+
+
+## Passes12382–12386 dual-host exact sieve and quantum lift
+
+**Results:** Quadratic finite-field elimination with exact cyclotomic recheck certifies36 order classes; all pure prime-power candidates from Pass12346's464-order bound are decided, only exact order3 occurs nontrivially (ten points).428 mixed candidates remain. Windows/Linux n385 and715 certificates match; n715 covers261351000625 characters via365525875 triples. Matched135-link metric K and two-channel fixed-budget repair improve the minimum on24 frozen samples from8.708840467274168e-5 to1.6913611869078947e-4; no continuous-torus bound. A729-state interacting native Hubbard sector verifies K_long(iw)=w^2 chi_density(iw), U=0,2,8, with full contact term. Published4D S-model boundary/GGSO data pass necessary consistency checks but full partition sum is not rebuilt. A rank27 isometry into actual256-amplitude Hamming CSS space tensor one auxiliary qutrit realizes nine faithful Schrodinger copies with nontrivial centre; this uses an extra carrier and does not identify regular address27 with operator27.
+
+**Artifacts:** [report](analysis/PASS12382_12386_DUAL_HOST_RESEARCH.md), [exact sieve](analysis/w33_pass12382_cyclotomic_sieve.py), [four-front producer](analysis/w33_pass12383_12386_dualhost_fronts.py), [cross-host receipt](data/w33_pass12382_12386_dualhost_receipt.json).

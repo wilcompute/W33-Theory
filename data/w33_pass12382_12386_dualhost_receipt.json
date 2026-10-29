@@ -1,0 +1,23 @@
+{
+  "reservation": "08928f58d3afeaedf9235d850576b20bc1841875",
+  "windows_host": "Windows-10-10.0.26340-SP0",
+  "windows_python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "producer_sha256": "54d415001dfaff2c68203a83f4b83172fbc6122c9814a6db7c66d5086263f686",
+  "server_windows_maximum_numeric_difference": 5.437297723176471e-09,
+  "numeric_entries_compared": 1577,
+  "source_and_nonnumeric_fields_match": true,
+  "windows_combined_tests": "12 passed in 19.53s",
+  "server_combined_tests": "12 passed in4.49s",
+  "independent_exact_grids": [
+    385,
+    715
+  ],
+  "exact_grid_non_timing_fields_match": true,
+  "source_windows_front_pid": 18192,
+  "source_windows_torsion_pid": 24320,
+  "local_git_interface": "Installed GitKraken MCP via stdio, not raw git for status/fetch/worktree",
+  "local_clean_worktree": "C:\\Repos\\w33_dualhost_12382",
+  "original_checkout": "C:\\Repos\\Theory of Everything",
+  "original_work_preservation": "Unrelated modified/untracked files present; no cleanup or blanket staging performed",
+  "boundaries": "No complete464-order census, continuous-torus stiffness bound, chiral interacting measure or independently reconstructed full4D worldsheet."
+}

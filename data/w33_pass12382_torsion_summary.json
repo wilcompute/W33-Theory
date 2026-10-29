@@ -1,0 +1,1964 @@
+{
+  "tested_grids": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    13,
+    15,
+    16,
+    21,
+    25,
+    27,
+    32,
+    35,
+    49,
+    55,
+    65,
+    70,
+    77,
+    91,
+    105,
+    121,
+    143,
+    169,
+    195,
+    231,
+    385,
+    715
+  ],
+  "covered_exact_orders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    21,
+    25,
+    27,
+    32,
+    33,
+    35,
+    39,
+    49,
+    55,
+    65,
+    70,
+    77,
+    91,
+    105,
+    121,
+    143,
+    169,
+    195,
+    231,
+    385,
+    715
+  ],
+  "known_nonidentity_exact_order": 3,
+  "known_nonidentity_count": 10,
+  "unresolved_necessary_orders": [
+    12,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    36,
+    40,
+    42,
+    44,
+    45,
+    48,
+    50,
+    52,
+    54,
+    56,
+    60,
+    63,
+    66,
+    72,
+    75,
+    78,
+    80,
+    84,
+    88,
+    90,
+    96,
+    98,
+    99,
+    100,
+    104,
+    110,
+    112,
+    117,
+    120,
+    126,
+    130,
+    132,
+    135,
+    140,
+    147,
+    150,
+    154,
+    156,
+    160,
+    165,
+    168,
+    175,
+    176,
+    180,
+    182,
+    189,
+    196,
+    198,
+    208,
+    210,
+    220,
+    224,
+    225,
+    234,
+    240,
+    242,
+    245,
+    252,
+    260,
+    264,
+    270,
+    273,
+    275,
+    280,
+    286,
+    294,
+    297,
+    300,
+    308,
+    312,
+    315,
+    325,
+    330,
+    336,
+    338,
+    350,
+    351,
+    352,
+    360,
+    363,
+    364,
+    378,
+    390,
+    396,
+    416,
+    420,
+    429,
+    440,
+    450,
+    455,
+    462,
+    468,
+    480,
+    490,
+    495,
+    504,
+    507,
+    520,
+    525,
+    528,
+    539,
+    546,
+    550,
+    560,
+    572,
+    585,
+    588,
+    594,
+    605,
+    616,
+    624,
+    630,
+    637,
+    650,
+    660,
+    672,
+    693,
+    700,
+    702,
+    726,
+    728,
+    735,
+    770,
+    780,
+    792,
+    819,
+    825,
+    840,
+    845,
+    847,
+    858,
+    880,
+    910,
+    924,
+    936,
+    945,
+    975,
+    980,
+    990,
+    1001,
+    1014,
+    1040,
+    1050,
+    1056,
+    1078,
+    1092,
+    1100,
+    1120,
+    1144,
+    1155,
+    1170,
+    1183,
+    1210,
+    1232,
+    1248,
+    1260,
+    1274,
+    1287,
+    1300,
+    1320,
+    1365,
+    1386,
+    1430,
+    1456,
+    1470,
+    1485,
+    1540,
+    1560,
+    1573,
+    1575,
+    1617,
+    1638,
+    1650,
+    1680,
+    1690,
+    1694,
+    1716,
+    1755,
+    1760,
+    1815,
+    1820,
+    1848,
+    1859,
+    1890,
+    1911,
+    1925,
+    1950,
+    1980,
+    2002,
+    2079,
+    2080,
+    2100,
+    2145,
+    2156,
+    2184,
+    2275,
+    2288,
+    2310,
+    2340,
+    2366,
+    2457,
+    2464,
+    2475,
+    2520,
+    2535,
+    2541,
+    2548,
+    2574,
+    2640,
+    2695,
+    2730,
+    2772,
+    2860,
+    2912,
+    2925,
+    2940,
+    2970,
+    3003,
+    3080,
+    3120,
+    3146,
+    3150,
+    3185,
+    3234,
+    3276,
+    3300,
+    3360,
+    3432,
+    3465,
+    3510,
+    3549,
+    3575,
+    3630,
+    3640,
+    3696,
+    3718,
+    3822,
+    3850,
+    3861,
+    3900,
+    3960,
+    4004,
+    4095,
+    4158,
+    4235,
+    4290,
+    4368,
+    4550,
+    4576,
+    4620,
+    4680,
+    4719,
+    4914,
+    4950,
+    5005,
+    5070,
+    5082,
+    5148,
+    5280,
+    5390,
+    5460,
+    5544,
+    5577,
+    5720,
+    5775,
+    5850,
+    5915,
+    6006,
+    6160,
+    6240,
+    6370,
+    6435,
+    6468,
+    6552,
+    6825,
+    6864,
+    6930,
+    7007,
+    7098,
+    7150,
+    7280,
+    7392,
+    7644,
+    7700,
+    7722,
+    7865,
+    8008,
+    8085,
+    8190,
+    8470,
+    8580,
+    8736,
+    9009,
+    9100,
+    9240,
+    9295,
+    9438,
+    9555,
+    10010,
+    10296,
+    10395,
+    10725,
+    10780,
+    10920,
+    11011,
+    11154,
+    11440,
+    11550,
+    11830,
+    12012,
+    12285,
+    12320,
+    12705,
+    12740,
+    12870,
+    13013,
+    13650,
+    13728,
+    13860,
+    14014,
+    14300,
+    14560,
+    15015,
+    15730,
+    16016,
+    16170,
+    16380,
+    17160,
+    17325,
+    17745,
+    18018,
+    18480,
+    18590,
+    19110,
+    19305,
+    20020,
+    20475,
+    20790,
+    21021,
+    21450,
+    21840,
+    22022,
+    22880,
+    23100,
+    23595,
+    24024,
+    24570,
+    25025,
+    25410,
+    25740,
+    26026,
+    27027,
+    27300,
+    27720,
+    27885,
+    28028,
+    30030,
+    32032,
+    32175,
+    32340,
+    32760,
+    33033,
+    34320,
+    34650,
+    35035,
+    35490,
+    36036,
+    36960,
+    38220,
+    38610,
+    39039,
+    40040,
+    40950,
+    42042,
+    42900,
+    43680,
+    45045,
+    47190,
+    48048,
+    50050,
+    51480,
+    54054,
+    55055,
+    55770,
+    60060,
+    64350,
+    65065,
+    66066,
+    68640,
+    70070,
+    72072,
+    75075,
+    78078,
+    80080,
+    84084,
+    90090,
+    96096,
+    100100,
+    105105,
+    110110,
+    120120,
+    130130,
+    135135,
+    140140,
+    150150,
+    160160,
+    165165,
+    180180,
+    195195,
+    210210,
+    225225,
+    240240,
+    270270,
+    300300,
+    330330,
+    360360,
+    390390,
+    420420,
+    450450,
+    480480
+  ],
+  "all_candidate_pure_prime_powers_decided": true,
+  "windows_run": [
+    {
+      "n": 70,
+      "characters_certified": 24010000,
+      "quadratic_triples": 343000,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          904393
+        ],
+        [
+          1011431,
+          340784
+        ]
+      ],
+      "first_prime_survivors": 24,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.40776634216308594
+    },
+    {
+      "n": 77,
+      "characters_certified": 35153041,
+      "quadratic_triples": 456533,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          704470
+        ],
+        [
+          1017479,
+          661324
+        ]
+      ],
+      "first_prime_survivors": 31,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.3558695316314697
+    },
+    {
+      "n": 91,
+      "characters_certified": 68574961,
+      "quadratic_triples": 753571,
+      "primes_and_primitive_roots": [
+        [
+          1001911,
+          422786
+        ],
+        [
+          1012103,
+          981679
+        ]
+      ],
+      "first_prime_survivors": 78,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.5677764415740967
+    },
+    {
+      "n": 105,
+      "characters_certified": 121550625,
+      "quadratic_triples": 1157625,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          681713
+        ],
+        [
+          1012411,
+          357763
+        ]
+      ],
+      "first_prime_survivors": 124,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          70,
+          0
+        ],
+        [
+          0,
+          70,
+          35,
+          0
+        ],
+        [
+          35,
+          0,
+          70,
+          35
+        ],
+        [
+          35,
+          0,
+          70,
+          70
+        ],
+        [
+          35,
+          35,
+          35,
+          70
+        ],
+        [
+          35,
+          70,
+          0,
+          0
+        ],
+        [
+          70,
+          0,
+          35,
+          35
+        ],
+        [
+          70,
+          0,
+          35,
+          70
+        ],
+        [
+          70,
+          35,
+          0,
+          0
+        ],
+        [
+          70,
+          70,
+          70,
+          35
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.7460207939147949
+    },
+    {
+      "n": 121,
+      "characters_certified": 214358881,
+      "quadratic_triples": 1771561,
+      "primes_and_primitive_roots": [
+        [
+          1000187,
+          691714
+        ],
+        [
+          1012771,
+          50067
+        ]
+      ],
+      "first_prime_survivors": 221,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 1.1058502197265625
+    },
+    {
+      "n": 143,
+      "characters_certified": 418161601,
+      "quadratic_triples": 2924207,
+      "primes_and_primitive_roots": [
+        [
+          1003003,
+          393362
+        ],
+        [
+          1016159,
+          687646
+        ]
+      ],
+      "first_prime_survivors": 373,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 1.6876780986785889
+    },
+    {
+      "n": 169,
+      "characters_certified": 815730721,
+      "quadratic_triples": 4826809,
+      "primes_and_primitive_roots": [
+        [
+          1005551,
+          30858
+        ],
+        [
+          1015691,
+          907585
+        ]
+      ],
+      "first_prime_survivors": 788,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 3.1496927738189697
+    },
+    {
+      "n": 195,
+      "characters_certified": 1445900625,
+      "quadratic_triples": 7414875,
+      "primes_and_primitive_roots": [
+        [
+          1001911,
+          236777
+        ],
+        [
+          1012831,
+          539752
+        ]
+      ],
+      "first_prime_survivors": 1398,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          65,
+          130,
+          0
+        ],
+        [
+          0,
+          130,
+          65,
+          0
+        ],
+        [
+          65,
+          0,
+          130,
+          65
+        ],
+        [
+          65,
+          0,
+          130,
+          130
+        ],
+        [
+          65,
+          65,
+          65,
+          130
+        ],
+        [
+          65,
+          130,
+          0,
+          0
+        ],
+        [
+          130,
+          0,
+          65,
+          65
+        ],
+        [
+          130,
+          0,
+          65,
+          130
+        ],
+        [
+          130,
+          65,
+          0,
+          0
+        ],
+        [
+          130,
+          130,
+          130,
+          65
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 5.208436727523804
+    },
+    {
+      "n": 231,
+      "characters_certified": 2847396321,
+      "quadratic_triples": 12326391,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          699221
+        ],
+        [
+          1017787,
+          633311
+        ]
+      ],
+      "first_prime_survivors": 2758,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          77,
+          154,
+          0
+        ],
+        [
+          0,
+          154,
+          77,
+          0
+        ],
+        [
+          77,
+          0,
+          154,
+          77
+        ],
+        [
+          77,
+          0,
+          154,
+          154
+        ],
+        [
+          77,
+          77,
+          77,
+          154
+        ],
+        [
+          77,
+          154,
+          0,
+          0
+        ],
+        [
+          154,
+          0,
+          77,
+          77
+        ],
+        [
+          154,
+          0,
+          77,
+          154
+        ],
+        [
+          154,
+          77,
+          0,
+          0
+        ],
+        [
+          154,
+          154,
+          154,
+          77
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 8.816485404968262
+    },
+    {
+      "n": 385,
+      "characters_certified": 21970650625,
+      "quadratic_triples": 57066625,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          685277
+        ],
+        [
+          1018711,
+          735467
+        ]
+      ],
+      "first_prime_survivors": 21830,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 55.6489200592041
+    },
+    {
+      "n": 715,
+      "characters_certified": 261351000625,
+      "quadratic_triples": 365525875,
+      "primes_and_primitive_roots": [
+        [
+          1016731,
+          893103
+        ],
+        [
+          1036751,
+          900037
+        ]
+      ],
+      "first_prime_survivors": 256843,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 314.0343723297119
+    }
+  ],
+  "server_runs": [
+    {
+      "n": 3,
+      "characters_certified": 81,
+      "quadratic_triples": 27,
+      "primes_and_primitive_roots": [
+        [
+          1000003,
+          499501
+        ],
+        [
+          1010083,
+          858703
+        ]
+      ],
+      "first_prime_survivors": 11,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          1
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.02616596221923828
+    },
+    {
+      "n": 5,
+      "characters_certified": 625,
+      "quadratic_triples": 125,
+      "primes_and_primitive_roots": [
+        [
+          1000151,
+          771729
+        ],
+        [
+          1010291,
+          785475
+        ]
+      ],
+      "first_prime_survivors": 1,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.001573324203491211
+    },
+    {
+      "n": 15,
+      "characters_certified": 50625,
+      "quadratic_triples": 3375,
+      "primes_and_primitive_roots": [
+        [
+          1000171,
+          413050
+        ],
+        [
+          1010431,
+          288185
+        ]
+      ],
+      "first_prime_survivors": 11,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          10,
+          0
+        ],
+        [
+          0,
+          10,
+          5,
+          0
+        ],
+        [
+          5,
+          0,
+          10,
+          5
+        ],
+        [
+          5,
+          0,
+          10,
+          10
+        ],
+        [
+          5,
+          5,
+          5,
+          10
+        ],
+        [
+          5,
+          10,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          5,
+          5
+        ],
+        [
+          10,
+          0,
+          5,
+          10
+        ],
+        [
+          10,
+          5,
+          0,
+          0
+        ],
+        [
+          10,
+          10,
+          10,
+          5
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.01150965690612793
+    },
+    {
+      "n": 21,
+      "characters_certified": 194481,
+      "quadratic_triples": 9261,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          45922
+        ],
+        [
+          1010899,
+          396701
+        ]
+      ],
+      "first_prime_survivors": 11,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          14,
+          0
+        ],
+        [
+          0,
+          14,
+          7,
+          0
+        ],
+        [
+          7,
+          0,
+          14,
+          7
+        ],
+        [
+          7,
+          0,
+          14,
+          14
+        ],
+        [
+          7,
+          7,
+          7,
+          14
+        ],
+        [
+          7,
+          14,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          7,
+          7
+        ],
+        [
+          14,
+          0,
+          7,
+          14
+        ],
+        [
+          14,
+          7,
+          0,
+          0
+        ],
+        [
+          14,
+          14,
+          14,
+          7
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.016537189483642578
+    },
+    {
+      "n": 35,
+      "characters_certified": 1500625,
+      "quadratic_triples": 42875,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          801202
+        ],
+        [
+          1011431,
+          215805
+        ]
+      ],
+      "first_prime_survivors": 1,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.014494657516479492
+    },
+    {
+      "n": 55,
+      "characters_certified": 9150625,
+      "quadratic_triples": 166375,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          484596
+        ],
+        [
+          1010791,
+          878735
+        ]
+      ],
+      "first_prime_survivors": 13,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.0382685661315918
+    },
+    {
+      "n": 65,
+      "characters_certified": 17850625,
+      "quadratic_triples": 274625,
+      "primes_and_primitive_roots": [
+        [
+          1001911,
+          166464
+        ],
+        [
+          1012831,
+          93608
+        ]
+      ],
+      "first_prime_survivors": 29,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.06104898452758789
+    },
+    {
+      "n": 6,
+      "characters_certified": 1296,
+      "quadratic_triples": 216,
+      "primes_and_primitive_roots": [
+        [
+          1000003,
+          499502
+        ],
+        [
+          1010083,
+          858704
+        ]
+      ],
+      "first_prime_survivors": 11,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          2
+        ],
+        [
+          2,
+          0,
+          4,
+          4
+        ],
+        [
+          2,
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          2,
+          4
+        ],
+        [
+          4,
+          2,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          4,
+          2
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.022003173828125
+    },
+    {
+      "n": 7,
+      "characters_certified": 2401,
+      "quadratic_triples": 343,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          852449
+        ],
+        [
+          1010423,
+          471202
+        ]
+      ],
+      "first_prime_survivors": 1,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.0017604827880859375
+    },
+    {
+      "n": 9,
+      "characters_certified": 6561,
+      "quadratic_triples": 729,
+      "primes_and_primitive_roots": [
+        [
+          1000099,
+          786834
+        ],
+        [
+          1010143,
+          474836
+        ]
+      ],
+      "first_prime_survivors": 11,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          6,
+          0
+        ],
+        [
+          0,
+          6,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          6,
+          3
+        ],
+        [
+          3,
+          0,
+          6,
+          6
+        ],
+        [
+          3,
+          3,
+          3,
+          6
+        ],
+        [
+          3,
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          3,
+          3
+        ],
+        [
+          6,
+          0,
+          3,
+          6
+        ],
+        [
+          6,
+          3,
+          0,
+          0
+        ],
+        [
+          6,
+          6,
+          6,
+          3
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.006693363189697266
+    },
+    {
+      "n": 13,
+      "characters_certified": 28561,
+      "quadratic_triples": 2197,
+      "primes_and_primitive_roots": [
+        [
+          1000039,
+          829878
+        ],
+        [
+          1010179,
+          655029
+        ]
+      ],
+      "first_prime_survivors": 1,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.0024209022521972656
+    },
+    {
+      "n": 25,
+      "characters_certified": 390625,
+      "quadratic_triples": 15625,
+      "primes_and_primitive_roots": [
+        [
+          1000151,
+          81146
+        ],
+        [
+          1012751,
+          18497
+        ]
+      ],
+      "first_prime_survivors": 1,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.007834434509277344
+    },
+    {
+      "n": 27,
+      "characters_certified": 531441,
+      "quadratic_triples": 19683,
+      "primes_and_primitive_roots": [
+        [
+          1000999,
+          141801
+        ],
+        [
+          1011583,
+          376543
+        ]
+      ],
+      "first_prime_survivors": 11,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          18,
+          0
+        ],
+        [
+          0,
+          18,
+          9,
+          0
+        ],
+        [
+          9,
+          0,
+          18,
+          9
+        ],
+        [
+          9,
+          0,
+          18,
+          18
+        ],
+        [
+          9,
+          9,
+          9,
+          18
+        ],
+        [
+          9,
+          18,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          9,
+          9
+        ],
+        [
+          18,
+          0,
+          9,
+          18
+        ],
+        [
+          18,
+          9,
+          0,
+          0
+        ],
+        [
+          18,
+          18,
+          18,
+          9
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.011700630187988281
+    },
+    {
+      "n": 49,
+      "characters_certified": 5764801,
+      "quadratic_triples": 117649,
+      "primes_and_primitive_roots": [
+        [
+          1000679,
+          348623
+        ],
+        [
+          1011067,
+          242646
+        ]
+      ],
+      "first_prime_survivors": 7,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.024969100952148438
+    },
+    {
+      "n": 91,
+      "characters_certified": 68574961,
+      "quadratic_triples": 753571,
+      "primes_and_primitive_roots": [
+        [
+          1001911,
+          422786
+        ],
+        [
+          1012103,
+          981679
+        ]
+      ],
+      "first_prime_survivors": 78,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 0.14363551139831543
+    },
+    {
+      "n": 105,
+      "characters_certified": 121550625,
+      "quadratic_triples": 1157625,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          681713
+        ],
+        [
+          1012411,
+          357763
+        ]
+      ],
+      "first_prime_survivors": 124,
+      "second_prime_survivors": 11,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          70,
+          0
+        ],
+        [
+          0,
+          70,
+          35,
+          0
+        ],
+        [
+          35,
+          0,
+          70,
+          35
+        ],
+        [
+          35,
+          0,
+          70,
+          70
+        ],
+        [
+          35,
+          35,
+          35,
+          70
+        ],
+        [
+          35,
+          70,
+          0,
+          0
+        ],
+        [
+          70,
+          0,
+          35,
+          35
+        ],
+        [
+          70,
+          0,
+          35,
+          70
+        ],
+        [
+          70,
+          35,
+          0,
+          0
+        ],
+        [
+          70,
+          70,
+          70,
+          35
+        ]
+      ],
+      "exact_orders": [
+        1,
+        3
+      ],
+      "elapsed_seconds": 0.24543213844299316
+    }
+  ],
+  "scope": "Grid coverage implies coverage of its divisors. Does not imply exclusion at other mixed orders. Necessary-order bound is inherited from Pass12346.",
+  "independent_server_large_grids": [
+    {
+      "n": 385,
+      "characters_certified": 21970650625,
+      "quadratic_triples": 57066625,
+      "primes_and_primitive_roots": [
+        [
+          1000231,
+          685277
+        ],
+        [
+          1018711,
+          735467
+        ]
+      ],
+      "first_prime_survivors": 21830,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 12.160070657730103
+    },
+    {
+      "n": 715,
+      "characters_certified": 261351000625,
+      "quadratic_triples": 365525875,
+      "primes_and_primitive_roots": [
+        [
+          1016731,
+          893103
+        ],
+        [
+          1036751,
+          900037
+        ]
+      ],
+      "first_prime_survivors": 256843,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 81.8166868686676
+    }
+  ]
+}
