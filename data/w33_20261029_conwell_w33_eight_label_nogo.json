@@ -1,0 +1,14 @@
+{
+  "schema": "w33.conwell.eight_label.full_symmetry_nogo.v1",
+  "PSp4_3_is_simple": true,
+  "PSp4_3_order": 25920,
+  "PGSp4_3_order": 51840,
+  "A8_order": 20160,
+  "S8_order": 40320,
+  "PSp4_3_divides_S8_order": false,
+  "A8_divides_PGSp4_3_order": false,
+  "max_full_W33_action_image_on_eight_permutation_labels": 2,
+  "no_transitive_full_W33_action_on_eight_Conwell_heptads": true,
+  "no_surjective_full_equivariant_40_to_28_pairs": true,
+  "does_not_exclude": "Any common proper subgroup, or eight-dimensional linear logical representation with non-permutation action."
+}
