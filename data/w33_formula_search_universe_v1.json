@@ -94164,6 +94164,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "ae0acc1ffcca30850dedb1f8d47711fe6d7b19ab6a3180fe1eee52438b673b69",
+      "normalized_formula": "\"dual_maximum_probability\":\"11664/11390625=0.001024\"",
+      "numeric_literals": [
+        "0.001024",
+        "11390625",
+        "11664"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_three_photon_dual_discriminator.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 111,
+          "path": "analysis/w33_20261029_three_photon_dual_discriminator.py",
+          "raw": "\"dual_maximum_probability\":\"11664/11390625 = 0.001024\",",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0d2c83fb61af47cb0fbf52dd9f3bfc69ccf114b74a06dafabcc1b5d063e12dd1",
+      "structural_formula": "\"dual_maximum_probability\":\"#/#=#\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "a24a76ac9687880d3c2a4ccd2e924e7d421da12ee2b636386b84b8278702294b",
       "normalized_formula": "\"dual_minimum_distance_16\":minimum[\"distance\"]=16",
       "numeric_literals": [
@@ -200331,6 +200360,34 @@
       },
       "structural_family_id": "659b9ff5cc122c49fe336b8f35bf068f6fa5c73cd655528b674e40ad878f7ad4",
       "structural_formula": "###\u2014F4choicemoduli=D4triality-intersectionplanes"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "55eac38f3c49905051c5b4277308f591ead9d7e6e12704b561d07ec7b7827f2a",
+      "normalized_formula": "##5.Honestq=7distancefirewall",
+      "numeric_literals": [
+        "5",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 39,
+          "path": "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md",
+          "raw": "## 5. Honest q=7 distance firewall",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6e24946e0530e455b99aee301fd4bbb077249351a5dd1602e7f25eebdabda875",
+      "structural_formula": "###.Honestq=#distancefirewall"
     },
     {
       "file_count": 1,
@@ -744153,6 +744210,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "20d5dfeba2aa4a77d38e0b3886e1d159f3508a3808003c14dcc5e2036d1a504b",
+      "normalized_formula": "OUT=ROOT/\"data/w33_20261029_rectangular_optical_mesh.json\"",
+      "numeric_literals": [
+        "0261029",
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_rectangular_optical_mesh.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 10,
+          "path": "analysis/w33_20261029_rectangular_optical_mesh.py",
+          "raw": "OUT=ROOT/\"data/w33_20261029_rectangular_optical_mesh.json\"",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "815db158cbc3e3274b4d3c83a8e35ca7dce07e54a411f9d1a1c322b31a9bc167",
+      "structural_formula": "OUT=ROOT/\"data/w3#_2#_rectangular_optical_mesh.json\""
+    },
+    {
+      "file_count": 1,
       "formula_id": "bac034a7302e5f218a1c416c39a2c3af9bc8566a4e3d5211a59d576fdd4f4faf",
       "normalized_formula": "OUT=ROOT/\"data/w33_affine_holonomy_vm_code_architecture.json\"",
       "numeric_literals": [
@@ -776926,6 +777011,42 @@
       },
       "structural_family_id": "3843c96e04ef40efc2040f0b2eaf1c9c38fca6c2c98716ca5b42f236838d05f7",
       "structural_formula": "Previousexactmodel-specificknown-input/labeled-detectortest,atcommoncouplerdrift\\(\\Delta\\theta\\in\\{#,#,#,#,#\\}\\)rad,usedtheBhattacharyyacoefficient\\(B=\\sum\\sqrt{p_iq_i}\\).Hereinclude"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "24c61ac964ac131e6d8e35fb91f4395ec8855566994a43618d98163847eccdd8",
+      "normalized_formula": "PreviousexhaustiveworkcertifiestheW(3,7)binaryadjacencyCSScode[[400,48,d]]with^10<=d<=14^,andrandomizedsearchesfoundweight14.ThenewMILPproduceranalysis/w33_20261029_q7_milp_falsifier.pytestsA*x=2*ywithbinaryx,integralyandfixedsupportsize,factoringpointtransitivityandadjacent/nonadjacentsecond-pointorbits.Both20-secondweight-tenfeasibilityjobsendedatthesolvertimelimitwithoutacounterexampleorproofofinfeasibility.^Inconclusive;theexactdistanceremainsunknown.^Weight-twelvefeasibilityisalsoopen.Anyd=14theoremrequiresactualprooforareproduciblesolverinfeasibilitycertificate",
+      "numeric_literals": [
+        "0",
+        "0261029",
+        "10",
+        "14",
+        "2",
+        "3",
+        "4",
+        "400",
+        "48",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 40,
+          "path": "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md",
+          "raw": "Previous exhaustive work certifies the W(3,7) binary adjacency CSS code [[400,48,d]] with **10 <= d <= 14**, and randomized searches found weight 14. The new MILP producer analysis/w33_20261029_q7_milp_falsifier.py tests A*x=2*y with binary x, integral y and fixed support size, factoring point transitivity and adjacent/nonadjacent second-point orbits. Both 20-second weight-ten feasibility jobs ended at the solver time limit without a counterexample or proof of infeasibility. **Inconclusive; the exact distance remains unknown.** Weight-twelve feasibility is also open. Any d=14 theorem requires actual proof or a reproducible solver infeasibility certificate.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "63009cf5bd4228bc5f76d4598ac7d4841af81b81ee6619e34fea69d1db086644",
+      "structural_formula": "PreviousexhaustiveworkcertifiestheW(#,#)binaryadjacencyCSScode[[#,#,d]]with^#<=d<=#^,andrandomizedsearchesfoundweight1#.ThenewMILPproduceranalysis/w3#_2#_q7_milp_falsifier.pytestsA*x=#*ywithbinaryx,integralyandfixedsupportsize,factoringpointtransitivityandadjacent/nonadjacentsecond-pointorbits.Both2#-secondweight-tenfeasibilityjobsendedatthesolvertimelimitwithoutacounterexampleorproofofinfeasibility.^Inconclusive;theexactdistanceremainsunknown.^Weight-twelvefeasibilityisalsoopen.Anyd=#theoremrequiresactualprooforareproduciblesolverinfeasibilitycertificate"
     },
     {
       "file_count": 1,
@@ -838436,6 +838557,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bf1b72f4aee5dbd249d891ad0b487b15ed294c4a2934cc2cecfbb399d292706c",
+      "normalized_formula": "The^integrallift^constructedhereisa*non-splitcentralextension*`2.PSp(4,3)`withcenter`{+I,-I}`,oforder^51,840^.BythestandardSchur-coveridentificationthisis`Sp(4,3)~=2.U4(2)`(see[GAPAtlascharactertable](https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbltoc/data/2.U4",
+      "numeric_literals": [
+        "2",
+        "3",
+        "4",
+        "51",
+        "840"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 57,
+          "path": "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md",
+          "raw": "The **integral lift** constructed here is a *non-split central extension* `2.PSp(4,3)` with center `{+I,-I}`, of order **51,840**. By the standard Schur-cover identification this is `Sp(4,3) ~= 2.U4(2)` (see [GAP Atlas character table](https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbltoc/data/2.U4%282%29.html) and [LMFDB 51840.a](https://www.lmfdb.org/Groups/Abstract/51840.a)). Its 270 quotient involutions of the rank-four class lift to order four.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "002b915a0f899b02f5feb91e6f3ff2e5093a2b00d523b0d736b81572fdd61a45",
+      "structural_formula": "The^integrallift^constructedhereisa*non-splitcentralextension*`#.PSp(#,#)`withcenter`{+I,-I}`,oforder^#,#^.BythestandardSchur-coveridentificationthisis`Sp(#,#)~=#.U4(#)`(see[GAPAtlascharactertable](https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbltoc/data/#.U4"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fce26620a9b6087aba250a74eb79554dc9aacc208e9f4595387749f74e82490c",
       "normalized_formula": "The^masshierarchy^ofSMfermionsincreaseswithgenerationnumber,matchingthefractaldistancescalingd=3^t.Thetopquarkmass(~173GeV)appearsattier-3scale;theupquarkmass(~2MeV)appearsattier-1scale",
       "numeric_literals": [
@@ -849860,6 +850012,42 @@
     },
     {
       "file_count": 1,
+      "formula_id": "020cb89f95fd974a1fa81fc649002a3f200852bb2a7f59b09a747b692fecea73",
+      "normalized_formula": "ThepointW(3,3)graphanditsdualline-intersectiongrapharenonisomorphicSRG(40,12,2,4)graphswithidenticalspectra.Literature:Spence(2000),https://doi.org/10.37236/1500.Theiridealquarter-cyclewalkmatrixisU=(2J-5(I+A))/15.Allphotonprobabilitiesarethereforeexactrationalnumbersfromintegerbosonicpermanents",
+      "numeric_literals": [
+        "10.37236",
+        "12",
+        "15",
+        "1500",
+        "2",
+        "2000",
+        "3",
+        "4",
+        "40",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 30,
+          "path": "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md",
+          "raw": "The point W(3,3) graph and its dual line-intersection graph are nonisomorphic SRG(40,12,2,4) graphs with identical spectra. Literature: Spence (2000), https://doi.org/10.37236/1500 . Their ideal quarter-cycle walk matrix is U=(2J-5(I+A))/15. All photon probabilities are therefore exact rational numbers from integer bosonic permanents.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ea2151a93c8fdbe4675413411320a34aff7f03b2a1b8e2713944bd75b0ed721a",
+      "structural_formula": "ThepointW(#,#)graphanditsdualline-intersectiongrapharenonisomorphicSRG(#,#,#,#)graphswithidenticalspectra.Literature:Spence(#),https://doi.org/#/#.Theiridealquarter-cyclewalkmatrixisU=(#J-#(I+A))/#.Allphotonprobabilitiesarethereforeexactrationalnumbersfromintegerbosonicpermanents"
+    },
+    {
+      "file_count": 1,
       "formula_id": "4ee866a8561a741bc4482ec39234dadb14c1443f17de389629364d5d2c88ffb7",
       "normalized_formula": "Thepositiveidentificationsarefinitegroup/code/incidencetheoremsandthenegativestatementsareexplicitfalsifiers.Nophysicalclaimisinferredfromcountequality,noall-qtheoremisinferredfromq=2,3,5,7tests,andtheGolayno-goisrestrictedtothestandardcoordinate-permutationroute",
       "numeric_literals": [
@@ -852644,6 +852832,40 @@
       },
       "structural_family_id": "4f606f56c6ad27e4173737d727bb88c63399240e0e2f923009bce7a274affabf",
       "structural_formula": "Thereforewithmindependentpairsofsingle-POVMmeasurements,thecollision-countestimatorP_hat=#*(numberofmatchingoutcomes)/m-#isunbiasedforTrrho5#.Foruniformlyconfused4#-outcomereadouteps,C_obs=(#-eps)#C+[#-(#-eps)#]/#,invertexplicitly"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "619dd36c5b22f91bf896751177dc8e373e63e0dd46fd81eda1a982f103b693e0",
+      "normalized_formula": "Thereis^another,non-isomorphic^groupwiththesameorderappearingelsewhereinthisrepository:`PGSp(4,3)~=Aut(PSp(4,3))~=W(E6)`,theouterautomorphismextension`PSp(4,3):2`.Itscenteristrivial.Itmust^not^beconflatedwiththecentraldoublecover`2.PSp(4,3)`:equalityofcardinality51,840is*not*anidentification.Thedistinctionisphysicallyrelevantbecausethecentralminussignisdetectableonlyinterferometricallyrelativetoareference,whereasaprojectiveouterautomorphismactsdifferentlyonthefinitegeometry.Seealsothe[repository'sstatedgroupvocabulary](https://wilcompute.github.io/W33-Theory/)and[thestandardE6Weylidentification](https://oa.tib.eu/renate/bitstreams/6fb7e7a9-d01b-4f4c-85ac-5813e67933d8/download)",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5813e67933",
+        "6",
+        "840",
+        "85"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 59,
+          "path": "analysis/2026-10-29_W33_srg28_code_atlas_integral_cover.md",
+          "raw": "There is **another, non-isomorphic** group with the same order appearing elsewhere in this repository: `PGSp(4,3) ~= Aut(PSp(4,3)) ~= W(E6)`, the outer automorphism extension `PSp(4,3):2`. Its center is trivial. It must **not** be conflated with the central double cover `2.PSp(4,3)`: equality of cardinality 51,840 is *not* an identification. The distinction is physically relevant because the central minus sign is detectable only interferometrically relative to a reference, whereas a projective outer automorphism acts differently on the finite geometry. See also the [repository's stated group vocabulary](https://wilcompute.github.io/W33-Theory/) and [the standard E6 Weyl identification](https://oa.tib.eu/renate/bitstreams/6fb7e7a9-d01b-4f4c-85ac-5813e67933d8/download).",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4b8ef7844371f2975813fac22dbc40057991407449b0466d4435d3fe8ab6c77c",
+      "structural_formula": "Thereis^another,non-isomorphic^groupwiththesameorderappearingelsewhereinthisrepository:`PGSp(#,#)~=Aut(PSp(#,#))~=W(E6)`,theouterautomorphismextension`PSp(#,#):#`.Itscenteristrivial.Itmust^not^beconflatedwiththecentraldoublecover`#.PSp(#,#)`:equalityofcardinality5#,#is*not*anidentification.Thedistinctionisphysicallyrelevantbecausethecentralminussignisdetectableonlyinterferometricallyrelativetoareference,whereasaprojectiveouterautomorphismactsdifferentlyonthefinitegeometry.Seealsothe[repository'sstatedgroupvocabulary](https://wilcompute.github.io/W3#-Theory/)and[thestandardE6Weylidentification](https://oa.tib.eu/renate/bitstreams/#fb7e7a9-d0#b-#f4c-#ac-#d8/download)"
     },
     {
       "file_count": 1,
@@ -1054203,6 +1054425,44 @@
     },
     {
       "file_count": 1,
+      "formula_id": "084989316b7333ae895e7b554b66c49da963e18230a3f6985d447d4d4f05e2b1",
+      "normalized_formula": "^Parallel-commitreconciliation:^Commit812e85e2(publishedduringthisresearch)independentlyestablishesthefull28-graphSRGbinaryCSSatlas,thesameW33/dual[[40,8,6]]versus[[40,20,4]]contrast,andaconstructive8-modeE8order-fouroptical-signwitness.ThoseresultsarenowPRIORREPOSITORYWORKandarenotclaimednovelhere.Thiscontinuationseparatelycertifiesall51,840naturalSp(4,3)tointegralE8wordidentities,implementsa40-moderectangularmesh,reconstructs1120-vertexC3(3),andprovidesthefulldistinct-outputthree-photondiscriminatorthatisnotintheparallelatlas.ThesedonotsolvetheTheoryofEverything,predictfundamentalconstants,demonstrateafault-tolerantmachine,orestablishanexactq=7CSSdistance.Priorrepoworkandoutsideliteratureareacknowledged",
+      "numeric_literals": [
+        "0",
+        "1",
+        "120",
+        "12e85",
+        "20",
+        "3",
+        "4",
+        "40",
+        "6",
+        "7",
+        "8",
+        "840"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 5,
+          "path": "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md",
+          "raw": "**Parallel-commit reconciliation:** Commit 812e85e2 (published during this research) independently establishes the full 28-graph SRG binary CSS atlas, the same W33/dual [[40,8,6]] versus [[40,20,4]] contrast, and a constructive 8-mode E8 order-four optical-sign witness. Those results are now PRIOR REPOSITORY WORK and are not claimed novel here. This continuation separately certifies all 51,840 natural Sp(4,3) to integral E8 word identities, implements a 40-mode rectangular mesh, reconstructs 1120-vertex C3(3), and provides the full distinct-output three-photon discriminator that is not in the parallel atlas. These do not solve the Theory of Everything, predict fundamental constants, demonstrate a fault-tolerant machine, or establish an exact q=7 CSS distance. Prior repo work and outside literature are acknowledged.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "f731bb1f0cd630b73d18e5b74fdd9feb4428c46bcc770315f81ba74d6fcb9606",
+      "structural_formula": "^Parallel-commitreconciliation:^Commit8#e2(publishedduringthisresearch)independentlyestablishesthefull2#-graphSRGbinaryCSSatlas,thesameW3#/dual[[#,#,#]]versus[[#,#,#]]contrast,andaconstructive8-modeE8order-fouroptical-signwitness.ThoseresultsarenowPRIORREPOSITORYWORKandarenotclaimednovelhere.Thiscontinuationseparatelycertifiesall5#,#naturalSp(#,#)tointegralE8wordidentities,implementsa4#-moderectangularmesh,reconstructs1#-vertexC3(#),andprovidesthefulldistinct-outputthree-photondiscriminatorthatisnotintheparallelatlas.ThesedonotsolvetheTheoryofEverything,predictfundamentalconstants,demonstrateafault-tolerantmachine,orestablishanexactq=#CSSdistance.Priorrepoworkandoutsideliteratureareacknowledged"
+    },
+    {
+      "file_count": 1,
       "formula_id": "7425246e8e4566e3ecda835d627a09dc4740d34668509fb1331fe7def55a2cfa",
       "normalized_formula": "^Partialexplanation.^Adualpairisrelatedbythe90\u00b0latticerotationR,sinceadj(N)=RTNR.ButRisnota",
       "numeric_literals": [
@@ -1098371,6 +1098631,58 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a9ad8d8bfde590895ced3724ad8a812a5189874a7c08a0f2b44aebc6e3309b33",
+      "normalized_formula": "analysis/w33_20261029_dual_polar_C3_3.pyconstructsall1,120Lagrangian3-spacesofF3^6andall3,640isotropic2-planes;everyplanebelongstofourLagrangians.Thedual-polargraphhasdegree39,diameter3,shellsizes[1,39,351,729],intersectionarraysb=[39,36,27,0],c=[0,1,4,13],a=[0,2,8,26],andeigenvalues[39,11,-1,-13].Anypairatdistancethreehasexactly52length-threewalks.Fornearest-neighborCTQWtheoffsiteamplitudeisofordert^3,nonzeroforarbitrarilyearlygenericpositivetimes:graphdiameterdoesNOTimplyanexactLorentzianlightcone.Thedimensionlessadjacencywalkrevivesatt=pi/2;thereisnoderivedseconds-scaleclock.Standardtheory:https://doi.org/10.1007/s00013-023-01829-2",
+      "numeric_literals": [
+        "-01829",
+        "-023",
+        "-1",
+        "-13",
+        "-2",
+        "0",
+        "0013",
+        "0261029",
+        "1",
+        "10.1007",
+        "11",
+        "120",
+        "13",
+        "2",
+        "26",
+        "27",
+        "3",
+        "351",
+        "36",
+        "39",
+        "4",
+        "6",
+        "640",
+        "729",
+        "8",
+        "9"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 27,
+          "path": "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md",
+          "raw": "analysis/w33_20261029_dual_polar_C3_3.py constructs all 1,120 Lagrangian 3-spaces of F3^6 and all 3,640 isotropic 2-planes; every plane belongs to four Lagrangians. The dual-polar graph has degree 39, diameter 3, shell sizes [1,39,351,729], intersection arrays b=[39,36,27,0], c=[0,1,4,13], a=[0,2,8,26], and eigenvalues [39,11,-1,-13]. Any pair at distance three has exactly 52 length-three walks. For nearest-neighbor CTQW the offsite amplitude is of order t^3, nonzero for arbitrarily early generic positive times: graph diameter does NOT imply an exact Lorentzian light cone. The dimensionless adjacency walk revives at t=pi/2; there is no derived seconds-scale clock. Standard theory: https://doi.org/10.1007/s00013-023-01829-2 .",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "92fef33543cb38de33c25d3023026df6b81a6cca665cac1801fcfacffbc1c81c",
+      "structural_formula": "analysis/w3#_2#_dual_polar_C3_3.pyconstructsall1,#Lagrangian3-spacesofF3^#andall3,#isotropic2-planes;everyplanebelongstofourLagrangians.Thedual-polargraphhasdegree3#,diameter3,shellsizes[#,#,#,#],intersectionarraysb=[#,#,#,#],c=[#,#,#,#],a=[#,#,#,#],andeigenvalues[#,#,#,#].Anypairatdistancethreehasexactly5#length-threewalks.Fornearest-neighborCTQWtheoffsiteamplitudeisofordert^#,nonzeroforarbitrarilyearlygenericpositivetimes:graphdiameterdoesNOTimplyanexactLorentzianlightcone.Thedimensionlessadjacencywalkrevivesatt=pi/#;thereisnoderivedseconds-scaleclock.Standardtheory:https://doi.org/#/s0####"
+    },
+    {
+      "file_count": 1,
       "formula_id": "884023fd2a3c79cc8a343cc601f95d1ed8537a895273438b203f0e2e94b84167",
       "normalized_formula": "analysis/w33_20261029_explicit_mod2_E8_isometry.pybuildsH=ker(A)/im(A),ahyperbolicbasis,andanexplicitisometryintotheE8simple-rootlatticemodulo2,usingQ(v)=sum_iv_i+sum_{i~j}v_iv_j",
       "numeric_literals": [
@@ -1098430,6 +1098742,36 @@
       },
       "structural_family_id": "d8053b631ce0a08015b4e7a6a33043f1c72948a45a2796965dd7023f849c7bf6",
       "structural_formula": "analysis/w3#_2#_optical_mesh_and_locality.pyconstructsU=exp(-i*pi*A/#)onthe^one-photon^#-modeHilbertspaceusingtheexactthree-eigenvaluespectralprojectors.ItthendecomposesUinto^#activeadjacent-modeSU(#)Givensblocks^plus4#outputphases(versusC(#,#)=#possibleblocks),andverifiesfullmatrixreconstructiontobelow5e-#entrywise"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a2072a580d6ec40790e8c4661edb9a039fc0a0459fc8797f06e415377d680782",
+      "normalized_formula": "analysis/w33_20261029_rectangular_optical_mesh.pyusesindependenttwo-sidedGivenseliminationtosynthesizeU=exp(-ipiA/2)ontheone-photonW3340-modeHilbertspace.Relativetothepriortriangulardecomposition",
+      "numeric_literals": [
+        "0261029",
+        "2",
+        "3",
+        "340"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 13,
+          "path": "analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md",
+          "raw": "analysis/w33_20261029_rectangular_optical_mesh.py uses independent two-sided Givens elimination to synthesize U=exp(-i pi A/2) on the one-photon W33 40-mode Hilbert space. Relative to the prior triangular decomposition:",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "5768875828aa735300e356b31cf2d55afbe501651c00bd807afd72fe92750063",
+      "structural_formula": "analysis/w3#_2#_rectangular_optical_mesh.pyusesindependenttwo-sidedGivenseliminationtosynthesizeU=exp(-ipiA/#)ontheone-photonW3#-modeHilbertspace.Relativetothepriortriangulardecomposition"
     },
     {
       "file_count": 1,
@@ -1909861,9 +1910203,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T15:11:14-04:00",
+  "frozen_at": "2026-10-29T15:21:44-04:00",
   "pass": 398,
-  "repository_head": "812e85e2e7686c2015b34882868db42183350ffd",
+  "repository_head": "014b7aa5f109fa4333999820c2b28796ead42eea",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1936238,6 +1936580,14 @@
       "exact_member_count": 1,
       "structural_family_id": "14a5124121444d5cf988afdf1566a94c0132eb65fa83a945d39a1594f01567de",
       "structural_formula": "\"dual_map_automorphism_order_is_4#\":len(automorphisms)=#"
+    },
+    {
+      "exact_formula_ids": [
+        "ae0acc1ffcca30850dedb1f8d47711fe6d7b19ab6a3180fe1eee52438b673b69"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0d2c83fb61af47cb0fbf52dd9f3bfc69ccf114b74a06dafabcc1b5d063e12dd1",
+      "structural_formula": "\"dual_maximum_probability\":\"#/#=#\""
     },
     {
       "exact_formula_ids": [
@@ -1966183,6 +1966533,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f7c0b163598c0fe27cb00ad9ca7d9c45f68a62cc8564619de4a77b374db28d73",
       "structural_formula": "###.Exactq=#minimumdistance,partialq=#"
+    },
+    {
+      "exact_formula_ids": [
+        "55eac38f3c49905051c5b4277308f591ead9d7e6e12704b561d07ec7b7827f2a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6e24946e0530e455b99aee301fd4bbb077249351a5dd1602e7f25eebdabda875",
+      "structural_formula": "###.Honestq=#distancefirewall"
     },
     {
       "exact_formula_ids": [
@@ -2110257,6 +2110615,14 @@
     },
     {
       "exact_formula_ids": [
+        "20d5dfeba2aa4a77d38e0b3886e1d159f3508a3808003c14dcc5e2036d1a504b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "815db158cbc3e3274b4d3c83a8e35ca7dce07e54a411f9d1a1c322b31a9bc167",
+      "structural_formula": "OUT=ROOT/\"data/w3#_2#_rectangular_optical_mesh.json\""
+    },
+    {
+      "exact_formula_ids": [
         "d8bceff61d6a378e603cd7f87ad434e9772e7fa870c641a6353f483ff7fa9ada"
       ],
       "exact_member_count": 1,
@@ -2119129,6 +2119495,14 @@
       "exact_member_count": 1,
       "structural_family_id": "3843c96e04ef40efc2040f0b2eaf1c9c38fca6c2c98716ca5b42f236838d05f7",
       "structural_formula": "Previousexactmodel-specificknown-input/labeled-detectortest,atcommoncouplerdrift\\(\\Delta\\theta\\in\\{#,#,#,#,#\\}\\)rad,usedtheBhattacharyyacoefficient\\(B=\\sum\\sqrt{p_iq_i}\\).Hereinclude"
+    },
+    {
+      "exact_formula_ids": [
+        "24c61ac964ac131e6d8e35fb91f4395ec8855566994a43618d98163847eccdd8"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "63009cf5bd4228bc5f76d4598ac7d4841af81b81ee6619e34fea69d1db086644",
+      "structural_formula": "PreviousexhaustiveworkcertifiestheW(#,#)binaryadjacencyCSScode[[#,#,d]]with^#<=d<=#^,andrandomizedsearchesfoundweight1#.ThenewMILPproduceranalysis/w3#_2#_q7_milp_falsifier.pytestsA*x=#*ywithbinaryx,integralyandfixedsupportsize,factoringpointtransitivityandadjacent/nonadjacentsecond-pointorbits.Both2#-secondweight-tenfeasibilityjobsendedatthesolvertimelimitwithoutacounterexampleorproofofinfeasibility.^Inconclusive;theexactdistanceremainsunknown.^Weight-twelvefeasibilityisalsoopen.Anyd=#theoremrequiresactualprooforareproduciblesolverinfeasibilitycertificate"
     },
     {
       "exact_formula_ids": [
@@ -2135865,6 +2136239,14 @@
     },
     {
       "exact_formula_ids": [
+        "bf1b72f4aee5dbd249d891ad0b487b15ed294c4a2934cc2cecfbb399d292706c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "002b915a0f899b02f5feb91e6f3ff2e5093a2b00d523b0d736b81572fdd61a45",
+      "structural_formula": "The^integrallift^constructedhereisa*non-splitcentralextension*`#.PSp(#,#)`withcenter`{+I,-I}`,oforder^#,#^.BythestandardSchur-coveridentificationthisis`Sp(#,#)~=#.U4(#)`(see[GAPAtlascharactertable](https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbltoc/data/#.U4"
+    },
+    {
+      "exact_formula_ids": [
         "fce26620a9b6087aba250a74eb79554dc9aacc208e9f4595387749f74e82490c"
       ],
       "exact_member_count": 1,
@@ -2138905,6 +2139287,14 @@
     },
     {
       "exact_formula_ids": [
+        "020cb89f95fd974a1fa81fc649002a3f200852bb2a7f59b09a747b692fecea73"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ea2151a93c8fdbe4675413411320a34aff7f03b2a1b8e2713944bd75b0ed721a",
+      "structural_formula": "ThepointW(#,#)graphanditsdualline-intersectiongrapharenonisomorphicSRG(#,#,#,#)graphswithidenticalspectra.Literature:Spence(#),https://doi.org/#/#.Theiridealquarter-cyclewalkmatrixisU=(#J-#(I+A))/#.Allphotonprobabilitiesarethereforeexactrationalnumbersfromintegerbosonicpermanents"
+    },
+    {
+      "exact_formula_ids": [
         "4ee866a8561a741bc4482ec39234dadb14c1443f17de389629364d5d2c88ffb7"
       ],
       "exact_member_count": 1,
@@ -2139646,6 +2140036,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4f606f56c6ad27e4173737d727bb88c63399240e0e2f923009bce7a274affabf",
       "structural_formula": "Thereforewithmindependentpairsofsingle-POVMmeasurements,thecollision-countestimatorP_hat=#*(numberofmatchingoutcomes)/m-#isunbiasedforTrrho5#.Foruniformlyconfused4#-outcomereadouteps,C_obs=(#-eps)#C+[#-(#-eps)#]/#,invertexplicitly"
+    },
+    {
+      "exact_formula_ids": [
+        "619dd36c5b22f91bf896751177dc8e373e63e0dd46fd81eda1a982f103b693e0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4b8ef7844371f2975813fac22dbc40057991407449b0466d4435d3fe8ab6c77c",
+      "structural_formula": "Thereis^another,non-isomorphic^groupwiththesameorderappearingelsewhereinthisrepository:`PGSp(#,#)~=Aut(PSp(#,#))~=W(E6)`,theouterautomorphismextension`PSp(#,#):#`.Itscenteristrivial.Itmust^not^beconflatedwiththecentraldoublecover`#.PSp(#,#)`:equalityofcardinality5#,#is*not*anidentification.Thedistinctionisphysicallyrelevantbecausethecentralminussignisdetectableonlyinterferometricallyrelativetoareference,whereasaprojectiveouterautomorphismactsdifferentlyonthefinitegeometry.Seealsothe[repository'sstatedgroupvocabulary](https://wilcompute.github.io/W3#-Theory/)and[thestandardE6Weylidentification](https://oa.tib.eu/renate/bitstreams/#fb7e7a9-d0#b-#f4c-#ac-#d8/download)"
     },
     {
       "exact_formula_ids": [
@@ -2190917,6 +2191315,14 @@
     },
     {
       "exact_formula_ids": [
+        "084989316b7333ae895e7b554b66c49da963e18230a3f6985d447d4d4f05e2b1"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "f731bb1f0cd630b73d18e5b74fdd9feb4428c46bcc770315f81ba74d6fcb9606",
+      "structural_formula": "^Parallel-commitreconciliation:^Commit8#e2(publishedduringthisresearch)independentlyestablishesthefull2#-graphSRGbinaryCSSatlas,thesameW3#/dual[[#,#,#]]versus[[#,#,#]]contrast,andaconstructive8-modeE8order-fouroptical-signwitness.ThoseresultsarenowPRIORREPOSITORYWORKandarenotclaimednovelhere.Thiscontinuationseparatelycertifiesall5#,#naturalSp(#,#)tointegralE8wordidentities,implementsa4#-moderectangularmesh,reconstructs1#-vertexC3(#),andprovidesthefulldistinct-outputthree-photondiscriminatorthatisnotintheparallelatlas.ThesedonotsolvetheTheoryofEverything,predictfundamentalconstants,demonstrateafault-tolerantmachine,orestablishanexactq=#CSSdistance.Priorrepoworkandoutsideliteratureareacknowledged"
+    },
+    {
+      "exact_formula_ids": [
         "7425246e8e4566e3ecda835d627a09dc4740d34668509fb1331fe7def55a2cfa"
       ],
       "exact_member_count": 1,
@@ -2202762,6 +2203168,14 @@
     },
     {
       "exact_formula_ids": [
+        "a9ad8d8bfde590895ced3724ad8a812a5189874a7c08a0f2b44aebc6e3309b33"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "92fef33543cb38de33c25d3023026df6b81a6cca665cac1801fcfacffbc1c81c",
+      "structural_formula": "analysis/w3#_2#_dual_polar_C3_3.pyconstructsall1,#Lagrangian3-spacesofF3^#andall3,#isotropic2-planes;everyplanebelongstofourLagrangians.Thedual-polargraphhasdegree3#,diameter3,shellsizes[#,#,#,#],intersectionarraysb=[#,#,#,#],c=[#,#,#,#],a=[#,#,#,#],andeigenvalues[#,#,#,#].Anypairatdistancethreehasexactly5#length-threewalks.Fornearest-neighborCTQWtheoffsiteamplitudeisofordert^#,nonzeroforarbitrarilyearlygenericpositivetimes:graphdiameterdoesNOTimplyanexactLorentzianlightcone.Thedimensionlessadjacencywalkrevivesatt=pi/#;thereisnoderivedseconds-scaleclock.Standardtheory:https://doi.org/#/s0####"
+    },
+    {
+      "exact_formula_ids": [
         "884023fd2a3c79cc8a343cc601f95d1ed8537a895273438b203f0e2e94b84167"
       ],
       "exact_member_count": 1,
@@ -2202775,6 +2203189,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d8053b631ce0a08015b4e7a6a33043f1c72948a45a2796965dd7023f849c7bf6",
       "structural_formula": "analysis/w3#_2#_optical_mesh_and_locality.pyconstructsU=exp(-i*pi*A/#)onthe^one-photon^#-modeHilbertspaceusingtheexactthree-eigenvaluespectralprojectors.ItthendecomposesUinto^#activeadjacent-modeSU(#)Givensblocks^plus4#outputphases(versusC(#,#)=#possibleblocks),andverifiesfullmatrixreconstructiontobelow5e-#entrywise"
+    },
+    {
+      "exact_formula_ids": [
+        "a2072a580d6ec40790e8c4661edb9a039fc0a0459fc8797f06e415377d680782"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5768875828aa735300e356b31cf2d55afbe501651c00bd807afd72fe92750063",
+      "structural_formula": "analysis/w3#_2#_rectangular_optical_mesh.pyusesindependenttwo-sidedGivenseliminationtosynthesizeU=exp(-ipiA/#)ontheone-photonW3#-modeHilbertspace.Relativetothepriortriangulardecomposition"
     },
     {
       "exact_formula_ids": [
@@ -2420327,20 +2420749,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92700381,
-    "exact_formula_families": 65302,
-    "files_scanned": 12753,
-    "formula_occurrences": 71446,
+    "bytes_scanned": 92737666,
+    "exact_formula_families": 65312,
+    "files_scanned": 12761,
+    "formula_occurrences": 71456,
     "status_occurrences": {
       "certified_or_theorem": 5373,
       "killed_or_retracted": 1953,
-      "open_or_conditional": 2417,
+      "open_or_conditional": 2418,
       "preregistered": 36,
-      "retrospective_fit": 5435,
-      "unclassified": 56232
+      "retrospective_fit": 5436,
+      "unclassified": 56240
     },
-    "structural_families": 63588
+    "structural_families": 63598
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "a4ef3d35ce389d28a1ecb04098f7fe4414c57e241171a9cd5308315ab2491da3"
+  "universe_sha256": "6f3538f63dc6a3373bfaa91b92b63932980881703edec29ec5fc536b94551690"
 }
