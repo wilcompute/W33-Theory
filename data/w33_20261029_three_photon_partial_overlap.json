@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "model": "Three photon pure internal states with equal real pairwise overlap s in [0,1], detector insensitive to internal state",
+  "unitary": "U=(2J-5(I+A))/15 at t=pi/2",
+  "all_3x3_signed_patterns": 512,
+  "W33_independent_triple_common_neighbor_histogram": {
+    "1": 2880,
+    "4": 360
+  },
+  "dual_independent_triple_common_neighbor_histogram": {
+    "0": 1080,
+    "2": 2160
+  },
+  "W33_witness_input": [
+    0,
+    1,
+    2
+  ],
+  "W33_witness_output": [
+    4,
+    13,
+    22
+  ],
+  "W33_witness_coefficient_tuple": [
+    4374,
+    13122,
+    8748
+  ],
+  "dual_universal_upper_coefficient_tuple": [
+    3564,
+    5832,
+    3888
+  ],
+  "guaranteed_strict_gap_coefficient_tuple": [
+    810,
+    7290,
+    4860
+  ],
+  "probability_denominator": 11390625,
+  "guaranteed_probability_gap_at_s0": 0.0000711111111111111,
+  "guaranteed_probability_gap_at_s1": 0.0011377777777777777,
+  "theorem": "For every s in [0,1], W33 has an event P=(4374+13122*s^2+8748*s^3)/15^6 exceeding ALL independent-input, distinct-output dual events bounded by (3564+5832*s^2+3888*s^3)/15^6.",
+  "scope": "Calibrated ideal conventional quantum optics; no loss/dark counts/partial-number-resolution modeling; no beyond-QM or TOE prediction."
+}
