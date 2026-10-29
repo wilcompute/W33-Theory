@@ -571256,6 +571256,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "19e0254c1f92eb3b0d514d52cf67823dad644993535be75ea783b90f70a692ee",
+      "normalized_formula": "Atk=(2pi/3,2pi/3,0,0),constructtheactualmatchedrepaired135-linkHandgaugegradientDoverZ[omega],omega^2+omega+1=0.Thetworepair-channelweightsareboth1,withepsilon=.001.SetS=H+DD^dagger.ItsnumeratormatricesA,BgiveS=(A+Bomega)/4500.AfloatinginverseisusedonlytoproposerationalnumeratormatricesX,Ywithdenominator2^24;allsubsequentverificationisexactintegerarithmetic",
+      "numeric_literals": [
+        ".001",
+        "0",
+        "1",
+        "2",
+        "24",
+        "3",
+        "35",
+        "4500"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12392_12396_EXACT_NATIVE_CONTROLS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/PASS12392_12396_EXACT_NATIVE_CONTROLS.md",
+          "raw": "At k=(2pi/3,2pi/3,0,0), construct the actual matched repaired135-link H and gauge gradient D over Z[omega], omega^2+omega+1=0. The two repair-channel weights are both1, with epsilon=.001. Set S=H+D D^dagger. Its numerator matrices A,B give S=(A+B omega)/4500. A floating inverse is used only to propose rational numerator matrices X,Y with denominator2^24; all subsequent verification is exact integer arithmetic.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "854ce4578f4c48cc5c49f97b448f2abda06c120231a10bc6b94867d435c5514d",
+      "structural_formula": "Atk=(#pi/#,#pi/#,#,#),constructtheactualmatchedrepaired1#-linkHandgaugegradientDoverZ[omega],omega^#+omega+#=#.Thetworepair-channelweightsareboth1,withepsilon=#.SetS=H+DD^dagger.ItsnumeratormatricesA,BgiveS=(A+Bomega)/#.AfloatinginverseisusedonlytoproposerationalnumeratormatricesX,Ywithdenominator2^#;allsubsequentverificationisexactintegerarithmetic"
+    },
+    {
+      "file_count": 1,
       "formula_id": "fd6f98f8b24c2d4de706d6521f5e67f83adc85efbc7dc2366e8c817dd89cd024",
       "normalized_formula": "Atk=0thesignedcurl/plaquetteboundarymatrixhasrank^78^(includingindependentexactGF(3)rankverification,notmerelyfloatingrank)insidetheLevigraph's81-dimensionalnativecyclespace.The3unfilledcyclesaretheintendedthreefirst-homology/windingdirections,notarandommissingconstraint",
       "numeric_literals": [
@@ -600892,6 +600926,34 @@
       },
       "structural_family_id": "07733e0eb083fa3104f3c41d19c0236f7a56a72a71b5304564037f877b0e4f4f",
       "structural_formula": "D,U,V=smith_normal_decomp(DomainMatrix.from_Matrix(sp.Matrix(A.tolist())).convert_to(ZZ));D,V=D.to_Matrix(),V.to_Matrix();r=sum(D[i,i]!=#foriinrange(min(D.rows,D.cols)));returnnp.array(V[:,r:].tolist(),dtype=np.int6#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "d57c1a7e6b0277e1562c9535d8b19389fcc4dc2d5a19715f4ad964eab7c1ca06",
+      "normalized_formula": "D,gap=build(phase);D2,_=build(phase+theta[a]-theta[b]);g=np.kron(np.eye(4),np.diag(np.exp(1j*theta)))",
+      "numeric_literals": [
+        "1",
+        "4"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12392_12396_exact_controls.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "analysis/w33_pass12392_12396_exact_controls.py",
+          "raw": "D,gap=build(phase);D2,_=build(phase+theta[a]-theta[b]);g=np.kron(np.eye(4),np.diag(np.exp(1j*theta)))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "6ba602d391270c8df860239d7676ebec7b73f5ae94a7e29255cfa301c48dc3bc",
+      "structural_formula": "D,gap=build(phase);D2,_=build(phase+theta[a]-theta[b]);g=np.kron(np.eye(#),np.diag(np.exp(#j*theta)))"
     },
     {
       "file_count": 1,
@@ -838913,6 +838975,34 @@
       },
       "structural_family_id": "144276972bc25ec467d05b81963243a55b1e0742bf71e61555fe7355a6d9b203",
       "structural_formula": "Thecentral`#=#x3`thereforeappearssimultaneouslyas"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bd95261fcc15d316183b5975201fd1614b20f7dab35878fc335c4e4310f5a789",
+      "normalized_formula": "Thecertificatestoresallfourintegermatrices,sonotrustinthenumericalinverseornumericaleigensolverisneeded.ExactHD=0separatesphysicalandgaugeblocks.Anindependenttestchecksmultiplicationthrougha270-by270rationalblockembeddingoftheEisensteinintegers.Thisisanexplicitrigorousboundatonemomentum,notaglobaltorusconstant.Thepreviouscompactnesscriterionremainsconditionalontheoldexactacoustic-moduleinputs",
+      "numeric_literals": [
+        "0",
+        "70"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12392_12396_EXACT_NATIVE_CONTROLS.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 15,
+          "path": "analysis/PASS12392_12396_EXACT_NATIVE_CONTROLS.md",
+          "raw": "The certificate stores all four integer matrices, so no trust in the numerical inverse or numerical eigensolver is needed. Exact H D=0 separates physical and gauge blocks. An independent test checks multiplication through a270-by270 rational block embedding of the Eisenstein integers. This is an explicit rigorous bound at one momentum, not a global torus constant. The previous compactness criterion remains conditional on the old exact acoustic-module inputs.",
+          "status": "open_or_conditional"
+        }
+      ],
+      "status_profile": {
+        "open_or_conditional": 1
+      },
+      "structural_family_id": "a329e0a6421a4d7e86b15d92bb65c5a66d4fc3778383c65277500360cdeec880",
+      "structural_formula": "Thecertificatestoresallfourintegermatrices,sonotrustinthenumericalinverseornumericaleigensolverisneeded.ExactHD=#separatesphysicalandgaugeblocks.Anindependenttestchecksmultiplicationthrougha2#-by2#rationalblockembeddingoftheEisensteinintegers.Thisisanexplicitrigorousboundatonemomentum,notaglobaltorusconstant.Thepreviouscompactnesscriterionremainsconditionalontheoldexactacoustic-moduleinputs"
     },
     {
       "file_count": 1,
@@ -1164859,6 +1164949,33 @@
       },
       "structural_family_id": "d08f153478d72bb4fbea1b07aa4c0f7de5eaeab3676c3e178ab0fb17ad1da287",
       "structural_formula": "bound=#-math.cos(a)#*math.sin(a)^#/(K+#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "7adaf10d8d902c9c9700ce6573a97bccdf7edc1d328f773466efa8084a8f3567",
+      "normalized_formula": "bound=Fraction(den-residual_num,4500*xnorm_num)",
+      "numeric_literals": [
+        "4500"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12392_12396_exact_controls.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_pass12392_12396_exact_controls.py",
+          "raw": "bound=Fraction(den-residual_num,4500*xnorm_num)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "b90e7fb769a7fd41221095ecb3263225475051aa68f609ba2f47030baa30a8aa",
+      "structural_formula": "bound=Fraction(den-residual_num,#*xnorm_num)"
     },
     {
       "file_count": 1,
@@ -1540562,6 +1540679,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "f09dd639d38a6f1b6d3672744881649de0efda3527a80a1e302eadcadd188788",
+      "normalized_formula": "phase=np.random.default_rng(12394).uniform(-.1,.1,135);theta=np.random.default_rng(92).normal(size=27)",
+      "numeric_literals": [
+        "-.1",
+        ".1",
+        "12394",
+        "135",
+        "27",
+        "92"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12392_12396_exact_controls.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 52,
+          "path": "analysis/w33_pass12392_12396_exact_controls.py",
+          "raw": "phase=np.random.default_rng(12394).uniform(-.1,.1,135);theta=np.random.default_rng(92).normal(size=27)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "64f572e57e398d88a93f156756a083b36eb55d2d1ae85e3661eaed5f4f7e4b0a",
+      "structural_formula": "phase=np.random.default_rng(#).uniform(#,#,#);theta=np.random.default_rng(#).normal(size=#)"
+    },
+    {
+      "file_count": 1,
       "formula_id": "f9b207cdc5edc7adf901d46fb2e85b988420d55a3deedb3fd9bf81c82ea8876d",
       "normalized_formula": "phase=theta0+2*np.pi*i/3",
       "numeric_literals": [
@@ -1714356,6 +1714505,38 @@
       },
       "structural_family_id": "4349435d05010a5d973bce9acd15be76014eb1230275d53a39ba9f96e238e13c",
       "structural_formula": "return{'maximum_denominator':max(denominators),'common_denominator':reduce(lcm,denominators,#),'nonintegral_entries':sum(any(c.denominator!=#forcinentry)forrowinmatrixforentryinrow)}"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "f6e471a4f15360c90e2b8e98649a468863c5c11ed02f453361ad7755d5e22d51",
+      "normalized_formula": "return{'momentum':'(2pi/3,2pi/3,0,0)','operator':'H_repaired_matched+DD^dag','matrix_denominator':4500,'inverse_denominator':q,'matrix_a':A.tolist(),'matrix_b':B.tolist(),'inverse_a':xa.tolist(),'inverse_b':xb.tolist(),'residual_bound':str(Fraction(residual_num,den)),'inverse_inf_norm_bound':str(Fraction(xnorm_num,q)),'certified_physical_eigenvalue_lower_bound':str(bound),'bound_decimal':float(bound),'proof':'ExactZ[omega]residualr<1gives||S^-1||inf<=||X||inf/(1-r).Hermiticityboundsitsspectralradius;exactHD=0separatesphysicalandgaugeblocks.','scope':'Oneexactnonidentitymomentum,notaglobaltorusconstant.'}",
+      "numeric_literals": [
+        "-1",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4500"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12392_12396_exact_controls.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 48,
+          "path": "analysis/w33_pass12392_12396_exact_controls.py",
+          "raw": "return {'momentum':'(2pi/3,2pi/3,0,0)','operator':'H_repaired_matched + D D^dag','matrix_denominator':4500,'inverse_denominator':q,'matrix_a':A.tolist(),'matrix_b':B.tolist(),'inverse_a':xa.tolist(),'inverse_b':xb.tolist(),'residual_bound':str(Fraction(residual_num,den)),'inverse_inf_norm_bound':str(Fraction(xnorm_num,q)),'certified_physical_eigenvalue_lower_bound':str(bound),'bound_decimal':float(bound),'proof':'Exact Z[omega] residual r<1 gives ||S^-1||inf<=||X||inf/(1-r). Hermiticity bounds its spectral radius; exact H D=0 separates physical and gauge blocks.','scope':'One exact nonidentity momentum, not a global torus constant.'}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e38a3c2185086b47e94f262152ea0239708340757dd86f476cf0d3884f992466",
+      "structural_formula": "return{'momentum':'(#pi/#,#pi/#,#,#)','operator':'H_repaired_matched+DD^dag','matrix_denominator':#,'inverse_denominator':q,'matrix_a':A.tolist(),'matrix_b':B.tolist(),'inverse_a':xa.tolist(),'inverse_b':xb.tolist(),'residual_bound':str(Fraction(residual_num,den)),'inverse_inf_norm_bound':str(Fraction(xnorm_num,q)),'certified_physical_eigenvalue_lower_bound':str(bound),'bound_decimal':float(bound),'proof':'ExactZ[omega]residualr<#gives||S^#||inf<=||X||inf/(#-r).Hermiticityboundsitsspectralradius;exactHD=#separatesphysicalandgaugeblocks.','scope':'Oneexactnonidentitymomentum,notaglobaltorusconstant.'}"
     },
     {
       "file_count": 1,
@@ -1907557,9 +1907738,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T12:38:24-04:00",
+  "frozen_at": "2026-10-29T12:49:10-04:00",
   "pass": 398,
-  "repository_head": "bf846cf50796a3187c5e50cc10340b4a3e7b4b13",
+  "repository_head": "26be23edb6016b2424caacc9ae01b253a682be4f",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2061245,6 +2061426,14 @@
     },
     {
       "exact_formula_ids": [
+        "19e0254c1f92eb3b0d514d52cf67823dad644993535be75ea783b90f70a692ee"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "854ce4578f4c48cc5c49f97b448f2abda06c120231a10bc6b94867d435c5514d",
+      "structural_formula": "Atk=(#pi/#,#pi/#,#,#),constructtheactualmatchedrepaired1#-linkHandgaugegradientDoverZ[omega],omega^#+omega+#=#.Thetworepair-channelweightsareboth1,withepsilon=#.SetS=H+DD^dagger.ItsnumeratormatricesA,BgiveS=(A+Bomega)/#.AfloatinginverseisusedonlytoproposerationalnumeratormatricesX,Ywithdenominator2^#;allsubsequentverificationisexactintegerarithmetic"
+    },
+    {
+      "exact_formula_ids": [
         "bb2a47cb54a72d399a18b3700b15bf78e0299248943ada66bdafd1c31d04947e"
       ],
       "exact_member_count": 1,
@@ -2069304,6 +2069493,14 @@
       "exact_member_count": 1,
       "structural_family_id": "07733e0eb083fa3104f3c41d19c0236f7a56a72a71b5304564037f877b0e4f4f",
       "structural_formula": "D,U,V=smith_normal_decomp(DomainMatrix.from_Matrix(sp.Matrix(A.tolist())).convert_to(ZZ));D,V=D.to_Matrix(),V.to_Matrix();r=sum(D[i,i]!=#foriinrange(min(D.rows,D.cols)));returnnp.array(V[:,r:].tolist(),dtype=np.int6#)"
+    },
+    {
+      "exact_formula_ids": [
+        "d57c1a7e6b0277e1562c9535d8b19389fcc4dc2d5a19715f4ad964eab7c1ca06"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "6ba602d391270c8df860239d7676ebec7b73f5ae94a7e29255cfa301c48dc3bc",
+      "structural_formula": "D,gap=build(phase);D2,_=build(phase+theta[a]-theta[b]);g=np.kron(np.eye(#),np.diag(np.exp(#j*theta)))"
     },
     {
       "exact_formula_ids": [
@@ -2133678,6 +2133875,14 @@
       "exact_member_count": 1,
       "structural_family_id": "144276972bc25ec467d05b81963243a55b1e0742bf71e61555fe7355a6d9b203",
       "structural_formula": "Thecentral`#=#x3`thereforeappearssimultaneouslyas"
+    },
+    {
+      "exact_formula_ids": [
+        "bd95261fcc15d316183b5975201fd1614b20f7dab35878fc335c4e4310f5a789"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a329e0a6421a4d7e86b15d92bb65c5a66d4fc3778383c65277500360cdeec880",
+      "structural_formula": "Thecertificatestoresallfourintegermatrices,sonotrustinthenumericalinverseornumericaleigensolverisneeded.ExactHD=#separatesphysicalandgaugeblocks.Anindependenttestchecksmultiplicationthrougha2#-by2#rationalblockembeddingoftheEisensteinintegers.Thisisanexplicitrigorousboundatonemomentum,notaglobaltorusconstant.Thepreviouscompactnesscriterionremainsconditionalontheoldexactacoustic-moduleinputs"
     },
     {
       "exact_formula_ids": [
@@ -2218702,6 +2218907,14 @@
       "exact_member_count": 1,
       "structural_family_id": "d08f153478d72bb4fbea1b07aa4c0f7de5eaeab3676c3e178ab0fb17ad1da287",
       "structural_formula": "bound=#-math.cos(a)#*math.sin(a)^#/(K+#)"
+    },
+    {
+      "exact_formula_ids": [
+        "7adaf10d8d902c9c9700ce6573a97bccdf7edc1d328f773466efa8084a8f3567"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "b90e7fb769a7fd41221095ecb3263225475051aa68f609ba2f47030baa30a8aa",
+      "structural_formula": "bound=Fraction(den-residual_num,#*xnorm_num)"
     },
     {
       "exact_formula_ids": [
@@ -2320437,6 +2320650,14 @@
     },
     {
       "exact_formula_ids": [
+        "f09dd639d38a6f1b6d3672744881649de0efda3527a80a1e302eadcadd188788"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "64f572e57e398d88a93f156756a083b36eb55d2d1ae85e3661eaed5f4f7e4b0a",
+      "structural_formula": "phase=np.random.default_rng(#).uniform(#,#,#);theta=np.random.default_rng(#).normal(size=#)"
+    },
+    {
+      "exact_formula_ids": [
         "f9b207cdc5edc7adf901d46fb2e85b988420d55a3deedb3fd9bf81c82ea8876d"
       ],
       "exact_member_count": 1,
@@ -2366329,6 +2366550,14 @@
       "exact_member_count": 1,
       "structural_family_id": "4349435d05010a5d973bce9acd15be76014eb1230275d53a39ba9f96e238e13c",
       "structural_formula": "return{'maximum_denominator':max(denominators),'common_denominator':reduce(lcm,denominators,#),'nonintegral_entries':sum(any(c.denominator!=#forcinentry)forrowinmatrixforentryinrow)}"
+    },
+    {
+      "exact_formula_ids": [
+        "f6e471a4f15360c90e2b8e98649a468863c5c11ed02f453361ad7755d5e22d51"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e38a3c2185086b47e94f262152ea0239708340757dd86f476cf0d3884f992466",
+      "structural_formula": "return{'momentum':'(#pi/#,#pi/#,#,#)','operator':'H_repaired_matched+DD^dag','matrix_denominator':#,'inverse_denominator':q,'matrix_a':A.tolist(),'matrix_b':B.tolist(),'inverse_a':xa.tolist(),'inverse_b':xb.tolist(),'residual_bound':str(Fraction(residual_num,den)),'inverse_inf_norm_bound':str(Fraction(xnorm_num,q)),'certified_physical_eigenvalue_lower_bound':str(bound),'bound_decimal':float(bound),'proof':'ExactZ[omega]residualr<#gives||S^#||inf<=||X||inf/(#-r).Hermiticityboundsitsspectralradius;exactHD=#separatesphysicalandgaugeblocks.','scope':'Oneexactnonidentitymomentum,notaglobaltorusconstant.'}"
     },
     {
       "exact_formula_ids": [
@@ -2417414,20 +2417643,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92549613,
-    "exact_formula_families": 65225,
-    "files_scanned": 12723,
-    "formula_occurrences": 71364,
+    "bytes_scanned": 92565340,
+    "exact_formula_families": 65231,
+    "files_scanned": 12727,
+    "formula_occurrences": 71370,
     "status_occurrences": {
-      "certified_or_theorem": 5356,
+      "certified_or_theorem": 5357,
       "killed_or_retracted": 1953,
-      "open_or_conditional": 2412,
+      "open_or_conditional": 2413,
       "preregistered": 36,
       "retrospective_fit": 5432,
-      "unclassified": 56175
+      "unclassified": 56179
     },
-    "structural_families": 63512
+    "structural_families": 63518
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "76ef51d19c51bc348d427267ebc2348d8345dd8f4972adc6a9f607c6249f32fd"
+  "universe_sha256": "837de7810d36fd4fffa32ef3e82146907348fb602eceeb66ef823c3a08e7c6d7"
 }
