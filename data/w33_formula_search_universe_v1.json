@@ -388948,6 +388948,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "23683b6ad525ec90f13473b41decb0ddb2ad34e8217bc43b9b4a459473a286aa",
+      "normalized_formula": "-ThePass12392packetsuppliesone^single-momentumexact^physicalstiffnessbound>0.000548,notauniformtorusorinfinite-volumephotongap",
+      "numeric_literals": [
+        "0.000548",
+        "2392"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_w33_adjacency_css40_hexads.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 88,
+          "path": "analysis/2026-10-29_w33_adjacency_css40_hexads.md",
+          "raw": "- The Pass12392 packet supplies one **single-momentum exact** physical stiffness bound >0.000548, not a uniform torus or infinite-volume photon gap.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0f41ab3ed10a6f4a1956134ee0ac87f804ed7434ff14f20810bdf512bd3b4f61",
+      "structural_formula": "-ThePass1#packetsuppliesone^single-momentumexact^physicalstiffnessbound>#,notauniformtorusorinfinite-volumephotongap"
+    },
+    {
+      "file_count": 1,
       "formula_id": "d4fe2603ca832fca09c11a715260063961910110fd96ab0b3371f861b5c1377e",
       "normalized_formula": "-TheYukawatensor'sexactgradingunderR(Pillar68'sT[a,b,v]=0unless",
       "numeric_literals": [
@@ -392806,7 +392834,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 66,
+          "line": 63,
           "path": "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md",
           "raw": "- **[E]** R_K = h/e\u00b2 is topological: the Hall conductance is (e\u00b2/h) \u00d7 (a Chern number) (TKNN 1982).",
           "status": "unclassified"
@@ -850583,7 +850611,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 76,
+          "line": 73,
           "path": "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md",
           "raw": "The qutrit graph state on the 40 points of W(3,3) has entanglement S(A) = rank\u2083 \u0393[A, \u0100] across a cut.",
           "status": "certified_or_theorem"
@@ -856800,6 +856828,39 @@
     },
     {
       "file_count": 1,
+      "formula_id": "26cf449ce33cb78fde0918b874c14ca898023b4cc772bca6243b8969a3b1a2ca",
+      "normalized_formula": "Thetestisreproducedby`analysis/w33_20261029_f9_hodge_trace_counterexample.py`andthecorrectedstatementispatchedin`analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md`.Therobustsplit-fieldconditionisbalancedeigenspacemultiplicities(orcharacteristicpolynomial`(T2+1)3`),notmerelythetrace.Thepreviousexhaustive`q=3`calculation,`q=5,13`tests,andthenon-splitcaseare^not^contradicted.Nothinginthisfinite-fieldcorrectionconstructsarealLorentzianphysicalspacetime",
+      "numeric_literals": [
+        "+1",
+        "0261029",
+        "13",
+        "2410",
+        "2417",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_w33_adjacency_css40_hexads.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 97,
+          "path": "analysis/2026-10-29_w33_adjacency_css40_hexads.md",
+          "raw": "The test is reproduced by `analysis/w33_20261029_f9_hodge_trace_counterexample.py` and the corrected statement is patched in `analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md`. The robust split-field condition is balanced eigenspace multiplicities (or characteristic polynomial `(T\u00b2+1)\u00b3`), not merely the trace. The previous exhaustive `q=3` calculation, `q=5,13` tests, and the non-split case are **not** contradicted. Nothing in this finite-field correction constructs a real Lorentzian physical spacetime.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "4f174e0bd0fe6e0c85975af9675a1f37213bde966b77da64d2a25d657f420b4e",
+      "structural_formula": "Thetestisreproducedby`analysis/w3#_2#_f9_hodge_trace_counterexample.py`andthecorrectedstatementispatchedin`analysis/PASS1#_1#_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md`.Therobustsplit-fieldconditionisbalancedeigenspacemultiplicities(orcharacteristicpolynomial`(T2#)#`),notmerelythetrace.Thepreviousexhaustive`q=#`calculation,`q=#,#`tests,andthenon-splitcaseare^not^contradicted.Nothinginthisfinite-fieldcorrectionconstructsarealLorentzianphysicalspacetime"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6e320d33ea48fbee62d5728f56f2e8c428cfb177be2d465a71ac0ff52ec6fbe7",
       "normalized_formula": "Thetestisstrongerthancountingfreeparameters,anddoesnotrequireaglobalnonconvexfitforanunrestrictedheavyrowonce`m,H`arefixed.Regressioncontrolsreconstructtherowfrom`C`andreject`H=2mm^T`,whosedefectisnegative.WhenfittingCKMobservables,theunphysicalup-eigenvectorrephasingsmustalsobeallowed;applyingthiscriteriontoonearbitrarilychosentargetphaserepresentativecouldproduceanotherfalseexclusion",
       "numeric_literals": [
@@ -861822,6 +861883,33 @@
       },
       "structural_family_id": "a890edb5490cc2586b1be5dea645f01f2fad10adf8bfd429a8e0a26f3f2f2753",
       "structural_formula": "Thus^point-sidedistance-threepairs^havecoherenttime-averageprobability\\((#/#)/(#/#)=#/#\u2248#\\)timesthepoint-sidedistance-twopairs,despitelargerclassicaleffectiveresistance.Thisseparatesunitaryinterferencefromclassicalrandom-walktransportinaparticularlyclean,exactW3#example.Itis^not^asuperluminaloracausalsignallingclaim:graphdistance,elapsedphysicaltimeandspeedoflighthavenotbeenidentified,andthelimitaveragesoverarbitrarylongwalktimes"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cacc8f4a14dadf2a72248c80e263b08bab347f575e3e341914b61eb81cca5f79",
+      "normalized_formula": "Thus`A=A^T`,`AA^T=0`;choosingbothbinaryCSScheckspacesas`row_F2(A)`givesatruecommutingstabilizerspacewith",
+      "numeric_literals": [
+        "0"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_w33_adjacency_css40_hexads.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 25,
+          "path": "analysis/2026-10-29_w33_adjacency_css40_hexads.md",
+          "raw": "Thus `A=A^T`, `A A^T=0`; choosing both binary CSS check spaces as `row_F2(A)` gives a true commuting stabilizer space with",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "2e8591743d8168f3beb26fed9403db39e449bc819a8a27a2354010acee91bfea",
+      "structural_formula": "Thus`A=A^T`,`AA^T=#`;choosingbothbinaryCSScheckspacesas`row_F2(A)`givesatruecommutingstabilizerspacewith"
     },
     {
       "file_count": 1,
@@ -1052126,6 +1052214,39 @@
       },
       "structural_family_id": "7d21a96ba4a590772824dee3231bc7644753d04b7f38a44c79e0b267ba0605de",
       "structural_formula": "^Important:^theformulaisashort-timespectral-momentidentity;itisnotanall-temperaturefermionground-statetheorem,anequalityofdifferentgraphzetafunctions,oraproofoftheclassicalRiemannhypothesis.ThefullW3#Leviisadegree-fourRamanujangraphwithIharacircle\\(|u|=#^{#/#}\\),whiletheisolatedthetaisirregularandhastheTOE7#unitarilytwistedsubdivisionfactor"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "a1669b4b2488a6bb27478e5370ad3ac023cf7a68f5c884362a194184b1add04b",
+      "normalized_formula": "^Importantcorrectiontopotentialconfusion:^thisisNOTthebinary40-by-40^point-lineincidence^`B`fromthe2026-07-15Pass78report.Thatmatrixisnotself-orthogonal:independently,`rank_F2(B)=25`and`BB^T=A(mod2)`.Thegraph'sadjacency`A`,nottheincidencematrix`B`,supportstheconstruction",
+      "numeric_literals": [
+        "-07",
+        "-15",
+        "0",
+        "026",
+        "25",
+        "40",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_w33_adjacency_css40_hexads.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 31,
+          "path": "analysis/2026-10-29_w33_adjacency_css40_hexads.md",
+          "raw": "**Important correction to potential confusion:** this is NOT the binary 40-by-40 **point-line incidence** `B` from the 2026-07-15 Pass78 report. That matrix is not self-orthogonal: independently, `rank_F2(B)=25` and `B B^T=A (mod2)`. The graph's adjacency `A`, not the incidence matrix `B`, supports the construction.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "40b9e5af9287b98e16b25f6d8a0641bd80eb7fce50304d25a102473a6545f2b6",
+      "structural_formula": "^Importantcorrectiontopotentialconfusion:^thisisNOTthebinary4#-by-#^point-lineincidence^`B`fromthe2###Pass7#report.Thatmatrixisnotself-orthogonal:independently,`rank_F2(B)=#`and`BB^T=A(mod2)`.Thegraph'sadjacency`A`,nottheincidencematrix`B`,supportstheconstruction"
     },
     {
       "file_count": 1,
@@ -1546782,7 +1546903,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 82,
+          "line": 79,
           "path": "analysis/PASS12410_12417_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md",
           "raw": "point\u2013line incidence matrix, since MM\u1d40 = 4I + A.",
           "status": "certified_or_theorem"
@@ -1908404,9 +1908525,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T13:37:01-04:00",
+  "frozen_at": "2026-10-29T13:43:33-04:00",
   "pass": 398,
-  "repository_head": "c12908d5992933a49388b418d002e73e7637f5a7",
+  "repository_head": "923c4eb20e8c686bedba283759226c42b18e0ec7",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2036727,6 +2036848,14 @@
     },
     {
       "exact_formula_ids": [
+        "23683b6ad525ec90f13473b41decb0ddb2ad34e8217bc43b9b4a459473a286aa"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0f41ab3ed10a6f4a1956134ee0ac87f804ed7434ff14f20810bdf512bd3b4f61",
+      "structural_formula": "-ThePass1#packetsuppliesone^single-momentumexact^physicalstiffnessbound>#,notauniformtorusorinfinite-volumephotongap"
+    },
+    {
+      "exact_formula_ids": [
         "d4fe2603ca832fca09c11a715260063961910110fd96ab0b3371f861b5c1377e"
       ],
       "exact_member_count": 1,
@@ -2139299,6 +2139428,14 @@
     },
     {
       "exact_formula_ids": [
+        "26cf449ce33cb78fde0918b874c14ca898023b4cc772bca6243b8969a3b1a2ca"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "4f174e0bd0fe6e0c85975af9675a1f37213bde966b77da64d2a25d657f420b4e",
+      "structural_formula": "Thetestisreproducedby`analysis/w3#_2#_f9_hodge_trace_counterexample.py`andthecorrectedstatementispatchedin`analysis/PASS1#_1#_CLOSURE_PROOF_ALPHA_ENTANGLEMENT_CEILING_TPRIME.md`.Therobustsplit-fieldconditionisbalancedeigenspacemultiplicities(orcharacteristicpolynomial`(T2#)#`),notmerelythetrace.Thepreviousexhaustive`q=#`calculation,`q=#,#`tests,andthenon-splitcaseare^not^contradicted.Nothinginthisfinite-fieldcorrectionconstructsarealLorentzianphysicalspacetime"
+    },
+    {
+      "exact_formula_ids": [
         "6e320d33ea48fbee62d5728f56f2e8c428cfb177be2d465a71ac0ff52ec6fbe7"
       ],
       "exact_member_count": 1,
@@ -2140680,6 +2140817,14 @@
       "exact_member_count": 1,
       "structural_family_id": "a890edb5490cc2586b1be5dea645f01f2fad10adf8bfd429a8e0a26f3f2f2753",
       "structural_formula": "Thus^point-sidedistance-threepairs^havecoherenttime-averageprobability\\((#/#)/(#/#)=#/#\u2248#\\)timesthepoint-sidedistance-twopairs,despitelargerclassicaleffectiveresistance.Thisseparatesunitaryinterferencefromclassicalrandom-walktransportinaparticularlyclean,exactW3#example.Itis^not^asuperluminaloracausalsignallingclaim:graphdistance,elapsedphysicaltimeandspeedoflighthavenotbeenidentified,andthelimitaveragesoverarbitrarylongwalktimes"
+    },
+    {
+      "exact_formula_ids": [
+        "cacc8f4a14dadf2a72248c80e263b08bab347f575e3e341914b61eb81cca5f79"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2e8591743d8168f3beb26fed9403db39e449bc819a8a27a2354010acee91bfea",
+      "structural_formula": "Thus`A=A^T`,`AA^T=#`;choosingbothbinaryCSScheckspacesas`row_F2(A)`givesatruecommutingstabilizerspacewith"
     },
     {
       "exact_formula_ids": [
@@ -2188913,6 +2189058,14 @@
       "exact_member_count": 1,
       "structural_family_id": "7d21a96ba4a590772824dee3231bc7644753d04b7f38a44c79e0b267ba0605de",
       "structural_formula": "^Important:^theformulaisashort-timespectral-momentidentity;itisnotanall-temperaturefermionground-statetheorem,anequalityofdifferentgraphzetafunctions,oraproofoftheclassicalRiemannhypothesis.ThefullW3#Leviisadegree-fourRamanujangraphwithIharacircle\\(|u|=#^{#/#}\\),whiletheisolatedthetaisirregularandhastheTOE7#unitarilytwistedsubdivisionfactor"
+    },
+    {
+      "exact_formula_ids": [
+        "a1669b4b2488a6bb27478e5370ad3ac023cf7a68f5c884362a194184b1add04b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "40b9e5af9287b98e16b25f6d8a0641bd80eb7fce50304d25a102473a6545f2b6",
+      "structural_formula": "^Importantcorrectiontopotentialconfusion:^thisisNOTthebinary4#-by-#^point-lineincidence^`B`fromthe2###Pass7#report.Thatmatrixisnotself-orthogonal:independently,`rank_F2(B)=#`and`BB^T=A(mod2)`.Thegraph'sadjacency`A`,nottheincidencematrix`B`,supportstheconstruction"
     },
     {
       "exact_formula_ids": [
@@ -2418486,20 +2418639,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92591757,
-    "exact_formula_families": 65254,
-    "files_scanned": 12731,
-    "formula_occurrences": 71395,
+    "bytes_scanned": 92610620,
+    "exact_formula_families": 65258,
+    "files_scanned": 12734,
+    "formula_occurrences": 71399,
     "status_occurrences": {
       "certified_or_theorem": 5365,
       "killed_or_retracted": 1953,
       "open_or_conditional": 2414,
       "preregistered": 36,
       "retrospective_fit": 5432,
-      "unclassified": 56195
+      "unclassified": 56199
     },
-    "structural_families": 63540
+    "structural_families": 63544
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "2e7d325fda42de9965d77bb3d1bb4feaac466c47bf338170e687cbac297de8b0"
+  "universe_sha256": "eb19f0f2159506cafcbd298c7b688f701806f4e1e8f4a0875eb5f641d0a98af2"
 }
