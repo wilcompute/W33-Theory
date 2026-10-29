@@ -1,0 +1,12 @@
+{
+ "Z6II_23_SM_20260917_2913_v6": {
+  "n_F": 824,
+  "n_B": 558,
+  "nF_minus_nB": 266,
+  "higgs_scalars": 20,
+  "fractional_fermions": 52,
+  "pairable": 0,
+  "liftable": 0,
+  "singlets": 160
+ }
+}

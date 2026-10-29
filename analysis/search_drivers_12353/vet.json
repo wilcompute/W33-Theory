@@ -1,0 +1,72 @@
+{
+ "Z6II_06_SM_20260917_2618_v0": {
+  "n_F": 856,
+  "n_B": 602,
+  "nF_minus_nB": 254,
+  "higgs_scalars": 8,
+  "fractional_fermions": 52,
+  "pairable": 242,
+  "liftable": 40,
+  "singlets": 88
+ },
+ "Z6II_06_SM_20260917_2618_v1": {
+  "n_F": 856,
+  "n_B": 602,
+  "nF_minus_nB": 254,
+  "higgs_scalars": 8,
+  "fractional_fermions": 52,
+  "pairable": 242,
+  "liftable": 40,
+  "singlets": 88
+ },
+ "Z6II_06_SM_20260917_2618_v2": {
+  "n_F": 856,
+  "n_B": 602,
+  "nF_minus_nB": 254,
+  "higgs_scalars": 8,
+  "fractional_fermions": 52,
+  "pairable": 242,
+  "liftable": 40,
+  "singlets": 88
+ },
+ "Z6II_06_SM_20260917_2618_v3": {
+  "n_F": 856,
+  "n_B": 602,
+  "nF_minus_nB": 254,
+  "higgs_scalars": 8,
+  "fractional_fermions": 52,
+  "pairable": 242,
+  "liftable": 40,
+  "singlets": 88
+ },
+ "Z6II_23_SM_20260917_2913_v6": {
+  "n_F": 824,
+  "n_B": 558,
+  "nF_minus_nB": 266,
+  "higgs_scalars": 20,
+  "fractional_fermions": 52,
+  "pairable": 422,
+  "liftable": 52,
+  "singlets": 160
+ },
+ "Z6II_23_SM_20260917_2913_v7": {
+  "n_F": 824,
+  "n_B": 558,
+  "nF_minus_nB": 266,
+  "higgs_scalars": 20,
+  "fractional_fermions": 52,
+  "pairable": 422,
+  "liftable": 52,
+  "singlets": 160
+ },
+ "Z6II_23_SM_20260917_2913_v8": {
+  "n_F": 824,
+  "n_B": 558,
+  "nF_minus_nB": 266,
+  "higgs_scalars": 20,
+  "fractional_fermions": 52,
+  "pairable": 422,
+  "liftable": 52,
+  "singlets": 160
+ }
+}

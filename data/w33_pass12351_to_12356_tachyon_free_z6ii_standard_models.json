@@ -1,0 +1,621 @@
+{
+  "12351_yvec": {
+    "SM_20260917_2618": {
+      "free": 4,
+      "residual": "0"
+    },
+    "SM_20260917_2503": {
+      "free": 0,
+      "residual": "0"
+    },
+    "SM_20260917_574": {
+      "free": 1,
+      "residual": "0"
+    },
+    "SM_20260917_2913": {
+      "free": 1,
+      "residual": "0"
+    },
+    "SM_20260917_1105": {
+      "free": 1,
+      "residual": "0"
+    }
+  },
+  "12351": {
+    "Z6II_06_SM_20260917_2618_v0": {
+      "Y_nonconstant_fields": 0,
+      "trY": "0",
+      "chiral": {
+        "1,1,1": -3,
+        "1,2,0": 4,
+        "1,2,1/2": 3,
+        "3,1,-2/3": -3,
+        "3,1,1/3": -3,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 4
+    },
+    "Z6II_06_SM_20260917_2618_v1": {
+      "Y_nonconstant_fields": 0,
+      "trY": "0",
+      "chiral": {
+        "1,1,1": -3,
+        "1,2,0": 4,
+        "1,2,1/2": 3,
+        "3,1,-2/3": -3,
+        "3,1,1/3": -3,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 4
+    },
+    "Z6II_06_SM_20260917_2618_v2": {
+      "Y_nonconstant_fields": 0,
+      "trY": "0",
+      "chiral": {
+        "1,1,1": -3,
+        "1,2,0": 4,
+        "1,2,1/2": 3,
+        "3,1,-2/3": -3,
+        "3,1,1/3": -3,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 4
+    },
+    "Z6II_06_SM_20260917_2618_v3": {
+      "Y_nonconstant_fields": 0,
+      "trY": "0",
+      "chiral": {
+        "1,1,1": -3,
+        "1,2,0": 4,
+        "1,2,1/2": 3,
+        "3,1,-2/3": -3,
+        "3,1,1/3": -3,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 4
+    },
+    "Z6II_12_SM_20260917_2503_v10": {
+      "Y_nonconstant_fields": 0,
+      "trY": "-12",
+      "chiral": {
+        "1,1,1": 3,
+        "1,1,1/2": -14,
+        "1,2,0": 10,
+        "1,2,1/2": -5,
+        "3,1,-1/6": 2,
+        "3,1,-2/3": 3,
+        "3,1,1/3": 1,
+        "3,2,-1/6": -3
+      },
+      "fractional_chiral": 26
+    },
+    "Z6II_12_SM_20260917_2503_v11": {
+      "Y_nonconstant_fields": 0,
+      "trY": "-12",
+      "chiral": {
+        "1,1,1": 3,
+        "1,1,1/2": -14,
+        "1,2,0": 10,
+        "1,2,1/2": -5,
+        "3,1,-1/6": 2,
+        "3,1,-2/3": 3,
+        "3,1,1/3": 1,
+        "3,2,-1/6": -3
+      },
+      "fractional_chiral": 26
+    },
+    "Z6II_12_SM_20260917_2503_v12": {
+      "Y_nonconstant_fields": 0,
+      "trY": "-12",
+      "chiral": {
+        "1,1,1": 3,
+        "1,1,1/2": -14,
+        "1,2,0": 10,
+        "1,2,1/2": -5,
+        "3,1,-1/6": 2,
+        "3,1,-2/3": 3,
+        "3,1,1/3": 1,
+        "3,2,-1/6": -3
+      },
+      "fractional_chiral": 26
+    },
+    "Z6II_12_SM_20260917_2503_v5": {
+      "Y_nonconstant_fields": 0,
+      "trY": "-12",
+      "chiral": {
+        "1,1,1": 3,
+        "1,1,1/2": -14,
+        "1,2,0": 10,
+        "1,2,1/2": -5,
+        "3,1,-1/6": 2,
+        "3,1,-2/3": 3,
+        "3,1,1/3": 1,
+        "3,2,-1/6": -3
+      },
+      "fractional_chiral": 26
+    },
+    "Z6II_12_SM_20260917_2503_v6": {
+      "Y_nonconstant_fields": 0,
+      "trY": "-12",
+      "chiral": {
+        "1,1,1": 3,
+        "1,1,1/2": -14,
+        "1,2,0": 10,
+        "1,2,1/2": -5,
+        "3,1,-1/6": 2,
+        "3,1,-2/3": 3,
+        "3,1,1/3": 1,
+        "3,2,-1/6": -3
+      },
+      "fractional_chiral": 26
+    },
+    "Z6II_12_SM_20260917_2503_v7": {
+      "Y_nonconstant_fields": 0,
+      "trY": "-12",
+      "chiral": {
+        "1,1,1": 3,
+        "1,1,1/2": -14,
+        "1,2,0": 10,
+        "1,2,1/2": -5,
+        "3,1,-1/6": 2,
+        "3,1,-2/3": 3,
+        "3,1,1/3": 1,
+        "3,2,-1/6": -3
+      },
+      "fractional_chiral": 26
+    },
+    "Z6II_12_SM_20260917_574_v0": {
+      "Y_nonconstant_fields": 0,
+      "trY": "12",
+      "chiral": {
+        "1,1,1": -3,
+        "1,1,1/2": 14,
+        "1,2,0": 6,
+        "1,2,1/2": 5,
+        "3,1,-1/3": 1,
+        "3,1,1/6": 2,
+        "3,1,2/3": 3,
+        "3,2,1/6": -3
+      },
+      "fractional_chiral": 22
+    },
+    "Z6II_12_SM_20260917_574_v5": {
+      "Y_nonconstant_fields": 0,
+      "trY": "12",
+      "chiral": {
+        "1,1,1": -3,
+        "1,1,1/2": 14,
+        "1,2,0": 6,
+        "1,2,1/2": 5,
+        "3,1,-1/3": 1,
+        "3,1,1/6": 2,
+        "3,1,2/3": 3,
+        "3,2,1/6": -3
+      },
+      "fractional_chiral": 22
+    },
+    "Z6II_12_SM_20260917_574_v6": {
+      "Y_nonconstant_fields": 0,
+      "trY": "12",
+      "chiral": {
+        "1,1,1": -3,
+        "1,1,1/2": 14,
+        "1,2,0": 6,
+        "1,2,1/2": 5,
+        "3,1,-1/3": 1,
+        "3,1,1/6": 2,
+        "3,1,2/3": 3,
+        "3,2,1/6": -3
+      },
+      "fractional_chiral": 22
+    },
+    "Z6II_23_SM_20260917_2913_v6": {
+      "Y_nonconstant_fields": 0,
+      "trY": "0",
+      "chiral": {
+        "1,1,1": -3,
+        "1,2,0": 4,
+        "1,2,1/2": 3,
+        "3,1,-2/3": -3,
+        "3,1,1/3": -3,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 4
+    },
+    "Z6II_23_SM_20260917_2913_v7": {
+      "Y_nonconstant_fields": 0,
+      "trY": "0",
+      "chiral": {
+        "1,1,1": -3,
+        "1,2,0": 4,
+        "1,2,1/2": 3,
+        "3,1,-2/3": -3,
+        "3,1,1/3": -3,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 4
+    },
+    "Z6II_23_SM_20260917_2913_v8": {
+      "Y_nonconstant_fields": 0,
+      "trY": "0",
+      "chiral": {
+        "1,1,1": -3,
+        "1,2,0": 4,
+        "1,2,1/2": 3,
+        "3,1,-2/3": -3,
+        "3,1,1/3": -3,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 4
+    },
+    "Z6II_59_SM_20260917_1105_v12": {
+      "Y_nonconstant_fields": 0,
+      "trY": "-36",
+      "chiral": {
+        "1,1,1/2": -48,
+        "1,2,0": 38,
+        "1,2,1/2": -3,
+        "3,1,1/3": -6,
+        "3,2,-1/6": 3
+      },
+      "fractional_chiral": 86
+    }
+  },
+  "12351_three_generation_models": [
+    "Z6II_06_SM_20260917_2618_v0",
+    "Z6II_06_SM_20260917_2618_v1",
+    "Z6II_06_SM_20260917_2618_v2",
+    "Z6II_06_SM_20260917_2618_v3",
+    "Z6II_23_SM_20260917_2913_v6",
+    "Z6II_23_SM_20260917_2913_v7",
+    "Z6II_23_SM_20260917_2913_v8"
+  ],
+  "12352": {
+    "Z6II_06_SM_20260917_2618_v0": {
+      "0": {
+        "min_level_with_winding": "-1/2",
+        "vacuum": "-1/2",
+        "safe": false,
+        "winding_dirs": [
+          3,
+          4,
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2, -2, -2))"
+      },
+      "2": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      },
+      "4": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      }
+    },
+    "Z6II_06_SM_20260917_2618_v1": {
+      "0": {
+        "min_level_with_winding": "-1/2",
+        "vacuum": "-1/2",
+        "safe": false,
+        "winding_dirs": [
+          3,
+          4,
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2, -2, -2))"
+      },
+      "2": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      },
+      "4": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      }
+    },
+    "Z6II_06_SM_20260917_2618_v2": {
+      "0": {
+        "min_level_with_winding": "-1/2",
+        "vacuum": "-1/2",
+        "safe": false,
+        "winding_dirs": [
+          3,
+          4,
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2, -2, -2))"
+      },
+      "2": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      },
+      "4": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      }
+    },
+    "Z6II_06_SM_20260917_2618_v3": {
+      "0": {
+        "min_level_with_winding": "-1/2",
+        "vacuum": "-1/2",
+        "safe": false,
+        "winding_dirs": [
+          3,
+          4,
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2, -2, -2))"
+      },
+      "2": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      },
+      "4": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      }
+    },
+    "Z6II_23_SM_20260917_2913_v6": {
+      "0": {
+        "min_level_with_winding": "-1/2",
+        "vacuum": "-1/2",
+        "safe": false,
+        "winding_dirs": [
+          3,
+          4,
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2, -1, -1))"
+      },
+      "2": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      },
+      "4": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      }
+    },
+    "Z6II_23_SM_20260917_2913_v7": {
+      "0": {
+        "min_level_with_winding": "-1/2",
+        "vacuum": "-1/2",
+        "safe": false,
+        "winding_dirs": [
+          3,
+          4,
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2, -1, -1))"
+      },
+      "2": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      },
+      "4": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      }
+    },
+    "Z6II_23_SM_20260917_2913_v8": {
+      "0": {
+        "min_level_with_winding": "-1/2",
+        "vacuum": "-1/2",
+        "safe": false,
+        "winding_dirs": [
+          3,
+          4,
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2, -1, -1))"
+      },
+      "2": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      },
+      "4": {
+        "min_level_with_winding": "-1/3",
+        "vacuum": "-1/6",
+        "safe": false,
+        "winding_dirs": [
+          5
+        ],
+        "at": "((0, 0, 0, 0), (-2,))"
+      }
+    }
+  },
+  "12353": {
+    "vet": {
+      "Z6II_06_SM_20260917_2618_v0": {
+        "n_F": 856,
+        "n_B": 602,
+        "nF_minus_nB": 254,
+        "higgs_scalars": 8,
+        "fractional_fermions": 52,
+        "pairable": 242,
+        "liftable": 40,
+        "singlets": 88
+      },
+      "Z6II_06_SM_20260917_2618_v1": {
+        "n_F": 856,
+        "n_B": 602,
+        "nF_minus_nB": 254,
+        "higgs_scalars": 8,
+        "fractional_fermions": 52,
+        "pairable": 242,
+        "liftable": 40,
+        "singlets": 88
+      },
+      "Z6II_06_SM_20260917_2618_v2": {
+        "n_F": 856,
+        "n_B": 602,
+        "nF_minus_nB": 254,
+        "higgs_scalars": 8,
+        "fractional_fermions": 52,
+        "pairable": 242,
+        "liftable": 40,
+        "singlets": 88
+      },
+      "Z6II_06_SM_20260917_2618_v3": {
+        "n_F": 856,
+        "n_B": 602,
+        "nF_minus_nB": 254,
+        "higgs_scalars": 8,
+        "fractional_fermions": 52,
+        "pairable": 242,
+        "liftable": 40,
+        "singlets": 88
+      },
+      "Z6II_23_SM_20260917_2913_v6": {
+        "n_F": 824,
+        "n_B": 558,
+        "nF_minus_nB": 266,
+        "higgs_scalars": 20,
+        "fractional_fermions": 52,
+        "pairable": 422,
+        "liftable": 52,
+        "singlets": 160
+      },
+      "Z6II_23_SM_20260917_2913_v7": {
+        "n_F": 824,
+        "n_B": 558,
+        "nF_minus_nB": 266,
+        "higgs_scalars": 20,
+        "fractional_fermions": 52,
+        "pairable": 422,
+        "liftable": 52,
+        "singlets": 160
+      },
+      "Z6II_23_SM_20260917_2913_v8": {
+        "n_F": 824,
+        "n_B": 558,
+        "nF_minus_nB": 266,
+        "higgs_scalars": 20,
+        "fractional_fermions": 52,
+        "pairable": 422,
+        "liftable": 52,
+        "singlets": 160
+      }
+    },
+    "control": {
+      "Z6II_23_SM_20260917_2913_v6": {
+        "n_F": 824,
+        "n_B": 558,
+        "nF_minus_nB": 266,
+        "higgs_scalars": 20,
+        "fractional_fermions": 52,
+        "pairable": 0,
+        "liftable": 0,
+        "singlets": 160
+      }
+    }
+  },
+  "12354": {
+    "up": {
+      "left": 9,
+      "right": 9,
+      "higgs": 20,
+      "couplings": 26,
+      "structural_rank_max_over_higgs": 3
+    },
+    "down": {
+      "left": 9,
+      "right": 9,
+      "higgs": 20,
+      "couplings": 30,
+      "structural_rank_max_over_higgs": 3
+    },
+    "lepton": {
+      "left": 7,
+      "right": 6,
+      "higgs": 20,
+      "couplings": 40,
+      "structural_rank_max_over_higgs": 2
+    }
+  },
+  "12355_unification": {
+    "b": {
+      "b3": "19/3",
+      "b2": "13",
+      "bY": "338/9"
+    },
+    "k_range": [
+      0.3152660694990434,
+      1.2833865716745918
+    ]
+  },
+  "checks": {
+    "12351: SUSY hypercharges fitted exactly (residual 0) for all five parents": true,
+    "12351: exactly seven models (SM_2618 v0-v3, SM_2913 v6-v8) carry exactly three SM generations (+4 pseudo-real (1,2)_0)": true,
+    "12352: zero-winding tachyon-free in all seven; winding cosets reach the vacua (small-radius bound)": true,
+    "12353: SM_2913 52/52 fractional fermions liftable (control e5: 0 pairings); SM_2618 40/52; n_F - n_B > 0": true,
+    "12354: renormalisable Yukawas exist in all three sectors (structural ranks recorded as upper bounds)": true,
+    "12355: no common threshold reaches k_Y = 5/3 (perturbative k in [0.32, 1.28])": true
+  },
+  "all_checks_pass": true
+}

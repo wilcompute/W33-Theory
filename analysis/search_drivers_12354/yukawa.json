@@ -1,0 +1,23 @@
+{
+ "up": {
+  "left": 9,
+  "right": 9,
+  "higgs": 20,
+  "couplings": 26,
+  "structural_rank_max_over_higgs": 3
+ },
+ "down": {
+  "left": 9,
+  "right": 9,
+  "higgs": 20,
+  "couplings": 30,
+  "structural_rank_max_over_higgs": 3
+ },
+ "lepton": {
+  "left": 7,
+  "right": 6,
+  "higgs": 20,
+  "couplings": 40,
+  "structural_rank_max_over_higgs": 2
+ }
+}

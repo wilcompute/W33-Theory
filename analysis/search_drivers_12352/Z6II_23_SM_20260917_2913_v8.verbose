@@ -1,0 +1,151 @@
+NSUSY 0
+ potential tachyons in sector (1, 0, 0) with weight q_i = (0.00 0.00 0.00 0.00 )
+ possible tacyonic Excitation N = 0.00
+ and mass M_R^2 = -0.50
+
+ potential tachyons in sector (1, 2, 0) with weight q_i = (0.00 0.33 -0.33 0.00 )
+ possible tacyonic Excitation N = 0.00
+ and mass M_R^2 = -0.17
+
+ potential tachyons in sector (1, 4, 0) with weight q_i = (0.00 -0.33 0.33 0.00 )
+ possible tacyonic Excitation N = 0.00
+ and mass M_R^2 = -0.17
+
+GAUGE A2 + A1 and A4 NU1 9
+F m=13 k=0 m=0 n=0 dim=1,1,24adj x1
+F m=13 k=0 m=0 n=0 dim=1,3adj,1 x1
+F m=13 k=0 m=0 n=0 dim=8adj,1,1 x1
+F m=14 k=0 m=0 n=0 dim=1,1,24adj x1
+F m=14 k=0 m=0 n=0 dim=1,3adj,1 x1
+F m=14 k=0 m=0 n=0 dim=8adj,1,1 x1
+F m=15 k=0 m=0 n=0 dim=1,1,1 x2
+F m=15 k=0 m=0 n=0 dim=3,1,1 x1
+F m=15 k=0 m=0 n=2 dim=-3,1,1 x2
+F m=15 k=0 m=0 n=2 dim=1,1,-5 x1
+F m=15 k=0 m=0 n=2 dim=1,1,1 x14
+F m=15 k=0 m=0 n=2 dim=1,1,5 x1
+F m=15 k=0 m=0 n=2 dim=1,2,1 x3
+F m=15 k=0 m=0 n=3 dim=-3,1,1 x2
+F m=15 k=0 m=0 n=3 dim=1,1,1 x26
+F m=15 k=0 m=0 n=3 dim=3,1,1 x4
+F m=15 k=0 m=0 n=4 dim=1,1,-5 x2
+F m=15 k=0 m=0 n=4 dim=1,1,1 x16
+F m=15 k=0 m=0 n=4 dim=1,1,5 x2
+F m=15 k=0 m=0 n=4 dim=1,2,1 x3
+F m=15 k=0 m=0 n=4 dim=3,1,1 x1
+F m=15 k=0 m=0 n=5 dim=-3,1,1 x4
+F m=15 k=0 m=0 n=5 dim=1,1,1 x30
+F m=15 k=0 m=0 n=5 dim=1,2,1 x4
+F m=15 k=0 m=0 n=5 dim=3,1,1 x2
+F m=15 k=0 m=1 n=3 dim=1,1,1 x12
+F m=15 k=0 m=1 n=5 dim=1,1,1 x24
+F m=15 k=0 m=1 n=5 dim=1,2,1 x8
+F m=16 k=0 m=0 n=0 dim=-3,1,1 x1
+F m=16 k=0 m=0 n=0 dim=1,1,1 x2
+F m=16 k=0 m=0 n=1 dim=-3,1,1 x2
+F m=16 k=0 m=0 n=1 dim=1,1,1 x30
+F m=16 k=0 m=0 n=1 dim=1,2,1 x4
+F m=16 k=0 m=0 n=1 dim=3,1,1 x4
+F m=16 k=0 m=0 n=2 dim=-3,1,1 x1
+F m=16 k=0 m=0 n=2 dim=1,1,-5 x2
+F m=16 k=0 m=0 n=2 dim=1,1,1 x16
+F m=16 k=0 m=0 n=2 dim=1,1,5 x2
+F m=16 k=0 m=0 n=2 dim=1,2,1 x3
+F m=16 k=0 m=0 n=3 dim=-3,1,1 x4
+F m=16 k=0 m=0 n=3 dim=1,1,1 x26
+F m=16 k=0 m=0 n=3 dim=3,1,1 x2
+F m=16 k=0 m=0 n=4 dim=1,1,-5 x1
+F m=16 k=0 m=0 n=4 dim=1,1,1 x14
+F m=16 k=0 m=0 n=4 dim=1,1,5 x1
+F m=16 k=0 m=0 n=4 dim=1,2,1 x3
+F m=16 k=0 m=0 n=4 dim=3,1,1 x2
+F m=16 k=0 m=1 n=1 dim=1,1,1 x24
+F m=16 k=0 m=1 n=1 dim=1,2,1 x8
+F m=16 k=0 m=1 n=3 dim=1,1,1 x12
+F m=17 k=0 m=0 n=0 dim=1,1,1 x4
+F m=18 k=0 m=0 n=0 dim=1,1,1 x4
+F m=19 k=0 m=0 n=0 dim=-3,2,1 x1
+F m=19 k=0 m=0 n=0 dim=1,1,1 x1
+F m=19 k=0 m=0 n=0 dim=1,1,10 x1
+F m=19 k=0 m=0 n=0 dim=3,2,1 x2
+F m=19 k=0 m=0 n=2 dim=-3,1,1 x2
+F m=19 k=0 m=0 n=2 dim=1,1,1 x5
+F m=19 k=0 m=0 n=2 dim=1,1,5 x1
+F m=19 k=0 m=0 n=2 dim=1,2,1 x1
+F m=19 k=0 m=0 n=2 dim=3,1,1 x1
+F m=19 k=0 m=0 n=3 dim=-3,1,1 x4
+F m=19 k=0 m=0 n=3 dim=-3,2,1 x2
+F m=19 k=0 m=0 n=3 dim=1,1,1 x16
+F m=19 k=0 m=0 n=3 dim=3,1,1 x2
+F m=19 k=0 m=0 n=3 dim=3,2,1 x4
+F m=19 k=0 m=0 n=4 dim=-3,1,1 x2
+F m=19 k=0 m=0 n=4 dim=1,1,-5 x2
+F m=19 k=0 m=0 n=4 dim=1,1,1 x7
+F m=19 k=0 m=0 n=4 dim=1,2,1 x2
+F m=19 k=0 m=0 n=4 dim=3,1,1 x1
+F m=19 k=0 m=0 n=5 dim=-3,1,1 x2
+F m=19 k=0 m=0 n=5 dim=1,1,1 x16
+F m=19 k=0 m=0 n=5 dim=1,2,1 x6
+F m=19 k=0 m=1 n=0 dim=1,1,1 x6
+F m=19 k=0 m=1 n=0 dim=1,2,-5 x1
+F m=19 k=0 m=1 n=0 dim=1,2,5 x1
+F m=19 k=0 m=1 n=0 dim=3,1,1 x1
+F m=19 k=0 m=1 n=1 dim=-3,1,1 x4
+F m=19 k=0 m=1 n=1 dim=1,1,-5 x2
+F m=19 k=0 m=1 n=1 dim=1,1,1 x42
+F m=19 k=0 m=1 n=1 dim=1,1,5 x2
+F m=19 k=0 m=1 n=1 dim=3,1,1 x4
+F m=19 k=0 m=1 n=2 dim=-3,1,1 x2
+F m=19 k=0 m=1 n=2 dim=1,1,1 x18
+F m=19 k=0 m=1 n=2 dim=1,1,5 x3
+F m=19 k=0 m=1 n=2 dim=1,2,1 x4
+F m=19 k=0 m=1 n=3 dim=1,1,1 x26
+F m=19 k=0 m=1 n=4 dim=1,1,-5 x3
+F m=19 k=0 m=1 n=4 dim=1,1,1 x18
+F m=19 k=0 m=1 n=4 dim=1,2,1 x2
+F m=19 k=0 m=1 n=4 dim=3,1,1 x1
+F m=20 k=0 m=0 n=0 dim=-3,2,1 x2
+F m=20 k=0 m=0 n=0 dim=1,1,-10 x1
+F m=20 k=0 m=0 n=0 dim=1,1,1 x1
+F m=20 k=0 m=0 n=0 dim=3,2,1 x1
+F m=20 k=0 m=0 n=1 dim=1,1,1 x16
+F m=20 k=0 m=0 n=1 dim=1,2,1 x6
+F m=20 k=0 m=0 n=1 dim=3,1,1 x2
+F m=20 k=0 m=0 n=2 dim=-3,1,1 x1
+F m=20 k=0 m=0 n=2 dim=1,1,1 x7
+F m=20 k=0 m=0 n=2 dim=1,1,5 x2
+F m=20 k=0 m=0 n=2 dim=1,2,1 x2
+F m=20 k=0 m=0 n=2 dim=3,1,1 x2
+F m=20 k=0 m=0 n=3 dim=-3,1,1 x2
+F m=20 k=0 m=0 n=3 dim=-3,2,1 x4
+F m=20 k=0 m=0 n=3 dim=1,1,1 x16
+F m=20 k=0 m=0 n=3 dim=3,1,1 x4
+F m=20 k=0 m=0 n=3 dim=3,2,1 x2
+F m=20 k=0 m=0 n=4 dim=-3,1,1 x1
+F m=20 k=0 m=0 n=4 dim=1,1,-5 x1
+F m=20 k=0 m=0 n=4 dim=1,1,1 x5
+F m=20 k=0 m=0 n=4 dim=1,2,1 x1
+F m=20 k=0 m=0 n=4 dim=3,1,1 x2
+F m=20 k=0 m=1 n=0 dim=-3,1,1 x1
+F m=20 k=0 m=1 n=0 dim=1,1,1 x6
+F m=20 k=0 m=1 n=0 dim=1,2,-5 x1
+F m=20 k=0 m=1 n=0 dim=1,2,5 x1
+F m=20 k=0 m=1 n=2 dim=-3,1,1 x1
+F m=20 k=0 m=1 n=2 dim=1,1,1 x18
+F m=20 k=0 m=1 n=2 dim=1,1,5 x3
+F m=20 k=0 m=1 n=2 dim=1,2,1 x2
+F m=20 k=0 m=1 n=3 dim=1,1,1 x26
+F m=20 k=0 m=1 n=4 dim=1,1,-5 x3
+F m=20 k=0 m=1 n=4 dim=1,1,1 x18
+F m=20 k=0 m=1 n=4 dim=1,2,1 x4
+F m=20 k=0 m=1 n=4 dim=3,1,1 x2
+F m=20 k=0 m=1 n=5 dim=-3,1,1 x4
+F m=20 k=0 m=1 n=5 dim=1,1,-5 x2
+F m=20 k=0 m=1 n=5 dim=1,1,1 x42
+F m=20 k=0 m=1 n=5 dim=1,1,5 x2
+F m=20 k=0 m=1 n=5 dim=3,1,1 x4
+F m=8 k=0 m=0 n=0 dim=1,1,1 x2
+F m=9 k=0 m=0 n=0 dim=1,1,1 x2
+F_NFIELDS 788
+T_NFIELDS 0
+ANOMALY_OK 1
