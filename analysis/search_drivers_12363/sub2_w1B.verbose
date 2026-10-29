@@ -1,0 +1,15 @@
+NSUSY 0
+ potential tachyons in sector (1, 0, 0) with weight q_i = (0.00 0.00 0.00 0.00 )
+ possible tacyonic Excitation N = 0.00
+ and mass M_R^2 = -0.50
+
+ potential tachyons in sector (1, 1, 0) with weight q_i = (0.00 0.33 -0.33 0.00 )
+ possible tacyonic Excitation N = 0.00
+ and mass M_R^2 = -0.17
+
+ potential tachyons in sector (1, 2, 0) with weight q_i = (0.00 -0.33 0.33 0.00 )
+ possible tacyonic Excitation N = 0.00
+ and mass M_R^2 = -0.17
+
+nsodump_verbose: /home/wiljd/orb/nonSUSYorbifolder/src/groupTheory/groupTheory.cc:98: void weightsystem<T>::findSimpleRoots(const MatrixType&) [with T = double; MatrixType = std::vector<std::vector<double> >]: Assertion `rank == candidates.size()' failed.
+timeout: the monitored command dumped core

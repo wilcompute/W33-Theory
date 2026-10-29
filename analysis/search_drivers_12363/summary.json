@@ -1,0 +1,24 @@
+{
+ "T": {
+  "sub2_w0": 0,
+  "sub2_noW5_w0": 12,
+  "sub2_w2": 0,
+  "sub2_noW5_w1": 12,
+  "sub2_wm1A": 42,
+  "sub2_wm3A": 42,
+  "sub2_w3A": 42,
+  "sub2_w5A": 42,
+  "sub2_w1A": null,
+  "sub2_noW5_wm1A": 12,
+  "sub2_noW5_w5A": 12
+ },
+ "control_noW5_w1_equals_w0_up_to_relabel": true,
+ "control_W5_w2_equals_w0_up_to_relabel": true,
+ "odd_winding_identical": true,
+ "odd_winding_tachyons": [
+  "T m=23 k=0 m=1 n=2 dim=1,1,1 x18",
+  "T m=23 k=0 m=1 n=2 dim=1,2,1 x3",
+  "T m=24 k=0 m=1 n=1 dim=1,1,1 x18",
+  "T m=24 k=0 m=1 n=1 dim=1,2,1 x3"
+ ]
+}

@@ -1,0 +1,2 @@
+nsoq_strict: /home/wiljd/orb/nonSUSYorbifolder/src/groupTheory/groupTheory.cc:98: void weightsystem<T>::findSimpleRoots(const MatrixType&) [with T = double; MatrixType = std::vector<std::vector<double> >]: Assertion `rank == candidates.size()' failed.
+timeout: the monitored command dumped core

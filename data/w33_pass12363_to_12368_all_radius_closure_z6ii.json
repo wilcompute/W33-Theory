@@ -1,0 +1,139 @@
+{
+  "12363": {
+    "T": {
+      "sub2_w0": 0,
+      "sub2_noW5_w0": 12,
+      "sub2_w2": 0,
+      "sub2_noW5_w1": 12,
+      "sub2_wm1A": 42,
+      "sub2_wm3A": 42,
+      "sub2_w3A": 42,
+      "sub2_w5A": 42,
+      "sub2_w1A": null,
+      "sub2_noW5_wm1A": 12,
+      "sub2_noW5_w5A": 12
+    },
+    "control_noW5_w1_equals_w0_up_to_relabel": true,
+    "control_W5_w2_equals_w0_up_to_relabel": true,
+    "odd_winding_identical": true,
+    "odd_winding_tachyons": [
+      "T m=23 k=0 m=1 n=2 dim=1,1,1 x18",
+      "T m=23 k=0 m=1 n=2 dim=1,2,1 x3",
+      "T m=24 k=0 m=1 n=1 dim=1,1,1 x18",
+      "T m=24 k=0 m=1 n=1 dim=1,2,1 x3"
+    ]
+  },
+  "12364": {
+    "Z6II_12_SM_20260917_574_v0": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_12_SM_20260917_574_v0_noanom": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_12_SM_20260917_574_v0_noanom_loose": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_12_SM_20260917_574_v0_noanom_loose_only": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_12_SM_20260917_574_v0_noanom_wide": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_12_SM_20260917_574_v0_wide": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_12_SM_20260917_574_v5": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_12_SM_20260917_574_v6": {
+      "solutions": 0,
+      "kY": []
+    },
+    "Z6II_23_SM_20260917_2913_v6": {
+      "solutions": 3,
+      "kY": [
+        "17/3",
+        "17/3",
+        "5/3"
+      ]
+    },
+    "Z6II_23_SM_20260917_2913_v6_noanom_loose": {
+      "solutions": 1,
+      "kY": [
+        "35/9"
+      ]
+    },
+    "SM_1105_v12_net_(1,2,3bar,1)": -2
+  },
+  "12365": {
+    "model": "Z6II_06_SM_20260917_2618_v0",
+    "fractional": 52,
+    "liftable_cap40": 40,
+    "liftable_all_orders_upper": 40,
+    "unmatched_types": [
+      "(-3, 1, '1/6')",
+      "(1, 1, '-1/2')",
+      "(1, 1, '1/2')",
+      "(3, 1, '-1/6')"
+    ]
+  },
+  "12365_control": {
+    "model": "Z6II_23_SM_20260917_2913_v6",
+    "fractional": 52,
+    "liftable_cap40": 52,
+    "liftable_all_orders_upper": 52,
+    "unmatched_types": []
+  },
+  "12366": {
+    "table": {
+      "(False, False)": 18,
+      "(True, True)": 18,
+      "(True, False)": 34,
+      "(False, True)": 29
+    },
+    "all_radius_clean": [
+      "Z6II_06_SM_20260917_1474_v10",
+      "Z6II_06_SM_20260917_1474_v11",
+      "Z6II_06_SM_20260917_1474_v12",
+      "Z6II_06_SM_20260917_1474_v13",
+      "Z6II_06_SM_20260917_1474_v17",
+      "Z6II_06_SM_20260917_1474_v18",
+      "Z6II_23_SM_20260917_2678_v0",
+      "Z6II_23_SM_20260917_2678_v1",
+      "Z6II_23_SM_20260917_2678_v15",
+      "Z6II_23_SM_20260917_2678_v16",
+      "Z6II_23_SM_20260917_2678_v17",
+      "Z6II_23_SM_20260917_2678_v18",
+      "Z6II_23_SM_20260917_2678_v19",
+      "Z6II_23_SM_20260917_2678_v2",
+      "Z6II_23_SM_20260917_2678_v3",
+      "Z6II_23_SM_20260917_2678_v4",
+      "Z6II_23_SM_20260917_2678_v5",
+      "Z6II_23_SM_20260917_2678_v6"
+    ]
+  },
+  "12367": {
+    "(True, True, False, False, False)": 18,
+    "(True, True, False, True, True)": 9,
+    "(True, True, False, True, False)": 27,
+    "(True, True, False, False, True)": 28,
+    "(True, True, True, True, False)": 7,
+    "(True, True, True, True, True)": 9,
+    "(True, True, True, False, True)": 1
+  },
+  "checks": {
+    "12363: controls (W5=0 winding-blind; w=2 = w=0); every odd winding gives the same 42 tachyons; 12 at large R5": true,
+    "12364: control finds k_Y=5/3 for SM_2913; SM_574 infeasible in every variant; SM_1105 has net 2 hidden-SU(3) doublets": true,
+    "12365: SM_2618 lifts 40/52 at all orders (12 forbidden); control SM_2913 52/52": true,
+    "12366: e3e4 clean 99/99 at both ends; e5e6 split 18/29/34/18; 18 all-radius-clean parents (SM_1474, SM_2678)": true,
+    "12367: 0 of 17 three-doublet parents clean at all radii; every parent has W3 and W5": true
+  },
+  "all_checks_pass": true
+}
