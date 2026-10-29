@@ -216653,7 +216653,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 263,
+          "line": 299,
           "path": "analysis/w33_20261028_twistor_klein_ag_codes_round13.py",
           "raw": "# CSS distance: min(d(C2\\C1),d(C1^perp\\C2^perp))=min(d2,3).",
           "status": "unclassified"
@@ -572492,6 +572492,41 @@
     },
     {
       "file_count": 1,
+      "formula_id": "5c2fe486d377b9c6f9e99b114043ffa84a456b1bb9139c04b26dbbf8051f3b21",
+      "normalized_formula": "AtthischaractertheearlierglobalexceptionalpolynomialQ(z^W-1)vanishes,whilez0=z2=1,soallthreecorrectiontermshavezeroBlochstiffness.Thisisnotanumericalnear-zero.Ontheinactivetwo-torusz0=z2=1,withx=z1andy=z3,theexceptionalequation(afterclearingdenominators)is5x^2-6xy-4x+6y^2-6y+5=0.Combiningwithitsunit-circlereciprocalconjugategivesresultant180(y-1)^6(5y^2+4y+5),whosetwononidentityunitrootsgivetheconjugatecounterexamples.Nofulllowerboundagainstalltwo-to-five-termpositiverepairsisproved",
+      "numeric_literals": [
+        "+4",
+        "-6",
+        "0",
+        "1",
+        "2",
+        "4",
+        "5",
+        "6",
+        "80"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_conwell_k8_erasure_radon_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/2026-10-29_conwell_k8_erasure_radon_five_frontiers.md",
+          "raw": "At this character the earlier global exceptional polynomial Q(z^W-1) vanishes, while z0=z2=1, so all three correction terms have zero Bloch stiffness. This is not a numerical near-zero. On the inactive two-torus z0=z2=1, with x=z1 and y=z3, the exceptional equation (after clearing denominators) is 5x^2-6xy-4x+6y^2-6y+5=0. Combining with its unit-circle reciprocal conjugate gives resultant 180(y-1)^6(5y^2+4y+5), whose two nonidentity unit roots give the conjugate counterexamples. No full lower bound against all two-to-five-term positive repairs is proved.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "2f770150f80f2be45394ffc10ec587f49ce3c408879dc0b77af99dc817fe5432",
+      "structural_formula": "AtthischaractertheearlierglobalexceptionalpolynomialQ(z^W-#)vanishes,whilez0=z2=#,soallthreecorrectiontermshavezeroBlochstiffness.Thisisnotanumericalnear-zero.Ontheinactivetwo-torusz0=z2=#,withx=z1andy=z3,theexceptionalequation(afterclearingdenominators)is5x^##xy-#x+#y^##y+#=#.Combiningwithitsunit-circlereciprocalconjugategivesresultant1#(y-#)^#(#y^##y+#),whosetwononidentityunitrootsgivetheconjugatecounterexamples.Nofulllowerboundagainstalltwo-to-five-termpositiverepairsisproved"
+    },
+    {
+      "file_count": 1,
       "formula_id": "5af6d69aba5cd285dbd56b6ae0ca130d317dc98236e9d62ea657410650f3d9c5",
       "normalized_formula": "Atthistemperature,thecascadedistributionP(j)=2^{-j}becomes",
       "numeric_literals": [
@@ -671751,6 +671786,35 @@
       },
       "structural_family_id": "e48e293bf77dfda522c5cc7f5f1207b3a8d2e04d01a63f3e40ee904f100170a0",
       "structural_formula": "Icosahedronhas1#=kvertices(substratevalency)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cd0d7e2f4352d7137db5b2dd56bf18a22ce868020189718cc0fbbd80fe39d63e",
+      "normalized_formula": "Identifythe28nondecomposablebinaryPl\u00fcckervectorswiththeedgesofK8usingtheirpairsofConwellheptads.Thereexisteightvectorsv_iinF2^6(onecanchoosev_0=0)suchthatforalledgesp_(ij)=v_i+v_j.Thev_ispanranksixandsumtozero.Thusthesix-bitsyndromeofanedgesetisthedegree-parityboundaryintheeven-weightsubspaceofF2^8,modulotheall-onesvector.ItvanishespreciselywheneveryK8vertexhasevendegreeoreveryK8vertexhasodddegree",
+      "numeric_literals": [
+        "0",
+        "6",
+        "8"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_conwell_k8_erasure_radon_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 9,
+          "path": "analysis/2026-10-29_conwell_k8_erasure_radon_five_frontiers.md",
+          "raw": "Identify the 28 nondecomposable binary Pl\u00fccker vectors with the edges of K8 using their pairs of Conwell heptads. There exist eight vectors v_i in F2^6 (one can choose v_0=0) such that for all edges p_(ij)=v_i+v_j. The v_i span rank six and sum to zero. Thus the six-bit syndrome of an edge set is the degree-parity boundary in the even-weight subspace of F2^8, modulo the all-ones vector. It vanishes precisely when every K8 vertex has even degree or every K8 vertex has odd degree.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "753ac2ab190af89730942bb00c6025f40db573753206f99d9f722c3f0e718a35",
+      "structural_formula": "Identifythe2#nondecomposablebinaryPl\u00fcckervectorswiththeedgesofK8usingtheirpairsofConwellheptads.Thereexisteightvectorsv_iinF2^#(onecanchoosev_0=#)suchthatforalledgesp_(ij)=v_i+v_j.Thev_ispanranksixandsumtozero.Thusthesix-bitsyndromeofanedgesetisthedegree-parityboundaryintheeven-weightsubspaceofF2^#,modulotheall-onesvector.ItvanishespreciselywheneveryK8vertexhasevendegreeoreveryK8vertexhasodddegree"
     },
     {
       "file_count": 1,
@@ -844538,6 +844602,38 @@
       },
       "structural_family_id": "286ac32eba09bb8f2ab37f49bc970226668ee39a2a0cc9dfec5898f195f623c4",
       "structural_formula": "Thelocalcountissymbolic:acharthasq+#geodesicroots;apartmentscontainingafixedrootformaq-clique,andchoosingthreeofthemgives`C(q,#)`Tannersix-cycles.Sincethereare`q^#(q+#)^#(q^##)`roots,thelocaltotalis`q^#(q+#)^#(q^##)C(q,#)=T(q)(q-#)`.Theq=#censusshowszeroexcessbeyondtheselocalcycles.Afullysymbolicno-cross-chartproofforarbitraryqisleftastheremaininglemmabeforepromotingtheformulatoallq"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "00cc673c2f5a71284042b519cd0a683f1d0e04f741da07e94b273b05b71ad29f",
+      "normalized_formula": "Thelocalnumericalproduceralsoevaluatesthe^reducedfour-periodmagneticgeneralizedeigenproblem^usingM,WandH(-2)=R^TKRfromtherepo.Attheknownorder-threeexceptionalmomentumandcoefficientepsilon=0.001,therepairednongaugeeigenvalueisapproximately0.0009542255forsixaddedcosinesand0.0028615788fortwelveaddedcosines;itiszerowithoutrepair.Theremainingexactgauge-nulleigenvalueisretained.Thisfinitereduced-modecomparison^doesnot^computethefull135-by-135linkoperatororestablishphysicalphotondispersion;loss/crosstalkcomparisonsrequireactualopticalparameters",
+      "numeric_literals": [
+        "-2",
+        ".0009542255",
+        ".0028615788",
+        "0.001",
+        "135",
+        "35"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_conwell_k8_erasure_radon_five_frontiers.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/2026-10-29_conwell_k8_erasure_radon_five_frontiers.md",
+          "raw": "The local numerical producer also evaluates the **reduced four-period magnetic generalized eigenproblem** using M, W and H(-2)=R^T K R from the repo. At the known order-three exceptional momentum and coefficient epsilon=0.001, the repaired nongauge eigenvalue is approximately 0.0009542255 for six added cosines and 0.0028615788 for twelve added cosines; it is zero without repair. The remaining exact gauge-null eigenvalue is retained. This finite reduced-mode comparison **does not** compute the full 135-by-135 link operator or establish physical photon dispersion; loss/crosstalk comparisons require actual optical parameters.",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "65086ba4ac01f5c832d66fdd03533992c453d0eaf8e61a4e75682a50a182b096",
+      "structural_formula": "Thelocalnumericalproduceralsoevaluatesthe^reducedfour-periodmagneticgeneralizedeigenproblem^usingM,WandH(#)=R^TKRfromtherepo.Attheknownorder-threeexceptionalmomentumandcoefficientepsilon=#,therepairednongaugeeigenvalueisapproximately0#forsixaddedcosinesand0#fortwelveaddedcosines;itiszerowithoutrepair.Theremainingexactgauge-nulleigenvalueisretained.Thisfinitereduced-modecomparison^doesnot^computethefull1#-by-#linkoperatororestablishphysicalphotondispersion;loss/crosstalkcomparisonsrequireactualopticalparameters"
     },
     {
       "file_count": 1,
@@ -1139770,6 +1139866,34 @@
     },
     {
       "file_count": 1,
+      "formula_id": "a54098a3edc63a880988d3fdb2daba8957d647c4f18c2e2bd6f7bf5f74314e68",
+      "normalized_formula": "assertpair_counts={'single_alias':168,'detected_non_single':210}",
+      "numeric_literals": [
+        "168",
+        "210"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_conwell_k8_erasure_radon_selector.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 109,
+          "path": "analysis/w33_20261029_conwell_k8_erasure_radon_selector.py",
+          "raw": "assert pair_counts == {'single_alias':168,'detected_non_single':210}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "89de349cc030365edb8307a67c18980c322b024124a1b81b205162416805e52b",
+      "structural_formula": "assertpair_counts={'single_alias':#,'detected_non_single':#}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "1d387949b727f9e2fa221eb8598cbc4890309abd14103457297e7f900db7e10c",
       "normalized_formula": "assertparallel['combined']['commutant']['centre_dim']=1",
       "numeric_literals": [
@@ -1141583,7 +1141707,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 277,
+          "line": 313,
           "path": "analysis/w33_20261028_twistor_klein_ag_codes_round13.py",
           "raw": "assert records['Klein']['2']['distance']==6 and records['off_quadric']['2']['distance']==4",
           "status": "unclassified"
@@ -1145640,6 +1145764,38 @@
       },
       "structural_family_id": "985ab3151b0a18841678b7cca0196bdf4ac6fbe38f5cdcaae47441dcdaa8eb5f",
       "structural_formula": "assertsp.factor(Theta.charpoly().as_expr())=(sp.Symbol(\"lambda\")^#-sp.Symbol(\"lambda\")^##*sp.Symbol(\"lambda\")#)^#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cdd6f8a41402e9156b5c4d13f4b667f9ca495700542d52626dc24cde9be8bfe9",
+      "normalized_formula": "assertsp.factor(sp.resultant(q,qstar,X))=180*(Y-1)^6*(5*Y^2+4*Y+5)",
+      "numeric_literals": [
+        "+4",
+        "1",
+        "180",
+        "2",
+        "5",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_20261029_conwell_k8_erasure_radon_selector.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 184,
+          "path": "analysis/w33_20261029_conwell_k8_erasure_radon_selector.py",
+          "raw": "assert sp.factor(sp.resultant(q,qstar,X))==180*(Y-1)**6*(5*Y**2+4*Y+5)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "bbc78380523bb263ff15242b9339630d23499c70cabacb1b1f7ae29dfab8cb94",
+      "structural_formula": "assertsp.factor(sp.resultant(q,qstar,X))=#*(Y-#)^#*(#*Y^##*Y+#)"
     },
     {
       "file_count": 1,
@@ -1903844,9 +1904000,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-28T23:40:44-04:00",
+  "frozen_at": "2026-10-29T00:10:04-04:00",
   "pass": 398,
-  "repository_head": "c9fb500cad432496778a93662f2f83fc89e3433a",
+  "repository_head": "bd8b056eba98a78f77f107689b1b63a57ed075f5",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2057860,6 +2058016,14 @@
     },
     {
       "exact_formula_ids": [
+        "5c2fe486d377b9c6f9e99b114043ffa84a456b1bb9139c04b26dbbf8051f3b21"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "2f770150f80f2be45394ffc10ec587f49ce3c408879dc0b77af99dc817fe5432",
+      "structural_formula": "AtthischaractertheearlierglobalexceptionalpolynomialQ(z^W-#)vanishes,whilez0=z2=#,soallthreecorrectiontermshavezeroBlochstiffness.Thisisnotanumericalnear-zero.Ontheinactivetwo-torusz0=z2=#,withx=z1andy=z3,theexceptionalequation(afterclearingdenominators)is5x^##xy-#x+#y^##y+#=#.Combiningwithitsunit-circlereciprocalconjugategivesresultant1#(y-#)^#(#y^##y+#),whosetwononidentityunitrootsgivetheconjugatecounterexamples.Nofulllowerboundagainstalltwo-to-five-termpositiverepairsisproved"
+    },
+    {
+      "exact_formula_ids": [
         "5af6d69aba5cd285dbd56b6ae0ca130d317dc98236e9d62ea657410650f3d9c5"
       ],
       "exact_member_count": 1,
@@ -2084762,6 +2084926,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e48e293bf77dfda522c5cc7f5f1207b3a8d2e04d01a63f3e40ee904f100170a0",
       "structural_formula": "Icosahedronhas1#=kvertices(substratevalency)"
+    },
+    {
+      "exact_formula_ids": [
+        "cd0d7e2f4352d7137db5b2dd56bf18a22ce868020189718cc0fbbd80fe39d63e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "753ac2ab190af89730942bb00c6025f40db573753206f99d9f722c3f0e718a35",
+      "structural_formula": "Identifythe2#nondecomposablebinaryPl\u00fcckervectorswiththeedgesofK8usingtheirpairsofConwellheptads.Thereexisteightvectorsv_iinF2^#(onecanchoosev_0=#)suchthatforalledgesp_(ij)=v_i+v_j.Thev_ispanranksixandsumtozero.Thusthesix-bitsyndromeofanedgesetisthedegree-parityboundaryintheeven-weightsubspaceofF2^#,modulotheall-onesvector.ItvanishespreciselywheneveryK8vertexhasevendegreeoreveryK8vertexhasodddegree"
     },
     {
       "exact_formula_ids": [
@@ -2131460,6 +2131632,14 @@
       "exact_member_count": 1,
       "structural_family_id": "286ac32eba09bb8f2ab37f49bc970226668ee39a2a0cc9dfec5898f195f623c4",
       "structural_formula": "Thelocalcountissymbolic:acharthasq+#geodesicroots;apartmentscontainingafixedrootformaq-clique,andchoosingthreeofthemgives`C(q,#)`Tannersix-cycles.Sincethereare`q^#(q+#)^#(q^##)`roots,thelocaltotalis`q^#(q+#)^#(q^##)C(q,#)=T(q)(q-#)`.Theq=#censusshowszeroexcessbeyondtheselocalcycles.Afullysymbolicno-cross-chartproofforarbitraryqisleftastheremaininglemmabeforepromotingtheformulatoallq"
+    },
+    {
+      "exact_formula_ids": [
+        "00cc673c2f5a71284042b519cd0a683f1d0e04f741da07e94b273b05b71ad29f"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "65086ba4ac01f5c832d66fdd03533992c453d0eaf8e61a4e75682a50a182b096",
+      "structural_formula": "Thelocalnumericalproduceralsoevaluatesthe^reducedfour-periodmagneticgeneralizedeigenproblem^usingM,WandH(#)=R^TKRfromtherepo.Attheknownorder-threeexceptionalmomentumandcoefficientepsilon=#,therepairednongaugeeigenvalueisapproximately0#forsixaddedcosinesand0#fortwelveaddedcosines;itiszerowithoutrepair.Theremainingexactgauge-nulleigenvalueisretained.Thisfinitereduced-modecomparison^doesnot^computethefull1#-by-#linkoperatororestablishphysicalphotondispersion;loss/crosstalkcomparisonsrequireactualopticalparameters"
     },
     {
       "exact_formula_ids": [
@@ -2208218,6 +2208398,14 @@
     },
     {
       "exact_formula_ids": [
+        "a54098a3edc63a880988d3fdb2daba8957d647c4f18c2e2bd6f7bf5f74314e68"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "89de349cc030365edb8307a67c18980c322b024124a1b81b205162416805e52b",
+      "structural_formula": "assertpair_counts={'single_alias':#,'detected_non_single':#}"
+    },
+    {
+      "exact_formula_ids": [
         "1d387949b727f9e2fa221eb8598cbc4890309abd14103457297e7f900db7e10c"
       ],
       "exact_member_count": 1,
@@ -2209837,6 +2210025,14 @@
       "exact_member_count": 1,
       "structural_family_id": "985ab3151b0a18841678b7cca0196bdf4ac6fbe38f5cdcaae47441dcdaa8eb5f",
       "structural_formula": "assertsp.factor(Theta.charpoly().as_expr())=(sp.Symbol(\"lambda\")^#-sp.Symbol(\"lambda\")^##*sp.Symbol(\"lambda\")#)^#"
+    },
+    {
+      "exact_formula_ids": [
+        "cdd6f8a41402e9156b5c4d13f4b667f9ca495700542d52626dc24cde9be8bfe9"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "bbc78380523bb263ff15242b9339630d23499c70cabacb1b1f7ae29dfab8cb94",
+      "structural_formula": "assertsp.factor(sp.resultant(q,qstar,X))=#*(Y-#)^#*(#*Y^##*Y+#)"
     },
     {
       "exact_formula_ids": [
@@ -2412706,20 +2412902,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92353487,
-    "exact_formula_families": 65098,
-    "files_scanned": 12696,
-    "formula_occurrences": 71234,
+    "bytes_scanned": 92375769,
+    "exact_formula_families": 65103,
+    "files_scanned": 12698,
+    "formula_occurrences": 71239,
     "status_occurrences": {
-      "certified_or_theorem": 5348,
+      "certified_or_theorem": 5350,
       "killed_or_retracted": 1933,
       "open_or_conditional": 2405,
       "preregistered": 36,
       "retrospective_fit": 5418,
-      "unclassified": 56094
+      "unclassified": 56097
     },
-    "structural_families": 63388
+    "structural_families": 63393
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "54ca1df8af974168eed0cc4f69351a22a563c127431f2a79370aae467c7f0539"
+  "universe_sha256": "5e85a94f312dc67ec67478fd72167b14dcc32b0ad18e0005cbf6d8ca151d8126"
 }
