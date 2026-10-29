@@ -1,0 +1,36 @@
+{
+  "method": "Exact finite-field elimination followed by exact cyclotomic remainders",
+  "orders": [
+    {
+      "n": 1001,
+      "characters_certified": 1004006004001,
+      "quadratic_triples": 1003003001,
+      "primes_and_primitive_roots": [
+        [
+          1003003,
+          572376
+        ],
+        [
+          1027027,
+          887899
+        ]
+      ],
+      "first_prime_survivors": 1000455,
+      "second_prime_survivors": 1,
+      "exact_h_exponents": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_orders": [
+        1
+      ],
+      "elapsed_seconds": 802.2768273353577
+    }
+  ],
+  "scope": "Complete declared grids; no claim of complete464-order classification",
+  "producer_sha256": "505bcd91f785d485fd0f90b73507340ba76119824bd7addf79f4f8cbf3a863d7"
+}

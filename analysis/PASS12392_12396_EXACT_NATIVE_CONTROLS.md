@@ -32,3 +32,6 @@ Three independent server tests check the exact residual through a separate ring 
 3. Construct a chiral measure and locality bounds for the native overlap operator.
 4. Derive the correct reduced-boundary GGSO phase conventions and rebuild the spin sum.
 5. Compile the coherent Fourier-frame encoder and test explicit E6 generator relations.
+
+## Late Windows checkpoint
+Order1001 completed on TheHeavyCrown in802.28seconds: only the identity. The exact quadratic/cyclotomic certificate covers1,004,006,004,001 characters via1,003,003,001 triples. This adds the exact order1001 case to previous divisor coverage, leaving417 necessary orders outside the completed grids. The1155 job continues; no result is claimed for it. The main checkout final pull encountered an index lock while other Git operations were present; the research worktree updated, and shared work was preserved. Final sync status is checked separately.
