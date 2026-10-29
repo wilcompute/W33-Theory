@@ -1,0 +1,23 @@
+{
+  "schema": "w33.adjacency_css.q7.weight8_exhaustive.v1",
+  "date": "2026-10-29",
+  "method": "W(3,7) point-transitivity reduction; projective F7^4 symplectic collinearity. Test cross-equality of 4-set syndromes with vertex0 present vs absent under fixed F2-linear 64-bit projection.",
+  "q": 7,
+  "points": 400,
+  "degree": 56,
+  "code_n": 400,
+  "code_k": 48,
+  "fixed_vertex": 0,
+  "three_subsets_of_remaining_399": 10507399,
+  "four_subsets_of_remaining_399": 1040232501,
+  "projected_three_subset_internal_duplicates": 0,
+  "projected_cross_collisions": 0,
+  "minimum_nonzero_kernel_weight_lower_bound": 10,
+  "logical_weight_14_upper_bound_from_intersecting_lines": 14,
+  "certified_css_distance_interval": "10<=d<=14",
+  "run_seconds_5_server_cores": 10.43,
+  "reproducibility": "g++ -O3 -std=c++20 -fopenmp -o /tmp/w33_q7_weight8 analysis/cpp/w33_20261029_q7_weight8_exact.cpp && OMP_NUM_THREADS=5 /tmp/w33_q7_weight8",
+  "proof": "If an even kernel word of weight <=8 exists, point transitivity places one support point at index 0; equal full syndromes follow for a balanced padded pair of distinct 4-subsets, one containing vertex 0 and the other excluding it. A linear projection must preserve equality. The exhaustive projected absence proves nonexistence, with no random-hash assumption.",
+  "status": "PASS",
+  "limits": "Weights 10 and 12 are not excluded. A fixed-pair MILP search timed out; its status is inconclusive."
+}
