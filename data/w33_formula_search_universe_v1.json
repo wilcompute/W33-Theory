@@ -1907738,9 +1907738,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T12:49:10-04:00",
+  "frozen_at": "2026-10-29T12:53:20-04:00",
   "pass": 398,
-  "repository_head": "26be23edb6016b2424caacc9ae01b253a682be4f",
+  "repository_head": "775cc9151bcd5259c2572ed83fd78c7cdde7b268",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2417643,7 +2417643,7 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92565340,
+    "bytes_scanned": 92565918,
     "exact_formula_families": 65231,
     "files_scanned": 12727,
     "formula_occurrences": 71370,
@@ -2417658,5 +2417658,5 @@
     "structural_families": 63518
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "837de7810d36fd4fffa32ef3e82146907348fb602eceeb66ef823c3a08e7c6d7"
+  "universe_sha256": "990516ac6bc8be0379871185a7c9fe09e102165fbb2c415606c8016fe6d2d8a6"
 }
