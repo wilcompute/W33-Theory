@@ -20,7 +20,7 @@ class FiveDeep(unittest.TestCase):
         a=self.data["complex_gram_three_photon"]
         self.assertEqual(a["W33_masks"],[511]*4)
         self.assertEqual(a["dual_masks"],[259,3,35,32])
-        self.assertEqual(a["difference_integer_coefficients"],[14120,14120,18520,18520,37040])
+        self.assertEqual(a["difference_integer_coefficients"],(14120,14120,18520,18520,37040))
         self.assertEqual(a["certified_positive_pair_coefficients_after_AMGM"],
                          ["5320/3","18520/3","18520/3"])
     def test_quantitative_hardware_bound(self):
