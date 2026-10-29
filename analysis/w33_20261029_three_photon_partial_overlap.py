@@ -48,11 +48,24 @@ def independent_triples(M):
 
 def main():
     A,B=two_graphs()
-    w33,witness=independent_triples(A)
+    w33,_=independent_triples(A)
     dual,no_witness=independent_triples(B)
     assert w33=={1:2880,4:360}
     assert dual=={0:1080,2:2160} and no_witness is None
+    # SAME physical input ports: the first W33-independent triple is not
+    # necessarily independent in the dual's fixed line-mode ordering.
+    # Select one that is independent in BOTH graphs and has four
+    # common point-graph neighbors. This avoids an invalid comparison.
+    witness=None
+    for abc in combinations(range(40),3):
+        if any(A[i,j] or B[i,j] for i,j in combinations(abc,2)):
+            continue
+        common=[k for k in range(40) if all(A[i,k] for i in abc)]
+        if len(common)==4:
+            witness=(abc,tuple(common[:3]))
+            break
     assert witness is not None and not (set(witness[0])&set(witness[1]))
+    assert all(not A[i,j] and not B[i,j] for i,j in combinations(witness[0],2))
     patterns=[coefficients(m) for m in range(512)]
     w=patterns[-1]
     assert w==(4374,13122,8748)
@@ -69,6 +82,7 @@ def main():
       "W33_independent_triple_common_neighbor_histogram":{str(k):v for k,v in w33.items()},
       "dual_independent_triple_common_neighbor_histogram":{str(k):v for k,v in dual.items()},
       "W33_witness_input":list(witness[0]),
+      "identical_input_ports_independent_in_both_graphs":True,
       "W33_witness_output":list(witness[1]),
       "W33_witness_coefficient_tuple":list(w),
       "dual_universal_upper_coefficient_tuple":list(bound),
