@@ -1,0 +1,34 @@
+{
+  "schema": "w33.20261029.doily_polarity_twistor_involution.v1",
+  "status": "EXACT_SYMPLECTIC_POLARITY_ORTHOGONAL_INVOLUTION",
+  "geometry": {
+    "name": "W(3,2) doily",
+    "points": 15,
+    "lines": 15,
+    "points_per_line": 3,
+    "collinearity_srg": [
+      15,
+      6,
+      1,
+      3
+    ],
+    "spectrum": {
+      "1": 9,
+      "6": 1,
+      "-3": 5
+    }
+  },
+  "incidence": "M[p,q]=1 iff symplectic_B(p,q)=0",
+  "incidence_identity": "M^2=4I+3J",
+  "T": "(3M-J)/6",
+  "T_symmetric": true,
+  "T_orthogonal": true,
+  "T_involution": true,
+  "T_trace": 5,
+  "T_eigenspace_dims": {
+    "+1": 10,
+    "-1": 5
+  },
+  "tests": "2/2 local pass",
+  "limits": "Classical finite symplectic incidence. No physical E6 multiplet or Lorentzian spacetime derived."
+}
