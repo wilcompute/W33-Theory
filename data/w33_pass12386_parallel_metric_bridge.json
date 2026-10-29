@@ -1,0 +1,40 @@
+{
+  "parallel_commit": "3d23371f3317d6357899150e612ec3c111b8d17e",
+  "M": [
+    [
+      10,
+      5,
+      -6,
+      0
+    ],
+    [
+      5,
+      10,
+      0,
+      -6
+    ],
+    [
+      -6,
+      0,
+      12,
+      -6
+    ],
+    [
+      0,
+      -6,
+      -6,
+      12
+    ]
+  ],
+  "determinant": "2916",
+  "square_root_determinant": 54,
+  "Smith_diagonal": [
+    1,
+    3,
+    18,
+    54
+  ],
+  "statement": "Any rational scalar/congruence of this acoustic metric that admits nondegenerate integral reduction at3 has square determinant modulo3, hence hyperbolic type in dimension4. It cannot yield the elliptic metric type required by the parallel finite kappa^2=-1 closure census.",
+  "identity": "det(lambda*A^T*M*A)=lambda^4*det(A)^2*54^2",
+  "boundary": "No assertion that the current integral lattice has good reduction; its determinant is divisible by3. A finite-field analogy does not supply real Lorentzian signature."
+}

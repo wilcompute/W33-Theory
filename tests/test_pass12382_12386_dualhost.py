@@ -69,3 +69,15 @@ def test_published_string_inputs_negative_controls():
     terms=r['published_series_terms_coefficient_m8_n8']
     assert any(c and m+n<0 and m!=n for c,m,n in terms)
     assert not any(c and m==n and m<0 for c,m,n in terms)
+
+def test_parallel_metric_square_class_obstruction():
+    data=json.loads((probe.ROOT/'data/w33_pass12386_parallel_metric_bridge.json').read_text())
+    M=s.Matrix(data['M']);assert M.det()==54**2
+    A=s.Matrix([[1,1,0,0],[0,1,0,0],[0,0,1,1],[0,0,0,1]])
+    assert (2*A.T*M*A).det()==2**4*A.det()**2*54**2
+    # Independent finite-field point count distinguishes the two4D metric types.
+    counts=[]
+    for diagonal in [[1,1,1,1],[1,1,1,2]]:
+        count=sum(any(v) and sum(d*x*x for d,x in zip(diagonal,v))%3==0 for v in product(range(3),repeat=4))//2
+        counts.append(count)
+    assert counts==[16,10]

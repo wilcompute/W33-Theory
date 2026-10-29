@@ -183,6 +183,26 @@ this packet makes no new complete historical-reading claim. No TOE closure is
 claimed. Full repository-index refresh and local synchronization are recorded
 in the final receipt rather than inferred from starting a process.
 
+## Incoming parallel connection: acoustic determinant versus finite closure
+
+During synchronization the parallel commit `3d23371f3` landed. Its report,
+producer and JSON were read in full. It enumerates elliptic metric Hodge stars
+with kappa squared equal to minus one over F3, separately from hyperbolic
+quantum-compatible metrics. That finite statement cannot be substituted for
+our real four-spatial-direction acoustic metric.
+
+There is an exact obstruction to that direct identification: the existing
+harmonic Gram M has determinant54 squared and Smith invariants1,3,18,54.
+A rational congruence and scalar preserve its determinant square class:
+`det(lambda A^T M A)=lambda^4 det(A)^2 54^2`. Consequently, if any such
+representative admits nondegenerate integral reduction at3, the resulting
+four-dimensional finite metric has square determinant and hyperbolic type,
+not the elliptic type of the parallel kappa-squared-minus-one census. The
+current integral M itself is singular modulo3; good reduction is not assumed.
+This is a scope obstruction and a use of the already stored determinant, not
+a new selection of Lorentzian physics. Exact data are in
+`data/w33_pass12386_parallel_metric_bridge.json`.
+
 ## Five independent next investigations
 
 1. Replace finite grids by a complete torsion-coset elimination covering the428
@@ -195,3 +215,9 @@ in the final receipt rather than inferred from starting a process.
    its spectrum before asserting modular or vacuum viability.
 5. Derive or physically prepare the auxiliary qutrit and the27-state Hamming
    isometry, and test whether a full E6 action has a useful native realization.
+
+## Final publication receipt
+
+Science commit79f762129 is published and every owned source/certificate was fetched back and checked. The final server suite passes13 tests including the parallel metric square-class check; the original12-test suite passed on both hosts. The full index was regenerated on the clean Windows worktree:12688 files,17642 distinctive results. Its cutoff is the reservation tree plus this packet, before the incoming parallel packets and metric addendum; it is a full-corpus snapshot, not a claim that later commits were indexed. Parallel3d23371f3 and8a7912931 were preserved and their reports, producers and certificates reviewed. The latter finds radius-safe sampled models but retains a hypercharge obstruction; this does not change the separate S-class input audit here.
+
+The original local master was fast-forwarded with GitKraken. Only the session-note file was staged/stashed to permit this; both conflict sides were merged, all unique original note lines checked, and the full original backup plus named stash retained. Scientific edits and config payloads matched saved hashes. Five auto-generated instruction files refreshed during the synchronization window, so no unchanged-byte claim is made for those. No unrelated work was published. A Continuity decision was logged successfully. Final synchronization to the commit containing these receipts is checked after publication.
