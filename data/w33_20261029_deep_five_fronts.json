@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "geometry": [
+    {
+      "q": 3,
+      "physical_qubits": 40,
+      "logical_qubits": 8,
+      "adjacency_binary_rank": 16,
+      "isotropic_lines": 40,
+      "two_line_logicals_weight_2q": 240,
+      "two_line_logicals_weight_2q_plus_2": 540,
+      "distinct_weight_2q_logical_cosets": 120,
+      "word_multiplicity_per_coset": 2,
+      "q7_exact_minimum_distance_proved": true
+    },
+    {
+      "q": 5,
+      "physical_qubits": 156,
+      "logical_qubits": 24,
+      "adjacency_binary_rank": 66,
+      "isotropic_lines": 156,
+      "two_line_logicals_weight_2q": 2340,
+      "two_line_logicals_weight_2q_plus_2": 9750,
+      "distinct_weight_2q_logical_cosets": 2340,
+      "word_multiplicity_per_coset": 1,
+      "q7_exact_minimum_distance_proved": true
+    },
+    {
+      "q": 7,
+      "physical_qubits": 400,
+      "logical_qubits": 48,
+      "adjacency_binary_rank": 176,
+      "isotropic_lines": 400,
+      "two_line_logicals_weight_2q": 11200,
+      "two_line_logicals_weight_2q_plus_2": 68600,
+      "distinct_weight_2q_logical_cosets": 11200,
+      "word_multiplicity_per_coset": 1,
+      "q7_exact_minimum_distance_proved": false
+    }
+  ],
+  "complex_gram_three_photon": {
+    "input_modes": [
+      0,
+      7,
+      9
+    ],
+    "output_modes": [
+      [
+        4,
+        14,
+        23
+      ],
+      [
+        4,
+        14,
+        32
+      ],
+      [
+        4,
+        23,
+        32
+      ],
+      [
+        14,
+        23,
+        32
+      ]
+    ],
+    "W33_masks": [
+      511,
+      511,
+      511,
+      511
+    ],
+    "dual_masks": [
+      259,
+      3,
+      35,
+      32
+    ],
+    "polynomial_variables": [
+      "1",
+      "abs_g01_squared",
+      "abs_g02_squared",
+      "abs_g12_squared",
+      "Re_Bargmann_cycle"
+    ],
+    "W33_integer_coefficients": [
+      17496,
+      17496,
+      17496,
+      17496,
+      34992
+    ],
+    "dual_integer_coefficients": [
+      3376,
+      3376,
+      -1024,
+      -1024,
+      -2048
+    ],
+    "difference_integer_coefficients": [
+      14120,
+      14120,
+      18520,
+      18520,
+      37040
+    ],
+    "guaranteed_minimum_probability_gap": 0.0012396159122085048,
+    "rigorous_minimum_is_fully_distinguishable": true,
+    "independent_mixed_internal_photon_states_covered_by_convexity": true,
+    "inequality": "abs(Re B)<=sqrt(x*y*z)<=(x+y+z)/3 for x,y,z in [0,1]",
+    "certified_positive_pair_coefficients_after_AMGM": [
+      "5320/3",
+      "18520/3",
+      "18520/3"
+    ]
+  },
+  "loss_and_device_certified_bounds": {
+    "minimum_probability_gap": 0.0012396159122085048,
+    "symmetric_per_device_operator_norm_strict_error_ceiling": 0.0002066026520347508,
+    "symmetric_per_device_output_total_variation_strict_error_ceiling": 0.0006198079561042524,
+    "trace_distance_bound": "TV(3-photon U,V) <=3*opnorm(U-V)",
+    "fixed_input_internal_states_assumed_same_for_both_graph_tests": true,
+    "uniform_photon_survival_fraction_eta_example": 0.9,
+    "emitted_per_registered_triple_trial_eta_0p9": 1.371742112482853,
+    "postselection_valid_only_for_uniform_input_and_mode_independent_loss": true,
+    "caveat": "Bounds are conservative certified sufficient conditions, not achieved hardware tolerances."
+  },
+  "odd_q_continuous_time_walk": [
+    {
+      "q": 3,
+      "vertices": 40,
+      "degree": 12,
+      "real_adjacency_eigenvalues": [
+        12,
+        2,
+        -4
+      ],
+      "quarter_t_pi_over_2_onsite_probability": "1/25",
+      "quarter_t_pi_over_2_each_neighbor_probability": "1/25",
+      "quarter_t_pi_over_2_each_nonneighbor_probability": "4/225",
+      "quarter_t_pi_over_2_total_neighbor_shell_probability": "12/25",
+      "all_odd_q_exact_revival_at_dimensionless_t_pi": true,
+      "earliest_projective_revival_t_pi": true,
+      "physical_seconds_not_determined": true
+    },
+    {
+      "q": 5,
+      "vertices": 156,
+      "degree": 30,
+      "real_adjacency_eigenvalues": [
+        30,
+        4,
+        -6
+      ],
+      "quarter_t_pi_over_2_onsite_probability": "4/169",
+      "quarter_t_pi_over_2_each_neighbor_probability": "4/169",
+      "quarter_t_pi_over_2_each_nonneighbor_probability": "9/4225",
+      "quarter_t_pi_over_2_total_neighbor_shell_probability": "120/169",
+      "all_odd_q_exact_revival_at_dimensionless_t_pi": true,
+      "earliest_projective_revival_t_pi": true,
+      "physical_seconds_not_determined": true
+    },
+    {
+      "q": 7,
+      "vertices": 400,
+      "degree": 56,
+      "real_adjacency_eigenvalues": [
+        56,
+        6,
+        -8
+      ],
+      "quarter_t_pi_over_2_onsite_probability": "9/625",
+      "quarter_t_pi_over_2_each_neighbor_probability": "9/625",
+      "quarter_t_pi_over_2_each_nonneighbor_probability": "16/30625",
+      "quarter_t_pi_over_2_total_neighbor_shell_probability": "504/625",
+      "all_odd_q_exact_revival_at_dimensionless_t_pi": true,
+      "earliest_projective_revival_t_pi": true,
+      "physical_seconds_not_determined": true
+    }
+  ],
+  "E8_center_Fock_parity": {
+    "matrix": "-I8",
+    "Fock_sector_phases": {
+      "0": 1,
+      "1": -1,
+      "2": 1,
+      "3": -1,
+      "4": 1,
+      "5": -1,
+      "6": 1,
+      "7": -1,
+      "8": 1
+    },
+    "operator": "(-1)^N on the eight optical modes",
+    "unobservable_global_phase_when_total_signal_photon_number_fixed": true,
+    "phase_reference_or_controlled_path_required": true,
+    "standard_linear_optics_not_beyond_quantum_theory": true
+  },
+  "new_physics_falsification": "NONE: ordinary quantum optics and finite geometry; no free physical energy scale or deviation established."
+}
