@@ -50,3 +50,11 @@ Prior repo dependencies: `data/w33_20261029_explicit_mod2_E8_isometry.json`; req
 3. Specify a calibrated optical and/or matter-photonic encoding for the integral-cover witness, including a reference rail, measured phases, loss and control errors.
 4. Search for an independently justified, local and energy-calibrated Hamiltonian—not an arbitrarily chosen polynomial in A.
 5. Require one parameter-free observable that actually departs from standard quantum mechanics or established field theory before claiming a physical TOE breakthrough.
+
+
+## Important same-order group distinction: two different 51,840s
+
+The **integral lift** constructed here is a *non-split central extension* `2.PSp(4,3)` with center `{+I,-I}`, of order **51,840**. By the standard Schur-cover identification this is `Sp(4,3) ~= 2.U4(2)` (see [GAP Atlas character table](https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/ctbltoc/data/2.U4%282%29.html) and [LMFDB 51840.a](https://www.lmfdb.org/Groups/Abstract/51840.a)). Its 270 quotient involutions of the rank-four class lift to order four.
+
+There is **another, non-isomorphic** group with the same order appearing elsewhere in this repository: `PGSp(4,3) ~= Aut(PSp(4,3)) ~= W(E6)`, the outer automorphism extension `PSp(4,3):2`. Its center is trivial. It must **not** be conflated with the central double cover `2.PSp(4,3)`: equality of cardinality 51,840 is *not* an identification. The distinction is physically relevant because the central minus sign is detectable only interferometrically relative to a reference, whereas a projective outer automorphism acts differently on the finite geometry. See also the [repository's stated group vocabulary](https://wilcompute.github.io/W33-Theory/) and [the standard E6 Weyl identification](https://oa.tib.eu/renate/bitstreams/6fb7e7a9-d01b-4f4c-85ac-5813e67933d8/download).
+
