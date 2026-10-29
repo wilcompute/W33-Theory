@@ -1,0 +1,121 @@
+{
+  "schema": "w33.conwell_k8.radon.erasure.matter.parity.correction.v1",
+  "producer": "analysis/w33_20261029_conwell_k8_erasure_radon_selector.py",
+  "date": "2026-10-29",
+  "status": "exact finite enumeration and algebraic certificates; ideal noise model",
+  "erasure": {
+    "code": "[[28,15,3]] binary CSS",
+    "qubits": "28 unordered heptad pairs = K8 edges",
+    "rank_Z_checks": 6,
+    "rank_X_checks": 7,
+    "correctable_by_size_0_to_6": [
+      1,
+      28,
+      378,
+      3220,
+      18760,
+      73248,
+      155456
+    ],
+    "uncorrectable_by_size_0_to_6": [
+      0,
+      0,
+      0,
+      56,
+      1715,
+      25032,
+      221284
+    ],
+    "no_erasures_of_size_7_or_more_correctable": true,
+    "zero_syndrome_triangles": 56,
+    "zero_syndrome_fourcycles": 210,
+    "zero_syndrome_perfect_matchings": 105,
+    "independent_flagged_loss_success_probability": {
+      "0.01": 0.9999407938129269,
+      "0.02": 0.9995002179822966,
+      "0.05": 0.9910413781331214,
+      "0.1": 0.9204160252488228,
+      "0.15": 0.7481152172922922
+    },
+    "success_formula": "sum(k=0..6) I[k] eta^k (1-eta)^(28-k)"
+  },
+  "Pauli": {
+    "X_single_syndrome": "6-bit Plucker vector p",
+    "Z_single_syndrome": "7 bits (p,1)",
+    "double_X_syndromes_alias_single": 168,
+    "double_X_syndromes_flagged_non_single": 210
+  },
+  "finite_Radon": {
+    "domain_points": 15,
+    "codomain_lines": 35,
+    "incidences": 105,
+    "rank_GF2": 11,
+    "kernel_dimension": 4,
+    "cokernel_dimension": 24,
+    "kernel": "F2-linear functionals on F2^4",
+    "GL4_2_generators_verified": 12,
+    "Penrose_holomorphic_transform_implemented": false
+  },
+  "A8": {
+    "Conwell_label_graph": "T(8) triangular strongly regular graph (28,12,6,4)",
+    "adjacency_minimal_polynomial": "A^2 = 8I + 2A + 4J",
+    "eigenvalues_multiplicities": {
+      "4": 7,
+      "12": 1,
+      "-2": 20
+    },
+    "invariant_quadratic_commutant_dim": 3,
+    "allowed_Hessian": "a I+b A+c J",
+    "sectors": {
+      "a+12b+28c": 1,
+      "a+4b": 7,
+      "a-2b": 20
+    },
+    "unique_symmetry_preserving_label_selector": false
+  },
+  "gauge": {
+    "candidate_rejected": "3 positive translated cosines: P0 along e0,e2; P5 along e0",
+    "exact_unitary_counterexample": [
+      "1",
+      "(-17-4i sqrt21)/25",
+      "1",
+      "(-2+i sqrt21)/5"
+    ],
+    "Q_exact_zero": true,
+    "all_three_translation_activations_zero": true,
+    "restricted_torus_resultant": "180(y-1)^6(5y^2+4y+5)",
+    "established_six_term_repair_retained": true
+  },
+  "ternary_Grassmann_correction": {
+    "all_G2_4_F3_planes": 130,
+    "symplectic_isotropic_planes": 40,
+    "correct_code_parameters": [
+      40,
+      5,
+      24
+    ],
+    "weights": {
+      "0": 1,
+      "24": 90,
+      "27": 80,
+      "30": 72
+    },
+    "incorrect_old_claim": [
+      40,
+      5,
+      28
+    ],
+    "legacy": "analysis/w33_pass153_grassmann_codes.py"
+  },
+  "reduced_period_diagnostic": {
+    "epsilon": 0.001,
+    "non_gauge_eigenvalue_at_order3": {
+      "unrepaired": 0,
+      "six_term": 0.0009542254680949847,
+      "twelve_term": 0.0028615788459329123
+    },
+    "full_135_link_bloch_diagonalized": false
+  },
+  "validation": "8/8 local tests on full independent producer; tests in GitHub source were added for repeated core checks. Whole repository CI independent.",
+  "physics_limitations": "No Penrose transform sheaf cohomology, Lorentzian reality, full native 135-link spectrum, coupled E6 determinant, optical circuit or threshold."
+}
