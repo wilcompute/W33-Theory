@@ -1,0 +1,229 @@
+{
+  "schema": "w33.srg28.adjacency_css_catalog.v1",
+  "date": "2026-10-29",
+  "status": "PASS",
+  "catalog_source": "https://users.cecs.anu.edu.au/~bdm/data/sr401224.g6",
+  "source_sha256": "b899979459e6304bfff848d112d0ac8d738c837e5e21dc6e9d310a386aee8be6",
+  "literature": "E. Spence (2000), The Strongly Regular (40,12,2,4) Graphs, EJC 7 R22, https://doi.org/10.37236/1500",
+  "method": "Decode all 28 graph6 representatives; check each 40,12,2,4; GF2 row-reduce point adjacency A; CSS [[40,40-2rank(A),d]] because A^2=0 mod2; exact minimum logical weight by all pairs of disjoint supports of size <=3 with equal full A-syndromes, testing stabilizer membership; count K4 via adjacent pairs of common neighbors.",
+  "n": 40,
+  "all_graphs_have_identical_complex_adjacency_spectrum": {
+    "2": 24,
+    "12": 1,
+    "-4": 15
+  },
+  "binary_rank_histogram": {
+    "10": 1,
+    "12": 2,
+    "14": 8,
+    "16": 17
+  },
+  "exact_css_histogram": {
+    "[[40,20,4]]": 1,
+    "[[40,16,4]]": 2,
+    "[[40,12,4]]": 8,
+    "[[40,8,6]]": 17
+  },
+  "w33_catalog_index_zero_based": 27,
+  "orthogonal_dual_index_zero_based": 26,
+  "graph_selection": "Exactly one of 28 graphs has binary rank 16 and exactly 40 K4; among two 40-K4 geometric graphs, rank10 distinguishes orthogonal dual.",
+  "records": [
+    {
+      "index": 0,
+      "rank2": 14,
+      "number_K4": 0,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 1,
+      "rank2": 14,
+      "number_K4": 4,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 2,
+      "rank2": 14,
+      "number_K4": 12,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 3,
+      "rank2": 14,
+      "number_K4": 8,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 4,
+      "rank2": 14,
+      "number_K4": 8,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 5,
+      "rank2": 16,
+      "number_K4": 12,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 6,
+      "rank2": 16,
+      "number_K4": 13,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 7,
+      "rank2": 16,
+      "number_K4": 12,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 8,
+      "rank2": 16,
+      "number_K4": 22,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 9,
+      "rank2": 16,
+      "number_K4": 12,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 10,
+      "rank2": 16,
+      "number_K4": 10,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 11,
+      "rank2": 14,
+      "number_K4": 16,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 12,
+      "rank2": 16,
+      "number_K4": 22,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 13,
+      "rank2": 16,
+      "number_K4": 7,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 14,
+      "rank2": 12,
+      "number_K4": 8,
+      "logical_qubits": 16,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 15,
+      "rank2": 16,
+      "number_K4": 7,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 16,
+      "rank2": 12,
+      "number_K4": 24,
+      "logical_qubits": 16,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 17,
+      "rank2": 14,
+      "number_K4": 16,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 18,
+      "rank2": 16,
+      "number_K4": 4,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 19,
+      "rank2": 16,
+      "number_K4": 7,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 20,
+      "rank2": 16,
+      "number_K4": 4,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 21,
+      "rank2": 16,
+      "number_K4": 7,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 22,
+      "rank2": 14,
+      "number_K4": 16,
+      "logical_qubits": 12,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 23,
+      "rank2": 16,
+      "number_K4": 7,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 24,
+      "rank2": 16,
+      "number_K4": 13,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 25,
+      "rank2": 16,
+      "number_K4": 16,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    },
+    {
+      "index": 26,
+      "rank2": 10,
+      "number_K4": 40,
+      "logical_qubits": 20,
+      "css_distance_exact": 4
+    },
+    {
+      "index": 27,
+      "rank2": 16,
+      "number_K4": 40,
+      "logical_qubits": 8,
+      "css_distance_exact": 6
+    }
+  ],
+  "limits": "This is a computational classification over previously published catalog, not novel existence theorem, experiment, or prediction of new particle physics."
+}
