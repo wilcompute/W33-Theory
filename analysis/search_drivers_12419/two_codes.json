@@ -1,0 +1,41 @@
+{
+ "3": {
+  "n": 40,
+  "k": 12,
+  "srg_identity": true,
+  "A2_zero_mod2": true,
+  "AplusI_sq_J_modp": true,
+  "rank2_A": 16,
+  "css_k": 8,
+  "rankp_AplusI": 11,
+  "ceiling_fraction": 0.275,
+  "half_cut_rank_found": 11,
+  "control_half_cut_rank": 20
+ },
+ "5": {
+  "n": 156,
+  "k": 30,
+  "srg_identity": true,
+  "A2_zero_mod2": true,
+  "AplusI_sq_J_modp": true,
+  "rank2_A": 66,
+  "css_k": 24,
+  "rankp_AplusI": 36,
+  "ceiling_fraction": 0.23076923076923078,
+  "half_cut_rank_found": 36,
+  "control_half_cut_rank": 78
+ },
+ "7": {
+  "n": 400,
+  "k": 56,
+  "srg_identity": true,
+  "A2_zero_mod2": true,
+  "AplusI_sq_J_modp": true,
+  "rank2_A": 176,
+  "css_k": 48,
+  "rankp_AplusI": 85,
+  "ceiling_fraction": 0.2125,
+  "half_cut_rank_found": 85,
+  "control_half_cut_rank": 200
+ }
+}

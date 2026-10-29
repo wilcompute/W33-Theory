@@ -1,0 +1,32 @@
+{
+ "3": {
+  "n": 40,
+  "lines": 40,
+  "intersecting_pairs": 240,
+  "tested": 240,
+  "weight_2q_logicals": 240,
+  "d_upper_bound": 6,
+  "smith_rank": 11,
+  "rankp_AplusI": 11
+ },
+ "5": {
+  "n": 156,
+  "lines": 156,
+  "intersecting_pairs": 2340,
+  "tested": 40,
+  "weight_2q_logicals": 40,
+  "d_upper_bound": 10,
+  "smith_rank": 36,
+  "rankp_AplusI": 36
+ },
+ "7": {
+  "n": 400,
+  "lines": 400,
+  "intersecting_pairs": 11200,
+  "tested": 40,
+  "weight_2q_logicals": 40,
+  "d_upper_bound": 14,
+  "smith_rank": 85,
+  "rankp_AplusI": 85
+ }
+}

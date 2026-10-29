@@ -1,0 +1,86 @@
+{
+  "12418_relaxed": {
+    "candidates": 59,
+    "with_solution": 0
+  },
+  "12419_12420": {
+    "3": {
+      "n": 40,
+      "k": 12,
+      "srg_identity": true,
+      "A2_zero_mod2": true,
+      "AplusI_sq_J_modp": true,
+      "rank2_A": 16,
+      "css_k": 8,
+      "rankp_AplusI": 11,
+      "ceiling_fraction": 0.275,
+      "half_cut_rank_found": 11,
+      "control_half_cut_rank": 20
+    },
+    "5": {
+      "n": 156,
+      "k": 30,
+      "srg_identity": true,
+      "A2_zero_mod2": true,
+      "AplusI_sq_J_modp": true,
+      "rank2_A": 66,
+      "css_k": 24,
+      "rankp_AplusI": 36,
+      "ceiling_fraction": 0.23076923076923078,
+      "half_cut_rank_found": 36,
+      "control_half_cut_rank": 78
+    },
+    "7": {
+      "n": 400,
+      "k": 56,
+      "srg_identity": true,
+      "A2_zero_mod2": true,
+      "AplusI_sq_J_modp": true,
+      "rank2_A": 176,
+      "css_k": 48,
+      "rankp_AplusI": 85,
+      "ceiling_fraction": 0.2125,
+      "half_cut_rank_found": 85,
+      "control_half_cut_rank": 200
+    }
+  },
+  "12421": {
+    "3": {
+      "n": 40,
+      "lines": 40,
+      "intersecting_pairs": 240,
+      "tested": 240,
+      "weight_2q_logicals": 240,
+      "d_upper_bound": 6,
+      "smith_rank": 11,
+      "rankp_AplusI": 11
+    },
+    "5": {
+      "n": 156,
+      "lines": 156,
+      "intersecting_pairs": 2340,
+      "tested": 40,
+      "weight_2q_logicals": 40,
+      "d_upper_bound": 10,
+      "smith_rank": 36,
+      "rankp_AplusI": 36
+    },
+    "7": {
+      "n": 400,
+      "lines": 400,
+      "intersecting_pairs": 11200,
+      "tested": 40,
+      "weight_2q_logicals": 40,
+      "d_upper_bound": 14,
+      "smith_rank": 85,
+      "rankp_AplusI": 85
+    }
+  },
+  "checks": {
+    "12418: relaxed hypercharge search complete -- 59 candidates, no solution": true,
+    "12419: both congruences hold at q = 3, 5, 7; rank_2 A = q(q^2+1)/2+1, k = q^2-1; rank_p(A+I) = 1 + C(p+2,3) (Smith)": true,
+    "12420: the ceiling is attained (11, 36, 85) while random regular graphs reach n/2; ceiling fraction decreasing toward 1/6": true,
+    "12421: weight-2q intersecting-line symmetric differences are logicals (240/240 at q = 3; 40/40 at q = 5, 7)": true
+  },
+  "all_checks_pass": true
+}
