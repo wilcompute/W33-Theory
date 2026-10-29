@@ -347151,7 +347151,7 @@
       "numeric_literals": [
         "2"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "papers/forty_points/appA_ledger.tex"
@@ -347163,10 +347163,18 @@
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "(A+I)^2\\equiv J",
           "status": "certified_or_theorem"
+        },
+        {
+          "category": "inline_math",
+          "line": 688,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "(A+I)^2\\equiv J",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1
+        "certified_or_theorem": 1,
+        "unclassified": 1
       },
       "structural_family_id": "d6149272aba7e0993e891bc7a5b5f4106476062a026bb772b6921d1ee110b45a",
       "structural_formula": "(A+I)^#\u2261J"
@@ -416464,6 +416472,35 @@
       },
       "structural_family_id": "4b43d8bc4931e2d29a9e9018a13a75fa676bcde7e929069166a142c1b3e2534d",
       "structural_formula": "#--SM_2#(small-Rsafe,threegenerationswithk_Y=#/#):#ofits5#fractional-chargefermions((#,#,-#/#),(#,#,+#/#))"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "9a4fe6a941d7c90b90cc5fc3bdc7f22799c1642cafe555c5483f10b5f003d9af",
+      "normalized_formula": "12421--distance:thesymmetricdifferenceoftwointersectinglines(weight2q)isanontriviallogical(all240atq=3--the",
+      "numeric_literals": [
+        "12421",
+        "3",
+        "40"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12418_to_12425_one_identity_two_codes.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 14,
+          "path": "analysis/w33_pass12418_to_12425_one_identity_two_codes.py",
+          "raw": "12421 -- distance: the symmetric difference of two intersecting lines (weight 2q) is a nontrivial logical (all 240 at q = 3 -- the",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "53c315297433e19c56558430d45c9bea7581501617b4c0c9e569eb0d57ac836b",
+      "structural_formula": "#--distance:thesymmetricdifferenceoftwointersectinglines(weight2q)isanontriviallogical(all2#atq=#--the"
     },
     {
       "file_count": 1,
@@ -559437,17 +559474,18 @@
       "structural_formula": "A^#x=#x"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "609707f1c645453a6428451612d2904c8350a9feb1641ecc99ada053252e3ecc",
       "normalized_formula": "A^2\u22610",
       "numeric_literals": [
         "0",
         "2"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
-        "W36_PAPER.tex"
+        "W36_PAPER.tex",
+        "papers/forty_points/appA_ledger.tex"
       ],
       "source_locations": [
         {
@@ -559456,10 +559494,17 @@
           "path": "W36_PAPER.tex",
           "raw": "A^2 \\equiv 0",
           "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
+          "line": 688,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "A^2\\equiv0",
+          "status": "unclassified"
         }
       ],
       "status_profile": {
-        "unclassified": 1
+        "unclassified": 2
       },
       "structural_family_id": "1ee04c9a89d57958d61dbc5bbd73a2e7a5eab920f5e812fc24a481f84920b402",
       "structural_formula": "A^#\u2261#"
@@ -1008132,7 +1008177,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 690,
+          "line": 691,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1197323,6 +1197368,38 @@
       },
       "structural_family_id": "50041652d770315b35d1b27f1c1a4d3cecae9296aab3b2b7538ff913197747e8",
       "structural_formula": "checks[\"#:alpha=Z0/(#R_K)holdsnumerically(#)\"]=old[\"#\"][\"#_alpha\"][\"rel_err\"]<#"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "cb1782e591889b892f1db37ffbfa71d5281f6961115d51c20272387f60bae568",
+      "normalized_formula": "checks[\"12420:theceilingisattained(11,36,85)whilerandomregulargraphsreachn/2;ceilingfractiondecreasingtoward1/6\"]=(",
+      "numeric_literals": [
+        "11",
+        "12420",
+        "2",
+        "36",
+        "6",
+        "85"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12418_to_12425_one_identity_two_codes.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 43,
+          "path": "analysis/w33_pass12418_to_12425_one_identity_two_codes.py",
+          "raw": "checks[\"12420: the ceiling is attained (11, 36, 85) while random regular graphs reach n/2; ceiling fraction decreasing toward 1/6\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "26f3c4392212dafbe9cfc2b96ae2362cd623c930c92593adf72d17da53a9acdc",
+      "structural_formula": "checks[\"#:theceilingisattained(#,#,#)whilerandomregulargraphsreachn/#;ceilingfractiondecreasingtoward1/#\"]=("
     },
     {
       "file_count": 1,
@@ -1433090,7 +1433167,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 689,
+          "line": 690,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1438224,7 +1438301,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 689,
+          "line": 690,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1858667,7 +1858744,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 689,
+          "line": 690,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1908560,9 +1908637,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T13:47:59-04:00",
+  "frozen_at": "2026-10-29T13:54:07-04:00",
   "pass": 398,
-  "repository_head": "a8bb48f61755cebffcb8c2a2871d569a7c1c0bd3",
+  "repository_head": "af1a7ee05d5681f7b00e393ca0824efd6feda60b",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -1968853,6 +1968930,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f36fa153f064b4fcd7e67d1ae25c05630232942d9c4d59cdc47dc0b8fd4f6c68",
       "structural_formula": "#--crossingtheroutes:underthefraction-freek_Y=#/#hyperchargesoftheA8models(#checked,#models,allwith"
+    },
+    {
+      "exact_formula_ids": [
+        "9a4fe6a941d7c90b90cc5fc3bdc7f22799c1642cafe555c5483f10b5f003d9af"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "53c315297433e19c56558430d45c9bea7581501617b4c0c9e569eb0d57ac836b",
+      "structural_formula": "#--distance:thesymmetricdifferenceoftwointersectinglines(weight2q)isanontriviallogical(all2#atq=#--the"
     },
     {
       "exact_formula_ids": [
@@ -2228330,6 +2228415,14 @@
     },
     {
       "exact_formula_ids": [
+        "cb1782e591889b892f1db37ffbfa71d5281f6961115d51c20272387f60bae568"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "26f3c4392212dafbe9cfc2b96ae2362cd623c930c92593adf72d17da53a9acdc",
+      "structural_formula": "checks[\"#:theceilingisattained(#,#,#)whilerandomregulargraphsreachn/#;ceilingfractiondecreasingtoward1/#\"]=("
+    },
+    {
+      "exact_formula_ids": [
         "5e6f9097d8dd3afb3fda35f738b4e61155ba64013ed8867e0c54935c9ad169a2"
       ],
       "exact_member_count": 1,
@@ -2418682,20 +2418775,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92615127,
-    "exact_formula_families": 65259,
-    "files_scanned": 12736,
-    "formula_occurrences": 71400,
+    "bytes_scanned": 92622620,
+    "exact_formula_families": 65261,
+    "files_scanned": 12738,
+    "formula_occurrences": 71404,
     "status_occurrences": {
-      "certified_or_theorem": 5365,
+      "certified_or_theorem": 5366,
       "killed_or_retracted": 1953,
       "open_or_conditional": 2414,
       "preregistered": 36,
       "retrospective_fit": 5432,
-      "unclassified": 56200
+      "unclassified": 56203
     },
-    "structural_families": 63545
+    "structural_families": 63547
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "366b627f1e87460e5a13a7c1a9c2651ba40359e33ebdae98628216a661136fdf"
+  "universe_sha256": "f0dca3290de0fe0acbf59d5ff0c23ef0b333be86819b17dfe6cb6313ca65d7b8"
 }
