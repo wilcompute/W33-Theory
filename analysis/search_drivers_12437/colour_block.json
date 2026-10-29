@@ -1,0 +1,152 @@
+{
+ "per_model": {
+  "Z6II_59_SM_20260917_2533_c110": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_59_SM_20260917_1628_c94": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_06_SM_20260917_2215_c55": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": false
+  },
+  "Z6II_59_SM_20260917_2533_c145": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_59_SM_20260917_2533_c40": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_06_SM_20260917_2215_c73": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": false
+  },
+  "Z6II_06_SM_20260917_2215_c32": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": false
+  },
+  "Z6II_59_SM_20260917_1628_c74": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_06_SM_20260917_2215_c60": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": false
+  },
+  "Z6II_06_SM_20260917_2215_c194": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": false
+  },
+  "Z6II_59_SM_20260917_1628_c182": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_06_SM_20260917_2541_c22": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_23_SM_20260917_2678_c227": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_06_SM_20260917_741_c61": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": false
+  },
+  "Z6II_10_SM_20260917_818_c133": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_59_SM_20260917_2533_c20": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_59_SM_20260917_1628_c33": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_23_SM_20260917_2678_c44": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_59_SM_20260917_2533_c44": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_10_SM_20260917_818_c63": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_59_SM_20260917_2533_c105": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_10_SM_20260917_1497_c148": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  },
+  "Z6II_59_SM_20260917_2533_c173": {
+   "Q": true,
+   "Q+U": true,
+   "Q+D": true,
+   "Q+U+D": true
+  }
+ },
+ "table": {
+  "(True, True, True, True)": 17,
+  "(True, True, True, False)": 6
+ },
+ "order": [
+  "Q",
+  "Q+U",
+  "Q+D",
+  "Q+U+D"
+ ]
+}

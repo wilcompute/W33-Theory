@@ -1,0 +1,20 @@
+{
+ "3": {
+  "n": 40,
+  "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "optimal": true,
+  "min_weight": 6,
+  "seconds": 0.4,
+  "mip_gap": 0.0,
+  "optimum_has_odd_line": true
+ },
+ "5": {
+  "n": 156,
+  "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "optimal": true,
+  "min_weight": 10,
+  "seconds": 38.2,
+  "mip_gap": 0.0,
+  "optimum_has_odd_line": true
+ }
+}

@@ -1,5 +1,11 @@
 # Passes 12426–12433: code distance, the code–entanglement dictionary, flux, and 65 new parents
 
+> **Correction (Pass 12437).** The 'colour-blocked' mechanism and the conclusion 'no three-generation hypercharge' for the 23 new-parent
+> candidates both came from the base hypercharge search only. With loose values and no anomaly condition, the colour conditions are
+> satisfiable for 17 of the 23; only 6 are colour-blocked. The full relaxed search is recorded in
+> `PASS12434_12441_DISTANCE_STABILIZER_GEOMETRY.md`.
+
+
 Claude track. Producer: `analysis/w33_pass12426_to_12433_distance_dictionary_flux_newparents.py`. Drivers:
 `analysis/search_drivers_12426`, `12427`, `12429`, `12373` (scan2, filt2, vet2) and `12402/twin2.py`.
 

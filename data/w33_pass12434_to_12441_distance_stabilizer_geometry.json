@@ -1,0 +1,298 @@
+{
+  "12434": {
+    "q3_q5": {
+      "3": {
+        "n": 40,
+        "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "optimal": true,
+        "min_weight": 6,
+        "seconds": 0.4,
+        "mip_gap": 0.0,
+        "optimum_has_odd_line": true
+      },
+      "5": {
+        "n": 156,
+        "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "optimal": true,
+        "min_weight": 10,
+        "seconds": 38.2,
+        "mip_gap": 0.0,
+        "optimum_has_odd_line": true
+      }
+    },
+    "q7": {
+      "7": {
+        "n": 400,
+        "status": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "optimal": false,
+        "min_weight": 400,
+        "seconds": 3000.6,
+        "mip_gap": 0.974999999999995,
+        "optimum_has_odd_line": false
+      }
+    }
+  },
+  "12435": {
+    "2": {
+      "lagrangians": 40,
+      "expected": 40,
+      "spheres": {
+        "0": 1,
+        "1": 12,
+        "2": 27
+      },
+      "spheres_formula": {
+        "0": 1,
+        "1": 12,
+        "2": 27
+      },
+      "overlap_table": {
+        "0|3^-0": 360,
+        "0|zero": 2880,
+        "1|3^-1": 12960,
+        "1|zero": 25920,
+        "2|3^-2": 87480
+      },
+      "overlaps_violating_3^-d": 0
+    },
+    "3": {
+      "lagrangians": 1120,
+      "expected": 1120,
+      "spheres": {
+        "0": 1,
+        "1": 39,
+        "2": 351,
+        "3": 729
+      },
+      "spheres_formula": {
+        "0": 1,
+        "1": 39,
+        "2": 351,
+        "3": 729
+      },
+      "overlap_table": {
+        "0|3^-0": 27,
+        "0|zero": 702,
+        "1|3^-1": 3159,
+        "1|zero": 25272,
+        "2|3^-2": 85293,
+        "2|zero": 170586,
+        "3|3^-3": 531441
+      },
+      "overlaps_violating_3^-d": 0
+    }
+  },
+  "12438": {
+    "2,2": {
+      "n": 2,
+      "q": 2,
+      "v": 15,
+      "k": 6,
+      "mu": 3,
+      "AplusI_sq_J_modp": true,
+      "rankp_AplusI": 5,
+      "smith": 5,
+      "ceiling_fraction": 0.3333333333333333,
+      "half_cut_max_found": 5,
+      "control_half_cut": 7
+    },
+    "3,2": {
+      "n": 3,
+      "q": 2,
+      "v": 63,
+      "k": 30,
+      "mu": 15,
+      "AplusI_sq_J_modp": true,
+      "rankp_AplusI": 7,
+      "smith": 7,
+      "ceiling_fraction": 0.1111111111111111,
+      "half_cut_max_found": 7,
+      "control_half_cut": 31
+    },
+    "4,2": {
+      "n": 4,
+      "q": 2,
+      "v": 255,
+      "k": 126,
+      "mu": 63,
+      "AplusI_sq_J_modp": true,
+      "rankp_AplusI": 9,
+      "smith": 9,
+      "ceiling_fraction": 0.03529411764705882,
+      "half_cut_max_found": 9,
+      "control_half_cut": 127
+    },
+    "2,3": {
+      "n": 2,
+      "q": 3,
+      "v": 40,
+      "k": 12,
+      "mu": 4,
+      "AplusI_sq_J_modp": true,
+      "rankp_AplusI": 11,
+      "smith": 11,
+      "ceiling_fraction": 0.275,
+      "A2_zero_mod2": true,
+      "rank2_A": 16,
+      "css_k": 8,
+      "half_cut_max_found": 11,
+      "control_half_cut": 20
+    },
+    "3,3": {
+      "n": 3,
+      "q": 3,
+      "v": 364,
+      "k": 120,
+      "mu": 40,
+      "AplusI_sq_J_modp": true,
+      "rankp_AplusI": 22,
+      "smith": 22,
+      "ceiling_fraction": 0.06043956043956044,
+      "A2_zero_mod2": true,
+      "rank2_A": 168,
+      "css_k": 28,
+      "half_cut_max_found": 22,
+      "control_half_cut": 182
+    },
+    "2,5": {
+      "n": 2,
+      "q": 5,
+      "v": 156,
+      "k": 30,
+      "mu": 6,
+      "AplusI_sq_J_modp": true,
+      "rankp_AplusI": 36,
+      "smith": 36,
+      "ceiling_fraction": 0.23076923076923078,
+      "A2_zero_mod2": true,
+      "rank2_A": 66,
+      "css_k": 24,
+      "half_cut_max_found": 36,
+      "control_half_cut": 78
+    },
+    "2,7": {
+      "n": 2,
+      "q": 7,
+      "v": 400,
+      "k": 56,
+      "mu": 8,
+      "AplusI_sq_J_modp": true,
+      "rankp_AplusI": 85,
+      "smith": 85,
+      "ceiling_fraction": 0.2125,
+      "A2_zero_mod2": true,
+      "rank2_A": 176,
+      "css_k": 48,
+      "half_cut_max_found": 85,
+      "control_half_cut": 200
+    }
+  },
+  "12435_qubits": {
+    "2": {
+      "lagrangians": 15,
+      "expected": 15,
+      "spheres": {
+        "0": 1,
+        "1": 6,
+        "2": 8
+      },
+      "spheres_formula": {
+        "0": 1,
+        "1": 6,
+        "2": 8
+      },
+      "overlap_table": {
+        "0|q^-0": 60,
+        "0|zero": 180,
+        "1|q^-1": 720,
+        "1|zero": 720,
+        "2|q^-2": 1920
+      },
+      "overlaps_violating_3^-d": 0
+    },
+    "3": {
+      "lagrangians": 135,
+      "expected": 135,
+      "spheres": {
+        "0": 1,
+        "1": 14,
+        "2": 56,
+        "3": 64
+      },
+      "spheres_formula": {
+        "0": 1,
+        "1": 14,
+        "2": 56,
+        "3": 64
+      },
+      "overlap_table": {
+        "0|q^-0": 8,
+        "0|zero": 56,
+        "1|q^-1": 224,
+        "1|zero": 672,
+        "2|q^-2": 1792,
+        "2|zero": 1792,
+        "3|q^-3": 4096
+      },
+      "overlaps_violating_3^-d": 0
+    }
+  },
+  "12437": {
+    "(True, True, True, True)": 17,
+    "(True, True, True, False)": 6
+  },
+  "12437_relaxed_full": {
+    "candidates": 23,
+    "with_solution": 1
+  },
+  "12437_SM2541": {
+    "model": "Z6II_06_SM_20260917_2541_c22",
+    "hypercharge_vector": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/6",
+      "0",
+      "0",
+      "-5/6",
+      "-1/6",
+      "5/6",
+      "-7/6",
+      "1/6"
+    ],
+    "kY": "17/3",
+    "trY": "0",
+    "t_dot_T_anom": "0",
+    "orthogonal_to_all_roots": true,
+    "three_SM_generations_exact": true,
+    "radius": {
+      "large_e5e6": 0,
+      "large_e3e4": 0,
+      "small_e5": 18,
+      "small_e3": 0
+    },
+    "y_independent_exotics": 0,
+    "higgs_scalar_listings": 36,
+    "fractional_fermions": 92,
+    "liftable_all_orders": 90,
+    "unliftable": "(1,2,0) pair (charges +-1/2)"
+  },
+  "checks": {
+    "12434: exact MILP minimum of ker_2(A): q = 3 -> 6 (control), q = 5 -> 10 = 2q, both optimal": true,
+    "12434: q = 7 MILP recorded honestly -- time limit, not solved (d = 14 at q = 7 remains search evidence, 12426)": true,
+    "12435: Lagrangians 40 / 1120; spheres = q^{r(r+1)/2}[n r]_q; every nonzero overlap = 3^-d; antipodes never orthogonal": true,
+    "12438: across W(2n-1,q) for (n,q) = (2,2),(3,2),(4,2),(2,3),(3,3),(2,5),(2,7): (A+I)^2 = J mod p; rank_p(A+I) = Smith 1 + C(2n+p-2, 2n-1) (5, 7, 9, 11, 22, 36, 85); the ceiling is attained; random regular graphs reach ~v/2": true,
+    "12438: qubit ceilings are 2n + 1 (doily 5, three qubits 7, four qubits 9)": true,
+    "12439: qubit Schmidt-rank width <= 2n + 1 = log2(v + 1) + 1 (logarithmic -> efficiently simulable MBQC, Van den Nest et al. 2007)": true,
+    "12435: qubit stabilizer geometry -- 15 / 135 frames, spheres = formula, nonzero overlaps 2^-d, antipodes unbiased": true,
+    "12437: CORRECTION of 12432 -- with loose values and no anomaly condition the full colour set is FEASIBLE for 17 of 23; only 6 are colour-blocked (the 12432 'all colour-blocked' was a base-mode statement)": true,
+    "12437: relaxed FULL search: exactly one candidate (SM_2541_c22) admits a three-generation hypercharge": true,
+    "12437: SM_2541_c22 -- k_Y = 17/3, Tr Y = 0, Y orthogonal to roots and to the anomalous U(1), large-R safe; 90/92 fractional fermions liftable, one (1,2,0) pair forbidden at all orders": true
+  },
+  "all_checks_pass": true
+}

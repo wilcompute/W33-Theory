@@ -1,0 +1,1 @@
+7 {'n': 400, 'status': 'Time limit reached. (HiGHS Status 13: Time limit reached)', 'optimal': False, 'min_weight': 400, 'seconds': 3000.6, 'mip_gap': 0.974999999999995, 'optimum_has_odd_line': False}

@@ -1,5 +1,13 @@
 # Passes 12418–12425: one identity, two codes
 
+> **Prior art (added in Pass 12439).** The mod-p identity (A + I)² ≡ J for W(3,p) was already in the corpus, together with:
+> - the non-commutation matrix B = J − I − A, with B_xy = ⟨x, y⟩^(p−1), B² = 0 and rank_p B = C(p + 2, 3);
+> - the Jordan structure.
+>
+> They are in `2026-10-22_pascal_phinary_frobenius_jordan_five_frontiers.md`, Section III (other track). rank_p(A + I) = 1 + C(p + 2, 3)
+> follows from it. This pass's contribution is the graph-state entanglement reading and the code family, not the identity or the rank.
+
+
 Claude track. Producer: `analysis/w33_pass12418_to_12425_one_identity_two_codes.py`. Drivers: `analysis/search_drivers_12419/`.
 
 **Cross-track input:** 923c4eb20 (wilcompute), which contributes two things:

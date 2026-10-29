@@ -1,0 +1,50 @@
+{
+ "2": {
+  "lagrangians": 15,
+  "expected": 15,
+  "spheres": {
+   "0": 1,
+   "1": 6,
+   "2": 8
+  },
+  "spheres_formula": {
+   "0": 1,
+   "1": 6,
+   "2": 8
+  },
+  "overlap_table": {
+   "0|q^-0": 60,
+   "0|zero": 180,
+   "1|q^-1": 720,
+   "1|zero": 720,
+   "2|q^-2": 1920
+  },
+  "overlaps_violating_3^-d": 0
+ },
+ "3": {
+  "lagrangians": 135,
+  "expected": 135,
+  "spheres": {
+   "0": 1,
+   "1": 14,
+   "2": 56,
+   "3": 64
+  },
+  "spheres_formula": {
+   "0": 1,
+   "1": 14,
+   "2": 56,
+   "3": 64
+  },
+  "overlap_table": {
+   "0|q^-0": 8,
+   "0|zero": 56,
+   "1|q^-1": 224,
+   "1|zero": 672,
+   "2|q^-2": 1792,
+   "2|zero": 1792,
+   "3|q^-3": 4096
+  },
+  "overlaps_violating_3^-d": 0
+ }
+}
