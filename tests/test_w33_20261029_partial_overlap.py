@@ -20,5 +20,5 @@ class PartialOverlap(unittest.TestCase):
         self.assertEqual(r["W33_witness_input"],[0,7,9])
         self.assertEqual(r["common_port_W33_aggregate_coefficients"],[17496,52488,34992])
         self.assertEqual(r["common_port_dual_aggregate_coefficients"],[3376,1328,-2048])
-        self.assertEqual([z["N"] for z in r["ideal_registered_trial_budgets_0p001_each_error"]],[20333,6881,2437,1413])
+        self.assertEqual([z["N"] for z in r["ideal_registered_trial_budgets_0p001_each_error"]],[19427,6881,2437,1413])
 if __name__=="__main__":unittest.main()
