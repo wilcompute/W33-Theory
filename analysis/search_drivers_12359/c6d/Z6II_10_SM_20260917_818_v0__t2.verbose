@@ -1,0 +1,69 @@
+NSUSY 0
+ potential tachyons in sector (1, 0, 0) with weight q_i = (0.00 0.00 0.00 0.00 )
+ possible tacyonic Excitation N = 0.00
+ and mass M_R^2 = -0.50
+
+GAUGE A7 and A5 + A1 NU1 3
+F m=13 k=0 m=0 n=0 dim=1,1,3adj x1
+F m=13 k=0 m=0 n=0 dim=1,35adj,1 x1
+F m=13 k=0 m=0 n=0 dim=63adj,1,1 x1
+F m=14 k=0 m=0 n=0 dim=1,1,3adj x1
+F m=14 k=0 m=0 n=0 dim=1,35adj,1 x1
+F m=14 k=0 m=0 n=0 dim=63adj,1,1 x1
+F m=15 k=0 m=0 n=0 dim=1,-6,2 x2
+F m=15 k=0 m=0 n=0 dim=1,1,3adj x1
+F m=15 k=0 m=0 n=0 dim=1,35adj,1 x1
+F m=15 k=0 m=0 n=0 dim=1,6,2 x2
+F m=15 k=0 m=0 n=0 dim=63adj,1,1 x1
+F m=15 k=0 m=0 n=1 dim=1,-6,1 x24
+F m=15 k=0 m=0 n=1 dim=1,1,2 x48
+F m=15 k=0 m=0 n=1 dim=1,6,1 x24
+F m=15 k=0 m=1 n=1 dim=-8,1,1 x8
+F m=15 k=0 m=1 n=1 dim=8,1,1 x8
+F m=16 k=0 m=0 n=0 dim=1,-6,2 x2
+F m=16 k=0 m=0 n=0 dim=1,1,3adj x1
+F m=16 k=0 m=0 n=0 dim=1,35adj,1 x1
+F m=16 k=0 m=0 n=0 dim=1,6,2 x2
+F m=16 k=0 m=0 n=0 dim=63adj,1,1 x1
+F m=16 k=0 m=0 n=1 dim=1,-6,1 x24
+F m=16 k=0 m=0 n=1 dim=1,1,2 x48
+F m=16 k=0 m=0 n=1 dim=1,6,1 x24
+F m=16 k=0 m=1 n=1 dim=-8,1,1 x8
+F m=16 k=0 m=1 n=1 dim=8,1,1 x8
+F m=17 k=0 m=0 n=0 dim=1,1,1 x12
+F m=18 k=0 m=0 n=0 dim=1,1,1 x12
+F m=19 k=0 m=0 n=0 dim=1,-15,1 x2
+F m=19 k=0 m=0 n=0 dim=1,1,1 x8
+F m=19 k=0 m=0 n=0 dim=1,15,1 x2
+F m=19 k=0 m=0 n=0 dim=1,20,2 x2
+F m=19 k=0 m=0 n=0 dim=70,1,1 x2
+F m=19 k=0 m=0 n=1 dim=1,-6,1 x16
+F m=19 k=0 m=0 n=1 dim=1,1,2 x16
+F m=19 k=0 m=0 n=1 dim=1,20,1 x8
+F m=19 k=0 m=0 n=1 dim=1,6,1 x16
+F m=19 k=0 m=1 n=0 dim=-8,1,2 x2
+F m=19 k=0 m=1 n=0 dim=-8,6,1 x2
+F m=19 k=0 m=1 n=0 dim=8,-6,1 x2
+F m=19 k=0 m=1 n=0 dim=8,1,2 x2
+F m=19 k=0 m=1 n=1 dim=-8,1,1 x24
+F m=19 k=0 m=1 n=1 dim=8,1,1 x24
+F m=20 k=0 m=0 n=0 dim=1,-15,1 x2
+F m=20 k=0 m=0 n=0 dim=1,1,1 x8
+F m=20 k=0 m=0 n=0 dim=1,15,1 x2
+F m=20 k=0 m=0 n=0 dim=1,20,2 x2
+F m=20 k=0 m=0 n=0 dim=70,1,1 x2
+F m=20 k=0 m=0 n=1 dim=1,-6,1 x16
+F m=20 k=0 m=0 n=1 dim=1,1,2 x16
+F m=20 k=0 m=0 n=1 dim=1,20,1 x8
+F m=20 k=0 m=0 n=1 dim=1,6,1 x16
+F m=20 k=0 m=1 n=0 dim=-8,1,2 x2
+F m=20 k=0 m=1 n=0 dim=-8,6,1 x2
+F m=20 k=0 m=1 n=0 dim=8,-6,1 x2
+F m=20 k=0 m=1 n=0 dim=8,1,2 x2
+F m=20 k=0 m=1 n=1 dim=-8,1,1 x24
+F m=20 k=0 m=1 n=1 dim=8,1,1 x24
+F m=8 k=0 m=0 n=0 dim=1,1,1 x4
+F m=9 k=0 m=0 n=0 dim=1,1,1 x4
+F_NFIELDS 532
+T_NFIELDS 0
+ANOMALY_OK 1

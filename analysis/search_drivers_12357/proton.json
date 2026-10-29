@@ -1,0 +1,152 @@
+{
+ "gauged_B": false,
+ "gauged_B-L": true,
+ "gauged_Y (control: must be solvable)": true,
+ "op_QQQL": {
+  "all": 2,
+  "vac6": 2
+ },
+ "op_UUDE": {
+  "all": 2,
+  "vac6": 2
+ },
+ "op_QQUcEc": {
+  "all": 0,
+  "vac6": 0
+ },
+ "op_QLUcDc": {
+  "all": 0,
+  "vac6": 0
+ },
+ "triplet_scalars": [
+  {
+   "id": 12,
+   "y": "1/3",
+   "QQ": true,
+   "UD": false,
+   "QL": false,
+   "UE": true
+  },
+  {
+   "id": 116,
+   "y": "-1/3",
+   "QQ": false,
+   "UD": false,
+   "QL": true,
+   "UE": false
+  },
+  {
+   "id": 125,
+   "y": "-1/3",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 209,
+   "y": "-1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 217,
+   "y": "1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 219,
+   "y": "-1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 269,
+   "y": "-1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 277,
+   "y": "1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 279,
+   "y": "-1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 338,
+   "y": "1/3",
+   "QQ": false,
+   "UD": false,
+   "QL": true,
+   "UE": false
+  },
+  {
+   "id": 376,
+   "y": "1/3",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": true
+  },
+  {
+   "id": 385,
+   "y": "1/3",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": true
+  },
+  {
+   "id": 393,
+   "y": "1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 398,
+   "y": "1/6",
+   "QQ": false,
+   "UD": false,
+   "QL": false,
+   "UE": false
+  },
+  {
+   "id": 402,
+   "y": "-1/3",
+   "QQ": false,
+   "UD": false,
+   "QL": true,
+   "UE": false
+  },
+  {
+   "id": 407,
+   "y": "-1/3",
+   "QQ": false,
+   "UD": false,
+   "QL": true,
+   "UE": false
+  }
+ ],
+ "triplets_with_diquark_and_leptoquark_couplings": 1
+}

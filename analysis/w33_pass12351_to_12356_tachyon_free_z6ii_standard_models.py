@@ -1,5 +1,10 @@
 """Passes 12351-12356: tachyon-free three-generation SO(16) x SO(16) Standard Models on Z6-II -- the SM_2913 lineage (Claude track).
 
+CORRECTION (Passes 12357-12362): the 12352 statements 'closed for radii above ~ sqrt(2) sqrt(alpha')' and 'large radii safe' are
+WITHDRAWN.  The 6D theory of the theta^2-fixed torus e5e6 has tachyons (m_R^2 = -1/6) that the order-2 Wilson line W5 removes only at
+zero momentum; they carry half-integer e5 momentum and return for R5 > sqrt(3/8) sqrt(alpha') (12 states for SM_2913, 24 for SM_2618).
+'Tachyon-free' below means: at the orbifold point (zero momentum and winding).  See w33_pass12357_to_12362_*.py.
+
 Prior art (cited, not claimed): Pass 11095 built 104 tachyon-free three-generation SO(16) x SO(16) models on the A8 shift of T6/Z3;
 Pass 11100 found, by random draws on the other W(3,3) geometries, no tachyon-free Standard-Model-like model 'on this sample';
 Pass 11096 closed the (-1)^F-in-the-twist 'twin' route for Z6-I, Z12-I, Z2xZ6-I, Z3xZ6, Z6xZ6 (Z6-II not in its list);

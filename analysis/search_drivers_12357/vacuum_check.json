@@ -1,0 +1,55 @@
+{
+ "fresh": true,
+ "drop_one": {
+  "27": {
+   "full": false,
+   "broken": [
+    "D",
+    "X",
+    "F"
+   ]
+  },
+  "40": {
+   "full": false,
+   "broken": [
+    "D",
+    "F",
+    "Z"
+   ]
+  },
+  "61": {
+   "full": false,
+   "broken": [
+    "D",
+    "X",
+    "F"
+   ]
+  },
+  "68": {
+   "full": false,
+   "broken": [
+    "F"
+   ]
+  },
+  "78": {
+   "full": false,
+   "broken": [
+    "D",
+    "L",
+    "X",
+    "F",
+    "Z"
+   ]
+  },
+  "79": {
+   "full": false,
+   "broken": [
+    "X",
+    "F",
+    "Z"
+   ]
+  }
+ },
+ "random_hits": 1,
+ "random_draws": 100
+}

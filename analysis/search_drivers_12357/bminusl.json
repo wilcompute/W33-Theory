@@ -1,0 +1,45 @@
+{
+ "free_params": 1,
+ "vacuum_3BL": {
+  "233": "0",
+  "294": "0",
+  "363": "0",
+  "382": "0",
+  "770": "0",
+  "771": "0"
+ },
+ "parity": "None",
+ "vacuum_breaks_BL": false,
+ "anomalies": {
+  "grav": "0",
+  "cubic": "0",
+  "SU3": "0",
+  "SU2": "0",
+  "Y2": "0"
+ },
+ "anomaly_free_choice": "[]",
+ "anomalous_for_all": false,
+ "singlet_3BL_hist": {
+  "6": 7,
+  "0": 46,
+  "-3*tau0": 10,
+  "3*tau0": 10,
+  "-6": 7
+ },
+ "even_nonzero_singlets": [
+  13,
+  118,
+  129,
+  131,
+  160,
+  309,
+  320,
+  334,
+  348,
+  350,
+  380,
+  389,
+  403,
+  408
+ ]
+}

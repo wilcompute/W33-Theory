@@ -1,0 +1,17 @@
+{
+ "parent": {
+  "left_weights": 412,
+  "unpaired": 214,
+  "vectorlike": false
+ },
+ "sub2": {
+  "left_weights": 392,
+  "unpaired": 0,
+  "vectorlike": true
+ },
+ "sub3": {
+  "left_weights": 436,
+  "unpaired": 0,
+  "vectorlike": true
+ }
+}

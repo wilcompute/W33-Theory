@@ -1,5 +1,10 @@
 # Passes 12351–12356: tachyon-free three-generation SO(16)×SO(16) Standard Models on Z6-II
 
+> **Correction (Passes 12357–12362).** The radius statements below are withdrawn for large radii. The 6D theory of the
+> θ²-fixed torus e5e6 has tachyons that the order-2 Wilson line W5 removes only at zero momentum. They carry half-integer e5
+> momentum and return for R5 > √(3/8)·√α′. "Tachyon-free" here holds only at the orbifold point. See
+> `PASS12357_12362_SUB_ORBIFOLDS_THRESHOLDS_VACUUM_PROTON.md`.
+
 Claude track. Producer: `analysis/w33_pass12351_to_12356_tachyon_free_z6ii_standard_models.py`.
 
 **Prior art (cited, not claimed).**
