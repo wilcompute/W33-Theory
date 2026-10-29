@@ -1,0 +1,618 @@
+{
+  "schema": "w33.toe.klein_twistor_AG_CSS.finite_F2.v1",
+  "quadric": {
+    "field": "F2",
+    "klein_quadric_points": 35,
+    "complement_points": 28,
+    "plucker_order": [
+      "01",
+      "02",
+      "03",
+      "12",
+      "13",
+      "23"
+    ],
+    "equation": "p01*p23+p02*p13+p03*p12=0",
+    "finite_twistor_points": 15,
+    "finite_twistor_lines": 35,
+    "point_line_incidence_count": 105,
+    "each_twistor_point_lines": 7,
+    "intersecting_line_pairs": 315,
+    "disjoint_line_pairs": 280
+  },
+  "conwell": {
+    "heptad_members": [
+      [
+        12,
+        22,
+        27,
+        39,
+        41,
+        53,
+        58
+      ],
+      [
+        12,
+        23,
+        26,
+        37,
+        43,
+        54,
+        57
+      ],
+      [
+        13,
+        22,
+        26,
+        35,
+        44,
+        49,
+        63
+      ],
+      [
+        13,
+        23,
+        27,
+        33,
+        46,
+        50,
+        60
+      ],
+      [
+        14,
+        18,
+        29,
+        39,
+        43,
+        49,
+        60
+      ],
+      [
+        14,
+        19,
+        28,
+        37,
+        41,
+        50,
+        63
+      ],
+      [
+        15,
+        18,
+        28,
+        35,
+        46,
+        53,
+        57
+      ],
+      [
+        15,
+        19,
+        29,
+        33,
+        44,
+        54,
+        58
+      ]
+    ],
+    "point_to_heptad_pair": {
+      "12": [
+        0,
+        1
+      ],
+      "13": [
+        2,
+        3
+      ],
+      "14": [
+        4,
+        5
+      ],
+      "15": [
+        6,
+        7
+      ],
+      "18": [
+        4,
+        6
+      ],
+      "19": [
+        5,
+        7
+      ],
+      "22": [
+        0,
+        2
+      ],
+      "23": [
+        1,
+        3
+      ],
+      "26": [
+        1,
+        2
+      ],
+      "27": [
+        0,
+        3
+      ],
+      "28": [
+        5,
+        6
+      ],
+      "29": [
+        4,
+        7
+      ],
+      "33": [
+        3,
+        7
+      ],
+      "35": [
+        2,
+        6
+      ],
+      "37": [
+        1,
+        5
+      ],
+      "39": [
+        0,
+        4
+      ],
+      "41": [
+        0,
+        5
+      ],
+      "43": [
+        1,
+        4
+      ],
+      "44": [
+        2,
+        7
+      ],
+      "46": [
+        3,
+        6
+      ],
+      "49": [
+        2,
+        4
+      ],
+      "50": [
+        3,
+        5
+      ],
+      "53": [
+        0,
+        6
+      ],
+      "54": [
+        1,
+        7
+      ],
+      "57": [
+        1,
+        6
+      ],
+      "58": [
+        0,
+        7
+      ],
+      "60": [
+        3,
+        4
+      ],
+      "63": [
+        2,
+        5
+      ]
+    },
+    "heptads": 8,
+    "heptad_size": 7,
+    "pairwise_intersection_size": 1,
+    "off_points_per_heptads": 2,
+    "exterior_projective_lines": 56,
+    "external_lines_as_G2_8_triangles": true,
+    "canonical_GL4_F2_to_A8": {
+      "generator_count": 12,
+      "heptad_action_order": 20160,
+      "all_generators_even_permutations": true,
+      "identified_finite_group": "GL4(F2) = A8",
+      "stabilizer_of_two_heptad_labels": 720,
+      "orbit_of_28_pairs": 28,
+      "point_to_heptad_pair_equivariance_verified": true,
+      "generators": [
+        {
+          "elementary_add": [
+            0,
+            1
+          ],
+          "heptad_permutation": [
+            4,
+            5,
+            6,
+            7,
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "elementary_add": [
+            0,
+            2
+          ],
+          "heptad_permutation": [
+            2,
+            3,
+            0,
+            1,
+            6,
+            7,
+            4,
+            5
+          ]
+        },
+        {
+          "elementary_add": [
+            0,
+            3
+          ],
+          "heptad_permutation": [
+            1,
+            0,
+            3,
+            2,
+            5,
+            4,
+            7,
+            6
+          ]
+        },
+        {
+          "elementary_add": [
+            1,
+            0
+          ],
+          "heptad_permutation": [
+            5,
+            6,
+            4,
+            7,
+            2,
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "elementary_add": [
+            1,
+            2
+          ],
+          "heptad_permutation": [
+            1,
+            0,
+            3,
+            2,
+            7,
+            6,
+            5,
+            4
+          ]
+        },
+        {
+          "elementary_add": [
+            1,
+            3
+          ],
+          "heptad_permutation": [
+            3,
+            2,
+            1,
+            0,
+            6,
+            7,
+            4,
+            5
+          ]
+        },
+        {
+          "elementary_add": [
+            2,
+            0
+          ],
+          "heptad_permutation": [
+            7,
+            2,
+            1,
+            5,
+            6,
+            3,
+            4,
+            0
+          ]
+        },
+        {
+          "elementary_add": [
+            2,
+            1
+          ],
+          "heptad_permutation": [
+            1,
+            0,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2
+          ]
+        },
+        {
+          "elementary_add": [
+            2,
+            3
+          ],
+          "heptad_permutation": [
+            5,
+            4,
+            6,
+            7,
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "elementary_add": [
+            3,
+            0
+          ],
+          "heptad_permutation": [
+            1,
+            0,
+            7,
+            4,
+            3,
+            6,
+            5,
+            2
+          ]
+        },
+        {
+          "elementary_add": [
+            3,
+            1
+          ],
+          "heptad_permutation": [
+            2,
+            7,
+            0,
+            5,
+            6,
+            3,
+            4,
+            1
+          ]
+        },
+        {
+          "elementary_add": [
+            3,
+            2
+          ],
+          "heptad_permutation": [
+            6,
+            5,
+            4,
+            7,
+            2,
+            1,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "native_reflection_F2_action": {
+      "reflection_heptad_permutation": [
+        3,
+        4,
+        6,
+        0,
+        1,
+        7,
+        2,
+        5
+      ],
+      "cycle_type": "2^4 (four transpositions)",
+      "fixed_heptads": 0,
+      "fixed_off_quadric_points": 4,
+      "preserves_Conwell_pair_labeling": true,
+      "caveat": "F2-period reflection is not a Lorentzian twistor real structure."
+    },
+    "symmetry": "eight heptads canonically determined as 7-cliques; numbering of heptads is conventional"
+  },
+  "codes": {
+    "Klein": {
+      "1": {
+        "length": 35,
+        "dimension": 6,
+        "homogeneous_polynomial_degree": 1,
+        "distance": 16,
+        "weight_enumerator": {
+          "0": 1,
+          "16": 35,
+          "20": 28
+        }
+      },
+      "2": {
+        "length": 35,
+        "dimension": 20,
+        "homogeneous_polynomial_degree": 2,
+        "distance": 6,
+        "weight_enumerator": {
+          "0": 1,
+          "6": 280,
+          "8": 735,
+          "10": 11648,
+          "12": 52290,
+          "14": 140360,
+          "16": 244895,
+          "18": 282240,
+          "20": 195916,
+          "22": 89320,
+          "24": 26145,
+          "26": 4480,
+          "28": 210,
+          "30": 56
+        }
+      },
+      "3": {
+        "length": 35,
+        "dimension": 34,
+        "homogeneous_polynomial_degree": 3
+      },
+      "4": {
+        "length": 35,
+        "dimension": 35,
+        "homogeneous_polynomial_degree": 4
+      },
+      "CSS_from_nested_degree_1_and_2": {
+        "length": 35,
+        "logical_qubits": 14,
+        "X_check_rank": 15,
+        "Z_check_rank": 6,
+        "distance": 3,
+        "logical_weight_degree2_side": 6,
+        "dual_degree2_distance": 7,
+        "commutation_exact": true,
+        "weight3_incidence_logical_witnesses": 105,
+        "physical_optics_claim": false
+      }
+    },
+    "off_quadric": {
+      "1": {
+        "length": 28,
+        "dimension": 6,
+        "homogeneous_polynomial_degree": 1,
+        "distance": 12,
+        "weight_enumerator": {
+          "0": 1,
+          "12": 28,
+          "16": 35
+        }
+      },
+      "2": {
+        "length": 28,
+        "dimension": 21,
+        "homogeneous_polynomial_degree": 2,
+        "distance": 4,
+        "weight_enumerator": {
+          "0": 1,
+          "4": 315,
+          "6": 6048,
+          "8": 47817,
+          "10": 206976,
+          "12": 472059,
+          "14": 630720,
+          "16": 472059,
+          "18": 206976,
+          "20": 47817,
+          "22": 6048,
+          "24": 315,
+          "28": 1
+        }
+      },
+      "3": {
+        "length": 28,
+        "dimension": 27,
+        "homogeneous_polynomial_degree": 3
+      },
+      "4": {
+        "length": 28,
+        "dimension": 28,
+        "homogeneous_polynomial_degree": 4
+      },
+      "CSS_from_nested_degree_1_and_2": {
+        "length": 28,
+        "logical_qubits": 15,
+        "X_check_rank": 7,
+        "Z_check_rank": 6,
+        "distance": 3,
+        "logical_weight_degree2_side": 4,
+        "dual_degree2_distance": 12,
+        "commutation_exact": true,
+        "weight3_incidence_logical_witnesses": 56,
+        "physical_optics_claim": false
+      }
+    }
+  },
+  "full_simplex_code": {
+    "length": 63,
+    "dimension": 6,
+    "homogeneous_polynomial_degree": 1,
+    "distance": 32,
+    "weight_enumerator": {
+      "0": 1,
+      "32": 63
+    }
+  },
+  "other_five_frontiers": {
+    "smaller_than_six_gauge_repair": {
+      "four_term_common_e0_e1_activation_disproved": true,
+      "exact_character": [
+        "1",
+        "1",
+        "omega",
+        "omega^2"
+      ],
+      "global_exceptional_polynomial_Q_zero": true,
+      "translation_weight_e0_e1_zero": true,
+      "stronger_2_to_5_term_general_no_go_proved": false
+    },
+    "full_native_spectrum": {
+      "full_135_link_N_by_N_numeric_spectrum_computed": false,
+      "analytical_massless_obstruction": "At identity commutator curl rows vanish and the Bloch curl rank falls from 108 to 105; bounded analytic native link operators have vanishing eigenvalues as z->1. No uniform massive gap for the acoustic flux branches.",
+      "optical_dispersion_and_equal_coupling_comparison_open": true
+    },
+    "matter_selector": {
+      "GL4_F2_orbit_of_28_nondegenerate_forms": 28,
+      "full_GL4_F2_invariant_choice_of_one_form_impossible": true,
+      "stabilizer_of_selected_form_order": 720,
+      "dynamically_spontaneous_or_explicit_selection_open": true
+    },
+    "binary_CSS_photonic_bridge": {
+      "candidate_classical_to_quantum_CSS_prototypes": [
+        [
+          35,
+          14,
+          3
+        ],
+        [
+          28,
+          15,
+          3
+        ]
+      ],
+      "physical_measurement_and_noise_threshold_derived": false
+    },
+    "native_reflection": {
+      "finite_F2_heptad_permutation_cycle_type": "2^4",
+      "finite_F2_fixes_4_off_quadric_points": true,
+      "Lorentzian_time_or_photon_helicities_derived": false
+    }
+  },
+  "limits": {
+    "not_a_Lorentzian_spacetime": true,
+    "no_SU22_real_structure_over_F2": true,
+    "classical_codes_vs_CSS_quantum_codes_distinguished": true,
+    "no_photonic_physical_decoder_tested": true,
+    "no_AG_curve_Goppa_code_claim": true,
+    "repo_historical_correction": "[7,3,4] binary code is simplex, NOT the [7,4,3] Hamming code."
+  }
+}
