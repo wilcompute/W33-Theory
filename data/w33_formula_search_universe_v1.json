@@ -642589,6 +642589,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bf8970e54d3b4f9dfe3920cb025103f0fb47763dcb2490105c92db0026a9efa2",
+      "normalized_formula": "Forindependentideal^registeredtriple-photontrials^,thescriptevaluatesbinomialerrorprobabilitieswithSciPy,usingadeterministicthresholdK>=konthecountofsuccessfulfour-portevents.Tokeepeachofthetwowrong-classificationprobabilitiesstrictlybelow0.001,minimalintegerNunderthisfixedthreshold-testfamilyare",
+      "numeric_literals": [
+        ".001"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 49,
+          "path": "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md",
+          "raw": "For independent ideal **registered triple-photon trials**, the script evaluates binomial error probabilities with SciPy, using a deterministic threshold K>=k on the count of successful four-port events. To keep each of the two wrong-classification probabilities strictly below 0.001, minimal integer N under this fixed threshold-test family are:",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "ee2e3fa02f4b3831d96792c828f8ed5539f02aef8646c5902470478b79bd0da1",
+      "structural_formula": "Forindependentideal^registeredtriple-photontrials^,thescriptevaluatesbinomialerrorprobabilitieswithSciPy,usingadeterministicthresholdK>=konthecountofsuccessfulfour-portevents.Tokeepeachofthetwowrong-classificationprobabilitiesstrictlybelow0#,minimalintegerNunderthisfixedthreshold-testfamilyare"
+    },
+    {
+      "file_count": 1,
       "formula_id": "c05d51462387f79c12061434792704bbdfd929c6ad78c3c4f0d6fdaaf385df75",
       "normalized_formula": "Forinputmodej,measuredpathportdifferenceintheidealbalancedinterferometerisRe(MW)_jj,andtheidentitycalibrationreturnsReM_jj.TheninescalarratiosaregenerallyNOTReW_jjwhenMhasoffdiagonalelements.Insampledcoherentmixingeps=0,.03,.09,.16,.30rad,scalar-referencebiasesininferrednormalizedW33echoreachedabout^-0.01517^at.30",
       "numeric_literals": [
@@ -842118,6 +842145,40 @@
     },
     {
       "file_count": 1,
+      "formula_id": "3acc131e9da6b781670e22a05188d8fc821e3ad457be05e72d15a0efc89cfa7e",
+      "normalized_formula": "Thedualexpressionisnonnegativethroughout[0,1]despiteitsnegativecubicinterferenceterm.Thes=1limitrecoversthealready-establishedperfect-indistinguishabilityprotocolwithP_W33=0.009216,P_dual=2656/11390625.Ats=0,P_W33=0.001536andP_dual=3376/11390625;thisremainsavalidgraphtest,nowusingclassicaldistinguishable-photonamplitudes",
+      "numeric_literals": [
+        "0",
+        "0.001536",
+        "0.009216",
+        "1",
+        "11390625",
+        "2656",
+        "3",
+        "3376"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md",
+          "raw": "The dual expression is nonnegative throughout [0,1] despite its negative cubic interference term. The s=1 limit recovers the already-established perfect-indistinguishability protocol with P_W33=0.009216, P_dual=2656/11390625. At s=0, P_W33=0.001536 and P_dual=3376/11390625; this remains a valid graph test, now using classical distinguishable-photon amplitudes.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8ccb1f65f769d7b09c8132fce5d9fc42a6e130205315573fdab14c2841b93616",
+      "structural_formula": "Thedualexpressionisnonnegativethroughout[#,#]despiteitsnegativecubicinterferenceterm.Thes=#limitrecoversthealready-establishedperfect-indistinguishabilityprotocolwithP_W3#=#,P_dual=#/#.Ats=#,P_W3#=#andP_dual=#/#;thisremainsavalidgraphtest,nowusingclassicaldistinguishable-photonamplitudes"
+    },
+    {
+      "file_count": 1,
       "formula_id": "18618b30a9ea4a60611c8401c7e8296b907896a30efacf8f3406a9e4e976155b",
       "normalized_formula": "Thedurablelessonsareunusuallycoherent.ThePerplexityarithmeticwasmostlycorrectwhileseveralphysicsframingswerenot;thetargetedforced-arithmeticguardisusefulwhilethebroadguardwastoonoisy;apriorBT820flagwasretractedaftertheactualproducerwasread;alpha(W(3,3))isexactly7andalpha(W(3,5))exactly18;Talliniimprovestheq=9upperboundfromtherepo's80to73;and,mostimportantlyforthispacket,therepo'sq=9lowerbound51hadnostoredwitness",
       "numeric_literals": [
@@ -846022,6 +846083,34 @@
       },
       "structural_family_id": "fbaba10f232228dcb35de8e2b237c0944835f509b97cb5b3988c7165d5f3e5c6",
       "structural_formula": "TheinducedphaseisB(w,e5)=V0\u00b7\u03bb/#:afermion-numberphasetiedtoalatticetranslation.ThatisaScherk\u2013Schwarz-typetwist"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "88280f4bb5cc1531c99e19226f0084179094ce629038a51b8fc33fc55327a8fe",
+      "normalized_formula": "Theinequalityremainspositiveevenforfullydistinguishablephotonss=0;atthatendpointitusesordinarygraphconnectivity,notuniquelybosoninterference.Theboundiscoefficientwiseandconservative:themaximacancomefromdifferentsignedpatterns,makingitvalidevenwhenthedualphysicallyrealizesfewerthanthe511patterns",
+      "numeric_literals": [
+        "0",
+        "11"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 24,
+          "path": "analysis/2026-10-29_W33_partial_indistinguishability_theorem.md",
+          "raw": "The inequality remains positive even for fully distinguishable photons s=0; at that endpoint it uses ordinary graph connectivity, not uniquely boson interference. The bound is coefficientwise and conservative: the maxima can come from different signed patterns, making it valid even when the dual physically realizes fewer than the 511 patterns.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e99ac0711befe5e0b5276b96da273dca6b3685f9d761a6c4bf0f095a2b900c06",
+      "structural_formula": "Theinequalityremainspositiveevenforfullydistinguishablephotonss=#;atthatendpointitusesordinarygraphconnectivity,notuniquelybosoninterference.Theboundiscoefficientwiseandconservative:themaximacancomefromdifferentsignedpatterns,makingitvalidevenwhenthedualphysicallyrealizesfewerthanthe5#patterns"
     },
     {
       "file_count": 1,
@@ -1910203,9 +1910292,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-29T15:21:44-04:00",
+  "frozen_at": "2026-10-29T15:29:54-04:00",
   "pass": 398,
-  "repository_head": "014b7aa5f109fa4333999820c2b28796ead42eea",
+  "repository_head": "8846ca82cf1af1838dc0e45b24f04c4f5d380e02",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2083149,6 +2083238,14 @@
     },
     {
       "exact_formula_ids": [
+        "bf8970e54d3b4f9dfe3920cb025103f0fb47763dcb2490105c92db0026a9efa2"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ee2e3fa02f4b3831d96792c828f8ed5539f02aef8646c5902470478b79bd0da1",
+      "structural_formula": "Forindependentideal^registeredtriple-photontrials^,thescriptevaluatesbinomialerrorprobabilitieswithSciPy,usingadeterministicthresholdK>=konthecountofsuccessfulfour-portevents.Tokeepeachofthetwowrong-classificationprobabilitiesstrictlybelow0#,minimalintegerNunderthisfixedthreshold-testfamilyare"
+    },
+    {
+      "exact_formula_ids": [
         "c05d51462387f79c12061434792704bbdfd929c6ad78c3c4f0d6fdaaf385df75"
       ],
       "exact_member_count": 1,
@@ -2137183,6 +2137280,14 @@
     },
     {
       "exact_formula_ids": [
+        "3acc131e9da6b781670e22a05188d8fc821e3ad457be05e72d15a0efc89cfa7e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8ccb1f65f769d7b09c8132fce5d9fc42a6e130205315573fdab14c2841b93616",
+      "structural_formula": "Thedualexpressionisnonnegativethroughout[#,#]despiteitsnegativecubicinterferenceterm.Thes=#limitrecoversthealready-establishedperfect-indistinguishabilityprotocolwithP_W3#=#,P_dual=#/#.Ats=#,P_W3#=#andP_dual=#/#;thisremainsavalidgraphtest,nowusingclassicaldistinguishable-photonamplitudes"
+    },
+    {
+      "exact_formula_ids": [
         "18618b30a9ea4a60611c8401c7e8296b907896a30efacf8f3406a9e4e976155b"
       ],
       "exact_member_count": 1,
@@ -2138220,6 +2138325,14 @@
       "exact_member_count": 1,
       "structural_family_id": "fbaba10f232228dcb35de8e2b237c0944835f509b97cb5b3988c7165d5f3e5c6",
       "structural_formula": "TheinducedphaseisB(w,e5)=V0\u00b7\u03bb/#:afermion-numberphasetiedtoalatticetranslation.ThatisaScherk\u2013Schwarz-typetwist"
+    },
+    {
+      "exact_formula_ids": [
+        "88280f4bb5cc1531c99e19226f0084179094ce629038a51b8fc33fc55327a8fe"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e99ac0711befe5e0b5276b96da273dca6b3685f9d761a6c4bf0f095a2b900c06",
+      "structural_formula": "Theinequalityremainspositiveevenforfullydistinguishablephotonss=#;atthatendpointitusesordinarygraphconnectivity,notuniquelybosoninterference.Theboundiscoefficientwiseandconservative:themaximacancomefromdifferentsignedpatterns,makingitvalidevenwhenthedualphysicallyrealizesfewerthanthe5#patterns"
     },
     {
       "exact_formula_ids": [
@@ -2420749,20 +2420862,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 92737666,
-    "exact_formula_families": 65312,
-    "files_scanned": 12761,
-    "formula_occurrences": 71456,
+    "bytes_scanned": 92749308,
+    "exact_formula_families": 65315,
+    "files_scanned": 12763,
+    "formula_occurrences": 71459,
     "status_occurrences": {
       "certified_or_theorem": 5373,
       "killed_or_retracted": 1953,
       "open_or_conditional": 2418,
       "preregistered": 36,
       "retrospective_fit": 5436,
-      "unclassified": 56240
+      "unclassified": 56243
     },
-    "structural_families": 63598
+    "structural_families": 63601
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "6f3538f63dc6a3373bfaa91b92b63932980881703edec29ec5fc536b94551690"
+  "universe_sha256": "1320cacbc7be60c0f825670bf1ef813b374dc6e705126fb5f019befdd998ea0f"
 }
