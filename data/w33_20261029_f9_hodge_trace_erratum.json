@@ -1,0 +1,22 @@
+{
+  "schema": "w33.F9.hodge.trace.erratum.v1",
+  "field": "F9=F3[i]/(i^2+1)",
+  "p": 3,
+  "q": 9,
+  "q_mod4": 1,
+  "kappa": "i I6",
+  "kappa_squared": "-I6",
+  "P_symmetric": true,
+  "trace": "6i=0",
+  "eigen_multiplicities_plus_minus_i": [
+    6,
+    0
+  ],
+  "hodge_metric_required_multiplicities": [
+    3,
+    3
+  ],
+  "trace_zero_criterion_sufficient": false,
+  "correct_split_metric_criterion": "3+3 eigenspace split; for p!=3 trace-zero equivalent",
+  "impact": "Corrects Pass12410–12417 theorem for characteristic-three square fields, not q3 q5 q13 findings."
+}

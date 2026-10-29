@@ -1,0 +1,53 @@
+{
+  "schema": "w33.binary.adjacency_css40.hexad.v1",
+  "graph": "W(3,3) distinguished collinearity graph",
+  "srg_parameters": [
+    40,
+    12,
+    2,
+    4
+  ],
+  "vertices": 40,
+  "edges": 240,
+  "lines": 40,
+  "adjacency_binary_rank": 16,
+  "point_line_incidence_binary_rank": 25,
+  "adjacency_squared_zero_mod_2": true,
+  "incidence_gram_equals_adjacency_mod_2": true,
+  "CSS": {
+    "n": 40,
+    "k": 8,
+    "d": 6,
+    "X_checks": 16,
+    "Z_checks": 16,
+    "X_distance": 6,
+    "Z_distance": 6
+  },
+  "stabilizer_weight_counts": {
+    "0": 1,
+    "8": 45,
+    "12": 1120,
+    "16": 15570,
+    "20": 32064,
+    "24": 15570,
+    "28": 1120,
+    "32": 45,
+    "40": 1
+  },
+  "kernel_counts_weights_one_to_six": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 240
+  },
+  "all_240_minimum_logical_hexads_from_two_intersecting_isotropic_lines": true,
+  "hexads_per_vertex": 36,
+  "graph_state_cuts_ebits": {
+    "line4": 4,
+    "minimum_logical_hexad6": 5,
+    "global_rank_ceiling": 16
+  },
+  "proof_scope": "Exact binary finite-dimensional CSS certificate, not an experimental claim nor a world-priority claim"
+}

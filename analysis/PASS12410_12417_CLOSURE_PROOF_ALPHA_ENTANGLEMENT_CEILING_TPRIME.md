@@ -18,8 +18,7 @@ is P-symmetric with κ² = −1.
 
 1. *(q ≡ 3 mod 4, so −1 is not a square.)* κ = ±(the Hodge star of an elliptic metric g). The metric is unique up to scalars, and every
    such κ arises. Closure alone produces a Lorentzian-type light cone, exactly as over ℝ.
-2. *(q ≡ 1 mod 4, so −1 is a square.)* κ is ±(the Hodge star of a hyperbolic metric) **iff** tr κ = 0. The solutions with tr κ ≠ 0 are not
-   metric; the simplest is κ = i·I.
+2. *(q ≡ 1 mod 4, so −1 is a square.)* κ is ±(the Hodge star of a hyperbolic metric) only when its two eigenvalue multiplicities are **3 and 3** (the balanced split). For characteristic p ≠ 3, this is equivalent to tr κ = 0. For **p = 3** it is NOT equivalent: κ = i·I over F₉ is P-symmetric, has κ² = −I and trace 6i = 0, yet is not a metric Hodge star. The balanced-split sufficiency follows from the nondegenerate 3+3 decomposition/metric-orbit argument, not from trace alone.
 
 **Proof.**
 
@@ -32,8 +31,7 @@ is P-symmetric with κ² = −1.
      nondegenerate.
    - By Witt's theorem for the pair (P, h), these generators form one orbit of O⁺(6, q). Its stabilizer is the F-points of O(U) ≅ O(3, q²).
    - So the number of solutions is |GO⁺(6, q)| / |GO(3, q²)| = q⁴(q² − 1)(q³ − 1).
-3. **When i ∈ F.** U is a rational nondegenerate subspace of any dimension a = 0, …, 6, and tr κ = i(2a − 6). This vanishes iff a = 3,
-   since p ≥ 5 here.
+3. **When i ∈ F.** U is a rational nondegenerate subspace of any dimension a = 0, …, 6, and tr κ = i(2a − 6). For p ≠ 3, this vanishes iff a = 3. For p = 3 (e.g. F₉, F₈₁, ...), it also vanishes for a = 0 and a = 6; scalar κ = ±i·I is the elementary counterexample. The metric criterion requires **a = 3**, or equivalently characteristic polynomial (T² + 1)³.
 4. **Matching the Hodge stars.**
    - The Hodge star of a metric g satisfies (P⁻¹G₂(g))² = det(g)·I.
    - A scalar s with s²·det(g) = −1 exists iff −det(g) is a square. For q ≡ 3 (mod 4) that means g is elliptic; for q ≡ 1 (mod 4), g is
@@ -55,11 +53,10 @@ is P-symmetric with κ² = −1.
   | 5 | 2,834,952 | 2,015,000 | 71% |
   | 13 | 12,304,306,952 | 10,662,392,520 | 87% |
 
-**Correction.** Passes 12402–12409 stated "closure always gives a metric" for every odd q. That holds only for q ≡ 3 (mod 4); both files
-now carry a note.
+**Corrections.** Passes 12402–12409 stated "closure always gives a metric" for every odd q. That holds only for q ≡ 3 (mod 4). A second October 29 audit found that the original trace-zero replacement for all q ≡ 1 (mod 4) fails in characteristic three (F₉ is the smallest example). The balanced ±i eigenspace dimension is the correct criterion in the split case; trace is an equivalent shortcut only if p ≠ 3. See `analysis/w33_20261029_f9_hodge_trace_counterexample.py` and its regression.
 
 **[I] Reading.** "Closure alone forces a light cone" is a property of fields like ℝ, in which −1 has no square root. Where i is already
-present, closure must be supplemented by tr κ = 0, the absence of an axion-like part.
+present, closure must be supplemented by a balanced ±i eigenspace split. In characteristic other than three, tr κ = 0 is an equivalent test; in characteristic three it is not.
 
 ## [E] + [I] 12411: α is a constitutive impedance over a topological impedance
 
