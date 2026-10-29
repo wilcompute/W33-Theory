@@ -1,0 +1,72 @@
+{
+  "schema": "w33.20261029.klein_e8_hamming_twistor_frame.v1",
+  "tests": "3/3 local PASS",
+  "space": "even-weight F2^8 / all-ones",
+  "dimension": 6,
+  "point_counts": {
+    "nonzero": 63,
+    "klein_quadric": 35,
+    "off_quadric": 28
+  },
+  "maximal_singular_planes": 30,
+  "rulings": [
+    15,
+    15
+  ],
+  "codes": {
+    "count": 30,
+    "parameters": [
+      8,
+      4,
+      4
+    ],
+    "weight_enumerator": {
+      "0": 1,
+      "4": 14,
+      "8": 1
+    },
+    "self_dual": true,
+    "S8_stabilizer": 1344,
+    "S8_orbit": 30,
+    "stabilizer_even": true
+  },
+  "E8_roots": {
+    "axis": 16,
+    "weight4": 224,
+    "total": 240
+  },
+  "incidence": {
+    "size": [
+      15,
+      15
+    ],
+    "row_sum": 7,
+    "column_sum": 7,
+    "gram": "M M^T=4I+3J",
+    "transform": "T=(3M-J)/6",
+    "orthogonal": true,
+    "entries_incident": "1/3",
+    "entries_nonincident": "-1/6"
+  },
+  "stabilizer_states": {
+    "total": 30,
+    "qubits": 8,
+    "span_dim": 15,
+    "Gram_spectrum": {
+      "0": 15,
+      "9": 1,
+      "3/2": 14
+    },
+    "pair_overlaps": {
+      "1/4": 210,
+      "1/8": 120,
+      "1/2": 105
+    }
+  },
+  "full_state_amplitude_identical": {
+    "states": 15,
+    "computational_basis": 256,
+    "verified_equalities": 3840
+  },
+  "scope": "finite incidence+Construction A; not holomorphic twistor physics, space-time derivation or experimentally selected TOE"
+}
