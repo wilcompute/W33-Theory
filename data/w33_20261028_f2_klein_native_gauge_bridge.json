@@ -1,0 +1,288 @@
+{
+  "schema": "w33.native.klein_gauge_choices_f2.v1",
+  "nonzero_projective_bivectors": 63,
+  "klein_quadric_Qplus_5_2_points": 35,
+  "nondecomposable_complement_points": 28,
+  "gl4_2_order": 20160,
+  "sp4_2_order": 720,
+  "symplectic_form_coset_count": 28,
+  "pair_count": 15,
+  "primitive_integer_kernels": [
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "pfaffian": 30,
+      "vector": [
+        0,
+        0,
+        5,
+        6,
+        5,
+        5
+      ],
+      "mod2_nondecomposable": false
+    },
+    {
+      "indices": [
+        0,
+        2
+      ],
+      "pfaffian": 25,
+      "vector": [
+        0,
+        -5,
+        0,
+        1,
+        5,
+        5
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        0,
+        3
+      ],
+      "pfaffian": 30,
+      "vector": [
+        0,
+        -6,
+        -1,
+        0,
+        5,
+        5
+      ],
+      "mod2_nondecomposable": false
+    },
+    {
+      "indices": [
+        0,
+        4
+      ],
+      "pfaffian": 1,
+      "vector": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        0,
+        5
+      ],
+      "pfaffian": 1,
+      "vector": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        1,
+        2
+      ],
+      "pfaffian": 25,
+      "vector": [
+        5,
+        0,
+        0,
+        1,
+        0,
+        5
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        1,
+        3
+      ],
+      "pfaffian": 30,
+      "vector": [
+        6,
+        0,
+        -1,
+        0,
+        -1,
+        5
+      ],
+      "mod2_nondecomposable": false
+    },
+    {
+      "indices": [
+        1,
+        4
+      ],
+      "pfaffian": 25,
+      "vector": [
+        5,
+        0,
+        0,
+        1,
+        0,
+        5
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        1,
+        5
+      ],
+      "pfaffian": 1,
+      "vector": [
+        -1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        2,
+        3
+      ],
+      "pfaffian": 1,
+      "vector": [
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        2,
+        4
+      ],
+      "pfaffian": 25,
+      "vector": [
+        5,
+        0,
+        0,
+        1,
+        0,
+        5
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        2,
+        5
+      ],
+      "pfaffian": 1,
+      "vector": [
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        3,
+        4
+      ],
+      "pfaffian": 25,
+      "vector": [
+        5,
+        -1,
+        -1,
+        0,
+        0,
+        5
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        3,
+        5
+      ],
+      "pfaffian": 1,
+      "vector": [
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "mod2_nondecomposable": true
+    },
+    {
+      "indices": [
+        4,
+        5
+      ],
+      "pfaffian": 1,
+      "vector": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "mod2_nondecomposable": true
+    }
+  ],
+  "pairs_full_rank_for_all_15_nonzero_F2_momenta": 12,
+  "failing_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "failing_momenta": [
+    "0001",
+    "1110",
+    "1111"
+  ],
+  "good_pairs_reduce_to_6_distinct_nondecomposable_projective_points": true,
+  "bad_pairs_reduce_to_1_distinct_decomposable_projective_point": true,
+  "optimized_pair": [
+    0,
+    5
+  ],
+  "optimized_vector": [
+    0,
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "optimized_pfaffian_mod2": 1,
+  "caveat": "Concrete Klein quadric finite-field correspondence and characteristic-two robustness test, not a physical photon derivation, not a native CSS implementation, no uniquely selected gauge coupling."
+}
