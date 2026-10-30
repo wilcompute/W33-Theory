@@ -1,0 +1,104 @@
+{
+  "schema": "w33.2026-10-29.five_fronts.seven_flag.fourline.v1",
+  "status": "PASS_EXACT_FINITE_MODEL",
+  "date": "2026-10-29",
+  "q7_four_isotropic_lines": {
+    "source": "analysis/cpp/w33_20261029_q7_four_line_fixed.cpp",
+    "fixed_line_orbit_representative": true,
+    "number_fourline_unions_checked": 10507399,
+    "line_transitivity": "Sp(4,7) is transitive on totally isotropic 2-subspaces",
+    "anomalies": 0,
+    "nullity_histogram": {
+      "28": {
+        "3": 9604
+      },
+      "29": {
+        "3": 340536
+      },
+      "30": {
+        "3": 1775368
+      },
+      "31": {
+        "3": 4148928
+      },
+      "32": {
+        "3": 4232963
+      }
+    },
+    "conclusion": "No weight-10 or weight-12 adjacency kernel word is contained in a union of up to four isotropic lines.",
+    "global_distance_interval": [
+      10,
+      14
+    ],
+    "exact_global_distance_closed": false
+  },
+  "flagged_extraction": {
+    "source": "analysis/w33_20261029_seven_flag_full_Z_round_two_fault.py",
+    "regression": "tests/test_w33_20261029_full_Z_round.py",
+    "ancilla_flags": 7,
+    "syndrome_ancillas_per_check": 1,
+    "check_count_per_Pauli_sector": 16,
+    "CNOTs_per_sequential_Pauli_round": 394,
+    "flag_labels": [
+      0,
+      30,
+      84,
+      113,
+      109,
+      43,
+      67
+    ],
+    "same_check_one_or_two_fault_histories": 3306573,
+    "cross_check_two_fault_histories": 49352880,
+    "zero_fault_histories": 1,
+    "all_modeled_histories": 52659454,
+    "distinct_global_observation_records": 1844033,
+    "ambiguous_recovery_classes": 0,
+    "window": "full sequential Z-check round, ideal subsequent complete X/Z syndrome",
+    "X_round": "Follows by global-H conjugation as an exact Pauli/CNOT/basis duality",
+    "mixed_round_certified": false,
+    "noisy_full_syndrome_certified": false,
+    "single_fault_catalog_count": 10262
+  },
+  "chiral_chain": {
+    "source": "analysis/w33_20261029_K_even_chiral_chain_no_go.py",
+    "g": "1/4",
+    "J": "1/10",
+    "sizes_checked": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "ground_sector_patterns": 2,
+    "sector_gap": "6/5",
+    "finite_T_1D_SSB": false,
+    "coupling_assumed": true
+  },
+  "intrinsic_causal": {
+    "source": "analysis/w33_20261029_Hp_intrinsic_subriemannian_obstruction.py",
+    "L_x2": 2,
+    "L_y2": 2,
+    "L_z2": "2*x^2",
+    "growth_dimension": 4,
+    "Lorentzian_continuum_derived": false
+  },
+  "optical_adversarial": {
+    "source": "analysis/w33_20261029_photon_adversarial_loss_calibration_budget.py",
+    "ideal_W_min_numerator": 17496,
+    "ideal_D_max_numerator": 6752,
+    "denominator": 11390625,
+    "adversarial_Gram_separate_by_hypothesis": true,
+    "conditional_budget": {
+      "eta": 0.95,
+      "opnorm_eps": 0.00001,
+      "beta": 0.00005,
+      "N": 95513,
+      "cutoff": 91
+    },
+    "correlated_trials_supported": false
+  },
+  "boundary": "These are exact finite-model or conditional conventional quantum-physics certificates, not proof of a TOE."
+}
