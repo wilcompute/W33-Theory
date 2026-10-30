@@ -346,14 +346,18 @@ The certificates for the Clifford recovery protocol are bundled in a self-contai
 
 | Path | Contents |
 |---|---|
-| `analysis/` | The corpus: pass write-ups, executable witnesses (`w33_pass*.py`, `*.g`), manuscript inserts, search drivers |
-| `data/` | Deterministic JSON certificates (many are gitignored by default; commit them with `git add -f`) |
+| `analysis/` | **The corpus.** Every pass write-up (`PASS*`, `BT*`, `PART*`, dated notes), executable witnesses (`w33_pass*.py`, `*.g`), manuscript inserts, and search drivers |
+| `data/` | Deterministic JSON certificates (gitignored by default; commit with `git add -f`) |
 | `tests/` | pytest contracts that tie write-ups, witnesses and certificates together |
-| `papers/` | Current paper projects; `papers/forty_points` has one ledger row per pass block |
+| `papers/` | Paper projects: `forty_points` (one ledger row per pass block), `standalone/` (companion papers and supplements), `submission/` |
+| `docs/` | The live atlas, built PDFs, and `evidence/`, `reports/`, `notes/`, `figures/`, `specs/`, `theory/` |
 | `formal/` | Lean 4 + mathlib |
-| `docs/` | The live atlas, built PDFs and reader-facing evidence cards |
-| `scripts/` | The search front door, guards, index builders and CI helpers |
-| `archive/` | Retired material, history preserved |
+| `scripts/` | The search front door (`find.py`), guards, index builders, `relocate.py` (move + rewrite references), CI helpers |
+| `archive/` | Retired material with history preserved; `archive/outputs/` holds old computation output trees |
+
+At the root you will find the three flagship manuscripts and their sources (they are compiled by ~135 workflows), importable Python
+modules that tests load by name, the generated indices, and configuration. Moving the remaining root modules is a planned step that
+needs per-module import checks, so they stay for now.
 
 Every directory is described, with live counts, in [`REPO_MAP.md`](REPO_MAP.md).
 
