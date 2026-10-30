@@ -1,0 +1,19 @@
+{
+  "domain_wall_verdict": "A bracket-sign domain wall is not topologically forced by the finite algebra alone: the sign can be absorbed into the determinant-character twist. Extra dynamics would be required to turn orientation choices into distinct physical phases or localized modes.",
+  "exact_equivariance": "[R_tilde(g)f,R_tilde(g)h]=R_tilde(g)[f,h] for all 432 affine transformations and all augmentation basis pairs",
+  "groups": {
+    "AGL(2,3)": 432,
+    "ASL(2,3)": 216
+  },
+  "interpretation": "The affine su3 eight can transform as an orientation pseudovector. Choosing a global orientation is one trivialization of the determinant line, not a theorem that AGL must be dynamically broken to ASL.",
+  "orientation_character": "chi(g)=+1 for det(g)=1 and -1 for det(g)=2",
+  "pass": 5696,
+  "permutation_parity": {
+    "ASL_coset": "all even permutations of the nine sites",
+    "determinant_reversing_coset": "all odd permutations"
+  },
+  "physics_boundary": "This refines Pass5686 at the representation level. It does not identify the twisted eight with QCD gluons or prove a physical parity/CP mechanism.",
+  "plain_action_failure": "The untwisted site action fails on the determinant-reversing coset exactly as Pass5686 found.",
+  "status": "DETERMINANT_LINE_TWIST_RESTORES_FULL_AGL23_AS_SU3_AUTOMORPHISMS",
+  "twisted_action": "R_tilde(g)=chi(g) R_site(g) on V8"
+}

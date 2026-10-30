@@ -1,0 +1,19 @@
+{
+  "collision_support": {
+    "deletion_mask": "C/3",
+    "horizontal_kept": 36,
+    "vertical_deleted": 9
+  },
+  "exact_expansion": "J(b-D)=J(b)-B(b,D)-B(D,b)+J(D); for Lie b, J(b-D)=-B(b,D)-B(D,b)+J(D)",
+  "information_no_go": [
+    "C/3 determines deleted support but not the full signed/normalized E8 bracket coefficients.",
+    "Affine orientation determines the sign of the V8 determinant su3 bracket, not the complete E8 bracket b.",
+    "Therefore collision support plus affine orientation do not by themselves determine J(b-D)."
+  ],
+  "l3_no_go": "Even for known J, solutions of d l3=-J form l3_0+ker(d) when they exist. Uniqueness requires a vanishing relevant closed-3-cochain freedom plus existence; neither follows from the collision projector.",
+  "numerical_symbolic_identity_max_residual": 9.663381206337363e-13,
+  "pass": 5694,
+  "physics_boundary": "This closes an algebraic information question. It neither proves that the full firewall l3 exists uniquely nor assigns the homotopy bracket a microscopic physical interaction.",
+  "repo_gate": "tools/compute_restricted_ce_h3.py and the exhaustive homotopy tools are the appropriate coefficient-level obstruction/nonuniqueness tests before any unique l3 theorem is promoted.",
+  "status": "JACOBIATOR_FULLY_EXPANDS_FROM_B_MINUS_D__COLLISION_PLUS_ORIENTATION_DO_NOT_UNIQUELY_FIX_L3"
+}

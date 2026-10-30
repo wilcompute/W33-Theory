@@ -1,0 +1,65 @@
+{
+  "interpretation": "The second ray differs from the magnetic sign pattern on 12 of 60 bonds up to global sign. The ratio is geometric-flatness protected, but the discrete ray/chirality choice is not resolved here.",
+  "magnetic_support": {
+    "nonzero_magnitude": 1.7320508075688767,
+    "nonzero_undirected_pairs": 60,
+    "zero_undirected_pairs": 60
+  },
+  "pass": 5685,
+  "physics_boundary": "This fixes a dimensionless spectral ratio inside the finite carrier model. It does not assign either level to a Standard Model particle, derive the energy scale, or show that flat bond magnitude is the unique microscopic Hamiltonian principle.",
+  "projective_flat_bond_rays": [
+    {
+      "bond_sign_disagreements_up_to_global_sign": 0,
+      "correlation_with_Hmag_ray": 1.0,
+      "levels": [
+        [
+          -0.3483388711451932,
+          4
+        ],
+        [
+          -0.1741694355725966,
+          4
+        ],
+        [
+          0.1741694355725964,
+          4
+        ],
+        [
+          0.3483388711451927,
+          4
+        ]
+      ],
+      "ratio": 1.9999999999999993,
+      "t": 0.46195204459670164
+    },
+    {
+      "bond_sign_disagreements_up_to_global_sign": 12,
+      "correlation_with_Hmag_ray": 0.6000000000000002,
+      "levels": [
+        [
+          -1.5116357563512346,
+          4
+        ],
+        [
+          -0.7558178781756184,
+          4
+        ],
+        [
+          0.755817878175617,
+          4
+        ],
+        [
+          1.5116357563512324,
+          4
+        ]
+      ],
+      "ratio": 1.999999999999998,
+      "t": 4.67444398819749
+    }
+  ],
+  "ray_deduplication": "canonical 60-bond sign pattern modulo global sign",
+  "starting_equivariant_Kodd_dimension": 4,
+  "status": "LOCAL_SUPPORT_PLUS_FLAT_BONDS_DISCRETELY_PIN_RATIO_TWO_WITH_TWO_RAYS",
+  "support_preserving_subspace_dimension": 2,
+  "theorem": "Among stabilizer-equivariant K-odd Hamiltonians, preserving the intrinsic magnetic support and requiring constant nonzero bond magnitude leaves exactly two real projective rays; both have absolute level ratio 2."
+}

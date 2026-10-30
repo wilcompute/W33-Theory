@@ -1,0 +1,77 @@
+{
+  "complement_gauge_contract": "For the four matching colors, 01~23, 02~13, 03~12 by sign complementation/switching. Canonical representatives are 01,02,03; spectral sorting rounds to 1e-10 before lexical tie-break.",
+  "conclusion": "The W33 Levi root has an explicit connected Ramanujan tower at 80,160,320 and 640 vertices under a deterministic switching-gauge convention. The complement gauge must be fixed before recursive labeling-dependent searches are reproducible.",
+  "construction": "At each new 4-regular bipartite graph, deterministic four-perfect-matching factorization followed by exhaustive choice among the three complementary-signing switching classes.",
+  "explicit_levels": [
+    {
+      "distinct_eigenvalues": 5,
+      "edges": 160,
+      "laplacian_gap": 1.550510257216816,
+      "nontrivial_radius": 2.449489742783184,
+      "vertices": 80
+    },
+    {
+      "distinct_eigenvalues": 81,
+      "edges": 320,
+      "laplacian_gap": 0.7162311243199686,
+      "nontrivial_radius": 3.2837688756800314,
+      "vertices": 160
+    },
+    {
+      "distinct_eigenvalues": 239,
+      "edges": 640,
+      "laplacian_gap": 0.5767971961121354,
+      "nontrivial_radius": 3.4232028038878646,
+      "vertices": 320
+    },
+    {
+      "distinct_eigenvalues": 557,
+      "edges": 1280,
+      "laplacian_gap": 0.5767971961121363,
+      "nontrivial_radius": 3.4232028038878637,
+      "vertices": 640
+    }
+  ],
+  "level1_to_level2_signing": {
+    "all_six_signed_radii": [
+      3.423202803887862,
+      3.423202803887862,
+      3.438598939297476,
+      3.438598939297476,
+      3.464940210345046,
+      3.464940210345046
+    ],
+    "matching_colors": [
+      0,
+      1
+    ],
+    "negative_degree_each_vertex": 2,
+    "negative_edges": 160,
+    "parent_vertices": 160,
+    "signed_radius": 3.423202803887862
+  },
+  "level2_to_level3_signing": {
+    "all_six_signed_radii": [
+      3.3960725808983176,
+      3.3960725808983176,
+      3.4440201355723845,
+      3.4440201355723845,
+      3.4674591280070626,
+      3.4674591280070626
+    ],
+    "matching_colors": [
+      0,
+      1
+    ],
+    "negative_degree_each_vertex": 2,
+    "negative_edges": 320,
+    "parent_vertices": 320,
+    "signed_radius": 3.3960725808983176
+  },
+  "pass": 5693,
+  "physics_boundary": "These are expander refinements of an internal graph carrier, not a physical spacetime discretization or continuum-limit proof.",
+  "producer_order_contract": "Pass5683 NEG is applied to levi() in its original line-major order; only derived lift edge lists are sorted.",
+  "ramanujan_bound": 3.4641016151377544,
+  "recursion_boundary": "The perfect-matching factorization still depends on deterministic graph ordering and the three switching classes are permuted by color relabeling. No automorphism-canonical or all-level recursive signing theorem is claimed.",
+  "status": "EXPLICIT_RAMANUJAN_W33_2LIFT_LEVELS_320_AND_640_CONSTRUCTED__COMPLEMENT_GAUGE_FIXED"
+}

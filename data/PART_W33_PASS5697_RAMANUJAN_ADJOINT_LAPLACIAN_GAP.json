@@ -1,0 +1,43 @@
+{
+  "explicit_W33_levels": [
+    {
+      "adjoint_zero_modes": 8,
+      "first_positive_adjoint_eigenvalue": 1.5505102572168188,
+      "first_positive_adjoint_multiplicity_at_least": 8,
+      "scalar_laplacian_gap": 1.5505102572168188,
+      "vertices": 80
+    },
+    {
+      "adjoint_zero_modes": 8,
+      "first_positive_adjoint_eigenvalue": 0.7162311243199688,
+      "first_positive_adjoint_multiplicity_at_least": 8,
+      "scalar_laplacian_gap": 0.7162311243199688,
+      "vertices": 160
+    },
+    {
+      "adjoint_zero_modes": 8,
+      "first_positive_adjoint_eigenvalue": 0.5767971961121354,
+      "first_positive_adjoint_multiplicity_at_least": 8,
+      "scalar_laplacian_gap": 0.5767971961121354,
+      "vertices": 320
+    },
+    {
+      "adjoint_zero_modes": 8,
+      "first_positive_adjoint_eigenvalue": 0.5767971961121368,
+      "first_positive_adjoint_multiplicity_at_least": 8,
+      "scalar_laplacian_gap": 0.5767971961121368,
+      "vertices": 640
+    }
+  ],
+  "mass_gap_no_go": "A finite expander Laplacian gap is not the Yang-Mills mass gap or confinement. It has no energy units until a kinetic/metric scale is supplied and does not establish the required infinite-volume interacting gauge-theory statement.",
+  "operator": "L_adj=(4I-A_graph) tensor I_8 on su3-valued site fields",
+  "pass": 5697,
+  "physics_boundary": "Promoted only as a finite internal graph-spectrum theorem for the linearized adjoint field.",
+  "routing_interpretation": "The expander suppresses slowly varying nonconstant internal site modes by a level-independent dimensionless graph gap.",
+  "status": "RAMANUJAN_INTERNAL_ADJOINT_LAPLACIAN_HAS_UNIFORM_FINITE_GRAPH_GAP_NOT_YANG_MILLS_MASS_GAP",
+  "universal_bound": {
+    "adjacency_nontrivial_radius_max": 3.4641016151377544,
+    "laplacian_gap_min": 0.5358983848622456
+  },
+  "zero_sector": "eight constant su3 directions are exact zero modes before gauge fixing; every nonconstant scalar graph mode is copied across the eight adjoint components"
+}

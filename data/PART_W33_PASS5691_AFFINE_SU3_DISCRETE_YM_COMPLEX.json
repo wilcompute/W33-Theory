@@ -1,0 +1,30 @@
+{
+  "affine_complex": {
+    "H1_translation_complex_R": 4,
+    "H1_with_line_faces_F3": 2,
+    "H1_with_line_faces_R": 0,
+    "affine_line_triangles": 12,
+    "cycle_space_dim_R": 28,
+    "links": 36,
+    "rank_boundary1_R": 8,
+    "rank_combined_faces_F3": 26,
+    "rank_line_faces_F3": 12,
+    "rank_translation_faces_F3": 24,
+    "rank_translation_faces_R": 24,
+    "rank_translation_plus_line_faces_R": 28,
+    "translation_plaquettes": 54,
+    "vertices": 9
+  },
+  "finite_YM_candidate": "F_f=(d a)_f + 1/2 [a,a]_f; S_YM=(1/(2 g^2)) sum_f <F_f,F_f>",
+  "homology_boundary": "The real four-dimensional H1 here is the cycle-space quotient by the computed face-boundary span on this explicit nine-site plaquette complex. Over a field its dual cohomology has the same dimension, but no chain map to any other repo four-logical/cohomology sector is asserted.",
+  "lie_metric": "Killing K=-54 times Euclidean metric on V8; choose <x,y>=-K(x,y)/54. Simplicity fixes the invariant quadratic form only up to overall scale.",
+  "linearized_su3_harmonic_dimensions": {
+    "translation_faces_over_R": 32,
+    "translation_plus_line_faces_over_R": 0
+  },
+  "normalization_boundary": "The Lie bracket/Killing form fixes relative algebraic normalization but does not determine the dimensionless physical gauge coupling g or which admissible face set is dynamical.",
+  "pass": 5691,
+  "physics_boundary": "This is a finite lattice-gauge candidate and cochain census, not a QCD derivation. The action face set, physical coupling, continuum limit, matter representation and confinement mechanism remain open.",
+  "status": "AFFINE_SU3_HAS_CANONICAL_KILLING_YM_FORM_AND_PLAQUETTE_H1_FOUR__OLD_VERTICAL_Z3_IS_ADJOINT_TRIVIAL",
+  "vertical_Z3_weld": "The old fiber translation is I_9 tensor C3 and acts trivially on V8 tensor span(1,1,1); its Z3 holonomy is therefore invisible in the adjoint base-su3 sector and is not the new nonabelian connection."
+}

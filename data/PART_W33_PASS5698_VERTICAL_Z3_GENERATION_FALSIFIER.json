@@ -1,0 +1,29 @@
+{
+  "ASL_only_decomposition": "3 copies of 1 plus 3 copies of V8; commutant M3(C) direct-sum M3(C), complex dimension 18",
+  "V8_character_self_inner_product": 1.0,
+  "base_ASL_module": "C^9 = 1 + V8 with V8 irreducible",
+  "bundle_module": "C^27 = C^9 tensor C[Z3]",
+  "falsifier": "Once the actual vertical Z3 gauge action is respected, the three fiber Fourier sectors carry inequivalent charges and cannot be mixed by a gauge-commuting M3 generation algebra.",
+  "joint_ASL_times_Z3_decomposition": [
+    "1 x chi0",
+    "V8 x chi0",
+    "1 x chi1",
+    "V8 x chi1",
+    "1 x chi2",
+    "V8 x chi2"
+  ],
+  "joint_commutant": "C^6, complex dimension 6",
+  "joint_multiplicities": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "open_generation_candidate": "The separate E8 grading factor 27 tensor 3 is not identified here with the vertical fiber qutrit. A genuine generation interpretation requires an explicit three-dimensional multiplicity/intertwiner commuting with the physical gauge algebra.",
+  "pass": 5698,
+  "physics_boundary": "The recurring number three in the fiber is structural Z3 charge data. This pass rules out the simplest fiber-phase=three-generation identification; it does not rule out every possible three-generation mechanism elsewhere in the repo.",
+  "status": "VERTICAL_Z3_FOURIER_SECTORS_ARE_THREE_GAUGE_CHARGES_NOT_THREE_IDENTICAL_GENERATIONS",
+  "vertical_shift_spectrum": "1^9 + omega^9 + omega_bar^9"
+}

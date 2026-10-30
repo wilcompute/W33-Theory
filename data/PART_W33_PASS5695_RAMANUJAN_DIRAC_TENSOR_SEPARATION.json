@@ -1,0 +1,38 @@
+{
+  "additive_hamiltonian": "H_tot(p)=H_D(p) tensor I + I tensor H_int",
+  "causal_support": "If U_phys moves at most one physical lattice step and U_int acts only on the internal factor, U_phys tensor U_int has exactly the same physical support bound. The repo split-step cube remains |Delta x_j|<=ell per macrostep.",
+  "exact_band_law": "E_{alpha,+/-}(p)=epsilon_alpha +/- sqrt(|p|^2+m^2)",
+  "group_velocity": "grad_p E_{alpha,+/-}=+/- p/sqrt(|p|^2+m^2), independent of epsilon_alpha and cover level",
+  "hilbert_factorization": "H_total = H_physical tensor C^{N_n}; N_n=80*2^n for the binary Levi cover hierarchy",
+  "internal_capacities_first_levels": [
+    80,
+    160,
+    320,
+    640,
+    1280
+  ],
+  "numeric_probe": {
+    "dirac_energy": 0.8831760866327847,
+    "finite_difference_velocity": [
+      0.22645540681542897,
+      0.33968311025089903,
+      0.45291081363085794
+    ],
+    "group_velocity": [
+      0.22645540682891915,
+      0.3396831102433787,
+      0.4529108136578383
+    ],
+    "kronecker_sum_spectrum_residual": 1.5987211554602254e-14,
+    "m": 0.7,
+    "p": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  "pass": 5695,
+  "physical_conversion": "c_eff=ell/tau remains a length/time calibration; doubling N_n changes internal state/routing capacity but does not set or renormalize SI c.",
+  "physics_boundary": "This is a noninteracting tensor/Kronecker-sum separation theorem. Couplings that mix physical position and internal routing could modify dispersion and must be tested separately; no photon ontology or value of c is derived.",
+  "status": "TENSOR_PRODUCT_ROUTING_DOUBLES_INTERNAL_CAPACITY_WITHOUT_RENORMALIZING_DIRAC_CAUSAL_CONE"
+}
