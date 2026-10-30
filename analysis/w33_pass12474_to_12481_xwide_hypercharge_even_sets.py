@@ -28,6 +28,9 @@ def main():
         e7 = json.loads(p7.read_text()); res["12474_q7_sym2"] = e7
         res["12474_q7_status"] = (f"exact minimum {e7['min_even_line_set']}" if e7["optimal"] else
                                   f"time limit; best even set {e7.get('min_even_line_set')} (upper bound)")
+        checks["12474: q = 7 minimum even line set is exactly 40 (optimal with the symmetry break; refutes the 5(q-1) = 30 guess of 12467); "
+               "odd q give 10, 20, 40 -- fits 5 * 2^((q-1)/2) [conjecture, three points]"] = (
+            e7["optimal"] and e7["min_even_line_set"] == 40 and e7["verified_even"] and e7["coverage_profile"] == [0, 2])
     xw = json.loads((A / "search_drivers_12468/ysearch_Z6II_06_SM_20260917_2541_c22_noanom_xwide_kcap5o3.json").read_text())
     log = (A / "search_drivers_12468/xwide_long.log").read_text(encoding="utf-8", errors="ignore")
     res["12475"] = dict(kY=[s["kY"] for s in xw["solutions"]], ended="infeasible" if "is Infeasible" in log else "time limit")

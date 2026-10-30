@@ -12,6 +12,20 @@
       2
     ]
   },
+  "12474_q7_sym2": {
+    "q": 7,
+    "lines": 400,
+    "optimal": true,
+    "seconds": 7846.3,
+    "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "min_even_line_set": 40,
+    "verified_even": true,
+    "coverage_profile": [
+      0,
+      2
+    ]
+  },
+  "12474_q7_status": "exact minimum 40",
   "12475": {
     "kY": [
       "17/3",
@@ -22,6 +36,7 @@
   },
   "checks": {
     "12474: line-pair symmetry break reproduces the exact q = 5 minimum 20 (optimal, verified even, coverage {0,2})": true,
+    "12474: q = 7 minimum even line set is exactly 40 (optimal with the symmetry break; refutes the 5(q-1) = 30 guess of 12467); odd q give 10, 20, 40 -- fits 5 * 2^((q-1)/2) [conjecture, three points]": true,
     "12475: 1/18 menu, cap K = 5/3, complete enumeration (ends infeasible) finds only k_Y in {17/3, 461/81}, all > 5/3": true
   },
   "all_checks_pass": true

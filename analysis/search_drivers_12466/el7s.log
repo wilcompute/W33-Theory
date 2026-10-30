@@ -1,0 +1,1 @@
+{"q": 7, "lines": 400, "optimal": true, "seconds": 7846.3, "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "min_even_line_set": 40, "verified_even": true, "coverage_profile": [0, 2]}

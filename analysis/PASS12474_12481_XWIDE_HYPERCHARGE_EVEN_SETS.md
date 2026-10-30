@@ -30,4 +30,5 @@ Every point of line 0 is covered an even number of times, so some second chosen 
 transitively on the lines meeting it, so that second line can be fixed without loss of generality.
 
 - **Control:** the q = 5 exact minimum of 20 is reproduced, in half the time (28 s versus 56 s).
-- **q = 7:** a 4-hour run with this reduction is in progress; its status goes in the certificate when it finishes.
+- **q = 7: the minimum is exactly 40** (optimal, 2.2 h with the reduction; coverage {0, 2}). That **refutes** the 5(q − 1) = 30 guess
+  of 12467. The minima are 6, 10, 20, 40 at q = 2, 3, 5, 7; the odd-q values fit 5·2^((q−1)/2) [conjecture, three points].
