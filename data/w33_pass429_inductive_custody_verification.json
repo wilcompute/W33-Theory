@@ -1,5 +1,5 @@
 {
-  "certificate_sha256": "ec527d3a4b58127095802717e95367246cc30cb3efb1e8cfb8026352406c9887",
+  "certificate_sha256": "722cb3db89c59901a921eeee5439875c29e9d407a2ccdb9b4aa63a435071fc95",
   "checks": {
     "all_24_append_induction_cases_preserve": true,
     "all_eleven_guards_have_counterexamples": true,
@@ -28,7 +28,7 @@
       "study": "S-C"
     }
   ],
-  "formal_spec": "specs/W33Pass429CustodyInductive.tla",
+  "formal_spec": "docs/specs/W33Pass429CustodyInductive.tla",
   "guard_counterexamples": {
     "artifact_claim": {
       "breaks_invariant": true,
@@ -269,7 +269,7 @@
     }
   ],
   "interleaving_trace_length": 24,
-  "schema": "w33.pass429.inductive_custody_verification.v1",
+  "schemas": "w33.pass429.inductive_custody_verification.v1",
   "status": "PASS",
   "theorem": {
     "frame_rule": "an append changes exactly one study chain, so all other chains retain their invariant and the local preservation proof lifts to arbitrary finite study maps",
