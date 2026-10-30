@@ -101,7 +101,7 @@ def syndrome(word,rows):
 def check_one(h,rows,piv,desc):
  gates=gates_for(h)
  faults=fault_catalog(gates)
- outcomes={}
+ outcomes={(0,0,0,0):(0,0)}  # compare against the no-fault baseline too
  histories=0
  for i in range(-1,len(faults)):
   if i<0:x1=z1=0
