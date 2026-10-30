@@ -26,7 +26,7 @@ origin-https    https://github.com/wilcompute/W33-Theory.git (push)
 ?? K27_stabilizer_C6.json
 ?? K54_edges_L_reconstruct.csv
 ?? analysis/PILLAR_91.md
-?? V42_precision_masses_report.json
+?? data/V42_precision_masses_report.json
 ?? V44_neutrino_report.json
 ?? check_verify.py
 ?? check_verify2.py

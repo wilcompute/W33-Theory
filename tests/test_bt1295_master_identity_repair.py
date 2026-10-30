@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "BT1295_q3_master_identity.py"
-RESULT = ROOT / "BT1295_q3_master_identity_results.json"
+RESULT = ROOT / "data/BT1295_q3_master_identity_results.json"
 REPORT = ROOT / "analysis/BT1295_BT1296_BT1297_breakthrough_report.md"
 
 

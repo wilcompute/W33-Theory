@@ -125,4 +125,4 @@ a genuine negative-polar/symplectic twist of the cell labels.
 
 - Analysis: `analysis/w33_a5_orbital_negative_polar_nogo.py`
 - Tests: `tests/test_w33_a5_orbital_negative_polar_nogo.py`
-- Result: `PART_MMCCCLXVIII_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json`
+- Result: `data/PART_MMCCCLXVIII_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json`

@@ -19,7 +19,7 @@ print(f"r^2 = {r2:.6f}   exp m_e/m_mu = {m_e/m_mu:.6f}   err = {abs(r2-m_e/m_mu)
 print(f"r^4 = {r**4:.8f}  exp m_e/m_tau = {m_e/m_tau:.8f}  err = {abs(r**4-m_e/m_tau)/(m_e/m_tau)*100:.1f}%")
 print(f"With PMNS theta_12 dressing: r^2*cos^2(33.44) = {r2*mix:.6f}  err = {abs(r2*mix-m_e/m_mu)/(m_e/m_mu)*100:.1f}%")
 
-with open("BT446_results.json", "w") as f:
+with open("data/BT446_results.json", "w") as f:
     json.dump({"r": r, "r_squared": r2,
                "m_e_over_m_mu_sub": r2, "m_e_over_m_mu_exp": m_e/m_mu,
                "error_pct": round(abs(r2-m_e/m_mu)/(m_e/m_mu)*100, 1),

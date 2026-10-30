@@ -36,7 +36,7 @@ from the master identity witness.
 python3 BT1295_q3_master_identity.py
 python3 tests/test_bt1295_master_identity_repair.py
 python3 -m py_compile BT1295_q3_master_identity.py tests/test_bt1295_master_identity_repair.py
-python3 -m json.tool BT1295_q3_master_identity_results.json
+python3 -m json.tool data/BT1295_q3_master_identity_results.json
 ```
 
 The local environment still has no `pytest` module, so the new regression is

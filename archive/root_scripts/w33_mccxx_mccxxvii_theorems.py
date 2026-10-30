@@ -149,7 +149,7 @@ if __name__ == "__main__":
         "mccxxvi": theorem_mccxxvi_heawood_tower(),
         "mccxxvii":theorem_mccxxvii_pythagorean_spin_foam(),
     }
-    with open("w33_mccxx_mccxxvii_results.json","w") as f:
+    with open("data/w33_mccxx_mccxxvii_results.json","w") as f:
         json.dump(results, f, indent=2)
     print(json.dumps(results, indent=2))
     print("\n=== ALL MCCXX-MCCXXVII VERIFIED ===")

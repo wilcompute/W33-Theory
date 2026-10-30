@@ -594,7 +594,7 @@ report = {
     'n_rk2_violations': rk2_violations,
 }
 
-report_path = ROOT / 'V34_sm_quantum_numbers_report.json'
+report_path = ROOT / 'data/V34_sm_quantum_numbers_report.json'
 with open(report_path, 'w') as f:
     json.dump(report, f, indent=2, default=str)
 

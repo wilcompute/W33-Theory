@@ -126,4 +126,4 @@ the W33 phase geometry rather than from row reduction.
 
 - Analysis: `analysis/w33_golden_selector_z20_cochain_lift.py`
 - Tests: `tests/test_w33_golden_selector_z20_cochain_lift.py`
-- Result: `PART_MCCXLVI_GOLDEN_SELECTOR_Z20_COCHAIN_LIFT_results.json`
+- Result: `data/PART_MCCXLVI_GOLDEN_SELECTOR_Z20_COCHAIN_LIFT_results.json`

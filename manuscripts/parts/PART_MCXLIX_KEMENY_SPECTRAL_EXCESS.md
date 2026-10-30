@@ -94,5 +94,5 @@ All identities are exact (verified with Python `fractions.Fraction`):
 
 - Analysis: `analysis/w33_kemeny_spectral_excess.py`
 - Tests: `tests/test_w33_kemeny_spectral_excess.py`
-- Results: `PART_MCXLIX_KEMENY_SPECTRAL_EXCESS_results.json`
+- Results: `data/PART_MCXLIX_KEMENY_SPECTRAL_EXCESS_results.json`
 - Data: `data/w33_kemeny_spectral_excess.json`

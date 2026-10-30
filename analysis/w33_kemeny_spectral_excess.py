@@ -206,7 +206,7 @@ def kemeny_spectral_excess_packet() -> dict[str, object]:
 
 def main() -> None:
     packet = kemeny_spectral_excess_packet()
-    out_path = ROOT / "PART_MCXLIX_KEMENY_SPECTRAL_EXCESS_results.json"
+    out_path = ROOT / "data/PART_MCXLIX_KEMENY_SPECTRAL_EXCESS_results.json"
     with open(out_path, "w") as fh:
         json.dump(packet, fh, indent=2)
     data_path = ROOT / "data" / "w33_kemeny_spectral_excess.json"

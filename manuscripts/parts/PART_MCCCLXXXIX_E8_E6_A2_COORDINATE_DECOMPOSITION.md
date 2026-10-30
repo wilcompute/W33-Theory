@@ -86,4 +86,4 @@ that selects an `E6 x A2` branch.
 
 - Analysis: `analysis/w33_e8_e6_a2_coordinate_decomposition.py`
 - Tests: `tests/test_w33_e8_e6_a2_coordinate_decomposition.py`
-- Result: `PART_MCCCLXXXIX_E8_E6_A2_COORDINATE_DECOMPOSITION_results.json`
+- Result: `data/PART_MCCCLXXXIX_E8_E6_A2_COORDINATE_DECOMPOSITION_results.json`

@@ -21,7 +21,7 @@ print(f"Error: {err_mH:.2f}%")
 print(f"m_H/m_Z = sqrt(lam) = sqrt(2) = {math.sqrt(lam):.6f}  (substrate fractal tier ratio)")
 print(f"Quartic lambda_H = q*lam/(V+mu) = {q*lam}/{V+mu} = {lambda_H_sub:.5f}  (exp {lambda_H_exp:.5f}, err {err_lH:.1f}%)")
 
-with open("BT448_results.json", "w") as f:
+with open("data/BT448_results.json", "w") as f:
     json.dump({"m_H_sub_GeV": round(m_H/1000, 4), "m_H_exp_GeV": m_H_exp/1000,
                "error_pct": round(err_mH, 2),
                "m_H_over_m_Z": round(math.sqrt(lam), 6),

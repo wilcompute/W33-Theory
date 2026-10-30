@@ -27,7 +27,7 @@ print(f"QCD correction:  1 + C_F*alpha_s/pi = {QCD_corr:.5f}")
 print(f"r_p = {r_p:.4f} fm  (exp = {r_p_exp:.4f} fm, err = {err:.1f}%)")
 print(f"Formula: r_p = sqrt(q)/mu * hbar_c/Lambda_QCD * (1 + 4*alpha_s/(3*pi))")
 
-with open("BT445_results.json", "w") as f:
+with open("data/BT445_results.json", "w") as f:
     json.dump({"r_p_fm": round(r_p, 4), "r_p_exp_fm": r_p_exp,
                "error_pct": round(err, 1),
                "D_dressing": round(D, 5),

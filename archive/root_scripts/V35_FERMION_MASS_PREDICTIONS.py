@@ -398,7 +398,7 @@ report = {
     'froggatt_nielsen_epsilon': eps,
 }
 
-report_path = ROOT / 'V35_fermion_mass_report.json'
+report_path = ROOT / 'data/V35_fermion_mass_report.json'
 with open(report_path, 'w') as f:
     json.dump(report, f, indent=2, default=str)
 

@@ -97,6 +97,6 @@ if __name__ == "__main__":
         "status": "PROVED"
     }
     print(json.dumps(result, indent=2))
-    with open("BT1296_cayley14_closed_form_results.json", "w") as f:
+    with open("data/BT1296_cayley14_closed_form_results.json", "w") as f:
         json.dump(result, f, indent=2)
     print("\nBT1296 PROVED — Cayley diameter = 4q+2 = 14 for q=3.")

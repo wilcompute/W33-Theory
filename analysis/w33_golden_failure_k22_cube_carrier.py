@@ -40,7 +40,7 @@ from analysis.w33_golden_selector_z20_cochain_lift import (  # noqa: E402
 )
 
 
-OUTPUT_PATH = ROOT / "PART_MMCCCLXX_GOLDEN_FAILURE_K22_CUBE_CARRIER_results.json"
+OUTPUT_PATH = ROOT / "data/PART_MMCCCLXX_GOLDEN_FAILURE_K22_CUBE_CARRIER_results.json"
 
 Q = 3
 V = 40

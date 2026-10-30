@@ -47,7 +47,7 @@ from scripts.w33_golden_selector_draft_audit import (  # noqa: E402
 )
 
 
-OUTPUT_PATH = ROOT / "PART_MMCCCLXXIII_GOLDEN_ORDERED_D4_TORSOR_results.json"
+OUTPUT_PATH = ROOT / "data/PART_MMCCCLXXIII_GOLDEN_ORDERED_D4_TORSOR_results.json"
 
 Q = 3
 

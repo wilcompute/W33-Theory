@@ -92,6 +92,6 @@ def run_bt1292():
 if __name__ == "__main__":
     res = run_bt1292()
     print(json.dumps(res, indent=2))
-    with open("BT1292_protection_law_CSS_bridge_results.json", "w") as f:
+    with open("data/BT1292_protection_law_CSS_bridge_results.json", "w") as f:
         json.dump(res, f, indent=2)
     print("\nBT1292 PASS — Protection-law ↔ CSS distance bridge established.")

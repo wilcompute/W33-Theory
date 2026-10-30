@@ -42,7 +42,7 @@ from analysis.w33_golden_selector_z20_cochain_lift import (  # noqa: E402
 )
 
 
-OUTPUT_PATH = ROOT / "PART_MMCCCLXXII_GOLDEN_FAILURE_PRODUCT_BIJECTION_results.json"
+OUTPUT_PATH = ROOT / "data/PART_MMCCCLXXII_GOLDEN_FAILURE_PRODUCT_BIJECTION_results.json"
 
 Q = 3
 

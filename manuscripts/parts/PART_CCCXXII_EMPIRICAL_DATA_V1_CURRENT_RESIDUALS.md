@@ -37,7 +37,7 @@ The weak-mixing reference value recorded is
 \sin^2\theta_{\mathrm{eff}}^{\mathrm{lept}}=0.23148\pm0.00012.
 \]
 
-Sources are recorded in `empirical_data_v1_current_residuals.json` as PDG/pdgLive entries accessed on 2026-05-05.
+Sources are recorded in `data/empirical_data_v1_current_residuals.json` as PDG/pdgLive entries accessed on 2026-05-05.
 
 ---
 

@@ -97,5 +97,5 @@ All identities verified by exact computation in `analysis/w33_ctqw_revival_spect
 
 - Analysis: `analysis/w33_ctqw_revival_spectrum.py`
 - Tests: `tests/test_w33_ctqw_revival_spectrum.py`
-- Results: `PART_MCXLVII_CTQW_REVIVAL_SPECTRUM_results.json`
+- Results: `data/PART_MCXLVII_CTQW_REVIVAL_SPECTRUM_results.json`
 - Data: `data/w33_ctqw_revival_spectrum.json`

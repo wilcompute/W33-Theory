@@ -36,7 +36,7 @@ if str(ROOT) not in sys.path:
 from analysis.w33_golden_selector_z20_cochain_lift import load_selector_data  # noqa: E402
 
 
-OUTPUT_PATH = ROOT / "PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE_results.json"
+OUTPUT_PATH = ROOT / "data/PART_MMCCCLXXI_BRIDGE_LINE_AFFINE_CAYLEY_CUBE_results.json"
 
 Q = 3
 

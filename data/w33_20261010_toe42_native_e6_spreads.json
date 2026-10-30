@@ -6032,7 +6032,7 @@
     33,
     38
   ],
-  "seconds": 0.6070420742034912,
+  "seconds": 0.5407018661499023,
   "prior_art": "The 200 spreads and 520 fans/parallelisms are known for GQ(2,4)/GQ(4,2); see Brouwer-Schlaefli tables and Saniga arXiv:1001.0659. TOE42 adds native triad indices and signed gate-order cost, not a discovery of the 200/520 totals.",
   "boundary": "Sign-switch optimization is a toy hardware controller proxy in fixed native triad sign convention; it is not a physical resource cost or invariant of coordinate sign flips."
 }

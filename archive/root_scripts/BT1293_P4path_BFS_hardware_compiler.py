@@ -125,6 +125,6 @@ if __name__ == "__main__":
         "status": "PASS" if is_p4 else "FAIL",
     }
     print(json.dumps(result, indent=2))
-    with open("BT1293_P4path_BFS_hardware_results.json", "w") as f:
+    with open("data/BT1293_P4path_BFS_hardware_results.json", "w") as f:
         json.dump(result, f, indent=2)
     print("\nBT1293", result['status'], "— P4 path = BFS depth = q bridge established.")

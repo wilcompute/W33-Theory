@@ -45,7 +45,7 @@ from analysis.w33_tetracode_e8_root_system_bridge import (
 from w33_pass92_discriminant_e8 import nullspace_basis, rowspace_basis, to_int
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "w33_pass123_axis_glue_e8_lift.json"
+OUT = ROOT / "data/w33_pass123_axis_glue_e8_lift.json"
 
 
 def reduce_mod_basis(vector: int, basis: Iterable[int]) -> int:

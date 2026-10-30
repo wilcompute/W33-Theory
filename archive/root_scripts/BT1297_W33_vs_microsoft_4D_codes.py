@@ -142,6 +142,6 @@ if __name__ == "__main__":
         "status": "COMPLETE"
     }
     print(json.dumps(result, indent=2))
-    with open("BT1297_W33_vs_microsoft_4D_results.json", "w") as f:
+    with open("data/BT1297_W33_vs_microsoft_4D_results.json", "w") as f:
         json.dump(result, f, indent=2)
     print("\nBT1297 COMPLETE — W33 vs Microsoft 4D codes comparison complete.")

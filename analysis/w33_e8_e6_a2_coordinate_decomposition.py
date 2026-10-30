@@ -42,7 +42,7 @@ from analysis.w33_tetracode_e8_root_system_bridge import (  # noqa: E402
 )
 
 
-OUTPUT_PATH = ROOT / "PART_MCCCLXXXIX_E8_E6_A2_COORDINATE_DECOMPOSITION_results.json"
+OUTPUT_PATH = ROOT / "data/PART_MCCCLXXXIX_E8_E6_A2_COORDINATE_DECOMPOSITION_results.json"
 
 E6_LOCAL_PROFILE = {
     Fraction(-2): 1,

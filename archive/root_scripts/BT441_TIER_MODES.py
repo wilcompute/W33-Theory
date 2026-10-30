@@ -28,6 +28,6 @@ print(f"N* = 2^q = {N_star} (E8 saturation boundary)")
 for r in tier_data:
     print(f"  Tier {r['tier']:2d} [{r['mode']:10s}] dim={r['dim']:5d}  rho={r['sphere_packing_density']:.6f}  I={r['info_capacity_bits']:.1f} bits")
 
-with open("BT441_results.json", "w") as f:
+with open("data/BT441_results.json", "w") as f:
     json.dump({"N_star": N_star, "tiers": tier_data}, f, indent=2)
 print("BT441 complete.")

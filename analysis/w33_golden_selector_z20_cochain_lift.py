@@ -388,7 +388,7 @@ def golden_selector_z20_cochain_lift_packet() -> dict[str, Any]:
 
 def main() -> None:
     packet = golden_selector_z20_cochain_lift_packet()
-    out_path = ROOT / "PART_MCCXLVI_GOLDEN_SELECTOR_Z20_COCHAIN_LIFT_results.json"
+    out_path = ROOT / "data/PART_MCCXLVI_GOLDEN_SELECTOR_Z20_COCHAIN_LIFT_results.json"
     with open(out_path, "w", encoding="utf-8") as handle:
         json.dump(packet, handle, indent=2)
 

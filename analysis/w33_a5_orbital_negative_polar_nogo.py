@@ -49,7 +49,7 @@ from analysis.w33_spread_negative_polar_selector_signature import (  # noqa: E40
 )
 
 
-OUTPUT_PATH = ROOT / "PART_MMCCCLXVIII_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json"
+OUTPUT_PATH = ROOT / "data/PART_MMCCCLXVIII_A5_ORBITAL_NEGATIVE_POLAR_NOGO_results.json"
 EXPECTED_SRG_36_15_6_6 = {
     "vertices": 36,
     "degree_profile": {"15": 36},

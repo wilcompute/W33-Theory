@@ -27,7 +27,7 @@ print(f"Error: {err:.3f}%  *** SUB-PERCENT PRECISION ***")
 print(f"At GUT unification: sin^2 = lam/(lam+q) = {sin2_W_GUT:.5f}")
 print(f"Denominator 13 = q + 3*(mu-1) + 1 = substrate gauge DOF count")
 
-with open("BT447_results.json", "w") as f:
+with open("data/BT447_results.json", "w") as f:
     json.dump({"sin2_theta_W": sin2_W, "sin2_theta_W_exp": sin2_W_exp,
                "error_pct": round(err, 3), "sin2_theta_W_GUT": sin2_W_GUT,
                "formula": "q/(q + 3*mu - lam) = 3/13",

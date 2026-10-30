@@ -93,5 +93,5 @@ All identities verified by exact computation in `analysis/w33_lovasz_independenc
 
 - Analysis: `analysis/w33_lovasz_independence_clique.py`
 - Tests: `tests/test_w33_lovasz_independence_clique.py`
-- Results: `PART_MCXLVIII_LOVASZ_INDEPENDENCE_CLIQUE_results.json`
+- Results: `data/PART_MCXLVIII_LOVASZ_INDEPENDENCE_CLIQUE_results.json`
 - Data: `data/w33_lovasz_independence_clique.json`

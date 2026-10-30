@@ -47,6 +47,8 @@ def batch(name):
             if re.match(r"(PASS|PART|BREAKTHROUGH|BT|AUDIT|ARXIV|PILLAR|W33_|W36_|RELEASE|NOTE|SUMMARY|SESSION)", f, re.I):
                 moves.append((f, "analysis/" + f))
         return moves
+    if name == "root-json":
+        return [(f, "data/" + f) for f in files if "/" not in f and f.endswith(".json") and not f.startswith(".")]
     if name == "small-dirs":
         dirs = dict(SMALL_DIRS)
         moves = [(f, dirs[f.split("/")[0]] + f[len(f.split("/")[0]):]) for f in files if "/" in f and f.split("/")[0] in dirs]
@@ -114,12 +116,46 @@ def rewrite_text(path, text, moves):
 
         def tok_sub(m):
             nonlocal n
+            before = m.string[max(0, m.start() - 24):m.start()]
+            if re.search(r"[\"'][A-Za-z0-9_.-]+[\"']\s*/\s*[\"']?$|[A-Za-z0-9_]/$", before):
+                return m.group(0)            # ROOT / "data" / "x.json" or a sub-path: points somewhere else already
             n += 1
             return old2new[m.group(1)]
         # do not touch link targets (already handled): split on links, rewrite only the non-link spans
         parts = re.split(r"(\]\([^)]*\)|href=\"[^\"]*\"|src=\"[^\"]*\")", text)
         text = "".join(p if i % 2 else rx.sub(tok_sub, p) for i, p in enumerate(parts))
     return text, n
+
+
+ROOT_BASE = re.compile(r"(?:\b(?:ROOT|REPO_ROOT|ROOT_DIR|repo_root|PROJECT_ROOT)\s*/\s*|\b(?:open|Path|exists|isfile)\(\s*)[\"']$")
+
+
+def strict_filter(moves):
+    """For file batches whose references live in Python: keep a move only if EVERY Python reference to it has an unambiguous
+    repo-root base (ROOT / "x", REPO_ROOT / "x", open("x"), Path("x")).  `out_dir / "x"`, `repo / "x"` (a variable that may be a
+    subfolder), zip member names and the like make the move ambiguous, so that file stays where it is (2026-10-30: the root-json batch
+    first rewrote three zip members and a test's subfolder variable)."""
+    names = {o: nw for o, nw in moves}
+    rx = re.compile(r"(?<![A-Za-z0-9_./\\-])(" + "|".join(re.escape(x) for x in sorted(names, key=len, reverse=True)) + r")(?![A-Za-z0-9_])")
+    pat = ROOT / ".git_relocate_patterns.txt"
+    pat.write_text("\n".join(sorted(names)) + "\n", encoding="utf-8")
+    try:
+        files = git("grep", "-I", "-l", "-F", "-f", str(pat), "--", "*.py").splitlines()
+    finally:
+        pat.unlink(missing_ok=True)
+    bad = set()
+    for f in files:
+        try:
+            t = (ROOT / f).read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            continue
+        for m in rx.finditer(t):
+            before = t[max(0, m.start() - 40):m.start()]
+            if f == m.group(1) or not ROOT_BASE.search(before) or "/" in f and "Path(" in before[-8:]:
+                bad.add(m.group(1))
+    kept = [(o, nw) for o, nw in moves if o not in bad]
+    print(f"strict: {len(bad)} of {len(moves)} files have an ambiguous Python reference and stay put")
+    return kept
 
 
 def run(moves, apply):
@@ -185,6 +221,8 @@ def main():
     ap.add_argument("--move", nargs=2, action="append", metavar=("OLD", "NEW"))
     a = ap.parse_args()
     moves = batch(a.batch) if a.batch else [tuple(m) for m in (a.move or [])]
+    if a.batch == "root-json":
+        moves = strict_filter(moves)
     if a.batch == "small-dirs":
         DIR_MOVES.extend(SMALL_DIRS)
         # file-level token rewriting is redundant for directory batches (the D/ rule covers it) and slow: rewrite links + dir tokens only
@@ -192,7 +230,8 @@ def main():
         DIR_ONLY = True
     taken = [nw for _, nw in moves if (ROOT / nw).exists()]
     if taken:
-        print("target collisions (these will be skipped):", taken[:10])
+        print(f"target collisions ({len(taken)}; skipped, and their references are left alone):", taken[:10])
+        moves = [(o, nw) for o, nw in moves if not (ROOT / nw).exists()]
     return run(moves, a.mode == "apply")
 
 

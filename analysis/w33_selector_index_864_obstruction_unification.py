@@ -38,7 +38,7 @@ from analysis.w33_spread_negative_polar_selector_signature import (  # noqa: E40
 )
 
 
-OUTPUT_PATH = ROOT / "PART_MMCCCLXIX_SELECTOR_INDEX_864_OBSTRUCTION_UNIFICATION_results.json"
+OUTPUT_PATH = ROOT / "data/PART_MMCCCLXIX_SELECTOR_INDEX_864_OBSTRUCTION_UNIFICATION_results.json"
 
 Q = 3
 V = 40

@@ -113,6 +113,6 @@ if __name__ == "__main__":
         "status": "PASS",
     }
     print(json.dumps(result, indent=2))
-    with open("BT1294_geon_polar_path_unification_results.json", "w") as f:
+    with open("data/BT1294_geon_polar_path_unification_results.json", "w") as f:
         json.dump(result, f, indent=2)
     print("\nBT1294 PASS — Geon / Polar-path unification complete.")

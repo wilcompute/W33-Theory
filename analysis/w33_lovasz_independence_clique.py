@@ -185,7 +185,7 @@ def lovasz_independence_clique_packet() -> dict[str, object]:
 
 def main() -> None:
     packet = lovasz_independence_clique_packet()
-    out_path = ROOT / "PART_MCXLVIII_LOVASZ_INDEPENDENCE_CLIQUE_results.json"
+    out_path = ROOT / "data/PART_MCXLVIII_LOVASZ_INDEPENDENCE_CLIQUE_results.json"
     with open(out_path, "w") as fh:
         json.dump(packet, fh, indent=2)
     data_path = ROOT / "data" / "w33_lovasz_independence_clique.json"

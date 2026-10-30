@@ -32,7 +32,7 @@ for u in universes:
 print("Only W(3,3) self-dual: selected by algebraic self-consistency")
 print(f"Self-encoding S=F(S), Bekenstein 2*pi*q = {2*pi*q:.4f} nats/Planck-area")
 
-with open("BT443_results.json", "w") as f:
+with open("data/BT443_results.json", "w") as f:
     json.dump({"universes": universes, "our_universe": "W(3,3)",
                "self_dual_unique": True, "generations_all": q,
                "self_encoding": "S=F(S), terminal F-coalgebra (Smyth-Plotkin 1982)"}, f, indent=2)

@@ -37,7 +37,7 @@ print(f"delta_CP cyclotomic base: {delta_sub:.1f} deg")
 print(f"delta_CP physical (pi shift): {delta_phys:.1f} deg  exp={delta_exp}+/-{delta_1sig} deg")
 print(f"  Within 1-sigma: {within_1sig}  (diff={abs(delta_phys-delta_exp):.1f} deg) *** PREDICTION CONFIRMED ***")
 
-with open("BT444_results.json", "w") as f:
+with open("data/BT444_results.json", "w") as f:
     json.dump({
         "proton_radius_fm": round(r_p_sub, 4),
         "r_p_exp_fm": r_p_exp,

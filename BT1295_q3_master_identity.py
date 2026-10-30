@@ -159,7 +159,7 @@ if __name__ == "__main__":
         "status": "PASS" if all_pass else "PARTIAL",
     }
     print(json.dumps(result, indent=2))
-    with open("BT1295_q3_master_identity_results.json", "w") as f:
+    with open("data/BT1295_q3_master_identity_results.json", "w") as f:
         json.dump(result, f, indent=2)
         f.write("\n")
     print(

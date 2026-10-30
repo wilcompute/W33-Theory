@@ -41,10 +41,10 @@ in analysis/BT1620_BT1622_holonet_insert.tex).
 ```
 photonic_holonet.tex          (main paper, photonic-holonet section)
 analysis/BT1620_BT1622_holonet_insert.tex   (BT1621-T1 tightness lemma)
-BT1621_ym_mass_gap_tightness.json           (numerical verification)
-BT1622_arxiv_submission_package.json        (submission metadata)
+data/BT1621_ym_mass_gap_tightness.json           (numerical verification)
+data/BT1622_arxiv_submission_package.json        (submission metadata)
 BT1615_witting_irrep_decomposition.json     (BT1615 data)
-BT1618_holographic_compression_proof.json   (BT1618 data)
+data/BT1618_holographic_compression_proof.json   (BT1618 data)
 ```
 
 ## Proof chain

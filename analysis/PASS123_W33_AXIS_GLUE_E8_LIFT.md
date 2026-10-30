@@ -134,5 +134,5 @@ canonical under arbitrary relabeling.
 Artifacts:
 
 - `w33_pass123_axis_glue_e8_lift.py`
-- `w33_pass123_axis_glue_e8_lift.json`
+- `data/w33_pass123_axis_glue_e8_lift.json`
 - `tests/test_pass104_axis_glue_e8_lift.py`

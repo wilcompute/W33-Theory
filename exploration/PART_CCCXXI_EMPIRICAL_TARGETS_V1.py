@@ -406,7 +406,7 @@ def empirical_targets_audit() -> Dict[str, object]:
 
 def main() -> int:
     audit = empirical_targets_audit()
-    out = ROOT / "empirical_targets_v1.json"
+    out = ROOT / "data/empirical_targets_v1.json"
     out.write_text(json.dumps(audit, indent=2), encoding="utf-8")
     mirror = ROOT / "PART_CCCXXI_empirical_targets_v1_results.json"
     mirror.write_text(json.dumps(audit, indent=2), encoding="utf-8")

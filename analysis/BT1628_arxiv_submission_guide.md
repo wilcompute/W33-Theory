@@ -52,8 +52,8 @@ analysis/BT1620_BT1622_holonet_insert.tex
 Optional supplementary data (upload as ancillary files):
 ```
 bt1626_ym_mass_gap_tightness_verifier.py
-BT1621_ym_mass_gap_tightness.json          (if present)
-BT1622_arxiv_submission_package.json       (if present)
+data/BT1621_ym_mass_gap_tightness.json          (if present)
+data/BT1622_arxiv_submission_package.json       (if present)
 ```
 
 Create the bundle:

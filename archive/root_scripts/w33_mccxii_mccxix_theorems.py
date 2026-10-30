@@ -103,7 +103,7 @@ if __name__ == "__main__":
         "mccxviii":theorem_mccxviii_K3_hodge(),
         "mccxix":  theorem_mccxix_e8_shell_fano(),
     }
-    with open("w33_mccxii_mccxix_results.json", "w") as f:
+    with open("data/w33_mccxii_mccxix_results.json", "w") as f:
         json.dump(results, f, indent=2)
     print(json.dumps(results, indent=2))
     print("\n=== ALL THEOREMS MCCXII-MCCXIX VERIFIED ===")

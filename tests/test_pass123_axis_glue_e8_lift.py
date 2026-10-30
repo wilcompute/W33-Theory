@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_pass104_regenerates_complete_axis_root_lift() -> None:
     assert pass104.main() == 0
     data = json.loads(
-        (ROOT / "w33_pass123_axis_glue_e8_lift.json").read_text(encoding="utf-8")
+        (ROOT / "data/w33_pass123_axis_glue_e8_lift.json").read_text(encoding="utf-8")
     )
 
     assert data["status"] == "PASS"
@@ -45,7 +45,7 @@ def test_pass104_axis_endpoints_are_opposite_weight_six_representatives() -> Non
 
 def test_pass104_keeps_edge_root_no_go_boundary() -> None:
     data = json.loads(
-        (ROOT / "w33_pass123_axis_glue_e8_lift.json").read_text(encoding="utf-8")
+        (ROOT / "data/w33_pass123_axis_glue_e8_lift.json").read_text(encoding="utf-8")
     )
 
     boundary = data["claim_boundary"]

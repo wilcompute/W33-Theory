@@ -88,6 +88,6 @@ result = {
     'geometric_chain': 'Lambda_C disc=E8/2E8 -> E8->Leech->Monster',
     'verdict': 'Moonshine connection is GEOMETRIC not representation-theoretic'
 }
-with open('PASS_103_MOONSHINE_THETA.json', 'w') as f:
+with open('data/PASS_103_MOONSHINE_THETA.json', 'w') as f:
     json.dump(result, f, indent=2)
 print('JSON saved.')

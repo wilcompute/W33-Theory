@@ -191,7 +191,7 @@ def ctqw_revival_spectrum_packet() -> dict[str, object]:
 
 def main() -> None:
     packet = ctqw_revival_spectrum_packet()
-    out_path = ROOT / "PART_MCXLVII_CTQW_REVIVAL_SPECTRUM_results.json"
+    out_path = ROOT / "data/PART_MCXLVII_CTQW_REVIVAL_SPECTRUM_results.json"
     with open(out_path, "w") as fh:
         json.dump(packet, fh, indent=2)
     data_path = ROOT / "data" / "w33_ctqw_revival_spectrum.json"

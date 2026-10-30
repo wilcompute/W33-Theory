@@ -35,7 +35,7 @@ from w33_pass123_axis_glue_e8_lift import (
 )
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "w33_pass125_two_we6_embeddings.json"
+OUT = ROOT / "data/w33_pass125_two_we6_embeddings.json"
 
 Permutation = tuple[int, ...]
 Matrix4 = tuple[tuple[int, int, int, int], ...]

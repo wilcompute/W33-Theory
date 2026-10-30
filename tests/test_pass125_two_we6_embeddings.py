@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_pass125_regenerates_exact_certificate() -> None:
     assert pass125.main() == 0
     data = json.loads(
-        (ROOT / "w33_pass125_two_we6_embeddings.json").read_text(encoding="utf-8")
+        (ROOT / "data/w33_pass125_two_we6_embeddings.json").read_text(encoding="utf-8")
     )
 
     assert data["status"] == "PASS"
@@ -26,7 +26,7 @@ def test_pass125_regenerates_exact_certificate() -> None:
 
 def test_pass125_measures_code_embedding_orbits() -> None:
     data = json.loads(
-        (ROOT / "w33_pass125_two_we6_embeddings.json").read_text(encoding="utf-8")
+        (ROOT / "data/w33_pass125_two_we6_embeddings.json").read_text(encoding="utf-8")
     )
 
     assert data["code_embedding"]["orbit_fingerprint_size_Q"] == [
@@ -44,7 +44,7 @@ def test_pass125_measures_code_embedding_orbits() -> None:
 
 def test_pass125_distinguishes_pass117_embedding() -> None:
     data = json.loads(
-        (ROOT / "w33_pass125_two_we6_embeddings.json").read_text(encoding="utf-8")
+        (ROOT / "data/w33_pass125_two_we6_embeddings.json").read_text(encoding="utf-8")
     )
 
     assert data["pass117_ordered_pair_embedding"]["isotropic_orbits"] == [

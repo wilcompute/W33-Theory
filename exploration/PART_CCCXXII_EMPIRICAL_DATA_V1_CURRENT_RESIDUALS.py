@@ -193,7 +193,7 @@ def empirical_data_current_audit() -> Dict[str, object]:
 
 def main() -> int:
     audit = empirical_data_current_audit()
-    out = ROOT / "empirical_data_v1_current_residuals.json"
+    out = ROOT / "data/empirical_data_v1_current_residuals.json"
     out.write_text(json.dumps(audit, indent=2), encoding="utf-8")
     mirror = ROOT / "PART_CCCXXII_empirical_data_v1_current_residuals_results.json"
     mirror.write_text(json.dumps(audit, indent=2), encoding="utf-8")

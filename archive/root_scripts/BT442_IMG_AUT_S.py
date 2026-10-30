@@ -30,7 +30,7 @@ print(f"AF-algebra A_S: Bratteli = recursive W(3,3) inclusion lattice")
 print(f"K_0(A_S) = ordered abelian dimension group")
 print(f"NEW object: Symplectic-base IMG vs standard cyclic-base IMG")
 
-with open("BT442_results.json", "w") as f:
+with open("data/BT442_results.json", "w") as f:
     json.dump({"G0": "Sp(4,F_3)", "G0_order": G0_order, "V": V,
                "tower": tower, "hausdorff_dim": 1.0,
                "description": "Symplectic-base IMG, NEW mathematical object"}, f, indent=2)

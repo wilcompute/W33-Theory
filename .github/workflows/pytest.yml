@@ -39,7 +39,7 @@ jobs:
           pip install -e . || true
           # ortools and pycddlib 3 (cdd.gmp API) were missing: ~10 test modules failed at import on every run (2026-10-30)
           sudo apt-get install -y -q libcdd-dev libgmp-dev
-          pip install ortools pycddlib || true
+          pip install ortools pycddlib pytest-xdist || true
 
       - name: Generate local fixtures
         run: |
@@ -74,7 +74,9 @@ jobs:
         env:
           PYTHONWARNINGS: default
         run: |
-          python -m pytest -q --continue-on-collection-errors
+          # collection alone took 54 min locally (modules compute at import); xdist spreads collection and execution over the runner cores
+          pip install pytest-xdist
+          python -m pytest -q --continue-on-collection-errors -n auto -p no:cacheprovider
 
       - name: Upload SUMMARY_RESULTS.json
         if: always()

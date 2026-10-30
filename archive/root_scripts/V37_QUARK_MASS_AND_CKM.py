@@ -514,7 +514,7 @@ report = {
     'sector_counts': {k: len(v) for k, v in sector_map.items()},
 }
 
-report_path = ROOT / 'V37_quark_mass_ckm_report.json'
+report_path = ROOT / 'data/V37_quark_mass_ckm_report.json'
 report_path.write_text(json.dumps(report, indent=2))
 print(f"\n\nReport saved to {report_path.name}")
 print("=" * 80)

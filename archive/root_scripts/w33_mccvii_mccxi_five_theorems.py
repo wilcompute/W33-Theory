@@ -171,7 +171,7 @@ if __name__ == "__main__":
     
     print(json.dumps(results, indent=2))
     
-    with open("w33_mccvii_mccxi_results.json", "w") as f:
+    with open("data/w33_mccvii_mccxi_results.json", "w") as f:
         json.dump(results, f, indent=2)
     
     print("\n=== ALL 5 THEOREMS VERIFIED ===")

@@ -406,7 +406,7 @@ def main() -> None:
     print('  Expected: reduce lepton and heavy-quark absolute mass errors to <15%.')
     print('=' * 72)
 
-    out = ROOT / 'V42_precision_masses_report.json'
+    out = ROOT / 'data/V42_precision_masses_report.json'
     out.write_text(json.dumps(results, indent=2))
     print(f'\nReport: {out.name}')
 

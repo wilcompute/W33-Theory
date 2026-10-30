@@ -494,7 +494,7 @@ def main():
         "sv_top5": [(int(k), float(r), svs) for k, r, svs in sv_by_site[:5]],
         "elapsed_s": round(elapsed, 2),
     }
-    out_path = ROOT / "V31_yukawa_report.json"
+    out_path = ROOT / "data/V31_yukawa_report.json"
     out_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
     print(f"  Report: {out_path}")
 
