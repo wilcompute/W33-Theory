@@ -4,7 +4,7 @@ All five requested directions were executed as explicit mathematical investigati
 
 ## Intake and ownership
 
-Original Theory of Everything checkout; reservation `485bfa609`. Remote changes through `4dcb27d3c`, especially science `6ab13216a`, were read before computing. The parallel track owns the nine-state trial, single-pair curvature bound, full fifteen-model heterotic fixture and Wilson sieve, eighth-moment optical correction, and arbitrary-dimensional product heat kernel. Its additional local files were left untouched. `RESULTS_INDEX.md`, recent reports/certificates, `docs/index.html`, the paper and its actual open-problem epilogue were searched by formulas and results before novelty claims.
+Original Theory of Everything checkout; reservation `485bfa609`. Remote changes through `4dcb27d3c`, especially science `6ab13216a`, were read before computing. The parallel track owns the nine-state trial, single-pair curvature bound, full fifteen-model heterotic fixture and Wilson sieve, eighth-moment optical correction, and arbitrary-dimensional product heat kernel. Its additional local files were left untouched. `RESULTS_INDEX.md`, recent docs/reports/certificates, `docs/index.html`, the paper and its actual open-problem epilogue were searched by formulas and results before novelty claims.
 
 Prior inputs:
 

@@ -69,7 +69,7 @@ jobs:
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3124_3132/pdf_sha256.txt
           printf 'models=PASS 8/8\npytest=PASS 10/10\ncharacter=degree6480_commutant1770\nrtl=PASS 2796/2796\n' > docs/evidence/pass3124_3132/manifest.txt
           cat > docs/evidence/pass3124_3132/OBSERVED_COMPLETE.json <<'EOF'
-          {"schemas":"w33.pass3124_3132.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","boundary":"No 27-row impossibility, full M36 census, laboratory optics, physical heat, or autonomous-clock claim."}
+          {"schema":"w33.pass3124_3132.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","boundary":"No 27-row impossibility, full M36 census, laboratory optics, physical heat, or autonomous-clock claim."}
           EOF
       - uses: actions/upload-artifact@v4
         with:

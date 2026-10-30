@@ -336,7 +336,7 @@ A proof-carrying star-complement prefix can be generated with
 ```bash
 python analysis/bt3544_clique_proof_dag.py \
   --limit 1 \
-  --json evidence/pass3542_3548/clique_proof_prefix.json
+  --json docs/evidence/pass3542_3548/clique_proof_prefix.json
 ```
 
 Removing `--limit` requests the complete 3,720-instance proof archive.

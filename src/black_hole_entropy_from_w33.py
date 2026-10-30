@@ -12,7 +12,7 @@ Bekenstein-Hawking Formula:
 The Problem: Why area? Why that specific formula?
 Why not volume? Why that coefficient?
 
-Standard Answer: String theory/loop quantum gravity
+Standard Answer: String docs/theory/loop quantum gravity
                  (incomplete, requires assumptions)
 
 W33 Answer: Microstates encoded in holonomy structure

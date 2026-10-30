@@ -85,7 +85,7 @@ jobs:
           sha = os.environ['GITHUB_SHA']
           hashes = Path('docs/evidence/pass7130_7137/pdf_sha256.txt').read_text().strip().splitlines()
           Path('data/PART_W33_PASS7130_7137_CI_PROOF.json').write_text(json.dumps({
-              'schemas': 'w33.pass7130_7137.ci_proof.v1',
+              'schema': 'w33.pass7130_7137.ci_proof.v1',
               'status': 'PASS',
               'source_commit': sha,
               'exact_producer_replayed': True,

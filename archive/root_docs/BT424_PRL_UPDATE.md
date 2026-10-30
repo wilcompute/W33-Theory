@@ -4,7 +4,7 @@
 
 ---
 
-## New Sections Added (to BT407_PAPER.tex)
+## New Sections Added (to papers/standalone/BT407_PAPER.tex)
 
 ### Section: Yukawa Texture from W(3,3) Adjacency (BT421)
 

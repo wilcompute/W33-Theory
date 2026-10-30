@@ -1,6 +1,6 @@
 # Paper Directory Review — May 2026
 
-**Purpose:** prevent confusion between the root-level arXiv manuscripts, `w33_paper_v2.tex`, and the `paper/` directory manuscript.
+**Purpose:** prevent confusion between the root-level arXiv manuscripts, `papers/standalone/w33_paper_v2.tex`, and the `paper/` directory manuscript.
 
 ## Active paper surfaces observed
 
@@ -10,14 +10,14 @@
    - Current focus: Ramanujan/LPS uniqueness, tau bridge, spectral moments, neutrino mass, seesaw cascade, and exact-boundary layer.
    - This is the actual `paper/` directory manuscript and should be checked first when the user says "the paper directory".
 
-2. **`w33_paper_v2.tex` / `w33_paper_v2.pdf`**
+2. **`papers/standalone/w33_paper_v2.tex` / `w33_paper_v2.pdf`**
    - Updated in commit `c049e02`, labeled `PAPER v2.3 (30 pages)`.
    - Includes broad physics claims: Hubble tension theorem, muon g-2 anomaly absence, baryogenesis, strong CP, 33rd prime theorem, and new-particle claims.
    - This is a root-level paper surface, not the `paper/` directory manuscript.
 
 3. **`PART_LXIII_ARXIV_COMPLETE_PAPER.tex`**
    - Updated in commit `6e416e3`, integrating Langlands/Frobenius Section 5 and Yukawa RG Section 6.
-   - This is the full arXiv manuscript surface, distinct from both `paper/main.tex` and `w33_paper_v2.tex`.
+   - This is the full arXiv manuscript surface, distinct from both `paper/main.tex` and `papers/standalone/w33_paper_v2.tex`.
 
 ## Latest structural update to integrate
 

@@ -1,6 +1,6 @@
 """W(3,3) MLI-MLX: TOE CONSTANTS COMPANION - PRECISION SUBSTRATE.
 
-After deep dive into toe_constants_companion.tex (678 lines).
+After deep dive into papers/standalone/toe_constants_companion.tex (678 lines).
 This batch captures the strongest NEW substrate predictions not yet in
 the MDCCI-ML arc: quadruple q=3 forcing, precision alpha^-1 form,
 CMB tilt, sigma_8, strong coupling, PMNS angles, Hubble tension,
@@ -151,7 +151,7 @@ DENOMINATOR.
 MLX: META — 30+ CONSTANTS, MEAN ERROR <1% (constants companion)
 ==============================================================
 
-The toe_constants_companion.tex paper presents 30+ Standard Model and
+The papers/standalone/toe_constants_companion.tex paper presents 30+ Standard Model and
 cosmology predictions, ALL substrate-clean, with MEAN ERROR <1%:
 
 | Constant                | Substrate           | Error  |
@@ -302,7 +302,7 @@ def main() -> None:
     headline = (
         "MLI-MLX: TOE CONSTANTS COMPANION PRECISION SUBSTRATE.\n"
         "\n"
-        "Deep harvest from toe_constants_companion.tex (678 lines).\n"
+        "Deep harvest from papers/standalone/toe_constants_companion.tex (678 lines).\n"
         "Strongest NEW substrate identities from the companion paper:\n"
         "\n"
         "QUADRUPLE q=3 FORCING (four INDEPENDENT identities):\n"

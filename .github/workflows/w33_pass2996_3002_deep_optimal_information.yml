@@ -62,7 +62,7 @@ jobs:
           sha256sum holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf > docs/evidence/pass2996_3002/pdf_sha256.txt
           printf 'python=PASS 7/7\npytest=PASS 8/8\nrtl=PASS 444/444\n' > docs/evidence/pass2996_3002/manifest.txt
           cat > docs/evidence/pass2996_3002/OBSERVED_COMPLETE.json <<'EOF'
-          {"schemas":"w33.pass2996_3002.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","claim_boundary":"Digital CI evidence only; no laboratory optical, autonomous-clock, or physical Landauer claim."}
+          {"schema":"w33.pass2996_3002.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","claim_boundary":"Digital CI evidence only; no laboratory optical, autonomous-clock, or physical Landauer claim."}
           EOF
           git diff --check
       - uses: actions/upload-artifact@v4

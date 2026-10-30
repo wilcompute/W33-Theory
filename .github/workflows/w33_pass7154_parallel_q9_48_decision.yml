@@ -29,14 +29,14 @@ jobs:
       - name: Solve target 48
         env:
           CASE_INDEX: ${{ matrix.case }}
-          CASE_OUTPUT: evidence/pass7154/case_${{ matrix.case }}.json
+          CASE_OUTPUT: docs/evidence/pass7154/case_${{ matrix.case }}.json
         run: |
           export PYTHONPATH="$PWD/analysis:${PYTHONPATH:-}"
           python analysis/w33_pass7154_parallel_48_case.py
       - uses: actions/upload-artifact@v4
         with:
           name: pass7154-case-${{ matrix.case }}
-          path: evidence/pass7154/case_${{ matrix.case }}.json
+          path: docs/evidence/pass7154/case_${{ matrix.case }}.json
 
   aggregate:
     needs: solve
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           pattern: pass7154-case-*
-          path: evidence/pass7154
+          path: docs/evidence/pass7154
           merge-multiple: true
       - name: Aggregate exact decision
         run: |
@@ -57,7 +57,7 @@ jobs:
           from pathlib import Path
           rows=[]
           for i in range(8):
-              p=Path(f'evidence/pass7154/case_{i}.json')
+              p=Path(f'docs/evidence/pass7154/case_{i}.json')
               assert p.exists(), p
               r=json.loads(p.read_text()); assert r['case_index']==i and r['target']==48
               rows.append(r)

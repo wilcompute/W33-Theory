@@ -66,7 +66,7 @@ holonet bench
 | Retro firmware exports | E | `analysis/w33_holonet_retro_export.py` | `artifacts/holonet_asm/*` | 4004/6502/Z80-style listings verify all ordered pairs | Abstract target listings; no cycle-accurate vendor claim. |
 | Firmware-to-fabric accounting `2160 = 30 x 72` | E | `analysis/w33_holonet_firmware_fabric_profile.py` | `data/w33_holonet_firmware_fabric_profile.json` | mirror atlas and Witting admission arithmetic pass | Cross-layer accounting, not throughput. |
 | Performance face | S/E | `analysis/holonet_bench.py`; `holonet bench` | `data/holonet_bench.json` | deterministic op counts pass; timings reported as host-relative | Python timing is a floor, not hardware ceiling. |
-| Photonic contextuality demonstrator | P | `holonet_demonstrator_protocol_v1.tex`; raw-shot validator/estimators | raw JSONL + estimator outputs | `S>36` and CF consistent with `1/10` | First physical falsifier; no full Holonet build implied. |
+| Photonic contextuality demonstrator | P | `papers/standalone/holonet_demonstrator_protocol_v1.tex`; raw-shot validator/estimators | raw JSONL + estimator outputs | `S>36` and CF consistent with `1/10` | First physical falsifier; no full Holonet build implied. |
 | Standard Model / E6 / weak-angle identifications | C | `analysis/w33_physics_bridge.py`; claim-tier spine | `data/w33_physics_bridge.json` | arithmetic ledger matches stated integers | Postdiction/identification unless a dynamical derivation exists. |
 | K3 / spectral action / gravity bridge | C/F | `analysis/w33_gravity_spectral_action.py`; `analysis/w33_propinquity_reduction.py` | `data/w33_gravity_spectral_action.json`; `data/w33_propinquity_reduction.json` | spectral moments and named open theorems recorded | Continuum convergence and positivity remain open. |
 | Planetary computer / infrastructure applications | F | `holonet_practical_implications.tex` | companion paper | structurally motivated roadmap | Not a built network or proven production protocol. |
@@ -77,7 +77,7 @@ holonet bench
 2. **Audit the datasheet:** `holonet audit`.
 3. **Measure the classical host:** `holonet bench`.
 4. **Read the machine paper:** `holonet_machine.tex`.
-5. **Falsify the first physical layer:** `holonet_demonstrator_protocol_v1.tex`, with its positive control in `holonet_parity_control.tex` (the even-`q` arm that must read `CF=0`).
+5. **Falsify the first physical layer:** `papers/standalone/holonet_demonstrator_protocol_v1.tex`, with its positive control in `papers/standalone/holonet_parity_control.tex` (the even-`q` arm that must read `CF=0`).
 6. **Grade the grand claims:** `holonet_claim_tiers.tex` and `analysis/BT1907_photonic_holonet_claim_tier_refactor.md`.
 
 ## Rule for future claims

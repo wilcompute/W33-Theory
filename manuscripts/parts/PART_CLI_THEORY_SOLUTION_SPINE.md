@@ -17,7 +17,7 @@ w33_paper.tex
 This is distinct from:
 
 - `paper/main.tex`, the shorter paper-directory manuscript,
-- `w33_paper_v2.tex`, the separate root-level v2.3 paper surface,
+- `papers/standalone/w33_paper_v2.tex`, the separate root-level v2.3 paper surface,
 - `PART_LXIII_ARXIV_COMPLETE_PAPER.tex`, the full arXiv manuscript surface.
 
 `w33_paper.tex` is the large live theory manuscript.  Its title block presents the program as:

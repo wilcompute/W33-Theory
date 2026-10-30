@@ -27,7 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 TEXT = (".md", ".py", ".tex", ".yml", ".yaml", ".toml", ".cfg", ".ini", ".sh", ".ps1", ".html", ".g", ".bib", ".txt", ".lean", ".rst")
 SKIP_PREFIX = ("data/", ".continuity/", "archive/dirs/")
-SKIP_FILES = {"RESULTS_INDEX.md", "KEY_VOCABULARY.md", "TOPICAL_ALIASES.md", "CODE_PARAMETER_INDEX_ALL_REPOS.md"}
+SKIP_FILES = {"relocate.py", "RESULTS_INDEX.md", "KEY_VOCABULARY.md", "TOPICAL_ALIASES.md", "CODE_PARAMETER_INDEX_ALL_REPOS.md"}
 KEEP_ROOT_MD = {"README.md", "CHANGELOG.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md", "LICENSE.md", "CLAUDE.md", "AGENTS.md",
                 "GEMINI.md", "REPO_MAP.md", "RESULTS_INDEX.md", "KEY_VOCABULARY.md", "TOPICAL_ALIASES.md", "CODE_PARAMETER_INDEX_ALL_REPOS.md",
                 "RESULTS_VOCABULARY.md", "CERTIFICATE_INDEX.md", "CERTIFICATE_RESULTS_INDEX.md", "HOLONET.md", "SESSION_HANDOFF.md"}
@@ -58,7 +58,7 @@ def batch(name):
 
 # generic names (build, dist, out, results, checks, patches) are deliberately NOT here: workflows and code use them for runtime
 # scratch paths and operators ('out/=' in numpy code), so a textual rewrite cannot tell them apart from the tracked folders.
-# small top-level directories (no importable Python) -> their natural homes; NOTES/notes merge (they collide on Windows, which is
+# small top-level directories (no importable Python) -> their natural homes; docs/notes/notes merge (they collide on Windows, which is
 # case-insensitive), schema merges into schemas.
 SMALL_DIRS = [("reports", "docs/reports"), ("NOTES", "docs/notes"), ("notes", "docs/notes"), ("presentations", "docs/presentations"),
               ("visualizations", "docs/visualizations"), ("figures", "docs/figures"), ("evidence", "docs/evidence"), ("specs", "docs/specs"),
@@ -70,6 +70,8 @@ SMALL_DIRS = [("reports", "docs/reports"), ("NOTES", "docs/notes"), ("notes", "d
               ("branch_audit", "archive/outputs/branch_audit"), ("schema", "schemas")]
 
 
+GENERIC_NAMES = {"main.tex", "index.html", "index.md", "README.md", "__init__.py", "setup.py", "conftest.py", "Makefile",
+                 "requirements.txt", "config.json", "manifest.json", "results.json", "report.md", "notes.md"}
 DIR_MOVES = []          # set by main() for directory batches
 DIR_ONLY = False
 LINK = re.compile(r"(\]\(|href=\"|src=\")([^)\"\s#]+)")
@@ -107,8 +109,11 @@ def rewrite_text(path, text, moves):
     for od, nd in DIR_MOVES:
         rxd = re.compile(r"(?<![A-Za-z0-9_./\\-])" + re.escape(od) + r"/(?=[A-Za-z0-9_.*{$-])")   # a path must follow, never 'out/='
         text, k = rxd.subn(nd + "/", text); n += k
-        rxq = re.compile(r"([\"'])" + re.escape(od) + r"\1")
-        text, k = rxq.subn(lambda m: m.group(1) + nd + m.group(1), text); n += k
+        # quoted bare names ONLY for distinctive directory names (a digit or an underscore): "notes", "schema", "evidence" are
+        # everyday dict keys -- this rule once turned ~2,500 "schema" keys into "schemas" before the audit caught it (2026-10-30)
+        if re.search(r"[0-9_]", od):          # a digit or underscore: V24_output, BT1613_arXiv_package -- never NOTES or notes
+            rxq = re.compile(r"([\"'])" + re.escape(od) + r"\1")
+            text, k = rxq.subn(lambda m: m.group(1) + nd + m.group(1), text); n += k
     # root-relative tokens (not part of a longer path or name); skip those already rewritten as links above
     names = sorted(old2new, key=len, reverse=True) if not DIR_ONLY else []
     if names:
@@ -164,7 +169,11 @@ def run(moves, apply):
     probe = re.compile("|".join(re.escape(os.path.basename(o)) for o in names)) if names else None
     # prefilter with git grep (one pass over the index, seconds) instead of reading all ~42k files in Python
     pat = ROOT / ".git_relocate_patterns.txt"
-    pat.write_text("\n".join(sorted({os.path.basename(o.rstrip("/")) for o in names})) + "\n", encoding="utf-8")
+    # directory batches must also find files that mention the directory but none of the moved files (2026-10-30: batch 2 first
+    # prefiltered on moved file names only and missed 73 files, e.g. workflows writing evidence/<pass>/)
+    pats = {os.path.basename(o.rstrip("/")) for o in names}
+    pats |= {d + "/" for d, _ in DIR_MOVES} | {'"' + d + '"' for d, _ in DIR_MOVES} | {"'" + d + "'" for d, _ in DIR_MOVES}
+    pat.write_text("\n".join(sorted(pats)) + "\n", encoding="utf-8")
     try:
         files = git("grep", "-I", "-l", "-F", "-f", str(pat)).splitlines()
     finally:
@@ -228,6 +237,11 @@ def main():
         # file-level token rewriting is redundant for directory batches (the D/ rule covers it) and slow: rewrite links + dir tokens only
         global DIR_ONLY
         DIR_ONLY = True
+    generic = [o for o, _ in moves if os.path.basename(o) in GENERIC_NAMES]
+    if generic:
+        # a generic basename (main.tex lives in every paper folder) cannot be rewritten textually without hitting the others
+        print(f"refusing {len(generic)} generic basename(s): {generic}")
+        moves = [(o, nw) for o, nw in moves if os.path.basename(o) not in GENERIC_NAMES]
     taken = [nw for _, nw in moves if (ROOT / nw).exists()]
     if taken:
         print(f"target collisions ({len(taken)}; skipped, and their references are left alone):", taken[:10])

@@ -5,16 +5,16 @@
 #        make holonet-release -> guarded Photonic Holonet PDF release
 
 TEX    = W36_PAPER
-FIGS   = figures/fig1_spectral_diagram.pdf \
-          figures/fig2_predictions_timeline.pdf \
-          figures/fig3_spectral_decomposition.pdf
+FIGS   = docs/figures/fig1_spectral_diagram.pdf \
+          docs/figures/fig2_predictions_timeline.pdf \
+          docs/figures/fig3_spectral_decomposition.pdf
 
 .PHONY: all clean arxiv figures focused-tests holonet-release holonet-ci
 
 all: $(TEX).pdf
 
 ## ── Figures: SVG → PDF ──────────────────────────────────────────────────
-figures/%.pdf: figures/%.svg
+docs/figures/%.pdf: docs/figures/%.svg
 	@echo "Converting $< → $@"
 	@inkscape $< --export-filename=$@
 
@@ -33,9 +33,9 @@ arxiv: $(TEX).pdf
 	@echo "Creating arXiv submission tarball..."
 	tar -czf W33_Theory_arXiv_submission.tar.gz \
 		$(TEX).tex \
-		figures/fig1_spectral_diagram.pdf \
-		figures/fig2_predictions_timeline.pdf \
-		figures/fig3_spectral_decomposition.pdf
+		docs/figures/fig1_spectral_diagram.pdf \
+		docs/figures/fig2_predictions_timeline.pdf \
+		docs/figures/fig3_spectral_decomposition.pdf
 	@echo "Tarball ready: W33_Theory_arXiv_submission.tar.gz"
 	@echo "Submit at: https://arxiv.org/submit"
 

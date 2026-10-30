@@ -67,7 +67,7 @@ def main():
     )
     if p.exists():
         d = load_json(p)
-        notes = d.get("docs/notes", {})
+        notes = d.get("notes", {})
         out_lines += section(
             "Tomotope triangle -> W33 completion",
             [
@@ -81,7 +81,7 @@ def main():
     p = ROOT / "data/_toe/coupling_20260110/checkpoint_toe_coupling_20260110.json"
     if p.exists():
         d = load_json(p)
-        notes = d.get("docs/notes", {})
+        notes = d.get("notes", {})
         out_lines += section(
             "TOE coupling (2T transport)",
             [
@@ -207,7 +207,7 @@ def main():
     )
     if p.exists():
         d = load_json(p)
-        notes = d.get("docs/notes", {})
+        notes = d.get("notes", {})
         grid = d.get("grid", {})
         out_lines += section(
             "Native C24 full-grid",

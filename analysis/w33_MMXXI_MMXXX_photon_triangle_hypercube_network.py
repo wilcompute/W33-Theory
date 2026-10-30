@@ -5,7 +5,7 @@ Deep synthesis combining:
   - Triangle network nonlocality (2024 AlGaAs experiment)
   - Self-Kerr nonlinearity literature
   - Repo: w33_cl4_q4_hypercube_network_unification.py
-  - Repo: single_photon_universal_computation.tex / self_entanglement_companion.tex
+  - Repo: single_photon_universal_computation.tex / papers/standalone/self_entanglement_companion.tex
   - User's insight: triangle = minimum closed loop = q = 3
 
 ==============================================================

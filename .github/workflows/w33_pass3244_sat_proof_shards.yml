@@ -28,23 +28,23 @@ jobs:
       - name: Emit exact shard
         run: |
           mkdir -p evidence
-          python analysis/bt3244_sat_proof_shards.py emit --shard ${{ matrix.shard }} --out evidence/shard.cnf --meta evidence/meta.json
+          python analysis/bt3244_sat_proof_shards.py emit --shard ${{ matrix.shard }} --out docs/evidence/shard.cnf --meta docs/evidence/meta.json
       - name: Solve and verify fail-closed
         shell: bash
         run: |
           set +e
-          timeout 1800 cadical evidence/shard.cnf evidence/proof.drat > evidence/solver.log 2>&1
+          timeout 1800 cadical docs/evidence/shard.cnf docs/evidence/proof.drat > docs/evidence/solver.log 2>&1
           code=$?
           set -e
           verified=0
-          if grep -q '^s UNSATISFIABLE' evidence/solver.log; then
-            /tmp/drat-trim/drat-trim evidence/shard.cnf evidence/proof.drat | tee evidence/drat.log
-            grep -q 's VERIFIED' evidence/drat.log
+          if grep -q '^s UNSATISFIABLE' docs/evidence/solver.log; then
+            /tmp/drat-trim/drat-trim docs/evidence/shard.cnf docs/evidence/proof.drat | tee docs/evidence/drat.log
+            grep -q 's VERIFIED' docs/evidence/drat.log
             verified=1
           fi
           args=()
           if [ "$verified" = 1 ]; then args+=(--drat-verified); fi
-          python analysis/bt3244_sat_proof_shards.py classify --shard ${{ matrix.shard }} --solver-log evidence/solver.log --exit-code "$code" "${args[@]}" --out evidence/status.json
+          python analysis/bt3244_sat_proof_shards.py classify --shard ${{ matrix.shard }} --solver-log docs/evidence/solver.log --exit-code "$code" "${args[@]}" --out docs/evidence/status.json
       - uses: actions/upload-artifact@v4
         with:
           name: pass3244-shard-${{ matrix.shard }}

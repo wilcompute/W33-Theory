@@ -125,7 +125,7 @@ def main():
     out=ROOT/args.out;summary=ROOT/args.summary;out.parent.mkdir(parents=True,exist_ok=True);summary.parent.mkdir(parents=True,exist_ok=True)
     out.write_bytes(gds)
     payload={
-      'schemas':'w33.pass4272.gds_compile_result.v1',
+      'schema':'w33.pass4272.gds_compile_result.v1',
       'gds_sha256':hashlib.sha256(gds).hexdigest(),
       'gds_bytes':len(gds),
       'route_count':len(routes),

@@ -357,7 +357,7 @@ This is an exact guard-state/Hamming-scheme duality. It is not a fault-tolerant 
 python analysis/bt3344_3353_exterior_dual_szegedy_q15.py
 python -m pytest -q tests/test_bt3344_3355_exterior_dual_szegedy_q15.py
 python tools/aggregate_bt3347_status_sidecars.py /path/to/tiny-sidecars \
-  --out evidence/pass3344_3355/chromatic_status_aggregate.json
+  --out docs/evidence/pass3344_3355/chromatic_status_aggregate.json
 python tools/integrate_bt3344_bt3355.py
 python tools/integrate_bt3344_bt3355.py --check
 ```

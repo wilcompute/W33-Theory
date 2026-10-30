@@ -83,7 +83,7 @@ checks={
   "tick_scope_note_needed":"numerical" in (ROOT/"analysis"/"w33_pass12055_microscopic_tick_model.py").read_text(encoding="utf-8",errors="replace")[:5000].lower(),
 }
 result={
-  "schemas":"w33.forty_points.evidence_audit.v1",
+  "schema":"w33.forty_points.evidence_audit.v1",
   "source":"papers/forty_points/main.tex and its 15 includes; prior local pdftotext extraction of main.pdf",
   "source_tex_sha256":hashlib.sha256(combined.encode()).hexdigest(),
   "module_count":len(modules),"included_tex_count":len(parts),

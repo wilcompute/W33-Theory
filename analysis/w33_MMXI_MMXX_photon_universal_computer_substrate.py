@@ -1,7 +1,7 @@
 """W(3,3) MMXI-MMXX: PHOTON AS UNIVERSAL SUBSTRATE COMPUTER.
 
 Deep harvest from single_photon_universal_computation.tex AND
-self_entanglement_companion.tex, combined with 2026 research on
+papers/standalone/self_entanglement_companion.tex, combined with 2026 research on
 time-bin qudits, Franson interferometers, digital-analog-probabilistic-
 deterministic computing, and topological QC.
 
@@ -143,7 +143,7 @@ So q = 3 is the smallest non-trivial q where the master split is balanced.
 MMXVIII: Q_4 TOROIDAL ROUTER = 4-LAYER ABSTRACTION
 ==============================================================
 
-The Q_4 hypercube router (from self_entanglement_companion.tex Sec 5):
+The Q_4 hypercube router (from papers/standalone/self_entanglement_companion.tex Sec 5):
 
   Vertices: |V(Q_4)| = 16 = mu^2 = (q+1)^2
   Edges:    |E(Q_4)| = 32 = r * mu^2 = r^F_5

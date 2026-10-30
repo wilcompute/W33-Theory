@@ -1,6 +1,6 @@
 """W(3,3) BREAKTHROUGH 59: FULL CONSTANTS COMPANION (35+ SUBSTRATE-PRECISION).
 
-A MAJOR consolidation from toe_constants_companion.tex: the full table
+A MAJOR consolidation from papers/standalone/toe_constants_companion.tex: the full table
 of 35+ substrate-precision dimensionless physical constants. BT53
 captured only 7 of these; BT59 captures the complete table.
 

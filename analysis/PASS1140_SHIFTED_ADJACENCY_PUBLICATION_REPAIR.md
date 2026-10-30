@@ -54,7 +54,7 @@ longer called a positive heat kernel.
 - `W36_PAPER.tex` is visibly labeled a superseded historical synthesis,
   and its spectral chapter and conclusion have been replaced by audited
   finite statements.
-- `w33_paper_v2.tex` is visibly labeled a superseded provenance draft and
+- `papers/standalone/w33_paper_v2.tex` is visibly labeled a superseded provenance draft and
   routes readers to the maintained surfaces.
 
 No \(32\)-dimensional point-carrier restriction is retained.  Since the

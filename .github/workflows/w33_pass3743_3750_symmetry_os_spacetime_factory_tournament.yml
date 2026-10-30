@@ -56,7 +56,7 @@ jobs:
           old=json.loads(Path('/tmp/frozen3750.json').read_text())
           assert got==old
           prereg=json.loads(Path('data/PART_3747_W33_HARDWARE_CHALLENGE_PREREGISTRATION.json').read_text())
-          assert prereg['schemas']==got['passes']['3747_preregistered_hardware_challenge']['schemas']
+          assert prereg['schema']==got['passes']['3747_preregistered_hardware_challenge']['schema']
           assert prereg['shots_per_tomography_setting']==got['passes']['3747_preregistered_hardware_challenge']['shots_per_tomography_setting']
           assert got['passes']['3748_bonkers_floquet_incidence_holonomy']['generated_permutation_group']=='S40'
           print('PASS frozen semantic and preregistration equality')

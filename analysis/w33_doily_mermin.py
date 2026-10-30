@@ -216,7 +216,7 @@ def main():
         "sources": [
             "w33_master_audit._build(2) (the doily); w33_ovoid_construct (the ovoid)",
             "Mermin-Peres magic square; two-qubit Pauli labeling of W(1,2)=GQ(2,2)",
-            "pairs with holonet_parity_control.tex (control-arm honesty)",
+            "pairs with papers/standalone/holonet_parity_control.tex (control-arm honesty)",
         ],
     }
     with open("data/w33_doily_mermin.json", "w") as fh:

@@ -2,14 +2,14 @@
 
 **Date:** 2026-05-01  
 **Primary manuscript:** `w33_paper.tex`  
-**Insert file:** `w33_paper_CLII_deep_solution_insert.tex`
+**Insert file:** `papers/standalone/w33_paper_CLII_deep_solution_insert.tex`
 
 ## What landed
 
 A paper-ready TeX insert was added:
 
 ```tex
-\input{w33_paper_CLII_deep_solution_insert.tex}
+\input{papers/standalone/w33_paper_CLII_deep_solution_insert.tex}
 ```
 
 Recommended placement: after the Hashimoto/spectral development and before broad phenomenology.

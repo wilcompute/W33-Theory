@@ -2,8 +2,8 @@
 
 After exhaustive reading of all 7 substrate papers (w33_paper.tex,
 W33_FOR_EVERYONE.tex, single_photon_universal_computation.tex,
-toe_constants_companion.tex, self_entanglement_companion.tex,
-toe_master_synthesis.tex, docs/index.html), I extract FOUR new
+papers/standalone/toe_constants_companion.tex, papers/standalone/self_entanglement_companion.tex,
+papers/standalone/toe_master_synthesis.tex, docs/index.html), I extract FOUR new
 substrate identities that have not been formalized in earlier
 breakthroughs.
 

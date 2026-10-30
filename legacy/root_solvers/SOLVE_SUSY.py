@@ -119,7 +119,7 @@ print("\n" + "="*80)
 print("  SECTION 3: COMPACTIFICATION AND EXTRA DIMENSIONS")
 print("="*80)
 
-# String theory/M-theory dimensional structure:
+# String docs/theory/M-theory dimensional structure:
 # 10D superstring: 4 + 6 (Calabi-Yau)
 # 11D M-theory: 4 + 7 (G2 manifold)
 # 26D bosonic string: 4 + 22

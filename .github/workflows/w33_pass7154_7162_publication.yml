@@ -69,7 +69,7 @@ jobs:
           import json, os
           from pathlib import Path
           d={
-            'schemas':'w33.pass7154_7162.publication_proof.v1',
+            'schema':'w33.pass7154_7162.publication_proof.v1',
             'status':'PASS',
             'source_commit':os.environ['GITHUB_SHA'],
             'analytic_e8_firewall_present':True,

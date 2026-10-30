@@ -1,4 +1,4 @@
-"""Round32 focused regressions for five independent theory/engineering fronts."""
+"""Round32 focused regressions for five independent docs/theory/engineering fronts."""
 import sys,json,math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'analysis'))

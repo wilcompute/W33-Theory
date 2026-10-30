@@ -24,9 +24,9 @@
 | Weinberg angle $\sin^2\theta_W = 3/13$ | `w33_paper.tex` §9 | ✅ DONE | 0.2σ |
 | Higgs mass $m_H = 125.2$ GeV | `w33_paper.tex` §13 | ✅ DONE | 0.2σ |
 | W-boson mass (tree) $m_W = 80.38$ GeV | `w33_paper.tex` §27 | ✅ DONE | PDG: 0.3σ |
-| W-boson mass (1-loop Hashimoto) | `PAPER_SECTION4B_MW_ONELOOP.tex` | ✅ DONE | CDF: 2.4σ |
-| $|V_{cb}|$ Hashimoto theorem | `PAPER_SECTION4_VCB_THEOREM.tex` | ✅ DONE | −0.3σ |
-| $\delta_{CP} = \pi/2$ holonomy proof | `PAPER_SECTION5_DELTA_CP.tex` | ✅ DONE | 0.2σ (J) |
+| W-boson mass (1-loop Hashimoto) | `papers/standalone/PAPER_SECTION4B_MW_ONELOOP.tex` | ✅ DONE | CDF: 2.4σ |
+| $|V_{cb}|$ Hashimoto theorem | `papers/standalone/PAPER_SECTION4_VCB_THEOREM.tex` | ✅ DONE | −0.3σ |
+| $\delta_{CP} = \pi/2$ holonomy proof | `papers/standalone/PAPER_SECTION5_DELTA_CP.tex` | ✅ DONE | 0.2σ (J) |
 | Neutron lifetime $\tau_n = 880$ s | `analysis/w33_pass137_neutron_lifetime.py` | ✅ DONE | +0.3σ |
 | Top Yukawa $y_t = 1$ exactly | `analysis/w33_pass132_top_mass.py` | ✅ DONE | ~1σ (pole-MS) |
 | Koide formula $Q = 2/3$ | `analysis/w33_pass133_koide_massgap.py` | ✅ DONE | 0.001σ |
@@ -100,9 +100,9 @@ W33-Theory/
 ├── W33_FOR_EVERYONE.tex             # Lay-audience companion
 ├── compile_and_check.sh             # Full build pipeline
 ├── SUBMISSION_CHECKLIST.md          # This file
-├── PAPER_SECTION4_VCB_THEOREM.tex   # |Vcb| theorem (Pass 130)
-├── PAPER_SECTION4B_MW_ONELOOP.tex   # mW one-loop (Pass 135)
-├── PAPER_SECTION5_DELTA_CP.tex      # δ_CP holonomy (Pass 136)
+├── papers/standalone/PAPER_SECTION4_VCB_THEOREM.tex   # |Vcb| theorem (Pass 130)
+├── papers/standalone/PAPER_SECTION4B_MW_ONELOOP.tex   # mW one-loop (Pass 135)
+├── papers/standalone/PAPER_SECTION5_DELTA_CP.tex      # δ_CP holonomy (Pass 136)
 ├── analysis/
 │   ├── w33_pass132_top_mass.py      # y_t = 1 derivation
 │   ├── w33_pass133_koide_massgap.py # Koide + QCD mass gap

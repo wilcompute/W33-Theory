@@ -101,7 +101,7 @@ Report-No: W33-2026-705
 
 1. Go to [journals.aps.org/prl/submissions](https://journals.aps.org/prl/submissions)
 2. Select **New Submission > Letters**
-3. Upload: `w33_bell_prl.tex`, `figures/fig1.pdf`, `figures/fig2.pdf`, `figures/fig3.pdf`, `w33_bell_supplemental.tex`
+3. Upload: `w33_bell_prl.tex`, `docs/figures/fig1.pdf`, `docs/figures/fig2.pdf`, `docs/figures/fig3.pdf`, `w33_bell_supplemental.tex`
 4. Paste cover letter above
 5. Add suggested reviewers
 6. Select classifications: **Quantum Information**, **Quantum Entanglement**, **Foundations of Quantum Mechanics**

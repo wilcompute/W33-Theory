@@ -24,7 +24,7 @@ grep BOTH:
   - `docs/index.html` (the live master ledger), and
   - the `.tex` papers: `w33_paper.tex`, `w33_for_everyone.tex`,
     `universal_computation_single_photon*.tex`, `photonic_holonet.tex`,
-    `standard_model_from_one_transvection.tex`
+    `papers/standalone/standard_model_from_one_transvection.tex`
 for the key quantity/term, and scan recent `git log`. Anchor on the grep
 TERMS below (line numbers drift). Example:
   `grep -rio "<term>" docs/index.html *.tex | sort | uniq -c`
@@ -54,7 +54,7 @@ ALREADY DONE — DO NOT RE-DERIVE (grep terms -> result):
   3^{1+2}:SL(2,3)=1⊕3⊕8, generations=Z(C(R))=Z₃, flavor S₃=⟨R,C⟩, color=
   matter-Heisenberg, chirality/parity/charge-conj, connection flat/curved
   (2T=24-cell group), curvature F=[R_p,R_q]. See
-  `standard_model_from_one_transvection.tex`.
+  `papers/standalone/standard_model_from_one_transvection.tex`.
 
 COMPLETENESS BOUNDARY (now a theorem in BOTH papers, 2026-06-13):
 `w33_paper.tex` §"The Integral E8 Lift: Eigenlattice Obstruction and the

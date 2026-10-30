@@ -520,7 +520,7 @@ One proof shard is generated with
 ```bash
 python analysis/bt3552_clique_proof_archive.py \
   --shard 0 \
-  --json evidence/pass3549_3555/proof_shard_00.json
+  --json docs/evidence/pass3549_3555/proof_shard_00.json
 ```
 
 ## Claim boundaries

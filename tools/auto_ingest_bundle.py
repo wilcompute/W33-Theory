@@ -362,7 +362,7 @@ def process_bundle(
     md_lines.append("")
     (out_dir / "ingest_report.md").write_text("\n".join(md_lines), encoding="utf-8")
 
-    # Also write a small tracked summary into `reports/auto_ingest/` so PRs can include
+    # Also write a small tracked summary into `docs/reports/auto_ingest/` so PRs can include
     # a compact representation even though `artifacts/` is git-ignored.
     repo_reports = ROOT / "reports" / "auto_ingest"
     repo_reports.mkdir(parents=True, exist_ok=True)

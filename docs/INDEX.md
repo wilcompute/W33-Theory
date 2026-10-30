@@ -66,7 +66,7 @@ Navigator for the repository's paper sections, reproducibility paths, and formal
 | Track | Key Docs | Main Scripts | Tests |
 |---|---|---|---|
 | W33 to E8 correspondence | `docs/NOVEL_CONNECTIONS_2026_02_10.md` | `scripts/w33_e8_correspondence_theorem.py`, `scripts/w33_homology.py`, `scripts/w33_hodge.py` | `tests/test_e8_embedding.py`, `tests/test_w33_hodge.py` |
-| Heisenberg/qutrit structure | `reports/auto_ingest/W33_Heisenberg_action_bundle_20260209_v1_analysis_report.md` | `scripts/w33_heisenberg_qutrit.py` | `tests/test_heisenberg_qutrit_structure.py` |
+| Heisenberg/qutrit structure | `docs/reports/auto_ingest/W33_Heisenberg_action_bundle_20260209_v1_analysis_report.md` | `scripts/w33_heisenberg_qutrit.py` | `tests/test_heisenberg_qutrit_structure.py` |
 | E6/F3 trilinear and reduced-orbit theorems | `docs/REDUCED_ORBIT_THEOREM_2026_02_10.md`, `docs/REDUCED_ORBIT_FORMAL_PROOF_2026_02_11.md` | `tools/build_e6_f3_trilinear_map.py`, `tools/analyze_e6_f3_trilinear_symmetry_breaking.py`, `tools/check_min_cert_orbit_involution_rule.py`, `tools/prove_z22_no_global_stabilizer.py` | `tests/test_e6_f3_trilinear.py`, `tests/test_check_min_cert_orbit_involution_rule_smoke.py`, `tests/test_prove_z22_no_global_stabilizer_smoke.py` |
 | Orbit-stabilizer bridge on exact min-cert reps | `docs/ORBIT_STABILIZER_BRIDGE_2026_02_11.md` | `tools/analyze_orbit_stabilizer_bridge.py` | `tests/test_analyze_orbit_stabilizer_bridge_smoke.py` |
 | GL(2,3) involution group/graph bridge | `docs/GL2_F3_INVOLUTION_CONJUGACY_2026_02_11.md` | `tools/analyze_gl2_f3_involution_conjugacy.py` | `tests/test_analyze_gl2_f3_involution_conjugacy_smoke.py` |

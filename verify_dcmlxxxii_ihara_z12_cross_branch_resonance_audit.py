@@ -359,7 +359,7 @@ def build_bridge() -> dict[str, Any]:
     remote_sources = [
         {
             "commit": REMOTE_MAIN_COMMIT,
-            "file": "NOTES/BREAKTHROUGH_MAY17_2026.md",
+            "file": "docs/notes/BREAKTHROUGH_MAY17_2026.md",
             "audit_status": (
                 "Corrected: the Z12 algebraic norm is 709, the 709^2 value is a "
                 "squared-magnitude artifact, and the genus map does not put RH on "
@@ -368,7 +368,7 @@ def build_bridge() -> dict[str, Any]:
         },
         {
             "commit": REMOTE_MAIN_COMMIT,
-            "file": "NOTES/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
+            "file": "docs/notes/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
             "audit_status": (
                 "Classified as coefficient-12 shadow; the live W33 Ihara-Bass "
                 "determinant uses coefficient 11."
@@ -376,7 +376,7 @@ def build_bridge() -> dict[str, Any]:
         },
         {
             "commit": REMOTE_MAIN_COMMIT,
-            "file": "NOTES/BREAKTHROUGH21_MASTER_THEOREM_MAY18.md",
+            "file": "docs/notes/BREAKTHROUGH21_MASTER_THEOREM_MAY18.md",
             "audit_status": (
                 "Finite Bass-11 graph-Ihara structure is retained; classical RH "
                 "still requires an identification/limit theorem."

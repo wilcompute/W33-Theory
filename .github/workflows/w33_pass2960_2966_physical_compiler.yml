@@ -37,20 +37,20 @@ jobs:
           vvp /tmp/transducer.vvp
       - name: Synthesize and place physical compiler datapaths
         run: |
-          mkdir -p evidence/pass2960_2966
+          mkdir -p docs/evidence/pass2960_2966
           for item in \
             'spc15 rtl/w33_pass2960_spc15_factorized_encoder.sv w33_pass2960_spc15_factorized_encoder' \
             'pilots rtl/w33_pass2965_curvature_pilot_checker.sv w33_pass2965_curvature_pilot_checker' \
             'transducer rtl/w33_pass2966_antisymplectic_phase_transducer.sv w33_pass2966_antisymplectic_phase_transducer'; do
               set -- $item; name=$1; src=$2; top=$3
-              yosys -p "read_verilog -sv $src; synth_ice40 -top $top -json /tmp/$name.json; stat" | tee evidence/pass2960_2966/${name}_yosys.log
-              nextpnr-ice40 --hx8k --package ct256 --json /tmp/$name.json --asc /tmp/$name.asc --freq 12 --pcf-allow-unconstrained |& tee evidence/pass2960_2966/${name}_nextpnr.log
+              yosys -p "read_verilog -sv $src; synth_ice40 -top $top -json /tmp/$name.json; stat" | tee docs/evidence/pass2960_2966/${name}_yosys.log
+              nextpnr-ice40 --hx8k --package ct256 --json /tmp/$name.json --asc /tmp/$name.asc --freq 12 --pcf-allow-unconstrained |& tee docs/evidence/pass2960_2966/${name}_nextpnr.log
           done
       - name: Integrate canonical blueprint and site idempotently
         run: |
           python tools/integrate_bt2960_bt2966.py
-          python tools/integrate_bt2960_bt2966.py | tee evidence/pass2960_2966/integration_second_run.log
-          grep -F "'idempotent': True" evidence/pass2960_2966/integration_second_run.log
+          python tools/integrate_bt2960_bt2966.py | tee docs/evidence/pass2960_2966/integration_second_run.log
+          grep -F "'idempotent': True" docs/evidence/pass2960_2966/integration_second_run.log
       - uses: tectonic-typesetting/setup-tectonic@v1
       - name: Compile all three canonical manuscripts
         run: |
@@ -60,9 +60,9 @@ jobs:
           ! grep -E 'Undefined control sequence|Emergency stop' *.log
       - name: Freeze evidence manifest
         run: |
-          cp /tmp/bt2960_2966_exact.log evidence/pass2960_2966/exact.log
-          cp /tmp/oam_profile.json evidence/pass2960_2966/oam_default_profile.json
-          sha256sum data/PART_BT296*.json rtl/w33_pass296*.sv holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf > evidence/pass2960_2966/sha256.txt
+          cp /tmp/bt2960_2966_exact.log docs/evidence/pass2960_2966/exact.log
+          cp /tmp/oam_profile.json docs/evidence/pass2960_2966/oam_default_profile.json
+          sha256sum data/PART_BT296*.json rtl/w33_pass296*.sv holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf > docs/evidence/pass2960_2966/sha256.txt
           pytest -q tests/test_bt2960_bt2966_physical_compiler.py
           git diff --check
       - uses: actions/upload-artifact@v4
@@ -70,7 +70,7 @@ jobs:
           name: pass2960-2966-physical-compiler-evidence
           path: |
             data/PART_BT296*.json
-            evidence/pass2960_2966/*
+            docs/evidence/pass2960_2966/*
             holonet_machine_blueprint.pdf
             w33_paper.pdf
             photonic_holonet.pdf
@@ -81,6 +81,6 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add holonet_machine_blueprint.tex docs/index.html
-          git add -f evidence/pass2960_2966 holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf *.log
+          git add -f docs/evidence/pass2960_2966 holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf *.log
           git commit -m 'Pass 2966: materialize physical compiler evidence [skip ci]' || exit 0
           git push origin HEAD:${{ github.head_ref }}

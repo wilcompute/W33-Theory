@@ -33,7 +33,7 @@ many -- q=3 is the SMALLEST symplectic quadrangle it can realize (q=2 is provabl
 the parity law it is also the smallest CONTEXTUAL one. The two forcings point at the same order. It
 also sharpens the control arm honestly: the even-order control fabric CANNOT be probed by the same
 complete-basis optics in C^3; its exactly-one-click statistic must be realized by a different
-measurement class, exactly as holonet_parity_control.tex concedes.
+measurement class, exactly as papers/standalone/holonet_parity_control.tex concedes.
 
 Honest scope: the impossibility is a two-line counting argument whose inputs (mu = 3, faithfulness,
 contexts of size 3 = dim C^3) are verified computationally here; the q=3 existence is the cited Witting
@@ -151,7 +151,7 @@ def main():
         "\nCONSEQUENCE: q=3 is the SMALLEST W(q) a complete-basis single-photon apparatus can realize at all"
         "\n(q=2 provably impossible in C^3), and by the parity law the smallest CONTEXTUAL one. Two independent"
         "\nforcings select the same order. The even-order control arm therefore requires a different"
-        "\nmeasurement class -- exactly the concession holonet_parity_control.tex makes."
+        "\nmeasurement class -- exactly the concession papers/standalone/holonet_parity_control.tex makes."
     )
     print(f"\n{'ALL PASS' if all_ok else 'FAILURES present.'}")
 
@@ -183,7 +183,7 @@ def main():
         "sources": [
             "w33_master_audit._build (SRG mu/lambda verified per q)",
             "Witting 40-ray realization in C^4 (corpus result, cited in w33_ks_inequality)",
-            "pairs with w33_doily_mermin (the two-contextuality separation) and holonet_parity_control.tex",
+            "pairs with w33_doily_mermin (the two-contextuality separation) and papers/standalone/holonet_parity_control.tex",
         ],
     }
     with open("data/w33_realization_dimension.json", "w") as fh:

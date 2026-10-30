@@ -1,6 +1,6 @@
 # BT818 — The Heptad No-Go: alpha = 7, and Two Corpus Corrections
 
-Full read of self_entanglement_companion.tex + exact computation on the
+Full read of papers/standalone/self_entanglement_companion.tex + exact computation on the
 Witting rays.  Three results; two correct standing claims in the corpus.
 
 ## T1: alpha(W(3,3)) = 7 = Phi6  (CORRECTION to the GraphTheory table)

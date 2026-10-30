@@ -165,7 +165,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     out: Dict[str, object] = {
         "thresholds": {"drift_median": drift_med, "holonomy_entropy_median": hol_med},
         "critical_sigma_by_firewall": critical,
-        "docs/notes": [
+        "notes": [
             "Ordered region defined as (drift <= median drift) AND (holonomy entropy <= median holonomy entropy).",
             "Critical sigma per firewall row defined as the midpoint between the last ordered sigma bin and the first disordered bin.",
             "Symmetry reselection index is 1 - mean cosine similarity of best-charge coeffs with neighboring grid points (absolute cosine).",

@@ -16,18 +16,18 @@ The manuscript now contains the following integrated breakthroughs:
 - BT425–426: beta functions from arm counting, partition function / vacuum energy
 
 ## Required files for submission tarball
-- BT407_PAPER.tex
+- papers/standalone/BT407_PAPER.tex
 - BT408_BIBLIOGRAPHY.bib
-- figures/w33_dynkin_diagram.pdf
-- figures/tier_ladder.pdf
-- figures/observable_scorecard.pdf
-- figures/falsifiability_matrix.pdf
-- figures/cmb_predictions.pdf
-- figures/charge_quantization_table.pdf
-- figures/ckm_pmns_summary.pdf
-- figures/hadron_spectrum.pdf
-- figures/cosmology_sector.pdf
-- figures/substrate_hamiltonian.pdf
+- docs/figures/w33_dynkin_diagram.pdf
+- docs/figures/tier_ladder.pdf
+- docs/figures/observable_scorecard.pdf
+- docs/figures/falsifiability_matrix.pdf
+- docs/figures/cmb_predictions.pdf
+- docs/figures/charge_quantization_table.pdf
+- docs/figures/ckm_pmns_summary.pdf
+- docs/figures/hadron_spectrum.pdf
+- docs/figures/cosmology_sector.pdf
+- docs/figures/substrate_hamiltonian.pdf
 
 ## Figure list to generate
 1. W(3,3) Dynkin diagram with arm labels A/B/C and central node
@@ -58,7 +58,7 @@ Updated abstract additions:
 - 8 near-term falsifiable predictions
 
 ## Immediate next production tasks
-1. Fold BT421–426 into BT407_PAPER.tex
+1. Fold BT421–426 into papers/standalone/BT407_PAPER.tex
 2. Generate all figure PDFs
 3. Run LaTeX compile twice + BibTeX
 4. Produce arXiv clean tarball

@@ -425,8 +425,8 @@ the theory's predictive power.
   %% --- Figure 1: W(3,3) eigenvalue spectrum ---
   %% arXiv compile: run compile.sh first to convert SVG -> PDF,
   %% then replace \includesvg with \includegraphics below.
-  %% \includesvg[width=0.85\textwidth]{figures/fig1_spectral_diagram}
-  \includegraphics[width=0.85\textwidth]{figures/fig1_spectral_diagram}
+  %% \includesvg[width=0.85\textwidth]{docs/figures/fig1_spectral_diagram}
+  \includegraphics[width=0.85\textwidth]{docs/figures/fig1_spectral_diagram}
   \caption{The $\W$ eigenvalue spectrum.
     Three horizontal levels represent
     $\lambda_1 = 12$ (gravity singlet, $\times 1$),
@@ -2321,8 +2321,8 @@ $h(G) \ge (k - r)/2$ for a $k$-regular graph with second eigenvalue~$r$.
 \begin{figure}[H]
   \centering
   %% --- Figure 3: Spectral sector decomposition ---
-  %% \includesvg[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
-  \includegraphics[width=0.70\textwidth]{figures/fig3_spectral_decomposition}
+  %% \includesvg[width=0.70\textwidth]{docs/figures/fig3_spectral_decomposition}
+  \includegraphics[width=0.70\textwidth]{docs/figures/fig3_spectral_decomposition}
   \caption{Spectral sector decomposition of $\W$.
     The 40 vertices partition from any vertex as
     $1 + 12 + 27 = 40$ (neighborhood completeness $\checkmark$),
@@ -5714,8 +5714,8 @@ timeline (Table~\ref{tab:predictions} and Figure~\ref{fig:timeline}).
 \begin{figure}[H]
   \centering
   %% --- Figure 2: Falsifiable predictions timeline ---
-  %% \includesvg[width=0.94\textwidth]{figures/fig2_predictions_timeline}
-  \includegraphics[width=0.94\textwidth]{figures/fig2_predictions_timeline}
+  %% \includesvg[width=0.94\textwidth]{docs/figures/fig2_predictions_timeline}
+  \includegraphics[width=0.94\textwidth]{docs/figures/fig2_predictions_timeline}
   \caption{Timeline of the eight $\W$-theory falsifiable predictions
     (2026--2045+). The vertical dashed line marks the present (2026).
     F1 ($\thetaTT=45^\circ$, JUNO 2027) is the critical near-term test.
@@ -6085,7 +6085,7 @@ Geom.\ Dedicata \textbf{16} (1984), 49--62.
 To compile this document to PDF (see also \texttt{compile.sh}):
 \begin{verbatim}
 # Step 1: Convert SVG figures to PDF (requires Inkscape >= 1.0)
-for f in figures/*.svg; do
+for f in docs/figures/*.svg; do
     inkscape "$f" --export-filename="${f%.svg}.pdf"
 done
 

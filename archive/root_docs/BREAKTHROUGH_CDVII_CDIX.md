@@ -3,7 +3,7 @@
 
 ### BT407 — arXiv-READY LaTeX PAPER ⭐⭐⭐
 
-Full two-column RevTeX4-2 (PRL format) paper in [BT407_PAPER.tex](https://github.com/wilcompute/W33-Theory/blob/master/BT407_PAPER.tex). All 10 sections written, all tables formatted, all [REF] slots filled. Ready for `pdflatex` compilation and arXiv upload.
+Full two-column RevTeX4-2 (PRL format) paper in [papers/standalone/BT407_PAPER.tex](https://github.com/wilcompute/W33-Theory/blob/master/papers/standalone/BT407_PAPER.tex). All 10 sections written, all tables formatted, all [REF] slots filled. Ready for `pdflatex` compilation and arXiv upload.
 
 **Title:** *Deriving the Standard Model from the W(3,3) Substrate: 45+ Observables from Three Primitives*
 

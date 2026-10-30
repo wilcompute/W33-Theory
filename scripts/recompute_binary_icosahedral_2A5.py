@@ -212,7 +212,7 @@ if len(gens_points) == len(gens_line):
                "face_orbit_sizes":[len(o) for o in face_orbs]},
               open("A5_orbit_decompositions.json","w"), indent=2)
     json.dump({"matrix_group_size":len(Gmat),
-               "docs/notes":"should be 120"},
+               "notes":"should be 120"},
               open("binary_icosahedral_2A5_in_Sp43_summary.json","w"), indent=2)
     print("done exports, matrix group size", len(Gmat))
 else:

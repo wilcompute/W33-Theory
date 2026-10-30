@@ -176,7 +176,7 @@ def analyze_counts(raw,eta):
 def analyze_bundle(manifest_path,raw_path,calibration_path,output,completed_at,test_mode):
     manifest=read_json(manifest_path)
     if manifest.get("schema")!=SCHEMA_VERSION+".manifest" or bool(manifest.get("test_mode"))!=test_mode:
-        raise ContractError("manifest schema/test-mode mismatch")
+        raise ContractError("manifest schemas/test-mode mismatch")
     verify_record(raw_path,manifest["raw_counts"],"raw counts"); verify_record(calibration_path,manifest["calibration"],"calibration")
     raw=read_json(raw_path); calibration=read_json(calibration_path)
     validate_raw(raw,test_mode); meta=validate_calibration(calibration,test_mode)

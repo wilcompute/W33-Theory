@@ -9,7 +9,7 @@
 ## Why this part exists
 
 The GitHub `main` note
-`NOTES/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md` surfaced a useful pattern:
+`docs/notes/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md` surfaced a useful pattern:
 if one writes the W(3,3) Ihara quadratics with coefficient `12`, the two
 non-trivial families land in
 \[

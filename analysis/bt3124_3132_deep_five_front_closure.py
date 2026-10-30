@@ -24,7 +24,7 @@ def main()->int:
       '3130':g['raw_states']==6480 and g['orbit_states']==1770 and g['fixed_register_saving_bits']==2,
       '3131':h['route_unique'] and h['route_min_hamming']==1 and h['phase_min_hamming_28']==21,
     }
-    out={'schemas':'w33.pass3124_3132.deep_five_front_closure.v1','status':'COMPLETE_EXACT_MODELED_AND_SOURCE' if all(checks.values()) else 'FAIL',
+    out={'schema':'w33.pass3124_3132.deep_five_front_closure.v1','status':'COMPLETE_EXACT_MODELED_AND_SOURCE' if all(checks.values()) else 'FAIL',
          'check_count':len(checks),'checks':checks,
          'headlines':{
           '3124':'The exact central-r2 feasibility model has 120 variables and 164,220 weight-1..4 constraints; 66 new cut rounds reached eight residual collisions but did not prove 27 infeasible.',

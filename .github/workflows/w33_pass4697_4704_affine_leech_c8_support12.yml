@@ -54,17 +54,17 @@ jobs:
         run: pytest -q tests/test_w33_pass4697_4704_affine_leech_c8_support12.py
       - name: Safe public materializer dry-run
         run: |
-          mkdir -p evidence/pass4697_4704
-          python tools/integrate_bt3376_bt3389.py --report evidence/pass4697_4704/site.json
+          mkdir -p docs/evidence/pass4697_4704
+          python tools/integrate_bt3376_bt3389.py --report docs/evidence/pass4697_4704/site.json
           test "$(grep -c 'id=\"pass4697-4704-affine-leech-c8-support12\"' docs/index.html)" -eq 1
           grep -q '5,586,853,480' docs/affine-golay-leech-c8-support12.html
       - uses: WtfJoke/setup-tectonic@v3
         with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
       - name: Compile canonical manuscripts
         run: |
-          mkdir -p evidence/pass4697_4704
+          mkdir -p docs/evidence/pass4697_4704
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4697_4704/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass4697_4704/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
       - uses: actions/upload-artifact@v4
@@ -72,7 +72,7 @@ jobs:
         with:
           name: pass4697-4704-core-evidence
           path: |
-            evidence/pass4697_4704/**
+            docs/evidence/pass4697_4704/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

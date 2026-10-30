@@ -362,7 +362,7 @@ def higher_algebra_e8():
         'tmf_e8': {
             'fact': 'TMF spectrum connects to E8 via string bordism',
             'witten_genus': 'Witten genus: MSpin -> TMF (Hopkins)',
-            'e8_bundles': 'E8 gauge bundles appear in string theory/M-theory',
+            'e8_bundles': 'E8 gauge bundles appear in string docs/theory/M-theory',
         },
         'factorization': {
             'chiral': 'Chiral algebras (Beilinson-Drinfeld) = factorization algebras',

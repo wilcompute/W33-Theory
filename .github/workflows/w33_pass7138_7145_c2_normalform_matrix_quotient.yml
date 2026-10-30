@@ -86,7 +86,7 @@ jobs:
           from pathlib import Path
           hashes=Path('docs/evidence/pass7138_7145/pdf_sha256.txt').read_text().strip().splitlines()
           Path('data/PART_W33_PASS7138_7145_CI_PROOF.json').write_text(json.dumps({
-              'schemas':'w33.pass7138_7145.ci_proof.v1',
+              'schema':'w33.pass7138_7145.ci_proof.v1',
               'status':'PASS',
               'source_commit':os.environ['GITHUB_SHA'],
               'exact_producer_replayed':True,

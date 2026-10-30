@@ -222,7 +222,7 @@ def build_bridge() -> dict[str, Any]:
         "summary": asdict(summary),
         "remote_main_note": {
             "commit": "adddef43",
-            "file": "NOTES/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
+            "file": "docs/notes/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
             "audit_status": "coefficient-12 shadow; not the W33 Ihara-Bass determinant",
         },
         "correct_w33_ihara": {

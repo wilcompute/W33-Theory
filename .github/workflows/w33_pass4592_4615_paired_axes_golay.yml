@@ -61,8 +61,8 @@ jobs:
         run: pytest -q tests/test_w33_pass4592_4615_paired_axes_golay.py
       - name: Dry-run safe restored-site materializer
         run: |
-          mkdir -p evidence/pass4592_4615
-          python tools/integrate_bt3376_bt3389.py --report evidence/pass4592_4615/site.json
+          mkdir -p docs/evidence/pass4592_4615
+          python tools/integrate_bt3376_bt3389.py --report docs/evidence/pass4592_4615/site.json
           test "$(grep -c 'id=\"pass4592-4615-paired-axes-golay\"' docs/index.html)" -eq 1
           grep -q '\[63,6,32\]' docs/apartment-paired-axes-golay.html
           grep -q 'full apartment weight enumerator' analysis/PASS4592_4615_paired_axes_golay_index_insert.html
@@ -70,9 +70,9 @@ jobs:
         with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
       - name: Compile canonical manuscripts
         run: |
-          mkdir -p evidence/pass4592_4615
+          mkdir -p docs/evidence/pass4592_4615
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4592_4615/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass4592_4615/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
       - name: Evidence boundaries
@@ -88,7 +88,7 @@ jobs:
         with:
           name: pass4592-4615-paired-axes-golay-evidence
           path: |
-            evidence/pass4592_4615/**
+            docs/evidence/pass4592_4615/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

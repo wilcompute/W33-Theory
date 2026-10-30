@@ -209,7 +209,7 @@ def main() -> None:
         "verified": all(checks.values()),
         "source_packets": {
             "abi_consumer": "data/bt1483_closure_abi_v2_consumer.json",
-            "branch_audit": "data/bt1485_d4_v4_branch_action_audit.json",
+            "archive/outputs/branch_audit": "data/bt1485_d4_v4_branch_action_audit.json",
             "css_rows": "data/bt1486_retwined_css_from_abi_v2.json",
             "classifier": "data/bt1487_v4_triangle_stabilizer_classifier.json",
         },

@@ -1,6 +1,6 @@
 """W(3,3) BREAKTHROUGH 74: PHI_12 WEB + HEEGNER f-LATTICE + FANO 28 + EW TOWER.
 
-Second-pass consolidation of toe_constants_companion.tex. Surfaces cross-links
+Second-pass consolidation of papers/standalone/toe_constants_companion.tex. Surfaces cross-links
 missed in BT59: the Phi_12 web (9 identities binding the 12th cyclotomic to
 the rest of the substrate), the Heegner f-lattice (4 large Heegner primes
 spaced by f=24), the universal Fano-non-incidence factor 1/(mu*Phi_6)=1/28

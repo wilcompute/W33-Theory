@@ -2,7 +2,7 @@
 """
 BT818 - The ovoid no-go, the Lovasz theta gap, and the KS ledger.
 
-Self-entanglement companion (self_entanglement_companion.tex) claims the
+Self-entanglement companion (papers/standalone/self_entanglement_companion.tex) claims the
 Witting Kochen-Specker bound: at most 34/40 contexts satisfiable.
 GraphTheory (docs/index.html snippet) claims alpha(W33) = 10 = "ovoids of
 GQ(3,3)" with Lovasz theta tight.  These cannot both be right:

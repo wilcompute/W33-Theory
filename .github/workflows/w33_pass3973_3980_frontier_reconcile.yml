@@ -31,9 +31,9 @@ jobs:
         with: {python-version: '3.12'}
       - name: Register both certificates without touching protected index
         run: |
-          mkdir -p evidence/pass3973_3980
+          mkdir -p docs/evidence/pass3973_3980
           python tools/integrate_pass3973_3980_frontier.py \
-            --report evidence/pass3973_3980/frontier_reconcile.json
+            --report docs/evidence/pass3973_3980/frontier_reconcile.json
           python - <<'PY'
           import json,re
           from pathlib import Path
@@ -66,4 +66,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: pass3973-3980-dual-frontier-reconcile
-          path: evidence/pass3973_3980/**
+          path: docs/evidence/pass3973_3980/**

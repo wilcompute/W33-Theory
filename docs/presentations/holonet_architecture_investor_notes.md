@@ -25,7 +25,7 @@ Short version to say out loud:
 
 ## What Changed Since The First Deck
 
-- BT1905 added `holonet_demonstrator_protocol_v1.tex`, the first physical falsifier: a Witting/Kochen-Specker contextuality experiment with noncontextual bound `S <= 36`, quantum target `S = 40`, and contextual fraction `CF = 1/10`.
+- BT1905 added `papers/standalone/holonet_demonstrator_protocol_v1.tex`, the first physical falsifier: a Witting/Kochen-Specker contextuality experiment with noncontextual bound `S <= 36`, quantum target `S = 40`, and contextual fraction `CF = 1/10`.
 - BT1906 added `docs/holonet_theorem_ledger.md`, a public claim-to-witness ledger.
 - BT1907 added `analysis/BT1907_photonic_holonet_claim_tier_refactor.md`, a five-tier evidence scheme: exact theorem, simulation, physical protocol, corpus identification, frontier application.
 - Passes 48-50 turned the photonic paper from theory into a compiler story: a 72-trit packet, retro CPU targets, Witting admission, and firmware-to-fabric runtime constants.
@@ -181,7 +181,7 @@ docs/holonet_theorem_ledger.md
 docs/holonet_claim_tier_dashboard.html
 docs/holonet_demonstrator_lab_packet.md
 docs/holonet_frequency_bin_lab_packet.md
-holonet_demonstrator_protocol_v1.tex
+papers/standalone/holonet_demonstrator_protocol_v1.tex
 ```
 
 In the deck, use the live route slide. Pick two addresses. The browser generates all 40 projective points over `F3`, computes the symplectic form, and routes without a stored table.

@@ -23,7 +23,7 @@ the rankone interpretation correction.
 
 Pass236 already owns the native Fourier mixing endpoint;11326 owns a supplied
 noncommuting CP action and11347 the first two-Gram CP trace degree. Their
-reports/scripts were read; those general results are not new here. BT1041/1042
+docs/reports/scripts were read; those general results are not new here. BT1041/1042
 already own a real Hilbert-Schmidt Dirac bimodule and its first-order test.
 Pass11271 owns a different E6 symmetric-family Yukawa/exotic-mass interface.
 The Majorana13/9 scripts hold a separate imposed mass-ratio ansatz; this packet

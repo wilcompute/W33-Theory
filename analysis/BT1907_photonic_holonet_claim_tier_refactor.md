@@ -15,7 +15,7 @@ This refactor separates the full Holonet manuscript into public claim tiers.  Th
 ## Refactored paper stack
 
 1. **Machine paper** (`holonet_machine.tex`, mostly E/S): processor, network, memory, CLI, audit, benchmark, contextuality fuel, and honest boundaries.
-2. **Demonstrator protocol** (`holonet_demonstrator_protocol_v1.tex`, P with E prerequisites): one physical test, the contextual fraction `1/10`.
+2. **Demonstrator protocol** (`papers/standalone/holonet_demonstrator_protocol_v1.tex`, P with E prerequisites): one physical test, the contextual fraction `1/10`.
 3. **Public theorem ledger** (`docs/holonet_theorem_ledger.md`): claim-to-witness map and audit contract.
 4. **Grand physics paper** (`photonic_holonet.tex`, E+S+P+C+F): ambitious synthesis, but every claim tiered.
 5. **Practical implications paper** (`holonet_practical_implications.tex`, mostly F with E/S inputs): infrastructure, data centers, quantum internet, DNA storage, autopoietic networks, consensus, and AI.
@@ -33,7 +33,7 @@ This refactor separates the full Holonet manuscript into public claim tiers.  Th
 | Contextual fraction `1/10` | E/P | Exact finite budget and first physical falsifier. | Promote to demonstrator protocol. |
 | Parity law: `CF=0` (even `q`) / `1/(q^2+1)` (odd `q`), scan `q=2,3,4` incl GF(4) | E | Exact: contextual iff `q` odd; `q=4` even composite proves parity, not primality. | Witness `analysis/w33_audit_qscan.py`; ledger row. |
 | Explicit even-`q` ovoid (noncontextual control model) | E | Exact construction of the `W(2)` 5-ray / `W(4)` 17-ray ovoid giving `CF=0`. | Witness `analysis/w33_ovoid_construct.py`; control model for the demonstrator. |
-| Two-arm contextuality discriminator | E/P | Same estimator returns `1/10` (odd) vs `0` (even); the physical control arm is pending. | `analysis/holonet_control_arm.py` runs `bt1901`/`bt1904` on both arms; `holonet_parity_control.tex`. |
+| Two-arm contextuality discriminator | E/P | Same estimator returns `1/10` (odd) vs `0` (even); the physical control arm is pending. | `analysis/holonet_control_arm.py` runs `bt1901`/`bt1904` on both arms; `papers/standalone/holonet_parity_control.tex`. |
 | Sign vs selection contextuality on `W(2)`; realization dimension bound | E | The even fabric stays Mermin sign-contextual while selection-noncontextual; `W(2)` has no complete-basis realization in `C^3`, so `q=3` is the smallest realizable and smallest contextual order. | `analysis/w33_doily_mermin.py` (exact `F_2` obstruction, 6-line certificate); `analysis/w33_realization_dimension.py` (counting theorem, verified inputs). |
 | Contextuality tax: the KS defect is one movable point-star | E | Exhaustive enumeration: exactly 40 optimal failure sets, each the star of one point, all centers realized; deficit `q+1` (odd) / 0 (even); the OS escalation budget = the `9^t` spend = one star = `1/10` of contexts. | `analysis/w33_contextuality_tax.py`; structurally underwrites the scheduler arc's `36 spreads / movable point-star defect` bridge (no assignment-to-spread bijection claimed). |
 | Spread side of the tax: 9/10 service rate and uniform defect loading | E | 36 spreads re-counted independently (exact cover, 9 per line); every spread meets every star once, so any optimum leaves every spread at exactly 9/10; exactly 20 optima per center (800 total) with occupancy always uniform `(c,c,c,c)`, `c` in {2,3,4} -- double occupancy is the minimal class. | `analysis/w33_spread_star_anatomy.py`; complete defect/spread incidence is the scheduler arc's tensor observation, independently re-verified. |

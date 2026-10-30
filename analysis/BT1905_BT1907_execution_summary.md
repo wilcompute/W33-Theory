@@ -2,7 +2,7 @@
 
 This packet executes the three prioritized architecture moves:
 
-1. **Holonet Demonstrator Protocol v1** — `holonet_demonstrator_protocol_v1.tex`
+1. **Holonet Demonstrator Protocol v1** — `papers/standalone/holonet_demonstrator_protocol_v1.tex`
 2. **Public Theorem/Audit Ledger** — `docs/holonet_theorem_ledger.md`
 3. **Photonic Holonet Claim-Tier Refactor** — `analysis/BT1907_photonic_holonet_claim_tier_refactor.md`
 
@@ -10,7 +10,7 @@ This packet executes the three prioritized architecture moves:
 
 ## BT1905 — Demonstrator protocol
 
-Added `holonet_demonstrator_protocol_v1.tex`.
+Added `papers/standalone/holonet_demonstrator_protocol_v1.tex`.
 
 Purpose: isolate the first physical falsifier for the Holonet substrate: the Witting/Kochen–Specker contextuality test on the forty contexts of `W(3,3)`.
 
@@ -72,7 +72,7 @@ Updated `HOLONET.md` with public reader paths:
 
 - **Run it:** `holonet verify`, `holonet audit`, `holonet bench`.
 - **Audit it:** `docs/holonet_theorem_ledger.md`.
-- **Falsify it:** `holonet_demonstrator_protocol_v1.tex`.
+- **Falsify it:** `papers/standalone/holonet_demonstrator_protocol_v1.tex`.
 - **Grade it:** `analysis/BT1907_photonic_holonet_claim_tier_refactor.md`.
 
 ## Honest note

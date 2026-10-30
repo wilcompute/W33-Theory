@@ -1,7 +1,7 @@
 """W(3,3) HASHIMOTO SECTOR-PROJECTED SPECTRUM THEOREM.
 
 Direct continuation of the Hashimoto alpha/11 Weinberg-correction work
-(reports/2026-05-23_hashimoto_weinberg_transport_*.md).  Those reports
+(docs/reports/2026-05-23_hashimoto_weinberg_transport_*.md).  Those reports
 ended with the open target: "sector-dependent Hashimoto transport,
 where the 480 directed-edge carrier is projected onto W33's 1+24+15
 spectral sectors".  This script closes that target.

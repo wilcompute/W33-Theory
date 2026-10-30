@@ -138,6 +138,6 @@ The number 1080 occurs elsewhere in the repository; no identification with anoth
 - public page: `docs/pass4940-4947-radius-quartic-holonomy.html`
 - root card source: `analysis/PASS4940_4947_radius_quartic_holonomy_index_insert.html`
 - idempotent root materializer: `tools/integrate_pass4940_4947_public.py`
-- exact evidence/release workflow: `.github/workflows/w33_pass4940_4947_exact_packet.yml`
+- exact docs/evidence/release workflow: `.github/workflows/w33_pass4940_4947_exact_packet.yml`
 
 Repository-wide GitHub Actions congestion is substantial. Public-root materialization and gate-level Pass4944 synthesis must therefore be reported by observed run state, not inferred from committed workflow source.

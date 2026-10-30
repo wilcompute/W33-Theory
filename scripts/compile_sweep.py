@@ -69,7 +69,7 @@ def standalone_tex():
     alone misses the wrappers. A standalone document is a file that nothing includes AND
     from which a \documentclass is reachable, in itself or through its include chain.
     """
-    roots = sorted(ROOT.glob("*.tex"))
+    roots = sorted(ROOT.glob("*.tex")) + sorted((ROOT / "papers" / "standalone").glob("*.tex"))   # standalone papers moved 2026-10-30
 
     def live_text(p):
         try:
@@ -113,9 +113,11 @@ def compile_one(p: Path):
     # the source's directory, so the only way to be sure they resolve is to be there.
     tmp = Path(tempfile.mkdtemp(prefix="sweep_"))
     try:
-        r = subprocess.run([str(TECTONIC), "-X", "compile", p.name,
+        # compile from the source's own directory (standalone papers live in papers/standalone/ since 2026-10-30), with the repo
+        # root on the search path so root manuscripts' relative \input{analysis/...} still resolve
+        r = subprocess.run([str(TECTONIC), "-X", "compile", p.name, "-Z", f"search-path={ROOT}",
                             "--outdir", str(tmp)],
-                           cwd=ROOT, capture_output=True, text=True, timeout=900)
+                           cwd=p.parent, capture_output=True, text=True, timeout=900)
         pdf = tmp / (p.stem + ".pdf")
         ok = r.returncode == 0 and pdf.exists()
         msg = ""

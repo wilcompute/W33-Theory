@@ -153,7 +153,7 @@ This gives a constructive finite spectral gap for a W(3,3) lattice/internal Yang
 
 ### Remaining Clay gap
 
-The Clay problem asks for a continuum four-dimensional quantum Yang--Mills theory satisfying rigorous axioms and possessing a physical mass gap. A finite spectral gap is evidence/architecture, not a continuum QFT proof.
+The Clay problem asks for a continuum four-dimensional quantum Yang--Mills theory satisfying rigorous axioms and possessing a physical mass gap. A finite spectral gap is docs/evidence/architecture, not a continuum QFT proof.
 
 ---
 

@@ -36,21 +36,21 @@ jobs:
           INSTALL_OUTCOME: ${{ steps.install.outcome }}
         run: |
           set +e
-          mkdir -p evidence/pass3751
+          mkdir -p docs/evidence/pass3751
           if command -v gap >/dev/null 2>&1; then
-            timeout 75m gap -q analysis/w33_monster_u42_class_fusion_target.g > evidence/pass3751/stdout.txt 2> evidence/pass3751/stderr.txt
+            timeout 75m gap -q analysis/w33_monster_u42_class_fusion_target.g > docs/evidence/pass3751/stdout.txt 2> docs/evidence/pass3751/stderr.txt
             GAP_RC=$?
           else
             GAP_RC=127
-            : > evidence/pass3751/stdout.txt
-            printf '%s\n' 'gap executable unavailable after installation step' > evidence/pass3751/stderr.txt
+            : > docs/evidence/pass3751/stdout.txt
+            printf '%s\n' 'gap executable unavailable after installation step' > docs/evidence/pass3751/stderr.txt
           fi
           export GAP_RC
           python - <<'PY'
           import hashlib, json, os
           from pathlib import Path
-          out = Path('evidence/pass3751/stdout.txt').read_text(errors='replace')
-          err = Path('evidence/pass3751/stderr.txt').read_text(errors='replace')
+          out = Path('docs/evidence/pass3751/stdout.txt').read_text(errors='replace')
+          err = Path('docs/evidence/pass3751/stderr.txt').read_text(errors='replace')
           rc = int(os.environ['GAP_RC'])
           parsed = None
           parse_error = None
@@ -97,5 +97,5 @@ jobs:
         with:
           name: pass3751-gap-class-fusion-evidence
           path: |
-            evidence/pass3751/**
+            docs/evidence/pass3751/**
             data/PART_3751_MONSTER_U42_CLASS_FUSION_EXECUTION.json

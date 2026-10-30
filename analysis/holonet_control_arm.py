@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 The control arm, made runnable end-to-end through the existing estimator path. The demonstrator
-protocol (holonet_demonstrator_protocol_v1.tex) measures the q=3 Witting fabric and expects contextual
-fraction 1/10; the parity-control companion (holonet_parity_control.tex) adds the positive control: the
+protocol (papers/standalone/holonet_demonstrator_protocol_v1.tex) measures the q=3 Witting fabric and expects contextual
+fraction 1/10; the parity-control companion (papers/standalone/holonet_parity_control.tex) adds the positive control: the
 SAME apparatus on an even-order fabric must read CF=0, because an explicit ovoid (w33_ovoid_construct.py)
 gives a noncontextual model satisfying every context. This witness closes the loop by running the
 demonstrator's OWN estimators (bt1901 normal-window, bt1904 exact-binomial) on BOTH arms and showing
@@ -199,7 +199,7 @@ def main():
         "sources": [
             "bt1901_contextual_fraction_estimator / bt1904_exact_contextual_fraction_estimator (unmodified)",
             "w33_ovoid_construct (even-q ovoid = noncontextual model)",
-            "holonet_demonstrator_protocol_v1.tex / holonet_parity_control.tex",
+            "papers/standalone/holonet_demonstrator_protocol_v1.tex / papers/standalone/holonet_parity_control.tex",
         ],
     }
     with open("data/holonet_control_arm.json", "w") as fh:

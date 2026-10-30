@@ -83,6 +83,6 @@ out={"status":"PASS_TOE54_FINITE_BLOCH_EXACT_GLOBAL_LORENTZ_OBSTRUCTION",
 "n_samples":len(rows),"squared_continuum_speed_target":2.0,
 "samples":rows,"directional_finite_k_summary":bydir,
 "physics_boundary":"No exact Lorentz invariance at finite lattice spacing for this specified finite-band model; does NOT forbid Lorentz-invariant continuum limits, approximate emergent relativity, nonlocal actions, or interactions restoring symmetry. Does not establish photons or gravity.",
-"prior_art":"Generic bounded periodic lattice dispersion versus continuum light cone is standard lattice field theory/homogenization. New scoped to the chosen W33 Bloch Maxwell operator and quantified here; no claim of original general no-go theorem."}
+"prior_art":"Generic bounded periodic lattice dispersion versus continuum light cone is standard lattice field docs/theory/homogenization. New scoped to the chosen W33 Bloch Maxwell operator and quantified here; no claim of original general no-go theorem."}
 (R/"data/w33_20261013_toe54_finite_lorentz_dispersion.json").write_text(json.dumps(out,indent=2)+"\n")
 print("TOE54",json.dumps({"status":out["status"],"summary":bydir},indent=2),flush=True)

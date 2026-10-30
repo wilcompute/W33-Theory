@@ -1,6 +1,6 @@
 # BT896 — Transvection Paper Reflection Patch
 
-This patch updates `standard_model_from_one_transvection.tex` after BT893--BT895.
+This patch updates `papers/standalone/standard_model_from_one_transvection.tex` after BT893--BT895.
 
 ## Correction applied
 
@@ -31,7 +31,7 @@ The abstract, scope paragraph, and witness ledger now point to the BT858--BT895 
 ## Files touched
 
 ```text
-standard_model_from_one_transvection.tex
+papers/standalone/standard_model_from_one_transvection.tex
 ```
 
 The patch is intentionally narrow: it does not change the master theorem, gauge/color/electroweak claims, gravity/zeta layer, or finite spectral input. It only repairs the Yukawa/flavor paragraph so the manuscript matches BT893--BT895.

@@ -95,7 +95,7 @@ def test_primary_publications_state_the_true_cubic_and_switch() -> None:
 
 def test_legacy_manuscripts_have_visible_status_boundaries() -> None:
     w36 = (ROOT / "W36_PAPER.tex").read_text(encoding="utf-8")
-    v2 = (ROOT / "w33_paper_v2.tex").read_text(encoding="utf-8")
+    v2 = (ROOT / "papers/standalone/w33_paper_v2.tex").read_text(encoding="utf-8")
     assert "Status: superseded historical synthesis" in w36
     assert "Audited finite conclusion" in w36
     assert "Superseded development draft" in v2

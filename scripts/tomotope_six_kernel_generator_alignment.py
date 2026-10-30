@@ -177,7 +177,7 @@ def build_alignment() -> dict[str, Any]:
             for name, action in induced.items()
         },
         "raw_generators_on_edges": generators,
-        "docs/notes": (
+        "notes": (
             "A six-slot kernel partition is extracted directly from the published "
             "12-edge tomotope generators via a central fixed-point-free involution. "
             "Each generator induces a well-defined permutation on the six slots."

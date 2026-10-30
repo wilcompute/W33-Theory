@@ -18,7 +18,7 @@ odd order q = 3 the witness shows the OBSTRUCTION instead: no ovoid exists (the 
 contextual.
 
 This makes the demonstrator's control arm concrete. The photonic contextuality test
-(holonet_demonstrator_protocol_v1.tex) measures the q = 3 fabric and expects CF = 1/10. Run the SAME
+(papers/standalone/holonet_demonstrator_protocol_v1.tex) measures the q = 3 fabric and expects CF = 1/10. Run the SAME
 apparatus on an even-order analyzer map (W(2) 15 rays / W(4) 85 rays) and the prediction flips to CF = 0,
 and THIS file is the explicit model that produces every expected outcome: the ovoid assignment. The
 positive arm and the control arm are the same hardware with opposite, geometry-forced predictions.

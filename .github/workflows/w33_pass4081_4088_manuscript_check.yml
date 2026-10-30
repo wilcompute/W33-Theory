@@ -17,12 +17,12 @@ jobs:
       - uses: WtfJoke/setup-tectonic@v3
         with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
       - run: |
-          mkdir -p evidence/pass4081_4088
+          mkdir -p docs/evidence/pass4081_4088
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4081_4088/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass4081_4088/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
       - uses: actions/upload-artifact@v4
         with:
           name: pass4081-4088-manuscripts
-          path: evidence/pass4081_4088/**
+          path: docs/evidence/pass4081_4088/**

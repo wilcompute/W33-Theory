@@ -4,7 +4,7 @@ PART CCCXII - Dirac Determinant / Operator Compiler
 ===================================================
 
 Trigger:
-    Re-reading the paper surfaces, especially w33_paper_v2.tex, which centers
+    Re-reading the paper surfaces, especially papers/standalone/w33_paper_v2.tex, which centers
     the one-line determinant
 
         Z(x) = (1-5x)^10 (1+x)^16 (1+7x)^6.
@@ -176,7 +176,7 @@ def dirac_determinant_operator_compiler_audit() -> Dict[str, object]:
         "status": "exact bridge from paper determinant to live operator stack",
         "source_links": {
             "paper_main": "paper/main.tex",
-            "w33_paper_v2": "w33_paper_v2.tex",
+            "w33_paper_v2": "papers/standalone/w33_paper_v2.tex",
             "normalized_markov_CCCXI": "Normalized Markov / Krein Compiler",
             "seidel_CCCIX": "Seidel Switching / Master Compiler",
             "line_graph_CCCVIII": "Line Graph / Hashimoto Shell Bridge",

@@ -10,7 +10,7 @@ Fetched/reviewed master at6dacc31d9, no incoming science. Read12006–12010 in f
 
 11921 already identifies flux-selected flavour qutrits and11927 already identifies Fourier modes as local-adjoint Pauli spurions.11588 distinguishes internal family zero modes from a4D spacetime index;12010 constructs a different4D native SU3 index. Magnetic translation and magnetized flavour mechanisms are standard. Here we implement a finite2D overlap zero-mode module with actual translation matrices; the internal torus remains external additional geometry.
 
-Result/formula searches covered the previous failure, common-scale running, single-spurion spectral alignment, commutant, proper-time species suppression, magnetic translations, H27 and zero modes across RESULTS_INDEX, recent analysis reports/scripts, certificates and site/paper frontier passages. No claim of exhaustive sentence-by-sentence reading of the full corpus is made.
+Result/formula searches covered the previous failure, common-scale running, single-spurion spectral alignment, commutant, proper-time species suppression, magnetic translations, H27 and zero modes across RESULTS_INDEX, recent analysis docs/reports/scripts, certificates and site/paper frontier passages. No claim of exhaustive sentence-by-sentence reading of the full corpus is made.
 
 ##12011: the absolute b/tau comparator can be matched after actual running and refitting
 

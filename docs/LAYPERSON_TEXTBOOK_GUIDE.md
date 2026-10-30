@@ -275,7 +275,7 @@ python -m pytest tests/test_heisenberg_qutrit_structure.py -q
 What to look for:
 
 - script and test both succeed
-- docs describing this path can be traced in `reports/auto_ingest/`
+- docs describing this path can be traced in `docs/reports/auto_ingest/`
 
 ## 9.5 Interpretation checklist
 

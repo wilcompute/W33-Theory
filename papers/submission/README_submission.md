@@ -6,7 +6,7 @@
 |---|---|
 | `main.tex` | Root document (includes §0-intro, §§1,4,5, bibliography) |
 | `section2_uniqueness.tex` | §2: C1-C5 Uniqueness Theorem |
-| `section3_tau_bridge.tex` | §3: Tau bridge, C5 curve, j-tower, C6 |
+| `papers/standalone/section3_tau_bridge.tex` | §3: Tau bridge, C5 curve, j-tower, C6 |
 | `arXiv_metadata.txt` | Title, abstract, MSC, categories |
 
 ## Compile

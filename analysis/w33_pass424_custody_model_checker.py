@@ -102,7 +102,7 @@ def build_payload()->dict:
     histogram={}
     for c in cases.values():
         key=','.join(c['v2_errors']);histogram[key]=histogram.get(key,0)+1
-    payload={'schemas':'w33.pass424.custody_model_checker.v1','status':'PASS' if all(checks.values()) else 'FAIL',
+    payload={'schema':'w33.pass424.custody_model_checker.v1','status':'PASS' if all(checks.values()) else 'FAIL',
       'model':{'artifact_stages':8,'attack_generators':len(muts),'bounded_attack_depth':2,'unique_mutated_states':len(cases),'formal_spec':'docs/specs/W33Pass424Custody.tla'},
       'theorem':{
        'safety':'every unique state reachable from the honest chain by one or two modeled replay, rollback, reordering, deletion, equivocation, key-collision, or claim-forgery attacks violates at least one v2 invariant',

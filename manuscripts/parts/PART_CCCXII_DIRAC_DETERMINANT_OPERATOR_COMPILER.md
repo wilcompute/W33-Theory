@@ -7,11 +7,11 @@
 
 ## 1. Paper-reading trigger
 
-The paper directory review clarifies that the repo currently has multiple active manuscript surfaces: `paper/main.tex`, `w33_paper_v2.tex`, and `PART_LXIII_ARXIV_COMPLETE_PAPER.tex`.  It also says `paper/main.tex` is the actual `paper/` directory manuscript, while `w33_paper_v2.tex` is the broader root-level paper surface.  fileciteturn397file0
+The paper directory review clarifies that the repo currently has multiple active manuscript surfaces: `paper/main.tex`, `papers/standalone/w33_paper_v2.tex`, and `PART_LXIII_ARXIV_COMPLETE_PAPER.tex`.  It also says `paper/main.tex` is the actual `paper/` directory manuscript, while `papers/standalone/w33_paper_v2.tex` is the broader root-level paper surface.  fileciteturn397file0
 
 The current `paper/main.tex` manuscript frames W(3,3) around the Ramanujan graph, arithmetic uniqueness, tau bridge, spectral moments, motivic cohomology, and quantum gravity.  Its boundary section says the live exact boundary rests on mutually consistent layers selecting `q=3`, including the qutrit kernel packet, spectral packet, continuum coefficient seed, residual fermion seed, and transport reduction.  fileciteturn398file0
 
-The broader `w33_paper_v2.tex` manuscript centers the one-line determinant
+The broader `papers/standalone/w33_paper_v2.tex` manuscript centers the one-line determinant
 
 \[
 Z(x)=(1-5x)^{10}(1+x)^{16}(1+7x)^6.

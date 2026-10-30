@@ -18,10 +18,10 @@ over earlier intermediate claims.
 
 The three canonical root TeX files are wrappers around large body files plus the
 shared frontier tail. The full body files were loaded and scanned line-by-line for
-section structure, imports, evidence/boundary language, errata, and current frontier
+section structure, imports, docs/evidence/boundary language, errata, and current frontier
 handoffs:
 
-| body | bytes | lines | headings | evidence/boundary flagged lines |
+| body | bytes | lines | headings | docs/evidence/boundary flagged lines |
 |---|---:|---:|---:|---:|
 | w33_paper_body.tex | 827,488 | 16,964 | 585 | 205 |
 | photonic_holonet_body.tex | 563,859 | 9,753 | 159 | 168 |

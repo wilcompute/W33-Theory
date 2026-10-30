@@ -30,7 +30,7 @@ it is not a new mediator architecture. Its documented running cost and
 family-SU3 UV boundary remain applicable to any assembled model.
 
 Searches covered result strings as well as keywords in RESULTS_INDEX.md,
-current reports/scripts, docs/index.html and w33_paper.tex. In particular,
+current docs/reports/scripts, docs/index.html and w33_paper.tex. In particular,
 79/4,79/6, the integer80948591928, hollowisation, Schur complements, diagonal
 determinant scaling, sextet sources, radial homotopy, false acceptance and
 effective resistance were checked. The exact applications are not claims of

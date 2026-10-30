@@ -119,12 +119,12 @@ def run_bundle(bundle_dir: Path, out_dir: Path, python_exe: str) -> dict[str, ob
         "bundle_dir": str(bundle_dir),
         "out_dir": str(out_dir),
         "status": "ok",
-        "docs/notes": [],
+        "notes": [],
     }
     compatible, missing = is_compatible_bundle(bundle_dir)
     if not compatible:
         result["status"] = "skipped_incompatible"
-        result["docs/notes"] = [f"Missing required files: {', '.join(missing)}"]
+        result["notes"] = [f"Missing required files: {', '.join(missing)}"]
         result["matches"] = None
         result["total"] = None
         return result
@@ -147,7 +147,7 @@ def run_bundle(bundle_dir: Path, out_dir: Path, python_exe: str) -> dict[str, ob
         result["total"] = total
     except Exception as exc:
         result["status"] = "error"
-        result["docs/notes"] = [str(exc)]
+        result["notes"] = [str(exc)]
         result["matches"] = None
         result["total"] = None
     return result
@@ -166,7 +166,7 @@ def build_markdown_summary(summary: dict[str, object]) -> str:
     lines.append("| Bundle | Status | Matches | Total | Notes |")
     lines.append("|---|---|---:|---:|---|")
     for row in summary["results"]:
-        notes = "; ".join(row.get("docs/notes", []))
+        notes = "; ".join(row.get("notes", []))
         lines.append(
             f"| `{row['bundle_dir']}` | `{row['status']}` | {row.get('matches')} | {row.get('total')} | {notes} |"
         )

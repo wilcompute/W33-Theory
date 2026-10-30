@@ -52,15 +52,15 @@ jobs:
           vvp /tmp/joint.vvp
       - name: Synthesize and place new datapaths
         run: |
-          mkdir -p evidence/pass2946_2952
+          mkdir -p docs/evidence/pass2946_2952
           for item in \
             'router rtl/w33_pass2948_spread_router.sv w33_pass2948_spread_router' \
             'transcript rtl/w33_pass2949_reversible_transcript_permutation.sv w33_pass2949_transcript_compress' \
             'quarter rtl/w33_pass2951_isodual_quarter_turn.sv w33_pass2951_isodual_quarter_turn' \
             'joint rtl/w33_pass2952_joint_rank_codec.sv w33_pass2952_joint_rank_encode'; do
               set -- $item; name=$1; src=$2; top=$3
-              yosys -p "read_verilog -sv $src; synth_ice40 -top $top -json /tmp/$name.json; stat" | tee evidence/pass2946_2952/${name}_yosys.log
-              nextpnr-ice40 --hx8k --package ct256 --json /tmp/$name.json --asc /tmp/$name.asc --freq 12 --pcf-allow-unconstrained |& tee evidence/pass2946_2952/${name}_nextpnr.log
+              yosys -p "read_verilog -sv $src; synth_ice40 -top $top -json /tmp/$name.json; stat" | tee docs/evidence/pass2946_2952/${name}_yosys.log
+              nextpnr-ice40 --hx8k --package ct256 --json /tmp/$name.json --asc /tmp/$name.asc --freq 12 --pcf-allow-unconstrained |& tee docs/evidence/pass2946_2952/${name}_nextpnr.log
           done
       - name: Integrate canonical artifacts
         run: |
@@ -88,7 +88,7 @@ jobs:
             data/PART_BT2950*_results.json
             data/PART_BT2951*_results.json
             data/PART_BT2952*_results.json
-            evidence/pass2946_2952/*
+            docs/evidence/pass2946_2952/*
             holonet_machine_blueprint.pdf
             w33_paper.pdf
             photonic_holonet.pdf

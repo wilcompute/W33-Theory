@@ -312,7 +312,7 @@ def main():
             "\n".join(lines), encoding="utf-8"
         )
         print(
-            "Wrote artifacts/forbid_full_aut_orbit_analysis.json and reports/forbid_full_aut_orbit_analysis.md (AGL fallback)"
+            "Wrote artifacts/forbid_full_aut_orbit_analysis.json and docs/reports/forbid_full_aut_orbit_analysis.md (AGL fallback)"
         )
         return
 
@@ -405,7 +405,7 @@ def main():
         "\n".join(lines), encoding="utf-8"
     )
     print(
-        "Wrote artifacts/forbid_full_aut_orbit_analysis.json and reports/forbid_full_aut_orbit_analysis.md"
+        "Wrote artifacts/forbid_full_aut_orbit_analysis.json and docs/reports/forbid_full_aut_orbit_analysis.md"
     )
 
 

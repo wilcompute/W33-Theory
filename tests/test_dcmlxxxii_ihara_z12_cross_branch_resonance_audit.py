@@ -27,9 +27,9 @@ def test_part_metadata_and_static_remote_sources_are_pinned() -> None:
     assert summary["decimal"] == 982
     assert summary["remote_main_commit"] == "ec327312"
     assert {source["file"] for source in sources} == {
-        "NOTES/BREAKTHROUGH_MAY17_2026.md",
-        "NOTES/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
-        "NOTES/BREAKTHROUGH21_MASTER_THEOREM_MAY18.md",
+        "docs/notes/BREAKTHROUGH_MAY17_2026.md",
+        "docs/notes/HEEGNER_IHARA_BREAKTHROUGH_MAY18_2026.md",
+        "docs/notes/BREAKTHROUGH21_MASTER_THEOREM_MAY18.md",
     }
     assert all(source["commit"] == "ec327312" for source in sources)
     assert ids["part_number_is_982"] is True

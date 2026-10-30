@@ -60,8 +60,8 @@ if [[ "${1:-}" == "--arxiv" ]]; then
     cp "${PAPER}_arxiv.tex" "${BUNDLE}/"
     cp "${PAPER}.bbl"       "${BUNDLE}/" 2>/dev/null || true
     mkdir -p "${BUNDLE}/figures"
-    cp figures/*.pdf        "${BUNDLE}/figures/" 2>/dev/null || true
-    cp figures/*.svg        "${BUNDLE}/figures/" 2>/dev/null || true
+    cp docs/figures/*.pdf        "${BUNDLE}/figures/" 2>/dev/null || true
+    cp docs/figures/*.svg        "${BUNDLE}/figures/" 2>/dev/null || true
     tar -czf "${BUNDLE}.tar.gz" "${BUNDLE}/"
     rm -rf "${BUNDLE}/"
     echo "      ✓  ${BUNDLE}.tar.gz ready for arXiv upload"

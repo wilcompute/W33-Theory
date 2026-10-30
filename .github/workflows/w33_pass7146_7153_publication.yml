@@ -61,7 +61,7 @@ jobs:
           from pathlib import Path
           clique=Path('data/PART_W33_PASS7146_EXACT_EIGHT_CLIQUES.json')
           d={
-            'schemas':'w33.pass7146_7153.publication_proof.v1',
+            'schema':'w33.pass7146_7153.publication_proof.v1',
             'status':'PASS',
             'source_commit':os.environ['GITHUB_SHA'],
             'pgl2_hexad_code_replayed':True,

@@ -1,7 +1,7 @@
 """W(3,3) BREAKTHROUGH 73: SINGLE-PHOTON SELF-ENTANGLEMENT BELL QUTRIT.
 
 Consolidation of single_photon_universal_computation.tex (2361 lines) and
-self_entanglement_companion.tex (394 lines). The substrate emerges from ONE
+papers/standalone/self_entanglement_companion.tex (394 lines). The substrate emerges from ONE
 photon's past x future temporal Bell qutrit |Omega>. No two-photon Bell
 pair needed; self-entanglement on a single photon hosts all of W(3,3).
 

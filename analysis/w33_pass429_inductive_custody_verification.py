@@ -118,7 +118,7 @@ def build_payload()->dict:
       'tla_uses_temporal_invariant':'Spec => []Safety' in spec,
       'proof_is_not_bounded_attack_enumeration':True,
     };checks={k:bool(v) for k,v in checks.items()}
-    payload={'schemas':'w33.pass429.inductive_custody_verification.v1','status':'PASS' if all(checks.values()) else 'FAIL',
+    payload={'schema':'w33.pass429.inductive_custody_verification.v1','status':'PASS' if all(checks.values()) else 'FAIL',
       'theorem':{
        'unbounded_safety':'by induction on event count, Init satisfies Safety and every enabled Append or Finalize transition preserves Safety; therefore every finite prefix of every arbitrarily long interleaving is safe',
        'scope':'the number of studies and event interleavings is unbounded at the transition-system level; each study has the fixed eight-stage preregistered protocol',

@@ -403,7 +403,7 @@ The independent complete clique rerun is intentionally isolated:
 
 ```bash
 python analysis/bt3535_star_clique_recertify.py \
-  --json evidence/pass3535_3541/star_clique_full.json
+  --json docs/evidence/pass3535_3541/star_clique_full.json
 ```
 
 ## Claim boundaries

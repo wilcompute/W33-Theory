@@ -17,7 +17,7 @@ import w33_pass7138_7145_c2_normalform_matrix_quotient as q
 TYPES=[(1,1,2),(1,1,3),(1,1,4),(1,1,5),(1,2,3),(1,2,4),(1,3,4),(1,3,5)]
 STATES=[(1,a,b,c) for a in range(1,9) for b in range(1,9) for c in range(1,9)]
 idx=int(os.environ['CASE_INDEX']); rep=TYPES[idx]
-out=Path(os.environ.get('CASE_OUTPUT',f'evidence/pass7154/case_{idx}.json'))
+out=Path(os.environ.get('CASE_OUTPUT',f'docs/evidence/pass7154/case_{idx}.json'))
 out.parent.mkdir(parents=True,exist_ok=True)
 Gi=p.invmat9(q.canonical_anchor_G(rep)); bad=[]
 for i in range(512):

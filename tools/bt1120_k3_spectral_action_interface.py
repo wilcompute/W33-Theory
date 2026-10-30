@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """BT1120/BT1131 K3 spectral-action interface.
 
-This is a schema/adapter skeleton, not a curvature solver. It validates that a
+This is a schemas/adapter skeleton, not a curvature solver. It validates that a
 K3 spectral-action result reports the convention data needed to interpret the
 pure manifold coefficients A0, A2, and A4, then emits a normalized JSON envelope.
 

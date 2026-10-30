@@ -56,8 +56,8 @@ jobs:
         run: pytest -q tests/test_w33_pass4571_4578_composition_enumerator_binary.py
       - name: Dry-run safe restored-site materializer
         run: |
-          mkdir -p evidence/pass4571_4578
-          python tools/integrate_bt3376_bt3389.py --report evidence/pass4571_4578/site.json
+          mkdir -p docs/evidence/pass4571_4578
+          python tools/integrate_bt3376_bt3389.py --report docs/evidence/pass4571_4578/site.json
           test "$(grep -c 'id=\"pass4571-4578-composition-enumerator-binary\"' docs/index.html)" -eq 1
           grep -q '350,343,565' docs/apartment-composition-enumerator-binary.html
           grep -q 'full enumerator is still open' analysis/PASS4571_4578_composition_enumerator_binary_index_insert.html
@@ -65,9 +65,9 @@ jobs:
         with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
       - name: Compile canonical manuscripts
         run: |
-          mkdir -p evidence/pass4571_4578
+          mkdir -p docs/evidence/pass4571_4578
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4571_4578/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass4571_4578/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
       - name: Evidence boundaries
@@ -81,7 +81,7 @@ jobs:
         with:
           name: pass4571-4578-composition-enumerator-binary-evidence
           path: |
-            evidence/pass4571_4578/**
+            docs/evidence/pass4571_4578/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

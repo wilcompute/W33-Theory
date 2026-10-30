@@ -1,6 +1,6 @@
 """W(3,3) MCXI-MCXX: SELF-ENTANGLEMENT COMPANION FINAL HARVEST.
 
-Final harvest of self_entanglement_companion.tex (394 lines, full read).
+Final harvest of papers/standalone/self_entanglement_companion.tex (394 lines, full read).
 Captures the strongest companion-paper substrate identities not yet
 captured by the single_photon batches: the (q!)! optimal Witting KS
 markings, three-generation Bell-qutrit storage 27 = 2*Phi_3 + 1, gauge-

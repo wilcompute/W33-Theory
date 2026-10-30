@@ -60,7 +60,7 @@ def main() -> None:
         "PART_BT2771_REMOTE_QUTRIT_SUM_LINK.json",
     ]
     out = {
-        "schemas": "w33.pass2767_2771.release.v1",
+        "schema": "w33.pass2767_2771.release.v1",
         "status": "COMPLETE_LOCAL_EXACT_REMOTE_PNR_PENDING",
         "checks": checks,
         "check_count": len(checks),

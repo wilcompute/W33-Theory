@@ -105,7 +105,7 @@ def main() -> dict:
     ROWS.write_text("\n".join(row_lines) + "\n")
     ORBITS.write_text("\n".join(f"{rep} {size}" for rep, size in orbits) + "\n")
     result = {
-        "schemas": "w33.pass1876.exact_dual_inputs.v1",
+        "schema": "w33.pass1876.exact_dual_inputs.v1",
         "status": "PASS",
         "full_group_order": len(group),
         "six_line_pack_stabilizer_order": len(stabilizer),

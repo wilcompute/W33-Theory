@@ -482,7 +482,7 @@ def main():
         },
         "deltaL6_exact_on_candidates": dl6_stats,
         "deltaL7_sample": dl7_stats,
-        "docs/notes": {
+        "notes": {
             "second_CE_sum_vanishes": "For g1 inputs, [g1,g1]→g2, so the [xi,xj]-substitution terms vanish.",
             "l7_convention": "l7 = -δl6",
             "dedup_method": "Nonzero results tracked via packed bytes keys; zero results may be recomputed.",

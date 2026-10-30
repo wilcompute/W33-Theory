@@ -1,6 +1,6 @@
 """W(3,3) MLXI-MLXX: TOE MASTER SYNTHESIS PRECISION SUBSTRATE.
 
-Deep harvest from toe_master_synthesis.tex (1688 lines).
+Deep harvest from papers/standalone/toe_master_synthesis.tex (1688 lines).
 Captures the strongest NEW substrate predictions: muon g-2 anomaly,
 kaon CP violation epsilon_K, n-qutrit Pauli hierarchy, m_Planck in GeV
 from holographic state count, primordial helium, neutron lifetime,
@@ -130,7 +130,7 @@ expansions of Standard Model + LCDM constants:
 
   (constant) = (leading substrate ratio) + (small substrate correction)
 
-Examples (from toe_master_synthesis.tex):
+Examples (from papers/standalone/toe_master_synthesis.tex):
 
   alpha^-1 = 137 + 1/28 + 4/14045
   alpha_s^-1(m_Z) = 110/13 + 1/74
@@ -301,7 +301,7 @@ def main() -> None:
     headline = (
         "MLXI-MLXX: TOE MASTER SYNTHESIS PRECISION SUBSTRATE.\n"
         "\n"
-        "Deep harvest from toe_master_synthesis.tex.  STRONGEST NEW substrate\n"
+        "Deep harvest from papers/standalone/toe_master_synthesis.tex.  STRONGEST NEW substrate\n"
         "predictions:\n"
         "\n"
         "ANOMALY PREDICTIONS:\n"

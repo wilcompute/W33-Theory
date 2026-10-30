@@ -226,7 +226,7 @@ def main() -> int:
                     f"{fc},{j}": int(v) for (fc, j), v in sorted(class_counts.items())
                 },
             },
-            "docs/notes": {
+            "notes": {
                 "vacuum_line_tetrahedra_are_flux_free": bool(
                     np.all(J[flat_face_count == 4] == 0)
                 ),

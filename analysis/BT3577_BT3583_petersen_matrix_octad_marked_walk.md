@@ -146,7 +146,7 @@ It satisfies the order and regularity shell while redistributing the unique-comm
 
 ```bash
 python analysis/bt3577_3583_petersen_matrix_octad_marked_walk.py
-python analysis/bt3580_star_proof_canary.py --json evidence/pass3577_3583/canary.json
+python analysis/bt3580_star_proof_canary.py --json docs/evidence/pass3577_3583/canary.json
 pytest -q tests/test_bt3577_bt3583_petersen_matrix_octad_marked_walk.py
 ```
 
