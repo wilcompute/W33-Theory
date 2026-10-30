@@ -1,0 +1,18 @@
+# Optional dependencies: each is imported by fewer than ~25 files, and tests that need one skip without it.
+# py -3 -m pip install -r requirements-optional.txt   (some have no wheels on every platform; failures here are not fatal)
+numba
+cvxpy
+qiskit-aer
+pycryptosat
+ripser
+persim
+mmgroup
+python-flint
+jax
+thewalrus
+pulp
+pynauty
+psutil
+scikit-learn
+galois
+pypdf

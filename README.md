@@ -317,6 +317,9 @@ alone with `cd formal && lake build W33.<Module>`. The history of the build, inc
 
 Commands use the Windows launcher; on Unix, replace `py -3` with `python3`.
 
+**On a fresh clone**, run `pwsh -File scripts/bootstrap.ps1` (packages and hooks), then `py -3 scripts/doctor.py` (one screen:
+what is installed and what is missing). Moving to another computer is covered in [`docs/SETUP.md`](docs/SETUP.md).
+
 ```bash
 # the flagship exceptional bridge (GAP owns the computation)
 gap -q analysis/w33_pass1147_schlaefli_steinberg_fourier_bridge.g

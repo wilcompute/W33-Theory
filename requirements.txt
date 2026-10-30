@@ -1,10 +1,21 @@
-jsonschema
-matplotlib
-mpmath
-networkx
-numba
+# Core dependencies: imported by hundreds of files (census 2026-10-30; `py -3 scripts/doctor.py` checks them).
+# Optional, used by a handful of passes each: requirements-optional.txt.  External tools (tectonic, GAP, PARI, Lean, Sage,
+# orbifolder): see docs/SETUP.md.
 numpy
-pandas
-requests
 scipy
 sympy
+networkx
+mpmath
+pandas
+matplotlib
+ortools
+python-igraph
+python-sat
+pycddlib
+pyyaml
+jsonschema
+requests
+pytest
+pytest-xdist
+pytest-timeout
+pre-commit
