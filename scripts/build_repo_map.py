@@ -77,8 +77,15 @@ def main():
     L += ["", f"## Root files ({len(rootfiles)})", "",
           "Root files that stay are importable Python modules, files other files reference by name, and the indexed corpus globs "
           "(PASS*.md, AUDIT*.md, BT*.md, PART*.md, *.tex). By type: " + ", ".join(f"{k} {v}" for k, v in kinds.most_common()) + ".", "",
-          f"## Not yet described ({len(und)} directories -- add a line to DESCRIBE in scripts/build_repo_map.py)", "",
-          ", ".join(f"`{d}/` ({n})" for d, n in und), ""]
+          f"## Other directories ({len(und)})", "",
+          "No curated description yet; shown with the commit that created them.  None can move: scripts/repo_hygiene.py dirs-plan "
+          "found every one named by a workflow / index / build config or referenced by path (2026-10-30).", "",
+          "| directory | tracked files | created by |", "|---|---:|---|"]
+    for d, n in und:
+        first = subprocess.run(["git", "log", "--diff-filter=A", "--format=%ad %h %s", "--date=short", "--", d + "/"], cwd=ROOT,
+                               capture_output=True, text=True, encoding="utf-8", errors="replace").stdout.strip().splitlines()
+        L.append(f"| `{d}/` | {n} | {(first[-1][:110] if first else '').replace('|', '/')} |")
+    L.append("")
     (ROOT / "REPO_MAP.md").write_text("\n".join(L), encoding="utf-8")
     print(f"REPO_MAP.md: {len(top)} directories ({len(top) - len(und)} described), {len(rootfiles)} root files")
 

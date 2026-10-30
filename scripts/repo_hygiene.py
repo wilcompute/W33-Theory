@@ -88,8 +88,60 @@ def plan():
     return moves, why
 
 
+MAX_DIR_FILES = 60                                   # "small" top-level directory
+DIR_KEEP = {"analysis", "data", "tests", "archive", "manuscripts", "tools", "exploration", "scripts", "docs", "papers", "formal", "src",
+            "w33", "lib", "bootstrap", "schemas", "schema", "config", "examples", "notebooks", "hardware", "rtl", "proofs", "passes",
+            "pillars", "legacy", "artifacts", "committed_artifacts", "bundles", "paper", "build", "dist", "out", "assets", "figures",
+            "utils", "code", "sage", "lean", "specs", "submission", "theory", "results", "reports", "checks", "evidence", "theorems",
+            "chains", "patches", "NOTES", "notes", "tex", "presentations", "visualizations", "matrices"}
+
+
+def dir_plan():
+    """Small top-level directories nothing references by name, untouched for AGE_DAYS, not a package, not matched by an index /
+    workflow glob -> archive/dirs_root/<name>/.  Conventional names (DIR_KEEP) are never moved, whatever their size."""
+    files = git("ls-files").splitlines()
+    size = collections.Counter(f.split("/")[0] for f in files if "/" in f)
+    cand = [d for d, n in size.items() if n <= MAX_DIR_FILES and d not in DIR_KEEP and not d.startswith(".")]
+    globs = []
+    for f in files:
+        if f.startswith(".github/workflows/") or f in ("analysis/build_results_index.py", "analysis/w33_pass398_formula_search_universe.py",
+                                                         "scripts/prepare_legacy_test_fixtures.py", "pyproject.toml", "setup.py"):
+            try:
+                globs.append(open(os.path.join(ROOT, f), encoding="utf-8", errors="ignore").read())
+            except OSError:
+                pass
+    cfg = "\n".join(globs)
+    now = time.time(); moves = []; why = collections.Counter()
+    for d in sorted(cand):
+        inside = [f for f in files if f.startswith(d + "/")]
+        if any(f.endswith("__init__.py") for f in inside):
+            why["keep (python package)"] += 1; continue
+        if d in cfg or any(fnmatch.fnmatchcase(d, g) for g in ("*_BUNDLE*", "*_bundle*", "*_deliverable*", "V2*_output*")):
+            why["keep (named by a workflow / index / build config)"] += 1; continue
+        t = git("log", "-1", "--format=%ct", "--", d + "/").strip()
+        if t and now - int(t) < AGE_DAYS * 86400:
+            why[f"keep (changed in the last {AGE_DAYS} days)"] += 1; continue
+        hits = [h for h in git("grep", "-I", "-l", "-F", "-e", d + "/", "--", ".", f":(exclude){d}/**", ":(exclude).continuity/**",
+                                "-e", d + "\\").splitlines() if os.path.basename(h) not in GENERATED]
+        if hits:
+            why["keep (referenced by path)"] += 1; continue
+        moves.append((d, f"archive/dirs_root/{d}")); why["move"] += 1
+    return moves, why
+
+
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "report"
+    if cmd in ("dirs-plan", "dirs-apply"):
+        moves, why = dir_plan()
+        for k, v in why.most_common(): print(f"  {v:5d}  {k}")
+        for a, b in moves:
+            if cmd == "dirs-plan":
+                print(f"git mv {a} {b}")
+            else:
+                os.makedirs(os.path.join(ROOT, "archive/dirs_root"), exist_ok=True)
+                subprocess.run(["git", "-C", ROOT, "mv", a, b], check=True)
+        if cmd == "dirs-apply": print(f"moved {len(moves)} directories")
+        return 0
     moves, why = plan()
     if cmd in ("report", "plan"):
         print(f"root tracked files: {sum(why.values())}")

@@ -29,6 +29,11 @@ on:
   pull_request:
     branches: [master]
   workflow_dispatch:
+  # 2026-10-30: the freeze (generate + commit) runs every 6 hours and on dispatch, not on every push.  Per-push freezing produced
+  # ~1000 bot commits; git history already dates every formula's first appearance exactly, so a 6-hourly frozen snapshot loses no
+  # prospective-credit evidence.  Pushes still run the verification steps above the freeze.
+  schedule:
+    - cron: '17 */6 * * *'
 
 permissions:
   contents: write
@@ -61,7 +66,7 @@ jobs:
       - name: Verify live claims ledger
         run: python scripts/check_claims_ledger.py
       - name: Generate the complete repository formula universe
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           python analysis/w33_pass398_formula_search_universe.py \
             --root . \
@@ -69,7 +74,7 @@ jobs:
             --repository-head "$GITHUB_SHA" \
             --frozen-at "$(git show -s --format=%cI "$GITHUB_SHA")"
       - name: Commit the frozen formula universe when changed
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           if git diff --quiet -- data/w33_formula_search_universe_v1.json && git ls-files --error-unmatch data/w33_formula_search_universe_v1.json >/dev/null 2>&1; then
             echo 'Formula universe already current.'
