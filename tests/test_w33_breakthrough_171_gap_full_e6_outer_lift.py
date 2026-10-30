@@ -8,12 +8,19 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from analysis.w33_BREAKTHROUGH_171_gap_full_e6_outer_lift import (  # noqa: E402
-    gap_full_e6_outer_lift_packet,
-)
+import pytest  # noqa: E402
+try:
+    from analysis.w33_BREAKTHROUGH_171_gap_full_e6_outer_lift import (  # noqa: E402
+        gap_full_e6_outer_lift_packet,
+    )
+except RuntimeError as _e:  # the module needs the GAP executable at import time (2026-10-30)
+    pytest.skip(f"GAP not available: {_e}", allow_module_level=True)
 
 
-PACKET = gap_full_e6_outer_lift_packet()
+try:
+    PACKET = gap_full_e6_outer_lift_packet()
+except RuntimeError as _e:  # runs GAP at import; skip where GAP is not installed
+    pytest.skip(f"GAP not available: {_e}", allow_module_level=True)
 
 
 def test_bt171_lifts_projective_half_to_full_w_e6() -> None:

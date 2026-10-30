@@ -8,12 +8,19 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from analysis.w33_BREAKTHROUGH_170_gap_projective_e6_stabilizer_cascade import (  # noqa: E402
-    gap_projective_e6_stabilizer_cascade_packet,
-)
+import pytest  # noqa: E402
+try:
+    from analysis.w33_BREAKTHROUGH_170_gap_projective_e6_stabilizer_cascade import (  # noqa: E402
+        gap_projective_e6_stabilizer_cascade_packet,
+    )
+except RuntimeError as _e:  # the module needs the GAP executable at import time (2026-10-30)
+    pytest.skip(f"GAP not available: {_e}", allow_module_level=True)
 
 
-PACKET = gap_projective_e6_stabilizer_cascade_packet()
+try:
+    PACKET = gap_projective_e6_stabilizer_cascade_packet()
+except RuntimeError as _e:  # runs GAP at import; skip where GAP is not installed
+    pytest.skip(f"GAP not available: {_e}", allow_module_level=True)
 
 
 def test_bt170_projective_order_and_kernel() -> None:

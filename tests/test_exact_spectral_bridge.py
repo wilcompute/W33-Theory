@@ -18,7 +18,10 @@ import math
 
 import numpy as np
 
-from tests.test_continuum_limit import EULER_CHI, spectral_data
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parent))  # tests/ is not a package (2026-10-30)
+from test_continuum_limit import EULER_CHI, spectral_data  # noqa: E402
 
 
 ZERO_TOL = 1e-8
