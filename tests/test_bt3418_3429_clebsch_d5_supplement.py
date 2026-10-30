@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "analysis"))
 import pytest
-packet = pytest.importorskip("bt3388_3399_clebsch_d5_fault_closure", reason="bt3388_3399 bootstrap payload truncated at upload (scripts/check_bootstrap_payloads.py)")
+packet = pytest.importorskip("bt3388_3399_clebsch_d5_fault_closure", reason="bt3388_3399 bootstrap payload truncated at upload (scripts/check_bootstrap_payloads.py)", exc_type=ImportError)
 
 
 def test_regenerates_frozen_packet() -> None:

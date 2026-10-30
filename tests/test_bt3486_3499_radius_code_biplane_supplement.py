@@ -4,7 +4,7 @@ import zlib
 from pathlib import Path
 
 import pytest
-packet = pytest.importorskip("analysis.bt3486_3499_radius_code_biplane_supplement", reason="bt3388_3399 bootstrap payload truncated at upload (scripts/check_bootstrap_payloads.py)")
+packet = pytest.importorskip("analysis.bt3486_3499_radius_code_biplane_supplement", reason="bt3388_3399 bootstrap payload truncated at upload (scripts/check_bootstrap_payloads.py)", exc_type=ImportError)
 
 
 def frozen_certificate() -> dict:
