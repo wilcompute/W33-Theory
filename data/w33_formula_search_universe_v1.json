@@ -549010,6 +549010,35 @@
     },
     {
       "file_count": 1,
+      "formula_id": "30041b49a46ef1638a32cd5b8ebd8f23630b166180a503216eba54dd5b3a6a5a",
+      "normalized_formula": ">SMrunningandnothresholds,thatthemeasuredWeinbergangleneedsk_Y\u22481.29,sofraction-freehyperchargessuchas17/3are",
+      "numeric_literals": [
+        "1.29",
+        "3",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12458_12465_VACUUM_THRESHOLDS_KLINES_MBQC.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 36,
+          "path": "analysis/PASS12458_12465_VACUUM_THRESHOLDS_KLINES_MBQC.md",
+          "raw": "> SM running and no thresholds, that the measured Weinberg angle needs k_Y \u2248 1.29, so fraction-free hypercharges such as 17/3 are",
+          "status": "retrospective_fit"
+        }
+      ],
+      "status_profile": {
+        "retrospective_fit": 1
+      },
+      "structural_family_id": "9e064e5ee1c7b565e4eda22d5472c5d67df58152b5932a3d08df82029b5c7cc5",
+      "structural_formula": ">SMrunningandnothresholds,thatthemeasuredWeinbergangleneedsk_Y\u2248#,sofraction-freehyperchargessuchas1#/#are"
+    },
+    {
+      "file_count": 1,
       "formula_id": "16d8987ad5b4abe58a268a1c6f0dd2c043cfe4812a84cb71f6ca326e078ca3e0",
       "normalized_formula": ">SU(3)xSU(2)xU(1)(StandardModel)",
       "numeric_literals": [
@@ -1392414,7 +1392443,7 @@
       "source_locations": [
         {
           "category": "relation_line",
-          "line": 97,
+          "line": 102,
           "path": "analysis/PASS12458_12465_VACUUM_THRESHOLDS_KLINES_MBQC.md",
           "raw": "is UNKNOWN in both symmetry cases after 1800 s each. **Status: open.** Deficient region = distance stays proved only at q = 3.",
           "status": "open_or_conditional"
@@ -1916982,9 +1917011,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-30T03:59:08-04:00",
+  "frozen_at": "2026-10-30T08:55:28-04:00",
   "pass": 398,
-  "repository_head": "941c48b9810a38dbaaf5f20701cb65cc51cb9e6b",
+  "repository_head": "b4a1559575e4c5978ba5059870afce6241a57a64",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2064708,6 +2064737,14 @@
       "exact_member_count": 1,
       "structural_family_id": "5f77a5fd0e53e0d882a2dab5633d4dd333a5236a38a6f8705ae8f519383492aa",
       "structural_formula": ">N=#^{##}=O3(Stab(p0))issimultaneouslytheregularsymmetryofthe"
+    },
+    {
+      "exact_formula_ids": [
+        "30041b49a46ef1638a32cd5b8ebd8f23630b166180a503216eba54dd5b3a6a5a"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "9e064e5ee1c7b565e4eda22d5472c5d67df58152b5932a3d08df82029b5c7cc5",
+      "structural_formula": ">SMrunningandnothresholds,thatthemeasuredWeinbergangleneedsk_Y\u2248#,sofraction-freehyperchargessuchas1#/#are"
     },
     {
       "exact_formula_ids": [
@@ -2429250,20 +2429287,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 93012059,
-    "exact_formula_families": 65536,
-    "files_scanned": 12815,
-    "formula_occurrences": 71710,
+    "bytes_scanned": 93042437,
+    "exact_formula_families": 65537,
+    "files_scanned": 12821,
+    "formula_occurrences": 71711,
     "status_occurrences": {
       "certified_or_theorem": 5398,
       "killed_or_retracted": 1964,
       "open_or_conditional": 2446,
       "preregistered": 36,
-      "retrospective_fit": 5451,
+      "retrospective_fit": 5452,
       "unclassified": 56415
     },
-    "structural_families": 63812
+    "structural_families": 63813
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "1fa0cb9e8198172dd61139f5f279a51f72d837f698c7d728fa10ac2391b85866"
+  "universe_sha256": "8d9ee3f508a0236e777d27c1385197713c3bcb61a30c25e83d00f2121af5b1f3"
 }
