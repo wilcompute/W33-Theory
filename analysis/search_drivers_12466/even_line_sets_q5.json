@@ -1,0 +1,13 @@
+{
+ "q": 5,
+ "lines": 156,
+ "optimal": true,
+ "seconds": 56.0,
+ "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+ "min_even_line_set": 20,
+ "verified_even": true,
+ "coverage_profile": [
+  0,
+  2
+ ]
+}

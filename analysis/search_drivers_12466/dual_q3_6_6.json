@@ -1,0 +1,13 @@
+{
+ "q": 3,
+ "weights": [
+  6,
+  6
+ ],
+ "lines": 40,
+ "status": "OPTIMAL",
+ "seconds": 0.1,
+ "weight": 6,
+ "n_lines": 2,
+ "in_kernel": true
+}

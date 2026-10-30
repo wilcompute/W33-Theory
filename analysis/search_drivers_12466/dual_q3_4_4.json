@@ -1,0 +1,10 @@
+{
+ "q": 3,
+ "weights": [
+  4,
+  4
+ ],
+ "lines": 40,
+ "status": "INFEASIBLE",
+ "seconds": 0.7
+}

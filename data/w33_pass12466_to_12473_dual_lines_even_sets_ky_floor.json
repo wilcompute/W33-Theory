@@ -1,0 +1,440 @@
+{
+  "12466": {
+    "q3_w4": {
+      "q": 3,
+      "weights": [
+        4,
+        4
+      ],
+      "lines": 40,
+      "status": "INFEASIBLE",
+      "seconds": 0.7
+    },
+    "q3_w6": {
+      "q": 3,
+      "weights": [
+        6,
+        6
+      ],
+      "lines": 40,
+      "status": "OPTIMAL",
+      "seconds": 0.1,
+      "weight": 6,
+      "n_lines": 2,
+      "in_kernel": true
+    },
+    "q5_w6_8": {
+      "q": 5,
+      "weights": [
+        6,
+        8
+      ],
+      "lines": 156,
+      "status": "UNKNOWN",
+      "seconds": 600.3
+    }
+  },
+  "12467": {
+    "2": {
+      "q": 2,
+      "lines": 15,
+      "optimal": true,
+      "seconds": 0.0,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "min_even_line_set": 6,
+      "verified_even": true,
+      "coverage_profile": [
+        0,
+        2
+      ]
+    },
+    "3": {
+      "q": 3,
+      "lines": 40,
+      "optimal": true,
+      "seconds": 0.2,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "min_even_line_set": 10,
+      "verified_even": true,
+      "coverage_profile": [
+        0,
+        2
+      ]
+    },
+    "5": {
+      "q": 5,
+      "lines": 156,
+      "optimal": true,
+      "seconds": 56.0,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "min_even_line_set": 20,
+      "verified_even": true,
+      "coverage_profile": [
+        0,
+        2
+      ]
+    },
+    "7": {
+      "q": 7,
+      "lines": 400,
+      "optimal": false,
+      "seconds": 3600.7,
+      "status": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "min_even_line_set": 40,
+      "verified_even": true,
+      "coverage_profile": [
+        0,
+        2
+      ]
+    }
+  },
+  "12468_cs_floor": {
+    "Z6II_06_SM_20260917_2541_c1060": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c1164": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c1224": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c1430": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c1493": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c1585": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c1614": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "41/9"
+    },
+    "Z6II_06_SM_20260917_2541_c1968": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2107": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c22": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2224": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2281": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c2450": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2606": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "41/9"
+    },
+    "Z6II_06_SM_20260917_2541_c2736": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2738": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2753": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2783": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "41/9"
+    },
+    "Z6II_06_SM_20260917_2541_c279": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c281": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c2872": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "35/9"
+    },
+    "Z6II_06_SM_20260917_2541_c290": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c2961": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c3022": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c316": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c3180": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c3330": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c3653": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c3721": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c387": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c3874": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c3920": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c4003": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c4124": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "41/9"
+    },
+    "Z6II_06_SM_20260917_2541_c4229": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c4282": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c4317": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c4671": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "35/9"
+    },
+    "Z6II_06_SM_20260917_2541_c4686": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c4747": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c4854": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c489": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c5326": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c5388": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "41/9"
+    },
+    "Z6II_06_SM_20260917_2541_c5416": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c5460": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c5484": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c5514": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c5714": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "Z6II_06_SM_20260917_2541_c766": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c897": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "53/9"
+    },
+    "Z6II_06_SM_20260917_2541_c993": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "17/3"
+    },
+    "control_SM_2913_v6": {
+      "kY_floor": "1",
+      "kY_floor_float": 1.0,
+      "kY_realised": "5/3"
+    }
+  },
+  "12468_generation_floor": {
+    "Z6II_06_SM_20260917_2541_c1060": 1.1871596445977246,
+    "Z6II_06_SM_20260917_2541_c1164": 1.1871596445977233,
+    "Z6II_06_SM_20260917_2541_c1224": 1.1871596445977235,
+    "Z6II_06_SM_20260917_2541_c1430": 1.1871596445977262,
+    "Z6II_06_SM_20260917_2541_c1493": 1.187159644597724,
+    "Z6II_06_SM_20260917_2541_c1585": 1.1871596445977235,
+    "Z6II_06_SM_20260917_2541_c1614": 1.1871596445977168,
+    "Z6II_06_SM_20260917_2541_c1968": 1.1871596445977255,
+    "Z6II_06_SM_20260917_2541_c2107": 1.1871596445977273,
+    "Z6II_06_SM_20260917_2541_c22": 1.1871596445977244,
+    "Z6II_06_SM_20260917_2541_c2224": 1.1871596445977246,
+    "Z6II_06_SM_20260917_2541_c2281": 1.1871596445977235,
+    "Z6II_06_SM_20260917_2541_c2450": 1.187159644597727,
+    "Z6II_06_SM_20260917_2541_c2606": 1.1871596445977288,
+    "Z6II_06_SM_20260917_2541_c2736": 1.1871596445977175,
+    "Z6II_06_SM_20260917_2541_c2738": 1.1871596445977264,
+    "Z6II_06_SM_20260917_2541_c2753": 1.187159644597725,
+    "Z6II_06_SM_20260917_2541_c2783": 1.1871596445977266,
+    "Z6II_06_SM_20260917_2541_c279": 1.1871596445977237,
+    "Z6II_06_SM_20260917_2541_c281": 1.1871596445977244,
+    "Z6II_06_SM_20260917_2541_c2872": 1.187159644597724,
+    "Z6II_06_SM_20260917_2541_c290": 1.1871596445977246,
+    "Z6II_06_SM_20260917_2541_c2961": 1.187159644597724,
+    "Z6II_06_SM_20260917_2541_c3022": 1.1871596445977233,
+    "Z6II_06_SM_20260917_2541_c316": 1.187159644597723,
+    "Z6II_06_SM_20260917_2541_c3180": 1.1871596445977244,
+    "Z6II_06_SM_20260917_2541_c3330": 1.1871596445977242,
+    "Z6II_06_SM_20260917_2541_c3653": 1.187159644597725,
+    "Z6II_06_SM_20260917_2541_c3721": 1.1871596445977244,
+    "Z6II_06_SM_20260917_2541_c387": 1.1871596445977277,
+    "Z6II_06_SM_20260917_2541_c3874": 1.187159644597725,
+    "Z6II_06_SM_20260917_2541_c3920": 1.1871596445977164,
+    "Z6II_06_SM_20260917_2541_c4003": 1.187159644597724,
+    "Z6II_06_SM_20260917_2541_c4124": 1.1871596445977284,
+    "Z6II_06_SM_20260917_2541_c4229": 1.1871596445977268,
+    "Z6II_06_SM_20260917_2541_c4282": 1.1871596445977164,
+    "Z6II_06_SM_20260917_2541_c4317": 1.1871596445977233,
+    "Z6II_06_SM_20260917_2541_c4671": 1.1871596445977244,
+    "Z6II_06_SM_20260917_2541_c4686": 1.1871596445977246,
+    "Z6II_06_SM_20260917_2541_c4747": 1.187159644597724,
+    "Z6II_06_SM_20260917_2541_c4854": 1.1871596445977242,
+    "Z6II_06_SM_20260917_2541_c489": 1.1871596445977244,
+    "Z6II_06_SM_20260917_2541_c5326": 1.1871596445977277,
+    "Z6II_06_SM_20260917_2541_c5388": 1.1871596445977288,
+    "Z6II_06_SM_20260917_2541_c5416": 1.187159644597725,
+    "Z6II_06_SM_20260917_2541_c5460": 1.187159644597726,
+    "Z6II_06_SM_20260917_2541_c5484": 1.1871596445977233,
+    "Z6II_06_SM_20260917_2541_c5514": 1.1871596445977233,
+    "Z6II_06_SM_20260917_2541_c5714": 1.1871596445977164,
+    "Z6II_06_SM_20260917_2541_c766": 1.1871596445977237,
+    "Z6II_06_SM_20260917_2541_c897": 1.1871596445977284,
+    "Z6II_06_SM_20260917_2541_c993": 1.1871596445977244
+  },
+  "12468_family_floor_range": [
+    1.1871596445977164,
+    1.1871596445977288,
+    52
+  ],
+  "12469": {
+    "all_kY": [
+      "11/3",
+      "17/3",
+      "35/9",
+      "41/9",
+      "53/9"
+    ],
+    "capped_5o3": [
+      "17/3"
+    ]
+  },
+  "checks": {
+    "12466: dual line model controls exact at q = 3 (weight 4 infeasible; weight 6 = 2 lines, in the kernel); q = 5 UNKNOWN (tool limit)": true,
+    "12467: minimum even line sets 6, 10, 20 at q = 2, 3, 5 (exact, verified even, coverage {0,2}); odd q exceed 2(q+1)": true,
+    "12468: single-field Cauchy-Schwarz floor = 1 in all 52 SM_2541 models and the SM_2913 control (the universal e^c bound)": true,
+    "12468: c22 one-generation floor 1.19 < 1.29 (the geometry does not forbid the unification value for one generation)": true,
+    "12468: all 52 SM_2541 models share the one-generation floor 1.187 (siblings of one parent)": true,
+    "12467: q = 7 even line set -- MILP hit its time limit with an even set of 40 lines (upper bound only)": true,
+    "12469: c22 exhaustive in the 1/6 menu -- exactly 6 three-generation hypercharges, min k_Y = 11/3": true,
+    "12469: L1-capped enumeration at K = 5/3 finds only k_Y = 17/3 > 5/3 -- no c22 hypercharge with k_Y <= 5/3 in the 1/6 menu (cap control at K = 4 keeps true solutions)": true
+  },
+  "all_checks_pass": true
+}

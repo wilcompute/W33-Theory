@@ -1,0 +1,13 @@
+{
+ "q": 7,
+ "lines": 400,
+ "optimal": false,
+ "seconds": 3600.7,
+ "status": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+ "min_even_line_set": 40,
+ "verified_even": true,
+ "coverage_profile": [
+  0,
+  2
+ ]
+}
