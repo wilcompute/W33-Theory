@@ -112,7 +112,7 @@ if os.environ.get('KCAP'):
 sols = []
 for it in range(NSOL):
     res = milp(np.zeros(nvar), constraints=LinearConstraint(A, lo, hi), integrality=integ,
-               bounds=Bounds(LB, UB_), options=dict(time_limit=600))
+               bounds=Bounds(LB, UB_), options=dict(time_limit=float(os.environ.get('YS_TL', 600))))
     if not res.success:
         print('no (further) solution:', res.message); break
     c = [sp.nsimplify(round(x, 9), rational=True, tolerance=1e-7) for x in res.x[:nt]]

@@ -37,6 +37,11 @@ c = np.concatenate([np.ones(m), np.zeros(n)])
 M = np.vstack([np.hstack([N, -2 * np.eye(n)]), np.concatenate([np.ones(m), np.zeros(n)])[None, :]])
 lo = np.concatenate([np.zeros(n), [1]]); hi = np.concatenate([np.zeros(n), [np.inf]])
 lb = np.zeros(m + n); ub = np.concatenate([np.ones(m), np.full(n, (q + 1) // 2)]); lb[0] = 1
+if len(sys.argv) > 3 and sys.argv[3] == 'sym2':
+    # 12474: every point of line 0 is covered evenly, so some second chosen line meets line 0; the stabiliser of line 0 is transitive on
+    # the lines meeting it, so WLOG the first such line (in index order) is chosen.
+    meet = [j for j in range(1, m) if set(lines[j]) & set(lines[0])]
+    lb[meet[0]] = 1
 t0 = time.time()
 r = milp(c, constraints=LinearConstraint(M, lo, hi), integrality=np.ones(m + n), bounds=Bounds(lb, ub), options=dict(time_limit=tl))
 rec = dict(q=q, lines=m, optimal=bool(r.status == 0), seconds=round(time.time() - t0, 1), status=r.message)
@@ -44,4 +49,4 @@ if r.x is not None:
     y = np.round(r.x[:m]).astype(int); cov = N @ y
     rec.update(min_even_line_set=int(y.sum()), verified_even=bool(not (cov % 2).any()), coverage_profile=sorted(set(int(v) for v in cov)))
 print(json.dumps(rec), flush=True)
-json.dump(rec, open(f'even_line_sets_q{q}.json', 'w'), indent=1)
+json.dump(rec, open(f'even_line_sets_q{q}' + ('_sym2' if len(sys.argv) > 3 else '') + '.json', 'w'), indent=1)

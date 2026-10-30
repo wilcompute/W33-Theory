@@ -1,0 +1,28 @@
+{
+  "12474_q5_sym2": {
+    "q": 5,
+    "lines": 156,
+    "optimal": true,
+    "seconds": 28.3,
+    "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "min_even_line_set": 20,
+    "verified_even": true,
+    "coverage_profile": [
+      0,
+      2
+    ]
+  },
+  "12475": {
+    "kY": [
+      "17/3",
+      "461/81",
+      "461/81"
+    ],
+    "ended": "infeasible"
+  },
+  "checks": {
+    "12474: line-pair symmetry break reproduces the exact q = 5 minimum 20 (optimal, verified even, coverage {0,2})": true,
+    "12475: 1/18 menu, cap K = 5/3, complete enumeration (ends infeasible) finds only k_Y in {17/3, 461/81}, all > 5/3": true
+  },
+  "all_checks_pass": true
+}
