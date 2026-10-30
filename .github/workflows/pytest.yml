@@ -61,7 +61,8 @@ jobs:
           git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'tests/test_*.py' > changed_tests.txt || true
           if [ -s changed_tests.txt ]; then
             echo "Running $(wc -l < changed_tests.txt) changed test file(s)"; cat changed_tests.txt
-            python -m pytest -q --continue-on-collection-errors $(cat changed_tests.txt)
+            # exit 5 = "no tests collected": e.g. every changed file skips at module level (pytest.importorskip) -- not a failure
+            python -m pytest -q --continue-on-collection-errors $(cat changed_tests.txt) || [ $? -eq 5 ]
           else
             echo "No test files changed in this push; the full suite runs weekly and on workflow_dispatch."
           fi
