@@ -1,5 +1,5 @@
 {
-  "certificate_sha256": "722cb3db89c59901a921eeee5439875c29e9d407a2ccdb9b4aa63a435071fc95",
+  "certificate_sha256": "755d2c762fe53871b29d7df320662591e2390fbc639ae12db37c34e890844366",
   "checks": {
     "all_24_append_induction_cases_preserve": true,
     "all_eleven_guards_have_counterexamples": true,
@@ -269,7 +269,7 @@
     }
   ],
   "interleaving_trace_length": 24,
-  "schemas": "w33.pass429.inductive_custody_verification.v1",
+  "schema": "w33.pass429.inductive_custody_verification.v1",
   "status": "PASS",
   "theorem": {
     "frame_rule": "an append changes exactly one study chain, so all other chains retain their invariant and the local preservation proof lifts to arbitrary finite study maps",

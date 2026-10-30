@@ -19,7 +19,7 @@
     "seed_count": 141,
     "unresolved_count": 0
   },
-  "certificate_sha256": "9e163fe6aab6b4385b6ae4531955c4b01828594afd2008d6ecc4fa6b11ffb746",
+  "certificate_sha256": "e630a2c7a905ebdf47fae23fb7b9f61ce723b3557bdd5029101a812892bca73c",
   "checks": {
     "all_iterates_remain_positive": true,
     "all_random_interior_seeds_converge": true,
@@ -689,31 +689,31 @@
         0.0
       ],
       [
+        0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
         -0.0,
         0.0
       ],
       [
         -0.0,
-        0.0
-      ],
-      [
-        0.0,
-        0.0
-      ],
-      [
-        0.0,
-        0.0
-      ],
-      [
-        0.0,
         -0.0
       ],
       [
-        -0.0,
+        0.0,
         0.0
       ],
       [
-        -0.0,
+        0.0,
         -0.0
       ]
     ],
