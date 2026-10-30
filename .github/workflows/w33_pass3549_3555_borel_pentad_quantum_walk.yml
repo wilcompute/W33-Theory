@@ -51,10 +51,10 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest sympy
       - name: Regenerate exact certificate
         run: |
-          mkdir -p evidence/pass3549_3555
+          mkdir -p docs/evidence/pass3549_3555
           cp data/PART_BT3549_BT3555_BOREL_PENTAD_QUANTUM_WALK_results.json /tmp/frozen3555.json
-          python analysis/bt3549_3555_borel_pentad_quantum_walk.py | tee evidence/pass3549_3555/exact.log
-          grep -F 'PASS_7_FRONTS 251725b948b166f475cf0a44b9d6662280c2dd7a7e12c47fb5ece3d110cc1f6b' evidence/pass3549_3555/exact.log
+          python analysis/bt3549_3555_borel_pentad_quantum_walk.py | tee docs/evidence/pass3549_3555/exact.log
+          grep -F 'PASS_7_FRONTS 251725b948b166f475cf0a44b9d6662280c2dd7a7e12c47fb5ece3d110cc1f6b' docs/evidence/pass3549_3555/exact.log
           python - <<'PY'
           import json
           from pathlib import Path
@@ -65,11 +65,11 @@ jobs:
           PY
       - name: Focused regressions and companion controls
         run: |
-          pytest -q tests/test_bt3549_bt3555_borel_pentad_quantum_walk.py | tee evidence/pass3549_3555/pytest.log
-          python analysis/bt3549_borel_signature_models.py | tee evidence/pass3549_3555/borel_models.log
-          grep -F 'PASS_24_BOREL_MODEL_CONTRACTS 24' evidence/pass3549_3555/borel_models.log
-          python analysis/bt3552_clique_proof_archive.py --self-test | tee evidence/pass3549_3555/archive_selftest.log
-          grep -F 'PASS_PROOF_ARCHIVE_SELF_TEST' evidence/pass3549_3555/archive_selftest.log
+          pytest -q tests/test_bt3549_bt3555_borel_pentad_quantum_walk.py | tee docs/evidence/pass3549_3555/pytest.log
+          python analysis/bt3549_borel_signature_models.py | tee docs/evidence/pass3549_3555/borel_models.log
+          grep -F 'PASS_24_BOREL_MODEL_CONTRACTS 24' docs/evidence/pass3549_3555/borel_models.log
+          python analysis/bt3552_clique_proof_archive.py --self-test | tee docs/evidence/pass3549_3555/archive_selftest.log
+          grep -F 'PASS_PROOF_ARCHIVE_SELF_TEST' docs/evidence/pass3549_3555/archive_selftest.log
           git diff --check
       - name: Verify manuscript and public reachability
         run: |
@@ -93,15 +93,15 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3549_3555/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3549_3555/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3549_3555/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3549_3555/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3549-3555-exact-packet-papers
           path: |
-            evidence/pass3549_3555/**
+            docs/evidence/pass3549_3555/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf
@@ -122,12 +122,12 @@ jobs:
       - run: python -m pip install --disable-pip-version-check sympy
       - name: Generate independently checked proof shard
         run: |
-          mkdir -p evidence/pass3549_3555/shards
+          mkdir -p docs/evidence/pass3549_3555/shards
           python analysis/bt3552_clique_proof_archive.py \
             --shard ${{ matrix.shard }} \
-            --json evidence/pass3549_3555/shards/shard_${{ matrix.shard }}.json
+            --json docs/evidence/pass3549_3555/shards/shard_${{ matrix.shard }}.json
       - uses: actions/upload-artifact@v4
         with:
           name: pass3552-proof-shard-${{ matrix.shard }}
           compression-level: 9
-          path: evidence/pass3549_3555/shards/*.json
+          path: docs/evidence/pass3549_3555/shards/*.json

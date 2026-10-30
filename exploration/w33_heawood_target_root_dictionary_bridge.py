@@ -110,7 +110,7 @@ def _q13_reports(phi: float, even: np.ndarray, odd: np.ndarray) -> dict[str, Any
         "best_numerator": best_numerator,
         "best_amplitude": best_numerator / 13.0,
         "best_absolute_target_error": best_error,
-        "reports": reports,
+        "docs/reports": reports,
     }
 
 
@@ -158,7 +158,7 @@ def build_heawood_target_root_dictionary_summary() -> dict[str, Any]:
             "best_q13_numerator_at_fixed_phase": q13["best_numerator"],
             "best_q13_amplitude_at_fixed_phase": q13["best_amplitude"],
             "best_q13_absolute_target_error": q13["best_absolute_target_error"],
-            "all_q13_reports": q13["reports"],
+            "all_q13_reports": q13["docs/reports"],
         }
 
     return {

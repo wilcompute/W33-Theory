@@ -98,7 +98,7 @@ meta = {
     "counts": cand.get("counts", []),
     "R3_norm": cand.get("R3_norm"),
     "artifact": str(arti_npz.name),
-    "notes": "Auto-registered z3 candidate (via _tmp_register_z3_candidate.py)",
+    "docs/notes": "Auto-registered z3 candidate (via _tmp_register_z3_candidate.py)",
     "timestamp": ts,
 }
 if ver_meta:

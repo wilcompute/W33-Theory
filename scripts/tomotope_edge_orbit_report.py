@@ -170,7 +170,7 @@ def build_report() -> dict[str, Any]:
         "edges_as_flag_orbits": edges,
         "r1_on_edges": r1_edges,
         "published_generators": p_maps,
-        "notes": (
+        "docs/notes": (
             "Edges are orbits of flags under <r0, r2, r3>. r1_on_edges is the induced "
             "permutation of r1 on the 12 edges. published_generators are the maniplex "
             "p0..p3 permutations on 12 edges from tomotope_permutation_summary.json. "

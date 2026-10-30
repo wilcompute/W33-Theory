@@ -50,7 +50,7 @@ def main() -> None:
     upper_bound_valid = upper_bound is not None and int(upper_bound) >= 0 and int(upper_bound) <= 540 and claimed_score <= int(upper_bound)
     optimality_certified = ctype == "optimality" and witness_valid and upper_bound_valid and computed_score == int(upper_bound)
     checks = {
-        "schema_file_exists": (ROOT / "schema" / "bt1395_s3_maxsat_certificate.schema.json").exists(),
+        "schema_file_exists": (ROOT / "schemas" / "bt1395_s3_maxsat_certificate.schema.json").exists(),
         "certificate_type_known": ctype in {"witness", "upper_bound", "optimality"},
         "witness_valid_if_labels_present": witness_valid if labels is not None else True,
         "upper_bound_valid_if_present": upper_bound_valid if upper_bound is not None else True,
@@ -67,7 +67,7 @@ def main() -> None:
         "upper_bound": upper_bound,
         "witness_valid": witness_valid,
         "optimality_status": "optimal_certified" if optimality_certified else ("upper_bound_recorded" if upper_bound is not None else "witness_only"),
-        "accepted_certificate_schema": "schema/bt1395_s3_maxsat_certificate.schema.json",
+        "accepted_certificate_schema": "schemas/bt1395_s3_maxsat_certificate.schema.json",
         "boundary": "This verifies the local arithmetic of a witness and/or upper-bound certificate. It does not independently derive a solver proof; that proof must be imported as the certificate source."
     }
     ns.out.parent.mkdir(parents=True, exist_ok=True)

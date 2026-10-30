@@ -49,12 +49,12 @@ jobs:
           python -m pip install numpy scipy networkx pytest
       - name: Regenerate exact packet
         run: |
-          mkdir -p evidence/pass3418_3429
+          mkdir -p docs/evidence/pass3418_3429
           python analysis/bt3388_3399_clebsch_d5_fault_closure.py \
             --json /tmp/results.json \
             --routes-json /tmp/routes.json \
             --codes-json /tmp/codes.json \
-            | tee evidence/pass3418_3429/exact.log
+            | tee docs/evidence/pass3418_3429/exact.log
           python - <<'PY'
           from pathlib import Path
           import base64,zlib
@@ -65,21 +65,21 @@ jobs:
           cmp /tmp/routes.json data/PART_BT3388_BT3399_DYNAMIC_ROUTE_manifest.json
           cmp /tmp/codes.json data/PART_BT3388_BT3399_SELF_PROTECTING_CODE_manifest.json
           pytest -q tests/test_bt3418_3429_clebsch_d5_supplement.py \
-            | tee evidence/pass3418_3429/pytest.log
+            | tee docs/evidence/pass3418_3429/pytest.log
           git diff --check
       - name: Exhaust code and routing RTL
         run: |
           iverilog -g2012 -s tb_w33_pass3388_3399_fault_codes \
-            -o evidence/pass3418_3429/fault_codes_tb \
+            -o docs/evidence/pass3418_3429/fault_codes_tb \
             rtl/w33_signature_s3_rom4.v \
             rtl/w33_envelope_self_protecting_code.v \
             rtl/w33_q5_dynamic_spare_router.v \
             rtl/w33_q6_triple_fault_router.v \
             rtl/tb_w33_pass3388_3399_fault_codes.v
-          vvp evidence/pass3418_3429/fault_codes_tb \
-            | tee evidence/pass3418_3429/rtl.log
+          vvp docs/evidence/pass3418_3429/fault_codes_tb \
+            | tee docs/evidence/pass3418_3429/rtl.log
           grep -F 'PASS self-protecting cases=4682 dynamic_routes=512 q6_routes=480' \
-            evidence/pass3418_3429/rtl.log
+            docs/evidence/pass3418_3429/rtl.log
       - name: Synthesize exact controllers
         run: |
           for top in \
@@ -90,9 +90,9 @@ jobs:
             w33_q5_dynamic_spare_router \
             w33_q6_triple_fault_router
           do
-            yosys -p "read_verilog rtl/w33_signature_s3_rom4.v rtl/w33_envelope_self_protecting_code.v rtl/w33_q5_dynamic_spare_router.v rtl/w33_q6_triple_fault_router.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json evidence/pass3418_3429/${top}.json; stat" \
-              2>&1 | tee evidence/pass3418_3429/${top}.yosys.log
-            test -s evidence/pass3418_3429/${top}.json
+            yosys -p "read_verilog rtl/w33_signature_s3_rom4.v rtl/w33_envelope_self_protecting_code.v rtl/w33_q5_dynamic_spare_router.v rtl/w33_q6_triple_fault_router.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json docs/evidence/pass3418_3429/${top}.json; stat" \
+              2>&1 | tee docs/evidence/pass3418_3429/${top}.yosys.log
+            test -s docs/evidence/pass3418_3429/${top}.json
           done
       - name: Place compact encoders and routers on UP5K
         run: |
@@ -103,10 +103,10 @@ jobs:
             w33_q6_triple_fault_router
           do
             nextpnr-ice40 --up5k --package sg48 \
-              --json evidence/pass3418_3429/${top}.json \
-              --asc evidence/pass3418_3429/${top}.asc \
+              --json docs/evidence/pass3418_3429/${top}.json \
+              --asc docs/evidence/pass3418_3429/${top}.asc \
               --pcf-allow-unconstrained --freq 12 \
-              2>&1 | tee evidence/pass3418_3429/${top}.nextpnr.log
+              2>&1 | tee docs/evidence/pass3418_3429/${top}.nextpnr.log
           done
       - uses: WtfJoke/setup-tectonic@v3
         with:
@@ -116,16 +116,16 @@ jobs:
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex
           do
             tectonic --keep-logs "$source" \
-              2>&1 | tee evidence/pass3418_3429/${source%.tex}.log
+              2>&1 | tee docs/evidence/pass3418_3429/${source%.tex}.log
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass3418_3429/pdf_sha256.txt
+            > docs/evidence/pass3418_3429/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3418-3429-clebsch-d5-fault-evidence
           path: |
-            evidence/pass3418_3429/**
+            docs/evidence/pass3418_3429/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

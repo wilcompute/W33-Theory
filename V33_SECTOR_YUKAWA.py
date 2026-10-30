@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 META = ROOT / 'extracted_v13' / 'W33-Theory-master' / 'artifacts' / 'e8_root_metadata_table.json'
 SC = ROOT / 'artifacts' / 'e8_structure_constants_w33_discrete.json'
-L3 = ROOT / 'V24_output_v13_full' / 'l3_patch_triples_full.jsonl'
+L3 = ROOT / 'archive/outputs/V24_output_v13_full' / 'l3_patch_triples_full.jsonl'
 
 meta = json.loads(META.read_text(encoding='utf-8'))
 sc = json.loads(SC.read_text(encoding='utf-8'))

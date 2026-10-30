@@ -67,12 +67,12 @@ jobs:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
       - name: Compile canonical manuscripts
         run: |
-          mkdir -p evidence/pass5611_5618
+          mkdir -p docs/evidence/pass5611_5618
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5611_5618/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass5611_5618/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5611_5618/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass5611_5618/pdf_sha256.txt
       - name: Freeze regenerated certificates and homepage
         run: |
           git config user.name 'github-actions[bot]'
@@ -98,4 +98,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: pass5611-5618-physics-magnetic-frontier
-          path: evidence/pass5611_5618/**
+          path: docs/evidence/pass5611_5618/**

@@ -35,21 +35,21 @@ jobs:
           pytest -q tests/test_bt3124_bt3132_deep_five_front_closure.py
       - name: Rebuild exact U4(2) class algebra
         run: |
-          mkdir -p evidence/pass3124_3132
-          python analysis/bt3126_u42_class_algebra.py | tee evidence/pass3124_3132/u42_class_algebra.log
-          grep -F 'dim 6480' evidence/pass3124_3132/u42_class_algebra.log
-          grep -F 'comm 1770' evidence/pass3124_3132/u42_class_algebra.log
+          mkdir -p docs/evidence/pass3124_3132
+          python analysis/bt3126_u42_class_algebra.py | tee docs/evidence/pass3124_3132/u42_class_algebra.log
+          grep -F 'dim 6480' docs/evidence/pass3124_3132/u42_class_algebra.log
+          grep -F 'comm 1770' docs/evidence/pass3124_3132/u42_class_algebra.log
       - name: Exact GAP induced-character cross-check
         run: |
-          gap -q analysis/w33_pass3126_flag_character_crosscheck.g | tee evidence/pass3124_3132/u42_gap.log
-          grep -F 'PASS U4(2) flag character multiplicities' evidence/pass3124_3132/u42_gap.log
+          gap -q analysis/w33_pass3126_flag_character_crosscheck.g | tee docs/evidence/pass3124_3132/u42_gap.log
+          grep -F 'PASS U4(2) flag character multiplicities' docs/evidence/pass3124_3132/u42_gap.log
       - name: Exhaust and synthesize typed timing fabric
         run: |
           iverilog -g2012 -s tb_w33_pass3128_selfdual_timing_fabric -o /tmp/timing.vvp \
             rtl/w33_pass3128_selfdual_timing_fabric.sv rtl/tb_w33_pass3128_selfdual_timing_fabric.sv
-          vvp /tmp/timing.vvp | tee evidence/pass3124_3132/timing_iverilog.log
-          grep -F 'PASS 2796/2796 self-dual timing ticks' evidence/pass3124_3132/timing_iverilog.log
-          yosys -p 'read_verilog -sv rtl/w33_pass3128_selfdual_timing_fabric.sv; synth_ice40 -top w33_pass3128_selfdual_timing_fabric; stat' 2>&1 | tee evidence/pass3124_3132/timing_yosys.log
+          vvp /tmp/timing.vvp | tee docs/evidence/pass3124_3132/timing_iverilog.log
+          grep -F 'PASS 2796/2796 self-dual timing ticks' docs/evidence/pass3124_3132/timing_iverilog.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3128_selfdual_timing_fabric.sv; synth_ice40 -top w33_pass3128_selfdual_timing_fabric; stat' 2>&1 | tee docs/evidence/pass3124_3132/timing_yosys.log
       - name: Integrate all front doors idempotently
         run: |
           python tools/integrate_bt3124_bt3132.py
@@ -60,16 +60,16 @@ jobs:
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             stem=${source%.tex}
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3124_3132/${stem}.build.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3124_3132/${stem}.build.log"
             test -s "${stem}.pdf"
             if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
           done
       - name: Freeze stable digital evidence
         run: |
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3124_3132/pdf_sha256.txt
-          printf 'models=PASS 8/8\npytest=PASS 10/10\ncharacter=degree6480_commutant1770\nrtl=PASS 2796/2796\n' > evidence/pass3124_3132/manifest.txt
-          cat > evidence/pass3124_3132/OBSERVED_COMPLETE.json <<'EOF'
-          {"schema":"w33.pass3124_3132.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","boundary":"No 27-row impossibility, full M36 census, laboratory optics, physical heat, or autonomous-clock claim."}
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3124_3132/pdf_sha256.txt
+          printf 'models=PASS 8/8\npytest=PASS 10/10\ncharacter=degree6480_commutant1770\nrtl=PASS 2796/2796\n' > docs/evidence/pass3124_3132/manifest.txt
+          cat > docs/evidence/pass3124_3132/OBSERVED_COMPLETE.json <<'EOF'
+          {"schemas":"w33.pass3124_3132.observed_evidence.v1","status":"OBSERVED_DIGITAL_EVIDENCE_COMPLETE","boundary":"No 27-row impossibility, full M36 census, laboratory optics, physical heat, or autonomous-clock claim."}
           EOF
       - uses: actions/upload-artifact@v4
         with:
@@ -83,7 +83,7 @@ jobs:
             data/PART_BT3129*.json
             data/PART_BT3130*.json
             data/PART_BT3131*.json
-            evidence/pass3124_3132/*
+            docs/evidence/pass3124_3132/*
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf
@@ -91,8 +91,8 @@ jobs:
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         env: {TARGET_BRANCH: '${{ github.event.pull_request.head.ref }}'}
         run: |
-          if git cat-file -e HEAD:evidence/pass3124_3132/OBSERVED_COMPLETE.json 2>/dev/null; then exit 0; fi
+          if git cat-file -e HEAD:docs/evidence/pass3124_3132/OBSERVED_COMPLETE.json 2>/dev/null; then exit 0; fi
           git config user.name 'W33 pass3124 evidence bot'
           git config user.email 'noreply@github.com'
-          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html evidence/pass3124_3132/
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html docs/evidence/pass3124_3132/
           if ! git diff --cached --quiet; then git commit -m 'Passes 3124-3132: record stable observed digital evidence'; git push origin "HEAD:${TARGET_BRANCH}"; fi

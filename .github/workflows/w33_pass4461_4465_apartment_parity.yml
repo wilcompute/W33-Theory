@@ -47,7 +47,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy
       - name: Regenerate exact certificates
         run: |
-          mkdir -p evidence/pass4461_4466
+          mkdir -p docs/evidence/pass4461_4466
           for pass in 4461 4462 4463 4464 4465 4466; do
             case "$pass" in
               4461) script=analysis/w33_pass4461_line_signing_apartment_trace.py ;;
@@ -57,7 +57,7 @@ jobs:
               4465) script=analysis/w33_pass4465_general_gq_line_signing_trace.py ;;
               4466) script=analysis/w33_pass4466_legacy_four_cycle_frustration_audit.py ;;
             esac
-            python "$script" | tee "evidence/pass4461_4466/pass${pass}.log"
+            python "$script" | tee "docs/evidence/pass4461_4466/pass${pass}.log"
           done
           git diff --exit-code -- \
             data/PART_W33_PASS4461_LINE_SIGNING_APARTMENT_TRACE.json \
@@ -69,7 +69,7 @@ jobs:
       - name: Dry-run restored-site reconciliation
         run: |
           python tools/integrate_bt3376_bt3389.py \
-            --report evidence/pass4461_4466/site_integration.json
+            --report docs/evidence/pass4461_4466/site_integration.json
           test "$(grep -c 'id="pass4461-4464-line-signing-apartment-parity"' docs/index.html)" -eq 1
           test -s docs/line-signing-apartment-parity.html
           grep -q '102,060' docs/line-signing-apartment-parity.html
@@ -81,11 +81,11 @@ jobs:
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             tectonic --keep-logs "$source" 2>&1 \
-              | tee "evidence/pass4461_4466/${source%.tex}.log"
+              | tee "docs/evidence/pass4461_4466/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass4461_4466/pdf_sha256.txt
+            > docs/evidence/pass4461_4466/pdf_sha256.txt
       - name: Static integrity
         run: |
           git diff --check
@@ -98,7 +98,7 @@ jobs:
         with:
           name: pass4461-4466-apartment-parity-evidence
           path: |
-            evidence/pass4461_4466/**
+            docs/evidence/pass4461_4466/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

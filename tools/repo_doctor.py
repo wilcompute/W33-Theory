@@ -47,8 +47,8 @@ HEAVY_DATA_RELATIVE_PATHS = (
     / "artifacts"
     / "e8_root_metadata_table.json",
     Path("artifacts") / "e8_structure_constants_w33_discrete.json",
-    Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl",
-    Path("V24_output_v13_full") / "l4_patch_quads_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l3_patch_triples_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l4_patch_quads_full.jsonl",
 )
 
 

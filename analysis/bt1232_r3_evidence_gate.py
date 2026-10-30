@@ -58,7 +58,7 @@ def classify(sample):
 
 def demo_samples():
     base = {
-        "schema": "BT1215_K3_GEOMETRY_SAMPLE_V1",
+        "schemas": "BT1215_K3_GEOMETRY_SAMPLE_V1",
         "sample_id": "base",
         "topology": {"chi":24,"signature":-16,"b2":22,"intersection_signature":[3,19]},
         "metric_block": {"shape_quality": 0.99},

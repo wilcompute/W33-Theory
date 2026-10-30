@@ -36,4 +36,4 @@ def test_bt1395_maxsat_bound_pathway_runs_true():
     assert out["verified"] is True
     assert out["optimality_status"] == "witness_only"
     data = json.loads((ROOT / "data" / "bt1395_s3_maxsat_bound_pathway.json").read_text(encoding="utf-8"))
-    assert data["accepted_certificate_schema"] == "schema/bt1395_s3_maxsat_certificate.schema.json"
+    assert data["accepted_certificate_schema"] == "schemas/bt1395_s3_maxsat_certificate.schema.json"

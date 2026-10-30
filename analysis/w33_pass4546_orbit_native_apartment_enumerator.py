@@ -39,7 +39,7 @@ from pathlib import Path
 from w33_pass4495_4502_distance_prism_reconstruction import geometry
 
 ROOT=Path(__file__).resolve().parents[1]
-DEFAULT_DIR=ROOT/'evidence'/'pass4546_orbit_enumerator'
+DEFAULT_DIR=ROOT/'docs/evidence'/'pass4546_orbit_enumerator'
 EXPECTED=[1,1,2,5,16,48,165,571,1961,6252,18226,47911,113314,240735,460273,793280,1234880,1739041,2218732,2566830,2694464]
 AUT_ORDER=51840
 FULL_CODEWORD_ORBITS=10789604

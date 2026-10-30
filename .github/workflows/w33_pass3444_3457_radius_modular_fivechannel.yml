@@ -58,12 +58,12 @@ jobs:
 
       - name: Regenerate exact certificate
         run: |
-          mkdir -p evidence/pass3444_3457
+          mkdir -p docs/evidence/pass3444_3457
           python analysis/bt3444_3457_radius_modular_fivechannel.py \
-            --json evidence/pass3444_3457/full.json \
-            | tee evidence/pass3444_3457/exact.log
+            --json docs/evidence/pass3444_3457/full.json \
+            | tee docs/evidence/pass3444_3457/exact.log
           grep -F 'PASS 10/10 radius, modular, five-channel, S4, and product-code checks' \
-            evidence/pass3444_3457/exact.log
+            docs/evidence/pass3444_3457/exact.log
 
       - name: Compare frozen semantic certificate
         run: |
@@ -71,7 +71,7 @@ jobs:
           import json
           from pathlib import Path
 
-          generated = json.loads(Path('evidence/pass3444_3457/full.json').read_text())
+          generated = json.loads(Path('docs/evidence/pass3444_3457/full.json').read_text())
           frozen = json.loads(Path('data/PART_BT3444_BT3457_RADIUS_MODULAR_FIVECHANNEL_results.json').read_text())
           assert generated['status'] == frozen['status'] == 'PASS'
           assert generated['checks'] == frozen['checks']
@@ -108,26 +108,26 @@ jobs:
       - name: Focused Python regression
         run: |
           python -m pytest -q tests/test_bt3444_3457_radius_modular_fivechannel.py \
-            | tee evidence/pass3444_3457/pytest.log
+            | tee docs/evidence/pass3444_3457/pytest.log
           git diff --check
 
       - name: Exhaust five-channel RTL
         run: |
           iverilog -g2012 -s tb_w33_pass3444_3457_five_channel \
-            -o evidence/pass3444_3457/five_channel_tb \
+            -o docs/evidence/pass3444_3457/five_channel_tb \
             rtl/w33_five_channel_symbol.v \
             rtl/tb_w33_pass3444_3457_five_channel.v
-          vvp evidence/pass3444_3457/five_channel_tb \
-            | tee evidence/pass3444_3457/rtl.log
+          vvp docs/evidence/pass3444_3457/five_channel_tb \
+            | tee docs/evidence/pass3444_3457/rtl.log
           grep -F 'PASS five-channel symbols=200 modular_order3_states=1944' \
-            evidence/pass3444_3457/rtl.log
+            docs/evidence/pass3444_3457/rtl.log
 
       - name: Synthesize both engines
         run: |
           for top in w33_five_channel_symbol w33_mod3_five_channel_step; do
-            yosys -p "read_verilog rtl/w33_five_channel_symbol.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json evidence/pass3444_3457/${top}.json; stat" \
-              2>&1 | tee evidence/pass3444_3457/${top}.yosys.log
-            test -s evidence/pass3444_3457/${top}.json
+            yosys -p "read_verilog rtl/w33_five_channel_symbol.v; hierarchy -top ${top}; synth_ice40 -top ${top} -json docs/evidence/pass3444_3457/${top}.json; stat" \
+              2>&1 | tee docs/evidence/pass3444_3457/${top}.yosys.log
+            test -s docs/evidence/pass3444_3457/${top}.json
           done
 
       - name: Verify current-frontier manifests
@@ -159,17 +159,17 @@ jobs:
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             tectonic --keep-logs "$source" \
-              2>&1 | tee evidence/pass3444_3457/${source%.tex}.log
+              2>&1 | tee docs/evidence/pass3444_3457/${source%.tex}.log
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass3444_3457/pdf_sha256.txt
+            > docs/evidence/pass3444_3457/pdf_sha256.txt
 
       - uses: actions/upload-artifact@v4
         with:
           name: pass3444-3457-radius-modular-fivechannel-evidence
           path: |
-            evidence/pass3444_3457/**
+            docs/evidence/pass3444_3457/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

@@ -14,7 +14,7 @@ from typing import Dict, List, Tuple
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / "artifacts"
-REPORTS = ROOT / "reports"
+REPORTS = ROOT / "docs/reports"
 REPORTS.mkdir(exist_ok=True)
 
 import argparse
@@ -50,7 +50,7 @@ if not (ART / "e6_cubic_affine_heisenberg_model.json").exists():
         "\n".join(lines), encoding="utf-8"
     )
     print(
-        "Wrote placeholder artifacts/forbid_orbit_analysis.json and reports/forbid_orbit_analysis.md"
+        "Wrote placeholder artifacts/forbid_orbit_analysis.json and docs/reports/forbid_orbit_analysis.md"
     )
     sys.exit(0)
 
@@ -154,4 +154,4 @@ else:
     lines.append("Candidates are NOT in the same AGL×Z3 orbit.")
 
 (REPORTS / "forbid_orbit_analysis.md").write_text("\n".join(lines), encoding="utf-8")
-print("Wrote artifacts/forbid_orbit_analysis.json and reports/forbid_orbit_analysis.md")
+print("Wrote artifacts/forbid_orbit_analysis.json and docs/reports/forbid_orbit_analysis.md")

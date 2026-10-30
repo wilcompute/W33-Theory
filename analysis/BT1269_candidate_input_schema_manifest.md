@@ -7,7 +7,7 @@ BT1269 adds a stable JSON input shape for external Clifford tomography candidate
 ## Schema file
 
 ```text
-schema/bt1269_tomography_candidate.schema.json
+schemas/bt1269_tomography_candidate.schema.json
 ```
 
 ## Required fields

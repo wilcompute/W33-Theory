@@ -54,14 +54,14 @@ def test_electron_seed_audit_keeps_the_boundary_honest() -> None:
     assert records["one_input_fermion_reduction"]["support_level"] == "repo-exact reduction"
     assert records["exact_residual_electron_seed_packet"]["support_level"] == "repo-exact packet"
     assert records["same_gaussian_norm_splices_into_charm_suppressor_packet"]["support_level"] == "repo-exact splice"
-    assert records["same_gaussian_norm_splices_into_charm_suppressor_packet"]["evidence"] == {
+    assert records["same_gaussian_norm_splices_into_charm_suppressor_packet"]["docs/evidence"] == {
         "shifted_gaussian_norm_mu_squared_plus_one": {"exact": "17", "float": 17.0},
         "cartan_packet": 8,
         "up_sector_suppressor": {"exact": "136", "float": 136.0},
         "cartan_times_shifted_gaussian_norm": 136,
     }
     assert records["same_barrier_shell_splices_into_toroidal_g2_packet"]["support_level"] == "repo-exact splice"
-    assert records["same_barrier_shell_splices_into_toroidal_g2_packet"]["evidence"] == {
+    assert records["same_barrier_shell_splices_into_toroidal_g2_packet"]["docs/evidence"] == {
         "barrier_shell_lambda_phi6_squared": {"exact": "98", "float": 98.0},
         "phi6": 7,
         "g2_dimension": 14,
@@ -69,7 +69,7 @@ def test_electron_seed_audit_keeps_the_boundary_honest() -> None:
     }
     assert records["same_seed_touches_exceptional_f4_scale"]["support_level"] == "repo-exact splice"
     assert records["same_seed_splices_into_q3_continuum_normalization"]["support_level"] == "repo-exact splice"
-    assert records["same_seed_splices_into_q3_continuum_normalization"]["evidence"] == {
+    assert records["same_seed_splices_into_q3_continuum_normalization"]["docs/evidence"] == {
         "charged_lepton_shell_mu_squared_phi3": {"exact": "208", "float": 208.0},
         "cartan_packet": 8,
         "discrete_6_mode_over_a0": 26,

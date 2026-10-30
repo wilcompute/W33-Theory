@@ -53,11 +53,11 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Compile all three canonical manuscripts
         run: |
-          mkdir -p evidence/pass7154_7162
+          mkdir -p docs/evidence/pass7154_7162
           for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             tectonic --keep-logs "$f"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7154_7162/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass7154_7162/pdf_sha256.txt
       - name: Materialize public frontier and freeze proof
         run: |
           git fetch origin master
@@ -69,7 +69,7 @@ jobs:
           import json, os
           from pathlib import Path
           d={
-            'schema':'w33.pass7154_7162.publication_proof.v1',
+            'schemas':'w33.pass7154_7162.publication_proof.v1',
             'status':'PASS',
             'source_commit':os.environ['GITHUB_SHA'],
             'analytic_e8_firewall_present':True,
@@ -78,7 +78,7 @@ jobs:
             'public_card_materialized_both_surfaces':True,
             'pass7154_q9_48_decision_present':Path('data/PART_W33_PASS7154_Q9_48_CLIQUE_DECISION.json').exists(),
             'pass7159_gap_full_gl6_certificate_present':Path('data/PART_W33_PASS7159_FANO40_FULL_GL6_STABILIZER.json').exists(),
-            'pdf_sha256':Path('evidence/pass7154_7162/pdf_sha256.txt').read_text().strip().splitlines(),
+            'pdf_sha256':Path('docs/evidence/pass7154_7162/pdf_sha256.txt').read_text().strip().splitlines(),
           }
           Path('data/PART_W33_PASS7154_7162_PUBLICATION_PROOF.json').write_text(json.dumps(d,indent=2)+'\n')
           PY

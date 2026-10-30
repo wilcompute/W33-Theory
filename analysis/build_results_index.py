@@ -101,7 +101,7 @@ GLOBS = [
     "*_BUNDLE*/**/*.md",
     "*_bundle*/**/*.md",
     "*_deliverable*/**/*.md",
-    "V2*_output*/**/*.md",
+    "archive/outputs/V2*_output*/**/*.md",   # moved from the root (2026-10-30)
     "NOTES/*.md",
 ]
 

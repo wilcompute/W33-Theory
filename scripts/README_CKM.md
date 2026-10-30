@@ -24,4 +24,4 @@ py -3 -X utf8 scripts/ckm_fit_scalings.py
 py -3 -X utf8 scripts/ckm_scaled_phase_reconstruction.py
 ```
 
-Outputs are saved under `data/` and a short summary is in `reports/ckm_analysis.md`.
+Outputs are saved under `data/` and a short summary is in `docs/reports/ckm_analysis.md`.

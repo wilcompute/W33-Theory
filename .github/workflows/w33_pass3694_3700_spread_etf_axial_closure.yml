@@ -86,17 +86,17 @@ jobs:
         run: |
           grep -F 'BT3694_BT3700_spread_etf_axial_closure_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
           grep -F 'id="spread-etf-norton"' docs/index.html
-          mkdir -p evidence/pass3694_3700
+          mkdir -p docs/evidence/pass3694_3700
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3694_3700/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3694_3700/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3694_3700/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3694_3700/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: w33-pass3694-3700-canonical-papers
           path: |
-            evidence/pass3694_3700/**
+            docs/evidence/pass3694_3700/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

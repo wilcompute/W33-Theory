@@ -64,7 +64,7 @@ from exploration.w33_yukawa_a4_normalization_bridge import (
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 DEFAULT_OUTPUT_PATH = DATA_DIR / "w33_balanced_branch_vacuum_bridge_summary.json"
-V29_STIFFNESS_SUMMARY_PATH = ROOT / "V29_output_q_stiffness" / "summary.json"
+V29_STIFFNESS_SUMMARY_PATH = ROOT / "archive/outputs/V29_output_q_stiffness" / "summary.json"
 
 
 def _fraction_text(value: Fraction) -> str:
@@ -251,7 +251,7 @@ def build_balanced_branch_vacuum_summary() -> dict[str, Any]:
             "exploration/w33_bridge_a4_normalization_bridge.py",
             "exploration/w33_yukawa_a4_normalization_bridge.py",
             "exploration/w33_q_cyclotomic_master_bridge.py",
-            "V29_output_q_stiffness/summary.json",
+            "archive/outputs/V29_output_q_stiffness/summary.json",
         ],
     }
 

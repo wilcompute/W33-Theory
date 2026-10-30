@@ -187,7 +187,7 @@ arXiv: [ARXIV-ID]
 
 **Submission portal:** https://authors.aps.org/Submissions/login/new  
 **Manuscript file:** `W36_PRL_LETTER.tex` (compiled PDF)  
-**Figures:** `figures/fig1_spectral_diagram.pdf`, `figures/fig2_predictions_timeline.pdf`  
+**Figures:** `docs/figures/fig1_spectral_diagram.pdf`, `docs/figures/fig2_predictions_timeline.pdf`  
 **Cover letter:** See `PRL_COVER_LETTER.md`  
 
 ---

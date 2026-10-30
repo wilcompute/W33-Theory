@@ -4,7 +4,7 @@
 Defines the schema for lifting each BT1880 vertex-E8 8-vector into the W(3,3)
 40-coordinate chain model. The first candidate lift uses BT982's vertex_subset
 when the materialized BT982 JSON is present; otherwise it uses the vertex subset
-recorded in the BT982 source. This is a schema/candidate lift, not yet a proof
+recorded in the BT982 source. This is a schemas/candidate lift, not yet a proof
 that it is the correct chain A/2 representative model.
 """
 from __future__ import annotations

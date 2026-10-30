@@ -41,15 +41,15 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest numpy==2.3.5
       - name: Regenerate quick exact certificate
         run: |
-          mkdir -p evidence/pass3965_3972
+          mkdir -p docs/evidence/pass3965_3972
           python analysis/w33_pass3965_3972_topology_control_causal_density.py \
-            --json evidence/pass3965_3972/results.json | tee evidence/pass3965_3972/exact.log
+            --json docs/evidence/pass3965_3972/results.json | tee docs/evidence/pass3965_3972/exact.log
           grep -F 'PASS_8_FRONTS 90911496d42850652801e77da5bf6523027f5e3a52e8d906a9e817526fa68d57' \
-            evidence/pass3965_3972/exact.log
+            docs/evidence/pass3965_3972/exact.log
           python - <<'PY'
           import json
           expected=json.load(open('data/PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json'))
-          observed=json.load(open('evidence/pass3965_3972/results.json'))
+          observed=json.load(open('docs/evidence/pass3965_3972/results.json'))
           assert observed == expected
           assert observed['passes']['3967_dual_geometry_lie_closure']['minimum_independent_diagonal_ports'] == 24
           assert observed['passes']['3970_bonkers_photon_causal_density']['serial_depth_bound'] == 'N_serial <= 4 E L/(h c)=4 L/lambda'
@@ -57,7 +57,7 @@ jobs:
           PY
       - name: Focused exact regression
         run: |
-          pytest -q tests/test_w33_pass3965_3972_topology_control_causal_density.py | tee evidence/pass3965_3972/pytest.log
+          pytest -q tests/test_w33_pass3965_3972_topology_control_causal_density.py | tee docs/evidence/pass3965_3972/pytest.log
           git diff --check
       - name: Check manuscript and public reachability
         run: |
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: pass3965-3972-quick-evidence
-          path: evidence/pass3965_3972/**
+          path: docs/evidence/pass3965_3972/**
 
   heavy-ledger:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.heavy_ledger }}
@@ -81,16 +81,16 @@ jobs:
       - run: python -m pip install --disable-pip-version-check numpy==2.3.5
       - name: Regenerate exhaustive ledgers
         run: |
-          mkdir -p evidence/pass3965_3972 /tmp/pass3965
+          mkdir -p docs/evidence/pass3965_3972 /tmp/pass3965
           python analysis/w33_pass3965_3972_topology_control_causal_density.py \
             --heavy --workdir /tmp/pass3965 \
-            --json evidence/pass3965_3972/heavy_results.json | tee evidence/pass3965_3972/heavy.log
+            --json docs/evidence/pass3965_3972/heavy_results.json | tee docs/evidence/pass3965_3972/heavy.log
           grep -F 'PASS_8_FRONTS 90911496d42850652801e77da5bf6523027f5e3a52e8d906a9e817526fa68d57' \
-            evidence/pass3965_3972/heavy.log
+            docs/evidence/pass3965_3972/heavy.log
       - uses: actions/upload-artifact@v4
         with:
           name: pass3965-3972-heavy-evidence
-          path: evidence/pass3965_3972/**
+          path: docs/evidence/pass3965_3972/**
 
   manuscripts:
     runs-on: ubuntu-24.04
@@ -101,18 +101,18 @@ jobs:
         with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
       - name: Compile all manuscript front doors
         run: |
-          mkdir -p evidence/pass3965_3972
+          mkdir -p docs/evidence/pass3965_3972
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3965_3972/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3965_3972/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass3965_3972/pdf_sha256.txt
+            > docs/evidence/pass3965_3972/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3965-3972-papers
           path: |
-            evidence/pass3965_3972/**
+            docs/evidence/pass3965_3972/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

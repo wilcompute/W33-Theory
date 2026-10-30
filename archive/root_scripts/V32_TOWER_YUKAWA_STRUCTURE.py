@@ -163,10 +163,10 @@ def main():
     cartan_dim, sc_roots, idx_grade, idx_i27, idx_i3 = load_grade_infrastructure()
 
     files = {
-        "l3 (triples → g0)": ROOT / "V24_output_v13_full" / "l3_patch_triples_full.jsonl",
-        "l4 (quads → g1)": ROOT / "V24_output_v13_full" / "l4_patch_quads_full.jsonl",
-        "l5 (quintuples → g2)": ROOT / "V24_output_v13_full" / "l5_patch_quintuples_full.jsonl",
-        "l6 (sextuples → g0)": ROOT / "V24_output_v13_full" / "l6_patch_sextuples_full.jsonl",
+        "l3 (triples → g0)": ROOT / "archive/outputs/V24_output_v13_full" / "l3_patch_triples_full.jsonl",
+        "l4 (quads → g1)": ROOT / "archive/outputs/V24_output_v13_full" / "l4_patch_quads_full.jsonl",
+        "l5 (quintuples → g2)": ROOT / "archive/outputs/V24_output_v13_full" / "l5_patch_quintuples_full.jsonl",
+        "l6 (sextuples → g0)": ROOT / "archive/outputs/V24_output_v13_full" / "l6_patch_sextuples_full.jsonl",
     }
 
     for name, path in files.items():

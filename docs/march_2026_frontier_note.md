@@ -686,7 +686,7 @@ There is now also a clean exact selector on the active `2x2` bridge branch:
 - Hence if `mu > 0` and `4u > Av`, the nonzero balanced stationary radius is
   - `r_*^2 = 2 mu / (4u - A v)`
 
-This does **not** finish the bridge theorem. The checked local `V29_output_q_stiffness/summary.json` is numerically near-isotropic at quadratic order (`diag_cv ~= 0.024`, `offdiag_rms_ratio ~= 0.0077`, `eig_std_ratio ~= 0.088`), and the companion `V29_output_q_stiffness_validate/summary.json` keeps the finite-difference mean relative error near `0.017`, which is consistent with the reduced selector picture, but only as observation. The exact open step is still the actual branch-realization / orientation theorem on the refinement tower.
+This does **not** finish the bridge theorem. The checked local `archive/outputs/V29_output_q_stiffness/summary.json` is numerically near-isotropic at quadratic order (`diag_cv ~= 0.024`, `offdiag_rms_ratio ~= 0.0077`, `eig_std_ratio ~= 0.088`), and the companion `archive/outputs/V29_output_q_stiffness_validate/summary.json` keeps the finite-difference mean relative error near `0.017`, which is consistent with the reduced selector picture, but only as observation. The exact open step is still the actual branch-realization / orientation theorem on the refinement tower.
 
 ### External H2 host split
 

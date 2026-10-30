@@ -49,7 +49,7 @@ The route-controlled Clifford transport is unitary and norm-preserving.  The red
 Added:
 
 ```text
-schema/bt1395_s3_maxsat_certificate.schema.json
+schemas/bt1395_s3_maxsat_certificate.schema.json
 tools/bt1395_s3_maxsat_bound_pathway.py
 data/bt1395_s3_maxsat_bound_pathway.json
 ```

@@ -14,7 +14,7 @@ def test_bt1280_recovery_packet_guide_exists():
     assert guide.exists()
     text = guide.read_text(encoding="utf-8")
     assert "Finite Clifford Recovery Packet Guide" in text
-    assert "schema/bt1269_tomography_candidate.schema.json" in text
+    assert "schemas/bt1269_tomography_candidate.schema.json" in text
     assert "tools/bt1272_score_candidate.py" in text
     assert "data/bt1275_strict_polar_path_recovery_certificate.json" in text
     assert "data/bt1279_recovery_packet_index.json" in text

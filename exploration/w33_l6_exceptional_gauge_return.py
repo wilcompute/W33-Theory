@@ -42,7 +42,7 @@ from w33_fermionic_connes_sector import canonical_spinor_basis
 
 L6_PATH = resolve_repo_data_path(
     ROOT,
-    Path("V24_output_v13_full") / "l6_patch_sextuples_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l6_patch_sextuples_full.jsonl",
 )
 META_PATH = resolve_repo_data_path(
     ROOT,

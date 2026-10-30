@@ -42,7 +42,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy pytest
       - name: Preserve frozen certificates
         run: |
-          mkdir -p evidence/pass4520_4527 /tmp/pass4520_4527
+          mkdir -p docs/evidence/pass4520_4527 /tmp/pass4520_4527
           for f in \
             data/PART_W33_PASS4520_APARTMENT_ENUMERATOR_FRONTIER.json \
             data/PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json \
@@ -54,10 +54,10 @@ jobs:
           done
       - name: Regenerate exact Q53 distance and general GQ theorems
         run: |
-          python analysis/w33_pass4521_q53_apartment_distance_proof.py | tee evidence/pass4520_4527/q53_distance.log
-          python analysis/w33_pass4523_general_gq_c6_tomography.py | tee evidence/pass4520_4527/gq_c6.log
-          python analysis/w33_pass4524_q53_prism_fiber_exception.py | tee evidence/pass4520_4527/q53_prism.log
-          python analysis/w33_pass4526_general_gq_prism_fan_kernel.py | tee evidence/pass4520_4527/fan_kernel.log
+          python analysis/w33_pass4521_q53_apartment_distance_proof.py | tee docs/evidence/pass4520_4527/q53_distance.log
+          python analysis/w33_pass4523_general_gq_c6_tomography.py | tee docs/evidence/pass4520_4527/gq_c6.log
+          python analysis/w33_pass4524_q53_prism_fiber_exception.py | tee docs/evidence/pass4520_4527/q53_prism.log
+          python analysis/w33_pass4526_general_gq_prism_fan_kernel.py | tee docs/evidence/pass4520_4527/fan_kernel.log
           python - <<'PY'
           import json
           assert json.load(open('data/PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json'))['code']=={'dimension':279,'length':102060,'minimum_distance':1458,'minimum_word_count':280}
@@ -71,7 +71,7 @@ jobs:
           PY
       - name: Regenerate 366D quotient and explicit cubic-surface bridges
         run: |
-          python analysis/w33_pass4522_4525_4527_dual_orthogonal_schlafli.py | tee evidence/pass4520_4527/orthogonal_bridges.log
+          python analysis/w33_pass4522_4525_4527_dual_orthogonal_schlafli.py | tee docs/evidence/pass4520_4527/orthogonal_bridges.log
           python - <<'PY'
           import json
           d=json.load(open('data/PART_W33_PASS4522_4525_4527_DUAL_ORTHOGONAL_SCHLAFLI.json'))
@@ -83,7 +83,7 @@ jobs:
           PY
       - name: Regenerate exact support-6/7 enumerator frontier
         run: |
-          python analysis/w33_pass4520_apartment_enumerator_frontier.py | tee evidence/pass4520_4527/enumerator.log
+          python analysis/w33_pass4520_apartment_enumerator_frontier.py | tee docs/evidence/pass4520_4527/enumerator.log
           python - <<'PY'
           import json
           d=json.load(open('data/PART_W33_PASS4520_APARTMENT_ENUMERATOR_FRONTIER.json'))
@@ -95,7 +95,7 @@ jobs:
       - name: Restore frozen certificate formatting and archive regenerated payloads
         run: |
           for f in data/PART_W33_PASS4520_APARTMENT_ENUMERATOR_FRONTIER.json data/PART_W33_PASS4521_Q53_APARTMENT_DISTANCE_PROOF.json data/PART_W33_PASS4522_4525_4527_DUAL_ORTHOGONAL_SCHLAFLI.json data/PART_W33_PASS4523_GENERAL_GQ_C6_TOMOGRAPHY.json data/PART_W33_PASS4524_Q53_PRISM_FIBER_EXCEPTION.json data/PART_W33_PASS4526_GENERAL_GQ_PRISM_FAN_KERNEL.json; do
-            cp "$f" "evidence/pass4520_4527/generated_$(basename "$f")"
+            cp "$f" "docs/evidence/pass4520_4527/generated_$(basename "$f")"
             cp "/tmp/pass4520_4527/$(basename "$f")" "$f"
           done
       - name: Verify concurrent manuscript chain and restored-site dry run
@@ -108,7 +108,7 @@ jobs:
           c=p.index('PASS4528_4535_borel_building_compiler_edge_insert')
           assert a<b<c
           PY
-          python tools/integrate_bt3376_bt3389.py --report evidence/pass4520_4527/site.json
+          python tools/integrate_bt3376_bt3389.py --report docs/evidence/pass4520_4527/site.json
           test "$(grep -c 'id=\"pass4520-4527-enumerator-q53-orthogonal\"' docs/index.html)" -eq 1
           test -s docs/apartment-q53-orthogonal-tomography.html
       - uses: WtfJoke/setup-tectonic@v3
@@ -117,10 +117,10 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4520_4527/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass4520_4527/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass4520_4527/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass4520_4527/pdf_sha256.txt
       - name: Fail-closed boundaries
         run: |
           git diff --check
@@ -131,7 +131,7 @@ jobs:
         with:
           name: pass4520-4527-enumerator-q53-orthogonal-evidence
           path: |
-            evidence/pass4520_4527/**
+            docs/evidence/pass4520_4527/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

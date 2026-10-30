@@ -16,10 +16,45 @@
     "exact_W33_matches_zero": "BT1358's exact_W33_matches=0 refers to the competitor/falsifier pool survivor search, not to absence of the W33 reference family. The W33 reference is handled separately in BT1354 as the physically realizable family."
   },
   "canonical_ladder": {
-    "Q4": {"delta": 2.523, "ramanujan_bound": 2.8284, "super_ramanujan": false, "code_params": {"n": 32, "k": 4, "d": 4}},
-    "Q5": {"delta": 2.687, "ramanujan_bound": 2.8284, "super_ramanujan": false, "code_params": {"n": 37, "k": 5, "d": 4}},
-    "Q6": {"delta": 2.862, "ramanujan_bound": 2.8284, "super_ramanujan": true, "code_params": {"n": 42, "k": 6, "d": 4}},
-    "Q7": {"delta_direct_bt1356": 3.0616, "params": {"n": 47, "k": 7, "d": 4}, "period_closed": true}
+    "Q4": {
+      "delta": 2.523,
+      "ramanujan_bound": 2.8284,
+      "super_ramanujan": false,
+      "code_params": {
+        "n": 32,
+        "k": 4,
+        "d": 4
+      }
+    },
+    "Q5": {
+      "delta": 2.687,
+      "ramanujan_bound": 2.8284,
+      "super_ramanujan": false,
+      "code_params": {
+        "n": 37,
+        "k": 5,
+        "d": 4
+      }
+    },
+    "Q6": {
+      "delta": 2.862,
+      "ramanujan_bound": 2.8284,
+      "super_ramanujan": true,
+      "code_params": {
+        "n": 42,
+        "k": 6,
+        "d": 4
+      }
+    },
+    "Q7": {
+      "delta_direct_bt1356": 3.0616,
+      "params": {
+        "n": 47,
+        "k": 7,
+        "d": 4
+      },
+      "period_closed": true
+    }
   },
   "paper_patch_recommendation": "Add chronology language: BT1324 was an open/ceiling warning; BT1356 resolves the heptad-ladder Q7 case; BT1358 falsifies competitors, not the W33 reference."
 }

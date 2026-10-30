@@ -27,7 +27,7 @@ sys.path.insert(0, str(ROOT))
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / "artifacts"
-REPORTS = ROOT / "reports"
+REPORTS = ROOT / "docs/reports"
 ART.mkdir(exist_ok=True)
 REPORTS.mkdir(exist_ok=True)
 

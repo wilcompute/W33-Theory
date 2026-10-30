@@ -81,9 +81,9 @@ adjacency eigenvalues, parameter-free derivation
 
 ## Files to Upload (in order)
 1. `W36_PAPER.tex` — main LaTeX source
-2. `figures/fig1_spectral_diagram.svg` — W(3,3) eigenvalue spectrum
-3. `figures/fig2_predictions_timeline.svg` — 8 predictions timeline
-4. `figures/fig3_spectral_decomposition.svg` — sector decomposition donut
+2. `docs/figures/fig1_spectral_diagram.svg` — W(3,3) eigenvalue spectrum
+3. `docs/figures/fig2_predictions_timeline.svg` — 8 predictions timeline
+4. `docs/figures/fig3_spectral_decomposition.svg` — sector decomposition donut
 5. `arxiv_metadata.md` — this file (for reference only, do not submit)
 
 ---

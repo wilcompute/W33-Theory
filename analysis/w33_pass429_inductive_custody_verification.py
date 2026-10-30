@@ -9,7 +9,7 @@ from w33_pass410_414_common import certificate,write_json
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'w33_pass429_inductive_custody_verification.json'
-SPEC=ROOT/'specs'/'W33Pass429CustodyInductive.tla'
+SPEC=ROOT/'docs/specs'/'W33Pass429CustodyInductive.tla'
 TYPES=['frozen_protocol','accepted_bom','calibration_certificate','blinded_raw_counts','blinded_analysis','blind_key','unblinded_result','independent_audit']
 ROLES=['protocol_owner','independent_auditor','acquisition_lab','acquisition_lab','blinded_analyst','blind_key_custodian','blinded_analyst','independent_auditor']
 ROLE_KEYS={r:'key:'+r for r in sorted(set(ROLES))}
@@ -118,14 +118,14 @@ def build_payload()->dict:
       'tla_uses_temporal_invariant':'Spec => []Safety' in spec,
       'proof_is_not_bounded_attack_enumeration':True,
     };checks={k:bool(v) for k,v in checks.items()}
-    payload={'schema':'w33.pass429.inductive_custody_verification.v1','status':'PASS' if all(checks.values()) else 'FAIL',
+    payload={'schemas':'w33.pass429.inductive_custody_verification.v1','status':'PASS' if all(checks.values()) else 'FAIL',
       'theorem':{
        'unbounded_safety':'by induction on event count, Init satisfies Safety and every enabled Append or Finalize transition preserves Safety; therefore every finite prefix of every arbitrarily long interleaving is safe',
        'scope':'the number of studies and event interleavings is unbounded at the transition-system level; each study has the fixed eight-stage preregistered protocol',
        'frame_rule':'an append changes exactly one study chain, so all other chains retain their invariant and the local preservation proof lifts to arbitrary finite study maps',
        'guard_minimality':'removing each of eleven binding or claim guards admits an executable one-step counterexample',
        'liveness_boundary':'weak fairness can imply eventual completion for continuously enabled honest actors, but liveness is not claimed without scheduler and availability assumptions; the TLA+ theorem is supplied but TLC/Apalache was not run'},
-      'formal_spec':'specs/W33Pass429CustodyInductive.tla','induction_cases':preservation,'finalization_cases':finalization,
+      'formal_spec':'docs/specs/W33Pass429CustodyInductive.tla','induction_cases':preservation,'finalization_cases':finalization,
       'guard_counterexamples':guard_counterexamples,'interleaving_trace_length':len(trace),'checks':checks}
     payload['certificate_sha256']=certificate(payload);return payload
 

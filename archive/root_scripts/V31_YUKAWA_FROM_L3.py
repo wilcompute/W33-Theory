@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parent
 ARTIFACTS = ROOT / "artifacts"
 DEFAULT_SC_JSON = ARTIFACTS / "e8_structure_constants_w33_discrete.json"
 DEFAULT_META_JSON = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
-DEFAULT_L3_JSONL = ROOT / "V24_output_v13_full" / "l3_patch_triples_full.jsonl"
+DEFAULT_L3_JSONL = ROOT / "archive/outputs/V24_output_v13_full" / "l3_patch_triples_full.jsonl"
 
 
 def main():

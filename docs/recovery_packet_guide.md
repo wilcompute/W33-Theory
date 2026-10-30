@@ -7,7 +7,7 @@ This guide gives the short path through the external candidate protocol.
 Use the schema:
 
 ```text
-schema/bt1269_tomography_candidate.schema.json
+schemas/bt1269_tomography_candidate.schema.json
 ```
 
 Required fields:

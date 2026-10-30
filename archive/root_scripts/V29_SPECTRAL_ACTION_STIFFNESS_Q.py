@@ -37,7 +37,7 @@ import scipy.sparse as sp
 def _parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser(description="Compute Dirac–Kähler spectral-action stiffness Q on im(d1).")
     ap.add_argument("--Lambda", type=float, default=4.0, help="Spectral-action cutoff Λ (default: 4.0)")
-    ap.add_argument("--out-dir", type=Path, default=Path("V29_output_q_stiffness"), help="Output directory")
+    ap.add_argument("--out-dir", type=Path, default=Path("archive/outputs/V29_output_q_stiffness"), help="Output directory")
     ap.add_argument(
         "--validate",
         type=int,

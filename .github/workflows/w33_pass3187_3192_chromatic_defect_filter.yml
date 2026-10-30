@@ -9,7 +9,7 @@ on:
       - 'analysis/BT2435_five_frontiers_insert.tex'
       - 'data/PART_BT3187*'
       - 'data/w33_pass_namespace_registry_v2.d/3187-3192.json'
-      - 'evidence/pass3187_3192/**'
+      - 'docs/evidence/pass3187_3192/**'
       - 'tests/test_bt3187_bt3192_chromatic_defect_block_filter.py'
       - 'tools/integrate_bt3187_bt3192.py'
       - 'w33_paper.tex'
@@ -50,21 +50,21 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Compile all three canonical manuscripts
         run: |
-          mkdir -p evidence/pass3187_3192
+          mkdir -p docs/evidence/pass3187_3192
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             stem=${source%.tex}
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3187_3192/${stem}.build.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3187_3192/${stem}.build.log"
             test -s "${stem}.pdf"
             if grep -E 'Undefined control sequence|LaTeX Error|Emergency stop|Fatal error' "${stem}.log"; then exit 1; fi
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > /tmp/pass3187_pdf_sha256.txt
-          diff -u evidence/pass3187_3192/pdf_sha256.txt /tmp/pass3187_pdf_sha256.txt
+          diff -u docs/evidence/pass3187_3192/pdf_sha256.txt /tmp/pass3187_pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3187-3192-chromatic-defect-evidence
           path: |
             data/PART_BT3187_BT3192_CHROMATIC_DEFECT_BLOCK_FILTER_results.json
-            evidence/pass3187_3192/*
+            docs/evidence/pass3187_3192/*
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

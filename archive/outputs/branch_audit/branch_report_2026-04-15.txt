@@ -32,7 +32,7 @@ origin-https    https://github.com/wilcompute/W33-Theory.git (push)
 ?? check_verify2.py
 ?? exploration/w33_moonshine_decomposed.py
 ?? pytest_run_output.txt
-?? reports/anchor_forbid_0-20-23.json
+?? docs/reports/anchor_forbid_0-20-23.json
 ?? scripts/find_fragile_imports.py
 ?? scripts/fragile_imports_report.txt
 ?? tail.txt
@@ -107,7 +107,7 @@ Captured: 2026-04-15
 I started a full `pytest` run to exercise the entire test-suite and capture results.
 The run produced immediate output and was captured to:
 
-  branch_audit/pytest_full_output_2026-04-15.txt
+  archive/outputs/branch_audit/pytest_full_output_2026-04-15.txt
 
 Observations from the captured output:
 - The run reached ~23% before the capture cut shown here.

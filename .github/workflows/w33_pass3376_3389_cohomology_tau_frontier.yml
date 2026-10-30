@@ -39,32 +39,32 @@ jobs:
           python-version: '3.12'
       - name: Regenerate exact certificates
         run: |
-          mkdir -p evidence/pass3376_3389
+          mkdir -p docs/evidence/pass3376_3389
           python -m pip install --disable-pip-version-check numpy pytest
           python analysis/bt3376_3389_cohomology_tau_frontier.py \
             --json /tmp/bt3376_3389_results.json \
-            | tee evidence/pass3376_3389/exact.log
+            | tee docs/evidence/pass3376_3389/exact.log
           cmp /tmp/bt3376_3389_results.json \
             data/PART_BT3376_BT3389_COHOMOLOGY_TAU_results.json
           python analysis/bt3385_hidden_torus_dalembertian.py \
             --json /tmp/bt3385_results.json \
-            | tee evidence/pass3376_3389/dalembertian.log
+            | tee docs/evidence/pass3376_3389/dalembertian.log
           cmp /tmp/bt3385_results.json \
             data/PART_BT3385_HIDDEN_TORUS_DALEMBERTIAN_results.json
       - name: Materialize public front doors twice
         run: |
           python tools/integrate_bt3376_bt3389.py \
-            --report evidence/pass3376_3389/integration_first.json
+            --report docs/evidence/pass3376_3389/integration_first.json
           python tools/integrate_bt3376_bt3389.py \
-            --report evidence/pass3376_3389/integration_second.json
+            --report docs/evidence/pass3376_3389/integration_second.json
           python tools/audit_w33_current_frontier.py \
-            --report evidence/pass3376_3389/frontier_audit.json
+            --report docs/evidence/pass3376_3389/frontier_audit.json
       - name: Focused regression
         run: |
           python -m pytest -q \
             tests/test_bt3376_3389_cohomology_tau_frontier.py \
             tests/test_bt3385_hidden_torus_dalembertian.py \
-            | tee evidence/pass3376_3389/pytest.log
+            | tee docs/evidence/pass3376_3389/pytest.log
           git diff --check
       - uses: WtfJoke/setup-tectonic@v3
         with:
@@ -73,11 +73,11 @@ jobs:
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             tectonic --keep-logs "$source" 2>&1 \
-              | tee evidence/pass3376_3389/${source%.tex}.log
+              | tee docs/evidence/pass3376_3389/${source%.tex}.log
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass3376_3389/pdf_sha256.txt
+            > docs/evidence/pass3376_3389/pdf_sha256.txt
       - name: Commit materialized index once
         run: |
           git config user.name github-actions[bot]
@@ -91,7 +91,7 @@ jobs:
         with:
           name: pass3376-3389-cohomology-tau-evidence
           path: |
-            evidence/pass3376_3389/**
+            docs/evidence/pass3376_3389/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

@@ -52,7 +52,7 @@ from w33_l6_exceptional_gauge_return import (
 
 
 DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_lie_tower_cycle_bridge_summary.json"
-TOWER_DIR = resolve_repo_data_path(ROOT, "V24_output_v13_full")
+TOWER_DIR = resolve_repo_data_path(ROOT, "archive/outputs/V24_output_v13_full")
 META_PATH = resolve_repo_data_path(
     ROOT,
     Path("extracted_v13")

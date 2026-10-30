@@ -40,7 +40,7 @@ from scripts.reproduce_w33_core import alpha_docs_variant, alpha_paper_variant  
 
 OUT_PATH = ROOT / "data" / "dcclxxii_formula_regime_registry_bridge.json"
 CONSISTENCY_NOTES = ROOT / "docs" / "consistency_notes.md"
-AUDIT_REPORT = ROOT / "reports" / "2026-05-16_repo_audit.md"
+AUDIT_REPORT = ROOT / "docs/reports" / "2026-05-16_repo_audit.md"
 
 Q = 3
 PHI3 = Q**2 + Q + 1

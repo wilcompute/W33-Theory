@@ -15,7 +15,7 @@ def run_cli(rel: str):
 
 
 def test_bt1269_schema_file_fields():
-    schema = json.loads((ROOT / "schema" / "bt1269_tomography_candidate.schema.json").read_text(encoding="utf-8"))
+    schema = json.loads((ROOT / "schemas" / "bt1269_tomography_candidate.schema.json").read_text(encoding="utf-8"))
     assert schema["required"] == ["candidate_id", "closure_order", "word_diameter", "edge_split", "diameter_endpoint_first_set_histogram", "labelled_channel_spread"]
     assert schema["properties"]["edge_split"]["required"] == ["polar_graph", "nonpolar_graph"]
     assert schema["additionalProperties"] is False

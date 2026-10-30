@@ -41,19 +41,19 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy
       - name: Reproduce distance, W33 reconstruction, and prism certificate
         run: |
-          mkdir -p evidence/pass4495_4502
+          mkdir -p docs/evidence/pass4495_4502
           python analysis/w33_pass4495_4502_distance_prism_reconstruction.py \
-            | tee evidence/pass4495_4502/distance_prisms.log
+            | tee docs/evidence/pass4495_4502/distance_prisms.log
           git diff --exit-code -- data/PART_W33_PASS4495_4502_DISTANCE_PRISM_RECONSTRUCTION.json
       - name: Reproduce H10 extension cohomology
         run: |
           python analysis/w33_pass4496_h10_extension_cohomology.py \
-            | tee evidence/pass4495_4502/h1.log
+            | tee docs/evidence/pass4495_4502/h1.log
           git diff --exit-code -- data/PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json
       - name: Reproduce higher Ihara, Clifford lift, and thermal shell
         run: |
           python analysis/w33_pass4497_4499_ihara_clifford_thermal.py \
-            | tee evidence/pass4495_4502/ihara_clifford_thermal.log
+            | tee docs/evidence/pass4495_4502/ihara_clifford_thermal.log
           git diff --exit-code -- data/PART_W33_PASS4497_4499_IHARA_CLIFFORD_THERMAL.json
       - name: Static theorem checks
         run: |
@@ -77,7 +77,7 @@ jobs:
           git diff --check
       - name: Dry-run restored-site reconciliation
         run: |
-          python tools/integrate_bt3376_bt3389.py --report evidence/pass4495_4502/site_integration.json
+          python tools/integrate_bt3376_bt3389.py --report docs/evidence/pass4495_4502/site_integration.json
           test "$(grep -c 'id="pass4495-4502-distance-cohomology-ihara-clifford-prism"' docs/index.html)" -eq 1
           test -s docs/apartment-code-distance-cohomology-prisms.html
           grep -q '\[1620,39,162\]' docs/apartment-code-distance-cohomology-prisms.html
@@ -88,17 +88,17 @@ jobs:
       - name: Compile all canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass4495_4502/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass4495_4502/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass4495_4502/pdf_sha256.txt
+            > docs/evidence/pass4495_4502/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: pass4495-4502-distance-cohomology-prisms-evidence
           path: |
-            evidence/pass4495_4502/**
+            docs/evidence/pass4495_4502/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

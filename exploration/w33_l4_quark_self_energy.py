@@ -45,7 +45,7 @@ from w33_quark_firewall_obstruction import firewall_triad_records
 ROOT = Path(__file__).resolve().parents[1]
 L4_PATH = resolve_repo_data_path(
     ROOT,
-    Path("V24_output_v13_full") / "l4_patch_quads_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l4_patch_quads_full.jsonl",
 )
 META_PATH = resolve_repo_data_path(
     ROOT,

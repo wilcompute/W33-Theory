@@ -57,12 +57,12 @@ jobs:
         with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
       - name: Compile all canonical manuscripts
         run: |
-          mkdir -p evidence/pass3320_3331
+          mkdir -p docs/evidence/pass3320_3331
           for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$f" 2>&1 | tee "evidence/pass3320_3331/${f%.tex}.log"
+            tectonic --keep-logs "$f" 2>&1 | tee "docs/evidence/pass3320_3331/${f%.tex}.log"
             test -s "${f%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3320_3331/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3320_3331/pdf_sha256.txt
       - name: Publish readable materialization once
         if: github.event_name == 'push'
         run: |
@@ -77,7 +77,7 @@ jobs:
         with:
           name: pass3320-3331-global-cover-quantum-hypercube-evidence
           path: |
-            evidence/pass3320_3331/**
+            docs/evidence/pass3320_3331/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

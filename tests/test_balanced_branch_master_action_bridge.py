@@ -8,7 +8,7 @@ def test_balanced_branch_master_action_summary() -> None:
 
     validated = summary["validated_v29_input"]
     assert validated["status"] == "ok"
-    assert validated["source_file"] == "V29_output_q_stiffness_validate/summary.json"
+    assert validated["source_file"] == "archive/outputs/V29_output_q_stiffness_validate/summary.json"
     assert validated["diag_rel_std"] < 0.03
     assert validated["offdiag_rel_rms"] < 0.01
     assert validated["finite_difference_pairs"] == 5

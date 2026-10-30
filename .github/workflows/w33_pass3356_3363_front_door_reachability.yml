@@ -32,15 +32,15 @@ jobs:
           python-version: '3.12'
       - name: Regenerate exact gauge certificate
         run: |
-          mkdir -p evidence/pass3356_3363
+          mkdir -p docs/evidence/pass3356_3363
           python analysis/bt3363_minimum_gauge_defect_generation.py \
-            --json /tmp/bt3363.json | tee evidence/pass3356_3363/gauge.log
+            --json /tmp/bt3363.json | tee docs/evidence/pass3356_3363/gauge.log
           cmp /tmp/bt3363.json data/PART_BT3363_MINIMUM_GAUGE_DEFECT_GENERATION_results.json
       - name: Materialize all four front doors twice
         run: |
-          python tools/integrate_bt3320_bt3331.py --report evidence/pass3356_3363/first.json
+          python tools/integrate_bt3320_bt3331.py --report docs/evidence/pass3356_3363/first.json
           python tools/integrate_bt3363_minimum_gauge_defect.py
-          python tools/integrate_bt3320_bt3331.py --report evidence/pass3356_3363/second.json
+          python tools/integrate_bt3320_bt3331.py --report docs/evidence/pass3356_3363/second.json
           python tools/integrate_bt3363_minimum_gauge_defect.py
           grep -F '\input{analysis/BT3330_global_cover_quantum_hypercube_insert}%' w33_paper.tex
           grep -F '\input{analysis/BT3363_minimum_gauge_defect_generation_insert}%' w33_paper.tex
@@ -56,7 +56,7 @@ jobs:
           pytest -q \
             tests/test_bt3356_3363_front_door_reachability.py \
             tests/test_bt3363_minimum_gauge_defect_generation.py \
-            | tee evidence/pass3356_3363/pytest.log
+            | tee docs/evidence/pass3356_3363/pytest.log
           git diff --check
       - uses: WtfJoke/setup-tectonic@v3
         with:
@@ -64,11 +64,11 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3356_3363/${source%.tex}.log
+            tectonic --keep-logs "$source" 2>&1 | tee docs/evidence/pass3356_3363/${source%.tex}.log
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass3356_3363/pdf_sha256.txt
+            > docs/evidence/pass3356_3363/pdf_sha256.txt
       - name: Commit materialized front doors once
         run: |
           git config user.name github-actions[bot]
@@ -82,7 +82,7 @@ jobs:
         with:
           name: pass3356-3363-front-door-gauge-evidence
           path: |
-            evidence/pass3356_3363/**
+            docs/evidence/pass3356_3363/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

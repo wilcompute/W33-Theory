@@ -24,7 +24,7 @@ Requires standard TeX Live packages: `amsmath`, `amssymb`, `amsthm`,
 
 - [ ] `pdflatex main.tex` produces no errors
 - [ ] All `\ref{}` and `\cite{}` resolve (check .log for `?`)
-- [ ] Abstract matches `submission/arXiv_metadata.txt`
+- [ ] Abstract matches `papers/submission/arXiv_metadata.txt`
 - [ ] Primary category: **math.NT**
 - [ ] Cross-list: **math.CO**, **hep-ph**
 - [ ] MSC codes entered on arXiv form: 11F11, 05C50, 11G15, 11R11

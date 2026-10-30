@@ -50,14 +50,14 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Compile all three canonical manuscripts
         run: |
-          mkdir -p evidence/pass7163_7170
+          mkdir -p docs/evidence/pass7163_7170
           for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
             tectonic --keep-logs "$f"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7163_7170/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass7163_7170/pdf_sha256.txt
       - name: Materialize public frontier and freeze proof
         run: |
-          cp evidence/pass7163_7170/pdf_sha256.txt /tmp/pass7163_7170_pdf_sha256.txt
+          cp docs/evidence/pass7163_7170/pdf_sha256.txt /tmp/pass7163_7170_pdf_sha256.txt
           git fetch origin master
           git reset --hard origin/master
           python tools/materialize_pass7163_7170_frontier.py
@@ -67,7 +67,7 @@ jobs:
           import json, os
           from pathlib import Path
           d={
-            'schema':'w33.pass7163_7170.publication_proof.v1',
+            'schemas':'w33.pass7163_7170.publication_proof.v1',
             'status':'PASS',
             'source_commit':os.environ['GITHUB_SHA'],
             'e8_hexagonal_lift_certificate_present':True,

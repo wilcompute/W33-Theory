@@ -9,9 +9,9 @@ This script is a minimal "sanity rebuild" for the tower:
     listed in `artifacts/e8_g1g1_couplings_cubic_firewall.json`.
 
 Outputs:
-  - V24_output/l3_patch_triples_full.jsonl
-  - V24_output/l4_patch_quads_full.jsonl
-  - V24_output/v24_l3_l4_report.json
+  - archive/outputs/V24_output/l3_patch_triples_full.jsonl
+  - archive/outputs/V24_output/l4_patch_quads_full.jsonl
+  - archive/outputs/V24_output/v24_l3_l4_report.json
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ ARTIFACTS = ROOT / "artifacts"
 DEFAULT_SC_JSON = ARTIFACTS / "e8_structure_constants_w33_discrete.json"
 DEFAULT_META_JSON = ARTIFACTS / "e8_root_metadata_table.json"
 DEFAULT_COUPLINGS_JSON = ARTIFACTS / "e8_g1g1_couplings_cubic_firewall.json"
-DEFAULT_OUT_DIR = ROOT / "V24_output"
+DEFAULT_OUT_DIR = ROOT / "archive/outputs/V24_output"
 
 
 Pair = Tuple[int, int]

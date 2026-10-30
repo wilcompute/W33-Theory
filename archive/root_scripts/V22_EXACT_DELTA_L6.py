@@ -32,8 +32,8 @@ from itertools import combinations
 
 ROOT = Path(r"c:\Repos\Theory of Everything")
 ARTIFACTS = ROOT / "artifacts"
-V20_DIR = ROOT / "extracted_v20" / "V20"
-V19_DIR = ROOT / "extracted_v20" / "v19" / "V19"
+V20_DIR = ROOT / "archive/outputs/extracted_v20" / "V20"
+V19_DIR = ROOT / "archive/outputs/extracted_v20" / "v19" / "V19"
 OUT_DIR = ROOT / "V22_output_corrected"
 
 # ── Load E8 bracket ──────────────────────────────────────────────────────────
@@ -414,7 +414,7 @@ def main():
     g1 = load_g1_indices(roots)
     print(f"  g1 size: {len(g1)} (range {min(g1)}..{max(g1)})")
     # Cross-check: g1 should match l4 input indices exactly
-    l4 = json.loads((ROOT / "extracted_v15" / "V15" / "l4_residual_quads_full.json").read_text(encoding="utf-8"))
+    l4 = json.loads((ROOT / "archive/outputs/extracted_v15" / "V15" / "l4_residual_quads_full.json").read_text(encoding="utf-8"))
     l4_inputs = set()
     for entry in l4:
         for idx in entry["in"]:
@@ -482,7 +482,7 @@ def main():
         },
         "deltaL6_exact_on_candidates": dl6_stats,
         "deltaL7_sample": dl7_stats,
-        "notes": {
+        "docs/notes": {
             "second_CE_sum_vanishes": "For g1 inputs, [g1,g1]→g2, so the [xi,xj]-substitution terms vanish.",
             "l7_convention": "l7 = -δl6",
             "dedup_method": "Nonzero results tracked via packed bytes keys; zero results may be recomputed.",

@@ -52,8 +52,8 @@ EPS = MU / V     # 0.1 = Froggatt-Nielsen parameter
 #  Data loading
 # ═══════════════════════════════════════════════════════════════════════════
 ROOT = Path(__file__).resolve().parent
-L3_PATH = ROOT / "V24_output_v13_full" / "l3_patch_triples_full.jsonl"
-L4_PATH = ROOT / "V24_output_v13_full" / "l4_patch_quads_full.jsonl"
+L3_PATH = ROOT / "archive/outputs/V24_output_v13_full" / "l3_patch_triples_full.jsonl"
+L4_PATH = ROOT / "archive/outputs/V24_output_v13_full" / "l4_patch_quads_full.jsonl"
 META_PATH = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
 SC_PATH = ROOT / "artifacts" / "e8_structure_constants_w33_discrete.json"
 

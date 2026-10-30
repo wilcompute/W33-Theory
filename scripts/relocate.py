@@ -54,6 +54,8 @@ def batch(name):
     raise SystemExit(f"unknown batch {name}")
 
 
+# generic names (build, dist, out, results, checks, patches) are deliberately NOT here: workflows and code use them for runtime
+# scratch paths and operators ('out/=' in numpy code), so a textual rewrite cannot tell them apart from the tracked folders.
 # small top-level directories (no importable Python) -> their natural homes; NOTES/notes merge (they collide on Windows, which is
 # case-insensitive), schema merges into schemas.
 SMALL_DIRS = [("reports", "docs/reports"), ("NOTES", "docs/notes"), ("notes", "docs/notes"), ("presentations", "docs/presentations"),
@@ -63,9 +65,7 @@ SMALL_DIRS = [("reports", "docs/reports"), ("NOTES", "docs/notes"), ("notes", "d
               ("V24_output_v13_full", "archive/outputs/V24_output_v13_full"), ("V29_output_q_stiffness", "archive/outputs/V29_output_q_stiffness"),
               ("V29_output_q_stiffness_validate", "archive/outputs/V29_output_q_stiffness_validate"),
               ("extracted_v15", "archive/outputs/extracted_v15"), ("extracted_v20", "archive/outputs/extracted_v20"),
-              ("branch_audit", "archive/outputs/branch_audit"), ("dist", "archive/outputs/dist"), ("out", "archive/outputs/out"),
-              ("build", "archive/outputs/build"), ("patches", "archive/outputs/patches"), ("results", "archive/outputs/results"),
-              ("checks", "archive/outputs/checks"), ("schema", "schemas")]
+              ("branch_audit", "archive/outputs/branch_audit"), ("schema", "schemas")]
 
 
 DIR_MOVES = []          # set by main() for directory batches
@@ -103,7 +103,7 @@ def rewrite_text(path, text, moves):
         text = rxg.sub(gh_sub, text)
     # directory moves: rewrite path-shaped references 'D/...' and quoted bare 'D' / "D" (never the bare word in prose)
     for od, nd in DIR_MOVES:
-        rxd = re.compile(r"(?<![A-Za-z0-9_./\\-])" + re.escape(od) + r"/")
+        rxd = re.compile(r"(?<![A-Za-z0-9_./\\-])" + re.escape(od) + r"/(?=[A-Za-z0-9_.*{$-])")   # a path must follow, never 'out/='
         text, k = rxd.subn(nd + "/", text); n += k
         rxq = re.compile(r"([\"'])" + re.escape(od) + r"\1")
         text, k = rxq.subn(lambda m: m.group(1) + nd + m.group(1), text); n += k

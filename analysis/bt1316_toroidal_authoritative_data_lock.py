@@ -78,7 +78,7 @@ def build_lock() -> dict[str, Any]:
     dxxxii = (ROOT / "analysis/W33_Part_DXXXII_Csaszar_Szilassi_Genus_Unification.md").read_text(
         encoding="utf-8"
     )
-    triad_html = (ROOT / "visualizations" / "w33-toroidal-triad.html").read_text(
+    triad_html = (ROOT / "docs/visualizations" / "w33-toroidal-triad.html").read_text(
         encoding="utf-8"
     )
     index_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")

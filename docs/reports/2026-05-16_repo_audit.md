@@ -28,7 +28,7 @@ For a zero-free-parameter theorem, this must be surfaced in CI rather than left 
 - `scripts/reproduce_w33_core.py`
 - `tests/test_reproduce_w33_core.py`
 - `docs/consistency_notes.md`
-- `reports/2026-05-16_repo_audit.md`
+- `docs/reports/2026-05-16_repo_audit.md`
 
 ## What the script checks
 

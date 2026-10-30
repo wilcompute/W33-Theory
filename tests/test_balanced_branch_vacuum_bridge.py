@@ -8,7 +8,7 @@ def test_balanced_branch_vacuum_summary() -> None:
 
     observation = summary["local_v29_stiffness_observation"]
     assert observation["status"] == "ok"
-    assert observation["source_file"] == "V29_output_q_stiffness/summary.json"
+    assert observation["source_file"] == "archive/outputs/V29_output_q_stiffness/summary.json"
     assert observation["diag_cv"] < 0.03
     assert observation["offdiag_rms_ratio"] < 0.01
     assert observation["eig_std_ratio"] < 0.09

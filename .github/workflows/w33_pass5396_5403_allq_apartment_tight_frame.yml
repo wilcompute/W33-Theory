@@ -58,13 +58,13 @@ jobs:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
       - name: Compile all three canonical manuscripts
         run: |
-          mkdir -p evidence/pass5396_5403
+          mkdir -p docs/evidence/pass5396_5403
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5396_5403/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass5396_5403/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass5396_5403/pdf_sha256.txt
+            > docs/evidence/pass5396_5403/pdf_sha256.txt
       - name: Commit deterministic homepage materialization if changed
         run: |
           if git diff --quiet -- docs/index.html; then
@@ -79,4 +79,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: pass5396-5403-allq-apartment-tight-frame
-          path: evidence/pass5396_5403/**
+          path: docs/evidence/pass5396_5403/**

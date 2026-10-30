@@ -9,7 +9,7 @@ from w33_pass410_414_common import certificate,write_json
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'w33_pass424_custody_model_checker.json'
-SPEC=ROOT/'specs'/'W33Pass424Custody.tla'
+SPEC=ROOT/'docs/specs'/'W33Pass424Custody.tla'
 TYPES=['frozen_protocol','accepted_bom','calibration_certificate','blinded_raw_counts','blinded_analysis','blind_key','unblinded_result','independent_audit']
 ROLES=['protocol_owner','independent_auditor','acquisition_lab','acquisition_lab','blinded_analyst','blind_key_custodian','blinded_analyst','independent_auditor']
 
@@ -102,8 +102,8 @@ def build_payload()->dict:
     histogram={}
     for c in cases.values():
         key=','.join(c['v2_errors']);histogram[key]=histogram.get(key,0)+1
-    payload={'schema':'w33.pass424.custody_model_checker.v1','status':'PASS' if all(checks.values()) else 'FAIL',
-      'model':{'artifact_stages':8,'attack_generators':len(muts),'bounded_attack_depth':2,'unique_mutated_states':len(cases),'formal_spec':'specs/W33Pass424Custody.tla'},
+    payload={'schemas':'w33.pass424.custody_model_checker.v1','status':'PASS' if all(checks.values()) else 'FAIL',
+      'model':{'artifact_stages':8,'attack_generators':len(muts),'bounded_attack_depth':2,'unique_mutated_states':len(cases),'formal_spec':'docs/specs/W33Pass424Custody.tla'},
       'theorem':{
        'safety':'every unique state reachable from the honest chain by one or two modeled replay, rollback, reordering, deletion, equivocation, key-collision, or claim-forgery attacks violates at least one v2 invariant',
        'sensitivity':'the same checker recovers concrete v1 counterexamples for cross-study, cross-device, nonce, and authorized-insider substitution',

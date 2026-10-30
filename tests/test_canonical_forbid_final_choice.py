@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-REPORTS = Path(__file__).resolve().parents[1] / "reports"
+REPORTS = Path(__file__).resolve().parents[1] / "docs/reports"
 ART = Path(__file__).resolve().parents[1] / "artifacts"
 
 

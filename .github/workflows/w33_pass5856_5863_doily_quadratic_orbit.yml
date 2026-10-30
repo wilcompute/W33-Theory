@@ -39,12 +39,12 @@ jobs:
         with: {github-token: '${{ secrets.GITHUB_TOKEN }}'}
       - name: Compile canonical manuscripts
         run: |
-          mkdir -p evidence/pass5856_5863
+          mkdir -p docs/evidence/pass5856_5863
           for s in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$s" 2>&1 | tee "evidence/pass5856_5863/${s%.tex}.log"
+            tectonic --keep-logs "$s" 2>&1 | tee "docs/evidence/pass5856_5863/${s%.tex}.log"
             test -s "${s%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass5856_5863/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass5856_5863/pdf_sha256.txt
       - name: Freeze homepage if changed
         run: |
           git config user.name 'github-actions[bot]'
@@ -54,4 +54,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: pass5856-5863-doily-quadratic-orbit
-          path: evidence/pass5856_5863/**
+          path: docs/evidence/pass5856_5863/**

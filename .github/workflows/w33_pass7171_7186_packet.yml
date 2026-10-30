@@ -66,12 +66,12 @@ jobs:
           PY
       - name: Compile three canonical manuscripts
         run: |
-          mkdir -p evidence/pass7171_7186
+          mkdir -p docs/evidence/pass7171_7186
           for f in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do tectonic --keep-logs "$f"; done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7171_7186/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass7171_7186/pdf_sha256.txt
       - name: Materialize public card and freeze publication proof
         run: |
-          cp evidence/pass7171_7186/pdf_sha256.txt /tmp/pass7171_7186_pdf_sha256.txt
+          cp docs/evidence/pass7171_7186/pdf_sha256.txt /tmp/pass7171_7186_pdf_sha256.txt
           git fetch origin master
           git reset --hard origin/master
           python tools/materialize_pass7171_7186_frontier.py
@@ -81,7 +81,7 @@ jobs:
           token='pass-7171-7186-e8-d4-q9'
           for p in (Path('docs/index.html'),Path('index.html')):
               assert p.read_text().count(f'id="{token}"')==1
-          out={'schema':'w33.pass7171_7186.publication_proof.v2','status':'PASS','source_commit':os.environ['GITHUB_SHA'],
+          out={'schemas':'w33.pass7171_7186.publication_proof.v2','status':'PASS','source_commit':os.environ['GITHUB_SHA'],
                'all_three_canonical_manuscripts_compiled':True,'public_card_materialized_both_surfaces':True,
                'global_q9_target48':'OPEN','local_q9_target48_excluded_through_core_deletion_radius':8,
                'h27_matter_cover_in_frontier':True,

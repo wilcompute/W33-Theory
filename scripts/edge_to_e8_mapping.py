@@ -1280,7 +1280,7 @@ def cp_sat_local_refine(mapping_init, cluster_edges, top_k=8, time_limit=10):
 # Simple plotting helpers
 
 
-def plot_feature_embeddings(mapping, score_matrix, meta, out_dir=ARTIFACTS / "figures"):
+def plot_feature_embeddings(mapping, score_matrix, meta, out_dir=ARTIFACTS / "docs/figures"):
     try:
         import matplotlib.pyplot as plt
     except Exception:
@@ -1308,7 +1308,7 @@ def plot_feature_embeddings(mapping, score_matrix, meta, out_dir=ARTIFACTS / "fi
     return out
 
 
-def plot_adj_preservation(mapping, meta, out_dir=ARTIFACTS / "figures"):
+def plot_adj_preservation(mapping, meta, out_dir=ARTIFACTS / "docs/figures"):
     try:
         import matplotlib.pyplot as plt
     except Exception:

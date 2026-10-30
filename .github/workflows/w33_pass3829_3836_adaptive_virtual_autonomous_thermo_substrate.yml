@@ -43,13 +43,13 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest numpy==2.3.5
       - name: Regenerate frozen semantic certificate
         run: |
-          mkdir -p evidence/pass3829_3836
-          python analysis/w33_pass3829_3836_adaptive_virtual_autonomous_thermo_substrate.py --json evidence/pass3829_3836/results.json | tee evidence/pass3829_3836/exact.log
-          grep -F 'PASS_8_FRONTS d924764ba5d64326fbdc8d7a6bbd8bcdff2fd08fb2a4c6560f29c53a71c29fe4' evidence/pass3829_3836/exact.log
+          mkdir -p docs/evidence/pass3829_3836
+          python analysis/w33_pass3829_3836_adaptive_virtual_autonomous_thermo_substrate.py --json docs/evidence/pass3829_3836/results.json | tee docs/evidence/pass3829_3836/exact.log
+          grep -F 'PASS_8_FRONTS d924764ba5d64326fbdc8d7a6bbd8bcdff2fd08fb2a4c6560f29c53a71c29fe4' docs/evidence/pass3829_3836/exact.log
           python - <<'PY'
           import json
           from pathlib import Path
-          got=json.loads(Path('evidence/pass3829_3836/results.json').read_text())
+          got=json.loads(Path('docs/evidence/pass3829_3836/results.json').read_text())
           frozen=json.loads(Path('data/PART_3829_3836_ADAPTIVE_VIRTUAL_AUTONOMOUS_THERMO_SUBSTRATE_results.json').read_text())
           assert got==frozen
           assert got['passes']['3830_measurement_only_virtual_w33_topology']['minimum_rounds']==12
@@ -58,7 +58,7 @@ jobs:
           PY
       - name: Focused exact regression
         run: |
-          pytest -q tests/test_w33_pass3829_3836_adaptive_virtual_autonomous_thermo_substrate.py | tee evidence/pass3829_3836/pytest.log
+          pytest -q tests/test_w33_pass3829_3836_adaptive_virtual_autonomous_thermo_substrate.py | tee docs/evidence/pass3829_3836/pytest.log
           git diff --check
       - name: Verify manuscript, restored-site, and public reachability
         run: |
@@ -81,7 +81,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: pass3829-3836-exact-adaptive-evidence
-          path: evidence/pass3829_3836/**
+          path: docs/evidence/pass3829_3836/**
 
   manuscripts:
     runs-on: ubuntu-24.04
@@ -93,17 +93,17 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Compile canonical manuscripts
         run: |
-          mkdir -p evidence/pass3829_3836
+          mkdir -p docs/evidence/pass3829_3836
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3829_3836/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3829_3836/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3829_3836/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3829_3836/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3829-3836-papers
           path: |
-            evidence/pass3829_3836/**
+            docs/evidence/pass3829_3836/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

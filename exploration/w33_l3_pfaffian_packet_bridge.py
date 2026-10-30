@@ -37,7 +37,7 @@ DEFAULT_OUTPUT_PATH = ROOT / "data" / "w33_l3_pfaffian_packet_bridge_summary.jso
 
 L3_PATH = resolve_repo_data_path(
     ROOT,
-    Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l3_patch_triples_full.jsonl",
 )
 META_PATH = resolve_repo_data_path(
     ROOT,

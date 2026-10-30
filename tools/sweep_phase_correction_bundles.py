@@ -10,8 +10,8 @@ For each compatible bundle, it:
 3. Reads `parallelogram_holonomy_vs_bargmann.json` and records match stats.
 
 Outputs:
-  - JSON summary (default: reports/phase_correction_sweep_summary.json)
-  - Markdown summary (default: reports/phase_correction_sweep_summary.md)
+  - JSON summary (default: docs/reports/phase_correction_sweep_summary.json)
+  - Markdown summary (default: docs/reports/phase_correction_sweep_summary.md)
 """
 from __future__ import annotations
 
@@ -119,12 +119,12 @@ def run_bundle(bundle_dir: Path, out_dir: Path, python_exe: str) -> dict[str, ob
         "bundle_dir": str(bundle_dir),
         "out_dir": str(out_dir),
         "status": "ok",
-        "notes": [],
+        "docs/notes": [],
     }
     compatible, missing = is_compatible_bundle(bundle_dir)
     if not compatible:
         result["status"] = "skipped_incompatible"
-        result["notes"] = [f"Missing required files: {', '.join(missing)}"]
+        result["docs/notes"] = [f"Missing required files: {', '.join(missing)}"]
         result["matches"] = None
         result["total"] = None
         return result
@@ -147,7 +147,7 @@ def run_bundle(bundle_dir: Path, out_dir: Path, python_exe: str) -> dict[str, ob
         result["total"] = total
     except Exception as exc:
         result["status"] = "error"
-        result["notes"] = [str(exc)]
+        result["docs/notes"] = [str(exc)]
         result["matches"] = None
         result["total"] = None
     return result
@@ -166,7 +166,7 @@ def build_markdown_summary(summary: dict[str, object]) -> str:
     lines.append("| Bundle | Status | Matches | Total | Notes |")
     lines.append("|---|---|---:|---:|---|")
     for row in summary["results"]:
-        notes = "; ".join(row.get("notes", []))
+        notes = "; ".join(row.get("docs/notes", []))
         lines.append(
             f"| `{row['bundle_dir']}` | `{row['status']}` | {row.get('matches')} | {row.get('total')} | {notes} |"
         )
@@ -193,12 +193,12 @@ def main() -> int:
     parser.add_argument(
         "--out-json",
         type=Path,
-        default=Path("reports/phase_correction_sweep_summary.json"),
+        default=Path("docs/reports/phase_correction_sweep_summary.json"),
     )
     parser.add_argument(
         "--out-md",
         type=Path,
-        default=Path("reports/phase_correction_sweep_summary.md"),
+        default=Path("docs/reports/phase_correction_sweep_summary.md"),
     )
     parser.add_argument(
         "--python-exe",

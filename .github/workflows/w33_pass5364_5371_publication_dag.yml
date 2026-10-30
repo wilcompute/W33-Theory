@@ -39,13 +39,13 @@ jobs:
           python tools/materialize_pass5364_5371_publication_integrity.py
       - name: Recursive frontier audit
         run: |
-          mkdir -p evidence/pass5364_5371
+          mkdir -p docs/evidence/pass5364_5371
           python analysis/w33_pass5364_publication_dag_audit.py \
-            --report evidence/pass5364_5371/publication_dag.json
+            --report docs/evidence/pass5364_5371/publication_dag.json
           python tools/audit_w33_current_frontier.py \
-            --report evidence/pass5364_5371/legacy_entrypoint.json
-          cmp evidence/pass5364_5371/publication_dag.json \
-              evidence/pass5364_5371/legacy_entrypoint.json
+            --report docs/evidence/pass5364_5371/legacy_entrypoint.json
+          cmp docs/evidence/pass5364_5371/publication_dag.json \
+              docs/evidence/pass5364_5371/legacy_entrypoint.json
       - name: Focused regression
         run: |
           python -m pip install --disable-pip-version-check pytest
@@ -57,12 +57,12 @@ jobs:
       - name: Compile all three canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5364_5371/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass5364_5371/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass5364_5371/pdf_sha256.txt
+            > docs/evidence/pass5364_5371/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass5364-5371-publication-dag
-          path: evidence/pass5364_5371/**
+          path: docs/evidence/pass5364_5371/**

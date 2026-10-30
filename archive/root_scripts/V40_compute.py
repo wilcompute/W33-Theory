@@ -31,10 +31,10 @@ EPS = MU / V  # 0.1
 ROOT = Path(__file__).resolve().parent
 META_PATH = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
 SC_PATH   = ROOT / "artifacts" / "e8_structure_constants_w33_discrete.json"
-L3_PATH   = ROOT / "V24_output_v13_full" / "l3_patch_triples_full.jsonl"
-L4_PATH   = ROOT / "V24_output_v13_full" / "l4_patch_quads_full.jsonl"
-L5_PATH   = ROOT / "extracted_v20" / "v19" / "V19" / "l5_patch_quintuples_full.jsonl"
-L6_PATH   = ROOT / "extracted_v20" / "V20" / "l6_patch_sextuples_full.jsonl"
+L3_PATH   = ROOT / "archive/outputs/V24_output_v13_full" / "l3_patch_triples_full.jsonl"
+L4_PATH   = ROOT / "archive/outputs/V24_output_v13_full" / "l4_patch_quads_full.jsonl"
+L5_PATH   = ROOT / "archive/outputs/extracted_v20" / "v19" / "V19" / "l5_patch_quintuples_full.jsonl"
+L6_PATH   = ROOT / "archive/outputs/extracted_v20" / "V20" / "l6_patch_sextuples_full.jsonl"
 
 
 def load_metadata():

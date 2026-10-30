@@ -34,9 +34,9 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy sympy pytest
       - name: Rebuild exact Pass5436-5443 certificate
         run: |
-          mkdir -p evidence/pass5436_5443
+          mkdir -p docs/evidence/pass5436_5443
           python analysis/w33_pass5436_5443_bicycle_apartment_scheme_packet.py \
-            | tee evidence/pass5436_5443/replay.json
+            | tee docs/evidence/pass5436_5443/replay.json
       - name: Focused exact regressions
         run: |
           pytest -q tests/test_w33_pass5436_5443_bicycle_apartment_scheme.py \
@@ -44,8 +44,8 @@ jobs:
             tests/test_w33_pass5364_5371_publication_dag.py
       - name: Materialize public frontier and audit recursive publication DAG
         run: |
-          python tools/integrate_bt3376_bt3389.py --report evidence/pass5436_5443/public-integration.json
-          python analysis/w33_pass5364_publication_dag_audit.py --report evidence/pass5436_5443/publication-dag.json
+          python tools/integrate_bt3376_bt3389.py --report docs/evidence/pass5436_5443/public-integration.json
+          python analysis/w33_pass5364_publication_dag_audit.py --report docs/evidence/pass5436_5443/publication-dag.json
           test "$(grep -c 'id=\"pass-5436-5443-bicycle-apartment-scheme\"' docs/index.html)" -eq 1
           git diff --check
       - uses: WtfJoke/setup-tectonic@v3
@@ -54,11 +54,11 @@ jobs:
       - name: Compile all three canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass5436_5443/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass5436_5443/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/pass5436_5443/pdf_sha256.txt
+            > docs/evidence/pass5436_5443/pdf_sha256.txt
       - name: Commit deterministic homepage materialization if changed
         run: |
           if git diff --quiet -- docs/index.html; then
@@ -73,4 +73,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: pass5436-5443-bicycle-apartment-scheme
-          path: evidence/pass5436_5443/**
+          path: docs/evidence/pass5436_5443/**

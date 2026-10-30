@@ -14,7 +14,7 @@
     "index_points_to_certificate": true,
     "index_target_matches": true
   },
-  "certificate": "data/bt1275_strict_polar_path_recovery_certificate.json",
-  "batch_summary": "data/bt1274_batch_candidate_scores_summary.json",
-  "packet_index": "data/bt1279_recovery_packet_index.json"
+  "certificate": "data\\bt1275_strict_polar_path_recovery_certificate.json",
+  "batch_summary": "data\\bt1274_batch_candidate_scores_summary.json",
+  "packet_index": "data\\bt1279_recovery_packet_index.json"
 }

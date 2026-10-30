@@ -38,7 +38,7 @@ def test_pass429_inductive_custody():
     assert len(p['induction_cases'])==24
     assert all(x['preserved'] for x in p['induction_cases'])
     assert all(x['breaks_invariant'] for x in p['guard_counterexamples'].values())
-    assert (ROOT/'specs'/'W33Pass429CustodyInductive.tla').exists()
+    assert (ROOT/'docs/specs'/'W33Pass429CustodyInductive.tla').exists()
 
 def test_cross_pass_closure():
     p425=load('w33_pass425_exact_extension_smith.json')

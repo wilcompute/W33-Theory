@@ -58,10 +58,10 @@ jobs:
         run: python -m pip install --disable-pip-version-check numpy sympy pytest
       - name: Regenerate and compare exact certificate
         run: |
-          mkdir -p evidence/pass3535_3541
+          mkdir -p docs/evidence/pass3535_3541
           cp data/PART_BT3535_BT3541_CLIQUE_BOREL_FOURIER_FACTORIZATION_PORTS_results.json /tmp/frozen3535.json
-          python analysis/bt3535_3541_clique_borel_fourier_factorization_ports.py | tee evidence/pass3535_3541/exact.log
-          grep -F 'PASS_7_FRONTS 34ea459ab6acea3a2b5624ba6523016cfb914ffb54220ed64230f74f78a1fb6b' evidence/pass3535_3541/exact.log
+          python analysis/bt3535_3541_clique_borel_fourier_factorization_ports.py | tee docs/evidence/pass3535_3541/exact.log
+          grep -F 'PASS_7_FRONTS 34ea459ab6acea3a2b5624ba6523016cfb914ffb54220ed64230f74f78a1fb6b' docs/evidence/pass3535_3541/exact.log
           python - <<'PY'
           import json
           from pathlib import Path
@@ -73,9 +73,9 @@ jobs:
           cp /tmp/frozen3535.json data/PART_BT3535_BT3541_CLIQUE_BOREL_FOURIER_FACTORIZATION_PORTS_results.json
       - name: Focused regression and clique controls
         run: |
-          pytest -q tests/test_bt3535_bt3541_clique_borel_fourier_factorization_ports.py | tee evidence/pass3535_3541/pytest.log
-          python analysis/bt3535_star_clique_recertify.py --self-test | tee evidence/pass3535_3541/clique_selftest.log
-          grep -F 'PASS_CLIQUE_ENGINE_SELF_TESTS' evidence/pass3535_3541/clique_selftest.log
+          pytest -q tests/test_bt3535_bt3541_clique_borel_fourier_factorization_ports.py | tee docs/evidence/pass3535_3541/pytest.log
+          python analysis/bt3535_star_clique_recertify.py --self-test | tee docs/evidence/pass3535_3541/clique_selftest.log
+          grep -F 'PASS_CLIQUE_ENGINE_SELF_TESTS' docs/evidence/pass3535_3541/clique_selftest.log
           git diff --check
       - name: Verify manuscript and public reachability
         run: |
@@ -99,15 +99,15 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3535_3541/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3535_3541/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3535_3541/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3535_3541/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3535-3541-exact-packet-papers
           path: |
-            evidence/pass3535_3541/**
+            docs/evidence/pass3535_3541/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf
@@ -123,15 +123,15 @@ jobs:
       - run: python -m pip install --disable-pip-version-check numpy sympy
       - name: Recompute all 3720 compatibility graphs and maximum cliques
         run: |
-          mkdir -p evidence/pass3535_3541
+          mkdir -p docs/evidence/pass3535_3541
           python analysis/bt3535_star_clique_recertify.py \
-            --json evidence/pass3535_3541/star_clique_full.json \
-            | tee evidence/pass3535_3541/star_clique_full.log
-          grep -F 'PASS_STAR_CLIQUE_RECERTIFICATION' evidence/pass3535_3541/star_clique_full.log
-          grep -F '"published_histogram_match": true' evidence/pass3535_3541/star_clique_full.json
-          grep -F '"compatibility_size_range": [' evidence/pass3535_3541/star_clique_full.json
+            --json docs/evidence/pass3535_3541/star_clique_full.json \
+            | tee docs/evidence/pass3535_3541/star_clique_full.log
+          grep -F 'PASS_STAR_CLIQUE_RECERTIFICATION' docs/evidence/pass3535_3541/star_clique_full.log
+          grep -F '"published_histogram_match": true' docs/evidence/pass3535_3541/star_clique_full.json
+          grep -F '"compatibility_size_range": [' docs/evidence/pass3535_3541/star_clique_full.json
       - uses: actions/upload-artifact@v4
         with:
           name: pass3535-independent-star-clique-recertification
           compression-level: 9
-          path: evidence/pass3535_3541/**
+          path: docs/evidence/pass3535_3541/**

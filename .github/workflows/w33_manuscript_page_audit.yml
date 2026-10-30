@@ -52,17 +52,17 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           set -euxo pipefail
-          mkdir -p evidence/current_manuscript_page_audit
+          mkdir -p docs/evidence/current_manuscript_page_audit
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/current_manuscript_page_audit/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/current_manuscript_page_audit/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
           sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
-            > evidence/current_manuscript_page_audit/pdf_sha256.txt
-          pdfinfo photonic_holonet.pdf > evidence/current_manuscript_page_audit/photonic_holonet_pdfinfo.txt
-          pdfinfo holonet_machine_blueprint.pdf > evidence/current_manuscript_page_audit/holonet_machine_blueprint_pdfinfo.txt
-          pdftotext -layout -f 194 -l 195 photonic_holonet.pdf evidence/current_manuscript_page_audit/photonic_holonet_pages_194_195.txt
-          pdftotext -layout -f 182 -l 230 holonet_machine_blueprint.pdf evidence/current_manuscript_page_audit/holonet_machine_blueprint_pages_182_230.txt
+            > docs/evidence/current_manuscript_page_audit/pdf_sha256.txt
+          pdfinfo photonic_holonet.pdf > docs/evidence/current_manuscript_page_audit/photonic_holonet_pdfinfo.txt
+          pdfinfo holonet_machine_blueprint.pdf > docs/evidence/current_manuscript_page_audit/holonet_machine_blueprint_pdfinfo.txt
+          pdftotext -layout -f 194 -l 195 photonic_holonet.pdf docs/evidence/current_manuscript_page_audit/photonic_holonet_pages_194_195.txt
+          pdftotext -layout -f 182 -l 230 holonet_machine_blueprint.pdf docs/evidence/current_manuscript_page_audit/holonet_machine_blueprint_pages_182_230.txt
       - name: Upload current manuscript PDFs
         uses: actions/upload-artifact@v4
         with:
@@ -71,5 +71,5 @@ jobs:
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf
-            evidence/current_manuscript_page_audit/**
+            docs/evidence/current_manuscript_page_audit/**
           retention-days: 7

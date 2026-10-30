@@ -26,7 +26,7 @@ where Δ_W33(q) = (1 − q^{40})(1 − q^{360}) encodes the edge- and automorphi
 
 ## Background
 
-The Langlands program seeks to unify number theory, representation theory, and geometry through a grand functorial correspondence. The NOTES/LANGLANDS_SPRINT_MAY_2026.md identified GQ(3,3) = W(3,3) as the natural geometric substrate for a finite-field Langlands construction, given that Sp(4,𝔽₃) acts on W(3,3) with exactly 2 orbits on point-line pairs (the defining property of a generalized quadrangle). This part materializes that bridge.
+The Langlands program seeks to unify number theory, representation theory, and geometry through a grand functorial correspondence. The docs/notes/LANGLANDS_SPRINT_MAY_2026.md identified GQ(3,3) = W(3,3) as the natural geometric substrate for a finite-field Langlands construction, given that Sp(4,𝔽₃) acts on W(3,3) with exactly 2 orbits on point-line pairs (the defining property of a generalized quadrangle). This part materializes that bridge.
 
 ---
 
@@ -66,7 +66,7 @@ Under the W(3,3) ToE dictionary:
 | Cuspidal reps | Dark sector / hidden matter fields |
 | Frobenius eigenvalues {1,3,9,27} | Coupling constant tower: {α₀, α₁, α₂, α₃} = {1, 1/3, 1/9, 1/27} |
 
-The coupling constant tower {1, 1/3, 1/9, 1/27} corresponds exactly to the powers of the base-3 expansion underlying W(3,3), connecting the Langlands correspondence directly to the RG flow pipeline in NOTES/RG_PHI6_POLAR_PIPELINE_MAY_2026.md.
+The coupling constant tower {1, 1/3, 1/9, 1/27} corresponds exactly to the powers of the base-3 expansion underlying W(3,3), connecting the Langlands correspondence directly to the RG flow pipeline in docs/notes/RG_PHI6_POLAR_PIPELINE_MAY_2026.md.
 
 ---
 

@@ -26,7 +26,7 @@ compared to the PDG value $\alpha_s(M_Z) = 0.1180 \pm 0.0009$, with residual $5.
 
 ## Background
 
-Parts CXXXIX–CXLIII established the QCD RG framework with the provisional baseline $k_3 = 1$. The NOTES/RG_PHI6_POLAR_PIPELINE_MAY_2026.md identified the selected W(3,3) QCD branch as $k_{3,\text{bare}} = 24/13$, where 24 = Leech lattice dimension = $8q$ and 13 = $|\text{Sp}(4)|$-related prime. This part elevates the pipeline result to a formal theorem.
+Parts CXXXIX–CXLIII established the QCD RG framework with the provisional baseline $k_3 = 1$. The docs/notes/RG_PHI6_POLAR_PIPELINE_MAY_2026.md identified the selected W(3,3) QCD branch as $k_{3,\text{bare}} = 24/13$, where 24 = Leech lattice dimension = $8q$ and 13 = $|\text{Sp}(4)|$-related prime. This part elevates the pipeline result to a formal theorem.
 
 ---
 

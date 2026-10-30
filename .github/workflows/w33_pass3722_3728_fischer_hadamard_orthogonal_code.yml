@@ -72,17 +72,17 @@ jobs:
         run: |
           grep -F 'BT3722_BT3728_fischer_hadamard_orthogonal_code_insert' analysis/W33_CURRENT_FRONTIER_MANIFEST.tex
           grep -F 'id="bt3722-3728-fischer-hadamard-orthogonal-code"' docs/index.html
-          mkdir -p evidence/pass3722_3728
+          mkdir -p docs/evidence/pass3722_3728
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3722_3728/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3722_3728/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3722_3728/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3722_3728/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: w33-pass3722-3728-exact-papers
           path: |
-            evidence/pass3722_3728/**
+            docs/evidence/pass3722_3728/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

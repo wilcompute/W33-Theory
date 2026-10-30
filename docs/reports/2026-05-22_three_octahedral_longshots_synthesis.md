@@ -188,9 +188,9 @@ Data:
 
 Reports:
 
-- `reports/2026-05-22_octahedron_corner_hypergraph_spectrum.md`
-- `reports/2026-05-22_octahedron_faces_are_signed_xmin.md`
-- `reports/2026-05-22_octahedron_axes_120_set.md`
+- `docs/reports/2026-05-22_octahedron_corner_hypergraph_spectrum.md`
+- `docs/reports/2026-05-22_octahedron_faces_are_signed_xmin.md`
+- `docs/reports/2026-05-22_octahedron_axes_120_set.md`
 
 ---
 

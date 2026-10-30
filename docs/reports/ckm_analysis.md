@@ -50,4 +50,4 @@ Files produced:
 
 Notes: the global optimizer jointly varied a complex 3×3 matrix (18 real parameters) and the log of diagonal left/right scales (6 parameters) with a unitarity penalty; the result projects to a numerically unitary candidate whose squared magnitudes are in `abs2`.
 
-Next steps added: compute the Jarlskog invariant for the projected unitary and embed the results/plots in a reproducible notebook (`reports/ckm_analysis.ipynb`).
+Next steps added: compute the Jarlskog invariant for the projected unitary and embed the results/plots in a reproducible notebook (`docs/reports/ckm_analysis.ipynb`).

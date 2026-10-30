@@ -10,8 +10,8 @@ on:
       - 'data/w33_pass42*.json'
       - 'docs/W33_PASS419_ADVERSARIAL_REPLICATION.md'
       - 'schemas/w33_pass419_hardened_handoff_v2.schema.json'
-      - 'specs/W33Pass424Custody.tla'
-      - 'specs/W33Pass429CustodyInductive.tla'
+      - 'docs/specs/W33Pass424Custody.tla'
+      - 'docs/specs/W33Pass429CustodyInductive.tla'
       - 'tests/test_pass415_419_five_frontiers.py'
       - 'tests/test_pass420_424_five_frontiers.py'
       - 'tests/test_pass425_429_five_frontiers.py'
@@ -175,7 +175,7 @@ jobs:
             data/w33_pass427_adaptive_telemetry_channel.json \
             data/w33_pass428_bayesian_hardware_diagnosis.json \
             data/w33_pass429_inductive_custody_verification.json \
-            specs/W33Pass429CustodyInductive.tla \
+            docs/specs/W33Pass429CustodyInductive.tla \
             tests/test_pass425_429_five_frontiers.py
       - if: steps.ready.outputs.ready == 'true'
         name: Verify live claims ledger

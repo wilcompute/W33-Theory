@@ -42,10 +42,10 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest numpy sympy
       - name: Regenerate exact packet
         run: |
-          mkdir -p evidence/pass3577_3583
+          mkdir -p docs/evidence/pass3577_3583
           cp data/PART_BT3577_BT3583_PETERSEN_MATRIX_OCTAD_MARKED_WALK_results.json /tmp/frozen3583.json
-          python analysis/bt3577_3583_petersen_matrix_octad_marked_walk.py | tee evidence/pass3577_3583/exact.log
-          grep -F 'PASS_7_FRONTS 2a4a06836164c6eb92d971aa18ecd1369990c7bf501ae1aaf342e7b5e5bc23a4' evidence/pass3577_3583/exact.log
+          python analysis/bt3577_3583_petersen_matrix_octad_marked_walk.py | tee docs/evidence/pass3577_3583/exact.log
+          grep -F 'PASS_7_FRONTS 2a4a06836164c6eb92d971aa18ecd1369990c7bf501ae1aaf342e7b5e5bc23a4' docs/evidence/pass3577_3583/exact.log
           python - <<'PY'
           import json
           from pathlib import Path
@@ -56,19 +56,19 @@ jobs:
           PY
       - name: Execute real proof canary
         run: |
-          python analysis/bt3580_star_proof_canary.py --json evidence/pass3577_3583/star_canary.json | tee evidence/pass3577_3583/canary.log
-          grep -F 'PASS_REAL_STAR_PROOF_CANARY 2a984b9a2f51646691657a8dfe5d01b9e33496f75500ba9b79abdd5a68385390' evidence/pass3577_3583/canary.log
+          python analysis/bt3580_star_proof_canary.py --json docs/evidence/pass3577_3583/star_canary.json | tee docs/evidence/pass3577_3583/canary.log
+          grep -F 'PASS_REAL_STAR_PROOF_CANARY 2a984b9a2f51646691657a8dfe5d01b9e33496f75500ba9b79abdd5a68385390' docs/evidence/pass3577_3583/canary.log
           python - <<'PY'
           import json
           from pathlib import Path
-          got=json.loads(Path('evidence/pass3577_3583/star_canary.json').read_text())
+          got=json.loads(Path('docs/evidence/pass3577_3583/star_canary.json').read_text())
           old=json.loads(Path('data/PART_BT3580_STAR_PROOF_CANARY.json').read_text())
           assert got==old
           print('PASS proof-canary frozen equality')
           PY
       - name: Focused regression
         run: |
-          pytest -q tests/test_bt3577_bt3583_petersen_matrix_octad_marked_walk.py | tee evidence/pass3577_3583/pytest.log
+          pytest -q tests/test_bt3577_bt3583_petersen_matrix_octad_marked_walk.py | tee docs/evidence/pass3577_3583/pytest.log
           git diff --check
       - name: Verify manuscript and public reachability
         run: |
@@ -90,15 +90,15 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3577_3583/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3577_3583/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3577_3583/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3577_3583/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3577-3583-exact-canary-papers
           path: |
-            evidence/pass3577_3583/**
+            docs/evidence/pass3577_3583/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

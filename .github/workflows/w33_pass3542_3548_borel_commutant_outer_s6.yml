@@ -58,10 +58,10 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest numpy sympy
       - name: Regenerate and compare exact certificate
         run: |
-          mkdir -p evidence/pass3542_3548
+          mkdir -p docs/evidence/pass3542_3548
           cp data/PART_BT3542_BT3548_BOREL_COMMUTANT_OUTER_S6_ANALYTIC_results.json /tmp/frozen3542.json
-          python analysis/bt3542_3548_borel_commutant_outer_s6_analytic.py | tee evidence/pass3542_3548/exact.log
-          grep -F 'PASS_7_FRONTS a98621cc2f2378eaed09b8f747022f419a16fbb33433336eeb8f2414f4273f1a' evidence/pass3542_3548/exact.log
+          python analysis/bt3542_3548_borel_commutant_outer_s6_analytic.py | tee docs/evidence/pass3542_3548/exact.log
+          grep -F 'PASS_7_FRONTS a98621cc2f2378eaed09b8f747022f419a16fbb33433336eeb8f2414f4273f1a' docs/evidence/pass3542_3548/exact.log
           python - <<'PY'
           import json
           from pathlib import Path
@@ -73,9 +73,9 @@ jobs:
           cp /tmp/frozen3542.json data/PART_BT3542_BT3548_BOREL_COMMUTANT_OUTER_S6_ANALYTIC_results.json
       - name: Focused regression and proof-DAG controls
         run: |
-          pytest -q tests/test_bt3542_bt3548_borel_commutant_outer_s6_analytic.py | tee evidence/pass3542_3548/pytest.log
-          python analysis/bt3544_clique_proof_dag.py --self-test | tee evidence/pass3542_3548/proof_dag_selftest.log
-          grep -F 'PASS_CLIQUE_PROOF_DAG_SELF_TESTS' evidence/pass3542_3548/proof_dag_selftest.log
+          pytest -q tests/test_bt3542_bt3548_borel_commutant_outer_s6_analytic.py | tee docs/evidence/pass3542_3548/pytest.log
+          python analysis/bt3544_clique_proof_dag.py --self-test | tee docs/evidence/pass3542_3548/proof_dag_selftest.log
+          grep -F 'PASS_CLIQUE_PROOF_DAG_SELF_TESTS' docs/evidence/pass3542_3548/proof_dag_selftest.log
           git diff --check
       - name: Verify manuscript and public reachability
         run: |
@@ -99,15 +99,15 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass3542_3548/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass3542_3548/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3542_3548/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3542_3548/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3542-3548-exact-packet-papers
           path: |
-            evidence/pass3542_3548/**
+            docs/evidence/pass3542_3548/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf
@@ -123,13 +123,13 @@ jobs:
       - run: python -m pip install --disable-pip-version-check numpy sympy
       - name: Build all 3720 independently checkable proof DAGs
         run: |
-          mkdir -p evidence/pass3542_3548
+          mkdir -p docs/evidence/pass3542_3548
           python analysis/bt3544_clique_proof_dag.py \
-            --json evidence/pass3542_3548/clique_proof_dags.json \
-            | tee evidence/pass3542_3548/clique_proof_dags.log
-          grep -F 'PASS_STAR_CLIQUE_PROOF_DAGS' evidence/pass3542_3548/clique_proof_dags.log
+            --json docs/evidence/pass3542_3548/clique_proof_dags.json \
+            | tee docs/evidence/pass3542_3548/clique_proof_dags.log
+          grep -F 'PASS_STAR_CLIQUE_PROOF_DAGS' docs/evidence/pass3542_3548/clique_proof_dags.log
       - uses: actions/upload-artifact@v4
         with:
           name: pass3544-star-clique-proof-dags
           compression-level: 9
-          path: evidence/pass3542_3548/**
+          path: docs/evidence/pass3542_3548/**

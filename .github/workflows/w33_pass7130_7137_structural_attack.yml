@@ -60,12 +60,12 @@ jobs:
 
       - name: Compile all three canonical manuscripts
         run: |
-          mkdir -p evidence/pass7130_7137
+          mkdir -p docs/evidence/pass7130_7137
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee "evidence/pass7130_7137/${source%.tex}.log"
+            tectonic --keep-logs "$source" 2>&1 | tee "docs/evidence/pass7130_7137/${source%.tex}.log"
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass7130_7137/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass7130_7137/pdf_sha256.txt
 
       - name: Materialize public card and freeze successful replay proof
         run: |
@@ -83,9 +83,9 @@ jobs:
           import json, os
           from pathlib import Path
           sha = os.environ['GITHUB_SHA']
-          hashes = Path('evidence/pass7130_7137/pdf_sha256.txt').read_text().strip().splitlines()
+          hashes = Path('docs/evidence/pass7130_7137/pdf_sha256.txt').read_text().strip().splitlines()
           Path('data/PART_W33_PASS7130_7137_CI_PROOF.json').write_text(json.dumps({
-              'schema': 'w33.pass7130_7137.ci_proof.v1',
+              'schemas': 'w33.pass7130_7137.ci_proof.v1',
               'status': 'PASS',
               'source_commit': sha,
               'exact_producer_replayed': True,
@@ -107,4 +107,4 @@ jobs:
         if: always()
         with:
           name: pass7130-7137-structural-attack
-          path: evidence/pass7130_7137/**
+          path: docs/evidence/pass7130_7137/**

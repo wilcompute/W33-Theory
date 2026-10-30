@@ -39,7 +39,7 @@ ARTIFACTS = ROOT / "artifacts"
 DEFAULT_SC_JSON = ARTIFACTS / "e8_structure_constants_w33_discrete.json"
 DEFAULT_META_JSON = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_root_metadata_table.json"
 DEFAULT_COUPLINGS_JSON = ROOT / "extracted_v13" / "W33-Theory-master" / "artifacts" / "e8_g1g1_couplings_cubic_firewall.json"
-DEFAULT_L6_JSONL = ROOT / "V24_output_v13_full" / "l6_patch_sextuples_full.jsonl"
+DEFAULT_L6_JSONL = ROOT / "archive/outputs/V24_output_v13_full" / "l6_patch_sextuples_full.jsonl"
 DEFAULT_OUT_DIR = ROOT / "V25_output"
 
 Pair = Tuple[int, int]

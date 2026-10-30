@@ -91,7 +91,7 @@ def build() -> dict:
 
     normalization_rows = [{"input": matrix_json(g), "coset_id": owner[g], "centralizer_suffix_id": suffix_by_g[g]} for g in sorted(group)]
     return {
-        "schema": "w33.pass2769.cx_centralizer_compiler.v1",
+        "schemas": "w33.pass2769.cx_centralizer_compiler.v1",
         "status": "COMPLETE_LOCAL_EXACT",
         "group_order": len(group),
         "centralizer_order": len(C),

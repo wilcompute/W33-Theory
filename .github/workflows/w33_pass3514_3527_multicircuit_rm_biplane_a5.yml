@@ -48,26 +48,26 @@ jobs:
           python -m pip install --disable-pip-version-check numpy sympy networkx pytest
       - name: Regenerate exact certificate
         run: |
-          mkdir -p evidence/pass3514_3527
-          python analysis/bt3514_3527_multicircuit_rm_biplane_a5.py | tee evidence/pass3514_3527/exact.log
-          grep -F 'PASS_7_FRONTS 3cc9e9d0889148b749a51fdb0834881f2ff131c9ba25cc8b51a402de280c93b4' evidence/pass3514_3527/exact.log
+          mkdir -p docs/evidence/pass3514_3527
+          python analysis/bt3514_3527_multicircuit_rm_biplane_a5.py | tee docs/evidence/pass3514_3527/exact.log
+          grep -F 'PASS_7_FRONTS 3cc9e9d0889148b749a51fdb0834881f2ff131c9ba25cc8b51a402de280c93b4' docs/evidence/pass3514_3527/exact.log
       - name: Focused regression
         run: |
-          pytest -q tests/test_bt3514_3527_multicircuit_rm_biplane_a5.py | tee evidence/pass3514_3527/pytest.log
+          pytest -q tests/test_bt3514_3527_multicircuit_rm_biplane_a5.py | tee docs/evidence/pass3514_3527/pytest.log
           git diff --check
       - name: Exhaust RTL
         run: |
-          iverilog -g2012 -s tb_w33_pass3514_3527 -o evidence/pass3514_3527/tb \
+          iverilog -g2012 -s tb_w33_pass3514_3527 -o docs/evidence/pass3514_3527/tb \
             rtl/w33_rm14_equivariant_encode.v \
             rtl/w33_clebsch_double_fault_locator3.v \
             rtl/tb_w33_pass3514_3527.v
-          vvp evidence/pass3514_3527/tb | tee evidence/pass3514_3527/rtl.log
-          grep -F 'PASS RM14 words=32 compound_locator_patterns=137 extra_bits=3' evidence/pass3514_3527/rtl.log
+          vvp docs/evidence/pass3514_3527/tb | tee docs/evidence/pass3514_3527/rtl.log
+          grep -F 'PASS RM14 words=32 compound_locator_patterns=137 extra_bits=3' docs/evidence/pass3514_3527/rtl.log
       - name: Synthesize readable engines
         run: |
           for top in w33_rm14_equivariant_encode w33_clebsch_double_fault_locator3; do
             yosys -p "read_verilog rtl/w33_rm14_equivariant_encode.v rtl/w33_clebsch_double_fault_locator3.v; hierarchy -top ${top}; synth_ice40 -top ${top}; stat" \
-              2>&1 | tee evidence/pass3514_3527/${top}.yosys.log
+              2>&1 | tee docs/evidence/pass3514_3527/${top}.yosys.log
           done
       - uses: WtfJoke/setup-tectonic@v3
         with:
@@ -75,15 +75,15 @@ jobs:
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3514_3527/${source%.tex}.log
+            tectonic --keep-logs "$source" 2>&1 | tee docs/evidence/pass3514_3527/${source%.tex}.log
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3514_3527/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3514_3527/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3514-3527-multicircuit-rm-biplane-a5-evidence
           path: |
-            evidence/pass3514_3527/**
+            docs/evidence/pass3514_3527/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

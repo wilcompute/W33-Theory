@@ -97,7 +97,7 @@ def main() -> dict:
     results = {
         "theorem": "BT490 Toroidal Metric Edge-Count Audit",
         "source_files": [
-            "visualizations/w33-toroidal-triad.html states Szilassi E=21",
+            "docs/visualizations/w33-toroidal-triad.html states Szilassi E=21",
             "EDGE_LENGTH_ANALYSIS.py derives S_edges from cyclic S_FACES",
         ],
         "expected_szilassi_closed_polyhedron": {

@@ -158,7 +158,7 @@ All metrics pass at zero tolerance.
 ## 8. Next Target
 
 The highest-priority open theoretical task is the **Z[ζ₁₂] unified ring claim**
-(NOTES/LANGLANDS_SPRINT_MAY_2026.md):
+(docs/notes/LANGLANDS_SPRINT_MAY_2026.md):
 
 > Prove that a single element $z \in \mathbb{Z}[\zeta_{12}]$ exists such that
 > $N_{\mathbb{Z}[i]}(\pi_i(z)) = 137$ and $N_{\mathbb{Z}[\omega]}(\pi_\omega(z)) \in \{7, 13\}$,

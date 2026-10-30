@@ -105,7 +105,7 @@ def build() -> dict:
     assert len(theta_only) == 33
     assert len(joint) == 34
     return {
-        "schema": "w33.pass2768.metaplectic_lift_sensor.v1",
+        "schemas": "w33.pass2768.metaplectic_lift_sensor.v1",
         "status": "COMPLETE_LOCAL_EXACT",
         "group_order": len(group),
         "conjugacy_classes": len(classes),

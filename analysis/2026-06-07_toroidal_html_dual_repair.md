@@ -2,7 +2,7 @@
 
 ## Source prompts from the HTML layer
 
-The `visualizations/w33-toroidal-triad.html` page already frames the tetrahedron, Császár polyhedron, and Szilassi polyhedron as one triad:
+The `docs/visualizations/w33-toroidal-triad.html` page already frames the tetrahedron, Császár polyhedron, and Szilassi polyhedron as one triad:
 
 - tetrahedron: genus-zero seed,
 - Császár: vertex-complete toroidal realization,

@@ -44,7 +44,7 @@ SC_PATH = resolve_repo_data_path(
 )
 L3_PATH = resolve_repo_data_path(
     REPO_ROOT,
-    Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l3_patch_triples_full.jsonl",
 )
 
 PER_GENERATION_DIM = 27

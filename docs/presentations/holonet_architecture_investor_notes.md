@@ -161,13 +161,13 @@ python3 analysis/holonet_cli.py verify
 python3 analysis/holonet_cli.py audit
 python3 analysis/holonet_cli.py bench
 python3 analysis/holonet_cli.py bench --compare --scale
-python3 presentations/holonet_architecture_demo.py
+python3 docs/presentations/holonet_architecture_demo.py
 ```
 
 If system Python lacks `scipy` or `networkx`, run through the repo venv:
 
 ```bash
-.venv/bin/python presentations/holonet_architecture_demo.py
+.venv/bin/python docs/presentations/holonet_architecture_demo.py
 ```
 
 The demo runner auto-selects `.venv/bin/python` when it has the audit dependencies.
@@ -175,7 +175,7 @@ The demo runner auto-selects `.venv/bin/python` when it has the audit dependenci
 Then open:
 
 ```text
-presentations/holonet_architecture_live_deck.html
+docs/presentations/holonet_architecture_live_deck.html
 docs/holonet.html
 docs/holonet_theorem_ledger.md
 docs/holonet_claim_tier_dashboard.html

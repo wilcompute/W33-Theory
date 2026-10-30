@@ -48,40 +48,40 @@ jobs:
           python -m pip install --disable-pip-version-check numpy sympy numba pytest
       - name: Regenerate exact certificate
         run: |
-          mkdir -p evidence/pass3556_3569
-          python analysis/bt3556_3569_radius_amplitude_code_fault_c5.py | tee evidence/pass3556_3569/exact.log
-          grep -F 'PASS_7_FRONTS 39a20ba02e9e28b77414e5e1236d2f58f9fb457a6ed2a610bab03fe74a9dadb3' evidence/pass3556_3569/exact.log
+          mkdir -p docs/evidence/pass3556_3569
+          python analysis/bt3556_3569_radius_amplitude_code_fault_c5.py | tee docs/evidence/pass3556_3569/exact.log
+          grep -F 'PASS_7_FRONTS 39a20ba02e9e28b77414e5e1236d2f58f9fb457a6ed2a610bab03fe74a9dadb3' docs/evidence/pass3556_3569/exact.log
       - name: Exercise renamespaced frozen fallback
         run: |
           rm -f data/PART_BT3556_BT3569_RADIUS_AMPLITUDE_CODE_FAULT_C5_results.json
-          pytest -q tests/test_bt3556_3569_radius_amplitude_code_fault_c5.py | tee evidence/pass3556_3569/pytest.log
+          pytest -q tests/test_bt3556_3569_radius_amplitude_code_fault_c5.py | tee docs/evidence/pass3556_3569/pytest.log
           git diff --check
       - name: Exhaust RTL distance-three locator
         run: |
-          iverilog -g2012 -s tb_w33_pass3556_3569 -o evidence/pass3556_3569/tb \
+          iverilog -g2012 -s tb_w33_pass3556_3569 -o docs/evidence/pass3556_3569/tb \
             rtl/w33_clebsch_double_fault_locator5.v \
             rtl/tb_w33_pass3556_3569.v
-          vvp evidence/pass3556_3569/tb | tee evidence/pass3556_3569/rtl.log
-          grep -F 'PASS compound_fault_patterns=137 companion_bits=5 minimum_distance=3' evidence/pass3556_3569/rtl.log
+          vvp docs/evidence/pass3556_3569/tb | tee docs/evidence/pass3556_3569/rtl.log
+          grep -F 'PASS compound_fault_patterns=137 companion_bits=5 minimum_distance=3' docs/evidence/pass3556_3569/rtl.log
       - name: Synthesize locator
         run: |
           yosys -p 'read_verilog rtl/w33_clebsch_double_fault_locator5.v; hierarchy -top w33_clebsch_double_fault_locator5; synth_ice40 -top w33_clebsch_double_fault_locator5; stat' \
-            2>&1 | tee evidence/pass3556_3569/locator5.yosys.log
+            2>&1 | tee docs/evidence/pass3556_3569/locator5.yosys.log
       - uses: WtfJoke/setup-tectonic@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Compile canonical manuscripts
         run: |
           for source in w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex; do
-            tectonic --keep-logs "$source" 2>&1 | tee evidence/pass3556_3569/${source%.tex}.log
+            tectonic --keep-logs "$source" 2>&1 | tee docs/evidence/pass3556_3569/${source%.tex}.log
             test -s "${source%.tex}.pdf"
           done
-          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > evidence/pass3556_3569/pdf_sha256.txt
+          sha256sum w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf > docs/evidence/pass3556_3569/pdf_sha256.txt
       - uses: actions/upload-artifact@v4
         with:
           name: pass3556-3569-radius-amplitude-code-fault-c5-evidence
           path: |
-            evidence/pass3556_3569/**
+            docs/evidence/pass3556_3569/**
             w33_paper.pdf
             photonic_holonet.pdf
             holonet_machine_blueprint.pdf

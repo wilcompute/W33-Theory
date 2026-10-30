@@ -497,7 +497,7 @@ def post_atlas_master_synthesis_audit() -> Dict[str, object]:
             "The highest-priority open task remains the Z[ζ₁₂] unified element proof (Langlands sprint)."
         ),
         "next_target": (
-            "The Z[ζ₁₂] Langlands claim (NOTES/LANGLANDS_SPRINT_MAY_2026.md): "
+            "The Z[ζ₁₂] Langlands claim (docs/notes/LANGLANDS_SPRINT_MAY_2026.md): "
             "prove that a single element z ∈ Z[ζ₁₂] has N_{Z[i]}(π_i(z))=137 and "
             "N_{Z[ω]}(π_ω(z)) ∈ {7,13}, establishing α⁻¹, β₀, β₁/₂ as Frobenius "
             "eigenvalues of a single automorphic object."

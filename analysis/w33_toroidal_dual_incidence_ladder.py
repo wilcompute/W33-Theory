@@ -164,7 +164,7 @@ def main() -> dict:
 
     results = {
         "theorem": "BT489 Toroidal Dual Incidence Ladder Theorem",
-        "source_hint": "visualizations/w33-toroidal-triad.html dual hole equations + mod-12 law + 42/66 constants panel",
+        "source_hint": "docs/visualizations/w33-toroidal-triad.html dual hole equations + mod-12 law + 42/66 constants panel",
         "admissible_residues_mod_12": sorted(RESIDUES),
         "residue_polynomials": {str(r): residue_polynomial_label(r) for r in sorted(RESIDUES)},
         "formulae": {

@@ -21,7 +21,7 @@ def load_json(p: Path):
 
 
 def ensure_reports_dir():
-    p = Path("reports")
+    p = Path("docs/reports")
     p.mkdir(exist_ok=True)
     return p
 

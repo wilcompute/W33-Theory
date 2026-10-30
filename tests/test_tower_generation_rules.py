@@ -108,19 +108,19 @@ from exploration._artifact_paths import resolve_repo_data_path
 ROOT = Path(__file__).resolve().parent.parent
 L3_PATH = resolve_repo_data_path(
     ROOT,
-    Path("V24_output_v13_full") / "l3_patch_triples_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l3_patch_triples_full.jsonl",
 )
 L4_PATH = resolve_repo_data_path(
     ROOT,
-    Path("V24_output_v13_full") / "l4_patch_quads_full.jsonl",
+    Path("archive/outputs/V24_output_v13_full") / "l4_patch_quads_full.jsonl",
 )
 L5_PATH = resolve_repo_data_path(
     ROOT,
-    Path("extracted_v20") / "v19" / "V19" / "l5_patch_quintuples_full.jsonl",
+    Path("archive/outputs/extracted_v20") / "v19" / "V19" / "l5_patch_quintuples_full.jsonl",
 )
 L6_PATH = resolve_repo_data_path(
     ROOT,
-    Path("extracted_v20") / "V20" / "l6_patch_sextuples_full.jsonl",
+    Path("archive/outputs/extracted_v20") / "V20" / "l6_patch_sextuples_full.jsonl",
 )
 L9_BUCKET_DIR = resolve_repo_data_path(
     ROOT,
