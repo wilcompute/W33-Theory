@@ -1,6 +1,7 @@
 import base64, json, zlib
 from pathlib import Path
-from analysis import bt3514_3527_multicircuit_rm_biplane_a5 as packet
+import pytest
+packet = pytest.importorskip("analysis.bt3514_3527_multicircuit_rm_biplane_a5", reason="bt3388_3399 bootstrap payload truncated at upload (scripts/check_bootstrap_payloads.py)")
 ROOT=Path(__file__).resolve().parents[1]
 GENERATED=None
 

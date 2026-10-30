@@ -32,6 +32,11 @@ There are no F-terms in a non-SUSY model.
 
 ## 12459: thresholds cannot unify SM_2541 — the lineage is closed at unification
 
+> **Prior art (found after publication with `scripts/find.py "k_Y" -i`).** Pass 12154 (94a6619c5, 2026-10-21) had already shown, with
+> SM running and no thresholds, that the measured Weinberg angle needs k_Y ≈ 1.29, so fraction-free hypercharges such as 17/3 are
+> excluded; Pass 12359 ran the threshold version for SM_2913 at k_Y = 5/3. What 12459 adds is the threshold-rescue test for the
+> SM_2541 family specifically: both fixed tori, every enumerated hypercharge, all 52 models.
+
 **Method.** I used the 12359 machinery: the large-volume Dixon–Kaplunovsky–Louis (DKL) form, with 6D coefficients computed from the massless
 spectra of *both* fixed tori. For c22 these are fresh strict-engine runs of the θ² and θ³ sub-orbifolds (940 and 624 fields), with the
 Wilson lines on each fixed torus switched off.

@@ -1,8 +1,8 @@
 name: Zenodo DOI sync
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'     # every 30 minutes
+  # The schedule (every 30 minutes since February) was removed on 2026-10-30: the DOI for v2026-02-15-qec-mlut was added on
+  # 2026-02-15 (0542cf259), so ~48 runs a day had nothing left to do.  Dispatch it by hand for a new release.
   workflow_dispatch: {}
 
 jobs:

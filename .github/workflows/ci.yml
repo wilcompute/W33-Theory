@@ -32,8 +32,8 @@ jobs:
       - name: Run Pass 71 tracks
         run: python w33_pass71_run_all_tracks.py
 
-      - name: Run full pytest suite
-        run: pytest tests/ -v --tb=short
+      # The full suite moved to pytest.yml (2026-10-30): this job installs only numpy/scipy, so the full suite failed here at
+      # collection on every push (missing sympy, ortools, cdd), duplicating pytest.yml's run.  This job verifies Pass 70/71.
 
       - name: Verify JSON witnesses exist
         run: |

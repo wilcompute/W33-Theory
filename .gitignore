@@ -271,3 +271,16 @@ data/corpus_index.sqlite
 # Pass 4466: DuckDB certificate index -- rebuildable from data/**/*.json
 data/cert_index.duckdb
 data/first_appearance_cache.json
+
+# --- agent scratch at the repository root (added 2026-10-30) --------------
+# Research dumps, intake mirrors, nested worktrees and Sage/CAS scratch written by the agents while they work.
+# They are never source: ~987 such files made `git status` and the VS Code Source Control view unusable.
+# Root-scoped so no tracked subtree is affected (git ls-files matched none of these patterns when this was added).
+/.research_*
+/.research_worktrees/
+/.sage_scratch/
+/.sage-*/
+/.sage_*/
+/_test_*.txt
+/_tmp_*
+/scratchpad_*

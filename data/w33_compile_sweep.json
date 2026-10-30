@@ -3,19 +3,19 @@
     {
       "file": "BT1612_no_go_paper.tex",
       "ok": true,
-      "pdf_bytes": 77257,
+      "pdf_bytes": 77259,
       "error": ""
     },
     {
       "file": "BT407_PAPER.tex",
       "ok": true,
-      "pdf_bytes": 125905,
+      "pdf_bytes": 125906,
       "error": ""
     },
     {
       "file": "holonet_demonstrator_protocol_v1.tex",
       "ok": true,
-      "pdf_bytes": 62945,
+      "pdf_bytes": 62947,
       "error": ""
     },
     {
@@ -25,33 +25,45 @@
       "error": ""
     },
     {
+      "file": "holonet_machine_blueprint.tex",
+      "ok": true,
+      "pdf_bytes": 3287025,
+      "error": ""
+    },
+    {
       "file": "holonet_parity_control.tex",
       "ok": true,
-      "pdf_bytes": 65608,
+      "pdf_bytes": 65612,
       "error": ""
     },
     {
       "file": "holonet_practical_implications.tex",
       "ok": true,
-      "pdf_bytes": 225196,
+      "pdf_bytes": 230784,
       "error": ""
     },
     {
       "file": "holonet_shannon_capacity.tex",
       "ok": true,
-      "pdf_bytes": 84464,
+      "pdf_bytes": 84462,
       "error": ""
     },
     {
       "file": "main.tex",
       "ok": true,
-      "pdf_bytes": 109279,
+      "pdf_bytes": 109282,
+      "error": ""
+    },
+    {
+      "file": "photonic_holonet.tex",
+      "ok": true,
+      "pdf_bytes": 3657196,
       "error": ""
     },
     {
       "file": "self_entanglement_companion.tex",
       "ok": true,
-      "pdf_bytes": 91295,
+      "pdf_bytes": 91294,
       "error": ""
     },
     {
@@ -63,13 +75,13 @@
     {
       "file": "standard_model_from_one_transvection.tex",
       "ok": true,
-      "pdf_bytes": 79521,
+      "pdf_bytes": 79519,
       "error": ""
     },
     {
       "file": "toe_constants_companion.tex",
       "ok": true,
-      "pdf_bytes": 120002,
+      "pdf_bytes": 120003,
       "error": ""
     },
     {
@@ -81,25 +93,37 @@
     {
       "file": "w33_everything.tex",
       "ok": true,
-      "pdf_bytes": 140033,
+      "pdf_bytes": 140034,
       "error": ""
     },
     {
       "file": "W33_FOR_EVERYONE.tex",
       "ok": true,
-      "pdf_bytes": 652946,
+      "pdf_bytes": 656623,
+      "error": ""
+    },
+    {
+      "file": "w33_paper.tex",
+      "ok": true,
+      "pdf_bytes": 4255827,
+      "error": ""
+    },
+    {
+      "file": "w33_paper_new_sections.tex",
+      "ok": true,
+      "pdf_bytes": 74654,
       "error": ""
     },
     {
       "file": "w33_paper_v2.tex",
       "ok": true,
-      "pdf_bytes": 232099,
+      "pdf_bytes": 232100,
       "error": ""
     },
     {
       "file": "w33_submission.tex",
       "ok": true,
-      "pdf_bytes": 210053,
+      "pdf_bytes": 210057,
       "error": ""
     },
     {
@@ -111,13 +135,13 @@
     {
       "file": "W36_PAPER_arxiv.tex",
       "ok": true,
-      "pdf_bytes": 236404,
+      "pdf_bytes": 236411,
       "error": ""
     },
     {
       "file": "W36_PRL_LETTER.tex",
       "ok": true,
-      "pdf_bytes": 164000,
+      "pdf_bytes": 163999,
       "error": ""
     }
   ],

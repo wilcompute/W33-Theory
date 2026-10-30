@@ -51,12 +51,15 @@ def _save(c: dict) -> None:
 
 
 def _files_with(token: str) -> list[str]:
-    """Which files contain the token, according to the corpus index."""
-    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "corpus_index.py"),
-                        "find", token], cwd=ROOT, capture_output=True, timeout=300)
-    out = r.stdout.decode("utf-8", errors="replace")
-    return [ln.strip() for ln in out.splitlines()
-            if ln.startswith("    ") and "/" in ln and not ln.strip().startswith("...")]
+    """Which tracked files contain the token -- read from the LIVE tree with git grep.
+
+    Until 2026-10-30 this asked scripts/corpus_index.py, whose SQLite database is gitignored and was never built in CI (so the
+    selftest failed on every push: 0 files) and locally had not been rebuilt since 2026-08-09 (so every result added after that
+    date was invisible to ownership resolution).  git grep reads the index of the checkout itself: 1-2 s, never stale."""
+    r = subprocess.run(["git", "grep", "-I", "-l", "-F", "-e", token, "--", "analysis", "papers", "docs", "manuscripts", "formal",
+                        "scripts", "passes", "exploration", "pillars", "*.md", "*.tex"],
+                       cwd=ROOT, capture_output=True, timeout=300)
+    return [ln.strip() for ln in r.stdout.decode("utf-8", errors="replace").splitlines() if ln.strip()]
 
 
 def file_added(path: str, timeout: int = 60) -> dict:
@@ -111,13 +114,14 @@ def selftest() -> int:
     print("  selftest")
     ok = True
     # a token the index certainly holds, resolved to a real dated commit
-    a = first_commit("103/132/206")
+    a = first_commit("103/132/206", cache={})
     hit = a.get("found") is True and a.get("date", "").startswith("20")
     ok &= hit
     print(f"    indexed token resolves to a commit   found={a.get('found')} "
           f"date={a.get('date')}  {'PASS' if hit else 'FAIL'}")
     # a token nothing can contain
-    b = first_commit("zzq_not_a_real_token_9f3a1")
+    # built at run time: a literal would itself be found by the git grep over scripts/
+    b = first_commit("zzq_not_a_real_" + "token_" + "9f3a1", cache={})
     miss = b.get("found") is False
     ok &= miss
     print(f"    impossible token returns not-found   found={b.get('found')}  "

@@ -83,6 +83,9 @@ GLOBS = [
     "formal/*.lean",
     "formal/W33/**/*.lean",
     "manuscripts/**/*.tex",
+    # papers/ (2026-10-30): papers/forty_points/appA_ledger.tex carries a one-line result summary of every Claude-track pass block
+    # since August, and none of papers/ was indexed -- its results were only findable through the pass files themselves.
+    "papers/**/*.tex",
     # BUNDLE DIRECTORIES (Pass 5524).  This repository has ~158 top-level bundle
     # directories -- PG33_OUTER_TWIST_GEOMETRY_BUNDLE_v01, SP43_TO_WE6_TRUE_FIXED_BUNDLE,
     # the TOE_* deliverables, V22-V26 outputs -- holding .md reports and .json

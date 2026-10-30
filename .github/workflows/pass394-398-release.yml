@@ -75,6 +75,14 @@ jobs:
             echo 'Formula universe already current.'
             exit 0
           fi
+          # Commit only when the FORMULA CONTENT changed.  frozen_at, repository_head, byte/file counts and line numbers change on
+          # every push, which made this job commit after nearly every push (976 bot commits by 2026-10-29) and re-trigger
+          # w33_toe_followthroughs.yml each time.  Compare the formula identities and multiplicities instead.
+          if python scripts/formula_universe_digest.py --compare-head data/w33_formula_search_universe_v1.json; then
+            git checkout -- data/w33_formula_search_universe_v1.json
+            echo 'Formula families unchanged (only timestamps, HEAD, counts or line numbers moved); not committing.'
+            exit 0
+          fi
           git config user.name 'w33-formula-freeze[bot]'
           git config user.email 'w33-formula-freeze[bot]@users.noreply.github.com'
           git add -f data/w33_formula_search_universe_v1.json

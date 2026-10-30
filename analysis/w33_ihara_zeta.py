@@ -270,4 +270,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-"""Part MCLXI: Ihara Zeta Function and Determinant Formula for W(3,3).

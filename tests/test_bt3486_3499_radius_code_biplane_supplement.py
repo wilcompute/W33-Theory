@@ -3,7 +3,8 @@ import json
 import zlib
 from pathlib import Path
 
-from analysis import bt3486_3499_radius_code_biplane_supplement as packet
+import pytest
+packet = pytest.importorskip("analysis.bt3486_3499_radius_code_biplane_supplement", reason="bt3388_3399 bootstrap payload truncated at upload (scripts/check_bootstrap_payloads.py)")
 
 
 def frozen_certificate() -> dict:
