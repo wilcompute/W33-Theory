@@ -1,0 +1,11 @@
+{
+ "full_singlets": 42,
+ "homogeneous_support": 42,
+ "sm_singlets_incl_hidden": 118,
+ "fi_support_hidden_plus": 118,
+ "fi_support_hidden_minus": 118,
+ "all_scalars": 286,
+ "fi_support_all_plus": 286,
+ "fi_support_all_minus": 286,
+ "control_outside_span_support": 0
+}

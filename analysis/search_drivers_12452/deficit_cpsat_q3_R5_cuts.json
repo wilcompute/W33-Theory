@@ -1,0 +1,15 @@
+{
+ "q": 3,
+ "R": 5,
+ "cases": {
+  "a": {
+   "status": "INFEASIBLE",
+   "seconds": 0.1
+  },
+  "b": {
+   "status": "INFEASIBLE",
+   "seconds": 0.0
+  }
+ },
+ "no_region_le_R": true
+}

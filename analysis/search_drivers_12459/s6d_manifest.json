@@ -1,0 +1,421 @@
+{
+ "note": "6D massless spectra (not committed, 41 MB): regenerate in WSL with  bash run6d.sh WORKER NWORKERS  (inputs ~/orb/newv0/<model>__t3.txt / __t2.txt from search_drivers_12373/filt.py)",
+ "files": {
+  "Z6II_06_SM_20260917_2541_c1060__t2.nsoq": {
+   "sha256": "c606d30ea83b9b861c49e8b7a608e663ec1107d8f374f526afcd47d5859e7a50",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1060__t3.nsoq": {
+   "sha256": "5ca3cebcf2dc3483e52fe4be2a8b555bb9c505765ae64b157bce0cb34ebc6769",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c1164__t2.nsoq": {
+   "sha256": "9df6e5f74133b0af53b5c1ec5de1f66cf34bd00caad49302ca15a8941a4ae8b6",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1164__t3.nsoq": {
+   "sha256": "3b5f229b6c8817cc8db7d9812a7df017aab5498c0bd53e73b06f7991300ef95c",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c1224__t2.nsoq": {
+   "sha256": "29dbd061e4321ea02cfc6f38d6817165a1e9a76298bbe2a1deabed4206b8eac4",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1224__t3.nsoq": {
+   "sha256": "8cd9549292e5e0105af454a55ca79dec1333d88d8a7c4ea495be5a524206ba78",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c1430__t2.nsoq": {
+   "sha256": "414b93798c841d7642a2a628eaaa1c50b8325f5815d488ecca9e404c0d5f4d32",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1430__t3.nsoq": {
+   "sha256": "20ab8f8dba1dbcc2b43cfc2483d676489b08bf3d99d37096ff18bdb6d89cf901",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c1493__t2.nsoq": {
+   "sha256": "7d71bf165e5b30030233e68de1eb44e3595637bdd3a92774f5a3d1b3a92fabc2",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1493__t3.nsoq": {
+   "sha256": "6820b8e33a1d585e982814083851d9a10db062249dac7ac05501f5af55d0aec3",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c1585__t2.nsoq": {
+   "sha256": "fa9355fc29c15f41776eb0f205509206c2750135192ae3065d5bcd9006db7221",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1585__t3.nsoq": {
+   "sha256": "b5953c95393982f22f0d8ab61c527461894fbac91a6486f9d6e816943cfbaa8d",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c1614__t2.nsoq": {
+   "sha256": "2533cf2118841e8170359363fc2305b454594a4b38745ea80d8c5481410f2d90",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1614__t3.nsoq": {
+   "sha256": "a5a7773ed089124d14c5559c2901529e17ba791bb37fea059370162e72332fb9",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c1968__t2.nsoq": {
+   "sha256": "5acb37f1762b7b4619741f28e32fe93cd459ec20869e2b2ceebf25ccbc96b30b",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c1968__t3.nsoq": {
+   "sha256": "00f244a9b3c3f9d23529f91b4e16b122f26e28906f759c112de96089f33bbdf0",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2107__t2.nsoq": {
+   "sha256": "7db8f3ce3bfac9b19706294bb8c8a66f0a7a6058ec24cff910eb4daa04588450",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2107__t3.nsoq": {
+   "sha256": "32d6e93d91972ca0220962987026dd958e69887ffd151cc6663b0168ca7bf24c",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2224__t2.nsoq": {
+   "sha256": "19a48a71ab9dba5a9a44debd055b90fc6b5a16b049dda433fdcadd997cde46c4",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2224__t3.nsoq": {
+   "sha256": "03f4299d36c1eb1b699c697d295a2caf342985659b2d853f02c902a45bcf6085",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2281__t2.nsoq": {
+   "sha256": "d081dddd092f64c86ab211a8346f142a34443873373025a2b2ed0bd717af5aed",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2281__t3.nsoq": {
+   "sha256": "9b42d12c66f4e484a495279929a11674f095ed51192acda5fdaacf076fc7f06c",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c22__t2.nsoq": {
+   "sha256": "224f3cc997a3f031c239027cd894b8c9d1df840119371eb2d63ba9015b27b505",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c22__t3.nsoq": {
+   "sha256": "b133f924f7d9614d8d07282cbb611dc8f7a92c90647bb9585b3c428b8738bc64",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2450__t2.nsoq": {
+   "sha256": "5623dddde07cba79442ea7d6111e95ca79c58d07c0802113293f363ce9849b53",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2450__t3.nsoq": {
+   "sha256": "45c5bc899edb51aac5ee01f7020b66ae73c65a3938aa0b1f3ef3a6a7ea3b4a2a",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2606__t2.nsoq": {
+   "sha256": "ac1f6e7d422cdf44812342a38268a9ae0b69f9cba6b02c1cbc0da6986e04dfd6",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2606__t3.nsoq": {
+   "sha256": "d2e46c00267e3aad2202f68e1bb1a83cde73be61812abb2628e4842a10a190f2",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2736__t2.nsoq": {
+   "sha256": "ef92b3d4b58184ef40b5e4b530bc86c9250adaccfc5e450e2d5e857267db5e31",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2736__t3.nsoq": {
+   "sha256": "57bac3cc1da3f1f61542ef5b13da9703ea8fee9f02afafc60fe50c8e448bc578",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2738__t2.nsoq": {
+   "sha256": "7db8f3ce3bfac9b19706294bb8c8a66f0a7a6058ec24cff910eb4daa04588450",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2738__t3.nsoq": {
+   "sha256": "a3a7807703ef2a8871006005d9f4ed0d3dc8f42f261e488df7734f1c99cc9f7c",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2753__t2.nsoq": {
+   "sha256": "5acb37f1762b7b4619741f28e32fe93cd459ec20869e2b2ceebf25ccbc96b30b",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2753__t3.nsoq": {
+   "sha256": "e08731cb601e988a8d338b2ad7a0717e2229087d2c2cf1adf5f927704946c415",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2783__t2.nsoq": {
+   "sha256": "aca7d89ccf42cf04ee3ab04f3f065e82ca64f7c5c72cc2def5d1a4d8cc61826f",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2783__t3.nsoq": {
+   "sha256": "23c309b346999ffeabb1c3a14c5fa1e6452c58011f032c1a03aba9ec3c69b097",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c279__t2.nsoq": {
+   "sha256": "d081dddd092f64c86ab211a8346f142a34443873373025a2b2ed0bd717af5aed",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c279__t3.nsoq": {
+   "sha256": "8ba089370b33c748bda059d09628da7b816d87c97cba188bc28417fc81cfd82e",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c281__t2.nsoq": {
+   "sha256": "e2b5460aaa94d8136f8b66230656bc3be2ff00797738df242e9071797ade6d6a",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c281__t3.nsoq": {
+   "sha256": "f062683812c4aa6605381e8578e99961ee30cc3d3d34acbaa973037e52d92573",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2872__t2.nsoq": {
+   "sha256": "babe9ec59d878d595d0a68d9f265035be62b18b83bc4c41e39b5be06ef8aeb2d",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2872__t3.nsoq": {
+   "sha256": "f4e3145cf82ce7d9c86fe1b5aed0ae34f920b89eaa9060a4a5b268bd21ac91e4",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c290__t2.nsoq": {
+   "sha256": "0e37d0ec86d381f3471f1a6eee27764ebc5da885b9ed780dbf6c6806349da9e0",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c290__t3.nsoq": {
+   "sha256": "b05b1f3410368fb46086a802a063e7c99e7b812428e3035cbd5666da02d40abd",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c2961__t2.nsoq": {
+   "sha256": "ae86f9a2cd1828fb419018ea95237f5ba358a41ce27c6468c8113388c3c65ebf",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c2961__t3.nsoq": {
+   "sha256": "8cd9549292e5e0105af454a55ca79dec1333d88d8a7c4ea495be5a524206ba78",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c3022__t2.nsoq": {
+   "sha256": "205587515bbb587b781e80f2a4a14b8032a8b50e7ea00ecfc5e25711e106e952",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c3022__t3.nsoq": {
+   "sha256": "2b88b8a46c4feb1ea8194023ef86327ec3f70ad7457548951d3c6ae2ac84a62d",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c316__t2.nsoq": {
+   "sha256": "120a3fbce6fad8870c057d7e0f821f4abb2b33ca0b3ab8af2df0e836c4b982f5",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c316__t3.nsoq": {
+   "sha256": "12816493522a9288acce6addca71f73da9394fd6f080d109a607913a0eab2696",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c3180__t2.nsoq": {
+   "sha256": "5a078d745acc36b65be05e8ce9d1a642f7a6717970e6ee3e5d4a14229c378395",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c3180__t3.nsoq": {
+   "sha256": "02c6aa2c1b5a4c61623e93a8cf837eecc2dec41aa7ad70bd76cef440781d09fd",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c3330__t2.nsoq": {
+   "sha256": "7fb2085606cb3660b6982595e13e6f9e6eb90a9866763ef3766b349ca86f4168",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c3330__t3.nsoq": {
+   "sha256": "eb444ddaccc4a3f446888da359aae754c7e55a701b8bf8334411b4f25c99c206",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c3653__t2.nsoq": {
+   "sha256": "3752b4092f09a8703899ab6173e3d554f868e1ba3948eda789ae1cb70063db99",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c3653__t3.nsoq": {
+   "sha256": "159e950ac85bf4e8b272bc2f156e6defef77095256f1ce970075db2aa49ff95c",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c3721__t2.nsoq": {
+   "sha256": "5a078d745acc36b65be05e8ce9d1a642f7a6717970e6ee3e5d4a14229c378395",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c3721__t3.nsoq": {
+   "sha256": "5ca3cebcf2dc3483e52fe4be2a8b555bb9c505765ae64b157bce0cb34ebc6769",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c3874__t2.nsoq": {
+   "sha256": "3752b4092f09a8703899ab6173e3d554f868e1ba3948eda789ae1cb70063db99",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c3874__t3.nsoq": {
+   "sha256": "3c4d27d176395e4644189534245755899dd611718a15dd07e47c06f9cfea2a55",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c387__t2.nsoq": {
+   "sha256": "f9a7488da157a0daa79bcda3a320a94b409ec4a1867b913f0de3162f510b9b23",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c387__t3.nsoq": {
+   "sha256": "be5c538a8377895912ddb70ee3d1395e45514566285c4ababc5ff822c559c5c2",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c3920__t2.nsoq": {
+   "sha256": "57afac31278fafb0f4675cb5d878b3df3b45697dc00d11f4efdb8ea3c355efe5",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c3920__t3.nsoq": {
+   "sha256": "1c7e650295e386f83ed019e706e644e02749189ad7b3c91b732acfbb2c443039",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4003__t2.nsoq": {
+   "sha256": "ef510d7e7ed68e39337c45fc174c4906468cf2c25a91a0eeca5b917098e3b248",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4003__t3.nsoq": {
+   "sha256": "1ce6aef2bb179ff2c054d4e86862437c3df020c43412a933d1cccd8cc086ca74",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4124__t2.nsoq": {
+   "sha256": "aca7d89ccf42cf04ee3ab04f3f065e82ca64f7c5c72cc2def5d1a4d8cc61826f",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4124__t3.nsoq": {
+   "sha256": "12fc9fac607d16773c1e0cb5463e99952514e344b26d052cb679158fa3de6197",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4229__t2.nsoq": {
+   "sha256": "5623dddde07cba79442ea7d6111e95ca79c58d07c0802113293f363ce9849b53",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4229__t3.nsoq": {
+   "sha256": "f7e22c6e26f679886514644d3d8483ebd55460ee094bcacce3b93594693a6adb",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4282__t2.nsoq": {
+   "sha256": "ef92b3d4b58184ef40b5e4b530bc86c9250adaccfc5e450e2d5e857267db5e31",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4282__t3.nsoq": {
+   "sha256": "57bac3cc1da3f1f61542ef5b13da9703ea8fee9f02afafc60fe50c8e448bc578",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4317__t2.nsoq": {
+   "sha256": "205587515bbb587b781e80f2a4a14b8032a8b50e7ea00ecfc5e25711e106e952",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4317__t3.nsoq": {
+   "sha256": "ccc0da25e94f5c8c78f8391752f11c0fbf11904cae2c38eede239818e56bb0f0",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4671__t2.nsoq": {
+   "sha256": "5abc740309bf4e29a4806d1ac7034808af6a6818ce4f485c7b881a6feb2d974b",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4671__t3.nsoq": {
+   "sha256": "5da2ef9638c58fe85eb730eba93e478d0fd36bba3343932c30e79acd7f3a9a6e",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4686__t2.nsoq": {
+   "sha256": "c606d30ea83b9b861c49e8b7a608e663ec1107d8f374f526afcd47d5859e7a50",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4686__t3.nsoq": {
+   "sha256": "c0063450fcf24f1968acdc88dede3c76049ff419b5b960df81c94065f2dbd417",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4747__t2.nsoq": {
+   "sha256": "7d71bf165e5b30030233e68de1eb44e3595637bdd3a92774f5a3d1b3a92fabc2",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4747__t3.nsoq": {
+   "sha256": "d998b185a70cc6f3cfbbbd8d5b5ac411a1471ae1e85b702502f5394c2e86c957",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c4854__t2.nsoq": {
+   "sha256": "ef510d7e7ed68e39337c45fc174c4906468cf2c25a91a0eeca5b917098e3b248",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c4854__t3.nsoq": {
+   "sha256": "9c483c4e2e048c78b9d266e081b12901f4bd8d7a9f715775ab967f3b6890e180",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c489__t2.nsoq": {
+   "sha256": "5a078d745acc36b65be05e8ce9d1a642f7a6717970e6ee3e5d4a14229c378395",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c489__t3.nsoq": {
+   "sha256": "02c6aa2c1b5a4c61623e93a8cf837eecc2dec41aa7ad70bd76cef440781d09fd",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c5326__t2.nsoq": {
+   "sha256": "f9a7488da157a0daa79bcda3a320a94b409ec4a1867b913f0de3162f510b9b23",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c5326__t3.nsoq": {
+   "sha256": "42a9022c505f48b758309abc13ec1a8b5306f7e7f4ec9c53f9c9abb3ffb69e0c",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c5388__t2.nsoq": {
+   "sha256": "ac1f6e7d422cdf44812342a38268a9ae0b69f9cba6b02c1cbc0da6986e04dfd6",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c5388__t3.nsoq": {
+   "sha256": "d2e46c00267e3aad2202f68e1bb1a83cde73be61812abb2628e4842a10a190f2",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c5416__t2.nsoq": {
+   "sha256": "3752b4092f09a8703899ab6173e3d554f868e1ba3948eda789ae1cb70063db99",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c5416__t3.nsoq": {
+   "sha256": "34ab41b9aa6cdf0c66ac4a71fe6483654db88af57e552f83c9ea7ae9a8873343",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c5460__t2.nsoq": {
+   "sha256": "7db8f3ce3bfac9b19706294bb8c8a66f0a7a6058ec24cff910eb4daa04588450",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c5460__t3.nsoq": {
+   "sha256": "be5c538a8377895912ddb70ee3d1395e45514566285c4ababc5ff822c559c5c2",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c5484__t2.nsoq": {
+   "sha256": "29dbd061e4321ea02cfc6f38d6817165a1e9a76298bbe2a1deabed4206b8eac4",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c5484__t3.nsoq": {
+   "sha256": "e9845a6b9d088df93e3827b0af62f4eaee7466adf5f111b23d4fac0fa98976ee",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c5514__t2.nsoq": {
+   "sha256": "7fb2085606cb3660b6982595e13e6f9e6eb90a9866763ef3766b349ca86f4168",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c5514__t3.nsoq": {
+   "sha256": "f754f92a77b286290358bbf5a5bcbf72a91f4e42ddede796bc17df87da5d2d0d",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c5714__t2.nsoq": {
+   "sha256": "57afac31278fafb0f4675cb5d878b3df3b45697dc00d11f4efdb8ea3c355efe5",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c5714__t3.nsoq": {
+   "sha256": "9b42d12c66f4e484a495279929a11674f095ed51192acda5fdaacf076fc7f06c",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c766__t2.nsoq": {
+   "sha256": "d081dddd092f64c86ab211a8346f142a34443873373025a2b2ed0bd717af5aed",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c766__t3.nsoq": {
+   "sha256": "8ba089370b33c748bda059d09628da7b816d87c97cba188bc28417fc81cfd82e",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c897__t2.nsoq": {
+   "sha256": "2e777d6e6952b0bb00539b996658ff4110b3f333537225b880380c5b88793976",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c897__t3.nsoq": {
+   "sha256": "666f41df033ace189ae180eebe9d4f0e421701297c0332fc53f28e2658a253f5",
+   "fields": 940
+  },
+  "Z6II_06_SM_20260917_2541_c993__t2.nsoq": {
+   "sha256": "224f3cc997a3f031c239027cd894b8c9d1df840119371eb2d63ba9015b27b505",
+   "fields": 624
+  },
+  "Z6II_06_SM_20260917_2541_c993__t3.nsoq": {
+   "sha256": "7ab79ef24f90790dc2e41f0d03dbb7bfbad5d2f03a817847c8e4f37cc22de59f",
+   "fields": 940
+  }
+ }
+}

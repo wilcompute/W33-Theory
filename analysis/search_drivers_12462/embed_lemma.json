@@ -1,0 +1,14 @@
+{
+ "grid3x3_q2": true,
+ "grid3x3_q3": true,
+ "grid3x3_q5": true,
+ "grid5x5_q2": true,
+ "grid5x5_q3": true,
+ "grid5x5_q5": true,
+ "random20_q2": true,
+ "random20_q3": true,
+ "random20_q5": true,
+ "W33_q2": true,
+ "W33_q3": true,
+ "W33_q5": true
+}

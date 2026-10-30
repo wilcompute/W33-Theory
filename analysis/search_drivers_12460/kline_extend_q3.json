@@ -1,0 +1,10 @@
+{
+ "5": {
+  "min_weight": 8,
+  "count_at_min": 2160
+ },
+ "6": {
+  "min_weight": 8,
+  "count_at_min": 7020
+ }
+}

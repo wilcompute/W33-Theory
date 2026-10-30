@@ -1,0 +1,14 @@
+{
+ "3": {
+  "words": 540,
+  "configurations_tested": 30836,
+  "violations": 0,
+  "tight": 480
+ },
+ "5": {
+  "words": 601,
+  "configurations_tested": 251468,
+  "violations": 0,
+  "tight": 602
+ }
+}

@@ -20,6 +20,12 @@ for case in ('a', 'b'):
         m.AddBoolXOr([x[j] for j in range(n) if A[y, j]] + [p[y], one])
         m.AddMaxEquality(r[y], [x[y], p[y]])
     m.Add(sum(r) <= R)
+    if len(sys.argv) > 4 and sys.argv[4] == 'cuts':      # 12461: counting lemma -- |x| <= q forces |R| >= 2q + 1, so for R <= 2q - 1 restrict |x|
+        m.Add(sum(x) >= q + 1); m.Add(sum(x) <= R)
+        ex = [m.NewBoolVar(f'e{i}') for i in range(n)]      # syndrome points outside supp x
+        for i in range(n):
+            m.AddBoolAnd([p[i], x[i].Not()]).OnlyEnforceIf(ex[i]); m.AddBoolOr([p[i].Not(), x[i]]).OnlyEnforceIf(ex[i].Not())
+        m.Add(sum(ex) + sum(x) <= R)
     m.Add(x[0] == 1)
     if case == 'a':
         m.Add(x[nb0[0]] == 1)
@@ -34,4 +40,4 @@ for case in ('a', 'b'):
     res[case] = rec
     print(q, R, case, rec, flush=True)
 json.dump(dict(q=q, R=R, cases=res, no_region_le_R=all(c['status'] == 'INFEASIBLE' for c in res.values()) and R < 1 + q * (q + 1)),
-          open(f'deficit_cpsat_q{q}_R{R}.json', 'w'), indent=1)
+          open(f'deficit_cpsat_q{q}_R{R}' + ('_cuts' if len(sys.argv) > 4 else '') + '.json', 'w'), indent=1)

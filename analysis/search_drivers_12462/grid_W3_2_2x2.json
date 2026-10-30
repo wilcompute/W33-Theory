@@ -1,0 +1,14 @@
+{
+ "polar": "W(3,2)",
+ "points": 15,
+ "grid": "2x2",
+ "status": "OPTIMAL",
+ "seconds": 0.2,
+ "verified_induced": true,
+ "embedding": [
+  0,
+  2,
+  7,
+  11
+ ]
+}

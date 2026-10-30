@@ -1,0 +1,20 @@
+{
+ "model": "Z6II_06_SM_20260917_2541_c290",
+ "singlets": 42,
+ "n_u1": 9,
+ "qT_norm": 104.15373253033229,
+ "support": 42,
+ "support_opposite_FI_sign": 42,
+ "all_singlets": {
+  "fractional": 104,
+  "dirac": 102,
+  "majorana": 2,
+  "liftable": 104
+ },
+ "dflat_support": {
+  "fractional": 104,
+  "dirac": 102,
+  "majorana": 2,
+  "liftable": 104
+ }
+}
