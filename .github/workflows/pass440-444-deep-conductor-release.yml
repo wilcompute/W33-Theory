@@ -21,7 +21,7 @@ on:
       - 'data/w33_pass444_hjelmslev_conductor_geometry.json'
       - 'formal/**'
       - 'tests/test_pass440_444_deep_conductor_release.py'
-      - 'PASS440_444_DEEP_CONDUCTOR_RELEASE.md'
+      - 'analysis/PASS440_444_DEEP_CONDUCTOR_RELEASE.md'
       - '.github/workflows/pass440-444-deep-conductor-release.yml'
   pull_request:
     branches: [master]

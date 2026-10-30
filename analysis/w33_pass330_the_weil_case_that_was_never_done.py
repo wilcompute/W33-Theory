@@ -19,7 +19,7 @@ teach says: search the corpus first. Doing that changes the question completely.
 
 === WHAT THE SEARCH FOUND ===
 
-PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md -- the other track,
+analysis/PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md -- the other track,
 GAP-verified, "complete", committed before this arc -- already builds the
 characteristic-two Weil machinery for the shadow, at EXACTLY Pass 225's degree:
 
@@ -134,7 +134,7 @@ import sympy as sp
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "w33_pass330_the_weil_case_that_was_never_done.json"
-SYN = ROOT / "PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md"
+SYN = ROOT / "analysis/PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md"
 
 
 def main():

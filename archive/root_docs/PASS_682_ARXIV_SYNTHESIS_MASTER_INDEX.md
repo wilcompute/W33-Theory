@@ -13,7 +13,7 @@ All 5 non-sequential next steps from the July 24 analysis have been executed and
 | 679 | `PASS_679_DEFORMATION_BURNSIDE_TOWER_EXTENSION.py` | Execute Pass 677 + full tower theorem | ✓ COMPLETE |
 | 680 | `PASS_680_RH_FROBENIUS_WEIL_OPERATOR.py` | RH Frobenius census to Weil explicit formula | ✓ COMPLETE |
 | 681 | `PASS_681_BELL_INEQUALITY_FALSIFICATION.py` | Bell-inequality falsification upgrade for publication | ✓ COMPLETE |
-| 682 | `PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md` | Unified arXiv preprint synthesis | ✓ COMPLETE |
+| 682 | `analysis/PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md` | Unified arXiv preprint synthesis | ✓ COMPLETE |
 
 ## Key Results
 

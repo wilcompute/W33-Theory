@@ -17,7 +17,7 @@
 1. Ensure Zenodo GitHub integration is enabled at https://zenodo.org/account/settings/github/
 2. Flip the W33-Theory repo switch to ON
 3. Create GitHub release `v1.0.0` → Zenodo automatically archives and assigns DOI
-4. Insert DOI into `ARXIV_COVER_LETTER.md` Comments field
+4. Insert DOI into `analysis/ARXIV_COVER_LETTER.md` Comments field
 
 ## DOI Format
 Will be: `10.5281/zenodo.XXXXXXX`

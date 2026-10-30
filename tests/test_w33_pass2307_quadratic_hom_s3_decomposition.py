@@ -92,7 +92,7 @@ def test_s3_decomposition_explains_both_splits(
 
 
 def test_publication_surfaces_name_the_s3_theorem() -> None:
-    report = (ROOT / "PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md").read_text(
+    report = (ROOT / "analysis/PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md").read_text(
         encoding="utf-8"
     )
     readme = (ROOT / "README.md").read_text(encoding="utf-8")

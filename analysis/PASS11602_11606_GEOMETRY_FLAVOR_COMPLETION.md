@@ -346,7 +346,7 @@ and R K has linear part S R S^T. An independent random complex-basis test
 checks these statements rather than reusing naive component conjugation.
 
 The corpus guard also flagged`hesse+levi`. Its four named candidate owners
-were read completely: [1087–1091](../PASS1087_1091_FIVE_STREAM_RELEASE.md),
+were read completely: [1087–1091](PASS1087_1091_FIVE_STREAM_RELEASE.md),
 [BT1720–1723](BT1720_BT1723_repo_mining_execution.md),
 [BT1741–1744](BT1741_BT1744_execution_summary.md), and
 [10949](PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE.md).

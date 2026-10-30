@@ -6,7 +6,7 @@ from pathlib import Path
 
 ERRATUM={
  "id":"ERR-1158-RESIDUAL","date":"2026-07-27",
- "file":"PASS1158_1162_BREAKTHROUGH_RELEASE.md",
+ "file":"analysis/PASS1158_1162_BREAKTHROUGH_RELEASE.md",
  "object_type":"W(E6)-module, not orbit",
  "corrected_claim":"The exact 1952-dimensional W(E6)-submodule is obtained from the Pass-1135 kernel decomposition after removing the multiplicity-three 81_minus isotypic block.",
  "tags_now_present":{

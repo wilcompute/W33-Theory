@@ -5,7 +5,7 @@ Spin links, EFT potentials, regulator, field retention and scales are inputs.
 
 Corpus guard's hesse+levi candidate concerns separate prior finite Levi/graph
 and Hesse/exceptional geometry; here the connection is Levi-Civita. Owners read:
-PASS1087_1091_FIVE_STREAM_RELEASE.md;
+analysis/PASS1087_1091_FIVE_STREAM_RELEASE.md;
 analysis/BT1720_BT1723_repo_mining_execution.md;
 analysis/BT1741_BT1744_execution_summary.md;
 analysis/PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE.md.

@@ -112,7 +112,7 @@ def test_pass375_cuts_the_phase_normalizer_and_excludes_a_split_complement() -> 
 
 def test_pass375_synthesis_preserves_object_ownership_boundaries() -> None:
     synthesis = (
-        ROOT / "PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md"
+        ROOT / "analysis/PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md"
     ).read_text(encoding="utf-8")
 
     for owner in ("BT571", "BT637", "BT644", "BT1480", "BT783", "Pass 214"):
@@ -140,4 +140,4 @@ def test_pass375_is_published_on_all_requested_surfaces() -> None:
         assert "regular" in surface.lower(), name
 
     index = (ROOT / "RESULTS_INDEX.md").read_text(encoding="utf-8")
-    assert "| `207360` | `PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md` |" in index
+    assert "| `207360` | `analysis/PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md` |" in index

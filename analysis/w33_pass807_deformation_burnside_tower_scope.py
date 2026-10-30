@@ -2,7 +2,7 @@
 """Pass 807: the Deformation-Burnside tower is a counting identity, not a
 deformation theorem -- separating what is proved from a synthesis over-read.
 
-The arXiv synthesis draft PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md states, as
+The arXiv synthesis draft analysis/PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md states, as
 its Theorem B/C, that "the real flat-block eigenlattice over Z[zeta_{q^n}] has
 q-primary rank exactly (q^{2n}-1)/2 for all odd primes q and all n >= 1",
 citing Passes 676-677 and asserting a proof in Passes 678/679.  Two facts make

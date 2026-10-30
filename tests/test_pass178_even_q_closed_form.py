@@ -7,7 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis" / "w33_pass178_even_q_closed_form.py"
 DATA = ROOT / "data" / "w33_pass178_even_q_closed_form.json"
-NOTE = ROOT / "PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md"
+NOTE = ROOT / "analysis/PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md"
 
 
 def test_pass178_theorem_backed_witness_runs():

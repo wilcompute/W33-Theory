@@ -58,7 +58,7 @@ The ownership details matter:
   half-spins are standard inputs, not repo novelty.
 - Pass 211 owns the finite $\operatorname{PGSp}(4,3)$ outer controller; Pass 333 builds
   its missing integral action on the Pass-332 lattice family.
-- Pass 332 (`PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md`) owns the three
+- Pass 332 (`analysis/PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md`) owns the three
   index-two stable leaves and their simultaneous intertwiners to the incidence
   $H_{10}$.
 - Kirschmer's classification of finite symplectic matrix groups already gives

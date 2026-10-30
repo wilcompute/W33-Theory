@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis" / "w33_pass1137_lossless_complement_a5_shadow.g"
 CERT_PATH = ROOT / "data" / "w33_pass1137_lossless_complement_a5_shadow.json"
-NOTE_PATH = ROOT / "PASS1137_LOSSLESS_COMPLEMENT_A5_SHADOW.md"
+NOTE_PATH = ROOT / "analysis/PASS1137_LOSSLESS_COMPLEMENT_A5_SHADOW.md"
 
 
 @lru_cache(maxsize=1)

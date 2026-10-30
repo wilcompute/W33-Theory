@@ -2,7 +2,7 @@
 
 **Status:** null result, prepared for submission in place of the withdrawn
 "CKM Full Matrix" claim.
-**Supersedes:** `BREAKTHROUGH_PASS882_CKM_FULL_MATRIX.md`
+**Supersedes:** `analysis/BREAKTHROUGH_PASS882_CKM_FULL_MATRIX.md`
 **Certificates:** `data/w33_pass981_arxiv_batch_intake_audit.json`
 
 ---

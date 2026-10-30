@@ -35,11 +35,11 @@ Veronese tetrahedra and11074 Levi chart tetrahedra are different objects.
 No blanket external novelty or priority claim is made.
 
 The intake guard's additional broad compound candidates were read fully:
-`PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md`,
+`analysis/PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md`,
 `analysis/PASS10954_REGULAR_C8_CLOCK_COMPLETION.md`,
-`PASS2300_2305_FIVE_FRONTIERS_RELEASE.md`,
+`analysis/PASS2300_2305_FIVE_FRONTIERS_RELEASE.md`,
 `analysis/BT2300_BT2305_five_frontiers.md`,
-`PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md` and
+`analysis/PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md` and
 `analysis/BT1741_BT1744_execution_summary.md`. They own, respectively,
 spread/ovoid and Weil-shadow maps, oriented C8 completion, higher-q Weil
 inversion, the 80-carrier obstruction and atlas allocation. Those results

@@ -81,7 +81,7 @@ def test_same_syntactic_word_changes_dynamical_type(pass2306: tuple[str, dict]) 
 
 
 def test_publication_surfaces_state_the_boundary() -> None:
-    report = (ROOT / "PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md").read_text(
+    report = (ROOT / "analysis/PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md").read_text(
         encoding="utf-8"
     )
     readme = (ROOT / "README.md").read_text(encoding="utf-8")

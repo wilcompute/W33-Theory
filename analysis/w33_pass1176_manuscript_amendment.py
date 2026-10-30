@@ -16,7 +16,7 @@ The exact Pass-1135 residual after removing the three 81-minus copies is
 of dimension 1952 and commutant dimension 1109. The cubic image is exactly `1+20+24`. No D5-adjoint or pending-MeatAxe claim is needed.
 """
 def main():
-    path=Path('PASS1158_1162_BREAKTHROUGH_RELEASE_AMENDED_SECTION.md');path.write_text(AMENDED_SECTION_MD)
+    path=Path('analysis/PASS1158_1162_BREAKTHROUGH_RELEASE_AMENDED_SECTION.md');path.write_text(AMENDED_SECTION_MD)
     result={'schema':'w33.pass1176.manuscript_amendment.v2','status':'PASS','all_tags_present':True,
       'tags_verified':{'acting_group':True,'stabilizer_label_or_order':True,'color_retained_or_forgotten':True},
       'exact_residual_dimension':1952,'exact_residual_commutant':1109,'amended_section_file':str(path)}

@@ -17,7 +17,7 @@ on:
       - 'formal/W33/Pass575CyclotomicDVRKernel.lean'
       - 'formal/W33.lean'
       - 'tests/test_w33_pass573_577_*.py'
-      - 'PASS573_577_C3_600CELL_SCHEME_DVR_IDEMPOTENT_DP_RELEASE.md'
+      - 'analysis/PASS573_577_C3_600CELL_SCHEME_DVR_IDEMPOTENT_DP_RELEASE.md'
       - '.github/workflows/pass573_577_exact.yml'
   workflow_dispatch:
 permissions:

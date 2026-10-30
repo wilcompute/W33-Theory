@@ -87,7 +87,7 @@ def test_docs_index_exposes_qec_ouroboros_bridge():
     text = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     assert "The snake eats its tail" in text
     assert "QEC Ouroboros Stabilizer Loop" in text
-    assert "PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md" in text
+    assert "analysis/PART_CCCCXVII_QEC_OUROBOROS_STABILIZER_LOOP.md" in text
     assert "QEC feedback loop on the" in text
     assert "[[240,81,3]]" in text
     assert "<code>240</code>-edge complex" in text

@@ -12,7 +12,7 @@ An independent local prototype with the same five mathematical targets passed fi
 
 ## Repository intake, conducted separately for each track
 
-1. E8–Hecke: PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md; analysis/w33_theta_E8_eisenstein_E4.py; analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md. Existing: actual 40 Eisenstein six-root fibers and classical Theta(E8)=E4.
+1. E8–Hecke: analysis/PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md; analysis/w33_theta_E8_eisenstein_E4.py; analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md. Existing: actual 40 Eisenstein six-root fibers and classical Theta(E8)=E4.
 2. Levi/Frobenius: analysis/w33_pass4956_point_line_24d_intertwiner.py; analysis/w33_20261021_levi_genus2_frobenius.py; analysis/2026-10-21_levi_genus2_local_frobenius_bridge.md. Existing: a point-line incidence intertwiner and a local prime-3 genus-two/elliptic factorization.
 3. Weil: analysis/w33_weil_cocycle_positivity.py; docs/RH_CASEY_W33_NEXT5_SYNTHESIS.md; analysis/RH_INVARIANT_TANGENT_AUDIT.md. Existing: local positive reflection cocycle, not the full Weil functional.
 4. Artin–Ihara: analysis/PASS4447_ZETA_AND_SIGNING_ARE_ONE_SUBJECT.md; analysis/w33_pass4461_line_signing_apartment_trace.py; analysis/w33_pass4409_4410_signings_and_larger_graphs.py. Existing: signed graph L-functions and the exact 1620 Levi apartments.

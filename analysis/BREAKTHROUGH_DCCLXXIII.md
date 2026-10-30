@@ -192,7 +192,7 @@ and the modular geometry is the gap-ladder primitive λ=2.
 ## Files Added
 - `analysis/w33_motive_lfunction.py`
 - `analysis/w33_f6_hadamard_forcing.py`
-- `BREAKTHROUGH_DCCLXXIII.md`
+- `analysis/BREAKTHROUGH_DCCLXXIII.md`
 
 ---
 

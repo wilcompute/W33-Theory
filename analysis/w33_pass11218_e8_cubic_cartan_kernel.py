@@ -212,7 +212,7 @@ def main(write: bool = True):
             "compatible_with_prior_no_go": True,
         },
         "prior_corpus_checked": [
-            "PASS1020_E8_TRANSITIVE_51840.md",
+            "analysis/PASS1020_E8_TRANSITIVE_51840.md",
             "analysis/w33_eisenstein_forcing.py",
             "analysis/w33_eisenstein_grand_synthesis.py",
             "analysis/w33_pass1047_eisenstein_parabolic_ladder.g",

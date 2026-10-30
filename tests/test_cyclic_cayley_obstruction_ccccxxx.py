@@ -84,7 +84,7 @@ def test_result_artifact_is_present_and_current():
 def test_docs_index_exposes_cyclic_obstruction():
     text = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     assert "Cyclic Cayley Obstruction and Photonic Ouroboros Guard" in text
-    assert "PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md" in text
+    assert "analysis/PART_CCCCXXX_CYCLIC_CAYLEY_OBSTRUCTION.md" in text
     assert "C(19,6)=27132" in text
     assert "zero cyclic <code>Z40</code> hits" in text
     assert "480-state Hashimoto/fusion carrier" in text

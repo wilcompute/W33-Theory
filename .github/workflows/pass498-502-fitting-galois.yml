@@ -25,7 +25,7 @@ on:
       - 'formal/W33.lean'
       - 'tests/test_w33_pass498_502_fitting_galois_release.py'
       - 'papers/fitting_galois_depth_note.tex'
-      - 'PASS498_502_FITTING_GALOIS_RELEASE.md'
+      - 'analysis/PASS498_502_FITTING_GALOIS_RELEASE.md'
       - '.github/workflows/pass498-502-fitting-galois.yml'
   pull_request:
     branches: [master]

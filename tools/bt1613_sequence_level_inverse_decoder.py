@@ -77,7 +77,7 @@ def main() -> None:
         'source_packets': {
             'decoder_fusion': 'data/bt1611_decoder_fusion.json',
             'universal_abi': 'data/bt1603_universal_computation_proof_closure.json',
-            'physical_fault_abi': 'BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md',
+            'physical_fault_abi': 'analysis/BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md',
         },
         'decoder_rule': 'detector bin gives local Fano fields; tick index gives frame; frame gives source/target; bin consistency validates the click.',
         'frame_count': FRAMES,

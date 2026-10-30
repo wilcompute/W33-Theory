@@ -64,7 +64,7 @@ def test_pass377_constructs_the_binary_q3_switch_header_clock() -> None:
 
 
 def test_pass377_public_surfaces_keep_the_header_not_intertwiner_boundary() -> None:
-    synthesis = (ROOT / "PASS377_BINARY_Q3_SWITCH_HEADER.md").read_text(
+    synthesis = (ROOT / "analysis/PASS377_BINARY_Q3_SWITCH_HEADER.md").read_text(
         encoding="utf-8"
     )
     for surface in (

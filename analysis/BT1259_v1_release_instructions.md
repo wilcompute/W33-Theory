@@ -7,7 +7,7 @@
 - [x] `.zenodo.json` deployed
 - [x] `paper/sections/` stubs in place for clean LaTeX build
 - [x] `tests/test_bijection_solver_v3.py` pytest suite (9 tests)
-- [x] `ARXIV_COVER_LETTER.md` drafted
+- [x] `analysis/ARXIV_COVER_LETTER.md` drafted
 - [ ] **paper-build CI passes** (trigger: this commit pushes to `paper/**`)
 - [ ] **bijection-tests CI passes** (already passing — pure Python, no deps)
 
@@ -31,7 +31,7 @@ gh release create v1.0.0 \
 1. `release_to_zenodo.yml` fires → Zenodo archives the repo → DOI assigned
 2. `zenodo_sync.yml` fires → metadata synced
 3. DOI appears at https://zenodo.org/doi/10.5281/zenodo.XXXXXXX within ~5 minutes
-4. Insert DOI into `ARXIV_COVER_LETTER.md` and submit to arXiv
+4. Insert DOI into `analysis/ARXIV_COVER_LETTER.md` and submit to arXiv
 
 ## Timeline
 - Gate: paper-build CI ≈ 8-12 minutes to complete

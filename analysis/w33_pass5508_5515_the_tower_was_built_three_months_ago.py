@@ -2,7 +2,7 @@
 thread rebuilt, it carries one arithmetic error, and the 96/576 gap has a reason.
 
   5508  Searching the WHOLE repository rather than analysis/ and data/ finds
-        BREAKTHROUGH_DCCLXXXIV.md at the top level, dated 2026-05-22, with the five-level
+        analysis/BREAKTHROUGH_DCCLXXXIV.md at the top level, dated 2026-05-22, with the five-level
         tower Q4 -> tomotope/Reye -> F4 -> 24-cell -> K12 already assembled.
 
   5509  It states |Roots(F4)| = 96.  F4 has 48 roots.  96 is the 24-cell's edge count.
@@ -92,12 +92,12 @@ def main() -> int:
     print("=" * 78)
 
     print("\n  PASS 5508 -- what a whole-repository search finds\n")
-    p = ROOT / "BREAKTHROUGH_DCCLXXXIV.md"
+    p = ROOT / "analysis/BREAKTHROUGH_DCCLXXXIV.md"
     exists = p.is_file()
     date = subprocess.run(["git", "log", "--diff-filter=A", "--format=%ad",
                            "--date=short", "-1", "--", str(p.name)],
                           cwd=ROOT, capture_output=True, text=True).stdout.strip()
-    print(f"    BREAKTHROUGH_DCCLXXXIV.md at the TOP LEVEL : {exists}")
+    print(f"    analysis/BREAKTHROUGH_DCCLXXXIV.md at the TOP LEVEL : {exists}")
     print(f"    added                                      : {date}")
     print("""
     IT CONTAINS THE TOWER ALREADY:
@@ -186,7 +186,7 @@ def main() -> int:
                      "tomotope's polytope automorphism group and is not recomputed here. "
                      "Pass 5511 NARROWS an earlier claim of this lane rather than extending "
                      "it"),
-        "pass_5508": {"file": "BREAKTHROUGH_DCCLXXXIV.md", "location": "repository root",
+        "pass_5508": {"file": "analysis/BREAKTHROUGH_DCCLXXXIV.md", "location": "repository root",
                       "added": date,
                       "contains": ["Q4 router faces 24", "tomotope/Reye |Aut| 96, 48 inc",
                                    "F4", "24-cell |Aut| 1152", "K12 horizon genus 6"],

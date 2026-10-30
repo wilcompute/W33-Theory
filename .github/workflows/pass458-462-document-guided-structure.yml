@@ -22,7 +22,7 @@ on:
       - 'data/w33_pass462_formal_cover_l1_audit.json'
       - 'formal/**'
       - 'tests/test_pass458_462_document_guided_structure_release.py'
-      - 'PASS458_462_DOCUMENT_GUIDED_STRUCTURE_RELEASE.md'
+      - 'analysis/PASS458_462_DOCUMENT_GUIDED_STRUCTURE_RELEASE.md'
       - '.github/workflows/pass458-462-document-guided-structure.yml'
   pull_request:
     branches: [master]

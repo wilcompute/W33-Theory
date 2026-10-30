@@ -86,8 +86,8 @@ This ties the fermion mixing scale Φ₃ = 13 to the W33 spectral zeta residue.
 - `analysis/w33_einstein_field_equations_from_spectral_action.py`
 - `analysis/bt981_e8_invariant_quadratic_form.py`
 - `analysis/w33_tetracode_e8_root_system_bridge.py`
-- `PASS5880_5887_EQUALIZED_Q_HASHIMOTO_IHARA_ZETA.md` (this session)
-- `PASS5888_5897_EXPERIMENTAL_FALSIFIER_AND_DELTA_C.md` (this session)
+- `analysis/PASS5880_5887_EQUALIZED_Q_HASHIMOTO_IHARA_ZETA.md` (this session)
+- `analysis/PASS5888_5897_EXPERIMENTAL_FALSIFIER_AND_DELTA_C.md` (this session)
 
 ---
 

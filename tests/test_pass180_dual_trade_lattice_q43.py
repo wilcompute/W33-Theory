@@ -7,7 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis" / "w33_pass180_dual_trade_lattice_q43.py"
 DATA = ROOT / "data" / "w33_pass180_dual_trade_lattice_q43.json"
-NOTE = ROOT / "PASS180_Q43_DUAL_TRADE_REGULARITY_BOUNDARY.md"
+NOTE = ROOT / "analysis/PASS180_Q43_DUAL_TRADE_REGULARITY_BOUNDARY.md"
 
 
 def test_pass180_corrected_witness_runs():

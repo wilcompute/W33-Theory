@@ -1,7 +1,7 @@
 # All 5 Next Steps — Exact Execution Summary
 
 **Date:** 2026-07-27  
-**Canonical release:** `PASS1132_1136_EXACT_EXECUTION_RELEASE.md`  
+**Canonical release:** `analysis/PASS1132_1136_EXACT_EXECUTION_RELEASE.md`  
 **Foundation:** `spec(D=A-I)=11^1+1^24+(-5)^15`
 
 The earlier version of this file described plans as completed work and, in Step 3,

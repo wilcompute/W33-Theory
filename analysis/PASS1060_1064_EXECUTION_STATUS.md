@@ -33,7 +33,7 @@ certificate rather than a detached proposal file.
 
 ## Authoritative artifacts
 
-* `PASS1060_1064_FIVE_STREAM_RELEASE.md`
+* `analysis/PASS1060_1064_FIVE_STREAM_RELEASE.md`
 * `data/w33_pass1060_1064_release.json`
 * `.github/workflows/pass1060_1064_exact.yml`
 * `tests/test_w33_pass1060_1064.py`

@@ -40,7 +40,7 @@ def main() -> None:
         'source_packets': {
             'bt1602': 'data/bt1602_fano_witting_detector_bin_synthesis.json',
             'bt1603': 'data/bt1603_universal_computation_proof_closure.json',
-            'roadmap': 'BREAKTHROUGH_PERPLEXITY_SESSION_JUN23.md',
+            'roadmap': 'analysis/BREAKTHROUGH_PERPLEXITY_SESSION_JUN23.md',
         },
         'frames': FRAMES,
         'active_detector_bins': BINS,

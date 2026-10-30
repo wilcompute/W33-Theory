@@ -9,9 +9,9 @@ the known narrative patterns from the release notes and pass files.
 
 This produces a static audit of the KNOWN 432-carrier claims in the
 four key manuscript-level files:
-  1. PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md
-  2. PASS1153_1157_CONTINUATION_RELEASE.md
-  3. PASS1158_1162_BREAKTHROUGH_RELEASE.md
+  1. analysis/PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md
+  2. analysis/PASS1153_1157_CONTINUATION_RELEASE.md
+  3. analysis/PASS1158_1162_BREAKTHROUGH_RELEASE.md
   4. data/w33_pass_namespace_registry_v2.json
 
 For each, it classifies the known 432 claims using the Pass 1157 rule:
@@ -25,7 +25,7 @@ from datetime import datetime
 
 KNOWN_CLAIMS = [
     {
-        'file': 'PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md',
+        'file': 'analysis/PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md',
         'section': 'Pass 1148 Hecke filtration',
         'claim': '432-carrier W(E6)/S5 with subdegrees summing to 432',
         'acting_group': 'W(E6)',
@@ -34,7 +34,7 @@ KNOWN_CLAIMS = [
         'classification': 'TYPED',
     },
     {
-        'file': 'PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md',
+        'file': 'analysis/PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md',
         'section': 'Pass 1149 Fourier Steinberg bridge',
         'claim': '243-dim packet = 81 tensor C[C3] over 432 carrier',
         'acting_group': 'W(E6)',
@@ -43,7 +43,7 @@ KNOWN_CLAIMS = [
         'classification': 'TYPED',
     },
     {
-        'file': 'PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md',
+        'file': 'analysis/PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md',
         'section': 'Pass 1152 crossed C3 commutant',
         'claim': 'End_{W(E6)xC3}(C[Omega_432 x C3]) dim 78',
         'acting_group': 'W(E6) x C3',
@@ -52,7 +52,7 @@ KNOWN_CLAIMS = [
         'classification': 'TYPED',
     },
     {
-        'file': 'PASS1153_1157_CONTINUATION_RELEASE.md',
+        'file': 'analysis/PASS1153_1157_CONTINUATION_RELEASE.md',
         'section': 'Pass 1156 carrier reconciliation',
         'claim': 'W(E6) 432-carrier vs Sp(4,3) 432-orbit',
         'acting_group': 'W(E6) AND Sp(4,3) (distinguished)',
@@ -61,7 +61,7 @@ KNOWN_CLAIMS = [
         'classification': 'TYPED',
     },
     {
-        'file': 'PASS1158_1162_BREAKTHROUGH_RELEASE.md',
+        'file': 'analysis/PASS1158_1162_BREAKTHROUGH_RELEASE.md',
         'section': 'Pass 1158 residual',
         'claim': '1952-dim cubic kernel residual after removing Steinberg packet',
         'acting_group': 'W(E6) (implicit)',
@@ -71,7 +71,7 @@ KNOWN_CLAIMS = [
         'note': 'Residual is not itself an orbit claim; needs clarification of which group acts on the residual.',
     },
     {
-        'file': 'PASS1158_1162_BREAKTHROUGH_RELEASE.md',
+        'file': 'analysis/PASS1158_1162_BREAKTHROUGH_RELEASE.md',
         'section': 'Pass 1160 W(E6) character bridge intro',
         'claim': 'W(E6) acting on 40-dimensional point carrier',
         'acting_group': 'W(E6)',

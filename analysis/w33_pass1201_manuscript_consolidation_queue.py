@@ -22,9 +22,9 @@ def main():
             'Replace provisional D5 image language with canonical working split 30+15 memo language'
         ],
         'target_files': [
-            'PASS1158_1162_BREAKTHROUGH_RELEASE.md',
-            'PASS1168_1172_EXECUTION_RELEASE.md',
-            'PASS1193_1197_EXACT_EQUIVARIANT_RELEASE.md'
+            'analysis/PASS1158_1162_BREAKTHROUGH_RELEASE.md',
+            'analysis/PASS1168_1172_EXECUTION_RELEASE.md',
+            'analysis/PASS1193_1197_EXACT_EQUIVARIANT_RELEASE.md'
         ],
         'goal': 'Bring manuscript-facing narrative into alignment with the exact-correction and exact-bridge layers.'
     }

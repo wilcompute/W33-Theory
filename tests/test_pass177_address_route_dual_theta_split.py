@@ -7,7 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis" / "w33_pass177_address_route_dual_theta_split.py"
 DATA = ROOT / "data" / "w33_pass177_address_route_dual_theta_split.json"
-NOTE = ROOT / "PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md"
+NOTE = ROOT / "analysis/PASS177_ADDRESS_ROUTE_DUAL_THETA_SPLIT.md"
 
 
 def test_pass177_witness_runs_cleanly():

@@ -10,7 +10,7 @@ stand", and names the rank law first. This witness shows the rank law was not
 ours to claim, on three independent counts, each machine-checked below.
 
 (1) EVEN q. Pass 256 presented rank_2 W(3,2^t) = Tr(B^t) + 1, B = [[4,2],[2,5]],
-    as a closed form I had found. PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md --
+    as a closed form I had found. analysis/PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md --
     committed 2026-07-10, in this repo, with a URL -- states Sastry-Sin Theorem 1:
         r_n = 1 + ((1+sqrt17)/2)^{2n} + ((1-sqrt17)/2)^{2n}.
     These are THE SAME FORMULA: ((1 +- sqrt17)/2)^2 = (9 +- sqrt17)/2 = the
@@ -152,7 +152,7 @@ def main():
             "why_identical": "((1 +- sqrt17)/2)^2 = (9 +- sqrt17)/2 = eigenvalues of B, "
                              "so Tr(B^n) = a^{2n} + b^{2n}. Verified symbolically.",
             "table": even_rows,
-            "where_it_already_was": "PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md (2026-07-10), with URL",
+            "where_it_already_was": "analysis/PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md (2026-07-10), with URL",
         },
         "count_2_odd_q": {
             "repo_boxed_and_proved": {

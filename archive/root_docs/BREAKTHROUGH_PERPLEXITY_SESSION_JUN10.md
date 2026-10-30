@@ -111,7 +111,7 @@ Yukawa ordering y₁ < y₃ ≈ y₂ forces normal hierarchy m_ν₁ < m_ν₂ <
 
 | File | Content | New Theorems |
 |------|---------|---------------|
-| `BREAKTHROUGH_DCCXCV_UMBRAL_MOONSHINE.md` | 23 Niemeier lattices × W33 | 3 |
+| `analysis/BREAKTHROUGH_DCCXCV_UMBRAL_MOONSHINE.md` | 23 Niemeier lattices × W33 | 3 |
 | `BREAKTHROUGH_DCCXCVI_AXION_MASS_WINDOW.md` | Axion f_a, m_a, E₆ identity | 3 |
 | `BREAKTHROUGH_DCCXCVII_NEUTRINO_MASS_HIERARCHY.md` | Seesaw, Δm², δ_CP, hierarchy | 4 |
 | `BREAKTHROUGH_PERPLEXITY_SESSION_JUN10.md` | This document | — |

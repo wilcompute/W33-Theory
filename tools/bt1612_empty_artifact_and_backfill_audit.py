@@ -10,7 +10,7 @@ MD = ROOT / 'analysis' / 'BT1612_empty_artifact_and_backfill_audit.md'
 TEX = ROOT / 'analysis' / 'BT1612_empty_artifact_and_backfill_audit.tex'
 
 FILES = [
-    'BREAKTHROUGH_BT1607_BT1609_ENTROPY_DUAL.md',
+    'analysis/BREAKTHROUGH_BT1607_BT1609_ENTROPY_DUAL.md',
     'BT1607_witting_entropy_budget.json',
     'BT1607_witting_entropy_budget.py',
     'BT1608_self_calibrating_feedback.json',

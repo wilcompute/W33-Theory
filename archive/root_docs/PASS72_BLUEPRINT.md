@@ -11,7 +11,7 @@ Pass 72 targets the four highest-leverage remaining gaps, selected to maximally 
 - Map to physical units via the W(3,3) lattice spacing a = 1/sqrt(k) = 1/sqrt(12)
 - Derive: mass_gap_lower = Delta * hbar * c / a in GeV units using k=12, q=3
 - Output: `w33_pass72_trackG_yang_mills_gap.json`
-- Reference: BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md
+- Reference: analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md
 
 ### Track H — CKM Matrix Full Numerical Reconstruction
 - Use the W(3,3) spread decomposition (27 spreads, 3 families of 9)

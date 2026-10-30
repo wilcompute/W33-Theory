@@ -21,7 +21,7 @@ on:
       - 'formal/W33/Pass570CyclotomicResidue.lean'
       - 'formal/W33.lean'
       - 'tests/test_w33_pass568_572_singer_hjelmslev_residue_walsh_chernoff.py'
-      - 'PASS568_572_SINGER_HJELMSLEV_RESIDUE_WALSH_CHERNOFF_RELEASE.md'
+      - 'analysis/PASS568_572_SINGER_HJELMSLEV_RESIDUE_WALSH_CHERNOFF_RELEASE.md'
       - '.github/workflows/pass568_572_exact.yml'
   workflow_dispatch:
 permissions:

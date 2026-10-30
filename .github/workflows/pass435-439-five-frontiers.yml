@@ -20,7 +20,7 @@ on:
       - 'data/w33_pass439_torsion_sensitive_photonic_fault_channel.json'
       - 'papers/heisenberg_pds_note.tex'
       - 'tests/test_pass435_439_five_frontiers.py'
-      - 'PASS435_439_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS435_439_FIVE_FRONTIERS_RELEASE.md'
       - '.github/workflows/pass435-439-five-frontiers.yml'
   pull_request:
     branches: [master]

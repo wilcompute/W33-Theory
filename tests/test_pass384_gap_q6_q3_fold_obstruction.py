@@ -184,7 +184,7 @@ def test_pass384_uses_the_live_bt1371_and_bt1407_inputs() -> None:
 
 
 def test_pass384_synthesis_keeps_the_no_go_scoped() -> None:
-    synthesis = (ROOT / "PASS384_Q6_Q3_FOLD_OBSTRUCTION.md").read_text(
+    synthesis = (ROOT / "analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md").read_text(
         encoding="utf-8"
     )
     assert "strict coordinate fold" in synthesis

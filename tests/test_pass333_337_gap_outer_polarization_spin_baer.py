@@ -144,7 +144,7 @@ def test_pass337_epsilon_and_signed_e8_are_different_baer_classes() -> None:
 
 def test_packet_is_visible_on_all_shared_theory_surfaces() -> None:
     synthesis = " ".join(
-        (ROOT / "PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md")
+        (ROOT / "analysis/PASS333_337_OUTER_POLARIZATION_SPIN_BAER_SYNTHESIS.md")
         .read_text(encoding="utf-8")
         .split()
     )

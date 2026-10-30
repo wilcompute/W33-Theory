@@ -11,7 +11,7 @@ on:
       - 'data/w33_pass231[0-4]**'
       - 'data/w33_pass2309_2314_six_frontiers.json'
       - 'tests/test_w33_pass2309_2314_six_frontiers.py'
-      - 'PASS2309_2315_RESOLUTION_HOM_SPREADS_HARDWARE_CONTROLLER_RELEASE.md'
+      - 'analysis/PASS2309_2315_RESOLUTION_HOM_SPREADS_HARDWARE_CONTROLLER_RELEASE.md'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
       - '.github/workflows/pass2309_2315_resolution_hom_spreads_hardware_controller.yml'
@@ -41,7 +41,7 @@ jobs:
         run: pytest -q tests/test_w33_pass2309_2314_six_frontiers.py
       - name: Check boundaries and manuscript hooks
         run: |
-          grep -q 'chi(H)=9 remains open' PASS2309_2315_RESOLUTION_HOM_SPREADS_HARDWARE_CONTROLLER_RELEASE.md
+          grep -q 'chi(H)=9 remains open' analysis/PASS2309_2315_RESOLUTION_HOM_SPREADS_HARDWARE_CONTROLLER_RELEASE.md
           grep -q 'not a rank-three' analysis/BT2309_2314_resolution_hom_spreads_hardware_controller.md
           grep -q '28' analysis/BT2309_2314_resolution_hom_spreads_hardware_controller.md
           grep -q 'BT2315_resolution_hom_spreads_hardware_controller_insert' w33_paper.tex

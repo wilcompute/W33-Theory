@@ -198,16 +198,16 @@ def test_pass358_360_are_published_without_the_physical_overread() -> None:
     paper = (ROOT / "w33_paper.tex").read_text(encoding="utf-8")
     website = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     synthesis = (
-        ROOT / "PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md"
+        ROOT / "analysis/PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
     gate_synthesis = (
-        ROOT / "PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md"
+        ROOT / "analysis/PASS360_ALPHA_CODE_AFFINE_CLIFFORD_PSL_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
     boundary_synthesis = (
-        ROOT / "PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md"
+        ROOT / "analysis/PASS361_ALPHA_CODE_CLIFFORD_MAXIMALITY_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
     double_shadow_synthesis = (
-        ROOT / "PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md"
+        ROOT / "analysis/PASS362_ALPHA_CODE_REAL_CLIFFORD_K44_F4_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
     index = (ROOT / "RESULTS_INDEX.md").read_text(encoding="utf-8")
 

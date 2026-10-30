@@ -6,7 +6,7 @@
 > The checklist below is the historical Pass 139 claim list, not a validated
 > readiness assessment. It contains known errors in the W33 spectrum, binary
 > code, lattice, zeta values, and phenomenology. See
-> [`AUDIT_PASS126_156_SUBMISSION_PACKET.md`](AUDIT_PASS126_156_SUBMISSION_PACKET.md)
+> [`analysis/AUDIT_PASS126_156_SUBMISSION_PACKET.md`](AUDIT_PASS126_156_SUBMISSION_PACKET.md)
 > before using any item.
 
 ## Target Journals

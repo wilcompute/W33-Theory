@@ -75,7 +75,7 @@ def test_pass379_witness_remains_pinned_to_the_live_bt1371_address_table() -> No
 
 
 def test_pass379_public_surfaces_keep_the_geometry_boundary_searchable() -> None:
-    synthesis = (ROOT / "PASS379_HEADER_Q6_GEOMETRY_BOUNDARY.md").read_text(
+    synthesis = (ROOT / "analysis/PASS379_HEADER_Q6_GEOMETRY_BOUNDARY.md").read_text(
         encoding="utf-8"
     )
     assert "960" in synthesis

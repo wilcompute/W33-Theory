@@ -12,7 +12,7 @@ supersedes the framing of any earlier pass it contradicts.*
 >
 > - **Even q**: Pass 256's `rank₂ = Tr(Bᵗ)+1` **is Sastry–Sin Theorem 1**
 >   (`((1±√17)/2)² = (9±√17)/2` = eigenvalues of *B*), already cited *in this
->   repo* at `PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md`, with a URL.
+>   repo* at `analysis/PASS178_EVEN_Q_INCIDENCE_RANK_TRANSFER.md`, with a URL.
 > - **Odd q**: Pass 238's `(q²+1)(q+2)/2` **is** the repo's own boxed and
 >   **algebraically proved** `(q(q+1)²+2)/2` in `analysis/2026-07-10_levi_next5.md`
 >   — five days earlier — which *also* boxes `rank₂A_P = q(q²+1)/2+1` (my

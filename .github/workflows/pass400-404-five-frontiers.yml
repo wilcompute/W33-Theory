@@ -17,7 +17,7 @@ on:
       - 'data/w33_pass404_photonic_voltage_compiler.json'
       - 'data/w33_pass404_photonic_voltage_schedule_q3.json'
       - 'tests/test_pass400_404_five_frontiers.py'
-      - 'PASS400_404_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS400_404_FIVE_FRONTIERS_RELEASE.md'
       - '.github/workflows/pass400-404-five-frontiers.yml'
   pull_request:
     branches: [master]

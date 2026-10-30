@@ -225,7 +225,7 @@ interface architecture;
 E8 root-hexagon allocation and channel weld. The originating quotient itself
 is credited above.
 
-`PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md` rules out equating the
+`analysis/PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md` rules out equating the
 transitive E8 eighty-carrier with the Levi point/line union; our gravity
 register does not make that identification.
 `analysis/PASS11070_11075_ORIENTED_CHAMBER_LOCAL_E8_NERVE.md` already freezes
@@ -241,7 +241,7 @@ The scope asserted here is each explicitly named extension, not novelty of
 these combinations of topic words.
 
 The final report also retrieved the `hesse+levi` advisory token. Prior
-`PASS1087_1091_FIVE_STREAM_RELEASE.md` owns dual-Hesse hyperplanes and
+`analysis/PASS1087_1091_FIVE_STREAM_RELEASE.md` owns dual-Hesse hyperplanes and
 Steinberg parity; `analysis/BT1720_BT1723_repo_mining_execution.md` owns
 Hesse/Fano chart-count bridges; and
 `analysis/PASS10949_FREUDENTHAL_QUASICONFORMAL_CLOCK_CONE.md` owns the exact

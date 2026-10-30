@@ -9,7 +9,7 @@ on:
       - 'analysis/w33_pass399_bulk_ramanujan_quantum.py'
       - 'data/w33_pass399_bulk_ramanujan_quantum.json'
       - 'tests/test_pass399_bulk_ramanujan_quantum.py'
-      - 'PASS399_BULK_RAMANUJAN_QUANTUM_RELEASE.md'
+      - 'analysis/PASS399_BULK_RAMANUJAN_QUANTUM_RELEASE.md'
       - '.github/workflows/pass399-bulk-ramanujan-quantum.yml'
   pull_request:
     branches: [master]

@@ -165,7 +165,7 @@ OUT = ROOT / "data" / "w33_pass348_every_multiplicity_is_a_torsor.json"
 GS = ROOT / "analysis" / "w33_eisenstein_grand_synthesis.py"
 P332 = ROOT / "data" / "w33_pass332_integral_halfspin_lift.json"
 P333 = ROOT / "data" / "w33_pass333_outer_s3_lift.json"
-BRIDGE = ROOT / "PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md"
+BRIDGE = ROOT / "analysis/PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md"
 
 
 def main():

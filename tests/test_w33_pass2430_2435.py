@@ -15,6 +15,6 @@ def test_five_frontier_certificates():
 def test_publication_hooks_and_boundaries():
  for f in ('w33_paper.tex','photonic_holonet.tex'):
   assert 'analysis/BT2435_five_frontiers_insert' in (ROOT/f).read_text(encoding="utf-8")
- release=(ROOT/'PASS2430_2435_FIVE_FRONTIERS_RELEASE.md').read_text(encoding="utf-8")
+ release=(ROOT/'analysis/PASS2430_2435_FIVE_FRONTIERS_RELEASE.md').read_text(encoding="utf-8")
  assert 'GLOBAL_U6_SINGLETON_UNION_BOUNDARY' in release
  assert 'chi(H)=9` remains open' in release

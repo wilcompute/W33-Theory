@@ -81,7 +81,7 @@ selection, or masses.
 
 Prior art: `w33_qpsi_matter_parity_e8_d8_bridge.json` (the `Q_psi` data);
 commit `5419c27` (`27 = 1+10+16`, `W(D5)` stabiliser); count-level `SU(4)`
-readings in `BREAKTHROUGH_DCCLXXXVII.md` and `scripts/w33_exact_sector_physics.py`.
+readings in `analysis/BREAKTHROUGH_DCCLXXXVII.md` and `scripts/w33_exact_sector_physics.py`.
 External: Faraut–Korányi; Baez, *The Octonions* (2002); Manogue–Dray–Wilson,
 JMP 63 (2022); Baez–Huerta (2010).
 

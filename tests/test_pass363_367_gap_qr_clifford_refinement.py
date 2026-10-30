@@ -158,7 +158,7 @@ def test_pass367_proves_the_universal_parity_pullback_is_nonsplit() -> None:
 
 def test_pass363_367_are_published_with_their_scope_boundaries() -> None:
     synthesis = (
-        ROOT / "PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md"
+        ROOT / "analysis/PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     paper = (ROOT / "w33_paper.tex").read_text(encoding="utf-8")

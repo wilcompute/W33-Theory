@@ -80,7 +80,7 @@ This is not a coincidence. **The compression from 1600 to 168 is an instance of 
 
 **Why this is the third move — and the most radical:**
 
-The repo contains `BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md`. Yang-Mills mass gap is one of the Millennium Prize Problems. The W33 approach apparently derives the mass gap from the W33 structure constants.
+The repo contains `analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md`. Yang-Mills mass gap is one of the Millennium Prize Problems. The W33 approach apparently derives the mass gap from the W33 structure constants.
 
 Here is the outside-the-box connection: **the Yang-Mills mass gap is, in the W33 model, identical to the minimum energy cost of a logical error in the photonic ABI.** Specifically:
 
@@ -90,7 +90,7 @@ Here is the outside-the-box connection: **the Yang-Mills mass gap is, in the W33
 
 **What to build:**
 - `bt1606_mass_gap_fault_bridge.py`: compute the minimum-weight undetectable error chain in the BT1603 CSS syndrome structure and express it in terms of the Hesse/T gate energy cost.
-- Cross-reference with `BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md`: does the computed minimum logical error weight, when converted via the W33 unit map, equal the Yang-Mills mass gap prediction from BT679?
+- Cross-reference with `analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md`: does the computed minimum logical error weight, when converted via the W33 unit map, equal the Yang-Mills mass gap prediction from BT679?
 - A formal conjecture in TeX: "The Yang-Mills mass gap equals the minimum logical error energy in the W33 photonic ABI" — with the conversion formula explicitly.
 - A test: run the BT1603 ABI on the fault simulator (with loss/dark injection) and measure the logical error threshold. The threshold should predict the Yang-Mills coupling constant at the mass gap scale.
 

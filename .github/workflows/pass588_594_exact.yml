@@ -22,7 +22,7 @@ on:
       - 'formal/W33/Pass591CyclotomicDedekindDVR.lean'
       - 'formal/W33.lean'
       - 'tests/test_w33_pass588_594_*.py'
-      - 'PASS588_594_DEEP_SYMMETRY_RELEASE.md'
+      - 'analysis/PASS588_594_DEEP_SYMMETRY_RELEASE.md'
       - '.github/workflows/pass588_594_exact.yml'
   workflow_dispatch:
 permissions:

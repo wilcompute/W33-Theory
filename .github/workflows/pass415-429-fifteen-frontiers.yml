@@ -15,9 +15,9 @@ on:
       - 'tests/test_pass415_419_five_frontiers.py'
       - 'tests/test_pass420_424_five_frontiers.py'
       - 'tests/test_pass425_429_five_frontiers.py'
-      - 'PASS415_419_FIVE_FRONTIERS_RELEASE.md'
-      - 'PASS420_424_FIVE_FRONTIERS_RELEASE.md'
-      - 'PASS425_429_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS415_419_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS420_424_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS425_429_FIVE_FRONTIERS_RELEASE.md'
       - '.github/workflows/pass415-429-fifteen-frontiers.yml'
   pull_request:
     branches: [master]
@@ -164,7 +164,7 @@ jobs:
         name: Audit exact Pass 425-429 batch
         run: |
           python scripts/audit_batch.py \
-            PASS425_429_FIVE_FRONTIERS_RELEASE.md \
+            analysis/PASS425_429_FIVE_FRONTIERS_RELEASE.md \
             analysis/w33_pass425_exact_extension_smith.py \
             analysis/w33_pass426_mixed_qutrit_phase_portrait.py \
             analysis/w33_pass427_adaptive_telemetry_channel.py \

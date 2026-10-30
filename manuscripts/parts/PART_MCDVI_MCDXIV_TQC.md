@@ -131,7 +131,7 @@ with the icosahedral prime p_Ih = 11 controlling the branching.
 
 ## MCDXI: Golden Selector Violation Rate = Computational Overhead
 
-From [BREAKTHROUGH_MCL.md], the golden selector has violation rate:
+From [analysis/BREAKTHROUGH_MCL.md], the golden selector has violation rate:
 ```
 ε = 1/g = 1/g_1 = 1/21
 ```
@@ -253,7 +253,7 @@ proper framework for the non-abelian anyon braiding, because:
 | MCDVIII (braid group) | `C337a_TRIANGLE_QUDIT_MAP.md` | Triangle-qudit map |
 | MCDIX (encoding) | `C338_TENSOR_NETWORK.md` | Tensor network structure |
 | MCDX (fault distance) | `C336a_GIRTH_PROOF.md` | Girth = 6 proof |
-| MCDXI (overhead) | `BREAKTHROUGH_MCL.md` | Golden selector |
+| MCDXI (overhead) | `analysis/BREAKTHROUGH_MCL.md` | Golden selector |
 | MCDXII (Berry phase) | `PART_CCCCCXL_TOPOLOGICAL_HARMONIC_OSCILLATOR.md` | Z₃ Berry phase |
 | MCDXIII (percolation) | `PART_CLXXXI` (percolation scripts) | p_Cl threshold |
 | MCDXIV (blueprint) | `BREAKTHROUGH_UQCA_PHYSICS.md` | Universal QCA physics |

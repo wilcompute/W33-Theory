@@ -128,9 +128,9 @@ def main() -> int:
     files.""")
 
     print("\n  PASS 5585 -- DCCLXXXIV's errata\n")
-    bt = (ROOT / "BREAKTHROUGH_DCCLXXXIV.md").read_text(encoding="utf-8",
+    bt = (ROOT / "analysis/BREAKTHROUGH_DCCLXXXIV.md").read_text(encoding="utf-8",
                                                         errors="replace")
-    print(f"    errata appended to BREAKTHROUGH_DCCLXXXIV.md : "
+    print(f"    errata appended to analysis/BREAKTHROUGH_DCCLXXXIV.md : "
           f"{'ERRATA (Pass 5580)' in bt}")
     print("""
     APPENDED, NOT REWRITTEN. The two corrections are |Roots(F4)| = 48 rather than 96, and

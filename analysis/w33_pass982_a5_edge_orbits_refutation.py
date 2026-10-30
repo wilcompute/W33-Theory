@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pass 982: the A5 edge-orbit claim is refuted.
 
-Pass 886 (BREAKTHROUGH_PASS886_ICOSAHEDRAL_QUASICRYSTAL.md) asserts that the
+Pass 886 (analysis/BREAKTHROUGH_PASS886_ICOSAHEDRAL_QUASICRYSTAL.md) asserts that the
 icosahedral group A5, sitting inside Aut(W(3,3)), "decomposes 240 edges into
 four orbits of 60 = |A5| each".  Pass 981 audited that batch and listed this as
 the one arithmetically clean item worth pursuing on its own terms.  It does not

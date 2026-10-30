@@ -111,7 +111,7 @@ def test_result_artifact_is_present_and_current():
 def test_docs_index_exposes_photonic_harmonic_tqc_bus():
     text = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     assert "Photonic Harmonic TQC Bus" in text
-    assert "PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md" in text
+    assert "analysis/PART_CCCCXVIII_PHOTONIC_HARMONIC_TQC_BUS.md" in text
     assert "fusion denominator <code>2</code>" in text
     assert "KLM denominator <code>4</code>" in text
     assert "Heawood <code>14=2&Phi;<sub>6</sub></code>" in text

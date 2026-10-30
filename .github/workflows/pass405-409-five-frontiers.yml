@@ -18,7 +18,7 @@ on:
       - 'data/w33_pass409_*.json'
       - 'schemas/w33_pass409_preregistered_falsifier_v1.schema.json'
       - 'tests/test_pass405_409_five_frontiers.py'
-      - 'PASS405_409_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS405_409_FIVE_FRONTIERS_RELEASE.md'
       - '.github/workflows/pass405-409-five-frontiers.yml'
   pull_request:
     branches: [master]

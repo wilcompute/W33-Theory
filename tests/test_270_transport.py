@@ -143,4 +143,4 @@ def test_analysis_summary_and_serialization(tmp_path):
 
 def test_pillar_89_narrative_exists():
     repo = Path(__file__).resolve().parent.parent
-    assert (repo / "PILLAR_89.md").exists(), "narrative PILLAR_89.md should be created"
+    assert (repo / "analysis/PILLAR_89.md").exists(), "narrative analysis/PILLAR_89.md should be created"

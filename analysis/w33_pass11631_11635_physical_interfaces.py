@@ -24,7 +24,7 @@ CONTEXT_OWNERS=[
  'analysis/BT1602_fano_witting_detector_bin_synthesis.md',
  'analysis/BT1697_holonet_typed_packet_abi.md',
  'analysis/BT1893_BT1895_summary.md',
- 'PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md',
+ 'analysis/PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md',
  'W33_FOR_EVERYONE.tex',
  'analysis/BT1741_BT1744_execution_summary.md',
  'analysis/PASS11070_11075_ORIENTED_CHAMBER_LOCAL_E8_NERVE.md',

@@ -1,6 +1,6 @@
 {
   "schema": "w33.pass191.double_six_subdegrees.v3",
-  "status": "PASS",
+  "status": "FAIL",
   "theorem": {
     "carrier": "axes x double-sixes, 120 x 36 = 4320",
     "product_orbit_sizes": [
@@ -21,14 +21,7 @@
     "native_completion_fibre": "the distinguished 3-suborbit is S3/C2; the axis stabilizer 216 acts through full S3 with kernel 36",
     "reading": "the 4320-element product has the controller's cardinality but not a transitive orbit structure: it splits as 120*(3+6+27).  The three special double-sixes over each axis do provide a native degree-three S3 fibre, but over 120 axes rather than over 4320 ordered paths"
   },
-  "controller_alignment": {
-    "verified": true,
-    "ordered_paths": 4320,
-    "completions_per_path": 3,
-    "completion_incidences": 12960,
-    "seed_action_size": 6,
-    "runtime_slots": 51840
-  },
+  "controller_alignment": {},
   "checks": {
     "group_order": true,
     "axes_120": true,
@@ -42,6 +35,6 @@
     "special_three_action_is_full_S3": true,
     "special_three_action_kernel_36": true,
     "pair_stabilizer_orders_are_72_36_8": true,
-    "controller_arithmetic_exact": true
+    "controller_arithmetic_exact": false
   }
 }

@@ -19,16 +19,16 @@ most rediscovery.
 | Search words and aliases | Canonical object/result | Start here | Do not confuse it with |
 |---|---|---|---|
 | `W33`, `W(3,3)`, `40 qutrit Paulis`, `SRG(40,12,2,4)` | projective commutation graph of the 40 nonidentity two-qutrit Pauli classes; spectrum \(12^1,2^{24},(-4)^{15}\) | [Theory navigator](docs/index.html#theory), [master paper](w33_paper.tex) | a physical spacetime or particle model |
-| `81 homology`, `H1 carrier`, `qutrit CSS` | clique-complex \(H_1\cong\mathbb Z^{81}\) and the certified \([[240,81,3]]_3\) sector | [Passes 373–374](PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) | the distinct \(81_-\) Schläfli-frame module |
+| `81 homology`, `H1 carrier`, `qutrit CSS` | clique-complex \(H_1\cong\mathbb Z^{81}\) and the certified \([[240,81,3]]_3\) sector | [Passes 373–374](analysis/PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md) | the distinct \(81_-\) Schläfli-frame module |
 | `adjacency SNF`, `signed turn`, `K operator`, `four-branch gluing` | integral adjacency and directed-edge lattices, including \(\operatorname{SNF}(A)=1^{16},2^8,8^{15},24\) and \(\operatorname{spec}(K)=(-6)^{81},2^{120},4^{24},10^{15}\) | [Pass 827 witness](analysis/w33_pass827_adjacency_kbranch_meets_e8_boundary.py), [Pass 826 witness](analysis/w33_pass826_k_operator_four_branch_gluing.py) | equality of spectra or dimensions without an integral map |
-| `120 axes`, `240 roots`, `axis glue`, `E8 lift` | intrinsic \(120\)-axis map to anisotropic \(E_8/2E_8\) lines and explicit chamber-gauged lift to all 240 signed roots | [local-axis lift](PASS123_W33_AXIS_GLUE_E8_LIFT.md) | the obstructed global bijection from the 240 W33 graph edges |
-| `432`, `216 frame lines`, `Steinberg bridge`, `58|23` | directed Schläfli carrier, rank-81 integral frame, and unique nonsplit characteristic-5 extension | [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md), [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md) | the 26-dimensional Hecke algebra or a physical generation |
-| `H26`, `26-dimensional Hecke algebra`, `modular radical`, `Loewy` | literal \(S_5\)-coset Hecke algebra with exact \(p=2,3,5\) radical and block profiles | [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) | the literal \(81\)-dimensional frame module, the ambient group Brauer block, or the 83-dimensional selector orbital algebra |
+| `120 axes`, `240 roots`, `axis glue`, `E8 lift` | intrinsic \(120\)-axis map to anisotropic \(E_8/2E_8\) lines and explicit chamber-gauged lift to all 240 signed roots | [local-axis lift](analysis/PASS123_W33_AXIS_GLUE_E8_LIFT.md) | the obstructed global bijection from the 240 W33 graph edges |
+| `432`, `216 frame lines`, `Steinberg bridge`, `58|23` | directed Schläfli carrier, rank-81 integral frame, and unique nonsplit characteristic-5 extension | [Pass 1147](analysis/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md), [Pass 1335](analysis/PASS1335_BRAUER_TREE_HECKE_CORNER.md) | the 26-dimensional Hecke algebra or a physical generation |
+| `H26`, `26-dimensional Hecke algebra`, `modular radical`, `Loewy` | literal \(S_5\)-coset Hecke algebra with exact \(p=2,3,5\) radical and block profiles | [Passes 1330–1334](analysis/PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md) | the literal \(81\)-dimensional frame module, the ambient group Brauer block, or the 83-dimensional selector orbital algebra |
 | `83 units`, `selector orbital algebra`, `End_H(Q^120)` | 120-selector action with 83 orbitals and rational Wedderburn algebra \(\mathbb Q^7\oplus M_2(\mathbb Q)^2\oplus M_3(\mathbb Q)^3\oplus M_4(\mathbb Q)\oplus M_5(\mathbb Q)\) | [Passes 1355–1384](analysis/BT1355_BT1359_selector_matching_scheme.md) | `H26`; the number 83 belongs to a different algebra |
-| `all-q spread graph`, `regular spread SRG`, `elliptic sections` | for every odd prime power, the regular-spread \(q+1\) relation is an explicit SRG with nontrivial eigenvalues \(q(q-2),-q\) | [Passes 2200–2206](PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md) | arbitrary non-Desarguesian spreads; the q=27 Ree–Tits control is nonregular |
+| `all-q spread graph`, `regular spread SRG`, `elliptic sections` | for every odd prime power, the regular-spread \(q+1\) relation is an explicit SRG with nontrivial eigenvalues \(q(q-2),-q\) | [Passes 2200–2206](analysis/PASS2200_2206_ALL_Q_SPREADS_NONREGULAR_CONTROLLER_RTL_RELEASE.md) | arbitrary non-Desarguesian spreads; the q=27 Ree–Tits control is nonregular |
 | `q27 spectrum`, `1 mod 9`, `Ree-Tits code`, `[730,5]_27` | complete hyperplane spectra and projective divisible codes for the regular, Kantor, Thas–Payne, and Ree–Tits coordinate families | [Pass 2300](analysis/w33_pass2300_ree_tits_divisible_code.py), [Pass 2304](analysis/w33_pass2304_known_q27_spread_spectra.py) | a classification of every q=27 symplectic spread; only four named families are complete here |
-| `50 quadratic maps`, `Hom bases`, `25+25`, `32+18`, `quadratic S3` | all quadratic maps from the signed-edge 90, with combined phase/outer module \(16\mathbf1\oplus16\mathrm{sgn}\oplus9\mathrm{std}\) | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py), [Pass 2307 character](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) | the Pass-2200 outer-even half, or physical coupling constants |
-| `controller 48`, `single-J 24`, `R4 U6`, `golden word`, `common inverter` | three distinct objects: abstract \((C_4\times C_6):C_2\), canonical \(C_{12}:C_2\) quotient, and overlapping \(SL_3(\mathbb Z)\) carrier | [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) | a single group in three coordinate systems, or a selected physical observable |
+| `50 quadratic maps`, `Hom bases`, `25+25`, `32+18`, `quadratic S3` | all quadratic maps from the signed-edge 90, with combined phase/outer module \(16\mathbf1\oplus16\mathrm{sgn}\oplus9\mathrm{std}\) | [Pass 2301 bases](analysis/w33_pass2301_complete_quadratic_hom_bases.py), [Pass 2307 character](analysis/PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md) | the Pass-2200 outer-even half, or physical coupling constants |
+| `controller 48`, `single-J 24`, `R4 U6`, `golden word`, `common inverter` | three distinct objects: abstract \((C_4\times C_6):C_2\), canonical \(C_{12}:C_2\) quotient, and overlapping \(SL_3(\mathbb Z)\) carrier | [Pass 2306](analysis/PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md) | a single group in three coordinate systems, or a selected physical observable |
 | `160 chambers`, `panel P/L`, `C2 Hecke`, `rank-48 chirality`, `Omega`, `shifted square -689` | the exact point/line panel algebra on incident W33 chambers, its Levi-Hashimoto factorization, and the conjugate \(24+24\) folded-cubic packet | [Passes 4324--4334](analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md) | the older adjacency `K operator`, a deterministic panel selector, a constructed \(W(G_2)\) action, or a particle spectrum |
 | `chamber M2(Q)`, `packet matrix units`, `Z/S switch`, `3840 nilpotents`, `HP/HL checksum` | literal \(M_2(\mathbb Q)\) split of the rank-48 chamber packet and chart-independent whole-family panel checksum | [Pass 4936](analysis/PASS4936_CHAMBER_PACKET_MATRIX_UNITS_AND_HOLOBOX_CHECKSUM.md) | an individual-selector intertwiner, 24 physical qubits, a unitary gate, or the earlier rank-40 Pass-4777 matrix-unit block |
 | `missing ten`, `10-trit controller`, `adjoint residual`, `dual numbers`, `59049 offsets`, `17 classes` | affine controller candidate \(\mathbb F_3^{10}\rtimes PGSp(4,3)\) after port matching, with a complete 17-orbit offset atlas | [Pass 4937](analysis/PASS4937_ADJOINT_DUAL_NUMBER_CONTROLLER.md) | the equal-order but different group \(Sp_4(\mathbb F_3[\epsilon]/\epsilon^2)\), the abelian kernel's group commutator, or an implemented HoloBox opcode |
@@ -37,10 +37,10 @@ most rediscovery.
 | `two 1440s`, `S6 x C2`, `Aut(S6)`, `151 versus 111 involutions`, `order 8` | two nonisomorphic order-1440 extensions: marked-residue \(S_6\times C_2\) versus duad–syntheme \(\operatorname{Aut}(S_6)\) | [Pass 4873](analysis/w33_pass4873_two_order1440_extensions.py) | one group in two coordinate systems; their centers have orders 2 and 1 |
 | `q5 cover 12`, `T12_165`, `zero-containment triples`, `Reye zero shell`, `T16_1034`, `23760 PSL27 placements`, `outer carrier involution`, `sign twist firewall`, `character 3 2 0` | the q=5 \(2\!-\!(13,6,60)\) multidesign intrinsically reconstructs Reye from its sixteen zero triples; the same order-576 group is odd on 12 and even on 16, has an explicit outer involution exchanging point/heavy stabilizer classes, and joins every natural \(PSL(2,7)\) \(7+1^5\) placement to \(S_{12}\); point/heavy/line permutation characters have self products 3 and pairwise products 2, while the sign-twisted point character pairs 0 with heavy and line | [Passes 5667–5674](analysis/PASS5667_5674_Q5_REYE_EQUIVARIANT_ORIENTATION.md) | the classical Reye parameters themselves, an abstract order-576 match, arbitrary \(PSL(2,7)\) representations, a canonical point/heavy-support labeling, or an identification of the sign twist with the source outer involution or line carrier |
 | `HoloBox`, `fractal microVM`, `network-as-VM`, `105025641`, `4096000000`, `2n route` | executable immutable 40-ary VM state graph with addressed mailbox/run, path-copy checkpoints, and one leaf/network loader | [runtime guide](docs/W33_FRACTAL_MICROVM_RUNTIME.md), [Python witness](analysis/w33_fractal_microvm_runtime.py), [GAP route witness](analysis/w33_fractal_microvm_routing.g) | the older count-only recursion, Witting's roadmap container design, OCI conformance, or a KVM/security boundary |
-| `Eisenstein structure`, `canonical`, `unique up to conjugacy`, `fixed-point-free order 3`, `rho = c^10`, `4A2`, `W33 leaves`, `A2^4 lines`, `1120`, `11200`, `2240`, `4480`, `155520`, `311040` | \(\rho=c^{10}\) is the fixed-point-free order-3 automorphism giving \(E_8\) its \(\mathbb Z[\omega]\)-structure; its 4480 conjugates are **2240 cyclic structures** (the "W33 leaves"), one \(W(E_8)\)-orbit since \(2240\times311040=\lvert W(E_8)\rvert\) — so \(W(3,3)\) is **canonical, not a choice**. \(C(\rho)=155520=\)ST \(G_{32}=\mathbb Z_3\times Sp(4,3)\), normaliser 311040; 1120 \(A_2\) subsystems carry 11200 \(A_2^4\) lines and a 5-class scheme (valencies \(1,120,648,270,81\)) | [Eisenstein bridge](PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md), [A2 global geometry](analysis/w33_pass7401_7408_e8_a2_global_geometry.py), [parabolic ladder](analysis/w33_pass1047_eisenstein_parabolic_ladder.g), [q=3 forcing](analysis/w33_eisenstein_forcing.py) | the leaf count 2240 counts **cyclic subgroups**, not elements (4480 = 2240\(\times\)2); \(G_{32}\neq Sp(4,3)\) — index 3, with \(\det_{\mathbb C}\) onto \(\mu_3\); and the ladder \(155520\to648\to24\) is point stabilisers, not a normal series |
+| `Eisenstein structure`, `canonical`, `unique up to conjugacy`, `fixed-point-free order 3`, `rho = c^10`, `4A2`, `W33 leaves`, `A2^4 lines`, `1120`, `11200`, `2240`, `4480`, `155520`, `311040` | \(\rho=c^{10}\) is the fixed-point-free order-3 automorphism giving \(E_8\) its \(\mathbb Z[\omega]\)-structure; its 4480 conjugates are **2240 cyclic structures** (the "W33 leaves"), one \(W(E_8)\)-orbit since \(2240\times311040=\lvert W(E_8)\rvert\) — so \(W(3,3)\) is **canonical, not a choice**. \(C(\rho)=155520=\)ST \(G_{32}=\mathbb Z_3\times Sp(4,3)\), normaliser 311040; 1120 \(A_2\) subsystems carry 11200 \(A_2^4\) lines and a 5-class scheme (valencies \(1,120,648,270,81\)) | [Eisenstein bridge](analysis/PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md), [A2 global geometry](analysis/w33_pass7401_7408_e8_a2_global_geometry.py), [parabolic ladder](analysis/w33_pass1047_eisenstein_parabolic_ladder.g), [q=3 forcing](analysis/w33_eisenstein_forcing.py) | the leaf count 2240 counts **cyclic subgroups**, not elements (4480 = 2240\(\times\)2); \(G_{32}\neq Sp(4,3)\) — index 3, with \(\det_{\mathbb C}\) onto \(\mu_3\); and the ladder \(155520\to648\to24\) is point stabilisers, not a normal series |
 | `chirality`, `orientation switch`, `antiunitary`, `det = -1`, `S+ / S-`, `Kramers`, `Frobenius-Schur`, `complex type`, `chirality character` | chirality is the **determinant character**, and it lives on the base only: \(Sp(4,3)\) is **perfect**, so \(\det\) is trivial and no orientation switch exists inside; \(\det_{\mathbb R}\) is trivial on the whole 311040 normaliser (every element is \(\mathbb C\)-linear or conjugate-linear on \(\mathbb C^4\)); \(\det_{\mathbb C}\) is onto \(\mu_3\) with kernel exactly \(Sp(4,3)\). The Weil representation splits \(W=U\oplus U^*\) with FS indicator \(0\) and character field \(\mathbb Q(\omega)\), so the substrate **is** chiral but cannot orient itself | [a reflection group cannot orient itself](analysis/A_REFLECTION_GROUP_CANNOT_ORIENT_ITSELF.md), [Pass 1029](analysis/w33_pass1029_no_orientation_switch_inside.g), [Pass 1031](analysis/w33_pass1031_complex_determinant_phase_detector.g), [Pass 1033](analysis/w33_pass1033_base_chirality_character.g), [Weil chirality theorem](analysis/2026-07-15_pass353_weil_chirality_theorem.md) | the 2-primary section obstruction — the antipodal map has \(\det=+1\), so it is a **different** \(C_2\) from the determinant chirality (Pass 1029); and hosting handedness is not explaining it |
 | `eta invariant`, `index theorem`, `Atiyah-Singer`, `spectral flow`, `McKean-Singer`, `Dirac index` | the substrate's index data: \(\operatorname{ind}(D)=\chi=-40\) with McKean–Singer supertrace \(-80\), and a finite eta/spectral-flow certificate | [Dirac index = Euler](analysis/bt923_dirac_index_euler.py), [finite eta spectral flow](analysis/w33_pass5625_finite_eta_spectral_flow.py), [Atiyah-Singer substrate](analysis/w33_BREAKTHROUGH_314_atiyah_singer_substrate.py) | the corpus writes **"finite eta"**, never "eta invariant" — a grep for the latter returns zero and the material is there. Bordism / Dai–Freed / Freed–Hopkins genuinely is **absent** |
-| `137 QR`, `quadratic residue CSS`, `[[137,1,d]]` | corrected binary quantum code \([[137,1,21]]\) | [Passes 363–367](PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) | the retracted unsupported \([[137,1,3]]\) intake claim |
+| `137 QR`, `quadratic residue CSS`, `[[137,1,d]]` | corrected binary quantum code \([[137,1,21]]\) | [Passes 363–367](analysis/PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md) | the retracted unsupported \([[137,1,3]]\) intake claim |
 
 ## The 160-chamber Hecke machine and the rank-48 chiral packet
 
@@ -267,7 +267,7 @@ the exhaustive census, TOM 78 and 80, and the complete joint-rank matrix.
 No map between two species follows from a shared count, rank entry, or
 abstract subgroup type.
 
-**Primary artifacts:** [Pass 1139](PASS1139_COMPLETE_DEGREE540_SPECIES_CENSUS.md)
+**Primary artifacts:** [Pass 1139](analysis/PASS1139_COMPLETE_DEGREE540_SPECIES_CENSUS.md)
 (complete TOM census and cubic complement),
 [Pass 161](analysis/w33_pass161_gq42_ihara_inheritance.py) (the first three
 natural carriers), [BT773](analysis/BT773_involution_cube_theorem.md)
@@ -355,10 +355,10 @@ finite representation theory, not a physical generation or Yukawa theorem.
 Do not identify the 135-dimensional oriented-edge kernel with another
 135-carrier merely from the shared count.
 
-**Primary artifacts:** [Pass 1147](PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md),
-[Pass 1138](PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md),
-[Passes 1142–1146](PASS1142_1146_EXACT_RELEASE.md), and
-[Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md).
+**Primary artifacts:** [Pass 1147](analysis/PASS1147_SCHLAEFLI_STEINBERG_FOURIER_BRIDGE.md),
+[Pass 1138](analysis/PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md),
+[Passes 1142–1146](analysis/PASS1142_1146_EXACT_RELEASE.md), and
+[Pass 1335](analysis/PASS1335_BRAUER_TREE_HECKE_CORNER.md).
 
 ### The modular `H26` algebra
 
@@ -389,10 +389,10 @@ the full group Brauer tree proves Ext uniqueness. No claim about the exact
 fixed-space behavior of the \(23\)-head is promoted here without a separate
 certificate.
 
-**Primary artifacts:** [Passes 1330–1334](PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md),
+**Primary artifacts:** [Passes 1330–1334](analysis/PASS1330_1334_MODULAR_TRIALITY_ATLAS_RELEASE.md),
 [`analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py`](analysis/w33_pass1330_1334_modular_triality_cycle_atlas.py),
 [`data/w33_pass1330_1334_modular_triality_cycle_atlas.json`](data/w33_pass1330_1334_modular_triality_cycle_atlas.json),
-and [Pass 1335](PASS1335_BRAUER_TREE_HECKE_CORNER.md).
+and [Pass 1335](analysis/PASS1335_BRAUER_TREE_HECKE_CORNER.md).
 
 ## The controllers — 48, 24, and infinity
 
@@ -419,7 +419,7 @@ order and spectral radius \(\varphi\).
 lattice action, not in the finite controller.  No physical observable is
 selected until an operational map singles out that arithmetic word.
 
-**Primary artifacts:** [Pass 2306](PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md),
+**Primary artifacts:** [Pass 2306](analysis/PASS2306_CONTROLLER_REPRESENTATION_TRICHOTOMY.md),
 the [GAP witness](analysis/w33_pass2306_controller_representation_trichotomy.g),
 and the [certificate](data/w33_pass2306_controller_representation_trichotomy.json).
 
@@ -458,7 +458,7 @@ couplings.  The integers 16 and 9 are not identified with other W33 carriers
 without a named intertwiner.
 
 **Primary artifacts:** [Pass 2301 witness](analysis/w33_pass2301_complete_quadratic_hom_bases.py),
-[Pass 2307](PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md), and the
+[Pass 2307](analysis/PASS2307_QUADRATIC_HOM_S3_DECOMPOSITION.md), and the
 [GAP character witness](analysis/w33_pass2307_quadratic_hom_s3_decomposition.g).
 
 ## The 36 — spreads
@@ -690,7 +690,7 @@ relation-space theorem follows from this recurrence calculation.
 
 **Primary artifacts:** [Pass 541](analysis/w33_pass541_q3_all_m_recurrence.g),
 its [certificate](data/w33_pass541_q3_all_m_recurrence.json), and the
-[proof synthesis](PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md).
+[proof synthesis](analysis/PASS541_Q3_ALL_M_RECURRENCE_THEOREM.md).
 
 ## Maximal real cyclotomic subring
 

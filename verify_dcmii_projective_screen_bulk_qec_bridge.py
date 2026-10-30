@@ -74,15 +74,15 @@ def build_bridge() -> dict[str, Any]:
 
     anchors = {
         "dcmi_boundary_keeps_pg23_screen": "PG(2,3) = projective screen / void shadow"
-        in read("PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md"),
+        in read("analysis/PART_DCMI_SUB_DISTINCTION_BOUNDARY_AUDIT.md"),
         "dclxv_fixed_screen_is_closed_neighborhood": "x^{\\perp} = \\{x\\} \\cup N(x)"
-        in read("PART_DCLXV_HOLONOMY_SCREEN_UNIVERSALITY_BRIDGE.md"),
+        in read("analysis/PART_DCLXV_HOLONOMY_SCREEN_UNIVERSALITY_BRIDGE.md"),
         "dclxvi_screen_operator_is_a_plus_i": "S = A + I"
-        in read("PART_DCLXVI_HOLONOMY_SCREEN_OPERATOR_BRIDGE.md"),
+        in read("analysis/PART_DCLXVI_HOLONOMY_SCREEN_OPERATOR_BRIDGE.md"),
         "cccxii_partition_has_27_non_neighbors": "27 non-neighbors"
-        in read("PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md"),
+        in read("analysis/PART_CCCXII_EQUITABLE_PARTITION_BRIDGE.md"),
         "dccclxxii_qec_tail_is_81": "39 + 120 + 81 = 240"
-        in read("PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md"),
+        in read("analysis/PART_DCCCLXXII_W33_FOR_EVERYONE_QEC_OUROBOROS_BRIDGE.md"),
     }
 
     identities = {

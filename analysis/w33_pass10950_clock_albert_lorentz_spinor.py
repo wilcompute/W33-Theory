@@ -503,7 +503,7 @@ def main(write=True):
         "repo_prior_art": [
             "data/w33_qpsi_matter_parity_e8_d8_bridge.json (Q_psi 16_1+10_-2+1_4, triad patterns)",
             "commit 5419c27 (27 lines, W(D5) stabiliser, 27 = 1+10+16)",
-            "BREAKTHROUGH_DCCLXXXVII.md, scripts/w33_exact_sector_physics.py (count-level Pati-Salam SU(4))",
+            "analysis/BREAKTHROUGH_DCCLXXXVII.md, scripts/w33_exact_sector_physics.py (count-level Pati-Salam SU(4))",
             "analysis/w33_pass10949_freudenthal_quasiconformal_clock_cone.py (the clock Albert algebra)",
         ],
         "external": [

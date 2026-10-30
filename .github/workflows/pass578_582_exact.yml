@@ -18,7 +18,7 @@ on:
       - 'formal/W33/Pass581CyclotomicCompletion.lean'
       - 'formal/W33.lean'
       - 'tests/test_w33_pass578_582_*.py'
-      - 'PASS578_582_RESIDUAL_COLORED_JOHNSON_COMPLETION_CONTINUOUS_RELEASE.md'
+      - 'analysis/PASS578_582_RESIDUAL_COLORED_JOHNSON_COMPLETION_CONTINUOUS_RELEASE.md'
       - '.github/workflows/pass578_582_exact.yml'
   workflow_dispatch:
 permissions:

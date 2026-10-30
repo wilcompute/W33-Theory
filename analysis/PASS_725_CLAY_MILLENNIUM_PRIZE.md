@@ -178,4 +178,4 @@ Key files:
 - `PASS_698_W33_L_FUNCTION.py` — W33 L-function definition
 - `PASS_701_WEIGHT1_DELIGNE_SERRE.py` — Weight-1 newform + Deligne-Serre application  
 - `PASS_706_GAP_DELIGNE_SERRE_CERTIFICATE.g` — Machine-verifiable GAP/Sage certificate
-- `PASS_725_CLAY_MILLENNIUM_PRIZE.md` — This document
+- `analysis/PASS_725_CLAY_MILLENNIUM_PRIZE.md` — This document

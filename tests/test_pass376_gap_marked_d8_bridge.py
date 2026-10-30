@@ -66,7 +66,7 @@ def test_pass376_constructs_the_marked_d8_bridge_without_a_sheet_overread() -> N
 
 
 def test_pass376_synthesis_and_public_surfaces_keep_the_fourfold_boundary() -> None:
-    synthesis = (ROOT / "PASS376_MARKED_D8_BRIDGE.md").read_text(encoding="utf-8")
+    synthesis = (ROOT / "analysis/PASS376_MARKED_D8_BRIDGE.md").read_text(encoding="utf-8")
     for surface in (
         synthesis,
         (ROOT / "README.md").read_text(encoding="utf-8"),

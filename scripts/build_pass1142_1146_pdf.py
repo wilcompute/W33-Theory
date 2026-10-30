@@ -12,7 +12,7 @@ import argparse
 
 MESSAGE = (
     "Pass 1142-1146 PDF generation is quarantined: its source was not "
-    "recoverable from the corrupted bundle. Use PASS1142_1146_EXACT_RELEASE.md "
+    "recoverable from the corrupted bundle. Use analysis/PASS1142_1146_EXACT_RELEASE.md "
     "and the checked-in JSON certificates."
 )
 

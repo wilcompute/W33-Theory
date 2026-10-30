@@ -27,8 +27,8 @@ TAG_MARKERS = [r'W\(E_?6\)', r'Sp\(4,3\)', r'C_3', r'color', r'acting.group',
                r'stabilizer.label', r'uncolored', r'colored']
 SUFFIXES = {'.tex', '.md'}
 EXCLUDE = {'analysis/w33_pass1153_manuscript_432_sweep.py',
-           'PASS1153_1157_CONTINUATION_RELEASE.md',
-           'PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md'}
+           'analysis/PASS1153_1157_CONTINUATION_RELEASE.md',
+           'analysis/PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md'}
 def classify(text, s, e):
     w = text[max(0,s-300):e+300]
     t = sum(1 for m in TAG_MARKERS if re.search(m, w, re.IGNORECASE))

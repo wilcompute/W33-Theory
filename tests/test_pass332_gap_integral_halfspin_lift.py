@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis" / "w33_pass332_integral_halfspin_lift.g"
 CERTIFICATE = ROOT / "data" / "w33_pass332_integral_halfspin_lift.json"
-SYNTHESIS = ROOT / "PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md"
+SYNTHESIS = ROOT / "analysis/PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md"
 SELECTION_LAYER = ROOT / "analysis" / "THE_SELECTION_LAYER.md"
 PAPER = ROOT / "w33_paper.tex"
 INDEX = ROOT / "docs" / "index.html"

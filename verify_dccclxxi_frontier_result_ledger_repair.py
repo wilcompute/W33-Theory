@@ -145,7 +145,7 @@ def _part_surface_max_decimal(excluded_decimals: set[int] | None = None) -> int:
 
 def _frontier_note_decimals() -> dict[int, list[str]]:
     rows: dict[int, list[str]] = {}
-    for path in ROOT.glob("PART_*.md"):
+    for path in list(ROOT.glob("PART_*.md")) + list((ROOT / "analysis").glob("PART_*.md")):  # root PART_*.md moved to analysis/ (2026-10-30)
         decimal = _part_decimal_from_name(path)
         if decimal is None or decimal < FRONTIER_START or decimal > FRONTIER_END:
             continue

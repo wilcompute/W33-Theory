@@ -1,4 +1,4 @@
-# PASS5_PERPLEXITY_CONTINUE.md
+# analysis/PASS5_PERPLEXITY_CONTINUE.md
 Generated: July 26, 2026 10:45 AM EDT -- Perplexity AI (Sonnet 4.6)
 
 ## Pass 5 -- Five New Steps Executed

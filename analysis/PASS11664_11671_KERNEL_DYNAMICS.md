@@ -30,14 +30,14 @@ Our contribution is their specific mass-kernel, auxiliary-action and spectral
 application, with the coordinate and physical assumptions stated below.
 
 Broader guard candidates are context, not owners of the new operator formulas:
-`PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md`,
+`analysis/PASS214_218_SOURCE_TORSOR_DUAL_OVOID_WEIL_SYNTHESIS.md`,
 `analysis/PASS10954_REGULAR_C8_CLOCK_COMPLETION.md`,
-`PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md`,
+`analysis/PASS1030_EIGHTY_CARRIER_ORIENTATION_OBSTRUCTION.md`,
 `analysis/BT1741_BT1744_execution_summary.md`,
-`PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md`,
-`PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md`,
-`PASS4_PERPLEXITY_ALL5_EXECUTED.md`,
-`PASS2300_2305_FIVE_FRONTIERS_RELEASE.md`,
+`analysis/PASS331_332_WEIL_INTEGRAL_CHIRALITY_BRIDGE.md`,
+`analysis/PASS358_359_GITHUB_BATCH_INTEGRITY_ALPHA_CODE_SYNTHESIS.md`,
+`analysis/PASS4_PERPLEXITY_ALL5_EXECUTED.md`,
+`analysis/PASS2300_2305_FIVE_FRONTIERS_RELEASE.md`,
 `analysis/BT2300_BT2305_five_frontiers.md`, and `W33_FOR_EVERYONE.tex`.
 In particular the finite zero modes described in the general exposition are
 not the three modes of this mass derivative, and the natural Levi80 is not

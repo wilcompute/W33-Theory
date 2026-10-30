@@ -62,7 +62,7 @@ def main() -> None:
         'verified': all(checks.values()),
         'source_packets': {
             'sequence_decoder': 'data/bt1613_sequence_level_inverse_decoder.json',
-            'parallel_fault_path': 'BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md',
+            'parallel_fault_path': 'analysis/BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md',
         },
         'outcome_counts': dict(outcomes),
         'pass_plus_corrected_rate': pass_rate,

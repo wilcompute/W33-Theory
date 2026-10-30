@@ -165,7 +165,7 @@ def test_paper_holonet_and_public_surfaces_lock_the_boundaries():
 
 
 def test_synthesis_lists_every_regenerating_witness():
-    synthesis = (ROOT / "PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md").read_text(
+    synthesis = (ROOT / "analysis/PASS181_192_AUDITED_CHIRAL_COMPLETION_SYNTHESIS.md").read_text(
         encoding="utf-8"
     )
     for pass_number in range(181, 193):

@@ -72,7 +72,7 @@ def test_dccxvi_qec_read_preserves_h1_tail() -> None:
 
 def test_dccxvi_markdown_and_boundary_are_present() -> None:
     payload = build_bridge()
-    text = (ROOT / "PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md").read_text(
+    text = (ROOT / "analysis/PART_DCCXVI_AXIS_SYNDROME_SELECTOR_CODEC_BRIDGE.md").read_text(
         encoding="utf-8"
     )
 

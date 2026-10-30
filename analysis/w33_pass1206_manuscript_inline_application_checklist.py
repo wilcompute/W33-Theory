@@ -14,7 +14,7 @@ def main():
         'timestamp': datetime.utcnow().isoformat() + 'Z',
         'schema': 'w33.pass1206.manuscript_inline_application_checklist.v1',
         'status': 'PASS',
-        'highest_priority_edit': 'Inline Pass 1158 amended residual block into PASS1158_1162_BREAKTHROUGH_RELEASE.md',
+        'highest_priority_edit': 'Inline Pass 1158 amended residual block into analysis/PASS1158_1162_BREAKTHROUGH_RELEASE.md',
         'secondary_edits': [
             'Append exact-correction note to relevant release file',
             'Append exact-bridge note to relevant release file',

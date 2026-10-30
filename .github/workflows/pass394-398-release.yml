@@ -11,7 +11,7 @@ on:
       - 'analysis/w33_pass398_formula_search_universe.py'
       - 'schemas/w33_photonic_lab_bundle_v1.schema.json'
       - 'tests/test_pass394_398_execution.py'
-      - 'PASS394_398_COVER_SECTION_DIRAC_LAB_FORMULA_RELEASE.md'
+      - 'analysis/PASS394_398_COVER_SECTION_DIRAC_LAB_FORMULA_RELEASE.md'
       - 'docs/index.html'
       - '*.tex'
       - 'analysis/**/*.md'

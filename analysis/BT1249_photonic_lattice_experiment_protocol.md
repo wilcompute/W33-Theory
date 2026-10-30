@@ -3,7 +3,7 @@
 **Status:** EXPERIMENTAL PROTOCOL READY
 
 ## Overview
-Building on BREAKTHROUGH_DCCXCIX_PHOTONIC_LATTICE_EXPERIMENT.md, this breakthrough specifies the complete experimental protocol to physically verify the W(3,3) topological structure using a silicon photonic lattice.
+Building on analysis/BREAKTHROUGH_DCCXCIX_PHOTONIC_LATTICE_EXPERIMENT.md, this breakthrough specifies the complete experimental protocol to physically verify the W(3,3) topological structure using a silicon photonic lattice.
 
 ## Setup
 - **Platform:** Silicon-on-insulator (SOI) waveguide array, 13 waveguides arranged in K(3,3) bipartite topology

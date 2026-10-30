@@ -232,7 +232,7 @@ intertwiner or an orbit-fingerprint obstruction remains to be constructed.
 - `analysis/w33_pass375_phase_character_normalizer_obstruction.g`
 - `data/w33_pass375_phase_character_normalizer_obstruction.json`
 - `tests/test_pass375_gap_phase_character_normalizer_obstruction.py`
-- `PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md`
+- `analysis/PASS375_W33_PHASE_CHARACTER_NORMALIZER_OBSTRUCTION.md`
 
 ## Honest scope
 

@@ -23,7 +23,7 @@ on:
       - 'formal/**'
       - 'hardware/pass467/**'
       - 'tests/test_pass463_467_chain_ring_cover_hardware_release.py'
-      - 'PASS463_467_CHAIN_RING_COVER_HARDWARE_RELEASE.md'
+      - 'analysis/PASS463_467_CHAIN_RING_COVER_HARDWARE_RELEASE.md'
       - '.github/workflows/pass463-467-chain-ring-cover-hardware.yml'
   pull_request:
     branches: [master]

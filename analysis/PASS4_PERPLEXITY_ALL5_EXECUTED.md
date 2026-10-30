@@ -1,4 +1,4 @@
-# PASS4_PERPLEXITY_ALL5_EXECUTED.md
+# analysis/PASS4_PERPLEXITY_ALL5_EXECUTED.md
 Generated: July 26, 2026 — Perplexity AI (Sonnet 4.6)
 
 ## Pass 4 — Five New Attacks, All Executed

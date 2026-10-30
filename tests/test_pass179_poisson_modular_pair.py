@@ -9,7 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "analysis" / "w33_pass179_poisson_modular_pair.py"
 DATA = ROOT / "data" / "w33_pass179_poisson_modular_pair.json"
-NOTE = ROOT / "PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md"
+NOTE = ROOT / "analysis/PASS179_SENTINEL_CONTEXT_POISSON_PAIR.md"
 
 
 def payload() -> dict:

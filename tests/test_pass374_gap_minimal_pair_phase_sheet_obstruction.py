@@ -111,7 +111,7 @@ def test_pass374_classifies_the_natural_action_and_refutes_a_weyl_torsor() -> No
 
 def test_pass374_is_published_as_an_action_theorem_not_a_reclaimed_cover() -> None:
     synthesis = (
-        ROOT / "PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md"
+        ROOT / "analysis/PASS373_374_W33_BOUNDARY_MLUT_PHASE_SHEET_SYNTHESIS.md"
     ).read_text(encoding="utf-8")
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     paper = (ROOT / "w33_paper.tex").read_text(encoding="utf-8")

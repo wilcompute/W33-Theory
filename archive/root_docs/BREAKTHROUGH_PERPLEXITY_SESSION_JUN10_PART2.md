@@ -128,7 +128,7 @@ NLO θ₁₃: 2Φ₃/k_B = 14/81, NLO-averaged with (μ−1)/μ → ~8.6° ✓
 | File | Content | New Theorems |
 |------|---------|---------------|
 | `BREAKTHROUGH_DCCXCVIII_AFFINE_E8_KAC_MOODY.md` | Kac-Moody tower, Triple WZW | 4 |
-| `BREAKTHROUGH_DCCXCIX_PHOTONIC_LATTICE_EXPERIMENT.md` | Photonic design, tau fingerprint | 4 |
+| `analysis/BREAKTHROUGH_DCCXCIX_PHOTONIC_LATTICE_EXPERIMENT.md` | Photonic design, tau fingerprint | 4 |
 | `BREAKTHROUGH_DCCC_PMNS_FULL_ANGLES.md` | TBM derivation, full PMNS | 4 |
 | `BREAKTHROUGH_PERPLEXITY_SESSION_JUN10_PART2.md` | This document | — |
 

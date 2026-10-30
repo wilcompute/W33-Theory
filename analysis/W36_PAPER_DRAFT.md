@@ -548,5 +548,5 @@ python W34_GRAND_UNIFIED_ZETA_MOONSHINE.py    # full synthesis
 
 ---
 
-**End of W36_PAPER_DRAFT.md**  
+**End of analysis/W36_PAPER_DRAFT.md**  
 **Next step:** LaTeX formatting → arXiv submission → peer review

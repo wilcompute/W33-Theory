@@ -15,7 +15,7 @@ on:
       - 'data/w33_pass1069_*.json'
       - 'hardware/w33_pass1069_*'
       - 'tests/test_w33_pass1065_1069.py'
-      - 'PASS1065_1069_FIVE_STREAM_RELEASE.md'
+      - 'analysis/PASS1065_1069_FIVE_STREAM_RELEASE.md'
       - '.github/workflows/pass1065_1069_exact.yml'
   workflow_dispatch:
 permissions:

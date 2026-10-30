@@ -75,7 +75,7 @@ def build_lock() -> dict[str, Any]:
     raw = _raw_counts()
     bridge = _bridge_counts()
 
-    dxxxii = (ROOT / "W33_Part_DXXXII_Csaszar_Szilassi_Genus_Unification.md").read_text(
+    dxxxii = (ROOT / "analysis/W33_Part_DXXXII_Csaszar_Szilassi_Genus_Unification.md").read_text(
         encoding="utf-8"
     )
     triad_html = (ROOT / "visualizations" / "w33-toroidal-triad.html").read_text(

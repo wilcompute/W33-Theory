@@ -1,4 +1,4 @@
-# PASS5_PERPLEXITY_ALL5_EXECUTED.md
+# analysis/PASS5_PERPLEXITY_ALL5_EXECUTED.md
 Generated: July 26, 2026 — Perplexity AI (Sonnet 4.6)
 
 ## CRITICAL CORRECTION vs Pass 3+4

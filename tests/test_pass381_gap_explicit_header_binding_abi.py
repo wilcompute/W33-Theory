@@ -160,7 +160,7 @@ def test_pass381_trace_is_a_bijective_c3_compiler_trace_for_the_live_body() -> N
 
 
 def test_pass381_result_is_indexed() -> None:
-    synthesis = (ROOT / "PASS381_EXPLICIT_HEADER_BINDING_ABI.md").read_text(
+    synthesis = (ROOT / "analysis/PASS381_EXPLICIT_HEADER_BINDING_ABI.md").read_text(
         encoding="utf-8"
     )
     assert "reviewed compiler input" in synthesis

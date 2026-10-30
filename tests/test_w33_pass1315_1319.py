@@ -56,10 +56,10 @@ def test_k9_chain_is_fail_closed():
         "analysis/w33_pass1266_theorem_ledger_v5.py",
         "analysis/w33_pass1272_theorem_ledger_v6.py",
         "analysis/w33_pass1277_theorem_ledger_v7.py",
-        "PASS1258_1262_EXECUTION_RELEASE.md",
-        "PASS1263_1267_EXECUTION_RELEASE.md",
-        "PASS1268_1272_EXECUTION_RELEASE.md",
-        "PASS1273_1277_EXECUTION_RELEASE.md",
+        "analysis/PASS1258_1262_EXECUTION_RELEASE.md",
+        "analysis/PASS1263_1267_EXECUTION_RELEASE.md",
+        "analysis/PASS1268_1272_EXECUTION_RELEASE.md",
+        "analysis/PASS1273_1277_EXECUTION_RELEASE.md",
     ]
     for rel in stale:
         text=(ROOT/rel).read_text(encoding="utf-8")

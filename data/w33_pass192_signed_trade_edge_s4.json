@@ -1,6 +1,6 @@
 {
   "schema": "w33.pass192.signed_trade_edge_s4.v1",
-  "status": "PASS",
+  "status": "FAIL",
   "signed_edge_codec": {
     "signed_trades": 240,
     "lines_times_edges": "40*6=240",
@@ -27,9 +27,6 @@
     "axis_kernel_in_line_stabilizer": 108
   },
   "controller_boundary": {
-    "verified": true,
-    "completions_per_path": 3,
-    "seed_action_size": 6,
     "reading": "the unframed three-completion type agrees with the axis S3/C2 action.  The six signed trades instead carry S4 on tetrahedral edges, not the regular S3 action; equal counts do not identify the framed actions"
   },
   "checks": {
@@ -49,6 +46,6 @@
     "axis_quotient_is_full_S3_with_kernel_108": true,
     "line_kernel_is_elementary_abelian_C3_cubed": true,
     "S4_order_profile_exact": true,
-    "controller_three_and_six_scales_loaded": true
+    "controller_three_and_six_scales_loaded": false
   }
 }

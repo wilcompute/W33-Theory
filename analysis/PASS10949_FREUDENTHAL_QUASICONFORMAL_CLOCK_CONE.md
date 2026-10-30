@@ -142,7 +142,7 @@ flagged compounds `e7+hesse`, `e7+levi`, `hesse+levi`, `e_6/e_8+levi` point to
 `analysis/BT1720_BT1723_repo_mining_execution.md` (magic-square Latin heptad and
 Coxeter-number counts), `analysis/BT1745_BT1748_execution_summary.md` (exceptional
 tower list), `analysis/PASS7376_7384_deep_followup.md` (a BT660 Levi carrier and
-E8/E7 local spectra), `PASS1087_1091_FIVE_STREAM_RELEASE.md` (dual-Hesse
+E8/E7 local spectra), `analysis/PASS1087_1091_FIVE_STREAM_RELEASE.md` (dual-Hesse
 hyperplanes) and the parent `analysis/w33_20260925_hesse_clock_e8_gradings.py`;
 `alpha@60` points to the split-real-form certificate cited above. Each was read:
 none constructs the quartic, the Heisenberg cone or the real-form restriction.

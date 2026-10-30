@@ -34,7 +34,7 @@ def main() -> None:
         "mass_gap_lower_natural_units": mass_gap_natural,
         "mass_gap_lower_GeV_if_a_in_fm": mass_gap_gev,
         "formula": "Delta * (1/a)",
-        "reference": "BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md"
+        "reference": "analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md"
     }
 
     Path("w33_pass72_trackG_yang_mills_gap.json").write_text(

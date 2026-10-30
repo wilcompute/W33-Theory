@@ -97,8 +97,8 @@ improved by any proper subset of Witting frames.
 
 ### Step 5 -- Post-submission
 
-- [ ] Record arXiv ID in `ARXIV_HOLONET_SUBMISSION.md`
-- [ ] Update `BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md` with arXiv link
+- [ ] Record arXiv ID in `analysis/ARXIV_HOLONET_SUBMISSION.md`
+- [ ] Update `analysis/BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md` with arXiv link
 - [ ] Tag the commit: `git tag arxiv-witting-ym-v1 <sha>`
 - [ ] Update `.last_update` with submission date and arXiv ID
 

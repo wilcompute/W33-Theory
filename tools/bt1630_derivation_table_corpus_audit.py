@@ -15,7 +15,7 @@ CANDIDATES = [
     {'path':'UNIFIED_MASTER_THEOREM.py','format':'py','priority':'high','reason':'search hit for master theorem / physics derivation content'},
     {'path':'docs/COMPLETE_SUMMARY.md','format':'md','priority':'high','reason':'markdown summary likely contains consolidated derivation tables'},
     {'path':'docs/ARXIV_PREPRINT_DRAFT.md','format':'md','priority':'medium','reason':'preprint draft may duplicate or supersede tables'},
-    {'path':'W36_PAPER_DRAFT.md','format':'md','priority':'medium','reason':'paper draft with potential physics tables'},
+    {'path':'analysis/W36_PAPER_DRAFT.md','format':'md','priority':'medium','reason':'paper draft with potential physics tables'},
     {'path':'docs/w33_complete_theory.html','format':'html','priority':'high','reason':'HTML complete theory page with tables'},
     {'path':'docs/w33_website.html','format':'html','priority':'high','reason':'website HTML table source'},
     {'path':'docs/qutrit_foundation.html','format':'html','priority':'medium','reason':'qutrit HTML table source'},

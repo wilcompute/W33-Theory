@@ -12,4 +12,4 @@ The promoted result must distinguish:
 - ordinary-character vertices from modular simple edges in the Brauer tree.
 
 The reservation is fulfilled by
-[`PASS1335_BRAUER_TREE_HECKE_CORNER.md`](PASS1335_BRAUER_TREE_HECKE_CORNER.md).
+[`analysis/PASS1335_BRAUER_TREE_HECKE_CORNER.md`](analysis/PASS1335_BRAUER_TREE_HECKE_CORNER.md).

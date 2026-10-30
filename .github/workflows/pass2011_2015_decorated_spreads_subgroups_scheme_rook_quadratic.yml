@@ -8,7 +8,7 @@ on:
       - 'data/w33_pass201[1-5]**'
       - 'data/w33_pass_namespace_registry_v2.d/201[1-5].json'
       - 'tests/test_w33_pass2011_2015_five_frontiers.py'
-      - 'PASS2011_2015_DECORATED_SPREADS_SUBGROUPS_SCHEME_ROOK_QUADRATIC_RELEASE.md'
+      - 'analysis/PASS2011_2015_DECORATED_SPREADS_SUBGROUPS_SCHEME_ROOK_QUADRATIC_RELEASE.md'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
       - '.github/workflows/pass2011_2015_decorated_spreads_subgroups_scheme_rook_quadratic.yml'

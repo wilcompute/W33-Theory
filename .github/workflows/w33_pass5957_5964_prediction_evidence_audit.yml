@@ -8,8 +8,8 @@ on:
       - 'analysis/PASS5957_5964_prediction_evidence_audit_insert.tex'
       - 'data/PART_W33_PASS5957_5964_PREDICTION_EVIDENCE_AUDIT.json'
       - 'tests/test_w33_pass5957_5964_prediction_evidence_audit.py'
-      - 'PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md'
-      - 'PASS5933_5956_HITLIST_PREDICTIONS.md'
+      - 'analysis/PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md'
+      - 'analysis/PASS5933_5956_HITLIST_PREDICTIONS.md'
       - 'scripts/w33_linf_bracket_mass_ratios.py'
       - 'scripts/w33_electron_seed_packet_derivation.py'
       - 'scripts/w33_weyl_law_4volume.py'
@@ -24,8 +24,8 @@ on:
       - 'analysis/w33_pass5957_5964_prediction_evidence_audit.py'
       - 'data/PART_W33_PASS5957_5964_PREDICTION_EVIDENCE_AUDIT.json'
       - 'tests/test_w33_pass5957_5964_prediction_evidence_audit.py'
-      - 'PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md'
-      - 'PASS5933_5956_HITLIST_PREDICTIONS.md'
+      - 'analysis/PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md'
+      - 'analysis/PASS5933_5956_HITLIST_PREDICTIONS.md'
   workflow_dispatch:
 
 jobs:

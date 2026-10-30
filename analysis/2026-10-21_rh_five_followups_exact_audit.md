@@ -6,7 +6,7 @@
 
 - Rational companion: analysis/w33_20261021_rh_five_frontiers.py, analysis/w33_20261021_levi_genus2_frobenius.py, analysis/w33_pass4956_point_line_24d_intertwiner.py.
 - Weil: analysis/w33_weil_cocycle_positivity.py, analysis/w33_renormalized_boundary_formula.py, analysis/RH_INVARIANT_TANGENT_AUDIT.md.
-- Hecke: PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md, analysis/w33_theta_E8_eisenstein_E4.py, analysis/w33_pass1240_hecke_multiplication_tables.py.
+- Hecke: analysis/PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md, analysis/w33_theta_E8_eisenstein_E4.py, analysis/w33_pass1240_hecke_multiplication_tables.py.
 - Graph holonomy: analysis/PASS4447_ZETA_AND_SIGNING_ARE_ONE_SUBJECT.md, analysis/w33_pass4461_line_signing_apartment_trace.py.
 - Infinite spectrum: analysis/w33_preregistered_higher_moment_search.py, analysis/w33_rh_correspondence_analytic_operator.py.
 

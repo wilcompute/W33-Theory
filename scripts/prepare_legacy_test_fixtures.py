@@ -99,7 +99,7 @@ LEGACY_FIXTURE_MAP = {
     Path("SUMMARY_54sheet.json"): Path("archive/json/SUMMARY_54sheet.json"),
     Path("SUMMARY_matching.json"): Path("archive/json/SUMMARY_matching.json"),
     Path("W33_adjacency_matrix.txt"): Path("archive/data/W33_adjacency_matrix.txt"),
-    Path("PILLAR_89.md"): Path("archive/misc/PILLAR_89.md"),
+    Path("analysis/PILLAR_89.md"): Path("archive/misc/PILLAR_89.md"),
 }
 
 

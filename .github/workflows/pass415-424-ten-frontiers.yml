@@ -13,8 +13,8 @@ on:
       - 'specs/W33Pass424Custody.tla'
       - 'tests/test_pass415_419_five_frontiers.py'
       - 'tests/test_pass420_424_five_frontiers.py'
-      - 'PASS415_419_FIVE_FRONTIERS_RELEASE.md'
-      - 'PASS420_424_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS415_419_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS420_424_FIVE_FRONTIERS_RELEASE.md'
       - '.github/workflows/pass415-424-ten-frontiers.yml'
   pull_request:
     branches: [master]

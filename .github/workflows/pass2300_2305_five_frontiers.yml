@@ -14,7 +14,7 @@ on:
       - 'tests/rtl/w33_pass2303_tb.sv'
       - 'w33_paper.tex'
       - 'photonic_holonet.tex'
-      - 'PASS2300_2305_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS2300_2305_FIVE_FRONTIERS_RELEASE.md'
       - '.github/workflows/pass2300_2305_five_frontiers.yml'
   workflow_dispatch:
 permissions:

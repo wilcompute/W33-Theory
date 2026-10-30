@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pass 405: universal critical-group theorem for the odd-prime Heisenberg bulk.
 
-The mathematical proof is recorded in PASS405_409_FIVE_FRONTIERS_RELEASE.md.
+The mathematical proof is recorded in analysis/PASS405_409_FIVE_FRONTIERS_RELEASE.md.
 This executable certificate checks every multiplicity identity in the proof,
 reconstructs the complete primary decomposition for arbitrary odd primes, and
 cross-checks the q=3,5,7 finite certificates from Pass 401.

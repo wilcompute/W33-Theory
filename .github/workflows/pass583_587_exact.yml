@@ -18,7 +18,7 @@ on:
       - 'formal/W33/Pass586CyclotomicLocalizedDVR.lean'
       - 'formal/W33.lean'
       - 'tests/test_w33_pass583_587_*.py'
-      - 'PASS583_587_GROUPOID_INTERTWINER_JOHNSON_LOCAL_BLACKWELL_RELEASE.md'
+      - 'analysis/PASS583_587_GROUPOID_INTERTWINER_JOHNSON_LOCAL_BLACKWELL_RELEASE.md'
       - '.github/workflows/pass583_587_exact.yml'
   workflow_dispatch:
 permissions:

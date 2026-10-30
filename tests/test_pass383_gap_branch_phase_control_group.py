@@ -58,7 +58,7 @@ def test_pass383_classifies_the_two_typed_branch_phase_lifts() -> None:
 
 
 def test_pass383_does_not_confuse_a_control_interface_with_a_spectral_coupling() -> None:
-    synthesis = (ROOT / "PASS383_BRANCH_PHASE_CONTROL_GROUP.md").read_text(
+    synthesis = (ROOT / "analysis/PASS383_BRANCH_PHASE_CONTROL_GROUP.md").read_text(
         encoding="utf-8"
     )
     assert "not a basis-level coupling" in synthesis

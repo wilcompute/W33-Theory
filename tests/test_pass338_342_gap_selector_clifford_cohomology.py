@@ -126,7 +126,7 @@ def test_pass342_globalizes_the_local_complex_without_forcing_kirschmer() -> Non
 
 def test_packet_is_visible_on_shared_theory_surfaces() -> None:
     synthesis = " ".join(
-        (ROOT / "PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md")
+        (ROOT / "analysis/PASS338_342_SELECTOR_CLIFFORD_COHOMOLOGY_SYNTHESIS.md")
         .read_text(encoding="utf-8")
         .split()
     )

@@ -16,7 +16,7 @@ on:
       - 'data/w33_pass471_uniform_cover_prime_power_witness.json'
       - 'data/w33_pass472_hardware_custody_gate.json'
       - 'tests/test_pass468_472_semisimple_galois_cover_release.py'
-      - 'PASS468_472_SEMISIMPLE_GALOIS_COVER_RELEASE.md'
+      - 'analysis/PASS468_472_SEMISIMPLE_GALOIS_COVER_RELEASE.md'
       - '.github/workflows/pass468-472-semisimple-galois-cover.yml'
   pull_request:
     branches: [master]

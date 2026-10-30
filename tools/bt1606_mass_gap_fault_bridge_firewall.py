@@ -10,7 +10,7 @@ MD = ROOT / 'analysis' / 'BT1606_mass_gap_fault_bridge_firewall.md'
 TEX = ROOT / 'analysis' / 'BT1606_mass_gap_fault_bridge_firewall.tex'
 
 ROWS = [
-    {'tier':'finite exact source','claim':'BT679 gives a finite K33 spectral-gap lower-bound model Delta >= 1/6','support':'BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md'},
+    {'tier':'finite exact source','claim':'BT679 gives a finite K33 spectral-gap lower-bound model Delta >= 1/6','support':'analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md'},
     {'tier':'finite exact ABI','claim':'BT1603 gives a finite Witting/Hesse/CSS photonic computation ABI with 1600 frames and 72 CSS rows','support':'data/bt1603_universal_computation_proof_closure.json'},
     {'tier':'candidate bridge','claim':'minimum logical-error energy in the ABI may be comparable to the finite mass-gap normalization','support':'requires new decoder/fault simulation'},
     {'tier':'required test','claim':'compute minimum undetectable CSS error chain and convert through a stated W33 unit map','support':'not yet built'},
@@ -36,7 +36,7 @@ def main() -> None:
         'title': 'Mass-gap / fault-tolerance bridge firewall',
         'verified': all(checks.values()),
         'source_packets': {
-            'yang_mills_gap': 'BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md',
+            'yang_mills_gap': 'analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md',
             'universal_abi': 'data/bt1603_universal_computation_proof_closure.json',
         },
         'claim_rows': ROWS,

@@ -7,7 +7,7 @@ on:
       - 'analysis/w33_pass542_triality_icosahedral_hjelmslev.py'
       - 'data/w33_pass542_triality_icosahedral_hjelmslev.json'
       - 'tests/test_w33_pass542_triality_icosahedral_hjelmslev.py'
-      - 'PASS542_TRIALITY_ICOSAHEDRAL_HJELMSLEV_RELEASE.md'
+      - 'analysis/PASS542_TRIALITY_ICOSAHEDRAL_HJELMSLEV_RELEASE.md'
       - '.github/workflows/pass542-triality-icosahedral-hjelmslev.yml'
   pull_request:
     branches: [master]

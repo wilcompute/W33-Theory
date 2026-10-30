@@ -113,7 +113,7 @@ def test_pass382_transition_table_and_fault_syndromes_are_exact() -> None:
 
 
 def test_pass382_scope_stays_an_abstract_controller_model() -> None:
-    synthesis = (ROOT / "PASS382_REVERSIBLE_LOGIC_SWITCH_CONTROLLER.md").read_text(
+    synthesis = (ROOT / "analysis/PASS382_REVERSIBLE_LOGIC_SWITCH_CONTROLLER.md").read_text(
         encoding="utf-8"
     )
     assert "does not bind a header" in synthesis

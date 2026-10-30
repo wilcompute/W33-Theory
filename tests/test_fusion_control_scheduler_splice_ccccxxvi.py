@@ -118,7 +118,7 @@ def test_result_artifact_is_present_and_current():
 def test_docs_index_exposes_fusion_control_scheduler_splice():
     text = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     assert "Fusion-Control Scheduler Splice" in text
-    assert "PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md" in text
+    assert "analysis/PART_CCCCXXVI_FUSION_CONTROL_SCHEDULER_SPLICE.md" in text
     assert "210+270=480" in text
     assert "420+540=960" in text
     assert "95+25=120" in text

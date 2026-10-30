@@ -80,7 +80,7 @@ def test_pass380_provenance_is_the_live_bt1407_body_schedule() -> None:
 
 
 def test_pass380_result_is_indexed() -> None:
-    synthesis = (ROOT / "PASS380_MINIMAL_SCHEDULER_PHASE_LIFT.md").read_text(
+    synthesis = (ROOT / "analysis/PASS380_MINIMAL_SCHEDULER_PHASE_LIFT.md").read_text(
         encoding="utf-8"
     )
     assert "16-row header-orbit binding table" in synthesis

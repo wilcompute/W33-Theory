@@ -4,7 +4,7 @@ Pass 762 - W33 alpha_s: 3-loop RGE + SUSY/LQ Threshold + Genus-6 K12 Correction
 =================================================================================
 Cross-links:
   - BREAKTHROUGH_MCCCCXIII_MCCCCXXXII_GENUS6_K12_MASTER.md  (genus-6 / K12 graph)
-  - BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md               (YM mass gap = Lambda_QCD)
+  - analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md               (YM mass gap = Lambda_QCD)
   - ALPHA_AND_SM.py                                          (SM alpha_s baseline)
   - Pass 757 (2-loop baseline)
   - BREAKTHROUGH_BT681_IHARA_FACTORIZATION.md                (Ihara zeta = W33 beta fn)
@@ -17,7 +17,7 @@ From BREAKTHROUGH_MCCCCXIII_MCCCCXXXII_GENUS6_K12_MASTER.md:
   b_2^W33 = (2857/2 - 5033*n_f/18 + 325*n_f^2/54) / (4*pi)^3
            with n_f -> n_f^W33 = Phi_6 = 7 at M_GUT, matching the K12 Ramanujan spec.
 
-From BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md:
+From analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md:
   Lambda_QCD^W33 = M_GUT * exp(-pi/(q*alpha_s(M_GUT)))
                  = M_GUT * exp(-pi*q*(q+1)/q)
                  = M_GUT * exp(-pi*(q+1))

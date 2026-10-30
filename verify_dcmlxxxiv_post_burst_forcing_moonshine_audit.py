@@ -111,8 +111,8 @@ def johnson_triangle_example() -> dict[str, Any]:
 
 
 def source_anchor_checks() -> dict[str, bool]:
-    breakthrough_778 = (ROOT / "BREAKTHROUGH_DCCLXXVIII.md").read_text(encoding="utf-8")
-    breakthrough_782 = (ROOT / "BREAKTHROUGH_DCCLXXXII.md").read_text(encoding="utf-8")
+    breakthrough_778 = (ROOT / "analysis/BREAKTHROUGH_DCCLXXVIII.md").read_text(encoding="utf-8")
+    breakthrough_782 = (ROOT / "analysis/BREAKTHROUGH_DCCLXXXII.md").read_text(encoding="utf-8")
     correction = (ROOT / "analysis" / "2026-05-18_moonshine_factorization_correction.md").read_text(
         encoding="utf-8"
     )

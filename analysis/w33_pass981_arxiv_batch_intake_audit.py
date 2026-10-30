@@ -30,7 +30,7 @@ successful parameter-free derivation would not survive referee arithmetic.
 
 2.  THE SAME FILE REFUTES ITS OWN "ZERO FITTING" CLAIM.
 
-BREAKTHROUGH_PASS882_CKM_FULL_MATRIX.md derives theta_12 FOUR times, in order:
+analysis/BREAKTHROUGH_PASS882_CKM_FULL_MATRIX.md derives theta_12 FOUR times, in order:
 
         arctan(sin phi/(2 sqrt 11 - 1))            = 9.61  degrees
         the same times sqrt(4/3) "colour correction" = 11.10 degrees
@@ -227,8 +227,8 @@ def part_E_numbering(checks):
     return {"duplicated": [881, 882],
             "mine": ["analysis/w33_pass881_seven_thread_batch_intake_audit.py",
                      "analysis/w33_pass882_spectral_surgery_rigidity.py"],
-            "theirs": ["BREAKTHROUGH_PASS881_E8_BIJECTION_EXPLICIT.md",
-                       "BREAKTHROUGH_PASS882_CKM_FULL_MATRIX.md"],
+            "theirs": ["analysis/BREAKTHROUGH_PASS881_E8_BIJECTION_EXPLICIT.md",
+                       "analysis/BREAKTHROUGH_PASS882_CKM_FULL_MATRIX.md"],
             "rule": "the earlier commit owns the number",
             "resolution_needed": (
                 "the .md pair was committed later and should be renumbered, or "

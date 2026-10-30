@@ -8,7 +8,7 @@ on:
       - 'analysis/PASS434_FIELD_SMITH_PAIRING.md'
       - 'data/w33_pass434_field_smith_pairing.json'
       - 'tests/test_w33_pass434_field_smith_pairing.py'
-      - 'PASS434_FIELD_SMITH_PAIRING_RELEASE.md'
+      - 'analysis/PASS434_FIELD_SMITH_PAIRING_RELEASE.md'
       - '.github/workflows/pass434-field-smith-pairing.yml'
   pull_request:
     branches: [master]

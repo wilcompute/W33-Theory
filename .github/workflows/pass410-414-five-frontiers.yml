@@ -18,7 +18,7 @@ on:
       - 'schemas/w33_pass414_independent_lab_handoff_v1.schema.json'
       - 'docs/W33_PASS414_INDEPENDENT_LAB_HANDOFF.md'
       - 'tests/test_pass410_414_five_frontiers.py'
-      - 'PASS410_414_FIVE_FRONTIERS_RELEASE.md'
+      - 'analysis/PASS410_414_FIVE_FRONTIERS_RELEASE.md'
       - '.github/workflows/pass410-414-five-frontiers.yml'
   pull_request:
     branches: [master]

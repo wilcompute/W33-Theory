@@ -24,7 +24,7 @@ def test_1200_degree40():
 
 
 def test_1201_targets():
-    assert 'PASS1158_1162_BREAKTHROUGH_RELEASE.md' in p1201()['target_files']
+    assert 'analysis/PASS1158_1162_BREAKTHROUGH_RELEASE.md' in p1201()['target_files']
 
 
 def test_1202_bundle_name():

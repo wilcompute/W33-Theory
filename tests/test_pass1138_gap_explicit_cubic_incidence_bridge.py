@@ -147,7 +147,7 @@ def test_octet_bijection_and_composite_factor_through_six_copies_of_each_line() 
 def test_pass1138_cites_prior_45_layer_owners_and_keeps_scope_finite() -> None:
     cert = json.loads(CERTIFICATE.read_text(encoding="utf-8"))
     synthesis = (
-        ROOT / "PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md"
+        ROOT / "analysis/PASS1138_EXPLICIT_CUBIC_INCIDENCE_BRIDGE.md"
     ).read_text(encoding="utf-8")
 
     assert cert["prior_owners"] == {

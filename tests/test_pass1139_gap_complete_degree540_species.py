@@ -247,7 +247,7 @@ def test_alias_registry_and_release_surfaces_use_the_five_species() -> None:
     assert [records[position]["tag"] for position in POSITIONS] == TAGS
 
     release = (
-        ROOT / "PASS1132_1136_EXACT_EXECUTION_RELEASE.md"
+        ROOT / "analysis/PASS1132_1136_EXACT_EXECUTION_RELEASE.md"
     ).read_text(encoding="utf-8")
     vocabulary = (ROOT / "RESULTS_VOCABULARY.md").read_text(encoding="utf-8")
     for tag in TAGS:

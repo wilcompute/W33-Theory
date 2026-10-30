@@ -294,7 +294,7 @@ E_1 = 10 = measurement rounds = oscillator energy = stabilizer count
 The Solovay-Kitaev theorem states: any single-qubit gate can be approximated
 to precision ε using O(log^c(1/ε)) gates from a universal set, with c ≈ 3.97.
 
-From BREAKTHROUGH_MCL.md, the golden selector has:
+From analysis/BREAKTHROUGH_MCL.md, the golden selector has:
 - Violation rate 1/g_1 = 1/21
 - Flatness obstruction at q²/5 = 9/5 of capacity
 

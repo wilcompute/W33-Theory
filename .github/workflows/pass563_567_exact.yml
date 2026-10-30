@@ -18,7 +18,7 @@ on:
       - 'formal/W33/Pass565CyclotomicFiveOrder.lean'
       - 'formal/W33.lean'
       - 'tests/test_w33_pass563_567_triality_quadratic_order_walsh_bayesian.py'
-      - 'PASS563_567_TRIALITY_QUADRATIC_ORDER_WALSH_BAYESIAN_RELEASE.md'
+      - 'analysis/PASS563_567_TRIALITY_QUADRATIC_ORDER_WALSH_BAYESIAN_RELEASE.md'
       - '.github/workflows/pass563_567_exact.yml'
   workflow_dispatch:
 permissions:

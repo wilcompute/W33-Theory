@@ -1,7 +1,7 @@
 # Pass 1023: the C6 obstruction is a PRODUCT of two independent obstructions --
 # a chirality C2 and a phase C3 -- and different subgroups see different halves.
 #
-# Pass 1022 (other track, PASS1022_EQUIVARIANT_SECTION_OBSTRUCTION.md, commit
+# Pass 1022 (other track, analysis/PASS1022_EQUIVARIANT_SECTION_OBSTRUCTION.md, commit
 # de4cf275d) proved that the line stabiliser L surjects onto C6 with kernel the
 # root stabiliser H, so the monodromy is regular and 240 -> 40 admits no
 # Sp(4,3)-equivariant section.  It also gave the exact subgroup criterion

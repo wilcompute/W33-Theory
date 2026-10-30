@@ -25,7 +25,7 @@ Using all prime powers n<=1000, numerical quadrature and the first 64 computed p
 
 ## 3. E8 Hecke scalar-line obstruction
 
-Prior corpus checked: PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md; analysis/w33_theta_E8_eisenstein_E4.py; analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md.
+Prior corpus checked: analysis/PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md; analysis/w33_theta_E8_eisenstein_E4.py; analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md.
 
 The normalized Eisenstein E4 Hecke eigenspace is one-dimensional with T_p eigenvalue 1+p^3. W33's point permutation representation splits as 1+24+15. The only invariant vectors for the full transitive symplectic W33 automorphism action are constants, so the 24- and 15-dimensional summands contain no invariant vectors. Therefore Hom_G(1,V24+V15)=0. An equivariant map from the scalar E4 eigenline into nonconstant W33 sectors is necessarily zero. This does not rule out a nontrivial higher-dimensional arithmetic Hecke module or symmetry reduction.
 

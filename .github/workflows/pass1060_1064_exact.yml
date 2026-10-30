@@ -15,7 +15,7 @@ on:
       - 'formal/W33/Pass1063SignedLiftObstruction.lean'
       - 'formal/W33/Pass575CyclotomicDVRKernel.lean'
       - 'formal/W33.lean'
-      - 'PASS1060_1064_FIVE_STREAM_RELEASE.md'
+      - 'analysis/PASS1060_1064_FIVE_STREAM_RELEASE.md'
       - '.github/workflows/pass1060_1064_exact.yml'
   workflow_dispatch:
 permissions:

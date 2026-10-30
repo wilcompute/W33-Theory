@@ -10,7 +10,7 @@
 
 1. **Rational conjugator:** analysis/w33_20261021_rh_five_frontiers.py, analysis/w33_pass4956_point_line_24d_intertwiner.py, analysis/w33_20261021_levi_genus2_frobenius.py. Prior local Frobenius equality and 24D incidence intertwiner are not claimed anew.
 2. **Completed Weil:** analysis/w33_weil_cocycle_positivity.py, docs/RH_CASEY_W33_NEXT5_SYNTHESIS.md, analysis/RH_INVARIANT_TANGENT_AUDIT.md. Local cocycle positivity did not establish full Weil positivity.
-3. **Nonconstant Hecke:** PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md, analysis/w33_theta_E8_eisenstein_E4.py, analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md. E8 Eisenstein fibration was already exact, but does not give a nonconstant Hecke correspondence.
+3. **Nonconstant Hecke:** analysis/PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md, analysis/w33_theta_E8_eisenstein_E4.py, analysis/PART_CCCCCXCIX_E8_SPECTRAL_SCOPE_AUDIT.md. E8 Eisenstein fibration was already exact, but does not give a nonconstant Hecke correspondence.
 4. **Levi apartment holonomy:** analysis/w33_pass4461_line_signing_apartment_trace.py, analysis/PASS4447_ZETA_AND_SIGNING_ARE_ONE_SUBJECT.md. The count of 1620 octagons was known; this execution proves that their binary incidence vectors span the whole cycle space.
 5. **Spectral triple benchmark:** analysis/w33_rh_correspondence_analytic_operator.py, analysis/w33_preregistered_higher_moment_search.py, analysis/BT921_hodge_dirac_spectral_triple.md. The Lambert-W ladder was known; the new calculation tests its normalized finite determinant directly against Xi.
 

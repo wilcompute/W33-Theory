@@ -1,6 +1,6 @@
 # Pass 810 — Corrected synthesis of the deformation / flat-block / Burnside arc
 
-> **Purpose.** `PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md` states two results
+> **Purpose.** `analysis/PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md` states two results
 > (its Theorems B and C) that do not hold as written. This note gives the honest
 > status of every claim in the arc so the preprint can be corrected before
 > submission. It is written across the track boundary: the flat-block passes are

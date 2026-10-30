@@ -36,7 +36,7 @@
 ## Documentation
 - [x] `UNIFIED_TOE_STATUS.md` — updated to 57 confirmed, Parts I-LXIII
 - [x] `README.md` — updated with 7 pillars, quick-start, full table
-- [x] `ARXIV_SUBMISSION.md` — submission guide complete
+- [x] `analysis/ARXIV_SUBMISSION.md` — submission guide complete
 - [x] `PART_XLV_MASTER_PREDICTION_TABLE.md` — P1-P116 listed
 - [x] `PART_LXIII_ARXIV_COMPLETE_PAPER.tex` — 6 theorems, 20 refs, appendix
 - [x] `CITATION.cff` — present

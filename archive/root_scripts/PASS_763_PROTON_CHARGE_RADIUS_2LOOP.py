@@ -10,7 +10,7 @@ Cross-links:
   - BIJECTION_SOLVER_V3.py: The 270-bijection on H_27 encodes the proton wave function
     as a function of the q-trinomial coefficients (same basis as bijection).
   - Pass 754 (tree-level r_p), Pass 757 (alpha_s), Pass 762 (3-loop alpha_s)
-  - BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md: Lambda_QCD feeds the chiral correction.
+  - analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md: Lambda_QCD feeds the chiral correction.
   - A5_orbit_decompositions.json: A5 orbits partition quark-level Feynman diagrams.
 
 From w33_paper.tex (proton radius section):

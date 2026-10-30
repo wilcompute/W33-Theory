@@ -29,7 +29,7 @@ def main() -> None:
         'title': 'Detector decoder / holographic audit fusion',
         'verified': all(checks.values()),
         'source_packets': {
-            'parallel_detector_decoder': 'BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md',
+            'parallel_detector_decoder': 'analysis/BREAKTHROUGH_BT1604_BT1606_PHYSICAL_FAULT_ABI.md',
             'holographic_audit': 'data/bt1605_witting_fano_holographic_compression_audit.json',
             'universal_abi': 'data/bt1603_universal_computation_proof_closure.json',
         },

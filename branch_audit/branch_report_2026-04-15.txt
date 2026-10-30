@@ -25,7 +25,7 @@ origin-https    https://github.com/wilcompute/W33-Theory.git (push)
 ?? A5_orbit_decompositions.json
 ?? K27_stabilizer_C6.json
 ?? K54_edges_L_reconstruct.csv
-?? PILLAR_91.md
+?? analysis/PILLAR_91.md
 ?? V42_precision_masses_report.json
 ?? V44_neutrino_report.json
 ?? check_verify.py
@@ -94,7 +94,7 @@ eabb7af7 2026-04-15 Wil  Faulhaber's formula: finite power sums from Bernoulli n
 784cbd3b 2026-04-15 wilcompute  Wire figures into W36_PAPER.tex with \includegraphics + SVG/PDF figure notes
 9cfd52a5 2026-04-15 wilcompute  Add figures (SVG) + arXiv submission metadata for W36 paper
 61ddb036 2026-04-15 wilcompute  Add W36_PAPER.tex — full LaTeX source for arXiv submission
-dd74be82 2026-04-15 wilcompute  Add W36_PAPER_DRAFT.md — ArXiv-ready preprint draft
+dd74be82 2026-04-15 wilcompute  Add analysis/W36_PAPER_DRAFT.md — ArXiv-ready preprint draft
 5f3edaf1 2026-04-15 wilcompute  Add W35_FALSIFIABILITY_AND_PREDICTIONS.py + results JSON + updated README index
 f471e26e 2026-04-15 wilcompute  Add W34_GRAND_UNIFIED_ZETA_MOONSHINE.py: Ihara zeta, L-functions, eta/theta, Ramanujan tau, Borcherds lift, NCG spectral action, and full results JSON
 15505beb 2026-04-15 wilcompute  Add W33_ZETA_TOWER.py + update W33_BERNOULLI_MOONSHINE_LINK_results.json with full computed data

@@ -21,7 +21,7 @@ on:
       - 'data/w33_pass452_length3_hjelmslev_filtration.json'
       - 'formal/**'
       - 'tests/test_pass448_452_characteristic_hjelmslev_release.py'
-      - 'PASS448_452_CHARACTERISTIC_HJELMSLEV_RELEASE.md'
+      - 'analysis/PASS448_452_CHARACTERISTIC_HJELMSLEV_RELEASE.md'
       - '.github/workflows/pass448-452-characteristic-hjelmslev.yml'
   pull_request:
     branches: [master]

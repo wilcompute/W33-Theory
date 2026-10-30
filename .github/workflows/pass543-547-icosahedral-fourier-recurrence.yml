@@ -12,7 +12,7 @@ on:
       - 'analysis/w33_pass547_q5_recurrence_families.py'
       - 'data/w33_pass543_547_icosahedral_fourier_recurrence.json'
       - 'tests/test_w33_pass543_547_icosahedral_fourier_recurrence.py'
-      - 'PASS543_547_ICOSAHEDRAL_FOURIER_RECURRENCE_RELEASE.md'
+      - 'analysis/PASS543_547_ICOSAHEDRAL_FOURIER_RECURRENCE_RELEASE.md'
       - '.github/workflows/pass543-547-icosahedral-fourier-recurrence.yml'
   pull_request:
     branches: [master]

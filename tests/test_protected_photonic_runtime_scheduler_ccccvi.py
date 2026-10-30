@@ -118,7 +118,7 @@ def test_result_artifact_is_present_and_current():
 def test_docs_index_exposes_runtime_scheduler():
     text = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     assert "Protected Photonic Runtime Scheduler" in text
-    assert "PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md" in text
+    assert "analysis/PART_CCCCVI_PROTECTED_PHOTONIC_RUNTIME_SCHEDULER.md" in text
     assert "eight-tick contract" in text
     assert "deterministic MBQC feed-forward" in text
     assert "64-bit-class selector commit" in text

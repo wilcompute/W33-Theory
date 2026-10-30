@@ -90,7 +90,7 @@ and coincides with the photon round-trip resonance condition of the holonet.
 - `PART_CLXXXII_CCT_HASHIMOTO_CARRIER_WELD.py` (CCT weld)
 - `photonic_holonet.tex` (§ FSR bridge — now extended by BT1641)
 - `w33_paper.tex` (§ Spectral Theory — now extended by BT1640)
-- `BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md` (spectral gap chain)
+- `analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md` (spectral gap chain)
 
 ---
 

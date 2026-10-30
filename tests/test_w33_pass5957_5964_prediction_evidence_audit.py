@@ -41,5 +41,5 @@ def test_inflation_and_scalar_observable_maps_are_assignments():
 
 
 def test_supersession_reports_are_live():
-    assert 'SUPERSEDED PHYSICAL-DERIVATION CLAIMS' in read('PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md')
-    assert 'SUPERSEDED PREDICTION-DERIVATION CLAIMS' in read('PASS5933_5956_HITLIST_PREDICTIONS.md')
+    assert 'SUPERSEDED PHYSICAL-DERIVATION CLAIMS' in read('analysis/PASS5913_5932_LINF_BRACKET_ELECTRON_WEYL.md')
+    assert 'SUPERSEDED PREDICTION-DERIVATION CLAIMS' in read('analysis/PASS5933_5956_HITLIST_PREDICTIONS.md')

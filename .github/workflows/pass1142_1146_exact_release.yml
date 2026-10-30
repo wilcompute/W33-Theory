@@ -49,4 +49,4 @@ jobs:
       - name: Run read-only corpus guards
         run: |
           python scripts/migrate_shifted_adjacency_descendants.py --check-only
-          python scripts/build_540_occurrence_registry.py PASS1142_1146_EXACT_RELEASE.md > /dev/null
+          python scripts/build_540_occurrence_registry.py analysis/PASS1142_1146_EXACT_RELEASE.md > /dev/null

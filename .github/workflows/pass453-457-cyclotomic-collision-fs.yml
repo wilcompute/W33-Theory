@@ -21,7 +21,7 @@ on:
       - 'data/w33_pass457_*.json'
       - 'formal/**'
       - 'tests/test_pass453_457_cyclotomic_collision_fs_release.py'
-      - 'PASS453_457_CYCLOTOMIC_COLLISION_FS_RELEASE.md'
+      - 'analysis/PASS453_457_CYCLOTOMIC_COLLISION_FS_RELEASE.md'
       - '.github/workflows/pass453-457-cyclotomic-collision-fs.yml'
   pull_request:
     branches: [master]

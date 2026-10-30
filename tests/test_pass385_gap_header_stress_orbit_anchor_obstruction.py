@@ -180,7 +180,7 @@ def test_pass385_pins_the_anchor_cross_and_scopes_the_no_go() -> None:
 
 def test_pass385_synthesis_states_the_precise_boundary() -> None:
     synthesis = (
-        ROOT / "PASS385_HEADER_STRESS_ORBIT_ANCHOR_OBSTRUCTION.md"
+        ROOT / "analysis/PASS385_HEADER_STRESS_ORBIT_ANCHOR_OBSTRUCTION.md"
     ).read_text(encoding="utf-8")
     assert "C_2\\times D_8" in synthesis
     assert "3,251,404,800" in synthesis

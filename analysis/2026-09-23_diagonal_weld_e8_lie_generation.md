@@ -69,9 +69,9 @@ root-geometry results end to end:
 `analysis/2026-09-21_e8_pauli243_projective_w33_bridge.md`,
 `analysis/2026-09-21_e8_matter81_h27_address_operator_compiler.md`,
 `analysis/2026-09-22_qpsi_gq24_parabolic_compiler.md`,
-`PASS174_DUAL_DISCRIMINANT_FIXED_RAIL_E8_HULL.md`,
-`PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md`,
-`PASS7401_7408_E8_A2_GLOBAL_GEOMETRY.md`, and the existing
+`analysis/PASS174_DUAL_DISCRIMINANT_FIXED_RAIL_E8_HULL.md`,
+`analysis/PASS7385_7400_EISENSTEIN_E8_W33_BRIDGE.md`,
+`analysis/PASS7401_7408_E8_A2_GLOBAL_GEOMETRY.md`, and the existing
 `photonic_holonet_body.tex` trinification surface. Those files establish the
 E8/H27/Pauli243 carriers, A2 root geometry, and earlier compiler boundaries;
 none computes the present 4-by-4 two-generator closure grid. The new claim is

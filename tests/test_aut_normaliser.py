@@ -43,4 +43,4 @@ def test_summary_files_created(tmp_path):
 
 def test_pillar_91_narrative_exists():
     repo = Path(__file__).resolve().parent.parent
-    assert (repo / "PILLAR_91.md").exists(), "PILLAR_91.md missing"
+    assert (repo / "analysis/PILLAR_91.md").exists(), "analysis/PILLAR_91.md missing"

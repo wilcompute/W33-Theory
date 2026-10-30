@@ -232,7 +232,7 @@ def main() -> int:
                                 "exact 'equal size is not correspondence' error CLAUDE.md "
                                 "documents",
             "already_in_corpus": ["CROSS_TRACK_LEDGER.md: W(q) self-dual only for even q",
-                                  "BREAKTHROUGH_JULY_2026_PERPLEXITY_PASS3.md Pass 1117: "
+                                  "analysis/BREAKTHROUGH_JULY_2026_PERPLEXITY_PASS3.md Pass 1117: "
                                   "the two 540-sets are not conjugate as G-sets"],
         },
         "discriminating_test": {

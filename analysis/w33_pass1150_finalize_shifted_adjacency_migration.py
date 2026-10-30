@@ -7,7 +7,7 @@ from typing import Iterable
 ROOT=Path(__file__).resolve().parents[1]
 MARKER="PASS1150_SHIFTED_ADJACENCY_RETRACTION"
 SELF_REGISTRATIONS={
-    "PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md":"corrected_release_surface_with_historical_signature:PASS1150",
+    "analysis/PASS1148_1152_EXACT_CROSSED_BRIDGE_RELEASE.md":"corrected_release_surface_with_historical_signature:PASS1150",
     "analysis/w33_pass1150_finalize_shifted_adjacency_migration.py":"audit_or_erratum:PASS1150",
     "data/w33_pass1150_shifted_adjacency_completion.json":"canonical_audit_certificate:PASS1150",
 }
