@@ -393229,6 +393229,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "53778914571235fcd82a9778069b412c05de40a77ab45254210c80751fc02e2b",
+      "normalized_formula": "-^Reading:^thegeometrydoes*not*forbidk_Y\u22481.3forasinglegeneration",
+      "numeric_literals": [
+        "1.3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12466_12473_DUAL_LINES_EVEN_SETS_KY_FLOOR.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 61,
+          "path": "analysis/PASS12466_12473_DUAL_LINES_EVEN_SETS_KY_FLOOR.md",
+          "raw": "- **Reading:** the geometry does *not* forbid k_Y \u2248 1.3 for a single generation.",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "0e2ca17dd88f21263139d58b9681b0a0ea2f9659ebb7e05d7c1a97f901754349",
+      "structural_formula": "-^Reading:^thegeometrydoes*not*forbidk_Y\u2248#forasinglegeneration"
+    },
+    {
+      "file_count": 1,
       "formula_id": "e4317e02494bf9e6c310ed8c5e38e1eb776df454c07a7a9cea2ef8d5c4d240e7",
       "normalized_formula": "-^Recommendation:^Use^2\u00d720rectangularmesh^withprogrammableMZIstoimplementW(3,3)'s240-edgeadjacency.TheReck/ClementsdecompositionrequiresO(v2)=1600MZIsforarbitrary40\u00d740unitary;butW(3,3)'sfixedsparsestructurerequiresonly240activecouplers",
       "numeric_literals": [
@@ -393377,6 +393404,35 @@
       },
       "structural_family_id": "615520dab8cdea7d63b8073608342598c72dd37858da3ceb7a3adde1db97f51b",
       "structural_formula": "-^SM_2#(v0\u2013v3)andSM_2#(v6\u2013v8):exactlythreechiralStandard-Modelgenerations^,withTrY=#.Theonlyextrasare4pseudo-real"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "79109fcae7792e43ad467ca9044e4583d5386923a7cd8934cc0019f64c2a6b5c",
+      "normalized_formula": "-^Strings:^unificationforces1\u2264k_Y<5/3,andhenceliftablefractionalstates.SM_2541'ssinglegenerationwouldallow",
+      "numeric_literals": [
+        "3",
+        "5",
+        "541"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/PASS12466_12473_DUAL_LINES_EVEN_SETS_KY_FLOOR.md"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 79,
+          "path": "analysis/PASS12466_12473_DUAL_LINES_EVEN_SETS_KY_FLOOR.md",
+          "raw": "- **Strings:** unification forces 1 \u2264 k_Y < 5/3, and hence liftable fractional states. SM_2541's single generation would allow",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "92d81ad832578ed2999ad71575edd32ea0f6d8f9e3e3b6898aad59d336681216",
+      "structural_formula": "-^Strings:^unificationforces1\u2264k_Y<#/#,andhenceliftablefractionalstates.SM_2#'ssinglegenerationwouldallow"
     },
     {
       "file_count": 1,
@@ -427901,6 +427957,35 @@
       },
       "structural_family_id": "301668154085a4047eb4e8386c2be6651b1c76220757040920563170f80e9d21",
       "structural_formula": "#\\lei<j\\le5"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "bb61647d569e058d6c7af7481fe83b1d8a3791f9f22570b5f9484fd76174c74d",
+      "normalized_formula": "1\\lek_Y<5/3",
+      "numeric_literals": [
+        "1",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "papers/forty_points/appA_ledger.tex"
+      ],
+      "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 694,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "1\\le k_Y<5/3",
+          "status": "certified_or_theorem"
+        }
+      ],
+      "status_profile": {
+        "certified_or_theorem": 1
+      },
+      "structural_family_id": "ba8610d6cc473093364c52c3648b6127fa964759ed9b147c23ff44b2d7f82bee",
+      "structural_formula": "#\\lek_Y<#/#"
     },
     {
       "file_count": 1,
@@ -908858,6 +908943,38 @@
     },
     {
       "file_count": 1,
+      "formula_id": "bfe2a2e3bf2832bf27d36dd79ed2f534223dc03e030bb1776123b196c3b9ba4d",
+      "normalized_formula": "[ev[q][\"min_even_line_set\"]forqin(2,3,5)]=[6,10,20]andall(ev[q][\"optimal\"]andev[q][\"verified_even\"]",
+      "numeric_literals": [
+        "10",
+        "2",
+        "20",
+        "3",
+        "5",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 45,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "[ev[q][\"min_even_line_set\"] for q in (2, 3, 5)] == [6, 10, 20] and all(ev[q][\"optimal\"] and ev[q][\"verified_even\"]",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "e5ae010194cf86caddac39cf95ae726a48de86384c20e58522c137f79315164f",
+      "structural_formula": "[ev[q][\"min_even_line_set\"]forqin(#,#,#)]=[#,#,#]andall(ev[q][\"optimal\"]andev[q][\"verified_even\"]"
+    },
+    {
+      "file_count": 1,
       "formula_id": "695936ed0325a7df74585829f9d98f354c730ff063ab969be9bb4e4195073275",
       "normalized_formula": "[f,k,2\\mu]=[24,12,8]",
       "numeric_literals": [
@@ -1012590,7 +1012707,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 696,
+          "line": 697,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "\\mu\\approx4.2\\times10^6",
           "status": "retrospective_fit"
@@ -1106117,6 +1106234,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "d1e82e49f677050d39464fe05a1166e09501d72e399e61e431c34dd9be5c6dc3",
+      "normalized_formula": "andall(ev[q][\"min_even_line_set\"]>2*(q+1)forqin(3,5)))",
+      "numeric_literals": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 47,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "and all(ev[q][\"min_even_line_set\"] > 2 * (q + 1) for q in (3, 5)))",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "5954b9d8ff72850745d9c1a0dfbd596c84e8155128a08fdba7cdb480567c29ec",
+      "structural_formula": "andall(ev[q][\"min_even_line_set\"]>#*(q+#)forqin(#,#)))"
+    },
+    {
+      "file_count": 1,
       "formula_id": "b54dbff6b9ad8c464c82d8cfe74e7dbec20acac4eb4012e406a0b038f1d60b60",
       "normalized_formula": "andall(omega(v,b,J)=0forbinprev)",
       "numeric_literals": [
@@ -1107646,6 +1107793,36 @@
       },
       "structural_family_id": "03f9199673e266f1433184241f2512f484413dbc0be2607a0f0b776fc03fc685",
       "structural_formula": "andev.get(\"('identical','identical','identical')\")=#)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "db23b98207fd6e484599ba7c0a4d231c46bb3fbdd8b64638b874f5e294ef6bcc",
+      "normalized_formula": "andev[q][\"coverage_profile\"]=[0,2]forqin(2,3,5))andev[2][\"min_even_line_set\"]=2*3",
+      "numeric_literals": [
+        "0",
+        "2",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 46,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "and ev[q][\"coverage_profile\"] == [0, 2] for q in (2, 3, 5)) and ev[2][\"min_even_line_set\"] == 2 * 3",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7ff9be5a99a0c3a7c172a4ccabd0791fb5f90c0ae24c6e4057131aed02512b30",
+      "structural_formula": "andev[q][\"coverage_profile\"]=[#,#]forqin(#,#,#))andev[#][\"min_even_line_set\"]=#*#"
     },
     {
       "file_count": 1,
@@ -1203332,6 +1203509,37 @@
     },
     {
       "file_count": 1,
+      "formula_id": "66e41b1cc935fe0bd27dec7dcff9aadbd142949ce7db91fbed4e2acc46425ebc",
+      "normalized_formula": "checks[\"12468:single-fieldCauchy-Schwarzfloor=1inall52SM_2541modelsandtheSM_2913control(theuniversale^cbound)\"]=(",
+      "numeric_literals": [
+        "1",
+        "12468",
+        "2",
+        "541",
+        "913"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 50,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "checks[\"12468: single-field Cauchy-Schwarz floor = 1 in all 52 SM_2541 models and the SM_2913 control (the universal e^c bound)\"] = (",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "25b2fd0339d78a908c00ef918b2622c67f3724123369a761f8b9563a5e207334",
+      "structural_formula": "checks[\"#:single-fieldCauchy-Schwarzfloor=#inall5#SM_2#modelsandtheSM_2#control(theuniversale^cbound)\"]=("
+    },
+    {
+      "file_count": 1,
       "formula_id": "bb811ae9007f03eb7458a962180e5d159626dcb3cc27634fcee7f7c8699f37a8",
       "normalized_formula": "checks[\"15_fermionic\"]=g=15#15Weylfermionspergeneration",
       "numeric_literals": [
@@ -1248212,7 +1248420,7 @@
       "numeric_literals": [
         "2"
       ],
-      "occurrence_count": 2,
+      "occurrence_count": 3,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
         "papers/forty_points/appA_ledger.tex"
@@ -1248231,10 +1248439,17 @@
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "d=2q",
           "status": "unclassified"
+        },
+        {
+          "category": "inline_math",
+          "line": 694,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "d=2q",
+          "status": "certified_or_theorem"
         }
       ],
       "status_profile": {
-        "certified_or_theorem": 1,
+        "certified_or_theorem": 2,
         "unclassified": 1
       },
       "structural_family_id": "fa3d41f6f49f714d7e64aa0bda9863260fb454ee48af5e0b45d225efeb087494",
@@ -1305526,6 +1305741,36 @@
     },
     {
       "file_count": 1,
+      "formula_id": "65d5152f38bacdeca662bfc23b45ad13ac5e4476cd2ef9e805a3346b241fd8b3",
+      "normalized_formula": "ev={q:j(f\"search_drivers_12466/even_line_sets_q{q}.json\")forqin(2,3,5)}",
+      "numeric_literals": [
+        "2",
+        "2466",
+        "3",
+        "5"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 39,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "ev = {q: j(f\"search_drivers_12466/even_line_sets_q{q}.json\") for q in (2, 3, 5)}",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "d0f2816d4fc179b3524fd4cb66268e2ef81a2ce0f5e58509a72c1c23f61645b0",
+      "structural_formula": "ev={q:j(f\"search_drivers_1#/even_line_sets_q{q}.json\")forqin(#,#,#)}"
+    },
+    {
+      "file_count": 1,
       "formula_id": "a81d657d8f9439642ef36c2f33f62abac8499f0c51bf6cf75e8421a1cbbcb3d6",
       "normalized_formula": "ev={str(int(x)):int(m)forx,minM.eigenvals().items()};assertev={'8':1,'4':4,'0':9,'-2':8,'-4':2}",
       "numeric_literals": [
@@ -1305663,6 +1305908,33 @@
       },
       "structural_family_id": "f62776eb2f524c7546f956ef17563ba47bf195a8fe1e486ef5d99584fdb120ca",
       "structural_formula": "ev[#]=##theconstantmodeisexactlyzeroonthisconnectedgraph"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "70f702f71640c3f73f1cd232f48e739ef75dc89aeef6ff68dac3d0beb252cfe3",
+      "normalized_formula": "ev[7]=json.loads(p7.read_text())",
+      "numeric_literals": [
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 42,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "ev[7] = json.loads(p7.read_text())",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "7b2205a4fabbb5245bc2196b364b61aba1d1a61391ef0b4f91df102a90b385ca",
+      "structural_formula": "ev[#]=json.loads(p7.read_text())"
     },
     {
       "file_count": 1,
@@ -1407095,6 +1407367,68 @@
     },
     {
       "file_count": 1,
+      "formula_id": "cd5aef8ce2a9a84b17b0201031a4f4996a77bb0038dac8df16ff400a63bc2e2d",
+      "normalized_formula": "kc4=j(\"search_drivers_12468/ysearch_Z6II_06_SM_20260917_2541_c22_noanom_loose_kcap4.json\")",
+      "numeric_literals": [
+        "0260917",
+        "2",
+        "2468",
+        "541",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 64,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "kc4 = j(\"search_drivers_12468/ysearch_Z6II_06_SM_20260917_2541_c22_noanom_loose_kcap4.json\")",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "060ac9ee509830bff68d4a35b42a859010d8701e13d947766d2462b7e2326d96",
+      "structural_formula": "kc4=j(\"search_drivers_1#/ysearch_Z6II_0#_SM_2#_2#_c2#_noanom_loose_kcap4.json\")"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "fe8ceda640e9790355a41f46214173885230f746a10baf6db5f9b4459ddb1bb0",
+      "normalized_formula": "kc=j(\"search_drivers_12468/ysearch_Z6II_06_SM_20260917_2541_c22_noanom_loose_kcap5o3.json\")",
+      "numeric_literals": [
+        "0260917",
+        "2",
+        "2468",
+        "541",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 63,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "kc = j(\"search_drivers_12468/ysearch_Z6II_06_SM_20260917_2541_c22_noanom_loose_kcap5o3.json\")",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "8138c160381f49f67069622ca3176c99641d311d8ac943a3469f4bb038a31250",
+      "structural_formula": "kc=j(\"search_drivers_1#/ysearch_Z6II_0#_SM_2#_2#_c2#_noanom_loose_kcap5o3.json\")"
+    },
+    {
+      "file_count": 1,
       "formula_id": "6b8506221b40ac8a43536da059d4631b2bc421e594c20b2d66e282158df1bce4",
       "normalized_formula": "kd=dict(single=kernel([0]),same_point=kernel([0,1]),collinear=max(kernel([0,3*col+k])forkinrange(3))",
       "numeric_literals": [
@@ -1440127,7 +1440461,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 695,
+          "line": 696,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_\\mu/m_\\tau=0.0588",
           "status": "retrospective_fit"
@@ -1445261,7 +1445595,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 695,
+          "line": 696,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "m_e/m_\\mu=0.00474",
           "status": "retrospective_fit"
@@ -1494960,6 +1495294,34 @@
       },
       "structural_family_id": "e1f6cddaec0d23690a018bdd6fe182a55aa1085bbca4a64f5c482f411fed16d8",
       "structural_formula": "notes=(f\"sin^#(tW)=q/(q^#+q)={q}/{q^#+q}={w3#_sin2_weinberg():#f}.\""
+    },
+    {
+      "file_count": 1,
+      "formula_id": "681d1f418a4f49e9730842ab6f4b7801b6b25f47649e944c1f1aa3996aa8bc37",
+      "normalized_formula": "notev[7][\"optimal\"]andev[7][\"verified_even\"]andev[7][\"min_even_line_set\"]=40)",
+      "numeric_literals": [
+        "40",
+        "7"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 61,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "not ev[7][\"optimal\"] and ev[7][\"verified_even\"] and ev[7][\"min_even_line_set\"] == 40)",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "824ad29a08c0da5b96800955b70d32e849b9ffe61b99a79fabe9d665154e870b",
+      "structural_formula": "notev[#][\"optimal\"]andev[#][\"verified_even\"]andev[#][\"min_even_line_set\"]=#)"
     },
     {
       "file_count": 1,
@@ -1667189,6 +1667551,33 @@
     },
     {
       "file_count": 1,
+      "formula_id": "b6f54d3d75d478e9de69382505bc64db2473285a2eb1bf74894a74e0d7717e63",
+      "normalized_formula": "py-3scripts/regenerate_root_results.py#targets=PART_*_results.jsonnamedbytests/*.pyandmissing",
+      "numeric_literals": [
+        "3"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "scripts/regenerate_root_results.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 8,
+          "path": "scripts/regenerate_root_results.py",
+          "raw": "py -3 scripts/regenerate_root_results.py # targets = PART_*_results.json named by tests/*.py and missing",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "253644eb846bc7dbfcf02b1add127f1286e55622fda4169ebde007587e9cb8a1",
+      "structural_formula": "py-#scripts/regenerate_root_results.py#targets=PART_*_results.jsonnamedbytests/*.pyandmissing"
+    },
+    {
+      "file_count": 1,
       "formula_id": "9b7799085ef7dc129e57720a7d170d69c383ef288eea06ed1d0dceca733c288c",
       "normalized_formula": "p{=}3",
       "numeric_literals": [
@@ -1672361,7 +1672750,7 @@
       "structural_formula": "q=#,#,#maximasuppliedbyalready-certifiedminimumdistancesandrecords"
     },
     {
-      "file_count": 1,
+      "file_count": 2,
       "formula_id": "83ebdb1d8b178565cefbfec34c22300aeccab8d44935c535415b0b17713eb7f4",
       "normalized_formula": "q=2,3,5",
       "numeric_literals": [
@@ -1672369,12 +1672758,20 @@
         "3",
         "5"
       ],
-      "occurrence_count": 1,
+      "occurrence_count": 2,
       "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
       "source_files": [
+        "papers/forty_points/appA_ledger.tex",
         "w33_paper_body.tex"
       ],
       "source_locations": [
+        {
+          "category": "inline_math",
+          "line": 694,
+          "path": "papers/forty_points/appA_ledger.tex",
+          "raw": "q=2,3,5",
+          "status": "certified_or_theorem"
+        },
         {
           "category": "inline_math",
           "line": 14557,
@@ -1672384,6 +1672781,7 @@
         }
       ],
       "status_profile": {
+        "certified_or_theorem": 1,
         "unclassified": 1
       },
       "structural_family_id": "5753ec449d97ba9bb9003aa824cb8db105048c99a06832787ad07ee9175bc326",
@@ -1707816,6 +1708214,33 @@
       },
       "structural_family_id": "70589fe478e5c94a3a6a24c18834d02002e3914049536b19d68f860f4a146dab",
       "structural_formula": "res[\"#_c2#\"]=dict(span=sp_,controls=dc,vacuum=vc)"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "82de15f58e4e0089ef33d760f5565716011b80d79a862e6d3a4b7471c5e5bd4e",
+      "normalized_formula": "res[\"12467\"]=ev",
+      "numeric_literals": [
+        "12467"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 43,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "res[\"12467\"] = ev",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "a6a2d3fd072cab51b8df33db0c6daa256da751b1585539024eaa78b9c749c878",
+      "structural_formula": "res[\"#\"]=ev"
     },
     {
       "file_count": 1,
@@ -1866907,7 +1867332,7 @@
       "source_locations": [
         {
           "category": "inline_math",
-          "line": 695,
+          "line": 696,
           "path": "papers/forty_points/appA_ledger.tex",
           "raw": "y_b/y_\\tau=1.002",
           "status": "retrospective_fit"
@@ -1868889,6 +1869314,37 @@
       },
       "structural_family_id": "5530ff1ee323ca1ff3e81a5d79576e371da635378d96ba520f2ab6f2d0a7c2b5",
       "structural_formula": "ys=alpha+#beta"
+    },
+    {
+      "file_count": 1,
+      "formula_id": "b00cddeafade2a90eea46e7a1702066e118aaf5234cb2f86331502bc19ababc4",
+      "normalized_formula": "ys=j(\"search_drivers_12468/ysearch_Z6II_06_SM_20260917_2541_c22_noanom_loose.json\")",
+      "numeric_literals": [
+        "0260917",
+        "2",
+        "2468",
+        "541",
+        "6"
+      ],
+      "occurrence_count": 1,
+      "prospective_credit_default": "ineligible_until_registry_entry_freezes_data_and_null_family",
+      "source_files": [
+        "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py"
+      ],
+      "source_locations": [
+        {
+          "category": "relation_line",
+          "line": 62,
+          "path": "analysis/w33_pass12466_to_12473_dual_lines_even_sets_ky_floor.py",
+          "raw": "ys = j(\"search_drivers_12468/ysearch_Z6II_06_SM_20260917_2541_c22_noanom_loose.json\")",
+          "status": "unclassified"
+        }
+      ],
+      "status_profile": {
+        "unclassified": 1
+      },
+      "structural_family_id": "522dfe29ce09cb01ddcce636f97559477c10d801b7b32554ea894faf36a1b1dd",
+      "structural_formula": "ys=j(\"search_drivers_1#/ysearch_Z6II_0#_SM_2#_2#_c2#_noanom_loose.json\")"
     },
     {
       "file_count": 1,
@@ -1917011,9 +1917467,9 @@
       "structural_formula": "\u2713E6hasdim7#=T1#(standard)"
     }
   ],
-  "frozen_at": "2026-10-30T08:55:28-04:00",
+  "frozen_at": "2026-10-30T16:04:23Z",
   "pass": 398,
-  "repository_head": "b4a1559575e4c5978ba5059870afce6241a57a64",
+  "repository_head": "26bc182902aa4bf08c1903d55c2788c3e92107c6",
   "scanner_policy": {
     "globs": [
       "docs/index.html",
@@ -2008540,6 +2008996,14 @@
     },
     {
       "exact_formula_ids": [
+        "bb61647d569e058d6c7af7481fe83b1d8a3791f9f22570b5f9484fd76174c74d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "ba8610d6cc473093364c52c3648b6127fa964759ed9b147c23ff44b2d7f82bee",
+      "structural_formula": "#\\lek_Y<#/#"
+    },
+    {
+      "exact_formula_ids": [
         "03e30f06ba5208dcfc3c7268dc314b0c42a62ea40d45fa105c14935bdebbc31d"
       ],
       "exact_member_count": 1,
@@ -2046601,6 +2047065,14 @@
     },
     {
       "exact_formula_ids": [
+        "53778914571235fcd82a9778069b412c05de40a77ab45254210c80751fc02e2b"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "0e2ca17dd88f21263139d58b9681b0a0ea2f9659ebb7e05d7c1a97f901754349",
+      "structural_formula": "-^Reading:^thegeometrydoes*not*forbidk_Y\u2248#forasinglegeneration"
+    },
+    {
+      "exact_formula_ids": [
         "e4317e02494bf9e6c310ed8c5e38e1eb776df454c07a7a9cea2ef8d5c4d240e7"
       ],
       "exact_member_count": 1,
@@ -2046638,6 +2047110,14 @@
       "exact_member_count": 1,
       "structural_family_id": "615520dab8cdea7d63b8073608342598c72dd37858da3ceb7a3adde1db97f51b",
       "structural_formula": "-^SM_2#(v0\u2013v3)andSM_2#(v6\u2013v8):exactlythreechiralStandard-Modelgenerations^,withTrY=#.Theonlyextrasare4pseudo-real"
+    },
+    {
+      "exact_formula_ids": [
+        "79109fcae7792e43ad467ca9044e4583d5386923a7cd8934cc0019f64c2a6b5c"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "92d81ad832578ed2999ad71575edd32ea0f6d8f9e3e3b6898aad59d336681216",
+      "structural_formula": "-^Strings:^unificationforces1\u2264k_Y<#/#,andhenceliftablefractionalstates.SM_2#'ssinglegenerationwouldallow"
     },
     {
       "exact_formula_ids": [
@@ -2161816,6 +2162296,14 @@
     },
     {
       "exact_formula_ids": [
+        "bfe2a2e3bf2832bf27d36dd79ed2f534223dc03e030bb1776123b196c3b9ba4d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "e5ae010194cf86caddac39cf95ae726a48de86384c20e58522c137f79315164f",
+      "structural_formula": "[ev[q][\"min_even_line_set\"]forqin(#,#,#)]=[#,#,#]andall(ev[q][\"optimal\"]andev[q][\"verified_even\"]"
+    },
+    {
+      "exact_formula_ids": [
         "695936ed0325a7df74585829f9d98f354c730ff063ab969be9bb4e4195073275"
       ],
       "exact_member_count": 1,
@@ -2211954,6 +2212442,14 @@
     },
     {
       "exact_formula_ids": [
+        "d1e82e49f677050d39464fe05a1166e09501d72e399e61e431c34dd9be5c6dc3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "5954b9d8ff72850745d9c1a0dfbd596c84e8155128a08fdba7cdb480567c29ec",
+      "structural_formula": "andall(ev[q][\"min_even_line_set\"]>#*(q+#)forqin(#,#)))"
+    },
+    {
+      "exact_formula_ids": [
         "b54dbff6b9ad8c464c82d8cfe74e7dbec20acac4eb4012e406a0b038f1d60b60"
       ],
       "exact_member_count": 1,
@@ -2212361,6 +2212857,14 @@
       "exact_member_count": 1,
       "structural_family_id": "03f9199673e266f1433184241f2512f484413dbc0be2607a0f0b776fc03fc685",
       "structural_formula": "andev.get(\"('identical','identical','identical')\")=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "db23b98207fd6e484599ba7c0a4d231c46bb3fbdd8b64638b874f5e294ef6bcc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7ff9be5a99a0c3a7c172a4ccabd0791fb5f90c0ae24c6e4057131aed02512b30",
+      "structural_formula": "andev[q][\"coverage_profile\"]=[#,#]forqin(#,#,#))andev[#][\"min_even_line_set\"]=#*#"
     },
     {
       "exact_formula_ids": [
@@ -2238250,6 +2238754,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e2469b60e5b2d81db35fca9e2f29a5142067694d5de3e9d0339433077d9b4b7e",
       "structural_formula": "checks[\"#:shiftclassrank1#vsscalar-#Higgsbranchrank1#--rootidentityonly\"]=rank_v9=#andrank_v0=#"
+    },
+    {
+      "exact_formula_ids": [
+        "66e41b1cc935fe0bd27dec7dcff9aadbd142949ce7db91fbed4e2acc46425ebc"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "25b2fd0339d78a908c00ef918b2622c67f3724123369a761f8b9563a5e207334",
+      "structural_formula": "checks[\"#:single-fieldCauchy-Schwarzfloor=#inall5#SM_2#modelsandtheSM_2#control(theuniversale^cbound)\"]=("
     },
     {
       "exact_formula_ids": [
@@ -2266665,6 +2267177,14 @@
     },
     {
       "exact_formula_ids": [
+        "65d5152f38bacdeca662bfc23b45ad13ac5e4476cd2ef9e805a3346b241fd8b3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "d0f2816d4fc179b3524fd4cb66268e2ef81a2ce0f5e58509a72c1c23f61645b0",
+      "structural_formula": "ev={q:j(f\"search_drivers_1#/even_line_sets_q{q}.json\")forqin(#,#,#)}"
+    },
+    {
+      "exact_formula_ids": [
         "a81d657d8f9439642ef36c2f33f62abac8499f0c51bf6cf75e8421a1cbbcb3d6"
       ],
       "exact_member_count": 1,
@@ -2266694,6 +2267214,14 @@
       "exact_member_count": 1,
       "structural_family_id": "f62776eb2f524c7546f956ef17563ba47bf195a8fe1e486ef5d99584fdb120ca",
       "structural_formula": "ev[#]=##theconstantmodeisexactlyzeroonthisconnectedgraph"
+    },
+    {
+      "exact_formula_ids": [
+        "70f702f71640c3f73f1cd232f48e739ef75dc89aeef6ff68dac3d0beb252cfe3"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "7b2205a4fabbb5245bc2196b364b61aba1d1a61391ef0b4f91df102a90b385ca",
+      "structural_formula": "ev[#]=json.loads(p7.read_text())"
     },
     {
       "exact_formula_ids": [
@@ -2294141,6 +2294669,22 @@
     },
     {
       "exact_formula_ids": [
+        "cd5aef8ce2a9a84b17b0201031a4f4996a77bb0038dac8df16ff400a63bc2e2d"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "060ac9ee509830bff68d4a35b42a859010d8701e13d947766d2462b7e2326d96",
+      "structural_formula": "kc4=j(\"search_drivers_1#/ysearch_Z6II_0#_SM_2#_2#_c2#_noanom_loose_kcap4.json\")"
+    },
+    {
+      "exact_formula_ids": [
+        "fe8ceda640e9790355a41f46214173885230f746a10baf6db5f9b4459ddb1bb0"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "8138c160381f49f67069622ca3176c99641d311d8ac943a3469f4bb038a31250",
+      "structural_formula": "kc=j(\"search_drivers_1#/ysearch_Z6II_0#_SM_2#_2#_c2#_noanom_loose_kcap5o3.json\")"
+    },
+    {
+      "exact_formula_ids": [
         "6b8506221b40ac8a43536da059d4631b2bc421e594c20b2d66e282158df1bce4"
       ],
       "exact_member_count": 1,
@@ -2317545,6 +2318089,14 @@
       "exact_member_count": 1,
       "structural_family_id": "e1f6cddaec0d23690a018bdd6fe182a55aa1085bbca4a64f5c482f411fed16d8",
       "structural_formula": "notes=(f\"sin^#(tW)=q/(q^#+q)={q}/{q^#+q}={w3#_sin2_weinberg():#f}.\""
+    },
+    {
+      "exact_formula_ids": [
+        "681d1f418a4f49e9730842ab6f4b7801b6b25f47649e944c1f1aa3996aa8bc37"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "824ad29a08c0da5b96800955b70d32e849b9ffe61b99a79fabe9d665154e870b",
+      "structural_formula": "notev[#][\"optimal\"]andev[#][\"verified_even\"]andev[#][\"min_even_line_set\"]=#)"
     },
     {
       "exact_formula_ids": [
@@ -2365106,6 +2365658,14 @@
     },
     {
       "exact_formula_ids": [
+        "b6f54d3d75d478e9de69382505bc64db2473285a2eb1bf74894a74e0d7717e63"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "253644eb846bc7dbfcf02b1add127f1286e55622fda4169ebde007587e9cb8a1",
+      "structural_formula": "py-#scripts/regenerate_root_results.py#targets=PART_*_results.jsonnamedbytests/*.pyandmissing"
+    },
+    {
+      "exact_formula_ids": [
         "9b7799085ef7dc129e57720a7d170d69c383ef288eea06ed1d0dceca733c288c",
         "b4696b8ea5d91420dc631e559e1ccbfe6e7b625e7d49eeea412ae27ce8a91dbe"
       ],
@@ -2373751,6 +2374311,14 @@
       "exact_member_count": 1,
       "structural_family_id": "b803c072b849433c69df06b791858397862ac3c3cb6a78015bd29fcf7a55fe61",
       "structural_formula": "res[\"#\"]=dict(x_in_F=#,total=#,random_expectation=#*#/#,wilson_a2_fibre=#)"
+    },
+    {
+      "exact_formula_ids": [
+        "82de15f58e4e0089ef33d760f5565716011b80d79a862e6d3a4b7471c5e5bd4e"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "a6a2d3fd072cab51b8df33db0c6daa256da751b1585539024eaa78b9c749c878",
+      "structural_formula": "res[\"#\"]=ev"
     },
     {
       "exact_formula_ids": [
@@ -2417306,6 +2417874,14 @@
     },
     {
       "exact_formula_ids": [
+        "b00cddeafade2a90eea46e7a1702066e118aaf5234cb2f86331502bc19ababc4"
+      ],
+      "exact_member_count": 1,
+      "structural_family_id": "522dfe29ce09cb01ddcce636f97559477c10d801b7b32554ea894faf36a1b1dd",
+      "structural_formula": "ys=j(\"search_drivers_1#/ysearch_Z6II_0#_SM_2#_2#_c2#_noanom_loose.json\")"
+    },
+    {
+      "exact_formula_ids": [
         "6ad6714d2245a997aaa4c039a01df1813ea28586ddb611d22176f24b72060ae3"
       ],
       "exact_member_count": 1,
@@ -2429287,20 +2429863,20 @@
     }
   ],
   "summary": {
-    "bytes_scanned": 93042437,
-    "exact_formula_families": 65537,
-    "files_scanned": 12821,
-    "formula_occurrences": 71711,
+    "bytes_scanned": 93062558,
+    "exact_formula_families": 65552,
+    "files_scanned": 12824,
+    "formula_occurrences": 71728,
     "status_occurrences": {
-      "certified_or_theorem": 5398,
+      "certified_or_theorem": 5401,
       "killed_or_retracted": 1964,
       "open_or_conditional": 2446,
       "preregistered": 36,
       "retrospective_fit": 5452,
-      "unclassified": 56415
+      "unclassified": 56429
     },
-    "structural_families": 63813
+    "structural_families": 63828
   },
   "title": "Frozen repository-wide numerical physics formula universe",
-  "universe_sha256": "8d9ee3f508a0236e777d27c1385197713c3bcb61a30c25e83d00f2121af5b1f3"
+  "universe_sha256": "003ff6f8011623072f6ed950093e203f3ccbf18b2ef0e2ce7d718977b3a954f0"
 }
