@@ -1,0 +1,489 @@
+{
+  "status": "FROZEN_COMPLETED_AND_TIMED_OUT_ATTEMPTS_KEPT_SEPARATELY",
+  "initial_source_sha256": "fba0660746b2ce835c386682c1d117d45d42f918421509b1c29a1512bc452a73",
+  "initial_source_text": "import sys,time,itertools,json,pathlib\nimport numpy as np\nsys.stdout.reconfigure(encoding='utf-8',errors='replace')\ndef solve(q,square=False,limit=90):\n t0=time.monotonic();target=(q+1)//2;I=q\n pairs=list(itertools.combinations(range(q+1),2));lookup={p:i for i,p in enumerate(pairs)}\n P=np.array([(2*a%q,1,0) if b==I else (a*b%q,(a+b)*pow(2,-1,q)%q,1) for a,b in pairs],dtype=np.int64)\n n=len(P);x,y,z=P.T;squares={a*a%q for a in range(1,q)};chi=np.array([0]+[1 if a in squares else -1 for a in range(1,q)])\n def bits(mask):return int.from_bytes(np.packbits(mask,bitorder='little').tobytes(),'little')\n adj=[]\n for a,b,c in P:\n  aa=(b*z-c*y)%q;bb=(c*x-a*z)%q;cc=(a*y-b*x)%q\n  adj.append(bits(chi[(bb*bb-4*aa*cc)%q]==(1 if square else -1)))\n incident=[0]*(q+1)\n for j,(a,b) in enumerate(pairs):incident[a]|=1<<j;incident[b]|=1<<j\n allpoints=(1<<(q+1))-1;linecache={};nodes=0;maxdepth=0;witness=None\n def linemask(i,j):\n  a,b,c=map(int,np.cross(P[i],P[j])%q);u=next(v for v in (a,b,c) if v);inv=pow(u,-1,q);key=tuple(v*inv%q for v in (a,b,c))\n  if key not in linecache:\n   linecache[key]=bits((key[0]*x+key[1]*y+key[2]*z)%q==0)\n  return linecache[key]\n def bt(chosen,free,allowed):\n  nonlocal nodes,maxdepth,witness\n  nodes+=1;maxdepth=max(maxdepth,len(chosen))\n  if nodes%1024==0 and time.monotonic()-t0>limit:raise TimeoutError\n  if not free:witness=list(chosen);return True\n  options=None\n  for a in range(q+1):\n   if free>>a&1:\n    cand=allowed&incident[a];count=cand.bit_count()\n    if count==0:return False\n    if options is None or count<options.bit_count():options=cand\n  while options:\n   bit=options&-options;options-=bit;j=bit.bit_length()-1;a,b=pairs[j]\n   nextallowed=allowed&adj[j]\n   for i in chosen:\n    nextallowed&=~linemask(i,j)\n   if bt(chosen+[j],free&~((1<<a)|(1<<b)),nextallowed):return True\n  return False\n start=lookup[(0,I)]\n try:\n  found=bt([start],allpoints&~((1<<I)|1),adj[start]);status='found' if found else 'none_complete'\n except TimeoutError:status='timeout'\n rec=dict(q=q,family='square' if square else 'nonsquare',status=status,nodes=nodes,max_depth=maxdepth,seconds=round(time.monotonic()-t0,3),\n          normalized_first_pair=[0,'inf'],matching=[['inf' if a==I else a,'inf' if b==I else b] for a,b in (pairs[j] for j in witness)] if witness else None)\n return rec\nif __name__=='__main__':\n out=[]\n for q in [int(a) for a in sys.argv[1:] if a.isdigit()]:\n  row=solve(q,square='--square' in sys.argv,limit=90);out.append(row);print(json.dumps(row),flush=True)\n  pathlib.Path(r'C:\\Users\\wiljd\\AppData\\Local\\Temp\\w33_arc_probe'+('_square' if '--square' in sys.argv else '')+'.json').write_text(json.dumps(out,indent=2))\n",
+  "identical_recursion_AST": [
+    "bt",
+    "linemask",
+    "bits"
+  ],
+  "initial_completed_attempts": [
+    {
+      "q": 3,
+      "family": "nonsquare",
+      "status": "found",
+      "nodes": 2,
+      "max_depth": 2,
+      "seconds": 0.02,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": [
+        [
+          0,
+          "inf"
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "q": 5,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 3,
+      "max_depth": 2,
+      "seconds": 0.01,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 7,
+      "family": "nonsquare",
+      "status": "found",
+      "nodes": 4,
+      "max_depth": 4,
+      "seconds": 0.014,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": [
+        [
+          0,
+          "inf"
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "q": 11,
+      "family": "nonsquare",
+      "status": "found",
+      "nodes": 6,
+      "max_depth": 6,
+      "seconds": 0.016,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": [
+        [
+          0,
+          "inf"
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "q": 19,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 35,
+      "max_depth": 4,
+      "seconds": 0.057,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 31,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 130,
+      "max_depth": 5,
+      "seconds": 0.177,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 67,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 1852,
+      "max_depth": 5,
+      "seconds": 3.735,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 71,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 2319,
+      "max_depth": 5,
+      "seconds": 8.221,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 79,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 4186,
+      "max_depth": 5,
+      "seconds": 11.433,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 83,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 5068,
+      "max_depth": 5,
+      "seconds": 11.263,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 103,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 15304,
+      "max_depth": 6,
+      "seconds": 36.102,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 107,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 18441,
+      "max_depth": 6,
+      "seconds": 30.155,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 127,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 41672,
+      "max_depth": 6,
+      "seconds": 67.05,
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    }
+  ],
+  "later_attempts": [
+    {
+      "q": 3,
+      "family": "nonsquare",
+      "status": "found",
+      "nodes": 2,
+      "max_depth": 2,
+      "seconds": 0.413,
+      "backend": "conic",
+      "compatibility_sha256": "435e4bf13f251b3f7fb82c98c03e5dad76103718ec6f8c9fff83ef990fb882cf",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": [
+        [
+          0,
+          "inf"
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "q": 5,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 3,
+      "max_depth": 2,
+      "seconds": 0.001,
+      "backend": "conic",
+      "compatibility_sha256": "0b2212ee3b7122e92a7d20dffd51861b2ab87154e127933eca38eea7f71a7f1a",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 7,
+      "family": "nonsquare",
+      "status": "found",
+      "nodes": 4,
+      "max_depth": 4,
+      "seconds": 0.064,
+      "backend": "conic",
+      "compatibility_sha256": "30f4c573f462bcbc40f8f6475ff6ea5d1d315486a15803846f11f73613c95dc8",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": [
+        [
+          0,
+          "inf"
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "q": 11,
+      "family": "nonsquare",
+      "status": "found",
+      "nodes": 6,
+      "max_depth": 6,
+      "seconds": 0.18,
+      "backend": "conic",
+      "compatibility_sha256": "6d3aea3d9dffda8be10fa7f886d65fcb6411df6b90746fdc4f0a95b1178c813c",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": [
+        [
+          0,
+          "inf"
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "q": 19,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 35,
+      "max_depth": 4,
+      "seconds": 0.339,
+      "backend": "conic",
+      "compatibility_sha256": "d20d953a9ee0b67bf2c7d68d4abc3350e3e754b311dfee1733b716486d7039e4",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 31,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 130,
+      "max_depth": 5,
+      "seconds": 1.723,
+      "backend": "conic",
+      "compatibility_sha256": "029d4f67e9223363ddfb122e9d740f64bc9f8ff589c4224dcf52077b6b2fd303",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 67,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 1852,
+      "max_depth": 5,
+      "seconds": 19.713,
+      "backend": "conic",
+      "compatibility_sha256": "18ef68b0c814561bc5b0f473a08e9a676ac4f590e33884f69e9886c76f22c69e",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 71,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 2319,
+      "max_depth": 5,
+      "seconds": 30.833,
+      "backend": "conic",
+      "compatibility_sha256": "3883c79231cbc6d7c28b02a68890707d20dfa6ff1d8801ac332e84c8e534dc7a",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 79,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 4186,
+      "max_depth": 5,
+      "seconds": 62.204,
+      "backend": "conic",
+      "compatibility_sha256": "be4bb4243c1ac43f6c6c1c8f046187f3656aeb829d2d8d560aee1084750c79f1",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 83,
+      "family": "nonsquare",
+      "status": "none_complete",
+      "nodes": 5068,
+      "max_depth": 5,
+      "seconds": 54.31,
+      "backend": "conic",
+      "compatibility_sha256": "cc6370008bb2a5efadb7be304ec2aba16a53cb3d529242173b293468724d450f",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 103,
+      "family": "nonsquare",
+      "status": "timeout",
+      "nodes": 10240,
+      "max_depth": 6,
+      "seconds": 187.669,
+      "backend": "conic",
+      "compatibility_sha256": "1981d2c5036ce7367a19584bbbf684990b4f61b33810447207d39bf0611775a5",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 107,
+      "family": "nonsquare",
+      "status": "timeout",
+      "nodes": 10240,
+      "max_depth": 6,
+      "seconds": 185.924,
+      "backend": "conic",
+      "compatibility_sha256": "280724919c55030161f77f3f6865bea5938b684616fa70c5a4c484da51ac10ac",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    },
+    {
+      "q": 127,
+      "family": "nonsquare",
+      "status": "timeout",
+      "nodes": 4096,
+      "max_depth": 6,
+      "seconds": 185.69,
+      "backend": "conic",
+      "compatibility_sha256": "84519b5c3a64e88ae914347ff5a824f340b1aa004cf1176e1acd13029988bb8d",
+      "normalized_first_pair": [
+        0,
+        "inf"
+      ],
+      "matching": null
+    }
+  ],
+  "direct_cross_ratio_attempt": {
+    "q": 113,
+    "status": "timeout",
+    "nodes": 16384,
+    "seconds": 192.3119999999908,
+    "matching": null,
+    "method": "independent direct cross-ratio recursion, normalized first pair"
+  },
+  "explanation": "The original nonsquare run completed at every requested q, including 103/107/127. Later contended reruns hit their wall limits. The original completed witnesses are retained, not converted from timeouts. The final producer adds field validation, an independent compatibility backend, hashes and larger CLI limits; its recursion is AST-identical to the original."
+}

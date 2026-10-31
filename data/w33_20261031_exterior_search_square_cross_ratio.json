@@ -1,0 +1,75 @@
+[
+  {
+    "q": 3,
+    "family": "square",
+    "status": "none_complete",
+    "nodes": 1,
+    "max_depth": 1,
+    "seconds": 0.153,
+    "backend": "cross_ratio",
+    "compatibility_sha256": "b0f66adc83641586656866813fd9dd0b8ebb63796075661ba45d1aa8089e1d44",
+    "normalized_first_pair": [
+      0,
+      "inf"
+    ],
+    "matching": null
+  },
+  {
+    "q": 5,
+    "family": "square",
+    "status": "found",
+    "nodes": 3,
+    "max_depth": 3,
+    "seconds": 0.001,
+    "backend": "cross_ratio",
+    "compatibility_sha256": "cc008b873310f0950901f9c8c1d0510e95d18b07b4a090d03e0c076ffa011fef",
+    "normalized_first_pair": [
+      0,
+      "inf"
+    ],
+    "matching": [
+      [
+        0,
+        "inf"
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  {
+    "q": 13,
+    "family": "square",
+    "status": "none_complete",
+    "nodes": 7,
+    "max_depth": 3,
+    "seconds": 0.007,
+    "backend": "cross_ratio",
+    "compatibility_sha256": "5b279b7343b2391d8abe987a69302bedaa6fcb07031e6d6a0d5562589ecdf437",
+    "normalized_first_pair": [
+      0,
+      "inf"
+    ],
+    "matching": null
+  },
+  {
+    "q": 113,
+    "family": "square",
+    "status": "timeout",
+    "nodes": 1024,
+    "max_depth": 5,
+    "seconds": 414.102,
+    "backend": "cross_ratio",
+    "compatibility_sha256": "5bba75a31abd9995109e18d45d0f2c5ad7faffb004a5eed5271369d7ef7606d9",
+    "normalized_first_pair": [
+      0,
+      "inf"
+    ],
+    "matching": null
+  }
+]

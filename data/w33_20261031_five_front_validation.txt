@@ -1,0 +1,24 @@
+test_pairwise_external_does_not_imply_arc (test_w33_20261031_conic_exterior_arc_bridge.ConicBridgeTests.test_pairwise_external_does_not_imply_arc) ... ok
+test_pole_polar_recovers_chord_including_infinity (test_w33_20261031_conic_exterior_arc_bridge.ConicBridgeTests.test_pole_polar_recovers_chord_including_infinity) ... ok
+test_second_projective_chart_preserves_the_predicates (test_w33_20261031_conic_exterior_arc_bridge.ConicBridgeTests.test_second_projective_chart_preserves_the_predicates) ... ok
+test_stopping_set_is_not_promoted_to_codeword (test_w33_20261031_conic_exterior_arc_bridge.ConicBridgeTests.test_stopping_set_is_not_promoted_to_codeword) ... ok
+test_actual_lift_has_an_explicit_two_qubit_pauli_dictionary (test_w33_20261031_five_fronts.FiveFrontTests.test_actual_lift_has_an_explicit_two_qubit_pauli_dictionary) ... ok
+test_actual_stabilizer_preserves_named_unsigned_e6_support (test_w33_20261031_five_fronts.FiveFrontTests.test_actual_stabilizer_preserves_named_unsigned_e6_support) ... ok
+test_context_entropy_beats_event_in_specified_model (test_w33_20261031_five_fronts.FiveFrontTests.test_context_entropy_beats_event_in_specified_model) ... ok
+test_continuum_control_converges_and_respects_actual_group (test_w33_20261031_five_fronts.FiveFrontTests.test_continuum_control_converges_and_respects_actual_group) ... ok
+test_first_order_global_transition_bound_above_spinodal (test_w33_20261031_five_fronts.FiveFrontTests.test_first_order_global_transition_bound_above_spinodal) ... ok
+test_full_projective_group_witness_and_symplectic_generators (test_w33_20261031_five_fronts.FiveFrontTests.test_full_projective_group_witness_and_symplectic_generators) ... ok
+test_functional_regulator_does_not_manufacture_chiral_index (test_w33_20261031_five_fronts.FiveFrontTests.test_functional_regulator_does_not_manufacture_chiral_index) ... ok
+test_general_bound_keeps_heavy_coverage_branch (test_w33_20261031_five_fronts.FiveFrontTests.test_general_bound_keeps_heavy_coverage_branch) ... ok
+test_independent_cross_ratio_and_conic_predicates (test_w33_20261031_five_fronts.FiveFrontTests.test_independent_cross_ratio_and_conic_predicates) ... ok
+test_kernel_is_cut_code_not_just_group_of_same_order (test_w33_20261031_five_fronts.FiveFrontTests.test_kernel_is_cut_code_not_just_group_of_same_order) ... ok
+test_rate_count_ratio_can_select_event_or_context (test_w33_20261031_five_fronts.FiveFrontTests.test_rate_count_ratio_can_select_event_or_context) ... ok
+test_reject_nonfields_in_prime_field_search (test_w33_20261031_five_fronts.FiveFrontTests.test_reject_nonfields_in_prime_field_search) ... ok
+test_search_113_completion_is_required_for_moore_claim (test_w33_20261031_five_fronts.FiveFrontTests.test_search_113_completion_is_required_for_moore_claim) ... ok
+test_search_known_positive_and_negative_controls (test_w33_20261031_five_fronts.FiveFrontTests.test_search_known_positive_and_negative_controls) ... ok
+test_uniform_hessian_is_exact_not_fitted_transition (test_w33_20261031_five_fronts.FiveFrontTests.test_uniform_hessian_is_exact_not_fitted_transition) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.434s
+
+OK

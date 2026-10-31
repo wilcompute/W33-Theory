@@ -1,0 +1,152 @@
+{
+  "status": "PROVED_COUNTING_LOWER_BOUNDS_NOT_EXACT_DISTANCES",
+  "rows": [
+    {
+      "q": 3,
+      "local_distance_two_count": 4,
+      "triple_budget": 4,
+      "balanced_triple_cost": 4,
+      "balanced_codegrees": {
+        "3": 4,
+        "4": 0
+      },
+      "coverage_0_2_lower_bound": 10,
+      "coverage_at_least_4_lower_bound": 16,
+      "general_even_set_lower_bound": 10
+    },
+    {
+      "q": 5,
+      "local_distance_two_count": 9,
+      "triple_budget": 20,
+      "balanced_triple_cost": 18,
+      "balanced_codegrees": {
+        "3": 6,
+        "4": 3
+      },
+      "coverage_0_2_lower_bound": 16,
+      "coverage_at_least_4_lower_bound": 24,
+      "general_even_set_lower_bound": 16
+    },
+    {
+      "q": 7,
+      "local_distance_two_count": 14,
+      "triple_budget": 56,
+      "balanced_triple_cost": 56,
+      "balanced_codegrees": {
+        "4": 14,
+        "5": 0
+      },
+      "coverage_0_2_lower_bound": 24,
+      "coverage_at_least_4_lower_bound": 32,
+      "general_even_set_lower_bound": 24
+    },
+    {
+      "q": 9,
+      "local_distance_two_count": 21,
+      "triple_budget": 120,
+      "balanced_triple_cost": 120,
+      "balanced_codegrees": {
+        "4": 15,
+        "5": 6
+      },
+      "coverage_0_2_lower_bound": 32,
+      "coverage_at_least_4_lower_bound": 40,
+      "general_even_set_lower_bound": 32
+    },
+    {
+      "q": 11,
+      "local_distance_two_count": 29,
+      "triple_budget": 220,
+      "balanced_triple_cost": 212,
+      "balanced_codegrees": {
+        "4": 13,
+        "5": 16
+      },
+      "coverage_0_2_lower_bound": 42,
+      "coverage_at_least_4_lower_bound": 48,
+      "general_even_set_lower_bound": 42
+    },
+    {
+      "q": 13,
+      "local_distance_two_count": 37,
+      "triple_budget": 364,
+      "balanced_triple_cost": 352,
+      "balanced_codegrees": {
+        "4": 3,
+        "5": 34
+      },
+      "coverage_0_2_lower_bound": 52,
+      "coverage_at_least_4_lower_bound": 56,
+      "general_even_set_lower_bound": 52
+    },
+    {
+      "q": 17,
+      "local_distance_two_count": 57,
+      "triple_budget": 816,
+      "balanced_triple_cost": 780,
+      "balanced_codegrees": {
+        "5": 36,
+        "6": 21
+      },
+      "coverage_0_2_lower_bound": 76,
+      "coverage_at_least_4_lower_bound": 72,
+      "general_even_set_lower_bound": 72
+    },
+    {
+      "q": 19,
+      "local_distance_two_count": 67,
+      "triple_budget": 1140,
+      "balanced_triple_cost": 1120,
+      "balanced_codegrees": {
+        "5": 22,
+        "6": 45
+      },
+      "coverage_0_2_lower_bound": 88,
+      "coverage_at_least_4_lower_bound": 80,
+      "general_even_set_lower_bound": 80
+    },
+    {
+      "q": 23,
+      "local_distance_two_count": 90,
+      "triple_budget": 2024,
+      "balanced_triple_cost": 1980,
+      "balanced_codegrees": {
+        "6": 78,
+        "7": 12
+      },
+      "coverage_0_2_lower_bound": 116,
+      "coverage_at_least_4_lower_bound": 96,
+      "general_even_set_lower_bound": 96
+    },
+    {
+      "q": 27,
+      "local_distance_two_count": 116,
+      "triple_budget": 3276,
+      "balanced_triple_cost": 3220,
+      "balanced_codegrees": {
+        "6": 56,
+        "7": 60
+      },
+      "coverage_0_2_lower_bound": 146,
+      "coverage_at_least_4_lower_bound": 112,
+      "general_even_set_lower_bound": 112
+    },
+    {
+      "q": 31,
+      "local_distance_two_count": 142,
+      "triple_budget": 4960,
+      "balanced_triple_cost": 4940,
+      "balanced_codegrees": {
+        "6": 2,
+        "7": 140
+      },
+      "coverage_0_2_lower_bound": 176,
+      "coverage_at_least_4_lower_bound": 128,
+      "general_even_set_lower_bound": 128
+    }
+  ],
+  "prior": "Pass 12488 owns the local antiregularity triple budget; classical hyperoval literature owns general hyperoval bounds and the q=3 minimum.",
+  "heavy_point_proof": "If r>=4 selected lines pass through p, each has q other points requiring another selected line. A line not through p can meet at most one of those r concurrent lines by the GQ axiom. Thus |S|>=r(q+1)>=4(q+1).",
+  "even_weight_proof": "For any point p, sum incidence rows for the points in p-perp. Mod2, this is the indicator of lines not through p: lines through p contribute q+1=0, other lines contribute 1. An even line set therefore has an even number of lines not through p and an even number through p, hence even total weight.",
+  "scope": "Odd prime powers. This does not prove the conjectured quadratic bound for all even line sets."
+}
