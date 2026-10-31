@@ -1,0 +1,431 @@
+{
+  "fronts": {
+    "01_characteristic_five_module": {
+      "action7_GF5": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0,
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          0,
+          0,
+          1,
+          3,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          3,
+          0,
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          4,
+          0,
+          0,
+          2,
+          4
+        ]
+      ],
+      "ambient_lift": "PGSp(4,9) order5 certified in predecessor, NOT an A5 representation classification",
+      "caveat": "Uses previous primitive rational-kernel reduction L; saturation to a canonical integral torsion module remains an independent verification requirement.",
+      "centralizer_dimension": 17,
+      "powers_of_unipotent_minus_identity_ranks": [
+        7,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "smith_torsion_order": 78125,
+      "status": "PASS_CYCLIC_GF5_TORSION_ACTION_EXPLICIT"
+    },
+    "02_optical_81mode_imperfections": {
+      "assumption": "Exclusive no-click/dark-click outcome model; sequential interblock passive couplers; no multiphoton interference, correlated detector errors or lab calibrations.",
+      "dark_assumed": [
+        0.0003,
+        0.0004,
+        0.0002
+      ],
+      "independent_triangles": 27,
+      "inter_triangle_81mode_crosstalk": [
+        {
+          "Bayes_one_shot_with_81_detectors_and_no_click": 0.1025772770069984,
+          "average_leakage_outside_injected_triangle": -3.3306690738754696e-16,
+          "neighbor_coupler_angle": 0.0
+        },
+        {
+          "Bayes_one_shot_with_81_detectors_and_no_click": 0.10257753629224806,
+          "average_leakage_outside_injected_triangle": 0.0006246745713813784,
+          "neighbor_coupler_angle": 0.025
+        },
+        {
+          "Bayes_one_shot_with_81_detectors_and_no_click": 0.10257762645071933,
+          "average_leakage_outside_injected_triangle": 0.009917043414508775,
+          "neighbor_coupler_angle": 0.1
+        }
+      ],
+      "mode_count": 81,
+      "models": [
+        {
+          "drift": 0.0,
+          "error_1": 0.09467596379257806,
+          "errors": {
+            "1": 0.09467596379257806,
+            "10": 8.088198438643441e-05,
+            "15": 1.874373905779716e-06,
+            "20": 4.602684684746791e-08,
+            "5": 0.0038389708347771364
+          },
+          "p_minus": [
+            0.04332414731903857,
+            0.8354257030233785,
+            2.426701684330692e-05,
+            0.12122588264073972
+          ],
+          "p_plus": [
+            0.8539722197338825,
+            0.04238819369403655,
+            2.0742437020330428e-05,
+            0.10361884413506066
+          ]
+        },
+        {
+          "drift": 0.02,
+          "error_1": 0.0948381366250632,
+          "errors": {
+            "1": 0.0948381366250632,
+            "10": 8.132419063381645e-05,
+            "15": 1.8906153987098273e-06,
+            "20": 4.659949004240923e-08,
+            "5": 0.0038502414695715617
+          },
+          "p_minus": [
+            0.043460730965372334,
+            0.8350915973013295,
+            0.00022030424533410936,
+            0.12122736748796409
+          ],
+          "p_plus": [
+            0.853784457715246,
+            0.042371260684896224,
+            0.00021690510841234655,
+            0.10362737649144549
+          ]
+        },
+        {
+          "drift": 0.08,
+          "error_1": 0.09726697775628639,
+          "errors": {
+            "1": 0.09726697775628639,
+            "10": 8.849418815886705e-05,
+            "15": 2.1705693381840056e-06,
+            "20": 5.702293509063367e-08,
+            "5": 0.004025634397280498
+          },
+          "p_minus": [
+            0.045530402369641426,
+            0.8300906941492371,
+            0.003130409092787139,
+            0.12124849438833443
+          ],
+          "p_plus": [
+            0.8509683231988661,
+            0.042117807084484156,
+            0.003158532750989805,
+            0.10375533696566006
+          ]
+        },
+        {
+          "drift": 0.2,
+          "error_1": 0.11070303474794917,
+          "errors": {
+            "1": 0.11070303474794915,
+            "10": 0.000159396629356537,
+            "15": 6.146868245420308e-06,
+            "20": 2.5558160226538114e-07,
+            "5": 0.005264514116113056
+          },
+          "p_minus": [
+            0.057820481988371766,
+            0.8024538223211277,
+            0.01839746995522574,
+            0.12132822573527478
+          ],
+          "p_plus": [
+            0.8352098247699262,
+            0.040717131307178196,
+            0.01960205767777301,
+            0.10447098624512263
+          ]
+        }
+      ],
+      "port_efficiencies": [
+        0.92,
+        0.9,
+        0.88
+      ],
+      "stage_survival": 0.975248753121875,
+      "status": "PASS_81MODE_PHOTON_LOSS_DARK_AND_CROSSTALK_MODEL"
+    },
+    "03_clock_frustration": {
+      "commuting_bonds": 1,
+      "eight_color_witness": [
+        0,
+        9,
+        26,
+        27,
+        30,
+        32,
+        34,
+        4
+      ],
+      "global_statement": "Exact distinct-color optimum: no 8-clique exists in the W33 noncommutation graph, so at least one commuting bond; this explicit 8-set has exactly one. Hence at most 27/28 bonds can simultaneously be mutually noncommuting. Does not imply optimum over 120 ticks with label repetition and temperature.",
+      "minimum_missed_bonds_among_seven_clique_extensions": 1,
+      "sample_J": 1.0,
+      "sample_K": 2.0,
+      "sample_bond_energy": -15.999999999999996,
+      "satisfied_noncommuting_bonds": 27,
+      "scope": "Externally supplied complete spatial graph, couplings, no physical vacuum selection.",
+      "seven_direction_cliques": 2880,
+      "status": "PASS_EIGHT_SITE_DISTINCT_COLOR_FRUSTRATION_CONTROL"
+    },
+    "04_chiral_local_index": {
+      "boundary": "1D assumed spatial chain; not a 2D chiral edge index or an anomalous W33 physical vacuum.",
+      "finite_depth_even_odd_swap": {
+        "index": 1,
+        "left": 1,
+        "right": 1
+      },
+      "on_site_qutrit_dimension": 3,
+      "reason": "Conjugating SWAP layers by finite-depth local native Clifford/Jones gates cannot change the QCA index. Nonzero chirality needs shift/anomalous locality mechanism.",
+      "shift_by_one": {
+        "index": 3,
+        "left": 0,
+        "right": 1
+      },
+      "status": "PASS_CLIFFORD_FINITE_DEPTH_TRIVIAL_GNVW_INDEX"
+    },
+    "05_metric_hamiltonian": {
+      "boundary": "4D spatial lattice, external continuous time, ansatz and constants supplied; no diffeomorphism invariance or Einstein constraints.",
+      "conserved_shift_charge": "Matter field u enters only via differences, so total canonical p_u is exactly conserved by the force sum on periodic space.",
+      "drift_ratio_coarse_to_mid": 4.001922888029811,
+      "drift_ratio_mid_to_fine": 4.000481805789818,
+      "measurements": [
+        {
+          "backreaction_norm": 0.013959877442172773,
+          "dt": 0.02,
+          "relative_energy_error": 0.0012383425949243896,
+          "reversal_error": 2.498001805406602e-16,
+          "steps": 80
+        },
+        {
+          "backreaction_norm": 0.013963107831068727,
+          "dt": 0.01,
+          "relative_energy_error": 0.000309436895605462,
+          "reversal_error": 2.393918396847994e-16,
+          "steps": 160
+        },
+        {
+          "backreaction_norm": 0.013963914261163966,
+          "dt": 0.005,
+          "relative_energy_error": 7.734990699310772e-05,
+          "reversal_error": 1.48318857196017e-16,
+          "steps": 320
+        }
+      ],
+      "status": "PASS_TIME_REVERSIBLE_SYMPLECTIC_CONFORMAL_DYNAMICS"
+    },
+    "06_outside_braid_commutant": {
+      "commutant_dimension": 2,
+      "exact_commutant_basis": "span_C{I9, parity(|a,b> -> |-a,-b>)}",
+      "irreducible_sector_dimensions": [
+        5,
+        4
+      ],
+      "minimum_nonsingular_value": 0.5112611266802969,
+      "note": "Two-qutrit metaplectic/Weil representation splits into 5D parity-even and 4D parity-odd sectors. Each restriction of the *-algebra generated by the five projectors is irreducible (Burnside); the total finite unitary braid group still is not dense.",
+      "physical_boundary": "No fusion category or protective many-body gap follows from a matrix commutant.",
+      "physical_parity_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "status": "PASS_NATIVE_BRAID_PARITY_SPLIT_5_PLUS_4"
+    },
+    "07_outside_wigner_magic": {
+      "caveat": "This demonstrates why native Clifford braids alone cannot generate Wigner mana. Injected non-Clifford phase is an external resource, not a derived interaction.",
+      "externally_supplied_nonclifford_phase_gate": {
+        "mana": 0.3677247801253176,
+        "min": -0.037037037037037035,
+        "sum_absolute": 1.4444444444444449
+      },
+      "implementation": "Two-qutrit Gross phase-point operators at odd prime d=3; exact 81 phase space outcomes",
+      "native_entangling_braid": {
+        "mana": 0.0,
+        "min": -3.0839528461809905e-17,
+        "sum_absolute": 1.0
+      },
+      "status": "PASS_NATIVE_CLIFFORD_POSITIVE_WIGNER_VS_NONCLIFFORD_MAGIC"
+    },
+    "08_outside_homology_vs_torsion": {
+      "boundary2_ranks": {
+        "F2": 193,
+        "F3": 193,
+        "F5": 193
+      },
+      "caveat": "Field homology dimensions of this particular square-filled CW complex do not alone determine its integral H1 torsion.",
+      "connected_components": 1,
+      "edges": 240,
+      "filled_4_cycles": 1680,
+      "filled_H1_dimensions": {
+        "F2": 0,
+        "F3": 0,
+        "F5": 0
+      },
+      "graph_h1_integral_torsion": 0,
+      "graph_h1_over_Z_free_rank": 193,
+      "graph_vertices": 48,
+      "significance": "Seven Z/5 factors in the 24x24 line-incidence B Smith cokernel are NOT ordinary H1 torsion of the unfilled 48-vertex graph. A chain complex and explicit 2-cells are essential before interpreting them as topological flux.",
+      "status": "PASS_FOUR_CYCLE_FILLED_COMPLEX_HOMOLOGY_FIELD_CHECK"
+    }
+  },
+  "schema": "w33.eight_quantum_fronts_round2.v1",
+  "sources": "W33-Theory master ad8846e, plus cited literature"
+}
