@@ -1,0 +1,1289 @@
+{
+  "canonical": {
+    "axis": "(2,3,1)/sqrt(14)",
+    "chronological_layers": [
+      "BS23(-phi)",
+      "BS12(-theta)",
+      "phase_pi_on_canonical_2_and_3",
+      "BS12(+theta)",
+      "BS23(+phi)"
+    ],
+    "phi_cos": "3/sqrt(10)",
+    "phi_sin": "1/sqrt(10)",
+    "target": "2vv^T-I (pi rotation about v)",
+    "theta_cos": "2/sqrt(14)",
+    "theta_sin": "sqrt(10)/sqrt(14)"
+  },
+  "exact_ideal_relation": "U=2vv^T-I=I+F^2/7, v in ker F, F^3=-14F",
+  "minus": {
+    "factor": 6,
+    "max_abs_matrix_error": 1.1102230246251565e-16,
+    "mode_triangles": 27,
+    "orientation": "minus",
+    "rank_of_exact_retyping": 54,
+    "schedule": [
+      {
+        "axis_integer": [
+          -1,
+          -2,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          0,
+          61,
+          71
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -1,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          1,
+          62,
+          69
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -3,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          2,
+          60,
+          70
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          2,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          3,
+          50,
+          64
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          1,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          4,
+          48,
+          65
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          3,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          5,
+          49,
+          63
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          3,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          6,
+          46,
+          68
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          2,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          7,
+          47,
+          66
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          1,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          8,
+          45,
+          67
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -3,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          9,
+          31,
+          77
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -2,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          10,
+          32,
+          75
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -1,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          11,
+          30,
+          76
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          3,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          12,
+          17,
+          79
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          2,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          13,
+          15,
+          80
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          1,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          14,
+          16,
+          78
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          3,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          18,
+          29,
+          73
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          2,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          19,
+          27,
+          74
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          1,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          20,
+          28,
+          72
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -3,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          21,
+          43,
+          56
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -2,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          22,
+          44,
+          54
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -1,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          23,
+          42,
+          55
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -1,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          24,
+          35,
+          58
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -3,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          25,
+          33,
+          59
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -2,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          26,
+          34,
+          57
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          2,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          36,
+          41,
+          52
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          1,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          37,
+          39,
+          53
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          3,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          38,
+          40,
+          51
+        ]
+      }
+    ]
+  },
+  "plus": {
+    "factor": 7,
+    "max_abs_matrix_error": 1.1102230246251565e-16,
+    "mode_triangles": 27,
+    "orientation": "plus",
+    "rank_of_exact_retyping": 54,
+    "schedule": [
+      {
+        "axis_integer": [
+          1,
+          2,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          0,
+          62,
+          70
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          3,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          1,
+          60,
+          71
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          1,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          2,
+          61,
+          69
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -2,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          3,
+          49,
+          65
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -3,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          4,
+          50,
+          63
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -1,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          5,
+          48,
+          64
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -3,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          6,
+          47,
+          67
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -1,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          7,
+          45,
+          68
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -2,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          8,
+          46,
+          66
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          3,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          9,
+          32,
+          76
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          1,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          10,
+          30,
+          77
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          2,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          11,
+          31,
+          75
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -3,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          12,
+          16,
+          80
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -1,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          13,
+          17,
+          78
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -2,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          14,
+          15,
+          79
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -3,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          18,
+          28,
+          74
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -1,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          19,
+          29,
+          72
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -2,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          20,
+          27,
+          73
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          3,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          1,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          21,
+          44,
+          55
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          1,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          0,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          22,
+          42,
+          56
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          2,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          2,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          23,
+          43,
+          54
+        ]
+      },
+      {
+        "axis_integer": [
+          2,
+          1,
+          3
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          24,
+          34,
+          59
+        ]
+      },
+      {
+        "axis_integer": [
+          3,
+          2,
+          1
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          25,
+          35,
+          57
+        ]
+      },
+      {
+        "axis_integer": [
+          1,
+          3,
+          2
+        ],
+        "canonical_sign_gauge": [
+          1,
+          1,
+          1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          26,
+          33,
+          58
+        ]
+      },
+      {
+        "axis_integer": [
+          -3,
+          -2,
+          -1
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          1,
+          0,
+          2
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          36,
+          40,
+          53
+        ]
+      },
+      {
+        "axis_integer": [
+          -1,
+          -3,
+          -2
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          2,
+          1,
+          0
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          37,
+          41,
+          51
+        ]
+      },
+      {
+        "axis_integer": [
+          -2,
+          -1,
+          -3
+        ],
+        "canonical_sign_gauge": [
+          -1,
+          -1,
+          -1
+        ],
+        "canonical_to_local_order": [
+          0,
+          2,
+          1
+        ],
+        "compiled_max_abs_error": 1.1102230246251565e-16,
+        "modes": [
+          38,
+          39,
+          52
+        ]
+      }
+    ]
+  },
+  "prior_art": "Pass 11062 perfect factors and October 1 cocycle blindness; present work supplies explicit real-symmetric pi pulse and two-Givens prepare/unprepare compiler.",
+  "resource_upper_bound_per_triangle": {
+    "additional_local_sign_gauges": "compiled into signed mode calibration",
+    "parallel_phase_stage": 1,
+    "parallel_triangles": 27,
+    "pi_phase_shifters": 2,
+    "real_two_mode_rotations": 4
+  },
+  "schema": "w33.20261031.54d_beamsplitter_compiler.v1",
+  "scientific_boundary": "An exact lossless real linear-optical unitary/circuit construction. Does not prove physical realization, phase fidelity, noise resilience, fault tolerance, a local Lorentzian continuum, or the direction of time.",
+  "status": "PASS"
+}
