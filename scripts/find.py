@@ -5,6 +5,8 @@
     py -3 scripts/find.py -E "d *= *2q" -i           # regex, case-insensitive
     py -3 scripts/find.py 51840 25920 --certs        # several results; also search data/**/*.json certificates
     py -3 scripts/find.py "[[40,8,6]]" --repos       # also every other repository under C:/Repos (git grep, primary repos only)
+    py -3 scripts/find.py --seq 6 10 20 40           # an integer SEQUENCE under any separators: "6, 10, 20, 40", "6/10/20/40",
+                                                     # "[6,10,20,40]", "6 -> 10 -> 20", "6 & 10 & 20" (LaTeX tables), ...
 
 WHY.  The repo had five separate search tools (RESULTS_INDEX.md, KEY_VOCABULARY.md, scripts/corpus_index.py, scripts/cert_query.py,
 scripts/check_prior_art_all_repos.py) and the two databases were last rebuilt on 2026-08-09, so a lookup either missed 2.5 months of
@@ -73,8 +75,18 @@ def main():
     ap.add_argument("-i", dest="icase", action="store_true")
     ap.add_argument("--certs", action="store_true", help="also search data/**/*.json certificates")
     ap.add_argument("--repos", action="store_true", help="also git-grep the other repositories under C:/Repos")
+    ap.add_argument("--seq", action="store_true", help="treat the patterns as ONE integer sequence, matched under any separators")
     ap.add_argument("--limit", type=int, default=25)
     a = ap.parse_args()
+    if a.seq:
+        # CLAUDE.md: search the RESULT -- a sequence is the most distinctive result there is, but it is written a dozen ways.  Between
+        # terms allow up to 12 non-digit characters ("$, $", " \to ", "/", " & ", "], ["), and never a digit, so 6 10 20 40 cannot
+        # match 6 10 200 40 or 16 10 20 40.
+        terms = [t.strip(",;") for t in a.patterns]
+        if not all(re.fullmatch(r"-?\d+", t) for t in terms):
+            ap.error("--seq takes integers only")
+        a.patterns = [r"(^|[^0-9.])" + r"[^0-9]{1,12}".join(re.escape(t) for t in terms) + r"([^0-9]|$)"]
+        a.regex = True
     fa = first_added()
     flags = (["-E"] if a.regex else ["-F"]) + (["-i"] if a.icase else [])
     pats = sum((["-e", p] for p in a.patterns), [])
