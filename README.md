@@ -358,9 +358,10 @@ The certificates for the Clifford recovery protocol are bundled in a self-contai
 | `scripts/` | The search front door (`find.py`), guards, index builders, `relocate.py` (move + rewrite references), CI helpers |
 | `archive/` | Retired material with history preserved; `archive/outputs/` holds old computation output trees |
 
-At the root you will find the three flagship manuscripts and their sources (they are compiled by ~135 workflows), importable Python
-modules that tests load by name, the generated indices, and configuration. Moving the remaining root modules is a planned step that
-needs per-module import checks, so they stay for now.
+At the root you will find the three flagship manuscripts and their sources (they are compiled by ~135 workflows), the generated
+indices, and configuration. The only Python files there are `setup.py`, `conftest.py`, and `holonet_cmd.py` (the installed
+`holonet` command). The former root modules (`verify_*`, `PART_*`, `w33_pass*`, `BT*`, …) live in `analysis/`, which the test
+configuration appends to the import path, so `import verify_x` still works.
 
 Every directory is described, with live counts, in [`REPO_MAP.md`](REPO_MAP.md).
 
