@@ -58,6 +58,6 @@ This is the cleanest exact quadratic-coercivity bridge so far in the octahedral 
 
 ## Executable artifact
 
-- Verifier: `verify_dcclvii_octahedral_chi_square_contraction_bridge.py`
+- Verifier: `analysis/verify_dcclvii_octahedral_chi_square_contraction_bridge.py`
 - Tests: `tests/test_dcclvii_octahedral_chi_square_contraction_bridge.py`
 - Data: `data/dcclvii_octahedral_chi_square_contraction_bridge.json`

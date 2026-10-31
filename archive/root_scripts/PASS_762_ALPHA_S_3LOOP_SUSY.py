@@ -5,7 +5,7 @@ Pass 762 - W33 alpha_s: 3-loop RGE + SUSY/LQ Threshold + Genus-6 K12 Correction
 Cross-links:
   - BREAKTHROUGH_MCCCCXIII_MCCCCXXXII_GENUS6_K12_MASTER.md  (genus-6 / K12 graph)
   - analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md               (YM mass gap = Lambda_QCD)
-  - ALPHA_AND_SM.py                                          (SM alpha_s baseline)
+  - analysis/ALPHA_AND_SM.py                                          (SM alpha_s baseline)
   - Pass 757 (2-loop baseline)
   - BREAKTHROUGH_BT681_IHARA_FACTORIZATION.md                (Ihara zeta = W33 beta fn)
   - BREAKTHROUGH_DCCXCVI_AXION_MASS_WINDOW.md                (f_a sets threshold)
@@ -59,7 +59,7 @@ print('='*70)
 print('Pass 762 - W33 alpha_s: 3-loop + SUSY + K12 Genus-6 correction')
 print('='*70)
 print(f'Cross-links: MCCCCXIII_GENUS6_K12, BT679_YM_MASS_GAP, BT681_IHARA, DCCXCVI_AXION')
-print(f'  ALPHA_AND_SM.py provides the SM baseline used for comparison.')
+print(f'  analysis/ALPHA_AND_SM.py provides the SM baseline used for comparison.')
 
 # Lambda_QCD from W33 (BT679_YANG_MILLS_MASS_GAP)
 Lambda_QCD_W33 = M_GUT * math.exp(-math.pi*(Q+1))

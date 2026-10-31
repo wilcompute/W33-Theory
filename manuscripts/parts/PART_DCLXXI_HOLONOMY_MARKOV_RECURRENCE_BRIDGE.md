@@ -125,7 +125,7 @@ They are also **recurrence-complete**.
 Verifier:
 
 ```text
-verify_dclxxi_holonomy_markov_recurrence_bridge.py
+analysis/verify_dclxxi_holonomy_markov_recurrence_bridge.py
 ```
 
 Tests:

@@ -12,7 +12,7 @@ TEX = ROOT / 'analysis' / 'BT1630_derivation_table_corpus_audit.tex'
 CANDIDATES = [
     {'path':'exploration/w33_complete_sm_derivation.py','format':'py','priority':'canonical_extracted','reason':'current BT1621 source for 19 SM rows'},
     {'path':'src/COMPLETE_SOLUTION.py','format':'py','priority':'high','reason':'search hit for SM/CKM/PMNS/Higgs table-like derivations'},
-    {'path':'UNIFIED_MASTER_THEOREM.py','format':'py','priority':'high','reason':'search hit for master theorem / physics derivation content'},
+    {'path':'analysis/UNIFIED_MASTER_THEOREM.py','format':'py','priority':'high','reason':'search hit for master theorem / physics derivation content'},
     {'path':'docs/COMPLETE_SUMMARY.md','format':'md','priority':'high','reason':'markdown summary likely contains consolidated derivation tables'},
     {'path':'docs/ARXIV_PREPRINT_DRAFT.md','format':'md','priority':'medium','reason':'preprint draft may duplicate or supersede tables'},
     {'path':'analysis/W36_PAPER_DRAFT.md','format':'md','priority':'medium','reason':'paper draft with potential physics tables'},

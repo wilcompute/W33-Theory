@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** branch-selection theorem for the RG threshold program  
-**Files:** `PART_CXLIII_BRANCH_SELECTION_PHI6_POLAR.py`, `PART_CXLIII_branch_selection_phi6_polar_results.json`, `tests/test_branch_selection_phi6_polar_cxliii.py`
+**Files:** `analysis/PART_CXLIII_BRANCH_SELECTION_PHI6_POLAR.py`, `PART_CXLIII_branch_selection_phi6_polar_results.json`, `tests/test_branch_selection_phi6_polar_cxliii.py`
 
 ---
 

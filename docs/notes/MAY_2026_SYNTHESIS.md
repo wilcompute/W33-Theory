@@ -28,7 +28,7 @@ W33-Theory/
 │   ├── w33_rg_gut_conversion.py      # GUT->MZ alpha_s chain (RK4, k3 fix) [NEW]
 │   ├── w33_yukawa_rg.py              # Yukawa running + fermion mass predictions [NEW]
 │   ├── w33_neutrino_rg_bridge.py     # Neutrino/seesaw consistency bridge [NEW]
-│   ├── SOLVE_RG_NEUTRINO.py          # NuFIT 5.3/6.0 fixed-point solver
+│   ├── analysis/SOLVE_RG_NEUTRINO.py          # NuFIT 5.3/6.0 fixed-point solver
 │   ├── z12_unified_ring_spectrum.py  # Z[zeta_12] Langlands sprint [NEW]
 │   ├── z12_frobenius_table.py        # Frobenius splitting table [NEW]
 │   └── z12_alpha_exact_fraction.py   # 669969/4889 Gaussian norm check [NEW]
@@ -95,4 +95,4 @@ W33-Theory/
 2. Run `w33_rg_gut_conversion.py` — what is the best-fit k3?
 3. Run `w33_yukawa_rg.py` — how many fermion masses match PDG within 2x?
 4. Write Section 5 of the paper around the Frobenius table result
-5. Extend `SOLVE_RG_NEUTRINO.py` to NuFIT 6.0 precision for IH discrimination
+5. Extend `analysis/SOLVE_RG_NEUTRINO.py` to NuFIT 6.0 precision for IH discrimination

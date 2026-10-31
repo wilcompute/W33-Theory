@@ -1,6 +1,6 @@
 # Part DCCLV — The W(3,3) Kissing-Number Tower
 
-**Bridge:** `verify_dcclv_kissing_number_tower.py` — Verified
+**Bridge:** `analysis/verify_dcclv_kissing_number_tower.py` — Verified
 **Tests:** `tests/test_dcclv_kissing_number_tower.py` — 19/19 pass
 **Data:** `data/dcclv_kissing_number_tower.json`
 

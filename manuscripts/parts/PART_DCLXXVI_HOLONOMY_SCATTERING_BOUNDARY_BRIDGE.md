@@ -82,7 +82,7 @@ It also determines the exact all-frequency boundary response that any mixed-plan
 Verifier:
 
 ```text
-verify_dclxxvi_holonomy_scattering_boundary_bridge.py
+analysis/verify_dclxxvi_holonomy_scattering_boundary_bridge.py
 ```
 
 Tests:

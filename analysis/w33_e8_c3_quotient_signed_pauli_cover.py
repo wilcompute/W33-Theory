@@ -206,7 +206,7 @@ def main(write=True):
         'proved':'antipodal/orthogonality cover and 240->80->40 factorization',
         'open':'refine the 54 noncommuting class into the two symplectic-sign classes 27+27 equivariantly; identify an E8 phase orientation with the Pauli +/- symplectic product',
         'do_not_conflate':'the internal E8 Coxeter-fiber C6 and the heterotic/Clifford CZ-parity C6 are distinct actions unless a future equivariant theorem identifies them'},
-      'parents':['data/PART_W33_PASS7163_7170_E8_HEXAGONAL_LIFT.json','w33_pass122_hopf_synthesis.py']
+      'parents':['data/PART_W33_PASS7163_7170_E8_HEXAGONAL_LIFT.json','analysis/w33_pass122_hopf_synthesis.py']
     }
     if write:OUT.write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2))

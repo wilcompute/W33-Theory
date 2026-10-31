@@ -94,6 +94,6 @@ This is the discrete geodesic principle of the closure chain.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxvii_closure_geodesic_refinement_bridge.py`
+- Verifier: `analysis/verify_dccxxxvii_closure_geodesic_refinement_bridge.py`
 - Tests: `tests/test_dccxxxvii_closure_geodesic_refinement_bridge.py`
 - Data: `data/dccxxxvii_closure_geodesic_refinement_bridge.json`

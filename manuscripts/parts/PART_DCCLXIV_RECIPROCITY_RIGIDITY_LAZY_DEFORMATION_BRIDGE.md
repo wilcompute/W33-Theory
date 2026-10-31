@@ -52,6 +52,6 @@ So the reciprocity is a sharp structural signature, not a generic background ide
 
 ## Executable artifact
 
-- Verifier: `verify_dcclxiv_reciprocity_rigidity_lazy_deformation_bridge.py`
+- Verifier: `analysis/verify_dcclxiv_reciprocity_rigidity_lazy_deformation_bridge.py`
 - Tests: `tests/test_dcclxiv_reciprocity_rigidity_lazy_deformation_bridge.py`
 - Data: `data/dcclxiv_reciprocity_rigidity_lazy_deformation_bridge.json`

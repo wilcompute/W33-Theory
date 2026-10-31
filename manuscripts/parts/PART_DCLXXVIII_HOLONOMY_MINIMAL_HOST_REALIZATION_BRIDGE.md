@@ -75,7 +75,7 @@ So the theory now constrains not just the finite witness object, but the minimum
 Verifier:
 
 ```text
-verify_dclxxviii_holonomy_minimal_host_realization_bridge.py
+analysis/verify_dclxxviii_holonomy_minimal_host_realization_bridge.py
 ```
 
 Tests:

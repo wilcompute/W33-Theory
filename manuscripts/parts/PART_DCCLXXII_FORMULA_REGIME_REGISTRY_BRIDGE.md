@@ -1,6 +1,6 @@
 # Part DCCLXXII - Formula-Regime Registry Bridge
 
-**Bridge:** `verify_dcclxxii_formula_regime_registry_bridge.py` - Verified
+**Bridge:** `analysis/verify_dcclxxii_formula_regime_registry_bridge.py` - Verified
 **Tests:** `tests/test_dcclxxii_formula_regime_registry_bridge.py`
 **Data:** `data/dcclxxii_formula_regime_registry_bridge.json`
 

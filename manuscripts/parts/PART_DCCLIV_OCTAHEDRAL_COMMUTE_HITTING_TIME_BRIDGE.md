@@ -71,6 +71,6 @@ This is the cleanest exact transport-time bridge on octahedral closure phase spa
 
 ## Executable artifact
 
-- Verifier: `verify_dccliv_octahedral_commute_hitting_time_bridge.py`
+- Verifier: `analysis/verify_dccliv_octahedral_commute_hitting_time_bridge.py`
 - Tests: `tests/test_dccliv_octahedral_commute_hitting_time_bridge.py`
 - Data: `data/dccliv_octahedral_commute_hitting_time_bridge.json`

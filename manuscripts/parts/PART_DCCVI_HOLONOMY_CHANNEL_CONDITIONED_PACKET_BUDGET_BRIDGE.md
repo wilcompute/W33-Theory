@@ -52,7 +52,7 @@ So the frontier is no longer only “which channel?” but “which exact condit
 Verifier:
 
 ```text
-verify_dccvi_holonomy_channel_conditioned_packet_budget_bridge.py
+analysis/verify_dccvi_holonomy_channel_conditioned_packet_budget_bridge.py
 ```
 
 Tests:

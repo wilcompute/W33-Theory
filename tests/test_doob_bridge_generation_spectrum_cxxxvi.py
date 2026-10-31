@@ -15,7 +15,7 @@ import pytest
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = REPO_ROOT / "PART_CXXXVI_DOOB_BRIDGE_GENERATION_SPECTRUM.py"
+MODULE_PATH = REPO_ROOT / "analysis/PART_CXXXVI_DOOB_BRIDGE_GENERATION_SPECTRUM.py"
 
 
 @pytest.fixture(scope="module")

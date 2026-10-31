@@ -1,6 +1,6 @@
 # Part DCCLI — Pascal's Second Diagonal as the W(3,3) Primitive Generator
 
-**Bridge:** `verify_dccli_pascal_diagonal_w33_generator.py` — Verified
+**Bridge:** `analysis/verify_dccli_pascal_diagonal_w33_generator.py` — Verified
 **Tests:** `tests/test_dccli_pascal_diagonal_w33_generator.py` — 28/28 pass
 **Data:** `data/dccli_pascal_diagonal_w33_generator.json`
 

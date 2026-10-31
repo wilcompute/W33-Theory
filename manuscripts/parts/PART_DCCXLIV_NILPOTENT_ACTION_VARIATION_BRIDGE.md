@@ -76,6 +76,6 @@ This is the cleanest finite variational layer of the closure chain so far.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxliv_nilpotent_action_variation_bridge.py`
+- Verifier: `analysis/verify_dccxliv_nilpotent_action_variation_bridge.py`
 - Tests: `tests/test_dccxliv_nilpotent_action_variation_bridge.py`
 - Data: `data/dccxliv_nilpotent_action_variation_bridge.json`

@@ -118,7 +118,7 @@ j(d=−11) = −2^g = −2^15 = −32768
 
 ---
 
-## §14: SOLVE_RG_NEUTRINO.py — Full Results
+## §14: analysis/SOLVE_RG_NEUTRINO.py — Full Results
 
 See `artifacts/rg_neutrino_results.json` for full precision solutions.
 Those numbers are the preserved NuFIT 5.3 legacy baseline used in the April

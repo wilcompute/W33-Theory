@@ -97,7 +97,7 @@ $$
 Verifier:
 
 ```text
-verify_dclxxxviii_holonomy_photonic_selector_packet_bridge.py
+analysis/verify_dclxxxviii_holonomy_photonic_selector_packet_bridge.py
 ```
 
 Tests:

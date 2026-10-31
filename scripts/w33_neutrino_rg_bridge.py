@@ -1,14 +1,14 @@
 """
 w33_neutrino_rg_bridge.py
 
-Bridge module: connects the neutrino mass solver (SOLVE_RG_NEUTRINO.py)
+Bridge module: connects the neutrino mass solver (analysis/SOLVE_RG_NEUTRINO.py)
 with the corrected RG chain (w33_rg_gut_conversion.py).
 
 The key question: do the W(3,3) fixed-point neutrino masses survive RG
 running from M_GUT to M_Z?
 
 W(3,3) predicts neutrino masses via the mu_eff^2 fixed-point condition
-(see SOLVE_RG_NEUTRINO.py). These are low-energy quantities anchored at M_Z.
+(see analysis/SOLVE_RG_NEUTRINO.py). These are low-energy quantities anchored at M_Z.
 The bridge checks:
   1. Consistency: are the neutrino Yukawa couplings at M_GUT small enough
      not to disturb the quark/charged lepton RG flow?
@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from w33_rg_gut_conversion import w33_m_gut
 
 # ---------------------------------------------------------------------------
-# Neutrino mass data (from SOLVE_RG_NEUTRINO.py NuFIT 6.0)
+# Neutrino mass data (from analysis/SOLVE_RG_NEUTRINO.py NuFIT 6.0)
 # ---------------------------------------------------------------------------
 
 # Best NH solution at fixed point 1/mu (lightest fixed point)

@@ -1,6 +1,6 @@
 # Pass 84 — W(3,3) and Q(4,3) are a Sunada–Gassmann pair
 
-**Status: PASS** — witness `w33_pass84_sunada_gassmann.py` (8/8 checks), test
+**Status: PASS** — witness `analysis/w33_pass84_sunada_gassmann.py` (8/8 checks), test
 `tests/test_pass84_sunada_gassmann.py` (5/5). Self-contained on the committed Pass 73/76/82 spine.
 
 Kac asked *"can you hear the shape of a drum?"*; Sunada built isospectral non-isometric manifolds
@@ -36,5 +36,5 @@ class-number sense; only a global geometric invariant (ovoids) and a global arit
 picture — and it names the phenomenon: a Sunada–Gassmann pair.
 
 ## Files
-- `w33_pass84_sunada_gassmann.py`, `.json` — witness + certificate (8 checks).
+- `analysis/w33_pass84_sunada_gassmann.py`, `.json` — witness + certificate (8 checks).
 - `tests/test_pass84_sunada_gassmann.py` — 5 assertions.

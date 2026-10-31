@@ -26,7 +26,7 @@ So the remote side of the remaining curved frontier is reduced to:
 Verifier:
 
 ```text
-verify_dccii_holonomy_remote_bipartite_frontier_bridge.py
+analysis/verify_dccii_holonomy_remote_bipartite_frontier_bridge.py
 ```
 
 Tests:

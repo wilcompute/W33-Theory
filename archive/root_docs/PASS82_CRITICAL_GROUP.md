@@ -1,7 +1,7 @@
 # Pass 82 — The critical group (sandpile group) separates the cospectral pair W(3,3) / Q(4,3)
 
 **Status: PASS** — GAP script `w33_pass82_critical_group.g` → certificate
-`w33_pass82_critical_group_out.txt`; witness `w33_pass82_critical_group.py` (6/6 checks); test
+`w33_pass82_critical_group_out.txt`; witness `analysis/w33_pass82_critical_group.py` (6/6 checks); test
 `tests/test_pass82_critical_group.py` (5/5). Self-contained on the committed Pass 73–77 spine.
 
 ## Context
@@ -41,5 +41,5 @@ Note K(G) (from the Laplacian) is distinct from the adjacency Smith form 1¹⁶2
 
 ## Files
 - `w33_pass82_critical_group.g`, `w33_pass82_critical_group_out.txt` — GAP script + certificate.
-- `w33_pass82_critical_group.py`, `.json` — witness + certificate (6 checks).
+- `analysis/w33_pass82_critical_group.py`, `.json` — witness + certificate (6 checks).
 - `tests/test_pass82_critical_group.py` — 5 assertions (reads the GAP cert; no live GAP needed).

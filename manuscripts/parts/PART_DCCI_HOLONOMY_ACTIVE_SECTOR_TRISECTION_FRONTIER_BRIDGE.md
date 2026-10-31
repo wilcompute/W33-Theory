@@ -31,7 +31,7 @@ So the remaining curved frontier may first appear in any of these three exact fu
 Verifier:
 
 ```text
-verify_dcci_holonomy_active_sector_trisection_frontier_bridge.py
+analysis/verify_dcci_holonomy_active_sector_trisection_frontier_bridge.py
 ```
 
 Tests:

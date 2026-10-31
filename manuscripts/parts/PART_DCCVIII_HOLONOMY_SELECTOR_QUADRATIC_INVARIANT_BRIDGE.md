@@ -55,7 +55,7 @@ That is a sharper and more stable form than raw channel bookkeeping.
 Verifier:
 
 ```text
-verify_dccviii_holonomy_selector_quadratic_invariant_bridge.py
+analysis/verify_dccviii_holonomy_selector_quadratic_invariant_bridge.py
 ```
 
 Tests:

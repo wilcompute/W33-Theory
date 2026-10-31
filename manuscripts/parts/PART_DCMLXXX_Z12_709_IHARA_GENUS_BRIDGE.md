@@ -191,7 +191,7 @@ H\!\left(-\frac1{12}\right)
 
 ## Executable artifact
 
-- Verifier: `verify_dcmlxxx_z12_709_ihara_genus_bridge.py`
+- Verifier: `analysis/verify_dcmlxxx_z12_709_ihara_genus_bridge.py`
 - Tests: `tests/test_dcmlxxx_z12_709_ihara_genus_bridge.py`
 - Data: `data/dcmlxxx_z12_709_ihara_genus_bridge.json`
 - Result: `PART_DCMLXXX_Z12_709_IHARA_GENUS_BRIDGE_results.json`

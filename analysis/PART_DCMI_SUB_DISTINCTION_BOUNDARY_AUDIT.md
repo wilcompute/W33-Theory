@@ -68,6 +68,6 @@ QEC/photonic H1=81 = protected live architecture
 
 Artifacts:
 
-- Verifier: `verify_dcmi_sub_distinction_boundary_audit.py`
+- Verifier: `analysis/verify_dcmi_sub_distinction_boundary_audit.py`
 - Data: `data/dcmi_sub_distinction_boundary_audit.json`
 - Tests: `tests/test_dcmi_sub_distinction_boundary_audit.py`

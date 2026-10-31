@@ -65,7 +65,7 @@ $$
 | Constant | W(3,3) Derivation | Part |
 |---|---|---|
 | α⁻¹ ≈ 137.036 | 137 = 15th prime; 15 = |simple root generators of Sp(4)| | DCCLVIII |
-| sin²θ_W ≈ 0.231 | 3/13 = 0.2308; 13 ∈ W(3,3) primitive chain | ALPHA_AND_SM.py |
+| sin²θ_W ≈ 0.231 | 3/13 = 0.2308; 13 ∈ W(3,3) primitive chain | analysis/ALPHA_AND_SM.py |
 | m_t/m_e ≈ 344,000 | 384000/240/2 ≈ 800 (within Yukawa ladder, Part CCCCCXI) | DCCCCCXI |
 | Λ_QCD ≈ 200 MeV | 240 MeV from E₈ packing × Planck scale chain | GAUGE_UNIFICATION |
 | n_gen = 3 | q = 3, forced by 15 criteria | DCCLVIII |

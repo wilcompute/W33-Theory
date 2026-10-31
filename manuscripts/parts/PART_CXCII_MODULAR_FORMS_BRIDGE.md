@@ -81,4 +81,4 @@ The 240 minimal E8 vectors equal the edge count of W(3,3).
 
 ## Verification
 
-All 33 checks pass in `PART_CXCII_MODULAR_FORMS_BRIDGE.py`. The Ramanujan tau values τ(1)–τ(13) are computed from first principles via the q-expansion, then verified against known values. Results are in `PART_CXCII_modular_forms_results.json`. Regression tests in `tests/test_modular_forms_bridge_cxcii.py` (80 tests, all passing).
+All 33 checks pass in `analysis/PART_CXCII_MODULAR_FORMS_BRIDGE.py`. The Ramanujan tau values τ(1)–τ(13) are computed from first principles via the q-expansion, then verified against known values. Results are in `PART_CXCII_modular_forms_results.json`. Regression tests in `tests/test_modular_forms_bridge_cxcii.py` (80 tests, all passing).

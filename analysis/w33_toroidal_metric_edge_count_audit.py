@@ -7,7 +7,7 @@ This audits a discrepancy found while mining the toroidal HTML + metric files.
 The toroidal-triad HTML correctly lists Szilassi as:
     V=14, E=21, F=7.
 
-But EDGE_LENGTH_ANALYSIS.py constructs Szilassi edges by taking all cyclic
+But analysis/EDGE_LENGTH_ANALYSIS.py constructs Szilassi edges by taking all cyclic
 adjacent pairs in S_FACES. The seven listed 6-cycles have 42 face-edge
 incidences, but they identify to 31 unique edges with incidence profile:
     20 singleton edges + 11 double edges.
@@ -65,7 +65,7 @@ def main() -> dict:
     assert incidence_count == F_expected * face_degree == 42
     assert E_expected == incidence_count // 2
 
-    # The actual parser output from EDGE_LENGTH_ANALYSIS.py.
+    # The actual parser output from analysis/EDGE_LENGTH_ANALYSIS.py.
     parsed_unique_edge_count = len(unique_edges)
     assert parsed_unique_edge_count == 31
     assert incidence_profile == Counter({1: 20, 2: 11})
@@ -98,7 +98,7 @@ def main() -> dict:
         "theorem": "BT490 Toroidal Metric Edge-Count Audit",
         "source_files": [
             "docs/visualizations/w33-toroidal-triad.html states Szilassi E=21",
-            "EDGE_LENGTH_ANALYSIS.py derives S_edges from cyclic S_FACES",
+            "analysis/EDGE_LENGTH_ANALYSIS.py derives S_edges from cyclic S_FACES",
         ],
         "expected_szilassi_closed_polyhedron": {
             "V": V_expected,

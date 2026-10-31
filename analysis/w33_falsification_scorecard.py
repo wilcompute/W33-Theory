@@ -246,7 +246,7 @@ def main():
         "cosmological tower (Passes 1-12: w33_complete_primordial_spectrum.py, w33_starobinsky.py, "
         "w33_tensor_clock.py, w33_ns_r_forecast.py, w33_scalaron_is_rhn.py, w33_baryon_asymmetry.py); "
         "existing scorecard (w33_measurable_scorecard_2026.py: f_NL, sum m_nu, Omega_DM/Omega_b, "
-        "m_bb); tier tower r=q^q/(l^mu F5) (BT399_NEUTRINO_MASSES.py, BT411_BARYON_ASYMMETRY.py); "
+        "m_bb); tier tower r=q^q/(l^mu F5) (analysis/BT399_NEUTRINO_MASSES.py, analysis/BT411_BARYON_ASYMMETRY.py); "
         "SRG(40,12,2,4) W(3,3); alpha=137 (w33_alpha_closure.py); proton lifetime ~4.6e35 yr "
         "(w33_proton_lifetime_gut_scale.py); DESI 2024 sum m_nu < 0.072 eV."
     ]

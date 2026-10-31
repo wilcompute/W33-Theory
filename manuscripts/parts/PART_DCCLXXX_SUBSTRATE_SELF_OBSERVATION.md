@@ -1,6 +1,6 @@
 # Part DCCLXXX — The Substrate Self-Observation Theorem
 
-**Bridge:** `verify_dcclxxx_substrate_self_observation.py` — Verified
+**Bridge:** `analysis/verify_dcclxxx_substrate_self_observation.py` — Verified
 **Tests:** `tests/test_dcclxxx_substrate_self_observation.py` — 19/19 pass
 **Data:** `data/dcclxxx_substrate_self_observation.json`
 

@@ -100,4 +100,4 @@ $$196560 = \underbrace{240}_{E} \times \underbrace{9}_{Q^2} \times \underbrace{7
 
 ## Verification
 
-All 40 checks pass in `PART_CXCI_GOLAY_CODE_BRIDGE.py`. Results are recorded in `PART_CXCI_golay_code_results.json`. Regression tests in `tests/test_golay_code_bridge_cxci.py` (92 tests, all passing).
+All 40 checks pass in `analysis/PART_CXCI_GOLAY_CODE_BRIDGE.py`. Results are recorded in `PART_CXCI_golay_code_results.json`. Regression tests in `tests/test_golay_code_bridge_cxci.py` (92 tests, all passing).

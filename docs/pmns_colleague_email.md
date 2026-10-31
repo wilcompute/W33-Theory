@@ -8,7 +8,7 @@ The exact PMNS formulas currently promoted at verified status in the repo are th
 - `sin^2(theta_23) = 7/13`
 - `sin^2(theta_13) = 2/91`
 
-The implementation is in `PMNS_CYCLOTOMIC.py`. The route is:
+The implementation is in `analysis/PMNS_CYCLOTOMIC.py`. The route is:
 
 - `q = 3`
 - `lambda = q - 1 = 2`

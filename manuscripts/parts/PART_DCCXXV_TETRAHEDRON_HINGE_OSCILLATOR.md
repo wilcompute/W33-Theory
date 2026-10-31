@@ -1,6 +1,6 @@
 # Part DCCXXV — The Tetrahedron as the Self-Dual Hinge of the Genus Oscillator
 
-**Bridge:** `verify_dccxxv_tetrahedron_hinge_oscillator.py` — Verified
+**Bridge:** `analysis/verify_dccxxv_tetrahedron_hinge_oscillator.py` — Verified
 **Tests:** `tests/test_dccxxv_tetrahedron_hinge_oscillator.py` — 24/24 pass
 **Data:** `data/dccxxv_tetrahedron_hinge_oscillator.json`
 

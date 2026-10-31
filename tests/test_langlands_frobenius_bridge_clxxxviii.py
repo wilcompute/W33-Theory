@@ -289,11 +289,11 @@ def test_audit_w33_atoms_present(audit):
 # ---------------------------------------------------------------------------
 
 def test_results_json_exists():
-    p = ROOT / "PART_CLXXXVIII_langlands_frobenius_results.json"
+    p = ROOT / "manuscripts" / "parts" / "PART_CLXXXVIII_langlands_frobenius_results.json"  # the tracked copy (root output is gitignored)
     assert p.exists()
 
 def test_results_json_valid():
-    p = ROOT / "PART_CLXXXVIII_langlands_frobenius_results.json"
+    p = ROOT / "manuscripts" / "parts" / "PART_CLXXXVIII_langlands_frobenius_results.json"  # the tracked copy (root output is gitignored)
     with p.open() as fh:
         data = json.load(fh)
     assert data["status"] == "PASS"

@@ -159,7 +159,7 @@ Total: **All 480+ lines of assertions pass** ✓
 1. **explore_moments.py**: Verifies recurrence via moment computation
 2. **explore_ihara.py**: Analyzes Ihara zeta critical points
 3. **explore_gq.py**: Validates GQ geometry triple-counting methods
-4. **test_triangles.py**: Quick triangle enumeration verification
+4. **analysis/test_triangles.py**: Quick triangle enumeration verification
 5. **explore_cycles.py**: Full cycle analysis framework
 6. **explore_association_scheme.py**: Association scheme structure analysis
 

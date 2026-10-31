@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** finite observable-classification grammar  
-**Files:** `PART_CXLVII_OBSERVABLE_GRAMMAR.py`, `PART_CXLVII_observable_grammar_results.json`, `tests/test_observable_grammar_cxlvii.py`
+**Files:** `analysis/PART_CXLVII_OBSERVABLE_GRAMMAR.py`, `PART_CXLVII_observable_grammar_results.json`, `tests/test_observable_grammar_cxlvii.py`
 
 ---
 

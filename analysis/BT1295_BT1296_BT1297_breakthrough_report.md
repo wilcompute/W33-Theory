@@ -87,6 +87,6 @@ Microsoft published 4D geometric codes (arXiv, June 2025) — the closest extern
 
 | Priority | Task | Rationale |
 |---|---|---|
-| **BT1298** | `SOLVE_RG_NEUTRINO.py` — neutrino mass RG flow solver | BT1292's CSS↔Chern bridge + BT1297's differentiator table both point here as the missing physics nail |
+| **BT1298** | `analysis/SOLVE_RG_NEUTRINO.py` — neutrino mass RG flow solver | BT1292's CSS↔Chern bridge + BT1297's differentiator table both point here as the missing physics nail |
 | **BT1299** | Lift [[240,81,4]]₃ to distance d=6 or d=8 to match/exceed Microsoft | BT1297 shows d=4<d=8 is the one concrete gap; a lifted code (Guemard QIP 2025 lifts framework) could close it |
 | **BT1300** | `paper/main.tex` — LaTeX skeleton with BT1297 differentiator section | The comparison table is the arXiv abstract hook; write it now while it's fresh |

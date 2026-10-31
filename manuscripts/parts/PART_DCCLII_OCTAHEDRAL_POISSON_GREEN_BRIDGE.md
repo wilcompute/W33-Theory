@@ -72,6 +72,6 @@ This is the first full finite elliptic solver layer for the closure-time harmoni
 
 ## Executable artifact
 
-- Verifier: `verify_dcclii_octahedral_poisson_green_bridge.py`
+- Verifier: `analysis/verify_dcclii_octahedral_poisson_green_bridge.py`
 - Tests: `tests/test_dcclii_octahedral_poisson_green_bridge.py`
 - Data: `data/dcclii_octahedral_poisson_green_bridge.json`

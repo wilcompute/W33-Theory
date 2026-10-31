@@ -67,7 +67,7 @@ The verifier checks the following abstract-level claims exactly:
 Verifier:
 
 ```text
-verify_dclxiii_arxiv_claim_ledger.py
+analysis/verify_dclxiii_arxiv_claim_ledger.py
 ```
 
 Tests:

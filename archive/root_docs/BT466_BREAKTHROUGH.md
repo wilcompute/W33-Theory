@@ -109,7 +109,7 @@ The degeneration IS the fixed point set.
 
 ## Verification
 
-See `BT466_SEXTACTIC_MODULAR_WILSON.py` — all 31 identities pass at 100%.
+See `analysis/BT466_SEXTACTIC_MODULAR_WILSON.py` — all 31 identities pass at 100%.
 
 ## Chain so far
 - BT464: Reye configuration as grand unifier (27/27)

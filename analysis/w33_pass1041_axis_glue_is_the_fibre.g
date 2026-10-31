@@ -40,7 +40,7 @@
 # PRIOR ART -- cited, not reclaimed:
 #   * w33_paper.tex thm:axis-glue-e8-lift OWNS the axis-glue carrier, the
 #     SRG(120,63,30,36) identification, and the warning that this is not the
-#     240-edge dictionary.  Witness w33_pass123_axis_glue_e8_lift.py.
+#     240-edge dictionary.  Witness analysis/w33_pass123_axis_glue_e8_lift.py.
 #   * Pass 1021 -- the fibration and its Eisenstein fibre.
 #   * Pass 1023 -- the Z2 x Z3 split of the fibre.
 

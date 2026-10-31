@@ -58,6 +58,6 @@ This is the cleanest exact recurrence/return bridge so far in the closure transp
 
 ## Executable artifact
 
-- Verifier: `verify_dcclx_octahedral_return_recurrence_bridge.py`
+- Verifier: `analysis/verify_dcclx_octahedral_return_recurrence_bridge.py`
 - Tests: `tests/test_dcclx_octahedral_return_recurrence_bridge.py`
 - Data: `data/dcclx_octahedral_return_recurrence_bridge.json`

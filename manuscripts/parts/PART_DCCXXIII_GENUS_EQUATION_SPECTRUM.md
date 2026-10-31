@@ -1,6 +1,6 @@
 # Part DCCXXIII — The Genus-Equation Spectrum and the W(3,3) Primitives
 
-**Bridge:** `verify_dccxxiii_genus_equation_spectrum.py` — Verified
+**Bridge:** `analysis/verify_dccxxiii_genus_equation_spectrum.py` — Verified
 **Tests:** `tests/test_dccxxiii_genus_equation_spectrum.py` — 21/21 pass
 **Data:** `data/dccxxiii_genus_equation_spectrum.json`
 

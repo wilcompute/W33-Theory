@@ -71,7 +71,7 @@ So the post-DCCX frontier is now pinned as a controlled support-kernel problem, 
 Verifier:
 
 ```text
-verify_dccxi_holonomy_weld_associator_support_bridge.py
+analysis/verify_dccxi_holonomy_weld_associator_support_bridge.py
 ```
 
 Tests:

@@ -115,7 +115,7 @@ At the singular values λ = q·ζ₃^j, the pencil member degenerates to a trian
 
 ## Verification
 
-See `BT465_HESSE_PENCIL_UNIFICATION.py` — all 35 identities pass at 100%.
+See `analysis/BT465_HESSE_PENCIL_UNIFICATION.py` — all 35 identities pass at 100%.
 
 Previous breakthroughs in chain:
 - BT460–BT463: Tomotope, W(3,3), E8 substrate identification

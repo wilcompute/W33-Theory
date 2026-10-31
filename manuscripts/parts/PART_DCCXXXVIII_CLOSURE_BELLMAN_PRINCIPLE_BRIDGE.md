@@ -72,6 +72,6 @@ So the emergent-time thread now has:
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxviii_closure_bellman_principle_bridge.py`
+- Verifier: `analysis/verify_dccxxxviii_closure_bellman_principle_bridge.py`
 - Tests: `tests/test_dccxxxviii_closure_bellman_principle_bridge.py`
 - Data: `data/dccxxxviii_closure_bellman_principle_bridge.json`

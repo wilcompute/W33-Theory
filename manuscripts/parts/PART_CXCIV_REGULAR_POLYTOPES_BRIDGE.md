@@ -98,7 +98,7 @@ to the 24 unit Hurwitz quaternions. Its symmetry order 1152 = J⁻¹ · K².
 
 ## Bridge Script
 
-`PART_CXCIV_REGULAR_POLYTOPES_BRIDGE.py` — 52/52 checks pass.
+`analysis/PART_CXCIV_REGULAR_POLYTOPES_BRIDGE.py` — 52/52 checks pass.
 
 ## Tests
 

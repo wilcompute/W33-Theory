@@ -82,6 +82,6 @@ generator and terminates after exactly six proper-time levels.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxlvi_nilpotent_action_jet_tower_bridge.py`
+- Verifier: `analysis/verify_dccxlvi_nilpotent_action_jet_tower_bridge.py`
 - Tests: `tests/test_dccxlvi_nilpotent_action_jet_tower_bridge.py`
 - Data: `data/dccxlvi_nilpotent_action_jet_tower_bridge.json`

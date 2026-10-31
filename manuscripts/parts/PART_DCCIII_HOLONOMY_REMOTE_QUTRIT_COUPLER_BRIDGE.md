@@ -55,7 +55,7 @@ So the remote frontier has moved one step closer to hardware language.
 Verifier:
 
 ```text
-verify_dcciii_holonomy_remote_qutrit_coupler_bridge.py
+analysis/verify_dcciii_holonomy_remote_qutrit_coupler_bridge.py
 ```
 
 Tests:

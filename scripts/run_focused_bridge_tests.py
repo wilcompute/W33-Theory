@@ -164,10 +164,10 @@ SUITES: dict[str, list[str]] = {
     ],
     # BT1635: YM tightness + calibration ABI + fault-path + decoder verifiers
     "ym-calibration": [
-        "bt1626_ym_mass_gap_tightness_verifier.py",
-        "bt1630_calibration_abi_verifier.py",
-        "bt1633_fault_path_theorem.py",
-        "bt1634_detector_bin_decoder.py",
+        "analysis/bt1626_ym_mass_gap_tightness_verifier.py",
+        "analysis/bt1630_calibration_abi_verifier.py",
+        "analysis/bt1633_fault_path_theorem.py",
+        "analysis/bt1634_detector_bin_decoder.py",
     ],
 }
 
@@ -192,10 +192,10 @@ ALIASES = {
 
 # BT1635: scripts that are run directly (not via pytest) in the ym-calibration suite
 DIRECT_RUN_SCRIPTS: set[str] = {
-    "bt1626_ym_mass_gap_tightness_verifier.py",
-    "bt1630_calibration_abi_verifier.py",
-    "bt1633_fault_path_theorem.py",
-    "bt1634_detector_bin_decoder.py",
+    "analysis/bt1626_ym_mass_gap_tightness_verifier.py",
+    "analysis/bt1630_calibration_abi_verifier.py",
+    "analysis/bt1633_fault_path_theorem.py",
+    "analysis/bt1634_detector_bin_decoder.py",
 }
 
 

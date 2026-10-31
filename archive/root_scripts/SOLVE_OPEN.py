@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SOLVE_OPEN.py — Closing ALL six open questions from SOLVE.py Chapter 13
+SOLVE_OPEN.py — Closing ALL six open questions from analysis/SOLVE.py Chapter 13
 =========================================================================
 
 This script provides rigorous computational proofs for the 6 items that
-SOLVE.py listed as "open":
+analysis/SOLVE.py listed as "open":
 
   Q1. sin^2(theta_W) = q/Phi_3  — from spectral triple axioms
   Q2. 1-loop alpha correction 3/22 — formal derivation
@@ -1154,8 +1154,8 @@ print(f"    m_c/m_t ~ sigma_2/sigma_1 = {r_21:.6f}")
 print(f"    m_u/m_t ~ sigma_3/sigma_1 = {r_31:.8f}")
 print(f"    m_u/m_c ~ sigma_3/sigma_2 = {r_32:.6f}")
 
-# Compare with observed and SOLVE.py ratios
-# SOLVE.py: m_c/m_t = 1/(|z|^2-1) = 1/136 = 0.007353
+# Compare with observed and analysis/SOLVE.py ratios
+# analysis/SOLVE.py: m_c/m_t = 1/(|z|^2-1) = 1/136 = 0.007353
 # SVD:     m_c/m_t ~ sigma_2/sigma_1
 # 
 # The SVD gives a different decomposition. Let's check what the 
@@ -1209,8 +1209,8 @@ print(f"    m_c/m_t = sigma_2/sigma_1 = {svd_ratio_ct:.6f}")
 print(f"    m_u/m_c = sigma_3/sigma_2 = {svd_ratio_uc:.6f}")
 print(f"    Both ~ 2/(|z|^2-2) = 2/135 = {2/135:.6f}")
 
-# CONNECTION TO SOLVE.py's formula:
-# SOLVE.py uses m_c/m_t = 1/(|z|^2-1) = 1/136.
+# CONNECTION TO analysis/SOLVE.py's formula:
+# analysis/SOLVE.py uses m_c/m_t = 1/(|z|^2-1) = 1/136.
 # The SVD gives 2/(|z|^2-2) = 2/135.
 # The factor of 2 difference: in the EXACT SVD, sigma_2/sigma_1 is NOT 1/b,
 # it's slightly different due to the off-diagonal structure.
@@ -1258,7 +1258,7 @@ print(f"    Both ~ 2/(|z|^2-2) = 2/135 = {2/135:.6f}")
 # enters through the epsilon = 1/sqrt(M) choice.
 # If instead we use M_eff = (|z|^2-1)/2 = 68 iterations with
 # epsilon = 1/sqrt(68), we get the SAME G^M result.
-# SOLVE.py's formula m_c/m_t = 1/136 is the DIRECT ratio from the 
+# analysis/SOLVE.py's formula m_c/m_t = 1/136 is the DIRECT ratio from the 
 # Gaussian integer norm, which the SVD mechanism MOTIVATES (showing 
 # the hierarchy arises from iteration of the generation operator
 # M = 136 times).
@@ -1441,7 +1441,7 @@ check("8 states per gen = 2 + 2*3 (SM content)", n_per_gen == 2 + 2*3)
 # m_H^2 = 2 * a_4 * v_EW^2 / a_0 = 2 * quartic coupling * v_EW^2
 
 # The Higgs mass:
-# In SOLVE.py: m_H = q^4 + v + mu = 81 + 40 + 4 = 125 GeV
+# In analysis/SOLVE.py: m_H = q^4 + v + mu = 81 + 40 + 4 = 125 GeV
 m_H_pred = q**4 + v_val + mu_val
 print(f"\n  SECTOR 3: HIGGS")
 print(f"    Higgs doublet from inner fluctuations of D_F")

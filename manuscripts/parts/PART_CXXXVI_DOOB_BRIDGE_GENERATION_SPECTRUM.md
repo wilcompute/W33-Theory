@@ -10,7 +10,7 @@ five new finite identities that connect the bridge dynamics to the SRG
 parameters $(k,\lambda,\mu) = (12,2,4)$ of W(3,3).
 
 The full computation lives in
-`PART_CXXXVI_DOOB_BRIDGE_GENERATION_SPECTRUM.py`
+`analysis/PART_CXXXVI_DOOB_BRIDGE_GENERATION_SPECTRUM.py`
 and the regression tests are in
 `tests/test_doob_bridge_generation_spectrum_cxxxvi.py`.
 

@@ -4,7 +4,7 @@
 
 ## Existing RH / Ramanujan work reviewed
 
-The graph-theoretic RH program is **already extensive**. We checked the original manuscript source \`manuscripts/tex/part27_graph_rh_theorem.tex\` (which is input by the \`w33_paper.tex\` manuscript), \`analysis/w33_ihara_zeta.py\`, \`w33_pass74_zeta_frontier.py\` (important separate Levi incidence-graph prime-cycle census), \`manuscripts/parts/PART_MCLIII_IHARA_ZETA.md\`, \`analysis/2026-07-15_pass89_ihara_zeta_ramanujan.md\`, \`analysis/w33_pass3080_3082_bass_regular_audit.py\` (explicit past **irregular-graph** correction), \`analysis/BT872_ihara_zeta_spanning_bridge.md\`, \`exploration/w33_ramanujan_bridge.py\`, \`docs/PART_CDI_IHARA_ZETA_DETERMINANT.md\`, plus latest TOE73–75 native theta/fermion/quantum-cover source.
+The graph-theoretic RH program is **already extensive**. We checked the original manuscript source \`manuscripts/tex/part27_graph_rh_theorem.tex\` (which is input by the \`w33_paper.tex\` manuscript), \`analysis/w33_ihara_zeta.py\`, \`analysis/w33_pass74_zeta_frontier.py\` (important separate Levi incidence-graph prime-cycle census), \`manuscripts/parts/PART_MCLIII_IHARA_ZETA.md\`, \`analysis/2026-07-15_pass89_ihara_zeta_ramanujan.md\`, \`analysis/w33_pass3080_3082_bass_regular_audit.py\` (explicit past **irregular-graph** correction), \`analysis/BT872_ihara_zeta_spanning_bridge.md\`, \`exploration/w33_ramanujan_bridge.py\`, \`docs/PART_CDI_IHARA_ZETA_DETERMINANT.md\`, plus latest TOE73–75 native theta/fermion/quantum-cover source.
 
 **Parent theorem:** the *40-vertex degree-12 collinearity graph* SRG(40,12,2,4) has spectrum \(\{12^1,2^{24},(-4)^{15}\}\). Bass yields
 \[

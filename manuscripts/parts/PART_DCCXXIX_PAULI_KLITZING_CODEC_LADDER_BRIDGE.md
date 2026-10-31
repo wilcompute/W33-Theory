@@ -47,6 +47,6 @@ This converts the Klitzing operation counts from an isolated table fact into a P
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxix_pauli_klitzing_codec_ladder_bridge.py`
+- Verifier: `analysis/verify_dccxxix_pauli_klitzing_codec_ladder_bridge.py`
 - Tests: `tests/test_dccxxix_pauli_klitzing_codec_ladder_bridge.py`
 - Data: `data/dccxxix_pauli_klitzing_codec_ladder_bridge.json`

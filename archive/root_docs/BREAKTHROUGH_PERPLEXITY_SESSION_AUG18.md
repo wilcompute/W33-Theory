@@ -82,7 +82,7 @@ and the **self-duality with the Szilassi formula is new**.
 
 ## Bell Qutrit Computation Simulator (Verified)
 
-All identities verified computationally in `BT1642_ringel_csaszar_clique_complex.py`:
+All identities verified computationally in `analysis/BT1642_ringel_csaszar_clique_complex.py`:
 
 ### Choi–Jamiołkowski Identity
 ```
@@ -122,7 +122,7 @@ reads out the trace of whatever gate you applied to the future.
 
 ## Files Pushed
 
-- `BT1642_ringel_csaszar_clique_complex.py` — Full computation + verification
+- `analysis/BT1642_ringel_csaszar_clique_complex.py` — Full computation + verification
 - `BT1642_ringel_csaszar_clique_complex.json` — Results JSON
 - `BREAKTHROUGH_PERPLEXITY_SESSION_AUG18.md` — This file
 

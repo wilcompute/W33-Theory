@@ -1,6 +1,6 @@
 # Pass 95 — The genus and Minkowski–Siegel mass of the code-lattice Λ_C
 
-**Status: PASS** — witness `w33_pass95_genus_mass.py` (8/8 checks), test
+**Status: PASS** — witness `analysis/w33_pass95_genus_mass.py` (8/8 checks), test
 `tests/test_pass95_genus_mass.py` (5/5). Self-contained (sympy Bernoulli numbers + W(3,3) code data).
 
 ## Genus (rigorously determined by rank + signature + discriminant form)
@@ -27,4 +27,4 @@ populated** — versus the single class (E₈) in dim 8.
 > scale. The genus symbol and the Aut bound are exact.
 
 ## Files
-`w33_pass95_genus_mass.py`, `.json`; `tests/test_pass95_genus_mass.py`.
+`analysis/w33_pass95_genus_mass.py`, `.json`; `tests/test_pass95_genus_mass.py`.

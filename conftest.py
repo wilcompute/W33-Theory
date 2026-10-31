@@ -10,6 +10,10 @@ for _subdir in ("pillars", "exploration"):
     _p = str(_root / _subdir)
     if _p not in sys.path:
         sys.path.insert(0, _p)
+# The former root modules (verify_*, PART_*, w33_pass*, BT*, ...) moved to analysis/ on 2026-10-30: APPEND it, so `import X` keeps
+# working for tests and an analysis/ module can never shadow an installed package or a module found earlier on the path.
+if str(_root / "analysis") not in sys.path:
+    sys.path.append(str(_root / "analysis"))
 
 # Detect availability of optional heavy dependencies
 _optional_modules = {

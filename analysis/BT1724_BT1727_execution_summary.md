@@ -10,7 +10,7 @@ The relevant older repo work was not under one obvious name.  The key anchors we
 - `tools/bt1412_toroidal_q4_oscillator_boundary.py`: the Q4/toroidal oscillator boundary layer.
 - `tools/h27_latin_cube_search.py`: H27 fails as a naive `3x3x3` Latin cube, so the positive object has to be a quotient/cover rather than a cube.
 - `analysis/w33_witting_reye_toroidal_tomotope_collapse.py`: the positive Latin/Reye model already existed as a cyclic `(12_4,16_3)` chart with 48 incidences and cycle rank 21.
-- `verify_dccli_pascal_diagonal_w33_generator.py`: Pascal/Fibonacci exceptional Coxeter ladder, including the `1,2,2,3,5` multiplier pattern.
+- `analysis/verify_dccli_pascal_diagonal_w33_generator.py`: Pascal/Fibonacci exceptional Coxeter ladder, including the `1,2,2,3,5` multiplier pattern.
 
 ## BT1724: q2025 quotient pairing
 

@@ -92,8 +92,8 @@ simulation.
 ## Verification
 
 ```bash
-python3 w33_pass80_native_k12_edge_vm.py
-python3 -m py_compile w33_pass80_native_k12_edge_vm.py
+python3 analysis/w33_pass80_native_k12_edge_vm.py
+python3 -m py_compile analysis/w33_pass80_native_k12_edge_vm.py
 python3 -m json.tool w33_pass80_native_k12_edge_vm.json
 ```
 

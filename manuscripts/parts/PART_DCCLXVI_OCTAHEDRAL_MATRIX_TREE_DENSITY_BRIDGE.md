@@ -1,6 +1,6 @@
 # Part DCCLXVI - Octahedral Matrix-Tree / Density-Denominator Bridge
 
-**Bridge:** `verify_dcclxvi_octahedral_matrix_tree_density_bridge.py` - Verified
+**Bridge:** `analysis/verify_dcclxvi_octahedral_matrix_tree_density_bridge.py` - Verified
 **Tests:** `tests/test_dcclxvi_octahedral_matrix_tree_density_bridge.py` - 16/16 pass
 **Data:** `data/dcclxvi_octahedral_matrix_tree_density_bridge.json`
 

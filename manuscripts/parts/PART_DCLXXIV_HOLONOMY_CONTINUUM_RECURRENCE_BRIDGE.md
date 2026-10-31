@@ -99,7 +99,7 @@ It now has a single exact continuum evolution equation whose integer-time sample
 Verifier:
 
 ```text
-verify_dclxxiv_holonomy_continuum_recurrence_bridge.py
+analysis/verify_dclxxiv_holonomy_continuum_recurrence_bridge.py
 ```
 
 Tests:

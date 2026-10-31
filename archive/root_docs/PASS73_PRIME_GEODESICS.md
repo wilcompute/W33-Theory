@@ -1,6 +1,6 @@
 # Pass 73 — The Prime Geodesic Spectrum of W(3,3)
 
-**Status: PASS** (witness `w33_pass73_prime_geodesics.py`, test `tests/test_pass73_prime_geodesics.py`, 8/8; paper compiles clean with tectonic.)
+**Status: PASS** (witness `analysis/w33_pass73_prime_geodesics.py`, test `tests/test_pass73_prime_geodesics.py`, 8/8; paper compiles clean with tectonic.)
 
 ## What this pass does
 
@@ -47,7 +47,7 @@ count obeys the graph prime number theorem π_G(m) ~ 11^m/m, and the Ramanujan p
 fluctuation by the tightest possible (RH) error — a hard, effective statement, not an asymptotic.
 
 ## Files
-- `w33_pass73_prime_geodesics.py` — witness (self-contained: builds W(3,3) from the symplectic
+- `analysis/w33_pass73_prime_geodesics.py` — witness (self-contained: builds W(3,3) from the symplectic
   form, the Hashimoto operator, the prime counts, and all four theorems).
 - `w33_pass73_prime_geodesics.json` — machine-readable certificate.
 - `tests/test_pass73_prime_geodesics.py` — 8 regression assertions.

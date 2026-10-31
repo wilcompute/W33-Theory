@@ -35,13 +35,13 @@ print("="*70)
 print("VII-V: POLYNOMIAL INVARIANTS & ZETA FUNCTIONS")
 print("="*70)
 
-# ── Build adjacency matrix from THEORY_OF_EVERYTHING.py ──
+# ── Build adjacency matrix from analysis/THEORY_OF_EVERYTHING.py ──
 from itertools import combinations
 import sys, importlib.util, os
 
 # Load graph from main theory file
 spec = importlib.util.spec_from_file_location("toe",
-    os.path.join(os.path.dirname(__file__), "THEORY_OF_EVERYTHING.py"))
+    os.path.join(os.path.dirname(__file__), "analysis/THEORY_OF_EVERYTHING.py"))
 # Actually, just rebuild the graph directly as done in THEORY_OF_EVERYTHING
 GF3 = range(3)
 points_raw = [(a,b,c,d) for a in GF3 for b in GF3 for c in GF3 for d in GF3]

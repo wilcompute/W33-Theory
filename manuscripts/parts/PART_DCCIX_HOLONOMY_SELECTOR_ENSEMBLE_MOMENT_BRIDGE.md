@@ -42,7 +42,7 @@ So the frontier is now equivalent to one deterministic second-moment kernel, not
 Verifier:
 
 ```text
-verify_dccix_holonomy_selector_ensemble_moment_bridge.py
+analysis/verify_dccix_holonomy_selector_ensemble_moment_bridge.py
 ```
 
 Tests:

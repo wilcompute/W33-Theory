@@ -84,7 +84,7 @@ That is the cleanest operator-level compression so far.
 Verifier:
 
 ```text
-verify_dclxxiii_holonomy_tripotent_hyperbolic_flow_bridge.py
+analysis/verify_dclxxiii_holonomy_tripotent_hyperbolic_flow_bridge.py
 ```
 
 Tests:

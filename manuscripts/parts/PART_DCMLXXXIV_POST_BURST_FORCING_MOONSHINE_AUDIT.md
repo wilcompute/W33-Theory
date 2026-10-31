@@ -166,7 +166,7 @@ dependency.
 
 ## Executable artifact
 
-- Verifier: `verify_dcmlxxxiv_post_burst_forcing_moonshine_audit.py`
+- Verifier: `analysis/verify_dcmlxxxiv_post_burst_forcing_moonshine_audit.py`
 - Tests: `tests/test_dcmlxxxiv_post_burst_forcing_moonshine_audit.py`
 - Data: `data/dcmlxxxiv_post_burst_forcing_moonshine_audit.json`
 - Result: `PART_DCMLXXXIV_POST_BURST_FORCING_MOONSHINE_AUDIT_results.json`

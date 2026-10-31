@@ -1,6 +1,6 @@
 # Part DCCLIV — The Frobenius Selection Principle and the Ouroboros Loop
 
-**Bridge:** `verify_dccliv_frobenius_selection_and_ouroboros.py` — Verified
+**Bridge:** `analysis/verify_dccliv_frobenius_selection_and_ouroboros.py` — Verified
 **Tests:** `tests/test_dccliv_frobenius_selection_and_ouroboros.py` — 21/21 pass
 **Data:** `data/dccliv_frobenius_selection_and_ouroboros.json`
 

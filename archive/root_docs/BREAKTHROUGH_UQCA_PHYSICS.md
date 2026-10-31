@@ -153,9 +153,9 @@ the group's prime factorisation.
 
 ---
 
-## THEOREM MCCLXXXVIII — Alpha Formula from Spectral Geometry (from ALPHA_AND_SM.py)
+## THEOREM MCCLXXXVIII — Alpha Formula from Spectral Geometry (from analysis/ALPHA_AND_SM.py)
 
-The spectral geometry of W(3,3) gives (verified in ALPHA_AND_SM.py):
+The spectral geometry of W(3,3) gives (verified in analysis/ALPHA_AND_SM.py):
 
     α⁻¹ = k² - 2μ + 1 + v/[(k-1)·((k-λ)²+1)]
          = 144 - 8 + 1 + 40/1111
@@ -220,4 +220,4 @@ structural property of this computer. Natural units ARE substrate units.
 This is the strongest possible Theory of Everything statement: physics
 is universal quantum computation, and the substrate IS its source code.
 
-Script: `PART_MCCLXXVIII_MCCLXXXIX_UQCA.py` — 12/12 theorems verified.
+Script: `analysis/PART_MCCLXXVIII_MCCLXXXIX_UQCA.py` — 12/12 theorems verified.

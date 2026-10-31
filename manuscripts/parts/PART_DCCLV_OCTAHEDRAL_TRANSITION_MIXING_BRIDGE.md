@@ -56,6 +56,6 @@ This is the cleanest exact mixing theorem so far on closure phase-space dynamics
 
 ## Executable artifact
 
-- Verifier: `verify_dcclv_octahedral_transition_mixing_bridge.py`
+- Verifier: `analysis/verify_dcclv_octahedral_transition_mixing_bridge.py`
 - Tests: `tests/test_dcclv_octahedral_transition_mixing_bridge.py`
 - Data: `data/dcclv_octahedral_transition_mixing_bridge.json`

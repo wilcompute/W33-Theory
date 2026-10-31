@@ -117,7 +117,7 @@ They are now also **continuously generated**.
 Verifier:
 
 ```text
-verify_dclxxii_holonomy_heat_semigroup_bridge.py
+analysis/verify_dclxxii_holonomy_heat_semigroup_bridge.py
 ```
 
 Tests:

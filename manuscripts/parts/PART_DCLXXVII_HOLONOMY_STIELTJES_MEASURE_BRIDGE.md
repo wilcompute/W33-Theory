@@ -83,7 +83,7 @@ That is an even deeper kind of closure.
 Verifier:
 
 ```text
-verify_dclxxvii_holonomy_stieltjes_measure_bridge.py
+analysis/verify_dclxxvii_holonomy_stieltjes_measure_bridge.py
 ```
 
 Tests:

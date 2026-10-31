@@ -79,6 +79,6 @@ The verifier checks:
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxiii_spatial_closure_time_bridge.py`
+- Verifier: `analysis/verify_dccxxxiii_spatial_closure_time_bridge.py`
 - Tests: `tests/test_dccxxxiii_spatial_closure_time_bridge.py`
 - Data: `data/dccxxxiii_spatial_closure_time_bridge.json`

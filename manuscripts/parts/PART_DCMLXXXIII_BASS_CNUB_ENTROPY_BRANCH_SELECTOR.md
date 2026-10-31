@@ -129,7 +129,7 @@ dependency.
 
 ## Executable artifact
 
-- Verifier: `verify_dcmlxxxiii_bass_cnub_entropy_branch_selector.py`
+- Verifier: `analysis/verify_dcmlxxxiii_bass_cnub_entropy_branch_selector.py`
 - Tests: `tests/test_dcmlxxxiii_bass_cnub_entropy_branch_selector.py`
 - Data: `data/dcmlxxxiii_bass_cnub_entropy_branch_selector.json`
 - Result: `PART_DCMLXXXIII_BASS_CNUB_ENTROPY_BRANCH_SELECTOR_results.json`

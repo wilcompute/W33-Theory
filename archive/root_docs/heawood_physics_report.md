@@ -22,18 +22,18 @@ Key claims and evidence:
 
   $$P_{mid} = \frac{1}{2} (I + H_{mid})$$
 
-  (constructed in `heawood_projector_clifford.py`) is idempotent in the mid-subspace and has trace $6$ (rank 6) to numerical precision.
+  (constructed in `analysis/heawood_projector_clifford.py`) is idempotent in the mid-subspace and has trace $6$ (rank 6) to numerical precision.
 
 - The 48 Fano 7-cycle automorphisms lift to valid Heawood automorphisms; their action on the mid-subspace yields unitary rotations whose phase statistics are reported in `heawood_spiral_closedform.json` (mean-of-means approximately zero, indicating no net global rotation direction across the family).
 
 
 ## Files and scripts
 
-- `heawood_from_fano_7cycles.py` — enumerates and maps Fano collineations to Heawood automorphisms.
-- `heawood_fano7_tetra_alignment.py` — compares tetrahedral oscillator to 7-cycle action.
-- `heawood_projector_clifford.py` — constructs the centered operator, isolates the mid-shell, normalizes, and builds `P_mid` to verify idempotency and rank.
-- `heawood_spiral_closedform.py` — produces `heawood_spiral_closedform.json` including exact closed-form ratio and 7-cycle phase statistics.
-- `tetrahedral_harmonic_crack_summary.py` — aggregated numerical summary.
+- `analysis/heawood_from_fano_7cycles.py` — enumerates and maps Fano collineations to Heawood automorphisms.
+- `analysis/heawood_fano7_tetra_alignment.py` — compares tetrahedral oscillator to 7-cycle action.
+- `analysis/heawood_projector_clifford.py` — constructs the centered operator, isolates the mid-shell, normalizes, and builds `P_mid` to verify idempotency and rank.
+- `analysis/heawood_spiral_closedform.py` — produces `heawood_spiral_closedform.json` including exact closed-form ratio and 7-cycle phase statistics.
+- `analysis/tetrahedral_harmonic_crack_summary.py` — aggregated numerical summary.
 
 
 ## Reproducibility
@@ -42,11 +42,11 @@ Run these commands from the repository root (Windows PowerShell shown):
 
 ```powershell
 & ".\.venv\Scripts\Activate.ps1"  # activate your venv
-python heawood_spiral_closedform.py
-python heawood_projector_clifford.py
-python heawood_from_fano_7cycles.py
-python heawood_fano7_tetra_alignment.py
-python tetrahedral_harmonic_crack_summary.py
+python analysis/heawood_spiral_closedform.py
+python analysis/heawood_projector_clifford.py
+python analysis/heawood_from_fano_7cycles.py
+python analysis/heawood_fano7_tetra_alignment.py
+python analysis/tetrahedral_harmonic_crack_summary.py
 ```
 
 Dependencies: `numpy`, `networkx` (the repo already includes `requirements.txt`).

@@ -82,7 +82,7 @@ So the two-qutrit constitutive response is governed by the q-versus-Φ6 split un
 Verifier:
 
 ```text
-verify_dclxxxiii_holonomy_q_phi6_interface_bridge.py
+analysis/verify_dclxxxiii_holonomy_q_phi6_interface_bridge.py
 ```
 
 Tests:

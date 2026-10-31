@@ -1,6 +1,6 @@
 # Part DCCCXIV - Phenomenology Claim-Ledger Audit
 
-**Verifier:** `verify_dcccxiv_phenomenology_claim_ledger_audit.py`
+**Verifier:** `analysis/verify_dcccxiv_phenomenology_claim_ledger_audit.py`
 **Tests:** `tests/test_dcccxiv_phenomenology_claim_ledger_audit.py`
 **Data:** `data/dcccxiv_phenomenology_claim_ledger_audit.json`
 

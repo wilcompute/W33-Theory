@@ -47,7 +47,7 @@ scripts = [
     "explore_ihara.py",
     "explore_cycles.py",
     "explore_association_scheme.py",
-    "test_triangles.py"
+    "analysis/test_triangles.py"
 ]
 import os
 for script in scripts:
@@ -99,7 +99,7 @@ if missing:
 print("\n[5/5] Triangle Count Verification")
 print("-" * 70)
 try:
-    result = subprocess.run(["python", "test_triangles.py"],
+    result = subprocess.run(["python", "analysis/test_triangles.py"],
                            capture_output=True, text=True, cwd=".", timeout=30,
                            encoding='utf-8', errors='replace')
     if result.stdout and "Match: True" in result.stdout:
@@ -108,7 +108,7 @@ try:
             print(f"  {line}")
         print("✓ Triangle enumeration verified")
     else:
-        print("✓ test_triangles.py runs (verification OK)")
+        print("✓ analysis/test_triangles.py runs (verification OK)")
 except Exception as e:
     print(f"✓ Triangle verification completed")
 

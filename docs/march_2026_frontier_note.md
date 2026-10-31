@@ -424,7 +424,7 @@ These are historical core invariants of the repo and remain part of the live pro
 
 ### Exact PMNS cyclotomic route
 
-The exact PMNS formulas currently promoted at verified status are the cyclotomic ones in [PMNS_CYCLOTOMIC.py](./PMNS_CYCLOTOMIC.py):
+The exact PMNS formulas currently promoted at verified status are the cyclotomic ones in [analysis/PMNS_CYCLOTOMIC.py](./PMNS_CYCLOTOMIC.py):
 
 - `sin^2(theta_12) = (q+1)/Phi_3 = 4/13`
 - `sin^2(theta_23) = Phi_6/Phi_3 = 7/13`

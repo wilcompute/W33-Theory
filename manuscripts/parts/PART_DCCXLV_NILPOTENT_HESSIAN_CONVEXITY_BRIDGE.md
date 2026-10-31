@@ -57,6 +57,6 @@ This is the cleanest finite convexity-style statement of the closure-action chai
 
 ## Executable artifact
 
-- Verifier: `verify_dccxlv_nilpotent_hessian_convexity_bridge.py`
+- Verifier: `analysis/verify_dccxlv_nilpotent_hessian_convexity_bridge.py`
 - Tests: `tests/test_dccxlv_nilpotent_hessian_convexity_bridge.py`
 - Data: `data/dccxlv_nilpotent_hessian_convexity_bridge.json`

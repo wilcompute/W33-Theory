@@ -127,12 +127,12 @@ canonical under arbitrary relabeling.
 ## Reproduce
 
 ```bash
-./.venv/bin/python w33_pass123_axis_glue_e8_lift.py
+./.venv/bin/python analysis/w33_pass123_axis_glue_e8_lift.py
 ./.venv/bin/python -m pytest -q tests/test_pass104_axis_glue_e8_lift.py
 ```
 
 Artifacts:
 
-- `w33_pass123_axis_glue_e8_lift.py`
+- `analysis/w33_pass123_axis_glue_e8_lift.py`
 - `data/w33_pass123_axis_glue_e8_lift.json`
 - `tests/test_pass104_axis_glue_e8_lift.py`

@@ -26,8 +26,8 @@ Today's session completed the **pre-submission hardening pass** for the W(3,3) p
 ### 1. 🔥 HIGHEST PRIORITY: Run LaTeX CI Build & Fix Compilation Errors
 Trigger the `paper_build` GitHub Actions workflow. The `w33_preprint.tex` must compile cleanly before arXiv submission. Fix any undefined references, missing figures, or package conflicts. Target: zero LaTeX errors, PDF artifact in CI.
 
-### 2. ⚡ HIGH PRIORITY: Write `BIJECTION_SOLVER_V3.py` Verification Suite
-Add a pytest test suite to `BIJECTION_SOLVER_V3.py` that computationally verifies all 7 rows of the BT1248 bijection table. This makes the SM bijection machine-checkable and CI-gated — the gold standard for a mathematical physics preprint.
+### 2. ⚡ HIGH PRIORITY: Write `analysis/BIJECTION_SOLVER_V3.py` Verification Suite
+Add a pytest test suite to `analysis/BIJECTION_SOLVER_V3.py` that computationally verifies all 7 rows of the BT1248 bijection table. This makes the SM bijection machine-checkable and CI-gated — the gold standard for a mathematical physics preprint.
 
 ### 3. 🎯 HIGH VALUE: Draft Cover Letter + Submit to arXiv
 Using the BT1251 abstract, draft a cover letter addressing the hep-th editors. The submission should go to: `hep-th` primary, with `math-ph` and `quant-ph` cross-lists. Attach the Zenodo DOI once the GitHub release is tagged.

@@ -58,7 +58,7 @@ def main():
         'defect':'q(q-3)/(q^2+q+1)',
         'boundary':'this is a selector internal to the repo phenomenological dictionary, not an independent experimental theorem'
       },
-      'ollivier_boundary':'GRAVITY_BREAKTHROUGH.py exhaustively verifies kappa=1/6 on all 240 q=3 edges. Its displayed all-q kappa extrapolation is not proved there, so it is not used as an all-q selector in this pass.',
+      'ollivier_boundary':'analysis/GRAVITY_BREAKTHROUGH.py exhaustively verifies kappa=1/6 on all 240 q=3 edges. Its displayed all-q kappa extrapolation is not proved there, so it is not used as an all-q selector in this pass.',
       'anchors':anchors,
       'physics_reading':'The strongest q=3 case now comes from a representation-algebra phase transition plus a spin-like double-cover condition; the mixing identity is supporting model evidence rather than the foundation.'
     }

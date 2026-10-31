@@ -164,7 +164,7 @@ graph zeta.
 
 ## Executable artifact
 
-- Verifier: `verify_dcmlxxxi_heegner_ihara_gaussian_audit.py`
+- Verifier: `analysis/verify_dcmlxxxi_heegner_ihara_gaussian_audit.py`
 - Tests: `tests/test_dcmlxxxi_heegner_ihara_gaussian_audit.py`
 - Data: `data/dcmlxxxi_heegner_ihara_gaussian_audit.json`
 - Result: `PART_DCMLXXXI_HEEGNER_IHARA_GAUSSIAN_AUDIT_results.json`

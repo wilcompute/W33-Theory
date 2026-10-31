@@ -523,9 +523,9 @@ All computations referenced in this paper are reproducible. Key modules:
 |---------|--------|
 | §2 Spectral data | `W33_COMPUTATION.py`, `W33_BOOTSTRAP.py` |
 | §3 Master Identity | `W33_MASTER_IDENTITY.py`, `W33_480_OPERATOR.py` |
-| §4 Fine structure | `ALPHA_AND_SM.py`, `INVESTIGATION_ALPHA.py` |
+| §4 Fine structure | `analysis/ALPHA_AND_SM.py`, `INVESTIGATION_ALPHA.py` |
 | §5 SM quantum numbers | `V34_SM_QUANTUM_NUMBERS.py`, `GAUGE_UNIFICATION.py` |
-| §6 Mixing matrices | `V35_CKM_PMNS_CP_SYNTHESIS.py`, `PMNS_CYCLOTOMIC.py` |
+| §6 Mixing matrices | `V35_CKM_PMNS_CP_SYNTHESIS.py`, `analysis/PMNS_CYCLOTOMIC.py` |
 | §7 Neutrino masses | `V44_NEUTRINO_MASSES.py`, `W33_NEUTRINO_FALSIFIABILITY.py` |
 | §8 Predictions | `W35_FALSIFIABILITY_AND_PREDICTIONS.py` |
 | §9 Moonshine | `W33_BERNOULLI_MOONSHINE_LINK.py`, `W34_GRAND_UNIFIED_ZETA_MOONSHINE.py` |

@@ -48,7 +48,7 @@ print(f"{'=' * 70}")
 # --- 1. Electromagnetic coupling ---
 # alpha_em^{-1} = (k-1)^2 - 2*r*s + v/L_eff
 # where L_eff = v/(v - 1 - f - g + ...) encodes the Laplacian structure
-alpha_em_inv = 137.036004    # Exact graph computation (see THEORY_OF_EVERYTHING.py)
+alpha_em_inv = 137.036004    # Exact graph computation (see analysis/THEORY_OF_EVERYTHING.py)
 alpha_em = 1.0 / alpha_em_inv
 
 print(f"\n  1. ELECTROMAGNETIC COUPLING")

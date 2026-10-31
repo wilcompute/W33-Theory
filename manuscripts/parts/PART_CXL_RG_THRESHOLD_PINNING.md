@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** inverse RG audit / threshold-naturalness theorem  
-**Files:** `PART_CXL_RG_THRESHOLD_PINNING.py`, `PART_CXL_rg_threshold_pinning_results.json`, `tests/test_rg_threshold_pinning_cxl.py`
+**Files:** `analysis/PART_CXL_RG_THRESHOLD_PINNING.py`, `PART_CXL_rg_threshold_pinning_results.json`, `tests/test_rg_threshold_pinning_cxl.py`
 
 ---
 

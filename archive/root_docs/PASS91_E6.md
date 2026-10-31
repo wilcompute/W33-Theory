@@ -1,6 +1,6 @@
 # Pass 91 — Aut(W(3,3)) IS the Weyl group of E₆ (the symmetry capstone)
 
-**Status: PASS** — GAP `w33_pass91_e6.g` → `w33_pass91_e6_out.txt`; witness `w33_pass91_e6.py`
+**Status: PASS** — GAP `w33_pass91_e6.g` → `w33_pass91_e6_out.txt`; witness `analysis/w33_pass91_e6.py`
 (6/6 checks); test `tests/test_pass91_e6.py` (4/4).
 
 Pass 90 found the two GQ(3,3) graphs have |Aut| = 51840 = |W(E₆)| = |Sp(4,3)|. This pass upgrades
@@ -34,5 +34,5 @@ PSp(4,3):2 = W(E₆) = SO₅(3).
 
 ## Files
 - `w33_pass91_e6.g`, `w33_pass91_e6_out.txt` — GAP certificate (derived subgroup + IsomorphismGroups).
-- `w33_pass91_e6.py`, `.json` — witness (6 checks).
+- `analysis/w33_pass91_e6.py`, `.json` — witness (6 checks).
 - `tests/test_pass91_e6.py` — 4 assertions.

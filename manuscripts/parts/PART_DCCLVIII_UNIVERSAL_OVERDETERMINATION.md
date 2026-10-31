@@ -1,6 +1,6 @@
 # Part DCCLVIII — The Universal Multi-Overdetermination of q = 3
 
-**Bridge:** `verify_dcclviii_universal_overdetermination.py` — Verified
+**Bridge:** `analysis/verify_dcclviii_universal_overdetermination.py` — Verified
 **Tests:** `tests/test_dcclviii_universal_overdetermination.py` — 23/23 pass
 **Data:** `data/dcclviii_universal_overdetermination.json`
 

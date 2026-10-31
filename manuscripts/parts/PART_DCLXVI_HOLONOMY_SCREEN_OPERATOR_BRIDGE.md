@@ -104,7 +104,7 @@ It is:
 Verifier:
 
 ```text
-verify_dclxvi_holonomy_screen_operator_bridge.py
+analysis/verify_dclxvi_holonomy_screen_operator_bridge.py
 ```
 
 Tests:

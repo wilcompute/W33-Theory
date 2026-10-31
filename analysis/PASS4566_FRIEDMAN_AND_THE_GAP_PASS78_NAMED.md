@@ -7,7 +7,7 @@ entirely**.
 
 ## 1. Pass 78 named this gap, and Pass 4565 is the first step into it
 
-`w33_pass78_equivariant_closure.py:109`:
+`analysis/w33_pass78_equivariant_closure.py:109`:
 
 > *"It is not yet the full edge-zeta Artin factorization across all 34 irreducibles."*
 

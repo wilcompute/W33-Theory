@@ -6,7 +6,7 @@ I searched beyond literal terms and used the repo's older aliases: H27 Latin cub
 
 - `tools/h27_latin_cube_search.py` searches whether the H27 layer can be modeled as a `3x3x3` Latin cube by labeling four H12 triangles with symbols in `F3`. Its recorded artifact says no base has a Latin-cube labeling. This says the missing object is not a naive H27 Latin cube.
 - `analysis/w33_witting_reye_toroidal_tomotope_collapse.py` already contains the right positive Latin object: a concrete cyclic Reye model with four triads of three points, twelve cross-triad Latin lines, `(12_4,16_3)`, 48 incidences, and Levi cycle rank 21.
-- `verify_dccli_pascal_diagonal_w33_generator.py` records the Pascal/Fibonacci exceptional ladder: triangular numbers generate W(3,3) primitives, and the exceptional Coxeter multipliers are Fibonacci values `1,2,2,3,5`.
+- `analysis/verify_dccli_pascal_diagonal_w33_generator.py` records the Pascal/Fibonacci exceptional ladder: triangular numbers generate W(3,3) primitives, and the exceptional Coxeter multipliers are Fibonacci values `1,2,2,3,5`.
 - `tools/OCTONION_E8_CONNECTION.py` records the 4x4 Freudenthal-Tits magic square over `R,C,H,O`, with the exceptional cells in the octonionic row/column.
 
 ## BT1720: q2025 connected domain triples

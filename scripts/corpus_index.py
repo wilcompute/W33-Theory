@@ -259,7 +259,7 @@ def collisions(max_files: int = 8, limit: int = 40) -> int:
             continue                                # they cite each other: fine
         # FIFTH noise class (Pass 1413): the SAME pass in two formats.
         # `BT807_q3_antiflag_two_clocks.md` vs `bt807_q3_antiflag_two_clocks.py`,
-        # `PART_CXCIX_QECC_BRIDGE.py` vs `manuscripts/parts/..._BRIDGE.md`.
+        # `analysis/PART_CXCIX_QECC_BRIDGE.py` vs `manuscripts/parts/..._BRIDGE.md`.
         # A witness and its write-up necessarily share every result; that is the
         # workflow, not a rediscovery.
         if Path(a).stem.lower() == Path(b).stem.lower():

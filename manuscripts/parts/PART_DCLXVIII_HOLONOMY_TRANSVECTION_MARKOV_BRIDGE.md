@@ -130,7 +130,7 @@ So the finite side is no longer just structurally closed. It is dynamically clos
 Verifier:
 
 ```text
-verify_dclxviii_holonomy_transvection_markov_bridge.py
+analysis/verify_dclxviii_holonomy_transvection_markov_bridge.py
 ```
 
 Tests:

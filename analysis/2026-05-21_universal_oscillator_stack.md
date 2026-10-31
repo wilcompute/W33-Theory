@@ -9,10 +9,10 @@ The key files read include:
 - `exploration/w33_pascal_rows_oscillator.py`
 - `exploration/w33_dual_polyhedra_oscillator.py`
 - `exploration/w33_seven_realizations_oscillator.py`
-- `verify_dccxxv_tetrahedron_hinge_oscillator.py`
-- `PART_CCCCCXLIII_D_OSCILLATOR_EQUATIONS.py`
-- `verify_dccli_pascal_diagonal_w33_generator.py`
-- `verify_dcclii_hyperbolic_pascal_600cell_e8.py`
+- `analysis/verify_dccxxv_tetrahedron_hinge_oscillator.py`
+- `analysis/PART_CCCCCXLIII_D_OSCILLATOR_EQUATIONS.py`
+- `analysis/verify_dccli_pascal_diagonal_w33_generator.py`
+- `analysis/verify_dcclii_hyperbolic_pascal_600cell_e8.py`
 - `exploration/w33_tetrahedral_chart_oscillator_bridge.py`
 - `exploration/w33_tetrahedral_ckm_oscillator_bridge.py`
 - `analysis/w33_toroidal_spectrum_realization_bridge.py`

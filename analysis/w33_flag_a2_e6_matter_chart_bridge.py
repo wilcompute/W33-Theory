@@ -363,7 +363,7 @@ def flag_a2_e6_matter_chart_packet() -> dict[str, Any]:
     return {
         "part": "MCCXLV",
         "theorem": "Flag A2/E6 matter chart bridge",
-        "input_bridge": "w33_e8_spectral_bridge.py MCCXXIX-MCCXLIV",
+        "input_bridge": "analysis/w33_e8_spectral_bridge.py MCCXXIX-MCCXLIV",
         "representative_flag": representative,
         "all_flag_summary": flags,
         "reading": (

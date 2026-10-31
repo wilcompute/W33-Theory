@@ -158,4 +158,4 @@ by the unique solution q = 3 to the axiom q! = 2q.
 
 ---
 
-Script: `PART_MCCLXVI_MCCLXXV_CYCLOTOMIC_SPECTRAL_ALGEBRA.py` — 10/10 verified.
+Script: `analysis/PART_MCCLXVI_MCCLXXV_CYCLOTOMIC_SPECTRAL_ALGEBRA.py` — 10/10 verified.

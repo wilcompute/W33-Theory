@@ -106,7 +106,7 @@ def build_bridge() -> dict[str, Any]:
         "flag_codec", "analysis/w33_flag_codec_toroidal_hypercube_boundary.py"
     ).build_payload()
     pascal_600 = _load_module(
-        "dcclii", "verify_dcclii_hyperbolic_pascal_600cell_e8.py"
+        "dcclii", "analysis/verify_dcclii_hyperbolic_pascal_600cell_e8.py"
     ).build_bridge()
     gray_hamming = _load_module(
         "gray_hamming", "analysis/w33_gray_hamming_router_lift.py"

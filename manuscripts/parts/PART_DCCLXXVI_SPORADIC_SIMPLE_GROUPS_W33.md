@@ -1,6 +1,6 @@
 # Part DCCLXXVI — The 26 Sporadic Simple Groups from W(3,3)
 
-**Bridge:** `verify_dcclxxvi_sporadic_simple_groups_w33.py` — Verified
+**Bridge:** `analysis/verify_dcclxxvi_sporadic_simple_groups_w33.py` — Verified
 **Tests:** `tests/test_dcclxxvi_sporadic_simple_groups_w33.py` — 22/22 pass
 **Data:** `data/dcclxxvi_sporadic_simple_groups_w33.json`
 

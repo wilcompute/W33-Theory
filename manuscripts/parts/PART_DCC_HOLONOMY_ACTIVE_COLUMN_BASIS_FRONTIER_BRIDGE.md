@@ -31,7 +31,7 @@ It is:
 Verifier:
 
 ```text
-verify_dcc_holonomy_active_column_basis_frontier_bridge.py
+analysis/verify_dcc_holonomy_active_column_basis_frontier_bridge.py
 ```
 
 Tests:

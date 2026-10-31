@@ -4,7 +4,7 @@
 
 ### Overview
 
-With the Gauss-Bonnet theorem proven (`GRAVITY_BREAKTHROUGH.py`) and the
+With the Gauss-Bonnet theorem proven (`analysis/GRAVITY_BREAKTHROUGH.py`) and the
 Q-polynomial (cometric) property of SRG(40,12,2,4) confirmed, we now have
 enough structure to **construct the graviton explicitly** as a combinatorial
 excitation of W(3,3) and to write a discrete Einstein equation.
@@ -312,7 +312,7 @@ W(3,3). There is no free parameter.
 
 ## References Within W33-Theory
 
-- `GRAVITY_BREAKTHROUGH.py` — Ollivier-Ricci κ = 1/6, Gauss-Bonnet, q=3 selection
+- `analysis/GRAVITY_BREAKTHROUGH.py` — Ollivier-Ricci κ = 1/6, Gauss-Bonnet, q=3 selection
 - `PART_CCLXVII_ZETA_REGULARISATION_BRIDGE.md` — zeta regularization of graph determinants
 - `PART_CCLXIV_COSMIC_STRINGS.md` — topological defects in the W(3,3) background
 - `PART_CCXIX_BLACK_HOLE_ENTROPY_BRIDGE.md` — Bekenstein-Hawking from graph entropy

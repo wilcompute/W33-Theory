@@ -1,6 +1,6 @@
 # Part DCCLXVII - Axis-Syndrome Nilpotent / Octahedral Codec Bridge
 
-**Bridge:** `verify_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py` - Verified
+**Bridge:** `analysis/verify_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py` - Verified
 **Tests:** `tests/test_dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.py`
 **Data:** `data/dcclxvii_axis_syndrome_nilpotent_octahedral_bridge.json`
 

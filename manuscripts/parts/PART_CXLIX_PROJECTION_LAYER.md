@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** projection-layer theorem / grammar-boundary refinement  
-**Files:** `PART_CXLIX_PROJECTION_LAYER.py`, `PART_CXLIX_projection_layer_results.json`, `tests/test_projection_layer_cxlix.py`
+**Files:** `analysis/PART_CXLIX_PROJECTION_LAYER.py`, `PART_CXLIX_projection_layer_results.json`, `tests/test_projection_layer_cxlix.py`
 
 ---
 

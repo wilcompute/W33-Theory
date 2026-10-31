@@ -22,10 +22,10 @@
 | α⁻¹ refined (rational) | 137 + 40/1111 | **137.036004** | 137.035999 | 🔶 NOT IN PAPER |
 | Running to m_Z | 137 − 9 (fermion loops) | **128** | ~128 | ✅ IN PAPER |
 
-- **Source**: `ALPHA_AND_SM.py`, `INVESTIGATION_ALPHA.py`, `DEEP_PATTERNS.py`
+- **Source**: `analysis/ALPHA_AND_SM.py`, `INVESTIGATION_ALPHA.py`, `DEEP_PATTERNS.py`
 - 🔶 The rational refinement α⁻¹ = 137 + 40/1111 where L_eff = (q²+q−1)(q⁴+2q²+2) = 1111 achieves error ~4.5×10⁻⁶. This is explored in `INVESTIGATION_ALPHA.py` but NOT in the paper.
 - 🔶 The continued fraction analysis of α⁻¹ and its SRG parameter connections are only in scripts.
-- 🔶 The Casimir-renormalization interpretation (bare k², vacuum polarization −2μ, topological +1, finite-size v/L_eff) is only in `ALPHA_AND_SM.py`.
+- 🔶 The Casimir-renormalization interpretation (bare k², vacuum polarization −2μ, topological +1, finite-size v/L_eff) is only in `analysis/ALPHA_AND_SM.py`.
 - 🔶 The polynomial form: k²−2μ+1 = q⁴+2q³+q²−2q−1 = 137 at q=3 (from `DEEP_PATTERNS.py`).
 
 ### 1.2 Weinberg Angle (Weak Mixing)
@@ -34,7 +34,7 @@
 |--------|---------|-------|----------|---|--------|
 | ⭐ sin²θ_W | q/Φ₃(q) = 3/13 | **0.23077** | 0.23122 ± 0.00004 | tree-level, 0.19% | ✅ IN PAPER |
 
-- **Source**: `GAUGE_UNIFICATION.py`, `PMNS_CYCLOTOMIC.py`
+- **Source**: `GAUGE_UNIFICATION.py`, `analysis/PMNS_CYCLOTOMIC.py`
 
 ### 1.3 Strong Coupling Constant
 
@@ -42,7 +42,7 @@
 |--------|---------|-------|----------|---|--------|
 | ⭐ α_s(M_Z) | q²/((q+1)((q+1)²+q)) = 9/76 | **0.11842** | 0.1180 ± 0.0009 | 0.47σ | ✅ IN PAPER |
 
-- **Source**: `GAUGE_UNIFICATION.py`, `PMNS_CYCLOTOMIC.py`
+- **Source**: `GAUGE_UNIFICATION.py`, `analysis/PMNS_CYCLOTOMIC.py`
 
 ### 1.4 GUT-Scale Coupling
 
@@ -75,10 +75,10 @@
 | ⭐ sin²θ₁₃ (reactor) | λ/(Φ₃·Φ₆) = 2/91 | **0.02198** | 0.02203 ± 0.00056 | 0.09σ | ✅ IN PAPER |
 | ⭐ Sum rule | sin²θ₂₃ = sin²θ_W + sin²θ₁₂ ⟺ q(q−3)=0 | **q=3 unique** | — | — | ✅ IN PAPER |
 
-- **Source**: `PMNS_CYCLOTOMIC.py`
+- **Source**: `analysis/PMNS_CYCLOTOMIC.py`
 - All four within 1σ — the strongest result of the theory.
 - 🔶 The beautiful complementary identities cos²θ₁₂ = q²/Φ₃ = 9/13 and cos²θ₂₃ = 2q/Φ₃ = 6/13 are in the script but not highlighted in the paper.
-- 🔶 The full PMNS matrix elements in exact fractions are in `PMNS_CYCLOTOMIC.py` but not fully tabulated in the paper.
+- 🔶 The full PMNS matrix elements in exact fractions are in `analysis/PMNS_CYCLOTOMIC.py` but not fully tabulated in the paper.
 
 ### 2.2 PMNS Jarlskog Invariant (CP Violation)
 
@@ -87,7 +87,7 @@
 | J_max (PMNS) | s₁₂c₁₂s₂₃c₂₃s₁₃c₁₃² | ~0.0332 | 🔶 NOT IN PAPER |
 | Exact form | 12√(3/13) × 89 / (13² × 91) | — | 🔶 NOT IN PAPER |
 
-- **Source**: `PMNS_CYCLOTOMIC.py`
+- **Source**: `analysis/PMNS_CYCLOTOMIC.py`
 
 ### 2.3 CKM (Quark) Mixing
 
@@ -100,7 +100,7 @@
 | CKM θ₁₃ | arctan(q³/(q⁶+q³+1)) | 2.04° | 0.201° | 🔶 NOT IN PAPER |
 | CP phase δ | π/q = 60° or arctan(μ/λ) = 63.4° | 60–63° | 65.5 ± 1.5° | 🔶 NOT IN PAPER |
 
-- **Source**: `FINAL_SOLVER.py`, `ckm_explore.py`, `DEEP_PHYSICS.py`
+- **Source**: `FINAL_SOLVER.py`, `ckm_explore.py`, `analysis/DEEP_PHYSICS.py`
 - The paper's CKM section uses a different (weaker) approach based on spectral ratios with 5–64% errors.
 - 🔶 The cyclotomic CKM pattern θₙ = arctan(qⁿ/Φ₃(qⁿ)) giving a geometric hierarchy is much cleaner but NOT in the paper.
 - 🔶 The Froggatt-Nielsen approach from `FERMION_MASSES.py` gives a parallel derivation.
@@ -124,7 +124,7 @@
 | Heat kernel masses | K_c(t) = Tr(exp(−tL_c))/n per generation | 🔶 NOT IN PAPER |
 | Laplacian eigenvalue ratio | 16/10 = 8/5, 16+10=26, 16×10=160 | 🔶 NOT IN PAPER |
 
-- **Source**: `FERMION_MASSES.py`, `MASS_HIERARCHY.py`, `MASS_SPECTRUM.py`
+- **Source**: `FERMION_MASSES.py`, `MASS_HIERARCHY.py`, `analysis/MASS_SPECTRUM.py`
 
 ### 2.6 Quark-Lepton Complementarity
 
@@ -147,7 +147,7 @@
 | Verified by LP | Linear programming confirms uniformity | — | 🔶 NOT IN PAPER |
 | Positive curvature | κ > 0 everywhere | → de Sitter | 🔶 NOT IN PAPER |
 
-- **Source**: `GRAVITY_BREAKTHROUGH.py`
+- **Source**: `analysis/GRAVITY_BREAKTHROUGH.py`
 
 ### 3.2 Discrete Gauss-Bonnet
 
@@ -157,7 +157,7 @@
 | Euler characteristic | χ = V − E + T = 40 − 240 + 160 = −40 | **−40** | 🔶 NOT IN PAPER |
 | ⭐ Uniqueness | E×κ = v requires 2(q−1) = 1+q → **q=3 only** | — | 🔶 NOT IN PAPER |
 
-- **Source**: `GRAVITY_BREAKTHROUGH.py`
+- **Source**: `analysis/GRAVITY_BREAKTHROUGH.py`
 - This is a MAJOR result: Gauss-Bonnet independently selects q=3 as the unique field order.
 
 ### 3.3 Expanding Universe

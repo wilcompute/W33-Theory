@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** inverse phenomenology audit / exact deterministic RG map  
-**Files:** `PART_CXXXIX_RG_EMBEDDING_INVERSION.py`, `PART_CXXXIX_rg_embedding_inversion_results.json`, `tests/test_rg_embedding_inversion_cxxxix.py`
+**Files:** `analysis/PART_CXXXIX_RG_EMBEDDING_INVERSION.py`, `PART_CXXXIX_rg_embedding_inversion_results.json`, `tests/test_rg_embedding_inversion_cxxxix.py`
 
 ---
 

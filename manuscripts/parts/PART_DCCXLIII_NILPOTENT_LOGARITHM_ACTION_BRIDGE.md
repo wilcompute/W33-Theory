@@ -69,6 +69,6 @@ This is the cleanest nilpotent effective-action layer of the closure chain so fa
 
 ## Executable artifact
 
-- Verifier: `verify_dccxliii_nilpotent_logarithm_action_bridge.py`
+- Verifier: `analysis/verify_dccxliii_nilpotent_logarithm_action_bridge.py`
 - Tests: `tests/test_dccxliii_nilpotent_logarithm_action_bridge.py`
 - Data: `data/dccxliii_nilpotent_logarithm_action_bridge.json`

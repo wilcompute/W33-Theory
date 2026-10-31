@@ -1,6 +1,6 @@
 # Part DCCCLXXI - Frontier Result-Ledger Repair
 
-**Verifier:** `verify_dccclxxi_frontier_result_ledger_repair.py`
+**Verifier:** `analysis/verify_dccclxxi_frontier_result_ledger_repair.py`
 **Tests:** `tests/test_dccclxxi_frontier_result_ledger_repair.py`
 **Data:** `data/dccclxxi_frontier_result_ledger_repair.json`
 

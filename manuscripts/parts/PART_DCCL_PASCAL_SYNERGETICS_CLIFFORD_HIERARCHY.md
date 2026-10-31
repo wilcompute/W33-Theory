@@ -1,6 +1,6 @@
 # Part DCCL — Pascal's Tetrahedron, Synergetics Concentric Hierarchy, and Clifford Grade Decomposition at q = 3
 
-**Bridge:** `verify_dccl_pascal_synergetics_clifford_hierarchy.py` — Verified
+**Bridge:** `analysis/verify_dccl_pascal_synergetics_clifford_hierarchy.py` — Verified
 **Tests:** `tests/test_dccl_pascal_synergetics_clifford_hierarchy.py` — 26/26 pass
 **Data:** `data/dccl_pascal_synergetics_clifford_hierarchy.json`
 

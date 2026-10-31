@@ -76,6 +76,6 @@ The emergent-time thread now has a correct nilpotent spectral interpretation:
 
 ## Executable artifact
 
-- Verifier: `verify_dccxlii_closure_jordan_residue_bridge.py`
+- Verifier: `analysis/verify_dccxlii_closure_jordan_residue_bridge.py`
 - Tests: `tests/test_dccxlii_closure_jordan_residue_bridge.py`
 - Data: `data/dccxlii_closure_jordan_residue_bridge.json`

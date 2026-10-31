@@ -423,7 +423,7 @@ def main():
         # This formula is specific to W(3,3), so we compute it generally
         # alpha^{-1} = (k-1)^2 + 2*r*(-s) + v / L_eff
         # where L_eff = (k-1) * ((k-lambda)^2 + 1) / ???
-        # Actually the exact formula from THEORY_OF_EVERYTHING.py:
+        # Actually the exact formula from analysis/THEORY_OF_EVERYTHING.py:
         # raw = (k-1)**2 - 2*r*s + v / ((k-1) * ((k-lambda)**2 + 1))
         
         L_eff_denom = (kk - 1) * ((kk - ll)**2 + 1)

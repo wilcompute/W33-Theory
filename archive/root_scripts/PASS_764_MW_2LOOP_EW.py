@@ -10,7 +10,7 @@ Cross-links:
   - Pass 758 (tree + 1-loop M_W), Pass 757/762 (alpha_s cascade)
   - BREAKTHROUGH_DCCLXIX.md:            W33 oblique rho-parameter from photonic H_27.
   - BREAKTHROUGH_BT676_K33_GRAND_SYNTHESIS.md: K33 = W33 + world grand synthesis.
-  - ALPHA_AND_SM.py:                    SM baseline M_W = 80.379 used as cross-check.
+  - analysis/ALPHA_AND_SM.py:                    SM baseline M_W = 80.379 used as cross-check.
 
 From BREAKTHROUGH_BT691_HODGE_SM.md:
   The Hodge decomposition of W33 gauge fields:
@@ -55,7 +55,7 @@ print('='*70)
 print('Pass 764 - W33 W-Boson Mass: 2-loop EW Precision')
 print('='*70)
 print(f'Cross-links: BT691_HODGE_SM, BT692_CKM, BT690_THRESHOLD, DCCLXIX, BT676_K33')
-print(f'  ALPHA_AND_SM.py baseline: M_W^SM = {M_W_PDG:.4f} GeV')
+print(f'  analysis/ALPHA_AND_SM.py baseline: M_W^SM = {M_W_PDG:.4f} GeV')
 
 sin2_W_GUT = Q/PHI_3         # = 3/13
 cos2_W_GUT = PHI_4/PHI_3    # = 10/13

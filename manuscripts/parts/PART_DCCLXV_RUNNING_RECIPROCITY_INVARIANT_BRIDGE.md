@@ -54,6 +54,6 @@ It is the strongest formalization so far of your “inverse Koide side” intuit
 
 ## Executable artifact
 
-- Verifier: `verify_dcclxv_running_reciprocity_invariant_bridge.py`
+- Verifier: `analysis/verify_dcclxv_running_reciprocity_invariant_bridge.py`
 - Tests: `tests/test_dcclxv_running_reciprocity_invariant_bridge.py`
 - Data: `data/dcclxv_running_reciprocity_invariant_bridge.json`

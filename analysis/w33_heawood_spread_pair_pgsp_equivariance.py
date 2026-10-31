@@ -3,7 +3,7 @@
 
 The companion PSp certificate proves equivariance for eight symplectic
 transvections. The only missing coset is represented by the multiplier-two
-similitude already used in w33_pass125_two_we6_embeddings.py:
+similitude already used in analysis/w33_pass125_two_we6_embeddings.py:
 
     D = diag(2,2,1,1),
     omega(Dx,Dy) = 2 omega(x,y)  over F3.

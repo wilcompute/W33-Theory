@@ -91,7 +91,7 @@ construction over the phenomenology.
 
 ```bash
 # Confirm G_release=1
-python PART_LXII_MASTER_VERIFICATION.py
+python analysis/PART_LXII_MASTER_VERIFICATION.py
 # Expected: Checks passed: 14/14  |  G_release: 1
 ```
 
@@ -107,7 +107,7 @@ If any check fails, do **not** submit. Fix the failing theorem first.
 - **Unique graph:** SRG(40,12,2,4) is the unique such graph; q=3 is forced by the
   self-complementary GQ condition
 - **Falsifiable:** 7 specific near-term experiments listed in §5 of the paper
-- **Reproducible:** `pip install numpy scipy sympy && python PART_LXII_MASTER_VERIFICATION.py`
+- **Reproducible:** `pip install numpy scipy sympy && python analysis/PART_LXII_MASTER_VERIFICATION.py`
   reproduces all key numbers in under 1 second
 - **Yang-Mills gap:** Δ_YM = k - r = 10 is a positive integer, directly from graph spectrum
 

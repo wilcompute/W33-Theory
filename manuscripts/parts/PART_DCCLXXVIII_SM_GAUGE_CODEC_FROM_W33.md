@@ -1,6 +1,6 @@
 # Part DCCLXXVIII — The Standard Model Gauge Codec from W(3,3)
 
-**Bridge:** `verify_dcclxxviii_sm_gauge_codec_from_w33.py` — Verified
+**Bridge:** `analysis/verify_dcclxxviii_sm_gauge_codec_from_w33.py` — Verified
 **Tests:** `tests/test_dcclxxviii_sm_gauge_codec_from_w33.py` — 21/21 pass
 **Data:** `data/dcclxxviii_sm_gauge_codec_from_w33.json`
 

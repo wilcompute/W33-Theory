@@ -1,7 +1,7 @@
 # Pass 90 — Automorphism census of the 28: is the arithmetic ladder a symmetry ladder?
 
 **Status: PASS** — GAP/GRAPE `w33_pass90_aut.g` → `w33_pass90_aut_out.txt`; witness
-`w33_pass90_aut.py` (8/8 checks); test `tests/test_pass90_aut.py` (5/5).
+`analysis/w33_pass90_aut.py` (8/8 checks); test `tests/test_pass90_aut.py` (5/5).
 
 Pass 89 stratified the 28 SRG(40,12,2,4) graphs into a 4-rung 2-adic ladder (2-ranks 16→14→12→10).
 This pass computes |Aut| for all 28 (GRAPE/nauty) and asks whether that ladder is also a symmetry
@@ -35,5 +35,5 @@ crowning the extreme — a clean picture of the whole SRG(40,12,2,4) family.
 
 ## Files
 - `w33_pass90_aut.g`, `w33_pass90_aut_out.txt` — GRAPE certificate.
-- `w33_pass90_aut.py`, `.json` — witness (8 checks).
+- `analysis/w33_pass90_aut.py`, `.json` — witness (8 checks).
 - `tests/test_pass90_aut.py` — 5 assertions.

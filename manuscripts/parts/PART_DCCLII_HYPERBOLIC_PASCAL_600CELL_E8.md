@@ -1,6 +1,6 @@
 # Part DCCLII — Hyperbolic Pascal Simplex, the 600-cell, and E_8 at q = 3
 
-**Bridge:** `verify_dcclii_hyperbolic_pascal_600cell_e8.py` — Verified
+**Bridge:** `analysis/verify_dcclii_hyperbolic_pascal_600cell_e8.py` — Verified
 **Tests:** `tests/test_dcclii_hyperbolic_pascal_600cell_e8.py` — 27/27 pass
 **Data:** `data/dcclii_hyperbolic_pascal_600cell_e8.json`
 

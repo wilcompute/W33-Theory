@@ -105,7 +105,7 @@ The 4 fundamental cycles correspond to the 4 cotree edges: $(1,4), (1,5), (2,4),
 
 ## Files
 
-- `BT676_K33_GRAND_SYNTHESIS.py` — Python verification code
+- `analysis/BT676_K33_GRAND_SYNTHESIS.py` — Python verification code
 - `BT676_summary.json` — Machine-readable results
 
 ---

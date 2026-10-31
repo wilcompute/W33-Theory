@@ -10,8 +10,8 @@ def run_script(name):
 
 
 def test_clx_runs():
-    run_script('THEORY_PART_CLX_COSMIC_RAY_DARK_SIGNALS.py')
+    run_script('pillars/THEORY_PART_CLX_COSMIC_RAY_DARK_SIGNALS.py')
 
 
 def test_clxi_runs():
-    run_script('THEORY_PART_CLXI_PROPAGATION_AND_FLUXES.py')
+    run_script('pillars/THEORY_PART_CLXI_PROPAGATION_AND_FLUXES.py')

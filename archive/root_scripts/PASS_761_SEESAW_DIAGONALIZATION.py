@@ -6,7 +6,7 @@ Cross-links:
   - BREAKTHROUGH_DCCXCVII_NEUTRINO_MASS_HIERARCHY.md  (W33 neutrino hierarchy)
   - BREAKTHROUGH_DCCC_PMNS_FULL_ANGLES.md              (PMNS full angles)
   - Pass 753 (LFV), Pass 756 (delta_CP), Pass 746 (f_a)
-  - BIJECTION_SOLVER_V3.py: the 270-bijection on H_27 is the same Heisenberg
+  - analysis/BIJECTION_SOLVER_V3.py: the 270-bijection on H_27 is the same Heisenberg
     group underlying the seesaw Dirac mass texture.
   - 270_transport_table.json: Hashimoto transport eigenvalues feeding M_R entries.
   - BREAKTHROUGH_BT685_QUANTUM_RAMANUJAN_WZW.md: WZW level k=12 gives M_R scale.

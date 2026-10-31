@@ -164,7 +164,7 @@ CLAIMS = [
         "stratum": 4,
         "label": "Q5 Hashimoto gap",
         "statement": "Q5 Tanner graph Hashimoto spectral gap is 2.687; Ramanujan compliant",
-        "witness": "bt1348_cross_quadrant_hashimoto_spectrum.py",
+        "witness": "analysis/bt1348_cross_quadrant_hashimoto_spectrum.py",
         "status": "CERTIFIED",
         "value": {"spectral_gap": 2.687, "ramanujan_compliant": True},
         "falsify_threshold": "Competitor with gap >= 2.687 on same Q5 family"
@@ -174,7 +174,7 @@ CLAIMS = [
         "stratum": 4,
         "label": "Q4->Q5 gap growth",
         "statement": "Pentad lift grows spectral gap by 6.5% (2.523 -> 2.687); monotone in quadrant index",
-        "witness": "bt1348_cross_quadrant_hashimoto_spectrum.py",
+        "witness": "analysis/bt1348_cross_quadrant_hashimoto_spectrum.py",
         "status": "CERTIFIED",
         "value": {"gap_Q4": 2.523, "gap_Q5": 2.687, "growth_pct": 6.5, "monotone": True},
         "falsify_threshold": "Non-monotone gap under pentad lift for any q=3 family"
@@ -184,7 +184,7 @@ CLAIMS = [
         "stratum": 4,
         "label": "Joint falsifier threshold",
         "statement": "Any competitor must simultaneously beat gaps 2.523 (Q4) AND 2.687 (Q5); no such competitor found",
-        "witness": "bt1348_cross_quadrant_hashimoto_spectrum.py",
+        "witness": "analysis/bt1348_cross_quadrant_hashimoto_spectrum.py",
         "status": "CERTIFIED",
         "value": {"joint_threshold_beaten": False},
         "falsify_threshold": "Competitor beating both gaps simultaneously"
@@ -195,7 +195,7 @@ CLAIMS = [
         "stratum": 5,
         "label": "Joint falsifier rate",
         "statement": "Joint Q4/Q5 falsifier eliminates 91.25% (73/80) of circulant CSS candidate families",
-        "witness": "bt1349_joint_q4_q5_falsifier.py",
+        "witness": "analysis/bt1349_joint_q4_q5_falsifier.py",
         "status": "CERTIFIED",
         "value": {"candidates": 80, "falsified": 73, "survivors": 7, "falsification_rate": 0.9125},
         "falsify_threshold": "Survivor matching both W33 gaps exactly"
@@ -205,7 +205,7 @@ CLAIMS = [
         "stratum": 5,
         "label": "Q4/Q5 joint uniqueness",
         "statement": "No survivor simultaneously matches W33 gap signatures at both Q4 and Q5; confirming uniqueness within circulant CSS class",
-        "witness": "bt1349_joint_q4_q5_falsifier.py",
+        "witness": "analysis/bt1349_joint_q4_q5_falsifier.py",
         "status": "CERTIFIED",
         "value": {"unique_joint_match": True, "surviving_near_matches": 7, "exact_joint_match_count": 0},
         "falsify_threshold": "Exact joint match found in circulant CSS class"

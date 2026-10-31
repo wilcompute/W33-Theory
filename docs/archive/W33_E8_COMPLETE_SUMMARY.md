@@ -270,5 +270,5 @@ This is not just a mathematical curiosity—it's the **deep structure of physics
 - `QUTRIT_DEEP_DIVE.py` - Qutrit operator structure
 - `QUTRIT_PHYSICS.py` - Physical interpretation
 - `GENERALIZED_QUADRANGLE.py` - GQ(3,3) verification
-- `EXPLICIT_BIJECTION.py` - Bijection details
+- `analysis/EXPLICIT_BIJECTION.py` - Bijection details
 - `W33_E8_COMPLETE_SUMMARY.md` - This document

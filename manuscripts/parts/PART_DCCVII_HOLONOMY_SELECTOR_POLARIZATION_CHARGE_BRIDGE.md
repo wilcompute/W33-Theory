@@ -54,7 +54,7 @@ This makes the post-DCCVI frontier both operational (budgeted) and oriented (sig
 Verifier:
 
 ```text
-verify_dccvii_holonomy_selector_polarization_charge_bridge.py
+analysis/verify_dccvii_holonomy_selector_polarization_charge_bridge.py
 ```
 
 Tests:

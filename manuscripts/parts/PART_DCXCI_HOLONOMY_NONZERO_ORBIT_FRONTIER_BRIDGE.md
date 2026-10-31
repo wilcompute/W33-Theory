@@ -48,7 +48,7 @@ So the remaining question is simply whether the host has crossed from the zero o
 Verifier:
 
 ```text
-verify_dcxci_holonomy_nonzero_orbit_frontier_bridge.py
+analysis/verify_dcxci_holonomy_nonzero_orbit_frontier_bridge.py
 ```
 
 Tests:

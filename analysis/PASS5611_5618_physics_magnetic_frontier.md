@@ -165,7 +165,7 @@ Three logically separated mechanisms select q=3:
    \]
    Hence the repo mixing sum rule also closes at q=3.  This is supporting model evidence, not an independent experimental derivation.
 
-The older `GRAVITY_BREAKTHROUGH.py` exactly computes `kappa=1/6` on all 240 q=3 W33 edges, but its displayed all-q curvature extrapolation is not proved there.  This packet therefore does not use that extrapolation as a theorem.
+The older `analysis/GRAVITY_BREAKTHROUGH.py` exactly computes `kappa=1/6` on all 240 q=3 W33 edges, but its displayed all-q curvature extrapolation is not proved there.  This packet therefore does not use that extrapolation as a theorem.
 
 ## Pass5615 — exact cover/F4 object map remains fail-closed
 

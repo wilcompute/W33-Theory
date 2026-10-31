@@ -102,7 +102,7 @@ So the finite holonomy object, the constitutive vacuum law, and the minimal host
 Verifier:
 
 ```text
-verify_dclxxxi_holonomy_constitutive_carrier_bridge.py
+analysis/verify_dclxxxi_holonomy_constitutive_carrier_bridge.py
 ```
 
 Tests:

@@ -33,7 +33,7 @@ def main():
     # The 'line stabilizers in common' from BT385/BT420 refers to the 16
     # projective stabilizers, but in the charged sector (the Sp extension),
     # this is doubled. Wait, BT420 explicitly says 16.
-    # Let's check the BT420_LOW_ENERGY_THRESHOLD_CARRIER.py again.
+    # Let's check the analysis/BT420_LOW_ENERGY_THRESHOLD_CARRIER.py again.
     # It says: "The 16 comes from the BT385 two-code rank ledger as the common line-stabilizer count."
     line_stabilizers = lambda_**mu  # 16
     closure_count = F5  # 5

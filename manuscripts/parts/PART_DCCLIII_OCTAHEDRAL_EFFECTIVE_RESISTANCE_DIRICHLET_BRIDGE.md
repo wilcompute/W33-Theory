@@ -71,6 +71,6 @@ This is the cleanest finite elliptic/energy bridge so far between closure dynami
 
 ## Executable artifact
 
-- Verifier: `verify_dccliii_octahedral_effective_resistance_dirichlet_bridge.py`
+- Verifier: `analysis/verify_dccliii_octahedral_effective_resistance_dirichlet_bridge.py`
 - Tests: `tests/test_dccliii_octahedral_effective_resistance_dirichlet_bridge.py`
 - Data: `data/dccliii_octahedral_effective_resistance_dirichlet_bridge.json`

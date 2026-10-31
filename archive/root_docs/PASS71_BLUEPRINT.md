@@ -39,4 +39,4 @@ Pass 71 targets the three hardest open verification gaps in the W33 programme:
 - **Track F** produces a table-ready falsifier: if any angle deviates from PDG by more than the current experimental uncertainty (≈0.5°), the programme is falsified at that step
 
 ## Execution trigger
-Run `python w33_pass71_run_all_tracks.py` once those three scripts are pushed in the next session.
+Run `python analysis/w33_pass71_run_all_tracks.py` once those three scripts are pushed in the next session.

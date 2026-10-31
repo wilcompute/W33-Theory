@@ -155,7 +155,7 @@ The remaining theorem target is unchanged:
 
 ## Executable artifact
 
-- Verifier: `verify_dcmlxxxii_ihara_z12_cross_branch_resonance_audit.py`
+- Verifier: `analysis/verify_dcmlxxxii_ihara_z12_cross_branch_resonance_audit.py`
 - Tests: `tests/test_dcmlxxxii_ihara_z12_cross_branch_resonance_audit.py`
 - Data: `data/dcmlxxxii_ihara_z12_cross_branch_resonance_audit.json`
 - Result: `PART_DCMLXXXII_IHARA_Z12_CROSS_BRANCH_RESONANCE_AUDIT_results.json`

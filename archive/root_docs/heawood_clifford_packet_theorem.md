@@ -27,10 +27,10 @@ is idempotent with trace 6 (rank 6). This realizes a finite `Cl(1,1)` packet tur
 
 ## Data provenance
 
-- `heawood_from_fano_7cycles.py`
-- `heawood_fano7_tetra_alignment.py`
-- `heawood_projector_clifford.py`
-- `tetrahedral_harmonic_crack_summary.py`
+- `analysis/heawood_from_fano_7cycles.py`
+- `analysis/heawood_fano7_tetra_alignment.py`
+- `analysis/heawood_projector_clifford.py`
+- `analysis/tetrahedral_harmonic_crack_summary.py`
 
 ## Consequences
 

@@ -66,6 +66,6 @@ closure propagator.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxlvii_nilpotent_ward_recursion_bridge.py`
+- Verifier: `analysis/verify_dccxlvii_nilpotent_ward_recursion_bridge.py`
 - Tests: `tests/test_dccxlvii_nilpotent_ward_recursion_bridge.py`
 - Data: `data/dccxlvii_nilpotent_ward_recursion_bridge.json`

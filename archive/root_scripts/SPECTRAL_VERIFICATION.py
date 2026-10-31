@@ -1665,7 +1665,7 @@ print("\n--- 19l. Ollivier-Ricci Curvature and Gauss-Bonnet ---")
 #
 # The EXACT Ollivier-Ricci curvature (via LP optimal transport) for GQ(q,q) is:
 #   κ = 2/k = 2/(q(q+1))
-# Verified exhaustively on all 240 edges in GRAVITY_BREAKTHROUGH.py.
+# Verified exhaustively on all 240 edges in analysis/GRAVITY_BREAKTHROUGH.py.
 
 _kappa = _Frac5(2, _k)
 assert _kappa == _Frac5(1, 6)
@@ -2528,7 +2528,7 @@ print("\n--- 19y. Gauss-Bonnet Selects q = 3 ---")
 # But q=2 fails the additional constraint that κ>0 gives de Sitter (both work).
 # The real selection: combine with physics constraint C11 (α⁻¹ = 137).
 
-# Instead, use the formulation from GRAVITY_BREAKTHROUGH.py:
+# Instead, use the formulation from analysis/GRAVITY_BREAKTHROUGH.py:
 # E×κ = v reformulated as 2(q²+1)(q−1) = (1+q)(1+q²)
 # which gives 2(q−1) = 1+q, i.e., q = 3.
 # But wait, E×κ = v is always true as shown above.

@@ -1,6 +1,6 @@
 # Part DCCLXVIII - Nilpotent Chain-Lift / QEC Bridge
 
-**Bridge:** `verify_dcclxviii_nilpotent_chain_lift_qec_bridge.py` - Verified
+**Bridge:** `analysis/verify_dcclxviii_nilpotent_chain_lift_qec_bridge.py` - Verified
 **Tests:** `tests/test_dcclxviii_nilpotent_chain_lift_qec_bridge.py`
 **Data:** `data/dcclxviii_nilpotent_chain_lift_qec_bridge.json`
 

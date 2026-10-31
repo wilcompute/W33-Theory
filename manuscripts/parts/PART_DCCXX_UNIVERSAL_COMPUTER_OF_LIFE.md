@@ -1,6 +1,6 @@
 # Part DCCXX — The Universal Computer of Life
 
-**Bridge:** `verify_dccxx_universal_computer_of_life.py` — Verified
+**Bridge:** `analysis/verify_dccxx_universal_computer_of_life.py` — Verified
 **Tests:** `tests/test_dccxx_universal_computer_of_life.py` — 17/17 pass
 **Data:** `data/dccxx_universal_computer_of_life.json`
 

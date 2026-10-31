@@ -125,7 +125,7 @@ So the honest slogan is:
 
 ## Executable artifact
 
-- Verifier: `verify_dcmlxxix_ihara_parameter_reconciliation.py`
+- Verifier: `analysis/verify_dcmlxxix_ihara_parameter_reconciliation.py`
 - Test: `tests/test_dcmlxxix_ihara_parameter_reconciliation.py`
 - Data: `data/dcmlxxix_ihara_parameter_reconciliation.json`
 - Result: `PART_DCMLXXIX_IHARA_PARAMETER_RECONCILIATION_results.json`

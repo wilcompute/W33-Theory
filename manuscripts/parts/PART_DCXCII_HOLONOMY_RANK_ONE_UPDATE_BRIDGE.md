@@ -39,7 +39,7 @@ What remains is one rank-one square-zero update on that already-correct packet.
 Verifier:
 
 ```text
-verify_dcxcii_holonomy_rank_one_update_bridge.py
+analysis/verify_dcxcii_holonomy_rank_one_update_bridge.py
 ```
 
 Tests:

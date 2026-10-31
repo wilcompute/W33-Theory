@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** heavy-threshold diagnostic / ppm-scale log-template match  
-**Files:** `PART_CXLI_HEAVY_THRESHOLD_LOG_MATCH.py`, `PART_CXLI_heavy_threshold_log_match_results.json`, `tests/test_heavy_threshold_log_match_cxli.py`
+**Files:** `analysis/PART_CXLI_HEAVY_THRESHOLD_LOG_MATCH.py`, `PART_CXLI_heavy_threshold_log_match_results.json`, `tests/test_heavy_threshold_log_match_cxli.py`
 
 ---
 

@@ -83,7 +83,7 @@ diffusion barrier between the three generations encoded by `(f, g, 1)`.
 
 | file | role |
 |------|------|
-| `PART_CXXXVII_HASHIMOTO_SPECTRAL_TRICHOTOMY.py` | runnable derivation + JSON report |
+| `analysis/PART_CXXXVII_HASHIMOTO_SPECTRAL_TRICHOTOMY.py` | runnable derivation + JSON report |
 | `tests/test_hashimoto_spectral_trichotomy_cxxxvii.py` | 13 regression identities (Bass + direct diagonalisation) |
 | `PART_CXXXVII_hashimoto_spectral_trichotomy_results.json` | machine-readable summary |
 

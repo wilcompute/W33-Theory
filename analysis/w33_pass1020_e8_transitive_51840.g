@@ -44,7 +44,7 @@
 # subgroup is Sp(4,3), order 51840.  We verify transitivity by computation.
 #
 # The pass then settles what this means for the 240-edge / 240-root question that
-# EXPLICIT_BIJECTION.py, GROUP_THEORETIC_BIJECTION.py, docs/archive/FINAL_TOE_PROOF.md
+# analysis/EXPLICIT_BIJECTION.py, GROUP_THEORETIC_BIJECTION.py, docs/archive/FINAL_TOE_PROOF.md
 # and Pass 1012 have all circled:
 #
 #   W(E6) = U4(2):2   -- faithful + transitive on the 240 W(3,3) edges,
@@ -425,7 +425,7 @@ Main1020 := function()
   WriteAll(stream, "    \"verdict\": \"the two labels in analysis/w33_pass338_selector_frame_240.g are interchanged. (a) The action it calls 'signed E8' cannot be an E8 root action at all: any subgroup of W(E8) containing -1 has suborbits refining the inner-product partition (1,56,126,56,1), and no subset of {4,54,72,108} sums to 56. (b) That profile is instead the W(3,3) EDGE profile fused by the index-2 overgroup, since 4*18 = 72 and 2*27 = 54 carry [1,1,4,18,18,18,18,27,27,108] to [1,1,4,54,72,108]. (c) Conversely the profile it calls the 'selector frame', [1,1,1,1,1,1,27,27,27,27,27,27,72], is exactly the subdegree profile of the genuine E8 root action computed here inside W(E8). Every number Pass 338 reports is correct; the E8 attribution is reversed.\"\n");
   WriteAll(stream, "  },\n");
   WriteAll(stream, "  \"corrections\": {\n");
-  WriteAll(stream, "    \"EXPLICIT_BIJECTION.py:561\": \"'No proper subgroup of W(E8) acts transitively on 240 roots (this is a well-known fact)' is false. Sp(4,3) of order 51840 and G32 of order 155520 are both proper and both transitive.\",\n");
+  WriteAll(stream, "    \"analysis/EXPLICIT_BIJECTION.py:561\": \"'No proper subgroup of W(E8) acts transitively on 240 roots (this is a well-known fact)' is false. Sp(4,3) of order 51840 and G32 of order 155520 are both proper and both transitive.\",\n");
   WriteAll(stream, "    \"exploration/GROUP_THEORETIC_BIJECTION.py:308 and docs/COMPLETE_SUMMARY.md:729 and exploration/WITTING_W33_S12_SYNTHESIS.py\": \"'Sp(4,3) = W(E6)' is false. Both have order 51840, but Sp(4,3) is perfect with centre of order 2, and W(E6) = U4(2):2 is not perfect and has trivial centre. This is the root cause of the 240=240 confusion: the two 240-sets belong to two DIFFERENT groups of the same order.\",\n");
   WriteAll(stream, Concatenation("    \"exploration/WITTING_W33_S12_SYNTHESIS.py orbit count\": \"'W(E6) has 15 ORBITS on E8 roots' is false; the count is 13, with profile ",
     String(sortedE6), " = one 72, six 27s and six fixed A2 roots. Verified directly on the reflection subgroup.\",\n"));

@@ -13,7 +13,7 @@ def test_binary_rank16_is_preexisting_and_gauge_rank14_optimal():
     assert p['preexisting_W33_Gf2_adjacency_rank']==16
     assert p['new_optimal_cross_register_couplings']==14
     assert p['basepoints_checked']==40
-    assert 'w33_pass88_smith_group.py' in p['W33_rank16_prior_repo_paths']
+    assert 'analysis/w33_pass88_smith_group.py' in p['W33_rank16_prior_repo_paths']
 def test_14_nonlocal_terms_plus_two_local_phase_functions_reproduce_all_pairs():
     A=adjacency()
     p=certificate()

@@ -186,9 +186,9 @@ conflated.
 ## Evidence files
 
 - `analysis/w33_pass117_o8_e6_embedding.g`
-- `w33_pass117_o8_e6_embedding.py`
-- `w33_pass118_lattice_intersection.py`
-- `w33_pass119_exact_2adic_mass.py`
-- `w33_pass120_srg120_anisotropic.py`
-- `w33_pass121_weight20_theta.py`
-- `w33_pass122_hopf_synthesis.py`
+- `analysis/w33_pass117_o8_e6_embedding.py`
+- `analysis/w33_pass118_lattice_intersection.py`
+- `analysis/w33_pass119_exact_2adic_mass.py`
+- `analysis/w33_pass120_srg120_anisotropic.py`
+- `analysis/w33_pass121_weight20_theta.py`
+- `analysis/w33_pass122_hopf_synthesis.py`

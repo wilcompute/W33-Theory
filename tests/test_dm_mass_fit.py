@@ -10,6 +10,6 @@ def run_script(name):
 
 
 def test_dm_mass_fit_runs():
-    out = run_script('THEORY_PART_CLXII_DM_MASS_FIT.py')
+    out = run_script('pillars/THEORY_PART_CLXII_DM_MASS_FIT.py')
     assert 'Best-fit DM mass' in out
     assert 'AMS-02' in out

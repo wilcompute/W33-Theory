@@ -67,6 +67,6 @@ This is the cleanest exact discrete analogue so far of a proper-time interval bu
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxv_closure_interval_invariant_bridge.py`
+- Verifier: `analysis/verify_dccxxxv_closure_interval_invariant_bridge.py`
 - Tests: `tests/test_dccxxxv_closure_interval_invariant_bridge.py`
 - Data: `data/dccxxxv_closure_interval_invariant_bridge.json`

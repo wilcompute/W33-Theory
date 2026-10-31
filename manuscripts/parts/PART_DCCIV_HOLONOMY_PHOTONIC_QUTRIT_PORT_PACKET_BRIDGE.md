@@ -70,7 +70,7 @@ That is much closer to an interface theorem than a purely finite combinatorial r
 Verifier:
 
 ```text
-verify_dcciv_holonomy_photonic_qutrit_port_packet_bridge.py
+analysis/verify_dcciv_holonomy_photonic_qutrit_port_packet_bridge.py
 ```
 
 Tests:

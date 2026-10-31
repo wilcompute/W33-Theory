@@ -92,7 +92,7 @@ That is a real closure of the finite dynamical side.
 Verifier:
 
 ```text
-verify_dclxxv_holonomy_transfer_function_bridge.py
+analysis/verify_dclxxv_holonomy_transfer_function_bridge.py
 ```
 
 Tests:

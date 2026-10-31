@@ -39,4 +39,4 @@ Track H is the single most externally verifiable prediction in the paper (CKM is
 Track J is the publishing unlock: the Zenodo DOI enables the arXiv submission to cite a permanent, machine-verified record.
 
 ## Execution trigger
-`python w33_pass72_run_all_tracks.py`
+`python analysis/w33_pass72_run_all_tracks.py`

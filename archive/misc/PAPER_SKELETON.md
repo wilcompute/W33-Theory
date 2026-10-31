@@ -162,7 +162,7 @@ Note: DESI DR1 prefers w0waCDM at ~2σ over ΛCDM.
 
 ## Section 6: RG Perturbation Theory and the Neutrino Precision Probe
 
-*Implemented in SOLVE_RG_NEUTRINO.py (2026-04-01)*
+*Implemented in analysis/SOLVE_RG_NEUTRINO.py (2026-04-01)*
 
 ### 6.1 The W(3,3) equal-eigenvalue fixed point
   sigma_j = s* * exp(delta_j),  sum_j delta_j = 0
@@ -188,7 +188,7 @@ Note: DESI DR1 prefers w0waCDM at ~2σ over ΛCDM.
 
 ## Section 7: Gauge-Gravity Unification Conjectures
 
-*Implemented in SOLVE_GAUGE_GRAVITY_UNIFICATION.py (2026-04-01)*
+*Implemented in analysis/SOLVE_GAUGE_GRAVITY_UNIFICATION.py (2026-04-01)*
 
 ### 7.1 The fine structure constant
 
@@ -233,7 +233,7 @@ Ihara zeta evaluation at the Ramanujan bound.
 
 ## Section 8: CKM/PMNS Mixing from W(3,3) Heegner Geometry
 
-*Implemented in SOLVE_CKM_PMNS_UNIFIED.py (2026-04-01)*
+*Implemented in analysis/SOLVE_CKM_PMNS_UNIFIED.py (2026-04-01)*
 
 ### 8.1 Quark-lepton complementarity (QLC)
   theta_12^CKM + theta_12^PMNS = 13.04 + 33.82 = 46.86 deg
@@ -273,7 +273,7 @@ of the W(3,3) base field prime q=3 to the cyclotomic polynomial value Phi3=13.
 
 ## Section 9: Dark Energy and the Cosmological Constant
 
-*Implemented in SOLVE_DARK_ENERGY_LAMBDA.py (2026-04-01)*
+*Implemented in analysis/SOLVE_DARK_ENERGY_LAMBDA.py (2026-04-01)*
 
 ### 9.1 Omega_Lambda from W(3,3) spectral partition
   Observed: Omega_Lambda = 0.6847
@@ -334,6 +334,6 @@ All theorems and predictions are backed by automated tests:
 - Phase CCLI-CCLXVII: ~370 tests across 18 test files
 - 100% of theorems have symbolic or numerical proofs in the test suite
 - All neutrino mass predictions reproducible from oscillation parameters alone
-- Section 6 implemented in SOLVE_RG_NEUTRINO.py (2026-04-01)
-- Sections 7-9 implemented in SOLVE_GAUGE_GRAVITY_UNIFICATION.py,
-  SOLVE_CKM_PMNS_UNIFIED.py, SOLVE_DARK_ENERGY_LAMBDA.py (2026-04-01)
+- Section 6 implemented in analysis/SOLVE_RG_NEUTRINO.py (2026-04-01)
+- Sections 7-9 implemented in analysis/SOLVE_GAUGE_GRAVITY_UNIFICATION.py,
+  analysis/SOLVE_CKM_PMNS_UNIFIED.py, analysis/SOLVE_DARK_ENERGY_LAMBDA.py (2026-04-01)

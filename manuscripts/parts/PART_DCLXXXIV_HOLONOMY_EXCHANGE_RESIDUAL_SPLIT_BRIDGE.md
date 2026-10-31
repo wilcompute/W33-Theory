@@ -85,7 +85,7 @@ That is a very tight closure between the qutrit constitutive picture and the exa
 Verifier:
 
 ```text
-verify_dclxxxiv_holonomy_exchange_residual_split_bridge.py
+analysis/verify_dclxxxiv_holonomy_exchange_residual_split_bridge.py
 ```
 
 Tests:

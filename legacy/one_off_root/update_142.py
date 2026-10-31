@@ -199,8 +199,8 @@ def update():
     # ══════════════════════════════════════════════════════
     # 5. Update status table
     # ══════════════════════════════════════════════════════
-    old_status = 'THEORY_OF_EVERYTHING.py: ALL 142 claims verified from F₃ + ω alone. Complete SM content, cosmology, exceptional algebras, string theory, SUSY, CY topology, discrete symmetries, fermion counting, QCD Casimirs, gauge boson decomposition, dark energy EoS, conformal/Lorentz groups, CP structure, anomaly cancellation, Higgs doublet count'
-    new_status = 'THEORY_OF_EVERYTHING.py: ALL 142 claims verified from F₃ + ω alone. Complete SM content, cosmology, exceptional algebras, string theory, SUSY, CY topology, discrete symmetries, fermion counting, QCD Casimirs, gauge boson decomposition, dark energy EoS, conformal/Lorentz groups, CP structure, anomaly cancellation, Higgs doublet count, <strong>480 directed-edge operator, Ihara-Bass, α DERIVED from spectral geometry</strong>'
+    old_status = 'analysis/THEORY_OF_EVERYTHING.py: ALL 142 claims verified from F₃ + ω alone. Complete SM content, cosmology, exceptional algebras, string theory, SUSY, CY topology, discrete symmetries, fermion counting, QCD Casimirs, gauge boson decomposition, dark energy EoS, conformal/Lorentz groups, CP structure, anomaly cancellation, Higgs doublet count'
+    new_status = 'analysis/THEORY_OF_EVERYTHING.py: ALL 142 claims verified from F₃ + ω alone. Complete SM content, cosmology, exceptional algebras, string theory, SUSY, CY topology, discrete symmetries, fermion counting, QCD Casimirs, gauge boson decomposition, dark energy EoS, conformal/Lorentz groups, CP structure, anomaly cancellation, Higgs doublet count, <strong>480 directed-edge operator, Ihara-Bass, α DERIVED from spectral geometry</strong>'
     content = content.replace(old_status, new_status)
     
     # ══════════════════════════════════════════════════════

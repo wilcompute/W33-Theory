@@ -246,7 +246,7 @@ This is the cleanest way to make the paper read like a genuine framework instead
 - `exploration/w33_mobius_szilassi_dual.py`
 - `tests/test_w33_mobius_szilassi_dual.py`
 - `PART_LXIV_PASCAL_LINE_SPLIT_THEOREM.md`
-- `PART_LXIV_pascal_line_split.py`
+- `analysis/PART_LXIV_pascal_line_split.py`
 - `part7_pascal_information_functor.tex`
 - `scripts/w33_q3_master_lock_audit.py`
 - `tests/test_w33_q3_master_lock_audit.py`

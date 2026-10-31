@@ -3,7 +3,7 @@
 ## A Zero-Parameter Derivation of 13 Standard Model Observables
 
 *Draft section for inclusion in the W33 Theory paper.*  
-*All results verified in V37_FULL_MIXING_SYNTHESIS.py.*
+*All results verified in analysis/V37_FULL_MIXING_SYNTHESIS.py.*
 
 ---
 
@@ -151,5 +151,5 @@ exploration/w33_levi_theta13_precision_bridge.py
 
 Each bridge is a self-contained Python module with a `build_summary()` function
 that returns a theorem dictionary with boolean assertions, all verified `True`.
-The synthesis script `V37_FULL_MIXING_SYNTHESIS.py` imports and verifies the
+The synthesis script `analysis/V37_FULL_MIXING_SYNTHESIS.py` imports and verifies the
 full chain at runtime.

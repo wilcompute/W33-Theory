@@ -1,6 +1,6 @@
 # Pass 96 — The 2-rank ladder is finer than the two-graph
 
-**Status: PASS** — witness `w33_pass96_switching_ladder.py` (10/10 checks), test
+**Status: PASS** — witness `analysis/w33_pass96_switching_ladder.py` (10/10 checks), test
 `tests/test_pass96_switching_ladder.py` (5/5). Self-contained (graph6 decode + GF(2) rank + integer
 SNF via sympy).
 
@@ -28,4 +28,4 @@ distinguishes graphs the two-graph cannot.
   mult(7). The **(ℤ/5)²³** echoes the critical group's constant 5-part (Pass 89, Pass 97).
 
 ## Files
-`w33_pass96_switching_ladder.py`, `.json`; `tests/test_pass96_switching_ladder.py`.
+`analysis/w33_pass96_switching_ladder.py`, `.json`; `tests/test_pass96_switching_ladder.py`.

@@ -55,6 +55,6 @@ final C = 12 * 2^5 = 384.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxii_closure_clock_codec_flow_bridge.py`
+- Verifier: `analysis/verify_dccxxxii_closure_clock_codec_flow_bridge.py`
 - Tests: `tests/test_dccxxxii_closure_clock_codec_flow_bridge.py`
 - Data: `data/dccxxxii_closure_clock_codec_flow_bridge.json`

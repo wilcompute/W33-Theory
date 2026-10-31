@@ -57,7 +57,7 @@ For G = I + εN:
 ```
 σ₁(G^{136}) via power iteration → dominant value = 137.007 ≈ α⁻¹
 ```
-This is verified computationally in PROOF.py.
+This is verified computationally in analysis/PROOF.py.
 
 ---
 

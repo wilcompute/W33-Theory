@@ -1,5 +1,5 @@
 # Pass 77 -- GAP group-theory tracks for W(3,3).
-# Writes a JSON-ish result file consumed by w33_pass77_frontier.py.
+# Writes a JSON-ish result file consumed by analysis/w33_pass77_frontier.py.
 #
 #   Track 1  Sp(4,3) acts rank-3 on the 40 points; the permutation character decomposes as
 #            1 + chi_15 + chi_24 -> the r=2 (dim 24) and s=-4 (dim 15) eigenspaces are

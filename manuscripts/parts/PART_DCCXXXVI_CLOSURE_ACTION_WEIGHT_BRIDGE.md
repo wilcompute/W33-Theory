@@ -71,6 +71,6 @@ So the emergent-time thread is no longer only kinematic. It now carries an exact
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxvi_closure_action_weight_bridge.py`
+- Verifier: `analysis/verify_dccxxxvi_closure_action_weight_bridge.py`
 - Tests: `tests/test_dccxxxvi_closure_action_weight_bridge.py`
 - Data: `data/dccxxxvi_closure_action_weight_bridge.json`

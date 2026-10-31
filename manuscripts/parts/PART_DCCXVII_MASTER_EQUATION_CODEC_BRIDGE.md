@@ -1,6 +1,6 @@
 # Part DCCXVII — Master-Equation Codec Bridge
 
-**Bridge:** `verify_dccxvii_master_equation_codec_bridge.py` — Verified
+**Bridge:** `analysis/verify_dccxvii_master_equation_codec_bridge.py` — Verified
 **Tests:** `tests/test_dccxvii_master_equation_codec_bridge.py` — 12/12 pass
 **Data:** `data/dccxvii_master_equation_codec_bridge.json`
 

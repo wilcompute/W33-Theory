@@ -1,6 +1,6 @@
 # Pass 97 — The 5-adic mirror: why E₈ lives at p=2 and nowhere else
 
-**Status: PASS** — witness `w33_pass97_five_adic_mirror.py` (11/11 checks), test
+**Status: PASS** — witness `analysis/w33_pass97_five_adic_mirror.py` (11/11 checks), test
 `tests/test_pass97_five_adic_mirror.py` (5/5). Self-contained (build_graph + GF(p) ranks + eigenvalue
 arithmetic).
 
@@ -31,4 +31,4 @@ self-orthogonal binary code. No odd prime qualifies — 3 is bad but empty, 5 is
 **There is no "E₈ at 5,"** and that asymmetry is exactly why E₈ appears at 2 alone.
 
 ## Files
-`w33_pass97_five_adic_mirror.py`, `.json`; `tests/test_pass97_five_adic_mirror.py`.
+`analysis/w33_pass97_five_adic_mirror.py`, `.json`; `tests/test_pass97_five_adic_mirror.py`.

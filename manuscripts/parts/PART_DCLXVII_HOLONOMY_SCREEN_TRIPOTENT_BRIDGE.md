@@ -125,7 +125,7 @@ It is:
 Verifier:
 
 ```text
-verify_dclxvii_holonomy_screen_tripotent_bridge.py
+analysis/verify_dclxvii_holonomy_screen_tripotent_bridge.py
 ```
 
 Tests:

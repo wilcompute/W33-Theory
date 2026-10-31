@@ -1,6 +1,6 @@
 # Part DCCXVIII — The Pincer-Bound Theorem for q = 3
 
-**Bridge:** `verify_dccxviii_pincer_bound_theorem.py` — Verified
+**Bridge:** `analysis/verify_dccxviii_pincer_bound_theorem.py` — Verified
 **Tests:** `tests/test_dccxviii_pincer_bound_theorem.py` — 15/15 pass
 **Data:** `data/dccxviii_pincer_bound_theorem.json`
 

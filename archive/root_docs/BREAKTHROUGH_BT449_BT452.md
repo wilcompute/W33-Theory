@@ -154,7 +154,7 @@ Hausdorff dim(S) = 1  (Cantor, ultrametric d(x,y) = 40^{-n})
 
 ## BT452 — Complete Verification Script
 
-See `BT452_VERIFICATION.py` for the standalone executable verification of all key predictions.
+See `analysis/BT452_VERIFICATION.py` for the standalone executable verification of all key predictions.
 
 **Results (zero free parameters):**
 

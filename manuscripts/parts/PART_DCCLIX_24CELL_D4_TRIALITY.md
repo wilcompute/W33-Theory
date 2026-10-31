@@ -1,6 +1,6 @@
 # Part DCCLIX — The 24-cell as the W(3,3) / E_8 f-vector Reification
 
-**Bridge:** `verify_dcclix_24cell_d4_triality.py` — Verified
+**Bridge:** `analysis/verify_dcclix_24cell_d4_triality.py` — Verified
 **Tests:** `tests/test_dcclix_24cell_d4_triality.py` — 21/21 pass
 **Data:** `data/dcclix_24cell_d4_triality.json`
 

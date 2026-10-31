@@ -1,6 +1,6 @@
 # Pass 86 — MacWilliams dual [40,24] of C₂(W): E₆ and E₈ in the code
 
-**Status: PASS** — witness `w33_pass86_macwilliams_dual.py` (5/5 checks), test
+**Status: PASS** — witness `analysis/w33_pass86_macwilliams_dual.py` (5/5 checks), test
 `tests/test_pass86_macwilliams_dual.py` (5/5). Self-contained (Pass 85 enumerator + sympy).
 
 C₂(W) = [40,16,8] is self-orthogonal (Pass 85), so C ⊆ C⊥ with **C⊥ = [40,24,6]**. The dual
@@ -23,5 +23,5 @@ orbit numbers as its minimum-weight geometry, with the moonshine 24 as the dual 
 coding-theory face of the same exceptional structure the graph's spectrum and zeta encode.
 
 ## Files
-- `w33_pass86_macwilliams_dual.py`, `.json` — witness + certificate (5 checks).
+- `analysis/w33_pass86_macwilliams_dual.py`, `.json` — witness + certificate (5 checks).
 - `tests/test_pass86_macwilliams_dual.py` — 5 assertions.

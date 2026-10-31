@@ -81,7 +81,7 @@ That is the cleanest host-level compression in the chain so far.
 Verifier:
 
 ```text
-verify_dclxxix_holonomy_balanced_core_bridge.py
+analysis/verify_dclxxix_holonomy_balanced_core_bridge.py
 ```
 
 Tests:

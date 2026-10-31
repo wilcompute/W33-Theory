@@ -114,7 +114,7 @@ That collapses three readings into one object:
 Verifier:
 
 ```text
-verify_dclxiv_holonomy_qutrit_transvection_bridge.py
+analysis/verify_dclxiv_holonomy_qutrit_transvection_bridge.py
 ```
 
 Tests:

@@ -1,6 +1,6 @@
 # Pass 74 — The Zeta Frontier of W(3,3) (six tracks)
 
-**Status: PASS** — witness `w33_pass74_zeta_frontier.py` (12/12 checks), test `tests/test_pass74_zeta_frontier.py` (7/7), paper compiles clean (tectonic).
+**Status: PASS** — witness `analysis/w33_pass74_zeta_frontier.py` (12/12 checks), test `tests/test_pass74_zeta_frontier.py` (7/7), paper compiles clean (tectonic).
 
 Executes the six starred next-steps from Pass 73. Each track was checked against
 `docs/index.html` and `w33_paper.tex` **first** (the doc is encyclopedic — Weil conjectures,
@@ -49,6 +49,6 @@ so each track states what is already documented and computes only the genuine de
 - disc_r = 40 = v, disc_s = 28 = v−k = dim SO(8) (index.html line 18122).
 
 ## Files
-- `w33_pass74_zeta_frontier.py`, `w33_pass74_zeta_frontier.json` — witness + certificate.
+- `analysis/w33_pass74_zeta_frontier.py`, `w33_pass74_zeta_frontier.json` — witness + certificate.
 - `tests/test_pass74_zeta_frontier.py` — 7 assertions.
 - `w33_paper.tex` — new subsection "The Zeta Frontier" after the Prime-Geodesic Expansion.

@@ -3,7 +3,7 @@
 ## Existing theorem preserved
 
 The uniform forty-transvection Markov operator is **not new**:
-`verify_dclxviii_holonomy_transvection_markov_bridge.py` already
+`analysis/verify_dclxviii_holonomy_transvection_markov_bridge.py` already
 establishes K = (13I+B)/40 = (12I-A+J)/40, with eigenvalues
 1^1, (1/4)^24, (2/5)^15. Here B=J-I-A is the W33
 noncollinearity adjacency matrix, A its collinearity adjacency.

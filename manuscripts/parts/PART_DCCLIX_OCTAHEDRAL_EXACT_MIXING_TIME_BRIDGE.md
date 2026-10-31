@@ -57,6 +57,6 @@ This is the cleanest exact finite-time equilibration theorem so far in the closu
 
 ## Executable artifact
 
-- Verifier: `verify_dcclix_octahedral_exact_mixing_time_bridge.py`
+- Verifier: `analysis/verify_dcclix_octahedral_exact_mixing_time_bridge.py`
 - Tests: `tests/test_dcclix_octahedral_exact_mixing_time_bridge.py`
 - Data: `data/dcclix_octahedral_exact_mixing_time_bridge.json`

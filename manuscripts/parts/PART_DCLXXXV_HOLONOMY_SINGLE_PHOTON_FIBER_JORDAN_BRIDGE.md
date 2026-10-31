@@ -79,7 +79,7 @@ So the chain is now:
 Verifier:
 
 ```text
-verify_dclxxxv_holonomy_single_photon_fiber_jordan_bridge.py
+analysis/verify_dclxxxv_holonomy_single_photon_fiber_jordan_bridge.py
 ```
 
 Tests:

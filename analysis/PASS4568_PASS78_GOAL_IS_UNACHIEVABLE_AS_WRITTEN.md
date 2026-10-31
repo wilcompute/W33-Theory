@@ -1,6 +1,6 @@
 # Pass 4568 — Pass 78's outstanding goal cannot be done as written, and here is the object that can
 
-Pass 4566 cited `w33_pass78_equivariant_closure.py:109` as naming the natural completion of
+Pass 4566 cited `analysis/w33_pass78_equivariant_closure.py:109` as naming the natural completion of
 the L-function work:
 
 > *"It is not yet the full edge-zeta Artin factorization across all 34 irreducibles."*

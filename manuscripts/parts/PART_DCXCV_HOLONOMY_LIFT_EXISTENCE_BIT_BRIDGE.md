@@ -43,7 +43,7 @@ It is not a new finite selector or a new matrix label. It is already the exact e
 Verifier:
 
 ```text
-verify_dcxcv_holonomy_lift_existence_bit_bridge.py
+analysis/verify_dcxcv_holonomy_lift_existence_bit_bridge.py
 ```
 
 Tests:

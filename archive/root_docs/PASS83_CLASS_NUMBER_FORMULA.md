@@ -1,6 +1,6 @@
 # Pass 83 — The graph analytic class number formula: W(3,3) as an F₁-curve
 
-**Status: PASS** — witness `w33_pass83_class_number_formula.py` (7/7 checks incl. a sympy symbolic
+**Status: PASS** — witness `analysis/w33_pass83_class_number_formula.py` (7/7 checks incl. a sympy symbolic
 verification), test `tests/test_pass83_class_number_formula.py` (5/5). Self-contained.
 
 A synthesis pass: it fuses three separately-established results into one arithmetic-geometry
@@ -37,5 +37,5 @@ complete, internally-consistent "curve over F₁" arithmetic — zeta, RH, funct
 class number, and class group, all verified.
 
 ## Files
-- `w33_pass83_class_number_formula.py`, `.json` — witness + certificate (exact integer + sympy).
+- `analysis/w33_pass83_class_number_formula.py`, `.json` — witness + certificate (exact integer + sympy).
 - `tests/test_pass83_class_number_formula.py` — 5 assertions.

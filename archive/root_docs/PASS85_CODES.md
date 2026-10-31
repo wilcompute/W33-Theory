@@ -1,7 +1,7 @@
 # Pass 85 — The binary code C₂(W) = [40,16,8] and its weight enumerator
 
 **Status: PASS** — GAP/GUAVA script `w33_pass85_codes.g` → certificate `w33_pass85_codes_out.txt`;
-witness `w33_pass85_codes.py` (6/6 checks); test `tests/test_pass85_codes.py` (5/5).
+witness `analysis/w33_pass85_codes.py` (6/6 checks); test `tests/test_pass85_codes.py` (5/5).
 
 The paper cites C₂(W) = [40,16,8] (Supplement N.2) as the binary code spanned by the rows of the
 W(3,3) adjacency, but never computes its **weight distribution**. GUAVA gives the full enumerator:
@@ -34,5 +34,5 @@ ring — the coding-theory face of the same E₈/E₆ structure the graph carrie
 
 ## Files
 - `w33_pass85_codes.g`, `w33_pass85_codes_out.txt` — GUAVA script + certificate.
-- `w33_pass85_codes.py`, `.json` — witness + certificate (6 checks; verifies A²≡0 mod 2 directly).
+- `analysis/w33_pass85_codes.py`, `.json` — witness + certificate (6 checks; verifies A²≡0 mod 2 directly).
 - `tests/test_pass85_codes.py` — 5 assertions.

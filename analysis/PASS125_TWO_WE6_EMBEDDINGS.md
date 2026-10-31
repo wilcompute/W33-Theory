@@ -1,7 +1,7 @@
 # Pass 125 — Two nonconjugate \(W(E_6)\) embeddings
 
 **Status: PASS.** The executable witness
-`w33_pass125_two_we6_embeddings.py` passes all 12 checks; its focused test is
+`analysis/w33_pass125_two_we6_embeddings.py` passes all 12 checks; its focused test is
 `tests/test_pass125_two_we6_embeddings.py`.
 
 ## The conflict

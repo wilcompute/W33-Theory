@@ -1,6 +1,6 @@
 # Part DCCLXXV - Photonic Retry Closure-Kernel Bridge
 
-**Verifier:** `verify_dcclxxv_photonic_retry_closure_kernel_bridge.py`
+**Verifier:** `analysis/verify_dcclxxv_photonic_retry_closure_kernel_bridge.py`
 **Tests:** `tests/test_dcclxxv_photonic_retry_closure_kernel_bridge.py`
 **Data:** `data/dcclxxv_photonic_retry_closure_kernel_bridge.json`
 

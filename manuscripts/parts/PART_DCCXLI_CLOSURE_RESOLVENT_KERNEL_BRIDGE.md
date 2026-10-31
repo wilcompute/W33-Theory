@@ -62,6 +62,6 @@ So the closure-time structure supports not just evolution, but full finite respo
 
 ## Executable artifact
 
-- Verifier: `verify_dccxli_closure_resolvent_kernel_bridge.py`
+- Verifier: `analysis/verify_dccxli_closure_resolvent_kernel_bridge.py`
 - Tests: `tests/test_dccxli_closure_resolvent_kernel_bridge.py`
 - Data: `data/dccxli_closure_resolvent_kernel_bridge.json`

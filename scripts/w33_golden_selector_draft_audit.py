@@ -5,7 +5,7 @@ from __future__ import annotations
 The live paper leaves the golden/icosahedral selector open on the nonlocal
 1620-quadrangle carrier. A stronger draft surface exists in
 ``part24_golden_selector.tex`` with an executable certificate in
-``SOLVEOPEN_XXIV.py``. That draft defines a local sign rule
+``analysis/SOLVEOPEN_XXIV.py``. That draft defines a local sign rule
 
     sigma(p, L1, L2) in {+1, -1}
 
@@ -26,7 +26,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DRAFT_FILE = ROOT / "SOLVEOPEN_XXIV.py"
+DRAFT_FILE = ROOT / "analysis/SOLVEOPEN_XXIV.py"
 DEFAULT_OUTPUT = ROOT / "data" / "w33_golden_selector_draft_audit_summary.json"
 
 

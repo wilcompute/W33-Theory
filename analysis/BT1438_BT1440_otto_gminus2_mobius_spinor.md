@@ -90,7 +90,7 @@ The missing Otto-side object is an explicit closure/chirality identification for
 ## Repo cross-checks
 
 - `w33_paper.tex` already fixes \(\Phi_3=13\), \(k=12\), \(f=24\), \(E=240\), and \(T=160\) from the q=3 parameter closure.
-- `W33_TANGLED_POLYHEDRA.py` already emphasizes tangled icosahedra, 12 vertices = k, 30 edges, and the Hurwitz/Klein quartic link \(168=24\cdot7=8\cdot21\).
+- `analysis/W33_TANGLED_POLYHEDRA.py` already emphasizes tangled icosahedra, 12 vertices = k, 30 edges, and the Hurwitz/Klein quartic link \(168=24\cdot7=8\cdot21\).
 - `analysis/w33_BREAKTHROUGH_376_dirac_spinor_from_Sp4R.py` already supplies the W33 spinor anchor via Sp(4,R) ~ Spin(2,3).
 
 ## Boundary

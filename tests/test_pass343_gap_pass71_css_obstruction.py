@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GAP_WITNESS = ROOT / "analysis" / "w33_pass343_pass71_css_obstruction.g"
 GAP_CERTIFICATE = ROOT / "data" / "w33_pass343_pass71_css_obstruction.json"
-LEGACY_WITNESS = ROOT / "w33_pass71_trackD_css_matrices.py"
+LEGACY_WITNESS = ROOT / "analysis/w33_pass71_trackD_css_matrices.py"
 LEGACY_CERTIFICATE = ROOT / "w33_pass71_trackD_css_matrices.json"
 
 

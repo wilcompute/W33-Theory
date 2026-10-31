@@ -98,7 +98,7 @@ def main():
     results={
         'theorem':'BT499 Corrected Seven-Realization Metric Heptad Theorem',
         'source':'data/Toroidal-Polyhedra-Realizations.txt coordinates and face cycles',
-        'correction':'Uses TXT Szilassi faces, not the old 31-edge EDGE_LENGTH_ANALYSIS.py S_FACES parser',
+        'correction':'Uses TXT Szilassi faces, not the old 31-edge analysis/EDGE_LENGTH_ANALYSIS.py S_FACES parser',
         'realization_packets':packets,
         'heptad_counts':{
             'realizations':7,

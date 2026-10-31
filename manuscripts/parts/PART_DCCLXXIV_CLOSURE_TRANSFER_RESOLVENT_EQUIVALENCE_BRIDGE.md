@@ -1,6 +1,6 @@
 # Part DCCLXXIV - Closure Transfer-Resolvent Equivalence Bridge
 
-**Verifier:** `verify_dcclxxiv_closure_transfer_resolvent_equivalence_bridge.py`
+**Verifier:** `analysis/verify_dcclxxiv_closure_transfer_resolvent_equivalence_bridge.py`
 **Tests:** `tests/test_dcclxxiv_closure_transfer_resolvent_equivalence_bridge.py`
 **Data:** `data/dcclxxiv_closure_transfer_resolvent_equivalence_bridge.json`
 
@@ -46,7 +46,7 @@ Thus the three descriptions are one finite operator package:
 
 The closure-clock stack now has a single canonical DCCXL surface. Later
 response/action parts should continue to import
-`verify_dccxl_closure_jordan_resolvent_bridge.py`, because it already exposes
+`analysis/verify_dccxl_closure_jordan_resolvent_bridge.py`, because it already exposes
 both `generator_matrix` and `generator_powers`.
 
 ---

@@ -2,7 +2,7 @@
 """Pass 1012: why the edge-root bijection resists construction -- an orbit obstruction.
 
 The repository has carried the `240 edges = 240 E8 roots` correspondence for many
-passes, with solvers (EXPLICIT_BIJECTION.py, BIJECTION_SOLVER_V3.py) trying to
+passes, with solvers (analysis/EXPLICIT_BIJECTION.py, analysis/BIJECTION_SOLVER_V3.py) trying to
 build it and recording partial progress: the edge graph is 22-regular and the
 root graph 56-regular so no graph isomorphism exists, and 226 of 240 edges are
 separated by distance profiles.  What was sought instead was an EQUIVARIANT
@@ -171,7 +171,7 @@ def part_C_obstruction(checks):
                 "W(E8) whose root orbits form a single 240 is not excluded, nor "
                 "is a weaker-than-equivariant correspondence."),
             "explains": (
-                "why EXPLICIT_BIJECTION.py and BIJECTION_SOLVER_V3.py could not "
+                "why analysis/EXPLICIT_BIJECTION.py and analysis/BIJECTION_SOLVER_V3.py could not "
                 "close the map: it does not exist under the equivariance they "
                 "assumed")}
 

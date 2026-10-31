@@ -1,6 +1,6 @@
 # Part DCCXLIX — The Octahedron as the Phase Space of the Closure Clock
 
-**Bridge:** `verify_dccxlix_octahedron_closure_phase_space.py` — Verified
+**Bridge:** `analysis/verify_dccxlix_octahedron_closure_phase_space.py` — Verified
 **Tests:** `tests/test_dccxlix_octahedron_closure_phase_space.py` — 23/23 pass
 **Data:** `data/dccxlix_octahedron_closure_phase_space.json`
 

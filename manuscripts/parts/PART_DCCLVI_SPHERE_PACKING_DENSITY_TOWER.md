@@ -1,6 +1,6 @@
 # Part DCCLVI — The W(3,3) Sphere-Packing Density Tower
 
-**Bridge:** `verify_dcclvi_sphere_packing_density_tower.py` — Verified
+**Bridge:** `analysis/verify_dcclvi_sphere_packing_density_tower.py` — Verified
 **Tests:** `tests/test_dcclvi_sphere_packing_density_tower.py` — 21/21 pass
 **Data:** `data/dcclvi_sphere_packing_density_tower.json`
 

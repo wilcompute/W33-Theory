@@ -27,10 +27,10 @@ jobs:
           pip install pytest numpy scipy
 
       - name: Run Pass 70 tracks
-        run: python w33_pass70_run_all_tracks.py
+        run: python analysis/w33_pass70_run_all_tracks.py
 
       - name: Run Pass 71 tracks
-        run: python w33_pass71_run_all_tracks.py
+        run: python analysis/w33_pass71_run_all_tracks.py
 
       # The full suite moved to pytest.yml (2026-10-30): this job installs only numpy/scipy, so the full suite failed here at
       # collection on every push (missing sympy, ortools, cdd), duplicating pytest.yml's run.  This job verifies Pass 70/71.

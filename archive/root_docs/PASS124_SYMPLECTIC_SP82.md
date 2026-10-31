@@ -1,6 +1,6 @@
 # Pass 124 — The symplectic capstone: Sp(8,2) unifies the two W(3,3) glue graphs
 
-**Status: PASS** — witness `w33_pass124_symplectic_sp82.py` (10/10 checks), test
+**Status: PASS** — witness `analysis/w33_pass124_symplectic_sp82.py` (10/10 checks), test
 `tests/test_pass124_symplectic_sp82.py` (5/5). Self-contained (F₂⁸ quadratic geometry + numpy).
 
 ## The result
@@ -59,5 +59,5 @@ r − s = 6 = 2·3 (Pass 97). The exceptional E₆/E₈ refinement (the quadrati
 featureless symplectic 255 into the arithmetically rich 135 + 120 split.
 
 ## Files
-- `w33_pass124_symplectic_sp82.py`, `.json` — witness (10 checks).
+- `analysis/w33_pass124_symplectic_sp82.py`, `.json` — witness (10 checks).
 - `tests/test_pass124_symplectic_sp82.py` — 5 assertions.

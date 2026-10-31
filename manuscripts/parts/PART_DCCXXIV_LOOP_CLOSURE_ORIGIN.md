@@ -1,6 +1,6 @@
 # Part DCCXXIV — The Loop-Closure Origin of (q, q+1)
 
-**Bridge:** `verify_dccxxiv_loop_closure_origin.py` — Verified
+**Bridge:** `analysis/verify_dccxxiv_loop_closure_origin.py` — Verified
 **Tests:** `tests/test_dccxxiv_loop_closure_origin.py` — 20/20 pass
 **Data:** `data/dccxxiv_loop_closure_origin.json`
 

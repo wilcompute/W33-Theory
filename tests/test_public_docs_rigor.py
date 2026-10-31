@@ -39,7 +39,7 @@ def test_pages_verified_section_scopes_pmns_dictionary_and_spectral_bridge() -> 
     start = text.index('<section id="verified">')
     end = text.index('<section id="conjectural">')
     verified = text[start:end]
-    assert "PMNS_CYCLOTOMIC.py" in verified
+    assert "analysis/PMNS_CYCLOTOMIC.py" in verified
     assert "4/13" in verified
     assert "7/13" in verified
     assert "2/91" in verified

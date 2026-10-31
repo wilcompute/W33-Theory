@@ -1,6 +1,6 @@
 # Part DCCLXX — The Hopf Fibration / Cayley–Dickson Tower at q = 3
 
-**Bridge:** `verify_dcclxx_hopf_cayley_dickson_tower.py` — Verified
+**Bridge:** `analysis/verify_dcclxx_hopf_cayley_dickson_tower.py` — Verified
 **Tests:** `tests/test_dcclxx_hopf_cayley_dickson_tower.py` — 22/22 pass
 **Data:** `data/dcclxx_hopf_cayley_dickson_tower.json`
 

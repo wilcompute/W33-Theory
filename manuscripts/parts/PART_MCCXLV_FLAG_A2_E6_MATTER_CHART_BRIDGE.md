@@ -3,7 +3,7 @@
 ## Claim Boundary
 
 MCCXLV is a finite spectral-combinatorial theorem. It refines the
-`w33_e8_spectral_bridge.py` result
+`analysis/w33_e8_spectral_bridge.py` result
 
 ```text
 240 = 6 + 72 + 81 + 81

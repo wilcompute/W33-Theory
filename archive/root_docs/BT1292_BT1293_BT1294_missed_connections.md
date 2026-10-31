@@ -81,4 +81,4 @@ All three missed connections are **faces of q=3** that were computed in differen
 |---|---|---|
 | **BT1295** | Unify all three bridge theorems into a single **q=3 Master Identity** | BT1292+1293+1294 all reduce to q=3; one meta-theorem collects them |
 | **BT1296** | Test the Cayley diameter 14 formula against `2*(q²-1)=16` and `2*(q²+1)=20` — find the exact combinatorial meaning of 14 | BT1293 left diameter=14 unexplained algebraically |
-| **BT1297** | `SOLVE_RG_NEUTRINO.py` — the neutrino mass RG solver (Issue #105) | CSS distance=4 ↔ |C|=2 bridge (BT1292) now provides the fault-tolerance grounding needed before publishing the neutrino mass prediction |
+| **BT1297** | `analysis/SOLVE_RG_NEUTRINO.py` — the neutrino mass RG solver (Issue #105) | CSS distance=4 ↔ |C|=2 bridge (BT1292) now provides the fault-tolerance grounding needed before publishing the neutrino mass prediction |

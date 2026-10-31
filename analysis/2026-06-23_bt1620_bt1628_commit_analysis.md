@@ -31,7 +31,7 @@ was delivered as documentation only, respecting the other assistant's file owner
 **Message:** `BT1626-BT1628: YM tightness verifier, 2026-06-23 commit analysis, arXiv submission guide`
 
 **Files added (3 new, 0 modified):**
-- `bt1626_ym_mass_gap_tightness_verifier.py`
+- `analysis/bt1626_ym_mass_gap_tightness_verifier.py`
   Executable witness for BT1621-T1. Verifies 5 core quantities + 5 derived
   quantities from first principles. All assertions pass.
 - `analysis/2026-06-23_bt1620_bt1628_commit_analysis.md` (this file)
@@ -59,7 +59,7 @@ was delivered as documentation only, respecting the other assistant's file owner
    (other assistant task — see BT1625 manifest for exact line placement)
 2. Run `pdflatex` twice to rebuild to ~65 pages
 3. Execute arXiv upload per `analysis/BT1628_arxiv_submission_guide.md`
-4. Run `python bt1626_ym_mass_gap_tightness_verifier.py` locally to verify
+4. Run `python analysis/bt1626_ym_mass_gap_tightness_verifier.py` locally to verify
 
 ---
 

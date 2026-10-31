@@ -31,7 +31,7 @@ It is a single-entry realization problem on an already-fixed host.
 Verifier:
 
 ```text
-verify_dcxcviii_holonomy_row_entry_curved_frontier_bridge.py
+analysis/verify_dcxcviii_holonomy_row_entry_curved_frontier_bridge.py
 ```
 
 Tests:

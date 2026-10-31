@@ -66,7 +66,7 @@ W33 Research Collective
 ### Figure 2: CHSH vs Noise Level
 - **Content**: `S(p)` vs depolarizing noise `p` for W33 (q=3) and generic Bell pair; both curves from 0 to 1; W33 curve stays above `S=2` (Bell threshold) to `p_crit = 0.391` vs `0.293`; shaded region = W33 advantage
 - **Caption**: "W33 Bell protocol tolerates 33% more noise than a generic Bell pair. Horizontal dashed line at `S=2` (classical limit). The W33 critical threshold `p_crit = (1+1/q)(1-1/√2) ≈ 0.391` (red dot) lies well above the generic threshold (blue dot)."
-- **Code to generate**: `python3 PASS_689_BELL_DECOHERENCE_THRESHOLD.py --plot`
+- **Code to generate**: `python3 analysis/PASS_689_BELL_DECOHERENCE_THRESHOLD.py --plot`
 
 ### Figure 3: Noise Advantage vs q
 - **Content**: `p_crit(q) = (1+1/q)(1-1/√2)` for `q = 3, 5, 7, 11, 13, 17, 19, 23`; showing convergence to `p_crit(∞) = 1 - 1/√2 ≈ 0.293` from above; error bars from photonic hardware noise floor

@@ -52,6 +52,6 @@ So closure events induce a canonical discrete clock parameter.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxi_loop_closure_clock_bridge.py`
+- Verifier: `analysis/verify_dccxxxi_loop_closure_clock_bridge.py`
 - Tests: `tests/test_dccxxxi_loop_closure_clock_bridge.py`
 - Data: `data/dccxxxi_loop_closure_clock_bridge.json`

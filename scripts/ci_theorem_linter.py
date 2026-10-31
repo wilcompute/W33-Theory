@@ -51,7 +51,8 @@ def lint_file(path: pathlib.Path, strict: bool = False) -> list[str]:
 
 def main():
     strict = '--strict' in sys.argv
-    root = pathlib.Path(__file__).parent
+    # the PART modules live in analysis/ (root until 2026-10-30); this used to glob scripts/ and checked 0 files
+    root = pathlib.Path(__file__).resolve().parents[1] / 'analysis'
     part_files = sorted(root.glob('PART_*.py'))
 
     all_violations = []

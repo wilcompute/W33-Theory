@@ -1,6 +1,6 @@
 # PART LXIV — Pascal Line-Split and Seidel Sector Operator
 
-**Status:** theorem-level structural upgrade; verified by `PART_LXIV_pascal_line_split.py`.
+**Status:** theorem-level structural upgrade; verified by `analysis/PART_LXIV_pascal_line_split.py`.
 
 This pass does not add another broad physics section. It extracts a rigid theorem from the Pascal/q-Pascal material and uses it to expose a cleaner dynamical object.
 

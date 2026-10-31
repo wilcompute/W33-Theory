@@ -1,6 +1,6 @@
 # Pass 94 — The mates separate again: code-lattice discriminant forms of W(3,3) vs Q(4,3)
 
-**Status: PASS** — witness `w33_pass94_dual_lattice.py` (9/9 checks), test
+**Status: PASS** — witness `analysis/w33_pass94_dual_lattice.py` (9/9 checks), test
 `tests/test_pass94_dual_lattice.py` (5/5). Self-contained (GF(2) + Arf invariant via symplectic
 reduction).
 
@@ -26,4 +26,4 @@ glue), never out of Q. "Can you hear the shape?" — yes, through the code-latti
 **8 + 20 = 28**, the size of the SRG(40,12,2,4) census (Pass 89).
 
 ## Files
-`w33_pass94_dual_lattice.py`, `.json`; `tests/test_pass94_dual_lattice.py`.
+`analysis/w33_pass94_dual_lattice.py`, `.json`; `tests/test_pass94_dual_lattice.py`.

@@ -86,7 +86,7 @@ interface:
 
 Artifacts:
 
-- Verifier: `verify_dcmii_projective_screen_bulk_qec_bridge.py`
+- Verifier: `analysis/verify_dcmii_projective_screen_bulk_qec_bridge.py`
 - Data: `data/dcmii_projective_screen_bulk_qec_bridge.json`
 - Result: `PART_DCMII_projective_screen_bulk_qec_bridge_results.json`
 - Tests: `tests/test_dcmii_projective_screen_bulk_qec_bridge.py`

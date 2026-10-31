@@ -11,7 +11,7 @@ on:
       - 'analysis/w33_reye_k12_orientable_horizon_completion.py'
       - 'analysis/w33_holonet_system.py'
       - 'data/w33_qutrit_optical_*.json'
-      - 'w33_pass79_full_closure.py'
+      - 'analysis/w33_pass79_full_closure.py'
       - '.github/workflows/w33_20260902_ft_locality_decoder_threshold.yml'
   workflow_dispatch:
 

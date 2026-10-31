@@ -5,12 +5,12 @@ on:
     branches: [master]
     paths:
       - 'tests/test_bijection_solver_v3.py'
-      - 'BIJECTION_SOLVER_V3.py'
+      - 'analysis/BIJECTION_SOLVER_V3.py'
       - '.github/workflows/bijection-tests.yml'
   pull_request:
     paths:
       - 'tests/test_bijection_solver_v3.py'
-      - 'BIJECTION_SOLVER_V3.py'
+      - 'analysis/BIJECTION_SOLVER_V3.py'
   workflow_dispatch:
 
 jobs:

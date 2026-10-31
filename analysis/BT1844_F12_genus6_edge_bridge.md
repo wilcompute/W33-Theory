@@ -9,7 +9,7 @@ The repo already contains the relevant oscillator/genus trail:
 ```text
 analysis/w33_temporal_torus_minimal_triangulation.py
 analysis/BT802_oscillator_atlas_verification.md
-verify_dccxxiii_genus_equation_spectrum.py
+analysis/verify_dccxxiii_genus_equation_spectrum.py
 data/dccxxiii_genus_equation_spectrum.json
 exploration/w33_csaszar_szilassi_jordan.py
 manuscripts/tex/part18_jungerman_ringel.tex

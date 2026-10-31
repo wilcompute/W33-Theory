@@ -78,6 +78,6 @@ q=3 -> Cl^+(3,0)~H with 4 basis elements -> codec 12 -> W(3,3) valency 12.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxx_clifford_even_quaternion_pauli_bridge.py`
+- Verifier: `analysis/verify_dccxxx_clifford_even_quaternion_pauli_bridge.py`
 - Tests: `tests/test_dccxxx_clifford_even_quaternion_pauli_bridge.py`
 - Data: `data/dccxxx_clifford_even_quaternion_pauli_bridge.json`

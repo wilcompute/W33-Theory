@@ -58,6 +58,6 @@ This is the cleanest finite harmonic mode decomposition of the closure-time phas
 
 ## Executable artifact
 
-- Verifier: `verify_dccli_octahedral_spectral_projector_semigroup_bridge.py`
+- Verifier: `analysis/verify_dccli_octahedral_spectral_projector_semigroup_bridge.py`
 - Tests: `tests/test_dccli_octahedral_spectral_projector_semigroup_bridge.py`
 - Data: `data/dccli_octahedral_spectral_projector_semigroup_bridge.json`

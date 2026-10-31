@@ -57,6 +57,6 @@ This is the cleanest exact finite entropy-production bridge so far in the octahe
 
 ## Executable artifact
 
-- Verifier: `verify_dcclvi_octahedral_entropy_contraction_bridge.py`
+- Verifier: `analysis/verify_dcclvi_octahedral_entropy_contraction_bridge.py`
 - Tests: `tests/test_dcclvi_octahedral_entropy_contraction_bridge.py`
 - Data: `data/dcclvi_octahedral_entropy_contraction_bridge.json`

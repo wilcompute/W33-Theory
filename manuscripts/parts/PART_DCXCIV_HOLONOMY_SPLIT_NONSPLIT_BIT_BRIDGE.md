@@ -42,7 +42,7 @@ Within the current exact finite/adapted language, the whole remaining frontier i
 Verifier:
 
 ```text
-verify_dcxciv_holonomy_split_nonsplit_bit_bridge.py
+analysis/verify_dcxciv_holonomy_split_nonsplit_bit_bridge.py
 ```
 
 Tests:

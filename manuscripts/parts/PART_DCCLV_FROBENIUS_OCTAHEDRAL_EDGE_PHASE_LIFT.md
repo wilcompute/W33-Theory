@@ -105,6 +105,6 @@ octahedral alphabet.
 
 ## Executable artifact
 
-- Verifier: `verify_dcclv_frobenius_octahedral_edge_phase_lift.py`
+- Verifier: `analysis/verify_dcclv_frobenius_octahedral_edge_phase_lift.py`
 - Tests: `tests/test_dcclv_frobenius_octahedral_edge_phase_lift.py`
 - Data: `data/dcclv_frobenius_octahedral_edge_phase_lift.json`

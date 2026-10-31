@@ -2,7 +2,7 @@
 """BT498: TXT Realization Corrected Szilassi Parser Theorem.
 
 The repo file data/Toroidal-Polyhedra-Realizations.txt contains the correct
-Szilassi face cycles. BT490 found that EDGE_LENGTH_ANALYSIS.py used a different
+Szilassi face cycles. BT490 found that analysis/EDGE_LENGTH_ANALYSIS.py used a different
 S_FACES list which produced 31 unique edges, not 21.
 
 This script parses/encodes the TXT-face Szilassi data directly and verifies:
@@ -138,7 +138,7 @@ def main() -> dict:
         'corrected_edges': edges,
         'metric_packets': [p1, p2],
         'repair_reading': {
-            'BT490': 'old EDGE_LENGTH_ANALYSIS.py parser used wrong Szilassi face cycles and gave 31 edges',
+            'BT490': 'old analysis/EDGE_LENGTH_ANALYSIS.py parser used wrong Szilassi face cycles and gave 31 edges',
             'BT498': 'TXT realization data gives the correct 21-edge closed Heawood/Szilassi carrier',
             'next_step': 'replace metric analysis Szilassi S_FACES with the TXT FACES list before promoting seven-realization edge spectra',
         },

@@ -27,7 +27,7 @@ from typing import Tuple
 ROOT=Path(__file__).resolve().parents[1]
 MOD=3
 E8_DIMS={"g0":86,"g1":81,"g2":81,"total":248}
-ARTIFACTS=["PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py","PART_CLXXV_triple_albert_e8_grading_results.json","tools/verify_e8_z3grading_from_structure_constants.py","scripts/w33_coexact_e6_bridge.py","scripts/e8_structural_bridge.py"]
+ARTIFACTS=["analysis/PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py","PART_CLXXV_triple_albert_e8_grading_results.json","tools/verify_e8_z3grading_from_structure_constants.py","scripts/w33_coexact_e6_bridge.py","scripts/e8_structural_bridge.py"]
 Vector=Tuple[int,int,int,int]
 def ok(n,c,v=None): return {"name":n,"passed":bool(c),"value":v}
 def mul(a,u): return tuple((a*u[i])%MOD for i in range(4))

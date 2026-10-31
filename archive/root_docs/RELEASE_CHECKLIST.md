@@ -5,7 +5,7 @@
 ---
 
 ## Algebraic Verification
-- [x] `PART_LXII_MASTER_VERIFICATION.py` passes 14/14 checks
+- [x] `analysis/PART_LXII_MASTER_VERIFICATION.py` passes 14/14 checks
 - [x] `G_release = 1` confirmed in `PART_LXII_master_results.json`
 - [x] Trace(A) = 0 verified (12 + 48 - 60 = 0)
 - [x] Eigenvalue multiplicities sum to v=40 (1+24+15)
@@ -24,14 +24,14 @@
 - [x] λ_H = 7/54 (exact rational)
 
 ## Pillar Scripts
-- [x] `UNIFIED_HIERARCHY_PROOF.py` — 50/50 assertions pass
-- [x] `UNIFIED_K3_TRANSPORT_SOLUTION.py` — transport closure confirmed
-- [x] `UNIFIED_GRAVITY_SPINFOAM.py` — S_EH=480, Λ=122, Bek=1/4
-- [x] `UNIFIED_MASTER_THEOREM.py` — 50 SM parameters
-- [x] `V37_FULL_MIXING_SYNTHESIS.py` — 13/13 CKM+PMNS
-- [x] `V42_STRONG_COUPLING_GUT.py` — α_s confirmed
-- [x] `PART_LVIII_SOLAR_NEUTRINO.py` — m_ν₃ confirmed
-- [x] `PART_LIX_HIGGS_MASS.py` — m_H confirmed
+- [x] `analysis/UNIFIED_HIERARCHY_PROOF.py` — 50/50 assertions pass
+- [x] `analysis/UNIFIED_K3_TRANSPORT_SOLUTION.py` — transport closure confirmed
+- [x] `analysis/UNIFIED_GRAVITY_SPINFOAM.py` — S_EH=480, Λ=122, Bek=1/4
+- [x] `analysis/UNIFIED_MASTER_THEOREM.py` — 50 SM parameters
+- [x] `analysis/V37_FULL_MIXING_SYNTHESIS.py` — 13/13 CKM+PMNS
+- [x] `analysis/V42_STRONG_COUPLING_GUT.py` — α_s confirmed
+- [x] `analysis/PART_LVIII_SOLAR_NEUTRINO.py` — m_ν₃ confirmed
+- [x] `analysis/PART_LIX_HIGGS_MASS.py` — m_H confirmed
 
 ## Documentation
 - [x] `UNIFIED_TOE_STATUS.md` — updated to 57 confirmed, Parts I-LXIII

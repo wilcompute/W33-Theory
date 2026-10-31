@@ -1,6 +1,6 @@
 # Part DCCLXXVII — The Convergent Attractor Theorem
 
-**Bridge:** `verify_dcclxxvii_convergent_attractor_theorem.py` — Verified
+**Bridge:** `analysis/verify_dcclxxvii_convergent_attractor_theorem.py` — Verified
 **Tests:** `tests/test_dcclxxvii_convergent_attractor_theorem.py` — 20/20 pass
 **Data:** `data/dcclxxvii_convergent_attractor_theorem.json`
 

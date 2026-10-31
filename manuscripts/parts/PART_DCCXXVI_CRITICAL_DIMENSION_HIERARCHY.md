@@ -1,6 +1,6 @@
 # Part DCCXXVI — Critical-Dimension Hierarchy from the q = 3 Genus Oscillator
 
-**Bridge:** `verify_dccxxvi_critical_dimension_hierarchy.py` — Verified
+**Bridge:** `analysis/verify_dccxxvi_critical_dimension_hierarchy.py` — Verified
 **Tests:** `tests/test_dccxxvi_critical_dimension_hierarchy.py` — 20/20 pass
 **Data:** `data/dccxxvi_critical_dimension_hierarchy.json`
 

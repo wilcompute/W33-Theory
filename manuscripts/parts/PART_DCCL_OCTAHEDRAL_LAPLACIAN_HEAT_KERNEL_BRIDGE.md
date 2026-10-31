@@ -65,6 +65,6 @@ This is the first exact spectral-diffusive dynamics bridge on the octahedral clo
 
 ## Executable artifact
 
-- Verifier: `verify_dccl_octahedral_laplacian_heat_kernel_bridge.py`
+- Verifier: `analysis/verify_dccl_octahedral_laplacian_heat_kernel_bridge.py`
 - Tests: `tests/test_dccl_octahedral_laplacian_heat_kernel_bridge.py`
 - Data: `data/dccl_octahedral_laplacian_heat_kernel_bridge.json`

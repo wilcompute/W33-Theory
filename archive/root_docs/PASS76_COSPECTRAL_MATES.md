@@ -1,6 +1,6 @@
 # Pass 76 — A cospectral, locally identical, non-isomorphic mate of W(3,3)
 
-**Status: PASS** — witness `w33_pass76_cospectral_mates.py` (8/8 checks), test `tests/test_pass76_cospectral_mates.py` (5/5), paper compiles clean.
+**Status: PASS** — witness `analysis/w33_pass76_cospectral_mates.py` (8/8 checks), test `tests/test_pass76_cospectral_mates.py` (5/5), paper compiles clean.
 
 Closes the loop flagged after Pass 75: produce an **actual** second SRG(40,12,2,4) and separate it
 from W(3,3) — and it turns out sharper than expected.
@@ -29,6 +29,6 @@ The cospectral mate therefore comes from the dual geometry Q(4,3), not from loca
 - **2-rank = 16** (the binary code [40,16,8]), **3-rank = 39 = v−1**, **5-rank = 40** (A invertible mod 5).
 
 ## Files
-- `w33_pass76_cospectral_mates.py`, `.json` — witness + certificate (8 checks).
+- `analysis/w33_pass76_cospectral_mates.py`, `.json` — witness + certificate (8 checks).
 - `tests/test_pass76_cospectral_mates.py` — 5 assertions (networkx-guarded for the iso claim).
 - `w33_paper.tex` — remark (d) appended to the Zeta Frontier subsection.

@@ -151,7 +151,7 @@ collision pairs    2,066  ->    356
 
 Reading the new head found the fifth and last noise class: **the same pass in two
 formats.** `BT807_q3_antiflag_two_clocks.md` vs `bt807_q3_antiflag_two_clocks.py`;
-`PART_CXCIX_QECC_BRIDGE.py` vs `manuscripts/parts/PART_CXCIX_QECC_BRIDGE.md`. A
+`analysis/PART_CXCIX_QECC_BRIDGE.py` vs `manuscripts/parts/PART_CXCIX_QECC_BRIDGE.md`. A
 witness and its write-up necessarily share every result — that is the workflow,
 not a rediscovery. Filtered by case-insensitive stem equality.
 

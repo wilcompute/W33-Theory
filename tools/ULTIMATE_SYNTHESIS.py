@@ -440,7 +440,7 @@ print(
 
   PHYSICS DERIVATIONS:
     • PHYSICS_EXTRACTION.py   - Coupling constants, Weinberg angle
-    • MASS_SPECTRUM.py        - Koide formula, τ mass prediction
+    • analysis/MASS_SPECTRUM.py        - Koide formula, τ mass prediction
     • ULTIMATE_SYNTHESIS.py   - This file: complete unified picture
 
   DOCUMENTATION:

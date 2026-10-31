@@ -1,6 +1,6 @@
 # Part DCCXXI — Biological Allometry from q = 3
 
-**Bridge:** `verify_dccxxi_biological_allometry_from_q3.py` — Verified
+**Bridge:** `analysis/verify_dccxxi_biological_allometry_from_q3.py` — Verified
 **Tests:** `tests/test_dccxxi_biological_allometry_from_q3.py` — 17/17 pass
 **Data:** `data/dccxxi_biological_allometry_from_q3.json`
 

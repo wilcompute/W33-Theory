@@ -160,7 +160,7 @@ Neutrino mass (Equation 7, Part LVIII):
 
 - Parts I-LXI committed to master
 - P1-P115 predictions filed
-- All computational scripts: THEORY_OF_EVERYTHING.py, SOLVE_OPEN.py,
+- All computational scripts: analysis/THEORY_OF_EVERYTHING.py, SOLVE_OPEN.py,
   SPECTRAL_VERIFICATION.py, and 60+ supporting Python modules
 - Parts LVIII-LIX: neutrino masses and Higgs quartic solved (April 26, 2026)
 - Errata LXI: eigenvalue multiplicities corrected throughout

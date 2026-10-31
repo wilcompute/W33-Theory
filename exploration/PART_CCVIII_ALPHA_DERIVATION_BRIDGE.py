@@ -7,7 +7,7 @@ from the W(3,3) SRG(40,12,2,4) parameters alone (zero free parameters).
 
 Two independent formulas are obtained and ranked by precision:
 
-  Formula A (ALPHA_AND_SM.py, previous):
+  Formula A (analysis/ALPHA_AND_SM.py, previous):
     α⁻¹ = K² − 2μ + 1 + V/L_eff
          = 144 − 8 + 1 + 40/1111
          = 137.036003600   (5.35 digits)
@@ -82,7 +82,7 @@ frac_A = V / L_EFF
 alpha_A = int_part + frac_A
 err_A = abs(alpha_A - ALPHA_INV_EXP)
 digits_A = -math.log10(err_A)
-print(f"Step 2 — Formula A (known, from ALPHA_AND_SM.py):")
+print(f"Step 2 — Formula A (known, from analysis/ALPHA_AND_SM.py):")
 print(f"  frac_A = V/L_eff = {V}/{L_EFF} = {frac_A:.9f}")
 print(f"  α⁻¹(A) = {int_part} + {frac_A:.9f} = {alpha_A:.9f}")
 print(f"  Error  = {err_A:.3e}  ({digits_A:.2f} digits)")

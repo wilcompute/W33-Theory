@@ -5,7 +5,7 @@ runnable witnesses while preserving the remaining canonical-geometry boundary.
 
 ## 1. Explicit `[[66,8,3]]_3` stabilizer witness
 
-`w33_pass79_full_closure.py` builds a finite qutrit stabilizer code on 66
+`analysis/w33_pass79_full_closure.py` builds a finite qutrit stabilizer code on 66
 physical qutrits:
 
 ```text
@@ -108,8 +108,8 @@ labelling witness.
 ## Verification
 
 ```bash
-python3 w33_pass79_full_closure.py
-python3 -m py_compile w33_pass79_full_closure.py
+python3 analysis/w33_pass79_full_closure.py
+python3 -m py_compile analysis/w33_pass79_full_closure.py
 /usr/bin/gap -q analysis/w33_pass79_edge_terwilliger.g
 python3 -m json.tool w33_pass79_full_closure.json
 ```

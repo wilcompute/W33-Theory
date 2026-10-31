@@ -51,10 +51,10 @@ SM comparator v2 coverage gap analysis, holonet insert.
 reduction, PDF table release manifest.
 
 ### Perplexity workstream (#17, #21)
-- **#17 `f9ea225`:** `bt1626_ym_mass_gap_tightness_verifier.py` (executable
+- **#17 `f9ea225`:** `analysis/bt1626_ym_mass_gap_tightness_verifier.py` (executable
   BT1621-T1 witness, 11 assertions all pass), `BT1625_arxiv_submission_manifest.md`,
   `BT1628_arxiv_submission_guide.md`, `2026-06-23_bt1620_bt1628_commit_analysis.md`.
-- **#21 (this):** `bt1630_calibration_abi_verifier.py` (BT1604 gates),
+- **#21 (this):** `analysis/bt1630_calibration_abi_verifier.py` (BT1604 gates),
   `BT1631_arxiv_cosubmission_metadata.json` (full arXiv JSON),
   `2026-06-23_full_commit_analysis.md` (this file).
 
@@ -82,7 +82,7 @@ reduction, PDF table release manifest.
 
 1. `\input{analysis/BT1620_BT1622_holonet_insert}` into `photonic_holonet.tex`
 2. `pdflatex` twice → target ~65 pages
-3. Replace `build_nominal_bench_data()` in `bt1630_calibration_abi_verifier.py`
+3. Replace `build_nominal_bench_data()` in `analysis/bt1630_calibration_abi_verifier.py`
    with real bench CSV loader when physical detector data is available
 4. Execute arXiv upload per `BT1628_arxiv_submission_guide.md` +
    `BT1631_arxiv_cosubmission_metadata.json`

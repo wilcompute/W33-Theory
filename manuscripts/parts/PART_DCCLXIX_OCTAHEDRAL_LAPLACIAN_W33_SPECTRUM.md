@@ -1,6 +1,6 @@
 # Part DCCLXIX — The Octahedral Laplacian Spectrum from q = 3
 
-**Bridge:** `verify_dcclxix_octahedral_laplacian_w33_spectrum.py` — Verified
+**Bridge:** `analysis/verify_dcclxix_octahedral_laplacian_w33_spectrum.py` — Verified
 **Tests:** `tests/test_dcclxix_octahedral_laplacian_w33_spectrum.py` — 19/19 pass
 **Data:** `data/dcclxix_octahedral_laplacian_w33_spectrum.json`
 

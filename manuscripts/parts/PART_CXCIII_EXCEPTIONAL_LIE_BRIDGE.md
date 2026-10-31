@@ -106,7 +106,7 @@ all values are expressed through W(3,3):
 
 ## Bridge Script
 
-`PART_CXCIII_EXCEPTIONAL_LIE_BRIDGE.py` — 52/52 checks pass.
+`analysis/PART_CXCIII_EXCEPTIONAL_LIE_BRIDGE.py` — 52/52 checks pass.
 
 ## Tests
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** spectral derivation of the CXL/CXLI threshold templates  
-**Files:** `PART_CXLII_HASHIMOTO_HEAVY_SPECTRUM_DERIVATION.py`, `PART_CXLII_hashimoto_heavy_spectrum_results.json`, `tests/test_hashimoto_heavy_spectrum_cxlii.py`
+**Files:** `analysis/PART_CXLII_HASHIMOTO_HEAVY_SPECTRUM_DERIVATION.py`, `PART_CXLII_hashimoto_heavy_spectrum_results.json`, `tests/test_hashimoto_heavy_spectrum_cxlii.py`
 
 ---
 

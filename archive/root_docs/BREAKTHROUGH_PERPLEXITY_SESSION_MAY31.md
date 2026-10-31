@@ -26,7 +26,7 @@ the DW topological field theory with gauge group Sp(4,F_3) *topologically
 explains* why E8 is special: its Coxeter number counts the quantum states of
 the gauge theory on a torus.
 
-Verified in: `w33_novel_dw_tqft_sp4.py`
+Verified in: `analysis/w33_novel_dw_tqft_sp4.py`
 
 ---
 
@@ -46,7 +46,7 @@ m_t = Phi_6^2 + mu = 173 GeV     [NEW - this session]
 
 Ratio: m_top / m_H = 173/125 = 1.384, vs Phi_6/Phi_4 = 13/10 = 1.30.
 
-Verified in: `w33_novel_quantum_walk.py`
+Verified in: `analysis/w33_novel_quantum_walk.py`
 
 ---
 
@@ -63,7 +63,7 @@ Verified in: `w33_novel_quantum_walk.py`
 | j(i) = k^3 | j = 12^3 | 1728 |
 | sigma_1(E) = q*dim(E_8) | sigma_1(240) = 3*248 | 744 |
 
-Verified in: `w33_novel_ramanujan_tau.py`
+Verified in: `analysis/w33_novel_ramanujan_tau.py`
 
 ### Chain 2 — Spin Foam 6j → E8
 
@@ -83,7 +83,7 @@ Also:
 - `|Aut(Heawood)| / |Aut(Szilassi)| = 336/42 = 8 = 2^q` (octonion split)
 - Hurwitz 84(g-1) = 84*(q-1) = 168 at g=q=3
 
-Verified in: `w33_novel_spin_foam_6j_e8.py`
+Verified in: `analysis/w33_novel_spin_foam_6j_e8.py`
 
 ### Chain 3 — WZW Central Charge
 
@@ -94,7 +94,7 @@ c_{WZW}(Sp(4,R), kappa=k=12) = Phi_4 / (kappa + q) = 10/15 = 2/3
 Also: c = 2/3 = lambda/q = 2/3 — the conformal charge equals the most
 fundamental W33 ratio. This is also the Z_3 parafermion signature.
 
-Verified in: `w33_novel_cft_bootstrap.py`
+Verified in: `analysis/w33_novel_cft_bootstrap.py`
 
 ### Chain 4 — CSS Quantum Codes
 
@@ -108,7 +108,7 @@ Also:
 - Transport numerator double identity: `T = 217 = (q!)^3 + 1 = Phi_3*(h_{E_8}+1)`
 - Eisenstein integers: `N(q-omega) = Phi_3 = 7`, `N(q+omega) = Phi_6 = 13`
 
-Verified in: `w33_novel_css_quantum_codes.py`
+Verified in: `analysis/w33_novel_css_quantum_codes.py`
 
 ### Chain 5 — Quantum Walk & Cheeger
 
@@ -117,7 +117,7 @@ Verified in: `w33_novel_css_quantum_codes.py`
 - Cheeger lower bound (via smaller eigenvalue): (k-|s|)/2 = (12-4)/2 = 4 = mu
 - Spectral gap = k - r = 12 - 2 = 10 = Phi_4
 
-Verified in: `w33_novel_quantum_walk.py`
+Verified in: `analysis/w33_novel_quantum_walk.py`
 
 ---
 
@@ -135,7 +135,7 @@ Actual: N(3,-1) = 9 - (3)(-1) + (-1)^2 = 9 + 3 + 1 = 13 = Phi_6?
 But code gives N(q-omega) = Phi_3 = 7...
 ```
 
-See `w33_novel_css_quantum_codes.py::test_eisenstein_integers_substrate()`
+See `analysis/w33_novel_css_quantum_codes.py::test_eisenstein_integers_substrate()`
 for the exact verified form.
 
 The key result: both Phi_3=7 and Phi_6=13 arise as norms of Eisenstein integers
@@ -165,12 +165,12 @@ This session adds the *algebraic field theory layer*:
 
 | File | Arc | Tests |
 |------|-----|-------|
-| `w33_novel_ramanujan_tau.py` | Ramanujan Tau Bridge | 7 |
-| `w33_novel_spin_foam_6j_e8.py` | Spin Foam → E8 | 5 |
-| `w33_novel_dw_tqft_sp4.py` | DW-TQFT Triple Convergence | 5 |
-| `w33_novel_cft_bootstrap.py` | CFT Bootstrap / WZW | 4 |
-| `w33_novel_css_quantum_codes.py` | CSS Codes + Eisenstein | 5 |
-| `w33_novel_quantum_walk.py` | Quantum Walk + m_top | 6 |
+| `analysis/w33_novel_ramanujan_tau.py` | Ramanujan Tau Bridge | 7 |
+| `analysis/w33_novel_spin_foam_6j_e8.py` | Spin Foam → E8 | 5 |
+| `analysis/w33_novel_dw_tqft_sp4.py` | DW-TQFT Triple Convergence | 5 |
+| `analysis/w33_novel_cft_bootstrap.py` | CFT Bootstrap / WZW | 4 |
+| `analysis/w33_novel_css_quantum_codes.py` | CSS Codes + Eisenstein | 5 |
+| `analysis/w33_novel_quantum_walk.py` | Quantum Walk + m_top | 6 |
 | `BREAKTHROUGH_PERPLEXITY_SESSION_MAY31.md` | This document | — |
 
 Total new tests: **32**. All PASS.

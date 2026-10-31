@@ -1,6 +1,6 @@
 # Part DCCXIX — The Self-Closure Theorem
 
-**Bridge:** `verify_dccxix_self_closure_theorem.py` — Verified
+**Bridge:** `analysis/verify_dccxix_self_closure_theorem.py` — Verified
 **Tests:** `tests/test_dccxix_self_closure_theorem.py` — 12/12 pass
 **Data:** `data/dccxix_self_closure_theorem.json`
 

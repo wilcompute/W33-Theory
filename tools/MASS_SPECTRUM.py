@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MASS_SPECTRUM.py
+analysis/MASS_SPECTRUM.py
 
 Deep dive into mass predictions from the geometric structure.
 

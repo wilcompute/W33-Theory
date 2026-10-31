@@ -1,5 +1,5 @@
 """
-BT1255 — pytest verification suite for BIJECTION_SOLVER_V3.py
+BT1255 — pytest verification suite for analysis/BIJECTION_SOLVER_V3.py
 Tests all 7 rows of the BT1248 W(3,3) ↔ Standard Model bijection table.
 Run with: pytest tests/test_bijection_solver_v3.py -v
 """

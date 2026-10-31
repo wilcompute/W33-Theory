@@ -150,7 +150,7 @@ All metrics pass at zero tolerance.
 
 | File | Purpose |
 |------|---------|
-| `PART_CLXXXVII_POST_ATLAS_MASTER_SYNTHESIS.py` | Bridge script + audit |
+| `analysis/PART_CLXXXVII_POST_ATLAS_MASTER_SYNTHESIS.py` | Bridge script + audit |
 | `PART_CLXXXVII_post_atlas_master_synthesis_results.json` | Full results JSON |
 | `tests/test_post_atlas_master_synthesis_clxxxvii.py` | 38 regression tests |
 | `PART_CLXXXVII_POST_ATLAS_MASTER_SYNTHESIS.md` | This note |

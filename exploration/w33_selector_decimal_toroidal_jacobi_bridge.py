@@ -358,11 +358,11 @@ def build_selector_decimal_toroidal_jacobi_summary() -> dict[str, Any]:
             "while the negative coefficient -1/6 remains the dual/oriented-sector problem."
         ),
         "source_files": [
-            "verify_dclxiv_holonomy_qutrit_transvection_bridge.py",
+            "analysis/verify_dclxiv_holonomy_qutrit_transvection_bridge.py",
             "scripts/w33_h4_s3_selector_holonomy_audit.py",
             "exploration/w33_k3_mixed_plane_nilpotent_holonomy_increment_bridge.py",
-            "PART_CLXIII_DECIMAL_REPTEND_COMPILER.py",
-            "verify_dccxxii_mod12_toroidal_synthesis.py",
+            "analysis/PART_CLXIII_DECIMAL_REPTEND_COMPILER.py",
+            "analysis/verify_dccxxii_mod12_toroidal_synthesis.py",
             "artifacts/toe_e8_z3graded_jacobi.json",
         ],
     }

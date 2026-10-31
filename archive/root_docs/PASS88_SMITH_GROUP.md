@@ -1,7 +1,7 @@
 # Pass 88 — Smith group, critical group, and the p-rank separator (a 2-adic transfer)
 
 **Status: PASS** — GAP script `w33_pass88_smith_group.g` → certificate `w33_pass88_smith_group_out.txt`;
-witness `w33_pass88_smith_group.py` (7/7 checks); test `tests/test_pass88_smith_group.py` (6/6).
+witness `analysis/w33_pass88_smith_group.py` (7/7 checks); test `tests/test_pass88_smith_group.py` (6/6).
 
 A graph has two Smith-normal-form invariants: the **Smith group** coker(A) (cokernel of the
 adjacency) and the **critical group** coker(L) (cokernel of the Laplacian = sandpile group). W(3,3)
@@ -40,5 +40,5 @@ destroyed, in a balanced 6-up/6-down reflection about the central 2-band.
 
 ## Files
 - `w33_pass88_smith_group.g`, `.txt` — GAP Smith-normal-form certificate.
-- `w33_pass88_smith_group.py`, `.json` — witness (7 checks; p-ranks + C₂(Q) computed directly).
+- `analysis/w33_pass88_smith_group.py`, `.json` — witness (7 checks; p-ranks + C₂(Q) computed directly).
 - `tests/test_pass88_smith_group.py` — 6 assertions.

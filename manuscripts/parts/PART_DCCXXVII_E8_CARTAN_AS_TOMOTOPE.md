@@ -1,6 +1,6 @@
 # Part DCCXXVII — The E_8 Cartan Matrix as the Tomotope f-Vector
 
-**Bridge:** `verify_dccxxvii_e8_cartan_as_tomotope.py` — Verified
+**Bridge:** `analysis/verify_dccxxvii_e8_cartan_as_tomotope.py` — Verified
 **Tests:** `tests/test_dccxxvii_e8_cartan_as_tomotope.py` — 23/23 pass
 **Data:** `data/dccxxvii_e8_cartan_as_tomotope.json`
 

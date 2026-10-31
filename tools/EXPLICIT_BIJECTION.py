@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-EXPLICIT_BIJECTION.py
+analysis/EXPLICIT_BIJECTION.py
 
 Now we actually construct the EXPLICIT bijection between:
 - 40 Pauli classes in F_3^4/~

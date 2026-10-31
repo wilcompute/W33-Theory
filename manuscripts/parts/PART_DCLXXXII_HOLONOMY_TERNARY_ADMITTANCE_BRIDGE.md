@@ -92,7 +92,7 @@ So the ternary two-qutrit geometry fixes:
 Verifier:
 
 ```text
-verify_dclxxxii_holonomy_ternary_admittance_bridge.py
+analysis/verify_dclxxxii_holonomy_ternary_admittance_bridge.py
 ```
 
 Tests:

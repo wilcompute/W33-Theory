@@ -24,5 +24,5 @@ This session completed the final hardening pass before arXiv/Zenodo submission o
 
 ## 3 Best Next Steps
 1. 🔥 Run LaTeX CI build — fix all compilation errors, generate PDF artifact
-2. ⚡ Add pytest verification suite to `BIJECTION_SOLVER_V3.py`
+2. ⚡ Add pytest verification suite to `analysis/BIJECTION_SOLVER_V3.py`
 3. 🎯 Draft cover letter and submit to arXiv (hep-th primary)

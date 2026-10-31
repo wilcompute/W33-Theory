@@ -111,9 +111,9 @@ All are in `/tmp/w33_novel/` with full pytest-compatible test functions:
 | `w33_novel_quantum_walk_spectrum.py` | 6 | All PASS |
 | `w33_novel_css_code_parameters.py` | 5 | All PASS |
 | `w33_novel_ramanujan_tau_bridge.py` | 6 | All PASS |
-| `w33_novel_spin_foam_6j_e8.py` | 5 | All PASS |
-| `w33_novel_dw_tqft_sp4.py` | 5 | All PASS |
-| `w33_novel_cft_bootstrap.py` | 5 | All PASS |
+| `analysis/w33_novel_spin_foam_6j_e8.py` | 5 | All PASS |
+| `analysis/w33_novel_dw_tqft_sp4.py` | 5 | All PASS |
+| `analysis/w33_novel_cft_bootstrap.py` | 5 | All PASS |
 
 
 ***

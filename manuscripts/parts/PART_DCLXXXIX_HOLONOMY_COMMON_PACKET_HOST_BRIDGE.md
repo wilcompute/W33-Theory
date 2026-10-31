@@ -69,7 +69,7 @@ the full `1620` carrier is precisely the ten-mode amplification of the exact hos
 Verifier:
 
 ```text
-verify_dclxxxix_holonomy_common_packet_host_bridge.py
+analysis/verify_dclxxxix_holonomy_common_packet_host_bridge.py
 ```
 
 Tests:

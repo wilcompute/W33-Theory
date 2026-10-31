@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** exact finite theorem / executable audit  
-**Files:** `PART_CXXXVIII_HASHIMOTO_QUADRATIC_FIELD_COMPILER.py`, `PART_CXXXVIII_hashimoto_quadratic_field_compiler_results.json`, `tests/test_hashimoto_quadratic_field_compiler_cxxxviii.py`
+**Files:** `analysis/PART_CXXXVIII_HASHIMOTO_QUADRATIC_FIELD_COMPILER.py`, `PART_CXXXVIII_hashimoto_quadratic_field_compiler_results.json`, `tests/test_hashimoto_quadratic_field_compiler_cxxxviii.py`
 
 ---
 

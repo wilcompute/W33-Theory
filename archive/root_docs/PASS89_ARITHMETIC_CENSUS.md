@@ -1,7 +1,7 @@
 # Pass 89 — The arithmetic census of the 28 SRG(40,12,2,4) graphs, and a graded 2-adic ladder
 
 **Status: PASS** — GAP census `w33_pass89_census.g` (Smith normal forms of A and L for all 28,
-over McKay's graph6 list) → `w33_pass89_census_out.txt`; witness `w33_pass89_census.py` (11/11
+over McKay's graph6 list) → `w33_pass89_census_out.txt`; witness `analysis/w33_pass89_census.py` (11/11
 checks); test `tests/test_pass89_census.py` (7/7).
 
 Pass 88 separated the two GQ(3,3) graphs by their Smith group, critical group, and 2-rank. This
@@ -47,5 +47,5 @@ Peter Sin (Smith normal forms of SRGs), Spence (the 28 graphs).
 
 ## Files
 - `w33_pass89_census.g`, `w33_pass89_matrices.g`, `w33_pass89_census_out.txt` — GAP inputs + certificate.
-- `w33_pass89_census.py`, `.json` — witness (11 checks).
+- `analysis/w33_pass89_census.py`, `.json` — witness (11 checks).
 - `tests/test_pass89_census.py` — 7 assertions.

@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** sector-weight/mixer theorem for the Ramanujan E6 shell  
-**Files:** `PART_CXLVI_FIBONACCI_E6_MIXER.py`, `PART_CXLVI_fibonacci_e6_mixer_results.json`, `tests/test_fibonacci_e6_mixer_cxlvi.py`
+**Files:** `analysis/PART_CXLVI_FIBONACCI_E6_MIXER.py`, `PART_CXLVI_fibonacci_e6_mixer_results.json`, `tests/test_fibonacci_e6_mixer_cxlvi.py`
 
 ---
 

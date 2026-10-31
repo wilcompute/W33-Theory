@@ -163,7 +163,7 @@ def main():
         "scalaron = N_1 (w33_scalaron_is_rhn.py); leptogenesis eta_B ~ 10^-2 eps_1 kappa, "
         "Davidson-Ibarra epsilon_1^max = (3/16pi) M_1 m_nu3/v^2 (Davidson-Ibarra 2002; "
         "Buchmuller-Di Bari-Plumacher); substrate Jarlskog J ~ 3e-5 & corpus leptogenesis "
-        "(BT411_BARYON_ASYMMETRY.py); observed eta_B = 6.1e-10 (Planck)."
+        "(analysis/BT411_BARYON_ASYMMETRY.py); observed eta_B = 6.1e-10 (Planck)."
     ]
     with open("data/w33_baryon_asymmetry.json", "w") as fh:
         json.dump(out, fh, indent=2)

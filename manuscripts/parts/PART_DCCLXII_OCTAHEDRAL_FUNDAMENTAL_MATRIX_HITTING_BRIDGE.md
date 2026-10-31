@@ -58,6 +58,6 @@ This is the cleanest exact finite resolvent-hitting bridge so far.
 
 ## Executable artifact
 
-- Verifier: `verify_dcclxii_octahedral_fundamental_matrix_hitting_bridge.py`
+- Verifier: `analysis/verify_dcclxii_octahedral_fundamental_matrix_hitting_bridge.py`
 - Tests: `tests/test_dcclxii_octahedral_fundamental_matrix_hitting_bridge.py`
 - Data: `data/dcclxii_octahedral_fundamental_matrix_hitting_bridge.json`

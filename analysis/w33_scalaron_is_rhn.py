@@ -173,8 +173,8 @@ def main():
     out["sources"] = [
         "scalaron mass from A_s (w33_starobinsky.py, w33_scalaron_seesaw.py); sum m_nu ~ "
         "0.101 eV neutrino cascade (w33_measurable_scorecard_2026.py); type-I seesaw "
-        "M_R=v^2/m_nu (BT399_NEUTRINO_MASSES.py); leptogenesis & Jarlskog J~3e-5 "
-        "(BT411_BARYON_ASYMMETRY.py); Davidson-Ibarra bound M_1 > ~10^9 GeV."
+        "M_R=v^2/m_nu (analysis/BT399_NEUTRINO_MASSES.py); leptogenesis & Jarlskog J~3e-5 "
+        "(analysis/BT411_BARYON_ASYMMETRY.py); Davidson-Ibarra bound M_1 > ~10^9 GeV."
     ]
     with open("data/w33_scalaron_is_rhn.json", "w") as fh:
         json.dump(out, fh, indent=2)

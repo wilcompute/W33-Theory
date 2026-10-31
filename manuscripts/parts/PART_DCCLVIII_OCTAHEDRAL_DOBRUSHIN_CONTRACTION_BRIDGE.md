@@ -56,6 +56,6 @@ This is the cleanest finite mixing-optimality statement so far in the closure tr
 
 ## Executable artifact
 
-- Verifier: `verify_dcclviii_octahedral_dobrushin_contraction_bridge.py`
+- Verifier: `analysis/verify_dcclviii_octahedral_dobrushin_contraction_bridge.py`
 - Tests: `tests/test_dcclviii_octahedral_dobrushin_contraction_bridge.py`
 - Data: `data/dcclviii_octahedral_dobrushin_contraction_bridge.json`

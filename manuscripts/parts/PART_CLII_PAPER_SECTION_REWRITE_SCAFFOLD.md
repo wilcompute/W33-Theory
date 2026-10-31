@@ -179,7 +179,7 @@ Add rows at the bottom of the master prediction table:
 ## Regression
 
 No new executable code in this part — all computations are verified by
-`PART_CLI_regression_tests.py` and `PART_CL_TWO_LAYER_OBSERVABLE_ALGEBRA.py`.
+`PART_CLI_regression_tests.py` and `analysis/PART_CL_TWO_LAYER_OBSERVABLE_ALGEBRA.py`.
 This part is documentation/scaffold only.
 
 ---

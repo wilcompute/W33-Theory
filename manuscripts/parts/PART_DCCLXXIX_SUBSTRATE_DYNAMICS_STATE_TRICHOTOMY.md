@@ -1,6 +1,6 @@
 # Part DCCLXXIX — The Substrate-Dynamics-State Trichotomy
 
-**Bridge:** `verify_dcclxxix_substrate_dynamics_state_trichotomy.py` — Verified
+**Bridge:** `analysis/verify_dcclxxix_substrate_dynamics_state_trichotomy.py` — Verified
 **Tests:** `tests/test_dcclxxix_substrate_dynamics_state_trichotomy.py` — 23/23 pass
 **Data:** `data/dcclxxix_substrate_dynamics_state_trichotomy.json`
 

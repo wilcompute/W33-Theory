@@ -6,6 +6,10 @@
 
 Batches:
   root-md    root pass write-ups (PASS*, PART*, BREAKTHROUGH*, BT*, ... *.md) -> analysis/ (where ~3,000 others already live)
+  root-json  root certificates -> data/ (strict: only files whose every Python reference has an unambiguous repo-root base)
+  small-dirs small top-level directories -> docs/, papers/, archive/outputs/, schemas/
+  root-py    root modules -> analysis/; each is "lifted" so its __file__-relative paths still resolve to the repo root and it can
+             still import the repo's packages when run as a script; root wrappers of pillars/ modules are retired
 
 Reference rewriting (in every tracked text file except the ones listed in SKIP):
   * a markdown / HTML link target  ](t)  href="t"  src="t"  is resolved relative to the file that contains it; if it pointed at a
@@ -53,7 +57,61 @@ def batch(name):
         dirs = dict(SMALL_DIRS)
         moves = [(f, dirs[f.split("/")[0]] + f[len(f.split("/")[0]):]) for f in files if "/" in f and f.split("/")[0] in dirs]
         return moves
+    if name == "root-py":
+        # every root module -> analysis/ (conftest.py APPENDS analysis/ to sys.path, so `import X` keeps working and can never shadow
+        # an installed or earlier module); root wrappers of pillars/ modules are retired, their references pointed at pillars/
+        moves = []
+        # setup.py installs py_modules from the root (holonet_cmd -> the `holonet` console command): those must stay
+        installed = set(re.findall(r"[\"']([A-Za-z_][A-Za-z0-9_]*)[\"']", (re.search(r"py_modules\s*=\s*\[([^\]]*)\]", (
+            ROOT / "setup.py").read_text(encoding="utf-8")) or re.match("", "")).group(1) or ""))
+        for f in files:
+            if "/" in f or not f.endswith(".py") or f in ("setup.py", "conftest.py") or f[:-3] in installed:
+                continue
+            pil = "pillars/" + f
+            if (ROOT / pil).exists() and "Wrapper to run pillars/" in (ROOT / f).read_text(encoding="utf-8", errors="ignore"):
+                RETIRE.add(f)
+                moves.append((f, pil))
+            else:
+                moves.append((f, "analysis/" + f))
+        return moves
     raise SystemExit(f"unknown batch {name}")
+
+
+RETIRE = set()          # root-py: wrappers whose real module already lives at the target -> git rm, references -> target
+# A moved root module located the repo through its own folder; one level down, the same expressions must climb one more level, so
+# every path it reads or writes stays exactly where it was (census 2026-10-30: these forms cover all 221 uses of __file__).
+UP = "os.path.dirname(os.path.dirname(os.path.abspath(__file__)))"
+FILE_FORMS = [
+    (re.compile(r"os\.path\.dirname\(\s*os\.path\.abspath\(\s*__file__\s*\)\s*\)"), "@@UP@@"),
+    (re.compile(r"os\.path\.dirname\(\s*__file__\s*\)"), "@@UP@@"),
+    (re.compile(r"\bPath\(\s*__file__\s*\)\.resolve\(\)\.parent(?![A-Za-z_\[])"), "Path(__file__).resolve().parents[1]"),
+    (re.compile(r"\bPath\(\s*__file__\s*\)\.parent(?![A-Za-z_\[])"), "Path(__file__).resolve().parents[1]"),
+]
+# analysis/exploration/pillars too: four moved modules import `analysis.X`, which needs the root on sys.path (found by the script rerun)
+LOCAL_PKG = re.compile(r"^([ \t]*)(?:from|import)[ \t]+(?:scripts|w33|src|lib|tools|utils|analysis|exploration|pillars)\b", re.M)
+
+
+def lift_module(path):
+    """Rewrite a root module moved one folder down so that it still resolves the repo root (FILE_FORMS) and, when run as a script,
+    can still import the repo's packages (sys.path[0] is now its own folder, not the root).  Returns the number of edits."""
+    p = ROOT / path
+    raw = p.read_bytes()
+    t = raw.decode("utf-8")
+    n = 0
+    for rx, rep in FILE_FORMS:
+        t, k = rx.subn(lambda m: rep, t)
+        n += k
+    t = t.replace("@@UP@@", UP)
+    m = LOCAL_PKG.search(t)
+    if m and "sys.path" not in t[:m.start()]:
+        eol = "\r\n" if b"\r\n" in raw else "\n"
+        boot = (m.group(1) + "import os as _os, sys as _sys; _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))"
+                "  # relocated from the root (2026-10-30)" + eol)
+        t = t[:m.start()] + boot + t[m.start():]
+        n += 1
+    if n:
+        p.write_bytes(t.encode("utf-8"))
+    return n
 
 
 # generic names (build, dist, out, results, checks, patches) are deliberately NOT here: workflows and code use them for runtime
@@ -204,6 +262,10 @@ def run(moves, apply):
         return 0
     for o, nw in moves:
         (ROOT / nw).parent.mkdir(parents=True, exist_ok=True)
+        if o in RETIRE:
+            subprocess.run(["git", "-C", str(ROOT), "rm", "-q", o], check=True)
+            changed.pop(o, None)
+            continue
         if (ROOT / nw).exists():
             print(f"  SKIP (target exists) {o} -> {nw}")
             continue
@@ -219,6 +281,9 @@ def run(moves, apply):
         if crlf:
             data = data.replace("\n", "\r\n")
         p.write_bytes(data.encode("utf-8"))
+    lifted = [(nw, lift_module(nw)) for o, nw in moves if "/" not in o and o.endswith(".py") and o not in RETIRE]
+    if lifted:
+        print(f"lifted {sum(1 for _, k in lifted if k)} moved modules ({sum(k for _, k in lifted)} __file__ / sys.path edits)")
     print("applied")
     return 0
 
@@ -242,10 +307,12 @@ def main():
         # a generic basename (main.tex lives in every paper folder) cannot be rewritten textually without hitting the others
         print(f"refusing {len(generic)} generic basename(s): {generic}")
         moves = [(o, nw) for o, nw in moves if os.path.basename(o) not in GENERIC_NAMES]
-    taken = [nw for _, nw in moves if (ROOT / nw).exists()]
+    taken = [nw for o, nw in moves if (ROOT / nw).exists() and o not in RETIRE]
     if taken:
         print(f"target collisions ({len(taken)}; skipped, and their references are left alone):", taken[:10])
-        moves = [(o, nw) for o, nw in moves if not (ROOT / nw).exists()]
+        moves = [(o, nw) for o, nw in moves if not (ROOT / nw).exists() or o in RETIRE]
+    if RETIRE:
+        print(f"retiring {len(RETIRE)} root wrapper(s) whose module already lives at the target: {sorted(RETIRE)}")
     return run(moves, a.mode == "apply")
 
 

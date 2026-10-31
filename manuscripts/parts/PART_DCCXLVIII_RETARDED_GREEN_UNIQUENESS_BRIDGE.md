@@ -73,6 +73,6 @@ deterministic once the Ward source is fixed.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxlviii_retarded_green_uniqueness_bridge.py`
+- Verifier: `analysis/verify_dccxlviii_retarded_green_uniqueness_bridge.py`
 - Tests: `tests/test_dccxlviii_retarded_green_uniqueness_bridge.py`
 - Data: `data/dccxlviii_retarded_green_uniqueness_bridge.json`

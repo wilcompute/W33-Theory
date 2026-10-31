@@ -96,7 +96,7 @@ It is:
 Verifier:
 
 ```text
-verify_dclxv_holonomy_screen_universality_bridge.py
+analysis/verify_dclxv_holonomy_screen_universality_bridge.py
 ```
 
 Tests:

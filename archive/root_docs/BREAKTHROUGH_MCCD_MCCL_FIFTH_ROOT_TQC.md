@@ -192,7 +192,7 @@ The Fibonacci prime F₅ and the genus g₂ are **dual substrates**: their sum i
 
 ## Verified Computations
 
-All identities verified in `PART_MCCD_MCCL_FIFTH_ROOT_TQC_VERIFY.py`:
+All identities verified in `analysis/PART_MCCD_MCCL_FIFTH_ROOT_TQC_VERIFY.py`:
 
 ```
 h_τ = q/F₅ = 3/5 = 0.6000  ✓ EXACT

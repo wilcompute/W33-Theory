@@ -123,7 +123,7 @@ It is now **spectrally filtered** by the witness family itself.
 Verifier:
 
 ```text
-verify_dclxix_holonomy_markov_power_bridge.py
+analysis/verify_dclxix_holonomy_markov_power_bridge.py
 ```
 
 Tests:

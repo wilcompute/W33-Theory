@@ -390,7 +390,7 @@ print("\n── Koide Formula ──")
 # (√10+4)² = 10+8√10+16 = 26+8√10
 # Q = 26/(26+8√10) = 13/(13+4√10)
 
-# From the EXACT Koide check in THEORY_OF_EVERYTHING.py:
+# From the EXACT Koide check in analysis/THEORY_OF_EVERYTHING.py:
 # Koide = lambda/q = 2/3
 # We verify this is correct using BB^T:
 # BB^T = A + (q+1)I, eigenvalues {k+q+1, r+q+1, s+q+1} = {16, 6, 0}

@@ -4,7 +4,7 @@ DEEP_PATTERNS — Comprehensive pattern analysis across ALL W(3,3) data
 =====================================================================
 
 After reading every fact in 207+ pillars, every solver script, and the
-complete THEORY_OF_EVERYTHING.py, this script searches for the deepest
+complete analysis/THEORY_OF_EVERYTHING.py, this script searches for the deepest
 mathematical patterns connecting everything.
 
 INPUT: Only F₃ and symplectic form ω
@@ -17,7 +17,7 @@ from collections import Counter, defaultdict
 import sys
 
 # ═══════════════════════════════════════════════════════════════════════
-#  PART I: BUILD W(3,3) (same as THEORY_OF_EVERYTHING.py)
+#  PART I: BUILD W(3,3) (same as analysis/THEORY_OF_EVERYTHING.py)
 # ═══════════════════════════════════════════════════════════════════════
 
 def build_w33():

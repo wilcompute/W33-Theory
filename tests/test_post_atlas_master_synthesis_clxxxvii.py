@@ -241,12 +241,12 @@ def test_clxxxvi_suzuki_vertex():
 # ---------------------------------------------------------------------------
 
 def test_results_json_exists():
-    p = Path(__file__).resolve().parent.parent / "PART_CLXXXVII_post_atlas_master_synthesis_results.json"
+    p = Path(__file__).resolve().parent.parent / "manuscripts" / "parts" / "PART_CLXXXVII_post_atlas_master_synthesis_results.json"  # tracked copy
     assert p.exists(), f"Results JSON not found at {p}"
 
 
 def test_results_json_valid():
-    p = Path(__file__).resolve().parent.parent / "PART_CLXXXVII_post_atlas_master_synthesis_results.json"
+    p = Path(__file__).resolve().parent.parent / "manuscripts" / "parts" / "PART_CLXXXVII_post_atlas_master_synthesis_results.json"  # tracked copy
     if not p.exists():
         pytest.skip("Results JSON not yet generated")
     data = json.loads(p.read_text(encoding="utf-8"))

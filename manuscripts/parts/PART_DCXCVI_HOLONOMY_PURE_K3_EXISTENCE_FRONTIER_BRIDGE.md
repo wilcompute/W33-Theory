@@ -43,7 +43,7 @@ It is one existence theorem on the K3 side.
 Verifier:
 
 ```text
-verify_dcxcvi_holonomy_pure_k3_existence_frontier_bridge.py
+analysis/verify_dcxcvi_holonomy_pure_k3_existence_frontier_bridge.py
 ```
 
 Tests:

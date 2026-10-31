@@ -30,7 +30,7 @@ Expected output: ~65 pages, no undefined reference warnings.
 ### Step 2 -- Run the verifier
 
 ```bash
-python bt1626_ym_mass_gap_tightness_verifier.py
+python analysis/bt1626_ym_mass_gap_tightness_verifier.py
 ```
 
 Expected output last line:
@@ -51,7 +51,7 @@ analysis/BT1620_BT1622_holonet_insert.tex
 
 Optional supplementary data (upload as ancillary files):
 ```
-bt1626_ym_mass_gap_tightness_verifier.py
+analysis/bt1626_ym_mass_gap_tightness_verifier.py
 data/BT1621_ym_mass_gap_tightness.json          (if present)
 data/BT1622_arxiv_submission_package.json       (if present)
 ```
@@ -118,4 +118,4 @@ improved by any proper subset of Witting frames.
 | Dual-workstream TeX insert | BT1620-BT1622 | analysis/BT1620_BT1622_holonet_insert.tex |
 | YM tightness theorem | BT1621-T1 | 0.3326 hbar/tau, TIGHT |
 | arXiv bundle manifest | BT1625 | analysis/BT1625_arxiv_submission_manifest.md |
-| Executable verifier | BT1626 | bt1626_ym_mass_gap_tightness_verifier.py |
+| Executable verifier | BT1626 | analysis/bt1626_ym_mass_gap_tightness_verifier.py |

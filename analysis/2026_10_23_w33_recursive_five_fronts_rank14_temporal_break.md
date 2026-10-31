@@ -5,7 +5,7 @@
 
 ## Executive result
 
-The W33 adjacency is a **known** binary-rank-16 matrix: `w33_pass88_smith_group.py` explicitly records this rank, and `analysis/w33_20260829_adjacency_sentinel_extension.py` analyzes its codimension-one sentinel subcode. **We do not claim to discover this rank.**
+The W33 adjacency is a **known** binary-rank-16 matrix: `analysis/w33_pass88_smith_group.py` explicitly records this rank, and `analysis/w33_20260829_adjacency_sentinel_extension.py` analyzes its codimension-one sentinel subcode. **We do not claim to discover this rank.**
 
 The new application is an exact phase-oracle circuit for the hypothetical two-register W33-controlled sign `(-1)^A[a,b]`. A 16-factor GF(2) bilinear decomposition was constructed and tested against all 1,600 truth-table entries. More strongly, allowing independently programmed one-register diagonal phase tables reduces the optimal nonlocal bilinear rank to **14**, represented naturally by **seven hyperbolic/symplectic pairs**. The computational win is in *logical cross-register parity-product terms*, not in demonstrated optical cost or a physically realized photon-photon interaction.
 

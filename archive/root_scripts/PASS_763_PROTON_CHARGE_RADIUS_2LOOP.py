@@ -7,7 +7,7 @@ Cross-links:
     via the W33 b-quark contribution at 2-loop.
   - BREAKTHROUGH_BT684_CYCLE_SCALES_DECAY_CONSTANTS.md: W33 cycle scales give f_pi, f_K
     which set the chiral radius correction.
-  - BIJECTION_SOLVER_V3.py: The 270-bijection on H_27 encodes the proton wave function
+  - analysis/BIJECTION_SOLVER_V3.py: The 270-bijection on H_27 encodes the proton wave function
     as a function of the q-trinomial coefficients (same basis as bijection).
   - Pass 754 (tree-level r_p), Pass 757 (alpha_s), Pass 762 (3-loop alpha_s)
   - analysis/BREAKTHROUGH_BT679_YANG_MILLS_MASS_GAP.md: Lambda_QCD feeds the chiral correction.

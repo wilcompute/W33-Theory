@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** deeper structural compiler theorem behind the Φ₆-polar RG branch  
-**Files:** `PART_CXLIV_TWO_SECTOR_QCD_COUPLING_COMPILER.py`, `PART_CXLIV_two_sector_qcd_coupling_results.json`, `tests/test_two_sector_qcd_coupling_cxliv.py`
+**Files:** `analysis/PART_CXLIV_TWO_SECTOR_QCD_COUPLING_COMPILER.py`, `PART_CXLIV_two_sector_qcd_coupling_results.json`, `tests/test_two_sector_qcd_coupling_cxliv.py`
 
 ---
 

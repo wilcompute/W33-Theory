@@ -76,6 +76,6 @@ It is the **symmetry-invariant ordered accumulation of closure events**.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxiv_proper_time_causal_order_bridge.py`
+- Verifier: `analysis/verify_dccxxxiv_proper_time_causal_order_bridge.py`
 - Tests: `tests/test_dccxxxiv_proper_time_causal_order_bridge.py`
 - Data: `data/dccxxxiv_proper_time_causal_order_bridge.json`

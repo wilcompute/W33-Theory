@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SOLVE_IT.py - THE DEFINITIVE SOLUTION
+analysis/SOLVE_IT.py - THE DEFINITIVE SOLUTION
 
 Key insight: Let's use the CORRECT W33 construction and then find a bijection
 by exploiting the D4 × D4 triality structure of E8.

@@ -1,6 +1,6 @@
 # Pass 75 — Four "even better" zeta ideas
 
-**Status: PASS** — witness `w33_pass75_zeta_equidistribution.py` (15/15 checks), test `tests/test_pass75_zeta_equidistribution.py` (5/5), paper compiles clean (tectonic).
+**Status: PASS** — witness `analysis/w33_pass75_zeta_equidistribution.py` (15/15 checks), test `tests/test_pass75_zeta_equidistribution.py` (5/5), paper compiles clean (tectonic).
 
 The four ideas that emerged during Pass 74, executed as witnesses.
 
@@ -38,6 +38,6 @@ fluctuation being bounded by dim(E₆) is forced arithmetic (v−1 = 39) meeting
 Sp(4,3)=W(E₆), not a numerical accident.
 
 ## Files
-- `w33_pass75_zeta_equidistribution.py`, `.json` — witness + certificate (15 checks).
+- `analysis/w33_pass75_zeta_equidistribution.py`, `.json` — witness + certificate (15 checks).
 - `tests/test_pass75_zeta_equidistribution.py` — 5 assertions.
 - `w33_paper.tex` — "Remarks" paragraph appended to the Zeta Frontier subsection.

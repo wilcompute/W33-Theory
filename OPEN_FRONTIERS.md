@@ -392,7 +392,7 @@ local curvature/cohomology checks.
   embedding, or (b) give a computer-checked proof that none exists.
 - Artifacts:
   - PART_L_M and PART_M (internal H4 shadow, obstruction proofs)
-  - verify_dccliv_frobenius_selection_and_ouroboros.py
+  - analysis/verify_dccliv_frobenius_selection_and_ouroboros.py
 - TODO: exhaustive search across symmetry-preserving assignments for
   small stabilizer subgroups; formalize obstruction in group-cohomology
   language and add a unit test.

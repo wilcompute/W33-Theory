@@ -1,6 +1,6 @@
 # Part DCCLIII — The Monster Moonshine Bridge: Numerical Verification of W(3,3) Decompositions
 
-**Bridge:** `verify_dccliii_monster_moonshine_w33_bridge.py` — Verified
+**Bridge:** `analysis/verify_dccliii_monster_moonshine_w33_bridge.py` — Verified
 **Tests:** `tests/test_dccliii_monster_moonshine_w33_bridge.py` — 27/27 pass
 **Data:** `data/dccliii_monster_moonshine_w33_bridge.json`
 

@@ -121,7 +121,7 @@ def regenerate_live_artifacts() -> dict[str, Any]:
     }
 
     dcmii_module = load_module(
-        "bt1494_dcmii", ROOT / "verify_dcmii_projective_screen_bulk_qec_bridge.py"
+        "bt1494_dcmii", ROOT / "analysis/verify_dcmii_projective_screen_bulk_qec_bridge.py"
     )
     dcmii_payload = dcmii_module.build_bridge()
     dcmii_module.write_bridge()

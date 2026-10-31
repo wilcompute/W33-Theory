@@ -74,7 +74,7 @@ The local turn alphabet is six signed Clifford channels plus six projected A2/We
 Verifier:
 
 ```text
-verify_dccxiv_holonomy_signed_triad_a2_projection_bridge.py
+analysis/verify_dccxiv_holonomy_signed_triad_a2_projection_bridge.py
 ```
 
 Tests:

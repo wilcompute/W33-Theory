@@ -1,6 +1,6 @@
 # Part DCCLXXI — Perfect Codes (Hamming, Golay) from W(3,3)
 
-**Bridge:** `verify_dcclxxi_perfect_codes_from_w33.py` — Verified
+**Bridge:** `analysis/verify_dcclxxi_perfect_codes_from_w33.py` — Verified
 **Tests:** `tests/test_dcclxxi_perfect_codes_from_w33.py` — 19/19 pass
 **Data:** `data/dcclxxi_perfect_codes_from_w33.json`
 

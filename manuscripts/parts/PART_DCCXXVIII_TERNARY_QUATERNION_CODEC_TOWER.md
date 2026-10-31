@@ -1,6 +1,6 @@
 # Part DCCXXVIII — The Ternary–Quaternion–Codec Tower and W(3,3) as Two-Qutrit Pauli Geometry
 
-**Bridge:** `verify_dccxxviii_ternary_quaternion_codec_tower.py` — Verified
+**Bridge:** `analysis/verify_dccxxviii_ternary_quaternion_codec_tower.py` — Verified
 **Tests:** `tests/test_dccxxviii_ternary_quaternion_codec_tower.py` — 21/21 pass
 **Data:** `data/dccxxviii_ternary_quaternion_codec_tower.json`
 

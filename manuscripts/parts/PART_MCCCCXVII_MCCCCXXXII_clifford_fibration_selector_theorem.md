@@ -135,7 +135,7 @@ All results are proved by explicit computation:
 7. All 122 fibration-partitions found by exhaustive search
 8. Antipodal address theorem verified for all 60 pairs
 
-See `PART_MCCCCXVII_MCCCCXXXII_clifford_fibration_selector_verifier.py`
+See `analysis/PART_MCCCCXVII_MCCCCXXXII_clifford_fibration_selector_verifier.py`
 
 ## Next Target: MCCCCXXXIII
 

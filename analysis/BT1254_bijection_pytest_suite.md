@@ -21,7 +21,7 @@
 
 ## CI Integration
 New workflow: `.github/workflows/bijection-tests.yml`  
-Triggers on: push to master (touching tests or BIJECTION_SOLVER_V3.py), PRs, manual dispatch.
+Triggers on: push to master (touching tests or analysis/BIJECTION_SOLVER_V3.py), PRs, manual dispatch.
 
 ## Usage
 ```bash

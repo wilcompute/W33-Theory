@@ -31,8 +31,8 @@ This document specifies the complete manifest for the Zenodo deposit of the W(3,
 ## Files to Include
 1. `w33_preprint.pdf` — compiled LaTeX manuscript
 2. `w33_preprint.tex` — LaTeX source
-3. `ALPHA_AND_SM.py` — fine-structure constant derivation engine
-4. `BIJECTION_SOLVER_V3.py` — W(3,3)→SM bijection solver
+3. `analysis/ALPHA_AND_SM.py` — fine-structure constant derivation engine
+4. `analysis/BIJECTION_SOLVER_V3.py` — W(3,3)→SM bijection solver
 5. `270_transport_table.json` — full 270-element transport table
 6. `270_transport_analysis_summary.json` — summary statistics
 7. `analysis/` — all 200+ breakthrough analysis files

@@ -1,6 +1,6 @@
 # Part DCCXXII — The Mod-12 Toroidal Synthesis
 
-**Bridge:** `verify_dccxxii_mod12_toroidal_synthesis.py` — Verified
+**Bridge:** `analysis/verify_dccxxii_mod12_toroidal_synthesis.py` — Verified
 **Tests:** `tests/test_dccxxii_mod12_toroidal_synthesis.py` — 23/23 pass
 **Data:** `data/dccxxii_mod12_toroidal_synthesis.json`
 

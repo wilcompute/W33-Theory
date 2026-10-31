@@ -54,7 +54,7 @@ def test_pass374_classifies_the_natural_action_and_refutes_a_weyl_torsor() -> No
         "stabilizer": "C2",
     }
     assert certificate["group_identification_owner"] == {
-        "file": "w33_pass125_two_we6_embeddings.py",
+        "file": "analysis/w33_pass125_two_we6_embeddings.py",
         "result": (
             "the multiplier-2 projective similitude extends PSp(4,3) to "
             "PGSp(4,3) isomorphic to W(E6)"

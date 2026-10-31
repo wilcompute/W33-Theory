@@ -1,6 +1,6 @@
 # Pass 93 — A second SRG out of W(3,3): SRG(135,70,37,35) from the glue group
 
-**Status: PASS** — witness `w33_pass93_srg135.py` (6/6 checks), test `tests/test_pass93_srg135.py`
+**Status: PASS** — witness `analysis/w33_pass93_srg135.py` (6/6 checks), test `tests/test_pass93_srg135.py`
 (4/4). Self-contained (GF(2) linear algebra).
 
 ## Result
@@ -24,4 +24,4 @@ E₈ lattice: the graph on the 135 isotropic vectors of E₈/2E₈, joined at in
 SRG(135,70,37,35) with O⁺₈(2) symmetry.
 
 ## Files
-`w33_pass93_srg135.py`, `.json`; `tests/test_pass93_srg135.py`.
+`analysis/w33_pass93_srg135.py`, `.json`; `tests/test_pass93_srg135.py`.

@@ -1,6 +1,6 @@
 # Pass 87 — Construction A lattice of C₂(W): theta series as a weight-20 modular form
 
-**Status: PASS** — witness `w33_pass87_theta_lattice.py` (5/5 checks), test
+**Status: PASS** — witness `analysis/w33_pass87_theta_lattice.py` (5/5 checks), test
 `tests/test_pass87_theta_lattice.py` (4/4). Self-contained (sympy).
 
 The capstone of the code arc (Pass 85/86): the code → lattice → modular form bridge (Gleason;
@@ -33,5 +33,5 @@ Grounded in the literature: Crnković–Maksimović (self-orthogonal codes from 
 Gleason / Broué–Enguehard (modular forms from codes).
 
 ## Files
-- `w33_pass87_theta_lattice.py`, `.json` — witness + certificate (5 checks).
+- `analysis/w33_pass87_theta_lattice.py`, `.json` — witness + certificate (5 checks).
 - `tests/test_pass87_theta_lattice.py` — 4 assertions.

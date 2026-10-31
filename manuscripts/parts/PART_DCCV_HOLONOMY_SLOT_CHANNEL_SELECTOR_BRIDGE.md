@@ -51,7 +51,7 @@ It is one two-channel selector choice encoded by one nonzero `F3` slot value.
 Verifier:
 
 ```text
-verify_dccv_holonomy_slot_channel_selector_bridge.py
+analysis/verify_dccv_holonomy_slot_channel_selector_bridge.py
 ```
 
 Tests:

@@ -69,7 +69,7 @@ This reframes the frontier as a coherence/gluing problem rather than a remaining
 Verifier:
 
 ```text
-verify_dccx_holonomy_selector_carrier_weld_bridge.py
+analysis/verify_dccx_holonomy_selector_carrier_weld_bridge.py
 ```
 
 Tests:

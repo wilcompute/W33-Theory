@@ -214,7 +214,7 @@ structure with exactly 2 types (transposition + 3-cycle).
 
 ## COMPLETE VERIFICATION (March 2026) — 323/323 Checks Pass
 
-### THEORY_OF_EVERYTHING.py
+### analysis/THEORY_OF_EVERYTHING.py
 A single script derives ALL results from exactly two inputs:
 - **F₃ = {0,1,2}** (the field with 3 elements)
 - **ω(x,y) = x₁y₃ − x₃y₁ + x₂y₄ − x₄y₂ mod 3** (symplectic form)
@@ -738,7 +738,7 @@ MOONSHINE: E₈ → j(τ) → Monster; 744=3×248; 196884=240×819+4×81
 The universe is a q=3 generalized quadrangle.
 ```
 
-### Curvature & Gravity (NEW — GRAVITY_BREAKTHROUGH.py)
+### Curvature & Gravity (NEW — analysis/GRAVITY_BREAKTHROUGH.py)
 
 **THEOREM:** W(3,3) has uniform Ollivier-Ricci curvature κ = 2/k = 1/6 on ALL 240 edges.
 
@@ -779,7 +779,7 @@ Key identities:
 - **16 − 10 = 6 = 2q** = Hubble tension
 - **√(16/10) = √(8/5) ≈ 1.265** = fermion/gauge mass ratio
 
-### Cabibbo Angle — SOLVED (NEW — DEEP_PHYSICS.py)
+### Cabibbo Angle — SOLVED (NEW — analysis/DEEP_PHYSICS.py)
 
 **THEOREM:** The Cabibbo angle is θ_C = arctan(q/(q²+q+1))
 
@@ -793,13 +793,13 @@ The formula emerges from the ratio of non-returning 2-walks to total vertices:
 (k−1−λ)/(v−1) = q²/(q·(q²+q+1)) = q/(q²+q+1)
 ```
 
-### Weinberg Angle — SOLVED (NEW — WOLFENSTEIN_CKM.py)
+### Weinberg Angle — SOLVED (NEW — analysis/WOLFENSTEIN_CKM.py)
 
 **RESULT:** sin²θ_W = q/(q²+q+1) = 3/13 = 0.23077 (observed: 0.23122, diff 0.19%)
 
 The SAME algebraic number q²+q+1 = 13 = |PG(2,q)| controls both the Weinberg angle and the Cabibbo angle. Running from tree-level 1/4 to low-energy 3/13 via correction −1/(μ·(q²+q+1)) = −1/52.
 
-### Full CKM Matrix — NEW (WOLFENSTEIN_CKM.py)
+### Full CKM Matrix — NEW (analysis/WOLFENSTEIN_CKM.py)
 
 Wolfenstein parameterization from W(3,3):
 - **λ_W = sin θ_C = q/√(q²+(q²+q+1)²) = 3/√178 = 0.2249** (obs: 0.2250)

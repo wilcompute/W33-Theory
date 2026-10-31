@@ -124,7 +124,7 @@ It is now **self-identifying after two steps**.
 Verifier:
 
 ```text
-verify_dclxx_holonomy_markov_tomography_bridge.py
+analysis/verify_dclxx_holonomy_markov_tomography_bridge.py
 ```
 
 Tests:

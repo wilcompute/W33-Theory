@@ -75,7 +75,7 @@ So the chain is now:
 Verifier:
 
 ```text
-verify_dclxxxvii_holonomy_selector_bundle_bridge.py
+analysis/verify_dclxxxvii_holonomy_selector_bundle_bridge.py
 ```
 
 Tests:

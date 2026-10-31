@@ -1,6 +1,6 @@
 # Pass 92 — The discriminant form of the code-lattice IS the E₈/2E₈ form (O⁺₈(2))
 
-**Status: PASS** — witness `w33_pass92_discriminant_e8.py` (7/7 checks), test
+**Status: PASS** — witness `analysis/w33_pass92_discriminant_e8.py` (7/7 checks), test
 `tests/test_pass92_discriminant_e8.py` (5/5). Self-contained (GF(2) linear algebra).
 
 This resolves the "why does 8 appear everywhere?" question — the glue dimension, the binary code's
@@ -39,5 +39,5 @@ E₈ lattice (Wikipedia / HandWiki): E₈/2E₈ has 120 norm-1 and 135 nonzero i
 O⁺₈(2); the 270 maximal isotropic 4-spaces split into two O⁺₈(2)-orbits of 135.
 
 ## Files
-- `w33_pass92_discriminant_e8.py`, `.json` — witness (7 checks).
+- `analysis/w33_pass92_discriminant_e8.py`, `.json` — witness (7 checks).
 - `tests/test_pass92_discriminant_e8.py` — 5 assertions.

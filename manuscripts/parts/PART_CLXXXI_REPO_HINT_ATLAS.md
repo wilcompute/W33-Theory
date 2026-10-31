@@ -170,12 +170,12 @@ Next test: decompose the 480 directed states by CLXXX sectors: colors, orientati
 Representative files:
 
 - `README.md`
-- `UNIFIED_HIERARCHY_PROOF.py`
-- `UNIFIED_MASTER_THEOREM.py`
-- `V37_FULL_MIXING_SYNTHESIS.py`
-- `V42_STRONG_COUPLING_GUT.py`
-- `PART_LVIII_SOLAR_NEUTRINO.py`
-- `PART_LIX_HIGGS_MASS.py`
+- `analysis/UNIFIED_HIERARCHY_PROOF.py`
+- `analysis/UNIFIED_MASTER_THEOREM.py`
+- `analysis/V37_FULL_MIXING_SYNTHESIS.py`
+- `analysis/V42_STRONG_COUPLING_GUT.py`
+- `analysis/PART_LVIII_SOLAR_NEUTRINO.py`
+- `analysis/PART_LIX_HIGGS_MASS.py`
 
 Bridge to CLXXX: map master-ladder atoms into older seven-pillar prediction packets while preserving exact/frontier boundaries.
 

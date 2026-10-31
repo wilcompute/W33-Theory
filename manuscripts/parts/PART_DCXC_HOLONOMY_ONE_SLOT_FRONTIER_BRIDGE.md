@@ -66,7 +66,7 @@ That is the whole live frontier in the current finite/adapted language.
 Verifier:
 
 ```text
-verify_dcxc_holonomy_one_slot_frontier_bridge.py
+analysis/verify_dcxc_holonomy_one_slot_frontier_bridge.py
 ```
 
 Tests:

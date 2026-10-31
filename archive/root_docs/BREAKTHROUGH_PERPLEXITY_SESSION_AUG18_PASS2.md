@@ -130,9 +130,9 @@ Every term governed by W33 arithmetic from `q^q − μ = 23`.
 
 ## Files Pushed This Session
 
-- `BT1643_css_boundary_genus21.py` + `.json`
-- `BT1644_ihara_zeta_mass_gap.py` + `.json`
-- `BT1645_monster_moonshine_encoding.py` + `.json`
+- `analysis/BT1643_css_boundary_genus21.py` + `.json`
+- `analysis/BT1644_ihara_zeta_mass_gap.py` + `.json`
+- `analysis/BT1645_monster_moonshine_encoding.py` + `.json`
 - `BREAKTHROUGH_PERPLEXITY_SESSION_AUG18_PASS2.md` (this file)
 
 ## Next Suggested Directions

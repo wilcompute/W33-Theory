@@ -110,7 +110,7 @@ def certificate():
         "manuscripts/tex/part27_graph_rh_theorem.tex",
         "w33_paper.tex (manuscript wrapper)",
         "analysis/w33_ihara_zeta.py",
-        "w33_pass74_zeta_frontier.py",
+        "analysis/w33_pass74_zeta_frontier.py",
         "manuscripts/parts/PART_MCLIII_IHARA_ZETA.md",
         "analysis/w33_pass3080_3082_bass_regular_audit.py"],
       "theta_vertices_edges":[11,12],"degree_multiset":{"2":9,"3":2},

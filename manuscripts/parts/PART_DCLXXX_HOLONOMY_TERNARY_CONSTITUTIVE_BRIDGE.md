@@ -79,7 +79,7 @@ They are already forced by the same ternary `W(3,3)` geometry that controls the 
 Verifier:
 
 ```text
-verify_dclxxx_holonomy_ternary_constitutive_bridge.py
+analysis/verify_dclxxx_holonomy_ternary_constitutive_bridge.py
 ```
 
 Tests:

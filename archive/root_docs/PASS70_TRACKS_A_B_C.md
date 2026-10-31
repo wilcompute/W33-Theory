@@ -5,11 +5,11 @@ claims are scoped to what the scripts actually construct.
 
 ## Files
 
-- `w33_pass70_trackA_ramanujan.py` computes the explicit Ramanujan-bound excess
+- `analysis/w33_pass70_trackA_ramanujan.py` computes the explicit Ramanujan-bound excess
   for the stated eigenvalue `(1+sqrt(97))/2`.
-- `w33_pass70_trackB_qec.py` records a 360-dimensional spectral multiplicity
+- `analysis/w33_pass70_trackB_qec.py` records a 360-dimensional spectral multiplicity
   ledger. It does **not** construct a stabilizer code.
-- `w33_pass70_trackC_partition.py` computes the stated critical inverse
+- `analysis/w33_pass70_trackC_partition.py` computes the stated critical inverse
   temperature and holographic-threshold quantities.
 
 ## Track B correction
@@ -36,4 +36,4 @@ Running the scripts writes:
 - `w33_pass70_trackC_partition.json`
 
 The prior Pass 69 file already present in the repository is
-`w33_pass69_track1_ihara_zeta.py`.
+`analysis/w33_pass69_track1_ihara_zeta.py`.

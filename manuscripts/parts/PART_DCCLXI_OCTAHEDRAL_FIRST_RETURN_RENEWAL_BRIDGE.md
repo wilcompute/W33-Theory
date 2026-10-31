@@ -62,6 +62,6 @@ This is the cleanest exact first-passage/renewal bridge so far in the closure tr
 
 ## Executable artifact
 
-- Verifier: `verify_dcclxi_octahedral_first_return_renewal_bridge.py`
+- Verifier: `analysis/verify_dcclxi_octahedral_first_return_renewal_bridge.py`
 - Tests: `tests/test_dcclxi_octahedral_first_return_renewal_bridge.py`
 - Data: `data/dcclxi_octahedral_first_return_renewal_bridge.json`

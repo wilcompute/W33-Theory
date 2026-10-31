@@ -1,6 +1,6 @@
 # Part DCCLVII — The Periodic Table from W(3,3)
 
-**Bridge:** `verify_dcclvii_periodic_table_from_w33.py` — Verified
+**Bridge:** `analysis/verify_dcclvii_periodic_table_from_w33.py` — Verified
 **Tests:** `tests/test_dcclvii_periodic_table_from_w33.py` — 19/19 pass
 **Data:** `data/dcclvii_periodic_table_from_w33.json`
 

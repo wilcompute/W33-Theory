@@ -78,7 +78,7 @@ def certificate():
         assert rank_factor(compensated)[0].shape[1]>=14
     return {'schema':'w33.phase_oracle.mod_local_gauge_rank14.v1',
       'preexisting_W33_Gf2_adjacency_rank':16,
-      'W33_rank16_prior_repo_paths':['w33_pass88_smith_group.py','analysis/w33_20260829_adjacency_sentinel_extension.py'],
+      'W33_rank16_prior_repo_paths':['analysis/w33_pass88_smith_group.py','analysis/w33_20260829_adjacency_sentinel_extension.py'],
       'new_optimal_cross_register_couplings':14,
       'left_local_phase_flags_from_A_column0':localL.astype(int).tolist(),
       'right_local_phase_flags_from_A_row0':localR.astype(int).tolist(),

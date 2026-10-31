@@ -7,7 +7,7 @@ the q=3 master identity had 13/13 verified faces, but the executable witness
 still returned `PARTIAL` with 11/13 faces.
 
 The failure was not conceptual. It came from two stale formulas inside
-`BT1295_q3_master_identity.py`:
+`analysis/BT1295_q3_master_identity.py`:
 
 - the W(3,3) point count used `q*(q^3+1)/2`, which gives 42 at q=3;
 - the Cayley diameter face used the q=3-only coincidence `q^2+q+2`.
@@ -33,9 +33,9 @@ from the master identity witness.
 ## Verification
 
 ```text
-python3 BT1295_q3_master_identity.py
+python3 analysis/BT1295_q3_master_identity.py
 python3 tests/test_bt1295_master_identity_repair.py
-python3 -m py_compile BT1295_q3_master_identity.py tests/test_bt1295_master_identity_repair.py
+python3 -m py_compile analysis/BT1295_q3_master_identity.py tests/test_bt1295_master_identity_repair.py
 python3 -m json.tool data/BT1295_q3_master_identity_results.json
 ```
 

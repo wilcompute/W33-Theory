@@ -26,7 +26,7 @@ It is already universal across the full active column family.
 Verifier:
 
 ```text
-verify_dcxcix_holonomy_column_chart_universality_bridge.py
+analysis/verify_dcxcix_holonomy_column_chart_universality_bridge.py
 ```
 
 Tests:

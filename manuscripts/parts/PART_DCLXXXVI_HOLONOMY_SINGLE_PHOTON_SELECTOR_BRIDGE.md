@@ -92,7 +92,7 @@ So the chain is now:
 Verifier:
 
 ```text
-verify_dclxxxvi_holonomy_single_photon_selector_bridge.py
+analysis/verify_dclxxxvi_holonomy_single_photon_selector_bridge.py
 ```
 
 Tests:

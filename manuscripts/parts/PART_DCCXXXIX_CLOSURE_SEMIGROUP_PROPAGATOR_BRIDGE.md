@@ -76,6 +76,6 @@ This is the first exact evolution law in genuinely semigroup form.
 
 ## Executable artifact
 
-- Verifier: `verify_dccxxxix_closure_semigroup_propagator_bridge.py`
+- Verifier: `analysis/verify_dccxxxix_closure_semigroup_propagator_bridge.py`
 - Tests: `tests/test_dccxxxix_closure_semigroup_propagator_bridge.py`
 - Data: `data/dccxxxix_closure_semigroup_propagator_bridge.json`

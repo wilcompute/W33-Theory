@@ -5,7 +5,7 @@ Connects response-sector maps to the existing E8/E6 grading spine in the repo.
 The compiler does not recompute full E8 structure constants.  Instead it builds
 an auditable alignment table using established repository artifacts:
 
-- PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py
+- analysis/PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py
 - tools/verify_e8_z3grading_from_structure_constants.py
 - scripts/w33_coexact_e6_bridge.py
 - scripts/e8_structural_bridge.py
@@ -27,7 +27,7 @@ ROOT=Path(__file__).resolve().parents[1]
 CHANNELS=["mass","gap","heat_trace","spinor_trace","resolvent_trace","zeta"]
 E8_DIMS={"g0":86,"g1":81,"g2":81,"total":248,"h1_w33":81}
 ARTIFACTS=[
-    "PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py",
+    "analysis/PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py",
     "PART_CLXXV_triple_albert_e8_grading_results.json",
     "tools/verify_e8_z3grading_from_structure_constants.py",
     "scripts/w33_coexact_e6_bridge.py",

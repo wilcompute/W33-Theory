@@ -115,7 +115,7 @@ strength of shared vocabulary.
 ## Prior art
 
 - `dccxxiii` / `data/dccxxiii_genus_equation_spectrum.json`,
-  `verify_dccxxiii_genus_equation_spectrum.py` — **own** the genus equation in
+  `analysis/verify_dccxxiii_genus_equation_spectrum.py` — **own** the genus equation in
   `W(3,3)` primitives, the three clocks, the genus oscillator, and the integer
   spectrum.
 - BT1844 / `w33_toroidal_h6_66_bridge.json` — **own** the complete-adjacency

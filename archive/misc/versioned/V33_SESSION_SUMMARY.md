@@ -128,7 +128,7 @@ l3→g0, l4→g1, l5→g2, l6→g0, l7→g1, l8→g2, **l9→g0** ✓
 ---
 
 ## New Files Created
-- `V33_SECTOR_YUKAWA.py`: Sector-specific Yukawa analysis with correct 1+16+10 split
+- `analysis/V33_SECTOR_YUKAWA.py`: Sector-specific Yukawa analysis with correct 1+16+10 split
 - `V33_sector_yukawa_report.json`: Report with sector, triad, and l9 data
 - `tests/test_tower_generation_rules.py`: Extended from 32 → 63 tests
 

@@ -54,7 +54,7 @@ It is:
 Verifier:
 
 ```text
-verify_dcxciii_holonomy_unique_extension_class_bridge.py
+analysis/verify_dcxciii_holonomy_unique_extension_class_bridge.py
 ```
 
 Tests:

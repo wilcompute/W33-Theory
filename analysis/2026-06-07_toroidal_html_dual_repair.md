@@ -46,7 +46,7 @@ n=12,
 E=66.
 \]
 
-The `EDGE_LENGTH_ANALYSIS.py` / edge-pattern HTML layer gives the seven-realization metric programme, but BT490 found a critical audit issue: the current cyclic parser for the Szilassi edge list produces 31 unique edges, not the closed Szilassi value 21. Therefore metric identities involving those parsed Szilassi edges must be treated as parser-dependent until the 21-edge graph is restored.
+The `analysis/EDGE_LENGTH_ANALYSIS.py` / edge-pattern HTML layer gives the seven-realization metric programme, but BT490 found a critical audit issue: the current cyclic parser for the Szilassi edge list produces 31 unique edges, not the closed Szilassi value 21. Therefore metric identities involving those parsed Szilassi edges must be treated as parser-dependent until the 21-edge graph is restored.
 
 ---
 
@@ -118,7 +118,7 @@ So the HTML page's predicted \(66\)-edge next level carries the same defect as t
 
 ## BT490 — Toroidal Metric Edge-Count Audit
 
-The current `EDGE_LENGTH_ANALYSIS.py` parser derives Szilassi edges by cycling through seven 6-vertex face lists. That gives:
+The current `analysis/EDGE_LENGTH_ANALYSIS.py` parser derives Szilassi edges by cycling through seven 6-vertex face lists. That gives:
 
 \[
 7\cdot6=42

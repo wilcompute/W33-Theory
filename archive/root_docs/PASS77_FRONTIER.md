@@ -1,7 +1,7 @@
 # Pass 77 — Seven frontier ideas: GAP representation theory + geometry + equidistribution
 
 **Status: PASS** — GAP proofs (`w33_pass77_group.g` → `w33_pass77_group_out.txt`), Python witness
-`w33_pass77_frontier.py` (6/6 checks), test `tests/test_pass77_frontier.py` (7/7), paper compiles.
+`analysis/w33_pass77_frontier.py` (6/6 checks), test `tests/test_pass77_frontier.py` (7/7), paper compiles.
 
 All seven follow-on ideas from Pass 76, executed. GAP and networkx confirmed available.
 
@@ -40,6 +40,6 @@ effective, quantitative form of Pass 75's discrepancy result.
 
 ## Files
 - `w33_pass77_group.g`, `w33_pass77_group_out.txt` — GAP script + certificate (T1, T5, T6).
-- `w33_pass77_frontier.py`, `.json` — Python witness (T2, T3, T4, T7 + reads GAP cert).
+- `analysis/w33_pass77_frontier.py`, `.json` — Python witness (T2, T3, T4, T7 + reads GAP cert).
 - `tests/test_pass77_frontier.py` — 7 assertions (networkx-guarded).
 - `w33_paper.tex` — remark (e) appended to the Zeta Frontier subsection.

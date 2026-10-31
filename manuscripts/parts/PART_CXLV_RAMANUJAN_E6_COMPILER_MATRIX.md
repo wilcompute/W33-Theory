@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** representation-theoretic compiler theorem  
-**Files:** `PART_CXLV_RAMANUJAN_E6_COMPILER_MATRIX.py`, `PART_CXLV_ramanujan_e6_compiler_matrix_results.json`, `tests/test_ramanujan_e6_compiler_matrix_cxlv.py`
+**Files:** `analysis/PART_CXLV_RAMANUJAN_E6_COMPILER_MATRIX.py`, `PART_CXLV_ramanujan_e6_compiler_matrix_results.json`, `tests/test_ramanujan_e6_compiler_matrix_cxlv.py`
 
 ---
 

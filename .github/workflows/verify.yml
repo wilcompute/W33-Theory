@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - 'verify_dclii_dclxii.py'
+      - 'analysis/verify_dclii_dclxii.py'
       - 'analysis/**'
       - 'tools/**'
   pull_request:
@@ -28,10 +28,10 @@ jobs:
         run: pip install numpy
 
       - name: Run DCLII-DCLXII verification
-        run: python3 verify_dclii_dclxii.py
+        run: python3 analysis/verify_dclii_dclxii.py
 
       - name: Run full W33 spectral verification
-        run: python3 verify_w33_full.py
+        run: python3 analysis/verify_w33_full.py
 
   latex:
     runs-on: ubuntu-latest

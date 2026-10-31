@@ -3,8 +3,8 @@
 different optimal *restricted* binary controlled-phase resources.
 
 Existing mathematical facts in repository:
- w33_pass76_cospectral_mates.py : W(3,3) and Q(4,3) nonisomorphic, same SRG.
- w33_pass88_smith_group.py     : binary adjacency ranks 16 and 10.
+ analysis/w33_pass76_cospectral_mates.py : W(3,3) and Q(4,3) nonisomorphic, same SRG.
+ analysis/w33_pass88_smith_group.py     : binary adjacency ranks 16 and 10.
 New application: exact binary phase-oracle local gauge ranks 14 vs 8,
 seven vs four alternating hyperbolic pairs, and explicit real local O(40)
 maps between their two-factor sign states. This cannot distinguish graph
@@ -95,8 +95,8 @@ def certificate():
     assert (a['hyperbolic_pair_count'],b['hyperbolic_pair_count'])==(7,4)
     assert abs(a['schmidt_entropy_bits']-b['schmidt_entropy_bits'])<1e-12
     return {'schema':'w33.q43.cospectral_self_mode_entanglement_vs_binary_phase_complexity.v1',
-      'source_repo_prior':['w33_pass76_cospectral_mates.py (same spectrum, nonisomorphic)',
-         'w33_pass88_smith_group.py (2-rank 16 vs 10)',
+      'source_repo_prior':['analysis/w33_pass76_cospectral_mates.py (same spectrum, nonisomorphic)',
+         'analysis/w33_pass88_smith_group.py (2-rank 16 vs 10)',
          'analysis/w33_20260829_adjacency_sentinel_extension.py (W33 rank16 prior)',
          'analysis/w33_single_photon_recursive_graph_phase_area_law_20261023.py (W33 Schmidt law)'],
       'systems':{'W33':a,'Q43':b},'local_equivalence':local_isometry_witness(W,Q),

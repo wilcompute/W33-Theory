@@ -53,6 +53,6 @@ This is the sharpest formal statement so far of your “inverse Koide-side” in
 
 ## Executable artifact
 
-- Verifier: `verify_dcclxiii_inverse_reciprocity_3_13_13_3_bridge.py`
+- Verifier: `analysis/verify_dcclxiii_inverse_reciprocity_3_13_13_3_bridge.py`
 - Tests: `tests/test_dcclxiii_inverse_reciprocity_3_13_13_3_bridge.py`
 - Data: `data/dcclxiii_inverse_reciprocity_3_13_13_3_bridge.json`

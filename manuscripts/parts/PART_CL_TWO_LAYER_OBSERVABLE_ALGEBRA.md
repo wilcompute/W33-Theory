@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-01  
 **Status:** deep architecture theorem / arXiv-paper replacement scaffold  
-**Files:** `PART_CL_TWO_LAYER_OBSERVABLE_ALGEBRA.py`, `PART_CL_two_layer_observable_algebra_results.json`, `tests/test_two_layer_observable_algebra_cl.py`
+**Files:** `analysis/PART_CL_TWO_LAYER_OBSERVABLE_ALGEBRA.py`, `PART_CL_two_layer_observable_algebra_results.json`, `tests/test_two_layer_observable_algebra_cl.py`
 
 ---
 

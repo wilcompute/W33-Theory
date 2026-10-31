@@ -17,4 +17,4 @@ def test_slot_counts():
 def test_formula():
     mod=load_module(); assert mod.GENERATION_COUNT*mod.ALBERT_DIM==81; assert mod.TRIPLE_DIAGONAL+mod.TRIPLE_OFFDIAGONAL==81; assert mod.TRIPLE_OFFDIAGONAL==72
 def test_payload_ccclxxix():
-    mod=load_module(); r=mod.build_results(); assert r['source_artifact']=='PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py'; assert 'Triple-Albert' in r['architecture_upgrade']
+    mod=load_module(); r=mod.build_results(); assert r['source_artifact']=='analysis/PART_CLXXV_TRIPLE_ALBERT_E8_GRADING.py'; assert 'Triple-Albert' in r['architecture_upgrade']

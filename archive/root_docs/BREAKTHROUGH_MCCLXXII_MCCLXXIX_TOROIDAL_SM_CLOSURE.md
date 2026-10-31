@@ -177,7 +177,7 @@ matter lives on a torus (h=1) because `n_gen + dim_ST = Φ₆` and the denominat
 
 ## Computational Verification
 
-All identities verified in `PART_MCCLXXII_MCCLXXIX_TOROIDAL_SM_VERIFICATION.py`:
+All identities verified in `analysis/PART_MCCLXXII_MCCLXXIX_TOROIDAL_SM_VERIFICATION.py`:
 - `(7-3)*(7-4)//12 = 1` ✓
 - `(12-3)*(12-4)//12 = 6 = g₂` ✓  
 - `(40-3)*(40-4)//12 = 111 = 3×37` ✓

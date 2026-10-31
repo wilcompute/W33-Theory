@@ -119,7 +119,7 @@ Throughout: q = 3 (field characteristic), v = 40, k = 12, λ = 2, μ = 4,
 r = 2, s = −4, f = 24, g = 15, E = |edges| = 240.
 Cyclotomic values: Φ₁(3)=2, Φ₃(3)=13, Φ₄(3)=10, Φ₆(3)=7.
 All verified computations are reproducible from the two-input script
-THEORY_OF_EVERYTHING.py in the repository.
+analysis/THEORY_OF_EVERYTHING.py in the repository.
 
 ---
 
@@ -666,12 +666,12 @@ symplectic form ω. Total verified checks: **47/47**.
 
 | Category | Checks | Source |
 |---|---|---|
-| Graph structure and spectrum | 12 | THEORY_OF_EVERYTHING.py |
-| Uniqueness selectors (q=3) | 6 | PROOF.py, UNIQUENESS.py |
+| Graph structure and spectrum | 12 | analysis/THEORY_OF_EVERYTHING.py |
+| Uniqueness selectors (q=3) | 6 | analysis/PROOF.py, UNIQUENESS.py |
 | NCG axioms and spectral action | 5 | NCG_GRAVITY.py |
-| SM parameters and mixing angles | 9 | WOLFENSTEIN_CKM.py |
+| SM parameters and mixing angles | 9 | analysis/WOLFENSTEIN_CKM.py |
 | Fermion masses (L∞ tower) | 5 | LINF_TOWER_MASS_DERIVATION.md |
-| Cosmological parameters | 8 | THEORY_OF_EVERYTHING.py |
+| Cosmological parameters | 8 | analysis/THEORY_OF_EVERYTHING.py |
 | Monster/moonshine identities | 7 | monster_connection.md |
 | Weyl law (barycentric refinement) | 5 | WEYL_LAW_REFINEMENT_THEOREM.md |
 | **Total** | **57** | all pass |
@@ -731,4 +731,4 @@ symplectic form ω. Total verified checks: **47/47**.
 ---
 
 *Manuscript prepared March 30, 2026. All computations reproducible
-from THEORY_OF_EVERYTHING.py with inputs F₃ and ω only.*
+from analysis/THEORY_OF_EVERYTHING.py with inputs F₃ and ω only.*

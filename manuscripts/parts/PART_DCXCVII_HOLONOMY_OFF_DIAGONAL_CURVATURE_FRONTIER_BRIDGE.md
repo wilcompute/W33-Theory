@@ -33,7 +33,7 @@ This turns the final unresolved theorem from a generic “curved existence” st
 Verifier:
 
 ```text
-verify_dcxcvii_holonomy_off_diagonal_curvature_frontier_bridge.py
+analysis/verify_dcxcvii_holonomy_off_diagonal_curvature_frontier_bridge.py
 ```
 
 Tests:

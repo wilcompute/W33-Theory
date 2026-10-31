@@ -130,7 +130,7 @@ def full_ckm_matrix(adj, n, edge_color):
     # V_CKM = R(theta_23) U(delta) R(theta_13) U(-delta) R(theta_12)
     # where R(theta) is a rotation and U(delta) introduces CP violation
     
-    # From DEEP_PHYSICS.py, we found theta_12 = arctan(q/(q^2+q+1)) = 13.0 deg
+    # From analysis/DEEP_PHYSICS.py, we found theta_12 = arctan(q/(q^2+q+1)) = 13.0 deg
     # Now derive theta_23 and theta_13 from the COMPONENT STRUCTURE
     
     gen_components = get_gen_components(gen_adjs, n)

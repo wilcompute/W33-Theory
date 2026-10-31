@@ -86,7 +86,7 @@ other order-51840 candidate. **The 240 = 240 correspondence is closed, not open.
 The numerical coincidence `|Sp(4,3)| = |W(E6)| = 51840` was read as an
 isomorphism, and that error propagated.
 
-1. `EXPLICIT_BIJECTION.py:561` — *"No proper subgroup of W(E8) acts transitively
+1. `analysis/EXPLICIT_BIJECTION.py:561` — *"No proper subgroup of W(E8) acts transitively
    on 240 roots (this is a well-known fact)."* **False.** `Sp(4,3)` (51840) and
    `G32` (155520) are both proper and both transitive.
 2. *"Sp(4,3) ≅ W(E6)"* / *"Aut(W(3,3)) = Sp(4,3)"* — **false**, and present in at
