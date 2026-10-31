@@ -1,0 +1,242 @@
+{
+  "additional_three": {
+    "directional_photon_readout": {
+      "canonical_signed_F": [
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          -1,
+          0,
+          2
+        ],
+        [
+          3,
+          -2,
+          0
+        ]
+      ],
+      "exact_distance": "12/(7 sqrt(14))",
+      "minus_port_probabilities": [
+        0.08163265306122448,
+        0.4841831053126902,
+        0.4341842416260852
+      ],
+      "optimal_equal_prior_bayes_test": {
+        "assumption": "IID injected input photons, fixed calibrated U+ or U-, ideal number-resolving port measurements; loss independent, heralded no-click outcome; no dark counts, drifts, crosstalk.",
+        "one_photon_error": 0.2709189355036362,
+        "photons_to_error_thresholds": {
+          "0.001": {
+            "ideal_error_at_threshold": 0.0009391876524436407,
+            "loss_model_error_at_threshold": 0.0008570606140725022,
+            "required_detected_photons": 23,
+            "required_injected_photons_with_loss_eta0p995_per_stage": 24
+          },
+          "1e-06": {
+            "ideal_error_at_threshold": 9.496420354467948e-07,
+            "loss_model_error_at_threshold": 8.602604271481943e-07,
+            "required_detected_photons": 54,
+            "required_injected_photons_with_loss_eta0p995_per_stage": 56
+          }
+        }
+      },
+      "orientation_blind_reciprocal_pulse": "U0=I+F^2/7 remains identical under F -> -F",
+      "plus_port_probabilities": [
+        0.08163265306122448,
+        0.026020976319962762,
+        0.892346370618813
+      ],
+      "scope": "A conditional source-and-detector basis can discriminate \u00b1 direction in one ideal lossless canonical 3-mode block; no spontaneous CP orientation or time arrow is produced.",
+      "status": "PASS_IDEAL_SINGLE_PHOTON_DIRECTION_READOUT",
+      "total_variation_distance_one_shot": 0.45816212899272757
+    },
+    "external_chern_w33_spectator": {
+      "Hamiltonian": "H_QWZ(k) tensor I40 + epsilon I2 tensor A_W33",
+      "epsilon": 0.01,
+      "internal_adjacency_spectrum": {
+        "-4": 15,
+        "12": 1,
+        "2": 24
+      },
+      "interpretation": "An external 2D Chern band is replicated 40 times by an internal W33 spectator; it does not bootstrap Chern chirality from internal geometry or choose the sign.",
+      "occupied_bundle_chern": -40,
+      "partner_bundle_chern": 40,
+      "positive_gap_lower_bound": "gap_QWZ - 16 epsilon (max-min adjacency =16)",
+      "spectator_modes": 40,
+      "status": "PASS_SPECTATOR_INTERNAL_TENSOR_FALSIFIER",
+      "topological_charge_from_W33_alone": false
+    },
+    "z5_synthetic_flux": {
+      "cycle_length": 4,
+      "cycle_rank": 193,
+      "gauge_invariance_error": 1.2412670766236366e-16,
+      "incidence_cokernel_torsion_rank": 7,
+      "interpretation": "One *chosen* graph Z5 edge connection produces a gauge invariant Wilson loop; graph cohomology offers 193 independent cycle directions, NOT a canonical seven-flux selection. No dynamic gauge action.",
+      "one_chord_with_z5_flux": [
+        1,
+        41
+      ],
+      "status": "PASS_Z5_FLUX_GAUGE_COVARIANCE_ON_DECLARED_GRAPH",
+      "wilson_loop_complex": [
+        0.30901699437494745,
+        -0.9510565162951535
+      ]
+    }
+  },
+  "falsification_scope": "Models, numerical controls, exact algebra. All physics input structures are declared; no TOE proof, physical E8 real form, quantum gravity, or measured photonic chip.",
+  "original_five": {
+    "chiral_index_control": {
+      "bulk_hamiltonian": "sin kx sigma_x + sin ky sigma_y + (m+cos kx+cos ky) sigma_z",
+      "conjugate_partner": "H_minus(k)=H_plus^*(-k); integer Chern changes sign",
+      "grids_checked": [
+        11,
+        17,
+        21,
+        25
+      ],
+      "limitations": "This is the standard externally supplied QWZ 2D lattice model, not an intrinsic W33 Weyl/CP derivation or a Standard-Model anomaly.",
+      "phase_diagram": {
+        "-1.0": {
+          "antiunitary_partner_chern": 1,
+          "chern": -1,
+          "sampled_min_band_gap": 1.9999999999999996
+        },
+        "-3.0": {
+          "antiunitary_partner_chern": 0,
+          "chern": 0,
+          "sampled_min_band_gap": 2.0
+        },
+        "1.0": {
+          "antiunitary_partner_chern": -1,
+          "chern": 1,
+          "sampled_min_band_gap": 2.000249485324894
+        },
+        "3.0": {
+          "antiunitary_partner_chern": 0,
+          "chern": 0,
+          "sampled_min_band_gap": 2.0876809057752075
+        }
+      },
+      "status": "PASS_TWO_BAND_TOPOLOGICAL_CONTROL"
+    },
+    "finite_speed_periodic_continuum": {
+      "acoustic_gradient": "p_mu=e^(ik_mu)-1; lambda=p^* Q p",
+      "analytic_stable_dt_upper_bound": 0.14907119849998599,
+      "chosen_dt": 0.07453559924999299,
+      "limitation": "Externally supplied time step and wave kinetic action. Discrete causality does not determine physical light speed, Lorentz invariance, or Einstein gravity.",
+      "native_metric_Q": [
+        [
+          5.0,
+          2.5,
+          -3.0,
+          0.0
+        ],
+        [
+          2.5,
+          5.0,
+          0.0,
+          -3.0
+        ],
+        [
+          -3.0,
+          0.0,
+          6.0,
+          -3.0
+        ],
+        [
+          0.0,
+          -3.0,
+          -3.0,
+          6.0
+        ]
+      ],
+      "one_tick_strict_coordinate_support": "couples offsets 0, \u00b1e_mu, \u00b1(e_mu-e_nu): L1 radius <=2 per tick",
+      "refinement": [
+        {
+          "N": 8,
+          "continuum_qform": 35.0,
+          "lambda": 17.928932188134524,
+          "leapfrog_omega": 4.252029947712344,
+          "relative_error": 0.1695631402308576
+        },
+        {
+          "N": 16,
+          "continuum_qform": 35.0,
+          "lambda": 5.154602957088921,
+          "leapfrog_omega": 2.27309283493007,
+          "relative_error": 0.044991135417519756
+        },
+        {
+          "N": 32,
+          "continuum_qform": 35.0,
+          "lambda": 1.3339542082983942,
+          "leapfrog_omega": 1.155326289516417,
+          "relative_error": 0.011417093050727089
+        },
+        {
+          "N": 64,
+          "continuum_qform": 35.0,
+          "lambda": 0.33637352722957437,
+          "leapfrog_omega": 0.5800223471774626,
+          "relative_error": 0.0028649640272864272
+        }
+      ],
+      "sampled_max_lambda": 62.62741699796952,
+      "status": "PASS_CONDITIONAL_LATTICE_WAVE_PROPAGATION"
+    },
+    "local_clock_symmetry_audit": {
+      "actual_projector_tick_interaction": "E(a,b)=3-Tr(Pi_a Pi_b) in {0,2,3}",
+      "lambda_Perron": 30.09675763767392,
+      "lambda_subleading": 0.8775435717470181,
+      "larger_than_W33_symmetry": "S3 wreath S40; arbitrary swaps of forty direction classes preserve E",
+      "limitation": "No unique tick, geometry discrimination, intrinsic preferred real form, or physical time without extra microscopic terms.",
+      "one_dimensional_correlation_length_sites": 0.2828817409950028,
+      "positive_temperature_unique_symmetric_transfer_state": true,
+      "status": "EXACT_LOCAL_CHAIN_WITH_ACCIDENTAL_SYMMETRY",
+      "temperature_betaJ": 0.7
+    },
+    "q9_A5_torsion": {
+      "automatic_identification": false,
+      "falsifier": "Demand an equivariant natural map from incidence-cokernel 5-torsion to graph cohomology, plus a gauge connection and a Hamiltonian. Neither 7 nor a Z5 phase is by itself a physical particle or gauge field.",
+      "graph_H1_dimension_F5": 193,
+      "integral_cokernel_torsion_dimension_F5": 7,
+      "smith_diagonal": {
+        "five": 7,
+        "one": 11,
+        "zero": 6
+      },
+      "status": "EXACT_COMPARISON_NOT_EQUIVALENCE"
+    },
+    "real_optical_noise": {
+      "not_inferred": "No FT threshold, calibration from waveguide data, or actual physical loss/crosstalk statistics.",
+      "orientations": {
+        "minus": {
+          "assumed_uniform_power_survival_per_five_stages_eta_0p995": 0.975248753121875,
+          "blocks": 27,
+          "coherent_common_global_phase_fidelity": 1.0000000000000004,
+          "max_unitarity_defect": 4.440892098500626e-16,
+          "noise_model": "Four independent normal perturbations per block; fixed ideal signed permutations. Equal scalar power attenuation eta per stage and mode, independent of phase noise.",
+          "seed": 31031,
+          "two_mode_angle_and_phase_noise_rms_radians": 0.01,
+          "unitary_average_gate_fidelity_ideal_vs_noisy": 0.9995344027635543
+        },
+        "plus": {
+          "assumed_uniform_power_survival_per_five_stages_eta_0p995": 0.975248753121875,
+          "blocks": 27,
+          "coherent_common_global_phase_fidelity": 1.0000000000000004,
+          "max_unitarity_defect": 4.440892098500626e-16,
+          "noise_model": "Four independent normal perturbations per block; fixed ideal signed permutations. Equal scalar power attenuation eta per stage and mode, independent of phase noise.",
+          "seed": 31031,
+          "two_mode_angle_and_phase_noise_rms_radians": 0.01,
+          "unitary_average_gate_fidelity_ideal_vs_noisy": 0.9994014315316824
+        }
+      },
+      "status": "PASS_IDEAL_SIMULATION_NOT_MEASURED_HARDWARE"
+    }
+  },
+  "schema": "w33.20261031.eight_front_physics_falsifiers.v1",
+  "source_head": "2669069be2ddcee262b2a72569f01b2796177451",
+  "status": "PASS_EIGHT_FINITE_TESTBED_FRONTS"
+}
