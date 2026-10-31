@@ -50,7 +50,7 @@ def test_pass80_native_k12_edge_vm_payload() -> None:
 
 
 def test_pass80_json_result_when_present() -> None:
-    path = Path("w33_pass80_native_k12_edge_vm.json")
+    path = Path("data/w33_pass80_native_k12_edge_vm.json")
     if not path.exists():
         return
     payload = json.loads(path.read_text(encoding="utf-8"))

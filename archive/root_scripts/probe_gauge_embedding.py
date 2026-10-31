@@ -137,10 +137,10 @@ def run():
         'closure': closure,
     }
 
-    with open('gauge_probe_result.json', 'w', encoding='utf-8') as f:
+    with open('data/gauge_probe_result.json', 'w', encoding='utf-8') as f:
         json.dump(out, f, indent=2)
 
-    print('Wrote gauge_probe_result.json', out)
+    print('Wrote data/gauge_probe_result.json', out)
 
 if __name__ == '__main__':
     run()

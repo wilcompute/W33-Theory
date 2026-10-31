@@ -185,9 +185,9 @@ def main():
         "generated_utc": datetime.datetime.utcnow().isoformat() + "Z",
         "master_index": index,
     }
-    with open("BT1638_arxiv_readiness_results.json", "w") as fh:
+    with open("data/BT1638_arxiv_readiness_results.json", "w") as fh:
         json.dump(output, fh, indent=2)
-    print("\nResults written to BT1638_arxiv_readiness_results.json")
+    print("\nResults written to data/BT1638_arxiv_readiness_results.json")
 
     print("\n" + "=" * 70)
     print(f"BT1638 STATUS: {'PASS' if ready else 'FAIL'}")

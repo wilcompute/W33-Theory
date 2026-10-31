@@ -125,6 +125,6 @@ output = {
     "rho_substrate": rho_sub,
     "status": "W mass 0.04% (tier 29), Z mass 0.52%. All SM gauge bosons derived."
 }
-with open("BT396_results.json", "w") as fout:
+with open("data/BT396_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT396_results.json")
+print("\nResults saved to data/BT396_results.json")

@@ -25,7 +25,7 @@ def load_bt387_predictions():
         "alpha_em_inv_0": 75.21127156211381,
         "source": "BT387 executable fallback",
     }
-    path = Path("BT387_results.json")
+    path = Path("data/BT387_results.json")
     if not path.exists():
         return fallback
     with path.open() as f:
@@ -163,6 +163,6 @@ results = {
         for n, s, p, pu, u, bt in predictions
     ]
 }
-with open("BT388_results.json", "w") as f:
+with open("data/BT388_results.json", "w") as f:
     json.dump(results, f, indent=2)
-print("Results saved to BT388_results.json")
+print("Results saved to data/BT388_results.json")

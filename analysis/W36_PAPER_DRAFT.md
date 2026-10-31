@@ -536,7 +536,7 @@ To reproduce all results:
 git clone https://github.com/wilcompute/W33-Theory.git
 cd W33-Theory
 pip install numpy scipy sympy
-python W35_FALSIFIABILITY_AND_PREDICTIONS.py  # generates W35_FALSIFIABILITY_results.json
+python W35_FALSIFIABILITY_AND_PREDICTIONS.py  # generates data/W35_FALSIFIABILITY_results.json
 python W34_GRAND_UNIFIED_ZETA_MOONSHINE.py    # full synthesis
 ```
 

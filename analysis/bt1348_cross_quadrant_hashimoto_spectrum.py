@@ -216,9 +216,9 @@ def main():
         'gap_grows_under_lift': bool(gap_growth),
         'bt': 'BT1348'
     }
-    with open('bt1348_cross_quadrant_hashimoto_results.json', 'w') as f:
+    with open('data/bt1348_cross_quadrant_hashimoto_results.json', 'w') as f:
         json.dump(output, f, indent=2)
-    print("\nResults -> bt1348_cross_quadrant_hashimoto_results.json")
+    print("\nResults -> data/bt1348_cross_quadrant_hashimoto_results.json")
     print("=" * 70)
     return output
 

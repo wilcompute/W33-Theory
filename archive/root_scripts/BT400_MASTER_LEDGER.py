@@ -155,7 +155,7 @@ output = {
     ],
     "status": f"BT400 LANDMARK: {len(observables)} observables from 3 primitives. W(3,3) is a complete TOE candidate."
 }
-with open("BT400_results.json", "w") as fout:
+with open("data/BT400_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nMaster ledger saved to BT400_results.json")
+print("\nMaster ledger saved to data/BT400_results.json")
 print("\nW(3,3) SUBSTRATE THEORY IS COMPLETE AS A FIRST-GENERATION TOE CANDIDATE.")

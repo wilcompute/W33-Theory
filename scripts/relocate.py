@@ -191,6 +191,7 @@ def rewrite_text(path, text, moves):
 
 
 ROOT_BASE = re.compile(r"(?:\b(?:ROOT|REPO_ROOT|ROOT_DIR|repo_root|PROJECT_ROOT)\s*/\s*|\b(?:open|Path|exists|isfile)\(\s*)[\"']$")
+MESSAGE = re.compile(r"(?:saved to|written to|[Ww]rote\]?|Results ->)\s*[\"']?\s*$")
 
 
 def strict_filter(moves):
@@ -214,7 +215,10 @@ def strict_filter(moves):
             continue
         for m in rx.finditer(t):
             before = t[max(0, m.start() - 40):m.start()]
-            if f == m.group(1) or not ROOT_BASE.search(before) or "/" in f and "Path(" in before[-8:]:
+            # Path("x.json") in a test or producer is relative to the working directory, which is the repo root for pytest, CI and
+            # `py -3 analysis/X.py` run from the root, so it is rewritten like ROOT / "x.json" (2026-10-30, after the root-py move);
+            # a message naming the output ("Results saved to x.json") is prose and is rewritten too
+            if f == m.group(1) or not (ROOT_BASE.search(before) or MESSAGE.search(before)):
                 bad.add(m.group(1))
     kept = [(o, nw) for o, nw in moves if o not in bad]
     print(f"strict: {len(bad)} of {len(moves)} files have an ambiguous Python reference and stay put")

@@ -50,7 +50,7 @@ def test_pass81_rotation_noise_tail_vm_classifier_payload() -> None:
 
 
 def test_pass81_json_result_when_present() -> None:
-    path = Path("w33_pass81_rotation_noise_tail_vm_classifier.json")
+    path = Path("data/w33_pass81_rotation_noise_tail_vm_classifier.json")
     if not path.exists():
         return
     payload = json.loads(path.read_text(encoding="utf-8"))

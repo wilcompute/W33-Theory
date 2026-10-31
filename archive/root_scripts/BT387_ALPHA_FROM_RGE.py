@@ -254,6 +254,6 @@ results = {
 }
 
 import json
-with open("BT387_results.json", "w") as f:
+with open("data/BT387_results.json", "w") as f:
     json.dump(results, f, indent=2)
-print("\nResults saved to BT387_results.json")
+print("\nResults saved to data/BT387_results.json")

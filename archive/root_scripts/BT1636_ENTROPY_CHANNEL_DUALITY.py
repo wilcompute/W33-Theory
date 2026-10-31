@@ -230,9 +230,9 @@ def main():
         },
         "sample_frames": results[:5],
     }
-    with open("BT1636_entropy_channel_duality_results.json", "w") as fh:
+    with open("data/BT1636_entropy_channel_duality_results.json", "w") as fh:
         json.dump(summary, fh, indent=2)
-    print("\nResults written to BT1636_entropy_channel_duality_results.json")
+    print("\nResults written to data/BT1636_entropy_channel_duality_results.json")
 
     print("\n" + "=" * 70)
     print(f"BT1636 STATUS: {'PASS' if all_pass else 'FAIL'}")

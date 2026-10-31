@@ -89,7 +89,7 @@ results = {
     "checks": checks,
 }
 
-with open("BT420_results.json", "w") as fobj:
+with open("data/BT420_results.json", "w") as fobj:
     json.dump(results, fobj, indent=2)
 
 print("=" * 80)
@@ -101,4 +101,4 @@ print(f"color-generation grid = {color_generation_grid} = q^2")
 print(f"threshold = {line_stabilizers}*{closure_count}/{color_generation_grid} = {threshold_value:.9f}")
 print(f"BT419 alpha^-1(0) = {bt405['prediction']['alpha_inv_0_pred']:.9f}")
 print("BT420 checks passed.")
-print("Results saved to BT420_results.json")
+print("Results saved to data/BT420_results.json")

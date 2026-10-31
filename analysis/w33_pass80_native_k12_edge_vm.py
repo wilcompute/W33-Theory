@@ -30,7 +30,7 @@ from typing import Iterable
 import w33_pass79_full_closure as pass79
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "w33_pass80_native_k12_edge_vm.json"
+OUTPUT = ROOT / "data/w33_pass80_native_k12_edge_vm.json"
 
 K12_TRIANGLE_CHECKS: list[tuple[int, int, int]] = [
     (3, 4, 10),

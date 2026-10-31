@@ -136,9 +136,9 @@ def main():
         ],
         "checks": checks,
     }
-    with open("w33_pass87_theta_lattice.json", "w", encoding="utf-8") as fh:
+    with open("data/w33_pass87_theta_lattice.json", "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2)
-    print("[wrote] w33_pass87_theta_lattice.json")
+    print("[wrote] data/w33_pass87_theta_lattice.json")
     return 0 if all_ok else 1
 
 

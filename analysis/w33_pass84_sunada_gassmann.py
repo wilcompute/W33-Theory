@@ -82,7 +82,7 @@ def main():
     m_edges = 240
 
     # T3 -- same class number, different class group (from Pass 82)
-    p82 = json.loads((ROOT / "w33_pass82_critical_group.json").read_text())
+    p82 = json.loads((ROOT / "data/w33_pass82_critical_group.json").read_text())
     KW = p82["critical_group_W33"]["invariant_factors"]
     KQ = p82["critical_group_Q43"]["invariant_factors"]
     same_class_number = (
@@ -175,8 +175,8 @@ def main():
         ),
         "checks": checks,
     }
-    (ROOT / "w33_pass84_sunada_gassmann.json").write_text(json.dumps(payload, indent=2))
-    print("[wrote] w33_pass84_sunada_gassmann.json")
+    (ROOT / "data/w33_pass84_sunada_gassmann.json").write_text(json.dumps(payload, indent=2))
+    print("[wrote] data/w33_pass84_sunada_gassmann.json")
     return 0 if all_ok else 1
 
 

@@ -140,6 +140,6 @@ output = {
     "W_mass_vs_CDF": {"M_W_sub": M_W_sub, "M_W_CDF": M_W_CDF, "diff_GeV": abs(M_W_sub-M_W_CDF)},
     "status": "All S,T,U within 1 sigma of LEP. EW precision consistent. M_W between PDG and CDF."
 }
-with open("BT405_results.json", "w") as fout:
+with open("data/BT405_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT405_results.json")
+print("\nResults saved to data/BT405_results.json")

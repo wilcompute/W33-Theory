@@ -364,10 +364,10 @@ results = {
     "note": "W(E6) orbit decomposition of 255 cosets is the next sub-step."
 }
 
-with open("PASS_99A_lambda_c_results.json", "w") as f:
+with open("data/PASS_99A_lambda_c_results.json", "w") as f:
     json.dump(results, f, indent=2)
 
-print("\n[Pass 99A] Results saved to PASS_99A_lambda_c_results.json")
+print("\n[Pass 99A] Results saved to data/PASS_99A_lambda_c_results.json")
 print(f"\n{'='*60}")
 print("PASS 99A COMPLETE")
 print(f"  det(Gram) = {det_val} == 2^8: {abs(det_val-256)<2}")

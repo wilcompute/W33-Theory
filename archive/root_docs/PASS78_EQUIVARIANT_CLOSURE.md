@@ -1,7 +1,7 @@
 # Pass 78 -- Equivariant zeta / Terwilliger / code-boundary closure
 
 **Status: PASS** -- witness `analysis/w33_pass78_equivariant_closure.py`, JSON
-`w33_pass78_equivariant_closure.json`, and focused test
+`data/w33_pass78_equivariant_closure.json`, and focused test
 `tests/test_pass78_equivariant_closure.py`.
 
 Pass 77 proved the rank-3 point-module representation and the W/Q ovoid

@@ -176,6 +176,6 @@ output = {
     "hubble_tension_note": "Substrate predicts H_0 = 67.2 km/s/Mpc, agreeing with CMB/Planck side.",
     "status": "H_0 derived to 0.30%. Omega_b to 9.4%. Hubble tension resolved in favor of Planck."
 }
-with open("BT398_results.json", "w") as fout:
+with open("data/BT398_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT398_results.json")
+print("\nResults saved to data/BT398_results.json")

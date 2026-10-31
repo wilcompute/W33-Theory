@@ -165,5 +165,5 @@ def write_q8_claim_ledger(path: Path) -> Path:
 
 
 if __name__ == "__main__":
-    output = write_q8_claim_ledger(Path("w33_q8_claim_ledger.json"))
+    output = write_q8_claim_ledger(Path("data/w33_q8_claim_ledger.json"))
     print(output)

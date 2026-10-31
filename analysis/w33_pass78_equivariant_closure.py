@@ -45,7 +45,7 @@ if str(ANALYSIS) not in sys.path:
 
 from w33_spread_double_six_association_scheme import spread_report  # noqa: E402
 
-OUTPUT = ROOT / "w33_pass78_equivariant_closure.json"
+OUTPUT = ROOT / "data/w33_pass78_equivariant_closure.json"
 
 
 def counter_to_json(counter: Counter) -> dict[str, int]:
@@ -118,7 +118,7 @@ def spectrum_profile(matrix: np.ndarray) -> dict[str, int]:
 
 
 def track_2_local_algebra(A: np.ndarray) -> dict:
-    pass77 = json.loads((ROOT / "w33_pass77_frontier.json").read_text(encoding="utf-8"))
+    pass77 = json.loads((ROOT / "data/w33_pass77_frontier.json").read_text(encoding="utf-8"))
     terwilliger_dim = pass77["track4_terwilliger"]["dim_terwilliger_algebra"]
     base = 0
     neighbors = np.nonzero(A[base])[0].tolist()
@@ -148,7 +148,7 @@ def track_2_local_algebra(A: np.ndarray) -> dict:
 
 
 def track_3_ovoid_spread() -> dict:
-    pass77 = json.loads((ROOT / "w33_pass77_frontier.json").read_text(encoding="utf-8"))
+    pass77 = json.loads((ROOT / "data/w33_pass77_frontier.json").read_text(encoding="utf-8"))
     ovoids = pass77["track2_3_ovoid_separator"]
     spreads = spread_report()
     return {
@@ -231,7 +231,7 @@ def track_5_weil_clifford(gap: dict | None) -> dict:
 
 def track_6_spence_boundary() -> dict:
     pass76 = json.loads(
-        (ROOT / "w33_pass76_cospectral_mates.json").read_text(encoding="utf-8")
+        (ROOT / "data/w33_pass76_cospectral_mates.json").read_text(encoding="utf-8")
     )
     t1 = pass76["track1_Q43_mate"]
     return {

@@ -60,7 +60,7 @@ def test_pass79_full_closure_payload() -> None:
 
 
 def test_pass79_json_result_matches_verifier_when_present() -> None:
-    path = Path("w33_pass79_full_closure.json")
+    path = Path("data/w33_pass79_full_closure.json")
     if not path.exists():
         return
     payload = json.loads(path.read_text(encoding="utf-8"))

@@ -25,7 +25,7 @@ checks the finite determinants.  The general factorization is not new here.
   the (80)-vertex, (160)-edge, degree-four Levi graph, its spectrum
   ({pm4,pmsqrt6,0}) with multiplicities (1,24,30), cycle rank (81),
   and exactly (1,620) simple 8-cycles.
-- `w33_pass75_zeta_equidistribution.json` already records the same (1,620)
+- `data/w33_pass75_zeta_equidistribution.json` already records the same (1,620)
   octagons as the undirected shortest incidence-graph primes, with oriented
   prime count (3,240).
 

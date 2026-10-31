@@ -49,6 +49,6 @@ so each track states what is already documented and computes only the genuine de
 - disc_r = 40 = v, disc_s = 28 = v−k = dim SO(8) (index.html line 18122).
 
 ## Files
-- `analysis/w33_pass74_zeta_frontier.py`, `w33_pass74_zeta_frontier.json` — witness + certificate.
+- `analysis/w33_pass74_zeta_frontier.py`, `data/w33_pass74_zeta_frontier.json` — witness + certificate.
 - `tests/test_pass74_zeta_frontier.py` — 7 assertions.
 - `w33_paper.tex` — new subsection "The Zeta Frontier" after the Prime-Geodesic Expansion.

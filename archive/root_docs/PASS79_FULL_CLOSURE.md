@@ -111,7 +111,7 @@ labelling witness.
 python3 analysis/w33_pass79_full_closure.py
 python3 -m py_compile analysis/w33_pass79_full_closure.py
 /usr/bin/gap -q analysis/w33_pass79_edge_terwilliger.g
-python3 -m json.tool w33_pass79_full_closure.json
+python3 -m json.tool data/w33_pass79_full_closure.json
 ```
 
 Current status: `PASS`.

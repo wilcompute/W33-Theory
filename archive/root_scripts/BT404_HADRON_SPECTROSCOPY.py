@@ -136,6 +136,6 @@ results = {
     "meson_status": "Tree-level GOR: pi~50%, K~60% off. Vector mesons 1-10% via tier interpolation. ChPT needed.",
     "status": "Baryon octet: all < 0.5%. Omega^- EXACT at 0.027%. Delta EXACT. Mesons need ChPT."
 }
-with open("BT404_results.json", "w") as fout:
+with open("data/BT404_results.json", "w") as fout:
     json.dump(results, fout, indent=2)
-print("\nResults saved to BT404_results.json")
+print("\nResults saved to data/BT404_results.json")

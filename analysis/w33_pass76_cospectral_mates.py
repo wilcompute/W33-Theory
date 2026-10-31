@@ -312,9 +312,9 @@ def main():
         "track3_integral_invariants": t3,
         "checks": checks,
     }
-    with open("w33_pass76_cospectral_mates.json", "w", encoding="utf-8") as fh:
+    with open("data/w33_pass76_cospectral_mates.json", "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2)
-    print("[wrote] w33_pass76_cospectral_mates.json")
+    print("[wrote] data/w33_pass76_cospectral_mates.json")
     return 0 if all_ok else 1
 
 

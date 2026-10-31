@@ -103,6 +103,6 @@ result = {
     "err_pct": abs(Omega_approx-Omega_pdg)/Omega_pdg*100,
     "status": f"Omega_DM h^2 = {Omega_approx:.3f} [Planck: {Omega_pdg}] {abs(Omega_approx-Omega_pdg)/Omega_pdg*100:.1f}%. WIMP miracle: factor 1.46 off. Sommerfeld correction needed for precise value."
 }
-with open("BT410_results.json", "w") as f:
+with open("data/BT410_results.json", "w") as f:
     json.dump(result, f, indent=2)
-print("\nResults saved to BT410_results.json")
+print("\nResults saved to data/BT410_results.json")

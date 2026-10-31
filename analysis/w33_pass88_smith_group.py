@@ -162,7 +162,7 @@ def main():
     kQ, dQ = gf2_min_distance(Aq)
 
     # critical groups (Pass 82)
-    p82 = json.loads((ROOT / "w33_pass82_critical_group.json").read_text())
+    p82 = json.loads((ROOT / "data/w33_pass82_critical_group.json").read_text())
     KW = p82["critical_group_W33"]["invariant_factors"]
     KQ = p82["critical_group_Q43"]["invariant_factors"]
 
@@ -260,8 +260,8 @@ def main():
         ],
         "checks": checks,
     }
-    (ROOT / "w33_pass88_smith_group.json").write_text(json.dumps(payload, indent=2))
-    print("[wrote] w33_pass88_smith_group.json")
+    (ROOT / "data/w33_pass88_smith_group.json").write_text(json.dumps(payload, indent=2))
+    print("[wrote] data/w33_pass88_smith_group.json")
     return 0 if all_ok else 1
 
 

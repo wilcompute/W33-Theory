@@ -132,10 +132,10 @@ def main():
         'examples': results[:5],
     }
 
-    with open('heawood_from_fano_7cycles.json','w',encoding='utf-8') as f:
+    with open('data/heawood_from_fano_7cycles.json','w',encoding='utf-8') as f:
         json.dump(out,f,indent=2)
 
-    print('Wrote heawood_from_fano_7cycles.json', out['fano_7cycles'])
+    print('Wrote data/heawood_from_fano_7cycles.json', out['fano_7cycles'])
 
 
 if __name__=='__main__':

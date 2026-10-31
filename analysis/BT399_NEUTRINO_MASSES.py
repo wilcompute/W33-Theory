@@ -164,6 +164,6 @@ output = {
     "m_RHN2_GeV": m_RHN2_GeV,
     "status": "Delta_m21^2 0.4%, sum 93 meV < 120 meV Planck bound. Normal hierarchy predicted."
 }
-with open("BT399_results.json", "w") as fout:
+with open("data/BT399_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT399_results.json")
+print("\nResults saved to data/BT399_results.json")

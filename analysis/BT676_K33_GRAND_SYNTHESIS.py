@@ -181,11 +181,11 @@ results = {
     ]
 }
 
-with open('BT676_summary.json', 'w') as f:
+with open('data/BT676_summary.json', 'w') as f:
     json.dump(results, f, indent=2)
 
 print("\n=== BT676 COMPLETE ===")
-print("Results saved to BT676_summary.json")
+print("Results saved to data/BT676_summary.json")
 
 if __name__ == '__main__':
     print("\nAll BT676 computations verified numerically.")

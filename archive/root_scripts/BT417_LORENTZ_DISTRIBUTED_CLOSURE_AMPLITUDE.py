@@ -105,7 +105,7 @@ results = {
     "checks": checks,
 }
 
-with open("BT417_results.json", "w") as fobj:
+with open("data/BT417_results.json", "w") as fobj:
     json.dump(results, fobj, indent=2)
 
 print("=" * 80)
@@ -122,4 +122,4 @@ print(f"  W33 c        = {w33_c:.12f}  error = {rel_err(w33_c, predicted_c)*100:
 print(f"  M_amp error to W33 = {amplitude_lock['relative_error_to_W33']*100:.4f}%")
 print(f"  M_amp direction residual = {amplitude_lock['relative_residual_norm']:.6e}")
 print("BT417 checks passed.")
-print("Results saved to BT417_results.json")
+print("Results saved to data/BT417_results.json")

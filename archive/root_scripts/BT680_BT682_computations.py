@@ -148,5 +148,5 @@ summary = {
     "BT681": {"Ihara_factorization": "(1-u^2)(1-4u^2)(1+2u^2)^4", "Theta_at_log2_3": 3.25},
     "BT682": {"code": "[[9,4,4]]", "transversal_gates": 36, "gate_group": "subgroup of GL(4,F_2)"}
 }
-with open('BT680_BT682_summary.json','w') as f: json.dump(summary, f, indent=2)
-print("Summary saved to BT680_BT682_summary.json")
+with open('data/BT680_BT682_summary.json','w') as f: json.dump(summary, f, indent=2)
+print("Summary saved to data/BT680_BT682_summary.json")

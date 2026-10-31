@@ -164,8 +164,8 @@ def main():
         ),
         "checks": checks,
     }
-    (ROOT / "w33_pass90_aut.json").write_text(json.dumps(payload, indent=2))
-    print("[wrote] w33_pass90_aut.json")
+    (ROOT / "data/w33_pass90_aut.json").write_text(json.dumps(payload, indent=2))
+    print("[wrote] data/w33_pass90_aut.json")
     return 0 if all_ok else 1
 
 

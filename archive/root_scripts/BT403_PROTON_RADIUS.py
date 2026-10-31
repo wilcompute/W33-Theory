@@ -122,6 +122,6 @@ output = {
     "formula": "r_p = (hbar*c / Lambda_QCD) * sqrt(q/(q+1)) * (1 - sin^2(theta_W)/q)",
     "status": "r_p from Lambda_QCD + q-simplex + EW correction. Final error TBD."
 }
-with open("BT403_results.json", "w") as fout:
+with open("data/BT403_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT403_results.json")
+print("\nResults saved to data/BT403_results.json")

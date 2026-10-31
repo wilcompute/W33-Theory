@@ -197,8 +197,8 @@ results = {
     }
 }
 
-with open("BT1642_ringel_csaszar_clique_complex.json", "w") as f:
+with open("data/BT1642_ringel_csaszar_clique_complex.json", "w") as f:
     json.dump(results, f, indent=2)
 
-print("\nAll assertions passed. Results saved to BT1642_ringel_csaszar_clique_complex.json")
+print("\nAll assertions passed. Results saved to data/BT1642_ringel_csaszar_clique_complex.json")
 print("BT1642 COMPLETE ✓")

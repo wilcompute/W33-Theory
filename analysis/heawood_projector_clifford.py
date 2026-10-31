@@ -72,10 +72,10 @@ def main():
         'q': q,
     }
 
-    with open('heawood_clifford_projector_summary.json', 'w', encoding='utf-8') as f:
+    with open('data/heawood_clifford_projector_summary.json', 'w', encoding='utf-8') as f:
         json.dump(comp, f, indent=2)
 
-    print('Wrote heawood_clifford_projector_summary.json', comp)
+    print('Wrote data/heawood_clifford_projector_summary.json', comp)
 
 
 if __name__ == '__main__':

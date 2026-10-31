@@ -162,6 +162,6 @@ output = {
     },
     "status": "All CMB peaks < 4%. Spectral tilt 0.75%. Tensor-to-scalar passes BICEP/Keck."
 }
-with open("BT400a_results.json", "w") as fout:
+with open("data/BT400a_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("Results saved to BT400a_results.json")
+print("Results saved to data/BT400a_results.json")

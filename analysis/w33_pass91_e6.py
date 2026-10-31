@@ -133,8 +133,8 @@ def main():
         "at q=3 this is PSp(4,3):2 = W(E6) = SO_5(3).",
         "checks": checks,
     }
-    (ROOT / "w33_pass91_e6.json").write_text(json.dumps(payload, indent=2))
-    print("[wrote] w33_pass91_e6.json")
+    (ROOT / "data/w33_pass91_e6.json").write_text(json.dumps(payload, indent=2))
+    print("[wrote] data/w33_pass91_e6.json")
     return 0 if all_ok else 1
 
 

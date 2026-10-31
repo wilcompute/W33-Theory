@@ -249,6 +249,6 @@ results = {
     "free_parameters": 0,
     "status": "All 4 Wolfenstein parameters substrate-derived to < 10% with zero free params"
 }
-with open("BT389_results.json", "w") as f:
+with open("data/BT389_results.json", "w") as f:
     json.dump(results, f, indent=2)
-print("Results saved to BT389_results.json")
+print("Results saved to data/BT389_results.json")

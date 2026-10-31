@@ -128,10 +128,10 @@ def run():
         'median_of_median_angles': median_of_medians,
     }
 
-    with open('heawood_spiral_closedform.json', 'w', encoding='utf-8') as f:
+    with open('data/heawood_spiral_closedform.json', 'w', encoding='utf-8') as f:
         json.dump(out, f, indent=2)
 
-    print('Wrote heawood_spiral_closedform.json')
+    print('Wrote data/heawood_spiral_closedform.json')
 
 
 if __name__ == '__main__':

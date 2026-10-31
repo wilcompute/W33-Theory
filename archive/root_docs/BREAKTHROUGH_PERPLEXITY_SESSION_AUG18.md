@@ -123,7 +123,7 @@ reads out the trace of whatever gate you applied to the future.
 ## Files Pushed
 
 - `analysis/BT1642_ringel_csaszar_clique_complex.py` — Full computation + verification
-- `BT1642_ringel_csaszar_clique_complex.json` — Results JSON
+- `data/BT1642_ringel_csaszar_clique_complex.json` — Results JSON
 - `BREAKTHROUGH_PERPLEXITY_SESSION_AUG18.md` — This file
 
 ## Next Suggested Breakthroughs

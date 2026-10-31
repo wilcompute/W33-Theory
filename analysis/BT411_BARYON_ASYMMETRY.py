@@ -131,6 +131,6 @@ result = {
     "Davidson_Ibarra": "PASSES (m_RHN >> 1e9 GeV)",
     "status": f"J_CP = {J_sub:.3e} [PDG {J_pdg:.3e}] 2.9%. GUT leptogenesis order-of-magnitude match. Full Yukawa texture needed."
 }
-with open("BT411_results.json", "w") as f:
+with open("data/BT411_results.json", "w") as f:
     json.dump(result, f, indent=2)
-print("\nResults saved to BT411_results.json")
+print("\nResults saved to data/BT411_results.json")

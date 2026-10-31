@@ -669,9 +669,9 @@ results = {
     "critical_test": "theta_23 = 45 degrees (maximal mixing) — JUNO 2024+"
 }
 
-with open("W35_FALSIFIABILITY_results.json", "w") as fh:
+with open("data/W35_FALSIFIABILITY_results.json", "w") as fh:
     json.dump(results, fh, indent=2)
-print("\nResults written to W35_FALSIFIABILITY_results.json")
+print("\nResults written to data/W35_FALSIFIABILITY_results.json")
 
 # Final summary
 print("\n" + "=" * 70)

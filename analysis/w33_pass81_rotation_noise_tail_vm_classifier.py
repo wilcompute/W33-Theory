@@ -30,7 +30,7 @@ import w33_pass79_full_closure as pass79
 import w33_pass80_native_k12_edge_vm as pass80
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "w33_pass81_rotation_noise_tail_vm_classifier.json"
+OUTPUT = ROOT / "data/w33_pass81_rotation_noise_tail_vm_classifier.json"
 GAP_TAIL = ROOT / "analysis" / "w33_pass81_hashimoto_tail_decomposition.g"
 PACKET_VM = ROOT / "analysis" / "w33_packet_vm.py"
 

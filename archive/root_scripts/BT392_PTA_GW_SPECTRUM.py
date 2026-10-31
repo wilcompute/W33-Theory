@@ -178,6 +178,6 @@ output = {
     },
     "status": "FIRST FALSIFIABLE PTA PREDICTION - all from substrate with zero free parameters"
 }
-with open("BT392_results.json", "w") as f:
+with open("data/BT392_results.json", "w") as f:
     json.dump(output, f, indent=2)
-print("Results saved to BT392_results.json")
+print("Results saved to data/BT392_results.json")

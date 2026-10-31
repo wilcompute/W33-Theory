@@ -93,7 +93,7 @@ six-vertex profile resolves the final twin.
 python3 analysis/w33_pass81_rotation_noise_tail_vm_classifier.py
 /usr/bin/gap -q analysis/w33_pass81_hashimoto_tail_decomposition.g
 python3 -m py_compile analysis/w33_pass81_rotation_noise_tail_vm_classifier.py
-python3 -m json.tool w33_pass81_rotation_noise_tail_vm_classifier.json
+python3 -m json.tool data/w33_pass81_rotation_noise_tail_vm_classifier.json
 ```
 
 Current status: `PASS`.

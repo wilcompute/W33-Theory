@@ -184,9 +184,9 @@ def main():
             "Observable closure survives Clifford transport (BT1603, entropy-preserving)"
         ]
     }
-    with open("BT1637_witting_sm_closure_results.json", "w") as fh:
+    with open("data/BT1637_witting_sm_closure_results.json", "w") as fh:
         json.dump(summary, fh, indent=2)
-    print("\nResults written to BT1637_witting_sm_closure_results.json")
+    print("\nResults written to data/BT1637_witting_sm_closure_results.json")
 
     print("\n" + "=" * 70)
     print(f"BT1637 STATUS: {'PASS' if closure_theorem_holds else 'FAIL'}")

@@ -272,10 +272,10 @@ summary = {
     "census": census
 }
 
-with open("PASS_100A_3rank_7rank_results.json", "w") as f:
+with open("data/PASS_100A_3rank_7rank_results.json", "w") as f:
     json.dump(summary, f, indent=2)
 
-print("\n[Pass 100A] Results saved to PASS_100A_3rank_7rank_results.json")
+print("\n[Pass 100A] Results saved to data/PASS_100A_3rank_7rank_results.json")
 print(f"\n{'='*60}")
 print("PASS 100A COMPLETE")
 print(f"  Graphs analyzed: {len(graphs)}")

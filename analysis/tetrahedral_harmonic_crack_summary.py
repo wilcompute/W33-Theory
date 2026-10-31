@@ -93,10 +93,10 @@ def main():
         'natural_constants_alignment': summarize_natural_constants(),
     }
 
-    with open('tetrahedral_harmonic_crack_summary.json', 'w', encoding='utf-8') as f:
+    with open('data/tetrahedral_harmonic_crack_summary.json', 'w', encoding='utf-8') as f:
         json.dump(out, f, indent=2)
 
-    print('Wrote tetrahedral_harmonic_crack_summary.json')
+    print('Wrote data/tetrahedral_harmonic_crack_summary.json')
     print('Summary:', out['heawood_fano_alignment'])
 
 

@@ -32,7 +32,7 @@ def laplacian(G):
 
 def main():
     # load spiral closedform json
-    with open('heawood_spiral_closedform.json','r',encoding='utf-8') as f:
+    with open('data/heawood_spiral_closedform.json','r',encoding='utf-8') as f:
         spiral = json.load(f)
     mid_vals = np.array(spiral.get('mid_vals', []))
     phases = np.array(spiral.get('permutation_7cycle_phases', []))

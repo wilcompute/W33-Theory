@@ -153,6 +153,6 @@ output = {
     "vacant_tiers_18_57": [c["tier"] for c in dm_candidates],
     "status": "Cold DM at tier l*k-mu=20 (4.0 TeV), FCC-hh testable. RHN at tier 47."
 }
-with open("BT397_results.json", "w") as fout:
+with open("data/BT397_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT397_results.json")
+print("\nResults saved to data/BT397_results.json")

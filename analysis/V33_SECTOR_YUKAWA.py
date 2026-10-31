@@ -210,5 +210,5 @@ report = {
         "l7": 22336560, "l8": 152647416, "l9": 587631258,
     },
 }
-Path(ROOT / "V33_sector_yukawa_report.json").write_text(json.dumps(report, indent=2))
-print("\n\nReport saved to V33_sector_yukawa_report.json")
+Path(ROOT / "data/V33_sector_yukawa_report.json").write_text(json.dumps(report, indent=2))
+print("\n\nReport saved to data/V33_sector_yukawa_report.json")

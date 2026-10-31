@@ -377,6 +377,6 @@ results = {
     "checks_count": len(checks),
 }
 
-with open("BT478_results.json", "w") as fp:
+with open("data/BT478_results.json", "w") as fp:
     json.dump(results, fp, indent=2)
-print("\nResults saved to BT478_results.json")
+print("\nResults saved to data/BT478_results.json")

@@ -148,7 +148,7 @@ results = {
     "checks": checks,
 }
 
-with open("BT414_results.json", "w") as fobj:
+with open("data/BT414_results.json", "w") as fobj:
     json.dump(results, fobj, indent=2)
 
 print("=" * 80)
@@ -176,4 +176,4 @@ print("")
 print("Reciprocity:")
 print(f"  (mu/F5)*F5 = {reciprocity_product:.6f} = mu")
 print("BT414 checks passed.")
-print("Results saved to BT414_results.json")
+print("Results saved to data/BT414_results.json")

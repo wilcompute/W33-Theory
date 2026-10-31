@@ -521,9 +521,9 @@ def main():
             "disc_r_40_disc_s_28": "index.html line 18122 (disc_r=v=40, disc_s=v-k=28=dim SO(8))",
         },
     }
-    with open("w33_pass74_zeta_frontier.json", "w", encoding="utf-8") as fh:
+    with open("data/w33_pass74_zeta_frontier.json", "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2)
-    print("[wrote] w33_pass74_zeta_frontier.json")
+    print("[wrote] data/w33_pass74_zeta_frontier.json")
     return 0 if all_ok else 1
 
 

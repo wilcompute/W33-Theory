@@ -170,6 +170,6 @@ output = {
     "Lambda_QCD_err_pct": abs(Lambda_QCD_sub - Lambda_QCD_pdg)/Lambda_QCD_pdg*100,
     "status": "BREAKTHROUGH - proton mass 0.035% from q*k+F5 tier formula"
 }
-with open("BT395_results.json", "w") as fout:
+with open("data/BT395_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT395_results.json")
+print("\nResults saved to data/BT395_results.json")

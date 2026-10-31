@@ -840,9 +840,9 @@ print(f"  dim(E8) = {E+8} = E+8 ✓")
 print(f"  VOA V♮ central charge = {f_mult} = f_mult ✓")
 
 # Write results to JSON
-with open("W34_GRAND_UNIFIED_results.json", "w") as fp:
+with open("data/W34_GRAND_UNIFIED_results.json", "w") as fp:
     json.dump(results, fp, indent=2, default=str)
-print(f"\nFull results written to W34_GRAND_UNIFIED_results.json")
+print(f"\nFull results written to data/W34_GRAND_UNIFIED_results.json")
 print(SEP)
 print("W(3,3) GRAND UNIFIED SYNTHESIS COMPLETE")
 print(SEP)

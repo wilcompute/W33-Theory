@@ -127,6 +127,6 @@ output = {
     "DM_mass_TeV":        m_DM_sub / 1e6,
     "status": f"Substrate s-quark HVP shift accounts for ~{HVP_shift_x11/Discrepancy*100:.0f}% of g-2 discrepancy. Reduced to {residual/48:.1f} sigma. Remainder attributable to tier-20 DM loop."
 }
-with open("BT402_results.json", "w") as fout:
+with open("data/BT402_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT402_results.json")
+print("\nResults saved to data/BT402_results.json")

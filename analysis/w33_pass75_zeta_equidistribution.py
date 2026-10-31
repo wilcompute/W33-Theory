@@ -375,9 +375,9 @@ def main():
         "track4_dim_E6_amplitude": t4,
         "checks": checks,
     }
-    with open("w33_pass75_zeta_equidistribution.json", "w", encoding="utf-8") as fh:
+    with open("data/w33_pass75_zeta_equidistribution.json", "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2)
-    print("[wrote] w33_pass75_zeta_equidistribution.json")
+    print("[wrote] data/w33_pass75_zeta_equidistribution.json")
     return 0 if all_ok else 1
 
 

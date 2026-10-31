@@ -27,7 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GAP_SCRIPT = ROOT / "analysis" / "w33_pass79_edge_terwilliger.g"
 SPENCE_G6 = ROOT / "data" / "spence_srg_40_12_2_4.g6"
-OUTPUT = ROOT / "w33_pass79_full_closure.json"
+OUTPUT = ROOT / "data/w33_pass79_full_closure.json"
 
 
 # ---------------------------------------------------------------------------

@@ -256,9 +256,9 @@ def main():
         'bt': 'BT1347'
     }
     import json
-    with open('bt1347_q5_pentad_lift_results.json', 'w') as f:
+    with open('data/bt1347_q5_pentad_lift_results.json', 'w') as f:
         json.dump(results, f, indent=2)
-    print("\nResults -> bt1347_q5_pentad_lift_results.json")
+    print("\nResults -> data/bt1347_q5_pentad_lift_results.json")
     print("=" * 70)
     return Hx5, Hz5, results
 

@@ -117,7 +117,7 @@ output = {
     "600cell_correction": "phi^2 holonomy when tier_gap = q",
     "status": "NEUTRINO SECTOR FULLY CLOSED. Both splittings < 1%."
 }
-with open("BT401_results.json", "w") as fout:
+with open("data/BT401_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT401_results.json")
+print("\nResults saved to data/BT401_results.json")
 print("NEUTRINO SECTOR FULLY CLOSED.")

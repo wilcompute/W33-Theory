@@ -160,6 +160,6 @@ output = {
     "J_PMNS_substrate": J_PMNS_sub,
     "status": "Full PMNS matrix derived: theta_12 0.33%, theta_13 1.3%, theta_23 4.1%, delta_CP within 3-sigma"
 }
-with open("BT393_results.json", "w") as fout:
+with open("data/BT393_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT393_results.json")
+print("\nResults saved to data/BT393_results.json")

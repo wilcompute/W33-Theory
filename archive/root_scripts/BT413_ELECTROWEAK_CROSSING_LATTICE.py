@@ -82,7 +82,7 @@ def rel_err(value, target):
 
 
 def load_bt387_frontier():
-    path = Path("BT387_results.json")
+    path = Path("data/BT387_results.json")
     if not path.exists():
         return {"available": False}
     with path.open() as fobj:

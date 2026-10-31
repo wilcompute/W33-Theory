@@ -16,7 +16,7 @@ Key claims and evidence:
 
   $$R = \frac{3 + \sqrt{2}}{3 - \sqrt{2}} = \frac{11 + 6\sqrt{2}}{7} \approx 2.7836116248912246$$
 
-  and is exactly represented in `heawood_spiral_closedform.json`.
+  and is exactly represented in `data/heawood_spiral_closedform.json`.
 
 - Removing the constant and bipartite sign modes and normalizing the mid-shell by $\sqrt{2}$ yields an involution operator on the 12D mid-shell. The projector
 
@@ -24,7 +24,7 @@ Key claims and evidence:
 
   (constructed in `analysis/heawood_projector_clifford.py`) is idempotent in the mid-subspace and has trace $6$ (rank 6) to numerical precision.
 
-- The 48 Fano 7-cycle automorphisms lift to valid Heawood automorphisms; their action on the mid-subspace yields unitary rotations whose phase statistics are reported in `heawood_spiral_closedform.json` (mean-of-means approximately zero, indicating no net global rotation direction across the family).
+- The 48 Fano 7-cycle automorphisms lift to valid Heawood automorphisms; their action on the mid-subspace yields unitary rotations whose phase statistics are reported in `data/heawood_spiral_closedform.json` (mean-of-means approximately zero, indicating no net global rotation direction across the family).
 
 
 ## Files and scripts
@@ -32,7 +32,7 @@ Key claims and evidence:
 - `analysis/heawood_from_fano_7cycles.py` — enumerates and maps Fano collineations to Heawood automorphisms.
 - `analysis/heawood_fano7_tetra_alignment.py` — compares tetrahedral oscillator to 7-cycle action.
 - `analysis/heawood_projector_clifford.py` — constructs the centered operator, isolates the mid-shell, normalizes, and builds `P_mid` to verify idempotency and rank.
-- `analysis/heawood_spiral_closedform.py` — produces `heawood_spiral_closedform.json` including exact closed-form ratio and 7-cycle phase statistics.
+- `analysis/heawood_spiral_closedform.py` — produces `data/heawood_spiral_closedform.json` including exact closed-form ratio and 7-cycle phase statistics.
 - `analysis/tetrahedral_harmonic_crack_summary.py` — aggregated numerical summary.
 
 

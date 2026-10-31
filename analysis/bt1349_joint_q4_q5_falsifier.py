@@ -230,9 +230,9 @@ def main():
         'threshold_Q5': THRESH_Q5,
         'bt': 'BT1349'
     }
-    with open('bt1349_joint_q4_q5_falsifier_results.json', 'w') as f:
+    with open('data/bt1349_joint_q4_q5_falsifier_results.json', 'w') as f:
         json.dump(output, f, indent=2)
-    print("\nResults -> bt1349_joint_q4_q5_falsifier_results.json")
+    print("\nResults -> data/bt1349_joint_q4_q5_falsifier_results.json")
     print("=" * 70)
     return output
 

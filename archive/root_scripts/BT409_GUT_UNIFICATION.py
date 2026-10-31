@@ -185,6 +185,6 @@ output = {
     "sin2_tW_GUT": q/(2**q),
     "status": "GUT tier 26 gives M_GUT=2.07e15 GeV. Proton lifetime in HyperK window. SHARP PREDICTION."
 }
-with open("BT409_results.json", "w") as fout:
+with open("data/BT409_results.json", "w") as fout:
     json.dump(output, fout, indent=2)
-print("\nResults saved to BT409_results.json")
+print("\nResults saved to data/BT409_results.json")

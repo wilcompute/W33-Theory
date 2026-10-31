@@ -201,9 +201,9 @@ def main():
         "f1_dictionary": dictionary,
         "checks": checks,
     }
-    with open("w33_pass83_class_number_formula.json", "w", encoding="utf-8") as fh:
+    with open("data/w33_pass83_class_number_formula.json", "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2)
-    print("[wrote] w33_pass83_class_number_formula.json")
+    print("[wrote] data/w33_pass83_class_number_formula.json")
     return 0 if all_ok else 1
 
 

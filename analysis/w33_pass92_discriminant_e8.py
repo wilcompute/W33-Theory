@@ -188,9 +188,9 @@ def main():
         "grounding": "E8 lattice: E8/2E8 has 120 norm-1 and 135 nonzero isotropic vectors under O+_8(2).",
         "checks": checks,
     }
-    with open("w33_pass92_discriminant_e8.json", "w", encoding="utf-8") as fh:
+    with open("data/w33_pass92_discriminant_e8.json", "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2)
-    print("[wrote] w33_pass92_discriminant_e8.json")
+    print("[wrote] data/w33_pass92_discriminant_e8.json")
     return 0 if all_ok else 1
 
 

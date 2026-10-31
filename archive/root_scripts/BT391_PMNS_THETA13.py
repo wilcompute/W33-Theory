@@ -175,6 +175,6 @@ output = {
     "formula_deltaCP": "pi + delta_CKM * (phi - 1)",
     "status": "theta_13 within 4.9%, delta_CP within 14%"
 }
-with open("BT391_results.json", "w") as f:
+with open("data/BT391_results.json", "w") as f:
     json.dump(output, f, indent=2)
-print("\nResults saved to BT391_results.json")
+print("\nResults saved to data/BT391_results.json")

@@ -168,6 +168,6 @@ output = {
     "mean_error_pct": statistics.mean(errors),
     "status": "All 9 charged fermion masses substrate-derived from tier formula"
 }
-with open("BT390_results.json", "w") as f:
+with open("data/BT390_results.json", "w") as f:
     json.dump(output, f, indent=2)
-print("Results saved to BT390_results.json")
+print("Results saved to data/BT390_results.json")
