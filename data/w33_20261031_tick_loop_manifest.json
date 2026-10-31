@@ -1,0 +1,28 @@
+{
+  "schema": "w33.tick-loop-rigidity.v1",
+  "reviewed_baseline": "ccbd086d1",
+  "staged_blob_sha256": {
+    "analysis/w33_20261031_tick_loop_rigidity.py": "17e5c516ba832848a79446deb04d5caea9db521680dc70afaf2d2fec7dbd1edb",
+    "analysis/2026-10-31_tick_loop_algebra_rigidity.md": "c879f583509567431dc82b8bbe0b953e822b05278fcd9ffc939626cbf2274870",
+    "tests/test_tick_loop_rigidity.py": "c0fecee1f4d639427cb3a7c2d2df22194a655558d793e695251ce80daaa0c879",
+    "data/w33_20261031_tick_loop_rigidity.json": "84cf00338df2b409174a74a09d1863e01df570cfa7f852b1aefbb4f081717847",
+    "data/w33_20261031_tick_loop_validation.txt": "220260e1406862e110b16157037b62aea7830e95f163098470cbc7501100e822",
+    "data/w33_20261031_third_continuation_manifest.json": "5540d86afb0856c4053427e4e9170726357ba7d569701d71c4a55e3b49deca8f",
+    "RESULTS_INDEX.md": "f30b98a451fd121a77b3bb6c62719c70bf83ab5ba43d7b6f146c515d5c4dc7e3"
+  },
+  "raw_worktree_sha256": {
+    "analysis/w33_20261031_tick_loop_rigidity.py": "17e5c516ba832848a79446deb04d5caea9db521680dc70afaf2d2fec7dbd1edb",
+    "analysis/2026-10-31_tick_loop_algebra_rigidity.md": "c879f583509567431dc82b8bbe0b953e822b05278fcd9ffc939626cbf2274870",
+    "tests/test_tick_loop_rigidity.py": "c0fecee1f4d639427cb3a7c2d2df22194a655558d793e695251ce80daaa0c879",
+    "data/w33_20261031_tick_loop_rigidity.json": "35706afbe1c3d69f30d8fde1487867cfb42b3d3e63976efad5210750128d7a68",
+    "data/w33_20261031_tick_loop_validation.txt": "220260e1406862e110b16157037b62aea7830e95f163098470cbc7501100e822",
+    "data/w33_20261031_third_continuation_manifest.json": "456b10d3ca80f78ce18544c0a04409e9421fed728f6fd17f23b85359c79fc215",
+    "RESULTS_INDEX.md": "eae27c5f51bc60127399d8b7c5a47962f0212f4d959c3b710e7f2652c491f9cf"
+  },
+  "inputs_sha256": {
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3",
+    "analysis/w33_20261031_tick_rate_entropy.py": "f27f4f056f7b6baa6b83280d2c4d98e038be7060d9f2256dfabb8863c4cb40cf"
+  },
+  "validation": "Five focused tests and producer replay PASS. Previous packet45 tests and five producer replays PASS. Full triple census uses floating arithmetic; selected witnesses use integer Eisenstein arithmetic; symmetry theorem is analytic.",
+  "scope": "No all-line diff reading, full paper reading, physical TOE, experimental validation or spontaneous chirality claim."
+}

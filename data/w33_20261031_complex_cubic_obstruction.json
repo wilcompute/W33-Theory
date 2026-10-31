@@ -1,0 +1,674 @@
+{
+  "status": "PROVED_NO_ARBITRARY_COMPLEX_MONOMIAL_DESCENT",
+  "group_controls": {
+    "projective_perfect": {
+      "order": 960,
+      "derived_order": 960,
+      "generators": [
+        [
+          0,
+          1,
+          2,
+          4,
+          3,
+          6,
+          5,
+          8,
+          7,
+          10,
+          9,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          26,
+          25,
+          24,
+          23,
+          22,
+          21,
+          20,
+          19
+        ],
+        [
+          0,
+          2,
+          1,
+          3,
+          4,
+          6,
+          5,
+          8,
+          7,
+          10,
+          9,
+          22,
+          21,
+          20,
+          19,
+          26,
+          25,
+          24,
+          23,
+          14,
+          13,
+          12,
+          11,
+          18,
+          17,
+          16,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          7,
+          10,
+          9,
+          12,
+          11,
+          14,
+          13,
+          16,
+          15,
+          18,
+          17,
+          20,
+          19,
+          22,
+          21,
+          24,
+          23,
+          26,
+          25
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          3,
+          5,
+          6,
+          8,
+          7,
+          9,
+          10,
+          16,
+          15,
+          18,
+          17,
+          12,
+          11,
+          14,
+          13,
+          24,
+          23,
+          26,
+          25,
+          20,
+          19,
+          22,
+          21
+        ],
+        [
+          0,
+          5,
+          6,
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          15,
+          16,
+          19,
+          20,
+          23,
+          24,
+          13,
+          14,
+          17,
+          18,
+          21,
+          22,
+          25,
+          26
+        ],
+        [
+          0,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          5,
+          6,
+          1,
+          2,
+          19,
+          13,
+          11,
+          21,
+          12,
+          22,
+          20,
+          14,
+          15,
+          25,
+          23,
+          17,
+          24,
+          18,
+          16,
+          26
+        ]
+      ]
+    },
+    "spinor_point_stabilizer_perfect": {
+      "order": 60,
+      "derived_order": 60,
+      "generators": [
+        [
+          0,
+          5,
+          6,
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          15,
+          16,
+          19,
+          20,
+          23,
+          24,
+          13,
+          14,
+          17,
+          18,
+          21,
+          22,
+          25,
+          26
+        ],
+        [
+          0,
+          3,
+          4,
+          7,
+          8,
+          10,
+          9,
+          5,
+          6,
+          2,
+          1,
+          11,
+          21,
+          19,
+          13,
+          20,
+          14,
+          12,
+          22,
+          23,
+          17,
+          15,
+          25,
+          16,
+          26,
+          24,
+          18
+        ]
+      ]
+    },
+    "covering_spinor_point_stabilizer_perfect": {
+      "order": 120,
+      "derived_order": 120,
+      "generators": [
+        [
+          0,
+          1,
+          0,
+          0,
+          4,
+          4,
+          0,
+          0,
+          2,
+          4,
+          4,
+          1,
+          4,
+          2,
+          4,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          1,
+          3,
+          4,
+          4,
+          3,
+          0,
+          3,
+          3,
+          4,
+          3,
+          2,
+          4,
+          4,
+          3,
+          4,
+          3
+        ]
+      ]
+    }
+  },
+  "constraint_shape": [
+    210,
+    16
+  ],
+  "multiplicative_contradiction": [
+    {
+      "constraint_index": 7,
+      "integer_power": -1,
+      "exponents": [
+        0,
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        -1
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "same_vector",
+        "generator": 0,
+        "left": [
+          3,
+          17,
+          24
+        ],
+        "right": [
+          3,
+          15,
+          26
+        ]
+      }
+    },
+    {
+      "constraint_index": 8,
+      "integer_power": 1,
+      "exponents": [
+        -1,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "same_vector",
+        "generator": 0,
+        "left": [
+          3,
+          18,
+          23
+        ],
+        "right": [
+          3,
+          15,
+          26
+        ]
+      }
+    },
+    {
+      "constraint_index": 13,
+      "integer_power": 1,
+      "exponents": [
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "same_vector",
+        "generator": 0,
+        "left": [
+          5,
+          17,
+          22
+        ],
+        "right": [
+          5,
+          13,
+          26
+        ]
+      }
+    },
+    {
+      "constraint_index": 35,
+      "integer_power": 1,
+      "exponents": [
+        0,
+        0,
+        -1,
+        1,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "same_vector",
+        "generator": 1,
+        "left": [
+          1,
+          20,
+          25
+        ],
+        "right": [
+          1,
+          19,
+          26
+        ]
+      }
+    },
+    {
+      "constraint_index": 37,
+      "integer_power": -1,
+      "exponents": [
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "same_vector",
+        "generator": 1,
+        "left": [
+          1,
+          22,
+          23
+        ],
+        "right": [
+          1,
+          19,
+          26
+        ]
+      }
+    },
+    {
+      "constraint_index": 71,
+      "integer_power": -1,
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "same_vector",
+        "generator": 2,
+        "left": [
+          1,
+          21,
+          24
+        ],
+        "right": [
+          1,
+          19,
+          26
+        ]
+      }
+    },
+    {
+      "constraint_index": 171,
+      "integer_power": 1,
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rhs_sign_exponent": 1,
+      "description": {
+        "kind": "singlet",
+        "generator": 4,
+        "triple": [
+          0,
+          3,
+          4
+        ],
+        "vector_terms": [
+          [
+            3,
+            15,
+            26
+          ],
+          [
+            4,
+            11,
+            22
+          ]
+        ]
+      }
+    },
+    {
+      "constraint_index": 172,
+      "integer_power": 1,
+      "exponents": [
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "singlet",
+        "generator": 4,
+        "triple": [
+          0,
+          5,
+          6
+        ],
+        "vector_terms": [
+          [
+            5,
+            13,
+            26
+          ],
+          [
+            6,
+            11,
+            24
+          ]
+        ]
+      }
+    },
+    {
+      "constraint_index": 207,
+      "integer_power": 1,
+      "exponents": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "rhs_sign_exponent": 0,
+      "description": {
+        "kind": "singlet",
+        "generator": 5,
+        "triple": [
+          0,
+          5,
+          6
+        ],
+        "vector_terms": [
+          [
+            5,
+            13,
+            26
+          ],
+          [
+            6,
+            11,
+            24
+          ]
+        ]
+      }
+    }
+  ],
+  "gauge_argument": "For a transitive monomial representation, phases restricted to a point stabilizer form a1D character. The60-element stabilizer on the16 orbit is perfect, so its character is trivial; choosing orbit-transversal basis scalings gauges every spinor action to an unsigned permutation. The whole960 group is perfect, so the fixed singlet acts trivially. Eliminating vector-coordinate phases leaves the published multiplicative equations in16 nonzero diagonal gauge coordinates.",
+  "covering_argument": "The corresponding120-element point stabilizer in the actual1920 cover is also perfect. Its central -I therefore acts trivially on all spinor coordinates in any such monomial representation. Cubic invariance and the singlet action force it trivial on1+10 too. Any covering representation would factor through the already excluded960 action.",
+  "conclusion": "No assignment of arbitrary nonzero complex monomial phases realizes either the unsigned960 action or its actual1920 cover as a linear symmetry of the native45-term cubic. The nine selected equations multiply to1=-1.",
+  "prior": "Extends the real-sign-only obstructions of w33_20261031_signed_cubic_lift.py. Monomial induction and point-stabilizer characters are standard representation theory.",
+  "boundary": "Specific prescribed27-coordinate permutation action. Does not exclude a different carrier, nonmonomial embedding, larger common extension, or the already constructed30720 signed lift; no physical E6 or Yukawa no-go asserted."
+}

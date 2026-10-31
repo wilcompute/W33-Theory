@@ -1,0 +1,73 @@
+{
+  "schema": "w33.third-continuation.20261031.v1",
+  "baseline": "10b626834e753a92512e3699cdf1df9bfa839b75",
+  "worktree_sha256": {
+    "analysis/w33_20261031_complex_cubic_obstruction.py": "dca96f9c75aa83e6bd684b9a26d71234f6b1938f71fc6a72fc65dbcfe0178319",
+    "analysis/w33_20261031_cross_field_stabilizers.py": "f4ce16f0afea1729a20468e253b255a17e463e80e06bcc93dc744fbf01003d79",
+    "analysis/w33_20261031_exterior_arc_code.py": "0c497a9e0bc0e54d08eee08a48b45d14e8bcd954a709a9b901e452a68c094432",
+    "analysis/w33_20261031_geometry_sensitive_mediator.py": "ab55b5d49b787658bfbb2805e188f0ec9a7895b143ca4300b3445e81c59d4aaf",
+    "analysis/w33_20261031_phase_space_refinement.py": "fe5614642af851e7985658bdf99ff1ec400be3e1dbed6b73e11aa3d4c2b7ffac",
+    "analysis/2026-10-31_complex_phases_cross_fields_and_refinement.md": "cb934d5b9469e0b6c3580a83f151a785ae6d4ec9a37dee68c82ced87fdd7cce3",
+    "tests/test_w33_20261031_cross_field_and_refinement.py": "e0c7b997466895835044b5be543856ab965cadc0baed3603b2412490f4dd355a",
+    "data/w33_20261031_complex_cubic_obstruction.json": "627048c8fe38837321ed93319d3e1f6f86ac2acf6bac393c61a47d3882c517da",
+    "data/w33_20261031_cross_field_stabilizers.json": "6e70c2526d0b7a3e1de4ec51a55e09403f4f81398bc47e68dbae32ee1f669860",
+    "data/w33_20261031_exterior_arc_code.json": "07452768e5635336bcbe167748a047c0e0b6470b25182d5c69050e79bf563b1d",
+    "data/w33_20261031_geometry_sensitive_mediator.json": "eaf1f81d44470768d8eacedf9edfb5b0b88436216491a4c7304e9e48de57a72a",
+    "data/w33_20261031_phase_space_refinement.json": "f467fa9444fa3a77531416fc520574bb8c5e92d240d95464855c390f9cd9891a",
+    "data/w33_20261031_third_continuation_validation.txt": "0423ac80fcc19d06b2773c0888f0ae4258bde19f6b4f1a0fcad1deae6254fe3c",
+    "data/w33_20261031_third_continuation_exploration.json": "d4ab3f5fa7d7d7028e5e7a63ea5ff3b70034999b79ba38ff5f9178442f298163",
+    "RESULTS_INDEX.md": "eae27c5f51bc60127399d8b7c5a47962f0212f4d959c3b710e7f2652c491f9cf",
+    "data/w33_20261031_signed_cubic_lift.json": "19e6c0c23784140899036adef54742151f333ac7e2d2b4881c640890b9c1b9b9",
+    "data/w33_20261031_petersen_stabilizer.json": "7dfd960178ac00cafec278ebad38c877df9dd302e48bcf92fc745ddbefc830f6",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261031_exterior_search.json": "0b1468ce6f29ae9079db50c8056dd8cfb729b21a66138770055a69af002902ed",
+    "analysis/w33_20261031_signed_cubic_lift.py": "455c40e0c7b0916e9a900aad96295220f009696f58ab1776c758507d876dc689",
+    "analysis/w33_20261031_native_phase_space_overlap.py": "1f96d4ff9e97ec894a020c5ee572b1e72e563e85b514256522a73535db2133c3",
+    "analysis/w33_20261031_local_tick_mediator.py": "b7c63d5493f1130f2e78bbe97e9c1ba3b60b4296959ce42c1a5492c4335d0d0d",
+    "analysis/w33_pass11177_perfect_gates_tritangent.py": "1f221d030d506896d401d65d07250348b7f76b5bd0941232aab2b7d2cf5c3f2f",
+    "analysis/w33_pass11156_perfect_spacetime_gates.py": "2d73ef79e51f5ef2ed7033735d91aba0a1118a24ce43ed085dbfe00059c8ec5b",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3"
+  },
+  "staged_git_blob_sha256": {
+    "analysis/w33_20261031_complex_cubic_obstruction.py": "dca96f9c75aa83e6bd684b9a26d71234f6b1938f71fc6a72fc65dbcfe0178319",
+    "analysis/w33_20261031_cross_field_stabilizers.py": "f4ce16f0afea1729a20468e253b255a17e463e80e06bcc93dc744fbf01003d79",
+    "analysis/w33_20261031_exterior_arc_code.py": "0c497a9e0bc0e54d08eee08a48b45d14e8bcd954a709a9b901e452a68c094432",
+    "analysis/w33_20261031_geometry_sensitive_mediator.py": "ab55b5d49b787658bfbb2805e188f0ec9a7895b143ca4300b3445e81c59d4aaf",
+    "analysis/w33_20261031_phase_space_refinement.py": "fe5614642af851e7985658bdf99ff1ec400be3e1dbed6b73e11aa3d4c2b7ffac",
+    "analysis/2026-10-31_complex_phases_cross_fields_and_refinement.md": "cb934d5b9469e0b6c3580a83f151a785ae6d4ec9a37dee68c82ced87fdd7cce3",
+    "tests/test_w33_20261031_cross_field_and_refinement.py": "e0c7b997466895835044b5be543856ab965cadc0baed3603b2412490f4dd355a",
+    "data/w33_20261031_complex_cubic_obstruction.json": "2199c1908d679ded3b1b03a475427b3136a6e5070349d151097169a70282df9a",
+    "data/w33_20261031_cross_field_stabilizers.json": "086eb675876f56d8ea5806c8dbdc9608a8dc755559ebfb3027c1c6503de3c2a7",
+    "data/w33_20261031_exterior_arc_code.json": "33f9f55aeaa017de8feed1d48cb4b1d8c6c12aa30ddc65f5446f556bba1d5db9",
+    "data/w33_20261031_geometry_sensitive_mediator.json": "6fe37a4221c97addf6bb21838ddf09a695e6eac5170dd6bfce791abc83fad468",
+    "data/w33_20261031_phase_space_refinement.json": "2bce03d460c2be3a9ba77a928bdba612257e1b97c44c1137dcc33dff1a85a5de",
+    "data/w33_20261031_third_continuation_validation.txt": "0423ac80fcc19d06b2773c0888f0ae4258bde19f6b4f1a0fcad1deae6254fe3c",
+    "data/w33_20261031_third_continuation_exploration.json": "bb9749a600e981db53d56550cdc57b71752da0a8c01bc52bd3edfa37cf76fe07",
+    "RESULTS_INDEX.md": "f30b98a451fd121a77b3bb6c62719c70bf83ab5ba43d7b6f146c515d5c4dc7e3"
+  },
+  "input_git_blob_sha256": {
+    "data/w33_20261031_signed_cubic_lift.json": "e54204307790b3a96dff7df5889024cba8285258f163977cbdd0c0b6a3bbd51d",
+    "data/w33_20261031_petersen_stabilizer.json": "80ab258f3ec2d3015d79cd42161be1b8472db69dd359ae610d7ec783ca5ed904",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "60429d1af26467b37ecaec98abda74231c2e393f89451051f46f5dd0af4f2279",
+    "data/w33_20261031_exterior_search.json": "e145f327e8aac75c292406fe3236129ee9f6eb79494f937f0d9c530948c2e2c8",
+    "analysis/w33_20261031_signed_cubic_lift.py": "455c40e0c7b0916e9a900aad96295220f009696f58ab1776c758507d876dc689",
+    "analysis/w33_20261031_native_phase_space_overlap.py": "1f96d4ff9e97ec894a020c5ee572b1e72e563e85b514256522a73535db2133c3",
+    "analysis/w33_20261031_local_tick_mediator.py": "b7c63d5493f1130f2e78bbe97e9c1ba3b60b4296959ce42c1a5492c4335d0d0d",
+    "analysis/w33_pass11177_perfect_gates_tritangent.py": "06917c4835c6750a9b1efcddb0a2c3cb87d01b43eca9edc9d2009dc33bcf191f",
+    "analysis/w33_pass11156_perfect_spacetime_gates.py": "a6cbe069c8917bf54584b7ff2a86f68230c9cf69d3cd2301c9bd4644b4ed70c4",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3"
+  },
+  "tests": "45 focused unittest tests PASS; all five producers regenerated. Actual log in third_continuation_validation.txt.",
+  "validation_types": [
+    "Integer nine-equation Cstar phase contradiction with perfect point-stabilizer controls.",
+    "Exact1920 cross-field homomorphism,11520 Cayley edges, central involution preserved.",
+    "All-field conic-code equivalence; finite ranks/distances are scoped controls.",
+    "Exact local-current pair costs/transfer spectrum; supplied model.",
+    "Exact flat-adjoint free refinement; fundamental charged signatures are numerical, not interval-certified."
+  ],
+  "boundaries": [
+    "No unrestricted all-q exterior-arc classification.",
+    "No derived physical vacuum, Lorentzian geometry, chiral gauge measure or TOE.",
+    "Full intellectual paper/week review remains incomplete."
+  ]
+}

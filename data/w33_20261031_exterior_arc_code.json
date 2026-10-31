@@ -1,0 +1,200 @@
+{
+  "status": "PROVED_ALL_FIELD_UNRESTRICTED_CODE_EQUIVALENCE",
+  "rows": [
+    {
+      "q": 3,
+      "length": 6,
+      "checks": 3,
+      "binary_rank": 3,
+      "dimension": 3,
+      "distance_lower_bound": 2,
+      "incidence_sha256": "421152326cc0a09d9c213e9612908310f12db4ed75761dbac3bc66de06425bb2",
+      "exact_distance": 2,
+      "minimum_word_count": 3,
+      "weight_enumerator": {
+        "0": 1,
+        "2": 3,
+        "4": 3,
+        "6": 1
+      },
+      "bound_equality_points": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "bound_equality_indices": [
+        3,
+        0
+      ]
+    },
+    {
+      "q": 5,
+      "length": 15,
+      "checks": 10,
+      "binary_rank": 9,
+      "dimension": 6,
+      "distance_lower_bound": 3,
+      "incidence_sha256": "ab5c3e4d90b2c4debd03cb83669c4bfa978bd984b75d9dbfc25b38b1270f5d2e",
+      "exact_distance": 5,
+      "minimum_word_count": 12,
+      "weight_enumerator": {
+        "0": 1,
+        "5": 12,
+        "6": 10,
+        "8": 15,
+        "9": 20,
+        "10": 6
+      }
+    },
+    {
+      "q": 7,
+      "length": 28,
+      "checks": 21,
+      "binary_rank": 15,
+      "dimension": 13,
+      "distance_lower_bound": 4,
+      "incidence_sha256": "d1e74ea1037b38f68f76a095332baee4b4a9ffcefd08f4a436555c43f76f8f64",
+      "exact_distance": 4,
+      "minimum_word_count": 14,
+      "weight_enumerator": {
+        "0": 1,
+        "4": 14,
+        "6": 28,
+        "8": 168,
+        "10": 672,
+        "12": 2121,
+        "14": 2184,
+        "16": 2121,
+        "18": 672,
+        "20": 168,
+        "22": 28,
+        "24": 14,
+        "28": 1
+      },
+      "bound_equality_points": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          1,
+          6,
+          6
+        ]
+      ],
+      "bound_equality_indices": [
+        21,
+        11,
+        17,
+        20
+      ]
+    },
+    {
+      "q": 11,
+      "length": 66,
+      "checks": 55,
+      "binary_rank": 35,
+      "dimension": 31,
+      "distance_lower_bound": 6,
+      "incidence_sha256": "6ab24b3a356a150b77d548d69be3d0519e34da9f18c38060fbe56d588ea9ebe6",
+      "exact_distance": 6,
+      "bound_equality_points": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          9,
+          6
+        ],
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          1,
+          5,
+          10
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          1,
+          1,
+          7
+        ]
+      ],
+      "bound_equality_indices": [
+        55,
+        48,
+        19,
+        29,
+        22,
+        7
+      ]
+    },
+    {
+      "q": 19,
+      "length": 190,
+      "checks": 171,
+      "binary_rank": 99,
+      "dimension": 91,
+      "distance_lower_bound": 10,
+      "incidence_sha256": "34ed1297a2de2457e4cbac8d2838d1678b897a8dbdb10a65ab01926e93aa2a35"
+    },
+    {
+      "q": 23,
+      "length": 276,
+      "checks": 253,
+      "binary_rank": 143,
+      "dimension": 133,
+      "distance_lower_bound": 12,
+      "incidence_sha256": "7f83c23321a04d542a743686995ff2d4565d6878dcb8542724acd4428e659296"
+    },
+    {
+      "q": 31,
+      "length": 496,
+      "checks": 465,
+      "binary_rank": 255,
+      "dimension": 241,
+      "distance_lower_bound": 16,
+      "incidence_sha256": "cbb67eb68cc96e7f748431701a6ca498c8f6e03dc0b5d3522ed03def7c8cc677"
+    }
+  ],
+  "code": "C_ext(q)=ker_F2 H, H=incidence(passant lines,external points) of a nondegenerate conic.",
+  "universal_bound": "For every odd prime power q, any nonzero codeword has weight at least(q+1)/2.",
+  "bound_proof": "An exterior point lies on(q-1)/2 passants. If selected in an even codeword, each of these lines needs another selected point. No other point can lie on two such lines, so there are at least(q-1)/2 other selected points.",
+  "equality_theorem": "A weight(q+1)/2 codeword is exactly a complete exterior arc: equality gives precisely one other selected point on each passant through every selected point, so all joining lines are distinct passants and no three selected points are collinear. Conversely an exterior arc of that size exhausts all passants through each point, so every passant meets it in0 or2 points. The two conic tangents at each exterior point partition all q+1 conic tangent contacts, recovering the good matching.",
+  "significance": "This equivalence places arbitrary matchings, without rational-degree restrictions, in a single binary linear code. An all-q arc exclusion is equivalent to strictness of this code-distance bound outside q=3,7,11.",
+  "prior": "Conic incidence binary codes were constructed by Droms et al. and their dimensions studied by Sin--Wu--Xiang and others. The displayed finite ranks are exact computed controls, not a new general rank theorem. The lower bound is the standard no4-cycle parity-check counting bound; the explicit link to the present exterior-arc target is the purpose here.",
+  "literature": [
+    "https://arxiv.org/abs/0911.2018",
+    "https://doi.org/10.1016/j.jcta.2010.11.010",
+    "https://arxiv.org/abs/1104.0324"
+  ],
+  "boundary": "Does not prove strictness of the distance bound for all larger q. Separate CP-SAT probes at19,23,31 timed out and are archived as UNKNOWN, not as exclusions. Prime-power coordinate extensions are not simulated using integer residues."
+}

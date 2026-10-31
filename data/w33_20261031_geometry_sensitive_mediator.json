@@ -1,0 +1,330 @@
+{
+  "status": "PASS_LOCAL_W33_SENSITIVE_MEDIATION",
+  "mediator": "For each oriented spatial edge, add a traceless Hermitian9x9 B_e with mu_c^2/2 Tr B_e^2-g_c Tr(B_e i[Pi_a,Pi_b]), mu_c^2>0. Reversing the edge reverses B and current. Complete its square.",
+  "exact_effective_energy": "E_ab=J(3-Tr Pi_a Pi_b)-K ||[Pi_a,Pi_b]||_F^2, J>=0, K=g_c^2/(2 mu_c^2)>=0.",
+  "pair_costs": [
+    "same tick:0",
+    "same direction, other outcome:3J",
+    "distinct commuting directions:2J",
+    "noncommuting directions:2J-4K/3"
+  ],
+  "square_completion_controls": [
+    {
+      "ticks": [
+        0,
+        0
+      ],
+      "current_norm": 0.0,
+      "square_completion_error": 0.0
+    },
+    {
+      "ticks": [
+        0,
+        1
+      ],
+      "current_norm": 0.0,
+      "square_completion_error": 0.0
+    },
+    {
+      "ticks": [
+        0,
+        3
+      ],
+      "current_norm": 0.0,
+      "square_completion_error": 0.0
+    },
+    {
+      "ticks": [
+        0,
+        15
+      ],
+      "current_norm": 1.3333333333333333,
+      "square_completion_error": 0.0
+    }
+  ],
+  "transfer_samples": [
+    {
+      "J": 1,
+      "K": 0.0,
+      "beta": 0.2,
+      "spectrum": [
+        [
+          80.52506865835785,
+          1
+        ],
+        [
+          0.08666313408113435,
+          24
+        ],
+        [
+          0.08666313408113613,
+          15
+        ],
+        [
+          0.4511883639059736,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 0.0,
+      "beta": 1.0,
+      "spectrum": [
+        [
+          16.933802275419414,
+          1
+        ],
+        [
+          0.6935682870258897,
+          24
+        ],
+        [
+          0.6935682870258899,
+          15
+        ],
+        [
+          0.950212931632136,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 0.0,
+      "beta": 3.0,
+      "spectrum": [
+        [
+          1.2902608242781373,
+          1
+        ],
+        [
+          0.9928105630781743,
+          24
+        ],
+        [
+          0.9928105630781743,
+          15
+        ],
+        [
+          0.9998765901959134,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 0.5,
+      "beta": 0.2,
+      "spectrum": [
+        [
+          88.2693403370076,
+          1
+        ],
+        [
+          -0.7738114968799499,
+          24
+        ],
+        [
+          0.9471377650422204,
+          15
+        ],
+        [
+          0.4511883639059736,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 0.5,
+      "beta": 1.0,
+      "spectrum": [
+        [
+          27.32301252062765,
+          1
+        ],
+        [
+          -0.4607884068861363,
+          24
+        ],
+        [
+          1.847924980937916,
+          15
+        ],
+        [
+          0.950212931632136,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 0.5,
+      "beta": 3.0,
+      "spectrum": [
+        [
+          2.5730486479556305,
+          1
+        ],
+        [
+          0.850278582669564,
+          24
+        ],
+        [
+          1.1353425434867845,
+          15
+        ],
+        [
+          0.9998765901959134,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 1.5,
+      "beta": 0.2,
+      "spectrum": [
+        [
+          107.22914492947106,
+          1
+        ],
+        [
+          -2.8804564515981115,
+          24
+        ],
+        [
+          3.053782719760382,
+          15
+        ],
+        [
+          0.4511883639059736,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 1.5,
+      "beta": 1.0,
+      "spectrum": [
+        [
+          86.97164433325379,
+          1
+        ],
+        [
+          -7.088414163844596,
+          24
+        ],
+        [
+          8.475550737896375,
+          15
+        ],
+        [
+          0.950212931632136,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 1.5,
+      "beta": 3.0,
+      "spectrum": [
+        [
+          82.08948189796816,
+          1
+        ],
+        [
+          -7.984880667331828,
+          24
+        ],
+        [
+          9.970501793488177,
+          15
+        ],
+        [
+          0.9998765901959134,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 2.0,
+      "beta": 0.2,
+      "spectrum": [
+        [
+          118.7822406849246,
+          1
+        ],
+        [
+          -4.164133757759616,
+          24
+        ],
+        [
+          4.337460025921886,
+          15
+        ],
+        [
+          0.4511883639059736,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 2.0,
+      "beta": 1.0,
+      "spectrum": [
+        [
+          163.7381016586825,
+          1
+        ],
+        [
+          -15.618020533336676,
+          24
+        ],
+        [
+          17.005157107388456,
+          15
+        ],
+        [
+          0.950212931632136,
+          80
+        ]
+      ]
+    },
+    {
+      "J": 1,
+      "K": 2.0,
+      "beta": 3.0,
+      "spectrum": [
+        [
+          599.6030259113506,
+          1
+        ],
+        [
+          -65.48638555770765,
+          24
+        ],
+        [
+          67.47200668386401,
+          15
+        ],
+        [
+          0.9998765901959134,
+          80
+        ]
+      ]
+    }
+  ],
+  "exact_zero_T_threshold": "K=3J/2. For J>0 and0<=K<3J/2 every unlike tick costs at least min(2J,2J-4K/3)>0, so connected-graph label ground states are the120 constant events. On a supplied bipartite spatial graph, K>3J/2 allows a noncommuting two-sublattice pair to minimize every edge, so constant events cease to be ground states. At equality both types coexist among many possible ground patterns.",
+  "low_T_scope": "Below the threshold, the finite120-state short-range model satisfies the Peierls condition and has transitive constant ground states, giving ordered low-T phases on supplied Z^d,d>=2 by standard Pirogov-Sinai theory. Above it, no complete ground-state or finite-T classification is claimed.",
+  "transfer_eigenvalues": "1+2o+36c+81n (1),1+2o+6c-9n (24),1+2o-12c+9n (15),1-o (80); o=e^-3betaJ,c=e^-2betaJ,n=e^-beta(2J-4K/3).",
+  "restored_geometry": "For J>0,K>0 the colored pair relation determines Pauli direction triples and W33 collinearity. The former S3 wr S40 symmetry reduces to S3^40 semidirect Aut(W33); independent outcome relabelings remain an enlarged symmetry beyond physical Clifford covariance.",
+  "stochastic_dynamics": "Local conditional heat bath obeys detailed balance for this exact energy, including negative bond energies. It is thermal kinetics, not a fundamental time arrow.",
+  "prior": "Round14 pair_current_mediator.py owns the stable current-elimination mechanism for rank-two vacuum mixtures. The preceding local_tick_mediator.py owns Gaussian edge alignment. Here one field per spatial edge couples the actual rank-three tick current, recovering the24+15 W33 sectors and exact coupling threshold.",
+  "boundary": "Spatial graph, mediator content, couplings, temperature and quantum interpretation are supplied. No measured particle, unique E8 real form, causal metric, UV completion or physical vacuum selection derived."
+}

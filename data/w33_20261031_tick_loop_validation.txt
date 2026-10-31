@@ -1,0 +1,15 @@
+COMMAND py -3 analysis/w33_20261031_tick_loop_rigidity.py
+{"status": "PASS_TICK_LOOP_RIGIDITY", "ordered_triples": 1728000, "numerical_reconstruction_error": 7.806561767671755e-15, "pair_preserving_local_swap": {"swap": [0, 1], "witness": [0, 3, 6], "image": [1, 3, 6], "exact_before": [3, 0], "exact_after": [0, 0], "ordered_triples_changed": 2808}, "nonreal_witness": {"ticks": [0, 12, 15], "exact_value": [2, 1]}}
+
+
+COMMAND py -3 -m unittest discover -s tests -p test_tick_loop_rigidity.py -v
+test_concrete_clifford_and_antiunitary_maps (test_tick_loop_rigidity.TickLoopRigidity.test_concrete_clifford_and_antiunitary_maps) ... ok
+test_exact_orientation_odd_witness (test_tick_loop_rigidity.TickLoopRigidity.test_exact_orientation_odd_witness) ... ok
+test_exact_pair_invisible_witness (test_tick_loop_rigidity.TickLoopRigidity.test_exact_pair_invisible_witness) ... ok
+test_full_tensor_and_product_controls (test_tick_loop_rigidity.TickLoopRigidity.test_full_tensor_and_product_controls) ... ok
+test_integer_formula_cyclic_and_conjugate (test_tick_loop_rigidity.TickLoopRigidity.test_integer_formula_cyclic_and_conjugate) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 33.386s
+
+OK

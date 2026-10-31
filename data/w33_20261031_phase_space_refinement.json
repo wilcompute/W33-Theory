@@ -1,0 +1,159 @@
+{
+  "status": "PASS_REFINEMENT_MODULE_DISTINCTION_AND_CHARGED_RESOLUTION_GATE",
+  "fundamental_refinement_samples": [
+    {
+      "N": 3,
+      "charge": 1,
+      "mass": 1.4,
+      "dimension": 36,
+      "numerical_index": -1,
+      "numerical_gap": 0.1320508075688789
+    },
+    {
+      "N": 5,
+      "charge": 1,
+      "mass": 1.4,
+      "dimension": 100,
+      "numerical_index": -1,
+      "numerical_gap": 0.3573859637391555
+    },
+    {
+      "N": 7,
+      "charge": 1,
+      "mass": 1.4,
+      "dimension": 196,
+      "numerical_index": -1,
+      "numerical_gap": 0.5355861673804106
+    },
+    {
+      "N": 11,
+      "charge": 1,
+      "mass": 1.4,
+      "dimension": 484,
+      "numerical_index": -1,
+      "numerical_gap": 0.6801609600536939
+    },
+    {
+      "N": 15,
+      "charge": 1,
+      "mass": 1.4,
+      "dimension": 900,
+      "numerical_index": -1,
+      "numerical_gap": 0.686045790676364
+    }
+  ],
+  "charged_index_resolution": [
+    {
+      "N": 15,
+      "rows": [
+        {
+          "N": 15,
+          "charge": 1,
+          "mass": 1.4,
+          "dimension": 900,
+          "numerical_index": -1,
+          "numerical_gap": 0.686045790676364
+        },
+        {
+          "N": 15,
+          "charge": -2,
+          "mass": 1.4,
+          "dimension": 900,
+          "numerical_index": -4,
+          "numerical_gap": 0.5133955789297105
+        },
+        {
+          "N": 15,
+          "charge": 4,
+          "mass": 1.4,
+          "dimension": 900,
+          "numerical_index": -1,
+          "numerical_gap": 0.057680440427631485
+        }
+      ],
+      "weighted_index_sum": 60,
+      "expected_continuum_indices": [
+        -1,
+        -4,
+        -16
+      ],
+      "expected_cubic_charge_sum": 0
+    },
+    {
+      "N": 23,
+      "rows": [
+        {
+          "N": 23,
+          "charge": 1,
+          "mass": 1.4,
+          "dimension": 2116,
+          "numerical_index": -1,
+          "numerical_gap": 0.6701864679952252
+        },
+        {
+          "N": 23,
+          "charge": -2,
+          "mass": 1.4,
+          "dimension": 2116,
+          "numerical_index": -4,
+          "numerical_gap": 0.6780198087468458
+        },
+        {
+          "N": 23,
+          "charge": 4,
+          "mass": 1.4,
+          "dimension": 2116,
+          "numerical_index": -16,
+          "numerical_gap": 0.27739031427878974
+        }
+      ],
+      "weighted_index_sum": 0,
+      "expected_continuum_indices": [
+        -1,
+        -4,
+        -16
+      ],
+      "expected_cubic_charge_sum": 0
+    }
+  ],
+  "charged_scope": "Numerical Hermitian spectral signatures, not interval certificates. The16_1+10_-2+1_4 ledger tests the necessary weighted-index sum, not a local anomaly-free measure. At N15 charge4 is in a wrong finite-resolution phase, so cancellation fails; at N23 the expected index ledger cancels. Physical charge assignments and a common chiral measure remain inputs.",
+  "exact_adjoint_result": "On Mat_(N^2), Ad(T_mu) commute because the fundamental commutators are central. The N^4 Pauli monomials diagonalize them with every Fourier momentum in(Z/N)^4 once. Each Wilson block has paired eigenvalues +/-sqrt(sum sin^2 p+(sum(1-cos p)-m)^2), each twice. Hence its index is exactly0 at every noncritical mass for every N.",
+  "adjoint_N3_control": {
+    "dimension": 324,
+    "index": 0,
+    "gap": 0.9999999999999933,
+    "maximum_symbol_spectrum_error": 2.220446049250313e-14
+  },
+  "exact_uniform_gap": "At m=1, H(p)^2=1+2 sum_(mu<nu)(1-cos p_mu)(1-cos p_nu), so1<=H^2<=49 at every N.",
+  "locality": "With ||H||<=7 and gap>=1, sign H=(H/7) sum_k c_k (I-H^2/49)^k, c_k=binom(2k,k)/4^k<=1. Truncating at K has operator error<=49*(48/49)^(K+1). In the Fourier-dual position basis the polynomial has range<=2K+1, giving a uniform exponential distance bound.",
+  "continuum": "For p=a k at m=1, Dov(p)/a -> i sum gamma_mu k_mu, with O(a) scalar Wilson correction. This is a flat Euclidean4D free-Dirac refinement on a supplied operator module/Fourier interpretation, not derived Lorentzian space.",
+  "continuum_symbol_controls": [
+    {
+      "N": 31,
+      "lattice_spacing": 0.2026833970057931,
+      "continuum_symbol_error": 0.016482304975131336
+    },
+    {
+      "N": 63,
+      "lattice_spacing": 0.09973310011396169,
+      "continuum_symbol_error": 0.008105019988919864
+    },
+    {
+      "N": 127,
+      "lattice_spacing": 0.049473900056532176,
+      "continuum_symbol_error": 0.004019962712397671
+    },
+    {
+      "N": 255,
+      "lattice_spacing": 0.024639942381096416,
+      "continuum_symbol_error": 0.0020020210587951242
+    }
+  ],
+  "prior": "The preceding36D fundamental kernel owns its exact N3 index certificates. Pass5709 owns central-flux invisibility in an adjoint representation; October19 owns the native80-character Pauli module. Pass11592 already shows charge-dependent Wilson resolution on external tori. Here the two refinement modules are compared explicitly and the same finite phase-space charged ledger is replayed.",
+  "literature": [
+    "https://arxiv.org/abs/hep-lat/9808010",
+    "https://arxiv.org/abs/0810.5234",
+    "https://arxiv.org/abs/hep-lat/9811032"
+  ],
+  "boundary": "Fundamental and full-matrix carriers differ (N^2 versus N^4). Their indices cannot be identified. Finite nonzero index and a flat adjoint continuum control do not combine into a derived chiral4D universe. No local anomaly primitive, non-Abelian measure, dynamical geometry or physical generation prediction constructed."
+}
