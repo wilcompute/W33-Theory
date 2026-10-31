@@ -31,8 +31,8 @@ def involutions(q):
     return out
 
 
-def good(m, q, sq, invs):
-    if not all(cr(a, b, c, d, q) not in sq for (a, b), (c, d) in itertools.combinations(m, 2)): return False
+def good(m, q, sq, invs, square=False):
+    if not all((cr(a, b, c, d, q) in sq) == square for (a, b), (c, d) in itertools.combinations(m, 2)): return False
     for t in itertools.combinations(m, 3):
         if any(all(mob(x, M, q) == y for x, y in t) for M in invs): return False
     return True

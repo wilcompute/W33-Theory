@@ -1,0 +1,200 @@
+{
+ "q": 3,
+ "opp": 2,
+ "predicted_size": 10,
+ "tried_R0": 16,
+ "results": [
+  {
+   "R0": [
+    6,
+    31,
+    13,
+    24
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    0,
+    38,
+    21,
+    28
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    28,
+    31,
+    27,
+    35
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    14,
+    29,
+    22,
+    7
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    35,
+    15,
+    11,
+    6
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    23,
+    11,
+    35,
+    33
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    23,
+    28,
+    5,
+    3
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    32,
+    30,
+    36,
+    22
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    8,
+    24,
+    39,
+    32
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    19,
+    0,
+    34,
+    22
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    29,
+    17,
+    38,
+    1
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    23,
+    7,
+    17,
+    15
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    36,
+    29,
+    31,
+    20
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    30,
+    7,
+    1,
+    14
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    26,
+    12,
+    16,
+    28
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    6,
+    16,
+    8,
+    32
+   ],
+   "matchings": 3,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  }
+ ]
+}

@@ -7,12 +7,12 @@ perfect matching of R0 into (q+1)/2 pairs {L, L'}.  The candidate is
 isotropic line).  Every point of R0 is covered exactly twice by construction; the matching decides the rest.  This script builds R0
 from three pairwise skew isotropic lines, tests EVERY perfect matching, and reports how many give an even set.
 usage: py -3 regulus_matching.py q [max_tries_of_R0]"""
-import sys, json, itertools, random
+import sys, json, itertools, random, collections
 import numpy as np
 from even_line_sets_gf import build
 
 
-def main(q, tries=50, seed=1):
+def main(q, tries=50, seed=1, opp=0):
     pts, lines, N = build(q)
     pid = {p: i for i, p in enumerate(pts)}
 
@@ -49,7 +49,7 @@ def main(q, tries=50, seed=1):
             trans.append(line_pts(p, next(iter(r))))
         if len(trans) != q + 1: continue
         opp_isotropic = sum(1 for U in trans if U in lidx)
-        if opp_isotropic != 0: continue               # need the antiregular "0" case
+        if opp_isotropic != opp: continue             # antiregularity: 0 (the cube family) or 2 (the Moore family)
         # R0 = the lines meeting three transversals (it contains T1, T2, T3)
         U1, U2, U3 = trans[:3]
         R0, R0_param = [], []
@@ -94,17 +94,21 @@ def main(q, tries=50, seed=1):
             if not (c % 2).any():
                 good += 1; good_list.append([(R0_param[a], R0_param[b]) for a, b in m])
                 if example is None:
-                    S = set(R0i) | {j for pr in m for j in perp[pr]}
+                    par = collections.Counter(R0i)          # mod-2 sum: the perps share the 2 isotropic opposite lines when opp = 2
+                    for pr in m: par.update(perp[pr])
+                    S = {j for j, k in par.items() if k % 2}
                     example = dict(matching=m, size=len(S), coverage=sorted(set(int(x) for x in c)))
         results.append(dict(R0=R0i, matchings=total, even=good, example=example, good_matchings_param=good_list))
         if good:
             break
-    return dict(q=q, predicted_size=(q + 1) * (q + 3) // 2, tried_R0=len(results), results=results)
+    return dict(q=q, opp=opp, predicted_size=(q + 1) * (q + 3) // 2 if opp == 0 else 2 + (q + 1) ** 2 // 2, tried_R0=len(results),
+                results=results)
 
 
 if __name__ == "__main__":
     q = int(sys.argv[1]); tries = int(sys.argv[2]) if len(sys.argv) > 2 else 50
-    out = main(q, tries)
+    opp = int(sys.argv[3]) if len(sys.argv) > 3 else 0
+    out = main(q, tries, opp=opp)
     print(json.dumps({k: v for k, v in out.items() if k != "results"}),
           [(r["matchings"], r["even"], r["example"] and r["example"]["size"]) for r in out["results"]])
-    json.dump(out, open(f"regulus_matching_q{q}.json", "w"), indent=1)
+    json.dump(out, open(f"regulus_matching_q{q}" + ("_opp2" if opp == 2 else "") + ".json", "w"), indent=1)

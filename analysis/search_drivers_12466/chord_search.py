@@ -5,7 +5,8 @@ import sys, json, time
 from chord_condition import cr, INF
 
 
-def search(q, tl=600):
+def search(q, tl=None, want_square=False):
+    tl = tl or float(__import__("os").environ.get("CHORD_TL", "600"))
     sq = {x * x % q for x in range(1, q)}
     pts = [INF] + list(range(q))
     pairs, used, t0 = [], set(), time.time()
@@ -13,7 +14,7 @@ def search(q, tl=600):
 
     def ok(a, b):
         for (c, d) in pairs:
-            if cr(a, b, c, d, q) in sq: return False
+            if (cr(a, b, c, d, q) in sq) != want_square: return False
         for i in range(len(pairs)):
             for j in range(i + 1, len(pairs)):
                 (c, d), (e, f) = pairs[i], pairs[j]
@@ -45,7 +46,8 @@ def search(q, tl=600):
 
 if __name__ == "__main__":
     res = {}
-    for q in map(int, sys.argv[1:]):
-        r = search(q); res[q] = r
+    sqmode = "--square" in sys.argv                     # the Moore family (opposite regulus with 2 isotropic lines): all square
+    for q in [int(a) for a in sys.argv[1:] if a.isdigit()]:
+        r = search(q, want_square=sqmode); res[q] = r
         print(json.dumps({k: v for k, v in r.items() if k != "matching"}), flush=True)
-    json.dump(res, open("chord_search.json", "w"), indent=1)
+    json.dump(res, open(__import__("os").environ.get("CHORD_OUT") or ("chord_search_square.json" if sqmode else "chord_search.json"), "w"), indent=1)

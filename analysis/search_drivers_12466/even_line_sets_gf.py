@@ -6,7 +6,7 @@ import sys, json, time, itertools
 import numpy as np
 from scipy.optimize import milp, LinearConstraint, Bounds
 
-IRRED = {4: (2, [1, 1]), 8: (2, [1, 1, 0]), 9: (3, [2, 0]), 16: (2, [1, 1, 0, 0]), 25: (5, [2, 0])}
+IRRED = {4: (2, [1, 1]), 8: (2, [1, 1, 0]), 9: (3, [2, 0]), 16: (2, [1, 1, 0, 0]), 25: (5, [2, 0]), 27: (3, [1, 1, 0]), 49: (7, [3, 0])}
 # (p, c) means x^k = c_0 + c_1 x + ... (coefficients of the reduction); x^2 = x + 1 (F4), x^3 = x + 1 (F8), x^2 = -1 (F9),
 # x^4 = x + 1 (F16), x^2 = 2 (F25: 2 is a non-square mod 5).
 

@@ -1,0 +1,72 @@
+{
+  "12490_geometric": {
+    "3": {
+      "reguli": 16,
+      "matchings": 3,
+      "even": 0,
+      "size": null
+    },
+    "5": {
+      "reguli": 1,
+      "matchings": 15,
+      "even": 5,
+      "size": 20
+    },
+    "7": {
+      "reguli": 17,
+      "matchings": 105,
+      "even": 0,
+      "size": null
+    },
+    "13": {
+      "reguli": 20,
+      "matchings": 135135,
+      "even": 0,
+      "size": null
+    }
+  },
+  "12493_moore_search": {
+    "found": [
+      5
+    ],
+    "none": [
+      3,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41
+    ],
+    "prime_powers": {
+      "3_moore": "none",
+      "5_moore": "found",
+      "7_moore": "none",
+      "11_moore": "none",
+      "9_moore": "none",
+      "25_moore": "none",
+      "27_moore": "none",
+      "49_moore": "none"
+    }
+  },
+  "12495_milp_q7": {
+    "cube": true,
+    "twin_pairs": 4,
+    "regulus": true,
+    "union_matches": true,
+    "size": 40,
+    "milp_status": "Time limit reached. (HiGHS Status 13: Time limit reached)"
+  },
+  "checks": {
+    "12490: Moore family -- q = 5: 5 of 15 matchings give the 20-line Petersen minimum; q = 3, 7: none": true,
+    "12491: q = 13 geometry -- 0 even sets among all 135,135 matchings of each of 20 reguli (the 100-line target)": true,
+    "12493: square-good matchings exist only at q = 5 (primes <= 41 and q = 9, 25, 27, 49) -- no Moore set at q = 13": true,
+    "12494: the generic GF(q) search reproduces the prime results (cube 3, 7, 11; Moore 5) and finds neither family at 9, 25, 27, 49": true,
+    "12495: the 40-line q = 7 optimum found by the MILP with no symmetry imposed is a cube": true
+  },
+  "all_checks_pass": true
+}

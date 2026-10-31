@@ -1,0 +1,280 @@
+{
+ "q": 7,
+ "opp": 2,
+ "predicted_size": 34,
+ "tried_R0": 17,
+ "results": [
+  {
+   "R0": [
+    1,
+    332,
+    228,
+    280,
+    48,
+    65,
+    117,
+    356
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    180,
+    195,
+    110,
+    144,
+    396,
+    351,
+    286,
+    275
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    247,
+    283,
+    224,
+    173,
+    323,
+    253,
+    334,
+    177
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    346,
+    177,
+    143,
+    112,
+    389,
+    306,
+    378,
+    186
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    235,
+    11,
+    60,
+    52,
+    316,
+    359,
+    148,
+    192
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    300,
+    155,
+    201,
+    76,
+    37,
+    267,
+    145,
+    109
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    212,
+    88,
+    301,
+    264,
+    231,
+    340,
+    94,
+    185
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    397,
+    314,
+    228,
+    377,
+    208,
+    253,
+    345,
+    291
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    78,
+    191,
+    95,
+    277,
+    169,
+    212,
+    44,
+    224
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    298,
+    116,
+    398,
+    83,
+    71,
+    371,
+    266,
+    24
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    6,
+    38,
+    394,
+    102,
+    315,
+    257,
+    169,
+    220
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    263,
+    207,
+    296,
+    248,
+    119,
+    175,
+    128,
+    176
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    196,
+    108,
+    347,
+    10,
+    46,
+    262,
+    225,
+    379
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    287,
+    234,
+    97,
+    105,
+    151,
+    118,
+    218,
+    288
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    258,
+    248,
+    159,
+    393,
+    282,
+    211,
+    177,
+    66
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    10,
+    117,
+    352,
+    40,
+    194,
+    90,
+    297,
+    325
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  },
+  {
+   "R0": [
+    281,
+    299,
+    226,
+    101,
+    380,
+    224,
+    92,
+    369
+   ],
+   "matchings": 105,
+   "even": 0,
+   "example": null,
+   "good_matchings_param": []
+  }
+ ]
+}

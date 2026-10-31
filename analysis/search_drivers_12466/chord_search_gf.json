@@ -1,0 +1,162 @@
+{
+ "3_cube": {
+  "status": "found",
+  "nodes": 3,
+  "seconds": 0.0,
+  "matching": [
+   [
+    -1,
+    0
+   ],
+   [
+    1,
+    2
+   ]
+  ]
+ },
+ "3_moore": {
+  "status": "none",
+  "nodes": 4,
+  "seconds": 0.0,
+  "matching": null
+ },
+ "5_cube": {
+  "status": "none",
+  "nodes": 16,
+  "seconds": 0.0,
+  "matching": null
+ },
+ "5_moore": {
+  "status": "found",
+  "nodes": 4,
+  "seconds": 0.0,
+  "matching": [
+   [
+    -1,
+    0
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    2,
+    3
+   ]
+  ]
+ },
+ "7_cube": {
+  "status": "found",
+  "nodes": 5,
+  "seconds": 0.0,
+  "matching": [
+   [
+    -1,
+    0
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    4,
+    5
+   ]
+  ]
+ },
+ "7_moore": {
+  "status": "none",
+  "nodes": 22,
+  "seconds": 0.0,
+  "matching": null
+ },
+ "11_cube": {
+  "status": "found",
+  "nodes": 7,
+  "seconds": 0.0,
+  "matching": [
+   [
+    -1,
+    0
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    10
+   ],
+   [
+    7,
+    9
+   ]
+  ]
+ },
+ "11_moore": {
+  "status": "none",
+  "nodes": 112,
+  "seconds": 0.0,
+  "matching": null
+ },
+ "9_cube": {
+  "status": "none",
+  "nodes": 74,
+  "seconds": 0.0,
+  "matching": null
+ },
+ "9_moore": {
+  "status": "none",
+  "nodes": 56,
+  "seconds": 0.0,
+  "matching": null
+ },
+ "25_cube": {
+  "status": "none",
+  "nodes": 4410,
+  "seconds": 3.0,
+  "matching": null
+ },
+ "25_moore": {
+  "status": "none",
+  "nodes": 3166,
+  "seconds": 1.7,
+  "matching": null
+ },
+ "27_cube": {
+  "status": "none",
+  "nodes": 7363,
+  "seconds": 4.6,
+  "matching": null
+ },
+ "27_moore": {
+  "status": "none",
+  "nodes": 3898,
+  "seconds": 2.8,
+  "matching": null
+ },
+ "49_cube": {
+  "status": "none",
+  "nodes": 229390,
+  "seconds": 287.3,
+  "matching": null
+ },
+ "49_moore": {
+  "status": "none",
+  "nodes": 147547,
+  "seconds": 181.2,
+  "matching": null
+ }
+}
