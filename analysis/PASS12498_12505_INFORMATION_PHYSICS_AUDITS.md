@@ -119,3 +119,36 @@ claim.
   J. Emerson, *Contextuality supplies the "magic" for quantum computation*, Nature 510 (2014).
 - N. D. Mermin, Phys. Rev. Lett. 65 (1990); A. Peres, Phys. Lett. A 151 (1990).
 - F. Y. Wu, *The Potts model*, Rev. Mod. Phys. 54 (1982) (the square-lattice β_c), as cited by the corpus's own firewall.
+
+## 12501: the q = 9 48-line set is an icosahedral orbit
+
+The 48-line even set of W(3,9) found in 12496 is identified exactly.
+
+- **Its 12 "free" lines** (lines missing every covered point) form K₂,₁₀: a disjoint isotropic pair X, Y and the regulus
+  {X, Y}^⊥ of their 10 transversals. The set misses the whole hyperbolic quadric Q⁺(3,9) swept by that regulus (100 points). It lies
+  among the 288 W-lines missing the quadric, on which H = Stab({X, Y}) = GL(2,9).2 acts transitively (`passant_orbits.py`).
+- **Its stabiliser lies in H**, because X and Y are determined by the set. Enumerating all 11,520 elements of H (`stab48.py`) gives a
+  stabiliser of **order 480** as a group of line permutations. It is **transitive on all 48 lines**, half its elements swap the two
+  24-line halves, and the element orders are 1, 2, 3, 4, 5, 6, 10, 12, 20.
+- **Its image in PGL(2,9) is A₅**: order 60, element orders 1¹ 2¹⁵ 3²⁰ 5²⁴ (`stab48_pgl_image.json`). The kernel is the scalar group
+  F₉*.
+
+> **The 48-set is a single orbit of F₉* · 2.A₅ · 2**, the binary icosahedral group acting on X ⊕ Y as (M, M⁻ᵀ), together with the
+> swap, with A₅ ⊂ PSL(2,9) ≅ A₆.
+
+**Reconstruction (control).** Building that group from scratch and minimising over its invariant even sets (`icosa_even.py`)
+returns **48** for one class of A₅ in PSL(2,9) and **80** for the other. 80 = q² − 1, the known transitive family.
+
+**It does not generalise.** The same construction gives 100 and 240 at q = 11 (worse than 84) and 720 at q = 19. The value 48 depends
+on q = 9 specifically.
+
+**Observation [I].** Every exceptional optimum found so far comes from an exceptional subgroup of PSL(2,q):
+
+| q | structure | group |
+|---|---|---|
+| 5 | Petersen | A₅ (PSL(2,5) ≅ A₅) |
+| 7 | cube | S₄ ⊂ PSL(2,7) |
+| 9 | the 48-set | A₅ ⊂ PSL(2,9) ≅ A₆ |
+| 11 | icosahedron | A₅ ⊂ PSL(2,11) |
+
+These are the field orders of Galois's theorem and of the exceptional isomorphisms. This is an observed pattern, not a theorem.

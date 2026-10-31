@@ -269,6 +269,72 @@
       "B": 0.7978231592953476
     }
   },
+  "12501": {
+    "stabiliser": {
+      "H_elements_tested": 11520,
+      "stabiliser_elements": 960,
+      "distinct_line_permutations": 480,
+      "orbits_on_S": [
+        48
+      ],
+      "elements_swapping_halves": 480,
+      "order_profile_on_lines": {
+        "1": 2,
+        "2": 190,
+        "3": 40,
+        "4": 64,
+        "5": 48,
+        "6": 200,
+        "10": 240,
+        "12": 80,
+        "20": 96
+      }
+    },
+    "pgl_image": {
+      "matrices_without_swap": 480,
+      "scalar_matrices": 8,
+      "PGL29_image_order": 60,
+      "PGL_image_order_profile": {
+        "1": 1,
+        "2": 15,
+        "3": 20,
+        "5": 24
+      }
+    },
+    "passants": {
+      "passants": 288,
+      "orbit_sizes": [
+        288
+      ],
+      "orbit_hits_by_S": [
+        [
+          288,
+          48
+        ]
+      ],
+      "S_union_of_orbits": false
+    },
+    "icosa": {
+      "9": [
+        48,
+        80,
+        48,
+        80
+      ],
+      "11": [
+        240,
+        240,
+        100,
+        240
+      ],
+      "19": [
+        720,
+        720,
+        720,
+        720
+      ]
+    }
+  },
   "checks": {
     "12498a: q = 3 alphabet hits 1 of 5 windows under its own grammar; >= 99% of 2,000 random alphabets do at least as well": true,
     "12498b: only m_H and alpha_s are within 3 sigma; 1/alpha and m_p/m_e miss by > 1e6 sigma; 12.6 of 54.8 bits survive": true,
@@ -276,7 +342,9 @@
     "12499: field-reduced grids -- q = 2 is the Mermin-Peres parity proof (-1); q = 4 and 8 give +1 (no parity proof)": true,
     "12499: commuting Hermitian Pauli groups -- ranks 2, 3 multiply to -I sometimes; ranks 4, 5 always to +I (random samples)": true,
     "12500: route enumerator recomputed = Pass 173; address minimum 8 (45 words); not self-dual": true,
-    "12500: specific-heat maxima at K ~ 0.60 for both models, far from the site's beta_c = log(1+sqrt 3) = 1.005": true
+    "12500: specific-heat maxima at K ~ 0.60 for both models, far from the site's beta_c = log(1+sqrt 3) = 1.005": true,
+    "12501: the 48-set's stabiliser (order 480 on lines) is transitive on the 48 lines; its PGL(2,9) image is A5": true,
+    "12501: rebuilding F_q^* . 2.A5 . 2 gives 48 (and 80 = q^2-1) at q = 9, but 100/240 at q = 11 and 720 at q = 19": true
   },
   "all_checks_pass": true
 }

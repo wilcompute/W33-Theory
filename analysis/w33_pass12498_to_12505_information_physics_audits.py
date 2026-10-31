@@ -60,6 +60,17 @@ def main():
     checks["12500: specific-heat maxima at K ~ 0.60 for both models, far from the site's beta_c = log(1+sqrt 3) = 1.005"] = (
         abs(th["specific_heat_peak_K"]["model_A_route"] - 0.6) < 0.02 and abs(th["specific_heat_peak_K"]["model_B_address"] - 0.6) < 0.02
         and abs(th["site_claim_beta_c"] - 1.00505) < 1e-4)
+    # 12501: the q = 9 48-set is an orbit of F9* . 2.A5 . 2
+    st, im, po = load("stab48_q9.json"), load("stab48_pgl_image.json"), load("passant_orbits_q9.json")
+    ic = {q: load(f"icosa_even_q{q}.json") for q in (9, 11, 19)}
+    res["12501"] = dict(stabiliser=st, pgl_image=im, passants=po,
+                        icosa={q: [r.get("weight") for r in d["results"]] for q, d in ic.items() if d})
+    checks["12501: the 48-set's stabiliser (order 480 on lines) is transitive on the 48 lines; its PGL(2,9) image is A5"] = (
+        st["distinct_line_permutations"] == 480 and st["orbits_on_S"] == [48] and im["PGL29_image_order"] == 60
+        and im["PGL_image_order_profile"] == {"1": 1, "2": 15, "3": 20, "5": 24} and po["passants"] == 288)
+    w9 = [r.get("weight") for r in ic[9]["results"]]
+    checks["12501: rebuilding F_q^* . 2.A5 . 2 gives 48 (and 80 = q^2-1) at q = 9, but 100/240 at q = 11 and 720 at q = 19"] = (
+        48 in w9 and 80 in w9 and min(r["weight"] for r in ic[11]["results"]) == 100 and min(r["weight"] for r in ic[19]["results"]) == 720)
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())
