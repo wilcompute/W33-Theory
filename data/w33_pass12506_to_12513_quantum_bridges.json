@@ -1,0 +1,151 @@
+{
+  "braid": {
+    "path": [
+      0,
+      39,
+      21,
+      18,
+      19
+    ],
+    "braid_relations": true,
+    "far_commutation": true,
+    "minimal_codewords": 216,
+    "by_k": {
+      "3": {
+        "generators": 2,
+        "group_order_on_points": 24,
+        "orbits_on_216": [
+          12,
+          12,
+          12,
+          12,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ]
+      },
+      "4": {
+        "generators": 3,
+        "group_order_on_points": 648,
+        "orbits_on_216": [
+          108,
+          108
+        ]
+      },
+      "5": {
+        "generators": 4,
+        "group_order_on_points": 25920,
+        "orbits_on_216": [
+          216
+        ]
+      },
+      "6": {
+        "generators": 5,
+        "group_order_on_points": 25920,
+        "orbits_on_216": [
+          216
+        ]
+      }
+    }
+  },
+  "B4_group": {
+    "order": 648,
+    "element_orders": {
+      "1": 1,
+      "2": 9,
+      "3": 98,
+      "4": 54,
+      "6": 234,
+      "9": 144,
+      "12": 108
+    },
+    "center_order": 3,
+    "elements_of_3power_order": 243,
+    "derived_subgroup_order": 216
+  },
+  "B4_quotient": {
+    "quotient_order": 216,
+    "quotient_element_orders": {
+      "1": 1,
+      "2": 9,
+      "3": 80,
+      "4": 54,
+      "6": 72
+    },
+    "ASL23_element_orders": {
+      "1": 1,
+      "2": 9,
+      "3": 80,
+      "4": 54,
+      "6": 72
+    },
+    "same_profile": true
+  },
+  "e8_probe": {
+    "covered": 240,
+    "point_permutations": 240,
+    "orbits_full": [
+      120,
+      120
+    ],
+    "SL_matrices": 120,
+    "SL_point_perms": 60,
+    "orbits_2I": [
+      60,
+      60,
+      60,
+      60
+    ],
+    "fixed_point_counts": {
+      "0": 224,
+      "16": 15,
+      "240": 1
+    },
+    "collinearity_degrees": [
+      32
+    ],
+    "collinearity_spectrum": {
+      "-10.0": 6,
+      "-8.0": 5,
+      "-7.0": 8,
+      "-6.449": 20,
+      "-6.0": 6,
+      "-5.0": 4,
+      "-4.0": 17,
+      "-3.449": 16,
+      "-3.162": 12,
+      "-2.0": 10,
+      "-1.551": 20,
+      "-1.0": 4,
+      "-0.0": 5,
+      "1.0": 8,
+      "1.449": 16,
+      "2.0": 10,
+      "3.0": 4,
+      "3.162": 12,
+      "4.0": 5,
+      "7.0": 4,
+      "8.0": 47,
+      "32.0": 1
+    },
+    "E8_roots": 240,
+    "E8_root_graph_spectrum": {
+      "-4.0": 84,
+      "-2.0": 112,
+      "8.0": 35,
+      "28.0": 8,
+      "56.0": 1
+    }
+  },
+  "checks": {
+    "12507: braid relations hold; B3/B4/B5/B6 images have orders 24/648/25920/25920": true,
+    "12507: orbits on the 216 minimal codewords -- B4 splits them 108 + 108, B5 is transitive": true,
+    "12507: the B4 image has centre 3 and its quotient has the ASL(2,3) (Hessian) element-order profile": true,
+    "12506: the q = 9 240 points -- two 120-orbits, collinearity graph 32-regular, unlike the E8 root graph (56-regular)": true
+  },
+  "all_checks_pass": true
+}
