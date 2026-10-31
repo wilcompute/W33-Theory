@@ -1,0 +1,107 @@
+{
+  "schema": "w33.server.five_physical_fronts.v1",
+  "certificate_kind": "verified_numeric_summary; run producer for complete expanded certificate",
+  "status": "FIVE_FRONTS_EXECUTED_IN_SERVER_PYTHON_7_PYTEST_PASSED",
+  "results": {
+    "01_steinberg160_mode_optics": {
+      "status": "PASS_160_FLAG_ISOMETRY_81_STEINBERG_EQUIVARIANCE",
+      "physical_rail_count": 160,
+      "logical_cycle_dimension": 81,
+      "incidence_rank": 79,
+      "generator_order": 3,
+      "number_generators": 5,
+      "max_intertwining_residual": 1.1e-14
+    },
+    "02_QND_strange_false_herald": {
+      "status": "PASS_STRANGE_QND_FALSE_HERALD_AND_MANA_ACCOUNTING",
+      "noise_free_success": 0.5,
+      "readout_flip_magic_zero": 0.5,
+      "conditional_fidelity": "1-eps",
+      "false_herald_from_input_0": "eps",
+      "conditional_mana": "log((5-4eps)/3) for 0<=eps<=0.5"
+    },
+    "03_full120_tick_classical_and_quantum": {
+      "status": "PASS_120_TICK_FOUR_SECTOR_TRANSFER_AND_TWO_SITE_QUANTUM_GAP",
+      "sector_multiplicities": [
+        1,
+        24,
+        15,
+        80
+      ],
+      "relation_counts_per_label": [
+        1,
+        2,
+        36,
+        81
+      ],
+      "full_two_site_quantum_hilbert_dimension": 14400,
+      "quantum_gaps": [
+        {
+          "h": 0.05,
+          "gap": 0.030656834452209014
+        },
+        {
+          "h": 0.25,
+          "gap": 0.1652140372833404
+        }
+      ]
+    },
+    "04_noisy_floquet_carrier_channel": {
+      "status": "PASS_FLOQUET_PER_CARRIER_13_TICK_EXPOSURE_AND_NOISY_FIDELITY",
+      "per_SWAP_native_ticks": 13,
+      "results": [
+        {
+          "L": 4,
+          "stage_histogram": {
+            "1": 2,
+            "2": 5,
+            "4": 9
+          },
+          "p": 0.01,
+          "mean_F_e": 0.7189975440354004,
+          "positive_coherent_info_carriers": 7
+        },
+        {
+          "L": 4,
+          "p": 0.03,
+          "mean_F_e": 0.4143044947663462,
+          "positive_coherent_info_carriers": 0
+        },
+        {
+          "L": 6,
+          "stage_histogram": {
+            "1": 2,
+            "2": 9,
+            "4": 25
+          },
+          "p": 0.01,
+          "mean_F_e": 0.69159485,
+          "positive_coherent_info_carriers": 11
+        },
+        {
+          "L": 8,
+          "stage_histogram": {
+            "1": 2,
+            "2": 13,
+            "4": 49
+          },
+          "p": 0.01,
+          "mean_F_e": 0.67806887,
+          "positive_coherent_info_carriers": 15
+        }
+      ]
+    },
+    "05_3plus1_lorentz_gauss_and_adm_nogo": {
+      "status": "PASS_3PLUS1_LORENTZ_GAUSS_CLOSURE_AND_ULTRALOCAL_ADM_FAILURE",
+      "spatial_lattice": [
+        2,
+        2,
+        2
+      ],
+      "max_lorentz_Gauss_Poisson_closure_error": 2.220446049250313e-16,
+      "ultralocal_scalar_bracket": 0,
+      "nonzero_generic_spatial_shift_target": 17.203907132704973
+    }
+  },
+  "limitations": "Every physical model has externally supplied hardware/dynamics; the Lorentz model explicitly fails ADM, no experimental TOE."
+}
