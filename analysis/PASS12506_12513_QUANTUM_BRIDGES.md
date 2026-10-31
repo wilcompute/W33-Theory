@@ -33,8 +33,9 @@ proved here [C].
 **Reading [I].** With metaplectic anyons as the braiding substrate:
 
 - **five anyons** suffice for braiding alone to move any minimal codeword of the two-qutrit line code to any other;
-- **four anyons** split the 216 into two halves of 108, the same 108 + 108 split as Pass 173's "two chiral orbits of 216" on the
-  signed shell, now produced by braiding;
+- **four anyons** split the 216 supports into two halves of 108. This is analogous to, but not the same object as, Pass 173's
+  split of the 432 *signed* minimal vectors into two chiral orbits of 216. Whether the 108 + 108 halves are exactly the images of
+  Pass 173's chiral orbits has not been checked [C];
 - **three anyons** give the binary tetrahedral group.
 
 ## 12506: the 240 covered points of the q = 9 set are not an E₈ root system
