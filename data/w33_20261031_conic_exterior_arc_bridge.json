@@ -1,0 +1,132 @@
+{
+  "status": "exact finite verification; literature classification credited",
+  "scope": "computations over prime fields 3,5,7,11,13; theorem over odd prime powers",
+  "sources": [
+    "https://doi.org/10.1007/BF01204717",
+    "https://arxiv.org/abs/1201.0484"
+  ],
+  "prior_repo": [
+    "analysis/PASS12482_12489_EVEN_LINE_SETS_PAIR_STRUCTURE.md",
+    "analysis/PASS12490_12497_MOORE_FAMILY_HS_EXCLUSION.md"
+  ],
+  "cases": [
+    {
+      "q": 3,
+      "pair_predicate_checks": 3,
+      "triple_predicate_checks": 0,
+      "exterior_arc_matchings": 3,
+      "example_matching": [
+        [
+          "inf",
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "conic_union": {
+        "size": 6,
+        "line_intersection_histogram": {
+          "2": 9,
+          "3": 2,
+          "0": 2
+        },
+        "stopping_set": true,
+        "binary_even_codeword": false
+      }
+    },
+    {
+      "q": 5,
+      "pair_predicate_checks": 45,
+      "triple_predicate_checks": 15,
+      "exterior_arc_matchings": 0,
+      "example_matching": null,
+      "conic_union": null
+    },
+    {
+      "q": 7,
+      "pair_predicate_checks": 210,
+      "triple_predicate_checks": 420,
+      "exterior_arc_matchings": 14,
+      "example_matching": [
+        [
+          "inf",
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "conic_union": {
+        "size": 12,
+        "line_intersection_histogram": {
+          "2": 30,
+          "3": 12,
+          "0": 15
+        },
+        "stopping_set": true,
+        "binary_even_codeword": false
+      }
+    },
+    {
+      "q": 11,
+      "pair_predicate_checks": 1485,
+      "triple_predicate_checks": 13860,
+      "exterior_arc_matchings": 22,
+      "example_matching": [
+        [
+          "inf",
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "conic_union": {
+        "size": 18,
+        "line_intersection_histogram": {
+          "2": 63,
+          "3": 30,
+          "0": 40
+        },
+        "stopping_set": true,
+        "binary_even_codeword": false
+      }
+    },
+    {
+      "q": 13,
+      "pair_predicate_checks": 3003,
+      "triple_predicate_checks": 45045,
+      "exterior_arc_matchings": 0,
+      "example_matching": null,
+      "conic_union": null
+    }
+  ]
+}
