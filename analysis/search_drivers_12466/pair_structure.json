@@ -1,0 +1,42 @@
+{
+ "q3_enumeration": {
+  "status": "OPTIMAL",
+  "count": 216,
+  "spectrum_classes": {
+   "((np.float64(-4.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(4.0)),)": 216
+  },
+  "twin_classes": {
+   "(False, None, None)": 216
+  },
+  "control_weight_1_to_9": "INFEASIBLE"
+ },
+ "q3_plain": {
+  "n": 10,
+  "twin_class_sizes": [
+   [
+    1,
+    10
+   ]
+  ],
+  "twin_paired": false
+ },
+ "q5_plain": {
+  "n": 20,
+  "twin_class_sizes": [
+   [
+    2,
+    10
+   ]
+  ],
+  "twin_paired": true,
+  "perps_inside": true,
+  "pair_graph_n": 10,
+  "pair_graph_degree": [
+   3
+  ],
+  "pair_graph_girth": 5,
+  "moore_bound_pairs": 10,
+  "pair_graph_is_petersen": true,
+  "pair_graph_is_c5": false
+ }
+}

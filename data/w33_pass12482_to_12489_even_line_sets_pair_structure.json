@@ -1,0 +1,67 @@
+{
+  "12482_minima": {
+    "2": 6,
+    "3": 10,
+    "4": 10,
+    "5": 20,
+    "8": 18
+  },
+  "12483": {
+    "count": 216,
+    "orbit": {
+      "orbit_size": 216,
+      "enumerated": 216,
+      "one_orbit": true,
+      "stabiliser_order_in_PSp43": 120
+    },
+    "control": "INFEASIBLE"
+  },
+  "12484": {
+    "n": 20,
+    "twin_class_sizes": [
+      [
+        2,
+        10
+      ]
+    ],
+    "twin_paired": true,
+    "perps_inside": true,
+    "pair_graph_n": 10,
+    "pair_graph_degree": [
+      3
+    ],
+    "pair_graph_girth": 5,
+    "moore_bound_pairs": 10,
+    "pair_graph_is_petersen": true,
+    "pair_graph_is_c5": false
+  },
+  "12484_orbit": {
+    "orbit_size": 4875,
+    "stabiliser_order": 960,
+    "divides": true
+  },
+  "12485_twin_paired_bound": {
+    "3": 10,
+    "5": 20,
+    "7": 34,
+    "9": 52,
+    "13": 100,
+    "113": 6500
+  },
+  "12485_moore_q": [
+    3,
+    5,
+    13,
+    113
+  ],
+  "checks": {
+    "12482: GF(q) driver reproduces the prime-q minima 6, 10, 20 at q = 2, 3, 5 (optimal, verified even)": true,
+    "12482: q = 4, 8 give 2(q+1) = 10, 18 (the known even-q minimum weight; control)": true,
+    "12483: q = 3 has exactly 216 minimum even line sets, one PSp(4,3)-orbit (stabiliser order 120), none below 10": true,
+    "12483: all 216 have intersection graph K55 minus a matching (spectrum +-4, +-1^4) and none is twin-paired": true,
+    "12484: the q = 5 optimum is twin-paired, every perp lies inside, and the pair graph is the Petersen graph (girth 5)": true,
+    "12484: the Petersen set has PSp(4,5)-orbit 4875 and stabiliser order 960 = 8 * |Aut(Petersen)|": true,
+    "12485: Moore degrees 2, 3, 7, 57 correspond to q = 3, 5, 13, 113 and the bound 2 + (q+1)^2/2 is 10, 20, 100, 6500": true
+  },
+  "all_checks_pass": true
+}
