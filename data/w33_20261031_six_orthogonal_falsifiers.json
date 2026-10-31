@@ -1,0 +1,404 @@
+{
+  "prior_commit": "e7ba2d6243c18017abbba6e00aa07a9d18b4d805",
+  "provenance": "Parallel commits have ALREADY solved A5 module 1+3+3, finite clock Hamiltonian 4-label, SO2 Ward, Steinberg81; this script contributes different invariant-form, transfer, QND, Lorentz SO13 and representation no-go certificates.",
+  "results": {
+    "01_GF5_A5_quadratic_invariants": {
+      "invariant_form_spaces": {
+        "alternating": {
+          "basis_matrices": [],
+          "basis_ranks": [],
+          "dimension": 0
+        },
+        "symmetric": {
+          "basis_matrices": [
+            [
+              [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1,
+                4,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                4,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                2,
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              [
+                2,
+                4,
+                1,
+                4,
+                4,
+                3,
+                1
+              ],
+              [
+                0,
+                1,
+                0,
+                4,
+                2,
+                1,
+                1
+              ],
+              [
+                0,
+                4,
+                4,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                4,
+                2,
+                0,
+                0,
+                0,
+                4
+              ],
+              [
+                3,
+                3,
+                1,
+                0,
+                0,
+                4,
+                1
+              ],
+              [
+                0,
+                1,
+                1,
+                2,
+                4,
+                1,
+                0
+              ]
+            ],
+            [
+              [
+                0,
+                4,
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                4,
+                2,
+                0,
+                3,
+                3,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                3,
+                4,
+                0,
+                3
+              ],
+              [
+                0,
+                3,
+                3,
+                0,
+                0,
+                0,
+                4
+              ],
+              [
+                0,
+                3,
+                4,
+                0,
+                0,
+                0,
+                3
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                3,
+                4,
+                3,
+                0,
+                1
+              ]
+            ]
+          ],
+          "basis_ranks": [
+            3,
+            7,
+            7
+          ],
+          "dimension": 3
+        }
+      },
+      "scope": "Actual A5xC2 7D canonical Tor module over characteristic5; no invariant symplectic form, no particle or Lorentz metric derivation.",
+      "status": "PASS_GF5_THREE_INVARIANT_QUADRATIC_FORMS_NO_ALTERNATING_FORM"
+    },
+    "02_ancilla_QND_strange_instrument": {
+      "depolarization_scan": [
+        {
+          "depolarization": 0.0,
+          "fidelity": 0.9999999999999997,
+          "l1": 1.6666666666666663,
+          "mana": 0.5108256237659905,
+          "min": -0.33333333333333326
+        },
+        {
+          "depolarization": 0.1,
+          "fidelity": 0.9333333333333331,
+          "l1": 1.5777777777777773,
+          "mana": 0.45601738727099533,
+          "min": -0.2888888888888888
+        },
+        {
+          "depolarization": 0.25,
+          "fidelity": 0.8333333333333329,
+          "l1": 1.444444444444444,
+          "mana": 0.367724780125317,
+          "min": -0.22222222222222218
+        },
+        {
+          "depolarization": 0.5,
+          "fidelity": 0.6666666666666664,
+          "l1": 1.222222222222222,
+          "mana": 0.20067069546215105,
+          "min": -0.11111111111111109
+        },
+        {
+          "depolarization": 0.75,
+          "fidelity": 0.4999999999999999,
+          "l1": 1.0,
+          "mana": 0.0,
+          "min": 1.850371707708594e-17
+        },
+        {
+          "depolarization": 1.0,
+          "fidelity": 0.33333333333333326,
+          "l1": 1.0,
+          "mana": 0.0,
+          "min": 0.1111111111111111
+        }
+      ],
+      "ideal_output_wigner": {
+        "l1": 1.6666666666666663,
+        "mana": 0.5108256237659905,
+        "min": -0.33333333333333326
+      },
+      "output_state": "(|1>-|2>)/sqrt2 on qutrit, non-stabilizer",
+      "physical_scope": "Exact two-outcome projective instrument with controlled non-Pauli Clifford observable supplied, not free magic generation or a demonstrated optical QND coupler.",
+      "resource": "Ancilla qubit |0>, H2, controlled qutrit parity R|j>=|-j>, H2, measure ancilla. Controlled-R is an externally supplied nonstabilizer-capable interaction; destructive direct photon counting would consume the target.",
+      "status": "PASS_QND_ANCILLA_PARITY_HERALDS_STRANGE_WITH_RESOURCE_COST",
+      "success_probability_for_stabilizer_input_1": 0.4999999999999998,
+      "wigner_negativity_noise_boundary": 0.75
+    },
+    "03_40state_local_clock_transfer": {
+      "large_beta_entropy_per_site": 3.295836866004329,
+      "large_beta_limiting_correlation_length": 0.45511961331341866,
+      "rows": [
+        {
+          "beta": 0.05,
+          "energy_per_bond": 0.07809240030219183,
+          "lambda0": 39.773217081298014,
+          "lambda2_mult24": -0.2920105044688035,
+          "lambda_minus4_mult15": 0.48233566839688446,
+          "xi_sites": 0.22663871844023742
+        },
+        {
+          "beta": 0.2,
+          "energy_per_bond": -0.1122869489239211,
+          "lambda0": 39.89487247091218,
+          "lambda2_mult24": -1.0872523433158894,
+          "lambda_minus4_mult15": 1.7466122512446107,
+          "xi_sites": 0.3196348746056715
+        },
+        {
+          "beta": 0.7,
+          "energy_per_bond": -0.4846455128563966,
+          "lambda0": 47.015247039463794,
+          "lambda2_mult24": -3.2908153468017334,
+          "lambda_minus4_mult15": 4.79762141891852,
+          "xi_sites": 0.43814456877519053
+        },
+        {
+          "beta": 1.5,
+          "energy_per_bond": -0.6365317008512965,
+          "lambda0": 74.99105418880858,
+          "lambda2_mult24": -7.055271348641406,
+          "lambda_minus4_mult15": 8.955697211905678,
+          "xi_sites": 0.470570754602194
+        },
+        {
+          "beta": 3.0,
+          "energy_per_bond": -0.6629466702059809,
+          "lambda0": 200.53425969724745,
+          "lambda2_mult24": -21.16221079243861,
+          "lambda_minus4_mult15": 23.157253288085275,
+          "xi_sites": 0.4632466897607122
+        },
+        {
+          "beta": 10.0,
+          "energy_per_bond": -0.6666352450877776,
+          "lambda0": 21216.84384416497,
+          "lambda2_mult24": -2356.315982678126,
+          "lambda_minus4_mult15": 2358.315982674004,
+          "xi_sites": 0.4551977136599781
+        }
+      ],
+      "scope": "Exactly soluble one-dimensional 40-state nearest-neighbor DIRECTION-ONLY clock transfer model, chosen J=1,K=2; no finite-temperature transition because all entries positive and Perron eigenvalue simple. Different from 120-tick complete graph and not dynamical gravity.",
+      "status": "PASS_EXACT_40_DIRECTION_LOCAL_CLOCK_THERMODYNAMICS",
+      "transfer_spectrum": "lambda0=1+12a+27b; lambda2=1+2a-3b (mult24); lambda_neg4=1-4a+3b (mult15), a=exp(-2 beta J),b=exp(-beta(2J-4K/3))"
+    },
+    "04_81mode_steinberg_vs_Pauli_obstruction": {
+      "Pauli_81_permutation_module_invariant_dimension": 2,
+      "Steinberg_81_invariant_dimension": 0,
+      "nonzero_Pauli_F3_4_orbit": 80,
+      "prior_work": "analysis/w33_20260901_clique_h1_equals_building_steinberg.py and analysis/w33_20261009_toe_integral_clique_levi_bridge.py",
+      "reason": "Pauli vector label permutation has two orbits, one {0} and one 80 nonzero; it contains two trivial summands over C. Earlier repo proves H1 of clique/Levi geometry irreducible Steinberg81 under PSp(4,3), with no trivial summand. Cannot identify the carriers merely because both dimensions are 81.",
+      "scope": "Purely representation-theoretic no-go for a PARTICULAR naive operator-label identification, not a no-go for nonlinear or distinct physical 81-mode bridges.",
+      "status": "PASS_81_DIMENSION_MATCH_NOT_EQUIVARIANT_PAULI_ISOMORPHISM",
+      "zero_vector_orbit": 1
+    },
+    "05_SO13_noncompact_gauge_Ward": {
+      "Lattice": "Externally postulated periodic 3x3 2D spatial grid with 4-vector frame and SO+(1,3) link matrices",
+      "action_indefinite": true,
+      "finite_difference_local_Ward_error": 0.0,
+      "gauge_action_invariance_abs_error": 3.552713678800501e-15,
+      "holonomy_trace_invariance_max_error": 1.7763568394002505e-15,
+      "metric_signature": [
+        1,
+        3
+      ],
+      "scope": "Noncompact SO+(1,3) gauge covariance of a stipulated frame kinetic action; not Einstein-Hilbert, no scalar/diffeomorphism first-class constraints, no spin-2 graviton, no spacetime derivation or physically stable Hamiltonian.",
+      "so13_commutator": "[K_x,K_y]=-J_z checked exactly",
+      "status": "PASS_NATIVE_CANDIDATE_LORENTZ_CONNECTION_GAUGE_WARD_BUT_NO_GR_CONSTRAINTS"
+    },
+    "06_Floquet_edge_unitary_vs_noise": {
+      "GNVW_boundary_index": 3,
+      "channel_limit": "For nonunitary depolarization the unitary-QCA index is not defined; eta^52 is an explicitly stipulated independent loss-control proxy, not an experimental threshold or a proof of protection.",
+      "edge_cycle_checks": [
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          8,
+          15
+        ]
+      ],
+      "noisy_layers_control": [
+        {
+          "52_layer_survival_control": 1.0,
+          "per_gate_layer_information_survival": 1.0
+        },
+        {
+          "52_layer_survival_control": 0.9493041681462654,
+          "per_gate_layer_information_survival": 0.999
+        },
+        {
+          "52_layer_survival_control": 0.7705488893118821,
+          "per_gate_layer_information_survival": 0.995
+        },
+        {
+          "52_layer_survival_control": 0.5929664464014994,
+          "per_gate_layer_information_survival": 0.99
+        },
+        {
+          "52_layer_survival_control": 0.3497485607556669,
+          "per_gate_layer_information_survival": 0.98
+        }
+      ],
+      "status": "PASS_CONDITIONAL_2D_FLOQUET_EDGE_INDEX_UNDER_UNITARY_DRESSING",
+      "unitary_stability_argument": "Multiplying a locality-preserving edge automorphism by bounded-depth local unitary circuits preserves its GNVW index; random onsite unitary dressing changes the outgoing local basis but cannot turn index3 into index1. Applies only to coherent unitary locality-preserving dynamics."
+    }
+  },
+  "schema": "w33.20261031.six_independent_falsifiers.v1",
+  "scope": "All finite exact numerics or stipulated toy models, no experimental TOE."
+}

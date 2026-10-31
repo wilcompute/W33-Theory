@@ -1,0 +1,116 @@
+{
+  "caveat": "This tests strictly local unitary miscalibration, NOT stochastic depolarization, leakage, optical mode loss, correlated entangling gate noise or a noisy-channel topological invariant.",
+  "model": "Four-stage checkerboard qutrit SWAP, each stage preceded by independent random three-by-three SU(3) local coherent rotations exp(i epsilon H_site). Same gate connectivity as the native 13-tick SWAP compiled in prior research.",
+  "robustness": "Exact destination-site routing persists, calibration by accumulated local U\u2020 recovers any incoming qutrit with unit fidelity. Uncalibrated single-basis state fidelity deteriorates with error scale. GNVW index survives finite-depth coherent local dressing.",
+  "rows": [
+    {
+      "boundary_shift_orbit_length": 7,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.0,
+      "maximum_recovered_infidelity": 0.0,
+      "mean_uncalibrated_infidelity": 0.0,
+      "periodic": false,
+      "side": 4
+    },
+    {
+      "boundary_shift_orbit_length": 7,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.04,
+      "maximum_recovered_infidelity": 8.881784197001252e-16,
+      "mean_uncalibrated_infidelity": 0.015382803202915012,
+      "periodic": false,
+      "side": 4
+    },
+    {
+      "boundary_shift_orbit_length": 7,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.2,
+      "maximum_recovered_infidelity": 8.881784197001252e-16,
+      "mean_uncalibrated_infidelity": 0.23083346703816918,
+      "periodic": false,
+      "side": 4
+    },
+    {
+      "boundary_shift_orbit_length": 7,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.5,
+      "maximum_recovered_infidelity": 1.3322676295501878e-15,
+      "mean_uncalibrated_infidelity": 0.6121394916275414,
+      "periodic": false,
+      "side": 4
+    },
+    {
+      "boundary_shift_orbit_length": 11,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.0,
+      "maximum_recovered_infidelity": 0.0,
+      "mean_uncalibrated_infidelity": 0.0,
+      "periodic": false,
+      "side": 6
+    },
+    {
+      "boundary_shift_orbit_length": 11,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.04,
+      "maximum_recovered_infidelity": 8.881784197001252e-16,
+      "mean_uncalibrated_infidelity": 0.013444441621082985,
+      "periodic": false,
+      "side": 6
+    },
+    {
+      "boundary_shift_orbit_length": 11,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.2,
+      "maximum_recovered_infidelity": 1.3322676295501878e-15,
+      "mean_uncalibrated_infidelity": 0.2507459433375752,
+      "periodic": false,
+      "side": 6
+    },
+    {
+      "boundary_shift_orbit_length": 11,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.5,
+      "maximum_recovered_infidelity": 1.1102230246251565e-15,
+      "mean_uncalibrated_infidelity": 0.7096314893779944,
+      "periodic": false,
+      "side": 6
+    },
+    {
+      "boundary_shift_orbit_length": 0,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.0,
+      "maximum_recovered_infidelity": 0.0,
+      "mean_uncalibrated_infidelity": 0.0,
+      "periodic": true,
+      "side": 6
+    },
+    {
+      "boundary_shift_orbit_length": 0,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.04,
+      "maximum_recovered_infidelity": 8.881784197001252e-16,
+      "mean_uncalibrated_infidelity": 0.013662849880383668,
+      "periodic": true,
+      "side": 6
+    },
+    {
+      "boundary_shift_orbit_length": 0,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.2,
+      "maximum_recovered_infidelity": 1.3322676295501878e-15,
+      "mean_uncalibrated_infidelity": 0.28598228132905684,
+      "periodic": true,
+      "side": 6
+    },
+    {
+      "boundary_shift_orbit_length": 0,
+      "bulk_permutation_identity": true,
+      "epsilon_random_local_SU3": 0.5,
+      "maximum_recovered_infidelity": 1.1102230246251565e-15,
+      "mean_uncalibrated_infidelity": 0.7175602059982338,
+      "periodic": true,
+      "side": 6
+    }
+  ],
+  "status": "PASS_FLOQUET_RANDOM_LOCAL_SU3_DRESSING_EXACT_ROUTE_AND_RECOVERY"
+}
