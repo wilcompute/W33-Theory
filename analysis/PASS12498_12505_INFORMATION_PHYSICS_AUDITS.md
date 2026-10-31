@@ -152,3 +152,62 @@ on q = 9 specifically.
 | 11 | icosahedron | A₅ ⊂ PSL(2,11) |
 
 These are the field orders of Galois's theorem and of the exceptional isomorphisms. This is an observed pattern, not a theorem.
+
+## 12502: is 48 the minimum at q = 9?
+
+`q9_le46.py` asks CP-SAT for an even line set of W(3,9) with at most 46 lines. It uses the line-pair symmetry break of 12474, which is
+valid because some chosen line meets another and PSp(4,q) is transitive on meeting line pairs. Even sets have even size, so
+**INFEASIBLE would prove the minimum is 48**. UNKNOWN proves nothing. The result is recorded in `q9_le46.json` when the 3-hour run
+finishes; until then, the status of record is: minimum ∈ [32, 48] (lower bound from the other track's
+`w33_20261031_even_set_bounds.py`).
+
+## 12503: the exceptional-subgroup pattern, tested
+
+`poly_even.py` generalises 12501's construction to every polyhedral group F_q* · L · 2 on a hyperbolic pair: L = A₄, S₄ or A₅,
+presented as s² = t³ = (st)ᵐ = 1 with m = 3, 4, 5. Each is tried at every q where it embeds in PSL(2,q).
+
+| q | best polyhedral (group) | best known | reading |
+|---|---|---|---|
+| 5 | **20** (A₄) | 20 | the Petersen set is A₄-invariant |
+| 7 | 68 (A₄), 72 (S₄) | 40 (cube, a regulus construction) | |
+| 9 | **48** (A₄, A₅) | 48 | A₄ ⊂ A₅ already suffices |
+| 11 | 100 (A₄, A₅) | 84 | |
+| 13 | 168 (A₄) | 168 = q² − 1 | the classical transitive family |
+| 17 | 288 (A₄, S₄) | 288 = q² − 1 (new upper bound; lower bound 72) | |
+| 19 | 720 (A₄, A₅) | 360 = q² − 1 | |
+
+**The pattern survives.** Below the classical q² − 1 family, small even line sets have been found only at q = 5, 7, 9, 11, each with
+an exceptional PSL(2,q) symmetry. Polyhedral subgroups at q = 13, 17, 19 give nothing smaller. That is an observed pattern [I]; no
+theorem is claimed.
+
+## 12504: the site's PMNS claims, tested fairly
+
+The site's "all within 0.5σ" neutrino triple is sin²θ₁₂ = 4/13, sin²θ₁₃ = 2/91 and sin²θ₂₃ = 7/13. `pmns_null.py` counts how often a
+random 13-integer alphabet (plus the leaf 1) reaches each angle within 1σ, using NuFIT 6.0 values and the site's own:
+
+| expression cost | q = 3 hits | random: θ₁₂ / θ₁₃ / θ₂₃ | P(random ≥ q = 3) |
+|---|---|---|---|
+| ≤ 2 (e.g. 4/13, 7/13) | θ₁₂, θ₂₃ | 88–90% / 0% / 95–98% | 0.83–0.88 |
+| ≤ 3 (e.g. 2/91) | all three | 100% / 100% / 100% | 1.00 |
+
+**The PMNS matches carry no evidence.** Small rationals with three integer leaves are so dense that every random alphabet reaches
+every angle.
+
+**Site corrections in `docs/index.html`:**
+
+- the "All within 0.5σ of experiment!" sentence;
+- the Higgs row, already withdrawn by Pass 1010 but still shown as a success;
+- the m_p/m_e row, which is 1.4 × 10⁶ σ, the nearest integer rather than a derivation;
+- the solar PMNS row.
+
+The README's Pass 1010 table was already honest; the site had not caught up with it.
+
+## 12505: a checker for future constant claims, and the literature
+
+- **`scripts/check_constant_claim.py`.** Give it `--measured --sigma --predicted --cost` and it reports the experimental tension,
+  the window, the fraction of random alphabets reaching the target at that cost, and a verdict: excluded, consistent but not
+  evidence, or rare. On the headline claims: 4/13 is "consistent, not evidence"; 3/13 is "excluded" (11σ); 9/76 is "consistent,
+  not evidence".
+- **Literature.** Transitive hyperovals of Q(4,q), q odd, are known in sizes (q+1)², q(q+1) and q² − 1, with dihedral-product
+  stabilisers. Searches (Pepe–Storme–Van de Voorde, the Bayens thesis, the transitive pseudo-hyperoval literature, three web
+  searches) found **no hyperoval of Q(4,9) of size 48**, and no icosahedral hyperoval. That is a negative search.

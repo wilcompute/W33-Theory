@@ -335,6 +335,77 @@
       ]
     }
   },
+  "12503_poly": {
+    "5_3": 20,
+    "5_5": 24,
+    "7_3": 68,
+    "7_4": 72,
+    "9_3": 48,
+    "9_4": 80,
+    "11_3": 100,
+    "13_3": 168,
+    "17_3": 288,
+    "17_4": 288,
+    "19_3": 720
+  },
+  "12504": {
+    "cost2_nufit6_SK": {
+      "q3_hits": [
+        true,
+        false,
+        true
+      ],
+      "p_random_at_least_as_many": 0.8275,
+      "random_per_angle": [
+        0.875,
+        0.0,
+        0.95
+      ],
+      "n": 400
+    },
+    "cost2_site_values": {
+      "q3_hits": [
+        true,
+        false,
+        true
+      ],
+      "p_random_at_least_as_many": 0.88,
+      "random_per_angle": [
+        0.9025,
+        0.0,
+        0.9775
+      ],
+      "n": 400
+    },
+    "cost3_nufit6_SK": {
+      "q3_hits": [
+        true,
+        true,
+        true
+      ],
+      "p_random_at_least_as_many": 1.0,
+      "random_per_angle": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "n": 400
+    },
+    "cost3_site_values": {
+      "q3_hits": [
+        true,
+        true,
+        true
+      ],
+      "p_random_at_least_as_many": 1.0,
+      "random_per_angle": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "n": 400
+    }
+  },
   "checks": {
     "12498a: q = 3 alphabet hits 1 of 5 windows under its own grammar; >= 99% of 2,000 random alphabets do at least as well": true,
     "12498b: only m_H and alpha_s are within 3 sigma; 1/alpha and m_p/m_e miss by > 1e6 sigma; 12.6 of 54.8 bits survive": true,
@@ -344,7 +415,9 @@
     "12500: route enumerator recomputed = Pass 173; address minimum 8 (45 words); not self-dual": true,
     "12500: specific-heat maxima at K ~ 0.60 for both models, far from the site's beta_c = log(1+sqrt 3) = 1.005": true,
     "12501: the 48-set's stabiliser (order 480 on lines) is transitive on the 48 lines; its PGL(2,9) image is A5": true,
-    "12501: rebuilding F_q^* . 2.A5 . 2 gives 48 (and 80 = q^2-1) at q = 9, but 100/240 at q = 11 and 720 at q = 19": true
+    "12501: rebuilding F_q^* . 2.A5 . 2 gives 48 (and 80 = q^2-1) at q = 9, but 100/240 at q = 11 and 720 at q = 19": true,
+    "12503: polyhedral symmetry reproduces 20 (q=5, A4) and 48 (q=9, A4), and gives nothing below q^2-1 at q = 13, 17, 19": true,
+    "12504: PMNS -- at cost <= 2, >= 80% of random alphabets match as many angles as q = 3; at cost <= 3, 100% match all three": true
   },
   "all_checks_pass": true
 }

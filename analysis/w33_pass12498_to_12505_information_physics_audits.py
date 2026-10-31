@@ -71,6 +71,26 @@ def main():
     w9 = [r.get("weight") for r in ic[9]["results"]]
     checks["12501: rebuilding F_q^* . 2.A5 . 2 gives 48 (and 80 = q^2-1) at q = 9, but 100/240 at q = 11 and 720 at q = 19"] = (
         48 in w9 and 80 in w9 and min(r["weight"] for r in ic[11]["results"]) == 100 and min(r["weight"] for r in ic[19]["results"]) == 720)
+    # 12502: q = 9 minimality search (recorded when present; only INFEASIBLE is a proof)
+    m9 = load("q9_le46.json")
+    if m9:
+        res["12502"] = {k: v for k, v in m9.items() if k != "chosen"}
+    # 12503: the polyhedral matrix
+    poly = {}
+    for q, m in ((5, 3), (5, 5), (7, 3), (7, 4), (9, 3), (9, 4), (11, 3), (13, 3), (17, 3), (17, 4), (19, 3)):
+        d = load(f"poly_even_q{q}_m{m}.json")
+        if d and d.get("results"):
+            poly[f"{q}_{m}"] = min(r["weight"] for r in d["results"] if r.get("verified_even"))
+    res["12503_poly"] = poly
+    checks["12503: polyhedral symmetry reproduces 20 (q=5, A4) and 48 (q=9, A4), and gives nothing below q^2-1 at q = 13, 17, 19"] = (
+        poly.get("5_3") == 20 and poly.get("9_3") == 48 and poly.get("13_3") == 168 and poly.get("17_3") == 288
+        and poly.get("17_4") == 288 and poly.get("19_3") >= 360)
+    # 12504: PMNS triple under the fair null
+    pm = load("pmns_null.json")
+    res["12504"] = pm
+    checks["12504: PMNS -- at cost <= 2, >= 80% of random alphabets match as many angles as q = 3; at cost <= 3, 100% match all three"] = (
+        pm["cost2_nufit6_SK"]["p_random_at_least_as_many"] >= 0.8 and pm["cost2_site_values"]["p_random_at_least_as_many"] >= 0.8
+        and pm["cost3_nufit6_SK"]["p_random_at_least_as_many"] == 1.0 and pm["cost3_site_values"]["p_random_at_least_as_many"] == 1.0)
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

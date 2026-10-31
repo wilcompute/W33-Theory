@@ -1,0 +1,44 @@
+== q=5 m=3
+{"line_orbits": 7, "orbit_sizes": [2, 6, 24, 30, 40], "status": "OPTIMAL", "weight": 24, "verified_even": true, "coverage": [0, 2], "bound": 24.0}
+{"line_orbits": 7, "orbit_sizes": [2, 6, 24, 30, 40], "status": "OPTIMAL", "weight": 24, "verified_even": true, "coverage": [0, 2], "bound": 24.0}
+{"line_orbits": 10, "orbit_sizes": [2, 6, 16, 24], "status": "OPTIMAL", "weight": 20, "verified_even": true, "coverage": [0, 2], "bound": 20.0}
+== q=5 m=5
+{"line_orbits": 7, "orbit_sizes": [2, 6, 24, 30, 40], "status": "OPTIMAL", "weight": 24, "verified_even": true, "coverage": [0, 2], "bound": 24.0}
+{"line_orbits": 7, "orbit_sizes": [2, 6, 24, 30, 40], "status": "OPTIMAL", "weight": 24, "verified_even": true, "coverage": [0, 2], "bound": 24.0}
+{"line_orbits": 7, "orbit_sizes": [2, 6, 24, 30, 40], "status": "OPTIMAL", "weight": 24, "verified_even": true, "coverage": [0, 2], "bound": 24.0}
+== q=7 m=3
+{"line_orbits": 6, "orbit_sizes": [2, 8, 48, 126, 168], "status": "OPTIMAL", "weight": 96, "verified_even": true, "coverage": [0, 2, 6], "bound": 96.0}
+{"line_orbits": 16, "orbit_sizes": [2, 4, 12, 18, 24, 36, 72], "status": "OPTIMAL", "weight": 68, "verified_even": true, "coverage": [0, 2, 4], "bound": 68.0}
+{"line_orbits": 6, "orbit_sizes": [2, 8, 48, 126, 168], "status": "OPTIMAL", "weight": 96, "verified_even": true, "coverage": [0, 2, 6], "bound": 96.0}
+== q=7 m=4
+{"line_orbits": 10, "orbit_sizes": [2, 8, 18, 24, 36, 48, 72], "status": "OPTIMAL", "weight": 72, "verified_even": true, "coverage": [0, 2], "bound": 72.0}
+{"line_orbits": 6, "orbit_sizes": [2, 8, 48, 126, 168], "status": "OPTIMAL", "weight": 96, "verified_even": true, "coverage": [0, 2, 6], "bound": 96.0}
+{"line_orbits": 6, "orbit_sizes": [2, 8, 48, 126, 168], "status": "OPTIMAL", "weight": 96, "verified_even": true, "coverage": [0, 2, 6], "bound": 96.0}
+== q=9 m=3
+{"line_orbits": 10, "orbit_sizes": [2, 10, 48, 60, 80, 120, 240], "status": "OPTIMAL", "weight": 48, "verified_even": true, "coverage": [0, 2], "bound": 48.0}
+{"line_orbits": 10, "orbit_sizes": [2, 10, 48, 60, 80, 120, 240], "status": "OPTIMAL", "weight": 48, "verified_even": true, "coverage": [0, 2], "bound": 48.0}
+{"line_orbits": 19, "orbit_sizes": [2, 4, 6, 12, 24, 32, 48, 96], "status": "OPTIMAL", "weight": 80, "verified_even": true, "coverage": [0, 2, 4], "bound": 80.0}
+== q=9 m=4
+{"line_orbits": 7, "orbit_sizes": [2, 10, 80, 180, 288], "status": "OPTIMAL", "weight": 80, "verified_even": true, "coverage": [0, 2, 4], "bound": 80.0}
+{"line_orbits": 18, "orbit_sizes": [2, 4, 6, 12, 24, 32, 48, 96], "status": "OPTIMAL", "weight": 80, "verified_even": true, "coverage": [0, 2, 4], "bound": 80.0}
+{"line_orbits": 18, "orbit_sizes": [2, 4, 6, 12, 24, 32, 48, 96], "status": "OPTIMAL", "weight": 80, "verified_even": true, "coverage": [0, 2, 4], "bound": 80.0}
+== q=11 m=3
+{"line_orbits": 10, "orbit_sizes": [2, 12, 60, 100, 120, 150, 300], "status": "OPTIMAL", "weight": 100, "verified_even": true, "coverage": [0, 2], "bound": 100.0}
+{"line_orbits": 10, "orbit_sizes": [2, 12, 60, 100, 120, 150, 300], "status": "OPTIMAL", "weight": 100, "verified_even": true, "coverage": [0, 2], "bound": 100.0}
+{"line_orbits": 22, "orbit_sizes": [2, 12, 30, 40, 60, 120], "status": "OPTIMAL", "weight": 100, "verified_even": true, "coverage": [0, 2], "bound": 100.0}
+== q=13 m=3
+{"line_orbits": 7, "orbit_sizes": [2, 14, 168, 546, 936], "status": "OPTIMAL", "weight": 168, "verified_even": true, "coverage": [0, 2, 6], "bound": 168.0}
+{"line_orbits": 7, "orbit_sizes": [2, 14, 168, 546, 936], "status": "OPTIMAL", "weight": 168, "verified_even": true, "coverage": [0, 2, 6], "bound": 168.0}
+{"line_orbits": 7, "orbit_sizes": [2, 14, 168, 546, 936], "status": "OPTIMAL", "weight": 168, "verified_even": true, "coverage": [0, 2, 6], "bound": 168.0}
+== q=17 m=3
+{"line_orbits": 7, "orbit_sizes": [2, 18, 288, 1224, 2176], "status": "OPTIMAL", "weight": 288, "verified_even": true, "coverage": [0, 2, 8], "bound": 288.0}
+{"line_orbits": 7, "orbit_sizes": [2, 18, 288, 1224, 2176], "status": "OPTIMAL", "weight": 288, "verified_even": true, "coverage": [0, 2, 8], "bound": 288.0}
+{"line_orbits": 7, "orbit_sizes": [2, 18, 288, 1224, 2176], "status": "OPTIMAL", "weight": 288, "verified_even": true, "coverage": [0, 2, 8], "bound": 288.0}
+== q=17 m=4
+{"line_orbits": 7, "orbit_sizes": [2, 18, 288, 1224, 2176], "status": "OPTIMAL", "weight": 288, "verified_even": true, "coverage": [0, 2, 8], "bound": 288.0}
+{"line_orbits": 7, "orbit_sizes": [2, 18, 288, 1224, 2176], "status": "OPTIMAL", "weight": 288, "verified_even": true, "coverage": [0, 2, 8], "bound": 288.0}
+{"line_orbits": 36, "orbit_sizes": [2, 6, 12, 24, 48, 64, 96, 192, 384], "status": "OPTIMAL", "weight": 288, "verified_even": true, "coverage": [0, 2, 8], "bound": 288.0}
+== q=19 m=3
+{"line_orbits": 6, "orbit_sizes": [2, 20, 360, 3078, 3420], "status": "OPTIMAL", "weight": 720, "verified_even": true, "coverage": [0, 2, 18], "bound": 720.0}
+{"line_orbits": 6, "orbit_sizes": [2, 20, 360, 3078, 3420], "status": "OPTIMAL", "weight": 720, "verified_even": true, "coverage": [0, 2, 18], "bound": 720.0}
+{"line_orbits": 6, "orbit_sizes": [2, 20, 360, 3078, 3420], "status": "OPTIMAL", "weight": 720, "verified_even": true, "coverage": [0, 2, 18], "bound": 720.0}

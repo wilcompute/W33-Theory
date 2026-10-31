@@ -1,0 +1,58 @@
+{
+ "cost2_nufit6_SK": {
+  "q3_hits": [
+   true,
+   false,
+   true
+  ],
+  "p_random_at_least_as_many": 0.8275,
+  "random_per_angle": [
+   0.875,
+   0.0,
+   0.95
+  ],
+  "n": 400
+ },
+ "cost2_site_values": {
+  "q3_hits": [
+   true,
+   false,
+   true
+  ],
+  "p_random_at_least_as_many": 0.88,
+  "random_per_angle": [
+   0.9025,
+   0.0,
+   0.9775
+  ],
+  "n": 400
+ },
+ "cost3_nufit6_SK": {
+  "q3_hits": [
+   true,
+   true,
+   true
+  ],
+  "p_random_at_least_as_many": 1.0,
+  "random_per_angle": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "n": 400
+ },
+ "cost3_site_values": {
+  "q3_hits": [
+   true,
+   true,
+   true
+  ],
+  "p_random_at_least_as_many": 1.0,
+  "random_per_angle": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "n": 400
+ }
+}
