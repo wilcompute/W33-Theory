@@ -1,0 +1,445 @@
+{
+  "note": "The same-subgroup 2/3/5 F9 stabilizer computation is in a separate companion script.",
+  "parts": {
+    "finite_quantum_clock": {
+      "Pauli_direction_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "boundary": "120 genuine tick labels are reduced to 4 directions with one fixed outcome. Local Hilbert factors, transverse field and spatial graph are supplied. A positive finite-size gap for h>0 is not a thermodynamic phase classification.",
+      "models": [
+        {
+          "classical_min": -1.333333333333333,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "hilbert_dimension": 64,
+          "sites": 3,
+          "spectral_samples": [
+            {
+              "gap": 0.0,
+              "ground_degeneracy": 6,
+              "ground_energy": -1.333333333333333,
+              "transverse_field": 0.0
+            },
+            {
+              "gap": 0.02619198212481888,
+              "ground_degeneracy": 1,
+              "ground_energy": -1.4635445263258173,
+              "transverse_field": 0.1
+            },
+            {
+              "gap": 0.11557586017032717,
+              "ground_degeneracy": 1,
+              "ground_energy": -1.9140739889101368,
+              "transverse_field": 0.4
+            },
+            {
+              "gap": 0.3675806640171606,
+              "ground_degeneracy": 1,
+              "ground_energy": -3.0606684184680457,
+              "transverse_field": 1.0
+            }
+          ]
+        },
+        {
+          "classical_min": -1.333333333333333,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "hilbert_dimension": 64,
+          "sites": 3,
+          "spectral_samples": [
+            {
+              "gap": 0.0,
+              "ground_degeneracy": 12,
+              "ground_energy": -1.333333333333333,
+              "transverse_field": 0.0
+            },
+            {
+              "gap": 0.027216754921070674,
+              "ground_degeneracy": 1,
+              "ground_energy": -1.4777459209970187,
+              "transverse_field": 0.1
+            },
+            {
+              "gap": 0.14589830607445786,
+              "ground_degeneracy": 1,
+              "ground_energy": -1.9684302890324865,
+              "transverse_field": 0.4
+            },
+            {
+              "gap": 0.4870304659804705,
+              "ground_degeneracy": 1,
+              "ground_energy": -3.136475364208175,
+              "transverse_field": 1.0
+            }
+          ]
+        },
+        {
+          "classical_min": -2.666666666666666,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "hilbert_dimension": 256,
+          "sites": 4,
+          "spectral_samples": [
+            {
+              "gap": 0.0,
+              "ground_degeneracy": 8,
+              "ground_energy": -2.666666666666666,
+              "transverse_field": 0.0
+            },
+            {
+              "gap": 1.2331610030003048e-05,
+              "ground_degeneracy": 1,
+              "ground_energy": -2.8202034244364578,
+              "transverse_field": 0.1
+            },
+            {
+              "gap": 0.002884200324649644,
+              "ground_degeneracy": 1,
+              "ground_energy": -3.3244546837279394,
+              "transverse_field": 0.4
+            },
+            {
+              "gap": 0.08395188269835163,
+              "ground_degeneracy": 1,
+              "ground_energy": -4.563988758706735,
+              "transverse_field": 1.0
+            }
+          ]
+        }
+      ],
+      "pair_energy": [
+        [
+          0.0,
+          2.0,
+          2.0,
+          -0.6666666666666665
+        ],
+        [
+          2.0,
+          0.0,
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0,
+          0.0,
+          -0.6666666666666665
+        ],
+        [
+          -0.6666666666666665,
+          2.0,
+          -0.6666666666666665,
+          0.0
+        ]
+      ],
+      "status": "PASS_FINITE_QUANTUM_CLOCK_NONTRANSITION_CONTROL"
+    },
+    "local_connection_Ward": {
+      "Hamiltonian": "E=1/2 sum_edges ||e(y)-R(a_xy)e(x)||^2 + beta sum_plaquettes(1-cos curl a)",
+      "boundary": "Actual exact local frame/connection gauge symmetry on an externally chosen 2D periodic lattice, not tetrad Einstein-Cartan gravity, not local Lorentz SO(1,3), and no quantum spin-2 modes.",
+      "energy_after_local_transform": 48.611376153784825,
+      "energy_before": 48.61137615378482,
+      "gauge_group": "SO(2) = U(1)",
+      "gauge_invariance_error": 7.105427357601002e-15,
+      "infinitesimal_Ward_residual": 3.552713678800501e-09,
+      "lattice": [
+        3,
+        3
+      ],
+      "status": "PASS_LOCAL_LATTICE_FRAME_CONNECTION_WARD_IDENTITY"
+    },
+    "native_Chern_trivial_frame": {
+      "boundary": "A Bloch torus and hopping wavevector are supplied. Nonzero local Berry curvature may occur while total Chern is zero. Nontrivial Chern requires patching obstructions, not globally conjugating a constant W33 projector.",
+      "grid_tests": [
+        {
+          "chern_number": 4.333118293125921e-17,
+          "grid": 7,
+          "integrated_absolute_discrete_curvature": 8.222187128479241e-15
+        },
+        {
+          "chern_number": -1.36174128183429e-16,
+          "grid": 11,
+          "integrated_absolute_discrete_curvature": 1.766577386932105e-14
+        },
+        {
+          "chern_number": -3.27014853756417e-16,
+          "grid": 17,
+          "integrated_absolute_discrete_curvature": 3.706669643530653e-14
+        }
+      ],
+      "proof": "P(k)=U(k)P0 U(k)^dagger, U=exp(i kx P1) exp(i ky P2) is globally smooth and periodic. This supplies a global frame U(k)|u_a>, hence the rank-3 Bloch bundle is trivial and c1=0 exactly.",
+      "rank": 3,
+      "status": "PASS_NATIVE_GLOBAL_BLOCH_FRAME_CHERN_ZERO"
+    },
+    "optical_U1_Wilson_gauge": {
+      "drift_control": [
+        {
+          "optimal_reshaped_classical_error": 0.0482460485473744,
+          "phase_drift": 0.0
+        },
+        {
+          "optimal_reshaped_classical_error": 0.04831211470824957,
+          "phase_drift": 0.03
+        },
+        {
+          "optimal_reshaped_classical_error": 0.048980055950073736,
+          "phase_drift": 0.1
+        },
+        {
+          "optimal_reshaped_classical_error": 0.05118126318743086,
+          "phase_drift": 0.2
+        }
+      ],
+      "maximum_invariance_error": 3.552713678800501e-15,
+      "port_calibration_spoof_gains": [
+        1.0,
+        18.607415008530438,
+        0.48656469720943973
+      ],
+      "random_U1_local_rephasings_verified": 200,
+      "scope": "A directed, labelled three-mode real-skew coupler has a gauge-invariant odd-loop sign under diagonal U(1) rephasings; arbitrary hypothesis-dependent detector gains erase identifiability. Phase reference and relative rail calibration are external inputs.",
+      "signed_triangle_Wilson_products": [
+        6.0,
+        -6.0
+      ],
+      "status": "PASS_Z2_TRIANGLE_WILSON_SIGN_GAUGE_OBSTRUCTION"
+    },
+    "quantum_double_S3_vs_Jones": {
+      "S3_anyon_quantum_dimensions": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "S3_rank": 8,
+      "S3_sector_table": [
+        [
+          3,
+          2,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          6,
+          1,
+          1
+        ],
+        [
+          1,
+          6,
+          1,
+          1
+        ],
+        [
+          1,
+          6,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ]
+      ],
+      "S3_total_quantum_dimension_squared": 36,
+      "SU2_level4_quantum_dimensions": [
+        1,
+        1.7320508075688772,
+        2,
+        1.7320508075688772,
+        1
+      ],
+      "SU2_level4_rank": 5,
+      "SU2_level4_total_quantum_dimension_squared": 12,
+      "group_S3_order": 6,
+      "obstruction": "D(S3) and SU(2)_4 cannot be equivalent braided fusion categories: ranks 8 versus 5, total D\u00b2 36 versus 12.",
+      "scope": "S3 quantum-double Hilbert space uses a physical six-level edge with a 2D gauge lattice; native two-qutrit Jones operators are not automatically this anyon model. Established quantum-double category theory, new explicit contrast in this repo packet.",
+      "status": "PASS_QUANTUM_DOUBLE_ANYON_CATEGORY_NONIDENTITY"
+    },
+    "spectral_dimension_artifact": {
+      "Cartesian_square_peak_dimension": 7.436948394860566,
+      "boundary": "Finite graph heat-trace effective dimension vanishes in both UV and IR; no continuum 4D plateau or Planck scale inferred.",
+      "exact_obstruction": "For G Cartesian-square, graph Laplacian is L tensor I + I tensor L, heat trace Z2=Z1\u00b2 and ds2=2 ds1 exactly. The finite spectral dimension can be multiplied by arbitrary Cartesian powers without emerging physical spatial dimensions.",
+      "heat_trace_formula": "1+24 exp(-10t)+15 exp(-16t)",
+      "laplacian_spectrum": {
+        "0": 1,
+        "10": 24,
+        "16": 15
+      },
+      "sampled_peak": {
+        "dimension": 3.718474197430283,
+        "time": 0.2591433051789333
+      },
+      "single_graph_samples": [
+        {
+          "ds": 0.023975975935751834,
+          "t": 0.001
+        },
+        {
+          "ds": 0.2375753350445906,
+          "t": 0.01
+        },
+        {
+          "ds": 1.1365208632858739,
+          "t": 0.05
+        },
+        {
+          "ds": 2.1270955018660027,
+          "t": 0.1
+        },
+        {
+          "ds": 3.4788412070592067,
+          "t": 0.2
+        },
+        {
+          "ds": 1.455006624781363,
+          "t": 0.5
+        },
+        {
+          "ds": 0.021822168934948188,
+          "t": 1.0
+        }
+      ],
+      "spectral_dimension_formula": "2t(240 exp(-10t)+240 exp(-16t))/Z(t)",
+      "status": "PASS_FINITE_SPECTRAL_DIMENSION_PRODUCT_ARTIFACT"
+    },
+    "ten_W33_MUB_contexts": {
+      "40_direction_spread": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          13,
+          22,
+          31
+        ],
+        [
+          5,
+          16,
+          26,
+          36
+        ],
+        [
+          6,
+          19,
+          30,
+          38
+        ],
+        [
+          7,
+          17,
+          29,
+          32
+        ],
+        [
+          9,
+          14,
+          25,
+          39
+        ],
+        [
+          8,
+          20,
+          24,
+          34
+        ],
+        [
+          10,
+          21,
+          27,
+          33
+        ],
+        [
+          11,
+          15,
+          28,
+          35
+        ],
+        [
+          12,
+          18,
+          23,
+          37
+        ]
+      ],
+      "Hilbert_dimension": 9,
+      "max_unbiased_probability_error": 1.8041124150158794e-16,
+      "number_bases": 10,
+      "operational_entropy_bound_nats": "For any two distinct bases, Maassen-Uffink H(B_i)+H(B_j)>=log 9, since maximal basis overlap squared is 1/9.",
+      "prior_art": "Complete 10 MUB sets in prime-power dimension 9 and W33 symplectic spreads are classical mathematics and have earlier repository studies.",
+      "rank_one_projectors_per_basis": 9,
+      "scope": "Exact Pauli MUB/context construction; not a new physical Born-rule derivation or Bell-nonlocality experiment.",
+      "status": "PASS_TEN_MUTUALLY_UNBIASED_QUTRIT_CONTEXT_BASES"
+    }
+  },
+  "status": "PASS_SEVEN_NEW_QUANTUM_GEOMETRY_CONTROLS"
+}
