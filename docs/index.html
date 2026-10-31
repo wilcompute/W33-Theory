@@ -14796,10 +14796,13 @@
             <h2 style="color: var(--accent1);"><span class="icon">◆</span> Statistical Mechanics &amp; Thermodynamics
               (Checks 1150–1163)</h2>
             <div class="formula-highlight" style="border-left-color: var(--accent1);">
-              W(3,3) as a statistical system: critical temperature β_c = log(1+√q) from Kramers-Wannier,
-              Ising model critical exponents from spectral gaps, partition function Z = v·k^(E/v) at
-              self-dual point, entropy S = k·log(q) = 12·log(3) per site, and universality class
-              determined by q = 3 (3-state Potts critical point).
+              <strong>Corrected (Pass 12500).</strong> W(3,3) as a statistical system, computed exactly: the 4-spin plaquette
+              Ising model (spins on the 40 points, one coupling per line) has Z = 2<sup>40</sup> cosh<sup>40</sup>K ·
+              W(tanh K), where W is the enumerator of Pass 173's route code [40,15,10]. Its Kramers–Wannier dual is a
+              different model (the address code [40,15,8]), so there is <em>no</em> self-dual point; the exact specific-heat
+              maxima are at K ≈ 0.60, and a 40-spin system has no sharp transition. The earlier text here (β<sub>c</sub> =
+              log(1+√q) “from Kramers–Wannier”, a self-dual partition function, 3-state Potts universality) imported
+              square-lattice results without derivation and is withdrawn.
             </div>
             <table>
               <tr>
