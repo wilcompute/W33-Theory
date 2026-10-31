@@ -1,0 +1,939 @@
+{
+  "status": "EXPLORATORY_ONLY_SUPERSEDED_BY_OFFICIAL_CERTIFICATES",
+  "sources": {
+    "w33_round2_probe.py": {
+      "sha256": "c47afcc825c9e7732b02d0a32e59fc5dfc64ae32579bc5fc9e924a4f0f4ac6ad",
+      "source": "import pathlib,sys,json,itertools,collections,importlib.util,time\nimport numpy as np,sympy as sp,networkx as nx\nR=pathlib.Path(r'C:\\Repos\\Theory of Everything');sys.path.insert(0,str(R/'analysis'))\nsys.stdout.reconfigure(encoding='utf-8',errors='replace')\ndef inv5(A):return np.array(sp.Matrix(A.tolist()).inv_mod(5)).astype(np.int64)%5\ndef gf2(A,b):\n a=np.column_stack([A,b]).astype(np.uint8);row=0;piv=[]\n for c in range(A.shape[1]):\n  found=np.flatnonzero(a[row:,c])\n  if not len(found):continue\n  k=row+found[0];a[[row,k]]=a[[k,row]]\n  for j in range(len(a)):\n   if j!=row and a[j,c]:a[j]^=a[row]\n  piv.append(c);row+=1\n if any(not z[:-1].any() and z[-1] for z in a):return None\n x=np.zeros(A.shape[1],dtype=np.uint8)\n for j,c in enumerate(piv):x[c]=a[j,-1]\n return x\ndef cubic_probe():\n import w33_20261031_continuum_chirality as old\n g=json.loads((R/'data/w33_20261031_petersen_stabilizer.json').read_text())\n d=old.internal_e6_support(g['signed_five_dimensional_generators']);tri=[tuple(t)for t in d['cubic_support']]\n native=json.loads((R/'artifacts/canonical_su3_gauge_and_cubic.json').read_text())['solution']['d_triples']\n nt={tuple(sorted(t['triple'])):int(t['sign']) for t in native}\n def graph(ts,anchor):\n  H=nx.Graph();H.add_nodes_from(range(27));H.add_edges_from((a,b)for t in ts for a,b in itertools.combinations(t,2))\n  nx.set_node_attributes(H,{i:0 if i==anchor else 1 if H.has_edge(i,anchor) else 2 for i in H},'sector');return H\n W=graph(tri,0);N=graph(nt,0)\n match=next(nx.isomorphism.GraphMatcher(W,N,node_match=lambda a,b:a['sector']==b['sector']).isomorphisms_iter())\n coeff={t:nt[tuple(sorted(match[i]for i in t))]for t in tri}\n A=np.zeros((46,27),dtype=int)\n for i,t in enumerate(tri):A[i,list(t)]=1\n A[-1,0]=1\n signed=[]\n for perm in d['generator_permutations']:\n  b=np.array([int(coeff[t]!=coeff[tuple(sorted(perm[i]for i in t))]) for t in tri]+[0])\n  bits=gf2(A,b);assert bits is not None\n  signed.append((tuple(perm),tuple(map(int,bits))))\n ident=(tuple(range(27)),(0,)*27);seen={ident};queue=[ident]\n def mul(g,h):\n  p,s=g;q,t=h;return tuple(p[q[i]]for i in range(27)),tuple(t[i]^s[q[i]]for i in range(27))\n for x in queue:\n  for g0 in signed:\n   y=mul(g0,x)\n   if y not in seen:seen.add(y);queue.append(y)\n  if len(seen)>100000:raise RuntimeError('unexpected order')\n print('SIGNED_CUBIC',len(seen),'kernel',sum(p==ident[0]for p,s in seen),flush=True)\n out=dict(weight_to_native=[match[i]for i in range(27)],coefficient_rows=[dict(triple=t,coefficient=coeff[t])for t in tri],signed_generators=[dict(permutation=p,sign_bits=s)for p,s in signed],order=len(seen),kernel_order=sum(p==ident[0]for p,s in seen))\n (R/'data/w33_20261031_signed_cubic_probe.json').write_text(json.dumps(out,indent=2))\n return out\ndef unitary_probe():\n g=json.loads((R/'data/w33_20261031_petersen_stabilizer.json').read_text());S=np.array(g['two_qubit_kernel_intertwiner']['intertwiner_mod5']);Si=inv5(S)\n X=sp.Matrix([[0,1],[1,0]]);Z=sp.diag(1,-1);I=sp.eye(2);ii=sp.I\n ts=[ii*sp.kronecker_product(X,I),ii*sp.kronecker_product(Z,I),sp.kronecker_product(I,X),sp.kronecker_product(I,Z)]\n reduce=lambda M:np.array([int(sp.re(x))+2*int(sp.im(x))for x in M]).reshape(4,4)%5\n key=lambda M:tuple(M)\n pool={key(sp.eye(4)):sp.eye(4)};queue=[sp.eye(4)]\n for a in queue:\n  for t in ts:\n   b=t*a\n   if key(b)not in pool:pool[key(b)]=b;queue.append(b)\n bymod={tuple(reduce(M).flat):M for M in queue};assert len(bymod)==32\n lifts=[]\n for gg in g['symplectic_matrix_generators']:\n  G=Si@np.array(gg)@S%5;Gi=inv5(G)\n  images=[bymod[tuple((G@reduce(T)@Gi%5).flat)] for T in ts]\n  rows=[]\n  for A,B in zip(ts,images):\n   # U A = B U, row-major vectorization.\n   for r,c in itertools.product(range(4),repeat=2):\n    row=[0]*16\n    for k in range(4):row[r*4+k]+=A[k,c];row[k*4+c]-=B[r,k]\n    rows.append(row)\n  ns=sp.Matrix(rows).nullspace();assert len(ns)==1\n  U=sp.Matrix(4,4,ns[0]);scale=(U.conjugate().T*U)[0,0];U=sp.simplify(U/sp.sqrt(scale))\n  assert U.conjugate().T*U==sp.eye(4)\n  def rat5(x):\n   a,b=sp.fraction(x);return int(a)*pow(int(b),-1,5)%5\n  red=lambda M:np.array([rat5(sp.re(x))+2*rat5(sp.im(x))for x in M]).reshape(4,4)%5\n  U=next(phase*U for phase in [1,-1,ii,-ii]if np.array_equal(red(phase*U),G))\n  lifts.append(U);print('LIFT',len(lifts),'det',sp.simplify(U.det()),'denoms',sorted({str(x)for x in U}),flush=True)\n mats=[np.array(M,dtype=complex)for M in lifts]\n def numeric_key(M):return tuple(np.rint(np.stack([M.real,M.imag],axis=-1)*2).astype(int).flat)\n seen={numeric_key(np.eye(4)):np.eye(4,dtype=complex)};queue=[np.eye(4,dtype=complex)]\n for a in queue:\n  for U in mats:\n   b=U@a;k=numeric_key(b)\n   assert np.max(abs(np.stack([b.real,b.imag],axis=-1)*2-np.rint(np.stack([b.real,b.imag],axis=-1)*2)))<1e-10\n   if k not in seen:seen[k]=b;queue.append(b)\n  if len(seen)>10000:raise RuntimeError('unexpected order')\n print('UNITARY_ORDER',len(seen),flush=True)\n out=dict(order=len(seen),generators=[[[str(x)for x in row]for row in M.tolist()]for M in lifts])\n (R/'data/w33_20261031_unitary_probe.json').write_text(json.dumps(out,indent=2));return out\nif __name__=='__main__':\n if sys.argv[-1]=='cubic':cubic_probe()\n else:unitary_probe()\n"
+    },
+    "w33_native_overlap_probe.py": {
+      "sha256": "9dbd46dbaee55f5921f80b5f6ab121d6139321e595f9b8d59495a70e5b036693",
+      "source": "import numpy as np,json,pathlib,itertools\nR=pathlib.Path(r'C:\\Repos\\Theory of Everything')\nX=np.roll(np.eye(3),1,axis=0).astype(complex);Z=np.diag(np.exp(2j*np.pi*np.arange(3)/3));I=np.eye(3)\nT=[np.kron(X,I),np.kron(Z,I),np.kron(I,X),np.kron(I,Z)]\nd=json.loads((R/'data/w33_20261031_unitary_stabilizer_lift.json').read_text())\nG=[np.array([[complex(x.replace('I','j').replace('*','')) if '/'not in x else complex(x.split('/')[0].replace('I','j').replace('*',''))/float(x.split('/')[1])for x in row]for row in M])for M in d['gamma_axes']]\ng5=G[0]@G[1]@G[2]@G[3];assert np.allclose(g5,g5.conj().T)\nfor m in np.arange(.1,8,.1):\n D=(4-m)*np.eye(36,dtype=complex)\n for P,U in zip(G,T):D-=(np.kron(np.eye(4)-P,U)+np.kron(np.eye(4)+P,U.conj().T))/2\n H=np.kron(g5,np.eye(9))@D;assert np.allclose(H,H.conj().T)\n ev=np.linalg.eigvalsh(H);idx=round(-np.sign(ev).sum()/2)\n if idx:print(round(m,2),idx,round(min(abs(ev)),6),flush=True)\n"
+    },
+    "w33_cubic_double_cover_probe.py": {
+      "sha256": "6012a3d156403e21326dfc28fa183f836db3e9d0a46a1fcf8d655f5e5e87270b",
+      "source": "import json,pathlib,sys,numpy as np\nR=pathlib.Path(r'C:\\Repos\\Theory of Everything');sys.path.insert(0,str(R/'analysis'))\nfrom w33_20261031_signed_cubic_lift import solve2\nfrom w33_20261031_continuum_chirality import internal_e6_support\ng=json.loads((R/'data/w33_20261031_petersen_stabilizer.json').read_text());d=json.loads((R/'data/w33_20261031_signed_cubic_lift.json').read_text())\ngens=[np.array(x)for x in g['symplectic_matrix_generators']];perms=[row['permutation']for row in d['signed_generators']]\nco={tuple(row['triple']):row['coefficient']for row in d['coefficient_rows']};rows=[]\nfor j,p in enumerate(perms):\n for t,c in co.items():rows.append((sum(1<<(27*j+i)for i in t),int(c!=co[tuple(sorted(p[i]for i in t))])))\nkey=lambda A:tuple(map(int,A.flat));I=np.eye(4,dtype=int);identity=key(I);minus=key(-I%5)\nwords={identity:([0]*27,tuple(range(27)))};queue=[I]\nfor A in queue:\n L,p=words[key(A)]\n for j,G in enumerate(gens):\n  B=G@A%5;k=key(B);L2=[L[i]^(1<<(27*j+p[i]))for i in range(27)];p2=tuple(perms[j][p[i]]for i in range(27))\n  if k not in words:words[k]=(L2,p2);queue.append(B)\n  else:\n   assert p2==words[k][1]\n   rows.extend((a^b,0)for a,b in zip(L2,words[k][0]))\nassert len(queue)==1920\nsupport=internal_e6_support(g['signed_five_dimensional_generators'])\nrows.extend((a,int(c==1))for a,c in zip(words[minus][0],support['charges']))\nsolution=solve2(rows,162)\nprint('UNITARY_DOUBLE_COVER_SIGNED_CUBIC_SECTION',solution is not None,flush=True)\nif solution:\n (R/'data/w33_20261031_cubic_unitary_common_probe.json').write_text(json.dumps(solution))\n"
+    }
+  },
+  "initial_snapshots": {
+    "signed_cubic_probe": {
+      "weight_to_native": [
+        0,
+        17,
+        26,
+        18,
+        25,
+        19,
+        24,
+        20,
+        23,
+        21,
+        22,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "coefficient_rows": [
+        {
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            0,
+            7,
+            8
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            0,
+            9,
+            10
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            1,
+            19,
+            26
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            1,
+            20,
+            25
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            1,
+            21,
+            24
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            1,
+            22,
+            23
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            2,
+            11,
+            18
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            2,
+            12,
+            17
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            2,
+            13,
+            16
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            2,
+            14,
+            15
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            3,
+            15,
+            26
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            3,
+            16,
+            25
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            3,
+            17,
+            24
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            3,
+            18,
+            23
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            4,
+            11,
+            22
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            4,
+            12,
+            21
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            4,
+            13,
+            20
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            4,
+            14,
+            19
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            5,
+            13,
+            26
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            5,
+            14,
+            25
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            5,
+            17,
+            22
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            5,
+            18,
+            21
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            6,
+            11,
+            24
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            6,
+            12,
+            23
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            6,
+            15,
+            20
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            6,
+            16,
+            19
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            7,
+            12,
+            26
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            7,
+            14,
+            24
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            7,
+            16,
+            22
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            7,
+            18,
+            20
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            8,
+            11,
+            25
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            8,
+            13,
+            23
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            8,
+            15,
+            21
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            8,
+            17,
+            19
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            9,
+            11,
+            26
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            9,
+            14,
+            23
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            9,
+            16,
+            21
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            9,
+            17,
+            20
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            10,
+            12,
+            25
+          ],
+          "coefficient": -1
+        },
+        {
+          "triple": [
+            10,
+            13,
+            24
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            10,
+            15,
+            22
+          ],
+          "coefficient": 1
+        },
+        {
+          "triple": [
+            10,
+            18,
+            19
+          ],
+          "coefficient": -1
+        }
+      ],
+      "signed_generators": [
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            4,
+            3,
+            6,
+            5,
+            8,
+            7,
+            10,
+            9,
+            18,
+            17,
+            16,
+            15,
+            14,
+            13,
+            12,
+            11,
+            26,
+            25,
+            24,
+            23,
+            22,
+            21,
+            20,
+            19
+          ],
+          "sign_bits": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1,
+            3,
+            4,
+            6,
+            5,
+            8,
+            7,
+            10,
+            9,
+            22,
+            21,
+            20,
+            19,
+            26,
+            25,
+            24,
+            23,
+            14,
+            13,
+            12,
+            11,
+            18,
+            17,
+            16,
+            15
+          ],
+          "sign_bits": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            7,
+            10,
+            9,
+            12,
+            11,
+            14,
+            13,
+            16,
+            15,
+            18,
+            17,
+            20,
+            19,
+            22,
+            21,
+            24,
+            23,
+            26,
+            25
+          ],
+          "sign_bits": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2,
+            4,
+            3,
+            5,
+            6,
+            8,
+            7,
+            9,
+            10,
+            16,
+            15,
+            18,
+            17,
+            12,
+            11,
+            14,
+            13,
+            24,
+            23,
+            26,
+            25,
+            20,
+            19,
+            22,
+            21
+          ],
+          "sign_bits": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "permutation": [
+            0,
+            5,
+            6,
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            23,
+            24,
+            13,
+            14,
+            17,
+            18,
+            21,
+            22,
+            25,
+            26
+          ],
+          "sign_bits": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "permutation": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            9,
+            10,
+            5,
+            6,
+            1,
+            2,
+            19,
+            13,
+            11,
+            21,
+            12,
+            22,
+            20,
+            14,
+            15,
+            25,
+            23,
+            17,
+            24,
+            18,
+            16,
+            26
+          ],
+          "sign_bits": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "order": 30720,
+      "kernel_order": 32
+    },
+    "unitary_probe": {
+      "order": 1920,
+      "generators": [
+        [
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "0",
+            "-I"
+          ],
+          [
+            "0",
+            "0",
+            "I",
+            "0"
+          ],
+          [
+            "0",
+            "-I",
+            "0",
+            "0"
+          ],
+          [
+            "I",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "I",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "I"
+          ],
+          [
+            "I",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "I",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "I",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "I",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-I",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-I"
+          ]
+        ],
+        [
+          [
+            "-1/2",
+            "1/2",
+            "I/2",
+            "-I/2"
+          ],
+          [
+            "-1/2",
+            "-1/2",
+            "-I/2",
+            "-I/2"
+          ],
+          [
+            "I/2",
+            "-I/2",
+            "-1/2",
+            "1/2"
+          ],
+          [
+            "-I/2",
+            "-I/2",
+            "-1/2",
+            "-1/2"
+          ]
+        ],
+        [
+          [
+            "I/2",
+            "-I/2",
+            "-I/2",
+            "-I/2"
+          ],
+          [
+            "-1/2",
+            "-1/2",
+            "1/2",
+            "-1/2"
+          ],
+          [
+            "-I/2",
+            "-I/2",
+            "-I/2",
+            "I/2"
+          ],
+          [
+            "-1/2",
+            "1/2",
+            "-1/2",
+            "-1/2"
+          ]
+        ]
+      ]
+    }
+  },
+  "native_mass_scan_raw": "1.3 -1 0.032051\r\n1.4 -1 0.132051\r\n1.5 -1 0.057271\r\n1.6 1 0.017633\r\n1.7 1 0.088518\r\n1.8 1 0.117641\r\n1.9 1 0.070585\r\n2.0 1 0.029965\r\n2.9 1 0.029251\r\n3.0 1 0.0\r\n3.1 3 0.1\r\n3.2 3 0.082012\r\n3.3 3 0.005973\r\n3.4 -1 0.055796\r\n3.5 -1 0.133975\r\n3.6 -1 0.19616\r\n3.7 -1 0.251736\r\n3.8 -1 0.299456\r\n3.9 -1 0.269163\r\n4.0 -1 0.20818\r\n4.1 -1 0.151911\r\n4.2 -1 0.100974\r\n4.3 -1 0.056029\r\n4.4 -1 0.017749\r\n4.8 -1 0.056852\r\n4.9 -1 0.053924\r\n5.0 -1 0.042205\r\n5.1 1 0.021959\r\n",
+  "caution": "The raw scan includes m=3 with a zero gap: its assigned floating sign count is invalid as an index. Only the official gapped exact-inertia certificates support accepted claims. Interpolation guard failure/correction is recorded in the report."
+}

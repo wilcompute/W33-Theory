@@ -1,0 +1,400 @@
+{
+  "status": "PASS_ALL_FIELD_BOUNDED_DEGREE_OBSTRUCTION",
+  "theorem": "For any odd prime power q>3, any good matching represented by a degree-d rational morphism P1->P1 must satisfy d^2>=q.",
+  "proof": "The homogeneous cross-product of f composed with f and the identity has degree d^2+1. It vanishes at all q+1 rational points. If q>d^2 it vanishes identically, so degree(f)^2=1. A nontrivial degree-one involution is represented in odd characteristic by a trace-zero matrix. Every chord joining t to f(t) passes through one fixed projective center; polar chord poles are collinear. At q>3 a matching has at least three chords, violating the arc condition.",
+  "excluded_family": "Any uniformly bounded-degree rational formula for infinitely increasing field orders. Arbitrary matching functions, including degree growing at least sqrt(q), are not excluded.",
+  "interpolations": [
+    {
+      "q": 7,
+      "minimum_morphism_degree": 5,
+      "lower_bound": 3,
+      "numerator_coefficients": [
+        4,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "denominator_coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "degree_rank_checks": [
+        {
+          "degree": 1,
+          "nullity": 0
+        },
+        {
+          "degree": 2,
+          "nullity": 0
+        },
+        {
+          "degree": 3,
+          "nullity": 0
+        },
+        {
+          "degree": 4,
+          "nullity": 2
+        },
+        {
+          "degree": 5,
+          "nullity": 4
+        }
+      ]
+    },
+    {
+      "q": 11,
+      "minimum_morphism_degree": 7,
+      "lower_bound": 4,
+      "numerator_coefficients": [
+        9,
+        0,
+        0,
+        6,
+        0,
+        4,
+        0,
+        0
+      ],
+      "denominator_coefficients": [
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "degree_rank_checks": [
+        {
+          "degree": 1,
+          "nullity": 0
+        },
+        {
+          "degree": 2,
+          "nullity": 0
+        },
+        {
+          "degree": 3,
+          "nullity": 0
+        },
+        {
+          "degree": 4,
+          "nullity": 0
+        },
+        {
+          "degree": 5,
+          "nullity": 0
+        },
+        {
+          "degree": 6,
+          "nullity": 2
+        },
+        {
+          "degree": 7,
+          "nullity": 4
+        }
+      ]
+    }
+  ],
+  "conference_controls": [
+    {
+      "q": 3,
+      "reordered_Paley_conference": [
+        [
+          0,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          0
+        ]
+      ],
+      "off_diagonal_blocks": "Every 2x2 block is Hadamard. This is equivalent to the pairwise nonsquare predicate, not to absence of three collinear poles."
+    },
+    {
+      "q": 7,
+      "reordered_Paley_conference": [
+        [
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          0
+        ]
+      ],
+      "off_diagonal_blocks": "Every 2x2 block is Hadamard. This is equivalent to the pairwise nonsquare predicate, not to absence of three collinear poles."
+    },
+    {
+      "q": 11,
+      "reordered_Paley_conference": [
+        [
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          0,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "off_diagonal_blocks": "Every 2x2 block is Hadamard. This is equivalent to the pairwise nonsquare predicate, not to absence of three collinear poles."
+    }
+  ],
+  "boundary": "The Paley block identity alone does not encode the no-three-collinear condition. An all-q classification remains open; no further finite searches are promoted to a proof.",
+  "prior": "Conic polarity and exterior matching equivalence: w33_20261031_conic_exterior_arc_bridge.py. Paley conference matrices and degree multiplicativity of rational maps are classical."
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "w33.lifts-native-index.20261031.v1",
+  "baseline": "97c806265ebbb40e21d291be43d1bbd456949d19",
+  "worktree_sha256": {
+    "analysis/w33_20261031_unitary_stabilizer_lift.py": "da571cd21c12844eebd9eec686d3c91383cab64b2562cd04813078136eab199f",
+    "analysis/w33_20261031_signed_cubic_lift.py": "455c40e0c7b0916e9a900aad96295220f009696f58ab1776c758507d876dc689",
+    "analysis/w33_20261031_arc_degree_obstruction.py": "6546d11661526571a57e87abfd3fe5749733a08313d638c158b976592d9521c3",
+    "analysis/w33_20261031_native_phase_space_overlap.py": "1f96d4ff9e97ec894a020c5ee572b1e72e563e85b514256522a73535db2133c3",
+    "analysis/w33_20261031_local_tick_mediator.py": "b7c63d5493f1130f2e78bbe97e9c1ba3b60b4296959ce42c1a5492c4335d0d0d",
+    "analysis/2026-10-31_signed_lifts_local_dynamics_native_index.md": "f8e5c9eb893b91ab0c9fb7efa2c36fe2329f8ae93d7f44643880492dc3b73030",
+    "tests/test_w33_20261031_lifts_and_native_index.py": "8479ff757d86ba972f7c2ba39454aa62242429f4d91692b5fcc3c0b6b63c9690",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261031_signed_cubic_lift.json": "19e6c0c23784140899036adef54742151f333ac7e2d2b4881c640890b9c1b9b9",
+    "data/w33_20261031_arc_degree_obstruction.json": "46b1d18bc4873bed5dc521eb4d2ced167df1935ed8da72765734ba53b0c15e2f",
+    "data/w33_20261031_native_phase_space_overlap.json": "11f1f398aa6b36c2cda9d455eaffafc4ba988dc964489659c02185fcb3f0e713",
+    "data/w33_20261031_local_tick_mediator.json": "987f5e7ae548a8c7d78539bdbe8e1c48d07c44a0a6b71a2c2828d53d48b2f6b1",
+    "data/w33_20261031_lifts_native_validation.txt": "3ae2696a78829a21a60a19d615d9eb749aabbc0073399b5baa4fcbe247c68239",
+    "data/w33_20261031_lift_exploration_archive.json": "a38baa39be10cc00cb4ec8cf5caee58d7117f8d08855921049e00ced13c300e9",
+    "RESULTS_INDEX.md": "bbe89dcf6f0e800e7163406b9eeaeb4df8c29da7ee5db4f0011534a75f5d99d1",
+    "data/w33_20261031_petersen_stabilizer.json": "7dfd960178ac00cafec278ebad38c877df9dd302e48bcf92fc745ddbefc830f6",
+    "data/w33_20261031_exterior_search.json": "0b1468ce6f29ae9079db50c8056dd8cfb729b21a66138770055a69af002902ed",
+    "artifacts/canonical_su3_gauge_and_cubic.json": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+    "analysis/w33_20261031_continuum_chirality.py": "a372f71546c3df2674f74c2e3e17b710431efbc01300c792bc041071517daa78",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3"
+  },
+  "staged_git_blob_sha256": {
+    "analysis/w33_20261031_unitary_stabilizer_lift.py": "da571cd21c12844eebd9eec686d3c91383cab64b2562cd04813078136eab199f",
+    "analysis/w33_20261031_signed_cubic_lift.py": "455c40e0c7b0916e9a900aad96295220f009696f58ab1776c758507d876dc689",
+    "analysis/w33_20261031_arc_degree_obstruction.py": "6546d11661526571a57e87abfd3fe5749733a08313d638c158b976592d9521c3",
+    "analysis/w33_20261031_native_phase_space_overlap.py": "1f96d4ff9e97ec894a020c5ee572b1e72e563e85b514256522a73535db2133c3",
+    "analysis/w33_20261031_local_tick_mediator.py": "b7c63d5493f1130f2e78bbe97e9c1ba3b60b4296959ce42c1a5492c4335d0d0d",
+    "analysis/2026-10-31_signed_lifts_local_dynamics_native_index.md": "f8e5c9eb893b91ab0c9fb7efa2c36fe2329f8ae93d7f44643880492dc3b73030",
+    "tests/test_w33_20261031_lifts_and_native_index.py": "8479ff757d86ba972f7c2ba39454aa62242429f4d91692b5fcc3c0b6b63c9690",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "60429d1af26467b37ecaec98abda74231c2e393f89451051f46f5dd0af4f2279",
+    "data/w33_20261031_signed_cubic_lift.json": "e54204307790b3a96dff7df5889024cba8285258f163977cbdd0c0b6a3bbd51d",
+    "data/w33_20261031_arc_degree_obstruction.json": "ba361216becdfbc98bfcee4dbb798e341ce2dc56e121f88073b6e9f92ea29547",
+    "data/w33_20261031_native_phase_space_overlap.json": "f055632a6b825ffcc185307dc974dbc02e7f7d791d0443a1a5b3d78c12129fe5",
+    "data/w33_20261031_local_tick_mediator.json": "7ba5fd6101b1f8e62969c80dfa77c11b8793e430ac21bd7a8333f8fa87ec790f",
+    "data/w33_20261031_lifts_native_validation.txt": "3ae2696a78829a21a60a19d615d9eb749aabbc0073399b5baa4fcbe247c68239",
+    "data/w33_20261031_lift_exploration_archive.json": "d250bc95e595b6083d3a7f872b332600b1227c744e017104b1e160ac80d25552",
+    "RESULTS_INDEX.md": "3ca4ccbb99613dcd123435d60c7147ed7c9fa214b15b6d20681eb30f5a5147ef"
+  },
+  "input_git_blob_sha256": {
+    "data/w33_20261031_petersen_stabilizer.json": "80ab258f3ec2d3015d79cd42161be1b8472db69dd359ae610d7ec783ca5ed904",
+    "data/w33_20261031_exterior_search.json": "e145f327e8aac75c292406fe3236129ee9f6eb79494f937f0d9c530948c2e2c8",
+    "artifacts/canonical_su3_gauge_and_cubic.json": "81444a3d3f2c93a2078bf23e3eea52f6b043ccb39b115aed4a9fbc62062ce135",
+    "analysis/w33_20261031_continuum_chirality.py": "a372f71546c3df2674f74c2e3e17b710431efbc01300c792bc041071517daa78",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3"
+  },
+  "validation": "All five producers regenerated;31 focused unittest tests PASS. Actual output in lifts_native_validation.txt.",
+  "scope": [
+    "Exact full1920 SU4 lift and30720 signed cubic lift completed.",
+    "Two real-sign descent obstructions carry word-equation certificates; arbitrary complex phases not classified.",
+    "All-field bounded-degree obstruction is not an unrestricted exterior-arc classification.",
+    "Local mediator and finite phase-space Wilson form are supplied models, not physical TOE derivations.",
+    "Native index is finite/internal and mass-dependent; no continuum chiral measure or unique family count.",
+    "Full intellectual paper/week reading remains incomplete."
+  ]
+}

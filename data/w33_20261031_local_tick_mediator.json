@@ -1,0 +1,89 @@
+{
+  "status": "PASS_LOCAL_GAUSSIAN_MEDIATOR_AND_DETAILED_BALANCE",
+  "mediator_action": "S=sum_edges [mu^2/2 Tr(Phi_e^2)-g Tr(Phi_e(Pi_a+Pi_b))], Phi_e Hermitian9x9, mu^2>0",
+  "exact_integrated_label_energy": "J sum_edges(3-Tr(Pi_a Pi_b)), J=g^2/mu^2; label-independent Gaussian determinants and constants omitted",
+  "pair_energies": {
+    "same_tick": 0,
+    "same_direction_other_outcome": 3,
+    "different_directions_commuting_or_not": 2
+  },
+  "ground_states_on_connected_graph": "Exactly120 constant event-label configurations. Optional onsite h_a quantum copies contribute the same factor3+6exp(-beta) for every label, so they do not change label selection.",
+  "square_completion_controls": [
+    {
+      "ticks": [
+        0,
+        0
+      ],
+      "pair_energy": 0,
+      "square_completion_error": 0.0
+    },
+    {
+      "ticks": [
+        0,
+        1
+      ],
+      "pair_energy": 3,
+      "square_completion_error": 7.105427357601002e-15
+    },
+    {
+      "ticks": [
+        0,
+        3
+      ],
+      "pair_energy": 2,
+      "square_completion_error": 0.0
+    },
+    {
+      "ticks": [
+        0,
+        17
+      ],
+      "pair_energy": 2,
+      "square_completion_error": 1.4210854715202004e-14
+    }
+  ],
+  "local_dynamics": "At each vertex replace its label with probability proportional to exp[-beta J sum_neighbor E(a,b)]. This continuous-time heat-bath generator is local and reversible for the exact integrated Gibbs measure. The mediator itself can use local Ornstein-Uhlenbeck dynamics conditioned on endpoints.",
+  "detailed_balance_max_error": 8.673617379884035e-19,
+  "finite_positive_T": "Irreducible finite-volume heat-bath chain, unique stationary Gibbs measure; no finite-volume spontaneous symmetry breaking.",
+  "high_T_uniqueness": "On a graph of maximum degree z, Dobrushin gives uniqueness if z*tanh(3 beta J/2)<1. The range of the change in a one-neighbor conditional energy is at most6J.",
+  "square_lattice_high_T_betaJ_bound": 0.1702752079219969,
+  "low_T_statement": "On a supplied Z^d lattice, d>=2, the finite-range120-state model has120 symmetry-related constant periodic ground states and Peierls cost>=2J per disagreeing edge. Standard Pirogov-Sinai theory therefore gives120 ordered low-temperature phases. No explicit critical temperature or complete phase diagram is computed.",
+  "transfer_matrix_spectrum": "1+2x^3+117x^2 (1), 1+2x^3-3x^2=(1-x)^2(1+2x) (39), 1-x^3 (80), x=exp(-beta J)",
+  "transfer_samples": [
+    {
+      "betaJ": 0.05,
+      "uniform_eigenvalue": 108.5873938630574,
+      "direction_eigenvalue": 0.006903698742236841,
+      "outcome_eigenvalue": 0.1392920235749422,
+      "chain_correlation_length": 0.15017860780668216
+    },
+    {
+      "betaJ": 0.3,
+      "uniform_eigenvalue": 66.02410074248229,
+      "direction_eigenvalue": 0.16670441119911872,
+      "outcome_eigenvalue": 0.5934303402594009,
+      "chain_correlation_length": 0.21223062686644317
+    },
+    {
+      "betaJ": 1.0,
+      "uniform_eigenvalue": 16.933802275419414,
+      "direction_eigenvalue": 0.6935682870258898,
+      "outcome_eigenvalue": 0.950212931632136,
+      "chain_correlation_length": 0.34717630093493324
+    },
+    {
+      "betaJ": 3.0,
+      "uniform_eigenvalue": 1.2902608242781373,
+      "direction_eigenvalue": 0.9928105630781742,
+      "outcome_eigenvalue": 0.9998765901959134,
+      "chain_correlation_length": 3.9220638115600823
+    }
+  ],
+  "accidental_symmetry": "S3 wr S40: the interaction forgets W33 collinearity between distinct directions. This is a limitation, not an E8 vacuum-selection mechanism.",
+  "prior": "The October19 variance audit already owns overlap blindness to W33 collinearity. Round13 auxiliary_mediator.py owns positive Gaussian matrix elimination for rank-two vacua, and Round14 pair_current_mediator.py owns a different engineered current interaction. Here this mechanism is placed on local edges for the actual rank-three120 ticks, with exact transfer spectrum and reversible kinetics. October9 q40 Potts and October21 local bond-chain constructions are different declared models. No novelty claimed for Gaussian integration, heat baths or Pirogov-Sinai theory.",
+  "literature": [
+    "https://doi.org/10.1007/BF01212295",
+    "https://www.math.ucla.edu/~biskup/290k.1.24w/PDFs/Zahradnik.pdf"
+  ],
+  "boundary": "The positive mediator, coupling, spatial graph and temperature are supplied. This constructs conditional local event ordering and kinetics, not a unique physical clock, E8 real form, Lorentzian dynamics or a TOE."
+}
