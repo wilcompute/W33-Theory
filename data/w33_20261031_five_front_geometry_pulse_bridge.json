@@ -1,0 +1,221 @@
+{
+  "checks": {
+    "clock_entropy_finite_size": true,
+    "q9_incidence_spectral_four_cycle": true,
+    "rank_three_continuum_firewall": true,
+    "two_exact_81_mode_reflection_pulses": true,
+    "w33_chiral_edge_cut": true
+  },
+  "clock_selection": {
+    "boundary": "Combinatorial finite-size entropy control; assumes prior annealed all-to-all rate ensemble, not a local clock action or physical real-form choice.",
+    "derivation": "single event yields log3 per quantum copy; four compatible ticks yield log4 per classical label asymptotically",
+    "finite_N_equal_four_label_critical_ratios": {
+      "128": 0.8263463859728849,
+      "16": 0.9787385457464799,
+      "256": 0.811475301450105,
+      "32": 0.8982115321434451,
+      "64": 0.8524556184678788,
+      "8": 1.1221759954445911
+    },
+    "prior_thermodynamic_threshold_N_over_M": 0.7924812503605781
+  },
+  "continuum": {
+    "all_q_obstruction": "At most 3 distinct eigenvalues at each q, for any q-dependent a,b,c. This rank-three invariant scalar sector cannot yield the unbounded ladder of distinct eigenvalues of a positive-dimensional compact-manifold Laplacian via eigenvalue convergence.",
+    "boundary": "This rejects the full-PSp-invariant one-body scalar sector, not matrix-valued modes, growing periodic covers, broken symmetries, interactions or continuum gravity in general.",
+    "numerical_families": {
+      "11": {
+        "degree": 132,
+        "eigenvalues": [
+          132,
+          10,
+          -12
+        ],
+        "multiplicities": [
+          1,
+          792,
+          671
+        ],
+        "normalized_positive_gap": 0.9242424242424242,
+        "v": 1464
+      },
+      "19": {
+        "degree": 380,
+        "eigenvalues": [
+          380,
+          18,
+          -20
+        ],
+        "multiplicities": [
+          1,
+          3800,
+          3439
+        ],
+        "normalized_positive_gap": 0.9526315789473684,
+        "v": 7240
+      },
+      "2": {
+        "degree": 6,
+        "eigenvalues": [
+          6,
+          1,
+          -3
+        ],
+        "multiplicities": [
+          1,
+          9,
+          5
+        ],
+        "normalized_positive_gap": 0.8333333333333334,
+        "v": 15
+      },
+      "3": {
+        "degree": 12,
+        "eigenvalues": [
+          12,
+          2,
+          -4
+        ],
+        "multiplicities": [
+          1,
+          24,
+          15
+        ],
+        "normalized_positive_gap": 0.8333333333333334,
+        "v": 40
+      },
+      "5": {
+        "degree": 30,
+        "eigenvalues": [
+          30,
+          4,
+          -6
+        ],
+        "multiplicities": [
+          1,
+          90,
+          65
+        ],
+        "normalized_positive_gap": 0.8666666666666667,
+        "v": 156
+      },
+      "7": {
+        "degree": 56,
+        "eigenvalues": [
+          56,
+          6,
+          -8
+        ],
+        "multiplicities": [
+          1,
+          224,
+          175
+        ],
+        "normalized_positive_gap": 0.8928571428571429,
+        "v": 400
+      }
+    },
+    "previous_prior_art": "2026-10-29 symmetry/dynamics no chirality; 2026-10-23 round7 positive gap no-go; 2026-10-09 Levi heat no-go; 2026-10-23 round9 periodic Euclidean acoustic control.",
+    "rank_three_commutant": "PSp(4,q)-invariant scalar point kernels are aI+bA+cJ"
+  },
+  "geometry_A5_q9": {
+    "24x24_biadjacency": {
+      "BBt_minimal_annihilator": "C(C-4I)(C-10I)(C-100I)=0",
+      "BBt_spectrum": {
+        "0": 6,
+        "10": 12,
+        "100": 1,
+        "4": 5
+      },
+      "integral_cokernel": "Z^6 direct_sum (Z/5Z)^7",
+      "rank_over_fields": {
+        "11": 18,
+        "2": 18,
+        "3": 18,
+        "5": 11,
+        "7": 18
+      },
+      "smith_normal_form": {
+        "five": 7,
+        "one": 11,
+        "zero": 6
+      }
+    },
+    "covered_points_twice": 240,
+    "intersection_graph": {
+      "bipartition": [
+        24,
+        24
+      ],
+      "connected": true,
+      "degree": 10,
+      "edges": 240,
+      "four_cycles": 1680,
+      "n": 48,
+      "spectrum": {
+        "-10": 1,
+        "-2": 5,
+        "-sqrt(10)": 12,
+        "0": 12,
+        "10": 1,
+        "2": 5,
+        "sqrt(10)": 12
+      },
+      "square_cycles_per_edge": 28,
+      "triangles": 0
+    },
+    "line_set": 48,
+    "novelty_boundary": "Source already identifies A5 orbit and graph spectrum; this checks incidence, field ranks and exact 4-cycles.",
+    "q": 9,
+    "source": "Pass 12501 orbit witness, analysis/search_drivers_12466/icosa_even_q9.json"
+  },
+  "schema": "w33.20261031.five_front_geometry_pulse_bridge.v1",
+  "scientific_scope": "Exact finite mathematics and conditional toy Hamiltonians; not a physical TOE.",
+  "source_free_chirality": {
+    "cut_partition_sizes": [
+      1,
+      39
+    ],
+    "edge_graph": "W(3,3) 40-vertex collinearity graph",
+    "firewall": "Source-free projected edge Ising model already in Oct23 Round9; cut cost is finite, K-conjugate signs remain unbiased at finite volume and an external field or infinite-volume limit is needed for selection.",
+    "ground_sign_sectors": 2,
+    "min_edge_cut": 12,
+    "minimum_nontrivial_flip_excitation_energy_over_J": "27/4",
+    "projected_O_squared": "9/32"
+  },
+  "status": "PASS",
+  "transducer_pulse": {
+    "common_pulse": "P=-F^2/14, H_real=pi*P, exp(-i*H_real)=I+F^2/7",
+    "directed_pulse": "exp(+-pi*F/(2sqrt(14)))=I+F^2/14+-F/sqrt(14)",
+    "eigenvalues_H_real": "0 on 27 dims; pi on 54 dims",
+    "implementation_status": "Exact ideal 81-mode Hamiltonian with 27 parallel three-mode blocks; no actual device, calibration, error threshold or chirality selection.",
+    "orientation_loss": "Real-symmetric involution depends on F^2 and cannot see F -> -F",
+    "orientation_resource": "Directed pulse depends on F; H=iF has imaginary gauge-invariant triangle hopping product",
+    "orientations": {
+      "minus": {
+        "all_triangles_F_cubed_equals_minus14F": true,
+        "edge_weight_histogram": {
+          "1,2,3": 27
+        },
+        "exact_81x81_involution_certified": true,
+        "factor": 6,
+        "integer_involution_identity": "(7I+F^2)^2=49I",
+        "quotient_rank_previous_certificate": 54,
+        "raw_rank": 54,
+        "triangle_count": 27
+      },
+      "plus": {
+        "all_triangles_F_cubed_equals_minus14F": true,
+        "edge_weight_histogram": {
+          "1,2,3": 27
+        },
+        "exact_81x81_involution_certified": true,
+        "factor": 7,
+        "integer_involution_identity": "(7I+F^2)^2=49I",
+        "quotient_rank_previous_certificate": 54,
+        "raw_rank": 54,
+        "triangle_count": 27
+      }
+    }
+  },
+  "upstream_head_at_start": "7949488538a96670bdd11740a77474cd51a5f758"
+}
