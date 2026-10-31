@@ -1,0 +1,123 @@
+{
+ "3": {
+  "q": 3,
+  "status": "found",
+  "matching": [
+   [
+    "inf",
+    0
+   ],
+   [
+    1,
+    2
+   ]
+  ],
+  "nodes": 3,
+  "seconds": 0.0
+ },
+ "5": {
+  "q": 5,
+  "status": "none",
+  "matching": null,
+  "nodes": 16,
+  "seconds": 0.0
+ },
+ "7": {
+  "q": 7,
+  "status": "found",
+  "matching": [
+   [
+    "inf",
+    0
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    4,
+    5
+   ]
+  ],
+  "nodes": 5,
+  "seconds": 0.0
+ },
+ "11": {
+  "q": 11,
+  "status": "found",
+  "matching": [
+   [
+    "inf",
+    0
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    5,
+    10
+   ],
+   [
+    7,
+    9
+   ]
+  ],
+  "nodes": 7,
+  "seconds": 0.0
+ },
+ "13": {
+  "q": 13,
+  "status": "none",
+  "matching": null,
+  "nodes": 276,
+  "seconds": 0.0
+ },
+ "17": {
+  "q": 17,
+  "status": "none",
+  "matching": null,
+  "nodes": 824,
+  "seconds": 0.1
+ },
+ "19": {
+  "q": 19,
+  "status": "none",
+  "matching": null,
+  "nodes": 1344,
+  "seconds": 0.2
+ },
+ "23": {
+  "q": 23,
+  "status": "none",
+  "matching": null,
+  "nodes": 3321,
+  "seconds": 0.7
+ },
+ "29": {
+  "q": 29,
+  "status": "none",
+  "matching": null,
+  "nodes": 10830,
+  "seconds": 1.6
+ },
+ "31": {
+  "q": 31,
+  "status": "none",
+  "matching": null,
+  "nodes": 14700,
+  "seconds": 2.4
+ }
+}

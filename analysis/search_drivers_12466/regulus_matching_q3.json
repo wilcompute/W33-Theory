@@ -1,0 +1,34 @@
+{
+ "q": 3,
+ "predicted_size": 12,
+ "tried_R0": 1,
+ "results": [
+  {
+   "R0": [
+    16,
+    31,
+    6,
+    7
+   ],
+   "matchings": 3,
+   "even": 3,
+   "example": {
+    "matching": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "size": 12,
+    "coverage": [
+     0,
+     2
+    ]
+   }
+  }
+ ]
+}

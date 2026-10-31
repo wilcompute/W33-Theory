@@ -1,0 +1,51 @@
+{
+ "37": {
+  "q": 37,
+  "status": "none",
+  "matching": null,
+  "nodes": 38041,
+  "seconds": 8.5
+ },
+ "41": {
+  "q": 41,
+  "status": "none",
+  "matching": null,
+  "nodes": 70223,
+  "seconds": 17.2
+ },
+ "43": {
+  "q": 43,
+  "status": "none",
+  "matching": null,
+  "nodes": 97410,
+  "seconds": 25.5
+ },
+ "47": {
+  "q": 47,
+  "status": "none",
+  "matching": null,
+  "nodes": 175412,
+  "seconds": 47.5
+ },
+ "53": {
+  "q": 53,
+  "status": "none",
+  "matching": null,
+  "nodes": 351858,
+  "seconds": 113.6
+ },
+ "59": {
+  "q": 59,
+  "status": "none",
+  "matching": null,
+  "nodes": 667732,
+  "seconds": 244.0
+ },
+ "61": {
+  "q": 61,
+  "status": "none",
+  "matching": null,
+  "nodes": 881012,
+  "seconds": 343.8
+ }
+}

@@ -1,0 +1,65 @@
+[
+ {
+  "q": 3,
+  "r": 2,
+  "k": 0,
+  "line_orbits": 28,
+  "orbit_sizes": [
+   1,
+   2
+  ],
+  "status": "OPTIMAL",
+  "seconds": 0.1,
+  "target_weight": null,
+  "weight": 10,
+  "verified_even": true,
+  "coverage_profile": [
+   0,
+   2
+  ],
+  "bound": 10.0,
+  "chosen": [
+   7,
+   10,
+   8,
+   12,
+   13,
+   15,
+   17,
+   18,
+   19,
+   20
+  ]
+ },
+ {
+  "q": 3,
+  "r": 2,
+  "k": 1,
+  "line_orbits": 40,
+  "orbit_sizes": [
+   1
+  ],
+  "status": "OPTIMAL",
+  "seconds": 0.1,
+  "target_weight": null,
+  "weight": 10,
+  "verified_even": true,
+  "coverage_profile": [
+   0,
+   2
+  ],
+  "bound": 10.0,
+  "chosen": [
+   7,
+   8,
+   10,
+   12,
+   13,
+   15,
+   17,
+   18,
+   19,
+   20
+  ]
+ }
+]

@@ -1,0 +1,449 @@
+{
+ "q": 5,
+ "predicted_size": 24,
+ "tried_R0": 34,
+ "results": [
+  {
+   "R0": [
+    85,
+    30,
+    8,
+    126,
+    65,
+    146
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    7,
+    18,
+    110,
+    55,
+    144,
+    99
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    0,
+    155,
+    57,
+    114,
+    41,
+    98
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    5,
+    6,
+    138,
+    144,
+    146,
+    152
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    90,
+    117,
+    68,
+    22,
+    36,
+    4
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    131,
+    125,
+    33,
+    98,
+    51,
+    105
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    106,
+    57,
+    124,
+    97,
+    91,
+    69
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    153,
+    97,
+    7,
+    58,
+    42,
+    23
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    18,
+    97,
+    107,
+    55,
+    65,
+    8
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    40,
+    151,
+    101,
+    42,
+    67,
+    65
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    121,
+    29,
+    77,
+    11,
+    127,
+    71
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    29,
+    153,
+    87,
+    8,
+    48,
+    107
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    4,
+    24,
+    140,
+    37,
+    101,
+    128
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    21,
+    54,
+    12,
+    32,
+    134,
+    77
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    99,
+    151,
+    49,
+    33,
+    126,
+    83
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    144,
+    95,
+    40,
+    83,
+    34,
+    138
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    104,
+    97,
+    12,
+    152,
+    18,
+    49
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    90,
+    150,
+    29,
+    96,
+    20,
+    36
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    19,
+    86,
+    140,
+    28,
+    75,
+    146
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    93,
+    75,
+    68,
+    109,
+    100,
+    34
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    3,
+    31,
+    154,
+    23,
+    107,
+    105
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    106,
+    29,
+    66,
+    48,
+    10,
+    88
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    0,
+    147,
+    58,
+    119,
+    55,
+    86
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    62,
+    5,
+    73,
+    8,
+    79,
+    56
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    112,
+    20,
+    137,
+    141,
+    21,
+    116
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    124,
+    43,
+    126,
+    73,
+    66,
+    154
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    148,
+    35,
+    130,
+    96,
+    108,
+    151
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    61,
+    22,
+    140,
+    126,
+    80,
+    11
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    105,
+    145,
+    27,
+    122,
+    7,
+    57
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    42,
+    35,
+    118,
+    130,
+    133,
+    152
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    74,
+    14,
+    42,
+    10,
+    139,
+    107
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    101,
+    83,
+    76,
+    58,
+    117,
+    42
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    140,
+    112,
+    32,
+    50,
+    134,
+    124
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  },
+  {
+   "R0": [
+    55,
+    125,
+    31,
+    77,
+    107,
+    71
+   ],
+   "matchings": 15,
+   "even": 0,
+   "example": null
+  }
+ ]
+}

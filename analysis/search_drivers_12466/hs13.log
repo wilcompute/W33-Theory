@@ -1,0 +1,1 @@
+"q": 13, "r": 7, "k": 0, "line_orbits": 340, "orbit_sizes": [7], "status": "INFEASIBLE" "q": 13, "r": 7, "k": 1, "line_orbits": 352, "orbit_sizes": [1, 7], "status": "UNKNOWN" "q": 13, "r": 7, "k": 2, "line_orbits": 340, "orbit_sizes": [7], "status": "INFEASIBLE" "q": 13, "r": 7, "k": 3, "line_orbits": 340, "orbit_sizes": [7], "status": "INFEASIBLE" 

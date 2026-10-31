@@ -45,6 +45,7 @@
     "5": 20,
     "7": 34,
     "9": 52,
+    "11": 74,
     "13": 100,
     "113": 6500
   },
@@ -54,6 +55,171 @@
     13,
     113
   ],
+  "12486_symmetric_upper_bounds": {
+    "3": 10,
+    "5": 20,
+    "7": 40,
+    "11": 84,
+    "13": 168
+  },
+  "12487_q7": [
+    {
+      "n": 40,
+      "twin_class_sizes": [
+        [
+          1,
+          32
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "twin_paired": false,
+      "k": 1,
+      "weight": 40,
+      "verified_even": true,
+      "coverage": [
+        0,
+        2
+      ]
+    },
+    {
+      "n": 40,
+      "twin_class_sizes": [
+        [
+          1,
+          32
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "twin_paired": false,
+      "k": 3,
+      "weight": 40,
+      "verified_even": true,
+      "coverage": [
+        0,
+        2
+      ]
+    }
+  ],
+  "12489_geometric": {
+    "3": [
+      3,
+      3,
+      12
+    ],
+    "5": [
+      15,
+      0,
+      null
+    ],
+    "7": [
+      105,
+      14,
+      40
+    ],
+    "11": [
+      10395,
+      22,
+      84
+    ]
+  },
+  "12489_condition": {
+    "3": {
+      "condition_count": 3,
+      "geometric_count": 3,
+      "geometric_ones_satisfy": true
+    },
+    "5": {
+      "condition_count": 0,
+      "geometric_count": 0,
+      "geometric_ones_satisfy": true
+    },
+    "7": {
+      "condition_count": 14,
+      "geometric_count": 14,
+      "geometric_ones_satisfy": true
+    },
+    "11": {
+      "condition_count": 22,
+      "geometric_count": 22,
+      "geometric_ones_satisfy": true
+    }
+  },
+  "12489_search": {
+    "3": "found",
+    "5": "none",
+    "7": "found",
+    "11": "found",
+    "13": "none",
+    "17": "none",
+    "19": "none",
+    "23": "none",
+    "29": "none",
+    "31": "none",
+    "37": "none",
+    "41": "none",
+    "43": "none",
+    "47": "none",
+    "53": "none",
+    "59": "none",
+    "61": "none"
+  },
+  "12489_stabilisers": {
+    "3": {
+      "good": 3,
+      "PGL": 24,
+      "orbit": 3,
+      "one_orbit": true,
+      "stabiliser": 8,
+      "order_profile": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      },
+      "transitive_on_PG1": true,
+      "pairs_are_blocks": true
+    },
+    "7": {
+      "good": 14,
+      "PGL": 336,
+      "orbit": 14,
+      "one_orbit": true,
+      "stabiliser": 24,
+      "order_profile": {
+        "1": 1,
+        "2": 9,
+        "3": 8,
+        "4": 6
+      },
+      "transitive_on_PG1": true,
+      "pairs_are_blocks": true
+    },
+    "11": {
+      "good": 22,
+      "PGL": 1320,
+      "orbit": 22,
+      "one_orbit": true,
+      "stabiliser": 60,
+      "order_profile": {
+        "1": 1,
+        "2": 15,
+        "3": 20,
+        "5": 24
+      },
+      "transitive_on_PG1": true,
+      "pairs_are_blocks": true
+    }
+  },
+  "12488_local_bound": {
+    "3": 9,
+    "5": 16,
+    "7": 23
+  },
   "checks": {
     "12482: GF(q) driver reproduces the prime-q minima 6, 10, 20 at q = 2, 3, 5 (optimal, verified even)": true,
     "12482: q = 4, 8 give 2(q+1) = 10, 18 (the known even-q minimum weight; control)": true,
@@ -61,7 +227,15 @@
     "12483: all 216 have intersection graph K55 minus a matching (spectrum +-4, +-1^4) and none is twin-paired": true,
     "12484: the q = 5 optimum is twin-paired, every perp lies inside, and the pair graph is the Petersen graph (girth 5)": true,
     "12484: the Petersen set has PSp(4,5)-orbit 4875 and stabiliser order 960 = 8 * |Aut(Petersen)|": true,
-    "12485: Moore degrees 2, 3, 7, 57 correspond to q = 3, 5, 13, 113 and the bound 2 + (q+1)^2/2 is 10, 20, 100, 6500": true
+    "12485: Moore degrees 2, 3, 7, 57 correspond to q = 3, 5, 13, 113 and the bound 2 + (q+1)^2/2 is 10, 20, 100, 6500": true,
+    "12486: symmetric search reaches the true minima 10, 20, 40 at q = 3, 5, 7 (controls)": true,
+    "12486: explicit even sets of 84 lines (q = 11) and 168 (q = 13) refute the 12474 fit 5*2^((q-1)/2) = 160, 320": true,
+    "12487: the symmetric 40-line optima at q = 7 are not twin-paired (4 twin pairs + 32 singles)": true,
+    "12489: S(R0,M) is even for exactly 3, 0, 14, 22 of the 3, 15, 105, 10395 matchings at q = 3, 5, 7, 11, sizes 12, -, 40, 84": true,
+    "12489: the cross-ratio / no-concurrency condition selects exactly the geometric matchings at q = 3, 5, 7, 11": true,
+    "12489: complete search -- good matchings exist only for q = 3, 7, 11 among the primes tested (up to 61)": true,
+    "12489: one PGL(2,q)-orbit each; stabiliser D4 (q=3), S4 = cube (q=7), A5 = icosahedron (q=11), transitive, pairs = blocks": true,
+    "12488: the local counting bound is 9, 16, 23 at q = 3, 5, 7 -- valid (<= 10, 20, 40) but not sharp": true
   },
   "all_checks_pass": true
 }

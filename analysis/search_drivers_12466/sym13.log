@@ -1,0 +1,6 @@
+"q": 13, "r": 7, "k": 0, "status": "FEASIBLE", "seconds": 600.0, "weight": 196
+"q": 13, "r": 7, "k": 1, "status": "FEASIBLE", "seconds": 600.1, "weight": 168
+"q": 13, "r": 7, "k": 2, "status": "FEASIBLE", "seconds": 600.1, "weight": 196
+"q": 13, "r": 7, "k": 3, "status": "FEASIBLE", "seconds": 600.0, "weight": 196
+"q": 13, "r": 14, "k": 0, "status": "FEASIBLE", "seconds": 600.1, "weight": 196
+"q": 13, "r": 14, "k": 1, "status": "FEASIBLE", "seconds": 600.2, "weight": 168

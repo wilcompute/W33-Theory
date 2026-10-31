@@ -1,0 +1,101 @@
+[
+ {
+  "n": 64,
+  "twin_class_sizes": [
+   [
+    1,
+    64
+   ]
+  ],
+  "twin_paired": false,
+  "k": 0,
+  "weight": 64,
+  "verified_even": true,
+  "coverage": [
+   0,
+   2,
+   8
+  ]
+ },
+ {
+  "n": 40,
+  "twin_class_sizes": [
+   [
+    1,
+    32
+   ],
+   [
+    2,
+    4
+   ]
+  ],
+  "twin_paired": false,
+  "k": 1,
+  "weight": 40,
+  "verified_even": true,
+  "coverage": [
+   0,
+   2
+  ]
+ },
+ {
+  "n": 56,
+  "twin_class_sizes": [
+   [
+    1,
+    32
+   ],
+   [
+    2,
+    12
+   ]
+  ],
+  "twin_paired": false,
+  "k": 2,
+  "weight": 56,
+  "verified_even": true,
+  "coverage": [
+   0,
+   2,
+   4
+  ]
+ },
+ {
+  "n": 40,
+  "twin_class_sizes": [
+   [
+    1,
+    32
+   ],
+   [
+    2,
+    4
+   ]
+  ],
+  "twin_paired": false,
+  "k": 3,
+  "weight": 40,
+  "verified_even": true,
+  "coverage": [
+   0,
+   2
+  ]
+ },
+ {
+  "n": 64,
+  "twin_class_sizes": [
+   [
+    1,
+    64
+   ]
+  ],
+  "twin_paired": false,
+  "k": 4,
+  "weight": 64,
+  "verified_even": true,
+  "coverage": [
+   0,
+   2
+  ]
+ }
+]

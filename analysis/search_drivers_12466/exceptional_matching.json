@@ -1,0 +1,46 @@
+{
+ "3": {
+  "good": 3,
+  "PGL": 24,
+  "orbit": 3,
+  "one_orbit": true,
+  "stabiliser": 8,
+  "order_profile": {
+   "1": 1,
+   "2": 5,
+   "4": 2
+  },
+  "transitive_on_PG1": true,
+  "pairs_are_blocks": true
+ },
+ "7": {
+  "good": 14,
+  "PGL": 336,
+  "orbit": 14,
+  "one_orbit": true,
+  "stabiliser": 24,
+  "order_profile": {
+   "1": 1,
+   "2": 9,
+   "3": 8,
+   "4": 6
+  },
+  "transitive_on_PG1": true,
+  "pairs_are_blocks": true
+ },
+ "11": {
+  "good": 22,
+  "PGL": 1320,
+  "orbit": 22,
+  "one_orbit": true,
+  "stabiliser": 60,
+  "order_profile": {
+   "1": 1,
+   "2": 15,
+   "3": 20,
+   "5": 24
+  },
+  "transitive_on_PG1": true,
+  "pairs_are_blocks": true
+ }
+}

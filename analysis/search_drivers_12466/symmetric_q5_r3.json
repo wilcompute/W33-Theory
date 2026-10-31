@@ -1,0 +1,89 @@
+[
+ {
+  "q": 5,
+  "r": 3,
+  "k": 0,
+  "line_orbits": 52,
+  "orbit_sizes": [
+   3
+  ],
+  "status": "OPTIMAL",
+  "seconds": 0.1,
+  "target_weight": null,
+  "weight": 24,
+  "verified_even": true,
+  "coverage_profile": [
+   0,
+   2
+  ],
+  "bound": 24.0,
+  "chosen": [
+   18,
+   84,
+   130,
+   20,
+   89,
+   110,
+   26,
+   139,
+   70,
+   28,
+   149,
+   80,
+   68,
+   82,
+   71,
+   73,
+   87,
+   76,
+   107,
+   146,
+   143,
+   127,
+   141,
+   138
+  ]
+ },
+ {
+  "q": 5,
+  "r": 3,
+  "k": 1,
+  "line_orbits": 56,
+  "orbit_sizes": [
+   1,
+   3
+  ],
+  "status": "OPTIMAL",
+  "seconds": 0.4,
+  "target_weight": null,
+  "weight": 20,
+  "verified_even": true,
+  "coverage_profile": [
+   0,
+   2
+  ],
+  "bound": 20.0,
+  "chosen": [
+   0,
+   49,
+   55,
+   3,
+   47,
+   51,
+   8,
+   39,
+   35,
+   12,
+   68,
+   93,
+   16,
+   21,
+   30,
+   143,
+   118,
+   31,
+   43,
+   37
+  ]
+ }
+]

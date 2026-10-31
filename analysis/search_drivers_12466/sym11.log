@@ -1,0 +1,14 @@
+"q": 11, "r": 12, "k": 0, "status": "FEASIBLE", "seconds": 400.1, "weight": 144
+"q": 11, "r": 12, "k": 1, "status": "FEASIBLE", "seconds": 400.1, "weight": 84
+"q": 11, "r": 12, "k": 2, "status": "FEASIBLE", "seconds": 400.0, "weight": 124
+"q": 11, "r": 12, "k": 3, "status": "FEASIBLE", "seconds": 400.8, "weight": 84
+"q": 11, "r": 12, "k": 4, "status": "FEASIBLE", "seconds": 400.3, "weight": 124
+"q": 11, "r": 6, "k": 0, "status": "FEASIBLE", "seconds": 400.1, "weight": 144
+"q": 11, "r": 6, "k": 1, "status": "FEASIBLE", "seconds": 400.0, "weight": 84
+"q": 11, "r": 6, "k": 2, "status": "FEASIBLE", "seconds": 400.1, "weight": 84
+"q": 11, "r": 6, "k": 3, "status": "FEASIBLE", "seconds": 400.0, "weight": 144
+"q": 11, "r": 4, "k": 0, "status": "FEASIBLE", "seconds": 400.0, "weight": 124
+"q": 11, "r": 4, "k": 1, "status": "FEASIBLE", "seconds": 400.2, "weight": 228
+"q": 11, "r": 4, "k": 2, "status": "FEASIBLE", "seconds": 400.2, "weight": 124
+"q": 11, "r": 3, "k": 0, "status": "FEASIBLE", "seconds": 400.1, "weight": 84
+"q": 11, "r": 3, "k": 1, "status": "FEASIBLE", "seconds": 400.4, "weight": 120

@@ -1,0 +1,22 @@
+{
+ "3": {
+  "condition_count": 3,
+  "geometric_count": 3,
+  "geometric_ones_satisfy": true
+ },
+ "5": {
+  "condition_count": 0,
+  "geometric_count": 0,
+  "geometric_ones_satisfy": true
+ },
+ "7": {
+  "condition_count": 14,
+  "geometric_count": 14,
+  "geometric_ones_satisfy": true
+ },
+ "11": {
+  "condition_count": 22,
+  "geometric_count": 22,
+  "geometric_ones_satisfy": true
+ }
+}
