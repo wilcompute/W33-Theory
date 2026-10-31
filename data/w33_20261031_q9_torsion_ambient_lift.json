@@ -1,0 +1,48 @@
+{
+  "point_map": {
+    "all_isotropic_lines_permuted": 820,
+    "all_projective_points_permuted": 820,
+    "all_selected_line_images_certified": true,
+    "field_frobenius_power": 1,
+    "fifth_power_scalar_GF9": 6,
+    "four_basis_point_ids": [
+      14,
+      15,
+      23,
+      95
+    ],
+    "full_ambient_PGSp_certificate": true,
+    "generator_order": 5,
+    "matrix_GF9": [
+      [
+        2,
+        7,
+        7,
+        0
+      ],
+      [
+        2,
+        8,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        8,
+        1
+      ],
+      [
+        0,
+        0,
+        5,
+        2
+      ]
+    ],
+    "projective_points_certified": 240,
+    "symplectic_similitude_multiplier_GF9": 2
+  },
+  "scope": "A lift, if found, identifies this order-five torsion action with a genuine ambient GF(9) collineation. No physics is inferred. If absent it exposes an abstract-graph automorphism not detected by the searched semilinear class.",
+  "search_attempts": 455,
+  "status": "PASS_GF9_AMBIENT_SEMILINEAR_LIFT"
+}

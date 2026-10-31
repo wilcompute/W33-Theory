@@ -1,0 +1,98 @@
+{
+  "IID_local_vs_collective_test": {
+    "0.001": {
+      "collective_error": 0.0002846094710965974,
+      "collective_ideal_copies": 4,
+      "local_error": 0.0001685463754179991,
+      "local_interferometer_IID_shots": 7
+    },
+    "1e-06": {
+      "collective_error": 3.2382590253732246e-07,
+      "collective_ideal_copies": 8,
+      "local_error": 8.064172516578932e-07,
+      "local_interferometer_IID_shots": 13
+    }
+  },
+  "analyzer_drift_control": [
+    {
+      "drift_radians": 0,
+      "one_shot_error": 0.0482460485473744
+    },
+    {
+      "drift_radians": 0.01,
+      "one_shot_error": 0.0482912246953124
+    },
+    {
+      "drift_radians": 0.03,
+      "one_shot_error": 0.04865268799535453
+    },
+    {
+      "drift_radians": 0.1,
+      "one_shot_error": 0.05277098722433503
+    }
+  ],
+  "analyzer_two_mode_Givens_angles": [
+    {
+      "ports": [
+        0,
+        1
+      ],
+      "radians": 2.3561944901923453
+    },
+    {
+      "ports": [
+        0,
+        2
+      ],
+      "radians": 1.006853685434268
+    },
+    {
+      "ports": [
+        1,
+        2
+      ],
+      "radians": -1.8925468811915394
+    }
+  ],
+  "baseline_fixed_port_TV": 0.45816212899272757,
+  "diagonal_phase_signs": [
+    1.0000000000000002,
+    1.0000000000000002,
+    1.0
+  ],
+  "one_photon_Helstrom_optimal_error": 0.0482460485473744,
+  "one_photon_fixed_port_error": 0.2709189355036362,
+  "per_orientation_analyzer_click_probabilities": {
+    "minus": [
+      0.048246048547374416,
+      0.9517539514526259,
+      3.5422156358576045e-32
+    ],
+    "plus": [
+      0.9517539514526261,
+      0.04824604854737439,
+      3.76596419297016e-33
+    ]
+  },
+  "real_mode_analyzer": [
+    [
+      -0.3779644730092273,
+      -0.3433399117638619,
+      -0.8598026297545507
+    ],
+    [
+      0.3779644730092271,
+      0.7905535072638201,
+      -0.48183815674532327
+    ],
+    [
+      0.8451542547285169,
+      -0.5070925528371099,
+      -0.16903085094570336
+    ]
+  ],
+  "scope": "Ideal state discrimination; loss and crosstalk must be separately modeled. Collective Helstrom test requires entangled joint measurements across multiple photons; local IID majority can be implemented by repeated single-photon three-mode detectors. Neither is a physical CP/time-arrow test.",
+  "source_pair_overlap": "-3/7",
+  "status": "PASS_REAL_THREE_MODE_HELSTROM_AND_BRAID_GATE_SENSING",
+  "trace_distance": "2sqrt(10)/7"
+}

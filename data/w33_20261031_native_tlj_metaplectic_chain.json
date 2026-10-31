@@ -1,0 +1,153 @@
+{
+  "JW_projectors": [
+    {
+      "idempotence_error": 4.622227044373278e-16,
+      "rank": 6,
+      "strands": 2,
+      "trace_real": 6.0
+    },
+    {
+      "idempotence_error": 6.676740106225732e-16,
+      "rank": 3,
+      "strands": 3,
+      "trace_real": 3.000000000000001
+    },
+    {
+      "idempotence_error": 1.5005836036720325e-15,
+      "rank": 1,
+      "strands": 4,
+      "trace_real": 1.0000000000000022
+    },
+    {
+      "idempotence_error": 2.4171865144461963e-15,
+      "rank": 0,
+      "strands": 5,
+      "trace_real": 3.2196467714129536e-15
+    }
+  ],
+  "TL": "e_i=sqrt(3) Pi_i, e_i^2=sqrt(3)e_i; e_i e_(i+1) e_i=e_i; distant generators commute",
+  "braid_formula": "R_i=A I + A^-1 e_i, A=exp(5 pi i/12); R_i=exp(-i pi/4)[I+(omega-1)(I-Pi_i)]",
+  "concrete_Pauli_coordinates": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "concrete_Pauli_indices": [
+    0,
+    4,
+    2,
+    13,
+    1
+  ],
+  "full_40_point_Pauli_conjugacy_verified": true,
+  "level4_truncation": "f5=0 in this explicit 9D *-representation",
+  "maximally_entangling_native_braid": {
+    "Pauli_direction": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "Schmidt_probabilities": [
+      0.3333333333333334,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "gate": "Jones R is the native order-three Clifford tick up to global phase, here controlled by the X tensor X eigenprojector",
+    "input": "|0> tensor |0>",
+    "physical_limit": "Ideal two-qutrit register gate, not a protected anyonic fusion process",
+    "von_Neumann_entropy_nats": 1.0986122886681098
+  },
+  "native_tick_count": 120,
+  "novelty_boundary": "Temperley-Lieb/Jones and metaplectic SU2_4 are established mathematics; earlier repo already discussed these topics numerically. The specific canonical native 9D 120-projector chain, exact gate identification, braid and f5 controls, and packing census are this reproducible bridge. No anyon material or topological hardware.",
+  "ordered_TL5_paths": {
+    "length4": 25920,
+    "length5": 25920,
+    "length6": 0,
+    "projective_symplectic_orbit_size": 25920,
+    "proof_method": "Exact enumerated induced-path census plus transvection BFS on actual 40 projective F3^4 directions",
+    "regular_PSp43_torsor": true,
+    "transvection_generator_vectors": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "projective_braid_image": "Exactly within native two-qutrit Clifford tick gates, hence no dense-braiding universality.",
+  "projector_pairs": {
+    "commuting_pairs": 240,
+    "noncommuting_pairs": 540
+  },
+  "root_of_unity": "q=exp(i pi/6), quantum loop dimension 2cos(pi/6)=sqrt(3), SU(2)_4 Jones parameter",
+  "spatial_graph_packing": {
+    "complete_maximal_set_census": true,
+    "maximum_pairwise_noncommuting_Pauli_directions": 7,
+    "number_maximal_independent_sets_4": 90,
+    "number_maximal_independent_sets_7": 2880,
+    "witness_7": [
+      0,
+      34,
+      32,
+      26,
+      9,
+      27,
+      30
+    ]
+  },
+  "spatial_interpretation": "Above the existing K=3J/2 noncommuting-bond preference threshold, any 7-site complete spatial graph can saturate all bonds using seven noncommuting directions; no 8-site complete graph can. This is a finite frustration/packing bound, not a vacuum derivation.",
+  "status": "PASS_NATIVE_9D_TEMPERLEY_LIEB_JONES_BRAID"
+}
