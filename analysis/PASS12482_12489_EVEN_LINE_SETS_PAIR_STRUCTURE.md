@@ -192,3 +192,46 @@ q = 3, 5, 7, and the q = 11 and q = 13 upper bounds are consistent with it.
   spaces*, Discrete Math. 310 (2010). https://arxiv.org/abs/1201.3294
 - S. E. Payne, J. A. Thas, *Finite Generalized Quadrangles*, 2nd ed. (2009), 3.3.1.
 - A. J. Hoffman, R. R. Singleton, *On Moore graphs with diameters 2 and 3*, IBM J. Res. Dev. 4 (1960).
+
+## Erratum and prior art (added with Passes 12496–12500)
+
+A deeper search of the corpus (markdown, Python, JSON, TeX, HTML and the text of all 81 tracked PDFs) found that parts of this
+release re-derive earlier results. The earlier work owns them; they are cited here.
+
+- **12483 rediscovers Pass 173** (`analysis/PASS173_INCIDENCE_TRANSCEIVER_ROUTE_DARK_LATTICE.md`, 2026-07-11). Pass 173 already has:
+  - the even-line-set code at q = 3, the **route code [40,15,10]**, with enumerator 1 + 216z¹⁰ + 270z¹² + 1080z¹⁴ + …;
+  - its **216** minimum words forming **one PSp(4,3)-orbit with stabiliser order 120 ≅ S₅**;
+  - each word being a pair of 5-line partial spreads ("pentad cores", BT844–BT846) meeting in the crown graph **K₅,₅ minus a
+    perfect matching**.
+
+  12483's enumeration and orbit computation is an independent recomputation, not a new result. **12467's q = 3 minimum 10 is Pass
+  173's route-code distance.**
+- **The code dimension (q³ + q)/2** follows from the odd-q 2-rank (q(q+1)² + 2)/2 recorded in `analysis/w33_levi_closure.py`.
+- **The degree-57 Moore case of 12485** connects to the corpus's existing M57 program: Passes ~3506–3512, the "Moore stage gate" and
+  solver tracks in `docs/index.html` and `holonet_machine_blueprint.pdf`. 12485/12492 add a geometric route into it (a twin-paired
+  even set of W(3,113)); they do not open a new problem.
+- **Still new as far as the corpus search goes:**
+  - the q = 5 Petersen structure (12484);
+  - the twin-pair Moore bound (12485);
+  - the symmetric-search values (12486);
+  - the regulus families with their square/cube/icosahedron classification (12489).
+
+  12496 shows that the twin-pair bound is not a general bound.
+
+### Cross-track and literature context (2026-10-31, read before the 12496–12500 commit)
+
+- **Hyperovals.** Coverage-{0,2} even line sets of W(q) are, dually, **hyperovals of Q(4,q)**: point sets meeting every line in 0 or
+  2 points. This is established terminology and literature, including De Bruyn's classification work at q = 3 (other track,
+  `analysis/2026-10-31_five_front_continuation.md` §3, commit 64d1762dc). Transitive hyperovals of Q(4,q), q odd, of sizes (q+1)²,
+  q(q+1) and q² − 1 are reported in the literature; I have this second-hand from a search, not from the primary source. So the
+  **q² − 1 values (24 at q = 5, 168 at q = 13)** noted in 12486/12489 belong to a known family, not a new pattern.
+- **The cube family is classical.** Good matchings are exactly **exterior arcs of a conic** of size (q+1)/2 (other track,
+  `analysis/2026-10-31_conic_exterior_arc_bridge.md`, commit e3ef31b58).
+  - Blokhuis–Seress–Wilbrink (1992) exclude every q ≡ 1 (mod 4).
+  - Van de Voorde already discusses the q = 7, 11 examples and their rarity.
+  - The other track's complete searches extend the exclusions through primes ≤ 127.
+
+  12489's construction and counts stand. Its sporadicity statement is a finite verification of a known phenomenon, and the reading
+  through Galois' exceptional actions of PSL(2,p) is an interpretation [I], not a theorem.
+- **Lower bounds.** The other track's `w33_20261031_even_set_bounds.py` turns 12488's local count into a proved general lower bound,
+  adding a heavy-coverage branch: 10, 16, 24, 32, 42, 52 at q = 3, 5, 7, 9, 11, 13.

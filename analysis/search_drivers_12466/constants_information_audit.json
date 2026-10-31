@@ -1,0 +1,101 @@
+{
+ "rows": [
+  {
+   "name": "m_p/m_e",
+   "prediction": "1836",
+   "measured": 1836.15267343,
+   "sigma": 1.1e-07,
+   "tension_sigma": 1387940.27,
+   "delta": 8.31485487069461e-05,
+   "bits_claim": 12.55,
+   "baseline": 0.30855,
+   "bits_net": 1.7
+  },
+  {
+   "name": "1/alpha",
+   "prediction": "137",
+   "measured": 137.035999084,
+   "sigma": 2.1e-08,
+   "tension_sigma": 1714242.1,
+   "delta": 0.0002626980081192887,
+   "bits_claim": 10.89,
+   "baseline": 0.072195,
+   "bits_net": 3.79
+  },
+  {
+   "name": "M_Z [GeV]",
+   "prediction": "91",
+   "measured": 91.1876,
+   "sigma": 0.0021,
+   "tension_sigma": 89.33,
+   "delta": 0.002057297264101754,
+   "bits_claim": 7.93,
+   "baseline": 0.3794,
+   "bits_net": 1.4
+  },
+  {
+   "name": "m_H [GeV]",
+   "prediction": "125",
+   "measured": 125.2,
+   "sigma": 0.11,
+   "tension_sigma": 1.82,
+   "delta": 0.0015974440894569453,
+   "bits_claim": 8.29,
+   "baseline": 0.401855,
+   "bits_net": 1.32
+  },
+  {
+   "name": "sin^2 theta_W (MSbar, M_Z)",
+   "prediction": "3/13",
+   "measured": 0.23122,
+   "sigma": 4e-05,
+   "tension_sigma": 11.27,
+   "delta": 0.001949525260657503,
+   "bits_claim": 8.0,
+   "baseline": 0.0535,
+   "bits_net": 4.22
+  },
+  {
+   "name": "alpha_s(M_Z)",
+   "prediction": "9/76",
+   "measured": 0.118,
+   "sigma": 0.0009,
+   "tension_sigma": 0.47,
+   "delta": 0.003568242640499486,
+   "bits_claim": 7.13,
+   "baseline": 0.876555,
+   "bits_net": 0.19
+  }
+ ],
+ "total_net_bits": 12.62,
+ "consistent_within_3sigma": [
+  "m_H [GeV]",
+  "alpha_s(M_Z)"
+ ],
+ "random_alphabet_control": {
+  "q3": {
+   "matches": 1,
+   "bits": 0.7243942712659336,
+   "errors": {
+    "m_p/m_e": 0.014787808128873037,
+    "1/alpha": 0.0007797809292031666,
+    "m_H": 0.003932442931565583,
+    "sin2_thetaW": 0.0012105022229911278,
+    "M_Z": 0.0020572972631037745
+   }
+  },
+  "n_random": 2000,
+  "seed": 1,
+  "p_matches": 0.9965,
+  "p_bits": 0.733,
+  "match_histogram": {
+   "0": 7,
+   "1": 324,
+   "2": 935,
+   "3": 621,
+   "4": 112,
+   "5": 1
+  },
+  "mean_bits": 2.3643657415316497
+ }
+}

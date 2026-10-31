@@ -1,0 +1,19 @@
+{
+ "loose": {
+  "substrate_frac_cost_le2": 0.7,
+  "random_targets_frac_cost_le2": 0.5225,
+  "random_alphabets_mean": 0.513,
+  "p_random_alphabet_ge_q3": 0.154
+ },
+ "tight": {
+  "substrate_frac_cost_le2": 0.5,
+  "random_targets_frac_cost_le2": 0.3825,
+  "random_alphabets_mean": 0.3448,
+  "p_random_alphabet_ge_q3": 0.156
+ },
+ "tool_as_written": {
+  "substrate": 0.7,
+  "random": 0.3825
+ },
+ "n_alphabets": 500
+}

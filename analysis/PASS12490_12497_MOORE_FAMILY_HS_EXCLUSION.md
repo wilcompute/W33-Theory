@@ -83,3 +83,55 @@ being recognised. **Whether every 40-line optimum is a cube is still open.**
 
 Searched: two further web searches (W(q) reguli with octahedral/icosahedral matchings; Moore graphs realised in Q(4,q)/W(q)), plus
 the sources of 12482. No such construction was found. That is a negative search, not a novelty proof.
+
+## 12496: q = 9 goes below the twin-pair bound — the bound is not general
+
+The GF(9) symmetric search (`symmetric_even_sets_gf.py`, `symmetric_fast.py`) finds even line sets of **48 lines** at q = 9. They are
+optimal within their symmetry class for order-10 symmetry (k = 1, 4) and for order-8 symmetry (k = 1, 3): two unrelated symmetry
+types. The GF(9) MILP had stopped at 164 with lower bound 33.
+
+**48 < 52 = 2 + (q+1)²/2.** So the twin-pair Moore bound of 12485 is **not** a bound for all even line sets at odd q. That answers the
+open question of 12488 in the negative.
+
+**Structure:**
+
+- not twin-paired;
+- the line graph is bipartite and 10-regular with spectrum ±10, ±√10 (12 each), ±2 (5 each), 0 (12);
+- the 48 lines split into two 24-line partial spreads covering the same 240 points;
+- inside each half, the number of common neighbours in the other half takes only the values 0 (a perfect matching), 5 (a 2-regular
+  graph) and 4;
+- the PSp(4,9)-orbit exceeds 400,000 sets (BFS, capped), so the stabiliser has order at most about 1,500.
+
+**Two hypotheses tested and refuted, each with a control:**
+
+1. *A symmetric difference of two spreads (two ovoids of Q(4,9)).* Only 12 lines avoid the covered points, far fewer than the 58
+   needed to complete either half to a spread (`spread_switch.py`: INFEASIBLE).
+2. *Two parallel classes of the Hermitian lines missing a Baer W(3,3).* This would give 2√q(q − 1) = 48 lines. No Hermitian form
+   vanishes on the 240 covered points (nullity 0, `hermitian_test.py`). The same solver finds the form on 240 points of a true
+   Hermitian surface (nullity 1, `hermitian_control.py`).
+
+**What the 48-set is remains open [C].**
+
+## 12497: the fast builder, and q = 11 and q = 25
+
+`symmetric_fast.py` enumerates the totally isotropic 2-spaces in reduced echelon form over any GF(q). Its line sets are identical to
+the pairwise builder at q = 3, 5, 9. It builds W(3,25) (16,276 lines) in about 5 s, and it reproduces 48 at q = 9 in 64 s.
+
+- **q = 11:** order-10 and order-5 symmetries, not tried before, give **84 again**, optimal within the order-10, k = 4 class. 84 now
+  appears under five symmetry types (orders 3, 5, 6, 10, 12). It is the best known value, not a proved minimum.
+- **q = 25** (order 26, k = 1): the one-hour run reached only 624 (bound 78). That is **inconclusive**: it neither supports nor
+  refutes a different law at square q.
+
+## Cross-track results and one correction (2026-10-31)
+
+- **q = 113 is closed by the other track.** Commit 64d1762dc, `analysis/2026-10-31_five_front_continuation.md` §1: its conic backend
+  completes the square-good search at q = 113 (15,319 states, no matching), with an independent backend agreeing on the full
+  compatibility graph. With 12492 this gives the statement of record: **among twin-paired coverage-{0,2} even line sets of W(3,q),
+  q odd, the Moore bound is attained only at q = 5.** My own q = 113 backtracking (`chord_search.py`) timed out after 4 h, and a
+  timeout is not an exclusion.
+- **Correction to 12484.** The order of the Petersen set's stabiliser (960) is correct, but "960 = 8 × |Aut(Petersen)|" wrongly
+  suggests all of S₅ acts. The other track computed the full stabiliser (`w33_20261031_petersen_stabilizer.py`): its image on the 10
+  pairs is **A₅**, element orders 1¹ 2¹⁵ 3²⁰ 5²⁴, with kernel 2⁴ on the cut module, so 960 = 60 × 16.
+- **The 48-line set at q = 9 (12496) is a 48-point hyperoval of Q(4,9).** It lies below the twin-pair bound 52, and its size is not
+  among the transitive families (q+1)² = 100, q(q+1) = 90, q² − 1 = 80. One literature search (hyperovals of Q(4,q), the Bayens
+  thesis) did not find it. That is a negative search, not a novelty claim.

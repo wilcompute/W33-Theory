@@ -1,0 +1,75 @@
+{
+ "2": {
+  "q": 2,
+  "qubits": 2,
+  "contexts": 6,
+  "observables": 9,
+  "occurrences": [
+   2
+  ],
+  "context_signs": [
+   1,
+   1,
+   1,
+   -1,
+   1,
+   1
+  ],
+  "product": -1,
+  "parity_proof": true
+ },
+ "4": {
+  "q": 4,
+  "qubits": 4,
+  "contexts": 10,
+  "observables": 75,
+  "occurrences": [
+   2
+  ],
+  "context_signs": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "product": 1,
+  "parity_proof": false
+ },
+ "8": {
+  "q": 8,
+  "qubits": 6,
+  "contexts": 18,
+  "observables": 567,
+  "occurrences": [
+   2
+  ],
+  "context_signs": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "product": 1,
+  "parity_proof": false
+ }
+}

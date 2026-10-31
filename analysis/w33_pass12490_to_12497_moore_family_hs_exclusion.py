@@ -63,6 +63,22 @@ def main():
         res["12495_sampled"] = dict(n=len(sampled), cubes=sum(1 for x in sampled if x["cube"]), known=cr["known"])
         checks["12495: every sampled 40-line optimum at q = 7 is a cube"] = bool(sampled) and all(x["cube"] for x in sampled) and all(
             x["cube"] for x in cr["known"])
+    # 12496: q = 9 below the twin-pair bound, and two refuted hypotheses (with controls)
+    s9 = [r for f in ("symmetric_fast_q9_r10.json", "symmetric_gf_q9_r10.json", "symmetric_gf_q9_r8.json") for r in (load(f) or [])]
+    opt48 = [(r["r"], r["k"]) for r in s9 if r.get("weight") == 48 and r["status"] == "OPTIMAL" and r.get("verified_even")]
+    res["12496_q9_48"] = sorted(set(opt48))
+    checks["12496: q = 9 has verified even sets of 48 < 52 = 2 + (q+1)^2/2 (optimal in order-10 AND order-8 symmetry classes)"] = (
+        any(r == 10 for r, _ in opt48) and any(r == 8 for r, _ in opt48) and 48 < 2 + 10 ** 2 // 2)
+    sw, ht, hc = load("spread_switch_q9_k1.json"), load("hermitian_test_k1.json"), load("hermitian_control.json")
+    res["12496_refuted"] = dict(spread_switch=sw and sw["status"], hermitian_nullity=ht and ht["nullity"],
+                                hermitian_control_nullity=hc and hc["nullity"])
+    checks["12496: the 48-set is neither a spread switch (INFEASIBLE) nor Hermitian (nullity 0; control on a true surface: 1)"] = (
+        bool(sw and ht and hc) and sw["status"] == "INFEASIBLE" and ht["nullity"] == 0 and hc["nullity"] == 1)
+    s11 = [r for f in ("symmetric_fast_q11_r10.json", "symmetric_fast_q11_r5.json") for r in (load(f) or [])]
+    res["12497_q11_new_symmetries"] = [(r["r"], r["k"], r.get("weight"), r["status"]) for r in s11]
+    checks["12497: q = 11 with order-10 / order-5 symmetry gives 84 again (optimal in the order-10, k = 4 class), nothing lower"] = bool(s11) and (
+        min(r["weight"] for r in s11 if r.get("verified_even")) == 84
+        and any(r["r"] == 10 and r["k"] == 4 and r["status"] == "OPTIMAL" and r["weight"] == 84 for r in s11))
     for name, key in (("chord_search_square_113.json", "12496_q113_moore"), ("chord_search_cube_67_101.json", "12496_cube_67_101")):
         r = load(name)
         if r:

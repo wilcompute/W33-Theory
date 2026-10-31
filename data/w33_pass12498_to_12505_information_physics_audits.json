@@ -1,0 +1,282 @@
+{
+  "12498": {
+    "alphabet_null": {
+      "q3": {
+        "matches": 1,
+        "bits": 0.7243942712659336,
+        "errors": {
+          "m_p/m_e": 0.014787808128873037,
+          "1/alpha": 0.0007797809292031666,
+          "m_H": 0.003932442931565583,
+          "sin2_thetaW": 0.0012105022229911278,
+          "M_Z": 0.0020572972631037745
+        }
+      },
+      "n_random": 2000,
+      "seed": 1,
+      "p_matches": 0.9965,
+      "p_bits": 0.733,
+      "match_histogram": {
+        "0": 7,
+        "1": 324,
+        "2": 935,
+        "3": 621,
+        "4": 112,
+        "5": 1
+      },
+      "mean_bits": 2.3643657415316497
+    },
+    "audit": {
+      "rows": [
+        {
+          "name": "m_p/m_e",
+          "prediction": "1836",
+          "measured": 1836.15267343,
+          "sigma": 1.1e-07,
+          "tension_sigma": 1387940.27,
+          "delta": 8.31485487069461e-05,
+          "bits_claim": 12.55,
+          "baseline": 0.30855,
+          "bits_net": 1.7
+        },
+        {
+          "name": "1/alpha",
+          "prediction": "137",
+          "measured": 137.035999084,
+          "sigma": 2.1e-08,
+          "tension_sigma": 1714242.1,
+          "delta": 0.0002626980081192887,
+          "bits_claim": 10.89,
+          "baseline": 0.072195,
+          "bits_net": 3.79
+        },
+        {
+          "name": "M_Z [GeV]",
+          "prediction": "91",
+          "measured": 91.1876,
+          "sigma": 0.0021,
+          "tension_sigma": 89.33,
+          "delta": 0.002057297264101754,
+          "bits_claim": 7.93,
+          "baseline": 0.3794,
+          "bits_net": 1.4
+        },
+        {
+          "name": "m_H [GeV]",
+          "prediction": "125",
+          "measured": 125.2,
+          "sigma": 0.11,
+          "tension_sigma": 1.82,
+          "delta": 0.0015974440894569453,
+          "bits_claim": 8.29,
+          "baseline": 0.401855,
+          "bits_net": 1.32
+        },
+        {
+          "name": "sin^2 theta_W (MSbar, M_Z)",
+          "prediction": "3/13",
+          "measured": 0.23122,
+          "sigma": 4e-05,
+          "tension_sigma": 11.27,
+          "delta": 0.001949525260657503,
+          "bits_claim": 8.0,
+          "baseline": 0.0535,
+          "bits_net": 4.22
+        },
+        {
+          "name": "alpha_s(M_Z)",
+          "prediction": "9/76",
+          "measured": 0.118,
+          "sigma": 0.0009,
+          "tension_sigma": 0.47,
+          "delta": 0.003568242640499486,
+          "bits_claim": 7.13,
+          "baseline": 0.876555,
+          "bits_net": 0.19
+        }
+      ],
+      "total_net_bits": 12.62,
+      "consistent_within_3sigma": [
+        "m_H [GeV]",
+        "alpha_s(M_Z)"
+      ],
+      "random_alphabet_control": {
+        "q3": {
+          "matches": 1,
+          "bits": 0.7243942712659336,
+          "errors": {
+            "m_p/m_e": 0.014787808128873037,
+            "1/alpha": 0.0007797809292031666,
+            "m_H": 0.003932442931565583,
+            "sin2_thetaW": 0.0012105022229911278,
+            "M_Z": 0.0020572972631037745
+          }
+        },
+        "n_random": 2000,
+        "seed": 1,
+        "p_matches": 0.9965,
+        "p_bits": 0.733,
+        "match_histogram": {
+          "0": 7,
+          "1": 324,
+          "2": 935,
+          "3": 621,
+          "4": 112,
+          "5": 1
+        },
+        "mean_bits": 2.3643657415316497
+      }
+    },
+    "mdl_fair": {
+      "loose": {
+        "substrate_frac_cost_le2": 0.7,
+        "random_targets_frac_cost_le2": 0.5225,
+        "random_alphabets_mean": 0.513,
+        "p_random_alphabet_ge_q3": 0.154
+      },
+      "tight": {
+        "substrate_frac_cost_le2": 0.5,
+        "random_targets_frac_cost_le2": 0.3825,
+        "random_alphabets_mean": 0.3448,
+        "p_random_alphabet_ge_q3": 0.156
+      },
+      "tool_as_written": {
+        "substrate": 0.7,
+        "random": 0.3825
+      },
+      "n_alphabets": 500
+    }
+  },
+  "12499": {
+    "2": {
+      "q": 2,
+      "qubits": 2,
+      "contexts": 6,
+      "observables": 9,
+      "occurrences": [
+        2
+      ],
+      "context_signs": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "product": -1,
+      "parity_proof": true
+    },
+    "4": {
+      "q": 4,
+      "qubits": 4,
+      "contexts": 10,
+      "observables": 75,
+      "occurrences": [
+        2
+      ],
+      "context_signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "product": 1,
+      "parity_proof": false
+    },
+    "8": {
+      "q": 8,
+      "qubits": 6,
+      "contexts": 18,
+      "observables": 567,
+      "occurrences": [
+        2
+      ],
+      "context_signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "product": 1,
+      "parity_proof": false
+    }
+  },
+  "12499_rank_signs": {
+    "2": {
+      "1": 90,
+      "-1": 42
+    },
+    "3": {
+      "1": 56,
+      "-1": 36
+    },
+    "4": {
+      "1": 52
+    },
+    "5": {
+      "1": 12
+    }
+  },
+  "12500": {
+    "route_dim": 15,
+    "address_dim": 15,
+    "route_low": {
+      "0": 1,
+      "10": 216,
+      "12": 270,
+      "14": 1080,
+      "16": 3375,
+      "18": 7920,
+      "20": 7044
+    },
+    "address_low": {
+      "0": 1,
+      "8": 45,
+      "12": 720,
+      "16": 6930
+    },
+    "control_route_matches_pass173": true,
+    "control_address_min_weight_8": true,
+    "specific_heat_peak_K": {
+      "model_A_route": 0.595,
+      "model_B_address": 0.598
+    },
+    "site_claim_beta_c": 1.005052538742381,
+    "self_dual": false,
+    "peak_heights": {
+      "A": 0.8171610206854085,
+      "B": 0.7978231592953476
+    }
+  },
+  "checks": {
+    "12498a: q = 3 alphabet hits 1 of 5 windows under its own grammar; >= 99% of 2,000 random alphabets do at least as well": true,
+    "12498b: only m_H and alpha_s are within 3 sigma; 1/alpha and m_p/m_e miss by > 1e6 sigma; 12.6 of 54.8 bits survive": true,
+    "12498c: with one tolerance rule, ~15% of random alphabets match the substrate's cost-<=2 fraction (no significant signal)": true,
+    "12499: field-reduced grids -- q = 2 is the Mermin-Peres parity proof (-1); q = 4 and 8 give +1 (no parity proof)": true,
+    "12499: commuting Hermitian Pauli groups -- ranks 2, 3 multiply to -I sometimes; ranks 4, 5 always to +I (random samples)": true,
+    "12500: route enumerator recomputed = Pass 173; address minimum 8 (45 words); not self-dual": true,
+    "12500: specific-heat maxima at K ~ 0.60 for both models, far from the site's beta_c = log(1+sqrt 3) = 1.005": true
+  },
+  "all_checks_pass": true
+}

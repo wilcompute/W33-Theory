@@ -1,0 +1,31 @@
+{
+ "route_dim": 15,
+ "address_dim": 15,
+ "route_low": {
+  "0": 1,
+  "10": 216,
+  "12": 270,
+  "14": 1080,
+  "16": 3375,
+  "18": 7920,
+  "20": 7044
+ },
+ "address_low": {
+  "0": 1,
+  "8": 45,
+  "12": 720,
+  "16": 6930
+ },
+ "control_route_matches_pass173": true,
+ "control_address_min_weight_8": true,
+ "specific_heat_peak_K": {
+  "model_A_route": 0.595,
+  "model_B_address": 0.598
+ },
+ "site_claim_beta_c": 1.005052538742381,
+ "self_dual": false,
+ "peak_heights": {
+  "A": 0.8171610206854085,
+  "B": 0.7978231592953476
+ }
+}

@@ -1,0 +1,14 @@
+{"q": 9, "r": 10, "k": 0, "line_orbits": 92, "status": "OPTIMAL", "seconds": 127.1, "weight": 100, "verified_even": true, "coverage_profile": [0, 2], "bound": 100.0}
+{"q": 9, "r": 10, "k": 1, "line_orbits": 172, "status": "OPTIMAL", "seconds": 233.5, "weight": 48, "verified_even": true, "coverage_profile": [0, 2], "bound": 48.0}
+{"q": 9, "r": 10, "k": 2, "line_orbits": 92, "status": "OPTIMAL", "seconds": 4.2, "weight": 60, "verified_even": true, "coverage_profile": [0, 2], "bound": 60.0}
+{"q": 9, "r": 10, "k": 3, "line_orbits": 164, "status": "OPTIMAL", "seconds": 678.6, "weight": 60, "verified_even": true, "coverage_profile": [0, 2], "bound": 60.0}
+{"q": 9, "r": 10, "k": 4, "line_orbits": 96, "status": "OPTIMAL", "seconds": 1.0, "weight": 48, "verified_even": true, "coverage_profile": [0, 2], "bound": 48.0}
+{"q": 9, "r": 10, "k": 5, "line_orbits": 164, "status": "FEASIBLE", "seconds": 900.3, "weight": 100, "verified_even": true, "coverage_profile": [0, 2], "bound": 55.0}
+{"q": 9, "r": 5, "k": 0, "line_orbits": 164, "status": "FEASIBLE", "seconds": 23081.4, "weight": 100, "verified_even": true, "coverage_profile": [0, 2], "bound": 25.0}
+{"q": 9, "r": 5, "k": 1, "line_orbits": 172, "status": "OPTIMAL", "seconds": 65.0, "weight": 48, "verified_even": true, "coverage_profile": [0, 2], "bound": 48.0}
+{"q": 9, "r": 5, "k": 2, "line_orbits": 164, "status": "OPTIMAL", "seconds": 126.2, "weight": 60, "verified_even": true, "coverage_profile": [0, 2], "bound": 60.0}
+{"q": 9, "r": 8, "k": 0, "line_orbits": 130, "status": "OPTIMAL", "seconds": 272.0, "weight": 80, "verified_even": true, "coverage_profile": [0, 2, 4], "bound": 80.0}
+{"q": 9, "r": 8, "k": 1, "line_orbits": 214, "status": "OPTIMAL", "seconds": 41.4, "weight": 48, "verified_even": true, "coverage_profile": [0, 2], "bound": 48.0}
+{"q": 9, "r": 8, "k": 2, "line_orbits": 122, "status": "OPTIMAL", "seconds": 14.0, "weight": 68, "verified_even": true, "coverage_profile": [0, 2, 4], "bound": 68.0}
+{"q": 9, "r": 8, "k": 3, "line_orbits": 210, "status": "OPTIMAL", "seconds": 18.1, "weight": 48, "verified_even": true, "coverage_profile": [0, 2], "bound": 48.0}
+{"q": 9, "r": 8, "k": 4, "line_orbits": 130, "status": "FEASIBLE", "seconds": 900.1, "weight": 80, "verified_even": true, "coverage_profile": [0, 2, 4], "bound": 76.0}

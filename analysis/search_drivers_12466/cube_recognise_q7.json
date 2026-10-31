@@ -1,0 +1,81 @@
+{
+ "known": [
+  {
+   "source": "symmetric_q7_r8.json k=1",
+   "cube": true,
+   "twin_pairs": 4,
+   "regulus": true,
+   "union_matches": true
+  },
+  {
+   "source": "symmetric_q7_r8.json k=3",
+   "cube": true,
+   "twin_pairs": 4,
+   "regulus": true,
+   "union_matches": true
+  },
+  {
+   "source": "symmetric_q7_r4.json k=0",
+   "cube": true,
+   "twin_pairs": 4,
+   "regulus": true,
+   "union_matches": true
+  },
+  {
+   "source": "symmetric_q7_r4.json k=1",
+   "cube": true,
+   "twin_pairs": 4,
+   "regulus": true,
+   "union_matches": true
+  },
+  {
+   "source": "symmetric_q7_r4.json k=2",
+   "cube": true,
+   "twin_pairs": 4,
+   "regulus": true,
+   "union_matches": true
+  }
+ ],
+ "sampled": [
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "cube": true,
+   "twin_pairs": 4,
+   "regulus": true,
+   "union_matches": true,
+   "status": "OPTIMAL"
+  },
+  {
+   "status": "UNKNOWN"
+  },
+  {
+   "status": "UNKNOWN"
+  }
+ ]
+}

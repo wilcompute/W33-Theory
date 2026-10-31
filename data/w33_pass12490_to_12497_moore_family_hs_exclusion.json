@@ -61,12 +61,139 @@
     "size": 40,
     "milp_status": "Time limit reached. (HiGHS Status 13: Time limit reached)"
   },
+  "12495_sampled": {
+    "n": 1,
+    "cubes": 1,
+    "known": [
+      {
+        "source": "symmetric_q7_r8.json k=1",
+        "cube": true,
+        "twin_pairs": 4,
+        "regulus": true,
+        "union_matches": true
+      },
+      {
+        "source": "symmetric_q7_r8.json k=3",
+        "cube": true,
+        "twin_pairs": 4,
+        "regulus": true,
+        "union_matches": true
+      },
+      {
+        "source": "symmetric_q7_r4.json k=0",
+        "cube": true,
+        "twin_pairs": 4,
+        "regulus": true,
+        "union_matches": true
+      },
+      {
+        "source": "symmetric_q7_r4.json k=1",
+        "cube": true,
+        "twin_pairs": 4,
+        "regulus": true,
+        "union_matches": true
+      },
+      {
+        "source": "symmetric_q7_r4.json k=2",
+        "cube": true,
+        "twin_pairs": 4,
+        "regulus": true,
+        "union_matches": true
+      }
+    ]
+  },
+  "12496_q9_48": [
+    [
+      8,
+      1
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      10,
+      4
+    ]
+  ],
+  "12496_refuted": {
+    "spread_switch": "INFEASIBLE",
+    "hermitian_nullity": 0,
+    "hermitian_control_nullity": 1
+  },
+  "12497_q11_new_symmetries": [
+    [
+      10,
+      0,
+      122,
+      "FEASIBLE"
+    ],
+    [
+      10,
+      1,
+      84,
+      "FEASIBLE"
+    ],
+    [
+      10,
+      2,
+      120,
+      "FEASIBLE"
+    ],
+    [
+      10,
+      3,
+      100,
+      "FEASIBLE"
+    ],
+    [
+      10,
+      4,
+      84,
+      "OPTIMAL"
+    ],
+    [
+      10,
+      5,
+      100,
+      "FEASIBLE"
+    ],
+    [
+      5,
+      0,
+      100,
+      "FEASIBLE"
+    ],
+    [
+      5,
+      1,
+      84,
+      "FEASIBLE"
+    ],
+    [
+      5,
+      2,
+      100,
+      "FEASIBLE"
+    ]
+  ],
+  "12496_q113_moore": {
+    "113": "timeout"
+  },
   "checks": {
     "12490: Moore family -- q = 5: 5 of 15 matchings give the 20-line Petersen minimum; q = 3, 7: none": true,
     "12491: q = 13 geometry -- 0 even sets among all 135,135 matchings of each of 20 reguli (the 100-line target)": true,
     "12493: square-good matchings exist only at q = 5 (primes <= 41 and q = 9, 25, 27, 49) -- no Moore set at q = 13": true,
     "12494: the generic GF(q) search reproduces the prime results (cube 3, 7, 11; Moore 5) and finds neither family at 9, 25, 27, 49": true,
-    "12495: the 40-line q = 7 optimum found by the MILP with no symmetry imposed is a cube": true
+    "12495: the 40-line q = 7 optimum found by the MILP with no symmetry imposed is a cube": true,
+    "12495: every sampled 40-line optimum at q = 7 is a cube": true,
+    "12496: q = 9 has verified even sets of 48 < 52 = 2 + (q+1)^2/2 (optimal in order-10 AND order-8 symmetry classes)": true,
+    "12496: the 48-set is neither a spread switch (INFEASIBLE) nor Hermitian (nullity 0; control on a true surface: 1)": true,
+    "12497: q = 11 with order-10 / order-5 symmetry gives 84 again (optimal in the order-10, k = 4 class), nothing lower": true
   },
   "all_checks_pass": true
 }
