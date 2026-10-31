@@ -93,6 +93,30 @@ def build():
     covector_dim=fixed_covectors.shape[1]
     pairing=(fixed_covectors.T@fixed_vectors)%5
     trivial_summand_splits=(fixed_dim==covector_dim==1 and bool(pairing[0,0]))
+    assert trivial_summand_splits
+    even3=ker(np.vstack([(central_action-I)%5,fixed_covectors.T]))
+    odd3=ker((central_action+I)%5)
+    assert even3.shape==odd3.shape==(7,3)
+    assert rk(np.column_stack([fixed_vectors,even3,odd3]))==7
+    derived_generators=[tuple(int(x)for x in p.array_form)for p in pg.derived_subgroup().generators]
+    def restrict(S):
+        matrices=[]
+        for p in derived_generators:
+            A=states[p]
+            M=np.column_stack([finite_solve(S,A@S[:,j]%5)for j in range(3)])%5
+            assert np.array_equal(S@M%5,A@S%5)
+            matrices.append(M)
+        assert rk(np.vstack([M-np.eye(3,dtype=np.int64)for M in matrices]))==3
+        assert rk(np.vstack([M.T-np.eye(3,dtype=np.int64)for M in matrices]))==3
+        # A5 is perfect, so all its 1D representations are trivial. Lack
+        # of fixed vectors and fixed dual covectors excludes dimensions 1 and 2.
+        return matrices
+    even3acts=restrict(even3)
+    odd3acts=restrict(odd3)
+    hom_equations=[]
+    for A,B0 in zip(even3acts,odd3acts):
+        hom_equations.append(np.kron(np.eye(3,dtype=np.int64),A)-np.kron(B0.T,np.eye(3,dtype=np.int64)))
+    hom_dimension=9-rk(np.vstack(hom_equations))
     comm=[]
     for k in (2,3,5):
         A=acts[k]
@@ -117,6 +141,10 @@ def build():
       "GF5_invariant_covector_dimension":covector_dim,
       "GF5_trivial_vector_covector_pairing":pairing.tolist(),
       "GF5_trivial_one_dim_summand_splits":trivial_summand_splits,
+      "even3_irreducible_over_GF5":True,
+      "odd3_irreducible_over_GF5":True,
+      "even3_odd3_derived_A5_hom_dimension":hom_dimension,
+      "actual_three_block_decomposition":"1_even + 3_even + 3_odd as irreducible GF5 modules; central C2 parity distinguishes the two three-dimensional sectors",
       "GF5_commutant_dimension":centralizer_dim,
       "GF5_generator_actions":{str(k):acts[k].tolist()for k in (2,3,5)},
       "order5_nilpotent_ranks":ranks,

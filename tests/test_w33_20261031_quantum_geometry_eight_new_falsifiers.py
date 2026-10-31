@@ -35,6 +35,9 @@ def test_faithful_seven_dim_Gf5_module(packet):
     assert d["central_even_module_dimension"]==4
     assert d["central_odd_module_dimension"]==3
     assert d["order5_nilpotent_ranks"]==[7,4,2,0,0,0]
+    assert d["GF5_trivial_one_dim_summand_splits"]
+    assert d["even3_irreducible_over_GF5"] and d["odd3_irreducible_over_GF5"]
+    assert d["even3_odd3_derived_A5_hom_dimension"]==1
 
 def test_reconstructed_mod5_group_relations(packet):
     acts={int(k):np.array(v,dtype=np.int64)for k,v in packet["group"]["GF5_generator_actions"].items()}
