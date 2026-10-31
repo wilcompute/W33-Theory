@@ -1,0 +1,956 @@
+{
+  "reference_head": "15b3e3288fed8ba560a3c37ededafb3e4ad86749",
+  "results": {
+    "01_exact_optical_projector_phase_control": {
+      "Gaussian_independent_rail_phase_law": "E[||P exp(i theta) psi||^2]=exp(-sigma^2)+(1-exp(-sigma^2))*81/160 for any unit norm code state",
+      "boundary": "A degree4 polynomial in sparse incidence B is not itself a deterministic passive-optical physical projector; LCU/postselection or other hardware is required.",
+      "exact_polynomial": "P=((8I-B)(4I-B)((4I-B)^2-6I))/320, B=D.T D",
+      "integer_idempotence_verified": true,
+      "phase_samples": [
+        {
+          "MC_code_survival": 1.0,
+          "MC_standard_error": 0.0,
+          "exact_ensemble_code_survival": 1.0,
+          "sigma_radians": 0.0
+        },
+        {
+          "MC_code_survival": 0.988993187113779,
+          "MC_standard_error": 7.181719899254051e-05,
+          "exact_ensemble_code_survival": 0.9890146733642098,
+          "sigma_radians": 0.15
+        },
+        {
+          "MC_code_survival": 0.943478080901797,
+          "MC_standard_error": 0.00035093839360782723,
+          "exact_ensemble_code_survival": 0.943073540565845,
+          "sigma_radians": 0.35
+        },
+        {
+          "MC_code_survival": 0.8091122721337091,
+          "MC_standard_error": 0.0009738658715790363,
+          "exact_ensemble_code_survival": 0.8087342821285555,
+          "sigma_radians": 0.7
+        },
+        {
+          "MC_code_survival": 0.5568193015345732,
+          "MC_standard_error": 0.0013149960141579278,
+          "exact_ensemble_code_survival": 0.5582908671274205,
+          "sigma_radians": 1.5
+        }
+      ],
+      "physical_incidence_modes": 160,
+      "rank": 81,
+      "status": "PASS_INTEGER_4HOP_W33_CODE_PROJECTOR_AND_PHASE_NOISE_LAW",
+      "uniform_diagonal": "81/160"
+    },
+    "02_160_mode_adjacent_Givens_encoder": {
+      "boundary": "Deterministic mathematical real orthogonal network, not fabricated/calibrated; no loss/dephasing model in this ideal compilation. Dense mesh, not an optimal sparse encoder.",
+      "gate_list_sha256": "f7b05b84d239349e4df1c49f70555baadda53b4dc91b820031defb6435735add",
+      "last_diagonal_signs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "logical_input_ports": 81,
+      "physical_output_ports": 160,
+      "real_adjacent_two_mode_interferometers": 8416,
+      "reconstruction_Frobenius_error": 1.1221362774768361e-13,
+      "sample_gates": [
+        {
+          "cos": -0.6778505295564042,
+          "modes": [
+            158,
+            159
+          ],
+          "sin": 0.735199741281308
+        },
+        {
+          "cos": -0.25261921435574597,
+          "modes": [
+            157,
+            158
+          ],
+          "sin": 0.9675657768535871
+        },
+        {
+          "cos": 0.1934079533460953,
+          "modes": [
+            156,
+            157
+          ],
+          "sin": 0.9811184248511872
+        },
+        {
+          "cos": -0.39252658324752193,
+          "modes": [
+            155,
+            156
+          ],
+          "sin": 0.9197406598840926
+        },
+        {
+          "cos": 0.43931122221027336,
+          "modes": [
+            154,
+            155
+          ],
+          "sin": 0.8983349319936945
+        },
+        {
+          "cos": 0.044233452417701574,
+          "modes": [
+            153,
+            154
+          ],
+          "sin": 0.9990212218402624
+        }
+      ],
+      "status": "PASS_160_PORT_ADJACENT_GIVENS_Q_ENCODER_COMPILED",
+      "worstcase_rectangular_elimination_bound": 9639
+    },
+    "03_QND_asymmetric_readout_and_loss": {
+      "boundary": "Controlled-R is imported non-Clifford-capable interaction; detector and loss values are hypothetical, no hardware feasibility claim.",
+      "model": "S vs E parity of supplied qutrit input |1>, symmetric ideal probability half each, asymmetric classical outcome errors, independent photon transmission",
+      "negative_Wigner_iff": "false_negative + false_positive != 1; the opposite-parity E state is also Wigner-negative, even when Strange fidelity is poor",
+      "rows": [
+        {
+          "Wigner_min": -0.33333333333333326,
+          "Wigner_negative": true,
+          "conditional_purity": 0.9999999999999996,
+          "delivered_herald_per_attempt": 0.5,
+          "delivered_true_strange_per_attempt": 0.5,
+          "false_herald_from_input_0": 0,
+          "false_negative_probability": 0,
+          "false_positive_probability": 0,
+          "mana": 0.5108256237659905,
+          "output_transmission": 1,
+          "posterior_strange_fidelity": 0.9999999999999996,
+          "reported_herald_probability": 0.5
+        },
+        {
+          "Wigner_min": -0.3266666666666666,
+          "Wigner_negative": true,
+          "conditional_purity": 0.9801999999999995,
+          "delivered_herald_per_attempt": 0.475,
+          "delivered_true_strange_per_attempt": 0.47025,
+          "false_herald_from_input_0": 0.01,
+          "false_negative_probability": 0.01,
+          "false_positive_probability": 0.01,
+          "mana": 0.5027934520687262,
+          "output_transmission": 0.95,
+          "posterior_strange_fidelity": 0.9899999999999995,
+          "reported_herald_probability": 0.5
+        },
+        {
+          "Wigner_min": -0.2698412698412697,
+          "Wigner_negative": true,
+          "conditional_purity": 0.8276643990929701,
+          "delivered_herald_per_attempt": 0.42000000000000004,
+          "delivered_true_strange_per_attempt": 0.38,
+          "false_herald_from_input_0": 0.1,
+          "false_negative_probability": 0.05,
+          "false_positive_probability": 0.1,
+          "mana": 0.43157625211184975,
+          "output_transmission": 0.8,
+          "posterior_strange_fidelity": 0.9047619047619043,
+          "reported_herald_probability": 0.525
+        },
+        {
+          "Wigner_min": -0.20634920634920628,
+          "Wigner_negative": true,
+          "conditional_purity": 0.6916099773242627,
+          "delivered_herald_per_attempt": 0.315,
+          "delivered_true_strange_per_attempt": 0.255,
+          "false_herald_from_input_0": 0.2,
+          "false_negative_probability": 0.15,
+          "false_positive_probability": 0.2,
+          "mana": 0.3455016433406069,
+          "output_transmission": 0.6,
+          "posterior_strange_fidelity": 0.8095238095238091,
+          "reported_herald_probability": 0.525
+        },
+        {
+          "Wigner_min": -0.025641025641025644,
+          "Wigner_negative": true,
+          "conditional_purity": 0.5029585798816568,
+          "delivered_herald_per_attempt": 0.5199999999999999,
+          "delivered_true_strange_per_attempt": 0.27999999999999997,
+          "false_herald_from_input_0": 0.6,
+          "false_negative_probability": 0.3,
+          "false_positive_probability": 0.6,
+          "mana": 0.050010420574661416,
+          "output_transmission": 0.8,
+          "posterior_strange_fidelity": 0.5384615384615383,
+          "reported_herald_probability": 0.6499999999999999
+        },
+        {
+          "Wigner_min": -0.005050505050505044,
+          "Wigner_negative": true,
+          "conditional_purity": 0.5004591368227729,
+          "delivered_herald_per_attempt": 0.49499999999999994,
+          "delivered_true_strange_per_attempt": 0.24,
+          "false_herald_from_input_0": 0.85,
+          "false_negative_probability": 0.2,
+          "false_positive_probability": 0.85,
+          "mana": 0.020000666706669216,
+          "output_transmission": 0.6,
+          "posterior_strange_fidelity": 0.4848484848484846,
+          "reported_herald_probability": 0.825
+        }
+      ],
+      "status": "PASS_ASYMMETRIC_ANCILLA_QND_AND_TRANSMISSION_RESOURCE_BUDGET"
+    },
+    "04_quantum_7clock_truncation_finite_scaling": {
+      "boundary": "N<=5 finite lattices and restricted 7-state local space; no 120-local-site thermodynamic quantum phase proven.",
+      "coupling_epsilon": -0.6666666666666666,
+      "periodic_chain_results": [
+        {
+          "Hilbert_dimension": 49,
+          "N": 2,
+          "energy_per_site": -0.7718601351354508,
+          "finite_gap": 0.09038693693756783,
+          "ground_energy": -1.5437202702709016,
+          "h": 0.12
+        },
+        {
+          "Hilbert_dimension": 49,
+          "N": 2,
+          "energy_per_site": -1.1243127508334174,
+          "finite_gap": 0.41529216833350113,
+          "ground_energy": -2.248625501666835,
+          "h": 0.5
+        },
+        {
+          "Hilbert_dimension": 343,
+          "N": 3,
+          "energy_per_site": -0.7599862509654556,
+          "finite_gap": 0.08172884989701057,
+          "ground_energy": -2.2799587528963667,
+          "h": 0.12
+        },
+        {
+          "Hilbert_dimension": 343,
+          "N": 3,
+          "energy_per_site": -1.1060399773234777,
+          "finite_gap": 0.42403216159656587,
+          "ground_energy": -3.318119931970433,
+          "h": 0.5
+        },
+        {
+          "Hilbert_dimension": 2401,
+          "N": 4,
+          "energy_per_site": -0.7622299729028453,
+          "finite_gap": 0.06881652826436158,
+          "ground_energy": -3.0489198916113813,
+          "h": 0.12
+        },
+        {
+          "Hilbert_dimension": 2401,
+          "N": 4,
+          "energy_per_site": -1.108088022949473,
+          "finite_gap": 0.37770238817849755,
+          "ground_energy": -4.432352091797892,
+          "h": 0.5
+        },
+        {
+          "Hilbert_dimension": 16807,
+          "N": 5,
+          "energy_per_site": -0.7617605136374941,
+          "finite_gap": 0.0757994175339638,
+          "ground_energy": -3.8088025681874704,
+          "h": 0.12
+        },
+        {
+          "Hilbert_dimension": 16807,
+          "N": 5,
+          "energy_per_site": -1.1078192366256296,
+          "finite_gap": 0.39838723160304834,
+          "ground_energy": -5.539096183128148,
+          "h": 0.5
+        }
+      ],
+      "status": "PASS_TRUNCATED_7_TICK_QUANTUM_CHAIN_LENGTH_SCALING",
+      "subspace": "7 selected pairwise noncommuting W33 directions, one outcome per direction; NOT all 120 on each site"
+    },
+    "05_three_qutrit_erasure_edge_code": {
+      "boundary": "Three physical qutrits with entangling preparation, erasure location known, ideal decoding. NOT a one-photon 160-rail code, and not independent unknown Pauli error correction.",
+      "erased_site_exact_recovery": [
+        {
+          "decode_state_error": 2.1722866501229847e-16,
+          "erased_site": 0
+        },
+        {
+          "decode_state_error": 2.1722866501229847e-16,
+          "erased_site": 1
+        },
+        {
+          "decode_state_error": 2.1722866501229847e-16,
+          "erased_site": 2
+        }
+      ],
+      "erasure_curve": [
+        {
+          "gain": 0.000997001999999969,
+          "one_qutrit_unencoded_success": 0.999,
+          "per_carrier_erasure": 0.001,
+          "three_qutrit_encoded_recovery_probability": 0.999997002
+        },
+        {
+          "gain": 0.004925249999999992,
+          "one_qutrit_unencoded_success": 0.995,
+          "per_carrier_erasure": 0.005,
+          "three_qutrit_encoded_recovery_probability": 0.99992525
+        },
+        {
+          "gain": 0.009701999999999988,
+          "one_qutrit_unencoded_success": 0.99,
+          "per_carrier_erasure": 0.01,
+          "three_qutrit_encoded_recovery_probability": 0.999702
+        },
+        {
+          "gain": 0.018815999999999944,
+          "one_qutrit_unencoded_success": 0.98,
+          "per_carrier_erasure": 0.02,
+          "three_qutrit_encoded_recovery_probability": 0.9988159999999999
+        },
+        {
+          "gain": 0.042749999999999955,
+          "one_qutrit_unencoded_success": 0.95,
+          "per_carrier_erasure": 0.05,
+          "three_qutrit_encoded_recovery_probability": 0.9927499999999999
+        },
+        {
+          "gain": 0.07200000000000017,
+          "one_qutrit_unencoded_success": 0.9,
+          "per_carrier_erasure": 0.1,
+          "three_qutrit_encoded_recovery_probability": 0.9720000000000002
+        },
+        {
+          "gain": 0.09375,
+          "one_qutrit_unencoded_success": 0.75,
+          "per_carrier_erasure": 0.25,
+          "three_qutrit_encoded_recovery_probability": 0.84375
+        },
+        {
+          "gain": 0.04800000000000004,
+          "one_qutrit_unencoded_success": 0.6,
+          "per_carrier_erasure": 0.4,
+          "three_qutrit_encoded_recovery_probability": 0.648
+        },
+        {
+          "gain": -0.04799999999999999,
+          "one_qutrit_unencoded_success": 0.4,
+          "per_carrier_erasure": 0.6,
+          "three_qutrit_encoded_recovery_probability": 0.35200000000000004
+        }
+      ],
+      "logical_to_physical_isometry": "|s_L>=sum_{t in GF3}|t,s+t,s+2t>/sqrt3",
+      "recoverable_one_erasure_probability": "1-3p^2+2p^3",
+      "status": "PASS_EXPLICIT_QUTRIT_3_1_2_ERASURE_CODE_DECODER"
+    },
+    "06_encoded_Floquet_edge_erasure_transport": {
+      "boundary": "Independent detectable erasure only. Includes neither the extra entangling encoder/decoder fault cost nor unflagged depolarizing noise. Code positions migrate and edge geometry supplied.",
+      "encoding": "[[3,1,2]]_3 quantum erasure code on three separate edge carriers; each sees 13 native ticks per actual SWAP stage",
+      "rows": [
+        {
+          "L": 4,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.999503605026569,
+          "encoded_minus_mean_unencoded": 0.01242267909424466,
+          "mean_unencoded_single_carrier_survival": 0.9870809259323243,
+          "native_tick_error": 0.0005,
+          "per_carrier_erasure_probability": [
+            0.012919074067675673,
+            0.012919074067675673,
+            0.012919074067675673
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "L": 4,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9980558453025105,
+          "encoded_minus_mean_unencoded": 0.023733430418060752,
+          "mean_unencoded_single_carrier_survival": 0.9743224148844497,
+          "native_tick_error": 0.001,
+          "per_carrier_erasure_probability": [
+            0.025677585115550405,
+            0.025677585115550405,
+            0.025677585115550405
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "L": 4,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9839087550992379,
+          "encoded_minus_mean_unencoded": 0.059052759967368695,
+          "mean_unencoded_single_carrier_survival": 0.9248559951318692,
+          "native_tick_error": 0.003,
+          "per_carrier_erasure_probability": [
+            0.07514400486813078,
+            0.07514400486813078,
+            0.07514400486813078
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "L": 4,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9588569495536577,
+          "encoded_minus_mean_unencoded": 0.08104780781960064,
+          "mean_unencoded_single_carrier_survival": 0.8778091417340571,
+          "native_tick_error": 0.005,
+          "per_carrier_erasure_probability": [
+            0.12219085826594278,
+            0.12219085826594278,
+            0.12219085826594278
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "L": 4,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.8656798437166691,
+          "encoded_minus_mean_unencoded": 0.09563669791151386,
+          "mean_unencoded_single_carrier_survival": 0.7700431458051552,
+          "native_tick_error": 0.01,
+          "per_carrier_erasure_probability": [
+            0.2299568541948449,
+            0.2299568541948449,
+            0.2299568541948449
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "L": 4,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.6355662776813267,
+          "encoded_minus_mean_unencoded": 0.044170842498007956,
+          "mean_unencoded_single_carrier_survival": 0.5913954351833187,
+          "native_tick_error": 0.02,
+          "per_carrier_erasure_probability": [
+            0.4086045648166813,
+            0.4086045648166813,
+            0.4086045648166813
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        },
+        {
+          "L": 6,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.999503605026569,
+          "encoded_minus_mean_unencoded": 0.01242267909424466,
+          "mean_unencoded_single_carrier_survival": 0.9870809259323243,
+          "native_tick_error": 0.0005,
+          "per_carrier_erasure_probability": [
+            0.012919074067675673,
+            0.012919074067675673,
+            0.012919074067675673
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 6,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9980558453025105,
+          "encoded_minus_mean_unencoded": 0.023733430418060752,
+          "mean_unencoded_single_carrier_survival": 0.9743224148844497,
+          "native_tick_error": 0.001,
+          "per_carrier_erasure_probability": [
+            0.025677585115550405,
+            0.025677585115550405,
+            0.025677585115550405
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 6,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9839087550992379,
+          "encoded_minus_mean_unencoded": 0.059052759967368695,
+          "mean_unencoded_single_carrier_survival": 0.9248559951318692,
+          "native_tick_error": 0.003,
+          "per_carrier_erasure_probability": [
+            0.07514400486813078,
+            0.07514400486813078,
+            0.07514400486813078
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 6,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9588569495536577,
+          "encoded_minus_mean_unencoded": 0.08104780781960064,
+          "mean_unencoded_single_carrier_survival": 0.8778091417340571,
+          "native_tick_error": 0.005,
+          "per_carrier_erasure_probability": [
+            0.12219085826594278,
+            0.12219085826594278,
+            0.12219085826594278
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 6,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.8656798437166691,
+          "encoded_minus_mean_unencoded": 0.09563669791151386,
+          "mean_unencoded_single_carrier_survival": 0.7700431458051552,
+          "native_tick_error": 0.01,
+          "per_carrier_erasure_probability": [
+            0.2299568541948449,
+            0.2299568541948449,
+            0.2299568541948449
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 6,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.6355662776813267,
+          "encoded_minus_mean_unencoded": 0.044170842498007956,
+          "mean_unencoded_single_carrier_survival": 0.5913954351833187,
+          "native_tick_error": 0.02,
+          "per_carrier_erasure_probability": [
+            0.4086045648166813,
+            0.4086045648166813,
+            0.4086045648166813
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 8,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.999503605026569,
+          "encoded_minus_mean_unencoded": 0.01242267909424466,
+          "mean_unencoded_single_carrier_survival": 0.9870809259323243,
+          "native_tick_error": 0.0005,
+          "per_carrier_erasure_probability": [
+            0.012919074067675673,
+            0.012919074067675673,
+            0.012919074067675673
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 8,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9980558453025105,
+          "encoded_minus_mean_unencoded": 0.023733430418060752,
+          "mean_unencoded_single_carrier_survival": 0.9743224148844497,
+          "native_tick_error": 0.001,
+          "per_carrier_erasure_probability": [
+            0.025677585115550405,
+            0.025677585115550405,
+            0.025677585115550405
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 8,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9839087550992379,
+          "encoded_minus_mean_unencoded": 0.059052759967368695,
+          "mean_unencoded_single_carrier_survival": 0.9248559951318692,
+          "native_tick_error": 0.003,
+          "per_carrier_erasure_probability": [
+            0.07514400486813078,
+            0.07514400486813078,
+            0.07514400486813078
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 8,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.9588569495536577,
+          "encoded_minus_mean_unencoded": 0.08104780781960064,
+          "mean_unencoded_single_carrier_survival": 0.8778091417340571,
+          "native_tick_error": 0.005,
+          "per_carrier_erasure_probability": [
+            0.12219085826594278,
+            0.12219085826594278,
+            0.12219085826594278
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 8,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.8656798437166691,
+          "encoded_minus_mean_unencoded": 0.09563669791151386,
+          "mean_unencoded_single_carrier_survival": 0.7700431458051552,
+          "native_tick_error": 0.01,
+          "per_carrier_erasure_probability": [
+            0.2299568541948449,
+            0.2299568541948449,
+            0.2299568541948449
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "L": 8,
+          "carrier_swap_stage_counts": [
+            2,
+            2,
+            2
+          ],
+          "encoded_known_erasure_recovery_probability": 0.6355662776813267,
+          "encoded_minus_mean_unencoded": 0.044170842498007956,
+          "mean_unencoded_single_carrier_survival": 0.5913954351833187,
+          "native_tick_error": 0.02,
+          "per_carrier_erasure_probability": [
+            0.4086045648166813,
+            0.4086045648166813,
+            0.4086045648166813
+          ],
+          "three_consecutive_moving_edge_sources": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        }
+      ],
+      "status": "PASS_FLOQUET_CHIRAL_ROUTING_WITH_EXPLICIT_THREE_QUTRIT_ERASURE_CODE"
+    },
+    "07_lattice_gauge_curvature_Gauss": {
+      "action_gauge_invariance_error": 0.0,
+      "canonical_local_Gauss_Ward_derivative": 0.0,
+      "scope": "SO2/U1 compact submodel of a Lorentz rotation; actual dynamical link and electric momenta restore Abelian gauge symmetry. No Palatini/Hamiltonian ADM constraints or full SO(1,3) gravity derived.",
+      "spatial_lattice": [
+        3,
+        3,
+        3
+      ],
+      "status": "PASS_SPATIAL_LINK_CURVATURE_U1_GAUSS_CONTROL_WITH_ELECTRIC_MOMENTA"
+    },
+    "08_outsidebox_Lorentz_ghost_no_positive_norm": {
+      "boost_eigenvalues": [
+        0.4965853037914094,
+        1.0,
+        1.0,
+        2.013752707470476
+      ],
+      "boundary": "No-go only for naive finite-dimensional positive norm on internal 4-vector representation; constrained gauge theories may remove ghosts and retain physical positive Hilbert space.",
+      "explanation": "The real 4-vector SO(1,3) boost has eigenvalues exp(+/-t), not unit modulus. No positive invariant inner product on this nontrivial representation; the previously supplied scalar has unbounded negative timelike quadratic energy.",
+      "indefinite_oscillator_negative_energy_sequence": [
+        -0.5,
+        -2.0,
+        -8.0,
+        -32.0
+      ],
+      "noncompact_Lorentz_metric_preserved": true,
+      "positive_definite_unitarity_possible": false,
+      "status": "PASS_LORENTZ_POSITIVE_METRIC_REPRESENTATION_OBSTRUCTION"
+    }
+  },
+  "schema": "w33.20261031.server.continuation.eight.fronts.v1",
+  "scope": "Five requested physics fronts (optics, QND, quantum clock, noisy edge decoding, curvature/Gauss) plus three independent novel ideas: 4hop polynomial projector, explicit qutrit quantum erasure, Lorentz positive-metric obstruction. Eight computational modules with optical and edge fronts split into two each."
+}
