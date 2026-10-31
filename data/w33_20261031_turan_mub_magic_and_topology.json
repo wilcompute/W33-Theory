@@ -1,0 +1,355 @@
+{
+  "reference_head": "ccbd086d1f5b1cc204547766baced5449981d020",
+  "results": {
+    "01_all_n_clock_ground_states": {
+      "finite_examples": [
+        {
+          "exact_Emin_at_J1_K2": -0.6666666666666665,
+          "n": 2,
+          "same_tick_bonds": 0,
+          "turan_noncommuting_bonds": 1
+        },
+        {
+          "exact_Emin_at_J1_K2": -3.999999999999999,
+          "n": 4,
+          "same_tick_bonds": 0,
+          "turan_noncommuting_bonds": 6
+        },
+        {
+          "exact_Emin_at_J1_K2": -13.999999999999996,
+          "exact_ground_state_count_for_n_ge_7": 31744742400,
+          "n": 7,
+          "same_tick_bonds": 0,
+          "turan_noncommuting_bonds": 21
+        },
+        {
+          "exact_Emin_at_J1_K2": -17.999999999999996,
+          "exact_ground_state_count_for_n_ge_7": 888852787200,
+          "n": 8,
+          "same_tick_bonds": 1,
+          "turan_noncommuting_bonds": 27
+        },
+        {
+          "exact_Emin_at_J1_K2": -22.66666666666666,
+          "exact_ground_state_count_for_n_ge_7": 11999512627200,
+          "n": 9,
+          "same_tick_bonds": 2,
+          "turan_noncommuting_bonds": 34
+        },
+        {
+          "exact_Emin_at_J1_K2": -47.999999999999986,
+          "exact_ground_state_count_for_n_ge_7": 4289825764224000,
+          "n": 13,
+          "same_tick_bonds": 6,
+          "turan_noncommuting_bonds": 72
+        },
+        {
+          "exact_Emin_at_J1_K2": -55.999999999999986,
+          "exact_ground_state_count_for_n_ge_7": 4289825764224000,
+          "n": 14,
+          "same_tick_bonds": 7,
+          "turan_noncommuting_bonds": 84
+        },
+        {
+          "exact_Emin_at_J1_K2": -63.999999999999986,
+          "exact_ground_state_count_for_n_ge_7": 150143901747840000,
+          "n": 15,
+          "same_tick_bonds": 9,
+          "turan_noncommuting_bonds": 96
+        },
+        {
+          "exact_Emin_at_J1_K2": -125.99999999999997,
+          "exact_ground_state_count_for_n_ge_7": 1149546198863462400000,
+          "n": 21,
+          "same_tick_bonds": 21,
+          "turan_noncommuting_bonds": 189
+        },
+        {
+          "exact_Emin_at_J1_K2": -456.6666666666666,
+          "exact_ground_state_count_for_n_ge_7": 38732957510954346655404180821213184000,
+          "n": 40,
+          "same_tick_bonds": 95,
+          "turan_noncommuting_bonds": 685
+        }
+      ],
+      "ground_state_count_n_ge7": "2880 * 3^7 * binomial(7,r) * n!/[a!^(7-r) (a+1)!^r]. Exact by Turan equality (balanced complete7-partite), each part identical tick and seven distinct noncommuting directions.",
+      "hypotheses": "Complete spatial K_n, labels from 120 rank3 Pauli spectral projectors, J>0 K>3J/2. Negative noncommuting edges have epsilon=2J-4K/3; same tick zero; all other positive.",
+      "kac_scaled_energy_density_limit": "If couplings divided by n-1, E_min/n -> (3/7)(2J-4K/3); external Kac normalization.",
+      "limitations": "No finite-T phase diagram, no physical spacetime lattice, no quantum Hamiltonian or emergent time.",
+      "reason": "Negative-bond subgraph K8-free by W33 clique number7 => Turan. Achieved with seven pairwise noncommuting directions, same tick in balanced parts.",
+      "status": "PROVED_ALL_N_TURAN_CLOCK_GROUND_LAW",
+      "theorem": "E_min(n)=epsilon * t7(n), t7(n)=1/2[n^2-(7-r)a^2-r(a+1)^2], n=7a+r and 0<=r<7."
+    },
+    "02_exact_chromatic_MUB_geometry": {
+      "10_disjoint_maximal_commuting_contexts": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          16,
+          25,
+          34
+        ],
+        [
+          5,
+          13,
+          23,
+          33
+        ],
+        [
+          6,
+          19,
+          30,
+          38
+        ],
+        [
+          7,
+          17,
+          29,
+          32
+        ],
+        [
+          8,
+          14,
+          27,
+          37
+        ],
+        [
+          9,
+          20,
+          22,
+          36
+        ],
+        [
+          11,
+          15,
+          28,
+          35
+        ],
+        [
+          10,
+          18,
+          24,
+          39
+        ],
+        [
+          12,
+          21,
+          26,
+          31
+        ]
+      ],
+      "W33_eigenvalues": {
+        "-4": 15,
+        "12": 1,
+        "2": 24
+      },
+      "actual_proper_coloring": 10,
+      "chromatic_lower_bound_Hoffman": 10,
+      "mutual_unbiasedness_max_error": 2.3647750424515834e-14,
+      "noncommutation_eigenvalues": {
+        "-3": 24,
+        "27": 1,
+        "3": 15
+      },
+      "physical_scope": "A native complete set of 10 mutually unbiased stabilizer bases in Hilbert dimension9, not a unique observed measurement preference.",
+      "status": "PROVED_W33_NONCOMMUTATION_CHROMATIC_10_AND_MUB_SPREAD"
+    },
+    "03_JonesWenzl_rank1_magic_resource": {
+      "f2_f3_f4_f5_ranks": [
+        6,
+        3,
+        1,
+        0
+      ],
+      "f4_Wigner_L1": 1.6666666666666665,
+      "f4_Wigner_min": -0.1111111111111111,
+      "f4_mana": 0.5108256237659906,
+      "f4_parity_eigenvalue": -1.0,
+      "f4_reduced_purity": 1.0,
+      "f4_two_qutrit_Schmidt_probabilities": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interpretation": "If f4 mana positive, its postselected measurement would be nonstabilizer resource; implementing a coherent f4 projector is a supplied non-Pauli operation. Otherwise a stabilizer witness.",
+      "local_factor_Wigner_and_Strange": [
+        {
+          "Wigner_L1": 1.0,
+          "Wigner_min": 0.0,
+          "ket_re_im": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "overlap_with_canonical_Strange": 0.0
+        },
+        {
+          "Wigner_L1": 1.6666666666666667,
+          "Wigner_min": -0.3333333333333333,
+          "ket_re_im": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.7071067811865475,
+              0.0
+            ],
+            [
+              -0.7071067811865476,
+              -4.710277376051326e-16
+            ]
+          ],
+          "overlap_with_canonical_Strange": 0.9999999999999998
+        }
+      ],
+      "scope": "No physical measurement gadget, postselection success rate or topological fusion sector proven.",
+      "status": "JW_F4_POSTSELECTED_RANK1_WIGNER_TEST"
+    },
+    "04_optical_phase_noise_limit": {
+      "measured_data": false,
+      "model": "Independent zero-mean Gaussian common waveguide phase theta per injection: D(theta)=diag(1,e^{i theta},e^{-i theta}); matrix coherence damped by exp(-sigma^2 (a_i-a_j)^2/2).",
+      "proof_scope": "Exact density-matrix Gaussian averaging and Helstrom trace norm for this chosen noise channel; not calibrated interferometer performance or automatic optimal measurement under unknown drift.",
+      "rows": [
+        {
+          "fixed_port_min_error": 0.2709189355036362,
+          "optimal_mixed_Helstrom_error": 0.048246048547374354,
+          "phase_noise_sigma_radians": 0.0,
+          "quantum_trace_distance": 0.9035079029052513
+        },
+        {
+          "fixed_port_min_error": 0.2709189355036362,
+          "optimal_mixed_Helstrom_error": 0.052438392074725115,
+          "phase_noise_sigma_radians": 0.1,
+          "quantum_trace_distance": 0.8951232158505498
+        },
+        {
+          "fixed_port_min_error": 0.2709189355036362,
+          "optimal_mixed_Helstrom_error": 0.12458959275086068,
+          "phase_noise_sigma_radians": 0.5,
+          "quantum_trace_distance": 0.7508208144982786
+        },
+        {
+          "fixed_port_min_error": 0.2709189355036362,
+          "optimal_mixed_Helstrom_error": 0.2047853511226529,
+          "phase_noise_sigma_radians": 1.0,
+          "quantum_trace_distance": 0.5904292977546942
+        },
+        {
+          "fixed_port_min_error": 0.2709189355036362,
+          "optimal_mixed_Helstrom_error": 0.26679388591476083,
+          "phase_noise_sigma_radians": 2.0,
+          "quantum_trace_distance": 0.4664122281704784
+        },
+        {
+          "fixed_port_min_error": 0.2709189355036362,
+          "optimal_mixed_Helstrom_error": 0.2709189097239614,
+          "phase_noise_sigma_radians": 4.0,
+          "quantum_trace_distance": 0.4581621805520772
+        },
+        {
+          "fixed_port_min_error": 0.2709189355036362,
+          "optimal_mixed_Helstrom_error": 0.2709189355036362,
+          "phase_noise_sigma_radians": 10.0,
+          "quantum_trace_distance": 0.45816212899272757
+        }
+      ],
+      "status": "PASS_PHASE_DEPHASING_OPTICAL_HELSTROM_TO_FIXED_PORT_LIMIT"
+    },
+    "05_gravitational_metric_signature": {
+      "Q_eigenvalues": [
+        1.3270484967614637,
+        1.4999999999999993,
+        8.999999999999998,
+        10.172951503238538
+      ],
+      "inertia_Q": [
+        4,
+        0,
+        0
+      ],
+      "next_step": "Signed tetrad/connection plus constraint algebra and continuum Ward checks (externally motivated).",
+      "obstruction": "Every g(x)=e^(2alpha phi_x) Q has four positive eigenvalues, zero negatives: Sylvester inertia law. The externally supplied time evolution adds a fifth coordinate, not a derived Lorentz 3+1 signature.",
+      "positive_conformal_field_preserves_inertia": true,
+      "status": "PROVED_CONFORMAL_SCALAR_METRIC_CANNOT_PRODUCE_LORENTZ_SIGNATURE"
+    },
+    "06_anyonic_category_mismatch": {
+      "D_S3_chiral_central_charge_mod8": 0,
+      "D_S3_simple_quantum_dimensions": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "D_S3_total_dimension_squared": 36,
+      "SU2_4_chiral_central_charge_mod8": 2,
+      "SU2_4_gauss_sum_re_im": [
+        -1.7763568394002505e-15,
+        3.464101615137756
+      ],
+      "SU2_4_simple_quantum_dimensions": [
+        1.0,
+        1.7320508075688774,
+        2.0000000000000004,
+        1.7320508075688776,
+        1.0
+      ],
+      "SU2_4_total_dimension_squared": 12.000000000000004,
+      "obstruction": "Different numbers of anyons (5 versus8), total quantum dimensions sqrt12 versus6, and nontrivial vs trivial chiral central charge. The 2026 D(S3) braiding+fusion hardware demonstration is not an implementation of this 9D native SU2_4 Jones representation.",
+      "status": "NO_BRAIDED_EQUIVALENCE_SU2_4_AND_D_S3"
+    },
+    "07_native_spectral_dimension_obstruction": {
+      "boundary": "Fixed finite graph cannot have a genuine t->0 continuum d=4 scaling, but a growing graph family might.",
+      "heat_trace": "K(t)=1+24e^(-10t)+15e^(-16t)",
+      "infrared_limit": 0,
+      "laplacian_spectrum": {
+        "0": 1,
+        "10": 24,
+        "16": 15
+      },
+      "sample_peak_dimension": 3.7179989561922997,
+      "sample_peak_time": 0.26143412201500305,
+      "spectral_dimension": "ds(t)=2t(240e^(-10t)+240e^(-16t))/K(t)",
+      "status": "FINITE_W33_LAPLACIAN_NO_INTRINSIC_4D_HEAT_KERNEL_SCALING",
+      "ultraviolet_limit": 0
+    },
+    "08_canonical_characteristic5_torsion": {
+      "B_shape": [
+        24,
+        24
+      ],
+      "canonical_Tor_dimension": 7,
+      "integer_kernel_dimension": 6,
+      "kernel_B_mod5_dimension": 13,
+      "limits": "This settles canonicity of the previous GF5 quotient; not full integral saturation at other primes, an A5 group representation or physical topological flux.",
+      "order5_induced_Jordan_blocks": [
+        3,
+        3,
+        1
+      ],
+      "rank_over_Q": 18,
+      "rank_reduction_mod5_of_integer_kernel_basis": 6,
+      "status": "PROVED_CANONICAL_CHAR5_TORSION_MODULE_IDENTIFICATION",
+      "theorem": "If L0 is rank-r sublattice of saturated kerZ(B) and rank_Fp(L0 modp)=r, then [kerZ(B):L0] is prime to p; their reductions span the same Fp-subspace. Here r6 p5. Exact tensor-sequence yields ker(B mod5)/red(kerZ B)=Tor_1(coker B,F5) of dimension7."
+    }
+  },
+  "schema": "w33.pass125xx.turan_mub_magic.v1"
+}
