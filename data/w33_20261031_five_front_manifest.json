@@ -41,5 +41,33 @@
     "The full-paper/week intellectual review remains incomplete.",
     "The supplied mean-field ensemble, count ratio and D5 lattice are not derived from W33.",
     "The full complex unitary stabilizer and signed E6 cubic lift remain unbuilt."
-  ]
+  ],
+  "published_science_commit": "64d1762dc420baade2fe0f4a4fa15cadc1560f70",
+  "hash_scope": "source_sha256/output_sha256/input_sha256 record the frozen Windows worktree bytes. git_blob_sha256 records the corresponding committed bytes, including Git LF normalization, for portable verification.",
+  "git_blob_sha256": {
+    "analysis/2026-10-31_five_front_continuation.md": "98fe51a2a324ac75aed7e635fbbaaeee70317db97147d6282484d25265c8b054",
+    "analysis/w33_20261031_exterior_search.py": "80f8b040a9685d041071d28fae1b6e8777c31537aedc640d0130018090eaaad1",
+    "analysis/w33_20261031_petersen_stabilizer.py": "9fccc492e4076ad4a4e8f11a0321e14a01dcd1d81a7356d32adcd9f81db124ca",
+    "analysis/w33_20261031_even_set_bounds.py": "4ccf3eb9ea140ecb225415c9863c4d90719b20e83b4cd17f0ebf48db7b6a774b",
+    "analysis/w33_20261031_tick_rate_entropy.py": "1ab06494794931bf3a74dc5f97e46e1eb0a88d556cdc062f99399ec7daac3742",
+    "analysis/w33_20261031_continuum_chirality.py": "a372f71546c3df2674f74c2e3e17b710431efbc01300c792bc041071517daa78",
+    "tests/test_w33_20261031_five_fronts.py": "62989b3fd758eca5946bb67548ba6e98083ac674f7d8430b7d6fa743ff4e0101",
+    "data/w33_20261031_exterior_search.json": "e145f327e8aac75c292406fe3236129ee9f6eb79494f937f0d9c530948c2e2c8",
+    "data/w33_20261031_exterior_search_square.json": "aa6b19663acbd81452f1931f30ac4bb7369b0f4d47085ff698bf331a659da31b",
+    "data/w33_20261031_exterior_search_square_cross_ratio.json": "825c96042d687a2ec2aa5cc19f14f93f80cf052dfc92b6c79793707315e942d2",
+    "data/w33_20261031_exterior_search_attempts.json": "a72b917d1f97809aa84128d688e7917e1191b49f706ed3aa81fafb0c93d20c9b",
+    "data/w33_20261031_petersen_stabilizer.json": "80ab258f3ec2d3015d79cd42161be1b8472db69dd359ae610d7ec783ca5ed904",
+    "data/w33_20261031_even_set_bounds.json": "3852212294e42622c96327377b62b8368fb5dbb09dc2c4db73d6dff40bd5dcc1",
+    "data/w33_20261031_tick_rate_entropy.json": "e69d6f7e05f1c54bdbf9939d8c181a9148ca2487209d79da091e17f48a835759",
+    "data/w33_20261031_continuum_chirality.json": "f6870463a3db7fe0eb9de43513e1bbd051c5dc3c23394dc361c091de2c5d5d92",
+    "data/w33_20261031_five_front_validation.txt": "fa84920831a65dc492b1a200aaeecf1d835960ffa4e7d069c7028c42ffd19a98",
+    "analysis/search_drivers_12466/even_line_sets_gf_q5.json": "49f9f9b1c7f6f404ce7a1cd3494230beea11d8ac4353337dfe7508e557dff73f",
+    "analysis/search_drivers_12466/chord_search_gf.json": "65bb65a794907854fb608b83a3d11d8c2ca371d3e56fdb1225c4c8bf81eec671",
+    "analysis/search_drivers_12466/chord_search_large.json": "fed1aa2d6a212d9c870cd3e7f9e8fb29db35042625abff0e7b1623bb65a076b4",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3",
+    "analysis/2026-10-19_tick_operator_frame_majorization.md": "5bf3341d08cbbab33e3f81e7a86c7e775b255a6b77fe65da168b83d29b3b74f0",
+    "analysis/w33_20261010_toe41_w33_overlap_index_nogo.py": "dc6e5354c30dd97cdfa0f150153bee462cffe447147a7f67c7db5a1e17201c8f",
+    "analysis/w33_pass11185_e6_yukawa_sectors.py": "6863024991d766f328cd15b657f67bfebdd2d9a167c5965c07ebb32604955497",
+    "RESULTS_INDEX.md": "50f3fad89f79a5e82d2710b4932b5ec38eff45819b8023bdd738af5e66468607"
+  }
 }
