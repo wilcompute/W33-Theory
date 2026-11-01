@@ -1,0 +1,29 @@
+{
+ "U4_order_mod_scalars": 648,
+ "point_image_order": 648,
+ "injective_on_points": true,
+ "transvection_group_order": 648,
+ "commutant_dim": 6,
+ "blocks": [
+  {
+   "dim": 1,
+   "kernel": 648,
+   "projective_image_order": 1
+  },
+  {
+   "dim": 3,
+   "kernel": 3,
+   "projective_image_order": 216
+  },
+  {
+   "dim": 2,
+   "kernel": 54,
+   "projective_image_order": 12
+  },
+  {
+   "dim": 3,
+   "kernel": 3,
+   "projective_image_order": 216
+  }
+ ]
+}

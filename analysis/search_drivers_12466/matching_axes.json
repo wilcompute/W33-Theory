@@ -1,0 +1,23 @@
+{
+ "3": {
+  "stabiliser": 8,
+  "axis_order": 4,
+  "axis_pairs": 0,
+  "matching_pairs": 2,
+  "matching_equals_axis_fixed_pairs": false
+ },
+ "7": {
+  "stabiliser": 24,
+  "axis_order": 3,
+  "axis_pairs": 4,
+  "matching_pairs": 4,
+  "matching_equals_axis_fixed_pairs": true
+ },
+ "11": {
+  "stabiliser": 60,
+  "axis_order": 5,
+  "axis_pairs": 6,
+  "matching_pairs": 6,
+  "matching_equals_axis_fixed_pairs": true
+ }
+}

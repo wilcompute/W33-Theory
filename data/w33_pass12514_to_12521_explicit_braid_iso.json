@@ -1,0 +1,60 @@
+{
+  "braid_iso": {
+    "U4_order_mod_scalars": 648,
+    "point_image_order": 648,
+    "injective_on_points": true,
+    "transvection_group_order": 648,
+    "commutant_dim": 6,
+    "blocks": [
+      {
+        "dim": 1,
+        "kernel": 648,
+        "projective_image_order": 1
+      },
+      {
+        "dim": 3,
+        "kernel": 3,
+        "projective_image_order": 216
+      },
+      {
+        "dim": 2,
+        "kernel": 54,
+        "projective_image_order": 12
+      },
+      {
+        "dim": 3,
+        "kernel": 3,
+        "projective_image_order": 216
+      }
+    ]
+  },
+  "matching_axes": {
+    "3": {
+      "stabiliser": 8,
+      "axis_order": 4,
+      "axis_pairs": 0,
+      "matching_pairs": 2,
+      "matching_equals_axis_fixed_pairs": false
+    },
+    "7": {
+      "stabiliser": 24,
+      "axis_order": 3,
+      "axis_pairs": 4,
+      "matching_pairs": 4,
+      "matching_equals_axis_fixed_pairs": true
+    },
+    "11": {
+      "stabiliser": 60,
+      "axis_order": 5,
+      "axis_pairs": 6,
+      "matching_pairs": 6,
+      "matching_equals_axis_fixed_pairs": true
+    }
+  },
+  "checks": {
+    "12516: the TL6/SU(2)_4 B4 unitary image has order 648 mod scalars and maps injectively onto the transvection group G (648)": true,
+    "12516: the 9-dim rep is 1 + 2 + 3 + 3 (commutant 6); each 3-dim block has projective image 216 (Hessian), kernel = centre 3": true,
+    "12515: q = 7 matching = fixed pairs of S4's four 3-fold axes; q = 11 matching = fixed pairs of A5's six 5-fold axes": true
+  },
+  "all_checks_pass": true
+}

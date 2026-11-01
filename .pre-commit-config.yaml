@@ -254,3 +254,10 @@ repos:
         language: system
         pass_filenames: true
         files: ^(scripts|analysis)/.*[.]py$
+      - id: constant-claims
+        name: "fair-null warning for (obs X +- s) constant claims (Pass 12512; never blocks)"
+        entry: py -3 scripts/check_constant_claims_hook.py
+        language: system
+        pass_filenames: true
+        verbose: true
+        files: ^(analysis|docs|papers|manuscripts)/.*\.(md|tex|html)$
