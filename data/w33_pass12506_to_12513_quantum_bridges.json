@@ -141,11 +141,224 @@
       "56.0": 1
     }
   },
+  "12510_12511": {
+    "a": {
+      "G": 648,
+      "sylow3_order": 81,
+      "n_sylow3": 4,
+      "O3_order": 27,
+      "O3_abelian": false,
+      "O3_element_orders": [
+        1,
+        3
+      ],
+      "Z_O3": 3,
+      "Z_G": 3,
+      "Z_equal": true,
+      "quotient_order": 24,
+      "quotient_profile": {
+        "1": 1,
+        "2": 1,
+        "3": 8,
+        "4": 6,
+        "6": 8
+      },
+      "SL23_profile": {
+        "1": 1,
+        "2": 1,
+        "3": 8,
+        "4": 6,
+        "6": 8
+      },
+      "is_3^{1+2}:SL(2,3)": true
+    },
+    "b": {
+      "signed": 432,
+      "PSp_orbits": [
+        216,
+        216
+      ],
+      "B4_orbits": [
+        108,
+        108,
+        108,
+        108
+      ],
+      "B5_orbits": [
+        216,
+        216
+      ],
+      "B4_orbit_chirality_composition": [
+        [
+          [
+            0,
+            108
+          ]
+        ],
+        [
+          [
+            1,
+            108
+          ]
+        ],
+        [
+          [
+            1,
+            108
+          ]
+        ],
+        [
+          [
+            0,
+            108
+          ]
+        ]
+      ]
+    }
+  },
+  "12512": {
+    "rows": [
+      {
+        "name": " Splitting, 50 tests): \u0394m\u00b2 31 /\u0394m\u00b2 21 =2\u03a6 3 +\u03a6 6 =",
+        "predicted": 33.0,
+        "measured": 32.6,
+        "sigma": 0.5,
+        "tension_sigma": 0.8,
+        "p_random_cost2": 1.0,
+        "p_random_cost3": 1.0,
+        "verdict": "not evidence"
+      },
+      {
+        "name": "/(q\u00b2+q+1)) = 13.0\u00b0 Cabibbo angle: sin\u03b8\u1d9c = 3/\u221a178 =",
+        "predicted": 0.2249,
+        "measured": 0.225,
+        "sigma": 0.0007,
+        "tension_sigma": 0.14,
+        "p_random_cost2": 0.12,
+        "p_random_cost3": 0.915,
+        "verdict": "not evidence"
+      },
+      {
+        "name": ") \u2705 29 sin\u00b2\u03b8 W = q/(q\u00b2+q+1) = 3/13 Weinberg angle:",
+        "predicted": 0.23077,
+        "measured": 0.23127,
+        "sigma": 3e-05,
+        "tension_sigma": 16.67,
+        "p_random_cost2": 0.0,
+        "p_random_cost3": 0.305,
+        "verdict": "EXCLUDED"
+      },
+      {
+        "name": "\u03b1 s = q\u00b2/((q+1)((q+1)\u00b2+q)) = 9/76 Strong coupling:",
+        "predicted": 0.11842,
+        "measured": 0.118,
+        "sigma": 0.0009,
+        "tension_sigma": 0.47,
+        "p_random_cost2": 0.175,
+        "p_random_cost3": 1.0,
+        "verdict": "not evidence"
+      },
+      {
+        "name": ", \u03a6\u2086(q)=7 39 sin\u00b2\u03b8\u2081\u2082 = (q+1)/\u03a6\u2083 = 4/13 Solar PMNS:",
+        "predicted": 0.3077,
+        "measured": 0.307,
+        "sigma": 0.013,
+        "tension_sigma": 0.05,
+        "p_random_cost2": 0.895,
+        "p_random_cost3": 1.0,
+        "verdict": "not evidence"
+      },
+      {
+        "name": "504) \u2705 40 sin\u00b2\u03b8\u2081\u2083 = \u03bb/(\u03a6\u2083\u00b7\u03a6\u2086) = 2/91 Reactor PMNS:",
+        "predicted": 0.02198,
+        "measured": 0.02203,
+        "sigma": 0.00056,
+        "tension_sigma": 0.09,
+        "p_random_cost2": 0.0,
+        "p_random_cost3": 1.0,
+        "verdict": "not evidence"
+      },
+      {
+        "name": "or!) \u2705 41 sin\u00b2\u03b8\u2082\u2083 = \u03a6\u2086/\u03a6\u2083 = 7/13 Atmospheric PMNS:",
+        "predicted": 0.5385,
+        "measured": 0.546,
+        "sigma": 0.021,
+        "tension_sigma": 0.36,
+        "p_random_cost2": 0.985,
+        "p_random_cost3": 1.0,
+        "verdict": "not evidence"
+      },
+      {
+        "name": "= 1/300 Starobinsky e\u2212folds: 60; n s =1\u22122/N=29/30=",
+        "predicted": 0.9667,
+        "measured": 0.9649,
+        "sigma": 0.0042,
+        "tension_sigma": 0.43,
+        "p_random_cost2": 0.41,
+        "p_random_cost3": 0.98,
+        "verdict": "not evidence"
+      },
+      {
+        "name": " vq+\u03bc+1 = 125 (dimensionless) Higgs mass: 120+4+1=",
+        "predicted": 125.0,
+        "measured": 125.1,
+        "sigma": 0.14,
+        "tension_sigma": 0.71,
+        "p_random_cost2": 0.105,
+        "p_random_cost3": 0.955,
+        "verdict": "not evidence"
+      },
+      {
+        "name": "actions from graph parameters: \u03a9 DM = \u03bc/g = 4/15 =",
+        "predicted": 0.267,
+        "measured": 0.265,
+        "sigma": 0.007,
+        "tension_sigma": 0.29,
+        "p_random_cost2": 0.685,
+        "p_random_cost3": 1.0,
+        "verdict": "not evidence"
+      },
+      {
+        "name": "7 (obs: 0.265\u00b10.007, 0.24\u03c3) \u03a9 b = \u03bb/(v+1) = 2/41 =",
+        "predicted": 0.0488,
+        "measured": 0.0493,
+        "sigma": 0.0006,
+        "tension_sigma": 0.83,
+        "p_random_cost2": 0.0,
+        "p_random_cost3": 1.0,
+        "verdict": "not evidence"
+      },
+      {
+        "name": " and the tensor amplitude. n s = 1 \u2212 2/N = 29/30 =",
+        "predicted": 0.9667,
+        "measured": 0.9649,
+        "sigma": 0.0042,
+        "tension_sigma": 0.43,
+        "p_random_cost2": 0.41,
+        "p_random_cost3": 0.98,
+        "verdict": "not evidence"
+      }
+    ],
+    "summary": {
+      "EXCLUDED": 1,
+      "not evidence": 11,
+      "rare at cost 3": 0
+    }
+  },
+  "12509_q9_le46": {
+    "q": 9,
+    "max_weight": 46,
+    "status": "UNKNOWN",
+    "seconds": 38814.5
+  },
   "checks": {
     "12507: braid relations hold; B3/B4/B5/B6 images have orders 24/648/25920/25920": true,
     "12507: orbits on the 216 minimal codewords -- B4 splits them 108 + 108, B5 is transitive": true,
     "12507: the B4 image has centre 3 and its quotient has the ASL(2,3) (Hessian) element-order profile": true,
-    "12506: the q = 9 240 points -- two 120-orbits, collinearity graph 32-regular, unlike the E8 root graph (56-regular)": true
+    "12506: the q = 9 240 points -- two 120-orbits, collinearity graph 32-regular, unlike the E8 root graph (56-regular)": true,
+    "12510: the B4 image is 3^{1+2}:SL(2,3) -- O3 extraspecial of order 27, exponent 3, Z(O3) = Z(G), quotient = SL(2,3) profile": true,
+    "12511: 432 signed codewords -- PSp(4,3): 216 + 216 (Pass 173 control); B4: four orbits of 108, each inside one chiral orbit": true,
+    "12512: all 12 site (obs +- sigma) rows -- 1 excluded, 11 not evidence, 0 rare under the fair null": true
   },
   "all_checks_pass": true
 }

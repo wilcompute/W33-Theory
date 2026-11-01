@@ -1,0 +1,75 @@
+{
+ "a": {
+  "G": 648,
+  "sylow3_order": 81,
+  "n_sylow3": 4,
+  "O3_order": 27,
+  "O3_abelian": false,
+  "O3_element_orders": [
+   1,
+   3
+  ],
+  "Z_O3": 3,
+  "Z_G": 3,
+  "Z_equal": true,
+  "quotient_order": 24,
+  "quotient_profile": {
+   "1": 1,
+   "2": 1,
+   "3": 8,
+   "4": 6,
+   "6": 8
+  },
+  "SL23_profile": {
+   "1": 1,
+   "2": 1,
+   "3": 8,
+   "4": 6,
+   "6": 8
+  },
+  "is_3^{1+2}:SL(2,3)": true
+ },
+ "b": {
+  "signed": 432,
+  "PSp_orbits": [
+   216,
+   216
+  ],
+  "B4_orbits": [
+   108,
+   108,
+   108,
+   108
+  ],
+  "B5_orbits": [
+   216,
+   216
+  ],
+  "B4_orbit_chirality_composition": [
+   [
+    [
+     0,
+     108
+    ]
+   ],
+   [
+    [
+     1,
+     108
+    ]
+   ],
+   [
+    [
+     1,
+     108
+    ]
+   ],
+   [
+    [
+     0,
+     108
+    ]
+   ]
+  ]
+ }
+}

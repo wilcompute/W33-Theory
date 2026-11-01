@@ -1,0 +1,129 @@
+{
+ "rows": [
+  {
+   "name": " Splitting, 50 tests): \u0394m\u00b2 31 /\u0394m\u00b2 21 =2\u03a6 3 +\u03a6 6 =",
+   "predicted": 33.0,
+   "measured": 32.6,
+   "sigma": 0.5,
+   "tension_sigma": 0.8,
+   "p_random_cost2": 1.0,
+   "p_random_cost3": 1.0,
+   "verdict": "not evidence"
+  },
+  {
+   "name": "/(q\u00b2+q+1)) = 13.0\u00b0 Cabibbo angle: sin\u03b8\u1d9c = 3/\u221a178 =",
+   "predicted": 0.2249,
+   "measured": 0.225,
+   "sigma": 0.0007,
+   "tension_sigma": 0.14,
+   "p_random_cost2": 0.12,
+   "p_random_cost3": 0.915,
+   "verdict": "not evidence"
+  },
+  {
+   "name": ") \u2705 29 sin\u00b2\u03b8 W = q/(q\u00b2+q+1) = 3/13 Weinberg angle:",
+   "predicted": 0.23077,
+   "measured": 0.23127,
+   "sigma": 3e-05,
+   "tension_sigma": 16.67,
+   "p_random_cost2": 0.0,
+   "p_random_cost3": 0.305,
+   "verdict": "EXCLUDED"
+  },
+  {
+   "name": "\u03b1 s = q\u00b2/((q+1)((q+1)\u00b2+q)) = 9/76 Strong coupling:",
+   "predicted": 0.11842,
+   "measured": 0.118,
+   "sigma": 0.0009,
+   "tension_sigma": 0.47,
+   "p_random_cost2": 0.175,
+   "p_random_cost3": 1.0,
+   "verdict": "not evidence"
+  },
+  {
+   "name": ", \u03a6\u2086(q)=7 39 sin\u00b2\u03b8\u2081\u2082 = (q+1)/\u03a6\u2083 = 4/13 Solar PMNS:",
+   "predicted": 0.3077,
+   "measured": 0.307,
+   "sigma": 0.013,
+   "tension_sigma": 0.05,
+   "p_random_cost2": 0.895,
+   "p_random_cost3": 1.0,
+   "verdict": "not evidence"
+  },
+  {
+   "name": "504) \u2705 40 sin\u00b2\u03b8\u2081\u2083 = \u03bb/(\u03a6\u2083\u00b7\u03a6\u2086) = 2/91 Reactor PMNS:",
+   "predicted": 0.02198,
+   "measured": 0.02203,
+   "sigma": 0.00056,
+   "tension_sigma": 0.09,
+   "p_random_cost2": 0.0,
+   "p_random_cost3": 1.0,
+   "verdict": "not evidence"
+  },
+  {
+   "name": "or!) \u2705 41 sin\u00b2\u03b8\u2082\u2083 = \u03a6\u2086/\u03a6\u2083 = 7/13 Atmospheric PMNS:",
+   "predicted": 0.5385,
+   "measured": 0.546,
+   "sigma": 0.021,
+   "tension_sigma": 0.36,
+   "p_random_cost2": 0.985,
+   "p_random_cost3": 1.0,
+   "verdict": "not evidence"
+  },
+  {
+   "name": "= 1/300 Starobinsky e\u2212folds: 60; n s =1\u22122/N=29/30=",
+   "predicted": 0.9667,
+   "measured": 0.9649,
+   "sigma": 0.0042,
+   "tension_sigma": 0.43,
+   "p_random_cost2": 0.41,
+   "p_random_cost3": 0.98,
+   "verdict": "not evidence"
+  },
+  {
+   "name": " vq+\u03bc+1 = 125 (dimensionless) Higgs mass: 120+4+1=",
+   "predicted": 125.0,
+   "measured": 125.1,
+   "sigma": 0.14,
+   "tension_sigma": 0.71,
+   "p_random_cost2": 0.105,
+   "p_random_cost3": 0.955,
+   "verdict": "not evidence"
+  },
+  {
+   "name": "actions from graph parameters: \u03a9 DM = \u03bc/g = 4/15 =",
+   "predicted": 0.267,
+   "measured": 0.265,
+   "sigma": 0.007,
+   "tension_sigma": 0.29,
+   "p_random_cost2": 0.685,
+   "p_random_cost3": 1.0,
+   "verdict": "not evidence"
+  },
+  {
+   "name": "7 (obs: 0.265\u00b10.007, 0.24\u03c3) \u03a9 b = \u03bb/(v+1) = 2/41 =",
+   "predicted": 0.0488,
+   "measured": 0.0493,
+   "sigma": 0.0006,
+   "tension_sigma": 0.83,
+   "p_random_cost2": 0.0,
+   "p_random_cost3": 1.0,
+   "verdict": "not evidence"
+  },
+  {
+   "name": " and the tensor amplitude. n s = 1 \u2212 2/N = 29/30 =",
+   "predicted": 0.9667,
+   "measured": 0.9649,
+   "sigma": 0.0042,
+   "tension_sigma": 0.43,
+   "p_random_cost2": 0.41,
+   "p_random_cost3": 0.98,
+   "verdict": "not evidence"
+  }
+ ],
+ "summary": {
+  "EXCLUDED": 1,
+  "not evidence": 11,
+  "rare at cost 3": 0
+ }
+}

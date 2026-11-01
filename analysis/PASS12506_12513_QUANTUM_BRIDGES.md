@@ -79,3 +79,62 @@ finishes. Only INFEASIBLE would be a proof.
   S.-M. Hong, Z. Wang, *Universal quantum computation with weakly integral anyons*, arXiv:1504.03383.
 - O. Parzanchevski, P. Sarnak, *Super-Golden-Gates for PU(2)*, Adv. Math. (2018), arXiv:1704.02106.
 - *Two-letter words and a fundamental homomorphism ruling geometric contextuality*, arXiv:1605.07118.
+
+## 12509: q = 9 minimality — the search did not finish (status of record)
+
+`q9_le46.py` ran for 38,814 s (10.8 h, longer than its 3 h limit because the machine was loaded) and ended **UNKNOWN**. It found no
+even line set of ≤ 46 lines, and it did not prove that none exists. **The minimum at q = 9 remains in [32, 48].** The 48-set is the
+best known upper bound, and no proof of optimality is claimed.
+
+## 12510: the 4-anyon braid image is 3^{1+2}:SL(2,3), the one-qutrit Clifford group
+
+`braid_structure.py` analyses the order-648 image G of B₄:
+
+- its largest normal 3-subgroup O₃(G) has **order 27**, is **non-abelian** and has **exponent 3**: the extraspecial Heisenberg group
+  3^{1+2}₊;
+- Z(O₃) = Z(G) has order 3;
+- G/O₃ has SL(2,3)'s element-order profile, 1¹ 2¹ 3⁸ 4⁶ 6⁸;
+- G has 4 Sylow 3-subgroups.
+
+So G has the structure **3^{1+2}₊ : SL(2,3)**, the Heisenberg–Weyl group extended by SL(2,3). That is the structure of the
+**one-qutrit Clifford group**, and of the one-qutrit SU(2)₄ metaplectic braid image (Cui–Wang). Its quotient by the centre has the
+profile of ASL(2,3), the Hessian group: the symmetry group of the Hesse configuration and of the d = 3 Hesse SIC. The other track
+realises that SIC from native Clifford data (8f5a8ce87, `analysis/2026-10-31_chiral_tetrahedra_hesse_and_jones.md`).
+
+> **Braiding four SU(2)₄ anyons acts on the two-qutrit geometry W(3,3) through a group with the structure 3^{1+2}:SL(2,3), a central
+> extension of the Hesse SIC's symmetry group.** It splits the 216 minimal codewords into 108 + 108. Five anyons reach all of
+> PSp(4,3).
+
+The structure is verified (normal series and quotient profiles). A full isomorphism with Cui–Wang's explicit SU(3) matrices is not
+built.
+
+## 12511: the B₄ halves are an invariant independent of chirality
+
+On the **432 signed** minimal codewords (a support together with a choice of which 5-line half is "+"):
+
+- the control works: PSp(4,3) gives Pass 173's **two chiral orbits of 216**, and B₅ gives the same split;
+- **B₄ gives four orbits of 108**, each lying inside one chiral orbit.
+
+So 4-anyon braiding preserves chirality, as all of PSp(4,3) does. On top of that it splits the supports 108 + 108: two independent
+binary invariants, giving 2 × 2 = 4 classes. This settles the open question left by the 12507 correction.
+
+## 12512: every "(obs ± σ)" claim on the site, through the fair null
+
+`site_claims_audit.py` parses every "⟨prediction⟩ (obs: X ± σ" row of `docs/index.html`. Twelve rows are found. Each is judged at
+expression cost ≤ 3, because the site's formulas use 2–3 integer leaves:
+
+| verdict | rows |
+|---|---|
+| **excluded by experiment** | 1: sin²θ_W = 3/13 (16.7σ) |
+| **consistent but not evidence** (≥ 30% of random alphabets reach it) | 11: Cabibbo, α_s, the three PMNS angles, Δm² ratio, n_s (twice), m_H, Ω_DM, Ω_b |
+| **rare under the null** | **0** |
+
+The site's PMNS note now carries this summary.
+
+## 12513: the golden-gate bridge — what is and is not built
+
+The q = 7 cube matching is the block system of an S₄ acting on the 8 points of PG(1,7). On the Bloch sphere, the octahedral group
+(single-qubit Clifford mod phase) acts on the 8 **cube vertices**, which are the Bravyi–Kitaev **T-type magic states**, with the
+antipodal pairs as blocks. A reduction map sending those 8 magic states to PG(1,7) and the golden-gate octahedral group to the cube's
+stabiliser would make the analogy concrete. It needs Galois descent: √3 ∉ F₇, so the magic-state coordinates live in F₄₉. **The map is
+not built; the bridge remains an interpretation [I].**

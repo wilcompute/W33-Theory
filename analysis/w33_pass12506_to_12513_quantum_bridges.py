@@ -35,6 +35,16 @@ def main():
     checks["12506: the q = 9 240 points -- two 120-orbits, collinearity graph 32-regular, unlike the E8 root graph (56-regular)"] = (
         e8["covered"] == 240 and e8["orbits_full"] == [120, 120] and e8["collinearity_degrees"] == [32]
         and e8["E8_root_graph_spectrum"] == {"-4.0": 84, "-2.0": 112, "8.0": 35, "28.0": 8, "56.0": 1})
+    bs, sa = load("braid_structure.json"), load("site_claims_audit.json")
+    res["12510_12511"] = bs
+    res["12512"] = sa
+    checks["12510: the B4 image is 3^{1+2}:SL(2,3) -- O3 extraspecial of order 27, exponent 3, Z(O3) = Z(G), quotient = SL(2,3) profile"] = (
+        bs["a"]["is_3^{1+2}:SL(2,3)"] and bs["a"]["O3_order"] == 27 and bs["a"]["Z_equal"])
+    checks["12511: 432 signed codewords -- PSp(4,3): 216 + 216 (Pass 173 control); B4: four orbits of 108, each inside one chiral orbit"] = (
+        bs["b"]["PSp_orbits"] == [216, 216] and bs["b"]["B4_orbits"] == [108, 108, 108, 108]
+        and all(len(c) == 1 for c in bs["b"]["B4_orbit_chirality_composition"]))
+    checks["12512: all 12 site (obs +- sigma) rows -- 1 excluded, 11 not evidence, 0 rare under the fair null"] = (
+        sa["summary"] == {"EXCLUDED": 1, "not evidence": 11, "rare at cost 3": 0})
     m9 = load("q9_le46.json")
     if m9:
         res["12509_q9_le46"] = {x: v for x, v in m9.items() if x != "chosen"}
