@@ -1,0 +1,45 @@
+{
+  "schema": "w33.chiral-tetrahedron-strange.v1",
+  "baseline": "b834d2017f628574ef1d9c009e136b740aaa9cfc",
+  "staged_blob_sha256": {
+    "analysis/w33_20261031_chiral_tetrahedron_strange_bridge.py": "d40eca7fbf5ee8669c7f9b446e5d5aa7ae2573fc8de48c85f0791dc68cd31ad0",
+    "analysis/2026-10-31_chiral_tetrahedra_hesse_and_jones.md": "294e62985895a71e4971c23a69949469cc60cb9792d278b44bcef23132d34e83",
+    "tests/test_chiral_tetrahedron_strange_bridge.py": "bbb1ef6cb0cce82adb0bcc63b76fb6ff28657fccd16351569e6373e954d0c083",
+    "data/w33_20261031_chiral_tetrahedron_strange_bridge.json": "0b47446b86cd17406379440ecbba0baf91e27117cbe9643b76cf58861d0e1b9e",
+    "data/w33_20261031_chiral_tetrahedron_strange_validation.txt": "a3a68ff7a56c48a777cee751d2a226b73bacc903c45ba51bb7768692537daf4a",
+    "RESULTS_INDEX.md": "f13cdefeda9b5491570170b3a0463199979ee5b798c5dde2506c78690de169b7"
+  },
+  "worktree_sha256": {
+    "analysis/w33_20261031_chiral_tetrahedron_strange_bridge.py": "d40eca7fbf5ee8669c7f9b446e5d5aa7ae2573fc8de48c85f0791dc68cd31ad0",
+    "analysis/2026-10-31_chiral_tetrahedra_hesse_and_jones.md": "294e62985895a71e4971c23a69949469cc60cb9792d278b44bcef23132d34e83",
+    "tests/test_chiral_tetrahedron_strange_bridge.py": "bbb1ef6cb0cce82adb0bcc63b76fb6ff28657fccd16351569e6373e954d0c083",
+    "data/w33_20261031_chiral_tetrahedron_strange_bridge.json": "3df20f3f0c8ada3d41efb8abd879c74cb63b7f931c3be307103b0c27d4fd6ed5",
+    "data/w33_20261031_chiral_tetrahedron_strange_validation.txt": "a3a68ff7a56c48a777cee751d2a226b73bacc903c45ba51bb7768692537daf4a",
+    "RESULTS_INDEX.md": "b1b9cbb638306be81bd428b950f28645cd11bf76e700eb52d0f0bc4d07b41dd3",
+    "analysis/w33_20261031_tick_loop_rigidity.py": "17e5c516ba832848a79446deb04d5caea9db521680dc70afaf2d2fec7dbd1edb",
+    "data/w33_20261031_tick_loop_rigidity.json": "35706afbe1c3d69f30d8fde1487867cfb42b3d3e63976efad5210750128d7a68",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3",
+    "analysis/w33_pass11177_perfect_gates_tritangent.py": "1f221d030d506896d401d65d07250348b7f76b5bd0941232aab2b7d2cf5c3f2f",
+    "analysis/w33_20261031_turan_mub_magic_and_topology.py": "ad3b9c5339f48ebbc83fc5a68e7133440425a9e576a3857db116ad12de3a9fc8",
+    "data/w33_20261031_native_tlj_metaplectic_chain.json": "daca2a5f16ceb0fbd0ac414d8e703c064db1f0e9ee7ee135667b4f4560ec7479"
+  },
+  "committed_input_blob_sha256": {
+    "analysis/w33_20261031_tick_loop_rigidity.py": "17e5c516ba832848a79446deb04d5caea9db521680dc70afaf2d2fec7dbd1edb",
+    "data/w33_20261031_tick_loop_rigidity.json": "84cf00338df2b409174a74a09d1863e01df570cfa7f852b1aefbb4f081717847",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3",
+    "analysis/w33_pass11177_perfect_gates_tritangent.py": "06917c4835c6750a9b1efcddb0a2c3cb87d01b43eca9edc9d2009dc33bcf191f",
+    "analysis/w33_20261031_turan_mub_magic_and_topology.py": "ad3b9c5339f48ebbc83fc5a68e7133440425a9e576a3857db116ad12de3a9fc8",
+    "data/w33_20261031_native_tlj_metaplectic_chain.json": "33653ed008a4db846bf349c8d01f336fd74efa8f34b7fcc476936436e4e67996"
+  },
+  "validation": "Producer replay and6 new unittest controls PASS. Prior50 focused tests remain valid for the unchanged preceding code. 56 total. No120^4 exhaustive enumeration claimed; tetrahedron optimum proved by simultaneous edge/face bounds.",
+  "exact_scope": [
+    "All3240 representative faces integer Eisenstein checked.",
+    "Explicit native-to-Pass11177 coordinate map identifies all45 existing factorisations.",
+    "Analytic Hesse complement, SIC, gap and supplied K4 ground-energy identities; numerical full matrix and second-basis controls."
+  ],
+  "boundaries": [
+    "No physical state-preparation device, spontaneous chirality, QFT continuum or TOE.",
+    "General Hesse/SIC/Strange geometry and existing Jones f4 identity credited.",
+    "Full weekly-patch/PDF intellectual reading remains incomplete."
+  ]
+}

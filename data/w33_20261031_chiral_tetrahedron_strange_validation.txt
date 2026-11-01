@@ -1,0 +1,16 @@
+COMMAND py -3 -u analysis/w33_20261031_chiral_tetrahedron_strange_bridge.py
+{"status": "PASS_CHIRAL_TETRAHEDRON_STRANGE_BRIDGE", "unordered_tetrahedra": 810, "Clifford_orbit_size": 810, "canonical_native_ticks": [0, 12, 16, 20], "maximum_projector_residual": 8.083736946057739e-16}
+
+
+COMMAND py -3 -m unittest discover -s tests -p test_chiral_tetrahedron_strange_bridge.py -v
+test_exact_cyclic_completion_faces (test_chiral_tetrahedron_strange_bridge.ChiralTetrahedronBridge.test_exact_cyclic_completion_faces) ... ok
+test_jones_recursion_gives_filtered_complement (test_chiral_tetrahedron_strange_bridge.ChiralTetrahedronBridge.test_jones_recursion_gives_filtered_complement) ... ok
+test_ninety_sic_families_match_existing_factorisations (test_chiral_tetrahedron_strange_bridge.ChiralTetrahedronBridge.test_ninety_sic_families_match_existing_factorisations) ... ok
+test_positive_quantum_gap_and_common_kernel (test_chiral_tetrahedron_strange_bridge.ChiralTetrahedronBridge.test_positive_quantum_gap_and_common_kernel) ... ok
+test_second_complex_basis_preserves_complement_and_loops (test_chiral_tetrahedron_strange_bridge.ChiralTetrahedronBridge.test_second_complex_basis_preserves_complement_and_loops) ... ok
+test_tetrahedron_saturates_every_energy_bound_and_reverses_orientation (test_chiral_tetrahedron_strange_bridge.ChiralTetrahedronBridge.test_tetrahedron_saturates_every_energy_bound_and_reverses_orientation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 25.568s
+
+OK
