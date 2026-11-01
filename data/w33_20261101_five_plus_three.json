@@ -1,0 +1,380 @@
+{
+  "based_on": "3e77fafcfa77cf228dd74438d18b448de8be4509",
+  "results": {
+    "01_optical_81_shortest_cycles_sparse_compiler": {
+      "boundary": "Deterministic real nearest-neighbor rotation count; physical chip depth, crosstalk, calibrations and encoder loss unmeasured.",
+      "first_five_gates": [
+        [
+          52.0,
+          53.0,
+          -0.7071067811865476,
+          0.7071067811865476
+        ],
+        [
+          51.0,
+          52.0,
+          -0.0,
+          1.0
+        ],
+        [
+          50.0,
+          51.0,
+          -0.0,
+          1.0
+        ],
+        [
+          49.0,
+          50.0,
+          -0.0,
+          1.0
+        ],
+        [
+          48.0,
+          49.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "fundamental_cycle_supports": 648,
+      "gate_count": 5346,
+      "gate_list_SHA256": "521112106974975f55a87dca182ea7762a1126b74d5e165ed39b9c2f048e9780",
+      "girth": 8,
+      "improvement_fraction": 0.36478136882129275,
+      "logical_modes": 81,
+      "number_independent_girth_cycles": 81,
+      "prior_gate_count": 8416,
+      "rails": 160,
+      "reconstruction_error": 3.894812539299926e-15,
+      "status": "PASS_81_GIRTH8_BASIS_AND_5346_ADJACENT_ROTATION_ENCODER"
+    },
+    "02_QND_strange_fidelity_stabilizer_tomography": {
+      "MUB_trace_reconstruction_error": 0.0,
+      "boundary": "Ensemble destructive tomography in four stabilizer bases; not QND verification of an individual surviving photon. Detector confusion must be independently calibrated; error bars reflect sampling, not model uncertainty.",
+      "conservative_99pct_Hoeffding_halfwidth": 0.02200264996742509,
+      "number_stabilizer_basis_settings": 4,
+      "raw_uncalibrated_fidelity": 0.9032499999999999,
+      "readout_corrected_fidelity": 0.9301047120418848,
+      "readout_symmetric_mislabel_probability": 0.03,
+      "shots_per_setting": 6000,
+      "status": "PASS_FOUR_STABILIZER_MUB_STRANGE_TOMOGRAPHY_WITH_CALIBRATED_READOUT",
+      "total_shots": 24000,
+      "true_Strange_fidelity": 0.9299999999999997
+    },
+    "03_full_120_tick_three_site_quantum_chain": {
+      "operator": "Open N-site sum nearest-neighbor native 120-label pair energy and -0.5 per-site rank-one uniform mixing",
+      "rows": [
+        {
+          "Hilbert_dimension": 14400,
+          "excitation_gap": 0.35541121534925524,
+          "ground_energy": -1.4146090290889906,
+          "ground_energy_per_site": -0.7073045145444953,
+          "local_dimension": 120,
+          "open_chain_length": 2,
+          "transverse_h": 0.5
+        },
+        {
+          "Hilbert_dimension": 1728000,
+          "excitation_gap": 0.28203548984491356,
+          "ground_energy": -2.3505558524051624,
+          "ground_energy_per_site": -0.7835186174683875,
+          "local_dimension": 120,
+          "open_chain_length": 3,
+          "transverse_h": 0.5
+        }
+      ],
+      "scope": "N=2 and N=3 finite quantum chains, not an MPS thermodynamic limit; real microscopic Hamiltonian externally stipulated.",
+      "status": "PASS_FULL_120_CLOCK_THREE_SITE_1728000_DIMENSION_QUANTUM_LANCZOS"
+    },
+    "04_Floquet_correlated_burst_erasure": {
+      "advantage_loss_thresholds": [
+        {
+          "critical_burst_probability": 0.0681001864771952,
+          "p_tick": 0.001
+        },
+        {
+          "critical_burst_probability": 0.21690786123226297,
+          "p_tick": 0.005
+        },
+        {
+          "critical_burst_probability": 0.27145012948679875,
+          "p_tick": 0.01
+        }
+      ],
+      "burst_model": "With probability b, a uniformly chosen nearest-neighbor pair is erased, otherwise three independent per-carrier erasures q=1-(1-p_tick)^26; bare rail sampled uniformly among three.",
+      "native_ticks_per_carrier": 26,
+      "number_edge_carriers": 3,
+      "rows": [
+        {
+          "adjacent_pair_burst": 0.0,
+          "bare_uniform_rail_success": 0.9743224148844496,
+          "encoded_gain": 0.023733430418060864,
+          "erasure_code_success": 0.9980558453025105,
+          "per_active_rail_erasure": 0.025677585115550405,
+          "per_tick_erasure": 0.001
+        },
+        {
+          "adjacent_pair_burst": 0.01,
+          "bare_uniform_rail_success": 0.9678269321185532,
+          "encoded_gain": 0.020248354730932117,
+          "erasure_code_success": 0.9880752868494853,
+          "per_active_rail_erasure": 0.025677585115550405,
+          "per_tick_erasure": 0.001
+        },
+        {
+          "adjacent_pair_burst": 0.05,
+          "bare_uniform_rail_success": 0.9418450010549679,
+          "encoded_gain": 0.006308051982416907,
+          "erasure_code_success": 0.9481530530373848,
+          "per_active_rail_erasure": 0.025677585115550405,
+          "per_tick_erasure": 0.001
+        },
+        {
+          "adjacent_pair_burst": 0.1,
+          "bare_uniform_rail_success": 0.9093675872254863,
+          "encoded_gain": -0.011117326453226828,
+          "erasure_code_success": 0.8982502607722594,
+          "per_active_rail_erasure": 0.025677585115550405,
+          "per_tick_erasure": 0.001
+        },
+        {
+          "adjacent_pair_burst": 0.2,
+          "bare_uniform_rail_success": 0.8444127595665231,
+          "encoded_gain": -0.04596808332451463,
+          "erasure_code_success": 0.7984446762420084,
+          "per_active_rail_erasure": 0.025677585115550405,
+          "per_tick_erasure": 0.001
+        },
+        {
+          "adjacent_pair_burst": 0.3,
+          "bare_uniform_rail_success": 0.7794579319075597,
+          "encoded_gain": -0.08081884019580243,
+          "erasure_code_success": 0.6986390917117573,
+          "per_active_rail_erasure": 0.025677585115550405,
+          "per_tick_erasure": 0.001
+        },
+        {
+          "adjacent_pair_burst": 0.0,
+          "bare_uniform_rail_success": 0.8778091417340572,
+          "encoded_gain": 0.08104780781960053,
+          "erasure_code_success": 0.9588569495536577,
+          "per_active_rail_erasure": 0.12219085826594278,
+          "per_tick_erasure": 0.005
+        },
+        {
+          "adjacent_pair_burst": 0.01,
+          "bare_uniform_rail_success": 0.8719570807891635,
+          "encoded_gain": 0.07731129926895774,
+          "erasure_code_success": 0.9492683800581212,
+          "per_active_rail_erasure": 0.12219085826594278,
+          "per_tick_erasure": 0.005
+        },
+        {
+          "adjacent_pair_burst": 0.05,
+          "bare_uniform_rail_success": 0.8485488370095886,
+          "encoded_gain": 0.06236526506638618,
+          "erasure_code_success": 0.9109141020759748,
+          "per_active_rail_erasure": 0.12219085826594278,
+          "per_tick_erasure": 0.005
+        },
+        {
+          "adjacent_pair_burst": 0.1,
+          "bare_uniform_rail_success": 0.8192885322851201,
+          "encoded_gain": 0.04368272231317183,
+          "erasure_code_success": 0.8629712545982919,
+          "per_active_rail_erasure": 0.12219085826594278,
+          "per_tick_erasure": 0.005
+        },
+        {
+          "adjacent_pair_burst": 0.2,
+          "bare_uniform_rail_success": 0.760767922836183,
+          "encoded_gain": 0.006317636806743243,
+          "erasure_code_success": 0.7670855596429262,
+          "per_active_rail_erasure": 0.12219085826594278,
+          "per_tick_erasure": 0.005
+        },
+        {
+          "adjacent_pair_burst": 0.3,
+          "bare_uniform_rail_success": 0.7022473133872458,
+          "encoded_gain": -0.031047448699685343,
+          "erasure_code_success": 0.6711998646875604,
+          "per_active_rail_erasure": 0.12219085826594278,
+          "per_tick_erasure": 0.005
+        },
+        {
+          "adjacent_pair_burst": 0.0,
+          "bare_uniform_rail_success": 0.7700431458051551,
+          "encoded_gain": 0.09563669791151397,
+          "erasure_code_success": 0.8656798437166691,
+          "per_active_rail_erasure": 0.2299568541948449,
+          "per_tick_erasure": 0.01
+        },
+        {
+          "adjacent_pair_burst": 0.01,
+          "bare_uniform_rail_success": 0.7649095248331207,
+          "encoded_gain": 0.09211352044638166,
+          "erasure_code_success": 0.8570230452795023,
+          "per_active_rail_erasure": 0.2299568541948449,
+          "per_tick_erasure": 0.01
+        },
+        {
+          "adjacent_pair_burst": 0.05,
+          "bare_uniform_rail_success": 0.7443750409449833,
+          "encoded_gain": 0.07802081058585231,
+          "erasure_code_success": 0.8223958515308356,
+          "per_active_rail_erasure": 0.2299568541948449,
+          "per_tick_erasure": 0.01
+        },
+        {
+          "adjacent_pair_burst": 0.1,
+          "bare_uniform_rail_success": 0.7187069360848114,
+          "encoded_gain": 0.06040492326019076,
+          "erasure_code_success": 0.7791118593450022,
+          "per_active_rail_erasure": 0.2299568541948449,
+          "per_tick_erasure": 0.01
+        },
+        {
+          "adjacent_pair_burst": 0.2,
+          "bare_uniform_rail_success": 0.6673707263644678,
+          "encoded_gain": 0.025173148608867435,
+          "erasure_code_success": 0.6925438749733352,
+          "per_active_rail_erasure": 0.2299568541948449,
+          "per_tick_erasure": 0.01
+        },
+        {
+          "adjacent_pair_burst": 0.3,
+          "bare_uniform_rail_success": 0.6160345166441241,
+          "encoded_gain": -0.010058626042455776,
+          "erasure_code_success": 0.6059758906016683,
+          "per_active_rail_erasure": 0.2299568541948449,
+          "per_tick_erasure": 0.01
+        }
+      ],
+      "scope": "Independent + adjacent-pair flagged-erasure toy; no encoding/decoding noise, coherence, or network-level error threshold.",
+      "status": "PASS_FLOQUET_THREE_QUTRIT_BURST_ERASURE_FAILURE_THRESHOLD"
+    },
+    "05_Lorentz_nonAbelian_curvature_gauge_and_stability": {
+      "Wilson_energy_boost_sequence": [
+        {
+          "noncompact_Wilson_weight": 0.0,
+          "rapidity": 0.0
+        },
+        {
+          "noncompact_Wilson_weight": -2.1723225392609753,
+          "rapidity": 1.0
+        },
+        {
+          "noncompact_Wilson_weight": -11.048782764334529,
+          "rapidity": 2.0
+        },
+        {
+          "noncompact_Wilson_weight": -105.23293134412215,
+          "rapidity": 4.0
+        },
+        {
+          "noncompact_Wilson_weight": -5957.916645014848,
+          "rapidity": 8.0
+        }
+      ],
+      "gauge_matter_action_error": 2.842170943040401e-14,
+      "gauge_plaquette_covariance_max_error": 1.6511943331333809e-15,
+      "gauge_trace_max_error": 2.6645352591003757e-15,
+      "lie_bracket_closure_error": 3.1401849173675503e-16,
+      "no_go": "Natural trace Wilson term 8-Tr(U_p)-Tr(U_p^-1) =4-4cosh(rapidity) for a boost, unbounded below. Gauge covariance is not a positive Hamiltonian or Einstein constraint closure.",
+      "scope": "Externally postulated 3D lattice Lorentz gauge action and matter vector. No invertible tetrad, second-class constraints, spin-two propagation or ADM closure.",
+      "spatial_lattice": [
+        2,
+        2,
+        2
+      ],
+      "status": "PASS_SO13_NONABELIAN_PLAQUETTE_WARD_AND_NONCOMPACT_INSTABILITY"
+    },
+    "06_outside_single_photon_rail_loss_KL_nogo": {
+      "loss_probability_max": 0.5062499999999999,
+      "loss_probability_min": 1.7045495560377083e-34,
+      "nuance": "This does not forbid multi-photon quantum error correcting codes or erasure flags with an extra intact encoded carrier.",
+      "rail": 0,
+      "restricted_loss_observable_rank": 1,
+      "status": "PASS_NO_SINGLE_RAIL_LOSS_KNILL_LAFLAMME_FOR_ONE_PHOTON_81CODE",
+      "theorem": "P|j><j|P cannot equal cP for rank(P)=81 since Pjj=81/160>0; detecting which rail is lost leaks logical information. Vacuum erasure of the only photon is not correctable within single-photon 160-rail encoding."
+    },
+    "07_outside_full120_zero_temperature_entropy": {
+      "noncommuting_graph_spectrum": {
+        "-9": 24,
+        "0": 80,
+        "81": 1,
+        "9": 15
+      },
+      "number_ground_configurations_formula": "81^N +24*(-9)^N +15*9^N for N>=2",
+      "residual_entropy_density": "ln(81)",
+      "rings": [
+        {
+          "exact_ground_configurations": 9720,
+          "per_site_entropy": 4.5909704487272425,
+          "ring_sites": 2
+        },
+        {
+          "exact_ground_configurations": 524880,
+          "per_site_entropy": 4.39030831467292,
+          "ring_sites": 3
+        },
+        {
+          "exact_ground_configurations": 43302600,
+          "per_site_entropy": 4.395930809339848,
+          "ring_sites": 4
+        },
+        {
+          "exact_ground_configurations": 3486252960,
+          "per_site_entropy": 4.39441866919109,
+          "ring_sites": 5
+        },
+        {
+          "exact_ground_configurations": 282450262680,
+          "per_site_entropy": 4.394461385120427,
+          "ring_sites": 6
+        }
+      ],
+      "scope": "Classical zero-temperature 1D nearest-neighbor model, not a dynamic mechanism for emergent time or gravity.",
+      "status": "PASS_120_TICK_ZERO_TEMPERATURE_CLOSED_RING_COLORING_TRACE",
+      "zero_temperature_correlation_length": "1/ln(9)"
+    },
+    "08_outside_line_correlated_phase_noise": {
+      "block_code_eigenvalue": "27/40",
+      "number_line_blocks": 40,
+      "original_independent_rail_formula": "exp(-sigma^2)+(1-exp(-sigma^2))*81/160",
+      "phase_noise_survival_formula": "exp(-sigma^2)+(1-exp(-sigma^2))*27/40 for any normalized 81D code state",
+      "projected_each_line_diagonal": "81/160",
+      "projected_each_line_offdiagonal": "-27/160",
+      "rail_block_size": 4,
+      "rows": [
+        {
+          "MonteCarlo_survival": 0.9999999999999999,
+          "exact_line_correlated_survival": 1.0,
+          "independent_rail_survival": 1.0,
+          "sigma": 0.0
+        },
+        {
+          "MonteCarlo_survival": 0.9623070339098347,
+          "exact_line_correlated_survival": 0.9625294191066321,
+          "independent_rail_survival": 0.943073540565845,
+          "sigma": 0.35
+        },
+        {
+          "MonteCarlo_survival": 0.8733882850127892,
+          "exact_line_correlated_survival": 0.8741035781099353,
+          "independent_rail_survival": 0.8087342821285555,
+          "sigma": 0.7
+        },
+        {
+          "MonteCarlo_survival": 0.7133553604283205,
+          "exact_line_correlated_survival": 0.7092547479826059,
+          "independent_rail_survival": 0.5582908671274205,
+          "sigma": 1.5
+        }
+      ],
+      "scope": "Exactly line-correlated Gaussian phase drift, not arbitrary correlated stochastic noise, quantum error correction or physical passive implementation.",
+      "status": "PASS_W33_LINE_COMMON_MODE_PHASE_NOISE_UNIVERSAL_27OVER40"
+    }
+  },
+  "schema": "w33.20261101.five_plus_three.v1",
+  "scope": "Finite mathematical models and error budgets; no physical TOE or unobserved particle-physics claims."
+}
