@@ -1,0 +1,19 @@
+{
+  "device": "TheHeavyCrown",
+  "same_hostname_as_local_execution": true,
+  "scope": "Independent process replay through Remote Desktop Commander on the same hardware; no extra server claimed.",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading 24 lines from line 1 (total: 25 lines, 0 remaining)]\n\ntest_cluster_and_trace_bounds_recorded_with_hypotheses (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_cluster_and_trace_bounds_recorded_with_hypotheses) ... ok\r\ntest_common_channel_and_probability_noise_bound (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_common_channel_and_probability_noise_bound) ... ok\r\ntest_continuous_gate_clifford_boundary (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_continuous_gate_clifford_boundary) ... ok\r\ntest_continuous_parent_controls_span_full_unitary_lie_algebra (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_continuous_parent_controls_span_full_unitary_lie_algebra) ... ok\r\ntest_control_words_act_on_actual_parents (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_control_words_act_on_actual_parents) ... ok\r\ntest_every_frame_is_a_positive_normalized_povm (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_every_frame_is_a_positive_normalized_povm) ... ok\r\ntest_exact_density_of_states_and_level_witnesses (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_exact_density_of_states_and_level_witnesses) ... ok\r\ntest_fresh_register_markov_property_on_every_matrix_unit (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_fresh_register_markov_property_on_every_matrix_unit) ... ok\r\ntest_markov_failure_is_an_exact_native_matrix_witness (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_markov_failure_is_an_exact_native_matrix_witness) ... ok\r\ntest_minimal_extension_commutator_certificate_and_tamper (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_minimal_extension_commutator_certificate_and_tamper) ... ok\r\ntest_oct_ground_witness_direct_matrix_energy (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_oct_ground_witness_direct_matrix_energy) ... ok\r\ntest_oct_last_pair_separation_matches_exhaustion (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_oct_last_pair_separation_matches_exhaustion) ... ok\r\ntest_overlap_incidence_and_native_cubic_dictionary (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_overlap_incidence_and_native_cubic_dictionary) ... ok\r\ntest_pair_energy_perturbation_bound_on_new_perturbations (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_pair_energy_perturbation_bound_on_new_perturbations) ... ok\r\ntest_real_first_order_geometry_in_operator_not_vector_coordinates (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_real_first_order_geometry_in_operator_not_vector_coordinates) ... ok\r\ntest_reconstruction_on_all_matrix_units (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_reconstruction_on_all_matrix_units) ... ok\r\ntest_spectral_action_is_constant_on_distinct_parents (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_spectral_action_is_constant_on_distinct_parents) ... ok\r\ntest_spinor_anticommutation_cannot_be_scalar_rephased (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_spinor_anticommutation_cannot_be_scalar_rephased) ... ok\r\ntest_thermal_magic_threshold_and_resource_limit (test_w33_20261101_native_five_fronts.NativeFiveFronts.test_thermal_magic_threshold_and_resource_limit) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 19 tests in 0.301s\r\n\r\nOK\r\n✅ Process completed with exit code 0 (runtime: 6.95s)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: TheHeavyCrown (75dccda9-254c-47a9-9d13-ef69565dedf7)]"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  }
+}

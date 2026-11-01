@@ -1,0 +1,61 @@
+{
+  "status": "PASS_FROZEN_PUBLICATION_PACKET",
+  "baseline": "5a72b00cd7d5a9dcb8e1b28fbfddcc94d1c792f8",
+  "utc": "2026-11-01T06:36:02.587212+00:00",
+  "artifact_raw_sha256": {
+    "analysis/w33_20261101_frame_tomography_octahedron.py": "1d7019763cfa793063532ca4527de6863184fce9c75a5ac7cdfeb3e43a703933",
+    "analysis/w33_20261101_parent_control_quantum_geometry.py": "34cd1d5226a9267958d2fe1551695038667143495e79ae91c391f1dc24a1eca4",
+    "analysis/w33_20261101_common_cubic_spinor_extension.py": "1be3b570a4bf51e3c46190415087d0b60a7614337bbe90ca7c35d1d2bfb49cca",
+    "data/w33_20261101_frame_tomography_octahedron.json": "c350042b92e114ba51a3089e6f470989e9ecaaa7b864cc56988aa5973724ce1d",
+    "data/w33_20261101_parent_control_quantum_geometry.json": "4fd6802425ae1741b044345041ca6a88f7171cd01143407aee3cd4ee96cfac2a",
+    "data/w33_20261101_common_cubic_spinor_extension.json": "f1a855d7402eed073b2f0778a1c1f5339786e5aafb2348220e53ebb9d4c87359",
+    "analysis/w33_20261101_native_validation.py": "7ba473b4d0c3acca998d864b6b6bff563f0500aa0d137bd316a998d2f7ac0b58",
+    "tests/test_w33_20261101_native_five_fronts.py": "a4fb2a8c3465b866d0b58d9d4b40f887b6713bc44b9a402e90807fd171d86a1d",
+    "analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md": "1d83b76e244ac4325ecdd59f2844c36e2f8d436d42c0b444ba188cd267862f3d",
+    "data/w33_20261101_native_remote_replay.json": "dad001908524ae2fc357da518376189dac047560dab1ea565f0e5e44eb97127b",
+    "data/w33_20261101_native_five_fronts_validation.json": "842715063eb373337c0a2273a4914f2bde292559b452f47ddaabb3b8a333cd73",
+    "data/w33_20261101_native_five_fronts_validation.log": "0aa52bc79a5948273796d124cf3dbb709fbe6f2008953d362a6a081a00dfcba8",
+    "RESULTS_INDEX.md": "92700f9472f32caab655c7bfb022516795dca1ddd4228b6bcf293ea27d2c7c2f"
+  },
+  "baseline_inputs": {
+    "data/w33_20261031_chiral_tetrahedron_strange_bridge.json": {
+      "local_raw_sha256": "3df20f3f0c8ada3d41efb8abd879c74cb63b7f931c3be307103b0c27d4fd6ed5",
+      "baseline_blob_sha256": "0b47446b86cd17406379440ecbba0baf91e27117cbe9643b76cf58861d0e1b9e"
+    },
+    "data/w33_20261031_tick_loop_rigidity.json": {
+      "local_raw_sha256": "35706afbe1c3d69f30d8fde1487867cfb42b3d3e63976efad5210750128d7a68",
+      "baseline_blob_sha256": "84cf00338df2b409174a74a09d1863e01df570cfa7f852b1aefbb4f081717847"
+    },
+    "data/w33_20261031_signed_cubic_lift.json": {
+      "local_raw_sha256": "19e6c0c23784140899036adef54742151f333ac7e2d2b4881c640890b9c1b9b9",
+      "baseline_blob_sha256": "e54204307790b3a96dff7df5889024cba8285258f163977cbdd0c0b6a3bbd51d"
+    },
+    "data/w33_20261031_petersen_stabilizer.json": {
+      "local_raw_sha256": "7dfd960178ac00cafec278ebad38c877df9dd302e48bcf92fc745ddbefc830f6",
+      "baseline_blob_sha256": "80ab258f3ec2d3015d79cd42161be1b8472db69dd359ae610d7ec783ca5ed904"
+    },
+    "data/w33_20261031_unitary_stabilizer_lift.json": {
+      "local_raw_sha256": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+      "baseline_blob_sha256": "60429d1af26467b37ecaec98abda74231c2e393f89451051f46f5dd0af4f2279"
+    },
+    "artifacts/canonical_su3_gauge_and_cubic.json": {
+      "local_raw_sha256": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+      "baseline_blob_sha256": "81444a3d3f2c93a2078bf23e3eea52f6b043ccb39b115aed4a9fbc62062ce135"
+    },
+    "analysis/w33_pass12055_microscopic_tick_model.py": {
+      "local_raw_sha256": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3",
+      "baseline_blob_sha256": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3"
+    },
+    "analysis/w33_20261031_tick_loop_rigidity.py": {
+      "local_raw_sha256": "17e5c516ba832848a79446deb04d5caea9db521680dc70afaf2d2fec7dbd1edb",
+      "baseline_blob_sha256": "17e5c516ba832848a79446deb04d5caea9db521680dc70afaf2d2fec7dbd1edb"
+    },
+    "analysis/w33_20261031_chiral_tetrahedron_strange_bridge.py": {
+      "local_raw_sha256": "d40eca7fbf5ee8669c7f9b446e5d5aa7ae2573fc8de48c85f0791dc68cd31ad0",
+      "baseline_blob_sha256": "d40eca7fbf5ee8669c7f9b446e5d5aa7ae2573fc8de48c85f0791dc68cd31ad0"
+    }
+  },
+  "validation": "Three producers regenerated;75 connected unittest tests pass. Nine earlier harness import errors and their correction are retained in actual logs. Nineteen new tests also pass via Remote Desktop Commander on the same hardware.",
+  "limits": "Fixed quotient maps, supplied controls and Hamiltonians, finite models. Not a physical TOE, full weekly-commit reading, full PDF reading, or complete repository test suite.",
+  "provenance": "Manifest does not hash itself. After publication compare committed blobs against working files after LF normalization and verify science commit ancestry on GitHub master."
+}
