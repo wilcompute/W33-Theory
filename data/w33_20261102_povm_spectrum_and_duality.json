@@ -1,0 +1,54 @@
+{
+  "status": "PASS_EXACT_216_OUTCOME_POVM_AND_DUALITY",
+  "address_minimum_words": 45,
+  "route_minimum_words": 216,
+  "cross_point_overlap_distribution": {
+    "0": 1080,
+    "4": 6480,
+    "6": 2160
+  },
+  "address_support_gram": "M.T M=8 I+2 A_point+J",
+  "povm": {
+    "dimension": 24,
+    "outcomes": 216,
+    "effects": "E_s=(1/9)|u_s><u_s|",
+    "sum_effects": "I_24",
+    "uniform_input_probability": "1/216",
+    "naimark_output_dimension": 216,
+    "operator_span_exact_rank": 201,
+    "hermitian_operator_space_dimension": 576,
+    "informationally_complete": false
+  },
+  "effect_squared_gram": {
+    "integer_eigenvalues": {
+      "0": 15,
+      "576": 15,
+      "768": 81,
+      "2304": 80,
+      "3168": 24,
+      "14400": 1
+    },
+    "modular_primes": [
+      65521,
+      65519,
+      65497,
+      65479,
+      65449,
+      65447,
+      65437,
+      65423
+    ],
+    "CRT_product": "337611956425919840995258239704451685661",
+    "max_polynomial_entry_bound": "1703893329976655609856000000000000",
+    "method": "annihilator vanishes modulo CRT product greater than twice norm bound; distinct-root mod-p nullities certify multiplicities"
+  },
+  "clifford_transvections_checked": 40,
+  "point_stabilizer_108_split_first_moments": {
+    "-12": 27,
+    "18": 12,
+    "108": 1
+  },
+  "invariant_cubic_frobenius_norm_squared": 27371520,
+  "equivariant_unital_Jordan_on_24d": false,
+  "scope": "Abstract measurement and finite geometry. No specific photonic circuit, arbitrary-state tomography or TOE."
+}
