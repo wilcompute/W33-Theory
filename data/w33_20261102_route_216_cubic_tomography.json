@@ -1,0 +1,70 @@
+{
+  "status": "PASS_INTEGER_ROUTE_216_CUBIC_TOMOGRAPHY",
+  "seed": [
+    10,
+    11,
+    25,
+    27,
+    28,
+    30,
+    31,
+    32,
+    37,
+    38
+  ],
+  "point_count": 40,
+  "line_count": 40,
+  "minimum_support_orbit": 216,
+  "lines_per_support": 10,
+  "points_covered": 20,
+  "gram_line": "B.T B=44 I+8 A_line+10 J",
+  "gram_point": "H.T H=60 I+15 A_point+48 J",
+  "point_gram_eigenvalues": {
+    "0": 15,
+    "90": 24,
+    "2160": 1
+  },
+  "centered_sign_frame": "Z=2H-J; Z.T Z=360 E_2, rank 24",
+  "spherical_tight_2_design": true,
+  "pairwise_point_support_intersections": {
+    "8": 7020,
+    "9": 6480,
+    "11": 4320,
+    "12": 3240,
+    "14": 2160
+  },
+  "cubic_tensor": "T_abc=sum_s Z_sa Z_sb Z_sc",
+  "cubic_types": [
+    {
+      "edge_pairs": 0,
+      "common_centers": 1,
+      "moment": 0,
+      "triple_count": 2880
+    },
+    {
+      "edge_pairs": 0,
+      "common_centers": 4,
+      "moment": -48,
+      "triple_count": 360
+    },
+    {
+      "edge_pairs": 1,
+      "common_centers": 0,
+      "moment": 12,
+      "triple_count": 4320
+    },
+    {
+      "edge_pairs": 2,
+      "common_centers": 0,
+      "moment": -24,
+      "triple_count": 2160
+    },
+    {
+      "edge_pairs": 3,
+      "common_centers": 0,
+      "moment": 108,
+      "triple_count": 160
+    }
+  ],
+  "scope": "Finite exact incidence/cubic tomography. Not a physical process-tensor or a TOE."
+}
