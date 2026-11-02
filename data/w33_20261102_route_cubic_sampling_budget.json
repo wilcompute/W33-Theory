@@ -1,0 +1,30 @@
+{
+  "ideal": {
+    "delta": 0.01,
+    "flips": 0,
+    "triples": 9880,
+    "exact_true_mean": "1/2",
+    "exact_max_false_mean": "1/18",
+    "exact_threshold": "5/18 (times attenuation)",
+    "gap": 0.4444444444444444,
+    "attenuation": 1,
+    "margin": 0.2222222222222222,
+    "iid_uniform_support_samples": 588,
+    "union_bound_failure_probability": 0.009783054259507366,
+    "scope": "Classical full-label oracle only; not quantum measurement feasibility"
+  },
+  "bit_flip_0p05": {
+    "delta": 0.01,
+    "flips": 0.05,
+    "triples": 9880,
+    "exact_true_mean": "1/2",
+    "exact_max_false_mean": "1/18",
+    "exact_threshold": "5/18 (times attenuation)",
+    "gap": 0.4444444444444444,
+    "attenuation": 0.7290000000000001,
+    "margin": 0.162,
+    "iid_uniform_support_samples": 1105,
+    "union_bound_failure_probability": 0.009967803515101877,
+    "scope": "Classical full-label oracle only; not quantum measurement feasibility"
+  }
+}
