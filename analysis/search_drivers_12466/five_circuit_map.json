@@ -1,0 +1,93 @@
+{
+ "stabiliser": 120,
+ "invariant_circuits": 1,
+ "stabiliser_orbits_on_45_sentinels": [
+  5,
+  10,
+  30
+ ],
+ "bijection": true,
+ "line_vs_5_sentinels_intersections": {
+  "(0, 0, 0, 0, 0)": 10
+ },
+ "lines_to_subsets_of_sentinels": [
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  [
+   0,
+   1,
+   2,
+   3,
+   4
+  ]
+ ],
+ "point_(covered,in_how_many_sentinels)": {
+  "(False, 2)": 20,
+  "(True, 0)": 20
+ },
+ "sentinel_pairwise_intersections": [
+  2
+ ],
+ "union_of_circuit_points": 20
+}

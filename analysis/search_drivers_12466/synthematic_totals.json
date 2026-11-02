@@ -1,0 +1,19 @@
+{
+ "sixes": 72,
+ "double_sixes": 36,
+ "totals_total": 216,
+ "per_double_six": 6,
+ "every_circuit_is_a_total": true,
+ "codewords_per_double_six": [
+  6
+ ],
+ "double_sixes_hit": 36,
+ "bijection_codewords_totals": true,
+ "two_totals_share_one_syntheme": [
+  1
+ ],
+ "five_plus_ten_are_the_15_synthemes": true,
+ "planes_with_2_in_12_and_1_in_15": 30,
+ "5_subsets_of_15_synthemes_that_are_totals": 6,
+ "5_subsets_of_15": 3003
+}

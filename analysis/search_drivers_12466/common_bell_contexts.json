@@ -1,0 +1,26 @@
+{
+ "grid_minus_pair_is_the_sentinel_all_216": true,
+ "the_10_lines_are_all_lines_missing_the_20_points_all_216": true,
+ "lines_by_intersection_with_a_sentinel": {
+  "0": 24,
+  "2": 16
+ },
+ "bell_contexts_per_sentinel": 24,
+ "pairs_with_that_sentinel": 12,
+ "zero_sum_5_subsets": 216,
+ "pairwise_2_but_nonzero_sum": 33984,
+ "pairwise_intersection_values": {
+  "2": 32,
+  "0": 12
+ },
+ "explicit_factorisation_has_8_local_points": 8,
+ "explicit_factorisation_is_a_sentinel": true,
+ "schmidt_spectra_by_line_type": {
+  "2": {
+   "(1.0, 0.0, 0.0)": 144
+  },
+  "0": {
+   "(0.3333, 0.3333, 0.3333)": 216
+  }
+ }
+}

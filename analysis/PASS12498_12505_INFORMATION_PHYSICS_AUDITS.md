@@ -128,7 +128,7 @@ The 48-line even set of W(3,9) found in 12496 is identified exactly.
   {X, Y}^⊥ of their 10 transversals. The set misses the whole hyperbolic quadric Q⁺(3,9) swept by that regulus (100 points). It lies
   among the 288 W-lines missing the quadric, on which H = Stab({X, Y}) = GL(2,9).2 acts transitively (`passant_orbits.py`).
 - **Its stabiliser lies in H**, because X and Y are determined by the set. Enumerating all 11,520 elements of H (`stab48.py`) gives a
-  stabiliser of **order 480** as a group of line permutations. It is **transitive on all 48 lines**, half its elements swap the two
+  stabiliser of **order 480** as a group of line permutations. *(Later, Pass 12525: that is inside GL(2,9).2 only; the full stabiliser in PGammaSp(4,9) has order 1920.)* It is **transitive on all 48 lines**, half its elements swap the two
   24-line halves, and the element orders are 1, 2, 3, 4, 5, 6, 10, 12, 20.
 - **Its image in PGL(2,9) is A₅**: order 60, element orders 1¹ 2¹⁵ 3²⁰ 5²⁴ (`stab48_pgl_image.json`). The kernel is the scalar group
   F₉*.

@@ -1,8 +1,8 @@
-# Passes 12518–12525: the q = 9 minimum is 48; the four-anyon braid image is the centraliser of the next generator; the 216 codewords carry the Hesse configuration
+# Passes 12518–12525: the q = 9 minimum is 48; the four-anyon braid image is the centraliser of the next generator; the 216 codewords are Sylvester's synthematic totals and carry the Hesse configuration
 
 Claude track. Producer: `analysis/w33_pass12518_to_12525_hesse_dictionary.py`. Test: `tests/test_w33_pass12518_to_12525.py`. Drivers in
 `analysis/search_drivers_12466`: `star_cubes.py`, `star48_control.py`, `heavy_cases.py`, `heavy_split.py`, `heavy_control.py`, `classify_q7.py`, `classify_q7b.py`, `cube_stabiliser_q7.py`, `cuiwang_compare.py`,
-`braid_point_stabiliser.py`, `hesse_dictionary.py`, `hesse_dictionary2.py`, `hesse_dictionary3.py`, `tprime_block.py`.
+`braid_point_stabiliser.py`, `five_circuit_map.py`, `ten_lines_five_sentinels.py`, `common_bell_contexts.py`, `synthematic_totals.py`, `kramers_doily.py`, `codeword_vs_spread.py`, `pair_of_sic.py`, `syndrome_theorem.py`, `bell_generalisation.py`, `recheck_cadical.py`, `classify_q9.py`, `hesse_dictionary.py`, `hesse_dictionary2.py`, `hesse_dictionary3.py`, `tprime_block.py`.
 
 Labels: **[E]** exact computation or proof, **[N]** numerical with a stated tolerance, **[I]** interpretation.
 
@@ -44,7 +44,7 @@ circuit, and that the derived subgroup (order 216) has orbits 108 + 36 + 36 + 36
 **[E]** The codeword stabiliser in PSp(4,3) has order 120 with element-order profile 1, 25, 20, 30, 24, 20, which is S₅'s. T_c fixes no codeword. The derived subgroup's
 orbits here are 108 (the uncovered half) + 36 + 36 + 36 (the covered half splits). So the partition is reproduced, and now explained.
 
-**Not established:** an explicit bijection between our codewords and those five-circuits. The evidence is the shared stabiliser profile and orbit partition.
+The explicit bijection with those five-circuits is built in 12523.
 
 ### The dictionary
 
@@ -85,8 +85,7 @@ on its three syndrome spaces.**
 - **[N]** The absolute-character profile on the reducible syndrome is exactly 27 × that of the qutrit Weil representation of SL(2,3), built independently from F and D:
   {1: 15, √3: 8, 3: 1} × 27 = {405, 216, 27}. Control: a 3-block gives a different profile.
 
-So the reducible syndrome carries the **Weil representation of SL(2,3)**, which decomposes as even (dimension 2) + odd (dimension 1). A "syndrome-controlled Pauli" reading,
-with exponent zero on that syndrome, fits these facts **[I]**; the operator identity itself was not written out.
+So the reducible syndrome carries the **Weil representation of SL(2,3)**, which decomposes as even (dimension 2) + odd (dimension 1). The operator identity behind this is 12524.
 
 **[E] The 2-block is the T′ doublet** in the sense of 12413: normalised to determinant 1 it generates a group of order 24, centre 2, element orders 1¹2¹3⁸4⁶6⁸, with
 traces 2, −2, −1, 0, 1. Also σ₁ = ±σ₃ on this block, so it factors through B₃. This refines 12413, which found T′ doublets only on F₃⁴ vectors: here one also sits in the
@@ -159,6 +158,78 @@ feasible value 28.
 
 **q = 7 minimum.** All 34 heavy cases at W = 38 are INFEASIBLE, so the star and heavy halves together give the minimum 40 by the same method as q = 9. Whether a *heavy* 40-line set exists is reported under `heavy_status` (`q7_W40`). Until that is all INFEASIBLE, this theorem covers hyperovals, not every minimal even set.
 
+## 12523: the 216 minimal codewords are the synthematic totals of the 36 double-sixes
+
+**Prior art, read first.** Pass 173 has the 216 supports, the crown graph K₅,₅ minus a matching, and the 540 skew-line charts. BT855 and BT856 have the K₅ calculus and the "20 dark lines". BT837 has 36 × 6 = 216
+"icosahedral cores" in the 36 spreads. Pass 7217 has the 36 doily slices and the K₆ model of six ovoids and six spreads. Pass 11210 has the 36 Kramers reversals and their 15 swapped splits.
+`w33_s6_duad_syntheme_pentad_bridge.py` has the abstract duad/syntheme model on the Hoffman–Singleton graph. Pass 11143 has the 16 product and 24 entangled lines. **I did not find these joined to the codewords**, in the corpus or in
+the literature I could reach. That is a search result and not a priority claim.
+
+**[E] Five-circuits.** `five_circuit_map.py`: each codeword's S₅ stabiliser fixes exactly one five-circuit of the `2026-08-29` no-go, and transport by PSp(4,3) gives an equivariant bijection of the 216 onto the 216. This upgrades the
+stabiliser-and-partition match of 12521 to an explicit map.
+
+**[E] The circuit is the complement.** A codeword covers 20 points. Its five sentinels cover exactly the other 20, each twice, and any two share 2 points. That is why their F₂-sum vanishes. S is exactly the set of lines missing those 20 points, in all 216
+cases.
+
+**[E] Each sentinel comes from a grid** (`common_bell_contexts.py`). Each matching pair {L, L′} of the crown graph has 4 transversals sweeping a 16-point grid, and grid − L − L′ is exactly one sentinel H ∪ H⊥, for all 216 codewords.
+
+**[E/N] Entanglement.** Against a factorisation, 24 lines miss H ∪ H⊥ and 16 meet it. In Hilbert space, for an explicit factorisation (tolerance 10⁻⁴ on spectra), the 24 give flat Schmidt spectrum (1/3, 1/3, 1/3) on all 216 states and the 16 give (1, 0, 0) on all
+144. So:
+
+> **A minimal codeword is exactly the set of two-qutrit contexts whose bases are maximally entangled with respect to all five factorisations of a zero-sum set.**
+
+The 24/16 count is Pass 11143's. The "simultaneously for five" statement is the addition.
+
+**[E] Sylvester.** `synthematic_totals.py`: the 45 sentinels with "disjoint" form GQ(4,2), its 27 lines are the frames (the 27 lines of the cubic), and there are 36 double-sixes. S₅ has orbits 12 + 15 on the 27. For each double-six the 15 tritangent planes inside the
+c_ij are the synthemes, and exactly **6 of their 3003 five-subsets** cover all 15 c_ij: the synthematic totals, any two sharing one syntheme.
+
+> **Every codeword's five sentinels are one total of one double-six, and every total arises exactly once: 216 = 36 × 6.**
+
+**Refuted on the way.** My first guess, that codewords are pairs of skew lines (also 216), is false: S₅ has no orbit of size 2 on the 27.
+
+**[E] Kramers and the doily.** `kramers_doily.py`: the outer coset of PSp(4,3) in PGSp(4,3) has 576 involutions: 540 with 8 fixed points and 36 fixed-point-free. These 36 are the only ones fixing 15 sentinels, and each swaps the factors of all 15, as Pass 11210 found. For each
+such θ, the 15 sentinels and 15 frames form a GQ(2,2), with 6 spreads. All 216 codewords occur exactly once.
+
+> **A minimal codeword = a Kramers reversal θ + a spread of the doily of the 15 splits θ swaps.**
+
+A doily is the geometry of the two-qubit Pauli group, so a two-qubit geometry sits inside the two-qutrit one here. This is a combinatorial isomorphism **[I]**: no two-qubit Hilbert space is constructed.
+
+**[E] Two sides of the outer automorphism.** `codeword_vs_spread.py`, GAP in `gap_a5.out`: each codeword fixes one spread and is disjoint from it, and meets the other 35 in 2 or 3 lines. Its A₅ has line orbits [5, 5, 10, 20]: the two pentads, that spread, and the 20 dark lines. BT837's cores have [10, 30].
+GAP confirms these are **the two classes of A₅ in A₆**. So BT837's 216 cores and these 216 codewords are the letters and the totals of the double-six, exchanged by the outer automorphism of S₆, which PSp(4,3) does not realise.
+
+**[E] A sharper Hesse statement** (`pair_of_sic.py`). Uncovered T_c-classes biject with the **36 unordered pairs of Hesse SIC points**: c lies in exactly two sentinels of the circuit, and the codeword's stabilising involution is the third point on that pair's affine line. This simplifies the (involution, line) labelling of 12521.
+
+**Does it generalise?** `bell_generalisation.py`. At q = 3, 5, 7, 9 the minimal set's uncovered points are exactly the union of the factorisations it misses (5, 40, 87, 330 of them), and S is exactly the set of lines in its covered points. Those are data, without a theorem. The zero-sum five-set is specific to
+q = 3 so far. The control of random line sets misses far fewer, but those cover more points, so it is not a fair baseline.
+
+## 12524: the syndrome-controlled Pauli
+
+**[N]** `syndrome_theorem.py`, on the 648 explicit 9 × 9 unitaries. Let Π_s be the P_c eigenprojectors, with s = 0 the reducible syndrome, and transport syndromes by a Pauli that does not commute with P_c. For every u in the order-27 normal subgroup N:
+
+> u = ⊕ₛ λₛ Lˢ, with L a Weyl operator of the logical qutrit.
+
+Exactly 27 elements are scalar on s = 0, so outside N nothing is. On s = 1 they give **9 operators modulo phase, an orthogonal basis**; on s = 2 they give L⁻¹. This proves the operator identity that 12521 only labelled as an interpretation.
+
+## 12525: stabilisers and a second solver
+
+**[E] GAP** (`gap_stab.out`), on line permutations of PΓSp(4,q):
+
+| q | minimal set | stabiliser | structure | derived | orbit on lines | orbit size |
+|---|---|---|---|---|---|---|
+| 3 | 10-set | 120 | S₅ | A₅ | 10 | 216 |
+| 7 | 40-set | 384 | **D₁₆ × S₄**, SmallGroup(384,18032) | C₄ × A₄ | 8 + 32 | 720,300 |
+| 9 | 48-set | 1920 | A₅:(C₈:(C₂ × C₂)) | C₄ × A₅ | 48 | 3,586,680 |
+
+The q = 7 row is the third independent count of 720,300. The S₄ is the cube's rotation group, matching 12515, and q = 9 is icosahedral.
+
+**Correction to Pass 12501.** "Stabiliser of order 480" was the stabiliser inside GL(2,9).2 only, which omits the similitude and Frobenius. The full stabiliser in PΓSp(4,9) has order 1920.
+
+**Second solver.** `recheck_cadical.py` uses CaDiCaL, a CDCL SAT solver sharing no code with CP-SAT. It reproduces the star verdicts at q = 3 and q = 5 (W = 8 and 18 UNSAT; W = 10 and 20 SAT in exactly one class, matching CP-SAT). Status at q = 7 is under `second_solver`. **It is not a proof certificate**, and the q = 9 theorem still rests on CP-SAT alone.
+
+**q = 9 uniqueness.** GAP's numbers predict that if the 48-set is unique up to symmetry, exactly one star class is feasible at W = 48, with 288 sets through X modulo the radical. `classify_q9.py` tests this; status under `classify_q9`.
+
+**Literature.** De Bruyn (ICMS 2020) lists W(3) and Q(4,3) among the quadrangles whose hyperovals can be classified, and Pasechnik's paper used computer classification for both. I did not find the values for q = 7, 9 or the Sylvester identification, but I could not read every candidate in full, so these are not claimed as new to the literature.
+
 ## What this does not do
 
 No claim here concerns particles, forces or constants. The dictionary is one-qutrit quantum information sitting on a finite geometry, and the choice of c is external: nothing here selects a
@@ -167,4 +238,6 @@ point (compare `2026-10-22_anchored_transvection_hamiltonian.md`).
 ## Sources
 
 - S. X. Cui, Z. Wang, *Universal quantum computation with metaplectic anyons*, J. Math. Phys. 56 (2015), arXiv:1405.7778.
-- Corpus: Pass 173; Pass 1047; 12413; 12507–12516; `2026-08-29_216_CLIFFORD_TORSOR_NOGO.md`; `2026-09-21_physical_a2_clifford648_w33_bridge.md`.
+- B. De Bruyn, *Classification results for hyperovals of generalized quadrangles*, ICMS 2020.
+- D. V. Pasechnik, *The triangular extensions of a generalized quadrangle of order (3,3)*, Bull. Belg. Math. Soc.
+- Corpus: Pass 173; BT837; BT855; BT856; Pass 7217; Pass 11143; Pass 11210; Pass 1047; 12413; 12507–12516; `2026-08-29_216_CLIFFORD_TORSOR_NOGO.md`; `2026-09-21_physical_a2_clifford648_w33_bridge.md`.

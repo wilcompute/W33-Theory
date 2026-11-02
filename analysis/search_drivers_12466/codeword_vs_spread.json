@@ -1,0 +1,19 @@
+{
+ "spreads": 36,
+ "stab_derived": 60,
+ "A5_line_orbits": [
+  5,
+  5,
+  10,
+  20
+ ],
+ "spreads_fixed_by_Stab": 1,
+ "spreads_fixed_by_A5": 1,
+ "intersections_with_all_spreads": {
+  "3": 20,
+  "2": 15,
+  "0": 1
+ },
+ "intersection_with_fixed_spread": 0,
+ "spread_stabiliser": 720
+}

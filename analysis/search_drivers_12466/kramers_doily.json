@@ -1,0 +1,20 @@
+{
+ "involutions_in_outer_coset": 576,
+ "fixed_point_counts": {
+  "8": 540,
+  "0": 36
+ },
+ "outer_involutions_fixing_15_sentinels": 36,
+ "all_15_swap_the_factors": [
+  15
+ ],
+ "slices": 36,
+ "doily_is_GQ22": true,
+ "spreads_per_doily": {
+  "6": 36
+ },
+ "codewords_hit": 216,
+ "each_codeword_from_unique_theta": [
+  1
+ ]
+}

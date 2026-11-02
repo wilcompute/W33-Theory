@@ -1,0 +1,10 @@
+{
+ "uncovered_pair_labels": 36,
+ "classes_per_pair": [
+  1
+ ],
+ "stabiliser_involution_is_third_point": true,
+ "covered_codewords_by_number_of_Hesse_sentinels_in_complement": {
+  "0": 108
+ }
+}

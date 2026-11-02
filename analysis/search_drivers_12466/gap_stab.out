@@ -1,0 +1,7 @@
+q7 G=276595200 stab=384 orbits_on_S=[ 8, 32 ] orbit=720300 center=2 derived=
+48 C4 x A4 abel=[ 2, 2, 2 ]
+q7 structure D16 x S4
+q7 id [ 384, 18032 ]
+q9 G=6886425600 stab=1920 orbits_on_S=[ 48 ] orbit=3586680 center=2 derived=
+240 C4 x A5 abel=[ 2, 2, 2 ]
+q9 structure A5 : (C8 : (C2 x C2))

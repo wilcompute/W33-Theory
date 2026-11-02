@@ -1,0 +1,12 @@
+Read("gap_q3.g");
+G := Group(gens);; Print("|G|=",Size(G),"\n");
+st := Stabilizer(G,spread,OnSets);; Print("spread stabiliser ",Size(st)," ",StructureDescription(st),"\n");
+A6 := DerivedSubgroup(st);;
+cl := ConjugacyClassesSubgroups(A6);; A5s := Filtered(cl,c->Size(Representative(c))=60);;
+for c in A5s do H:=Representative(c);
+  Print(" A5 class in A6, ",Size(c)," conjugates there; line orbits ",SortedList(List(Orbits(H,[1..40]),Length)),"\n");
+od;
+S0 := First(codewords,c->Stabilizer(G,c,OnSets)<>fail and Length(Intersection(c,spread))=0);;
+Sc := Stabilizer(G,S0,OnSets);; Print("S5 stabiliser ",Size(Sc),"; its A5 line orbits ",SortedList(List(Orbits(DerivedSubgroup(Sc),[1..40]),Length)),"; contained in st ",IsSubgroup(st,Sc),"\n");
+hom := ActionHomomorphism(st,Orbit(st,1,OnPoints),OnPoints);;
+QUIT;

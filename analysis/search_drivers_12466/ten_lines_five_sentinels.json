@@ -1,0 +1,74 @@
+{
+ "degree": [
+  4
+ ],
+ "bipartite": true,
+ "parts": [
+  5,
+  5
+ ],
+ "matching_pairs": 5,
+ "sentinels_in_complement": 5,
+ "sentinel_action_on_ten": [
+  {
+   "fixes_S": false,
+   "fixed": [],
+   "swapped": [
+    [
+     16,
+     35
+    ]
+   ]
+  },
+  {
+   "fixes_S": false,
+   "fixed": [],
+   "swapped": [
+    [
+     10,
+     19
+    ]
+   ]
+  },
+  {
+   "fixes_S": false,
+   "fixed": [],
+   "swapped": [
+    [
+     11,
+     32
+    ]
+   ]
+  },
+  {
+   "fixes_S": false,
+   "fixed": [],
+   "swapped": [
+    [
+     21,
+     33
+    ]
+   ]
+  },
+  {
+   "fixes_S": false,
+   "fixed": [],
+   "swapped": [
+    [
+     18,
+     36
+    ]
+   ]
+  }
+ ],
+ "each_matching_pair_singled_out_by_one_sentinel": [
+  1,
+  1,
+  1,
+  1,
+  1
+ ],
+ "pair_transversals": [
+  "{'transversals': 4, 'union': 16, 'meets_comp': 8}"
+ ]
+}

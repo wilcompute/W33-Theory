@@ -1,0 +1,17 @@
+{
+ "q": 3,
+ "W": 10,
+ "classes": 2,
+ "range": [
+  0,
+  2
+ ],
+ "unsat": 1,
+ "sat": [
+  {
+   "rep": 0,
+   "weight": 10
+  }
+ ],
+ "seconds": 0.1
+}

@@ -1,0 +1,12 @@
+{
+ "elements_scalar_on_reducible_syndrome": 27,
+ "N": 27,
+ "power_law_counts": {
+  "(('b2~b1^2', np.True_), ('b2~b1^-1', np.True_), ('b2~b1', np.True_))": 3,
+  "(('b2~b1^2', np.True_), ('b2~b1^-1', np.True_), ('b2~b1', np.False_))": 24
+ },
+ "distinct_block_ops_mod_phase": 9,
+ "orthogonal_operator_basis": true,
+ "outside_N_scalar_on_reducible": 0,
+ "reducible_phase": "(-0.4999999999999994+0.8660254037844388j)"
+}

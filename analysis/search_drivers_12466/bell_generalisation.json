@@ -1,0 +1,98 @@
+[
+ {
+  "q": 3,
+  "weight": 10,
+  "sentinels": 45,
+  "result": {
+   "covered": 20,
+   "sentinels_missed": 5,
+   "closure_size": 10,
+   "closure_is_S": true,
+   "union_missed_pts": 20
+  },
+  "random_lines_sentinels_missed": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ]
+ },
+ {
+  "q": 5,
+  "weight": 20,
+  "sentinels": 325,
+  "result": {
+   "covered": 60,
+   "sentinels_missed": 40,
+   "closure_size": 20,
+   "closure_is_S": true,
+   "union_missed_pts": 96
+  },
+  "random_lines_sentinels_missed": [
+   0,
+   0,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ]
+ },
+ {
+  "q": 7,
+  "weight": 40,
+  "sentinels": 1225,
+  "result": {
+   "covered": 160,
+   "sentinels_missed": 87,
+   "closure_size": 40,
+   "closure_is_S": true,
+   "union_missed_pts": 240
+  },
+  "random_lines_sentinels_missed": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "q": 9,
+  "weight": 48,
+  "sentinels": 3321,
+  "result": {
+   "covered": 240,
+   "sentinels_missed": 330,
+   "closure_size": 48,
+   "closure_is_S": true,
+   "union_missed_pts": 580
+  },
+  "random_lines_sentinels_missed": [
+   1,
+   3,
+   3,
+   4,
+   5,
+   5,
+   8,
+   8,
+   8,
+   13
+  ]
+ }
+]
