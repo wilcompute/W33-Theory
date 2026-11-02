@@ -1,0 +1,59 @@
+{
+  "status": "PASS_W3Q_HALFWALK_REFLECTION_POVM_BRIDGE",
+  "q3_exact_povm_reflection": "U(pi/2) = I - Z.T Z / 180 (for adjacency Hamiltonian A, units J=1)",
+  "unitary_period_for_odd_q": "pi / J",
+  "cases": [
+    {
+      "q": 3,
+      "points": 40,
+      "valency": 12,
+      "positive_projector_rank": 24,
+      "projector_integer_scale": 60,
+      "nontrivial_quantum_walk_period": "pi / coupling J, for odd q",
+      "half_period_time": "pi/(2*J)",
+      "half_period_matrix": "global_sign * (I - 2 E_+)",
+      "global_sign": 1,
+      "return_and_adjacent_probability": 0.04000000000000001,
+      "nonadjacent_probability": 0.017777777777777778,
+      "multiplicity_return_and_adjacent": 13,
+      "multiplicity_nonadjacent": 27,
+      "matrix_unitarity_exact": true,
+      "bare_laplacian_normalised_gap": 0.8333333333333334
+    },
+    {
+      "q": 5,
+      "points": 156,
+      "valency": 30,
+      "positive_projector_rank": 90,
+      "projector_integer_scale": 260,
+      "nontrivial_quantum_walk_period": "pi / coupling J, for odd q",
+      "half_period_time": "pi/(2*J)",
+      "half_period_matrix": "global_sign * (I - 2 E_+)",
+      "global_sign": -1,
+      "return_and_adjacent_probability": 0.02366863905325444,
+      "nonadjacent_probability": 0.0021301775147928997,
+      "multiplicity_return_and_adjacent": 31,
+      "multiplicity_nonadjacent": 125,
+      "matrix_unitarity_exact": true,
+      "bare_laplacian_normalised_gap": 0.8666666666666667
+    },
+    {
+      "q": 7,
+      "points": 400,
+      "valency": 56,
+      "positive_projector_rank": 224,
+      "projector_integer_scale": 700,
+      "nontrivial_quantum_walk_period": "pi / coupling J, for odd q",
+      "half_period_time": "pi/(2*J)",
+      "half_period_matrix": "global_sign * (I - 2 E_+)",
+      "global_sign": 1,
+      "return_and_adjacent_probability": 0.0144,
+      "nonadjacent_probability": 0.0005224489795918367,
+      "multiplicity_return_and_adjacent": 57,
+      "multiplicity_nonadjacent": 343,
+      "matrix_unitarity_exact": true,
+      "bare_laplacian_normalised_gap": 0.8928571428571429
+    }
+  ],
+  "scope": "Single-particle continuous-time quantum walk with assumed uniform adjacency couplings J; no derived J, gravity, continuum, photon hardware or TOE."
+}

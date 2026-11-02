@@ -1,0 +1,155 @@
+{
+  "status": "PASS_FIVE_DEEPER_FRONTS_AND_GAPS",
+  "optical_compiler": {
+    "input_dimension": 24,
+    "output_modes": 216,
+    "adjacent_rotations": 4884,
+    "max_reconstruction_error": 4.579669976578771e-16,
+    "max_qr_residual": 1.7763568394002505e-15,
+    "angle_error_rms_trials_radians": {
+      "0.0": {
+        "max_isometry_element_error": 4.718447854656915e-16,
+        "frobenius_isometry_error": 6.607367993686996e-15,
+        "completeness_error": 1.7763568394002505e-15
+      },
+      "0.0001": {
+        "max_isometry_element_error": 0.00030110529826227195,
+        "frobenius_isometry_error": 0.005520894799407498,
+        "completeness_error": 1.7763568394002505e-15
+      },
+      "0.001": {
+        "max_isometry_element_error": 0.0037908096430964155,
+        "frobenius_isometry_error": 0.054244414490547475,
+        "completeness_error": 1.9984014443252818e-15
+      }
+    },
+    "mesh_file": "data\\w33_20261102_adjacent_givens_mesh.json.gz",
+    "scope": "216-mode real orthogonal interferometer compiler, not a 24-mode-only detector or a validated hardware layout."
+  },
+  "effect_blind_sector": {
+    "exact_null_rank_from_CRT": 15,
+    "blind_leverage_each_outcome": "5/72",
+    "max_numerical_blind_leverage_deviation": 7.355227538141662e-16,
+    "null_projector_idempotence_residual": 3.652164795234306e-15,
+    "operator_span_dim": 201,
+    "real_symmetric_operator_dim": 300,
+    "complex_hermitian_operator_dim": 576,
+    "scope": "15-dimensional kernel on measurement outcomes; not a proof of irreducible group-module type."
+  },
+  "albert_cubic_euclidean_adjoint": {
+    "test_vector_indexed": "(ZtZ[:,0]+ZtZ[:,1])/12",
+    "cubic_value": 0,
+    "adjoint_nonzero": true,
+    "adjoint_of_adjoint_nonzero": true,
+    "adjoint_twice_max_abs": 9674588160000,
+    "canonical_euclidean_sharp_identity_holds": false,
+    "scope": "Only the canonical frame-metric quadratic gradient; general trace form / 27D embedding NOT excluded."
+  },
+  "q7": {
+    "q": 7,
+    "points": 400,
+    "lines": 400,
+    "weight": 40,
+    "seed_even_coverage": true,
+    "fixed_point_eigenvalue": 6,
+    "centered_integer_sign": "5 H - 2",
+    "squared_norm": 2400,
+    "distinct_random_walk_supports_verified": 2453,
+    "full_symplectic_orbit_size_from_parallel_certificate": 720300,
+    "conditional_full_orbit_covariance_coefficient": 308700,
+    "positive_eigenspace_dim": 224,
+    "scope": "One seed + nonuniform random walk; NOT exhaustive enumeration or proof of 720300 orbit."
+  },
+  "continuum": {
+    "status": "NO_GAPLESS_LIMIT_FOR_BARE_W3Q_NORMALISED_LAPLACIAN",
+    "diameter_for_all_q_at_least_2": 2,
+    "gap_limit_as_q_to_infinity": 1,
+    "tables": [
+      {
+        "q": 3,
+        "v": 40,
+        "adjacency_eigenvalues": [
+          12,
+          2,
+          -4
+        ],
+        "normalised_laplacian_nonzero_eigenvalues": [
+          0.8333333333333334,
+          1.3333333333333333
+        ],
+        "normalised_spectral_gap": 0.8333333333333334
+      },
+      {
+        "q": 5,
+        "v": 156,
+        "adjacency_eigenvalues": [
+          30,
+          4,
+          -6
+        ],
+        "normalised_laplacian_nonzero_eigenvalues": [
+          0.8666666666666667,
+          1.2
+        ],
+        "normalised_spectral_gap": 0.8666666666666667
+      },
+      {
+        "q": 7,
+        "v": 400,
+        "adjacency_eigenvalues": [
+          56,
+          6,
+          -8
+        ],
+        "normalised_laplacian_nonzero_eigenvalues": [
+          0.8928571428571429,
+          1.1428571428571428
+        ],
+        "normalised_spectral_gap": 0.8928571428571429
+      },
+      {
+        "q": 9,
+        "v": 820,
+        "adjacency_eigenvalues": [
+          90,
+          8,
+          -10
+        ],
+        "normalised_laplacian_nonzero_eigenvalues": [
+          0.9111111111111111,
+          1.1111111111111112
+        ],
+        "normalised_spectral_gap": 0.9111111111111111
+      },
+      {
+        "q": 11,
+        "v": 1464,
+        "adjacency_eigenvalues": [
+          132,
+          10,
+          -12
+        ],
+        "normalised_laplacian_nonzero_eigenvalues": [
+          0.9242424242424242,
+          1.0909090909090908
+        ],
+        "normalised_spectral_gap": 0.9242424242424242
+      },
+      {
+        "q": 101,
+        "v": 1040604,
+        "adjacency_eigenvalues": [
+          10302,
+          100,
+          -102
+        ],
+        "normalised_laplacian_nonzero_eigenvalues": [
+          0.990293146961755,
+          1.00990099009901
+        ],
+        "normalised_spectral_gap": 0.990293146961755
+      }
+    ],
+    "scope": "Only bare point-graph normalized Laplacian; weighted covers/towers/other operators not ruled out."
+  }
+}
