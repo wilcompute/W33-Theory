@@ -8,6 +8,7 @@
 12523 -- the 216 codewords = the synthematic totals of the 36 double-sixes = Kramers reversal + doily spread; the five-circuit bijection; five-fold Bell contexts; letters versus totals.
 12524 -- the order-27 subgroup acts as a syndrome-controlled Weyl operator.
 12525 -- GAP stabilisers D16 x S4 (q = 7), order 1920 (q = 9); CaDiCaL re-check at q = 3, 5; q = 9 uniqueness status.
+12526 -- the other track's 216-point frame = 36 regular 5-simplices; five-spaces on SRG(36,15,6,6); 120 shared directions = (line, matching).
 """
 
 import json
@@ -121,6 +122,14 @@ def main():
     checks["12525: CaDiCaL reproduces the star verdicts at q = 3, 5"] = c3["unsat"] == 2 and not c3["sat"] and c3b["unsat"] == 1 and [s["weight"] for s in c3b["sat"]] == [10] and c5["unsat"] == 4 and c5b["unsat"] == 3 and [s["weight"] for s in c5b["sat"]] == [20]
     r7 = load("recheck_cadical_q7_W38.json"); res["second_solver"] = dict(q7_W38="pending" if r7 is None else dict(unsat=r7["unsat"], sat=r7["sat"], classes=r7["classes"]), q9="not attempted")
     cq = load("classify_q9.json"); res["classify_q9"] = "pending" if cq is None else dict(done=cq.get("done", False), infeasible=cq["infeasible"], feasible=[(f["rep"], f["normal_forms"], f["sets"]) for f in cq["feasible"]], unknown=cq["unknown"], classes=cq["classes"])
+    sf = load("simplex_frame.json"); res["simplex_frame"] = sf
+    checks["12526: Z_s is linear in the total's sentinels; each double-six's 6 rows sum to zero with inner product -8; rank 24"] = (
+        sf["row_formula_all_216"] and sf["rows_sum_to_zero_each_double_six"] and sf["inner_products_within_double_six"] == {"-8": 540} and sf["ranks"] == [5] and sf["rank_all"] == 24)
+    checks["12526: projectors sum to 7.5 E_2; the 36 five-spaces carry SRG(36,15,6,6)"] = (
+        sf["sum_projectors_eigs"]["7.5"] == 24 and sf["SRG_on_36"] == [15] and sf["common_lambda_mu"] == [6] and sum(sf["principal_cos2_spectra_between_five_spaces"].values()) == 630)
+    checks["12526: 120 shared directions, each in 3 spaces; +-3 entries = a line with a perfect matching, all 120 occur"] = (
+        sf["shared_directions"] == 120 and sf["spaces_per_direction"] == [3] and sf["three_entries_are_a_line_with_a_matching"] and sf["distinct_line_matchings"] == 120)
+    checks["12526: control -- reproduces the other track's cubic moment 108 on all 160 collinear triples"] = sf["control_cubic_moment_on_collinear_triples"] == {"108": 160}
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

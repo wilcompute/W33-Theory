@@ -1,8 +1,8 @@
-# Passes 12518–12525: the q = 9 minimum is 48; the four-anyon braid image is the centraliser of the next generator; the 216 codewords are Sylvester's synthematic totals and carry the Hesse configuration
+# Passes 12518–12526: the q = 9 minimum is 48; the four-anyon braid image is the centraliser of the next generator; the 216 codewords are Sylvester's synthematic totals and carry the Hesse configuration
 
 Claude track. Producer: `analysis/w33_pass12518_to_12525_hesse_dictionary.py`. Test: `tests/test_w33_pass12518_to_12525.py`. Drivers in
 `analysis/search_drivers_12466`: `star_cubes.py`, `star48_control.py`, `heavy_cases.py`, `heavy_split.py`, `heavy_control.py`, `classify_q7.py`, `classify_q7b.py`, `cube_stabiliser_q7.py`, `cuiwang_compare.py`,
-`braid_point_stabiliser.py`, `five_circuit_map.py`, `ten_lines_five_sentinels.py`, `common_bell_contexts.py`, `synthematic_totals.py`, `kramers_doily.py`, `codeword_vs_spread.py`, `pair_of_sic.py`, `syndrome_theorem.py`, `bell_generalisation.py`, `recheck_cadical.py`, `classify_q9.py`, `hesse_dictionary.py`, `hesse_dictionary2.py`, `hesse_dictionary3.py`, `tprime_block.py`.
+`braid_point_stabiliser.py`, `five_circuit_map.py`, `ten_lines_five_sentinels.py`, `common_bell_contexts.py`, `synthematic_totals.py`, `kramers_doily.py`, `codeword_vs_spread.py`, `pair_of_sic.py`, `syndrome_theorem.py`, `bell_generalisation.py`, `recheck_cadical.py`, `classify_q9.py`, `simplex_frame.py`, `hesse_dictionary.py`, `hesse_dictionary2.py`, `hesse_dictionary3.py`, `tprime_block.py`.
 
 Labels: **[E]** exact computation or proof, **[N]** numerical with a stated tolerance, **[I]** interpretation.
 
@@ -230,6 +230,24 @@ The q = 7 row is the third independent count of 720,300. The S₄ is the cube's 
 
 **Literature.** De Bruyn (ICMS 2020) lists W(3) and Q(4,3) among the quadrangles whose hyperovals can be classified, and Pasechnik's paper used computer classification for both. I did not find the values for q = 7, 9 or the Sylvester identification, but I could not read every candidate in full, so these are not claimed as new to the literature.
 
+## 12526: the other track's 216-point frame is 36 regular simplices
+
+**Prior art.** `2026-11-02_route_minimum_cubic_tomography.md` (other track, d28feb4f9) defines Z = 2H − J on the 216 supports: rank 24, ZᵀZ = 360 E₂, a tight spherical 2-design, with cubic moments reconstructing W(3,3). That work owns the frame. The
+decomposition below follows by combining it with 12523. As a control, `simplex_frame.py` reproduces its cubic moment 108 on all 160 collinear triples, and its rank 24.
+
+**[E]** By 12523, each row is linear in the five sentinels of its total: **Z_s = J − Σ_{i∈total} 1_{F_i}**, checked in integers on all 216. Each syntheme lies in exactly 2 of the 6 totals of a double-six, so:
+
+> **The 6 rows of each double-six sum to zero and have constant inner product −8 = −40/5. The 216-point frame is a union of 36 regular 5-simplices.**
+
+**[N]** (eigenvalue tolerance 10⁻⁵; direction vectors verified integer to 10⁻⁶)
+
+- The sum of the 36 projectors onto the 5-spaces is 7.5 E₂, with spectrum 7.5²⁴ and 0¹⁶. So the double-sixes form a tight frame of subspaces of the 24-dim eigenspace.
+- Two 5-spaces are in one of two relations. **270 pairs** have principal cos² (0, 0, 0, ¼, ¼) and **360 pairs** have (1/16, 1/16, 1/16, 1/16, 1). The first relation is the graph **SRG(36,15,6,6)**, BT837's schedule graph, checked for degree and common neighbours.
+- The 360 pairs share exactly one direction. There are **120 such directions, each in exactly 3 spaces**. Each is an integer vector with entries ±3 on 4 coordinates (two of each sign) and ±1 elsewhere.
+- **[E on the label]** The ±3 coordinates are always a W(3,3) line, and their signs a perfect matching of it. All 120 = 40 × 3 pairs (line, matching) occur.
+
+The pair (line, matching) is the object whose stabiliser is the second order-216 subgroup class in the `2026-08-29` no-go. No quantum measurement or physical channel is proposed here; the other track's firewall on physical scope applies equally.
+
 ## What this does not do
 
 No claim here concerns particles, forces or constants. The dictionary is one-qutrit quantum information sitting on a finite geometry, and the choice of c is external: nothing here selects a
@@ -240,4 +258,4 @@ point (compare `2026-10-22_anchored_transvection_hamiltonian.md`).
 - S. X. Cui, Z. Wang, *Universal quantum computation with metaplectic anyons*, J. Math. Phys. 56 (2015), arXiv:1405.7778.
 - B. De Bruyn, *Classification results for hyperovals of generalized quadrangles*, ICMS 2020.
 - D. V. Pasechnik, *The triangular extensions of a generalized quadrangle of order (3,3)*, Bull. Belg. Math. Soc.
-- Corpus: Pass 173; BT837; BT855; BT856; Pass 7217; Pass 11143; Pass 11210; Pass 1047; 12413; 12507–12516; `2026-08-29_216_CLIFFORD_TORSOR_NOGO.md`; `2026-09-21_physical_a2_clifford648_w33_bridge.md`.
+- Corpus: `2026-11-02_route_minimum_cubic_tomography.md`; Pass 173; BT837; BT855; BT856; Pass 7217; Pass 11143; Pass 11210; Pass 1047; 12413; 12507–12516; `2026-08-29_216_CLIFFORD_TORSOR_NOGO.md`; `2026-09-21_physical_a2_clifford648_w33_bridge.md`.

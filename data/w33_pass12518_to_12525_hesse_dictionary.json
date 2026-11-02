@@ -835,10 +835,78 @@
   },
   "classify_q9": {
     "done": false,
-    "infeasible": 198,
+    "infeasible": 274,
     "feasible": [],
     "unknown": [],
     "classes": 511
+  },
+  "simplex_frame": {
+    "row_formula_all_216": true,
+    "double_sixes": 36,
+    "rows_sum_to_zero_each_double_six": true,
+    "inner_products_within_double_six": {
+      "-8": 540
+    },
+    "ranks": [
+      5
+    ],
+    "rank_all": 24,
+    "all_inner_products": {
+      "-8": 7020,
+      "-4": 6480,
+      "4": 4320,
+      "8": 3240,
+      "16": 2160
+    },
+    "sum_projectors_eigs": {
+      "-0.0": 16,
+      "7.5": 24
+    },
+    "principal_cos2_spectra_between_five_spaces": {
+      "(0.0625, 0.0625, 0.0625, 0.0625, 1.0)": 360,
+      "(0.0, 0.0, 0.0, 0.25, 0.25)": 270
+    },
+    "ZtZ_formula": true,
+    "control_cubic_moment_on_collinear_triples": {
+      "108": 160
+    },
+    "SRG_on_36": [
+      15
+    ],
+    "common_lambda_mu": [
+      6
+    ],
+    "shared_directions": 120,
+    "spaces_per_direction": [
+      3
+    ],
+    "direction_entry_values": [
+      [
+        [
+          -3,
+          2
+        ],
+        [
+          -1,
+          18
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    ],
+    "support_top_sizes": [
+      2
+    ],
+    "top_is_a_sentinel": 0,
+    "top_is_a_line": 0,
+    "three_entries_are_a_line_with_a_matching": true,
+    "distinct_line_matchings": 120
   },
   "checks": {
     "12518: star classes 2, 4, 24, 511 at q = 3, 5, 7, 9": true,
@@ -876,7 +944,11 @@
     "12523: at q = 3, 5, 7, 9 the uncovered points are the union of the missed factorisations": true,
     "12524: exactly 27 elements are scalar on the reducible syndrome; 9 orthogonal operators on s = 1; L^-1 on s = 2": true,
     "12525: GAP: q = 7 stabiliser 384 = D16 x S4, orbit 720300; q = 9 stabiliser 1920, orbit 3586680": true,
-    "12525: CaDiCaL reproduces the star verdicts at q = 3, 5": true
+    "12525: CaDiCaL reproduces the star verdicts at q = 3, 5": true,
+    "12526: Z_s is linear in the total's sentinels; each double-six's 6 rows sum to zero with inner product -8; rank 24": true,
+    "12526: projectors sum to 7.5 E_2; the 36 five-spaces carry SRG(36,15,6,6)": true,
+    "12526: 120 shared directions, each in 3 spaces; +-3 entries = a line with a perfect matching, all 120 occur": true,
+    "12526: control -- reproduces the other track's cubic moment 108 on all 160 collinear triples": true
   },
   "all_checks_pass": true
 }
