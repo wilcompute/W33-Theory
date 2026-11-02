@@ -1,0 +1,3026 @@
+{
+  "schema": "w33.20261102.forty_points_complete_pdf_page_audit.v1",
+  "status": "ALL_215_PAGES_EXTRACTED_AND_INDEXED",
+  "pdf_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+  "pdf_byte_size": 1333946,
+  "page_count": 215,
+  "nonempty_pages": 215,
+  "total_extracted_characters": 673091,
+  "combined_normalized_text_sha256": "6d47120b423ebef0cff3085aeb6d1ce97edc0cc27bd940e38c7e65de5dff7828",
+  "theorem_mentions": 0,
+  "explicit_refuted_markers": 0,
+  "explicit_open_markers": 0,
+  "pages": [
+    {
+      "page": 1,
+      "chars": 729,
+      "sha256": "3ebbed6c4ae947fd9f0879694ae4841342b659dd2612f292517ce989d0175894",
+      "top_lines": [
+        "one point  4 lines  12 neighbours  27 far points",
+        "Forty Points",
+        "One qutrit, the exceptional algebras, and a light cone",
+        "An exact and honest account of the 𝑊(3, 3) programme,"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 2,
+      "chars": 3997,
+      "sha256": "e21b41342dd3307570f991f574d93cebb2706528fbab6dd8b5169cee0fcc3f7d",
+      "top_lines": [
+        "Abstract",
+        "For everyone. Take the smallest quantum system that has three settings instead of two — a",
+        "qutrit — and let it act on itself. The ways it can be transformed, and the ways those transfor-",
+        "mations do or do not interfere with one another, form a finite geometric object with exactly"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 3,
+      "chars": 3091,
+      "sha256": "907cd09cbd3eec6e5721a4c3b90d22fd37a579cc59c4e7cd38c9ce7b56778576",
+      "top_lines": [
+        "|  3",
+        "is the height twist exp(𝑖𝜋𝜌∨) and gives a (5, 5) slice: signature is a real-form datum, invisi-",
+        "ble over 𝔽3. For the 215 heterotic ℤ6 Standard Models of the 𝑊(3, 3) twist we recover and",
+        "freeze the exact spectra and prove, over the full rational 𝐵−𝐿freedom and over all 1024"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 4,
+      "chars": 3586,
+      "sha256": "d2a2959195a0ee5ebbfd03dc4a6c3ea57a9debcb21dbf65c08f5e98dc5b6def1",
+      "top_lines": [
+        "4    |  Forty Points",
+        "Contents",
+        "Abstract                                                                       2",
+        "How to read this paper                                                          7"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 5,
+      "chars": 3882,
+      "sha256": "081df7aabec105c8e1cfbde7bdeeb7e4104523ad74600ce9f17da4cc8e9b40bf",
+      "top_lines": [
+        "Contents    |  5",
+        "4.7  Four clocks: the Hesse striations and the tetracode  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  31",
+        "4.8  Clocks as relations: the Page–Wootters weld .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  33",
+        "4.9 A second light cone: Hermitian 3 + 1, and a weld that fails   .  .  .  .  .  .  .  .  .  .  .  33"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 6,
+      "chars": 2629,
+      "sha256": "e50b95d130a11e8d7494306b057d88cdc764bd978b3f64892b050f4f1cc9dc7e",
+      "top_lines": [
+        "6    |  Forty Points",
+        "9  The Standard Model on forty points                                          92",
+        "9.1  What the finite geometry itself contains   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  92",
+        "9.2  The string that carries the geometry    .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  95"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 7,
+      "chars": 2221,
+      "sha256": "e794e86562664acb2217e42d454a9820ae3eba9f3fa93f2b981afca8881dfd90",
+      "top_lines": [
+        "How to read this paper    |  7",
+        "How to read this paper",
+        "This paper is written for two readers at once. One has never studied algebra beyond school",
+        "and wants to understand what has actually been found. The other wants every statement to"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 8,
+      "chars": 3379,
+      "sha256": "72938d4bc263825843cb5cb4e0c0b52c965fff04795d82d93a572f09d7f9403c",
+      "top_lines": [
+        "8    |  Forty Points",
+        "one qutrit ℂ3                               𝐸8: 248 dimensions",
+        "three settings, with phases                    80 + 84 + 84 from 9 histories, §5",
+        "9 operator histories End(ℂ3)                           clock gradings of 𝐸8"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 9,
+      "chars": 2799,
+      "sha256": "c56c762ac79833928cd2ffa728fc200f712b8cb75b6e3a0e8e0304cbb3edbafa",
+      "top_lines": [
+        "Prologue: a shape made of measurements    |  9",
+        "In plain words",
+        "A useful picture: 𝑊(3, 3) is like a crystal. A crystal is finite in its unit cell, but the",
+        "unit cell determines the whole crystal’s behaviour — how it breaks, how light passes"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 10,
+      "chars": 2945,
+      "sha256": "62e5b7a5df3eadc50b765e3b921c85cd0af6d3f5cbffcf70e7251efbbdeadc82",
+      "top_lines": [
+        "10    |  Forty Points",
+        "1.4 The forty in one breath",
+        "Here is the whole construction, which Sections 2–3 unpack slowly. Label the 81 two-qutrit",
+        "Pauli operators by vectors 𝑥∈𝔽43. Remove the identity, leaving 80. An operator and its"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 11,
+      "chars": 2577,
+      "sha256": "428ca893da7ad5d01fe0d1e539f172156b91cdcd9c4753d0cc72ee5d6bf54a67",
+      "top_lines": [
+        "The object: the symplectic quadrangle 𝑊(3, 3)    |  11",
+        "Where this stops",
+        "The finite geometry supplies symmetry and structure.  It does not, by itself, supply a",
+        "Hamiltonian, an energy scale, a value of Newton’s constant, or a reason for any par-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 12,
+      "chars": 2165,
+      "sha256": "23ea993062091a442cf41b9ebd147612a107b714ef1ae229d4b731658c264890",
+      "top_lines": [
+        "12    |  Forty Points",
+        "𝐿",
+        "𝑝",
+        "𝑝∉𝐿"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 13,
+      "chars": 707,
+      "sha256": "6e64b28b602e77a16986389812654e76f2f91f4b2ad10d76db1a38df5d16b5a6",
+      "top_lines": [
+        "The object: the symplectic quadrangle 𝑊(3, 3)    |  13",
+        "𝑊(3, 3): 40 points, all 240 edges",
+        "𝑝and its 4 lines (12 + 12 edges)            neighbour to far point (108)               far to far (108)",
+        "Figure 3. A portrait of 𝑊(3, 3), computed from the symplectic form and drawn from the point"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 14,
+      "chars": 2544,
+      "sha256": "3e0cdad40d56643178609f96100672ef2af1a74c7267fee84a76763a9a84bc92",
+      "top_lines": [
+        "14    |  Forty Points",
+        "So the symplectic form is not an arbitrary choice: it is the commutation phase of two-qutrit",
+        "measurements.",
+        "What it means physically: contexts"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 15,
+      "chars": 2618,
+      "sha256": "2cd3ca84bd18eefa5be6e5409e44f9daf34409caf8d9a93d35703f5a40671844",
+      "top_lines": [
+        "One qutrit, acting on itself    |  15",
+        "2.5 The dual picture and a firewall",
+        "Swap the roles of points and lines: the 40 lines of 𝑊(3, 3), with two lines “adjacent” when",
+        "they meet, form the dual quadrangle, which is the parabolic quadric 𝑄(4, 3). For odd 𝑞the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 16,
+      "chars": 2555,
+      "sha256": "2d1afe54396912d332533aca91555c81053882061840436b7e15fb9bf0a769cd",
+      "top_lines": [
+        "16    |  Forty Points",
+        "3.1 Operators are states",
+        "An operator on one qutrit is a 3×3 matrix: nine complex numbers. So the space of operators",
+        "End(ℂ3) is itself a nine-dimensional complex vector space, and with the Hilbert–Schmidt"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 17,
+      "chars": 2900,
+      "sha256": "2cb2b0a4d6e0aa2666f10f908ec0746379b62e8f77d3db866a97cfa226b80ddc",
+      "top_lines": [
+        "One qutrit, acting on itself    |  17",
+        "“qutrits” are not two particles, and not even two subsystems in the usual sense: they are",
+        "the algebra of left actions and its commutant, the algebra of right actions, on one qutrit’s",
+        "operator space."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 18,
+      "chars": 2803,
+      "sha256": "90e3af23c83109d0aa54276636c0c85f85b717a6e51a35f17a41df31a0d9b9ff",
+      "top_lines": [
+        "18    |  Forty Points",
+        "A correction the papers needed",
+        "An earlier draft of the photonic paper described three optical time bins as containing",
+        "“a past qutrit and a future qutrit”. Three orthogonal bins span only ℂ3, whereas two"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 19,
+      "chars": 3198,
+      "sha256": "a4e2d43bf0116be64b48d38d192a6c087779707ca4d32bb1c32b03c6a7e8b7b1",
+      "top_lines": [
+        "One qutrit, acting on itself    |  19",
+        "The matrix units are its eigenvectors:",
+        "𝑝𝑗",
+        "𝐾𝐸𝑖𝑗= log   𝐸𝑖𝑗."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 20,
+      "chars": 3469,
+      "sha256": "31635065fbb72261bbafba9bce83975ac735c0071d2bfebb244f0ef33da511f0",
+      "top_lines": [
+        "20    |  Forty Points",
+        "Proposition 3.5 (the spookiness budget)                                    COMPUTATION",
+        "For the qutrit Bell inequality of Collins, Gisin, Linden, Massar and Popescu [47] (local",
+        "bound 2): using only 𝑊(3, 3)’s own resources — stabilizer states, Pauli measurements,"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 21,
+      "chars": 3504,
+      "sha256": "d0c74b423318df7950cb715234e906f4145e2afee52b60127e84e0795985af63",
+      "top_lines": [
+        "One qutrit, acting on itself    |  21",
+        "In plain words",
+        "In space, a system can give its full entanglement to only one partner. Across time it",
+        "gives it to its whole history at once — because it is not sharing anything, it is simply"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 22,
+      "chars": 4001,
+      "sha256": "1a4bd1c3104c6169961a7ab3a6af2fa5a15bafef747f3fa2240358ef71339aad",
+      "top_lines": [
+        "22    |  Forty Points",
+        "Sp(6, 3)), each column carrying determinants (1, 1, −1). The value 4/√15 is derived: on",
+        "the family √𝑥|000⟩+ √(1 −𝑥)/4 ∑𝑎=1,2|𝑎⟩(|0𝑎⟩+ |𝑎0⟩) the negativity is √(1 + 15𝑥)(1 −𝑥)/4,",
+        "maximal at 𝑥= 7/15. The temporal optimum keeps climbing: 3.576, 3.621, 3.658 at 𝑑="
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 23,
+      "chars": 4269,
+      "sha256": "caa186799e28fe3bd291c1a7691eef04bc2c3452591f1541bd8f7ef9c133bb86",
+      "top_lines": [
+        "One qutrit, acting on itself    |  23",
+        "ing — against 2 in time. The bulge is not a qutrit feature: normalised so that a maximally",
+        "entangled pair has 𝑁= 1, three qubits exceed the line by more ((8√2 −4)/7 = 1.0448) and",
+        "the excess shrinks with the local dimension (1.0259 for 𝐷= 4, 1.0159 for 𝐷= 7). The opti-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 24,
+      "chars": 4093,
+      "sha256": "9ecf058fb5e3880052bfdf99a092f10b39ffeff823bb24b39e2565502685153e",
+      "top_lines": [
+        "24    |  Forty Points",
+        "couplings 16 ⋅16 ⋅10 of the 𝐸6 cubic; a partially entangling tick never keeps a singlet-sector",
+        "split in the singlet sector, and the frame stabiliser 𝑊(𝐷5) — the 𝑆𝑂(10) Weyl group — acts on",
+        "such a split only locally or perfectly, never partially (a counting dictionary; no field content is"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 25,
+      "chars": 4113,
+      "sha256": "28a4d25fecac12d8581b313c1bdbbb04c3486416c876998e6202a4634d82c2bc",
+      "top_lines": [
+        "One qutrit, acting on itself    |  25",
+        "Labelled by the line over 𝔽9, the uniform four-sets of ten are the Baer sublines, and two points",
+        "outside a non-subline four-set share a sign class exactly when they are harmonic to one pair",
+        "of it whose pairing avoids one Galois class of cross-ratios ({1±𝑖} versus its conjugate) — the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 26,
+      "chars": 2303,
+      "sha256": "ec5953179ea801f38a9b6b0c42e1665fd6c7e04c70b17f446f80738e0e573e08",
+      "top_lines": [
+        "26    |  Forty Points",
+        "4 Time: a finite light cone and four clocks",
+        "Section 3 ended with a qutrit whose operators behave like the before-and-after of a process.",
+        "This section asks what time looks like inside 𝑊(3, 3). The answer comes in three layers, and"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 27,
+      "chars": 2614,
+      "sha256": "c0cae1e4ea1dd7a959ee84ee3fa6d58efe5c6c77ed44db989519df818428cbf8",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  27",
+        "The 13 boundary lines are not an arbitrary leftover. In Plücker coordinates the 40 lines of",
+        "𝑊(3, 3) lie on the quadric 𝑥0𝑥4 −𝑥1𝑥3 + 𝑥22 = 0 in ℙ4(𝔽3) — this is the dual quadrangle",
+        "𝑄(4, 3) of Section 2 — and the 27 histories are its “big cell” 𝑥0 ≠0, reached by 𝑆↦[1 ∶𝑎∶𝑏∶"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 28,
+      "chars": 2369,
+      "sha256": "cbef4ba8359574fedda7f374fd288dc2de3a3e70fe99b6e1e742b43c37c30d1b",
+      "top_lines": [
+        "28    |  Forty Points",
+        "“null” has a sharp operational meaning: two complete measurement contexts share",
+        "exactly one measurement. The celestial circle — the set of directions light can travel —",
+        "is in ordinary 2 + 1 dimensions a circle of directions; here it is the four points of the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 29,
+      "chars": 2867,
+      "sha256": "08469011566147c2c7f23aa8433b4cbe7f7187d8e8d30aac535d3ac5e43556fa",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  29",
+        "Proposition 4.2 separates two notions that ordinary physics merges. The state of the",
+        "finite present is a counter of null pulses modulo their common mode: 27 values. But",
+        "a history that fires one pulse in every direction returns to the same present while ad-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 30,
+      "chars": 2561,
+      "sha256": "163f31c7b7eca5a1df7e25c004932976ebfd6bddc983327a82032a3b4fac09c6",
+      "top_lines": [
+        "30    |  Forty Points",
+        "4.5 History is a path, and paths do not close",
+        "The null graph is connected with 27 vertices and 108 edges, so its cycle space has rank 108 −",
+        "27+1 = 82. Its fundamental group is the free group 𝐹82 and its universal cover is the infinite"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 31,
+      "chars": 2897,
+      "sha256": "d5b9dc9ad4858ea0654717ee5b2046795a88ff2735f6da60adb9a705866effc8",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  31",
+        "Temporal observable   Lives on                                        Reversible?",
+        "position in the present  one of 27 events                                  yes",
+        "step count              length of a path in the null graph                  yes"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 32,
+      "chars": 3440,
+      "sha256": "abee61c9641f3677e9d4a5368b21b2267a339456477849de8d54b92fc34b24a6",
+      "top_lines": [
+        "32    |  Forty Points",
+        "Theorem 4.5 (one 𝑆4 for three structures)                                    COMPUTATION",
+        "The four projective null directions of the present, the four Hesse clocks, and (Sec-",
+        "tion 5) four orthogonal 𝐴2 root systems inside 𝐸8 are all indexed by ℙ1(𝔽3) ="
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 33,
+      "chars": 2807,
+      "sha256": "4f653880d9e7810b55ade137f6dcf2281aba86ac66d858efb56eeb40a25f6a19",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  33",
+        "the identity behaves exactly like a spinor under rotation, and this is literal: the tick lifts to",
+        "an element of order eight in 𝐺𝐿(2, 3) whose fourth power is the central 2𝜋spin sign, and in",
+        "Section 8 the same sign is matter parity (Theorem 8.3)."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 34,
+      "chars": 2395,
+      "sha256": "6bf4167a4b486008eb0303fad502420923ef224fd8ed9f3ccc10832f43eac79a",
+      "top_lines": [
+        "34    |  Forty Points",
+        "ten null directions of the Hermitian 3 + 1 present",
+        "= ten disjoint lines of 𝑊(3, 3) covering all 40 points (a spread)",
+        "Figure 11. The Hermitian 3+1 light cone is a partition of the forty points into ten complete mea-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 35,
+      "chars": 4130,
+      "sha256": "7dc78914b044b72b5778755e13d099ddf9180a70754c2b2623551f0b4f815d39",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  35",
+        "— and discarding it turns a reversible tick into the maximally irreversible channel. This",
+        "is the finite form of the modern view that the thermodynamic arrow is information",
+        "loss, and it is consistent with the Connes–Rovelli idea of Section 3: a state can orient"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 36,
+      "chars": 4153,
+      "sha256": "8b427824e6ba3b1175fc9718809226d516f153615c7bc6479f6285b6bc4fa27c",
+      "top_lines": [
+        "36    |  Forty Points",
+        "The approach to 4 can be written down. With 𝑑outcomes every CGLMP term is one linear",
+        "2",
+        "ramp in the cyclic lag 𝛿of the second outcome from its target, so 𝐼𝑑= 4 − 𝑑−1𝐿with 𝐿the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 37,
+      "chars": 4219,
+      "sha256": "0be39d7797b3caafb050389d3bbf4e71260d5862c7a04c4cdc29b114dc084241",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  37",
+        "two-qutrit and 84013/157464 of three-qutrit ticks the reversal cannot be unitary — exactly",
+        "the ticks whose period is divisible by 3 — so Wigner’s anti-unitarity is forced by the dynam-",
+        "ics. Any T-violation of the substrate dynamics must therefore come from the non-Clifford"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 38,
+      "chars": 4673,
+      "sha256": "a0a03c55521dcc7494fe6d56c02e9a06b1149dedfd4a2a44d73de778ac5d6e84",
+      "top_lines": [
+        "38    |  Forty Points",
+        "2𝜋",
+        "ond level lies in the same cubic field ℚ(cos    ), and the stronger level 0.712386 reached                                                 9",
+        "by single-sector violators is exactly the square of the minimal one: the optimal reversal"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 39,
+      "chars": 3989,
+      "sha256": "daaf18dcec4fd0b3baf04a084d80d8114699eeb887e1e959fbee74e580256416",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  39",
+        "𝔽9-linear perfect tick (exhaustive: 165 888 reduced cases covering all 13 436 928 dressings,",
+        "since 𝑇3 = 𝑍lets the Pauli parts be absorbed into the frame; one magic leg breaks exactly",
+        "1"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 40,
+      "chars": 4388,
+      "sha256": "7c829bdc73237bae3ea831185517fc461d979a6afc21a02cc11c4eddeb03e6ac",
+      "top_lines": [
+        "40    |  Forty Points",
+        "Im tr[𝐻𝑢, 𝐻𝑑]3. On every one-qutrit Clifford+𝑇word with up to three cubic gates (checked",
+        "word by word against the exact criterion) and four (by exact count, 2 077 650 of 2 985 984),",
+        "𝐽6 > 0 exactly for the violators; the same holds on all two-qutrit ticks checked. A single magic"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 41,
+      "chars": 4220,
+      "sha256": "ab734d455920dc19e906c4480b8d32d603918aefcfbf9304700fefbf28e73cc3",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  41",
+        "𝐽6 are real, the Clifford orbit moments of 𝜓and ̄𝜓agree up to order five because the first",
+        "𝑇-odd Clifford-invariant polynomial of a qutrit ray has bidegree (6, 6) (and is unique there),",
+        "and therefore 𝐽6(𝑈) = |𝜆|12 Δ6(𝜓) with Δ6 = avg𝐶|⟨𝜓|𝐶𝜓⟩|12−avg𝐶|⟨𝜓|𝐶̄𝜓⟩|12 = 2|ℎ6(𝜓)|2; its"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 42,
+      "chars": 4178,
+      "sha256": "ac55de038a30bb1d4f05a2df9b4f3f7d0eb96c3c52b65f81d964355f2647e485",
+      "top_lines": [
+        "42    |  Forty Points",
+        "classes, and about 12% are magnitude-blind and need phases. At four qutrits the fixed-axis",
+        "case is settled on 97.6% (decider) plus 0.6% (theorem) of Stab(𝑧1), and on every decided",
+        "same-line class. The generic component of 𝐽6’s blind spot is not a hidden symmetry (no con-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 43,
+      "chars": 4236,
+      "sha256": "3c2812ff5fc7cfecef410f03422366d449c8b43eb104c66c90245792d099d861",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  43",
+        "reversal is a symplectic 𝑄with 𝑀𝑠−𝑘𝑄(𝐽𝑀𝐽) = 𝑄and 𝑄𝑧1 = 𝑧1, plus a frame condition. If",
+        "𝑀2𝑧1 = 𝑧1 then 𝜔(𝑀𝑧1, 𝑧1) = 0, so the shear fixes 𝑣= 𝑧1 + 𝑀𝑧1; the anti-symplectic 𝐴= 𝑄𝐽",
+        "satisfies 𝐴= 𝑀𝑠−𝑘𝐴𝑀, whence 𝐴𝑣= −𝑣; 𝑄commutes with the cubic gate because both"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 44,
+      "chars": 4154,
+      "sha256": "fd898696f5de9a189c743d20336142a3a44c027fc8dc6c927f93105feda1bf48",
+      "top_lines": [
+        "44    |  Forty Points",
+        "One-gate reversibility is linear algebra. Let 𝐾0 be the vectors fixed by 𝑀and orthogonal to the",
+        "magic axis. Pairing the frame condition of any reversal 𝑄with 𝜔(𝑤, ⋅), 𝑤∈𝐾0, shows that a",
+        "reversible frame satisfies 𝜔((1 −(𝑄𝐽)−1)𝑤, 𝑎) = 0 for all 𝑤∈𝐾0 — for every 𝑛. Conversely,"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 45,
+      "chars": 4212,
+      "sha256": "cc437bd972f9dfb422016ee699aa1a97ccab882e886cc6c7cb9b312fb40d763c",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  45",
+        "The union law is a theorem. Every reverser 𝐴of a one-gate tick has a semisimple part 𝐴𝑁",
+        "(𝑁odd) that is again a reverser, splits, and reverses at least the frames 𝐴does; reversals",
+        "with a nonzero shear exponent are dominated the same way (their cube is shear-free in"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 46,
+      "chars": 4095,
+      "sha256": "dec4d5c4a4be1b8ca23721deeb428a257ca3677334f9b4edadef11d9a11ed34a",
+      "top_lines": [
+        "46    |  Forty Points",
+        "odd half. For two qutrits the even half is the Burkhardt space above and the odd half is the",
+        "Cartan subalgebra of 𝔢8 = 𝔰𝔩(9) ⊕Λ3ℂ9 ⊕Λ3ℂ9∗, the Lie algebra of two-qutrit operators",
+        "together with the creation and annihilation of three fermions in the nine two-qutrit modes"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 47,
+      "chars": 4570,
+      "sha256": "336015b2034bf069482703d62be5fc1ebe3ccdd5225160be161c01ade51cbba1",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  47",
+        "map.py, w33_pass11700_triality_is_central.py, w33_pass11701_11702_clock_symme-",
+        "try_breaking.py, w33_pass11703_vacuum_and_clock_share_a_line.py)",
+        "A consistent Standard-Model configuration. The line-trinification breaking above makes colour"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 48,
+      "chars": 3610,
+      "sha256": "2fad505935fe307ed1b19a591dfd9f23928543d4274c1b03894f38e628c0a9a9",
+      "top_lines": [
+        "48    |  Forty Points",
+        "two-qutrit 𝐸8 is exactly the nine-level determinant (1680 couplings, constant 1). The Codex",
+        "ℤ6-II benchmark lies in the W(3,3) anomaly class but not in the strict 𝑆𝑈(9) class, so this",
+        "dictionary does not apply to it.  THEOREM   COMPUTATION  (w33_pass11802_11807_levels_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 49,
+      "chars": 3297,
+      "sha256": "1cb226b2e23088fc27c6e7578e6ea939167bc2fc53458dc37ac01a5857aae83d",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  49",
+        "𝑆∈Sp(2𝑛, 3),",
+        "𝐴(𝑆) = 𝑛−𝑐(𝑆),     𝑐(𝑆) = ∑ (𝑚1(𝜆)/2 + 𝑚2(𝜆)) + 𝑚𝔽91 (𝑥2 + 1),",
+        "𝜆=±1"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 50,
+      "chars": 3601,
+      "sha256": "b2804ad7bafd9f5328237c5e1d688567bffb4dfd7815e71544d92aae15c64b84",
+      "top_lines": [
+        "50    |  Forty Points",
+        "• a graph or a real form for the other pieces;",
+        "• for three small pieces, one found by search.",
+        "So 𝐴(𝑆) = 𝑛−𝑐(𝑆) for every number of qubits, with 𝑐= 𝑚1(1)/2+𝜒2 𝑚2(1)+𝑚1(𝑥2 +𝑥+1),"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 51,
+      "chars": 4151,
+      "sha256": "7b0df716d75951a4143b9a6e4b7e86534febdae723cf1d40d9f91380b022b1a9",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  51",
+        "so the phase space is the spinor of a five-dimensional quadratic space, as 𝑆𝑝(4) ≅Spin(5),",
+        "whose real form Spin(2, 3) is the isometry group of anti-de Sitter space. Its 121 points are the",
+        "40 measurement contexts (null: the conformal boundary), the 45 tensor factorisations, and"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 52,
+      "chars": 3765,
+      "sha256": "cfd3cadf6d1720903263d59e788c1688a7a8177fa9f2d86cb6a9ef9e88f476e1",
+      "top_lines": [
+        "52    |  Forty Points",
+        "lorentz_commutant.py)",
+        "The faithful lift sharpens this. The finite Lorentz group 𝐴6, lifted to 𝐸8 as a group of order ex-",
+        "actly 360, commutes with 𝔰𝔲(5), the Georgi–Glashow algebra. The order-2 torus elements of"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 53,
+      "chars": 3705,
+      "sha256": "a991a4c6b92592a2ac7cd2fcebd7d3a69462539e376342371756840aa06ac7b1",
+      "top_lines": [
+        "Time: a finite light cone and four clocks    |  53",
+        "Spinorial Lorentz together with the central translation commutes with 𝔰𝔲(3) ⊕𝔰𝔬(5) ⊕𝔲(1),",
+        "which contains the left–right-symmetric algebra.  THEOREM   COMPUTATION (w33_pass11854_",
+        "11857_family_nogo_chirality_firewall_combined.py, w33_pass11856_boundary_boot-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 54,
+      "chars": 2349,
+      "sha256": "83e8ac668c10eef72a520bde837a1bdf2fb16a320c603391b1181a4d777c0d26",
+      "top_lines": [
+        "54    |  Forty Points",
+        "geometry.  OPEN",
+        "5  𝐸8 from nine histories",
+        "𝐸8 is the largest of the five exceptional simple Lie algebras: 248 dimensions, 240 roots, a sym-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 55,
+      "chars": 3084,
+      "sha256": "8e341fa33f4afbcca985cc39ed36d87e8ae8008748fed0f8bc2d11d51114b5b5",
+      "top_lines": [
+        "𝐸8 from nine histories    |  55",
+        "Theorem 5.1 (four clocks, four 𝐴2’s)                            THEOREM   COMPUTATION",
+        "The three lines of one parallel class give three roots with pairwise products −1 and",
+        "sum 0; with their negatives they form a root system 𝐴2. Lines of different classes meet"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 56,
+      "chars": 2661,
+      "sha256": "9c14e6c36c1b1d2e7c941f399d59ba276fc2d7f9b56ef1f7ecc772c02577192a",
+      "top_lines": [
+        "56    |  Forty Points",
+        "Theorem 5.2 (no equivariant bijection)                                      COMPUTATION",
+        "The two groups of order 51 840 of Section 2 each do only half the job:",
+        "• PGSp(4, 3) ≅𝑊(𝐸6) acts faithfully and transitively on the 240 edges of 𝑊(3, 3),"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 57,
+      "chars": 2792,
+      "sha256": "92540502d4c011861488cfc88acdf849bfec139a16e7cf45d44abc03e0186584",
+      "top_lines": [
+        "𝐸8 from nine histories    |  57",
+        "5.5 𝐸6 × 𝐴2, the twenty-seven, and a cubic",
+        "Under its subalgebra 𝐸6 ⊕𝐴2,",
+        "𝐸8 = (78, 1) ⊕(1, 8) ⊕(27, 3) ⊕(27, 3),"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 58,
+      "chars": 3766,
+      "sha256": "c5bec8136fa1197498dacf5b51e393f8cdca6de0ca253ef6d0b703c9c512b028",
+      "top_lines": [
+        "58    |  Forty Points",
+        "uct of the nine SIC mirror forms and 𝐵the product of the twelve stabilizer/MUB mirror",
+        "forms. Their divisor valuations are",
+        "div 𝑃= (3, 1),    div 𝐽= (1, 2),"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 59,
+      "chars": 4036,
+      "sha256": "2078dce173f36b91562c4e78c8b334175752681870a6840242f7046df19452db",
+      "top_lines": [
+        "𝐸8 from nine histories    |  59",
+        "the exact eliminant factors as (𝐴2 + 𝐴+ 1)(𝐴3 −3𝐴2 −24𝐴−1)(𝐴3 + 24𝐴2 + 3𝐴−1). All",
+        "coordinates are nonzero and there are no points at infinity, so the nine cube-root lifts give",
+        "72 reduced rays. The invariant quotient identifies these with the 𝑇orbit. Their location is in-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 60,
+      "chars": 3402,
+      "sha256": "4f863f115a3187d185b3b5a17ca106298415a09fcb82515ec7f88fc793846564",
+      "top_lines": [
+        "60    |  Forty Points",
+        "𝑑𝑆𝐹[Hess(𝐹)] is the classical Hessian polarization of the ternary cubic’s Aronhold scalar,",
+        "exact restriction gives",
+        "19683𝒯−(48384/5)𝐼36 + (13824/5)𝐼6𝐼12"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 61,
+      "chars": 3831,
+      "sha256": "a7145d57eeeef659976bdde7b67d13eb6aaaad9f9bdc0199bce003754d4f2434",
+      "top_lines": [
+        "𝐸8 from nine histories    |  61",
+        "complex directions. A numerical full Hessian and fermion calculation reproduces the pub-",
+        "lished canonical spectrum of Goh et al.: eight scalar Goldstones, ten squared masses 162𝑚2/49,",
+        "two 486𝑚2/49, and 486𝑚2/7, 648𝑚2/7. Two small radial Kähler deformations are tested with"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 62,
+      "chars": 4067,
+      "sha256": "daf9ad6ac4184d65e569a4bb7ce86e41e13ecec8a49d0425e5cd8e1fafcc6378",
+      "top_lines": [
+        "62    |  Forty Points",
+        "Smaller field and continuum architectures (Passes11280–11284). A degree-four factor lift",
+        "of the rank-five cubic selector uses three complex 27 × 5 fields with an added auxiliary 𝑈(5)",
+        "gauge factor. Its996 real fields have91 gauge and905 positive normal directions locally; the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 63,
+      "chars": 4198,
+      "sha256": "29a6239dd13af0e4bb1589b08e5ffafbe8ff590e2efada475aa7a04f00c7d555",
+      "top_lines": [
+        "𝐸8 from nine histories    |  63",
+        "These are scoped EFT constructions and obstructions, not observed-parameter predictions.",
+        "COMPUTATION  (Passes11293–11297; matching, phase, constraint and flux controls)",
+        "The next audit contracts the actual single-channel mediator Yukawas, but finds that one vec-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 64,
+      "chars": 4017,
+      "sha256": "5315dc1619bc19230234cb7ebbaf76a08557cb8ca0cc37a2b034c2977fd9cee8",
+      "top_lines": [
+        "64    |  Forty Points",
+        "cluding an unequal noncommuting branch, but all retain a positive scalar AF barrier. A",
+        "supplied full24-field family-invariant EFT has numerical local minima with spontaneous rel-",
+        "ative CP and 2 + 1 singular-value splitting; commuting Gram matrices still preclude a CKM"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 65,
+      "chars": 3634,
+      "sha256": "0c0152b5b8d0c31565f318554011d8a250727ad70f2148753aa15cb851c382f8",
+      "top_lines": [
+        "𝐸8 from nine histories    |  65",
+        "tries of the normal hard Hessian unfixed; the native graph’s three transverse boost directions",
+        "have local shift rank 237, without establishing nonlinear Dirac closure. On the backreacted",
+        "axion-winding wall, 𝜒= 1/𝑏−4/5 and 𝑉𝜙= −𝐹/(𝑞𝑐𝑏2) solve the coupled vector zero equa-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 66,
+      "chars": 2103,
+      "sha256": "97368f4d35e23baca2bcc5654618044226b7fba79b6872c612374db95c1ee3d6",
+      "top_lines": [
+        "66    |  Forty Points",
+        "5.7 Clock gradings of 𝐸8",
+        "A clock gives more than a ℤ3-grading: once an origin and an orientation are chosen it gives",
+        "an integer grading. On the committed Chevalley basis:"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 67,
+      "chars": 2335,
+      "sha256": "a1ed44be128a7b596cee5c2774413fab7e5095adf5fe7b759ccca8b49e288b9f",
+      "top_lines": [
+        "𝐸8 from nine histories    |  67",
+        "Figure 14. The 240 roots of 𝐸8 projected to the Coxeter plane of a Coxeter element 𝑐(order 30),",
+        "which acts on the plane as a rotation by 12∘. The roots lie on eight rings of thirty. The orbits of",
+        "𝑐5 — rotation by 60∘— are regular hexagons, five per ring: these 40 hexagons are the 40 fibres"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 68,
+      "chars": 2642,
+      "sha256": "43f71674e834b6d0baf8b4efaf8d4251660f35d36462b3510674095a9d82498f",
+      "top_lines": [
+        "68    |  Forty Points",
+        "What it means physically: cubic time",
+        "Read degree as “order in time”. A first-order move is a state update; two moves com-",
+        "pose into a second-order history; and three reach the top doublet, whose coeﬀicient"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 69,
+      "chars": 2866,
+      "sha256": "9f732bfb030550b28d7048d20adb80e1781c8b387011c51567807face4e226c9",
+      "top_lines": [
+        "The Freudenthal 56 and a 57-dimensional light cone    |  69",
+        "𝑎7 =    −3    −2    −1      0      1      2      3",
+        "𝑎8 = −2    1           ⋅           ⋅           ⋅           ⋅           ⋅           ⋅",
+        "contact layer 𝔤−1"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 70,
+      "chars": 2406,
+      "sha256": "258fbc7d8dba9277b6521d2f0eba89378605abd54dc3fae4af4b4c1ca0a61fd5",
+      "top_lines": [
+        "70    |  Forty Points",
+        "(𝑋#)# = 𝑁(𝑋) 𝑋and 𝑋⋅𝑋# = 3𝑁(𝑋), so 𝑁is the norm of a cubic Jordan algebra (a split",
+        "Albert algebra) over ℚ[29]. w33_pass10949_freudenthal_quasiconformal_clock_",
+        "cone.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 71,
+      "chars": 3085,
+      "sha256": "89436527922c8844bc884b363bdfcf4a61bf431bff113853d3ab4753e89dade6",
+      "top_lines": [
+        "The Freudenthal 56 and a 57-dimensional light cone    |  71",
+        "(iv) the Weyl reflection 𝑤exchanging 𝑒𝜃and −𝑒−𝜃acts as an inversion 𝜄, and",
+        "𝐷(𝑝, 𝑝′)",
+        "𝐷(𝜄𝑝, 𝜄𝑝′) =                                    𝒩(𝑝) 𝒩(𝑝′)."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 72,
+      "chars": 2305,
+      "sha256": "532d4bac5e81b964708b2ec5f652c4ea08d699d75d0b17b9e2fdbf3939c45541",
+      "top_lines": [
+        "72    |  Forty Points",
+        "Nothing here supplies a black hole, a charge lattice of a physical theory, or dynamics.",
+        "OPEN",
+        "7  Real forms: where time’s signature comes from"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 73,
+      "chars": 2565,
+      "sha256": "ee4136a1b76253da26c50ff5ad745ee4b90fdafee9a3e282bb7d1b7fed19f7b2",
+      "top_lines": [
+        "Real forms: where time’s signature comes from    |  73",
+        "7.3 The three tick lines are a Klein four-group",
+        "The three roots 𝜃, −(𝜃−𝛼8) and −𝛼8 that define the tick line and its companions sum to zero,",
+        "have pairwise products −1, and are orthogonal to 𝐸6: they form the external 𝐴2 of 𝐸6 × 𝐴2."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 74,
+      "chars": 2705,
+      "sha256": "05fd444499e4b17a64831cc6d9ce53e2a5c12accf0a06e16fa4aa97d3cf8b36c",
+      "top_lines": [
+        "74    |  Forty Points",
+        "form of the repository lands on the first; the Hesse clock lands on the second. The",
+        "black-hole quartic of Section 6 is the entropy formula in both.",
+        "More precisely, the clock’s chain 𝐸6(−26) ⊂𝐸7(−25) ⊂𝐸8(−24) (all three computed here,"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 75,
+      "chars": 2829,
+      "sha256": "474a81d3c1f785c852f7e22efd099d1dc0917f108df54709c648451974f61b1e",
+      "top_lines": [
+        "Real forms: where time’s signature comes from    |  75",
+        "one time",
+        "5 dims",
+        "5"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 76,
+      "chars": 3193,
+      "sha256": "61d0c955408b0b52a21829fb9345a28a51ab1cb6ae655da2bd4144c4ca4c7fee",
+      "top_lines": [
+        "76    |  Forty Points",
+        "𝛾= 2𝛽. The clock/split dichotomy of Theorem 7.3 is thus also a pair of adjacent phases.",
+        "w33_pass12054_tick_condensate_landau.py",
+        "The couplings can be derived rather than assumed. A tick is generated by the positive op-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 77,
+      "chars": 3826,
+      "sha256": "9eb78ac3c40d6533f5d905352dab0b6db123832c061341c0e4786544571cbc6d",
+      "top_lines": [
+        "Real forms: where time’s signature comes from    |  77",
+        "Observers see the clock’s space but not its time.  Let an observer be a Kramers time re-",
+        "versal 𝐽(anti-symplectic, 𝐽2 = −1; 36 up to sign), with Lorentz group its centraliser 𝑆𝐿(2, 9)",
+        "(Pass 11831). The clock group of Theorem 7.4 is canonical: it is the unique subgroup of in-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 78,
+      "chars": 3935,
+      "sha256": "9f088cb80ba6b0cfe68c0c3062cfee8c9d663ceed05e89c1f6a482763e9ef78d",
+      "top_lines": [
+        "78    |  Forty Points",
+        "Time turns triality.  For two non-collinear clocks the symmetries fixing both events act on",
+        "the three octets 8𝑣, 8𝑠, 8𝑐of Pass 12064 as the cyclic group ℤ3, with kernel the two-clock",
+        "group 𝐶2 × 𝑄8. The generators are the ticks at the four common neighbours: each fixes"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 79,
+      "chars": 3714,
+      "sha256": "00c17860c6992bb07e2f2dc364124fec80de1a341f7613cb0f9764dc89db5d72",
+      "top_lines": [
+        "Real forms: where time’s signature comes from    |  79",
+        "the clocks. The clock involutions act on the 248 as commuting gradings; their free energy is",
+        "concave, Klein pairs (product a clock) beat all other pairs by 𝑍72 −𝑍64 = 8(1−𝑒−1/2𝑇)2, and",
+        "with a capacity cost the first multi-clock condensate is a Klein triple, fixing 𝔢6 + 𝔲(1)2. w33_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 80,
+      "chars": 3680,
+      "sha256": "90a49bb26f67949132dd5fbf893b04e1ae1394dbaae60939944bda1558248d67",
+      "top_lines": [
+        "80    |  Forty Points",
+        "Three families.  Adding an order-3 shift that keeps the Standard-Model gauge roots of a",
+        "grading, the only non-zero anomaly-free chiral patterns are 𝑁(𝑄) = 𝑁(𝑢𝑐) = 𝑁(𝑑𝑐) =",
+        "𝑁(𝐿) = 𝑁(𝑒𝑐) = ±3, for exactly 10+10 of the 242 compatible shifts, all with fixed algebra 𝔢6+"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 81,
+      "chars": 4554,
+      "sha256": "3bd43a60a0b06a2471e2dfb0ecf5e1f52e62fdc291bf0626581568938b9baad4",
+      "top_lines": [
+        "Real forms: where time’s signature comes from    |  81",
+        "never reaches three families. w33_pass12116_to_12120_three_generation_physics.py",
+        "Prior art on the same geometry is stronger: the 𝐴8 shift already gives 104 tachyon-free",
+        "three-generation models with the canonical 𝑘𝑌= 5/3 (Passes 11095–11099). On the 𝑒6 + 𝑎2"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 82,
+      "chars": 3614,
+      "sha256": "1e6a56ce6d8f0aa9a912e0e93b998aeb0705a2129c69f60eef42eaa14efeaa9d",
+      "top_lines": [
+        "82    |  Forty Points",
+        "these exotics, and the two candidates fail further: 𝑘𝑌= 17/3 gives sin2 𝜃𝑊(𝑀𝑍) ≈0.09–",
+        "0.11 with the Standard-Model spectrum, one has no charged-lepton Yukawa and the other",
+        "has Dirac neutrinos without Majorana masses. The Witten-sector levels of the model with"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 83,
+      "chars": 3393,
+      "sha256": "3c04776d7c44914f9736cc071a865754eff778e33ef1d2a42b13a46b4dabe300",
+      "top_lines": [
+        "Real forms: where time’s signature comes from    |  83",
+        "A non-supersymmetric string can still be close to a supersymmetric one: a Scherk–Schwarz",
+        "interpolation attaches the fermion parity to a translation, so that supersymmetry returns as",
+        "a radius grows and the vacuum energy is exponentially small when bosons and fermions"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 84,
+      "chars": 3372,
+      "sha256": "8aadcd88ea018ccd33dc3cf5eaa1a435df69f3815b5afd18fed92991240be80a",
+      "top_lines": [
+        "84    |  Forty Points",
+        "— and none a scalar. This corrects an earlier sample statement that the twisted sectors carry",
+        "no 10 at all (true of its 163 models, false of the class, whose density is 0.17%); what sur-",
+        "vives is the physical point: the twisted 10s are twisted fermions, so on this route no scalar"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 85,
+      "chars": 3897,
+      "sha256": "ea011e5422f43edd8375743549a23b990e6668e2db7ab8b87cf210461f5ea64c",
+      "top_lines": [
+        "Real forms: where time’s signature comes from    |  85",
+        "The native Narain point.  The native lattice of the parallel track (II(2, 2) at 𝑇= 𝑈= 𝜌)",
+        "admits no Scherk–Schwarz translation compatible with its 𝐶3 × 𝐶3, and even a single 𝐶3",
+        "freezes all four of its moduli, so an interpolation radius there requires breaking the native"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 86,
+      "chars": 3899,
+      "sha256": "96afd2b0f154e9df825a9f122d305fc3550527b86cf9c2afb18a14c17a2bb90e",
+      "top_lines": [
+        "86    |  Forty Points",
+        "massless, based on printed weights, is retracted). The torsion shifts their momentum",
+        "along the Scherk–Schwarz direction by 1/2 for every winding (it is a lattice Wilson line,",
+        "not a freely acting translation), so they return as tachyons for 𝑅6 > √3𝛼′/8 ≈0.61√𝛼′;"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 87,
+      "chars": 3127,
+      "sha256": "5db48b8a5f2c47dfaf60904f8c07684123ebed6addda177c801f9c0d436c59b5",
+      "top_lines": [
+        "The Albert algebra: ten dimensions, a spinor, and matter parity    |  87",
+        "to_12362_sub_orbifolds_thresholds_vacuum_proton.py Winding sectors settle the",
+        "small-radius side: feeding the engine constructing elements translated by an odd",
+        "winding along 𝑒5 (controls: winding is invisible without the Wilson line, and even"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 88,
+      "chars": 2905,
+      "sha256": "41dd748fcc943f71aab7355ae8b5596b552074292bc9b71406f02639be33f828",
+      "top_lines": [
+        "88    |  Forty Points",
+        "In plain words",
+        "The octonions are the largest of the four number systems in which you can divide: the",
+        "real numbers, the complex numbers, the quaternions, and the octonions, of dimen-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 89,
+      "chars": 2954,
+      "sha256": "8d44ae7401e6755b4d7b6feb6cab95569dd3cd13157789bf2d69f7735c461a30",
+      "top_lines": [
+        "The Albert algebra: ten dimensions, a spinor, and matter parity    |  89",
+        "“boosts” 𝐿𝑦(𝑦∈𝐴0, orthogonal to 𝑒−𝑐) gives a 45-dimensional algebra that pre-",
+        "serves 𝐴0 and its determinant of inertia (1, 9), and acts faithfully: it is 𝔰𝔬(1, 9);",
+        "(iv) on 𝐴1/2 the commutant of 𝔰𝔬(1, 9) is one-dimensional: the 16 is absolutely irre-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 90,
+      "chars": 2701,
+      "sha256": "2f2c086d3728de80c4944ba751722a743ab0b8238186cfed78534cc22716c60b",
+      "top_lines": [
+        "90    |  Forty Points",
+        "Two readings of the same branching",
+        "A ten-dimensional chiral spinor, seen by a four-dimensional observer, becomes four",
+        "left-handed Weyl spinors transforming as the 4 of 𝑆𝑈(4). If 𝑆𝑈(4) is read as the rota-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 91,
+      "chars": 2635,
+      "sha256": "12009ee1d7a2c00349f0ad995c40af8c2f6867513aa2e076e2e89ac374210743",
+      "top_lines": [
+        "The Albert algebra: ten dimensions, a spinor, and matter parity    |  91",
+        "repository’s matter parity is the 2𝜋rotation of the Spin(9) fixing a primitive idem-",
+        "potent. The same 27 = 1 + 10 + 16 that a GUT reads as singlet, Higgs and matter",
+        "is, in the clock real form, scalar, Lorentz vector and Weyl spinor.  BRIDGE  (reading)"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 92,
+      "chars": 3033,
+      "sha256": "c6f44ef507a5a9f7d6fbf48390ad1736270684a516dd256500278a824e3b7514",
+      "top_lines": [
+        "92    |  Forty Points",
+        "The exceptional ladder closes: from one qutrit, through 𝑊(3, 3), 𝐸8, a Hesse clock and",
+        "its real form, to the Albert algebra 𝐻3(𝕆) — whose automorphisms are 𝐹4, whose",
+        "structure group is 𝐸6(−26), and inside which sit ten-dimensional Minkowski space, its"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 93,
+      "chars": 2389,
+      "sha256": "d2e30a6339a3ad35f770991cddc3c346f05a44c257932dbc41a7939843c787fe",
+      "top_lines": [
+        "The Standard Model on forty points    |  93",
+        "EXACT      Quantum measurement structure (qutrit Paulis, contexts, Clifford group)",
+        "EXACT        Exceptional algebras 𝐸6, 𝐸7, 𝐸8, 𝐹4 and the Albert algebra",
+        "EXACT     A finite light cone; clocks; one Lorentzian real form 𝔰𝔬(1, 9)"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 94,
+      "chars": 2489,
+      "sha256": "e90e405cdc3040b77282944b9a7117f58bf11e426b34b73ad563aa8baa1b8778",
+      "top_lines": [
+        "94    |  Forty Points",
+        "Proposition 9.1 (the transvection spine)                                     COMPUTATION",
+        "The centraliser 𝐶(𝑅) of a transvection has order 648 (it is the point stabiliser 31+2∶2𝐴4)",
+        "and centre ⟨𝑅⟩≅ℤ3. Its permutation module on the 12 neighbours of 𝑝0 decomposes"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 95,
+      "chars": 3226,
+      "sha256": "0f6b5bdfd3ec8cc347afc0c0926404fa5ef75789b502e743788a7f2ff8c6de2d",
+      "top_lines": [
+        "The Standard Model on forty points    |  95",
+        "Theorem 9.3 (no Pauli 𝐸6)                                    THEOREM   COMPUTATION",
+        "Conjugation by the three-qutrit Pauli group splits 𝔤𝔩(27) into 729 distinct one-",
+        "dimensional character spaces, so every conjugation-stable subalgebra is spanned by"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 96,
+      "chars": 2888,
+      "sha256": "b525e61d0e904740d34754738fce314dfec0a3178e895df4b04fccdaca963060",
+      "top_lines": [
+        "96    |  Forty Points",
+        "first principles, why heterotic model builders moved to even-order orbifolds. An exhaus-",
+        "tive census of 127 980 classes confirms it, and 64 000 fresh Wilson-line draws on the unique",
+        "modular-invariant 𝑊(3, 3) twist of 𝑇6/ℤ3 find no Standard Model (P10979). The law is a"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 97,
+      "chars": 3619,
+      "sha256": "1850fc5d890520687568675054e5d7a00c8ab885695ee3765bc892a06ce7eda7",
+      "top_lines": [
+        "The Standard Model on forty points    |  97",
+        "Requirement       Current exact status                                Badge",
+        "Supersymmetric     In the doublet–triplet-solving vacuum, 𝐹- and 𝐷-flatness   REFUTED",
+        "vacuum                conflict: one 𝑈(1) direction gives every mass singlet a pos-  (that vacuum)"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 98,
+      "chars": 3022,
+      "sha256": "b32a33d97b3d213b66cfaf610a73ee5142002b7e0233ae653fed064eaf20ca5a",
+      "top_lines": [
+        "98    |  Forty Points",
+        "ℤ6 orbifolds",
+        "Standard Models with the 𝑊(3, 3) twist  215            5b3f3ad",
+        "a 𝐵−𝐿matter parity exists  88           P10960           baryon triality   0/215"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 99,
+      "chars": 3346,
+      "sha256": "5a92bdc3a8f7351da8167523305d6a2a330267ec7f55ff57897655bd4324139d",
+      "top_lines": [
+        "The Standard Model on forty points    |  99",
+        "a matter parity, keeps exotics massless.",
+        "• A first, rational-span test left one vacuum with every exotic massive. Integer powers",
+        "of the vacuum fields (the discrete remnants of the broken 𝑈(1)s) already keep four"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 100,
+      "chars": 3210,
+      "sha256": "1a69f7515fce8e6f0632210a128e03fed045f9d80488cd276cee3ac1d443651e",
+      "top_lines": [
+        "100    |  Forty Points",
+        "4 anomaly-free",
+        "215 models       83: FI term cannot be cancelled                 128: 𝐷-flat directions exist",
+        "88 with 𝐵−𝐿      64: no 𝐷-flat direction             23 + 1: every 𝐷-flat vacuum condenses a 𝐵−𝐿= ±1 field"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 101,
+      "chars": 2971,
+      "sha256": "337dfecbd8ef5235e07b01db7d4feb9ff62ebe018d73fdffbff46dd08af11e6f",
+      "top_lines": [
+        "The Standard Model on forty points    |  101",
+        "FI side: needs 𝑓< 0",
+        "forced 𝜈𝑐",
+        "16−3 ⊂78                                                   singlets                                                    singlets"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 102,
+      "chars": 3391,
+      "sha256": "9934203ed4e90680fffb1052f790bca1823b2ee20f333af8feee9fe934ed7ac3",
+      "top_lines": [
+        "102    |  Forty Points",
+        "In plain words",
+        "Of the two textbook discrete symmetries that protect the proton, the first dies at the",
+        "Fayet–Iliopoulos term and the second is ruled out by the grand-unified shape of the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 103,
+      "chars": 2929,
+      "sha256": "f6a7906789d0a1a96b609f4a558f81cc5b426b2360151de5a1a988f0a6201679",
+      "top_lines": [
+        "The Standard Model on forty points    |  103",
+        "do tame 𝑅-parity violation, because proton decay through 𝜆′𝜆″ falls as 1/ ̃𝑚4. With 𝜆′ ∼𝜆″ ∼",
+        "⟨𝑛⟩/𝑀𝑠≈0.2–0.4, the bound |𝜆′𝜆″| ≲10−27( ̃𝑚/100 GeV)2 needs ̃𝑚≳6 × 1014–1.2 × 1015 GeV.",
+        "The Higgs sets a ceiling. Running the Standard-Model couplings up at two loops (checked"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 104,
+      "chars": 4107,
+      "sha256": "25da228c704e6a58cda757014281f3b553374880143b44d7afc4ca33c3a542c0",
+      "top_lines": [
+        "104    |  Forty Points",
+        "Even the best of these, the certified 23-direction vacuum, would not have described our",
+        "world: the Higgs pair it protects is protected by an exact symmetry that also forbids any",
+        "mass for its superpartners (massless Higgsinos, long excluded), and although its top-quark"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 105,
+      "chars": 3879,
+      "sha256": "d63ac5c59300206c00bc91789a64e4470cf6de85eb963f479752fea4cf18987b",
+      "top_lines": [
+        "The Standard Model on forty points    |  105",
+        "by class, these models carry 48 more states of electric charge ±1/3 on one side than on the",
+        "other, six of them neutral under every hidden group. In any vacuum that leaves the hidden",
+        "sector unbroken — all 28 do — those six are exactly massless, and both hidden groups are"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 106,
+      "chars": 3685,
+      "sha256": "e145c9f197126a9ff14d3c43f749cffc3288c5e7e32eb7896162949ae06cbbbc",
+      "top_lines": [
+        "106    |  Forty Points",
+        "have no dimension-four or dimension-five proton-decay operators.",
+        "We computed the 87 twins after repairing five faults that stop the standard spectrum pro-",
+        "gram at 𝑁= 0. Every twin is anomaly-free up to a single Green–Schwarz 𝑈(1), keeps its"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 107,
+      "chars": 3606,
+      "sha256": "d94ed54c6df8dd6ef71c1fe7c851da3d3dfd9b8443dbe78171c9f2733d3465ed",
+      "top_lines": [
+        "The Standard Model on forty points    |  107",
+        "new here is that the 𝑊(3, 3) shift is among them. Two independent codes agree on the mass-",
+        "less spectra of every sample model the non-supersymmetric orbifolder ships.  COMPUTATION",
+        "(w33_pass11095_so16xso16_a8_standard_models.py)"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 108,
+      "chars": 4144,
+      "sha256": "1bcc2d22593637adb1a113fb216ef305a70c6d0b75aabbb54d478bf850d59f20",
+      "top_lines": [
+        "108    |  Forty Points",
+        "54: it is Δ(54), the flavour group of a Wilson-line-free ℤ3 torus [27]. Its Heisenberg subgroup",
+        "𝐻27 = ⟨𝑋, 𝑍⟩(translation of the fixed points and the phase of the selection rule) has as its",
+        "centre the orbifold twist itself, 𝑍𝑋= 𝜔𝑙𝑋𝑍, and the reflection is the −𝐼of 𝑆𝐿(2, 3) acting"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 109,
+      "chars": 3995,
+      "sha256": "b0cf70e2e5d4f2075d45cc808b587a5822536edf39886da4d3690b3ec59cddf7",
+      "top_lines": [
+        "The Standard Model on forty points    |  109",
+        "significant (Fisher 𝑝= 0.16).  COMPUTATION  (w33_pass11107_winding_tachyons.py, w33_",
+        "pass11108_tachyon_free_moduli_rescan.py, w33_pass11110_moduli_map.py)",
+        "The stabilised family modulus also undoes the heavy top. Worldsheet instantons make the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 110,
+      "chars": 3952,
+      "sha256": "266da52d299248e8bc4e1af9997320fdfd6b0ab507d4512870063d2c8e191219",
+      "top_lines": [
+        "110    |  Forty Points",
+        "heavy top and bottom from a localised Higgs—giving 21 survivors with a neutral exit. In",
+        "8 of them only neutral tachyons appear even when both Wilson-line tori shrink together,",
+        "and in 6 the whole zero-𝐵direction stays neutral down to Im 𝑇= 0.6: charged tachyons"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 111,
+      "chars": 4263,
+      "sha256": "ec1c0fd8b969547feadd71c4a8506155c06ab5f5d77bc4403a3c0b0fbf69302d",
+      "top_lines": [
+        "The Standard Model on forty points    |  111",
+        "i.e. ⟨𝑇⟩⟨𝑆⟩/𝑀2 ≈0.01–0.02; the light generations stay degenerate. Across all 21 neutral-",
+        "exit survivors the condensate never unlocks an up-type Yukawa or a 𝜇-term (down entries",
+        "in 14, lepton in 17). The endpoint itself is not a nearby vacuum: shrinking the neutral"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 112,
+      "chars": 3036,
+      "sha256": "cf7a29938929dd820a912184491133e82999d0973e0b4ca327c7a4e443afa36f",
+      "top_lines": [
+        "112    |  Forty Points",
+        "touched by the condensate, while the anarchic conjugate sector that would give large lepton",
+        "mixing gives large quark mixing too.  COMPUTATION  (w33_pass11138_singlet_vev_hier-",
+        "archies.py, w33_pass11139_wilson_line_duality_group.py, w33_pass11140_zero_ra-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 113,
+      "chars": 3340,
+      "sha256": "25bd625eca3804379d14291a97e0110e54b3692c83e469ae16fe8a62f4053bde",
+      "top_lines": [
+        "The Standard Model on forty points    |  113",
+        "reversed_only_by_antiunitaries.py): they split 16+16 exactly as the two half-spin",
+        "weight sets of 𝐷5, unitary Cliffords preserve each half, and antiunitary ones — and",
+        "nothing else — exchange them. The other track has since found the same law on the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 114,
+      "chars": 3253,
+      "sha256": "eef05bd2733982aca4c759eb722e30fa0071e64268f995ea21869aa6e471ae15",
+      "top_lines": [
+        "114    |  Forty Points",
+        "tification (5419c27, 98cafff): frame orientation parity is the index-two character of 𝑊(𝐸6),",
+        "and the Pass 346 half-spin swap is the same character. It also separated this relative chiral-",
+        "ity from two other ℤ2 labels that are not characters: the point/line type, which is invariant"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 115,
+      "chars": 3610,
+      "sha256": "20914a06d219de3a6e0394e8e1c389110f6149da9c46ce09fc0a824d5cd2d3ff",
+      "top_lines": [
+        "The Standard Model on forty points    |  115",
+        "This is the known vacuum-alignment problem of flavour symmetry, here for the line sta-",
+        "biliser’s 𝑆4. Solving it needs structure the geometry does not supply here.  COMPUTATION",
+        "(w33_pass11230_tm1_alignment.py)"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 116,
+      "chars": 3050,
+      "sha256": "d40c18ae36f6dbdf6b991bb8c4da673f3362642bcadf525062aded5e67f4501c",
+      "top_lines": [
+        "116    |  Forty Points",
+        "entropy growing at the maximal rate;",
+        "• the arrow-carrying three-qutrit tick of Section 4 comes next, 534–539 from product",
+        "states;"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 117,
+      "chars": 4198,
+      "sha256": "500ff609d8e41c3f61b569d4130070db9f419f5d4fe20efc3f6e5caa98626dc1",
+      "top_lines": [
+        "The Standard Model on forty points    |  117",
+        "Bolza’s curve) it has rank three with no hierarchy. Near a product point the hierarchy obeys",
+        "the exact law 𝜎1𝜎3/𝜎22 = 𝑟(𝜏1)𝑟(𝜏2)/2, and because this and 𝜎2/𝜎1 would be the same in",
+        "every fermion sector, one modulus with one theta characteristic is excluded by the measured"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 118,
+      "chars": 4218,
+      "sha256": "e5ba0ccb8c4435826f5b4cbbb42a1a8d62508e2f649bcb6e5c8ed2ec627a46d9",
+      "top_lines": [
+        "118    |  Forty Points",
+        "family 𝑆𝑈(3) to its Cartan. Only the 𝑆𝑈(3)3 part is gauged in the four-dimensional model;",
+        "the enhancement to 𝐸6 would need a higher-dimensional (gauge–Higgs) completion. w33_",
+        "pass11887_11889_e6_family_at_w33_point.py Which vacuum is realised depends on the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 119,
+      "chars": 4398,
+      "sha256": "b82b4eb634f772b8a5c421a03800c739df10f2ef5ab8aea0c9bd66726ef555e8",
+      "top_lines": [
+        "The Standard Model on forty points    |  119",
+        "a phase gate, an off-diagonal one the entangling gate 𝜔2𝑐1𝑐2, and 𝐺𝐿(2, ℤ[𝜔]) permutes 𝜇.",
+        "The finite group generated has projective order 51840 and is isomorphic, by its action on",
+        "the Pauli group, to 𝑆𝑝(4, 3) = Aut 𝑊(3, 3). The diagonal moduli alone give only 𝑇′ × 𝑇′"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 120,
+      "chars": 4298,
+      "sha256": "ce82cdfc3fabd6ab6e955f58113730901d2dbfff14d9654265db89fb18599d56",
+      "top_lines": [
+        "120    |  Forty Points",
+        "1",
+        "instanton factor 𝜃(0,𝑎)/𝜃(0,0), which is 2 at the self-dual point (the normalisation agrees with",
+        "Pass 11109). A light-pair split is bought with a top suppression, and this is the criterion"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 121,
+      "chars": 3835,
+      "sha256": "9f4985ffbbad90532cbd7f3ab78fe43e0d25885336261167946cff6f6fa9cd62",
+      "top_lines": [
+        "The Standard Model on forty points    |  121",
+        "• for 𝑘≡0, 𝑚𝑐= 𝑚𝑢;",
+        "• for 𝑘≢0, the top equals one of the light quarks.",
+        "These coincidences occur only at those points, and the theta-zero law is the case 𝑘= 3. In-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 122,
+      "chars": 3637,
+      "sha256": "4c22cfdcc100ebd166a39e489e10d565a19041000d4ba2503cc4166bc679b193",
+      "top_lines": [
+        "122    |  Forty Points",
+        "the minimal home is falsified by the up/down comparison: the up Yukawas need a larger",
+        "effective area. With a localised Higgs the CKM is a permutation (𝑉𝑢𝑠= 0). A Higgs ad-",
+        "mixture of 𝜖≈3 ⋅10−3 in a second selection class gives a Cabibbo-sized angle, but such a"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 123,
+      "chars": 3904,
+      "sha256": "dd30ccb2fa2f55e992d019bf067036408dbb81750bf578653df6e157258ff678",
+      "top_lines": [
+        "The Standard Model on forty points    |  123",
+        "• The Gaussian slopes are quantised: −4/3, −8/3 (or −2/3), and −2, −1 or −4, in units",
+        "of 𝜋. The observed up/down log-ratio 1.605 is therefore not attainable with a scalar",
+        "period matrix; the entangling modulus is required."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 124,
+      "chars": 3790,
+      "sha256": "4a01ddb41a13895e30415d5f2bc90a4c19698a38530636445b3dd8c43ba50e9b",
+      "top_lines": [
+        "124    |  Forty Points",
+        "shifted by (5𝑚/18)𝑤, so there is no Georgi–Jarlskog factor. A scan of the tilted (1, 1, 4) model",
+        "(279 moduli, 83700 Higgs choices) finds 𝑚𝑑/𝑚𝑠> 0.01 in 17% of cases – the tilt fixes the size",
+        "of the first-generation mass – but no Gatto–Sartori–Tonin correlation (0.11), and none of the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 125,
+      "chars": 4166,
+      "sha256": "0749eb1c77678ee3da286068f3c6c156003e8f6224878179d0a1501b77ec6dd3",
+      "top_lines": [
+        "The Standard Model on forty points    |  125",
+        "image coincide as a 216-element projective matrix set in this same qutrit basis (after canoni-",
+        "cal projective normalisation at 10−9), extending the intertwiner to the whole projective one-",
+        "qutrit Clifford/Hessian group at the certified numerical level. The tensor cube has three"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 126,
+      "chars": 3848,
+      "sha256": "d3b3d990f8d95b3e80539872e7040032e4b3f26e4c9fd1e5b31b8ecde4f7aa45",
+      "top_lines": [
+        "126    |  Forty Points",
+        "Higgs: whenever a nonzero F-flat vacuum exists it lands back on the charm–up-locked sta-",
+        "biliser locus. A viable cubic escape needs non-F-flat soft/radiative dynamics, higher invari-",
+        "ants, extra fields, or further symmetry breaking. w33_20261011_h27_hesse_cubic_f_flat_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 127,
+      "chars": 4151,
+      "sha256": "bd31ac436a72f056cb98bcb6947c544b8b62daff6fe8c274332448c72b84856c",
+      "top_lines": [
+        "The Standard Model on forty points    |  127",
+        "Yukawa spectrum (1, 1, 0) exactly at the Eisenstein point – the theta-zero law – and (1, 1 −",
+        "𝑎𝜀, 𝑏𝜀2) near it. For quarks this is excluded, but in the Weinberg channel it is an inverted",
+        "neutrino spectrum with a solar splitting linear in 𝜀and an almost massless 𝜈3: matching"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 128,
+      "chars": 4168,
+      "sha256": "6a19c9e9b428f9a331c34d959bd9bd71f63f67bfeae1217f4a7c53c227db1c41",
+      "top_lines": [
+        "128    |  Forty Points",
+        "ric texture whose small parameter is the off-diagonal modulus Ω12 (the criterion rank one",
+        "⇔Ω12 = 0 and the Schmidt spectrum (1, 𝜀, 𝜀2) are already Pass 11872’s). The heat-equation",
+        "expansion about a product torus then gives, in closed form, an invariant independent of Ω12"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 129,
+      "chars": 4309,
+      "sha256": "6b733dd0c34e5f901db9cc8860d459cdebe18b1341b51d226e4a470db95973a0",
+      "top_lines": [
+        "The Standard Model on forty points    |  129",
+        "and the mirror Ω →−̄Ω, 𝑧→−̄𝑧restores the sign, a labelling convention). With twelve pa-",
+        "rameters this shows existence, not a prediction. In every good fit the ̄5 factor sits in its cusp",
+        "regime, where the level-3 Gaussian factor is ≈𝑚𝑠/𝑚𝑏: the up hierarchy is entangling, the"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 130,
+      "chars": 4258,
+      "sha256": "3a1471a87cc2cf7d2830847cc92ac1c4e62ee85827ebad8e5d85ac58c962b00b",
+      "top_lines": [
+        "130    |  Forty Points",
+        "actor_angle_needs_neutrino_breaking.py Strong CP enters through the same modulus.",
+        "Since det 𝑌𝑢= 𝐶𝜀3𝑢+ 𝑂(𝜀5𝑢) (TOE38/TOE39), arg det 𝑌𝑢= 3 arg 𝜀𝑢+ const + 𝑂(|𝜀𝑢|2), and",
+        "with the fitted Wilson line det 𝑌𝑑also winds three times around 𝜀𝑑= 0. The heat-kernel"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 131,
+      "chars": 3963,
+      "sha256": "0ff0ce7c57ec2e8c87899bdfaafd6804e0187038a278712218122580672c4b0b",
+      "top_lines": [
+        "The Standard Model on forty points    |  131",
+        "𝑚𝑒𝑚𝜇/𝑚2𝜏at 0.66 of its value: a 2–3𝜎tension that the running between the matching scale",
+        "and 𝑀𝑍must decide. w33_pass12045_geometric_barr_row.py Running does not rescue",
+        "that branch. Followed with one-loop Standard Model running from 𝑀𝑍to 2 × 1016 GeV, no"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 132,
+      "chars": 2422,
+      "sha256": "cdbb4e86bffc154e5f4e6374c6555d12b837737ec76544a3172a98621edc9084",
+      "top_lines": [
+        "132    |  Forty Points",
+        "9.9 What we do not count as evidence",
+        "The older manuscripts contain many numerical coincidences: 1/𝛼≈137 written as a combi-",
+        "nation of cyclotomic values of 𝑞= 3, spectral indices of the cosmic microwave background,"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 133,
+      "chars": 3204,
+      "sha256": "90af75ce41af4f7db0329e7c271888ef41bb21a04060e5f002f3dc3a2a201bf4",
+      "top_lines": [
+        "The machine: a computer read off the geometry    |  133",
+        "carrier",
+        "one photon",
+        "time ⊗frequency"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 134,
+      "chars": 2660,
+      "sha256": "937a62f6ca92ef06ad53f4b13305304289de6fd48faa2631e61780c7429a3866",
+      "top_lines": [
+        "134    |  Forty Points",
+        "Theorem 10.1 (the complete instruction group)                               COMPUTATION",
+        "The six Clifford opcodes generate exactly Sp(4, 3) (order 51 840); adjoining one trans-",
+        "lation generates the aﬀine group"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 135,
+      "chars": 3261,
+      "sha256": "881e30147010978bdc1af366d56ac2c5ec59085291ea233112e015f581dacc84",
+      "top_lines": [
+        "The machine: a computer read off the geometry    |  135",
+        "graph is 7, attained by heptads of seven rays with all pairwise overlaps 1/3. bt822_",
+        "magic_census_matter_is_magic.py, bt818_ovoid_nogo_theta_gap.py",
+        "4"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 136,
+      "chars": 2952,
+      "sha256": "da4228eb4f7619216029ad37fc199483a472a98306ed23a0d3b94bc4952988dd",
+      "top_lines": [
+        "136    |  Forty Points",
+        "𝑊(3, 3)",
+        "011              111                      𝑊(3, 3)          𝑊(3, 3)",
+        "010              110"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 137,
+      "chars": 3864,
+      "sha256": "439ad4e2c5310cf221b1c3dd79f694b78e14b472697d0176fa6e491d86d1cf84",
+      "top_lines": [
+        "Epilogue: what a theory of everything still needs    |  137",
+        "exact                     bridge / hosted                  open",
+        "• 𝑊(3, 3) as qutrit commutation       • “null” = shared measurement         • a dynamical principle",
+        "geometry                         • lifted history = proper time          • a continuum limit; gravity"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 138,
+      "chars": 3976,
+      "sha256": "01699cb022e42e2bd3b2f2c8d2c8520635935a35aba576d976f89ca5e455236d",
+      "top_lines": [
+        "138    |  Forty Points",
+        "order under every alignment of the scalar vacuum tried; with a single Higgs triplet",
+        "a residual 𝑆3 locks 𝑚𝑐= 𝑚𝑢exactly at every minimum of its general Δ(54)-invariant",
+        "potential, while a misaligned flavon triplet splits charm from up but needs an order-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 139,
+      "chars": 3139,
+      "sha256": "e01035b2c90001912b225383b36ecd623d8e46c036de86f88dbc2ed19f522dea",
+      "top_lines": [
+        "Epilogue: what a theory of everything still needs    |  139",
+        "the antiunitary coset is the generalised CP of the genus-two modulus, so the orientation",
+        "is set by whether the vacuum value of Ω lies off the CP-real locus, and the open question",
+        "becomes what stabilises Ω."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 140,
+      "chars": 3578,
+      "sha256": "8562b95f2c9ee848cca49b4c24e34ccf4eb124c8c9b741e0786b500bc75efe6f",
+      "top_lines": [
+        "140    |  Forty Points",
+        "Was believed                                                Is true",
+        "there is a natural bijection 240 edges ↔240 roots        no equivariant bijection; a 6∶1 fibration of",
+        "roots over points (§5.4)"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 141,
+      "chars": 2812,
+      "sha256": "d6f6d2407fb2d6fab1b7452d30b9def6aae75ad3ca72c6098d3b3b6165387023",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  141",
+        "A The ledger: every claim, its status, its witness",
+        "Every script named below lives in analysis/ of the repository wilcompute/W33-Theory",
+        "and writes its certificate to data/; most have a regression test in tests/. Commit hashes"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 142,
+      "chars": 2839,
+      "sha256": "d18a743db84fa9c4626c89947f4fd142073b9e3ffa47ba514f64950b30419b55",
+      "top_lines": [
+        "142    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "perfect space–time gates:              THEOREM   COMPUTATION   w33_pass11156_perfect_",
+        "det 𝑆𝐴𝐴+ det 𝑆𝐵𝐴= 1; 13824 = 243                          spacetime_gates.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 143,
+      "chars": 2899,
+      "sha256": "8f87fdbb3b255742a2312ff2899706dc3e2697da5b633b0e64ff65e429f3bf9d",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  143",
+        "Claim                           Badge                   Witness",
+        "perfect three-qutrit tick secret-shares     COMPUTATION            w33_pass11165_three_",
+        "each past (0 to every proper subset of                         qutrit_arrow.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 144,
+      "chars": 2546,
+      "sha256": "ed23aaccb56a5f62a149feae9bb7b2beb2b3a49466b1d05997b2a38591145160",
+      "top_lines": [
+        "144    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "perfect two-qutrit gate ⇔collinear      THEOREM   COMPUTATION   w33_pass11177_perfect_",
+        "factorisations in GQ(4, 2) (tritangent                         gates_tritangent.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 145,
+      "chars": 2547,
+      "sha256": "1d8b40d38b73b81bc8056a44862f029995092aeb08cbfc3022399cb364c7bbec",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  145",
+        "Claim                           Badge                   Witness",
+        "4/√15 is the maximum on the          THEOREM   COMPUTATION   w33_pass11187_torus_",
+        "torus-symmetric class: certified                             class_bnb.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 146,
+      "chars": 2594,
+      "sha256": "251622b8cfd5ef2e5815581da42c531dddddb7af12448836963bdd9ef4237719",
+      "top_lines": [
+        "146    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "E6 reflections: moved frames = a        COMPUTATION            w33_pass11202_reflection_",
+        "double-six (36 ↔36); 15 fixed splits                          double_six.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 147,
+      "chars": 2628,
+      "sha256": "0e5c1b8567c0ceb02cd85b85ae12c8819f5b099595c5b783bfcbd2ffe3367c7a",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  147",
+        "Claim                           Badge                   Witness",
+        "independent brute force (no closed      THEOREM   COMPUTATION   w33_pass11234_qubit_",
+        "form, no class list): qubit                                  bruteforce_check.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 148,
+      "chars": 2552,
+      "sha256": "8e7cd87937e38a2103fead7504065fc0ca86ba26331b47e42a071be3d8f387e8",
+      "top_lines": [
+        "148    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "arrow law class by class for qubits       COMPUTATION            w33_pass11208_arrow_",
+        "(𝑛≤5), 5-, 7-dits and all 940 classes                          universality.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 149,
+      "chars": 2689,
+      "sha256": "99801023563ff4263a7acb2d19eef1838d6fd075152aac69a5020b18f02a1196",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  149",
+        "Claim                           Badge                   Witness",
+        "arrows of named ticks: 17/48 of         COMPUTATION            w33_pass11223_named_",
+        "perfect two-qutrit gates arrow-free                           tick_arrows.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 150,
+      "chars": 2440,
+      "sha256": "cecab59f52f6b906fc8081ed8dda406fecdc0945aa8daa5ce2bc91a99d20da31",
+      "top_lines": [
+        "150    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "one gate, two qutrits, unconditional:     THEOREM   COMPUTATION   w33_pass11330_orbit_",
+        "1944-element centralizer of 𝑇⊗1,                            census.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 151,
+      "chars": 2650,
+      "sha256": "72dbc19883fb6a92b76fca1e2c39edf90e5d2fcc5ced98c8a21b9a81ba0392fa",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  151",
+        "Claim                           Badge                   Witness",
+        "substrate Jarlskog: reversible ⇔𝑈𝑇      THEOREM   COMPUTATION   w33_pass11355_substrate_",
+        "Clifford-conjugate to 𝑈;                                   jarlskog.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 152,
+      "chars": 2464,
+      "sha256": "d7c4d3ff738524abeddcccf396815a0277ccf44e52f9f7140ec9253004392095",
+      "top_lines": [
+        "152    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "three-qutrit one gate exact: violating     COMPUTATION            w33_pass11373_three_",
+        "fraction 2388204,240857  bad classes 3276437                             qutrit_exact_fraction.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 153,
+      "chars": 2845,
+      "sha256": "cf3e3b43253cf992d360ec45ff9727384946f7fc8aa8b03aa65b67e9b7f6327b",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  153",
+        "Claim                           Badge                   Witness",
+        "four-qutrit cells: same-line cell          COMPUTATION            w33_pass11437_four_",
+        "77/342 →0.14, others →18;                                 qutrit_cells.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 154,
+      "chars": 2851,
+      "sha256": "c10979f0842bcf5aa5aa48f9c4dee3602fb4e7c3b5667fc9ddff240e410ee3a9",
+      "top_lines": [
+        "154    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "THEOREM: magic-axis law for every    THEOREM   COMPUTATION   w33_pass11498_magic_",
+        "𝑛(𝐴𝑣= −𝑣for 𝐴= 𝑄𝐽; 𝑄𝐽𝑣= −𝑣on                         axis_law_all_n.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 155,
+      "chars": 3104,
+      "sha256": "5e8f0f614b521642fea1ab221bad944557c0374c90c693c35ae669eed8ad8ad3",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  155",
+        "Claim                           Badge                   Witness",
+        "invariants proved to degree 20:         THEOREM   COMPUTATION   w33_pass11534_time_",
+        "stabiliser moments 𝑀1, 𝑀3..𝑀9 and                          arrow_module_exact.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 156,
+      "chars": 2918,
+      "sha256": "aa67ffbe7d6b5eb5fae0d273287e2b271f7c8a79fdb0c32da535c7237a76d0ee",
+      "top_lines": [
+        "156    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "two-qutrit Hesse ℙ4: ticks =           THEOREM   COMPUTATION   w33_pass11657_hesse_",
+        "Burkhardt 𝑗-planes, factorisations =                          space_geometrises_w33.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 157,
+      "chars": 2712,
+      "sha256": "7c921add748fd1990d8b357a2274879f8c32a05b6f8ff4b218bd737f1eb9c537",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  157",
+        "Claim                           Badge                   Witness",
+        "line-trinification SM excludes every      THEOREM   COMPUTATION   w33_pass11706_11709_",
+        "pure-state vacuum (colour ⊂Λ3,                            vacuum_clock_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 158,
+      "chars": 2774,
+      "sha256": "93568e401f65c068285decf0ac1e6f76d6ff7aa27f78321871e07e37e238c969",
+      "top_lines": [
+        "158    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "𝑆𝑈(9) flavour unification: W(3,3)       THEOREM   COMPUTATION   w33_pass11818_11821_su9_",
+        "vacuum = 3 × (84 + 9 × 9); alternating                         flavour_and_corrected_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 159,
+      "chars": 2986,
+      "sha256": "098d9352e82304b203203aa1c68760ed2f5ec2f5a95e0575a3208977fa80f5f3",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  159",
+        "Claim                           Badge                   Witness",
+        "E8 under the Weil-lifted Clifford        THEOREM   COMPUTATION   w33_pass11834_11837_",
+        "group: 𝔰𝔩9 = ℂ[80], Λ3 has 7                               singletons_bulk_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 160,
+      "chars": 2633,
+      "sha256": "77ddfb9fb21605f40b6f4e66012853c0096c557eb28327e661840bf8eee4a34f",
+      "top_lines": [
+        "160    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "boundary four-point:                 THEOREM   COMPUTATION   w33_pass11852_bulk_four_",
+        "dim(Sym415)𝐺= 3, spanned by                             point.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 161,
+      "chars": 2368,
+      "sha256": "e8533ce3ed4e54b9fa991fe244e9de391cc654031ed39072cbf02a011e7fc5a2",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  161",
+        "Claim                           Badge                   Witness",
+        "charged-sector little groups 𝐴5, 𝑆4, 𝑆3    THEOREM   COMPUTATION   w33_pass11867_one_loop_",
+        "(rotation type); one loop: bubble, box                        positivity.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 162,
+      "chars": 2384,
+      "sha256": "3e6e930c72ed3e29aff3054a6da79ed7e0d97eb7cb0d4e82abe6dae29f5545c8",
+      "top_lines": [
+        "162    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "TM1 on a line: stabiliser of a line acts     COMPUTATION            w33_pass11243_tm1_line_",
+        "as 𝑆4 on its 4 points (order 1296,                             geometry.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 163,
+      "chars": 2873,
+      "sha256": "27bed5e8458eef5f7a1878bb2969dc4b86bc4907133b457be64c887ac428e354",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  163",
+        "Claim                           Badge                   Witness",
+        "AME(10, 3) with a twisted ten-cycle      COMPUTATION            w33_pass11249_ame10_",
+        "symmetry (twist order 1, 2, 4): 1600                          cyclic_search.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 164,
+      "chars": 3444,
+      "sha256": "e3d5e56d04da12705e94119c858c2ec4800c7156fe65bffb1d269526e911c6a0",
+      "top_lines": [
+        "164    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "36 triangles; unique orientation cycle;    COMPUTATION            w33_20260924_history_",
+        "82 = 1 + 81, 81 = 35 + 46                                  invariant_cycle_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 165,
+      "chars": 2579,
+      "sha256": "c5f2efba804a3d6791bd699883940a9a609e11b73808778a6121b08886e109e6",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  165",
+        "Claim                           Badge                   Witness",
+        "exact Cartan-to-qutrit 𝐺26 map:         COMPUTATION            w33_pass11261_g26_",
+        "restricted Pfaﬀian 217𝐶3𝑁9𝑆39;                              cartan_coordinate_map.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 166,
+      "chars": 2750,
+      "sha256": "9fa8399efa95c35a1a9d08c79f2bf9d6f143261066c9e6601c502d2e37a2bcb0",
+      "top_lines": [
+        "166    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "qutrit conjugation                    THEOREM   COMPUTATION   w33_20261001_u81_",
+        "𝜏(𝑎, 𝑏, 𝑐) = (−𝑎, 𝑏, −𝑐) leaves the                             antiunitary_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 167,
+      "chars": 3278,
+      "sha256": "5b84264bae157c7a2e95344c0a03508a504de3492add446ffebc482f7f8052f9",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  167",
+        "Claim                           Badge                   Witness",
+        "ℤ6: 42 of 79 SMs from the 𝑊(3, 3)       COMPUTATION             Holotrade 5b3f3ad",
+        "vacuum"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 168,
+      "chars": 2650,
+      "sha256": "c6349426a56b84d1c4473bbed2307779cfe7145664f170d2426a88d3092c51f3",
+      "top_lines": [
+        "168    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "ℤ12-I: 289 SMs, 14 parity vacua,         COMPUTATION            w33_pass10968_z12_left_",
+        "exotics massive in none; ℤ2 × ℤ6-I: 29                        chiral_ledger.json.gz"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 169,
+      "chars": 2595,
+      "sha256": "5886dd34f4f8b2144c0b2acaea68dd47fac463499a2dab9c95276dbd75ae9211",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  169",
+        "Claim                           Badge                   Witness",
+        "Baryonic and mixed hidden             COMPUTATION            w33_pass11088_baryonic_",
+        "condensates (all 775/802/277                               hidden_condensates.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 170,
+      "chars": 2566,
+      "sha256": "e4ee7f87c1cfbbb5685d5556c9817cd8e6a26de5d180cfc8af0b1b409a2636c4",
+      "top_lines": [
+        "170    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "Non-SUSY orbifolder cross-check        COMPUTATION            w33_pass11095_so16xso16_",
+        "19/19 identical; 𝑆𝑂(16) × 𝑆𝑂(16) with                        a8_standard_models.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 171,
+      "chars": 2241,
+      "sha256": "0b999b6ab1e5dceac567619fdbc29099d95f268e4e3d35966fa4ac5d80e5120c",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  171",
+        "Claim                           Badge                   Witness",
+        "Top and bottom in one doublet iff 𝐻𝑢,    COMPUTATION            w33_pass11104_ckm_and_",
+        "𝐻𝑑at the same fixed point (36/108);                          leptons.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 172,
+      "chars": 2108,
+      "sha256": "717998ac534d416262416d19b0960081f7128d95d20faf86084cdf3f909873f0",
+      "top_lines": [
+        "172    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "31+2𝑘has faithful degree 3𝑘: three       BRIDGE                w33_pass11111_no_243_",
+        "twisted generations force 𝑘= 1;                             family_group.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 173,
+      "chars": 2118,
+      "sha256": "b882987eeb184aae6da8a1235c82875ff279cb0ddadff5a8f6587e776fb097b2",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  173",
+        "Claim                           Badge                   Witness",
+        "Neutral tachyons on their own          COMPUTATION            w33_pass11119_neutral_",
+        "Wilson-line torus in 60/491 models                           tori_across_491.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 174,
+      "chars": 2916,
+      "sha256": "1454d2db609416088db40cea345f4b99525152ec96eb4a0ca561d9d6dd8e3d24",
+      "top_lines": [
+        "174    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "𝐵-field map: charged tachyons need      COMPUTATION            w33_pass11125_bfield_",
+        "𝐵≠0 and Im 𝑇≤1; 𝐵≥0.4 lifts the                          charged_onset.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 175,
+      "chars": 2866,
+      "sha256": "a667ea63ee6e64aff3b2c9c4ebd1cd557f91cf48ac26e64d6ec354c3344bf762",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  175",
+        "Claim                           Badge                   Witness",
+        "per-singlet VEV hierarchies (108         COMPUTATION            w33_pass11138_singlet_",
+        "draws): light generations stay                              vev_hierarchies.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 176,
+      "chars": 2415,
+      "sha256": "29b73f2b4e30c513422dde3fd77cc4ead39ce79b9c988dd8f47ed3b5f3974b45",
+      "top_lines": [
+        "176    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "Sparse normalized Cartan plane:        COMPUTATION            w33_20261001_exact_",
+        "exact integer moments; universal                            cartan_mirror_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 177,
+      "chars": 2743,
+      "sha256": "18801fd289c1ce82f39c5eb1fd10833308f3abd29c8b40e89914bb08d5d72a6c",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  177",
+        "Claim                           Badge                   Witness",
+        "Conditional canonical Cartan           COMPUTATION            w33_20261001_condensate_",
+        "condensate: exact six-direction                              cartan_potential.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 178,
+      "chars": 3287,
+      "sha256": "f504f685077e1bdcca759c084c252912ff764e3fe752d2a51e5c84be1448e2f9",
+      "top_lines": [
+        "178    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "W33 clique times history circle:          COMPUTATION            w33_pass11279_history_",
+        "injective four-boundary, no intrinsic                           flux_obstruction.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 179,
+      "chars": 3352,
+      "sha256": "fd347e08a3a2c245f15eb8b41b53a1681058284442d3b2a3d244e088839f5dc4",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  179",
+        "Claim                           Badge                   Witness",
+        "Local Ward-matched leading complex    COMPUTATION            w33_pass11295_ward_",
+        "poles; analytic UV/tadpole matching                         matched_modulus_poles.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 180,
+      "chars": 3628,
+      "sha256": "3cefc9d5431282b46bdeffe579817bd05d2c534d460b1c3734527c6bd3a5c1f6",
+      "top_lines": [
+        "180    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "Constructed native-edge linear          COMPUTATION            w33_pass11316_native_",
+        "spin-two action: 2 massless plus 79                            edge_fierz_pauli.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 181,
+      "chars": 3567,
+      "sha256": "fa58b1bc7b9b16d00b90ebb6fe6773ea508f089de92a676fe654d10074ef8f77",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  181",
+        "Claim                           Badge                   Witness",
+        "Exact complex-isotropic Yukawa ray     COMPUTATION            w33_pass11340_isotropic_",
+        "and stronger scalar AF barrier                                flavor_portal.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 182,
+      "chars": 3611,
+      "sha256": "6a20918c09dad85a0f6d1ff1c66b1558e2b6514078d17560c001ca093fc4bff0",
+      "top_lines": [
+        "182    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "11363: equal-lapse rank-77 metric null    COMPUTATION            w33_pass11361_11368_",
+        "is the vertex potential                                     physical_frontier.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 183,
+      "chars": 2937,
+      "sha256": "644f1cd4409372aac7acb901f12c3aaf526063a4e9c83d32a976953eee064051",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  183",
+        "Claim                           Badge                   Witness",
+        "11881: two quartic invariants;           COMPUTATION            w33_pass11879_11883_e8_",
+        "Kempf–Ness flat moduli = Siegel                            higgs_siegel_modulus.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 184,
+      "chars": 2676,
+      "sha256": "61d533e8e0d03f527148a803278bdbcb633b2a5447770f8b7958839c1e2bd9f6",
+      "top_lines": [
+        "184    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "11897: Kähler moduli of 𝑇4/ℤ3 act on    COMPUTATION            w33_pass11897_11898_",
+        "the 9 twisted fixed points by the                             kahler_moduli_two_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 185,
+      "chars": 2512,
+      "sha256": "db289441c07cde684df707f7a4c89f5a2b0ea3e88dedfcfad96cb3457c4f44bf",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  185",
+        "Claim                           Badge                   Witness",
+        "11905: at every fixed point              COMPUTATION            w33_pass11905_symmetric_",
+        "𝑧= 𝑚/2 + 𝑘Ω/6 of the level-3                               wilson_lines_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 186,
+      "chars": 2288,
+      "sha256": "338049fa7eee6845c264f0d8dae714b61813647fb5e5d12b6e2f93cd899ba932",
+      "top_lines": [
+        "186    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "11912: exact decomposition             COMPUTATION            w33_pass11912_",
+        "Θ[(𝛼1, 𝛼2)] =                                           entangling_modulus_is_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 187,
+      "chars": 2310,
+      "sha256": "309cefcf123215314a51a73b241e96b8e745f184012cf21c02ec2fc17d3c6af5",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  187",
+        "Claim                           Badge                   Witness",
+        "11918: single-Higgs 10 ⋅10 Yukawas      BRIDGE                w33_pass11918_tilt_ckm_",
+        "are monomial (degenerate pair                             and_up_lemma.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 188,
+      "chars": 2130,
+      "sha256": "5a61895390b65e3f65a2e6e902d369f1b7b55199880530f27fab033244ff3862",
+      "top_lines": [
+        "188    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "11923: the heterotic local-10 lock and     BRIDGE                w33_pass11923_",
+        "the magnetized up lemma are one                           stabiliser_higgs_lock.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 189,
+      "chars": 2305,
+      "sha256": "19af9092bcd39c026f6f95f7421044e77b65e07bb48e1eadbc202a622cd33091",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  189",
+        "Claim                           Badge                   Witness",
+        "11927: background Fourier modes act    BRIDGE                w33_pass11927_fourier_",
+        "on the flavour qutrits as two-qutrit                           spurions.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 190,
+      "chars": 2323,
+      "sha256": "ddb2e3ab2382d3cea2a8090d2a85b0c105ab20440df069abfc3b803bf25026ea",
+      "top_lines": [
+        "190    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "11930: Higgs modes vanishing at all     COMPUTATION            w33_pass11930_fixed_",
+        "Eisenstein fixed points (blow-up                            point_avoiding_higgs.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 191,
+      "chars": 2317,
+      "sha256": "1f44127881bdd14e31cd350f6f6ecc2e4eec11a24ca7208c3ebdea6a21ebe125",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  191",
+        "Claim                           Badge                   Witness",
+        "11938: stabiliser-polar directions map    BRIDGE                w33_pass11938_weber_up_",
+        "to the reducible locus; off it the up                           texture.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 192,
+      "chars": 2024,
+      "sha256": "e9b650c1a50a29287f6aaeee1be78be4082c90ef83b1dd7d9c79986c95888c54",
+      "top_lines": [
+        "192    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "11943: PMNS no-go for the minimal     BRIDGE                w33_pass11943_pmns_no_",
+        "theta-null SU(5) picture (TBM                              go_and_lepton_band.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 193,
+      "chars": 2422,
+      "sha256": "ea47e272fcf742dad28918b5f7deaeefb8f15ea972893690505c74db596e388e",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  193",
+        "Claim                           Badge                   Witness",
+        "11948: axiflavon decay constant fixed     COMPUTATION  REFUTED    w33_pass11948_axiflavon_",
+        "by the up masses:                                        decay_constant.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 194,
+      "chars": 2215,
+      "sha256": "8c12093e2818c1987e33e4f6c184b14823e6ac6bdc3d01a7081d5aba18ada5f5",
+      "top_lines": [
+        "194    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12044: 𝑆-type generalised CP (|𝜏| = 1     BRIDGE                w33_pass12044_s_type_cp_",
+        "arc): up fits exactly, every down                             and_locus_stability.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 195,
+      "chars": 2483,
+      "sha256": "5d8a77a97be1c1cadd228258a1ab989cde7605e7a12c1293fd1955c85137f663",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  195",
+        "Claim                           Badge                   Witness",
+        "12050: origin of 𝜀= Ω12: heterotic       BRIDGE                w33_pass12050_entangler_",
+        "continuous Wilson lines enter                               origin.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 196,
+      "chars": 2601,
+      "sha256": "8123154ab815703f9fac0dd2945f30f2048d4f13b25020fa9318860f050a23c7",
+      "top_lines": [
+        "196    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12057: matter decides the time: on       COMPUTATION            w33_pass12057_matter_",
+        "𝑎𝐹+ 𝑏𝐺the Witting point (one time)                         decides_the_time.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 197,
+      "chars": 2981,
+      "sha256": "9f6fd79bc3e2535c94e14d251671ea56ff5e3ba8a5bec487a8e319b6c3709ab5",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  197",
+        "Claim                           Badge                   Witness",
+        "12065: second realisation of the 12054    THEOREM               w33_pass12065_landau_",
+        "phases; no phase fixes an observer;                           phases_have_no_rest_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 198,
+      "chars": 3113,
+      "sha256": "4ba13ddb5940931638d84bb217a2e113dbf5a2c331862a85f67b52922e311a0a",
+      "top_lines": [
+        "198    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12076: each singlet gives 𝑆𝑂(10)𝑖with   THEOREM               w33_pass12076_time_",
+        "10𝑖= 8𝑖+ 𝑓𝑗+ 𝑓𝑘, 16𝑖= 8𝑗+ 8𝑘; triality                        rotates_so10.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 199,
+      "chars": 3046,
+      "sha256": "b294cda4cb8151ce6b1f0ab5838505644252e475f49ef4b5c0bf5f4286571846",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  199",
+        "Claim                           Badge                   Witness",
+        "12089: 𝐸6 clock vacuum + split         THEOREM               w33_pass12089_fermion_",
+        "fermion parity: 𝔰𝔬(10) for 27 splits, all                        parity_makes_the_16_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 200,
+      "chars": 2461,
+      "sha256": "d3f96d7a811f036115cf3a1ed49b3698e59a5974e534cad3c162e43d541691ab",
+      "top_lines": [
+        "200    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12121–12125: exact 3-generation 𝑌but    COMPUTATION            w33_pass12121_to_12125_",
+        "𝑘𝑌≥11/3 (A8 route of 11095 has                            hypercharge_yukawas_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 201,
+      "chars": 2943,
+      "sha256": "b47555c9a3c798e014981c52a53066ce047cb60da3c1934fa2a4de8506aaf102",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  201",
+        "Claim                           Badge                   Witness",
+        "12156–12161: volume thresholds         COMPUTATION            w33_pass12156_to_12161_",
+        "universal, 𝑘𝑌= 17/3 needs −2636;                           thresholds_fricke_audit_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 202,
+      "chars": 2328,
+      "sha256": "a56b56026aa38d5fc06fa2b1402ccfcd4577bffa0c65eab0eafd76a7f854303a",
+      "top_lines": [
+        "202    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12217–12222: exhaustive twisted-10      COMPUTATION            w33_pass12217_to_12222_",
+        "analysis (231124 configurations): 405                         twisted_tens_are_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 203,
+      "chars": 2360,
+      "sha256": "b3734965beda30acfa52bd7d21cd45ca8039028cf74112dd0d0c0737c8b0a3ed",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  203",
+        "Claim                           Badge                   Witness",
+        "12253–12258: standalone note on        COMPUTATION            w33_pass12253_to_12258_",
+        "Theorem 7.7 (papers/no_higgs_10);                          note_and_cross_engine.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 204,
+      "chars": 2380,
+      "sha256": "f7ef916bcd66576fa887f6fe27ff6c5dea794b8ae5fd49c37fc112a28173899c",
+      "top_lines": [
+        "204    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12286–12291: tachyon-free left-right      COMPUTATION            w33_pass12286_to_12291_",
+        "candidate (SM_810 Scherk–Schwarz                          left_right_candidate_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 205,
+      "chars": 2244,
+      "sha256": "5132b65ce6e4c7deede83f753c6967af302a81c0dc7b05d1fff2fe5dc702e592",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  205",
+        "Claim                           Badge                   Witness",
+        "12316–12321: CORRECTION to 12307:   COMPUTATION            w33_pass12316_to_12321_",
+        "the torsion shifts momentum, not                            window_empty.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 206,
+      "chars": 2495,
+      "sha256": "a66447165eccefaf5c7daa894fbb651a2536772b7a7496416d05f7adee004938",
+      "top_lines": [
+        "206    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12357–12362: sub-orbifold geometries    COMPUTATION            w33_pass12357_to_12362_",
+        "(parent regenerated 788/788,                               sub_orbifolds_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 207,
+      "chars": 1950,
+      "sha256": "b1e7bd16a212449d3031706b29c570a166cafa462afbfc81d74db8d9eebd879b",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  207",
+        "Claim                           Badge                   Witness",
+        "12418–12425: one SRG identity, two      COMPUTATION            w33_pass12418_to_12425_",
+        "codes: 𝐴2 ≡0 (mod 2) gives CSS                            one_identity_two_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 208,
+      "chars": 2198,
+      "sha256": "ed1357cb22b66766966d49f0c822d45cdafa6bc29766f570499d850218ba495e",
+      "top_lines": [
+        "208    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12450–12457: SM_2541 fractional pair    COMPUTATION            w33_pass12450_to_12457_",
+        "was a Dirac-only artefact — real-rep                           majorana_rescue_deficit_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 209,
+      "chars": 2056,
+      "sha256": "d2abee5fc3a0df9181aaab28d011fda6948a62175c115ca9fcb0037c9bf12760",
+      "top_lines": [
+        "The ledger: every claim, its status, its witness    |  209",
+        "Claim                           Badge                   Witness",
+        "12482–12489: minimal even line sets     COMPUTATION            w33_pass12482_to_12489_",
+        "of 𝑊(3, 𝑞): 𝑞= 3 has exactly 216                             even_line_sets_pair_"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 210,
+      "chars": 2110,
+      "sha256": "35de8c602aa76bb6c8b9e6b6e2bac454a426b7ad06971640bef3f4f794b673a1",
+      "top_lines": [
+        "210    |  Forty Points",
+        "Claim                           Badge                   Witness",
+        "12005: CP-real bare theta matrices on    COMPUTATION            w33_pass12005_cp_real_",
+        "a common left torus plus one complex                        theta_barr.py"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 211,
+      "chars": 2660,
+      "sha256": "ebfc83f75cfbe3f73758d0861406ce18ed725fb37827bc95c80e89b70f20ab92",
+      "top_lines": [
+        "Glossary    |  211",
+        "consistently across contexts; a resource for quantum computation.",
+        "CSS code A quantum error-correcting code built from two classical codes; [[𝑛, 𝑘, 𝑑]]𝑞means",
+        "𝑛physical qudits, 𝑘logical, distance 𝑑."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 212,
+      "chars": 2506,
+      "sha256": "9c07eef6dd7e9c3d443b63e1a1dd3493aa407cc2506e89c1983a36947958db52",
+      "top_lines": [
+        "212    |  Forty Points",
+        "Strongly regular graph A regular graph in which adjacent pairs have 𝜆, and non-adjacent",
+        "pairs 𝜇, common neighbours.",
+        "Symplectic form An alternating, nondegenerate bilinear form; here the commutation phase"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 213,
+      "chars": 3050,
+      "sha256": "1c593e200f268fe8886f62ff791d15cde922d5f310e8e266b54d12abb7e0796e",
+      "top_lines": [
+        "References    |  213",
+        "[15] H. Freudenthal, Beziehungen der 𝐸7 und 𝐸8 zur Oktavenebene I, Indag. Math. 16 (1954) 218–",
+        "230.",
+        "[16] S. Garibaldi, 𝐸8, the most exceptional group, Bull. Amer. Math. Soc. 53 (2016) 643–671."
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 214,
+      "chars": 3000,
+      "sha256": "dd6aa2aed1dfcf117be661bbd21a1a7bab553214126635a1ddc32c1bd1225933",
+      "top_lines": [
+        "214    |  Forty Points",
+        "[35] C. A. Manogue, T. Dray and R. A. Wilson, Octions: an 𝐸8 description of the Standard Model, J.",
+        "Math. Phys. 63 (2022) 081703, arXiv:2204.05310.",
+        "[36] S. P. Martin, Some simple criteria for gauged R-parity, Phys. Rev. D 46 (1992) R2769, arXiv:hep-"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    },
+    {
+      "page": 215,
+      "chars": 2765,
+      "sha256": "adf60775c94bcc9367c36036dc7e064e8282201a309cda23876fb4738be36954",
+      "top_lines": [
+        "References    |  215",
+        "[55] S. Rana, Negative eigenvalues of partial transposition of arbitrary bipartite states, Phys. Rev. A",
+        "87 (2013) 054301.",
+        "[56] F. Huber, C. Eltschka, J. Siewert and O. Gühne, Bounds on absolutely maximally entangled"
+      ],
+      "theorem_mentions": 0,
+      "status_refuted": 0,
+      "status_open": 0
+    }
+  ],
+  "scope": "Every PDF page extracted and indexed; textual coverage is NOT a proof that each claim or printed equation was independently checked, nor a visual check of every figure."
+}

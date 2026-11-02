@@ -1,0 +1,23 @@
+{
+  "status": "PASS_Q5_ROUTE_4875_ORBIT_SECOND_MOMENT",
+  "field": 5,
+  "points": 156,
+  "lines": 156,
+  "support_size": 20,
+  "orbit_size": 4875,
+  "points_covered_twice_per_support": 60,
+  "supports_covering_each_point": 1875,
+  "gram_diag_adj_far": [
+    1875,
+    875,
+    675
+  ],
+  "gram_formula": "H5.T H5 = 1200 I + 200 A_point + 675 J",
+  "centered_rank": 90,
+  "centered_eigenvalues_rounded": {
+    "0": 66,
+    "2000": 90
+  },
+  "duration_seconds": 25.47,
+  "scope": "Only q=5 full orbit and second moments; no exhaustive cubic tensor or quantum dynamics."
+}
