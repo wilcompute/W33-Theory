@@ -1,0 +1,15 @@
+{
+ "q": 7,
+ "W": 40,
+ "rep": 11905,
+ "generators": 4,
+ "orbits": [
+  {
+   "size": 42,
+   "cube": true
+  }
+ ],
+ "final_status": "INFEASIBLE",
+ "total_sets": 42,
+ "seconds": 77.4
+}

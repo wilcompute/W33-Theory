@@ -4,7 +4,7 @@
 12519 -- heavy cases: minima 16 (q = 3) and 28 (q = 5); at q = 9, W = 46 all 42 cases INFEASIBLE, with a positive control.  With 12518: the q = 9 minimum is 48.
 12520 -- Cui-Wang: both groups have order 648; an intertwiner exists only with the mirror convention.
 12521 -- the B4 image = Stab(c) = centraliser of sigma_5; 108 + 108 = covered / uncovered; uncovered -> 9 SIC states, covered -> 12 MUB states; P_c syndromes, Weil, T'.
-12522 -- the q = 7 classification status.
+12522 -- the 40-line hyperovals of W(3,7) are one PGSp(4,7) orbit of 720,300 cubes, stabiliser 384.
 """
 
 import json
@@ -43,11 +43,18 @@ def main():
         hc["lands_in_listed_case"] and hc["max_coverage"] == 4 and hc["weight"] == 88 and hc["status_at_own_weight"] in ("OPTIMAL", "FEASIBLE"))
     res["q9_minimum"] = 48 if all_infeasible(star["9_46"]) and h9["infeasible"] == h9["cases"] and not h9["unknown"] and ctl["weight"] == 48 else None
     res["heavy_status"] = {}
-    for q, W in ((7, 38), (9, 46)):
+    for q, W in ((7, 38), (7, 40), (9, 46)):
         r = load(f"heavy_split_q{q}_W{W}.json")
         res["heavy_status"][f"q{q}_W{W}"] = "pending" if r is None else dict(cases=r["cases"], infeasible=r["infeasible"], unknown=r["unknown"], feasible=[f["weight"] for f in r["feasible"]])
-    cl = load("classify_q7.json")
-    res["classify_status"] = "pending" if cl is None else cl["total"]
+    cl, clb, cs, h7 = load("classify_q7.json"), load("classify_q7b_11905.json"), load("cube_stabiliser_q7.json"), load("heavy_split_q7_W38.json")
+    res.update(classify=cl, classify_b=clb, cube_orbit=cs)
+    decided = {c["rep"]: c for c in cl["per_class"]}
+    checks["12519: q = 7 heavy cases at W = 38 all INFEASIBLE"] = h7["infeasible"] == h7["cases"] == 34 and not h7["unknown"] and not h7["feasible"]
+    checks["12522: 22 star classes empty, class 24 one cube, class 11905 finished by exclusion: one orbit of 42 cubes, then INFEASIBLE"] = (
+        sum(c["status"] == "INFEASIBLE" for c in cl["per_class"]) == 22 and decided[24]["status"] == "OPTIMAL" and decided[24]["solutions"] == decided[24]["cubes"] == 1
+        and decided[11905]["non_cubes"] == 0 and clb["final_status"] == "INFEASIBLE" and clb["orbits"] == [{"size": 42, "cube": True}])
+    count = 343 * (decided[24]["orbit"] * 1 + decided[11905]["orbit"] * clb["total_sets"]) * 400 // 40
+    checks["12522: the count 720,300 agrees with direct orbit enumeration, stabiliser 384"] = count == cs["orbit"] == 720300 and cs["stabiliser"] == 384
     cw = load("cuiwang_compare.json")
     iw = cw["intertwiners"]
     checks["12520: both groups have order 648, centre 3; intertwiner for the inverse generators, none for the generators themselves"] = (

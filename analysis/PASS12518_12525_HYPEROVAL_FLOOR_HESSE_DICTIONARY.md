@@ -1,7 +1,7 @@
 # Passes 12518–12525: the q = 9 minimum is 48; the four-anyon braid image is the centraliser of the next generator; the 216 codewords carry the Hesse configuration
 
 Claude track. Producer: `analysis/w33_pass12518_to_12525_hesse_dictionary.py`. Test: `tests/test_w33_pass12518_to_12525.py`. Drivers in
-`analysis/search_drivers_12466`: `star_cubes.py`, `star48_control.py`, `heavy_cases.py`, `heavy_split.py`, `heavy_control.py`, `classify_q7.py`, `cuiwang_compare.py`,
+`analysis/search_drivers_12466`: `star_cubes.py`, `star48_control.py`, `heavy_cases.py`, `heavy_split.py`, `heavy_control.py`, `classify_q7.py`, `classify_q7b.py`, `cube_stabiliser_q7.py`, `cuiwang_compare.py`,
 `braid_point_stabiliser.py`, `hesse_dictionary.py`, `hesse_dictionary2.py`, `hesse_dictionary3.py`, `tprime_block.py`.
 
 Labels: **[E]** exact computation or proof, **[N]** numerical with a stated tolerance, **[I]** interpretation.
@@ -132,6 +132,7 @@ meeting a given L₁ off x. So one such line may be fixed, and further lines bra
 |---|---|---|---|
 | 3 | minimise | 9 | minimum **16** = 4(q + 1), confirmed unsplit (14 infeasible, 16 feasible) |
 | 5 | 26 | 13 | **all infeasible**; unsplit finds 28, so minimum **28** > 4(q + 1) = 24 |
+| 7 | 38 | 34 | **all infeasible, 0 unknown**, 4728 s |
 | 9 | 46 | 42 | **all infeasible, 0 unknown**, 2511 s |
 
 **Positive control** (`heavy_control.py`): a genuine even set with a point of coverage 4 (88 lines, the symmetric difference of the 48-set and a transvection image) is carried through the same
@@ -144,15 +145,19 @@ reductions. It lands in listed case 11 and satisfies that case's model, and the 
 | minimum | 6 | 10 | 10 | 20 | 40 | 18 | **48** |
 
 This closes the interval [32, 48]. No independent proof checker was run, and the proof depends on CP-SAT's INFEASIBLE verdicts over 553 cases plus the group reductions, which are asserted in code.
-The q = 7 status at W = 38 is in the JSON under `heavy_status`.
-
 Among heavy sets, 4(q + 1) is tight at q = 3 and not at q = 5. The unsplit q = 5, W = 26 run did not finish, so that infeasibility rests on the split alone, plus agreement at q = 3 and at the
 feasible value 28.
 
 ## 12522: the q = 7 classification
 
-`classify_q7.py` enumerates all 40-line hyperovals in each star class (one CP-SAT worker, because multi-worker enumeration under-counts) and applies `cube_recognise`. If complete, it decides
-whether every optimum at q = 7 is a cube-family set. Status under `classify_status`. Any non-OPTIMAL class means no theorem.
+**Theorem (computer proof by CP-SAT).** The 40-line hyperovals of W(3,7) form **one orbit of PGSp(4,7), of size 720,300, with stabiliser of order 384**, and all of them are cube-family sets.
+
+- `classify_q7.py` enumerates each of the 24 star classes (one CP-SAT worker, because multi-worker enumeration under-counts). 22 classes are empty and class 24 has one set, a cube.
+- Class 11905 ran out of time at 38 sets, all cubes, which is not a proof. `classify_q7b.py` finishes it by search and exclusion: find a set, block its whole orbit under the star's stabiliser, repeat. It finds **one orbit of 42 sets, all cubes, then INFEASIBLE** (77 s). The earlier 38 is consistent with this.
+- **Counting.** Sets through a fixed line: 343·(168·1 + 1·42) = 72,030, so 72,030·400/40 = 720,300 in total. The two classes contribute 4 : 1, matching the 32 + 8 lines of a cube.
+- **Independent cross-check** (`cube_stabiliser_q7.py`). Direct orbit enumeration of one cube under transvections and a similitude, with no solver involved, returns exactly 720,300, so the orbit is everything. 276,595,200 / 720,300 = 384.
+
+**q = 7 minimum.** All 34 heavy cases at W = 38 are INFEASIBLE, so the star and heavy halves together give the minimum 40 by the same method as q = 9. Whether a *heavy* 40-line set exists is reported under `heavy_status` (`q7_W40`). Until that is all INFEASIBLE, this theorem covers hyperovals, not every minimal even set.
 
 ## What this does not do
 

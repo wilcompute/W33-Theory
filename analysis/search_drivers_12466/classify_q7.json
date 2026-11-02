@@ -1,0 +1,207 @@
+{
+ "q": 7,
+ "W": 40,
+ "classes": 24,
+ "per_class": [
+  {
+   "rep": 0,
+   "orbit": 48,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 1,
+   "orbit": 504,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 2,
+   "orbit": 504,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 8,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 9,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 10,
+   "orbit": 504,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 11,
+   "orbit": 2016,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 13,
+   "orbit": 2016,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 16,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 17,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 18,
+   "orbit": 672,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 24,
+   "orbit": 168,
+   "status": "OPTIMAL",
+   "solutions": 1,
+   "cubes": 1,
+   "non_cubes": 0
+  },
+  {
+   "rep": 27,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 64,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 67,
+   "orbit": 168,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 72,
+   "orbit": 504,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 75,
+   "orbit": 672,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 82,
+   "orbit": 252,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 114,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 115,
+   "orbit": 1008,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 129,
+   "orbit": 336,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 474,
+   "orbit": 252,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 493,
+   "orbit": 126,
+   "status": "INFEASIBLE",
+   "solutions": 0,
+   "cubes": 0,
+   "non_cubes": 0
+  },
+  {
+   "rep": 11905,
+   "orbit": 1,
+   "status": "FEASIBLE",
+   "solutions": 38,
+   "cubes": 38,
+   "non_cubes": 0
+  }
+ ],
+ "total": {
+  "solutions": 39,
+  "cubes": 39,
+  "non_cubes": 0,
+  "status_INFEASIBLE": 22,
+  "status_OPTIMAL": 1,
+  "status_FEASIBLE": 1
+ }
+}
