@@ -1,0 +1,67 @@
+{
+  "status": "PASS_FROZEN_NATIVE_CONTINUATION",
+  "baseline": "3249fff103ea775cc123bbaee46db835035c49f5",
+  "utc": "2026-11-02T19:14:17.368297+00:00",
+  "artifact_raw_sha256": {
+    "analysis/w33_20261102_chiral_surface_development.py": "94017720fe124a37aae01796239eb963f462a96e47d3af07db6d268656bde19d",
+    "analysis/w33_20261102_common_cover_interactions.py": "783fc8307ed23f33ce4bdca8e02397095ac3c3822b178ea566034b5dbe85f53a",
+    "analysis/w33_20261102_graded_parent_geometry.py": "fa07d1d2410f3378dd19855947519f13f0ee434522f7e43774482f09180fd5aa",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8",
+    "data/w33_20261102_common_cover_interactions.json": "85a518cf0f2fb85b787e4c581bff505a7afe99db9444a2a3e411985dec8bf663",
+    "data/w33_20261102_graded_parent_geometry.json": "d47acc35ac38371777b49f5be945a2684432c4141e2e0f675dba8fe12cd049d4",
+    "analysis/w33_20261102_continuation_validation.py": "7eb83518bf1cd71165f5c93aaed09b6ca4dd96f064f5ac74b169a0c0b8706b6f",
+    "analysis/2026-11-02_native_topology_interactions_and_real_geometry.md": "52d67048c4e7964c7593a3f22024b1b7aad23003d71ba751a541a2bc9ae03124",
+    "tests/test_w33_20261102_topology_interactions_geometry.py": "1fa07c6b853ba2fb94caa95a38b9228032f317f8d7d6387543a9f663f6485609",
+    "data/w33_20261102_continuation_validation.json": "dc7f0acbaf653d8322166f3540c3090da91ab46833db9cc26797e06e9e0cc611",
+    "data/w33_20261102_continuation_validation.log": "bd3e824e063bc8ec6b63344b1584e0229173d5e410a66aa7f33e1cf38199da11",
+    "RESULTS_INDEX.md": "4ecaa30c2aa054f05e7f022884d153ea6da178197851af98cecbc2763c05e409"
+  },
+  "baseline_input_raw_sha256": {
+    "analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md": "1d83b76e244ac4325ecdd59f2844c36e2f8d436d42c0b444ba188cd267862f3d",
+    "analysis/w33_20261031_chiral_tetrahedron_strange_bridge.py": "d40eca7fbf5ee8669c7f9b446e5d5aa7ae2573fc8de48c85f0791dc68cd31ad0",
+    "analysis/w33_20261031_tick_loop_rigidity.py": "17e5c516ba832848a79446deb04d5caea9db521680dc70afaf2d2fec7dbd1edb",
+    "analysis/w33_20261031_tick_rate_entropy.py": "f27f4f056f7b6baa6b83280d2c4d98e038be7060d9f2256dfabb8863c4cb40cf",
+    "analysis/w33_20261101_common_cubic_spinor_extension.py": "1be3b570a4bf51e3c46190415087d0b60a7614337bbe90ca7c35d1d2bfb49cca",
+    "analysis/w33_20261101_frame_tomography_octahedron.py": "1d7019763cfa793063532ca4527de6863184fce9c75a5ac7cdfeb3e43a703933",
+    "analysis/w33_20261101_native_validation.py": "7ba473b4d0c3acca998d864b6b6bff563f0500aa0d137bd316a998d2f7ac0b58",
+    "analysis/w33_20261101_parent_control_quantum_geometry.py": "34cd1d5226a9267958d2fe1551695038667143495e79ae91c391f1dc24a1eca4",
+    "analysis/w33_pass12055_microscopic_tick_model.py": "1e50e81ebe09c45c181369b87d1f12244ab446f4f41e651a0484537df0ebfce3",
+    "artifacts/canonical_su3_gauge_and_cubic.json": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+    "data/w33_20261031_chiral_tetrahedron_strange_bridge.json": "3df20f3f0c8ada3d41efb8abd879c74cb63b7f931c3be307103b0c27d4fd6ed5",
+    "data/w33_20261031_petersen_stabilizer.json": "7dfd960178ac00cafec278ebad38c877df9dd302e48bcf92fc745ddbefc830f6",
+    "data/w33_20261031_signed_cubic_lift.json": "19e6c0c23784140899036adef54742151f333ac7e2d2b4881c640890b9c1b9b9",
+    "data/w33_20261031_tick_loop_rigidity.json": "35706afbe1c3d69f30d8fde1487867cfb42b3d3e63976efad5210750128d7a68",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261101_common_cubic_spinor_extension.json": "f1a855d7402eed073b2f0778a1c1f5339786e5aafb2348220e53ebb9d4c87359",
+    "data/w33_20261101_frame_tomography_octahedron.json": "c350042b92e114ba51a3089e6f470989e9ecaaa7b864cc56988aa5973724ce1d",
+    "data/w33_20261101_native_five_fronts_validation.json": "842715063eb373337c0a2273a4914f2bde292559b452f47ddaabb3b8a333cd73",
+    "data/w33_20261101_native_five_fronts_validation.log": "0aa52bc79a5948273796d124cf3dbb709fbe6f2008953d362a6a081a00dfcba8",
+    "data/w33_20261101_native_remote_replay.json": "dad001908524ae2fc357da518376189dac047560dab1ea565f0e5e44eb97127b",
+    "data/w33_20261101_parent_control_quantum_geometry.json": "4fd6802425ae1741b044345041ca6a88f7171cd01143407aee3cd4ee96cfac2a",
+    "tests/test_w33_20261101_native_five_fronts.py": "a4fb2a8c3465b866d0b58d9d4b40f887b6713bc44b9a402e90807fd171d86a1d"
+  },
+  "preserved_unrelated_raw_sha256": {
+    ".mcp.json": "12a6b5758cc12212fb7788cecc3d2f3e2e8e9660f9e45a98bdc46f0974e388b3",
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_20261009_toe22_scale_nogo.json": "82dbb4a48d2f9f5c0631bc0912b380e18760c039336e7dd4c4801d7d80d1bfdc",
+    "data/w33_20261009_toe22_two_boson_quantum_selector.json": "8dc1270712e753a04cff78365537018a9f88bdaf693f1d1fe6e968022397a0ad",
+    "data/w33_20261009_toe26_e6_sector_charge_dynamics.json": "581dd36c156de2f22093635c4c7ea9c56173a2153860e88822b29d20ff83403e",
+    "data/w33_20261013_toe61_charge_gap.json": "1eec3c3cf0ae96c95ad483a1918c457fe843bac83c3c27fe4fc8d93a85fa3cc0",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    "data/w33_pass11949_axiflavon_quality_fails.json": "4c41fc7de9d19ca15e672436df6f503896853fffad12c564a188d24fc37270ef",
+    "papers/photonic_hardware_atlas/main.tex": "c337c768dbf59701a5bcafae906903ad544a45aa36204b7c039f68ddb088b70d"
+  },
+  "validation": "All3 producers regenerated;44 connected tests passed8.569s through Remote Desktop Commander on TheHeavyCrown, the same hardware as local execution.14 new tests independently passed locally.",
+  "results": [
+    "native maximal chiral surfaces develop into tetrahedral branched covers; exact9720 saturated ground count",
+    "prescribed common cover permits only the coordinate0 alternating mixed tensor; symmetric space zero",
+    "explicit324-dimensional KO6 sign completion; orientability and duality fail for unchangedMat9 algebra"
+  ],
+  "limits": "Fixed finite representations, supplied Hamiltonians and externally specified triangulations. Not physical TOE, full weekly/PDF reading or whole-repository testing.",
+  "prior_reconciliation": [
+    "BT804 pillow covers and Oct8 genus53 surface are different carriers",
+    "Omega preservation is already in the Oct31 unitary lift",
+    "unique positive completion and810 tetrahedra are previous native results"
+  ],
+  "provenance": "This manifest does not hash itself. Publication checks compare every committed artifact with local content after LF normalization, and verify GitHub master ancestry."
+}

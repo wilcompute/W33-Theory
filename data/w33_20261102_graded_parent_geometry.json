@@ -1,0 +1,38 @@
+{
+  "status": "PASS_KO6_PARENT_COMPLETION_WITH_ORIENTABILITY_DUALITY_OBSTRUCTIONS",
+  "dimension": 324,
+  "exact_maps": "H=I-Q; D0=ad_H on Mat9. On C2 tensor C2 tensor Mat9: D=sigma_x tensor I2 tensor D0; Gamma=sigma_z tensor I2 tensor I81; J=(sigma_y tensor sigma_y tensor transpose81) K. Mat9 acts by I4 tensor left multiplication.",
+  "KO6_signs": {
+    "J_squared": 1,
+    "JD_sign": 1,
+    "J_Gamma_sign": -1
+  },
+  "matrix_identity_errors": {
+    "D_selfadjoint": 3.1813839409166403e-15,
+    "grading_square": 0.0,
+    "D_odd": 0.0,
+    "J_square_plus": 0.0,
+    "JD_plus": 3.1813839409166403e-15,
+    "J_grading_minus": 0.0,
+    "order_zero": 1.6936812201397525e-14,
+    "first_order": 2.6148201022037268e-14,
+    "grading_commutes_left": 0.0
+  },
+  "spectrum": {
+    "-1": 72,
+    "0": 180,
+    "1": 72
+  },
+  "intersection_form": [
+    [
+      0.0
+    ]
+  ],
+  "minimum_spin_multiplicity_in_tensor_ansatz": 4,
+  "restricted_minimality": "Assume D=T tensor ad_H and Gamma=G tensor I, with spin involutions T,G anticommuting, and a spin antiunitary reversing both. The complex Cl2 module has dimension2r; in canonical form the antiunitary is(sigma_y tensor B)K. Its square is-I2 tensor B conjugate(B). KO6 requires B conjugate(B)=-I_r; determinants force r even. Thus minimum spin dimension4, attained by B=sigma_y. This does not classify arbitrary Dirac operators or enlarged algebras.",
+  "two_spin_completion": "With only C2, J=(sigma_y tensor transpose81)K obeys JD=+DJ and JGamma=-GammaJ but J^2=-1: KO2 signs, not KO6.",
+  "orientability_obstruction": "Every zero-dimensional orienting cycle sum L_a J L_b^* J^-1 acts as I4 tensor an operator on Mat9; Gamma has nontrivial sigma_z on the spin factor. Hence no such cycle equals Gamma.",
+  "duality_obstruction": "For the sole K0 generator of complex Mat9, Tr(Gamma L_e R_e)=0. The one-by-one intersection form is zero, so Poincare duality fails for this algebra/module.",
+  "spectral_action": "180f(0)+144f(1/Lambda^2); external spin multiplicity changes counts but cannot distinguish the810 conjugate parents.",
+  "boundary": "An explicit even real first-order construction with KO6 signs, failing orientability and duality. Sign completion alone does not produce a Standard Model, physical fermion multiplicity or Lorentzian gravity. No universal minimal-dimension theorem is asserted."
+}
