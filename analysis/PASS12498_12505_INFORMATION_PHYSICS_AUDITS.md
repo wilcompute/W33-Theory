@@ -158,7 +158,7 @@ These are the field orders of Galois's theorem and of the exceptional isomorphis
 `q9_le46.py` asks CP-SAT for an even line set of W(3,9) with at most 46 lines. It uses the line-pair symmetry break of 12474, which is
 valid because some chosen line meets another and PSp(4,q) is transitive on meeting line pairs. Even sets have even size, so
 **INFEASIBLE would prove the minimum is 48**. UNKNOWN proves nothing. The result is recorded in `q9_le46.json` when the 3-hour run
-finishes; until then, the status of record is: minimum ∈ [32, 48] (lower bound from the other track's
+finishes; until then (*later: settled at 48, Passes 12518–12519*), the status of record is: minimum ∈ [32, 48] (lower bound from the other track's
 `w33_20261031_even_set_bounds.py`).
 
 ## 12503: the exceptional-subgroup pattern, tested

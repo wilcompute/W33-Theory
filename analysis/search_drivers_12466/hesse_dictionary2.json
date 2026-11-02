@@ -1,0 +1,55 @@
+{
+ "c": 19,
+ "order3_fixes_pencil": [
+  true
+ ],
+ "pointwise_fixed_count": [
+  1
+ ],
+ "direction_in_chosen_pair": {
+  "False": 108
+ },
+ "codewords_per_pair_and_direction": [
+  9
+ ],
+ "Pc_commutes_with_generators": [
+  true,
+  true,
+  true
+ ],
+ "Pc_eigenspaces": [
+  {
+   "eigenvalue_phase": -1.0,
+   "dim": 3,
+   "leak": 0.0,
+   "commutant_dim": 1,
+   "traces_R0": "(1.22474+1.22474j)",
+   "traces_R0R1": "1j"
+  },
+  {
+   "eigenvalue_phase": 1.0,
+   "dim": 3,
+   "leak": 0.0,
+   "commutant_dim": 2,
+   "traces_R0": "(1.22474+1.22474j)",
+   "traces_R0R1": "1j"
+  },
+  {
+   "eigenvalue_phase": -0.0,
+   "dim": 3,
+   "leak": 0.0,
+   "commutant_dim": 1,
+   "traces_R0": "(1.22474+1.22474j)",
+   "traces_R0R1": "1j"
+  }
+ ],
+ "collinear_SIC_triples_rank2": 12,
+ "dual_state_overlaps": {
+  "0.333333": 54,
+  "0.0": 12
+ },
+ "dual_vs_SIC_overlaps": {
+  "0.0": 36,
+  "0.5": 72
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "CW_eigs": [
+  [
+   0.0,
+   0.0,
+   2.0944
+  ],
+  [
+   0.0,
+   2.0944,
+   6.2832
+  ],
+  [
+   0.0,
+   0.0,
+   2.0944
+  ]
+ ],
+ "native_eigs": [
+  [
+   4.1888,
+   6.2832,
+   6.2832
+  ],
+  [
+   4.1888,
+   6.2832,
+   6.2832
+  ],
+  [
+   0.0,
+   0.0,
+   4.1888
+  ]
+ ],
+ "CW_group_order": 648,
+ "CW_center": 3,
+ "native_group_order": 648,
+ "native_center": 3,
+ "intertwiners": {
+  "sigma|123": {
+   "null": 0,
+   "invertible": false
+  },
+  "sigma|321": {
+   "null": 0,
+   "invertible": false
+  },
+  "sigma_inverse|123": {
+   "null": 1,
+   "invertible": true
+  },
+  "sigma_inverse|321": {
+   "null": 1,
+   "invertible": true
+  },
+  "sigma_conj|123": {
+   "null": 1,
+   "invertible": true
+  },
+  "sigma_conj|321": {
+   "null": 1,
+   "invertible": true
+  }
+ },
+ "paired_native": 648
+}

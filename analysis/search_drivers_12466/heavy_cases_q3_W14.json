@@ -1,0 +1,13 @@
+{
+ "q": 3,
+ "W": 14,
+ "cases": 1,
+ "results": [
+  {
+   "orbit_size": 1,
+   "status": "INFEASIBLE",
+   "seconds": 0.7
+  }
+ ],
+ "seconds": 0.8
+}

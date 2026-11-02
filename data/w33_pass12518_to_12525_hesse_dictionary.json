@@ -1,0 +1,327 @@
+{
+  "q9_minimum": 48,
+  "heavy_status": {
+    "q7_W38": "pending",
+    "q9_W46": {
+      "cases": 42,
+      "infeasible": 42,
+      "unknown": [],
+      "feasible": []
+    }
+  },
+  "classify_status": "pending",
+  "point_stabiliser": {
+    "G_order": 648,
+    "points_fixed_by_G": [
+      19
+    ],
+    "perp_of_p0_p1_p2": [
+      19
+    ],
+    "stabiliser_of_c_in_PSp43": 648,
+    "G_equals_stabiliser": true,
+    "coverage_of_c": {
+      "2": 108,
+      "0": 108
+    },
+    "orbits_vs_coverage": [
+      {
+        "size": 108,
+        "coverages": [
+          2
+        ]
+      },
+      {
+        "size": 108,
+        "coverages": [
+          0
+        ]
+      }
+    ],
+    "involutions_in_G": 9,
+    "involution_fixed_points": {
+      "8": 9
+    },
+    "codeword_stabilisers_in_G": [
+      {
+        "orbit": 0,
+        "order": 6,
+        "element_orders": {
+          "1": 1,
+          "2": 3,
+          "3": 2
+        }
+      },
+      {
+        "orbit": 1,
+        "order": 6,
+        "element_orders": {
+          "1": 1,
+          "2": 1,
+          "3": 2,
+          "6": 2
+        }
+      }
+    ]
+  },
+  "dictionary": {
+    "c": 19,
+    "Tc_fixes_no_codeword": true,
+    "involutions": 9,
+    "distinct_hyperbolic_lines_through_c": 9,
+    "affine_lines": 12,
+    "each_line_has_3": true,
+    "uncovered_fibres_over_9_involutions": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    "covered_fibres_over_12_lines": [
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "stabiliser_orders": {
+      "6": 216
+    },
+    "pairs_per_line": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "pauli_vectors_fixed_by_braid": 2,
+    "involutions_in_block_group": 9,
+    "SIC_overlaps_per_3_block": [
+      {
+        "0.25": 36
+      },
+      {
+        "0.25": 36
+      }
+    ]
+  },
+  "dictionary2": {
+    "c": 19,
+    "order3_fixes_pencil": [
+      true
+    ],
+    "pointwise_fixed_count": [
+      1
+    ],
+    "direction_in_chosen_pair": {
+      "False": 108
+    },
+    "codewords_per_pair_and_direction": [
+      9
+    ],
+    "Pc_commutes_with_generators": [
+      true,
+      true,
+      true
+    ],
+    "Pc_eigenspaces": [
+      {
+        "eigenvalue_phase": -1.0,
+        "dim": 3,
+        "leak": 0.0,
+        "commutant_dim": 1,
+        "traces_R0": "(1.22474+1.22474j)",
+        "traces_R0R1": "1j"
+      },
+      {
+        "eigenvalue_phase": 1.0,
+        "dim": 3,
+        "leak": 0.0,
+        "commutant_dim": 2,
+        "traces_R0": "(1.22474+1.22474j)",
+        "traces_R0R1": "1j"
+      },
+      {
+        "eigenvalue_phase": -0.0,
+        "dim": 3,
+        "leak": 0.0,
+        "commutant_dim": 1,
+        "traces_R0": "(1.22474+1.22474j)",
+        "traces_R0R1": "1j"
+      }
+    ],
+    "collinear_SIC_triples_rank2": 12,
+    "dual_state_overlaps": {
+      "0.333333": 54,
+      "0.0": 12
+    },
+    "dual_vs_SIC_overlaps": {
+      "0.0": 36,
+      "0.5": 72
+    }
+  },
+  "dictionary3": {
+    "uncovered_flags": 36,
+    "uncovered_classes_per_flag": [
+      1
+    ],
+    "covered_line_pair_labels": 36,
+    "covered_classes_per_label": [
+      1
+    ],
+    "codeword_stabiliser_in_PSp43": {
+      "1": 1,
+      "2": 25,
+      "3": 20,
+      "4": 30,
+      "5": 24,
+      "6": 20
+    },
+    "derived_order": 216,
+    "derived_orbits_(size,covered)": [
+      [
+        36,
+        true
+      ],
+      [
+        36,
+        true
+      ],
+      [
+        36,
+        true
+      ],
+      [
+        108,
+        false
+      ]
+    ],
+    "kernel_on_2_block_projective": 54,
+    "N_order": 27,
+    "N_abs_trace_on_3_block": {
+      "3.0": 3,
+      "0.0": 24
+    },
+    "involutions_same_projectively_on_2_block": true,
+    "N_coset_constant_on_syndrome0": true,
+    "weil_projective_order": 24,
+    "weil_abs_trace_profile": [
+      [
+        1.0,
+        15
+      ],
+      [
+        1.7321,
+        8
+      ],
+      [
+        3.0,
+        1
+      ]
+    ],
+    "syndrome0_abs_trace_profile": [
+      [
+        1.0,
+        405
+      ],
+      [
+        1.7321,
+        216
+      ],
+      [
+        3.0,
+        27
+      ]
+    ],
+    "control_3_block_abs_trace_profile": [
+      [
+        0.0,
+        168
+      ],
+      [
+        1.0,
+        405
+      ],
+      [
+        1.7321,
+        72
+      ],
+      [
+        3.0,
+        3
+      ]
+    ]
+  },
+  "tprime": {
+    "order": 24,
+    "centre": 2,
+    "element_orders": {
+      "1": 1,
+      "2": 1,
+      "3": 8,
+      "4": 6,
+      "6": 8
+    },
+    "traces": {
+      "1:(2+0j)": 1,
+      "2:(-2-0j)": 1,
+      "3:(-1+0j)": 8,
+      "4:0j": 6,
+      "6:(1+0j)": 8
+    },
+    "sigma1_equals_sigma3_up_to_sign": true
+  },
+  "star48_control": {
+    "moves": 18,
+    "representative": 24380,
+    "status_W48": "OPTIMAL",
+    "weight": 48,
+    "W46_infeasible_classes": 511,
+    "W46_classes": 511
+  },
+  "checks": {
+    "12518: star classes 2, 4, 24, 511 at q = 3, 5, 7, 9": true,
+    "12518: controls -- no hyperoval below the known minima 10, 20, 40, and the minima are found at q = 3, 5": true,
+    "12518: W(3,9) has no hyperoval of <= 46 lines: all 511 classes INFEASIBLE, none unknown": true,
+    "12518: positive control -- the known 48-set's own class is OPTIMAL at weight 48": true,
+    "12519: q = 5 heavy cases at W = 26 all INFEASIBLE": true,
+    "12519: heavy minima 16 at q = 3 and 28 at q = 5": true,
+    "12519: q = 9 heavy cases at W = 46 all INFEASIBLE, none unknown": true,
+    "12519: positive control -- an 88-line even set of coverage 4 lands in a listed case and satisfies its model": true,
+    "12520: both groups have order 648, centre 3; intertwiner for the inverse generators, none for the generators themselves": true,
+    "12521: the B4 image fixes exactly one point c = perp(p0, p1, p2) and equals its whole stabiliser (648)": true,
+    "12521: the two B4 orbits are exactly 'c covered' and 'c uncovered', 108 each": true,
+    "12521: stabilisers are S3 (covered) and Z6 (uncovered)": true,
+    "12521: T_c fixes no codeword; 9 involutions = 9 hyperbolic lines through c; 12 affine lines": true,
+    "12521: 216 = 9*12 + 12*9": true,
+    "12521: T_c-classes biject with 36 (involution, line) pairs and 36 (Hesse line, pair) labels": true,
+    "12521: the involution eigenvectors are a SIC (all 36 overlaps 1/4) on both 3-blocks": true,
+    "12521: control -- the 12 dual vectors are 4 MUBs (overlaps 0 x 12, 1/3 x 54), not 1/4": true,
+    "12521: a covered codeword's pair never contains the pointwise-fixed direction": true,
+    "12521: P_c commutes with B4; three invariant 3-dim syndrome spaces, commutants 1, 1, 2": true,
+    "12521: codeword stabiliser has S5's order profile; derived orbits 108 (uncovered) + 36 + 36 + 36 (covered), as 2026-08-29": true,
+    "12521: N (27) is scalar on the 2-block, traceless off centre on a 3-block": true,
+    "12521: the reducible syndrome's absolute character = 27 x Weil of SL(2,3); control: a 3-block differs": true,
+    "12521: the 2-block is SL(2,3), the T' doublet with traces 2, -2, -1, 0, 1, factoring through B3": true
+  },
+  "all_checks_pass": true
+}

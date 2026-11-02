@@ -1,0 +1,92 @@
+{
+ "uncovered_flags": 36,
+ "uncovered_classes_per_flag": [
+  1
+ ],
+ "covered_line_pair_labels": 36,
+ "covered_classes_per_label": [
+  1
+ ],
+ "codeword_stabiliser_in_PSp43": {
+  "1": 1,
+  "2": 25,
+  "3": 20,
+  "4": 30,
+  "5": 24,
+  "6": 20
+ },
+ "derived_order": 216,
+ "derived_orbits_(size,covered)": [
+  [
+   36,
+   true
+  ],
+  [
+   36,
+   true
+  ],
+  [
+   36,
+   true
+  ],
+  [
+   108,
+   false
+  ]
+ ],
+ "kernel_on_2_block_projective": 54,
+ "N_order": 27,
+ "N_abs_trace_on_3_block": {
+  "3.0": 3,
+  "0.0": 24
+ },
+ "involutions_same_projectively_on_2_block": true,
+ "N_coset_constant_on_syndrome0": true,
+ "weil_projective_order": 24,
+ "weil_abs_trace_profile": [
+  [
+   1.0,
+   15
+  ],
+  [
+   1.7321,
+   8
+  ],
+  [
+   3.0,
+   1
+  ]
+ ],
+ "syndrome0_abs_trace_profile": [
+  [
+   1.0,
+   405
+  ],
+  [
+   1.7321,
+   216
+  ],
+  [
+   3.0,
+   27
+  ]
+ ],
+ "control_3_block_abs_trace_profile": [
+  [
+   0.0,
+   168
+  ],
+  [
+   1.0,
+   405
+  ],
+  [
+   1.7321,
+   72
+  ],
+  [
+   3.0,
+   3
+  ]
+ ]
+}

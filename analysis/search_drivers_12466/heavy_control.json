@@ -1,0 +1,9 @@
+{
+ "q": 9,
+ "weight": 88,
+ "max_coverage": 4,
+ "case_index": 11,
+ "cases": 42,
+ "lands_in_listed_case": true,
+ "status_at_own_weight": "OPTIMAL"
+}

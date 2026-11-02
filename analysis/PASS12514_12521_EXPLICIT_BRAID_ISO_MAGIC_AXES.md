@@ -49,8 +49,8 @@ EVIDENCE or RARE. **It warns and never blocks**, like `check_rediscovery.py`. Te
 - **q = 9 minimality.** No new proof. A strengthened run was started and then withdrawn before producing anything: its extra
   constraint was already implied by evenness, so it was not the symmetry break its name claimed. A real third-line symmetry break
   needs a proof that the stabiliser of two meeting lines is transitive on the q relevant lines, which has not been done. **The q = 9
-  minimum stays in [32, 48].**
-- **The Hesse SIC and the 108 + 108 split.** Not attempted this round.
+  minimum stays in [32, 48].** *(Later: settled at 48, Passes 12518–12519.)*
+- **The Hesse SIC and the 108 + 108 split.** Not attempted this round. *Later: answered in `PASS12518_12525_HYPEROVAL_FLOOR_HESSE_DICTIONARY.md`, which also supersedes the q = 9 interval above and corrects "matches Cui–Wang" to the mirror convention.*
 
 ## Sources
 

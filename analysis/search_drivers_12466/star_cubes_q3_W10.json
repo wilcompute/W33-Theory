@@ -1,0 +1,26 @@
+{
+ "q": 3,
+ "W": 10,
+ "star_orbits": 2,
+ "feasible": [
+  {
+   "rep": 0,
+   "weight": 10,
+   "chosen": [
+    0,
+    1,
+    9,
+    13,
+    16,
+    28,
+    32,
+    34,
+    37,
+    39
+   ]
+  }
+ ],
+ "unknown": [],
+ "infeasible": 1,
+ "seconds": 0.0
+}

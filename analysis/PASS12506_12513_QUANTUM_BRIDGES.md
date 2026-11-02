@@ -33,6 +33,7 @@ proved here [C].
 **Reading [I].** With metaplectic anyons as the braiding substrate:
 
 - **five anyons** suffice for braiding alone to move any minimal codeword of the two-qutrit line code to any other;
+- *(Later: Pass 12521 identifies the halves as "the fixed point c covered / not covered" and G as its stabiliser; see `PASS12518_12525_HYPEROVAL_FLOOR_HESSE_DICTIONARY.md`.)*
 - **four anyons** split the 216 supports into two halves of 108. This is analogous to, but not the same object as, Pass 173's
   split of the 432 *signed* minimal vectors into two chiral orbits of 216. Whether the 108 + 108 halves are exactly the images of
   Pass 173's chiral orbits has not been checked [C];
@@ -83,7 +84,7 @@ finishes. Only INFEASIBLE would be a proof.
 ## 12509: q = 9 minimality — the search did not finish (status of record)
 
 `q9_le46.py` ran for 38,814 s (10.8 h, longer than its 3 h limit because the machine was loaded) and ended **UNKNOWN**. It found no
-even line set of ≤ 46 lines, and it did not prove that none exists. **The minimum at q = 9 remains in [32, 48].** The 48-set is the
+even line set of ≤ 46 lines, and it did not prove that none exists. **The minimum at q = 9 remains in [32, 48].** *(Later: settled at 48, Passes 12518–12519.)* The 48-set is the
 best known upper bound, and no proof of optimality is claimed.
 
 ## 12510: the 4-anyon braid image is 3^{1+2}:SL(2,3), the one-qutrit Clifford group

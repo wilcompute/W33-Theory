@@ -1,0 +1,60 @@
+{
+ "c": 19,
+ "Tc_fixes_no_codeword": true,
+ "involutions": 9,
+ "distinct_hyperbolic_lines_through_c": 9,
+ "affine_lines": 12,
+ "each_line_has_3": true,
+ "uncovered_fibres_over_9_involutions": [
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12
+ ],
+ "covered_fibres_over_12_lines": [
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "stabiliser_orders": {
+  "6": 216
+ },
+ "pairs_per_line": [
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3
+ ],
+ "pauli_vectors_fixed_by_braid": 2,
+ "involutions_in_block_group": 9,
+ "SIC_overlaps_per_3_block": [
+  {
+   "0.25": 36
+  },
+  {
+   "0.25": 36
+  }
+ ]
+}
