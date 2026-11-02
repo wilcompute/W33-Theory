@@ -224,9 +224,13 @@ The q = 7 row is the third independent count of 720,300. The S₄ is the cube's 
 
 **Correction to Pass 12501.** "Stabiliser of order 480" was the stabiliser inside GL(2,9).2 only, which omits the similitude and Frobenius. The full stabiliser in PΓSp(4,9) has order 1920.
 
-**Second solver.** `recheck_cadical.py` uses CaDiCaL, a CDCL SAT solver sharing no code with CP-SAT. It reproduces the star verdicts at q = 3 and q = 5 (W = 8 and 18 UNSAT; W = 10 and 20 SAT in exactly one class, matching CP-SAT). Status at q = 7 is under `second_solver`. **It is not a proof certificate**, and the q = 9 theorem still rests on CP-SAT alone.
+**Second solver.** `recheck_cadical.py` uses CaDiCaL, a CDCL SAT solver sharing no code with CP-SAT. It reproduces the star verdicts at q = 3 and q = 5 (W = 8 and 18 UNSAT; W = 10 and 20 SAT in exactly one class, matching CP-SAT). At q = 7, W = 38 it **finished no case in several hours** under CPU contention, and I stopped it, so there is no second-solver result at q = 7 or q = 9. **It is not a proof certificate**, and the q = 9 theorem still rests on CP-SAT alone.
 
-**q = 9 uniqueness.** GAP's numbers predict that if the 48-set is unique up to symmetry, exactly one star class is feasible at W = 48, with 288 sets through X modulo the radical. `classify_q9.py` tests this; status under `classify_q9`.
+**q = 9 uniqueness (computer proof by CP-SAT).** GAP's numbers predicted in advance that if the 48-set is unique up to symmetry, exactly one star class is feasible at W = 48, with (normal forms) × (sets per normal form) = 3,586,680 · 48 / 820 / 729 = 288. `classify_q9.py` found **510 classes INFEASIBLE, 0 unknown, and one feasible class with 288 normal forms and exactly 1 set each**, the same class 24380 as the positive control of 12518. So:
+
+> **The 48-line hyperovals of W(3,9) form one orbit of PΓSp(4,9), of size 3,586,680, with stabiliser of order 1920.**
+
+Whether a non-hyperoval 48-line even set exists is reported under `heavy_status` (`q9_W48`). Until that is all INFEASIBLE, this covers hyperovals, not every minimal even set.
 
 **Literature.** De Bruyn (ICMS 2020) lists W(3) and Q(4,3) among the quadrangles whose hyperovals can be classified, and Pasechnik's paper used computer classification for both. I did not find the values for q = 7, 9 or the Sylvester identification, but I could not read every candidate in full, so these are not claimed as new to the literature.
 

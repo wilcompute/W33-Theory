@@ -13,7 +13,8 @@
       "infeasible": 42,
       "unknown": [],
       "feasible": []
-    }
+    },
+    "q9_W48": "pending"
   },
   "classify": {
     "q": 7,
@@ -830,13 +831,19 @@
     }
   ],
   "second_solver": {
-    "q7_W38": "pending",
+    "q7_W38": "stopped: no case finished",
     "q9": "not attempted"
   },
   "classify_q9": {
-    "done": false,
-    "infeasible": 274,
-    "feasible": [],
+    "done": true,
+    "infeasible": 510,
+    "feasible": [
+      [
+        24380,
+        288,
+        1
+      ]
+    ],
     "unknown": [],
     "classes": 511
   },
@@ -948,7 +955,8 @@
     "12526: Z_s is linear in the total's sentinels; each double-six's 6 rows sum to zero with inner product -8; rank 24": true,
     "12526: projectors sum to 7.5 E_2; the 36 five-spaces carry SRG(36,15,6,6)": true,
     "12526: 120 shared directions, each in 3 spaces; +-3 entries = a line with a perfect matching, all 120 occur": true,
-    "12526: control -- reproduces the other track's cubic moment 108 on all 160 collinear triples": true
+    "12526: control -- reproduces the other track's cubic moment 108 on all 160 collinear triples": true,
+    "12525: q = 9, W = 48: 510 classes INFEASIBLE, none unknown, one class with 288 normal forms x 1 set, matching the GAP prediction": true
   },
   "all_checks_pass": true
 }

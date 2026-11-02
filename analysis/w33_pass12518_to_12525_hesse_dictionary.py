@@ -47,7 +47,7 @@ def main():
         hc["lands_in_listed_case"] and hc["max_coverage"] == 4 and hc["weight"] == 88 and hc["status_at_own_weight"] in ("OPTIMAL", "FEASIBLE"))
     res["q9_minimum"] = 48 if all_infeasible(star["9_46"]) and h9["infeasible"] == h9["cases"] and not h9["unknown"] and ctl["weight"] == 48 else None
     res["heavy_status"] = {}
-    for q, W in ((7, 38), (7, 40), (9, 46)):
+    for q, W in ((7, 38), (7, 40), (9, 46), (9, 48)):
         r = load(f"heavy_split_q{q}_W{W}.json")
         res["heavy_status"][f"q{q}_W{W}"] = "pending" if r is None else dict(cases=r["cases"], infeasible=r["infeasible"], unknown=r["unknown"], feasible=[f["weight"] for f in r["feasible"]])
     cl, clb, cs, h7 = load("classify_q7.json"), load("classify_q7b_11905.json"), load("cube_stabiliser_q7.json"), load("heavy_split_q7_W38.json")
@@ -120,7 +120,7 @@ def main():
     checks["12525: GAP: q = 7 stabiliser 384 = D16 x S4, orbit 720300; q = 9 stabiliser 1920, orbit 3586680"] = "D16 x S4" in gs and "orbit=720300" in gs and "stab=1920" in gs and "orbit=3586680" in gs and "[ 384, 18032 ]" in gs
     c3, c3b, c5, c5b = (load(f"recheck_cadical_q{q}_W{W}.json") for q, W in ((3, 8), (3, 10), (5, 18), (5, 20)))
     checks["12525: CaDiCaL reproduces the star verdicts at q = 3, 5"] = c3["unsat"] == 2 and not c3["sat"] and c3b["unsat"] == 1 and [s["weight"] for s in c3b["sat"]] == [10] and c5["unsat"] == 4 and c5b["unsat"] == 3 and [s["weight"] for s in c5b["sat"]] == [20]
-    r7 = load("recheck_cadical_q7_W38.json"); res["second_solver"] = dict(q7_W38="pending" if r7 is None else dict(unsat=r7["unsat"], sat=r7["sat"], classes=r7["classes"]), q9="not attempted")
+    r7 = load("recheck_cadical_q7_W38.json"); res["second_solver"] = dict(q7_W38="stopped: no case finished" if r7 is None else dict(unsat=r7["unsat"], sat=r7["sat"], classes=r7["classes"]), q9="not attempted")
     cq = load("classify_q9.json"); res["classify_q9"] = "pending" if cq is None else dict(done=cq.get("done", False), infeasible=cq["infeasible"], feasible=[(f["rep"], f["normal_forms"], f["sets"]) for f in cq["feasible"]], unknown=cq["unknown"], classes=cq["classes"])
     sf = load("simplex_frame.json"); res["simplex_frame"] = sf
     checks["12526: Z_s is linear in the total's sentinels; each double-six's 6 rows sum to zero with inner product -8; rank 24"] = (
@@ -130,6 +130,8 @@ def main():
     checks["12526: 120 shared directions, each in 3 spaces; +-3 entries = a line with a perfect matching, all 120 occur"] = (
         sf["shared_directions"] == 120 and sf["spaces_per_direction"] == [3] and sf["three_entries_are_a_line_with_a_matching"] and sf["distinct_line_matchings"] == 120)
     checks["12526: control -- reproduces the other track's cubic moment 108 on all 160 collinear triples"] = sf["control_cubic_moment_on_collinear_triples"] == {"108": 160}
+    checks["12525: q = 9, W = 48: 510 classes INFEASIBLE, none unknown, one class with 288 normal forms x 1 set, matching the GAP prediction"] = (
+        cq["done"] and cq["infeasible"] == 510 and not cq["unknown"] and [(f["rep"], f["normal_forms"], f["sets"]) for f in cq["feasible"]] == [(24380, 288, 1)] and 3586680 * 48 // 820 // 729 == 288 and ctl["representative"] == 24380)
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())
