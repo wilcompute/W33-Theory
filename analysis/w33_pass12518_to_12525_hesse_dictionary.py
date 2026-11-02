@@ -94,7 +94,7 @@ def main():
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())
     OUT.write_text(json.dumps(res, indent=2, default=str))
-    print(json.dumps(checks, indent=1), res["all_checks_pass"], res["heavy_status"], res["classify_status"])
+    print(json.dumps(checks, indent=1), res["all_checks_pass"], res["heavy_status"], res["cube_orbit"])
     return res
 
 
