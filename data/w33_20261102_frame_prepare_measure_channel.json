@@ -1,0 +1,38 @@
+{
+  "status": "PASS_EXACT_FRAME_PREPARE_MEASURE_CHANNEL",
+  "source": "216 route minimum-support POVM in complex dimension 24",
+  "states": 216,
+  "source_dimension": 24,
+  "transition_denominator": 14400,
+  "one_input_row_numerator_counts": {
+    "16": 100,
+    "64": 95,
+    "256": 20,
+    "1600": 1
+  },
+  "self_identification_probability": "1/9",
+  "symmetric_doubly_stochastic": true,
+  "strictly_positive_all_entries": true,
+  "integer_spectrum": {
+    "0": 15,
+    "576": 15,
+    "768": 81,
+    "2304": 80,
+    "3168": 24,
+    "14400": 1
+  },
+  "normalised_eigenvalues": [
+    "1",
+    "11/50",
+    "4/25",
+    "4/75",
+    "1/25",
+    "0"
+  ],
+  "spectral_gap": "39/50",
+  "worst_case_tv_l2_bound_5_steps": 0.003778353940592437,
+  "five_steps_sufficient_for_tv_below_1pct": true,
+  "nontrivial_zero_eigenspace": 15,
+  "quantum_state_discrimination": "not perfect in one shot: self-click p=1/9",
+  "scope": "Valid abstract prepare-measure classical channel; no d24 photon circuit and no universal quantum hardware."
+}
