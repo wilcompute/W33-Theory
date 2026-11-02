@@ -1,0 +1,59 @@
+{
+  "status": "VALIDATED_NATIVE_KNIGHT_CLIFFORD_BRIDGE",
+  "baseline": "e29242572",
+  "artifact_raw_sha256": {
+    "analysis/w33_20261102_toroidal_knight_clifford_bridge.py": "67aa296ea1bc885e63f355d6926a7da1b20fc94cda237b7ae6d4f321e9c65ca1",
+    "analysis/w33_20261102_knight_bridge_validation.py": "091991d4c91a609337edd42cc8a46d9e17a75e2f2182196cccb3a9507a223998",
+    "analysis/2026-11-02_native_knight_clifford_cover_bridge.md": "231908c5a63b7378462889fd046527ae6c85a19531cbdb693e45837fd9a37937",
+    "tests/test_w33_20261102_toroidal_knight_clifford_bridge.py": "cb729f49cc9248cf8bd22a0d1a979b8e325ac7a9e2bf6c3421d6ab3133c9d94b",
+    "data/w33_20261102_toroidal_knight_clifford_bridge.json": "fcf98eb416975170bae9c34e2da6a76af12488614d6efe2dbe5786251d701a03",
+    "data/w33_20261102_knight_bridge_validation.json": "f31427bd44c9d91a15da31b3f77b474556d4163f551f231e5511ab02f3591c29",
+    "RESULTS_INDEX.md": "8a9f0ee423d0c5d11b67228e0bc413b4bc2017b2d34bca639b037bcf9d3f220e",
+    "TOPICAL_ALIASES.md": "fd9eb3aab528826d4142a2a46d15e322408acda8f3571ef0578c7d9ee299a7ac",
+    "data/w33_20261102_knight_bridge_guard_audit.json": "278fe804dedf93b95121307d4be1024abefb108bdba5d1656e7777da58fa1a35"
+  },
+  "preserved_unrelated_raw_sha256": {
+    ".mcp.json": "12a6b5758cc12212fb7788cecc3d2f3e2e8e9660f9e45a98bdc46f0974e388b3",
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_20261009_toe22_scale_nogo.json": "82dbb4a48d2f9f5c0631bc0912b380e18760c039336e7dd4c4801d7d80d1bfdc",
+    "data/w33_20261009_toe22_two_boson_quantum_selector.json": "8dc1270712e753a04cff78365537018a9f88bdaf693f1d1fe6e968022397a0ad",
+    "data/w33_20261009_toe26_e6_sector_charge_dynamics.json": "581dd36c156de2f22093635c4c7ea9c56173a2153860e88822b29d20ff83403e",
+    "data/w33_20261013_toe61_charge_gap.json": "1eec3c3cf0ae96c95ad483a1918c457fe843bac83c3c27fe4fc8d93a85fa3cc0",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    "data/w33_pass11949_axiflavon_quality_fails.json": "4c41fc7de9d19ca15e672436df6f503896853fffad12c564a188d24fc37270ef",
+    "papers/photonic_hardware_atlas/main.tex": "c337c768dbf59701a5bcafae906903ad544a45aa36204b7c039f68ddb088b70d"
+  },
+  "baseline_input_raw_sha256": {
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8"
+  },
+  "science_validation": "PASS_PRODUCER_AND_21_CONNECTED_TESTS",
+  "guard_all_exit_codes_zero": false,
+  "guard_limitations": [
+    {
+      "id": "stale-boundaries",
+      "exit_code": 124
+    },
+    {
+      "id": "tag-540-check",
+      "exit_code": 1
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "exit_code": 1
+    }
+  ],
+  "prior_ownership": [
+    "analysis/w33_cl4_q4_hypercube_network_unification.py",
+    "analysis/w33_pass5316_latin_knight_q4_affine_derivative_census.py",
+    "analysis/w33_20261031_unitary_stabilizer_lift.py",
+    "analysis/w33_20261102_chiral_surface_development.py"
+  ],
+  "advisory_reconciliation": {
+    "ovoids@6": "Read data/w33_pass1044_gaussian_falsified_and_pass338_closed.json and data/w33_pass1080_contextual_fraction_audit.json in full. Six doily ovoids are prior mathematics, explicitly not claimed new; the actual old/new spinor actions on them are computed here.",
+    "diagonal_edges@2": "Read data/bt1818_quartet_operator_labeling.json in full: its two diagonals belong to a four-state square. This bridge has16 board diagonals; the candidate refers to array coordinate content, not the same scalar result.",
+    "same_order_therefore_same": "Advisory matches a sentence explicitly warning about inequivalent equal-order groups. Identification here uses faithful Pauli actions, exact old matrices and independent permutation closure."
+  },
+  "publication": "CLI fallback because no GitKraken MCP tools are exposed; normal master push, explicit owned files only.",
+  "scope": "Finite native cover and Clifford maps only; TOE and full weekly/PDF reading are unfinished."
+}

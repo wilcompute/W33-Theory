@@ -1,0 +1,37 @@
+{
+  "utc": "2026-11-02T20:23:50.028822+00:00",
+  "execution": "Remote Desktop Commander on TheHeavyCrown; same hardware as local workspace",
+  "input_sha256": {
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8"
+  },
+  "jobs": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py"
+      ],
+      "returncode": 0,
+      "stdout": "PASS_NATIVE_KNIGHT_CLIFFORD_BRIDGE 960 11520\n",
+      "stderr": "",
+      "seconds": 13.404
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_w33_20261102_toroidal_knight_clifford_bridge.py",
+        "tests/test_w33_20261102_topology_interactions_geometry.py"
+      ],
+      "returncode": 0,
+      "stdout": ".....................                                                    [100%]\n21 passed in 59.82s\n",
+      "stderr": "",
+      "seconds": 67.451
+    }
+  ],
+  "status": "PASS_PRODUCER_AND_21_CONNECTED_TESTS"
+}

@@ -1,0 +1,301 @@
+{
+  "mode": "Configured local hook entries executed directly with selected file arguments; Git Bash/CMD hook launcher unavailable as a reliable runner. Known baseline failures are recorded in data/w33_20261102_repository_guard_audit.json.",
+  "records": [
+    {
+      "id": "stale-boundaries",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stale_boundaries.py"
+      ],
+      "exit_code": 124,
+      "seconds": 240.65938568115234,
+      "output": "Exceeded240s; no PASS asserted."
+    },
+    {
+      "id": "shifted-adjacency-descendants",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_shifted_adjacency_descendants.py",
+        "--check-only",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md",
+        "tests/test_w33_20261102_toroidal_knight_clifford_bridge.py",
+        "data/w33_20261102_toroidal_knight_clifford_bridge.json",
+        "data/w33_20261102_knight_bridge_validation.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8687634468078613,
+      "output": ""
+    },
+    {
+      "id": "tag-540-check",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md",
+        "tests/test_w33_20261102_toroidal_knight_clifford_bridge.py",
+        "data/w33_20261102_toroidal_knight_clifford_bridge.json",
+        "data/w33_20261102_knight_bridge_validation.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "seconds": 1.1128742694854736,
+      "output": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 297: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 406: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1486: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1604: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1615: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1962: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2372: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2639: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2848: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3968: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 421: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n"
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/w33_pass1197_parallel_collision_guard.py",
+        "--check-only"
+      ],
+      "exit_code": 1,
+      "seconds": 1.0232558250427246,
+      "output": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n"
+    },
+    {
+      "id": "s-min-formula-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_smin_formula.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md",
+        "tests/test_w33_20261102_toroidal_knight_clifford_bridge.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8174009323120117,
+      "output": ""
+    },
+    {
+      "id": "topical-aliases",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/build_topical_aliases.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 167.27383971214294,
+      "output": "TOPICAL_ALIASES.md up to date\n"
+    },
+    {
+      "id": "certificate-digests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificates.py",
+        "--quiet",
+        "data/w33_20261102_toroidal_knight_clifford_bridge.json",
+        "data/w33_20261102_knight_bridge_validation.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7835042476654053,
+      "output": ""
+    },
+    {
+      "id": "novelty-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_novelty_claims.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9473860263824463,
+      "output": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n"
+    },
+    {
+      "id": "rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_rediscovery.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4738643169403076,
+      "output": ""
+    },
+    {
+      "id": "search-power",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_search_power.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2113726139068604,
+      "output": "\n  scanned 3 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "guard-selftests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_guard_selftests.py"
+      ],
+      "exit_code": 0,
+      "seconds": 74.21645259857178,
+      "output": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n"
+    },
+    {
+      "id": "regex-deadends",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_regex_deadends.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7987709045410156,
+      "output": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "retraction-propagation",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_retraction_propagation.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7290623188018799,
+      "output": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "stdlib-shadow",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stdlib_shadow.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "tests/test_w33_20261102_toroidal_knight_clifford_bridge.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7142918109893799,
+      "output": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "heredoc-regex",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_heredoc_regex.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8743693828582764,
+      "output": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "cert-prose-vs-data",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_cert_prose_vs_data.py",
+        "data/w33_20261102_toroidal_knight_clifford_bridge.json",
+        "data/w33_20261102_knight_bridge_validation.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6455280780792236,
+      "output": "\n  0 prose/data contradiction(s) in 2 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "convention-fixed-form",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_convention_fixed_form.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9740903377532959,
+      "output": "\n  0 convention-fixed choice(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "key-nearmiss",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_key_nearmiss.py",
+        "data/w33_20261102_toroidal_knight_clifford_bridge.json",
+        "data/w33_20261102_knight_bridge_validation.json"
+      ],
+      "exit_code": 0,
+      "seconds": 216.04970288276672,
+      "output": "  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `clifford_grade_counts` near-misses: `counts`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `enlarged_projective_order` near-misses: `order`, `projective_order`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `gate_on_six_ovoids` near-misses: `gate`, `ovoids`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `gray_masks` near-misses: `masks`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `grid_edges` near-misses: `edges`, `grid`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `knight_edges` near-misses: `edges`, `ordinary_knight_edges`, `same_symbol_knight_edges`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `native_labels` near-misses: `labels`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `old_signed_generator_actions` near-misses: `actions`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `ovoid_stabilizer_projective_order` near-misses: `order`, `ovoid`, `projective_order`, `projective_stabilizer_order`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `projective_pauli_kernel_order` near-misses: `kernel_order`, `order`, `projective`, `projective_pauli_order`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `restricted_projective_order` near-misses: `order`, `projective_order`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `restricted_unsigned_order` near-misses: `d_order`, `order`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `signed_adjoint_order` near-misses: `adjoint_order`, `order`, `signed`, `t_order`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `signed_switch_action` near-misses: `action`, `signed`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `source_faces` near-misses: `faces`, `source`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `symplectic_quotient_order` near-misses: `order`, `quotient_order`, `symplectic`, `t_order`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `transported_faces` near-misses: `faces`\n  w33_20261102_toroidal_knight_clifford_bridge.json\n      new key `unsigned_switch_order` near-misses: `h_order`, `order`\n\n  18 near-miss key name(s) over 2 certificate(s)\n\n  Renaming a key before the certificate is committed costs nothing. Pass 4800's `alpha` and\n  BT818's `alpha_exact` are one such pair, and keeping them apart cost six passes.\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "certificate-rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificate_rediscovery.py",
+        "data/w33_20261102_toroidal_knight_clifford_bridge.json",
+        "data/w33_20261102_knight_bridge_validation.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.8370368480682373,
+      "output": "  RARE  w33_20261102_toroidal_knight_clifford_bridge.json\n        diagonal_edges@2  (stem reaches 1 file-slots)  already in: bt1818_quartet_operator_labeling.json\n  RARE  w33_20261102_toroidal_knight_clifford_bridge.json\n        ovoids@6  (stem reaches 5 file-slots)  already in: w33_pass1044_gaussian_falsified_and_pass338_closed.json, w33_pass1080_contextual_fraction_audit.json\n\n  2 token(s) already present elsewhere, over 2 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "order-coincidence",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_order_coincidence.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0590057373046875,
+      "output": "  analysis/2026-11-02_native_knight_clifford_cover_bridge.md:170  [same_order_therefore_same]\n      inequivalent subgroups of the same order. We identify our result by its\n\n  1 order-coincidence claim(s) in 3 file(s)\n\n  CANDIDATES. The settling check is the element-order spectrum -- cheap, and usually\n  already computed. BT159 published its own spectrum next to the claim it refutes.\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "spectral-overreach",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_spectral_overreach.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9696025848388672,
+      "output": "\n  0 candidate spectral over-read(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "hardcoded-keys",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_hardcoded_keys.py",
+        "analysis/w33_20261102_toroidal_knight_clifford_bridge.py",
+        "analysis/w33_20261102_knight_bridge_validation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9512543678283691,
+      "output": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n"
+    },
+    {
+      "id": "constant-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_constant_claims_hook.py",
+        "analysis/2026-11-02_native_knight_clifford_cover_bridge.md"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8144431114196777,
+      "output": ""
+    }
+  ],
+  "all_exit_codes_zero": false
+}

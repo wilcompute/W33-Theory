@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **13417** files; **18221** distinctive results
+Indexed **13420** files; **18221** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **7915** appear in exactly one file — the sharpest signal.
 
@@ -4394,7 +4394,7 @@ Indexed **13417** files; **18221** distinctive results
 | `20261028` | `analysis/2026-10-28_f2_klein_native_gauge_bridge.md` · `analysis/2026-10-28_five_fronts_followup.md` · `analysis/2026-10-28_round12_five_frontiers.md` · `analysis/2026-10-28_six_term_native_bloch_repair.md` · *(+14)* |
 | `20261038` | `analysis/w33_20261008_tetraquadric_explicit_smooth_modular_search.py` |
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+7)* |
-| `20261102` | `analysis/2026-11-02_native_topology_interactions_and_real_geometry.md` · `analysis/2026-11-02_two_sided_phase_convention_audit.md` · `analysis/w33_20261102_chiral_surface_development.py` · `analysis/w33_20261102_common_cover_interactions.py` · *(+3)* |
+| `20261102` | `analysis/2026-11-02_native_knight_clifford_cover_bridge.md` · `analysis/2026-11-02_native_topology_interactions_and_real_geometry.md` · `analysis/2026-11-02_two_sided_phase_convention_audit.md` · `analysis/w33_20261102_chiral_surface_development.py` · *(+6)* |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
 | `20600416` | `analysis/BT1902_1906_u6_mixed_gaussian_phase_zeta.md` · `analysis/BT2410_BT2415_five_frontiers.md` · `analysis/w33_pass1902_1903_decoder_mixed_reduction.py` |
@@ -15544,11 +15544,11 @@ Indexed **13417** files; **18221** distinctive results
 | `5308` | `analysis/w33_pass5308_hoffman_d4_triality.py` · `analysis/w33_pass5309_hoffman_tomotope_degree12_action.py` · `analysis/w33_pass5313_d4_triality_latin_parastrophe_quotient.py` · `analysis/w33_pass5317_hoffman_fourcell_triality_refinement.py` · *(+6)* |
 | `5309` | `analysis/2026-10-09_five_fronts_round12.md` · `analysis/w33_pass5309_hoffman_tomotope_degree12_action.py` · `analysis/w33_pass5310_tesseract_rotation_d4_tomotope_doublecovers.py` · `analysis/w33_pass5312_hoffman_latin_degree12_action_obstruction.py` · *(+5)* |
 | `5310` | `analysis/w33_pass5308_hoffman_d4_triality.py` · `analysis/w33_pass5310_tesseract_rotation_d4_tomotope_doublecovers.py` · `analysis/w33_pass5319_d4_tesseract_facepairs_tomotope_action.py` · `analysis/w33_pass5320_tesseract_rotation_vs_d4_facepair_orbital_fusion.py` · *(+3)* |
-| `5311` | `analysis/w33_pass5311_order4_latin_toroidal_q4_census.py` · `analysis/w33_pass5316_latin_knight_q4_affine_derivative_census.py` · `analysis/w33_pass5468_5475_the_simplex_stabiliser_is_WF4.py` |
+| `5311` | `analysis/2026-11-02_native_knight_clifford_cover_bridge.md` · `analysis/w33_pass5311_order4_latin_toroidal_q4_census.py` · `analysis/w33_pass5316_latin_knight_q4_affine_derivative_census.py` · `analysis/w33_pass5468_5475_the_simplex_stabiliser_is_WF4.py` |
 | `5312` | `analysis/w33_pass5312_hoffman_latin_degree12_action_obstruction.py` · `analysis/w33_pass5313_d4_triality_latin_parastrophe_quotient.py` |
 | `5313` | `analysis/BT4324_BT4334_CHAMBER_HECKE_AND_AUDITED_CORRECTIONS.md` · `analysis/w33_pass4324_4327_chamber_hecke_hashimoto.g` · `analysis/w33_pass5313_d4_triality_latin_parastrophe_quotient.py` |
 | `5315` | `analysis/w33_20261013_toe53_optical_15to81.py` · `docs/index.html` |
-| `5316` | `analysis/w33_pass5316_latin_knight_q4_affine_derivative_census.py` · `analysis/w33_pass5468_5475_the_simplex_stabiliser_is_WF4.py` · `analysis/w33_pass5516_5523_the_576_is_proved_and_the_bug_was_the_finding.py` · `analysis/w33_pass8909_8916_e7_e8_d4_reye_latin_selector.py` · *(+1)* |
+| `5316` | `analysis/2026-11-02_native_knight_clifford_cover_bridge.md` · `analysis/w33_20261102_toroidal_knight_clifford_bridge.py` · `analysis/w33_pass5316_latin_knight_q4_affine_derivative_census.py` · `analysis/w33_pass5468_5475_the_simplex_stabiliser_is_WF4.py` · *(+3)* |
 | `5317` | `analysis/w33_pass5317_hoffman_fourcell_triality_refinement.py` |
 | `5318` | `analysis/w33_pass5318_latin_spread_triality_action.py` |
 | `5319` | `analysis/w33_pass5319_d4_tesseract_facepairs_tomotope_action.py` · `analysis/w33_pass5320_tesseract_rotation_vs_d4_facepair_orbital_fusion.py` · `analysis/w33_pass5321_tomotope_3k4_coordinate_partition_semidirect.py` |
@@ -15831,7 +15831,7 @@ Indexed **13417** files; **18221** distinctive results
 | `5635` | `analysis/w33_pass1826_1830_verify_frozen.py` · `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` · `scripts/check_certificate_rediscovery.py` · `scripts/check_transitivity.py` |
 | `5636` | `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` |
 | `5637` | `analysis/w33_pass1887_1891_verify_frozen.py` · `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` · `scripts/check_certificate_rediscovery.py` |
-| `5638` | `analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md` · `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` · `analysis/w33_pass5643_5650_the_tomotope_w33_bridge_is_wf4_mod_centre.py` |
+| `5638` | `analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md` · `analysis/2026-11-02_native_knight_clifford_cover_bridge.md` · `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` · `analysis/w33_pass5643_5650_the_tomotope_w33_bridge_is_wf4_mod_centre.py` |
 | `5639` | `analysis/2026-05-29_flag_codec_toroidal_hypercube_boundary.md` · `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` · `scripts/check_transitivity.py` |
 | `5640` | `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` |
 | `5641` | `analysis/w33_pass5635_5642_the_sixteen_codecs_are_not_a_hypercube.py` |
