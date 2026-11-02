@@ -1,0 +1,181 @@
+{
+  "status": "PASS_PAPER_PHASE_REBUILD_AND_FIVE_TESTS",
+  "test_count": 5,
+  "test_replay": "data/w33_20261102_phase_test_replay.json",
+  "compiled_pdf_pages": 215,
+  "visual_pages_checked": [
+    16,
+    17
+  ],
+  "rendered_page_sha256": {
+    "16": "754ba1c83e639def2bb7f4c17a4fd14d7fbd140bf190830005cd7ab372238309",
+    "17": "4b424cbf9efcb78a7d5384b2cb66f332fabbec4c447bc95a1afe24120aeb4f5a"
+  },
+  "reading_scope": "Extracted text of original PDF pages1-16 and137-140 read; full215-page reading and full weekly commit reading remain incomplete.",
+  "layout_scope": "Corrected page16 and continuation17 rendered with PyMuPDF and visually checked. Build log includes warnings elsewhere; this is not a full215-page layout review.",
+  "compiler": {
+    "command": "cd '/mnt/c/Repos/Theory of Everything/papers/forty_points' && /home/wiljd/.local/bin/tectonic -X compile main.tex",
+    "exit_code": 0,
+    "seconds": 310.0568549633026,
+    "output": "note: \"version 2\" Tectonic command-line interface activated\nnote: Running TeX ...\nnote: Rerunning TeX because \"main.out\" changed ...\nnote: Rerunning TeX because \"main.aux\" changed ...\nnote: Running xdvipdfmx ...\nnote: Writing `main.pdf` (1.2721500396728516 MiB)\nnote: Skipped writing 3 intermediate files (use --keep-intermediates to keep them)\nwarning: sec02_object:19: Overfull \\hbox (11.34557pt too wide) in paragraph at lines 14--19\nwarning: sec02_object:171: Overfull \\hbox (11.44759pt too wide) detected at line 171\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:296: Overfull \\hbox (3.76793pt too wide) in paragraph at lines 288--296\nwarning: sec03_selfentangle:430: Missing character: There is no \ufffd\ufffd\ufffd\ufffd (U+1D6E4) in font [texgyrepagella-regular.otf]/OT:script=latn;language=dflt;!\nwarning: could not represent character \"\ud835\udee4\" (0x1d6e4) in font \"[texgyrepagella-regular.otf]/OT:script=latn;language=dflt;\"\nwarning:   you may need to load the `fontspec` package and use (e.g.) \\setmainfont to\nwarning:   choose a different font that covers the unrepresentable character(s)\nwarning: sec04_time:1: Overfull \\hbox (9.3209pt too wide) in paragraph at lines 444--1\nwarning: sec04_time:327: Underfull \\hbox (badness 1466) in paragraph at lines 326--327\nwarning: sec04_time:348: Underfull \\hbox (badness 1337) in paragraph at lines 348--348\nwarning: sec04_time:680: Overfull \\hbox (4.98965pt too wide) in paragraph at lines 666--680\nwarning: sec04_time:691: Overfull \\hbox (7.54665pt too wide) in paragraph at lines 681--691\nwarning: sec04_time:726: Overfull \\hbox (2.99126pt too wide) in paragraph at lines 705--726\nwarning: sec04_time:843: Overfull \\hbox (3.5614pt too wide) in paragraph at lines 828--843\nwarning: sec04_time:892: Overfull \\hbox (10.01672pt too wide) detected at line 892\nwarning: sec04_time:904: Overfull \\hbox (28.68489pt too wide) in paragraph at lines 892--904\nwarning: sec04_time:904: Overfull \\hbox (9.6462pt too wide) in paragraph at lines 892--904\nwarning: sec04_time:1201: Overfull \\hbox (20.77983pt too wide) in paragraph at lines 1197--1201\nwarning: sec04_time:1289: Overfull \\hbox (45.87068pt too wide) in paragraph at lines 1278--1289\nwarning: sec04_time:1327: Overfull \\hbox (1.22578pt too wide) in paragraph at lines 1318--1327\nwarning: sec05_e8:448: Overfull \\hbox (6.79288pt too wide) in paragraph at lines 431--448\nwarning: sec05_e8:491: Overfull \\hbox (3.1445pt too wide) in paragraph at lines 467--491\nwarning: sec05_e8:535: Overfull \\hbox (3.29414pt too wide) in paragraph at lines 519--535\nwarning: sec05_e8:643: Overfull \\hbox (46.14366pt too wide) in paragraph at lines 625--643\nwarning: sec05_e8:643: Overfull \\hbox (7.44148pt too wide) in paragraph at lines 625--643\nwarning: sec07_realforms:228: Overfull \\hbox (16.88615pt too wide) in paragraph at lines 227--228\nwarning: sec07_realforms:266: Overfull \\hbox (10.72289pt too wide) in paragraph at lines 261--266\nwarning: sec07_realforms:283: Overfull \\hbox (25.18202pt too wide) in paragraph at lines 268--283\nwarning: sec07_realforms:365: Overfull \\hbox (23.15897pt too wide) in paragraph at lines 356--365\nwarning: sec09_physics:155: Underfull \\hbox (badness 1603) in paragraph at lines 148--155\nwarning: sec09_physics:168: Overfull \\hbox (11.44191pt too wide) in paragraph at lines 163--168\nwarning: sec09_physics:509: Overfull \\hbox (8.2105pt too wide) in paragraph at lines 506--509\nwarning: sec09_physics:615: Overfull \\hbox (0.51622pt too wide) in paragraph at lines 605--615\nwarning: sec09_physics:744: Overfull \\hbox (28.07753pt too wide) in paragraph at lines 740--744\nwarning: sec09_physics:783: Overfull \\hbox (6.42195pt too wide) in paragraph at lines 779--783\nwarning: sec09_physics:832: Overfull \\hbox (5.45241pt too wide) in paragraph at lines 825--832\nwarning: sec09_physics:832: Overfull \\hbox (1.13994pt too wide) in paragraph at lines 825--832\nwarning: sec09_physics:920: Overfull \\hbox (21.04616pt too wide) in paragraph at lines 913--920\nwarning: sec09_physics:1570: Overfull \\hbox (7.62988pt too wide) in paragraph at lines 1569--1570\nwarning: sec11_epilogue:105: Overfull \\hbox (3.95958pt too wide) in paragraph at lines 91--105\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 1354) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 2689) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 4927) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 1038) in paragraph at lines 204--204\nwarning: appA_ledger:222: Overfull \\hbox (6.50148pt too wide) in alignment at lines 21--222\nwarning: appA_ledger:422: Overfull \\hbox (6.50148pt too wide) in alignment at lines 222--422\nwarning: appA_ledger:622: Overfull \\hbox (6.50148pt too wide) in alignment at lines 422--622\nwarning: appA_ledger:702: Overfull \\hbox (6.50148pt too wide) in alignment at lines 622--702\nwarning: appB_glossary:26: Overfull \\hbox (8.75577pt too wide) in paragraph at lines 24--26\nwarning: appC_references:44: Underfull \\hbox (badness 2626) in paragraph at lines 41--44\nwarning: appC_references:151: Underfull \\hbox (badness 3407) in paragraph at lines 149--151\nwarning: appC_references:198: Underfull \\hbox (badness 5652) in paragraph at lines 196--198\nwarning: sec02_object:19: Overfull \\hbox (11.34557pt too wide) in paragraph at lines 14--19\nwarning: sec02_object:171: Overfull \\hbox (11.44759pt too wide) detected at line 171\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:296: Overfull \\hbox (3.76793pt too wide) in paragraph at lines 288--296\nwarning: sec03_selfentangle:430: \nMissing character: There is no \ufffd\ufffd\ufffd\ufffd (U+1D6E4) in font [texgyrepagella-regular.otf]/OT:script=latn;language=dflt;!\nwarning: could not represent character \"\ud835\udee4\" (0x1d6e4) in font \"[texgyrepagella-regular.otf]/OT:script=latn;language=dflt;\"\nwarning:   you may need to load the `fontspec` package and use (e.g.) \\setmainfont to\nwarning:   choose a different font that covers the unrepresentable character(s)\nwarning: sec04_time:1: Overfull \\hbox (9.3209pt too wide) in paragraph at lines 444--1\nwarning: sec04_time:327: Underfull \\hbox (badness 1466) in paragraph at lines 326--327\nwarning: sec04_time:348: Underfull \\hbox (badness 1337) in paragraph at lines 348--348\nwarning: sec04_time:680: Overfull \\hbox (4.98965pt too wide) in paragraph at lines 666--680\nwarning: sec04_time:691: Overfull \\hbox (7.54665pt too wide) in paragraph at lines 681--691\nwarning: sec04_time:726: Overfull \\hbox (2.99126pt too wide) in paragraph at lines 705--726\nwarning: sec04_time:843: Overfull \\hbox (3.5614pt too wide) in paragraph at lines 828--843\nwarning: sec04_time:892: Overfull \\hbox (10.01672pt too wide) detected at line 892\nwarning: sec04_time:904: Overfull \\hbox (28.68489pt too wide) in paragraph at lines 892--904\nwarning: sec04_time:904: Overfull \\hbox (9.6462pt too wide) in paragraph at lines 892--904\nwarning: sec04_time:1201: Overfull \\hbox (20.77983pt too wide) in paragraph at lines 1197--1201\nwarning: sec04_time:1289: Overfull \\hbox (45.87068pt too wide) in paragraph at lines 1278--1289\nwarning: sec04_time:1327: Overfull \\hbox (1.22578pt too wide) in paragraph at lines 1318--1327\nwarning: sec05_e8:448: Overfull \\hbox (6.79288pt too wide) in paragraph at lines 431--448\nwarning: sec05_e8:491: Overfull \\hbox (3.1445pt too wide) in paragraph at lines 467--491\nwarning: sec05_e8:535: Overfull \\hbox (3.29414pt too wide) in paragraph at lines 519--535\nwarning: sec05_e8:643: Overfull \\hbox (46.14366pt too wide) in paragraph at lines 625--643\nwarning: sec05_e8:643: Overfull \\hbox (7.44148pt too wide) in paragraph at lines 625--643\nwarning: sec07_realforms:228: Overfull \\hbox (16.88615pt too wide) in paragraph at lines 227--228\nwarning: sec07_realforms:266: Overfull \\hbox (10.72289pt too wide) in paragraph at lines 261--266\nwarning: sec07_realforms:283: Overfull \\hbox (25.18202pt too wide) in paragraph at lines 268--283\nwarning: sec07_realforms:365: Overfull \\hbox (23.15897pt too wide) in paragraph at lines 356--365\nwarning: sec09_physics:155: Underfull \\hbox (badness 1603) in paragraph at lines 148--155\nwarning: sec09_physics:168: Overfull \\hbox (17.5301pt too wide) in paragraph at lines 163--168\nwarning: sec09_physics:509: Overfull \\hbox (8.2105pt too wide) in paragraph at lines 506--509\nwarning: sec09_physics:615: Overfull \\hbox (0.51622pt too wide) in paragraph at lines 605--615\nwarning: sec09_physics:744: Overfull \\hbox (28.07753pt too wide) in paragraph at lines 740--744\nwarning: sec09_physics:783: Overfull \\hbox (12.51015pt too wide) in paragraph at lines 779--783\nwarning: sec09_physics:832: Overfull \\hbox (5.45241pt too wide) in paragraph at lines 825--832\nwarning: sec09_physics:832: Overfull \\hbox (1.13994pt too wide) in paragraph at lines 825--832\nwarning: sec09_physics:920: Overfull \\hbox (21.04616pt too wide) in paragraph at lines 913--920\nwarning: sec09_physics:1570: Overfull \\hbox (7.62988pt too wide) in paragraph at lines 1569--1570\nwarning: sec11_epilogue:105: Overfull \\hbox (3.95958pt too wide) in paragraph at lines 91--105\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 1354) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 2689) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 4927) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 1038) in paragraph at lines 204--204\nwarning: appA_ledger:15: Overfull \\hbox (6.50148pt too wide) in alignment at lines 11--15\nwarning: appA_ledger:19: Overfull \\hbox (6.50148pt too wide) in alignment at lines 15--19\nwarning: appA_ledger:21: Overfull \\hbox (6.50148pt too wide) in alignment at lines 19--21\nwarning: appA_ledger:222: Overfull \\hbox (6.50148pt too wide) in alignment at lines 21--222\nwarning: appA_ledger:422: Overfull \\hbox (6.50148pt too wide) in alignment at lines 222--422\nwarning: appA_ledger:622: Overfull \\hbox (6.50148pt too wide) in alignment at lines 422--622\nwarning: appA_ledger:702: Overfull \\hbox (6.50148pt too wide) in alignment at lines 622--702\nwarning: appB_glossary:26: Overfull \\hbox (8.75577pt too wide) in paragraph at lines 24--26\nwarning: appC_references:44: Underfull \\hbox (badness 2626) in paragraph at lines 41--44\nwarning: appC_references:151: Underfull \\hbox (badness 3407) in paragraph at lines 149--151\nwarning: appC_references:198: Underfull \\hbox (badness 5652) in paragraph at lines 196--198\nwarning: sec02_object:19: Overfull \\hbox (11.34557pt too wide) in paragraph at lines 14--19\nwarning: sec02_object:171: Overfull \\hbox (11.44759pt too wide) detected at line 171\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:123: Underfull \\hbox (badness 10000) in paragraph at lines 123--123\nwarning: sec03_selfentangle:296: Overfull \\hbox (3.76793pt too wide) in paragraph at lines 288--296\nwarning: sec03_selfentangle:430: \nMissing character: There is no \ufffd\ufffd\ufffd\ufffd (U+1D6E4) in font [texgyrepagella-regular.otf]/OT:script=latn;language=dflt;!\nwarning: could not represent character \"\ud835\udee4\" (0x1d6e4) in font \"[texgyrepagella-regular.otf]/OT:script=latn;language=dflt;\"\nwarning:   you may need to load the `fontspec` package and use (e.g.) \\setmainfont to\nwarning:   choose a different font that covers the unrepresentable character(s)\nwarning: sec04_time:1: Overfull \\hbox (9.3209pt too wide) in paragraph at lines 444--1\nwarning: sec04_time:327: Underfull \\hbox (badness 1466) in paragraph at lines 326--327\nwarning: sec04_time:348: Underfull \\hbox (badness 1337) in paragraph at lines 348--348\nwarning: sec04_time:680: Overfull \\hbox (4.98965pt too wide) in paragraph at lines 666--680\nwarning: sec04_time:691: Overfull \\hbox (7.54665pt too wide) in paragraph at lines 681--691\nwarning: sec04_time:726: Overfull \\hbox (2.99126pt too wide) in paragraph at lines 705--726\nwarning: sec04_time:843: Overfull \\hbox (3.5614pt too wide) in paragraph at lines 828--843\nwarning: sec04_time:892: Overfull \\hbox (10.01672pt too wide) detected at line 892\nwarning: sec04_time:904: Overfull \\hbox (28.68489pt too wide) in paragraph at lines 892--904\nwarning: sec04_time:904: Overfull \\hbox (9.6462pt too wide) in paragraph at lines 892--904\nwarning: sec04_time:1201: Overfull \\hbox (20.77983pt too wide) in paragraph at lines 1197--1201\nwarning: sec04_time:1289: Overfull \\hbox (45.87068pt too wide) in paragraph at lines 1278--1289\nwarning: sec04_time:1327: Overfull \\hbox (1.22578pt too wide) in paragraph at lines 1318--1327\nwarning: sec05_e8:448: Overfull \\hbox (6.79288pt too wide) in paragraph at lines 431--448\nwarning: sec05_e8:491: Overfull \\hbox (3.1445pt too wide) in paragraph at lines 467--491\nwarning: sec05_e8:535: Overfull \\hbox (3.29414pt too wide) in paragraph at lines 519--535\nwarning: sec05_e8:643: Overfull \\hbox (46.14366pt too wide) in paragraph at lines 625--643\nwarning: sec05_e8:643: Overfull \\hbox (7.44148pt too wide) in paragraph at lines 625--643\nwarning: sec07_realforms:228: Overfull \\hbox (16.88615pt too wide) in paragraph at lines 227--228\nwarning: sec07_realforms:266: Overfull \\hbox (10.72289pt too wide) in paragraph at lines 261--266\nwarning: sec07_realforms:283: Overfull \\hbox (25.18202pt too wide) in paragraph at lines 268--283\nwarning: sec07_realforms:365: Overfull \\hbox (23.15897pt too wide) in paragraph at lines 356--365\nwarning: sec09_physics:155: Underfull \\hbox (badness 1603) in paragraph at lines 148--155\nwarning: sec09_physics:168: Overfull \\hbox (17.5301pt too wide) in paragraph at lines 163--168\nwarning: sec09_physics:509: Overfull \\hbox (8.2105pt too wide) in paragraph at lines 506--509\nwarning: sec09_physics:615: Overfull \\hbox (0.51622pt too wide) in paragraph at lines 605--615\nwarning: sec09_physics:744: Overfull \\hbox (28.07753pt too wide) in paragraph at lines 740--744\nwarning: sec09_physics:783: Overfull \\hbox (12.51015pt too wide) in paragraph at lines 779--783\nwarning: sec09_physics:832: Overfull \\hbox (5.45241pt too wide) in paragraph at lines 825--832\nwarning: sec09_physics:832: Overfull \\hbox (1.13994pt too wide) in paragraph at lines 825--832\nwarning: sec09_physics:920: Overfull \\hbox (21.04616pt too wide) in paragraph at lines 913--920\nwarning: sec09_physics:1570: Overfull \\hbox (7.62988pt too wide) in paragraph at lines 1569--1570\nwarning: sec11_epilogue:105: Overfull \\hbox (3.95958pt too wide) in paragraph at lines 91--105\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 1354) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 10000) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 2689) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 4927) in paragraph at lines 204--204\nwarning: sec11_epilogue:204: Underfull \\hbox (badness 1038) in paragraph at lines 204--204\nwarning: appA_ledger:15: Overfull \\hbox (6.50148pt too wide) in alignment at lines 11--15\nwarning: appA_ledger:19: Overfull \\hbox (6.50148pt too wide) in alignment at lines 15--19\nwarning: appA_ledger:21: Overfull \\hbox (6.50148pt too wide) in alignment at lines 19--21\nwarning: appA_ledger:222: Overfull \\hbox (6.50148pt too wide) in alignment at lines 21--222\nwarning: appA_ledger:422: Overfull \\hbox (6.50148pt too wide) in alignment at lines 222--422\nwarning: appA_ledger:622: Overfull \\hbox (6.50148pt too wide) in alignment at lines 422--622\nwarning: appA_ledger:702: Overfull \\hbox (6.50148pt too wide) in alignment at lines 622--702\nwarning: appB_glossary:26: Overfull \\hbox (8.75577pt too wide) in paragraph at lines 24--26\nwarning: appC_references:44: Underfull \\hbox (badness 2626) in paragraph at lines 41--44\nwarning: appC_references:151: Underfull \\hbox (badness 3407) in paragraph at lines 149--151\nwarning: appC_references:198: Underfull \\hbox (badness 5652) in paragraph at lines 196--198\nwarning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.\n"
+  },
+  "phase_targeted_guards": {
+    "records": [
+      {
+        "script": "check_shifted_adjacency_descendants.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_shifted_adjacency_descendants.py",
+          "--check-only",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.9777569770812988,
+        "output": ""
+      },
+      {
+        "script": "tag_540_disambiguation.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\tag_540_disambiguation.py",
+          "--check-only",
+          "--strict",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.721895694732666,
+        "output": ""
+      },
+      {
+        "script": "check_smin_formula.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_smin_formula.py",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.7186410427093506,
+        "output": ""
+      },
+      {
+        "script": "check_certificates.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_certificates.py",
+          "--quiet",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.6766431331634521,
+        "output": ""
+      },
+      {
+        "script": "check_rediscovery.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_rediscovery.py",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 2.419538736343384,
+        "output": ""
+      },
+      {
+        "script": "check_regex_deadends.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_regex_deadends.py",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.686098575592041,
+        "output": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n"
+      },
+      {
+        "script": "check_heredoc_regex.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_heredoc_regex.py",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.1706838607788086,
+        "output": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n"
+      },
+      {
+        "script": "check_stdlib_shadow.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_stdlib_shadow.py",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.9999291896820068,
+        "output": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n"
+      },
+      {
+        "script": "check_convention_fixed_form.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_convention_fixed_form.py",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.832730770111084,
+        "output": "\n  0 convention-fixed choice(s) in 5 file(s)\n  (zero means nothing unless --selftest passes; run it)\n"
+      },
+      {
+        "script": "check_constant_claims_hook.py",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "C:\\Repos\\Theory of Everything\\scripts\\check_constant_claims_hook.py",
+          "analysis/w33_20261102_two_sided_phase_convention.py",
+          "analysis/2026-11-02_two_sided_phase_convention_audit.md",
+          "tests/test_w33_20261102_two_sided_phase_convention.py",
+          "papers/forty_points/sec03_selfentangle.tex",
+          "data/w33_20261102_two_sided_phase_convention.json"
+        ],
+        "exit_code": 0,
+        "seconds": 1.802943468093872,
+        "output": ""
+      }
+    ],
+    "all_exit_codes_zero": true
+  }
+}

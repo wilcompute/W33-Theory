@@ -1,0 +1,17 @@
+{
+  "status": "PASS_PAPER_COMPILER_CLOCK_FIRST_PHASE_RECONCILIATION",
+  "ordered_label_pairs": 6561,
+  "exact_phase_histogram": {
+    "0": 2241,
+    "1": 2160,
+    "2": 2160
+  },
+  "commuting_ordered_pairs": 2241,
+  "maximum_clock_first_matrix_residual": 2.881996807198919e-15,
+  "shift_first_pairs_disagreeing_with_displayed_clock_first_phase": 4320,
+  "maximum_wrong_convention_residual": 5.196152422706632,
+  "corrected_paper_definition": "P_u=Z^(u1) X^(u2), matching the cited executable compiler; label coordinates reversed relative to Section2.",
+  "exact_phase_law": "For ZX=omega XZ and P_u=Z^a X^b: P_u P_v=omega^(aB-bA) P_v P_u. For Phi_(u,v)(M)=P_u M P_v^dagger, the exponent is [u,u_prime]-[v,v_prime]. The X-first convention reverses that exponent.",
+  "vectorization": "Paper convention |i><j| maps to |i> tensor |j>, so Phi matrix is P_u tensor conjugate(P_v).",
+  "boundary": "A paper notation correction: the cited compiler already used the correct clock-first convention. No change to old executable mathematics or the zero-pairing W33 graph; a global sign reversal changes oriented phases, not commutation incidence. Exhaustive complex matrix checks are floating-point; the phase-law proof uses exact ZX=omega XZ arithmetic."
+}

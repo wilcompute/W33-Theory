@@ -1,0 +1,41 @@
+{
+  "status": "PASS_PHASE_CORRECTION_WITH_DOCUMENTED_REPOSITORY_GUARD_LIMITS",
+  "science_commit": "43395db5539188d4e7c1e0bf6fe80ea814d42ef6",
+  "science_publication_receipt": {
+    "commit": "43395db5539188d4e7c1e0bf6fe80ea814d42ef6",
+    "remote_master": "43395db5539188d4e7c1e0bf6fe80ea814d42ef6",
+    "verified_files": 13,
+    "preserved_files": 9,
+    "utc": "2026-11-02T19:46:36.588164+00:00"
+  },
+  "artifact_raw_sha256": {
+    "analysis/w33_20261102_two_sided_phase_convention.py": "72ef5d1a3c8f81742c75098289ea4e9e973cfd05f95870bbccd478a6bd1558df",
+    "tests/test_w33_20261102_two_sided_phase_convention.py": "2312f3dfdda0fe09fcde8e08993a3306fc6c743075593c80ebd80443d1c5257a",
+    "analysis/2026-11-02_two_sided_phase_convention_audit.md": "d5a2f2d1028a5c452f1350e5180f0b35f71caf12ae18268ace124137c2ea05b3",
+    "data/w33_20261102_two_sided_phase_convention.json": "06a74fafa407978b3b976923f29b7082f632eb2307893836416e19024482d133",
+    "papers/forty_points/sec03_selfentangle.tex": "abcd3576d09728b265eff59c35060b4ef440ca15faae6570782d38a5b1f0d3d2",
+    "papers/forty_points/main.pdf": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "RESULTS_INDEX.md": "fd3b6289aa71975d363644194478d49e824c9760bcd966b9bf9df548fe5320f5",
+    "TOPICAL_ALIASES.md": "2702aee09294eb26152d56a5bbbdcdf3efdffd6afce867ab52a0176b9f4bc34a",
+    "data/w33_20261102_phase_test_replay.json": "ddb0b4fc6e078482a1afb6f45717b050996cde3f8e7490e93ae7360d46de7d45",
+    "data/w33_20261102_paper_phase_validation.json": "3fcfbcdd74f046bfb59872a1e876fa48a53ef4957e6899230a0d7487de31643b",
+    "data/w33_20261102_repository_guard_audit.json": "4cef7e29edfa4f28e574aa4854ede99247b58cdd52c5e5671f316e0e346623a6"
+  },
+  "paper_baseline_blob_sha256": {
+    "papers/forty_points/sec03_selfentangle.tex": "27a83932b3ea268b12c229ceeaca54972884518e99854d56d87769d2c618e0ac",
+    "papers/forty_points/main.pdf": "c655f8cc334227d7a251f1fc1232e8b8f573fd3bdac19113d4aba316f8ccd9ee"
+  },
+  "preserved_unrelated_raw_sha256": {
+    ".mcp.json": "12a6b5758cc12212fb7788cecc3d2f3e2e8e9660f9e45a98bdc46f0974e388b3",
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_20261009_toe22_scale_nogo.json": "82dbb4a48d2f9f5c0631bc0912b380e18760c039336e7dd4c4801d7d80d1bfdc",
+    "data/w33_20261009_toe22_two_boson_quantum_selector.json": "8dc1270712e753a04cff78365537018a9f88bdaf693f1d1fe6e968022397a0ad",
+    "data/w33_20261009_toe26_e6_sector_charge_dynamics.json": "581dd36c156de2f22093635c4c7ea9c56173a2153860e88822b29d20ff83403e",
+    "data/w33_20261013_toe61_charge_gap.json": "1eec3c3cf0ae96c95ad483a1918c457fe843bac83c3c27fe4fc8d93a85fa3cc0",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    "data/w33_pass11949_axiflavon_quality_fails.json": "4c41fc7de9d19ca15e672436df6f503896853fffad12c564a188d24fc37270ef",
+    "papers/photonic_hardware_atlas/main.tex": "c337c768dbf59701a5bcafae906903ad544a45aa36204b7c039f68ddb088b70d"
+  },
+  "validation": "44 connected native tests plus5 exhaustive phase tests PASS.3 native producers and phase producer regenerated. Corrected215-page PDF rebuilt; pages16-17 visually checked. Ten targeted phase guards PASS; global failures/timeouts are recorded separately.",
+  "utc": "2026-11-02T19:56:27.624225+00:00"
+}

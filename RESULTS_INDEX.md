@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **13415** files; **18221** distinctive results
+Indexed **13417** files; **18221** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **7915** appear in exactly one file — the sharpest signal.
 
@@ -4394,7 +4394,7 @@ Indexed **13415** files; **18221** distinctive results
 | `20261028` | `analysis/2026-10-28_f2_klein_native_gauge_bridge.md` · `analysis/2026-10-28_five_fronts_followup.md` · `analysis/2026-10-28_round12_five_frontiers.md` · `analysis/2026-10-28_six_term_native_bloch_repair.md` · *(+14)* |
 | `20261038` | `analysis/w33_20261008_tetraquadric_explicit_smooth_modular_search.py` |
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+7)* |
-| `20261102` | `analysis/2026-11-02_native_topology_interactions_and_real_geometry.md` · `analysis/w33_20261102_chiral_surface_development.py` · `analysis/w33_20261102_common_cover_interactions.py` · `analysis/w33_20261102_continuation_validation.py` · *(+1)* |
+| `20261102` | `analysis/2026-11-02_native_topology_interactions_and_real_geometry.md` · `analysis/2026-11-02_two_sided_phase_convention_audit.md` · `analysis/w33_20261102_chiral_surface_development.py` · `analysis/w33_20261102_common_cover_interactions.py` · *(+3)* |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
 | `20600416` | `analysis/BT1902_1906_u6_mixed_gaussian_phase_zeta.md` · `analysis/BT2410_BT2415_five_frontiers.md` · `analysis/w33_pass1902_1903_decoder_mixed_reduction.py` |
@@ -13039,7 +13039,7 @@ Indexed **13415** files; **18221** distinctive results
 | `2237` | `analysis/THEORY_OF_EVERYTHING.py` · `analysis/w33_pass4328_4333_audited_corrections.g` |
 | `2238` | `analysis/THEORY_OF_EVERYTHING.py` |
 | `2239` | `analysis/THEORY_OF_EVERYTHING.py` |
-| `2241` | `analysis/THEORY_OF_EVERYTHING.py` · `docs/index.html` |
+| `2241` | `analysis/2026-11-02_two_sided_phase_convention_audit.md` · `analysis/THEORY_OF_EVERYTHING.py` · `docs/index.html` |
 | `2242` | `analysis/THEORY_OF_EVERYTHING.py` · `docs/index.html` |
 | `2243` | `analysis/THEORY_OF_EVERYTHING.py` |
 | `2244` | `analysis/THEORY_OF_EVERYTHING.py` · `analysis/w33_pass4328_4333_audited_corrections.g` |

@@ -1,0 +1,17 @@
+{
+  "test_count": 5,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading last 11 lines (total: 11 lines)]\n\nPASS_PAPER_COMPILER_CLOCK_FIRST_PHASE_RECONCILIATION 6561 4320\r\ntest_all_pairs_and_wrong_convention_count (test_w33_20261102_two_sided_phase_convention.PhaseConvention.test_all_pairs_and_wrong_convention_count) ... ok\r\ntest_exact_commuting_pair_census (test_w33_20261102_two_sided_phase_convention.PhaseConvention.test_exact_commuting_pair_census) ... ok\r\ntest_explicit_shift_clock_witness (test_w33_20261102_two_sided_phase_convention.PhaseConvention.test_explicit_shift_clock_witness) ... ok\r\ntest_paper_uses_the_same_clock_first_definition_as_source (test_w33_20261102_two_sided_phase_convention.PhaseConvention.test_paper_uses_the_same_clock_first_definition_as_source) ... ok\r\ntest_two_sided_operator_action_on_every_matrix_unit (test_w33_20261102_two_sided_phase_convention.PhaseConvention.test_two_sided_operator_action_on_every_matrix_unit) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.711s\r\n\r\nOK\r\n✅ Process completed with exit code 0 (runtime: 12.11s)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: TheHeavyCrown (75dccda9-254c-47a9-9d13-ef69565dedf7)]"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  }
+}
