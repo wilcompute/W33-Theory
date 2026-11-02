@@ -1,0 +1,27 @@
+{
+ "q": 3,
+ "W": 10,
+ "classes": 2,
+ "infeasible": 1,
+ "unknown": [],
+ "feasible": [
+  {
+   "rep": 0,
+   "normal_forms": 2,
+   "sets": 1,
+   "sample": [
+    0,
+    1,
+    9,
+    13,
+    16,
+    28,
+    32,
+    34,
+    37,
+    39
+   ]
+  }
+ ],
+ "done": true
+}

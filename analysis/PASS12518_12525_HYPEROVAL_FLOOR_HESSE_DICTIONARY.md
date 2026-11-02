@@ -2,7 +2,7 @@
 
 Claude track. Producer: `analysis/w33_pass12518_to_12525_hesse_dictionary.py`. Test: `tests/test_w33_pass12518_to_12525.py`. Drivers in
 `analysis/search_drivers_12466`: `star_cubes.py`, `star48_control.py`, `heavy_cases.py`, `heavy_split.py`, `heavy_control.py`, `classify_q7.py`, `classify_q7b.py`, `cube_stabiliser_q7.py`, `cuiwang_compare.py`,
-`braid_point_stabiliser.py`, `five_circuit_map.py`, `ten_lines_five_sentinels.py`, `common_bell_contexts.py`, `synthematic_totals.py`, `kramers_doily.py`, `codeword_vs_spread.py`, `pair_of_sic.py`, `syndrome_theorem.py`, `bell_generalisation.py`, `recheck_cadical.py`, `classify_q9.py`, `simplex_frame.py`, `hesse_dictionary.py`, `hesse_dictionary2.py`, `hesse_dictionary3.py`, `tprime_block.py`.
+`braid_point_stabiliser.py`, `five_circuit_map.py`, `ten_lines_five_sentinels.py`, `common_bell_contexts.py`, `synthematic_totals.py`, `kramers_doily.py`, `codeword_vs_spread.py`, `pair_of_sic.py`, `syndrome_theorem.py`, `bell_generalisation.py`, `recheck_cadical.py`, `classify_q9.py`, `classify_q.py`, `simplex_frame.py`, `hesse_dictionary.py`, `hesse_dictionary2.py`, `hesse_dictionary3.py`, `tprime_block.py`.
 
 Labels: **[E]** exact computation or proof, **[N]** numerical with a stated tolerance, **[I]** interpretation.
 
@@ -217,10 +217,11 @@ Exactly 27 elements are scalar on s = 0, so outside N nothing is. On s = 1 they 
 | q | minimal set | stabiliser | structure | derived | orbit on lines | orbit size |
 |---|---|---|---|---|---|---|
 | 3 | 10-set | 120 | S₅ | A₅ | 10 | 216 |
+| 5 | 20-set | 1920 | **2⁴:S₅ ≅ W(D₅) ≅ Aut(Clebsch)** | 2⁴:A₅ | 20 | 4,875 |
 | 7 | 40-set | 384 | **D₁₆ × S₄**, SmallGroup(384,18032) | C₄ × A₄ | 8 + 32 | 720,300 |
 | 9 | 48-set | 1920 | A₅:(C₈:(C₂ × C₂)) | C₄ × A₅ | 48 | 3,586,680 |
 
-The q = 7 row is the third independent count of 720,300. The S₄ is the cube's rotation group, matching 12515, and q = 9 is icosahedral.
+The q = 3 row is inside PSp(4,3) (in PGSp(4,3) the order doubles to 240 with the same orbit). The q = 5 isomorphism is tested directly in GAP against the even-weight subgroup of C₂ ≀ S₅ (`gap_clebsch.out`); the 20 lines have a single block system of 10 pairs. The orbit 4,875 agrees with the other track's W(3,5) frame (630d25796). The q = 5 and q = 9 orders are equal but the groups differ. The q = 7 row is the third independent count of 720,300. The S₄ is the cube's rotation group, matching 12515, and q = 9 is icosahedral.
 
 **Correction to Pass 12501.** "Stabiliser of order 480" was the stabiliser inside GL(2,9).2 only, which omits the similitude and Frobenius. The full stabiliser in PΓSp(4,9) has order 1920.
 
@@ -229,6 +230,8 @@ The q = 7 row is the third independent count of 720,300. The S₄ is the cube's 
 **q = 9 uniqueness (computer proof by CP-SAT).** GAP's numbers predicted in advance that if the 48-set is unique up to symmetry, exactly one star class is feasible at W = 48, with (normal forms) × (sets per normal form) = 3,586,680 · 48 / 820 / 729 = 288. `classify_q9.py` found **510 classes INFEASIBLE, 0 unknown, and one feasible class with 288 normal forms and exactly 1 set each**, the same class 24380 as the positive control of 12518. So:
 
 > **The 48-line hyperovals of W(3,9) form one orbit of PΓSp(4,9), of size 3,586,680, with stabiliser of order 1920.**
+
+The same test at q = 3 and 5 (`classify_q.py`) gives one class with 2 × 1 and 1 × 5, matching 216 · 10 / 40 / 27 = 2 and 4,875 · 20 / 156 / 125 = 5. So at q = 3, 5, 7, 9 the minimal hyperovals are a single orbit. These results also supply, for hyperovals, the orbit completeness that the other track's tight-frame theorem assumes (`2026-11-02_minimum_route_povm_fivefront_continuation.md`).
 
 Whether a non-hyperoval 48-line even set exists is reported under `heavy_status` (`q9_W48`). Until that is all INFEASIBLE, this covers hyperovals, not every minimal even set.
 

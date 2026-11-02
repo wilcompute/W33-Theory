@@ -956,7 +956,9 @@
     "12526: projectors sum to 7.5 E_2; the 36 five-spaces carry SRG(36,15,6,6)": true,
     "12526: 120 shared directions, each in 3 spaces; +-3 entries = a line with a perfect matching, all 120 occur": true,
     "12526: control -- reproduces the other track's cubic moment 108 on all 160 collinear triples": true,
-    "12525: q = 9, W = 48: 510 classes INFEASIBLE, none unknown, one class with 288 normal forms x 1 set, matching the GAP prediction": true
+    "12525: q = 9, W = 48: 510 classes INFEASIBLE, none unknown, one class with 288 normal forms x 1 set, matching the GAP prediction": true,
+    "12525: q = 3, 5 classify to one class: 2 x 1 and 1 x 5, matching 216 and 4875": true,
+    "12525: GAP: the q = 5 stabiliser has order 1920, orbit 4875, and is isomorphic to the even-weight subgroup of C2 wr S5 with trivial centre": true
   },
   "all_checks_pass": true
 }

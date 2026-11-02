@@ -132,6 +132,13 @@ def main():
     checks["12526: control -- reproduces the other track's cubic moment 108 on all 160 collinear triples"] = sf["control_cubic_moment_on_collinear_triples"] == {"108": 160}
     checks["12525: q = 9, W = 48: 510 classes INFEASIBLE, none unknown, one class with 288 normal forms x 1 set, matching the GAP prediction"] = (
         cq["done"] and cq["infeasible"] == 510 and not cq["unknown"] and [(f["rep"], f["normal_forms"], f["sets"]) for f in cq["feasible"]] == [(24380, 288, 1)] and 3586680 * 48 // 820 // 729 == 288 and ctl["representative"] == 24380)
+    c3q, c5q = load("classify_q3_W10.json"), load("classify_q5_W20.json")
+    gq5, gcl = (D / "gap_stab_q5.out").read_text(), (D / "gap_clebsch.out").read_text()
+    checks["12525: q = 3, 5 classify to one class: 2 x 1 and 1 x 5, matching 216 and 4875"] = (
+        c3q["done"] and c5q["done"] and [(f["normal_forms"], f["sets"]) for f in c3q["feasible"]] == [(2, 1)] and [(f["normal_forms"], f["sets"]) for f in c5q["feasible"]] == [(1, 5)]
+        and not c3q["unknown"] and not c5q["unknown"] and 216 * 10 // 40 // 27 == 2 and 4875 * 20 // 156 // 125 == 5)
+    checks["12525: GAP: the q = 5 stabiliser has order 1920, orbit 4875, and is isomorphic to the even-weight subgroup of C2 wr S5 with trivial centre"] = (
+        "stab=1920" in gq5 and "orbit=4875" in gq5 and "center=1 iso to q5 stabiliser: true" in gcl)
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())
