@@ -1,0 +1,39 @@
+{
+  "status": "PASS_36_MODE_DEGREE_MATCHED_PHOTONIC_BENCHMARK",
+  "vertices": 36,
+  "edges": 63,
+  "root_index": 0,
+  "dimensionless_propagation_time": 4.0,
+  "same_size_and_same_degree_sequence_rewired_control_TV": 0.449247452281613,
+  "without_required_degree_dependent_onsite_TV": 0.3960815772121919,
+  "uniform_loss_fraction_illustrative": 0.35,
+  "uniform_loss_normalized_distribution_exactly_unchanged": true,
+  "edge_coupling_uncertainty_bound_illustrative": 0.05,
+  "onsite_detuning_error_bound_illustrative_J": 0.05,
+  "12_seed_distribution_TV_under_fabrication_uncertainty": [
+    0.04156154047066782,
+    0.043542933524256304,
+    0.06796022464558608,
+    0.05716731406535974,
+    0.041132023649315855,
+    0.05493328861784229,
+    0.0644061956956598,
+    0.07807268587841673,
+    0.0628131878224777,
+    0.05458678364024693,
+    0.0739466250711151,
+    0.056620143368158696
+  ],
+  "shot_protocol": {
+    "injected_photons": 300,
+    "detected_photons_assumed": 195,
+    "trials_per_hypothesis": 250,
+    "correct_classifications_pascal": 250,
+    "correct_classifications_rewired": 250,
+    "method": "multinomial likelihood-ratio, calibrated ideal distributions, known fixed output-port identity; zero dark counts and no cross talk assumed"
+  },
+  "hardware_matrix": "Hii=J*weighted_degree_i+detuning_i, Hij=-J*coupling_ij on nearest-neighbor links; propagation along z implements exp(-i H z); J z is dimensionless.",
+  "construction": "Degree-preserving 100-double-edge-swap connected null, same 36 vertices and 63 edges. This tests topology beyond size and local degree. Rewired graph need not be geometrically planar or feasible as identical single-layer waveguides.",
+  "limitations": "No fabrication, optical loss/crosstalk calibration, fiber coupling length, real device resolution, dark counts or physical hardware. The rewired null may need crossings/multiplane routing; it is a mathematical control. Photon counts are synthetic and use chosen 35% uniform loss.",
+  "replay_seed": 20261103
+}

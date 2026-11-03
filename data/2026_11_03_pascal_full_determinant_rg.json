@@ -1,0 +1,70 @@
+{
+  "status": "PASS_COMPLETE_CHARACTERISTIC_AND_DIRICHLET_DETERMINANT_RECURSION",
+  "identity": "Let Q_n(z)=det((L_n-zI)_{interior,interior}); P_n(z)=det(L_n-zI); D_n(z)=Schur boundary matrix. Build M18=direct_sum_6 D_n+L_nine_bridges. Then P_(n+1)=Q_n^6*det M18 and Q_(n+1)=Q_n^6*det (M18)_15x15, with D_(n+1)=Schur_3(M18).",
+  "algebraic_status": "Exact block determinant/Schur identities over rational functions z; pole cancellations return characteristic polynomials. This closes the determinant recursion in P,Q,D but does not produce a factored eigenvalue family or a continuum spectral convergence theorem.",
+  "tests": [
+    {
+      "child": 1,
+      "next": 2,
+      "spectral_z": -1.0,
+      "parent_full_logabsdet_prediction": 49.053394411936644,
+      "parent_full_logabsdet_direct": 49.05339441193666,
+      "parent_dirichlet_logabsdet_prediction": 46.509782936894894,
+      "parent_dirichlet_logabsdet_direct": 46.509782936894894,
+      "boundary_error": 4.440892098500626e-16
+    },
+    {
+      "child": 2,
+      "next": 3,
+      "spectral_z": -1.0,
+      "parent_full_logabsdet_prediction": 299.6857296187162,
+      "parent_full_logabsdet_direct": 299.6857296187162,
+      "parent_dirichlet_logabsdet_prediction": 297.1421183465192,
+      "parent_dirichlet_logabsdet_direct": 297.14211834651934,
+      "boundary_error": 4.440892098500626e-16
+    },
+    {
+      "child": 1,
+      "next": 2,
+      "spectral_z": -0.1,
+      "parent_full_logabsdet_prediction": 34.14074157825679,
+      "parent_full_logabsdet_direct": 34.140741578256794,
+      "parent_dirichlet_logabsdet_prediction": 34.8548551598786,
+      "parent_dirichlet_logabsdet_direct": 34.85485515987862,
+      "boundary_error": 7.771561172376096e-16
+    },
+    {
+      "child": 2,
+      "next": 3,
+      "spectral_z": -0.1,
+      "parent_full_logabsdet_prediction": 215.58924827587214,
+      "parent_full_logabsdet_direct": 215.5892482758719,
+      "parent_dirichlet_logabsdet_prediction": 216.30835618614725,
+      "parent_dirichlet_logabsdet_direct": 216.30835618614725,
+      "boundary_error": 2.220446049250313e-16
+    },
+    {
+      "child": 1,
+      "next": 2,
+      "spectral_z": 0.05,
+      "parent_full_logabsdet_prediction": 29.247530875563005,
+      "parent_full_logabsdet_direct": 29.247530875563008,
+      "parent_dirichlet_logabsdet_prediction": 30.91237449562001,
+      "parent_dirichlet_logabsdet_direct": 30.91237449562001,
+      "boundary_error": 2.4424906541753444e-15
+    },
+    {
+      "child": 2,
+      "next": 3,
+      "spectral_z": 0.05,
+      "parent_full_logabsdet_prediction": 184.73389083961732,
+      "parent_full_logabsdet_direct": 184.7338908396173,
+      "parent_dirichlet_logabsdet_prediction": 179.71164493925897,
+      "parent_dirichlet_logabsdet_direct": 179.71164493925878,
+      "boundary_error": 1.5587531265737198e-13
+    }
+  ],
+  "tests_count": 6,
+  "scope": "L_n unweighted nearest-neighbor Pascal support Laplacian, including the original unit-bridge operator; 3 supplied outer corners. Dense direct determinants at 6,36,216 vertices are an independent numerical check, not symbolic exact coefficient computation.",
+  "prior": "Previous repository two-scalar resolvent RG owned D recursion; this adds a full-spectrum determinant bookkeeping closure without pretending hidden Dirichlet modes disappear."
+}

@@ -1,0 +1,94 @@
+{
+  "status": "PASS_ALTERNATIVE_LOCAL_GRAPH_GROWTH_TOPOLOGY_AND_HUB_NO_GO",
+  "growth_rule": "Start a triangle disk. Synchronously replace each triangular face with three triangles by inserting one new center vertex and connecting it to all three corners; no embedding coordinates or 4D target are used in the update.",
+  "exact_invariants": "After n iterations: faces=3^n, V=(3^n+5)/2, E=3V-6, Euler chi=V-E+F=1. Every graph is planar; topology remains a 2-dimensional triangulated disk.",
+  "levels": [
+    {
+      "level": 1,
+      "vertices": 4,
+      "edges": 6,
+      "triangular_faces": 3,
+      "planar": true,
+      "Euler_disk_chi": 1,
+      "max_vertex_degree": 3,
+      "diameter_exact_if_small": 1,
+      "diameter_sample_lower_bound": 1,
+      "coordinate_system_supplied": false
+    },
+    {
+      "level": 2,
+      "vertices": 7,
+      "edges": 15,
+      "triangular_faces": 9,
+      "planar": true,
+      "Euler_disk_chi": 1,
+      "max_vertex_degree": 6,
+      "diameter_exact_if_small": 2,
+      "diameter_sample_lower_bound": 2,
+      "coordinate_system_supplied": false
+    },
+    {
+      "level": 3,
+      "vertices": 16,
+      "edges": 42,
+      "triangular_faces": 27,
+      "planar": true,
+      "Euler_disk_chi": 1,
+      "max_vertex_degree": 12,
+      "diameter_exact_if_small": 3,
+      "diameter_sample_lower_bound": 3,
+      "coordinate_system_supplied": false
+    },
+    {
+      "level": 4,
+      "vertices": 43,
+      "edges": 123,
+      "triangular_faces": 81,
+      "planar": true,
+      "Euler_disk_chi": 1,
+      "max_vertex_degree": 24,
+      "diameter_exact_if_small": 3,
+      "diameter_sample_lower_bound": 3,
+      "coordinate_system_supplied": false
+    },
+    {
+      "level": 5,
+      "vertices": 124,
+      "edges": 366,
+      "triangular_faces": 243,
+      "planar": true,
+      "Euler_disk_chi": 1,
+      "max_vertex_degree": 48,
+      "diameter_exact_if_small": 4,
+      "diameter_sample_lower_bound": 4,
+      "coordinate_system_supplied": false
+    },
+    {
+      "level": 6,
+      "vertices": 367,
+      "edges": 1095,
+      "triangular_faces": 729,
+      "planar": true,
+      "Euler_disk_chi": 1,
+      "max_vertex_degree": 96,
+      "diameter_exact_if_small": 5,
+      "diameter_sample_lower_bound": 5,
+      "coordinate_system_supplied": false
+    },
+    {
+      "level": 7,
+      "vertices": 1096,
+      "edges": 3282,
+      "triangular_faces": 2187,
+      "planar": true,
+      "Euler_disk_chi": 1,
+      "max_vertex_degree": 192,
+      "diameter_exact_if_small": null,
+      "diameter_sample_lower_bound": 5,
+      "coordinate_system_supplied": false
+    }
+  ],
+  "dimension_selection_obstruction": "Self-similar, coordinate-free local refinement plus exponential vertex growth does not imply four Lorentzian dimensions. This specific rule stays a 2D simplicial disk at every finite level, generates increasing high-degree hub sites, and has no physical causal cone or massless spin-two constraint.",
+  "comparison_to_causal_diamond": "Unlike sprinkling (which assumes Minkowski dimension), the rule takes only a starting triangle and combinatorial replacement. But it selects 2D triangular topology through its face rule. Neither candidate creates the intended 3+1 structure from no extra assumptions.",
+  "scope": "A simple explicit growth-rule negative control, not an exhaustive classification of all coordinate-free graph or causal-set dynamics."
+}

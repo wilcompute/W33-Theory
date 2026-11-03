@@ -1,0 +1,94 @@
+{
+  "status": "PASS_MARGINAL_INTERACTING_GAP_VERSUS_PASCAL_LINEAR_RG",
+  "gap_equation": "1/g=integral_{-pi}^pi dk/(2pi) 1/sqrt(sin(k)^2+m^2) = [2/(pi sqrt(1+m\u00b2))] K(1/(1+m\u00b2))",
+  "asymptotic": "For weak g>0, m ~ 4 exp[-pi/(2g)] in the declared massless lattice 1+1D Dirac mean-field gap model. The logarithm arises from linear zeros of sin k.",
+  "mass_gap_table": [
+    {
+      "coupling_g": 0.2,
+      "mean_field_gap_over_lattice_UV": 0.001552806400129068,
+      "asymptotic_weak_coupling_formula": 0.0015528128157070655,
+      "gap_to_asymptotic_ratio": 0.99999586841509
+    },
+    {
+      "coupling_g": 0.25,
+      "mean_field_gap_over_lattice_UV": 0.007469220536804971,
+      "asymptotic_weak_coupling_formula": 0.007469770926831957,
+      "gap_to_asymptotic_ratio": 0.9999263176833162
+    },
+    {
+      "coupling_g": 0.3,
+      "mean_field_gap_over_lattice_UV": 0.021276061556809507,
+      "asymptotic_weak_coupling_formula": 0.02128626191520233,
+      "gap_to_asymptotic_ratio": 0.9995208008605053
+    },
+    {
+      "coupling_g": 0.35,
+      "mean_field_gap_over_lattice_UV": 0.04489397783049119,
+      "asymptotic_weak_coupling_formula": 0.04497290219621981,
+      "gap_to_asymptotic_ratio": 0.9982450684328916
+    },
+    {
+      "coupling_g": 0.4,
+      "mean_field_gap_over_lattice_UV": 0.07845790174036626,
+      "asymptotic_weak_coupling_formula": 0.07881149194646846,
+      "gap_to_asymptotic_ratio": 0.9955134689450827
+    },
+    {
+      "coupling_g": 0.5,
+      "mean_field_gap_over_lattice_UV": 0.1702152403218922,
+      "asymptotic_weak_coupling_formula": 0.17285567305508903,
+      "gap_to_asymptotic_ratio": 0.9847246394258907
+    },
+    {
+      "coupling_g": 0.7,
+      "mean_field_gap_over_lattice_UV": 0.40388947481432325,
+      "asymptotic_weak_coupling_formula": 0.4241363092036324,
+      "gap_to_asymptotic_ratio": 0.9522633786592687
+    }
+  ],
+  "antiperiodic_finite_size_controls": [
+    {
+      "antiperiodic_lattice_sites": 64,
+      "finite_vol_critical_g": 0.31556478187823367,
+      "susceptibility_at_m_zero": 3.1689214304841786
+    },
+    {
+      "antiperiodic_lattice_sites": 256,
+      "finite_vol_critical_g": 0.24682680130513082,
+      "susceptibility_at_m_zero": 4.051423892026157
+    },
+    {
+      "antiperiodic_lattice_sites": 1024,
+      "finite_vol_critical_g": 0.20267680132141566,
+      "susceptibility_at_m_zero": 4.933963795955842
+    },
+    {
+      "antiperiodic_lattice_sites": 4096,
+      "finite_vol_critical_g": 0.17192451843654485,
+      "susceptibility_at_m_zero": 5.816506040522005
+    }
+  ],
+  "mass_unit_reparameterization": [
+    {
+      "UV_inverse_length_inv_m": 1.0,
+      "dimensional_gap_inv_m": 0.001552806400129068,
+      "gap_to_UV_ratio_invariant": 0.001552806400129068
+    },
+    {
+      "UV_inverse_length_inv_m": 1000000.0,
+      "dimensional_gap_inv_m": 1552.806400129068,
+      "gap_to_UV_ratio_invariant": 0.001552806400129068
+    },
+    {
+      "UV_inverse_length_inv_m": 1e+30,
+      "dimensional_gap_inv_m": 1.552806400129068e+27,
+      "gap_to_UV_ratio_invariant": 0.001552806400129068
+    }
+  ],
+  "physical_scale_boundary": "A dimensionless interaction can dynamically produce a highly suppressed mass-to-UV ratio through a marginal logarithmic instability. It does not fix g or the dimensionful UV cutoff. Multiplying UV by an arbitrary factor multiplies physical gap by that factor with all dimensionless observables unchanged.",
+  "pascal_contrast": "Prior Pascal exact Schur flow c_(n+1)=(7/15)c_n+O(c_n\u00b2) is a hyperbolic linear contraction, not this marginal logarithmic gap. Identifying the two requires a separately constructed interacting Hamiltonian and renormalization matching.",
+  "physics_scope": "An explicitly supplied 1+1D mean-field gap equation, not a proof of Gross-Neveu continuum, a 3+1D UV completion, observed particle masses, gravity, emergent Lorentz signature, or TOE.",
+  "sources": [
+    "https://doi.org/10.1103/PhysRevD.10.3235"
+  ]
+}

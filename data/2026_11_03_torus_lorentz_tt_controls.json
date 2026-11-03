@@ -1,0 +1,376 @@
+{
+  "status": "PASS_SUPPLIED_4D_TORUS_CONTINUUM_AND_TWO_HELICITY_CONSTRAINT_TESTS",
+  "heat_spectral_dimension": [
+    {
+      "side": 8,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 2.146218509449718
+    },
+    {
+      "side": 8,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 0.3394459265912865
+    },
+    {
+      "side": 8,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 0.04970457961235484
+    },
+    {
+      "side": 8,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 3.2193277641745772
+    },
+    {
+      "side": 8,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 0.5091688898869298
+    },
+    {
+      "side": 8,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 0.07455686941853225
+    },
+    {
+      "side": 8,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 4.292437018899436
+    },
+    {
+      "side": 8,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 0.678891853182573
+    },
+    {
+      "side": 8,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 0.09940915922470968
+    },
+    {
+      "side": 16,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 2.18363818716356
+    },
+    {
+      "side": 16,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 2.0073419236876044
+    },
+    {
+      "side": 16,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 1.8144494654085315
+    },
+    {
+      "side": 16,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 3.2754572807453397
+    },
+    {
+      "side": 16,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 3.011012885531407
+    },
+    {
+      "side": 16,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 2.721674198112797
+    },
+    {
+      "side": 16,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 4.36727637432712
+    },
+    {
+      "side": 16,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 4.014683847375209
+    },
+    {
+      "side": 16,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 3.628898930817063
+    },
+    {
+      "side": 32,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 2.183638223607192
+    },
+    {
+      "side": 32,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 2.0334236522382887
+    },
+    {
+      "side": 32,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 2.0217629241421755
+    },
+    {
+      "side": 32,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 3.2754573354107874
+    },
+    {
+      "side": 32,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 3.0501354783574333
+    },
+    {
+      "side": 32,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 3.0326443862132635
+    },
+    {
+      "side": 32,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 4.367276447214384
+    },
+    {
+      "side": 32,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 4.066847304476577
+    },
+    {
+      "side": 32,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 4.043525848284351
+    },
+    {
+      "side": 64,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 2.1836382236071925
+    },
+    {
+      "side": 64,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 2.0334236525977647
+    },
+    {
+      "side": 64,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 2.0217634066596477
+    },
+    {
+      "side": 64,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 3.2754573354107888
+    },
+    {
+      "side": 64,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 3.0501354788966477
+    },
+    {
+      "side": 64,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 3.0326451099894713
+    },
+    {
+      "side": 64,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 4.367276447214385
+    },
+    {
+      "side": 64,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 4.066847305195529
+    },
+    {
+      "side": 64,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 4.043526813319295
+    },
+    {
+      "side": 128,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 2.183638223607191
+    },
+    {
+      "side": 128,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 2.0334236525977656
+    },
+    {
+      "side": 128,
+      "input_dimension": 2,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 2.0217634066596477
+    },
+    {
+      "side": 128,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 3.275457335410787
+    },
+    {
+      "side": 128,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 3.0501354788966486
+    },
+    {
+      "side": 128,
+      "input_dimension": 3,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 3.0326451099894713
+    },
+    {
+      "side": 128,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 2.0,
+      "spectral_dimension": 4.367276447214382
+    },
+    {
+      "side": 128,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 8.0,
+      "spectral_dimension": 4.066847305195531
+    },
+    {
+      "side": 128,
+      "input_dimension": 4,
+      "diffusion_time_lattice_units": 12.0,
+      "spectral_dimension": 4.043526813319295
+    }
+  ],
+  "mid_heat_regime": {
+    "side": 128,
+    "input_dimension": 4,
+    "diffusion_time_lattice_units": 12.0,
+    "spectral_dimension": 4.043526813319295
+  },
+  "central_difference_wave_dispersion": [
+    {
+      "side": 8,
+      "a": 0.7853981633974483,
+      "omega_axis": 2.3526399107296116,
+      "omega_oblique_same_continuum_k": 2.7265723824357573,
+      "relative_directional_dispersion_anisotropy": 0.12464415723538187,
+      "relative_axis_error_vs_omega_eq_c_abs_k": 0.2157866964234628
+    },
+    {
+      "side": 16,
+      "a": 0.39269908169872414,
+      "omega_axis": 2.829495962233146,
+      "omega_oblique_same_continuum_k": 2.9299051962787,
+      "relative_directional_dispersion_anisotropy": 0.03346974468185134,
+      "relative_axis_error_vs_omega_eq_c_abs_k": 0.05683467925561795
+    },
+    {
+      "side": 32,
+      "a": 0.19634954084936207,
+      "omega_axis": 2.956815442488522,
+      "omega_oblique_same_continuum_k": 2.982366511711501,
+      "relative_directional_dispersion_anisotropy": 0.008517023074326335,
+      "relative_axis_error_vs_omega_eq_c_abs_k": 0.014394852503825994
+    },
+    {
+      "side": 64,
+      "a": 0.09817477042468103,
+      "omega_axis": 2.9891686799091075,
+      "omega_oblique_same_continuum_k": 2.9955847475741555,
+      "relative_directional_dispersion_anisotropy": 0.0021386892216826623,
+      "relative_axis_error_vs_omega_eq_c_abs_k": 0.003610440030297498
+    },
+    {
+      "side": 128,
+      "a": 0.04908738521234052,
+      "omega_axis": 2.9972899669210076,
+      "omega_oblique_same_continuum_k": 2.9988957565786523,
+      "relative_directional_dispersion_anisotropy": 0.0005352632192148951,
+      "relative_axis_error_vs_omega_eq_c_abs_k": 0.0009033443596641414
+    }
+  ],
+  "tensor_tt_constraints": [
+    {
+      "k": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "symmetric_tensor_dim": 6,
+      "transverse_traceless_rank": 2,
+      "projector_idempotence_max": 0.0,
+      "imposed_projector_not_dynamical": true
+    },
+    {
+      "k": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "symmetric_tensor_dim": 6,
+      "transverse_traceless_rank": 2,
+      "projector_idempotence_max": 5.551115123125783e-17,
+      "imposed_projector_not_dynamical": true
+    },
+    {
+      "k": [
+        2.0,
+        2.0,
+        1.0
+      ],
+      "symmetric_tensor_dim": 6,
+      "transverse_traceless_rank": 2,
+      "projector_idempotence_max": 5.551115123125783e-17,
+      "imposed_projector_not_dynamical": true
+    }
+  ],
+  "graph_selection_linear_edge_cost": {
+    "energy_per_site_if_single_edge_weight": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6
+    },
+    "no_go": "A free energy depending solely on positive constant times edge count N*D selects lowest D; with negative coefficient selects highest D. No interior 3-space/4-spacetime dimensionality can be selected by this single term without extra competing dynamics or boundary restrictions."
+  },
+  "interpretation": "A 4D Cartesian torus supplies the intended approximate Euclidean spectral dimension; independent temporal wave equation and 3D spatial differences supply a causal cone approximation and two-helicity TT projector only after extra structures are supplied.",
+  "negative_controls": "D=2,3 heat traces; axis versus oblique lattice dispersion; rank-six symmetric tensor before projection versus rank-two TT after projection.",
+  "scope": "No dynamical graph-growth action, Einstein gravity, nonlinear diffeomorphism constraints, universality of matter coupling, derivation of dimension/time, Lorentzian signature from graph alone, or physical graviton established.",
+  "references": [
+    "https://doi.org/10.1103/PhysRev.135.B1049",
+    "https://link.springer.com/article/10.1007/s41114-026-00064-9"
+  ]
+}

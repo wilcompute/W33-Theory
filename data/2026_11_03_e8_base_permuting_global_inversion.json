@@ -1,0 +1,236 @@
+{
+  "status": "PASS_BT1774_OBJECTWISE_BASE_PERMUTING_REFLECTION",
+  "prior_weyl_word": "BT1774 sequences FSEQ/BSEQ; reconstruction convention autodetected",
+  "reconstruction": {
+    "reverse_sequence_applied": false,
+    "operation": "F_then_reverse_B"
+  },
+  "coxeter_conjugation_h_c_h_inverse": "c^-1 on each of 240 roots verified",
+  "fiber_map": [
+    27,
+    1,
+    21,
+    12,
+    17,
+    15,
+    6,
+    13,
+    33,
+    24,
+    18,
+    38,
+    3,
+    7,
+    14,
+    5,
+    29,
+    4,
+    10,
+    31,
+    23,
+    2,
+    32,
+    20,
+    9,
+    25,
+    26,
+    0,
+    36,
+    16,
+    30,
+    19,
+    22,
+    8,
+    34,
+    35,
+    28,
+    39,
+    11,
+    37
+  ],
+  "fiber_map_fixed_count": 8,
+  "fiber_map_cycle_sizes": {
+    "1": 8,
+    "2": 16
+  },
+  "fiber_map_cycle_witnesses": [
+    [
+      0,
+      27
+    ],
+    [
+      1
+    ],
+    [
+      2,
+      21
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      4,
+      17
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      6
+    ],
+    [
+      7,
+      13
+    ],
+    [
+      8,
+      33
+    ],
+    [
+      9,
+      24
+    ],
+    [
+      10,
+      18
+    ],
+    [
+      11,
+      38
+    ],
+    [
+      14
+    ],
+    [
+      16,
+      29
+    ],
+    [
+      19,
+      31
+    ],
+    [
+      20,
+      23
+    ],
+    [
+      22,
+      32
+    ],
+    [
+      25
+    ],
+    [
+      26
+    ],
+    [
+      28,
+      36
+    ],
+    [
+      30
+    ],
+    [
+      34
+    ],
+    [
+      35
+    ],
+    [
+      37,
+      39
+    ]
+  ],
+  "affine_reflection_intercepts_mod6": [
+    5,
+    3,
+    5,
+    0,
+    5,
+    0,
+    2,
+    0,
+    5,
+    4,
+    1,
+    1,
+    0,
+    0,
+    2,
+    0,
+    5,
+    5,
+    1,
+    4,
+    0,
+    5,
+    1,
+    0,
+    4,
+    5,
+    0,
+    5,
+    3,
+    5,
+    3,
+    4,
+    1,
+    5,
+    3,
+    2,
+    3,
+    1,
+    1,
+    1
+  ],
+  "square_action_phase_on_k0": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "root_permutation_fixed_count": 8,
+  "all_540_cross_fiber_edges_preserved": true,
+  "base_collinearity_adjacency_preserved": true,
+  "all_40_phases_obey_k_to_alpha_minus_k": true,
+  "comparison": "Our earlier fixed-base no-go excludes maps (f,k)->(f,alpha_f-k). The known Coxeter inversion h acts (f,k)->(sigma(f),alpha_f-k), with sigma nontrivial; its base permutation resolves that obstruction. Existing BT1774 supplies the conjugator itself.",
+  "not_physics": "No left-handed fermions, Lorentzian parity violation or Standard Model chirality derived."
+}

@@ -1,0 +1,210 @@
+{
+  "status": "PASS_COHERENT_QUANTUM_SWITCH_COMMUTATOR_NEGATIVE_CONTROLS",
+  "pure_switch_definition": "|Psi>=(|0> VU|psi> + |1> UV|psi>)/sqrt(2), with control |+> and two unitary processes. Control measured in X basis.",
+  "minus_probability_exact": "p(-)=||(VU-UV)|psi>||\u00b2/4",
+  "pauli_X_Z_anticommuting_minus_probability": 1.0,
+  "pauli_X_I_commuting_minus_probability": 0.0,
+  "rotation_X_Z_formula": "for Rx(theta),Rz(phi), p(-)=sin\u00b2(theta/2) sin\u00b2(phi/2)",
+  "angle_sweep": [
+    {
+      "theta": 0.0,
+      "phi": 0.0,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 0.0,
+      "phi": 0.5235987755982988,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 0.0,
+      "phi": 1.5707963267948966,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 0.0,
+      "phi": 3.141592653589793,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 0.5235987755982988,
+      "phi": 0.0,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 0.5235987755982988,
+      "phi": 0.5235987755982988,
+      "minus_outcome_coherent_switch": 0.004487298107780675,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.004487298107780675
+    },
+    {
+      "theta": 0.5235987755982988,
+      "phi": 1.5707963267948966,
+      "minus_outcome_coherent_switch": 0.03349364905389034,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.03349364905389034
+    },
+    {
+      "theta": 0.5235987755982988,
+      "phi": 3.141592653589793,
+      "minus_outcome_coherent_switch": 0.06698729810778066,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.06698729810778066
+    },
+    {
+      "theta": 1.0471975511965976,
+      "phi": 0.0,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 1.0471975511965976,
+      "phi": 0.5235987755982988,
+      "minus_outcome_coherent_switch": 0.016746824526945158,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.01674682452694516
+    },
+    {
+      "theta": 1.0471975511965976,
+      "phi": 1.5707963267948966,
+      "minus_outcome_coherent_switch": 0.12499999999999997,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.125
+    },
+    {
+      "theta": 1.0471975511965976,
+      "phi": 3.141592653589793,
+      "minus_outcome_coherent_switch": 0.24999999999999994,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.24999999999999994
+    },
+    {
+      "theta": 1.5707963267948966,
+      "phi": 0.0,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 1.5707963267948966,
+      "phi": 0.5235987755982988,
+      "minus_outcome_coherent_switch": 0.03349364905389034,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.03349364905389034
+    },
+    {
+      "theta": 1.5707963267948966,
+      "phi": 1.5707963267948966,
+      "minus_outcome_coherent_switch": 0.2500000000000001,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.2500000000000001
+    },
+    {
+      "theta": 1.5707963267948966,
+      "phi": 3.141592653589793,
+      "minus_outcome_coherent_switch": 0.5000000000000001,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.5000000000000001
+    },
+    {
+      "theta": 3.141592653589793,
+      "phi": 0.0,
+      "minus_outcome_coherent_switch": 0.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.0
+    },
+    {
+      "theta": 3.141592653589793,
+      "phi": 0.5235987755982988,
+      "minus_outcome_coherent_switch": 0.06698729810778066,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.06698729810778066
+    },
+    {
+      "theta": 3.141592653589793,
+      "phi": 1.5707963267948966,
+      "minus_outcome_coherent_switch": 0.5000000000000001,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 0.5000000000000001
+    },
+    {
+      "theta": 3.141592653589793,
+      "phi": 3.141592653589793,
+      "minus_outcome_coherent_switch": 1.0,
+      "minus_outcome_incoherent_classical_order_mixture": 0.5,
+      "analytic_commutator_formula": 1.0
+    }
+  ],
+  "dephasing_controls": [
+    {
+      "label": "anticommuting",
+      "visibility_eta": 0.0,
+      "minus_probability": 0.5
+    },
+    {
+      "label": "commuting",
+      "visibility_eta": 0.0,
+      "minus_probability": 0.5
+    },
+    {
+      "label": "anticommuting",
+      "visibility_eta": 0.2,
+      "minus_probability": 0.6000000000000001
+    },
+    {
+      "label": "commuting",
+      "visibility_eta": 0.2,
+      "minus_probability": 0.4
+    },
+    {
+      "label": "anticommuting",
+      "visibility_eta": 0.5,
+      "minus_probability": 0.75
+    },
+    {
+      "label": "commuting",
+      "visibility_eta": 0.5,
+      "minus_probability": 0.25
+    },
+    {
+      "label": "anticommuting",
+      "visibility_eta": 0.8,
+      "minus_probability": 0.9
+    },
+    {
+      "label": "commuting",
+      "visibility_eta": 0.8,
+      "minus_probability": 0.09999999999999998
+    },
+    {
+      "label": "anticommuting",
+      "visibility_eta": 1.0,
+      "minus_probability": 1.0
+    },
+    {
+      "label": "commuting",
+      "visibility_eta": 1.0,
+      "minus_probability": 0.0
+    }
+  ],
+  "operational_boundary": "Ideal circuit model of coherently controlled operation order. Quantum switch is causally nonseparable but cannot by itself violate ordinary causal inequalities using local laboratory statistics; does not demonstrate retrocausality. A process tensor for an open laboratory needs formal comb CP/trace constraints, which were already implemented elsewhere in this repo; this model is a new W33-independent control.",
+  "physics_boundary": "No geometry, graviton, emergent time, local relativistic field theory or physical realization demonstrated.",
+  "prior_repository": "analysis/PASS11042_INSTRUMENT_DEPENDENT_PROCESS_MEMORY.md already implements qutrit one-slot combs and instrument dependence; this adds a distinct two-unitary switch control, not a full replacement.",
+  "literature": [
+    "https://doi.org/10.1103/9jss-yf1c",
+    "https://doi.org/10.1103/bnkn-4p3f",
+    "https://doi.org/10.1103/kmmy-3dy3"
+  ]
+}

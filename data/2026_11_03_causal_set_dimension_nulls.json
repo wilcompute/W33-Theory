@@ -1,0 +1,317 @@
+{
+  "status": "PASS_2D_TO_5D_LORENTZ_POSETS_AND_MATCHED_RANDOM_DAG_NULL",
+  "construction": "N uniform independent points in a finite Minkowski Alexandrov diamond in dimension d=2..5. Coordinates use dimension-dependent Beta time distribution and uniform spatial balls. Future relation from timelike/null Minkowski separation, then discard coordinates.",
+  "ordering_fraction_formula": "Gamma(d+1)Gamma(d/2)/(2Gamma(3d/2))",
+  "series": [
+    {
+      "dimension_supplied": 2,
+      "theoretical_ordering_fraction": 0.5,
+      "observed_mean": 0.5038448952879581,
+      "observed_sd": 0.018796883053181168,
+      "mean_longest_chain": 23.583333333333332,
+      "replicates": [
+        {
+          "seed": 0,
+          "comparable_pair_fraction": 0.5146160558464223,
+          "longest_chain": 23
+        },
+        {
+          "seed": 1,
+          "comparable_pair_fraction": 0.53125,
+          "longest_chain": 25
+        },
+        {
+          "seed": 2,
+          "comparable_pair_fraction": 0.4850021815008726,
+          "longest_chain": 23
+        },
+        {
+          "seed": 3,
+          "comparable_pair_fraction": 0.4733856893542757,
+          "longest_chain": 20
+        },
+        {
+          "seed": 4,
+          "comparable_pair_fraction": 0.5008726003490401,
+          "longest_chain": 22
+        },
+        {
+          "seed": 5,
+          "comparable_pair_fraction": 0.5239419720767888,
+          "longest_chain": 25
+        },
+        {
+          "seed": 6,
+          "comparable_pair_fraction": 0.4975458115183246,
+          "longest_chain": 23
+        },
+        {
+          "seed": 7,
+          "comparable_pair_fraction": 0.505835514834206,
+          "longest_chain": 21
+        },
+        {
+          "seed": 8,
+          "comparable_pair_fraction": 0.519033595113438,
+          "longest_chain": 27
+        },
+        {
+          "seed": 9,
+          "comparable_pair_fraction": 0.5221967713787086,
+          "longest_chain": 25
+        },
+        {
+          "seed": 10,
+          "comparable_pair_fraction": 0.4794393542757417,
+          "longest_chain": 26
+        },
+        {
+          "seed": 11,
+          "comparable_pair_fraction": 0.4930191972076789,
+          "longest_chain": 23
+        }
+      ]
+    },
+    {
+      "dimension_supplied": 3,
+      "theoretical_ordering_fraction": 0.22857142857142862,
+      "observed_mean": 0.22609438627108788,
+      "observed_sd": 0.024475317522696723,
+      "mean_longest_chain": 10.166666666666666,
+      "replicates": [
+        {
+          "seed": 0,
+          "comparable_pair_fraction": 0.212369109947644,
+          "longest_chain": 10
+        },
+        {
+          "seed": 1,
+          "comparable_pair_fraction": 0.18477312390924958,
+          "longest_chain": 9
+        },
+        {
+          "seed": 2,
+          "comparable_pair_fraction": 0.193771815008726,
+          "longest_chain": 10
+        },
+        {
+          "seed": 3,
+          "comparable_pair_fraction": 0.25163612565445026,
+          "longest_chain": 11
+        },
+        {
+          "seed": 4,
+          "comparable_pair_fraction": 0.23478403141361257,
+          "longest_chain": 10
+        },
+        {
+          "seed": 5,
+          "comparable_pair_fraction": 0.24078315881326354,
+          "longest_chain": 10
+        },
+        {
+          "seed": 6,
+          "comparable_pair_fraction": 0.23031195462478185,
+          "longest_chain": 10
+        },
+        {
+          "seed": 7,
+          "comparable_pair_fraction": 0.19486256544502617,
+          "longest_chain": 11
+        },
+        {
+          "seed": 8,
+          "comparable_pair_fraction": 0.231348167539267,
+          "longest_chain": 10
+        },
+        {
+          "seed": 9,
+          "comparable_pair_fraction": 0.2600349040139616,
+          "longest_chain": 10
+        },
+        {
+          "seed": 10,
+          "comparable_pair_fraction": 0.22954842931937172,
+          "longest_chain": 10
+        },
+        {
+          "seed": 11,
+          "comparable_pair_fraction": 0.24890924956369984,
+          "longest_chain": 11
+        }
+      ]
+    },
+    {
+      "dimension_supplied": 4,
+      "theoretical_ordering_fraction": 0.1,
+      "observed_mean": 0.0951179828388598,
+      "observed_sd": 0.019639669328162,
+      "mean_longest_chain": 6.25,
+      "replicates": [
+        {
+          "seed": 0,
+          "comparable_pair_fraction": 0.08376963350785341,
+          "longest_chain": 8
+        },
+        {
+          "seed": 1,
+          "comparable_pair_fraction": 0.11469240837696335,
+          "longest_chain": 7
+        },
+        {
+          "seed": 2,
+          "comparable_pair_fraction": 0.08093368237347295,
+          "longest_chain": 5
+        },
+        {
+          "seed": 3,
+          "comparable_pair_fraction": 0.09702225130890052,
+          "longest_chain": 6
+        },
+        {
+          "seed": 4,
+          "comparable_pair_fraction": 0.09860383944153578,
+          "longest_chain": 6
+        },
+        {
+          "seed": 5,
+          "comparable_pair_fraction": 0.11240183246073299,
+          "longest_chain": 6
+        },
+        {
+          "seed": 6,
+          "comparable_pair_fraction": 0.08049738219895287,
+          "longest_chain": 6
+        },
+        {
+          "seed": 7,
+          "comparable_pair_fraction": 0.11294720767888307,
+          "longest_chain": 6
+        },
+        {
+          "seed": 8,
+          "comparable_pair_fraction": 0.05121073298429319,
+          "longest_chain": 5
+        },
+        {
+          "seed": 9,
+          "comparable_pair_fraction": 0.1224367364746946,
+          "longest_chain": 7
+        },
+        {
+          "seed": 10,
+          "comparable_pair_fraction": 0.09205933682373472,
+          "longest_chain": 7
+        },
+        {
+          "seed": 11,
+          "comparable_pair_fraction": 0.09484075043630018,
+          "longest_chain": 6
+        }
+      ]
+    },
+    {
+      "dimension_supplied": 5,
+      "theoretical_ordering_fraction": 0.04262404262404264,
+      "observed_mean": 0.04132580715532286,
+      "observed_sd": 0.008083942798613977,
+      "mean_longest_chain": 4.333333333333333,
+      "replicates": [
+        {
+          "seed": 0,
+          "comparable_pair_fraction": 0.0299956369982548,
+          "longest_chain": 4
+        },
+        {
+          "seed": 1,
+          "comparable_pair_fraction": 0.031904450261780105,
+          "longest_chain": 4
+        },
+        {
+          "seed": 2,
+          "comparable_pair_fraction": 0.0406304537521815,
+          "longest_chain": 4
+        },
+        {
+          "seed": 3,
+          "comparable_pair_fraction": 0.0568826352530541,
+          "longest_chain": 4
+        },
+        {
+          "seed": 4,
+          "comparable_pair_fraction": 0.04068499127399651,
+          "longest_chain": 4
+        },
+        {
+          "seed": 5,
+          "comparable_pair_fraction": 0.05595549738219895,
+          "longest_chain": 6
+        },
+        {
+          "seed": 6,
+          "comparable_pair_fraction": 0.0393760907504363,
+          "longest_chain": 4
+        },
+        {
+          "seed": 7,
+          "comparable_pair_fraction": 0.035176701570680625,
+          "longest_chain": 4
+        },
+        {
+          "seed": 8,
+          "comparable_pair_fraction": 0.04128490401396161,
+          "longest_chain": 4
+        },
+        {
+          "seed": 9,
+          "comparable_pair_fraction": 0.03992146596858639,
+          "longest_chain": 6
+        },
+        {
+          "seed": 10,
+          "comparable_pair_fraction": 0.04232111692844677,
+          "longest_chain": 4
+        },
+        {
+          "seed": 11,
+          "comparable_pair_fraction": 0.04177574171029668,
+          "longest_chain": 4
+        }
+      ]
+    }
+  ],
+  "lorentz_boost_dimension": 4,
+  "boost_beta": 0.55,
+  "boost_order_relation_exactly_invariant": true,
+  "relabeling_invariant": true,
+  "d4_geometry_comparable_fraction": 0.09544066317626528,
+  "density_matched_random_transitive_percolation": {
+    "link_probability": 0.021146297454833984,
+    "null_comparable_fraction": 0.09533158813263526,
+    "geometry_interval_count_0to3": {
+      "0": 1024,
+      "1": 272,
+      "2": 122,
+      "3": 62
+    },
+    "null_interval_count_0to3": {
+      "0": 347,
+      "1": 414,
+      "2": 338,
+      "3": 237
+    },
+    "sum_L1_difference_first_four_interval_frequency": 0.6918483164432822,
+    "chains": {
+      "geometry": 6,
+      "null": 11
+    },
+    "bdg_4d_combinatorial_bracket_on_bounded_diamond": 160,
+    "bdg_4d_combinatorial_bracket_on_density_matched_null": 59,
+    "bdg_action_boundary": "Only n-N0+9N1-16N2+8N3 bracket, ignoring overall scale 4sqrt6(l/lp)^2 and boundary terms; correct 4D curvature interpretation requires continuum-volume limit and fluctuation control."
+  },
+  "causal_dimensionality_boundary": "Successful ordering statistics validate known causal-set embedding diagnostics under an externally supplied d-dimensional Minkowski diamond. Causal order and fixed event density alone are insufficient to derive d=4, metric dynamics, Einstein equations, or Planck scale. A full dimension claim needs varied manifold geometries, scaling in N and likelihood against matched-degree/geometric nulls.",
+  "literature": [
+    "https://doi.org/10.1103/qdst-yrh6",
+    "https://arxiv.org/abs/1903.11544"
+  ]
+}
