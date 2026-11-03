@@ -1,0 +1,134 @@
+{
+  "status": "PASS_FOUR_DISTANCE_GRAVITY_PHASE_SYSTEMATICS_PROJECTION",
+  "masses_kg": 2e-14,
+  "time_s": 1.0,
+  "arm_displacement_m": 5e-05,
+  "yukawa_test_range_m": 0.00015,
+  "candidate_distances_m": [
+    0.00015,
+    0.000175,
+    0.00019999999999999998,
+    0.000225,
+    0.00025,
+    0.00027499999999999996,
+    0.0003,
+    0.00035,
+    0.00039999999999999996,
+    0.0005
+  ],
+  "best_four_distance_vs_Yukawa_plus_constant": {
+    "ds_m": [
+      0.00015,
+      0.00019999999999999998,
+      0.000225,
+      0.0005
+    ],
+    "newton_phase": [
+      -0.4219279580210261,
+      -0.16877118320841059,
+      -0.11689778923526274,
+      -0.01022855655808543
+    ],
+    "best_yukawa_with_nuisance_phase": [
+      -0.42441967215604987,
+      -0.16461602435932676,
+      -0.11276066576361417,
+      -0.016029124743793914
+    ],
+    "residual_phase_radians": [
+      0.002491714135023748,
+      -0.004155158849083823,
+      -0.004137123471648574,
+      0.005800568185708484
+    ],
+    "max_phase_residual_radians": 0.005800568185708484,
+    "l2_residual_phase_radians": 0.00861605282530903,
+    "assumed_sigma_per_point_phase_radians": 0.01,
+    "forecast_delta_chi2_at_independent_sigma_0p01": 0.7423636628851571,
+    "per_point_phase_sigma_for_3sigma_ideal": 0.0028720176084363436,
+    "design_matrix_condition_number": 1261.9652109652259,
+    "fit_columns": [
+      "yukawa_shape",
+      "constant_offset"
+    ]
+  },
+  "chosen_comparison_150_200_300_500um": {
+    "ds_m": [
+      0.00015,
+      0.00019999999999999998,
+      0.0003,
+      0.0005
+    ],
+    "newton_phase": [
+      -0.4219279580210261,
+      -0.16877118320841059,
+      -0.04822033805954606,
+      -0.01022855655808543
+    ],
+    "best_yukawa_with_nuisance_phase": [
+      -0.4238540275590462,
+      -0.1639090587808711,
+      -0.04614361463609269,
+      -0.015241334871058054
+    ],
+    "residual_phase_radians": [
+      0.0019260695380201032,
+      -0.004862124427539499,
+      -0.002076723423453365,
+      0.005012778312972624
+    ],
+    "max_phase_residual_radians": 0.005012778312972624,
+    "l2_residual_phase_radians": 0.007535962075720247,
+    "assumed_sigma_per_point_phase_radians": 0.01,
+    "forecast_delta_chi2_at_independent_sigma_0p01": 0.5679072440669382,
+    "per_point_phase_sigma_for_3sigma_ideal": 0.0025119873585734156,
+    "design_matrix_condition_number": 1134.2815400003299,
+    "fit_columns": [
+      "yukawa_shape",
+      "constant_offset"
+    ]
+  },
+  "same_best_design_with_additional_inverse_cube_nuisance": {
+    "ds_m": [
+      0.00015,
+      0.00019999999999999998,
+      0.000225,
+      0.0005
+    ],
+    "newton_phase": [
+      -0.4219279580210261,
+      -0.16877118320841059,
+      -0.11689778923526274,
+      -0.01022855655808543
+    ],
+    "best_yukawa_with_nuisance_phase": [
+      -0.42188096390801544,
+      -0.16918132701917116,
+      -0.11646618186856757,
+      -0.010297014227043703
+    ],
+    "residual_phase_radians": [
+      -4.6994113010678795e-05,
+      0.0004101438107605715,
+      -0.00043160736669517474,
+      6.845766895827339e-05
+    ],
+    "max_phase_residual_radians": 0.00043160736669517474,
+    "l2_residual_phase_radians": 0.0006011636745409751,
+    "assumed_sigma_per_point_phase_radians": 0.01,
+    "forecast_delta_chi2_at_independent_sigma_0p01": 0.003613977635876074,
+    "per_point_phase_sigma_for_3sigma_ideal": 0.00020038789151365837,
+    "design_matrix_condition_number": 18668.160967794283,
+    "fit_columns": [
+      "yukawa_shape",
+      "constant_offset",
+      "inverse_cube_background"
+    ]
+  },
+  "clock_gravity_shift_one_meter_near_earth": 1.0911369672198217e-16,
+  "clock_vs_phase_non_independence": "Local stationary clock redshift and matter-wave gravitational phase both depend on the underlying gravitational potential; they are complementary systematics tests but do not by themselves add an independent mediator field observable. Source-composition, source motion/retardation and multiple baselines are essential.",
+  "scope": "Newtonian branch potential point masses, assumed 0.01 rad independent Gaussian phase noise and constant phase nuisance; no actual sources/noise covariance, no quantum clock device, no retardation calculation. An extra inverse-cube force is an illustrative nuisance, not a measured electromagnetic background. Unmodeled backgrounds and all static local classical mediator loopholes remain.",
+  "references": [
+    "https://doi.org/10.1103/r8ry-sp35"
+  ]
+}

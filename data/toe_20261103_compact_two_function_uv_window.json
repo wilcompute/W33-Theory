@@ -1,0 +1,384 @@
+{
+  "status": "PASS_COVARIANT_TWO_PERIODIC_FUNCTIONS_COMPACT_FIELD_TEST",
+  "mass_coupling_beta_frozen": 0.05299751293406564,
+  "potential_slope_lambda_external": 0.5,
+  "initial_phi_velocity_over_H0_external": 0.5,
+  "models": [
+    {
+      "F_over_Mpl": "noncompact_exponential",
+      "samples": [
+        {
+          "z": 0,
+          "x_over_Mpl": 0.0,
+          "v": 0.5,
+          "E2": 0.9999999999999999,
+          "mass_ratio_to_today": 1.0,
+          "V_over_today": 1.0,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": -0.8790003659210363,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 0.5,
+          "x_over_Mpl": -0.22956324615355853,
+          "v": 0.6642019271535446,
+          "E2": 1.9292081338854683,
+          "mass_ratio_to_today": 1.012240591359221,
+          "V_over_today": 1.1216284730506711,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": -0.6730027124586534,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 1,
+          "x_over_Mpl": -0.45358775010439295,
+          "v": 0.9127588612223362,
+          "E2": 3.8947694177872663,
+          "mass_ratio_to_today": 1.0243302891960446,
+          "V_over_today": 1.2545712428547047,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": -0.20032383459403344,
+          "Friedmann_Raychaudhuri_residual": -1.7763568394002505e-15
+        },
+        {
+          "z": 2,
+          "x_over_Mpl": -0.9231830125057685,
+          "v": 1.4254094679907883,
+          "E2": 14.805792944243693,
+          "mass_ratio_to_today": 1.0501430611952396,
+          "V_over_today": 1.5865970558556024,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": 0.6600859705184697,
+          "Friedmann_Raychaudhuri_residual": -7.105427357601002e-15
+        },
+        {
+          "z": 5,
+          "x_over_Mpl": -2.2060799811632426,
+          "v": 2.185325560671027,
+          "E2": 374.03470653461176,
+          "mass_ratio_to_today": 1.1240258532682146,
+          "V_over_today": 3.013312556006511,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": 0.9869869880786354,
+          "Friedmann_Raychaudhuri_residual": 2.2737367544323206e-13
+        }
+      ]
+    },
+    {
+      "F_over_Mpl": 0.5,
+      "samples": [
+        {
+          "z": 0,
+          "x_over_Mpl": 0.0,
+          "v": 0.5,
+          "E2": 0.9999999999999999,
+          "mass_ratio_to_today": 1.0,
+          "V_over_today": 1.0,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": -0.8790003659210363,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 0.5,
+          "x_over_Mpl": -0.23076755995128867,
+          "v": 0.6761266894364251,
+          "E2": 1.931709584291657,
+          "mass_ratio_to_today": 1.0118704098994233,
+          "V_over_today": 1.1177645830490075,
+          "m_logarithmic_slope_today_units": -0.04745237936131778,
+          "V_logarithmic_slope_today_units": -0.44768496420156,
+          "w_phi": -0.6618194213161337,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 1,
+          "x_over_Mpl": -0.4636877586722338,
+          "v": 0.9692022604210407,
+          "E2": 3.9438537441907138,
+          "mass_ratio_to_today": 1.0214266043166587,
+          "V_over_today": 1.221417469137013,
+          "m_logarithmic_slope_today_units": -0.03179510312555565,
+          "V_logarithmic_slope_today_units": -0.29996787929569474,
+          "w_phi": -0.12279265767764456,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 2,
+          "x_over_Mpl": -0.9765727256611554,
+          "v": 1.5801525723158902,
+          "E2": 16.10395696963321,
+          "mass_ratio_to_today": 1.0248900112715624,
+          "V_over_today": 1.2610537537014217,
+          "m_logarithmic_slope_today_units": 0.019773424693698666,
+          "V_logarithmic_slope_today_units": 0.18655049641950974,
+          "w_phi": 0.7829209744808864,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 5,
+          "x_over_Mpl": -2.3641722065028725,
+          "v": 2.2844600870697143,
+          "E2": 509.6423529452905,
+          "mass_ratio_to_today": 0.9738525395500358,
+          "V_over_today": 0.7788255659219377,
+          "m_logarithmic_slope_today_units": -0.000845562369013733,
+          "V_logarithmic_slope_today_units": -0.00797737782587741,
+          "w_phi": 0.9977289488424446,
+          "Friedmann_Raychaudhuri_residual": 9.094947017729282e-13
+        }
+      ]
+    },
+    {
+      "F_over_Mpl": 1,
+      "samples": [
+        {
+          "z": 0,
+          "x_over_Mpl": 0.0,
+          "v": 0.5,
+          "E2": 0.9999999999999999,
+          "mass_ratio_to_today": 1.0,
+          "V_over_today": 1.0,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": -0.8790003659210363,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 0.5,
+          "x_over_Mpl": -0.22986531154436762,
+          "v": 0.6671979750289965,
+          "E2": 1.9298326747089096,
+          "mass_ratio_to_today": 1.0121484921378558,
+          "V_over_today": 1.1206660431324142,
+          "m_logarithmic_slope_today_units": -0.051603524233185184,
+          "V_logarithmic_slope_today_units": -0.48684854605710726,
+          "w_phi": -0.6702076776274843,
+          "Friedmann_Raychaudhuri_residual": 8.881784197001252e-16
+        },
+        {
+          "z": 1,
+          "x_over_Mpl": -0.4561442669246073,
+          "v": 0.9271841426294185,
+          "E2": 3.9069513900423423,
+          "mass_ratio_to_today": 1.0236194922022075,
+          "V_over_today": 1.2463819796745894,
+          "m_logarithmic_slope_today_units": -0.04757891885332494,
+          "V_logarithmic_slope_today_units": -0.4488787890152318,
+          "w_phi": -0.18055228668864565,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 2,
+          "x_over_Mpl": -0.9373606286755434,
+          "v": 1.469302890508317,
+          "E2": 15.132261685873932,
+          "mass_ratio_to_today": 1.0436413774688131,
+          "V_over_today": 1.4963058590438618,
+          "m_logarithmic_slope_today_units": -0.03137015080097568,
+          "V_logarithmic_slope_today_units": -0.29595870696803617,
+          "w_phi": 0.698054649098225,
+          "Friedmann_Raychaudhuri_residual": 1.4210854715202004e-14
+        },
+        {
+          "z": 5,
+          "x_over_Mpl": -2.256807532042357,
+          "v": 2.2305527398887572,
+          "E2": 413.803896139871,
+          "mass_ratio_to_today": 1.0418608120040938,
+          "V_over_today": 1.4723937010499604,
+          "m_logarithmic_slope_today_units": 0.033571581133343645,
+          "V_logarithmic_slope_today_units": 0.31672789226081366,
+          "w_phi": 0.9944625084542393,
+          "Friedmann_Raychaudhuri_residual": 4.547473508864641e-13
+        }
+      ]
+    },
+    {
+      "F_over_Mpl": 2,
+      "samples": [
+        {
+          "z": 0,
+          "x_over_Mpl": 0.0,
+          "v": 0.5,
+          "E2": 0.9999999999999999,
+          "mass_ratio_to_today": 1.0,
+          "V_over_today": 1.0,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": -0.8790003659210363,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 0.5,
+          "x_over_Mpl": -0.22963882378780526,
+          "v": 0.6649518584552647,
+          "E2": 1.9293642152844532,
+          "mass_ratio_to_today": 1.01221759542886,
+          "V_over_today": 1.1213880981217534,
+          "m_logarithmic_slope_today_units": -0.052648550280330594,
+          "V_logarithmic_slope_today_units": -0.49670774500145704,
+          "w_phi": -0.672304027085617,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 1,
+          "x_over_Mpl": -0.4542287982715908,
+          "v": 0.9163842236348683,
+          "E2": 3.8978086225213247,
+          "mass_ratio_to_today": 1.0241536645063398,
+          "V_over_today": 1.2525318285810372,
+          "m_logarithmic_slope_today_units": -0.05163654700520697,
+          "V_logarithmic_slope_today_units": -0.48716009626195245,
+          "w_phi": -0.1953586342908616,
+          "Friedmann_Raychaudhuri_residual": 1.7763568394002505e-15
+        },
+        {
+          "z": 2,
+          "x_over_Mpl": -0.9267797344326287,
+          "v": 1.4367255655020028,
+          "E2": 14.887368499458818,
+          "mass_ratio_to_today": 1.048518252994867,
+          "V_over_today": 1.5635877952914612,
+          "m_logarithmic_slope_today_units": -0.047408523840764424,
+          "V_logarithmic_slope_today_units": -0.44727121346001186,
+          "w_phi": 0.6701002088297622,
+          "Friedmann_Raychaudhuri_residual": -7.105427357601002e-15
+        },
+        {
+          "z": 5,
+          "x_over_Mpl": -2.2197877422930503,
+          "v": 2.199134964954748,
+          "E2": 384.4626941818,
+          "mass_ratio_to_today": 1.0995869428329381,
+          "V_over_today": 2.4489307218283907,
+          "m_logarithmic_slope_today_units": -0.02357099226780783,
+          "V_logarithmic_slope_today_units": -0.22237828685595654,
+          "w_phi": 0.989825424022775,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        }
+      ]
+    },
+    {
+      "F_over_Mpl": 4,
+      "samples": [
+        {
+          "z": 0,
+          "x_over_Mpl": 0.0,
+          "v": 0.5,
+          "E2": 0.9999999999999999,
+          "mass_ratio_to_today": 1.0,
+          "V_over_today": 1.0,
+          "m_logarithmic_slope_today_units": -0.05299751293406564,
+          "V_logarithmic_slope_today_units": -0.5,
+          "w_phi": -0.8790003659210363,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 0.5,
+          "x_over_Mpl": -0.22958214438625307,
+          "v": 0.6643894672908278,
+          "E2": 1.9292471508340912,
+          "mass_ratio_to_today": 1.0122348441967342,
+          "V_over_today": 1.121568394026668,
+          "m_logarithmic_slope_today_units": -0.05291024343135554,
+          "V_logarithmic_slope_today_units": -0.4991766641689519,
+          "w_phi": -0.6728280460765298,
+          "Friedmann_Raychaudhuri_residual": -8.881784197001252e-16
+        },
+        {
+          "z": 1,
+          "x_over_Mpl": -0.45374813124676394,
+          "v": 0.9136663816631054,
+          "E2": 3.895528814755812,
+          "mass_ratio_to_today": 1.0242862021628172,
+          "V_over_today": 1.254061909783037,
+          "m_logarithmic_slope_today_units": -0.05265689347645099,
+          "V_logarithmic_slope_today_units": -0.4967864580924919,
+          "w_phi": -0.19908117315603713,
+          "Friedmann_Raychaudhuri_residual": 0.0
+        },
+        {
+          "z": 2,
+          "x_over_Mpl": -0.9240854597856298,
+          "v": 1.4282600992632257,
+          "E2": 14.826181408440648,
+          "mass_ratio_to_today": 1.0497371077410231,
+          "V_over_today": 1.5808200736645737,
+          "m_logarithmic_slope_today_units": -0.051589530071512985,
+          "V_logarithmic_slope_today_units": -0.4867165194685236,
+          "w_phi": 0.6626232238355232,
+          "Friedmann_Raychaudhuri_residual": -1.4210854715202004e-14
+        },
+        {
+          "z": 5,
+          "x_over_Mpl": -2.2095792238789334,
+          "v": 2.188973210232813,
+          "E2": 376.6750458283211,
+          "mass_ratio_to_today": 1.117659738449329,
+          "V_over_today": 2.856093316899775,
+          "m_logarithmic_slope_today_units": -0.045115211072152994,
+          "V_logarithmic_slope_today_units": -0.42563517205308254,
+          "w_phi": 0.9877882589158677,
+          "Friedmann_Raychaudhuri_residual": -4.547473508864641e-13
+        }
+      ]
+    }
+  ],
+  "noncompact_exact_exponential_turn_monodromy": [
+    {
+      "F_over_Mpl": 0.5,
+      "m_exp_after_one_compact_turn_over_before": 0.8466256977504116,
+      "V_exp_after_one_compact_turn_over_before": 0.20787957635076193
+    },
+    {
+      "F_over_Mpl": 1,
+      "m_exp_after_one_compact_turn_over_before": 0.7167750720913715,
+      "V_exp_after_one_compact_turn_over_before": 0.04321391826377226
+    },
+    {
+      "F_over_Mpl": 2,
+      "m_exp_after_one_compact_turn_over_before": 0.5137665039715907,
+      "V_exp_after_one_compact_turn_over_before": 0.0018674427317079893
+    },
+    {
+      "F_over_Mpl": 4,
+      "m_exp_after_one_compact_turn_over_before": 0.26395602060319057,
+      "V_exp_after_one_compact_turn_over_before": 3.4873423562089973e-06
+    }
+  ],
+  "heavy_one_loop_naturalness_thresholds": [
+    {
+      "one_real_boson_mass_eV": 1e-20,
+      "maximum_dimensionless_exponential_phi_mass_slope_to_keep_abs_one_loop_mphi_squared_below_H0_squared": 3.130137288367927e+35
+    },
+    {
+      "one_real_boson_mass_eV": 0.01,
+      "maximum_dimensionless_exponential_phi_mass_slope_to_keep_abs_one_loop_mphi_squared_below_H0_squared": 0.3130137288367927
+    },
+    {
+      "one_real_boson_mass_eV": 1000000000.0,
+      "maximum_dimensionless_exponential_phi_mass_slope_to_keep_abs_one_loop_mphi_squared_below_H0_squared": 3.1301372883679267e-23
+    },
+    {
+      "one_real_boson_mass_eV": 1000000000000.0,
+      "maximum_dimensionless_exponential_phi_mass_slope_to_keep_abs_one_loop_mphi_squared_below_H0_squared": 3.130137288367927e-29
+    },
+    {
+      "one_real_boson_mass_eV": 1e+25,
+      "maximum_dimensionless_exponential_phi_mass_slope_to_keep_abs_one_loop_mphi_squared_below_H0_squared": 3.1301372883679257e-55
+    }
+  ],
+  "exact_global_no_go": "A strictly compact phi~phi+2pi f cannot have a globally single-valued EXACT exp(-lambda phi/Mpl) potential with real lambda!=0. The exact exp(-beta phi/Mpl) dark mass has the analogous problem. Periodic versions or explicit monodromy sheet variables restore mathematical consistency, at the cost of different cosmological histories.",
+  "periodic_ansatz": "y=f sin(phi/f); V=V0 exp(-lambda y), mchi=m0 exp(-beta y); both globally periodic. The homogeneous equations conserve total stress-energy and satisfy rho_c_N=-(3+beta dy/dx*x_N)rho_c. No nonperturbative axion model claimed.",
+  "loop_threshold": "Single isolated real-boson Coleman-Weinberg threshold |delta mphi\u00b2|~g\u00b2 M^4/(8pi\u00b2 Mpl\u00b2), scheme-dependent naturalness counterexample, NOT an observational upper bound. Heavy portal SUSY/messenger cancellation already studied in uncommitted mechanism_portal_protection.py and many older repo passes; this table only displays the universal scale sensitivity, with that prior attribution.",
+  "scope": "PERIODIC SELF-CONSISTENT HOMOGENEOUS scalar+averaged DM backgrounds, not a simultaneous fit to CLASS-Dovekie, no new interacting-ULA Boltzmann solver, no actual axion monodromy UV completion. Small fitted excursion is not the same as the distinct initial velocity v0=.5 in this illustrative integration.",
+  "references": [
+    "https://doi.org/10.1103/PhysRevD.94.103526"
+  ]
+}

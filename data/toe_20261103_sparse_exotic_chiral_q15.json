@@ -1,0 +1,51 @@
+{
+  "status": "PASS_REAL_SPARSE_L10_Q15_WILSON_KERNEL_AND_SMALL_L_INDEX_GAUGE_CONTROL",
+  "rows": [
+    {
+      "L": 3,
+      "charge_Q": 1,
+      "matrix_dimension": 324,
+      "nonzeros": 5508,
+      "sparse_memory_MiB": 0.10629653930664062,
+      "compared_dense_GiB": 0.0015642642974853516,
+      "hermitian_max_entry_defect": 0.0,
+      "complex_bilinear_self_adj_defect": 1.4210854715202004e-14,
+      "construction_seconds": 0.0140543999732472,
+      "exact_dense_L3_index": -1,
+      "exact_dense_min_abs_eigen": 0.3455097810878937,
+      "exact_dense_eigensolve_seconds": 0.14879239996662363,
+      "sparse_min_abs_eigen_estimate": 0.3455097810878947,
+      "gauge_covariance_probe_relative_residual": 2.428470856431352e-16
+    },
+    {
+      "L": 4,
+      "charge_Q": 1,
+      "matrix_dimension": 1024,
+      "nonzeros": 17408,
+      "sparse_memory_MiB": 0.3359413146972656,
+      "compared_dense_GiB": 0.015625,
+      "hermitian_max_entry_defect": 0.0,
+      "complex_bilinear_self_adj_defect": 0.0,
+      "construction_seconds": 0.020916600013151765,
+      "gauge_covariance_probe_relative_residual": 2.46504642065885e-16
+    },
+    {
+      "L": 10,
+      "charge_Q": 15,
+      "matrix_dimension": 40000,
+      "nonzeros": 680000,
+      "sparse_memory_MiB": 13.122562408447266,
+      "compared_dense_GiB": 23.84185791015625,
+      "hermitian_max_entry_defect": 0.0,
+      "complex_bilinear_self_adj_defect": 1.1368683772161603e-13,
+      "construction_seconds": 0.131584299961105,
+      "gauge_covariance_probe_relative_residual": 2.3764231002181085e-16
+    }
+  ],
+  "mathematical_context": "W gamma5-hermitian Wilson kernel H=gamma5(W-m0), m0=1, 4D periodic torus with U1 unit flux in 12 and34 planes. Multiplied links U^q for integer Q=3(B-L).",
+  "scope": "ACTUAL sparse q=15 L10 Wilson kernel and its Hermiticity, memory. It is a prerequisite, NOT the L10 overlap SIGN, not the L10 topological index, not a chiral measure and no gauge+fermion path integral. L3 q1 dense full spectrum and index used to verify sparse construction against prior local mechanism. Charge q=15 links are within conservative plaquette phase benchmark. Dimensions are externally supplied 4D geometry.",
+  "prior_local_source": "uncommitted analysis/toe_20261103_mechanism_four_dimensional_overlap.py is an earlier independent exact small-L construction, not claimed as our new result.",
+  "literature": [
+    "https://doi.org/10.1103/756m-stz5"
+  ]
+}

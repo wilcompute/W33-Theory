@@ -1,0 +1,121 @@
+{
+  "status": "PASS_REAL_CLASS_LENSING_AND_PARAMETER_IDENTIFIABILITY_SENSITIVITY",
+  "source": "analysis/toe_uv/class_cmb.py patched binary ~/cosmo/class_fading/class",
+  "models": [
+    {
+      "label": "fading_fit",
+      "C_phi_phi_proxy_native_CLASS_column": {
+        "40": 8.416906813932e-11,
+        "100": 1.007710443354e-11,
+        "200": 1.421161623718e-12,
+        "400": 1.580661166453e-13,
+        "700": 2.182297271193e-14,
+        "1000": 5.771629344784e-15
+      },
+      "file_header_column": "phiphi",
+      "units": "As CLASS o_cl.dat writes the lensing potential column, its ell prefactor is common and cancels in ratios at fixed ell.",
+      "sigma8": 0.825051,
+      "Omega_m": 0.3059022601286444
+    },
+    {
+      "label": "zero_coupling_fixed_cosmology",
+      "C_phi_phi_proxy_native_CLASS_column": {
+        "40": 8.323882372579e-11,
+        "100": 9.93308185218e-12,
+        "200": 1.395806653749e-12,
+        "400": 1.546357622338e-13,
+        "700": 2.127588443194e-14,
+        "1000": 5.615536743553e-15
+      },
+      "file_header_column": "phiphi",
+      "units": "As CLASS o_cl.dat writes the lensing potential column, its ell prefactor is common and cancels in ratios at fixed ell.",
+      "sigma8": 0.804331,
+      "Omega_m": 0.31120068309139337
+    },
+    {
+      "label": "fading_lnAs_plus_0p01",
+      "C_phi_phi_proxy_native_CLASS_column": {
+        "40": 8.501498133743e-11,
+        "100": 1.017838101682e-11,
+        "200": 1.43544453549e-12,
+        "400": 1.596547075279e-13,
+        "700": 2.204229723395e-14,
+        "1000": 5.829635184047e-15
+      },
+      "file_header_column": "phiphi",
+      "units": "As CLASS o_cl.dat writes the lensing potential column, its ell prefactor is common and cancels in ratios at fixed ell.",
+      "sigma8": 0.829187,
+      "Omega_m": 0.3059022601286444
+    }
+  ],
+  "observables": [
+    {
+      "ell": 40,
+      "log_lens_coupling_ratio_fading_over_cpoff": 0.011113621680404593,
+      "lens_relative_coupling_effect_percent": 1.1175607389581454,
+      "derivative_logC_to_cp_finite": 0.20970081547470126,
+      "derivative_logC_to_lnAs_finite": 0.999999999989547
+    },
+    {
+      "ell": 100,
+      "log_lens_coupling_ratio_fading_over_cpoff": 0.014395175171053336,
+      "lens_relative_coupling_effect_percent": 1.4499284663439305,
+      "derivative_logC_to_cp_finite": 0.2716198246691767,
+      "derivative_logC_to_lnAs_finite": 0.9999999999834136
+    },
+    {
+      "ell": 200,
+      "log_lens_coupling_ratio_fading_over_cpoff": 0.0180020875003144,
+      "lens_relative_coupling_effect_percent": 1.8165101807545492,
+      "derivative_logC_to_cp_finite": 0.3396779679588144,
+      "derivative_logC_to_lnAs_finite": 1.0000000000018359
+    },
+    {
+      "ell": 400,
+      "log_lens_coupling_ratio_fading_over_cpoff": 0.021940974828165028,
+      "lens_relative_coupling_effect_percent": 2.2183448136101402,
+      "derivative_logC_to_cp_finite": 0.41400008440890157,
+      "derivative_logC_to_lnAs_finite": 0.9999999999806658
+    },
+    {
+      "ell": 700,
+      "log_lens_coupling_ratio_fading_over_cpoff": 0.02538896405460173,
+      "lens_relative_coupling_effect_percent": 2.571400882252828,
+      "derivative_logC_to_cp_finite": 0.47905953787280947,
+      "derivative_logC_to_lnAs_finite": 0.9999999999631008
+    },
+    {
+      "ell": 1000,
+      "log_lens_coupling_ratio_fading_over_cpoff": 0.027417248131746855,
+      "lens_relative_coupling_effect_percent": 2.77965595025631,
+      "derivative_logC_to_cp_finite": 0.5173308446729704,
+      "derivative_logC_to_lnAs_finite": 1.0000000000005609
+    }
+  ],
+  "jacobian_columns": [
+    "c_prime",
+    "lnAs"
+  ],
+  "Fisher_1pct_uncorrelated_ell_bins": [
+    [
+      9016.581966482347,
+      22313.89075025909
+    ],
+    [
+      22313.89075025909,
+      59999.99999838248
+    ]
+  ],
+  "Fisher_eigenvalues": [
+    630.0243654939368,
+    68386.55759937089
+  ],
+  "fisher_correlation_cp_lnAs": -0.9593536002548937,
+  "idealized_cp_sigma_if_lnAs_fixed": 0.010531228416395803,
+  "idealized_cp_sigma_after_marginal_lnAs": 0.0373174174555409,
+  "modeled_cp_bestfit": 0.05299751293406564,
+  "scope": "Real full CLASS CMB lensing potential spectra; NOT galaxy shear or tomographic weak-lensing data, not an actual survey likelihood or a robust posterior. Six multipoles are correlated by cosmic variance and lensing reconstruction; independent 1% per bin is an invented sensitivity thought experiment. cp derivative uses 0 vs fitted cp and hence is secant, not differential derivative at cp=.053.",
+  "prior_literature": [
+    "https://doi.org/10.1088/1475-7516/2026/02/014"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "status": "PASS_REAL_CLASS_LENSING_CP_AS_NS_THREE_PARAMETER_PROJECTED_RESPONSE",
+  "actual_runs": 4,
+  "parent_lensing_certificate": "data/toe_20261103_class_lensing_growth_jacobian.json",
+  "new_ns_plus_delta": 0.005,
+  "Cphi_ns_perturbed_values": [
+    8.354536210344e-11,
+    1.003473121531e-11,
+    1.419219314092e-12,
+    1.583146545129e-13,
+    2.191237948626e-14,
+    5.804681723479e-15
+  ],
+  "ell": [
+    40,
+    100,
+    200,
+    400,
+    700,
+    1000
+  ],
+  "finite_difference_logC_over_ns": [
+    -1.487549783915528,
+    -0.842753126416092,
+    -0.2735280895449704,
+    0.3142263264806174,
+    0.817708278371424,
+    1.1420725761445145
+  ],
+  "jacobian_columns": [
+    "cprime_secant",
+    "lnAs_exact_amplitude",
+    "ns_forward"
+  ],
+  "Jacobian": [
+    [
+      0.20970081547470126,
+      1.0,
+      -1.487549783915528
+    ],
+    [
+      0.2716198246691767,
+      1.0,
+      -0.842753126416092
+    ],
+    [
+      0.3396779679588144,
+      1.0,
+      -0.2735280895449704
+    ],
+    [
+      0.41400008440890157,
+      1.0,
+      0.3142263264806174
+    ],
+    [
+      0.47905953787280947,
+      1.0,
+      0.817708278371424
+    ],
+    [
+      0.5173308446729704,
+      1.0,
+      1.1420725761445145
+    ]
+  ],
+  "independent_1pct_fisher": [
+    [
+      9016.581966482347,
+      22313.890750573737,
+      4788.897213134032
+    ],
+    [
+      22313.890750573737,
+      60000.0,
+      -3298.2381888003442
+    ],
+    [
+      4788.897213134032,
+      -3298.2381888003442,
+      50695.695894333825
+    ]
+  ],
+  "eigenvalues_1pct_fisher": [
+    1.4948150175174593,
+    51210.74561318765,
+    68500.03743261097
+  ],
+  "projected_cprime_response": [
+    0.008401321221823799,
+    -0.006465278259697171,
+    -0.006193297353824401,
+    -0.0018639143672618541,
+    0.00323839185701702,
+    0.002882776901941164
+  ],
+  "projected_Cprime_1sigma_illustrative": 0.7602623785168304,
+  "lensing_response_removed_by_amplitude_and_tilt": 0.9998081194012786,
+  "full_cp_change_logC_residual_after_amplitude_and_ns_fit": [
+    0.00044524913011684264,
+    -0.0003426436681906366,
+    -0.00032822935661382113,
+    -9.878282578694789e-05,
+    0.0001716267143278341,
+    0.00015278000614665777
+  ],
+  "scope": "REAL patched CLASS linear lensing spectra from four full solver runs. 1% per multipole independent errors are illustrative, not a real survey covariance; no galaxy weak-lensing tomographic likelihood. n_s and lnAs response derivative at fitted model, cp response finite secant from zero to fitted cp, so linear Fisher forecast is only local approximate at cp~0.05. Fixes other cosmological parameters, not a full MCMC."
+}
